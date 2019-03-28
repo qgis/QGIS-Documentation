@@ -294,17 +294,17 @@ More information on variables usage in the :ref:`general_tools_variables` sectio
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |alignBottom|  image:: /static/common/mActionAlignBottom.png
+.. |alignBottom| image:: /static/common/mActionAlignBottom.png
    :width: 1.5em
-.. |alignHCenter|  image:: /static/common/mActionAlignHCenter.png
+.. |alignHCenter| image:: /static/common/mActionAlignHCenter.png
    :width: 1.5em
-.. |alignLeft|  image:: /static/common/mActionAlignLeft.png
+.. |alignLeft| image:: /static/common/mActionAlignLeft.png
    :width: 1.5em
-.. |alignRight|  image:: /static/common/mActionAlignRight.png
+.. |alignRight| image:: /static/common/mActionAlignRight.png
    :width: 1.5em
-.. |alignTop|  image:: /static/common/mActionAlignTop.png
+.. |alignTop| image:: /static/common/mActionAlignTop.png
    :width: 1.5em
-.. |alignVCenter|  image:: /static/common/mActionAlignVCenter.png
+.. |alignVCenter| image:: /static/common/mActionAlignVCenter.png
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em

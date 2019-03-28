@@ -240,11 +240,3 @@ of a few of them.
 
 * Distance and area using the :class:`QgsDistanceArea <qgis.core.QgsDistanceArea>` class: `Distance matrix algorithm <https://github.com/qgis/QGIS/blob/master/python/plugins/processing/algs/qgis/PointDistance.py>`_
 * `Lines to polygons algorithm <https://github.com/qgis/QGIS/blob/master/python/plugins/processing/algs/qgis/LinesToPolygons.py>`_
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`

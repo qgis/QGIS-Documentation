@@ -17,11 +17,3 @@ Write a short explanatory text to accompany it. Include in this text the
 criteria that were used in considering a house for purchase and subsequent
 development, as well as explaining your recommendations for which buildings
 are suitable.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-

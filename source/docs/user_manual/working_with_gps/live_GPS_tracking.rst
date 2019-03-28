@@ -228,7 +228,7 @@ or without it, by connecting the QGIS live tracking tool directly to the device
 .. |gpsTrackBarChart| image:: /static/common/gpstrack_barchart.png
    :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
-   :width: 1.5em
+   :width: 2em
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png

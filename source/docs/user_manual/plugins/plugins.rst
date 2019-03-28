@@ -228,23 +228,17 @@ directly from their repository.
    :width: 1.3em
 .. |installPluginFromZip| image:: /static/common/mActionInstallPluginFromZip.png
    :width: 1.5em
-.. |nix| image:: /static/common/nix.png
-   :width: 1em
-.. |osx| image:: /static/common/osx.png
-   :width: 1em
 .. |plugin| image:: /static/common/plugin.png
-   :width: 1.5em
-.. |pluginInstalled| image:: /static/common/plugin-installed.png
-   :width: 1.5em
-.. |pluginInvalid| image:: /static/common/plugin-incompatible.png
    :width: 1.5em
 .. |plugin-new| image:: /static/common/plugin-new.png
    :width: 1.5em
 .. |plugin-upgrade| image:: /static/common/plugin-upgrade.png
    :width: 1.5em
+.. |pluginInstalled| image:: /static/common/plugin-installed.png
+   :width: 1.5em
+.. |pluginInvalid| image:: /static/common/plugin-incompatible.png
+   :width: 1.5em
 .. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
    :width: 1.5em
 .. |transformSettings| image:: /static/common/mActionTransformSettings.png
    :width: 1.5em
-.. |win| image:: /static/common/win.png
-   :width: 1em

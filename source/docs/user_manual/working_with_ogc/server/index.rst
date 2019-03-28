@@ -44,11 +44,3 @@ Manual <training_qgis_server>` or :ref:`server_plugins`.
   services
   plugins
   config
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-

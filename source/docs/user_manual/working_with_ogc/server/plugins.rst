@@ -91,11 +91,3 @@ Test the server with the HelloWorld plugin:
 
 You can have a look at the default GetCapabilities of the QGIS server at:
 :file:`http://localhost/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities`
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-

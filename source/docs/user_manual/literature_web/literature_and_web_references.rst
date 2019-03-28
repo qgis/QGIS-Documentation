@@ -20,11 +20,3 @@ OPEN-GEOSPATIAL-CONSORTIUM. Web map service (1.1.1) implementation specification
 OPEN-GEOSPATIAL-CONSORTIUM. Web map service (1.3.0) implementation specification. https://portal.opengeospatial.org, 2004.
 
 POSTGIS-PROJECT. Spatial support for postgresql. http://postgis.refractions.net/, 2013.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-

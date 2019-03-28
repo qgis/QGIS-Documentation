@@ -30,11 +30,3 @@ let's say ``(rainfall * slope )/100``:
 * then let's calculate what are the municipalities with the greatest predicted
   risk of rainfall: :menuselection:`SAGA --> Raster statistics with polygons`
   (the parameters of interest are *Maximum* and *Mean*)
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-

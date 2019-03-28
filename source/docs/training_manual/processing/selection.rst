@@ -34,11 +34,3 @@ Since the selection is not part of the data itself, but something that only exis
 The selection we have just made, like most of the ones created by the rest of the selection algorithms, can also be done manually from QGIS, so you might be wondering what is the point on using an algorithm for that. Although now this might not make much sense to you, we will later see how to create models and scripts. If you want to make a selection in the middle of a model (which defines a processing workflow), only a geoalgorithm can be added to a model, and other QGIS elements and operations cannot be added. That is the reason why some processing algorithms duplicate functionality that is also available in other QGIS elements.
 
 By now, just remember that selections can be made using processing geoalgorithms, and that algorithms will only use the selected features if a selection exists, or all features otherwise.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-

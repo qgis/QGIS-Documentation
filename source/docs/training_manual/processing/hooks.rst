@@ -79,11 +79,3 @@ check them for geometry errors. If at least one feature contains an invalid geom
 To activate this hook we need enter its filename in the *Pre-execution script
 file* option in the Processing configuration dialog. 
 The hook will be executed before running any Processing algorithm.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-

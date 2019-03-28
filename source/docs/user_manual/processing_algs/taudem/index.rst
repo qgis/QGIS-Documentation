@@ -29,11 +29,3 @@ documentation <http://hydrology.usu.edu/taudem/taudem5/documentation.html>`_
      basic_grid_analysis_tools
      specialized_grid_analysis_tools
      stream_network_analysis_tools
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-

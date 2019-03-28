@@ -623,7 +623,7 @@ viewing the field.
 
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |color|  image:: /static/common/color.png
+.. |color| image:: /static/common/color.png
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |duplicateLayer| image:: /static/common/mActionDuplicateLayer.png

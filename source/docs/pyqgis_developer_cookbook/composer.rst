@@ -200,12 +200,3 @@ To export a layout, the :class:`QgsLayoutExporter <qgis.core.QgsLayoutExporter>`
  exporter.exportToPdf(pdf_path, QgsLayoutExporter.PdfExportSettings())
 
 Use the :meth:`exportToImage() <qgis.core.QgsLayoutExporter.exportToImage>` in case you want to export to an image instead of a PDF file.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`

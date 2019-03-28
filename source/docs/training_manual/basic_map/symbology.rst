@@ -624,11 +624,11 @@ map.
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/global/basic.png
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
 .. |hard| image:: /static/global/hard.png
 .. |majorUrbanName| replace:: Swellendam
 .. |moderate| image:: /static/global/moderate.png
-.. |checkbox| image:: /static/common/checkbox.png
-   :width: 1.3em
 .. |rendering| image:: /static/common/rendering.png
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png

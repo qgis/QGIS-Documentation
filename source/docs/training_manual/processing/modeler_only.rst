@@ -51,11 +51,3 @@ Now we have to edit the rasterize algorithm, so it uses the output of the calcul
 The final algorithm should look like this:
 
 .. image:: img/modeler_only/final.png
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-

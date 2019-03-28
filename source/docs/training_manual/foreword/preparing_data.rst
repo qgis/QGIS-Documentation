@@ -250,8 +250,5 @@ The tokens you need to replace are as follows:
 .. |indicatorMemory| image:: /static/common/mIndicatorMemory.png
    :width: 1.5em
 .. |majorUrbanName| replace:: Swellendam
-.. |radioButtonOn| image:: /static/common/radiobuttonon.png
-.. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
-   :width: 1.5em
 .. |zoomToLayer| image:: /static/common/mActionZoomToLayer.png
    :width: 1.5em

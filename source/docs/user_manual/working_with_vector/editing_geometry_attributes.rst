@@ -1581,13 +1581,13 @@ To edit features in-place:
    :width: 1.5em
 .. |delta| image:: /static/common/delta.png
    :width: 1.5em
-.. |editableEdits| image:: /static/common/mIconEditableEdits.png
-   :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
 .. |editCut| image:: /static/common/mActionEditCut.png
    :width: 1.5em
 .. |editPaste| image:: /static/common/mActionEditPaste.png
+   :width: 1.5em
+.. |editableEdits| image:: /static/common/mIconEditableEdits.png
    :width: 1.5em
 .. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
    :width: 1.5em

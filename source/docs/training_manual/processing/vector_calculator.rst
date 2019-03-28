@@ -53,11 +53,3 @@ The parameters window should look like this.
 A python field calculator is available in the *Advanced Python field calculator*, which will not be detailed here
 
 .. image:: img/vector_calculator/advanced.png
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-

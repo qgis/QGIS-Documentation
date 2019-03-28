@@ -155,4 +155,3 @@ symbolization is useful in the case of rasters as well.
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/global/basic.png
 .. |hard| image:: /static/global/hard.png
-.. |toolbox| replace:: :menuselection:`Processing --> Toolbox`

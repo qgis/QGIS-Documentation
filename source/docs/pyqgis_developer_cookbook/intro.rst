@@ -345,10 +345,3 @@ The reason for using SIP instead of more widely used SWIG is that the
 QGIS code depends on Qt libraries. Python bindings for Qt (PyQt) are
 also done using SIP and this allows seamless integration of PyQGIS with
 PyQt.
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-

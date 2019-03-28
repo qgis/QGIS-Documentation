@@ -35,11 +35,3 @@ We can make this example more complex by extending the model and computing some 
 .. image:: img/iterative_model/model2.png
 
 If you now run the model, apart from the tables you will get a set of pages with statistics. These pages will be available in the results dialog.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-

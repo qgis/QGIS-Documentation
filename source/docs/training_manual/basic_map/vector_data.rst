@@ -225,8 +225,6 @@ lesson.
 .. |LS| replace:: Lesson:
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
-.. |addSpatiaLiteLayer| image:: /static/common/mActionAddSpatiaLiteLayer.png
-   :width: 1.5em
 .. |basic| image:: /static/global/basic.png
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
    :width: 1.5em

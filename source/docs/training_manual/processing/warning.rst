@@ -55,11 +55,3 @@ Here is a good reference that you can read to learn more about spatial data anal
 Michael John De Smith, Michael F. Goodchild, Paul A. Longley
 
 It is available online `here <https://www.spatialanalysisonline.com/>`_
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-

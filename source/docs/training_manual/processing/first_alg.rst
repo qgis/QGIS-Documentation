@@ -87,11 +87,3 @@ Try yourself saving it using different file formats (use, for instance,
 :file:`shp` and :file:`geojson` as extensions). Also, if you do not want the
 layer to be loaded in QGIS after it is generated, you can check off the checkbox
 that is found below the output path box.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-

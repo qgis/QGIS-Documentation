@@ -56,11 +56,3 @@ under the terms of the GNU Free Documentation License, Version 1.3 or
 any later version published by the Free Software Foundation; with no
 Invariant Sections, no Front-Cover Texts and no Back-Cover Texts. A
 copy of the license is included in Appendix :ref:`gfl_appendix`.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-

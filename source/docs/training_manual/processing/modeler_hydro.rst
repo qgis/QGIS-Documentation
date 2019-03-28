@@ -47,11 +47,3 @@ Threshold = 100,000
 .. image:: img/modeler_hydro/result_2.png
 
 Threshold = 1,0000,000
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
