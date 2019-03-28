@@ -360,6 +360,9 @@ Icon                                Substitution                            Icon
 |25dSymbol|                         ``|25dSymbol|``                         |ruleBasedSymbol|              ``|ruleBasedSymbol|``
 |invertedSymbol|                    ``|invertedSymbol|``                    |heatmapSymbol|                ``|heatmapSymbol|``
 |pointDisplacementSymbol|           ``|pointDisplacementSymbol|``           |pointClusterSymbol|           ``|pointClusterSymbol|``
+|contour_active|                    ``|contour_active|``                    |contour_inactive|             ``|contour_inactive|``
+|vector_active|                     ``|vector_active|``                     |vector_inactive|              ``|vector_inactive|``
+|rendering_mesh|                    ``|rendering_mesh|``                    |groupsexploring|              ``|groupsexploring|``
 |sum|                               ``|sum|``                               |sort|                         ``|sort|``
 |paintEffects|                      ``|paintEffects|``                      |mapIdentification|            ``|mapIdentification|``
 |styleManager|                      ``|styleManager|``                      |iconView|                     ``|iconView|``
@@ -478,6 +481,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |addMap| image:: /static/common/mActionAddMap.png
    :width: 1.5em
+.. |addMeshLayer| image:: /static/common/mActionAddMeshLayer.png
+   :width: 1.5em
 .. |addMssqlLayer| image:: /static/common/mActionAddMssqlLayer.png
    :width: 1.5em
 .. |addNodesShape| image:: /static/common/mActionAddNodesShape.png
@@ -495,8 +500,6 @@ Icon                            Substitution                        Icon        
 .. |addPostgisLayer| image:: /static/common/mActionAddPostgisLayer.png
    :width: 1.5em
 .. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
-   :width: 1.5em
-.. |addMeshLayer| image:: /static/common/mActionAddMeshLayer.png
    :width: 1.5em
 .. |addRing| image:: /static/common/mActionAddRing.png
    :width: 2em
@@ -582,6 +585,10 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |contextHelp| image:: /static/common/mActionContextHelp.png
    :width: 1.5em
+.. |contour_active| image:: /static/common/contours_active.png
+   :width: 1.5em
+.. |contour_inactive| image:: /static/common/contours_inactive.png
+   :width: 2em
 .. |convexHull| image:: /static/common/convex_hull.png
    :width: 1.5em
 .. |coordinateCapture| image:: /static/common/coordinate_capture.png
@@ -648,8 +655,6 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |duplicateLayout| image:: /static/common/mActionDuplicateLayout.png
    :width: 1.5em
-.. |editableEdits| image:: /static/common/mIconEditableEdits.png
-   :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
 .. |editCut| image:: /static/common/mActionEditCut.png
@@ -659,6 +664,8 @@ Icon                            Substitution                        Icon        
 .. |editNodesShape| image:: /static/common/mActionEditNodesShape.png
    :width: 1.5em
 .. |editPaste| image:: /static/common/mActionEditPaste.png
+   :width: 1.5em
+.. |editableEdits| image:: /static/common/mIconEditableEdits.png
    :width: 1.5em
 .. |eventBrowser| image:: /static/common/event_browser.png
    :width: 1.5em
@@ -721,10 +728,10 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |general| image:: /static/common/general.png
    :width: 2em
+.. |geoPackage| image:: /static/common/mGeoPackage.png
+   :width: 1.5em
 .. |geographic| image:: /static/common/geographic.png
 .. |geometryChecker| image:: /static/common/geometrychecker.png
-   :width: 1.5em
-.. |geoPackage| image:: /static/common/mGeoPackage.png
    :width: 1.5em
 .. |georefRun| image:: /static/common/mGeorefRun.png
    :width: 1.5em
@@ -747,6 +754,8 @@ Icon                            Substitution                        Icon        
 .. |grassTools| image:: /static/common/grass_tools.png
    :width: 1.5em
 .. |groupItems| image:: /static/common/mActionGroupItems.png
+   :width: 1.5em
+.. |groupsexploring| image:: /static/common/mesh_groups_explore.png
    :width: 1.5em
 .. |heatmap| image:: /static/common/heatmap.png
    :width: 1.5em
@@ -853,8 +862,6 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |lowerItems| image:: /static/common/mActionLowerItems.png
    :width: 1.5em
-.. |makepermanent| image:: /static/common/mIndicatorMemory.png
-   :width: 1.5em
 .. |mapIdentification| image:: /static/common/mActionMapIdentification.png
    :width: 1.5em
 .. |mapTips| image:: /static/common/mActionMapTips.png
@@ -895,9 +902,9 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |multiEdit| image:: /static/common/mActionMultiEdit.png
    :width: 1.5em
-.. |newAttribute| image:: /static/common/mActionNewAttribute.png
-   :width: 1.5em
 .. |new3DMap| image:: /static/common/mActionNew3DMap.png
+   :width: 1.5em
+.. |newAttribute| image:: /static/common/mActionNewAttribute.png
    :width: 1.5em
 .. |newBookmark| image:: /static/common/mActionNewBookmark.png
    :width: 1.5em
@@ -957,19 +964,19 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |processSelected| image:: /static/common/mActionProcessSelected.png
    :width: 1.5em
+.. |processing| image:: /static/common/processingAlgorithm.png
+   :width: 1.5em
+.. |processingHistory| image:: /static/common/history.png
+   :width: 1.5em
+.. |processingModel| image:: /static/common/processingModel.png
+   :width: 1.5em
+.. |processingResult| image:: /static/common/processingResult.png
+   :width: 1.5em
 .. |projectProperties| image:: /static/common/mActionProjectProperties.png
    :width: 1.5em
 .. |projectionDisabled| image:: /static/common/mIconProjectionDisabled.png
    :width: 1.5em
 .. |projectionEnabled| image:: /static/common/mIconProjectionEnabled.png
-   :width: 1.5em
-.. |processing| image:: /static/common/processingAlgorithm.png
-   :width: 1.5em
-.. |processingHistory| image:: /static/common/history.png
-   :width: 2em
-.. |processingModel| image:: /static/common/processingModel.png
-   :width: 1.5em
-.. |processingResult| image:: /static/common/processingResult.png
    :width: 1.5em
 .. |pyramids| image:: /static/common/pyramids.png
    :width: 1.5em
@@ -996,6 +1003,8 @@ Icon                            Substitution                        Icon        
 .. |render| image:: /static/common/render.png
    :width: 1.5em
 .. |rendering| image:: /static/common/rendering.png
+   :width: 1.5em
+.. |rendering_mesh| image:: /static/common/mesh_rendering.png
    :width: 1.5em
 .. |reshape| image:: /static/common/mActionReshape.png
    :width: 1.5em
@@ -1096,9 +1105,9 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |start| image:: /static/common/mActionStart.png
    :width: 1.5em
-.. |stylePreset| image:: /static/common/stylepreset.png
-   :width: 1.5em
 .. |styleManager| image:: /static/common/mActionStyleManager.png
+   :width: 1.5em
+.. |stylePreset| image:: /static/common/stylepreset.png
    :width: 1.5em
 .. |success| image:: /static/common/mIconSuccess.png
    :width: 1em
@@ -1139,6 +1148,10 @@ Icon                            Substitution                        Icon        
 .. |unlocked| image:: /static/common/unlocked.png
    :width: 1.5em
 .. |vectorGrid| image:: /static/common/vector_grid.png
+   :width: 1.5em
+.. |vector_active| image:: /static/common/vector_active.png
+   :width: 2em
+.. |vector_inactive| image:: /static/common/vector_inactive.png
    :width: 1.5em
 .. |vertexTool| image:: /static/common/mActionVertexTool.png
    :width: 1.5em
