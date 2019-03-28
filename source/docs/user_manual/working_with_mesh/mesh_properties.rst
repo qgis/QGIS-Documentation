@@ -1,6 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
 
 .. _`label_meshdata`:
 
@@ -157,10 +154,10 @@ including:
 Use the :guilabel:`Assign Extra Dataset to Mesh` button to add more groups
 to the current mesh layer.
 
-Symbology
----------
+Style
+-----
 
-Click the |symbology| :guilabel:`Symbology` button to activate the dialog
+Click the |symbology| :guilabel:`Style` button to activate the dialog
 as shown in the following image:
 
 
@@ -169,9 +166,9 @@ as shown in the following image:
 .. figure:: img/mesh_symbology.png
    :align: center
 
-   Mesh Layer Symbology
+   Mesh Layer Style
 
-Symbology properties are divided in several tabs:
+Style properties are divided in several tabs:
 
 * :ref:`General <mesh_symbology_general>`
 * :ref:`Contours Symbology <mesh_symbology_contours>`
@@ -191,7 +188,8 @@ The tab |general| presents the following items:
 * :ref:`blending mode <blend-modes>` available for the selected dataset.
 
 
-The slider |slider|, combo box |selectString| and |groupsexploring| buttons allow to explore another dimension of the data, if available.
+The slider |slider|, combo box |selectString| and |groupsexploring| buttons
+allow to explore another dimension of the data, if available.
 As the slider moves, the metadata is presented accordingly.
 See the figure :ref:`Mesh groups <figure_mesh_groups>` below as an example.
 The map canvas will display the selected dataset group as well.
@@ -202,7 +200,6 @@ The map canvas will display the selected dataset group as well.
    :align: center
 
    Dataset in Selected Group(s)
-
 
 
 You can apply symbology to each group using the tabs.
