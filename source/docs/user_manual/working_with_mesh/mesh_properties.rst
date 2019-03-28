@@ -317,32 +317,33 @@ The line width and color can be changed in this dialog, and both the grid render
 
 .. |addMeshLayer| image:: /static/common/mActionAddMeshLayer.png
    :width: 1.5em
-.. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
-   :width: 1.5em
-.. |setProjection| image:: /static/common/mActionSetProjection.png
-   :width: 1.5em
-.. |symbology| image:: /static/common/symbology.png
-   :width: 2em
-.. |signMinus| image:: /static/common/symbologyRemove.png
-   :width: 1.5em
-.. |signPlus| image:: /static/common/symbologyAdd.png
-   :width: 1.5em
-.. |general| image:: /static/common/general.png
-   :width: 2em
-.. |rendering_mesh| image:: /static/common/mesh_rendering.png
-   :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
 .. |contour_active| image:: /static/common/contours_active.png
    :width: 1.5em
 .. |contour_inactive| image:: /static/common/contours_inactive.png
    :width: 2em
+.. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
+   :width: 1.5em
+.. |general| image:: /static/common/general.png
+   :width: 2em
+.. |groupsexploring| image:: /static/common/mesh_groups_explore.png
+   :width: 1.5em
+.. |rendering_mesh| image:: /static/common/mesh_rendering.png
+   :width: 1.5em
+.. |selectString| image:: /static/common/selectstring.png
+   :width: 2.5em
+.. |setProjection| image:: /static/common/mActionSetProjection.png
+   :width: 1.5em
+.. |signMinus| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |slider| image:: /static/common/slider.png
+.. |symbology| image:: /static/common/symbology.png
+   :width: 2em
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |vector_active| image:: /static/common/vector_active.png
    :width: 2em
 .. |vector_inactive| image:: /static/common/vector_inactive.png
    :width: 1.5em
-.. |groupsexploring| image:: /static/common/mesh_groups_explore.png
-   :width: 1.5em
-.. |checkbox| image:: /static/common/checkbox.png
-   :width: 1.5em
-.. |slider| image:: /static/common/slider.png
-.. |selectString| image:: /static/common/selectstring.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

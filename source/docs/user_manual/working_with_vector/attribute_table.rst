@@ -966,8 +966,8 @@ table.
   Avoid using multiple fields in the primary key in a pivot table. QGIS assumes a single 
   primary key so a constraint like ``constraint airports_airlines_pkey primary key (airport_fk, airline_fk)``
   will not work.
-    
-  
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
