@@ -12,12 +12,14 @@ Writing new Processing algorithms as Python scripts
 
 There are two options for writing Processing algorithms using Python.
 
-* Extending :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`
+* Extending
+  :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`
 * Using the @alg decorator
 
 Within QGIS, you can use :guilabel:`Create new script` in the
-:guilabel:`Scripts` menu at the top of the :guilabel:`Processing Toolbox` to
-open the :guilabel:`Processing Script Editor` where you can write your code.
+:guilabel:`Scripts` menu at the top of the :guilabel:`Processing Toolbox`
+to open the :guilabel:`Processing Script Editor` where you can write
+your code.
 To simplify the task, you can start with a script template by using
 :guilabel:`Create new script from template` from the same menu.
 This opens a template that extends
@@ -30,9 +32,9 @@ become available in the :guilabel:`Processing Toolbox`.
 Extending QgsProcessingAlgorithm
 --------------------------------
 
-The following code takes a vector layer, counts the number of features, does a
-buffer operation and creates a raster layer from the result of the buffer
-operation.
+The following code takes a vector layer, counts the number of features,
+does a buffer operation and creates a raster layer from the result of
+the buffer operation.
 The buffer layer, raster layer and number of features are returned.
 
 .. testcode:: 
@@ -47,7 +49,8 @@ The buffer layer, raster layer and number of features are returned.
                            QgsProcessingParameterVectorDestination,
                            QgsProcessingParameterRasterDestination)
     import processing
-    
+
+
     class ExampleProcessingAlgorithm(QgsProcessingAlgorithm):
         """
         This is an example algorithm that takes a vector layer,
@@ -61,11 +64,15 @@ The buffer layer, raster layer and number of features are returned.
             return QCoreApplication.translate('Processing', string)
     
         def createInstance(self):
+            # createInstance must return a new copy of your algorithm.
+            # If you change the name of the class, make sure you also
+            # update the the value returned here to match!
             return ExampleProcessingAlgorithm()
     
         def name(self):
             """
-            Returns the algorithm name, used for identifying the algorithm.
+            Returns the unique algorithm name, used for identifying
+            the algorithm.
             """
             return 'bufferrasterextend'
     
@@ -83,13 +90,14 @@ The buffer layer, raster layer and number of features are returned.
     
         def groupId(self):
             """
-            Returns the unique ID of the group this algorithm belongs to.
+            Returns the unique ID of the group this algorithm belongs
+            to.
             """
             return 'examplescripts'
     
         def shortHelpString(self):
             """
-            Returns a localised short helper string for the algorithm.
+            Returns a localised short help string for the algorithm.
             """
             return self.tr('Example algorithm short description')
     
@@ -97,7 +105,8 @@ The buffer layer, raster layer and number of features are returned.
             """
             Here we define the inputs and outputs of the algorithm.
             """
-            # 'INPUT' is the recommended name for the main input parameter
+            # 'INPUT' is the recommended name for the main input
+            # parameter.
             self.addParameter(
                 QgsProcessingParameterFeatureSource(
                     'INPUT',
@@ -107,35 +116,39 @@ The buffer layer, raster layer and number of features are returned.
             )
             self.addParameter(
                 QgsProcessingParameterVectorDestination(
-                    'BUFFER',
-                    self.tr('BUFFER'),
+                    'BUFFER_OUTPUT',
+                    self.tr('Buffer output'),
                 )
             )
-            # 'OUTPUT' is the recommended name for the main output parameter
+            # 'OUTPUT' is the recommended name for the main output
+            # parameter.
             self.addParameter(
                 QgsProcessingParameterRasterDestination(
                     'OUTPUT', # 'OUTPUT' is recommended for the main input
-                    self.tr('OUTPUT')
+                    self.tr('Raster output')
                 )
             )
             self.addParameter(
                 QgsProcessingParameterDistance(
                     'BUFFERDIST',
                     self.tr('BUFFERDIST'),
-                    defaultValue = 1
+                    defaultValue = 1.0,
+                    # Make distance units match the INPUT layer units:
+                    parentParameterName='INPUT'
                 )
             )
             self.addParameter(
                 QgsProcessingParameterDistance(
                     'CELLSIZE',
                     self.tr('CELLSIZE'),
-                    defaultValue = 10
+                    defaultValue = 10.0,
+                    parentParameterName='INPUT'
                 )
             )
             self.addOutput(
                 QgsProcessingOutputNumber(
                     'NUMBEROFFEATURES',
-                    self.tr('NUMBEROFFEATURES')
+                    self.tr('Number of features processed')
                 )
             )
     
@@ -143,39 +156,109 @@ The buffer layer, raster layer and number of features are returned.
             """
             Here is where the processing itself takes place.
             """
-            input_featuresource = self.parameterAsSource(parameters, 'INPUT',
-                                                     context)
+            # First, we get the count of features from the INPUT layer.
+            # This layer is defined as a QgsProcessingParameterFeatureSource
+            # parameter, so its value is retrieved by calling
+            # self.parameterAsSource.
+            input_featuresource = self.parameterAsSource(parameters,
+                                                         'INPUT',
+                                                         context)
             numfeatures = input_featuresource.featureCount()
-            buffer_layer_path = self.parameterAsOutputLayer(parameters, 'BUFFER',
-                                                      context)
-            output_raster_path = self.parameterAsOutputLayer(parameters, 'OUTPUT',
-                                                       context)
-            bufferdist = self.parameterAsDouble(parameters, 'BUFFERDIST', context)
+            buffer_layer_path = self.parameterAsOutputLayer(parameters,
+                                                            'BUFFER_OUTPUT',
+                                                            context)
+            # Retrieve the buffer distance and raster cell size numeric
+            # values.
+            # Since these are numeric values, they are retrieved using
+            # self.parameterAsDouble.
+            bufferdist = self.parameterAsDouble(parameters, 'BUFFERDIST',
+                                                context)
             rastercellsize = self.parameterAsDouble(parameters, 'CELLSIZE',
                                                     context)
             if feedback.isCanceled():
-                return {'OUTPUT': None, 'BUFFER': None,
+                return {'OUTPUT': None, 'BUFFER_OUTPUT': None,
                         'NUMBEROFFEATURES': numfeatures}
             buffer_result = processing.run('native:buffer',
-                                   {'INPUT': input_featuresource, 'OUTPUT': buffer_layer_path,
-                                    'DISTANCE': bufferdist, 'SEGMENTS': 10, 
-                                    'DISSOLVE': True, 'END_CAP_STYLE': 0,
-                                    'JOIN_STYLE': 0, 'MITER_LIMIT': 10
+                                   {
+                                    # Here we pass on the original
+                                    # parameter values of INPUT and
+                                    # BUFFER_OUTPUT to the buffer
+                                    # algorithm, way that particular
+                                    # algorithm requires.
+                                    'INPUT': parameters['INPUT'],
+                                    'OUTPUT': parameters['BUFFER_OUTPUT'],
+                                    'DISTANCE': bufferdist,
+                                    'SEGMENTS': 10, 
+                                    'DISSOLVE': True,
+                                    'END_CAP_STYLE': 0,
+                                    'JOIN_STYLE': 0,
+                                    'MITER_LIMIT': 10
                                     },
-                                   is_child_algorithm=True, context=context,
+                                   # Because the buffer algorithm is being
+                                   # run as a step in another larger algorithm,
+                                   # the is_child_algorithm option should be
+                                   # set to True
+                                   is_child_algorithm=True,
+                                   # It's important to pass on the context and
+                                   # feedback objects to child algorithms, so
+                                   # that they can properly give feedback to
+                                   # users and handle cancelation requests.
+                                   context=context,
+                                   feedback=feedback)
+            # It's good practice to check for cancelation as much as is sensibly
+            # possible!
+            # Doing so allows for responsive cancelation, instead of forcing users
+            # to wait for unwanted processing to occur.
+            if feedback.isCanceled():
+                return {}
+            # Run the separate rasterization algorithm using the buffer result as
+            # an input.
+            rasterized_result = processing.run('qgis:rasterize',
+                                   {
+                                    # Here we pass the 'OUTPUT' value from the
+                                    # buffer's result dictionary off to the
+                                    # rasterize child algorithm.
+                                    # This dictionary value contains everything
+                                    # the child algorithm needs to know to retrieve
+                                    # the correct output layer from the buffer step.
+                                    'LAYER': buffer_result['OUTPUT'],
+                                    # The rasterize 'EXTENT' parameter is a
+                                    # QgsProcessingParameterExtent type.
+                                    # Extent parameters accept a wide range of
+                                    # input value types, including QgsRectangle
+                                    # values, comma separated strings of x/y
+                                    # min/max values, and also layer values.
+                                    # When a layer value is used, then the full
+                                    # extent of that layer will be used as the
+                                    # extent parameter value.
+                                    # It's a handy shortcut to ensure that the
+                                    # rasterize algorithm creates a raster which
+                                    # covers the full extent of the buffered output
+                                    # layer.
+                                    # Use processing.algorithmHelp to see detailed
+                                    # documentation on all the possible input
+                                    # values which the parameters for a particular
+                                    # algorithm will accept.
+                                    'EXTENT': buffer_result['OUTPUT'],
+                                    'MAP_UNITS_PER_PIXEL': rastercellsize,
+                                    # Just like input values, output/destination
+                                    # style parameters should be passed using their
+                                    # original parameter value to child algorithms.
+                                    # There's no need to evaluate these values in
+                                    # advance!
+                                    'OUTPUT': parameters['OUTPUT']
+                                   },
+                                   is_child_algorithm=True,
+                                   context=context,
                                    feedback=feedback)
             if feedback.isCanceled():
-                return {'OUTPUT': None, 'BUFFER': buffer_result['OUTPUT'],
-                        'NUMBEROFFEATURES': numfeatures}
-            rasterized_result = processing.run('qgis:rasterize',
-                                   {'LAYER': buffer_layer_path, 'EXTENT': buffer_result['OUTPUT'],
-                                    'MAP_UNITS_PER_PIXEL': rastercellsize,
-                                    'OUTPUT': output_raster_path
-                                   },
-                                   is_child_algorithm=True, context=context,
-                                   feedback=feedback)
+                return {}
+            # Our successful algorithm should return values for all the output
+            # parameters it has defined. In this case, that's the buffer and
+            # rasterized output layers, and the count of features processed.
+            # The dictionary keys here match the original parameter/output name.
             return {'OUTPUT': rasterized_result['OUTPUT'],
-                    'BUFFER': buffer_result['OUTPUT'],
+                    'BUFFER_OUTPUT': buffer_result['OUTPUT'],
                     'NUMBEROFFEATURES': numfeatures}
  
 The @alg decorator
@@ -202,51 +285,66 @@ The buffer layer, raster layer and number of features are returned.
     from qgis.processing import alg
     from qgis.core import QgsProject
     
-    @alg(name='bufferrasteralg', label='Buffer and export to raster (alg)', group='examplescripts',
-         group_label='Example scripts')
+    @alg(name='bufferrasteralg', label='Buffer and export to raster (alg)',
+         group='examplescripts', group_label='Example scripts')
     # 'INPUT' is the recommended name for the main input parameter
     @alg.input(type=alg.SOURCE, name='INPUT', label='Input vector layer')
     # 'OUTPUT' is the recommended name for the main output parameter
-    @alg.input(type=alg.RASTER_LAYER_DEST, name='OUTPUT', label='OUTPUT')
-    @alg.input(type=alg.VECTOR_LAYER_DEST, name='BUFFER', label='BUFFER')
-    @alg.input(type=alg.DISTANCE, name='BUFFERDIST', label='BUFFER DISTANCE', default=1.0)
-    @alg.input(type=alg.DISTANCE, name='CELLSIZE', label='RASTER CELL SIZE', default=10.0)
-    @alg.output(type=alg.NUMBER, name='NUMBEROFFEATURES', label='NUMBEROFFEATURES')
+    @alg.input(type=alg.RASTER_LAYER_DEST, name='OUTPUT',
+               label='Raster output')
+    @alg.input(type=alg.VECTOR_LAYER_DEST, name='BUFFER_OUTPUT',
+               label='Buffer output')
+    @alg.input(type=alg.DISTANCE, name='BUFFERDIST', label='BUFFER DISTANCE',
+               default=1.0)
+    @alg.input(type=alg.DISTANCE, name='CELLSIZE', label='RASTER CELL SIZE',
+               default=10.0)
+    @alg.output(type=alg.NUMBER, name='NUMBEROFFEATURES',
+                label='Number of features processed')
     
     def bufferrasteralg(instance, parameters, context, feedback, inputs):
         """
         Description of the algorithm.
         (If there is no comment here, you will get an error)
         """
-        input_featuresource = instance.parameterAsSource(parameters, 'INPUT', context)
-        numfeatures = inputlayer.featureCount()
-        buffer_layer_path = instance.parameterAsOutputLayer(parameters, 'BUFFER', context)
-        output_raster_path = instance.parameterAsOutputLayer(parameters, 'OUTPUT', context)
-        bufferdist = instance.parameterAsDouble(parameters, 'BUFFERDIST', context)
-        rastercellsize = instance.parameterAsDouble(parameters, 'CELLSIZE', context)
+        input_featuresource = instance.parameterAsSource(parameters,
+                                                         'INPUT', context)
+        numfeatures = input_featuresource.featureCount()
+        buffer_layer_path = instance.parameterAsOutputLayer(parameters,
+                                                            'BUFFER_OUTPUT',
+                                                            context)
+        bufferdist = instance.parameterAsDouble(parameters, 'BUFFERDIST',
+                                                context)
+        rastercellsize = instance.parameterAsDouble(parameters, 'CELLSIZE',
+                                                    context)
         if feedback.isCanceled():
-            return {'OUTPUT': None, 'BUFFER': None,
-                    'NUMBEROFFEATURES': numfeatures}
+            return {}
         buffer_result = processing.run('native:buffer',
-                                   {'INPUT': inputlayer, 'OUTPUT': buffer_layer_path,
-                                    'DISTANCE': bufferdist, 'SEGMENTS': 10, 
-                                    'DISSOLVE': True, 'END_CAP_STYLE': 0,
-                                    'JOIN_STYLE': 0, 'MITER_LIMIT': 10
+                                   {'INPUT': parameters['INPUT'],
+                                    'OUTPUT': buffer_layer_path,
+                                    'DISTANCE': bufferdist,
+                                    'SEGMENTS': 10, 
+                                    'DISSOLVE': True,
+                                    'END_CAP_STYLE': 0,
+                                    'JOIN_STYLE': 0,
+                                    'MITER_LIMIT': 10
                                     },
-                                   is_child_algorithm=True, context=context,
+                                   is_child_algorithm=True,
+                                   context=context,
                                    feedback=feedback)
         if feedback.isCanceled():
-            return {'OUTPUT': None, 'BUFFER': buffer_result['OUTPUT'],
-                    'NUMBEROFFEATURES': numfeatures}
+            return {}
         rasterized_result = processing.run('qgis:rasterize',
-                                   {'LAYER': buffer_layer_path, 'EXTENT': buffer_result['OUTPUT'],
+                                   {'LAYER': buffer_result['OUTPUT'],
+                                    'EXTENT': buffer_result['OUTPUT'],
                                     'MAP_UNITS_PER_PIXEL': rastercellsize,
-                                    'OUTPUT': output_raster_path
+                                    'OUTPUT': parameters['OUTPUT']
                                    },
                                    is_child_algorithm=True, context=context,
                                    feedback=feedback)
+        if feedback.isCanceled():
+            return {}
         return {'OUTPUT': rasterized_result['OUTPUT'],
-                'BUFFER': buffer_result['OUTPUT'],
+                'BUFFER_OUTPUT': buffer_result['OUTPUT'],
                 'NUMBEROFFEATURES': numfeatures}
 
 As you can see, it involves two algorithms ('native:buffer' and
@@ -282,7 +380,8 @@ Processing and their corresponding alg decorator constants
      - Description
    * - :class:`QgsProcessingParameterAuthConfig <qgis.core.QgsProcessingParameterAuthConfig>`
      - ``alg.AUTH_CFG``
-     - Allows users to select from available authentication configurations or create new authentication configurations.
+     - Allows users to select from available authentication configurations or
+       create new authentication configurations.
    * - :class:`QgsProcessingParameterBand <qgis.core.QgsProcessingParameterBand>`
      - ``alg.BAND``
      - A band of a raster layer.
@@ -394,8 +493,8 @@ algorithm is used as part of a model.
 Communicating with the user
 ---------------------------
 
-If your algorithm takes a long time to process, it is a good idea to inform the
-user about the progress.  You can use ``feedback``
+If your algorithm takes a long time to process, it is a good idea to
+inform the user about the progress.  You can use ``feedback``
 (:class:`QgsProcessingFeedback <qgis.core.QgsProcessingFeedback>`) for this.
 
 The progress text and progressbar can be updated using two methods:
@@ -427,8 +526,8 @@ You can document your scripts by overloading the
 Flags
 -----
 
-You can override the :meth:`flags <qgis.core.QgsProcessingAlgorithm.flags>` method of
-:class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`
+You can override the :meth:`flags <qgis.core.QgsProcessingAlgorithm.flags>`
+method of :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`
 to tell QGIS more about your algorithm.
 You can for instance tell QGIS that the script shall be hidden from
 the modeler, that it can be canceled, that it is not thread safe,
@@ -446,8 +545,8 @@ and more.
 Best practices for writing script algorithms
 --------------------------------------------
 
-Here's a quick summary of ideas to consider when creating your script algorithms
-and, especially, if you want to share them with other QGIS users.
+Here's a quick summary of ideas to consider when creating your script
+algorithms and, especially, if you want to share them with other QGIS users.
 Following these simple rules will ensure consistency across the different
 Processing elements such as the toolbox, the modeler or the batch processing
 interface.
@@ -455,8 +554,9 @@ interface.
 * Do not load resulting layers. Let Processing handle your results and load
   your layers if needed.
 * Always declare the outputs your algorithm creates.
-* Do not show message boxes or use any GUI element from the script. If you want
-  to communicate with the user, use the methods of the feedback object
+* Do not show message boxes or use any GUI element from the script.
+  If you want to communicate with the user, use the methods of the
+  feedback object
   (:class:`QgsProcessingFeedback <qgis.core.QgsProcessingFeedback>`) or
   throw a :class:`QgsProcessingException <qgis.core.QgsProcessingException>`.
 
