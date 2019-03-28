@@ -1,5 +1,3 @@
-.. only:: html
-
 
 .. _qgis.documentation.whatsnew:
 
@@ -18,11 +16,3 @@ You may also review the visual changelogs at https://qgis.org/en/site/forusers/v
 
 .. |QGIS_CURRENT| replace:: QGIS 3.4
 .. _QGIS_CURRENT: https://docs.qgis.org/3.4/en/docs/
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-

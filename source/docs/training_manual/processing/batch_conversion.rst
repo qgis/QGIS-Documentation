@@ -90,11 +90,3 @@ results in this case.
 
 Click on *OK* and the batch process will be run. If everything went fine,
 all your layers will have been processed, and 3 new layers would have been created.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-

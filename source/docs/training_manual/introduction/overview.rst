@@ -173,19 +173,19 @@ to you and start improving on your map! This is the topic of the next lesson.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |favourites| image:: /static/common/mIconFavourites.png
-   :width: 1.5em
 .. |LS| replace:: Lesson:
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/global/basic.png
-.. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
+.. |favourites| image:: /static/common/mIconFavourites.png
    :width: 1.5em
-.. |qgsProjectFile| image:: /static/common/mIconQgsProjectFile.png
+.. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
    :width: 1.5em
 .. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em
 .. |measure| image:: /static/common/mActionMeasure.png
+   :width: 1.5em
+.. |qgsProjectFile| image:: /static/common/mIconQgsProjectFile.png
    :width: 1.5em
 .. |zoomToLayer| image:: /static/common/mActionZoomToLayer.png
    :width: 1.5em

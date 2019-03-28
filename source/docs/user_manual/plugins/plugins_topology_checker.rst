@@ -87,11 +87,3 @@ On **polygon layers**, the following rules are available:
 * **Must not overlap with**: Adjacent polygons from one layer should not share
   common area with polygons from another layer.
 
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-

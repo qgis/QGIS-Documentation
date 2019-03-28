@@ -35,11 +35,3 @@ For definitions of ``~`` and ``(UserProfile)`` see :ref:`core_and_external_plugi
 
     By setting `QGIS_PLUGINPATH` to an existing directory path, you can add this
     path to the list of paths that are searched for plugins.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-

@@ -2091,7 +2091,7 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |annotation| image:: /static/common/mActionAnnotation.png
    :width: 1.5em
-.. |atlasNext|  image:: /static/common/mActionAtlasNext.png
+.. |atlasNext| image:: /static/common/mActionAtlasNext.png
    :width: 1.5em
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
@@ -2159,7 +2159,7 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |hideSelectedLayers| image:: /static/common/mActionHideSelectedLayers.png
    :width: 1.5em
-.. |history|  image:: /static/common/mActionHistory.png
+.. |history| image:: /static/common/mActionHistory.png
    :width: 1.5em
 .. |htmlAnnotation| image:: /static/common/mActionHtmlAnnotation.png
    :width: 1.5em

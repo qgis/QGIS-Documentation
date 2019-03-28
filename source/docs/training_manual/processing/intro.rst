@@ -17,11 +17,3 @@ For a more systematic description of all the framework components and their usag
 All the exercises in this guide use free data set that can be downloaded from the `QGIS website <https://qgis.org/downloads/data/>`_. The zip file to download contains several folders corresponding to each one of the lessons in this guide. In each of them you will find a QGIS project file. Just open it and you will be ready to start the lesson.
 
 Enjoy!
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-

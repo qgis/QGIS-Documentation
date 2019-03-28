@@ -205,15 +205,15 @@ For :guilabel:`APIs` you can specify:
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |helpContents| image:: /static/common/mActionHelpContents.png
-   :width: 1.5em
 .. |clearConsole| image:: /static/common/iconClearConsole.png
    :width: 1.5em
+.. |helpContents| image:: /static/common/mActionHelpContents.png
+   :width: 1.5em
+.. |options| image:: /static/common/mActionOptions.png
+   :width: 1em
 .. |runConsole| image:: /static/common/iconRunConsole.png
    :width: 1.5em
 .. |showEditorConsole| image:: /static/common/iconShowEditorConsole.png
    :width: 1.5em
-.. |options| image:: /static/common/mActionOptions.png
-   :width: 1em
 .. |start| image:: /static/common/mActionStart.png
    :width: 1.5em

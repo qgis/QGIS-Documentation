@@ -248,11 +248,3 @@ In the :guilabel:`General` group of the processing config dialog you will find t
 entries named :guilabel:`Pre-execution script file` and :guilabel:`Post-execution
 script file` where the filename of the scripts to be run in each case can be
 entered.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-

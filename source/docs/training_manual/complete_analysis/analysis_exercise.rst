@@ -760,6 +760,7 @@ cartography in creating your output map.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |LS| replace:: Lesson:
 .. |addOgrLayer| image:: /static/common/mActionAddOgrLayer.png
    :width: 1.5em
 .. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
@@ -768,4 +769,3 @@ cartography in creating your output map.
    :width: 1.3em
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
    :width: 1.5em
-.. |LS| replace:: Lesson:

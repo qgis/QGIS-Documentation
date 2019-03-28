@@ -46,11 +46,3 @@ is explained in a later chapter in this manual.
 If you have reached this point, now you are ready to use geoalgorithms. There is
 no need to configure anything else by now. We can already run our first algorithm,
 which we will do in the next lesson.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-

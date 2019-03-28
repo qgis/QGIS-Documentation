@@ -200,11 +200,3 @@ More info:
 
 https://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-files/
 https://linuxaria.com/article/open-files-in-linux
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-

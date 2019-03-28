@@ -32,11 +32,3 @@ Finally, we convert to a vector:
 - :menuselection:`GRASS --> r.to.vect` [Feature type: area; Smooth corners: yes]
 
 **Exercise for the reader**: repeat the analysis, replacing GRASS commands with analogous from other programs.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
