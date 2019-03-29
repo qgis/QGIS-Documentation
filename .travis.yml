@@ -2,6 +2,9 @@ language: python
 python:
   - "3.5"
 
+services:
+  - docker
+
 cache:
   apt: true
   pip: true
@@ -50,7 +53,7 @@ install:
 
 script:
   - make html
-  - make doctest
+  - make -f docker.mk doctest
 
 #after_success:
 #  - ./scripts/ci/deploy-docs.sh
