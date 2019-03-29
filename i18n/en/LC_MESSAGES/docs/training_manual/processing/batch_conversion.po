@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project testing\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-28 10:31+0100\n"
+"POT-Creation-Date: 2019-03-30 00:23+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,16 +19,20 @@ msgstr ""
 "Generated-By: Babel 2.5.1\n"
 
 #: ../../source/docs/training_manual/processing/batch_conversion.rst:6
+msgid "|updatedisclaimer|"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/batch_conversion.rst:9
 msgid "The batch processing interface"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/batch_conversion.rst:8
+#: ../../source/docs/training_manual/processing/batch_conversion.rst:11
 msgid ""
 "This lesson introduces the batch processing interface, which allows to "
 "execute a single algorithm with a set of different input values."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/batch_conversion.rst:10
+#: ../../source/docs/training_manual/processing/batch_conversion.rst:14
 msgid ""
 "Sometimes a given algorithm has to be executed repeteadly with different "
 "inputs. This is, for instance, the case when a set of input files have to"
@@ -36,7 +40,7 @@ msgid ""
 "given projection must be converted into another projection."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/batch_conversion.rst:12
+#: ../../source/docs/training_manual/processing/batch_conversion.rst:19
 msgid ""
 "In that case, calling the algorithm repeatedly on the toolbox is not the "
 "best option. Instead, the batch processing interface should be used, "
@@ -46,13 +50,13 @@ msgid ""
 "select *Run as batch process*."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/batch_conversion.rst:16
+#: ../../source/docs/training_manual/processing/batch_conversion.rst:27
 msgid ""
 "For this example, we will use the *Reproject algorithm*, so find it and "
 "do as described above. You will get to the following dialog."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/batch_conversion.rst:20
+#: ../../source/docs/training_manual/processing/batch_conversion.rst:32
 msgid ""
 "If you have a look at the data for this lesson, you will see that it "
 "contains a set of three shapefiles, but no QGIS project file. This is "
@@ -62,7 +66,7 @@ msgid ""
 "the layers in a given folder."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/batch_conversion.rst:22
+#: ../../source/docs/training_manual/processing/batch_conversion.rst:38
 msgid ""
 "Each row in the table of the batch processing dialog represents a single "
 "execution of the algorithm. Cells in a row correspond to the parameter "
@@ -70,14 +74,14 @@ msgid ""
 "in the normal single--execution dialog, but horizontally in that row."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/batch_conversion.rst:24
+#: ../../source/docs/training_manual/processing/batch_conversion.rst:43
 msgid ""
 "Defining the batch process to run is one by filling the table with the "
 "corresponding values, and the dialog itself contains several tools to "
 "make this task easier."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/batch_conversion.rst:26
+#: ../../source/docs/training_manual/processing/batch_conversion.rst:47
 msgid ""
 "Let's start filling the fields one by one. The first column to fill is "
 "the *Input layer* one. Instead of entering the names of each one of the "
@@ -88,7 +92,7 @@ msgid ""
 "ones will be used to fill the rows underneath."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/batch_conversion.rst:30
+#: ../../source/docs/training_manual/processing/batch_conversion.rst:57
 msgid ""
 "The default number of rows is 3, which is exactly the number of layers we"
 " have to convert, but if you select more layers, new rows will be added "
@@ -96,7 +100,7 @@ msgid ""
 " rows using the *Add row* button."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/batch_conversion.rst:32
+#: ../../source/docs/training_manual/processing/batch_conversion.rst:61
 msgid ""
 "We are going to convert all those layers to the EPSG:23029 CRS, so we "
 "have to select that CRS in the second field. We want the same on for all "
@@ -107,7 +111,7 @@ msgid ""
 "top cell."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/batch_conversion.rst:36
+#: ../../source/docs/training_manual/processing/batch_conversion.rst:70
 msgid ""
 "Finally, we have to select an output file for each execution, which will "
 "contain the corresponding reprojected layer. Once again, let's do it just"
@@ -116,14 +120,14 @@ msgid ""
 "instance, ``reprojected.shp``)."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/batch_conversion.rst:38
+#: ../../source/docs/training_manual/processing/batch_conversion.rst:75
 msgid ""
 "Now, when you click *OK* on the file selection dialog, the file does not "
 "automatically gets written to the cell, but an input box like the "
 "following one is shown instead."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/batch_conversion.rst:42
+#: ../../source/docs/training_manual/processing/batch_conversion.rst:81
 msgid ""
 "If you select the first option, only the current cell will be filled. If "
 "you select any of the other ones, all the rows below will be filled with "
@@ -135,14 +139,14 @@ msgid ""
 "like this."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/batch_conversion.rst:46
+#: ../../source/docs/training_manual/processing/batch_conversion.rst:91
 msgid ""
 "The last column sets whether or not to add the resulting layers to the "
 "current QGIS project. Leave the default *Yes* option, so you can see your"
 " results in this case."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/batch_conversion.rst:48
+#: ../../source/docs/training_manual/processing/batch_conversion.rst:95
 msgid ""
 "Click on *OK* and the batch process will be run. If everything went fine,"
 " all your layers will have been processed, and 3 new layers would have "

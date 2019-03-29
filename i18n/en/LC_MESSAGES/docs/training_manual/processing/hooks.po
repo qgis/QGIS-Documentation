@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project testing\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-28 10:31+0100\n"
+"POT-Creation-Date: 2019-03-30 00:23+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,45 +19,49 @@ msgstr ""
 "Generated-By: Babel 2.5.1\n"
 
 #: ../../source/docs/training_manual/processing/hooks.rst:6
+msgid "|updatedisclaimer|"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/hooks.rst:9
 msgid "Pre- and post-execution script hooks"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/hooks.rst:8
+#: ../../source/docs/training_manual/processing/hooks.rst:11
 msgid ""
 "This lesson shows how to use pre- and post-execution hooks, which allow "
 "to perform additional operations before and after actual processing."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/hooks.rst:11
+#: ../../source/docs/training_manual/processing/hooks.rst:14
 msgid ""
 "Pre- and post-execution hooks are Processing scripts that run before and "
 "after actual data processing is performed. This can be used to automate "
 "tasks that should be performed whenever an algorithm is executed."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/hooks.rst:15
+#: ../../source/docs/training_manual/processing/hooks.rst:18
 msgid ""
 "The syntax of the hooks is identical to the syntax of Processing scripts,"
 " see the corresponding `chapter "
-"<http://docs.qgis.org/testing/en/docs/user_manual/processing/console.html>`_"
+"<https://docs.qgis.org/testing/en/docs/user_manual/processing/console.html>`_"
 " in the QGIS User Guide for more details."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/hooks.rst:19
+#: ../../source/docs/training_manual/processing/hooks.rst:22
 msgid ""
 "In addition to all scripts features, in hooks you can use a special "
 "global variable named ``alg``, which represents the algorithm that has "
 "just been (or is about to be) executed."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/hooks.rst:23
+#: ../../source/docs/training_manual/processing/hooks.rst:26
 msgid ""
 "Here is an example post-execution script. By default, Processing stores "
 "analysis results in temporary files. This script will copy outputs to a "
 "specific directory, so they won't be deleted after closing QGIS."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/hooks.rst:40
+#: ../../source/docs/training_manual/processing/hooks.rst:43
 msgid ""
 "In the first two lines we import the required Python packages: ``os`` ---"
 " for path manipulations, e.g. extracting file name, and ``shutil`` --- "
@@ -66,13 +70,13 @@ msgid ""
 " in this lesson."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/hooks.rst:45
+#: ../../source/docs/training_manual/processing/hooks.rst:48
 msgid ""
 "Then we define a ``MY_DIRECTORY`` constant, which is the path to the "
 "directory where we want to copy analysis results."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/hooks.rst:48
+#: ../../source/docs/training_manual/processing/hooks.rst:51
 msgid ""
 "At the end of the script, we have the main hook code. In the loop we "
 "iterate over all algorithm outputs and check if this output is a file-"
@@ -81,7 +85,7 @@ msgid ""
 "directory."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/hooks.rst:53
+#: ../../source/docs/training_manual/processing/hooks.rst:56
 msgid ""
 "To activate this hook we neeed to open the Processing options, find the "
 "entry named *Post-execution script file* in the *General* group, and "
@@ -89,19 +93,19 @@ msgid ""
 " executed after each Processing algorithm."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/hooks.rst:57
+#: ../../source/docs/training_manual/processing/hooks.rst:60
 msgid ""
 "In a similar way, we can implement pre-execution hooks. For example, "
 "let's create a hook to check input vectors for geometry errors."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/hooks.rst:73
+#: ../../source/docs/training_manual/processing/hooks.rst:76
 msgid ""
 "As in the previous example, first we import required QGIS and Processing "
 "packages."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/hooks.rst:76
+#: ../../source/docs/training_manual/processing/hooks.rst:79
 msgid ""
 "Then we iterate over all the algorithm parameters and if a "
 "ParameterVector parameter is found, we get the corresponding vector layer"
@@ -110,10 +114,20 @@ msgid ""
 "geometry, we print a warning message."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/hooks.rst:80
+#: ../../source/docs/training_manual/processing/hooks.rst:83
 msgid ""
 "To activate this hook we need enter its filename in the *Pre-execution "
 "script file* option in the Processing configuration dialog. The hook will"
 " be executed before running any Processing algorithm."
 msgstr ""
+
+#~ msgid ""
+#~ "The syntax of the hooks is "
+#~ "identical to the syntax of Processing"
+#~ " scripts, see the corresponding `chapter"
+#~ " "
+#~ "<http://docs.qgis.org/testing/en/docs/user_manual/processing/console.html>`_"
+#~ " in the QGIS User Guide for "
+#~ "more details."
+#~ msgstr ""
 

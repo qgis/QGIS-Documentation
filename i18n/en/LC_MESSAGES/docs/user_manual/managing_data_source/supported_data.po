@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project testing\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-28 10:31+0100\n"
+"POT-Creation-Date: 2019-03-30 00:23+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,19 +18,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.1\n"
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:7
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:6
 msgid "|updatedisclaimer|"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:13
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:12
 msgid "Exploring Data Formats and Fields"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:28
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:27
 msgid "Raster data"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:30
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:29
 msgid ""
 "Raster data in GIS are matrices of discrete cells that represent features"
 " on, above or below the earth's surface. Each cell in the raster grid has"
@@ -40,43 +40,43 @@ msgid ""
 " such as an elevation matrix."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:37
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:36
 msgid ""
 "Unlike vector data, raster data typically do not have an associated "
 "database record for each cell. They are geocoded by pixel resolution and "
-"the x/y coordinate of a corner pixel of the raster layer. This allows "
+"the X/Y coordinate of a corner pixel of the raster layer. This allows "
 "QGIS to position the data correctly in the map canvas."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:42
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:41
 msgid ""
 "QGIS makes use of georeference information inside the raster layer (e.g.,"
 " :index:`GeoTiff`) or in an appropriate world file to properly display "
 "the data."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:50
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:49
 msgid "Vector Data"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:52
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:51
 msgid ""
 "Many of the features available in QGIS work the same, regardless the "
 "vector data source. However, because of the differences in formats "
-"specifications (ESRI shapefiles, MapInfo and MicroStation file formats, "
+"specifications (ESRI Shapefile, MapInfo and MicroStation file formats, "
 "AutoCAD DXF, PostGIS, SpatiaLite, DB2, Oracle Spatial and MSSQL Spatial "
 "databases, and many more), QGIS may handle differently some of their "
 "properties. This section describes how to work with these specificities."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:61
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:60
 msgid ""
 "QGIS supports (multi)point, (multi)line, (multi)polygon, CircularString, "
 "CompoundCurve, CurvePolygon, MultiCurve, MultiSurface feature types, all "
 "with Z and/or M values."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:65
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:64
 msgid ""
 "You should note also that some drivers don't support some of these "
 "feature types like CircularString, CompoundCurve, CurvePolygon, "
@@ -84,151 +84,143 @@ msgid ""
 "(multi)polygon feature."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:74
-msgid "ESRI Shapefiles"
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:73
+msgid "ESRI Shapefile"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:76
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:75
 msgid ""
-"The ESRI shapefile is still one of the most used vector file format in "
-"QGIS. However, this file format has some limitation that some other file "
-"format have not (like Geopackage, spatialite). Support is provided by the"
-" `OGR Simple Feature Library <http://www.gdal.org/ogr/>`_."
+"ESRI Shapefile is still one of the most used vector file format in QGIS. "
+"However, this file format has some limitation that some other file format"
+" have not (like GeoPackage, SpatiaLite). Support is provided by the `OGR "
+"Simple Feature Library <https://www.gdal.org/ogr/>`_."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:81
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:80
 msgid ""
-"A shapefile actually consists of several files. The following three are "
-"required:"
+"A Shapefile format dataset consists of several files. The following three"
+" are required:"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:84
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:83
 msgid ":file:`.shp` file containing the feature geometries"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:85
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:84
 msgid ":file:`.dbf` file containing the attributes in dBase format"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:86
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:85
 msgid ":file:`.shx` index file"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:88
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:87
 msgid ""
-"Shapefiles also can include a file with a :file:`.prj` suffix, which "
-"contains the projection information. While it is very useful to have a "
-"projection file, it is not mandatory. A shapefile dataset can contain "
-"additional files. For further details, see the ESRI technical "
-"specification at "
-"http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf."
+"A Shapefile format dataset can also include a file with a :file:`.prj` "
+"suffix, which contains the projection information. While it is very "
+"useful to have a projection file, it is not mandatory. A Shapefile format"
+" dataset can contain additional files. For further details, see the ESRI "
+"technical specification at "
+"https://www.esri.com/library/whitepapers/pdfs/shapefile.pdf."
 msgstr ""
 
 #: ../../source/docs/user_manual/managing_data_source/supported_data.rst:94
-msgid "**Improving Performance for Shapefiles**"
+msgid "**Improving Performance for Shapefile format datasets**"
 msgstr ""
 
 #: ../../source/docs/user_manual/managing_data_source/supported_data.rst:96
 msgid ""
-"To improve the performance of drawing a shapefile, you can create a "
-"spatial index. A spatial index will improve the speed of both zooming and"
-" panning. Spatial indexes used by QGIS have a :file:`.qix` extension."
+"To improve the performance of drawing a Shapefile format dataset, you can"
+" create a spatial index. A spatial index will improve the speed of both "
+"zooming and panning. Spatial indexes used by QGIS have a :file:`.qix` "
+"extension."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:100
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:101
 msgid "Use these steps to create the index:"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:102
-msgid "Load a shapefile (see :ref:`browser_panel`);"
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:103
+msgid "Load a Shapefile format dataset (see :ref:`browser_panel`)."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:103
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:104
 msgid ""
 "Open the :guilabel:`Layer Properties` dialog by double-clicking on the "
-"shapefile name in the legend or by right-clicking and choosing "
-":menuselection:`Properties` from the context menu."
+"layer name in the legend or by right-clicking and choosing "
+":menuselection:`Properties...` from the context menu."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:106
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:107
 msgid ""
-"In the :guilabel:`General` tab, click the **[Create Spatial Index]** "
-"button."
+"In the :guilabel:`Source` tab, click the :guilabel:`Create Spatial Index`"
+" button."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:108
-msgid "**Problem loading a shape .prj file**"
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:109
+msgid "**Problem loading a .prj file**"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:110
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:111
 msgid ""
-"If you load a shapefile with a :file:`.prj` file and QGIS is not able to "
-"read the coordinate reference system from that file, you will need to "
-"define the proper projection manually within the :guilabel:`General` tab "
-"of the :guilabel:`Layer Properties` dialog of the layer by clicking the "
-"**[Specify...]**  button. This is due to the fact that :file:`.prj` files"
-" often do not provide the complete projection parameters as used in QGIS "
-"and listed in the :guilabel:`CRS` dialog."
+"If you load a Shapefile format dataset with a :file:`.prj` file and QGIS "
+"is not able to read the coordinate reference system from that file, you "
+"will need to define the proper projection manually within the "
+":menuselection:`Layer Properties --> Source` tab of the layer by clicking"
+" the |setProjection| :sup:`Select CRS` button. This is due to the fact "
+"that :file:`.prj` files often do not provide the complete projection "
+"parameters as used in QGIS and listed in the :guilabel:`CRS` dialog."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:118
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:120
 msgid ""
-"For the same reason, if you create a new shapefile with QGIS, two "
-"different projection files are created: a :file:`.prj` file with limited "
-"projection parameters, compatible with ESRI software, and a :file:`.qpj` "
-"file, providing the complete parameters of the used CRS. Whenever QGIS "
-"finds a :file:`.qpj` file, it will be used instead of the :file:`.prj`."
+"For the same reason, if you create a new Shapefile format dataset with "
+"QGIS, two different projection files are created: a :file:`.prj` file "
+"with limited projection parameters, compatible with ESRI software, and a "
+":file:`.qpj` file, providing the complete parameters of the used CRS. "
+"Whenever QGIS finds a :file:`.qpj` file, it will be used instead of the "
+":file:`.prj`."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:129
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:132
 msgid "Delimited Text Files"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:131
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:134
 msgid ""
-"Tabular data is a very common and widely used format because of its "
-"simplicity and readability -- data can be viewed and edited even in a "
-"plain text editor. A delimited text file is an attribute table with each "
+"Delimited text file is a very common and widely used format because of "
+"its simplicity and readability -- data can be viewed and edited even in a"
+" plain text editor. A delimited text file is a tabular data with each "
 "column separated by a defined character and each row separated by a line "
 "break. The first row usually contains the column names. A common type of "
 "delimited text file is a CSV (Comma Separated Values), with each column "
-"separated by a comma."
+"separated by a comma. Such data files can also contain positional "
+"information (see :ref:`csv_geometry`)."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:138
-msgid "Such data files can also contain positional information in two main forms:"
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:140
-msgid "As point coordinates in separate columns"
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:141
-msgid "As well-known text (WKT) representation of geometry"
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:143
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:142
 msgid ""
-"QGIS allows you to load a delimited text file as a layer or ordinal "
-"table. But first check that the file meets the following requirements:"
+"QGIS allows you to load a delimited text file as a layer or ordinal table"
+" (see :ref:`browser_panel` or :ref:`vector_loading_csv`). But first check"
+" that the file meets the following requirements:"
 msgstr ""
 
 #: ../../source/docs/user_manual/managing_data_source/supported_data.rst:146
 msgid ""
 "The file must have a delimited header row of field names. This must be "
-"the first line in the text file."
+"the first line of the data (ideally the first row in the text file)."
 msgstr ""
 
 #: ../../source/docs/user_manual/managing_data_source/supported_data.rst:148
 msgid ""
-"The header row must contain field(s) with geometry definition. These "
-"field(s) can have any name."
+"If geometry should be enabled, the header row must contain field(s) with "
+"geometry definition. These field(s) can have any name."
 msgstr ""
 
 #: ../../source/docs/user_manual/managing_data_source/supported_data.rst:150
 msgid ""
-"The X and Y coordinates (if geometry is defined by coordinates) must be "
-"specified as numbers. The coordinate system is not important."
+"The X and Y coordinates fields (if geometry is defined by coordinates) "
+"must be specified as numbers. The coordinate system is not important."
 msgstr ""
 
 #: ../../source/docs/user_manual/managing_data_source/supported_data.rst:152
@@ -272,11 +264,42 @@ msgstr ""
 msgid "The Y coordinates are contained in the ``Y`` field."
 msgstr ""
 
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:180
+msgid "Storing geometry information in delimited text file"
+msgstr ""
+
 #: ../../source/docs/user_manual/managing_data_source/supported_data.rst:182
-msgid "CSVT Files"
+msgid "Delimited text files can contain geometry information in two main forms:"
 msgstr ""
 
 #: ../../source/docs/user_manual/managing_data_source/supported_data.rst:184
+msgid ""
+"As coordinates in separate columns (eg. ``Xcol``, ``Ycol``... ), "
+"compatible with point geometry data;"
+msgstr ""
+
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:186
+msgid ""
+"As well-known text (WKT) representation of geometry in a single column, "
+"for any geometry type."
+msgstr ""
+
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:189
+msgid ""
+"Features with curved geometries (CircularString, CurvePolygon and "
+"CompoundCurve) are supported. Here are some examples of such geometry "
+"types as a delimited text with WKT geometries::"
+msgstr ""
+
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:200
+msgid "Delimited Text supports also Z and M coordinates in geometries::"
+msgstr ""
+
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:209
+msgid "Using CSVT file to control field formatting"
+msgstr ""
+
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:211
 msgid ""
 "When loading CSV files, the OGR driver assumes all fields are strings "
 "(i.e. text) unless it is told otherwise. You can create a CSVT file to "
@@ -355,48 +378,33 @@ msgstr ""
 msgid "2016-07-28 18:33:12+00"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:198
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:224
 msgid ""
 "The CSVT file is a **ONE line** plain text file with the data types in "
 "quotes and separated by commas, e.g.::"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:203
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:229
 msgid "You can even specify width and precision of each column, e.g.::"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:207
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:233
 msgid ""
 "This file is saved in the same folder as the :file:`.csv` file, with the "
 "same name, but :file:`.csvt` as the extension."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:210
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:236
 msgid ""
 "*You can find more information at* `GDAL CSV Driver "
-"<http://www.gdal.org/drv_csv.html>`_."
+"<https://www.gdal.org/drv_csv.html>`_."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:213
-msgid "Others valuable informations for advanced users"
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:215
-msgid ""
-"Features with curved geometries (CircularString, CurvePolygon and "
-"CompoundCurve) are supported. Here are three examples of such geometry "
-"types as a delimited text with WKT geometries::"
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:225
-msgid "Delimited Text supports also Z and M coordinates in geometries::"
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:234
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:243
 msgid "PostGIS Layers"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:236
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:245
 msgid ""
 "PostGIS layers are stored in a PostgreSQL database. The advantages of "
 "PostGIS are its spatial indexing, filtering and querying capabilities it "
@@ -404,11 +412,11 @@ msgid ""
 "work more accurately than they do with OGR layers in QGIS."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:244
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:253
 msgid "**PostGIS Layers**"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:246
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:255
 msgid ""
 "Normally, a PostGIS layer is defined by an entry in the geometry_columns "
 "table. QGIS can load layers that do not have an entry in the "
@@ -417,7 +425,7 @@ msgid ""
 "your PostgreSQL manual for information on creating views."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:252
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:261
 msgid ""
 "This section contains some details on how QGIS accesses PostgreSQL "
 "layers. Most of the time, QGIS should simply provide you with a list of "
@@ -428,11 +436,11 @@ msgid ""
 "QGIS to load it."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:260
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:269
 msgid "Primary key"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:262
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:271
 msgid ""
 "QGIS requires that PostgreSQL layers contain a column that can be used as"
 " a unique key for the layer. For tables, this usually means that the "
@@ -444,18 +452,18 @@ msgid ""
 "automatically indexed in PostgreSQL)."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:271
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:280
 msgid ""
 "QGIS offers a checkbox **Select at id** that is activated by default. "
 "This option gets the ids without the attributes which is faster in most "
 "cases."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:275
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:284
 msgid "View"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:277
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:286
 msgid ""
 "If the PostgreSQL layer is a view, the same requirement exists, but views"
 " do not always have primary keys or columns with unique constraints on "
@@ -467,18 +475,18 @@ msgid ""
 "preferably indexed)."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:285
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:294
 msgid ""
 "As for table, a checkbox **Select at id** is activated by default (see "
 "above for the meaning of the checkbox). It can make sense to disable this"
 " option when you use expensive views."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:292
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:301
 msgid "QGIS layer_style table and database backup"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:294
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:303
 msgid ""
 "If you want to make a backup of your PostGIS database using the "
 ":file:`pg_dump` and :file:`pg_restore` commands, and the default layer "
@@ -486,11 +494,11 @@ msgid ""
 "XML option to :file:`DOCUMENT` before the restore command:"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:305
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:314
 msgid "Filter database side"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:307
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:316
 msgid ""
 "QGIS allows to filter features already on server side. Check the "
 ":menuselection:`Settings --> Options --> Data Sources -->` |checkbox| "
@@ -500,51 +508,51 @@ msgid ""
 "gracefully fallback to local evaluation."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:315
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:324
 msgid "Support of PostgreSQL data types"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:317
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:326
 msgid ""
 "Most of common data types are supported by the PostgreSQL provider: "
-"integer, float, varchar, geometry, timestamp and array."
+"integer, float, varchar, geometry, timestamp, array and hstore."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:325
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:334
 msgid "Importing Data into PostgreSQL"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:327
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:336
 msgid ""
 "Data can be imported into PostgreSQL/PostGIS using several tools, "
 "including the DB Manager plugin and the command line tools shp2pgsql and "
 "ogr2ogr."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:331
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:340
 msgid "DB Manager"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:333
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:342
 msgid ""
 "QGIS comes with a core plugin named |dbManager| :sup:`DB Manager`. It can"
-" be used to load shapefiles and other data formats, and it includes "
-"support for schemas. See section :ref:`dbmanager` for more information."
+" be used to load data, and it includes support for schemas. See section "
+":ref:`dbmanager` for more information."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:338
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:347
 msgid "shp2pgsql"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:340
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:349
 msgid ""
 "PostGIS includes an utility called **shp2pgsql** that can be used to "
-"import shapefiles into a PostGIS-enabled database. For example, to import"
-" a shapefile named :file:`lakes.shp` into a PostgreSQL database named "
-"``gis_data``, use the following command:"
+"import Shapefile format datasets into a PostGIS-enabled database. For "
+"example, to import a Shapefile format dataset named :file:`lakes.shp` "
+"into a PostgreSQL database named ``gis_data``, use the following command:"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:349
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:359
 msgid ""
 "This creates a new layer named ``lakes_new`` in the ``gis_data`` "
 "database. The new layer will have a spatial reference identifier (SRID) "
@@ -552,53 +560,53 @@ msgid ""
 "spatial reference systems and projections."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:358
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:368
 msgid "**Exporting datasets from PostGIS**"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:360
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:370
 msgid ""
 "Like the import tool **shp2pgsql**, there is also a tool to export "
-"PostGIS datasets as shapefiles: **pgsql2shp**. This is shipped within "
-"your PostGIS distribution."
+"PostGIS datasets in the Shapefile format: **pgsql2shp**. This is shipped "
+"within your PostGIS distribution."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:368
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:378
 msgid "ogr2ogr"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:370
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:380
 msgid ""
 "Besides **shp2pgsql** and **DB Manager**, there is another tool for "
 "feeding geodata in PostGIS: **ogr2ogr**. This is part of your GDAL "
 "installation."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:373
-msgid "To import a shapefile into PostGIS, do the following: ::"
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:384
+msgid "To import a Shapefile format dataset into PostGIS, do the following: ::"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:379
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:390
 msgid ""
-"This will import the shapefile :file:`alaska.shp` into the PostGIS "
-"database *postgis* using the user *postgres* with the password "
+"This will import the Shapefile format dataset :file:`alaska.shp` into the"
+" PostGIS database *postgis* using the user *postgres* with the password "
 "*topsecret* on host server *myhost.de*."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:383
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:395
 msgid ""
 "Note that OGR must be built with PostgreSQL to support PostGIS. You can "
 "verify this by typing (in |nix|) ::"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:390
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:402
 msgid ""
 "If you prefer to use PostgreSQL's **COPY** command instead of the default"
 " **INSERT INTO** method, you can export the following environment "
 "variable (at least available on |nix| and |osx|): ::"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:397
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:409
 msgid ""
 "**ogr2ogr** does not create spatial indexes like **shp2pgsl** does. You "
 "need to create them manually, using the normal SQL command **CREATE "
@@ -606,11 +614,11 @@ msgid ""
 ":ref:`vector_improving_performance`)."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:407
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:419
 msgid "Improving Performance"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:409
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:421
 msgid ""
 "Retrieving features from a PostgreSQL database can be time-consuming, "
 "especially over a network. You can improve the drawing performance of "
@@ -618,22 +626,22 @@ msgid ""
 " layer in the database. PostGIS supports creation of a GiST (Generalized "
 "Search Tree) index to speed up spatial searches of the data (GiST index "
 "information is taken from the PostGIS documentation available at "
-"http://postgis.net)."
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:416
-msgid ""
-"You can use the DBManager to create an index to your layer. You should "
-"first select the layer and click on :menuselection:`Table --> Edit "
-"table`, go to :menuselection:`Indexes` tab and click on **[Add spatial "
-"index]**."
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:420
-msgid "The syntax for creating a GiST index is: ::"
+"https://postgis.net)."
 msgstr ""
 
 #: ../../source/docs/user_manual/managing_data_source/supported_data.rst:428
+msgid ""
+"You can use the DBManager to create an index to your layer. You should "
+"first select the layer and click on :menuselection:`Table --> Edit "
+"table`, go to :menuselection:`Indexes` tab and click on :guilabel:`Add "
+"Spatial Index`."
+msgstr ""
+
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:432
+msgid "The syntax for creating a GiST index is: ::"
+msgstr ""
+
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:440
 msgid ""
 "Note that for large tables, creating the index can take a long time. Once"
 " the index is created, you should perform a ``VACUUM ANALYZE``. See the "
@@ -641,19 +649,19 @@ msgid ""
 "more information."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:432
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:444
 msgid "The following is an example of creating a GiST index: ::"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:455
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:467
 msgid "Vector layers crossing 180 |degrees| longitude"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:457
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:469
 msgid ""
 "Many GIS packages don't wrap vector maps with a geographic reference "
 "system (lat/lon) crossing the 180 degrees longitude line "
-"(http://postgis.refractions.net/documentation/manual-2.0/ST\\_Shift\\_Longitude.html)."
+"(http://postgis.refractions.net/documentation/manual-2.0/ST_Shift_Longitude.html)."
 " As result, if we open such a map in QGIS, we will see two far, distinct "
 "locations, that should appear near each other. In "
 "Figure_vector_crossing_, the tiny point on the far left of the map canvas"
@@ -661,11 +669,11 @@ msgid ""
 "Zealand main islands."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:470
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:482
 msgid "Map in lat/lon crossing the 180 |degrees| longitude line"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:472
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:484
 msgid ""
 "A work-around is to transform the longitude values using PostGIS and the "
 "**ST_Shift_Longitude** function. This function reads every point/vertex "
@@ -675,41 +683,41 @@ msgid ""
 "|degrees|-centric map."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:484
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:496
 msgid ""
 "Crossing 180 |degrees| longitude applying the **ST_Shift_Longitude** "
 "function"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:488
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:500
 msgid "Usage"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:490
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:502
 msgid ""
 "Import data into PostGIS (:ref:`vector_import_data_in_postgis`) using, "
 "for example, the DB Manager plugin."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:492
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:504
 msgid ""
 "Use the PostGIS command line interface to issue the following command (in"
 " this example, \"TABLE\" is the actual name of your PostGIS table): "
 "``gis_data=# update TABLE set the_geom=ST_Shift_Longitude(the_geom);``"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:495
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:507
 msgid ""
 "If everything went well, you should receive a confirmation about the "
 "number of features that were updated. Then you'll be able to load the map"
 " and see the difference (Figure_vector_crossing_map_)."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:503
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:515
 msgid "SpatiaLite Layers"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:505
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:517
 msgid ""
 "If you want to save a vector layer to SpatiaLite format, you can do this "
 "by right clicking the layer in the legend. Then, click on "
@@ -717,24 +725,24 @@ msgid ""
 "select 'SpatiaLite' as format and the CRS. Also, you can select 'SQLite' "
 "as format and then add ``SPATIALITE=YES`` in the OGR data source creation"
 " option field. This tells OGR to create a SpatiaLite database. See also "
-"http://www.gdal.org/ogr/drv_sqlite.html."
+"https://www.gdal.org/ogr/drv_sqlite.html."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:512
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:524
 msgid "QGIS also supports editable views in SpatiaLite."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:514
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:526
 msgid ""
 "If you want to create a new SpatiaLite layer, please refer to section "
 ":ref:`vector_create_spatialite`."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:521
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:533
 msgid "**SpatiaLite data management Plugins**"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:523
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:535
 msgid ""
 "For SpatiaLite data management, you can also use several Python plugins: "
 "QSpatiaLite, SpatiaLite Manager or :ref:`DB Manager <dbmanager>` (core "
@@ -742,11 +750,11 @@ msgid ""
 "with the Plugin Installer."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:532
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:544
 msgid "DB2 Spatial Layers"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:534
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:546
 msgid ""
 "IBM DB2 for Linux, Unix and Windows (DB2 LUW), IBM DB2 for z/OS "
 "(mainframe) and IBM DashDB products allow users to store and analyse "
@@ -755,42 +763,48 @@ msgid ""
 "spatial data in these databases."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:545
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:557
 msgid ""
 "User documentation on these capabilities can be found at the `DB2 z/OS "
 "KnowledgeCenter`_, `DB2 LUW KnowledgeCenter`_ and `DB2 DashDB "
 "KnowledgeCenter`_."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:549
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:561
 msgid ""
 "For more information about working with the DB2 spatial capabilities, "
 "check out the `DB2 Spatial Tutorial`_ on IBM DeveloperWorks."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:553
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:564
 msgid ""
 "The DB2 provider currently only supports the Windows environment through "
 "the Windows ODBC driver."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:556
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:567
 msgid "The client running QGIS needs to have one of the following installed:"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:558
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:569
 msgid "DB2 LUW"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:559
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:570
 msgid "IBM Data Server Driver Package"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:560
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:571
 msgid "IBM Data Server Client"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:562
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:573
+msgid ""
+"To open a DB2 data in QGIS, you can refer to :ref:`browser_panel` or "
+":ref:`vector_loading_database` section."
+msgstr ""
+
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:576
 msgid ""
 "If you are accessing a DB2 LUW database on the same machine or using DB2 "
 "LUW as a client, the DB2 executables and supporting files need to be "
@@ -798,4 +812,305 @@ msgid ""
 "like the following with the name **db2.bat** and including it in the "
 "directory **%OSGEO4W_ROOT%/etc/ini**."
 msgstr ""
+
+#~ msgid ""
+#~ "Unlike vector data, raster data "
+#~ "typically do not have an associated "
+#~ "database record for each cell. They "
+#~ "are geocoded by pixel resolution and "
+#~ "the x/y coordinate of a corner "
+#~ "pixel of the raster layer. This "
+#~ "allows QGIS to position the data "
+#~ "correctly in the map canvas."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Many of the features available in "
+#~ "QGIS work the same, regardless the "
+#~ "vector data source. However, because of"
+#~ " the differences in formats specifications"
+#~ " (ESRI shapefiles, MapInfo and MicroStation"
+#~ " file formats, AutoCAD DXF, PostGIS, "
+#~ "SpatiaLite, DB2, Oracle Spatial and "
+#~ "MSSQL Spatial databases, and many more),"
+#~ " QGIS may handle differently some of"
+#~ " their properties. This section describes"
+#~ " how to work with these "
+#~ "specificities."
+#~ msgstr ""
+
+#~ msgid "ESRI Shapefiles"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The ESRI shapefile is still one of"
+#~ " the most used vector file format "
+#~ "in QGIS. However, this file format "
+#~ "has some limitation that some other "
+#~ "file format have not (like Geopackage,"
+#~ " spatialite). Support is provided by "
+#~ "the `OGR Simple Feature Library "
+#~ "<http://www.gdal.org/ogr/>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A shapefile actually consists of several"
+#~ " files. The following three are "
+#~ "required:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Shapefiles also can include a file "
+#~ "with a :file:`.prj` suffix, which "
+#~ "contains the projection information. While "
+#~ "it is very useful to have a "
+#~ "projection file, it is not mandatory."
+#~ " A shapefile dataset can contain "
+#~ "additional files. For further details, "
+#~ "see the ESRI technical specification at"
+#~ " http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf."
+#~ msgstr ""
+
+#~ msgid "**Improving Performance for Shapefiles**"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To improve the performance of drawing"
+#~ " a shapefile, you can create a "
+#~ "spatial index. A spatial index will "
+#~ "improve the speed of both zooming "
+#~ "and panning. Spatial indexes used by "
+#~ "QGIS have a :file:`.qix` extension."
+#~ msgstr ""
+
+#~ msgid "Load a shapefile (see :ref:`browser_panel`);"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Open the :guilabel:`Layer Properties` dialog"
+#~ " by double-clicking on the shapefile"
+#~ " name in the legend or by "
+#~ "right-clicking and choosing "
+#~ ":menuselection:`Properties` from the context "
+#~ "menu."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the :guilabel:`General` tab, click "
+#~ "the **[Create Spatial Index]** button."
+#~ msgstr ""
+
+#~ msgid "**Problem loading a shape .prj file**"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you load a shapefile with a "
+#~ ":file:`.prj` file and QGIS is not "
+#~ "able to read the coordinate reference"
+#~ " system from that file, you will "
+#~ "need to define the proper projection "
+#~ "manually within the :guilabel:`General` tab"
+#~ " of the :guilabel:`Layer Properties` dialog"
+#~ " of the layer by clicking the "
+#~ "**[Specify...]**  button. This is due to"
+#~ " the fact that :file:`.prj` files "
+#~ "often do not provide the complete "
+#~ "projection parameters as used in QGIS"
+#~ " and listed in the :guilabel:`CRS` "
+#~ "dialog."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For the same reason, if you create"
+#~ " a new shapefile with QGIS, two "
+#~ "different projection files are created: "
+#~ "a :file:`.prj` file with limited "
+#~ "projection parameters, compatible with ESRI"
+#~ " software, and a :file:`.qpj` file, "
+#~ "providing the complete parameters of the"
+#~ " used CRS. Whenever QGIS finds a "
+#~ ":file:`.qpj` file, it will be used "
+#~ "instead of the :file:`.prj`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Tabular data is a very common and"
+#~ " widely used format because of its"
+#~ " simplicity and readability -- data "
+#~ "can be viewed and edited even in"
+#~ " a plain text editor. A delimited "
+#~ "text file is an attribute table "
+#~ "with each column separated by a "
+#~ "defined character and each row separated"
+#~ " by a line break. The first row"
+#~ " usually contains the column names. A"
+#~ " common type of delimited text file"
+#~ " is a CSV (Comma Separated Values),"
+#~ " with each column separated by a "
+#~ "comma."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Such data files can also contain "
+#~ "positional information in two main "
+#~ "forms:"
+#~ msgstr ""
+
+#~ msgid "As point coordinates in separate columns"
+#~ msgstr ""
+
+#~ msgid "As well-known text (WKT) representation of geometry"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "QGIS allows you to load a "
+#~ "delimited text file as a layer or"
+#~ " ordinal table. But first check that"
+#~ " the file meets the following "
+#~ "requirements:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The file must have a delimited "
+#~ "header row of field names. This "
+#~ "must be the first line in the "
+#~ "text file."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The header row must contain field(s) "
+#~ "with geometry definition. These field(s) "
+#~ "can have any name."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The X and Y coordinates (if "
+#~ "geometry is defined by coordinates) must"
+#~ " be specified as numbers. The "
+#~ "coordinate system is not important."
+#~ msgstr ""
+
+#~ msgid "CSVT Files"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "*You can find more information at* "
+#~ "`GDAL CSV Driver "
+#~ "<http://www.gdal.org/drv_csv.html>`_."
+#~ msgstr ""
+
+#~ msgid "Others valuable informations for advanced users"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Features with curved geometries "
+#~ "(CircularString, CurvePolygon and CompoundCurve) "
+#~ "are supported. Here are three examples"
+#~ " of such geometry types as a "
+#~ "delimited text with WKT geometries::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Most of common data types are "
+#~ "supported by the PostgreSQL provider: "
+#~ "integer, float, varchar, geometry, timestamp"
+#~ " and array."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "QGIS comes with a core plugin "
+#~ "named |dbManager| :sup:`DB Manager`. It "
+#~ "can be used to load shapefiles and"
+#~ " other data formats, and it includes"
+#~ " support for schemas. See section "
+#~ ":ref:`dbmanager` for more information."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "PostGIS includes an utility called "
+#~ "**shp2pgsql** that can be used to "
+#~ "import shapefiles into a PostGIS-enabled"
+#~ " database. For example, to import a"
+#~ " shapefile named :file:`lakes.shp` into a"
+#~ " PostgreSQL database named ``gis_data``, "
+#~ "use the following command:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Like the import tool **shp2pgsql**, "
+#~ "there is also a tool to export "
+#~ "PostGIS datasets as shapefiles: **pgsql2shp**."
+#~ " This is shipped within your PostGIS"
+#~ " distribution."
+#~ msgstr ""
+
+#~ msgid "To import a shapefile into PostGIS, do the following: ::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This will import the shapefile "
+#~ ":file:`alaska.shp` into the PostGIS database"
+#~ " *postgis* using the user *postgres* "
+#~ "with the password *topsecret* on host"
+#~ " server *myhost.de*."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Retrieving features from a PostgreSQL "
+#~ "database can be time-consuming, "
+#~ "especially over a network. You can "
+#~ "improve the drawing performance of "
+#~ "PostgreSQL layers by ensuring that a "
+#~ "PostGIS spatial index exists on each "
+#~ "layer in the database. PostGIS supports"
+#~ " creation of a GiST (Generalized "
+#~ "Search Tree) index to speed up "
+#~ "spatial searches of the data (GiST "
+#~ "index information is taken from the "
+#~ "PostGIS documentation available at "
+#~ "http://postgis.net)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can use the DBManager to "
+#~ "create an index to your layer. You"
+#~ " should first select the layer and"
+#~ " click on :menuselection:`Table --> Edit"
+#~ " table`, go to :menuselection:`Indexes` tab"
+#~ " and click on **[Add spatial "
+#~ "index]**."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Many GIS packages don't wrap vector "
+#~ "maps with a geographic reference system"
+#~ " (lat/lon) crossing the 180 degrees "
+#~ "longitude line "
+#~ "(http://postgis.refractions.net/documentation/manual-2.0/ST\\_Shift\\_Longitude.html)."
+#~ " As result, if we open such a"
+#~ " map in QGIS, we will see two"
+#~ " far, distinct locations, that should "
+#~ "appear near each other. In "
+#~ "Figure_vector_crossing_, the tiny point on "
+#~ "the far left of the map canvas "
+#~ "(Chatham Islands) should be within the"
+#~ " grid, to the right of the New"
+#~ " Zealand main islands."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you want to save a vector "
+#~ "layer to SpatiaLite format, you can "
+#~ "do this by right clicking the "
+#~ "layer in the legend. Then, click "
+#~ "on :menuselection:`Save as...`, define the "
+#~ "name of the output file, and "
+#~ "select 'SpatiaLite' as format and the"
+#~ " CRS. Also, you can select 'SQLite'"
+#~ " as format and then add "
+#~ "``SPATIALITE=YES`` in the OGR data "
+#~ "source creation option field. This tells"
+#~ " OGR to create a SpatiaLite database."
+#~ " See also http://www.gdal.org/ogr/drv_sqlite.html."
+#~ msgstr ""
 

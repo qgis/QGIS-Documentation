@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project testing\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-28 10:31+0100\n"
+"POT-Creation-Date: 2019-03-30 00:23+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,17 +19,21 @@ msgstr ""
 "Generated-By: Babel 2.5.1\n"
 
 #: ../../source/docs/training_manual/processing/selection.rst:6
+msgid "|updatedisclaimer|"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/selection.rst:9
 msgid "Selection"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/selection.rst:8
+#: ../../source/docs/training_manual/processing/selection.rst:11
 msgid ""
 "In this lesson we will see how processing algorithms handle selections in"
 " vector layers that are used as inputs, and how to create a selection "
 "using a particular type of algorithm."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/selection.rst:10
+#: ../../source/docs/training_manual/processing/selection.rst:13
 msgid ""
 "Unlike other analysis plugins in QGIS, you will not find in processing "
 "geoalgorithms any \"Use only selected features\" checkbox or similar. The"
@@ -38,22 +42,22 @@ msgid ""
 "following simple rules when using a vector layer."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/selection.rst:12
+#: ../../source/docs/training_manual/processing/selection.rst:15
 msgid "If the layer has a selection, only selected features are used."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/selection.rst:13
+#: ../../source/docs/training_manual/processing/selection.rst:16
 msgid "If there is no selection, all features are used."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/selection.rst:15
+#: ../../source/docs/training_manual/processing/selection.rst:18
 msgid ""
 "Please note that you can change this behaviour by unselecting the "
 "relevant option in the :menuselection:`Processing --> Options --> "
 "General` menu."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/selection.rst:17
+#: ../../source/docs/training_manual/processing/selection.rst:20
 msgid ""
 "You can test that yourself by selecting a few points in any of the layers"
 " that we used in the last chapter, and running the reprojection algorithm"
@@ -63,7 +67,7 @@ msgid ""
 "layer."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/selection.rst:19
+#: ../../source/docs/training_manual/processing/selection.rst:22
 msgid ""
 "To make a selection, you can use any of the available methods and tools "
 "in QGIS. However, you can also use a geoalgorithm to do so. Algorithms "
@@ -71,17 +75,17 @@ msgid ""
 "*Vector/Selection*"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/selection.rst:23
+#: ../../source/docs/training_manual/processing/selection.rst:26
 msgid "Open the *Random selection* algorithm."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/selection.rst:27
+#: ../../source/docs/training_manual/processing/selection.rst:30
 msgid ""
 "Leaving the default values, it will select 10 points from the current "
 "layer."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/selection.rst:31
+#: ../../source/docs/training_manual/processing/selection.rst:34
 msgid ""
 "You will notice that this algorithm does not produce any output, but "
 "modifies the input layer (not the layer itself, but its selection). This "
@@ -89,7 +93,7 @@ msgid ""
 " layers and not alter the input layers."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/selection.rst:33
+#: ../../source/docs/training_manual/processing/selection.rst:36
 msgid ""
 "Since the selection is not part of the data itself, but something that "
 "only exist within QGIS, these selection algorithms only must be used "
@@ -97,7 +101,7 @@ msgid ""
 "option that you can find in the corresponding parameter value box."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/selection.rst:35
+#: ../../source/docs/training_manual/processing/selection.rst:38
 msgid ""
 "The selection we have just made, like most of the ones created by the "
 "rest of the selection algorithms, can also be done manually from QGIS, so"
@@ -111,7 +115,7 @@ msgid ""
 "elements."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/selection.rst:37
+#: ../../source/docs/training_manual/processing/selection.rst:40
 msgid ""
 "By now, just remember that selections can be made using processing "
 "geoalgorithms, and that algorithms will only use the selected features if"

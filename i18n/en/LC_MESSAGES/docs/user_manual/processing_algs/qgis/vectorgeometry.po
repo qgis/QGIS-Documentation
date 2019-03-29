@@ -1,0 +1,4464 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project testing\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-30 00:23+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:6
+msgid "|updatedisclaimer|"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:9
+msgid "Vector geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:21
+msgid "Add geometry attributes"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:22
+msgid "Computes geometric properties of the features in a vector layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:24
+msgid ""
+"It generates a new vector layer with the same content as the input one, "
+"but with additional attributes, containing geometric measurements based "
+"on a selected CRS."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:27
+msgid ""
+"The attributes added to the table depend on the geometry type and "
+"dimension of the input layer:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:30
+msgid ""
+"for **point** layers: X (``xcoord``), Y (``ycoord``), Z (``zcoord``) "
+"coordinates and/or M value (``mvalue``);"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:32
+msgid ""
+"for **line** layers: ``length`` and, particularly for LineString and "
+"CompoundCurve geometry type also adds feature's ``sinuosity`` and "
+"straight distance (``straightdis``);"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:34
+msgid "for **polygon** layers: ``perimeter`` and ``area``."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:36
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:330
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:375
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:425
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:704
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:777
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1130
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1477
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1652
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2000
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2533
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3086
+msgid "``Default menu``: :menuselection:`Vector --> Geometry Tools`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:39
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:82
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:174
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:201
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:236
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:333
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:378
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:428
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:456
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:511
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:553
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:600
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:626
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:653
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:707
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:738
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:780
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:830
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:876
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:908
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:946
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:986
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1022
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1049
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1094
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1133
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1165
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1216
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1259
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1290
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1314
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1376
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1408
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1446
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1480
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1506
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1525
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1573
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1609
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1655
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1686
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1744
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1776
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1807
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1845
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1886
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1936
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1969
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2003
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2025
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2062
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2093
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2155
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2225
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2259
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2287
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2310
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2346
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2378
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2414
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2448
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2493
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2536
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2579
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2651
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2700
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2755
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2811
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2841
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2866
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2915
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2951
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2999
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3048
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3089
+msgid "Parameters"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:41
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:85
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:239
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:336
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:381
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:431
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:513
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:555
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:879
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:910
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:948
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1136
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1316
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1528
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1576
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1612
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1658
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1747
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1810
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2065
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2228
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2261
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2313
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2417
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2450
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2496
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2703
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2758
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2814
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2844
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3002
+msgid "``Input layer`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:41
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:336
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2313
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2349
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2381
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3002
+msgid "Vector layer in input."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:51
+msgid "``Calculate using`` [enumeration]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:44
+msgid "Calculation parameters to use for the geometric properties. Options are:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:47
+msgid "0 --- Layer CRS"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:48
+msgid "1 --- Project CRS"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:49
+msgid "2 --- Ellipsoidal"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:51
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:263
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:279
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:921
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1102
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1329
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1545
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1711
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1859
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1865
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2105
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2167
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2550
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2595
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2612
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2973
+msgid "Default: *0*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:54
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:138
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:180
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:207
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:299
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:344
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:395
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:439
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:481
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:534
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:571
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:605
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:632
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:682
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:713
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:752
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:791
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:841
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:890
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:929
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:961
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:998
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1027
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1061
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1105
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1139
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1185
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1236
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1265
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1295
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1349
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1385
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1420
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1458
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1486
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1512
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1553
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1584
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1625
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1661
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1720
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1750
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1792
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1818
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1868
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1909
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1947
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1982
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2009
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2041
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2068
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2130
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2192
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2242
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2264
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2293
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2327
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2357
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2390
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2425
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2469
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2504
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2559
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2621
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2683
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2731
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2781
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2823
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2847
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2887
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2921
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2976
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3025
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3061
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3100
+msgid "Outputs"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:58
+msgid "``Added geom info`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:57
+msgid "Copy of the input vector layer with the addition of the geometry fields."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:63
+msgid "Aggregate"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:64
+msgid ""
+"Takes a vector or table layer and creates a new layer by aggregating "
+"features based on a ``group by`` expression."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:67
+msgid ""
+"Features for which ``group by`` expression returns the same value are "
+"grouped together."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:69
+msgid ""
+"It is possible to group all source features together using constant value"
+" in ``group by`` parameter, example: NULL."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:72
+msgid ""
+"It is also possible to group features by multiple fields using Array "
+"function, example: Array(\"Field1\", \"Field2\")."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:75
+msgid ""
+"Geometries (if present) are combined into one multipart geometry for each"
+" group. Output attributes are computed depending on each given aggregate "
+"definition."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:78
+msgid ""
+"This algorithm allows to use the default aggregation functions of the "
+"QGIS Expression engine."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:85
+msgid "Vector layer in input to aggregate the features from."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:90
+msgid "``Group by expression`` [tablefield: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:88
+msgid "Choose the grouping field. If *NULL* all features will be grouped."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:90
+msgid "Default: *NULL*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:131
+msgid "``Aggregates`` [list]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:93
+msgid "List of the fields in the output layer with their definitions."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:95
+msgid ""
+"By default, the embedded table lists all the fields of the source layer "
+"and allows you to edit them:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:98
+msgid "Click the |newAttribute| button to create a new field."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:99
+msgid "Click |deleteAttribute| to remove a field."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:100
+msgid "Use |arrowUp| and |arrowDown| to change the selected field order."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:101
+msgid "Click |clearText| to reset to the default view."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:103
+msgid ""
+"For each of the fields you'd like to retrieve information from, you need "
+"to fill the following options:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:107
+msgid "``Input expression`` [expression]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:107
+msgid "Field or expression from the input layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:113
+msgid "``Aggregate function`` [enumeration]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:110
+msgid ""
+":ref:`Function <aggregates_function>` to use on the input expression to "
+"return the aggregated value."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:113
+msgid ""
+"Default: *concatenate* (for string data type), *sum* (for numeric data "
+"type)"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:118
+msgid "``Delimiter`` [string]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:116
+msgid ""
+"Text string to separate aggregated values, for example in case of "
+"concatenation."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:118
+msgid "Default: *,*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:122
+msgid "``Output field name`` [string]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:121
+msgid ""
+"Name of the aggregated field in the output layer. By default input field "
+"name is kept."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:125
+msgid "``Type`` [enumeration]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:125
+msgid "Data type of the output field."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:128
+msgid "``Length`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:128
+msgid "Length of the output field."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:131
+msgid "``Precision`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:131
+msgid "Precision of the output field."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:135
+msgid "``Load fields from layer`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:134
+msgid ""
+"You can also load the fields from another layer and use these fields for "
+"the aggregation."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:141
+msgid "``Aggregated`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:141
+msgid "Multigeometry vector layer with the aggregated values."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:144
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:213
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:305
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:350
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:445
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:486
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:539
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:577
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:610
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:688
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:797
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:847
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:935
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:966
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1067
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1191
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1242
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1391
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1464
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1590
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1631
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1667
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1726
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1756
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1824
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1874
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2074
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2136
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2198
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2363
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2396
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2431
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2475
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2510
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2893
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3031
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3067
+msgid "See also"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:145
+msgid ""
+"For a  complete description of the aggregates function, refer to the "
+"dedicated :ref:`aggregates_function` chapter."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:152
+msgid "Boundary"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:153
+msgid ""
+"Returns the closure of the combinatorial boundary of the input geometries"
+" (i.e. the topological boundary of the geometry)."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:156
+msgid "Only valid for polygon or line layers."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:158
+msgid ""
+"For **polygon geometries** , the boundary consists of all the line "
+"strings for each ring of the polygon."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:164
+msgid "Black dash boundary lines of the source polygon layer"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:166
+msgid ""
+"For **lines geometries**, the boundaries are the vertices between each "
+"features."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:171
+msgid "Boundary layer for lines. In yellow a selected features."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:177
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:204
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:783
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:833
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1096
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1168
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1219
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1262
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1379
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1779
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1848
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2349
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2381
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2539
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2654
+msgid "``Input layer`` [vector: line, polygon]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:177
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:204
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:239
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1528
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1576
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1612
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1747
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1779
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1810
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1848
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2065
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2417
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2496
+msgid "Input vector layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:184
+msgid "``Boundary`` [vector: point, line]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:183
+msgid "Boundary from the input layer (point for line, and line for polygon)."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:189
+msgid "Bounding boxes"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:190
+msgid ""
+"Calculates the bounding box (envelope) of each feature in an input layer."
+" Polygon and line geometries are supported."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:196
+msgid "Black lines represent the bounding boxes of each polygon feature"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:198
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:231
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:328
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:595
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:735
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:775
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:827
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1019
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1046
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1256
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1443
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1503
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1570
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1606
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1650
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1683
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1741
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1773
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1804
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2022
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2059
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2222
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2284
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2307
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2531
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2648
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2752
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2808
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2838
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2912
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2996
+msgid ""
+"|checkbox| Allows :ref:`features in-place modification "
+"<processing_inplace_edit>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:210
+msgid "``Bounds`` [vector: polygon]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:210
+msgid "Bounding boxes of input layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:214
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1591
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1757
+msgid ":ref:`qgisminimumboundinggeometry`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:220
+msgid "Buffer"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:221
+msgid ""
+"Computes a buffer area for all the features in an input layer, using a "
+"fixed distance."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:223
+msgid ""
+"It is possible to define also a negative distance for polygon input "
+"layers: in this case the buffer will result in a smaller polygon."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:229
+msgid "In yellow the buffer of point, line and polygon layer"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:233
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:597
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:873
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:983
+msgid "``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:247
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1382
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1694
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2038
+msgid "``Distance`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:242
+msgid ""
+"Distance radius of the buffer calculated from the boundary of each "
+"feature. Moreover you can use the Data Defined button on the right to "
+"choose a field from which the radius will be calculated: this way you can"
+" have different radius for each feature (see "
+":ref:`qgisvariabledistancebuffer`)."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:247
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1694
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2587
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2712
+msgid "Default: *10.0*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:253
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2601
+msgid "``Segments`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:250
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2598
+msgid ""
+"Controls the number of line segments to use to approximate a quarter "
+"circle when creating rounded offsets."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:253
+msgid "Default: *5*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:268
+msgid "``End cap style`` [enumeration]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:256
+msgid "Controls how line endings are handled in the buffer. Options are:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:259
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:275
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1707
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2608
+msgid "0 --- Round"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:260
+msgid "1 --- Flat"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:261
+msgid "2 --- Square"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:268
+msgid "Round, flat and square cap styles"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:279
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1711
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2612
+msgid "``Join style`` [enumeration]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:271
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2604
+msgid ""
+"Specifies whether round, miter or beveled joins should be used when "
+"offsetting corners in a line. Options are:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:276
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1708
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2609
+msgid "1 --- Miter"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:277
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1709
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2610
+msgid "2 --- Bevel"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:284
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1717
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2618
+msgid "``Miter limit`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:282
+msgid "Only applicable for miter join styles."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:284
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1717
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2618
+msgid "Default: *2.0*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:296
+msgid "``Dissolve result`` [boolean]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:287
+msgid ""
+"Choose to dissolve the final buffer. If chosen each buffer that overlaps "
+"with another one will be dissolved and an unique feature will be created."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:290
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:341
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:478
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:953
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:958
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1334
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1339
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1815
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1906
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1979
+msgid "Default: *False*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:295
+msgid "Standard and dissolved buffer"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:302
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2625
+msgid "``Buffer`` [vector: polygon]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:302
+msgid "Buffer polygon vector layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:306
+msgid ""
+":ref:`qgisvariabledistancebuffer`, :ref:`qgismultiringconstantbuffer`, "
+":ref:`qgisbufferbym`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:313
+msgid "Centroids"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:314
+msgid ""
+"Creates a new point layer, with points representing the centroid of the "
+"geometries of the input layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:317
+msgid ""
+"The centroid can be a single point representing the barycenter (of all "
+"parts) of the feature, so it can be outside the feature borders. It can "
+"also be a point on each part of the feature."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:320
+msgid ""
+"The attributes associated to each point in the output layer are the same "
+"ones associated to the original features."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:326
+msgid "The red stars represent the centroids of each feature of the input layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:341
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1815
+msgid "``Create point on surface for each part`` [boolean |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:339
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1813
+msgid ""
+"If checked a point for each different part of the geometry will be "
+"created."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:347
+msgid "``Centroids`` [vector: point]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:347
+msgid "Points vector layer in output."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:351
+msgid ":ref:`qgispointonsurface`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:357
+msgid "Check validity"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:358
+msgid "Performs a validity check on the geometries of a vector layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:360
+msgid ""
+"The geometries are classified in three groups (valid, invalid and error) "
+"and a vector layer is generated with the features in each of these "
+"categories:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:363
+msgid ""
+"The **valid** layer contains only the valid features (without topological"
+" errors)."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:364
+msgid ""
+"The **invalid** layer contains all the invalid features found by the "
+"algorithm."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:365
+msgid ""
+"The **error** layer is the point layer where the invalid features have "
+"been found."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:367
+msgid ""
+"The attribute table of each generated vector layer will contain some "
+"additional information (numbers of error found and type of error):"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:373
+msgid ""
+"Left the input layer. Right: in green the valid layer, in orange the "
+"invalid layer"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:381
+msgid "Source layer to check."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:392
+msgid "``Method`` [enumeration]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:384
+msgid "Check validity method."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:386
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2544
+msgid "Options:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:388
+msgid "0 --- The one selected in digitizing settings"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:389
+msgid "1 --- QGIS"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:390
+msgid "2 --- GEOS"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:392
+msgid "Default: *2*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:398
+msgid "``Valid output`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:398
+msgid "Vector layer containing copy of the valid features of the source layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:402
+msgid "``Invalid output`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:401
+msgid ""
+"Vector layer containing copy of the invalid features of the source layer "
+"with the field  ``_errors`` listing the summary of the error found."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:407
+msgid "``Error output`` [vector: point]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:405
+msgid ""
+"Point layer of the exact position of the validity problems detected with "
+"the ``message`` field describing the error(s) found."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:412
+msgid "Collect geometries"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:413
+msgid ""
+"Takes a vector layer and collects its geometries into new multipart "
+"geometries."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:415
+msgid ""
+"One or more attributes can be specified to collect only geometries "
+"belonging to the same class (having the same value for the specified "
+"attributes), alternatively all geometries can be collected."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:419
+msgid ""
+"All output geometries will be converted to multi geometries, even those "
+"with just a single part. This algorithm does not dissolve overlapping "
+"geometries - they will be collected together without modifying the shape "
+"of each geometry part."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:423
+msgid ""
+"See the 'Promote to multipart' or 'Aggregate' algorithms for alternative "
+"options."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:431
+msgid "Vector layer to be transformed."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:436
+msgid "``Unique ID fields`` [tablefield: any] [list]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:434
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:526
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:675
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:744
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:882
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1171
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1178
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1222
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1229
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1531
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1975
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2118
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2180
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2321
+msgid "Optional"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:436
+msgid "Choose one or more attributes to collect the geometries."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:442
+msgid "``Collected`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:442
+msgid "Vector layer with collected geometries."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:446
+msgid ":ref:`qgisaggregate`, :ref:`qgispromotetomulti`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:452
+msgid "Concave hull (alpha shapes)"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:453
+msgid "Computes the concave hull of the features in an input point layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:458
+msgid "``Input point layer`` [vector: point]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:458
+msgid "Point vector layer to calculate the concave hull."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:468
+msgid "``Threshold`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:461
+msgid "Number from 0 (maximum concave hull) to 1 (convex hull)."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:463
+msgid "Default: *0.3*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:468
+msgid "Different thresholds used (0.3, 0.6, 0.9)"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:473
+msgid "``Allow holes`` [boolean]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:471
+msgid "Choose whether to allow holes in the final concave hull."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:473
+msgid "Default: *True*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:478
+msgid "``Split multipart geometry into singlepart geometries`` [boolean]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:476
+msgid "Check if you want to have singlepart geometries instead of multipart ones."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:483
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:536
+msgid "``Concave hull`` [vector: polygon]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:483
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:536
+msgid "Output concave hull."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:487
+msgid ":ref:`qgisconvexhull`, :ref:`qgisknearestconcavehull`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:493
+msgid "Concave hull (k-nearest neighbor)"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:494
+msgid ""
+"This algorithm generates a concave hull polygon from a set of points. If "
+"the input layer is a line or polygon layer, it will use the vertices."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:498
+msgid ""
+"The number of neighbors to consider determines the concaveness of the "
+"output polygon. A lower number will result in a concave hull that follows"
+" the points very closely, while a higher number will have a smoother "
+"shape. The minimum number of neighbor points to consider is 3. A value "
+"equal to or greater than the number of points will result in a convex "
+"hull."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:506
+msgid ""
+"If a field is selected, the algorithm will group the features in the "
+"input layer using unique values in that field and generate individual "
+"polygons in the output layer for each group."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:513
+msgid "Vector layer to calculate the concave hull."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:523
+msgid "``Number of neighboring points to consider`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:516
+msgid ""
+"Determines the concaveness of the output polygon. A small number will "
+"result in a concave hull that follows the points very closely, while a "
+"high number will make the polygon look more like the convex hull (if the "
+"number is equal to or larger than the number of features, the result will"
+" be the convex hull)."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:523
+msgid "Default (and minimum): *3*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:531
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1535
+msgid "``Field`` [tablefield: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:528
+msgid ""
+"If specified, one concave hull polygon is generated for each unique value"
+" of the field (by selecting features using this value)."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:531
+msgid "Default: *None*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:540
+msgid ":ref:`qgisconcavehull`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:546
+msgid "Convert geometry type"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:547
+msgid ""
+"Generates a new layer based on an existing one, with a different type of "
+"geometry."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:549
+msgid ""
+"Not all conversions are possible. For instance, a line layer can be "
+"converted to a point layer, but a point layer cannot be converted to a "
+"line layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:555
+msgid "Input vector layer to transform."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:568
+msgid "``New geometry type`` [enumeration]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:558
+msgid "Geometry type to apply to the output features. Options are:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:561
+msgid "0 --- Centroids"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:562
+msgid "1 --- Nodes"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:563
+msgid "2 --- Linestrings"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:564
+msgid "3 --- Multilinestrings"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:565
+msgid "4 --- Polygons"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:567
+msgid ""
+"Conversion types availability depends on the input layer and the "
+"conversion chosen: e.g. it is not possible to convert a point to a line."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:574
+msgid "``Converted`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:574
+msgid "Converted vector layer depending on the parameters chosen."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:578
+msgid ":ref:`qgispolygonize`, :ref:`qgislinestopolygons`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:584
+msgid "Convex hull"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:585
+msgid "Calculates the convex hull for each feature in an input layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:587
+msgid ""
+"See the 'Minimum bounding geometry' algorithm for a convex hull "
+"calculation which covers the whole layer or grouped subsets of features."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:593
+msgid "Black lines identify the convex hull for each layer feature"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:602
+msgid "``Input point layer`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:602
+msgid "Point vector layer to calculate the convex hull."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:607
+msgid "``Convex hull`` [vector: polygon]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:607
+msgid "Output convex hull."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:611
+msgid ":ref:`qgisminimumboundinggeometry`, :ref:`qgisconcavehull`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:617
+msgid "Create layer from extent"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:618
+msgid ""
+"Creates a new vector layer that contains a single feature with geometry "
+"matching the extent of the input layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:621
+msgid ""
+"It can be used in models to convert a literal extent (``xmin``, ``xmax``,"
+" ``ymin``, ``ymax`` format) into a layer which can be used for other "
+"algorithms which require a layer based input."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:629
+msgid "``Extent (xmin, xmax, ymin, ymax)`` [extent]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:629
+msgid "Extent to represent."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:636
+msgid "``Extent``"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:635
+msgid "Layer with a polygon feature representing the input extent."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:641
+msgid "Create wedge buffers"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:642
+msgid "Creates wedge shaped buffers from input points."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:647
+msgid "Wedge buffers"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:649
+msgid ""
+"The native output from this algorithm are CurvePolygon geometries, but "
+"these may be automatically segmentized to Polygons depending on the "
+"output format."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:656
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:710
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1889
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2028
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2096
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2158
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3092
+msgid "``Input layer`` [vector: point]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:656
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1889
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2096
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2158
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3092
+msgid "Input point vector layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:659
+msgid "``Azimuth (degrees from North)`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:659
+msgid "Angle (in degrees) as the middle value of the wedge."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:668
+msgid "``Wedge width (in degrees)`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:662
+msgid ""
+"Width (in degrees) of the buffer. The wedge will extend to half of the "
+"angular width either side of the azimuth direction."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:668
+msgid "Azimuth and width values of the wedge buffer"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:672
+msgid "``Outer radius`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:671
+msgid ""
+"The outer *size* (length) of the wedge: the size is meant from the source"
+" point to the edge of the wedge shape."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:679
+msgid "``Inner radius`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:677
+msgid "Inner radius value. If 0 the wedge will begin from the source point."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:679
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:749
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2033
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2122
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2184
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2318
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2422
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2461
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2501
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2773
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2778
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2874
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3007
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3012
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3017
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3022
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3097
+msgid "Default: *0.0*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:685
+msgid "``Buffers`` [vector: polygon]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:685
+msgid "Wedge buffer polygon vector layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:689
+msgid ""
+":ref:`qgisbuffer`, :ref:`qgisbufferbym`, :ref:`qgistaperedbuffer`, "
+":ref:`qgisbufferbym`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:695
+msgid "Delaunay triangulation"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:696
+msgid ""
+"Creates a polygon layer with the delaunay triangulation corresponding to "
+"a point layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:702
+msgid "Delaunay triangulation on points"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:710
+msgid "Point vector layer to compute the triangulation on."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:716
+msgid "``Delaunay triangulation`` [vector: polygon]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:715
+msgid "Resulting polygon layer of delaunay triangulation."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:721
+msgid "Delete holes"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:722
+msgid ""
+"Takes a polygon layer and removes holes in polygons. It creates a new "
+"vector layer in which polygons with holes have been replaced by polygons "
+"with only their external ring. Attributes are not modified."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:726
+msgid ""
+"An optional minimum area parameter allows removing only holes which are "
+"smaller than a specified area threshold. Leaving this parameter at "
+"``0.0`` results in all holes being removed."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:733
+msgid "Before and after the cleaning"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:741
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:988
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1939
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2006
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2918
+msgid "``Input layer`` [vector: polygon]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:741
+msgid "Polygon layer with holes."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:749
+msgid "``Remove holes with area less than`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:746
+msgid ""
+"Only holes with an area less than this threshold will be deleted. If "
+"``0.0`` is added, **all** the holes will be deleted."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:756
+msgid "``Cleaned`` [vector: polygon]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:755
+msgid "Vector layer without holes or holes larger than specified area."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:761
+msgid "Densify by count"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:762
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:805
+msgid ""
+"Takes a polygon or line layer and generates a new one in which the "
+"geometries have a larger number of vertices than the original one."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:765
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:812
+msgid ""
+"If the geometries have Z or M values present then these will be linearly "
+"interpolated at the added vertices."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:768
+msgid ""
+"The number of new vertices to add to each segment is specified as an "
+"input parameter."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:773
+msgid "Red points show the vertices before and after the densify"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:783
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:833
+msgid "Polygon or line vector layer to densify."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:788
+msgid "``Vertices to add`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:786
+msgid "Number of vertices to add to each segment."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:788
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1417
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2659
+msgid "Default: *1*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:794
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:844
+msgid "``Densified`` [vector: line, polygon]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:794
+msgid "Densified layer with vertices added."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:798
+msgid ":ref:`qgisdensifygeometriesgivenaninterval`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:804
+msgid "Densify by interval"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:808
+msgid ""
+"The geometries are densified by adding regularly placed extra vertices "
+"inside each segment so that the maximum distance between any two vertices"
+" does not exceed the specified distance."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:815
+msgid "**Example**"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:817
+msgid ""
+"Specifying a distance 3 would cause the segment ``[0 0] -> [10 0]`` to be"
+" converted to ``[0 0] -> [2.5 0] -> [5 0] -> [7.5 0] -> [10 0]``, since 3"
+" extra vertices are required on the segment and spacing these at 2.5 "
+"increments allows them to be evenly spaced over the segment."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:825
+msgid "Densify geometry at a given interval"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:838
+msgid "``Interval between vertices to add`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:836
+msgid "Maximum distance between two consecutive vertices."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:838
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:926
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1895
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1900
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1944
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2038
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2110
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2115
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2172
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2177
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2387
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2466
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2556
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2763
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2768
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2879
+msgid "Default: *1.0*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:844
+msgid "Densified layer with vertices added using the specified interval."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:848
+msgid ":ref:`qgisdensifygeometries`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:854
+msgid "Dissolve"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:855
+msgid ""
+"Takes a vector layer and combines its features into new features. One or "
+"more attributes can be specified to dissolve features belonging to the "
+"same class (having the same value for the specified attributes), "
+"alternatively all features can be dissolved into a single one."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:860
+msgid ""
+"All output geometries will be converted to multi geometries. In case the "
+"input is a polygon layer, common boundaries of adjacent polygons being "
+"dissolved will get erased."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:864
+msgid ""
+"The resulting attribute table will have the same fields as the input "
+"layer. The values in the output layer's fields are the ones of the first "
+"input feature that happens to be processed."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:871
+msgid "Dissolve the polygon layer on a common attribute"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:879
+msgid "Vector layer to dissolve."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:887
+msgid "``Dissolve field(s)`` [tablefield: any] [list]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:884
+msgid ""
+"Features having the same value for the selected field(s) will be replaced"
+" with a single one and their geometries are merged."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:887
+msgid ""
+"If no field is provided then all the features are dissolved in a single "
+"feature."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:894
+msgid "``Dissolved`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:893
+msgid ""
+"Multi geometry type layer with merged geometries but non aggregated "
+"values in fields."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:899
+msgid "Drape (set Z value from raster)"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:900
+msgid ""
+"Uses values sampled from a band within a raster layer to set the Z value "
+"for every overlapping vertex in the feature geometry. The raster values "
+"can optionally be scaled by a preset amount."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:904
+msgid ""
+"If Z values already exist in the layer, they will be overwritten with the"
+" new value. If no Z values exist, the geometry will be upgraded to "
+"include the Z dimension."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:910
+msgid "Input vector layer to set the Z values to."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:913
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2453
+msgid "``Raster layer`` [raster]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:913
+msgid "Raster layer to take the Z values from."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:916
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2456
+msgid "``Band number`` [raster band]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:916
+msgid "The raster band to take the Z values from if the raster is multiband."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:921
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2461
+msgid "``Value for nodata or non-intersecting vertices`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:919
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2459
+msgid ""
+"Value to use in case the vertex does not intersect (a valid pixel of) the"
+" raster."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:926
+msgid "``Scale`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:924
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2464
+msgid "Scaling value: the band values are multiplied by this value."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:932
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2472
+msgid "``Updated`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:932
+msgid ""
+"A vector layer with geometries that have Z values extracted from the "
+"provided raster layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:936
+msgid ":ref:`qgissetmfromraster`, :ref:`qgissetzvalue`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:942
+msgid "Drop m/z values"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:943
+msgid "Removes any M (measure) or Z (altitude) values from input geometries."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:948
+msgid "Input vector layer from which M and/or Z values will be dropped."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:953
+msgid "``Drop M Values`` [boolean]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:951
+msgid "Removes the M values from the geometries."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:958
+msgid "``Drop Z Values`` [boolean]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:956
+msgid "Removes the Z values from the geometries."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:963
+msgid "``Z/M Dropped`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:963
+msgid ""
+"A vector layer that is identical to the input layer, except that M and/or"
+" Z values have been removed from its geometries."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:967
+msgid ":ref:`qgissetmvalue`, :ref:`qgissetzvalue`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:973
+msgid "Eliminate selected polygons"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:974
+msgid ""
+"Combines selected polygons of the input layer with certain adjacent "
+"polygons by erasing their common boundary. The adjacent polygon can be "
+"either the one with the largest or smallest area or the one sharing the "
+"largest common boundary with the polygon to be eliminated."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:979
+msgid ""
+"Eliminate is normally used to get rid of sliver polygons, i.e. tiny "
+"polygons that are a result of polygon intersection processes where "
+"boundaries of the inputs are similar but not identical."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:988
+msgid "Input polygon vector layer to clean."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:995
+msgid "``Merge selection with the neighboring polygon with the`` [enumeration]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:991
+msgid "Choose the parameter to use in order to get rid of the selected polygons:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:993
+msgid "Largest Area"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:994
+msgid "Smallest Area"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:995
+msgid "Largest Common Boundary"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1001
+msgid "``Eliminated`` [vector: polygon]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1000
+msgid "Cleaned vector layer as result of the parameters chosen."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1006
+msgid "Explode lines"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1007
+msgid ""
+"Takes a lines layer and creates a new one in which each line layer is "
+"replaced by a set of lines representing the segments in the original "
+"line."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1010
+msgid ""
+"Each line in the resulting layer contains only a start and an end point, "
+"with no intermediate vertices between them."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1017
+msgid "The original line layer and the exploded one"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1024
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1052
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1292
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1449
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1483
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1509
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1689
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1972
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2290
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2582
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2869
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2954
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3051
+msgid "``Input layer`` [vector: line]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1024
+msgid "Line vector layer in input to explode."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1031
+msgid "``Exploded`` [vector: line]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1030
+msgid ""
+"Output vector line with features representing each segment of the input "
+"layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1036
+msgid "Extend lines"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1037
+msgid ""
+"Extends line geometry by a specified amount at the start and end of the "
+"line."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1039
+msgid ""
+"Lines are extended using the bearing of the first and last segment in the"
+" line."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1044
+msgid ""
+"The red dashes represent the initial and final extension of the original "
+"layer"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1052
+msgid "Line vector layer to extend."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1055
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1452
+msgid "``Start distance`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1055
+msgid ""
+"Distance by which to extend the first segment of the line (starting "
+"point)."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1058
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1455
+msgid "``End distance`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1058
+msgid "Distance by which to extend the last segment of the line (ending point)."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1064
+msgid "``Extended`` [vector: line]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1064
+msgid "Extended vector line layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1068
+msgid ":ref:`qgislinesubstring`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1074
+msgid "Extract specific vertices"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1075
+msgid ""
+"Takes a line or polygon layer and generates a point layer with points "
+"representing specific vertices in the input lines or polygons."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1078
+msgid ""
+"For instance, this algorithm can be used to extract the first or last "
+"vertices in the geometry. The attributes associated to each point are the"
+" same ones associated to the line or polygon that the point belongs to."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1082
+msgid ""
+"The vertex indices parameter accepts a comma separated string specifying "
+"the indices of the vertices to extract. The first vertex corresponds to "
+"an index of 0, the second vertex has an index of 1, etc. Negative indices"
+" can be used to find vertices at the end of the geometry, e.g., an index "
+"of -1 corresponds to the last vertex, -2 corresponds to the second last "
+"vertex, etc."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1088
+msgid ""
+"Additional fields are added to the vertices indicating the specific "
+"vertex position (e.g., 0, -1, etc), the original vertex index, the "
+"vertex’s part and its index within the part (as well as its ring for "
+"polygons), distance along the original geometry and bisector angle of "
+"vertex for the original geometry."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1096
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1136
+msgid "Vector layer in input to extract the vertices from."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1102
+msgid "``Vertex indices`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1099
+msgid ""
+"Type the indices of the vertices to extract. The algorithm accepts comma "
+"separated values for many vertices to extract (e.g. ``-2, 3, 5, 7``)."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1109
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1143
+msgid "``Vertices`` [vector: point]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1108
+msgid ""
+"Point layer with features representing the specific vertices in the input"
+" layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1114
+msgid "Extract vertices"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1115
+msgid ""
+"Takes a line or polygon layer and generates a point layer with points "
+"representing the vertices in the input lines or polygons."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1118
+msgid ""
+"The attributes associated to each point are the same ones associated to "
+"the line or polygon that the point belongs to."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1121
+msgid ""
+"Additional fields are added to the vertices indicating the vertex index "
+"(beginning at 0), the feature’s part and its index within the part (as "
+"well as its ring for polygons), distance along original geometry and "
+"bisector angle of vertex for original geometry."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1128
+msgid "Vertices extracted for line and polygon layer"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1142
+msgid ""
+"Point layer with features representing all the vertices in the input "
+"layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1148
+msgid "Filter vertices by M value"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1149
+msgid ""
+"Filters away vertices based on their M value, returning geometries with "
+"only vertex points that have a M value greater than or equal to the "
+"specified minimum value and/or less than or equal to the maximum value."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1153
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1203
+msgid ""
+"If the minimum value is not specified then only the maximum value is "
+"tested, and similarly if the maximum value is not specified then only the"
+" minimum value is tested."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1159
+msgid ""
+"The red line represents the black line with only vertices whose M value "
+"is <=10."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1161
+msgid ""
+"Depending on the input geometry attributes and the filters used, the "
+"resultant geometries created by this algorithm may no longer be valid."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1168
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1219
+msgid "Vector layer to remove vertices from."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1175
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1226
+msgid "``Minimum`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1173
+msgid "Minimum M value allowed to keep a vertex."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1175
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1182
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1226
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1233
+msgid "Default: *Not set*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1182
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1233
+msgid "``Maximum`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1180
+msgid "Maximum M value allowed to keep a vertex."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1188
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1239
+msgid "``Filtered`` [vector: line, polygon]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1188
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1239
+msgid "Vector layer of the features with only the filtered vertices."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1192
+msgid ":ref:`qgisfilterverticesbyz`, :ref:`qgisextractvertices`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1198
+msgid "Filter vertices by Z value"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1199
+msgid ""
+"Filters away vertices based on their Z value, returning geometries with "
+"only vertex points that have a Z value greater than or equal to the "
+"specified minimum value and/or less than or equal to the maximum value."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1209
+msgid ""
+"The red line represents the black line with only vertices whose Z value "
+"is <=10."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1211
+msgid ""
+"Depending on the input geometry attributes and the filters used, the "
+"resultant geometries created by this algorithm may no longer be valid. "
+"You may need to run the :ref:`qgisfixgeometries` algorithm to ensure "
+"their validity."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1224
+msgid "Minimum Z value allowed to keep a vertex."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1231
+msgid "Maximum Z value allowed to keep a vertex."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1243
+msgid ":ref:`qgisfilterverticesbym`, :ref:`qgisextractvertices`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1249
+msgid "Fix geometries"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1250
+msgid ""
+"Attempts to create a valid representation of a given invalid geometry "
+"without losing any of the input vertices. Already valid geometries are "
+"returned without further intervention. Always outputs multi-geometry "
+"layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1254
+msgid "M values will be dropped from the output."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1262
+msgid "Polygon or vector layer in input."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1268
+msgid "``Fixed geometries`` [vector: line, polygon]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1268
+msgid "Layer with fixed geometries."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1273
+msgid "Geodesic line split at antimeridian |36|"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1275
+msgid ""
+"This algorithm splits a line into multiple geodesic segments, whenever "
+"the line crosses the antimeridian (±180 degrees longitude)."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1278
+msgid ""
+"Splitting at the antimeridian helps the visual display of the lines in "
+"some projections. The returned geometry will always be a multi-part "
+"geometry."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1281
+msgid ""
+"Whenever line segments in the input geometry cross the antimeridian, they"
+" will be split into two segments, with the latitude of the breakpoint "
+"being determined using a geodesic line connecting the points either side "
+"of this segment. The current project ellipsoid setting will be used when "
+"calculating this breakpoint."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1286
+msgid ""
+"If the input geometry contains M or Z values, these will be linearly "
+"interpolated for the new vertices created at the antimeridian."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1292
+msgid "Vector input line layer"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1298
+msgid "``Split`` [vector: line]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1298
+msgid "Vector line layer resulting from geodesic split."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1303
+msgid "Geometry by expression"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1304
+msgid ""
+"Updates existing geometries (or creates new geometries) for input "
+"features by use of a QGIS expression."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1307
+msgid ""
+"This allows complex geometry modifications which can utilize all the "
+"flexibility of the QGIS expression engine to manipulate and create "
+"geometries for output features."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1310
+msgid ""
+"For help with QGIS expression functions, see the inbuilt help for "
+"specific functions which is available in the :ref:`expression builder "
+"<vector_expressions>`."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1316
+msgid "Vector input layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1329
+msgid "``Output geometry type`` [enumeration]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1319
+msgid ""
+"The output geometry strongly depends on the expression you will choose: "
+"for instance, if you want to create a buffer then the geometry type has "
+"to be a polygon."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1323
+msgid "Available options are:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1325
+msgid "0 --- Polygon"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1326
+msgid "1 --- Line"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1327
+msgid "2 --- Point"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1334
+msgid "``Output geometry has z dimension`` [boolean]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1332
+msgid "Choose if the output geometry should have the Z dimension."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1339
+msgid "``Output geometry has m values`` [boolean]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1337
+msgid "Choose if the output geometry should have the M dimension."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1346
+msgid "``Geometry expression`` [expression]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1342
+msgid ""
+"Add the geometry expression you want to use. You can use the button to "
+"open the Expression Dialog: the dialog has a list of all the usable "
+"expression together with their help and guide."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1346
+msgid "Default: *$geometry*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1353
+msgid "``Modified geometry`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1352
+msgid "Vector layer resulting from the expression added."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1358
+msgid "Interpolate point on line"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1359
+msgid ""
+"Creates a point geometry interpolated at a set distance along line or "
+"curve geometries."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1362
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1433
+msgid "Z and M values are linearly interpolated from existing values."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1364
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1435
+msgid ""
+"If a multipart geometry is encountered, only the first part is considered"
+" when calculating the substring."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1367
+msgid ""
+"If the specified distance is greater than the input feature's length, the"
+" resultant feature will have a null geometry."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1373
+msgid "Interpolated point at 500m of the beginning of the line"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1379
+msgid "Line or polygon vector layer  from which to interpolate point placement."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1382
+msgid "Distance from the beginning of the line."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1388
+msgid "``Interpolated points`` [vector: point]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1388
+msgid ""
+"Point vector layer with features at a set distance along the line or "
+"polygon boundary."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1392
+msgid ":ref:`qgispointsalonglines`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1397
+msgid "Keep n biggest parts"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1398
+msgid ""
+"Takes a layer with polygons or multipolygons and returns a new layer in "
+"which only the *n* largest polygons of each multipolygon feature are "
+"kept. If a feature has *n* or fewer parts, the feature will just be "
+"copied."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1405
+msgid ""
+"Clockwise from left-up: original multipart feature, one, two and three "
+"biggest parts kept"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1411
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1490
+msgid "``Polygons`` [vector: polygon]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1411
+msgid "Input polygon layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1417
+msgid "``To keep`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1414
+msgid ""
+"Choose how many parts to keep. If 1 is selected, only the biggest part of"
+" the feature will be kept."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1424
+msgid "``Biggest parts`` [vector: polygon]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1423
+msgid "Resulting polygon layer with the n biggest parts of each feature."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1429
+msgid "Line substring"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1430
+msgid ""
+"Returns the portion of a line (or curve) which falls between the "
+"specified start and end distances (measured from the beginning of the "
+"line)."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1441
+msgid ""
+"Substring line with starting distance set at 0 meters and the ending "
+"distance at 250 meters."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1449
+msgid "Line vector layer to extract the substring from."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1452
+msgid ""
+"Distance along the input line, representing the start point of the output"
+" feature."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1455
+msgid ""
+"Distance along the input line, representing the end point of the output "
+"feature."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1461
+msgid "``Substring`` [vector: line]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1461
+msgid "Vector line layer of the substring"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1465
+msgid ":ref:`qgisextendlines`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1471
+msgid "Lines to polygon"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1472
+msgid ""
+"Generates a polygon layer using as polygon rings the lines from an input "
+"line layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1474
+msgid ""
+"The attribute table of the output layer is the same as the one from of "
+"the input line layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1483
+msgid "Line vector layer to convert."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1489
+msgid "Polygon vector layer from the line input vector layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1495
+msgid "Merge lines"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1496
+msgid ""
+"Joins all connected parts of MultiLineString geometries into single "
+"LineString geometries."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1499
+msgid ""
+"If any parts of the input MultiLineString geometries are not connected, "
+"the resultant geometry will be a MultiLineString containing any lines "
+"which could be merged and any non-connected line parts."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1509
+msgid "MultiLineString vector layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1516
+msgid "``Merged`` [vector: lines]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1515
+msgid "Single LineString vector layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1521
+msgid "Minimum bounding geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1522
+msgid "Creates geometries which enclose the features from an input layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1533
+msgid ""
+"Features can be grouped by a field. If set, this causes the output layer "
+"to contain one feature per grouped value with a minimal geometry covering"
+" only the features with matching values."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1550
+msgid "``Geometry type`` [enumeration]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1538
+msgid "Numerous enclosing geometry types are supported:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1540
+msgid "0 --- Envelope (Bounding Box)"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1541
+msgid "1 --- Minimum Oriented Rectangle"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1542
+msgid "2 --- Minimum Enclosing Circle"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1543
+msgid "3 --- Convex Hull"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1550
+msgid "Clockwise from left-up: envelopes, oriented rectangle, circle, convex hull"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1557
+msgid "``Bounding geometry`` [vector: polygon]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1556
+msgid "Bounding polygon layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1562
+msgid "Minimum enclosing circles"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1563
+msgid ""
+"Calculates the minimum enclosing circle which covers each feature in an "
+"input layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1568
+msgid "Enclosing circles for each feature"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1581
+msgid "``Number of segment in circles`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1579
+msgid "Choose the number of segment for each circle."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1581
+msgid "Default: *72*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1587
+msgid "``Minimum enclosing circles`` [vector: polygon]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1587
+msgid "Enclosing circles for each polygon feature."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1597
+msgid "Multi-ring buffer (constant distance)"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1598
+msgid ""
+"Computes multi-ring (*donuts*) buffer for all the features in an input "
+"layer, using a fixed or dynamic distance and ring numbers."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1604
+msgid "Multi-ring buffer for line, point and polygon layer"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1617
+msgid "``Number of rings`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1615
+msgid ""
+"Total number of rings that the buffer must have. It can be a unique value"
+" (same ring number for all the features) or it can be taken from features"
+" data (different ring number depending on the feature values)."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1622
+msgid "``Distance between rings`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1620
+msgid ""
+"Distance between the single rings. It can be a unique value (same "
+"distance for all the features) or it can be taken from features data "
+"(different distance depending on the feature values)."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1628
+msgid "``Multi-ring buffer (constant distance)``"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1628
+msgid "Multi ring buffer polygon vector layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1632
+msgid ""
+":ref:`qgisbuffer`, :ref:`qgisvariabledistancebuffer`, "
+":ref:`qgisrectanglesovalsdiamondsfixed`, "
+":ref:`qgisrectanglesovalsdiamondsvariable`, :ref:`qgissinglesidedbuffer`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1639
+msgid "Multipart to singleparts"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1640
+msgid "Splits the multipart input layers into single features."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1642
+msgid ""
+"The attributes of the output layers are the same of the original ones but"
+" divided into single features."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1648
+msgid "Left the multipart source layer and right the single part output result"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1658
+msgid "Multipart input layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1664
+msgid "``Single parts`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1664
+msgid "Singlepart layer in output with updated attribute table."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1668
+msgid ":ref:`qgiscollect`, :ref:`qgispromotetomulti`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1674
+msgid "Offset lines"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1675
+msgid ""
+"Offsets lines by a specified distance. Positive distances will offset "
+"lines to the left, and negative distances will offset them to the right."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1681
+msgid "In blue the source layer, in red the offset one"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1689
+msgid "Line vector layer in input to elaborate the offset on."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1692
+msgid "Distance of the offset."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1700
+msgid "``Segment`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1697
+msgid ""
+"Number of line segments to use to approximate a quarter circle when "
+"creating rounded offsets."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1700
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2601
+msgid "Default: *8*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1703
+msgid ""
+"Specify whether round, miter or beveled joins should be used when "
+"offsetting corners in a line. Options are:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1714
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2615
+msgid ""
+"Only applicable for mitered join styles, and controls the maximum "
+"distance from the offset curve to use when creating a mitered join."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1723
+msgid "``Offset`` [vector: line]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1723
+msgid "Offset line layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1727
+msgid ":ref:`qgisarrayoffsetlines`, :ref:`qgistranslategeometry`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1733
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1739
+msgid "Oriented minimum bounding box"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1734
+msgid ""
+"Calculates the minimum area rotated rectangle which covers each feature "
+"in an input layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1753
+msgid "``Bounding boxes`` [vector: polygon]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1753
+msgid "Oriented minimum bounding boxes for each polygon feature."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1763
+msgid "Orthogonalize"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1764
+msgid ""
+"Takes a line or polygon layer and attempts to orthogonalize all the "
+"geometries in the layer. This process shifts the vertices in the "
+"geometries to try to make every angle in the geometry either a right "
+"angle or a straight line."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1771
+msgid "In blue the source layer while the red line is the orthogonalized result"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1785
+msgid "``Maximum angle tolerance (degrees)`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1782
+msgid ""
+"Specify the maximum deviation from a right angle or straight line a "
+"vertex can have for it to be adjusted. Smaller tolerances mean that only "
+"vertices which are already closer to right angles will be adjusted, and "
+"larger tolerances mean that vertices which deviate further from right "
+"angles will also be adjusted."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1789
+msgid "``Maximum algorithm iterations`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1788
+msgid ""
+"Setting a larger number for the maximum iterations will result in a more "
+"orthogonal geometry at the cost of extra processing time."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1796
+msgid "``Orthogonalized`` [vector: line, polygon]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1795
+msgid "Final layer with angles adjusted depending on the parameters chosen."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1801
+msgid "Point on surface"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1802
+msgid "Returns a point guaranteed to lie on the surface of a geometry."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1821
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1951
+msgid "``Point`` [vector: point]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1821
+msgid "Point vector layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1825
+msgid ":ref:`qgiscentroids`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1831
+msgid "Points along geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1832
+msgid ""
+"Creates points at regular intervals along line or polygon geometries. "
+"Created points will have new attributes added for the distance along the "
+"geometry and the angle of the line at the point."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1836
+msgid ""
+"An optional start and end offset can be specified, which controls how far"
+" from the start and end of the geometry the points should be created."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1842
+msgid "Points created along the source line layer"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1853
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2587
+msgid "``Distance`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1851
+msgid "Distance between two consecutive points along a geometry."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1853
+msgid "Default: *100*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1859
+msgid "``Start offset`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1856
+msgid ""
+"Distance from the beginning of the input line, representing the position "
+"of the first point."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1865
+msgid "``End offset`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1862
+msgid ""
+"Distance from the end of the input line, representing the position beyond"
+" which no point feature shoud be created."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1871
+msgid "``Points`` [vector: point]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1871
+msgid ""
+"Point vector layer with features placed along the line or polygon "
+"boundary."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1875
+msgid ":ref:`qgisinterpolatepoint`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1880
+msgid "Points displacement"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1881
+msgid ""
+"Given a distance of proximity, identifies nearby point features and "
+"radially distributes them over a circle whose center represents their "
+"barycenter. A convenient tool to scatter overlaid features."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1895
+msgid "``Minimum distance to other points`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1892
+msgid ""
+"Distance below which point features are considered close. Close features "
+"are distributed altogether."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1900
+msgid "``Displacement distance`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1898
+msgid "Radius of the circle on which close features are placed."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1906
+msgid "``Horizontal distribution for two point case`` [boolean]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1903
+msgid ""
+"When only two points are identified as close, aligns them horizontally on"
+" the circle instead of vertically."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1913
+msgid "``Displaced`` [vector: point]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1912
+msgid "Point vector layer with displaced features."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1918
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1933
+msgid "Pole of inaccessibility"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1919
+msgid ""
+"Calculates the pole of inaccessibility for a polygon layer, which is the "
+"most distant internal point from the boundary of the surface."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1922
+msgid ""
+"This algorithm uses the 'polylabel' algorithm (Vladimir Agafonkin, 2016),"
+" which is an iterative approach guaranteed to find the true pole of "
+"inaccessibility within a specified tolerance. A more precise tolerance "
+"(lower value) requires more iterations and will take longer to calculate."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1927
+msgid ""
+"The distance from the calculated pole to the polygon boundary will be "
+"stored as a new attribute in the output layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1939
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2006
+msgid "Input polygon vector layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1944
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2712
+msgid "``Tolerance`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1942
+msgid "Set the tolerance for the calculation."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1950
+msgid "Point as pole of inaccessibility for the source polygon vector layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1956
+msgid "Polygonize"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1957
+msgid ""
+"Creates a polygon layer whose features boundaries are generated from a "
+"**closed** line layer features."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1963
+msgid "The yellow polygons generated from the closed lines"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1965
+msgid ""
+"The line layer must have closed shapes in order to be transformed into a "
+"polygon."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1972
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2582
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2869
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2954
+msgid "Input line vector layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1979
+msgid "``Keep table structure of line layer`` [boolean]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1977
+msgid "Check to copy the original attribute of the line layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1986
+msgid "``Polygons from lines`` [vector: polygon]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1985
+msgid "Vector layer with polygonized features."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1991
+msgid "Polygons to lines"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1992
+msgid ""
+"Takes a polygon layer and creates a line layer, with lines representing "
+"the boundaries of the polygons in the input layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:1998
+msgid "Black lines as the result of the algorithm"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2013
+msgid "``Lines`` [vector: line]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2012
+msgid "Lines from the polygon layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2018
+msgid "Project points (Cartesian)"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2019
+msgid ""
+"Projects point geometries by a specified distance and bearing (azimuth), "
+"creating a new point layer with the projected points."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2028
+msgid "Point vector layer to project."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2033
+msgid "``Bearing (degrees from North)`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2031
+msgid "Clockwise angle starting from North, in degree (°) unit."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2036
+msgid "Distance to offset geometries, in layer units."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2045
+msgid "``Projected`` [vector: point]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2044
+msgid "Projected layer at given degrees and distance."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2050
+msgid "Promote to multipart"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2051
+msgid ""
+"Takes a vector layer with singlepart geometries and generates a new one "
+"in which all geometries are multipart."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2054
+msgid "Input features which are already multipart features will remain unchanged."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2056
+msgid ""
+"This algorithm can be used to force geometries to multipart types in "
+"order to be compatible with data providers that require multipart "
+"features."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2071
+msgid "``Multiparts`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2071
+msgid "Multiparts vector layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2075
+msgid ":ref:`qgisaggregate`, :ref:`qgiscollect`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2081
+msgid "Rectangles, ovals, diamonds (fixed)"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2082
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2144
+msgid ""
+"Creates a buffer area for all the features in an input layer with "
+"different shape choice."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2085
+msgid "Parameters can vary depending on the shape chosen."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2090
+msgid "Different buffer shapes"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2105
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2167
+msgid "``Buffer shape`` [enumeration]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2099
+msgid "Different shapes available:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2101
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2163
+msgid "0 --- Rectangles"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2102
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2164
+msgid "1 --- Ovals"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2103
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2165
+msgid "2 --- Diamonds"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2110
+msgid "``Width`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2108
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2170
+msgid "Width of the buffer shape."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2115
+msgid "``Height`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2113
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2175
+msgid "Height of the buffer shape."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2122
+msgid "``Rotation`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2120
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2182
+msgid "Rotation of the buffer shape."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2127
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2189
+msgid "``Number of segment`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2125
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2187
+msgid "How many segment should have the buffer shape."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2127
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2189
+msgid "Default: *36*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2133
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2195
+msgid "``Output`` [vector: polygon]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2133
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2195
+msgid "Buffer shape in output."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2137
+msgid ":ref:`qgisrectanglesovalsdiamondsvariable`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2143
+msgid "Rectangles, ovals, diamonds (variable)"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2147
+msgid ""
+"Buffer shape parameters are specified through attribute of the input "
+"layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2152
+msgid "Different buffer shapes with different parameters"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2161
+msgid "Different shape available:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2172
+msgid "``Width`` [tablefield: numeric]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2177
+msgid "``Height`` [tablefield: numeric]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2184
+msgid "``Rotation`` [tablefield: numeric]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2199
+msgid ":ref:`qgisrectanglesovalsdiamondsfixed`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2205
+msgid "Remove duplicate vertices"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2206
+msgid ""
+"Removes duplicate vertices from features, wherever removing the vertices "
+"does not result in a degenerate geometry."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2209
+msgid ""
+"The tolerance parameter specifies the tolerance for coordinates when "
+"determining whether vertices are identical."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2212
+msgid ""
+"By default, Z values are not considered when detecting duplicate "
+"vertices. E.g. two vertices with the same X and Y coordinate but "
+"different Z values will still be considered duplicate and one will be "
+"removed. If the Use Z Value parameter is true, then the Z values are also"
+" tested and vertices with the same X and Y but different Z will be "
+"maintained."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2218
+msgid ""
+"Duplicate vertices are not tested between different parts of a multipart "
+"geometry, e.g. a multipoint geometry with overlapping points will not be "
+"changed by this method."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2228
+msgid "Input vector layer with duplicate vertices."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2233
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2556
+msgid "``Tolerance`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2231
+msgid "Vertices closer than the specified distance are considered duplicates."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2233
+msgid "Default:*0.000001*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2239
+msgid "``Use Z value`` [boolean |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2236
+msgid ""
+"Allows to consider the Z coordinate when detecting duplicate vertices ie "
+"two points at the same X,Y coordinate but with different Z value are not "
+"set as duplicates."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2239
+msgid "Default:*False*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2246
+msgid "``Cleaned`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2245
+msgid "Vector layer without duplicate vertices."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2251
+msgid "Remove null geometries"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2252
+msgid "Removes any features which do not have a geometry from a vector layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2254
+msgid "All other features will be copied unchanged."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2256
+msgid "The features with null geometries can be saved to a separate layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2261
+msgid "Input vector layer with NULL geometries."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2267
+msgid "``Non null geometries`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2267
+msgid "Vector layer without NULL geometries."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2271
+msgid "``Null geometries`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2270
+msgid "Vector layer with only NULL geometries."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2276
+msgid "Reverse line direction"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2277
+msgid "Inverts the direction of a line layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2282
+msgid "Before and after the direction inversion"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2290
+msgid "Input line vector layer to invert the direction."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2297
+msgid "``Reversed`` [vector: line]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2296
+msgid "Inverted line vector layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2302
+msgid "Rotate"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2303
+msgid ""
+"Rotates feature geometries by the specified angle clockwise. The rotation"
+" occurs around each feature's centroid, or optionally around a unique "
+"preset point."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2318
+msgid "``Rotation (degrees clockwise)`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2316
+msgid "Angle of the rotation in degrees."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2324
+msgid "``Rotation anchor point (x, y)`` [point]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2323
+msgid ""
+"X,Y coordinates of the point to rotate the features around. If not set "
+"the rotation occurs around each feature's centroid."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2331
+msgid "``Rotated`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2330
+msgid "Vector layer with rotated geometries."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2336
+msgid "Segmentize by maximum angle"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2337
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2371
+msgid "Segmentizes a geometry by converting curved sections to linear sections."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2339
+msgid ""
+"The segmentization is performed by specifying the maximum allowed radius "
+"angle between vertices on the straightened geometry (e.g the angle of the"
+" arc created from the original arc center to consecutive output vertices "
+"on the linearized geometry). Non-curved geometries will be retained "
+"without change."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2354
+msgid "``Maximum angle between vertices (degrees)`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2352
+msgid ""
+"Maximum allowed radius angle between vertices on the straightened "
+"geometry."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2354
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2959
+msgid "Default: *5.0*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2360
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2393
+msgid "``Segmentized`` [vector: line, polygon]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2360
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2393
+msgid "Vector layer with segmentized geometries."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2364
+msgid ""
+":ref:`qgissegmentizebymaxdistance`, :ref:`qgissimplifygeometries`, "
+":ref:`qgissmoothgeometry`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2370
+msgid "Segmentize by maximum distance"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2373
+msgid ""
+"The segmentization is performed by specifying the maximum allowed offset "
+"distance between the original curve and the segmentized representation. "
+"Non-curved geometries will be retained without change."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2387
+msgid "``Maximum offset distance`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2384
+msgid ""
+"Maximum allowed offset distance between the original curve and the "
+"segmentized representation, in the layer units."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2397
+msgid ""
+":ref:`qgissegmentizebymaxangle`, :ref:`qgissimplifygeometries`, "
+":ref:`qgissmoothgeometry`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2403
+msgid "Set M value"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2404
+msgid "Sets the M value for geometries in a layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2406
+msgid ""
+"If M values already exist in the layer, they will be overwritten with the"
+" new value. If no M values exist, the geometry will be upgraded to "
+"include M values and the specified value used as the initial M value for "
+"all geometries."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2410
+msgid ""
+"Use the |identify|:sup:`Identify Features` button to check the added M "
+"value: the results are available in the :guilabel:`Identify Results` "
+"dialog."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2422
+msgid "``M Value`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2420
+msgid "New M value to assign to the features."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2428
+msgid "``M Added`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2428
+msgid "Vector layer in output with M value."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2432
+msgid ":ref:`qgissetmfromraster`, :ref:`qgissetzvalue`, :ref:`qgisdropmzvalues`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2438
+msgid "Set M value from raster"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2440
+msgid ""
+"Uses values sampled from a band within a raster layer to set the M value "
+"for every overlapping vertex in the feature geometry. The raster values "
+"can optionally be scaled by a preset amount."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2444
+msgid ""
+"If M values already exist in the layer, they will be overwritten with the"
+" new value. If no M values exist, the geometry will be upgraded to "
+"include M values."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2450
+msgid "Input vector layer to set the M values to."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2453
+msgid "Raster layer to take the M values from."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2456
+msgid "The raster band to take the M values from if the raster is multiband."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2466
+msgid "``Scale factor`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2472
+msgid "A vector layer with M values extracted from the provided raster layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2476
+msgid ":ref:`qgissetzfromraster`, :ref:`qgissetmvalue`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2482
+msgid "Set Z value"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2483
+msgid "Sets the Z value for geometries in a layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2485
+msgid ""
+"If Z values already exist in the layer, they will be overwritten with the"
+" new value. If no Z values exist, the geometry will be upgraded to "
+"include Z values and the specified value used as the initial Z value for "
+"all geometries."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2489
+msgid ""
+"Use the |identify|:sup:`Identify Features` button to check the added Z "
+"value: the results are available in the :guilabel:`Identify Results` "
+"dialog."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2501
+msgid "``Z Value`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2499
+msgid "New Z value to assign to the features."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2507
+msgid "``Z Added`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2507
+msgid "Vector layer in output with Z value."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2511
+msgid ":ref:`qgissetzfromraster`, :ref:`qgissetmvalue`, :ref:`qgisdropmzvalues`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2517
+msgid "Simplify"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2518
+msgid ""
+"Simplifies the geometries in a line or polygon layer. It creates a new "
+"layer with the same features as the ones in the input layer, but with "
+"geometries containing a lower number of vertices."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2522
+msgid ""
+"The algorithm gives a choice of simplification methods, including "
+"distance based (the \"Douglas-Peucker\" algorithm), area based "
+"(\"Visvalingam\" algorithm) and snapping geometries to grid."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2529
+msgid ""
+"Clockwise from left-up: source layer and different simplification "
+"tolerances"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2539
+msgid "Polygon or line vector to simplify."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2550
+msgid "``Simplification method`` [enumeration]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2542
+msgid "Method of the simplification."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2546
+msgid "0 --- Distance (Douglas-Peucker)"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2547
+msgid "1 --- Snap to grid"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2548
+msgid "2 --- Area (Visvalingam)"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2553
+msgid ""
+"Threshold tolerance (in units of the layer): if the distance between two "
+"nodes is smaller than the tolerance value, the segment will be simplified"
+" and vertices will be removed."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2563
+msgid "``Simplified`` [vector: line, polygon]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2562
+msgid "Simplified vector layers in output."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2568
+msgid "Single sided buffer"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2569
+msgid ""
+"Computes a buffer on lines by a specified distance on one side of the "
+"line only."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2571
+msgid "Buffer always results in a polygon layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2576
+msgid "Left versus right side buffer on the same vector line layer"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2585
+msgid "Distance radius of the buffer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2595
+msgid "``Side`` [enumeration]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2590
+msgid "Choose which side the buffer should be created:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2592
+msgid "0 -- Left"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2593
+msgid "1 -- Right"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2624
+msgid "One side buffer polygon vector layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2630
+msgid "Smooth"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2631
+msgid ""
+"Smooths the geometries in a line or polygon layer. It creates a new layer"
+" with the same features as the ones in the input layer, but with "
+"geometries containing a **higher number of vertices and corners** in the "
+"geometries smoothed out."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2635
+msgid ""
+"The iterations parameter dictates how many smoothing iterations will be "
+"applied to each geometry. A higher number of iterations results in "
+"smoother geometries with the cost of greater number of nodes in the "
+"geometries."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2639
+msgid ""
+"The offset parameter controls how \"tightly\" the smoothed geometries "
+"follow the original geometries. Smaller values results in a tighter fit, "
+"and larger values will create a looser fit."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2643
+msgid ""
+"The maximum angle parameter can be used to prevent smoothing of nodes "
+"with large angles. Any node where the angle of the segments to either "
+"side is larger than this will not be smoothed. For example, setting the "
+"maximum angle to 90 degrees or lower would preserve right angles in the "
+"geometry."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2654
+msgid "Polygon or line vector to smooth."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2664
+msgid "``Iterations`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2657
+msgid "With many iterations the resulting layer will have many nodes."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2664
+msgid "Different number of iterations cause smoother geometries"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2675
+msgid "``Offset`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2667
+msgid ""
+"Larger values will *move* the resulting layer borders from the input "
+"layer ones."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2669
+msgid "Default: *0.25*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2674
+msgid ""
+"In blue the input layer. Offset value of 0.25 results in the red line "
+"while offset value of 0.50 results in the green line"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2680
+msgid "``Maximum node angle to smooth`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2678
+msgid "Every node below this value will be smoothed."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2680
+msgid "Default: *180.0*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2687
+msgid "``Smoothed`` [vector: line, polygon]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2686
+msgid "The smoothed vector layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2692
+msgid "Snap geometries to layer"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2693
+msgid ""
+"Snaps the geometries in a layer either to the geometries from another "
+"layer, or to geometries within the same layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2696
+msgid ""
+"Matching is done based on a tolerance distance, and vertices will be "
+"inserted or removed as required to make the geometries match the "
+"reference geometries."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2703
+msgid "Vector layer to align."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2706
+msgid "``Reference layer`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2706
+msgid "Vector layer to snap to."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2709
+msgid ""
+"Control how close input vertices need to be to the reference layer "
+"geometries before they are snapped. This distance is specified in layer "
+"units."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2728
+msgid "``Behavior`` [enumeration]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2715
+msgid ""
+"Snapping can be done on an existing node or a segment (its closest point "
+"to the vertex to move). Choose between different snapping options:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2719
+msgid "0 --- Prefer aligning nodes, insert extra vertices where required"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2720
+msgid "1 --- Prefer closest point, insert extra vertices where required"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2721
+msgid "2 --- Prefer aligning nodes, don't insert new vertices"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2722
+msgid "3 --- Prefer closest point, don't insert new vertices"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2723
+msgid "4 --- Move end points only, prefer aligning nodes"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2724
+msgid "5 --- Move end points only, prefer closest point"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2725
+msgid "6 --- Snap end points to end points only"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2726
+msgid "7 --- Snap to anchor nodes (single layer only)"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2728
+msgid "Default: *Prefer aligning nodes, insert extra vertices where required*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2735
+msgid "``Snapped geometry`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2734
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2784
+msgid "Vector layer with snapped geometries."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2740
+msgid "Snap points to grid"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2741
+msgid ""
+"Modifies the coordinates of geometries in a vector layer, so that all "
+"points or vertices are snapped to the closest point of a grid."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2744
+msgid ""
+"If the snapped geometry cannot be calculated (or is totally collapsed) "
+"the feature's geometry will be cleared."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2747
+msgid ""
+"Snapping can be performed on the X, Y, Z or M axis. A grid spacing of 0 "
+"for any axis will disable snapping for that axis."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2750
+msgid "Snapping to grid may generate an invalid geometry in some corner cases."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2758
+msgid "Input vector layer to snap."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2763
+msgid "``X Grid Spacing`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2761
+msgid "Spacing of the grid on the X axis."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2768
+msgid "``Y Grid Spacing`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2766
+msgid "Spacing of the grid on the Y axis."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2773
+msgid "``Z Grid Spacing`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2771
+msgid "Spacing of the grid on the Z axis."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2778
+msgid "``M Grid Spacing`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2776
+msgid "Spacing of the grid on the M axis."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2785
+msgid "``Snapped`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2790
+msgid "Subdivide"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2791
+msgid ""
+"Subdivides the geometry. The returned geometry will be a collection "
+"containing subdivided parts from the original geometry, where no part has"
+" more than the specified maximum number of nodes."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2795
+msgid ""
+"This is useful for dividing a complex geometry into less complex parts, "
+"easier to spatially index and faster to perform spatial operations. "
+"Curved geometries will be segmentized before subdivision."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2802
+msgid ""
+"Left the input layer, middle maximum nodes value is 100 and right maximum"
+" value is 200"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2805
+msgid ""
+"Subdividing a geometry can generate geometry parts that may not be valid "
+"and may contain self-intersections."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2814
+msgid "Vector layer that will have its feature geometries subdivided."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2820
+msgid "``Maximum nodes in parts`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2817
+msgid ""
+"Maximum number of vertices each new geometry part is allowed to have. "
+"Fewer *sub-parts* for higher values."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2820
+msgid "Default: *256*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2827
+msgid "``Subdivided`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2826
+msgid "Output vector layer with subdivided geometries."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2832
+msgid "Swap X and Y coordinates"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2833
+msgid "Switches the X and Y coordinate values in input geometries."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2835
+msgid ""
+"It can be used to repair geometries which have accidentally had their "
+"latitude and longitude values reversed."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2844
+msgid "Input vector layer to swap."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2851
+msgid "``Swapped`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2850
+msgid "Output swapped vector layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2856
+msgid "Tapered buffers"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2857
+msgid ""
+"Creates tapered buffer along line geometries, using a specified start and"
+" end buffer diameter."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2863
+msgid "Tapered buffer example"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2874
+msgid "``Start width`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2872
+msgid ""
+"Represents the radius of the buffer applied at the start point of the "
+"line feature."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2879
+msgid "``End width`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2877
+msgid ""
+"Represents the radius of the buffer applied at the end point of the line "
+"feature."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2884
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3058
+msgid "``Segments`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2882
+msgid "Number of the buffer segments."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2884
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3058
+msgid "Default: *16*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2890
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3064
+msgid "``Buffered`` [vector: polygon]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2890
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3064
+msgid "Variable buffer polygon layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2894
+msgid ":ref:`qgisbufferbym`, :ref:`qgisbuffer`, :ref:`qgiswedgebuffers`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2900
+msgid "Tessellate"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2901
+msgid ""
+"Tessellates a polygon geometry layer, dividing the geometries into "
+"triangular components."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2904
+msgid ""
+"The output layer consists of multipolygon geometries for each input "
+"feature, with each multipolygon consisting of multiple triangle component"
+" polygons."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2910
+msgid "Tessellated polygon (right)"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2918
+msgid "Polygon vector layer in input."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2925
+msgid "``Tesselated`` [vector: polygon]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2924
+msgid "Output a multipolygonZ layer with tessellated features."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2930
+msgid "Transect"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2931
+msgid "Creates transects on vertices for (multi)linestring."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2933
+msgid ""
+"A transect is a line oriented from an angle (by default perpendicular) to"
+" the input polylines (at vertices)."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2936
+msgid ""
+"Field(s) from feature(s) are returned in the transect with these new "
+"fields:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2938
+msgid "TR_FID: ID of the original feature"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2939
+msgid "TR_ID: ID of the transect. Each transect have an unique ID"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2940
+msgid "TR_SEGMENT: ID of the segment of the linestring"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2941
+msgid "TR_ANGLE: Angle in degrees from the original line at the vertex"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2942
+msgid "TR_LENGTH: Total length of the transect returned"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2943
+msgid ""
+"TR_ORIENT: Side of the transect (only on the left or right of the line, "
+"or both side)"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2948
+msgid "Dashed red lines represent the transect of the input line layer"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2959
+msgid "``Length of the transect`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2957
+msgid "Length in map unit of the transect."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2964
+msgid ""
+"``Angle in degrees from the original line at the vertices`` [number "
+"|dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2962
+msgid "Change the angle of the transect."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2964
+msgid "Default: *90.0*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2973
+msgid "``Side to create the transect`` [enumeration]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2967
+msgid "Choose the side of the transect. Available options are:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2969
+msgid "0 --- Left"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2970
+msgid "1 --- Right"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2971
+msgid "2 --- Both"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2980
+msgid "``Transect`` [vector: line]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2979
+msgid "Transect of the source line vector layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2985
+msgid "Translate"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2986
+msgid ""
+"Moves the geometries within a layer, by offsetting with a predefined X "
+"and Y displacement."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2989
+msgid "Z and M values present in the geometry can also be translated."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:2994
+msgid "Dashed lines represent the translated geometry of the input layer"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3007
+msgid "``Offset distance (x-axis)`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3005
+msgid "Displacement to apply on the X axis."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3012
+msgid "``Offset distance (y-axis)`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3010
+msgid "Displacement to apply on the Y axis."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3017
+msgid "``Offset distance (z-axis)`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3015
+msgid "Displacement to apply on the Z axis."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3022
+msgid "``Offset distance (m values)`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3020
+msgid "Offset value to apply on M."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3028
+msgid "``Translated`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3028
+msgid "Translated (moved) vector layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3032
+msgid ":ref:`qgisarraytranslatedfeatures`, :ref:`qgisoffsetline`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3038
+msgid "Variable width buffer (by M value)"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3039
+msgid ""
+"Creates variable width buffers along lines, using the M value of the line"
+" geometries as the diameter of the buffer at each vertex."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3045
+msgid "Variable buffer example"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3051
+msgid "Line vector layer in input."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3054
+msgid ""
+"Number of the buffer segments. It can be a unique value (same value for "
+"all the features) or it can be taken from features data (different value "
+"depending on the feature attribute)."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3068
+msgid ":ref:`qgistaperedbuffer`, :ref:`qgisbuffer`, :ref:`qgissetmvalue`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3074
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3084
+msgid "Voronoi polygons"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3075
+msgid ""
+"Takes a points layer and generates a polygon layer containing the Voronoi"
+" polygons (known also as Thiessen polygons) corresponding to those input "
+"points."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3078
+msgid ""
+"Any location within a Voronoi polygon is closer to the associated point "
+"than to any other point."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3097
+msgid "``Buffer region`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3095
+msgid "Area of the Voronoi polygons or of the input layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3104
+msgid "``Voronoi polygons`` [vector: polygon]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeometry.rst:3103
+msgid "Voronoi polygons of the input point vector layer."
+msgstr ""
+

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project testing\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-28 10:31+0100\n"
+"POT-Creation-Date: 2019-03-30 00:23+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,16 +19,20 @@ msgstr ""
 "Generated-By: Babel 2.5.1\n"
 
 #: ../../source/docs/training_manual/processing/interpolation_cross.rst:6
+msgid "|updatedisclaimer|"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:9
 msgid "More interpolation"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/interpolation_cross.rst:8
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:11
 msgid ""
 "This chapter shows another practical case where interpolation algorithms "
 "are used."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/interpolation_cross.rst:10
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:13
 msgid ""
 "Interpolation is a common technique, and it can be used to demonstrate "
 "several techniques that can be applied using the QGIS processing "
@@ -36,7 +40,7 @@ msgid ""
 "already introduced, but has a different approach."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/interpolation_cross.rst:12
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:15
 msgid ""
 "The data for this lesson contains also a points layer, in this case with "
 "elevation data. We are going to interpolate it much in the same way as we"
@@ -45,7 +49,7 @@ msgid ""
 "process."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/interpolation_cross.rst:14
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:17
 #, python-format
 msgid ""
 "First, we have to rasterize the points layer and fill the resulting no--"
@@ -62,25 +66,25 @@ msgid ""
 " the following parameters."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/interpolation_cross.rst:18
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:21
 #, python-format
 msgid "That will select 90% of the points in the layer to rasterize"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/interpolation_cross.rst:22
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:25
 msgid ""
 "The selection is random, so your selection might differ from the "
 "selection shown in the above image."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/interpolation_cross.rst:24
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:27
 msgid ""
 "Now run the *Rasterize* algorithm to get the first raster layer, and then"
 " run the *Close gaps* algorithm to fill the no--data cells [Cell "
 "resolution: 100 m]."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/interpolation_cross.rst:28
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:31
 msgid ""
 "To check the quality of the interpolation, we can now use the points that"
 " are not selected. At this point, we know the real elevation (the value "
@@ -89,20 +93,20 @@ msgid ""
 "differences between those values."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/interpolation_cross.rst:30
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:33
 msgid ""
 "Since we are going to use the points that are not selected, first, let's "
 "invert the selection."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/interpolation_cross.rst:34
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:37
 msgid ""
 "The points contain the original values, but not the interpolated ones. To"
 " add them in a new field, we can use the *Add raster values to points* "
 "algorithm"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/interpolation_cross.rst:38
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:41
 msgid ""
 "The raster layer to select (the algorithm supports multiple raster, but "
 "we just need one) is the resulting one from the interpolation. We have "
@@ -110,19 +114,19 @@ msgid ""
 "used for the name of the field to add."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/interpolation_cross.rst:40
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:43
 msgid ""
 "Now we have a vector layer that contains both values, with points that "
 "were not used for the interpolation."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/interpolation_cross.rst:44
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:47
 msgid ""
 "Now, we will use the fields calculator for this task. Open the *Field "
 "calculator* algorithm and run it with the following parameters."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/interpolation_cross.rst:48
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:51
 msgid ""
 "If your field with the values from the raster layer has a different name,"
 " you should modify the above formula accordingly. Running this algorithm,"
@@ -131,26 +135,26 @@ msgid ""
 " elevation values."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/interpolation_cross.rst:50
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:53
 msgid ""
 "Representing that layer according to that value will give us a first idea"
 " of where the largest discrepancies are found."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/interpolation_cross.rst:54
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:57
 msgid ""
 "Interpolating that layer will get you a raster layer with the estimated "
 "error in all points of the interpolated area."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/interpolation_cross.rst:58
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:61
 msgid ""
 "You can also get the same information (difference between original point "
 "values and interpolated ones) directly with :menuselection:`GRASS --> "
 "v.sample`."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/interpolation_cross.rst:60
+#: ../../source/docs/training_manual/processing/interpolation_cross.rst:63
 msgid ""
 "Your results might differ from these ones, since there is a random "
 "component introduced when running the random selection, at the beginning "
