@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project testing\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-30 00:23+0100\n"
+"POT-Creation-Date: 2017-12-28 10:31+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,21 +19,17 @@ msgstr ""
 "Generated-By: Babel 2.5.1\n"
 
 #: ../../source/docs/training_manual/processing/iterative.rst:6
-msgid "|updatedisclaimer|"
-msgstr ""
-
-#: ../../source/docs/training_manual/processing/iterative.rst:9
 msgid "Iterative execution of algorithms"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/iterative.rst:11
+#: ../../source/docs/training_manual/processing/iterative.rst:8
 msgid ""
 "This lesson shows a different way of executing algorithms that use vector"
 " layers, by running them repeatedly, iterating over the features in an "
 "input vector layer"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/iterative.rst:13
+#: ../../source/docs/training_manual/processing/iterative.rst:10
 msgid ""
 "We already know the graphical modeler, which is one way of automating "
 "processing tasks. However, in some situations, the modeler might not be "
@@ -42,11 +38,11 @@ msgid ""
 " execution of algorithms."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/iterative.rst:15
+#: ../../source/docs/training_manual/processing/iterative.rst:12
 msgid "Open the data corresponding to this chapter. It should look like this."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/iterative.rst:19
+#: ../../source/docs/training_manual/processing/iterative.rst:16
 msgid ""
 "You will recognize our well-known DEM from previous chapters and a set of"
 " watersheds extracted from it. Imagine that you need to cut the DEM into "
@@ -56,50 +52,50 @@ msgid ""
 "mean elevation or it hypsographic curve."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/iterative.rst:21
+#: ../../source/docs/training_manual/processing/iterative.rst:18
 msgid ""
 "This can be a lengthy and tedious task, especially if the number of "
 "watersheds is large. However, it is a task that can be easily automated, "
 "as we will see."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/iterative.rst:23
+#: ../../source/docs/training_manual/processing/iterative.rst:20
 msgid ""
 "The algorithm to use for clipping a raster layer with a polygon layer is "
 "called *Clip raster with polygons*, and has the following parameters "
 "dialog."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/iterative.rst:27
+#: ../../source/docs/training_manual/processing/iterative.rst:24
 msgid ""
 "You can run it using the watersheds layer and the DEM as input, and you "
 "will get the following result."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/iterative.rst:31
+#: ../../source/docs/training_manual/processing/iterative.rst:28
 msgid "As you can see, the area covered by all the watershed polygons is used."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/iterative.rst:33
+#: ../../source/docs/training_manual/processing/iterative.rst:30
 msgid ""
 "You can have the DEM clipped with just a single watershed by selecting "
 "the desired watershed and then running the algorithm as we did before."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/iterative.rst:37
+#: ../../source/docs/training_manual/processing/iterative.rst:34
 msgid ""
 "Since only selected features are used, only the selected polygon will be "
 "used to crop the raster layer."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/iterative.rst:41
+#: ../../source/docs/training_manual/processing/iterative.rst:38
 msgid ""
 "Doing this for all the watersheds will produce the result we are looking "
 "for, but it doesn't look like a very practical way of doing it. Instead, "
 "let's see how to automate that *select and crop* routine."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/iterative.rst:43
+#: ../../source/docs/training_manual/processing/iterative.rst:40
 msgid ""
 "First of all, remove the previous selection, so all polygons will be used"
 " again. Now open the *Clip raster with polygon* algorithm and select the "
@@ -108,7 +104,7 @@ msgid ""
 "selected the watersheds layer."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/iterative.rst:47
+#: ../../source/docs/training_manual/processing/iterative.rst:44
 msgid ""
 "This button will cause the selected input layer to be split into as many "
 "layer as feature are found in it, each of them containing a single "
@@ -119,13 +115,13 @@ msgid ""
 "algorithm."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/iterative.rst:49
+#: ../../source/docs/training_manual/processing/iterative.rst:46
 msgid ""
 "Here's the result that you will get if you run the clipping algorithm as "
 "explained."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/iterative.rst:53
+#: ../../source/docs/training_manual/processing/iterative.rst:50
 msgid ""
 "For each layer, the black and white color palette, (or whatever palette "
 "you are using), is adjusted differently, from its minimum to its maximum "
@@ -134,7 +130,7 @@ msgid ""
 "however, do match."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/iterative.rst:55
+#: ../../source/docs/training_manual/processing/iterative.rst:52
 msgid ""
 "If you enter an output filename, resulting files will be named using that"
 " filename and a number corresponding to each iteration as suffix."

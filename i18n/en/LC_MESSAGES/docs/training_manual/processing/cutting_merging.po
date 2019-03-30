@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project testing\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-30 00:23+0100\n"
+"POT-Creation-Date: 2017-12-28 10:31+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,20 +19,16 @@ msgstr ""
 "Generated-By: Babel 2.5.1\n"
 
 #: ../../source/docs/training_manual/processing/cutting_merging.rst:6
-msgid "|updatedisclaimer|"
-msgstr ""
-
-#: ../../source/docs/training_manual/processing/cutting_merging.rst:9
 msgid "Clipping and merging raster layers"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/cutting_merging.rst:11
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:8
 msgid ""
 "In this lesson we will see another example of spatial data preparation, "
 "to continue using geoalgorithms in real-world scenarios."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/cutting_merging.rst:14
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:10
 msgid ""
 "For this lesson, we are going to calculate a slope layer for an area "
 "surrounding a city area, which is given in a vector layer with a single "
@@ -42,28 +38,28 @@ msgid ""
 "something like this."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/cutting_merging.rst:23
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:14
 msgid "These layers have two problems:"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/cutting_merging.rst:25
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:16
 msgid ""
 "They cover an area that is too large for what we want (we are interested "
 "in a smaller region around the city center)"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/cutting_merging.rst:27
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:17
 msgid ""
 "They are in two different files (the city limits fall into just one "
 "single raster layer, but, as it's been said, we want some extra area "
 "around it)."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/cutting_merging.rst:30
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:19
 msgid "Both of them are easily solvable with the appropriate geoalgorithms."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/cutting_merging.rst:32
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:21
 msgid ""
 "First, we create a rectangle defining the area that we want. To do it, we"
 " create a layer containing the bounding box of the layer with the limits "
@@ -71,29 +67,29 @@ msgid ""
 "that covers a bit more that the strictly necessary."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/cutting_merging.rst:37
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:23
 msgid ""
 "To calculate the bounding box , we can use the *Polygon from layer "
 "extent* algorithm"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/cutting_merging.rst:41
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:27
 msgid ""
 "To buffer it, we use the *Fixed distance buffer* algorithm, with the "
 "following parameter values."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/cutting_merging.rst:45
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:31
 msgid "Syntax changed in recent versions; set both Distance and Arc vertex to .25"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/cutting_merging.rst:47
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:33
 msgid ""
 "Here is the resulting bounding box obtained using the parameters shown "
 "above"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/cutting_merging.rst:51
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:37
 msgid ""
 "It is a rounded box, but we can easily get the equivalent box with square"
 " angles, by running the *Polygon from layer extent* algorithm on it. We "
@@ -101,33 +97,33 @@ msgid ""
 "rectangle, saving one step."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/cutting_merging.rst:57
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:41
 msgid ""
 "You will notice that the rasters has a different projection from the "
 "vector. We should therefore reproject them before proceeding further, "
 "using the *Warp (reproject)* tool."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/cutting_merging.rst:63
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:45
 msgid ""
 "Recent versions have a more complex interface. Make sure at least one "
 "compression method is selected."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/cutting_merging.rst:66
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:47
 msgid ""
 "With this layer that contains the bounding box of the raster layer that "
 "we want to obtain, we can crop both of the raster layers, using the *Clip"
 " raster with polygon* algorithm."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/cutting_merging.rst:72
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:51
 msgid ""
 "Once the layers have been cropped, they can be merged using the GDAL "
 "*Merge* algorithm."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/cutting_merging.rst:76
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:55
 msgid ""
 "You can save time merging first and then cropping, and you will avoid "
 "calling the clipping algorithm twice. However, if there are several "
@@ -139,15 +135,15 @@ msgid ""
 "have two layers, so you shouldn't worry about that now."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/cutting_merging.rst:84
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:57
 msgid "With that, we get the final DEM we want."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/cutting_merging.rst:88
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:61
 msgid "Now it is time to compute the slope layer."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/cutting_merging.rst:90
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:63
 msgid ""
 "A slope layer can be computed with the *Slope, Aspect, Curvature* "
 "algorithm, but the DEM obtained in the last step is not suitable as "
@@ -159,15 +155,15 @@ msgid ""
 "slope, with either SAGA or GDAL."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/cutting_merging.rst:98
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:65
 msgid "With the new DEM, slope can now be computed."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/cutting_merging.rst:102
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:69
 msgid "And here is the resulting slope layer."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/cutting_merging.rst:106
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:73
 msgid ""
 "The slope produced by the *Slope, Aspect, Curvature* algorithm can be "
 "expressed in degrees or radians; degrees are a more practical and common "
@@ -177,17 +173,17 @@ msgid ""
 "already used)."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/cutting_merging.rst:114
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:77
 msgid ""
 "Reprojecting the converted slope layer back with the *Reproject raster "
 "layer*, we get the final layer we wanted."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/cutting_merging.rst:117
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:79
 msgid "todo: Add image"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/cutting_merging.rst:119
+#: ../../source/docs/training_manual/processing/cutting_merging.rst:81
 msgid ""
 "The reprojection processes might have caused the final layer to contain "
 "data outside the bounding box that we calculated in one of the first "

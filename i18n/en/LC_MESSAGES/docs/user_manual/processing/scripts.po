@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project testing\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-30 00:23+0100\n"
+"POT-Creation-Date: 2017-12-28 10:31+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.1\n"
 
-#: ../../source/docs/user_manual/processing/scripts.rst:6
+#: ../../source/docs/user_manual/processing/scripts.rst:7
 msgid "|updatedisclaimer|"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:9
+#: ../../source/docs/user_manual/processing/scripts.rst:10
 msgid "Writing new Processing algorithms as python scripts"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:16
+#: ../../source/docs/user_manual/processing/scripts.rst:17
 msgid ""
 "You can create your own algorithms by writing the corresponding Python "
 "code and adding a few extra lines to supply additional information needed"
@@ -39,20 +39,20 @@ msgid ""
 "extension, will automatically create the corresponding algorithm."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:26
+#: ../../source/docs/user_manual/processing/scripts.rst:27
 msgid ""
 "The name of the algorithm (the one you will see in the toolbox) is "
 "created from the filename, removing its extension and replacing "
 "underscores with blank spaces."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:29
+#: ../../source/docs/user_manual/processing/scripts.rst:30
 msgid ""
 "Let's have the following code, which calculates the Topographic Wetness "
 "Index (TWI) directly from a DEM"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:43
+#: ../../source/docs/user_manual/processing/scripts.rst:44
 msgid ""
 "As you can see, it involves 3 algorithms, all of them coming from SAGA. "
 "The last one of them calculates the TWI, but it needs a slope layer and a"
@@ -60,7 +60,7 @@ msgid ""
 "DEM, we can calculate them by calling the corresponding SAGA algorithms."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:48
+#: ../../source/docs/user_manual/processing/scripts.rst:49
 msgid ""
 "The part of the code where this processing takes place is not difficult "
 "to understand if you have read the previous chapter. The first lines, "
@@ -69,64 +69,64 @@ msgid ""
 "any of the GUI components, like the toolbox or the graphical modeler."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:54
+#: ../../source/docs/user_manual/processing/scripts.rst:55
 msgid ""
 "These lines start with a double Python comment symbol (``##``) and have "
 "the following structure"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:61
+#: ../../source/docs/user_manual/processing/scripts.rst:62
 msgid ""
 "Here is a list of all the parameter types that are supported in "
 "processing scripts, their syntax and some examples."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:64
+#: ../../source/docs/user_manual/processing/scripts.rst:65
 msgid "``raster``. A raster layer"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:65
+#: ../../source/docs/user_manual/processing/scripts.rst:66
 msgid "``vector``. A vector layer"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:66
+#: ../../source/docs/user_manual/processing/scripts.rst:67
 msgid "``table``. A table"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:67
+#: ../../source/docs/user_manual/processing/scripts.rst:68
 msgid ""
 "``number``. A numerical value. A default value must be provided. For "
 "instance, ``depth=number 2.4``"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:69
+#: ../../source/docs/user_manual/processing/scripts.rst:70
 msgid ""
 "``string``. A text string. As in the case of numerical values, a default "
 "value must be added. For instance, ``name=string Victor``"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:71
+#: ../../source/docs/user_manual/processing/scripts.rst:72
 msgid ""
 "``longstring``. Same as string, but a larger text box will be shown, so "
 "it is better suited for long strings, such as for a script expecting a "
 "small code snippet."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:73
+#: ../../source/docs/user_manual/processing/scripts.rst:74
 msgid ""
 "``boolean``. A boolean value. Add ``True`` or ``False`` after it to set "
 "the default value. For example, ``verbose=boolean True``."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:75
+#: ../../source/docs/user_manual/processing/scripts.rst:76
 msgid "``multiple raster``. A set of input raster layers."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:76
+#: ../../source/docs/user_manual/processing/scripts.rst:77
 msgid "``multiple vector``. A set of input vector layers."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:77
+#: ../../source/docs/user_manual/processing/scripts.rst:78
 msgid ""
 "``field``. A field in the attributes table of a vector layer. The name of"
 " the layer has to be added after the ``field`` tag. For instance, if you "
@@ -134,42 +134,42 @@ msgid ""
 "``myfield=field mylayer`` to add a field from that layer as parameter."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:81
+#: ../../source/docs/user_manual/processing/scripts.rst:82
 msgid "``extent``. A spatial extent defined by xmin, xmax, ymin, ymax"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:82
+#: ../../source/docs/user_manual/processing/scripts.rst:83
 msgid "``folder``. A folder"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:83
+#: ../../source/docs/user_manual/processing/scripts.rst:84
 msgid "``file``. A filename"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:84
+#: ../../source/docs/user_manual/processing/scripts.rst:85
 msgid "``crs``. A Coordinate Reference System"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:85
+#: ../../source/docs/user_manual/processing/scripts.rst:86
 msgid ""
 "``selection``. A dropdown menu that allows the user to select from a pre-"
 "populated list. For example ``units=selection sq_km;sq_miles;sq_degrees``"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:87
+#: ../../source/docs/user_manual/processing/scripts.rst:88
 msgid ""
 "``name``. Name of the script. This will be displayed as the algorithm "
 "name in the processing toolbox. For example ``My Algorithm Name=name``"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:89
+#: ../../source/docs/user_manual/processing/scripts.rst:90
 msgid ""
 "``group``. Folder name where the script will appear in the Processing "
 "Toolbox. For Example, adding ``Utils=groups`` will put the script within "
 "a ``Utils`` folder within Scripts."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:93
+#: ../../source/docs/user_manual/processing/scripts.rst:94
 msgid ""
 "The parameter name is the name that will be shown to the user when "
 "executing the algorithm, and also the variable name to use in the script "
@@ -177,7 +177,7 @@ msgid ""
 "to a variable with that name."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:97
+#: ../../source/docs/user_manual/processing/scripts.rst:98
 msgid ""
 "When showing the name of the parameter to the user, the name will be "
 "edited to improve its appearance, replacing underscores with spaces. So, "
@@ -185,7 +185,7 @@ msgid ""
 " value``, you can use the variable name ``A_numerical_value``."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:102
+#: ../../source/docs/user_manual/processing/scripts.rst:103
 msgid ""
 "Layers and tables values are strings containing the filepath of the "
 "corresponding object. To turn them into a QGIS object, you can use the "
@@ -194,57 +194,57 @@ msgid ""
 "separated by semicolons (``;``)."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:107
+#: ../../source/docs/user_manual/processing/scripts.rst:108
 msgid "Outputs are defined in a similar manner, using the following tags:"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:109
+#: ../../source/docs/user_manual/processing/scripts.rst:110
 msgid "``output raster``"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:110
+#: ../../source/docs/user_manual/processing/scripts.rst:111
 msgid "``output vector``"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:111
+#: ../../source/docs/user_manual/processing/scripts.rst:112
 msgid "``output table``"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:112
+#: ../../source/docs/user_manual/processing/scripts.rst:113
 msgid "``output html``"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:113
+#: ../../source/docs/user_manual/processing/scripts.rst:114
 msgid "``output file``"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:114
+#: ../../source/docs/user_manual/processing/scripts.rst:115
 msgid "``output number``"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:115
+#: ../../source/docs/user_manual/processing/scripts.rst:116
 msgid "``output string``"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:116
+#: ../../source/docs/user_manual/processing/scripts.rst:117
 msgid "``output extent``"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:118
+#: ../../source/docs/user_manual/processing/scripts.rst:119
 msgid ""
 "The value assigned to the output variables is always a string with a "
 "filepath. It will correspond to a temporary filepath in case the user has"
 " not entered any output filename."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:122
+#: ../../source/docs/user_manual/processing/scripts.rst:123
 msgid ""
 "In addition to the tags for parameters and outputs, you can also define "
 "the group under which the algorithm will be shown, using the ``group`` "
 "tag."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:125
+#: ../../source/docs/user_manual/processing/scripts.rst:126
 msgid ""
 "The last tag that you can use in your script header is ``##nomodeler``. "
 "Use that when you do not want your algorithm to be shown in the modeler "
@@ -254,11 +254,11 @@ msgid ""
 " modeler"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:132
+#: ../../source/docs/user_manual/processing/scripts.rst:133
 msgid "Handing data produced by the algorithm"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:134
+#: ../../source/docs/user_manual/processing/scripts.rst:135
 msgid ""
 "When you declare an output representing a layer (raster, vector or "
 "table), the algorithm will try to add it to QGIS once it is finished. "
@@ -268,7 +268,7 @@ msgid ""
 "corresponding output."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:140
+#: ../../source/docs/user_manual/processing/scripts.rst:141
 msgid ""
 "Do not use the ``load()`` method in your script algorithms, but just when"
 " working with the console line. If a layer is created as output of an "
@@ -278,7 +278,7 @@ msgid ""
 "really creates."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:146
+#: ../../source/docs/user_manual/processing/scripts.rst:147
 msgid ""
 "Hidden outputs (numbers and strings) do not have a value. Instead, it is "
 "you who has to assign a value to them. To do so, just set the value of a "
@@ -286,15 +286,15 @@ msgid ""
 "you have used this declaration,"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:155
+#: ../../source/docs/user_manual/processing/scripts.rst:156
 msgid "the following line will set the value of the output to 5:"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:163
+#: ../../source/docs/user_manual/processing/scripts.rst:164
 msgid "Communicating with the user"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:165
+#: ../../source/docs/user_manual/processing/scripts.rst:166
 msgid ""
 "If your algorithm takes a long time to process, it is a good idea to "
 "inform the user. You have a global named ``progress`` available, with two"
@@ -302,14 +302,14 @@ msgid ""
 "modify the progress text and the progress bar."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:170
+#: ../../source/docs/user_manual/processing/scripts.rst:171
 msgid ""
 "If you have to provide some information to the user, not related to the "
 "progress of the algorithm, you can use the ``setInfo(text)`` method, also"
 " from the ``progress`` object."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:174
+#: ../../source/docs/user_manual/processing/scripts.rst:175
 msgid ""
 "If your script has some problem, the correct way of propagating it is to "
 "raise an exception of type ``GeoAlgorithmExecutionException()``. You can "
@@ -319,21 +319,21 @@ msgid ""
 "modeler, Python console...)"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:182
+#: ../../source/docs/user_manual/processing/scripts.rst:183
 msgid "Documenting your scripts"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:184
+#: ../../source/docs/user_manual/processing/scripts.rst:185
 msgid ""
 "As in the case of models, you can create additional documentation for "
 "your script, to explain what they do and how to use them. In the script "
-"editing dialog you will find a :guilabel:`Edit Script Help` button. Click"
-" on it and it will take you to the help editing dialog. Check the chapter"
-" about the graphical modeler to find out more about this dialog and how "
-"to use it."
+"editing dialog you will find a **[Edit script help]** button. Click on it"
+" and it will take you to the help editing dialog. Check the chapter about"
+" the graphical modeler to find out more about this dialog and how to use "
+"it."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:190
+#: ../../source/docs/user_manual/processing/scripts.rst:191
 msgid ""
 "Help files are saved in the same folder as the script itself, adding the "
 ":file:`.help` extension to the filename. Note that you can edit your "
@@ -343,22 +343,22 @@ msgid ""
 " and is associated with a filename, saving is done automatically."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:199
+#: ../../source/docs/user_manual/processing/scripts.rst:200
 msgid "Example scripts"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:201
+#: ../../source/docs/user_manual/processing/scripts.rst:202
 msgid ""
 "Several examples are available in the on-line collection of scripts, "
 "which you can access by selecting the *Get script from on-line script "
 "collection* tool under the *Scripts/tools* entry in the toolbox."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:211
+#: ../../source/docs/user_manual/processing/scripts.rst:212
 msgid "Processing Get Script"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:213
+#: ../../source/docs/user_manual/processing/scripts.rst:214
 msgid ""
 "Please, check them to see real examples of how to create algorithms using"
 " the processing framework classes. You can right-click on any script "
@@ -366,11 +366,11 @@ msgid ""
 "see it."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:219
+#: ../../source/docs/user_manual/processing/scripts.rst:220
 msgid "Best practices for writing script algorithms"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:221
+#: ../../source/docs/user_manual/processing/scripts.rst:222
 msgid ""
 "Here's a quick summary of ideas to consider when creating your script "
 "algorithms and, especially, if you want to share with other QGIS users. "
@@ -379,13 +379,13 @@ msgid ""
 "processing interface."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:226
+#: ../../source/docs/user_manual/processing/scripts.rst:227
 msgid ""
 "Do not load resulting layers. Let Processing handle your results and load"
 " your layers if needed."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:228
+#: ../../source/docs/user_manual/processing/scripts.rst:229
 msgid ""
 "Always declare the outputs your algorithm creates. Avoid things such as "
 "declaring one output and then using the destination filename set for that"
@@ -395,56 +395,42 @@ msgid ""
 "the ``##nomodeler`` tag."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:233
+#: ../../source/docs/user_manual/processing/scripts.rst:234
 msgid ""
 "Do not show message boxes or use any GUI element from the script. If you "
 "want to communicate with the user, use the ``setInfo()`` method or throw "
 "an ``GeoAlgorithmExecutionException``"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:236
+#: ../../source/docs/user_manual/processing/scripts.rst:237
 msgid ""
 "As a rule of thumb, do not forget that your algorithm might be executed "
 "in a context other than the Processing toolbox."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:241
+#: ../../source/docs/user_manual/processing/scripts.rst:242
 msgid "Pre- and post-execution script hooks"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:243
+#: ../../source/docs/user_manual/processing/scripts.rst:244
 msgid ""
 "Scripts can also be used to set pre- and post-execution hooks that are "
 "run before and after an algorithm is run. This can be used to automate "
 "tasks that should be performed whenever an algorithm is executed."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:247
+#: ../../source/docs/user_manual/processing/scripts.rst:248
 msgid ""
 "The syntax is identical to the syntax explained above, but an additional "
 "global variable named ``alg`` is available, representing the algorithm "
 "that has just been (or is about to be) executed."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:251
+#: ../../source/docs/user_manual/processing/scripts.rst:252
 msgid ""
 "In the :guilabel:`General` group of the processing config dialog you will"
 " find two entries named :guilabel:`Pre-execution script file` and "
 ":guilabel:`Post-execution script file` where the filename of the scripts "
 "to be run in each case can be entered."
 msgstr ""
-
-#~ msgid ""
-#~ "As in the case of models, you "
-#~ "can create additional documentation for "
-#~ "your script, to explain what they "
-#~ "do and how to use them. In "
-#~ "the script editing dialog you will "
-#~ "find a **[Edit script help]** button."
-#~ " Click on it and it will take"
-#~ " you to the help editing dialog. "
-#~ "Check the chapter about the graphical"
-#~ " modeler to find out more about "
-#~ "this dialog and how to use it."
-#~ msgstr ""
 

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project testing\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-30 00:23+0100\n"
+"POT-Creation-Date: 2017-12-28 10:31+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,24 +19,20 @@ msgstr ""
 "Generated-By: Babel 2.5.1\n"
 
 #: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:6
-msgid "|updatedisclaimer|"
-msgstr ""
-
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:9
 msgid "Numeric calculations in the modeler"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:11
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:8
 msgid ""
 "Beware, this chapter is not well tested, please report any issue; images "
 "are missing"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:13
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:10
 msgid "In this lesson we will see how to use numeric outputs in the modeler"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:15
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:12
 msgid ""
 "For this lesson, we are going to modify the hydrological model that we "
 "created in the last chapter (open it in the modeler before starting), so "
@@ -46,32 +42,32 @@ msgid ""
 " on some simple statistical analysis."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:17
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:14
 msgid ""
 "Starting with the aforementioned model, let's do the following "
 "modifications:"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:19
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:16
 msgid ""
 "First, calculate statistics of the flow accumulation layer using the "
 "*Raster layer statistics* algorithm."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:23
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:20
 msgid ""
 "This will generate a set of statistical values that will now be available"
 " for all numeric fields in other algorithms."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:25
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:22
 msgid ""
 "If you edit the  *Channel network* algorithm, as we did in the last "
 "lesson, you will see now that you have other options apart from the "
 "numeric input that you added."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:29
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:26
 msgid ""
 "However, none of this values is suitable for being used as a valid "
 "threshold, since they will result in channel networks that will not be "
@@ -80,7 +76,7 @@ msgid ""
 "the standard deviation."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:31
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:28
 msgid ""
 "To add that arithmetical operation, we can use the calculator that you "
 "will find in the *Geoalgorithms/modeler/modeler-tools* group. This group "
@@ -88,11 +84,11 @@ msgid ""
 "that provide some useful functionality when creating a model."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:33
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:30
 msgid "The parameters dialog of the calculator algorithm looks like this:"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:37
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:34
 msgid ""
 "As you can see, the dialog is different to the other ones we have seen, "
 "but you have in there the same variables that were available in the "
@@ -100,35 +96,35 @@ msgid ""
 "formula and click on *OK* to add the algorithm."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:41
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:38
 msgid ""
 "If you expand the outputs entry, as shown above, you will see that the "
 "model is connected to two of the values, namely the mean and the standard"
 " deviation, which are the ones that we have used in the formula."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:43
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:40
 msgid ""
 "Adding this new algorithm will add a new numeric value. If you go again "
 "to the *Channel network* algorithm, you can now select that value in the "
 "*Threshold* parameter."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:47
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:44
 msgid "Click on *OK* and your model should look like this."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:51
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:48
 msgid ""
 "We are not using the numeric input that we added to the model, so it can "
 "be removed. Right--click on it and select *Remove*"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:53
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:50
 msgid "todo: Add image"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:55
+#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:52
 msgid "Our new model is now finished."
 msgstr ""
 

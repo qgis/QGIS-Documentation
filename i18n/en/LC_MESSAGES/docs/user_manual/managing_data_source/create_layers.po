@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project testing\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-30 00:23+0100\n"
+"POT-Creation-Date: 2017-12-28 10:31+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,58 +18,141 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.1\n"
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:6
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:7
 msgid "|updatedisclaimer|"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:12
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:13
 msgid "Creating Layers"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:20
-msgid "Layers can be created in many ways, including:"
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:22
-msgid "empty layers from scratch;"
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:21
+msgid "Creating a layer can be processed in many ways in QGIS; it can be done:"
 msgstr ""
 
 #: ../../source/docs/user_manual/managing_data_source/create_layers.rst:23
-msgid "layers from existing layers;"
+msgid "from scratch, creating an empty layer;"
 msgstr ""
 
 #: ../../source/docs/user_manual/managing_data_source/create_layers.rst:24
-msgid "layers from the clipboard;"
+msgid "from an existing layer;"
 msgstr ""
 
 #: ../../source/docs/user_manual/managing_data_source/create_layers.rst:25
+msgid "from the clipboard;"
+msgstr ""
+
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:26
 msgid ""
-"layers as a result of an SQL-like query based on one or many layers: the "
+"as a result of an SQL-like query based on one or many layers: the "
 ":ref:`virtual layer <vector_virtual_layers>`."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:28
-msgid "QGIS also provides tools to import/export different formats."
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:29
+msgid "QGIS also provides particular tools to import/export different formats."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:36
-msgid "Creating new vector layers"
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:37
+msgid "Creating new Vector layers"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:38
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:39
 msgid ""
-"QGIS allows you to create new Shapefile layers, new SpatiaLite layers, "
-"new GPX layers and new Temporary Scratch layers. Creation of a new GRASS "
-"layer is supported within the GRASS plugin. (Please refer to section "
+"QGIS allows you to create new shapefile layers, new SpatiaLite layers, "
+"new GPX layers and New Temporary Scratch Layers. Creation of a new GRASS "
+"layer is supported within the GRASS plugin. Please refer to section "
 ":ref:`creating_new_grass_vectors` for more information on creating GRASS "
-"vector layers.)"
+"vector layers."
 msgstr ""
 
 #: ../../source/docs/user_manual/managing_data_source/create_layers.rst:49
-msgid "Creating a new GeoPackage layer"
+msgid "Creating a new Shapefile layer"
 msgstr ""
 
 #: ../../source/docs/user_manual/managing_data_source/create_layers.rst:51
+msgid ""
+"To create a new shape layer for editing, choose :menuselection:`Create "
+"Layer -->` |newVectorLayer| :menuselection:`New Shapefile Layer...` from "
+"the :menuselection:`Layer` menu. The :guilabel:`New Shapefile Layer` "
+"dialog will be displayed as shown in figure_create_shapefile_. Choose the"
+" type of layer (point, line or polygon) and the CRS (coordinate reference"
+" system)."
+msgstr ""
+
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:57
+msgid ""
+"Note that QGIS does not yet support creation of 2.5D features (i.e., "
+"features with X,Y,Z coordinates)."
+msgstr ""
+
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:65
+msgid "Creating a new Shapefile layer dialog"
+msgstr ""
+
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:67
+msgid ""
+"To complete the creation of the new shapefile layer, add the desired "
+"attributes by clicking on the **[Add to attributes list]** button and "
+"specifying a name and type for the attribute. A first 'id' column is "
+"added as default but can be removed, if not wanted. Only :guilabel:`Type:"
+" real` |selectString|, :guilabel:`Type: integer` |selectString|, "
+":guilabel:`Type: string` |selectString| and :guilabel:`Type:date` "
+"|selectString| attributes are supported. Additionally and according to "
+"the attribute type, you can also define the width and precision of the "
+"new attribute column. Once you are happy with the attributes, click "
+"**[OK]** and provide a name for the shapefile. QGIS will automatically "
+"add a :file:`.shp` extension to the name you specify. Once the layer has "
+"been created, it will be added to the map, and you can edit it in the "
+"same way as described in section :ref:`sec_edit_existing_layer`."
+msgstr ""
+
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:85
+msgid "Creating a new SpatiaLite layer"
+msgstr ""
+
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:87
+msgid ""
+"To create a new SpatiaLite layer for editing, choose :menuselection:`New "
+"-->` |newSpatiaLiteLayer| :menuselection:`New SpatiaLite Layer...` from "
+"the :menuselection:`Layer` menu. The :guilabel:`New SpatiaLite Layer` "
+"dialog will be displayed as shown in Figure_create_spatialite_."
+msgstr ""
+
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:97
+msgid "Creating a New SpatiaLite layer dialog"
+msgstr ""
+
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:99
+msgid ""
+"The first step is to select an existing SpatiaLite database or to create "
+"a new SpatiaLite database. This can be done with the browse button "
+"|browseButton| to the right of the database field. Then, add a name for "
+"the new layer, define the layer type, and specify the coordinate "
+"reference system with **[Specify CRS]**. If desired, you can select "
+"|checkbox| :guilabel:`Create an autoincrementing primary key`."
+msgstr ""
+
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:105
+msgid ""
+"To define an attribute table for the new SpatiaLite layer, add the names "
+"of the attribute columns you want to create with the corresponding column"
+" type, and click on the **[Add to attribute list]** button. Once you are "
+"happy with the attributes, click **[OK]**. QGIS will automatically add "
+"the new layer to the legend, and you can edit it in the same way as "
+"described in section :ref:`sec_edit_existing_layer`."
+msgstr ""
+
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:112
+msgid ""
+"Further management of SpatiaLite layers can be done with the DB Manager. "
+"See :ref:`dbmanager`."
+msgstr ""
+
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:119
+msgid "Creating a new GeoPackage layer"
+msgstr ""
+
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:121
 msgid ""
 "To create a new GeoPackage layer go to :menuselection:`Layer --> New -->`"
 " |newGeoPackageLayer| :menuselection:`New GeoPackage Layer...`. The "
@@ -77,115 +160,34 @@ msgid ""
 "figure_create_geopackage_."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:61
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:131
 msgid "Creating a New GeoPackage layer dialog"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:63
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:133
 msgid ""
 "The first step is to select an existing GeoPackage or create a new one. "
-"This can be done by pressing the ellipses :guilabel:`...` button at the "
-"right of the Database field. Then, give a name for the new layer, define "
-"the layer type and specify the coordinate reference system with "
-":guilabel:`Specify CRS`."
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:68
-msgid ""
-"To define an attribute table for the new GeoPackage layer, add the names "
-"of the attribute columns you want to create with the corresponding column"
-" type, and click on the :guilabel:`Add to Fields List` button. Once you "
-"are happy with the attributes, click :guilabel:`OK`. QGIS will "
-"automatically add the new layer to the legend, and you can edit it in the"
-" same way as described in section :ref:`sec_edit_existing_layer`."
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:79
-msgid "Creating a new Shapefile layer"
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:81
-msgid ""
-"To create a new Shapefile layer, choose :menuselection:`Create Layer -->`"
-" |newVectorLayer| :menuselection:`New Shapefile Layer...` from the "
-":menuselection:`Layer` menu or select it from the :guilabel:`Data Source "
-"Manager` toolbar. The :guilabel:`New Shapefile Layer` dialog will be "
-"displayed as shown in figure_create_shapefile_. The first step is to "
-"provide a path and name for the Shapefile. QGIS will automatically add "
-"the :file:`.shp` extension to the name you specify Next, choose the type "
-"of layer (point, line or polygon) and optional Z or M dimensions, as well"
-" as the CRS (coordinate reference system)."
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:96
-msgid "Creating a new Shapefile layer dialog"
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:98
-msgid ""
-"To complete the creation of the new Shapefile layer, add the desired "
-"attributes by specifying a name and type for each attribute and clicking "
-"on the :guilabel:`Add to Fields List` button. A first 'id' column is "
-"added by default but can be removed, if not wanted. Only "
-":guilabel:`Decimal number` |selectString|, :guilabel:`Whole number` "
-"|selectString|, :guilabel:`Text data` |selectString| and :guilabel:`Date`"
-" |selectString| attributes are supported. Additionally, depending on the "
-"attribute type, you can also define the length and precision of the new "
-"attribute column. Once you are happy with the attributes, click "
-":guilabel:`OK`. Once the Shapefile has been created, it will be added to "
-"the map as a new layer, and you can edit it in the same way as described "
-"in section :ref:`sec_edit_existing_layer`."
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:116
-msgid "Creating a new SpatiaLite layer"
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:118
-msgid ""
-"To create a new SpatiaLite layer for editing, choose "
-":menuselection:`Create Layer -->` |newSpatiaLiteLayer| "
-":menuselection:`New SpatiaLite Layer...` from the :menuselection:`Layer` "
-"menu or select it from the :guilabel:`Data Source Manager` toolbar. The "
-":guilabel:`New SpatiaLite Layer` dialog will be displayed as shown in "
-"Figure_create_spatialite_."
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:130
-msgid "Creating a New SpatiaLite layer dialog"
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:132
-msgid ""
-"The first step is to select an existing SpatiaLite database or to create "
-"a new SpatiaLite database. This can be done with the :guilabel:`...` "
-"button at the right of the database field. Then, add a name for the new "
-"layer, define the layer type, and specify the coordinate reference system"
-" with :guilabel:`Specify CRS`. If desired, you can select |checkbox| "
-":guilabel:`Create an autoincrementing primary key`."
+"This can be done by pressing the ellipses **[...]** button at the right "
+"of the Database field. Then, give a name for the new layer, define the "
+"layer type and specify the coordinate reference system with **[Specify "
+"CRS]**."
 msgstr ""
 
 #: ../../source/docs/user_manual/managing_data_source/create_layers.rst:138
 msgid ""
-"To define an attribute table for the new SpatiaLite layer, add the names "
+"To define an attribute table for the new GeoPackage layer, add the names "
 "of the attribute columns you want to create with the corresponding column"
-" type, and click on the :guilabel:`Add to Fields List` button. Once you "
-"are happy with the attributes, click :guilabel:`OK`. QGIS will "
-"automatically add the new layer to the legend, and you can edit it in the"
-" same way as described in section :ref:`sec_edit_existing_layer`."
+" type, and click on the **[Add to fields list]** button. Once you are "
+"happy with the attributes, click **[OK]**. QGIS will automatically add "
+"the new layer to the legend, and you can edit it in the same way as "
+"described in section :ref:`sec_edit_existing_layer`."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:145
-msgid ""
-"Further management of SpatiaLite layers can be done with the DB Manager. "
-"See :ref:`dbmanager`."
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:153
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:149
 msgid "Creating a new GPX layer"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:155
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:151
 msgid ""
 "To create a new GPX file, you need to load the GPS plugin first. "
 ":menuselection:`Plugins -->` |showPluginManager| :menuselection:`Plugin "
@@ -193,235 +195,136 @@ msgid ""
 ":guilabel:`GPS Tools` checkbox."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:160
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:156
 msgid ""
 "When this plugin is loaded, choose :menuselection:`New -->` |createGPX| "
 ":menuselection:`Create new GPX Layer...` from the :menuselection:`Layer` "
 "menu. In the :guilabel:`Save new GPX file as` dialog, choose where to "
-"save the new file and press :guilabel:`Save`. Three new layers are added "
-"to the :guilabel:`Layers Panel`: ``waypoints``, ``routes`` and ``tracks``"
-" with predefined structure."
+"save the new file and press **[Save]**. Three new layers are added to the"
+" :guilabel:`Layers Panel`: ``waypoints``, ``routes`` and ``tracks`` with "
+"predefined structure."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:172
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:168
 msgid "Creating a new Temporary Scratch Layer"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:174
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:170
 msgid ""
-"Temporary Scratch Layers are in-memory layers, meaning that they are not "
-"saved on disk and will be discarded when QGIS is closed. They can be "
-"handy to store features you temporarily need or as intermediate layers "
-"during geoprocessing operations."
+"Empty, editable memory layers can be defined using :menuselection:`Layer "
+"--> Create Layer --> New Temporary Scratch Layer`. Here you can even "
+"create |radioButtonOff|:guilabel:`Multipoint`, "
+"|radioButtonOff|:guilabel:`Multiline` and "
+"|radioButtonOff|:guilabel:`Multipolygon` Layers beneath "
+"|radioButtonOn|:guilabel:`Point`, |radioButtonOff|:guilabel:`Line` and "
+"|radioButtonOff|:guilabel:`Polygon` Layers. Temporary Scratch Layers are "
+"not saved and will be discarded when QGIS is closed. See also "
+":ref:`paste_into_layer`."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:179
-msgid ""
-"Empty, editable temporary scratch layers can be defined using "
-":menuselection:`Layer --> Create Layer -->` |createMemory| "
-":menuselection:`New Temporary Scratch Layer` or |createMemory| :sup:`New "
-"temporary scratch layer` button from the :guilabel:`Data Source Manager "
-"Toolbar`. Here you can create a:"
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:184
-msgid "``No geometry`` type layer, served as simple table,"
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:183
+msgid "Save layer from an existing file"
 msgstr ""
 
 #: ../../source/docs/user_manual/managing_data_source/create_layers.rst:185
-msgid "``Point`` or ``MultiPoint`` layer,"
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:186
-msgid "``LineString/CompoundCurve`` or ``MultiLineString/MultiCurve`` layer,"
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:187
-msgid "``Polygon/CurvePolygon`` or ``MultiPolygon/MultiSurface`` layer."
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:194
-msgid "Creating a new Temporary Scratch layer dialog"
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:196
 msgid ""
-"By default, a new temporary scratch layer is created without any "
-"attribute. But you can also create prepopulated temporary scratch layers "
-"using e.g. the clipboard (see :ref:`paste_into_layer`) or as a result of "
-"a :ref:`Processing algorithm <processing_algs>`."
+"Layers (raster or vector) or subset of layers can be saved in another "
+"format with the :guilabel:`Save As...` feature in the layer contextual "
+"menu (by right-clicking in the layer in the layer tree) or in the "
+":menuselection:`Layer --> Save As...` menu."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:201
-msgid "**Permanently store a memory layer on disk**"
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:203
-msgid ""
-"To avoid data loss when closing project with temporary scratch layers, "
-"you can save these layers to any vector format supported by QGIS:"
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:206
-msgid "clicking the |indicatorMemory| indicator icon next to the layer;"
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:207
-msgid ""
-"selecting the :guilabel:`Make permanent` entry in the layer contextual "
-"menu;"
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:208
-msgid ""
-"or as of any other vector layer, using the :menuselection:`Export -->` "
-"entry from the contextual menu or the :menuselection:`Layer --> Save "
-"As...` menu."
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:211
-msgid ""
-"Each of these commands prompts the :guilabel:`Save Vector Layer as` "
-"dialog exposed in :ref:`general_saveas` section and the saved file "
-"replaces the temporary one in the :guilabel:`Layers` panel."
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:219
-msgid "Creating new layers from an existing layer"
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:221
-msgid ""
-"Both raster and vector layers can be saved in a different format and/or "
-"reprojected to a different coordinate reference system (CRS) using the "
-":menuselection:`Layer --> Save As...` menu or right-clicking on the layer"
-" in the :guilabel:`Layers panel` and selecting:"
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:226
-msgid ":menuselection:`Export --> Save As...` for raster layer"
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:227
-msgid ""
-":menuselection:`Export --> Save Features As...` or :menuselection:`Export"
-" --> Save Selected Features As...` for vector layer."
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:229
-msgid ""
-"Drag'n drop layer from the layer tree to the PostGIS entry in the "
-":guilabel:`Browser Panel`. Note that you should have already a PostGIS "
-"connection in the :guilabel:`Browser Panel`."
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:234
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:191
 msgid "Common parameters"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:236
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:193
 msgid ""
-"The :guilabel:`Save Layer as...` dialog shows several parameters to "
-"change the behavior when saving the layer. Among the common parameters "
-"for raster and vector are:"
+"The :guilabel:`Save As` dialog shows several parameters to change the "
+"behavior when saving the layer. Common parameters (raster and vector) "
+"are:"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:240
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:196
+msgid ":guilabel:`Format`"
+msgstr ""
+
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:197
 msgid ":guilabel:`File name`"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:241
-msgid ":guilabel:`CRS`: can be changed to reproject the data"
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:198
+msgid ":guilabel:`CRS`"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:242
-msgid ":guilabel:`Add saved file to map`: to add the new layer to the canvas"
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:199
+msgid ":guilabel:`Add saved file to map` to add the new layer to the canvas"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:243
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:200
 msgid ""
 ":guilabel:`Extent` (possible values are **layer**, **Map view** or "
 "**user-defined** extent)"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:246
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:203
 msgid "However, some parameters are specific to raster and vector formats:"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:249
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:206
 msgid "Raster specific parameters"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:251
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:208
 msgid ":guilabel:`Output mode` (it can be **raw data** or **rendered image**)"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:252
-msgid ""
-":guilabel:`Format`: exports to any raster format GDAL can write to, such "
-"as GeoTiff, GeoPackage, MBTiles, Geospatial PDF, SAGA GIS Binary Grid, "
-"Intergraph Raster, ESRI .hdr Labelled..."
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:255
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:209
 msgid ":guilabel:`Resolution`"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:256
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:210
 msgid ""
 ":guilabel:`Create Options`: advanced options (file compression, block "
 "sizes, colorimetry...) to fine tune the output file. See the `gdal-ogr "
-"<https://www.gdal.org>`_ driver documentation."
+"<http://gdal.org>`_ driver documentation."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:259
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:213
 msgid ":guilabel:`Pyramids` creation"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:260
-msgid ""
-":guilabel:`VRT Tiles` in case you opted to |checkbox| :guilabel:`Create "
-"VRT`"
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:214
+msgid ":guilabel:`VRT Tiles`"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:261
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:215
 msgid ":guilabel:`No data values`"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:268
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:222
 msgid "Saving as a new raster layer"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:271
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:225
 msgid "Vector specific parameters"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:273
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:227
 msgid ""
 "Depending on the format of export, some of these options are available or"
 " not:"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:275
-msgid ""
-":guilabel:`Format`: exports to any vector format GDAL can write to, such "
-"as GeoPackage, ESRI Shapefile, AutoCAD DXF, ESRI FileGDB, Mapinfo TAB or "
-"MIF, SpatiaLite, CSV, KML, ODS..."
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:278
-msgid ":guilabel:`Layer name` depending on the selected format"
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:279
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:229
 msgid ":guilabel:`Encoding`"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:280
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:230
 msgid ":guilabel:`Save only selected features`"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:281
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:231
 msgid ""
 ":guilabel:`Select fields to export and their export options`. In case you"
 " set your fields behavior with some :ref:`Edit widgets "
@@ -430,199 +333,168 @@ msgid ""
 "fields values by displayed values`."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:286
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:236
 msgid ""
 ":guilabel:`Symbology export`: can be used mainly for DXF export and for "
 "all file formats who manage OGR feature styles (see note below) as DXF, "
 "KML, tab file formats:"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:290
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:240
 msgid "**No symbology**: default style of the application that reads the data"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:291
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:241
 msgid "**Feature symbology**: save style with OGR Feature Styles (see note below)"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:292
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:242
 msgid ""
 "**Symbol Layer symbology**: save with OGR Feature Styles (see note below)"
 " but export the same geometry multiple times if there are multiple "
 "symbology symbol layers used"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:295
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:245
 msgid "A **Scale** value can be applied to the latest options."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:299
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:249
 msgid ""
 "*OGR Feature Styles* are a way to store style directly in the data as a "
 "hidden attribute. Only some formats can handle this kind of information. "
 "KML, DXF and TAB file formats are such formats. For advanced users, you "
 "can read the `OGR Feature Styles specification "
-"<https://www.gdal.org/ogr_feature_style.html>`_ document."
+"<http://www.gdal.org/ogr_feature_style.html>`_ document."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:305
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:255
 msgid ""
 ":guilabel:`Geometry`: you can configure the geometry capabilities of the "
 "output layer"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:308
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:258
 msgid ""
-":guilabel:`geometry type`: keeps the original geometry of the features "
+":guilabel:`geometry type`: keep the original geometry of the features "
 "when set to **Automatic**, otherwise removes or overrides it with any "
 "type. You can add an empty geometry column to an attribute table, remove "
 "the geometry column of a spatial layer."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:312
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:262
 msgid ""
-":guilabel:`Force multi-type`: forces creation of multi-geometry features "
-"in the layer."
+":guilabel:`Force multi-type`: force creation of multi-geometry features "
+"in the layer"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:314
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:264
 msgid ":guilabel:`Include z-dimension` to geometries."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:318
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:268
 msgid ""
 "Overriding layer geometry type makes it possible to do things like save a"
 " geometryless table (e.g. :file:`.csv` file) into a shapefile WITH any "
 "type of geometry (point, line, polygon), so that geometries can then be "
-"manually added to rows with the |addPart| :sup:`Add Part` tool."
+"manually added to rows with the |addPart| :sup:`Add Part` tool ."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:323
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:273
 msgid ""
 ":guilabel:`Datasources Options`, :guilabel:`Layer Options` or "
 ":guilabel:`Custom Options` which allow you to configure some advanced "
-"parameters. See the `gdal-ogr <https://www.gdal.org>`_ driver "
-"documentation."
+"parameters. See the `gdal-ogr <http://gdal.org>`_ driver documentation."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:332
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:282
 msgid "Saving as a new vector layer"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:336
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:286
 msgid ""
 "When saving a vector layer into an existing file, depending on the "
 "capabilities of the output format (Geopackage, SpatiaLite, FileGDB...), "
 "the user can decide whether to:"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:340
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:290
 msgid "overwrite the whole file"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:341
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:291
 msgid "overwrite only the target layer (the layer name is configurable)"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:342
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:292
 msgid "append features to the existing target layer"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:343
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:293
 msgid "append features, add new fields if there are any."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:345
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:295
 msgid ""
 "For formats like ESRI Shapefile, MapInfo .tab, feature append is also "
 "available."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:351
-msgid "Creating new DXF files"
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:301
+msgid "Create DXF files"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:353
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:303
 msgid ""
 "Besides the :guilabel:`Save As...` dialog which provides options to "
 "export a single layer to another format, including :file:`*.DXF`, QGIS "
 "provides another tool to export multiple layers as a single DXF layers. "
-"It's accessible in the :menuselection:`Project --> Import/Export --> "
-"Export Project to DXF...` menu."
+"It's accessible in the :menuselection:`Project --> DXF Export...` menu."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:358
-msgid "In the :guilabel:`DXF Export` dialog:"
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:308
+msgid "The :guilabel:`DXF Export` dialog allows the user to:"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:360
-msgid "Indicate the destination layer file."
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:310
+msgid "indicate the destination layer file;"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:361
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:311
 msgid ""
-"Choose the symbology mode and scale (see the `OGR Feature Styles "
-"<ogr_features_note>`_ note) if applicable."
+"choose the symbology mode and scale (see the `OGR Feature Styles "
+"<ogr_features_note>`_ note);"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:363
-msgid "Select the data :guilabel:`Encoding`."
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:313
+msgid "select the encoding and CRS;"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:364
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:314
 msgid ""
-"Select the :guilabel:`CRS` to apply: the selected layers will be "
-"reprojected to the given CRS."
+"check the loaded layers to include in the DXF files or pick them from an "
+"existing :ref:`visibility preset <preset_visibility>`."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:366
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:317
 msgid ""
-"select the layers to include in the DXF files either by checking each in "
-"the table widget or automatically pick them from an existing :ref:`map "
-"theme <map_themes>`. The :guilabel:`Select All` and :guilabel:`Deselect "
-"All` buttons can also help to quickly set the data to export."
+"For each layer, you can choose a field whose values are used to split "
+"features in generated destination layers in the DXF output. You can also "
+"choose to |checkbox| :guilabel:`Use the layer title as name if set` and "
+"keep features grouped."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:371
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:321
 msgid ""
-"For each layer, you can also choose whether to export all the features in"
-" a single DXF layer or rely on a field whose values are used to split the"
-" features in generated destination layers in the DXF output."
+"choose to only :guilabel:`Export features intersecting the current map "
+"extent`."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:375
-msgid "Optionally, you can also choose to:"
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:327
+msgid "Create layer from a clipboard"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:377
-msgid ""
-"|checkbox| :guilabel:`Use the layer title as name if set` instead of the "
-"layer name itself;"
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:379
-msgid ""
-"|checkbox| :guilabel:`Export features intersecting the current map "
-"extent`;"
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:380
-msgid "|unchecked| :guilabel:`Force 2d output (eg. to support polyline width)`;"
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:381
-msgid "|checkbox| :guilabel:`Export label as MTEXT elements` or TEXT elements."
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:388
-msgid "Exporting a project to DXF dialog"
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:394
-msgid "Creating new layers from the clipboard"
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:396
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:329
 msgid ""
 "Features that are on the clipboard can be pasted into a new layer. To do "
 "this, Select some features, copy them to the clipboard, and then paste "
@@ -630,106 +502,98 @@ msgid ""
 "-->` and choosing:"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:400
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:333
 msgid ""
-":guilabel:`New Vector Layer...`: you need to select the layer CRS, poping"
-" up the :guilabel:`Save vector layer as...` dialog from which you can "
-"select any supported data format (see :ref:`general_saveas` for "
+":menuselection:`New Vector Layer...`: you need to select the layer CRS, "
+"poping up the :guilabel:`Save vector layer as...` dialog from which you "
+"can select any supported data format (see :ref:`general_saveas` for "
 "parameters);"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:403
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:336
 msgid ""
-"or :guilabel:`Temporary Scratch Layer...`: you need to select the layer "
-"CRS and give a name."
+"or :menuselection:`Temporary Scratch Layer...`: you need to select the "
+"layer CRS and give a name."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:406
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:339
 msgid ""
 "A new layer, filled with selected features and their attributes is "
 "created and added to map canvas if asked."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:409
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:342
 msgid ""
-"Creating layers from clipboard is possible with features selected and "
-"copied within QGIS as well as features from another application, as long "
-"as they are defined using well-known text (WKT) string."
+"Creating layers from clipboard applies to features selected and copied "
+"within QGIS and also to features from another source defined using well-"
+"known text (WKT)."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:418
-msgid "Creating virtual layers"
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:351
+msgid "Virtual layers"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:420
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:353
 msgid ""
-"Virtual layers are a special kind of vector layer. They allow you to "
-"define a layer as the result of an SQL query involving any number of "
-"other vector layers that QGIS is able to open. Virtual layers do not "
-"carry data by themselves and can be seen as views to other layers."
+"A special kind of vector layer allows you to define a layer as the result"
+" of an advanced query, using the SQL language on any number of other "
+"vector layers that QGIS is able to open. These layers are called virtual "
+"layers: they do not carry data by themselves and can be seen as views to "
+"other layers."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:426
-msgid "To create a virtual layer, open the virtual layer creation dialog by:"
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:359
+msgid "Creating a virtual layer"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:428
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:361
 msgid ""
-"clicking |virtualLayer| :guilabel:`Add Virtual Layer` option in the "
-":menuselection:`Layer --> Add Layer -->` menu;"
+"Open the virtual layer creation dialog by clicking on :guilabel:`Add "
+"Virtual Layer` in the :guilabel:`Layer` menu or from the corresponding "
+"toolbar."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:430
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:365
 msgid ""
-"enabling the |virtualLayer| :guilabel:`Add Virtual Layer` tab in the "
-":guilabel:`Data Source Manager` dialog;"
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:432
-msgid "or using the :guilabel:`DB Manager` dialog tree item."
-msgstr ""
-
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:434
-msgid ""
-"The dialog allows you to specify a :guilabel:`Layer name` and an SQL "
+"The dialog allows you to specify a :guilabel:`Layer name` and a SQL "
 ":guilabel:`Query`. The query can use the name (or id) of loaded vector "
-"layers as tables, as well as their field names as columns."
+"layers as tables, as well as their fields' name as columns."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:438
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:369
 msgid ""
 "For example, if you have a layer called ``airports``, you can create a "
 "new virtual layer called ``public_airports`` with an SQL query like:"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:447
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:378
 msgid ""
-"The SQL query will be executed, regardless of the underlying provider of "
-"the ``airports`` layer, even if this provider does not directly support "
-"SQL queries."
+"The SQL query will be executed, whatever the underlying provider of the "
+"``airports`` layer is and even if this provider does not directly support"
+" SQL queries."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:454
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:385
 msgid "Create virtual layers dialog"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:456
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:387
 msgid ""
-"Joins and complex queries can also be created, for example, to join "
-"airports and country information:"
+"Joins and complex queries can also be created simply by directly using "
+"the names of the layers that are to be joined."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:468
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:392
 msgid ""
 "It's also possible to create virtual layers using the SQL window of "
 ":ref:`dbmanager`."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:472
-msgid "Embedding layers for use in queries"
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:396
+msgid "Embedded layers"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:474
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:398
 msgid ""
 "Besides the vector layers available in the map canvas, the user can add "
 "layers to the :guilabel:`Embedded layers` list, which he can use in "
@@ -737,70 +601,70 @@ msgid ""
 " panel."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:478
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:402
 msgid ""
 "To embed a layer, click :guilabel:`Add` and provide the :guilabel:`Local "
 "name`, :guilabel:`Provider`, :guilabel:`Encoding` and the path to the "
 ":guilabel:`Source`."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:482
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:406
 msgid ""
 "The :guilabel:`Import` button allows adding layers loaded in the map "
 "canvas into the Embedded layers list. This allows to later remove those "
 "layers from the Layers panel without breaking any existent query."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:487
-msgid "Supported query language"
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:411
+msgid "Supported language"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:489
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:413
 msgid "The underlying engine uses SQLite and SpatiaLite to operate."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:491
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:415
 msgid ""
 "It means you can use all of the SQL your local installation of SQLite "
 "understands."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:494
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:418
 msgid ""
 "Functions from SQLite and spatial functions from SpatiaLite can also be "
 "used in a virtual layer query. For instance, creating a point layer out "
 "of an attribute-only layer can be done with a query similar to:"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:503
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:427
 msgid ""
 ":ref:`Functions of QGIS expressions<functions_list>` can also be used in "
 "a virtual layer query."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:506
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:430
 msgid "To refer the geometry column of a layer, use the name ``geometry``."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:508
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:432
 msgid ""
 "Contrary to a pure SQL query, all the fields of a virtual layer query "
 "must be named. Don't forget to use the ``as`` keyword to name your "
 "columns if they are the result of a computation or function call."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:513
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:437
 msgid "Performance issues"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:515
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:439
 msgid ""
 "With default parameters set, the virtual layer engine will try its best "
 "to detect the type of the different columns of the query, including the "
 "type of the geometry column if one is present."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:519
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:443
 msgid ""
 "This is done by introspecting the query when possible or by fetching the "
 "first row of the query (LIMIT 1) at last resort. Fetching the first row "
@@ -808,11 +672,11 @@ msgid ""
 " reasons."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:524
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:448
 msgid "The creation dialog allows to specify different parameters:"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:526
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:450
 msgid ""
 ":guilabel:`Unique identifier column`: this option allows specifying which"
 " field of the query represents unique integer values that QGIS can use as"
@@ -821,59 +685,59 @@ msgid ""
 "rows by id."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:532
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:456
 msgid ""
 ":guilabel:`No geometry`: this option forces the virtual layer to ignore "
 "any geometry field. The resulting layer is an attribute-only layer."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:535
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:459
 msgid ""
 "Geometry :guilabel:`Column`: this option allows to specify the name of "
 "the column that is to be used as the geometry of the layer."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:538
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:462
 msgid ""
 "Geometry :guilabel:`Type`: this option allows to specify the type of the "
 "geometry of the virtual layer."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:541
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:465
 msgid ""
 "Geometry :guilabel:`CRS`: this option allows to specify the coordinate "
 "reference system of the virtual layer."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:545
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:469
 msgid "Special comments"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:547
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:471
 msgid ""
 "The virtual layer engine tries to determine the type of each column of "
 "the query. If it fails, the first row of the query is fetched to "
 "determine column types."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:551
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:475
 msgid ""
 "The type of a particular column can be specified directly in the query by"
 " using some special comments."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:554
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:478
 msgid ""
 "The syntax is the following: ``/*:type*/``. It has to be placed just "
 "after the name of a column. ``type`` can be either ``int`` for integers, "
 "``real`` for floating point numbers or ``text``."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:558
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:482
 msgid "For instance:"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:565
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:489
 msgid ""
 "The type and coordinate reference system of the geometry column can also "
 "be set thanks to special comments with the following syntax "
@@ -883,23 +747,23 @@ msgid ""
 " coordinate reference system."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:572
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:496
 msgid "Use of indexes"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:574
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:498
 msgid ""
 "When requesting a layer through a virtual layer, indexes of this source "
 "layer will be used in the following ways:"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:577
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:501
 msgid ""
 "if an ``=`` predicate is used on the primary key column of the layer, the"
 " underlying data provider will be asked for a particular id (FilterFid)"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:580
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:504
 msgid ""
 "for any other predicates (``>``, ``<=``, ``!=``, etc.) or on a column "
 "without a primary key, a request built from an expression will be used to"
@@ -907,7 +771,7 @@ msgid ""
 "used on database providers if they exist."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:585
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:509
 msgid ""
 "A specific syntax exists to handle spatial predicates in requests and "
 "triggers the use of a spatial index: a hidden column named "
@@ -915,409 +779,9 @@ msgid ""
 "compared for equality to a bounding box. Example:"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:596
+#: ../../source/docs/user_manual/managing_data_source/create_layers.rst:520
 msgid ""
 "Spatial binary predicates like ``ST_Intersects`` are significantly sped "
 "up when used in conjunction with this spatial index syntax."
 msgstr ""
-
-#~ msgid "Creating a layer can be processed in many ways in QGIS; it can be done:"
-#~ msgstr ""
-
-#~ msgid "from scratch, creating an empty layer;"
-#~ msgstr ""
-
-#~ msgid "from an existing layer;"
-#~ msgstr ""
-
-#~ msgid "from the clipboard;"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "as a result of an SQL-like "
-#~ "query based on one or many layers:"
-#~ " the :ref:`virtual layer "
-#~ "<vector_virtual_layers>`."
-#~ msgstr ""
-
-#~ msgid "QGIS also provides particular tools to import/export different formats."
-#~ msgstr ""
-
-#~ msgid "Creating new Vector layers"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "QGIS allows you to create new "
-#~ "shapefile layers, new SpatiaLite layers, "
-#~ "new GPX layers and New Temporary "
-#~ "Scratch Layers. Creation of a new "
-#~ "GRASS layer is supported within the "
-#~ "GRASS plugin. Please refer to section"
-#~ " :ref:`creating_new_grass_vectors` for more "
-#~ "information on creating GRASS vector "
-#~ "layers."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "To create a new shape layer for"
-#~ " editing, choose :menuselection:`Create Layer "
-#~ "-->` |newVectorLayer| :menuselection:`New Shapefile"
-#~ " Layer...` from the :menuselection:`Layer` "
-#~ "menu. The :guilabel:`New Shapefile Layer` "
-#~ "dialog will be displayed as shown "
-#~ "in figure_create_shapefile_. Choose the type"
-#~ " of layer (point, line or polygon)"
-#~ " and the CRS (coordinate reference "
-#~ "system)."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Note that QGIS does not yet "
-#~ "support creation of 2.5D features (i.e.,"
-#~ " features with X,Y,Z coordinates)."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "To complete the creation of the "
-#~ "new shapefile layer, add the desired "
-#~ "attributes by clicking on the **[Add "
-#~ "to attributes list]** button and "
-#~ "specifying a name and type for the"
-#~ " attribute. A first 'id' column is"
-#~ " added as default but can be "
-#~ "removed, if not wanted. Only "
-#~ ":guilabel:`Type: real` |selectString|, "
-#~ ":guilabel:`Type: integer` |selectString|, "
-#~ ":guilabel:`Type: string` |selectString| and "
-#~ ":guilabel:`Type:date` |selectString| attributes are"
-#~ " supported. Additionally and according to"
-#~ " the attribute type, you can also "
-#~ "define the width and precision of "
-#~ "the new attribute column. Once you "
-#~ "are happy with the attributes, click "
-#~ "**[OK]** and provide a name for "
-#~ "the shapefile. QGIS will automatically "
-#~ "add a :file:`.shp` extension to the "
-#~ "name you specify. Once the layer "
-#~ "has been created, it will be added"
-#~ " to the map, and you can edit"
-#~ " it in the same way as "
-#~ "described in section :ref:`sec_edit_existing_layer`."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "To create a new SpatiaLite layer "
-#~ "for editing, choose :menuselection:`New -->`"
-#~ " |newSpatiaLiteLayer| :menuselection:`New SpatiaLite"
-#~ " Layer...` from the :menuselection:`Layer` "
-#~ "menu. The :guilabel:`New SpatiaLite Layer` "
-#~ "dialog will be displayed as shown "
-#~ "in Figure_create_spatialite_."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The first step is to select an "
-#~ "existing SpatiaLite database or to "
-#~ "create a new SpatiaLite database. This"
-#~ " can be done with the browse "
-#~ "button |browseButton| to the right of"
-#~ " the database field. Then, add a "
-#~ "name for the new layer, define the"
-#~ " layer type, and specify the "
-#~ "coordinate reference system with **[Specify"
-#~ " CRS]**. If desired, you can select"
-#~ " |checkbox| :guilabel:`Create an autoincrementing"
-#~ " primary key`."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "To define an attribute table for "
-#~ "the new SpatiaLite layer, add the "
-#~ "names of the attribute columns you "
-#~ "want to create with the corresponding"
-#~ " column type, and click on the "
-#~ "**[Add to attribute list]** button. Once"
-#~ " you are happy with the attributes,"
-#~ " click **[OK]**. QGIS will automatically"
-#~ " add the new layer to the "
-#~ "legend, and you can edit it in "
-#~ "the same way as described in "
-#~ "section :ref:`sec_edit_existing_layer`."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The first step is to select an "
-#~ "existing GeoPackage or create a new "
-#~ "one. This can be done by pressing"
-#~ " the ellipses **[...]** button at the"
-#~ " right of the Database field. Then,"
-#~ " give a name for the new layer,"
-#~ " define the layer type and specify"
-#~ " the coordinate reference system with "
-#~ "**[Specify CRS]**."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "To define an attribute table for "
-#~ "the new GeoPackage layer, add the "
-#~ "names of the attribute columns you "
-#~ "want to create with the corresponding"
-#~ " column type, and click on the "
-#~ "**[Add to fields list]** button. Once"
-#~ " you are happy with the attributes,"
-#~ " click **[OK]**. QGIS will automatically"
-#~ " add the new layer to the "
-#~ "legend, and you can edit it in "
-#~ "the same way as described in "
-#~ "section :ref:`sec_edit_existing_layer`."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "When this plugin is loaded, choose "
-#~ ":menuselection:`New -->` |createGPX| "
-#~ ":menuselection:`Create new GPX Layer...` from"
-#~ " the :menuselection:`Layer` menu. In the"
-#~ " :guilabel:`Save new GPX file as` "
-#~ "dialog, choose where to save the "
-#~ "new file and press **[Save]**. Three "
-#~ "new layers are added to the "
-#~ ":guilabel:`Layers Panel`: ``waypoints``, ``routes``"
-#~ " and ``tracks`` with predefined structure."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Empty, editable memory layers can be "
-#~ "defined using :menuselection:`Layer --> Create"
-#~ " Layer --> New Temporary Scratch "
-#~ "Layer`. Here you can even create "
-#~ "|radioButtonOff|:guilabel:`Multipoint`, "
-#~ "|radioButtonOff|:guilabel:`Multiline` and "
-#~ "|radioButtonOff|:guilabel:`Multipolygon` Layers beneath"
-#~ " |radioButtonOn|:guilabel:`Point`, "
-#~ "|radioButtonOff|:guilabel:`Line` and "
-#~ "|radioButtonOff|:guilabel:`Polygon` Layers. Temporary "
-#~ "Scratch Layers are not saved and "
-#~ "will be discarded when QGIS is "
-#~ "closed. See also :ref:`paste_into_layer`."
-#~ msgstr ""
-
-#~ msgid "Save layer from an existing file"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Layers (raster or vector) or subset "
-#~ "of layers can be saved in another"
-#~ " format with the :guilabel:`Save As...` "
-#~ "feature in the layer contextual menu "
-#~ "(by right-clicking in the layer in"
-#~ " the layer tree) or in the "
-#~ ":menuselection:`Layer --> Save As...` menu."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The :guilabel:`Save As` dialog shows "
-#~ "several parameters to change the "
-#~ "behavior when saving the layer. Common"
-#~ " parameters (raster and vector) are:"
-#~ msgstr ""
-
-#~ msgid ":guilabel:`Format`"
-#~ msgstr ""
-
-#~ msgid ":guilabel:`CRS`"
-#~ msgstr ""
-
-#~ msgid ":guilabel:`Add saved file to map` to add the new layer to the canvas"
-#~ msgstr ""
-
-#~ msgid ""
-#~ ":guilabel:`Create Options`: advanced options "
-#~ "(file compression, block sizes, "
-#~ "colorimetry...) to fine tune the output"
-#~ " file. See the `gdal-ogr "
-#~ "<http://gdal.org>`_ driver documentation."
-#~ msgstr ""
-
-#~ msgid ":guilabel:`VRT Tiles`"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "*OGR Feature Styles* are a way to"
-#~ " store style directly in the data "
-#~ "as a hidden attribute. Only some "
-#~ "formats can handle this kind of "
-#~ "information. KML, DXF and TAB file "
-#~ "formats are such formats. For advanced"
-#~ " users, you can read the `OGR "
-#~ "Feature Styles specification "
-#~ "<http://www.gdal.org/ogr_feature_style.html>`_ document."
-#~ msgstr ""
-
-#~ msgid ""
-#~ ":guilabel:`geometry type`: keep the original"
-#~ " geometry of the features when set"
-#~ " to **Automatic**, otherwise removes or "
-#~ "overrides it with any type. You "
-#~ "can add an empty geometry column "
-#~ "to an attribute table, remove the "
-#~ "geometry column of a spatial layer."
-#~ msgstr ""
-
-#~ msgid ""
-#~ ":guilabel:`Force multi-type`: force creation"
-#~ " of multi-geometry features in the"
-#~ " layer"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Overriding layer geometry type makes it"
-#~ " possible to do things like save "
-#~ "a geometryless table (e.g. :file:`.csv` "
-#~ "file) into a shapefile WITH any "
-#~ "type of geometry (point, line, polygon),"
-#~ " so that geometries can then be "
-#~ "manually added to rows with the "
-#~ "|addPart| :sup:`Add Part` tool ."
-#~ msgstr ""
-
-#~ msgid ""
-#~ ":guilabel:`Datasources Options`, :guilabel:`Layer "
-#~ "Options` or :guilabel:`Custom Options` which"
-#~ " allow you to configure some advanced"
-#~ " parameters. See the `gdal-ogr "
-#~ "<http://gdal.org>`_ driver documentation."
-#~ msgstr ""
-
-#~ msgid "Create DXF files"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Besides the :guilabel:`Save As...` dialog "
-#~ "which provides options to export a "
-#~ "single layer to another format, "
-#~ "including :file:`*.DXF`, QGIS provides another"
-#~ " tool to export multiple layers as"
-#~ " a single DXF layers. It's accessible"
-#~ " in the :menuselection:`Project --> DXF "
-#~ "Export...` menu."
-#~ msgstr ""
-
-#~ msgid "The :guilabel:`DXF Export` dialog allows the user to:"
-#~ msgstr ""
-
-#~ msgid "indicate the destination layer file;"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "choose the symbology mode and scale "
-#~ "(see the `OGR Feature Styles "
-#~ "<ogr_features_note>`_ note);"
-#~ msgstr ""
-
-#~ msgid "select the encoding and CRS;"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "check the loaded layers to include "
-#~ "in the DXF files or pick them "
-#~ "from an existing :ref:`visibility preset "
-#~ "<preset_visibility>`."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "For each layer, you can choose a"
-#~ " field whose values are used to "
-#~ "split features in generated destination "
-#~ "layers in the DXF output. You can"
-#~ " also choose to |checkbox| :guilabel:`Use"
-#~ " the layer title as name if "
-#~ "set` and keep features grouped."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "choose to only :guilabel:`Export features "
-#~ "intersecting the current map extent`."
-#~ msgstr ""
-
-#~ msgid "Create layer from a clipboard"
-#~ msgstr ""
-
-#~ msgid ""
-#~ ":menuselection:`New Vector Layer...`: you need"
-#~ " to select the layer CRS, poping "
-#~ "up the :guilabel:`Save vector layer "
-#~ "as...` dialog from which you can "
-#~ "select any supported data format (see"
-#~ " :ref:`general_saveas` for parameters);"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "or :menuselection:`Temporary Scratch Layer...`: "
-#~ "you need to select the layer CRS"
-#~ " and give a name."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Creating layers from clipboard applies "
-#~ "to features selected and copied within"
-#~ " QGIS and also to features from "
-#~ "another source defined using well-known"
-#~ " text (WKT)."
-#~ msgstr ""
-
-#~ msgid "Virtual layers"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "A special kind of vector layer "
-#~ "allows you to define a layer as"
-#~ " the result of an advanced query, "
-#~ "using the SQL language on any "
-#~ "number of other vector layers that "
-#~ "QGIS is able to open. These layers"
-#~ " are called virtual layers: they do"
-#~ " not carry data by themselves and "
-#~ "can be seen as views to other "
-#~ "layers."
-#~ msgstr ""
-
-#~ msgid "Creating a virtual layer"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Open the virtual layer creation dialog"
-#~ " by clicking on :guilabel:`Add Virtual "
-#~ "Layer` in the :guilabel:`Layer` menu or"
-#~ " from the corresponding toolbar."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The dialog allows you to specify a"
-#~ " :guilabel:`Layer name` and a SQL "
-#~ ":guilabel:`Query`. The query can use the"
-#~ " name (or id) of loaded vector "
-#~ "layers as tables, as well as their"
-#~ " fields' name as columns."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The SQL query will be executed, "
-#~ "whatever the underlying provider of the"
-#~ " ``airports`` layer is and even if"
-#~ " this provider does not directly "
-#~ "support SQL queries."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Joins and complex queries can also "
-#~ "be created simply by directly using "
-#~ "the names of the layers that are"
-#~ " to be joined."
-#~ msgstr ""
-
-#~ msgid "Embedded layers"
-#~ msgstr ""
-
-#~ msgid "Supported language"
-#~ msgstr ""
 

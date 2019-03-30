@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project testing\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-30 00:23+0100\n"
+"POT-Creation-Date: 2017-12-28 10:31+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,27 +19,23 @@ msgstr ""
 "Generated-By: Babel 2.5.1\n"
 
 #: ../../source/docs/training_manual/processing/extents.rst:6
-msgid "|updatedisclaimer|"
-msgstr ""
-
-#: ../../source/docs/training_manual/processing/extents.rst:9
 msgid "Defining extents"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/extents.rst:11
+#: ../../source/docs/training_manual/processing/extents.rst:8
 msgid ""
 "In this lesson we will see how to define extents, which are needed by "
 "some algorithms, especially raster ones."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/extents.rst:14
+#: ../../source/docs/training_manual/processing/extents.rst:10
 msgid ""
 "Some algorithms require an extent to define the area to be covered by the"
 " analysis they perform, and usually to define the extent of the resulting"
 " layer."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/extents.rst:17
+#: ../../source/docs/training_manual/processing/extents.rst:12
 msgid ""
 "When an extent is required, it can be defined manually by entering the "
 "four values that define it (min X, min Y, max X, max Y), but there are "
@@ -47,14 +43,14 @@ msgid ""
 "will see all of them in this lesson."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/extents.rst:22
+#: ../../source/docs/training_manual/processing/extents.rst:14
 msgid ""
 "First, let's open an algorithm that requires an extent to be defined. "
 "Open the *Rasterize* algorithm, which creates a raster layer from a "
 "vector layer."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/extents.rst:27
+#: ../../source/docs/training_manual/processing/extents.rst:18
 msgid ""
 "All the parameters, except for the last two ones, are used to define "
 "which layer is to be rasterized, and configure how the rasterization "
@@ -66,13 +62,13 @@ msgid ""
 "cellsize)."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/extents.rst:35
+#: ../../source/docs/training_manual/processing/extents.rst:20
 msgid ""
 "The first thing you can do is to type the 4 defining values explained "
 "before, separated by commas."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/extents.rst:40
+#: ../../source/docs/training_manual/processing/extents.rst:24
 msgid ""
 "That doesn't need any extra explanation. While this is the most flexible "
 "option, it is also the less practical in some cases, and that's why other"
@@ -80,17 +76,17 @@ msgid ""
 " on the right--hand side of the extent text box."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/extents.rst:47
+#: ../../source/docs/training_manual/processing/extents.rst:28
 msgid "Let's see what each one of them does."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/extents.rst:49
+#: ../../source/docs/training_manual/processing/extents.rst:30
 msgid ""
 "The first option is *Use layer/canvas extent*, which will show the "
 "selection dialog shown below."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/extents.rst:54
+#: ../../source/docs/training_manual/processing/extents.rst:34
 msgid ""
 "Here you can select the extent of the canvas (the extent covered by the "
 "current zoom), or the extension any of the available layers. Select it "
@@ -98,20 +94,20 @@ msgid ""
 " corresponding values."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/extents.rst:58
+#: ../../source/docs/training_manual/processing/extents.rst:36
 msgid ""
 "The second option is *Select extent on canvas*. In this case, the "
 "algorithm dialog disappears and you can click and drag on the QGIS canvas"
 " to define the desired extent."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/extents.rst:64
+#: ../../source/docs/training_manual/processing/extents.rst:40
 msgid ""
 "Once you release the mouse button, the dialog will reappear and the text "
 "box will already have the values corresponding to the defined extent."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/extents.rst:67
+#: ../../source/docs/training_manual/processing/extents.rst:42
 msgid ""
 "The last option is *Use min covering extent from input layers*, which is "
 "the default option. This will compute the min covering extent of all "
@@ -124,28 +120,28 @@ msgid ""
 "computed from all of them together."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/extents.rst:76
+#: ../../source/docs/training_manual/processing/extents.rst:44
 msgid "We will use this last method to execute our rasterization algorithm."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/extents.rst:78
+#: ../../source/docs/training_manual/processing/extents.rst:46
 msgid "Fill the parameters dialog as shown next, and press *OK*."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/extents.rst:82
+#: ../../source/docs/training_manual/processing/extents.rst:50
 msgid ""
 "In this case, better use an *Integer (1 byte)* instead of a *Floating "
 "point (4 byte)*, since the *NAME* is an integer with maximum value=64. "
 "This will result in a smaller file size and faster computations."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/extents.rst:86
+#: ../../source/docs/training_manual/processing/extents.rst:52
 msgid ""
 "You will get a rasterized layer that covers exactly the area covered by "
 "the original vector layer."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/extents.rst:91
+#: ../../source/docs/training_manual/processing/extents.rst:56
 msgid ""
 "In some cases, the last option, *Use min covering extent from input "
 "layers*, might not be available. This will happen in those algorithm that"
@@ -154,7 +150,7 @@ msgid ""
 "options."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/extents.rst:96
+#: ../../source/docs/training_manual/processing/extents.rst:58
 msgid ""
 "Notice that, when a selection exist, the extent of the layer is that of "
 "the whole set of features, and the selection is not used to compute the "
