@@ -5,6 +5,9 @@
 Writing code in the PyQGIS Cookbook
 ***********************************
 
+.. contents::
+   :local:
+
 If you are planning to add or update some chapters of the
 :ref:`PyQGIS-Developer-Cookbook`, then you should follow some rules to enable
 automatic testing of the code snippets.
