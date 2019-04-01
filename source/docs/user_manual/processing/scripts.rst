@@ -12,7 +12,6 @@ Writing new Processing algorithms as python scripts
 Currently, the only way to write Processing algorithms using Python is
 to extend the :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`
 class.
-using Python.
 
 * Extending
   :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`
