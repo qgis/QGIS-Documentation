@@ -8,7 +8,7 @@
 Cheat sheet
 ***********
 
-Cheat sheet for PyQgis
+Cheat sheet for PyQGIS
 
 .. only:: html
 
