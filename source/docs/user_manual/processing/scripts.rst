@@ -124,7 +124,7 @@ The buffer layer, raster layer and number of features are returned.
             # parameter.
             self.addParameter(
                 QgsProcessingParameterRasterDestination(
-                    'OUTPUT', # 'OUTPUT' is recommended for the main input
+                    'OUTPUT',
                     self.tr('Raster output')
                 )
             )
@@ -158,15 +158,12 @@ The buffer layer, raster layer and number of features are returned.
             """
             # First, we get the count of features from the INPUT layer.
             # This layer is defined as a QgsProcessingParameterFeatureSource
-            # parameter, so its value is retrieved by calling
+            # parameter, so it is retrieved by calling
             # self.parameterAsSource.
             input_featuresource = self.parameterAsSource(parameters,
                                                          'INPUT',
                                                          context)
             numfeatures = input_featuresource.featureCount()
-            buffer_layer_path = self.parameterAsOutputLayer(parameters,
-                                                            'BUFFER_OUTPUT',
-                                                            context)
             # Retrieve the buffer distance and raster cell size numeric
             # values.
             # Since these are numeric values, they are retrieved using
@@ -176,14 +173,13 @@ The buffer layer, raster layer and number of features are returned.
             rastercellsize = self.parameterAsDouble(parameters, 'CELLSIZE',
                                                     context)
             if feedback.isCanceled():
-                return {'OUTPUT': None, 'BUFFER_OUTPUT': None,
-                        'NUMBEROFFEATURES': numfeatures}
+                return {}
             buffer_result = processing.run('native:buffer',
                                    {
                                     # Here we pass on the original
                                     # parameter values of INPUT and
-                                    # BUFFER_OUTPUT to the buffer
-                                    # algorithm, way that particular
+                                    # BUFFER_OUTPUT to the buffer algorithm,
+                                    # in the way that this particular
                                     # algorithm requires.
                                     'INPUT': parameters['INPUT'],
                                     'OUTPUT': parameters['BUFFER_OUTPUT'],
@@ -309,9 +305,6 @@ The buffer layer, raster layer and number of features are returned.
         input_featuresource = instance.parameterAsSource(parameters,
                                                          'INPUT', context)
         numfeatures = input_featuresource.featureCount()
-        buffer_layer_path = instance.parameterAsOutputLayer(parameters,
-                                                            'BUFFER_OUTPUT',
-                                                            context)
         bufferdist = instance.parameterAsDouble(parameters, 'BUFFERDIST',
                                                 context)
         rastercellsize = instance.parameterAsDouble(parameters, 'CELLSIZE',
@@ -320,7 +313,7 @@ The buffer layer, raster layer and number of features are returned.
             return {}
         buffer_result = processing.run('native:buffer',
                                    {'INPUT': parameters['INPUT'],
-                                    'OUTPUT': buffer_layer_path,
+                                    'OUTPUT': parameters['BUFFER_OUTPUT'],
                                     'DISTANCE': bufferdist,
                                     'SEGMENTS': 10, 
                                     'DISSOLVE': True,
