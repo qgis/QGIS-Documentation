@@ -74,7 +74,7 @@ Decorators
     INCHES_TO_MM = 0.0393700787402
     case = 2
 
-    def AddCopyRight(p,text,xOffset,yOffset):
+   def add_copyright(p, text, x_offset, y_offset):
         p.translate( xOffset , yOffset  )
         text.drawContents(p)
         p.setWorldTransform( p.worldTransform() )
