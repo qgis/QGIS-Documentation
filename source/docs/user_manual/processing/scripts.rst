@@ -1,6 +1,3 @@
-.. only:: html
-
-
 Writing new Processing algorithms as python scripts
 ====================================================
 
@@ -362,7 +359,3 @@ You can find code on
 https://github.com/qgis/QGIS/tree/release-3_4/python/plugins/processing/algs/qgis.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
