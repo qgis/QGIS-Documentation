@@ -68,11 +68,10 @@ to be placed before the ``.. testcode::``::
      crs = QgsCoordinateReferenceSystem(4326, QgsCoordinateReferenceSystem.PostgisCrsId)
      assert crs.isValid()
 
-If the code snippet is not creating an object (and therefore you cannot use
-something like ``assert object.isValid()``) you can still compare the output
-with another directive using the ``print()`` method. If your code has printed
-outputs, you need to add the expected results within a ``.. testoutput::`` to
-compare the expected output::
+If the code snippet doesn't create objects (and therefore you cannot use
+something like ``assert object.isValid()``), you can test the code using the
+``print()`` method, then add the expected results within a ``.. testoutput::``
+directive to compare the expected output::
 
   .. testcode::
 
@@ -84,7 +83,7 @@ compare the expected output::
      QGIS CRS ID: 3452
      PostGIS SRID: 4326
 
-By default, the content of `.. testoutput::` is shown in the HTLM output.
+By default, the content of ``.. testoutput::`` is shown in the HTML output.
 To hide it from the HTML use the `:hide:` option::
 
   .. testoutput::
@@ -92,6 +91,11 @@ To hide it from the HTML use the `:hide:` option::
 
      QGIS CRS ID: 3452
      PostGIS SRID: 4326
+
+.. note::
+
+   If the code snippet contains any print statements, you MUST add a ``testoutput``
+   with the expected outputs; otherwise the test will fail.
 
 Grouping tests
 ----------------------------
