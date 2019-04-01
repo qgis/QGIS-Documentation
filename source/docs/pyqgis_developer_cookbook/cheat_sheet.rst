@@ -568,7 +568,7 @@ https://raw.githubusercontent.com/klakar/QGIS\_resources/master/collections/Geos
 Sources
 =======
 
-http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/
+https://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/
 
 http://qgis.org/api/
 
