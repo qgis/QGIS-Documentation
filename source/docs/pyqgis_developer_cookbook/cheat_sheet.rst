@@ -506,7 +506,7 @@ Settings
 
 .. code-block:: python
 
-    from PyQt5.QtCore import QSettings
+    from qgis.PyQt.QtCore import QgsSettings
     qs = QSettings()
 
     for k in sorted(qs.allKeys()):
