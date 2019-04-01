@@ -212,7 +212,7 @@ TOC
 
     layer = iface.addVectorLayer("input.shp", "name", "ogr")
     if not layer:
-      print "Layer failed to load!"
+      print("Layer failed to load!")
 
 **Find layer by name**
 
