@@ -742,7 +742,7 @@ https://doc.qt.io/qt-5.9/qnetworkproxy.html#ProxyType-enum
 Locator Settings
 ----------------
 
-|search| The :guilabel:`Locator` tab allows to configure the **Locator bar**, a
+|search| The :guilabel:`Locator` tab allows to configure the :ref:`Locator bar <locator_bar>`, a
 quick search widget available on the status bar that helps you perform searches
 anywhere in the application. It provides some default filters (with prefix) to use:
 
