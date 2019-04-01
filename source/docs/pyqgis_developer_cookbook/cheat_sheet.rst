@@ -61,7 +61,7 @@ Decorators
 
 .. code-block:: python
 
-    from PyQt5.QtCore import *
+    from qgis.PyQt.QtCore import *
     from qgis.PyQt.QtGui import *
 
     mQFont = "Sans Serif"
