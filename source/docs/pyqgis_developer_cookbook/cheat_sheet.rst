@@ -525,7 +525,7 @@ Toolbars
     parent = toolbar.parentWidget()
     parent.removeToolBar(toolbar)
 
-    #and add again
+    # and add again
     parent.addToolBar(toolbar)
 
 **Remove actions toolbar**
