@@ -13,7 +13,6 @@ Currently, the only way to write Processing algorithms using Python is
 to extend the :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`
 class.
 
-* Extending
   :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`
 
 The @alg decorator introduced in QGIS 3.6 to simplify the writing of
