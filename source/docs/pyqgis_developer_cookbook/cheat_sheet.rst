@@ -20,7 +20,7 @@ User Interface
 
 **Change Look & Feel**
 
-.. code-block:: python
+.. testcode::
 
     app = QApplication.instance()
     qss_file = open(r"style.qss").read()
