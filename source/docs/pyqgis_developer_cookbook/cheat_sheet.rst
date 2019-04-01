@@ -10,7 +10,9 @@ Cheat sheet
 
 Cheat sheet for PyQgis
 
-.. contents:: Table of contents
+.. only:: html
+
+   .. contents::
    :local:
 
 UI
