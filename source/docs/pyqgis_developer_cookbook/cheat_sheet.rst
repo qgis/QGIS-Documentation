@@ -572,7 +572,7 @@ https://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/
 
 https://qgis.org/api/
 
-https://qgis.org/pyqgis/3.0/
+https://qgis.org/pyqgis/
 
 https://stackoverflow.com/questions/tagged/qgis
 
