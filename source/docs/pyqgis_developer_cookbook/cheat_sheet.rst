@@ -570,7 +570,7 @@ Sources
 
 https://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/
 
-http://qgis.org/api/
+https://qgis.org/api/
 
 https://qgis.org/pyqgis/3.0/
 
