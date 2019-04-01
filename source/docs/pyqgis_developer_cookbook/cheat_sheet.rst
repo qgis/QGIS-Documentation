@@ -514,7 +514,7 @@ Settings
 
 ↑ `Table of contents`_
 
-ToolBars
+Toolbars
 ========
 
 **Remove Toolbar**
