@@ -16,7 +16,7 @@ Cheat sheet for PyQgis
    :local:
 
 UI
-==
+==============
 
 **Change Look & Feel**
 
