@@ -213,7 +213,7 @@ An example for this metadata.txt
   ; Since QGIS 3.10, a comma separated list of plugins to be installed
   ; (or upgraded) can be specified.
   ; The example below will try to install (or upgrade) "MyOtherPlugin" version 1.12
-  ; and any version of "YetAnothrPlugin"
+  ; and any version of "YetAnotherPlugin"
   plugin_dependencies=MyOtherPlugin==1.12,YetAnotherPlugin
 
 
