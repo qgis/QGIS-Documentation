@@ -200,7 +200,7 @@ TOC
     canvas = iface.mapCanvas()
     layers = [canvas.layer(i) for i in range(canvas.layerCount())]
     layers_names = [ layer.name() for layer in layers ]
-    print "layers TOC = ", layers_names
+    print("layers TOC = ", layers_names)
 
     or
 
