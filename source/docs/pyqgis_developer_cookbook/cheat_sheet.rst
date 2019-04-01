@@ -13,7 +13,7 @@ Cheat sheet for PyQgis
 .. only:: html
 
    .. contents::
-   :local:
+      :local:
 
 User Interface
 ==============
