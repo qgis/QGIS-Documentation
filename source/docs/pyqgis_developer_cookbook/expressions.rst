@@ -3,7 +3,7 @@
 
 The code snippets on this page needs the following imports if you're outside the pyqgis console:
 
-.. testcode:: python
+.. testcode::
 
    from qgis.core import (
       QgsExpression,
@@ -76,15 +76,15 @@ Examples of scalar expressions:
 Parsing Expressions
 ===================
 
-.. testcode:: python
+.. testcode::
 
    exp = QgsExpression('1 + 1 = 2')
-   assert not exp.hasParserError()
+   assert(not exp.hasParserError())
 
    exp = QgsExpression('1 + 1 = ')
-   assert exp.hasParserError()
+   assert(exp.hasParserError())
 
-   assert(exp.parserErrorString() == 'syntax error, unexpected $end')
+   assert(exp.parserErrorString() == '\nsyntax error, unexpected $end')
 
 .. index:: Expressions; Evaluating
 
@@ -94,7 +94,7 @@ Evaluating Expressions
 Basic Expressions
 -----------------
 
-.. testcode:: python
+.. testcode::
 
    exp = QgsExpression('1 + 1 = 2')
    assert(exp.evaluate())
@@ -108,14 +108,15 @@ A :class:`QgsExpressionContext <qgis.core.QgsExpressionContext>`
 object has to be created and passed, to allow the expression to access the feature field values.
 "Column" is the name of the field in the layer.
 
-.. testcode:: python
+.. testcode::
+
    fields = QgsFields()
-   field = QgsField('Field')
+   field = QgsField('Column')
    fields.append(field)
    feature = QgsFeature()
    feature.setFields(fields)
    feature.setAttribute(0, 99)
-   exp = QgsExpression('Field')
+   exp = QgsExpression('Column')
    context = QgsExpressionContext()
    context.setFeature(feature)
    assert(exp.evaluate(context) == 99)
@@ -124,7 +125,7 @@ object has to be created and passed, to allow the expression to access the featu
 Handling errors
 ---------------
 
-.. testcode:: python
+.. testcode::
 
    exp = QgsExpression("1 + 1 = 2 ")
    if exp.hasParserError():
@@ -134,7 +135,6 @@ Handling errors
    if exp.hasEvalError():
       raise ValueError(exp.evalErrorString())
 
-   print(value)
 
 Examples
 ========
@@ -142,10 +142,10 @@ Examples
 The following example can be used to filter a layer and return any feature that
 matches a predicate.
 
-.. testcode:: python
+.. testcode::
 
    def where(layer, exp):
-      print("Where")
+
       exp = QgsExpression(exp)
       if exp.hasParserError():
          raise Exception(exp.parserErrorString())
