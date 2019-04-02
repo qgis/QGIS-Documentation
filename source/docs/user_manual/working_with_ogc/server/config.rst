@@ -162,6 +162,24 @@ QGIS_SERVER_CACHE_SIZE
 Sets the network cache size in MB. The default value is ``50`` MB.
 
 
+QGIS_SERVER_OVERRIDE_SYSTEM_LOCALE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Sets LOCALE to be used by QGIS server. The default value is empty (no override).
+
+Example: ``de_CH.utf8``
+
+
+QGIS_SERVER_SHOW_GROUP_SEPARATOR 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Defines whether a group separator (e.g. thousand separator) should be used for
+numeric values (e.g. in GetFeatureInfo responses). The default value is ``0``.
+
+* ``0`` or ``false`` (case insensitive)
+* ``1`` or ``true`` (case insensitive)
+
+
 Settings summary
 ================
 
