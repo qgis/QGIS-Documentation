@@ -269,7 +269,7 @@ TOC
     for subLayer in subLayers:
         name = subLayer.split('!!.. code-block:: python!!')[1]
         uri = "%s|layername=%s" % (fileName, name,)
-        #Create layer
+        # Create layer
         sub_vlayer = QgsVectorLayer(uri, name, 'ogr')
         #Add layer to map
         QgsProject.instance().addMapLayer(sub_vlayer)
