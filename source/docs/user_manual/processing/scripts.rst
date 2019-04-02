@@ -1,4 +1,4 @@
-Writing new Processing algorithms as python scripts
+Writing new Processing algorithms as Python scripts
 ====================================================
 
 .. only:: html
@@ -6,13 +6,9 @@ Writing new Processing algorithms as python scripts
    .. contents::
       :local:
 
-Currently, the only way to write Processing algorithms using Python is
+In QGIS 3.4, the only way to write Processing algorithms using Python is
 to extend the :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`
 class.
-
-
-The @alg decorator introduced in QGIS 3.6 to simplify the writing of
-Processing algorithms is not available in QGIS 3.4.
 
 Within QGIS, you can use :guilabel:`Create new script` in the
 :guilabel:`Scripts` menu at the top of the :guilabel:`Processing Toolbox`
