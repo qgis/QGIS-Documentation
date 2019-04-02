@@ -218,7 +218,7 @@ Table of contents
 
     from qgis.core import QgsProject
     layer = QgsProject.instance().mapLayersByName("name")[0]
-    print layer.name()
+    print(layer.name())
 
 **Set Active layer**
 
@@ -267,9 +267,9 @@ Table of contents
     for subLayer in subLayers:
         name = subLayer.split('!!.. code-block:: python!!')[1]
         uri = "%s|layername=%s" % (fileName, name,)
-        #Create layer
+        # Create layer
         sub_vlayer = QgsVectorLayer(uri, name, 'ogr')
-        #Add layer to map
+        # Add layer to map
         QgsProject.instance().addMapLayer(sub_vlayer)
 
 **Load tile layer (XYZ-Layer)**
