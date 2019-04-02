@@ -5,11 +5,9 @@
 .. _cheat-sheet:
 
 ***********
-Cheat sheet
-***********
-
 Cheat sheet for PyQGIS
-
+***********
+.. contents:: Table of contents
 .. only:: html
 
    .. contents::
@@ -28,7 +26,7 @@ User Interface
 
 **Change Icon and Title**
 
-.. code-block:: python
+.. testcode::
 
     icon = QIcon(r"logo.png")
     iface.mainWindow().setWindowIcon(icon)  
@@ -41,13 +39,13 @@ Canvas
 
 **Access Canvas**
 
-.. code-block:: python
+.. testcode::
 
     canvas = iface.mapCanvas()
 
 **Change Canvas color**
 
-.. code-block:: python
+.. testcode::
 
     iface.mapCanvas().setCanvasColor(QtCore.Qt.black)       
     iface.mapCanvas().refresh()
@@ -59,7 +57,7 @@ Decorators
 
 **CopyRight**
 
-.. code-block:: python
+.. testcode::
 
     from qgis.PyQt.QtCore import *
     from qgis.PyQt.QtGui import *
@@ -138,7 +136,7 @@ Processing algorithms
 
 **Get algorithms list**
 
-.. code-block:: python
+.. testcode::
 
     for alg in QgsApplication.processingRegistry().algorithms():
         print("{}:{} --> {}".format(alg.provider().name(), alg.name(), alg.displayName()))
@@ -159,43 +157,43 @@ Processing algorithms
 
 Random selection
 
-.. code-block:: python
+.. testcode::
 
     import processing
     processing.algorithmHelp("qgis:randomselection")
 
 **How many algorithms are there?**
 
-.. code-block:: python
+.. testcode::
 
     len(QgsApplication.processingRegistry().algorithms())
 
 **How many providers are there?**
 
-.. code-block:: python
+.. testcode::
 
     len(QgsApplication.processingRegistry().providers())
 
 **How many Expressions are there?**
 
-.. code-block:: python
+.. testcode::
 
     len(QgsExpression.Functions()) 
 
 ↑ `Table of contents`_
 
-TOC
-===
+Table of contents
+=================
 
 **Access checked Layers**
 
-.. code-block:: python
+.. testcode::
 
     iface.mapCanvas().layers()
 
 **Obtain Layers name**
 
-.. code-block:: python
+.. testcode::
 
     canvas = iface.mapCanvas()
     layers = [canvas.layer(i) for i in range(canvas.layerCount())]
@@ -208,7 +206,7 @@ TOC
 
 **Add vector layer**
 
-.. code-block:: python
+.. testcode::
 
     layer = iface.addVectorLayer("input.shp", "name", "ogr")
     if not layer:
@@ -216,7 +214,7 @@ TOC
 
 **Find layer by name**
 
-.. code-block:: python
+.. testcode::
 
     from qgis.core import QgsProject
     layer = QgsProject.instance().mapLayersByName("name")[0]
@@ -224,7 +222,7 @@ TOC
 
 **Set Active layer**
 
-.. code-block:: python
+.. testcode::
 
     from qgis.core import QgsProject
     layer = QgsProject.instance().mapLayersByName("name")[0]
@@ -232,20 +230,20 @@ TOC
 
 **Remove all layers**
 
-.. code-block:: python
+.. testcode::
 
     QgsProject.instance().removeAllMapLayers()
 
 **Remove Contextual menu**
 
-.. code-block:: python
+.. testcode::
 
     ltv = iface.layerTreeView()
     ltv.setMenuProvider( None ) 
 
 **See the CRS**
 
-.. code-block:: python
+.. testcode::
 
     for layer in QgsProject().instance().mapLayers().values():   
         crs = layer.crs().authid()
@@ -253,14 +251,14 @@ TOC
 
 **Set the CRS**
 
-.. code-block:: python
+.. testcode::
 
     for layer in QgsProject().instance().mapLayers().values():
         layer.setCrs(QgsCoordinateReferenceSystem(4326, QgsCoordinateReferenceSystem.EpsgCrsId))
 
 **Load all layers from GeoPackage**
 
-.. code-block:: python
+.. testcode::
 
     fileName = "sample.gpkg"
     layer = QgsVectorLayer(fileName,"test","ogr")
@@ -276,7 +274,7 @@ TOC
 
 **Load tile layer (XYZ-Layer)**
 
-.. code-block:: python
+.. testcode::
 
     def loadXYZ(url, name):
         rasterLyr = QgsRasterLayer("type=xyz&url=" + url, name, "wms")
@@ -292,7 +290,7 @@ Advanced TOC
 
 **Root node**
 
-.. code-block:: python
+.. testcode::
 
     root = QgsProject.instance().layerTreeRoot()
     print (root)
@@ -300,7 +298,7 @@ Advanced TOC
 
 **Access the first child node**
 
-.. code-block:: python
+.. testcode::
 
     child0 = root.children()[0]
     print (child0)
@@ -310,7 +308,7 @@ Advanced TOC
 
 **Find groups and nodes**
 
-.. code-block:: python
+.. testcode::
 
     for child in root.children():
       if isinstance(child, QgsLayerTreeGroup):
@@ -320,13 +318,13 @@ Advanced TOC
 
 **Find group by name**
 
-.. code-block:: python
+.. testcode::
 
     print (root.findGroup("Name"))
 
 **Add layer**
 
-.. code-block:: python
+.. testcode::
 
     layer1 = QgsVectorLayer("Point?crs=EPSG:4326", "Layer 1", "memory")
     QgsProject.instance().addMapLayer(layer1, False)
@@ -334,16 +332,20 @@ Advanced TOC
 
 **Add Group**
 
-.. code-block:: python
+.. testcode::
 
     node_group2 = QgsLayerTreeGroup("Group 2")
     root.addChildNode(node_group2)
 
-**Add Node** root.removeChildNode(node\_group2) root.removeLayer(layer1)
+**Add Node**
+
+.. testcode::
+
+    root.removeChildNode(node\_group2) root.removeLayer(layer1)
 
 **Move Node**
 
-.. code-block:: python
+.. testcode::
 
     cloned_group1 = node_group1.clone()
     root.insertChildNode(0, cloned_group1)
@@ -351,14 +353,14 @@ Advanced TOC
 
 **Rename None**
 
-.. code-block:: python
+.. testcode::
 
     node_group1.setName("Group X")
     node_layer2.setName("Layer X")
 
 **Changing visibility**
 
-.. code-block:: python
+.. testcode::
 
     print (node_group1.isVisible())
     node_group1.setItemVisibilityChecked(False)
@@ -366,14 +368,14 @@ Advanced TOC
 
 **Expand Node**
 
-.. code-block:: python
+.. testcode::
 
     print (node_group1.isExpanded())
     node_group1.setExpanded(False)
 
 **Hidden Node Trick**
 
-.. code-block:: python
+.. testcode::
 
     model = iface.layerTreeView().layerTreeModel()
     ltv = iface.layerTreeView()
@@ -389,7 +391,7 @@ Advanced TOC
 
 **Node Signals**
 
-.. code-block:: python
+.. testcode::
 
     def onWillAddChildren(node, indexFrom, indexTo):
       print ("WILL ADD", node, indexFrom, indexTo)
@@ -402,7 +404,7 @@ Advanced TOC
 
 **Create new TOC**
 
-.. code-block:: python
+.. testcode::
 
     from qgis.gui import *
     root = QgsProject.instance().layerTreeRoot()
@@ -418,38 +420,38 @@ Layers
 
 **Add Vector layer**
 
-.. code-block:: python
+.. testcode::
 
     layer = iface.addVectorLayer("/path/to/shapefile/file.shp", "layer name you like", "ogr")
 
 **Get Active Layer**
 
-.. code-block:: python
+.. testcode::
 
     layer = iface.activeLayer()
 
 **List All Layers**
 
-.. code-block:: python
+.. testcode::
 
     names = [layer.name() for layer in QgsProject.instance().mapLayers().values()]
 
 **Show methods**
 
-.. code-block:: python
+.. testcode::
 
     dir(layer)
 
 **Get Features**
 
-.. code-block:: python
+.. testcode::
 
     for f in layer.getFeatures():
         print (f)
 
 **Get Geometry**
 
-.. code-block:: python
+.. testcode::
 
      for f in layer.getFeatures():
       geom = f.geometry()
@@ -458,7 +460,7 @@ Layers
 
 **Hide a field column**
 
-.. code-block:: python
+.. testcode::
 
     def fieldVisibility (layer,fname):
       setup = QgsEditorWidgetSetup('Hidden', {})
@@ -472,7 +474,7 @@ Layers
 
 **Move geometry**
 
-.. code-block:: python
+.. testcode::
 
     geom = feat.geometry()
     geom.translate(100, 100)
@@ -480,13 +482,13 @@ Layers
 
 **Adding new feature**
 
-.. code-block:: python
+.. testcode::
 
     iface.openFeatureForm(iface.activeLayer(), QgsFeature(), False)
 
 **Layer from WKT**
 
-.. code-block:: python
+.. testcode::
 
     layer = QgsVectorLayer('Polygon?crs=epsg:4326', 'Mississippi', 'memory')
     pr = layer.dataProvider()
@@ -504,7 +506,7 @@ Settings
 
 **Get QSettings list**
 
-.. code-block:: python
+.. testcode::
 
     from qgis.PyQt.QtCore import QgsSettings
     qs = QgsSettings()
@@ -519,7 +521,7 @@ Toolbars
 
 **Remove Toolbar**
 
-.. code-block:: python
+.. testcode::
 
     toolbar = iface.helpToolBar()   
     parent = toolbar.parentWidget()
@@ -530,7 +532,7 @@ Toolbars
 
 **Remove actions toolbar**
 
-.. code-block:: python
+.. testcode::
 
     actions = iface.attributesToolBar().actions()
     iface.attributesToolBar().clear()
@@ -544,7 +546,7 @@ Menus
 
 **Remove Menu**
 
-.. code-block:: python
+.. testcode::
 
     # for example Help Menu
     menu = iface.helpMenu() 
@@ -561,7 +563,7 @@ Common PyQGIS functions
 
 https://github.com/boundlessgeo/lib-qgis-commons
 
-https://raw.githubusercontent.com/klakar/QGIS\_resources/master/collections/Geosupportsystem/python/qgis\_basemaps.py
+https://raw.githubusercontent.com/klakar/QGIS_resources/master/collections/Geosupportsystem/python/qgis_basemaps.py
 
 ↑ `Table of contents`_
 
