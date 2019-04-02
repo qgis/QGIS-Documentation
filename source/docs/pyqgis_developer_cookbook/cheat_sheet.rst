@@ -4,10 +4,10 @@
 
 .. _cheat-sheet:
 
-***********
+**********************
 Cheat sheet for PyQGIS
-***********
-.. contents:: Table of contents
+**********************
+
 .. only:: html
 
    .. contents::
@@ -20,6 +20,8 @@ User Interface
 
 .. testcode::
 
+    from qgis.PyQt.QtWidgets import QApplication
+
     app = QApplication.instance()
     qss_file = open(r"style.qss").read()
     app.setStyleSheet(qss_file)
@@ -28,11 +30,11 @@ User Interface
 
 .. testcode::
 
+    from qgis.PyQt.QtGui import QIcon
+
     icon = QIcon(r"logo.png")
     iface.mainWindow().setWindowIcon(icon)  
     iface.mainWindow().setWindowTitle("CNE")
-
-↑ `Table of contents`_
 
 Canvas
 ======
@@ -50,8 +52,6 @@ Canvas
     iface.mapCanvas().setCanvasColor(QtCore.Qt.black)       
     iface.mapCanvas().refresh()
 
-↑ `Table of contents`_
-
 Decorators
 ==========
 
@@ -59,8 +59,8 @@ Decorators
 
 .. testcode::
 
-    from qgis.PyQt.QtCore import *
-    from qgis.PyQt.QtGui import *
+    from qgis.PyQt.Qt import QTextDocument
+    from qgis.PyQt.QtGui import QFont
 
     mQFont = "Sans Serif"
     mQFontsize = 9
@@ -129,14 +129,14 @@ Decorators
     iface.mapCanvas().renderComplete.connect(_onRenderComplete)
     iface.mapCanvas().refresh()
 
-↑ `Table of contents`_
-
 Processing algorithms
 =====================
 
 **Get algorithms list**
 
 .. testcode::
+
+    from qgis.core import QgsApplication
 
     for alg in QgsApplication.processingRegistry().algorithms():
         print("{}:{} --> {}".format(alg.provider().name(), alg.name(), alg.displayName()))
@@ -160,11 +160,14 @@ Random selection
 .. testcode::
 
     import processing
+
     processing.algorithmHelp("qgis:randomselection")
 
 **How many algorithms are there?**
 
 .. testcode::
+
+    from qgis.core import QgsApplication
 
     len(QgsApplication.processingRegistry().algorithms())
 
@@ -172,15 +175,17 @@ Random selection
 
 .. testcode::
 
+    from qgis.core import QgsApplication
+
     len(QgsApplication.processingRegistry().providers())
 
 **How many Expressions are there?**
 
 .. testcode::
 
-    len(QgsExpression.Functions()) 
+    from qgis.core import QgsExpression
 
-↑ `Table of contents`_
+    len(QgsExpression.Functions()) 
 
 Table of contents
 =================
@@ -217,6 +222,7 @@ Table of contents
 .. testcode::
 
     from qgis.core import QgsProject
+
     layer = QgsProject.instance().mapLayersByName("name")[0]
     print(layer.name())
 
@@ -225,12 +231,15 @@ Table of contents
 .. testcode::
 
     from qgis.core import QgsProject
+
     layer = QgsProject.instance().mapLayersByName("name")[0]
     iface.setActiveLayer(layer)
 
 **Remove all layers**
 
 .. testcode::
+
+    from qgis.core import QgsProject
 
     QgsProject.instance().removeAllMapLayers()
 
@@ -245,6 +254,8 @@ Table of contents
 
 .. testcode::
 
+    from qgis.core import QgsProject
+
     for layer in QgsProject().instance().mapLayers().values():   
         crs = layer.crs().authid()
         layer.setName(layer.name() + ' (' + crs + ')')
@@ -253,12 +264,16 @@ Table of contents
 
 .. testcode::
 
+    from qgis.core import QgsProject, QgsCoordinateReferenceSystem
+
     for layer in QgsProject().instance().mapLayers().values():
         layer.setCrs(QgsCoordinateReferenceSystem(4326, QgsCoordinateReferenceSystem.EpsgCrsId))
 
 **Load all layers from GeoPackage**
 
 .. testcode::
+
+    from qgis.core import QgsVectorLayer, QgsProject
 
     fileName = "sample.gpkg"
     layer = QgsVectorLayer(fileName,"test","ogr")
@@ -276,6 +291,8 @@ Table of contents
 
 .. testcode::
 
+    from qgis.core import QgsRasterLayer, QgsProject
+
     def loadXYZ(url, name):
         rasterLyr = QgsRasterLayer("type=xyz&url=" + url, name, "wms")
         QgsProject.instance().addMapLayer(rasterLyr)
@@ -283,14 +300,14 @@ Table of contents
     urlWithParams = 'type=xyz&url=https://a.tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png&zmax=19&zmin=0&crs=EPSG3857'
     loadXYZ(urlWithParams, 'OpenStreetMap')
 
-↑ `Table of contents`_
-
 Advanced TOC
 ============
 
 **Root node**
 
 .. testcode::
+
+    from qgis.core import QgsProject
 
     root = QgsProject.instance().layerTreeRoot()
     print (root)
@@ -310,6 +327,8 @@ Advanced TOC
 
 .. testcode::
 
+    from qgis.core import QgsLayerTreeGroup, QgsLayerTreeLayer
+
     for child in root.children():
       if isinstance(child, QgsLayerTreeGroup):
         print ("- group: " + child.name())
@@ -326,6 +345,8 @@ Advanced TOC
 
 .. testcode::
 
+    from qgis.core import QgsVectorLayer, QgsProject
+
     layer1 = QgsVectorLayer("Point?crs=EPSG:4326", "Layer 1", "memory")
     QgsProject.instance().addMapLayer(layer1, False)
     node_layer1 = root.addLayer(layer1)
@@ -333,6 +354,8 @@ Advanced TOC
 **Add Group**
 
 .. testcode::
+
+    from qgis.core import QgsLayerTreeGroup
 
     node_group2 = QgsLayerTreeGroup("Group 2")
     root.addChildNode(node_group2)
@@ -377,6 +400,8 @@ Advanced TOC
 
 .. testcode::
 
+    from qgis.core import QgsProject
+
     model = iface.layerTreeView().layerTreeModel()
     ltv = iface.layerTreeView()
     root = QgsProject.instance().layerTreeRoot()
@@ -406,14 +431,14 @@ Advanced TOC
 
 .. testcode::
 
-    from qgis.gui import *
+    from qgis.core import QgsProject, QgsLayerTreeModel
+    from qgis.gui import QgsLayerTreeView 
+    
     root = QgsProject.instance().layerTreeRoot()
     model = QgsLayerTreeModel(root)
     view = QgsLayerTreeView()
     view.setModel(model)
     view.show()
-
-↑ `Table of contents`_
 
 Layers
 ======
@@ -433,6 +458,8 @@ Layers
 **List All Layers**
 
 .. testcode::
+
+    from qgis.core import QgsProject
 
     names = [layer.name() for layer in QgsProject.instance().mapLayers().values()]
 
@@ -462,6 +489,8 @@ Layers
 
 .. testcode::
 
+    from qgis.core import QgsEditorWidgetSetup
+
     def fieldVisibility (layer,fname):
       setup = QgsEditorWidgetSetup('Hidden', {})
       for i, column in enumerate(layer.fields()):
@@ -484,11 +513,15 @@ Layers
 
 .. testcode::
 
+    from qgis.core import QgsFeature
+
     iface.openFeatureForm(iface.activeLayer(), QgsFeature(), False)
 
 **Layer from WKT**
 
 .. testcode::
+
+    from qgis.core import QgsVectorLayer, QgsFeature, QgsGeometry, QgsProject
 
     layer = QgsVectorLayer('Polygon?crs=epsg:4326', 'Mississippi', 'memory')
     pr = layer.dataProvider()
@@ -499,8 +532,6 @@ Layers
     layer.updateExtents()
     QgsProject.instance().addMapLayers([layer])
 
-↑ `Table of contents`_
-
 Settings
 ========
 
@@ -509,12 +540,11 @@ Settings
 .. testcode::
 
     from qgis.PyQt.QtCore import QgsSettings
+
     qs = QgsSettings()
 
     for k in sorted(qs.allKeys()):
         print (k)
-
-↑ `Table of contents`_
 
 Toolbars
 ========
@@ -539,8 +569,6 @@ Toolbars
     iface.attributesToolBar().addAction(actions[4])
     iface.attributesToolBar().addAction(actions[3])
 
-↑ `Table of contents`_
-
 Menus
 =====
 
@@ -553,22 +581,15 @@ Menus
     menubar = menu.parentWidget()
     menubar.removeAction(menu.menuAction())
 
-    #and add again
+    # and add again
     menubar.addAction(menu.menuAction())
 
-↑ `Table of contents`_
-
-Common PyQGIS functions
-=======================
+Sources
+=======
 
 https://github.com/boundlessgeo/lib-qgis-commons
 
 https://raw.githubusercontent.com/klakar/QGIS_resources/master/collections/Geosupportsystem/python/qgis_basemaps.py
-
-↑ `Table of contents`_
-
-Sources
-=======
 
 https://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/
 
@@ -578,7 +599,6 @@ https://qgis.org/pyqgis/
 
 https://stackoverflow.com/questions/tagged/qgis
 
-↑ `Table of contents`_
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -587,6 +607,5 @@ https://stackoverflow.com/questions/tagged/qgis
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 
