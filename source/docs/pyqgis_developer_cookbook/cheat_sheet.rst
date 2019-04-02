@@ -220,7 +220,7 @@ TOC
 
     from qgis.core import QgsProject
     layer = QgsProject.instance().mapLayersByName("name")[0]
-    print layer.name()
+    print(layer.name())
 
 **Set Active layer**
 
