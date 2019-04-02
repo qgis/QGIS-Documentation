@@ -23,7 +23,7 @@ User Interface
     from qgis.PyQt.QtWidgets import QApplication
 
     app = QApplication.instance()
-    qss_file = open(r"style.qss").read()
+    qss_file = open(r"/path/to/style/file.qss").read()
     app.setStyleSheet(qss_file)
 
 **Change Icon and Title**
@@ -32,9 +32,9 @@ User Interface
 
     from qgis.PyQt.QtGui import QIcon
 
-    icon = QIcon(r"logo.png")
+    icon = QIcon(r"/path/to/logo/file.png")
     iface.mainWindow().setWindowIcon(icon)  
-    iface.mainWindow().setWindowTitle("CNE")
+    iface.mainWindow().setWindowTitle("My QGIS")
 
 Canvas
 ======
@@ -49,7 +49,9 @@ Canvas
 
 .. testcode::
 
-    iface.mapCanvas().setCanvasColor(QtCore.Qt.black)       
+    from qgis.PyQt.QtCore import Qt
+
+    iface.mapCanvas().setCanvasColor(Qt.black)    
     iface.mapCanvas().refresh()
 
 Decorators
@@ -144,12 +146,12 @@ Processing algorithms
     # or 
 
     def alglist():
-      s = ''
-      for i in QgsApplication.processingRegistry().algorithms():
-        l = i.displayName().ljust(50, "-")
-        r = i.id()
-        s += '{}--->{}\n'.format(l, r)
-      print(s)
+        s = ''
+        for i in QgsApplication.processingRegistry().algorithms():
+            l = i.displayName().ljust(50, "-")
+            r = i.id()
+            s += '{}--->{}\n'.format(l, r)
+        print(s)
 
     alglist()
 
@@ -205,7 +207,7 @@ Table of contents
     layers_names = [ layer.name() for layer in layers ]
     print("layers TOC = ", layers_names)
 
-    or
+    # or
 
     layers = [layer for layer in QgsProject.instance().mapLayers().values()]
 
@@ -213,9 +215,9 @@ Table of contents
 
 .. testcode::
 
-    layer = iface.addVectorLayer("input.shp", "name", "ogr")
+    layer = iface.addVectorLayer("/path/to/shapefile/file.shp", "layer name you like", "ogr")
     if not layer:
-      print("Layer failed to load!")
+        print("Layer failed to load!")
 
 **Find layer by name**
 
@@ -223,7 +225,7 @@ Table of contents
 
     from qgis.core import QgsProject
 
-    layer = QgsProject.instance().mapLayersByName("name")[0]
+    layer = QgsProject.instance().mapLayersByName("layer name you like")[0]
     print(layer.name())
 
 **Set Active layer**
@@ -232,7 +234,7 @@ Table of contents
 
     from qgis.core import QgsProject
 
-    layer = QgsProject.instance().mapLayersByName("name")[0]
+    layer = QgsProject.instance().mapLayersByName("layer name you like")[0]
     iface.setActiveLayer(layer)
 
 **Remove all layers**
@@ -275,12 +277,12 @@ Table of contents
 
     from qgis.core import QgsVectorLayer, QgsProject
 
-    fileName = "sample.gpkg"
+    fileName = "/path/to/gpkg/file.gpkg"
     layer = QgsVectorLayer(fileName,"test","ogr")
     subLayers =layer.dataProvider().subLayers()
 
     for subLayer in subLayers:
-        name = subLayer.split('!!.. code-block:: python!!')[1]
+        name = subLayer.split('!!::!!')[1]
         uri = "%s|layername=%s" % (fileName, name,)
         # Create layer
         sub_vlayer = QgsVectorLayer(uri, name, 'ogr')
@@ -330,10 +332,10 @@ Advanced TOC
     from qgis.core import QgsLayerTreeGroup, QgsLayerTreeLayer
 
     for child in root.children():
-      if isinstance(child, QgsLayerTreeGroup):
-        print ("- group: " + child.name())
-      elif isinstance(child, QgsLayerTreeLayer):
-        print ("- layer: " + child.name() + "  ID: " + child.layerId())
+        if isinstance(child, QgsLayerTreeGroup):
+            print ("- group: " + child.name())
+        elif isinstance(child, QgsLayerTreeLayer):
+            print ("- layer: " + child.name() + "  ID: " + child.layerId())
 
 **Find group by name**
 
@@ -347,7 +349,7 @@ Advanced TOC
 
     from qgis.core import QgsVectorLayer, QgsProject
 
-    layer1 = QgsVectorLayer("Point?crs=EPSG:4326", "Layer 1", "memory")
+    layer1 = QgsVectorLayer("Point?crs=EPSG:4326", "layer name you like", "memory")
     QgsProject.instance().addMapLayer(layer1, False)
     node_layer1 = root.addLayer(layer1)
 
@@ -364,7 +366,7 @@ Advanced TOC
 
 .. testcode::
 
-    root.removeChildNode(node\_group2) root.removeLayer(layer1)
+    root.removeChildNode(node_group2) root.removeLayer(layer1)
 
 **Move Node**
 
@@ -406,7 +408,7 @@ Advanced TOC
     ltv = iface.layerTreeView()
     root = QgsProject.instance().layerTreeRoot()
 
-    layer = QgsProject.instance().mapLayersByName(u'Name')[0]
+    layer = QgsProject.instance().mapLayersByName(u'layer name you like')[0]
     node=root.findLayer( layer.id())
 
     index = model.node2index( node )
@@ -419,10 +421,10 @@ Advanced TOC
 .. testcode::
 
     def onWillAddChildren(node, indexFrom, indexTo):
-      print ("WILL ADD", node, indexFrom, indexTo)
+        print ("WILL ADD", node, indexFrom, indexTo)
 
     def onAddedChildren(node, indexFrom, indexTo):
-      print ("ADDED", node, indexFrom, indexTo)
+        print ("ADDED", node, indexFrom, indexTo)
 
     root.willAddChildren.connect(onWillAddChildren)
     root.addedChildren.connect(onAddedChildren)
@@ -480,10 +482,10 @@ Layers
 
 .. testcode::
 
-     for f in layer.getFeatures():
-      geom = f.geometry()
-      print ('%s, %s, %f, %f' % (f['NAME'], f['USE'],
-         geom.asPoint().y(), geom.asPoint().x()))
+    # Point layer
+    for f in layer.getFeatures():
+        geom = f.geometry()
+        print ('%s, %s, %f, %f' % (f['Column X'], f['Column Y'],geom.asPoint().y(), geom.asPoint().x()))
 
 **Hide a field column**
 
@@ -492,13 +494,13 @@ Layers
     from qgis.core import QgsEditorWidgetSetup
 
     def fieldVisibility (layer,fname):
-      setup = QgsEditorWidgetSetup('Hidden', {})
-      for i, column in enumerate(layer.fields()):
-        if column.name()==fname:
-          layer.setEditorWidgetSetup(idx, setup)
-        break
-        else:
-          continue
+        setup = QgsEditorWidgetSetup('Hidden', {})
+        for i, column in enumerate(layer.fields()):
+            if column.name()==fname:
+                layer.setEditorWidgetSetup(idx, setup)
+                break
+            else:
+                continue
           
 
 **Move geometry**
