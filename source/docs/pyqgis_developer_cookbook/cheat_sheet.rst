@@ -271,7 +271,7 @@ TOC
         uri = "%s|layername=%s" % (fileName, name,)
         # Create layer
         sub_vlayer = QgsVectorLayer(uri, name, 'ogr')
-        #Add layer to map
+        # Add layer to map
         QgsProject.instance().addMapLayer(sub_vlayer)
 
 **Load tile layer (XYZ-Layer)**
