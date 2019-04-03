@@ -43,6 +43,7 @@ Canvas
 
 .. testcode::
 
+    from qgis.utils import iface
     canvas = iface.mapCanvas()
 
 **Change Canvas color**
