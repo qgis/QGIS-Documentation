@@ -413,7 +413,7 @@ Advanced TOC
     ltv = iface.layerTreeView()
     root = QgsProject.instance().layerTreeRoot()
 
-    layer = QgsProject.instance().mapLayersByName(u'layer name you like')[0]
+    layer = QgsProject.instance().mapLayersByName('layer name you like')[0]
     node=root.findLayer( layer.id())
 
     index = model.node2index( node )
