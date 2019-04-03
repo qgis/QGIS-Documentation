@@ -26,7 +26,7 @@ User Interface
     qss_file = open(r"/path/to/style/file.qss").read()
     app.setStyleSheet(qss_file)
 
-**Change Icon and Title**
+**Change icon and title**
 
 .. testcode::
 
@@ -39,14 +39,15 @@ User Interface
 Canvas
 ======
 
-**Access Canvas**
+**Access canvas**
 
 .. testcode::
 
     from qgis.utils import iface
+
     canvas = iface.mapCanvas()
 
-**Change Canvas color**
+**Change canvas color**
 
 .. testcode::
 
@@ -80,7 +81,7 @@ Decorators
         text.drawContents(p)
         p.setWorldTransform( p.worldTransform() )
 
-    def _onRenderComplete(p):
+    def _on_render_complete(p):
         deviceHeight = p.device().height()
         deviceWidth  = p.device().width()
         text = QTextDocument()
@@ -99,37 +100,38 @@ Decorators
         yOffset  = pixelsInchY  * INCHES_TO_MM * int(mMarginVertical)
 
         if case == 0:
-        # Top Left
-        AddCopyRight(p, text, xOffset, yOffset)
+            # Top Left
+            add_copyright(p, text, xOffset, yOffset)
 
         elif case == 1:
-        # Bottom Left
-        yOffset = deviceHeight - yOffset - size.height()
-        AddCopyRight(p, text, xOffset, yOffset)
+            # Bottom Left
+            yOffset = deviceHeight - yOffset - size.height()
+            add_copyright(p, text, xOffset, yOffset)
 
         elif case == 2:
-        # Top Right
-        xOffset  = deviceWidth  - xOffset - size.width()
-        AddCopyRight(p, text, xOffset, yOffset)
+            # Top Right
+            xOffset  = deviceWidth  - xOffset - size.width()
+            add_copyright(p, text, xOffset, yOffset)
 
         elif case == 3: 
-        # Bottom Right
-        yOffset  = deviceHeight - yOffset - size.height()
-        xOffset  = deviceWidth  - xOffset - size.width()
-        AddCopyRight(p, text, xOffset, yOffset)
+            # Bottom Right
+            yOffset  = deviceHeight - yOffset - size.height()
+            xOffset  = deviceWidth  - xOffset - size.width()
+            add_copyright(p, text, xOffset, yOffset)
 
         elif case == 4:
-        # Top Center
-        xOffset = deviceWidth / 2
-        AddCopyRight(p, text, xOffset, yOffset)
+            # Top Center
+            xOffset = deviceWidth / 2
+            add_copyright(p, text, xOffset, yOffset)
+        
         else:
-        # Bottom Center
-        yOffset = deviceHeight - yOffset - size.height()
-        xOffset = deviceWidth / 2
-        AddCopyRight(p, text, xOffset, yOffset)
+            # Bottom Center
+            yOffset = deviceHeight - yOffset - size.height()
+            xOffset = deviceWidth / 2
+            add_copyright(p, text, xOffset, yOffset)
 
 
-    iface.mapCanvas().renderComplete.connect(_onRenderComplete)
+    iface.mapCanvas().renderComplete.connect(_on_render_complete)
     iface.mapCanvas().refresh()
 
 Processing algorithms
@@ -156,7 +158,7 @@ Processing algorithms
 
     alglist()
 
-**Get algorithms Help**
+**Get algorithms help**
 
 Random selection
 
@@ -182,7 +184,7 @@ Random selection
 
     len(QgsApplication.processingRegistry().providers())
 
-**How many Expressions are there?**
+**How many expressions are there?**
 
 .. testcode::
 
@@ -193,13 +195,15 @@ Random selection
 Table of contents
 =================
 
-**Access checked Layers**
+**Access checked layers**
 
 .. testcode::
 
+    from qgis.utils import iface
+
     iface.mapCanvas().layers()
 
-**Obtain Layers name**
+**Obtain layers name**
 
 .. testcode::
 
@@ -229,7 +233,7 @@ Table of contents
     layer = QgsProject.instance().mapLayersByName("layer name you like")[0]
     print(layer.name())
 
-**Set Active layer**
+**Set active layer**
 
 .. testcode::
 
@@ -246,7 +250,7 @@ Table of contents
 
     QgsProject.instance().removeAllMapLayers()
 
-**Remove Contextual menu**
+**Remove contextual menu**
 
 .. testcode::
 
@@ -272,7 +276,7 @@ Table of contents
     for layer in QgsProject().instance().mapLayers().values():
         layer.setCrs(QgsCoordinateReferenceSystem(4326, QgsCoordinateReferenceSystem.EpsgCrsId))
 
-**Load all layers from GeoPackage**
+**Load all Layers from GeoPackage**
 
 .. testcode::
 
@@ -354,7 +358,7 @@ Advanced TOC
     QgsProject.instance().addMapLayer(layer1, False)
     node_layer1 = root.addLayer(layer1)
 
-**Add Group**
+**Add group**
 
 .. testcode::
 
@@ -363,13 +367,13 @@ Advanced TOC
     node_group2 = QgsLayerTreeGroup("Group 2")
     root.addChildNode(node_group2)
 
-**Add Node**
+**Add node**
 
 .. testcode::
 
     root.removeChildNode(node_group2) root.removeLayer(layer1)
 
-**Move Node**
+**Move node**
 
 .. testcode::
 
@@ -377,7 +381,7 @@ Advanced TOC
     root.insertChildNode(0, cloned_group1)
     root.removeChildNode(node_group1)
 
-**Rename None**
+**Rename none**
 
 .. testcode::
 
@@ -392,14 +396,14 @@ Advanced TOC
     node_group1.setItemVisibilityChecked(False)
     node_layer2.setItemVisibilityChecked(False)
 
-**Expand Node**
+**Expand node**
 
 .. testcode::
 
     print (node_group1.isExpanded())
     node_group1.setExpanded(False)
 
-**Hidden Node Trick**
+**Hidden node trick**
 
 .. testcode::
 
@@ -417,7 +421,7 @@ Advanced TOC
     node.setCustomProperty( 'nodeHidden', 'true')
     ltv.setCurrentIndex(model.node2index(root))  
 
-**Node Signals**
+**Node signals**
 
 .. testcode::
 
@@ -430,7 +434,7 @@ Advanced TOC
     root.willAddChildren.connect(onWillAddChildren)
     root.addedChildren.connect(onAddedChildren)
 
-**Create new TOC**
+**Create new table of contents (TOC)**
 
 .. testcode::
 
@@ -446,19 +450,21 @@ Advanced TOC
 Layers
 ======
 
-**Add Vector layer**
+**Add vector layer**
 
 .. testcode::
 
+    from qgis.utils import iface
+
     layer = iface.addVectorLayer("/path/to/shapefile/file.shp", "layer name you like", "ogr")
 
-**Get Active Layer**
+**Get active Layer**
 
 .. testcode::
 
     layer = iface.activeLayer()
 
-**List All Layers**
+**List all layers**
 
 .. testcode::
 
@@ -472,14 +478,14 @@ Layers
 
     dir(layer)
 
-**Get Features**
+**Get features**
 
 .. testcode::
 
     for f in layer.getFeatures():
         print (f)
 
-**Get Geometry**
+**Get geometry**
 
 .. testcode::
 
@@ -552,9 +558,11 @@ Settings
 Toolbars
 ========
 
-**Remove Toolbar**
+**Remove toolbar**
 
 .. testcode::
+
+    from qgis.utils import iface
 
     toolbar = iface.helpToolBar()   
     parent = toolbar.parentWidget()
@@ -575,9 +583,11 @@ Toolbars
 Menus
 =====
 
-**Remove Menu**
+**Remove menu**
 
 .. testcode::
+
+    from qgis.utils import iface
 
     # for example Help Menu
     menu = iface.helpMenu() 
