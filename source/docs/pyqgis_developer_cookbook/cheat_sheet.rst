@@ -73,7 +73,7 @@ Decorators
     mMarginVertical = 0
     mLabelQColor = "#FF0000"
 
-    INCHES_TO_MM = 0.0393700787402
+    INCHES_TO_MM = 0.0393700787402 # 1 millimeter = 0.0393700787402 inches
     case = 2
 
    def add_copyright(p, text, x_offset, y_offset):
@@ -82,8 +82,9 @@ Decorators
         p.setWorldTransform( p.worldTransform() )
 
     def _on_render_complete(p):
-        deviceHeight = p.device().height()
-        deviceWidth  = p.device().width()
+        deviceHeight = p.device().height() # Get paint device height on which this painter is currently painting
+        deviceWidth  = p.device().width() # Get paint device width on which this painter is currently painting
+        # Create new container for structured rich text
         text = QTextDocument()
         font = QFont()
         font.setFamily(mQFont)
@@ -91,6 +92,7 @@ Decorators
         text.setDefaultFont(font)
         style = "<style type=\"text/css\"> p {color: " + mLabelQColor + "}</style>"
         text.setHtml( style + "<p>" + mLabelQString + "</p>" )
+        # Text Size
         size = text.size()
 
         # RenderMillimeters
@@ -99,6 +101,7 @@ Decorators
         xOffset  = pixelsInchX  * INCHES_TO_MM * int(mMarginHorizontal)
         yOffset  = pixelsInchY  * INCHES_TO_MM * int(mMarginVertical)
 
+        # Calculate positions
         if case == 0:
             # Top Left
             add_copyright(p, text, xOffset, yOffset)
@@ -130,8 +133,9 @@ Decorators
             xOffset = deviceWidth / 2
             add_copyright(p, text, xOffset, yOffset)
 
-
+    # Emitted when the canvas has rendered
     iface.mapCanvas().renderComplete.connect(_on_render_complete)
+    # Repaint the canvas map
     iface.mapCanvas().refresh()
 
 Processing algorithms
