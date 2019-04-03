@@ -276,7 +276,7 @@ Table of contents
     for layer in QgsProject().instance().mapLayers().values():
         layer.setCrs(QgsCoordinateReferenceSystem(4326, QgsCoordinateReferenceSystem.EpsgCrsId))
 
-**Load all Layers from GeoPackage**
+**Load all layers from GeoPackage**
 
 .. testcode::
 
@@ -458,7 +458,7 @@ Layers
 
     layer = iface.addVectorLayer("/path/to/shapefile/file.shp", "layer name you like", "ogr")
 
-**Get active Layer**
+**Get active layer**
 
 .. testcode::
 
@@ -600,18 +600,17 @@ Menus
 Sources
 =======
 
-https://github.com/boundlessgeo/lib-qgis-commons
-
-https://raw.githubusercontent.com/klakar/QGIS_resources/master/collections/Geosupportsystem/python/qgis_basemaps.py
-
-https://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/
+https://qgis.org/pyqgis/
 
 https://qgis.org/api/
 
-https://qgis.org/pyqgis/
+https://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/
 
 https://stackoverflow.com/questions/tagged/qgis
 
+https://raw.githubusercontent.com/klakar/QGIS_resources/master/collections/Geosupportsystem/python/qgis_basemaps.py
+
+https://github.com/boundlessgeo/lib-qgis-commons
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
