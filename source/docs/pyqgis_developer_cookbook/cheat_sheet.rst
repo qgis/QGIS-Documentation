@@ -265,7 +265,7 @@ Table of contents
 
     for layer in QgsProject().instance().mapLayers().values():   
         crs = layer.crs().authid()
-        layer.setName(layer.name() + ' (' + crs + ')')
+        layer.setName('{} ({})'.format(layer.name(), crs))
 
 **Set the CRS**
 
