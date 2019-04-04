@@ -395,6 +395,7 @@ Icon                            Substitution                        Icon        
 |toLines|                       ``|toLines|``                       |extractNodes|                  ``|extractNodes|``
 |splitLayer|                    ``|splitLayer|``
 |showRasterCalculator|          ``|showRasterCalculator|``          |heatmap|                       ``|heatmap|``
+|showMeshCalculator|            ``|showMeshCalculator|``
 ==============================  ==================================  ==============================  ==================================
 
 Various Core Plugins
@@ -1073,6 +1074,8 @@ Icon                            Substitution                        Icon        
 .. |showEditorConsole| image:: /static/common/iconShowEditorConsole.png
    :width: 1.5em
 .. |showMapTheme| image:: /static/common/mActionShowPresets.png
+   :width: 1.5em
+.. |showMeshCalculator| image:: /static/common/mActionShowMeshCalculator.png
    :width: 1.5em
 .. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
    :width: 1.5em
