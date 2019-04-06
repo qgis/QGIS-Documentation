@@ -779,6 +779,8 @@ Status Bar
 The status bar provides you with general information about the map view
 and processed or available actions, and offers you tools to manage the map view.
 
+.. _`locator_bar`:
+
 On the left side of the status bar, the locator bar, a quick search widget,
 helps you find and run any feature or options in QGIS. Simply type text
 associated with the item you are looking for (name, tag, keyword...) and you get

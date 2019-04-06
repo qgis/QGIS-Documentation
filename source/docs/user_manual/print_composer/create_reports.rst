@@ -31,7 +31,7 @@ GIS projects in a simple, quick and structured way.
 Get started
 ===========
 
-:guilabel:`Reports` menu is an extension of Print Layout. This funcionality can
+:guilabel:`Reports` menu is an extension of Print Layout. This functionality can
 be found in :menuselection:`Project --> New Report` or inside of
 :menuselection:`Project --> Layout Manager`.
 
