@@ -76,7 +76,7 @@ Decorators
     INCHES_TO_MM = 0.0393700787402 # 1 millimeter = 0.0393700787402 inches
     case = 2
 
-   def add_copyright(p, text, x_offset, y_offset):
+    def add_copyright(p, text, x_offset, y_offset):
         p.translate( xOffset , yOffset  )
         text.drawContents(p)
         p.setWorldTransform( p.worldTransform() )
@@ -328,6 +328,8 @@ Advanced TOC
 
 .. testcode::
 
+    from qgis.core import QgsLayerTreeGroup, QgsLayerTreeLayer
+
     child0 = root.children()[0]
     print (child0)
     print (type(child0))
@@ -371,11 +373,17 @@ Advanced TOC
     node_group2 = QgsLayerTreeGroup("Group 2")
     root.addChildNode(node_group2)
 
-**Add node**
+**Remove layer**
 
 .. testcode::
 
-    root.removeChildNode(node_group2) root.removeLayer(layer1)
+    root.removeLayer(layer1)
+
+**Remove group**
+
+.. testcode::
+
+    root.removeChildNode(node_group2)
 
 **Move node**
 
