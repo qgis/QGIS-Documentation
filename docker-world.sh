@@ -37,8 +37,8 @@ for l in $langs
     #time rsync -hvrzc -e ssh --progress output/pdf/$l qgis.osgeo.osuosl.org:/var/www/qgisdata/QGIS-Documentation-2.18/live/html/pdf
     #time rsync -hvrzc -e ssh --progress output/html/$l qgis.osgeo.osuosl.org:/var/www/qgisdata/QGIS-Documentation-2.18/live/html
     # 1 dec 2017 rsycn to local disk
-    time rsync -hvrzc --progress output/pdf/$l /var/www/qgisdata/QGIS-Documentation-2.18/live/html/pdf
-    time rsync -hvrzc --progress output/html/$l /var/www/qgisdata/QGIS-Documentation-2.18/live/html
+    time rsync -hvrzc --progress output/pdf/$l /var/www/qgisdata/QGIS-Documentation-3.4/live/html/pdf
+    time rsync -hvrzc --progress output/html/$l /var/www/qgisdata/QGIS-Documentation-3.4/live/html
   done
 
 now=`date`
