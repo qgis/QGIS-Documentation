@@ -1,0 +1,534 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-04-07 15:33+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:8
+msgid "Raster miscellaneous"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:19
+msgid "Build overviews (pyramids)"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:20
+msgid ""
+"To speed up rendering time of raster layers overviews (pyramids) can be "
+"created. Overviews are lower resolution copies of the data which QGIS "
+"uses depending of the level of zoom."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:24
+msgid ""
+"This algorithm is derived from the `GDAL addo utility "
+"<https://www.gdal.org/gdaladdo.html>`_ ."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:26
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:87
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:136
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:189
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:225
+msgid "``Default menu``: :menuselection:`Raster --> Miscellaneous`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:29
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:90
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:139
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:192
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:228
+msgid "Parameters"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:32
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:195
+msgid "``Input layer`` [raster]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:32
+msgid "Input raster layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:38
+msgid "``Overview levels`` [string]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:35
+msgid ""
+"Defines the number of overview levels calculated by the original "
+"resolution of the input raster layer. By default 4 levels will be taken "
+"into consideration."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:38
+msgid "Default: *2 4 8 16*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:43
+msgid "``Remove all existing overviews`` [boolean]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:41
+msgid ""
+"Removes existing overviews from the raster. By default these aren't "
+"removed."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:43
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:117
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:148
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:153
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:201
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:206
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:245
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:251
+msgid "Default: *False*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:58
+msgid "``Resampling method`` [enumeration]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:46
+msgid "Calculates the overviews with a defined resampling method."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:48
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:64
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:99
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:158
+msgid "Options:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:50
+msgid "0 --- nearest"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:51
+msgid "1 --- average"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:52
+msgid "2 --- gauss"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:53
+msgid "3 --- cubic"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:54
+msgid "4 --- average_mp"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:55
+msgid "5 --- average_magphase"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:56
+msgid "6 --- mode"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:58
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:70
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:105
+msgid "Default: *0*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:70
+msgid "``Overview format`` [enumeration]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:61
+msgid ""
+"The overviews can be stored internally, or externally as GTiff or ERDAS "
+"Imagine file. By default the overviews are stored in the output raster."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:66
+msgid "0 --- Internal (if possible)"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:67
+msgid "1 --- External (GTiff .ovr)"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:68
+msgid "2 --- External (ERDAS Imagine .aux)"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:73
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:120
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:175
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:209
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:277
+msgid "Outputs"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:76
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:124
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:179
+msgid "``Output layer`` [raster]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:76
+msgid "Output raster layer with overviews."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:81
+msgid "Build virtual raster"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:82
+msgid ""
+"Builds a VRT (Virtual Dataset) that is a mosaic of the list of input "
+"GDAL-supported rasters. With a mosaic you can merge several raster files."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:85
+msgid ""
+"This algorithm is derived from the `GDAL buildvrt utility "
+"<https://www.gdal.org/gdalbuildvrt.html>`_ ."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:93
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:142
+msgid "``Input layers`` [raster] [list]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:93
+msgid "GDAL-supported raster layers."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:105
+msgid "``Resolution`` [enumeration]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:96
+msgid ""
+"The output resolution of the mosaic. By default the average resolution of"
+" th raster files will be chosen."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:101
+msgid "0 --- average"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:102
+msgid "1 --- highest"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:103
+msgid "2 --- lowest"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:111
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:153
+msgid "``Layer stack`` [boolean]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:108
+msgid ""
+"With 'False' you can define that each raster file goes into a separated "
+"stacked band in the VRT band."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:111
+msgid "Default: *True*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:117
+msgid "``Allow projection difference`` [boolean]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:114
+msgid ""
+"Allows that the output bands have different projections derived from the "
+"projection of the input raster layers."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:123
+msgid "Output raster file."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:129
+msgid "Merge"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:130
+msgid ""
+"Merges raster files in a simple way. Here you can use a pseudocolor table"
+" from an input raster and define the output raster type. All the images "
+"must be in the same coordinate system."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:134
+msgid ""
+"This algorithm is derived from the `GDAL merge utility "
+"<https://www.gdal.org/gdal_merge.html>`_ ."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:142
+msgid "Input raster layers."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:148
+msgid "``Grab pseudocolor table from first layer`` [boolean]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:145
+msgid "The pseudocolor table from the first layer will be used for the coloring."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:151
+msgid ""
+"If 'True' is chosen each input file will be placed into a separate "
+"stacked band."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:172
+msgid "``Output raster type`` [enumeration]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:156
+msgid "Defines the output raster type. By default this will be 'Float23'."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:160
+msgid "0 --- Byte"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:161
+msgid "1 --- Int16"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:162
+msgid "2 --- UInt16"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:163
+msgid "3 --- UInt32"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:164
+msgid "4 --- Int32"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:165
+msgid "5 --- Float32"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:166
+msgid "6 --- Float64"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:167
+msgid "7 --- CInt16"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:168
+msgid "8 --- CInt32"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:169
+msgid "9 --- CFloat32"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:170
+msgid "10 --- CFloat64"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:172
+msgid "Default: *5*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:178
+msgid "Output raster layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:184
+msgid "Raster information"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:185
+msgid ""
+"The gdalinfo program lists various information about a GDAL supported "
+"raster dataset."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:187
+msgid ""
+"This algorithm is derived from the `GDAL info utility "
+"<https://www.gdal.org/gdalinfo.html>`_ ."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:195
+msgid "Raster layer in input."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:201
+msgid "``Suppress GCP info`` [boolean]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:198
+msgid ""
+"Suppress ground control points list printing. It may be useful for "
+"datasets with huge amount of GCPs, such as L1B AVHRR or HDF4 MODIS which "
+"contain thousands of them."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:206
+msgid "``Suppress metadata info`` [boolean]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:204
+msgid ""
+"Suppress metadata printing. Some datasets may contain a lot of metadata "
+"strings."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:213
+msgid "``Layer information`` [html]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:212
+msgid "Raster information in output."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:218
+msgid "Tile index"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:219
+msgid ""
+"Builds a vector layer with a record for each input raster file, an "
+"attribute containing the filename, and a polygon geometry outlining the "
+"raster. This output is suitable for use with MapServer as a raster "
+"tileindex."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:223
+msgid ""
+"This algorithm is derived from the `GDAL addo utility <`GDAL Tile Index "
+"utility <https://www.gdal.org/gdaltindex.html>`_ ."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:231
+msgid "``Input files`` [raster] [list]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:231
+msgid "The input raster files. Can be multiple files."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:238
+msgid "``Field name to hold the file path to the indexed rasters`` [string]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:234
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:254
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:262
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:265
+msgid "Optional"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:236
+msgid ""
+"The output field name to hold the file path/location to the indexed "
+"rasters."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:238
+msgid "Default: *location*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:245
+msgid "``Store absolute path to the indexed rasters`` [boolean]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:241
+msgid ""
+"Set whether the absolute path to the raster files is stored in the tile "
+"index file. By default the raster filenames will be put in the file "
+"exactly as they are specified in the command."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:251
+msgid "``Skip files with different projection reference`` [boolean]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:248
+msgid ""
+"Only files with same projection as files already inserted in the tile "
+"index will be inserted. Default does not check projection and accepts all"
+" inputs."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:259
+msgid "``Transform geometries to the given CRS`` [crs]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:256
+msgid ""
+"Geometries of input files will be transformed to the desired target "
+"coordinate reference system. Default creates simple rectangular polygons "
+"in the same coordinate reference system as the input rasters."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:262
+msgid "``The name of the field to store the SRS of each tile`` [string]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:274
+msgid "``The format in which the CRS of each tile must be written`` [enumeration]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:267
+msgid "Possible values are:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:269
+msgid "Auto"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:270
+msgid "Well-known text (WKT)"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:271
+msgid "EPSG"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:272
+msgid "Proj.4"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:274
+msgid "Default: *AUTO*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:281
+msgid "``Tile index`` [vector: polygon]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/gdal/rastermiscellaneous.rst:280
+msgid ""
+"The name of the output file to create/append to. The default shapefile "
+"will be created if it doesn't already exist, otherwise it will append to "
+"the existing file."
+msgstr ""
+

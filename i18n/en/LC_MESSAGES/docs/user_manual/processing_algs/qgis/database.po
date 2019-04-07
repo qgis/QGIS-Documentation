@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project testing\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-28 10:31+0100\n"
+"POT-Creation-Date: 2019-04-07 15:33+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,351 +18,536 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.1\n"
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:7
-msgid "|updatedisclaimer|"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:10
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:8
 msgid "Database"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:21
-msgid "Import into PostGIS"
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:19
+msgid "Export to PostgreSQL"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:23
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:20
 msgid ""
-"Imports a vector layer currently loaded in QGIS into a PostGIS database. "
-"Prior to this a connection between QGIS and the PostGIS database has to "
-"be created (for example with the DB Manager)."
+"Exports a vector layer to a PostgreSQL database. Prior to this a "
+"connection between QGIS and the PostgreSQL database has to be created "
+"(see eg :ref:`vector_create_stored_connection`)."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:28
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:157
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:198
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:280
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:25
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:105
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:174
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:230
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:268
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:297
 msgid "Parameters"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:32
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:202
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:28
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:108
 msgid "``Layer to import`` [vector: any]"
 msgstr ""
 
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:28
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:108
+msgid "Vector layer to add to the database."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:32
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:232
+msgid "``Database (connection name)`` [string]"
+msgstr ""
+
 #: ../../source/docs/user_manual/processing_algs/qgis/database.rst:31
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:201
-msgid ""
-"One of the loaded layer in QGIS. If you want to import another layer you "
-"have to load it in QGIS before to import."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:36
-msgid "``Database (connection name)`` [selection]"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:35
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:234
 msgid ""
 "Name of the database connection (not the database name). Existing "
 "connections will be shown in the combobox."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:43
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:39
 msgid "``Schema (schema name)`` [string]"
 msgstr ""
 
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:35
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:42
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:48
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:60
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:114
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:120
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:131
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:246
+msgid "Optional"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:37
+msgid ""
+"Name of the schema to store the data. It can be a new one or already "
+"exist."
+msgstr ""
+
 #: ../../source/docs/user_manual/processing_algs/qgis/database.rst:39
-msgid "Optional. Existing schemas will be listed in the combobox."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:41
-msgid "An existing schema of the selected database can be chosen."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:43
 msgid "Default: *public*"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:49
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:213
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:45
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:117
 msgid "``Table to import to (leave blank to use layer name)`` [string]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:46
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:64
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:210
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:216
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:227
-msgid "Optional."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:48
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:212
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:44
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:116
 msgid ""
 "Defines a table name for the imported vector file. If nothing is added, "
 "the layer name will be used."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:55
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:218
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:51
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:122
 msgid "``Primary key field`` [tablefield: any]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:52
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:50
 msgid ""
-"Optional. A column with **unique** values can be used as Primary key for "
-"the database."
+"Sets the primary key field from an existing field in the vector layer. A "
+"column with **unique** values can be used as Primary key for the "
+"database."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:55
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:218
-msgid "Sets the primary key field from an existing field in the vector layer."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:61
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:224
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:57
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:128
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:250
 msgid "``Geometry column`` [string]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:58
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:54
 msgid ""
 "Defines the name of the geometry column in the new PostGIS table. "
 "Geometry information for the features is stored in this column."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:61
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:224
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:57
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:128
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:250
 msgid "Default: *geom*"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:68
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:231
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:64
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:135
 msgid "``Encoding`` [string]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:66
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:62
 msgid "Defines the encoding of the layer in the new PostGIS table."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:68
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:231
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:64
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:135
 msgid "Default: *UTF-8*"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:73
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:236
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:69
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:140
 msgid "``Overwrite`` [boolean]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:71
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:234
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:67
 msgid "Overwrites existing tables having the same name."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:73
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:78
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:84
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:236
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:241
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:247
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:69
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:74
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:79
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:140
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:145
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:150
 msgid "Default: *True*"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:78
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:241
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:74
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:145
 msgid "``Create spatial index`` [boolean]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:76
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:239
-msgid "Specify whether to create a spatial index or not."
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:72
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:143
+msgid "Specifies whether to create a spatial index or not."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:84
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:247
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:79
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:150
 msgid "``Convert field names to lowercase`` [boolean]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:81
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:244
-msgid ""
-"If activated this prevents the field names of the input vector layer from"
-" being converted to lowercase."
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:77
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:148
+msgid "Converts the field names of the input vector layer to lowercase."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:90
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:253
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:85
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:156
 msgid "``Drop length constraints on character fields`` [boolean]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:87
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:250
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:82
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:153
 msgid ""
-"Specify whether the length constraints on character fields should be "
+"Specifies whether the length constraints on character fields should be "
 "dropped or not."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:90
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:97
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:253
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:260
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:85
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:92
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:156
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:163
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:182
 msgid "Default: *False*"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:98
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:261
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:93
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:164
 msgid "``Create single-part geometries instead of multi-part`` [boolean]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:93
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:256
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:88
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:159
 msgid ""
-"Specify if the features of the loaded layer should be single-part instead"
-" of multi-part. By default the existing geometries information are "
-"preserved."
+"Specifies if the features of the loaded layer should be single-part "
+"instead of multi-part. By default the existing geometries information are"
+" preserved."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:101
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:175
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:264
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:301
-msgid "Console usage"
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:98
+msgid "Export to SpatiaLite"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:119
-msgid "PostGIS execute SQL"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:121
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:99
 msgid ""
-"Allows a SQL database query to be performed on a PostGIS database "
-"connected to QGIS. The algorithm **won't** create any new layer: it is "
-"designed to run queries on the layer itself."
+"Exports a vector layer to a SpatiaLite database. Prior to this a "
+"connection between QGIS and the SpatiaLite database has to be created "
+"(see eg :ref:`label_spatialite`)."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:128
-msgid "Example"
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:111
+msgid "``File database`` [vector]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:129
-msgid ""
-"1. Set all the values of an existing field to a fixed value. The SQL "
-"query string will be:"
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:111
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:300
+msgid "The SQLite/SpatiaLite database file to connect to."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:136
-msgid ""
-"in the example above, the values of the field ``field_to_update`` of the "
-"table ``your_table`` will be all set to ``20``."
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:122
+msgid "Sets the primary key field from an existing field in the vector layer."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:139
-msgid ""
-"2. Create a new ``area`` column and calculate the area of each feature "
-"with the ``ST_AREA`` PostGIS function."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:142
-msgid ""
-"Run the first query and create the new column ``area`` on the table "
-"``my_table``:"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:148
-msgid ""
-"Run the second query and update the `area` column and calculate the area "
-"of each feature:"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:162
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:287
-msgid "``Database`` [string]"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:160
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:283
-msgid ""
-"Name of the database, not the connection name. By default you don't have "
-"to fill in the name, the current database connection will be chosen."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:166
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:292
-msgid "``SQL query`` [string]"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:165
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:290
-msgid "Defines the SQL query, for example ``UPDATE my_table SET field=10``."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:169
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:295
-msgid "Outputs"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:170
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:296
-msgid ""
-"No new outputs will be created. The layer chosen will be updated with the"
-" executed SQL query. By opening the table (for example with Data Manager)"
-" you will see the results."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:190
-msgid "Import into SpatiaLite"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:192
-msgid ""
-"Imports a vector layer currently loaded in QGIS into a SpatiaLite "
-"database. Prior to this a connection between QGIS and the SpatiaLite "
-"database has to be created (for example with the DB Manager)."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:207
-msgid "``File database`` [selection]"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:205
-msgid ""
-"Name of the database connection. The combobox will show all the databases"
-" of the layers loaded in QGIS. Moreover, it is possible to choose an "
-"external `sqlite` file."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:221
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:125
 msgid ""
 "Defines the name of the geometry column in the new SpatiaLite table. "
 "Geometry information for the features is stored in this column."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:229
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:133
 msgid "Defines the encoding of the layer in the new SpatiaLite table."
 msgstr ""
 
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:138
+msgid "Overwrites existing table having the same name."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:169
+msgid "Package layers"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:170
+msgid ""
+"Collects a number of existing layers and packages them together into a "
+"single GeoPackage database."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:177
+msgid "``Input layers`` [vector: any] [list]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:177
+msgid "All the vector layers to import into the GeoPackage database."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:182
+msgid "``Overwrite existing GeoPackage`` [boolean]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:180
+msgid "Replaces an existing database with a new one."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:185
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:253
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:279
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:310
+msgid "Outputs"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:188
+msgid "``Destination GeoPackage``"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:187
+msgid ""
+"If not specified the GeoPackage database will be saved in the temporary "
+"folder."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:193
+msgid "PostgreSQL execute and load SQL"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:195
+msgid ""
+"Allows a SQL database query to be performed on a PostgreSQL database "
+"connected to QGIS and loads the result. The algorithm **won't** create "
+"any new layer: it is designed to run queries on the layer itself."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:202
+msgid "Example"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:203
+msgid ""
+"1. Set all the values of an existing field to a fixed value. The SQL "
+"query string will be:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:210
+msgid ""
+"in the example above, the values of the field ``field_to_update`` of the "
+"table ``your_table`` will be all set to ``20``."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:213
+msgid ""
+"2. Create a new ``area`` column and calculate the area of each feature "
+"with the ``ST_AREA`` PostGIS function."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:216
+msgid ""
+"Run the first query and create the new column ``area`` on the table "
+"``my_table``:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:222
+msgid ""
+"Run the second query and update the ``area`` column and calculate the "
+"area of each feature:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:238
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:276
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:307
+msgid "``SQL query`` [string]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:238
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:276
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:305
+msgid "Defines the SQL query, for example ``UPDATE my_table SET field=10``."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:243
+msgid "``Unique ID field name`` [tablefield: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:241
+msgid "Sets the primary key field from an existing field in the table."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:243
+msgid "Default: *id*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:248
+msgid "Name of the geometry column in the table."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:254
+msgid ""
+"No new layer is created. The SQL query is executed in place on the layer "
+"and its result (as a subset of the input table) is automatically loaded "
+"in QGIS."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:261
+msgid "PostgreSQL execute SQL"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:263
+msgid ""
+"Allows a SQL database query to be performed on a PostgreSQL database "
+"connected to QGIS. The algorithm **won't** create any new layer: it is "
+"designed to run queries on the layer itself."
+msgstr ""
+
 #: ../../source/docs/user_manual/processing_algs/qgis/database.rst:273
+msgid "``Database`` [string]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:271
+msgid ""
+"Name of the database, not the connection name. By default you don't have "
+"to fill in the name, the current database connection will be chosen."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:280
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:311
+msgid "No new layer is created. The SQL query is executed in place on the layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:283
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:314
+msgid "See also"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:284
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:315
+msgid ""
+"For some SQL query examples see :ref:`PostGIS SQL Query Examples "
+"<qgis_postgis_execute_sql_example>`."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:290
 msgid "SpatiaLite execute SQL"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:275
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:292
 msgid ""
 "Allows a SQL database query to be performed on a SpatiaLite database "
 "connected to QGIS. The algorithm **won't** create any new layer: it is "
 "designed to run queries on the layer itself."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:287
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:292
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:302
+msgid "``Database`` [vector]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:302
+#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:307
 msgid "Default: *(not set)*"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:308
-msgid "See also"
-msgstr ""
+#~ msgid "|updatedisclaimer|"
+#~ msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/database.rst:309
-msgid ""
-"For some SQL query examples see :ref:`PostGIS SQL Query Examples "
-"<qgis_postgis_execute_sql_example>`."
-msgstr ""
+#~ msgid "Import into PostGIS"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Imports a vector layer currently loaded"
+#~ " in QGIS into a PostGIS database. "
+#~ "Prior to this a connection between "
+#~ "QGIS and the PostGIS database has "
+#~ "to be created (for example with "
+#~ "the DB Manager)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "One of the loaded layer in QGIS."
+#~ " If you want to import another "
+#~ "layer you have to load it in "
+#~ "QGIS before to import."
+#~ msgstr ""
+
+#~ msgid "``Database (connection name)`` [selection]"
+#~ msgstr ""
+
+#~ msgid "Optional. Existing schemas will be listed in the combobox."
+#~ msgstr ""
+
+#~ msgid "An existing schema of the selected database can be chosen."
+#~ msgstr ""
+
+#~ msgid "Optional."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Optional. A column with **unique** "
+#~ "values can be used as Primary key"
+#~ " for the database."
+#~ msgstr ""
+
+#~ msgid "Specify whether to create a spatial index or not."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If activated this prevents the field "
+#~ "names of the input vector layer "
+#~ "from being converted to lowercase."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Specify whether the length constraints "
+#~ "on character fields should be dropped"
+#~ " or not."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Specify if the features of the "
+#~ "loaded layer should be single-part "
+#~ "instead of multi-part. By default "
+#~ "the existing geometries information are "
+#~ "preserved."
+#~ msgstr ""
+
+#~ msgid "Console usage"
+#~ msgstr ""
+
+#~ msgid "PostGIS execute SQL"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Allows a SQL database query to be"
+#~ " performed on a PostGIS database "
+#~ "connected to QGIS. The algorithm "
+#~ "**won't** create any new layer: it "
+#~ "is designed to run queries on the"
+#~ " layer itself."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Run the second query and update "
+#~ "the `area` column and calculate the "
+#~ "area of each feature:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "No new outputs will be created. "
+#~ "The layer chosen will be updated "
+#~ "with the executed SQL query. By "
+#~ "opening the table (for example with "
+#~ "Data Manager) you will see the "
+#~ "results."
+#~ msgstr ""
+
+#~ msgid "Import into SpatiaLite"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Imports a vector layer currently loaded"
+#~ " in QGIS into a SpatiaLite database."
+#~ " Prior to this a connection between"
+#~ " QGIS and the SpatiaLite database has"
+#~ " to be created (for example with "
+#~ "the DB Manager)."
+#~ msgstr ""
+
+#~ msgid "``File database`` [selection]"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Name of the database connection. The "
+#~ "combobox will show all the databases "
+#~ "of the layers loaded in QGIS. "
+#~ "Moreover, it is possible to choose "
+#~ "an external `sqlite` file."
+#~ msgstr ""
 

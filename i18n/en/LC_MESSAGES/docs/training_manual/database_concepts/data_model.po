@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project testing\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-28 10:31+0100\n"
+"POT-Creation-Date: 2019-04-07 15:33+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,79 +18,78 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.1\n"
 
-#: ../../source/docs/training_manual/database_concepts/data_model.rst:6
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:8
 msgid "|LS| Implementing the Data Model"
 msgstr ""
 
-#: ../../source/docs/training_manual/database_concepts/data_model.rst:8
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:10
 msgid ""
 "Now that we've covered all the theory, let's create a new database. This "
 "database will be used for our exercises for the lessons that will follow "
 "afterwards."
 msgstr ""
 
-#: ../../source/docs/training_manual/database_concepts/data_model.rst:12
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:14
 msgid ""
 "**The goal for this lesson:** To install the required software and use it"
 " to implement our example database."
 msgstr ""
 
-#: ../../source/docs/training_manual/database_concepts/data_model.rst:16
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:18
 msgid "Install PostgreSQL"
 msgstr ""
 
-#: ../../source/docs/training_manual/database_concepts/data_model.rst:18
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:20
 msgid ""
 "Although outside the scope of this document, Mac users can install "
 "PostgreSQL using `Homebrew <http://russbrooks.com/2010/11/25/install-"
-"postgresql-9-on-os-x>`_. Windows users can use the graphical installer "
-"located here: `<http://www.postgresql.org/download/windows/>`_. Please "
-"note that the documentation will assume users are running QGIS under "
-"Ubuntu."
+"postgresql-9-on-os-x>`_. Windows users can use the `graphical installer "
+"<https://www.postgresql.org/download/windows/>`_. Please note that the "
+"documentation will assume users are running QGIS under Ubuntu."
 msgstr ""
 
-#: ../../source/docs/training_manual/database_concepts/data_model.rst:26
-#: ../../source/docs/training_manual/database_concepts/data_model.rst:63
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:28
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:65
 msgid "Under Ubuntu:"
 msgstr ""
 
-#: ../../source/docs/training_manual/database_concepts/data_model.rst:32
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:34
 msgid "You should get a message like this:"
 msgstr ""
 
-#: ../../source/docs/training_manual/database_concepts/data_model.rst:51
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:53
 msgid ""
 "Press :kbd:`Y` and :kbd:`Enter` and wait for the download and "
 "installation to finish."
 msgstr ""
 
-#: ../../source/docs/training_manual/database_concepts/data_model.rst:55
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:57
 msgid "Help"
 msgstr ""
 
-#: ../../source/docs/training_manual/database_concepts/data_model.rst:57
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:59
 msgid ""
 "PostgreSQL has very good `online "
-"<http://www.postgresql.org/docs/9.1/static/index.html>`_ documentation."
+"<https://www.postgresql.org/docs/9.1/index.html>`_ documentation."
 msgstr ""
 
-#: ../../source/docs/training_manual/database_concepts/data_model.rst:61
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:63
 msgid "Create a database user"
 msgstr ""
 
-#: ../../source/docs/training_manual/database_concepts/data_model.rst:65
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:67
 msgid ""
 "After the installation is complete, run this command to become the "
 "postgres user and then create a new database user:"
 msgstr ""
 
-#: ../../source/docs/training_manual/database_concepts/data_model.rst:72
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:74
 msgid ""
 "Type in your normal log in password when prompted (you need to have sudo "
 "rights)."
 msgstr ""
 
-#: ../../source/docs/training_manual/database_concepts/data_model.rst:74
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:76
 msgid ""
 "Now, at the postgres user's bash prompt, create the database user. Make "
 "sure the user name matches your unix login name: it will make your life "
@@ -98,80 +97,78 @@ msgid ""
 " logged in as that user:"
 msgstr ""
 
-#: ../../source/docs/training_manual/database_concepts/data_model.rst:83
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:85
 msgid ""
 "Enter a password when prompted. You should use a different password to "
 "your login password."
 msgstr ""
 
-#: ../../source/docs/training_manual/database_concepts/data_model.rst:86
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:88
 msgid "What do those options mean?"
 msgstr ""
 
-#: ../../source/docs/training_manual/database_concepts/data_model.rst:98
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:100
 msgid "Now you should leave the postgres user's bash shell environment by typing:"
 msgstr ""
 
-#: ../../source/docs/training_manual/database_concepts/data_model.rst:106
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:108
 msgid "Verify the new account"
 msgstr ""
 
-#: ../../source/docs/training_manual/database_concepts/data_model.rst:112
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:114
 msgid "Should return something like this::"
 msgstr ""
 
-#: ../../source/docs/training_manual/database_concepts/data_model.rst:122
-#: ../../source/docs/training_manual/database_concepts/data_model.rst:152
-msgid "Type :kbd:`q` to exit."
-msgstr ""
-
-#: ../../source/docs/training_manual/database_concepts/data_model.rst:125
-msgid "Create a database"
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:124
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:154
+msgid "Type :kbd:`Q` to exit."
 msgstr ""
 
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:127
+msgid "Create a database"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:129
 msgid ""
 "The ``createdb`` command is used to create a new database. It should be "
 "run from the bash shell prompt:"
 msgstr ""
 
-#: ../../source/docs/training_manual/database_concepts/data_model.rst:134
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:136
 msgid "You can verify the existence of your new database by using this command:"
 msgstr ""
 
-#: ../../source/docs/training_manual/database_concepts/data_model.rst:140
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:142
 msgid "Which should return something like this:"
 msgstr ""
 
-#: ../../source/docs/training_manual/database_concepts/data_model.rst:155
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:157
 msgid "Starting a database shell session"
 msgstr ""
 
-#: ../../source/docs/training_manual/database_concepts/data_model.rst:157
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:159
 msgid "You can connect to your database easily like this::"
 msgstr ""
 
-#: ../../source/docs/training_manual/database_concepts/data_model.rst:161
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:163
 msgid "To exit out of the psql database shell, type::"
 msgstr ""
 
-#: ../../source/docs/training_manual/database_concepts/data_model.rst:165
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:167
 msgid "For help in using the shell, type::"
 msgstr ""
 
-#: ../../source/docs/training_manual/database_concepts/data_model.rst:169
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:171
 msgid "For help in using sql commands, type::"
 msgstr ""
 
-#: ../../source/docs/training_manual/database_concepts/data_model.rst:173
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:175
 msgid "To get help on a specific command, type (for example)::"
 msgstr ""
 
-#: ../../source/docs/training_manual/database_concepts/data_model.rst:177
+#: ../../source/docs/training_manual/database_concepts/data_model.rst:179
 msgid ""
 "See also the `Psql cheat sheet "
-"<http://www.postgresonline.com/downloads/special_feature/postgresql90_cheatsheet_A4.pdf>`_"
-" - available online `here "
 "<http://www.postgresonline.com/downloads/special_feature/postgresql90_cheatsheet_A4.pdf>`_."
 msgstr ""
 
@@ -376,4 +373,32 @@ msgstr ""
 #: ../../source/docs/training_manual/database_concepts/data_model.rst:411
 msgid "Next you'll learn how to use the DBMS to add new data."
 msgstr ""
+
+#~ msgid ""
+#~ "Although outside the scope of this "
+#~ "document, Mac users can install "
+#~ "PostgreSQL using `Homebrew "
+#~ "<http://russbrooks.com/2010/11/25/install-postgresql-9-on-"
+#~ "os-x>`_. Windows users can use the "
+#~ "graphical installer located here: "
+#~ "`<http://www.postgresql.org/download/windows/>`_. Please "
+#~ "note that the documentation will assume"
+#~ " users are running QGIS under Ubuntu."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "PostgreSQL has very good `online "
+#~ "<http://www.postgresql.org/docs/9.1/static/index.html>`_ "
+#~ "documentation."
+#~ msgstr ""
+
+#~ msgid "Type :kbd:`q` to exit."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "See also the `Psql cheat sheet "
+#~ "<http://www.postgresonline.com/downloads/special_feature/postgresql90_cheatsheet_A4.pdf>`_"
+#~ " - available online `here "
+#~ "<http://www.postgresonline.com/downloads/special_feature/postgresql90_cheatsheet_A4.pdf>`_."
+#~ msgstr ""
 

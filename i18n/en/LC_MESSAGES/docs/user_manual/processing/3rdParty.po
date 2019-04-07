@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project testing\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-28 10:31+0100\n"
+"POT-Creation-Date: 2019-04-07 15:33+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.1\n"
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:7
-msgid "|updatedisclaimer|"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/3rdParty.rst:12
+#: ../../source/docs/user_manual/processing/3rdParty.rst:10
 msgid "Configuring external applications"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:19
+#: ../../source/docs/user_manual/processing/3rdParty.rst:17
 msgid ""
 "The processing framework can be extended using additional applications. "
 "Currently, SAGA, GRASS and R are supported. Algorithms relying on an "
@@ -35,7 +31,7 @@ msgid ""
 "using the QGIS Plugin Manager."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:25
+#: ../../source/docs/user_manual/processing/3rdParty.rst:23
 msgid ""
 "This section will show you how to configure the Processing framework to "
 "include these additional applications, and it will explain some "
@@ -45,7 +41,7 @@ msgid ""
 "just like you do with any other geoalgorithm."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:32
+#: ../../source/docs/user_manual/processing/3rdParty.rst:30
 msgid ""
 "By default, all algorithms that rely on an external application not "
 "shipped with QGIS are not enabled. You can enable them in the settings "
@@ -53,11 +49,11 @@ msgid ""
 " in your system."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:39
+#: ../../source/docs/user_manual/processing/3rdParty.rst:37
 msgid "A note for Windows users"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:41
+#: ../../source/docs/user_manual/processing/3rdParty.rst:39
 msgid ""
 "If you are not an advanced user and you are running QGIS on Windows, you "
 "might not be interested in reading the rest of this chapter. Make sure "
@@ -69,11 +65,11 @@ msgid ""
 "installation SAGA and GRASS as well."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:52
+#: ../../source/docs/user_manual/processing/3rdParty.rst:50
 msgid "A note on file formats"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:54
+#: ../../source/docs/user_manual/processing/3rdParty.rst:52
 msgid ""
 "When using an external software, opening a file in QGIS does not mean "
 "that it can be opened and processed as well in that other software. In "
@@ -85,7 +81,7 @@ msgid ""
 " and log dialog) to know more about what is going wrong."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:63
+#: ../../source/docs/user_manual/processing/3rdParty.rst:61
 msgid ""
 "Using GRASS raster layers is, for instance, one case in which you might "
 "have trouble and not be able to complete your work if you call an "
@@ -93,24 +89,24 @@ msgid ""
 "layers will not appear as available to algorithms."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:68
+#: ../../source/docs/user_manual/processing/3rdParty.rst:66
 msgid ""
 "You should, however, find no problems at all with vector layers, since "
 "QGIS automatically converts from the original file format to one accepted"
 " by the external application before passing the layer to it. This adds "
 "extra processing time, which might be significant if the layer has a "
 "large size, so do not be surprised if it takes more time to process a "
-"layer from a DB connection than it does to process one of a similar size "
-"stored in a shapefile."
+"layer from a DB connection than it process a layer from a Shapefile "
+"format dataset of similar size."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:75
+#: ../../source/docs/user_manual/processing/3rdParty.rst:73
 msgid ""
 "Providers not using external applications can process any layer that you "
 "can open in QGIS, since they open it for analysis through QGIS."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:78
+#: ../../source/docs/user_manual/processing/3rdParty.rst:76
 msgid ""
 "Regarding output formats, all formats supported by QGIS as output can be "
 "used, both for raster and vector layers. Some providers do not support "
@@ -119,11 +115,11 @@ msgid ""
 "this conversion is needed, that might increase the processing time."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:86
+#: ../../source/docs/user_manual/processing/3rdParty.rst:84
 msgid "A note on vector layer selections"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:88
+#: ../../source/docs/user_manual/processing/3rdParty.rst:86
 msgid ""
 "External applications may also be made aware of the selections that exist"
 " in vector layers within QGIS. However, that requires rewriting all input"
@@ -133,17 +129,17 @@ msgid ""
 "configuration, can a layer be directly passed to an external application."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:95
+#: ../../source/docs/user_manual/processing/3rdParty.rst:93
 msgid ""
 "In other cases, exporting only selected features is needed, which causes "
 "execution times to be longer."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:99
+#: ../../source/docs/user_manual/processing/3rdParty.rst:97
 msgid "SAGA"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:101
+#: ../../source/docs/user_manual/processing/3rdParty.rst:99
 msgid ""
 "SAGA algorithms can be run from QGIS if you have SAGA installed in your "
 "system and you configure the processing framework properly so it can find"
@@ -151,14 +147,14 @@ msgid ""
 "needed to run SAGA algorithms."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:107
+#: ../../source/docs/user_manual/processing/3rdParty.rst:105
 msgid ""
 "If you are running Windows, both the stand-alone installer and the "
 "OSGeo4W installer include SAGA along with QGIS, and the path is "
 "automatically configured, so there is no need to do anything else."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:111
+#: ../../source/docs/user_manual/processing/3rdParty.rst:109
 msgid ""
 "If you have installed SAGA yourself and your QGIS installer did not "
 "include it, the path to the SAGA executable must be configured. To do "
@@ -168,14 +164,14 @@ msgid ""
 "you are ready to run SAGA algorithms from QGIS."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:118
+#: ../../source/docs/user_manual/processing/3rdParty.rst:116
 msgid ""
 "If you are running Linux, SAGA binaries are not included with Processing,"
 " so you have to download and install the software yourself. Please check "
 "the SAGA website for more information."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:122
+#: ../../source/docs/user_manual/processing/3rdParty.rst:120
 msgid ""
 "In this case, there is no need to configure the path to the SAGA "
 "executable, and you will not see those folder entries. Instead, you must "
@@ -184,11 +180,11 @@ msgid ""
 "check that the system can find where the SAGA binaries are located."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:129
+#: ../../source/docs/user_manual/processing/3rdParty.rst:127
 msgid "About SAGA grid system limitations"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:131
+#: ../../source/docs/user_manual/processing/3rdParty.rst:129
 msgid ""
 "Most SAGA algorithms that require several input raster layers require "
 "them to have the same grid system. That is, they must cover the same "
@@ -200,46 +196,46 @@ msgid ""
 "operate with layers from different grid systems)."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:140
+#: ../../source/docs/user_manual/processing/3rdParty.rst:138
 msgid ""
 "The definition of that common grid system is controlled by the user, and "
 "you will find several parameters in the SAGA group of the settings window"
 " to do so. There are two ways of setting the target grid system:"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:144
+#: ../../source/docs/user_manual/processing/3rdParty.rst:142
 msgid ""
 "Setting it manually. You define the extent by setting the values of the "
 "following parameters:"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:147
+#: ../../source/docs/user_manual/processing/3rdParty.rst:145
 msgid ":guilabel:`Resampling min X`"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:148
+#: ../../source/docs/user_manual/processing/3rdParty.rst:146
 msgid ":guilabel:`Resampling max X`"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:149
+#: ../../source/docs/user_manual/processing/3rdParty.rst:147
 msgid ":guilabel:`Resampling min Y`"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:150
+#: ../../source/docs/user_manual/processing/3rdParty.rst:148
 msgid ":guilabel:`Resampling max Y`"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:151
+#: ../../source/docs/user_manual/processing/3rdParty.rst:149
 msgid ":guilabel:`Resampling cellsize`"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:153
+#: ../../source/docs/user_manual/processing/3rdParty.rst:151
 msgid ""
 "Notice that QGIS will resample input layers to that extent, even if they "
 "do not overlap with it."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:155
+#: ../../source/docs/user_manual/processing/3rdParty.rst:153
 msgid ""
 "Setting it automatically from input layers. To select this option, just "
 "check the :guilabel:`Use min covering grid system for resampling` option."
@@ -248,18 +244,18 @@ msgid ""
 "layer is the maximum of all cell sizes of the input layers."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:161
+#: ../../source/docs/user_manual/processing/3rdParty.rst:159
 msgid ""
 "For algorithms that do not use multiple raster layers, or for those that "
 "do not need a unique input grid system, no resampling is performed before"
 " calling SAGA, and those parameters are not used."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:166
+#: ../../source/docs/user_manual/processing/3rdParty.rst:164
 msgid "Limitations for multi-band layers"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:168
+#: ../../source/docs/user_manual/processing/3rdParty.rst:166
 msgid ""
 "Unlike QGIS, SAGA has no support for multi-band layers. If you want to "
 "use a multiband layer (such as an RGB or multispectral image), you first "
@@ -269,11 +265,11 @@ msgid ""
 " extract a single band)."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:175
+#: ../../source/docs/user_manual/processing/3rdParty.rst:173
 msgid "Limitations in cell size"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:177
+#: ../../source/docs/user_manual/processing/3rdParty.rst:175
 msgid ""
 "SAGA assumes that raster layers have the same cell size in the X and Y "
 "axis. If you are working with a layer with different values for "
@@ -282,11 +278,11 @@ msgid ""
 " an input layer might not be suitable to be processed by SAGA."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:184
+#: ../../source/docs/user_manual/processing/3rdParty.rst:182
 msgid "Logging"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:186
+#: ../../source/docs/user_manual/processing/3rdParty.rst:184
 msgid ""
 "When QGIS calls SAGA, it does so using its command-line interface, thus "
 "passing a set of commands to perform all the required operations. SAGA "
@@ -296,7 +292,7 @@ msgid ""
 "algorithm is running."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:193
+#: ../../source/docs/user_manual/processing/3rdParty.rst:191
 msgid ""
 "Both the commands sent by QGIS and the additional information printed by "
 "SAGA can be logged along with other processing log messages, and you "
@@ -306,15 +302,21 @@ msgid ""
 "logging mechanism."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:199
+#: ../../source/docs/user_manual/processing/3rdParty.rst:197
 msgid ""
 "Most other providers that use an external application and call it through"
 " the command-line have similar options, so you will find them as well in "
 "other places in the processing settings list."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/3rdParty.rst:206
+#: ../../source/docs/user_manual/processing/3rdParty.rst:204
 msgid "R. Creating R scripts"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:206
+msgid ""
+"To enable R in Processing you need to install the **Processing R "
+"Provider** plugin."
 msgstr ""
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:208
@@ -588,4 +590,24 @@ msgid ""
 "latter approach is the behavior you prefer, just check the :guilabel:`Use"
 " min covering region` option in the GRASS configuration parameters."
 msgstr ""
+
+#~ msgid "|updatedisclaimer|"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You should, however, find no problems"
+#~ " at all with vector layers, since "
+#~ "QGIS automatically converts from the "
+#~ "original file format to one accepted "
+#~ "by the external application before "
+#~ "passing the layer to it. This adds"
+#~ " extra processing time, which might "
+#~ "be significant if the layer has a"
+#~ " large size, so do not be "
+#~ "surprised if it takes more time to"
+#~ " process a layer from a DB "
+#~ "connection than it does to process "
+#~ "one of a similar size stored in"
+#~ " a shapefile."
+#~ msgstr ""
 

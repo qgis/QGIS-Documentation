@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project testing\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-28 10:31+0100\n"
+"POT-Creation-Date: 2019-04-07 15:33+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,15 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.1\n"
 
-#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:7
-msgid "|updatedisclaimer|"
-msgstr ""
-
-#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:12
+#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:10
 msgid "Security Considerations"
 msgstr ""
 
-#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:19
+#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:17
 msgid ""
 "Once the master password is entered, the API is open to access "
 "authentication configs in the authentication database, similar to how "
@@ -36,37 +32,37 @@ msgid ""
 " access to authentication credentials."
 msgstr ""
 
-#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:25
+#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:23
 msgid ""
 "The quick solution for initial release of feature is to just not include "
 "most PyQGIS bindings for the authentication system."
 msgstr ""
 
-#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:28
+#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:26
 msgid ""
 "Another simple, though not robust, fix is to add a combobox in "
 ":menuselection:`Settings --> Options --> Authentication` (defaults to "
 "\"never\"):"
 msgstr ""
 
-#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:36
+#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:34
 msgid ""
 "Such an option's setting would need to be saved in a location non-"
 "accessible to Python, e.g. the authentication database, and encrypted "
 "with the master password."
 msgstr ""
 
-#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:40
+#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:38
 msgid "Another option may be to track which plugins the user has specifically"
 msgstr ""
 
-#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:41
+#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:39
 msgid ""
 "allowed to access the authentication system, though it may be tricky to "
 "deduce which plugin is actually making the call."
 msgstr ""
 
-#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:45
+#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:43
 msgid ""
 "Sandboxing plugins, possibly in their own virtual environments, would "
 "reduce 'cross-plugin' hacking of authentication configs from another "
@@ -74,7 +70,7 @@ msgid ""
 "communication as well, but maybe only between third-party plugins."
 msgstr ""
 
-#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:50
+#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:48
 msgid ""
 "Another good solution is to issue code-signing certificates to vetted "
 "plugin authors. Then validate the plugin's certificate upon loading. If "
@@ -83,11 +79,11 @@ msgid ""
 "management dialogs."
 msgstr ""
 
-#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:55
+#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:53
 msgid "Alternatively, access to sensitive authentication system data from Python"
 msgstr ""
 
-#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:56
+#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:54
 msgid ""
 "could never be allowed, and only the use of QGIS core widgets, or "
 "duplicating authentication system integrations, would allow the plugin to"
@@ -96,18 +92,18 @@ msgid ""
 " the main app."
 msgstr ""
 
-#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:62
+#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:60
 msgid ""
 "The same security concerns apply to C++ plugins, though it will be harder"
 " to restrict access, since there is no function binding to simply be "
 "removed as with Python."
 msgstr ""
 
-#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:67
+#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:65
 msgid "Restrictions"
 msgstr ""
 
-#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:69
+#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:67
 msgid ""
 "The confusing `licensing and exporting`_ issues associated with OpenSSL "
 "apply. In order for Qt to work with SSL certificates, it needs access to "
@@ -116,7 +112,7 @@ msgid ""
 " limitations)."
 msgstr ""
 
-#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:74
+#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:72
 msgid ""
 "QCA follows a similar tactic, whereby linking to QCA incurs no "
 "restrictions, because the qca-ossl (OpenSSL) plugin is loaded at run-"
@@ -126,9 +122,12 @@ msgid ""
 "know. I'm not a lawyer."
 msgstr ""
 
-#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:80
+#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:78
 msgid ""
 "The authentication system safely disables itself when ``qca-ossl`` is not"
 " found at run-time."
 msgstr ""
+
+#~ msgid "|updatedisclaimer|"
+#~ msgstr ""
 

@@ -46,12 +46,12 @@ do
   #set +x
   # Now register the language translations for the localised po file against
   # this resource.
-  for LOCALE in $LOCALES
-  do
-      LOCALEFILE=`echo $POFILE | sed "s/\/en\//\/$LOCALE\//g"`
-      #echo "$LOCALEFILE"
-      tx set -r $RESOURCE -l $LOCALE  "$LOCALEFILE"
-  done
+#  for LOCALE in $LOCALES
+#  do
+#      LOCALEFILE=`echo $POFILE | sed "s/\/en\//\/$LOCALE\//g"`
+#      #echo "$LOCALEFILE"
+#      tx set -r $RESOURCE -l $LOCALE  "$LOCALEFILE"
+#  done
   # When we are done in this block we should have created a section in the
   # .tx/config file that looks like this:
   #

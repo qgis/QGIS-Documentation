@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project testing\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-28 10:31+0100\n"
+"POT-Creation-Date: 2019-04-07 15:33+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,419 +18,673 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.1\n"
 
-#: ../../source/docs/user_manual/processing/scripts.rst:7
-msgid "|updatedisclaimer|"
+#: ../../source/docs/user_manual/processing/scripts.rst:5
+msgid "Writing new Processing algorithms as Python scripts"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:10
-msgid "Writing new Processing algorithms as python scripts"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:17
+#: ../../source/docs/user_manual/processing/scripts.rst:12
 msgid ""
-"You can create your own algorithms by writing the corresponding Python "
-"code and adding a few extra lines to supply additional information needed"
-" to define the semantics of the algorithm. You can find a "
-":guilabel:`Create new script` menu under the :guilabel:`Tools` group in "
-"the :guilabel:`Script` algorithms block of the toolbox. Double-click on "
-"it to open the script edition dialog. That's where you should type your "
-"code. Saving the script from there in the :file:`scripts` folder (the "
-"default one when you open the save file dialog), with :file:`.py` "
-"extension, will automatically create the corresponding algorithm."
+"In QGIS 3.4, the only way to write Processing algorithms using Python is "
+"to extend the :class:`QgsProcessingAlgorithm "
+"<qgis.core.QgsProcessingAlgorithm>` class."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:27
+#: ../../source/docs/user_manual/processing/scripts.rst:16
 msgid ""
-"The name of the algorithm (the one you will see in the toolbox) is "
-"created from the filename, removing its extension and replacing "
-"underscores with blank spaces."
+"Within QGIS, you can use :guilabel:`Create new script` in the "
+":guilabel:`Scripts` menu at the top of the :guilabel:`Processing Toolbox`"
+" to open the :guilabel:`Processing Script Editor` where you can write "
+"your code. To simplify the task, you can start with a script template by "
+"using :guilabel:`Create new script from template` from the same menu. "
+"This opens a template that extends :class:`QgsProcessingAlgorithm "
+"<qgis.core.QgsProcessingAlgorithm>`."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:25
+msgid ""
+"If you save the script in the :file:`scripts` folder (the default "
+"location) with a :file:`.py` extension, the algorithm will become "
+"available in the :guilabel:`Processing Toolbox`."
 msgstr ""
 
 #: ../../source/docs/user_manual/processing/scripts.rst:30
+msgid "Extending QgsProcessingAlgorithm"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:32
 msgid ""
-"Let's have the following code, which calculates the Topographic Wetness "
-"Index (TWI) directly from a DEM"
+"The following code takes a vector layer, counts the number of features, "
+"does a buffer operation and creates a raster layer from the result of the"
+" buffer operation. The buffer layer, raster layer and number of features "
+"are returned."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:44
-msgid ""
-"As you can see, it involves 3 algorithms, all of them coming from SAGA. "
-"The last one of them calculates the TWI, but it needs a slope layer and a"
-" flow accumulation layer. We do not have these, but since we have the "
-"DEM, we can calculate them by calling the corresponding SAGA algorithms."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:49
-msgid ""
-"The part of the code where this processing takes place is not difficult "
-"to understand if you have read the previous chapter. The first lines, "
-"however, need some additional explanation. They provide the information "
-"that is needed to turn your code into an algorithm that can be run from "
-"any of the GUI components, like the toolbox or the graphical modeler."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:55
-msgid ""
-"These lines start with a double Python comment symbol (``##``) and have "
-"the following structure"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:62
-msgid ""
-"Here is a list of all the parameter types that are supported in "
-"processing scripts, their syntax and some examples."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:65
-msgid "``raster``. A raster layer"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:66
-msgid "``vector``. A vector layer"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:67
-msgid "``table``. A table"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:68
-msgid ""
-"``number``. A numerical value. A default value must be provided. For "
-"instance, ``depth=number 2.4``"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:70
-msgid ""
-"``string``. A text string. As in the case of numerical values, a default "
-"value must be added. For instance, ``name=string Victor``"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:72
-msgid ""
-"``longstring``. Same as string, but a larger text box will be shown, so "
-"it is better suited for long strings, such as for a script expecting a "
-"small code snippet."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:74
-msgid ""
-"``boolean``. A boolean value. Add ``True`` or ``False`` after it to set "
-"the default value. For example, ``verbose=boolean True``."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:76
-msgid "``multiple raster``. A set of input raster layers."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:77
-msgid "``multiple vector``. A set of input vector layers."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:78
-msgid ""
-"``field``. A field in the attributes table of a vector layer. The name of"
-" the layer has to be added after the ``field`` tag. For instance, if you "
-"have declared a vector input with ``mylayer=vector``, you could use "
-"``myfield=field mylayer`` to add a field from that layer as parameter."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:82
-msgid "``extent``. A spatial extent defined by xmin, xmax, ymin, ymax"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:83
-msgid "``folder``. A folder"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:84
-msgid "``file``. A filename"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:85
-msgid "``crs``. A Coordinate Reference System"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:86
-msgid ""
-"``selection``. A dropdown menu that allows the user to select from a pre-"
-"populated list. For example ``units=selection sq_km;sq_miles;sq_degrees``"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:88
-msgid ""
-"``name``. Name of the script. This will be displayed as the algorithm "
-"name in the processing toolbox. For example ``My Algorithm Name=name``"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:90
-msgid ""
-"``group``. Folder name where the script will appear in the Processing "
-"Toolbox. For Example, adding ``Utils=groups`` will put the script within "
-"a ``Utils`` folder within Scripts."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:94
-msgid ""
-"The parameter name is the name that will be shown to the user when "
-"executing the algorithm, and also the variable name to use in the script "
-"code. The value entered by the user for that parameter will be assigned "
-"to a variable with that name."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:98
-msgid ""
-"When showing the name of the parameter to the user, the name will be "
-"edited to improve its appearance, replacing underscores with spaces. So, "
-"for instance, if you want the user to see a parameter named ``A numerical"
-" value``, you can use the variable name ``A_numerical_value``."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:103
-msgid ""
-"Layers and tables values are strings containing the filepath of the "
-"corresponding object. To turn them into a QGIS object, you can use the "
-"``processing.getObjectFromUri()`` function. Multiple inputs also have a "
-"string value, which contains the filepaths to all selected objects, "
-"separated by semicolons (``;``)."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:108
-msgid "Outputs are defined in a similar manner, using the following tags:"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:110
-msgid "``output raster``"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:111
-msgid "``output vector``"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:112
-msgid "``output table``"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:113
-msgid "``output html``"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:114
-msgid "``output file``"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:115
-msgid "``output number``"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:116
-msgid "``output string``"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:117
-msgid "``output extent``"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:119
-msgid ""
-"The value assigned to the output variables is always a string with a "
-"filepath. It will correspond to a temporary filepath in case the user has"
-" not entered any output filename."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:123
-msgid ""
-"In addition to the tags for parameters and outputs, you can also define "
-"the group under which the algorithm will be shown, using the ``group`` "
-"tag."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:126
-msgid ""
-"The last tag that you can use in your script header is ``##nomodeler``. "
-"Use that when you do not want your algorithm to be shown in the modeler "
-"window. This should be used for algorithms that do not have a clear "
-"syntax (for instance, if the number of layers to be created is not known "
-"in advance, at design time), which make them unsuitable for the graphical"
-" modeler"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:133
+#: ../../source/docs/user_manual/processing/scripts.rst:258
 msgid "Handing data produced by the algorithm"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:135
+#: ../../source/docs/user_manual/processing/scripts.rst:260
 msgid ""
-"When you declare an output representing a layer (raster, vector or "
-"table), the algorithm will try to add it to QGIS once it is finished. "
-"That is the reason why, although the ``runalg()`` method does not load "
-"the layers it produces, the final *TWI* layer will be loaded, since it is"
-" saved to the file entered by the user, which is the value of the "
-"corresponding output."
+"When you declare an output representing a layer (raster or vector), the "
+"algorithm will try to add it to QGIS once it is finished."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:141
+#: ../../source/docs/user_manual/processing/scripts.rst:263
+msgid "Raster layer output: QgsProcessingParameterRasterDestination."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:264
+msgid "Vector layer output: QgsProcessingParameterVectorDestination."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:266
 msgid ""
-"Do not use the ``load()`` method in your script algorithms, but just when"
-" working with the console line. If a layer is created as output of an "
-"algorithm, it should be declared as such. Otherwise, you will not be able"
-" to properly use the algorithm in the modeler, since its syntax (as "
-"defined by the tags explained above) will not match what the algorithm "
+"So even if the ``processing.run()`` method does not add the layers it "
+"creates into the user's current project, the two output layers (buffer "
+"and raster buffer) will be loaded, since they are saved to the "
+"destinations entered by the user (or to temporary destinations if the "
+"user does not specify a destination)."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:272
+msgid ""
+"If a layer is created as output of an algorithm, it should be declared as"
+" such. Otherwise, you will not be able to properly use the algorithm in "
+"the modeler, since what is declared will not match what the algorithm "
 "really creates."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:147
+#: ../../source/docs/user_manual/processing/scripts.rst:278
 msgid ""
-"Hidden outputs (numbers and strings) do not have a value. Instead, it is "
-"you who has to assign a value to them. To do so, just set the value of a "
-"variable with the name you used to declare that output. For instance, if "
-"you have used this declaration,"
+"You can return strings, numbers and more by specifying them in the result"
+" dictionary (as demonstrated for \"NUMBEROFFEATURES\"), but they should "
+"always be explicitly defined as outputs from your algorithm. We encourage"
+" algorithms to output as many useful values as possible, since these can "
+"be valuable for use in later algorithms when your algorithm is used as "
+"part of a model."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:156
-msgid "the following line will set the value of the output to 5:"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:164
+#: ../../source/docs/user_manual/processing/scripts.rst:287
 msgid "Communicating with the user"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:166
+#: ../../source/docs/user_manual/processing/scripts.rst:289
 msgid ""
 "If your algorithm takes a long time to process, it is a good idea to "
-"inform the user. You have a global named ``progress`` available, with two"
-" available methods: ``setText(text)`` and ``setPercentage(percent)`` to "
-"modify the progress text and the progress bar."
+"inform the user about the progress.  You can use ``feedback`` "
+"(:class:`QgsProcessingFeedback <qgis.core.QgsProcessingFeedback>`) for "
+"this."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:171
+#: ../../source/docs/user_manual/processing/scripts.rst:293
 msgid ""
-"If you have to provide some information to the user, not related to the "
-"progress of the algorithm, you can use the ``setInfo(text)`` method, also"
-" from the ``progress`` object."
+"The progress text and progressbar can be updated using two methods: "
+":meth:`setProgressText(text) "
+"<qgis.core.QgsProcessingFeedback.setProgressText>` and "
+":meth:`setProgress(percent) <qgis.core.QgsFeedback.setProgress>`."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:175
+#: ../../source/docs/user_manual/processing/scripts.rst:297
 msgid ""
-"If your script has some problem, the correct way of propagating it is to "
-"raise an exception of type ``GeoAlgorithmExecutionException()``. You can "
-"pass a message as argument to the constructor of the exception. "
+"You can provide more information to the user using "
+":meth:`pushCommandInfo(text) "
+"<qgis.core.QgsProcessingFeedback.pushCommandInfo>`, "
+":meth:`pushDebugInfo(text) "
+"<qgis.core.QgsProcessingFeedback.pushDebugInfo>`, :meth:`pushInfo(text) "
+"<qgis.core.QgsProcessingFeedback.pushInfo>` and :meth:`reportError(text) "
+"<qgis.core.QgsProcessingFeedback.reportError>`."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:303
+msgid ""
+"If your script has a problem, the correct way of handling it is to raise "
+"a :class:`QgsProcessingException <qgis.core.QgsProcessingException>`. You"
+" can pass a message as an argument to the constructor of the exception. "
 "Processing will take care of handling it and communicating with the user,"
 " depending on where the algorithm is being executed from (toolbox, "
-"modeler, Python console...)"
+"modeler, Python console, ...)"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:183
+#: ../../source/docs/user_manual/processing/scripts.rst:312
 msgid "Documenting your scripts"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:185
+#: ../../source/docs/user_manual/processing/scripts.rst:314
 msgid ""
-"As in the case of models, you can create additional documentation for "
-"your script, to explain what they do and how to use them. In the script "
-"editing dialog you will find a **[Edit script help]** button. Click on it"
-" and it will take you to the help editing dialog. Check the chapter about"
-" the graphical modeler to find out more about this dialog and how to use "
-"it."
+"You can document your scripts by overloading the :meth:`helpString() "
+"<qgis.core.QgsProcessingAlgorithm.helpString>` and :meth:`helpUrl() "
+"<qgis.core.QgsProcessingAlgorithm.helpUrl>` methods of "
+":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:191
+#: ../../source/docs/user_manual/processing/scripts.rst:320
+msgid "Flags"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:322
 msgid ""
-"Help files are saved in the same folder as the script itself, adding the "
-":file:`.help` extension to the filename. Note that you can edit your "
-"script's help before saving it for the first time. If you later close the"
-" script editing dialog without saving the script (i.e. you discard it), "
-"the help content you wrote will be lost. If your script was already saved"
-" and is associated with a filename, saving is done automatically."
+"You can override the :meth:`flags "
+"<qgis.core.QgsProcessingAlgorithm.flags>` method of "
+":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>` to "
+"tell QGIS more about your algorithm. You can for instance tell QGIS that "
+"the script shall be hidden from the modeler, that it can be canceled, "
+"that it is not thread safe, and more."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:200
-msgid "Example scripts"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:202
+#: ../../source/docs/user_manual/processing/scripts.rst:330
 msgid ""
-"Several examples are available in the on-line collection of scripts, "
-"which you can access by selecting the *Get script from on-line script "
-"collection* tool under the *Scripts/tools* entry in the toolbox."
+"By default, Processing runs algorithms in a separate thread in order to "
+"keep QGIS responsive while the processing task runs. If your algorithm is"
+" regularly crashing, you are probably using API calls which are not safe "
+"to do in a background thread. Try returning the "
+"QgsProcessingAlgorithm.FlagNoThreading flag from your algorithm's flags()"
+" method to force Processing to run your algorithm in the main thread "
+"instead."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:212
-msgid "Processing Get Script"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:214
-msgid ""
-"Please, check them to see real examples of how to create algorithms using"
-" the processing framework classes. You can right-click on any script "
-"algorithm and select :guilabel:`Edit script` to edit its code or just to "
-"see it."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing/scripts.rst:220
+#: ../../source/docs/user_manual/processing/scripts.rst:339
 msgid "Best practices for writing script algorithms"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:222
+#: ../../source/docs/user_manual/processing/scripts.rst:341
 msgid ""
 "Here's a quick summary of ideas to consider when creating your script "
-"algorithms and, especially, if you want to share with other QGIS users. "
-"Following these simple rules will ensure consistency across the different"
-" Processing elements such as the toolbox, the modeler or the batch "
-"processing interface."
+"algorithms and, especially, if you want to share them with other QGIS "
+"users. Following these simple rules will ensure consistency across the "
+"different Processing elements such as the toolbox, the modeler or the "
+"batch processing interface."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:227
+#: ../../source/docs/user_manual/processing/scripts.rst:347
 msgid ""
 "Do not load resulting layers. Let Processing handle your results and load"
 " your layers if needed."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:229
-msgid ""
-"Always declare the outputs your algorithm creates. Avoid things such as "
-"declaring one output and then using the destination filename set for that"
-" output to create a collection of them. That will break the correct "
-"semantics of the algorithm and make it impossible to use it safely in the"
-" modeler. If you have to write an algorithm like that, make sure you add "
-"the ``##nomodeler`` tag."
+#: ../../source/docs/user_manual/processing/scripts.rst:349
+msgid "Always declare the outputs your algorithm creates."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:234
+#: ../../source/docs/user_manual/processing/scripts.rst:350
 msgid ""
 "Do not show message boxes or use any GUI element from the script. If you "
-"want to communicate with the user, use the ``setInfo()`` method or throw "
-"an ``GeoAlgorithmExecutionException``"
+"want to communicate with the user, use the methods of the feedback object"
+" (:class:`QgsProcessingFeedback <qgis.core.QgsProcessingFeedback>`) or "
+"throw a :class:`QgsProcessingException "
+"<qgis.core.QgsProcessingException>`."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:237
+#: ../../source/docs/user_manual/processing/scripts.rst:356
 msgid ""
-"As a rule of thumb, do not forget that your algorithm might be executed "
-"in a context other than the Processing toolbox."
+"There are already many processing algorithms available in QGIS. You can "
+"find code on "
+"https://github.com/qgis/QGIS/tree/release-3_4/python/plugins/processing/algs/qgis."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:242
-msgid "Pre- and post-execution script hooks"
-msgstr ""
+#~ msgid "|updatedisclaimer|"
+#~ msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:244
-msgid ""
-"Scripts can also be used to set pre- and post-execution hooks that are "
-"run before and after an algorithm is run. This can be used to automate "
-"tasks that should be performed whenever an algorithm is executed."
-msgstr ""
+#~ msgid "Writing new Processing algorithms as python scripts"
+#~ msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:248
-msgid ""
-"The syntax is identical to the syntax explained above, but an additional "
-"global variable named ``alg`` is available, representing the algorithm "
-"that has just been (or is about to be) executed."
-msgstr ""
+#~ msgid ""
+#~ "You can create your own algorithms "
+#~ "by writing the corresponding Python code"
+#~ " and adding a few extra lines "
+#~ "to supply additional information needed "
+#~ "to define the semantics of the "
+#~ "algorithm. You can find a "
+#~ ":guilabel:`Create new script` menu under "
+#~ "the :guilabel:`Tools` group in the "
+#~ ":guilabel:`Script` algorithms block of the "
+#~ "toolbox. Double-click on it to "
+#~ "open the script edition dialog. That's"
+#~ " where you should type your code. "
+#~ "Saving the script from there in "
+#~ "the :file:`scripts` folder (the default "
+#~ "one when you open the save file"
+#~ " dialog), with :file:`.py` extension, will"
+#~ " automatically create the corresponding "
+#~ "algorithm."
+#~ msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:252
-msgid ""
-"In the :guilabel:`General` group of the processing config dialog you will"
-" find two entries named :guilabel:`Pre-execution script file` and "
-":guilabel:`Post-execution script file` where the filename of the scripts "
-"to be run in each case can be entered."
-msgstr ""
+#~ msgid ""
+#~ "The name of the algorithm (the one"
+#~ " you will see in the toolbox) "
+#~ "is created from the filename, removing"
+#~ " its extension and replacing underscores"
+#~ " with blank spaces."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Let's have the following code, which "
+#~ "calculates the Topographic Wetness Index "
+#~ "(TWI) directly from a DEM"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As you can see, it involves 3 "
+#~ "algorithms, all of them coming from "
+#~ "SAGA. The last one of them "
+#~ "calculates the TWI, but it needs a"
+#~ " slope layer and a flow accumulation"
+#~ " layer. We do not have these, "
+#~ "but since we have the DEM, we "
+#~ "can calculate them by calling the "
+#~ "corresponding SAGA algorithms."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The part of the code where this"
+#~ " processing takes place is not "
+#~ "difficult to understand if you have "
+#~ "read the previous chapter. The first "
+#~ "lines, however, need some additional "
+#~ "explanation. They provide the information "
+#~ "that is needed to turn your code"
+#~ " into an algorithm that can be "
+#~ "run from any of the GUI "
+#~ "components, like the toolbox or the "
+#~ "graphical modeler."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "These lines start with a double "
+#~ "Python comment symbol (``##``) and have"
+#~ " the following structure"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Here is a list of all the "
+#~ "parameter types that are supported in"
+#~ " processing scripts, their syntax and "
+#~ "some examples."
+#~ msgstr ""
+
+#~ msgid "``raster``. A raster layer"
+#~ msgstr ""
+
+#~ msgid "``vector``. A vector layer"
+#~ msgstr ""
+
+#~ msgid "``table``. A table"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``number``. A numerical value. A default"
+#~ " value must be provided. For "
+#~ "instance, ``depth=number 2.4``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``string``. A text string. As in "
+#~ "the case of numerical values, a "
+#~ "default value must be added. For "
+#~ "instance, ``name=string Victor``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``longstring``. Same as string, but a"
+#~ " larger text box will be shown, "
+#~ "so it is better suited for long"
+#~ " strings, such as for a script "
+#~ "expecting a small code snippet."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``boolean``. A boolean value. Add "
+#~ "``True`` or ``False`` after it to "
+#~ "set the default value. For example, "
+#~ "``verbose=boolean True``."
+#~ msgstr ""
+
+#~ msgid "``multiple raster``. A set of input raster layers."
+#~ msgstr ""
+
+#~ msgid "``multiple vector``. A set of input vector layers."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``field``. A field in the attributes "
+#~ "table of a vector layer. The name"
+#~ " of the layer has to be added"
+#~ " after the ``field`` tag. For "
+#~ "instance, if you have declared a "
+#~ "vector input with ``mylayer=vector``, you "
+#~ "could use ``myfield=field mylayer`` to "
+#~ "add a field from that layer as "
+#~ "parameter."
+#~ msgstr ""
+
+#~ msgid "``extent``. A spatial extent defined by xmin, xmax, ymin, ymax"
+#~ msgstr ""
+
+#~ msgid "``folder``. A folder"
+#~ msgstr ""
+
+#~ msgid "``file``. A filename"
+#~ msgstr ""
+
+#~ msgid "``crs``. A Coordinate Reference System"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``selection``. A dropdown menu that "
+#~ "allows the user to select from a"
+#~ " pre-populated list. For example "
+#~ "``units=selection sq_km;sq_miles;sq_degrees``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``name``. Name of the script. This "
+#~ "will be displayed as the algorithm "
+#~ "name in the processing toolbox. For "
+#~ "example ``My Algorithm Name=name``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``group``. Folder name where the script"
+#~ " will appear in the Processing "
+#~ "Toolbox. For Example, adding ``Utils=groups``"
+#~ " will put the script within a "
+#~ "``Utils`` folder within Scripts."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The parameter name is the name "
+#~ "that will be shown to the user "
+#~ "when executing the algorithm, and also"
+#~ " the variable name to use in "
+#~ "the script code. The value entered "
+#~ "by the user for that parameter "
+#~ "will be assigned to a variable "
+#~ "with that name."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When showing the name of the "
+#~ "parameter to the user, the name "
+#~ "will be edited to improve its "
+#~ "appearance, replacing underscores with spaces."
+#~ " So, for instance, if you want "
+#~ "the user to see a parameter named"
+#~ " ``A numerical value``, you can use"
+#~ " the variable name ``A_numerical_value``."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Layers and tables values are strings "
+#~ "containing the filepath of the "
+#~ "corresponding object. To turn them into"
+#~ " a QGIS object, you can use the"
+#~ " ``processing.getObjectFromUri()`` function. Multiple"
+#~ " inputs also have a string value, "
+#~ "which contains the filepaths to all "
+#~ "selected objects, separated by semicolons "
+#~ "(``;``)."
+#~ msgstr ""
+
+#~ msgid "Outputs are defined in a similar manner, using the following tags:"
+#~ msgstr ""
+
+#~ msgid "``output raster``"
+#~ msgstr ""
+
+#~ msgid "``output vector``"
+#~ msgstr ""
+
+#~ msgid "``output table``"
+#~ msgstr ""
+
+#~ msgid "``output html``"
+#~ msgstr ""
+
+#~ msgid "``output file``"
+#~ msgstr ""
+
+#~ msgid "``output number``"
+#~ msgstr ""
+
+#~ msgid "``output string``"
+#~ msgstr ""
+
+#~ msgid "``output extent``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The value assigned to the output "
+#~ "variables is always a string with "
+#~ "a filepath. It will correspond to "
+#~ "a temporary filepath in case the "
+#~ "user has not entered any output "
+#~ "filename."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In addition to the tags for "
+#~ "parameters and outputs, you can also "
+#~ "define the group under which the "
+#~ "algorithm will be shown, using the "
+#~ "``group`` tag."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The last tag that you can use "
+#~ "in your script header is "
+#~ "``##nomodeler``. Use that when you do"
+#~ " not want your algorithm to be "
+#~ "shown in the modeler window. This "
+#~ "should be used for algorithms that "
+#~ "do not have a clear syntax (for"
+#~ " instance, if the number of layers"
+#~ " to be created is not known in"
+#~ " advance, at design time), which make"
+#~ " them unsuitable for the graphical "
+#~ "modeler"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When you declare an output representing"
+#~ " a layer (raster, vector or table),"
+#~ " the algorithm will try to add "
+#~ "it to QGIS once it is finished."
+#~ " That is the reason why, although "
+#~ "the ``runalg()`` method does not load"
+#~ " the layers it produces, the final"
+#~ " *TWI* layer will be loaded, since"
+#~ " it is saved to the file "
+#~ "entered by the user, which is the"
+#~ " value of the corresponding output."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Do not use the ``load()`` method "
+#~ "in your script algorithms, but just "
+#~ "when working with the console line. "
+#~ "If a layer is created as output"
+#~ " of an algorithm, it should be "
+#~ "declared as such. Otherwise, you will"
+#~ " not be able to properly use "
+#~ "the algorithm in the modeler, since "
+#~ "its syntax (as defined by the tags"
+#~ " explained above) will not match what"
+#~ " the algorithm really creates."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Hidden outputs (numbers and strings) do"
+#~ " not have a value. Instead, it "
+#~ "is you who has to assign a "
+#~ "value to them. To do so, just "
+#~ "set the value of a variable with"
+#~ " the name you used to declare "
+#~ "that output. For instance, if you "
+#~ "have used this declaration,"
+#~ msgstr ""
+
+#~ msgid "the following line will set the value of the output to 5:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If your algorithm takes a long "
+#~ "time to process, it is a good "
+#~ "idea to inform the user. You have"
+#~ " a global named ``progress`` available, "
+#~ "with two available methods: ``setText(text)``"
+#~ " and ``setPercentage(percent)`` to modify "
+#~ "the progress text and the progress "
+#~ "bar."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you have to provide some "
+#~ "information to the user, not related "
+#~ "to the progress of the algorithm, "
+#~ "you can use the ``setInfo(text)`` "
+#~ "method, also from the ``progress`` "
+#~ "object."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If your script has some problem, "
+#~ "the correct way of propagating it "
+#~ "is to raise an exception of type"
+#~ " ``GeoAlgorithmExecutionException()``. You can "
+#~ "pass a message as argument to the"
+#~ " constructor of the exception. Processing"
+#~ " will take care of handling it "
+#~ "and communicating with the user, "
+#~ "depending on where the algorithm is "
+#~ "being executed from (toolbox, modeler, "
+#~ "Python console...)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As in the case of models, you "
+#~ "can create additional documentation for "
+#~ "your script, to explain what they "
+#~ "do and how to use them. In "
+#~ "the script editing dialog you will "
+#~ "find a **[Edit script help]** button."
+#~ " Click on it and it will take"
+#~ " you to the help editing dialog. "
+#~ "Check the chapter about the graphical"
+#~ " modeler to find out more about "
+#~ "this dialog and how to use it."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Help files are saved in the same"
+#~ " folder as the script itself, adding"
+#~ " the :file:`.help` extension to the "
+#~ "filename. Note that you can edit "
+#~ "your script's help before saving it "
+#~ "for the first time. If you later"
+#~ " close the script editing dialog "
+#~ "without saving the script (i.e. you "
+#~ "discard it), the help content you "
+#~ "wrote will be lost. If your script"
+#~ " was already saved and is associated"
+#~ " with a filename, saving is done "
+#~ "automatically."
+#~ msgstr ""
+
+#~ msgid "Example scripts"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Several examples are available in the"
+#~ " on-line collection of scripts, which"
+#~ " you can access by selecting the "
+#~ "*Get script from on-line script "
+#~ "collection* tool under the *Scripts/tools* "
+#~ "entry in the toolbox."
+#~ msgstr ""
+
+#~ msgid "Processing Get Script"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Please, check them to see real "
+#~ "examples of how to create algorithms "
+#~ "using the processing framework classes. "
+#~ "You can right-click on any script"
+#~ " algorithm and select :guilabel:`Edit "
+#~ "script` to edit its code or just"
+#~ " to see it."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Here's a quick summary of ideas to"
+#~ " consider when creating your script "
+#~ "algorithms and, especially, if you want"
+#~ " to share with other QGIS users. "
+#~ "Following these simple rules will ensure"
+#~ " consistency across the different "
+#~ "Processing elements such as the toolbox,"
+#~ " the modeler or the batch processing"
+#~ " interface."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Always declare the outputs your "
+#~ "algorithm creates. Avoid things such as"
+#~ " declaring one output and then using"
+#~ " the destination filename set for "
+#~ "that output to create a collection "
+#~ "of them. That will break the "
+#~ "correct semantics of the algorithm and"
+#~ " make it impossible to use it "
+#~ "safely in the modeler. If you have"
+#~ " to write an algorithm like that, "
+#~ "make sure you add the ``##nomodeler``"
+#~ " tag."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Do not show message boxes or use"
+#~ " any GUI element from the script. "
+#~ "If you want to communicate with "
+#~ "the user, use the ``setInfo()`` method"
+#~ " or throw an ``GeoAlgorithmExecutionException``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As a rule of thumb, do not "
+#~ "forget that your algorithm might be "
+#~ "executed in a context other than "
+#~ "the Processing toolbox."
+#~ msgstr ""
+
+#~ msgid "Pre- and post-execution script hooks"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Scripts can also be used to set"
+#~ " pre- and post-execution hooks that"
+#~ " are run before and after an "
+#~ "algorithm is run. This can be used"
+#~ " to automate tasks that should be "
+#~ "performed whenever an algorithm is "
+#~ "executed."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The syntax is identical to the "
+#~ "syntax explained above, but an "
+#~ "additional global variable named ``alg`` "
+#~ "is available, representing the algorithm "
+#~ "that has just been (or is about"
+#~ " to be) executed."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the :guilabel:`General` group of the"
+#~ " processing config dialog you will "
+#~ "find two entries named :guilabel:`Pre-"
+#~ "execution script file` and :guilabel:`Post-"
+#~ "execution script file` where the "
+#~ "filename of the scripts to be run"
+#~ " in each case can be entered."
+#~ msgstr ""
 
