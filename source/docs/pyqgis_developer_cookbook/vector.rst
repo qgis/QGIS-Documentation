@@ -751,6 +751,8 @@ categorizedSymbol  :class:`QgsCategorizedSymbolRenderer <qgis.core.QgsCategorize
 graduatedSymbol    :class:`QgsGraduatedSymbolRenderer  <qgis.core.QgsGraduatedSymbolRenderer>`    Renders features using a different symbol for each range of values
 =================  ============================================================================== ===================================================================
 
+|
+
 There might be also some custom renderer types, so never make an assumption
 there are just these types. You can query the application's :class:`QgsRendererRegistry <qgis.core.QgsRendererRegistry>`
 to find out currently available renderers:
