@@ -116,8 +116,9 @@ enumeration.
   gPolygon.wkbType() == QgsWkbTypes.MultiPolygon
   # output: False
 
-As an alternative, one can use :meth:`wkbType() <qgis.core.QgsGeometry.wkbType>`
-method which returns a value from :class:`QgsWkbTypes.GeometryType <qgis.core.QgsWkbTypes>` enumeration.
+As an alternative, one can use :meth:`type() <qgis.core.QgsGeometry.type>`
+method which returns a value from :class:`QgsWkbTypes.GeometryType <qgis.core.QgsWkbTypes>`
+enumeration.
 
 You can use the :meth:`displayString() <qgis.core.QgsWkbTypes.displayString>`
 function to get a human readable geometry type.
@@ -126,7 +127,7 @@ function to get a human readable geometry type.
 
   gPnt.wkbType()
   # output: 1
-  QgsWkbTypes.displayString(int(gPnt.wkbType()))
+  QgsWkbTypes.displayString(gPnt.wkbType())
   # output: 'Point'
 
 There is also a helper function
@@ -145,7 +146,7 @@ vector type. Here's an example on how to use these accessors:
   # output: [[<QgsPointXY: POINT(1 1)>, <QgsPointXY: POINT(2 2)>, <QgsPointXY: POINT(2 1)>, <QgsPointXY: POINT(1 1)>]]
 
 .. note:: The tuples (x,y) are not real tuples, they are :class:`QgsPoint <qgis.core.QgsPoint>`
-   objects, the values are accessible with :meth:`x() <qgis.core.QgsPoint.x>` ()
+   objects, the values are accessible with :meth:`x() <qgis.core.QgsPoint.x>`
    and :meth:`y() <qgis.core.QgsPoint.y>` methods.
 
 For multipart geometries there are similar accessor functions:
@@ -242,7 +243,7 @@ methods to analyze and transform vector data. Here are some links to the code
 of a few of them.
 
 * Distance and area using the :class:`QgsDistanceArea <qgis.core.QgsDistanceArea>` class:
-  see `Distance matrix algorithm <https://github.com/qgis/QGIS/blob/master/python/plugins/processing/algs/qgis/PointDistance.py>`_
+  `Distance matrix algorithm <https://github.com/qgis/QGIS/blob/master/python/plugins/processing/algs/qgis/PointDistance.py>`_
 * `Lines to polygons algorithm <https://github.com/qgis/QGIS/blob/master/python/plugins/processing/algs/qgis/LinesToPolygons.py>`_
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
