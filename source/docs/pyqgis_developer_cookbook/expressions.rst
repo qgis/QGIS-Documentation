@@ -10,6 +10,7 @@ The code snippets on this page needs the following imports if you're outside the
       QgsExpression,
       QgsExpressionContext,
       QgsFeature,
+      QgsFeatureRequest,
       QgsField,
       QgsFields,
       QgsVectorLayer
@@ -145,22 +146,6 @@ matches a predicate.
 
 .. testcode::
 
-   def where(layer, exp):
-
-      exp = QgsExpression(exp)
-      if exp.hasParserError():
-         raise Exception(exp.parserErrorString())
-      context = QgsExpressionContext()
-      context.setFields(layer.fields())
-      exp.prepare(context)
-      for feature in layer.getFeatures():
-         context.setFeature(feature)
-         value = exp.evaluate(context)
-         if exp.hasEvalError():
-            raise ValueError(exp.evalErrorString())
-         if bool(value):
-            yield feature
-
    layer = QgsVectorLayer("Point?field=Test:integer",
                               "addfeat", "memory")
 
@@ -172,9 +157,12 @@ matches a predicate.
        assert(layer.addFeature(feature))
    layer.commitChanges()
 
+   expression = 'Test >= 3'
+   request = QgsFeatureRequest().setFilterExpression(expression)
+
    matches = 0
-   for f in where(layer, 'Test >= 3'):
-      matches+=1
+   for f in layer.getFeatures(request):
+      matches += 1
 
    assert(matches == 7)
 
