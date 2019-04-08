@@ -23,8 +23,6 @@ The code snippets on this page needs the following imports if you're outside the
 Expressions, Filtering and Calculating Values
 *********************************************
 
-.. warning:: |outofdate|
-
 .. contents::
    :local:
 
@@ -185,5 +183,4 @@ matches a predicate.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
