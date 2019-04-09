@@ -45,7 +45,7 @@ master_doc = 'docs/index'
 
 # General information about the project.
 project = u'QGIS Documentation Project'
-copyright = u'2014, QGIS project'
+copyright = u'2002-now, QGIS project'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
