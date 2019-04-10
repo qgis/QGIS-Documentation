@@ -19,7 +19,7 @@ All algorithms (including models) can be executed as a batch process. That
 is, they can be executed using not just a single set of inputs, but several of them,
 executing the algorithm as many times as needed. This is useful when processing
 large amounts of data, since it is not necessary to launch the algorithm many
-times from the toolbox. testing changes.
+times from the toolbox.
 
 To execute an algorithm as a batch process, right-click on its name in the toolbox
 and select the :guilabel:`Execute as batch process` option in the pop-up menu
