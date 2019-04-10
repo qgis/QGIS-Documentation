@@ -113,8 +113,8 @@ enumeration.
   gPolygon.wkbType() == QgsWkbTypes.MultiPolygon
   # output: False
 
-As an alternative, one can use :meth:`type() <qgis.core.QgsGeometry.type>`
-method which returns a value from :class:`QgsWkbTypes.GeometryType <qgis.core.QgsWkbTypes>`
+As an alternative, one can use the :meth:`type() <qgis.core.QgsGeometry.type>`
+method which returns a value from the :class:`QgsWkbTypes.GeometryType <qgis.core.QgsWkbTypes>`
 enumeration.
 
 You can use the :meth:`displayString() <qgis.core.QgsWkbTypes.displayString>`
