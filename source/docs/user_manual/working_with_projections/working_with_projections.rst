@@ -239,6 +239,17 @@ only two parameters to define a user CRS:
 To create a new CRS, click the |signPlus| :sup:`Add new CRS` button and
 enter a descriptive name and the CRS parameters.
 
+Integrate a NTv2-transformation in QGIS 
+""""""""""""""""""""""""""""""""""""""""""""""
+To integrate a NTv2 transformation file in QGIS you need one more step: 
+
+1. Add the NTv2 file (.gsb) in the CRS folder of QGIS (e.g. C:\OSGeo4W64\share\proj for windows users)
+2. Add in the proj.4 definition the parameter **nadgrids** (+nadgrids=namefile.gsb)
+
+
+.. figure:: img/nadgrids_example.PNG
+   :align: center
+
 Note that the :guilabel:`Parameters` must begin with a ``+proj=`` block,
 to represent the new coordinate reference system.
 
