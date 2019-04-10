@@ -239,7 +239,7 @@ only two parameters to define a user CRS:
 To create a new CRS, click the |signPlus| :sup:`Add new CRS` button and
 enter a descriptive name and the CRS parameters.
 
-Integrate a NTv2-transformation in QGIS 
+Integrate an NTv2-transformation in QGIS 
 """"""""""""""""""""""""""""""""""""""""""""""
 To integrate a NTv2 transformation file in QGIS you need one more step: 
 
