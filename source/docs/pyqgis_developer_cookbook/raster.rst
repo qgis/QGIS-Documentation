@@ -164,7 +164,7 @@ red band (1) and green band (2):
 In case only one band is necessary for visualization of the raster, single band
 drawing can be chosen, either gray levels or pseudocolor.
 
-As we did before, we have to use meth:`triggerRepaint() <qgis.core.QgsMapLayer.triggerRepaint>`
+As we did before, we have to use :meth:`triggerRepaint() <qgis.core.QgsMapLayer.triggerRepaint>`
 to update the map and see the results:
 
 .. code-block:: python
