@@ -1,5 +1,3 @@
-.. only:: html
-
 
 .. _vector:
 
@@ -750,6 +748,8 @@ categorizedSymbol  :class:`QgsCategorizedSymbolRenderer <qgis.core.QgsCategorize
 graduatedSymbol    :class:`QgsGraduatedSymbolRenderer  <qgis.core.QgsGraduatedSymbolRenderer>`    Renders features using a different symbol for each range of values
 =================  ============================================================================== ===================================================================
 
+|
+
 There might be also some custom renderer types, so never make an assumption
 there are just these types. You can query the application's :class:`QgsRendererRegistry <qgis.core.QgsRendererRegistry>`
 to find out currently available renderers:
@@ -1339,7 +1339,6 @@ of the metadata class. The icon can be loaded from a file (as shown above) or
 can be loaded from a `Qt resource <https://doc.qt.io/qt-5/resources.html>`_
 (PyQt5 includes .qrc compiler for Python).
 
-.. warning:: |outofdate|
 
 Further Topics
 ==============
@@ -1352,14 +1351,4 @@ Further Topics
 * working with color ramps (:class:`QgsColorRamp <qgis.core.QgsColorRamp>`)
 * exploring symbol layer and renderer registries
 
-
 .. _supported formats by OGR: https://www.gdal.org/ogr_formats.html
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
