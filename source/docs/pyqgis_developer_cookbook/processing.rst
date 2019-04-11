@@ -111,4 +111,4 @@ You can create a folder :file:`processing_provider` with three files in it:
   https://github.com/qgis/QGIS/blob/master/python/plugins/processing/script/ScriptTemplate.py
 
 Now you can reload your plugin in QGIS and you should see your example script in
-the Processing toolbox and modeller.
+the Processing toolbox and modeler.
