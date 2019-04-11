@@ -49,7 +49,7 @@ You can set a duration to show it for a limited time
 
    QGIS Message bar with timer
 
-The examples above show an error bar, but the ``level`` parameter can be used
+The example above shows an error bar, but the ``level`` parameter can be used
 to creating warning messages or info messages, using the
 :class:`Qgis.MessageLevel <qgis.core.Qgis.MessageLevel>` enumeration. You can use up to 4 different levels:
 
