@@ -1351,3 +1351,4 @@ Further Topics
 * working with color ramps (:class:`QgsColorRamp <qgis.core.QgsColorRamp>`)
 * exploring symbol layer and renderer registries
 
+.. _supported formats by OGR: https://www.gdal.org/ogr_formats.html
