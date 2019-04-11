@@ -43,7 +43,7 @@ properly work with LAStools:
   instructions in `this tutorial <https://rapidlasso.com/2013/09/29/how-to-install-lastools-toolbox-in-qgis/>`_.
 
 Now you need to install the LAStools to your computer. Get the newest
-*lastools* version `here <http://lastools.org/download/lastools.zip>`_
+*lastools* version `here <https://lastools.github.io/download/LAStools.zip>`_
 and extract the content of the :file:`lastools.zip` file into a folder in your
 system, for example, :file:`C:\\lastools\\`. The path to the :file:`lastools`
 folder cannot have spaces or special characters.
