@@ -49,7 +49,7 @@ Here are some definition of the most common objects treated in this chapter.
     Authentication DB
 
   Authentication Database
-    A :term:`Master Password` crypted sqlite db :file`qgis-auth.db`
+    A :term:`Master Password` crypted sqlite db :file:`qgis-auth.db`
     where :term:`Authentication Configuration` are stored. e.g user/password,
     personal certificates and keys, Certificate Authorities
 
