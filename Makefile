@@ -185,17 +185,6 @@ pdf: html
 full:
 	@-if [ $(LANG) = "en" ]; then \
 		echo; \
-# 20190412 I really do not know what the preferred lang code was, so keep it to current one in Transifex and QGIS-Desktop
-#	elif [ $(LANG) = "zh_CN" ]; then \
-#		echo; \
-#		echo Pulling zh-Hans from transifex but renaming it to zh_CN; \
-#		tx pull --minimum-perc=1 --skip -f -l zh-Hans; \
-#		mv i18n/zh-Hans i18n/zh_CN; \
-#	elif [ $(LANG) = "zh_TW" ]; then \
-#		echo; \
-#		echo Pulling zh-Hant from transifex but renaming it to zh_TW; \
-#		tx pull --minimum-perc=1 --skip -f -l zh-Hant; \
-#		mv i18n/zh-Hant i18n/zh_TW; \
 	else \
 		echo; \
 		echo Pulling $$LANG from transifex; \
