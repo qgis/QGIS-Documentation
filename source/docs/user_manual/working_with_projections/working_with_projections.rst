@@ -51,8 +51,8 @@ specification of the CRS. This projection file has the same base name as the
 :file:`alaska.prj`.
 
 Whenever you select a new CRS, the layer units will automatically be
-changed in the :guilabel:`General` tab of the |options|
-:guilabel:`Project Properties` dialog under the :guilabel:`Project` menu.
+changed in the :guilabel:`General` tab of the
+:guilabel:`Properties` dialog under the :guilabel:`Project` menu.
 
 .. index:: CRS
    single: CRS; Default CRS
