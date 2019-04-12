@@ -231,9 +231,14 @@ authentication database and configurations:
 * **Input master password**:
   
   * Opens the master password input dialog, independent of performing any
-    authentication database command. Clear cached master password
-  * Unsets the master password if it has been set via input dialog. Reset master
-    password
+    authentication database command.
+    
+* **Clear cached master password**:
+
+  * Unsets the master password if it has been set via input dialog.
+  
+* **Reset master password**:
+
   * Opens a dialog to change the master password (the current password
     must be known) and optionally back up the current database.
 
