@@ -24,8 +24,8 @@
   <option value="ru" title="{{ _('Russian') }}">Русский</option>
   <option value="tr" title="{{ _('Turkish') }}">Turkish</option>
   <!--<option value="uk" title="{{ _('Ukrainian') }}">Українська</option>-->
-  <!--<option value="zh_Hans" title="{{ _('Chinese (Simplified)') }}">中文</option>-->
-  <option value="zh_Hant" title="{{ _('Chinese (traditional)') }}">Chinese (traditional)</option>
+  <!--<option value="zh-Hans" title="{{ _('Chinese (Simplified)') }}">中文</option>-->
+  <option value="zh-Hant" title="{{ _('Chinese (traditional)') }}">Chinese (traditional)</option>
 </select>
 
 <script>
@@ -39,17 +39,17 @@
       currentPage = pages.join('/') + '/';
     }
     $(document).ready(function(){
-        var search = new RegExp('\/[a-zA-Z_]{2,8}\/'+ currentPage, 'gi');
+        var search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
         var langPlusPage = window.location.href.match(search);
         // it's possible this is the index.html page called without 'index.html', try without the currentPage
         if (langPlusPage==undefined){
-            search = new RegExp('\/[a-zA-Z_]{2,8}\/$', 'gi');
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/$', 'gi');
             langPlusPage = window.location.href.match(search);
         }
         // it's possible this is an index.html page called without 'index.html', try removing index.html
         if (langPlusPage==undefined){
             currentPage = currentPage.replace('index.html','')
-            search = new RegExp('\/[a-zA-Z_]{2,8}\/'+ currentPage, 'gi');
+            search = new RegExp('\/[a-zA-Z_-]{2,8}\/'+ currentPage, 'gi');
             langPlusPage = window.location.href.match(search);
         }
         // still no langPlugPage: stop, because the language swicher will misbehave
