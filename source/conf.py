@@ -542,3 +542,4 @@ def start_qgis():
     sys.stdout = sys.stderr
 '''
 doctest_test_doctest_blocks = ''
+exclude_patterns += ['docs/user_manual/processing_algs/*']
