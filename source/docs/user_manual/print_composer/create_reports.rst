@@ -127,7 +127,7 @@ For now we’ll add a Field Group to our report. At its
 most basic level, you can think of a :guilabel:`Field Group Section` as the equivalent
 of a :ref:`print atlas <atlas_generation>`. You select a layer to iterate over,
 and the report will insert a section for each feature found. Selecting the new
-::guilabel:`Field Group Section` section reveals a number of new related settings:
+:guilabel:`Field Group Section` section reveals a number of new related settings:
 
 .. figure:: img/field_group.png
    :align: center
