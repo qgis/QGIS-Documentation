@@ -265,7 +265,7 @@ choose whatever name you like (``coco.bango``, ``super.duper.training``,
 * Let's set up the ``myhost`` name to point to the localhost IP by adding
   ``127.0.0.1 x`` to the :file:`/etc/hosts` with the following command:
   ``sh -c "echo '127.0.0.1 myhost' >> /etc/hosts"`` or by manually
-  editing the file with ``sudo gedit /etc/hosts``.
+  editing the file with ``gedit /etc/hosts``.
 * We can check that ``myhost`` points to the localhost by running in the terminal
   the  ``ping myhost`` command which should output:
 
