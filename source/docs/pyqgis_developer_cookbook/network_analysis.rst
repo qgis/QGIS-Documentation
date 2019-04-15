@@ -58,8 +58,8 @@ programming pattern. A graph is constructed using a so-called Director.
 There is only one Director for now: `QgsLineVectorLayerDirector <https://qgis.org/api/classQgsLineVectorLayerDirector.html>`_.
 The director sets the basic settings that will be used to construct a graph
 from a line vector layer, used by the builder to create the graph. Currently, as
-in the case with the director, only one builder exists: `QgsGraphBuilder <https://qgis.org/api/classQgsGraphBuilder.html>`_,
-that creates `QgsGraph <https://qgis.org/api/classQgsGraph.html>`_ objects.
+in the case with the director, only one builder exists: :class:`QgsGraphBuilder <qgis.analysis.QgsGraphBuilder>`,
+that creates :class:`QgsGraph <qgis.analysis.QgsGraph>` objects.
 You may want to implement your own builders that will build a graphs compatible
 with such libraries as `BGL <https://www.boost.org/doc/libs/1_48_0/libs/graph/doc/index.html>`_
 or `NetworkX <https://networkx.lanl.gov/>`_.
@@ -137,8 +137,8 @@ And tell the director about this strategy
 
   director.addProperter(properter)
 
-Now we can use the builder, which will create the graph. The QgsGraphBuilder
-class constructor takes several arguments:
+Now we can use the builder, which will create the graph. The :class:`QgsGraphBuilder
+<qgis.analysis.QgsGraphBuilder>` class constructor takes several arguments:
 
 * crs --- coordinate reference system to use. Mandatory argument.
 * otfEnabled --- use "on the fly" reprojection or no. By default const:`True`
@@ -201,12 +201,15 @@ with the following properties:
 * if vertex B is reachable from vertex A, then the path from A to B is the
   single available path and it is optimal (shortest) on this graph
 
-To get the shortest path tree use the methods :func:`shortestTree` and
-:func:`dijkstra` of `QgsGraphAnalyzer <https://qgis.org/api/classQgsGraphAnalyzer.html>`_
-class. It is recommended to use method :func:`dijkstra` because it works
+To get the shortest path tree use the methods :meth:`shortestTree
+<qgis.analysis.QgsGraphAnalyzer.shortestTree>` and :meth:`dijkstra
+<qgis.analysis.QgsGraphAnalyzer.dijkstra>` of :class:`QgsGraphAnalyzer
+<qgis.analysis.QgsGraphAnalyzer>` class. It is recommended to use method
+:meth:`dijkstra <qgis.analysis.QgsGraphAnalyzer.dijkstra>` because it works
 faster and uses memory more efficiently.
 
-The :func:`shortestTree` method is useful when you want to walk around the
+The :meth:`shortestTree <qgis.analysis.QgsGraphAnalyzer.shortestTree>` method
+is useful when you want to walk around the
 shortest path tree. It always creates a new graph object (QgsGraph) and accepts
 three variables:
 
@@ -218,7 +221,8 @@ three variables:
 
   tree = QgsGraphAnalyzer.shortestTree(graph, startId, 0)
 
-The :func:`dijkstra` method has the same arguments, but returns two arrays.
+The :meth:`dijkstra <qgis.analysis.QgsGraphAnalyzer.dijkstra>` method has the
+same arguments, but returns two arrays.
 In the first array element i contains index of the incoming edge or -1 if there
 are no incoming edges. In the second array element i contains distance from
 the root of the tree to vertex i or DOUBLE_MAX if vertex i is unreachable
@@ -229,10 +233,13 @@ from the root.
   (tree, cost) = QgsGraphAnalyzer.dijkstra(graph, startId, 0)
 
 Here is some very simple code to display the shortest path tree using the graph
-created with the :func:`shortestTree` method (select linestring layer in TOC
-and replace coordinates with your own). **Warning**: use this code only as an
-example, it creates a lots of `QgsRubberBand <https://qgis.org/api/classQgsRubberBand.html>`_
-objects and may be slow on large data-sets.
+created with the :meth:`shortestTree <qgis.analysis.QgsGraphAnalyzer.shortestTree>`
+method (select linestring layer in :guilabel:`Layers` panel
+and replace coordinates with your own).
+
+.. warning:: Use this code only as an example, it creates a lot of
+  :class:`QgsRubberBand <qgis.gui.QgsRubberBand>` objects and may be slow on
+  large datasets.
 
 ::
 
@@ -267,7 +274,8 @@ objects and may be slow on large data-sets.
     rb.addPoint (tree.vertex(tree.arc(i).outVertex()).point())
     i = i + 1
 
-Same thing but using :func:`dijkstra` method
+Same thing but using :meth:`dijkstra <qgis.analysis.QgsGraphAnalyzer.dijkstra>`
+method
 
 ::
 
@@ -307,7 +315,8 @@ Finding shortest paths
 
 To find the optimal path between two points the following approach is used.
 Both points (start A and end B) are "tied" to the graph when it is built. Then
-using the methods :func:`shortestTree` or :func:`dijkstra` we build the
+using the methods :meth:`shortestTree <qgis.analysis.QgsGraphAnalyzer.shortestTree>`
+or :meth:`dijkstra <qgis.analysis.QgsGraphAnalyzer.dijkstra>` we build the
 shortest path tree with root in the start point A. In the same tree we also
 find the end point B and start to walk through the tree from point B to point
 A. The whole algorithm can be written as
@@ -328,7 +337,7 @@ be visited during traveling by this path.
 
 Here is the sample code for QGIS Python Console (you will need to select
 linestring layer in TOC and replace coordinates in the code with yours) that
-uses method :func:`shortestTree`
+uses method :meth:`shortestTree <qgis.analysis.QgsGraphAnalyzer.shortestTree>`
 
 ::
 
@@ -379,7 +388,8 @@ uses method :func:`shortestTree`
     for pnt in p:
       rb.addPoint(pnt)
 
-And here is the same sample but using :func:`dijkstra` method
+And here is the same sample but using :meth:`dijkstra
+<qgis.analysis.QgsGraphAnalyzer.dijkstra>` method
 
 ::
 
@@ -439,9 +449,10 @@ station. Which parts of city can a fire truck reach in 5 minutes? 10 minutes?
 15 minutes?". Answers to these questions are fire station's areas of
 availability.
 
-To find the areas of availability we can use method :func:`dijkstra` of the
-:class:`QgsGraphAnalyzer` class. It is enough to compare the elements of the
-cost array with a predefined value. If cost[i] is less than or equal to a
+To find the areas of availability we can use method :meth:`dijkstra
+<qgis.analysis.QgsGraphAnalyzer.dijkstra>` of the :class:`QgsGraphAnalyzer
+<qgis.analysis.QgsGraphAnalyzer>` class. It is enough to compare the elements of
+the cost array with a predefined value. If cost[i] is less than or equal to a
 predefined value, then vertex i is inside the area of availability, otherwise
 it is outside.
 

@@ -40,9 +40,9 @@ class. Instances of this class can be created in several different ways:
 
   QGIS uses three different IDs for every reference system:
 
-  * :const:`PostgisCrsId` --- IDs used within PostGIS databases.
-  * :const:`InternalCrsId` --- IDs internally used in QGIS database.
-  * :const:`EpsgCrsId` --- IDs assigned by the EPSG organization
+  * :attr:`InternalCrsId <qgis.core.QgsCoordinateReferenceSystem.InternalCrsId>` --- IDs internally used in QGIS database.
+  * :attr:`PostgisCrsId <qgis.core.QgsCoordinateReferenceSystem.PostgisCrsId>` --- IDs used within PostGIS databases.
+  * :attr:`EpsgCrsId <qgis.core.QgsCoordinateReferenceSystem.EpsgCrsId>` --- IDs assigned by the EPSG organization
 
   If not specified otherwise in second parameter, PostGIS SRID is used by default.
 
@@ -56,7 +56,7 @@ class. Instances of this class can be created in several different ways:
      crs = QgsCoordinateReferenceSystem(wkt)
      assert crs.isValid()
 
-* create invalid CRS and then use one of the :func:`create*` functions to
+* create invalid CRS and then use one of the ``create*`` functions to
   initialize it. In the following example we use Proj4 string to initialize the
   projection
 
@@ -67,12 +67,14 @@ class. Instances of this class can be created in several different ways:
      assert crs.isValid()
 
 It's wise to check whether creation (i.e. lookup in the database) of the CRS
-has been successful: :meth:`isValid() <qgis.core.QgsCoordinateReferenceSystem.isValid>` must return :const:`True`.
+has been successful: :meth:`isValid() <qgis.core.QgsCoordinateReferenceSystem.isValid>`
+must return ``True``.
 
 Note that for initialization of spatial reference systems QGIS needs to look up
 appropriate values in its internal database :file:`srs.db`. Thus in case you
 create an independent application you need to set paths correctly with
-:meth:`QgsApplication.setPrefixPath() <qgis.core.QgsApplication.setPrefixPath>` otherwise it will fail to find the
+:meth:`QgsApplication.setPrefixPath() <qgis.core.QgsApplication.setPrefixPath>`
+otherwise it will fail to find the
 database. If you are running the commands from QGIS python console or
 developing a plugin you do not care: everything is already set up for you.
 

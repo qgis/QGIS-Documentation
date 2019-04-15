@@ -222,12 +222,13 @@ beginning of the script similar to the following code:
 We begin by importing the :mod:`qgis.core` module and then configuring
 the prefix path. The prefix path is the location where QGIS is
 installed on your system. It is configured in the script by calling
-the ``setPrefixPath`` method. The second argument of ``setPrefixPath``
-is set to :const:`True`, which controls whether the default paths are
+the :meth:`setPrefixPath <qgis.core.QgsApplication.setPrefixPath>` method. The
+second argument of meth:`setPrefixPath <qgis.core.QgsApplication.setPrefixPath>`
+is set to ``True``, which controls whether the default paths are
 used.
 
 The QGIS install path varies by platform; the easiest way to find it
-for your your system is to use the :ref:`pythonconsole` from within
+for your system is to use the :ref:`pythonconsole` from within
 QGIS and look at the output from running
 ``QgsApplication.prefixPath()``.
 
@@ -247,7 +248,7 @@ Using PyQGIS in custom applications
 
 The only difference between :ref:`standalonescript` and a custom PyQGIS
 application is the second argument when instantiating the ``QgsApplication``.
-Pass :const:`True` instead of ``False`` to indicate that we plan to
+Pass ``True`` instead of ``False`` to indicate that we plan to
 use a GUI.
 
 ::

@@ -81,8 +81,9 @@ To query the current renderer:
     'singlebandgray'
 
 To set a renderer, use the :meth:`setRenderer <qgis.core.QgsRasterLayer.setRenderer>`
-method of :class:`QgsRasterLayer <qgis.core.QgsRasterLayer>`. There
-are a number of renderer classes (derived from :class:`QgsRasterRenderer`):
+method of :class:`QgsRasterLayer <qgis.core.QgsRasterLayer>`. There are a
+number of renderer classes (derived from :class:`QgsRasterRenderer
+<qgis.core.QgsRasterRenderer>`):
 
 * :class:`QgsMultiBandColorRenderer <qgis.core.QgsMultiBandColorRenderer>`
 * :class:`QgsPalettedRasterRenderer <qgis.core.QgsPalettedRasterRenderer>`
@@ -186,22 +187,18 @@ Query Values
 
 Raster values can be queried using the
 :meth:`sample <qgis.core.QgsRasterDataProvider.sample>` method of
-the :class:`QgsRasterDataProvider <qgis.core.QgsRasterDataProvider>`
-class.
+the :class:`QgsRasterDataProvider <qgis.core.QgsRasterDataProvider>` class.
 You have to specify a :class:`QgsPointXY <qgis.core.QgsPointXY>`
-and the band number of the raster layer you want to query.
-The method returns a tuple with the value and ``True`` or ``False``
-depending on the result:
+and the band number of the raster layer you want to query. The method returns a
+tuple with the value and ``True`` or ``False`` depending on the results:
 
 .. code-block:: python
 
     val, res = rlayer.dataProvider().sample(QgsPointXY(20.50, -34), 1)
 
-The second method is using the
-:meth:`identify <qgis.core.QgsRasterDataProvider.identify>` method
-that returns a
-:class:`QgsRasterIdentifyResult <qgis.core.QgsRasterIdentifyResult>`
-object.
+Another method to query raster values is using the :meth:`identify
+<qgis.core.QgsRasterDataProvider.identify>` method that returns a
+:class:`QgsRasterIdentifyResult <qgis.core.QgsRasterIdentifyResult>` object.
 
 .. code-block:: python
 
