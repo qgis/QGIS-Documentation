@@ -20,6 +20,7 @@ and print them or save them as image, PDF or SVG files.
    composer_items/index
    create_output
    create_reports
+   create_dynamic_layout
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
