@@ -403,6 +403,7 @@ Vertex tool
     workflow. This allows major improvements like taking profit of the advanced
     digitizing panel with the vertex tool while digitizing or editing objects of
     multiple layers at the same time.
+    
 
 For any editable vector layer, the
 |vertexToolActiveLayer| :sup:`Vertex tool (Current Layer)` provides manipulation
@@ -483,6 +484,17 @@ Red circles will appear when hovering vertices.
   selection can jump to the nearest vertex or line. You can use Advanced
   Digitizing Panel constraints for distance, angles, exact X Y location
   before the second click.
+  
+  Here you can use the snap-to-grid feature. Having activated the Remove duplicate nodes and set
+  a value for the Geometry precision in the layer properties, a grid appears on a zoom level
+  according to the Geometry precision.
+  
+  .. _figure_vertex_snap_to_grid:
+  
+  .. figure:: img/vertex_snap_to_grid.png
+     :align: center
+    
+     Selecting a vertex and moving the vertices to grid
 
 Each change made with the vertex  is stored as a separate entry in the
 :guilabel:`Undo` dialog. Remember that all operations support topological editing when
@@ -503,20 +515,16 @@ vertex in the map canvas, and vice versa. Simply change a coordinate in the tabl
 and your vertex position is updated. You can also select multiple rows and delete
 them altogether.
 
-.. note:: **Changed behavior in QGIS3**
-
-  In QGIS 2.x, the panel was opening each time the vertex tool was used which was
-  slow and confusing when editing big features. Now, just invoke it with a
-  right - click.
-
-  .. _figure_right_click_button_vertex_editor_panel:
-
-  .. figure:: img/vertex_editor_panel_contextual_button.png
-     :align: center
-
-     Button to open the vertex editor panel via right-click
-
-
+.. note:: **Changed behavior in QGIS 3.4**
+    
+   In earlier QGIS 3 versions, right click on a feature would bring up a small popup menu
+   that offered display of the vertex editor. Now, right click on a feature will immediately
+   show the vertex editor and lock this feature, thus disabling the editing of any other features.
+   While being locked, a feature is exclusive for editing: Selecting and moving of vertices and
+   segments by clicking or dragging is only possible for this feature. New vertices can only be
+   added to the locked feature. Also, the vertex editor panel now opens itself automatically upon
+   activating the vertex tool, and its position/docked state remembered across uses.
+  
 .. _figure_edit_vertex:
 
 .. figure:: img/vertex_editor_panel.png
