@@ -488,21 +488,12 @@ Red circles will appear when hovering vertices.
   a value for the Geometry precision in the layer properties, a grid appears on a zoom level
   according to the Geometry precision.
   
-  
-  .. _figure_select_vertex_snap_to_grid:
-  
-  .. figure:: img/select_vertex_snap_to_grid.png
-     :align: center
-  
-     Selecting a vertex
-  
-  
   .. _figure_vertex_snap_to_grid:
   
   .. figure:: img/vertex_snap_to_grid.png
      :align: center
     
-     Moving vertices to grid
+     Selecting a vertex and moving the vertices to grid
 
 Each change made with the vertex  is stored as a separate entry in the
 :guilabel:`Undo` dialog. Remember that all operations support topological editing when
