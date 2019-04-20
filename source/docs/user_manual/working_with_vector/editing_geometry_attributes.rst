@@ -478,8 +478,8 @@ Red circles will appear when hovering vertices.
   Digitizing Panel constraints for distance, angles, exact X Y location
   before the second click.
   
-  Here you can use the snap-to-grid feature. Having activated the Remove duplicate nodes and set
-  a value for the Geometry precision in the layer properties, a grid appears on a zoom level
+  Here you can use the snap-to-grid feature. Having set a value for the :ref:`geometry precision <digitizingmenu>`
+  in the layer properties, a grid appears on a zoom level
   according to the Geometry precision.
   
   .. _figure_vertex_snap_to_grid:
@@ -510,13 +510,11 @@ them altogether.
 
 .. note:: **Changed behavior in QGIS 3.4**
     
-   In earlier QGIS 3 versions, right click on a feature would bring up a small popup menu
-   that offered display of the vertex editor. Now, right click on a feature will immediately
-   show the vertex editor and lock this feature, thus disabling the editing of any other features.
-   While being locked, a feature is exclusive for editing: Selecting and moving of vertices and
-   segments by clicking or dragging is only possible for this feature. New vertices can only be
-   added to the locked feature. Also, the vertex editor panel now opens itself automatically upon
-   activating the vertex tool, and its position/docked state remembered across uses.
+   Right click on a feature will immediately show the vertex editor and lock this feature,
+   thus disabling the editing of any other features. While being locked, a feature is exclusive
+   for editing: Selecting and moving of vertices and segments by clicking or dragging is only possible
+   for this feature. New vertices can only be added to the locked feature. Also, the vertex editor panel
+   now opens itself automatically upon activating the vertex tool, and its position/docked state remembered across uses.
   
 .. _figure_edit_vertex:
 
