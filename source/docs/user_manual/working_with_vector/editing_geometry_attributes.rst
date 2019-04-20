@@ -345,7 +345,9 @@ geometry then enter its attributes. To digitize the geometry:
 
 #. Left-click on the map area to create the first point of your new feature. For
    point features, this should be enough and trigger, if required, the feature
-   form to fill in their attributes.
+   form to fill in their attributes. Having set the :ref:`geometry precision <digitizingmenu>`
+   in the layer properties you can use :ref:`snap to grid <snap_to_grid>` here
+   to create features based on a regular distance.
 #. For line or polygon geometries, keep on left-clicking for each additional
    point you wish to capture or use :ref:`automatic tracing <tracing>` capability
    to accelerate the digitization. This will create consecutive straight lines
@@ -483,7 +485,9 @@ Red circles will appear when hovering vertices.
   selection can jump to the nearest vertex or line. You can use Advanced
   Digitizing Panel constraints for distance, angles, exact X Y location
   before the second click.
-  
+ 
+.. _snap_to_grid:
+
   Here you can use the snap-to-grid feature. Having set a value for the :ref:`geometry precision <digitizingmenu>`
   in the layer properties, a grid appears on a zoom level
   according to the Geometry precision.
