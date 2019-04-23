@@ -40,11 +40,11 @@ class. Instances of this class can be created in several different ways:
 
   QGIS uses three different IDs for every reference system:
 
-  * :attr:`InternalCrsId <qgis.core.QgsCoordinateReferenceSystem.InternalCrsId>` --- IDs internally used in QGIS database.
-  * :attr:`PostgisCrsId <qgis.core.QgsCoordinateReferenceSystem.PostgisCrsId>` --- IDs used within PostGIS databases.
-  * :attr:`EpsgCrsId <qgis.core.QgsCoordinateReferenceSystem.EpsgCrsId>` --- IDs assigned by the EPSG organization
+  * :attr:`InternalCrsId <qgis.core.QgsCoordinateReferenceSystem.InternalCrsId>` --- ID used in the internal QGIS database.
+  * :attr:`PostgisCrsId <qgis.core.QgsCoordinateReferenceSystem.PostgisCrsId>` --- ID used in PostGIS databases.
+  * :attr:`EpsgCrsId <qgis.core.QgsCoordinateReferenceSystem.EpsgCrsId>` --- ID assigned by the EPSG organization.
 
-  If not specified otherwise in second parameter, PostGIS SRID is used by default.
+  If not specified otherwise with the second parameter, PostGIS SRID is used by default.
 
 * specify CRS by its well-known text (WKT)
 
@@ -56,9 +56,9 @@ class. Instances of this class can be created in several different ways:
      crs = QgsCoordinateReferenceSystem(wkt)
      assert crs.isValid()
 
-* create invalid CRS and then use one of the ``create*`` functions to
-  initialize it. In the following example we use Proj4 string to initialize the
-  projection
+* create an invalid CRS and then use one of the ``create*`` functions to
+  initialize it. In the following example we use a Proj4 string to initialize the
+  projection.
 
   .. testcode::
 
@@ -73,9 +73,9 @@ must return ``True``.
 Note that for initialization of spatial reference systems QGIS needs to look up
 appropriate values in its internal database :file:`srs.db`. Thus in case you
 create an independent application you need to set paths correctly with
-:meth:`QgsApplication.setPrefixPath() <qgis.core.QgsApplication.setPrefixPath>`
+:meth:`QgsApplication.setPrefixPath() <qgis.core.QgsApplication.setPrefixPath>`,
 otherwise it will fail to find the
-database. If you are running the commands from QGIS python console or
+database. If you are running the commands from the QGIS python console or
 developing a plugin you do not care: everything is already set up for you.
 
 Accessing spatial reference system information:
