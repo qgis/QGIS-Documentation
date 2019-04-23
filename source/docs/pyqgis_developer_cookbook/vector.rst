@@ -518,7 +518,7 @@ create them easily. This is what you have to do:
 
 * add features to index --- index takes :class:`QgsFeature <qgis.core.QgsFeature>` object and adds it
   to the internal data structure. You can create the object manually or use
-  one from a previous call to provider's :meth:`nextFeature() <qgis.core.QgsFeatureIterator.nextFeature>`
+  one from a previous call to the provider's :meth:`getFeatures() <qgis.core.QgsVectorDataProvider.getFeatures>` method.
 
   .. code-block:: python
 

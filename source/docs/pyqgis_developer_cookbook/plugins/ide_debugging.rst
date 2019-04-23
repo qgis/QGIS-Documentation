@@ -36,7 +36,7 @@ you have to do:
 * Make a copy of :file:`qgis-unstable.bat` and rename it ``pyscripter.bat``.
 * Open it in an editor. And remove the last line, the one that starts QGIS.
 * Add a line that points to your Pyscripter executable and add the
-  commandline argument that sets the version of Python to be used
+  command line argument that sets the version of Python to be used
 * Also add the argument that points to the folder where Pyscripter can
   find the Python dll used by QGIS, you can find this under the bin folder
   of your OSGeoW install
