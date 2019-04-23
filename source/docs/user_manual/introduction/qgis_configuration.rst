@@ -884,8 +884,8 @@ But you can create as many user profiles as you want:
 
    The user profile folder can be opened from within QGIS using the
    :guilabel:`Open Active Profile Folder`.
-#. The new profile opens a new instance of QGIS, using a clean and unchanged
-   configuration from installation. You can then set your custom configurations.
+#. A new instance of QGIS is started, using a clean
+   configuration. You can then set your custom configurations.
 
 As each user profile contains isolated settings, plugins and history they can be great for
 different workflows, demos, users of the same machine, or testing settings, etc.
@@ -1269,7 +1269,7 @@ Command line and environment variables
 
 We've seen that :ref:`launching QGIS <label_startingqgis>` is done as for any
 application on your OS.
-QGIS however provides command line options for more advanced use cases.
+QGIS provides command line options for more advanced use cases (in some cases
 In some cases, you can use an environment variable instead of the command line option.
 To get a list of the options, enter ``qgis --help`` on the command line, which
 returns::
@@ -1517,14 +1517,14 @@ Deploying QGIS within an organization
 
 If you need to deploy QGIS within an organization with a custom configuration file,
 first you need to copy/paste the content of the default settings file located in
-:file:`your_QGIS_PKG_path/resources/qgis_global_settings.ini`. This file contains
-already some default sections identified by a block starting with ``[]``.
-We recommend you to keep these defaults values and add at the bottom of the file your
-own sections. Even if a section is duplicated in the file, QGIS will take the last
+:file:`your_QGIS_PKG_path/resources/qgis_global_settings.ini`. This file already
+contains some default sections identified by a block starting with ``[]``.
+We recommend that you keep these defaults values and add your own sections at the bottom
+of the file. If a section is duplicated in the file, QGIS will take the last
 one from top to bottom.
 
-You can then change ``allowVersionCheck=false`` to disable
-the version check from QGIS.
+You can change ``allowVersionCheck=false`` to disable
+the QGIS version check.
 
 If you do not want to display the migration window after a fresh install, you need
 the following section:
@@ -1542,13 +1542,13 @@ If you want to add a custom variable in the global scope:
    [variables]
    organisation="Your organization"
 
-To discover all possibilities of the settings ``INI`` file, we suggest you to set
-the config you would like in QGIS Desktop and then to search it in your ``INI``
+To discover all possibilities of the settings ``INI`` file, we suggest that you set
+the config you would like in QGIS Desktop and then to search for it in your ``INI``
 file located in your profile using a text editor. A lot of settings can be set
-from ``INI`` such as WMS/WMTS, PostGIS connections, proxy settings, maptips…
+using the ``INI`` file such as WMS/WMTS, PostGIS connections, proxy settings, maptips…
 
 Finally, you need to set the environment variable ``QGIS_GLOBAL_SETTINGS_FILE``
-to your customized path.
+to the path of your customized file.
 
 In addition, you can also deploy files such as Python macros, color palettes,
 layout templates, project templates… either in the QGIS system directory or
@@ -1556,7 +1556,7 @@ in the QGIS user profile.
 
 * Layout templates must be deployed in the :file:`composer_templates` directory.
 * Project templates must be deployed in the :file:`project_templates` directory.
-* Custom Python macro must be deployed in the :file:`python` directory.
+* Custom Python macros must be deployed in the :file:`python` directory.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
