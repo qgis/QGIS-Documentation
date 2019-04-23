@@ -25,7 +25,7 @@ To simplify the task, you can start with a script template by using
 This opens a template that extends
 :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`.
 
-If you save the script in the script to the :file:`scripts` folder
+If you save the script in the :file:`scripts` folder
 (the default location) with a :file:`.py` extension, the algorithm will
 become available in the :guilabel:`Processing Toolbox`.
 
