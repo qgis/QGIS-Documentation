@@ -252,7 +252,7 @@ The buffer layer, raster layer and number of features are returned.
             # Our successful algorithm should return values for all the output
             # parameters it has defined. In this case, that's the buffer and
             # rasterized output layers, and the count of features processed.
-            # The dictionary keys here match the original parameter/output name.
+            # The dictionary keys here match the original parameter/output names.
             return {'OUTPUT': rasterized_result['OUTPUT'],
                     'BUFFER_OUTPUT': buffer_result['OUTPUT'],
                     'NUMBEROFFEATURES': numfeatures}
