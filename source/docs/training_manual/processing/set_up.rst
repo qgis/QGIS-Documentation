@@ -11,10 +11,10 @@ Later on we will show how to configure the external applications that are used
 for extending the list of available algorithms, but for now we are just going
 to work with the framework itself.
 
-The processing framework is a core QGIS plugin, which means that, it should
+The processing framework is a core QGIS plugin, which means that it should
 already be installed in your system, since it is included with QGIS. In case it
-is active, you should see a menu called *Processing* in your menu bar. There you
-will find an access to all the framework components.
+is active, you should see a menu called :guilabel:`Processing` in your menu bar.
+There you can access all the framework components.
 
 .. image:: img/set_up/menu.png
 
@@ -31,8 +31,9 @@ of the QGIS window.
 
 
 The toolbox contains a list of all the available algorithms, divided in groups
-so called *Providers*. Providers can be (de)activated in the settings dialog. We
-will discuss the settings dialog later in this manual.
+called *Providers*. Providers can be (de)activated in the
+:menuselection:`Settings --> Options --> Processing`. We will discuss that
+dialog later in this manual.
 
 By default, only providers that do not rely on third-party applications (that is,
 those that only require QGIS elements to be run) are active. Algorithms requiring

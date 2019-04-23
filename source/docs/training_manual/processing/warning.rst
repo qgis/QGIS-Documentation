@@ -8,9 +8,9 @@ Just like the manual of a word processor doesn't teach you how to write a novel
 or a poem, or a CAD tutorial doesn't show you how to calculate the size of a
 beam for a building, this guide will not teach you spatial analysis. Instead,
 it will show you how to use the QGIS Processing framework, a powerful tool
-for performing spatial analysis, but it is up to you to learn the required
+for performing spatial analysis. It is up to you to learn the required
 concepts that are needed to understand that type of analysis. Without them,
-there is no point on using the framework and its algorithms, although you
+there is no point in using the framework and its algorithms, although you
 might be tempted to try.
 
 Let's show this more clearly with an example.
@@ -21,7 +21,7 @@ The parameters dialog for that module is like the following one.
 
 .. image:: img/warning/kriging.png
 
-It look complex, right?
+It looks complex, right?
 
 By reading this manual, you will learn things such as how to use that module,
 how to run it in a batch process to create raster layers from hundreds of points
