@@ -1270,7 +1270,7 @@ Command line and environment variables
 We've seen that :ref:`launching QGIS <label_startingqgis>` is done as for any
 application on your OS.
 QGIS provides command line options for more advanced use cases (in some cases
-In some cases, you can use an environment variable instead of the command line option.
+you can use an environment variable instead of the command line option).
 To get a list of the options, enter ``qgis --help`` on the command line, which
 returns::
 
@@ -1543,7 +1543,7 @@ If you want to add a custom variable in the global scope:
    organisation="Your organization"
 
 To discover all possibilities of the settings ``INI`` file, we suggest that you set
-the config you would like in QGIS Desktop and then to search for it in your ``INI``
+the config you would like in QGIS Desktop and then search for it in your ``INI``
 file located in your profile using a text editor. A lot of settings can be set
 using the ``INI`` file such as WMS/WMTS, PostGIS connections, proxy settings, maptips…
 
