@@ -108,7 +108,7 @@ following functionalities (see figure_layout_table_ppt_):
   In the :guilabel:`Columns` section you can:
 
   * Move attributes up or down the list by selecting the rows and then using the
-    the |arrowUp| and |arrowDown| buttons to shift the rows. Multiple rows can
+    |arrowUp| and |arrowDown| buttons to shift the rows. Multiple rows can
     be selected and moved at any one time.
   * Add an attribute with the |signPlus| button. This will add an empty row at
     the bottom of the table where you can select a field to be the attribute
