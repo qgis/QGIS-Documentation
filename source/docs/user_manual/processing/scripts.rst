@@ -354,4 +354,3 @@ There are already many processing algorithms available in QGIS.
 You can find code on
 https://github.com/qgis/QGIS/tree/release-3_4/python/plugins/processing/algs/qgis.
 
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
