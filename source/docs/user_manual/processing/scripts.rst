@@ -25,7 +25,7 @@ To simplify the task, you can start with a script template by using
 This opens a template that extends
 :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`.
 
-If you save the script in the script to the :file:`scripts` folder
+If you save the script in the :file:`scripts` folder
 (the default location) with a :file:`.py` extension, the algorithm will
 become available in the :guilabel:`Processing Toolbox`.
 
@@ -252,7 +252,7 @@ The buffer layer, raster layer and number of features are returned.
             # Our successful algorithm should return values for all the output
             # parameters it has defined. In this case, that's the buffer and
             # rasterized output layers, and the count of features processed.
-            # The dictionary keys here match the original parameter/output name.
+            # The dictionary keys here match the original parameter/output names.
             return {'OUTPUT': rasterized_result['OUTPUT'],
                     'BUFFER_OUTPUT': buffer_result['OUTPUT'],
                     'NUMBEROFFEATURES': numfeatures}
