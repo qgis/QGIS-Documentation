@@ -434,6 +434,19 @@ Menu Option                                      Toolbar                      Re
 When starting QGIS for the first time not all core plugins are loaded.
 
 
+Mesh
+----
+
+The :menuselection:`Mesh` menu provides tools needed to manipulate
+:ref:`mesh layers <label_meshdata>`.
+
+========================================================  ===========================  ===============================
+Menu Option                                               Toolbar                      Reference
+========================================================  ===========================  ===============================
+|showMeshCalculator| :menuselection:`Mesh Calculator`
+========================================================  ===========================  ===============================
+
+
 Processing
 ----------
 
@@ -1046,6 +1059,8 @@ open the Plugin Manager dialog.
 .. |showAllLayers| image:: /static/common/mActionShowAllLayers.png
    :width: 1.5em
 .. |showBookmarks| image:: /static/common/mActionShowBookmarks.png
+   :width: 1.5em
+.. |showMeshCalculator| image:: /static/common/mActionShowMeshCalculator.png
    :width: 1.5em
 .. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
    :width: 1.5em
