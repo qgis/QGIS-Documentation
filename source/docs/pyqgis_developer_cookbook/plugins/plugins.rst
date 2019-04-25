@@ -291,7 +291,7 @@ The only plugin functions that must exist in the main plugin source file (e.g.
 * ``initGui()``   --> called when the plugin is loaded
 * ``unload()``    --> called when the plugin is unloaded
 
-You can see that in the above example, the :meth:`addPluginToMenu <qgis.gui.QgisInterface.addPluginToMenu>` is used.
+In the above example, :meth:`addPluginToMenu <qgis.gui.QgisInterface.addPluginToMenu>` is used.
 This will add the corresponding menu action to the :menuselection:`Plugins`
 menu. Alternative methods exist to add the action to a different menu. Here is
 a list of those methods:
@@ -299,9 +299,10 @@ a list of those methods:
 * :meth:`addPluginToRasterMenu() <qgis.gui.QgisInterface.addPluginToRasterMenu>`
 * :meth:`addPluginToVectorMenu() <qgis.gui.QgisInterface.addPluginToVectorMenu>`
 * :meth:`addPluginToDatabaseMenu() <qgis.gui.QgisInterface.addPluginToDatabaseMenu>`
-* :meth:`addPluginToWebMenu() <qgis.gui.QgisInterface.addPluginToMenu>`
+* :meth:`addPluginToWebMenu() <qgis.gui.QgisInterface.addPluginToWebMenu>`
 
-All of them have the same syntax as the :meth:`addPluginToMenu <qgis.gui.QgisInterface.addPluginToMenu>` method.
+All of them have the same syntax as the
+:meth:`addPluginToMenu <qgis.gui.QgisInterface.addPluginToMenu>` method.
 
 Adding your plugin menu to one of those predefined method is recommended to
 keep consistency in how plugin entries are organized. However, you can add your

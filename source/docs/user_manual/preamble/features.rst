@@ -143,7 +143,7 @@ Python console, which can be opened with: :menuselection:`Plugins
 --> Python Console`. The console opens as a non-modal utility
 window. For interaction with the QGIS environment, there is the
 :data:`qgis.utils.iface` variable, which is an instance of
-:class:`QgisInterface <qgis.gui.QgisInterface>`. This interface allows access to the map canvas,
+:class:`QgisInterface <qgis.gui.QgisInterface>`. This interface provides access to the map canvas,
 menus, toolbars and other parts of the QGIS application. You can create
 a script, then drag and drop it into the QGIS window and it will be
 executed automatically.

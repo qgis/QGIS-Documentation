@@ -76,7 +76,7 @@ appropriate values in its internal database :file:`srs.db`. Thus in case you
 create an independent application you need to set paths correctly with
 :meth:`QgsApplication.setPrefixPath() <qgis.core.QgsApplication.setPrefixPath>`,
 otherwise it will fail to find the
-database. If you are running the commands from the QGIS python console or
+database. If you are running the commands from the QGIS Python console or
 developing a plugin you do not care: everything is already set up for you.
 
 Accessing spatial reference system information:

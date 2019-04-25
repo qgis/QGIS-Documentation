@@ -204,9 +204,9 @@ with the following properties:
 
 To get the shortest path tree use the methods :meth:`shortestTree
 <qgis.analysis.QgsGraphAnalyzer.shortestTree>` and :meth:`dijkstra
-<qgis.analysis.QgsGraphAnalyzer.dijkstra>` of :class:`QgsGraphAnalyzer
-<qgis.analysis.QgsGraphAnalyzer>` class. It is recommended to use method
-:meth:`dijkstra <qgis.analysis.QgsGraphAnalyzer.dijkstra>` because it works
+<qgis.analysis.QgsGraphAnalyzer.dijkstra>` of the :class:`QgsGraphAnalyzer
+<qgis.analysis.QgsGraphAnalyzer>` class. It is recommended to use the
+:meth:`dijkstra <qgis.analysis.QgsGraphAnalyzer.dijkstra>` method because it works
 faster and uses memory more efficiently.
 
 The :meth:`shortestTree <qgis.analysis.QgsGraphAnalyzer.shortestTree>` method
@@ -275,7 +275,7 @@ and replace coordinates with your own).
     rb.addPoint (tree.vertex(tree.arc(i).outVertex()).point())
     i = i + 1
 
-Same thing but using :meth:`dijkstra <qgis.analysis.QgsGraphAnalyzer.dijkstra>`
+Same thing but using the :meth:`dijkstra <qgis.analysis.QgsGraphAnalyzer.dijkstra>`
 method
 
 ::
@@ -316,8 +316,8 @@ Finding shortest paths
 
 To find the optimal path between two points the following approach is used.
 Both points (start A and end B) are "tied" to the graph when it is built. Then
-using the methods :meth:`shortestTree <qgis.analysis.QgsGraphAnalyzer.shortestTree>`
-or :meth:`dijkstra <qgis.analysis.QgsGraphAnalyzer.dijkstra>` we build the
+using the :meth:`shortestTree <qgis.analysis.QgsGraphAnalyzer.shortestTree>`
+or :meth:`dijkstra <qgis.analysis.QgsGraphAnalyzer.dijkstra>` method we build the
 shortest path tree with root in the start point A. In the same tree we also
 find the end point B and start to walk through the tree from point B to point
 A. The whole algorithm can be written as
@@ -338,7 +338,7 @@ be visited during traveling by this path.
 
 Here is the sample code for QGIS Python Console (you will need to select
 linestring layer in TOC and replace coordinates in the code with yours) that
-uses method :meth:`shortestTree <qgis.analysis.QgsGraphAnalyzer.shortestTree>`
+uses the :meth:`shortestTree <qgis.analysis.QgsGraphAnalyzer.shortestTree>` method
 
 ::
 
@@ -389,7 +389,7 @@ uses method :meth:`shortestTree <qgis.analysis.QgsGraphAnalyzer.shortestTree>`
     for pnt in p:
       rb.addPoint(pnt)
 
-And here is the same sample but using :meth:`dijkstra
+And here is the same sample but using the :meth:`dijkstra
 <qgis.analysis.QgsGraphAnalyzer.dijkstra>` method
 
 ::
@@ -450,8 +450,8 @@ station. Which parts of city can a fire truck reach in 5 minutes? 10 minutes?
 15 minutes?". Answers to these questions are fire station's areas of
 availability.
 
-To find the areas of availability we can use method :meth:`dijkstra
-<qgis.analysis.QgsGraphAnalyzer.dijkstra>` of the :class:`QgsGraphAnalyzer
+To find the areas of availability we can use the :meth:`dijkstra
+<qgis.analysis.QgsGraphAnalyzer.dijkstra>` method of the :class:`QgsGraphAnalyzer
 <qgis.analysis.QgsGraphAnalyzer>` class. It is enough to compare the elements of
 the cost array with a predefined value. If cost[i] is less than or equal to a
 predefined value, then vertex i is inside the area of availability, otherwise
