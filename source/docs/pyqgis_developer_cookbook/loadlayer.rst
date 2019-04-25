@@ -212,8 +212,9 @@ providers:
       uri = 'http://localhost:8080/geoserver/wfs?' + urllib.unquote(urllib.urlencode(params))
 
 
-.. note:: You can change the data source of an existing layer by calling :func:`setDataSource()`
-   on a :class:`QgsVectorLayer` instance, as in the following example:
+.. note:: You can change the data source of an existing layer by calling
+   :meth:`setDataSource() <qgis.core.QgsVectorLayer.setDataSource>`
+   on a :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` instance, as in the following example:
 
    .. code-block:: python
 
