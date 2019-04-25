@@ -1089,16 +1089,17 @@ radius
         return FooSymbolLayer(self.radius)
 
 
-The :meth:`layerType <qgis.core.QgsSymbolLayer.layerType>` method determines the name of the symbol layer, it has
-to be unique among all symbol layers. Properties are used for persistence of
-attributes. The :meth:`clone <qgis.core.QgsSymbolLayer.clone>` method must return a
-copy of the symbol layer with
+The :meth:`layerType <qgis.core.QgsSymbolLayer.layerType>` method determines
+the name of the symbol layer; it has to be unique among all symbol layers.
+The :meth:`properties <qgis.core.QgsSymbolLayer.properties>` method is used
+for persistence of attributes. The :meth:`clone <qgis.core.QgsSymbolLayer.clone>`
+method must return a copy of the symbol layer with
 all attributes being exactly the same. Finally there are rendering methods:
 :meth:`startRender <qgis.core.QgsSymbolLayer.startRender>` is called before
 rendering the first feature, :meth:`stopRender <qgis.core.QgsSymbolLayer.stopRender>`
-when rendering is done. And :meth:`renderPoint <qgis.core.QgsMarkerSymbolLayer.renderPoint>` method which does the rendering.
-The coordinates of the point(s) are already transformed to the output
-coordinates.
+when the rendering is done, and :meth:`renderPoint
+<qgis.core.QgsMarkerSymbolLayer.renderPoint>` is called to do the rendering.
+The coordinates of the point(s) are already transformed to the output coordinates.
 
 For polylines and polygons the only difference would be in the rendering
 method: you would use
