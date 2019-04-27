@@ -119,7 +119,7 @@ using functions, layer's fields and values. It contains following widgets:
     When using complex expression, it is good practice to add
     text either as a multiline comment or inline comments to help you remember.
 
-    .. code-block::
+    ::
 
       /*
       Labels each region with its highest (in altitude) airport(s)
