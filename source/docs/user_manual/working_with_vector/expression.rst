@@ -115,14 +115,14 @@ using functions, layer's fields and values. It contains following widgets:
 
   .. tip:: **Document your expression with comments**
 
-    When using complex expression, it may be a good practice to add
-    texts either as a multiline comment or inline comments to help you remember.
+    When using complex expression, it is good practice to add
+    text either as a multiline comment or inline comments to help you remember.
 
-    .. code-block:: sql
+    .. code-block::
 
       /*
       Labels each region with its highest (in altitude) airport(s)
-      and altitude, eg 'AMBLER : 264m' for 'Northwest Artic' region
+      and altitude, eg 'AMBLER : 264m' for the 'Northwest Artic' region
       */
       with_variable(
         'airport_alti', -- stores the highest altitude of the region
@@ -141,7 +141,7 @@ using functions, layer's fields and values. It contains following widgets:
               and "ELEV" = @airport_alti
           )
           || ' : ' || @airport_alti || 'm'
-          -- using || allows to skip regions without airport
+          -- using || allows regions without airports to be skipped
       )
 
 * Under the expression editor, an :guilabel:`Output preview` displays the result
