@@ -869,9 +869,8 @@ features we want to print. In order to retrieve an atlas with all features,
 the ``*`` symbol may be used (according to the maximum number of features
 allowed in the project configuration).
 
-When ``FORMAT`` is ``pdf``, a PDF document with one feature per page will be
-returned. For all other formats, only the first page is returned.
-
+When ``FORMAT`` is ``pdf``, a single PDF document combining the feature pages is
+returned. For all other formats, a single page is returned.
 
 mapX:EXTENT
 ^^^^^^^^^^^
