@@ -16,11 +16,11 @@ QGIS Server Python Plugins
 
 Python plugins can also run on QGIS Server (see :ref:`label_qgisserver`):
 
-* By using the *server interface* (:class:`QgsServerInterface`) a Python plugin running on the
+* By using the *server interface* (:class:`QgsServerInterface <qgis.server.QgsServerInterface>`) a Python plugin running on the
   server can alter the behavior of existing core services (**WMS**, **WFS** etc.).
-* With the *server filter interface* (:class:`QgsServerFilter`) you can change the input
+* With the *server filter interface* (:class:`QgsServerFilter <qgis.server.QgsServerFilter>`) you can change the input
   parameters, change the generated output or even provide new services.
-* With the *access control interface* (:class:`QgsAccessControlFilter`) you can apply
+* With the *access control interface* (:class:`QgsAccessControlFilter <qgis.server.QgsAccessControlFilter>`) you can apply
   some access restriction per requests.
 
 
@@ -28,15 +28,15 @@ Server Filter Plugins architecture
 ==================================
 
 Server python plugins are loaded once when the FCGI application starts. They
-register one or more :class:`QgsServerFilter` (from this point, you might
+register one or more :class:`QgsServerFilter <qgis.server.QgsServerFilter>` (from this point, you might
 find useful a quick look to the `server plugins API docs <https://qgis.org/api/group__server.html>`_).
 Each filter should implement at least one of three callbacks:
 
-* :func:`requestReady()`
-* :func:`responseComplete()`
-* :func:`sendResponse()`
+* :meth:`requestReady() <qgis.server.QgsServerFilter.requestReady>`
+* :meth:`responseComplete() <qgis.server.QgsServerFilter.responseComplete>`
+* :meth:`sendResponse() <qgis.server.QgsServerFilter.sendResponse>`
 
-All filters have access to the request/response object (:class:`QgsRequestHandler`)
+All filters have access to the request/response object (:class:`QgsRequestHandler <qgis.server.QgsRequestHandler>`)
 and can manipulate all its properties (input/output) and
 raise exceptions (while in a quite particular way as we’ll see below).
 
@@ -44,16 +44,17 @@ Here is a pseudo code showing a typical server session and when the filter’s c
 
 * Get the incoming request
     * create GET/POST/SOAP request handler
-    * pass request to an instance of :class:`QgsServerInterface`
-    * call plugins :func:`requestReady` filters
+    * pass request to an instance of :class:`QgsServerInterface <qgis.server.QgsServerInterface>`
+    * call plugins :meth:`requestReady <qgis.server.QgsServerFilter.requestReady>` filters
     * if there is not a response
         * if SERVICE is WMS/WFS/WCS
             * create WMS/WFS/WCS server
-                * call server’s :func:`executeRequest` and possibly call :func:`sendResponse`
+                * call server’s :meth:`executeRequest <qgis.server.QgsService.executeRequest>`
+                  and possibly call :meth:`sendResponse <qgis.server.QgsServerFilter.sendResponse>`
                   plugin filters when streaming output or store the byte stream output
                   and content type in the request handler
-        * call plugins :func:`responseComplete` filters
-    * call plugins :func:`sendResponse` filters
+        * call plugins :meth:`responseComplete <qgis.server.QgsServerFilter.responseComplete>` filters
+    * call plugins :meth:`sendResponse <qgis.server.QgsServerFilter.sendResponse>` filters
     * request handler output the response
 
 
@@ -84,25 +85,35 @@ This is called whenever output is sent to **FCGI** ``stdout`` (and from there, t
 the client), this is normally done after core services have finished their process
 and after responseComplete hook was called, but in a few cases XML can become so
 huge that a streaming XML implementation was needed (WFS GetFeature is one of them),
-in this case, :func:`sendResponse` is called multiple times before the response
-is complete (and before :func:`responseComplete` is called). The obvious consequence
-is that :func:`sendResponse` is normally called once but might be exceptionally
+in this case, :meth:`sendResponse <qgis.server.QgsServerFilter.sendResponse>` is
+called multiple times before the response
+is complete (and before
+:meth:`responseComplete <qgis.server.QgsServerFilter.responseComplete>` is called).
+The obvious consequence
+is that :meth:`sendResponse <qgis.server.QgsServerFilter.sendResponse>` is
+normally called once but might be exceptionally
 called multiple times and in that case (and only in that case) it is also called
-before :func:`responseComplete`.
+before :meth:`responseComplete <qgis.server.QgsServerFilter.responseComplete>`.
 
-:func:`sendResponse` is the best place for direct manipulation of core service’s
-output and while :func:`responseComplete` is typically also an option,
-:func:`sendResponse` is the only viable option  in case of streaming services.
+:meth:`sendResponse <qgis.server.QgsServerFilter.sendResponse>` is the best place
+for direct manipulation of core service’s
+output and while :meth:`responseComplete <qgis.server.QgsServerFilter.responseComplete>`
+is typically also an option,
+:meth:`sendResponse <qgis.server.QgsServerFilter.sendResponse>` is the only
+viable option in case of streaming services.
 
 responseComplete
 ----------------
 
 This is called once when core services (if hit) finish their process and the
 request is ready to be sent to the client. As discussed above, this is normally
-called before :func:`sendResponse` except for streaming services (or other plugin
-filters) that might have called :func:`sendResponse` earlier.
+called before :meth:`sendResponse <qgis.server.QgsServerFilter.sendResponse>`
+except for streaming services (or other plugin
+filters) that might have called
+:meth:`sendResponse <qgis.server.QgsServerFilter.sendResponse>` earlier.
 
-:func:`responseComplete` is the ideal place to provide new services implementation
+:meth:`responseComplete <qgis.server.QgsServerFilter.responseComplete>` is the
+ideal place to provide new services implementation
 (WPS or custom services) and to perform direct manipulation of the output coming
 from core services (for example to add a watermark upon a WMS image).
 
@@ -111,7 +122,8 @@ Raising exception from a plugin
 
 Some work has still to be done on this topic: the current implementation can
 distinguish between handled and unhandled exceptions by setting a
-:class:`QgsRequestHandler` property to an instance of :class:`QgsMapServiceException`,
+:class:`QgsRequestHandler <qgis.server.QgsRequestHandler>` property to an
+instance of :class:`QgsMapServiceException <qgis.server.QgsMapServiceException>`,
 this way the main C++ code can catch handled python exceptions and ignore
 unhandled exceptions (or better: log them).
 
@@ -128,8 +140,9 @@ Writing a server plugin
 A server plugin is a standard QGIS Python plugin as described in
 :ref:`developing_plugins`, that just provides an additional (or alternative)
 interface: a typical QGIS desktop plugin has access to QGIS application
-through the :class:`QgisInterface` instance, a server plugin has also
-access to a :class:`QgsServerInterface`.
+through the :class:`QgisInterface <qgis.gui.QgisInterface>` instance, a server
+plugin has also
+access to a :class:`QgsServerInterface <qgis.server.QgsServerInterface>`.
 
 To tell QGIS Server that a plugin has a server interface, a special
 metadata entry is needed (in `metadata.txt`) ::
@@ -161,7 +174,8 @@ __init__.py
 This file is required by Python's import system. Also, QGIS Server requires that this
 file contains a :func:`serverClassFactory()` function, which is called when the
 plugin gets loaded into QGIS Server when the server starts. It receives reference to instance of
-:class:`QgsServerInterface` and must return instance of your plugin's class.
+:class:`QgsServerInterface <qgis.server.QgsServerInterface>` and must return instance
+of your plugin's class.
 This is how the example plugin :file:`__init__.py` looks like::
 
     # -*- coding: utf-8 -*-
@@ -181,11 +195,12 @@ This is where the magic happens and this is how magic looks like:
 
 A server plugin typically consists in one or more callbacks packed into objects called QgsServerFilter.
 
-Each :class:`QgsServerFilter` implements one or more of the following callbacks:
+Each :class:`QgsServerFilter <qgis.server.QgsServerFilter>` implements one or more
+of the following callbacks:
 
-* :func:`requestReady()`
-* :func:`responseComplete()`
-* :func:`sendResponse()`
+* :meth:`requestReady() <qgis.server.QgsServerFilter.requestReady>`
+* :meth:`responseComplete() <qgis.server.QgsServerFilter.responseComplete>`
+* :meth:`sendResponse() <qgis.server.QgsServerFilter.sendResponse>`
 
 The following example implements a minimal filter which prints *HelloServer!*
 in case the **SERVICE** parameter equals to “HELLO”::
@@ -216,14 +231,17 @@ The filters must be registered into the **serverIface** as in the following exam
             self.serverIface = serverIface
             serverIface.registerFilter( HelloFilter, 100 )
 
-The second parameter of :func:`registerFilter` allows to set a priority which
+The second parameter of
+:meth:`registerFilter <qgis.server.QgsServerInterface.registerFilter>` sets a priority which
 defines the order for the callbacks with the same name (the lower priority is
 invoked first).
 
 By using the three callbacks, plugins can manipulate the input and/or the output
 of the server in many different ways. In every moment, the plugin instance has
-access to the :class:`QgsRequestHandler` through the :class:`QgsServerInterface`,
-the :class:`QgsRequestHandler` has plenty of methods that can be used to alter
+access to the :class:`QgsRequestHandler <qgis.server.QgsRequestHandler>` through 
+the :class:`QgsServerInterface <qgis.server.QgsServerInterface>`.
+The :class:`QgsRequestHandler <qgis.server.QgsRequestHandler>` class has plenty of
+methods that can be used to alter
 the input parameters before entering the core processing of the server (by using
 :func:`requestReady`) or after the request has been processed by the core services
 (by using :func:`sendResponse`).
@@ -365,8 +383,9 @@ __init__.py
 
 This file is required by Python's import system. As for all QGIS server plugins, this
 file contains a :func:`serverClassFactory()` function, which is called when the
-plugin gets loaded into QGIS Server when the server starts. It receives reference to instance of
-:class:`QgsServerInterface` and must return instance of your plugin's class.
+plugin gets loaded into QGIS Server at startup. It receives a reference to an instance of
+:class:`QgsServerInterface <qgis.server.QgsServerInterface>` and must return an instance
+of your plugin's class.
 This is how the example plugin :file:`__init__.py` looks like:
 
 .. code:: python
@@ -450,13 +469,17 @@ layerPermissions
 
 Limit the access to the layer.
 
-Return an object of type ``QgsAccessControlFilter.LayerPermissions``,
-who has the properties:
+Return an object of type :meth:`LayerPermissions
+<qgis.server.QgsAccessControlFilter.layerPermissions>`, which has the properties:
 
-* ``canRead`` to see him in the ``GetCapabilities`` and have read access.
-* ``canInsert`` to be able to insert a new feature.
-* ``canUpdate`` to be able to update a feature.
-* ``candelete`` to be able to delete a feature.
+* :attr:`canRead <qgis.server.QgsAccessControlFilter.LayerPermissions.canRead>`
+  to see it in the ``GetCapabilities`` and have read access.
+* :attr:`canInsert <qgis.server.QgsAccessControlFilter.LayerPermissions.canInsert>`
+  to be able to insert a new feature.
+* :attr:`canUpdate <qgis.server.QgsAccessControlFilter.LayerPermissions.canUpdate>`
+  to be able to update a feature.
+* :attr:`canDelete <qgis.server.QgsAccessControlFilter.LayerPermissions.canDelete>`
+  to be able to delete a feature.
 
 Example:
 

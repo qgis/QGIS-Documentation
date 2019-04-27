@@ -86,7 +86,9 @@ though it is not available in the GUI library. If you are not familiar with
 then you are encouraged to check the documentation now, because the layout
 is based on it.
 
-The central class of the layout is the :class:`QgsLayout <qgis.core.QgsLayout>` class, which is derived from the Qt :class:`QGraphicsScene` class. Let us create an instance of it:
+The central class of the layout is the :class:`QgsLayout <qgis.core.QgsLayout>`
+class, which is derived from the Qt `QGraphicsScene <https://doc.qt.io/qt-5/qgraphicsscene.html>`_
+class. Let us create an instance of it:
 
 .. code-block:: python
 
