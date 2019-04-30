@@ -480,7 +480,7 @@ URL example:
   &...
 
 In this example, the same filter (field ``col2`` equals the string ``blabla``) is applied to layers ``mylayer1`` and ``mylayer2``, while the filter on ``col1`` is only applied to ``mylayer1``.
-  
+
 .. note::
 
   It is possible to make attribute searches via GetFeatureInfo and omit
@@ -758,6 +758,8 @@ Parameters for the **GetPrint** request:
 +-----------------------+----------+------------------------------------------+
 | FORMAT                | Yes      | Output format                            |
 +-----------------------+----------+------------------------------------------+
+| ATLAS_PK              | No       | Atlas features                           |
++-----------------------+----------+------------------------------------------+
 | STYLES                | No       | :ref:`See GetMap <qgisserver-wms-getmap>`|
 +-----------------------+----------+------------------------------------------+
 | TRANSPARENT           | No       | :ref:`See GetMap <qgisserver-wms-getmap>`|
@@ -857,6 +859,18 @@ This parameter specifies the format of map image. Available values are:
 If the ``FORMAT`` parameter is different from one of these values, then an
 exception is returned.
 
+
+
+ATLAS_PK
+^^^^^^^^
+
+This parameter allows activation of Atlas rendering by indicating which
+features we want to print. In order to retrieve an atlas with all features,
+the ``*`` symbol may be used (according to the maximum number of features
+allowed in the project configuration).
+
+When ``FORMAT`` is ``pdf``, a single PDF document combining the feature pages is
+returned. For all other formats, a single page is returned.
 
 mapX:EXTENT
 ^^^^^^^^^^^
@@ -1644,18 +1658,18 @@ You can see there are several parameters in this request:
 External WMS layers
 ===================
 
-QGIS Server allows including layers from external WMS servers in WMS GetMap 
-and WMS GetPrint requests. This is especially useful if a web client uses an 
-external background layer in the web map. 
-For performance reasons, such layers should be directly requested by the web 
-client (not cascaded via QGIS server). For printing however, these layers 
+QGIS Server allows including layers from external WMS servers in WMS GetMap
+and WMS GetPrint requests. This is especially useful if a web client uses an
+external background layer in the web map.
+For performance reasons, such layers should be directly requested by the web
+client (not cascaded via QGIS server). For printing however, these layers
 should be cascaded via QGIS server in order to appear in the printed map.
 
-External layers can be added to the LAYERS parameter as 
-EXTERNAL_WMS:<layername>. 
-The parameters for the external WMS layers (e.g. url, format, 
-dpiMode, crs, layers, styles) can later be given as service 
-parameters <layername>:<parameter>. 
+External layers can be added to the LAYERS parameter as
+EXTERNAL_WMS:<layername>.
+The parameters for the external WMS layers (e.g. url, format,
+dpiMode, crs, layers, styles) can later be given as service
+parameters <layername>:<parameter>.
 In a GetMap request, this might look like this:
 
 .. code-block:: none
