@@ -382,7 +382,7 @@ will adapt dynamically.
   ``map description``. In the :guilabel:`Main Properties` also enter the text ``map description``.
   Here we will also include
   the date using ``printed on: [%format_date(now(),'dd.MM.yyyy')%]``. We are again using
-  a variable that QGIS creates automatically again. For x insert the expression ``@rg_layout_margin +3`` and
+  a variable that QGIS creates automatically. For :guilabel:`X` insert the expression ``@rg_layout_margin + 3`` and
   for y enter the expression ``@rg_layout_margin +11.5``.
 * The third label will include information about your organisation. We will create some variables first
   in the :guilabel:`Variables` menu of the :guilabel:`Item Properties`. Go to the :guilabel:`Layout` menu, click the |signPlus| button each time
