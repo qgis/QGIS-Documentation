@@ -407,7 +407,8 @@ will adapt dynamically.
   the path under :menuselection:`Main Properties --> Image Source`.
 * Our layout still needs a north arrow. This will also be insterted by using |addNewImage| :sup:`Adds a new Picture to the layout`.
   Set the name to ``north arrow``, go to :guilabel:`Main Properties` and select the
-  :guilabel:`Image source`  ``/usr/local/share/qgis/svg/arrows/Arrow_02.svg``. The position is defined by
+  :guilabel:`Image source`  ``/usr/local/share/qgis/svg/arrows/Arrow_02.svg``.
+  The position is defined by:
   ``@layout_pagewidth - @rg_layout_margin - 68.25`` for x and by ``@rg_layout_margin + 22.5``.
   We use static numbers here to define the ``Width`` and the ``Height``: ``21,027`` and ``21,157``.
   
