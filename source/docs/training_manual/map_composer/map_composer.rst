@@ -301,7 +301,7 @@ will adapt dynamically.
 |moderate| |FA| Creating the dynamic map canvas
 -------------------------------------------------------------------------------
 
-* Load the vector layer regions.shp into the map canvas and adapt its properties
+* Load the ESRI Shapefile format dataset :file:`regions.shp` into the map canvas and adapt its properties
   to suit your own convenience.
 * After everything is rendered and symbolized to your liking,
   click the |newLayout| :sup:`New Print Layout` icon in the toolbar or
