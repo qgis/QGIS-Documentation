@@ -395,7 +395,7 @@ will adapt dynamically.
 
 .. figure:: img/dynamic_layout_organisation.png
 
-|moderate| |FA| Creating the pictures of the dynamic header
+|moderate| |FA| Adding pictures to the dynamic header
 ---------------------------------------------------------------------------------------
 
 * Go to the |addNewImage| :sup:`Adds a new Picture to the layout` item and place a picture on top of your
