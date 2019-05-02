@@ -327,7 +327,8 @@ will adapt dynamically.
   string to a real number. Now finally let's define the width and height of the map canvas.
   For :guilabel:`Width` use the |dataDefineExpressionOn| :sup:`Data defined override` typing in
   ``@layout_pagewidth - @zg_layout_rand * 2'``
-  under :guilabel:`Edit...` . Here the variable ``layout_pagewidth`` that QGIS creates automatically is used.
+  under :guilabel:`Edit...`.
+  Here the variable ``layout_pagewidth`` (created automatically by QGIS) is used.
   Finally, set the ``Height`` with the expression ``@layout_pageheight -  @rg_layout_header -  @rg_layout_margin * 2``
   with the |dataDefineExpressionOn| :sup:`Data defined override`.
 * We will also create a grid containing the coordinates of the main canvas map extend.
