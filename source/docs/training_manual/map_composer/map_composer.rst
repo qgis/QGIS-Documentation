@@ -329,7 +329,8 @@ will adapt dynamically.
   ``@layout_pagewidth - @zg_layout_rand * 2'``
   under :guilabel:`Edit...`.
   Here the variable ``layout_pagewidth`` (created automatically by QGIS) is used.
-  Finally, set the ``Height`` with the expression ``@layout_pageheight -  @rg_layout_header -  @rg_layout_margin * 2``
+  Finally, set the :guilabel:`Height` with the expression
+  ``@layout_pageheight -  @rg_layout_header -  @rg_layout_margin * 2``
   with the |dataDefineExpressionOn| :sup:`Data defined override`.
 * We will also create a grid containing the coordinates of the main canvas map extend.
   Go to the :guilabel:`Item Properties` again and choose the menu :guilabel:`Grids`. Insert a grid by clicking the
