@@ -353,7 +353,7 @@ will adapt dynamically.
   using the |addNodesShape| :sup:`Add Node Item`. Create a horizontal line and two vertical lines.
   After entering the names,
   insert the expression ``@rg_layout_margin`` and ``@rg_layout_margin + 8`` for :guilabel:`X` and :guilabel:`Y`, and
-  ``@layout_pagewidth -  @rg_layout_margin * 2 - 53.5`` for the width of the horizontal line.
+  ``@layout_pagewidth -  @rg_layout_margin * 2 - 53.5`` for the :guilabel:`Width`.
 * The first vertical line is defined by ``@layout_pagewidth -  @rg_layout_margin * 2 - 53.5`` for ``X``
   and ``@rg_layout_margin`` for ``Y``. It's defined by the height of the header we created, so enter
   the expression ``@rg_layout_height_header`` for ``Height``.
