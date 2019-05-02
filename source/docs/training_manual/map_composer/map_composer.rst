@@ -361,7 +361,7 @@ will adapt dynamically.
   for :guilabel:`X` and ``@rg_layout_margin`` for :guilabel:`Y`.
   It shall have the same value for :guilabel:`Height` as the first vertical line: 
   ``@rg_layout_height_header``. The figure below shows the structure of our dynamic layout. We will fill
-  the fields we created by the lines with some elements.
+  the areas created by the lines with some elements.
 
 .. figure:: img/dynamic_layout_structure.png
    :align: center
