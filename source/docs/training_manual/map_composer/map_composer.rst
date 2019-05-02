@@ -389,7 +389,7 @@ will adapt dynamically.
   |signPlus| button for each new variable
   and enter the names ``o_department``, ``o_name`` , ``o_adress`` and ``o_postcode`` as shown in the picture below.
   In the second row enter the detailed information about your organisation. We will use these variables in the :guilabel:`Main Properties`
-  menu. The position is defined by ``@layout_pagewidth - @rg_layout_margin - 49.5`` for ``X`` and
+  section. The position is defined by ``@layout_pagewidth - @rg_layout_margin - 49.5`` for :guilabel:`X` and
   ``@rg_layout_margin + 15.5`` for ``Y``. The ``Width`` is ``49,00`` and the ``Height`` is defined by ``@rg_layout_header - 15.5``.
 
 .. figure:: img/dynamic_layout_organisation.png
