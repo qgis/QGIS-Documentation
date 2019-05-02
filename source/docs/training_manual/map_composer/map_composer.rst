@@ -316,7 +316,7 @@ will adapt dynamically.
   Press the |signPlus| button and type in the name ``rg_layout_margin``. Set the value to ``7.5``. Press
   the |signPlus| button again and type in the name ``rg_layout_height_header``. Set the value to ``36``.
 * Now you are ready to create the position and the size of the map canvas automatically
-  by means of the variables. Go to the :guilabel:`Item Properties` panel and open the menu :guilabel:`Position and Size`.
+  by means of the variables. Go to the :guilabel:`Item Properties` panel and open the :guilabel:`Position and Size` section.
   Click the |dataDefineExpressionOn| :sup:`Data defined override` for ``X``. From :guilabel:`Variables`, choose ``@rg_layout_margin``.
   Click the |dataDefineExpressionOn| :sup:`Data defined override` for ``Y``. Choose :guilabel:`Edit...` and type in the formula
   ``to_real(@rg_layout_margin) + to_real(@rg_layout_height_header)``. This means that the
