@@ -398,7 +398,7 @@ will adapt dynamically.
 |moderate| |FA| Adding pictures to the dynamic header
 ---------------------------------------------------------------------------------------
 
-* Go to the |addNewImage| :sup:`Adds a new Picture to the layout` item and place a picture on top of your
+* Use the |addNewImage| :sup:`Adds a new Picture to the layout` button to place a picture in the top of your
   label ``organisation information``. After entering the name ``organisation logo`` define the position
   for ``X`` with ``@layout_pagewidth - @rg_layout_margin-48.5`` and for ``Y`` with ``@rg_layout_margin+3.5``.
   The size of the logo is defined statically by ``39,292`` for ``Width`` and ``9,583`` for ``Height``.
