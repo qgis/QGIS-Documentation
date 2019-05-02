@@ -372,7 +372,8 @@ will adapt dynamically.
 * The title of your QGIS project can be included automatically. The title is set
   in the :guilabel:`Project Properties`. Insert a label with the |addLabel| :sup:`Adds a new Label to the layout` button
   and enter the name ``project title (variable)``.
-  In the :guilabel:`Main Properties` of the :guilabel:`Items Properties` Panel enter the expression ``[%@project title%]``. Set the
+  In the :guilabel:`Main Properties` of the :guilabel:`Items Properties` Panel enter the expression
+  ``[%@project title%]``. Set the
   position of the label with the expression ``@rg_layout_margin +3`` for ``X`` and ``@rg_layout_margin + 0.25`` for ``Y``.
   The label box should have a width of 105 mm. Enter the expression ``@layout_pagewidth - @rg_layout_margin *2 -90``
   for Width and enter ``11,25`` for Height. Under :guilabel:`Appearance` set the Font to 16 pt.
