@@ -409,7 +409,8 @@ will adapt dynamically.
   Set the name to ``north arrow``, go to :guilabel:`Main Properties` and select the
   :guilabel:`Image source`  ``/usr/local/share/qgis/svg/arrows/Arrow_02.svg``.
   The position is defined by:
-  ``@layout_pagewidth - @rg_layout_margin - 68.25`` for x and by ``@rg_layout_margin + 22.5``.
+  ``@layout_pagewidth - @rg_layout_margin - 68.25`` for :guilabel:`X` and by ``@rg_layout_margin + 22.5``
+  for :guilabel:`Y`.
   We use static numbers here to define the ``Width`` and the ``Height``: ``21,027`` and ``21,157``.
   
 |moderate| |FA| Creating the scalebar of the dynamic header
