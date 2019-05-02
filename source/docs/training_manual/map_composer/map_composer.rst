@@ -422,7 +422,8 @@ will adapt dynamically.
   This means that the scale changes automatically according to the extent you choose
   in the QGIS main canvas. Choose the :guilabel:`Style` ``Numeric``. This means that we insert a simple scale without
   a scalebar. The scale still needs a position and size. For :guilabel:`X` enter ``@layout_pagewidth - @rg_layout_margin - 68.25``,
-  for y enter ``@rg_layout_margin + 6.5``, for Width enter ``28,639`` and for Height ``13,100``. The ``Reference point``
+  for :guilabel:`Y` enter ``@rg_layout_margin + 6.5``, for :guilabel:`Width` enter ``28,639``
+  and for :guilabel:`Height` ``13.100``. The ``Reference point``
   should be placed in the center.
   
 Congratulations! You created your first dynamic map layout. Take a look at the layout and check if everything looks the way you want it!
