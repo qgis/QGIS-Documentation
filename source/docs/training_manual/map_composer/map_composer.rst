@@ -344,7 +344,8 @@ will adapt dynamically.
 
 * Insert a rectangle which will contain the header with the |addBasicShape| :sup:`Add Shape` button. 
   In the :guilabel:`Items` panel enter the name ``header``.
-* Again, go to the :guilabel:`Item Properties` and open the menu :guilabel:`Position and Size`. Using the |dataDefineOn| :sup:`Data defined override`
+* Again, go to the :guilabel:`Item Properties` and open the :guilabel:`Position and Size` section.
+  Using |dataDefineOn| :sup:`Data defined override`,
   choose the ``@rg_layout_margin`` variable for ``X`` as well as for ``Y``. The width is defined by the expression
   ``@layout_pagewidth - @zg_layout_rand * 2`` and the height by the expression ``@rg_layout_header``. 
 * We will insert a horizontal line and two vertical lines to divide the header into different sections
