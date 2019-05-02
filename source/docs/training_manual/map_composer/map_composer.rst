@@ -354,7 +354,7 @@ will adapt dynamically.
   After entering the names,
   insert the expression ``@rg_layout_margin`` and ``@rg_layout_margin + 8`` for :guilabel:`X` and :guilabel:`Y`, and
   ``@layout_pagewidth -  @rg_layout_margin * 2 - 53.5`` for the :guilabel:`Width`.
-* The first vertical line is defined by ``@layout_pagewidth -  @rg_layout_margin * 2 - 53.5`` for ``X``
+* The first vertical line is defined by ``@layout_pagewidth -  @rg_layout_margin * 2 - 53.5`` for :guilabel:`X`
   and ``@rg_layout_margin`` for ``Y``. It's defined by the height of the header we created, so enter
   the expression ``@rg_layout_height_header`` for ``Height``.
   The second vertical line is placed left to it. Enter the expression ``@layout_pagewidth-@rg_layout_margin*2-83.5``
