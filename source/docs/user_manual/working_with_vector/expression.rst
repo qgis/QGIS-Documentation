@@ -113,6 +113,37 @@ using functions, layer's fields and values. It contains following widgets:
   * *Marker*: for every other error (eg, missing parenthesis, unexpected
     character) at a single location.
 
+  .. tip:: **Document your expression with comments**
+
+    When using complex expression, it is good practice to add
+    text either as a multiline comment or inline comments to help you remember.
+
+    ::
+
+      /*
+      Labels each region with its highest (in altitude) airport(s)
+      and altitude, eg 'AMBLER : 264m' for the 'Northwest Artic' region
+      */
+      with_variable(
+        'airport_alti', -- stores the highest altitude of the region
+        aggregate(
+          'airports',
+          'max',
+          "ELEV", -- the field containing the altitude
+          -- and limit the airports to the region they are within
+          filter := within( $geometry, geometry( @parent ) )
+        ),
+          aggregate( -- finds airports at the same altitude in the region 
+            'airports',
+            'concatenate',
+            "NAME",
+            filter := within( $geometry, geometry( @parent ) )
+              and "ELEV" = @airport_alti
+          )
+          || ' : ' || @airport_alti || 'm'
+          -- using || allows regions without airports to be skipped
+      )
+
 * Under the expression editor, an :guilabel:`Output preview` displays the result
   of the expression evaluated on the first feature of the layer. In case of
   error, it indicates it and you can access details with the provided hyperlink.
@@ -121,14 +152,21 @@ using functions, layer's fields and values. It contains following widgets:
   find a particular function or field.
   Double-clicking an item adds it to the expression editor.
 * A help panel displays help for each selected item in the function selector.
+
+  .. tip::
+
+   Press :kbd:`Ctrl+Click` when hovering a function name in an expression to
+   automatically display its help in the dialog.
+
 * A field's values widget shown when a field is selected in the function selector
   helps to fetch features attributes. Double-clicking a value adds it to the
   expression editor.
 
 .. tip::
 
- Press :kbd:`Ctrl+Click` when hovering over a function name in an expression to
- automatically display its help in the dialog.
+   The right panel, showing functions help or field values, can be
+   collapsed (invisible) in the dialog. Press the :guilabel:`Show Values`
+   or :guilabel:`Show Help` button to get it back.
 
 .. _figure_expression_tab:
 
