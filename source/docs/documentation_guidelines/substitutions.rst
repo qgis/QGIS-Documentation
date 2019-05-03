@@ -360,6 +360,9 @@ Icon                                Substitution                            Icon
 |25dSymbol|                         ``|25dSymbol|``                         |ruleBasedSymbol|              ``|ruleBasedSymbol|``
 |invertedSymbol|                    ``|invertedSymbol|``                    |heatmapSymbol|                ``|heatmapSymbol|``
 |pointDisplacementSymbol|           ``|pointDisplacementSymbol|``           |pointClusterSymbol|           ``|pointClusterSymbol|``
+|contour_active|                    ``|contour_active|``                    |contour_inactive|             ``|contour_inactive|``
+|vector_active|                     ``|vector_active|``                     |vector_inactive|              ``|vector_inactive|``
+|rendering_mesh|                    ``|rendering_mesh|``                    |groupsexploring|              ``|groupsexploring|``
 |sum|                               ``|sum|``                               |sort|                         ``|sort|``
 |paintEffects|                      ``|paintEffects|``                      |mapIdentification|            ``|mapIdentification|``
 |styleManager|                      ``|styleManager|``                      |iconView|                     ``|iconView|``
@@ -392,6 +395,7 @@ Icon                            Substitution                        Icon        
 |toLines|                       ``|toLines|``                       |extractNodes|                  ``|extractNodes|``
 |splitLayer|                    ``|splitLayer|``
 |showRasterCalculator|          ``|showRasterCalculator|``          |heatmap|                       ``|heatmap|``
+|showMeshCalculator|            ``|showMeshCalculator|``
 ==============================  ==================================  ==============================  ==================================
 
 Various Core Plugins
@@ -478,6 +482,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |addMap| image:: /static/common/mActionAddMap.png
    :width: 1.5em
+.. |addMeshLayer| image:: /static/common/mActionAddMeshLayer.png
+   :width: 1.5em
 .. |addMssqlLayer| image:: /static/common/mActionAddMssqlLayer.png
    :width: 1.5em
 .. |addNodesShape| image:: /static/common/mActionAddNodesShape.png
@@ -495,8 +501,6 @@ Icon                            Substitution                        Icon        
 .. |addPostgisLayer| image:: /static/common/mActionAddPostgisLayer.png
    :width: 1.5em
 .. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
-   :width: 1.5em
-.. |addMeshLayer| image:: /static/common/mActionAddMeshLayer.png
    :width: 1.5em
 .. |addRing| image:: /static/common/mActionAddRing.png
    :width: 2em
@@ -582,6 +586,10 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |contextHelp| image:: /static/common/mActionContextHelp.png
    :width: 1.5em
+.. |contour_active| image:: /static/common/contours_active.png
+   :width: 1.5em
+.. |contour_inactive| image:: /static/common/contours_inactive.png
+   :width: 2em
 .. |convexHull| image:: /static/common/convex_hull.png
    :width: 1.5em
 .. |coordinateCapture| image:: /static/common/coordinate_capture.png
@@ -747,6 +755,8 @@ Icon                            Substitution                        Icon        
 .. |grassTools| image:: /static/common/grass_tools.png
    :width: 1.5em
 .. |groupItems| image:: /static/common/mActionGroupItems.png
+   :width: 1.5em
+.. |groupsexploring| image:: /static/common/mesh_groups_explore.png
    :width: 1.5em
 .. |heatmap| image:: /static/common/heatmap.png
    :width: 1.5em
@@ -995,6 +1005,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |rendering| image:: /static/common/rendering.png
    :width: 1.5em
+.. |rendering_mesh| image:: /static/common/mesh_rendering.png
+   :width: 1.5em
 .. |reshape| image:: /static/common/mActionReshape.png
    :width: 1.5em
 .. |resizeNarrowest| image:: /static/common/mActionResizeNarrowest.png
@@ -1062,6 +1074,8 @@ Icon                            Substitution                        Icon        
 .. |showEditorConsole| image:: /static/common/iconShowEditorConsole.png
    :width: 1.5em
 .. |showMapTheme| image:: /static/common/mActionShowPresets.png
+   :width: 1.5em
+.. |showMeshCalculator| image:: /static/common/mActionShowMeshCalculator.png
    :width: 1.5em
 .. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
    :width: 1.5em
@@ -1137,6 +1151,10 @@ Icon                            Substitution                        Icon        
 .. |unlocked| image:: /static/common/unlocked.png
    :width: 1.5em
 .. |vectorGrid| image:: /static/common/vector_grid.png
+   :width: 1.5em
+.. |vector_active| image:: /static/common/vector_active.png
+   :width: 2em
+.. |vector_inactive| image:: /static/common/vector_inactive.png
    :width: 1.5em
 .. |vertexTool| image:: /static/common/mActionVertexTool.png
    :width: 1.5em

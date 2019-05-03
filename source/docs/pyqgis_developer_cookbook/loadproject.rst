@@ -38,7 +38,8 @@ You can call its :meth:`read() <qgis.core.QgsProject.read>` method, passing the 
 
 If you need to make modifications to the project (for example to add or remove some layers)
 and save your changes, call the :meth:`write() <qgis.core.QgsProject.write>` method of your project instance.
-The :func:`write()` method also accepts an optional path for saving the project to a new location:
+The :meth:`write() <qgis.core.QgsProject.write>` method also accepts an optional
+path for saving the project to a new location:
 
 .. code-block:: python
 

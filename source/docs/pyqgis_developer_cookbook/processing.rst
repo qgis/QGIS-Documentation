@@ -112,7 +112,7 @@ You can create a folder :file:`processing_provider` with three files in it:
   https://github.com/qgis/QGIS/blob/master/python/plugins/processing/script/ScriptTemplate.py
 
 Now you can reload your plugin in QGIS and you should see your example script in
-the Processing toolbox and modeller.
+the Processing toolbox and modeler.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -120,5 +120,4 @@ the Processing toolbox and modeller.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

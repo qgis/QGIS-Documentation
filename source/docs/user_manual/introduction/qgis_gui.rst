@@ -275,7 +275,7 @@ Menu Option                                                   Shortcut          
 :menuselection:`Create Layer -->`                             \                     :guilabel:`Data Source Manager`    :ref:`sec_create_vector`
 :menuselection:`Add Layer -->`                                \                     :guilabel:`Data Source Manager`    :ref:`opening_data`
 :guilabel:`Embed Layers and Groups...`                        \                     \                                  :ref:`nesting_projects`
-:guilabel:`Add from Layer Definition File...`                 \                     \                                  \
+:guilabel:`Add from Layer Definition File...`                 \                     \                                  :ref:`layer_definition_file`
 |editCopy| :guilabel:`Copy Style`                             \                     \                                  :ref:`save_layer_property`
 |editPaste| :guilabel:`Paste Style`                           \                     \                                  :ref:`save_layer_property`
 |editCopy| :guilabel:`Copy Layer`                             \                     \                                  \
@@ -285,7 +285,7 @@ Menu Option                                                   Shortcut          
 |fileSave| :guilabel:`Save Layer Edits`                       \                     :guilabel:`Digitizing`             :ref:`save_feature_edits`
 |allEdits| :menuselection:`Current Edits -->`                 \                     :guilabel:`Digitizing`             :ref:`save_feature_edits`
 :guilabel:`Save As...`                                        \                     \                                  :ref:`general_saveas`
-:guilabel:`Save As Layer Definition File...`                  \                     \                                  \
+:guilabel:`Save As Layer Definition File...`                  \                     \                                  :ref:`layer_definition_file`
 |removeLayer| :guilabel:`Remove Layer/Group`                  :kbd:`Ctrl+D`         \                                  \
 |duplicateLayer| :guilabel:`Duplicate Layer(s)`               \                     \                                  \
 :guilabel:`Set Scale Visibility of Layer(s)`                  \                     \                                  \
@@ -432,6 +432,19 @@ Menu Option                                      Toolbar                      Re
 |
 
 When starting QGIS for the first time not all core plugins are loaded.
+
+
+Mesh
+----
+
+The :menuselection:`Mesh` menu provides tools needed to manipulate
+:ref:`mesh layers <label_meshdata>`.
+
+========================================================  ===========================  ===============================
+Menu Option                                               Toolbar                      Reference
+========================================================  ===========================  ===============================
+|showMeshCalculator| :menuselection:`Mesh Calculator`
+========================================================  ===========================  ===============================
 
 
 Processing
@@ -779,6 +792,8 @@ Status Bar
 The status bar provides you with general information about the map view
 and processed or available actions, and offers you tools to manage the map view.
 
+.. _`locator_bar`:
+
 On the left side of the status bar, the locator bar, a quick search widget,
 helps you find and run any feature or options in QGIS. Simply type text
 associated with the item you are looking for (name, tag, keyword...) and you get
@@ -1044,6 +1059,8 @@ open the Plugin Manager dialog.
 .. |showAllLayers| image:: /static/common/mActionShowAllLayers.png
    :width: 1.5em
 .. |showBookmarks| image:: /static/common/mActionShowBookmarks.png
+   :width: 1.5em
+.. |showMeshCalculator| image:: /static/common/mActionShowMeshCalculator.png
    :width: 1.5em
 .. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
    :width: 1.5em

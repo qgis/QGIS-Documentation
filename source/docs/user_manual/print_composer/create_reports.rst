@@ -31,7 +31,7 @@ GIS projects in a simple, quick and structured way.
 Get started
 ===========
 
-:guilabel:`Reports` menu is an extension of Print Layout. This funcionality can
+:guilabel:`Reports` menu is an extension of Print Layout. This functionality can
 be found in :menuselection:`Project --> New Report` or inside of
 :menuselection:`Project --> Layout Manager`.
 
@@ -116,7 +116,7 @@ to add to our report.
 |
 
 There are two options: :guilabel:`Add Static Layout Section` and a
-:guilabel:`Field Group Section`.  The :guilabel:`Add Static Layout Section` is a
+:guilabel:`Field Group Section`. The :guilabel:`Add Static Layout Section` is a
 single, static body layout. This can be used to embed static layouts mid-way
 through a report. Alternatively, a :guilabel:`Field Group Section` repeats its
 body layout for every feature in a layer. The features are sorted by the
@@ -130,7 +130,7 @@ For now we’ll add a Field Group to our report. At its
 most basic level, you can think of a :guilabel:`Field Group Section` as the equivalent
 of a :ref:`print atlas <atlas_generation>`. You select a layer to iterate over,
 and the report will insert a section for each feature found. Selecting the new
-::guilabel:`Field Group Section` section reveals a number of new related settings:
+:guilabel:`Field Group Section` reveals a number of new related settings:
 
 .. figure:: img/field_group.png
    :align: center
@@ -260,11 +260,11 @@ Reports in QGIS 3.0 - the Ultimate Guide!
 <https://north-road.com/2018/01/23/exploring-reports-in-qgis-3-0-the-ultimate-guide>`_
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be
-   automatically updated by the find_set_subst.py script. If you need to create a
-   new substitution manually, please add it also to the substitutions.txt file in
-   the source folder.
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
 
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

@@ -83,17 +83,7 @@ The source of the document can be found here:
 
 So why did I choose this document?
 
-#. It is considered finished for the current release.
-   If it is not yet completed the following statement followed by an empty line
-   can be found in the top of the document.
-
-   ``|updatedisclaimer|``
-
-   This will produce a visible disclaimer in the output product.
-   To start translating a document with an update disclaimer there is a good
-   chance that later on it needs another finishing touch.
-
-#. It also includes images, captions, headers, references and replacements.
+#. It includes images, captions, headers, references and replacements.
 #. I wrote it so it is easier for me to translate ;-)
 
 The build process has created the English ``.po`` file which can be found here::
@@ -354,4 +344,3 @@ For any question, please contact the `QGIS Community Team
    :width: 2em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

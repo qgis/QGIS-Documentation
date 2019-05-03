@@ -101,8 +101,9 @@ PyQGIS provides several options for creating a geometry:
 Access to Geometry
 ==================
 
-First, you should find out the geometry type. The :meth:`wkbType() <qgis.core.QgsGeometry.wkbType>` method is the one to
-use. It returns a value from the :class:`QgsWkbTypes.Type <qgis.core.QgsWkbTypes>` enumeration
+First, you should find out the geometry type. The :meth:`wkbType() <qgis.core.QgsGeometry.wkbType>`
+method is the one to use. It returns a value from the :class:`QgsWkbTypes.Type <qgis.core.QgsWkbTypes>`
+enumeration.
 
 .. code-block:: python
 
@@ -115,16 +116,18 @@ use. It returns a value from the :class:`QgsWkbTypes.Type <qgis.core.QgsWkbTypes
   gPolygon.wkbType() == QgsWkbTypes.MultiPolygon
   # output: False
 
-As an alternative, one can use :meth:`wkbType() <qgis.core.QgsGeometry.wkbType>` method which returns a value from
-:class:`QgsWkbTypes.GeometryType <qgis.core.QgsWkbTypes>` enumeration.
+As an alternative, one can use the :meth:`type() <qgis.core.QgsGeometry.type>`
+method which returns a value from the :class:`QgsWkbTypes.GeometryType <qgis.core.QgsWkbTypes>`
+enumeration.
 
-You can use the func:`wkbType() <qgis.core.QgsWkbTypes.displayString>` function to get a human readable geometry type.
+You can use the :meth:`displayString() <qgis.core.QgsWkbTypes.displayString>`
+function to get a human readable geometry type.
 
 .. code-block:: python
 
   gPnt.wkbType()
   # output: 1
-  QgsWkbTypes.displayString(int(gPnt.wkbType()))
+  QgsWkbTypes.displayString(gPnt.wkbType())
   # output: 'Point'
 
 There is also a helper function
@@ -143,13 +146,13 @@ vector type. Here's an example on how to use these accessors:
   # output: [[<QgsPointXY: POINT(1 1)>, <QgsPointXY: POINT(2 2)>, <QgsPointXY: POINT(2 1)>, <QgsPointXY: POINT(1 1)>]]
 
 .. note:: The tuples (x,y) are not real tuples, they are :class:`QgsPoint <qgis.core.QgsPoint>`
-   objects, the values are accessible with :meth:`x() <qgis.core.QgsPoint.x>` () and :meth:`y() <qgis.core.QgsPoint.y>` methods.
+   objects, the values are accessible with :meth:`x() <qgis.core.QgsPoint.x>`
+   and :meth:`y() <qgis.core.QgsPoint.y>` methods.
 
 For multipart geometries there are similar accessor functions:
-:meth:`asMultiPoint() <qgis.core.QgsGeometry.asMultiPoint>`, :meth:`asMultiPolyline() <qgis.core.QgsGeometry.asMultiPolyline>` and :meth:`asMultiPolygon() <qgis.core.QgsGeometry.asMultiPolygon>`
+:meth:`asMultiPoint() <qgis.core.QgsGeometry.asMultiPoint>`, :meth:`asMultiPolyline() <qgis.core.QgsGeometry.asMultiPolyline>` and :meth:`asMultiPolygon() <qgis.core.QgsGeometry.asMultiPolygon>`.
 
 
-qgis.core.QgsGeometry.asMultiPoint
 .. index:: Geometry; Predicates and operations
 
 Geometry Predicates and Operations
@@ -159,7 +162,7 @@ QGIS uses GEOS library for advanced geometry operations such as geometry
 predicates (:meth:`contains() <qgis.core.QgsGeometry.contains>`, :meth:`intersects() <qgis.core.QgsGeometry.intersects>`, …) and set operations
 (:meth:`combine() <qgis.core.QgsGeometry.combine>`, :meth:`difference() <qgis.core.QgsGeometry.difference>`, …). It can also compute geometric
 properties of geometries, such as area (in the case of polygons) or lengths
-(for polygons and lines)
+(for polygons and lines).
 
 Let's see an example that combines iterating over the features in a
 given layer and performing some geometric computations based on their
@@ -239,7 +242,8 @@ You can find many example of algorithms that are included in QGIS and use these
 methods to analyze and transform vector data. Here are some links to the code
 of a few of them.
 
-* Distance and area using the :class:`QgsDistanceArea <qgis.core.QgsDistanceArea>` class: `Distance matrix algorithm <https://github.com/qgis/QGIS/blob/master/python/plugins/processing/algs/qgis/PointDistance.py>`_
+* Distance and area using the :class:`QgsDistanceArea <qgis.core.QgsDistanceArea>` class:
+  `Distance matrix algorithm <https://github.com/qgis/QGIS/blob/master/python/plugins/processing/algs/qgis/PointDistance.py>`_
 * `Lines to polygons algorithm <https://github.com/qgis/QGIS/blob/master/python/plugins/processing/algs/qgis/LinesToPolygons.py>`_
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
