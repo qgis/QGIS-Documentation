@@ -47,14 +47,15 @@ with the following line:
 
 Now, there is basically just one (interesting) thing you can do with
 that from the console: execute an algorithm. That is done using the
-``run()`` method, which takes the name of the algorithm to execute
+:meth:`run <qgis.core.QgsProcessingAlgorithm.run>` method, which
+takes the name of the algorithm to execute
 as its first parameter, and then a variable number of additional
 parameters depending on the requirements of the algorithm. So the
 first thing you need to know is the name of the algorithm to
 execute. That is not the name you see in the toolbox, but rather a
 unique command–line name. To find the right name for your algorithm,
-you can use the processingRegistry. Type the following line in your
-console:
+you can use the :class:`processingRegistry <qgis.core.QgsProcessingRegistry>`.
+Type the following line in your console:
 
 ::
 
@@ -425,16 +426,20 @@ After doing the necessary imports, the following
 :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`
 functions are specified:
 
-* ``name``: The id of the algorithm (lowercase).
-* ``displayName``: A human readable name for the algorithm.
-* ``createInstance``: Create a new instance of the algorithm class.
-* ``initAlgorithm``: Configure the parameterDefinitions and
-  outputDefinitions.
+* :meth:`name <qgis.core.QgsProcessingAlgorithm.name>`: The id of the
+  algorithm (lowercase).
+* :meth:`displayName <qgis.core.QgsProcessingAlgorithm.displayName>`:
+  A human readable name for the algorithm.
+* :meth:`createInstance <qgis.core.QgsProcessingAlgorithm.createInstance>`:
+  Create a new instance of the algorithm class.
+* :meth:`initAlgorithm <qgis.core.QgsProcessingAlgorithm.initAlgorithm>`:
+  Configure the parameterDefinitions and outputDefinitions.
 
   Here you describe the parameters and output of the algorithm.  In
   this case, a feature source for the input, a feature sink for
   the result and a number for the buffer distance.
-* ``processAlgorithm``: Do the work.
+* :meth:`processAlgorithm <qgis.core.QgsProcessingAlgorithm.processAlgorithm>`:
+  Do the work.
 
   Here we first run the ``smoothgeometry`` algorithm to smooth the
   geometry, and then we run the ``buffer`` algorithm on the smoothed
@@ -448,35 +453,35 @@ functions are specified:
 There are a number of different parameter types available for
 input and output.
 Their definitions can be found in processing.h.  Below is an
-alphabetically sorted list (see `the Python API documentation
-<https://qgis.org/pyqgis/master/core/Processing/QgsProcessingAlgorithm.html>`_
-for details).
+alphabetically sorted list (see :class:`the Python API documentation
+<qgis.core.QgsProcessingAlgorithm>` for details).
 
-* QgsProcessingParameterBand
-* QgsProcessingParameterBoolean
-* QgsProcessingParameterCrs
-* QgsProcessingParameterDistance
-* QgsProcessingParameterEnum
-* QgsProcessingParameterExpression
-* QgsProcessingParameterExtent
-* QgsProcessingParameterFeatureSink
-* QgsProcessingParameterFeatureSource
-* QgsProcessingParameterField - A field in the attributes table of a
-  vector layer.  The name of the layer has to be specified.
-* QgsProcessingParameterFile
-* QgsProcessingParameterFileDestination
-* QgsProcessingParameterFolderDestination
-* QgsProcessingParameterMapLayer
-* QgsProcessingParameterMatrix
-* QgsProcessingParameterMultipleLayers
-* QgsProcessingParameterNumber
-* QgsProcessingParameterPoint
-* QgsProcessingParameterRange
-* QgsProcessingParameterRasterDestination
-* QgsProcessingParameterRasterLayer
-* QgsProcessingParameterString
-* QgsProcessingParameterVectorDestination
-* QgsProcessingParameterVectorLayer
+* :class:`QgsProcessingParameterBand <qgis.core.QgsProcessingParameterBand>`
+* :class:`QgsProcessingParameterBoolean <qgis.core.QgsProcessingParameterBoolean>`
+* :class:`QgsProcessingParameterCrs <qgis.core.QgsProcessingParameterCrs>`
+* :class:`QgsProcessingParameterDistance <qgis.core.QgsProcessingParameterDistance>`
+* :class:`QgsProcessingParameterEnum <qgis.core.QgsProcessingParameterEnum>`
+* :class:`QgsProcessingParameterExpression <qgis.core.QgsProcessingParameterExpression>`
+* :class:`QgsProcessingParameterExtent <qgis.core.QgsProcessingParameterExtent>`
+* :class:`QgsProcessingParameterFeatureSink <qgis.core.QgsProcessingParameterFeatureSink>`
+* :class:`QgsProcessingParameterFeatureSource <qgis.core.QgsProcessingParameterFeatureSource>`
+* :class:`QgsProcessingParameterField <qgis.core.QgsProcessingParameterField>` -
+  A field in the attributes table of a vector layer. The name of the
+  layer has to be specified.
+* :class:`QgsProcessingParameterFile <qgis.core.QgsProcessingParameterFile>`
+* :class:`QgsProcessingParameterFileDestination <qgis.core.QgsProcessingParameterFileDestination>`
+* :class:`QgsProcessingParameterFolderDestination <qgis.core.QgsProcessingParameterFolderDestination>`
+* :class:`QgsProcessingParameterMapLayer <qgis.core.QgsProcessingParameterMapLayer>`
+* :class:`QgsProcessingParameterMatrix <qgis.core.QgsProcessingParameterMatrix>`
+* :class:`QgsProcessingParameterMultipleLayers <qgis.core.QgsProcessingParameterMultipleLayers>`
+* :class:`QgsProcessingParameterNumber <qgis.core.QgsProcessingParameterNumber>`
+* :class:`QgsProcessingParameterPoint <qgis.core.QgsProcessingParameterPoint>`
+* :class:`QgsProcessingParameterRange <qgis.core.QgsProcessingParameterRange>`
+* :class:`QgsProcessingParameterRasterDestination <qgis.core.QgsProcessingParameterRasterDestination>`
+* :class:`QgsProcessingParameterRasterLayer <qgis.core.QgsProcessingParameterRasterLayer>`
+* :class:`QgsProcessingParameterString <qgis.core.QgsProcessingParameterString>`
+* :class:`QgsProcessingParameterVectorDestination <qgis.core.QgsProcessingParameterVectorDestination>`
+* :class:`QgsProcessingParameterVectorLayer <qgis.core.QgsProcessingParameterVectorLayer>`
 
 The first parameter to the constructors is the name of the parameter,
 and the second is the description of the parameter (for the user
@@ -505,17 +510,22 @@ return, the more useful your algorithm becomes!
 
 Feedback
 ........
-The ``feedback`` object passed to ``processAlgorithm`` should be used for
-user feedback / interaction.
-You can use the ``setProgress`` function of the ``feedback`` object to update
+
+The :class:`feedback <qgis.core.QgsProcessingFeedback>` object passed to
+:meth:`processAlgorithm <qgis.core.QgsProcessingAlgorithm.processAlgorithm>`
+should be used for user feedback / interaction.
+You can use the :meth:`setProgress <qgis.core.QgsFeedback.setProgress>`
+function of the :class:`feedback <qgis.core.QgsProcessingFeedback>` object to update
 the progress bar (0 to 100) to inform the user about the progress of the
-algorithm.  This is very useful if your algorithm takes a long time to
-complete.
-The ``feedback`` object provides an ``isCanceled`` method that
+algorithm. This is very useful if your algorithm takes a long time to complete.
+
+The :class:`feedback <qgis.core.QgsProcessingFeedback>` object provides an
+:meth:`isCanceled <qgis.core.QgsFeedback.isCanceled>` method that
 should be monitored to enable cancelation of the algorithm by the user.
-The ``pushInfo`` method of ``feedback`` can be used to send information
-to the user, and ``reportError`` is handy for pushing non-fatal errors
-to users.
+The :meth:`pushInfo <qgis.core.QgsProcessingFeedback.pushInfo>` method of
+:class:`feedback <qgis.core.QgsProcessingFeedback>` can be used to send information
+to the user, and :meth:`reportError <qgis.core.QgsProcessingFeedback.reportError>`
+is handy for pushing non-fatal errors to users.
 
 Algorithms should avoid using other forms of providing feedback to
 users, such as print statements or logging to
@@ -553,12 +563,13 @@ As in the case of models, you can create additional documentation for
 your scripts, to explain what they do and how to use them.
 
 :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`
-provides the ``helpString()``, ``shortHelpString()`` and ``helpUrl()``
-functions for that purpose.
+provides the :meth:`helpString <qgis.core.QgsProcessingAlgorithm.helpString>`,
+:meth:`shortHelpString <qgis.core.QgsProcessingAlgorithm.shortHelpString>` and
+:meth:`helpUrl <qgis.core.QgsProcessingAlgorithm.helpUrl>` functions for that purpose.
 Specify / override these to provide more help to the user.
 
-``shortDescription()`` (added in 3.4) is used in the tooltip when
-hovering over the algorithm in the toolbox.
+:meth:`shortDescription <qgis.core.QgsProcessingAlgorithm.shortDescription>`
+is used in the tooltip when hovering over the algorithm in the toolbox.
 
 Pre- and post-execution script hooks
 ------------------------------------
