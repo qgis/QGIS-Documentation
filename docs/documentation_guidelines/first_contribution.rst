@@ -98,7 +98,8 @@ Pages on the QGIS website can be edited quickly and easily by clicking on the
 #. After you click on :guilabel:`Propose file change` github will navigate to
    the :guilabel:`Comparing changes` page.
 
-   * If you're done making changes, skip to :ref:`Compare changes <compare_changes>` in the :ref:`Share your changes via Pull Request <sharing_changes>` section below.
+   * If you're done making changes, skip to :ref:`Compare changes <compare_changes>`
+     in the :ref:`Share your changes via Pull Request <sharing_changes>` section below.
    * If there are additional changes that you want to make before submitting
      them to QGIS, follow these steps:
 
@@ -106,7 +107,7 @@ Pages on the QGIS website can be edited quickly and easily by clicking on the
      #. Click on |githubBranch| and search for the ``patch-xxx`` branch. Select
         this patch branch. The |githubBranch| button will now say
         :guilabel:`Branch: patch-xxx`
-     #. Jump down to :ref:`Modify files<modify_files>` below.
+     #. Jump down to :ref:`Modify files <modify_files>` below.
 
 Alternative 2: Create an ad hoc branch in your documentation repository
 .......................................................................
@@ -134,8 +135,10 @@ The name of the new branch should relate to the problem you intend to fix. The
 3. Modify files
 ---------------
 
-#. Browse the source files of your fork of QGIS-Documentation to the file that needs to be modified
-#. Make your modifications following the :ref:`writing guidelines <QGIS-documentation-guidelines>`
+#. Browse the source files of your fork of QGIS-Documentation to the file that
+   needs to be modified
+#. Make your modifications following the :ref:`writing guidelines
+   <QGIS-documentation-guidelines>`
 #. When you finish, navigate to the **Commit Changes** frame at the bottom of
    the page, make a short comment about your changes, and click on
    :guilabel:`Commit Changes` to commit the changes directly to your branch.
@@ -229,9 +232,25 @@ concerned issue will be closed as soon as the pull request is merged.
 
 Add links to any documentation pages that you are changing.
 
-Click on :guilabel:`Create pull request`
+Click on :guilabel:`Create pull request`.
 
-4. Make corrections
+4. Review and comment pull request
+..................................
+
+You can make `comments <https://help.github.com/articles/commenting-on-a-pull-request/>`_
+on the changes in a pull request. Navigate to the `pull request page <https://github.com/qgis/QGIS-Documentation/pulls>`_
+and click on the pull request that you want to comment on.
+
+At the bottom of the page you will find a text box where you can leave general
+comments about a pull request.
+
+To add comments about specific lines, click on
+|githubFilesChanged| and find the file you want to comment on. You may have to
+click on :guilabel:`Load diff` to see the changes. Scroll to the line you
+want to comment on and click on the |githubBluePlus|. That will open a text box
+allowing you to leave a comment.
+
+5. Make corrections
 ...................
 
 A new pull request will automatically be added to the `Pull requests list <https://github.com/qgis/QGIS-Documentation/pulls>`_.
@@ -266,22 +285,6 @@ those changes and repeat the steps above.
 
 An administrator will merge your contribution after any build errors are
 corrected, and after you and the administrators are satisfied with your changes.
-
-5. Review and comment pull request
-..................................
-
-You can make `comments <https://help.github.com/articles/commenting-on-a-pull-request/>`_
-on the changes in a pull request. Navigate to the `pull request page <https://github.com/qgis/QGIS-Documentation/pulls>`_
-and click on the pull request that you want to comment on.
-
-At the bottom of the page you will find a text box where you can leave general
-comments about a pull request.
-
-To add comments about specific lines, click on
-|githubFilesChanged| and find the file you want to comment on. You may have to
-click on :guilabel:`Load diff` to see the changes. Scroll to the line you
-want to comment on and click on the |githubBluePlus|. That will open a text box
-allowing you to leave a comment.
 
 5. Delete your merged branch
 ----------------------------
