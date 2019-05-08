@@ -680,7 +680,7 @@ Outputs
 
 See also
 ........
-:ref:`qgisbuffer`, :ref:`qgisbufferbym`, :ref:`qgistaperedbuffer`, :ref:`qgisbufferbym`
+:ref:`qgisbuffer`, :ref:`qgisbufferbym`, :ref:`qgistaperedbuffer`
 
 
 .. _qgisdelaunaytriangulation:
