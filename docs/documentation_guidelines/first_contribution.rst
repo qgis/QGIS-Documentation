@@ -237,19 +237,73 @@ Click on :guilabel:`Create pull request`.
 4. Review and comment pull request
 ..................................
 
-You can make `comments <https://help.github.com/articles/commenting-on-a-pull-request/>`_
-on the changes in a pull request. Navigate to the `pull request page <https://github.com/qgis/QGIS-Documentation/pulls>`_
-and click on the pull request that you want to comment on.
+As seen above, anyone can submit modifications to the documentation through pull
+requests. Likewise anyone can review pull requests with questions and `comments
+<https://help.github.com/articles/commenting-on-a-pull-request/>`_. Perhaps the
+writng style doesn't match project guidelines, the change is missing some major
+details or screenshots, or maybe everything looks great and is in order.
+Reviewing helps to improve the quality of the contribution, both in form and
+substance.
 
-At the bottom of the page you will find a text box where you can leave general
-comments about a pull request.
+To review a pull request:
 
-To add comments about specific lines, click on
-|githubFilesChanged| and find the file you want to comment on. You may have to
-click on :guilabel:`Load diff` to see the changes. Scroll to the line you
-want to comment on and click on the |githubBluePlus|. That will open a text box
-allowing you to leave a comment.
+#. Navigate to the `pull requests page <https://github.com/qgis/QGIS-Documentation/pulls>`_
+   and click on the pull request that you want to comment on.
+#. At the bottom of the page you will find a text box where you can leave general
+   comments about the pull request.
+#. To add comments about specific lines,
 
+   #. Click on |githubFilesChanged| and find the file you want to comment on.
+      You may have to click on :guilabel:`Display the source diff` to see the
+      changes.
+   #. Scroll to the line you want to comment on and click on the |githubBluePlus|.
+      That will open a text box allowing you to leave a comment.
+
+Specific line comments can be published either:
+
+* as single comments, using the :guilabel:`Add single comment` button. They are
+  published as you go. Use this only if you have few comments to add or when
+  replying to another comment.
+* or as part of a review, pressing the :guilabel:`Start a review` button.
+  Your comments are not automatically sent after validation, allowing you to
+  edit or cancel them afterwards, to add a summary of the main points of the
+  review or global instructions regarding the pull request and whether you
+  approve it or not. This is the convenient way since it's more flexible and
+  allows you to structure your review, edit the comments, publish when you are
+  ready and send a single notification to the repository followers and not one
+  notification for each comment. Get `more details
+  <https://help.github.com/en/articles/reviewing-proposed-changes-in-a-pull-request>`.
+
+.. figure:: img/githubAddLineComment.png
+    :align: Center
+
+    Commenting a line with a suggestion of rewriting
+
+
+Line comments can embed suggestions of reformulation that the pull request
+writer can directly insert in his changes. To add a suggestion,
+click the |githubSuggestions| :sup:`Insert a suggestion` button on top of the
+comment text box and modify the text within the suggestion block.
+
+
+.. tip:: **Prefer committing suggestions to your pull request as a batch**
+
+ As a pull request author, when directly incorporating reviewers' feedback
+ in your pull request, avoid using the :guilabel:`Commit suggestion` button
+ at the bottom of the comment when you have many suggestions to address and
+ prefer adding them as a batch commit, that is:
+ 
+ #. Switch to the |githubFilesChanged| tab
+ #. Press :guilabel:`Add suggestion to batch` for each rewording you'd like to
+    include. You will see a counter increasing as you go.
+ #. Press any of the :guilabel:`Commit suggestions` button when you are ready to
+    apply the suggestions to your pull request and enter a message describing
+    the changes.
+ 
+ This will add all the modifications to your branch as a single commit, making a
+ more legible history of changes and less notifications for the repository
+ followers.
+ 
 5. Make corrections
 ...................
 
@@ -576,3 +630,6 @@ Further reading
    :width: 8em
 .. |githubFork| image:: /static/common/githubFork.png
    :width: 4em
+.. |githubSuggestions| image:: /static/common/githubSuggestions.png
+   :width: 1.5em
+
