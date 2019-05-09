@@ -313,7 +313,7 @@ will adapt dynamically.
   Scroll down to the :guilabel:`Variables` section and find the :guilabel:`Layout` part.
   Here we set some variables you
   can use all over the dynamic print layout. The first variable will define the margin.
-* Now you are ready to create the position and the size of the map canvas automatically
+Now you are ready to create the position and the size of the map item automatically
   by means of the variables. Go to the :guilabel:`Item Properties` panel and open the :guilabel:`Position and Size` section.
   Click the |dataDefineExpressionOn| :sup:`Data defined override` for ``X``.
   From :guilabel:`Variables`, choose ``@rg_layout_margin``.
