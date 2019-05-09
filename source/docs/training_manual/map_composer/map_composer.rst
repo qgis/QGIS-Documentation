@@ -366,7 +366,7 @@ will adapt dynamically.
 .. figure:: img/dynamic_layout_structure.png
    :align: center
 
-|moderate| |FA| Creating the labels of the dynamic header
+|moderate| |FA| Creating labels for the dynamic header
 ---------------------------------------------------------------------------------------
 
 * You can enter the project title of your QGIS project automatically. This title has to be set
