@@ -36,8 +36,7 @@ you have to do:
 * Make a copy of :file:`qgis-unstable.bat` and rename it ``pyscripter.bat``.
 * Open it in an editor. And remove the last line, the one that starts QGIS.
 * Add a line that points to your Pyscripter executable and add the
-  commandline argument that sets the version of Python to be used (2.7 in the
-  case of QGIS >= 2.0)
+  command line argument that sets the version of Python to be used
 * Also add the argument that points to the folder where Pyscripter can
   find the Python dll used by QGIS, you can find this under the bin folder
   of your OSGeoW install
@@ -203,8 +202,8 @@ press Enter. It will show you which QGIS module it uses and its path. Strip the
 trailing ``/qgis/__init__.pyc`` from this path and you've got the path you are
 looking for.
 
-You should also add your plugins folder here (on Linux it is
-:file:`~/.qgis2/python/plugins`).
+You should also add your plugins folder here (it is in :file:`python/plugins`
+under the :ref:`user profile <user_profiles>` folder).
 
 Next jump to the *Forced Builtins* tab, click on *New...* and enter ``qgis``.
 This will make Eclipse parse the QGIS API. You probably also want Eclipse to

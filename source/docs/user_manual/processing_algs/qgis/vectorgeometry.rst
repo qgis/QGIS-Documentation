@@ -165,7 +165,7 @@ For **lines geometries**, the boundaries are the vertices between each features.
 .. figure:: img/boundary_lines.png
    :align: center
 
-   Boundary layer for lines. In yellow a selected features.
+   Boundary layer for lines. In yellow a selected feature.
 
 Parameters
 ..........
@@ -683,7 +683,7 @@ Outputs
 
 See also
 ........
-:ref:`qgisbuffer`, :ref:`qgisbufferbym`, :ref:`qgistaperedbuffer`, :ref:`qgisbufferbym`
+:ref:`qgisbuffer`, :ref:`qgisbufferbym`, :ref:`qgistaperedbuffer`
 
 
 .. _qgisdelaunaytriangulation:

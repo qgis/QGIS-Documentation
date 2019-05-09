@@ -1,3 +1,7 @@
+.. only:: html
+
+   |updatedisclaimer|
+
 .. index:: Map rendering, Map printing
 
 .. _layout:
@@ -85,7 +89,9 @@ though it is not available in the GUI library. If you are not familiar with
 then you are encouraged to check the documentation now, because the layout
 is based on it.
 
-The central class of the layout is the :class:`QgsLayout <qgis.core.QgsLayout>` class, which is derived from the Qt :class:`QGraphicsScene` class. Let us create an instance of it:
+The central class of the layout is the :class:`QgsLayout <qgis.core.QgsLayout>`
+class, which is derived from the Qt `QGraphicsScene <https://doc.qt.io/qt-5/qgraphicsscene.html>`_
+class. Let us create an instance of it:
 
 .. code-block:: python
 
@@ -207,5 +213,4 @@ Use the :meth:`exportToImage() <qgis.core.QgsLayoutExporter.exportToImage>` in c
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
