@@ -384,7 +384,7 @@ will adapt dynamically.
   Here we will also include
   the date using ``printed on: [%format_date(now(),'dd.MM.yyyy')%]``. We are again using
   a variable that QGIS creates automatically. For :guilabel:`X` insert the expression ``@rg_layout_margin + 3`` and
-  for y enter the expression ``@rg_layout_margin +11.5``.
+  for :guilabel:`Y` enter the expression ``@rg_layout_margin + 11.5``.
 * The third label will include information about your organisation. We will create some variables first
   in the :guilabel:`Variables` menu of the :guilabel:`Item Properties`. Click the |signPlus| button each time
   and enter the names ``o_department``, ``o_name`` , ``o_adress`` and ``o_postcode`` as shown in the picture below.
