@@ -312,7 +312,7 @@ will adapt dynamically.
 * Create a map item called ``main map`` on the canvas and go to the :guilabel:`Layout` panel.
   Scroll down to the :guilabel:`Variables` section and find the :guilabel:`Layout` part.
   Here we set some variables you
-  can use all over the dynamic print layout. The first variable defines the margin.
+  can use all over the dynamic print layout. The first variable will define the margin.
   Press the |signPlus| button and type in the name ``rg_layout_margin``. Set the value to ``7.5``. Press
   the |signPlus| button again and type in the name ``rg_layout_height_header``. Set the value to ``36``.
 * Now you are ready to create the position and the size of the map canvas automatically
