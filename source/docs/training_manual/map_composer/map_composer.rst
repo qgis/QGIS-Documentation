@@ -390,7 +390,8 @@ will adapt dynamically.
   and enter the names ``o_department``, ``o_name`` , ``o_adress`` and ``o_postcode`` as shown in the picture below.
   In the second row enter the detailed information about your organisation. We will use these variables in the :guilabel:`Main Properties`
   section. The position is defined by ``@layout_pagewidth - @rg_layout_margin - 49.5`` for :guilabel:`X` and
-  ``@rg_layout_margin + 15.5`` for ``Y``. The ``Width`` is ``49,00`` and the ``Height`` is defined by ``@rg_layout_header - 15.5``.
+  ``@rg_layout_margin + 15.5`` for :guilabel:`Y`. :guilabel:`Width` is ``49.00`` and :guilabel:`Height`
+  is defined by ``@rg_layout_header - 15.5``.
 
 .. figure:: img/dynamic_layout_organisation.png
 
