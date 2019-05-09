@@ -11,7 +11,7 @@ Please have a look into one of the documents below.
    :maxdepth: 2
 
    User Guide/Manual <user_manual/index>
-   User Guide/Manual PDF's <https://docs.qgis.org/testing/pdf/>
+   User Guide/Manual PDF's <https://docs.qgis.org/3.4/pdf/>
    PyQGIS Cookbook <pyqgis_developer_cookbook/index>
    Developers Guide <developers_guide/index>
    Documentation Guidelines <documentation_guidelines/index>
