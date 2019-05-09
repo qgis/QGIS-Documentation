@@ -380,7 +380,8 @@ will adapt dynamically.
   give a width of 105 mm) and enter ``11.25`` for :guilabel:`Height`.
   Under :guilabel:`Appearance` set the Font size to 16 pt.
 * The second label will include a description of the map you created. Again, insert a label and name it
-  ``map description``. In the Main Properties also enter the text ``map description``. Here also enter
+  ``map description``. In the :guilabel:`Main Properties` also enter the text ``map description``.
+  Here we will also include
   the date of description by typing in ``printed on: [%format_date(now(),'dd.MM.yyyy')%]``. We are using
   a variable that QGIS creates automatically again. For x insert the expression ``@rg_layout_margin +3`` and
   for y enter the expression ``@rg_layout_margin +11.5``.
