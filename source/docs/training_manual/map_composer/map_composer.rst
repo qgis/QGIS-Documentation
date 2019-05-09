@@ -374,7 +374,8 @@ will adapt dynamically.
   and enter the name ``project title (variable)``.
   In the :guilabel:`Main Properties` of the :guilabel:`Items Properties` Panel enter the expression
   ``[%@project title%]``. Set the
-  position of the label with the expression ``@rg_layout_margin +3`` for ``X`` and ``@rg_layout_margin + 0.25`` for ``Y``.
+  position of the label with the expression ``@rg_layout_margin +3`` for :guilabel:`X` and
+  ``@rg_layout_margin + 0.25`` for :guilabel:`Y`.
   The label box should have a width of 105 mm. Enter the expression ``@layout_pagewidth - @rg_layout_margin *2 -90``
   for Width and enter ``11,25`` for Height. Under :guilabel:`Appearance` set the Font to 16 pt.
 * The second label will include a description of the map you created. Again, insert a label and name it
