@@ -411,7 +411,7 @@ will adapt dynamically.
   The position is defined by:
   ``@layout_pagewidth - @rg_layout_margin - 68.25`` for :guilabel:`X` and by ``@rg_layout_margin + 22.5``
   for :guilabel:`Y`.
-  We use static numbers here to define the ``Width`` and the ``Height``: ``21,027`` and ``21,157``.
+  We use static numbers here to define the :guilabel:`Width` and the :guilabel:`Height`: ``21.027`` and ``21.157``.
   
 |moderate| |FA| Creating the scalebar of the dynamic header
 ----------------------------------------------------------------------------------------
