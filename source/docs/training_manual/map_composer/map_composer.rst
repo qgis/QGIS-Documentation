@@ -309,7 +309,7 @@ will adapt dynamically.
   choose a title for the new layer.
 * We want to create a map layout consisting of a header and a map about the regions of
   Alaska. The layout should have a margin of 7.5 mm and the header should be 36mm high.
-* Create a map item called ``main map`` onto the canvas and go into the :guilabel:`Layout` panel.
+* Create a map item called ``main map`` on the canvas and go to the :guilabel:`Layout` panel.
   Choose the :guilabel:`Variables` menu and go to the :guilabel:`Layout` menu. Here we set some variables you
   can use all over the dynamic print layout. The first variable defines the margin.
   Press the |signPlus| button and type in the name ``rg_layout_margin``. Set the value to ``7.5``. Press
