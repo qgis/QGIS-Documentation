@@ -419,7 +419,7 @@ will adapt dynamically.
 * To insert a scalebar in the header click on |addScalebar| :sup:`Adds a new Scale Bar to the layout` and
   place it in the rectangle above the north arrow. In :guilabel:`Map` under the :guilabel:`Main Properties`
   choose your ``main map(Map 0)``.
-  which we created before. This means that the scale changes automatically according to the extent you choose
+  This means that the scale changes automatically according to the extent you choose
   in the QGIS main canvas. Choose the :guilabel:`Style` ``Numeric``. This means that we insert a simple scale without
   a scalebar. The scale still needs a position and size. For x enter ``@layout_pagewidth - @rg_layout_margin - 68.25``,
   for y enter ``@rg_layout_margin + 6.5``, for Width enter ``28,639`` and for Height ``13,100``. The ``Reference point``
