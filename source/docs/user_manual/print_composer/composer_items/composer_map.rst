@@ -343,7 +343,9 @@ drawing over the selected map frame. You can customize it with:
 .. |moveItemContent| image:: /static/common/mActionMoveItemContent.png
    :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
+   :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
+   :width: 1.5em
 .. |showMapTheme| image:: /static/common/mActionShowPresets.png
    :width: 1.5em
 .. |signMinus| image:: /static/common/symbologyRemove.png

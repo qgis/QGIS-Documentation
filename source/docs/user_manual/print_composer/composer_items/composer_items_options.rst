@@ -316,7 +316,7 @@ More information on variables usage in the :ref:`general_tools_variables` sectio
 .. |locked| image:: /static/common/locked.png
    :width: 1.5em
 .. |lockedGray| image:: /static/common/lockedGray.png
-   :width: 1.5em
+   :width: 1.2em
 .. |raiseItems| image:: /static/common/mActionRaiseItems.png
    :width: 1.5em
 .. |resizeNarrowest| image:: /static/common/mActionResizeNarrowest.png

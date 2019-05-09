@@ -963,7 +963,7 @@ open the Plugin Manager dialog.
 .. |layoutManager| image:: /static/common/mActionLayoutManager.png
    :width: 1.5em
 .. |lockedGray| image:: /static/common/lockedGray.png
-   :width: 1.5em
+   :width: 1.2em
 .. |logo| image:: /static/common/logo.png
    :width: 1.5em
 .. |mapTips| image:: /static/common/mActionMapTips.png
@@ -1069,7 +1069,7 @@ open the Plugin Manager dialog.
 .. |showSelectedLayers| image:: /static/common/mActionShowSelectedLayers.png
    :width: 1.5em
 .. |simplifyFeatures| image:: /static/common/mActionSimplify.png
-   :width: 2em
+   :width: 1.5em
 .. |splitFeatures| image:: /static/common/mActionSplitFeatures.png
    :width: 1.5em
 .. |splitParts| image:: /static/common/mActionSplitParts.png
@@ -1079,7 +1079,7 @@ open the Plugin Manager dialog.
 .. |success| image:: /static/common/mIconSuccess.png
    :width: 1em
 .. |sum| image:: /static/common/mActionSum.png
-   :width: 1.5em
+   :width: 1.2em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
 .. |topologyChecker| image:: /static/common/mActionTopologyChecker.png

@@ -3413,11 +3413,11 @@ in the current edit session.
 .. |display| image:: /static/common/display.png
    :width: 1.5em
 .. |editMetadata| image:: /static/common/editmetadata.png
-   :width: 1.5em
+   :width: 1.2em
 .. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
 .. |formView| image:: /static/common/mActionFormView.png
-   :width: 1.5em
+   :width: 1.2em
 .. |graduatedSymbol| image:: /static/common/rendererGraduatedSymbol.png
    :width: 1.5em
 .. |heatmapSymbol| image:: /static/common/rendererHeatmapSymbol.png
@@ -3457,13 +3457,13 @@ in the current edit session.
 .. |labelshadow| image:: /static/common/labelshadow.png
    :width: 1.5em
 .. |legend| image:: /static/common/legend.png
-   :width: 1.5em
+   :width: 1.2em
 .. |mapIdentification| image:: /static/common/mActionMapIdentification.png
    :width: 1.5em
 .. |mapTips| image:: /static/common/mActionMapTips.png
    :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
-   :width: 2em
+   :width: 1.5em
 .. |moveLabel| image:: /static/common/mActionMoveLabel.png
    :width: 1.5em
 .. |newAttribute| image:: /static/common/mActionNewAttribute.png
@@ -3489,7 +3489,9 @@ in the current edit session.
 .. |projectProperties| image:: /static/common/mActionProjectProperties.png
    :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
+   :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
+   :width: 1.5em
 .. |render| image:: /static/common/render.png
    :width: 1.5em
 .. |rendering| image:: /static/common/rendering.png
