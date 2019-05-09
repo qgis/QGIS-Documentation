@@ -445,7 +445,8 @@ you to practice the techniques you have learned so far.
 .. |addMap| image:: /static/common/mActionAddMap.png
    :width: 1.5em
 .. |alignLeft| image:: /static/common/mActionAlignLeft.png
-.. |edit| image:: /static/common/edit.png   :width: 1.5em
+.. |edit| image:: /static/common/edit.png
+   :width: 1.5em
 .. |basic| image:: /static/global/basic.png
    :width: 1.5em
 .. |filePrint| image:: /static/common/mActionFilePrint.png
