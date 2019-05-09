@@ -381,7 +381,7 @@ will adapt dynamically.
   a variable that QGIS creates automatically again. For x insert the expression ``@rg_layout_margin +3`` and
   for y enter the expression ``@rg_layout_margin +11.5``.
 * The third label will include information about your organisation. We will create some variables first
-  in the :guilabel:`Variables` menu of the :guilabel:`Item Properties`. Go to the :guilabel:`Layout` menu, click the |signPlus| button each time
+  in the :guilabel:`Variables` menu of the :guilabel:`Item Properties`. Click the |signPlus| button each time
   and enter the names ``o_department``, ``o_name`` , ``o_adress`` and ``o_postcode`` as shown in the picture below.
   In the second row enter the detailed information about your organisation. We will use these variables in the :guilabel:`Main Properties`
   menu. The position is defined by ``@layout_pagewidth - @rg_layout_margin - 49.5`` for ``X`` and
