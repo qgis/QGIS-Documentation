@@ -402,7 +402,7 @@ will adapt dynamically.
   label ``organisation information``. After entering the name ``organisation logo`` define the position
   for :guilabel:`X` with ``@layout_pagewidth - @rg_layout_margin - 48.5`` and for :guilabel:`Y` with
   ``@rg_layout_margin + 3.5``.
-  The size of the logo is defined statically by ``39,292`` for ``Width`` and ``9,583`` for ``Height``.
+  The size of the logo is set to ``39.292`` for :guilabel:`Width` and ``9.583`` for :guilabel:`Height`.
   To include a logo of your organisation you have to save your logo under your home directory and enter
   the path under :menuselection:`Main Properties --> Image Source`.
 * Our layout still needs a north arrow. This will also be insterted by using |addNewImage| :sup:`Adds a new Picture to the layout`.
