@@ -421,7 +421,7 @@ will adapt dynamically.
   choose your ``main map(Map 0)``.
   This means that the scale changes automatically according to the extent you choose
   in the QGIS main canvas. Choose the :guilabel:`Style` ``Numeric``. This means that we insert a simple scale without
-  a scalebar. The scale still needs a position and size. For x enter ``@layout_pagewidth - @rg_layout_margin - 68.25``,
+  a scalebar. The scale still needs a position and size. For :guilabel:`X` enter ``@layout_pagewidth - @rg_layout_margin - 68.25``,
   for y enter ``@rg_layout_margin + 6.5``, for Width enter ``28,639`` and for Height ``13,100``. The ``Reference point``
   should be placed in the center.
   
