@@ -342,7 +342,7 @@ will adapt dynamically.
 |moderate| |FA| Creating the dynamic header
 -------------------------------------------------------------------------------
 
-* First step is that you insert a rectangle which will be the header with the |addBasicShape| :sup:`Add Shape` Item. 
+* Insert a rectangle which will contain the header with the |addBasicShape| :sup:`Add Shape` button. 
   In the :guilabel:`Items` panel enter the name ``header``.
 * Again, go to the :guilabel:`Item Properties` and open the menu :guilabel:`Position and Size`. Using the |dataDefineOn| :sup:`Data defined override`
   choose the ``@rg_layout_margin`` variable for ``X`` as well as for ``Y``. The width is defined by the expression
