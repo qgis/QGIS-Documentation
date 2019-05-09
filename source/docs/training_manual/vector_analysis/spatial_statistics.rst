@@ -363,5 +363,6 @@ rasters? That's what we'll do in the next module!
    :width: 1.5em
 .. |moderate| image:: /static/global/moderate.png
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
-.. |sum| image:: /static/common/mActionSum.png
    :width: 1.5em
+.. |sum| image:: /static/common/mActionSum.png
+   :width: 1.2em

@@ -117,7 +117,9 @@ platform-specific icon at the end of the figure caption.
 .. |osx| image:: /static/common/osx.png
    :width: 1em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
+   :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
+   :width: 1.5em
 .. |selectColor| image:: /static/common/selectcolor.png
 .. |selectNumber| image:: /static/common/selectnumber.png
    :width: 2.8em

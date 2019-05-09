@@ -414,7 +414,7 @@ save the configuration to the database.
 .. |fileSave| image:: /static/common/mActionFileSave.png
    :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
-   :width: 2em
+   :width: 1.5em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png

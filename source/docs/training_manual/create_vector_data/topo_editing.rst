@@ -310,7 +310,7 @@ so that attribute editing is simpler and more effective.
 .. |selectRectangle| image:: /static/common/mActionSelectRectangle.png
    :width: 1.5em
 .. |simplifyFeatures| image:: /static/common/mActionSimplify.png
-   :width: 2em
+   :width: 1.5em
 .. |splitFeatures| image:: /static/common/mActionSplitFeatures.png
    :width: 1.5em
 .. |undo| image:: /static/common/mActionUndo.png
