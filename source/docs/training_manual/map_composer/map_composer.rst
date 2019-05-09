@@ -306,7 +306,7 @@ will adapt dynamically.
 * After everything is rendered and symbolized to your liking,
   click the |newLayout| :sup:`New Print Layout` icon in the toolbar or
   choose :menuselection:`File --> New Print Layout`. You will be prompted to
-  choose a title for the new layer,
+  choose a title for the new layer.
 * We want to create a map layout consisting of a header and a map about the regions of
   Alaska. The layout should have a margin of 7.5 mm and the header should be 36mm high.
 * Create a map item called ``main map`` onto the canvas and go into the :guilabel:`Layout` panel.
