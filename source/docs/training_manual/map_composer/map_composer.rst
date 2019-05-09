@@ -323,7 +323,16 @@ will adapt dynamically.
   can use all over the dynamic print layout. The first variable will define the margin.
 Now you are ready to create the position and the size of the map item automatically
   by means of the variables. Go to the :guilabel:`Item Properties` panel and open the :guilabel:`Position and Size` section.
-  Click the |dataDefineExpressionOn| :sup:`Data defined override` for ``X``.
+#. Click the |dataDefined| :sup:`Data defined override` for :guilabel:`X`
+   and from the :guilabel:`Variables` entry, choose ``@rg_layout_margin``.
+#. Click the |dataDefined| :sup:`Data defined override` for :guilabel:`Y`,
+   choose :guilabel:`Edit...` and type in the formula
+   
+   ::
+   
+    to_real(@rg_layout_margin) + to_real(@rg_layout_height_header)
+
+      
   From :guilabel:`Variables`, choose ``@rg_layout_margin``.
   Click the |dataDefineExpressionOn| :sup:`Data defined override` for ``Y``.
   Choose :guilabel:`Edit...` and type in the formula
