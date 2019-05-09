@@ -350,7 +350,8 @@ will adapt dynamically.
   :guilabel:`Width` shall be defined by the expression
   ``@layout_pagewidth - @zg_layout_rand * 2`` and :guilabel:`Height` by the expression ``@rg_layout_header``. 
 * We will insert a horizontal line and two vertical lines to divide the header into different sections
-  using the |addNodesShape| :sup:`Add Node Item`. Create a horizontal line and two vertical lines. After entering the names
+  using the |addNodesShape| :sup:`Add Node Item`. Create a horizontal line and two vertical lines.
+  After entering the names,
   insert the expression ``@rg_layout_margin`` and ``@rg_layout_margin + 8`` for X and Y and
   ``@layout_pagewidth -  @rg_layout_margin * 2 - 53.5`` for the width of the horizontal line.
 * The first vertical line is defined by ``@layout_pagewidth -  @rg_layout_margin * 2 - 53.5`` for ``X``
