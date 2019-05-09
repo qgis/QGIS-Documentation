@@ -1598,7 +1598,7 @@ To edit features in-place:
 .. |editPaste| image:: /static/common/mActionEditPaste.png
    :width: 1.5em
 .. |editableEdits| image:: /static/common/mIconEditableEdits.png
-   :width: 1.5em
+   :width: 1em
 .. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
    :width: 1.5em
 .. |fillRing| image:: /static/common/mActionFillRing.png
@@ -1654,7 +1654,7 @@ To edit features in-place:
 .. |settings| image:: /static/common/settings.png
    :width: 1.5em
 .. |simplifyFeatures| image:: /static/common/mActionSimplify.png
-   :width: 2em
+   :width: 1.5em
 .. |snapping| image:: /static/common/mIconSnapping.png
    :width: 1.5em
 .. |splitFeatures| image:: /static/common/mActionSplitFeatures.png

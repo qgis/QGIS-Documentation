@@ -147,7 +147,9 @@ by attribute value`.
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
+   :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
+   :width: 1.5em
 .. |selectNumber| image:: /static/common/selectnumber.png
    :width: 2.8em
 .. |selectString| image:: /static/common/selectstring.png

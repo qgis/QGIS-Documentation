@@ -660,13 +660,13 @@ Icon                            Substitution                        Icon        
 .. |editCut| image:: /static/common/mActionEditCut.png
    :width: 1.5em
 .. |editMetadata| image:: /static/common/editmetadata.png
-   :width: 1.5em
+   :width: 1.2em
 .. |editNodesShape| image:: /static/common/mActionEditNodesShape.png
    :width: 1.5em
 .. |editPaste| image:: /static/common/mActionEditPaste.png
    :width: 1.5em
 .. |editableEdits| image:: /static/common/mIconEditableEdits.png
-   :width: 1.5em
+   :width: 1em
 .. |eventBrowser| image:: /static/common/event_browser.png
    :width: 1.5em
 .. |eventId| image:: /static/common/event_id.png
@@ -717,7 +717,7 @@ Icon                            Substitution                        Icon        
 .. |formSelect| image:: /static/common/mIconFormSelect.png
    :width: 1.5em
 .. |formView| image:: /static/common/mActionFormView.png
-   :width: 1.5em
+   :width: 1.2em
 .. |fromSelectedFeature| image:: /static/common/mActionFromSelectedFeature.png
    :width: 1em
 .. |fullHistogramStretch| image:: /static/common/mActionFullHistogramStretch.png
@@ -727,7 +727,7 @@ Icon                            Substitution                        Icon        
 .. |gdalScript| image:: /static/common/mActionGDALScript.png
    :width: 1.5em
 .. |general| image:: /static/common/general.png
-   :width: 2em
+   :width: 1.5em
 .. |geoPackage| image:: /static/common/mGeoPackage.png
    :width: 1.5em
 .. |geographic| image:: /static/common/geographic.png
@@ -847,7 +847,7 @@ Icon                            Substitution                        Icon        
 .. |layoutManager| image:: /static/common/mActionLayoutManager.png
    :width: 1.5em
 .. |legend| image:: /static/common/legend.png
-   :width: 1.5em
+   :width: 1.2em
 .. |linkGeorefToQGis| image:: /static/common/mActionLinkGeorefToQGis.png
    :width: 2.5em
 .. |linkQGisToGeoref| image:: /static/common/mActionLinkQGisToGeoref.png
@@ -855,7 +855,7 @@ Icon                            Substitution                        Icon        
 .. |locked| image:: /static/common/locked.png
    :width: 1.5em
 .. |lockedGray| image:: /static/common/lockedGray.png
-   :width: 1.5em
+   :width: 1.2em
 .. |lockedRepeat| image:: /static/common/lock_repeating.png
    :width: 1.5em
 .. |logo| image:: /static/common/logo.png
@@ -879,7 +879,7 @@ Icon                            Substitution                        Icon        
 .. |mergeFeatures| image:: /static/common/mActionMergeFeatures.png
    :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
-   :width: 2em
+   :width: 1.5em
 .. |metasearch| image:: /static/common/MetaSearch.png
    :width: 1.5em
 .. |moveFeature| image:: /static/common/mActionMoveFeature.png
@@ -987,7 +987,9 @@ Icon                            Substitution                        Icon        
 .. |qgsProjectFile| image:: /static/common/mIconQgsProjectFile.png
    :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
+   :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
+   :width: 1.5em
 .. |raiseItems| image:: /static/common/mActionRaiseItems.png
    :width: 1.5em
 .. |randomSelection| image:: /static/common/random_selection.png
@@ -1085,7 +1087,7 @@ Icon                            Substitution                        Icon        
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |simplifyFeatures| image:: /static/common/mActionSimplify.png
-   :width: 2em
+   :width: 1.5em
 .. |singleSymbol| image:: /static/common/rendererSingleSymbol.png
    :width: 1.5em
 .. |slider| image:: /static/common/slider.png
@@ -1112,7 +1114,7 @@ Icon                            Substitution                        Icon        
 .. |success| image:: /static/common/mIconSuccess.png
    :width: 1em
 .. |sum| image:: /static/common/mActionSum.png
-   :width: 1.5em
+   :width: 1.2em
 .. |svgAnnotation| image:: /static/common/mActionSvgAnnotation.png
    :width: 1.5em
 .. |symDifference| image:: /static/common/sym_difference.png

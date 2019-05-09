@@ -206,4 +206,4 @@ column or line can be customized through this dialog.
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |sum| image:: /static/common/mActionSum.png
-   :width: 1.5em
+   :width: 1.2em

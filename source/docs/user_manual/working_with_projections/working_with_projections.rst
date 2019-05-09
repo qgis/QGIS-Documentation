@@ -303,7 +303,9 @@ transformations` group:
 .. |projectProperties| image:: /static/common/mActionProjectProperties.png
    :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
+   :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
+   :width: 1.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
 .. |signMinus| image:: /static/common/symbologyRemove.png

@@ -1597,7 +1597,9 @@ in the QGIS user profile.
 .. |processing| image:: /static/common/processingAlgorithm.png
    :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
+   :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
+   :width: 1.5em
 .. |search| image:: /static/common/search.png
    :width: 1.5em
 .. |select| image:: /static/common/mActionSelect.png
