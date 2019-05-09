@@ -333,7 +333,8 @@ will adapt dynamically.
   ``@layout_pageheight -  @rg_layout_header -  @rg_layout_margin * 2``
   with the |dataDefineExpressionOn| :sup:`Data defined override`.
 * We will also create a grid containing the coordinates of the main canvas map extent.
-  Go to the :guilabel:`Item Properties` again and choose the menu :guilabel:`Grids`. Insert a grid by clicking the
+  Go to :guilabel:`Item Properties` again and choose the :guilabel:`Grids` section.
+  Insert a grid by clicking the
   |signPlus| button. Go to :guilabel:`Modify grid ...` and apply the Intervals for X, Y and Offset according
   to the map scale you choosed in the QGIS main canvas. The Grid type :guilabel:`Cross` is very well suited
   for our purposes.
