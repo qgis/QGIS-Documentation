@@ -322,7 +322,7 @@ will adapt dynamically.
   Click the |dataDefineExpressionOn| :sup:`Data defined override` for ``Y``.
   Choose :guilabel:`Edit...` and type in the formula
   ``to_real(@rg_layout_margin) + to_real(@rg_layout_height_header)``. This means that the
-  reference point will have the X-Position of 7.5 mm and the Y-Postion of 43.5 mmm where
+  reference point (where the header ends) will have 7.5 mm as its X-Position and 43.5 mm as its Y-Postion.
   the header ends. Notice that the values for the Y-Position have to be converted from
   string to a real number. Now finally let's define the width and height of the map canvas.
   For ``Width`` use the |dataDefineExpressionOn| :sup:`Data defined override` typing in ``@layout_pagewidth - @zg_layout_rand * 2'``
