@@ -229,10 +229,12 @@ or without it, by connecting the QGIS live tracking tool directly to the device
 .. |gpsTrackBarChart| image:: /static/common/gpstrack_barchart.png
    :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
-   :width: 2em
+   :width: 1.5em
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
+   :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
+   :width: 1.5em
 .. |slider| image:: /static/common/slider.png
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
