@@ -369,7 +369,7 @@ will adapt dynamically.
 |moderate| |FA| Creating labels for the dynamic header
 ---------------------------------------------------------------------------------------
 
-* You can enter the project title of your QGIS project automatically. This title has to be set
+* The title of your QGIS project can be included automatically. The title is set
   in the :guilabel:`Project Properties` first. Insert a label with the |addLabel| :sup:`Adds a new Label to the layout` Item
   and enter the name ``project title (variable)``.
   In the :guilabel:`Main Properties` of the :guilabel:`Items Properties` Panel enter the expression ``[%@project title%]``. Set the
