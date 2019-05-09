@@ -319,7 +319,8 @@ will adapt dynamically.
   by means of the variables. Go to the :guilabel:`Item Properties` panel and open the :guilabel:`Position and Size` section.
   Click the |dataDefineExpressionOn| :sup:`Data defined override` for ``X``.
   From :guilabel:`Variables`, choose ``@rg_layout_margin``.
-  Click the |dataDefineExpressionOn| :sup:`Data defined override` for ``Y``. Choose :guilabel:`Edit...` and type in the formula
+  Click the |dataDefineExpressionOn| :sup:`Data defined override` for ``Y``.
+  Choose :guilabel:`Edit...` and type in the formula
   ``to_real(@rg_layout_margin) + to_real(@rg_layout_height_header)``. This means that the
   reference point will have the X-Position of 7.5 mm and the Y-Postion of 43.5 mmm where
   the header ends. Notice that the values for the Y-Position have to be converted from
