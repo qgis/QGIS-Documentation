@@ -348,7 +348,7 @@ will adapt dynamically.
   Using |dataDefineOn| :sup:`Data defined override`,
   choose the ``@rg_layout_margin`` variable for :guilabel:`X` as well as for :guilabel:`Y`.
   :guilabel:`Width` shall be defined by the expression
-  ``@layout_pagewidth - @zg_layout_rand * 2`` and the height by the expression ``@rg_layout_header``. 
+  ``@layout_pagewidth - @zg_layout_rand * 2`` and :guilabel:`Height` by the expression ``@rg_layout_header``. 
 * We will insert a horizontal line and two vertical lines to divide the header into different sections
   using the |addNodesShape| :sup:`Add Node Item`. Create a horizontal line and two vertical lines. After entering the names
   insert the expression ``@rg_layout_margin`` and ``@rg_layout_margin + 8`` for X and Y and
