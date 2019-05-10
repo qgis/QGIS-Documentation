@@ -2202,7 +2202,7 @@ Parameters
   Allows to consider the Z coordinate when detecting duplicate vertices ie two points
   at the same X,Y coordinate but with different Z value are not set as duplicates.
 
-  Default:*False*
+  Default: *False*
 
 Outputs
 .......
