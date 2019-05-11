@@ -75,7 +75,7 @@ General Settings
 
 * Select the :guilabel:`Style (QGIS restart required)` |selectString| and choose
   between 'Oxygen', 'Windows', 'Motif', 'CDE', 'Plastique' and 'Cleanlooks';
-* Define the :guilabel:`UI theme` |selectString|. It can be 'default' or 'Night Mapping';
+* Define the :guilabel:`UI theme` |selectString|. It can be 'default', 'Night Mapping', or 'Blend of Gray';
 * Define the :guilabel:`Icon size` |selectString|;
 * Define the :guilabel:`Font` and its :guilabel:`Size`. The font can be
   |radioButtonOn| :guilabel:`Qt default` or a user-defined one;

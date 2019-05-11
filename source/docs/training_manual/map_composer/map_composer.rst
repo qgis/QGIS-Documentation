@@ -308,6 +308,7 @@ will adapt dynamically.
   choose :menuselection:`File --> New Print Layout`. You will be prompted to
   choose a title for the new layer.
 * We want to create a map layout consisting of a header and a map with the regions of
+<<<<<<< HEAD
   Alaska. The layout should have a margin of 7.5 mm and the header should be 36mm high.
 * Create a map item called ``main map`` on the canvas and go to the :guilabel:`Layout` panel.
   Scroll down to the :guilabel:`Variables` section and find the :guilabel:`Layout` part.
@@ -318,6 +319,33 @@ will adapt dynamically.
 * Now you are ready to create the position and the size of the map canvas automatically
   by means of the variables. Go to the :guilabel:`Item Properties` panel and open the :guilabel:`Position and Size` section.
   Click the |dataDefineExpressionOn| :sup:`Data defined override` for ``X``.
+=======
+  Alaska. The layout should have a margin of 7.5 mm and the header should be 36 mm high.
+#. Go to the :guilabel:`Layout` panel and scroll down to the :guilabel:`Variables`
+   section. Here we set some variables you can use all over the dynamic print
+   layout.
+   
+   #. The first variable will define the margin. Press the |signPlus| :sup:`Add
+      variable` button and type in the name ``rg_layout_margin``. Set the value
+      to ``7.5``.
+   #. Press the |signPlus| button again and type in the name ``rg_layout_height_header``
+      for the header's height. Set its value to ``36``.
+  Scroll down to the :guilabel:`Variables` section and find the :guilabel:`Layout` part.
+  Here we set some variables you
+  can use all over the dynamic print layout. The first variable will define the margin.
+Now you are ready to create the position and the size of the map item automatically
+  by means of the variables. Go to the :guilabel:`Item Properties` panel and open the :guilabel:`Position and Size` section.
+#. Click the |dataDefined| :sup:`Data defined override` for :guilabel:`X`
+   and from the :guilabel:`Variables` entry, choose ``@rg_layout_margin``.
+#. Click the |dataDefined| :sup:`Data defined override` for :guilabel:`Y`,
+   choose :guilabel:`Edit...` and type in the formula
+   
+   ::
+   
+    to_real(@rg_layout_margin) + to_real(@rg_layout_height_header)
+
+      
+>>>>>>> da185be0b29e821f6824db6a092b92d123168187
   From :guilabel:`Variables`, choose ``@rg_layout_margin``.
   Click the |dataDefineExpressionOn| :sup:`Data defined override` for ``Y``.
   Choose :guilabel:`Edit...` and type in the formula
@@ -374,7 +402,12 @@ will adapt dynamically.
   and enter the name ``project title (variable)``.
   In the :guilabel:`Main Properties` of the :guilabel:`Items Properties` Panel enter the expression
   ``[%@project title%]``. Set the
+<<<<<<< HEAD
   position of the label with the expression ``@rg_layout_margin +3`` for ``X`` and ``@rg_layout_margin + 0.25`` for ``Y``.
+=======
+  position of the label with the expression ``@rg_layout_margin +3`` for :guilabel:`X` and
+  ``@rg_layout_margin + 0.25`` for :guilabel:`Y`.
+>>>>>>> da185be0b29e821f6824db6a092b92d123168187
   Enter the expression ``@layout_pagewidth - @rg_layout_margin *2 -90`` for :guilabel:`Width` (this should
   give a width of 105 mm) and enter ``11.25`` for :guilabel:`Height`.
   Under :guilabel:`Appearance` set the Font size to 16 pt.
@@ -385,8 +418,12 @@ will adapt dynamically.
   a variable that QGIS creates automatically. For :guilabel:`X` insert the expression ``@rg_layout_margin + 3`` and
   for :guilabel:`Y` enter the expression ``@rg_layout_margin + 11.5``.
 * The third label will include information about your organisation. First we will create some variables
+<<<<<<< HEAD
   in the :guilabel:`Variables` menu of the :guilabel:`Item Properties`. Go to the :guilabel:`Layout` menu, click the
   |signPlus| button for each new variable
+=======
+  in the :guilabel:`Variables` menu of the :guilabel:`Item Properties`. Click the |signPlus| button each time
+>>>>>>> da185be0b29e821f6824db6a092b92d123168187
   and enter the names ``o_department``, ``o_name`` , ``o_adress`` and ``o_postcode`` as shown in the picture below.
   In the second row enter the detailed information about your organisation. We will use these variables in the :guilabel:`Main Properties`
   section. The position is defined by ``@layout_pagewidth - @rg_layout_margin - 49.5`` for :guilabel:`X` and
