@@ -175,7 +175,7 @@ manually choose the start and end points.
   and choose the location tagged with ``Start Point`` in the picture. The menu
   is filled with the coordinates of the clicked point;
 * Do the same thing but choosing the location tagged with ``End point`` for
-  :guilabel:`End point(x, y)`;
+  :guilabel:`End point (x, y)`;
 * Open the :guilabel:`Advanced parameters` menu;
 * Choose the ``speed`` field as the :guilabel:`Speed Field` parameter. With this
   option the algorithm will take into account the speed values for each road;
