@@ -126,9 +126,9 @@ The :file:`startup.py` file
 
 Every time QGIS starts, the user's Python home directory
 
-* Linux: :file:`.local/share/QGIS/QGIS3/profiles/default/python`
-* Windows: :file:`AppData\\Roaming\\QGIS\\QGIS3\\profiles\\default\\python`
-* macOS: :file:`Library/Application Support/QGIS/QGIS3/profiles/default`
+* Linux: :file:`.local/share/QGIS/QGIS3`
+* Windows: :file:`AppData\\Roaming\\QGIS\\QGIS3`
+* macOS: :file:`Library/Application Support/QGIS/QGIS3`
 
 is searched for a file named :file:`startup.py`. If that file exists, it
 is executed by the embedded Python interpreter.
