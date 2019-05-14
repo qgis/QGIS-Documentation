@@ -292,18 +292,18 @@ comment text box and modify the text within the suggestion block.
  in your pull request, avoid using the :guilabel:`Commit suggestion` button
  at the bottom of the comment when you have many suggestions to address and
  prefer adding them as a batch commit, that is:
- 
+
  #. Switch to the |githubFilesChanged| tab
  #. Press :guilabel:`Add suggestion to batch` for each rewording you'd like to
     include. You will see a counter increasing as you go.
  #. Press any of the :guilabel:`Commit suggestions` button when you are ready to
     apply the suggestions to your pull request and enter a message describing
     the changes.
- 
+
  This will add all the modifications to your branch as a single commit, making a
  more legible history of changes and less notifications for the repository
- followers.
- 
+ followers. Incidentally, proceeding as this will also save you many clicks.
+
 5. Make corrections
 ...................
 
