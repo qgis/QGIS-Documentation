@@ -64,7 +64,7 @@ for the analysis:
   and choose the location tagged with ``Starting Point`` in the picture. The menu
   is filled with the coordinates of the clicked point;
 * Do the same thing but choosing the location tagged with ``Ending point`` for
-  :guilabel:`End point(x, y)`;
+  :guilabel:`End point (x, y)`;
 * Click on the :guilabel:`Run` button:
 
 .. image:: img/shortest_point.png
