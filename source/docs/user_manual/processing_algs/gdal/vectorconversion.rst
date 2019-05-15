@@ -137,6 +137,7 @@ Parameters
 
   ``Profile`` [enumeration]
     <put parameter description here>
+
     Options:
 
     * 0 --- 
@@ -146,7 +147,7 @@ Parameters
     * 4 --- High compression
     * 5 --- JPEG compression
 
-  Default: *0*
+    Default: *1*
 
 ``Output data type`` [enumeration]
   Defines the type of the resulting raster image.
