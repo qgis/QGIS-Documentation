@@ -41,21 +41,27 @@ Parameters
   Default: *False*
 
 ``Resampling method`` [enumeration]
+  Optional
+
   Calculates the overviews with a defined resampling method.
 
   Options:
 
-  * 0 --- nearest
-  * 1 --- average
-  * 2 --- gauss
-  * 3 --- cubic
-  * 4 --- average_mp
-  * 5 --- average_magphase
-  * 6 --- mode
+  * 0 --- Nearest neighbour
+  * 1 --- Average
+  * 2 --- Gaussian
+  * 3 --- Cubic convolution
+  * 4 --- B-Spline convolution
+  * 5 --- Lanczos windowed sinc
+  * 6 --- Average MP
+  * 7 --- Average in mag/phase space
+  * 8 --- Mode
 
   Default: *0*
 
 ``Overview format`` [enumeration]
+  Optional
+
   The overviews can be stored internally, or externally as GTiff or ERDAS Imagine file.
   By default the overviews are stored in the output raster.
 
@@ -102,8 +108,8 @@ Parameters
 
   Default: *0*
 
-``Layer stack`` [boolean]
-  With 'False' you can define that each raster file goes into a separated stacked band
+``Place each input file into a separate band`` [boolean]
+  With 'True' you can define that each raster file goes into a separated stacked band
   in the VRT band.
 
   Default: *True*
@@ -114,11 +120,31 @@ Parameters
 
   Default: *False*
 
+
+``Add alpha mask band to VRT when source raster has none`` [boolean]
+  Adds an alpha mask band to the VRT when the source raster have none
+
+``Override projection for the output file`` [enumeration]
+  Optional
+
+  A VRT will be created even if the input datasets have not the same projection.
+  Projections will just be ignored.
+
 Outputs
 .......
 
-``Output layer`` [raster]
-  Output raster file.
+``Virtual`` [raster]
+  Output raster file
+
+``Open output file after running the algorithm`` [boolean]
+  Add the output raster to the map canvas
+
+  Default: *True*
+
+  By clicking on ``Run as Batch Process..``, the algorithm can be executed as a batch process
+  (see `The batch processing interface <https://docs.qgis.org/3.4/en/docs/user_manual/processing/batch.html>`_)
+
+  Once you have introduced all the necessary parameters, just click on ``Run`` to start the process.
 
 
 .. _gdalmerge:
@@ -151,7 +177,7 @@ Parameters
   Default: *False*
 
 ``Output raster type`` [enumeration]
-  Defines the output raster type. By default this will be 'Float23'.
+  Defines the output raster type. By default this will be 'Float32'.
 
   Options:
 
@@ -169,11 +195,57 @@ Parameters
 
   Default: *5*
 
+``Input pixel value to treat as "nodata"`` [number]
+  Optional
+
+  Ignore pixels from files being merge in with this pixel value.
+
+``Assign specified "nodata" value to output`` [number]
+  Optional
+
+  Assign the specified nodata value to output bands.
+
+``Additional creation options``
+  Optional
+
+  In this section multiple options can be passed to the output format driver
+   See `format specific documentation for legal creation options for each format
+   <https://www.gdal.org/formats_list.html>`_.
+
+   The button |signPlus| lets you add an option.
+   The button |signMinus| deletes an option previously added. By clicking on :guilabel:`validate`
+   you can verify whether the creation options are legal to the given output format.
+
+``Profile`` [enumeration]
+  Set the compression to use
+
+  Options:
+
+  * Default
+  * No compression
+  * Low compression
+  * High compression
+  * JPEG compression
+
+  Default: *No compression*
+
+
+
 Outputs
 .......
 
 ``Output layer`` [raster]
   Output raster layer.
+
+``Open output file after running the algorithm`` [boolean]
+  Add the output raster to the map canvas
+
+  Default: *True*
+
+  By clicking on ``Run as Batch Process..``, the algorithm can be executed as a batch process
+  (see `The batch processing interface <https://docs.qgis.org/3.4/en/docs/user_manual/processing/batch.html>`_)
+
+  Once you have introduced all the necessary parameters, just click on ``Run`` to start the process.
 
 
 .. _gdalgdalinfo:
@@ -191,6 +263,12 @@ Parameters
 
 ``Input layer`` [raster]
   Raster layer in input.
+
+``Force computation of the actual min/max values for each band`` [boolean]
+  Force computation of the actual min/max values for each band in the dataset
+
+``Read and display image statistics (force computation if necessary)`` [boolean]
+  Read and display image statistics. Force computation if no statistics are stored in an image
 
 ``Suppress GCP info`` [boolean]
   Suppress ground control points list printing. It may be useful for datasets with huge amount of GCPs,
@@ -218,7 +296,8 @@ Builds a vector layer with a record for each input raster file, an
 attribute containing the filename, and a polygon geometry outlining the raster.
 This output is suitable for use with MapServer as a raster tileindex.
 
-This algorithm is derived from the `GDAL addo utility <`GDAL Tile Index utility <https://www.gdal.org/gdaltindex.html>`_ .
+This algorithm is derived from the
+`GDAL Tile Index utility <https://www.gdal.org/gdaltindex.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Miscellaneous`
 
@@ -259,6 +338,8 @@ Parameters
 ``The name of the field to store the SRS of each tile`` [string]
   Optional
 
+  The name of the field to store the SRS of each tile.
+
 ``The format in which the CRS of each tile must be written`` [enumeration]
   Optional
 
@@ -269,7 +350,7 @@ Parameters
   * EPSG
   * Proj.4
 
-  Default: *AUTO*
+  Default: *Auto*
 
 Outputs
 .......
@@ -279,11 +360,21 @@ Outputs
   be created if it doesn't already exist, otherwise it will append to the
   existing file.
 
+``Open output file after running the algorithm`` [boolean]
+  Add the output raster to the map canvas
+
+  Default: *True*
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
    please add it also to the substitutions.txt file in the
    source folder.
+
+.. |signMinus| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+
 
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
