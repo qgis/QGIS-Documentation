@@ -122,30 +122,19 @@ Parameters
 
 
 ``Add alpha mask band to VRT when source raster has none`` [boolean]
-  Adds an alpha mask band to the VRT when the source raster have none
+  Adds an alpha mask band to the VRT when the source raster has none.
 
-``Override projection for the output file`` [enumeration]
+``Override projection for the output file`` [crs]
   Optional
 
-  A VRT will be created even if the input datasets have not the same projection.
-  Projections will just be ignored.
+  (starting with GDAL 1.10) Overrides the projection for the output file. The srs_def may be any of the usual
+  GDAL/OGR forms, complete WKT, PROJ.4, EPSG:n or a file containing the WKT. No reprojection is done.
 
 Outputs
 .......
 
 ``Virtual`` [raster]
   Output raster file
-
-``Open output file after running the algorithm`` [boolean]
-  Add the output raster to the map canvas
-
-  Default: *True*
-
-  By clicking on ``Run as Batch Process..``, the algorithm can be executed as a batch process
-  (see `The batch processing interface <https://docs.qgis.org/3.4/en/docs/user_manual/processing/batch.html>`_)
-
-  Once you have introduced all the necessary parameters, just click on ``Run`` to start the process.
-
 
 .. _gdalmerge:
 
@@ -198,55 +187,40 @@ Parameters
 ``Input pixel value to treat as "nodata"`` [number]
   Optional
 
-  Ignore pixels from files being merge in with this pixel value.
+  Ignores pixels from files being merge in with this pixel value.
 
 ``Assign specified "nodata" value to output`` [number]
   Optional
 
-  Assign the specified nodata value to output bands.
+  Assigns the specified nodata value to output bands.
 
 ``Additional creation options``
   Optional
 
-  In this section multiple options can be passed to the output format driver
-   See `format specific documentation for legal creation options for each format
-   <https://www.gdal.org/formats_list.html>`_.
+  ``Profile`` [enumeration]
+    Sets the compression to use
 
-   The button |signPlus| lets you add an option.
-   The button |signMinus| deletes an option previously added. By clicking on :guilabel:`validate`
-   you can verify whether the creation options are legal to the given output format.
+    Options:
 
-``Profile`` [enumeration]
-  Set the compression to use
+    * 0 --- Default
+    * 1 --- No compression
+    * 2 --- Low compression
+    * 3 --- High compression
+    * 4 --- JPEG compression
 
-  Options:
+    Default: *1*
 
-  * Default
-  * No compression
-  * Low compression
-  * High compression
-  * JPEG compression
-
-  Default: *No compression*
-
-
+    The button |signPlus| lets add an option.
+    The button |signMinus| deletes an option previously added.
+    By clicking on :guilabel:`validate` the creation options to the given output format are verified.  See
+    `format specific documentation for legal creation options for each format
+    <https://www.gdal.org/formats_list.html>`_.
 
 Outputs
 .......
 
 ``Output layer`` [raster]
   Output raster layer.
-
-``Open output file after running the algorithm`` [boolean]
-  Add the output raster to the map canvas
-
-  Default: *True*
-
-  By clicking on ``Run as Batch Process..``, the algorithm can be executed as a batch process
-  (see `The batch processing interface <https://docs.qgis.org/3.4/en/docs/user_manual/processing/batch.html>`_)
-
-  Once you have introduced all the necessary parameters, just click on ``Run`` to start the process.
-
 
 .. _gdalgdalinfo:
 
@@ -265,19 +239,19 @@ Parameters
   Raster layer in input.
 
 ``Force computation of the actual min/max values for each band`` [boolean]
-  Force computation of the actual min/max values for each band in the dataset
+  Forces computation of the actual min/max values for each band in the dataset.
 
 ``Read and display image statistics (force computation if necessary)`` [boolean]
-  Read and display image statistics. Force computation if no statistics are stored in an image
+  Reads and displays image statistics. Forces computation if no statistics are stored in an image.
 
 ``Suppress GCP info`` [boolean]
-  Suppress ground control points list printing. It may be useful for datasets with huge amount of GCPs,
+  Suppresses ground control points list printing. It may be useful for datasets with huge amount of GCPs,
   such as L1B AVHRR or HDF4 MODIS which contain thousands of them.
 
   Default: *False*
 
 ``Suppress metadata info`` [boolean]
-  Suppress metadata printing. Some datasets may contain a lot of metadata strings.
+  Suppresses metadata printing. Some datasets may contain a lot of metadata strings.
 
   Default: *False*
 
@@ -359,11 +333,6 @@ Outputs
   The name of the output file to create/append to. The default shapefile will
   be created if it doesn't already exist, otherwise it will append to the
   existing file.
-
-``Open output file after running the algorithm`` [boolean]
-  Add the output raster to the map canvas
-
-  Default: *True*
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
