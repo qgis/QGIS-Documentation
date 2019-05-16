@@ -108,8 +108,8 @@ for the analysis:
 
    |
 
-#. Now that you know how to use the tool, feel free to change them and test other
-   locations.
+Now that you know how to use the tool, feel free to change them and test other
+locations.
 
 
 .. _backlink-network_analysis_1:
