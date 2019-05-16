@@ -20,6 +20,9 @@ are many tools available:
 
 .. image:: img/select_network_algorithms.png
    :align: center
+   :width: 75%
+
+|
 
 Open the project :file:`exercise_data/network_analysis/network.qgz`, it contains
 two layers:
@@ -32,14 +35,17 @@ to understand the road network.
 
 .. image:: img/network_map.png
    :align: center
+   :width: 100%
+
+|
 
 
 The shortest path tools provide ways to calculate either the shortest or the fastest path
 between two points of a network, given:
 
-* start point and end point selected on the map;
-* start point selected on the map and end points taken from a point layer;
-* start points taken from a point layer and end point selected on the map;
+* start point and end point selected on the map
+* start point selected on the map and end points taken from a point layer
+* start points taken from a point layer and end point selected on the map
 
 Let's start.
 
@@ -57,40 +63,52 @@ for the analysis:
 
 .. image:: img/start_end_point.png
    :align: center
+   :width: 100%
 
-* Open the :guilabel:`Shortest path (point to point)` algorithm;
-* Select :guilabel:`network_lines` for :guilabel:`Vector layer representing network`;
-* Let ``Shortest`` in the :guilabel:`Path type to calculate` parameter;
-* Click on the :guilabel:`...` button next to the :guilabel:`Start point (x, y)`
-  and choose the location tagged with ``Starting Point`` in the picture. The menu
-  is filled with the coordinates of the clicked point;
-* Do the same thing but choosing the location tagged with ``Ending point`` for
-  :guilabel:`End point (x, y)`;
-* Click on the :guilabel:`Run` button:
+|
 
-.. image:: img/shortest_point.png
-   :align: center
+#. Open the :guilabel:`Shortest path (point to point)` algorithm
+#. Select :guilabel:`network_lines` for :guilabel:`Vector layer representing network`
+#. Let ``Shortest`` in the :guilabel:`Path type to calculate` parameter
+#. Click on the :guilabel:`...` button next to the :guilabel:`Start point (x, y)`
+   and choose the location tagged with ``Starting Point`` in the picture. The menu
+   is filled with the coordinates of the clicked point.
+#. Do the same thing but choosing the location tagged with ``Ending point`` for
+   :guilabel:`End point (x, y)`
+#. Click on the :guilabel:`Run` button:
 
-A new line layer is created representing the shortest path between the chosen
-points. Uncheck the :guilabel:`network_lines` layer to see the result better:
+   .. image:: img/shortest_point.png
+      :align: center
+      :width: 100%
 
-.. image:: img/shortest_point_result.png
-   :align: center
+   |
 
-Let's open the attribute table of the output layer. It contains three fields,
-representing the coordinates of the starting and ending points and the
-**cost**.
+#. A new line layer is created representing the shortest path between the chosen
+   points. Uncheck the :guilabel:`network_lines` layer to see the result better:
 
-We chose ``Shortest`` as :guilabel:`Path type to calculate`, so the **cost**
-represent the **distance**, in layer units, between the two locations.
+   .. image:: img/shortest_point_result.png
+      :align: center
+      :width: 100%
 
-In our case, the *shortest* distance between the chosen points is around ``1000``
-meters:
+   |
 
-.. image:: img/shortest_point_attributes.png
-   :align: center
+#. Let's open the attribute table of the output layer. It contains three fields,
+   representing the coordinates of the starting and ending points and the
+   **cost**.
 
-Now that you now how to use the tool, feel free to change them and test other
+   We chose ``Shortest`` as :guilabel:`Path type to calculate`, so the **cost**
+   represent the **distance**, in layer units, between the two locations.
+
+   In our case, the *shortest* distance between the chosen points is around ``1000``
+   meters:
+
+   .. image:: img/shortest_point_attributes.png
+      :align: center
+      :width: 100%
+
+   |
+
+Now that you know how to use the tool, feel free to change them and test other
 locations.
 
 
@@ -117,33 +135,36 @@ between two points. As you can imagine, the time depends on the travel **speed**
 We will use the same layers and same starting and ending points of the previous
 exercises.
 
-* Open the :guilabel:`Shortest path (point to point)` algorithm;
-* Fill the :guilabel:`Input layer`, :guilabel:`Start point (x, y)` and
-  :guilabel:`End point (x, y)` as we did before;
-* Choose ``Fastest`` as the :guilabel:`Path type to calculate`;
-* Open the :guilabel:`Advanced parameter` menu;
-* Change the :guilabel:`Default speed (km/h)` from the default ``50`` value to
-  ``4``;
+#. Open the :guilabel:`Shortest path (point to point)` algorithm
+#. Fill the :guilabel:`Input layer`, :guilabel:`Start point (x, y)` and
+   :guilabel:`End point (x, y)` as we did before
+#. Choose ``Fastest`` as the :guilabel:`Path type to calculate`
+#. Open the :guilabel:`Advanced parameter` menu
+#. Change the :guilabel:`Default speed (km/h)` from the default ``50`` value to
+   ``4``
 
-  .. image:: img/shortest_path_advanced.png
-     :align: center
+   .. image:: img/shortest_path_advanced.png
+      :align: center
+      :width: 100%
 
-* Click on :guilabel:`Run`.
+   |
 
-Once the algorithm is finished, close the dialog and open the attribute table of
-the output layer.
+#. Click on :guilabel:`Run`
+#. Once the algorithm is finished, close the dialog and open the attribute table of
+   the output layer.
 
-The :guilabel:`cost` field contains the value according to the speed parameter
-you have chosen.
+   The :guilabel:`cost` field contains the value according to the speed parameter
+   you have chosen. We can convert the :guilabel:`cost` field from hours with
+   fractions to the more readable *minutes* values.
 
-We can convert the :guilabel:`cost` field from hours with fractions to the more
-readable *minutes* values.
+#. Open the field calculator by clicking on the |calculateField| icon and add the
+   new field :guilabel:`minutes` by multiplying the :guilabel:`cost` field by 60:
 
-* Open the field calculator by clicking on the |calculateField| icon and add the
-  new field :guilabel:`minutes` by multiplying the :guilabel:`cost` field by 60:
+   .. image:: img/shortest_path_conversion.png
+      :align: center
+      :width: 100%
 
-  .. image:: img/shortest_path_conversion.png
-     :align: center
+   |
 
 That's it! Now you know how many minutes it will take to get from one point to
 the other one.
@@ -156,6 +177,9 @@ following map:
 
 .. image:: img/speed_limit.png
    :align: center
+   :width: 100%
+
+|
 
 we would like to know the **fastest** route considering the **speed limits** of
 each road (the labels represent the speed limits in km/h). The shortest path
@@ -166,29 +190,34 @@ As we did in the first exercise, we will use the
 :menuselection:`Network analysis --> Shortest path (point to point)` and we will
 manually choose the start and end points.
 
-* Open the :menuselection:`Network analysis --> Shortest path (point to point)`
-  algorithm;
-* Select :guilabel:`network_lines` for the :guilabel:`Vector layer representing network`
-  parameter;
-* Choose ``Fastest`` as the :guilabel:`Path type to calculate`;
-* Click on the :guilabel:`...` button next to the :guilabel:`Start point (x, y)`
-  and choose the location tagged with ``Start Point`` in the picture. The menu
-  is filled with the coordinates of the clicked point;
-* Do the same thing but choosing the location tagged with ``End point`` for
-  :guilabel:`End point (x, y)`;
-* Open the :guilabel:`Advanced parameters` menu;
-* Choose the ``speed`` field as the :guilabel:`Speed Field` parameter. With this
-  option the algorithm will take into account the speed values for each road;
+#. Open the :menuselection:`Network analysis --> Shortest path (point to point)`
+   algorithm
+#. Select :guilabel:`network_lines` for the :guilabel:`Vector layer representing network`
+   parameter
+#. Choose ``Fastest`` as the :guilabel:`Path type to calculate`
+#. Click on the :guilabel:`...` button next to the :guilabel:`Start point (x, y)`
+   and choose the location tagged with ``Start Point`` in the picture. The menu
+   is filled with the coordinates of the clicked point.
+#. Do the same thing but choosing the location tagged with ``End point`` for
+   :guilabel:`End point (x, y)`
+#. Open the :guilabel:`Advanced parameters` menu
+#. Choose the ``speed`` field as the :guilabel:`Speed Field` parameter. With this
+   option the algorithm will take into account the speed values for each road.
 
-  .. image:: img/speed_limit_parameters.png
-     :align: center
+   .. image:: img/speed_limit_parameters.png
+      :align: center
+      :width: 100%
 
-* Click on the :guilabel:`Run` button:
+   |
 
-Turn off the :guilabel:`network_lines` layer to better see the result.
+#. Click on the :guilabel:`Run` button
+#. Turn off the :guilabel:`network_lines` layer to better see the result
 
-.. image:: img/speed_limit_result.png
-   :align: center
+   .. image:: img/speed_limit_result.png
+      :align: center
+      :width: 100%
+
+   |
 
 As you can see the fastest route does not correspond to the shortest one.
 
@@ -206,22 +235,28 @@ given a distance or a time value?
 Given a distance of ``250`` meters we want to know how far we can go on the
 network from each point of the :guilabel:`network_points` layer.
 
-* Uncheck all the layers except :guilabel:`network_points`;
-* Open the :menuselection:`Network Analysis --> Service area (from layer)` algorithm;
-* Choose :guilabel:`network_lines` for :guilabel:`Vector layer representing network`;
-* Choose :guilabel:`network_points` for :guilabel:`Vector layer with start points`;
-* Choose ``Shortest`` in :guilabel:`Path type to calculate`;
-* Enter ``250`` in the :guilabel:`Travel cost` parameter;
-* Click on :guilabel:`Run` and then close the dialog.
+#. Uncheck all the layers except :guilabel:`network_points`
+#. Open the :menuselection:`Network Analysis --> Service area (from layer)` algorithm
+#. Choose :guilabel:`network_lines` for :guilabel:`Vector layer representing network`
+#. Choose :guilabel:`network_points` for :guilabel:`Vector layer with start points`
+#. Choose ``Shortest`` in :guilabel:`Path type to calculate`
+#. Enter ``250`` in the :guilabel:`Travel cost` parameter
+#. Click on :guilabel:`Run` and then close the dialog
 
-.. image:: img/service_area.png
-   :align: center
+   .. image:: img/service_area.png
+      :align: center
+      :width: 100%
 
-The output layer represents the maximum path you can reach from the point features
-given a distance of 250 meters:
+   |
 
-.. image:: img/service_area_result.png
-   :align: center
+   The output layer represents the maximum path you can reach from the point features
+   given a distance of 250 meters:
+
+   .. image:: img/service_area_result.png
+      :align: center
+      :width: 100%
+
+   |
 
 Cool isn't it?
 
