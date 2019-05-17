@@ -127,8 +127,7 @@ Parameters
 ``Override projection for the output file`` [crs]
   Optional
 
-  (starting with GDAL 1.10) Overrides the projection for the output file. The srs_def may be any of the usual
-  GDAL/OGR forms, complete WKT, PROJ.4, EPSG:n or a file containing the WKT. No reprojection is done.
+  Overrides the projection for the output file. No reprojection is done.
 
 Outputs
 .......
@@ -187,7 +186,7 @@ Parameters
 ``Input pixel value to treat as "nodata"`` [number]
   Optional
 
-  Ignores pixels from files being merge in with this pixel value.
+  Ignores pixels from files being merged in with this pixel value.
 
 ``Assign specified "nodata" value to output`` [number]
   Optional
@@ -197,16 +196,19 @@ Parameters
 ``Additional creation options``
   Optional
 
+  Allows to add more advanced and format-related creation options (colorimetry,
+  file compression, block size...).
+
   ``Profile`` [enumeration]
     Sets the compression to use
 
     Options:
 
-    * 0 --- Default
-    * 1 --- No compression
-    * 2 --- Low compression
-    * 3 --- High compression
-    * 4 --- JPEG compression
+    * 1 --- Default
+    * 2 --- No compression
+    * 3 --- Low compression
+    * 4 --- High compression
+    * 5 --- JPEG compression
 
     Default: *1*
 
@@ -319,12 +321,12 @@ Parameters
 
   Possible values are:
 
-  * Auto
-  * Well-known text (WKT)
-  * EPSG
-  * Proj.4
+  * 0 --- Auto
+  * 1 --- Well-known text (WKT)
+  * 2 --- EPSG
+  * 3 --- Proj.4
 
-  Default: *Auto*
+  Default: *0*
 
 Outputs
 .......
@@ -344,6 +346,4 @@ Outputs
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
-
-
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
