@@ -450,10 +450,7 @@ functions are specified:
   to the ``smoothgeometry`` and ``buffer`` algorithms.
 
 There are a number of different parameter types available for
-input and output.
-Their definitions can be found in processing.h.  Below is an
-alphabetically sorted list (see :class:`the Python API documentation
-<qgis.core.QgsProcessingAlgorithm>` for details).
+input and output. Below is an alphabetically sorted list:
 
 * :class:`QgsProcessingParameterBand <qgis.core.QgsProcessingParameterBand>`
 * :class:`QgsProcessingParameterBoolean <qgis.core.QgsProcessingParameterBoolean>`
