@@ -621,11 +621,50 @@ You can define the :guilabel:`Default font` used within the :ref:`print layout
 GDAL Settings
 -------------
 
-GDAL is a data exchange library for raster files. In this tab, you can
-:guilabel:`Edit create options` and :guilabel:`Edit Pyramids Options` of the
-raster formats. You can define which GDAL driver is to be used for a raster
-format, as in some cases more than one GDAL driver is available.
+`GDAL <https://www.gdal.org>`_ is a data exchange library for vector and raster files.
+Depending on the format, GDAL helps to read and/or write data and, accordingly,
+the current tab provides following capabilities (only for rasters, yet):
 
+.. _gdal_createoptions:
+
+* :guilabel:`Edit create options`: it allows you to edit or add different profiles
+  of file transformation, i.e. a set of predefined combinations of parameters
+  (type and level of compression, blocks size, overview, colorimetry, alpha...)
+  to use when outputting raster files.
+
+  .. _figure_gdal_create_settings:
+
+  .. figure:: img/gdalCreateOptions.png
+     :align: center
+
+     Sample of create options profile
+
+  The upper part of the dialog lists the current profile(s) and allows you to
+  add new ones or remove any of them. You can also reset the profile to its
+  default parameters if you changed it meanwhile. Some formats (eg, GeoTiff)
+  already propose some sample of profiles you can work with.
+
+  At the bottom of the dialog:
+
+  * The |signPlus| button lets you add rows to fill with the parameter name and value
+  * The |signMinus| button deletes a previously added parameter
+  * Click the :guilabel:`Validate` button to check that the creation options
+    entered for the given format are compatible
+  * Use the :guilabel:`Help` button to find out the parameters to use or refer
+    to the `GDAL documentation for legal creation options for each
+    format <https://www.gdal.org/formats_list.html>`_.
+
+* :guilabel:`Edit Pyramids Options`
+
+  .. _figure_gdal_pyramids_settings:
+
+  .. figure:: img/gdalPyramidsOptions.png
+     :align: center
+
+     Sample of Pyramids profile
+
+* Define which GDAL driver is to be used to read and/or write files,
+  as in some cases more than one GDAL driver is available.
 
 .. _figure_gdal_settings:
 
