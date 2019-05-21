@@ -1346,8 +1346,9 @@ To use these functions in an expression, they should be preceded by @ character
  map_units                    Returns the units of map measurements
  notification_message         Content of the notification message sent by the provider
                               (available only for actions triggered by provider notifications).
- parent                       Returns attributes and geometry from the parent feature when
-                              in the filter of the "aggregate" expression function
+ parent                       Refers to the current feature in the parent layer,
+                              providing access to its attributes and geometry when filtering
+                              an :ref:`aggregate <aggregates_function>` function
  project_abstract             Returns the project abstract, taken from project metadata
  project_author               Returns the project author, taken from project metadata
  project_basename             Returns the basename of current project's filename (without
