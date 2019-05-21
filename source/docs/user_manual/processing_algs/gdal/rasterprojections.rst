@@ -154,26 +154,26 @@ Parameters
 ``Georeferenced extents of output file to be created (xmin, xmax, ymin, ymax)`` [extent]
   Optional
 
-  Sets georeferenced extents of output file to be created (in ``target CRS`` by default or in ``CRS of the target raster extent`` if specified).
+  Sets georeferenced extent of the output file to be created (in the ``target CRS`` by default. In the ``CRS of the target raster extent``, if specified).
 
 ``CRS of the target raster extent`` [crs]
   Optional
 
-  Specifies the CRS in which to interpret the coordinates given for the extents
-  of output file. This must not be confused with the target CRS of the output
+  Specifies the CRS in which to interpret the coordinates given for the extent
+  of the output file. This must not be confused with the target CRS of the output
   dataset. It is instead a convenience e.g. when knowing the output coordinates
-  in a geodetic long/lat SRS, but still wanting a result in a projected coordinate system.
+  in a geodetic long/lat CRS, but wanting a result in a projected coordinate system.
 
 ``Use multithreaded warping implementation`` [boolean]
-  Two threads will be used to process chunks of image and perform input/output
-  operation simultaneously. Note that computation is not multithreaded itself.
+  Two threads will be used to process chunks of the image and perform input/output
+  operations simultaneously. Note that the computation itself is not multithreaded.
 
   Default: *False*
 
 ``Additional command line parameters`` [string]
   Optional
 
-  Allows to add more advanced reprojection parameters.
+  Allows adding more advanced reprojection parameters.
 
 
 Outputs
