@@ -114,7 +114,8 @@ Parameters
   Default: *0*
 
 ``Nodata value for output bands`` [number]
-  Sets nodata value for output bands. If not provided, then nodata values will be copied from the source dataset.
+  Sets nodata value for output bands. If not provided, then nodata values will
+  be copied from the source dataset.
 
 ``Output file resolution in target georeferenced units`` [number]
   Defines the output file resolution of reprojection result.
@@ -122,7 +123,7 @@ Parameters
 ``Additional creation parameters`` [string]
   Optional
 
-  Passes a creation option to the output format driver. Multiple  options may
+  Passes creation options to the output format driver. Multiple options may
   be listed. See `format specific documentation for legal creation options for
   each format <https://www.gdal.org/formats_list.html>`_.
 
@@ -151,7 +152,8 @@ Parameters
 ``Georeferenced extents of output file to be created (xmin, xmax, ymin, ymax)`` [extent]
   Optional
 
-  Sets georeferenced extent of the output file to be created (in the ``target CRS`` by default. In the ``CRS of the target raster extent``, if specified).
+  Sets georeferenced extent of the output file to be created (in the ``target CRS``
+  by default. In the ``CRS of the target raster extent``, if specified).
 
 ``CRS of the target raster extent`` [crs]
   Optional
