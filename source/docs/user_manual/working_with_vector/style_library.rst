@@ -434,7 +434,7 @@ Appropriate for point geometry features, marker symbols have several
    .. code-block:: xml
   
     <svg width="100%" height="100%">
-    <rect fill="param(fill) #ff0000" stroke="param(outline) #00ff00" stroke-width="param(stroke-width) 10" width="100" height="100">
+    <rect fill="param(fill) #ff0000" stroke="param(outline) #00ff00" stroke-width="param(outline-width) 10" width="100" height="100">
     </rect>
     </svg>
  
