@@ -1347,7 +1347,7 @@ To use these functions in an expression, they should be preceded by @ character
  notification_message         Content of the notification message sent by the provider
                               (available only for actions triggered by provider notifications).
  parent                       Refers to the current feature in the parent layer,
-                              allowing to fetch its attribute or geometry when filtering
+                              providing access to its attributes and geometry when filtering
                               an :ref:`aggregate <aggregates_function>` function
  project_abstract             Returns the project abstract, taken from project metadata
  project_author               Returns the project author, taken from project metadata
