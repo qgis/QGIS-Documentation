@@ -2523,7 +2523,7 @@ snapping geometries to grid.
 .. figure:: img/simplify_geometries.png
    :align: center
 
-   Clockwise from left-up: source layer and increasing simplification tolerances
+   Clockwise from top left: source layer and increasing simplification tolerances
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
