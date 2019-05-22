@@ -434,7 +434,8 @@ will adapt dynamically.
 ---------------------------------------------------------------------------------------
 
 #. The title of your QGIS project can be included automatically. The title is set
-   in the :guilabel:`Project Properties`. Insert a label with the |addLabel| :sup:`Adds a new Label to the layout` button
+   in the :guilabel:`Project Properties`.
+   Insert a label with the |addLabel| :sup:`Adds a new Label to the layout` button
    and enter the name ``project title (variable)``.
    In the :guilabel:`Main Properties` of the :guilabel:`Items Properties` Panel enter the expression
    
