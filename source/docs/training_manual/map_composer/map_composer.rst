@@ -301,7 +301,7 @@ will adapt dynamically.
 |moderate| |FA| Creating the dynamic map canvas
 -------------------------------------------------------------------------------
 
-#. Load the ESRI Shapefile format dataset :file:`protected_areas.shp`, :file:`places.shp`, :file:`rivers.shp` and :file:`water.shp`
+#. Load the ESRI Shapefile format datasets :file:`protected_areas.shp`, :file:`places.shp`, :file:`rivers.shp` and :file:`water.shp`
    into the map canvas and adapt its properties to suit your own convenience.
 #. After everything is rendered and symbolized to your liking,
    click the |newLayout| :sup:`New Print Layout` icon in the toolbar or
