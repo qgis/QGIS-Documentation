@@ -345,7 +345,7 @@ will adapt dynamically.
    Go to :guilabel:`Item Properties` again and choose the :guilabel:`Grids` section.
    Insert a grid by clicking the
    |signPlus| button. Go to :guilabel:`Modify grid ...` and set the :guilabel:`Interval` for X, Y and :guilabel:`Offset` according
-   to the map scale you chose in the QGIS main canvas. The Grid type :guilabel:`Cross` is very well suited
+   to the map scale you chose in the QGIS main canvas. The :guilabel:`Grid type` :guilabel:`Cross` is very well suited
    for our purposes.
    
 |moderate| |FA| Creating the dynamic header
