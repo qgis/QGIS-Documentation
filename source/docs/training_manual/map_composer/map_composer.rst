@@ -407,7 +407,7 @@ will adapt dynamically.
    
      @sw_layout_height_header
 
-   for :guilabel:`Height`.The second vertical line is placed left to it. Enter the expression
+   for :guilabel:`Height`.The second vertical line is placed to the left of the first one. Enter the expression
    
    ::
     
