@@ -165,7 +165,7 @@ For **lines geometries**, the boundaries are the vertices between each features.
 .. figure:: img/boundary_lines.png
    :align: center
 
-   Boundary layer for lines. In yellow a selected features.
+   Boundary layer for lines. In yellow a selected feature.
 
 Parameters
 ..........
@@ -683,7 +683,7 @@ Outputs
 
 See also
 ........
-:ref:`qgisbuffer`, :ref:`qgisbufferbym`, :ref:`qgistaperedbuffer`, :ref:`qgisbufferbym`
+:ref:`qgisbuffer`, :ref:`qgisbufferbym`, :ref:`qgistaperedbuffer`
 
 
 .. _qgisdelaunaytriangulation:
@@ -2233,7 +2233,7 @@ Parameters
   Allows to consider the Z coordinate when detecting duplicate vertices ie two points
   at the same X,Y coordinate but with different Z value are not set as duplicates.
 
-  Default:*False*
+  Default: *False*
 
 Outputs
 .......
@@ -2523,7 +2523,7 @@ snapping geometries to grid.
 .. figure:: img/simplify_geometries.png
    :align: center
 
-   Clockwise from left-up: source layer and different simplification tolerances
+   Clockwise from top left: source layer and increasing simplification tolerances
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 

@@ -435,7 +435,7 @@ Appropriate for point geometry features, marker symbols have several
    .. code-block:: xml
   
     <svg width="100%" height="100%">
-    <rect fill="param(fill) #ff0000" stroke="param(outline) #00ff00" stroke-width="param(stroke-width) 10" width="100" height="100">
+    <rect fill="param(fill) #ff0000" stroke="param(outline) #00ff00" stroke-width="param(outline-width) 10" width="100" height="100">
     </rect>
     </svg>
  
@@ -640,7 +640,7 @@ viewing the field.
 .. |locked| image:: /static/common/locked.png
    :width: 1.5em
 .. |lockedGray| image:: /static/common/lockedGray.png
-   :width: 1.5em
+   :width: 1.2em
 .. |openTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em
 .. |paintEffects| image:: /static/common/mIconPaintEffects.png

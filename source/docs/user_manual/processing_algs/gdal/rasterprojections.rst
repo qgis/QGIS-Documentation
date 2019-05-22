@@ -84,46 +84,56 @@ Parameters
 ..........
 
 ``Input layer`` [raster]
-  Input raster layer.
+  Input raster layer to reproject.
 
-``Source SRS (EPSG Code)`` [crs]
+``Source CRS`` [crs]
+  Optional
+
   Defines the CRS of the input raster layer.
 
-  Default: *EPSG:4326*
-
-``Destination SRS (EPSG Code)`` [crs]
-  Defines the target CRS of the raster layer.
+``Target CRS`` [crs]
+  Defines the CRS of the output raster layer.
 
   Default: *EPSG:4326*
 
-``Output file resolution in target georeferenced units (leave 0 for no change)`` [number]
-  Defines the output file resolution of reprojection result.
-
-  Default: *0.0*
-
-``Resampling method`` [enumeration]
-  Several resampling methods can be chosen for the reprojection.
-  By default a near resampling method is chosen.
+``Resampling method to use`` [enumeration]
+  Pixel value resampling method to use.
 
   Options:
 
-  * 0 --- near
-  * 1 --- bilinear
-  * 2 --- cubic
-  * 3 --- cubicspline
-  * 4 --- lanczos
+  * 0 --- Nearest neighbour
+  * 1 --- Bilinear
+  * 2 --- Cubic
+  * 3 --- Cubic spline
+  * 4 --- Lanczos windowed sinc
+  * 5 --- Average
+  * 6 --- Mode
+  * 7 --- Maximum
+  * 8 --- Minimum
+  * 9 --- Median
+  * 10 --- First quartile
+  * 11 --- Third quartile
 
   Default: *0*
+
+``Nodata value for output bands`` [number]
+  Sets nodata value for output bands. If not provided, then nodata values will
+  be copied from the source dataset.
+
+``Output file resolution in target georeferenced units`` [number]
+  Defines the output file resolution of reprojection result.
 
 ``Additional creation parameters`` [string]
   Optional
 
-  <put parameter description here>
+  Passes creation options to the output format driver. Multiple  options may
+  be listed. See `format specific documentation for legal creation options for
+  each format <https://www.gdal.org/formats_list.html>`_.
 
   Default: *(not set)*
 
 ``Output data type`` [enumeration]
-  Defines the format of the output raster file.
+  Defines the data type of the output bands.
 
   Options:
 
@@ -142,11 +152,37 @@ Parameters
 
   Default: *0*
 
+``Georeferenced extents of output file to be created (xmin, xmax, ymin, ymax)`` [extent]
+  Optional
+
+  Sets georeferenced extent of the output file to be created (in the ``target CRS``
+  by default. In the ``CRS of the target raster extent``, if specified).
+
+``CRS of the target raster extent`` [crs]
+  Optional
+
+  Specifies the CRS in which to interpret the coordinates given for the extent
+  of the output file. This must not be confused with the target CRS of the output
+  dataset. It is instead a convenience e.g. when knowing the output coordinates
+  in a geodetic long/lat CRS, but wanting a result in a projected coordinate system.
+
+``Use multithreaded warping implementation`` [boolean]
+  Two threads will be used to process chunks of the image and perform input/output
+  operations simultaneously. Note that the computation itself is not multithreaded.
+
+  Default: *False*
+
+``Additional command line parameters`` [string]
+  Optional
+
+  Allows adding more advanced reprojection parameters.
+
+
 Outputs
 .......
 
-``Output layer`` [raster]
-  <put output description here>
+``Reprojected`` [raster]
+  Reprojected output raster layer.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

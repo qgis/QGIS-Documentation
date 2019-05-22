@@ -893,7 +893,7 @@ https://qgis.org/en/site/getinvolved/development/addinggrasstools.html.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |CURRENT| replace:: 2.18
+.. |CURRENT| replace:: 3.4
 .. |captureBoundary| image:: /static/common/mActionCaptureBoundary.png
    :width: 1.5em
 .. |captureCentroid| image:: /static/common/mActionCaptureCentroid.png
@@ -907,7 +907,7 @@ https://qgis.org/en/site/getinvolved/development/addinggrasstools.html.
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |general| image:: /static/common/general.png
-   :width: 2em
+   :width: 1.5em
 .. |grass| image:: /static/common/grasslogo.png
    :width: 1.5em
 .. |grassCloseMapset| image:: /static/common/grass_close_mapset.png
@@ -929,6 +929,7 @@ https://qgis.org/en/site/getinvolved/development/addinggrasstools.html.
 .. |projectionEnabled| image:: /static/common/mIconProjectionEnabled.png
    :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
+   :width: 1.5em
 .. |rasterGroup| image:: /static/common/mIconRasterGroup.png
    :width: 1.5em
 .. |rasterLink| image:: /static/common/mIconRasterLink.png

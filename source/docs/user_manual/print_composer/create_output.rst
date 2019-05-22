@@ -441,6 +441,7 @@ the image file format set in :guilabel:`Atlas` panel or to SVG file.
 .. |filePrint| image:: /static/common/mActionFilePrint.png
    :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
+   :width: 1.5em
 .. |saveAsPDF| image:: /static/common/mActionSaveAsPDF.png
    :width: 1.5em
 .. |saveAsSVG| image:: /static/common/mActionSaveAsSVG.png

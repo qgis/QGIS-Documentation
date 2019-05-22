@@ -975,9 +975,11 @@ Description of these capabilities and how-to are provided in chapter
 .. |kde| image:: /static/common/kde.png
    :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
-   :width: 2em
+   :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
+   :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
+   :width: 1.5em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png

@@ -559,6 +559,7 @@ A complete sample XML file with three queries is displayed below:
 .. |evisFile| image:: /static/common/evis_file.png
    :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
+   :width: 1.5em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

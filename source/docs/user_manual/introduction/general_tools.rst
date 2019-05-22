@@ -2131,7 +2131,7 @@ The values presented in the varying size assistant above will set the size
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
 .. |editableEdits| image:: /static/common/mIconEditableEdits.png
-   :width: 1.5em
+   :width: 1em
 .. |expandNewTree| image:: /static/common/mActionExpandNewTree.png
    :width: 1.5em
 .. |expandTree| image:: /static/common/mActionExpandTree.png
@@ -2153,7 +2153,7 @@ The values presented in the varying size assistant above will set the size
 .. |formSelect| image:: /static/common/mIconFormSelect.png
    :width: 1.5em
 .. |formView| image:: /static/common/mActionFormView.png
-   :width: 1.5em
+   :width: 1.2em
 .. |hideAllLayers| image:: /static/common/mActionHideAllLayers.png
    :width: 1.5em
 .. |hideDeselectedLayers| image:: /static/common/mActionHideDeselectedLayers.png

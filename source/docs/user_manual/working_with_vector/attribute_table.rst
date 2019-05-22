@@ -513,13 +513,15 @@ A short example illustrates how field calculator works when using the
    |calculateField| :sup:`Field Calculator` dialog.
 #. Select the |checkbox| :guilabel:`Create a new field` checkbox to save the
    calculations into a new field.
-#. Add ``length`` as Output field name and ``real`` as Output field type, and
-   define Output field length to be 10 and Precision, 3.
-#. Now double click on function ``$length`` in the :guilabel:`Geometry` group
-   to add it into the Field calculator expression box.
+#. Set :guilabel:`Output field name` to  ``length_km``
+#. Select ``Decimal number (real)`` as :guilabel:`Output field type`
+#. Set the :guilabel:`Output field length` to ``10`` and the :guilabel:`Precision`
+   to ``3``
+#. Double click on ``$length`` in the :guilabel:`Geometry` group to add the length
+   of the geometry into the Field calculator expression box.
 #. Complete the expression by typing ``/ 1000`` in the Field calculator
    expression box and click :guilabel:`OK`.
-#. You can now find a new field ``length`` in the attribute table.
+#. You can now find a new :guilabel:`length_km` field in the attribute table.
 
 .. _virtual_field:
 
@@ -1011,7 +1013,7 @@ table.
 .. |formSelect| image:: /static/common/mIconFormSelect.png
    :width: 1.5em
 .. |formView| image:: /static/common/mActionFormView.png
-   :width: 1.5em
+   :width: 1.2em
 .. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em
 .. |link| image:: /static/common/mActionLink.png
@@ -1033,7 +1035,9 @@ table.
 .. |panToSelected| image:: /static/common/mActionPanToSelected.png
    :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
+   :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
+   :width: 1.5em
 .. |saveEdits| image:: /static/common/mActionSaveEdits.png
    :width: 1.5em
 .. |selectAll| image:: /static/common/mActionSelectAll.png

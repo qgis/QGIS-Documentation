@@ -41,11 +41,11 @@ class. Instances of this class can be created in several different ways:
 
   QGIS uses three different IDs for every reference system:
 
-  * :const:`PostgisCrsId` --- IDs used within PostGIS databases.
-  * :const:`InternalCrsId` --- IDs internally used in QGIS database.
-  * :const:`EpsgCrsId` --- IDs assigned by the EPSG organization
+  * :attr:`InternalCrsId <qgis.core.QgsCoordinateReferenceSystem.InternalCrsId>` --- ID used in the internal QGIS database.
+  * :attr:`PostgisCrsId <qgis.core.QgsCoordinateReferenceSystem.PostgisCrsId>` --- ID used in PostGIS databases.
+  * :attr:`EpsgCrsId <qgis.core.QgsCoordinateReferenceSystem.EpsgCrsId>` --- ID assigned by the EPSG organization.
 
-  If not specified otherwise in second parameter, PostGIS SRID is used by default.
+  If not specified otherwise with the second parameter, PostGIS SRID is used by default.
 
 * specify CRS by its well-known text (WKT)
 
@@ -57,9 +57,9 @@ class. Instances of this class can be created in several different ways:
      crs = QgsCoordinateReferenceSystem(wkt)
      assert crs.isValid()
 
-* create invalid CRS and then use one of the :func:`create*` functions to
-  initialize it. In the following example we use Proj4 string to initialize the
-  projection
+* create an invalid CRS and then use one of the ``create*`` functions to
+  initialize it. In the following example we use a Proj4 string to initialize the
+  projection.
 
   .. testcode::
 
@@ -68,13 +68,15 @@ class. Instances of this class can be created in several different ways:
      assert crs.isValid()
 
 It's wise to check whether creation (i.e. lookup in the database) of the CRS
-has been successful: :meth:`isValid() <qgis.core.QgsCoordinateReferenceSystem.isValid>` must return :const:`True`.
+has been successful: :meth:`isValid() <qgis.core.QgsCoordinateReferenceSystem.isValid>`
+must return ``True``.
 
 Note that for initialization of spatial reference systems QGIS needs to look up
 appropriate values in its internal database :file:`srs.db`. Thus in case you
 create an independent application you need to set paths correctly with
-:meth:`QgsApplication.setPrefixPath() <qgis.core.QgsApplication.setPrefixPath>` otherwise it will fail to find the
-database. If you are running the commands from QGIS python console or
+:meth:`QgsApplication.setPrefixPath() <qgis.core.QgsApplication.setPrefixPath>`,
+otherwise it will fail to find the
+database. If you are running the commands from the QGIS Python console or
 developing a plugin you do not care: everything is already set up for you.
 
 Accessing spatial reference system information:
@@ -148,5 +150,4 @@ Output:
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

@@ -104,4 +104,5 @@ layout of the QGIS interface. This is the topic of the next lesson.
 .. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
    :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
+   :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
