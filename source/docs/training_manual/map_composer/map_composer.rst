@@ -574,7 +574,8 @@ will adapt dynamically.
    and for :guilabel:`Height` ``13.100``. The ``Reference point``
    should be placed in the center.
   
-Congratulations! You created your first dynamic map layout. Take a look at the layout and check if everything looks the way you want it!
+Congratulations! You created your first dynamic map layout.
+Take a look at the layout and check if everything looks the way you want it!
 The dynamic map layout reacts automatically when you change the :guilabel:`page properties`.
 For example, if you change the page size from DIN A4 to DIN A3, just click the |draw| :sup:`Refresh view` button and
 the page design is adapted.
