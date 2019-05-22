@@ -311,7 +311,7 @@ will adapt dynamically.
    Alaska. The layout should have a margin of 7.5 mm and the header should be 36mm high.
 #. Create a map item called ``main map`` on the canvas and go to the :guilabel:`Layout` panel.
    Scroll down to the :guilabel:`Variables` section and find the :guilabel:`Layout` part.
-   Here we set some variables you can use all over the dynamic print layout.Go to the :guilabel:`Layout` panel
+   Here we set some variables you can use all over the dynamic print layout. Go to the :guilabel:`Layout` panel
    and scroll down to the :guilabel:`Variables` section.  The first variable will define the margin.
    Press the |signPlus| button and type in the name ``sw_layout_margin``. Set the value to ``7.5``. Press
    the |signPlus| button again and type in the name ``sw_layout_height_header``. Set the value to ``36``.
