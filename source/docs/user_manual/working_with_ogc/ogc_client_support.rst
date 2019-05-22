@@ -617,14 +617,27 @@ The difference is that there are no default servers defined, so we have to add o
 **Loading a WFS Layer**
 
 As an example, we use the DM Solutions WFS server and display a layer.
-The URL is: http://www2.dmsolutions.ca/cgi-bin/mswfs_gmap
+https://demo.gatewaygeomatics.com/cgi-bin/wfs_gateway?REQUEST=GetCapabilities&VERSION=1.0.0&SERVICE=WFS
+
+To be able to load a WFS Layer we create a connection to the WFS server first.
 
 #. Click on the |wfs| :sup:`Add WFS Layer` tool on the
    Layers toolbar. The :guilabel:`Add WFS Layer from a Server` dialog appears.
 #. Click on :guilabel:`New`.
-#. Enter 'DM Solutions' as name.
+#. Enter ``DM Solutions`` as name.
 #. Enter the URL (see above).
-#. Click :guilabel:`OK`.
+#. 
+
+
+.. _figure_OGC_create_wfs_connection:
+
+.. figure:: img/add_connection_wfs.png
+   :align: center
+   
+   Creating a connection to a WFS server
+
+Now we are ready to load WFS layers from the above connection.
+   
 #. Choose 'DM Solutions' from the :guilabel:`Server Connections`
    |selectString| drop-down list.
 #. Click :guilabel:`Connect`.
