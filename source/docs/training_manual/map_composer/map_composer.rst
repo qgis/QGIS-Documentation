@@ -326,7 +326,7 @@ will adapt dynamically.
    
     to_real(@sw_layout_margin) + to_real(@sw_layout_height_header)
     
-#. You can create the size of the map item by using variables for :guilabel:`Width` and :guilabel:`Height`.
+#. You can create the size of the map item by using the variables for :guilabel:`Width` and :guilabel:`Height`.
    Click the |dataDefineExpressionOn| :sup:`Data defined override` for :guilabel:`Width` and choose :guilabel:`Edit ...` again.
    Fill in the formula
    
