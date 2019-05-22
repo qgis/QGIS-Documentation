@@ -531,7 +531,8 @@ will adapt dynamically.
    The size of the logo is set to ``39.292`` for :guilabel:`Width` and ``9.583`` for :guilabel:`Height`.
    To include a logo of your organisation you have to save your logo under your home directory and enter
    the path under :menuselection:`Main Properties --> Image Source`.
-#. Our layout still needs a north arrow. This will also be insterted by using |addNewImage| :sup:`Adds a new Picture to the layout`.
+#. Our layout still needs a north arrow.
+   This will also be insterted by using |addNewImage| :sup:`Adds a new Picture to the layout`.
    Set the name to ``north arrow``, go to :guilabel:`Main Properties` and select the
    :file:`Arrow_02.svg`.
    The position is defined by
