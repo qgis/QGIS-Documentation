@@ -418,7 +418,7 @@ will adapt dynamically.
    
     @sw_layout_margin
     
-   for :guilabel:`Y`.It shall have the same value for :guilabel:`Height` as the first vertical line: 
+   for :guilabel:`Y`. It shall have the same value for :guilabel:`Height` as the first vertical line: 
    
    ::
    
