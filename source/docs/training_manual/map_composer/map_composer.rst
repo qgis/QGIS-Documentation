@@ -547,7 +547,8 @@ will adapt dynamically.
    
     @sw_layout_margin + 22.5
    
-   for :guilabel:`Y`. We use static numbers here to define the :guilabel:`Width` and the :guilabel:`Height`: ``21.027`` and ``21.157``.
+   for :guilabel:`Y`. We use static numbers here to define the :guilabel:`Width` and the
+   :guilabel:`Height`: ``21.027`` and ``21.157``.
   
 |moderate| |FA| Creating the scalebar of the dynamic header
 ----------------------------------------------------------------------------------------
