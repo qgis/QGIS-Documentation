@@ -152,7 +152,7 @@ Parameters
 ``Georeferenced extents of output file to be created (xmin, xmax, ymin, ymax)`` [extent]
   Optional
 
-  Sets georeferenced extent of the output file to be created (in the ``target CRS``
+  Sets the georeferenced extent of the output file to be created (in the ``target CRS``
   by default. In the ``CRS of the target raster extent``, if specified).
 
 ``CRS of the target raster extent`` [crs]
