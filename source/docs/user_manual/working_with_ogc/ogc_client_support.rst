@@ -626,7 +626,6 @@ To be able to load a WFS Layer we create a connection to the WFS server first.
 #. Click on :guilabel:`New`.
 #. Enter ``DM Solutions`` as name.
 #. Enter the URL (see above).
-#. 
 
 
 .. _figure_OGC_create_wfs_connection:
