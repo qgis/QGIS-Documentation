@@ -76,6 +76,8 @@ Examples of scalar expressions:
 Parsing Expressions
 ===================
 
+The following example shows how to check if a given expression can be parsed correctly:
+
 .. testcode::
 
    exp = QgsExpression('1 + 1 = 2')
@@ -91,8 +93,13 @@ Parsing Expressions
 Evaluating Expressions
 ======================
 
+Expressions can be used in different contexts, for example to filter features or to compute new field values. In any case, the expression has to be evaluated. That means that its value is computed by performing the specified computational steps, which can range from simple arithmetic to aggregate expressions. 
+
+
 Basic Expressions
 -----------------
+
+This basic expression evaluates to 1, meaning it is true: 
 
 .. testcode::
 
@@ -103,10 +110,10 @@ Basic Expressions
 Expressions with features
 --------------------------
 
-The following example will evaluate the given expression against a feature.
-A :class:`QgsExpressionContext <qgis.core.QgsExpressionContext>`
-object has to be created and passed, to allow the expression to access the feature field values.
-"Column" is the name of the field in the layer.
+To evaluate an expression against a feature a :class:`QgsExpressionContext <qgis.core.QgsExpressionContext>`
+object has to be created and passed to the evaluate function, to allow the expression to access the feature's field values.
+
+The following example shows how to create a feature with a field called "Column" and how to add this feature to the expression context.
 
 .. testcode::
 
@@ -116,28 +123,79 @@ object has to be created and passed, to allow the expression to access the featu
    feature = QgsFeature()
    feature.setFields(fields)
    feature.setAttribute(0, 99)
+   
    exp = QgsExpression('Column')
    context = QgsExpressionContext()
    context.setFeature(feature)
    assert(exp.evaluate(context) == 99)
 
 
-Handling errors
----------------
+The following is a more complete example of how to use expressions in the context of a vector layer, in order to compute now field values:
 
 .. testcode::
 
-   exp = QgsExpression("1 + 1 = 2 ")
-   if exp.hasParserError():
-      raise Exception(exp.parserErrorString())
+   from qgis.PyQt.QtCore import QVariant
+   
+   # create a vector layer
+   vl = QgsVectorLayer("Point", "Companies", "memory")
+   pr = vl.dataProvider()
+   pr.addAttributes([QgsField("Name", QVariant.String),
+                     QgsField("Employees",  QVariant.Int),
+                     QgsField("Revenue", QVariant.Double),
+                     QgsField("Rev. per employee", QVariant.Double),
+                     QgsField("Sum", QVariant.Double),
+                     QgsField("Fun", QVariant.Double)])
+   vl.updateFields()
+   
+   # add data to the first three fields
+   my_data = [
+       {'x': 0, 'y': 0, 'name': 'ABC', 'emp': 10, 'rev': 100.1},
+       {'x': 1, 'y': 1, 'name': 'DEF', 'emp': 2, 'rev': 50.5},
+       {'x': 5, 'y': 5, 'name': 'GHI', 'emp': 100, 'rev': 725.9}] 
+   
+   for rec in my_data:
+       f = QgsFeature()
+       pt = QgsPointXY(rec['x'], rec['y'])
+       f.setGeometry(QgsGeometry.fromPointXY(pt))
+       f.setAttributes([rec['name'], rec['emp'], rec['rev']])
+       pr.addFeature(f)
+   
+   vl.updateExtents() 
+   QgsProject.instance().addMapLayer(vl)
 
-   value = exp.evaluate()
-   if exp.hasEvalError():
-      raise ValueError(exp.evalErrorString())
+   # The first expression computes the revenue per employee. 
+   # The second one computes the sum of all revenue values in the layer. 
+   # The final third expression doesn’t really make sense but illustrates 
+   # the fact that we can use a wide range of expression functions, such 
+   # as area and buffer in our expressions:
+   expression1 = QgsExpression('Revenue/Employees')
+   expression2 = QgsExpression('sum(Revenue)')
+   expression3 = QgsExpression('area(buffer($geometry,Employees))')
+   
+   # QgsExpressionContextUtils.globalProjectLayerScopes() is a convenience 
+   # function that adds the global, project, and layer scopes all at once. 
+   # Alternatively, those scopes can also be added manually. In any case, 
+   # it is important to always go from “most generic” to “most specific” 
+   # scope, i.e. from global to project to layer
+   context = QgsExpressionContext()
+   context.appendScopes(QgsExpressionContextUtils.globalProjectLayerScopes(vl))
+   
+   vl.startEditing()
+ 
+   for f in vl.getFeatures():
+       context.setFeature(f)
+       f['Rev. per employee'] = expression1.evaluate(context)
+       f['Sum'] = expression2.evaluate(context)
+       f['Fun'] = expression3.evaluate(context)
+       vl.updateFeature(f)
+ 
+   vl.commitChanges()
+   
+   assert(f['Sum'] == 876.5)
 
 
-Examples
-========
+Filtering a layer with expressions
+----------------------------------
 
 The following example can be used to filter a layer and return any feature that
 matches a predicate.
@@ -163,6 +221,22 @@ matches a predicate.
       matches += 1
 
    assert(matches == 7)
+
+
+Handling expression errors
+==========================
+
+Expression-related errors can occur during expression parsing or evaluation: 
+
+.. testcode::
+
+   exp = QgsExpression("1 + 1 = 2 ")
+   if exp.hasParserError():
+      raise Exception(exp.parserErrorString())
+
+   value = exp.evaluate()
+   if exp.hasEvalError():
+      raise ValueError(exp.evalErrorString())
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
