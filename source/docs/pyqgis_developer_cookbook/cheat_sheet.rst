@@ -267,7 +267,7 @@ Table of contents
 
     from qgis.core import QgsProject
 
-    for layer in QgsProject().instance().mapLayers().values():   
+    for layer in QgsProject.instance().mapLayers().values():   
         crs = layer.crs().authid()
         layer.setName('{} ({})'.format(layer.name(), crs))
 
