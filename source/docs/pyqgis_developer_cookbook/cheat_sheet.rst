@@ -393,7 +393,7 @@ Advanced TOC
     root.insertChildNode(0, cloned_group1)
     root.removeChildNode(node_group1)
 
-**Rename none**
+**Rename node**
 
 .. testcode::
 
