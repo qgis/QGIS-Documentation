@@ -13,7 +13,8 @@ The code snippets on this page needs the following imports if you're outside the
       QgsVectorLayer,
       QgsPointXY, 
       QgsGeometry, 
-      QgsProject
+      QgsProject,
+      QgsExpressionContextUtils
    )
 
 .. index:: Expressions, Filtering, Calculating values
