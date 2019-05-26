@@ -90,7 +90,10 @@ The following example shows how to check if a given expression can be parsed cor
 Evaluating Expressions
 ======================
 
-Expressions can be used in different contexts, for example to filter features or to compute new field values. In any case, the expression has to be evaluated. That means that its value is computed by performing the specified computational steps, which can range from simple arithmetic to aggregate expressions. 
+Expressions can be used in different contexts, for example to filter features or to compute
+new field values. In any case, the expression has to be evaluated. That means that its
+value is computed by performing the specified computational steps, which can range from
+simple arithmetic to aggregate expressions. 
 
 
 Basic Expressions
