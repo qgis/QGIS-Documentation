@@ -137,7 +137,7 @@ feature to the expression context.
 
 
 The following is a more complete example of how to use expressions in the context of a vector layer, in
-order to compute now field values:
+order to compute new field values:
 
 .. testcode::
    
