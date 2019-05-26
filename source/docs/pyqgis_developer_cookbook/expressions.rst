@@ -233,7 +233,7 @@ Expression-related errors can occur during expression parsing or evaluation:
 
 .. testcode::
 
-   exp = QgsExpression("1 + 1 = 2 ")
+   exp = QgsExpression("1 + 1 = 2")
    if exp.hasParserError():
       raise Exception(exp.parserErrorString())
 
