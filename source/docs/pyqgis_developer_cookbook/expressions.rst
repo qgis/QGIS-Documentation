@@ -135,7 +135,8 @@ feature to the expression context.
    assert(exp.evaluate(context) == 99)
 
 
-The following is a more complete example of how to use expressions in the context of a vector layer, in order to compute now field values:
+The following is a more complete example of how to use expressions in the context of a vector layer, in
+order to compute now field values:
 
 .. testcode::
 
