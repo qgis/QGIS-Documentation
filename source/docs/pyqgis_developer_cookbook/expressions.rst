@@ -10,7 +10,10 @@ The code snippets on this page needs the following imports if you're outside the
       QgsFeatureRequest,
       QgsField,
       QgsFields,
-      QgsVectorLayer
+      QgsVectorLayer,
+      QgsPointXY, 
+      QgsGeometry, 
+      QgsProject
    )
 
 .. index:: Expressions, Filtering, Calculating values
@@ -136,8 +139,7 @@ The following is a more complete example of how to use expressions in the contex
 order to compute now field values:
 
 .. testcode::
-
-   from qgis.core import QgsPointXY
+   
    from qgis.PyQt.QtCore import QVariant
    
    # create a vector layer
