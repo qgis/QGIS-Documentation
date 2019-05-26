@@ -140,6 +140,7 @@ order to compute now field values:
 
 .. testcode::
 
+   from qgis.core import QgsPointXY
    from qgis.PyQt.QtCore import QVariant
    
    # create a vector layer
