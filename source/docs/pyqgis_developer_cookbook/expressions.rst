@@ -113,7 +113,7 @@ This basic expression evaluates to 1, meaning it is true:
 Expressions with features
 --------------------------
 
-To evaluate an expression against a feature a :class:`QgsExpressionContext <qgis.core.QgsExpressionContext>`
+To evaluate an expression against a feature, a :class:`QgsExpressionContext <qgis.core.QgsExpressionContext>`
 object has to be created and passed to the evaluate function, to allow the expression to access the feature's field values.
 
 The following example shows how to create a feature with a field called "Column" and how to add this feature to the expression context.
