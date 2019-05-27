@@ -30,13 +30,13 @@ In order to provide translations:
 #. These "originals" are then copied by the script to the :file:`i18n` folders for
    other languages.
 #. The sentences in the :file:`.po` files are pushed to Transifex and made
-   available for translators who can begin to translate from english to their
+   available for translators who can begin to translate from English to their
    language with the editor.
 #. At the end of the day, a script pulls back all validated translations
 #. At the next build of the documentation (which occurs at least once a day), a
    script reuses the sentences to create translated output
 #. When afterwards an :file:`.rst` document is updated a new :file:`.po` file is
-   created in the english part. The contents of this new file will be merged
+   created in the English part. The contents of this new file will be merged
    with already existing :file:`.po` files for each language. This means that
    when a new line is added to an :file:`.rst` document that was already
    translated, only the new/updated sentences are added in the translated
@@ -51,7 +51,7 @@ In order to provide translations:
  
 Two different tools are currently used to do translations in QGIS:
 
-* the **Transifex web platform**, the easiest and recommanded way to translate QGIS,
+* The **Transifex web platform**, the easiest and recommended way to translate QGIS,
   transparently does the process described above and pulls all the translatable
   texts in one place for the translator. Just pick the files you want and translate.
   Translated files are stored in the platform until another release is pushed.
@@ -111,7 +111,7 @@ In order to translate using Transifex, you need to:
    .. figure:: img/transifex_choose_language.png
       :align: center
 
-      Select language for translation in Transifex menu
+      Select language for translation in the Transifex menu
    
 #. Hover over your language and click either:
 
@@ -148,9 +148,9 @@ With Qt Linguist, you need to:
 #. proceed to the translation locally
 #. upload the modified files to their sources (Transifex or GitHub).
 
-While downloading and uploading tranlatable files can be done with Transifex,
-it's not advised to use this process (or very carefully). Because there's no
-versionning system on Transifex, the file you upload will simply replace the
+While downloading and uploading translatable files can be done with Transifex,
+it's not advised to use this process. Since there's no
+versioning system on Transifex, the file you upload will simply replace the
 existing one and potentially overwrite any modification made by others on the
 platform in the meantime.
 
@@ -212,7 +212,7 @@ https://doc-snapshots.qt.io/qt5-5.12/linguist-translators.html
    If you want to download content to translate from the source
    repository, never do this in the ``master`` branch. For translations
    there are always translation branches available, once a document is fully
-   updated in english for a certain version. As an example, to translate
+   updated in English for a certain version. As an example, to translate
    the manual of QGIS 2.8, you have to use the manual_en_v2.8 branch.
 
 
@@ -286,8 +286,8 @@ A bit further we meet the following tricky translation item:
    plugin (see figure_heatmap_settings_).
 
 It holds a reference to a figure ``figure_heatmap_settings_``, and like a reference
-to section this reference should not be changed!! The reference definition
-itself from the rst-document is not included in the :file:`.po` file and can therefore
+to a section this reference should not be changed!! The reference definition
+from the rst-document is not included in the :file:`.po` file and can therefore
 not be changed. This means the reference to figures can not be translated. When
 HTML is created you will see ``figure_heatmap_settings``. When a PDF document is
 created ``figure_heatmap_settings_`` is replaced with a figure number.
