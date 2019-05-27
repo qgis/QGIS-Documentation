@@ -7,6 +7,7 @@ The code snippets on this page needs the following imports if you're outside the
 .. testcode::
 
    from qgis.core import (
+      edit,
       QgsExpression,
       QgsExpressionContext,
       QgsFeature,
@@ -190,16 +191,13 @@ order to compute new field values:
    context = QgsExpressionContext()
    context.appendScopes(QgsExpressionContextUtils.globalProjectLayerScopes(vl))
    
-   vl.startEditing()
- 
-   for f in vl.getFeatures():
-       context.setFeature(f)
-       f['Rev. per employee'] = expression1.evaluate(context)
-       f['Sum'] = expression2.evaluate(context)
-       f['Fun'] = expression3.evaluate(context)
-       vl.updateFeature(f)
- 
-   vl.commitChanges()
+   with edit(vl):
+       for f in vl.getFeatures():
+           context.setFeature(f)
+           f['Rev. per employee'] = expression1.evaluate(context)
+           f['Sum'] = expression2.evaluate(context)
+           f['Fun'] = expression3.evaluate(context)
+           vl.updateFeature(f)
    
    assert(f['Sum'] == 876.5)
 
