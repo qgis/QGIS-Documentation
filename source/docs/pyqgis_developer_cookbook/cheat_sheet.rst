@@ -218,12 +218,22 @@ Table of contents
 
     print("layers TOC = {}".format(layers_names))
 
+.. testoutput::
+   :hide:
+
+   layers TOC = ['layer name you like']
+
 Otherwise 
 
 .. testcode::
 
     layers = [layer.name() for layer in QgsProject.instance().mapLayers().values()]
     print("layers TOC = {}".format(layers))
+
+.. testoutput::
+   :hide:
+
+   layers TOC = ['layer name you like']
 
 **Add vector layer**
 
@@ -241,6 +251,12 @@ Otherwise
 
     layer = QgsProject.instance().mapLayersByName("layer name you like")[0]
     print(layer.name())
+
+.. testoutput::
+   :hide:
+
+   layer name you like
+
 
 **Set active layer**
 
@@ -335,7 +351,7 @@ Advanced TOC
 
 **Root node**
 
-.. testcode::
+.. code-block:: python
 
     from qgis.core import QgsProject
 
@@ -347,13 +363,21 @@ Advanced TOC
 
 .. testcode::
 
-    from qgis.core import QgsLayerTreeGroup, QgsLayerTreeLayer
+    from qgis.core import QgsLayerTreeGroup, QgsLayerTreeLayer, QgsLayerTree
 
     child0 = root.children()[0]
-    print (child0)
+    print (child0.name())
     print (type(child0))
     print (isinstance(child0, QgsLayerTreeLayer))
-    print (child0.parent())
+    print (isinstance(child0.parent(), QgsLayerTree))
+
+.. testoutput::
+   :hide:
+
+   OpenStreetMap
+   <class 'qgis._core.QgsLayerTreeLayer'>
+   True
+   True
 
 **Find groups and nodes**
 
@@ -365,11 +389,18 @@ Advanced TOC
         if isinstance(child, QgsLayerTreeGroup):
             print ("- group: " + child.name())
         elif isinstance(child, QgsLayerTreeLayer):
-            print ("- layer: " + child.name() + "  ID: " + child.layerId())
+            print ("- layer: " + child.name())
+
+.. testoutput::
+   :hide:
+
+   - layer: OpenStreetMap
+   - group: My Group
+
 
 **Find group by name**
 
-.. testcode::
+.. code-block:: python
 
     print (root.findGroup("My Group"))
 
@@ -434,6 +465,11 @@ Advanced TOC
     print (cloned_group1.isExpanded())
     cloned_group1.setExpanded(False)
 
+.. testoutput::
+   :hide:
+   
+   True
+
 **Hidden node trick**
 
 .. code-block:: python
@@ -454,7 +490,7 @@ Advanced TOC
 
 **Node signals**
 
-.. testcode::
+.. code-block:: python
 
     def onWillAddChildren(node, indexFrom, indexTo):
         print ("WILL ADD", node, indexFrom, indexTo)
@@ -467,7 +503,7 @@ Advanced TOC
 
 **Create new table of contents (TOC)**
 
-.. testcode::
+.. code-block:: python
 
     from qgis.core import QgsProject, QgsLayerTreeModel
     from qgis.gui import QgsLayerTreeView 
@@ -491,7 +527,7 @@ Layers
 
 **Get active layer**
 
-.. testcode::
+.. code-block:: python
 
     layer = iface.activeLayer()
 
@@ -511,14 +547,14 @@ Layers
 
 **Get features**
 
-.. testcode::
+.. code-block:: python
 
     for f in layer.getFeatures():
         print (f)
 
 **Get geometry**
 
-.. testcode::
+.. code-block:: python
 
     # Point layer
     for f in layer.getFeatures():
@@ -539,19 +575,10 @@ Layers
                 break
             else:
                 continue
-          
-
-**Move geometry**
-
-.. testcode::
-
-    geom = feat.geometry()
-    geom.translate(100, 100)
-    feat.setGeometry(geom)
 
 **Adding new feature**
 
-.. testcode::
+.. code-block:: python
 
     from qgis.core import QgsFeature
 
@@ -572,6 +599,15 @@ Layers
     layer.updateExtents()
     QgsProject.instance().addMapLayers([layer])
 
+
+**Move geometry**
+
+.. testcode::
+
+    geom.translate(100, 100)
+    poly.setGeometry(geom)
+
+
 Settings
 ========
 
@@ -579,9 +615,9 @@ Settings
 
 .. testcode::
 
-    from qgis.PyQt.QtCore import QgsSettings
+    from qgis.PyQt.QtCore import QSettings
 
-    qs = QgsSettings()
+    qs = QSettings()
 
     for k in sorted(qs.allKeys()):
         print (k)
@@ -591,7 +627,7 @@ Toolbars
 
 **Remove toolbar**
 
-.. testcode::
+.. code-block:: python
 
     from qgis.utils import iface
 
@@ -604,7 +640,7 @@ Toolbars
 
 **Remove actions toolbar**
 
-.. testcode::
+.. code-block:: python
 
     actions = iface.attributesToolBar().actions()
     iface.attributesToolBar().clear()
@@ -616,7 +652,7 @@ Menus
 
 **Remove menu**
 
-.. testcode::
+.. code-block:: python
 
     from qgis.utils import iface
 
