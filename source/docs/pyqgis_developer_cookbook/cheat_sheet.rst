@@ -16,9 +16,10 @@ Cheat sheet for PyQGIS
 User Interface
 ==============
 
+
 **Change Look & Feel**
 
-.. testcode::
+.. code-block:: python
 
     from qgis.PyQt.QtWidgets import QApplication
 
@@ -28,7 +29,7 @@ User Interface
 
 **Change icon and title**
 
-.. testcode::
+.. code-block:: python
 
     from qgis.PyQt.QtGui import QIcon
 
@@ -41,7 +42,7 @@ Canvas
 
 **Access canvas**
 
-.. testcode::
+.. code-block:: python
 
     from qgis.utils import iface
 
@@ -49,7 +50,7 @@ Canvas
 
 **Change canvas color**
 
-.. testcode::
+.. code-block:: python
 
     from qgis.PyQt.QtCore import Qt
 
@@ -61,7 +62,7 @@ Decorators
 
 **CopyRight**
 
-.. testcode::
+.. code-block:: python
 
     from qgis.PyQt.Qt import QTextDocument
     from qgis.PyQt.QtGui import QFont
@@ -150,7 +151,9 @@ Processing algorithms
     for alg in QgsApplication.processingRegistry().algorithms():
         print("{}:{} --> {}".format(alg.provider().name(), alg.name(), alg.displayName()))
 
-    # or 
+Otherwise 
+
+.. testcode::
 
     def alglist():
         s = ''
@@ -160,13 +163,11 @@ Processing algorithms
             s += '{}--->{}\n'.format(l, r)
         print(s)
 
-    alglist()
-
 **Get algorithms help**
 
 Random selection
 
-.. testcode::
+.. code-block:: python
 
     import processing
 
@@ -201,7 +202,7 @@ Table of contents
 
 **Access checked layers**
 
-.. testcode::
+.. code-block:: python
 
     from qgis.utils import iface
 
@@ -211,18 +212,22 @@ Table of contents
 
 .. testcode::
 
-    canvas = iface.mapCanvas()
-    layers = [canvas.layer(i) for i in range(canvas.layerCount())]
-    layers_names = [ layer.name() for layer in layers ]
-    print("layers TOC = ", layers_names)
+    layers_names = []
+    for layer in QgsProject.instance().mapLayers().values():
+        layers_names.append(layer.name())
 
-    # or
+    print("layers TOC = {}".format(layers_names))
 
-    layers = [layer for layer in QgsProject.instance().mapLayers().values()]
+Otherwise 
+
+.. testcode::
+
+    layers = [layer.name() for layer in QgsProject.instance().mapLayers().values()]
+    print("layers TOC = {}".format(layers))
 
 **Add vector layer**
 
-.. testcode::
+.. code-block:: python
 
     layer = iface.addVectorLayer("/path/to/shapefile/file.shp", "layer name you like", "ogr")
     if not layer:
@@ -239,7 +244,7 @@ Table of contents
 
 **Set active layer**
 
-.. testcode::
+.. code-block:: python
 
     from qgis.core import QgsProject
 
@@ -256,10 +261,14 @@ Table of contents
 
 **Remove contextual menu**
 
-.. testcode::
+.. code-block:: python
 
     ltv = iface.layerTreeView()
-    ltv.setMenuProvider( None ) 
+    mp = ltv.menuProvider()
+    ltv.setMenuProvider(None) 
+    # Restore
+    ltv.setMenuProvider(mp) 
+
 
 **See the CRS**
 
@@ -282,7 +291,7 @@ Table of contents
 
 **Load all layers from GeoPackage**
 
-.. testcode::
+.. code-block:: python
 
     from qgis.core import QgsVectorLayer, QgsProject
 
@@ -313,6 +322,16 @@ Table of contents
 
 Advanced TOC
 ============
+
+.. testsetup::
+    
+    from qgis.core import QgsVectorLayer, QgsProject, QgsLayerTreeLayer
+
+    layer = QgsVectorLayer("Point?crs=EPSG:4326", "layer name you like", "memory")
+    QgsProject.instance().addMapLayer(layer)
+
+    root = QgsProject.instance().layerTreeRoot()
+    node_group = root.addGroup("My Group")
 
 **Root node**
 
@@ -352,7 +371,7 @@ Advanced TOC
 
 .. testcode::
 
-    print (root.findGroup("Name"))
+    print (root.findGroup("My Group"))
 
 **Add layer**
 
@@ -389,35 +408,35 @@ Advanced TOC
 
 .. testcode::
 
-    cloned_group1 = node_group1.clone()
+    cloned_group1 = node_group.clone()
     root.insertChildNode(0, cloned_group1)
-    root.removeChildNode(node_group1)
+    root.removeChildNode(node_group)
 
 **Rename none**
 
-.. testcode::
+.. code-block:: python
 
-    node_group1.setName("Group X")
-    node_layer2.setName("Layer X")
+    cloned_group1.setName("Group X")
+    node_layer1.setName("Layer X")
 
 **Changing visibility**
 
-.. testcode::
+.. code-block:: python
 
-    print (node_group1.isVisible())
-    node_group1.setItemVisibilityChecked(False)
-    node_layer2.setItemVisibilityChecked(False)
+    print (cloned_group1.isVisible())
+    cloned_group1.setItemVisibilityChecked(False)
+    node_layer1.setItemVisibilityChecked(False)
 
 **Expand node**
 
 .. testcode::
 
-    print (node_group1.isExpanded())
-    node_group1.setExpanded(False)
+    print (cloned_group1.isExpanded())
+    cloned_group1.setExpanded(False)
 
 **Hidden node trick**
 
-.. testcode::
+.. code-block:: python
 
     from qgis.core import QgsProject
 
@@ -464,7 +483,7 @@ Layers
 
 **Add vector layer**
 
-.. testcode::
+.. code-block:: python
 
     from qgis.utils import iface
 
@@ -504,7 +523,7 @@ Layers
     # Point layer
     for f in layer.getFeatures():
         geom = f.geometry()
-        print ('%s, %s, %f, %f' % (f['Column X'], f['Column Y'],geom.asPoint().y(), geom.asPoint().x()))
+        print ('%f, %f' % (geom.asPoint().y(), geom.asPoint().x()))
 
 **Hide a field column**
 
@@ -615,8 +634,6 @@ Sources
 https://qgis.org/pyqgis/
 
 https://qgis.org/api/
-
-https://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/
 
 https://stackoverflow.com/questions/tagged/qgis
 
