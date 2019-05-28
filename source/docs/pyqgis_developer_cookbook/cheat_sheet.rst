@@ -276,7 +276,7 @@ Otherwise
 
     from qgis.core import QgsProject
 
-    for layer in QgsProject().instance().mapLayers().values():   
+    for layer in QgsProject.instance().mapLayers().values():   
         crs = layer.crs().authid()
         layer.setName('{} ({})'.format(layer.name(), crs))
 
@@ -286,7 +286,7 @@ Otherwise
 
     from qgis.core import QgsProject, QgsCoordinateReferenceSystem
 
-    for layer in QgsProject().instance().mapLayers().values():
+    for layer in QgsProject.instance().mapLayers().values():
         layer.setCrs(QgsCoordinateReferenceSystem(4326, QgsCoordinateReferenceSystem.EpsgCrsId))
 
 **Load all layers from GeoPackage**
@@ -412,7 +412,7 @@ Advanced TOC
     root.insertChildNode(0, cloned_group1)
     root.removeChildNode(node_group)
 
-**Rename none**
+**Rename node**
 
 .. code-block:: python
 
