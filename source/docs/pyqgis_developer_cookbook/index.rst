@@ -29,6 +29,7 @@ PyQGIS Developer Cookbook
    processing
    network_analysis
    server
+   cheat_sheet
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
