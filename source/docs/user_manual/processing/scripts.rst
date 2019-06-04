@@ -168,7 +168,8 @@ The buffer layer, raster layer and number of features are returned.
                                                     context)
             if feedback.isCanceled():
                 return {}
-            buffer_result = processing.run('native:buffer',
+            buffer_result = processing.run(
+                'native:buffer',
                 {
                     # Here we pass on the original parameter values of INPUT 
                     # and BUFFER_OUTPUT to the buffer algorithm, in the way 
