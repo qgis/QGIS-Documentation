@@ -16,7 +16,7 @@ Working with Projections
 .. index:: Projections, CRS (Coordinate Reference System)
 
 A Coordinate Reference System, or CRS, is a method of associating
-numerical coordinates with a precise position on the surface of the Earth.
+numerical coordinates with a position on the surface of the Earth.
 QGIS has support for approximately 7,000 standard CRSs, each with
 different use cases, pros and cons! Choosing an appropriate reference
 system for your QGIS projects and data can be a complex task, but
@@ -36,9 +36,9 @@ these standard projections are identified through use of an authority:code
 combination, where the authority is an organisation name such as "EPSG" or
 "IGNF", and the code is a unique number associated with a specific CRS. For
 instance, the common WGS 84 latitude/longitude CRS is known by the identifier
-"EPSG:4326", and the web mapping standard CRS is "EPSG:3857". 
+``EPSG:4326``, and the web mapping standard CRS is ``EPSG:3857``. 
 
-Any custom, user-created CRSs are stored in a user CRS database. See
+Custom, user-created CRSs are stored in a user CRS database. See
 section :ref:`sec_custom_projections` for information on managing your custom
 coordinate reference systems.
 
@@ -50,10 +50,10 @@ must contain information about its coordinate reference system or you will need
 to manually assign the correct CRS to the layer. For PostGIS layers, QGIS uses
 the spatial reference identifier that was specified when that PostGIS layer was
 created. For data supported by OGR or GDAL, QGIS relies on the presence of a
-recognized means of specifying the CRS. For instance, in the case
-of Shapefiles, this is a file containing the Well-Known Text (:index:`WKT`)
+recognized means of specifying the CRS. For instance, for the Shapefile format
+this is a file containing the Well-Known Text (:index:`WKT`)
 representation of the layer's CRS. This projection file has the same base name as the
-:file:`.shp` file and a :file:`.prj` extension. For example, a Shapefile named
+:file:`.shp` file and a :file:`.prj` extension. For example,
 :file:`alaska.shp` would have a corresponding projection file named
 :file:`alaska.prj`.
 
@@ -116,8 +116,8 @@ CRS Settings
 ============
 
 By default, QGIS starts each new project using a global default projection. This
-default CRS is EPSG:4326, or "WGS 84", and it is a global latitude/longitude based
-reference system. This default CRS can be changed via the :guilabel`CRS for New Projects`
+default CRS is ``EPSG:4326`` (also known as "WGS 84"), and it is a global latitude/longitude based
+reference system. This default CRS can be changed via the :guilabel:`CRS for New Projects`
 setting in the :guilabel:`CRS` tab under :menuselection:`Settings -->` |options|
 :guilabel:`Options`. There is an option to automatically set the project's CRS
 to match the CRS of the first layer loaded into a new project, or alternatively
@@ -129,7 +129,7 @@ This choice will be saved for use in subsequent QGIS sessions.
 .. figure:: img/crsdialog.png
    :align: center
 
-   CRS tab in the QGIS Options Dialog
+   The CRS tab in the QGIS Options Dialog
 
 When you use layers that do not have a CRS, you can define how QGIS
 responds to these layers. This can be done globally in the
@@ -266,7 +266,7 @@ transformation is available, but is not currently usable, QGIS will show
 an informative warning message advising you of the more accurate transformation
 and how to enable it on your system. Usually, this requires download of
 an external package of transformation support files, and extracting these
-to the "proj" folder under your QGIS user profile folder.
+to the :file:`proj` folder under your QGIS :ref:`user profile <user_profiles>` folder.
 
 If desired, QGIS can also prompt you whenever multiple possible transformations
 can be made between two CRSs, and allow you to make an informed selection
@@ -319,7 +319,7 @@ transformations` group:
 Datum transformations set in the :menuselection:`Settings -->` |options|
 :guilabel:`Options --> CRS` tab will be inherited by all new QGIS
 projects created on the system. Additionally, a particular project
-may have it's own specific set of transformations specified via the
+may have its own specific set of transformations specified via the
 :guilabel:`CRS` tab of the :guilabel:`Project properties` dialog
 (:menuselection:`Project --> Properties...`). These settings apply
 to the current project only.
