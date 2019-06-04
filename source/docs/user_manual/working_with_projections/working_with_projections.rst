@@ -280,7 +280,9 @@ transformations` group:
   available`: when more than one appropriate datum transformation exists for a
   source/destination CRS combination, a dialog will automatically be opened
   prompting users to choose which of these datum transformations to use for
-  the project;
+  the project. If the :guilabel:`Make default` checkbox is ticked when
+  selecting a transformation from this dialog, then the choice is remembered
+  and automatically applied to any newly created QGIS projects.
 * or predefining a list of the appropriate default transformations to use
   when loading layers to projects or reprojecting a layer.
 
