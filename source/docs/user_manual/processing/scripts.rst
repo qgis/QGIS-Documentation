@@ -202,7 +202,8 @@ The buffer layer, raster layer and number of features are returned.
                 
             # Run the separate rasterization algorithm using the buffer result 
             # as an input.
-            rasterized_result = processing.run('qgis:rasterize',
+            rasterized_result = processing.run(
+                'qgis:rasterize',
                 {
                     # Here we pass the 'OUTPUT' value from the buffer's result 
                     # dictionary off to the rasterize child algorithm.
