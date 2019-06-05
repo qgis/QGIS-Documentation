@@ -14,6 +14,7 @@ PyQGIS Developer Cookbook
    intro
    loadproject
    loadlayer
+   legend
    raster
    vector
    geometry
