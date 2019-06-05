@@ -12,8 +12,10 @@ ifneq ($(QGIS_PREFIX_PATH), "")
 LD_LIBRARY_PATH := $(QGIS_PREFIX_PATH)/lib:$(LD_LIBRARY_PATH)
 # For install folder
 PYTHONPATH := $(QGIS_PREFIX_PATH)/share/qgis/python:$(PYTHONPATH)
+PYTHONPATH := $(QGIS_PREFIX_PATH)/share/qgis/python/plugins:$(PYTHONPATH)
 # For build output folder
 PYTHONPATH := $(QGIS_PREFIX_PATH)/python:$(PYTHONPATH)
+PYTHONPATH := $(QGIS_PREFIX_PATH)/python/plugins:$(PYTHONPATH)
 endif
 
 # Use sphinx from virtualenv
