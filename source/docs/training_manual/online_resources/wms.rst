@@ -103,7 +103,8 @@ but using the same projection as the :guilabel:`OSM-WMS` layer, which is
 :guilabel:`WGS 84 / Pseudo Mercator`.
 
 * Enable "on the fly" projection.
-* In the :guilabel:`CRS` tab (:guilabel:`Project Properties` dialog), enter the
+
+  In the :guilabel:`CRS` tab (:guilabel:`Project Properties` dialog), enter the
   value :kbd:`pseudo` in the :guilabel:`Filter` field:
 
   .. image:: img/enable_projection.png
