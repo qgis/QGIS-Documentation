@@ -510,7 +510,8 @@ of a given person is to read from the beginning until you find it.
 Spatial indexes are not created by default for a QGIS vector layer, but you can
 create them easily. This is what you have to do:
 
-* create spatial index using the :meth:`QgsSpatialIndex() <qgis.core.QgsVectorLayer.beginEditCommand>` class:
+* create spatial index using the :class:`QgsSpatialIndex() <qgis.core.QgsSpatialIndex>`
+  class:
 
   .. code-block:: python
 
@@ -577,7 +578,7 @@ From an instance of :class:`QgsVectorFileWriter <qgis.core.QgsVectorFileWriter>`
 
   # Write to an ESRI Shapefile format dataset using UTF-8 text encoding
   error = QgsVectorFileWriter.writeAsVectorFormat(layer, "/path/to/folder/my_esridata",
-                                                  "UTF-8", driverName="ESRI Shapefile") 
+                                                  "UTF-8", driverName="ESRI Shapefile")
   if error[0] == QgsVectorFileWriter.NoError:
       print("success again!")
 
@@ -591,7 +592,7 @@ A destination CRS may also be specified --- if a valid instance of
 :class:`QgsCoordinateReferenceSystem <qgis.core.QgsCoordinateReferenceSystem>`
 is passed as the fourth parameter, the layer is transformed to that CRS.
 
-For valid driver names please call the :meth:`supportedFiltersAndFormats 
+For valid driver names please call the :meth:`supportedFiltersAndFormats
 <qgis.core.QgsVectorFileWriter.supportedFiltersAndFormats>` method
 or consult the `supported formats by OGR`_ --- you
 should pass the value in the "Code" column as the driver name.
@@ -925,7 +926,7 @@ you can again use the
 :meth:`classAttribute <qgis.core.QgsGraduatedSymbolRenderer.classAttribute>`
 (to find the classification attribute name),
 :meth:`sourceSymbol <qgis.core.QgsGraduatedSymbolRenderer.sourceSymbol>`
-and :meth:`sourceColorRamp <qgis.core.QgsGraduatedSymbolRenderer.sourceColorRamp>` methods.  
+and :meth:`sourceColorRamp <qgis.core.QgsGraduatedSymbolRenderer.sourceColorRamp>` methods.
 Additionally there is the :meth:`mode <qgis.core.QgsGraduatedSymbolRenderer.mode>`
 method which determines how the ranges were created:
 using equal intervals, quantiles or some other method.
@@ -1047,7 +1048,7 @@ a database of all available symbol layer types.
 To access symbol layer data, use its :meth:`properties() <qgis.core.QgsSymbolLayer.properties>` method that returns a
 key-value dictionary of properties which determine the appearance. Each symbol
 layer type has a specific set of properties that it uses. Additionally, there
-are the generic methods :meth:`color <qgis.core.QgsSymbol.color>`, :meth:`size 
+are the generic methods :meth:`color <qgis.core.QgsSymbol.color>`, :meth:`size
 <qgis.core.QgsMarkerSymbol.size>`, :meth:`angle <qgis.core.QgsMarkerSymbol.angle>` and
 :meth:`width <qgis.core.QgsLineSymbol.width>`,
 with their setter counterparts. Of course size and angle are available only for
