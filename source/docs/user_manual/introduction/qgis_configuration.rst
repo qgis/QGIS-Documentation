@@ -190,7 +190,7 @@ There is an option to automatically set new project’s CRS:
 
 The choice will be saved for use in subsequent QGIS sessions and in any case,
 the Coordinate Reference System of the project can still be overridden from
-:menuselection:`Project --> Project properties --> CRS` tab.
+the :menuselection:`Project --> Project properties --> CRS` tab.
 
 **CRS for new layers**
 
