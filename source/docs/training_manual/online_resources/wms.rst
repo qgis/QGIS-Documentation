@@ -103,7 +103,7 @@ but using the same projection as the :guilabel:`OSM-WMS` layer, which is
 :guilabel:`WGS 84 / Pseudo Mercator`.
 
 * Enable "on the fly" projection
-  (:menuselection:`Project -> Properties...`, :guilabel:`CRS`,
+  (:menuselection:`Project --> Properties...`, :guilabel:`CRS`,
   uncheck :guilabel:`No projection (or unknown/non-Earth projection)`.)
 
 * In the :guilabel:`CRS` tab (:guilabel:`Project Properties` dialog), enter the
