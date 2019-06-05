@@ -102,9 +102,11 @@ because "on the fly" projection is disabled. Let's enable it again,
 but using the same projection as the :guilabel:`OSM-WMS` layer, which is
 :guilabel:`WGS 84 / Pseudo Mercator`.
 
-* Enable "on the fly" projection.
+* Enable "on the fly" projection
+  (:menuselection:`Project -> Properties...`, :guilabel:`CRS`,
+  unheck :guilabel:`No projection (or unknown/non-Earth projection)`.)
 
-  In the :guilabel:`CRS` tab (:guilabel:`Project Properties` dialog), enter the
+* In the :guilabel:`CRS` tab (:guilabel:`Project Properties` dialog), enter the
   value :kbd:`pseudo` in the :guilabel:`Filter` field:
 
   .. image:: img/enable_projection.png
