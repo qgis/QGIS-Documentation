@@ -256,20 +256,8 @@ Datum Transformations
 In QGIS, 'on-the-fly' CRS transformation is enabled by default, meaning that
 whenever you use layers with different coordinate systems QGIS transparently
 reprojects them to the project CRS. For some CRS, there are a number of possible
-transforms available to reproject to the project's CRS!
-
-By default, QGIS will attempt to use the most accurate transformation available. 
-However, in some cases this may not be possible, e.g. whenever additional
-support files are required to use a transformation. Whenever a more accurate
-transformation is available, but is not currently usable, QGIS will show
-an informative warning message advising you of the more accurate transformation
-and how to enable it on your system. Usually, this requires download of
-an external package of transformation support files, and extracting these
-to the :file:`proj` folder under your QGIS :ref:`user profile <user_profiles>` folder.
-
-If desired, QGIS can also prompt you whenever multiple possible transformations
-can be made between two CRSs, and allow you to make an informed selection
-of which is the most appropriate transformation to use for your data.
+transforms available to reproject to the project's CRS! QGIS optionally allows
+you to define a particular transformation to use, otherwise QGIS uses a default one.
 
 This customization is done in the :menuselection:`Settings -->` |options|
 :guilabel:`Options --> CRS` tab menu under the :guilabel:`Default datum
@@ -289,20 +277,19 @@ transformations` group:
   #. Indicate the :guilabel:`Source CRS` of the layer, using the drop-down menu
      or the |setProjection| :sup:`Select CRS` widget.
   #. Likewise, provide the :guilabel:`Destination CRS`.
-  #. A list of available transformations from source to
-     destination will be shown in the table. Clicking a row shows details on the settings
-     applied and the corresponding accuracy of the transformation.
+  #. Depending on the transform grid files (based on GDAL and PROJ version
+     installed on your system), a list of available transformations from source to
+     destination is built in the table. Clicking a row shows details on the settings
+     applied (epsg code, accuracy of the transform, number of stations involved...).
 
-     In some cases a transformation may not be available for use on your system.
-     In this case, the transformation will still be shown in this list but
-     will not be selectable.
+     You can choose to only display current valid transformations by checking
+     the |checkbox| :guilabel:`Hide deprecated` option.
 
   #. Find your preferred transformation, select it and click :guilabel:`OK`.
 
      A new row is added to the table under :menuselection:`CRS --> Default datum
      transformations` with information about 'Source CRS' and 'Destination CRS'
-     as well as the 'Operation' which will be used to transform between the
-     CRSs.
+     as well as 'Source datum transform' and 'Destination datum transform'.
 
   From now, QGIS automatically uses the selected datum transformation for
   further transformation between these two CRSs until you |signMinus| remove
