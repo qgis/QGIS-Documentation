@@ -324,7 +324,7 @@ Parameters
   * 0 --- Auto
   * 1 --- Well-known text (WKT)
   * 2 --- EPSG
-  * 3 --- Proj.4
+  * 3 --- Proj
 
   Default: *0*
 

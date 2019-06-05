@@ -103,7 +103,7 @@ Other than setting the :guilabel:`Layer name` to display in the
 Coordinate Reference System
 ---------------------------
 
-* Displays the layer's Coordinate Reference System (CRS) as a PROJ.4 string.
+* Displays the layer's Coordinate Reference System.
   You can change the layer's CRS, selecting a recently used one
   in the drop-down list or clicking on |setProjection| :sup:`Select CRS` button
   (see :ref:`crs_selector`). Use this process only if the CRS applied to the

@@ -58,7 +58,7 @@ class. Instances of this class can be created in several different ways:
      assert crs.isValid()
 
 * create an invalid CRS and then use one of the ``create*`` functions to
-  initialize it. In the following example we use a Proj4 string to initialize the
+  initialize it. In the following example we use a Proj string to initialize the
   projection.
 
   .. testcode::
@@ -90,7 +90,7 @@ Accessing spatial reference system information:
    print("Description:", crs.description())
    print("Projection Acronym:", crs.projectionAcronym())
    print("Ellipsoid Acronym:", crs.ellipsoidAcronym())
-   print("Proj4 String:", crs.toProj4())
+   print("Proj String:", crs.toProj4())
    # check whether it's geographic or projected coordinate system
    print("Is geographic:", crs.isGeographic())
    # check type of map units in this CRS (values defined in QGis::units enum)
@@ -105,7 +105,7 @@ Output:
    Description: WGS 84
    Projection Acronym: longlat
    Ellipsoid Acronym: WGS84
-   Proj4 String: +proj=longlat +datum=WGS84 +no_defs
+   Proj String: +proj=longlat +datum=WGS84 +no_defs
    Is geographic: True
    Map units: 6
 
