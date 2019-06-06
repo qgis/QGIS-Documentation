@@ -24,103 +24,135 @@ if you pan or zoom on the map.
 
 For this exercise, you can either use the basic map you made at the start of
 the course, or just start a new map and load some existing layers into it. For
-this example, we used a new map and loaded the original :guilabel:`places` and
-:guilabel:`landuse` layers and adjusted the symbology:
+this example, we used a new map and loaded the original :guilabel:`places`,
+:guilabel:`landuse` and :guilabel:`protected_areas` layers and adjusted the
+symbology:
 
 .. image:: img/new_map.png
    :align: center
+   :width: 100%
 
-* Load these layers into a new map, or use your original map with only these
-  layers visible.
+|
 
-* Before starting to add the WMS layer, first deactivate "on the fly"
-  projection (:menuselection:`Project --> Properties...`, :guilabel:`CRS`,
-  check :guilabel:`No projection (or unknown/non-Earth projection)`.
-  This may cause the layers to no longer overlap properly, but
-  don't worry: we'll fix that later.
-* To add WMS layers, click on the :guilabel:`Add WMS Layer` button:
+#. Load these layers into a new map, or use your original map with only these
+   layers visible.
+#. Before starting to add the WMS layer, first deactivate "on the fly"
+   projection (:menuselection:`Project --> Properties... --> CRS` tab,
+   check :guilabel:`No projection (or unknown/non-Earth projection)`.
+   This may cause the layers to no longer overlap properly, but
+   don't worry: we'll fix that later.
+#. To add WMS layers, click on the |dataSourceManager| button to open the
+   :guilabel:`Data Source Manager` dialog and enable the |wms|
+   :guilabel:`WMS/WMTS` tab.
 
-  |wms|
+   .. image:: img/datasourcemanager_wms.png
+      :align: center
 
-Remember how you connected to a SpatiaLite database at the beginning of the
-course. The :guilabel:`landuse`, :guilabel:`places`, and :guilabel:`water` layers
-are in that database. To use those layers, you first needed to connect to the
-database. Using a WMS is similar, with the exception that the
-layers are on a remote server.
+   |
 
-* To create a new connection to a WMS, click on the :guilabel:`New` button.
+   Remember how you connected to a SpatiaLite or GeoPackage database at the
+   beginning of the course. The :guilabel:`landuse`, :guilabel:`buildings`, and
+   :guilabel:`roads` layers are stored in a database. To use those layers, you
+   first needed to connect to the database. Using a WMS is similar, with the
+   exception that the layers are on a remote server.
 
-You'll need a WMS address to continue. There are several free WMS servers
-available on the Internet. One of these is `terrestris
-<https://ows.terrestris.de/osm/service>`_, which makes use of the `OpenStreetMap
-<https://wiki.openstreetmap.org/wiki/Main_Page>`_ dataset.
+#. To create a new connection to a WMS, click on the :guilabel:`New` button.
 
-* To make use of this WMS, set it up in your current dialog, like this:
+   You'll need a WMS address to continue. There are several free WMS servers
+   available on the Internet. One of these is `terrestris
+   <https://ows.terrestris.de/osm/service>`_, which makes use of the `OpenStreetMap
+   <https://wiki.openstreetmap.org/wiki/Main_Page>`_ dataset.
 
-  .. image:: img/new_wms_connection.png
-     :align: center
+#. To make use of this WMS, set it up in your current dialog, like this:
 
-* The value of the :guilabel:`Name` field should be ``terrestris``.
-* The value of the :guilabel:`URL` field should be
-  ``https://ows.terrestris.de/osm/service``.
-* Click :guilabel:`OK`. You should see the new WMS server listed:
+   .. image:: img/new_wms_connection.png
+      :align: center
 
-  .. image:: img/new_connection_listed.png
-     :align: center
+   |
 
-* Click :guilabel:`Connect`. In the list below, you should now see these
-  new entries loaded:
+   * The value of the :guilabel:`Name` field should be ``terrestris``.
+   * The value of the :guilabel:`URL` field should be
+     ``https://ows.terrestris.de/osm/service``.
+#. Click :guilabel:`OK`. You should see the new WMS server listed:
 
-  .. image:: img/new_wms_entries.png
-     :align: center
+   .. image:: img/new_connection_listed.png
+      :align: center
 
-  These are all the layers hosted by this WMS server.
+   |
 
-* Click once on the :guilabel:`OSM-WMS` layer. This will display its
-  :guilabel:`Coordinate Reference System`:
+#. Click :guilabel:`Connect`. In the list below, you should now see these
+   new entries loaded:
 
-  .. image:: img/osm_wms_selected.png
-     :align: center
+   .. image:: img/new_wms_entries.png
+      :align: center
 
-Since we're not using :kbd:`WGS 84` for our map, let's see all the CRSs we have
-to choose from.
+   |
 
-* Click the :guilabel:`Change` button. You will see a standard
-  :guilabel:`Coordinate Reference System Selector` dialog.
-* We want a *projected* CRS, so let's choose :guilabel:`WGS 84 / Pseudo
-  Mercator`.
+   These are all the layers hosted by this WMS server.
 
-  .. image:: img/pseudo_mercator_selected.png
-     :align: center
+#. Click once on the :guilabel:`OSM-WMS` layer. This will display its
+   :guilabel:`Coordinate Reference System`:
 
-* Click :guilabel:`OK`.
-* Click :guilabel:`Add` and the new layer will appear in your map as
-  :guilabel:`OSM-WMS`.
-* In the :guilabel:`Layers` panel, click and drag it to the bottom of the list.
+   .. image:: img/osm_wms_selected.png
+      :align: center
 
-You will notice that your layers aren't located correctly. This is
-because "on the fly" projection is disabled. Let's enable it again,
-but using the same projection as the :guilabel:`OSM-WMS` layer, which is
-:guilabel:`WGS 84 / Pseudo Mercator`.
+   |
 
-* Enable "on the fly" projection
-  (:menuselection:`Project --> Properties...`, :guilabel:`CRS`,
-  uncheck :guilabel:`No projection (or unknown/non-Earth projection)`.)
+   Since we're not using ``WGS 84`` for our map, let's see all the CRSs we have
+   to choose from.
 
-* In the :guilabel:`CRS` tab (:guilabel:`Project Properties` dialog), enter the
-  value :kbd:`pseudo` in the :guilabel:`Filter` field:
+   #. Click the :guilabel:`Change...` button. You will see a standard
+      :guilabel:`Coordinate Reference System Selector` dialog.
+   #. We want a *projected* CRS, so let's choose :guilabel:`WGS 84 / Pseudo
+      Mercator`.
 
-  .. image:: img/enable_projection.png
-     :align: center
+      #. Enter the value ``pseudo`` in the :guilabel:`Filter` field:
+      #. Choose :guilabel:`WGS 84 / Pseudo Mercator` from the list.
 
-* Choose :guilabel:`WGS 84 / Pseudo Mercator` from the list.
-* Click :guilabel:`OK`.
-* Now right-click on one of your own layers in the :guilabel:`Layers` panel and
-  click :guilabel:`Zoom to layer extent`. You should see the |majorUrbanName|
-  area:
+         .. image:: img/pseudo_mercator_selected.png
+            :align: center
 
-  .. image:: img/wms_result.png
-     :align: center
+         |
+
+      #. Click :guilabel:`OK`. The Coordinate Reference System associated to the
+         entry has changed.
+
+#. Click :guilabel:`Add` and the new layer will appear in your map as
+   :guilabel:`OpenStreetMap WMS - by terrestris`.
+#. Close the :guilabel;`Data Source Manager` dialog if not done automatically
+#. In the :guilabel:`Layers` panel, click and drag it to the bottom of the list.
+#. Zoom out in order to have  global view of the layers. You will notice that
+   your layers aren't located correctly (near west of Africa).
+   This is because "on the fly" projection is disabled.
+
+   .. image:: img/reprojection_off.png
+      :align: center
+      :width: 100%
+
+   |
+
+#. Let's enable the reprojection again, but using the same projection as the
+   :guilabel:`OpenStreetMap WMS` layer, which is :guilabel:`WGS 84 / Pseudo Mercator`.
+
+   #. Open the :menuselection:`Project --> Properties... --> CRS` tab
+   #. Uncheck :guilabel:`No projection (or unknown/non-Earth projection)`
+   #. Choose :guilabel:`WGS 84 / Pseudo Mercator` from the list.
+
+      .. image:: img/enable_projection.png
+         :align: center
+
+      |
+
+   #. Click :guilabel:`OK`.
+#. Now right-click on one of your own layers in the :guilabel:`Layers` panel and
+   click :guilabel:`Zoom to layer extent`. You should see the |majorUrbanName|
+   area:
+
+   .. image:: img/wms_result.png
+      :align: center
+      :width: 100%
+
+   |
 
 Note how the WMS layer's streets and our own streets overlap. That's a good
 sign!
@@ -157,18 +189,20 @@ layer from the :guilabel:`terrestris` WMS server.
 |basic| |TY|
 -------------------------------------------------------------------------------
 
-* Hide the :guilabel:`OSM-WSM` layer in the :guilabel:`Layers` panel.
-* Add the "ZAF CGS 1M Bedrock Lithostratigraphy" WMS server at this URL:
-  ``http://196.33.85.22/cgi-bin/ZAF_CGS_Bedrock_Geology/wms``
-* Load the :guilabel:`BEDROCKGEOLOGY` layer into the map (use the :guilabel:`Add WMS
-  Layer` button as before). Remember to check that it's in the same
-  :guilabel:`WGS 84 / World Mercator` projection as the rest of your map!
-* You might want to set its :guilabel:`Encoding` to :guilabel:`JPEG` and its
-  :guilabel:`Tile size` option to :kbd:`200` by :kbd:`200`, so that it loads
-  faster:
+#. Hide the :guilabel:`OSM-WSM` layer in the :guilabel:`Layers` panel.
+#. Add the "ZAF CGS 1M Bedrock Lithostratigraphy" WMS server at this URL:
+   ``http://196.33.85.22/cgi-bin/ZAF_CGS_Bedrock_Geology/wms``
+#. Load the :guilabel:`BEDROCKGEOLOGY` layer into the map (you can also use the
+   :menuselection:`Layer --> Add Layer -->` |wms| :menuselection:`Add Layer
+   WMS/WMTS Layer...` button to open the Data Source Manager dialog).
+   Remember to check that it's in the same
+   :guilabel:`WGS 84 / World Mercator` projection as the rest of your map!
+#. You might want to set its :guilabel:`Encoding` to :guilabel:`JPEG` and its
+   :guilabel:`Tile size` option to ``200`` by ``200``, so that it loads
+   faster:
 
-  .. image:: img/bedrock_geology_layer.png
-     :align: center
+   .. image:: img/bedrock_geology_layer.png
+      :align: center
 
 :ref:`Check your results <wms-1>`
 
@@ -178,11 +212,10 @@ layer from the :guilabel:`terrestris` WMS server.
 |moderate| |TY|
 -------------------------------------------------------------------------------
 
-* Hide all other WMS layers to prevent them rendering unnecessarily in the
-  background.
-* Add the "OGC" WMS server at this URL:
-  ``http://ogc.gbif.org:80/wms``
-* Add the :guilabel:`bluemarble` layer.
+#. Hide all other WMS layers to prevent them rendering unnecessarily in the
+   background.
+#. Add the "OGC" WMS server at this URL: ``http://ogc.gbif.org:80/wms``
+#. Add the :guilabel:`bluemarble` layer.
 
 :ref:`Check your results <wms-2>`
 
@@ -212,9 +245,9 @@ Using a WMS, you can add inactive maps as backdrops for your existing map data.
 |FR|
 -------------------------------------------------------------------------------
 
-- `Spatineo Directory <https://directory.spatineo.com/>`_
-- `Geopole.org <https://geopole.org/>`_
-- `OpenStreetMap.org list of WMS servers
+* `Spatineo Directory <https://directory.spatineo.com/>`_
+* `Geopole.org <https://geopole.org/>`_
+* `OpenStreetMap.org list of WMS servers
   <https://wiki.openstreetmap.org/wiki/WMS>`_
 
 |WN|
@@ -239,6 +272,8 @@ Feature Service (WFS). That's the topic of the next lesson.
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/global/basic.png
+.. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
+   :width: 1.5em
 .. |hard| image:: /static/global/hard.png
 .. |majorUrbanName| replace:: Swellendam
 .. |moderate| image:: /static/global/moderate.png
