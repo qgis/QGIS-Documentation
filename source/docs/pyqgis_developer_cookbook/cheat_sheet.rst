@@ -33,6 +33,62 @@ User Interface
     iface.mainWindow().setWindowIcon(icon)  
     iface.mainWindow().setWindowTitle("My QGIS")
 
+Settings
+========
+
+**Get QSettings list**
+
+.. testcode::
+
+    from qgis.PyQt.QtCore import QSettings
+
+    qs = QSettings()
+
+    for k in sorted(qs.allKeys()):
+        print (k)
+
+Toolbars
+========
+
+**Remove toolbar**
+
+.. code-block:: python
+
+    from qgis.utils import iface
+
+    toolbar = iface.helpToolBar()   
+    parent = toolbar.parentWidget()
+    parent.removeToolBar(toolbar)
+
+    # and add again
+    parent.addToolBar(toolbar)
+
+**Remove actions toolbar**
+
+.. code-block:: python
+
+    actions = iface.attributesToolBar().actions()
+    iface.attributesToolBar().clear()
+    iface.attributesToolBar().addAction(actions[4])
+    iface.attributesToolBar().addAction(actions[3])
+
+Menus
+=====
+
+**Remove menu**
+
+.. code-block:: python
+
+    from qgis.utils import iface
+
+    # for example Help Menu
+    menu = iface.helpMenu() 
+    menubar = menu.parentWidget()
+    menubar.removeAction(menu.menuAction())
+
+    # and add again
+    menubar.addAction(menu.menuAction())
+
 Canvas
 ======
 
@@ -53,156 +109,32 @@ Canvas
     iface.mapCanvas().setCanvasColor(Qt.black)    
     iface.mapCanvas().refresh()
 
-Decorators
-==========
+Layers
+======
 
-**CopyRight**
-
-.. code-block:: python
-
-    from qgis.PyQt.Qt import QTextDocument
-    from qgis.PyQt.QtGui import QFont
-
-    mQFont = "Sans Serif"
-    mQFontsize = 9
-    mLabelQString = "© QGIS 2019"
-    mMarginHorizontal = 0
-    mMarginVertical = 0
-    mLabelQColor = "#FF0000"
-
-    INCHES_TO_MM = 0.0393700787402 # 1 millimeter = 0.0393700787402 inches
-    case = 2
-
-    def add_copyright(p, text, x_offset, y_offset):
-        p.translate( xOffset , yOffset  )
-        text.drawContents(p)
-        p.setWorldTransform( p.worldTransform() )
-
-    def _on_render_complete(p):
-        deviceHeight = p.device().height() # Get paint device height on which this painter is currently painting
-        deviceWidth  = p.device().width() # Get paint device width on which this painter is currently painting
-        # Create new container for structured rich text
-        text = QTextDocument()
-        font = QFont()
-        font.setFamily(mQFont)
-        font.setPointSize(int(mQFontsize))
-        text.setDefaultFont(font)
-        style = "<style type=\"text/css\"> p {color: " + mLabelQColor + "}</style>"
-        text.setHtml( style + "<p>" + mLabelQString + "</p>" )
-        # Text Size
-        size = text.size()
-
-        # RenderMillimeters
-        pixelsInchX  = p.device().logicalDpiX()
-        pixelsInchY  = p.device().logicalDpiY()
-        xOffset  = pixelsInchX  * INCHES_TO_MM * int(mMarginHorizontal)
-        yOffset  = pixelsInchY  * INCHES_TO_MM * int(mMarginVertical)
-
-        # Calculate positions
-        if case == 0:
-            # Top Left
-            add_copyright(p, text, xOffset, yOffset)
-
-        elif case == 1:
-            # Bottom Left
-            yOffset = deviceHeight - yOffset - size.height()
-            add_copyright(p, text, xOffset, yOffset)
-
-        elif case == 2:
-            # Top Right
-            xOffset  = deviceWidth  - xOffset - size.width()
-            add_copyright(p, text, xOffset, yOffset)
-
-        elif case == 3: 
-            # Bottom Right
-            yOffset  = deviceHeight - yOffset - size.height()
-            xOffset  = deviceWidth  - xOffset - size.width()
-            add_copyright(p, text, xOffset, yOffset)
-
-        elif case == 4:
-            # Top Center
-            xOffset = deviceWidth / 2
-            add_copyright(p, text, xOffset, yOffset)
-        
-        else:
-            # Bottom Center
-            yOffset = deviceHeight - yOffset - size.height()
-            xOffset = deviceWidth / 2
-            add_copyright(p, text, xOffset, yOffset)
-
-    # Emitted when the canvas has rendered
-    iface.mapCanvas().renderComplete.connect(_on_render_complete)
-    # Repaint the canvas map
-    iface.mapCanvas().refresh()
-
-Processing algorithms
-=====================
-
-**Get algorithms list**
-
-.. testcode::
-
-    from qgis.core import QgsApplication
-
-    for alg in QgsApplication.processingRegistry().algorithms():
-        print("{}:{} --> {}".format(alg.provider().name(), alg.name(), alg.displayName()))
-
-Otherwise 
-
-.. testcode::
-
-    def alglist():
-        s = ''
-        for i in QgsApplication.processingRegistry().algorithms():
-            l = i.displayName().ljust(50, "-")
-            r = i.id()
-            s += '{}--->{}\n'.format(l, r)
-        print(s)
-
-**Get algorithms help**
-
-Random selection
-
-.. code-block:: python
-
-    import processing
-
-    processing.algorithmHelp("qgis:randomselection")
-
-**How many algorithms are there?**
-
-.. testcode::
-
-    from qgis.core import QgsApplication
-
-    len(QgsApplication.processingRegistry().algorithms())
-
-**How many providers are there?**
-
-.. testcode::
-
-    from qgis.core import QgsApplication
-
-    len(QgsApplication.processingRegistry().providers())
-
-**How many expressions are there?**
-
-.. testcode::
-
-    from qgis.core import QgsExpression
-
-    len(QgsExpression.Functions()) 
-
-Table of contents
-=================
-
-**Access checked layers**
+**Add vector layer**
 
 .. code-block:: python
 
     from qgis.utils import iface
 
-    iface.mapCanvas().layers()
+    layer = iface.addVectorLayer("/path/to/shapefile/file.shp", "layer name you like", "ogr")
+    if not layer:
+        print("Layer failed to load!")
+
+**Get active layer**
+
+.. code-block:: python
+
+    layer = iface.activeLayer()
+
+**List all layers**
+
+.. testcode::
+
+    from qgis.core import QgsProject
+
+    QgsProject.instance().mapLayers().values()
 
 **Obtain layers name**
 
@@ -223,21 +155,13 @@ Otherwise
 
 .. testcode::
 
-    layers = [layer.name() for layer in QgsProject.instance().mapLayers().values()]
-    print("layers TOC = {}".format(layers))
+    layers_names = [layer.name() for layer in QgsProject.instance().mapLayers().values()]
+    print("layers TOC = {}".format(layers_names))
 
 .. testoutput::
    :hide:
 
    layers TOC = ['layer name you like']
-
-**Add vector layer**
-
-.. code-block:: python
-
-    layer = iface.addVectorLayer("/path/to/shapefile/file.shp", "layer name you like", "ogr")
-    if not layer:
-        print("Layer failed to load!")
 
 **Find layer by name**
 
@@ -253,7 +177,6 @@ Otherwise
 
    layer name you like
 
-
 **Set active layer**
 
 .. code-block:: python
@@ -263,34 +186,62 @@ Otherwise
     layer = QgsProject.instance().mapLayersByName("layer name you like")[0]
     iface.setActiveLayer(layer)
 
-**Remove all layers**
+**Show methods**
 
 .. testcode::
 
-    from qgis.core import QgsProject
+    dir(layer)
 
-    QgsProject.instance().removeAllMapLayers()
-
-**Remove contextual menu**
+**Adding new feature with feature form**
 
 .. code-block:: python
 
-    ltv = iface.layerTreeView()
-    mp = ltv.menuProvider()
-    ltv.setMenuProvider(None) 
-    # Restore
-    ltv.setMenuProvider(mp) 
+    from qgis.core import QgsFeature, QgsGeometry
 
+    feat = QgsFeature()
+    geom = QgsGeometry() 
+    feat.setGeometry(geom)
+    feat.setFields(layer.fields())
 
-**See the CRS**
+    iface.openFeatureForm(layer, feat, False)
+
+**Adding new feature without feature form**
+
+.. testsetup::
+
+    from qgis.core import QgsFeature, QgsGeometry
 
 .. testcode::
 
-    from qgis.core import QgsProject
+    from qgis.core import QgsPointXY
 
-    for layer in QgsProject.instance().mapLayers().values():   
-        crs = layer.crs().authid()
-        layer.setName('{} ({})'.format(layer.name(), crs))
+    pr = layer.dataProvider()
+    feat = QgsFeature()
+    feat.setGeometry(QgsGeometry.fromPointXY(QgsPointXY(10,10)))
+    pr.addFeatures([feat])
+
+**Get features**
+
+.. code-block:: python
+
+    for f in layer.getFeatures():
+        print (f)
+
+**Get geometry**
+
+.. code-block:: python
+
+    # Point layer
+    for f in layer.getFeatures():
+        geom = f.geometry()
+        print ('%f, %f' % (geom.asPoint().y(), geom.asPoint().x()))
+
+**Move geometry**
+
+.. code-block:: python
+
+    geom.translate(100, 100)
+    poly.setGeometry(geom)
 
 **Set the CRS**
 
@@ -300,6 +251,36 @@ Otherwise
 
     for layer in QgsProject.instance().mapLayers().values():
         layer.setCrs(QgsCoordinateReferenceSystem(4326, QgsCoordinateReferenceSystem.EpsgCrsId))
+        
+**Hide a field column**
+
+.. testcode::
+
+    from qgis.core import QgsEditorWidgetSetup
+
+    def fieldVisibility (layer,fname):
+        setup = QgsEditorWidgetSetup('Hidden', {})
+        for i, column in enumerate(layer.fields()):
+            if column.name()==fname:
+                layer.setEditorWidgetSetup(idx, setup)
+                break
+            else:
+                continue
+
+**Layer from WKT**
+
+.. testcode::
+
+    from qgis.core import QgsVectorLayer, QgsFeature, QgsGeometry, QgsProject
+
+    layer = QgsVectorLayer('Polygon?crs=epsg:4326', 'Mississippi', 'memory')
+    pr = layer.dataProvider()
+    poly = QgsFeature()
+    geom = QgsGeometry.fromWkt("POLYGON ((-88.82 34.99,-88.0934.89,-88.39 30.34,-89.57 30.18,-89.73 31,-91.63 30.99,-90.8732.37,-91.23 33.44,-90.93 34.23,-90.30 34.99,-88.82 34.99))")
+    poly.setGeometry(geom)
+    pr.addFeatures([poly])
+    layer.updateExtents()
+    QgsProject.instance().addMapLayers([layer])
 
 **Load all layers from GeoPackage**
 
@@ -331,6 +312,53 @@ Otherwise
 
     urlWithParams = 'type=xyz&url=https://a.tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png&zmax=19&zmin=0&crs=EPSG3857'
     loadXYZ(urlWithParams, 'OpenStreetMap')
+
+**Remove all layers**
+
+.. testsetup::
+
+    from qgis.core import QgsProject
+
+.. testcode::
+
+    QgsProject.instance().removeAllMapLayers()
+
+**Remove all**
+
+.. code-block:: python
+
+    QgsProject.instance().clear()
+
+Table of contents
+=================
+
+**Access checked layers**
+
+.. code-block:: python
+
+    from qgis.utils import iface
+
+    iface.mapCanvas().layers()
+
+**Remove contextual menu**
+
+.. code-block:: python
+
+    ltv = iface.layerTreeView()
+    mp = ltv.menuProvider()
+    ltv.setMenuProvider(None) 
+    # Restore
+    ltv.setMenuProvider(mp) 
+
+**See the CRS**
+
+.. testcode::
+
+    from qgis.core import QgsProject
+
+    for layer in QgsProject.instance().mapLayers().values():   
+        crs = layer.crs().authid()
+        layer.setName('{} ({})'.format(layer.name(), crs))
 
 Advanced TOC
 ============
@@ -509,155 +537,145 @@ Advanced TOC
     view.setModel(model)
     view.show()
 
-Layers
-======
+Processing algorithms
+=====================
 
-**Add vector layer**
-
-.. code-block:: python
-
-    from qgis.utils import iface
-
-    layer = iface.addVectorLayer("/path/to/shapefile/file.shp", "layer name you like", "ogr")
-
-**Get active layer**
-
-.. code-block:: python
-
-    layer = iface.activeLayer()
-
-**List all layers**
+**Get algorithms list**
 
 .. testcode::
 
-    from qgis.core import QgsProject
+    from qgis.core import QgsApplication
 
-    names = [layer.name() for layer in QgsProject.instance().mapLayers().values()]
+    for alg in QgsApplication.processingRegistry().algorithms():
+        print("{}:{} --> {}".format(alg.provider().name(), alg.name(), alg.displayName()))
 
-**Show methods**
-
-.. testcode::
-
-    dir(layer)
-
-**Get features**
-
-.. code-block:: python
-
-    for f in layer.getFeatures():
-        print (f)
-
-**Get geometry**
-
-.. code-block:: python
-
-    # Point layer
-    for f in layer.getFeatures():
-        geom = f.geometry()
-        print ('%f, %f' % (geom.asPoint().y(), geom.asPoint().x()))
-
-**Hide a field column**
+Otherwise 
 
 .. testcode::
 
-    from qgis.core import QgsEditorWidgetSetup
+    def alglist():
+        s = ''
+        for i in QgsApplication.processingRegistry().algorithms():
+            l = i.displayName().ljust(50, "-")
+            r = i.id()
+            s += '{}--->{}\n'.format(l, r)
+        print(s)
 
-    def fieldVisibility (layer,fname):
-        setup = QgsEditorWidgetSetup('Hidden', {})
-        for i, column in enumerate(layer.fields()):
-            if column.name()==fname:
-                layer.setEditorWidgetSetup(idx, setup)
-                break
-            else:
-                continue
+**Get algorithms help**
 
-**Adding new feature**
+Random selection
 
 .. code-block:: python
 
-    from qgis.core import QgsFeature
+    import processing
 
-    iface.openFeatureForm(iface.activeLayer(), QgsFeature(), False)
+    processing.algorithmHelp("qgis:randomselection")
 
-**Layer from WKT**
+**How many algorithms are there?**
 
 .. testcode::
 
-    from qgis.core import QgsVectorLayer, QgsFeature, QgsGeometry, QgsProject
+    from qgis.core import QgsApplication
 
-    layer = QgsVectorLayer('Polygon?crs=epsg:4326', 'Mississippi', 'memory')
-    pr = layer.dataProvider()
-    poly = QgsFeature()
-    geom = QgsGeometry.fromWkt("POLYGON ((-88.82 34.99,-88.0934.89,-88.39 30.34,-89.57 30.18,-89.73 31,-91.63 30.99,-90.8732.37,-91.23 33.44,-90.93 34.23,-90.30 34.99,-88.82 34.99))")
-    poly.setGeometry(geom)
-    pr.addFeatures([poly])
-    layer.updateExtents()
-    QgsProject.instance().addMapLayers([layer])
+    len(QgsApplication.processingRegistry().algorithms())
 
-
-**Move geometry**
+**How many providers are there?**
 
 .. testcode::
 
-    geom.translate(100, 100)
-    poly.setGeometry(geom)
+    from qgis.core import QgsApplication
 
+    len(QgsApplication.processingRegistry().providers())
 
-Settings
-========
-
-**Get QSettings list**
+**How many expressions are there?**
 
 .. testcode::
 
-    from qgis.PyQt.QtCore import QSettings
+    from qgis.core import QgsExpression
 
-    qs = QSettings()
+    len(QgsExpression.Functions()) 
 
-    for k in sorted(qs.allKeys()):
-        print (k)
+Decorators
+==========
 
-Toolbars
-========
-
-**Remove toolbar**
+**CopyRight**
 
 .. code-block:: python
 
-    from qgis.utils import iface
+    from qgis.PyQt.Qt import QTextDocument
+    from qgis.PyQt.QtGui import QFont
 
-    toolbar = iface.helpToolBar()   
-    parent = toolbar.parentWidget()
-    parent.removeToolBar(toolbar)
+    mQFont = "Sans Serif"
+    mQFontsize = 9
+    mLabelQString = "© QGIS 2019"
+    mMarginHorizontal = 0
+    mMarginVertical = 0
+    mLabelQColor = "#FF0000"
 
-    # and add again
-    parent.addToolBar(toolbar)
+    INCHES_TO_MM = 0.0393700787402 # 1 millimeter = 0.0393700787402 inches
+    case = 2
 
-**Remove actions toolbar**
+    def add_copyright(p, text, x_offset, y_offset):
+        p.translate( xOffset , yOffset  )
+        text.drawContents(p)
+        p.setWorldTransform( p.worldTransform() )
 
-.. code-block:: python
+    def _on_render_complete(p):
+        deviceHeight = p.device().height() # Get paint device height on which this painter is currently painting
+        deviceWidth  = p.device().width() # Get paint device width on which this painter is currently painting
+        # Create new container for structured rich text
+        text = QTextDocument()
+        font = QFont()
+        font.setFamily(mQFont)
+        font.setPointSize(int(mQFontsize))
+        text.setDefaultFont(font)
+        style = "<style type=\"text/css\"> p {color: " + mLabelQColor + "}</style>"
+        text.setHtml( style + "<p>" + mLabelQString + "</p>" )
+        # Text Size
+        size = text.size()
 
-    actions = iface.attributesToolBar().actions()
-    iface.attributesToolBar().clear()
-    iface.attributesToolBar().addAction(actions[4])
-    iface.attributesToolBar().addAction(actions[3])
+        # RenderMillimeters
+        pixelsInchX  = p.device().logicalDpiX()
+        pixelsInchY  = p.device().logicalDpiY()
+        xOffset  = pixelsInchX  * INCHES_TO_MM * int(mMarginHorizontal)
+        yOffset  = pixelsInchY  * INCHES_TO_MM * int(mMarginVertical)
 
-Menus
-=====
+        # Calculate positions
+        if case == 0:
+            # Top Left
+            add_copyright(p, text, xOffset, yOffset)
 
-**Remove menu**
+        elif case == 1:
+            # Bottom Left
+            yOffset = deviceHeight - yOffset - size.height()
+            add_copyright(p, text, xOffset, yOffset)
 
-.. code-block:: python
+        elif case == 2:
+            # Top Right
+            xOffset  = deviceWidth  - xOffset - size.width()
+            add_copyright(p, text, xOffset, yOffset)
 
-    from qgis.utils import iface
+        elif case == 3: 
+            # Bottom Right
+            yOffset  = deviceHeight - yOffset - size.height()
+            xOffset  = deviceWidth  - xOffset - size.width()
+            add_copyright(p, text, xOffset, yOffset)
 
-    # for example Help Menu
-    menu = iface.helpMenu() 
-    menubar = menu.parentWidget()
-    menubar.removeAction(menu.menuAction())
+        elif case == 4:
+            # Top Center
+            xOffset = deviceWidth / 2
+            add_copyright(p, text, xOffset, yOffset)
+        
+        else:
+            # Bottom Center
+            yOffset = deviceHeight - yOffset - size.height()
+            xOffset = deviceWidth / 2
+            add_copyright(p, text, xOffset, yOffset)
 
-    # and add again
-    menubar.addAction(menu.menuAction())
+    # Emitted when the canvas has rendered
+    iface.mapCanvas().renderComplete.connect(_on_render_complete)
+    # Repaint the canvas map
+    iface.mapCanvas().refresh()
 
 Sources
 =======
