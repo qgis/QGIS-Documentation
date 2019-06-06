@@ -178,9 +178,19 @@ source code.
 CRS Settings
 ------------
 
-You can select a :guilabel:`Default CRS for new projects` applied each time you
-open a new project. This Coordinate Reference System can then be overridden by
-selected value in :menuselection:`Project --> Project properties --> CRS` tab.
+**Default CRS for new projects**
+
+There is an option to automatically set new project’s CRS:
+
+* |radioButtonOn|:guilabel:`Use CRS from first layer added`: the CRS of the project
+  is turned to match the CRS of the first layer loaded into it
+* |radioButtonOff|:guilabel:`Use a default CRS`: a preselected CRS is applied by
+  default to any new project and is left unchanged when adding layers to the
+  project.
+
+The choice will be saved for use in subsequent QGIS sessions and in any case,
+the Coordinate Reference System of the project can still be overridden from
+the :menuselection:`Project --> Project properties --> CRS` tab.
 
 **CRS for new layers**
 
