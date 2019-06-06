@@ -34,7 +34,9 @@ this example, we used a new map and loaded the original :guilabel:`places` and
   layers visible.
 
 * Before starting to add the WMS layer, first deactivate "on the fly"
-  projection.  This may cause the layers to no longer overlap properly, but
+  projection (:menuselection:`Project --> Properties...`, :guilabel:`CRS`,
+  check :guilabel:`No projection (or unknown/non-Earth projection)`.
+  This may cause the layers to no longer overlap properly, but
   don't worry: we'll fix that later.
 * To add WMS layers, click on the :guilabel:`Add WMS Layer` button:
 
@@ -101,7 +103,10 @@ because "on the fly" projection is disabled. Let's enable it again,
 but using the same projection as the :guilabel:`OSM-WMS` layer, which is
 :guilabel:`WGS 84 / Pseudo Mercator`.
 
-* Enable "on the fly" projection.
+* Enable "on the fly" projection
+  (:menuselection:`Project --> Properties...`, :guilabel:`CRS`,
+  uncheck :guilabel:`No projection (or unknown/non-Earth projection)`.)
+
 * In the :guilabel:`CRS` tab (:guilabel:`Project Properties` dialog), enter the
   value :kbd:`pseudo` in the :guilabel:`Filter` field:
 
