@@ -255,6 +255,16 @@ Otherwise
 
     for layer in QgsProject.instance().mapLayers().values():
         layer.setCrs(QgsCoordinateReferenceSystem(4326, QgsCoordinateReferenceSystem.EpsgCrsId))
+
+**See the CRS**
+
+.. testcode::
+
+    from qgis.core import QgsProject
+
+    for layer in QgsProject.instance().mapLayers().values():   
+        crs = layer.crs().authid()
+        layer.setName('{} ({})'.format(layer.name(), crs))
         
 **Hide a field column**
 
@@ -353,16 +363,6 @@ Table of contents
     ltv.setMenuProvider(None) 
     # Restore
     ltv.setMenuProvider(mp) 
-
-**See the CRS**
-
-.. testcode::
-
-    from qgis.core import QgsProject
-
-    for layer in QgsProject.instance().mapLayers().values():   
-        crs = layer.crs().authid()
-        layer.setName('{} ({})'.format(layer.name(), crs))
 
 Advanced TOC
 ============
