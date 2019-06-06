@@ -33,7 +33,7 @@ this example, we used a new map and loaded the original :guilabel:`places` and
   layers visible.
 
 * Before starting to add the WMS layer, first deactivate "on the fly"
-  projection (:menuselection:`Project -> Properties...`, :guilabel:`CRS`,
+  projection (:menuselection:`Project --> Properties...`, :guilabel:`CRS`,
   check :guilabel:`No projection (or unknown/non-Earth projection)`.
   This may cause the layers to no longer overlap properly, but
   don't worry: we'll fix that later.
