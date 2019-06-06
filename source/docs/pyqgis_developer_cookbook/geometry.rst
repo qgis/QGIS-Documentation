@@ -16,7 +16,7 @@ Geometry Handling
 
 The code snippets on this page need the following imports if you're outside the pyqgis console:
 
-.. code-block:: python
+.. testcode::
 
     from qgis.core import (
       QgsGeometry,
@@ -55,12 +55,22 @@ PyQGIS provides several options for creating a geometry:
 
 * from coordinates
 
-  .. code-block:: python
+  .. testcode::
 
     gPnt = QgsGeometry.fromPointXY(QgsPointXY(1,1))
+    print(gPnt)
     gLine = QgsGeometry.fromPolyline([QgsPoint(1, 1), QgsPoint(2, 2)])
+    print(gLine)
     gPolygon = QgsGeometry.fromPolygonXY([[QgsPointXY(1, 1),
 	QgsPointXY(2, 2), QgsPointXY(2, 1)]])
+    print(gPolygon)
+
+  .. testoutput::
+    :hide:
+
+    <QgsGeometry: Point (1 1)>
+    <QgsGeometry: LineString (1 1, 2 2)>
+    <QgsGeometry: Polygon ((1 1, 2 2, 2 1, 1 1))>
 
   Coordinates are given using :class:`QgsPoint <qgis.core.QgsPoint>` class or :class:`QgsPointXY <qgis.core.QgsPointXY>`
   class. The difference between these classes is that :class:`QgsPoint <qgis.core.QgsPoint>`
@@ -80,21 +90,31 @@ PyQGIS provides several options for creating a geometry:
 
 * from well-known text (WKT)
 
-  .. code-block:: python
+  .. testcode::
 
-    gem = QgsGeometry.fromWkt("POINT(3 4)")
+    geom = QgsGeometry.fromWkt("POINT(3 4)")
+    print(geom)
+
+  .. testoutput::
+    :hide:
+
+    <QgsGeometry: Point (3 4)>
 
 * from well-known binary (WKB)
 
-  .. code-block:: python
+  .. testcode::
 
     g = QgsGeometry()
     wkb = bytes.fromhex("010100000000000000000045400000000000001440")
     g.fromWkb(wkb)
-    
+
     # print WKT representation of the geometry
     print(g.asWkt())
 
+  .. testoutput::
+    :hide:
+
+    Point (42 5)
 
 .. index:: Geometry; Access to
 
@@ -105,16 +125,21 @@ First, you should find out the geometry type. The :meth:`wkbType() <qgis.core.Qg
 method is the one to use. It returns a value from the :class:`QgsWkbTypes.Type <qgis.core.QgsWkbTypes>`
 enumeration.
 
-.. code-block:: python
+.. testcode::
 
-  gPnt.wkbType() == QgsWkbTypes.Point
-  # output: True
-  gLine.wkbType() == QgsWkbTypes.LineString
-  # output: True
-  gPolygon.wkbType() == QgsWkbTypes.Polygon
-  # output: True
-  gPolygon.wkbType() == QgsWkbTypes.MultiPolygon
-  # output: False
+  print(gPnt.wkbType())
+  # output: 1 for Point
+  print(gLine.wkbType())
+  # output: 2 for LineString
+  print(gPolygon.wkbType())
+  # output: 3 for Polygon
+
+.. testoutput::
+  :hide:
+
+  1
+  2
+  3
 
 As an alternative, one can use the :meth:`type() <qgis.core.QgsGeometry.type>`
 method which returns a value from the :class:`QgsWkbTypes.GeometryType <qgis.core.QgsWkbTypes>`
@@ -123,12 +148,20 @@ enumeration.
 You can use the :meth:`displayString() <qgis.core.QgsWkbTypes.displayString>`
 function to get a human readable geometry type.
 
-.. code-block:: python
+.. testcode::
 
-  gPnt.wkbType()
-  # output: 1
-  QgsWkbTypes.displayString(gPnt.wkbType())
+  print(QgsWkbTypes.displayString(gPnt.wkbType()))
   # output: 'Point'
+  print(QgsWkbTypes.displayString(gLine.wkbType()))
+  # output: 'LineString'
+  print(QgsWkbTypes.displayString(gPolygon.wkbType()))
+  # output: 'Polygon'
+
+.. testoutput::
+
+  Point
+  LineString
+  Polygon
 
 There is also a helper function
 :meth:`isMultipart() <qgis.core.QgsGeometry.isMultipart>` to find out whether a geometry is multipart or not.
@@ -136,14 +169,22 @@ There is also a helper function
 To extract information from a geometry there are accessor functions for every
 vector type. Here's an example on how to use these accessors:
 
-.. code-block:: python
+.. testcode::
 
-  gPnt.asPoint()
+  print(gPnt.asPoint())
   # output: <QgsPointXY: POINT(1 1)>
-  gLine.asPolyline()
+  print(gLine.asPolyline())
   # output: [<QgsPointXY: POINT(1 1)>, <QgsPointXY: POINT(2 2)>]
-  gPolygon.asPolygon()
+  print(gPolygon.asPolygon())
   # output: [[<QgsPointXY: POINT(1 1)>, <QgsPointXY: POINT(2 2)>, <QgsPointXY: POINT(2 1)>, <QgsPointXY: POINT(1 1)>]]
+
+.. testoutput::
+  :hide:
+
+  <QgsPointXY: POINT(1 1)>
+  [<QgsPointXY: POINT(1 1)>, <QgsPointXY: POINT(2 2)>]
+  [[<QgsPointXY: POINT(1 1)>, <QgsPointXY: POINT(2 2)>, <QgsPointXY: POINT(2 1)>, <QgsPointXY: POINT(1 1)>]]
+
 
 .. note:: The tuples (x,y) are not real tuples, they are :class:`QgsPoint <qgis.core.QgsPoint>`
    objects, the values are accessible with :meth:`x() <qgis.core.QgsPoint.x>`
@@ -189,7 +230,7 @@ The following code assumes ``layer`` is a :class:`QgsVectorLayer <qgis.core.QgsV
     print('Perimeter: ', geom.length())
 
 Now you have calculated and printed the areas and perimeters of the geometries.
-You may however quickly notice that the values are strange. 
+You may however quickly notice that the values are strange.
 That is because areas and perimeters don't take CRS into account when computed
 using the :meth:`area() <qgis.core.QgsGeometry.area>` and :meth:`length()
 <qgis.core.QgsGeometry.length>`
@@ -217,26 +258,30 @@ The following code assumes ``layer`` is a :class:`QgsVectorLayer
     print(name)
     print("Perimeter (m):", d.measurePerimeter(geom))
     print("Area (m2):", d.measureArea(geom))
-    
+
     # let's calculate and print the area again, but this time in square kilometers
     print("Area (km2):", d.convertAreaMeasurement(d.measureArea(geom), QgsUnitTypes.AreaSquareKilometers))
 
 
 Alternatively, you may want to know the distance and bearing between two points.
 
-.. code-block:: python
+.. testcode::
 
   d = QgsDistanceArea()
   d.setEllipsoid('WGS84')
 
-  # Let's create two points. 
-  # Santa claus is a workaholic and needs a summer break, 
+  # Let's create two points.
+  # Santa claus is a workaholic and needs a summer break,
   # lets see how far is Tenerife from his home
   santa = QgsPointXY(25.847899, 66.543456)
   tenerife = QgsPointXY(-16.5735, 28.0443)
 
   print("Distance in meters: ", d.measureLine(santa, tenerife))
 
+.. testoutput::
+  :hide:
+
+  Distance in meters:  5154172.923937496
 
 You can find many example of algorithms that are included in QGIS and use these
 methods to analyze and transform vector data. Here are some links to the code
