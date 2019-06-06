@@ -123,6 +123,8 @@ Layers
     from qgis.utils import iface
 
     layer = iface.addVectorLayer("/path/to/shapefile/file.shp", "layer name you like", "ogr")
+    if not layer:
+        print("Layer failed to load!")
 
 **Get active layer**
 
@@ -136,85 +138,7 @@ Layers
 
     from qgis.core import QgsProject
 
-    names = [layer.name() for layer in QgsProject.instance().mapLayers().values()]
-
-**Show methods**
-
-.. testcode::
-
-    dir(layer)
-
-**Get features**
-
-.. code-block:: python
-
-    for f in layer.getFeatures():
-        print (f)
-
-**Get geometry**
-
-.. code-block:: python
-
-    # Point layer
-    for f in layer.getFeatures():
-        geom = f.geometry()
-        print ('%f, %f' % (geom.asPoint().y(), geom.asPoint().x()))
-
-**Hide a field column**
-
-.. testcode::
-
-    from qgis.core import QgsEditorWidgetSetup
-
-    def fieldVisibility (layer,fname):
-        setup = QgsEditorWidgetSetup('Hidden', {})
-        for i, column in enumerate(layer.fields()):
-            if column.name()==fname:
-                layer.setEditorWidgetSetup(idx, setup)
-                break
-            else:
-                continue
-
-**Adding new feature**
-
-.. code-block:: python
-
-    from qgis.core import QgsFeature
-
-    iface.openFeatureForm(iface.activeLayer(), QgsFeature(), False)
-
-**Layer from WKT**
-
-.. testcode::
-
-    from qgis.core import QgsVectorLayer, QgsFeature, QgsGeometry, QgsProject
-
-    layer = QgsVectorLayer('Polygon?crs=epsg:4326', 'Mississippi', 'memory')
-    pr = layer.dataProvider()
-    poly = QgsFeature()
-    geom = QgsGeometry.fromWkt("POLYGON ((-88.82 34.99,-88.0934.89,-88.39 30.34,-89.57 30.18,-89.73 31,-91.63 30.99,-90.8732.37,-91.23 33.44,-90.93 34.23,-90.30 34.99,-88.82 34.99))")
-    poly.setGeometry(geom)
-    pr.addFeatures([poly])
-    layer.updateExtents()
-    QgsProject.instance().addMapLayers([layer])
-
-**Move geometry**
-
-.. testcode::
-
-    geom.translate(100, 100)
-    poly.setGeometry(geom)
-
-Table of contents
-=================
-
-**Access checked layers**
-
-.. code-block:: python
-
-    from qgis.utils import iface
-
-    iface.mapCanvas().layers()
+    QgsProject.instance().mapLayers().values()
 
 **Obtain layers name**
 
@@ -229,27 +153,19 @@ Table of contents
 .. testoutput::
    :hide:
 
-   layers TOC = ['Mississippi', 'layer name you like']
+   layers TOC = ['layer name you like']
 
 Otherwise 
 
 .. testcode::
 
-    layers = [layer.name() for layer in QgsProject.instance().mapLayers().values()]
-    print("layers TOC = {}".format(layers))
+    layers_names = [layer.name() for layer in QgsProject.instance().mapLayers().values()]
+    print("layers TOC = {}".format(layers_names))
 
 .. testoutput::
    :hide:
 
-   layers TOC = ['Mississippi', 'layer name you like']
-
-**Add vector layer**
-
-.. code-block:: python
-
-    layer = iface.addVectorLayer("/path/to/shapefile/file.shp", "layer name you like", "ogr")
-    if not layer:
-        print("Layer failed to load!")
+   layers TOC = ['layer name you like']
 
 **Find layer by name**
 
@@ -274,33 +190,62 @@ Otherwise
     layer = QgsProject.instance().mapLayersByName("layer name you like")[0]
     iface.setActiveLayer(layer)
 
-**Remove all layers**
+**Show methods**
 
 .. testcode::
 
-    from qgis.core import QgsProject
+    dir(layer)
 
-    QgsProject.instance().removeAllMapLayers()
-
-**Remove contextual menu**
+**Adding new feature with feature form**
 
 .. code-block:: python
 
-    ltv = iface.layerTreeView()
-    mp = ltv.menuProvider()
-    ltv.setMenuProvider(None) 
-    # Restore
-    ltv.setMenuProvider(mp) 
+    from qgis.core import QgsFeature, QgsGeometry
 
-**See the CRS**
+    feat = QgsFeature()
+    geom = QgsGeometry() 
+    feat.setGeometry(geom)
+    feat.setFields(layer.fields())
+
+    iface.openFeatureForm(layer, feat, False)
+
+**Adding new feature without feature form**
+
+.. testsetup::
+
+    from qgis.core import QgsFeature, QgsGeometry
 
 .. testcode::
 
-    from qgis.core import QgsProject
+    from qgis.core import QgsPointXY
 
-    for layer in QgsProject.instance().mapLayers().values():   
-        crs = layer.crs().authid()
-        layer.setName('{} ({})'.format(layer.name(), crs))
+    pr = layer.dataProvider()
+    feat = QgsFeature()
+    feat.setGeometry(QgsGeometry.fromPointXY(QgsPointXY(10,10)))
+    pr.addFeatures([feat])
+
+**Get features**
+
+.. code-block:: python
+
+    for f in layer.getFeatures():
+        print (f)
+
+**Get geometry**
+
+.. code-block:: python
+
+    # Point layer
+    for f in layer.getFeatures():
+        geom = f.geometry()
+        print ('%f, %f' % (geom.asPoint().y(), geom.asPoint().x()))
+
+**Move geometry**
+
+.. code-block:: python
+
+    geom.translate(100, 100)
+    poly.setGeometry(geom)
 
 **Set the CRS**
 
@@ -310,6 +255,36 @@ Otherwise
 
     for layer in QgsProject.instance().mapLayers().values():
         layer.setCrs(QgsCoordinateReferenceSystem(4326, QgsCoordinateReferenceSystem.EpsgCrsId))
+        
+**Hide a field column**
+
+.. testcode::
+
+    from qgis.core import QgsEditorWidgetSetup
+
+    def fieldVisibility (layer,fname):
+        setup = QgsEditorWidgetSetup('Hidden', {})
+        for i, column in enumerate(layer.fields()):
+            if column.name()==fname:
+                layer.setEditorWidgetSetup(idx, setup)
+                break
+            else:
+                continue
+
+**Layer from WKT**
+
+.. testcode::
+
+    from qgis.core import QgsVectorLayer, QgsFeature, QgsGeometry, QgsProject
+
+    layer = QgsVectorLayer('Polygon?crs=epsg:4326', 'Mississippi', 'memory')
+    pr = layer.dataProvider()
+    poly = QgsFeature()
+    geom = QgsGeometry.fromWkt("POLYGON ((-88.82 34.99,-88.0934.89,-88.39 30.34,-89.57 30.18,-89.73 31,-91.63 30.99,-90.8732.37,-91.23 33.44,-90.93 34.23,-90.30 34.99,-88.82 34.99))")
+    poly.setGeometry(geom)
+    pr.addFeatures([poly])
+    layer.updateExtents()
+    QgsProject.instance().addMapLayers([layer])
 
 **Load all layers from GeoPackage**
 
@@ -341,6 +316,53 @@ Otherwise
 
     urlWithParams = 'type=xyz&url=https://a.tile.openstreetmap.org/%7Bz%7D/%7Bx%7D/%7By%7D.png&zmax=19&zmin=0&crs=EPSG3857'
     loadXYZ(urlWithParams, 'OpenStreetMap')
+
+**Remove all layers**
+
+.. testsetup::
+
+    from qgis.core import QgsProject
+
+.. testcode::
+
+    QgsProject.instance().removeAllMapLayers()
+
+**Remove all**
+
+.. code-block:: python
+
+    QgsProject.instance().clear()
+
+Table of contents
+=================
+
+**Access checked layers**
+
+.. code-block:: python
+
+    from qgis.utils import iface
+
+    iface.mapCanvas().layers()
+
+**Remove contextual menu**
+
+.. code-block:: python
+
+    ltv = iface.layerTreeView()
+    mp = ltv.menuProvider()
+    ltv.setMenuProvider(None) 
+    # Restore
+    ltv.setMenuProvider(mp) 
+
+**See the CRS**
+
+.. testcode::
+
+    from qgis.core import QgsProject
+
+    for layer in QgsProject.instance().mapLayers().values():   
+        crs = layer.crs().authid()
+        layer.setName('{} ({})'.format(layer.name(), crs))
 
 Advanced TOC
 ============
@@ -380,9 +402,9 @@ Advanced TOC
 .. testoutput::
    :hide:
 
-   OpenStreetMap
-   <class 'qgis._core.QgsLayerTreeLayer'>
-   True
+   My Group
+   <class 'qgis._core.QgsLayerTreeGroup'>
+   False
    True
 
 **Find groups and nodes**
@@ -400,7 +422,6 @@ Advanced TOC
 .. testoutput::
    :hide:
 
-   - layer: OpenStreetMap
    - group: My Group
 
 
