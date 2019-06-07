@@ -124,12 +124,14 @@ enumeration.
 
 .. testcode::
 
-  print(gPnt.wkbType())
-  # output: 1 for Point
-  print(gLine.wkbType())
-  # output: 2 for LineString
-  print(gPolygon.wkbType())
-  # output: 3 for Polygon
+  if gPnt.wkbType() == QgsWkbTypes.Point:
+    print(gPnt.wkbType())
+    # output: 1 for Point
+  if gLine.wkbType() == QgsWkbTypes.LineString:
+    print(gLine.wkbType())
+  if gPolygon.wkbType() == QgsWkbTypes.Polygon:
+    print(gPolygon.wkbType())
+    # output: 3 for Polygon
 
 .. testoutput::
   :hide:
