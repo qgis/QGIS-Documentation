@@ -418,7 +418,7 @@ When starting QGIS for the first time not all core plugins are loaded.
 Web
 ---
 
-This is what the :guilabel:`Database` menu looks like if all the core plugins
+This is what the :guilabel:`Web` menu looks like if all the core plugins
 are enabled.
 If no web plugins are enabled, there will be no guilabel:`Web` menu.
 
