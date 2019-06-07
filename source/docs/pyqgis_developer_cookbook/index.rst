@@ -1,6 +1,3 @@
-.. only:: html
-
-
 .. _PyQGIS-Developer-Cookbook:
 
 =========================
@@ -28,3 +25,6 @@ PyQGIS Developer Cookbook
    processing
    network_analysis
    server
+   cheat_sheet
+
+
