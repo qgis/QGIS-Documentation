@@ -401,7 +401,7 @@ Database
 
 This is what the :guilabel:`Database` menu looks like if all the core plugins
 are enabled.
-If no database plugins are enabled, there will be no guilabel:`Database` menu.
+If no database plugins are enabled, there will be no :guilabel:`Database` menu.
 
 ===============================================  ============================  ===============================
 Menu Option                                      Toolbar                       Reference
