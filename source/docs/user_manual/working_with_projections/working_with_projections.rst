@@ -222,19 +222,6 @@ only two parameters to define a user CRS:
 To create a new CRS, click the |signPlus| :sup:`Add new CRS` button and
 enter a descriptive name and the CRS parameters.
 
-Integrate an NTv2-transformation in QGIS 
-""""""""""""""""""""""""""""""""""""""""""""""
-To integrate an NTv2 transformation file in QGIS you need one more step: 
-
-1. Place the NTv2 file (.gsb) in the CRS/Proj folder that QGIS uses (e.g. *C:\\OSGeo4W64\\share\\proj* for windows users)
-2. Add **nadgrids** (+nadgrids=nameofthefile.gsb) to the Proj4 definition in the :guilabel:`Parameters`
-   field of the :guilabel:`Custom Coordinate Reference System Dialog`
-   (:menuselection:`Settings --> Custom Projections...`).
-
-
-.. figure:: img/nadgrids_example.PNG
-   :align: center
-
 Note that the :guilabel:`Parameters` must begin with a ``+proj=`` block,
 to represent the new coordinate reference system.
 
@@ -242,6 +229,25 @@ You can test your CRS parameters to see if they give sane results. To do this,
 enter known WGS 84 latitude and longitude values in :guilabel:`North` and
 :guilabel:`East` fields, respectively. Click on :guilabel:`Calculate`, and compare the
 results with the known values in your coordinate reference system.
+
+Integrate an NTv2-transformation in QGIS 
+----------------------------------------
+
+To integrate an NTv2 transformation file in QGIS you need one more step: 
+
+#. Place the NTv2 file (.gsb) in the CRS/Proj folder that QGIS uses
+   (e.g. *C:\\OSGeo4W64\\share\\proj* for windows users)
+#. Add **nadgrids** (+nadgrids=nameofthefile.gsb) to the Proj definition
+   in the :guilabel:`Parameters` field of the :guilabel:`Custom Coordinate
+   Reference System Definition` (:menuselection:`Settings --> Custom Projections...`).
+
+   .. _figure_nadgrids:
+
+   .. figure:: img/nadgrids_example.PNG
+      :align: center
+
+      Setting an NTv2 transformation
+
 
 .. index:: Datum transformation
 .. _datum_transformation:
