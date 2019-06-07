@@ -370,9 +370,9 @@ Advanced TOC
 .. testoutput::
    :hide:
 
-   OpenStreetMap
-   <class 'qgis._core.QgsLayerTreeLayer'>
-   True
+   My Group
+   <class 'qgis._core.QgsLayerTreeGroup'>
+   False
    True
 
 **Find groups and nodes**
@@ -390,7 +390,6 @@ Advanced TOC
 .. testoutput::
    :hide:
 
-   - layer: OpenStreetMap
    - group: My Group
 
 
