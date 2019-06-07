@@ -25,6 +25,9 @@ Using QGIS Core Plugins
    plugins_topology_checker
 
 
+Below is the list of Core plugins provided with QGIS.
+They are not necessarily enabled by default.
+
 ======================  ============================  ======================================================  ===============================
 Icon                    Plugin                        Description                                             Manual Reference
 ======================  ============================  ======================================================  ===============================
@@ -37,7 +40,6 @@ Icon                    Plugin                        Description               
 |grass|                 GRASS                         GRASS functionality                                     :ref:`sec_grass`
 |metasearch|            MetaSearch Catalog Client     Interact with metadata catalog services (CSW)           :ref:`metasearch`
 |offlineEditingCopy|    Offline Editing               Offline editing and synchronizing with database         :ref:`offlinedit`
-|showPluginManager|     Plugin Manager                Manage core and external plugins                        :ref:`managing_plugins` 
 |geoprocessing|         Processing                    Spatial data processing framework                       :ref:`label_processing`
 |topologyChecker|       Topology Checker              Find topological errors in vector layers                :ref:`topology`
 ======================  ============================  ======================================================  ===============================
@@ -68,8 +70,6 @@ Icon                    Plugin                        Description               
 .. |metasearch| image:: /static/common/MetaSearch.png
    :width: 1.5em
 .. |offlineEditingCopy| image:: /static/common/offline_editing_copy.png
-   :width: 1.5em
-.. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
    :width: 1.5em
 .. |topologyChecker| image:: /static/common/mActionTopologyChecker.png
    :width: 1.5em
