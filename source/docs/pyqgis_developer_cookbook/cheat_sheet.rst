@@ -667,15 +667,11 @@ Menus
 Sources
 =======
 
-https://qgis.org/pyqgis/
-
-https://qgis.org/api/
-
-https://stackoverflow.com/questions/tagged/qgis
-
-https://raw.githubusercontent.com/klakar/QGIS_resources/master/collections/Geosupportsystem/python/qgis_basemaps.py
-
-https://github.com/boundlessgeo/lib-qgis-commons
+* `QGIS Python (PyQGIS) API <https://qgis.org/pyqgis/>`_
+* `QGIS C++ API <https://qgis.org/api/>`_
+* `StackOverFlow QGIS questions <https://stackoverflow.com/questions/tagged/qgis>`_
+* `Script by Klas Karlsson <https://raw.githubusercontent.com/klakar/QGIS_resources/master/collections/Geosupportsystem/python/qgis_basemaps.py>`_
+* `Boundless lib-qgis-common repository <https://github.com/boundlessgeo/lib-qgis-commons>`_
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
