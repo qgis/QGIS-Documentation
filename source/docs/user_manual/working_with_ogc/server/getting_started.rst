@@ -30,78 +30,76 @@ Please refer to that section.
 HTTP Server configuration
 -------------------------
 
-.. index:: Apache
+.. index:: Apache, mod_fcgid
 
 Apache
 ......
 
-Configuration
-^^^^^^^^^^^^^
+Apache and its `mod_fcgid <https://httpd.apache.org/mod_fcgid/mod/mod_fcgid.html>`_ module
+may be used for executing QGIS Server.
 
-Once QGIS Server is installed, let's configure the environment and enable it.
-
-Install the Apache server in a separate virtual host listening on port ``80``.
-Enable the rewrite module to pass HTTP BASIC auth headers:
+Install Apache and ``mod_fcgid``:
 
 .. code-block:: bash
 
- sudo a2enmod rewrite
- cat /etc/apache2/conf-available/qgis-server-port.conf
- Listen 80
- sudo a2enconf qgis-server-port
+ sudo apt-get install apache2 libapache2-mod-fcgid
 
-This is the virtual host configuration, stored in
-:file:`/etc/apache2/sites-available/001-qgis-server.conf`:
+Here we assume that an Apache ``VirtualHost`` is already set up. For example this is what a basic
+``VirtualHost`` configuration may look like:
 
 .. code-block:: apache
 
    <VirtualHost *:80>
+
     ServerAdmin webmaster@localhost
     DocumentRoot /var/www/html
 
-    ErrorLog ${APACHE_LOG_DIR}/qgis-server-error.log
-    CustomLog ${APACHE_LOG_DIR}/qgis-server-access.log combined
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
 
-    # Longer timeout for WPS... default = 40
-    FcgidIOTimeout 120
-    FcgidInitialEnv LC_ALL "en_US.UTF-8"
-    FcgidInitialEnv PYTHONIOENCODING UTF-8
-    FcgidInitialEnv LANG "en_US.UTF-8"
-
-    ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
-    <Directory "/usr/lib/cgi-bin">
-        AllowOverride All
-        Options +ExecCGI -MultiViews +FollowSymLinks
-	# for apache2 > 2.4
-	Require all granted
-        #Allow from all
-    </Directory>
    </VirtualHost>
 
+.. note::
 
-Moreover, you can use some :ref:`qgis-server-envvar` to configure QGIS Server.
-With Apache as HTTP Server, you have to use ``FcgidInitialEnv`` to define these
-variables as shown below:
+   On Debian systems, a default ``VirtualHost`` is available in
+   ``/etc/apache2/sites-available/000-default.conf``.
+
+Let's now add ``mod_fcgid`` configuration directives for QGIS Server:
 
 .. code-block:: apache
 
-    FcgidInitialEnv QGIS_DEBUG 1
-    FcgidInitialEnv QGIS_SERVER_LOG_FILE /tmp/qgis-000.log
-    FcgidInitialEnv QGIS_SERVER_LOG_LEVEL 0
+   <VirtualHost *:80>
 
+    ServerAdmin webmaster@localhost
+    DocumentRoot /var/www/html
 
-Start
-^^^^^
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
 
-Now enable the virtual host and restart Apache:
+    FcgidInitialEnv DISPLAY ":99"
+    FcgidInitialEnv QGIS_SERVER_LOG_LEVEL "0"
+    FcgidInitialEnv QGIS_SERVER_LOG_STDERR "1"
+
+    <Location /qgisserver>
+     SetHandler fcgid-script
+     FcgidWrapper /usr/lib/cgi-bin/qgis_mapserv.fcgi virtual
+     Options +ExecCGI -MultiViews +FollowSymLinks
+     Require all granted
+    </Location>
+
+   </VirtualHost>
+
+See the ``mod_fcgid`` documentation for more information on the ``Fcgid`` parameters
+used. And see below to understand when and why the ``DISPLAY`` environment variable
+needs to be set.
+
+Now restart Apache for the new configuration to be taken into account:
 
 .. code-block:: bash
 
- sudo a2ensite 001-qgis-server
  sudo service apache2 restart
 
-QGIS Server is now available at http://localhost/cgi-bin/qgis-server.cgi.
-
+QGIS Server is now available at http://localhost/qgisserver.
 
 .. index:: nginx, spawn-fcgi, fcgiwrap
 
