@@ -147,8 +147,8 @@ The :guilabel:`Source` tab displays basic information about the selected mesh,
 including:
 
 * the Layer name to display in the :guilabel:`Layers` panel
-* setting the Coordinate Reference System: Displays the layer’s Coordinate
-  Reference System (CRS). You can change the layer’s CRS by
+* setting the Coordinate Reference System: Displays the layer’s
+  :ref:`Coordinate Reference System (CRS) <layer_crs>`. You can change the layer’s CRS by
   selecting a recently used one in the drop-down list or clicking on |setProjection|
   :guilabel:`Select CRS` button (see :ref:`crs_selector`).
   Use this process only if the CRS applied to the layer is wrong or

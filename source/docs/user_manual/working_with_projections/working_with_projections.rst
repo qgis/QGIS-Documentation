@@ -42,6 +42,8 @@ Custom, user-created CRSs are stored in a user CRS database. See
 section :ref:`sec_custom_projections` for information on managing your custom
 coordinate reference systems.
 
+.. _layer_crs:
+
 Layer Coordinate Reference Systems
 ==================================
 
