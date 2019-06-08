@@ -158,95 +158,95 @@ The buffer layer, raster layer and number of features are returned.
                                                          'INPUT',
                                                          context)
             numfeatures = input_featuresource.featureCount()
+            
             # Retrieve the buffer distance and raster cell size numeric
-            # values.
-            # Since these are numeric values, they are retrieved using
-            # self.parameterAsDouble.
+            # values. Since these are numeric values, they are retrieved 
+            # using self.parameterAsDouble.
             bufferdist = self.parameterAsDouble(parameters, 'BUFFERDIST',
                                                 context)
             rastercellsize = self.parameterAsDouble(parameters, 'CELLSIZE',
                                                     context)
             if feedback.isCanceled():
                 return {}
-            buffer_result = processing.run('native:buffer',
-                                   {
-                                    # Here we pass on the original
-                                    # parameter values of INPUT and
-                                    # BUFFER_OUTPUT to the buffer algorithm,
-                                    # in the way that this particular
-                                    # algorithm requires.
-                                    'INPUT': parameters['INPUT'],
-                                    'OUTPUT': parameters['BUFFER_OUTPUT'],
-                                    'DISTANCE': bufferdist,
-                                    'SEGMENTS': 10, 
-                                    'DISSOLVE': True,
-                                    'END_CAP_STYLE': 0,
-                                    'JOIN_STYLE': 0,
-                                    'MITER_LIMIT': 10
-                                    },
-                                   # Because the buffer algorithm is being
-                                   # run as a step in another larger algorithm,
-                                   # the is_child_algorithm option should be
-                                   # set to True
-                                   is_child_algorithm=True,
-                                   # It's important to pass on the context and
-                                   # feedback objects to child algorithms, so
-                                   # that they can properly give feedback to
-                                   # users and handle cancelation requests.
-                                   context=context,
-                                   feedback=feedback)
+            buffer_result = processing.run(
+                'native:buffer',
+                {
+                    # Here we pass on the original parameter values of INPUT 
+                    # and BUFFER_OUTPUT to the buffer algorithm, in the way 
+                    # that this particular algorithm requires.
+                    'INPUT': parameters['INPUT'],
+                    'OUTPUT': parameters['BUFFER_OUTPUT'],
+                    'DISTANCE': bufferdist,
+                    'SEGMENTS': 10, 
+                    'DISSOLVE': True,
+                    'END_CAP_STYLE': 0,
+                    'JOIN_STYLE': 0,
+                    'MITER_LIMIT': 10
+                },
+                # Because the buffer algorithm is being run as a step in 
+                # another larger algorithm, the is_child_algorithm option 
+                # should be set to True
+                is_child_algorithm=True,
+                #
+                # It's important to pass on the context and feedback objects to 
+                # child algorithms, so that they can properly give feedback to
+                # users and handle cancelation requests.
+                context=context,
+                feedback=feedback)
+                
             # It's good practice to check for cancelation as much as is sensibly
-            # possible!
-            # Doing so allows for responsive cancelation, instead of forcing users
-            # to wait for unwanted processing to occur.
+            # possible! Doing so allows for responsive cancelation, instead of  
+            # forcing users to wait for unwanted processing to occur.
             if feedback.isCanceled():
                 return {}
-            # Run the separate rasterization algorithm using the buffer result as
-            # an input.
-            rasterized_result = processing.run('qgis:rasterize',
-                                   {
-                                    # Here we pass the 'OUTPUT' value from the
-                                    # buffer's result dictionary off to the
-                                    # rasterize child algorithm.
-                                    # This dictionary value contains everything
-                                    # the child algorithm needs to know to retrieve
-                                    # the correct output layer from the buffer step.
-                                    'LAYER': buffer_result['OUTPUT'],
-                                    # The rasterize 'EXTENT' parameter is a
-                                    # QgsProcessingParameterExtent type.
-                                    # Extent parameters accept a wide range of
-                                    # input value types, including QgsRectangle
-                                    # values, comma separated strings of x/y
-                                    # min/max values, and also layer values.
-                                    # When a layer value is used, then the full
-                                    # extent of that layer will be used as the
-                                    # extent parameter value.
-                                    # It's a handy shortcut to ensure that the
-                                    # rasterize algorithm creates a raster which
-                                    # covers the full extent of the buffered output
-                                    # layer.
-                                    # Use processing.algorithmHelp to see detailed
-                                    # documentation on all the possible input
-                                    # values which the parameters for a particular
-                                    # algorithm will accept.
-                                    'EXTENT': buffer_result['OUTPUT'],
-                                    'MAP_UNITS_PER_PIXEL': rastercellsize,
-                                    # Just like input values, output/destination
-                                    # style parameters should be passed using their
-                                    # original parameter value to child algorithms.
-                                    # There's no need to evaluate these values in
-                                    # advance!
-                                    'OUTPUT': parameters['OUTPUT']
-                                   },
-                                   is_child_algorithm=True,
-                                   context=context,
-                                   feedback=feedback)
+                
+            # Run the separate rasterization algorithm using the buffer result 
+            # as an input.
+            rasterized_result = processing.run(
+                'qgis:rasterize',
+                {
+                    # Here we pass the 'OUTPUT' value from the buffer's result 
+                    # dictionary off to the rasterize child algorithm.
+                    # This dictionary value contains everything the child 
+                    # algorithm needs to know to retrieve the correct output 
+                    # layer from the buffer step.
+                    'LAYER': buffer_result['OUTPUT'],
+                    #
+                    # The rasterize 'EXTENT' parameter is a 
+                    # QgsProcessingParameterExtent type. Extent parameters  
+                    # accept a wide range of input value types, including 
+                    # QgsRectangle values, comma separated strings of x/y 
+                    # min/max values, and also layer values. When a layer value 
+                    # is used, then the full extent of that layer will be used 
+                    # as the extent parameter value.
+                    # It's a handy shortcut to ensure that the rasterize 
+                    # algorithm creates a raster which covers the full extent 
+                    # of the buffered output layer.
+                    # Use processing.algorithmHelp to see detailed
+                    # documentation on all the possible input values which the 
+                    # parameters for a particular algorithm will accept.
+                    'EXTENT': buffer_result['OUTPUT'],
+                    'MAP_UNITS_PER_PIXEL': rastercellsize,
+                    #
+                    # Just like input values, output/destination
+                    # style parameters should be passed using their
+                    # original parameter value to child algorithms.
+                    # There's no need to evaluate these values in
+                    # advance!
+                    'OUTPUT': parameters['OUTPUT']
+                },
+                is_child_algorithm=True,
+                context=context,
+                feedback=feedback)
+                
             if feedback.isCanceled():
                 return {}
+                
             # Our successful algorithm should return values for all the output
             # parameters it has defined. In this case, that's the buffer and
             # rasterized output layers, and the count of features processed.
-            # The dictionary keys here match the original parameter/output name.
+            # The dictionary keys here match the original parameter/output 
+            # names.
             return {'OUTPUT': rasterized_result['OUTPUT'],
                     'BUFFER_OUTPUT': buffer_result['OUTPUT'],
                     'NUMBEROFFEATURES': numfeatures}
