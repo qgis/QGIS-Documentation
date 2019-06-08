@@ -654,7 +654,7 @@ Navigation options for exploring the map in 3D:
 
 * Tilt and rotate
 
-  * To tilt the terrain (rotating it around a horizonal axis that goes
+  * To tilt the terrain (rotating it around a horizontal axis that goes
     through the center of the window):
 
     * Drag the mouse forward/backward with the middle mouse button
