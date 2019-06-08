@@ -209,7 +209,7 @@ Otherwise
 
 .. testsetup::
 
-    from qgis.core import QgsFeature, QgsGeometry
+    from qgis.core import QgsFeature, QgsGeometry, QgsProject
 
 .. testcode::
 
@@ -226,6 +226,34 @@ Otherwise
 
     for f in layer.getFeatures():
         print (f)
+
+**Get selected features**
+
+.. code-block:: python
+
+    for f in layer.selectedFeatures():
+        print (f)
+
+**Get selected features Ids**
+
+.. testcode::
+
+    selectedFeatures = layer.selectedFeatureIds()
+    print(selectedFeatures)
+
+.. testoutput::
+   :hide:
+
+   []
+
+**Create a memory layer from selected features Ids**
+
+.. testcode::
+
+    from qgis.core import QgsFeatureRequest
+
+    memory_layer = layer.materialize(QgsFeatureRequest().setFilterFids(layer.selectedFeatureIds()))
+    QgsProject.instance().addMapLayer(memory_layer)
 
 **Get geometry**
 
