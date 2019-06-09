@@ -416,7 +416,7 @@ wrapped into undo commands. (If you do not care about undo/redo and want to
 have the changes stored immediately, then you will have easier work by
 :ref:`editing with data provider <editing>`.)
 
-Here is how you can use the the undo functionality:
+Here is how you can use the undo functionality:
 
 .. code-block:: python
 
