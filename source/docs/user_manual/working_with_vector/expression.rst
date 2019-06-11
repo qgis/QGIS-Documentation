@@ -1140,9 +1140,9 @@ if one of the inputs is NULL then the result is NULL.
 
 .. note:: **About fields concatenation**
 
-  You can concatenate strings using either `||` or ``+``. The latter also means
+  You can concatenate strings using either ``||`` or ``+``. The latter also means
   sum up expression. So if you have an integer (field or numeric value) this can
-  be error prone. In this case, you should use `||`. If you concatenate two
+  be error prone. In this case, you should use ``||``. If you concatenate two
   string values, you can use both.
 
 **Some examples:**
