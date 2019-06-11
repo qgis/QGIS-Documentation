@@ -244,16 +244,17 @@ However, some parameters are specific to raster and vector formats:
 Raster specific parameters
 --------------------------
 
-Depending on the format of export, some of these options are available or not:
+Depending on the format of export, some of these options may not be available:
 
 * :guilabel:`Output mode` (it can be **raw data** or **rendered image**)
 * :guilabel:`Format`: exports to any raster format GDAL can write to, such as
   GeoTiff, GeoPackage, MBTiles, Geospatial PDF, SAGA GIS Binary Grid,
   Intergraph Raster, ESRI .hdr Labelled...
 * :guilabel:`Resolution`
-* :guilabel:`Create Options`: allows to use the advanced options (file compression,
-  block sizes, colorimetry...), either from the :ref:`predefined create profiles
-  <gdal_createoptions>` related to the output format or by setting each parameter.
+* :guilabel:`Create Options`: use advanced options (file compression, block
+  sizes, colorimetry...) when generating files, either from the :ref:`predefined
+  create profiles <gdal_createoptions>` related to the output format or by
+  setting each parameter.
 * :guilabel:`Pyramids` creation
 * :guilabel:`VRT Tiles` in case you opted to |checkbox| :guilabel:`Create VRT`
 * :guilabel:`No data values`
@@ -298,7 +299,7 @@ Depending on the format of export, some of these options are available or not:
      the data as a hidden attribute. Only some formats can handle this kind of
      information. KML, DXF and TAB file formats are such formats. For advanced
      users, you can read the `OGR Feature Styles specification
-     <https://www.gdal.org/ogr_feature_style.html>`_ document.
+     <https://gdal.org/user/ogr_feature_style.html>`_ document.
 
 * :guilabel:`Geometry`: you can configure the geometry capabilities of the
   output layer
