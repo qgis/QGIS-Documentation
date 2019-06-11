@@ -628,38 +628,47 @@ You can define the :guilabel:`Default font` used within the :ref:`print layout
 GDAL Settings
 -------------
 
-`GDAL <https://www.gdal.org>`_ is a data exchange library for vector and raster files.
-Depending on the format, GDAL helps to read and/or write data and, accordingly,
-the current tab provides following capabilities (only for rasters, yet):
+`GDAL <https://www.gdal.org>`_ is a data exchange library for vector and raster
+files. It provides drivers to read and or write data in different formats.
+The :guilabel:`GDAL` tab currently exposes the drivers for raster formats with
+their capabilities.
+
+GDAL driver options
+...................
+
+This frame provides ways to customize the behavior of drivers that support read
+and write access: 
 
 .. _gdal_createoptions:
 
-* :guilabel:`Edit create options`: it allows you to edit or add different profiles
+* :guilabel:`Edit create options`: allows you to edit or add different profiles
   of file transformation, i.e. a set of predefined combinations of parameters
   (type and level of compression, blocks size, overview, colorimetry, alpha...)
-  to use when outputting raster files.
+  to use when outputting raster files. The parameters depend on the driver.
 
   .. _figure_gdal_create_settings:
 
   .. figure:: img/gdalCreateOptions.png
      :align: center
 
-     Sample of create options profile
+     Sample of create options profile (for GeoTiff)
 
   The upper part of the dialog lists the current profile(s) and allows you to
   add new ones or remove any of them. You can also reset the profile to its
-  default parameters if you changed it meanwhile. Some formats (eg, GeoTiff)
-  already propose some sample of profiles you can work with.
+  default parameters if you have changed them. Some drivers (eg, GeoTiff)
+  have some sample of profiles you can work with.
 
   At the bottom of the dialog:
 
   * The |signPlus| button lets you add rows to fill with the parameter name and value
-  * The |signMinus| button deletes a previously added parameter
+  * The |signMinus| button deletes the selected parameter
   * Click the :guilabel:`Validate` button to check that the creation options
-    entered for the given format are compatible
-  * Use the :guilabel:`Help` button to find out the parameters to use or refer
-    to the `GDAL documentation for legal creation options for each
-    format <https://www.gdal.org/formats_list.html>`_.
+    entered for the given format are valid
+  * Use the :guilabel:`Help` button to find the parameters to use, or refer
+    to the `GDAL raster drivers documentation
+    <https://gdal.org/drivers/raster/index.html>`_.
+
+.. _gdal_pyramidsoptions:
 
 * :guilabel:`Edit Pyramids Options`
 
@@ -670,8 +679,11 @@ the current tab provides following capabilities (only for rasters, yet):
 
      Sample of Pyramids profile
 
-* Define which GDAL driver is to be used to read and/or write files,
-  as in some cases more than one GDAL driver is available.
+GDAL drivers
+............
+
+In this frame, you can define which GDAL driver is to use to read and/or
+write files, as in some cases more than one GDAL driver is available.
 
 .. _figure_gdal_settings:
 
@@ -680,6 +692,9 @@ the current tab provides following capabilities (only for rasters, yet):
 
    GDAL Settings in QGIS
 
+.. tip:: Double-click a driver that allows read and write access (``rw+(v)``)
+  opens the :ref:`Edit Create options <gdal_createoptions>` dialog for
+  customization.
 
 .. index:: Variables
 .. _variables_options:
