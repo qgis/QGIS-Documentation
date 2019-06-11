@@ -6,8 +6,6 @@
 Code Snippets
 *************
 
-.. warning:: |outofdate|
-
 .. contents::
    :local:
 
@@ -22,39 +20,37 @@ In the plug-in add to the :func:`initGui()`
 
 ::
 
-  self.keyAction = QAction("Test Plugin", self.iface.mainWindow())
-  self.iface.registerMainWindowAction(self.keyAction, "F7") # action1 triggered by F7 key
-  self.iface.addPluginToMenu("&Test plugins", self.keyAction)
-  QObject.connect(self.keyAction, SIGNAL("triggered()"),self.keyActionF7)
+  self.key_action = QAction("Test Plugin", self.iface.mainWindow())
+  self.iface.registerMainWindowAction(self.key_action, "Ctrl+I")  # action triggered by Ctrl+I
+  self.iface.addPluginToMenu("&Test plugins", self.key_action)
+  self.key_action.triggered.connect(self.key_action_triggered)
 
 To :func:`unload()` add
 
 ::
 
-  self.iface.unregisterMainWindowAction(self.keyAction)
+  self.iface.unregisterMainWindowAction(self.key_action)
 
-The method that is called when F7 is pressed
+The method that is called when CTRL+I is pressed
 
 ::
 
-  def keyActionF7(self):
-    QMessageBox.information(self.iface.mainWindow(),"Ok", "You pressed F7")
+  def key_action_triggered(self):
+    QMessageBox.information(self.iface.mainWindow(),"Ok", "You pressed Ctrl+I")
 
 .. index:: Plugins; Toggle layers
 
 How to toggle Layers
 --------------------
 
-Since QGIS 2.4 there is new layer tree API that allows direct access to the
-layer tree in the legend. Here is an example how to toggle visibility of the
-active layer
-
+There is an API to access layers in the legend.
+Here is an example that toggles the visibility of the active layer
 ::
 
   root = QgsProject.instance().layerTreeRoot()
   node = root.findLayer(iface.activeLayer().id())
   new_state = Qt.Checked if node.isVisible() == Qt.Unchecked else Qt.Unchecked
-  node.setVisible(new_state)
+  node.setItemVisibilityChecked(new_state)
 
 .. index:: Plugins; Access attributes of selected features
 
@@ -63,33 +59,33 @@ How to access attribute table of selected features
 
 .. code-block:: python
 
-  def changeValue(self, value):
-    layer = self.iface.activeLayer()
-    if(layer):
-      nF = layer.selectedFeatureCount()
-      if (nF > 0):
-        layer.startEditing()
-        ob = layer.selectedFeaturesIds()
-        b = QVariant(value)
-        if (nF > 1):
-          for i in ob:
-          layer.changeAttributeValue(int(i), 1, b) # 1 being the second column
-        else:
-          layer.changeAttributeValue(int(ob[0]), 1, b) # 1 being the second column
-        layer.commitChanges()
-      else:
-        QMessageBox.critical(self.iface.mainWindow(), "Error",
-          "Please select at least one feature from current layer")
-    else:
-      QMessageBox.critical(self.iface.mainWindow(), "Error", "Please select a layer")
+   def change_value(value):
+       """Change the value in the second column for all selected features.
+
+       :param value: The new value.
+       """
+       layer = iface.activeLayer()
+       if layer:
+           count_selected = layer.selectedFeatureCount()
+           if count_selected > 0:
+               layer.startEditing()
+               id_features = layer.selectedFeatureIds()
+               for i in id_features:
+                   layer.changeAttributeValue(i, 1, value) # 1 being the second column
+               layer.commitChanges()
+           else:
+               iface.messageBar().pushCritical("Error",
+                   "Please select at least one feature from current layer")
+       else:
+           iface.messageBar().pushCritical("Error", "Please select a layer")
 
 
-The method requires one parameter (the new value for the attribute
+The method requires one parameter (the new value for the second
 field of the selected feature(s)) and can be called by
 
 ::
 
-  self.changeValue(50)
+  changeValue(50)
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
