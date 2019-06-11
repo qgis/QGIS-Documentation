@@ -131,7 +131,7 @@ feature to the expression context.
    feature.setFields(fields)
    feature.setAttribute(0, 99)
    
-   exp = QgsExpression('Column')
+   exp = QgsExpression('"Column"')
    context = QgsExpressionContext()
    context.setFeature(feature)
    assert(exp.evaluate(context) == 99)
@@ -176,9 +176,9 @@ order to compute new field values:
    # The final third expression doesn’t really make sense but illustrates 
    # the fact that we can use a wide range of expression functions, such 
    # as area and buffer in our expressions:
-   expression1 = QgsExpression('Revenue/Employees')
-   expression2 = QgsExpression('sum(Revenue)')
-   expression3 = QgsExpression('area(buffer($geometry,Employees))')
+   expression1 = QgsExpression('"Revenue"/"Employees"')
+   expression2 = QgsExpression('sum("Revenue")')
+   expression3 = QgsExpression('area(buffer($geometry,"Employees"))')
    
    # QgsExpressionContextUtils.globalProjectLayerScopes() is a convenience 
    # function that adds the global, project, and layer scopes all at once. 
