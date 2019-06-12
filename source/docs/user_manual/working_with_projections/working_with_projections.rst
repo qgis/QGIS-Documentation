@@ -247,6 +247,25 @@ enter known WGS 84 latitude and longitude values in :guilabel:`North` and
 :guilabel:`East` fields, respectively. Click on :guilabel:`Calculate`, and compare the
 results with the known values in your coordinate reference system.
 
+Integrate an NTv2-transformation in QGIS 
+----------------------------------------
+
+To integrate an NTv2 transformation file in QGIS you need one more step: 
+
+#. Place the NTv2 file (.gsb) in the CRS/Proj folder that QGIS uses
+   (e.g. *C:\\OSGeo4W64\\share\\proj* for windows users)
+#. Add **nadgrids** (+nadgrids=nameofthefile.gsb) to the Proj definition
+   in the :guilabel:`Parameters` field of the :guilabel:`Custom Coordinate
+   Reference System Definition` (:menuselection:`Settings --> Custom Projections...`).
+
+   .. _figure_nadgrids:
+
+   .. figure:: img/nadgrids_example.PNG
+      :align: center
+
+      Setting an NTv2 transformation
+
+
 .. index:: Datum transformation
 .. _datum_transformation:
 
