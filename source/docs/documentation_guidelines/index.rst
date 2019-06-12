@@ -7,8 +7,9 @@ Documentation Guidelines
 .. toctree::
    :maxdepth: 2
 
+   first_contribution
    writing
    cookbook_guidelines
    do_translations
    substitutions
-   first_contribution
+
