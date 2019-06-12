@@ -621,10 +621,10 @@ https://demo.gatewaygeomatics.com/cgi-bin/wfs_gateway?REQUEST=GetCapabilities&VE
 
 To be able to load a WFS Layer we create a connection to the WFS server first.
 
-#. Go to the browser panel as described in :ref:`browser_panel` . Choose the menu
-   :guilabel:`WFS`.
-#. Click on :guilabel:`New`.
-#. Enter ``DM Solutions`` as name.
+#. Go to the browser panel as described in :ref:`browser_panel`.
+#. Right-click on the :guilabel:`WFS` in the :ref:`browser_panel`.
+#. Click on :guilabel:`New connection ...`.
+#. Enter ``Gateway Geomatics`` as name.
 #. Enter the URL (see above).
 
 
@@ -637,7 +637,7 @@ To be able to load a WFS Layer we create a connection to the WFS server first.
 
 Now we are ready to load WFS layers from the above connection.
    
-#. Choose 'DM Solutions' from the :guilabel:`Server Connections`
+#. Choose 'Gateway Geomatics' from the :guilabel:`Server Connections`
    |selectString| drop-down list.
 #. Click :guilabel:`Connect`.
 #. Wait for the list of layers to be populated.
