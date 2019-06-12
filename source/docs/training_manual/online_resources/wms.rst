@@ -36,7 +36,7 @@ symbology:
 
 #. Load these layers into a new map, or use your original map with only these
    layers visible.
-#. Before starting to add the WMS layer, first deactivate "on the fly"
+#. Before starting to add the WMS layer, deactivate "on the fly"
    projection (:menuselection:`Project --> Properties... --> CRS` tab,
    check :guilabel:`No projection (or unknown/non-Earth projection)`.
    This may cause the layers to no longer overlap properly, but
@@ -114,14 +114,14 @@ symbology:
 
          |
 
-      #. Click :guilabel:`OK`. The Coordinate Reference System associated to the
-         entry has changed.
+      #. Click :guilabel:`OK`. The Coordinate Reference System associated with
+         the entry has changed.
 
 #. Click :guilabel:`Add` and the new layer will appear in your map as
    :guilabel:`OpenStreetMap WMS - by terrestris`.
 #. Close the :guilabel;`Data Source Manager` dialog if not done automatically
 #. In the :guilabel:`Layers` panel, click and drag it to the bottom of the list.
-#. Zoom out in order to have  global view of the layers. You will notice that
+#. Zoom out in order to get a global view of the layers. You will notice that
    your layers aren't located correctly (near west of Africa).
    This is because "on the fly" projection is disabled.
 
@@ -212,8 +212,8 @@ layer from the :guilabel:`terrestris` WMS server.
 |moderate| |TY|
 -------------------------------------------------------------------------------
 
-#. Hide all other WMS layers to prevent them rendering unnecessarily in the
-   background.
+#. Hide all other WMS layers to prevent them from rendering unnecessarily in
+   the background.
 #. Add the "OGC" WMS server at this URL: ``http://ogc.gbif.org:80/wms``
 #. Add the :guilabel:`bluemarble` layer.
 
