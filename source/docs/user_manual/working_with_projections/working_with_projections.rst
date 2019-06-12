@@ -253,8 +253,8 @@ Integrate an NTv2-transformation in QGIS
 To integrate an NTv2 transformation file in QGIS you need one more step: 
 
 #. Place the NTv2 file (.gsb) in the CRS/Proj folder that QGIS uses
-   (e.g. *C:\\OSGeo4W64\\share\\proj* for windows users)
-#. Add **nadgrids** (+nadgrids=nameofthefile.gsb) to the Proj definition
+   (e.g. :file:`C:\\OSGeo4W64\\share\\proj` for windows users)
+#. Add **nadgrids** (``+nadgrids=nameofthefile.gsb``) to the Proj definition
    in the :guilabel:`Parameters` field of the :guilabel:`Custom Coordinate
    Reference System Definition` (:menuselection:`Settings --> Custom Projections...`).
 
