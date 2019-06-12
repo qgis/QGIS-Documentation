@@ -238,8 +238,8 @@ Otherwise
 
 .. testcode::
 
-    selectedFeatures = layer.selectedFeatureIds()
-    print(selectedFeatures)
+    selected_ids = layer.selectedFeatureIds()
+    print(selected_ids)
 
 .. testoutput::
    :hide:
