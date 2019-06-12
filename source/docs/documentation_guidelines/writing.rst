@@ -1,7 +1,7 @@
 .. _writing_doc_guidelines:
 
 *************************
-Documentation Guidelines
+Writing Guidelines
 *************************
 
 .. contents::
@@ -19,10 +19,10 @@ coupled with some scripts from the Sphinx toolset to post-process the HTML outpu
 See http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
 or https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html.
 
-In general, when creating rst documentation for the QGIS project, please follow
+In general, when creating reST documentation for the QGIS project, please follow
 the `Python documentation style guidelines
 <https://devguide.python.org/documenting/>`_.
-Below are exposed some general guidelines to follow when
+Below are exposed some general guidelines you may need to follow when
 using reST for the QGIS documentation writing.
 
 If you are looking for general rules on contributing to QGIS project or managing
