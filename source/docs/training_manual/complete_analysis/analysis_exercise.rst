@@ -558,7 +558,7 @@ you'll need to know the size of one of your existing rasters.
 
 #. Open the :guilabel:`Properties` dialog of any of the three existing rasters.
 #. Switch to the :guilabel:`Metadata` tab.
-#. Make a note of the :`guilabel:`X` and :guilabel:`Y` values under the heading
+#. Make a note of the :guilabel:`X` and :guilabel:`Y` values under the heading
    :guilabel:`Dimensions` in the Metadata table.
 #. Close the :guilabel:`Properties` dialog.
 #. Click on the :menuselection:`Raster --> Conversion --> Rasterize` menu item.
