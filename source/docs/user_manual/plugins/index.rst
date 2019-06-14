@@ -7,8 +7,7 @@ Plugins
 .. toctree::
    :maxdepth: 2
 
-   python_console
    plugins
    core_plugins/index
-
+   python_console
 
