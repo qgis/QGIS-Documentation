@@ -196,7 +196,7 @@ Parameters
 ``Additional creation options``
   Optional
 
-  Allows to add one or more optional creation options that can be used to control
+  Allows to add one or more creation options that can be used to control
   particulars (colorimetry, block size, file compression...) about the file to be
   created. For convenience, you can rely on predefined profiles (see
   :ref:`GDAL driver options section <gdal_createoptions>`).
