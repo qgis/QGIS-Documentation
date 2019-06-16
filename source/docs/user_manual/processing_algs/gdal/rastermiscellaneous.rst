@@ -196,23 +196,10 @@ Parameters
 ``Additional creation options``
   Optional
 
-  Allows to select or add a profile to be used on the raster creation, see
-  :ref:`GDAL driver options section <gdal_createoptions>`
-  Predefined profiles are listed.
-
-  ``Profile`` [enumeration]
-    Sets the compression to use
-
-    Options:
-
-    * 1 --- Default
-    * 2 --- No compression
-    * 3 --- Low compression
-    * 4 --- High compression
-    * 5 --- JPEG compression
-
-    Default: *1*
-
+  Allows to add one or more optional creation options that can be used to control
+  particulars (colorimetry, block size, file compression...) about the file to be
+  created. For convenience, you can rely on predefined profiles (see
+  :ref:`GDAL driver options section <gdal_createoptions>`).
 
 Outputs
 .......
