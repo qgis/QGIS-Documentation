@@ -123,14 +123,13 @@ Parameters
 ``Output file resolution in target georeferenced units`` [number]
   Defines the output file resolution of reprojection result.
 
-``Additional creation parameters`` [string]
+``Additional creation options``
   Optional
 
-  Passes creation options to the output format driver. Multiple  options may
-  be listed. See `format specific documentation for legal creation options for
-  each format <https://www.gdal.org/formats_list.html>`_.
-
-  Default: *(not set)*
+  Allows to add one or more creation options that can be used to control
+  particulars (colorimetry, block size, file compression...) about the file to be
+  created. For convenience, you can rely on predefined profiles (see
+  :ref:`GDAL driver options section <gdal_createoptions>`).
 
 ``Output data type`` [enumeration]
   Defines the data type of the output bands.
