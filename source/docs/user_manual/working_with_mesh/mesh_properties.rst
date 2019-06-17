@@ -234,7 +234,7 @@ Use :guilabel:`Load` to adjust the min and max values of the current group.
 The :guilabel:`Interpolation` list contains three options to render contours: :guilabel:`Linear`,
 :guilabel:`Discrete` and :guilabel:`Exact`.
 
-The :guilabel:`Color ramp` widget opens the :ref:`color ramp drop-down shorcut <color_ramp_widget>`.
+The :guilabel:`Color ramp` widget opens the :ref:`color ramp drop-down shortcut <color_ramp_widget>`.
 
 The :guilabel:`Label unit suffix` is a label added after the value in the legend.
 
