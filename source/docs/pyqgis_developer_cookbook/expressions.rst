@@ -196,6 +196,7 @@ order to compute new field values:
            f['Fun'] = expression3.evaluate(context)
            vl.updateFeature(f)
    
+.. testcleanup::
    assert(f['Sum'] == 876.5)
 
 
