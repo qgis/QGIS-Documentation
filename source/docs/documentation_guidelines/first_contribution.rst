@@ -11,9 +11,18 @@
 .. note:: Though QGIS-Documentation is used to demonstrate the process, all
    commands and steps shown below also apply to QGIS-Website.
 
-Now that you know how to write documentation using :ref:`reStructuredText and
-Sphinx <writing_doc_guidelines>`, let's dive into the process of producing
-documentation and sharing your changes with the community.
+If you are reading these lines, it is certainly because you are willing
+to contribute to writing QGIS documentation and are looking for a how-to.
+Then you are at the right place. The current document will guide you through
+the different ways to achieve this objective, showing you the main steps to
+follow, the tricks you can use and the traps you should be aware of.
+
+For any help, do not hesitate to either ask in a comment on the issue report you
+are trying to fix or write to the `QGIS-community-team list
+<https://lists.osgeo.org/mailman/listinfo/qgis-community-team>`_. More details at
+`Get involved in documentation <https://qgis.org/en/site/getinvolved/document.html>`_.
+
+Let's now dive into the process.
 
 Using the GitHub web interface
 ==============================
@@ -25,7 +34,8 @@ The GitHub web interface allows you to do the following:
 * make a pull request to have your changes inserted into the main repository
 * create, update, or delete branches
 
-Read the GitHub `Hello-world <https://guides.github.com/activities/hello-world/>`_
+If you are not yet familiar with git and GitHub vocabulary, you may want to
+read the GitHub `Hello-world <https://guides.github.com/activities/hello-world/>`_
 project to learn some basic vocabulary and actions that will be used below.
 
 .. note:: **If you are fixing a reported issue**
@@ -68,7 +78,9 @@ Pages on the QGIS website can be edited quickly and easily by clicking on the
    top of the page telling you that you don't have write access to this repo
    and your changes will be applied to a new branch of your repository.
 
-#. Do your changes following the :ref:`writing guidelines <QGIS-documentation-guidelines>`.
+#. Do your changes. Since the documentation is written using the reStructureText
+   syntax, depending on your changes, you may need to rely on the :ref:`writing
+   guidelines <QGIS-documentation-guidelines>`.
 
 #. When you finish, make a short comment about your changes and click on
    :guilabel:`Propose file change`. This will generate a
