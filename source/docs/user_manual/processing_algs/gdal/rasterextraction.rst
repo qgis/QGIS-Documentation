@@ -38,12 +38,13 @@ Parameters
 
   Default: *0,1,0,1*
 
-``Additional creation parameters`` [string]
+``Additional creation options``
   Optional
 
-  <put parameter description here>
-
-  Default: *(not set)*
+  Allows to add one or more creation options that can be used to control
+  particulars (colorimetry, block size, file compression...) about the file to be
+  created. For convenience, you can rely on predefined profiles (see
+  :ref:`GDAL driver options section <gdal_createoptions>`).
 
 ``Output data type`` [enumeration]
   Defines the format of the output raster file.
@@ -112,12 +113,13 @@ Parameters
 
   Default: *False*
 
-``Additional creation parameters`` [string]
+``Additional creation options``
   Optional
 
-  <put parameter description here>
-
-  Default: *(not set)*
+  Allows to add one or more creation options that can be used to control
+  particulars (colorimetry, block size, file compression...) about the file to be
+  created. For convenience, you can rely on predefined profiles (see
+  :ref:`GDAL driver options section <gdal_createoptions>`).
 
 ``Output data type`` [enumeration]
   Defines the format of the output raster file.
