@@ -193,27 +193,10 @@ Parameters
 ``Additional creation options``
   Optional
 
-  Allows to add more advanced and format-related creation options (colorimetry,
-  file compression, block size...).
-
-  ``Profile`` [enumeration]
-    Sets the compression to use
-
-    Options:
-
-    * 1 --- Default
-    * 2 --- No compression
-    * 3 --- Low compression
-    * 4 --- High compression
-    * 5 --- JPEG compression
-
-    Default: *1*
-
-    The button |signPlus| lets add an option.
-    The button |signMinus| deletes an option previously added.
-    By clicking on :guilabel:`validate` the creation options to the given output format are verified.  See
-    `format specific documentation for legal creation options for each format
-    <https://www.gdal.org/formats_list.html>`_.
+  Allows to add one or more creation options that can be used to control
+  particulars (colorimetry, block size, file compression...) about the file to be
+  created. For convenience, you can rely on predefined profiles (see
+  :ref:`GDAL driver options section <gdal_createoptions>`).
 
 Outputs
 .......
