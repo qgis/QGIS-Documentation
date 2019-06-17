@@ -583,7 +583,7 @@ database is described at :ref:`label_spatialite`.
    and choose connect will provide you with the database connection dialog.
 
 Most of the connection dialogs follow a common basis that will be described
-below using the PostGreSQL database tool as example. For additional settings
+below using the PostgreSQL database tool as example. For additional settings
 specific to other providers, you can find corresponding description at:
 
 * :ref:`create_mssql_connection`;
