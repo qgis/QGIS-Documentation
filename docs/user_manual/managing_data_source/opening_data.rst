@@ -770,18 +770,21 @@ For the other database types, see their differences at
 * :guilabel:`Port`: Port number the PostgreSQL database server listens on. The default
   port for PostGIS is ``5432``.
 * :guilabel:`Database`: Name of the database.
-* :guilabel:`SSL mode`: How the SSL connection will be negotiated with the server.
-  Note that massive speed-ups in PostGIS layer rendering can be achieved
-  by disabling SSL in the connection editor.
-  The following options may be available:
+* :guilabel:`SSL mode`: SSL encryption setup
+  The following options are available:
 
-  * :guilabel:`Disable`: Only try an unencrypted SSL connection;
-  * :guilabel:`Allow`: Try a non-SSL connection. If that fails, try an SSL connection;
-  * :guilabel:`Prefer` (the default): Try an SSL connection. If that fails, try a
-    non-SSL connection;
-  * :guilabel:`Require`: Only try an SSL connection.
-  * :guilabel:`verify_ca`:
-  * :guilabel:`verify_full`:
+  * :guilabel:`Prefer` (the default): I don't care about encryption, but I wish to pay
+    the overhead of encryption if the server supports it.
+  * :guilabel:`Require`: I want my data to be encrypted, and I accept the overhead. I trust
+    that the network will make sure I always connect to the server I want.
+  * :guilabel:`Verify CA`: I want my data encrypted, and I accept the overhead. I want to
+    be sure that I connect to a server that I trust.
+  * :guilabel:`Verify Full`: I want my data encrypted, and I accept the overhead. I want to
+    be sure that I connect to a server I trust, and that it's the one I specify.
+  * :guilabel:`Allow`: I don't care about security, but I will pay the overhead of
+    encryption if the server insists on it.
+  * :guilabel:`Disable`: I don't care about security, and I don't want to pay the overhead
+    of encryption.
 
 * :guilabel:`Authentication`, basic.
 
