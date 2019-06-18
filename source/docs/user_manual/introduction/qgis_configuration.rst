@@ -1338,7 +1338,6 @@ you can use an environment variable instead of the command line option).
 To get a list of the options, enter ``qgis --help`` on the command line, which
 returns::
 
-  QGIS - 3.7.0-Master (52d22b8)
   QGIS is a user friendly Open Source Geographic Information System.
   Usage: /usr/bin/qgis.bin [OPTION] [FILE]
     OPTION:
