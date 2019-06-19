@@ -145,7 +145,7 @@ the :guilabel:`Browser`.
    |
 
 .. tip:: Enable the :guilabel:`Browser` panel in :menuselection:`View --> Panels -->`
-  and use it to add your data. It's a handy shortcut for the :guilabel:`Data Source
+  and use it to add your data. It's a handy shortcut for the :menuselection:`Data Source
   Manager --> Browser` tab, with the same functionality.
 
 .. note:: Remember to save your project frequently! The project file doesn't contain any of
