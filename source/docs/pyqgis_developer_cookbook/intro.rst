@@ -16,8 +16,8 @@ give a good overview of the principal functionality.
    :local:
 
 Python support was first introduced in QGIS 0.9.
-Today, there are several ways to use Python in QGIS Desktop, they
-are covered in the following sections:
+There are several ways to use Python in QGIS Desktop
+(covered in the following sections):
 
 * Issue commands in the Python console within QGIS
 * Create and use plugins
@@ -60,10 +60,11 @@ It can be opened from the :menuselection:`Plugins --> Python Console` menu:
 The screenshot above illustrates how to get the layer currently
 selected in the layer list, show its ID and optionally, if it is a
 vector layer, show the feature count.
-For interaction with the QGIS environment, there is a :data:`iface`
-variable, which is an instance of :class:`QgisInterface <qgis.gui.QgisInterface>`. This
-interface allows access to the map canvas, menus, toolbars and other
-parts of the QGIS application. 
+For interaction with the QGIS environment, there is an :data:`iface`
+variable, which is an instance of
+:class:`QgisInterface <qgis.gui.QgisInterface>`.
+This interface allows access to the map canvas, menus, toolbars and
+other parts of the QGIS application. 
 
 For user convenience, the following statements are executed
 when the console is started (in the future it will be possible to set
@@ -76,7 +77,7 @@ further initial commands)
 
 For those which use the console often, it may be useful to set a
 shortcut for triggering the console (within
-:menuselection:`Settings --> Configure shortcuts...`)
+:menuselection:`Settings --> Keyboard shortcuts...`)
 
 .. index:: Python; Plugins
 
@@ -84,8 +85,8 @@ Python Plugins
 ==============
 
 The functionality of QGIS can be extended using plugins.
-It is now also possible to use plugins written
-in Python. The main advantage over C++ plugins is simplicity of
+Plugins can be written in Python.
+The main advantage over C++ plugins is simplicity of
 distribution (no compiling for each platform) and easier
 development.
 
@@ -100,9 +101,8 @@ for detailed instructions.
 
 .. note::
 
-    Python plugins are also available for QGIS server
-    (:ref:`label_qgisserver`), see :ref:`server_plugins` for further
-    details.
+    Python plugins are also available for QGIS server.
+    See :ref:`server_plugins` for further details.
 
 
 .. index::
@@ -142,8 +142,8 @@ is executed by the embedded Python interpreter.
 .. index::
   pair: Environment; PYQGIS_STARTUP
 
-PYQGIS_STARTUP environment variable
------------------------------------
+The PYQGIS_STARTUP environment variable
+---------------------------------------
 
 You can run Python code just before QGIS initialization completes by
 setting the ``PYQGIS_STARTUP`` environment variable to the path of an
@@ -152,7 +152,7 @@ existing Python file.
 This code will run before QGIS initialization is complete.
 This method is very useful for cleaning
 sys.path, which may have undesireable paths, or for isolating/loading
-the initial environ without requiring a virtual environment, e.g.
+the initial environment without requiring a virtual environment, e.g.
 homebrew or MacPorts installs on Mac.
 
 .. index::
@@ -170,15 +170,15 @@ the :mod:`qgis.core` module, initialize it and you are ready for the
 processing.
 
 Or you may want to create an interactive application that uses
-GIS functionality --- perform measurements, export a map as PDF, or any
-other functionality. The :mod:`qgis.gui` module brings various GUI
+GIS functionality --- perform measurements, export a map as PDF, ...
+The :mod:`qgis.gui` module provides various GUI
 components, most notably the map canvas widget that can be
 incorporated into the application with support for zooming, panning
 and/or any further custom map tools.
 
 PyQGIS custom applications or standalone scripts must be configured to
-locate the QGIS resources such as projection information, providers
-for reading vector and raster layers, etc. QGIS Resources are
+locate the QGIS resources, such as projection information and providers
+for reading vector and raster layers. QGIS Resources are
 initialized by adding a few lines to the beginning of your application
 or script. The code to initialize QGIS for custom applications and
 standalone scripts is similar. Examples of each are provided
@@ -186,7 +186,7 @@ below.
 
 .. note::
 
-     Do *not* use :file:`qgis.py` as a name for your test script
+     Do *not* use :file:`qgis.py` as a name for your script.
      Python will not be able to import the bindings as the script's
      name will shadow them.
 
@@ -196,36 +196,37 @@ Using PyQGIS in standalone scripts
 ----------------------------------
 
 To start a standalone script, initialize the QGIS resources at the
-beginning of the script similar to the following code:
+beginning of the script:
 
 ::
 
   from qgis.core import *
 
-  # supply path to qgis install location
+  # Supply path to qgis install location
   QgsApplication.setPrefixPath("/path/to/qgis/installation", True)
 
-  # create a reference to the QgsApplication, setting the
-  # second argument to False disables the GUI
+  # Create a reference to the QgsApplication.  Setting the
+  # second argument to False disables the GUI.
   qgs = QgsApplication([], False)
 
-  # load providers
+  # Load providers
   qgs.initQgis()
 
   # Write your code here to load some layers, use processing
   # algorithms, etc.
 
-  # When your script is complete, call exitQgis() to remove the
+  # Finally, exitQgis() is called to remove the
   # provider and layer registries from memory
 
   qgs.exitQgis()
 
-We begin by importing the :mod:`qgis.core` module and then configuring
+First we import the :mod:`qgis.core` module and configure
 the prefix path. The prefix path is the location where QGIS is
 installed on your system. It is configured in the script by calling
-the :meth:`setPrefixPath <qgis.core.QgsApplication.setPrefixPath>` method. The
-second argument of meth:`setPrefixPath <qgis.core.QgsApplication.setPrefixPath>`
-is set to ``True``, which controls whether the default paths are
+the :meth:`setPrefixPath <qgis.core.QgsApplication.setPrefixPath>` method.
+The second argument of
+:meth:`setPrefixPath <qgis.core.QgsApplication.setPrefixPath>`
+is set to ``True``, specifying that default paths are to be
 used.
 
 The QGIS install path varies by platform; the easiest way to find it
@@ -235,8 +236,8 @@ QGIS and look at the output from running
 
 After the prefix path is configured, we save a reference to
 ``QgsApplication`` in the variable ``qgs``. The second argument is set
-to ``False``, which indicates that we do not plan to use the GUI since
-we are writing a standalone script. With the ``QgsApplication``
+to ``False``, specifying that we do not plan to use the GUI since
+we are writing a standalone script. With ``QgsApplication``
 configured, we load the QGIS data providers and layer registry by
 calling the ``qgs.initQgis()`` method. With QGIS initialized, we are
 ready to write the rest of the script. Finally, we wrap up by calling
@@ -256,12 +257,12 @@ use a GUI.
 
   from qgis.core import *
 
-  # supply path to qgis install location
+  # Supply the path to the qgis install location
   QgsApplication.setPrefixPath("/path/to/qgis/installation", True)
 
-  # create a reference to the QgsApplication
-  # setting the second argument to True enables the GUI, which we need
-  # to do since this is a custom application
+  # Create a reference to the QgsApplication.
+  # Setting the second argument to True enables the GUI.  We need
+  # this since this is a custom application.
 
   qgs = QgsApplication([], True)
 
@@ -271,12 +272,12 @@ use a GUI.
   # Write your code here to load some layers, use processing
   # algorithms, etc.
 
-  # When your script is complete, call exitQgis() to remove the
+  # Finally, exitQgis() is called to remove the
   # provider and layer registries from memory
   qgs.exitQgis()
 
 
-Now you can work with the QGIS API --- load layers and do some processing or fire
+Now you can work with the QGIS API - load layers and do some processing or fire
 up a GUI with a map canvas. The possibilities are endless :-)
 
 
@@ -286,8 +287,8 @@ up a GUI with a map canvas. The possibilities are endless :-)
 Running Custom Applications
 ---------------------------
 
-You will need to tell your system where to search for QGIS libraries and
-appropriate Python modules if they are not in a well-known location ---
+You need to tell your system where to search for QGIS libraries and
+appropriate Python modules if they are not in a well-known location -
 otherwise Python will complain::
 
   >>> import qgis.core
@@ -301,18 +302,18 @@ QGIS installation path:
 * on Windows: :command:`set PYTHONPATH=c:\\<qgispath>\\python`
 * on macOS: :command:`export PYTHONPATH=/<qgispath>/Contents/Resources/python`
 
-The path to the PyQGIS modules is now known, however they depend on
+Now, the path to the PyQGIS modules is known, but they depend on
 the ``qgis_core`` and ``qgis_gui`` libraries (the Python modules serve
-only as wrappers). The path to these libraries is typically unknown
-to the operating system, so you get an import error again (the message
+only as wrappers). The path to these libraries may be unknown to the
+operating system, and then you will get an import error again (the message
 might vary depending on the system)::
 
   >>> import qgis.core
   ImportError: libqgis_core.so.3.2.0: cannot open shared object file:
     No such file or directory
 
-Fix this by adding the directories where the QGIS libraries reside to search
-path of the dynamic linker:
+Fix this by adding the directories where the QGIS libraries reside to
+the search path of the dynamic linker:
 
 * on Linux: :command:`export LD_LIBRARY_PATH=/<qgispath>/lib`
 * on Windows: :command:`set PATH=C:\\<qgispath>\\bin;C:\\<qgispath>\\apps\\<qgisrelease>\\bin;%PATH%`
@@ -323,9 +324,9 @@ These commands can be put into a bootstrap script that will take care of
 the startup. When deploying custom applications using PyQGIS, there are
 usually two possibilities:
 
-* require the user to install QGIS on his platform prior to installing your
+* require the user to install QGIS prior to installing your
   application. The application installer should look for default locations
-  of QGIS libraries and allow user to set the path if not found. This
+  of QGIS libraries and allow the user to set the path if not found. This
   approach has the advantage of being simpler, however it requires the user
   to do more steps.
 
@@ -334,18 +335,18 @@ usually two possibilities:
   be saved from the burden of downloading and installing additional pieces
   of software.
 
-The two deployment models can be mixed - deploy standalone application on
-Windows and macOS, for Linux leave the installation of QGIS up to user
-and his package manager.
+The two deployment models can be mixed.  You can provide a standalone
+applications on Windows and macOS, but for Linux leave the installation of
+GIS up to the user and his package manager.
 
 Technical notes on PyQt and SIP
 ===============================
 
 We've decided for Python as it's one of the most favoured languages for
 scripting. PyQGIS bindings in QGIS 3 depend on SIP and PyQt5.
-The reason for using SIP instead of more widely used SWIG is that the
+The reason for using SIP instead of the more widely used SWIG is that the
 QGIS code depends on Qt libraries. Python bindings for Qt (PyQt) are
-also done using SIP and this allows seamless integration of PyQGIS with
+done using SIP and this allows seamless integration of PyQGIS with
 PyQt.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
