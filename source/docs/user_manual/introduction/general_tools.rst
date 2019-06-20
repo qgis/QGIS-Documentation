@@ -330,7 +330,7 @@ Layer Styling Panel
 The :guilabel:`Layer Styling` panel (also enabled with :kbd:`Ctrl+3`) is
 a shortcut to some of the functionalities of the :guilabel:`Layer Properties`
 dialog. It provides a quick and easy way to define the rendering and the
-behavior of a layer, and to visualize its effects without haveing to open the
+behavior of a layer, and to visualize its effects without having to open the
 layer properties dialog.
 
 In addition to avoiding the blocking (or "modal") layer properties dialog, the layer
