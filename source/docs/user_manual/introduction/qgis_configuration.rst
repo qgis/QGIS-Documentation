@@ -10,6 +10,7 @@ QGIS Configuration
 
    .. contents::
       :local:
+      :depth: 2
 
 QGIS is highly configurable. Through the :menuselection:`Settings` menu, it
 provides different tools to:
@@ -1394,7 +1395,8 @@ returns::
         set to load on startup using the following command:
         ``qgis ./raster/landcover.img ./gml/lakes.gml``
 
-``--snapshot`` option
+``--snapshot``
+..............
 
 This option allows you to create a snapshot in PNG format from the current view.
 This comes in handy when you have many projects and want to generate
@@ -1407,19 +1409,22 @@ be added after ``--snapshot``. For example::
 
   qgis --snapshot my_image.png --width 1000 --height 600 --project my_project.qgs
 
-``--lang``  option
+``--lang``
+..........
 
 Based on your locale, QGIS selects the correct localization. If you would like
 to change your language, you can specify a language code. For example,
 ``qgis --lang it`` starts QGIS in Italian localization.
 
-``--project`` option
+``--project``
+..............
 
 Starting QGIS with an existing project file is also possible. Just add the
 command line option ``--project`` followed by your project name and QGIS will
 open with all layers in the given file loaded.
 
-``--extent`` option
+``extent``
+..........
 
 To start with a specific map extent use this option. You need to add the
 bounding box of your extent in the following order separated by a comma::
@@ -1429,21 +1434,25 @@ bounding box of your extent in the following order separated by a comma::
 This option probably makes more sense when paired with the ``--project`` option
 to open a specific project at the desired extent.
 
-``--nologo`` option
+``--nologo``
+............
 
 This option hides the splash screen when you start QGIS.
 
-``--noversioncheck`` option
+``--noversioncheck``
+....................
 
 Skip searching for a new version of QGIS at startup.
 
-``--noplugins`` option
+``--noplugins``
+...............
 
 If you have trouble at start-up with plugins, you can avoid loading them at
 start-up with this option. They will still be available from the Plugins Manager
 afterwards.
 
-``--nocustomization`` option
+``--nocustomization``
+.....................
 
 Using this option, any existing :ref:`GUI customization <sec_customization>`
 will not be applied at startup. This means that any hidden buttons, menu items,
@@ -1457,11 +1466,13 @@ removed by customization.
 .. _custom_commandline:
 
 ``--customizationfile``
+.......................
 
 Using this option, you can define a UI customization file, that
 will be used at startup.
 
-``--globalsettingsfile`` option
+``--globalsettingsfile``
+........................
 
 Using this option, you can specify the path for a Global Settings
 file (``.ini``), also known as the Default Settings. The settings in the specified
@@ -1478,12 +1489,14 @@ several machines by only editing one file.
 
 The equivalent environment variable is ``QGIS_GLOBAL_SETTINGS_FILE``.
 
-``--authdbdirectory`` option
+``--authdbdirectory``
+.....................
 
 This option is similar to ``--globalsettingsfile``, but defines the path to the
 directory where the authentication database will be stored and loaded.
 
-``--code`` option
+``--code``
+..........
 
 This option can be used to run a given python file directly after QGIS has
 started.
@@ -1504,7 +1517,8 @@ the layer the name 'Alaska' using the following command::
 
   qgis --code load_alaska.py
 
-``--defaultui`` option
+``--defaultui``
+...............
 
 On load, **permanently resets** the user interface (UI) to the default settings.
 This option will restore the panels and toolbars visibility, position, and size.
@@ -1516,7 +1530,8 @@ customization<sec_customization>`. Items hidden by GUI customization (e.g. the
 status bar) will remain hidden even using the ``--defaultui`` option. See also
 the ``--nocustomization`` option.
 
-``--hide-browser`` option
+``--hide-browser``
+..................
 
 On load, hides the :guilabel:`Browser` panel from the user interface. The panel
 can be enabled by right-clicking a space in the toolbars or using the
@@ -1526,7 +1541,8 @@ Linux KDE).
 Unless it's enabled again, the Browser panel will remain hidden in the following
 sessions.
 
-``--dxf-*`` option
+``--dxf-*``
+...........
 
 These options can be used to export a QGIS project into a DXF file. Several
 options are available:
@@ -1541,20 +1557,23 @@ options are available:
 * *--dxf-map-theme*: choose a :ref:`map theme <map_themes>` from the layer tree
   configuration.
 
-``--take-screenshots`` option
+``--take-screenshots``
+......................
 
 Takes screenshots for the user documentation. Can be used together with
 ``--screenshots-categories`` to filter which categories/sections of the
 documentation screenshots should be created (see QgsAppScreenShots::Categories).
 
-``--profile`` option
+``--profile``
+.............
 
 Loads QGIS using a specific profile from the user's profile folder. Unless
 changed, the selected profile will be used in the following QGIS sessions.
 
 .. _profiles-path_option:
 
-``--profiles-path`` option
+``--profiles-path``
+...................
 
 With this option, you can choose a path to load and save the profiles (user
 settings). It creates profiles inside a ``{path}\profiles`` folder, which
@@ -1566,12 +1585,14 @@ using a file sharing service.
 
 The equivalent environment variable is ``QGIS_CUSTOM_CONFIG_PATH``.
 
-``--version-migration`` option
+``--version-migration``
+.......................
 
 If settings from an older version are found (*e.g.*, the ``.qgis2`` folder from QGIS
 2.18), this option will import them into the default QGIS profile.
 
-``--openclprogramfolder`` option
+``--openclprogramfolder``
+.........................
 
 Using this option, you can specify an alternative path for your OpenCL programs.
 This is useful for developers while testing new versions of the programs
