@@ -22,8 +22,8 @@ The following chapters will guide you through learning:
 * how to modify the texts, provide screenshots... in a compliant way
 * how to share and ensure your modifications are pushed to the official docs.
 
-If you are looking for general rules on contributing to QGIS project or managing
-repositories, you may find help at `Get Involved in the QGIS Community
+If you are looking for general information about how to contribute to the QGIS
+project, you may find help at `Get Involved in the QGIS Community
 <https://qgis.org/en/site/getinvolved/index.html>`_.
 
 

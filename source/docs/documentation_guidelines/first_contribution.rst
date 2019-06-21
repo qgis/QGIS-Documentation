@@ -13,7 +13,7 @@
 
 If you are reading these lines, it is certainly because you are willing
 to contribute to writing QGIS documentation and are looking for a how-to.
-You are at the right place! The current document will guide you through
+You have come to the right place! The current document will guide you through
 the different ways to achieve this objective, showing you the main steps to
 follow, the tricks you can use and the traps you should be aware of.
 
@@ -24,9 +24,9 @@ are trying to fix or write to the `QGIS-community-team list
 
 Let's now dive into the process.
 
-Documentation sources are stored using a git version control system and
+Documentation sources are stored using the git version control system and are
 available on GitHub at https://github.com/qgis/QGIS-Documentation.
-You may find two main ways, not mutually exclusive, to modify the files:
+There are two main ways, not mutually exclusive, to modify the files:
 
 #. :ref:`Using the GitHub web interface <github_interface>`
 #. :ref:`Using Git command line tools <git_command_line_tools>`.
