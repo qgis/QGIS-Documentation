@@ -1909,6 +1909,31 @@ Outputs
   Point vector layer with displaced features.
 
 
+.. _qgispointtolayer:
+
+Point to layer
+--------------
+
+This algorithm creates a new vector layer that contains a single feature with
+geometry matching a point parameter.
+It can be used in models to convert a point into a layer which can be used
+for other algorithms which require a layer based input.
+
+Parameters
+..........
+
+``Point`` [coordinates]
+  Input point.
+
+  Default: *False*
+
+Outputs
+.......
+
+``Point`` [vector: point]
+  Point vector layer containing the input point.
+
+
 .. _qgispoleofinaccessibility:
 
 Pole of inaccessibility
