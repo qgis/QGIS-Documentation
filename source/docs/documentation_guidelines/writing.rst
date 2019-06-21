@@ -9,8 +9,8 @@ Writing Guidelines
 
 In general, when creating reST documentation for the QGIS project, please follow
 the `Python documentation style guidelines <https://devguide.python.org/documenting/>`_.
-For convenience, we provide below a set of general rules we rely on for writing
-QGIS documentation.
+For convenience, we provide a set of general rules we rely on for writing
+QGIS documentation below.
 
 
 Writing Documentation
