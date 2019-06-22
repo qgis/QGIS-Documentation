@@ -1925,7 +1925,6 @@ Parameters
 ``Point`` [coordinates]
   Input point.
 
-  Default: *False*
 
 Outputs
 .......
