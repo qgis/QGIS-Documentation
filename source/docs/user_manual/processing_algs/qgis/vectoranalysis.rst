@@ -49,7 +49,7 @@ Climb along line
 
 This algorithm calculates the total climb and descent along line geometries.
 The input layer must have Z values present. If Z values are not available,
-the  "Drape" (set Z value from raster) algorithm may be used to add Z values
+the  :ref:`qgissetzfromraster` algorithm may be used to add Z values
 from a DEM layer.
 
 The output layer is a copy of the input layer with additional fields that
