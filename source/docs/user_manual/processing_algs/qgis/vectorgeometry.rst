@@ -631,6 +631,10 @@ Outputs
 ``Extent``
   Layer with a polygon feature representing the input extent.
 
+See also
+........
+:ref:`qgispointtolayer`
+
 
 .. _qgiswedgebuffers:
 
