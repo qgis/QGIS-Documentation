@@ -72,7 +72,7 @@ Outputs
 ``Climb layer`` [vector: line]
   Line layer containing new attributes with the results from climb calculations.
 
-``Total climb``
+``Total climb`` [number]
   The sum of the climb for all the line geometries in the layer.
 
 ``Total descent``
