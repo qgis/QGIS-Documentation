@@ -75,7 +75,7 @@ Outputs
 ``Total climb`` [number]
   The sum of the climb for all the line geometries in the layer.
 
-``Total descent``
+``Total descent`` [number]
   The sum of the descent for all the line geometries in the layer.
 
 ``Minimum elevation``
