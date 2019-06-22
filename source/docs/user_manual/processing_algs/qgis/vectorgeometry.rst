@@ -1936,7 +1936,9 @@ Outputs
 ``Point`` [vector: point]
   Point vector layer containing the input point.
 
-
+See also
+........
+:ref:`qgisextenttolayer`
 .. _qgispoleofinaccessibility:
 
 Pole of inaccessibility
