@@ -65,7 +65,7 @@ Parameters
 ..........
 
 ``Line layer`` [vector: line]
-  Line layer to calculate the climb for.
+  Line layer to calculate the climb for. Must have Z values.
 
 Outputs
 .......
