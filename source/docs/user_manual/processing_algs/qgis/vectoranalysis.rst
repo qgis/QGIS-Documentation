@@ -78,7 +78,7 @@ Outputs
 ``Total descent`` [number]
   The sum of the descent for all the line geometries in the layer.
 
-``Minimum elevation``
+``Minimum elevation`` [number]
   The minimum elevation for the geometries in the layer.
 
 ``Maximum elevation``
