@@ -1939,6 +1939,8 @@ Outputs
 See also
 ........
 :ref:`qgisextenttolayer`
+
+
 .. _qgispoleofinaccessibility:
 
 Pole of inaccessibility
