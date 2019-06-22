@@ -81,7 +81,7 @@ Outputs
 ``Minimum elevation`` [number]
   The minimum elevation for the geometries in the layer.
 
-``Maximum elevation``
+``Maximum elevation`` [number]
   The maximum elevation for the geometries in the layer.
 
 
