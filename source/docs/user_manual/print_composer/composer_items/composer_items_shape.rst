@@ -1,8 +1,8 @@
 .. only:: html
 
 
-Shape Items
-===========
+The Shape Items
+===============
 
 .. only:: html
 
@@ -73,14 +73,18 @@ vertices of the items can be independently and directly manipulated using the
 |editNodesShape| :guilabel:`Edit Nodes Item`. The item itself can be manipulated
 as exposed in :ref:`interact_layout_item`.
 
-To add a node-based shape, click the |addNodesShape| :sup:`Add Node Item` icon
-and select either |addPolygon| :sup:`Add Polygon` or |addPolyline| :sup:`Add
-Polyline` tool. Then perform left clicks to add nodes to your current shape.
-If you hold down the :kbd:`Shift` key while drawing a segment, it is constrained
-to follow an orientation multiple of 45\ |degrees|.
+To add a node-based shape:
 
-When you're done, a simple right click terminates the shape, allowing you to
-customize the appearance in the :guilabel:`Item Properties` panel.
+#. Click the |addNodesShape| :sup:`Add Node Item` icon
+#. Select either |addPolygon| :sup:`Add Polygon` or |addPolyline| :sup:`Add
+   Polyline` tool
+#. Perform consecutive left clicks to add nodes of your item.
+   If you hold down the :kbd:`Shift` key while drawing a segment, it is
+   constrained to follow an orientation multiple of 45\ |degrees|.
+#. When you're done, right-click to terminate the shape.
+
+You can customize the appearance of the shape in the :guilabel:`Item Properties`
+panel.
 
 .. _figure_layout_nodes_shape:
 
@@ -129,8 +133,8 @@ The Arrow Item
 ..............
 
 The |addArrow| :sup:`Add Arrow` tool is a shortcut to create an arrow-enabled
-polyline by default and thus has same properties and behavior as a polyline
-node item.
+polyline by default and thus has same properties and behavior as a
+:ref:`polyline node item <layout_node_based_shape_item>`.
 
 Actually, the arrow item can be used to add a simple arrow, for example, to
 show the relation between two different print layout items. However, to create
