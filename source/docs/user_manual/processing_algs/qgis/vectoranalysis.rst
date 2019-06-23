@@ -59,7 +59,6 @@ If the input layer contains fields with the same names as these added fields,
 they will be renamed (field names will be altered to "name_2", "name_3", etc,
 finding the first non-duplicate name).
 
-
 Parameters
 ..........
 
