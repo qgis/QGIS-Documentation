@@ -1918,7 +1918,7 @@ Outputs
 Point to layer
 --------------
 
-This algorithm creates a new vector layer that contains a single feature with
+Creates a new vector layer that contains a single feature with
 geometry matching a point parameter.
 It can be used in models to convert a point into a layer which can be used
 for other algorithms which require a layer based input.
