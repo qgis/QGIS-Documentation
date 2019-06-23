@@ -1927,7 +1927,7 @@ Parameters
 ..........
 
 ``Point`` [coordinates]
-  Input point (example: `397254,6214446 [EPSG:32632]`).
+  Input point (example: ``397254,6214446 [EPSG:32632]``).
 
 
 Outputs
