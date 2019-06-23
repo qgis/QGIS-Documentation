@@ -22,6 +22,7 @@ including each type of layout items described in the previous section.
 
 .. figure:: img/print_composer_complete.png
    :align: center
+   :width: 100%
 
    Print Layout with map view, legend, image, scale bar, coordinates, text and
    HTML frame added
