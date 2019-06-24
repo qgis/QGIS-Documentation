@@ -4,7 +4,7 @@
 
 The code snippets on this page needs the following imports if you're outside the pyqgis console:
 
-.. testcode::
+.. testcode:: expr
 
    from qgis.core import (
       edit,
@@ -83,7 +83,7 @@ Parsing Expressions
 
 The following example shows how to check if a given expression can be parsed correctly:
 
-.. testcode::
+.. testcode:: expr
 
    exp = QgsExpression('1 + 1 = 2')
    assert(not exp.hasParserError())
@@ -109,7 +109,7 @@ Basic Expressions
 
 This basic expression evaluates to 1, meaning it is true: 
 
-.. testcode::
+.. testcode:: expr
 
    exp = QgsExpression('1 + 1 = 2')
    assert(exp.evaluate())
@@ -125,7 +125,7 @@ the feature's field values.
 The following example shows how to create a feature with a field called "Column" and how to add this
 feature to the expression context.
 
-.. testcode::
+.. testcode:: expr
 
    fields = QgsFields()
    field = QgsField('Column')
@@ -143,7 +143,7 @@ feature to the expression context.
 The following is a more complete example of how to use expressions in the context of a vector layer, in
 order to compute new field values:
 
-.. testcode::
+.. testcode:: expr
    
    from qgis.PyQt.QtCore import QVariant
    
@@ -198,9 +198,13 @@ order to compute new field values:
            f['Sum'] = expression2.evaluate(context)
            f['Fun'] = expression3.evaluate(context)
            vl.updateFeature(f)
-   
-.. testcleanup::
-   assert(f['Sum'] == 876.5)
+
+   print( f['Sum'])
+
+.. testoutput:: expr
+   :hide:
+
+   876.5
 
 
 Filtering a layer with expressions
@@ -209,7 +213,7 @@ Filtering a layer with expressions
 The following example can be used to filter a layer and return any feature that
 matches a predicate.
 
-.. testcode::
+.. testcode:: expr
 
    layer = QgsVectorLayer("Point?field=Test:integer",
                               "addfeat", "memory")
@@ -237,7 +241,7 @@ Handling expression errors
 
 Expression-related errors can occur during expression parsing or evaluation: 
 
-.. testcode::
+.. testcode:: expr
 
    exp = QgsExpression("1 + 1 = 2")
    if exp.hasParserError():
