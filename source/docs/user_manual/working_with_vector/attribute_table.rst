@@ -394,7 +394,7 @@ drop-down list next to the :guilabel:`Filter features` button. The options are:
 
 To clear the filter, either select the :guilabel:`Show all features` option
 mentioned in :ref:`filter_features`, or clear the expression and
-click :guilabel:`Apply`.
+click :guilabel:`Apply` or press :kbd:`Enter`.
 
 Using action on features
 ========================
