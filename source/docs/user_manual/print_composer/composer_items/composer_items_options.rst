@@ -60,11 +60,11 @@ You can also:
 
    You can also use the :guilabel:`Paste in Place` (:kbd:`Ctrl+Shift+V`) command
    to duplicate an item from one page to another and place it in the new page at
-   the same coordinates than the original.
+   the same coordinates as the original.
 
 Moreover, you can create items using a print layout template (for details, see
-:ref:`layout_manager`) through :menuselection:`Layout --> Add Items from Template...`
-command.
+:ref:`layout_manager`) through the :menuselection:`Layout --> Add Items from
+Template...` command.
 
 .. tip:: **Add layout items using the file browser**
 
@@ -211,7 +211,7 @@ Background, Item ID, Variables and Rendering (See figure_layout_common_).
 
    The |dataDefined| :sup:`Data defined override` icon next to most of the
    options means that you can associate that property with a layer, features
-   attributes or geometry or with any other layout item's property, using
+   attributes, geometry or with any other layout item's property, using
    :ref:`expressions <vector_expressions>` or :ref:`variables
    <general_tools_variables>`. For more information see :ref:`data_defined`.
 
@@ -244,8 +244,8 @@ Position and Size
 .................
 
 Extending the features of the :ref:`New Item Properties <create_layout_item>`
-dialog with data-defined capabilities, this group allows you to set accurate
-placement of the items
+dialog with data-defined capabilities, this group allows you to place the items
+accurately.
 
 .. _figure_layout_position:
 
@@ -259,10 +259,10 @@ placement of the items
 * the :guilabel:`X` and :guilabel:`Y` coordinate of the :guilabel:`Reference
   point` of the item on the chosen page. The ratio between these values can be
   locked in pressing the |lockedGray| button beside. Changing any value using
-  the widget or the |select| :sup:`Select/Move item` tool onto the page will
+  the widget or the |select| :sup:`Select/Move item` tool will
   proportionally update the other one;
 * the :guilabel:`Width` and :guilabel:`Height` of the item bounding box. Like
-  with coordinates, ratio between width and height can be locked in and the
+  with coordinates, the ratio between width and height can be locked in and the
   item size updated proportionally with changes applied to any of them.
 
 .. index:: Rendering mode

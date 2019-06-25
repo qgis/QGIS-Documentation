@@ -133,7 +133,7 @@ The Arrow Item
 ..............
 
 The |addArrow| :sup:`Add Arrow` tool is a shortcut to create an arrow-enabled
-polyline by default and thus has same properties and behavior as a
+polyline by default and thus has the same properties and behavior as a
 :ref:`polyline node item <layout_node_based_shape_item>`.
 
 Actually, the arrow item can be used to add a simple arrow, for example, to
