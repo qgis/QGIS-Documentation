@@ -135,35 +135,40 @@ in all testing groups, something normally usefull to use in the test setup::
 How to test snippets on your local machine
 ==========================================
 
-.. note:: instructions are valid for Linux system.
+.. note:: Instructions are valid for Linux system.
 
 To test Python code snippets, you need a *QGIS* installation. For this, there
-are many options:
+are many options. You can:
 
-* You can use your system *QGIS* installation with *Sphinx* from a Python virtual
+* Use your system *QGIS* installation with *Sphinx* from a Python virtual
   environment::
 
     make -f venv.mk doctest
 
-* You can use a manually built installation of *QGIS*, to do so, you need to
-  create a custom ``Makefile`` extension on top of the ``venv.mk`` file, for
-  example a ``user.mk`` file with the following content::
+* Use a manually built installation of *QGIS*. You'd need to:
 
-    # Root installation folder
-    QGIS_PREFIX_PATH = /home/user/apps/qgis-master
+  #. Create a custom ``Makefile`` extension on top of the :file:`venv.mk` file,
+     for example a :file:`user.mk` file with the following content::
 
-    # Or build output folder
-    QGIS_PREFIX_PATH = /home/user/dev/QGIS-build-master/output
+      # Root installation folder
+      QGIS_PREFIX_PATH = /home/user/apps/qgis-master
 
-    include venv.mk
+      include venv.mk
 
-  Then, use it to run target ``doctest``::
+     Or ::
 
-    make -f user.mk doctest
+      # build output folder
+      QGIS_PREFIX_PATH = /home/user/dev/QGIS-build-master/output
 
-* Or you can run target ``doctest`` inside the official *QGIS* docker image::
+      include venv.mk
+
+  #. Then, use it to run target ``doctest``::
+
+      make -f user.mk doctest
+
+* Run target ``doctest`` inside the official *QGIS* docker image::
 
     make -f docker.mk doctest
 
-  You have to install `Docker <https://www.docker.com/>`_ first because we will
-  use a docker image with QGIS in it.
+  You have to install `Docker <https://www.docker.com/>`_ first because this
+  uses a docker image with QGIS in it.
