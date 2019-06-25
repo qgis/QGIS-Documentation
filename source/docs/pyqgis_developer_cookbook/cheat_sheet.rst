@@ -153,7 +153,7 @@ Layers
 .. testoutput::
    :hide:
 
-   layers TOC = ['layer name you like']
+   layers TOC = ['Companies, 'layer name you like']
 
 Otherwise 
 
@@ -165,7 +165,7 @@ Otherwise
 .. testoutput::
    :hide:
 
-   layers TOC = ['layer name you like']
+   layers TOC = ['Companies, 'layer name you like']
 
 **Find layer by name**
 
