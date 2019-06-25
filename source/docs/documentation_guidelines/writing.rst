@@ -7,27 +7,10 @@ Writing Guidelines
 .. contents::
    :local:
 
-Introduction
-============
-
-QGIS Documentation will
-be built automatically on the server at 0, 8am, 4pm US/Pacific (Pacific Time).
-The current status is available at https://docs.qgis.org.
-
-QGIS Documentation is mainly written using the reStructuredText (reST) format syntax,
-coupled with some scripts from the Sphinx toolset to post-process the HTML output.
-See http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
-or https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html.
-
 In general, when creating reST documentation for the QGIS project, please follow
-the `Python documentation style guidelines
-<https://devguide.python.org/documenting/>`_.
-Below you will find some general guidelines for writing QGIS documentation
-using reST.
-
-If you are looking for general rules on contributing to QGIS project or managing
-repositories, you may find help at
-`Get Involved in the QGIS Community <https://qgis.org/en/site/getinvolved/index.html>`_.
+the `Python documentation style guidelines <https://devguide.python.org/documenting/>`_.
+For convenience, we provide a set of general rules we rely on for writing
+QGIS documentation below.
 
 
 Writing Documentation

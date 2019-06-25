@@ -13,7 +13,7 @@
 
 If you are reading these lines, it is certainly because you are willing
 to contribute to writing QGIS documentation and are looking for a how-to.
-Then you are at the right place. The current document will guide you through
+You have come to the right place! The current document will guide you through
 the different ways to achieve this objective, showing you the main steps to
 follow, the tricks you can use and the traps you should be aware of.
 
@@ -23,6 +23,15 @@ are trying to fix or write to the `QGIS-community-team list
 `Get involved in documentation <https://qgis.org/en/site/getinvolved/document.html>`_.
 
 Let's now dive into the process.
+
+Documentation sources are stored using the git version control system and are
+available on GitHub at https://github.com/qgis/QGIS-Documentation.
+There are two main ways, not mutually exclusive, to modify the files:
+
+#. :ref:`Using the GitHub web interface <github_interface>`
+#. :ref:`Using Git command line tools <git_command_line_tools>`.
+
+.. _github_interface:
 
 Using the GitHub web interface
 ==============================
@@ -291,7 +300,8 @@ branch` icon to delete any unwanted branches.
 Using Git command line tools
 =============================
 
-The GitHub web interface is an easy way to update the QGIS-documentation repo with your contributions, but it doesn't offer tools to:
+The GitHub web interface is an easy way to update the QGIS-documentation
+repo with your contributions, but it doesn't offer tools to:
 
 * group your commits and clean your change history
 * fix possible conflicts with the main repo
