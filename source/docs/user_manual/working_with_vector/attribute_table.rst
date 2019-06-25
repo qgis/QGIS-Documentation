@@ -377,7 +377,7 @@ and selecting modes.
 
 A filter can also be specified with the :guilabel:`Advanced Filter (Expression)`
 choice in the bottom left pull-down menu of the attribute table dialog.
-The filter expression will shown up at the bottom of the widget.
+The filter expression will show up at the bottom of the widget.
 
 .. _figure_filter_select_form:
 
