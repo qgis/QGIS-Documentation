@@ -368,16 +368,16 @@ Filtering and selecting features using forms
 --------------------------------------------
 
 Clicking the |filterMap| :sup:`Filter/Select features using form` or
-pressing :kbd:`Ctrl+F` the attribute table dialog will switch to form view
-and all widgets are replaced with their search variant.
+pressing :kbd:`Ctrl+F` will make the attribute table dialog switch to form view
+and replace each widget with its search variant.
 
 From this point onwards, this tool functionality is similar to the one described
-in the :ref:`select_by_value`, where you can find descriptions of all operators
+in :ref:`select_by_value`, where you can find descriptions of all operators
 and selecting modes.
 
-Moreover, in the attribute table case, there is also a :guilabel:`Filter
-features` button that allows filtering features instead of selecting them (by
-creating an Advanced Filter (Expression) for the user).
+A filter can also be specified with the :guilabel:`Advanced Filter (Expression)`
+choice in the bottom left pull-down menu of the attribute table dialog.
+The filter expression will shown up at the bottom of the widget.
 
 .. _figure_filter_select_form:
 
@@ -392,8 +392,8 @@ drop-down list next to the :guilabel:`Filter features` button. The options are:
 * :guilabel:`Filter within ("AND")`
 * :guilabel:`Extend filter ("OR")`
 
-To clear the filter, either select :guilabel:`Show all features` option
-mentioned in :ref:`filter_features`, or click to clear the expression and
+To clear the filter, either select the :guilabel:`Show all features` option
+mentioned in :ref:`filter_features`, or clear the expression and
 click :guilabel:`Apply`.
 
 Using action on features
