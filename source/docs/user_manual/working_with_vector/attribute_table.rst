@@ -393,7 +393,7 @@ drop-down list next to the :guilabel:`Filter features` button. The options are:
 * :guilabel:`Extend filter ("OR")`
 
 To clear the filter, either select the :guilabel:`Show all features` option
-mentioned in :ref:`filter_features`, or clear the expression and
+from the bottom left pull-down menu, or clear the expression and
 click :guilabel:`Apply` or press :kbd:`Enter`.
 
 Using action on features
