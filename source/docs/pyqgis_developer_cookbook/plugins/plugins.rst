@@ -137,7 +137,7 @@ icon                   False     a file name or a relative path (relative to
                                  the base folder of the plugin's compressed
                                  package) of a web friendly image (PNG, JPEG)
 category               False     one of `Raster`, `Vector`, `Database` and `Web`
-plugin_dependencies    False     PIP-like comma separated list of other plugins to install (since QGIS 3.8)
+plugin_dependencies    False     PIP-like comma separated list of other plugins to install
 =====================  ========  =======================================
 
 By default, plugins are placed in the `Plugins` menu (we will see in the next
