@@ -53,8 +53,9 @@ the  :ref:`qgissetzfromraster` algorithm may be used to add Z values
 from a DEM layer.
 
 The output layer is a copy of the input layer with additional fields that
-contain the total climb, total descent, the minimum elevation and the
-maximum elevation for each line geometry.
+contain the total climb (``climb``), total descent (``descent``), the
+minimum elevation (``minelev``) and the maximum elevation (``maxelev``) for
+each line geometry.
 If the input layer contains fields with the same names as these added fields,
 they will be renamed (field names will be altered to "name_2", "name_3", etc,
 finding the first non-duplicate name).
