@@ -94,7 +94,7 @@ datasets from the same folder (:file:`exercise_data/shapefile`) to the map.
 |IC|
 -------------------------------------------------------------------------------
 
-You've learned how to add a layer from a shapefile dataset and create a basic map!
+You've learned how to add a layer from a Shapefile dataset and create a basic map!
 
 |WN|
 -------------------------------------------------------------------------------
