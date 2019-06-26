@@ -69,18 +69,23 @@ Outputs
 .......
 ``Climb layer`` [vector: line]
   Line layer containing new attributes with the results from climb calculations.
+  Key in the result dictionary: ``OUTPUT``.
 
 ``Total climb`` [number]
   The sum of the climb for all the line geometries in the layer.
+  Key in the result dictionary: ``TOTALCLIMB``.
 
 ``Total descent`` [number]
   The sum of the descent for all the line geometries in the layer.
+  Key in the result dictionary: ``TOTALDESCENT``.
 
 ``Minimum elevation`` [number]
   The minimum elevation for the geometries in the layer.
+  Key in the result dictionary: ``MINELEVATION``.
 
 ``Maximum elevation`` [number]
   The maximum elevation for the geometries in the layer.
+  Key in the result dictionary: ``MAXELEVATION``.
 
 
 .. _qgiscountpointsinpolygon:
