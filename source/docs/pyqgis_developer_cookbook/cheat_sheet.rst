@@ -13,6 +13,12 @@ Cheat sheet for PyQGIS
    .. contents::
       :local:
 
+.. testsetup::
+
+    from qgis.core import QgsProject
+
+    QgsProject.instance().clean()
+
 User Interface
 ==============
 
