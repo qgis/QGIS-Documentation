@@ -17,7 +17,7 @@ Cheat sheet for PyQGIS
 
     from qgis.core import QgsProject
 
-    QgsProject.instance().clean()
+    QgsProject.instance().clear()
 
 User Interface
 ==============
