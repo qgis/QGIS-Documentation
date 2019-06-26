@@ -186,7 +186,7 @@ uses the standard STYLES parameter.
  &HEIGHT=551
  &FORMAT=image/jpeg
  &LAYERS=countries,countries_shapeburst
- &STYLES=classified_by_name,default
+ &STYLES=classified_by_name,blue
  &OPACITIES=255,30
  &FILTER=countries:"name" IN ( 'Germany' , 'Italy' )
 
