@@ -42,6 +42,53 @@ Outputs
   HTML file with calculated statistics.
 
 
+.. _qgisclimbalongline:
+
+Climb along line
+----------------
+
+This algorithm calculates the total climb and descent along line geometries.
+The input layer must have Z values present. If Z values are not available,
+the  :ref:`qgissetzfromraster` algorithm may be used to add Z values
+from a DEM layer.
+
+The output layer is a copy of the input layer with additional fields that
+contain the total climb (``climb``), total descent (``descent``), the
+minimum elevation (``minelev``) and the maximum elevation (``maxelev``) for
+each line geometry.
+If the input layer contains fields with the same names as these added fields,
+they will be renamed (field names will be altered to "name_2", "name_3", etc,
+finding the first non-duplicate name).
+
+Parameters
+..........
+
+``Line layer`` [vector: line]
+  Line layer to calculate the climb for. Must have Z values.
+
+Outputs
+.......
+``Climb layer`` [vector: line]
+  Line layer containing new attributes with the results from climb calculations.
+  Key in the result dictionary: ``OUTPUT``.
+
+``Total climb`` [number]
+  The sum of the climb for all the line geometries in the layer.
+  Key in the result dictionary: ``TOTALCLIMB``.
+
+``Total descent`` [number]
+  The sum of the descent for all the line geometries in the layer.
+  Key in the result dictionary: ``TOTALDESCENT``.
+
+``Minimum elevation`` [number]
+  The minimum elevation for the geometries in the layer.
+  Key in the result dictionary: ``MINELEVATION``.
+
+``Maximum elevation`` [number]
+  The maximum elevation for the geometries in the layer.
+  Key in the result dictionary: ``MAXELEVATION``.
+
+
 .. _qgiscountpointsinpolygon:
 
 Count points in polygon
