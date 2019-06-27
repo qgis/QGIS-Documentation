@@ -631,6 +631,10 @@ Outputs
 ``Extent``
   Layer with a polygon feature representing the input extent.
 
+See also
+........
+:ref:`qgispointtolayer`
+
 
 .. _qgiswedgebuffers:
 
@@ -1907,6 +1911,34 @@ Outputs
 
 ``Displaced`` [vector: point]
   Point vector layer with displaced features.
+
+
+.. _qgispointtolayer:
+
+Point to layer
+--------------
+
+Creates a new vector layer that contains a single feature with
+geometry matching a point parameter.
+It can be used in models to convert a point into a layer which can be used
+for other algorithms which require a layer based input.
+
+Parameters
+..........
+
+``Point`` [coordinates]
+  Input point (example: ``397254,6214446 [EPSG:32632]``).
+
+
+Outputs
+.......
+
+``Point`` [vector: point]
+  Point vector layer containing the input point.
+
+See also
+........
+:ref:`qgisextenttolayer`
 
 
 .. _qgispoleofinaccessibility:
