@@ -274,10 +274,13 @@ created in this way will always be added to a user's Processing Scripts
 provider -- it is not possible to add these algorithms to a custom provider,
 e.g. for use in plugins.
 
-The following code uses the @alg decorator to take a vector layer, count
-the number of features, do a buffer operation and create a raster layer
-from the result of the buffer operation.
-The buffer layer, raster layer and number of features are returned.
+The following code uses the @alg decorator to 
+
+#. use a vector layer as input
+#. count the number of features
+#. do a buffer operation
+#. create a raster layer from the result of the buffer operation
+#. returns the buffer layer, raster layer and number of features
 
 .. testcode:: 
 
