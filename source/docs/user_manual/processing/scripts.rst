@@ -260,19 +260,20 @@ The buffer layer, raster layer and number of features are returned.
 The @alg decorator
 ------------------
 
-By using the @alg decorator, you can create your own algorithms by writing the
-corresponding Python code and adding a few extra lines to supply additional
-information needed to define the semantics of the algorithm.
-This simplifies the creation of algorithms and specification of inputs and
-outputs.
+Using the @alg decorator, you can create your own algorithms by writing the
+Python code and adding a few extra lines to supply additional
+information needed to make it a proper Processing algorithm.
+This simplifies the creation of algorithms and the specification of inputs
+and outputs.
+
 One important limitation with the decorator approach is that algorithms
 created in this way will always be added to a user's Processing Scripts
 provider -- it is not possible to add these algorithms to a custom provider,
 e.g. for use in plugins.
 
-The following code takes a vector layer, counts the number of features, does a
-buffer operation and creates a raster layer from the result of the buffer
-operation using the @alg decorator.
+The following code uses the @alg decorator to take a vector layer, count
+the number of features, do a buffer operation and create a raster layer
+from the result of the buffer operation.
 The buffer layer, raster layer and number of features are returned.
 
 .. testcode:: 
@@ -355,13 +356,13 @@ the toolbox or the graphical modeler.
 These lines are all calls to the ``@alg`` decorator functions that
 help simplify the coding of the algorithm.
 
-The @alg decorator is used to define the name and location of the
-algorithm in the Toolbox.
-The @alg.input decorator is used to define the inputs of the algorithm.
-The @alg.output decorator is used to define the outputs of the algorithm.
+* The @alg decorator is used to define the name and location of the
+  algorithm in the Toolbox.
+* The @alg.input decorator is used to define the inputs of the algorithm.
+* The @alg.output decorator is used to define the outputs of the algorithm.
 
-Here is the list of input and output types types that are supported in
-Processing and their corresponding alg decorator constants
+Here is the list of input and output types that are supported in
+Processing with their corresponding alg decorator constants
 (:file:`algfactory.py` contains the complete list of alg constants).
 
 .. list-table:: Input and output types
@@ -374,86 +375,86 @@ Processing and their corresponding alg decorator constants
    * - :class:`QgsProcessingParameterAuthConfig <qgis.core.QgsProcessingParameterAuthConfig>`
      - ``alg.AUTH_CFG``
      - Allows users to select from available authentication configurations or
-       create new authentication configurations.
+       create new authentication configurations
    * - :class:`QgsProcessingParameterBand <qgis.core.QgsProcessingParameterBand>`
      - ``alg.BAND``
-     - A band of a raster layer.
+     - A band of a raster layer
    * - :class:`QgsProcessingParameterBoolean <qgis.core.QgsProcessingParameterBoolean>`
      - ``alg.BOOL``
-     - A boolean value.
+     - A boolean value
    * - :class:`QgsProcessingParameterCrs <qgis.core.QgsProcessingParameterCrs>`
      - ``alg.CRS``
      - A Coordinate Reference System
    * - :class:`QgsProcessingParameterDistance <qgis.core.QgsProcessingParameterDistance>`
      - ``alg.DISTANCE``
-     - A double numeric parameter for distance values.
+     - A double numeric parameter for distance values
    * - :class:`QgsProcessingParameterEnum <qgis.core.QgsProcessingParameterEnum>`
      - ``alg.ENUM``
-     - An enumeration, allowing for selection from a set of predefined values.
+     - An enumeration, allowing for selection from a set of predefined values
    * - :class:`QgsProcessingParameterExpression <qgis.core.QgsProcessingParameterExpression>`
      - ``alg.EXPRESSION``
-     - An expression.
+     - An expression
    * - :class:`QgsProcessingParameterExtent <qgis.core.QgsProcessingParameterExtent>`
      - ``alg.EXTENT``
-     - A spatial extent defined by xmin, xmax, ymin, ymax.
+     - A spatial extent defined by xmin, xmax, ymin, ymax
    * - :class:`QgsProcessingParameterField <qgis.core.QgsProcessingParameterField>`
      - ``alg.FIELD``
-     - A field in the attribute table of a vector layer.
+     - A field in the attribute table of a vector layer
    * - :class:`QgsProcessingParameterFile <qgis.core.QgsProcessingParameterFile>`
      - ``alg.FILE``
-     - A filename of an existing file.
+     - A filename of an existing file
    * - :class:`QgsProcessingParameterFileDestination <qgis.core.QgsProcessingParameterFileDestination>`
      - ``alg.FILE_DEST``
-     - A filename for a newly created output file.
+     - A filename for a newly created output file
    * - :class:`QgsProcessingParameterFolderDestination <qgis.core.QgsProcessingParameterFolderDestination>`
      - ``alg.FOLDER_DEST``
-     - A folder.
+     - A folder
    * - :class:`QgsProcessingParameterMapLayer <qgis.core.QgsProcessingParameterMapLayer>`
      - ``alg.MAPLAYER``
-     - A map layer.
+     - A map layer
    * - :class:`QgsProcessingParameterMatrix <qgis.core.QgsProcessingParameterMatrix>`
      - ``alg.MATRIX``
-     - A matrix.
+     - A matrix
    * - :class:`QgsProcessingParameterMeshLayer <qgis.core.QgsProcessingParameterMeshLayer>`
      - ``alg.MESH_LAYER``
-     - A mesh layer.
+     - A mesh layer
    * - :class:`QgsProcessingParameterMultipleLayers <qgis.core.QgsProcessingParameterMultipleLayers>`
      - ``alg.MULTILAYER``
-     - A set of layers.
+     - A set of layers
    * - :class:`QgsProcessingParameterNumber <qgis.core.QgsProcessingParameterNumber>`
      - ``alg.NUMBER``
-     - A numerical value.
+     - A numerical value
    * - :class:`QgsProcessingParameterPoint <qgis.core.QgsProcessingParameterPoint>`
      - ``alg.POINT``
-     - A point.
+     - A point
    * - :class:`QgsProcessingParameterRange <qgis.core.QgsProcessingParameterRange>`
      - ``alg.RANGE``
-     - A number range.
+     - A number range
    * - :class:`QgsProcessingParameterRasterLayer <qgis.core.QgsProcessingParameterRasterLayer>`
      - ``alg.RASTER_LAYER``
-     - A raster layer.
+     - A raster layer
    * - :class:`QgsProcessingParameterRasterDestination <qgis.core.QgsProcessingParameterRasterDestination>`
      - ``alg.RASTER_LAYER_DEST``
-     - A raster layer.
+     - A raster layer
    * - :class:`QgsProcessingParameterFeatureSink <qgis.core.QgsProcessingParameterFeatureSink>`
      - ``alg.SINK``
-     - A feature sink.
+     - A feature sink
    * - :class:`QgsProcessingParameterFeatureSource <qgis.core.QgsProcessingParameterFeatureSource>`
      - ``alg.SOURCE``
-     - A feature source.
+     - A feature source
    * - :class:`QgsProcessingParameterString <qgis.core.QgsProcessingParameterString>`
      - ``alg.STRING``
-     - A text string.
+     - A text string
    * - :class:`QgsProcessingParameterVectorLayer <qgis.core.QgsProcessingParameterVectorLayer>`
      - ``alg.VECTOR_LAYER``
-     - A vector layer.
+     - A vector layer
    * - :class:`QgsProcessingParameterVectorDestination <qgis.core.QgsProcessingParameterVectorDestination>`
      - ``alg.VECTOR_LAYER_DEST``
-     - A vector layer.
+     - A vector layer
 
 
-Handing data produced by the algorithm
---------------------------------------
+Handing algorithm output
+------------------------
 
 When you declare an output representing a layer (raster or vector),
 the algorithm will try to add it to QGIS once it is finished.
@@ -464,10 +465,10 @@ the algorithm will try to add it to QGIS once it is finished.
   alg.VECTOR_LAYER_DEST.
 
 So even if the ``processing.run()`` method does not add the layers
-it creates into the user's current project,
+it creates to the user's current project,
 the two output layers (buffer and raster buffer) will be loaded,
 since they are saved to the destinations entered by the user (or to
-temporary destinations if the user does not specify a destination).
+temporary destinations if the user does not specify destinations).
 
 If a layer is created as output of an algorithm, it should be
 declared as such.
@@ -494,7 +495,7 @@ The progress text and progressbar can be updated using two methods:
 :meth:`setProgressText(text) <qgis.core.QgsProcessingFeedback.setProgressText>`
 and :meth:`setProgress(percent) <qgis.core.QgsFeedback.setProgress>`.
 
-You can provide more information to the user using
+You can provide more information by using
 :meth:`pushCommandInfo(text) <qgis.core.QgsProcessingFeedback.pushCommandInfo>`,
 :meth:`pushDebugInfo(text) <qgis.core.QgsProcessingFeedback.pushDebugInfo>`,
 :meth:`pushInfo(text) <qgis.core.QgsProcessingFeedback.pushInfo>` and
