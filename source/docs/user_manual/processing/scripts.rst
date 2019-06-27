@@ -66,7 +66,7 @@ The buffer layer, raster layer and number of features are returned.
         def createInstance(self):
             # createInstance must return a new copy of your algorithm.
             # If you change the name of the class, make sure you also
-            # update the the value returned here to match!
+            # update the value returned here to match!
             return ExampleProcessingAlgorithm()
     
         def name(self):
