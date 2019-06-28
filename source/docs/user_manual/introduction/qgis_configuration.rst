@@ -1398,7 +1398,7 @@ returns::
 ``--version``
 ..............
 
-This option returns QGIS version.
+This option returns QGIS version information.
 
 ``--snapshot``
 ..............
