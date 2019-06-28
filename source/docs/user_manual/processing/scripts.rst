@@ -26,10 +26,13 @@ become available in the :guilabel:`Processing Toolbox`.
 Extending QgsProcessingAlgorithm
 --------------------------------
 
-The following code takes a vector layer, counts the number of features,
-does a buffer operation and creates a raster layer from the result of
-the buffer operation.
-The buffer layer, raster layer and number of features are returned.
+The following code
+
+#. takes a vector layer as input
+#. counts the number of features
+#. does a buffer operation
+#. creates a raster layer from the result of the buffer operation
+#. returns the buffer layer, raster layer and number of features
 
 .. testcode:: 
 
