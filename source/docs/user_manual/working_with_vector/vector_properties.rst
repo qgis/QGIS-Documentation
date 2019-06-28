@@ -2279,7 +2279,7 @@ Use this function to add extra logic to your dialogs. The form code can be
 specified in three different ways:
 
 * ``load from the environment``: use a function, for example in
-  :file:`startup.py` or from an installed plugin)
+  :file:`startup.py` or from an installed plugin
 * ``load from an external file``: a file chooser will appear in that case to
   allow you to select a Python file from your filesystem
 * ``provide code in this dialog``: a Python editor will appear where you can
