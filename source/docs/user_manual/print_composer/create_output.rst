@@ -164,10 +164,9 @@ Export as PDF
 =============
 
 The |saveAsPDF| :sup:`Export as PDF` tool exports all the composition pages
-into a single PDF file you'd need to provide path and name.
-Unlike the other formats, exporting to :file:`.PDF` does not provide means to
-override the layout export settings. So check :ref:`these settings
-<layout_export_settings>` to ensure they are compatible with your needs.
+into a single PDF file. Like the other formats, exporting to :file:`.PDF`
+provides means to override some of the layout :ref:`export settings
+<layout_export_settings>`.
 
 .. _figure_layout_output_pdf:
 
