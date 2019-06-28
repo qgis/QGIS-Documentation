@@ -1138,25 +1138,14 @@ if one of the inputs is NULL then the result is NULL.
 
 |
 
-.. note:: **About fields concatenation**
-
-  You can concatenate strings using either `||` or ``+``. The latter also means
-  sum up expression. So if you have an integer (field or numeric value) this can
-  be error prone. In this case, you should use `||`. If you concatenate two
-  string values, you can use both.
-
 **Some examples:**
 
 * Joins a string and a value from a column name::
 
     'My feature''s id is: ' || "gid"
-    'My feature''s id is: ' + "gid" => triggers an error as gid is an integer
-    "country_name" + '(' + "country_code" + ')'
-    "country_name" || '(' || "country_code" || ')'
-
 
 * Test if the "description" attribute field starts with the 'Hello' string
-  in the value (note the position of the % character)::
+  in the value (note the position of the ``%`` character)::
 
     "description" LIKE 'Hello%'
 
@@ -1271,6 +1260,35 @@ This group contains functions that operate on strings
  wordwrap               Returns a string wrapped to a maximum/
                         minimum number of characters
 =====================  ======================================================
+
+|
+
+**About fields concatenation**
+
+You can concatenate strings or field values using either ``||`` or ``+``
+operators or the ``concat`` function, with some special characteristics:
+
+* The ``+`` operator also means sum up expression, so if you have an integer
+  (field or numeric value) operand, this can be error prone and you better use
+  the others::
+
+   'My feature''s id is: ' + "gid" => triggers an error as gid is an integer
+
+* When any of the arguments is a NULL value, either ``||`` or ``+`` will
+  return a NULL value. To return the other arguments regardless the NULL value,
+  you may want to use the ``concat`` function::
+
+   "country_name" || NULL => NULL
+   concat('My feature''s id is: ', NULL) => My feature's id is
+   concat("firstname", "nickname", "lastname") => Chuck Norris (if empty nickname)
+   "firstname" + "nickname" + "lastname" => NULL (if one field is empty)
+
+* For other cases, do at your convenience::
+
+   'My country is ' + "country_name" + ' (' + "country_code" + ')'
+   'My country is ' || "country_name" || ' (' || "country_code" || ')'
+   concat('My country is ', "country_name", ' (', "country_code", ')')
+   # All the above return: My country is France (FR)
 
 
 .. _variables_functions:
@@ -1533,3 +1551,4 @@ Further information about creating Python code can be found in the
 .. |start| image:: /static/common/mActionStart.png
    :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
+
