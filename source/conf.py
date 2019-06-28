@@ -356,3 +356,8 @@ def start_qgis():
     sys.stdout = sys.stderr
 '''
 doctest_test_doctest_blocks = ''
+
+doctest_global_cleanup = '''
+from qgis.core import QgsProject
+QgsProject.instance().clear()
+'''
