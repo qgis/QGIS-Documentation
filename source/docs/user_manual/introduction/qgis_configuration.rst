@@ -1395,6 +1395,11 @@ returns::
         set to load on startup using the following command:
         ``qgis ./raster/landcover.img ./gml/lakes.gml``
 
+``--version``
+..............
+
+This option returns QGIS version.
+
 ``--snapshot``
 ..............
 
@@ -1409,7 +1414,17 @@ be added after ``--snapshot``. For example::
 
   qgis --snapshot my_image.png --width 1000 --height 600 --project my_project.qgs
 
-``--lang``
+``--width``
+...........
+
+This option returns the width of the snapshot to be emitted (used with ``--snapshot``).
+
+``--height``
+............
+
+This option returns the height of the snapshot to be emitted (used with ``--snapshot``).
+
+`--lang``
 ..........
 
 Based on your locale, QGIS selects the correct localization. If you would like
@@ -1423,8 +1438,8 @@ Starting QGIS with an existing project file is also possible. Just add the
 command line option ``--project`` followed by your project name and QGIS will
 open with all layers in the given file loaded.
 
-``extent``
-..........
+``--extent``
+............
 
 To start with a specific map extent use this option. You need to add the
 bounding box of your extent in the following order separated by a comma::
