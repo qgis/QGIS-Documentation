@@ -110,7 +110,7 @@ plugin such as its name, description etc. File :file:`metadata.txt` is the
 right place to put this information.
 
 
-.. important::
+.. note::
    All metadata must be in UTF-8 encoding.
 
 .. _plugin_metadata_table:
@@ -139,6 +139,8 @@ icon                   False     a file name or a relative path (relative to
 category               False     one of `Raster`, `Vector`, `Database` and `Web`
 plugin_dependencies    False     PIP-like comma separated list of other plugins to install
 =====================  ========  =======================================
+
+|
 
 By default, plugins are placed in the `Plugins` menu (we will see in the next
 section  how to add a menu entry for your plugin) but they can also be placed
