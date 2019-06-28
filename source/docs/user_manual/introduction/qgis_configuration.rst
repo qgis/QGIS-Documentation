@@ -1424,7 +1424,7 @@ This option returns the width of the snapshot to be emitted (used with ``--snaps
 
 This option returns the height of the snapshot to be emitted (used with ``--snapshot``).
 
-`--lang``
+``--lang``
 ..........
 
 Based on your locale, QGIS selects the correct localization. If you would like
