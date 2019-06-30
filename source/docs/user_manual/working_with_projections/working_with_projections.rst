@@ -338,15 +338,10 @@ to the current project only.
 
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |crs| image:: /static/common/CRS.png
-   :width: 1.5em
 .. |customProjection| image:: /static/common/mActionCustomProjection.png
    :width: 1.5em
-.. |geographic| image:: /static/common/geographic.png
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em
-.. |projectProperties| image:: /static/common/mActionProjectProperties.png
-   :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
    :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
