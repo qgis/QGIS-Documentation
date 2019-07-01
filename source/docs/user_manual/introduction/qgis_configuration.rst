@@ -141,9 +141,11 @@ and so on.
 
 .. note::
   Documentation is versioned and translated only for QGIS Long Term Releases (LTR),
-  meaning that if you are running a regular release (eg, QGIS 3.0), help button will
-  open the *testing* manual page, which may contain description of features
-  in newer release (3.2 and 3.4) or in development (3.1 and 3.3).
+  meaning that if you are running a regular release (eg, QGIS 3.0), the help button
+  will by default open the next LTR manual page (ie. 3.4 LTR), which may contain
+  description of features in newer releases (3.2 and 3.4). If no LTR documentation
+  is available then the *testing* doc, with features from newer and development
+  versions, is used.
 
 **QSettings**
 
