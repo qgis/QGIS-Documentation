@@ -1,8 +1,8 @@
 .. _projectpy:
 
-*****************
-Accessing the TOC
-*****************
+*************************************
+Accessing the Table Of Contents (TOC)
+*************************************
 
 .. contents::
    :local:
@@ -17,20 +17,23 @@ following imports:
                           QgsLayerTreeLayer,
                           )
 
-You can use different classes to access all the loaded layer in the TOC and
-use them to retrieve information.
+You can use different classes to access all the loaded layers in the TOC and
+use them to retrieve information:
 
-QgsProject class
-================
+* :class:`QgsProject <qgis.core.QgsProject>`
+* :class:`QgsLayerTreeGroup <qgis.core.QgsLayerTreeGroup>`
 
-You can use the :class:`QgsProject <qgis.core.QgsProject>` to retrieve
-information about the TOC and all the layer loaded.
+The QgsProject class
+====================
 
-You have to create an ``instance`` of the :class:`QgsProject <qgis.core.QgsProject>`
-and use its method to get the loaded layers.
+You can use :class:`QgsProject <qgis.core.QgsProject>` to retrieve information
+about the TOC and all the layer loaded.
 
-The main method is :meth:`mapLayers() <qgis.core.QgsProject.mapLayers>` that
-will return a dictionary of the loaded layers:
+You have to create an ``instance`` of :class:`QgsProject <qgis.core.QgsProject>`
+and use its methods to get the loaded layers.
+
+The main method is :meth:`mapLayers() <qgis.core.QgsProject.mapLayers>`. It will
+return a dictionary of the loaded layers:
 
 .. code-block:: python
 
@@ -38,10 +41,10 @@ will return a dictionary of the loaded layers:
   d
   {'ne_10m_populated_places_82a2e342_f2a0_4496_b5bc_fdd5a2bea4d8': <qgis._core.QgsVectorLayer object at 0x7f1e98c438b8>, 'countries_d0c46c9f_2bd6_4745_9bbd_5bf265500431': <qgis._core.QgsVectorLayer object at 0x7f1e98c43828>, 'regions_77909407_0815_4c37_96e3_19e9f2aa2657': <qgis._core.QgsVectorLayer object at 0x7f1e98c43678>}
 
-the dictionary ``keys`` are the unique layer id while the ``values`` are the
+The dictionary ``keys`` are the unique layer ids while the ``values`` are the
 related objects.
 
-It is now straightforward to obtain any other information of the layers:
+It is now straightforward to obtain any other information about the layers:
 
 .. code-block:: python
 
@@ -54,24 +57,24 @@ It is now straightforward to obtain any other information of the layers:
   d
   {'ne_10m_populated_places': <qgis._core.QgsVectorLayer object at 0x7f1e98c438b8>, 'regions': <qgis._core.QgsVectorLayer object at 0x7f1e98c43678>, 'countries': <qgis._core.QgsVectorLayer object at 0x7f1e98c43828>}
 
-Else you can also query the TOC by the name of the layer:
+You can also query the TOC using the name of the layer:
 
 .. code-block:: python
 
     country_layer = QgsProject.instance().mapLayersByName("countries")[0]
 
-.. note:: it returns a list with all the matching layers, for this we indexed with
-  ``[0]`` to get the first (an unique layer with this name)
+.. note:: A list with all the matching layers is returned, so we index with
+  ``[0]`` to get the first layer with this name.
 
 
 QgsLayerTreeGroup class
 =======================
 
 The layer tree is a classical tree structure built of nodes. There are currently
-two types of nodes: group nodes :class:`QgsLayerTreeGroup <qgis.core.QgsLayerTreeGroup>`
-and layer nodes :class:`QgsLayerTreeLayer <qgis.core.QgsLayerTreeLayer>`.
+two types of nodes: group nodes (:class:`QgsLayerTreeGroup <qgis.core.QgsLayerTreeGroup>`)
+and layer nodes (:class:`QgsLayerTreeLayer <qgis.core.QgsLayerTreeLayer>`).
 
-.. note:: for more information you can read this blog posts of Martin Dobias:
+.. note:: for more information you can read these blog posts of Martin Dobias:
   `Part 1 <https://www.lutraconsulting.co.uk/blog/2014/07/06/qgis-layer-tree-api-part-1/>`_
   `Part 2 <https://www.lutraconsulting.co.uk/blog/2014/07/25/qgis-layer-tree-api-part-2/>`_
   `Part 3 <https://www.lutraconsulting.co.uk/blog/2015/01/30/qgis-layer-tree-api-part-3/>`_
@@ -89,10 +92,10 @@ of the :class:`QgsProject <qgis.core.QgsProject>` class:
 
     root.children()
 
-It returns a list of only direct children, sub group children should be accessed
-from their own sub groups.
+A list of direct children is returned. Sub group children should be accessed
+from their own direct parent.
 
-We can retrieving one of the children:
+We can retrieve one of the children:
 
 .. code-block:: python
 
@@ -100,16 +103,15 @@ We can retrieving one of the children:
     child0
     <qgis._core.QgsLayerTreeGroup object at 0x7f1e1ea54168>
 
-There are come useful methods to retrieve layers by their unique ``ids``:
+Layers can also be retrieved using their (unique) ``id``:
 
 .. code-block:: python
 
     ids = root.findLayerIds()
-    ids
     # access the first layer of the ids list
     root.findLayer(ids[0])
 
-And at the same time also groups can be searched by their names:
+And groups can also be searched using their names:
 
 .. code-block:: python
 
@@ -117,7 +119,7 @@ And at the same time also groups can be searched by their names:
 
 
 :class:`QgsLayerTreeGroup <qgis.core.QgsLayerTreeGroup>` has many other useful
-method that can be used to obtain other information of the TOC:
+methods that can be used to obtain more information about the TOC:
 
 .. code-block:: python
 
@@ -129,7 +131,7 @@ method that can be used to obtain other information of the TOC:
 Now let’s add some layers to the project’s layer tree. There are two ways of doing
 that:
 
-#. **Explicit addition** with :meth:`addLayer() <qgis.core.QgsLayerTreeGroup.addLayer>`
+#. **Explicit addition** using the :meth:`addLayer() <qgis.core.QgsLayerTreeGroup.addLayer>`
    or :meth:`insertLayer() <qgis.core.QgsLayerTreeGroup.insertLayer>`
    functions:
 
@@ -142,7 +144,7 @@ that:
       # add the layer at given position
       root.insertLayer(5, layer1)
 
-#. **Implicit addition**: while the project's layer tree is connected to the
+#. **Implicit addition**: since the project's layer tree is connected to the
    layer registry it is enough to add a layer to the map layer registry:
 
    .. code-block:: python
@@ -161,24 +163,24 @@ You can switch between :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` and
     node_layer.layer()
     <qgis._core.QgsVectorLayer object at 0x7fecceb46c18>
 
-Groups  can be added with the :meth:`addGroup() <qgis.core.QgsLayerTreeGroup.addGroup>`
-method. The former will add a group to the end of the TOC while with the latter
-you can choose the position at which you want to add the group:
+Groups can be added with the :meth:`addGroup() <qgis.core.QgsLayerTreeGroup.addGroup>`
+method. In the example below, the former will add a group to the end of the TOC
+while for the latter you can add another group within an existing one:
 
 .. code-block:: python
 
     node_group1 = root.addGroup('Simple Group')
     # add a sub-group to Simple Group
-    node_subgroup1 = node_group.addGroup("I'm a sub group")
+    node_subgroup1 = node_group1.addGroup("I'm a sub group")
 
 
-To remove nodes and groups there are many useful methods.
+To moving nodes and groups there are many useful methods.
 
-Moving an existing node is made in 3 steps:
+Moving an existing node is done in three steps:
 
-1. cloning the existing node
-2. moving the cloned node to the desired position
-3. deleting the original node
+#. cloning the existing node
+#. moving the cloned node to the desired position
+#. deleting the original node
 
 .. code-block:: python
 
@@ -189,7 +191,7 @@ Moving an existing node is made in 3 steps:
     # remove the original node
     root.removeChildNode(node_group1)
 
-A little bit more *complicated* could be move a layer around the legend:
+It is a little bit more *complicated* to move a layer around in the legend:
 
 .. code-block:: python
 
@@ -226,7 +228,7 @@ or moving it to an existing group:
     parent.removeChildNode(myvl)
 
 
-Other methods are available to modify the groups and layers:
+Some other methods that can be used to modify the groups and layers:
 
 .. code-block:: python
 
