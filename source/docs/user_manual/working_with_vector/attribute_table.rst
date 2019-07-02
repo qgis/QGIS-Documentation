@@ -375,9 +375,7 @@ From this point onwards, this tool functionality is similar to the one described
 in :ref:`select_by_value`, where you can find descriptions of all operators
 and selecting modes.
 
-A filter can also be specified with the :guilabel:`Advanced Filter (Expression)`
-choice in the bottom left pull-down menu of the attribute table dialog.
-The filter expression will show up at the bottom of the widget.
+The filter expression will show up at the bottom of the form.
 
 .. _figure_filter_select_form:
 
