@@ -350,7 +350,7 @@ For formats like ESRI Shapefile, MapInfo .tab, feature append is also available.
 GeoJSON specific parameters
 ---------------------------
 
-GeoJSON has some specific Layer options available. These option actually come
+GeoJSON has some specific :guilabel:`Layer Options` available. These options actually come
 from GDAL which is responsible for the writing of the file:
 
 * :guilabel:`COORDINATE_PRECISION` the maximum number of digits after the
