@@ -368,7 +368,7 @@ from GDAL which is responsible for the writing of the file:
   member names are forbidden in the FeatureCollection, Feature and Geometry
   object, the default coordinate precision is 7 decimal digits
 * :guilabel:`WRITE_BBOX` set to YES to write a bbox property with the bounding
-  boxof the geometries at the feature and feature collection level
+  box of the geometries at the feature and feature collection level
 
 Besides GeoJSON there is also an option to export to
 "GeoJSON - Newline Delimited" (see https://www.gdal.org/drv_geojsonseq.html).
