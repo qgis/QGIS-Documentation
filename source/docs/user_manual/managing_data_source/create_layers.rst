@@ -382,7 +382,7 @@ GeoJSON - Newline Delimited has some specific Layer options availabe too:
   difference is how the features are separated: only by a newline (LF) character
   (Newline Delimited JSON, geojsonl) or by prepending a record-separator (RS)
   character too (giving GeoJSON Text Sequences, geojsons). Default to NO.
-  Note that files are written with the json extention if not given
+  Note that files are written with the json extension if not given.
 
 .. index:: DXF Export
 .. _create_dxf_files:
