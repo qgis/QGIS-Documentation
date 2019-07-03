@@ -353,7 +353,7 @@ GeoJSON specific parameters
 GeoJSON has some specific Layer options available. These option actually come
 from GDAL which is responsible for the writing of the file:
 
-* :guilabel:`COORDINATE_PRECISION` the maximum number of figures after the
+* :guilabel:`COORDINATE_PRECISION` the maximum number of digits after the
   decimal separator to write in coordinates. Defaults to 15 (note: for Lat Lon
   coordinates 6 is considered enough). Truncation will occur to remove
   trailing zeros.
