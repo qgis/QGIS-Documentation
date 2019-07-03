@@ -366,7 +366,7 @@ from GDAL which is responsible for the writing of the file:
   rule for orientation, values of a "bbox" array are
   [west, south, east, north], not [minx, miny, maxx, maxy]. Some extension
   member names are forbidden in the FeatureCollection, Feature and Geometry
-  object, the default coordinate precision is 7 decimal digits
+  objects, the default coordinate precision is 7 decimal digits
 * :guilabel:`WRITE_BBOX` set to YES to write a bbox property with the bounding
   box of the geometries at the feature and feature collection level
 
