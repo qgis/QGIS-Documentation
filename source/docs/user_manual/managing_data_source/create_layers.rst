@@ -356,7 +356,7 @@ from GDAL which is responsible for the writing of the file:
 * :guilabel:`COORDINATE_PRECISION` the maximum number of figures after the
   decimal separator to write in coordinates. Defaults to 15 (note: for Lat Lon
   coordinates 6 is considered enough). Truncation will occur to remove
-  trailing zero's
+  trailing zeros.
 * :guilabel:`RFC7946` by default GeoJSON 2008 initial version will be used.
   If set to YES, then the updated RFC 7946 standard will be used.
   Default is NO (thus GeoJSON 2008).
