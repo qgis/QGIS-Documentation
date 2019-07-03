@@ -344,6 +344,32 @@ decide whether to:
 
 For formats like ESRI Shapefile, MapInfo .tab, feature append is also available.
 
+.. index:: GeoJSON Export
+.. _export_geojson_files:
+
+GeoJSON specific parameters
+---------------------------
+
+GeoJSON has some specific Layer options available. These option actually come
+from GDAL which is responsible for the writing of the file:
+
+* :guilabel:`COORDINATE_PRECISION` the maximum number of figures after the
+  decimal separator to write in coordinates. Defaults to 15 (note: for Lat Lon
+  coordinates 6 is considered enough). Truncation will occur to remove
+  trailing zero's
+* :guilabel:`RFC7946` by default GeoJSON 2008 initial version will be used.
+  If set to YES, then the updated RFC 7946 standard will be used.
+  Default is NO (thus GeoJSON 2008).
+  See https://gdal.org/drivers/vector/geojson.html#rfc-7946-write-support for
+  the main differences, in short: only EPSG:4326 is allowed, other crs's will
+  be transformed, polygons will be written such as to follow the right-hand
+  rule for orientation, values of a "bbox" array are
+  [west, south, east, north], not [minx, miny, maxx, maxy], Some extension
+  member names are forbidden in the FeatureCollection, Feature and Geometry
+  object, the default coordinate precision is 7 decimal digits
+* :guilabel:`WRITE_BBOX` set to YES to write a bbox property with the bounding
+  boxof the geometries at the feature and feature collection level
+
 .. index:: DXF Export
 .. _create_dxf_files:
 
