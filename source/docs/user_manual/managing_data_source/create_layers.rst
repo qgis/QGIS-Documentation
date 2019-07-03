@@ -370,6 +370,20 @@ from GDAL which is responsible for the writing of the file:
 * :guilabel:`WRITE_BBOX` set to YES to write a bbox property with the bounding
   boxof the geometries at the feature and feature collection level
 
+Besides GeoJSON there is also an option to export to
+"GeoJSON - Newline Delimited" (see https://www.gdal.org/drv_geojsonseq.html).
+Instead of a FeatureCollection with Features, you can stream one type
+(probably only Features) sequentially separated with newlines.
+
+GeoJSON - Newline Delimited has some specific Layer options availabe too:
+
+* :guilabel:`COORDINATE_PRECISION` see above at GeoJSON
+* :guilabel:`RS` whether to start records with the RS=0x1E character. The
+  difference is how the features are separated: only by a newline (LF) character
+  (Newline Delimited JSON, geojsonl) or by prepending a record-separator (RS)
+  character too (giving GeoJSON Text Sequences, geojsons). Default to NO.
+  Note that files are written with the json extention if not given
+
 .. index:: DXF Export
 .. _create_dxf_files:
 
