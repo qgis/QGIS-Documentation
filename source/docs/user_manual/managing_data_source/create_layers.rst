@@ -364,7 +364,7 @@ from GDAL which is responsible for the writing of the file:
   the main differences, in short: only EPSG:4326 is allowed, other crs's will
   be transformed, polygons will be written such as to follow the right-hand
   rule for orientation, values of a "bbox" array are
-  [west, south, east, north], not [minx, miny, maxx, maxy], Some extension
+  [west, south, east, north], not [minx, miny, maxx, maxy]. Some extension
   member names are forbidden in the FeatureCollection, Feature and Geometry
   object, the default coordinate precision is 7 decimal digits
 * :guilabel:`WRITE_BBOX` set to YES to write a bbox property with the bounding
