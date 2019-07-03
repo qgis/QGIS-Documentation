@@ -377,7 +377,7 @@ Instead of a FeatureCollection with Features, you can stream one type
 
 GeoJSON - Newline Delimited has some specific Layer options availabe too:
 
-* :guilabel:`COORDINATE_PRECISION` see above at GeoJSON
+* :guilabel:`COORDINATE_PRECISION` see above (same as for GeoJSON)
 * :guilabel:`RS` whether to start records with the RS=0x1E character. The
   difference is how the features are separated: only by a newline (LF) character
   (Newline Delimited JSON, geojsonl) or by prepending a record-separator (RS)
