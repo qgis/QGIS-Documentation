@@ -226,6 +226,12 @@ If you want to clear your session and start fresh, go to
 This will prompt you to save the existing project if
 changes have been made since it was opened or last saved.
 
+.. _figure_new_project:
+.. figure:: /static/common/new_project.png
+   :align: center
+ 
+   Starting a new project in QGIS 
+
 The information saved in a project file includes:
 
 * Layers added
