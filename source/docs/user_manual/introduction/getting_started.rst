@@ -49,7 +49,7 @@ https://htmlpreview.github.io/?https://raw.github.com/qgis/QGIS/master/doc/INSTA
 
 If you want to build a particular release and not the version in development,
 you should replace ``master`` with the release branch (commonly in the
-``release-X_Y`` form) in the above-mentioned link because instructions may differ.
+``release-X_Y`` form) in the above-mentioned link (installation instructions may differ).
 
 Installing on external media
 ----------------------------
@@ -71,7 +71,7 @@ Downloading sample data
 -----------------------
 
 This user guide contains examples based on the QGIS sample dataset (also called
-``Alaska dataset``).
+the ``Alaska dataset``).
 
 |win| The Windows installer has an option to download the QGIS sample dataset.
 If checked, the data will be downloaded to your :file:`Documents` folder and
@@ -195,7 +195,7 @@ Let's do some customization on the lakes layer.
    #. Select :guilabel:`Single labels` in the drop-down menu to enable labeling.
    #. From the :guilabel:`Label with` list, choose the ``NAMES`` field.
    #. Press :guilabel:`Apply`. Names will now load over the boundaries.
-#. You can improve readability of the labels, adding a white buffer around them:
+#. You can improve readability of the labels by adding a white buffer around them:
 
    #. Click the :guilabel:`Buffer` tab in the list on the left
    #. Check |checkbox| :guilabel:`Draw text buffer`
