@@ -29,32 +29,50 @@ Let's get started right away!
 -------------------------------------------------------------------------------
 
 #. Open QGIS. You will have a new, blank map.
-#. Click the :guilabel:`Open Data Source Manager` button: |dataSourceManager|.
+
+   .. image:: img/add_blank_qgis.png
+      :align: center
+      :width: 100 %
+
+   |
+
+#. The :guilabel:`Data Source Manager` dialog allows you to choose the data to
+   load depending on the data type. We'll use it to load our dataset:
+   click the |dataSourceManager| :sup:`Open Data Source Manager` button.
+
    If you can't find the icon, check that the :guilabel:`Data Source Manager`
    toolbar is enabled in the :menuselection:`View --> Toolbars` menu.
 
-   The :guilabel:`Data Source Manager` dialog allows you to choose the data to
-   load depending on the data type:
-   the tabs in the left-hand section of the dialog list the main data types.
-   You can also browse the files directly from the folder of your computer
-   with the *Browser* tab (see :ref:`browser_panel_tm` section):
-
    .. image:: img/add_data_dialog.png
       :align: center
-      :scale: 60 %
+      :width: 100 %
 
-#. Click on the :guilabel:`Vector` tab, enable the |radioButtonOn|:guilabel:`File`
-   source type and press the :guilabel:`...` button next to :guilabel:`Vector
-   Dataset(s)`.
-#. Navigate to the file :file:`exercise_data/shapefile/protected_areas.shp`
-   (in your course directory).
-#. Select the file and click :guilabel:`Open`. You will see the original dialog,
-   but with the file path filled in.
+   |
 
-   .. image:: img/add_vector_dialog.png
-      :align: center
+#. Load the :file:`protected_areas.shp` vector dataset:
+   
+   #. Click on the :guilabel:`Vector` tab.
+   #. Enable the |radioButtonOn|:guilabel:`File` source type.
+   #. Press the :guilabel:`...` button next to :guilabel:`Vector Dataset(s)`.
+   #. Select the :file:`exercise_data/shapefile/protected_areas.shp` file
+      in your training directory.
+   #. Click :guilabel:`Open`. You will see the original dialog,
+      with the file path filled in.
 
-#. Click :guilabel:`Add` here as well. The data you specified will now load.
+      .. image:: img/add_vector_dialog.png
+         :align: center
+
+      |
+
+   #. Click :guilabel:`Add` here as well. The data you specified will now load:
+      you can see a ``protected_areas`` item in the :guilabel:`Layers` panel
+      (bottom left) with its features shown in the main map canvas.
+
+      .. image:: img/first_loaded_layer.png
+         :align: center
+         :width: 100%
+
+      |
 
 Congratulations! You now have a basic map. Now would be a good time to save
 your work.
@@ -69,14 +87,14 @@ your work.
 -------------------------------------------------------------------------------
 
 Repeat the steps above to add the :file:`places.shp` and :file:`rivers.shp`
-data sets from the same folder (:file:`exercise_data/shapefile`) to the map.
+layers from the same folder (:file:`exercise_data/shapefile`) to the map.
 
 :ref:`Check your results <interface-preparation-1>`
 
 |IC|
 -------------------------------------------------------------------------------
 
-You've learned how to add a layer and create a basic map!
+You've learned how to add a layer from a Shapefile dataset and create a basic map!
 
 |WN|
 -------------------------------------------------------------------------------
