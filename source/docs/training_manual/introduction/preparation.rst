@@ -37,7 +37,7 @@ Let's get started right away!
    |
 
 #. The :guilabel:`Data Source Manager` dialog allows you to choose the data to
-   load depending on the data type. We'll be using it to load our dataset:
+   load depending on the data type. We'll use it to load our dataset:
    click the |dataSourceManager| :sup:`Open Data Source Manager` button.
 
    If you can't find the icon, check that the :guilabel:`Data Source Manager`
@@ -49,13 +49,13 @@ Let's get started right away!
 
    |
 
-#. Load the :file:`protected_areas.shp` dataset vector file:
+#. Load the :file:`protected_areas.shp` vector dataset:
    
    #. Click on the :guilabel:`Vector` tab.
    #. Enable the |radioButtonOn|:guilabel:`File` source type.
    #. Press the :guilabel:`...` button next to :guilabel:`Vector Dataset(s)`.
    #. Select the :file:`exercise_data/shapefile/protected_areas.shp` file
-      in your course directory.
+      in your training directory.
    #. Click :guilabel:`Open`. You will see the original dialog,
       with the file path filled in.
 
@@ -87,7 +87,7 @@ your work.
 -------------------------------------------------------------------------------
 
 Repeat the steps above to add the :file:`places.shp` and :file:`rivers.shp`
-datasets from the same folder (:file:`exercise_data/shapefile`) to the map.
+layers from the same folder (:file:`exercise_data/shapefile`) to the map.
 
 :ref:`Check your results <interface-preparation-1>`
 
