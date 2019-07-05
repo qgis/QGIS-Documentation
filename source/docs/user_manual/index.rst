@@ -16,6 +16,7 @@ QGIS User Guide
     preamble/features
     preamble/whats_new
     introduction/getting_started
+    introduction/project_files
     introduction/qgis_gui
     introduction/qgis_configuration
     working_with_projections/working_with_projections
