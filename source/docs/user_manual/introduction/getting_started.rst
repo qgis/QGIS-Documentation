@@ -227,6 +227,11 @@ QGIS, configure them and generate your map in an image format you can use in
 other softwares. Let's move on to learn more about the available functionality,
 features and settings, and how to use them.
 
+.. note::
+ If you want to continue learning QGIS through the step-by-step exercises
+ route, QGIS documentation provides a :ref:`Training manual
+ <QGIS-training-manual-index-reference>` you can rely on.
+
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
