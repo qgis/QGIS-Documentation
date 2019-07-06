@@ -15,8 +15,9 @@ Getting Started
    .. contents::
       :local:
 
-This chapter provides a quick overview of installing QGIS, downloading QGIS sample data,
-and running a first simple session visualizing raster and vector data.
+This chapter provides a quick overview of installing QGIS, downloading QGIS
+sample data, and running a first simple session visualizing raster and vector
+data.
 
 .. index:: Installation
 .. _`label_installation`:
@@ -24,9 +25,14 @@ and running a first simple session visualizing raster and vector data.
 Installing QGIS
 ===============
 
-Installing QGIS is easy. Standard installers are available
-for MS Windows |win| and MacOS |osx|. Binary packages (rpm and deb) or
-software repositories are provided for many flavors of GNU/Linux |nix|.
+QGIS project provides different ways to install QGIS depending on your platform.
+
+Installing from binaries
+------------------------
+
+Standard installers are available for |win| MS Windows and |osx| macOS. Binary
+packages (rpm and deb) or software repositories are provided for many flavors of
+GNU/Linux |nix|.
 
 For more information and instructions for your operating system check 
 https://download.qgis.org.
@@ -39,9 +45,10 @@ instructions. They are distributed with the QGIS source code in a file
 called :file:`INSTALL`. You can also find them online at
 https://htmlpreview.github.io/?https://raw.github.com/qgis/QGIS/master/doc/INSTALL.html.
 
-If you want to build a particular release, you should replace ``master`` by the
-release branch (commonly in the ``release-X_Y`` form) in the above-mentioned
-link because instructions may differ.
+
+If you want to build a particular release and not the version in development,
+you should replace ``master`` with the release branch (commonly in the
+``release-X_Y`` form) in the above-mentioned link (installation instructions may differ).
 
 Installing on external media
 ----------------------------
@@ -52,6 +59,9 @@ that overrides the default :ref:`user profile <user_profiles>` path and forces
 **QSettings** to use this directory, too.
 See section :ref:`env_options` for additional information.
 
+.. Todo: Expand a bit on the process because the linked chapter does not tell
+  more or find a more informative section.
+
 
 .. index:: Data sample
 .. _label_sampledata:
@@ -59,7 +69,8 @@ See section :ref:`env_options` for additional information.
 Downloading sample data
 -----------------------
 
-This user guide contains examples based on the QGIS sample dataset.
+This user guide contains examples based on the QGIS sample dataset (also called
+the ``Alaska dataset``).
 
 |win| The Windows installer has an option to download the QGIS sample dataset.
 If checked, the data will be downloaded to your :file:`Documents` folder and
@@ -71,14 +82,13 @@ you may do one of the following:
 * Use GIS data that you already have
 * Download sample data from
   https://qgis.org/downloads/data/qgis_sample_data.zip
-* Uninstall QGIS and reinstall with the data download option checked (only recommended if
-  the above solutions are unsuccessful)
+* Uninstall QGIS and reinstall with the data download option checked (only
+  recommended if the above solutions are unsuccessful)
 
 |nix| |osx| For GNU/Linux and macOS, there are no dataset installation
-packages available as rpm, deb or dmg. To use the sample dataset, download the
-file :file:`qgis_sample_data` as a ZIP archive from
-https://qgis.org/downloads/data/ and unzip the archive
-on your system.
+packages available as rpm, deb or dmg. To use the sample dataset, download it
+from https://qgis.org/downloads/data/qgis_sample_data.zip and unzip the archive
+on any convenient location on your system.
 
 The Alaska dataset includes all GIS data that are used for the examples and
 screenshots in this user guide; it also includes a small GRASS database.
@@ -130,8 +140,8 @@ This means that you can launch QGIS by:
 
 To stop QGIS, use:
 
-* |nix| |win| the menu option :menuselection:`Project --> Exit QGIS` or use the shortcut
-  :kbd:`Ctrl+Q`
+* |nix| |win| the menu option :menuselection:`Project --> Exit QGIS` or use the
+  shortcut :kbd:`Ctrl+Q`
 * |osx| :menuselection:`QGIS --> Quit QGIS`, or use the shortcut :kbd:`Cmd+Q`
 * or use the red cross at the top-right corner of the main interface of the application.
 
@@ -141,48 +151,74 @@ To stop QGIS, use:
 Sample Session: Loading raster and vector layers
 ================================================
 
-Now that you have QGIS installed and a sample dataset available, we will demonstrate
-a first sample session. In this example, we will visualize a raster and a vector layer.
+Now that you have :ref:`QGIS installed <label_installation>` and a :ref:`sample
+dataset <label_sampledata>` available, we will demonstrate a first sample
+session. In this example, we will visualize a raster and a vector layer.
 We will use:
 
 * the :file:`landcover` raster layer (:file:`qgis_sample_data/raster/landcover.img`)
 * and the :file:`lakes` vector layer (:file:`qgis_sample_data/gml/lakes.gml`)
 
+Where :file:`qgis_sample_data` represents the path to the unzipped dataset.
 
 #. Start QGIS as seen in :ref:`label_startingqgis`.
-#. To load the landcover data, click on the |dataSourceManager| :sup:`Open Data Source Manager` icon.
-#. The Data Source Manager should open in Browser mode.
-#. Browse to the folder :file:`qgis_sample_data/raster/`, select
-   the ERDAS IMG file :file:`landcover.img` and double-click to open it.
-   (The landcover layer is added in the background while the Data Source Manager window remains open.)
-#. To load the lakes data, browse to the folder :file:`qgis_sample_data/gml/`,
-   and double-click on the file :file:`lakes.gml` to open it.
-   The :guilabel:`Coordinate Reference System Selector` dialog opens with
-   :guilabel:`NAD27 / Alaska Alberts` selected, click :guilabel:`OK`.
-#. Close the Data Source Manager window.
-#. Zoom to your favorite area with some lakes.
-#. Double click the :file:`lakes` layer in the map legend to open the
-   :guilabel:`Properties` dialog.
-#. Click on the |symbology| :guilabel:`Symbology` tab and select blue as fill color.
-#. Click on the |labeling| :guilabel:`Labels` tab and select :guilabel:`Single labels`
-   in the drop-down menu to enable labeling. Then from the :guilabel:`Label with`
-   list, choose the ``NAMES`` field to label each lake with its name.
-#. To improve readability of labels, you can add a white buffer around them
-   by clicking :guilabel:`Buffer` in the list on the left, checking |checkbox|
-   :guilabel:`Draw text buffer` and choosing ``3`` as buffer size.
-#. Click :guilabel:`Apply`. Check if the result looks good, and finally click
-   :guilabel:`OK`.
-#. Select :menuselection:`View --> Decorations --> Scale Bar`, and in the
-   dialog that opens, check |checkbox| :guilabel:`Enable Scale Bar` and
-   press :guilabel:`Apply` (you can customize some options of the dialog if
-   you want).
+#. To load the files in QGIS:
+
+   #. Click on the |dataSourceManager| :sup:`Open Data Source Manager` icon.
+      The Data Source Manager should open in Browser mode.
+   #. Browse to the folder :file:`qgis_sample_data/raster/`
+   #. Select the ERDAS IMG file :file:`landcover.img` and double-click it.
+      The landcover layer is added in the background while the Data Source
+      Manager window remains open.
+   #. To load the lakes data, browse to the folder :file:`qgis_sample_data/gml/`,
+      and double-click the :file:`lakes.gml` file to open it.
+   #. A :guilabel:`Coordinate Reference System Selector` dialog opens with
+      :guilabel:`NAD27 / Alaska Alberts` selected, click :guilabel:`OK`.
+   #. Close the Data Source Manager window
+
+You now have the two layers available in your project in some random colours.
+Let's do some customization on the lakes layer.
+
+#. Select the |zoomIn| :sup:`Zoom In` tool on the :guilabel:`Navigation` toolbar
+#. Zoom to an area with some lakes
+#. Double-click the :file:`lakes` layer in the map legend to open the
+   :guilabel:`Properties` dialog
+#. To change the lakes color:
+
+   #. Click on the |symbology| :guilabel:`Symbology` tab
+   #. Select blue as fill color.
+   #. Press :guilabel:`Apply`. Lakes are now displayed in blue in the map canvas.
+#. To display the name of the lakes:
+
+   #. Click on the |labeling| :guilabel:`Labels` tab
+   #. Select :guilabel:`Single labels` in the drop-down menu to enable labeling.
+   #. From the :guilabel:`Label with` list, choose the ``NAMES`` field.
+   #. Press :guilabel:`Apply`. Names will now load over the boundaries.
+#. You can improve readability of the labels by adding a white buffer around them:
+
+   #. Click the :guilabel:`Buffer` tab in the list on the left
+   #. Check |checkbox| :guilabel:`Draw text buffer`
+   #. Choose ``3`` as buffer size
+   #. Click :guilabel:`Apply`
+   #. Check if the result looks good, and update the value if needed.
+   #. Finally click :guilabel:`OK` to close the guilabel:`Layer Properties`
+      dialog and apply the changes.
+
+Let's now add some decorations in order to shape the map and export it out of
+QGIS:
+
+#. Select :menuselection:`View --> Decorations --> Scale Bar` menu
+#. In the dialog that opens, check |checkbox| :guilabel:`Enable Scale Bar` option 
+#. Customize the options of the dialog as you want
+#. Press :guilabel:`Apply`
 #. Likewise, from the decorations menu, add more items (north arrow, copyright...)
-   to the map canvas
+   to the map canvas with custom properties.
 #. Click :menuselection:`Project --> Import/Export -->` |saveMapAsImage|
-   :menuselection:`Export Map to Image...` and press :guilabel:`Save` in the
-   opened dialog. Select a file location, a format and confirm by pressing
-   :guilabel:`Save` again.
-#. Use :menuselection:`Project -->` |fileSave| :menuselection:`Save...` to
+   :menuselection:`Export Map to Image...`
+#. Press :guilabel:`Save` in the opened dialog
+#. Select a file location, a format and confirm by pressing :guilabel:`Save`
+   again.
+#. Press :menuselection:`Project -->` |fileSave| :menuselection:`Save...` to
    store your changes as a :file:`.qgz` project file.
 
 That's it! You can see how easy it is to visualize raster and vector layers in
@@ -215,4 +251,5 @@ features and settings, and how to use them.
    :width: 2em
 .. |win| image:: /static/common/win.png
    :width: 1em
-
+.. |zoomIn| image:: /static/common/mActionZoomIn.png
+   :width: 1.5em
