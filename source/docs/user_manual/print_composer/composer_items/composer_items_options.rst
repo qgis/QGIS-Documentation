@@ -256,14 +256,13 @@ accurately.
 
 * the actual number of the page to place the item on;
 * the reference point of the item;
-* the :guilabel:`X` and :guilabel:`Y` coordinate of the :guilabel:`Reference
+* the :guilabel:`X` and :guilabel:`Y` coordinates of the :guilabel:`Reference
   point` of the item on the chosen page. The ratio between these values can be
-  locked in pressing the |lockedGray| button beside. Changing any value using
+  locked by clicking on the |lockedGray| button. Changes made to a value using
   the widget or the |select| :sup:`Select/Move item` tool will
-  proportionally update the other one;
-* the :guilabel:`Width` and :guilabel:`Height` of the item bounding box. Like
-  with coordinates, the ratio between width and height can be locked in and the
-  item size updated proportionally with changes applied to any of them.
+  be reflected in both of them;
+* the :guilabel:`Width` and :guilabel:`Height` of the item bounding box. As
+  for coordinates, the ratio between width and height can be locked.
 
 .. index:: Rendering mode
 .. _layout_Rendering_Mode:
