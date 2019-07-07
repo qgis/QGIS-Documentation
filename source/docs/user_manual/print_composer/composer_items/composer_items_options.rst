@@ -21,27 +21,50 @@ common options and behavior that are exposed below.
 Creating a layout item
 ----------------------
 
-To create a layout item, select the corresponding tool either from the
-:menuselection:`Add Item` menu or the :guilabel:`Toolbox` bar. Then:
+Items can be created using different tools, either from scratch or based on
+existing items.
 
-* click on the page and fill the size and placement information requested
-  in the :ref:`new items properties <position_size>` dialog that pops up;
-* or click-and-drag to define the initial size and placement of the item. You can
-  rely on :ref:`grids and guides <grid_guides>` snapping for a better position.
+To create a layout item from scratch:
+
+#. Select the corresponding tool either from the :menuselection:`Add Item` menu
+   or the :guilabel:`Toolbox` bar.
+#. Then:
+
+   * Click on the page and fill the size and placement information requested
+     in the :guilabel:`New Item Properties` dialog that pops up (for details,
+     see :ref:`position_size`);
+
+     .. _figure_layout_new_item:
+
+     .. figure:: img/new_item_properties.png
+        :align: center
+
+        New Item properties dialog
+
+   * Or click-and-drag to define the initial size and placement of the item.
+     You can rely on :ref:`grids and guides <grid_guides>` snapping for a better
+     position.
 
 .. note::
   Because they can have particular shapes, drawing node or arrow items does not
   work with one-click nor click-and-drag methods; you need to click and
-  place each node of the item.
+  place each node of the item. See :ref:`layout_node_based_shape_item` for more
+  details.
 
-You can also use the :menuselection:`Edit` menu or :guilabel:`Layout` toolbar
-tools to copy an existing item and paste it at the mouse position as a new item.
-Use the :guilabel:`Paste in Place` (:kbd:`Ctrl+Shift+V`) to constrain the new item
-at the coordinates of the copied item, in the active page.
+You can also:
 
-Likewise, you can also create items using a print layout template (for details, see
-:ref:`layout_manager`) through :menuselection:`Layout --> Add Items from Template...`
-command.
+#. Select an existing item with the |select| :sup:`Select/Move item` button from
+   the :guilabel:`Toolbox` toolbar
+#. Use the contextual menu or the :menuselection:`Edit` menu tools to copy/cut
+   the item and paste it at the mouse position as a new item.
+
+   You can also use the :guilabel:`Paste in Place` (:kbd:`Ctrl+Shift+V`) command
+   to duplicate an item from one page to another and place it in the new page at
+   the same coordinates as the original.
+
+Moreover, you can create items using a print layout template (for details, see
+:ref:`layout_manager`) through the :menuselection:`Layout --> Add Items from
+Template...` command.
 
 .. tip:: **Add layout items using the file browser**
 
@@ -187,11 +210,10 @@ Background, Item ID, Variables and Rendering (See figure_layout_common_).
 .. note::
 
    The |dataDefined| :sup:`Data defined override` icon next to most of the
-   options means that you can associate that property with a layer or
-   features attributes or with any other layout item's property, using
+   options means that you can associate that property with a layer, features
+   attributes, geometry or with any other layout item's property, using
    :ref:`expressions <vector_expressions>` or :ref:`variables
-   <general_tools_variables>`. These are particularly helpful with atlas
-   generation (See eg, :ref:`atlas_data_defined_override`).
+   <general_tools_variables>`. For more information see :ref:`data_defined`.
 
 .. _Frame_Dialog:
 
@@ -221,26 +243,27 @@ Background, Item ID, Variables and Rendering (See figure_layout_common_).
 Position and Size
 .................
 
-Based on the :guilabel:`New Item Properties` dialog, this group allows you to
-set:
+Extending the features of the :ref:`New Item Properties <create_layout_item>`
+dialog with data-defined capabilities, this group allows you to place the items
+accurately.
 
-.. _figure_layout_new_item:
+.. _figure_layout_position:
 
-.. figure:: img/new_item_properties.png
+.. figure:: img/position_size.png
    :align: center
 
    New Item properties dialog
 
 * the actual number of the page to place the item on;
 * the reference point of the item;
-* the :guilabel:`X` and :guilabel:`Y` coordinate of the reference map in
-  the selected page. The ratio between these values can be locked pressing the
-  |lockedGray| button beside. Changing any value using the widget or the
-  |select| :sup:`Select/Move item` tool onto the page will proportionally
-  update the other one;
+* the :guilabel:`X` and :guilabel:`Y` coordinate of the :guilabel:`Reference
+  point` of the item on the chosen page. The ratio between these values can be
+  locked in pressing the |lockedGray| button beside. Changing any value using
+  the widget or the |select| :sup:`Select/Move item` tool will
+  proportionally update the other one;
 * the :guilabel:`Width` and :guilabel:`Height` of the item bounding box. Like
-  with coordinates, ratio between width and height can be locked and their
-  values updated with changes applied to the other one.
+  with coordinates, the ratio between width and height can be locked in and the
+  item size updated proportionally with changes applied to any of them.
 
 .. index:: Rendering mode
 .. _layout_Rendering_Mode:
