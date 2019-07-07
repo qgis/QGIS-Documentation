@@ -160,6 +160,7 @@ any elements are added.
 
 .. figure:: img/print_composer_blank.png
    :align: center
+   :width: 100%
 
    Print Layout
 
