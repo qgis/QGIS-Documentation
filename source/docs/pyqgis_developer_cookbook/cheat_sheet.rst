@@ -38,6 +38,10 @@ Settings
 
 **Get QSettings list**
 
+.. testcleanup::
+    
+    QSettings().clear()
+    
 .. testcode::
 
     from qgis.PyQt.QtCore import QSettings
