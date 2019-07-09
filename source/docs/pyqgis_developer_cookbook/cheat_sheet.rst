@@ -38,6 +38,10 @@ Settings
 
 **Get QSettings list**
 
+.. testcleanup::
+    
+    QSettings().clear()
+    
 .. testcode::
 
     from qgis.PyQt.QtCore import QSettings
@@ -108,6 +112,14 @@ Canvas
 
     iface.mapCanvas().setCanvasColor(Qt.black)    
     iface.mapCanvas().refresh()
+
+**Map Update interval**
+
+.. testcode::
+
+    from qgis.PyQt.QtCore import QSettings
+    # Set milliseconds (150 milliseconds)
+    QSettings().setValue("/qgis/map_update_interval", 150)
 
 Layers
 ======
@@ -185,6 +197,18 @@ Otherwise
 
     layer = QgsProject.instance().mapLayersByName("layer name you like")[0]
     iface.setActiveLayer(layer)
+
+**Refresh layer at interval**
+
+.. testcode::
+
+    from qgis.core import QgsProject
+
+    layer = QgsProject.instance().mapLayersByName("layer name you like")[0]
+    # Set seconds (5 seconds)
+    layer.setAutoRefreshInterval(5000)
+    # Enable auto refresh
+    layer.setAutoRefreshEnabled(True)
 
 **Show methods**
 
