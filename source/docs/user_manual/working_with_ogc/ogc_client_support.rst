@@ -620,7 +620,7 @@ https://demo.gatewaygeomatics.com/cgi-bin/wfs_gateway?REQUEST=GetCapabilities&VE
 
 To be able to load a WFS Layer we create a connection to the WFS server first.
 
-#. Open the :guilabel:`Data Source Manager` dialog pressing the
+#. Open the :guilabel:`Data Source Manager` dialog by pressing the
    |dataSourceManager| :sup:`Open Data Source Manager` button
 #. Enable the |wfs| :guilabel:`WFS` tab
 #. Click on :guilabel:`New...` to open the :guilabel:`Create a New WFS
@@ -645,7 +645,7 @@ To be able to load a WFS Layer we create a connection to the WFS server first.
    * And depending on the WFS version:
 
      * Force to :guilabel:`Ignore axis orientation (WFS 1.1/WFS 2.0)`
-     * :guilabel:`Enable feature paging` and specify the maximum of features
+     * :guilabel:`Enable feature paging` and specify the maximum number of features
        to retrieve with :guilabel:`Page size`. If no limit is defined, then the
        server default is applied.
 
@@ -655,7 +655,7 @@ To be able to load a WFS Layer we create a connection to the WFS server first.
     tab will keep unprotected credentials in the connection configuration.
     Those **credentials will be visible** if, for instance, you shared the
     project file with someone. Therefore, it's advisable to save your
-    credentials in a *Authentication configuration* instead
+    credentials in an *Authentication configuration* instead
     (:guilabel:`Configurations` tab). See :ref:`authentication_index` for
     more details.
 
@@ -696,7 +696,7 @@ features and view the attribute table.
 
 .. note::
 
-  QGIS supports different versions of WFS servers with for each, background
+  QGIS supports different versions of the WFS protocol, with background
   download and progressive rendering, on-disk caching of downloaded features
   and version autodetection.
 
