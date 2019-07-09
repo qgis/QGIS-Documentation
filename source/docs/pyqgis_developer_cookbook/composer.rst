@@ -206,6 +206,18 @@ To export a layout, the :class:`QgsLayoutExporter <qgis.core.QgsLayoutExporter>`
 
 Use the :meth:`exportToImage() <qgis.core.QgsLayoutExporter.exportToImage>` in case you want to export to an image instead of a PDF file.
 
+Exporting a layout atlas
+------------------------
+
+If you want to export all pages from a layout that has the atlas option
+configured and enabled, you need to use the :meth:`atlas()
+<qgis.core.QgsLayout.atlas>` in the exporter :class:`QgsLayoutExporter
+<qgis.core.QgsLayoutExporter>` with small adjustments.
+
+.. code-block:: python
+
+   exporter.exportToPdf(layout.atlas(), pdf_path, 'pdf', QgsLayoutExporter.PdfExportSettings())
+
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
