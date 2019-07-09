@@ -207,7 +207,7 @@ Otherwise
     layer = QgsProject.instance().mapLayersByName("layer name you like")[0]
     # Set seconds (5 seconds)
     layer.setAutoRefreshInterval(5000)
-    # Enabled auto refresh
+    # Enable auto refresh
     layer.setAutoRefreshEnabled(True)
 
 **Show methods**
