@@ -61,15 +61,12 @@ The following code
             return QCoreApplication.translate('Processing', string)
     
         def createInstance(self):
-            # createInstance must return a new copy of your algorithm.
-            # If you change the name of the class, make sure you also
-            # update the value returned here to match!
+            # Must return a new copy of your algorithm.
             return ExampleProcessingAlgorithm()
     
         def name(self):
             """
-            Returns the unique algorithm name, used for identifying
-            the algorithm.
+            Returns the unique algorithm name.
             """
             return 'bufferrasterextend'
     
@@ -175,8 +172,7 @@ The following code
                 'native:buffer',
                 {
                     # Here we pass on the original parameter values of INPUT 
-                    # and BUFFER_OUTPUT to the buffer algorithm, in the way 
-                    # that this particular algorithm requires.
+                    # and BUFFER_OUTPUT to the buffer algorithm.
                     'INPUT': parameters['INPUT'],
                     'OUTPUT': parameters['BUFFER_OUTPUT'],
                     'DISTANCE': bufferdist,
@@ -197,9 +193,7 @@ The following code
                 context=context,
                 feedback=feedback)
                 
-            # It's good practice to check for cancelation as much as is sensibly
-            # possible! Doing so allows for responsive cancelation, instead of  
-            # forcing users to wait for unwanted processing to occur.
+            # Check for cancelation
             if feedback.isCanceled():
                 return {}
                 
@@ -210,32 +204,10 @@ The following code
                 {
                     # Here we pass the 'OUTPUT' value from the buffer's result 
                     # dictionary off to the rasterize child algorithm.
-                    # This dictionary value contains everything the child 
-                    # algorithm needs to know to retrieve the correct output 
-                    # layer from the buffer step.
                     'LAYER': buffer_result['OUTPUT'],
-                    #
-                    # The rasterize 'EXTENT' parameter is a 
-                    # QgsProcessingParameterExtent type. Extent parameters  
-                    # accept a wide range of input value types, including 
-                    # QgsRectangle values, comma separated strings of x/y 
-                    # min/max values, and also layer values. When a layer value 
-                    # is used, then the full extent of that layer will be used 
-                    # as the extent parameter value.
-                    # It's a handy shortcut to ensure that the rasterize 
-                    # algorithm creates a raster which covers the full extent 
-                    # of the buffered output layer.
-                    # Use processing.algorithmHelp to see detailed
-                    # documentation on all the possible input values which the 
-                    # parameters for a particular algorithm will accept.
                     'EXTENT': buffer_result['OUTPUT'],
                     'MAP_UNITS_PER_PIXEL': rastercellsize,
-                    #
-                    # Just like input values, output/destination
-                    # style parameters should be passed using their
-                    # original parameter value to child algorithms.
-                    # There's no need to evaluate these values in
-                    # advance!
+                    # Use the original parameter value.
                     'OUTPUT': parameters['OUTPUT']
                 },
                 is_child_algorithm=True,
@@ -245,17 +217,76 @@ The following code
             if feedback.isCanceled():
                 return {}
                 
-            # Our successful algorithm should return values for all the output
-            # parameters it has defined. In this case, that's the buffer and
-            # rasterized output layers, and the count of features processed.
-            # The dictionary keys here match the original parameter/output 
-            # names.
+            # Return the results
             return {'OUTPUT': rasterized_result['OUTPUT'],
                     'BUFFER_OUTPUT': buffer_result['OUTPUT'],
                     'NUMBEROFFEATURES': numfeatures}
+
+Processing algorithm standard functions:
+
+* createInstance (mandatory)
+    Must return a new copy of your algorithm.
+    If you change the name of the class, make sure you also update the value
+    returned here to match!
+    
+* name (mandatory)
+    Returns the unique algorithm name, used for identifying the algorithm.
+    
+* displayName (mandatory)
+    Returns the translated algorithm name.
+    
+* group
+    Returns the name of the group this algorithm belongs to.
+    
+* groupId
+    Returns the unique ID of the group this algorithm belongs to.
+    
+* shortHelpString
+    Returns a localised short help string for the algorithm.
+    
+* initAlgorithm (mandatory)
+    Here we define the inputs and outputs of the algorithm.
+    
+    ``INPUT`` and ``OUTPUT`` are recommended names for the main input and
+    main output parameters, respectively.
+    
+    If a parameter depends on another parameter, ``parentParameterName``
+    is used to specify this relationship (could be the field / band of a
+    layer or the distance units of a layer).
+
+* processAlgorithm (mandatory)
+    This is where the processing takes place.
+    
+    Parameters are retrieved using special purpose functions, for
+    instance ``parameterAsSource`` and ``parameterAsDouble``.
+    
+    ``processing.run`` can be used to run other processing algoritms from
+    a processing algorithm. The first parameter is the name of the
+    algorithm, the second is a dictionary of the parameters to the
+    algorithm.
+    ``is_child_algorithm`` is normally set to ``True`` when running an
+    algorithm from within another algorithm.
+    ``context`` and ``feedback`` informs the algorithm about the
+    environment to run in and the channel for communicating with the user
+    (catching cancel request, reporting progress, providing textual
+    feedback).
+    When using the (parent) algoritm's parameters as parameters to "child"
+    algorithms, the original parameter values should be used (e.g.
+    ``parameters['OUTPUT']``).
+    
+    It is good practice to check the feedback object for cancelation
+    as much as is sensibly possible! Doing so allows for responsive
+    cancelation, instead of forcing users to wait for unwanted processing
+    to occur.
+    
+    The algorithm should return values for all the output
+    parameters it has defined as a dictionary.
+    In this case, that's the buffer and rasterized output layers, and the
+    count of features processed.
+    The dictionary keys must match the original parameter/output names.
  
-Handing data produced by the algorithm
---------------------------------------
+Handing algorithm output
+------------------------
 
 When you declare an output representing a layer (raster or vector),
 the algorithm will try to add it to QGIS once it is finished.
