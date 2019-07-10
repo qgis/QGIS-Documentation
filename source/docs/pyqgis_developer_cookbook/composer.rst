@@ -196,9 +196,26 @@ To export a layout, the :class:`QgsLayoutExporter <qgis.core.QgsLayoutExporter>`
 
 .. code-block:: python
 
- pdf_path = os.path.join(QgsProject.instance().homePath(), "output.pdf")
+   base_path = os.path.join(QgsProject.instance().homePath()
+   pdf_path = os.path.join(base_path, "output.pdf")
 
- exporter = QgsLayoutExporter(layout)
- exporter.exportToPdf(pdf_path, QgsLayoutExporter.PdfExportSettings())
+   exporter = QgsLayoutExporter(layout)
+   exporter.exportToPdf(pdf_path, QgsLayoutExporter.PdfExportSettings())
 
 Use the :meth:`exportToImage() <qgis.core.QgsLayoutExporter.exportToImage>` in case you want to export to an image instead of a PDF file.
+
+Exporting a layout atlas
+------------------------
+
+If you want to export all pages from a layout that has the atlas option
+configured and enabled, you need to use the :meth:`atlas()
+<qgis.core.QgsPrintLayout.atlas>` method in the exporter (:class:`QgsLayoutExporter
+<qgis.core.QgsLayoutExporter>`) with small adjustments. In the following
+example, the pages are exported to PNG images:
+
+.. code-block:: python
+
+   exporter.exportToImage(layout.atlas(), base_path, 'png', QgsLayoutExporter.PdfExportSettings())
+
+Notice that the outputs will be saved in the base path folder, using the output
+filename expression configured on atlas.
