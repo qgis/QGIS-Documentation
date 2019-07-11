@@ -143,7 +143,7 @@ MSSQL...) level.
 
 
 You can also open the :guilabel:`Query Builder` dialog using the :guilabel:`Filter...`
-option from the :menuselection:`View` menu or the layer contextual menu.
+option from the :menuselection:`Layer` menu or the layer contextual menu.
 The :guilabel:`Fields`, :guilabel:`Values` and :guilabel:`Operators` sections in
 the dialog help you to construct the SQL-like query exposed in the
 :guilabel:`Provider specific filter expression` box.
