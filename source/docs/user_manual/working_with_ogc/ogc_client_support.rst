@@ -621,43 +621,68 @@ https://demo.gatewaygeomatics.com/cgi-bin/wfs_gateway?REQUEST=GetCapabilities&VE
 
 To be able to load a WFS Layer we create a connection to the WFS server first.
 
-#. Go to the browser panel as described in :ref:`browser_panel` . Right-click on
-   :guilabel:`WFS`.
-#. Click on :guilabel:`New connection ...`.
-#. Enter ``Gateway Geomatics`` as name.
-#. Enter the URL (see above).
+#. Open the :guilabel:`Data Source Manager` dialog by pressing the
+   |dataSourceManager| :sup:`Open Data Source Manager` button
+#. Enable the |wfs| :guilabel:`WFS` tab
+#. Click on :guilabel:`New...` to open the :guilabel:`Create a New WFS
+   Connection` dialog
+#. Enter ``Gateway Geomatics`` as name
+#. Enter the URL (see above)
 
+   .. _figure_OGC_create_wfs_connection:
 
-.. _figure_OGC_create_wfs_connection:
-
-.. figure:: img/add_connection_wfs.png
-   :align: center
+   .. figure:: img/add_connection_wfs.png
+      :align: center
    
-   Creating a connection to a WFS server
+      Creating a connection to a WFS server
+
+#. In the WFS settings dialog, you can:
+
+   * Indicate the WFS version of the server. If unknown, press the
+     :guilabel:`Detect` button to automatically retrieve it.
+   * Define the :guilabel:`maximum number of features` retrieved in a single
+     GetFetFeature request. If empty, no limit is set.
+   * :guilabel:`Invert axis orientation`.
+   * And depending on the WFS version:
+
+     * Force to :guilabel:`Ignore axis orientation (WFS 1.1/WFS 2.0)`
+     * :guilabel:`Enable feature paging` and specify the maximum number of features
+       to retrieve with :guilabel:`Page size`. If no limit is defined, then the
+       server default is applied.
+
+   .. warning::
+
+    Entering **username** and **password** in the :guilabel:`Authentication`
+    tab will keep unprotected credentials in the connection configuration.
+    Those **credentials will be visible** if, for instance, you shared the
+    project file with someone. Therefore, it's advisable to save your
+    credentials in an *Authentication configuration* instead
+    (:guilabel:`Configurations` tab). See :ref:`authentication_index` for
+    more details.
+
+#. Press :guilabel:`OK` to create the connection.
+
+Note that any proxy settings you may have set in your preferences are also recognized.
 
 Now we are ready to load WFS layers from the above connection.
    
 #. Choose 'Gateway Geomatics' from the :guilabel:`Server Connections`
    |selectString| drop-down list.
-#. Click :guilabel:`Connect`.
-#. Wait for the list of layers to be populated.
-#. Select the :guilabel:`Parks` layer in the list.
-#. Click :guilabel:`Apply` to add the layer to the map.
+#. Click :guilabel:`Connect`
+#. Select the :guilabel:`Parks` layer in the list
+#. You can also choose whether to:
 
-Note that any proxy settings you may have set in your preferences are also recognized.
+   * |unchecked| :guilabel:`Use title for layer name`, showing the layer's
+     title as defined on the server in the :guilabel:`Layers` panel instead of
+     its :guilabel:`Name`
+   * |checkbox| :guilabel:`Only request features overlapping the view extent`
+   * |unchecked| :guilabel:`Change` the layer's CRS
+   * or :guilabel:`Build query` to specify particular features to retrieve,
+     by either using the corresponding button or double-clicking the target
+     layer.
+   
+#. Click :guilabel:`Add` to add the layer to the map.
 
-In the WFS settings dialog, you can define the :guilabel:`maximal number of features`
-downloaded, set up the version, force to :guilabel:`Ignore axis orientation (WFS 1.1/WFS
-2.0)` and force :guilabel:`Inverse axis orientation`.
-
-.. warning::
-
-   Entering **username** and **password** in the :guilabel:`Authentication` tab
-   will keep unprotected credentials in the connection configuration. Those
-   **credentials will be visible** if, for instance, you shared the project file
-   with someone. Therefore, it's advisable to save your credentials in a
-   *Authentication configuration* instead (:guilabel:`configurations` tab).
-   See :ref:`authentication_index` for more details.
 
 .. _figure_OGC_add_wfs:
 
@@ -667,16 +692,14 @@ downloaded, set up the version, force to :guilabel:`Ignore axis orientation (WFS
    Adding a WFS layer
 
 You'll notice the download progress is visualized in the lower left of the QGIS
-main window. Once the layer is loaded, you can identify and select a province or
-two and view the attribute table.
+main window. Once the layer is loaded, you can identify and select a couple of
+features and view the attribute table.
 
-.. note:: **About differences between WFS versions**
+.. note::
 
-  WFS 1.0.0, 1.1.0 and 2.0 are supported. Background download and progressive
-  rendering, on-disk caching of downloaded features and version autodetection are
-  now supported.
-
-  Only WFS 2.0 service supports GetFeature paging.
+  QGIS supports different versions of the WFS protocol, with background
+  download and progressive rendering, on-disk caching of downloaded features
+  and version autodetection.
 
 .. tip:: **Finding WFS Servers**
 
@@ -693,12 +716,16 @@ two and view the attribute table.
 
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
+   :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
 .. |kde| image:: /static/common/kde.png
    :width: 1.5em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
+.. |unchecked| image:: /static/common/checkbox_unchecked.png
+   :width: 1.3em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |wcs| image:: /static/common/mActionAddWcsLayer.png
    :width: 1.5em
