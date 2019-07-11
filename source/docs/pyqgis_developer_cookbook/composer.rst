@@ -205,7 +205,8 @@ To export a layout, the :class:`QgsLayoutExporter <qgis.core.QgsLayoutExporter>`
    exporter = QgsLayoutExporter(layout)
    exporter.exportToPdf(pdf_path, QgsLayoutExporter.PdfExportSettings())
 
-Use the :meth:`exportToImage() <qgis.core.QgsLayoutExporter.exportToImage>` in case you want to export to an image instead of a PDF file.
+Use the :meth:`exportToImage() <qgis.core.QgsLayoutExporter.exportToImage>`
+in case you want to export to an image instead of a PDF file.
 
 Exporting a layout atlas
 ------------------------
@@ -218,7 +219,7 @@ example, the pages are exported to PNG images:
 
 .. code-block:: python
 
-   exporter.exportToImage(layout.atlas(), base_path, 'png', QgsLayoutExporter.PdfExportSettings())
+   exporter.exportToImage(layout.atlas(), base_path, 'png', QgsLayoutExporter.ImageExportSettings())
 
 Notice that the outputs will be saved in the base path folder, using the output
 filename expression configured on atlas.
