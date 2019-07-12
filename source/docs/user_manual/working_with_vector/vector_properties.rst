@@ -797,7 +797,7 @@ features of the layer:
 * :guilabel:`Opacity` |slider|: You can make the underlying layer in
   the map canvas visible with this tool. Use the slider to adapt the visibility
   of your vector layer to your needs. You can also make a precise definition of
-  the percentage of visibility in the the menu beside the slider.
+  the percentage of visibility in the menu beside the slider.
 
 * :guilabel:`Blending mode` at the :guilabel:`Layer` and :guilabel:`Feature` levels:
   You can achieve special rendering effects with these tools that you may previously
