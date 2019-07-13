@@ -146,6 +146,12 @@ QGIS provides two view modes to easily manipulate data in the attribute table:
   <maptips>` in a first panel and displays only the attributes of the clicked
   identifier in the second one. Form view uses the layer fields configuration
   (see :ref:`vector_attributes_menu`).
+  You can browse through the feature identifiers with the arrows on the bottom
+  of the first panel. Once you markered the feature in yellow in the list it
+  is selected in yellow on the canvas. Use the |zoomToSelected| on top of the
+  attribute table to zoom to the feature. Clicking on an entry in the list 
+  (without using the rectangles) makes a feature flash in red color once so you
+  can see where it is situated.
 
 You can switch from one mode to the other by clicking the corresponding icon at
 the bottom right of the dialog.
