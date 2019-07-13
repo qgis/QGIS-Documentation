@@ -53,10 +53,12 @@ Organizing symbols and color ramps
 The :guilabel:`Style Manager` dialog displays in its center a frame with
 previewed items organized into tabs:
 
+* :guilabel:`All` for a complete collection of point, linear and surface symbols as the
+  following items allow only to display a single item group;
 * |pointLayer| :guilabel:`Marker` for point symbols;
 * |lineLayer| :guilabel:`Line` for linear symbols;
 * |polygonLayer| :guilabel:`Fill` for surface symbols;
-* and |color| :guilabel:`Color ramp`.
+* and |color| :guilabel:`Color ramp`
 
 For each family of items, you can organize the elements into different categories,
 listed in the panel on the left:
