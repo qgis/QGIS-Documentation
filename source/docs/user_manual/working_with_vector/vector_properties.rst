@@ -2211,7 +2211,7 @@ shown for example in figure_fields_form_.
 
 To create the form, you can drag and drop fields from the :guilabel:`Available
 Widgets` panel to the :guilabel:`Form Layout` one to have fields added to
-your custom form and drag and drop fiels inside the :guilabel:`Form Layout`
+your custom form and drag and drop fields inside the :guilabel:`Form Layout`
 to reorder their position.
 
 You can also use categories (tab or group frames) to better structure the form.
