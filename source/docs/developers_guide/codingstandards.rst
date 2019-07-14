@@ -294,6 +294,20 @@ e.g.:
 
   const long GEOCRS_ID = 3344;
 
+Comments
+========
+
+Comments to class methods should use a third person indicative style instead
+of the imperative style:
+
+.. code-block:: cpp
+
+    /**
+     * Creates a new QgsFeatureFilterModel, optionally specifying a \a parent.
+     */
+    explicit QgsFeatureFilterModel( QObject *parent = nullptr );
+    ~QgsFeatureFilterModel() override;
+
 
 Qt Signals and Slots
 ====================
