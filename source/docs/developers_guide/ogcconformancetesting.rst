@@ -1,6 +1,8 @@
 
 .. index:: OGC Conformance Testing
 
+.. _qgis_ogc_conformance:
+
 *************************
  OGC Conformance Testing
 *************************

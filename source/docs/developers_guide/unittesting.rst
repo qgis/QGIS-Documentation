@@ -1,4 +1,6 @@
 
+.. _qgis_unittesting: 
+ 
 **************
  Unit Testing
 **************
