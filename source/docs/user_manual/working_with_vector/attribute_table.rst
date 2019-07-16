@@ -107,11 +107,11 @@ following functionality:
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 | |panToSelected|         | Pan map to the selected rows        |                                            | :kbd:`Ctrl+P`       |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |zoomToSelected|        | Zoom map to the selected rows       |                                            | :kbd:`Ctrl+J`       |
+| |zoomToSelected|        | Zoom map to the selected rows       |                                            |                     |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 | |newAttribute|          | New field                           | Add a new field to the data source         | :kbd:`Ctrl+W`       |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |deleteAttribute|       | Delete field                        | Remove a field from the data source        | :kbd:`Ctrl+L`       |
+| |deleteAttribute|       | Delete field                        | Remove a field from the data source        |                     |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 | |calculateField|        | Open field calculator               | Update field for many features in a row    | :kbd:`Ctrl+I`       |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
