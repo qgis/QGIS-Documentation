@@ -24,8 +24,9 @@ The Style Manager
 The :guilabel:`Style Manager` is the place where you can manage and create
 generic style items. These are symbols, color ramps, text formats or label
 settings that can be used to symbolize features, layers or print layouts.
-They are stored in the QGIS installation style database and shared with all
-your project files.
+They are stored in the :file:`symbology-style.db` database under the active
+:ref:`user profile <user_profiles>` and shared with all the project files
+opened with that profile.
 Style items can also be shared with others thanks to the export/import
 capabilities of the :guilabel:`Style Manager` dialog.
 
@@ -186,6 +187,8 @@ creates a file for each selected symbol in a given folder. The SVG folder can be
 added to the :guilabel:`SVG paths` in :menuselection:`Settings --> Options -->
 System` menu of another user, allowing him direct access to all these symbols.
 
+.. _import_style_items:
+
 Importing items
 ...............
 
@@ -209,6 +212,23 @@ You can extend your style library by importing new items:
 
    Importing style items
 
+.. tip:: **Use the Browser panel to import style items into the style database**
+
+   It's also possible to import style items into the active user profile style
+   database diretly from the :guilabel:`Browser` panel:
+   
+   #. Select the style :file:`.xml` file in the browser
+   #. Drag-and-drop it over the map canvas or right-click and select
+      :guilabel:`Import Style...`
+   #. Fill the :guilabel:`Import Items` dialog following :ref:`import_style_items`
+   #. Press :guilabel:`Import` and the selected style items are added to the
+      style database
+
+   Double-clicking the style file in the browser opens the :guilabel:`Style
+   Manager` dialog showing the items in the file. You can select them and press
+   :guilabel:`Copy to Default Style...` to import them into the active style
+   database. A tag can be assigned to items. Also available through right-click,
+   :guilabel:`Open Style...` command.
 
 .. _color-ramp:
 
