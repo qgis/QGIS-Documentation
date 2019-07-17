@@ -85,7 +85,7 @@ following functionality:
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 | |newTableRow|           | Add feature                         | Add new geometryless feature               |                     |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |deleteSelected|        | Delete selected features            | Remove selected features from the layer    |                     |
+| |deleteSelectedFeatures|| Delete selected features            | Remove selected features from the layer    |                     |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 | |editCut|               | Cut selected features to clipboard  |                                            | :kbd:`Ctrl+X`       |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
@@ -756,7 +756,8 @@ a table. And there are also some buttons available. Let's review them shortly:
 * The |newTableRow| button will add a new record to the airport layer attribute table.
   And it will assign the new airport to the current region by default.
 * The |duplicateFeature| button allows you to copy one or more child features.
-* The |deleteSelected| button will delete the selected airport permanently.
+* The |deleteSelectedFeatures| button will delete the selected airport
+  permanently.
 * The |link| symbol will open a new dialog where you can select any existing
   airport which will then be assigned to the current region. This may be handy
   if you created the airport on the wrong region by accident.
@@ -994,7 +995,7 @@ table.
    :width: 1.5em
 .. |deleteAttribute| image:: /static/common/mActionDeleteAttribute.png
    :width: 1.5em
-.. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
+.. |deleteSelectedFeatures| image:: /static/common/mActionDeleteSelectedFeatures.png
    :width: 1.5em
 .. |deselectAll| image:: /static/common/mActionDeselectAll.png
    :width: 1.5em
