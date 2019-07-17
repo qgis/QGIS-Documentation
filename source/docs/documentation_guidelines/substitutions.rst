@@ -319,11 +319,13 @@ Icon                     Substitution                 Icon                     S
 |addBasicTriangle|       ``|addBasicTriangle|``       |addBasicRectangle|      ``|addBasicRectangle|``
 |addNodesShape|          ``|addNodesShape|``          |editNodesShape|         ``|editNodesShape|``
 |addPolygon|             ``|addPolygon|``             |addPolyline|            ``|addPolyline|``
-|addArrow|               ``|addArrow|``               \                        \
+|addArrow|               ``|addArrow|``               |northArrow|             ``|northArrow|``
 |addMap|                 ``|addMap|``                 |addLegend|              ``|addLegend|``
 |addHtml|                ``|addHtml|``                |addTable|               ``|addTable|``
 |label|                  ``|label|``                  |scaleBar|               ``|scaleBar|``
 |select|                 ``|select|``                 |moveItemContent|        ``|moveItemContent|``
+|setToCanvasScale|       ``|setToCanvasScale|``       |setToCanvasExtent|      ``|setToCanvasExtent|``
+|viewScaleInCanvas|      ``|viewScaleInCanvas|``      |viewExtentInCanvas|     ``|viewExtentInCanvas|``
 |raiseItems|             ``|raiseItems|``             |lowerItems|             ``|lowerItems|``
 |moveItemsToTop|         ``|moveItemsToTop|``         |moveItemsToBottom|      ``|moveItemsToBottom|``
 |alignLeft|              ``|alignLeft|``              |alignRight|             ``|alignRight|``
@@ -1067,6 +1069,10 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
+.. |setToCanvasExtent| image:: /static/common/mActionSetToCanvasExtent.png
+   :width: 1.5em
+.. |setToCanvasScale| image:: /static/common/mActionSetToCanvasScale.png
+   :width: 1.5em
 .. |settings| image:: /static/common/settings.png
    :width: 1.5em
 .. |showAllLayers| image:: /static/common/mActionShowAllLayers.png
@@ -1161,6 +1167,10 @@ Icon                            Substitution                        Icon        
 .. |vertexTool| image:: /static/common/mActionVertexTool.png
    :width: 1.5em
 .. |vertexToolActiveLayer| image:: /static/common/mActionVertexToolActiveLayer.png
+   :width: 1.5em
+.. |viewExtentInCanvas| image:: /static/common/mActionViewExtentInCanvas.png
+   :width: 1.5em
+.. |viewScaleInCanvas| image:: /static/common/mActionViewScaleInCanvas.png
    :width: 1.5em
 .. |virtualLayer| image:: /static/common/mActionAddVirtualLayer.png
    :width: 1.5em
