@@ -21,7 +21,7 @@ There are several tabs in the dialog:
 * |system| :ref:`Source <raster_sourcetab>`
 * |symbology| :ref:`Symbology <raster_symbology>`
 * |transparency| :ref:`Transparency <raster_transparency>`
-* |rasterHistogram| :ref:`Histogram <label_histogram>`
+* |rasterHistogram| :ref:`Histogram <raster_histogram>`
 * |rendering| :ref:`Rendering <raster_rendering>`
 * |pyramids| :ref:`Pyramids <raster_pyramids>`
 * |editMetadata| :ref:`Metadata <raster_metadata>`
@@ -417,7 +417,7 @@ This will make the look of the map more three dimensional.
    Raster Transparency
 
 Additionally, you can enter a raster value that should be treated as
-an additional *NODATA* value in :guilabel:`Additional no data value`.
+an :guilabel:`Additional no data value`.
 
 An even more flexible way to customize the transparency is available
 in the :guilabel:`Custom transparency options` section:
@@ -447,7 +447,7 @@ in the :guilabel:`Custom transparency options` section:
 
 
 .. index:: Histogram
-.. _label_histogram:
+.. _raster_histogram:
 
 Histogram Properties
 ====================
@@ -509,7 +509,7 @@ You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum
 be visible.
 It will be hidden outside this range.
 The |mapIdentification| :sup:`Set to current canvas scale` button helps
-you use the current map canvas scale as boundary of.
+you use the current map canvas scale as boundary of the range visibility.
 See :ref:`label_scaledepend` for more information.
 
 .. _figure_raster_rendering:
