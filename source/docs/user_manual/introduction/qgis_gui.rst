@@ -145,7 +145,7 @@ Menu Option                                                              Shortcu
 :menuselection:`Add Ellipse -->`                                         \                     :guilabel:`Shape Digitizing`        \
 |moveFeature| :guilabel:`Move Feature(s)`                                \                     :guilabel:`Advanced Digitizing`     :ref:`move_feature`
 |moveFeatureCopy| :guilabel:`Copy and Move Feature(s)`                   \                     :guilabel:`Advanced Digitizing`     :ref:`move_feature`
-|deleteSelected| :guilabel:`Delete Selected`                             \                     :guilabel:`Digitizing`              :ref:`delete_feature`
+|deleteSelectedFeatures| :guilabel:`Delete Selected`                     \                     :guilabel:`Digitizing`              :ref:`delete_feature`
 |multiEdit| :guilabel:`Modify Attributes of Selected Features`           \                     :guilabel:`Digitizing`              :ref:`calculate_fields_values`
 |rotateFeature| :guilabel:`Rotate Feature(s)`                            \                     :guilabel:`Advanced Digitizing`     :ref:`rotate_feature`
 |simplifyFeatures| :guilabel:`Simplify Feature`                          \                     :guilabel:`Advanced Digitizing`     :ref:`simplify_feature`
@@ -907,7 +907,7 @@ open the Plugin Manager dialog.
    :width: 2em
 .. |deleteRing| image:: /static/common/mActionDeleteRing.png
    :width: 2em
-.. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
+.. |deleteSelectedFeatures| image:: /static/common/mActionDeleteSelectedFeatures.png
    :width: 1.5em
 .. |draw| image:: /static/common/mActionDraw.png
    :width: 1.5em
