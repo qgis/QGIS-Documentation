@@ -183,8 +183,8 @@ You can extend your symbols library by importing new symbols:
 #. Check |unchecked| :guilabel:`Do not import embedded tags` to avoid the import
    of tags associated to the items being imported.
 #. Give the name of any :guilabel:`Additional tag(s)` to apply to the new items.
-#. Select from the preview the symbols you want to add to your library.
-#. And press **Import**.
+#. Select from the preview the items you want to add to your library.
+#. And press :guilabel:`Import`.
 
 .. _figure_symbol_import:
 
