@@ -14,7 +14,7 @@
       :local:
 
 .. index::
-    single: Style Manager
+    single: Style manager
 
 .. _vector_style_manager:
 
@@ -47,6 +47,7 @@ You can open that modeless dialog either:
    The Style Manager
 
 
+.. index:: Style items
 .. _group_symbols:
 
 Organizing style items
@@ -212,23 +213,37 @@ You can extend your style library by importing new items:
 
    Importing style items
 
-.. tip:: **Use the Browser panel to import style items into the style database**
+.. index::
+   pair: Browser; Style items
 
-   It's also possible to import style items into the active user profile style
-   database diretly from the :guilabel:`Browser` panel:
+Using the Browser panel
+.......................
+
+It's also possible to import style items into the active user profile style
+database diretly from the :guilabel:`Browser` panel:
    
-   #. Select the style :file:`.xml` file in the browser
-   #. Drag-and-drop it over the map canvas or right-click and select
-      :guilabel:`Import Style...`
-   #. Fill the :guilabel:`Import Items` dialog following :ref:`import_style_items`
-   #. Press :guilabel:`Import` and the selected style items are added to the
-      style database
+#. Select the style :file:`.xml` file in the browser
+#. Drag-and-drop it over the map canvas or right-click and select
+   :guilabel:`Import Style...`
+#. Fill the :guilabel:`Import Items` dialog following :ref:`import_style_items`
+#. Press :guilabel:`Import` and the selected style items are added to the
+   style database
 
-   Double-clicking the style file in the browser opens the :guilabel:`Style
-   Manager` dialog showing the items in the file. You can select them and press
-   :guilabel:`Copy to Default Style...` to import them into the active style
-   database. A tag can be assigned to items. Also available through right-click,
-   :guilabel:`Open Style...` command.
+Double-clicking the style file in the browser opens the :guilabel:`Style
+Manager` dialog showing the items in the file. You can select them and press
+:guilabel:`Copy to Default Style...` to import them into the active style
+database. Tags can be assigned to items. Also available through right-click,
+:guilabel:`Open Style...` command.
+
+.. _figure_symbol_open:
+
+.. figure:: img/open_style_file.png
+   :align: center
+
+   Opening a style items file
+
+The dialog also allows to export single symbols as :file:`.PNG` or :file:`.SVG`
+files.
 
 .. _color-ramp:
 
