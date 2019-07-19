@@ -534,6 +534,48 @@ If you want to create a new SpatiaLite layer, please refer to section
  recommended). If necessary, they can be downloaded and installed with the
  Plugin Installer.
 
+
+.. index:: GeoJSON Export
+.. _export_geojson_files:
+
+GeoJSON specific parameters
+---------------------------
+
+GeoJSON has some specific :guilabel:`Layer Options` available. These options actually come
+from GDAL which is responsible for the writing of the file:
+
+* :guilabel:`COORDINATE_PRECISION` the maximum number of digits after the
+  decimal separator to write in coordinates. Defaults to 15 (note: for Lat Lon
+  coordinates 6 is considered enough). Truncation will occur to remove
+  trailing zeros.
+* :guilabel:`RFC7946` by default GeoJSON 2008 will be used.
+  If set to YES, then the updated RFC 7946 standard will be used.
+  Default is NO (thus GeoJSON 2008).
+  See https://gdal.org/drivers/vector/geojson.html#rfc-7946-write-support for
+  the main differences, in short: only EPSG:4326 is allowed, other crs's will
+  be transformed, polygons will be written such as to follow the right-hand
+  rule for orientation, values of a "bbox" array are
+  [west, south, east, north], not [minx, miny, maxx, maxy]. Some extension
+  member names are forbidden in FeatureCollection, Feature and Geometry
+  objects, the default coordinate precision is 7 decimal digits
+* :guilabel:`WRITE_BBOX` set to YES to write a bbox property with the bounding
+  box of the geometries at the feature and feature collection level
+
+Besides GeoJSON there is also an option to export to
+"GeoJSON - Newline Delimited" (see https://www.gdal.org/drv_geojsonseq.html).
+Instead of a FeatureCollection with Features, you can stream one type
+(probably only Features) sequentially separated with newlines.
+
+GeoJSON - Newline Delimited has some specific Layer options availabe too:
+
+* :guilabel:`COORDINATE_PRECISION` see above (same as for GeoJSON)
+* :guilabel:`RS` whether to start records with the RS=0x1E character. The
+  difference is how the features are separated: only by a newline (LF) character
+  (Newline Delimited JSON, geojsonl) or by prepending a record-separator (RS)
+  character too (giving GeoJSON Text Sequences, geojsons). Default to NO.
+  Note that files are written with the json extension if not given.
+
+
 .. index:: DB2 Spatial
 .. _label_db2_spatial:
 
