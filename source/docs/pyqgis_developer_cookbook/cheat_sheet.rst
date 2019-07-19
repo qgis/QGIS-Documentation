@@ -623,6 +623,18 @@ Random selection
 
     processing.algorithmHelp("qgis:randomselection")
 
+**Run the algorithm**
+
+For this example, the result is stored in a temporary memory layer
+which is added to the project.
+
+.. code-block:: python
+
+    import processing
+    result = processing.run("native:buffer", {'INPUT': layer, 'OUTPUT': 'memory:'})
+    QgsProject.instance().addMapLayer(result['OUTPUT'])
+
+
 **How many algorithms are there?**
 
 .. testcode::
