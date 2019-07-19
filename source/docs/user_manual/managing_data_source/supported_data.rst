@@ -221,16 +221,16 @@ what data type the different columns are:
 The CSVT file is a **ONE line** plain text file with the data types in quotes
 and separated by commas, e.g.::
 
-"Integer","Real","String"
+ "Integer","Real","String"
 
 You can even specify width and precision of each column, e.g.::
 
-"Integer(6)","Real(5.5)","String(22)"
+ "Integer(6)","Real(5.5)","String(22)"
 
 This file is saved in the same folder as the :file:`.csv` file, with the same
 name, but :file:`.csvt` as the extension.
 
-*You can find more information at* `GDAL CSV Driver <https://www.gdal.org/drv_csv.html>`_.
+*You can find more information at* `GDAL CSV Driver <https://gdal.org/drivers/vector/csv.html>`_.
 
 
 .. index:: PostGIS, PostgreSQL
@@ -496,14 +496,14 @@ version of the data to be plotted in a 180 |degrees|-centric map.
 Usage
 .....
 
-*  Import data into PostGIS (:ref:`vector_import_data_in_postgis`) using,
-   for example, the DB Manager plugin.
-*  Use the PostGIS command line interface to issue the following command
-   (in this example, "TABLE" is the actual name of your PostGIS table):
-   ``gis_data=# update TABLE set the_geom=ST_Shift_Longitude(the_geom);``
-*  If everything went well, you should receive a confirmation about the
-   number of features that were updated. Then you'll be able to load the
-   map and see the difference (Figure_vector_crossing_map_).
+* Import data into PostGIS (:ref:`vector_import_data_in_postgis`) using,
+  for example, the DB Manager plugin.
+* Use the PostGIS command line interface to issue the following command
+  (in this example, "TABLE" is the actual name of your PostGIS table):
+  ``gis_data=# update TABLE set the_geom=ST_Shift_Longitude(the_geom);``
+* If everything went well, you should receive a confirmation about the
+  number of features that were updated. Then you'll be able to load the
+  map and see the difference (Figure_vector_crossing_map_).
 
 .. index:: Spatialite, SQLite
 .. _spatialite_data:
