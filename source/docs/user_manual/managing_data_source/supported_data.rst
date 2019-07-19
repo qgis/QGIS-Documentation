@@ -541,8 +541,9 @@ If you want to create a new SpatiaLite layer, please refer to section
 GeoJSON specific parameters
 ---------------------------
 
-GeoJSON has some specific :guilabel:`Layer Options` available. These options actually come
-from GDAL which is responsible for the writing of the file:
+When :ref:`exporting layers <general_saveas>` to GeoJSON, this format has
+some specific :guilabel:`Layer Options` available. These options
+actually come from GDAL which is responsible for the writing of the file:
 
 * :guilabel:`COORDINATE_PRECISION` the maximum number of digits after the
   decimal separator to write in coordinates. Defaults to 15 (note: for Lat Lon
