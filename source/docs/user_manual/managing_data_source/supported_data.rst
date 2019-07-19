@@ -505,34 +505,27 @@ Usage
   number of features that were updated. Then you'll be able to load the
   map and see the difference (Figure_vector_crossing_map_).
 
-.. index:: Spatialite, SQLite
+.. index:: SpatiaLite, SQLite
 .. _spatialite_data:
 
 SpatiaLite Layers
 -----------------
 
 If you want to save a vector layer to SpatiaLite format, you can do this by
-right clicking the layer in the legend. Then, click on :menuselection:`Save as...`,
-define the name of the output file, and select 'SpatiaLite' as format and the CRS.
-Also, you can select 'SQLite' as format and then add ``SPATIALITE=YES`` in the
-OGR data source creation option field. This tells OGR to create a SpatiaLite
-database. See also https://www.gdal.org/ogr/drv_sqlite.html.
+following instructions at :ref:`general_saveas`. You would need to select
+``SpatiaLite`` as :guilabel:`Format` and enter both :guilabel:`File name` and
+:guilabel:`Layer name`.
 
-QGIS also supports editable views in SpatiaLite.
+Also, you can select ``SQLite`` as format and then add ``SPATIALITE=YES`` in the
+:guilabel:`Custom Options --> Data source` field. This tells GDAL to create
+a SpatiaLite database. See also https://gdal.org/drivers/vector/sqlite.html.
+
+QGIS also supports editable views in SpatiaLite. For SpatiaLite data management,
+you can also use core plugin :ref:`DB Manager <dbmanager>`.
 
 If you want to create a new SpatiaLite layer, please refer to section
 :ref:`vector_create_spatialite`.
 
-.. index:: QSpatiaLite, Spatialite manager, DB Manager
-
-.. _tip_spatialite_management_plugin:
-
-.. tip:: **SpatiaLite data management Plugins**
-
- For SpatiaLite data management, you can also use several Python plugins:
- QSpatiaLite, SpatiaLite Manager or :ref:`DB Manager <dbmanager>` (core plugin,
- recommended). If necessary, they can be downloaded and installed with the
- Plugin Installer.
 
 .. index:: DB2 Spatial
 .. _label_db2_spatial:
