@@ -733,6 +733,19 @@ Decorators
     # Repaint the canvas map
     iface.mapCanvas().refresh()
 
+Composer
+==========
+
+**Get print layout by name**
+
+.. testcode::
+
+    composerTitle = 'MyComposer' # Name of the composer
+
+    project = QgsProject.instance()
+    projectLayoutManager = project.layoutManager()
+    layout = projectLayoutManager.layoutByName(composerTitle)
+
 Sources
 =======
 
