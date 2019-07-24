@@ -106,24 +106,25 @@ should be surrounded by ``[%`` and ``%]`` in the :guilabel:`Main properties` fra
 
     concat( 'Page ', @atlas_featurenumber, '/', @atlas_totalfeatures )
 
-* Return the X coordinate of the bottom left corner of a map canvas:
+* Return the X coordinate of the bottom left corner of the extent shown
+  in the ``Map 1`` item:
 
   ::
 
     x_min( map_get( item_variables( 'Map 1' ), 'map_extent' ) )
 
-* Retrieve the name of the layers in the current layout 'Map 1' item,
+* Retrieve the name of the layers in the current layout ``Map 1`` item,
   and formats in one name by line:
 
   ::
 
-    array_to_string(
-      array_foreach(
-        map_get( item_variables( 'Map 1' ), 'map_layers' ), -- retrieve the layers list
-        layer_property( @element, 'name' ) -- retrieve each layer name
-      ),
-      '\n' -- converts the list to string separated by breaklines
-    )
+   array_to_string(
+    array_foreach(
+     map_get( item_variables( 'Map 1' ), 'map_layers' ), -- retrieve the layers list
+     layer_property( @element, 'name' ) -- retrieve each layer name
+    ),
+    '\n' -- converts the list to string separated by breaklines
+   )
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
