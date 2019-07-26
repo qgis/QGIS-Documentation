@@ -148,8 +148,8 @@ credentials for an hypothetic alice user:
   p_config.setName("alice")
   p_config.setMethod("PKI-Paths")
   p_config.setUri("https://example.com")
-  p_config.setConfig("certpath", "path/to/alice-cert.pem" ))
-  p_config.setConfig("keypath", "path/to/alice-key.pem" ))
+  p_config.setConfig("certpath", "path/to/alice-cert.pem" )
+  p_config.setConfig("keypath", "path/to/alice-key.pem" )
   # check if method parameters are correctly set
   assert p_config.isValid()
 
