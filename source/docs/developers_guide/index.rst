@@ -17,4 +17,5 @@ steps to easily and efficiently contribute to QGIS code.
     git
     qtcreator
     unittesting
+    processingtesting
     ogcconformancetesting
