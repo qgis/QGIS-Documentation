@@ -381,8 +381,8 @@ and selecting modes.
 
     Attribute table filtered by the filter form
 
-In the attribute table case, there is also a :guilabel:`Filter features` 
-button that allows filtering features to list. Its use triggers the
+When selecting / filtering features from the attribute table, there is a :guilabel:`Filter features` 
+button that allows defining and refining filters. Its use triggers the
 :guilabel:`Advanced filter (Expression)` option and displays the corresponding
 filter expression in an editable text widget at the bottom of the form.
 
