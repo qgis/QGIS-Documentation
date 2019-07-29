@@ -46,12 +46,10 @@ needs and re-run the algorithm.
 
 The :guilabel:`History` dialog also provides a convenient way to contribute to
 the consolidation of the testing infrastructure of QGIS Processing algorithms
-and scripts. Right-click on a command you previously execute and the
-:guilabel:`Create Test...` command will open a new window with a text definition.
-The remaining step is to copy and paste the text in a :file:`.yaml` file available at
-https://github.com/qgis/QGIS/tree/master/python/plugins/processing/tests/testdata
-depending on the algorithm provider used. More details at
-https://github.com/qgis/QGIS/blob/master/python/plugins/processing/tests/README.md
+and scripts. Right-click on a command you previously executed and you can
+:guilabel:`Create Test...` for the concerned algorithm, following instructions at
+https://github.com/qgis/QGIS/blob/master/python/plugins/processing/tests/README.md.
+
 
 The processing log
 -------------------
