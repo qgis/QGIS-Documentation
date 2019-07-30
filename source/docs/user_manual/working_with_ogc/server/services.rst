@@ -143,6 +143,8 @@ parameters:
 |                |          | - USE_TITLE_AS_LAYERNAME:  if enabled, the title of the layer will      |
 |                |          |   be used as layer name.                                                |
 +----------------+----------+-------------------------------------------------------------------------+
+| TILED           | No      | Working in *tiled mode*                                                 |
++----------------+----------+-------------------------------------------------------------------------+
 
 |
 
@@ -164,6 +166,7 @@ URL example:
   &FORMAT=image/png
   &TRANSPARENT=TRUE
   &DPI=300
+  &TILED=TRUE
 
 
 SERVICE
@@ -520,6 +523,18 @@ As those features id's correspond in the source dataset to **France** and
   Server response to a GetMap request with SELECTION parameter
 
 
+TILED
+^^^^^
+
+(|38|)
+
+Set the ``TILED`` parameter to ``TRUE`` to tell QGIS Server to work in *tiled* mode, and to apply
+the *Tile buffer* configured in the QGIS project.
+
+When ``TILED`` is ``TRUE`` and when a non-zero Tile buffer is configured in the QGIS project,
+features outside the tile extent are drawn to avoid cut symbols at tile boundaries.
+
+``TILED`` defaults to ``FALSE``.
 
 .. _server_wms_getfeatureinfo:
 
@@ -1709,4 +1724,5 @@ Similarly, external layers can be used in GetPrint requests:
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |38| replace:: ``NEW in 3.8``
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
