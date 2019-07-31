@@ -26,7 +26,7 @@ environment variable:
  cd /opt/qgis-server/plugins
  sudo wget https://github.com/elpaso/qgis-helloserver/archive/master.zip
  In case unzip was not installed before:
- sudo apt-get install unzip
+ sudo apt install unzip
  sudo unzip master.zip
  sudo mv qgis-helloserver-master HelloServer
 

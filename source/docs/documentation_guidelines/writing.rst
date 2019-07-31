@@ -475,7 +475,7 @@ referencing :file:`.rst` file.
   
   .. code-block:: bash
   
-    sudo apt-get autoremove appmenu-gtk appmenu-gtk3 appmenu-qt
+    sudo apt autoremove appmenu-gtk appmenu-gtk3 appmenu-qt
 
 
 Translate Screenshots

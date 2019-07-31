@@ -142,8 +142,10 @@ another OS. In Ubuntu, do the following in the terminal:
 .. note:: At the time of writing, Qt5 is the latest version available. However,
   this process specifically requires Qt4 and is not necessarily compatible with
   Qt5.
+  
+  ::
 
-:kbd:`sudo apt-get install qt4-designer`
+   sudo apt install qt4-designer
 
 ... and it should install automatically. Otherwise, look for it in the
 *Software Center*.

@@ -43,7 +43,7 @@ Install Apache and ``mod_fcgid``:
 
 .. code-block:: bash
 
- sudo apt-get install apache2 libapache2-mod-fcgid
+ sudo apt install apache2 libapache2-mod-fcgid
 
 Here we assume that an Apache ``VirtualHost`` is already set up. For example this is what a basic
 ``VirtualHost`` configuration may look like:
@@ -129,7 +129,7 @@ Install NGINX:
 
 .. code-block:: bash
 
- sudo apt-get install nginx
+ sudo apt install nginx
 
 
 fcgiwrap
@@ -140,7 +140,7 @@ to run QGIS Server, you first have to install the corresponding package:
 
 .. code-block:: bash
 
- sudo apt-get install fcgiwrap
+ sudo apt install fcgiwrap
 
 Then, introduce the following block in your NGINX server configuration:
 
@@ -171,7 +171,7 @@ of fcgiwrap, the first step is to install the package:
 
 .. code-block:: bash
 
-  sudo apt-get install spawn-fcgi
+  sudo apt install spawn-fcgi
 
 
 Then, introduce the following block in your NGINX server configuration:
@@ -281,7 +281,7 @@ To install the package:
 
 .. code-block:: bash
 
- sudo apt-get install xvfb
+ sudo apt install xvfb
 
 Then, according to your HTTP server, you should configure the **DISPLAY**
 parameter or directly use **xvfb-run**.
