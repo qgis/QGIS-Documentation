@@ -345,11 +345,12 @@ left of the attribute table dialog. This list offers the following filters:
   choose a column from a list, type a value and press :kbd:`Enter` to filter.
   Then, only the matching features are shown in the attribute table.
 * :guilabel:`Advanced filter (Expression)` - Opens the expression builder
-  dialog. Within it, you can create complex expressions to match table rows.
+  dialog. Within it, you can create :ref:`complex expressions
+  <vector_expressions>` to match table rows.
   For example, you can filter the table using more than one field.
-  See :ref:`vector_expressions` for more information.
+  When applied, the filter expression will show up at the bottom of the form.
 
-It is also possible to filter features using the :ref:`filter_select_form`.
+It is also possible to :ref:`filter features using forms <filter_select_form>`.
 
 .. note::
 
@@ -367,7 +368,6 @@ It is also possible to filter features using the :ref:`filter_select_form`.
   Visible on Map` on a new canvas extent updates the spatial restriction.
 
 
-
 .. _filter_select_form:
 
 Filtering and selecting features using forms
@@ -381,14 +381,17 @@ From this point onwards, this tool functionality is similar to the one described
 in :ref:`select_by_value`, where you can find descriptions of all operators
 and selecting modes.
 
-The filter expression will show up at the bottom of the form.
-
 .. _figure_filter_select_form:
 
 .. figure:: img/tableFilteredForm.png
     :align: center
 
     Attribute table filtered by the filter form
+
+When selecting / filtering features from the attribute table, there is a :guilabel:`Filter features` 
+button that allows defining and refining filters. Its use triggers the
+:guilabel:`Advanced filter (Expression)` option and displays the corresponding
+filter expression in an editable text widget at the bottom of the form.
 
 If there are already filtered features, you can refine the filter using the
 drop-down list next to the :guilabel:`Filter features` button. The options are:
