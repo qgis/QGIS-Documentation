@@ -14,29 +14,30 @@
       :local:
 
 .. index::
-    single: Style Manager
+    single: Style manager
 
 .. _vector_style_manager:
 
 The Style Manager
 ==================
 
-The :guilabel:`Style Manager` is the place where users can manage and create
-generic symbols and color ramps to be used in several QGIS projects. You can
-open that modeless dialog:
+The :guilabel:`Style Manager` is the place where you can manage and create
+generic style items. These are symbols, color ramps, text formats or label
+settings that can be used to symbolize features, layers or print layouts.
+They are stored in the :file:`symbology-style.db` database under the active
+:ref:`user profile <user_profiles>` and shared with all the project files
+opened with that profile.
+Style items can also be shared with others thanks to the export/import
+capabilities of the :guilabel:`Style Manager` dialog.
 
-* with the |styleManager| :sup:`Style Manager` button of the Project toolbar;
+You can open that modeless dialog either:
+
 * from the :menuselection:`Settings -->` |styleManager| :menuselection:`Style
-  Manager...` menu;
-* or from a vector :menuselection:`Layer Properties --> Symbology` tab (using the
-  |styleManager| :sup:`Style Manager` button in a :ref:`symbol property
-  <symbol-selector>` dialog).
-
-The dialog allows you to:
-
-* create, edit and remove symbols and color ramps;
-* organize symbols and color ramps in custom groups;
-* export and import symbols and color ramps.
+  Manager...` menu
+* with the |styleManager| :sup:`Style Manager` button from the Project toolbar
+* or with the |styleManager| :sup:`Style Manager` button from a vector
+  :menuselection:`Layer Properties -->` menu (while :ref:`configuring
+  a symbol <symbol-selector>` or :ref:`formatting a text <showlabels>`).
 
 .. _figure_style_manager:
 
@@ -46,39 +47,48 @@ The dialog allows you to:
    The Style Manager
 
 
+.. index:: Style items
 .. _group_symbols:
 
-Organizing symbols and color ramps
-----------------------------------
+Organizing style items
+----------------------
 
 The :guilabel:`Style Manager` dialog displays in its center a frame with
 previewed items organized into tabs:
 
-* :guilabel:`All` for a complete collection of point, linear and surface symbols as the
-  following items allow only to display a single item group;
-* |pointLayer| :guilabel:`Marker` for point symbols;
-* |lineLayer| :guilabel:`Line` for linear symbols;
-* |polygonLayer| :guilabel:`Fill` for surface symbols;
-* and |color| :guilabel:`Color ramp`
+* :guilabel:`All` for a complete collection of point, linear and surface symbols
+  and label settings as well as predefined color ramps and text formats;
+* |pointLayer| :guilabel:`Marker` for point symbols only;
+* |lineLayer| :guilabel:`Line` for linear symbols only;
+* |polygonLayer| :guilabel:`Fill` for surface symbols only;
+* |color| :guilabel:`Color ramp`;
+* |text| :guilabel:`Text format` to manage text formats, which store the font,
+  color, buffers, shadows, and backgrounds of text formats (i.e. all the
+  formatting parts of label settings, which can be used outside of labels,
+  eg in layouts);
+* |labeling| :guilabel:`Label settings` to manage :ref:`label settings
+  <showlabels>`, which include the text formats and some layer-type specific
+  settings such as label placement, priority, rendering...
+
 
 For each family of items, you can organize the elements into different categories,
 listed in the panel on the left:
 
-* **Favorites**: displayed by default when configuring an item, it shows a
-  set of default symbols and color ramps you can extend;
-* **All**: listing all the installed symbols and color ramps;
+* **Favorites**: displayed by default when configuring an item, it shows an
+  extensible set of items;
+* **All**: lists all the available items for the active type;
 * **Tags**: shows a list of labels you can use to identify the items.
-  A symbol or color ramp can be tagged more than once. Select a tag in the list
-  and you'll see the items that belong to it for each type of item.
-  To create a new tag you could later attach to symbols or color ramps, use the
+  An item can be tagged more than once. Select a tag in the list and the tabs
+  are updated to show only their items that belong to it.
+  To create a new tag you could later attach to a set of items, use the
   :guilabel:`Add Tag...` button or select the |signPlus| :guilabel:`Add Tag...`
   from any tag contextual menu;
 * **Smart Group**: a smart group dynamically fetches its symbols according to
   conditions set (see eg, figure_smart_group_). Click the :guilabel:`Add Smart Group...`
   button to create smart groups. The dialog box allows you to enter an expression
   to filter the items to select (has a particular tag, have a string in its name,
-  etc.). Any symbol or color ramp that satisfies the entered condition(s) is
-  automatically added to the smart group.
+  etc.). Any symbol, color ramp, text format or label setting that satisfies
+  the entered condition(s) is automatically added to the smart group.
 
 
 .. _figure_smart_group:
@@ -89,19 +99,20 @@ listed in the panel on the left:
    Creating a Smart Group
 
 Tags and smart groups are not mutually exclusive: they are simply two different
-ways to organize your symbols and color ramps. 
+ways to organize your style elements. 
 Unlike the smart groups that automatically fetch their belonged items based on
-the input constraints, tags are filled by the user. To edit any of those categories,
-you can either:
+the input constraints, tags are filled by the user. To edit any of those
+categories, you can either:
 
 * select the items, right-click and choose :menuselection:`Add to Tag -->`
   and then select the tag name or create a new tag;
 * select the tag and press :menuselection:`Modify group... --> Attach Selected Tag
-  to Symbols`. A |unchecked| checkbox appears near each item to help you select
-  or deselect it. When selection is finished, press :menuselection:`Modify group... -->
-  Finish Tagging`.
-* select the smart group, press :menuselection:`Modify group... --> Edit smart group...`
-  and configure a new set of constraints in the :guilabel:`Smart Group Editor` dialog.
+  to Symbols`. A checkbox appears next to each item to help you select
+  or deselect it. When selection is finished, press :menuselection:`Modify
+  group... --> Finish Tagging`.
+* select the smart group, press :menuselection:`Modify group... --> Edit smart
+  group...` and configure a new set of constraints in the :guilabel:`Smart Group
+  Editor` dialog.
   This option is also available in the contextual menu of the smart group.
 
 To remove a tag or a smart group, right-click on it and select the |signMinus|
@@ -111,38 +122,42 @@ category.
 Adding, editing or removing an item
 -----------------------------------
 
-As seen earlier, symbols and color ramps are listed under different tabs whose
-contents depend on the active category (tag, smart group, favorites...). For each
-type of symbols (*Marker* , *Line* or *Fill*) and color ramp, when the tab is
-enabled, you can:
+As seen earlier, style elements are listed under different tabs whose
+contents depend on the active category (tag, smart group, favorites...).
+When a tab is enabled, you can:
 
 * Add new items: press the |signPlus| :sup:`Add item` button and configure the
-  item following :ref:`symbols <symbol-selector>` or :ref:`color ramps <color-ramp>`
-  builder description.
-* Modify an existing item: select an item and press |symbologyEdit| :sup:`Edit item`
-  button and configure as mentioned above. 
-* Delete existing items: to delete a symbol you no longer need, select it and click
-  |signMinus| :sup:`Remove item` (also available through right-click).
-  The symbol will be deleted from the local symbols database.
+  item following :ref:`symbols <symbol-selector>`, :ref:`color ramps
+  <color-ramp>` or :ref:`text format and label <showlabels>` builder description.
+* Modify an existing item: select an item and press |symbologyEdit| :sup:`Edit
+  item` button and configure as mentioned above. 
+* Delete existing items: to delete an element you no longer need, select it and
+  click |signMinus| :sup:`Remove item` (also available through right-click).
+  The item will be deleted from the local database.
+
+Note that the :guilabel:`All` tab provides access to these options for every type
+of item.
 
 Right-clicking over a selection of items also allows you to:
 
 * :guilabel:`Add to Favorites`;
 * :guilabel:`Remove from Favorites`;
-* :menuselection:`Add to Tag -->` and select the appropriate tag or create a new one to use;
+* :menuselection:`Add to Tag -->` and select the appropriate tag or create a new
+  one to use;
 * :guilabel:`Clear Tags`: detaching the symbols from any tag;
 * :guilabel:`Remove Item(s)`;
 * :guilabel:`Edit Item`: applies to the item you right-click over;
-* :guilabel:`Export Selected Symbol(s) as PNG...` (not available with color ramps);
-* :guilabel:`Export Selected Symbol(s) as SVG...` (not available with color ramps);
+* :guilabel:`Export Selected Symbol(s) as PNG...` (only available with symbols);
+* :guilabel:`Export Selected Symbol(s) as SVG...` (only available with symbols);
 
 .. _share_symbols:
 
-Sharing symbols and color ramps
--------------------------------
+Sharing style items
+-------------------
 
 The |sharing| :guilabel:`Import/Export` tool, at the left bottom of the Style
-Manager dialog, offers options to easily share symbols and color ramps with
+Manager dialog, offers options to easily share symbols, color ramps, text
+formats and label settings with
 others. These options are also available through right-click over the items.
 
 Exporting items
@@ -152,48 +167,83 @@ You can export a set of items to an :file:`.XML` file:
 
 #. Expand the |sharing| :guilabel:`Import/Export` drop-down menu and select
    |fileSave| :guilabel:`Export Item(s)...`
-#. Choose the symbols and color ramps you'd like to integrate. Symbol selection
-   can be done with the mouse or using a tag or group previously set.
-#. Press :guilabel:`Export` when ready. You'll be prompted to indicate the destination
-   of the saved file. The XML format generates a single file containing all the
-   selected symbols. This file can then be imported in another user's style library.
+#. Choose the items you'd like to integrate. Selection
+   can be done with the mouse or using a tag or a group previously set.
+#. Press :guilabel:`Export` when ready. You'll be prompted to indicate the
+   destination of the saved file. The XML format generates a single file
+   containing all the selected items. This file can then be imported in
+   another user's style library.
 
 .. _figure_symbol_export:
 
 .. figure:: img/export_styles.png
    :align: center
 
-   Exporting symbols and color ramps
+   Exporting style items
 
-When symbols are selected, you can also export them to :file:`.PNG` or :file:`.SVG`.
-Exporting to :file:`.PNG` or :file:`.SVG` (both not available for color ramp symbols)
+When symbols are selected, you can also export them to :file:`.PNG` or
+:file:`.SVG`. Exporting to :file:`.PNG` or :file:`.SVG` (both not available for
+other style item types)
 creates a file for each selected symbol in a given folder. The SVG folder can be
 added to the :guilabel:`SVG paths` in :menuselection:`Settings --> Options -->
 System` menu of another user, allowing him direct access to all these symbols.
 
+.. _import_style_items:
+
 Importing items
 ...............
 
-You can extend your symbols library by importing new symbols:
+You can extend your style library by importing new items:
 
 #. Expand the |sharing| :guilabel:`Import/Export` drop-down menu and select
    |fileOpen| :guilabel:`Import Item(s)` at the left bottom of the dialog.
-#. In the new dialog, indicate the source of the symbols (it can be an
+#. In the new dialog, indicate the source of the style items (it can be an
    :file:`.xml` file on the disk or a url).
 #. Set whether to |unchecked| :guilabel:`Add to favorites` the items to import.
 #. Check |unchecked| :guilabel:`Do not import embedded tags` to avoid the import
    of tags associated to the items being imported.
 #. Give the name of any :guilabel:`Additional tag(s)` to apply to the new items.
 #. Select from the preview the symbols you want to add to your library.
-#. And press **Import**.
+#. And press :guilabel:`Import`.
 
 .. _figure_symbol_import:
 
 .. figure:: img/import_styles.png
    :align: center
 
-   Importing symbols and color ramps
+   Importing style items
 
+.. index::
+   pair: Browser; Style items
+
+Using the Browser panel
+.......................
+
+It's also possible to import style items into the active user profile style
+database diretly from the :guilabel:`Browser` panel:
+   
+#. Select the style :file:`.xml` file in the browser
+#. Drag-and-drop it over the map canvas or right-click and select
+   :guilabel:`Import Style...`
+#. Fill the :guilabel:`Import Items` dialog following :ref:`import_style_items`
+#. Press :guilabel:`Import` and the selected style items are added to the
+   style database
+
+Double-clicking the style file in the browser opens the :guilabel:`Style
+Manager` dialog showing the items in the file. You can select them and press
+:guilabel:`Copy to Default Style...` to import them into the active style
+database. Tags can be assigned to items. Also available through right-click,
+:guilabel:`Open Style...` command.
+
+.. _figure_symbol_open:
+
+.. figure:: img/open_style_file.png
+   :align: center
+
+   Opening a style items file
+
+The dialog also allows to export single symbols as :file:`.PNG` or :file:`.SVG`
+files.
 
 .. _color-ramp:
 
@@ -637,6 +687,8 @@ viewing the field.
    :width: 1.5em
 .. |iconView| image:: /static/common/mActionIconView.png
    :width: 1.5em
+.. |labeling| image:: /static/common/labelingSingle.png
+   :width: 1.5em
 .. |lineLayer| image:: /static/common/mIconLineLayer.png
    :width: 1.5em
 .. |locked| image:: /static/common/locked.png
@@ -662,6 +714,8 @@ viewing the field.
 .. |styleManager| image:: /static/common/mActionStyleManager.png
    :width: 1.5em
 .. |symbologyEdit| image:: /static/common/symbologyEdit.png
+   :width: 1.5em
+.. |text| image:: /static/common/text.png
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
