@@ -263,9 +263,8 @@ other softwares. Let's move on to learn more about the available functionality,
 features and settings, and how to use them.
 
 .. note::
- If you want to continue learning QGIS through the step-by-step exercises
- route, QGIS documentation provides a :ref:`Training manual
- <QGIS-training-manual-index-reference>` you can rely on.
+ To continue learning QGIS through step-by-step exercises, follow the
+ :ref:`Training manual <QGIS-training-manual-index-reference>`.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
