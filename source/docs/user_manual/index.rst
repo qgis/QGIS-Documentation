@@ -22,6 +22,7 @@ QGIS User Guide
     introduction/qgis_configuration
     working_with_projections/working_with_projections
     introduction/general_tools
+    style_library/index
     managing_data_source/index
     working_with_vector/index
     working_with_raster/index
