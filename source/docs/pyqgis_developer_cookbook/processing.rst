@@ -70,7 +70,7 @@ You can create a folder :file:`processing_provider` with three files in it:
 
 * :file:`provider.py` which will create the Processing provider and expose your algorithms.
 
-.. code-block:: python
+  .. code-block:: python
 
    from qgis.core import QgsProcessingProvider
 
