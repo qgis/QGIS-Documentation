@@ -8,6 +8,10 @@
  The Style Library
 *******************
 
+.. toctree::
+
+   style_library
+
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
