@@ -12,6 +12,7 @@
 
    style_library
    style_manager
+   symbol_selector
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
