@@ -10,7 +10,6 @@
 
 .. toctree::
 
-   style_library
    style_manager
    symbol_selector
 
