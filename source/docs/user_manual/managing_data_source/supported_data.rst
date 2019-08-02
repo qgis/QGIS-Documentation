@@ -533,6 +533,22 @@ If you want to create a new SpatiaLite layer, please refer to section
  recommended). If necessary, they can be downloaded and installed with the
  Plugin Installer.
 
+.. index:: GeoJSON Export
+.. _export_geojson_files:
+
+GeoJSON specific parameters
+---------------------------
+
+GeoJSON has some specific :guilabel:`Layer Options` available. These options
+actually come from GDAL which is responsible for the writing of the file.
+
+* :guilabel:`COORDINATE_PRECISION` the maximum number of digits after the
+  decimal separator to write in coordinates. Defaults to 15 (note: for Lat Lon
+  coordinates 6 is considered enough). Truncation will occur to remove
+  trailing zeros.
+* :guilabel:`WRITE_BBOX` set to YES to write a bbox property with the bounding
+  box of the geometries at the feature and feature collection level
+
 .. index:: DB2 Spatial
 .. _label_db2_spatial:
 
