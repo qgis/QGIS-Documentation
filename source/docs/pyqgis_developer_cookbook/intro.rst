@@ -105,7 +105,7 @@ for detailed instructions.
 
 
 .. index::
-  pair: Python; startup
+  pair: Python; Startup
 
 Running Python code when QGIS starts
 ====================================
@@ -118,8 +118,6 @@ starts.
 2. Setting the ``PYQGIS_STARTUP`` environment variable to an
    existing Python file
 
-.. index::
-  single: Python; startup.py
 
 The :file:`startup.py` file
 ----------------------------

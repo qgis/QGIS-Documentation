@@ -21,7 +21,7 @@ Debian based distro users can do:
 
 .. code-block:: bash
 
-  sudo apt-get install git
+  sudo apt install git
 
 
 Install git for Windows

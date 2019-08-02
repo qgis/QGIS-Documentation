@@ -415,7 +415,7 @@ The easiest way to create and manage all the translation files is to install
 `Qt Linguist <https://doc.qt.io/qt-5/qtlinguist-index.html>`_.
 In a Debian-based GNU/Linux environment you can install it typing::
 
-  sudo apt-get install qttools5-dev-tools
+  sudo apt install qttools5-dev-tools
 
 
 Files and directory

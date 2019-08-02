@@ -23,8 +23,8 @@ Postgis is easily installed from apt.
 
 .. code-block:: bash
 
-  $ sudo apt-get install postgis
-  $ sudo apt-get install postgresql-9.1-postgis
+  $ sudo apt install postgis
+  $ sudo apt install postgresql-9.1-postgis
 
 Really, it's that easy...
 
@@ -40,8 +40,8 @@ commands.
 
   $ sudo apt-add-repository ppa:sharpie/for-science
   $ sudo apt-add-repository ppa:sharpie/postgis-nightly
-  $ sudo apt-get update
-  $ sudo apt-get install postgresql-9.1-postgis-nightly
+  $ sudo apt update
+  $ sudo apt install postgresql-9.1-postgis-nightly
 
 
 Installing under Windows

@@ -20,7 +20,7 @@ Setup of WMS 1.3 and WMS 1.1.1 conformance tests
 
 .. code-block:: bash
 
-  sudo apt-get install openjdk-8-jdk maven
+  sudo apt install openjdk-8-jdk maven
   cd ~/src
   git clone https://github.com/opengeospatial/teamengine.git
   cd teamengine

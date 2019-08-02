@@ -158,7 +158,7 @@ GPSD, so
 
 ::
 
-  sudo apt-get install gpsd
+  sudo apt install gpsd
 
 Then load the ``garmin_gps`` kernel module
 
