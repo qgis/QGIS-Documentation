@@ -11,6 +11,7 @@
 .. toctree::
 
    style_library
+   style_manager
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
