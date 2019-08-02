@@ -153,7 +153,8 @@ Use the :menuselection:`Remove Current Theme` button to delete the active theme.
 Map themes are helpful to switch quickly between different preconfigured
 combinations: select a map theme in the list to restore its combination.
 All configured themes are also accessible in the print layout, allowing you to
-create a map layout based on specific themes (see :ref:`layout_main_properties`).
+create different map items based on specific themes and independent of
+the current main canvas rendering (see :ref:`Map item layers <layout_layers>`).
 
 
 Overview of the context menu of the Layers panel
