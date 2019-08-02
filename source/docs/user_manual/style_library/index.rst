@@ -12,6 +12,7 @@
 
    style_manager
    symbol_selector
+   label_settings
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
