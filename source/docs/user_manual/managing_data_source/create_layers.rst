@@ -343,22 +343,6 @@ decide whether to:
 
 For formats like ESRI Shapefile, MapInfo .tab, feature append is also available.
 
-.. index:: GeoJSON Export
-.. _export_geojson_files:
-
-GeoJSON specific parameters
----------------------------
-
-GeoJSON has some specific :guilabel:`Layer Options` available. These options
-actually come from GDAL which is responsible for the writing of the file.
-
-* :guilabel:`COORDINATE_PRECISION` the maximum number of digits after the
-  decimal separator to write in coordinates. Defaults to 15 (note: for Lat Lon
-  coordinates 6 is considered enough). Truncation will occur to remove
-  trailing zeros.
-* :guilabel:`WRITE_BBOX` set to YES to write a bbox property with the bounding
-  box of the geometries at the feature and feature collection level
-
 .. index:: DXF Export
 .. _create_dxf_files:
 
