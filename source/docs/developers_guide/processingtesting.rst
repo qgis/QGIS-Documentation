@@ -76,18 +76,18 @@ The above translates to
        name: expected/polys_densify.gml
 
 
-It is also possible to create tests for Processing scripts. Scripts
-should be placed in the `scripts` subdirectory in the test data directory
-`python/plugins/processing/tests/testdata/`. Script file name
-should match script algorithm name.
+It is also possible to create tests for Processing scripts. Scripts should
+be placed in the :file:`scripts` subdirectory in the test data directory
+:file:`python/plugins/processing/tests/testdata/`. The script file name
+should match the script algorithm name.
 
-Params and results
-------------------
+Parameters and results
+----------------------
 
 Trivial type parameters
 .......................
 
-Params and results are specified as lists or dictionaries:
+Parameters and results are specified as lists or dictionaries:
 
 .. code-block:: yaml
 
@@ -112,7 +112,7 @@ You will often need to specify layers as parameters. To specify a layer you
 will need to specify:
 
 * the type, ie ``vector`` or ``raster``
-* a name, with relative path like :file:`expected/polys_centroid.gml`
+* a name, with a relative path like :file:`expected/polys_centroid.gml`
 
 This is what it looks like in action:
 
@@ -147,7 +147,7 @@ the 'file' type and the (relative) path to the file in its 'name':
 Results
 .......
 
-Results are specified very similar.
+Results are specified very similarly.
 
 Basic vector files
 ^^^^^^^^^^^^^^^^^^
@@ -161,14 +161,14 @@ It couldn't be more trivial
   type: vector
 
 
-Add the expected GML and XSD in the folder.
+Add the expected GML and XSD files in the folder.
 
 Vector with tolerance
 ^^^^^^^^^^^^^^^^^^^^^
 
 Sometimes different platforms create slightly different results which are
 still acceptable. In this case (but only then) you may also use additional
-properties to define how exactly a layer is compared.
+properties to define how a layer is compared.
 
 To deal with a certain tolerance for output values you can specify a ``compare``
 property for an output. The compare property can contain sub-properties for
@@ -207,7 +207,7 @@ a test from the processing history.
 Files
 ^^^^^
 
-You can compare the content of an output file by an expected result reference file
+You can compare the content of an output file to an expected result reference file
 
 .. code-block:: yaml
 
@@ -244,11 +244,11 @@ reference directory
 Algorithm Context
 -----------------
 
-There are few more definitions that can modify context of the algorithm -
-these can be specified at top level of test:
+There are a few more definitions that can modify the context of the algorithm -
+these can be specified at the top level of test:
 
 * ``project`` - will load a specified QGIS project file before running the
-  algorithm. If not specified, algorithm will run with empty project
+  algorithm. If not specified, the algorithm will run with an empty project
 * ``project_crs`` - overrides the default project CRS - e.g. ``EPSG:27700``
 * ``ellipsoid`` - overrides the default project ellipsoid used for measurements,
   e.g. ``GRS80``
@@ -261,5 +261,5 @@ Running tests locally
 
  ctest -V -R ProcessingQgisAlgorithmsTest
 
-or one of the following value listed in the `CMakelists.txt
+or one of the following values listed in the `CMakelists.txt
 <https://github.com/qgis/QGIS/blob/master/python/plugins/processing/tests/CMakeLists.txt>`_
