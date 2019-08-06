@@ -235,9 +235,9 @@ behavior when saving the layer. Among the common parameters for raster and vecto
 are:
 
 * :guilabel:`File name`: the location of the file on the disk. It can refer to
-  the output layer or to a container that would store the layer (in case for
-  example of database-like files such as GeoPackage, SpatiaLite, Open Document
-  Spreadsheets... formats)
+  the output layer or to a container that would store the layer (for
+  example database-like formats such as GeoPackage, SpatiaLite or Open Document
+  Spreadsheets)
 * :guilabel:`CRS`: can be changed to reproject the data
 * :guilabel:`Extent` (possible values are **layer**, **Map view** or
   **user-defined** extent)
@@ -279,7 +279,7 @@ Depending on the format of export, some of these options are available or not:
   GeoPackage, ESRI Shapefile, AutoCAD DXF, ESRI FileGDB, Mapinfo TAB or MIF,
   SpatiaLite, CSV, KML, ODS...
 * :guilabel:`Layer name`: available when the :guilabel:`File name` refers to a
-  container-like file, this entry represents the output layer
+  container-like format, this entry represents the output layer
 * :guilabel:`Encoding`
 * :guilabel:`Save only selected features`
 * :guilabel:`Select fields to export and their export options`. In case you set
