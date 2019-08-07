@@ -419,7 +419,7 @@ Processing with their corresponding alg decorator constants
      - A band of a raster layer (input)
    * - :class:`QgsProcessingParameterBoolean <qgis.core.QgsProcessingParameterBoolean>`
      - ``alg.BOOL``
-     - A boolean value (output)
+     - A boolean value (input)
    * - :class:`QgsProcessingOutputBoolean <qgis.core.QgsProcessingOutputBoolean>`
      - ``alg.BOOL``
      - A boolean value (output)
