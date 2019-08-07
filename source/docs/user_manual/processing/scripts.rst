@@ -413,85 +413,136 @@ Processing with their corresponding alg decorator constants
    * - :class:`QgsProcessingParameterAuthConfig <qgis.core.QgsProcessingParameterAuthConfig>`
      - ``alg.AUTH_CFG``
      - Allows users to select from available authentication configurations or
-       create new authentication configurations
+       create new authentication configurations (input)
    * - :class:`QgsProcessingParameterBand <qgis.core.QgsProcessingParameterBand>`
      - ``alg.BAND``
-     - A band of a raster layer
+     - A band of a raster layer (input)
    * - :class:`QgsProcessingParameterBoolean <qgis.core.QgsProcessingParameterBoolean>`
      - ``alg.BOOL``
-     - A boolean value
+     - A boolean value (output)
+   * - :class:`QgsProcessingOutputBoolean <qgis.core.QgsProcessingOutputBoolean>`
+     - ``alg.BOOL``
+     - A boolean value (output)
    * - :class:`QgsProcessingParameterColor <qgis.core.QgsProcessingParameterColor>`
-     - Currently missing
-     - A color
+     - ``alg.COLOR``
+     - A color (input)
    * - :class:`QgsProcessingParameterCrs <qgis.core.QgsProcessingParameterCrs>`
      - ``alg.CRS``
-     - A Coordinate Reference System
+     - A Coordinate Reference System (input)
    * - :class:`QgsProcessingParameterDistance <qgis.core.QgsProcessingParameterDistance>`
      - ``alg.DISTANCE``
-     - A double numeric parameter for distance values
+     - A double numeric parameter for distance values (input)
+   * - :class:`QgsProcessingOutputNumber <qgis.core.QgsProcessingOutputNumber>`
+     - ``alg.DISTANCE``
+     - A double numeric parameter for distance values (output)
    * - :class:`QgsProcessingParameterEnum <qgis.core.QgsProcessingParameterEnum>`
      - ``alg.ENUM``
-     - An enumeration, allowing for selection from a set of predefined values
+     - An enumeration, allowing for selection from a set of predefined values (input)
    * - :class:`QgsProcessingParameterExpression <qgis.core.QgsProcessingParameterExpression>`
      - ``alg.EXPRESSION``
-     - An expression
+     - An expression (input)
    * - :class:`QgsProcessingParameterExtent <qgis.core.QgsProcessingParameterExtent>`
      - ``alg.EXTENT``
-     - A spatial extent defined by xmin, xmax, ymin, ymax
+     - A spatial extent defined by xmin, xmax, ymin, ymax (input)
    * - :class:`QgsProcessingParameterField <qgis.core.QgsProcessingParameterField>`
      - ``alg.FIELD``
-     - A field in the attribute table of a vector layer
+     - A field in the attribute table of a vector layer (input)
    * - :class:`QgsProcessingParameterFile <qgis.core.QgsProcessingParameterFile>`
      - ``alg.FILE``
-     - A filename of an existing file
+     - A filename of an existing file (input)
+   * - :class:`QgsProcessingOutputFile <qgis.core.QgsProcessingOutputFile>`
+     - ``alg.FILE``
+     - A filename of an existing file (output)
    * - :class:`QgsProcessingParameterFileDestination <qgis.core.QgsProcessingParameterFileDestination>`
      - ``alg.FILE_DEST``
-     - A filename for a newly created output file
+     - A filename for a newly created output file (input)
+   * - :class:`QgsProcessingOutputFolder <qgis.core.QgsProcessingOutputFolder>`
+     - ``alg.FOLDER``
+     - A folder (output)
    * - :class:`QgsProcessingParameterFolderDestination <qgis.core.QgsProcessingParameterFolderDestination>`
      - ``alg.FOLDER_DEST``
-     - A folder
+     - A folder (input)
+   * - :class:`QgsProcessingOutputHtml <qgis.core.QgsProcessingOutputHtml>`
+     - ``alg.HTML``
+     - HTML (output)
+   * - :class:`QgsProcessingParameterNumber.Integer <qgis.core.QgsProcessingParameterNumber.Integer>`
+     - ``alg.INT``
+     - A integer (input)
+   * - :class:`QgsProcessingOutputNumber <qgis.core.QgsProcessingOutputNumber>`
+     - ``alg.INT``
+     - A integer (output)
+   * - :class:`QgsProcessingOutputLayerDefinition <qgis.core.QgsProcessingOutputLayerDefinition>`
+     - ``alg.LAYERDEF``
+     - A layer definition (output)
+   * - :class:`QgsProcessingParameterLayout <qgis.core.QgsProcessingParameterLayout>`
+     - ``alg.LAYOUT``
+     - A layout (input)
+   * - :class:`QgsProcessingParameterLayoutItem <qgis.core.QgsProcessingParameterLayoutItem>`
+     - ``alg.LAYOUT_ITEM``
+     - A layout item (input)
    * - :class:`QgsProcessingParameterMapLayer <qgis.core.QgsProcessingParameterMapLayer>`
      - ``alg.MAPLAYER``
-     - A map layer
+     - A map layer (input)
+   * - :class:`QgsProcessingOutputMapLayer <qgis.core.QgsProcessingOutputMapLayer>`
+     - ``alg.MAPLAYER``
+     - A map layer (output)
    * - :class:`QgsProcessingParameterMatrix <qgis.core.QgsProcessingParameterMatrix>`
      - ``alg.MATRIX``
-     - A matrix
+     - A matrix (input)
    * - :class:`QgsProcessingParameterMeshLayer <qgis.core.QgsProcessingParameterMeshLayer>`
      - ``alg.MESH_LAYER``
-     - A mesh layer
+     - A mesh layer (input)
    * - :class:`QgsProcessingParameterMultipleLayers <qgis.core.QgsProcessingParameterMultipleLayers>`
      - ``alg.MULTILAYER``
-     - A set of layers
+     - A set of layers (input)
+   * - :class:`QgsProcessingOutputMultipleLayers <qgis.core.QgsProcessingOutputMultipleLayers>`
+     - ``alg.MULTILAYER``
+     - A set of layers (output)
    * - :class:`QgsProcessingParameterNumber <qgis.core.QgsProcessingParameterNumber>`
      - ``alg.NUMBER``
-     - A numerical value
+     - A numerical value (input)
+   * - :class:`QgsProcessingOutputNumber <qgis.core.QgsProcessingOutputNumber>`
+     - ``alg.NUMBER``
+     - A numerical value (input and output)
    * - :class:`QgsProcessingParameterPoint <qgis.core.QgsProcessingParameterPoint>`
      - ``alg.POINT``
-     - A point
+     - A point (input)
    * - :class:`QgsProcessingParameterRange <qgis.core.QgsProcessingParameterRange>`
      - ``alg.RANGE``
-     - A number range
+     - A number range (input)
    * - :class:`QgsProcessingParameterRasterLayer <qgis.core.QgsProcessingParameterRasterLayer>`
      - ``alg.RASTER_LAYER``
-     - A raster layer
+     - A raster layer (input)
+   * - :class:`QgsProcessingOutputRasterLayer <qgis.core.QgsProcessingOutputRasterLayer>`
+     - ``alg.RASTER_LAYER``
+     - A raster layer (output)
    * - :class:`QgsProcessingParameterRasterDestination <qgis.core.QgsProcessingParameterRasterDestination>`
      - ``alg.RASTER_LAYER_DEST``
-     - A raster layer
+     - A raster layer (input)
+   * - :class:`QgsProcessingParameterScale <qgis.core.QgsProcessingParameterScale>`
+     - ``alg.SCALE``
+     - A map scale (input)
    * - :class:`QgsProcessingParameterFeatureSink <qgis.core.QgsProcessingParameterFeatureSink>`
      - ``alg.SINK``
-     - A feature sink
+     - A feature sink (input)
    * - :class:`QgsProcessingParameterFeatureSource <qgis.core.QgsProcessingParameterFeatureSource>`
      - ``alg.SOURCE``
-     - A feature source
+     - A feature source (input)
    * - :class:`QgsProcessingParameterString <qgis.core.QgsProcessingParameterString>`
      - ``alg.STRING``
-     - A text string
+     - A text string (input)
+   * - :class:`QgsProcessingOutputString <qgis.core.QgsProcessingOutputString>`
+     - ``alg.STRING``
+     - A text string (output)
    * - :class:`QgsProcessingParameterVectorLayer <qgis.core.QgsProcessingParameterVectorLayer>`
      - ``alg.VECTOR_LAYER``
-     - A vector layer
+     - A vector layer (input)
+   * - :class:`QgsProcessingOutputVectorLayer <qgis.core.QgsProcessingOutputVectorLayer>`
+     - ``alg.VECTOR_LAYER``
+     - A vector layer (output)
    * - :class:`QgsProcessingParameterVectorDestination <qgis.core.QgsProcessingParameterVectorDestination>`
      - ``alg.VECTOR_LAYER_DEST``
-     - A vector layer
+     - A vector layer (input)
 
 
 Handing algorithm output
