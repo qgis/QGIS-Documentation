@@ -467,7 +467,7 @@ Processing with their corresponding alg decorator constants
      - HTML (output)
    * - :class:`QgsProcessingParameterNumber <qgis.core.QgsProcessingParameterNumber>`
      - ``alg.INT``
-     - A integer (input)
+     - An integer (input)
    * - :class:`QgsProcessingOutputNumber <qgis.core.QgsProcessingOutputNumber>`
      - ``alg.INT``
      - A integer (output)
