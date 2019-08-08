@@ -289,11 +289,14 @@ The :guilabel:`Save Layer as...` dialog shows several parameters to change the
 behavior when saving the layer. Among the common parameters for raster and vector
 are:
 
-* :guilabel:`File name`
+* :guilabel:`File name`: the location of the file on the disk. It can refer to
+  the output layer or to a container that would store the layer (for
+  example database-like formats such as GeoPackage, SpatiaLite or Open Document
+  Spreadsheets)
 * :guilabel:`CRS`: can be changed to reproject the data
-* :guilabel:`Add saved file to map`: to add the new layer to the canvas
 * :guilabel:`Extent` (possible values are **layer**, **Map view** or
   **user-defined** extent)
+* :guilabel:`Add saved file to map`: to add the new layer to the canvas
 
 However, some parameters are specific to raster and vector formats:
 
@@ -330,7 +333,8 @@ Depending on the format of export, some of these options are available or not:
 * :guilabel:`Format`: exports to any vector format GDAL can write to, such as
   GeoPackage, ESRI Shapefile, AutoCAD DXF, ESRI FileGDB, Mapinfo TAB or MIF,
   SpatiaLite, CSV, KML, ODS...
-* :guilabel:`Layer name` depending on the selected format
+* :guilabel:`Layer name`: available when the :guilabel:`File name` refers to a
+  container-like format, this entry represents the output layer
 * :guilabel:`Encoding`
 * :guilabel:`Save only selected features`
 * :guilabel:`Select fields to export and their export options`. In case you set
@@ -354,7 +358,7 @@ Depending on the format of export, some of these options are available or not:
 .. note:: *OGR Feature Styles* are a way to store style directly in
      the data as a hidden attribute. Only some formats can handle this kind of
      information. KML, DXF and TAB file formats are such formats. For advanced
-     users, you can read the `OGR Feature Styles specification
+     details, you can read the `OGR Feature Styles specification
      <https://gdal.org/user/ogr_feature_style.html>`_ document.
 
 * :guilabel:`Geometry`: you can configure the geometry capabilities of the
@@ -375,9 +379,10 @@ Depending on the format of export, some of these options are available or not:
   geometry (point, line, polygon), so that geometries can then be manually added
   to rows with the |addPart| :sup:`Add Part` tool.
 
-* :guilabel:`Datasources Options`, :guilabel:`Layer Options` or
-  :guilabel:`Custom Options` which allow you to configure some advanced
-  parameters. See the `gdal-ogr <https://www.gdal.org>`_ driver documentation.
+* :guilabel:`Datasource Options`, :guilabel:`Layer Options` or
+  :guilabel:`Custom Options` which allow you to configure advanced parameters
+  depending on the output format. Some are exposed in :ref:`supported_format`
+  but for full details, see the `GDAL <https://www.gdal.org>`_ driver documentation.
 
 .. _figure_save_vector:
 

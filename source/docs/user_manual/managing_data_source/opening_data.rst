@@ -509,7 +509,8 @@ geometry type. The loaded layers will contain all the data of that geometry type
 in the file and keep the :file:`osm` file data structure.
 
 
-.. index:: Spatialite, SQLite
+.. index::
+   pair: SpatiaLite; SQLite
 .. _label_spatialite:
 
 SpatiaLite Layers
