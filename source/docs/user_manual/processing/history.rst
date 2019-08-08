@@ -43,6 +43,13 @@ simply double-clicking on the corresponding entry: the algorithm dialog opens
 with parameters already filled; you can then change any of them to fit your
 needs and re-run the algorithm.
 
+The :guilabel:`History` dialog also provides a convenient way to contribute to
+the consolidation of the testing infrastructure of QGIS Processing algorithms
+and scripts. Right-click on a command you previously executed and you can
+:guilabel:`Create Test...` for the concerned algorithm, following instructions at
+https://github.com/qgis/QGIS/blob/master/python/plugins/processing/tests/README.md.
+
+
 The processing log
 -------------------
 
