@@ -160,9 +160,9 @@ and cleanup resources prior to running each test, and the test unit as a whole.
 
 Then come your test methods, all of which should take no parameters and
 should return void. The methods will be called in order of declaration. We
-are implementing two methods here which illustrates two types of testing.
+are implementing two methods here which illustrate two types of testing.
 
-In the first case we want to generally test the various parts of the class are working,
+In the first case we want to generally test if the various parts of the class are working,
 We can use a functional testing approach. Once again, extreme programmers
 would advocate writing these tests before implementing the class. Then as
 you work your way through your class implementation you iteratively run your
@@ -200,14 +200,14 @@ implemented to replicate the conditions of a particular bug. For example:
 #. We opened a bug report (`ticket #832 <https://issues.qgis.org/issues/832>`_)
 #. We created a regression test that replicated the bug using a small
    test dataset (a 10x10 raster).
-#. We ran the test and ran it, verifying that it did indeed fail
+#. We ran the test, verifying that it did indeed fail
    (the cell count was 99 instead of 100).
 #. Then we went to fix the bug and reran the unit test and the regression test
    passed. We committed the regression test along with the bug fix. Now if
    anybody breakes this in the source code again in the future, we can
    immediatly identify that the code has regressed.
    
-   Better yet before committing any changes in the future, running our tests
+   Better yet, before committing any changes in the future, running our tests
    will ensure our changes don't have unexpected side effects - like breaking
    existing functionality.
 
