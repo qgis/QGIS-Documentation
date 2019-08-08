@@ -503,7 +503,7 @@ Processing with their corresponding alg decorator constants
      - A numerical value (input)
    * - :class:`QgsProcessingOutputNumber <qgis.core.QgsProcessingOutputNumber>`
      - ``alg.NUMBER``
-     - A numerical value (input and output)
+     - A numerical value (output)
    * - :class:`QgsProcessingParameterPoint <qgis.core.QgsProcessingParameterPoint>`
      - ``alg.POINT``
      - A point (input)
