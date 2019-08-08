@@ -54,6 +54,8 @@ In the :guilabel:`Main properties` group (see figure_layout_map_) of the map
   layout :ref:`annotations <sec_annotations>` that are placed on the main map
   canvas.
 
+.. _`layout_layers`:
+
 Layers
 ------
 

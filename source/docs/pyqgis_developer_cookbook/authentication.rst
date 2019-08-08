@@ -95,12 +95,12 @@ understand the snippet.
 
 .. code-block:: python
 
-  authMgr = QgsAuthManager.instance()
+  authMgr = QgsApplication.authManager()
   # check if QgsAuthManager has been already initialized... a side effect
   # of the QgsAuthManager.init() is that AuthDbPath is set.
   # QgsAuthManager.init() is executed during QGIS application init and hence
   # you do not normally need to call it directly.
-  if authMgr.authenticationDbPath():
+  if authMgr.authenticationDatabasePath():
       # already initilised => we are inside a QGIS app.
       if authMgr.masterPasswordIsSet():
           msg = 'Authentication master password not recognized'
@@ -142,14 +142,14 @@ credentials for an hypothetic alice user:
 
 .. code-block:: python
 
-  authMgr = QgsAuthManager.instance()
+  authMgr = QgsApplication.authManager()
   # set alice PKI data
   p_config = QgsAuthMethodConfig()
   p_config.setName("alice")
   p_config.setMethod("PKI-Paths")
   p_config.setUri("https://example.com")
-  p_config.setConfig("certpath", "path/to/alice-cert.pem" ))
-  p_config.setConfig("keypath", "path/to/alice-key.pem" ))
+  p_config.setConfig("certpath", "path/to/alice-cert.pem" )
+  p_config.setConfig("keypath", "path/to/alice-key.pem" )
   # check if method parameters are correctly set
   assert p_config.isValid()
 
@@ -185,7 +185,7 @@ Populate Authorities
 
 .. code-block:: python
 
-    authMgr = QgsAuthManager.instance()
+    authMgr = QgsApplication.authManager()
     # add authorities
     cacerts = QSslCertificate.fromPath( "/path/to/ca_chains.pem" )
     assert cacerts is not None
@@ -232,7 +232,7 @@ We can remove an entry from :term:`Authentication Database` using it's
 
 .. code-block:: python
 
-  authMgr = QgsAuthManager.instance()
+  authMgr = QgsApplication.authManager()
   authMgr.removeAuthenticationConfig( "authCfg_Id_to_remove" )
 
 .. _Leave_AuthCfg_expansion_to_QgsAuthManager:
@@ -260,7 +260,7 @@ enabled service like a WMS or WFS or to a DB connection.
 
   .. code-block:: python
 
-    In [19]: authM = QgsAuthManager.instance()
+    In [19]: authM = QgsApplication.authManager()
     In [20]: authM.authMethod("Identity-Cert").supportedDataProviders()
     Out[20]: [u'ows', u'wfs', u'wcs', u'wms', u'postgres']
 
@@ -271,7 +271,7 @@ URL like in the following snippet:
 .. code-block:: python
 
   authCfg = 'fm1s770'
-  quri = QgsDataSourceURI()
+  quri = QgsDataSourceUri()
   quri.setParam("layers", 'usa:states')
   quri.setParam("styles", '')
   quri.setParam("format", 'image/png')
@@ -281,7 +281,7 @@ URL like in the following snippet:
   quri.setParam("authcfg", authCfg)   # <---- here my authCfg url parameter
   quri.setParam("contextualWMSLegend", '0')
   quri.setParam("url", 'https://my_auth_enabled_server_ip/wms')
-  rlayer = QgsRasterLayer(quri.encodedUri(), 'states', 'wms')
+  rlayer = QgsRasterLayer(str(quri.encodedUri(), "utf-8"), 'states', 'wms')
 
 In the upper case, the ``wms`` provider will take care to expand ``authcfg``
 URI parameter with credential just before setting the HTTP connection.

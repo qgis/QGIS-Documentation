@@ -221,16 +221,16 @@ what data type the different columns are:
 The CSVT file is a **ONE line** plain text file with the data types in quotes
 and separated by commas, e.g.::
 
-"Integer","Real","String"
+ "Integer","Real","String"
 
 You can even specify width and precision of each column, e.g.::
 
-"Integer(6)","Real(5.5)","String(22)"
+ "Integer(6)","Real(5.5)","String(22)"
 
 This file is saved in the same folder as the :file:`.csv` file, with the same
 name, but :file:`.csvt` as the extension.
 
-*You can find more information at* `GDAL CSV Driver <https://www.gdal.org/drv_csv.html>`_.
+*You can find more information at* `GDAL CSV Driver <https://gdal.org/drivers/vector/csv.html>`_.
 
 
 .. index:: PostGIS, PostgreSQL
@@ -496,43 +496,79 @@ version of the data to be plotted in a 180 |degrees|-centric map.
 Usage
 .....
 
-*  Import data into PostGIS (:ref:`vector_import_data_in_postgis`) using,
-   for example, the DB Manager plugin.
-*  Use the PostGIS command line interface to issue the following command
-   (in this example, "TABLE" is the actual name of your PostGIS table):
-   ``gis_data=# update TABLE set the_geom=ST_Shift_Longitude(the_geom);``
-*  If everything went well, you should receive a confirmation about the
-   number of features that were updated. Then you'll be able to load the
-   map and see the difference (Figure_vector_crossing_map_).
+* Import data into PostGIS (:ref:`vector_import_data_in_postgis`) using,
+  for example, the DB Manager plugin.
+* Use the PostGIS command line interface to issue the following command
+  (in this example, "TABLE" is the actual name of your PostGIS table):
+  ``gis_data=# update TABLE set the_geom=ST_Shift_Longitude(the_geom);``
+* If everything went well, you should receive a confirmation about the
+  number of features that were updated. Then you'll be able to load the
+  map and see the difference (Figure_vector_crossing_map_).
 
-.. index:: Spatialite, SQLite
+.. index:: SpatiaLite, SQLite
 .. _spatialite_data:
 
 SpatiaLite Layers
 -----------------
 
 If you want to save a vector layer to SpatiaLite format, you can do this by
-right clicking the layer in the legend. Then, click on :menuselection:`Save as...`,
-define the name of the output file, and select 'SpatiaLite' as format and the CRS.
-Also, you can select 'SQLite' as format and then add ``SPATIALITE=YES`` in the
-OGR data source creation option field. This tells OGR to create a SpatiaLite
-database. See also https://www.gdal.org/ogr/drv_sqlite.html.
+following instructions at :ref:`general_saveas`. You would need to select
+``SpatiaLite`` as :guilabel:`Format` and enter both :guilabel:`File name` and
+:guilabel:`Layer name`.
 
-QGIS also supports editable views in SpatiaLite.
+Also, you can select ``SQLite`` as format and then add ``SPATIALITE=YES`` in the
+:guilabel:`Custom Options --> Data source` field. This tells GDAL to create
+a SpatiaLite database. See also https://gdal.org/drivers/vector/sqlite.html.
+
+QGIS also supports editable views in SpatiaLite. For SpatiaLite data management,
+you can also use core plugin :ref:`DB Manager <dbmanager>`.
 
 If you want to create a new SpatiaLite layer, please refer to section
 :ref:`vector_create_spatialite`.
 
-.. index:: QSpatiaLite, Spatialite manager, DB Manager
 
-.. _tip_spatialite_management_plugin:
 
-.. tip:: **SpatiaLite data management Plugins**
+.. index:: GeoJSON Export
+.. _export_geojson_files:
 
- For SpatiaLite data management, you can also use several Python plugins:
- QSpatiaLite, SpatiaLite Manager or :ref:`DB Manager <dbmanager>` (core plugin,
- recommended). If necessary, they can be downloaded and installed with the
- Plugin Installer.
+GeoJSON specific parameters
+---------------------------
+
+When :ref:`exporting layers <general_saveas>` to GeoJSON, this format has
+some specific :guilabel:`Layer Options` available. These options
+actually come from GDAL which is responsible for the writing of the file:
+
+* :guilabel:`COORDINATE_PRECISION` the maximum number of digits after the
+  decimal separator to write in coordinates. Defaults to 15 (note: for Lat Lon
+  coordinates 6 is considered enough). Truncation will occur to remove
+  trailing zeros.
+* :guilabel:`RFC7946` by default GeoJSON 2008 will be used.
+  If set to YES, then the updated RFC 7946 standard will be used.
+  Default is NO (thus GeoJSON 2008).
+  See https://gdal.org/drivers/vector/geojson.html#rfc-7946-write-support for
+  the main differences, in short: only EPSG:4326 is allowed, other crs's will
+  be transformed, polygons will be written such as to follow the right-hand
+  rule for orientation, values of a "bbox" array are
+  [west, south, east, north], not [minx, miny, maxx, maxy]. Some extension
+  member names are forbidden in FeatureCollection, Feature and Geometry
+  objects, the default coordinate precision is 7 decimal digits
+* :guilabel:`WRITE_BBOX` set to YES to write a bbox property with the bounding
+  box of the geometries at the feature and feature collection level
+
+Besides GeoJSON there is also an option to export to
+"GeoJSON - Newline Delimited" (see https://www.gdal.org/drv_geojsonseq.html).
+Instead of a FeatureCollection with Features, you can stream one type
+(probably only Features) sequentially separated with newlines.
+
+GeoJSON - Newline Delimited has some specific Layer options availabe too:
+
+* :guilabel:`COORDINATE_PRECISION` see above (same as for GeoJSON)
+* :guilabel:`RS` whether to start records with the RS=0x1E character. The
+  difference is how the features are separated: only by a newline (LF) character
+  (Newline Delimited JSON, geojsonl) or by prepending a record-separator (RS)
+  character too (giving GeoJSON Text Sequences, geojsons). Default to NO.
+  Note that files are written with the json extension if not given.
+
 
 .. index:: DB2 Spatial
 .. _label_db2_spatial:

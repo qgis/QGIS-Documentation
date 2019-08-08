@@ -32,6 +32,7 @@ explore some of its features.
 
    .. image:: img/qms_result.png
       :align: center
+      :width: 60%
 
 The QuickMapServices plugin makes a lot of base maps available.
 
@@ -92,7 +93,7 @@ canvas.
 
 .. image:: img/quickosm_result.png
    :align: center
-   :scale: 60 %
+   :width: 60 %
 
 .. warning:: QuickOSM creates temporary layer when downloading the data. If you
   want to save them permanently, click on the |indicatorMemory| icon next to the
@@ -163,7 +164,7 @@ The mountain peaks layer will be downloaded and shown in QGIS:
 
 .. image:: img/quickosm_advanced_result.png
    :align: center
-   :scale: 60 %
+   :width: 60 %
 
 You can write complex queries using the `Overpass Query language
 <https://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL>`_.

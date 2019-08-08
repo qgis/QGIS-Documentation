@@ -79,13 +79,13 @@ following functionality:
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 | |multiEdit|             | Toggle multi edit mode              | Update multiple fields of many features    |                     |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |saveEdits|             | Save Edits                          | Save current modifications                 | :kbd:`Ctrl+S`       |
+| |saveEdits|             | Save Edits                          | Save current modifications                 |                     |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 | |draw|                  | Reload the table                    |                                            |                     |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 | |newTableRow|           | Add feature                         | Add new geometryless feature               |                     |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |deleteSelected|        | Delete selected features            | Remove selected features from the layer    |                     |
+| |deleteSelectedFeatures|| Delete selected features            | Remove selected features from the layer    |                     |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 | |editCut|               | Cut selected features to clipboard  |                                            | :kbd:`Ctrl+X`       |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
@@ -111,7 +111,7 @@ following functionality:
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 | |newAttribute|          | New field                           | Add a new field to the data source         | :kbd:`Ctrl+W`       |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |deleteAttribute|       | Delete field                        | Remove a field from the data source        | :kbd:`Ctrl+L`       |
+| |deleteAttribute|       | Delete field                        | Remove a field from the data source        |                     |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
 | |calculateField|        | Open field calculator               | Update field for many features in a row    | :kbd:`Ctrl+I`       |
 +-------------------------+-------------------------------------+--------------------------------------------+---------------------+
@@ -146,6 +146,12 @@ QGIS provides two view modes to easily manipulate data in the attribute table:
   <maptips>` in a first panel and displays only the attributes of the clicked
   identifier in the second one. Form view uses the layer fields configuration
   (see :ref:`vector_attributes_menu`).
+  You can browse through the feature identifiers with the arrows on the bottom
+  of the first panel. Once you markered the feature in yellow in the list it
+  is selected in yellow on the canvas. Use the |zoomToSelected| on top of the
+  attribute table to zoom to the feature. Clicking on an entry in the list 
+  (without using the rectangles) makes a feature flash in red color once so you
+  can see where it is situated.
 
 You can switch from one mode to the other by clicking the corresponding icon at
 the bottom right of the dialog.
@@ -339,11 +345,12 @@ left of the attribute table dialog. This list offers the following filters:
   choose a column from a list, type a value and press :kbd:`Enter` to filter.
   Then, only the matching features are shown in the attribute table.
 * :guilabel:`Advanced filter (Expression)` - Opens the expression builder
-  dialog. Within it, you can create complex expressions to match table rows.
+  dialog. Within it, you can create :ref:`complex expressions
+  <vector_expressions>` to match table rows.
   For example, you can filter the table using more than one field.
-  See :ref:`vector_expressions` for more information.
+  When applied, the filter expression will show up at the bottom of the form.
 
-It is also possible to filter features using the :ref:`filter_select_form`.
+It is also possible to :ref:`filter features using forms <filter_select_form>`.
 
 .. note::
 
@@ -361,23 +368,18 @@ It is also possible to filter features using the :ref:`filter_select_form`.
   Visible on Map` on a new canvas extent updates the spatial restriction.
 
 
-
 .. _filter_select_form:
 
 Filtering and selecting features using forms
 --------------------------------------------
 
 Clicking the |filterMap| :sup:`Filter/Select features using form` or
-pressing :kbd:`Ctrl+F` the attribute table dialog will switch to form view
-and all widgets are replaced with their search variant.
+pressing :kbd:`Ctrl+F` will make the attribute table dialog switch to form view
+and replace each widget with its search variant.
 
 From this point onwards, this tool functionality is similar to the one described
-in the :ref:`select_by_value`, where you can find descriptions of all operators
+in :ref:`select_by_value`, where you can find descriptions of all operators
 and selecting modes.
-
-Moreover, in the attribute table case, there is also a :guilabel:`Filter
-features` button that allows filtering features instead of selecting them (by
-creating an Advanced Filter (Expression) for the user).
 
 .. _figure_filter_select_form:
 
@@ -386,15 +388,20 @@ creating an Advanced Filter (Expression) for the user).
 
     Attribute table filtered by the filter form
 
+When selecting / filtering features from the attribute table, there is a :guilabel:`Filter features` 
+button that allows defining and refining filters. Its use triggers the
+:guilabel:`Advanced filter (Expression)` option and displays the corresponding
+filter expression in an editable text widget at the bottom of the form.
+
 If there are already filtered features, you can refine the filter using the
 drop-down list next to the :guilabel:`Filter features` button. The options are:
 
 * :guilabel:`Filter within ("AND")`
 * :guilabel:`Extend filter ("OR")`
 
-To clear the filter, either select :guilabel:`Show all features` option
-mentioned in :ref:`filter_features`, or click to clear the expression and
-click :guilabel:`Apply`.
+To clear the filter, either select the :guilabel:`Show all features` option
+from the bottom left pull-down menu, or clear the expression and
+click :guilabel:`Apply` or press :kbd:`Enter`.
 
 Using action on features
 ========================
@@ -752,7 +759,8 @@ a table. And there are also some buttons available. Let's review them shortly:
 * The |newTableRow| button will add a new record to the airport layer attribute table.
   And it will assign the new airport to the current region by default.
 * The |duplicateFeature| button allows you to copy one or more child features.
-* The |deleteSelected| button will delete the selected airport permanently.
+* The |deleteSelectedFeatures| button will delete the selected airport
+  permanently.
 * The |link| symbol will open a new dialog where you can select any existing
   airport which will then be assigned to the current region. This may be handy
   if you created the airport on the wrong region by accident.
@@ -990,7 +998,7 @@ table.
    :width: 1.5em
 .. |deleteAttribute| image:: /static/common/mActionDeleteAttribute.png
    :width: 1.5em
-.. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
+.. |deleteSelectedFeatures| image:: /static/common/mActionDeleteSelectedFeatures.png
    :width: 1.5em
 .. |deselectAll| image:: /static/common/mActionDeselectAll.png
    :width: 1.5em

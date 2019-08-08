@@ -32,11 +32,10 @@ QGIS also provides tools to import/export different formats.
 Creating new vector layers
 ==========================
 
-QGIS allows you to create new Shapefile layers, new SpatiaLite layers, new
-GPX layers and new Temporary Scratch layers. Creation of a new GRASS layer
-is supported within the GRASS plugin.
-(Please refer to section :ref:`creating_new_grass_vectors` for more information
-on creating GRASS vector layers.)
+QGIS allows you to create new layers in different formats. It provides tools
+for creation from scratch for GeoPackage, Shapefile, SpatiaLite, GPX format and
+Temporary Scratch layers (aka memory layers). Creation of a :ref:`new
+GRASS layer <creating_new_grass_vectors>` is supported within the GRASS plugin.
 
 
 .. index:: New GeoPackage layer
@@ -45,10 +44,11 @@ on creating GRASS vector layers.)
 Creating a new GeoPackage layer
 -------------------------------
 
-To create a new GeoPackage layer go to :menuselection:`Layer --> New -->`
-|newGeoPackageLayer| :menuselection:`New GeoPackage Layer...`.
-The :guilabel:`New GeoPackage Layer` dialog will
-be displayed as shown in figure_create_geopackage_.
+To create a new GeoPackage layer, press the |newGeoPackageLayer|
+:menuselection:`New GeoPackage Layer...` button in the :menuselection:`Layer
+--> Create Layer -->` menu or from the :guilabel:`Data Source Manager` toolbar.
+The :guilabel:`New GeoPackage Layer` dialog will be displayed as shown in
+figure_create_geopackage_.
 
 .. _figure_create_geopackage:
 
@@ -57,17 +57,42 @@ be displayed as shown in figure_create_geopackage_.
 
    Creating a New GeoPackage layer dialog
 
-The first step is to select an existing GeoPackage or create a new one. This
-can be done by pressing the ellipses :guilabel:`...` button at the right of the
-Database field. Then, give a name for the new layer, define the layer type and
-specify the coordinate reference system with :guilabel:`Specify CRS`.
+#. The first step is to indicate the database file location. This can be done
+   by pressing the :guilabel:`...` button at the right of the
+   :guilabel:`Database` field and select an existing GeoPackage file
+   or create a new one. QGIS will automatically add the right extension to
+   the name you provide.
+#. Then, give a name for the new layer to store
+#. Define the :guilabel:`Geometry type`. If not a geometryless layer, you
+   can specify whether it should :guilabel:`Include Z dimension` and/or
+   :guilabel:`Include M values`.
+#. Specify the coordinate reference system using the |setProjection| button
 
-To define an attribute table for the new GeoPackage layer, add the names of
-the attribute columns you want to create with the corresponding column type, 
-and click on the :guilabel:`Add to Fields List` button. Once you are happy with the
-attributes, click :guilabel:`OK`. QGIS will automatically add the new layer to the
-legend, and you can edit it in the same way as described in section
-:ref:`sec_edit_existing_layer`.
+To add fields to the layer you are creating:
+
+#. Enter the :guilabel:`Name` of the field
+#. Select the data :guilabel:`Type`. Supported types are :guilabel:`Text data`,
+   :guilabel:`Whole number` (both integer and integer64), :guilabel:`Decimal
+   number`, :guilabel:`Date` and :guilabel:`Date and time`, :guilabel:`Blob`
+   and :guilabel:`Boolean`.
+#. Depending on the selected data format, enter the :guilabel:`Maximum length`
+   of values.
+#. Click on the |newAttribute| :guilabel:`Add to Fields List` button
+#. And reproduce the steps above for each field you need to add
+#. Once you are happy with the attributes, click :guilabel:`OK`.
+   QGIS will automatically add the new layer to the legend, and you can edit it
+   as described in section :ref:`sec_edit_existing_layer`.
+
+By default, When creating a GeoPackage layer, QGIS generates a :guilabel:`Feature
+id column` called ``fid`` which behaves like the primary key of the layer. The
+name can be changed. Likewise, the geometry field, if availabe, is named ``geometry``
+and you can choose to :guilabel:`Create a spatial index` on it.
+These options can be found under the :guilabel:`Advanced Options` next to the
+:guilabel:`Layer identifier`, short human readable name of the layer, and the
+:guilabel:`Layer description`.
+
+Further management of GeoPackage layers can be done with the :ref:`DB Manager
+<dbmanager>`.
 
 
 .. _vector_create_shapefile:
@@ -75,15 +100,21 @@ legend, and you can edit it in the same way as described in section
 Creating a new Shapefile layer
 ------------------------------
 
-To create a new Shapefile layer, choose :menuselection:`Create Layer -->`
-|newVectorLayer| :menuselection:`New Shapefile Layer...` from the
-:menuselection:`Layer` menu or select it from the :guilabel:`Data Source Manager`
-toolbar. The :guilabel:`New Shapefile Layer` dialog will be
-displayed as shown in figure_create_shapefile_. 
-The first step is to provide a path and name for the Shapefile. QGIS will
-automatically add the :file:`.shp` extension to the name you specify
-Next, choose the type of layer (point, line or polygon) and optional Z or M 
-dimensions, as well as the CRS (coordinate reference system).
+To create a new Shapefile layer, press the |newVectorLayer| :menuselection:`New
+Shapefile Layer...` button in the :menuselection:`Layer --> Create Layer -->`
+menu or from the :guilabel:`Data Source Manager` toolbar.
+The :guilabel:`New Shapefile Layer` dialog will be displayed as shown in
+figure_create_shapefile_.
+
+#. The first step is to provide a path and name for the layer using the
+   :guilabel:`...` button next to :guilabel:`File name`. QGIS will
+   automatically add the right extension to the name you provide.
+#. Next, indicate the :guilabel:`File encoding` of the data
+#. Choose the :guilabel:`Geometry type` of the layer (point, multipoint, line
+   or polygon)
+#. Specify whether the geometry should have an optional :guilabel:`Z (+ M
+   values)` or :guilabel:`M values`
+#. Specify the coordinate reference system using the |setProjection| button
 
 .. _figure_create_shapefile:
 
@@ -92,18 +123,21 @@ dimensions, as well as the CRS (coordinate reference system).
 
    Creating a new Shapefile layer dialog
 
-To complete the creation of the new Shapefile layer, add the desired attributes
-by specifying a name and type for each attribute and clicking on the 
-:guilabel:`Add to Fields List` button. 
-A first 'id' column is added by default but can be
-removed, if not wanted. Only :guilabel:`Decimal number` |selectString|,
-:guilabel:`Whole number` |selectString|, :guilabel:`Text data`
-|selectString| and :guilabel:`Date` |selectString| attributes are
-supported. Additionally, depending on the attribute type, you can also define
-the length and precision of the new attribute column. Once you are happy with the
-attributes, click :guilabel:`OK`. 
-Once the Shapefile has been created, it will be added to the map as a new layer,
-and you can edit it in the same way as described in section :ref:`sec_edit_existing_layer`.
+To add fields to the layer you are creating:
+
+#. Enter the :guilabel:`Name` of the field
+#. Select the data :guilabel:`Type`. Only :guilabel:`Decimal number`,
+   :guilabel:`Whole number`, :guilabel:`Text data` and :guilabel:`Date`
+   attributes are supported.
+#. Depending on the selected data format, enter the :guilabel:`Length` and
+   :guilabel:`Precision`.
+#. Click on the |newAttribute| :guilabel:`Add to Fields List` button
+#. And reproduce the steps above for each field you need to add
+#. Once you are happy with the attributes, click :guilabel:`OK`.
+   QGIS will automatically add the new layer to the legend, and you can edit it
+   as described in section :ref:`sec_edit_existing_layer`.
+
+By default, A first integer ``id`` column is added but can be removed.
 
 
 .. index:: New SpatiaLite layer
@@ -112,10 +146,9 @@ and you can edit it in the same way as described in section :ref:`sec_edit_exist
 Creating a new SpatiaLite layer
 -------------------------------
 
-To create a new SpatiaLite layer for editing, choose :menuselection:`Create Layer
--->` |newSpatiaLiteLayer| :menuselection:`New SpatiaLite Layer...` from the
-:menuselection:`Layer` menu or select it from the :guilabel:`Data Source Manager`
-toolbar.
+To create a new SpatiaLite layer, press the |newSpatiaLiteLayer|
+:menuselection:`New SpatiaLite Layer...` button in the :menuselection:`Layer
+--> Create Layer -->` menu or from the :guilabel:`Data Source Manager` toolbar.
 The :guilabel:`New SpatiaLite Layer` dialog will be displayed as shown in
 Figure_create_spatialite_.
 
@@ -126,21 +159,34 @@ Figure_create_spatialite_.
 
    Creating a New SpatiaLite layer dialog
 
-The first step is to select an existing SpatiaLite database or to create a new
-SpatiaLite database. This can be done with the :guilabel:`...` button at
-the right of the database field. Then, add a name for the new layer, define
-the layer type, and specify the coordinate reference system with :guilabel:`Specify CRS`.
-If desired, you can select |checkbox| :guilabel:`Create an autoincrementing primary key`.
+#. The first step is to indicate the database file location. This can be done
+   by pressing the :guilabel:`...` button at the right of the
+   :guilabel:`Database` field and select an existing SpatiaLite file
+   or create a new one. QGIS will automatically add the right extension to
+   the name you provide.
+#. Then, give a name for the new layer to store
+#. Define the :guilabel:`Geometry type`. If not a geometryless layer, you
+   can specify whether it should :guilabel:`Include Z dimension` and/or
+   :guilabel:`Include M values`.
+#. Specify the coordinate reference system using the |setProjection| button.
 
-To define an attribute table for the new SpatiaLite layer, add the names of
-the attribute columns you want to create with the corresponding column type, and
-click on the :guilabel:`Add to Fields List` button. Once you are happy with the
-attributes, click :guilabel:`OK`. QGIS will automatically add the new layer to the
-legend, and you can edit it in the same way as described in section
-:ref:`sec_edit_existing_layer`.
+To add fields to the layer you are creating:
 
-Further management of SpatiaLite layers can be done with the DB Manager. See
-:ref:`dbmanager`.
+#. Enter the :guilabel:`Name` of the field
+#. Select the data :guilabel:`Type`. Supported types are :guilabel:`Text data`,
+   :guilabel:`Whole number` and :guilabel:`Decimal number`.
+#. Click on the |newAttribute| :guilabel:`Add to Fields List` button
+#. And reproduce the steps above for each field you need to add
+#. Once you are happy with the attributes, click :guilabel:`OK`.
+   QGIS will automatically add the new layer to the legend, and you can edit it
+   as described in section :ref:`sec_edit_existing_layer`.
+
+If desired, you can select |checkbox| :guilabel:`Create an autoincrementing
+primary key` under the guilabel:`Advanced Options` section. You can also rename
+the :guilabel:`Geometry column` which is ``geometry`` by default.
+
+Further management of SpatiaLite layers can be done with the :ref:`DB Manager
+<dbmanager>`.
 
 
 .. index:: New GPX layer
@@ -171,17 +217,23 @@ Creating a new Temporary Scratch Layer
 Temporary Scratch Layers are in-memory layers, meaning that they are not saved
 on disk and will be discarded when QGIS is closed. They can be handy to store
 features you temporarily need or as intermediate layers during geoprocessing
-operations. 
+operations.
 
-Empty, editable temporary scratch layers can be defined using :menuselection:`Layer
---> Create Layer -->` |createMemory| :menuselection:`New Temporary Scratch Layer`
-or |createMemory| :sup:`New temporary scratch layer` button from the :guilabel:`Data
-Source Manager Toolbar`. Here you can create a:
+To create a new Temporary Scratch layer, press the |createMemory|
+:menuselection:`New Temporary Scratch Layer...` button from the
+:menuselection:`Layer --> Create Layer -->` menu or from the :guilabel:`Data
+Source Manager` toolbar.
+The :guilabel:`New Temporary Scratch Layer` dialog will be displayed as shown in
+figure_create_temporary_. Then:
 
-* ``No geometry`` type layer, served as simple table,
-* ``Point`` or ``MultiPoint`` layer,
-* ``LineString/CompoundCurve`` or ``MultiLineString/MultiCurve`` layer,
-* ``Polygon/CurvePolygon`` or ``MultiPolygon/MultiSurface`` layer.
+#. Indicate the :guilabel:`Layer name`
+#. Select the :guilabel:`Geometry type`. Here you can create a:
+
+   * ``No geometry`` type layer, served as simple table,
+   * ``Point`` or ``MultiPoint`` layer,
+   * ``LineString/CompoundCurve`` or ``MultiLineString/MultiCurve`` layer,
+   * ``Polygon/CurvePolygon`` or ``MultiPolygon/MultiSurface`` layer.
+#. Specify the coordinate reference system using the |setProjection| button.
 
 .. _figure_create_temporary:
 
@@ -190,8 +242,11 @@ Source Manager Toolbar`. Here you can create a:
 
    Creating a new Temporary Scratch layer dialog
 
-By default, a new temporary scratch layer is created without any attribute. But
-you can also create prepopulated temporary scratch layers using e.g. the
+By default, a new temporary scratch layer is created without any attributes. You
+can later add them using the |newAttribute| :sup:`New Field` button from the
+layer's attribute table or the :guilabel:`Source Fields` tab of its properties
+dialog.
+But you can also create prepopulated temporary scratch layers using e.g. the
 clipboard (see :ref:`paste_into_layer`) or as a result of a :ref:`Processing
 algorithm <processing_algs>`.
 
@@ -234,11 +289,14 @@ The :guilabel:`Save Layer as...` dialog shows several parameters to change the
 behavior when saving the layer. Among the common parameters for raster and vector
 are:
 
-* :guilabel:`File name`
+* :guilabel:`File name`: the location of the file on the disk. It can refer to
+  the output layer or to a container that would store the layer (for
+  example database-like formats such as GeoPackage, SpatiaLite or Open Document
+  Spreadsheets)
 * :guilabel:`CRS`: can be changed to reproject the data
-* :guilabel:`Add saved file to map`: to add the new layer to the canvas
 * :guilabel:`Extent` (possible values are **layer**, **Map view** or
   **user-defined** extent)
+* :guilabel:`Add saved file to map`: to add the new layer to the canvas
 
 However, some parameters are specific to raster and vector formats:
 
@@ -275,7 +333,8 @@ Depending on the format of export, some of these options are available or not:
 * :guilabel:`Format`: exports to any vector format GDAL can write to, such as
   GeoPackage, ESRI Shapefile, AutoCAD DXF, ESRI FileGDB, Mapinfo TAB or MIF,
   SpatiaLite, CSV, KML, ODS...
-* :guilabel:`Layer name` depending on the selected format
+* :guilabel:`Layer name`: available when the :guilabel:`File name` refers to a
+  container-like format, this entry represents the output layer
 * :guilabel:`Encoding`
 * :guilabel:`Save only selected features`
 * :guilabel:`Select fields to export and their export options`. In case you set
@@ -299,7 +358,7 @@ Depending on the format of export, some of these options are available or not:
 .. note:: *OGR Feature Styles* are a way to store style directly in
      the data as a hidden attribute. Only some formats can handle this kind of
      information. KML, DXF and TAB file formats are such formats. For advanced
-     users, you can read the `OGR Feature Styles specification
+     details, you can read the `OGR Feature Styles specification
      <https://gdal.org/user/ogr_feature_style.html>`_ document.
 
 * :guilabel:`Geometry`: you can configure the geometry capabilities of the
@@ -320,9 +379,10 @@ Depending on the format of export, some of these options are available or not:
   geometry (point, line, polygon), so that geometries can then be manually added
   to rows with the |addPart| :sup:`Add Part` tool.
 
-* :guilabel:`Datasources Options`, :guilabel:`Layer Options` or
-  :guilabel:`Custom Options` which allow you to configure some advanced
-  parameters. See the `gdal-ogr <https://www.gdal.org>`_ driver documentation.
+* :guilabel:`Datasource Options`, :guilabel:`Layer Options` or
+  :guilabel:`Custom Options` which allow you to configure advanced parameters
+  depending on the output format. Some are exposed in :ref:`supported_format`
+  but for full details, see the `GDAL <https://www.gdal.org>`_ driver documentation.
 
 .. _figure_save_vector:
 
@@ -343,6 +403,7 @@ decide whether to:
 * append features, add new fields if there are any.
 
 For formats like ESRI Shapefile, MapInfo .tab, feature append is also available.
+
 
 .. index:: DXF Export
 .. _create_dxf_files:
@@ -613,14 +674,16 @@ used in conjunction with this spatial index syntax.
    :width: 1.5em
 .. |indicatorMemory| image:: /static/common/mIndicatorMemory.png
    :width: 1.5em
+.. |newAttribute| image:: /static/common/mActionNewAttribute.png
+   :width: 1.5em
 .. |newGeoPackageLayer| image:: /static/common/mActionNewGeoPackageLayer.png
    :width: 1.5em
 .. |newSpatiaLiteLayer| image:: /static/common/mActionNewSpatiaLiteLayer.png
    :width: 1.5em
 .. |newVectorLayer| image:: /static/common/mActionNewVectorLayer.png
    :width: 1.5em
-.. |selectString| image:: /static/common/selectstring.png
-   :width: 2.5em
+.. |setProjection| image:: /static/common/mActionSetProjection.png
+   :width: 1.5em
 .. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png

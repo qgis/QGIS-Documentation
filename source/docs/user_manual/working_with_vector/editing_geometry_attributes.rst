@@ -300,7 +300,7 @@ Using the basic digitizing tools, you can perform the following functions:
 | |multiEdit|                  | Modify the attributes of all      |                          |                                  |
 |                              | selected features simultaneously  |                          |                                  |
 +------------------------------+-----------------------------------+--------------------------+----------------------------------+
-| |deleteSelected|             | Delete Selected                   ||editCut|                 | Cut Features                     |
+| |deleteSelectedFeatures|     | Delete Selected                   ||editCut|                 | Cut Features                     |
 +------------------------------+-----------------------------------+--------------------------+----------------------------------+
 | |editCopy|                   | Copy Features                     | |editPaste|              | Paste Features                   |
 +------------------------------+-----------------------------------+--------------------------+----------------------------------+
@@ -477,8 +477,10 @@ Red circles will appear when hovering vertices.
 
 * **Deleting vertices**: Select the vertices and click the :kbd:`Delete` key.
   Deleting all the vertices of a feature generates, if compatible with the datasource,
-  a geometryless feature. Note that this doesn't delete the complete feature, just the geometry part;
-  To delete a complete feature use the |deleteSelected| :sup:`Delete Selected` tool.
+  a geometryless feature. Note that this doesn't delete the complete feature,
+  just the geometry part;
+  To delete a complete feature use the |deleteSelectedFeatures| :sup:`Delete
+  Selected` tool.
 
 * **Moving vertices**: Select all the vertices you want to move, click on
   a selected vertex or edge, and click again on the desired new location. All
@@ -616,8 +618,8 @@ If we want to delete an entire feature (attribute and geometry), we can do that
 by first selecting the geometry using the regular |selectRectangle| :sup:`Select
 Features by area or single click` tool. Selection can also be done from the attribute
 table. Once you have the selection set, press :kbd:`Delete` or :kbd:`Backspace`
-key or use the |deleteSelected| :sup:`Delete Selected` tool to delete the
-features. Multiple selected features can be deleted at once.
+key or use the |deleteSelectedFeatures| :sup:`Delete Selected` tool to delete
+the features. Multiple selected features can be deleted at once.
 
 The |editCut| :sup:`Cut Features` tool on the digitizing toolbar can
 also be used to delete features. This effectively deletes the feature but
@@ -1584,7 +1586,7 @@ To edit features in-place:
    :width: 2em
 .. |deleteRing| image:: /static/common/mActionDeleteRing.png
    :width: 2em
-.. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
+.. |deleteSelectedFeatures| image:: /static/common/mActionDeleteSelectedFeatures.png
    :width: 1.5em
 .. |delta| image:: /static/common/delta.png
    :width: 1.5em

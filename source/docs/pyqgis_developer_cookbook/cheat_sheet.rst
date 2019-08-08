@@ -42,6 +42,10 @@ Settings
 
 **Get QSettings list**
 
+.. testcleanup::
+    
+    QSettings().clear()
+    
 .. testcode::
 
     from qgis.PyQt.QtCore import QSettings
@@ -112,6 +116,14 @@ Canvas
 
     iface.mapCanvas().setCanvasColor(Qt.black)    
     iface.mapCanvas().refresh()
+
+**Map Update interval**
+
+.. testcode::
+
+    from qgis.PyQt.QtCore import QSettings
+    # Set milliseconds (150 milliseconds)
+    QSettings().setValue("/qgis/map_update_interval", 150)
 
 Layers
 ======
@@ -189,6 +201,18 @@ Otherwise
 
     layer = QgsProject.instance().mapLayersByName("layer name you like")[0]
     iface.setActiveLayer(layer)
+
+**Refresh layer at interval**
+
+.. testcode::
+
+    from qgis.core import QgsProject
+
+    layer = QgsProject.instance().mapLayersByName("layer name you like")[0]
+    # Set seconds (5 seconds)
+    layer.setAutoRefreshInterval(5000)
+    # Enable auto refresh
+    layer.setAutoRefreshEnabled(True)
 
 **Show methods**
 
@@ -603,6 +627,18 @@ Random selection
 
     processing.algorithmHelp("qgis:randomselection")
 
+**Run the algorithm**
+
+For this example, the result is stored in a temporary memory layer
+which is added to the project.
+
+.. code-block:: python
+
+    import processing
+    result = processing.run("native:buffer", {'INPUT': layer, 'OUTPUT': 'memory:'})
+    QgsProject.instance().addMapLayer(result['OUTPUT'])
+
+
 **How many algorithms are there?**
 
 .. testcode::
@@ -726,4 +762,3 @@ Sources
    source folder.
 
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
-

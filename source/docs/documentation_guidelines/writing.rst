@@ -437,31 +437,31 @@ Add new Screenshots
 -------------------
 
 Here are some hints to create new, nice looking screenshots.
-The images should be placed  in a :file:`img/` folder, in the same folder as the
-rst file.
+The images should be placed in a :file:`img/` folder, in the same folder as the
+referencing :file:`.rst` file.
 
 * Same environment for all the screen caps (same OS, same decoration, same font
   size). We have used Ubuntu with Unity and the default "ambience" theme.
   For screenshots of QGIS main window and layouts we have set it to show menus
   on the window (not the default in unity).
 * Reduce the window to the minimal space needed to show the feature (taking the
-  all screen for a small modal window > overkill)
+  whole screen for a small modal window > overkill)
 * The less clutter, the better (no need to activate all the toolbars)
-* Don't resize them in an image editor, the size will be set into the rst files
-  if necessary (downscaling the dimensions without properly upping the
+* Don't resize them in an image editor; the size will be set into the :file:`.rst`
+  files if necessary (downscaling the dimensions without properly upping the
   resolution > ugly)
 * Cut the background
 * Make the top corners transparent if the background is not white
-* Set print size resolution to 135 dpi (e.g. in Gimp set the print resolution
-  :menuselection:`image --> print size` and save). This way, images will be at
+* Set print size resolution to ``135 dpi`` (e.g. in Gimp set the print resolution
+  :menuselection:`Image --> Print size` and save). This way, images will be at
   original size in html and at a good print resolution in the PDF.
   You can also use ImageMagick convert command to do a batch of images:
 
-.. code-block:: bash
+  .. code-block:: bash
 
-  convert -units PixelsPerInch input.png -density 135 output.png
+    convert -units PixelsPerInch input.png -density 135 output.png
 
-* Save them in png (no jpeg artifacts)
+* Save them in :file:`.png` (no :file:`.jpeg` artifacts)
 * The screenshot should show the content according to what is described in the
   text
 * You can find some prepared QGIS-projects that were used before to create
@@ -475,7 +475,7 @@ rst file.
   
   .. code-block:: bash
   
-    sudo apt-get autoremove appmenu-gtk appmenu-gtk3 appmenu-qt
+    sudo apt autoremove appmenu-gtk appmenu-gtk3 appmenu-qt
 
 
 Translate Screenshots
@@ -483,7 +483,7 @@ Translate Screenshots
 
 Here are some hints to create screenshots for your translated user guide.
 Translated images should be placed in a :file:`img/<your_language>/` folder, in
-the same folder as the rst file.
+the same folder as the referencing :file:`.rst` file.
 
 * Same environment for all the screen caps (same OS, same decoration, same font
   size)
@@ -496,13 +496,14 @@ the same folder as the rst file.
   and look ugly. If you need to have a different size due to longer ui strings,
   don't forget to change the dimension in the rst code of your language.
 * Same filename as the english 'original' screenshot
-* Reduce the window to the minimal space needed to show the feature
-  (taking all the screen for a small modal window > overkill)
+* Reduce the window to the minimal space needed to show the feature (taking the
+  whole screen for a small modal window > overkill)
 * The less clutter, the better (no need to activate all the toolbars)
-* Don't resize them in an image editor, the size will be set into the rst files
-  (downscaling the dimensions without properly upping the resolution > ugly)
+* Don't resize them in an image editor; the size will be set into the :file:`.rst`
+  files if necessary (downscaling the dimensions without properly upping the
+  resolution > ugly)
 * Cut the background
-* Save them in png (no jpeg artifacts)
+* Save them in :file:`.png` (no :file:`.jpeg` artifacts)
 * The screenshot should show the content according to what is described in the
   text
 

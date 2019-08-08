@@ -7,7 +7,8 @@
 .. contents::
    :local:
 
-This section describes how to get started using the QGIS GIT repository. Before you can do this, you need to first have a git client installed on your system.
+This section describes how to get started using the QGIS GIT repository. Before
+you can do this, you need to first have a git client installed on your system.
 
 
 Installation
@@ -20,20 +21,22 @@ Debian based distro users can do:
 
 .. code-block:: bash
 
-  sudo apt-get install git
+  sudo apt install git
 
 
 Install git for Windows
 ------------------------
 
-Windows users can obtain `msys git <https://gitforwindows.org/>`_ or use git distributed with `cygwin <https://cygwin.com>`_.
+Windows users can obtain `msys git <https://gitforwindows.org/>`_ or use git
+distributed with `cygwin <https://cygwin.com>`_.
 
 
 Install git for OSX
 -------------------
 
 The `git project <https://git-scm.com/>`_ has a downloadable build of git.
-Make sure to get the package matching your processor (x86_64 most likely, only the first Intel Macs need the i386 package).
+Make sure to get the package matching your processor (x86_64 most likely, only
+the first Intel Macs need the i386 package).
 
 Once downloaded open the disk image and run the installer.
 
@@ -42,14 +45,16 @@ PPC/source note
 The git site does not offer PPC builds. If you need a PPC build, or you just want
 a little more control over the installation, you need to compile it yourself.
 
-Download the source from https://git-scm.com/. Unzip it, and in a Terminal cd to the source folder, then:
+Download the source from https://git-scm.com/.
+Unzip it, and in a Terminal cd to the source folder, then:
 
 .. code-block:: bash
 
   make prefix=/usr/local
   sudo make prefix=/usr/local install
 
-If you don't need any of the extras, Perl, Python or TclTk (GUI), you can disable them before running make with:
+If you don't need any of the extras, Perl, Python or TclTk (GUI),
+you can disable them before running make with:
 
 .. code-block:: bash
 
@@ -106,7 +111,8 @@ If you're interested in checking out QGIS documentation sources:
 
   git clone git@github.com:qgis/QGIS-Documentation.git
 
-You can also take a look at the readme included with the documentation repo for more information.
+You can also take a look at the readme included with the documentation repo
+for more information.
 
 
 QGIS website sources
@@ -118,7 +124,8 @@ If you're interested in checking out QGIS website sources:
 
   git clone git@github.com:qgis/QGIS-Website.git
 
-You can also take a look at the readme included with the website repo for more information.
+You can also take a look at the readme included with the website repo
+for more information.
 
 
 GIT Documentation
@@ -294,11 +301,11 @@ Patch file naming
 ==================
 
 If the patch is a fix for a specific bug, please name the file with the bug
-number in it e.g. bug777fix.patch, and attach it to the `original bug report in trac 
-<https://issues.qgis.org/projects/qgis>`_.
+number in it e.g. bug777fix.patch, and attach it to the `original bug report in
+GitHub <https://github.com/qgis/QGIS/issues>`_.
 
-If the bug is an enhancement or new feature, its usually a good idea to create
-a `ticket in trac <https://issues.qgis.org/projects/qgis>`_
+If the bug is an enhancement or new feature, it's usually a good idea to create
+a `ticket in GitHub <https://github.com/qgis/QGIS/issues>`_
 first and then attach your patch.
 
 
@@ -330,9 +337,7 @@ Getting your patch noticed
 
 QGIS developers are busy folk. We do scan the incoming patches on bug reports
 but sometimes we miss things. Don't be offended or alarmed. Try to identify a
-developer to help you - using the `Technical Resources
-<https://qgis.org/en/site/getinvolved/governance/governance.html#technical-resources>`_
-and contact them
+developer to help you and contact them
 asking them if they can look at your patch. If you don't get any response, you
 can escalate your query to one of the Project Steering Committee members
 (contact details also available in the Technical Resources).

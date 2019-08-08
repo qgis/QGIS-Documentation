@@ -144,7 +144,7 @@ MSSQL...) level.
 
 
 You can also open the :guilabel:`Query Builder` dialog using the :guilabel:`Filter...`
-option from the :menuselection:`View` menu or the layer contextual menu.
+option from the :menuselection:`Layer` menu or the layer contextual menu.
 The :guilabel:`Fields`, :guilabel:`Values` and :guilabel:`Operators` sections in
 the dialog help you to construct the SQL-like query exposed in the
 :guilabel:`Provider specific filter expression` box.
@@ -797,7 +797,7 @@ features of the layer:
 * :guilabel:`Opacity` |slider|: You can make the underlying layer in
   the map canvas visible with this tool. Use the slider to adapt the visibility
   of your vector layer to your needs. You can also make a precise definition of
-  the percentage of visibility in the the menu beside the slider.
+  the percentage of visibility in the menu beside the slider.
 
 * :guilabel:`Blending mode` at the :guilabel:`Layer` and :guilabel:`Feature` levels:
   You can achieve special rendering effects with these tools that you may previously
@@ -2212,7 +2212,7 @@ shown for example in figure_fields_form_.
 
 To create the form, you can drag and drop fields from the :guilabel:`Available
 Widgets` panel to the :guilabel:`Form Layout` one to have fields added to
-your custom form and drag and drop fiels inside the :guilabel:`Form Layout`
+your custom form and drag and drop fields inside the :guilabel:`Form Layout`
 to reorder their position.
 
 You can also use categories (tab or group frames) to better structure the form.

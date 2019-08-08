@@ -119,7 +119,7 @@ symbology:
 
 #. Click :guilabel:`Add` and the new layer will appear in your map as
    :guilabel:`OpenStreetMap WMS - by terrestris`.
-#. Close the :guilabel;`Data Source Manager` dialog if not done automatically
+#. Close the :guilabel:`Data Source Manager` dialog if not done automatically
 #. In the :guilabel:`Layers` panel, click and drag it to the bottom of the list.
 #. Zoom out in order to get a global view of the layers. You will notice that
    your layers aren't located correctly (near west of Africa).

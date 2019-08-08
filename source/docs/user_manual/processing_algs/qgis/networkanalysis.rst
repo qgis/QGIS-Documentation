@@ -40,8 +40,8 @@ Parameters
   Default: *0*
 
 ``Travel cost`` [number]
-  The value is estimated as a distance (in the project map units) when looking for
-  the *Shortest* path and as time (in hours) for the *Fastest* path.
+  The value is estimated as a distance (in the network layer units) when looking for
+  the *Shortest* path and as time (in seconds) for the *Fastest* path.
 
   Default: *0.0*
 
@@ -153,8 +153,8 @@ Parameters
   Default: *0*
 
 ``Travel cost`` [number]
-  The value is estimated as a distance (in the project map units) when looking for
-  the *Shortest* path and as time (in hours) for the *Fastest* path.
+  The value is estimated as a distance (in the network layer units) when looking for
+  the *Shortest* path and as time (in seconds) for the *Fastest* path.
 
   Default: *0.0*
 

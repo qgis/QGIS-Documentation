@@ -153,7 +153,7 @@ Icon                          Substitution                       Icon           
 |toggleEditing|               ``|toggleEditing|``                |allEdits|                     ``|allEdits|``
 |tracing|                     ``|tracing|``                      |snapping|                     ``|snapping|``
 |capturePoint|                ``|capturePoint|``                 |capturePolygon|               ``|capturePolygon|``
-|captureLine|                 ``|captureLine|``                  |deleteSelected|               ``|deleteSelected|``
+|captureLine|                 ``|captureLine|``                  |deleteSelectedFeatures|       ``|deleteSelectedFeatures|``
 |circularStringCurvePoint|    ``|circularStringCurvePoint|``     |circularStringRadius|         ``|circularStringRadius|``
 |vertexTool|                  ``|vertexTool|``                   |vertexToolActiveLayer|        ``|vertexToolActiveLayer|``
 |moveFeature|                 ``|moveFeature|``                  |moveFeatureCopy|              ``|moveFeatureCopy|``
@@ -264,28 +264,29 @@ Icon                            Substitution                        Icon        
 |gpsImporter|                   ``|gpsImporter|``                   |gpsTrackBarChart|              ``|gpsTrackBarChart|``
 |folder|                        ``|folder|``                        |extents|                       ``|extents|``
 |settings|                      ``|settings|``                      |start|                         ``|start|``
-|3dconfigure|                   ``|3dconfigure|``
+|3dconfigure|                   ``|3dconfigure|``                   |deleteSelected|                ``|deleteSelected|``
 ==============================  ==================================  ==============================  ==================================
 
 
 Attribute Table
 ===============
 
-============================ ===============================  =======================  ===========================
-Icon                         Substitution                     Icon                     Substitution
-============================ ===============================  =======================  ===========================
-|openTable|                  ``|openTable|``                  |selectedToTop|          ``|selectedToTop|``
-|selectAll|                  ``|selectAll|``                  |invertSelection|        ``|invertSelection|``
-|panToSelected|              ``|panToSelected|``              |zoomToSelected|         ``|zoomToSelected|``
-|copySelected|               ``|copySelected|``               |editPaste|              ``|editPaste|``
-|expressionSelect|           ``|expressionSelect|``           |deleteSelected|         ``|deleteSelected|``
-|newAttribute|               ``|newAttribute|``               |deleteAttribute|        ``|deleteAttribute|``
-|newTableRow|                ``|newTableRow|``                |calculateField|         ``|calculateField|``
-|draw|                       ``|draw|``                       |formView|               ``|formView|``
-|conditionalFormatting|      ``|conditionalFormatting|``      |multiEdit|              ``|multiEdit|``
-|dock|                       ``|dock|``                       |actionRun|              ``|actionRun|``
+============================ ===============================  =========================  =============================
+Icon                         Substitution                     Icon                       Substitution
+============================ ===============================  =========================  =============================
+|openTable|                  ``|openTable|``                  |selectedToTop|            ``|selectedToTop|``
+|selectAll|                  ``|selectAll|``                  |invertSelection|          ``|invertSelection|``
+|panToSelected|              ``|panToSelected|``              |zoomToSelected|           ``|zoomToSelected|``
+|copySelected|               ``|copySelected|``               |editPaste|                ``|editPaste|``
+|expressionSelect|           ``|expressionSelect|``           |deleteSelectedFeatures|   ``|deleteSelectedFeatures|``
+|newAttribute|               ``|newAttribute|``               |deleteAttribute|          ``|deleteAttribute|``
+|newTableRow|                ``|newTableRow|``                |calculateField|           ``|calculateField|``
+|draw|                       ``|draw|``                       |formView|                 ``|formView|``
+|conditionalFormatting|      ``|conditionalFormatting|``      |multiEdit|                ``|multiEdit|``
+|dock|                       ``|dock|``                       |actionRun|                ``|actionRun|``
 |duplicateFeature|           ``|duplicateFeature|``
-============================ ===============================  =======================  ===========================
+|panTo|                      ``|panTo|``                      |highlightFeature|         ``|highlightFeature|``
+============================ ===============================  =========================  =============================
 
 
 Projections and Georeferencer
@@ -319,11 +320,13 @@ Icon                     Substitution                 Icon                     S
 |addBasicTriangle|       ``|addBasicTriangle|``       |addBasicRectangle|      ``|addBasicRectangle|``
 |addNodesShape|          ``|addNodesShape|``          |editNodesShape|         ``|editNodesShape|``
 |addPolygon|             ``|addPolygon|``             |addPolyline|            ``|addPolyline|``
-|addArrow|               ``|addArrow|``               \                        \
+|addArrow|               ``|addArrow|``               |northArrow|             ``|northArrow|``
 |addMap|                 ``|addMap|``                 |addLegend|              ``|addLegend|``
 |addHtml|                ``|addHtml|``                |addTable|               ``|addTable|``
 |label|                  ``|label|``                  |scaleBar|               ``|scaleBar|``
 |select|                 ``|select|``                 |moveItemContent|        ``|moveItemContent|``
+|setToCanvasScale|       ``|setToCanvasScale|``       |setToCanvasExtent|      ``|setToCanvasExtent|``
+|viewScaleInCanvas|      ``|viewScaleInCanvas|``      |viewExtentInCanvas|     ``|viewExtentInCanvas|``
 |raiseItems|             ``|raiseItems|``             |lowerItems|             ``|lowerItems|``
 |moveItemsToTop|         ``|moveItemsToTop|``         |moveItemsToBottom|      ``|moveItemsToBottom|``
 |alignLeft|              ``|alignLeft|``              |alignRight|             ``|alignRight|``
@@ -632,6 +635,8 @@ Icon                            Substitution                        Icon        
    :width: 2em
 .. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
    :width: 1.5em
+.. |deleteSelectedFeatures| image:: /static/common/mActionDeleteSelectedFeatures.png
+   :width: 1.5em
 .. |dependencies| image:: /static/common/dependencies.png
    :width: 1.5em
 .. |deselectAll| image:: /static/common/mActionDeselectAll.png
@@ -771,6 +776,8 @@ Icon                            Substitution                        Icon        
 .. |hideDeselectedLayers| image:: /static/common/mActionHideDeselectedLayers.png
    :width: 1.5em
 .. |hideSelectedLayers| image:: /static/common/mActionHideSelectedLayers.png
+   :width: 1.5em
+.. |highlightFeature| image:: /static/common/mActionHighlightFeature.png
    :width: 1.5em
 .. |histogram| image:: /static/common/histogram.png
    :width: 1.5em
@@ -951,6 +958,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |pan| image:: /static/common/mActionPan.png
    :width: 1.5em
+.. |panTo| image:: /static/common/mActionPanTo.png
+   :width: 1.5em
 .. |panToSelected| image:: /static/common/mActionPanToSelected.png
    :width: 1.5em
 .. |pencil| image:: /static/common/pencil.png
@@ -1067,6 +1076,10 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
+.. |setToCanvasExtent| image:: /static/common/mActionSetToCanvasExtent.png
+   :width: 1.5em
+.. |setToCanvasScale| image:: /static/common/mActionSetToCanvasScale.png
+   :width: 1.5em
 .. |settings| image:: /static/common/settings.png
    :width: 1.5em
 .. |showAllLayers| image:: /static/common/mActionShowAllLayers.png
@@ -1161,6 +1174,10 @@ Icon                            Substitution                        Icon        
 .. |vertexTool| image:: /static/common/mActionVertexTool.png
    :width: 1.5em
 .. |vertexToolActiveLayer| image:: /static/common/mActionVertexToolActiveLayer.png
+   :width: 1.5em
+.. |viewExtentInCanvas| image:: /static/common/mActionViewExtentInCanvas.png
+   :width: 1.5em
+.. |viewScaleInCanvas| image:: /static/common/mActionViewScaleInCanvas.png
    :width: 1.5em
 .. |virtualLayer| image:: /static/common/mActionAddVirtualLayer.png
    :width: 1.5em

@@ -142,7 +142,7 @@ active:
 Four other relevant buttons are still inactive, but will become active when we
 start interacting with our new data:
 
-  |saveEdits| |deleteSelected| |editCut| |editCopy|
+  |saveEdits| |deleteSelectedFeatures| |editCut| |editCopy|
   |editPaste|
 
 From left to right on the toolbar, they are:
@@ -295,7 +295,7 @@ be useful.
 .. |basic| image:: /static/global/basic.png
 .. |capturePolygon| image:: /static/common/mActionCapturePolygon.png
    :width: 1.5em
-.. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
+.. |deleteSelectedFeatures| image:: /static/common/mActionDeleteSelectedFeatures.png
    :width: 1.5em
 .. |edit| image:: /static/common/edit.png
    :width: 1.5em

@@ -27,9 +27,9 @@ Install QGIS Server with:
 
 .. code-block:: bash
 
- apt-get install qgis-server
+ apt install qgis-server
  # if you want to install server plugins, also:
- apt-get install python-qgis
+ apt install python-qgis
 
 QGIS Server should be used in production without QGIS Desktop (with
 the accompagning X Server) installed on the same machine.
@@ -73,10 +73,12 @@ need to use an HTTP server.
 In this lesson we're going to use the
 `Apache HTTP server <https://httpd.apache.org>`_, colloquially called Apache.
 
-First we need to install Apache by running the following command in a terminal:
-``apt-get install apache2 libapache2-mod-fcgid``.
+First we need to install Apache by running the following command in a terminal::
 
-You can run QGIS server on your default website, or configure a virtualhost specifically for this, as follows.
+ apt install apache2 libapache2-mod-fcgid
+
+You can run QGIS server on your default website, or configure a virtualhost
+specifically for this, as follows.
 
 In the :file:`/etc/apache2/sites-available` directory let's create a file
 called :file:`qgis.demo.conf`, with this content:
@@ -182,7 +184,7 @@ enable the ``fcgid`` mod if it's not already enabled and restart the ``apache2``
 
 .. code-block:: bash
 
- apt-get install xvfb
+ apt install xvfb
 
 Create the service file:
 
@@ -248,7 +250,7 @@ should output:
 
 .. note::
 
- curl can be installed with ``apt-get install curl``.
+ curl can be installed with ``apt install curl``.
 
 Apache is now configured.
 

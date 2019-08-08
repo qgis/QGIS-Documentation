@@ -27,7 +27,7 @@ Under Ubuntu:
 
 .. code-block:: bash
 
-  sudo apt-get install postgresql-9.1
+  sudo apt install postgresql-9.1
 
 You should get a message like this:
 
@@ -393,7 +393,7 @@ Under Ubuntu, you can install it like this:
 
 .. code-block:: bash
 
-  sudo apt-get install pgadmin3
+  sudo apt install pgadmin3
 
 pgAdmin III will be covered in more detail in another module.
 
