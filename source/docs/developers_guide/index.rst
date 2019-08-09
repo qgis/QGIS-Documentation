@@ -13,8 +13,8 @@ steps to easily and efficiently contribute to QGIS code.
     :maxdepth: 1
 
     codingstandards
-    git
-    unittesting
-    qtcreator
     hig
+    git
+    qtcreator
+    unittesting
     ogcconformancetesting
