@@ -106,8 +106,7 @@ should be surrounded by ``[%`` and ``%]`` in the :guilabel:`Main properties` fra
 
     concat( 'Page ', @atlas_featurenumber, '/', @atlas_totalfeatures )
 
-* Return the X coordinate of the bottom left corner of the extent shown
-  in the ``Map 1`` item:
+* Return the lower X coordinate of the ``Map 1`` item's extent:
 
   ::
 
