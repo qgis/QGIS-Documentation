@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project testing\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-07 15:33+0200\n"
+"POT-Creation-Date: 2019-08-11 14:48+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -52,32 +52,166 @@ msgid "Extending QgsProcessingAlgorithm"
 msgstr ""
 
 #: ../../source/docs/user_manual/processing/scripts.rst:32
+msgid "The following code"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:34
+msgid "takes a vector layer as input"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:35
+msgid "counts the number of features"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:36
+msgid "does a buffer operation"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:37
+msgid "creates a raster layer from the result of the buffer operation"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:38
+msgid "returns the buffer layer, raster layer and number of features"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:228
+msgid "Processing algorithm standard functions:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:233
+msgid "createInstance (mandatory)"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:231
 msgid ""
-"The following code takes a vector layer, counts the number of features, "
-"does a buffer operation and creates a raster layer from the result of the"
-" buffer operation. The buffer layer, raster layer and number of features "
-"are returned."
+"Must return a new copy of your algorithm. If you change the name of the "
+"class, make sure you also update the value returned here to match!"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:236
+msgid "name (mandatory)"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:236
+msgid "Returns the unique algorithm name, used for identifying the algorithm."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:239
+msgid "displayName (mandatory)"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:239
+msgid "Returns the translated algorithm name."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:242
+msgid "group"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:242
+msgid "Returns the name of the group this algorithm belongs to."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:245
+msgid "groupId"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:245
+msgid "Returns the unique ID of the group this algorithm belongs to."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:248
+msgid "shortHelpString"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:248
+msgid "Returns a localised short help string for the algorithm."
 msgstr ""
 
 #: ../../source/docs/user_manual/processing/scripts.rst:258
-msgid "Handing data produced by the algorithm"
+msgid "initAlgorithm (mandatory)"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:260
+#: ../../source/docs/user_manual/processing/scripts.rst:251
+msgid "Here we define the inputs and outputs of the algorithm."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:253
+msgid ""
+"``INPUT`` and ``OUTPUT`` are recommended names for the main input and "
+"main output parameters, respectively."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:256
+msgid ""
+"If a parameter depends on another parameter, ``parentParameterName`` is "
+"used to specify this relationship (could be the field / band of a layer "
+"or the distance units of a layer)."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:289
+msgid "processAlgorithm (mandatory)"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:261
+msgid "This is where the processing takes place."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:263
+msgid ""
+"Parameters are retrieved using special purpose functions, for instance "
+"``parameterAsSource`` and ``parameterAsDouble``."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:266
+msgid ""
+"``processing.run`` can be used to run other processing algoritms from a "
+"processing algorithm. The first parameter is the name of the algorithm, "
+"the second is a dictionary of the parameters to the algorithm. "
+"``is_child_algorithm`` is normally set to ``True`` when running an "
+"algorithm from within another algorithm. ``context`` and ``feedback`` "
+"informs the algorithm about the environment to run in and the channel for"
+" communicating with the user (catching cancel request, reporting "
+"progress, providing textual feedback). When using the (parent) algoritm's"
+" parameters as parameters to \"child\" algorithms, the original parameter"
+" values should be used (e.g. ``parameters['OUTPUT']``)."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:280
+msgid ""
+"It is good practice to check the feedback object for cancelation as much "
+"as is sensibly possible! Doing so allows for responsive cancelation, "
+"instead of forcing users to wait for unwanted processing to occur."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:285
+msgid ""
+"The algorithm should return values for all the output parameters it has "
+"defined as a dictionary. In this case, that's the buffer and rasterized "
+"output layers, and the count of features processed. The dictionary keys "
+"must match the original parameter/output names."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:292
+msgid "Handing algorithm output"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:294
 msgid ""
 "When you declare an output representing a layer (raster or vector), the "
 "algorithm will try to add it to QGIS once it is finished."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:263
+#: ../../source/docs/user_manual/processing/scripts.rst:297
 msgid "Raster layer output: QgsProcessingParameterRasterDestination."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:264
+#: ../../source/docs/user_manual/processing/scripts.rst:298
 msgid "Vector layer output: QgsProcessingParameterVectorDestination."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:266
+#: ../../source/docs/user_manual/processing/scripts.rst:300
 msgid ""
 "So even if the ``processing.run()`` method does not add the layers it "
 "creates into the user's current project, the two output layers (buffer "
@@ -86,7 +220,7 @@ msgid ""
 "user does not specify a destination)."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:272
+#: ../../source/docs/user_manual/processing/scripts.rst:306
 msgid ""
 "If a layer is created as output of an algorithm, it should be declared as"
 " such. Otherwise, you will not be able to properly use the algorithm in "
@@ -94,7 +228,7 @@ msgid ""
 "really creates."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:278
+#: ../../source/docs/user_manual/processing/scripts.rst:312
 msgid ""
 "You can return strings, numbers and more by specifying them in the result"
 " dictionary (as demonstrated for \"NUMBEROFFEATURES\"), but they should "
@@ -104,11 +238,11 @@ msgid ""
 "part of a model."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:287
+#: ../../source/docs/user_manual/processing/scripts.rst:321
 msgid "Communicating with the user"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:289
+#: ../../source/docs/user_manual/processing/scripts.rst:323
 msgid ""
 "If your algorithm takes a long time to process, it is a good idea to "
 "inform the user about the progress.  You can use ``feedback`` "
@@ -116,7 +250,7 @@ msgid ""
 "this."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:293
+#: ../../source/docs/user_manual/processing/scripts.rst:327
 msgid ""
 "The progress text and progressbar can be updated using two methods: "
 ":meth:`setProgressText(text) "
@@ -124,7 +258,7 @@ msgid ""
 ":meth:`setProgress(percent) <qgis.core.QgsFeedback.setProgress>`."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:297
+#: ../../source/docs/user_manual/processing/scripts.rst:331
 msgid ""
 "You can provide more information to the user using "
 ":meth:`pushCommandInfo(text) "
@@ -135,7 +269,7 @@ msgid ""
 "<qgis.core.QgsProcessingFeedback.reportError>`."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:303
+#: ../../source/docs/user_manual/processing/scripts.rst:337
 msgid ""
 "If your script has a problem, the correct way of handling it is to raise "
 "a :class:`QgsProcessingException <qgis.core.QgsProcessingException>`. You"
@@ -145,11 +279,11 @@ msgid ""
 "modeler, Python console, ...)"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:312
+#: ../../source/docs/user_manual/processing/scripts.rst:346
 msgid "Documenting your scripts"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:314
+#: ../../source/docs/user_manual/processing/scripts.rst:348
 msgid ""
 "You can document your scripts by overloading the :meth:`helpString() "
 "<qgis.core.QgsProcessingAlgorithm.helpString>` and :meth:`helpUrl() "
@@ -157,11 +291,11 @@ msgid ""
 ":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:320
+#: ../../source/docs/user_manual/processing/scripts.rst:354
 msgid "Flags"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:322
+#: ../../source/docs/user_manual/processing/scripts.rst:356
 msgid ""
 "You can override the :meth:`flags "
 "<qgis.core.QgsProcessingAlgorithm.flags>` method of "
@@ -171,7 +305,7 @@ msgid ""
 "that it is not thread safe, and more."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:330
+#: ../../source/docs/user_manual/processing/scripts.rst:364
 msgid ""
 "By default, Processing runs algorithms in a separate thread in order to "
 "keep QGIS responsive while the processing task runs. If your algorithm is"
@@ -182,11 +316,11 @@ msgid ""
 "instead."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:339
+#: ../../source/docs/user_manual/processing/scripts.rst:373
 msgid "Best practices for writing script algorithms"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:341
+#: ../../source/docs/user_manual/processing/scripts.rst:375
 msgid ""
 "Here's a quick summary of ideas to consider when creating your script "
 "algorithms and, especially, if you want to share them with other QGIS "
@@ -195,17 +329,17 @@ msgid ""
 "batch processing interface."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:347
+#: ../../source/docs/user_manual/processing/scripts.rst:381
 msgid ""
 "Do not load resulting layers. Let Processing handle your results and load"
 " your layers if needed."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:349
+#: ../../source/docs/user_manual/processing/scripts.rst:383
 msgid "Always declare the outputs your algorithm creates."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:350
+#: ../../source/docs/user_manual/processing/scripts.rst:384
 msgid ""
 "Do not show message boxes or use any GUI element from the script. If you "
 "want to communicate with the user, use the methods of the feedback object"
@@ -214,7 +348,7 @@ msgid ""
 "<qgis.core.QgsProcessingException>`."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:356
+#: ../../source/docs/user_manual/processing/scripts.rst:390
 msgid ""
 "There are already many processing algorithms available in QGIS. You can "
 "find code on "
@@ -686,5 +820,18 @@ msgstr ""
 #~ "execution script file` where the "
 #~ "filename of the scripts to be run"
 #~ " in each case can be entered."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The following code takes a vector "
+#~ "layer, counts the number of features,"
+#~ " does a buffer operation and creates"
+#~ " a raster layer from the result "
+#~ "of the buffer operation. The buffer "
+#~ "layer, raster layer and number of "
+#~ "features are returned."
+#~ msgstr ""
+
+#~ msgid "Handing data produced by the algorithm"
 #~ msgstr ""
 

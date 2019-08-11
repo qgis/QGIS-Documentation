@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project testing\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-07 15:33+0200\n"
+"POT-Creation-Date: 2019-08-11 14:48+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -348,7 +348,6 @@ msgstr ""
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:223
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:598
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:645
 msgid ""
 "Entering **username** and **password** in the :guilabel:`Authentication` "
 "tab will keep unprotected credentials in the connection configuration. "
@@ -891,99 +890,172 @@ msgstr ""
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:621
 msgid ""
-"As an example, we use the DM Solutions WFS server and display a layer. "
-"The URL is: http://www2.dmsolutions.ca/cgi-bin/mswfs_gmap"
+"As an example, we use the Gateway Geomatics WFS server and display a "
+"layer. https://demo.gatewaygeomatics.com/cgi-"
+"bin/wfs_gateway?REQUEST=GetCapabilities&VERSION=1.0.0&SERVICE=WFS"
 msgstr ""
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:624
 msgid ""
-"Click on the |wfs| :sup:`Add WFS Layer` tool on the Layers toolbar. The "
-":guilabel:`Add WFS Layer from a Server` dialog appears."
+"To be able to load a WFS Layer we create a connection to the WFS server "
+"first."
 msgstr ""
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:626
-msgid "Click on :guilabel:`New`."
-msgstr ""
-
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:627
-msgid "Enter 'DM Solutions' as name."
+msgid ""
+"Open the :guilabel:`Data Source Manager` dialog by pressing the "
+"|dataSourceManager| :sup:`Open Data Source Manager` button"
 msgstr ""
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:628
-msgid "Enter the URL (see above)."
+msgid "Enable the |wfs| :guilabel:`WFS` tab"
 msgstr ""
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:629
-msgid "Click :guilabel:`OK`."
+msgid ""
+"Click on :guilabel:`New...` to open the :guilabel:`Create a New WFS "
+"Connection` dialog"
 msgstr ""
 
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:630
-msgid ""
-"Choose 'DM Solutions' from the :guilabel:`Server Connections` "
-"|selectString| drop-down list."
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:631
+msgid "Enter ``Gateway Geomatics`` as name"
 msgstr ""
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:632
-msgid "Click :guilabel:`Connect`."
+msgid "Enter the URL (see above)"
 msgstr ""
 
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:633
-msgid "Wait for the list of layers to be populated."
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:639
+msgid "Creating a connection to a WFS server"
 msgstr ""
 
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:634
-msgid "Select the :guilabel:`Parks` layer in the list."
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:641
+msgid "In the WFS settings dialog, you can:"
 msgstr ""
 
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:635
-msgid "Click :guilabel:`Apply` to add the layer to the map."
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:643
+msgid ""
+"Indicate the WFS version of the server. If unknown, press the "
+":guilabel:`Detect` button to automatically retrieve it."
 msgstr ""
 
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:637
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:645
+msgid ""
+"Define the :guilabel:`maximum number of features` retrieved in a single "
+"GetFetFeature request. If empty, no limit is set."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:647
+msgid ":guilabel:`Invert axis orientation`."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:648
+msgid "And depending on the WFS version:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:650
+msgid "Force to :guilabel:`Ignore axis orientation (WFS 1.1/WFS 2.0)`"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:651
+msgid ""
+":guilabel:`Enable feature paging` and specify the maximum number of "
+"features to retrieve with :guilabel:`Page size`. If no limit is defined, "
+"then the server default is applied."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:657
+msgid ""
+"Entering **username** and **password** in the :guilabel:`Authentication` "
+"tab will keep unprotected credentials in the connection configuration. "
+"Those **credentials will be visible** if, for instance, you shared the "
+"project file with someone. Therefore, it's advisable to save your "
+"credentials in an *Authentication configuration* instead "
+"(:guilabel:`Configurations` tab). See :ref:`authentication_index` for "
+"more details."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:665
+msgid "Press :guilabel:`OK` to create the connection."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:667
 msgid ""
 "Note that any proxy settings you may have set in your preferences are "
 "also recognized."
 msgstr ""
 
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:639
-msgid ""
-"In the WFS settings dialog, you can define the :guilabel:`maximal number "
-"of features` downloaded, set up the version, force to :guilabel:`Ignore "
-"axis orientation (WFS 1.1/WFS 2.0)` and force :guilabel:`Inverse axis "
-"orientation`."
-msgstr ""
-
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:657
-msgid "Adding a WFS layer"
-msgstr ""
-
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:659
-msgid ""
-"You'll notice the download progress is visualized in the lower left of "
-"the QGIS main window. Once the layer is loaded, you can identify and "
-"select a province or two and view the attribute table."
-msgstr ""
-
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:663
-msgid "**About differences between WFS versions**"
-msgstr ""
-
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:665
-msgid ""
-"WFS 1.0.0, 1.1.0 and 2.0 are supported. Background download and "
-"progressive rendering, on-disk caching of downloaded features and version"
-" autodetection are now supported."
-msgstr ""
-
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:669
-msgid "Only WFS 2.0 service supports GetFeature paging."
+msgid "Now we are ready to load WFS layers from the above connection."
 msgstr ""
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:671
-msgid "**Finding WFS Servers**"
+msgid ""
+"Choose 'Gateway Geomatics' from the :guilabel:`Server Connections` "
+"|selectString| drop-down list."
 msgstr ""
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:673
+msgid "Click :guilabel:`Connect`"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:674
+msgid "Select the :guilabel:`Parks` layer in the list"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:675
+msgid "You can also choose whether to:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:677
+msgid ""
+"|unchecked| :guilabel:`Use title for layer name`, showing the layer's "
+"title as defined on the server in the :guilabel:`Layers` panel instead of"
+" its :guilabel:`Name`"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:680
+msgid "|checkbox| :guilabel:`Only request features overlapping the view extent`"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:681
+msgid "|unchecked| :guilabel:`Change` the layer's CRS"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:682
+msgid ""
+"or :guilabel:`Build query` to specify particular features to retrieve, by"
+" either using the corresponding button or double-clicking the target "
+"layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:686
+msgid "Click :guilabel:`Add` to add the layer to the map."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:694
+msgid "Adding a WFS layer"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:696
+msgid ""
+"You'll notice the download progress is visualized in the lower left of "
+"the QGIS main window. Once the layer is loaded, you can identify and "
+"select a couple of features and view the attribute table."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:702
+msgid ""
+"QGIS supports different versions of the WFS protocol, with background "
+"download and progressive rendering, on-disk caching of downloaded "
+"features and version autodetection."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:706
+msgid "**Finding WFS Servers**"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:708
 msgid ""
 "You can find additional WFS servers by using Google or your favourite "
 "search engine. There are a number of lists with public URLs, some of them"
@@ -1175,5 +1247,81 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Click **[Apply]** to add the layer to the map."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As an example, we use the DM "
+#~ "Solutions WFS server and display a "
+#~ "layer. The URL is: http://www2.dmsolutions.ca"
+#~ "/cgi-bin/mswfs_gmap"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click on the |wfs| :sup:`Add WFS "
+#~ "Layer` tool on the Layers toolbar. "
+#~ "The :guilabel:`Add WFS Layer from a "
+#~ "Server` dialog appears."
+#~ msgstr ""
+
+#~ msgid "Click on :guilabel:`New`."
+#~ msgstr ""
+
+#~ msgid "Enter 'DM Solutions' as name."
+#~ msgstr ""
+
+#~ msgid "Enter the URL (see above)."
+#~ msgstr ""
+
+#~ msgid "Click :guilabel:`OK`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Choose 'DM Solutions' from the "
+#~ ":guilabel:`Server Connections` |selectString| "
+#~ "drop-down list."
+#~ msgstr ""
+
+#~ msgid "Click :guilabel:`Connect`."
+#~ msgstr ""
+
+#~ msgid "Wait for the list of layers to be populated."
+#~ msgstr ""
+
+#~ msgid "Select the :guilabel:`Parks` layer in the list."
+#~ msgstr ""
+
+#~ msgid "Click :guilabel:`Apply` to add the layer to the map."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the WFS settings dialog, you "
+#~ "can define the :guilabel:`maximal number "
+#~ "of features` downloaded, set up the "
+#~ "version, force to :guilabel:`Ignore axis "
+#~ "orientation (WFS 1.1/WFS 2.0)` and force"
+#~ " :guilabel:`Inverse axis orientation`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You'll notice the download progress is"
+#~ " visualized in the lower left of "
+#~ "the QGIS main window. Once the "
+#~ "layer is loaded, you can identify "
+#~ "and select a province or two and"
+#~ " view the attribute table."
+#~ msgstr ""
+
+#~ msgid "**About differences between WFS versions**"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "WFS 1.0.0, 1.1.0 and 2.0 are "
+#~ "supported. Background download and progressive"
+#~ " rendering, on-disk caching of "
+#~ "downloaded features and version autodetection"
+#~ " are now supported."
+#~ msgstr ""
+
+#~ msgid "Only WFS 2.0 service supports GetFeature paging."
 #~ msgstr ""
 

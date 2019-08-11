@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project testing\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-07 15:33+0200\n"
+"POT-Creation-Date: 2019-08-11 14:48+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -747,10 +747,36 @@ msgid ""
 msgstr ""
 
 #: ../../source/docs/user_manual/managing_data_source/supported_data.rst:543
-msgid "DB2 Spatial Layers"
+msgid "GeoJSON specific parameters"
 msgstr ""
 
 #: ../../source/docs/user_manual/managing_data_source/supported_data.rst:545
+msgid ""
+"When :ref:`exporting layers <general_saveas>` to GeoJSON, this format has"
+" some specific :guilabel:`Layer Options` available. These options "
+"actually come from GDAL which is responsible for the writing of the file:"
+msgstr ""
+
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:549
+msgid ""
+":guilabel:`COORDINATE_PRECISION` the maximum number of digits after the "
+"decimal separator to write in coordinates. Defaults to 15 (note: for Lat "
+"Lon coordinates 6 is considered enough). Truncation will occur to remove "
+"trailing zeros."
+msgstr ""
+
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:553
+msgid ""
+":guilabel:`WRITE_BBOX` set to YES to write a bbox property with the "
+"bounding box of the geometries at the feature and feature collection "
+"level"
+msgstr ""
+
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:560
+msgid "DB2 Spatial Layers"
+msgstr ""
+
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:562
 msgid ""
 "IBM DB2 for Linux, Unix and Windows (DB2 LUW), IBM DB2 for z/OS "
 "(mainframe) and IBM DashDB products allow users to store and analyse "
@@ -759,48 +785,48 @@ msgid ""
 "spatial data in these databases."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:556
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:573
 msgid ""
 "User documentation on these capabilities can be found at the `DB2 z/OS "
 "KnowledgeCenter`_, `DB2 LUW KnowledgeCenter`_ and `DB2 DashDB "
 "KnowledgeCenter`_."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:560
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:577
 msgid ""
 "For more information about working with the DB2 spatial capabilities, "
 "check out the `DB2 Spatial Tutorial`_ on IBM DeveloperWorks."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:563
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:580
 msgid ""
 "The DB2 provider currently only supports the Windows environment through "
 "the Windows ODBC driver."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:566
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:583
 msgid "The client running QGIS needs to have one of the following installed:"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:568
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:585
 msgid "DB2 LUW"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:569
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:586
 msgid "IBM Data Server Driver Package"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:570
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:587
 msgid "IBM Data Server Client"
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:572
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:589
 msgid ""
 "To open a DB2 data in QGIS, you can refer to :ref:`browser_panel` or "
 ":ref:`vector_loading_database` section."
 msgstr ""
 
-#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:575
+#: ../../source/docs/user_manual/managing_data_source/supported_data.rst:592
 msgid ""
 "If you are accessing a DB2 LUW database on the same machine or using DB2 "
 "LUW as a client, the DB2 executables and supporting files need to be "

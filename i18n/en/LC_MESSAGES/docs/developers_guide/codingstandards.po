@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project testing\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-07 15:33+0200\n"
+"POT-Creation-Date: 2019-08-11 14:48+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -382,11 +382,21 @@ msgid ""
 "separated e.g.:"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:302
+#: ../../source/docs/developers_guide/codingstandards.rst:301
+msgid "Comments"
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:303
+msgid ""
+"Comments to class methods should use a third person indicative style "
+"instead of the imperative style:"
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:316
 msgid "Qt Signals and Slots"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:304
+#: ../../source/docs/developers_guide/codingstandards.rst:318
 msgid ""
 "All signal/slot connects should be made using the \"new style\" connects "
 "available in Qt5. Futher information on this requirement is available in "
@@ -394,42 +404,42 @@ msgid ""
 "Proposals/issues/77>`_."
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:308
+#: ../../source/docs/developers_guide/codingstandards.rst:322
 msgid ""
 "Avoid use of Qt auto connect slots (i.e. those named ``void "
 "on_mSpinBox_valueChanged``). Auto connect slots are fragile and prone to "
 "breakage without warning if dialogs are refactored."
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:314
+#: ../../source/docs/developers_guide/codingstandards.rst:328
 msgid "Editing"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:316
+#: ../../source/docs/developers_guide/codingstandards.rst:330
 msgid ""
 "Any text editor/IDE can be used to edit QGIS code, providing the "
 "following requirements are met."
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:320
+#: ../../source/docs/developers_guide/codingstandards.rst:334
 msgid "Tabs"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:322
+#: ../../source/docs/developers_guide/codingstandards.rst:336
 msgid ""
 "Set your editor to emulate tabs with spaces. Tab spacing should be set to"
 " 2 spaces."
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:325
+#: ../../source/docs/developers_guide/codingstandards.rst:339
 msgid "In vim this is done with ``set expandtab ts=2``"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:328
+#: ../../source/docs/developers_guide/codingstandards.rst:342
 msgid "Indentation"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:330
+#: ../../source/docs/developers_guide/codingstandards.rst:344
 msgid ""
 "Source code should be indented to improve readability. There is a "
 ":file:`scripts/prepare-commit.sh` that looks up the changed files and "
@@ -437,7 +447,7 @@ msgid ""
 "can also use :file:`scripts/astyle.sh` to indent individual files."
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:335
+#: ../../source/docs/developers_guide/codingstandards.rst:349
 msgid ""
 "As newer versions of astyle indent differently than the version used to "
 "do a complete reindentation of the source, the script uses an old astyle "
@@ -445,128 +455,128 @@ msgid ""
 "cmake to include it in the build)."
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:341
+#: ../../source/docs/developers_guide/codingstandards.rst:355
 msgid "Braces"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:343
+#: ../../source/docs/developers_guide/codingstandards.rst:357
 msgid "Braces should start on the line following the expression:"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:359
+#: ../../source/docs/developers_guide/codingstandards.rst:373
 msgid "API Compatibility"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:361
+#: ../../source/docs/developers_guide/codingstandards.rst:375
 msgid "There is `API documentation <https://qgis.org/api/>`_ for C++."
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:363
+#: ../../source/docs/developers_guide/codingstandards.rst:377
 msgid ""
 "We try to keep the API stable and backwards compatible. Cleanups to the "
 "API should be done in a manner similar to the Qt sourcecode e.g."
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:403
+#: ../../source/docs/developers_guide/codingstandards.rst:417
 msgid "SIP Bindings"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:405
+#: ../../source/docs/developers_guide/codingstandards.rst:419
 msgid ""
 "Some of the SIP files are automatically generated using a dedicated "
 "script."
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:409
+#: ../../source/docs/developers_guide/codingstandards.rst:423
 msgid "Header pre-processing"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:412
+#: ../../source/docs/developers_guide/codingstandards.rst:426
 msgid ""
 "All the information to properly build the SIP file must be found in the "
 "C++ header file. Some macros are available for such definition:"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:415
+#: ../../source/docs/developers_guide/codingstandards.rst:429
 msgid ""
 "Use ``#ifdef SIP_RUN`` to generate code only in SIP files or ``#ifndef "
 "SIP_RUN`` for C++ code only. ``#else`` statements are handled in both "
 "cases."
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:418
+#: ../../source/docs/developers_guide/codingstandards.rst:432
 msgid "Use ``SIP_SKIP`` to discard a line"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:419
+#: ../../source/docs/developers_guide/codingstandards.rst:433
 msgid "The following annotations are handled:"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:421
+#: ../../source/docs/developers_guide/codingstandards.rst:435
 msgid "``SIP_FACTORY``: ``/Factory/``"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:422
+#: ../../source/docs/developers_guide/codingstandards.rst:436
 msgid "``SIP_OUT``: ``/Out/``"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:423
+#: ../../source/docs/developers_guide/codingstandards.rst:437
 msgid "``SIP_INOUT``: ``/In,Out/``"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:424
+#: ../../source/docs/developers_guide/codingstandards.rst:438
 msgid "``SIP_TRANSFER``: ``/Transfer/``"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:425
+#: ../../source/docs/developers_guide/codingstandards.rst:439
 msgid "``SIP_PYNAME(name)``: ``/PyName=name/``"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:426
+#: ../../source/docs/developers_guide/codingstandards.rst:440
 msgid "``SIP_KEEPREFERENCE``: ``/KeepReference/``"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:427
+#: ../../source/docs/developers_guide/codingstandards.rst:441
 msgid "``SIP_TRANSFERTHIS``: ``/TransferThis/``"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:428
+#: ../../source/docs/developers_guide/codingstandards.rst:442
 msgid "``SIP_TRANSFERBACK``: ``/TransferBack/``"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:430
+#: ../../source/docs/developers_guide/codingstandards.rst:444
 msgid ""
 "``private`` sections are not displayed, except if you use a ``#ifdef "
 "SIP_RUN`` statement in this block."
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:432
+#: ../../source/docs/developers_guide/codingstandards.rst:446
 msgid ""
 "``SIP_PYDEFAULTVALUE(value)`` can be used to define an alternative "
 "default value of the python method. If the default value contains a comma"
 " ``,``, the value should be surrounded by single quotes ``'``"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:435
+#: ../../source/docs/developers_guide/codingstandards.rst:449
 msgid ""
 "``SIP_PYTYPE(type)`` can be used to define an alternative type for an "
 "argument of the python method. If the type contains a comma ``,``, the "
 "type should be surrounded by single quotes ``'``"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:439
+#: ../../source/docs/developers_guide/codingstandards.rst:453
 msgid "A demo file can be found in :file:`tests/scripts/sipifyheader.h`."
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:442
+#: ../../source/docs/developers_guide/codingstandards.rst:456
 msgid "Generating the SIP file"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:444
+#: ../../source/docs/developers_guide/codingstandards.rst:458
 msgid "The SIP file can be generated using a dedicated script. For instance:"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:451
+#: ../../source/docs/developers_guide/codingstandards.rst:465
 msgid ""
 "As soon as a SIP file is added to one of the source file "
 "(:file:`python/core/core.sip`, :file:`python/gui/gui.sip` or "
@@ -575,17 +585,17 @@ msgid ""
 " with its corresponding header."
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:457
+#: ../../source/docs/developers_guide/codingstandards.rst:471
 msgid ""
 "Older files for which the automatic creation is not enabled yet are "
 "listed in :file:`python/auto_sip.blacklist`."
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:461
+#: ../../source/docs/developers_guide/codingstandards.rst:475
 msgid "Improving sipify script"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:463
+#: ../../source/docs/developers_guide/codingstandards.rst:477
 msgid ""
 "If some improvements are required for sipify script, please add the "
 "missing bits to the demo file :file:`tests/scripts/sipifyheader.h` and "
@@ -594,57 +604,57 @@ msgid ""
 "automatically tested on Travis as a unit test of the script itself."
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:470
+#: ../../source/docs/developers_guide/codingstandards.rst:484
 msgid "Coding Style"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:473
+#: ../../source/docs/developers_guide/codingstandards.rst:487
 msgid ""
 "Here are described some programming hints and tips that will hopefully "
 "reduce errors, development time and maintenance."
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:478
+#: ../../source/docs/developers_guide/codingstandards.rst:492
 msgid "Where-ever Possible Generalize Code"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:481
+#: ../../source/docs/developers_guide/codingstandards.rst:495
 msgid ""
 "If you are cut-n-pasting code, or otherwise writing the same thing more "
 "than once, consider consolidating the code into a single function."
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:484
+#: ../../source/docs/developers_guide/codingstandards.rst:498
 msgid "This will:"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:486
+#: ../../source/docs/developers_guide/codingstandards.rst:500
 msgid "allow changes to be made in one location instead of in multiple places"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:487
+#: ../../source/docs/developers_guide/codingstandards.rst:501
 msgid "help prevent code bloat"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:488
+#: ../../source/docs/developers_guide/codingstandards.rst:502
 msgid ""
 "make it more difficult for multiple copies to evolve differences over "
 "time, thus making it harder to understand and maintain for others"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:493
+#: ../../source/docs/developers_guide/codingstandards.rst:507
 msgid "Prefer Having Constants First in Predicates"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:495
+#: ../../source/docs/developers_guide/codingstandards.rst:509
 msgid "Prefer to put constants first in predicates."
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:497
+#: ../../source/docs/developers_guide/codingstandards.rst:511
 msgid "``0 == value`` instead of ``value == 0``"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:499
+#: ../../source/docs/developers_guide/codingstandards.rst:513
 msgid ""
 "This will help prevent programmers from accidentally using ``=`` when "
 "they meant to use ``==``, which can introduce very subtle logic bugs. The"
@@ -653,33 +663,33 @@ msgid ""
 "values."
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:505
+#: ../../source/docs/developers_guide/codingstandards.rst:519
 msgid "Whitespace Can Be Your Friend"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:507
+#: ../../source/docs/developers_guide/codingstandards.rst:521
 msgid ""
 "Adding spaces between operators, statements, and functions makes it "
 "easier for humans to parse code."
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:510
+#: ../../source/docs/developers_guide/codingstandards.rst:524
 msgid "Which is easier to read, this:"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:516
+#: ../../source/docs/developers_guide/codingstandards.rst:530
 msgid "or this:"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:522
+#: ../../source/docs/developers_guide/codingstandards.rst:536
 msgid ":file:`scripts/prepare-commit.sh` will take care of this."
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:526
+#: ../../source/docs/developers_guide/codingstandards.rst:540
 msgid "Put commands on separate lines"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:528
+#: ../../source/docs/developers_guide/codingstandards.rst:542
 msgid ""
 "When reading code it's easy to miss commands, if they are not at the "
 "beginning of the line. When quickly reading through code, it's common to "
@@ -688,94 +698,94 @@ msgid ""
 "like ``if``."
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:533
+#: ../../source/docs/developers_guide/codingstandards.rst:547
 msgid "Consider:"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:541
+#: ../../source/docs/developers_guide/codingstandards.rst:555
 msgid "It's very easy to miss part of what the flow of control. Instead use"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:553
+#: ../../source/docs/developers_guide/codingstandards.rst:567
 msgid "Indent access modifiers"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:555
+#: ../../source/docs/developers_guide/codingstandards.rst:569
 msgid ""
 "Access modifiers structure a class into sections of public API, protected"
 " API and private API. Access modifiers themselves group the code into "
 "this structure. Indent the access modifier and declarations."
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:572
+#: ../../source/docs/developers_guide/codingstandards.rst:586
 msgid "Book recommendations"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:575
+#: ../../source/docs/developers_guide/codingstandards.rst:589
 msgid ""
 "`Effective Modern C++ "
 "<https://shop.oreilly.com/product/0636920033707.do>`_, Scott Meyers"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:576
+#: ../../source/docs/developers_guide/codingstandards.rst:590
 msgid ""
 "`More Effective C++ <https://www.informit.com/store/more-effective-c"
 "-plus-plus-35-new-ways-to-improve-your-9780201633719>`_, Scott Meyers"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:577
+#: ../../source/docs/developers_guide/codingstandards.rst:591
 msgid ""
 "`Effective STL <https://www.informit.com/store/effective-stl-50-specific-"
 "ways-to-improve-your-use-9780201749625>`_, Scott Meyers"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:578
+#: ../../source/docs/developers_guide/codingstandards.rst:592
 msgid ""
 "`Design Patterns <https://www.amazon.com/Design-Patterns-Elements-"
 "Reusable-Object-Oriented/dp/0201633612>`_, GoF"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:580
+#: ../../source/docs/developers_guide/codingstandards.rst:594
 msgid ""
 "You should also really read this article from Qt Quarterly on `designing "
 "Qt style (APIs) <https://doc.qt.io/archives/qq/qq13-apis.html>`_"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:585
+#: ../../source/docs/developers_guide/codingstandards.rst:599
 msgid "Credits for contributions"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:587
+#: ../../source/docs/developers_guide/codingstandards.rst:601
 msgid ""
 "Contributors of new functions are encouraged to let people know about "
 "their contribution by:"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:590
+#: ../../source/docs/developers_guide/codingstandards.rst:604
 msgid ""
 "adding a note to the changelog for the first version where the code has "
 "been incorporated, of the type::"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:596
+#: ../../source/docs/developers_guide/codingstandards.rst:610
 msgid ""
 "writing an article about the new feature on a blog, and add it to the "
 "QGIS planet https://plugins.qgis.org/planet/"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:598
+#: ../../source/docs/developers_guide/codingstandards.rst:612
 msgid "adding their name to:"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:600
+#: ../../source/docs/developers_guide/codingstandards.rst:614
 msgid "https://github.com/qgis/QGIS/blob/master/doc/CONTRIBUTORS"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:601
+#: ../../source/docs/developers_guide/codingstandards.rst:615
 msgid "https://github.com/qgis/QGIS/blob/master/doc/AUTHORS"
 msgstr ""
 
-#: ../../source/docs/developers_guide/codingstandards.rst:602
+#: ../../source/docs/developers_guide/codingstandards.rst:616
 msgid "https://github.com/qgis/QGIS/blob/master/doc/contributors.json"
 msgstr ""
 

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project 3.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-07 15:33+0200\n"
+"POT-Creation-Date: 2019-08-11 14:48+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -47,7 +47,7 @@ msgstr ""
 #: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:29
 msgid ""
 "The global task manager (found with :meth:`QgsApplication.taskManager() "
-"<qgis.core.QgsApplication.taskManager>`) is normally used.  This means "
+"<qgis.core.QgsApplication.taskManager>`) is normally used. This means "
 "that your tasks may not be the only tasks that are controlled by the task"
 " manager."
 msgstr ""
@@ -79,50 +79,51 @@ msgstr ""
 
 #: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:62
 msgid ""
-"Dependencies between tasks can be described using the ``addSubTask`` "
-"function of :class:`QgsTask <qgis.core.QgsTask>`. When a dependency is "
-"stated, the task manager will automatically determine how these "
-"dependencies will be executed. Wherever possible dependencies will be "
-"executed in parallel in order to satisfy them as quickly as possible. If "
-"a task on which another task depends is canceled, the dependent task will"
-" also be canceled. Circular dependencies can make deadlocks possible, so "
-"be careful."
+"Dependencies between tasks can be described using the :meth:`addSubTask "
+"<qgis.core.QgsTask.addSubTask>` function of :class:`QgsTask "
+"<qgis.core.QgsTask>`. When a dependency is stated, the task manager will "
+"automatically determine how these dependencies will be executed. Wherever"
+" possible dependencies will be executed in parallel in order to satisfy "
+"them as quickly as possible. If a task on which another task depends is "
+"canceled, the dependent task will also be canceled. Circular dependencies"
+" can make deadlocks possible, so be careful."
 msgstr ""
 
 #: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:72
 msgid ""
 "If a task depends on a layer being available, this can be stated using "
-"the ``setDependentLayers`` function of :class:`QgsTask "
-"<qgis.core.QgsTask>`. If a layer on which a task depends is not "
-"available, the task will be canceled."
+"the :meth:`setDependentLayers <qgis.core.QgsTask.setDependentLayers>` "
+"function of :class:`QgsTask <qgis.core.QgsTask>`. If a layer on which a "
+"task depends is not available, the task will be canceled."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:77
+#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:78
 msgid ""
 "Once the task has been created it can be scheduled for running using the "
-"``addTask`` function of the task manager. Adding a task to the manager "
-"automatically transfers ownership of that task to the manager, and the "
-"manager will cleanup and delete tasks after they have executed. The "
-"scheduling of the tasks is influenced by the task priority, which is set "
-"in ``addTask``."
+":meth:`addTask <qgis.core.QgsTaskManager.addTask>` function of the task "
+"manager. Adding a task to the manager automatically transfers ownership "
+"of that task to the manager, and the manager will cleanup and delete "
+"tasks after they have executed. The scheduling of the tasks is influenced"
+" by the task priority, which is set in :meth:`addTask "
+"<qgis.core.QgsTaskManager.addTask>`."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:85
+#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:86
 msgid ""
 "The status of tasks can be monitored using :class:`QgsTask "
 "<qgis.core.QgsTask>` and :class:`QgsTaskManager "
 "<qgis.core.QgsTaskManager>` signals and functions."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:90
+#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:91
 msgid "Examples"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:93
+#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:94
 msgid "Extending QgsTask"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:95
+#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:96
 msgid ""
 "In this example ``RandomIntegerSumTask`` extends :class:`QgsTask "
 "<qgis.core.QgsTask>` and will generate 100 random integers between 0 and "
@@ -132,11 +133,11 @@ msgid ""
 "task manager, demonstrating two types of dependencies."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:215
+#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:216
 msgid "Task from function"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:217
+#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:218
 msgid ""
 "Create a task from a function (``doSomething`` in this example). The "
 "first parameter of the function will hold the :class:`QgsTask "
@@ -146,18 +147,76 @@ msgid ""
 "additional named parameter ``wait_time``."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:302
+#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:303
 msgid "Task from a processing algorithm"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:304
+#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:305
 msgid ""
-"Create a task that uses the algorithm ``qgis:randompointsinextent`` to "
-"generate 50000 random points inside a specified extent.  The result is "
-"added to the project in a safe way."
+"Create a task that uses the algorithm :ref:`qgis:randompointsinextent "
+"<qgisrandompointsinextent>` to generate 50000 random points inside a "
+"specified extent.  The result is added to the project in a safe way."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:347
+#: ../../source/docs/pyqgis_developer_cookbook/tasks.rst:348
 msgid "See also: https://www.opengis.ch/2018/06/22/threads-in-pyqgis3/."
 msgstr ""
+
+#~ msgid ""
+#~ "The global task manager (found with "
+#~ ":meth:`QgsApplication.taskManager() "
+#~ "<qgis.core.QgsApplication.taskManager>`) is normally "
+#~ "used.  This means that your tasks "
+#~ "may not be the only tasks that "
+#~ "are controlled by the task manager."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Dependencies between tasks can be "
+#~ "described using the ``addSubTask`` function"
+#~ " of :class:`QgsTask <qgis.core.QgsTask>`. When"
+#~ " a dependency is stated, the task "
+#~ "manager will automatically determine how "
+#~ "these dependencies will be executed. "
+#~ "Wherever possible dependencies will be "
+#~ "executed in parallel in order to "
+#~ "satisfy them as quickly as possible. "
+#~ "If a task on which another task"
+#~ " depends is canceled, the dependent "
+#~ "task will also be canceled. Circular "
+#~ "dependencies can make deadlocks possible, "
+#~ "so be careful."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If a task depends on a layer "
+#~ "being available, this can be stated "
+#~ "using the ``setDependentLayers`` function of"
+#~ " :class:`QgsTask <qgis.core.QgsTask>`. If a "
+#~ "layer on which a task depends is"
+#~ " not available, the task will be "
+#~ "canceled."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Once the task has been created it"
+#~ " can be scheduled for running using"
+#~ " the ``addTask`` function of the task"
+#~ " manager. Adding a task to the "
+#~ "manager automatically transfers ownership of"
+#~ " that task to the manager, and "
+#~ "the manager will cleanup and delete "
+#~ "tasks after they have executed. The "
+#~ "scheduling of the tasks is influenced"
+#~ " by the task priority, which is "
+#~ "set in ``addTask``."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Create a task that uses the "
+#~ "algorithm ``qgis:randompointsinextent`` to generate"
+#~ " 50000 random points inside a "
+#~ "specified extent.  The result is added"
+#~ " to the project in a safe way."
+#~ msgstr ""
 
