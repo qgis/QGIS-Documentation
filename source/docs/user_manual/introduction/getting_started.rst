@@ -238,7 +238,7 @@ Let's do some customization on the lakes layer.
    #. Choose ``3`` as buffer size
    #. Click :guilabel:`Apply`
    #. Check if the result looks good, and update the value if needed.
-   #. Finally click :guilabel:`OK` to close the guilabel:`Layer Properties`
+   #. Finally click :guilabel:`OK` to close the :guilabel:`Layer Properties`
       dialog and apply the changes.
 
 Let's now add some decorations in order to shape the map and export it out of
