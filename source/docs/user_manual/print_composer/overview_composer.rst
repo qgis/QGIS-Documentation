@@ -27,8 +27,8 @@ atlas generator.
 
 .. index:: Layout template, Map template
 
-Sample Session
-==============
+Sample Session for beginners
+============================
 
 Before you start to work with the print layout, you need to load some raster
 or vector layers in the QGIS map canvas and adapt their properties to suit your
