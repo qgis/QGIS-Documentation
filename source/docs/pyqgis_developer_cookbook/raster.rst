@@ -107,7 +107,7 @@ Single Band Rasters
 Let's say we want a render single band raster layer with colors ranging from
 green to yellow (corresponding to pixel values from 0 to 255).
 In the first stage we will prepare a
-class:`QgsRasterShader <qgis.core.QgsRasterShader>` object and configure
+:class:`QgsRasterShader <qgis.core.QgsRasterShader>` object and configure
 its shader function:
 
 .. code-block:: python
