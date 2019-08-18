@@ -483,6 +483,12 @@ Advanced TOC
 
     print (root.findGroup("My Group"))
 
+**Find layer by id**
+
+.. code-block:: python
+
+    print (root.findLayer(layer.layerId()))
+
 **Add layer**
 
 .. testcode::
@@ -529,6 +535,33 @@ Advanced TOC
     cloned_group1.setName("Group X")
     node_layer1.setName("Layer X")
 
+**Move loaded layer**
+
+.. code-block:: python
+
+    layer = QgsProject.instance().mapLayersByName("layer name you like")[0]
+    root = QgsProject.instance().layerTreeRoot()
+
+    mylayer = root.findLayer(layer.id())
+    myClone = mylayer.clone()
+    parent = mylayer.parent()
+
+    group = root.findGroup("My Group")
+    # Insert in first position
+    group.insertChildNode(0, myClone)
+
+    parent.removeChildNode(mylayer)
+
+**Load layer in a specific group**
+
+.. code-block:: python
+
+    QgsProject.instance().addMapLayer(layer, False)
+
+    root = QgsProject.instance().layerTreeRoot()
+    g = root.findGroup("My Group")
+    g.insertChildNode(0, QgsLayerTreeLayer(layer))
+
 **Changing visibility**
 
 .. code-block:: python
@@ -536,6 +569,16 @@ Advanced TOC
     print (cloned_group1.isVisible())
     cloned_group1.setItemVisibilityChecked(False)
     node_layer1.setItemVisibilityChecked(False)
+
+**Is group selected**
+
+.. code-block:: python
+
+    def isMyGroupSelected( groupName ):
+        myGroup = QgsProject.instance().layerTreeRoot().findGroup( groupName )        
+        return myGroup in iface.layerTreeView().selectedNodes()
+
+    print (isMyGroupSelected( 'my group name' ))
 
 **Expand node**
 
@@ -744,6 +787,19 @@ Decorators
     iface.mapCanvas().renderComplete.connect(_on_render_complete)
     # Repaint the canvas map
     iface.mapCanvas().refresh()
+
+Composer
+==========
+
+**Get print layout by name**
+
+.. testcode::
+
+    composerTitle = 'MyComposer' # Name of the composer
+
+    project = QgsProject.instance()
+    projectLayoutManager = project.layoutManager()
+    layout = projectLayoutManager.layoutByName(composerTitle)
 
 Sources
 =======
