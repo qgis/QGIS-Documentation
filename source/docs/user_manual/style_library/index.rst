@@ -2,19 +2,17 @@
 
    |updatedisclaimer|
 
-.. _label_workingvector:
+.. _vector_symbol_library:
 
-**************************
- Working with Vector Data
-**************************
+*******************
+ The Style Library
+*******************
 
 .. toctree::
-   :maxdepth: 2
 
-   vector_properties
-   expression
-   attribute_table
-   editing_geometry_attributes
+   style_manager
+   symbol_selector
+   label_settings
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
