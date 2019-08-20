@@ -124,7 +124,7 @@ Raising exception from a plugin
 Some work has still to be done on this topic: the current implementation can
 distinguish between handled and unhandled exceptions by setting a
 :class:`QgsRequestHandler <qgis.server.QgsRequestHandler>` property to an
-instance of :class:`QgsMapServiceException <qgis.server.QgsMapServiceException>`,
+instance of QgsMapServiceException,
 this way the main C++ code can catch handled python exceptions and ignore
 unhandled exceptions (or better: log them).
 
