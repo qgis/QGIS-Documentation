@@ -29,8 +29,8 @@ In order to provide translations:
    English language in the folder :file:`/QGIS-Documentation/i18n/en`.
 #. These "originals" are then copied by the script to the :file:`i18n` folders for
    other languages.
-#. The sentences in the :file:`.po` files are pushed to Transifex and made
-   available for translators who can begin to translate from English to their
+#. The sentences in the :file:`.po` files are pushed to the Transifex web platform,
+   and made available for translators who can begin to translate from English to their
    language with the editor.
 #. At the end of the day, a script pulls back all validated translations
 #. At the next build of the documentation (which occurs at least once a day), a
@@ -51,11 +51,13 @@ In order to provide translations:
  
 Two different tools are currently used to do translations in QGIS:
 
-* The **Transifex web platform**, the easiest and recommended way to translate QGIS,
+* The `Transifex web platform <https://www.transifex.com/>`_, the easiest and
+  recommended way to translate QGIS,
   transparently does the process described above and pulls all the translatable
   texts in one place for the translator. Just pick the files you want and translate.
   Translated files are stored in the platform until another release is pushed.
-* **Qt Linguist**, a Qt development tool, requires the translator to pull locally
+* `Qt Linguist <https://doc.qt.io/qt-5/qtlinguist-index.html>`_, a Qt
+  development tool, requires the translator to pull locally
   the :file:`.po` (or :file:`.ts`) files from the source code, translate and
   then push back.
 
@@ -102,9 +104,9 @@ In order to translate using Transifex, you need to:
 
 #. `create an account on Transifex and join the QGIS project
    <https://qgis.org/en/site/getinvolved/translate.html#join-a-project>`_.
-#. Once you get a team, click on the corresponding project (in this case ``QGIS
-   Documentation``). A list of available languages with their ratio of translation
-   is displayed.
+#. Once you are part of a language team, click on the corresponding project
+   (in this case ``QGIS Documentation``). A list of available languages with
+   their ratio of translation is displayed.
 
    .. _figure_transifex_languages:
 
@@ -115,21 +117,21 @@ In order to translate using Transifex, you need to:
    
 #. Hover over your language and click either:
 
-   * :guilabel:`view resources`: translatable :file:`.po` files with their ratio
+   * :guilabel:`View resources`: translatable :file:`.po` files with their ratio
      of translation, number of strings and some more metadata are now displayed.
    * or :guilabel:`Translate`: opens the interface of translation with all the
      available :file:`.po` files
-#. Identify the file you'd like to translate or any unfinished file and click on
-   it: paragraphs in the files are displayed and you can use the interface to
-   filter, translate, suggest translation... 
+#. Identify the file you'd like to translate (in our case we are looking for the
+   ``docs_user-manual_plugins_plugins-heatmap``, the heatmap plugin file)
+   or any unfinished file and click on it: strings in the files are loaded
+   and you can use the interface to filter, translate, suggest translation... 
 
-You get a list of all translatable :file:`.po` files. Click on the
-``docs_user-manual_plugins_plugins-heatmap`` to select the heatmap plugin file
-and choose ``Translate`` in the prompted dialog.
-Note that you can also choose to download the file and translate it
-with tools like Qt Linguist.
-The next page lists all the sentences in the file. All you need to do is select
-the text and translate following the :ref:`guidelines <translate_manual>`.
+   .. tip:: For the documentation or the website, clicking the ``Fix me`` link
+     in the footer of a page brings you directly to its corresponding translation
+     page in Transifex.
+ 
+#. All you need to do is select each text and translate following the
+   :ref:`guidelines <translate_manual>`.
 
 For further information on the use of Transifex Web Editor, see
 https://docs.transifex.com/translation/translating-with-the-web-editor.
@@ -153,13 +155,6 @@ it's not advised to use this process. Since there's no
 versioning system on Transifex, the file you upload will simply replace the
 existing one and potentially overwrite any modification made by others on the
 platform in the meantime.
-
-You'd want to take the Qt Linguist route if you want to translate resources that
-are no longer availabe in Transifex, eg a previous release. And most of the time,
-the resources will be directly pulled from the project source repository,
-on GitHub. This is particularly true with QGIS Desktop translation (eg, a
-released LTR is not available on Transifex but may still need translation fixes).
-
 
 When you open the file in Qt Linguist for the first time you will see the
 following dialog:
