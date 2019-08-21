@@ -147,7 +147,7 @@ You can create as many map themes as you need: whenever the current combination
 in the map legend (visible layers, their active style, the map legend nodes)
 does not match any existing map theme contents as defined above, click on
 :guilabel:`Add Theme...` to create a new map theme, or use
-:menuselection:`Replace Theme -->` to update the current map theme.
+:menuselection:`Replace Theme -->` to update a map theme.
 Use the :menuselection:`Remove Current Theme` button to delete the active theme.
 
 Map themes are helpful to switch quickly between different preconfigured
