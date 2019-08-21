@@ -246,6 +246,33 @@ Outputs
   Vector layer without the field(s) chosen.
 
 
+.. _qgisextractbinary:
+
+Extract binary field
+--------------------
+Extracts contents from a binary field, saving them to individual files.
+Filenames can be generated using values taken from an attribute in the
+source table or based on a more complex expression.
+
+Parameters
+..........
+
+``Input layer`` [vector: any]
+  Input vector layer containing the binary data.
+
+``Binary field`` [tablefield: any]
+  Field containing the binary data.
+
+``File name`` [expression]
+  Field or expression-based text to name each output file.
+
+Outputs
+.......
+
+``Destination folder`` [folder]
+  Folder in which to store the output files.
+
+
 .. _qgisfieldcalculator:
 
 Field calculator
