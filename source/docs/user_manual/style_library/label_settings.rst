@@ -26,9 +26,16 @@ the drop-down menus - see :ref:`data_defined_labeling` for a use case.
 Text tab
 ........
 
+.. _figure_textsettings_text:
+
+.. figure:: img/textsettings_text.png
+   :align: center
+
+   Text settings - Text tab
+
 In the |text| :guilabel:`Text` tab, you can define the :guilabel:`Font`,
 :guilabel:`Style`, and :guilabel:`Size` of your labels' text (see
-Figure_labels_). There are options available to set the labels'
+figure_textsettings_text_). There are options available to set the labels'
 :guilabel:`Color` and :guilabel:`Transparency`. Use the :guilabel:`Type
 case` option to change the capitalization style of the text. You have
 the possibility to render the text as 'All uppercase', 'All lowercase'
