@@ -1127,10 +1127,11 @@ labels based on expressions - See :ref:`labeling_with_expressions`.
 Setting the automated placement engine
 --------------------------------------
 
-In the top right corner of the :guilabel:`Labels` tab, you can use the
-|autoPlacement| :sup:`Automated placement settings (applies to all layers)` to
-configure a global and automated behavior of the labels. Clicking the
-|autoPlacement| button provides you with the following options:
+You can use the automated placement settings to configure a global and
+automated behavior of the labels. In the top right corner of the
+:guilabel:`Labels` tab, click the |autoPlacement| :sup:`Automated placement
+settings (applies to all layers)` button, opening a dialog with the following
+options:
 
 .. _figure_automated_placement:
 
@@ -1139,14 +1140,11 @@ configure a global and automated behavior of the labels. Clicking the
 
    The labels automated placement engine
 
-* The :guilabel:`Search method` combobox provides you with different placement methods
-  for finding good placement solutions for point, line and polygon labeling.
-  More details in this `article
-  <https://www.ee.co.za/wp-content/uploads/legacy/PositionIT%202009/PAL_PositIT_Jul09_p56-61.pdf>`_.
 * The :guilabel:`Number of candidates` controls set how many label placement
-  candidates should be generated for each feature type. The more candidates generated,
-  the better the labeling will be - but at a cost of rendering speed. Smaller number
-  of candidates results in less labels placed but faster redraws.
+  candidates should be generated for each feature type. The more candidates
+  generated, the better the labeling will be - but at a cost of rendering
+  speed. Smaller number of candidates results in less labels placed but faster
+  redraws.
 * |checkbox| :guilabel:`Draw text as outlines`: controls whether text labels are
   drawn (and exported) as either proper text objects OR as paths only. If they
   are exported as text objects then they can be edited in external applications
@@ -1156,13 +1154,19 @@ configure a global and automated behavior of the labels. Clicking the
   that when :ref:`exporting a layout to svg <export_layout_svg>` there's actually
   an override for this setting - so you can leave the project rendering as outlines
   but for a :file:`.svg` export export the labels as text.
-* |checkbox| :guilabel:`Show partial labels`: controls whether labels which fall partially
-  outside of the map extent should be rendered. If checked, these labels will be shown
-  (when there's no way to place them fully within the visible area). If unchecked then
-  partial visible labels will be skipped.
-* |checkbox| :guilabel:`show all labels for all layers (i.e. including colliding objects)`.
-  Note that this option can be also set per layer (see :ref:`labels_rendering`)
-* |checkbox| :guilabel:`show candidates (for debugging)`: controls whether boxes
+* |checkbox| :guilabel:`Allow truncated labels on edges of map`: controls
+  whether labels which fall partially outside of the map extent should be
+  rendered. If checked, these labels will be shown (when there's no way to
+  place them fully within the visible area). If unchecked then partially
+  visible labels will be skipped. Note that this setting has no effects on
+  labels' display in the :ref:`layout map item <layout_map_item>`.
+* |unchecked| :guilabel:`Show all labels for all layers (i.e. including
+  colliding objects)`. Note that this option can be also set per layer (see
+  :ref:`labels_rendering`)
+* |unchecked| :guilabel:`Show unplaced labels`: allows to determine whether any
+  important labels are missing from the maps (e.g. due to overlaps or other
+  constraints). They are displayed using a customizable color.
+* |unchecked| :guilabel:`Show candidates (for debugging)`: controls whether boxes
   should be drawn on the map showing all the candidates generated for label placement.
   Like the label says, it's useful only for debugging and testing the effect different
   labeling settings have. This could be handy for a better manual placement with
@@ -3166,4 +3170,6 @@ in the current edit session.
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
+.. |unchecked| image:: /static/common/checkbox_unchecked.png
+   :width: 1.3em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
