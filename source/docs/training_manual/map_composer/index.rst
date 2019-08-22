@@ -12,6 +12,7 @@ quality maps with all the requisite map components.
    :maxdepth: 2
 
    map_composer
+   dynamic_layout
    day_1_assignment
 
 
