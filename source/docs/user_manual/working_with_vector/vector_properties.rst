@@ -1094,32 +1094,46 @@ Labels Properties
 The |labeling| :guilabel:`Labels` properties provides you with all the needed
 and appropriate capabilities to configure smart labeling on vector layers. This
 dialog can also be accessed from the :guilabel:`Layer Styling` panel, or using
-the |labeling| :sup:`Layer Labeling Options` icon of the **Labels toolbar**.
+the |labeling| :sup:`Layer Labeling Options` button of the **Labels toolbar**.
 
 The first step is to choose the labeling method from the drop-down list.
 Available methods are:
 
 * |labelingNone| :guilabel:`No labels`: the default value, showing no labels
   from the layer
-* |labeling| :ref:`Single labels <showlabels>`
+* |labeling| :guilabel:`Single labels`: Show labels on the map using a single
+  attribute or an expression
 * |labelingRuleBased| :ref:`Rule-based labeling <rule_based_labeling>`
 * and |labelingObstacle| :guilabel:`Blocking`: allows to set a layer as just an
   obstacle for other layer's labels without rendering any labels of its own.
 
-The next steps assume you select the |labeling| :guilabel:`Single labels` option,
-enabling following tabs that help you configure the labeling:
+The next steps assume you select the |labeling| :guilabel:`Single labels`
+option, opening the following dialog.
+
+.. _figure_labels:
+
+.. figure:: img/label_menu_text.png
+   :align: center
+
+   Layer labeling settings - Single labels
+
+At the top of the dialog, a :guilabel:`Label with` drop-down list is enabled.
+You can select an attribute column to use for labeling. By default, the
+:ref:`display field <maptips>` is used. Click |expression| if you want to define
+labels based on expressions - See :ref:`labeling_with_expressions`.
+
+Below are displayed options to customize the labels, under various tabs:
 
 * :ref:`Text <labels_text>`
 * :ref:`Formatting <labels_formatting>`
 * :ref:`Buffer <labels_buffer>`
 * :ref:`Background <labels_background>`
 * :ref:`Shadow <labels_shadow>`
+* :guilabel:`Callouts`
 * :ref:`Placement <labels_placement>`
 * :ref:`Rendering <labels_rendering>`
 
-It also enables the :guilabel:`Label with` drop-down list, from which you can
-select an attribute column to use. Click |expression| if you want to define
-labels based on expressions - See :ref:`labeling_with_expressions`.
+Description of how to set each property is exposed at :ref:`showlabels`.
 
 .. index:: Labels; Automated placement
 .. _automated_placement:
@@ -1220,9 +1234,9 @@ Define labels based on expressions
 Whether you choose single or rule-based labeling type, QGIS allows using
 expressions to label features.
 
-Assuming you are using the :guilabel:`Single labels` method, click the |expression| icon near the
-:guilabel:`Label with` drop-down list in the |labeling| :guilabel:`Labels` tab
-of the properties dialog.
+Assuming you are using the :guilabel:`Single labels` method, click the
+|expression| button near the :guilabel:`Label with` drop-down list in the
+|labeling| :guilabel:`Labels` tab of the properties dialog.
 
 In figure_labels_expression_, you see a sample expression to label the alaska
 trees layer with tree type and area, based on the field 'VEGDESC', some
