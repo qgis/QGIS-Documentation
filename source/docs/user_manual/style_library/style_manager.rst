@@ -62,13 +62,13 @@ previewed items organized into tabs:
 * |lineLayer| :guilabel:`Line` for linear symbols only;
 * |polygonLayer| :guilabel:`Fill` for surface symbols only;
 * |color| :guilabel:`Color ramp`;
-* |text| :guilabel:`Text format` to manage text formats, which store the font,
-  color, buffers, shadows, and backgrounds of text formats (i.e. all the
-  formatting parts of label settings, which can be used outside of labels,
-  eg in layouts);
+* |text| :guilabel:`Text format` to manage :ref:`text formats <text_format>`,
+  which store the font, color, buffers, shadows, and backgrounds of texts
+  (i.e. all the formatting parts of the label settings, which for instance can
+  be used in layouts);
 * |labeling| :guilabel:`Label settings` to manage :ref:`label settings
   <showlabels>`, which include the text formats and some layer-type specific
-  settings such as label placement, priority, rendering...
+  settings such as label placement, priority, callouts, rendering...
 
 
 For each family of items, you can organize the elements into different categories,
