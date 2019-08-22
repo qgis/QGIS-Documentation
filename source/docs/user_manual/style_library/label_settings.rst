@@ -18,12 +18,8 @@ The following steps describe simple labeling without using the
 :guilabel:`Data defined override` functions, which are situated next to
 the drop-down menus - see :ref:`data_defined_labeling` for a use case.
 
-.. _figure_labels:
 
-.. figure:: img/label_menu_text.png
-   :align: center
 
-   Layer labeling settings - Text tab
 
 .. _labels_text:
 

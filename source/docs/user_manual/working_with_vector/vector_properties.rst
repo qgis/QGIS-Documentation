@@ -1109,6 +1109,13 @@ Available methods are:
 The next steps assume you select the |labeling| :guilabel:`Single labels` option,
 enabling following tabs that help you configure the labeling:
 
+.. _figure_labels:
+
+.. figure:: img/label_menu_text.png
+   :align: center
+
+   Layer labeling settings - Single labels
+
 * :ref:`Text <labels_text>`
 * :ref:`Formatting <labels_formatting>`
 * :ref:`Buffer <labels_buffer>`
