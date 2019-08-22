@@ -141,7 +141,8 @@ next lesson.
 |IC|
 -------------------------------------------------------------------------------
 
-As you have seen, georeferencing a paper map is a relatively straight forward operation.
+You have now georeferencing a paper map, making it possible to use it as a map
+layer in QGIS.
 
 |WN|
 -------------------------------------------------------------------------------
