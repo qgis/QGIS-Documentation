@@ -141,7 +141,7 @@ next lesson.
 |IC|
 -------------------------------------------------------------------------------
 
-You have now georeferencing a paper map, making it possible to use it as a map
+You have now georeferenced a paper map, making it possible to use it as a map
 layer in QGIS.
 
 |WN|
