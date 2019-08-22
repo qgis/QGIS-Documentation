@@ -13,18 +13,51 @@
    .. contents::
       :local:
 
+Labels are textual information you can display on vector features. They add
+details you could not necessarily represent using symbols.
 
-The following steps describe simple labeling without using the
-:guilabel:`Data defined override` functions, which are situated next to
-the drop-down menus - see :ref:`data_defined_labeling` for a use case.
+The :guilabel:`Style Manager` dialog allows you to create a set of labels or
+text formats (ie the appearance of the text, including font, size, colors,
+shadow, background...). Each of these items could later be applied to layers in
+the |labeling| :guilabel:`Labels` tab of the vector :guilabel:`Layer Properties`
+dialog or :guilabel:`Layer Styling` panel or using the |labeling| :sup:`Layer
+Labeling Options` button of the **Labels toolbar**. You can also directly
+configure them in the abovementioned dialogs.
 
+.. It could be nice to briefly expose the "label settings" tab of the style
+ manager, with some sample of label settings in it.
 
+The :guilabel:`Label Settings` dialog allows you to configure smart labeling
+for vector layers. Setting
+a label includes configuring the :ref:`text format <text_format>`, and how
+the label relates with the features or other labels (through :ref:`placement
+<labels_placement>`, :ref:`rendering <labels_rendering>` and callout).
+
+.. _text_format:
+
+Formatting the label text
+=========================
+
+To create text formats, you can:
+
+#. Open the |styleManager| :guilabel:`Style Manager` dialog
+#. Activate the :guilabel:`Text format` tab
+
+   .. _figure_textformats:
+
+   .. figure:: img/stylemanager_textformat.png
+      :align: center
+
+      Text formats in Style Manager dialog
+
+#. Press the |signPlus| :sup:`Add item` button. The :guilabel:`Text Settings`
+   dialog opens with the following properties.
 
 
 .. _labels_text:
 
 Text tab
-........
+--------
 
 .. _figure_textsettings_text:
 
@@ -53,7 +86,7 @@ sharing easier.
 .. _labels_formatting:
 
 Formatting tab
-..............
+--------------
 
 In the |labelformatting| :guilabel:`Formatting` tab, you can define a character
 for a line break
@@ -80,7 +113,7 @@ you want to show the plus sign in positive numbers.
 .. _labels_buffer:
 
 Buffer tab
-..........
+----------
 
 To create a buffer around the labels, activate the |checkbox| :guilabel:`Draw
 text buffer` checkbox in the |labelbuffer| :guilabel:`Buffer` tab. You can
@@ -96,7 +129,7 @@ transparent labels) will allow you to create outlined text labels.
 .. _labels_background:
 
 Background tab
-..............
+--------------
 
 In the |labelbackground| :guilabel:`Background` tab, you can define with
 :guilabel:`Size X` and :guilabel:`Size Y` the shape of your background.
@@ -115,7 +148,7 @@ map canvas using the :guilabel:`Blend mode` (see :ref:`blend-modes`).
 .. _labels_shadow:
 
 Shadow tab
-..........
+----------
 
 Use the |labelshadow| :guilabel:`Shadow` tab for a user-defined :guilabel:`Draw
 drop shadow`. The drawing of the background is very variable.
@@ -149,7 +182,7 @@ can also be altered by choosing a blend mode.
 .. _labels_placement:
 
 Placement tab
-.............
+=============
 
 Choose the |labelplacement| :guilabel:`Placement` tab for configuring label placement
 and labeling priority. Note that the placement options differ according to the
@@ -159,7 +192,7 @@ the global :ref:`PAL setting <automated_placement>`.
 .. _cartographic:
 
 Placement for point layers
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------
 
 With the |radioButtonOn| :guilabel:`Cartographic` placement mode,
 point labels are generated with a better visual relationship with the
@@ -200,7 +233,7 @@ setting. Thus, placement in a selected quadrant with a defined rotation is
 possible.
 
 Placement for line layers
-^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------
 
 Label options for line layers include |radioButtonOn| :guilabel:`Parallel`,
 |radioButtonOff| :guilabel:`Curved` or |radioButtonOff| :guilabel:`Horizontal`.
@@ -226,7 +259,7 @@ minimum distance for repeating labels. The distance can be in ``mm`` or in
 ``map units``.
 
 Placement for polygon layers
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------
 
 You can choose one of the following options for placing labels in polygons
 (see figure_labels_placement_polygon_):
@@ -287,7 +320,7 @@ others will be left out.
 .. _labels_rendering:
 
 Rendering tab
-.............
+=============
 
 In the |render| :guilabel:`Rendering` tab, you can tune when the labels can
 be rendered and their interaction with other labels and features.
@@ -379,6 +412,8 @@ by minimising the labels placement:
    :width: 1.5em
 .. |labelformatting| image:: /static/common/labelformatting.png
    :width: 1.5em
+.. |labeling| image:: /static/common/labelingSingle.png
+   :width: 1.5em
 .. |labelplacement| image:: /static/common/labelplacement.png
    :width: 1.5em
 .. |labelshadow| image:: /static/common/labelshadow.png
@@ -389,7 +424,11 @@ by minimising the labels placement:
    :width: 1.5em
 .. |render| image:: /static/common/render.png
    :width: 1.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
 .. |slider| image:: /static/common/slider.png
+.. |styleManager| image:: /static/common/mActionStyleManager.png
+   :width: 1.5em
 .. |text| image:: /static/common/text.png
    :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
