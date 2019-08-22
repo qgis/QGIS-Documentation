@@ -109,8 +109,7 @@ can be seen also in the :guilabel:`GCP table` in the :guilabel:`dX[pixels]` and
 coordinates you have entered to find what the problem is. You can use the image
 above as a guide.
 
-Once you are happy with your control points save your ground control points,
-in case that you will need them later, and you will:
+Once you are happy with your control points, you can save them for later use:
 
 * :menuselection:`File --> Save GCP points as...`.
 * In the folder :kbd:`exercise_data\\forestry\\digitizing`, name the file
