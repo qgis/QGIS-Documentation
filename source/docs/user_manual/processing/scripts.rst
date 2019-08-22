@@ -506,6 +506,8 @@ Sorted on class name.
      - :class:`QgsProcessingParameterVectorDestination <qgis.core.QgsProcessingParameterVectorDestination>`
      - A vector layer
 
+|
+
 .. list-table:: Output types
    :widths: 50 20 30
    :header-rows: 1
