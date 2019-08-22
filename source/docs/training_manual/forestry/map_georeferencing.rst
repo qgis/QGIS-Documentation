@@ -72,7 +72,7 @@ Next you should define the transformation settings for georeferencing the map:
 * Click :guilabel:`OK`.
    
 The map contains several cross-hairs marking the coordinates in the map,
-we will use those to georeferenciate this image. You can use the zooming and
+we will use those to georeference this image. You can use the zooming and
 panning tools as you usually do in QGIS to inspect the image in the
 Georeferencer's window.
 
