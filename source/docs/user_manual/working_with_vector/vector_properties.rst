@@ -1124,14 +1124,14 @@ labels based on expressions - See :ref:`labeling_with_expressions`.
 
 Below are displayed options to customize the labels, under various tabs:
 
-* :ref:`Text <labels_text>`
-* :ref:`Formatting <labels_formatting>`
-* :ref:`Buffer <labels_buffer>`
-* :ref:`Background <labels_background>`
-* :ref:`Shadow <labels_shadow>`
-* :guilabel:`Callouts`
-* :ref:`Placement <labels_placement>`
-* :ref:`Rendering <labels_rendering>`
+* |text| :ref:`Text <labels_text>`
+* |labelformatting| :ref:`Formatting <labels_formatting>`
+* |labelbuffer| :ref:`Buffer <labels_buffer>`
+* |labelbackground| :ref:`Background <labels_background>`
+* |labelshadow| :ref:`Shadow <labels_shadow>`
+* |labelcallout| :guilabel:`Callouts`
+* |labelplacement| :ref:`Placement <labels_placement>`
+* |render| :ref:`Rendering <labels_rendering>`
 
 Description of how to set each property is exposed at :ref:`showlabels`.
 
@@ -3107,6 +3107,14 @@ in the current edit session.
    :width: 1.5em
 .. |joinedLayerNotEditable| image:: /static/common/mIconJoinedLayerNotEditable.png
    :width: 1.5em
+.. |labelbackground| image:: /static/common/labelbackground.png
+   :width: 1.5em
+.. |labelbuffer| image:: /static/common/labelbuffer.png
+   :width: 1.5em
+.. |labelcallout| image:: /static/common/labelcallout.png
+   :width: 1.5em
+.. |labelformatting| image:: /static/common/labelformatting.png
+   :width: 1.5em
 .. |labeling| image:: /static/common/labelingSingle.png
    :width: 1.5em
 .. |labelingNone| image:: /static/common/labelingNone.png
@@ -3114,6 +3122,10 @@ in the current edit session.
 .. |labelingObstacle| image:: /static/common/labelingObstacle.png
    :width: 1.5em
 .. |labelingRuleBased| image:: /static/common/labelingRuleBased.png
+   :width: 1.5em
+.. |labelplacement| image:: /static/common/labelplacement.png
+   :width: 1.5em
+.. |labelshadow| image:: /static/common/labelshadow.png
    :width: 1.5em
 .. |legend| image:: /static/common/legend.png
    :width: 1.2em
@@ -3150,6 +3162,8 @@ in the current edit session.
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
    :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
+   :width: 1.5em
+.. |render| image:: /static/common/render.png
    :width: 1.5em
 .. |rendering| image:: /static/common/rendering.png
    :width: 1.5em

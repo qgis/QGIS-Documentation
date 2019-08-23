@@ -225,6 +225,7 @@ Icon                     Substitution                 Icon                     S
 |labelbackground|        ``|labelbackground|``        |labelbuffer|            ``|labelbuffer|``
 |labelformatting|        ``|labelformatting|``        |labelplacement|         ``|labelplacement|``
 |labelshadow|            ``|labelshadow|``            |render|                 ``|render|``
+|labelcallout|           ``|labelcallout|``
 =======================  ===========================  =======================  ===========================
 
 Help
@@ -835,6 +836,8 @@ Icon                            Substitution                        Icon        
 .. |labelbackground| image:: /static/common/labelbackground.png
    :width: 1.5em
 .. |labelbuffer| image:: /static/common/labelbuffer.png
+   :width: 1.5em
+.. |labelcallout| image:: /static/common/labelcallout.png
    :width: 1.5em
 .. |labelformatting| image:: /static/common/labelformatting.png
    :width: 1.5em
