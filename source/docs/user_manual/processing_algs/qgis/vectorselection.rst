@@ -113,30 +113,6 @@ Parameters
 
   Options:
 
-Intersect
-    Description of intersect.
-    
-    .. _figure_intersect:
-
-    .. figure:: img/intersect.png
-       :align: center
-
-       Demonstration of intersect
-
-Contain
-    Definition 2, paragraph 1.
-
-    Definition 2, paragraph 2.
-
-Disjoint
-    Definition 3.
-
-term 4 : classifier one : classifier two
-    Definition 4.
-
-
-
-
   * 0 --- intersect
   * 1 --- contain
   * 2 --- disjoint
@@ -412,9 +388,18 @@ Parameters
   Source vector layer.
 
 ``Where the features (geometric predicate)`` [enumeration] [list]
-  Spatial condition for the selection:
+  Spatial condition for the selection is using the geometric predicate, which has eight options.
+       
+    .. _figure_intersect:
 
-  Options:
+    .. figure:: img/selectbylocation.png
+       :align: center
+In this example, dataset 1 consists of the green circles, dataset 2 is the orange square.
+  Intersect
+    Tests whether a geometry intersects another. Returns 1 (true) if the geometries spatially intersect (share any portion of space) and 0 if they don’t. In the picture above, this will select circle 1, 2 and 3.
+
+  Contain
+    
 
   * 0 --- intersect
   * 1 --- contain
