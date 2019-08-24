@@ -113,6 +113,30 @@ Parameters
 
   Options:
 
+Intersect
+    Description of intersect.
+    
+    .. _figure_intersect:
+
+    .. figure:: img/intersect.png
+       :align: center
+
+       Demonstration of intersect
+
+Contain
+    Definition 2, paragraph 1.
+
+    Definition 2, paragraph 2.
+
+Disjoint
+    Definition 3.
+
+term 4 : classifier one : classifier two
+    Definition 4.
+
+
+
+
   * 0 --- intersect
   * 1 --- contain
   * 2 --- disjoint
