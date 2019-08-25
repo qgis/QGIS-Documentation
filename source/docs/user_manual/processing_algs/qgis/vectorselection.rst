@@ -395,7 +395,7 @@ In this example, the dataset from which we want to select (the *source vector la
 
 ``Where the features (geometric predicate)`` [enumeration] [list]
   The spatial condition for the selection is defined by choosing one or more geometric predicates. There are eight options.
-       
+
   Intersect
     Tests whether a geometry intersects another. Returns 1 (true) if the geometries spatially intersect (share any portion of space) and 0 if they don’t. In the picture above, this will select circle 1, 2 and 3.
 
