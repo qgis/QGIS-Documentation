@@ -1,3 +1,4 @@
+******************
 QGIS Documentation
 ******************
 
@@ -8,7 +9,7 @@ QGIS Documentation
    :local:
 
 Introduction
-------------
+============
 
 This repository is meant to write and manage the Official Documentation of
 `QGIS <https://qgis.org>`_, an Open Source GIS Software.
@@ -43,7 +44,7 @@ Styling is in theme/qgis-theme. This theme is used for website and documentation
 The website version is the canonical one.
 
 Partial / faster building
--------------------------
+=========================
 
 Because of the size of the documentation, the building of the full docs can take up a long time.
 
@@ -73,7 +74,7 @@ Uncomment the lines for the modules that you do NOT want to build in this part o
 
 
 Building the documentation using Make
--------------------------------------
+=====================================
 
 Building is only tested on Linux systems using make, on windows we now started a Paver setup (see below)
 
@@ -89,7 +90,7 @@ using::
 No need to use option ``-f venv.mk`` after that.
 
 Speed up the documentation build
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------
 
 Running ``make html`` generates **from scratch** the full english documentation.
 You can see from the output that after it removes the content from static it runs the
@@ -140,7 +141,7 @@ To add a new language (the scripts will need some directory structure)::
 See the website in action: http://www.qgis.org
 
 Building PDF
-^^^^^^^^^^^^
+------------
 
 You will need to install **texi2pdf** by doing:
 
@@ -154,7 +155,7 @@ Alike the html build command, you need to run make with the option to build pdf
 
 
 Building the Documentation using Docker
--------------------------------------
+=======================================
 
 Docker is an open platform for distributed applications for developers and
 sysadmins (https://www.docker.com/).
@@ -173,7 +174,7 @@ if not already present.
    ./docker-run.sh LANG=fr html
 
 Building the Documentation using Paver
---------------------------------------
+======================================
 
 Paver is a python based Make-like tool (http://paver.readthedocs.io/en/latest/)
 
@@ -249,109 +250,8 @@ This will pull all german po files from transifex (based on the
 .tx/config file in the root of this project)
 
 
-Translating the english QGIS Documentation
-******************************************
-
-Translating of the Documentation is handled via transifex: http://www.transifex.com
-
-ONLY the current stable branch is translated.
-
-If you want to help translating: create an account and join one of the translation
-teams of the qgis project: https://www.transifex.com/organization/qgis
-
-Every language has it's own maintainer, please contact them, if you want to help.
-You find a list of current language maintainers at the end of this document. If
-your language is not listed, please contact the `QGIS-Community-Team Mailinglist
-<http://lists.osgeo.org/mailman/listinfo/qgis-community-team>`_ and ask for help.
-
-
-Authors and translators
-***********************
-
-The English QGIS manual (Master Document) and its translation is managed by the
-Community Assistant (Manual Team Lead) and supported by additional language
-specific teams.
-
-English Manual (Master Document)
---------------------------------
-
-* Community Assistant (Manual Team Lead): ??
-
-  * Contributor : Otto Dassau < dassau[at]gbd-consult.de >
-  * Contributor : Larissa Junek < junek[at]gbd-consult.de >
-
-Manual and Application Translations
------------------------------------
-
-* Community Assistant (Manual Team Lead): ??
-
-  * Dutch Team Lead : Richard Duivenvoorde < richard[at]duif.net >
-  * French Team Lead : Marie Silvestre < marie_silvestre[at]yahoo.fr >
-  * German Team Lead : Otto Dassau < dassau[at]gbd-consult.de >
-  * Greek Team Lead : Dr. Nicolas Karanikolas (not confirmed)
-  * Italian Team Lead : Paolo Cavallini < cavallini[at]faunalia.it >
-
-    * Contributor : Matteo Ghetta
-    * Contributor : Iacopo Zetti
-    * Contributor : Pasquale Di Donato
-    * Contributor : Giuseppe Patti < geognu[at]infinito.it >
-    * Contributor : Simona Santini
-
-  * Japanese Team Lead: Kayam Yoichi < yoichi.kayama[at]gmail.com >
-  * Lao Team Lead: Anousak Souphavanh < anousak at gmail.com >
-  * Lithuanian Team Lead : Kestas M < m.kestas[at]gmail.com >
-  * Polish Team Lead : Robert Szczepanek < robert[at]szczepanek.pl >
-
-    * Contributor : Andrzej Swiader < andrzej.swiader[at]uj.edu.pl >
-
-  * Portuguese (pt_BR) Team Lead: Arthur Nanni < comunidade[at]qgisbrasil.org >
-
-    * Contributor : Rodrigo Sperb
-    * Contributor : Sidney Goveia
-
-  * Portuguese (pt_PT) Team Lead: Giovanni Manghi < giovanni.manghi[at]faunalia.pt >
-
-    * Contributor : Vânia Neves < vania.neves[at]faunalia.pt >
-    * Contributor : Alexandre Neto < senhor.neto[at]gmail.com >
-    * Contributor : Zara Teixeira < zarafani[at]gmail.com >
-
-  * Romanian Team Lead: Sorin Călinică < sorin.calinica[at]gmail.com >, Tudor Bărăscu < tudor.barascu[at]qtibia.ro >
-
-    * Contributor: Georgiana Ioanovici
-    * Contributor: Alex Bădescu
-
-  * Russian Team Lead: Alex Bruy < alexander.bruy[at]gmail.com >
-
-  * Spanish Team Lead : Carlos Dávila < cdavilam[at]orangecorreo.es >
-
-
-QGIS Website and Website Translation
-------------------------------------
-
-QGIS Website and Website Translation is managed by the Community Assistant (Website
-Team Lead) and supported by numerous contributors.
-
-* Community Assistant (Website and  Website Translation Team Lead): Werner Macho <werner.macho[at]gmail.com>
-
-  * Contributor : Otto Dassau  <dassau[at]gbd-consult.de>
-
-* German Translation
-
-  * Contributor: Horst Düster  <Horst.Duester at bd.so.ch>
-  * Contributor: Otto Dassau  <dassau[at]gbd-consult.de>
-
-* Russian Translation
-
-  * Contributor: Alexander Bruy  <alexander.bruy[at]gmail.com>
-
-* Romanian Translation
-
-  * Contributor: Sorin Călinică < sorin.calinica[at]gmail.com >
-  * Contributor: Tudor Bărăscu < tudor.barascu[at]qtibia.ro >
-
-
 Testing Python snippets
-***********************
+=======================
 
 To test Python code snippets, you need a *QGIS* installation, for this there are many options:
 
@@ -393,3 +293,33 @@ which does not appear in documentation with directive ``testsetup``, for example
 
 For more information see *Sphinx* doctest extension documentation:
 https://www.sphinx-doc.org/en/master/usage/extensions/doctest.html
+
+
+Translating the English QGIS Documentation
+==========================================
+
+Translating of the Documentation is handled via transifex: http://www.transifex.com
+
+ONLY the current stable branch is translated.
+
+If you want to help translating: create an account and join one of the translation
+teams of the qgis project: https://www.transifex.com/organization/qgis
+
+Every language has it's own maintainer, please contact them, if you want to help.
+You find a list of current language maintainers at the end of this document. If
+your language is not listed, please contact the `QGIS-Community-Team Mailinglist
+<http://lists.osgeo.org/mailman/listinfo/qgis-community-team>`_ and ask for help.
+
+
+Authors and translators
+=======================
+
+The English QGIS manual (Master Document) and its translation is managed by the
+Community Assistant (Manual Team Lead) and supported by additional language
+specific teams.
+
+A list of contributors is available at
+https://docs.qgis.org/testing/en/docs/user_manual/preamble/contributors.html
+
+To join us, find information at https://qgis.org/en/site/getinvolved/index.html
+
