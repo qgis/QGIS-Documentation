@@ -746,11 +746,11 @@ fine-tune the 3D scene:
   * :guilabel:`Elevation`: Raster layer to be used for generation of the
     terrain. This layer must contain a band that represents elevation.
   * :guilabel:`Vertical scale`: Scale factor for vertical axis.
-    Increasing the scale will exaggerate the terrain.
+    Increasing the scale will exaggerate the height of the landforms.
   * :guilabel:`Tile resolution`: How many samples from the terrain raster layer
     to use for each tile.
-    A value of 16px means that the geometry of each tile will be built
-    from 16x16 elevation samples.
+    A value of 16px means that the geometry of each tile will consist of
+    16x16 elevation samples.
     Higher numbers create more detailed terrain tiles at the expense of
     increased rendering complexity.
   * :guilabel:`Skirt height`: Sometimes it is possible to see small cracks
@@ -763,13 +763,13 @@ fine-tune the 3D scene:
 * |unchecked| :guilabel:`Terrain shading`: Allows to choose how the terrain
   should be rendered:
 
-  * Shading disabled - the color of terrain is determined only from map texture
-  * Shading enabled - the color of terrain is determined using Phong's shading
-    model, taking into account map texture, terrain normal vector, scene
-    light(s) and terrain material's :guilabel:`Ambient` and :guilabel:`Specular`
+  * Shading disabled - terrain color is determined only from map texture
+  * Shading enabled - terrain color is determined using Phong's shading
+    model, taking into account map texture, the terrain normal vector, scene
+    light(s) and the terrain material's :guilabel:`Ambient` and :guilabel:`Specular`
     colors and :guilabel:`Shininess`
 
-* :guilabel:`Lights`: You can add up to eight point lights, each with particular
+* :guilabel:`Lights`: You can add up to eight point lights, each with a particular
   position (in :guilabel:`X`, :guilabel:`Y` and :guilabel:`Z`),
   :guilabel:`Color`, :guilabel:`Intensity` and :guilabel:`Attenuation`.
 
