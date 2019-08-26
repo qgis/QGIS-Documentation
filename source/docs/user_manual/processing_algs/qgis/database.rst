@@ -228,7 +228,6 @@ Parameters
 ..........
 
 ``Database (connection name)`` [string]
-
   Name of the database connection (not the database name). Existing connections
   will be shown in the combobox.
 
