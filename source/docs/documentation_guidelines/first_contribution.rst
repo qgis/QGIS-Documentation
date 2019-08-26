@@ -322,21 +322,45 @@ Local repository
 
 Now you are ready to get a local clone of **your** QGIS-Documentation repository:
 
+You can clone  your QGIS repository using the web URL as follows:
+
 .. code-block:: bash
 
   $ cd ~/Documents/Development/QGIS/
-  $ git clone git@github.com:<YourName>/QGIS-Documentation.git
+  $ git clone https://github.com/<YourName>/QGIS-Documentation.git
 
 The former command line is simply an example.
 You should adapt both the path and the repository URL, replacing ``<YourName>``
 with your user name.
 
+Check the following:
+
+.. code-block:: bash
+
+  $ git remote -v
+  origin  https://github.com/<YourName>/QGIS-Documentation.git (fetch)
+  origin  https://github.com/<YourName>/QGIS-Documentation.git (push)
+  $ git branch
+  * master
+
+* *origin* is the name of the remote repository of your QGIS-Documentation
+  repository.
+* *master* is the default main branch. You should never use it to contribute!
+  **Never!**
+
+Alternatively you can clone your QGIS repository using the SSH protocol:
+
+.. code-block:: bash
+
+  $ cd ~/Documents/Development/QGIS/
+  $ git clone git@github.com:<YourName>/QGIS-Documentation.git
+
 .. tip:: **Permission denied (publickey) error?**
 
-   If you get a Permission denied (publickey) error, there may be a problem with
+   If you get a Permission denied (publickey) error with the former command, there may be a problem with
    your SSH key. See `GitHub help <https://help.github.com/articles/error-permission-denied-publickey/>`_ for details.
 
-Check it:
+Check the following if you used the SSH protocol:
 
 .. code-block:: bash
 
@@ -345,12 +369,6 @@ Check it:
   origin  git@github.com:<YourName>/QGIS-Documentation.git (push)
   $ git branch
   * master
-
-
-* *origin* is the name of the remote repository of your QGIS-Documentation
-  repository.
-* *master* is the default main branch. You should never use it to contribute!
-  **Never!**
 
 You can start to work here but in the long terme process you will get a lot of
 issue when you will push your contribution (called Pull Request in github
@@ -363,6 +381,18 @@ Add another remote repository
 To be able to follow the work in the main project, add a new remote repository
 in your local repository. This new remote repository is the QGIS-Documentation
 repository from QGIS project:
+
+.. code-block:: bash
+
+  $ git remote add upstream https://github.com/qgis/QGIS-Documentation.git
+  $ git remote -v
+  origin  https://github.com/<YourName>/QGIS-Documentation.git (fetch)
+  origin  https://github.com/<YourName>/QGIS-Documentation.git (push)
+  upstream        https://github.com/qgis/QGIS-Documentation.git (fetch)
+  upstream        https://github.com/qgis/QGIS-Documentation.git (push)
+
+Similarly, you can use the SSH protocol to add a remote repository in your local
+repository:
 
 .. code-block:: bash
 
