@@ -391,6 +391,7 @@ Parameters
 
     .. figure:: img/selectbylocation.png
        :align: center
+       
        In this example, the dataset from which we want to select (the *source vector layer*) consists of the green circles, the orange rectangle is the dataset that it is being compared to (the *intersection vector layer*).
 
 ``Where the features (geometric predicate)`` [enumeration] [list]
