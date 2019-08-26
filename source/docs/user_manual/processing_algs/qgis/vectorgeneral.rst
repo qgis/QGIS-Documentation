@@ -643,7 +643,7 @@ Creates a set of vectors in an output folder based on an input layer and an attr
 The output folder will contain as many layers as the unique values found in the
 desired field.
 
-The number of files generated is equal to the number of different values found
+The number of geopackage files generated is equal to the number of different values found
 for the specified attribute.
 
 It is the opposite operation of *merging*.
