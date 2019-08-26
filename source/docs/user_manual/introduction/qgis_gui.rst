@@ -714,42 +714,73 @@ Navigation options for exploring the map in 3D:
 To reset the camera view, click the |zoomFullExtent| :sup:`Zoom Full`
 button on the top of the 3D canvas panel.
 
-Terrain Configuration
+Scene Configuration
 ---------------------
 
-A terrain raster provides the elevation.
-This raster layer must contain a band that represents elevation.
-To select the terrain raster:
+The 3D map view opens with some default settings you can customize.
+To do so, click the |options| :sup:`Configure...` button at the top of
+the 3D canvas panel to open the :guilabel:`3D configuration` window.
 
-#. Click the |3dconfigure| :sup:`Configure...` button at the top of
-   the 3D canvas panel to open the :guilabel:`3D configuration` window
-#. Choose the terrain raster layer in the :guilabel:`Elevation`
-   pull-down menu
+.. _figure_3dmap_config:
 
-In the 3D Configuration window there are various other options to
-fine-tune the 3D scene.
-Before diving into the details, it is worth noting that terrain in a 3D view
-is represented by a hierarchy of terrain tiles and as the camera moves
-closer to the terrain, existing tiles that do not have sufficient detail
-are replaced by smaller tiles with more details.
-Each tile has mesh geometry derived from the elevation raster layer and
-texture from 2D map layers.
+.. figure:: img/3dmapconfiguration.png
+   :align: center
 
-Configuration options and their meaning:
+   The 3D Map Configuration dialog
+   
 
-* :guilabel:`Elevation`: Raster to be used for generation of terrain.
-* :guilabel:`Vertical scale`: Scale factor for vertical axis.
-  Increasing the scale will exaggerate the terrain.
-* :guilabel:`Tile resolution`: How many samples from the terrain raster layer to
-  use for each tile.
-  A value of 16px means that the geometry of each tile will be built
-  from 16x16 elevation samples.
-  Higher numbers create more detailed terrain tiles at the expense of
-  increased rendering complexity.
-* :guilabel:`Skirt height`: Sometimes it is possible to see small cracks
-  between tiles of the terrain.
-  Raising this value will add vertical walls ("skirts") around terrain
-  tiles to hide the cracks.
+In the 3D Configuration window there are various options to
+fine-tune the 3D scene:
+
+* Camera's :guilabel:`Field of view`: allowing to create panoramic scenes.
+  Default value is 45\°.
+* :guilabel:`Terrain`: Before diving into the details, it is worth noting that
+  terrain in a 3D view is represented by a hierarchy of terrain tiles and as
+  the camera moves closer to the terrain, existing tiles that do not have
+  sufficient details are replaced by smaller tiles with more details.
+  Each tile has mesh geometry derived from the elevation raster layer and
+  texture from 2D map layers.
+
+  * :guilabel:`Type`: It can be :guilabel:`Flat terrain`, :guilabel:`DEM
+    (Raster Layer)` or :guilabel:`Online`.
+  * :guilabel:`Elevation`: Raster layer to be used for generation of the
+    terrain. This layer must contain a band that represents elevation.
+  * :guilabel:`Vertical scale`: Scale factor for vertical axis.
+    Increasing the scale will exaggerate the height of the landforms.
+  * :guilabel:`Tile resolution`: How many samples from the terrain raster layer
+    to use for each tile.
+    A value of 16px means that the geometry of each tile will consist of
+    16x16 elevation samples.
+    Higher numbers create more detailed terrain tiles at the expense of
+    increased rendering complexity.
+  * :guilabel:`Skirt height`: Sometimes it is possible to see small cracks
+    between tiles of the terrain.
+    Raising this value will add vertical walls ("skirts") around terrain
+    tiles to hide the cracks.
+  * :guilabel:`Map theme`: Allows you to select the set of layers to display
+    in the map view from predefined :ref:`map themes <map_themes>`
+
+* |unchecked| :guilabel:`Terrain shading`: Allows you to choose how the terrain
+  should be rendered:
+
+  * Shading disabled - terrain color is determined only from map texture
+  * Shading enabled - terrain color is determined using Phong's shading
+    model, taking into account map texture, the terrain normal vector, scene
+    light(s) and the terrain material's :guilabel:`Ambient` and :guilabel:`Specular`
+    colors and :guilabel:`Shininess`
+
+* :guilabel:`Lights`: You can add up to eight point lights, each with a particular
+  position (in :guilabel:`X`, :guilabel:`Y` and :guilabel:`Z`),
+  :guilabel:`Color`, :guilabel:`Intensity` and :guilabel:`Attenuation`.
+
+  .. _figure_3dmap_configlights:
+
+  .. figure:: img/3dmapconfiguration_lights.png
+     :align: center
+
+     The 3D Map Lights Configuration dialog
+
+
 * :guilabel:`Map tile resolution`: Width and height of the 2D map images used
   as textures for the terrain tiles.
   256px means that each tile will be rendered into an image of
@@ -769,10 +800,10 @@ Configuration options and their meaning:
 * :guilabel:`Zoom labels`: Shows the number of zoom levels (depends on the
   map tile resolution and max. ground error).
 * |unchecked| :guilabel:`Show labels`: Toggles map labels on/off
-* |unchecked| :guilabel:`Show map tile info`: Include border and tile numbers for the
+* |unchecked| :guilabel:`Show map tile info`: Include border and tile numbers
+  for the terrain tiles (useful for troubleshooting terrain issues)
+* |unchecked| :guilabel:`Show bounding boxes`: Show 3D bounding boxes of the
   terrain tiles (useful for troubleshooting terrain issues)
-* |unchecked| :guilabel:`Show bounding boxes`: Show 3D bounding boxes of the terrain
-  tiles (useful for troubleshooting terrain issues)
 * |unchecked| :guilabel:`Show camera's view center`
 
 3D vector layers
@@ -877,8 +908,6 @@ open the Plugin Manager dialog.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |3dconfigure| image:: /static/common/mIconProperties.png
-   :width: 1.3em
 .. |addAllToOverview| image:: /static/common/mActionAddAllToOverview.png
    :width: 1.5em
 .. |addPart| image:: /static/common/mActionAddPart.png
