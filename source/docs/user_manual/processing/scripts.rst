@@ -12,9 +12,8 @@ Writing new Processing algorithms as Python scripts
 
 There are two options for writing Processing algorithms using Python.
 
-* Extending
-  :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`
-* Using the @alg decorator
+* :ref:`Extending<scripts_extend>` :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`
+* :ref:`Using the @alg decorator<scripts_alg>`
 
 Within QGIS, you can use :guilabel:`Create new script` in the
 :guilabel:`Scripts` menu at the top of the :guilabel:`Processing Toolbox`
@@ -28,6 +27,8 @@ This opens a template that extends
 If you save the script in the :file:`scripts` folder
 (the default location) with a :file:`.py` extension, the algorithm will
 become available in the :guilabel:`Processing Toolbox`.
+
+.. _scripts_extend:
 
 Extending QgsProcessingAlgorithm
 --------------------------------
@@ -291,6 +292,7 @@ Processing algorithm standard functions:
     count of features processed.
     The dictionary keys must match the original parameter/output names.
  
+.. _scripts_alg:
 
 The @alg decorator
 ------------------
