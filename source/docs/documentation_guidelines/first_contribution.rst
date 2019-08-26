@@ -320,7 +320,7 @@ type while ``#`` are comments.
 Local repository
 ----------------
 
-Now you are ready to get a local clone of **your** QGIS-Documentation repository:
+Now you are ready to get a local clone of **your** QGIS-Documentation repository.
 
 You can clone  your QGIS repository using the web URL as follows:
 
