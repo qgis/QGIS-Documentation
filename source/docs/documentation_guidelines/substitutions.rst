@@ -226,6 +226,10 @@ Icon                     Substitution                 Icon                     S
 |labelformatting|        ``|labelformatting|``        |labelplacement|         ``|labelplacement|``
 |labelshadow|            ``|labelshadow|``            |render|                 ``|render|``
 |labelcallout|           ``|labelcallout|``
+|pinLabels|              ``|pinLabels|``              |showHideLabels|         ``|showHideLabels|``
+|moveLabel|              ``|moveLabel|``              |rotateLabel|            ``|rotateLabel|``
+|showPinnedLabels|       ``|showPinnedLabels|``       |showUnplacedLabel|      ``|showUnplacedLabel|``
+|changeLabelProperties|  ``|changeLabelProperties|``   
 =======================  ===========================  =======================  ===========================
 
 Help
@@ -563,6 +567,8 @@ Icon                            Substitution                        Icon        
 .. |categorizedSymbol| image:: /static/common/rendererCategorizedSymbol.png
    :width: 1.5em
 .. |centroids| image:: /static/common/centroids.png
+   :width: 1.5em
+.. |changeLabelProperties| image:: /static/common/mActionChangeLabelProperties.png
    :width: 1.5em
 .. |checkGeometry| image:: /static/common/check_geometry.png
    :width: 1.5em
@@ -911,6 +917,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |moveItemsToTop| image:: /static/common/mActionMoveItemsToTop.png
    :width: 1.5em
+.. |moveLabel| image:: /static/common/mActionMoveLabel.png
+   :width: 1.5em
 .. |multiEdit| image:: /static/common/mActionMultiEdit.png
    :width: 1.5em
 .. |new3DMap| image:: /static/common/mActionNew3DMap.png
@@ -968,6 +976,8 @@ Icon                            Substitution                        Icon        
 .. |pencil| image:: /static/common/pencil.png
    :width: 1.5em
 .. |piechart| image:: /static/common/pie-chart.png
+   :width: 1.5em
+.. |pinLabels| image:: /static/common/mActionPinLabels.png
    :width: 1.5em
 .. |plugin| image:: /static/common/plugin.png
    :width: 1.5em
@@ -1037,6 +1047,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |rotateFeature| image:: /static/common/mActionRotateFeature.png
    :width: 1.5em
+.. |rotateLabel| image:: /static/common/mActionRotateLabel.png
+   :width: 1.5em
 .. |rotatePointSymbols| image:: /static/common/mActionRotatePointSymbols.png
    :width: 1.5em
 .. |ruleBasedSymbol| image:: /static/common/rendererRuleBasedSymbol.png
@@ -1091,15 +1103,21 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |showEditorConsole| image:: /static/common/iconShowEditorConsole.png
    :width: 1.5em
+.. |showHideLabels| image:: /static/common/mActionShowHideLabels.png
+   :width: 1.5em
 .. |showMapTheme| image:: /static/common/mActionShowPresets.png
    :width: 1.5em
 .. |showMeshCalculator| image:: /static/common/mActionShowMeshCalculator.png
+   :width: 1.5em
+.. |showPinnedLabels| image:: /static/common/mActionShowPinnedLabels.png
    :width: 1.5em
 .. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
    :width: 1.5em
 .. |showRasterCalculator| image:: /static/common/mActionShowRasterCalculator.png
    :width: 1.5em
 .. |showSelectedLayers| image:: /static/common/mActionShowSelectedLayers.png
+   :width: 1.5em
+.. |showUnplacedLabel| image:: /static/common/mActionShowUnplacedLabel.png
    :width: 1.5em
 .. |signMinus| image:: /static/common/symbologyRemove.png
    :width: 1.5em

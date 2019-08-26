@@ -1431,12 +1431,16 @@ same way with diagrams:
 * |showPinnedLabels| :sup:`Highlight Pinned Labels And Diagrams`. If the
   vector layer of the label is editable, then the highlighting is green,
   otherwise it's blue.
-* |moveLabel| :sup:`Move Label And Diagram` that has data-defined
-  position. You just have to drag the label to the desired place.
+* |showUnplacedLabel| :sup:`Toggles Display of Unplaced Labels`: Allows to
+  determine whether any important labels are missing from the maps (e.g. due
+  to overlaps or other constraints). They are displayed with a customizable
+  color (see :ref:`automated_placement`).
 * |showHideLabels| :sup:`Show/Hide Labels And Diagrams` that has
   data-defined visbility. If you click or drag an area holding :kbd:`Shift`,
   then label(s) are hidden. When a label is hidden, you just have to click
   or drag an area around the feature's point to restore its visibility.
+* |moveLabel| :sup:`Move Label And Diagram` that has data-defined
+  position. You just have to drag the label to the desired place.
 * |rotateLabel| :sup:`Rotate Label`. Click the label and move around and
   you get the text rotated.
 * |changeLabelProperties| :sup:`Change Label`. It opens a dialog to change the
@@ -3178,6 +3182,8 @@ in the current edit session.
 .. |showHideLabels| image:: /static/common/mActionShowHideLabels.png
    :width: 1.5em
 .. |showPinnedLabels| image:: /static/common/mActionShowPinnedLabels.png
+   :width: 1.5em
+.. |showUnplacedLabel| image:: /static/common/mActionShowUnplacedLabel.png
    :width: 1.5em
 .. |signMinus| image:: /static/common/symbologyRemove.png
    :width: 1.5em
