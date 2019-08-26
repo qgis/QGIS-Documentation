@@ -1,5 +1,9 @@
 :orphan:
 
+.. The following section is included in network analysis algorithms, ie
+ qgisserviceareafrompoint, qgisserviceareafromlayer, qgisshortestpathlayertopoint,
+ qgisshortestpathpointtolayer and qgisshortestpathpointtopoint
+
 **network_advanced_parameters**
 
 ``Direction field`` [tablefield: string]
