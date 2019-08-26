@@ -757,10 +757,10 @@ fine-tune the 3D scene:
     between tiles of the terrain.
     Raising this value will add vertical walls ("skirts") around terrain
     tiles to hide the cracks.
-  * :guilabel:`Map theme`: Allows to select the set of layers to display in the
-    map view from predefined :ref:`map themes <map_themes>`
+  * :guilabel:`Map theme`: Allows you to select the set of layers to display
+    in the map view from predefined :ref:`map themes <map_themes>`
 
-* |unchecked| :guilabel:`Terrain shading`: Allows to choose how the terrain
+* |unchecked| :guilabel:`Terrain shading`: Allows you to choose how the terrain
   should be rendered:
 
   * Shading disabled - terrain color is determined only from map texture
