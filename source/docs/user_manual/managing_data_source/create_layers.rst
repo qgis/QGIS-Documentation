@@ -357,8 +357,8 @@ tool to export multiple layers as a single DXF layers. It's accessible in the
 In the :guilabel:`DXF Export` dialog:
 
 #. Indicate the destination layer file.
-#. Choose the symbology mode and scale (see the `OGR Feature Styles
-   <ogr_features_note>`_ note) if applicable.
+#. Choose the symbology mode and scale (see the :ref:`OGR Feature Styles
+   <ogr_features_note>` note) if applicable.
 #. Select the data :guilabel:`Encoding`.
 #. Select the :guilabel:`CRS` to apply: the selected layers will be reprojected
    to the given CRS.
