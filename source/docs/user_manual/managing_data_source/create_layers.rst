@@ -424,7 +424,7 @@ In the :guilabel:`DXF Export` dialog:
 #. Select the data :guilabel:`Encoding`.
 #. Select the :guilabel:`CRS` to apply: the selected layers will be reprojected
    to the given CRS.
-#. select the layers to include in the DXF files either by checking each in the
+#. Select the layers to include in the DXF files either by checking each in the
    table widget or automatically pick them from an existing :ref:`map theme
    <map_themes>`. The :guilabel:`Select All` and :guilabel:`Deselect All` buttons
    can also help to quickly set the data to export.
