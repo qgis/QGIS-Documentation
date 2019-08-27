@@ -1279,7 +1279,7 @@ Parameters
 
 Outputs
 .......
-  <put output description here>
+<put output description here>
 
 
 lasgrid
@@ -1502,7 +1502,7 @@ Parameters
 
 Outputs
 .......
-  <put output description here>
+<put output description here>
 
 
 lasvalidate
