@@ -46,7 +46,7 @@ form, the browser displays and handles both identically.
 The list of the persons who contribute on writing, reviewing and translating
 the following documentation is available at :ref:`doc_contributors`.
 
-Copyright (c) 2004 - 2019 QGIS Development Team
+Copyright (c) 2004-2019 QGIS Development Team
 
 **Internet:** https://www.qgis.org
 
