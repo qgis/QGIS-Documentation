@@ -63,7 +63,7 @@
         // TODO: links should come from conf.py
         // TODO: all template pages have the actual translation in sphinc.conf
         // documentation master only github links
-        fix_translation_link = 'https://www.transifex.com/projects/p/qgis-website/translate/#' + 
+        fix_translation_link = 'https://www.transifex.com/projects/p/qgis-documentation/translate/#' + 
             currentLang.slice(1) + currentPage.replace(/\//g, "_").replace(/-/g, "_").replace(/\.html/g, "")
         if ('/en/' != currentLang) {
             $('#fix_translation_link').attr('href', fix_translation_link);
