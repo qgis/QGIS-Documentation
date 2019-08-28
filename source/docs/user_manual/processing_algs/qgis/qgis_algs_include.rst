@@ -56,4 +56,14 @@
   If a feature does not have a value in this field, or no field is set then the
   default speed value (provided with the ``Default speed`` parameter) is used.
 
+  ``Default speed (km/h)`` [number]
+    Value to use to calculate the travel time if no speed field is provided for an edge.
+
+    Default: *5.0*
+
+  ``Topology tolerance`` [number]
+    Two lines with nodes closer than the specified tolerance are considered connected.
+
+    Default: *0.0*
+
 **end_network_advanced_parameters**

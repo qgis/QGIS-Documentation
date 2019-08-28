@@ -50,16 +50,6 @@ Parameters
      :start-after: **network_advanced_parameters**
      :end-before: **end_network_advanced_parameters**
 
-  ``Default speed (km/h)`` [number]
-    Value to use to calculate the travel time if no speed field is provided for an edge.
-
-    Default: *5.0*
-
-  ``Topology tolerance`` [number]
-    Two lines with nodes closer than the specified tolerance are considered connected.
-
-    Default: *0.0*
-
   ``Include upper/lower bound points`` [boolean]
     Creates a point layer output with two points for each edge at the boundaries of the
     service area.
@@ -117,16 +107,6 @@ Parameters
      :start-after: **network_advanced_parameters**
      :end-before: **end_network_advanced_parameters**
 
-  ``Default speed (km/h)`` [number]
-    Value to use to calculate the travel time if no speed field is provided for an edge.
-
-    Default: *5.0*
-
-  ``Topology tolerance`` [number]
-    Two lines with nodes closer than the specified tolerance are considered connected.
-
-    Default: *0.0*
-
   ``Include upper/lower bound points`` [boolean]
     Creates a point layer output with two points for each edge at the boundaries of the
     service area.
@@ -179,16 +159,6 @@ Parameters
      :start-after: **network_advanced_parameters**
      :end-before: **end_network_advanced_parameters**
 
-  ``Default speed (km/h)`` [number]
-    Value to use to calculate the travel time if no speed field is provided for an edge.
-
-    Default: *50.0*
-
-  ``Topology tolerance`` [number]
-    Two lines with nodes closer than the specified tolerance are considered connected.
-
-    Default: *0.0*
-
 Outputs
 .......
 
@@ -230,16 +200,6 @@ Parameters
      :start-after: **network_advanced_parameters**
      :end-before: **end_network_advanced_parameters**
 
-  ``Default speed (km/h)`` [number]
-    Value to use to calculate the travel time if no speed field is provided for an edge.
-
-    Default: *50.0*
-
-  ``Topology tolerance`` [number]
-    Two lines with nodes closer than the specified tolerance are considered connected.
-
-    Default: *0.0*
-
 Outputs
 .......
 
@@ -279,16 +239,6 @@ Parameters
   .. include:: qgis_algs_include.rst
      :start-after: **network_advanced_parameters**
      :end-before: **end_network_advanced_parameters**
-
-  ``Default speed (km/h)`` [number]
-    Value to use to calculate the travel time if no speed field is provided for an edge.
-
-    Default: *50.0*
-
-  ``Topology tolerance`` [number]
-    Two lines with nodes closer than the specified tolerance are considered connected.
-
-    Default: *0.0*
 
 Outputs
 .......
