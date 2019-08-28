@@ -59,7 +59,7 @@
   ``Default speed (km/h)`` [number]
     Value to use to calculate the travel time if no speed field is provided for an edge.
 
-    Default: *5.0*
+    Default: *50.0*
 
   ``Topology tolerance`` [number]
     Two lines with nodes closer than the specified tolerance are considered connected.
