@@ -419,8 +419,8 @@ Parameters
     Tests whether a geometry is within another. Returns 1 (true) if geometry a is completely inside geometry b. Only circle 1 is selected.
     
   Cross
-     	Returns 1 (true) if the supplied geometries have some, but not all, interior points in common and the actual crossing is of a lower dimension than the highest supplied geometry. For example, a line crossing a polygon will cross as a line (selected). Two lines crossing will cross as a point (selected). Two polygons cross as a polygon (not selected).
-      
+    Returns 1 (true) if the supplied geometries have some, but not all, interior points in common and the actual crossing is of a lower dimension than the highest supplied geometry. For example, a line crossing a polygon will cross as a line (selected). Two lines crossing will cross as a point (selected). Two polygons cross as a polygon (not selected).
+
 
   Default: *Intersect*
 
