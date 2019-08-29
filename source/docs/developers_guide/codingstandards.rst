@@ -583,7 +583,7 @@ Book recommendations
 ---------------------
 
 
-- `Effective Modern C++ <https://shop.oreilly.com/product/0636920033707.do>`_, Scott Meyers
+- `Effective Modern C++ <http://shop.oreilly.com/product/0636920033707.do>`_, Scott Meyers
 - `More Effective C++ <https://www.informit.com/store/more-effective-c-plus-plus-35-new-ways-to-improve-your-9780201633719>`_, Scott Meyers
 - `Effective STL <https://www.informit.com/store/effective-stl-50-specific-ways-to-improve-your-use-9780201749625>`_, Scott Meyers
 - `Design Patterns <https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612>`_, GoF
@@ -609,7 +609,5 @@ contribution by:
 * adding their name to:
 
   * https://github.com/qgis/QGIS/blob/master/doc/CONTRIBUTORS
-  * https://github.com/qgis/QGIS/blob/master/doc/AUTHORS
-  * https://github.com/qgis/QGIS/blob/master/doc/contributors.json
-  
-  
+  * https://github.com/qgis/QGIS/blob/master/doc/AUTHORS  
+

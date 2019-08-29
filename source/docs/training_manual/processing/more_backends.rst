@@ -83,7 +83,7 @@ Dissolve features based on a common attribute:
 .. _LASTools: https://rapidlasso.com/lastools/
 .. _LecoS: https://conservationecology.wordpress.com/qgis-plugins-and-scripts/lecos-land-cover-statistics/
 .. _lwgeom: https://plugins.qgis.org/plugins/processinglwgeomprovider/
-.. _Animove: https://www.faunalia.eu/en/animove.html
+.. _Animove: https://www.faunalia.eu/en/dev/animove.html
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

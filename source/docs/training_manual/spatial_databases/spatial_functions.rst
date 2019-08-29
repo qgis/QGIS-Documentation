@@ -81,9 +81,7 @@ previous exercise.
    9.1, you will need to follow a different set of steps in order to install
    the postgis extensions for your database. Please consult the
    `PostGIS Documentation <https://postgis.net/docs/postgis_installation.html#create_new_db>`_
-   for instructions on how to do this. There are also some instructions in the
-   `previous version <http://manual.linfiniti.com/en/postgis/spatial_functions.html#install-plpgsql>`_
-   of this manual.
+   for instructions on how to do this.
 
 Looking at the installed PostGIS functions
 -------------------------------------------------------------------------------

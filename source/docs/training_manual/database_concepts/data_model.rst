@@ -17,7 +17,7 @@ Install PostgreSQL
 
 .. note:: Although outside the scope of this document, Mac users can install
   PostgreSQL using
-  `Homebrew <http://russbrooks.com/2010/11/25/install-postgresql-9-on-os-x>`_.
+  `Homebrew <www.russbrooks.com/2010/11/25/install-postgresql-9-on-os-x>`_.
   Windows users can use the
   `graphical installer <https://www.postgresql.org/download/windows/>`_.
   Please note that the documentation will assume users are running QGIS under

@@ -24,7 +24,7 @@ Description
 Turns points (up to billions) via seamless Delaunay triangulation
 implemented using streaming into large elevation, intensity, or RGB rasters.
 
-For more info see the `blast2dem <https://rapidlasso.com/blast2dem>`_ page and 
+For more info see the `blast2dem <https://rapidlasso.com/blast/blast2dem>`_ page and 
 its online `README <http://lastools.org/download/blast2dem_README.txt>`__ file.
 
 Parameters
@@ -93,7 +93,7 @@ Description
 Turns points (up to billions) via seamless Delaunay triangulation
 implemented using streaming into large iso-contour lines (optionally tiled).
 
-For more info see the `blast2iso <https://rapidlasso.com/blast2iso>`_ page and
+For more info see the `blast2iso <https://rapidlasso.com/blast/blast2iso>`_ page and
 its online `README <http://lastools.org/download/blast2iso_README.txt>`__ file.
 
 Parameters
@@ -164,7 +164,7 @@ Turns points (up to 20 million) via a temporary Delaunay triangulation
 that is rasterized with a user-defined step size into an elevation, intensity, or
 RGB raster.
 
-For more info see the `las2dem <https://rapidlasso.com/las2dem>`_ page
+For more info see the `las2dem <https://rapidlasso.com/lastools/las2dem>`_ page
 and its online `README <http://lastools.org/download/las2dem_README.txt>`__ file.
 
 Parameters
@@ -233,7 +233,7 @@ Description
 Turns point clouds (up to 20 million per file) into iso-contour lines
 by creating a temporary Delaunay triangulation on which the contours are then traced.
 
-For more info see the `las2iso <https://rapidlasso.com/las2iso>`_ page and its
+For more info see the `las2iso <https://rapidlasso.com/lastools/las2iso>`_ page and its
 online `README <http://lastools.org/download/las2iso_README.txt>`__ file.
 
 Parameters
@@ -303,7 +303,7 @@ Description
 Uses las2las to filter LiDAR points based on different attributes and
 to write the surviving subset of points to a new LAZ or LAS file.
 
-For more info see the `las2las <https://rapidlasso.com/las2las>`_ page and
+For more info see the `las2las <https://rapidlasso.com/lastools/las2las>`_ page and
 its online `README <http://lastools.org/download/las2las_README.txt>`__ file.
 
 Parameters
@@ -1053,7 +1053,7 @@ Description
 Uses las2las to filter LiDAR points based on different attributes and
 to write the surviving subset of points to a new LAZ or LAS file.
 
-For more info see the `las2las <https://rapidlasso.com/las2las>`_ page and
+For more info see the `las2las <https://rapidlasso.com/lastools/las2las>`_ page and
 its online `README <http://lastools.org/download/las2las_README.txt>`__ file.
 
 Parameters
@@ -1292,7 +1292,7 @@ Grids a selected attribute (e.g. elevation, intensity, classification,
 scan angle, ...) of a large point clouds with a user-defined step size onto raster
 using a particular method (e.g. min, max, average).
 
-For more info see the `lasgrid <https://rapidlasso.com/lasgrid>`_ page and
+For more info see the `lasgrid <https://rapidlasso.com/lastools/lasgrid>`_ page and
 its online `README <http://lastools.org/download/lasgrid_README.txt>`__ file.
 
 Parameters

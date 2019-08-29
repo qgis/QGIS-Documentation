@@ -8,7 +8,8 @@
 R Syntax Summary table for Processing
 **************************************
 
-Module contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna <https://www.santannapisa.it/it/istituto/scienze-della-vita/agricultural-water-management>`_
+Module contributed by Matteo Ghetta - funded by
+`Scuola Superiore Sant'Anna <https://www.santannapisa.it/it>`_
 
 Processing allows a lot of different input and output parameter that can be used
 in the script body.

@@ -25,7 +25,7 @@ available from Boundless Geo:
 * `Spatial Database Tips and Tricks
   <http://workshops.boundlessgeo.com/postgis-spatialdbtips/>`_
 
-See also `PostGIS online <http://postgisonline.org/>`_.
+See also `PostGIS In Action <www.postgis.us/>`_.
 
 .. toctree::
    :maxdepth: 2

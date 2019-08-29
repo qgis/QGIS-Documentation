@@ -18,7 +18,7 @@ Clip vector by extent
 ----------------------
 Clips any OGR-supported vector file to a given extent.
 
-This algorithm is derived from the `ogr2ogr utility <https://www.gdal.org/ogr2ogr.html>`_ .
+This algorithm is derived from the `ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_ .
 
 Parameters
 ..........
@@ -50,7 +50,7 @@ Clip vector by polygon
 -----------------------
 Clips any OGR-supported vector layer by a polygon.
 
-This algorithm is derived from the `ogr2ogr utility <https://www.gdal.org/ogr2ogr.html>`_ .
+This algorithm is derived from the `ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_ .
 
 Parameters
 ..........

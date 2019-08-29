@@ -18,7 +18,7 @@ Convert format
 --------------
 Converts any OGR-supported vector layer into another OGR-supported format.
 
-This algorithm is derived from the `ogr2ogr utility <https://www.gdal.org/ogr2ogr.html>`_ .
+This algorithm is derived from the `ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_ .
 
 Parameters
 ..........
@@ -76,7 +76,7 @@ Rasterize (vector to raster)
 ----------------------------
 Converts vector geometries (points, lines and polygons) into a raster image.
 
-This algorithm is derived from the `GDAL rasterize utility <https://www.gdal.org/gdal_rasterize.html>`_ .
+This algorithm is derived from the `GDAL rasterize utility <https://gdal.org/gdal_rasterize.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Conversion`
 

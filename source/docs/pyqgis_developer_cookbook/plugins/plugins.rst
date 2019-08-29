@@ -75,8 +75,8 @@ What is the meaning of the files:
 * :file:`metadata.txt` = Contains general info, version, name and some other
   metadata used by plugins website and plugin infrastructure.
 
-`Here <https://www.dimitrisk.gr/qgis/creator/>`_
-is an online automated way of creating the basic files (skeleton) of a typical
+`Here <https://github.com/wonder-sk/qgis-minimal-plugin>`_
+is a way of creating the basic files (skeleton) of a typical
 QGIS Python plugin.
 
 There is a QGIS plugin called

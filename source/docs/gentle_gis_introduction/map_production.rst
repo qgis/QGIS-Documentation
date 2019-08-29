@@ -291,10 +291,7 @@ Further reading
 * DeMers, Michael N. (2005). Fundamentals of Geographic Information Systems. 3rd
   Edition. Wiley. ISBN: 9814126195
 
-**Websites**:
-
-* https://en.wikipedia.org/wiki/Scale_(map)
-* https://www.colorado.edu/geography/gcraft/notes/mapproj/mapproj.html
+**Website**: https://en.wikipedia.org/wiki/Scale_(map)
 
 The QGIS User Guide also has more detailed information on map production provided
 in QGIS.

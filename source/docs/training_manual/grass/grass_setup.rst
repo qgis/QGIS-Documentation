@@ -51,7 +51,7 @@ data (raster, vector, etc) in a particular structure, but don't worry, GRASS wil
 take care of this for you.
 
 Just remember: ``Location`` contains ``Mapset`` that contains the data. For more
-information visit the `GRASS website <https://grass.osgeo.org/grass75/manuals/grass_database.html>`_.
+information visit the `GRASS website <https://grass.osgeo.org/grass77/manuals/grass_database.html>`_.
 
 .. figure:: img/grass_database.png
    :align: center

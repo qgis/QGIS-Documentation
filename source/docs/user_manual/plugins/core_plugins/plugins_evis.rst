@@ -16,7 +16,8 @@ eVis Plugin
 (This section is derived
 from Horning, N., K. Koy, P. Ersts. 2009. eVis (v1.1.0) User's Guide. American
 Museum of Natural History, Center for Biodiversity and Conservation. Available
-from https://biodiversityinformatics.amnh.org/, and released under the GNU FDL.)
+from https://www.amnh.org/research/center-for-biodiversity-conservation/capacity-development/biodiversity-informatics,
+and released under the GNU FDL.)
 
 The Biodiversity Informatics Facility at the American Museum of Natural History's
 (AMNH) Center for Biodiversity and Conservation (CBC)

@@ -597,7 +597,8 @@ even nice to look at!
 |FR|
 -------------------------------------------------------------------------------
 
-`Examples of Beautiful Maps <https://gis.stackexchange.com/questions/3083/examples-of-beautiful-maps>`_
+`Examples of Beautiful Maps
+<https://gis.stackexchange.com/questions/3083/seeking-examples-of-beautiful-maps>`_
 
 |WN|
 -------------------------------------------------------------------------------
