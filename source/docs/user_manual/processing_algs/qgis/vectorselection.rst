@@ -265,7 +265,7 @@ Parameters
 
 See also
 ........
-:ref:`qgisrandomsextract`
+:ref:`qgisrandomextract`
 
 
 .. _qgisrandomselectionwithinsubsets:
