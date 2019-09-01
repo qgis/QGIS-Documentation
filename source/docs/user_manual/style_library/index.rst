@@ -9,6 +9,7 @@
 *******************
 
 .. toctree::
+   :maxdepth: 2
 
    style_manager
    symbol_selector
