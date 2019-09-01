@@ -61,6 +61,10 @@ Outputs
 ``Extracted (non-matching)`` [vector: any]
   Vector layer with not matching features.
 
+See also
+........
+:ref:`qgisselectbyattribute`
+
 
 .. _qgisextractbyexpression:
 
@@ -90,6 +94,10 @@ Outputs
 
 ``Non-matching`` [vector: any]
   Vector layer with not matching features.
+
+See also
+........
+:ref:`qgisselectbyexpression`
 
 
 .. _qgisextractbylocation:
@@ -133,6 +141,10 @@ Outputs
 ``Extracted (location)`` [vector: any]
   Vector layer of the spatial intersection.
 
+See also
+........
+:ref:`qgisselectbylocation`
+
 
 .. _qgisrandomextract:
 
@@ -168,6 +180,10 @@ Outputs
 
 ``Extracted (random)`` [vector: any]
   Vector layer containing random selected features.
+
+See also
+........
+:ref:`qgisrandomselection`
 
 
 .. _qgisrandomextractwithinsubsets:
@@ -210,6 +226,10 @@ Outputs
 ``Extracted (random stratified)`` [vector: any]
   Vector layer containing random selected features.
 
+See also
+........
+:ref:`qgisrandomselectionwithinsubsets`
+
 
 .. _qgisrandomselection:
 
@@ -241,6 +261,10 @@ Parameters
   Number or percentage of features to select.
 
   Default: *10*
+
+See also
+........
+:ref:`qgisrandomextract`
 
 
 .. _qgisrandomselectionwithinsubsets:
@@ -284,6 +308,10 @@ Parameters
   Number or percentage of features to select.
 
   Default: *10*
+
+See also
+........
+:ref:`qgisrandomextractwithinsubsets`
 
 
 .. _qgisselectbyattribute:
@@ -338,6 +366,11 @@ Parameters
 
   Default: *0*
 
+See also
+........
+:ref:`qgisextractbyattribute`
+
+
 .. _qgisselectbyexpression:
 
 Select by expression
@@ -366,6 +399,10 @@ Parameters
   * 3 --- removing from current selection
 
   Default: *0*
+
+See also
+........
+:ref:`qgisextractbyexpression`
 
 
 .. _qgisselectbylocation:
@@ -414,3 +451,8 @@ Parameters
   * 3 --- removing from current selection
 
   Default: *0*
+
+See also
+........
+:ref:`qgisextractbylocation`
+
