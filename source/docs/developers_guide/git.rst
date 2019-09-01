@@ -134,9 +134,9 @@ GIT Documentation
 
 See the following sites for information on becoming a GIT master.
 
-* https://services.github.com/
-* https://progit.org
+* https://git-scm.com/book/en/v2
 * http://gitready.com
+* https://help.github.com/en
 
 
 Development in branches
@@ -220,7 +220,7 @@ Pull Requests
 
 In general it is easier for developers if you submit GitHub pull
 requests. We do not describe Pull Requests here, but rather refer you to the
-`GitHub pull request documentation <https://help.github.com/articles/using-pull-requests>`_.
+`GitHub pull request documentation <https://help.github.com/articles/about-pull-requests>`_.
 
 If you make a pull request we ask that you please merge master to your PR
 branch regularly so that your PR is always mergable to the upstream master

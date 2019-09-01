@@ -19,7 +19,7 @@ To speed up rendering time of raster layers overviews (pyramids) can
 be created. Overviews are lower resolution copies of the data which
 QGIS uses depending of the level of zoom.
 
-This algorithm is derived from the `GDAL addo utility <https://www.gdal.org/gdaladdo.html>`_ .
+This algorithm is derived from the `GDAL addo utility <https://gdal.org/gdaladdo.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Miscellaneous`
 
@@ -86,7 +86,7 @@ Build virtual raster
 Builds a VRT (Virtual Dataset) that is a mosaic of the list of input GDAL-supported rasters.
 With a mosaic you can merge several raster files.
 
-This algorithm is derived from the `GDAL buildvrt utility <https://www.gdal.org/gdalbuildvrt.html>`_ .
+This algorithm is derived from the `GDAL buildvrt utility <https://gdal.org/gdalbuildvrt.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Miscellaneous`
 
@@ -143,7 +143,7 @@ Merges raster files in a simple way. Here you can use a pseudocolor
 table from an input raster and define the output raster type. All
 the images must be in the same coordinate system.
 
-This algorithm is derived from the `GDAL merge utility <https://www.gdal.org/gdal_merge.html>`_ .
+This algorithm is derived from the `GDAL merge utility <https://gdal.org/gdal_merge.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Miscellaneous`
 
@@ -213,7 +213,7 @@ Raster information
 ------------------
 The gdalinfo program lists various information about a GDAL supported raster dataset.
 
-This algorithm is derived from the `GDAL info utility <https://www.gdal.org/gdalinfo.html>`_ .
+This algorithm is derived from the `GDAL info utility <https://gdal.org/gdalinfo.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Miscellaneous`
 
@@ -256,7 +256,7 @@ attribute containing the filename, and a polygon geometry outlining the raster.
 This output is suitable for use with MapServer as a raster tileindex.
 
 This algorithm is derived from the
-`GDAL Tile Index utility <https://www.gdal.org/gdaltindex.html>`_ .
+`GDAL Tile Index utility <https://gdal.org/gdaltindex.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Miscellaneous`
 

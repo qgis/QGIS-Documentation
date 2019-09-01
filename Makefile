@@ -242,7 +242,11 @@ fasthtml: updatestatic
 	# No internationalization is performed
 	$(SPHINXBUILD) -n -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html/$(LANG)
 
-.PHONY: doctest
+linkcheck:
+	$(SPHINXBUILD) -n -b linkcheck $(ALLSPHINXOPTS) $(BUILDDIR)/linkcheck
+	@echo
+	@echo "Check finished. Report is in $(BUILDDIR)/linkcheck/output.txt".
+
 doctest:
 	$(SPHINXBUILD) -b doctest $(ALLSPHINXOPTS) $(BUILDDIR)/doctest
 	@echo "Testing of doctests in the sources finished, look at the " \

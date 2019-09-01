@@ -246,7 +246,6 @@ Using a WMS, you can add inactive maps as backdrops for your existing map data.
 -------------------------------------------------------------------------------
 
 * `Spatineo Directory <https://directory.spatineo.com/>`_
-* `Geopole.org <https://geopole.org/>`_
 * `OpenStreetMap.org list of WMS servers
   <https://wiki.openstreetmap.org/wiki/WMS>`_
 

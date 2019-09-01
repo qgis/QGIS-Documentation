@@ -20,7 +20,7 @@ data and a hillshade raster.
 -------------------------------------------------------------------------------
 
 Managing LiDAR data within QGIS is possible using the Processing framework and
-the algorithms provided by `LAStools <https://rapidlasso.com/2013/09/29//how-to-install-lastools-toolbox-in-qgis>`_.
+the algorithms provided by `LAStools <https://rapidlasso.com/2013/09/29/how-to-install-lastools-toolbox-in-qgis>`_.
 
 You can obtain a digital elevation model (DEM) from a LiDAR point cloud and then
 create a hillshade raster that is visually more intuitive for presentation purposes.
@@ -133,7 +133,8 @@ The brown points are the points classified as ground and the gray ones are the r
 you can click the letter :kbd:`g` to visualize only the ground points or the
 letter :kbd:`u` to see only the unclassified points. Click the letter :kbd:`a`
 to see all the points again. Check the :file:`lasview_README.txt` file for more
-commands. If you are interested, also this `tutorial <https://www.rapidlasso.com/2014/03/02/tutorial-manual-lidar-editing/>`_
+commands. If you are interested, also this `tutorial
+<https://rapidlasso.com/2014/03/02/tutorial-manual-lidar-editing/>`_
 about editing LiDAR points manually will show you different operations within
 the viewer.
 
@@ -179,7 +180,7 @@ soil drains that have been dug in the forests.
 
 Using LiDAR data to get a DEM, specially in forested areas, gives good results
 with not much effort. You could also use ready LiDAR derived DEMs or other
-sources like the `SRTM 9m resolution DEMs <http://srtm.csi.cgiar.org/SELECTION/inputCoord.asp>`_.
+sources like the `SRTM 9m resolution DEMs <http://srtm.csi.cgiar.org/srtmdata/>`_.
 Either way, you can use them to create a hillshade raster to use in your map
 presentations.
 

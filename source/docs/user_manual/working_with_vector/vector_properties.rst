@@ -427,7 +427,7 @@ available modes are:
 * Pretty Breaks: Computes a sequence of about n+1 equally spaced nice values
   which cover the range of the values in x. The values are chosen so that they
   are 1, 2 or 5 times a power of 10. (based on pretty from the R statistical
-  environment http://astrostatistics.psu.edu/datasets/R/html/base/html/pretty.html)
+  environment https://astrostatistics.psu.edu/datasets/R/html/base/html/pretty.html)
 
 The listbox in the center part of the :guilabel:`Symbology` tab lists the classes
 together with their ranges, labels and symbols that will be rendered.

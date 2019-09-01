@@ -90,7 +90,7 @@ easily catch up. Just go to https://qgis.org/irclogs and read the
 IRC-logs.
 
 Commercial support for QGIS is also available. Check the website
-https://qgis.org/en/commercial-support.html for more information.
+https://qgis.org/en/site/forusers/commercial_support.html for more information.
 
 BugTracker
 ==========

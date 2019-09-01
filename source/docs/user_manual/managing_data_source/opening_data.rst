@@ -24,13 +24,13 @@ and often write a lot of formats:
 * Vector data formats include ESRI formats (Shapefile, Geodatabase...),
   MapInfo and MicroStation file formats, AutoCAD DWG/DXF, GeoPackage, GeoJSON,
   GRASS, GPX, KML, Comma Separated Values, and many more...
-  Read the complete list of `OGR vector supported formats
-  <https://www.gdal.org/ogr_formats.html>`_.
+  Read the complete list of `vector supported formats
+  <https://gdal.org/drivers/vector/index.html>`_.
 * Raster data formats include ArcInfo Binary Grid, ArcInfo ASCII Grid, JPEG,
   GeoTIFF, ERDAS IMAGINE, MBTiles, R or Idrisi rasters, ASCII Gridded XYZ,
   GDAL Virtual, SRTM, Sentinel Data, and many more...
   Read the complete list of `raster supported formats
-  <https://www.gdal.org/formats_list.html>`_.
+  <https://gdal.org/drivers/raster/index.html>`_.
 * Database formats include PostgreSQL/PostGIS, SQLite/SpatiaLite, Oracle, DB2
   or MSSQL Spatial, MySQL...
 * Support of web data services (WM(T)S, WFS, WCS, CSW, ArcGIS Servers...) is
@@ -39,7 +39,7 @@ and often write a lot of formats:
   formats such as virtual and memory layers.
 
 As of the date of this document, more than 80 vector and 140 raster formats are
-supported by the `GDAL/OGR <https://www.gdal.org/>`_ and QGIS native providers.
+supported by `GDAL <https://gdal.org/>`_ and QGIS native providers.
 
 .. note::
 
@@ -722,10 +722,10 @@ The service file looks like::
   like ``export PGSERVICE=water_service`` before doing your psql commands.
 
   You can find all the parameters `here
-  <https://www.postgresql.org/docs/current/static/libpq-connect.html#LIBPQ-PARAMKEYWORDS>`_
+  <https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-PARAMKEYWORDS>`_
 
 .. note:: If you don't want to save the passwords in the service file you can
-  use the `.pg_pass <https://www.postgresql.org/docs/current/static/libpq-pgpass.html>`_
+  use the `.pg_pass <https://www.postgresql.org/docs/current/libpq-pgpass.html>`_
   option.
 
 

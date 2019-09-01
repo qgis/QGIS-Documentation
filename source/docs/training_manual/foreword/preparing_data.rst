@@ -186,8 +186,8 @@ For modules :ref:`tm_create_vector_data` and :ref:`tm_rasters`, you'll also need
 raster images (SRTM DEM) which cover the region you have selected for your
 course.
 
-The CGIAR-CGI (http://srtm.csi.cgiar.org/) provides some SRTM DEM you can download
-from http://srtm.csi.cgiar.org/SELECTION/inputCoord.asp.
+The `CGIAR-CGI <http://srtm.csi.cgiar.org/>`_ provides some SRTM DEM you can download
+from http://srtm.csi.cgiar.org/srtmdata/.
 
 You'll need images which cover the entire region you have chosen to use.
 To find the extent coordinates, in QGIS , |zoomToLayer| zoom to the extent of

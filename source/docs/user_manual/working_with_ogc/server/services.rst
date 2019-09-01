@@ -971,8 +971,8 @@ only the symbols for the features falling into the requested area:
   request, to let QGIS Server scale symbols according to the map view image
   size.
 
-Content based legend features are based on the
-`UMN MapServer implementation: <http://www.mapserver.org/development/rfc/ms-rfc-101.html>`_
+Content based legend features are based on the `UMN MapServer implementation:
+<https://www.mapserver.org/development/rfc/ms-rfc-101.html>`_
 
 * **SHOWFEATURECOUNT** if set to ``TRUE`` adds in the legend the
   feature count of the features like in the following image:

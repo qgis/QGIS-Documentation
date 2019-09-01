@@ -634,7 +634,7 @@ You can define the :guilabel:`Default font` used within the :ref:`print layout
 GDAL Settings
 -------------
 
-`GDAL <https://www.gdal.org>`_ is a data exchange library for vector and raster
+`GDAL <https://gdal.org>`_ is a data exchange library for vector and raster
 files. It provides drivers to read and or write data in different formats.
 The :guilabel:`GDAL` tab currently exposes the drivers for raster formats with
 their capabilities.

@@ -269,9 +269,6 @@ Further reading
 * DeMers, Michael N. (2005). Fundamentals of Geographic Information Systems. 3rd
   Edition. Wiley. ISBN: 9814126195
 
-**Websites**:
-
-* http://www.manifold.net/doc/transform_border_buffers.htm
 
 The QGIS User Guide also has more detailed information on analysing vector data
 in QGIS.

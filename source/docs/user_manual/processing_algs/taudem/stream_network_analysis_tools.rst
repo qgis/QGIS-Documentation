@@ -523,7 +523,8 @@ See also
   for Drainage Density", Geomorphology, 5(1/2): 59-76.
 * Tarboton, D. G. and D. P. Ames, (2001), "Advances in the mapping of flow
   networks from digital elevation data", World Water and Environmental Resources
-  Congress, Orlando, Florida, May 20-24, ASCE, http://www.engineering.usu.edu/dtarb/asce2001.pdf.
+  Congress, Orlando, Florida, May 20-24, ASCE,
+  https://www.researchgate.net/publication/2329568_Advances_in_the_Mapping_of_Flow_Networks_From_Digital_Elevation_Data.
 
 Stream Reach and Watershed
 --------------------------

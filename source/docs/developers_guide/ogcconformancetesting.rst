@@ -61,7 +61,7 @@ For the WMS tests, data can be downloaded and loaded into a QGIS project:
   unzip data-wms-1.3.0.zip
 
 Then create a `QGIS project
-<https://github.com/qgis/QGIS/blob/master/tests/testdata/qgis_server/ets-wms12/project.qgs>`_
+<https://github.com/qgis/QGIS/blob/master/tests/testdata/qgis_server/ets-wms13/project.qgs>`_
 according to the description in
 https://cite.opengeospatial.org/teamengine/about/wms/1.3.0/site/.
 To run the tests, we need to provide the GetCapabilities URL of the service later.

@@ -382,7 +382,7 @@ Depending on the format of export, some of these options are available or not:
 * :guilabel:`Datasource Options`, :guilabel:`Layer Options` or
   :guilabel:`Custom Options` which allow you to configure advanced parameters
   depending on the output format. Some are exposed in :ref:`supported_format`
-  but for full details, see the `GDAL <https://www.gdal.org>`_ driver documentation.
+  but for full details, see the `GDAL <https://gdal.org>`_ driver documentation.
 
 .. _figure_save_vector:
 
