@@ -266,9 +266,6 @@ Parameters
 ``File name`` [expression]
   Field or expression-based text to name each output file.
 
-Outputs
-.......
-
 ``Destination folder`` [folder]
   Folder in which to store the output files.
 
