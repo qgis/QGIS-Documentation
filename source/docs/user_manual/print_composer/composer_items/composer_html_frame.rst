@@ -51,7 +51,26 @@ panel provides the following functionalities (see figure_layout_html_ppt_):
   override` button, to provide a URL from the contents of an attribute field of
   a table or using a regular expression.
 * In :guilabel:`Source` you can enter text in the textbox with some HTML tags or
-  provide a full HTML page.
+  provide a full HTML page. Provided that you created a relation described in
+  in :ref:`Creating one or many to many relations<_vector_relations>` a simple code including
+  HTML, JavaScript and GeoJSON gives you full access to the parent and child features. 
+  This way, the atlas feature browses through the parent layers and and creates a page
+  for every existing relation, depicting a parent feature and the relating child features
+  on one page each.
+  
+  .. code-block:: HTML 
+  
+     <script>
+     <div id="name"></div>
+     <div id="type"></div>
+     <script type="text/javascript">
+      function setFeature(feature)
+               {
+                document.getElementById('name').innerHTML = feature.properties.NAME;
+                document.getElementById('type').innerHTML = feature.properties.TYPE;
+               }
+      </script>
+
 * The :guilabel:`Insert an Expression` button can be used to insert an expression like
   ``[%Year($now)%]`` in the Source textbox to display the current year. This
   button is only activated when radiobutton :guilabel:`Source` is selected.
