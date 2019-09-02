@@ -103,6 +103,10 @@ panel provides the following functionalities (see figure_layout_legend_items_):
     symbology), you can specify a boolean expression to remove from the legend
     tree, styles that have no feature satisfying a condition. Note that the
     features are nevertheless kept and shown in the layout map item.
+  * The |addExpression| :sup:`Add symbol expression` allows you to add expressions
+    to each symbol label of a given layer. The label is represented by 
+    the variable "@symbol_label" in the expression. Currently aggregate functions 
+    are supported but will use all the features during evaluation.
 
   While the default behavior of the legend item is to mimic the
   :guilabel:`Layers panel` tree, displaying the same groups, layers and classes
@@ -184,6 +188,8 @@ column or line can be customized through this dialog.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |addExpression| image:: /static/common/mActionAddExpression.png
+   :width: 1.5em
 .. |addGroup| image:: /static/common/mActionAddGroup.png
    :width: 1.5em
 .. |addLegend| image:: /static/common/mActionAddLegend.png
