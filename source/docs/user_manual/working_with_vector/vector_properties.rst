@@ -1784,7 +1784,7 @@ depending on the OGR data format and version.
 If set in the underlying data source or in the :ref:`forms properties
 <configure_field>`, the field's alias is also displayed. An alias is a human
 readable field name you can use in the feature form or the attribute table.
-Alias are saved in the project file.
+Aliases are saved in the project file.
 
 Depending on the data provider, you can associate a comment with a field, for
 example at its creation. This information is retrieved and shown in the
