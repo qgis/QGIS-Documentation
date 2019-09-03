@@ -74,7 +74,7 @@ and update the whole QGIS documentation.
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
 | Martina Savarese   | icephale            | Andrei               | GiordanoPezzola       | zstadler             |
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
-| Ramon              | embelding           | ajazepk              |                       |                      |
+| Ramon              | embelding           | ajazepk              | Fran Raga             |                      |
 +--------------------+---------------------+----------------------+-----------------------+----------------------+
 
 
@@ -138,7 +138,7 @@ Romanian              Alex Bădescu, Bogdan Pacurar, Georgiana Ioanovici, Lonut
                       Losifescu-Enescu, Sorin Călinică, Tudor Bărăscu
 Russian               Alexander Bruy, Artem Popov
 Spanish               Carlos Dávila, Diana Galindo, Edwin Amado, Gabriela Awad,
-                      Javier César Aldariz, Mayeul Kauffmann
+                      Javier César Aldariz, Mayeul Kauffmann, Fran Raga
 Ukrainian             Alexander Bruy
 ===================== ========================================================
 
