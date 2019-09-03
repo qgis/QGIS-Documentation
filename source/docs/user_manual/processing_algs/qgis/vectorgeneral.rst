@@ -658,11 +658,8 @@ Parameters
 ``Unique ID field`` [tablefield: any]
   Field of the attribute table on which the layer will be split.
 
-Outputs
-.......
-
 ``Output directory`` [folder]
-  Directory where all the split layer will be saved.
+  Directory where all the split layers will be saved.
 
 See also
 ........
