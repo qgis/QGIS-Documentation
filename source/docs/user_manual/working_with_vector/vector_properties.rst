@@ -2107,9 +2107,10 @@ You can also rename fields by double-clicking its name. This is only supported
 for data providers like PostgreSQL, Oracle, Memory layer and some OGR layer
 depending on the OGR data format and version.
 
-You can define some alias to display human readable fields in the feature form
-or the attribute table. In this case, you don't need to switch to editing mode.
-Alias are saved in project file.
+If set in the underlying data source or in the :ref:`forms properties
+<configure_field>`, the field's alias is also displayed. An alias is a human
+readable field name you can use in the feature form or the attribute table.
+Alias are saved in the project file.
 
 Depending on the data provider, you can associate a comment with a field, for
 example at its creation. This information is retrieved and shown in the
