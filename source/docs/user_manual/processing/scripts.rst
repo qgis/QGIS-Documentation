@@ -238,7 +238,7 @@ Processing algorithm standard functions:
 
 * name (mandatory)
     Returns the unique algorithm name, used for identifying the algorithm.
-    
+
 * displayName (mandatory)
     Returns the translated algorithm name.
 
@@ -272,7 +272,7 @@ Processing algorithm standard functions:
     algorithm, the second is a dictionary of the parameters to the algorithm.
     ``is_child_algorithm`` is normally set to ``True`` when running an
     algorithm from within another algorithm.
-    ``context`` and ``feedback`` informs the algorithm about the
+    ``context`` and ``feedback`` inform the algorithm about the
     environment to run in and the channel for communicating with the user
     (catching cancel request, reporting progress, providing textual feedback).
     When using the (parent) algorithm's parameters as parameters to "child"
