@@ -86,7 +86,7 @@
 
   *Intersect*
     Tests whether a geometry intersects another. Returns 1 (true) if the
-    geometries spatially intersect (share any portion of space) and 0 if they
+    geometries spatially intersect (share any portion of space - overlap or touch) and 0 if they
     don’t. In the picture above, this will select circles 1, 2 and 3.
 
   *Contain*
@@ -97,7 +97,7 @@
     This is the opposite of *are within*.
     
   *Disjoint*
-    Returns 1 (true) if the geometries do not share any space together.
+    Returns 1 (true) if the geometries do not share any portion of space (no overlap, not touching).
     Only circle 4 is selected.
     
   *Equal*
