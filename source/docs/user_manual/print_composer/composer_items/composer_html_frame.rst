@@ -53,7 +53,6 @@ panel provides the following functionalities (see figure_layout_html_ppt_):
 * In :guilabel:`Source` you can enter text in the textbox with some HTML tags or
   provide a full HTML page. Provided that you created a :ref:`relation between
   layers <vector_relations>` a simple code including
-  in :ref:`Creating one or many to many relations<_vector_relations>` a simple code including
   HTML, JavaScript and GeoJSON gives you full access to the parent and child features. 
   This way, the atlas feature browses through the parent layers and and creates a page
   for every existing relation, depicting a parent feature and the relating child features
