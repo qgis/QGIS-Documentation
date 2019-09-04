@@ -53,48 +53,48 @@ The following code
         This is an example algorithm that takes a vector layer,
         creates some new layers and returns some results.
         """
-    
+
         def tr(self, string):
             """
             Returns a translatable string with the self.tr() function.
             """
             return QCoreApplication.translate('Processing', string)
-    
+
         def createInstance(self):
             # Must return a new copy of your algorithm.
             return ExampleProcessingAlgorithm()
-    
+
         def name(self):
             """
             Returns the unique algorithm name.
             """
             return 'bufferrasterextend'
-    
+
         def displayName(self):
             """
             Returns the translated algorithm name.
             """
             return self.tr('Buffer and export to raster (extend)')
-    
+
         def group(self):
             """
             Returns the name of the group this algorithm belongs to.
             """
             return self.tr('Example scripts')
-    
+
         def groupId(self):
             """
             Returns the unique ID of the group this algorithm belongs
             to.
             """
             return 'examplescripts'
-    
+
         def shortHelpString(self):
             """
             Returns a localised short help string for the algorithm.
             """
             return self.tr('Example algorithm short description')
-    
+
         def initAlgorithm(self, config=None):
             """
             Here we define the inputs and outputs of the algorithm.
@@ -145,7 +145,7 @@ The following code
                     self.tr('Number of features processed')
                 )
             )
-    
+
         def processAlgorithm(self, parameters, context, feedback):
             """
             Here is where the processing itself takes place.
@@ -192,11 +192,11 @@ The following code
                 # users and handle cancelation requests.
                 context=context,
                 feedback=feedback)
-                
+
             # Check for cancelation
             if feedback.isCanceled():
                 return {}
-                
+
             # Run the separate rasterization algorithm using the buffer result 
             # as an input.
             rasterized_result = processing.run(
@@ -213,10 +213,10 @@ The following code
                 is_child_algorithm=True,
                 context=context,
                 feedback=feedback)
-                
+
             if feedback.isCanceled():
                 return {}
-                
+
             # Return the results
             return {'OUTPUT': rasterized_result['OUTPUT'],
                     'BUFFER_OUTPUT': buffer_result['OUTPUT'],
@@ -228,57 +228,55 @@ Processing algorithm standard functions:
     Must return a new copy of your algorithm.
     If you change the name of the class, make sure you also update the value
     returned here to match!
-    
+
 * name (mandatory)
     Returns the unique algorithm name, used for identifying the algorithm.
-    
+
 * displayName (mandatory)
     Returns the translated algorithm name.
-    
+
 * group
     Returns the name of the group this algorithm belongs to.
-    
+
 * groupId
     Returns the unique ID of the group this algorithm belongs to.
-    
+
 * shortHelpString
     Returns a localised short help string for the algorithm.
-    
+
 * initAlgorithm (mandatory)
     Here we define the inputs and outputs of the algorithm.
-    
+
     ``INPUT`` and ``OUTPUT`` are recommended names for the main input and
     main output parameters, respectively.
-    
+
     If a parameter depends on another parameter, ``parentParameterName``
     is used to specify this relationship (could be the field / band of a
     layer or the distance units of a layer).
 
 * processAlgorithm (mandatory)
     This is where the processing takes place.
-    
+
     Parameters are retrieved using special purpose functions, for
     instance ``parameterAsSource`` and ``parameterAsDouble``.
-    
-    ``processing.run`` can be used to run other processing algoritms from
+
+    ``processing.run`` can be used to run other processing algorithms from
     a processing algorithm. The first parameter is the name of the
-    algorithm, the second is a dictionary of the parameters to the
-    algorithm.
+    algorithm, the second is a dictionary of the parameters to the algorithm.
     ``is_child_algorithm`` is normally set to ``True`` when running an
     algorithm from within another algorithm.
-    ``context`` and ``feedback`` informs the algorithm about the
+    ``context`` and ``feedback`` inform the algorithm about the
     environment to run in and the channel for communicating with the user
-    (catching cancel request, reporting progress, providing textual
-    feedback).
-    When using the (parent) algoritm's parameters as parameters to "child"
+    (catching cancel request, reporting progress, providing textual feedback).
+    When using the (parent) algorithm's parameters as parameters to "child"
     algorithms, the original parameter values should be used (e.g.
     ``parameters['OUTPUT']``).
-    
+
     It is good practice to check the feedback object for cancelation
     as much as is sensibly possible! Doing so allows for responsive
     cancelation, instead of forcing users to wait for unwanted processing
     to occur.
-    
+
     The algorithm should return values for all the output
     parameters it has defined as a dictionary.
     In this case, that's the buffer and rasterized output layers, and the
