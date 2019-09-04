@@ -51,7 +51,8 @@ panel provides the following functionalities (see figure_layout_html_ppt_):
   override` button, to provide a URL from the contents of an attribute field of
   a table or using a regular expression.
 * In :guilabel:`Source` you can enter text in the textbox with some HTML tags or
-  provide a full HTML page. Provided that you created a relation described in
+  provide a full HTML page. Provided that you created a :ref:`relation between
+  layers <vector_relations>` a simple code including
   in :ref:`Creating one or many to many relations<_vector_relations>` a simple code including
   HTML, JavaScript and GeoJSON gives you full access to the parent and child features. 
   This way, the atlas feature browses through the parent layers and and creates a page
