@@ -54,20 +54,26 @@ panel provides the following functionalities (see figure_layout_html_ppt_):
   provide a full HTML page. Provided that you created a :ref:`relation between
   layers <vector_relations>` a simple code including
   HTML, JavaScript and GeoJSON gives you full access to the parent and child features. 
-  This way, the atlas feature browses through the parent layers and creates a page
-  for every existing relation, depicting a parent feature and the relating child features
-  on one page each.
+  The following code requires an existing relation ``my_relation`` and creates a dynamic bullet
+  list of related child features.
   
   .. code-block:: HTML 
   
      <script>
      <div id="name"></div>
-     <div id="type"></div>
+     <div id="my_children"></div>
+     
      <script type="text/javascript">
       function setFeature(feature)
                {
                 document.getElementById('name').innerHTML = feature.properties.NAME;
-                document.getElementById('type').innerHTML = feature.properties.TYPE;
+                document.getElementById('my_children').innerHTML = '';
+                feature.properties.my_relation.forEach(function(child_feature)
+                                       {
+                                       var node = document.createElement("li"):
+                                       node.appendChild(document.createTextNode(child_feature.NAME));
+                                       document.getElementById('my_children').appendChild(node);
+                                       }
                }
       </script>
 
