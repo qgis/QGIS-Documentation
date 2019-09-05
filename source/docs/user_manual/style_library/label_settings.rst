@@ -71,17 +71,22 @@ In the |text| :guilabel:`Text` tab, you can set for each label:
 * the :guilabel:`Font`, from the ones available on your machine
 * the :guilabel:`Style`: along the common styles of the font, you can set
   whether the text should be underlined or strikeout
-
 * the :guilabel:`Size` that can be in :guilabel:`Points`, :guilabel:`Pixels`,
   :guilabel:`Millimeter`, :guilabel:`Map units`, :guilabel:`Meters at scale`,
   or :guilabel:`Inches`
 * the :guilabel:`Color`
 * and the :guilabel:`Opacity`.
 
-It's also the place to select from existing text formats samples or create new
-ones thanks to the |styleManager| :sup:`Style Manager` widget. Press the
-:guilabel:`Save format...` button to store the current text format in the
-:guilabel:`Style Manager`, with name and tag(s).
+At the bottom, a text formats list widget shows a filterable list of text
+formats stored within your :ref:`style manager database <vector_style_manager>`.
+This allows you to easily set text formats to match styles saved in the local
+style database, and also to add a new text format to the style database based on
+the current settings. Press the :guilabel:`Save format...` button to store the
+current text format in the :guilabel:`Style Manager`, providing a name and tag(s).
+
+Likewise, a label settings list widget is shown when configuring labels, allowing
+you to pick from the |styleManager| :sup:`Style Manager` widget or to add new
+styles to it.
 
 
 .. _labels_formatting:
@@ -106,7 +111,7 @@ In the |labelformatting| :guilabel:`Formatting` tab, you can:
 * Under :guilabel:`Spacing`, change the space between words and between
   individual letters.
 * |checkbox| :guilabel:`Enable kerning` of the text font
-* set the :guilabel:`Text orientation` which can be :guilabel:`Horizontal`
+* Set the :guilabel:`Text orientation` which can be :guilabel:`Horizontal`
   or :guilabel:`Vertical`. It can also be :guilabel:`Rotation-based` when
   setting a label.
 * Use the :guilabel:`Blend mode` option to determine how your labels will mix
@@ -120,12 +125,12 @@ In the |labelformatting| :guilabel:`Formatting` tab, you can:
 
   * Set a character for a line break in the text with the :guilabel:`Wrap on
     character` option
-  * Choose the number of characters to :guilabel:`Wrap  lines to`. This value
-    can represent either the :guilabel:`Maximum line length` or the
-    :guilabel:`Minimal line length`.
+  * Set an auto-wrapping ideal line size using the :guilabel:`Wrap lines to`
+    option. The size can represent either the :guilabel:`Maximum line length`
+    or the :guilabel:`Minimum line length`.
   * Decide of the :guilabel:`Line Height`
   * Format the :guilabel:`Alignment`: typical values available are
-    :guilabel:`Left`, :guilabel:`Right`, and :guilabel:`Center`.
+    :guilabel:`Left`, :guilabel:`Right` and :guilabel:`Center`.
 
     When setting point labels properties, the text alignment can also be
     :guilabel:`Follow label placement`. In that case, the alignment will depend
@@ -135,7 +140,7 @@ In the |labelformatting| :guilabel:`Formatting` tab, you can:
 
 * For line labels you can include :guilabel:`Line direction symbol`
   to help determine the lines directions, with symbols to use to indicate the
-  :guilabel:`Left` or :guilabel:`Right. They work particularly well when
+  :guilabel:`Left` or :guilabel:`Right`. They work particularly well when
   used with the *curved* or *Parallel* placement options from the
   :guilabel:`Placement` tab. There are options to set the symbols position, and
   to |unchecked| :guilabel:`Reverse direction`.
@@ -164,7 +169,7 @@ text buffer` checkbox in the |labelbuffer| :guilabel:`Buffer` tab. Then you can:
   :guilabel:`Pixels`, :guilabel:`Millimeter`, :guilabel:`Map units`,
   :guilabel:`Meters at scale` or :guilabel:`Inches`
 * Select the buffer's :guilabel:`Color`
-* |checkbox| :guilabel:`Color buffer's fill`:  The buffer expands from the
+* |checkbox| :guilabel:`Color buffer's fill`: The buffer expands from the
   label's outline, so, if the option is activated, the label's interior is
   filled. This may be relevant when using partially transparent labels or with
   non-normal blending modes, which will allow seeing behind the label's text.
@@ -177,7 +182,7 @@ text buffer` checkbox in the |labelbuffer| :guilabel:`Buffer` tab. Then you can:
   will mix with the map components below them (more details at
   :ref:`blend-modes`).
 * Check |unchecked| :guilabel:`Draw effects` to add advanced :ref:`paint effects
-  <draw_effects> for customizing the visualization of the labels.
+  <draw_effects>` for customizing the visualization of the labels.
 
 
 .. _labels_background:
