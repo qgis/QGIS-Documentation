@@ -66,65 +66,119 @@ Text tab
 
    Text settings - Text tab
 
-In the |text| :guilabel:`Text` tab, you can define the :guilabel:`Font`,
-:guilabel:`Style`, and :guilabel:`Size` of your labels' text (see
-figure_textsettings_text_). There are options available to set the labels'
-:guilabel:`Color` and :guilabel:`Transparency`. Use the :guilabel:`Type
-case` option to change the capitalization style of the text. You have
-the possibility to render the text as 'All uppercase', 'All lowercase'
-or 'Capitalize first letter'. In :guilabel:`Spacing`, you can change the space
-between words and between individual letters. Finally, use the
-:guilabel:`Blend mode` option to determine how your labels will mix with the
-map features below them (see more about it in :ref:`blend-modes`).
+In the |text| :guilabel:`Text` tab, you can set for each label:
 
-The :guilabel:`Apply label text substitutes` option gives you ability to specify
-a list of texts to substitute to texts in feature labels (e.g., abbreviating street
-types). Replacement texts are thus used to display labels in the map canvas.
-Users can also export and import lists of substitutes to make reuse and
-sharing easier.
+* the :guilabel:`Font`, from the ones available on your machine
+* the :guilabel:`Style`: along the common styles of the font, you can set
+  whether the text should be underlined or strikeout
+
+* the :guilabel:`Size` that can be in :guilabel:`Points`, :guilabel:`Pixels`,
+  :guilabel:`Millimeter`, :guilabel:`Map units`, :guilabel:`Meters at scale`,
+  or :guilabel:`Inches`
+* the :guilabel:`Color`
+* and the :guilabel:`Opacity`.
+
+It's also the place to select from existing text formats samples or create new
+ones thanks to the |styleManager| :sup:`Style Manager` widget. Press the
+:guilabel:`Save format...` button to store the current text format in the
+:guilabel:`Style Manager`, with name and tag(s).
+
 
 .. _labels_formatting:
 
 Formatting tab
 --------------
 
-In the |labelformatting| :guilabel:`Formatting` tab, you can define a character
-for a line break
-in the labels with the :guilabel:`Wrap on character` option. You can also
-format the :guilabel:`Line Height` and the :guilabel:`alignment`. For the
-latter, typical values are available (left, right, and center), plus
-*Follow label placement* for point layers. When set to this mode, text
-alignment for labels will be dependent on the final placement of the label
-relative to the point. E.g., if the label is placed to the left of the point,
-then the label will be right aligned, while if it is placed to the right, it
-will be left aligned.
+.. _figure_textsettings_formatting:
 
-For line vector layers you can include :guilabel:`Line directions symbols`
-to help determine the lines directions. They work particularly well when
-used with the *curved* or *Parallel* placement options from the
-:guilabel:`Placement` tab. There are options to set the symbols position, and
-to :guilabel:`reverse direction`.
+.. figure:: img/textsettings_formatting.png
+   :align: center
 
-Use the |checkbox| :guilabel:`Formatted numbers` option to format numeric
-labels. You can set the number of :guilabel:`Decimal places`. By default, 3
-decimal places will be used. Use the |checkbox| :guilabel:`Show plus sign` if
-you want to show the plus sign in positive numbers.
+   Text settings - Formatting tab
+
+In the |labelformatting| :guilabel:`Formatting` tab, you can:
+
+* Use the :guilabel:`Type case` option to change the capitalization style of
+  the text. You have the possibility to render the text as :guilabel:`All
+  uppercase`, :guilabel:`All lowercase` or :guilabel:`Capitalize first letter`.
+  Note that the last option modifies only the first letter of each word and
+  leaves untouched the other letters in the text.
+* Under :guilabel:`Spacing`, change the space between words and between
+  individual letters.
+* |checkbox| :guilabel:`Enable kerning` of the text font
+* set the :guilabel:`Text orientation` which can be :guilabel:`Horizontal`
+  or :guilabel:`Vertical`. It can also be :guilabel:`Rotation-based` when
+  setting a label.
+* Use the :guilabel:`Blend mode` option to determine how your labels will mix
+  with the map features below them (more details at :ref:`blend-modes`).
+* The |unchecked| :guilabel:`Apply label text substitutes` option gives you
+  ability to specify a list of texts to substitute to texts in feature labels
+  (e.g., abbreviating street types). Replacement texts are thus used to display
+  labels in the map canvas. Users can also export and import lists of
+  substitutes to make reuse and sharing easier.
+* Configure :guilabel:`Multiple lines` behavior:
+
+  * Set a character for a line break in the text with the :guilabel:`Wrap on
+    character` option
+  * Choose the number of characters to :guilabel:`Wrap  lines to`. This value
+    can represent either the :guilabel:`Maximum line length` or the
+    :guilabel:`Minimal line length`.
+  * Decide of the :guilabel:`Line Height`
+  * Format the :guilabel:`Alignment`: typical values available are
+    :guilabel:`Left`, :guilabel:`Right`, and :guilabel:`Center`.
+
+    When setting point labels properties, the text alignment can also be
+    :guilabel:`Follow label placement`. In that case, the alignment will depend
+    on the final placement of the label relative to the point. E.g., if the
+    label is placed to the left of the point, then the label will be right
+    aligned, while if it is placed to the right, it will be left aligned.
+
+* For line labels you can include :guilabel:`Line direction symbol`
+  to help determine the lines directions, with symbols to use to indicate the
+  :guilabel:`Left` or :guilabel:`Right. They work particularly well when
+  used with the *curved* or *Parallel* placement options from the
+  :guilabel:`Placement` tab. There are options to set the symbols position, and
+  to |unchecked| :guilabel:`Reverse direction`.
+* Use the |unchecked| :guilabel:`Formatted numbers` option to format numeric
+  texts. You can set the number of :guilabel:`Decimal places`. By default, ``3``
+  decimal places will be used. Use the |checkbox| :guilabel:`Show plus sign` if
+  you want to show the plus sign in positive numbers.
+
 
 .. _labels_buffer:
 
 Buffer tab
 ----------
 
+.. _figure_textsettings_buffer:
+
+.. figure:: img/textsettings_buffer.png
+   :align: center
+
+   Text settings - Buffer tab
+
 To create a buffer around the labels, activate the |checkbox| :guilabel:`Draw
-text buffer` checkbox in the |labelbuffer| :guilabel:`Buffer` tab. You can
-set the buffer's :guilabel:`Size`, :guilabel:`color`, and
-:guilabel:`Transparency`. The buffer expands from the label's outline
-, so, if the |checkbox| :guilabel:`color buffer's fill` checkbox is
-activated, the buffer interior is filled. This may be relevant when
-using partially transparent labels or with non-normal blending
-modes, which will allow seeing behind the label's text. Deactivating
-|checkbox| :guilabel:`color buffer's fill` checkbox (while using totally
-transparent labels) will allow you to create outlined text labels.
+text buffer` checkbox in the |labelbuffer| :guilabel:`Buffer` tab. Then you can:
+
+* Set the buffer's :guilabel:`Size` that can be in :guilabel:`Points`,
+  :guilabel:`Pixels`, :guilabel:`Millimeter`, :guilabel:`Map units`,
+  :guilabel:`Meters at scale` or :guilabel:`Inches`
+* Select the buffer's :guilabel:`Color`
+* |checkbox| :guilabel:`Color buffer's fill`:  The buffer expands from the
+  label's outline, so, if the option is activated, the label's interior is
+  filled. This may be relevant when using partially transparent labels or with
+  non-normal blending modes, which will allow seeing behind the label's text.
+  Unchecking the option (while using totally transparent labels) will allow you
+  to create outlined text labels.
+* Define the buffer's :guilabel:`Opacity`
+* Apply a :guilabel:`Pen join style`: it can be :guilabel:`Round`,
+  :guilabel:`Miter` or :guilabel:`Bevel`
+* Use the :guilabel:`Blend mode` option to determine how your label's buffer
+  will mix with the map components below them (more details at
+  :ref:`blend-modes`).
+* Check |unchecked| :guilabel:`Draw effects` to add advanced :ref:`paint effects
+  <draw_effects> for customizing the visualization of the labels.
+
 
 .. _labels_background:
 
