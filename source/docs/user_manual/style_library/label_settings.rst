@@ -107,7 +107,7 @@ In the |labelformatting| :guilabel:`Formatting` tab, you can:
   the text. You have the possibility to render the text as :guilabel:`All
   uppercase`, :guilabel:`All lowercase` or :guilabel:`Capitalize first letter`.
   Note that the last option modifies only the first letter of each word and
-  leaves untouched the other letters in the text.
+  leaves the other letters in the text untouched.
 * Under :guilabel:`Spacing`, change the space between words and between
   individual letters.
 * |checkbox| :guilabel:`Enable kerning` of the text font
