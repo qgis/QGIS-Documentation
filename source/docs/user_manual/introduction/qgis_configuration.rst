@@ -795,7 +795,8 @@ cache on SSL errors (recommanded)`.
 Credentials of proxy are set using the :ref:`authentication widget <authentication>`.
 
 Excluding some URLs can be added to the text box below the proxy settings (see
-Figure_Network_Tab_).
+Figure_Network_Tab_). No proxy will be used if the target url starts with one of the string
+listed in this text box.
 
 If you need more detailed information about the different proxy settings,
 please refer to the manual of the underlying QT library documentation at
