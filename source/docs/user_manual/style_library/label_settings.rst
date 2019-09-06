@@ -66,13 +66,13 @@ Text tab
 
    Text settings - Text tab
 
-In the |text| :guilabel:`Text` tab, you can set for each label:
+In the |text| :guilabel:`Text` tab, you can set:
 
 * the :guilabel:`Font`, from the ones available on your machine
-* the :guilabel:`Style`: along the common styles of the font, you can set
-  whether the text should be underlined or strikeout
+* the :guilabel:`Style`: along with the common styles of the font, you can set
+  whether the text should be underlined or striked through
 * the :guilabel:`Size` that can be in :guilabel:`Points`, :guilabel:`Pixels`,
-  :guilabel:`Millimeter`, :guilabel:`Map units`, :guilabel:`Meters at scale`,
+  :guilabel:`Millimeters`, :guilabel:`Map units`, :guilabel:`Meters at scale`,
   or :guilabel:`Inches`
 * the :guilabel:`Color`
 * and the :guilabel:`Opacity`.
@@ -116,19 +116,19 @@ In the |labelformatting| :guilabel:`Formatting` tab, you can:
   setting a label.
 * Use the :guilabel:`Blend mode` option to determine how your labels will mix
   with the map features below them (more details at :ref:`blend-modes`).
-* The |unchecked| :guilabel:`Apply label text substitutes` option gives you
-  ability to specify a list of texts to substitute to texts in feature labels
-  (e.g., abbreviating street types). Replacement texts are thus used to display
-  labels in the map canvas. Users can also export and import lists of
+* The |unchecked| :guilabel:`Apply label text substitutes` option allows you
+  to specify a list of texts to substitute to texts in feature labels (e.g.,
+  abbreviating street types). Replacement texts are used when displaying
+  labels on the map. Users can also export and import lists of
   substitutes to make reuse and sharing easier.
-* Configure :guilabel:`Multiple lines` behavior:
+* Configure :guilabel:`Multiple lines`:
 
-  * Set a character for a line break in the text with the :guilabel:`Wrap on
-    character` option
-  * Set an auto-wrapping ideal line size using the :guilabel:`Wrap lines to`
+  * Set a character that will force a line break in the text with the
+    :guilabel:`Wrap on character` option
+  * Set an ideal line size for auto-wrapping using the :guilabel:`Wrap lines to`
     option. The size can represent either the :guilabel:`Maximum line length`
     or the :guilabel:`Minimum line length`.
-  * Decide of the :guilabel:`Line Height`
+  * Decide the :guilabel:`Line Height`
   * Format the :guilabel:`Alignment`: typical values available are
     :guilabel:`Left`, :guilabel:`Right` and :guilabel:`Center`.
 
@@ -139,7 +139,7 @@ In the |labelformatting| :guilabel:`Formatting` tab, you can:
     aligned, while if it is placed to the right, it will be left aligned.
 
 * For line labels you can include :guilabel:`Line direction symbol`
-  to help determine the lines directions, with symbols to use to indicate the
+  to help determine the line directions, with symbols to use to indicate the
   :guilabel:`Left` or :guilabel:`Right`. They work particularly well when
   used with the *curved* or *Parallel* placement options from the
   :guilabel:`Placement` tab. There are options to set the symbols position, and
@@ -147,7 +147,7 @@ In the |labelformatting| :guilabel:`Formatting` tab, you can:
 * Use the |unchecked| :guilabel:`Formatted numbers` option to format numeric
   texts. You can set the number of :guilabel:`Decimal places`. By default, ``3``
   decimal places will be used. Use the |checkbox| :guilabel:`Show plus sign` if
-  you want to show the plus sign in positive numbers.
+  you want to show the plus sign for positive numbers.
 
 
 .. _labels_buffer:
@@ -162,11 +162,11 @@ Buffer tab
 
    Text settings - Buffer tab
 
-To create a buffer around the labels, activate the |checkbox| :guilabel:`Draw
+To create a buffer around the label, activate the |checkbox| :guilabel:`Draw
 text buffer` checkbox in the |labelbuffer| :guilabel:`Buffer` tab. Then you can:
 
 * Set the buffer's :guilabel:`Size` that can be in :guilabel:`Points`,
-  :guilabel:`Pixels`, :guilabel:`Millimeter`, :guilabel:`Map units`,
+  :guilabel:`Pixels`, :guilabel:`Millimeters`, :guilabel:`Map units`,
   :guilabel:`Meters at scale` or :guilabel:`Inches`
 * Select the buffer's :guilabel:`Color`
 * |checkbox| :guilabel:`Color buffer's fill`: The buffer expands from the
