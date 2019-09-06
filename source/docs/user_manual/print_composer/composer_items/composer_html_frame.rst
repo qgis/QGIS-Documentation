@@ -51,32 +51,7 @@ panel provides the following functionalities (see figure_layout_html_ppt_):
   override` button, to provide a URL from the contents of an attribute field of
   a table or using a regular expression.
 * In :guilabel:`Source` you can enter text in the textbox with some HTML tags or
-  provide a full HTML page. Provided that you created a :ref:`relation between
-  layers <vector_relations>` a simple code including
-  HTML, JavaScript and GeoJSON gives you full access to the parent and child features. 
-  The following code requires an existing relation ``my_relation`` and creates a dynamic bullet
-  list of related child features.
-  
-  .. code-block:: HTML 
-  
-     <script>
-     <div id="name"></div>
-     <div id="my_children"></div>
-     
-     <script type="text/javascript">
-      function setFeature(feature)
-               {
-                document.getElementById('name').innerHTML = feature.properties.NAME;
-                document.getElementById('my_children').innerHTML = '';
-                feature.properties.my_relation.forEach(function(child_feature)
-                                       {
-                                       var node = document.createElement("li"):
-                                       node.appendChild(document.createTextNode(child_feature.NAME));
-                                       document.getElementById('my_children').appendChild(node);
-                                       }
-               }
-      </script>
-
+  provide a full HTML page.
 * The :guilabel:`Insert an Expression` button can be used to insert an expression like
   ``[%Year($now)%]`` in the Source textbox to display the current year. This
   button is only activated when radiobutton :guilabel:`Source` is selected.
