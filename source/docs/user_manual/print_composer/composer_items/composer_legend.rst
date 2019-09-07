@@ -103,7 +103,7 @@ panel provides the following functionalities (see figure_layout_legend_items_):
     symbology), you can specify a boolean expression to remove from the legend
     tree, styles that have no feature satisfying a condition. Note that the
     features are nevertheless kept and shown in the layout map item.
-  * The |addExpression| :sup:`Add symbol expression` allows you to add expressions
+  * |addExpression| :sup:`Add symbol expression` allows you to add expressions
     to each symbol label of a given layer. The label is represented by 
     the variable "@symbol_label" in the expression. Currently aggregate functions 
     are supported but will use all the features during evaluation.
