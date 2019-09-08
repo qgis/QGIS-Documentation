@@ -105,8 +105,7 @@ panel provides the following functionalities (see figure_layout_legend_items_):
     features are nevertheless kept and shown in the layout map item.
   * |addExpression| :sup:`Add symbol expression` allows you to add expressions
     to each symbol label of a given layer. The label is represented by 
-    the variable "@symbol_label" in the expression. Currently aggregate functions 
-    are supported but will use all the features during evaluation.
+    the variable "@symbol_label" in the expression.
 
   While the default behavior of the legend item is to mimic the
   :guilabel:`Layers panel` tree, displaying the same groups, layers and classes
