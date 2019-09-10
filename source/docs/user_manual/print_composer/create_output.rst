@@ -49,7 +49,7 @@ are:
 
 * the :ref:`Export settings <layout_export_settings>` of the :guilabel:`Layout`
   panel, such as :guilabel:`Export resolution`, :guilabel:`Print as raster`,
-  :guilabel:`Always export as vectors` or :guilabel:`Save world file`;
+  :guilabel:`Always export as vectors` or :guilabel:`Save world file`;
 * the :guilabel:`Exclude page from exports` in the :ref:`page item properties
   <page_properties>` panel;
 * the :guilabel:`Exclude item from exports` in the :ref:`item properties
@@ -61,32 +61,44 @@ are:
 Export as Image
 ===============
 
-Clicking the |saveMapAsImage| :sup:`Export as image` icon will ask you to
-select the image format and enter the filename to use to export the print layout:
-in the case of multi-page composition, each page will be exported to a file with
-the given name appended with the page number.
+To export a layout to image:
 
-In the next :guilabel:`Image Export Options` dialog, you can optionally
-override the print layout resolution and the exported page dimensions
-(set in :guilabel:`Layout` panel).
+#. Click the |saveMapAsImage| :sup:`Export as image` icon
+#. Select the image format, the folder and filename to use; if the layout
+   contains more than one page, each page will be exported to a file with the
+   given filename appended with the page number.
+#. In the next :guilabel:`Image Export Options` dialog:
 
-.. index:: Crop layout to content
-.. _crop_to_content:
+   * You can override the print layout :guilabel:`Export resolution` and the
+     exported page dimensions (as set in :guilabel:`Layout` panel).
+   * When needed, images rendering can also be improved with the :guilabel:`Enable
+     antialiasing` option.
+   * If you need to export your layout as a **georeferenced image** (e.g., to
+     share with other projects), check the |unchecked| :guilabel:`Generate
+     world file` option and a world file named like the page on which the
+     :ref:`reference map <reference_map>` set in :guilabel:`Layout` panel is
+     placed will be created along with the export(s).
+     This option can also be checked by default in the :ref:`layout panel
+     <layout_panel>`.
 
-By checking |checkbox| :guilabel:`Crop to content` option, the image output
-by the layout will include the minimal area enclosing all the items (map,
-legend, scale bar, shapes, label, image...) of each page of the composition:
 
-* If the composition includes a single page, then the output is resized to
-  include EVERYTHING on the composition. The page can then be reduced or
-  extended to all items depending on their position (on, above, below, left or
-  right of the page).
-* In case of a multi-page layout, each page will be resized to include items in
-  its area (left and right sides for all pages, plus top for the first page and
-  bottom for the last page). Each resized page is exported to a separate file.
+   .. index:: Crop layout to content
+   .. _crop_to_content:
 
-The :guilabel:`Crop to content` dialog also allows to add some margins around
-the cropped bounds.
+   * By checking |checkbox| :guilabel:`Crop to content` option, the image output
+     by the layout will include the minimal area enclosing all the items (map,
+     legend, scale bar, shapes, label, image...) of each page of the composition:
+
+     * If the composition includes a single page, then the output is resized to
+       include EVERYTHING on the composition. The page can then be reduced or
+       extended to all items depending on their position (on, above, below, left or
+       right of the page).
+     * In case of a multi-page layout, each page will be resized to include items in
+       its area (left and right sides for all pages, plus top for the first page and
+       bottom for the last page). Each resized page is exported to a separate file.
+
+     The :guilabel:`Crop to content` dialog also allows to add some margins around
+     the cropped bounds.
 
 .. _figure_layout_output_image:
 
@@ -107,15 +119,9 @@ the cropped bounds.
  Use transparency-compatible formats like :file:`.TIFF` or :file:`.PNG` in such
  a case.
 
-If you need to export your layout as a **georeferenced image** (e.g., to share
-with other projects), check the |unchecked| :guilabel:`Generate world file`
-option and a world file named like the page on which the map reference set in
-:guilabel:`Layout` panel is placed will be created along the export(s).
-This option can also be checked by default in the :ref:`layout panel
-<layout_panel>`.
-
-When needed, images rendering can also be improved with the :guilabel:`Enable
-antialiasing` option.
+.. note:: When supported by the format (eg, :file:`PNG` does) and the
+ underlying Qt library, the exported image may include :ref:`project metadata
+ <project_metadata>` (author, title, date, description...)
 
 
 .. _export_layout_svg:
@@ -123,23 +129,48 @@ antialiasing` option.
 Export as SVG
 =============
 
-With |saveAsSVG| :sup:`Export as SVG`, you also need to fill the filename (used
-as a basename for all files in case of multi-page composition) and then can
-apply |checkbox| :guilabel:`Crop to content` :ref:`option <crop_to_content>`.
+To export a layout as SVG:
 
-The SVG export options dialog also allows to override the layout default export
-and offers other settings:
+#. Click the |saveAsSVG| :sup:`Export as SVG` icon
+#. You also need to fill the path and filename (used as a basename for all the
+   files in case of multi-page composition)
+#. In the next :guilabel:`SVG Export Options` dialog, you can override the
+   layout default :ref:`export settings <layout_export_settings>` or configure
+   new ones:
 
-* |unchecked|:guilabel:`Export map layers as SVG groups`: may affect label
-  placement.
-* |checkbox|:guilabel:`Render map labels as outlines`: unchecking this will
-  allow you to edit labels as texts in vector illustration software.
-* |unchecked|:guilabel:`Always export as vectors`: some rendering options
-  require items to be rasterized for a better rendering. Check this option to
-  keep the objects as vectors with the risk that the appearance of the output
-  file may not match the print layout preview (for more details, see
-  :ref:`layout_export_settings`).
-* |checkbox|:guilabel:`Export RDF metadata`.
+   * |unchecked| :guilabel:`Export map layers as SVG groups`: exported items are
+     grouped within layers whose name matches the layer names from QGIS, making
+     it much easier to understand the contents of the document.
+   * |unchecked| :guilabel:`Always export as vectors`: some rendering options
+     require items to be rasterized for a better rendering. Check this option to
+     keep the objects as vectors with the risk that the appearance of the output
+     file may not match the print layout preview (for more details, see
+     :ref:`layout_export_settings`).
+   * |checkbox| :guilabel:`Export RDF metadata` of the document such as the
+     title, author, date, description...
+   * |checkbox| :guilabel:`Simplify geometries to reduce output file size`
+     This avoids exporting ALL geometry vertices, which can result in a ridiculously
+     complex and large export file size or fail to load in other applications.
+     Geometries will be simplified while exporting the layout in order to remove
+     any redundant vertices which are not discernably different at the export DPI
+     (e.g. if export DPI is 300 dpi, vertices less than 1/600 inch different
+     from each other will be removed).
+   * Set the :guilabel:`Text export`: controls whether text labels are exported
+     as either proper text objects (:guilabel:`Always export texts as text
+     objects`) or as paths only (:guilabel:`Always export texts as paths`).
+     If they are exported as text objects then they can be edited in external
+     applications (e.g. Inkscape) as normal text. BUT the side effect is that
+     the rendering quality is decreased, AND there’s issues with rendering when
+     certain text settings like buffers are in place. That’s why exporting as
+     paths is recommended.
+   * |checkbox|:guilabel:`Render map labels as outlines`: unchecking this will
+     allow you to edit labels as texts in vector illustration software.
+   * Apply |checkbox| :guilabel:`Crop to content` :ref:`option <crop_to_content>`
+   * |unchecked| :guilabel:`Disable tiled raster layer exports`: When exporting
+     files, QGIS uses a built-in raster layer tiled rendering that saves memory
+     usage. Sometimes, this can however cause visible "seams" in the rasters
+     for generated files. Checking this option would fix that, at the cost of a
+     high memory usage during exports.
 
 .. _figure_layout_output_svg:
 
@@ -160,10 +191,45 @@ and offers other settings:
 Export as PDF
 =============
 
-The |saveAsPDF| :sup:`Export as PDF` tool exports all the composition pages
-into a single PDF file. Like the other formats, exporting to :file:`.PDF`
-provides means to override some of the layout :ref:`export settings
-<layout_export_settings>`.
+To export a layout as PDF:
+
+#. Click the |saveAsPDF| :sup:`Export as PDF` icon
+#. You also need to fill the path and filename: unlike the other tools, all the
+   pages in the layout are exported to a single PDF file.
+#. In the next :guilabel:`PDF Export Options` dialog, you can override the
+   layout default :ref:`export settings <layout_export_settings>` or configure
+   new ones:
+
+   * |unchecked| :guilabel:`Always export as vectors`: some rendering options
+     require items to be rasterized for a better rendering. Check this option to
+     keep the objects as vectors with the risk that the appearance of the output
+     file may not match the print layout preview (for more details, see
+     :ref:`layout_export_settings`).
+   * |checkbox| :guilabel:`Append georeference information`
+   * |checkbox| :guilabel:`Export RDF metadata` of the document such as the
+     title, author, date, description...
+   * Set the :guilabel:`Text export`: controls whether text labels are exported
+     as either proper text objects (:guilabel:`Always export texts as text
+     objects`) or as paths only (:guilabel:`Always export texts as paths`).
+     If they are exported as text objects then they can be edited in external
+     applications (e.g. Inkscape) as normal text. BUT the side effect is that
+     the rendering quality is decreased, AND there’s issues with rendering when
+     certain text settings like buffers are in place. That’s why exporting as
+     paths is recommended.
+   * |unchecked| :guilabel:`Create Geospatial PDF (GeoPDF)`
+   * |unchecked| :guilabel:`Disable tiled raster layer exports`: When exporting
+     files, QGIS uses a built-in raster layer tiled rendering that saves memory
+     usage. Sometimes, this can however cause visible "seams" in the rasters
+     for generated files. Checking this option would fix that, at the cost of a
+     high memory usage during exports.
+   * |checkbox| :guilabel:`Simplify geometries to reduce output file size`
+     This avoids exporting ALL geometry vertices, which can result in a ridiculously
+     complex and large export file size or fail to load in other applications.
+     Geometries will be simplified while exporting the layout in order to remove
+     any redundant vertices which are not discernably different at the export DPI
+     (e.g. if export DPI is 300 dpi, vertices less than 1/600 inch different
+     from each other will be removed).
+
 
 .. _figure_layout_output_pdf:
 
