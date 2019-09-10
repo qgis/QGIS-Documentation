@@ -142,7 +142,7 @@ Besides layer-based snapping options, you can also define topological
 functionalities in the :guilabel:`Snapping options...` dialog in the
 :menuselection:`Settings` (or :menuselection:`File`) menu. Here, you can
 define |checkbox| :guilabel:`Enable topological editing`, and/or for polygon
-layers, activate the |checkbox| :guilabel:`Avoid Intersections` option.
+layers, activate the |checkbox| :guilabel:`Avoid Overlap` option.
 
 
 .. index:: Shared polygon boundaries
