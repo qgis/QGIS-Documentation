@@ -1027,13 +1027,13 @@ This offers a convenient way to write expressions referring to multiple layers,
 such as when performing :ref:`aggregates <aggregates_function>`, :ref:`attribute
 <record_attributes>` or :ref:`spatial <geometry_functions>` queries.
 
-It also provides some convenient functions to manipulate the layers.
+It also provides some convenient functions to manipulate layers.
 
 ==================  ========================================================
  Function            Description
 ==================  ========================================================
  decode_uri |36|     Takes a layer and decodes the uri of the underliying data
-                     provider. Available information depend on the data provider
+                     provider. Available information depends on the data provider
                      type.
 ==================  ========================================================
 
@@ -1205,7 +1205,7 @@ if one of the inputs is NULL then the result is NULL.
 Processing Functions |36|
 -------------------------
 
-This group contains functions to operate on processing algorithms.
+This group contains functions that operate on processing algorithms.
 
 ==================== =========================================================
  Function             Description
@@ -1452,7 +1452,7 @@ To use these functions in an expression, they should be preceded by @ character
                               an :ref:`aggregate <aggregates_function>` function
  project_abstract             Returns the project abstract, taken from project metadata
  project_area_units           Returns the area unit for the current project, used when
-                              calculating area of geometries
+                              calculating areas of geometries
  project_author               Returns the project author, taken from project metadata
  project_basename             Returns the basename of current project's filename (without
                               path and extension)
@@ -1461,8 +1461,8 @@ To use these functions in an expression, they should be preceded by @ character
  project_crs_definition       Returns the full definition of the Coordinate reference
                               system of the project
  project_distance_units       Returns the distance unit for the current project, used when
-                              calculating areas of geometries
- project_ellipsoid            Returns the name of ellipsoid of the current project, used when
+                              calculating lenghts of geometries and distances
+ project_ellipsoid            Returns the name of the ellipsoid of the current project, used when
                               calculating geodetic areas or lengths of geometries
  project_filename             Returns the filename of the current project
  project_folder               Returns the folder of the current project
