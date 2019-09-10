@@ -306,17 +306,26 @@ This group contains functions for manipulating colors.
    :header: "Function", "Description"
    :widths: 25, 70
 
-   "color_cmyk", "Returns a string representation of a color based on its cyan, magenta, yellow and black components"
-   "color_cmyka", "Returns a string representation of a color based on its cyan, magenta, yellow, black and alpha (transparency) components"
-   "color_grayscale_average", "Applies a grayscale filter and returns a string representation from a provided color"
-   "color_hsl", "Returns a string representation of a color based on its hue, saturation, and lightness attributes"
-   "color_hsla", "Returns a string representation of a color based on its hue, saturation, lightness and alpha (transparency) attributes"
-   "color_hsv", "Returns a string representation of a color based on its hue, saturation, and value attributes"
-   "color_hsva", "Returns a string representation of a color based on its hue, saturation, value and alpha (transparency) attributes"
-   "color_mix_rgb", "Returns a string representing a color mixing the red, green, blue, and alpha values of two provided colors based on a given ratio"
+   "color_cmyk", "Returns a string representation of a color based on its cyan,
+   magenta, yellow and black components"
+   "color_cmyka", "Returns a string representation of a color based on its cyan,
+   magenta, yellow, black and alpha (transparency) components"
+   "color_grayscale_average", "Applies a grayscale filter and returns a string
+   representation from a provided color"
+   "color_hsl", "Returns a string representation of a color based on its hue,
+   saturation, and lightness attributes"
+   "color_hsla", "Returns a string representation of a color based on its hue,
+   saturation, lightness and alpha (transparency) attributes"
+   "color_hsv", "Returns a string representation of a color based on its hue,
+   saturation, and value attributes"
+   "color_hsva", "Returns a string representation of a color based on its hue,
+   saturation, value and alpha (transparency) attributes"
+   "color_mix_rgb", "Returns a string representing a color mixing the red, green,
+   blue, and alpha values of two provided colors based on a given ratio"
    "color_part", "Returns a specific component from a color string, eg the red component or alpha component"
    "color_rgb", "Returns a string representation of a color based on its red, green, and blue components"
-   "color_rgba", "Returns a string representation of a color based on its red, green, blue, and alpha (transparency) components"
+   "color_rgba", "Returns a string representation of a color based on its red,
+   green, blue, and alpha (transparency) components"
    "create_ramp", "Returns a gradient ramp from a map of color strings and steps"
    "darker", "Returns a darker (or lighter) color string"
    "lighter", "Returns a lighter (or darker) color string"
@@ -335,11 +344,14 @@ This group contains functions to handle conditional checks in expressions.
    :widths: auto
 
    "CASE WHEN ... THEN ... END", "Evaluates an expression and returns a result if true. You can test multiple conditions"
-   "CASE WHEN ... THEN ... ELSE ... END", "Evaluates an expression and returns a different result whether it's true or false. You can test multiple conditions"
+   "CASE WHEN ... THEN ... ELSE ... END", "Evaluates an expression and
+   returns a different result whether it's true or false. You can test multiple conditions"
    "coalesce", "Returns the first non-NULL value from the expression list"
    "if", "Tests a condition and returns a different result depending on the conditional check"
-   "nullif(value1, value2) |36|", "Returns a null value if value1 equals value2 otherwise it returns value1. This can be used to conditionally substitute values with NULL."
-   "try |36|", "Tries an expression and returns its value if error-free,an alternative value (if provided) or Null if an error occurs"
+   "nullif(value1, value2) |36|", "Returns a null value if value1 equals value2
+   otherwise it returns value1. This can be used to conditionally substitute values with NULL."
+   "try |36|", "Tries an expression and returns its value if error-free,
+   an alternative value (if provided) or Null if an error occurs"
 
 .. only:: html
 
@@ -369,7 +381,8 @@ This group contains functions to convert one data type to another
    "to_dm", "Converts a coordinate to degree, minute"
    "to_dms", "Converts coordinate to degree, minute, second"
    "to_int", "Converts a string to integer number"
-   "to_interval", "Converts a string to an interval type (can be used to take days, hours, months, etc. of a date)"
+   "to_interval", "Converts a string to an interval type (can be used
+   to take days, hours, months, etc. of a date)"
    "to_real", "Converts a string to a real number"
    "to_string", "Converts number to string"
    "to_time", "Converts a string into a time object"
@@ -511,8 +524,11 @@ This group contains functions for fuzzy comparisons between values.
    :header: "Function", "Description"
    :widths: 25, 70
 
-   "hamming_distance", "Returns the number of characters at corresponding positions within the input strings where the characters are different"
-   "levensheim", "Returns the minimum number of character edits (insertions, deletions or substitutions) required to change one string to another. Measure the similarity between two strings"
+   "hamming_distance", "Returns the number of characters at corresponding
+   positions within the input strings where the characters are different"
+   "levensheim", "Returns the minimum number of character edits (insertions,
+   deletions or substitutions) required to change one string to another.
+   Measure the similarity between two strings"
    "longest_common_substring", "Returns the longest common substring between two strings"
    "soundex", "Returns the Soundex representation of a string"
 
@@ -526,12 +542,17 @@ This group contains general assorted functions.
    :header: "Function", "Description"
    :widths: 20, 75
 
-   "env", "Gets an environment variable and returns its content as a string. If the variable is not found, ``NULL`` will be returned."
-   "eval", "Evaluates an expression which is passed in a string. Useful to expand dynamic parameters passed as context variables or fields."
+   "env", "Gets an environment variable and returns its content as a string.
+   If the variable is not found, ``NULL`` will be returned."
+   "eval", "Evaluates an expression which is passed in a string.
+   Useful to expand dynamic parameters passed as context variables or fields."
    "is_layer_visible", "Returns true if a specified layer is visible"
-   "layer_property", "Returns a property of a layer or a value of its metadata. It can be layer name, crs, geometry type, feature count..."
+   "layer_property", "Returns a property of a layer or a value of its metadata.
+   It can be layer name, crs, geometry type, feature count..."
    "var", "Returns the value stored within a specified variable. See variable functions below"
-   "with_variable", "Creates and sets a variable for any expression code that will be provided as a third argument. Useful to avoid repetition in expressions where the same value needs to be used more than once."
+   "with_variable", "Creates and sets a variable for any expression code that
+   will be provided as a third argument. Useful to avoid repetition in expressions
+   where the same value needs to be used more than once."
 
 
 .. _geometry_functions:
@@ -562,7 +583,6 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    the Spatial Reference System of this geometry"
    "azimuth", "Returns the north-based azimuth as the angle in radians measured
    clockwise from the vertical on point_a to point_b"
-   
    "boundary", "Returns the closure of the combinatorial boundary of the geometry
    (ie the topological boundary of the geometry - see also :ref:`qgisboundary`)."
    "bounds", "Returns a geometry which represents the bounding box of an input geometry.
@@ -577,7 +597,6 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    Reference System of this geometry (see also :ref:`qgisbuffer`)"
    "buffer_by_m", "Creates a buffer along a line geometry where the buffer diameter
    varies according to the M values at the line vertices (see also :ref:`qgisbufferbym`)"
-
    "centroid", "Returns the geometric center of a geometry (see also :ref:`qgiscentroids`)"
    "closest_point", "Returns the point on a geometry that is closest to a second geometry"
    "combine", "Returns the combination of two geometries"
@@ -593,7 +612,6 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    "distance", "Returns the minimum distance (based on Spatial Reference System)
    between two geometries in projected units"
    "distance_to_vertex", "Returns the distance along the geometry to a specified vertex"
-
    "end_point", "Returns the last node from a geometry (see also :ref:`qgisextractspecificvertices`)"
    "extend", "Extends the start and end of a linestring geometry by a specified amount
    (see also :ref:`qgisextendlines`)"
@@ -610,7 +628,6 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    "geometry", "Returns a feature's geometry"
    "geometry_n", "Returns the nth geometry from a geometry collection,
    or null if the input geometry is not a collection"
-
    "hausdorff_distance", "Returns basically a measure of how similar or dissimilar
    two geometries are, with a lower distance indicating more similar geometries"
    "inclination", "Returns the inclination measured from the zenith (0) to the nadir (180) on point_a to point_b"
@@ -625,7 +642,6 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    (share any portion of space) their bounding box, or 0 if they don't"
    "is_closed", "Returns true if a line string is closed (start and end points are coincident),
    false if a line string is not closed, or null if the geometry is not a line string"
-
    "length", "Returns length of a line geometry feature (or length of a string)"
    "line_interpolate_angle", "Returns the angle parallel to the geometry at a specified
    distance along a linestring geometry. Angles are in degrees clockwise from north."
@@ -638,7 +654,6 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    (see also :ref:`qgislinesubstring`)"
    "line_merge", "Returns a (Multi-)LineString geometry, where any connected LineStrings
    from the input geometry have been merged into a single linestring."
-
    "m", "Returns the M value of a point geometry"
    "make_circle", "Creates a circular geometry based on center point and radius"
    "make_ellipse", "Creates an elliptical geometry based on center point, axes and azimuth"
@@ -655,7 +670,6 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    (see also :ref:`qgisminimumenclosingcircle`)"
    "nodes_to_points", "Returns a multipoint geometry consisting of every node in
    the input geometry (see also :ref:`qgisextractvertices`)"
-
    "num_geometries", "Returns the number of geometries in a geometry collection,
    or null if the input geometry is not a collection"
    "num_interior_rings", "Returns the number of interior rings in a polygon or
@@ -670,7 +684,6 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    bounding box of an input geometry (see also :ref:`qgisorientedminimumboundingbox`)"
    "overlaps", "Tests whether a geometry overlaps another. Returns 1 (true) if
    the geometries share space, are of the same dimension, but are not completely contained by each other"
-
    "perimeter", "Returns the perimeter of a geometry polygon feature.
    Calculations are in the Spatial Reference System of this geometry"
    "point_n", "Returns a specific node from a geometry (see also :ref:`qgisextractspecificvertices`)"
@@ -685,7 +698,6 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    representation of the relationship between two geometries"
    "reverse", "Reverses the direction of a line string by reversing the order of its
    vertices (see also :ref:`qgisreverselinedirection`)"
-
    "segments_to_lines", "Returns a multi line geometry consisting of a line for
    every segment in the input geometry (see also :ref:`qgisexplodelines`)"
    "shortest_line", "Returns the shortest line joining two geometries.
@@ -702,7 +714,6 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    "start_point", "Returns the first node from a geometry (see also :ref:`qgisextractspecificvertices`)"
    "sym_difference", "Returns a geometry that represents the portions of two
    geometries that do not intersect (see also :ref:`qgissymmetricaldifference`)"
-
    "tapered_buffer", "Creates a buffer along a line geometry where the buffer
    diameter varies evenly over the length of the line (see also :ref:`qgistaperedbuffer`)"
    "touches", "Tests whether a geometry touches another. Returns 1 (true) if
@@ -716,7 +727,6 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    given an angle and radii (see also :ref:`qgiswedgebuffers`)"
    "within (a,b)", "Tests whether a geometry is within another. Returns 1 (true)
    if geometry a is completely inside geometry b"
-
    "x", "Returns the X coordinate of a point geometry, or the X coordinate of the
    centroid for a non-point geometry"
    "x_min", "Returns the minimum X coordinate of a geometry.
@@ -813,7 +823,8 @@ and values are identified by their keys.
    "map", "Returns a map containing all the keys and values passed as pair of parameters"
    "map_akeys", "Returns all the keys of a map as an array"
    "map_avals", "Returns all the values of a map as an array"
-   "map_concat", "Returns a map containing all the entries of the given maps. If two maps contain the same key, the value of the second map is taken."
+   "map_concat", "Returns a map containing all the entries of the given maps.
+   If two maps contain the same key, the value of the second map is taken."
    "map_delete", "Returns a map with the given key and its corresponding value deleted"
    "map_exist", "Returns true if the given key exists in the map"
    "map_get", "Returns the value of a map, given it's key"
@@ -837,15 +848,18 @@ This group contains math functions (e.g., square root, sin and cos).
    "acos", "Returns the inverse cosine of a value in radians"
    "asin", "Returns the inverse sine of a value in radians"
    "atan", "Returns the inverse tangent of a value in radians"
-   "atan2(y,x)", "Returns the inverse tangent of Y/X by using the signs of the two arguments to determine the quadrant of the result"
-   "azimuth(a,b)", "Returns the north-based azimuth as the angle in radians measured clockwise from the vertical on point a to point b"
+   "atan2(y,x)", "Returns the inverse tangent of Y/X by using the signs of the
+   two arguments to determine the quadrant of the result"
+   "azimuth(a,b)", "Returns the north-based azimuth as the angle in radians
+   measured clockwise from the vertical on point a to point b"
    "ceil", "Rounds a number upwards"
    "clamp", "Restricts an input value to a specified range"
    "cos", "Returns the cosine of a value in radians"
    "degrees", "Converts from radians to degrees"
    "exp", "Returns exponential of a value"
    "floor", "Rounds a number downwards"
-   "inclination", "Returns the inclination measured from the zenith (0) to the nadir (180) on point_a to point_b."
+   "inclination", "Returns the inclination measured from the zenith (0) to the
+   nadir (180) on point_a to point_b."
    "ln", "Returns the natural logarithm of the passed expression"
    "log", "Returns the value of the logarithm of the passed value and base"
    "log10", "Returns the value of the base 10 logarithm of the passed expression"
@@ -853,11 +867,15 @@ This group contains math functions (e.g., square root, sin and cos).
    "min", "Returns the smallest not null value in a set of values"
    "pi", "Returns the value of pi for calculations"
    "radians", "Converts from degrees to radians"
-   "rand", "Returns the random integer within the range specified by the minimum and maximum argument (inclusive)"
-   "randf", "Returns the random float within the range specified by the minimum and maximum argument (inclusive)"
+   "rand", "Returns the random integer within the range specified by the minimum
+   and maximum argument (inclusive)"
+   "randf", "Returns the random float within the range specified by the minimum
+   and maximum argument (inclusive)"
    "round", "Rounds to number of decimal places"
-   "scale_exp", "Transforms a given value from an input domain to an output range using an exponential curve"
-   "scale_linear", "Transforms a given value from an input domain to an output range using linear interpolation"
+   "scale_exp", "Transforms a given value from an input domain to an output
+   range using an exponential curve"
+   "scale_linear", "Transforms a given value from an input domain to an output
+   range using linear interpolation"
    "sin", "Returns the sine of an angle"
    "sqrt", "Returns the square root of a value"
    "tan", "Returns the tangent of an angle"
@@ -892,7 +910,8 @@ if one of the inputs is NULL then the result is NULL.
    "||", "Joins two values together into a string. If one of the values is NULL the result will be NULL"
    "'\\n'", "Inserts a new line in a string"
    "LIKE", "Returns 1 if the first parameter matches the supplied pattern"
-   "ILIKE", "Returns 1 if the first parameter matches case-insensitive the supplied pattern (ILIKE can be used instead of LIKE to make the match case-insensitive)"
+   "ILIKE", "Returns 1 if the first parameter matches case-insensitive the supplied
+   pattern (ILIKE can be used instead of LIKE to make the match case-insensitive)"
    "a IS b", "Tests whether two values are identical. Returns 1 if a is the same as b"
    "a OR b", "Returns 1 when condition a or condition b is true"
    "a AND b", "Returns 1 when conditions a and b are true"
@@ -962,15 +981,18 @@ This group contains functions that operate on record identifiers.
    :widths: 25, 70
    :class: longtable
 
-   "$currentfeature", "Returns the current feature being evaluated. This can be used with the 'attribute' function to evaluate attribute values from the current feature."
+   "$currentfeature", "Returns the current feature being evaluated. This can be used
+   with the 'attribute' function to evaluate attribute values from the current feature."
    "$id", "Returns the feature id of the current row"
    "attribute", "Returns the value of a specified attribute from a feature"
-   "attributes |310|", "Returns a :ref:`map <maps_functions>` of all attributes from a feature, with field names as map keys"
+   "attributes |310|", "Returns a :ref:`map <maps_functions>` of all attributes from
+   a feature, with field names as map keys"
    "get_feature", "Returns the first feature of a layer matching a given attribute value"
    "get_feature_by_id", "Returns the feature of a layer matching the given feature ID"
    "is_selected", "Returns if a feature is selected"
    "num_selected", "Returns the number of selected features on a given layer"
-   "represent_value", "Returns the configured representation value for a field value (convenient with some :ref:`widget types <edit_widgets>`)"
+   "represent_value", "Returns the configured representation value for a field value
+   (convenient with some :ref:`widget types <edit_widgets>`)"
    "sql_fetch_and_increment |36|", "Manage autoincrementing values in sqlite databases"
    "uuid", "Generates a Universally Unique Identifier (UUID) for each row. Each UUID is 38 characters long."
 
@@ -1007,18 +1029,22 @@ This group contains functions that operate on strings
    "concat", "Concatenates several strings to one"
    "format", "Formats a string using supplied arguments"
    "format_date", "Formats a date type or string into a custom string format"
-   "format_number", "Returns a number formatted with the locale separator for thousands (also truncates the number to the number of supplied places)"
+   "format_number", "Returns a number formatted with the locale separator for
+   thousands (also truncates the number to the number of supplied places)"
    "left(string, n)", "Returns a substring that contains the n leftmost characters of the string"
    "length", "Returns length of a string (or length of a line geometry feature)"
    "lower", "converts a string to lower case"
    "lpad", "Returns a string padded on the left to the specified width, using the fill character"
-   "regexp_match", "Returns the first matching position matching a regular expression within a string, or 0 if the substring is not found"
+   "regexp_match", "Returns the first matching position matching a regular expression
+   within a string, or 0 if the substring is not found"
    "regexp_replace", "Returns a string with the supplied regular expression replaced"
    "regexp_substr", "Returns the portion of a string which matches a supplied regular expression"
-   "replace", "Returns a string with the supplied string, array, or map of strings replaced by a string, an array of strings or paired values"
+   "replace", "Returns a string with the supplied string, array, or map of strings replaced
+   by a string, an array of strings or paired values"
    "right(string, n)", "Returns a substring that contains the n rightmost characters of the string"
    "rpad", "Returns a string padded on the right to the specified width, using the fill character"
-   "strpos", "Returns the first matching position of a substring within another string, or 0 if the substring is not found"
+   "strpos", "Returns the first matching position of a substring within another string,
+   or 0 if the substring is not found"
    "substr", "Returns a part of a string"
    "title", "Converts all words of a string to title case (all words lower case with leading capital letter)"
    "trim", "Removes all leading and trailing white space (spaces, tabs, etc.) from a string"
@@ -1088,7 +1114,6 @@ To use these functions in an expression, they should be preceded by @ character
    "atlas_layername", "Returns the current atlas coverage layer name"
    "atlas_pagename", "Returns the current atlas page name"
    "atlas_totalfeatures", "Returns the total number of features in atlas"
-
    "canvas_cursor_point", "Returns the last cursor position on the canvas in the
    project's geographical coordinates"
    "cluster_color", "Returns the color of symbols within a cluster, or NULL if
@@ -1102,7 +1127,6 @@ To use these functions in an expression, they should be preceded by @ character
    "fullextent_maxy |38|", "Maximum y value from full canvas extent (including all layers)"
    "fullextent_minx |38|", "Minimum x value from full canvas extent (including all layers)"
    "fullextent_miny |38|", "Minimum x value from full canvas extent (including all layers)"
-
    "geometry_part_count", "Returns the number of parts in rendered feature's geometry"
    "geometry_part_num", "Returns the current geometry part number for feature being rendered"
    "geometry_point_count", "Returns the number of points in the rendered geometry's part"
@@ -1120,7 +1144,6 @@ To use these functions in an expression, they should be preceded by @ character
    "layout_page", "Returns the page number of the current item in the layout"
    "layout_pageheight", "Returns the active page height in the layout (in mm)"
    "layout_pagewidth", "Returns the active page width in the layout (in mm)"
-
    "map_crs", "Returns the Coordinate reference system of the current map"
    "map_crs_acronym |36|", "Returns the acronym of the Coordinate reference
    system of the current map"
@@ -1150,7 +1173,6 @@ To use these functions in an expression, they should be preceded by @ character
    "parent", "Refers to the current feature in the parent layer, providing access to
    its attributes and geometry when filtering an :ref:`aggregate <aggregates_function>`
    function"
-
    "project_abstract", "Returns the project abstract, taken from project metadata"
    "project_area_units", "Returns the area unit for the current project, used when
    calculating areas of geometries"
@@ -1172,7 +1194,6 @@ To use these functions in an expression, they should be preceded by @ character
    "project_keywords", "Returns the project keywords, taken from the project's metadata"
    "project_path", "Returns the full path (including file name) of the current project"
    "project_title", "Returns the title of current project"
-
    "qgis_locale", "Returns the current language of QGIS"
    "qgis_os_name", "Returns the current Operating system name, eg 'windows', 'linux' or 'osx'"
    "qgis_platform", "Returns QGIS platform, eg 'desktop' or 'server'"
@@ -1180,7 +1201,6 @@ To use these functions in an expression, they should be preceded by @ character
    "qgis_short_version", "Returns current QGIS version short string"
    "qgis_version", "Returns current QGIS version string"
    "qgis_version_no", "Returns current QGIS version number"
-
    "snapping_results", "Gives access to snapping results while digitizing a
    feature (only available in add feature)"
    "symbol_angle", "Returns the angle of the symbol used to render the feature

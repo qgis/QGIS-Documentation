@@ -278,27 +278,28 @@ the same place, from page to page.
 Below is a list of all the available tools in this menu with some convenient
 information.
 
-================================================= ========================== ========================== =====================================
- Tool                                              Shortcut                   Toolbar                    Reference
-================================================= ========================== ========================== =====================================
- |undo| :guilabel:`Undo (last change)`             :kbd:`Ctrl+Z`              :guilabel:`Layout`         :ref:`layout_undo_panel`
- |redo| :guilabel:`Redo (last reverted change)`    :kbd:`Ctrl+Y`              :guilabel:`Layout`         :ref:`layout_undo_panel`
- |deleteSelected| :guilabel:`Delete`               :kbd:`Del`
- |editCut| :guilabel:`Cut`                         :kbd:`Ctrl+X`
- |editCopy| :guilabel:`Copy`                       :kbd:`Ctrl+C`
- |editPaste| :guilabel:`Paste`                     :kbd:`Ctrl+V`
- :guilabel:`Paste in place`                        :kbd:`Ctrl+Shift+V`
- |selectAll| :guilabel:`Select All`                :kbd:`Ctrl+A`
- |deselectAll| :guilabel:`Deselect all`            :kbd:`Ctrl+Shift+A`
- |invertSelection| :guilabel:`Invert Selection`
- :guilabel:`Select Next Item Below`                :kbd:`Ctrl+Alt+[`
- :guilabel:`Select Next Item above`                :kbd:`Ctrl+Alt+]`
- |pan| :guilabel:`Pan Layout`                      :kbd:`P`                   :guilabel:`Toolbox`
- |zoomToArea| :guilabel:`Zoom`                     :kbd:`Z`                   :guilabel:`Toolbox`
- |select| :guilabel:`Select/Move Item`             :kbd:`V`                   :guilabel:`Toolbox`        :ref:`interact_layout_item`
- |moveItemContent| :guilabel:`Move Content`        :kbd:`C`                   :guilabel:`Toolbox`        :ref:`layout_map_item`
- |editNodesShape| :guilabel:`Edit Nodes Item`                                 :guilabel:`Toolbox`        :ref:`layout_node_based_shape_item`
-================================================= ========================== ========================== =====================================
+.. csv-table:: Available Tools
+   :header: "Tool", "Shortcut", "Toolbar", "Reference"
+   :widths: 30, 17, 10, 33
+
+   "|undo| :guilabel:`Undo (last change)`", ":kbd:`Ctrl+Z`", ":guilabel:`Layout`", ":ref:`layout_undo_panel`"
+   "|redo| :guilabel:`Redo (last reverted change)`", ":kbd:`Ctrl+Y`", ":guilabel:`Layout`", ":ref:`layout_undo_panel`"
+   "|deleteSelected| :guilabel:`Delete`", ":kbd:`Del`"
+   "|editCut| :guilabel:`Cut`", ":kbd:`Ctrl+X`"
+   "|editCopy| :guilabel:`Copy`", ":kbd:`Ctrl+C`"
+   "|editPaste| :guilabel:`Paste`", ":kbd:`Ctrl+V`"
+   ":guilabel:`Paste in place`", ":kbd:`Ctrl+Shift+V`"
+   "|selectAll| :guilabel:`Select All`", ":kbd:`Ctrl+A`"
+   "|deselectAll| :guilabel:`Deselect all`", ":kbd:`Ctrl+Shift+A`"
+   "|invertSelection| :guilabel:`Invert Selection`"
+   ":guilabel:`Select Next Item Below`", ":kbd:`Ctrl+Alt+[`"
+   ":guilabel:`Select Next Item above`", ":kbd:`Ctrl+Alt+]`"
+   "|pan| :guilabel:`Pan Layout`", ":kbd:`P`", ":guilabel:`Toolbox`"
+   "|zoomToArea| :guilabel:`Zoom`", ":kbd:`Z`", ":guilabel:`Toolbox`"
+   "|select| :guilabel:`Select/Move Item`", ":kbd:`V`", ":guilabel:`Toolbox`", ":ref:`interact_layout_item`"
+   "|moveItemContent| :guilabel:`Move Content`", ":kbd:`C`", ":guilabel:`Toolbox`", ":ref:`layout_map_item`"
+   "|editNodesShape| :guilabel:`Edit Nodes Item`", "", ":guilabel:`Toolbox`", ":ref:`layout_node_based_shape_item`"
+
 
 
 View menu
