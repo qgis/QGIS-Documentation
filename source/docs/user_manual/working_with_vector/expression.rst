@@ -1461,7 +1461,7 @@ To use these functions in an expression, they should be preceded by @ character
  project_crs_definition       Returns the full definition of the Coordinate reference
                               system of the project
  project_distance_units       Returns the distance unit for the current project, used when
-                              calculating lenghts of geometries and distances
+                              calculating lengths of geometries and distances
  project_ellipsoid            Returns the name of the ellipsoid of the current project, used when
                               calculating geodetic areas or lengths of geometries
  project_filename             Returns the filename of the current project
