@@ -527,7 +527,7 @@ commands.
 
 :guilabel:`Preferences` and :guilabel:`About QGIS` are the same commands as
 :menuselection:`Settings --> Options` and :menuselection:`Help --> About`.
-:guilabel:`Quit QGIS` corresponds to :menuselection:`Project --> Exit QGIS`"
+:guilabel:`Quit QGIS` corresponds to :menuselection:`Project --> Exit QGIS`
 under the other platforms.
 
 .. _sec_panels_and_toolbars:
