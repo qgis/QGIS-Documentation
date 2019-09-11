@@ -405,7 +405,7 @@ Processing with their corresponding alg decorator constants
 Sorted on class name.
 
 .. list-table:: Input types
-   :widths: 50 20 30
+   :widths: 24 55 21
    :header-rows: 1
 
    * - Alg constant
@@ -509,7 +509,7 @@ Sorted on class name.
 |
 
 .. list-table:: Output types
-   :widths: 50 20 30
+   :widths: 25 50 25
    :header-rows: 1
 
    * - Alg constant

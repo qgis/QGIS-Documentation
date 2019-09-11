@@ -165,6 +165,8 @@ frame listing vector or raster layers added to the project, optionally
 organized in groups. Depending on the item selected in the panel, a
 right-click shows a dedicated set of options presented below.
 
+.. tabularcolumns:: |l|c|c|c|
+
 =================================================================  ==================  =================  =============
 Option                                                             Vector Layer        Raster Layer       Group
 =================================================================  ==================  =================  =============
@@ -471,6 +473,8 @@ on any vector layer. This panel allows you to select:
 * the statistics to return using the drop-down button at the bottom-right of the
   dialog. Depending on the field's (or expression's values) type, available
   statistics are:
+
+.. tabularcolumns:: |l|c|c|c|c|
 
 ================================== ============ ============  ============  ============
  Statistics                         String       Integer       Float         Date
@@ -1324,6 +1328,8 @@ automatically filling the search box with existing values.
 Alongside each field, there is a drop-down list with options to
 control the search behaviour:
 
+.. tabularcolumns:: |l|c|c|c|
+
 ============================================= ============ ============  ============
  Field search option                           String       Numeric       Date
 ============================================= ============ ============  ============
@@ -1344,7 +1350,9 @@ control the search behaviour:
  :guilabel:`Ends with`                         |checkbox|
 ============================================= ============ ============  ============
 
-|
+.. only:: html
+
+   |
 
 For string comparisons, it is also possible to use the |checkbox|
 :guilabel:`Case sensitive` option.

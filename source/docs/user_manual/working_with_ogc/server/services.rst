@@ -42,29 +42,27 @@ Specifications document according to the version number of the service:
 
 Standard requests provided by QGIS Server:
 
-+--------------------+-----------------------------------------------------------+
-| Request            |  Description                                              |
-+====================+===========================================================+
-| GetCapabilities    | Return XML metadata with information about the server     |
-+--------------------+-----------------------------------------------------------+
-| GetMap             | Return a map                                              |
-+--------------------+-----------------------------------------------------------+
-| GetFeatureInfo     | Retrieves data (geometry and values) for a pixel location |
-+--------------------+-----------------------------------------------------------+
-| GetLegendGraphics  | Returns legend symbols                                    |
-+--------------------+-----------------------------------------------------------+
+.. csv-table::
+   :header: "Request", "Description"
+   :widths: auto
 
-|
+   "GetCapabilities", "Returns XML metadata with information about the server"
+   "GetMap", "Returns a map"
+   "GetFeatureInfo", "Retrieves data (geometry and values) for a pixel location"
+   "GetLegendGraphics", "Returns legend symbols"
+
+.. only :: html
+
+   |
 
 Vendor requests provided by QGIS Server:
 
-+---------------------+---------------------------------------------------+
-| Request             |  Description                                      |
-+=====================+===================================================+
-| GetPrint            | Returns a QGIS composition                        |
-+---------------------+---------------------------------------------------+
-| GetProjectSettings  | Returns specific information about QGIS Server    |
-+---------------------+---------------------------------------------------+
+.. csv-table::
+   :header: "Request", "Description"
+   :widths: auto
+
+   "GetPrint", "Returns a QGIS composition"
+   "GetProjectSettings", "Returns specific information about QGIS Server"
 
 
 .. _`qgisserver-wms-getmap`:
@@ -75,78 +73,57 @@ GetMap
 Standard parameters for the **GetMap** request according to the OGC WMS 1.1.0
 and 1.3.0 specifications:
 
-+---------------+----------+-----------------------------------------------------+
-| Parameter     | Required | Description                                         |
-+===============+==========+=====================================================+
-| SERVICE       | Yes      | Name of the service (WMS)                           |
-+---------------+----------+-----------------------------------------------------+
-| VERSION       | No       | Version of the service                              |
-+---------------+----------+-----------------------------------------------------+
-| REQUEST       | Yes      | Name of the request (GetMap)                        |
-+---------------+----------+-----------------------------------------------------+
-| LAYERS        | No       | Layers to display                                   |
-+---------------+----------+-----------------------------------------------------+
-| STYLES        | No       | Layers' style                                       |
-+---------------+----------+-----------------------------------------------------+
-| SRS / CRS     | Yes      | Coordinate reference system                         |
-+---------------+----------+-----------------------------------------------------+
-| BBOX          | No       | Map extent                                          |
-+---------------+----------+-----------------------------------------------------+
-| WIDTH         | Yes      | Width of the image in pixels                        |
-+---------------+----------+-----------------------------------------------------+
-| HEIGHT        | Yes      | Height of the image in pixels                       |
-+---------------+----------+-----------------------------------------------------+
-| FORMAT        | No       | Image format                                        |
-+---------------+----------+-----------------------------------------------------+
-| TRANSPARENT   | No       | Transparent background                              |
-+---------------+----------+-----------------------------------------------------+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
 
-|
+   "SERVICE", "Yes", "Name of the service (WMS)"
+   "VERSION", "No", "Version of the service"
+   "REQUEST", "Yes", "Name of the request (GetMap)"
+   "LAYERS", "No", "Layers to display"
+   "STYLES", "No", "Layers' style"
+   "SRS / CRS", "Yes", "Coordinate reference system"
+   "BBOX", "No", "Map extent"
+   "WIDTH", "Yes", "Width of the image in pixels"
+   "HEIGHT", "Yes", "Height of the image in pixels"
+   "FORMAT", "No", "Image format"
+   "TRANSPARENT", "No", "Transparent background"
+
+.. only:: html
+
+   |
 
 In addition to the standard ones, QGIS Server supports the following extra
 parameters:
 
 
-+----------------+----------+-------------------------------------------------------------------------+
-| Parameter      | Required | Description                                                             |
-+================+==========+=========================================================================+
-| MAP            | Yes      | Specify the QGIS project file                                           |
-+----------------+----------+-------------------------------------------------------------------------+
-| BGCOLOR        | No       | Specify the background color                                            |
-+----------------+----------+-------------------------------------------------------------------------+
-| DPI            | No       | Specify the output resolution                                           |
-+----------------+----------+-------------------------------------------------------------------------+
-| IMAGE_QUALITY  | No       | JPEG compression                                                        |
-+----------------+----------+-------------------------------------------------------------------------+
-| OPACITIES      | No       | Opacity for layer or group                                              |
-+----------------+----------+-------------------------------------------------------------------------+
-| FILTER         | No       | Subset of features                                                      |
-+----------------+----------+-------------------------------------------------------------------------+
-| SELECTION      | No       | Highlight features                                                      |
-+----------------+----------+-------------------------------------------------------------------------+
-| FILE_NAME      | No       | Only for ``FORMAT=application/dxf``                                     |
-|                |          |                                                                         |
-|                |          | File name of the downloaded file                                        |
-+----------------+----------+-------------------------------------------------------------------------+
-| FORMAT_OPTIONS | No       | Only for ``FORMAT=application/dxf``                                     |
-|                |          |                                                                         |
-|                |          | key:value pairs separated by                                            |
-|                |          | semicolon.                                                              |
-|                |          |                                                                         |
-|                |          | - SCALE:  to be used for symbology rules, filters and styles (not       |
-|                |          |   actual scaling of the data - data remains in the original scale).     |
-|                |          | - MODE:NOSYMBOLOGY|FEATURESYMBOLOGY|SYMBOLLAYERSYMBOLOGY:               |
-|                |          |   corresponds to the three export options offered in the QGIS           |
-|                |          |   Desktop DXF export dialog.                                            |
-|                |          | - LAYERSATTRIBUTES:yourcolumn_with_values_to_be_used_for_dxf_layernames |
-|                |          |   if not specified, the original QGIS layer names are used.             |
-|                |          | - USE_TITLE_AS_LAYERNAME:  if enabled, the title of the layer will      |
-|                |          |   be used as layer name.                                                |
-+----------------+----------+-------------------------------------------------------------------------+
-| TILED           | No      | Working in *tiled mode*                                                 |
-+----------------+----------+-------------------------------------------------------------------------+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: 20, 10, 65
 
-|
+   "MAP", "Yes", "Specify the QGIS project file"
+   "BGCOLOR", "No", "Specify the background color"
+   "DPI", "No", "Specify the output resolution"
+   "IMAGE_QUALITY", "No", "JPEG compression"
+   "OPACITIES", "No", "Opacity for layer or group"
+   "FILTER", "No", "Subset of features"
+   "SELECTION", "No", "Highlight features"
+   "FILE_NAME", "No", "Only for ``FORMAT=application/dxf``
+
+   File name of the downloaded file"
+   "FORMAT_OPTIONS", "No", "Only for ``FORMAT=application/dxf``
+   key:value pairs separated by semicolon.
+   
+   * SCALE:  to be used for symbology rules, filters and styles (not actual scaling of the data - data remains in the original scale).
+   * MODE:NOSYMBOLOGY|FEATURESYMBOLOGY|SYMBOLLAYERSYMBOLOGY: corresponds to the three export options offered in the QGIS Desktop DXF export dialog.
+   * LAYERSATTRIBUTES:field_with_values_to_use_for_dxf_layernames if not specified, the original QGIS layer names are used.
+   * USE_TITLE_AS_LAYERNAME: if enabled, the title of the layer will  be used as layer name.
+   "
+   "TILED", "No", "Working in *tiled mode*"
+
+.. only:: html
+
+   |
 
 URL example:
 
@@ -544,71 +521,52 @@ GetFeatureInfo
 Standard parameters for the **GetFeatureInfo** request according to the OGC WMS 1.1.0
 and 1.3.0 specifications:
 
-+---------------+----------+----------------------------------------------+
-| Parameter     | Required | Description                                  |
-+===============+==========+==============================================+
-| SERVICE       | Yes      | Name of the service (WMS)                    |
-+---------------+----------+----------------------------------------------+
-| VERSION       | No       | :ref:`See GetMap <qgisserver-wms-getmap>`    |
-+---------------+----------+----------------------------------------------+
-| REQUEST       | Yes      | :ref:`See GetMap <qgisserver-wms-getmap>`    |
-+---------------+----------+----------------------------------------------+
-| LAYERS        | No       | :ref:`See GetMap <qgisserver-wms-getmap>`    |
-+---------------+----------+----------------------------------------------+
-| STYLES        | No       | :ref:`See GetMap <qgisserver-wms-getmap>`    |
-+---------------+----------+----------------------------------------------+
-| SRS / CRS     | Yes      | :ref:`See GetMap <qgisserver-wms-getmap>`    |
-+---------------+----------+----------------------------------------------+
-| BBOX          | No       | :ref:`See GetMap <qgisserver-wms-getmap>`    |
-+---------------+----------+----------------------------------------------+
-| WIDTH         | Yes      | :ref:`See GetMap <qgisserver-wms-getmap>`    |
-+---------------+----------+----------------------------------------------+
-| HEIGHT        | Yes      | :ref:`See GetMap <qgisserver-wms-getmap>`    |
-+---------------+----------+----------------------------------------------+
-| TRANSPARENT   | No       | :ref:`See GetMap <qgisserver-wms-getmap>`    |
-+---------------+----------+----------------------------------------------+
-| INFO_FORMAT   | No       | Output format                                |
-+---------------+----------+----------------------------------------------+
-| QUERY_LAYERS  | Yes      | Layers to query                              |
-+---------------+----------+----------------------------------------------+
-| FEATURE_COUNT | No       | Maximum number of features to return         |
-+---------------+----------+----------------------------------------------+
-| I             | No       | Pixel column of the point to query           |
-+---------------+----------+----------------------------------------------+
-| X             | No       | Same as `I` parameter, but in WMS 1.1.0      |
-+---------------+----------+----------------------------------------------+
-| J             | No       | Pixel row of the point to query              |
-+---------------+----------+----------------------------------------------+
-| Y             | No       | Same as `J` parameter, but in WMS 1.1.0      |
-+---------------+----------+----------------------------------------------+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
 
-|
+   "SERVICE", "Yes", "Name of the service (WMS)"
+   "VERSION", "No", ":ref:`See GetMap <qgisserver-wms-getmap>`"
+   "REQUEST", "Yes", ":ref:`See GetMap <qgisserver-wms-getmap>`"
+   "LAYERS", "No", ":ref:`See GetMap <qgisserver-wms-getmap>`"
+   "STYLES", "No", ":ref:`See GetMap <qgisserver-wms-getmap>`"
+   "SRS / CRS", "Yes", ":ref:`See GetMap <qgisserver-wms-getmap>`"
+   "BBOX", "No", ":ref:`See GetMap <qgisserver-wms-getmap>`"
+   "WIDTH", "Yes", ":ref:`See GetMap <qgisserver-wms-getmap>`"
+   "HEIGHT", "Yes", ":ref:`See GetMap <qgisserver-wms-getmap>`"
+   "TRANSPARENT", "No", ":ref:`See GetMap <qgisserver-wms-getmap>`"
+   "INFO_FORMAT", "No", "Output format"
+   "QUERY_LAYERS", "Yes", "Layers to query"
+   "FEATURE_COUNT", "No", "Maximum number of features to return"
+   "I", "No", "Pixel column of the point to query"
+   "X", "No", "Same as `I` parameter, but in WMS 1.1.0"
+   "J", "No", "Pixel row of the point to query"
+   "Y", "No", "Same as `J` parameter, but in WMS 1.1.0"
+
+.. only:: html
+
+   |
 
 In addition to the standard ones, QGIS Server supports the following extra
 parameters:
 
 
-+----------------------+----------+------------------------------------------+
-| Parameter            | Required | Description                              |
-+======================+==========+==========================================+
-| MAP                  | Yes      | :ref:`See GetMap <qgisserver-wms-getmap>`|
-+----------------------+----------+------------------------------------------+
-| FILTER               | No       | :ref:`See GetMap <qgisserver-wms-getmap>`|
-+----------------------+----------+------------------------------------------+
-| FI_POINT_TOLERANCE   | No       | Tolerance in pixels for point layers     |
-+----------------------+----------+------------------------------------------+
-| FI_LINE_TOLERANCE    | No       | Tolerance in pixels for line layers      |
-+----------------------+----------+------------------------------------------+
-| FI_POLYGON_TOLERANCE | No       | Tolerance in pixels for polygon layers   |
-+----------------------+----------+------------------------------------------+
-| FILTER_GEOM          | No       | Geometry filtering                       |
-+----------------------+----------+------------------------------------------+
-| WITH_MAPTIP          | No       | Add map tips to the output               |
-+----------------------+----------+------------------------------------------+
-| WITH_GEOMETRY        | No       | Add geometry to the output               |
-+----------------------+----------+------------------------------------------+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
 
-|
+   "MAP", "Yes", ":ref:`See GetMap <qgisserver-wms-getmap>`"
+   "FILTER", "No", ":ref:`See GetMap <qgisserver-wms-getmap>`"
+   "FI_POINT_TOLERANCE", "No", "Tolerance in pixels for point layers"
+   "FI_LINE_TOLERANCE", "No", "Tolerance in pixels for line layers"
+   "FI_POLYGON_TOLERANCE", "No", "Tolerance in pixels for polygon layers"
+   "FILTER_GEOM", "No", "Geometry filtering"
+   "WITH_MAPTIP", "No", "Add map tips to the output"
+   "WITH_GEOMETRY", "No", "Add geometry to the output"
+
+.. only:: html
+
+   |
 
 URL example:
 
@@ -754,51 +712,34 @@ parameters of the contained layout maps and labels.
 
 Parameters for the **GetPrint** request:
 
-+-----------------------+----------+------------------------------------------+
-| Parameter             | Required | Description                              |
-+=======================+==========+==========================================+
-| MAP                   | Yes      | Specify the QGIS project file            |
-+-----------------------+----------+------------------------------------------+
-| SERVICE               | Yes      | Name of the service (WMS)                |
-+-----------------------+----------+------------------------------------------+
-| VERSION               | No       | :ref:`See GetMap <qgisserver-wms-getmap>`|
-+-----------------------+----------+------------------------------------------+
-| REQUEST               | Yes      | Name of the request (GetPrint)           |
-+-----------------------+----------+------------------------------------------+
-| LAYERS                | No       | :ref:`See GetMap <qgisserver-wms-getmap>`|
-+-----------------------+----------+------------------------------------------+
-| TEMPLATE              | Yes      | Layout template to use                   |
-+-----------------------+----------+------------------------------------------+
-| SRS / CRS             | Yes      | :ref:`See GetMap <qgisserver-wms-getmap>`|
-+-----------------------+----------+------------------------------------------+
-| FORMAT                | Yes      | Output format                            |
-+-----------------------+----------+------------------------------------------+
-| ATLAS_PK              | No       | Atlas features                           |
-+-----------------------+----------+------------------------------------------+
-| STYLES                | No       | :ref:`See GetMap <qgisserver-wms-getmap>`|
-+-----------------------+----------+------------------------------------------+
-| TRANSPARENT           | No       | :ref:`See GetMap <qgisserver-wms-getmap>`|
-+-----------------------+----------+------------------------------------------+
-| OPACITIES             | No       | :ref:`See GetMap <qgisserver-wms-getmap>`|
-+-----------------------+----------+------------------------------------------+
-| SELECTION             | No       | :ref:`See GetMap <qgisserver-wms-getmap>`|
-+-----------------------+----------+------------------------------------------+
-| mapX:EXTENT           | No       | Extent of the map 'X'                    |
-+-----------------------+----------+------------------------------------------+
-| mapX:LAYERS           | No       | Layers of the map 'X'                    |
-+-----------------------+----------+------------------------------------------+
-| mapX:STYLES           | No       | Layers' style of the map 'X'             |
-+-----------------------+----------+------------------------------------------+
-| mapX:SCALE            | No       | Layers' scale of the map 'X'             |
-+-----------------------+----------+------------------------------------------+
-| mapX:ROTATION         | No       | Rotation  of the map 'X'                 |
-+-----------------------+----------+------------------------------------------+
-| mapX:GRID_INTERVAL_X  | No       | Grid interval on x axis of the map 'X'   |
-+-----------------------+----------+------------------------------------------+
-| mapX:GRID_INTERVAL_Y  | No       | Grid interval on y axis of the map 'X'   |
-+-----------------------+----------+------------------------------------------+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
 
-|
+   "MAP", "Yes", "Specify the QGIS project file"
+   "SERVICE", "Yes", "Name of the service (WMS)"
+   "VERSION", "No", ":ref:`See GetMap <qgisserver-wms-getmap>`"
+   "REQUEST", "Yes", "Name of the request (GetPrint)"
+   "LAYERS", "No", ":ref:`See GetMap <qgisserver-wms-getmap>`"
+   "TEMPLATE", "Yes", "Layout template to use"
+   "SRS / CRS", "Yes", ":ref:`See GetMap <qgisserver-wms-getmap>`"
+   "FORMAT", "Yes", "Output format"
+   "ATLAS_PK", "No", "Atlas features"
+   "STYLES", "No", ":ref:`See GetMap <qgisserver-wms-getmap>`"
+   "TRANSPARENT", "No", ":ref:`See GetMap <qgisserver-wms-getmap>`"
+   "OPACITIES", "No", ":ref:`See GetMap <qgisserver-wms-getmap>`"
+   "SELECTION", "No", ":ref:`See GetMap <qgisserver-wms-getmap>`"
+   "mapX:EXTENT", "No", "Extent of the map 'X'"
+   "mapX:LAYERS", "No", "Layers of the map 'X'"
+   "mapX:STYLES", "No", "Layers' style of the map 'X'"
+   "mapX:SCALE", "No", "Layers' scale of the map 'X'"
+   "mapX:ROTATION", "No", "Rotation  of the map 'X'"
+   "mapX:GRID_INTERVAL_X", "No", "Grid interval on x axis of the map 'X'"
+   "mapX:GRID_INTERVAL_Y", "No", "Grid interval on y axis of the map 'X'"
+
+.. only:: html
+
+   |
 
 URL example:
 
@@ -1008,17 +949,14 @@ Specifications document according to the version number of the service:
 
 Standard requests provided by QGIS Server:
 
-+--------------------+-----------------------------------------------------------+
-| Request            |  Description                                              |
-+====================+===========================================================+
-| GetCapabilities    | Returns XML metadata with information about the server    |
-+--------------------+-----------------------------------------------------------+
-| GetFeature         | Returns a selection of features                           |
-+--------------------+-----------------------------------------------------------+
-| DescribeFeatureType| Returns a description of feature types and properties     |
-+--------------------+-----------------------------------------------------------+
-| Transaction        | Allows features to be inserted, updated or deleted        |
-+--------------------+-----------------------------------------------------------+
+.. csv-table::
+   :header: "Request", "Description"
+   :widths: auto
+
+   "GetCapabilities", "Returns XML metadata with information about the server"
+   "GetFeature", "Returns a selection of features"
+   "DescribeFeatureType", "Returns a description of feature types and properties"
+   "Transaction", "Allows features to be inserted, updated or deleted"
 
 
 .. _`qgisserver-wfs-getfeature`:
@@ -1029,53 +967,40 @@ GetFeature
 Standard parameters for the **GetFeature** request according to the OGC WFS 1.0.0
 and 1.1.0 specifications:
 
-+---------------+----------+-------------------------------------+
-| Parameter     | Required | Description                         |
-+===============+==========+=====================================+
-| SERVICE       | Yes      | Name of the service                 |
-+---------------+----------+-------------------------------------+
-| VERSION       | No       | Version of the service              |
-+---------------+----------+-------------------------------------+
-| REQUEST       | Yes      | Name of the request                 |
-+---------------+----------+-------------------------------------+
-| TYPENAME      | No       | Name of layers                      |
-+---------------+----------+-------------------------------------+
-| OUTPUTFORMAT  | No       | Output Format                       |
-+---------------+----------+-------------------------------------+
-| RESULTTYPE    | No       | Type of the result                  |
-+---------------+----------+-------------------------------------+
-| PROPERTYNAME  | No       | Name of properties to return        |
-+---------------+----------+-------------------------------------+
-| MAXFEATURES   | No       | Maximum number of features to return|
-+---------------+----------+-------------------------------------+
-| SRSNAME       | No       | Coordinate reference system         |
-+---------------+----------+-------------------------------------+
-| FEATUREID     | No       | Filter the features by ids          |
-+---------------+----------+-------------------------------------+
-| FILTER        | No       | OGC Filter Encoding                 |
-+---------------+----------+-------------------------------------+
-| BBOX          | No       | Map Extent                          |
-+---------------+----------+-------------------------------------+
-| SORTBY        | No       | Sort the results                    |
-+---------------+----------+-------------------------------------+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
 
-|
+   "SERVICE", "Yes", "Name of the service"
+   "VERSION", "No", "Version of the service"
+   "REQUEST", "Yes", "Name of the request"
+   "TYPENAME", "No", "Name of layers"
+   "OUTPUTFORMAT", "No", "Output Format"
+   "RESULTTYPE", "No", "Type of the result"
+   "PROPERTYNAME", "No", "Name of properties to return"
+   "MAXFEATURES", "No", "Maximum number of features to return"
+   "SRSNAME", "No", "Coordinate reference system"
+   "FEATUREID", "No", "Filter the features by ids"
+   "FILTER", "No", "OGC Filter Encoding"
+   "BBOX", "No", "Map Extent"
+   "SORTBY", "No", "Sort the results"
+
+.. only:: html
+
+   |
 
 In addition to the standard ones, QGIS Server supports the following extra
 parameters:
 
 
-+---------------+----------+----------------------------------+
-| Parameter     | Required | Description                      |
-+===============+==========+==================================+
-| MAP           | Yes      | Specify the QGIS project file    |
-+---------------+----------+----------------------------------+
-| STARTINDEX    | No       | Paging                           |
-+---------------+----------+----------------------------------+
-| GEOMETRYNAME  | No       | Type of geometry to return       |
-+---------------+----------+----------------------------------+
-| EXP_FILTER    | No       | Expression filtering             |
-+---------------+----------+----------------------------------+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
+
+   "MAP", "Yes", "Specify the QGIS project file"
+   "STARTINDEX", "No", "Paging"
+   "GEOMETRYNAME", "No", "Type of geometry to return"
+   "EXP_FILTER", "No", "Expression filtering"
 
 
 SERVICE
@@ -1207,15 +1132,13 @@ Specifications document of the service:
 
 Standard requests provided by QGIS Server:
 
-+--------------------+-----------------------------------------------------------+
-| Request            |  Description                                              |
-+====================+===========================================================+
-| GetCapabilities    | Returns XML metadata with information about the server    |
-+--------------------+-----------------------------------------------------------+
-| GetTile            | Returns a tile                                            |
-+--------------------+-----------------------------------------------------------+
-| GetFeatureInfo     | Retrieves data (geometry and values) for a pixel location |
-+--------------------+-----------------------------------------------------------+
+.. csv-table::
+   :header: "Request", "Description"
+   :widths: auto
+
+   "GetCapabilities", "Returns XML metadata with information about the server"
+   "GetTile", "Returns a tile"
+   "GetFeatureInfo", "Retrieves data (geometry and values) for a pixel location"
 
 
 .. _`qgisserver-wmts-getcapabilities`:
@@ -1226,27 +1149,30 @@ GetCapabilities
 Standard parameters for the **GetCapabilities** request according to the OGC WMTS 1.0.0
 specifications:
 
-+---------------+----------+-----------------------------------------------+
-| Parameter     | Required | Description                                   |
-+===============+==========+===============================================+
-| SERVICE       | Yes      | Name of the service (WMTS)                    |
-+---------------+----------+-----------------------------------------------+
-| REQUEST       | Yes      | Name of the request (GetCapabilities)         |
-+---------------+----------+-----------------------------------------------+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
 
-|
+   "SERVICE", "Yes", "Name of the service (WMTS)"
+   "REQUEST", "Yes", "Name of the request (GetCapabilities)"
+
+.. only:: html
+
+   |
 
 In addition to the standard ones, QGIS Server supports the following extra
 parameters:
 
 
-+---------------+----------+----------------------------------+
-| Parameter     | Required | Description                      |
-+===============+==========+==================================+
-| MAP           | Yes      | Specify the QGIS project file    |
-+---------------+----------+----------------------------------+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
 
-|
+   "MAP", "Yes", "Specify the QGIS project file"
+
+.. only:: html
+
+   |
 
 URL example:
 
@@ -1285,39 +1211,36 @@ GetTile
 Standard parameters for the **GetTile** request according to the OGC WMTS 1.0.0
 specifications:
 
-+---------------+----------+----------------------------------+
-| Parameter     | Required | Description                      |
-+===============+==========+==================================+
-| SERVICE       | Yes      | Name of the service (WMTS)       |
-+---------------+----------+----------------------------------+
-| REQUEST       | Yes      | Name of the request (GetTile)    |
-+---------------+----------+----------------------------------+
-| LAYER         | Yes      | Layer identifier                 |
-+---------------+----------+----------------------------------+
-| FORMAT        | Yes      | Output format of the tile        |
-+---------------+----------+----------------------------------+
-| TILEMATRIXSET | Yes      | Name of the pyramid              |
-+---------------+----------+----------------------------------+
-| TILEMATRIX    | Yes      | Meshing                          |
-+---------------+----------+----------------------------------+
-| TILEROW       | Yes      | Row coordinate in the mesh       |
-+---------------+----------+----------------------------------+
-| TILECOL       | Yes      | Column coordinate in the mesh    |
-+---------------+----------+----------------------------------+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
 
-|
+   "SERVICE", "Yes", "Name of the service (WMTS)"
+   "REQUEST", "Yes", "Name of the request (GetTile)"
+   "LAYER", "Yes", "Layer identifier"
+   "FORMAT", "Yes", "Output format of the tile"
+   "TILEMATRIXSET", "Yes", "Name of the pyramid"
+   "TILEMATRIX", "Yes", "Meshing"
+   "TILEROW", "Yes", "Row coordinate in the mesh"
+   "TILECOL", "Yes", "Column coordinate in the mesh"
+
+.. only:: html
+
+   |
 
 In addition to the standard ones, QGIS Server supports the following extra
 parameters:
 
 
-+---------------+----------+----------------------------------+
-| Parameter     | Required | Description                      |
-+===============+==========+==================================+
-| MAP           | Yes      | Specify the QGIS project file    |
-+---------------+----------+----------------------------------+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
 
-|
+   "MAP", "Yes", "Specify the QGIS project file"
+
+.. only:: html
+
+   |
 
 URL example:
 
@@ -1446,43 +1369,38 @@ WMTS 1.0.0 specifications:
 
 - `WMS 1.1.0 <https://portal.opengeospatial.org/files/?artifact_id=1081&version=1&format=pdf>`_
 
-+---------------+----------+-----------------------------------------------+
-| Parameter     | Required | Description                                   |
-+===============+==========+===============================================+
-| SERVICE       | Yes      | Name of the service (WMTS)                    |
-+---------------+----------+-----------------------------------------------+
-| REQUEST       | Yes      | Name of the request (GetFeatureInfo)          |
-+---------------+----------+-----------------------------------------------+
-| LAYER         | Yes      | Layer identifier                              |
-+---------------+----------+-----------------------------------------------+
-| INFOFORMAT    | No       | Output format                                 |
-+---------------+----------+-----------------------------------------------+
-| I             | No       | X coordinate of a pixel                       |
-+---------------+----------+-----------------------------------------------+
-| J             | No       | Y coordinate of a pixel                       |
-+---------------+----------+-----------------------------------------------+
-| TILEMATRIXSET | Yes      | :ref:`See GetTile <qgisserver-wmts-gettile>`  |
-+---------------+----------+-----------------------------------------------+
-| TILEMATRIX    | Yes      | :ref:`See GetTile <qgisserver-wmts-gettile>`  |
-+---------------+----------+-----------------------------------------------+
-| TILEROW       | Yes      | :ref:`See GetTile <qgisserver-wmts-gettile>`  |
-+---------------+----------+-----------------------------------------------+
-| TILECOL       | Yes      | :ref:`See GetTile <qgisserver-wmts-gettile>`  |
-+---------------+----------+-----------------------------------------------+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
 
-|
+   "SERVICE", "Yes", "Name of the service (WMTS)"
+   "REQUEST", "Yes", "Name of the request (GetFeatureInfo)"
+   "LAYER", "Yes", "Layer identifier"
+   "INFOFORMAT", "No", "Output format"
+   "I", "No", "X coordinate of a pixel"
+   "J", "No", "Y coordinate of a pixel"
+   "TILEMATRIXSET", "Yes", ":ref:`See GetTile <qgisserver-wmts-gettile>`"
+   "TILEMATRIX", "Yes", ":ref:`See GetTile <qgisserver-wmts-gettile>`"
+   "TILEROW", "Yes", ":ref:`See GetTile <qgisserver-wmts-gettile>`"
+   "TILECOL", "Yes", ":ref:`See GetTile <qgisserver-wmts-gettile>`"
+
+.. only::html
+
+   |
 
 In addition to the standard ones, QGIS Server supports the following extra
 parameters:
 
 
-+---------------+----------+----------------------------------+
-| Parameter     | Required | Description                      |
-+===============+==========+==================================+
-| MAP           | Yes      | Specify the QGIS project file    |
-+---------------+----------+----------------------------------+
+.. csv-table::
+   :header: "Parameter", "Required", "Description"
+   :widths: auto
 
-|
+   "MAP", "Yes", "Specify the QGIS project file"
+
+.. only:: html
+
+   |
 
 URL example:
 

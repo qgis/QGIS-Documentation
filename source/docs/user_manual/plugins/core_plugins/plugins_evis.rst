@@ -465,31 +465,20 @@ XML format for eVis predefined queries
 
 The XML tags read by eVis
 
-+------------------+------------------------------------------------------------------------------------------------+
-| Tag              | Description                                                                                    |
-+==================+================================================================================================+
-| query            | Defines the beginning and end of a query statement.                                            |
-+------------------+------------------------------------------------------------------------------------------------+
-| shortdescription | A short description of the query that appears in the eVis drop-down menu.                      |
-+------------------+------------------------------------------------------------------------------------------------+
-| description      | A more detailed description of the query displayed in the Predefined Query text window.        |
-+------------------+------------------------------------------------------------------------------------------------+
-| databasetype     | The database type, defined in the Database Type drop-down menu in the Database Connection tab. |
-+------------------+------------------------------------------------------------------------------------------------+
-| databaseport     | The port as defined in the Port text box in the Database Connection tab.                       |
-+------------------+------------------------------------------------------------------------------------------------+
-| databasename     | The database name as defined in the Database Name text box in the Database Connection tab.     |
-+------------------+------------------------------------------------------------------------------------------------+
-| databaseusername | The database username as defined in the Username text box in the Database Connection tab.      |
-+------------------+------------------------------------------------------------------------------------------------+
-| databasepassword | The database password as defined in the Password text box in the Database Connection tab.      |
-+------------------+------------------------------------------------------------------------------------------------+
-| sqlstatement     | The SQL command.                                                                               |
-+------------------+------------------------------------------------------------------------------------------------+
-| autoconnect      | A flag ("true"" or "false") to specify if the above tags should be used to automatically       |
-|                  | connect to the database without running the database connection routine in the Database        |
-|                  | Connection tab.                                                                                |
-+------------------+------------------------------------------------------------------------------------------------+
+.. csv-table::
+   :header: "Tag", "Description"
+   :widths: 18, 77
+
+   "query", "Defines the beginning and end of a query statement."
+   "shortdescription", "A short description of the query that appears in the eVis drop-down menu."
+   "description", "A more detailed description of the query displayed in the Predefined Query text window."
+   "databasetype", "The database type, defined in the Database Type drop-down menu in the Database Connection tab."
+   "databaseport", "The port as defined in the Port text box in the Database Connection tab."
+   "databasename", "The database name as defined in the Database Name text box in the Database Connection tab."
+   "databaseusername", "The database username as defined in the Username text box in the Database Connection tab."
+   "databasepassword", "The database password as defined in the Password text box in the Database Connection tab."
+   "sqlstatement", "The SQL command."
+   "autoconnect", "A flag (""true"" or ""false"") to specify if the above tags should be used to automatically connect to the database without running the database connection routine in the Database Connection tab."                                                                                
 
 A complete sample XML file with three queries is displayed below:
 
