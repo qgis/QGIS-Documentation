@@ -493,10 +493,10 @@ Help
 ----
 
 .. csv-table::
-   :header: "Menu Option", "Shortcut"
+   :header: "Menu Option", "Shortcut", "Toolbar"
    :widths: auto
 
-   "|helpContents| :guilabel:`Help Contents`", ":kbd:`F1`"
+   "|helpContents| :guilabel:`Help Contents`", ":kbd:`F1`", ":guilabel:`Help`"
    ":guilabel:`API Documentation`"
    ":guilabel:`Report an Issue`"
    ":guilabel:`Need commercial support?`"
