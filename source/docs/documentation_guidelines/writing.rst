@@ -468,7 +468,7 @@ referencing :file:`.rst` file.
   text
 
 .. tip:: If you are on Ubuntu, you can use the following command to remove the
-  global menu function and create smaller application screens with menu's:
+  global menu function and create smaller application screens with menus:
   
   .. code-block:: bash
   
