@@ -1,17 +1,13 @@
-### Description
 <!---
 Include a few sentences describing the overall goals for this Pull Request.
---->
+ 
+A list of issues is at https://github.com/qgis/QGIS-Documentation/issues.
+Add "fix #issuenumber" for each issue the PR fixes. The ticket(s) will be closed automatically.
+If your PR doesn't fix entirely the ticket, only add the ticket(s) reference preceded by # character.
+-->
 Goal:
 
-<!---
-If your PR fixes a ticket, add `fix` in front of the ticket number. The ticket will be closed automatically.
-Add as much as needed `fix #number` if the PR closes more than one ticket.
-If your PR doesn't fix entirely the ticket, just add the ticket reference.
-The complete list of the issues is at https://github.com/qgis/QGIS-Documentation/issues.
--->
-Ticket: #
-
+Ticket(s): #
 <!---
 Indicate whether the fix should be backported to previous release.
 Replace the space between square brackets by a `x` to make it checked.
