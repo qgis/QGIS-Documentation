@@ -87,7 +87,8 @@ the :ref:`project file <sec_projects>`. It provides you with tools to:
 
 .. csv-table::
    :header: "Menu Option", "Shortcut", "Toolbar", "Reference"
-   :widths: auto
+   :widths: 30, 18, 12, 35
+   :class: longtable
 
    "|fileNew| :guilabel:`New`", ":kbd:`Ctrl+N`", ":guilabel:`Project`", ":ref:`sec_projects`"
    ":menuselection:`New from template -->`", "", "", ":ref:`sec_projects`"
@@ -277,7 +278,7 @@ or paste layer properties (style, scale, CRS...).
 
 .. csv-table::
    :header: "Menu Option", "Shortcut", "Toolbar", "Reference"
-   :widths: auto
+   :widths: 30, 18, 18, 30
    :class: longtable
 
    "|dataSourceManager| :guilabel:`Data Source Manager`", ":kbd:`Ctrl+L`", ":guilabel:`Data Source Manager`",":ref:`Opening Data <datasourcemanager>`"
@@ -354,7 +355,7 @@ are enabled.
 
 .. csv-table::
    :header: "Menu Option", "Shortcut", "Toolbar", "Reference"
-   :widths: auto
+   :widths: 30, 15, 15, 40
 
    "|coordinateCapture| :guilabel:`Coordinate Capture`", "", ":guilabel:`Vector`", ":ref:`coordcapt`"
    "|geometryChecker| :guilabel:`Check Geometries...`", "", ":guilabel:`Vector`", ":ref:`geometry_checker`"
@@ -446,7 +447,7 @@ If no web plugins are enabled, there will be no guilabel:`Web` menu.
    :header: "Menu Option", "Toolbar", "Reference"
    :widths: auto
 
-   |metasearch| :menuselection:`MetaSearch`", ":guilabel:`Web`", ":ref:`metasearch`"
+   "|metasearch| :menuselection:`MetaSearch`", ":guilabel:`Web`", ":ref:`metasearch`"
 
 .. only:: html
 
@@ -465,7 +466,7 @@ The :menuselection:`Mesh` menu provides tools needed to manipulate
    :header: "Menu Option", "Toolbar", "Reference"
    :widths: auto
 
-   |showMeshCalculator| :menuselection:`Mesh Calculator`"
+   "|showMeshCalculator| :menuselection:`Mesh Calculator`"
 
 
 
@@ -492,10 +493,10 @@ Help
 ----
 
 .. csv-table::
-   :header: "Menu Option", "Shortcut", "Reference"
+   :header: "Menu Option", "Shortcut"
    :widths: auto
 
-   "|helpContents| :guilabel:`Help Contents`", ":kbd:`F1`", ":guilabel:`Help`"
+   "|helpContents| :guilabel:`Help Contents`", ":kbd:`F1`"
    ":guilabel:`API Documentation`"
    ":guilabel:`Report an Issue`"
    ":guilabel:`Need commercial support?`"
@@ -511,7 +512,7 @@ This menu is only available under |osx| macOS and contains some OS related
 commands.
 
 .. csv-table::
-   :header: "Menu Option", "Shortcut", "Reference"
+   :header: "Menu Option", "Shortcut"
    :widths: auto
 
    ":guilabel:`Preferences`"
