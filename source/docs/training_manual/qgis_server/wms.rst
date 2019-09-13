@@ -165,7 +165,7 @@ scale so you could get a blank image as response.
 You can also play around with others parameters from above, like changing the
 returned image type to ``image/png``.
 
-|moderate| |FA| Use Filter, Opacities and Filter parameters
+|moderate| |FA| Use Filter, Opacities and Styles parameters
 -------------------------------------------------------------------------------
 
 Let's do another request that adds another layer, some of the
