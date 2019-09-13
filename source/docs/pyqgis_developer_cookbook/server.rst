@@ -29,9 +29,10 @@ Server Filter Plugins architecture
 ==================================
 
 Server python plugins are loaded once when the FCGI application starts. They
-register one or more :class:`QgsServerFilter <qgis.server.QgsServerFilter>` (from this point, you might
-find useful a quick look to the `server plugins API docs <https://qgis.org/api/group__server.html>`_).
-Each filter should implement at least one of three callbacks:
+register one or more :class:`QgsServerFilter <qgis.server.QgsServerFilter>`
+(from this point, you might find useful a quick look to the :api:`server plugins
+API docs <group__server.html>`). Each filter should implement at least one of
+three callbacks:
 
 * :meth:`requestReady() <qgis.server.QgsServerFilter.requestReady>`
 * :meth:`responseComplete() <qgis.server.QgsServerFilter.responseComplete>`

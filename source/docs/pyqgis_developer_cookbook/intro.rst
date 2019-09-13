@@ -31,9 +31,9 @@ Python application.
 
 .. index:: API
 
-There is a `complete QGIS API <https://qgis.org/api/>`_ reference that
-documents the classes from the QGIS libraries. `The Pythonic QGIS API
-(pyqgis) <https://qgis.org/pyqgis>`_ is nearly identical to the C++ API.
+There is a :api:`complete QGIS API <>` reference that
+documents the classes from the QGIS libraries. :pyqgis:`The Pythonic QGIS API
+(pyqgis) <>` is nearly identical to the C++ API.
 
 A good resource for learning how to perform common tasks is to
 download existing plugins from the

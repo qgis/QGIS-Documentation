@@ -22,7 +22,7 @@ If no replacement exists:
 #. check the documentation repository whether the icon is available in
    :file:`/static/common` folder. If no image, then you need to find and
    copy the icon image file from `QGIS repository <https://github.com/qgis/QGIS>`_
-   (often under https://github.com/qgis/QGIS/tree/master/images/themes/default folder)
+   (often under :qgissource:`images/themes/default` folder)
    and paste (in ``.png`` format) under :file:`/static/common` folder.
    For convenience and update, it's advised to keep filename when possible.
 #. create the reference to the substitution in the :file:`/source/substitutions.txt`
