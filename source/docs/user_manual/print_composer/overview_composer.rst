@@ -493,14 +493,21 @@ print layout.
 
    Layout Settings in the Print Layout
 
+.. _reference_map:
+
 General settings
 ................
 
 In a print layout, you can use more than one map item.
-The :guilabel:`Reference map` selects the map item to be used as the layout's
-master map. The layout will use this map in any
-properties and variable calculating units or scale. This includes exporting
-the print layout to georeferenced formats.
+The :guilabel:`Reference map` represents the map item to use as the layout's
+master map. It's assigned as long as there's a map item in the layout.
+The layout will use this map in any of their properties and variables
+calculating units or scale. This includes exporting the print layout to
+georeferenced formats.
+
+Likewise, the other layout items (scale bar, legend, north arrow...) are
+by default associated and bound to the reference map settings (orientation,
+layers displayed, scale...). 
 
 .. _grid_guides:
 
