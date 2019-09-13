@@ -744,8 +744,8 @@ Decorators
 Sources
 =======
 
-* `QGIS Python (PyQGIS) API <https://qgis.org/pyqgis/>`_
-* `QGIS C++ API <https://qgis.org/api/>`_
+* :pyqgis:`QGIS Python (PyQGIS) API <>`
+* :api:`QGIS C++ API <>`
 * `StackOverFlow QGIS questions <https://stackoverflow.com/questions/tagged/qgis>`_
 * `Script by Klas Karlsson <https://raw.githubusercontent.com/klakar/QGIS_resources/master/collections/Geosupportsystem/python/qgis_basemaps.py>`_
 * `Boundless lib-qgis-common repository <https://github.com/boundlessgeo/lib-qgis-commons>`_

@@ -108,7 +108,7 @@ You can create a folder :file:`processing_provider` with three files in it:
 
 * :file:`example_processing_algorithm.py` which contains the example algorithm file.
   Copy/paste the content of the script template:
-  https://github.com/qgis/QGIS/blob/release-3_4/python/plugins/processing/script/ScriptTemplate.py
+  :qgissource:`python/plugins/processing/script/ScriptTemplate.py`
 
 Now you can reload your plugin in QGIS and you should see your example script in
 the Processing toolbox and modeler.
