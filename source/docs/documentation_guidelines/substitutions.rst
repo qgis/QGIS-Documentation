@@ -483,6 +483,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |addDelimitedTextLayer| image:: /static/common/mActionAddDelimitedTextLayer.png
    :width: 1.5em
+.. |addExpression| image:: /static/common/mActionAddExpression.png
+   :width: 1.5em
 .. |addHtml| image:: /static/common/mActionAddHtml.png
    :width: 1.5em
 .. |addLayer| image:: /static/common/mActionAddLayer.png
