@@ -287,6 +287,6 @@ methods to analyze and transform vector data. Here are some links to the code
 of a few of them.
 
 * Distance and area using the :class:`QgsDistanceArea <qgis.core.QgsDistanceArea>` class:
-  :qgissource:`Distance matrix algorithm <python/plugins/processing/algs/qgis/PointDistance.py>`
-* :qgissource:`Lines to polygons algorithm <python/plugins/processing/algs/qgis/LinesToPolygons.py>`
+  :source:`Distance matrix algorithm <python/plugins/processing/algs/qgis/PointDistance.py>`
+* :source:`Lines to polygons algorithm <python/plugins/processing/algs/qgis/LinesToPolygons.py>`
 

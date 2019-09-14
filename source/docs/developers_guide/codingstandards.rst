@@ -608,7 +608,7 @@ contribution by:
   and add it to the QGIS planet https://plugins.qgis.org/planet/
 * adding their name to:
 
-  * :qgissource:`doc/CONTRIBUTORS`
-  * :qgissource:`doc/AUTHORS`
+  * :source:`doc/CONTRIBUTORS`
+  * :source:`doc/AUTHORS`
 
 

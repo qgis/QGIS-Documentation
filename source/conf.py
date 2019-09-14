@@ -116,7 +116,7 @@ intersphinx_mapping = {'pyqgis_api': ('https://qgis.org/pyqgis/{}/'.format(versi
 # alias names to a base URL and a prefix.
 extlinks = {'api': ('https://qgis.org/api/{}%s'.format(''.join([version, '/']) if version != 'testing' else ''), None),
             'pyqgis': ('https://qgis.org/pyqgis/{}/%s'.format(version if version != 'testing' else 'master'), None),
-            'qgissource': ('https://github.com/qgis/QGIS/blob/{}/%s'.format(
+            'source': ('https://github.com/qgis/QGIS/blob/{}/%s'.format(
                 ''.join(['release-', version]).replace('.', '_') if version != 'testing' else 'master'), None)
            }
 
