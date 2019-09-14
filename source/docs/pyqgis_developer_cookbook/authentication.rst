@@ -33,7 +33,7 @@ plugin and its tests. This is the first plugin that used Authentication
 infrastructure. The plugin code and its tests can be found at this
 `link <https://github.com/boundlessgeo/qgis-geoserver-plugin>`_.
 Other good code reference can be read from the authentication infrastructure
-:qgissource:`tests code <tests/src/python/test_qgsauthsystem.py>`.
+:source:`tests code <tests/src/python/test_qgsauthsystem.py>`.
 
 
 .. _Authentication_manager_glossary:
@@ -309,8 +309,8 @@ PKI examples with other data providers
 ......................................
 
 Other example can be read directly in the QGIS tests upstream as in
-:qgissource:`test_authmanager_pki_ows <tests/src/python/test_authmanager_pki_ows.py>` or
-:qgissource:`test_authmanager_pki_postgres <tests/src/python/test_authmanager_pki_postgres.py>`.
+:source:`test_authmanager_pki_ows <tests/src/python/test_authmanager_pki_ows.py>` or
+:source:`test_authmanager_pki_postgres <tests/src/python/test_authmanager_pki_postgres.py>`.
 
 
 .. _Adapt_plugins_to_use_Auth_infrastructure:
@@ -367,7 +367,7 @@ and can be used as in the following snippet:
   # GUI has to be integrated
   tabGui.insertTab( 1, gui, "Configurations" )
 
-The above example is taken from the QGIS source :qgissource:`code
+The above example is taken from the QGIS source :source:`code
 <src/providers/postgres/qgspgnewconnection.cpp#L42>`
 The second parameter of the GUI constructor refers to data provider type. The
 parameter is used to restrict the compatible :term:`Authentication Method`\s with
@@ -394,7 +394,7 @@ and can be used as in the following snippet:
  gui = QgsAuthConfigSelect( parent )
  gui.show()
 
-an integrated example can be found in the related :qgissource:`test
+an integrated example can be found in the related :source:`test
 <tests/src/python/test_qgsauthsystem.py#L80>`.
 
 .. _Authorities_Editor_GUI:
