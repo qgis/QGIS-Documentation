@@ -205,6 +205,7 @@ Icon                            Substitution                        Icon        
 |expression|                    ``|expression|``                    |dataDefineOn|                  ``|dataDefineOn|``
 |dataDefineExpressionOn|        ``|dataDefineExpressionOn|``        |dataDefineError|               ``|dataDefineError|``
 |dataDefineExpressionError|     ``|dataDefineExpressionError|``
+|addExpression|                 ``|addExpression|``
 |expressionFilter|              ``|expressionFilter|``              |filterMap|                     ``|filterMap|``
 ==============================  ==================================  ==============================  ==================================
 
