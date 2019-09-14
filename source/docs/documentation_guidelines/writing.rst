@@ -440,10 +440,12 @@ Here are some hints to create new, nice looking screenshots.
 The images should be placed in a :file:`img/` folder, in the same folder as the
 referencing :file:`.rst` file.
 
-* Same environment for all the screen caps (same OS, same decoration, same font
-  size). We have used Ubuntu with Unity and the default "ambience" theme.
-  For screenshots of QGIS main window and layouts we have set it to show menus
-  on the window (not the default in unity).
+* You can find some prepared QGIS-projects that are used to create screenshots
+  in the :file:`./qgis-projects` folder of this repository.
+  This makes it easier to reproduce screenshots for the next version of QGIS.
+  These projects use the QGIS `Sample Data <https://qgis.org/downloads/data/>`_
+  (aka Alaska Dataset), which should be placed in the same folder
+  as the QGIS-Documentation Repository.
 * Reduce the window to the minimal space needed to show the feature (taking the
   whole screen for a small modal window > overkill)
 * The less clutter, the better (no need to activate all the toolbars)
@@ -464,14 +466,9 @@ referencing :file:`.rst` file.
 * Save them in :file:`.png` (no :file:`.jpeg` artifacts)
 * The screenshot should show the content according to what is described in the
   text
-* You can find some prepared QGIS-projects that were used before to create
-  screenshots in :file:`./qgis-projects`.
-  This makes it easier to reproduce screenshots for the next version of QGIS.
-  These projects use the QGIS `Sample Data <https://qgis.org/downloads/data/>`_
-  (aka Alaska Dataset), which should be placed in the same folder
-  as the QGIS-Documentation Repository.
-* Use the following command to remove the global menu function in Ubuntu
-  to create smaller application screens with menu's:
+
+.. tip:: If you are on Ubuntu, you can use the following command to remove the
+  global menu function and create smaller application screens with menus:
   
   .. code-block:: bash
   
@@ -485,16 +482,11 @@ Here are some hints to create screenshots for your translated user guide.
 Translated images should be placed in a :file:`img/<your_language>/` folder, in
 the same folder as the referencing :file:`.rst` file.
 
-* Same environment for all the screen caps (same OS, same decoration, same font
-  size)
 * Use the QGIS projects included in QGIS-Documentation repository (in
   :file:`./qgis_projects`)
   These were used to produce the 'original' screenshots in the manual.
   The QGIS `Sample Data <https://qgis.org/downloads/data/>`_ (aka Alaska Dataset)
   should be placed in the same folder as the QGIS-Documentation Repository.
-* Same size as the english 'original' screenshots, otherwise they will be stretched
-  and look ugly. If you need to have a different size due to longer ui strings,
-  don't forget to change the dimension in the rst code of your language.
 * Same filename as the english 'original' screenshot
 * Reduce the window to the minimal space needed to show the feature (taking the
   whole screen for a small modal window > overkill)
