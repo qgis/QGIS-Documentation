@@ -3052,7 +3052,7 @@ If a buffer size is specified, the polygons will be buffered with an
 additional size in map units. This allows for the check to be more robust
 for small changes in the borders of allowed gaps.
 
-When *allowed gaps* are enabled, an additional fix *Add Allowed Gap" for
+When *allowed gaps* are enabled, an additional fix *Add Allowed Gap* for
 detected gap errors is available. If this fix is applied for a gap, a new
 polygon with the shape of the gap will be added to the *allowed gaps layer*.
 
