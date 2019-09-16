@@ -222,10 +222,10 @@ Other than the grid type, you can define:
 
 .. _Figure_layout_map_grid_draw:
 
-.. figure:: img/map_draw_grid.png
+.. figure:: img/map_grid_appearance.png
    :align: center
 
-   Draw Grid Dialog
+   Grid Appearance Dialog
 
 Grid Frame
 ..........
