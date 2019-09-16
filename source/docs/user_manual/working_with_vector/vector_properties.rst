@@ -3009,7 +3009,7 @@ Topology Checks
 ---------------
 
 In the :guilabel:`Topology checks` section, additional topology validation
-checks can be activated. Topology checks will be executed when the user 
+checks can be activated. Topology checks will be executed when the user
 saves the layer. Check errors will be reported in the geometry validation
 panel. As long as validation errors are present, the layer can not be saved.
 Topology checks are executed in the area of the bounding box of the modified
@@ -3031,8 +3031,31 @@ in the current edit session.
    * - The |checkbox| :guilabel:`Missing vertex` check will
        check for shared boundaries of neighbouring polygons
        where one border misses a vertex which is present on
-       the other one. 
+       the other one.
      - .. image:: img/missingvertexcheck.png
+
+Gap check exceptions
+....................
+
+It is possible to define areas, which are ignored in the gap check. For example,
+a land use layer may have acceptable holes for lakes.
+
+In the options for the gap checks under Allowed Gaps, an *allowed gaps layer*
+can be defined. On this additional layer, acceptable gaps are managed.
+
+--image:: img/acceptable_gaps.png
+
+Whenever the gap check is executed, any gap which is covered by a polygon
+from the *allowed gaps layer* is ignored.
+
+If a buffer size is specified, the polygons will be buffered with an
+additional size in map units. This allows for the check to be more robust
+for small changes in the borders of allowed gaps.
+
+When *allowed gaps* are enabled, an additional fix *Add Allowed Gap" for
+detected gap errors is available. If this fix is applied for a gap, a new
+polygon with the shape of the gap will be added to the *allowed gaps layer*.
+
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
