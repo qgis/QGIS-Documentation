@@ -1944,6 +1944,33 @@ wider set of color ramps and options:
 
    Quick color ramp selection widget
 
+.. index:: Font selection; Text format
+.. _font_selector:
+
+Font Selector
+--------------
+
+The :guilabel:`Font` selector widget is a convenient shortcut when you want to
+set font properties for textual information (feature labels, decoration labels,
+map legend text, ...). Clicking the drop-down arrow shows the following options:
+
+.. _figure_fontselector_widget:
+
+.. figure:: img/fontselector_widget.png
+   :align: center
+
+   Font selector drop-down menu
+
+* :guilabel:`Font Size` in the associated unit
+* :menuselection:`Recent Fonts -->` menu with the active font checked (at the top)
+* :guilabel:`Configure Format...`: same as pressing the font selector widget. It
+  opens a dialog to set text format parameters. Depending on the context, it can
+  be the OS default :guilabel:`Text format` dialog or the QGIS custom dialog
+  with advanced formatting options (opacity, orientation, buffer, background,
+  shadow, ...) as described in section :ref:`text_format`.
+* :guilabel:`Copy Format` of the text
+* and :guilabel:`Paste Format` to the text, speeding configuration.
+
 
 .. index::
    single: Rendering effects; Blending modes
