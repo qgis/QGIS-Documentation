@@ -316,7 +316,8 @@ The following code uses the @alg decorator to
 
 .. testcode:: 
 
-    from qgis.processing import alg, run
+    import processing
+    from qgis.processing import alg
     from qgis.core import QgsProject
     
     @alg(name='bufferrasteralg', label='Buffer and export to raster (alg)',
@@ -349,7 +350,7 @@ The following code uses the @alg decorator to
                                                     context)
         if feedback.isCanceled():
             return {}
-        buffer_result = run('native:buffer',
+        buffer_result = processing.run('native:buffer',
                                    {'INPUT': parameters['INPUT'],
                                     'OUTPUT': parameters['BUFFER_OUTPUT'],
                                     'DISTANCE': bufferdist,
@@ -364,7 +365,7 @@ The following code uses the @alg decorator to
                                    feedback=feedback)
         if feedback.isCanceled():
             return {}
-        rasterized_result = run('qgis:rasterize',
+        rasterized_result = processing.run('qgis:rasterize',
                                    {'LAYER': buffer_result['OUTPUT'],
                                     'EXTENT': buffer_result['OUTPUT'],
                                     'MAP_UNITS_PER_PIXEL': rastercellsize,
