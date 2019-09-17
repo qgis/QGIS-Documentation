@@ -839,7 +839,7 @@ Grid
 |transformed| :sup:`Grid` allows you to add a coordinate grid and coordinate
 annotations to the map canvas.
 
-#. Select :menuselection:`View --> Decorations --> Grid` to open the dialog.
+#. Select :menuselection:`View --> Decorations --> Grid...` to open the dialog.
 
    .. _figure_decorations_grid:
 
@@ -849,10 +849,41 @@ annotations to the map canvas.
       The Grid Dialog
 
 #. Tick |checkbox| :guilabel:`Enable grid` and set grid
-   definitions according to the layers loaded in the map canvas.
-#. Tick |checkbox| :guilabel:`Draw annotations` and set
-   annotation definitions according to the layers loaded in the map canvas.
-#. Click :guilabel:`Apply` to verify that it looks as expected or :guilabel:`OK` if you're satisfied.
+   definitions according to the layers loaded in the map canvas:
+   
+   * The :guilabel:`Grid type`: it can be :guilabel:`Line` or :guilabel:`Marker`
+   * The associated :ref:`Line symbol <vector_line_symbols>` or :ref:`marker
+     symbol <vector_marker_symbols>` used to represent the grid marks
+   * The :guilabel:`Interval X` and :guilabel:`Interval Y` between the grid
+     marks, in the map units
+   * An :guilabel:`Offset X` and :guilabel:`Offset Y` distance of the grid
+     marks from the bottom left corner of the map canvas, in map units
+   * The interval and offset parameters can be set based on the 
+     :guilabel:`Canvas Extents` or using the extent of the :guilabel:`Active
+     Raster Layer`
+#. Tick |checkbox| :guilabel:`Draw annotations` to display the coordinates of
+   the grid marks and set:
+
+   * The :guilabel:`Annotation direction`, ie how the labels would be placed
+     regarding their grid line. It can be:
+   
+     * :guilabel:`Horizontal` or :guilabel:`Vertical` for all the labels
+     * :guilabel:`Horizontal and Vertical`, ie each label is parallel to the
+       grid mark it refers to
+     * :guilabel:`Boundary direction`, ie each label follows the canvas
+       boundary, and is perpendicular to the grid mark it refers to
+   * The :guilabel:`Annotation font` using the OS :ref:`font selector widget
+     <font_selector>`
+   * The :guilabel:`Distance to map frame`, margin between annotations and map
+     canvas limits. Convenient when exporting the map canvas eg to image or
+     PDF format and avoid annotations to be on the "paper" limits.
+
+     .. Todo: Add a reference link to export map canvas to image or pdf section when done
+
+   * The :guilabel:`Coordinate precision`
+
+#. Click :guilabel:`Apply` to verify that it looks as expected or :guilabel:`OK`
+   if you're satisfied.
 
 .. index:: Copyright
 .. _copyright_decoration:
