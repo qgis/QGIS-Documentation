@@ -657,8 +657,7 @@ interface.
   throw a :class:`QgsProcessingException <qgis.core.QgsProcessingException>`.
 
 There are already many processing algorithms available in QGIS.
-You can find code on
-https://github.com/qgis/QGIS/tree/master/python/plugins/processing/algs/qgis.
+You can find code on :source:`python/plugins/processing/algs/qgis`.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
