@@ -505,9 +505,10 @@ The layout will use this map in any of their properties and variables
 calculating units or scale. This includes exporting the print layout to
 georeferenced formats.
 
-Likewise, the other layout items (scale bar, legend, north arrow...) are
-by default associated and bound to the reference map settings (orientation,
-layers displayed, scale...). 
+Moreover, new layout items such as scale bar, legend or north arrow have by
+default their settings (orientation, displayed layers, scale, ...) bound to
+the map item they are drawn over, and fall back to the reference map if no
+overlaping map.
 
 .. _grid_guides:
 
