@@ -383,6 +383,5 @@ interface.
   throw a :class:`QgsProcessingException <qgis.core.QgsProcessingException>`.
 
 There are already many processing algorithms available in QGIS.
-You can find code on
-https://github.com/qgis/QGIS/tree/release-3_4/python/plugins/processing/algs/qgis.
+You can find code on :source:`python/plugins/processing/algs/qgis`.
 

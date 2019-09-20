@@ -11,7 +11,7 @@ Algorithm tests
 ===============
 
 .. note:: The original version of these instructions is available at
-  https://github.com/qgis/QGIS/blob/master/python/plugins/processing/tests/README.md
+  :source:`python/plugins/processing/tests/README.md`
 
 QGIS provides several algorithms under the Processing framework.
 You can extend this list with algorithms of your own and, like any new feature,
@@ -261,5 +261,5 @@ Running tests locally
 
  ctest -V -R ProcessingQgisAlgorithmsTest
 
-or one of the following values listed in the `CMakelists.txt
-<https://github.com/qgis/QGIS/blob/master/python/plugins/processing/tests/CMakeLists.txt>`_
+or one of the following values listed in the :source:`CMakelists.txt
+<python/plugins/processing/tests/CMakeLists.txt>`
