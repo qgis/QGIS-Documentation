@@ -1244,6 +1244,10 @@ tools:
    Right-click in the polygon and choose it from the context menu that shows a
    list of all the polygons that contain the clicked point.
    All the overlapping features from the active layer are selected.
+   
+.. note:: Use the `Reselect Features` tool to reselect your previous selection. 
+   Very useful when you have painstakingly made a selection, and then click 
+   somewhere else accidentally and clear your selection. 
 
 While using the |selectRectangle| :guilabel:`Select Feature(s)` tool,
 holding :kbd:`Shift` or :kbd:`Ctrl` toggles whether a feature is selected
