@@ -112,7 +112,7 @@ This basic expression evaluates to 1, meaning it is true:
 .. testcode:: expr
 
    exp = QgsExpression('1 + 1 = 2')
-   assert(exp.evaluate())
+   assert(exp.evaluate()) # exp.evaluate() returns 1 that assert() recognize as True
 
 
 Expressions with features
