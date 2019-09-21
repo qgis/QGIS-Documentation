@@ -209,7 +209,7 @@ As grid type, you can specify to use a:
   intersection;
 * or *Frame and annotations only*.
 
-Other than the grid type, you can define:
+Other than the grid type, you can define: 
 
 * the :guilabel:`CRS` which could not be the same as the map item's;
 * the :guilabel:`Interval` between two consecutive grid references in ``X``
