@@ -215,7 +215,7 @@ Other than the grid type, you can define:
 * the :guilabel:`Interval` between two consecutive grid references in ``X``
   and ``Y`` directions;
 * the :guilabel:`Interval Units` to use for the grid references, in ``Map
-  units``, ``Fit Segement Width``, ``Millimeters`` or ``Centimeters`` *(`Fix Segement Width` will dynamically select the grid interval based on the map extent to a "pretty" interval)*;
+  units``, ``Millimeters``, ``Centimeters`` or ``Fit Segment Width`` *(``Fit Segment Width`` will dynamically select the grid interval based on the map extent to a "pretty" interval)*;
 * an :guilabel:`Offset` from the map item edges, in ``X`` and ``Y`` directions;
 * and the :guilabel:`Blend mode` of the grid (see :ref:`blend-modes`) when
   compatible.
