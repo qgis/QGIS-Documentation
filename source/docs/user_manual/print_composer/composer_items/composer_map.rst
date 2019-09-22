@@ -211,7 +211,7 @@ As grid type, you can specify to use a:
 
 Other than the grid type, you can define: 
 
-* the :guilabel:`CRS` which could be set differently to the project CRS;
+* the :guilabel:`CRS` which could be different from the project CRS;
 * the :guilabel:`Interval` between two consecutive grid references in ``X``
   and ``Y`` directions;
 * the :guilabel:`Interval Units` to use for the grid references, in ``Map
