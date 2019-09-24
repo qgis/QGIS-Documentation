@@ -52,7 +52,7 @@ The following code
                            QgsProcessingParameterFeatureSource,
                            QgsProcessingParameterVectorDestination,
                            QgsProcessingParameterRasterDestination)
-    import processing
+    from qgis import processing
 
 
     class ExampleProcessingAlgorithm(QgsProcessingAlgorithm):
@@ -316,7 +316,7 @@ The following code uses the @alg decorator to
 
 .. testcode:: 
 
-    import processing
+    from qgis import processing
     from qgis.processing import alg
     from qgis.core import QgsProject
     

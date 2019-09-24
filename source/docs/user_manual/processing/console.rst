@@ -43,7 +43,7 @@ with the following line:
 
 ::
 
-    >>> import processing
+    >>> from qgis import processing
 
 Now, there is basically just one (interesting) thing you can do with
 that from the console: execute an algorithm. That is done using the
@@ -370,7 +370,7 @@ smoothing the layer.
          QgsProcessingParameterFeatureSource,
          QgsProcessingParameterFeatureSink)
 
-  import processing
+  from qgis import processing
 
   class algTest(QgsProcessingAlgorithm):
       INPUT_BUFFERDIST = 'BUFFERDIST'

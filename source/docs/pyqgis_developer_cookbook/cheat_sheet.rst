@@ -666,7 +666,7 @@ Random selection
 
 .. code-block:: python
 
-    import processing
+    from qgis import processing
 
     processing.algorithmHelp("qgis:randomselection")
 
@@ -677,7 +677,7 @@ which is added to the project.
 
 .. code-block:: python
 
-    import processing
+    from qgis import processing
     result = processing.run("native:buffer", {'INPUT': layer, 'OUTPUT': 'memory:'})
     QgsProject.instance().addMapLayer(result['OUTPUT'])
 
