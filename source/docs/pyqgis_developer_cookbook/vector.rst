@@ -587,11 +587,11 @@ From an instance of :class:`QgsVectorFileWriter <qgis.core.QgsVectorFileWriter>`
   opts.layerName= 'my_new_layer_name'
   error = QgsVectorFileWriter.writeAsVectorFormat(layer=vlayer, fileName=gdb_path,options=opts) 
   if error[0] == QgsVectorFileWriter.NoError: 
-    print("success!") 
-  else: 
-    print("error")
+    print("success!")
+  else:
+    print(error)
 
-You can also convert fields to make them compatible with different formats by using the FieldValueConverter.
+You can also convert fields to make them compatible with different formats by using the  :class:`FieldValueConverter <qgis.core.QgsVectorFileWriter.FieldValueConverter>`.
 For example, to convert array variable types (e.g. in Postgres) to a text type, you can do the following:
 
 .. code-block:: python
@@ -606,7 +606,11 @@ For example, to convert array variable types (e.g. in Postgres) to a text type, 
 
     def convert(self, fieldIdxInLayer, value): 
       if fieldIdxInLayer == self.list_field_idx: 
-        return QgsListFieldFormatter().representValue( layer=vlayer,fieldIndex=self.list_field_idx,config={}, cache=None, value=value ) 
+        return QgsListFieldFormatter().representValue( layer=vlayer,
+                                                      fieldIndex=self.list_field_idx,
+                                                      config={}, 
+                                                      cache=None, 
+                                                      value=value ) 
       else: 
         return value               
 
