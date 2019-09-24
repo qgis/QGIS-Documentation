@@ -29,7 +29,7 @@ options(
         builddir='build',
         sourcedir='source',
         i18ndir='i18n',
-        resourcedir='resources',
+        resourcedir='static',
         conf='source/conf.py'
     ),
     sphinxintl=Bunch(
@@ -40,19 +40,14 @@ options(
         dest_dir="virtualenv",
         packages_to_install = [
             # Project dependencies
-            'Jinja2==2.7.2',
-            'MarkupSafe==0.18',
-            'Pygments==1.6',
-            'Sphinx==1.2',
-            'argparse==1.2.1',
-            'distribute==0.7.3',
-            'docutils==0.11',
-            'polib==1.0.3',
-            'six==1.5.2',
-            'sphinx-intl==0.9.4',
-            # pip install transifex on Windows files because of py2exe problem
-            # if you need id: pip install transifex-client==0.9
-            #'transifex-client==0.9'
+            'docutils==0.14',
+            'Jinja2==2.10',
+            'MarkupSafe==1.0',
+            'Pygments==2.3.1',
+            'Sphinx==1.6.5',
+            'sphinx-intl==0.9.9',
+            'transifex-client==0.12.5',
+            'urllib3==1.23'
             ],
         paver_command_line="virtual_env_init",
     )
@@ -83,8 +78,8 @@ def virtual_env_init():
     $ python bootstrap.py
     That will create a virtual environment to work in.
     """
-    print "virtual environment successfully bootstrapped."
-    print INSTRUCTIONS
+    print ("virtual environment successfully bootstrapped.")
+    print (INSTRUCTIONS)
 
 
 @task
@@ -94,46 +89,15 @@ def virtual_env_init():
 def clean(options):
     # all static stuff which is copied in source
     staticdir = os.path.join(options.sphinx.sourcedir, "static")
+    print (staticdir)
     if os.path.exists(staticdir):
+        print("")
         shutil.rmtree(staticdir)
     # something in i18n/pot dir creates havoc when using gettext: remove it
     potdir = os.path.join(options.sphinx.i18ndir, "pot")
     if os.path.exists(potdir):
         shutil.rmtree(potdir)
 
-
-# rm -rf i18n/*/LC_MESSAGES/docs/*/
-# rm -rf output/html/en/*
-# rm -f source/docs_conf.py*
-# rm -rf source/docs/*/
-# # all .mo files
-# find i18n/*/LC_MESSAGES/ -type f -name '*.mo' -delete
-
-# remove all resources from source/static directory
-# copy english resources from resources/en to source/static directory
-# IF we have a localized build (LANG != en) then
-# overwrite with potentially available LANG resources  by
-# copy LANG resources from resources/LANG to source/static directory
-# TODO: check if LANG != en, for now: unnessecary copy for english
-#   localizeresources: clean
-#   	@echo
-#   	@echo "Removing all static content from $(SOURCEDIR)/static."
-#   	rm -rf $(SOURCEDIR)/static
-#   	@echo "Copy 'en' (base) static content to $(SOURCEDIR)/static."
-#   	mkdir $(SOURCEDIR)/static
-#   	# historically the images for the docs sub project are not in a separate docs folder
-#   	# that is why we copy site (to site) and docs/* into root in separate steps
-#   	cp -r $(RESOURCEDIR)/en/site $(SOURCEDIR)/static
-#   	@if [ -d "$(RESOURCEDIR)/en/docs" ]; then \
-#   		cp -r $(RESOURCEDIR)/en/docs/* $(SOURCEDIR)/static; \
-#   	fi
-#   	@echo "Copy localized '$(LANG)' static content to $(SOURCEDIR)/static."
-#   	@if [ -d "$(RESOURCEDIR)/$(LANG)/site" ]; then \
-#   		cp -r $(RESOURCEDIR)/$(LANG)/site $(SOURCEDIR)/static; \
-#   	fi
-#   	@if [ -d "$(RESOURCEDIR)/$(LANG)/docs" ]; then \
-#   		cp -r $(RESOURCEDIR)/$(LANG)/docs/* $(SOURCEDIR)/static; \
-#   	fi
 
 
 @task
@@ -149,26 +113,10 @@ def setup():
     options.clean.lang = options.setup.lang
     clean()
 
-    # create an empty static dir again
-    staticdir = os.path.join(options.sphinx.sourcedir, "static")
-    os.mkdir(staticdir)
-    # copy english site resources to static dir
-    english_site_resources = os.path.join(options.sphinx.resourcedir, "en", "site")
-    if os.path.exists(english_site_resources):
-        distutils.dir_util.copy_tree(english_site_resources, os.path.join(staticdir, "site"))
-    # copy (optional) localized site resources in static dir
-    translated_site_resources = os.path.join(options.sphinx.resourcedir, options.setup.lang, "site")
-    if os.path.exists(translated_site_resources):
-        distutils.dir_util.copy_tree(translated_site_resources, os.path.join(staticdir, "site"))
-    # historically the images for the docs sub project are not in a separate 'docs' folder
-    # that is why we copy docs/* into root instead of docs to docs
-    english_docs_resources = os.path.join(options.sphinx.resourcedir, "en", "docs")
-    if os.path.exists(english_docs_resources):
-        distutils.dir_util.copy_tree(english_docs_resources, staticdir)
-    translated_docs_resources = os.path.join(options.sphinx.resourcedir, options.setup.lang, "docs")
-    if os.path.exists(translated_docs_resources):
-        distutils.dir_util.copy_tree(translated_docs_resources, staticdir)
-
+    #"Updating static content (substitution images) into $(SOURCEDIR)/static
+    print(options.sphinx.resourcedir)
+    distutils.dir_util.copy_tree(options.sphinx.resourcedir, os.path.join(options.sphinx.sourcedir,  "static"), update=1)
+    
     # we also need to set the proper sphinx binaries
     if currentos == 'win32':
         options.sphinxintl.sphinxintlbin = 'virtualenv\Scripts\sphinx-intl.exe' 
@@ -188,7 +136,8 @@ def sphinxintl(options):
     # sphinx-intl uses 'locale-dir' from conf.py
     # -c = pointing to conf.py
     # -l = language
-    sh('%s build -l %s -c %s' % (options.sphinxintl.sphinxintlbin, options.setup.lang, options.sphinx.conf))
+    #sh('%s -c %s build -l %s ' % (options.sphinxintl.sphinxintlbin, options.sphinx.conf, options.setup.lang))
+    sh('%s build -l %s ' % (options.sphinxintl.sphinxintlbin, options.setup.lang))
 
 
 @task
