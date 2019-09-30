@@ -193,86 +193,114 @@ if not already present.
 Building the Documentation using Paver
 ======================================
 
-Paver is a python based Make-like tool (http://paver.readthedocs.io/en/latest/)
+`Paver <https://pypi.org/project/Paver/>`_ is a Python based Make-like tool.
+It can be used on Linux and Windows (somebody can test on macOS?)
 
-Paver can be used on Linux and Windows (somebody can test on OSX?)
+There are two scripts available in the repository:
 
-There are two scripts available:
+- ``bootstrap.py`` (for setting up the python related stuff)
+- ``pavement.py`` (the config file for Paver that generates the bootstrap file)
 
-- bootstrap.py (for setting up the python related stuff)
-- pavement.py (the config file for Paver)
-
+.. note:: QGIS-Documentation is based on Python 3. Depending on the flavor
+ of your OS, you may need to replace ``python`` with ``python3`` in the
+ following code samples.
+ 
 General use:
 
-.. code-block:: bash
+#. First, install Paver (see https://pypi.org/project/Paver/#files)
+#. Move to the QGIS-Documentation root folder
 
-    # first let bootstrap.py install all stuff
-    python bootstrap.py
+   .. code-block:: bash
 
-    # if the script is complaining about easysetup missing:
-    # download: http://setuptools.readthedocs.io/en/latest/easy_install.html
-    # and install that first:
-    python ez_setup.py
+     cd path/to/QGIS-Documentation
 
-    # after succesfull running of bootstrap.py you have all wheels on place,
-    # the script has created a virtual environment (called "virtualenv")
-    # with all Sphinx related python machinery. Now you just need to:
-    # 1) activate the virtual environment with all Sphinx related python machinery
-    # 2) run the actual script to build the documentation
+#. Use the ``bootstrap.py`` file to install all stuff.
 
-    # To go into the virtual environment:
-    # on Windows:
-    virtualenv\Scripts\activate
-    # on Linux:
-    source virtualenv/bin/activate
+   .. code-block:: bash
 
-    # now build :) (make sure that you are in the QGIS-Documentation root folder)
-    # eg english only (for testing, only QGIS stable is being translated)
-    paver html
+     python bootstrap.py
 
-To be able to build localized versions of the Documentation with paver the
-'Transifex-client (tx)' is needed.
+   .. I'm commenting this yet. easy_install is deprecated and we should not
+      advise its use. 
+      
+      If the script is complaining about easysetup missing:
+    
+      #. download: http://setuptools.readthedocs.io/en/latest/easy_install.html
+      #. and install that first:
 
-On linux, install with:
+         .. code-block:: bash
 
-.. code-block:: bash
+         python ez_setup.py
 
-  pip install transifex-client==0.12
+   After succesfull running of bootstrap.py you have all wheels on place,
+   the script has created a virtual environment (a folder called "virtualenv")
+   with all Sphinx related python machinery.
 
-On Windows, you should download it from: http://files.transifex.com/transifex-client/0.10/tx.exe
-see http://support.transifex.com/customer/portal/articles/998120-client-on-windows
+#. Now you need to activate the virtual environment with all Sphinx related
+   python machinery. To go into the virtual environment:
 
-To make tx.exe usable in the paver script, either put it IN this directory
-next to the pavement.py file, OR add it to your PATH
+   .. code-block:: bash
 
-IMPORTANT: to be able to pull from transifex.com, you will need a credentials file.
-This file should be named: ``.transifexrc`` and easiest is to put it in your home dir C:\\users\\you.
-Another option is to put it in the root of this project, but be carefull to not put your credentials in Github :-)
+      # on Windows:
+      virtualenv\Scripts\activate
+      # on Linux:
+      source virtualenv/bin/activate   
 
-The file should contain this::
+#. Run the actual script to build the documentation
+   (Make sure that you are in the QGIS-Documentation root folder):
+      
+   .. code-block:: bash
 
-  [https://www.transifex.com]
-  hostname = https://www.transifex.com
-  password = yourtransifexpassword
-  token =
-  username = yourtransifexusername
+      # english only
+      paver html
 
-With a working tx and a .transifexrc, you should be able to build
-for example the german version of docs via:
+   A ``build`` folder is now added in the repository, and under a ``html/en`` sub-folder,
+   you'll find all the necessary html files of the docs.
+#. To be able to build localized versions of the Documentation with paver the
+   `Transifex-client (tx) <https://docs.transifex.com/client/installing-the-client>`_
+   is needed. Remember that only QGIS stable branch is being translated.
 
-.. code-block:: bash
+   #. Install with:
 
- # german:
- paver html -l de
+      .. code-block:: bash
 
-During the build you will see this command:
+       pip install transifex-client
 
-.. code-block:: bash
+      On Windows, you can also download it from:
+      https://github.com/transifex/transifex-client/releases/download/0.13.6/tx.py36.x64.exe
+      Then, to make ``tx.exe`` usable in the paver script, either put it IN this directory
+      next to the ``pavement.py`` file, OR add it to your PATH.
 
- tx pull --minimum-perc=1 --skip -f -l de
+   #. **IMPORTANT**: To be able to pull from transifex.com, you will need a credentials file.
+      This file should be named: ``.transifexrc`` and easiest is to put it in your home dir
+      (eg, on Windows, C:\\users\\you).
+      Another option is to put it in the root of this project, but be careful to not put your
+      credentials in Github :-)
 
-This will pull all german po files from transifex (based on the
-.tx/config file in the root of this project)
+      The file should contain this::
+
+       [https://www.transifex.com]
+       hostname = https://www.transifex.com
+       password = yourtransifexpassword
+       token =
+       username = yourtransifexusername
+
+   #. With a working tx and a .transifexrc, you should be able to build
+      for example the german version of docs via:
+
+      .. code-block:: bash
+
+       # german:
+       paver html -l de
+
+      During the build you will see this command:
+
+      .. code-block:: bash
+
+       tx pull --minimum-perc=1 --skip -f -l de
+
+      This will pull all german po files from transifex (based on the
+      .tx/config file in the root of this project)
 
 
 Testing Python snippets
