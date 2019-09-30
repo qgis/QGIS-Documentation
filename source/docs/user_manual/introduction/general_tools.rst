@@ -1972,6 +1972,44 @@ map legend text, ...). Clicking the drop-down arrow shows the following options:
 * and :guilabel:`Paste Format` to the text, speeding configuration.
 
 
+.. index:: Unit selection; Map scale
+.. _unit_selector:
+
+Unit Selector
+--------------
+
+Properties of the items (labels, symbols, layout elements...) in QGIS are not
+necessarily bound to either the project units or a particular layer units.
+For a large set of properties, the :guilabel:`Unit` selector drop-down menu
+allows you to tweak their value according to the rendering you want (based on
+screen resolution, paper size, or the terrain). Available units are:
+
+* :guilabel:`Millimeters`
+* :guilabel:`Points`
+* :guilabel:`Pixels`
+* :guilabel:`Meters at Scale`: Converts the value in the current map units
+  (that can be inches, degrees, feet... based on the project CRS) to meters
+* :guilabel:`Map Units`: The size is scaled according to the map view scale.
+  Because this can lead to too big or too small values, use the |options| button
+  next to the entry to constrain the size to apply in a range of values based on:
+  
+  * The :guilabel:`Minimum scale` and the :guilabel:`Maximum scale`: The value
+    is scaled based on the map view scale until you reach any of these scale limits.
+    Out of the range of scale, the value at the nearest scale limit is kept. 
+  * and/or The :guilabel:`Minimum size` and the :guilabel:`Maximum size` in ``mm``:
+    The value is scaled based on the map view scale until it reaches any of these
+    limits; Then the limit size is kept.
+
+  .. _figure_adjust_scaling_units:
+
+  .. figure:: img/adjust_scaling.png
+     :align: center
+
+     Adjust scaling range dialog  
+
+* and :guilabel:`Inches`
+
+
 .. index::
    single: Rendering effects; Blending modes
 .. _blend-modes:
