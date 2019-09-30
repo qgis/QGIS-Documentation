@@ -205,17 +205,33 @@ map canvas using the :guilabel:`Blend mode` (see :ref:`blend-modes`).
 Shadow tab
 ----------
 
-Use the |labelshadow| :guilabel:`Shadow` tab for a user-defined :guilabel:`Draw
-drop shadow`. The drawing of the background is very variable.
-Choose between 'Lowest label component', 'Text', 'Buffer' and 'Background'.
-The :guilabel:`Offset` angle depends on the orientation
-of the label. If you choose the |checkbox| :guilabel:`Use global shadow` checkbox,
-then the zero point of the angle is
-always oriented to the north and doesn't depend on the orientation of the label.
-You can influence the appearance of the shadow with the :guilabel:`Blur radius`.
-The higher the number, the softer the shadows. The appearance of the drop shadow
-can also be altered by choosing a blend mode.
+.. _figure_textsettings_shadow:
 
+.. figure:: img/textsettings_shadow.png
+   :align: center
+
+   Text settings - Shadow tab
+
+To add a shadow below the text, enable the |labelshadow| :guilabel:`Shadow`
+tab and activate the |checkbox| :guilabel:`Draw drop shadow`. Then:
+
+* Indicate the item used to generate the shadow with :guilabel:`Draw under`.
+  It can be the :guilabel:`Lowest label component` or a particular
+  component such as the :guilabel:`Text` itself, the :guilabel:`Buffer` or
+  the :guilabel:`Background`.
+* Set the shadow's :guilabel:`Offset` from the item being shadowded, ie:
+
+  * The angle: clockwise, it depends on the underlying item orientation
+  * The distance of offset from the item being shadowded
+  * The units of the offset
+
+  If you tick the |checkbox| :guilabel:`Use global shadow` checkbox,
+  then the zero point of the angle is always oriented to the north and
+  doesn't depend on the orientation of the label's item.
+
+* You can influence the appearance of the shadow with the :guilabel:`Blur
+  radius`. The higher the number, the softer the shadows, in the units of
+  your choice.
 
 .. comment FIXME: at the moment there is an error in this setting
 
@@ -233,6 +249,14 @@ can also be altered by choosing a blend mode.
    Apparently, there is an error with re-painting the opaque pixels back over
    top of the shadow (depending upon the shadow's color), when that setting is
    used.
+
+* Define the shadow's :guilabel:`Opacity`
+* Rescale the shadow's size based on the label's using the :guilabel:`Scale`
+  factor
+* Choose the shadow's :guilabel:`Color`
+* Use the :guilabel:`Blend mode` option to determine how your label's shadow
+  will mix with the map components below them (more details at
+  :ref:`blend-modes`).
 
 .. _labels_placement:
 
