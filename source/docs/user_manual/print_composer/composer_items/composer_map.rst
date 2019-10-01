@@ -216,6 +216,7 @@ Other than the grid type, you can define:
   and ``Y`` directions;
 * the :guilabel:`Interval Units` to use for the grid references, in ``Map
   units``, ``Millimeters`` or ``Centimeters``;
+* an :guilabel:`Offset` from the map item edges, in ``X`` and ``Y`` directions;
 * and the :guilabel:`Blend mode` of the grid (see :ref:`blend-modes`) when
   compatible.
 
