@@ -769,9 +769,10 @@ Spatial Bookmarks
 -----------------
 
 Spatial Bookmarks allow you to "bookmark" a geographic location and return to
-it later. By default, bookmarks are saved on the computer, meaning that they are available
-from any project in the same computer. If you wish to store the bookmark in the project
-file (:file:`.qgs`) then you can do this by selecting the :guilabel:`In Project` checkbox.
+it later. By default, bookmarks are saved on the computer (as :guilabel:`User
+Bookmarks`), meaning that they are available from any project of the same
+user profile. They can also be saved for a single project (named
+:guilabel:`Project Bookmarks`) and stored within the project file.
 
 Creating a Bookmark
 ...................
@@ -779,12 +780,25 @@ Creating a Bookmark
 To create a bookmark:
 
 #. Zoom or pan to the area of interest.
-#. Select the menu option :menuselection:`View --> New Bookmark` or press
-   :kbd:`Ctrl+B`. The :guilabel:`Spatial Bookmarks` panel opens with the newly
-   created bookmark.
-#. Enter a descriptive name for the bookmark (up to 255 characters).
-#. Check the :guilabel:`In Project` box if you wish to save the bookmark in the project file.
-#. Press :kbd:`Enter` to add the bookmark or click elsewhere.
+#. Select the menu option :menuselection:`View --> New Spatial Bookmark...` or
+   press :kbd:`Ctrl+B`. The :guilabel:`Bookmark Editor` dialog opens.
+
+   .. _figure_create_bookmarks:
+
+   .. figure:: img/bookmark_editor.png
+      :align: center
+
+      The Bookmark Editor Dialog
+
+#. Enter a descriptive name for the bookmark
+#. Enter or select a group name in which to store related bookmarks
+#. Select the extent of the area you wish to save, using the extent selector;
+   the extent can be calculated from a loaded layer extent, the current map
+   canvas or drawn over the current map canvas.
+#. Indicate the :guilabel:`CRS` to use for the extent
+#. Select whether the bookmark will be :guilabel:`Saved in` :guilabel:`User
+   Bookmarks` or :guilabel:`Project Bookmarks`
+#. Press :guilabel:`Save` to add the bookmark to the list
 
 Note that you can have multiple bookmarks with the same name.
 
