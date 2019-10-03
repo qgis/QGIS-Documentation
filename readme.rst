@@ -14,24 +14,25 @@ Introduction
 This repository is meant to write and manage the Official Documentation of
 `QGIS <https://qgis.org>`_, an Open Source GIS Software.
 
-Latest stable documentation is on http://docs.qgis.org/3.4 and its PDF versions
-are available at http://docs.qgis.org/3.4/pdf.
+Latest stable documentation is on https://docs.qgis.org/3.4 and its PDF versions
+are available at https://docs.qgis.org/3.4/pdf.
 
 The ongoing work for future releases is published as QGIS Testing Documentation.
 It's built from the ``master`` branch and NOT translated. QGIS Testing Documentation
-is on http://docs.qgis.org/testing and http://docs.qgis.org/testing/pdf/
+is on https://docs.qgis.org/testing and https://docs.qgis.org/testing/pdf/
 
 Previous releases are also available:
 
-- QGIS 2.18 docs http://docs.qgis.org/2.18 and http://docs.qgis.org/2.18/pdf/
-- QGIS 2.14 docs http://docs.qgis.org/2.14 and http://docs.qgis.org/2.14/pdf/
-- QGIS 2.6 docs http://docs.qgis.org/2.6 and http://docs.qgis.org/2.6/pdf/
-- QGIS 2.2 docs http://docs.qgis.org/2.2 and http://docs.qgis.org/2.2/pdf/
-- QGIS 2.0 docs http://docs.qgis.org/2.0 and http://docs.qgis.org/2.0/pdf/
-- QGIS 1.8 docs http://docs.qgis.org/1.8 and http://docs.qgis.org/1.8/pdf/
+- QGIS 2.18 docs https://docs.qgis.org/2.18 and https://docs.qgis.org/2.18/pdf/
+- QGIS 2.14 docs https://docs.qgis.org/2.14 and https://docs.qgis.org/2.14/pdf/
+- QGIS 2.8 docs https://docs.qgis.org/2.8 and https://docs.qgis.org/2.8/pdf/
+- QGIS 2.6 docs https://docs.qgis.org/QGIS-Documentation-2.6/live/html/en/docs/index.html
+- QGIS 2.2 docs https://docs.qgis.org/QGIS-Documentation-2.2/live/html/en/docs/index.html	
+- QGIS 2.0 docs https://docs.qgis.org/QGIS-Documentation-2.0/live/html/en/docs/index.html	
+- QGIS 1.8 docs https://docs.qgis.org/QGIS-Documentation-1.8/live/html/en/docs/index.html
 
 Translations of released docs are also available via the docs.qgis.org language path:
-for example for the 3.4 German language: http://docs.qgis.org/3.4/de.
+for example for the 3.4 German language: https://docs.qgis.org/3.4/de.
 Note that only the current stable branch is available for translation.
 
 Documentation is static generated website using Sphinx (http://sphinx-doc.org/),
