@@ -408,7 +408,7 @@ in :ref:`layout_items` chapter.
  |label| :guilabel:`Add Label`                       :guilabel:`Toolbox`        :ref:`layout_label_item`
  |addLegend| :guilabel:`Add Legend`                  :guilabel:`Toolbox`        :ref:`layout_legend_item`
  |scaleBar| :guilabel:`Add Scale Bar`                :guilabel:`Toolbox`        :ref:`layout_scalebar_item`
- |NorthArrow| :guilabel:`Add North Arrow`            :guilabel:`Toolbox`        :ref:`layout_north_arrow_item`
+ |addNorthArrow| :guilabel:`Add North Arrow`         :guilabel:`Toolbox`        :ref:`layout_picture_item`
  |addBasicShape| :menuselection:`Add Shape -->`      :guilabel:`Toolbox`        :ref:`layout_basic_shape_item`
  |addArrow| :guilabel:`Add Arrow`                    :guilabel:`Toolbox`        :ref:`layout_arrow_item`
  |addNodesShape| :menuselection:`Add Node Item -->`  :guilabel:`Toolbox`        :ref:`layout_node_based_shape_item`
