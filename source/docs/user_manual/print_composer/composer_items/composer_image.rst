@@ -26,7 +26,6 @@ By default, the picture item is a blank frame that you can customize using its
 .. figure:: img/image_mainproperties.png
    :align: center
 
-   
    Picture Item Properties panel
 
 
