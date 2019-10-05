@@ -5,8 +5,8 @@
 .. index:: Image, Picture, Layout; Image item, Layout; North arrow
 .. _layout_picture_item:
 
-The Picture Item
-================
+The Picture and the North Arrow Items
+=====================================
 
 The :guilabel:`Picture` item is a tool that helps decorate your map with
 pictures, logos... It's also the one that provides the in-built north arrows.
@@ -26,6 +26,7 @@ By default, the picture item is a blank frame that you can customize using its
 .. figure:: img/image_mainproperties.png
    :align: center
 
+   
    Picture Item Properties panel
 
 
@@ -99,6 +100,10 @@ is a convenient feature for north arrows that you can align with either:
 
 You can also apply a declination :guilabel:`Offset` to the picture rotation.
 
+North Arrows
+------------
+You can use the |northArrow| :sup:`Add North Arrow`  shortcut directly from the Toolbox in the print layout and you can pimp it as a :guilabel:`Picture` item as described above (see also figure_layout_image_).
+   
 .. note::
 
    Many of the north arrows do not have an 'N' added in the north arrow, this is
@@ -124,5 +129,7 @@ You can also apply a declination :guilabel:`Offset` to the picture rotation.
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
+   :width: 1.5em
+.. |northArrow| image:: /static/common/north_arrow.png
    :width: 1.5em
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
