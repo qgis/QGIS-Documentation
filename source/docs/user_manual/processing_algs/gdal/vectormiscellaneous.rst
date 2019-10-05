@@ -101,6 +101,8 @@ Parameters
   Default: *0*
 
 ``Assign an output CRS`` [crs]
+  Optional
+
   Defines the output CRS of the database table.
 
 ``Reproject to this CRS on output`` [crs]
