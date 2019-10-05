@@ -1245,7 +1245,7 @@ tools:
    list of all the polygons that contain the clicked point.
    All the overlapping features from the active layer are selected.
    
-.. note:: Use the `Reselect Features` tool to reselect your previous selection. 
+.. tip:: Use the `Reselect Features` tool to reselect your previous selection. 
    Very useful when you have painstakingly made a selection, and then click 
    somewhere else accidentally and clear your selection. 
 
