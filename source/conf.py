@@ -123,6 +123,10 @@ html_theme = 'basic'
 html_theme_options = {
 }
 
+html_context = {
+    'outdated': False
+}
+
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
 

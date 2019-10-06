@@ -147,7 +147,9 @@ http://stackoverflow.com/questions/13209597/override-html-page-template-for-a-sp
         </div>
       </div>
     </div>
-    {{ outdated() }}
+    {%- if outdated %}
+      {{ outdated_block() }}
+    {%- endif %}
   </div>
 {% endmacro %}
 
