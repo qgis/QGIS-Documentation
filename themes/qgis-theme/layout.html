@@ -31,7 +31,12 @@
 {%- endmacro %}
 
 {%- macro relbar() %}
-    <div class="related">
+    {%- if outdated %}
+      {%- set navigation_classes = "related related-outdated" %}
+    {%- else %}
+      {%- set navigation_classes = "related" %}
+    {%- endif %}
+    <div class="{{ navigation_classes }}">
       {# QGIS hide this # navigation h3 #} 
       {#<h3>{{ _('Navigation') }}</h3>#}
       <ul>
