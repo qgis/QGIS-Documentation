@@ -517,7 +517,7 @@ following instructions at :ref:`general_saveas`. You would need to select
 :guilabel:`Layer name`.
 
 Also, you can select ``SQLite`` as format and then add ``SPATIALITE=YES`` in the
-:guilabel:`Custom Options --> Data source` field. This tells GDAL to create
+:menuselection:`Custom Options --> Data source` field. This tells GDAL to create
 a SpatiaLite database. See also https://gdal.org/drivers/vector/sqlite.html.
 
 QGIS also supports editable views in SpatiaLite. For SpatiaLite data management,
