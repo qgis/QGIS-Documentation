@@ -262,7 +262,7 @@ enabled service like a WMS or WFS or to a DB connection.
 
     In [19]: authM = QgsApplication.authManager()
     In [20]: authM.authMethod("Identity-Cert").supportedDataProviders()
-    Out[20]: [u'ows', u'wfs', u'wcs', u'wms', u'postgres']
+    Out[20]: ['ows', 'wfs', 'wcs', 'wms', 'postgres']
 
 For example, to access a WMS service using stored credentials identified with
 ``authcfg = 'fm1s770'``, we just have to use the ``authcfg`` in the data source
