@@ -209,14 +209,17 @@ As grid type, you can specify to use a:
   intersection;
 * or *Frame and annotations only*.
 
-Other than the grid type, you can define:
+Other than the grid type, you can define: 
 
-* the :guilabel:`CRS` which could not be the same as the map item's;
+* the :guilabel:`CRS` which could be different from the project CRS;
+* the :guilabel:`Interval units` to use for the grid references, in ``Map
+  Unit``, ``Fit Segment Width``, ``Millimeter`` or ``Centimeter``;
 * the :guilabel:`Interval` between two consecutive grid references in ``X``
   and ``Y`` directions;
-* the :guilabel:`Interval Units` to use for the grid references, in ``Map
-  units``, ``Millimeters`` or ``Centimeters``;
-* an :guilabel:`Offset` from the map item edges, in ``X`` and ``Y`` directions;
+* choosing ``Fit Segment Width`` will dynamically select the grid interval based 
+  on the map extent to a "pretty" interval. When selected, the ``Minimum`` and 
+  ``Maximum`` intervals can be set;
+* the :guilabel:`Offset` from the map item edges, in the ``X`` and/or the ``Y`` direction;
 * and the :guilabel:`Blend mode` of the grid (see :ref:`blend-modes`) when
   compatible.
 
