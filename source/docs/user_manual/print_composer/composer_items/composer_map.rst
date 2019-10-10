@@ -216,7 +216,7 @@ Other than the grid type, you can define:
   Unit``, ``Fit Segment Width``, ``Millimeter`` or ``Centimeter``;
 * the :guilabel:`Interval` between two consecutive grid references in ``X``
   and ``Y`` directions;
-* choosing ``Fix Segment Width`` will dynamically select the grid interval based 
+* choosing ``Fit Segment Width`` will dynamically select the grid interval based 
   on the map extent to a "pretty" interval. When selected, the ``Minimum`` and 
   ``Maximum`` intervals can be set;
 * the :guilabel:`Offset` from the map item edges, in the ``X`` and/or the ``Y`` direction;
