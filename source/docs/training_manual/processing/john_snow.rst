@@ -10,13 +10,13 @@ First analysis example
 
 Now that everything is configured and we can use external algorithms, we have a very powerful tool to perform spatial analysis. It is time to work out a larger exercise with some real--world data. 
 
-We will be using the well-known dataset that John Snow used in 1854, in his groundbreaking work (http://en.wikipedia.org/wiki/John_Snow_%28physician%29), and we will get some interesting results. The analysis of this dataset is pretty obvious and there is no need for sofisticated GIS techniques to end up with good results and conclusions, but it is a good way of showing how these spatial problems can be analyzed and solved by using different processing tools.
+We will be using the well-known dataset that John Snow used in 1854, in his groundbreaking work (http://en.wikipedia.org/wiki/John_Snow_%28physician%29), and we will get some interesting results. The analysis of this dataset is pretty obvious and there is no need for sophisticated GIS techniques to end up with good results and conclusions, but it is a good way of showing how these spatial problems can be analyzed and solved by using different processing tools.
 
 The dataset contains shapefiles with cholera deaths and pump locations, and an OSM rendered map in TIFF format. Open the corresponding QGIS project for this lesson.
 
 .. image:: img/john_snow/project.png
 
-The first thing to do is to calculting the Voronoi diagram (a.k.a. Thyessen polygons) of the pumps layer, to get the influence zone of each pump. The *Voronoi Diagram* algorithm can be used for that.
+The first thing to do is to calculating the Voronoi diagram (a.k.a. Thyessen polygons) of the pumps layer, to get the influence zone of each pump. The *Voronoi Diagram* algorithm can be used for that.
 
 
 .. image:: img/john_snow/voronoi.png
@@ -27,7 +27,7 @@ Pretty easy, but it will already give us interesting information.
 
 Clearly, most cases are within one of the polygons
 
-To get a more quantitative result, we can count the number of deaths in each polygon. Since each point represents a building where deaths occured, and the number of deaths is stored in an attribute, we cannot just count the points. We need a weighted count, so we will use the *Count points in polygon (weighted)* tool.
+To get a more quantitative result, we can count the number of deaths in each polygon. Since each point represents a building where deaths occurred, and the number of deaths is stored in an attribute, we cannot just count the points. We need a weighted count, so we will use the *Count points in polygon (weighted)* tool.
 
 .. image:: img/john_snow/pointsinpoly.png
 
