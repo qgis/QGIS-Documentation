@@ -106,12 +106,12 @@ It's far better to use the ``sphinx-build`` command so it only builds the parts 
 changed. This ensures a very short build time (several seconds). Pay attention that if you add images in the
 ``resources`` directory they won't be copied  into the ``static`` directory if you don't use the ``make``
 command. This means that your ``sphinx-build`` command won't find the new images. If you still want to build
-fast you should copy the new images from ``resources`` to their correspondant location under ``static``.
+fast you should copy the new images from ``resources`` to their corresponding location under ``static``.
 Keep in mind that different options of the ``make`` command (presented down the page) are outputting different
 ``sphinx-build`` commands.
 
 You should also be aware that the ``make ..`` commands are made for production purposes which translates that
-the build will stop at the first inconsitency because of the ``sphinx-build -nW ..`` command. You should drop
+the build will stop at the first inconsistency because of the ``sphinx-build -nW ..`` command. You should drop
 the ``-W`` option if you want your build to fully complete (with warnings of course)
 (e.g. ``sphinx-build -n -b html -d output/doctrees  -D language=en -A language=en source output/html/en``).
 
@@ -233,7 +233,7 @@ General use:
 
          python ez_setup.py
 
-   After succesfull running of bootstrap.py you have all wheels on place,
+   After successful running of bootstrap.py you have all wheels on place,
    the script has created a virtual environment (a folder called "virtualenv")
    with all Sphinx related python machinery.
 
