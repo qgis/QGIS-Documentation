@@ -349,6 +349,15 @@ Some examples:
                  $currentfeature, 'layer2_id') ) )
            ) 
 
+  -- Create a nice radial effect of points surrounding the central feature
+  -- point when used as a MultiPoint geometry generator
+  collect_geometries(
+    array_foreach(
+      generate_series( 0, 330, 30 ),
+        project( $geometry, .2, radians( @element ) )
+    )
+  )
+
 .. _vector_field_marker:
 
 The Vector Field Marker
