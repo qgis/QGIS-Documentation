@@ -51,7 +51,7 @@ Accessor Functions
 ------------------
 
 
-Class member values should be obtained through accesssor functions. The
+Class member values should be obtained through accessor functions. The
 function should be named without a get prefix. Accessor functions for the
 two private members above would be:
 
@@ -299,7 +299,7 @@ Qt Signals and Slots
 ====================
 
 All signal/slot connects should be made using the "new style" connects available
-in Qt5. Futher information on this requirement is available in
+in Qt5. Further information on this requirement is available in
 `QEP #77 <https://github.com/qgis/QGIS-Enhancement-Proposals/issues/77>`_.
 
 Avoid use of Qt auto connect slots (i.e. those named

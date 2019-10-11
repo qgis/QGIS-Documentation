@@ -25,7 +25,7 @@ the details:
   programming advocates suggest that the code should not even be written yet
   when you start building your tests, and then as you implement your code you can
   immediately validate each new functional part you add with your test. In
-  practive you will probably need to write tests for pre-existing code in QGIS
+  practice you will probably need to write tests for pre-existing code in QGIS
   since we are starting with a testing framework well after much application
   logic has already been implemented.
 
@@ -119,8 +119,8 @@ in whatever headers you may need:
   #include <qgsapplication.h>
 
 Since we are combining both class declaration and implementation in a single
-file the class declaration comes next. We start with our doxygen documentation.
-Every test case should be properly documented. We use the doxygen ingroup
+file the class declaration comes next. We start with our Doxygen documentation.
+Every test case should be properly documented. We use the Doxygen ingroup
 directive so that all the UnitTests appear as a module in the generated Doxygen
 documentation. After that comes a short description of the unit test and
 the class must inherit from QObject and include the Q_OBJECT macro.
@@ -163,13 +163,13 @@ first case I want to generally test the various parts of the class are working,
 I can use a functional testing approach. Once again, extreme programmers
 would advocate writing these tests before implementing the class. Then as
 you work your way through your class implementation you iteratively run your
-unit tests. More and more test functions should complete sucessfully as your
+unit tests. More and more test functions should complete successfully as your
 class implementation work progresses, and when the whole unit test passes, your
 new class is done and is now complete with a repeatable way to validate it.
 
 Typically your unit tests would only cover the public API of your class,
 and normally you do not need to write tests for accessors and mutators. If it
-should happen that an acccessor or mutator is not working as expected you would
+should happen that an accessor or mutator is not working as expected you would
 normally implement a regression test to check for this (see lower down).
 
 .. code-block:: cpp
@@ -191,8 +191,8 @@ recently received a report by email that the cell count by rasters was off by
 test dataset (a 10x10 raster). Then I ran the test and ran it, verifying that
 it did indeed fail (the cell count was 99 instead of 100). Then I went to fix
 the bug and reran the unit test and the regression test passed. I committed the
-regression test along with the bug fix. Now if anybody breakes this in the
-source code again in the future, we can immediatly identify that the code has
+regression test along with the bug fix. Now if anybody breaks this in the
+source code again in the future, we can immediately identify that the code has
 regressed. Better yet before committing any changes in the future, running our
 tests will ensure our changes don't have unexpected side effects - like breaking
 existing functionality.
@@ -347,7 +347,7 @@ add to our test class:
   #include "testqgsrasterlayer.moc"
 
 The purpose of these two lines is to signal to Qt's moc that his is a QtTest
-(it will generate a main method that in turn calls each test funtion.The last
+(it will generate a main method that in turn calls each test function.The last
 line is the include for the MOC generated sources. You should replace
 'testqgsrasterlayer' with the name of your class in lower case.
 

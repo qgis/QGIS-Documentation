@@ -141,7 +141,7 @@ Purpose
 The complexity of the QGIS source code has increased considerably during the
 last years. Therefore it is hard to anticipate the side effects that the
 addition of a feature will have. In the past, the QGIS project had very long
-release cycles because it was a lot of work to reetablish the stability of the
+release cycles because it was a lot of work to reestablish the stability of the
 software system after new features were added. To overcome these problems, QGIS
 switched to a development model where new features are coded in GIT branches
 first and merged to master (the main branch) when they are finished and stable.
@@ -266,7 +266,7 @@ repository as soon as your pull request is merged:
   
 * ``[needs-docs]`` to instruct doc writers to please add some extra documentation
   after a fix or addition to an already existing functionality.
-* ``[feature]`` in case of new functionnality. Filling a good description in your
+* ``[feature]`` in case of new functionality. Filling a good description in your
   PR will be a good start.
 
 Please devs use these labels (case insensitive) so doc writers have issues to
