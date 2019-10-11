@@ -48,7 +48,7 @@ small.
 
 Two different tools are currently used to do translations in QGIS:
 
-* the Transifex web platform, the easiest and recommanded way to translate QGIS,
+* the Transifex web platform, the easiest and recommended way to translate QGIS,
   transparently does the process described above and pulls all the translatable
   texts in one place for the translator. He then just picks the files he wants
   and does the translation
@@ -229,7 +229,7 @@ identifier!
 In this case ``load_core_plugin`` is a unique reference identifier placed before
 an rst item that has a caption. The ref statement will be replaced with the text
 of the header and turned into a hyperlink. When the header this reference is
-refering to is translated, all references to this header will be automatically
+referring to is translated, all references to this header will be automatically
 translated as well.
 
 The next item contains the rst-tag ``:menuselection:`` followed by text
@@ -315,7 +315,7 @@ Summary Rules for translation
    ``:sup:``, ``:guilabel:`` and ``:menuselection:`` tags.
    Check if/how it is translated in the QGIS Application. Do not change the tag itself.
 #. Text between double stars and double quotes often indicate values or
-   fieldnames, sometimes they need translation sometimes not.
+   field names, sometimes they need translation sometimes not.
 #. Be aware to use exactly the same (number of) special characters of the source
    text such as `````, ``````, ``*``, ``**``, ``::``. These contribute to the
    cosmetics of the information provided

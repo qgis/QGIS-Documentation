@@ -368,7 +368,7 @@ advised to use this latter tag as it's easier to fulfill them.
 
    .. index:: WMS, WFS, Loading layers
 
-It's also recommanded to use index parameters such as ``single``, ``pair``,
+It's also recommended to use index parameters such as ``single``, ``pair``,
 ``see``... in order to build a more structured and interconnected table of index.
 See http://www.sphinx-doc.org/en/stable/markup/misc.html#index-generating-markup
 for more information on index creation.

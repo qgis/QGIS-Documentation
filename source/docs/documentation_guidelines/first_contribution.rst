@@ -251,7 +251,7 @@ Check it:
 * *master* is the default main branch. You should never use it to contribute!
   **Never!**
 
-You can start to work here but in the long terme process you will get a lot of
+You can start to work here but in the long term process you will get a lot of
 issue when you will push your contribution (called Pull Request in github
 process) as the master branch of the QGIS-Documentation repository will diverge
 from your local/remote repository.
