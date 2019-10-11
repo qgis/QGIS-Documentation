@@ -595,7 +595,8 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    varies according to the M values at the line vertices (see also :ref:`qgisbufferbym`)"
    "centroid", "Returns the geometric center of a geometry (see also :ref:`qgiscentroids`)"
    "closest_point", "Returns the point on a geometry that is closest to a second geometry"
-   "collect_geometries", "Collects a set of geometries into a multi-part geometry object."
+   "collect_geometries |310|", "Collects a set of geometries into a multi-part geometry
+   object (see also :ref:`qgiscollect`)"
    "combine", "Returns the combination of two geometries"
    "contains(a,b)", "Returns 1 (true) if and only if no points of b lie in the exterior of a,
    and at least one point of the interior of b lies in the interior of a"
