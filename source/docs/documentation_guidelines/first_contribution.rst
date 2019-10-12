@@ -326,7 +326,7 @@ You can clone  your QGIS repository using the web URL as follows:
 
 .. code-block:: bash
 
-  # move to the folder in which to store the local repository
+  # move to the folder in which you intend to store the local repository
   $ cd ~/Documents/Development/QGIS/
   $ git clone https://github.com/<YourName>/QGIS-Documentation.git
 
@@ -355,7 +355,7 @@ Alternatively you can clone your QGIS repository using the SSH protocol:
 
 .. code-block:: bash
 
-  # move to the folder in which to store the local repository
+  # move to the folder in which you intend to store the local repository
   $ cd ~/Documents/Development/QGIS/
   $ git clone git@github.com:<YourName>/QGIS-Documentation.git
 
@@ -425,7 +425,7 @@ Update your base branch
 -----------------------
 
 Before working on a new contribution, you should always update your
-branch in your local repository. Assuming you are willing to push changes
+master branch in your local repository. Assuming you are willing to push changes
 to the testing documentation, run the following command lines:
 
 .. code-block:: bash
@@ -441,13 +441,13 @@ to the testing documentation, run the following command lines:
   # update **your** remote repository (aka <YourName>/QGIS-Documentation)
   $ git push origin master
 
-Now you have your local and remote repositories which have both ``master``
+Now you have your local and remote repositories which both have their ``master``
 branch up to date with the official ``master`` branch of QGIS-Documentation.
 You can start to work on your contribution.
 
 .. note:: Switch the branch if you wish to contribute to released doc
 
-  Along the testing documentation, we continue to fix issues in QGIS |CURRENT| doc,
+  Along with the testing documentation, we continue to fix issues in QGIS |CURRENT| doc,
   meaning that you can also contribute to it. Follow the previous section sample code,
   replacing ``master`` with the corresponding branch of the latest documentation.
 
@@ -466,7 +466,7 @@ base branch! Always!
    $ git checkout -b myNewBranch
    # checkout means go to the branch
    # and -b flag creates a new branch if needed, based on current branch
-   # Let's check the list of existing branch (* indicates the current branch)
+   # Let's check the list of existing branches (* indicates the current branch)
    $ git branch
    master
    release_2.18
