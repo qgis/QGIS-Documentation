@@ -18,6 +18,7 @@ by the **Open Geospatial Consortium (OGC)**:
 
 - WMS 1.1.0 and 1.3.0
 - WFS 1.0.0 and 1.1.0
+- WFS3 (OGC API - Features)
 - WCS 1.1.1
 - WMTS 1.0.0
 
@@ -113,7 +114,7 @@ parameters:
    File name of the downloaded file"
    "FORMAT_OPTIONS", "No", "Only for ``FORMAT=application/dxf``
    key:value pairs separated by semicolon.
-   
+
    * SCALE:  to be used for symbology rules, filters and styles (not actual scaling of the data - data remains in the original scale).
    * MODE:NOSYMBOLOGY|FEATURESYMBOLOGY|SYMBOLLAYERSYMBOLOGY: corresponds to the three export options offered in the QGIS Desktop DXF export dialog.
    * LAYERSATTRIBUTES:field_with_values_to_use_for_dxf_layernames if not specified, the original QGIS layer names are used.
@@ -1505,13 +1506,293 @@ This parameter allows to define the Y coordinate of the pixel for which we
 want to retrieve underlying information.
 
 
+.. _`ogc_api_features`:
+
+WFS3 (OGC API Features)
+==============================================
+
+WFS3 is the first implementation of the new generation of OGC protocols, it is
+described by the `OGC API - Features - Part 1: Core <http://docs.opengeospatial.org/is/17-069r3/17-069r3.html>`_  document.
+
+Here is a quick informal summary of the most important differences between the well known
+WFS protocol and WFS3:
+
+- WFS3 is based on a `REST <https://en.wikipedia.org/wiki/Representational_state_transfer>`_ API
+- WFS3 API specification must follow the `OPENAPI <https://en.wikipedia.org/wiki/OpenAPI_Specification>`_
+- WFS3 supports multiple output formats but it does not dictates any (GeoJSON and HTML are the only currently available in QGIS WFS3) and it uses `content negotiation <https://en.wikipedia.org/wiki/Content_negotiation>`_ to determine which format is to be serverd to the client
+- JSON and HTML are first class citizens in WFS3
+
+.. important::
+
+    While QGIS WFS3 implementation can make use of `MAP` parameter to specify the project file,
+    no extra query parameters are allowed by OPENAPI specification, for this reason it is strongly
+    recommended that ``MAP`` it is not exposed in the URL and the project file is specified in
+    the environment by other means (i.e. setting ``QGIS_PROJECT_FILE`` in the environment through
+    a rewrite rule).
+
+
+.. note::
+
+    The **API** endpoint provides the comprehensive documentation of all supported parameters and the
+    output formats of your service. The following paragraphs will only describe the most important ones.
+
+
+Resource representation
+-----------------------
+
+QGIS Server WFS3 implementation currently supports the following resource representation (output) formats:
+
+- HTML
+- JSON
+
+which format is actually served depends on content negotiation but a specific format can be explicitly
+requested by the clients by appending a format specifier to the endpoints.
+
+Supported format specifier extensions are:
+
+- ``.json``
+- ``.html``
+
+Additional format specifier aliases may be defined by specific endpoints:
+
+- ``.openapi``: alias for ``.json`` supported by the **API** endpoint
+- ``.geojson``: alias for ``.json`` supported by the **Features** and **Feature** endpoints
+
+
+Pagination
+--------------------
+
+Pagination of long list of features is implemented in OGC API through ``next``
+and ``prev`` links, QGIS server construct those links by appending ``limit`` and ``offset``
+to the base URL.
+
+.. note::
+
+    The maximum acceptable value for ``limit`` can be configured with the ``QGIS_SERVER_API_WFS3_MAX_LIMIT``
+    server configuration setting.
+
+
+Feature filtering
+--------------------
+
+The features can be filtered/searched by specifying one or more filters.
+
+Bounding box filter
+^^^^^^^^^^^^^^^^^^^^
+
+A bounding box spatial filter can be specified with the ``bbox`` parameter:
+
+The order of comma separated elements is:
+
+- Lower left corner, WGS 84 longitude
+- Lower left corner, WGS 84 latitude
+- Upper right corner, WGS 84 longitude
+- Upper right corner, WGS 84 latitude
+
+.. note::
+
+    The OGC specifications also allow a 6 items bbox specifier where the third and sixth
+    item are the Z components, this is not yet supported by QGIS server.
+
+
+URL example:
+
+.. code-block:: none
+
+    http://localhost/qgis_server/wfs3/collection_one/items.json?bbox=-180,-90,180,90
+
+If the CRS of the the bounding box is different than WGS84 (`http://www.opengis.net/def/crs/OGC/1.3/CRS84`)
+a different CRS can be specified by using an additional optional parameter ``bbox-crs``, the CRS format
+identifier must be in the OGC URI format, such as:
+
+URL example:
+
+.. code-block:: none
+
+    http://localhost/qgis_server/wfs3/collection_one/items.json?bbox=-180,-90,180,90&bbox-crs=http://www.opengis.net/def/crs/OGC/1.3/CRS84
+
+
+Attribute filters
+^^^^^^^^^^^^^^^^^^^^
+
+Attribute filters can be combined with the bounding box filter and they are in the general form:`<attribute name>=<attribute value>`,
+multiple filters are also possible and they are combined with an `AND` operator.
+
+URL example:
+
+filters all features where attribute ``name`` equals to "my value"
+
+.. code-block:: none
+
+    http://localhost/qgis_server/wfs3/collection_one/items.json?attribute_one=my%20value
+
+
+Partial matches are also supported by using a ``*`` ("star") operator:
+
+URL example:
+
+filters all features where attribute ``name`` ends with "value"
+
+.. code-block:: none
+
+    http://localhost/qgis_server/wfs3/collection_one/items.json?attribute_one=*value
+
+
+Entrypoints
+--------------------
+
+The API provides a list of entrypoints that the clients can retrieve,
+the system is designed in such a way that every response provides a set
+of links to navigate through all the provided resources.
+
+Entry points provided by QGIS implementation are:
+
+.. csv-table::
+   :header: "Name", "Path", "Description"
+   :widths: auto
+
+   "Landing Page", "``/``", "General information about the service and provides links to all available endpoints"
+   "Conformance", "``/conformance``", "Information about the conformance of the service to the standards"
+   "API", "``/api``", "Full description of the endpoints provided by the service and the returned documents structure"
+   "Collections", "``/collections``", "List of all collections (i.e. 'vector layers') provided by the service"
+   "Collection Information", "``/collection/<collectionId>``", "Information about a collection (name, metadata, extent etc.)"
+   "Features", "``/collection/<collectionId>/items``", "List of the features provided by the collection"
+   "Feature", "``/collection/<collectionId>/items/<featureId>``", "Information about a single feature"
+
+.. only:: html
+
+   |
+
+
+Landing Page
+^^^^^^^^^^^^^^^^^^^^
+
+The main entrypoint is the **Landing Page**, from that page it is possible to navigate to all the
+service available endpoints. The **Landing Page** must provide links to
+
+- the API definition (path ``/api`` link relations ``service-desc`` and ``service-doc``),
+- the Conformance declaration (path ``/conformance``, link relation ``conformance``), and
+- the Collections (path ``/collections``, link relation ``data``).
+
+API Definition
+^^^^^^^^^^^^^^^^^^^^
+
+The **API Definition** is a an OPENAPI-compliant description of the API provided by the service.
+In its HTML representation it is a browsable page where all the endpoints and their response formats
+are accurately listed and documented.
+
+The API definition provides a comprehensive and authoritative documentation of the service,
+including all supported parameters and returned formats.
+
+Collections
+^^^^^^^^^^^^^^^^^^^^
+
+The collection endpoint provides a list of all the collections provided
+by the service, since the service "serves" a single QGIS project, the collections are
+the vector layers from the current project (if they were published as WFS in the project
+properties).
+
+
+Collections
+^^^^^^^^^^^^^^^^^^^^^
+
+While the previous endpoint does not does not provide detailed information about each available
+collection: that information is available in the *collections* endpoints, typical information
+includes the extent, the description, CRSs and other metadata.
+
+The HTML representation also provides a browsable map with the available features.
+
+Features
+^^^^^^^^^^^^^^^^^^^^^
+
+This endpoint provides a list of all features in a collection.
+
+The HTML representation also provides a browsable map with the available features.
+
+
+Feature
+^^^^^^^^^^^^^^^^^^^^^^^
+
+This endpoint provides all the available information about a single feature,
+including the feature attributes and its geometry.
+
+The HTML representation also provides a browsable map with the feature geometry.
+
+Configuration and settings
+--------------------------
+
+
+The HTML template language
+--------------------------
+
+The HTML representation uses an HTML template to generate the response.
+The templates can be customized by overriding them (see the next section about
+how to do that).
+
+The template is parsed by a template engine called `inja <https://github.com/pantor/inja#tutorial>`_,
+the template has access to the same data that are available to the ``JSON`` representation and a few
+additional functions are available to the template:
+
+Custom template functions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- ``path_append( path )``: appends a directory path to the current url
+- ``path_chomp( n )``:removes the specified number "n" of directory components from the current url path
+- ``json_dump( )``: prints current JSON data passed to the template
+- ``static( path )``: returns the full URL to the specified static path, for example: ``static( "/style/black.css" )``:  with a root path "http://localhost/qgis_server/wfs3" will return "http://localhost/qgis_server/wfs3/static/style/black.css".
+- ``links_filter( links, key, value )``: Returns filtered links from a link list
+- ``content_type_name( content_type )``: Returns a short name from a content type for example "text/html" will return "HTML"
+
+
+Template overrides
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Templates and static assets are stored in subdirectories of the QGIS server default API resource directory
+(``/usr/share/qgis/resources/server/api/`` on a Linux system), the base directory can be customized
+by changing the environment variable ``QGIS_SERVER_API_RESOURCES_DIRECTORY``.
+
+A typical Linux installation will have the following directory tree:
+
+.. code-block:: bash
+
+    /usr/share/qgis/resources/server/api/
+    └── ogc
+        ├── schema.json
+        ├── static
+        │   ├── jsonFormatter.min.css
+        │   ├── jsonFormatter.min.js
+        │   └── style.css
+        └── templates
+            └── wfs3
+                ├── describeCollection.html
+                ├── describeCollections.html
+                ├── footer.html
+                ├── getApiDescription.html
+                ├── getFeature.html
+                ├── getFeatures.html
+                ├── getLandingPage.html
+                ├── getRequirementClasses.html
+                ├── header.html
+                ├── leaflet_map.html
+                └── links.html
+
+To override the templates you can copy the whole tree to another location
+and point ``QGIS_SERVER_API_RESOURCES_DIRECTORY`` to the new location.
+
+
 .. _`extra-getmap-parameters`:
 
 Extra parameters supported by all request types
 ===============================================
 
+The following extra parameters are supported by all protocols.
+
 * **FILE_NAME** parameter: if set, the server response will be sent to the
   client as a file attachment with the specified file name.
+
+.. note::
+
+    Not available for WFS3.
 
 * **MAP** parameter: Similar to MapServer, the ``MAP`` parameter can be used to
   specify the path to the QGIS project file. You can specify an absolute path
