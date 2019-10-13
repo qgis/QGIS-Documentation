@@ -20,7 +20,7 @@ some general rules about how they are handled by geoalgorithms when creating a n
 .. image:: img/crs/crs_layer.png
 
 * If there are no input layer, it will use the project CRS, unless the algorithm
-  contains a specific CRS field (as it happenend in the last lesson with the
+  contains a specific CRS field (as it happened in the last lesson with the
   graticule algorithm)
 
 Open the project corresponding to this lesson and you will see two layers named
@@ -64,7 +64,7 @@ Those coordinate values are given in the layer CRS, since we chose that option.
 However, even if you choose another option, the output CRS of the layer would
 have been the same, since the input CRS is used to set the CRS of the output layer.
 Choosing another option will cause the values to be different, but not the
-resulting point to change or the CRS of the ouput layer to be different to
+resulting point to change or the CRS of the output layer to be different to
 the CRS of the input one.
 
 

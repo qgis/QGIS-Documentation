@@ -64,7 +64,7 @@ to that extension will be used to save the layer or table.
 
 In all the exercises in this guide, we will be saving results to a temporary
 file, since there is no need to save them for a later use. Feel free to save
-them to a permament location if you want to.
+them to a permanent location if you want to.
 
 .. warning:: Temporary files are deleted once you close QGIS. If you create a
   project with an output that was saved as a temporary output, QGIS will
