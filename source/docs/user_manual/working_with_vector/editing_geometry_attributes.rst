@@ -37,7 +37,8 @@ Setting the Snapping Tolerance and Search Radius
 ================================================
 
 For an optimal and accurate edit of the vector layer geometries, we need to set
-an appropriate value of snapping tolerance and search radius for features vertices.
+an appropriate value of snapping tolerance and search radius for features
+vertices.
 
 
 .. index:: Snapping tolerance
@@ -45,89 +46,88 @@ an appropriate value of snapping tolerance and search radius for features vertic
 Snapping tolerance
 ------------------
 
-Snapping tolerance is the distance QGIS uses to ``search`` for the closest
-vertex and/or segment you are trying to connect to when you set a new vertex or
-move an existing vertex. If you aren't within the snapping tolerance, QGIS
+When you add a new vertex or move an existing one, snapping tolerance is the
+distance QGIS uses to search for the closest vertex or segment you are
+trying to connect to. If you aren't within the snapping tolerance, QGIS
 will leave the vertex where you release the mouse button, instead of snapping
-it to an existing vertex and/or segment.
+it to an existing vertex or segment.
+
 The snapping tolerance setting affects all tools that work with tolerance.
 
-#. A general, project-wide snapping tolerance can be defined by choosing
-   :menuselection:`Settings -->` |options| :menuselection:`Options...`,
-   :guilabel:`Digitizing` tab.
-   You can select between 'To vertex', 'To segment' or 'To vertex and segment'
-   as default snap mode. You can also define a default snapping tolerance and
-   a search radius for vertex edits. The tolerance can be set either in map
-   units or in pixels. The advantage of choosing pixels is that the snapping
-   tolerance doesn't have to be changed after zoom operations. In our small
-   digitizing project (working with the Alaska dataset), we define the
-   snapping units in feet. Your results may vary, but something on the order
-   of 300 ft at a scale of 1:10000 should be a reasonable setting.
-#. A layer-based snapping tolerance that overrides the global snapping options
-   can be defined by choosing :menuselection:`Project --> Snapping options`.
-   It helps to enable and adjust snapping mode and tolerance on a layer basis
-   (see figure_edit_snapping_). This dialog offers three different modes to
-   select the layer(s) to snap to:
+You can enable or disabled snapping by using the |snapping| :sup:`Enable
+snapping` button on the :guilabel:`Snapping Toolbar` or pressing :kbd:`S` at any
+time while you're on the map view. The toolbar is also very convenient to
+quickly configure the snapping mode, tolerance value, and units. Nevertheless,
+the snapping configurations can be set in :menuselection:`Project --> Snapping
+Options...`.
 
-   * :guilabel:`Current layer`: only the active layer is used, a convenient way
-     to ensure topology within the layer being edited
-   * :guilabel:`All layers`: a quick and simple setting for all visible layers
-     in the project so that the pointer snaps to all vertices and/or segments.
-     In most cases it is sufficient to use this snapping mode.
-   * :guilabel:`Advanced`: if you need to edit a layer and snap its vertices to another
-     layer, ensure the target layer is checked and increase the snapping tolerance
-     to a greater value. Furthermore, snapping will never occur to a layer that
-     is not checked in the snapping options dialog, regardless of the global
-     snapping tolerance. So be sure to mark the checkbox for those layers that
-     you need to snap to.
+There are three options to select the layer(s) to snap to:
 
+* :guilabel:`All layers`: quick setting for all visible layers
+  in the project so that the pointer snaps to all vertices and/or segments.
+  In most cases, it is sufficient to use this snapping mode, but beware when
+  using it on projects with too many vector layers, as it may cause
+  slowness.
+* :guilabel:`Current layer`: only the active layer is used, a convenient way
+  to ensure topology within the layer being edited
+* :guilabel:`Advanced Configuration`: allows you to enable and adjust snapping
+  mode and tolerance on a layer basis (see figure_edit_snapping_). If you need
+  to edit a layer and snap its vertices to another, ensure the target layer
+  is checked and increase the snapping tolerance to a higher value.
+  Furthermore, snapping will not occur to a layer that is not checked in the
+  snapping options dialog.
+
+As for snapping mode, you can select between ``To vertex``, ``To segment``, and
+``To vertex and segment``.
+
+The tolerance values can be set either in the project's ``map units`` or in
+``pixels``. The advantage of choosing ``pixels`` is that it keeps the snapping
+constant at different map scales. 10 to 12 pixels is normally a good value, but
+it may depend on the DPI of your screen. On the other hand, using map units
+allows the tolerance to be related to real ground distances. For example, if you
+have a minimum distance between elements, this option can be useful to ensure
+that you don’t add vertexes too close to each other.
 
 .. _figure_edit_snapping:
 
 .. figure:: img/editProjectSnapping.png
    :align: center
 
-   Edit snapping options on a layer basis (Advanced mode)
+   Snapping options (Advanced Configuration mode)
 
-.. tip:: **Control the list of layers to snap**
+.. note::
 
-   The :guilabel:`Snapping Options` dialog is by default populated with parameters
-   (mode, tolerance, units) set in the global :guilabel:`Digitizing` tab.
-   To avoid layers being checked by default in the **Advanced** mode and hence
-   set snappable, define the :guilabel:`Default Snap mode` to ``Off``.
+   By default, only visible features (the features whose style is displayed,
+   except for layers where the symbology is "No symbols") can be snapped. You
+   can enable the snapping on invisible features by checking |unchecked|
+   :guilabel:`Enable snapping on invisible features` under
+   :menuselection:`Settings --> Options --> Digitizing` tab.
 
-.. tip:: **Quickly toggle snapping**
+.. tip:: **Enable snapping by default**
 
-   You can quickly enable or disable snapping by clicking the |snapping| :sup:`Enable
-   Snapping` icon or pressing :kbd:`S` at any time while you're in the map view.
+   You can set snapping to be enabled by default on all new projects in
+   :menuselection:`Settings --> Options --> Digitizing` tab. You can also set
+   the default snapping mode, tolerance value, and units, which will populate
+   the :guilabel:`Snapping Options` dialog.
 
-Snapping tolerance can be set in ``pixels`` or ``map units`` (the units of the
-map view). While in the **Advanced** layer selection mode, it is possible to use
-a snapping tolerance that refers to ``layer units``, the units of the reprojected
-layer when 'on-the-fly' CRS transformation is on.
 
-By default, only visible features (the features whose style is displayed,
-except for layers where the symbology is "No symbols") can be snapped.
-You can enable the snapping on invisible features by checking
-|unchecked| :guilabel:`Enable snapping on invisible features` under
-:menuselection:`Settings -->` |options| :menuselection:`Options --> Digitizing` tab.
 
 .. index:: Search radius
 
 Search radius
 --------------
 
-Search radius is the distance QGIS uses to ``search`` for the closest vertex
-you are trying to select when you click on the map. If you aren't within the
-search radius, QGIS won't find and select any vertex for editing.
-The search radius for vertex edits can be defined under :menuselection:`Settings -->`
-|options| :menuselection:`Options --> Digitizing` tab. This is the same
-place where you define the general, project-wide snapping tolerance.
+Search radius is the distance QGIS uses to ``search`` for the closest vertex you
+are trying to select when you click on the map. If you aren't within the search
+radius, QGIS won't find and select any vertex for editing. The search radius for
+vertex edits can be defined under :menuselection:`Settings -->` |options|
+:menuselection:`Options --> Digitizing` tab. This is the same place where you
+define the snapping default values.
 
-Snap tolerance and search radius are set in ``map units`` or ``pixels``, so you may
-find you need to experiment to get them set right. If you specify too big of
+Snap tolerance and search radius are set in ``map units`` or ``pixels``, so you
+may find you need to experiment to get them set right. If you specify too big of
 a tolerance, QGIS may snap to the wrong vertex, especially if you are dealing
-with a large number of vertices in close proximity. Set search radius too
+with a large number of vertices in close proximity. Set the search radius too
 small, and it won't find anything to move.
 
 
@@ -217,7 +217,7 @@ you no longer need to manually place all the vertices during digitization:
 #. Move the mouse over another vertex or segment you'd like to snap and, instead
    of the usual straight line, the digitizing rubber band represents a path from
    the last point you snapped to the current position.
-   
+
    QGIS actually uses the underlying features topology to build the shortest path
    between the two points. Tracing requires snapping to be activated in traceable
    layers to build the path. You should also snap to an existing vertex or segment
@@ -241,7 +241,7 @@ and a negative value does the opposite.
 
    This tool does not add points to existing polygon geometries even if :guilabel:`Topological editing`
    is enabled.
-   If geometry precision is activated on the edited layer, the resulting 
+   If geometry precision is activated on the edited layer, the resulting
    geometry might not exactly follow an existing geometry.
 
 .. tip:: **Quickly enable or disable automatic tracing by pressing the** :kbd:`T` **key**
@@ -405,7 +405,7 @@ Vertex tool
     workflow. This allows major improvements like taking profit of the advanced
     digitizing panel with the vertex tool while digitizing or editing objects of
     multiple layers at the same time.
-    
+
 
 For any editable vector layer, the
 |vertexToolActiveLayer| :sup:`Vertex tool (Current Layer)` provides manipulation
@@ -522,13 +522,13 @@ and your vertex position is updated. You can also select multiple rows and delet
 them altogether.
 
 .. note:: **Changed behavior in QGIS 3.4**
-    
+
    Right click on a feature will immediately show the vertex editor and lock this feature,
    thus disabling the editing of any other features. While being locked, a feature is exclusive
    for editing: Selecting and moving of vertices and segments by clicking or dragging is only possible
    for this feature. New vertices can only be added to the locked feature. Also, the vertex editor panel
    now opens itself automatically upon activating the vertex tool, and its position/docked state remembered across uses.
-  
+
 .. _figure_edit_vertex:
 
 .. figure:: img/vertex_editor_panel.png
@@ -805,7 +805,7 @@ features in the map canvas:
 #. Press the |rotateFeature| :sup:`Rotate Feature(s)` icon
 #. Then click on the feature to rotate. The feature's centroid is referenced as
    rotation center, a preview of the rotated feature is displayed and a widget
-   opens showing the current :guilabel:`Rotation` angle. 
+   opens showing the current :guilabel:`Rotation` angle.
 #. Click on the map canvas when you are satisfied with the new placement or
    manually enter the rotation angle in the text box. You can also use the
    :guilabel:`Snap to °` box to constrain the rotation values.
@@ -1113,12 +1113,12 @@ a multipolygon/multipolyline/multipoint feature is created.
      Sum, Count, Concatenation... depending on the type of the field.
      see :ref:`statistical_summary` for the full list of functions).
 
-   .. note:: 
+   .. note::
     If the layer has default values or clauses present on fields,
     these are used as the initial value for the merged feature.
 
 #. Press :guilabel:`OK` to apply the modifications. A single (multi)feature is
-   created in the layer, replacing the previously selected ones. 
+   created in the layer, replacing the previously selected ones.
 
 .. index::
    single: Digitizing tools; Merge Attributes
@@ -1151,7 +1151,7 @@ rotation of point symbols in the map canvas.
       the symbol editor dialog.
    #. Click the |dataDefined| :guilabel:`Data-defined override` widget near the
       :guilabel:`Rotation` option of the top :guilabel:`Marker` level (preferably)
-      of the symbol layers. 
+      of the symbol layers.
    #. Choose a field in the :guilabel:`Field Type` combobox. Values of this
       field are hence used to rotate each feature's symbol accordingly.
 
@@ -1213,7 +1213,7 @@ of the lines that is concerned; any segment of a geometry can be modified.
 .. note:: This can lead to invalid geometries.
 
 .. note:: You must activate segment snapping for this tool to work.
- 
+
 The tool asks you to select a limit (a segment) with respect to which another
 segment will be extended or trimmed. Unlike the node tool, a check is performed to
 modify only the layer being edited.
@@ -1523,7 +1523,7 @@ To edit features in-place:
    * They do not change the geometry type, e.g. from line to point layer.
 
    .. figure:: img/edit_inplace_algorithms.png
-      :align: center 
+      :align: center
 
       Processing algorithms: all (left) vs polygon in-place editors (right)
 
@@ -1537,7 +1537,7 @@ To edit features in-place:
       the algorithm dialog pops up. Fill in the required information.
    #. Click :guilabel:`Modify Selected Features` or :guilabel:`Modify All Features`
       depending on whether there's an active selection.
-   
+
    Changes are applied to the layer and placed in the edit buffer: the layer
    is indeed toggled to editing mode with unsaved modification as indicated by
    the |editableEdits| icon next to the layer name.
