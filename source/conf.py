@@ -124,6 +124,8 @@ html_theme_options = {
 }
 
 html_context = {
+    # When a QGIS version reaches end of life, set this to True to show an information
+    # message on the top of the page.message on top from now on.
     'outdated': False
 }
 
