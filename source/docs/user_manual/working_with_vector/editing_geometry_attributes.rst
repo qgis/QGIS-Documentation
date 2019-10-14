@@ -100,7 +100,7 @@ that you don’t add vertexes too close to each other.
    By default, only visible features (the features whose style is displayed,
    except for layers where the symbology is "No symbols") can be snapped. You
    can enable the snapping on invisible features by checking |unchecked|
-   :guilabel:`Enable snapping on invisible features` under
+   :guilabel:`Enable snapping on invisible features` under the
    :menuselection:`Settings --> Options --> Digitizing` tab.
 
 .. tip:: **Enable snapping by default**
