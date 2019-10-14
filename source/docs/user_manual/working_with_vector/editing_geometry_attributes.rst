@@ -58,7 +58,7 @@ You can enable or disabled snapping by using the |snapping| :sup:`Enable
 snapping` button on the :guilabel:`Snapping Toolbar` or pressing :kbd:`S` at any
 time while you're on the map view. This toolbar is also very convenient to
 quickly configure the snapping mode, tolerance value, and units.
-the snapping configurations can be set in :menuselection:`Project --> Snapping
+The snapping configuration can also be set in :menuselection:`Project --> Snapping
 Options...`.
 
 There are three options to select the layer(s) to snap to:
