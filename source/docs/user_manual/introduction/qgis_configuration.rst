@@ -553,7 +553,8 @@ This tab helps you configure general settings when :ref:`editing vector layer
 
 **Snapping**
 
-* |checkbox| :guilabel:`Enable snapping by default`
+* |checkbox| :guilabel:`Enable snapping by default` activates snapping when
+  a project is opened
 * Define :guilabel:`Default snap mode` |selectString| ('Vertex', 'Vertex and segment',
   'Segment')
 * Define :guilabel:`Default snapping tolerance` in map units or pixels
@@ -643,7 +644,7 @@ GDAL driver options
 ...................
 
 This frame provides ways to customize the behavior of drivers that support read
-and write access: 
+and write access:
 
 .. _gdal_createoptions:
 
