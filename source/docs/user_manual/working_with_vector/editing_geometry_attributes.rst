@@ -66,7 +66,7 @@ There are three options to select the layer(s) to snap to:
 * :guilabel:`All layers`: quick setting for all visible layers
   in the project so that the pointer snaps to all vertices and/or segments.
   In most cases, it is sufficient to use this snapping mode, but beware when
-  using it on projects with too many vector layers, as it may cause
+  using it on projects with many vector layers, as it may cause
   slowness.
 * :guilabel:`Current layer`: only the active layer is used, a convenient way
   to ensure topology within the layer being edited
