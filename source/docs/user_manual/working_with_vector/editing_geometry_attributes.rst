@@ -74,7 +74,7 @@ There are three options to select the layer(s) to snap to:
   mode and tolerance on a layer basis (see figure_edit_snapping_). If you need
   to edit a layer and snap its vertices to another, ensure the target layer
   is checked and increase the snapping tolerance to a higher value.
-  Furthermore, snapping will not occur to a layer that is not checked in the
+  Snapping will not occur to a layer that is not checked in the
   snapping options dialog.
 
 As for snapping mode, you can select between ``To vertex``, ``To segment``, and
