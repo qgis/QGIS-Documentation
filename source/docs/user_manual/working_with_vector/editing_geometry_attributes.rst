@@ -83,7 +83,7 @@ As for snapping mode, you can select between ``To vertex``, ``To segment``, and
 The tolerance values can be set either in the project's ``map units`` or in
 ``pixels``. The advantage of choosing ``pixels`` is that it keeps the snapping
 constant at different map scales. 10 to 12 pixels is normally a good value, but
-it may depend on the DPI of your screen. On the other hand, using map units
+it depends on the DPI of your screen. Using map units
 allows the tolerance to be related to real ground distances. For example, if you
 have a minimum distance between elements, this option can be useful to ensure
 that you don’t add vertexes too close to each other.
