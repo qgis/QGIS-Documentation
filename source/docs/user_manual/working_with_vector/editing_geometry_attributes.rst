@@ -54,7 +54,7 @@ it to an existing vertex or segment.
 
 The snapping tolerance setting affects all tools that work with tolerance.
 
-You can enable or disabled snapping by using the |snapping| :sup:`Enable
+You can enable or disable snapping by using the |snapping| :sup:`Enable
 snapping` button on the :guilabel:`Snapping Toolbar` or pressing :kbd:`S` at any
 time while you're on the map view. This toolbar is also very convenient to
 quickly configure the snapping mode, tolerance value, and units.
@@ -86,7 +86,7 @@ constant at different map scales. 10 to 12 pixels is normally a good value, but
 it depends on the DPI of your screen. Using map units
 allows the tolerance to be related to real ground distances. For example, if you
 have a minimum distance between elements, this option can be useful to ensure
-that you don’t add vertexes too close to each other.
+that you don’t add vertices too close to each other.
 
 .. _figure_edit_snapping:
 
