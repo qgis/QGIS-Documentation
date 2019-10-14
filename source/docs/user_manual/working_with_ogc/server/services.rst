@@ -1518,17 +1518,19 @@ Here is a quick informal summary of the most important differences between the w
 WFS protocol and WFS3:
 
 - WFS3 is based on a `REST <https://en.wikipedia.org/wiki/Representational_state_transfer>`_ API
-- WFS3 API specification must follow the `OPENAPI <https://en.wikipedia.org/wiki/OpenAPI_Specification>`_
+- WFS3 API must follow the `OPENAPI <https://en.wikipedia.org/wiki/OpenAPI_Specification>`_ specifications
 - WFS3 supports multiple output formats but it does not dictates any (GeoJSON and HTML are the only currently available in QGIS WFS3) and it uses `content negotiation <https://en.wikipedia.org/wiki/Content_negotiation>`_ to determine which format is to be serverd to the client
 - JSON and HTML are first class citizens in WFS3
+- WFS3 is self-documenting (through the ``/api`` endpoint)
+- WFS3 is fully navigable (through links) and browsable
 
 .. important::
 
-    While QGIS WFS3 implementation can make use of `MAP` parameter to specify the project file,
+    While QGIS WFS3 implementation can make use of ``MAP`` parameter to specify the project file,
     no extra query parameters are allowed by OPENAPI specification, for this reason it is strongly
     recommended that ``MAP`` it is not exposed in the URL and the project file is specified in
     the environment by other means (i.e. setting ``QGIS_PROJECT_FILE`` in the environment through
-    a rewrite rule).
+    a web server rewrite rule).
 
 
 .. note::
@@ -1601,22 +1603,22 @@ URL example:
 
     http://localhost/qgis_server/wfs3/collection_one/items.json?bbox=-180,-90,180,90
 
-If the CRS of the the bounding box is different than WGS84 (`http://www.opengis.net/def/crs/OGC/1.3/CRS84`)
-a different CRS can be specified by using an additional optional parameter ``bbox-crs``, the CRS format
-identifier must be in the OGC URI format, such as:
+If the *CRS* of the the bounding box is different than WGS84 (*http://www.opengis.net/def/crs/OGC/1.3/CRS84*)
+a different *CRS* can be specified by using an additional optional parameter ``bbox-crs``, the *CRS* format
+identifier must be in the *OGC URI* format, such as:
 
 URL example:
 
 .. code-block:: none
 
-    http://localhost/qgis_server/wfs3/collection_one/items.json?bbox=-180,-90,180,90&bbox-crs=http://www.opengis.net/def/crs/OGC/1.3/CRS84
+    http://localhost/qgis_server/wfs3/collection_one/items.json?bbox=913191,5606014,913234,5606029&bbox-crs=http://www.opengis.net/def/crs/EPSG/9.6.2/3857
 
 
 Attribute filters
 ^^^^^^^^^^^^^^^^^^^^
 
 Attribute filters can be combined with the bounding box filter and they are in the general form:`<attribute name>=<attribute value>`,
-multiple filters are also possible and they are combined with an `AND` operator.
+multiple filters are also possible and they are combined with ``AND`` operators.
 
 URL example:
 
@@ -1655,7 +1657,7 @@ Entry points provided by QGIS implementation are:
    "Conformance", "``/conformance``", "Information about the conformance of the service to the standards"
    "API", "``/api``", "Full description of the endpoints provided by the service and the returned documents structure"
    "Collections", "``/collections``", "List of all collections (i.e. 'vector layers') provided by the service"
-   "Collection Information", "``/collection/<collectionId>``", "Information about a collection (name, metadata, extent etc.)"
+   "Collection", "``/collection/<collectionId>``", "Information about a collection (name, metadata, extent etc.)"
    "Features", "``/collection/<collectionId>/items``", "List of the features provided by the collection"
    "Feature", "``/collection/<collectionId>/items/<featureId>``", "Information about a single feature"
 
@@ -1674,6 +1676,15 @@ service available endpoints. The **Landing Page** must provide links to
 - the Conformance declaration (path ``/conformance``, link relation ``conformance``), and
 - the Collections (path ``/collections``, link relation ``data``).
 
+.. _figure_server_wfs3_landing_page:
+
+.. figure:: img/server_wfs3_landing_page.png
+   :align: center
+
+   Server WFS3 landing page
+
+
+
 API Definition
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -1684,6 +1695,10 @@ are accurately listed and documented.
 The API definition provides a comprehensive and authoritative documentation of the service,
 including all supported parameters and returned formats.
 
+.. note::
+
+    This endpoint is analogue to WFS's ``GetCapabilities``
+
 Collections
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -1693,14 +1708,23 @@ the vector layers from the current project (if they were published as WFS in the
 properties).
 
 
-Collections
+Collection
 ^^^^^^^^^^^^^^^^^^^^^
 
 While the previous endpoint does not does not provide detailed information about each available
-collection: that information is available in the *collections* endpoints, typical information
+collection: that information is available in the ``/collections`` endpoints, typical information
 includes the extent, the description, CRSs and other metadata.
 
 The HTML representation also provides a browsable map with the available features.
+
+
+.. _figure_server_wfs3_collection:
+
+.. figure:: img/server_wfs3_collection.png
+   :align: center
+
+   Server WFS3 collection page
+
 
 Features
 ^^^^^^^^^^^^^^^^^^^^^
@@ -1708,6 +1732,19 @@ Features
 This endpoint provides a list of all features in a collection.
 
 The HTML representation also provides a browsable map with the available features.
+
+
+.. note::
+
+    This endpoint is analogue to WFS's ``GetFeature``
+
+
+.. _figure_server_wfs3_features:
+
+.. figure:: img/server_wfs3_features.png
+   :align: center
+
+   Server WFS3 features
 
 
 Feature
@@ -1718,8 +1755,22 @@ including the feature attributes and its geometry.
 
 The HTML representation also provides a browsable map with the feature geometry.
 
+
 Configuration and settings
 --------------------------
+
+Server settings recognized by the WFS3 implementation are:
+
+.. csv-table::
+   :header: "Name", "Description", "Default"
+   :widths: auto
+
+   "``QGIS_SERVER_API_RESOURCES_DIRECTORY``", "Base directory for all WFS3 static resources (HTML templates, CSS, JS etc.)", "depends on packaging"
+   "``QGIS_SERVER_API_WFS3_MAX_LIMIT``", "Maximum value for ``limit`` in a features request", "10000"
+
+.. only:: html
+
+   |
 
 
 The HTML template language
