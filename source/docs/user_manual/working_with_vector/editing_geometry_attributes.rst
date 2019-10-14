@@ -120,7 +120,7 @@ Search radius
 Search radius is the distance QGIS uses to ``search`` for the closest vertex you
 are trying to select when you click on the map. If you aren't within the search
 radius, QGIS won't find and select any vertex for editing. The search radius for
-vertex edits can be defined under :menuselection:`Settings -->` |options|
+vertex edits can be defined under the :menuselection:`Settings -->` |options|
 :menuselection:`Options --> Digitizing` tab. This is the same place where you
 define the snapping default values.
 
