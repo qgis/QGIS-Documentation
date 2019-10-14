@@ -121,7 +121,7 @@ html_theme_options = {
 html_context = {
     # When a QGIS version reaches end of life, set this to True to show an information
     # message on the top of the page.
-    'outdated': False
+    'outdated': True
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
