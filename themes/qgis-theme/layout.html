@@ -24,6 +24,12 @@
   {%- set titlesuffix = "" %}
 {%- endif %}
 
+{%- macro outdated() %}
+    <div class="row outdated">
+      This documentation is for a QGIS version which has reached end of life. Visit the <a href="https://docs.qgis.org/latest/">latest version</a> instead.
+    </div>
+{%- endmacro %}
+
 {%- macro relbar() %}
     <div class="related">
       {# QGIS hide this # navigation h3 #} 
