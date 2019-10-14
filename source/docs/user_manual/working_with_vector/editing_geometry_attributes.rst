@@ -69,7 +69,7 @@ There are three options to select the layer(s) to snap to:
   using it on projects with many vector layers, as it may cause
   slowness.
 * :guilabel:`Current layer`: only the active layer is used, a convenient way
-  to ensure topology within the layer being edited
+  to ensure topology within the layer being edited.
 * :guilabel:`Advanced Configuration`: allows you to enable and adjust snapping
   mode and tolerance on a layer basis (see figure_edit_snapping_). If you need
   to edit a layer and snap its vertices to another, ensure the target layer
