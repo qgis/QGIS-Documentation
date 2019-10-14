@@ -105,7 +105,7 @@ that you don’t add vertexes too close to each other.
 
 .. tip:: **Enable snapping by default**
 
-   You can set snapping to be enabled by default on all new projects in
+   You can set snapping to be enabled by default on all new projects in the
    :menuselection:`Settings --> Options --> Digitizing` tab. You can also set
    the default snapping mode, tolerance value, and units, which will populate
    the :guilabel:`Snapping Options` dialog.
