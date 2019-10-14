@@ -56,7 +56,7 @@ The snapping tolerance setting affects all tools that work with tolerance.
 
 You can enable or disabled snapping by using the |snapping| :sup:`Enable
 snapping` button on the :guilabel:`Snapping Toolbar` or pressing :kbd:`S` at any
-time while you're on the map view. The toolbar is also very convenient to
+time while you're on the map view. This toolbar is also very convenient to
 quickly configure the snapping mode, tolerance value, and units. Nevertheless,
 the snapping configurations can be set in :menuselection:`Project --> Snapping
 Options...`.
