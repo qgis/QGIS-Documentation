@@ -1736,7 +1736,7 @@ The HTML representation also provides a browsable map with the available feature
 
 .. note::
 
-    This endpoint is analogue to WFS's ``GetFeature``
+    This endpoint is analogue to WFS's ``GetFeature``.
 
 
 .. _figure_server_wfs3_features:
