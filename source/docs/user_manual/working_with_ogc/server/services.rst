@@ -1579,6 +1579,12 @@ Feature filtering
 
 The features can be filtered/searched by specifying one or more filters.
 
+
+Date and time filter
+^^^^^^^^^^^^^^^^^^^^
+
+This kind of filter is not currently supported by QGIS WFS3 implementation.
+
 Bounding box filter
 ^^^^^^^^^^^^^^^^^^^^
 
