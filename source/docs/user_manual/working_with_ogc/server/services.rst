@@ -1617,7 +1617,7 @@ URL example:
 Attribute filters
 ^^^^^^^^^^^^^^^^^^^^
 
-Attribute filters can be combined with the bounding box filter and they are in the general form:`<attribute name>=<attribute value>`,
+Attribute filters can be combined with the bounding box filter and they are in the general form: ``<attribute name>=<attribute value>``,
 multiple filters are also possible and they are combined with ``AND`` operators.
 
 URL example:
