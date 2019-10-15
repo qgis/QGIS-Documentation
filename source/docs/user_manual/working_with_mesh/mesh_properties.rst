@@ -288,7 +288,7 @@ Rendering
 .........
 
 In the tab |rendering_mesh|,  QGIS offers two possibilities to display the grid,
-as shown in the image :ref:` Mesh rendering <figure_mesh_symbology_grid>`:
+as shown in the image :ref:`Mesh rendering <figure_mesh_symbology_grid>`:
 
 *	``Native Mesh Rendering`` that shows quadrants
 *	``Triangular Mesh Rendering`` that display triangles
