@@ -145,7 +145,7 @@ Topological editing
 ===================
 
 Apart from snapping options, the :guilabel:`Snapping options...`` dialog
-(:menuselection:`Project --> Snapping options) and the
+(:menuselection:`Project --> Snapping options`) and the
 :guilabel:`Snapping` toolbar allow you to enable and disable some topological
 functionalities.
 
