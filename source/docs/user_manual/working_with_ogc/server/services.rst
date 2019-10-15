@@ -1644,7 +1644,7 @@ Entrypoints
 --------------------
 
 The API provides a list of entrypoints that the clients can retrieve.
-the system is designed in such a way that every response provides a set
+The system is designed in such a way that every response provides a set
 of links to navigate through all the provided resources.
 
 Entry points provided by QGIS implementation are:
