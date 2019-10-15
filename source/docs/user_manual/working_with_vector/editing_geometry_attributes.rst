@@ -137,7 +137,6 @@ with a large number of vertices in close proximity. Set the search radius too
 small, and it won't find anything to move.
 
 
-
 .. index:: Topological editing
    single: Digitizing; Topology
 
@@ -148,10 +147,6 @@ Apart from snapping options, the :guilabel:`Snapping options...`` dialog
 (:menuselection:`Project --> Snapping options`) and the
 :guilabel:`Snapping` toolbar allow you to enable and disable some topological
 functionalities.
-
-.. There, you can
- define |checkbox| :guilabel:`Enable topological editing`, and/or for polygon
- layers, activate the |checkbox| :guilabel:`Avoid overlap` option.
 
 
 .. index:: Shared polygon boundaries
