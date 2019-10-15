@@ -192,7 +192,7 @@ digitize all vertices of the common boundary.
 .. warning:: **Use cautiously the** :guilabel:`Avoid overlap` **option**
 
    Since this option will cut new overlapping geometries of any polygon layer,
-   you can get unexpected geometries if you forget to uncheck it when longer
+   you can get unexpected geometries if you forget to uncheck it when no longer
    needed.
 
 
