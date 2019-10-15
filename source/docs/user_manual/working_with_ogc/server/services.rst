@@ -1643,7 +1643,7 @@ filters all features where attribute ``name`` ends with "value"
 Entrypoints
 --------------------
 
-The API provides a list of entrypoints that the clients can retrieve,
+The API provides a list of entrypoints that the clients can retrieve.
 the system is designed in such a way that every response provides a set
 of links to navigate through all the provided resources.
 
