@@ -154,10 +154,14 @@ functionalities.
 Enable topological editing
 --------------------------
 
-The option |checkbox| :guilabel:`Enable topological editing` is for editing
-and maintaining common boundaries in features mosaics. QGIS 'detects'
-shared boundary by the features, so you only have to move a common vertex/segment
-once, and QGIS will take care of updating the neighboring features.
+The |topopologicalEditing| :sup:`Topological editing` button helps to edit and
+to maintain features with common boundaries. With this option enabled, QGIS
+'detects' which boundaries are shared by the features; When you move common
+vertices/segments, QGIS will also move them on the neighboring features.
+
+Topological editing works with features from different layers, as long as the
+layers are visible and in editing mode.
+
 
 .. index:: Avoid overlap
    seealso: Avoid overlap; Topology
@@ -1678,4 +1682,6 @@ To edit features in-place:
 .. |vertexTool| image:: /static/common/mActionVertexTool.png
    :width: 1.5em
 .. |vertexToolActiveLayer| image:: /static/common/mActionVertexToolActiveLayer.png
+   :width: 1.5em
+.. |topopologicalEditing| image:: /static/common/mIconTopologicalEditing.png
    :width: 1.5em
