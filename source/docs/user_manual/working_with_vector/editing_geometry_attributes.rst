@@ -158,7 +158,7 @@ Enable topological editing
 
 The |topopologicalEditing| :sup:`Topological editing` button helps to edit and
 to maintain features with common boundaries. With this option enabled, QGIS
-'detects' which boundaries are shared by the features; When you move common
+'detects' boundaries that are shared by the features; When you move common
 vertices/segments, QGIS will also move them on the neighboring features.
 
 Topological editing works with features from different layers, as long as the
