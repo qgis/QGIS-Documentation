@@ -116,7 +116,7 @@ Enable snapping on intersections
 ---------------------------------
 
 Another available option is to use |snappingIntersection| :guilabel:`snapping on
-intersection`, which allows you to lock on geometry intersections of
+intersection`, which allows you to snap to geometry intersections of
 snapping enabled layers, even if there's no vertices in there.
 
 .. index:: Search radius
