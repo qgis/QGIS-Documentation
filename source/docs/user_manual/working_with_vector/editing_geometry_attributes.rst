@@ -85,7 +85,7 @@ constant at different map scales. 10 to 12 pixels is normally a good value, but
 it depends on the DPI of your screen. Using map units
 allows the tolerance to be related to real ground distances. For example, if you
 have a minimum distance between elements, this option can be useful to ensure
-that you don’t add vertices too close to each other.
+that you don’t add vertexes too close to each other.
 
 .. _figure_edit_snapping:
 
@@ -137,11 +137,14 @@ small, and it won't find anything to move.
 Topological editing
 ===================
 
-Besides layer-based snapping options, you can also define topological
-functionalities in the :guilabel:`Snapping options...` dialog in the
-:menuselection:`Settings` (or :menuselection:`File`) menu. Here, you can
-define |checkbox| :guilabel:`Enable topological editing`, and/or for polygon
-layers, activate the |checkbox| :guilabel:`Avoid overlap` option.
+Apart from snapping options, the :guilabel:`Snapping options...`` dialog
+(:menuselection:`Project --> Snapping options) and the
+:guilabel:`Snapping` toolbar allow you to enable and disable some topological
+functionalities.
+
+.. There, you can
+ define |checkbox| :guilabel:`Enable topological editing`, and/or for polygon
+ layers, activate the |checkbox| :guilabel:`Avoid overlap` option.
 
 
 .. index:: Shared polygon boundaries
@@ -161,23 +164,24 @@ once, and QGIS will take care of updating the neighboring features.
 Avoid intersections of new polygons
 -----------------------------------
 
-A second topological option called |checkbox| :guilabel:`Avoid intersections`
-prevents you to draw new features that overlap an existing one.
-It is for quicker digitizing of adjacent
-polygons. If you already have one polygon, it is possible with this option
-to digitize the second one such that both intersect, and QGIS then cuts the
-second polygon to the boundary of the existing one. The advantage is that you
-don't have to digitize all vertices of the common boundary.
+When the snapping mode is set to ``Advanced configuration``, for polygon layers,
+there's an option called |checkbox| :guilabel:`Avoid intersections`. This option
+prevents you from drawing new features that overlap existing ones in the
+selected layer, which allows a quicker digitizing of adjacent polygons.
 
-.. note:: If the new geometry is totally covered by existing ones, it gets cleared
-   and the new feature will have no geometry when allowed by the provider, otherwise
-   saving modifications will make QGIS pop-up an error message.
+With avoid intersections enabled, if you already have one polygon, you can digitize
+a second one such that both intersect. QGIS will cut the second polygon to the
+boundary of the existing one. The advantage is that you don't have to
+digitize all vertices of the common boundary.
 
-.. warning:: **Use cautiously the** :guilabel:`Avoid Intersections` **option**
+.. note:: If the new geometry is totally covered by existing ones, it gets
+   cleared, and QGIS will show an error message.
 
-   Because the option cuts or clears geometry of any overlaping feature from
-   any polygon layer, do not forget to uncheck this option once you no longer
-   need it otherwise, you can get unexpected geometries.
+.. warning:: **Use cautiously the** :guilabel:`Avoid overlap` **option**
+
+   Since this option will cut new overlapping geometries of any polygon layer,
+   you can get unexpected geometries if you forget to uncheck it when longer
+   needed.
 
 
 .. index:: Snapping on intersections
