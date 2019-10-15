@@ -1594,7 +1594,7 @@ The order of comma separated elements is:
 .. note::
 
     The OGC specifications also allow a 6 items bbox specifier where the third and sixth
-    item are the Z components, this is not yet supported by QGIS server.
+    items are the Z components, this is not yet supported by QGIS server.
 
 
 URL example:
