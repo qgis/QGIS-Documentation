@@ -174,7 +174,7 @@ Avoid overlap of new polygons
 When the snapping mode is set to ``Advanced configuration``, for polygon layers,
 there's an option called |checkbox| :guilabel:`Avoid overlap`. This option
 prevents you from drawing new features that overlap existing ones in the
-selected layer, which allows a quicker digitizing of adjacent polygons.
+selected layer, speeding up digitizing of adjacent polygons.
 
 With avoid overlap enabled, if you already have one polygon, you can digitize
 a second one such that both intersect. QGIS will cut the second polygon to the
