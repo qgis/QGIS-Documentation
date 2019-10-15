@@ -177,7 +177,7 @@ prevents you from drawing new features that overlap existing ones in the
 selected layer, speeding up digitizing of adjacent polygons.
 
 With avoid overlap enabled, if you already have one polygon, you can digitize
-a second one such that both intersect. QGIS will cut the second polygon to the
+a second one such that they intersect. QGIS will then cut the second polygon to the
 boundary of the existing one. The advantage is that you don't have to
 digitize all vertices of the common boundary.
 
