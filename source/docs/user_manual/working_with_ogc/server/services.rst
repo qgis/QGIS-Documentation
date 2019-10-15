@@ -1527,7 +1527,7 @@ WFS protocol and WFS3:
 .. important::
 
     While QGIS WFS3 implementation can make use of ``MAP`` parameter to specify the project file,
-    no extra query parameters are allowed by OPENAPI specification, for this reason it is strongly
+    no extra query parameters are allowed by OPENAPI specification. For this reason it is strongly
     recommended that ``MAP`` is not exposed in the URL and the project file is specified in
     the environment by other means (i.e. setting ``QGIS_PROJECT_FILE`` in the environment through
     a web server rewrite rule).
