@@ -110,7 +110,14 @@ that you don’t add vertexes too close to each other.
    the default snapping mode, tolerance value, and units, which will populate
    the :guilabel:`Snapping Options` dialog.
 
+.. index:: Snapping on intersections
 
+Enable snapping on intersections
+---------------------------------
+
+Another available option is to use |snappingIntersection| :guilabel:`snapping on
+intersection`, which allows you to lock on geometry intersections of
+snapping enabled layers, even if there's no vertices in there.
 
 .. index:: Search radius
 
@@ -188,15 +195,6 @@ digitize all vertices of the common boundary.
    you can get unexpected geometries if you forget to uncheck it when longer
    needed.
 
-
-.. index:: Snapping on intersections
-
-Enable snapping on intersections
----------------------------------
-
-Another option is to use |checkbox| :guilabel:`Enable snapping on intersection`.
-It allows you to snap on an intersection of background layers, even if there's no vertex on
-the intersection.
 
 Geometry Checker
 -----------------
@@ -1684,4 +1682,6 @@ To edit features in-place:
 .. |vertexToolActiveLayer| image:: /static/common/mActionVertexToolActiveLayer.png
    :width: 1.5em
 .. |topopologicalEditing| image:: /static/common/mIconTopologicalEditing.png
+   :width: 1.5em
+.. |snappingIntersection| image:: /static/common/mIconSnappingIntersection.png
    :width: 1.5em
