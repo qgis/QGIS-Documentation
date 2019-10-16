@@ -1512,22 +1512,27 @@ WFS3 (OGC API Features)
 ==============================================
 
 WFS3 is the first implementation of the new generation of OGC protocols. It is
-described by the `OGC API - Features - Part 1: Core <http://docs.opengeospatial.org/is/17-069r3/17-069r3.html>`_  document.
+described by the
+`OGC API - Features - Part 1: Core <http://docs.opengeospatial.org/is/17-069r3/17-069r3.html>`_
+document.
 
 Here is a quick informal summary of the most important differences between the well known
 WFS protocol and WFS3:
 
 - WFS3 is based on a `REST <https://en.wikipedia.org/wiki/Representational_state_transfer>`_ API
 - WFS3 API must follow the `OPENAPI <https://en.wikipedia.org/wiki/OpenAPI_Specification>`_ specifications
-- WFS3 supports multiple output formats but it does not dictates any (GeoJSON and HTML are the only currently available in QGIS WFS3) and it uses `content negotiation <https://en.wikipedia.org/wiki/Content_negotiation>`_ to determine which format is to be serverd to the client
+- WFS3 supports multiple output formats but it does not dictate any (only GeoJSON and
+  HTML are currently available in QGIS WFS3) and it uses `content negotiation
+  <https://en.wikipedia.org/wiki/Content_negotiation>`_ to determine which format is to
+  be served to the client
 - JSON and HTML are first class citizens in WFS3
 - WFS3 is self-documenting (through the ``/api`` endpoint)
 - WFS3 is fully navigable (through links) and browsable
 
 .. important::
 
-    While QGIS WFS3 implementation can make use of ``MAP`` parameter to specify the project file,
-    no extra query parameters are allowed by OPENAPI specification. For this reason it is strongly
+    While the WFS3 implementation in QGIS can make use of the ``MAP`` parameter to specify the project file,
+    no extra query parameters are allowed by the OPENAPI specification. For this reason it is strongly
     recommended that ``MAP`` is not exposed in the URL and the project file is specified in
     the environment by other means (i.e. setting ``QGIS_PROJECT_FILE`` in the environment through
     a web server rewrite rule).
@@ -1535,20 +1540,20 @@ WFS protocol and WFS3:
 
 .. note::
 
-    The **API** endpoint provides the comprehensive documentation of all supported parameters and the
+    The **API** endpoint provides comprehensive documentation of all supported parameters and
     output formats of your service. The following paragraphs will only describe the most important ones.
 
 
 Resource representation
 -----------------------
 
-QGIS Server WFS3 implementation currently supports the following resource representation (output) formats:
+The QGIS Server WFS3 implementation currently supports the following resource representation (output) formats:
 
 - HTML
 - JSON
 
-which format is actually served depends on content negotiation but a specific format can be explicitly
-requested by the clients by appending a format specifier to the endpoints.
+the format that is actually served will depend on content negotiation, but a specific format can be explicitly
+requested by appending a format specifier to the endpoints.
 
 Supported format specifier extensions are:
 
@@ -1564,7 +1569,7 @@ Additional format specifier aliases may be defined by specific endpoints:
 Pagination
 --------------------
 
-Pagination of long list of features is implemented in OGC API through ``next``
+Pagination of a long list of features is implemented in the OGC API through ``next``
 and ``prev`` links, QGIS server construct those links by appending ``limit`` and ``offset``
 to the base URL.
 
@@ -1590,7 +1595,7 @@ Bounding box filter
 
 A bounding box spatial filter can be specified with the ``bbox`` parameter:
 
-The order of comma separated elements is:
+The order of the comma separated elements is:
 
 - Lower left corner, WGS 84 longitude
 - Lower left corner, WGS 84 latitude
@@ -1599,7 +1604,7 @@ The order of comma separated elements is:
 
 .. note::
 
-    The OGC specifications also allow a 6 items bbox specifier where the third and sixth
+    The OGC specifications also allow a 6 item bbox specifier where the third and sixth
     items are the Z components, this is not yet supported by QGIS server.
 
 
@@ -1609,8 +1614,8 @@ URL example:
 
     http://localhost/qgis_server/wfs3/collection_one/items.json?bbox=-180,-90,180,90
 
-If the *CRS* of the bounding box is different than WGS84 (*http://www.opengis.net/def/crs/OGC/1.3/CRS84*)
-a different CRS can be specified by using an additional optional parameter ``bbox-crs``. The CRS format
+If the *CRS* of the bounding box is not WGS84 (*http://www.opengis.net/def/crs/OGC/1.3/CRS84*),
+a different CRS can be specified by using the optional parameter ``bbox-crs``. The CRS format
 identifier must be in the `OGC URI <http://www.opengis.net/def/crs/>`_ format:
 
 URL example:
@@ -1623,12 +1628,13 @@ URL example:
 Attribute filters
 ^^^^^^^^^^^^^^^^^^^^
 
-Attribute filters can be combined with the bounding box filter and they are in the general form: ``<attribute name>=<attribute value>``,
-multiple filters are also possible and they are combined with ``AND`` operators.
+Attribute filters can be combined with the bounding box filter and they are in the
+general form: ``<attribute name>=<attribute value>``.
+Multiple filters can be combined using the ``AND`` operator.
 
 URL example:
 
-filters all features where attribute ``name`` equals to "my value"
+filters all features where attribute ``name`` equals "my value"
 
 .. code-block:: none
 
@@ -1653,7 +1659,7 @@ The API provides a list of entrypoints that the clients can retrieve.
 The system is designed in such a way that every response provides a set
 of links to navigate through all the provided resources.
 
-Entry points provided by QGIS implementation are:
+Entry points provided by the QGIS implementation are:
 
 .. csv-table::
    :header: "Name", "Path", "Description"
@@ -1672,7 +1678,7 @@ Landing Page
 ^^^^^^^^^^^^^^^^^^^^
 
 The main entrypoint is the **Landing Page**. From that page it is possible to navigate to all the
-service available endpoints. The **Landing Page** must provide links to
+available service endpoints. The **Landing Page** must provide links to
 
 - the API definition (path ``/api`` link relations ``service-desc`` and ``service-doc``),
 - the Conformance declaration (path ``/conformance``, link relation ``conformance``), and
@@ -1721,9 +1727,9 @@ properties).
 Collection detail
 ^^^^^^^^^^^^^^^^^^^^^
 
-While the previous endpoint does not provide detailed information about each available
+While the collections endpoint does not provide detailed information about each available
 collection, that information is available in the ``/collections/<collectionId>`` endpoints.
-Typical information includes the extent, the description, CRSs and other metadata.
+Typical information includes the extent, a description, CRSs and other metadata.
 
 The HTML representation also provides a browsable map with the available features.
 
@@ -1746,7 +1752,7 @@ The HTML representation also provides a browsable map with the available feature
 
 .. note::
 
-    This endpoint is analogue to WFS's ``GetFeature``.
+    This endpoint is analogue to ``GetFeature`` in  WFS 1 and WFS 2.
 
 
 .. _figure_server_wfs3_features:
@@ -1777,7 +1783,7 @@ The HTML representation also provides a browsable map with the feature geometry.
 Configuration and settings
 --------------------------
 
-Server settings recognized by the WFS3 implementation are:
+Server settings recognized by the QGIS WFS3 implementation are:
 
 .. csv-table::
    :header: "Name", "Description", "Default"
@@ -1802,11 +1808,14 @@ Custom template functions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - ``path_append( path )``: appends a directory path to the current url
-- ``path_chomp( n )``:removes the specified number "n" of directory components from the current url path
-- ``json_dump( )``: prints current JSON data passed to the template
-- ``static( path )``: returns the full URL to the specified static path, for example: "static( "/style/black.css" )":  with a root path "http://localhost/qgis_server/wfs3" will return "http://localhost/qgis_server/wfs3/static/style/black.css".
+- ``path_chomp( n )``: removes the specified number "n" of directory components from the current url path
+- ``json_dump( )``: prints the JSON data passed to the template
+- ``static( path )``: returns the full URL to the specified static path, for example:
+  "static( "/style/black.css" )":  with a root path "http://localhost/qgis_server/wfs3"
+  will return "http://localhost/qgis_server/wfs3/static/style/black.css".
 - ``links_filter( links, key, value )``: Returns filtered links from a link list
-- ``content_type_name( content_type )``: Returns a short name from a content type for example "text/html" will return "HTML"
+- ``content_type_name( content_type )``: Returns a short name from a content type,
+  for example "text/html" will return "HTML"
 
 
 .. _`server_wfs3_template_override`:
