@@ -1566,17 +1566,155 @@ Additional format specifier aliases may be defined by specific endpoints:
 - ``.geojson``: alias for ``.json`` supported by the **Features** and **Feature** endpoints
 
 
+Endpoints
+--------------------
+
+The API provides a list of endpoints that the clients can retrieve.
+The system is designed in such a way that every response provides a set
+of links to navigate through all the provided resources.
+
+Endpoints points provided by the QGIS implementation are:
+
+.. csv-table::
+   :header: "Name", "Path", "Description"
+   :widths: auto
+
+   "Landing Page", "``/``", "General information about the service and provides links to all available endpoints"
+   "Conformance", "``/conformance``", "Information about the conformance of the service to the standards"
+   "API", "``/api``", "Full description of the endpoints provided by the service and the returned documents structure"
+   "Collections", "``/collections``", "List of all collections (i.e. 'vector layers') provided by the service"
+   "Collection", "``/collections/{collectionId}``", "Information about a collection (name, metadata, extent etc.)"
+   "Features", "``/collections/{collectionId}/items``", "List of the features provided by the collection"
+   "Feature", "``/collections/{collectionId}/items/{featureId}``", "Information about a single feature"
+
+
+Landing Page
+^^^^^^^^^^^^^^^^^^^^
+
+The main endpoint is the **Landing Page**. From that page it is possible to navigate to all the
+available service endpoints. The **Landing Page** must provide links to
+
+- the API definition (path ``/api`` link relations ``service-desc`` and ``service-doc``),
+- the Conformance declaration (path ``/conformance``, link relation ``conformance``), and
+- the Collections (path ``/collections``, link relation ``data``).
+
+.. _figure_server_wfs3_landing_page:
+
+.. figure:: img/server_wfs3_landing_page.png
+   :align: center
+
+   Server WFS3 landing page
+
+
+
+API Definition
+^^^^^^^^^^^^^^^^^^^^
+
+The **API Definition** is an OPENAPI-compliant description of the API provided by the service.
+In its HTML representation it is a browsable page where all the endpoints and their response formats
+are accurately listed and documented.
+The path of this endpoint is ``/api``.
+
+The API definition provides a comprehensive and authoritative documentation of the service,
+including all supported parameters and returned formats.
+
+.. note::
+
+    This endpoint is analogue to WFS's ``GetCapabilities``
+
+Collections list
+^^^^^^^^^^^^^^^^^^^^
+
+The collections endpoint provides a list of all the collections available in
+the service. Since the service "serves" a single QGIS project the collections are
+the vector layers from the current project (if they were published as WFS in the project
+properties).
+The path of this endpoint is ``/collections/``.
+
+.. _figure_server_wfs3_collections:
+
+.. figure:: img/server_wfs3_collections.png
+   :align: center
+
+   Server WFS3 collections list page
+
+
+Collection detail
+^^^^^^^^^^^^^^^^^^^^^
+
+While the collections endpoint does not provide detailed information about each available
+collection, that information is available in the ``/collections/{collectionId}`` endpoints.
+Typical information includes the extent, a description, CRSs and other metadata.
+
+The HTML representation also provides a browsable map with the available features.
+
+
+.. _figure_server_wfs3_collection:
+
+.. figure:: img/server_wfs3_collection.png
+   :align: center
+
+   Server WFS3 collection detail page
+
+
+Features list
+^^^^^^^^^^^^^^^^^^^^^
+
+This endpoint provides a list of all features in a collection knowing the collection ID.
+The path of this endpoint is ``/collections/{collectionId}/items``.
+
+The HTML representation also provides a browsable map with the available features.
+
+
+.. note::
+
+    This endpoint is analogue to ``GetFeature`` in  WFS 1 and WFS 2.
+
+
+.. _figure_server_wfs3_features:
+
+.. figure:: img/server_wfs3_features.png
+   :align: center
+
+   Server WFS3 features list page
+
+
+Feature detail
+^^^^^^^^^^^^^^^^^^^^^^^
+
+This endpoint provides all the available information about a single feature,
+including the feature attributes and its geometry.
+The path of this endpoint is ``/collections/{collectionId}/items/{itemId}``.
+
+The HTML representation also provides a browsable map with the feature geometry.
+
+
+.. _figure_server_wfs3_feature:
+
+.. figure:: img/server_wfs3_feature.png
+   :align: center
+
+   Server WFS3 feature detail page
+
+
+
 Pagination
 --------------------
 
 Pagination of a long list of features is implemented in the OGC API through ``next``
-and ``prev`` links, QGIS server construct those links by appending ``limit`` and ``offset``
-to the base URL.
+and ``prev`` links, QGIS server constructs these links by appending ``limit`` and ``offset``
+as query string parameters.
+
+URL example:
+
+.. code-block:: none
+
+    http://localhost/qgis_server/wfs3/collection_one/items.json?offset=10&limit=10
 
 .. note::
 
     The maximum acceptable value for ``limit`` can be configured with the ``QGIS_SERVER_API_WFS3_MAX_LIMIT``
-    server configuration setting.
+    server configuration setting (see: :ref:`server_wfs3_settings`).
 
 
 Feature filtering
@@ -1589,6 +1727,7 @@ Date and time filter
 ^^^^^^^^^^^^^^^^^^^^
 
 This kind of filter is not currently supported by QGIS WFS3 implementation.
+
 
 Bounding box filter
 ^^^^^^^^^^^^^^^^^^^^
@@ -1652,133 +1791,7 @@ filters all features where attribute ``name`` ends with "value"
     http://localhost/qgis_server/wfs3/collection_one/items.json?attribute_one=*value
 
 
-Entrypoints
---------------------
-
-The API provides a list of entrypoints that the clients can retrieve.
-The system is designed in such a way that every response provides a set
-of links to navigate through all the provided resources.
-
-Entry points provided by the QGIS implementation are:
-
-.. csv-table::
-   :header: "Name", "Path", "Description"
-   :widths: auto
-
-   "Landing Page", "``/``", "General information about the service and provides links to all available endpoints"
-   "Conformance", "``/conformance``", "Information about the conformance of the service to the standards"
-   "API", "``/api``", "Full description of the endpoints provided by the service and the returned documents structure"
-   "Collections", "``/collections``", "List of all collections (i.e. 'vector layers') provided by the service"
-   "Collection", "``/collections/<collectionId>``", "Information about a collection (name, metadata, extent etc.)"
-   "Features", "``/collections/<collectionId>/items``", "List of the features provided by the collection"
-   "Feature", "``/collections/<collectionId>/items/<featureId>``", "Information about a single feature"
-
-
-Landing Page
-^^^^^^^^^^^^^^^^^^^^
-
-The main entrypoint is the **Landing Page**. From that page it is possible to navigate to all the
-available service endpoints. The **Landing Page** must provide links to
-
-- the API definition (path ``/api`` link relations ``service-desc`` and ``service-doc``),
-- the Conformance declaration (path ``/conformance``, link relation ``conformance``), and
-- the Collections (path ``/collections``, link relation ``data``).
-
-.. _figure_server_wfs3_landing_page:
-
-.. figure:: img/server_wfs3_landing_page.png
-   :align: center
-
-   Server WFS3 landing page
-
-
-
-API Definition
-^^^^^^^^^^^^^^^^^^^^
-
-The **API Definition** is an OPENAPI-compliant description of the API provided by the service.
-In its HTML representation it is a browsable page where all the endpoints and their response formats
-are accurately listed and documented.
-
-The API definition provides a comprehensive and authoritative documentation of the service,
-including all supported parameters and returned formats.
-
-.. note::
-
-    This endpoint is analogue to WFS's ``GetCapabilities``
-
-Collections list
-^^^^^^^^^^^^^^^^^^^^
-
-The collections endpoint provides a list of all the collections available in
-the service. Since the service "serves" a single QGIS project the collections are
-the vector layers from the current project (if they were published as WFS in the project
-properties).
-
-
-.. _figure_server_wfs3_collections:
-
-.. figure:: img/server_wfs3_collections.png
-   :align: center
-
-   Server WFS3 collections list page
-
-
-Collection detail
-^^^^^^^^^^^^^^^^^^^^^
-
-While the collections endpoint does not provide detailed information about each available
-collection, that information is available in the ``/collections/<collectionId>`` endpoints.
-Typical information includes the extent, a description, CRSs and other metadata.
-
-The HTML representation also provides a browsable map with the available features.
-
-
-.. _figure_server_wfs3_collection:
-
-.. figure:: img/server_wfs3_collection.png
-   :align: center
-
-   Server WFS3 collection detail page
-
-
-Features list
-^^^^^^^^^^^^^^^^^^^^^
-
-This endpoint provides a list of all features in a collection.
-
-The HTML representation also provides a browsable map with the available features.
-
-
-.. note::
-
-    This endpoint is analogue to ``GetFeature`` in  WFS 1 and WFS 2.
-
-
-.. _figure_server_wfs3_features:
-
-.. figure:: img/server_wfs3_features.png
-   :align: center
-
-   Server WFS3 features list page
-
-
-Feature detail
-^^^^^^^^^^^^^^^^^^^^^^^
-
-This endpoint provides all the available information about a single feature,
-including the feature attributes and its geometry.
-
-The HTML representation also provides a browsable map with the feature geometry.
-
-
-.. _figure_server_wfs3_feature:
-
-.. figure:: img/server_wfs3_feature.png
-   :align: center
-
-   Server WFS3 feature detail page
-
+.. _`server_wfs3_settings`:
 
 Configuration and settings
 --------------------------
