@@ -1861,7 +1861,7 @@ The following extra parameters are supported by all protocols.
 
     Not available for WFS3.
 
-* **MAP** parameter: Similar to MapServer, the ``MAP`` parameter can be used to
+* **MAP**: Similar to MapServer, the ``MAP`` parameter can be used to
   specify the path to the QGIS project file. You can specify an absolute path
   or a path relative to the location of the server executable
   (:file:`qgis_mapserv.fcgi`).
