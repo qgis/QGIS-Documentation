@@ -1854,7 +1854,7 @@ Extra parameters supported by all request types
 
 The following extra parameters are supported by all protocols.
 
-* **FILE_NAME** parameter: if set, the server response will be sent to the
+* **FILE_NAME**: if set, the server response will be sent to the
   client as a file attachment with the specified file name.
 
 .. note::
