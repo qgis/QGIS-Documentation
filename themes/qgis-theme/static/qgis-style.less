@@ -350,7 +350,7 @@ div.section:before {
 /* span achors are a little more difficult,
 these are for internal refs, eg: en/docs/user_manual/working_with_vector/editing_geometry_attributes.html#sec-advanced-edit
 hopefully this is unique enough for the :ref: spans we use */
-/* RD: no, this makes normal spans 60px high, so a lot of whitespace in 
+/* RD: no, this makes normal spans 60px high, so a lot of whitespace in
 normal pages. So while working for som internal refs, disable it now till
 somebody comes up with a better idea */
 /*div.section > span:before {
@@ -868,6 +868,12 @@ section.menu nav.subnav ul li a:hover {
   background-position: 15px 8px;
   background-repeat: no-repeat;
 }
+/* theming of warning boxes class=".admonition .important" */
+.important {
+    background-image: url("images/warning.png");
+    background-position: 15px 8px;
+    background-repeat: no-repeat;
+  }
 .admonition,
 .bordered-block {
   background-color: #fbfbfb;
