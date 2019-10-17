@@ -110,11 +110,11 @@ panel provides the following functionalities (see figure_layout_legend_items_):
   * |addExpression| :sup:`Add symbol expression` allows you to add expressions
     to each symbol label of a given layer. New variables (``@symbol_label``,
     ``@symbol_id`` and ``@symbol_count``) help you interact with the legend
-     entry.
-    
+    entry.
+
     For example, given a categorized layer, you can append to each class in the
     legend their number of features, ie *class (number)*:
-    
+
     #. Select the layer entry in the legend tree
     #. Press the |addExpression| :sup:`Add symbol expression` button, opening
        the :guilabel:`Expression String Builder` dialog
@@ -123,7 +123,6 @@ panel provides the following functionalities (see figure_layout_legend_items_):
         concat( @symbol_label, ' (', @symbol_count, ')' )
 
     #. Press :guilabel:`OK`
-
 
   While the default behavior of the legend item is to mimic the
   :guilabel:`Layers` panel tree, displaying the same groups, layers and classes
