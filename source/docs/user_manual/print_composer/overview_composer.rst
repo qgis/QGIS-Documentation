@@ -662,7 +662,7 @@ panel. Right-click on a page and select :guilabel:`Page Properties...`. The
   current page with its content should be included in the :ref:`layout output
   <create-output>`;
 * the :guilabel:`Background` of the current page using the :ref:`color
-  <color-selector>` or :ref:`symbol <symbol-selector>` you want. 
+  <color-selector>` or :ref:`symbol <symbol-selector>` you want.
 
 .. _figure_layout_page:
 
@@ -682,12 +682,12 @@ Guides are vertical or horizontal line references you can place on a layout
 page to assist you on items placement, when creating, moving or resizing them.
 To be active, guides require the :menuselection:`View --> Show Guides` and
 :menuselection:`View --> Snap to Guides` options to be checked.
-To create a guide, different ways:
+To create a guide, there are two different methods:
 
-* assuming :menuselection:`View --> Show Rulers` option is set, drag out a
+* if the :menuselection:`View --> Show Rulers` option is set, drag out a
   ruler and release the mouse button within the page area, at the desired
   position.
-* more accurate, use the :guilabel:`Guides` panel from the :menuselection:`View
+* for more precision, use the :guilabel:`Guides` panel from the :menuselection:`View
   --> Toolbox -->` or by selecting :guilabel:`Manage guides for page...`
   from the page's contextual menu.
 
@@ -704,7 +704,7 @@ locations:
 #. Select the :guilabel:`Page` you'd like to add the guides to
 #. Click the |signPlus| :sup:`Add new guide` button and enter the coordinates
    of the horizontal or vertical line. The origin is at the top right corner.
-   Different units are available for setting.
+   Different units are available for this.
 
    The panel also allows adjusting position of existing guides to exact
    coordinates: double-click a guide coordinate and replace the value.
@@ -712,7 +712,7 @@ locations:
    It allows creation or removal of guides only in the current page.
    However, you can use the :guilabel:`Apply to All Pages` button to replicate
    the guide configuration of the current page to the other pages in the layout.
-#. To delete a guide, select it and press |signMinus| :sup:`Remove selected
+#. To delete a guide, select it and press the |signMinus| :sup:`Remove selected
    guide` button. Use :guilabel:`Clear All Guides` to remove all the guides
    in the current page.
 
