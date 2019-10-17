@@ -52,15 +52,15 @@ In Main properties you can:
 
 * Change the :guilabel:`Title` of the legend. It can be made dynamic using the
   :ref:`data-defined override <data_defined>` setting, useful for example when
-  generating atlas;
+  generating an atlas;
 * Choose which :guilabel:`Map` item the current legend will refer to.
-  By default, the map over which the legend item is drawn is picked and if none,
-  then it falls back to the `reference map <reference_map>`.
+  By default, the map over which the legend item is drawn is picked. If none,
+  then it falls back to the :ref:`reference map <reference_map>`.
 * Wrap the text of the legend on a given character: each time the character
   appears, it's replaced with a line break;
 * Set the symbols and text placement in the legend: the :guilabel:`Arrangement`
   can be :guilabel:`Symbols on left` or :guilabel:`Symbols on right`. The default
-  value depends on whether the locale in use is right-to-left based or not.
+  value depends on the locale in use (right-to-left based or not).
 * Use |checkbox| :guilabel:`Resize to fit contents` to control whether or
   not a legend should be automatically resized to fit its contents. If
   unchecked, then the legend will never resize and instead just stick to
@@ -108,8 +108,9 @@ panel provides the following functionalities (see figure_layout_legend_items_):
     tree, styles that have no feature satisfying a condition. Note that the
     features are nevertheless kept and shown in the layout map item.
   * |addExpression| :sup:`Add symbol expression` allows you to add expressions
-    to each symbol label of a given layer. The label is represented by 
-    the **@symbol_label** variable in the expression.
+    to each symbol label of a given layer. New variables (``@symbol_label``,
+    ``@symbol_id`` and ``@symbol_count``) help you interact with the legend
+     entry.
     
     For example, given a categorized layer, you can append to each class in the
     legend their number of features, ie *class (number)*:
@@ -155,7 +156,7 @@ provides the following functionalities:
 
 * You can change the font of the legend title, group, subgroup and item (feature)
   in the legend item using the :ref:`font selector <font_selector>` widget
-* You can set for each of these levels the text :guilabel:`Alignment`: it can
+* For each of these levels you can set the text :guilabel:`Alignment`: it can
   be :guilabel:`Left` (default for left-to-right based locales),
   :guilabel:`Center` or :guilabel:`Right` (default for right-to-left based
   locales).
@@ -168,7 +169,7 @@ Columns
 -------
 
 Under the :guilabel:`Columns` group of the legend :guilabel:`Item Properties`
-panel, Legend items can be arranged over several columns:
+panel, legend items can be arranged over several columns:
 
 * Set the number of columns in the :guilabel:`Count` |selectNumber| field.
   This value can be made dynamic e.g., following atlas features, legend
@@ -190,7 +191,7 @@ Symbol
 ------
 
 The :guilabel:`Symbol` group of the legend :guilabel:`Item Properties` panel
-configures the general size of symbols displayed next to the legend text.
+configures the size of symbols displayed next to the legend labels.
 You can:
 
 * Set the :guilabel:`Symbol width` and :guilabel:`Symbol height`
