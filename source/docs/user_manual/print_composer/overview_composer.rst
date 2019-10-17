@@ -661,8 +661,8 @@ panel. Right-click on a page and select :guilabel:`Page Properties...`. The
 * the |unchecked| :guilabel:`Exclude page from exports` to control whether the
   current page with its content should be included in the :ref:`layout output
   <create-output>`;
- * the :guilabel:`Background` of the current page using the
-   :ref:`color <color-selector>` or :ref:`symbol <symbol-selector>` you want. 
+* the :guilabel:`Background` of the current page using the :ref:`color
+  <color-selector>` or :ref:`symbol <symbol-selector>` you want. 
 
 .. _figure_layout_page:
 
