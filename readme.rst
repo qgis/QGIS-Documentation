@@ -26,10 +26,10 @@ Previous releases are also available:
 - QGIS 2.18 docs https://docs.qgis.org/2.18 and https://docs.qgis.org/2.18/pdf/
 - QGIS 2.14 docs https://docs.qgis.org/2.14 and https://docs.qgis.org/2.14/pdf/
 - QGIS 2.8 docs https://docs.qgis.org/2.8 and https://docs.qgis.org/2.8/pdf/
-- QGIS 2.6 docs https://docs.qgis.org/QGIS-Documentation-2.6/live/html/en/docs/index.html
-- QGIS 2.2 docs https://docs.qgis.org/QGIS-Documentation-2.2/live/html/en/docs/index.html	
-- QGIS 2.0 docs https://docs.qgis.org/QGIS-Documentation-2.0/live/html/en/docs/index.html	
-- QGIS 1.8 docs https://docs.qgis.org/QGIS-Documentation-1.8/live/html/en/docs/index.html
+- QGIS 2.6 docs https://docs.qgis.org/2.6
+- QGIS 2.2 docs https://docs.qgis.org/2.2
+- QGIS 2.0 docs https://docs.qgis.org/2.0	
+- QGIS 1.8 docs https://docs.qgis.org/1.8
 
 Translations of released docs are also available via the docs.qgis.org language path:
 for example for the 3.4 German language: https://docs.qgis.org/3.4/de.
