@@ -855,17 +855,19 @@ annotations to the map canvas.
    * The associated :ref:`Line symbol <vector_line_symbols>` or :ref:`marker
      symbol <vector_marker_symbols>` used to represent the grid marks
    * The :guilabel:`Interval X` and :guilabel:`Interval Y` between the grid
-     marks, in the map units
+     marks, in map units
    * An :guilabel:`Offset X` and :guilabel:`Offset Y` distance of the grid
      marks from the bottom left corner of the map canvas, in map units
-   * The interval and offset parameters can be set based on the 
-     :guilabel:`Canvas Extents` or using the extent of the :guilabel:`Active
-     Raster Layer`
+   * The interval and offset parameters can be set based on the:
+
+     * :guilabel:`Canvas Extents`: generates a grid with an interval that is
+       approximatively 1/5 of the canvas width 
+     * :guilabel:`Active Raster Layer` resolution
 #. Tick |checkbox| :guilabel:`Draw annotations` to display the coordinates of
    the grid marks and set:
 
    * The :guilabel:`Annotation direction`, ie how the labels would be placed
-     regarding their grid line. It can be:
+     relative to their grid line. It can be:
    
      * :guilabel:`Horizontal` or :guilabel:`Vertical` for all the labels
      * :guilabel:`Horizontal and Vertical`, ie each label is parallel to the
@@ -875,8 +877,8 @@ annotations to the map canvas.
    * The :guilabel:`Annotation font` using the OS :ref:`font selector widget
      <font_selector>`
    * The :guilabel:`Distance to map frame`, margin between annotations and map
-     canvas limits. Convenient when exporting the map canvas eg to image or
-     PDF format and avoid annotations to be on the "paper" limits.
+     canvas limits. Convenient when exporting the map canvas eg to an image
+     format or PDF, and avoid annotations to be on the "paper" limits.
 
      .. Todo: Add a reference link to export map canvas to image or pdf section when done
 
