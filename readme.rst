@@ -326,8 +326,10 @@ Prerequisites:
   
 #. Activate the virtual environment. 
    On Windows, virtualenv creates a batch file that can be located at:
-   ..\\QGIS-Documentation\\venv\\Scripts\\activate.bat
-   Using the Command Prompt just run this script.  
+   
+   ..\\QGIS-Documentation\\venv\\Scripts\\activate.bat. 
+   
+   Using the Command Prompt just run this script as follows: 
 
    .. code-block:: bash
 
