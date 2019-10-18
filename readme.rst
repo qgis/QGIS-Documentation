@@ -312,9 +312,9 @@ Prerequisites:
   -  Virtualenv (https://virtualenv.pypa.io/en/latest/installation/)
 
 #. Create a local copy of **your** QGIS doc repository following the instructions indicated in
-:ref:`Local repository <local_repository>`.
+  :ref:`Local repository <local_repository>`.
+  :ref:`writing guidelines <QGIS-documentation-guidelines>`.
 
- 
 #. Verify that you have origin and upstream repositories as described in  
 :ref:`Local repository <local_repository>`.
 
