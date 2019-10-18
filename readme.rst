@@ -312,13 +312,20 @@ Prerequisites:
 - Pip (https://pip.pypa.io/en/stable/installing/)
 - Virtualenv (https://virtualenv.pypa.io/en/latest/installation/)
 
-#. Create a local copy of **your** QGIS doc repository following the instructions indicated in
-   :ref:`local repository <local_repository>`.
-  
-#. Verify that you have *origin* and *upstream* repositories as described in  
-   :ref:`local repository <local_repository>`.
+#. Create a local copy of **your** QGIS doc repository.
+ 
+ .. code-block:: bash
 
-#. Create a virtual environment, e.g., <venv> in the folder created <QGIS-Documentation>
+  # move to the folder in which you intend to store the local repository
+  $ cd ~/Documents/Development/QGIS/
+  # clone the repository
+  $ git clone https://github.com/<YourName>/QGIS-Documentation.git
+
+The former command line is simply an example.
+You should adapt both the path and the repository URL, replacing ``<YourName>``
+with your user name.
+
+#. Create a virtual environment, e.g., <venv> in the folder created *QGIS-Documentation*
 
    .. code-block:: bash
      $ Virtualenv venv
