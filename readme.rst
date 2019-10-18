@@ -326,7 +326,7 @@ Prerequisites:
   
 #. Activate the virtual environment. 
    On Windows, virtualenv creates a batch file that can be located at:
-   ..\QGIS-Documentation\venv\Scripts\activate.bat
+   ..\\QGIS-Documentation\\venv\\Scripts\\activate.bat
    Using the Command Prompt just run this script.  
 
    .. code-block:: bash
@@ -347,7 +347,7 @@ Prerequisites:
 
      $ sphinx-build -M html source build
 
-   This will generate the documentation locally in ..\QGIS-Documentation\build\html\docs.
+   This will generate the documentation locally in ..\\QGIS-Documentation\\build\\html\\docs.
 
 Testing Python snippets
 =======================
