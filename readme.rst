@@ -318,9 +318,10 @@ Prerequisites:
 
      $ git clone https://github.com/<YourName>/QGIS-Documentation.git
 
-#. Create a virtual environment, e.g., *venv* in the folder just created *QGIS-Documentation*
+#. Create a virtual environment, e.g., *venv* in the folder just created *QGIS-Documentation*.
 
    .. code-block:: bash
+
      $ Virtualenv venv
   
 #. Activate the virtual environment. 
@@ -329,6 +330,7 @@ Prerequisites:
    Using the Command Prompt just run this script.  
 
    .. code-block:: bash
+
      $ activate.bat
 
    This script will modify your shell prompt to indicate which environment is currently active.  
@@ -336,11 +338,13 @@ Prerequisites:
 #. Install the required packages for locally building the QGIS documentation executing:
 
    .. code-block:: bash
+
      $ pip install -r REQUIREMENTS.txt . 
 
 #. Now you are ready to build the QGIS documentation locally. To do that you run the following sphinx command:
 
    .. code-block:: bash
+
      $ sphinx-build -M html source build
 
    This will generate the documentation locally in ..\QGIS-Documentation\build\html\docs.
