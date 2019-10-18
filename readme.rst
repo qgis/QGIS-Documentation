@@ -312,18 +312,18 @@ Prerequisites:
   -  Virtualenv (https://virtualenv.pypa.io/en/latest/installation/)
 
 #. Create a local copy of **your** QGIS doc repository following the instructions indicated in
- :ref:`Local repository <local_repository>`.
+:ref:`Local repository <local_repository>`.
 
  
 #. Verify that you have origin and upstream repositories as described in  
-  :ref:`Local repository <local_repository>`.
+:ref:`Local repository <local_repository>`.
 
 #. Create a virtual environment, e.g., <venv> in the folder created <QGIS-Documentation>
 .. code-block:: bash
   $ Virtualenv venv
   
 #. Activate the virtual environment. On Windows, virtualenv creates a batch file that can be located at:
-  ..\QGIS-Documentation \venv\Scripts\activate.bat
+..\QGIS-Documentation \venv\Scripts\activate.bat
   Using the Command Prompt just run this script.  
   .. code-block:: bash
   $ activate.bat
