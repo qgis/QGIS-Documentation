@@ -420,25 +420,26 @@ the image file format set in :guilabel:`Atlas` panel or to SVG file.
 .. _relations_in_atlas:
 
 Use project defined relations for atlas creation
------------------------------------------------
+------------------------------------------------
 
-For users with decent HTML and Javascript knowledge there is the possibility to
-operate on GeoJSON objects and so use project defined relations from the QGIS project.
-The big difference between this approach versus just using expressions
+For users with HTML and Javascript knowledge it's possible to operate on
+GeoJSON objects and use project defined relations from the QGIS project.
+The difference between this approach and using expressions
 directly inserted into the HTML is that it gives you a full,
-unstructured GeoJSON feature to work with. This means that you can use
-existing javascript libraries and functions which operate on geojson
+unstructured GeoJSON feature to work with. This means that you can use the
+existing Javascript libraries and functions which operate on GeoJSON
 feature representations.
 The following code includes all related child features from the defined relation.
 Using the JavaScript ``setFeature`` function it allows you to make flexible HTML
 which represents relations in whatever format you like (lists, tables, etc).
-In the code sample we create a dynamic bullet list of related child features.
+In the code sample, we create a dynamic bullet list of the related child features.
 
 .. code::
 
    <script>
    <div id="name"></div>
    <div id="my_children"></div>
+   </script>
 
    <script type="text/javascript">
       function setFeature(feature)
@@ -448,15 +449,15 @@ In the code sample we create a dynamic bullet list of related child features.
       //clear existing relation contents
       feature.properties.my_relation.forEach(function(child_feature) {
       // for each related child feature, create a LI element with the feature's name
-                                                                     var node = document.createElement("li");
-                                                                     node.appendChild(document.createTextNode(child_feature.NAME));
-                                                                     document.getElementById('my_children').appendChild(node);
-                                                                     });
+         var node = document.createElement("li");
+         node.appendChild(document.createTextNode(child_feature.NAME));
+         document.getElementById('my_children').appendChild(node);
+         });
       }
    </script>
 
-During the atlas creation described in the previous section there will be an iteration over
-the coverage layer containing the parent feature. On every page you will see a bullet list of
+During the atlas creation there will be an iteration over the coverage layer
+containing the parent features. On every page, you will see a bullet list of
 the related child features.
    
 
