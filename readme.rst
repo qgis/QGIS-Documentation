@@ -314,24 +314,18 @@ Prerequisites:
 
 #. Create a local copy of **your** QGIS doc repository.
  
-.. code-block:: bash
+   .. code-block:: bash
 
-  # move to the folder in which you intend to store the local repository
-  $ cd ~/Documents/Development/QGIS/
-  # clone the repository
-  $ git clone https://github.com/<YourName>/QGIS-Documentation.git
+     $ git clone https://github.com/<YourName>/QGIS-Documentation.git
 
-  The former command line is simply an example.
-  You should adapt both the path and the repository URL, replacing ``<YourName>``
-  with your user name.
+#. Create a virtual environment, e.g., *venv* in the folder just created *QGIS-Documentation*
 
-#. Create a virtual environment, e.g., <venv> in the folder created *QGIS-Documentation*
-
-.. code-block:: bash
-  $ Virtualenv venv
+   .. code-block:: bash
+     $ Virtualenv venv
   
-#. Activate the virtual environment. On Windows, virtualenv creates a batch file that can be located at:
-   ..\QGIS-Documentation \venv\Scripts\activate.bat
+#. Activate the virtual environment. 
+   On Windows, virtualenv creates a batch file that can be located at:
+   ..\QGIS-Documentation\venv\Scripts\activate.bat
    Using the Command Prompt just run this script.  
 
    .. code-block:: bash
