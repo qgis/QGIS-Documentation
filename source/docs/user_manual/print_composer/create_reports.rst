@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. index::
    single: Printing; Reports
 
@@ -259,6 +255,8 @@ The current information was adapted from the blog of North Road, `Exploring
 Reports in QGIS 3.0 - the Ultimate Guide!
 <https://north-road.com/2018/01/23/exploring-reports-in-qgis-3-0-the-ultimate-guide>`_
 
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -267,4 +265,3 @@ Reports in QGIS 3.0 - the Ultimate Guide!
 
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

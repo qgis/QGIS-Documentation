@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 The Shape Items
 ===============
 
@@ -182,4 +178,3 @@ hitting the :kbd:`Del` key.
    :ltrim:
 .. |editNodesShape| image:: /static/common/mActionEditNodesShape.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

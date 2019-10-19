@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. _cheat-sheet:
 
 **********************
@@ -809,12 +805,3 @@ Sources
 * `StackOverFlow QGIS questions <https://stackoverflow.com/questions/tagged/qgis>`_
 * `Script by Klas Karlsson <https://raw.githubusercontent.com/klakar/QGIS_resources/master/collections/Geosupportsystem/python/qgis_basemaps.py>`_
 * `Boundless lib-qgis-common repository <https://github.com/boundlessgeo/lib-qgis-commons>`_
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

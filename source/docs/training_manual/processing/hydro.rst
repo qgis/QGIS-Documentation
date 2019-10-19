@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 Hydrological analysis
 ============================================================
 
@@ -115,12 +111,3 @@ The resulting statistics are the following ones.
 We will use both the basin calculations procedure and the statistics
 calculation in other lessons, to find out how other elements can help us
 automate both of them and work more effectively.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

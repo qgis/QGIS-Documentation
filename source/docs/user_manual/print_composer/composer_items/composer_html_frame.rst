@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. index:: HTML frame
 .. _layout_html_item:
 
@@ -153,4 +149,3 @@ following functionalities (see figure_layout_html_breaks_):
    :width: 1.3em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

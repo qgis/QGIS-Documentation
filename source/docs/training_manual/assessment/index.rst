@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 *******************************************************************************
 |MOD| Assessment
 *******************************************************************************
@@ -169,4 +165,3 @@ Final Map
 .. |basic| image:: /static/global/basic.png
 .. |hard| image:: /static/global/hard.png
 .. |moderate| image:: /static/global/moderate.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

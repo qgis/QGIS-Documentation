@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. index:: Expressions
 
 .. _vector_expressions:
@@ -1360,4 +1356,3 @@ Further information about creating Python code can be found in the
    :width: 1.5em
 .. |start| image:: /static/common/mActionStart.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

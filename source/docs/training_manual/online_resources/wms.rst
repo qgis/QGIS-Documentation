@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. _`wms-services`:
 
 |LS| Web Mapping Services
@@ -276,6 +272,5 @@ Feature Service (WFS). That's the topic of the next lesson.
 .. |hard| image:: /static/global/hard.png
 .. |majorUrbanName| replace:: Swellendam
 .. |moderate| image:: /static/global/moderate.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |wms| image:: /static/common/mActionAddWmsLayer.png
    :width: 1.5em

@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 |LS| Map Presentation
 ===============================================================================
 
@@ -115,4 +111,3 @@ starting point to explore how you could achieve the specific results you need.
 .. |LS| replace:: Lesson:
 .. |TY| replace:: Try Yourself
 .. |basic| image:: /static/global/basic.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

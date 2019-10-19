@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. index:: Layout; Label item
 .. _layout_label_item:
 
@@ -138,4 +134,3 @@ should be surrounded by ``[%`` and ``%]`` in the :guilabel:`Main properties` fra
    :width: 1.5em
 .. |logo| image:: /static/common/logo.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

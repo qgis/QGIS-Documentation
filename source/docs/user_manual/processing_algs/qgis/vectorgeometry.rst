@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 Vector geometry
 ===============
 
@@ -3155,4 +3151,3 @@ Outputs
    :width: 1.5em
 .. |newAttribute| image:: /static/common/mActionNewAttribute.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

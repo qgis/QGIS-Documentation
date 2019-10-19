@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. index:: Plugins; User interaction
 
 ***************************
@@ -193,12 +189,3 @@ save about the execution of your code.
    developers (i.e. you suspect they are triggered by some broken code)
  * :class:`QgsMessageLog <qgis.core.QgsMessageLog>` is for messages to
    investigate issues by sysadmins (e.g. to help a sysadmin to fix configurations)
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

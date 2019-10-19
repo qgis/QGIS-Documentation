@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. index:: DB Manager
 .. _dbmanager:
 
@@ -86,4 +82,3 @@ and only that portion will be executed when you press :kbd:`F5` or click the
 
 .. |dbManager| image:: /static/common/dbmanager.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

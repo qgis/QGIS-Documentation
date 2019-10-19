@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. index:: Catalog services, Metadata
    single: Plugins; MetaSearch
 .. _metasearch:
@@ -196,4 +192,3 @@ You can fine tune MetaSearch with the following :guilabel:`settings`:
 
 .. |metasearch| image:: /static/common/MetaSearch.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

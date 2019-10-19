@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. _editingvector:
 
 *********
@@ -1657,11 +1653,15 @@ To edit features in-place:
    :width: 1.5em
 .. |snapping| image:: /static/common/mIconSnapping.png
    :width: 1.5em
+.. |snappingIntersection| image:: /static/common/mIconSnappingIntersection.png
+   :width: 1.5em
 .. |splitFeatures| image:: /static/common/mActionSplitFeatures.png
    :width: 1.5em
 .. |splitParts| image:: /static/common/mActionSplitParts.png
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
+   :width: 1.5em
+.. |topopologicalEditing| image:: /static/common/mIconTopologicalEditing.png
    :width: 1.5em
 .. |tracing| image:: /static/common/mActionTracing.png
    :width: 1.5em
@@ -1671,12 +1671,7 @@ To edit features in-place:
    :width: 1.3em
 .. |undo| image:: /static/common/mActionUndo.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |vertexTool| image:: /static/common/mActionVertexTool.png
    :width: 1.5em
 .. |vertexToolActiveLayer| image:: /static/common/mActionVertexToolActiveLayer.png
-   :width: 1.5em
-.. |topopologicalEditing| image:: /static/common/mIconTopologicalEditing.png
-   :width: 1.5em
-.. |snappingIntersection| image:: /static/common/mIconSnappingIntersection.png
    :width: 1.5em

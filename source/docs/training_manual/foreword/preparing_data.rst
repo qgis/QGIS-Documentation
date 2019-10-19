@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. _tm_preparing_data:
 
 Preparing Exercise Data
@@ -251,6 +247,5 @@ The tokens you need to replace are as follows:
 .. |indicatorMemory| image:: /static/common/mIndicatorMemory.png
    :width: 1.5em
 .. |majorUrbanName| replace:: Swellendam
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |zoomToLayer| image:: /static/common/mActionZoomToLayer.png
    :width: 1.5em

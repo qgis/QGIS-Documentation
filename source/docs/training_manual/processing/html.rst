@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 HTML outputs
 ============================================================
 
@@ -51,12 +47,3 @@ Each one of those values is handled as a single output, and stored in a variable
 This has no importance at all now, but once we move to the graphical modeler,
 you will see that it will allow us to use those values as numeric inputs for
 other algorithms. 
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

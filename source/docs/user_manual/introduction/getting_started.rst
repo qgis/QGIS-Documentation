@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. Purpose: This chapter aims to describe how the user starts to use QGIS. It
 .. should be kept short with only few steps to get QGIS working with two layers.
 
@@ -290,7 +286,6 @@ features and settings, and how to use them.
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |win| image:: /static/common/win.png
    :width: 1em
 .. |zoomIn| image:: /static/common/mActionZoomIn.png

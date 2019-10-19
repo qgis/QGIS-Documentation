@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. index:: Raster, Layer properties
 .. _raster_properties_dialog:
 
@@ -626,4 +622,3 @@ collected.
    :width: 1.5em
 .. |transparency| image:: /static/common/transparency.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

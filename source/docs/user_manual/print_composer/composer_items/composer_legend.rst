@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. index:: Legend item, Map legend
 .. _layout_legend_item:
 
@@ -264,4 +260,3 @@ columns and lines can be customized through this dialog.
    :width: 1.5em
 .. |sum| image:: /static/common/mActionSum.png
    :width: 1.2em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

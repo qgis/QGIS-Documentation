@@ -1,5 +1,3 @@
-|updatedisclaimer|
-
 .. index:: Attribute table
 .. _sec_attribute_table:
 
@@ -1038,6 +1036,5 @@ table.
    :width: 1.5em
 .. |unlink| image:: /static/common/mActionUnlink.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |zoomToSelected| image:: /static/common/mActionZoomToSelected.png
    :width: 1.5em
