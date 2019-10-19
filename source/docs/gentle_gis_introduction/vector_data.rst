@@ -147,7 +147,7 @@ small enough for the scale at which you want to use the data.
    and curved. When zoomed in to a larger scale (1:500 to the right) polylines
    may look very angular.
 
-The **attributes** of a polyline decribe its properties or characteristics. For
+The **attributes** of a polyline describe its properties or characteristics. For
 example a road polyline may have attributes that describe whether it is surfaced
 with gravel or tar, how many lanes it has, whether it is a one way street, and
 so on. The GIS can use these attributes to symbolise the polyline feature with a
