@@ -258,7 +258,7 @@ identifier!
 In this case ``load_core_plugin`` is a unique reference identifier placed before
 an rst item that has a caption. The ref statement will be replaced with the text
 of the header and turned into a hyperlink. When the header this reference is
-refering to is translated, all references to this header will be automatically
+referring to is translated, all references to this header will be automatically
 translated as well.
 
 The next item contains the rst-tag ``:menuselection:`` followed by text

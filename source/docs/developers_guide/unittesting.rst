@@ -27,7 +27,7 @@ the details:
    programming advocates suggest that the code should not even be written yet
    when you start building your tests, and then as you implement your code you can
    immediately validate each new functional part you add with your test. In
-   practive you will probably need to write tests for pre-existing code in QGIS
+   practice you will probably need to write tests for pre-existing code in QGIS
    since we are starting with a testing framework well after much application
    logic has already been implemented.
 
@@ -57,7 +57,7 @@ the details:
    ``make && (sudo)  make install`` procedure.
 
 #. You run your tests. This is normally done simply by doing ``make test``
-   after the ``make install`` step, though we will explain other aproaches that offer
+   after the ``make install`` step, though we will explain other approaches that offer
    more fine grained control over running tests.
 
 
@@ -166,13 +166,13 @@ In the first case we want to generally test if the various parts of the class ar
 We can use a functional testing approach. Once again, extreme programmers
 would advocate writing these tests before implementing the class. Then as
 you work your way through your class implementation you iteratively run your
-unit tests. More and more test functions should complete sucessfully as your
+unit tests. More and more test functions should complete successfully as your
 class implementation work progresses, and when the whole unit test passes, your
 new class is done and is now complete with a repeatable way to validate it.
 
 Typically your unit tests would only cover the public API of your class,
 and normally you do not need to write tests for accessors and mutators. If it
-should happen that an acccessor or mutator is not working as expected you would
+should happen that an accessor or mutator is not working as expected you would
 normally implement a :ref:`regression test <regression_test>` to check for this.
 
 .. code-block:: cpp
@@ -205,7 +205,7 @@ implemented to replicate the conditions of a particular bug. For example:
 #. Then we went to fix the bug and reran the unit test and the regression test
    passed. We committed the regression test along with the bug fix. Now if
    anybody breakes this in the source code again in the future, we can
-   immediatly identify that the code has regressed.
+   immediately identify that the code has regressed.
    
    Better yet, before committing any changes in the future, running our tests
    will ensure our changes don't have unexpected side effects - like breaking
