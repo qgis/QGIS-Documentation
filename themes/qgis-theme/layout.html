@@ -30,9 +30,17 @@
     </div>
 {%- endmacro %}
 
+{%- macro isTesting_block() %}
+    <div class="row isTesting">
+    This documentation is a work in progress. For the Long Term Release and translations, please visit the <a href="https://docs.qgis.org/latest/{{ language }}/">latest version</a>.
+    </div>
+{%- endmacro %}
+
 {%- macro relbar() %}
     {%- if outdated %}
       {%- set navigation_classes = "related related-outdated" %}
+    {%- elif isTesting %}
+      {%- set navigation_classes = "related related-isTesting" %}
     {%- else %}
       {%- set navigation_classes = "related" %}
     {%- endif %}
