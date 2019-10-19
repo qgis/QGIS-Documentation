@@ -141,7 +141,7 @@ Parameters
   avalanches may be triggered and 0 values elsewhere.
 
 ``Proportion Threshold`` [number]
-  This value is a threshold proportion that is used to limit the disperson of
+  This value is a threshold proportion that is used to limit the dispersion of
   flow caused by using the D-infinity multiple flow direction method for
   determining flow direction. The D-infinity multiple flow direction method
   often causes very small amounts of flow to be dispersed to some downslope
@@ -195,7 +195,7 @@ indicated by an indicator grid (dg). It a grid of the concentration of a substan
 at each location in the domain, where the supply of substance from a supply area
 is loaded into the flow at a concentration or solubility threshold. The flow is
 first calculated as a D-infinity weighted contributing area of an input Effective
-Runoff Weight Grid (notionally excess precipitation). The concentation of
+Runoff Weight Grid (notionally excess precipitation). The concentration of
 substance over the supply area (indicator grid) is at the concentration threshold.
 As the substance moves downslope with the D-infinity flow field, it is subject
 to first order decay in moving from cell to cell as well as dilution due to
@@ -494,7 +494,7 @@ This tool calculates the distance from each grid cell up to the ridge cells alon
 the reverse D-infinity flow directions. Ridge cells are defined to be grid cells
 that have no contribution from grid cells further upslope. Given the convergence
 of multiple flow paths at any grid cell, any given grid cell can have multiple
-upslope ridge cells. There are three statictical methods that this tool can use:
+upslope ridge cells. There are three statistical methods that this tool can use:
 maximum distance, minimum distance and waited flow average over these flow paths.
 A variant on the above is to consider only grid cells that contribute flow with
 a proportion greater than a user specified threshold (t) to be considered as
@@ -748,10 +748,10 @@ Outputs
   A grid giving the deposition resulting from the transport limited
   accumulation. This is the residual from the transport in to each grid cell
   minus the transport capacity out of the grid cell. The deposition grid is
-  calculated as the transport in + the local supply - the tranport out.
+  calculated as the transport in + the local supply - the transport out.
 
 ``Output Concentration Grid`` [raster]
-  If an input concentation in supply grid is given, then this grid is also
+  If an input concentration in supply grid is given, then this grid is also
   output and gives the concentration of a compound (contaminant) adhered or
   bound to the transported substance (e.g. sediment) is calculated.
 

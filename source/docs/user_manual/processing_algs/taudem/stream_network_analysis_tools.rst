@@ -181,7 +181,7 @@ Parameters
   with respect to the stream raster grid.
 
 ``Maximum Number of Grid Cells to traverse`` [number]
-  This input paramater is the maximum number of grid cells that the points in
+  This input parameter is the maximum number of grid cells that the points in
   the input outlet shapefile will be moved before they are saved to the output
   outlet shapefile.
 
@@ -193,12 +193,12 @@ Outputs
 ``Output Outlet Shapefile`` [vector: point]
   A point shape file defining points of interest or outlets. This file has one
   point in it for each point in the input outlet shapefile. If the original
-  point was located on a stream, then the point was not moved. If the origianl
+  point was located on a stream, then the point was not moved. If the original
   point was not on a stream, the point was moved downslope according to the D8
   flow direction until it reached a stream or the maximum distance had been
   reached. This file has an additional field "dist_moved" added to it which is
   the number of cells that the point was moved. This field is 0 if the cell was
-  originally on a stream, -1 if it was not moved becuase there was not a stream
+  originally on a stream, -1 if it was not moved because there was not a stream
   within the maximum distance, or some positive value if it was moved.
 
 
@@ -478,7 +478,7 @@ Parameters
 
 ``Spacing for Threshold Values`` [enumeration]
   This parameter indicates whether logarithmic or linear spacing should be used
-  when looking for possible threshold values using drop ananlysis.
+  when looking for possible threshold values using drop analysis.
 
   Options:
 
@@ -595,7 +595,7 @@ Parameters
   Optional
 
   A point shape file defining points of interest. If this file is used, the
-  tool will only deliiniate the stream network upstream of these outlets.
+  tool will only deliniate the stream network upstream of these outlets.
   Additionally, points in the Outlets Shapefile are used to logically split
   stream reaches to facilitate representing watersheds upstream and downstream
   of monitoring points. This tool REQUIRES THAT THERE BE an integer attribute
