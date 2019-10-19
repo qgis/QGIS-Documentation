@@ -775,7 +775,7 @@ Network Settings
 
 Defines the :guilabel:`Directory` and a :guilabel:`Size` for the cache.
 Also offers tools to :guilabel:`automatically clear the connection authentication
-cache on SSL errors (recommanded)`.
+cache on SSL errors (recommended)`.
 
 **Proxy for web access**
 

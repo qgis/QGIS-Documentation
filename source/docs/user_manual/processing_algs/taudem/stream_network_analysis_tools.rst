@@ -322,7 +322,7 @@ Stream Definition By Threshold
 Description
 ...........
 
-Operates on any grid and outputs an indicator (1, 0) grid identifing cells with
+Operates on any grid and outputs an indicator (1, 0) grid identifying cells with
 input values >= the threshold value. The standard use is to use an accumulated
 source area grid to as the input grid to generate a stream raster grid as the
 output. If you use the optional input mask grid, it limits the domain being
@@ -765,7 +765,7 @@ Topographic Wetness Index
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........

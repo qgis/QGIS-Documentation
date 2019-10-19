@@ -864,7 +864,7 @@ vertices, as long as the geometry remains valid:
 #. A summary of the modifications that would apply is shown at the bottom of the
    dialog, listing number of features and number of vertices (before and after
    the operation and the ratio the change represents).
-   Also, in the map canvas, the expected geometry is diplayed over the existing
+   Also, in the map canvas, the expected geometry is displayed over the existing
    one, using the rubberband color.
 #. When the expected geometry fits your needs, click :guilabel:`OK` to apply the
    modification.
@@ -1314,7 +1314,7 @@ Keyboard shortcuts
 ------------------
 
 To speed up the use of Advanced Digitizing Panel, there are a couple of keyboard
-shorcuts available:
+shortcuts available:
 
 +----------+-------------------+-------------------------------+---------------------------------------+
 | Key      | Simple            | :kbd:`Ctrl+` or :kbd:`Alt+`   | :kbd:`Shift+`                         |
