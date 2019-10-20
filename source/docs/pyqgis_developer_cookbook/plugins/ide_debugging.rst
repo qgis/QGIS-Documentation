@@ -36,24 +36,25 @@ We are assuming that you have compiled QGIS on Ubuntu with the given
 build directory :file:`~/dev/qgis/build/master`. It's not compulsory to have
 a self compiled QGIS, but only this has been tested. Paths must be adapted.
 
-In PyCharm, in your :guilabel:`Project Properties`, :guilabel:`Project Interpreter`,
-we are going to create a Python Virtual environment called `QGIS`. Click
-the small gear and then :guilabel:`Add`. Select :guilabel:`Virtualenv environment`.
-Select a generic location for all your Python projects such as
-:file:`~/dev/qgis/python_venv` because we will use this Python interpreter
-for all our plugins. Choose a Python 3 base interpreter available on
-your system and check the next two options :guilabel:`Inherit global site-packages`
-and :guilabel:`Make available to all projects`.
+#. In PyCharm, in your :guilabel:`Project Properties`, :guilabel:`Project Interpreter`,
+   we are going to create a Python Virtual environment called ``QGIS``.
+#. Click the small gear and then :guilabel:`Add`.
+#. Select :guilabel:`Virtualenv environment`.
+#. Select a generic location for all your Python projects such as
+   :file:`~/dev/qgis/python_venv` because we will use this Python interpreter for all our plugins.
+#. Choose a Python 3 base interpreter available on your system and check
+   the next two options :guilabel:`Inherit global site-packages`
+   and :guilabel:`Make available to all projects`.
+#. Click :guilabel:`OK`, come back on the small gear and click :guilabel:`Show all`.
+#. In the new window, select your new interpreter ``QGIS`` and click the last icon in
+   the vertical menu :guilabel:`Show paths for the selected interpreter.`
+#. Finally, add the following absolute path to the list
+   :file:`~/dev/qgis/build/master/output/python`.
+#. Restart PyCharm and you can start using this new Python virtual environment
+   for all your plugins.
 
-Click :guilabel:`OK` and you will come back on the small gear, :guilabel:`Show all`.
-In the new window, select your new interpreter `QGIS` and click the last icon in
-the vertical menu :guilabel:`Show paths for the selected interpreter.`
-Finally, add the following absolute path to your QGIS Python API folder
-:file:`~/dev/qgis/build/master/output/python`.
-
-Restart PyCharm and you can start using this new Python virtual environment
-for all your plugins. PyCharm will be aware of the QGIS API and also of the
-PyQt API if you use Qt provided by QGIS like `from qgis.PyQt.QtCore import QDir`.
+PyCharm will be aware of the QGIS API and also of the PyQt API if you use Qt
+provided by QGIS like ``from qgis.PyQt.QtCore import QDir``.
 The autocompletion should work and PyCharm can inspect your code.
 
 In the professional version of PyCharm, remote debugging is working well. For the
