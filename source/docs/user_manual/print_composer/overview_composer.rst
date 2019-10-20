@@ -706,9 +706,9 @@ locations:
    of the horizontal or vertical line. The origin is at the top right corner.
    Different units are available for this.
 
-   The panel also allows adjusting position of existing guides to exact
-   coordinates: double-click a guide coordinate and replace the value.
-#. The :guilabel:`Guides` panel lists only items for the current page.
+   The panel also allows adjusting the position of existing guides to exact
+   coordinates: double-click and replace the value.
+#. The :guilabel:`Guides` panel lists only the items for the current page.
    It allows creation or removal of guides only in the current page.
    However, you can use the :guilabel:`Apply to All Pages` button to replicate
    the guide configuration of the current page to the other pages in the layout.
