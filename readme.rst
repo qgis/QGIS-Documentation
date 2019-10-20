@@ -318,16 +318,18 @@ Prerequisites:
 
      $ git clone https://github.com/<YourName>/QGIS-Documentation.git
 
-#. Create a virtual environment, e.g., *venv* in the folder just created *QGIS-Documentation*.
+#. Create a virtual environment, e.g., *venv* in the folder just created 
+   (*QGIS-Documentation*).
 
    .. code-block:: bash
 
+     $ cd QGIS-Documentation
      $ Virtualenv venv
   
 #. Activate the virtual environment. 
    On Windows, virtualenv creates a batch file that can be located at:
    
-   ..\\QGIS-Documentation\\venv\\Scripts\\activate.bat. 
+   venv\\Scripts\\activate.bat. 
    
    Using the Command Prompt just run this script as follows: 
 
