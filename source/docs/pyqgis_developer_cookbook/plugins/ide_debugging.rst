@@ -16,12 +16,13 @@ Useful plugins for writing Python plugins
 =========================================
 
 Two plugins are convenient when writing Python plugins.
+
 * Go to :menuselection:`Plugins --> Manage and Install plugins…`.
   You may need to enable experimental plugins.
 * *Plugin reloader*. This will let you reload a plugin instead of
   having to close and restart QGIS to have the plugin reloaded.
 * *First Aid*. This will let you have a remote Python console and
-  to inspect variables when a exception is raised from a plugin.
+  to inspect variables when an exception is raised from a plugin.
 
 
 Configuring PyCharm on Ubuntu with a compiled QGIS
@@ -33,10 +34,10 @@ PyCharm on the website: https://www.jetbrains.com/pycharm/download
 
 We are assuming that you have compiled QGIS on Ubuntu with the given
 build directory :file:`~/dev/qgis/build/master`. It's not compulsory to have
-a self compiled QGIS, but this hasn't been tested. Paths must be adapted.
+a self compiled QGIS, but only this has been tested. Paths must be adapted.
 
 In PyCharm, in your :guilabel:`Project Properties`, :guilabel:`Project Interpreter`,
-we are going to create Python Virtual environment called `QGIS`. Click
+we are going to create a Python Virtual environment called `QGIS`. Click
 the small gear and then :guilabel:`Add`. Select :guilabel:`Virtualenv environment`.
 Select a generic location for all your Python projects such as
 :file:`~/dev/qgis/python_venv` because we will use this Python interpreter
@@ -44,14 +45,14 @@ for all our plugins. Choose a Python 3 base interpreter available on
 your system and check the next two options :guilabel:`Inherit global site-packages`
 and :guilabel:`Make available to all projects`.
 
-Click :guilabel:`OK` and then come back on the small gear, :guilabel:`Show all`.
-In the new window select your new interpreter `QGIS` and click the last icon in
+Click :guilabel:`OK` and you will come back on the small gear, :guilabel:`Show all`.
+In the new window, select your new interpreter `QGIS` and click the last icon in
 the vertical menu :guilabel:`Show paths for the selected interpreter.`
 Finally, add the following absolute path to your QGIS Python API folder
 :file:`~/dev/qgis/build/master/output/python`.
 
-Restart PyCharm and you can start using this newly Python virtual environment
-for all your plugin. PyCharm will be aware of the QGIS API and also of the
+Restart PyCharm and you can start using this new Python virtual environment
+for all your plugins. PyCharm will be aware of the QGIS API and also of the
 PyQt API if you use Qt provided by QGIS like `from qgis.PyQt.QtCore import QDir`.
 The autocompletion should work and PyCharm can inspect your code.
 
@@ -136,7 +137,7 @@ There is some preparation to be done on QGIS itself. One plugin is of
 interest: **Remote Debug**.
 
 * Go to :menuselection:`Plugins --> Manage and Install plugins...`
-* Search for *Remote Debug* ( at the moment it's still experimental, so enable
+* Search for *Remote Debug* (at the moment it's still experimental, so enable
   experimental plugins under the :guilabel:`Options` tab in case it does not show up).
   Install it.
 
