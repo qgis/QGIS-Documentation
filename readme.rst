@@ -304,6 +304,55 @@ General use:
       .tx/config file in the root of this project)
 
 
+Building the Documentation using Windows - minimal setup
+========================================================
+Prerequisites:
+
+- Python 3.5 or higher (https://www.python.org/downloads/windows/)
+- Pip (https://pip.pypa.io/en/stable/installing/)
+- Virtualenv (https://virtualenv.pypa.io/en/latest/installation/)
+
+#. Create a local copy of **your** QGIS doc repository.
+ 
+   .. code-block:: bash
+
+     $ git clone https://github.com/<YourName>/QGIS-Documentation.git
+
+#. Create a virtual environment, e.g., *venv* in the folder just created 
+   (*QGIS-Documentation*).
+
+   .. code-block:: bash
+
+     $ cd QGIS-Documentation
+     $ Virtualenv venv
+  
+#. Activate the virtual environment. 
+   On Windows, virtualenv creates a batch file that can be located at:
+   
+   venv\\Scripts\\activate.bat. 
+   
+   Using the Command Prompt just run this script as follows: 
+
+   .. code-block:: bash
+
+     $ activate.bat
+
+   This script will modify your shell prompt to indicate which environment is currently active.  
+
+#. Install the required packages for locally building the QGIS documentation executing:
+
+   .. code-block:: bash
+
+     $ pip install -r REQUIREMENTS.txt . 
+
+#. Now you are ready to build the QGIS documentation locally. To do that you run the following sphinx command:
+
+   .. code-block:: bash
+
+     $ sphinx-build -M html source build
+
+   This will generate the documentation locally in ..\\QGIS-Documentation\\build\\html\\docs.
+
 Testing Python snippets
 =======================
 
