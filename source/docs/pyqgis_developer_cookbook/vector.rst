@@ -644,12 +644,6 @@ you can do the following:
   #opts is a QgsVectorFileWriter.SaveVectorOptions as above
   opts.fieldValueConverter = converter  
 
-The third (mandatory) parameter specifies output text encoding.
-Only some drivers need this for correct operation - Shapefile is one of them
-(other drivers will ignore this parameter).
-Specifying the correct encoding is important if you are using international
-(non US-ASCII) characters.
-
 A destination CRS may also be specified --- if a valid instance of
 :class:`QgsCoordinateReferenceSystem <qgis.core.QgsCoordinateReferenceSystem>`
 is passed as the fourth parameter, the layer is transformed to that CRS.
