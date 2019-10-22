@@ -37,7 +37,7 @@ Parameters
   Field or expression to categorize the features.
 
 ``Style database (leave blank to use saved symbols)`` [file]
-  File (``.XML``) containing the symbols to apply to the input layer categories.
+  File (:file:`.XML`) containing the symbols to apply to the input layer categories.
   The file can be obtained from the Style Manager
   :ref:`Share symbols <share_symbols>` tool.
   If no file is specified, QGIS local symbols library is used.
@@ -68,6 +68,120 @@ Outputs
   Optional
 
   Lists symbols from the provided style database which could not match any category.
+
+
+.. _qgiscombinestyles:
+
+Combine style databases |310|
+---------------------------------------
+Combines multiple QGIS style databases into a single style database.
+If items of the same type with the same name exist in different source
+databases these will be renamed to have unique names in the output combined database.
+
+Parameters
+..........
+
+``Input databases`` [file] [list]
+  Files containing QGIS style items.
+
+``Objects to combine`` [list]
+  Types of style items in the input databases you would like to put in the new
+  database. These can be:
+  
+  * :ref:`Symbols <edit_symbol>`
+  * :ref:`Color ramps <color-ramp>`
+  * :ref:`Text formats <text_format>`
+  * :ref:`Label settings <showlabels>`
+
+Outputs
+.......
+
+``Output style database`` [file]
+  Output :file:`.XML` file combining the selected style items.
+
+See also
+........
+:ref:`qgisstylefromproject`
+
+
+.. _qgisstylefromproject:
+
+Create style database from project |310|
+----------------------------------------
+Extracts all style objects (symbols, color ramps, text formats and
+label settings) from a QGIS project.
+
+The extracted symbols are saved to a QGIS style database (:file:`XML` format),
+which can be managed and imported via the :ref:`Style Manager <vector_style_manager>`
+dialog.
+
+Parameters
+..........
+
+``Input project`` [file]
+  A QGIS project file to extract the style items from.
+
+``Objects to extract`` [list]
+  Types of style items in the input project you would like to put in the new
+  database. These can be:
+  
+  * :ref:`Symbols <edit_symbol>`
+  * :ref:`Color ramps <color-ramp>`
+  * :ref:`Text formats <text_format>`
+  * :ref:`Label settings <showlabels>`
+
+Outputs
+.......
+
+``Output style database`` [file]
+  Output :file:`.XML` file storing the selected style items.
+
+See also
+........
+:ref:`qgiscombinestyles`
+
+
+.. _qgisprintlayoutmapextenttolayer:
+
+Print layout map extent to layer |38|
+-------------------------------------
+
+Creates a polygon layer containing the extent of a print layout map item
+(or items), with attributes specifying the map size (in layout units,
+i.e. the :ref:`reference map <reference_map>` units), scale and rotation.
+
+If the map item parameter is specified, then only the matching map extent will
+be exported. If it is not specified, all map extents from the layout will be exported.
+
+Optionally, a specific output CRS can be specified. If it is not specified,
+the original map item CRS will be used.
+
+Parameters
+..........
+
+``Print layout`` [enumeration]
+  A print layout in the current project.
+
+``Map item`` [enumeration]
+  Optional
+
+  The map item(s) whose information you want to extract.
+  If none is provided then all the map items are processed.
+
+  Default: *All the map items*
+
+``Override CRS`` [crs]
+  Optional
+
+  Select the CRS of the layer in which the information will be reported.
+
+  Default: *The layout CRS*
+
+Outputs
+.......
+
+``Extent`` [vector: polygon]
+  A vector layer storing the selected map item(s) information.
 
 
 .. _qgistopologicalcoloring:
@@ -142,4 +256,6 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |310| replace:: ``NEW in 3.10``
+.. |38| replace:: ``NEW in 3.8``
 .. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
