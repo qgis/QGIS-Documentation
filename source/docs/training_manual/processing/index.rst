@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. QGIS processing guide documentation master file, created by
    sphinx-quickstart on Thu Jun 13 00:05:30 2013.
    You can adapt this file completely to your liking, but it should at least
@@ -55,12 +51,3 @@ Contents:
    r_syntax
    r_syntax-table
    geomorpho
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

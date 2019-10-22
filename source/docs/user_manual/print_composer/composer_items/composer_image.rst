@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. index:: Image, Picture, Layout; Image item, Layout; North arrow
 .. _layout_picture_item:
 
@@ -125,4 +121,3 @@ You can also apply a declination :guilabel:`Offset` to the picture rotation.
    :width: 1.3em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

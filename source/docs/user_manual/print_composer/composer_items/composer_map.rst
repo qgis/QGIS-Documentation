@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. index:: Layout; Map item
 .. _layout_map_item:
 
@@ -357,4 +353,3 @@ drawing over the selected map frame. You can customize it with:
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

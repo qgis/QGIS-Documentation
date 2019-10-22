@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 Starting with the graphical modeler
 ============================================================
 
@@ -110,12 +106,3 @@ You can run it just like any normal algorithm, double--clicking on it.
 As you can see, the parameters dialog, contain the input that you added to the model, along with the outputs that you set as final when adding the corresponding algorithms.
 
 Run it using the DEM as input and you will get the TWI layer in just one single step.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

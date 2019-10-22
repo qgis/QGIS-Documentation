@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 First analysis example
 ============================================================
 
@@ -56,12 +52,3 @@ Remember that, to get the output extent, you do not have to type it. Click on th
 Select the streets raster layer and its extent will be automatically added to the text field. You must do the same with the cellsize, selecting the cellsize of that layer as well.
 
 Combining with the pumps layer, we see that there is one pump clearly in the hotspot where the maximum density of death cases is found.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

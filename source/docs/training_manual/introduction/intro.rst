@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 |LS| A Brief Introduction
 ===============================================================================
 
@@ -130,4 +126,3 @@ lesson will guide you in creating your first QGIS map.
 .. |basic| image:: /static/global/basic.png
 .. |hard| image:: /static/global/hard.png
 .. |moderate| image:: /static/global/moderate.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

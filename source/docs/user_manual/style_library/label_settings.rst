@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. _showlabels:
 
 *****************
@@ -491,5 +487,4 @@ by minimising the labels placement:
 .. |text| image:: /static/common/text.png
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
-   :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
+   :width: 1.3em

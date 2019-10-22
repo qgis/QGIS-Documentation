@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. _plugin_gps:
 
 GPS Plugin
@@ -317,6 +313,5 @@ system port, then run GPSBabel
    :width: 1em
 .. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |win| image:: /static/common/win.png
    :width: 1em

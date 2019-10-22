@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. _symbol-selector:
 
 ********************
@@ -405,4 +401,3 @@ viewing the field.
    :width: 1.5em
 .. |styleManager| image:: /static/common/mActionStyleManager.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

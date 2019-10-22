@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 ***************
 Getting Started
 ***************
@@ -625,4 +621,3 @@ the path to the SVG image so that it represents a valid relative path.
    :width: 1.3em
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

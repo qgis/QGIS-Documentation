@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. _working_with_ogc:
 
 ***********************
@@ -727,7 +723,6 @@ features and view the attribute table.
    :width: 2.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |wcs| image:: /static/common/mActionAddWcsLayer.png
    :width: 1.5em
 .. |wfs| image:: /static/common/mActionAddWfsLayer.png

@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. _label_conventions:
 
 ***********
@@ -127,6 +123,5 @@ platform-specific icon at the end of the figure caption.
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
 .. |slider| image:: /static/common/slider.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |win| image:: /static/common/win.png
    :width: 1em

@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 *******************************************************************************
 |MOD| Database Concepts with PostgreSQL 
 *******************************************************************************
@@ -29,4 +25,3 @@ learning about other typical RDBMS functions.
    source folder.
 
 .. |MOD| replace:: Module:
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 ********
 Services
 ********
@@ -2013,4 +2009,3 @@ Similarly, external layers can be used in GetPrint requests:
    source folder.
 
 .. |38| replace:: ``NEW in 3.8``
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

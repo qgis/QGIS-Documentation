@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 Running an external algorithm
 ============================================================
 
@@ -111,12 +107,3 @@ not only to SAGA, but also to other external applications as well.
 In the next lesson we will introduce the processing log, where information about
 commands run by geoalgorithms is kept, and you will see how to get more detail
 when issues like this appear.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

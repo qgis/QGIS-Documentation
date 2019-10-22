@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 |LS| Georeferencing a Map
 ===============================================================================
 
@@ -161,4 +157,3 @@ and add the inventory data to them.
 .. |LS| replace:: Lesson:
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/global/basic.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

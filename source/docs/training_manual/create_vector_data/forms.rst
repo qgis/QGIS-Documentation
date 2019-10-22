@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 |LS| Forms
 ===============================================================================
 
@@ -249,4 +245,3 @@ that you define. This is the subject of the next lesson.
    :width: 1.5em
 .. |majorUrbanName| replace:: Swellendam
 .. |moderate| image:: /static/global/moderate.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. index:: QGIS Server, WMS Server, WFS Server, WCS Server
 
 .. _`label_qgisserver`:
@@ -45,12 +41,3 @@ Manual <training_qgis_server>` or :ref:`server_plugins`.
   services
   plugins
   config
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

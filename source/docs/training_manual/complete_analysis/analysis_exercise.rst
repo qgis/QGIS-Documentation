@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 |LS| Supplementary Exercise
 ===============================================================================
 
@@ -770,4 +766,3 @@ cartography in creating your output map.
    :width: 1.3em
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

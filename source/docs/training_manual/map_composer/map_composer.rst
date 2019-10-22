@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 |LS| Using Print Layout
 ===============================================================================
 
@@ -325,7 +321,6 @@ Congratulations on your first completed QGIS map project!
    :width: 1.5em
 .. |signMinus| image:: /static/common/symbologyRemove.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
    :width: 1.5em
 .. |zoomIn| image:: /static/common/mActionZoomIn.png

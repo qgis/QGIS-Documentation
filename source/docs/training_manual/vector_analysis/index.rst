@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 *******************************************************************************
 |MOD| Vector Analysis
 *******************************************************************************
@@ -44,4 +40,3 @@ locate suitable farm properties for this new residential development.
 
 .. |MOD| replace:: Module:
 .. |majorUrbanName| replace:: Swellendam
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 ******************
 QGIS Configuration
 ******************
@@ -1725,6 +1721,5 @@ in the QGIS user profile.
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |win| image:: /static/common/win.png
    :width: 1em

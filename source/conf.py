@@ -239,17 +239,10 @@ latex_elements = {
     '''
 }
 
-rst_prolog = """
-.. role:: disclaimer
-"""
-#.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
-#"""
-
-# Substitutions below are sorted and should be in lowerCamelCase
-# NOTE that for inline images (like button and menu icons inline in text) you HAVE TO make a substitution
-# so ONLY use common for this kind of images
+# rst_prolog = ""
 
 # rst_epilog = ""
+
 
 # -- Options for LaTeX output --------------------------------------------------
 
