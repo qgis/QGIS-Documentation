@@ -900,14 +900,23 @@ section.menu nav.subnav ul li a:hover {
   padding-right: 3px;
 }
 .outdated {
+  /* only to be visible for outdated releases*/
   background: #ffbaba;
   color: #6a0e0e;
+}
+.isTesting {
+  /* only to be visible in testing*/
+  background: #f3fbfb;
+  color: black;
+}
+.outdated, .isTesting {
+  /* top banner for testing and outdated docs*/
   padding-top: 0.5rem;
   margin-left: 0;
   padding-left: 0.5rem;
   padding-bottom: 0.5rem;
   font-size: 0.9rem;
 }
-.related-outdated {
+.related-outdated, .related-isTesting{
   margin-top: 2.5rem;
 }
