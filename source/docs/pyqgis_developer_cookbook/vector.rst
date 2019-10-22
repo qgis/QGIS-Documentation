@@ -568,68 +568,81 @@ From an instance of :class:`QgsVectorFileWriter <qgis.core.QgsVectorFileWriter>`
 .. code-block:: python
 
   # Write to a GeoPackage (default)
-  error = QgsVectorFileWriter.writeAsVectorFormat(layer, "/path/to/folder/my_data", "")
+  error = QgsVectorFileWriter.writeAsVectorFormat(layer,
+                                                  "/path/to/folder/my_data",
+                                                  "")
   if error[0] == QgsVectorFileWriter.NoError:
       print("success!")
 
-  # Write to an ESRI Shapefile format dataset using UTF-8 text encoding
-  error = QgsVectorFileWriter.writeAsVectorFormat(layer, "/path/to/folder/my_esridata",
-                                                  "UTF-8", driverName="ESRI Shapefile") 
-  if error[0] == QgsVectorFileWriter.NoError:
-      print("success again!")
-
-  # Write to an ESRI GDB file
-  opts = QgsVectorFileWriter.SaveVectorOptions() 
-  opts.driverName="FileGDB"
-  # if no geometry
-  opts.overrideGeometryType = QgsWkbTypes.NullGeometry 
-  opts.actionOnExistingFile=QgsVectorFileWriter.ActionOnExistingFile.CreateOrOverwriteLayer 
-  opts.layerName= 'my_new_layer_name'
-  error = QgsVectorFileWriter.writeAsVectorFormat(layer=vlayer, fileName=gdb_path,options=opts) 
-  if error[0] == QgsVectorFileWriter.NoError: 
-    print("success!")
-  else:
-    print(error)
-
-You can also convert fields to make them compatible with different formats by using the  :class:`FieldValueConverter <qgis.core.QgsVectorFileWriter.FieldValueConverter>`.
-For example, to convert array variable types (e.g. in Postgres) to a text type, you can do the following:
-
 .. code-block:: python
 
-  LIST_FIELD_NAME='xxxx'
-
-  class ESRIValueConverter(QgsVectorFileWriter.FieldValueConverter): 
-    def __init__(self, layer, list_field): 
-     QgsVectorFileWriter.FieldValueConverter.__init__(self) 
-        self.layer = layer 
-        self.list_field_idx = self.layer.fields().indexFromName(list_field)       
-
-    def convert(self, fieldIdxInLayer, value): 
-      if fieldIdxInLayer == self.list_field_idx: 
-        return QgsListFieldFormatter().representValue( layer=vlayer,
-                                                      fieldIndex=self.list_field_idx,
-                                                      config={}, 
-                                                      cache=None, 
-                                                      value=value ) 
-      else: 
-        return value               
-
-    def fieldDefinition(self, field): 
-      idx = self.layer.fields().indexFromName(field.name()) 
-      if idx == self.list_field_idx: 
-        return QgsField(LIST_FIELD_NAME, QVariant.String) 
-      else: 
-        return self.layer.fields()[idx]
-
-  converter = ESRIValueConverter(vlayer, LIST_FIELD_NAME)
-  #opts is a QgsVectorFileWriter.SaveVectorOptions as above
-  opts.fieldValueConverter = converter  
+  # Write to an ESRI Shapefile format dataset using UTF-8 text encoding
+  error = QgsVectorFileWriter.writeAsVectorFormat(layer,
+                                                  "/path/to/folder/my_esridata",
+                                                  "UTF-8",
+                                                  driverName="ESRI Shapefile")
+  if error[0] == QgsVectorFileWriter.NoError:
+      print("success again!")
 
 The third (mandatory) parameter specifies output text encoding.
 Only some drivers need this for correct operation - Shapefile is one of them
 (other drivers will ignore this parameter).
 Specifying the correct encoding is important if you are using international
 (non US-ASCII) characters.
+
+.. code-block:: python
+
+  # Write to an ESRI GDB file
+  opts = QgsVectorFileWriter.SaveVectorOptions()
+  opts.driverName = "FileGDB"
+  # if no geometry
+  opts.overrideGeometryType = QgsWkbTypes.NullGeometry
+  opts.actionOnExistingFile = QgsVectorFileWriter.ActionOnExistingFile.CreateOrOverwriteLayer
+  opts.layerName = 'my_new_layer_name'
+  error = QgsVectorFileWriter.writeAsVectorFormat(layer=vlayer,
+                                                  fileName=gdb_path,
+                                                  options=opts) 
+  if error[0] == QgsVectorFileWriter.NoError: 
+    print("success!")
+  else:
+    print(error)
+
+You can also convert fields to make them compatible with different formats by
+using the  :class:`FieldValueConverter <qgis.core.QgsVectorFileWriter.FieldValueConverter>`.
+For example, to convert array variable types (e.g. in Postgres) to a text type,
+you can do the following:
+
+.. code-block:: python
+
+  LIST_FIELD_NAME = 'xxxx'
+
+  class ESRIValueConverter(QgsVectorFileWriter.FieldValueConverter):
+
+    def __init__(self, layer, list_field):
+      QgsVectorFileWriter.FieldValueConverter.__init__(self)
+        self.layer = layer
+        self.list_field_idx = self.layer.fields().indexFromName(list_field) 
+
+    def convert(self, fieldIdxInLayer, value):
+      if fieldIdxInLayer == self.list_field_idx:
+        return QgsListFieldFormatter().representValue(layer=vlayer,
+                                                      fieldIndex=self.list_field_idx,
+                                                      config={},
+                                                      cache=None,
+                                                      value=value)
+      else:
+        return value
+
+    def fieldDefinition(self, field):
+      idx = self.layer.fields().indexFromName(field.name())
+      if idx == self.list_field_idx:
+        return QgsField(LIST_FIELD_NAME, QVariant.String)
+      else:
+        return self.layer.fields()[idx]
+
+  converter = ESRIValueConverter(vlayer, LIST_FIELD_NAME)
+  #opts is a QgsVectorFileWriter.SaveVectorOptions as above
+  opts.fieldValueConverter = converter  
 
 A destination CRS may also be specified --- if a valid instance of
 :class:`QgsCoordinateReferenceSystem <qgis.core.QgsCoordinateReferenceSystem>`
