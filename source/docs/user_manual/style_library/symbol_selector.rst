@@ -180,20 +180,31 @@ Appropriate for point geometry features, marker symbols have several
   |lockedGray| :sup:`Lock aspect ratio`. Each SVG file colors and stroke can
   also be adapted.
 
-  .. note:: Requirements for a customizable SVG marker symbol
+  .. note:: SVG version requirements
+
+   QGIS renders SVG files that follow the `SVG Tiny 1.2 profile
+   <https://www.w3.org/TR/SVGMobile12/>`_, intended for implementation on a
+   range of devices, from cellphones and PDAs to laptop and desktop computers,
+   and thus includes a subset of the features included in SVG 1.1 Full,
+   along with new features to extend the capabilities of SVG.
+
+   Some features not included in these specifications might not be rendered
+   correctly in QGIS.
+
+  .. tip:: Enable SVG marker symbol customization
 
    To have the possibility to change the colors of a :guilabel:`SVG marker`,
    you have to add the placeholders ``param(fill)`` for fill color,
    ``param(outline)`` for stroke color and ``param(outline-width)`` for stroke
    width. These placeholders can optionally be followed by a default value, e.g.:
- 
+
    .. code-block:: xml
-  
+
     <svg width="100%" height="100%">
     <rect fill="param(fill) #ff0000" stroke="param(outline) #00ff00" stroke-width="param(outline-width) 10" width="100" height="100">
     </rect>
     </svg>
- 
+
 For each marker symbol layer type, you can set some of the following properties:
 
 * :guilabel:`Size`
