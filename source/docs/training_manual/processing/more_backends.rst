@@ -21,6 +21,7 @@ R
 R_ is a free and open source software environment for statistical computing and graphics.
 
 It has to be installed separately, together with a few necessary libraries (**LIST**).
+To enable the use of R in QGIS, the *Processing R Provider* plugin must also be installed.
 
 The beauty of Processing implementation is that you can add your own scripts, simple or complex ones, and they may then be used as any other module, piped into more complex workflows, etc.
 
