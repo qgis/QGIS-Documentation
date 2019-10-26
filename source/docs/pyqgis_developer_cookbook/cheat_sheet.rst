@@ -462,13 +462,13 @@ Advanced TOC
    from qgis.core import QgsLayerTreeGroup, QgsLayerTreeLayer
    
    def getGroupLayers(group):
-      print('- group:' + group.name())
+      print('- group: ' + group.name())
       for child in group.children():
          if isinstance(child, QgsLayerTreeGroup):
             # Recursive call to get nested groups
             getGroupLayers(child)
          else:
-            print('  - layer:' + child.name())
+            print('  - layer: ' + child.name())
 
 
    root = QgsProject.instance().layerTreeRoot()
@@ -476,7 +476,7 @@ Advanced TOC
       if isinstance(child, QgsLayerTreeGroup):
          getGroupLayers(child)
       elif isinstance(child, QgsLayerTreeLayer):
-         print ("- layer: " + child.name()) 
+         print ('- layer: ' + child.name()) 
    
 .. testoutput::
    :hide:
