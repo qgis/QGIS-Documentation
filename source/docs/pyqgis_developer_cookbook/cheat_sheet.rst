@@ -474,7 +474,7 @@ Advanced TOC
    root = QgsProject.instance().layerTreeRoot()
    for child in root.children():
       if isinstance(child, QgsLayerTreeGroup):
-         getGroupLayers(child)
+         get_group_layers(child)
       elif isinstance(child, QgsLayerTreeLayer):
          print ('- layer: ' + child.name()) 
    
