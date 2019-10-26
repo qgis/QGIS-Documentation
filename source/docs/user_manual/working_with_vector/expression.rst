@@ -791,9 +791,11 @@ All these functions return the hash (a string hex value) of the string argument.
 
 **An example:**
 
-* Return the md4 hash ("c0fc71c241cdebb6e888cbac0e2b68eb") of the string "QGIS" ::
-    md4( 'QGIS' )
-    
+* Return the md4 hash ( 'c0fc71c241cdebb6e888cbac0e2b68eb' ) of the string 'QGIS'::
+
+    md4( 'QGIS')
+
+
 Layout Functions
 ----------------
 
