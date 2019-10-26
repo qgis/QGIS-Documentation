@@ -759,6 +759,37 @@ This group contains functions that operate on geometry objects (e.g., length, ar
     CASE WHEN $area > 10 000 THEN 'Larger' ELSE 'Smaller' END
 
 
+Hash Functions
+----------------
+
+This group contains hash functions (self explaining?).
+
+.. csv-table::
+   :header: "Function", "Description"
+   :widths: auto
+
+   "md4", ""
+   "md5", ""
+   "sha1", ""
+   "sha224", ""
+   "sha256", ""
+   "sha384", ""
+   "sha512", ""
+   "sha3_224", ""
+   "sha3_256", ""
+   "sha3_384", ""
+   "sha3_512", ""
+   "keccak_224", ""
+   "keccak_256", ""
+   "keccak_384", ""
+   "keccak_512", ""
+
+.. only:: html
+
+   |
+
+**Some examples:**
+
 Layout Functions
 ----------------
 
