@@ -461,7 +461,7 @@ Advanced TOC
 
    from qgis.core import QgsLayerTreeGroup, QgsLayerTreeLayer
    
-   def getGroupLayers(group):
+   def get_group_layers(group):
       print('- group: ' + group.name())
       for child in group.children():
          if isinstance(child, QgsLayerTreeGroup):
