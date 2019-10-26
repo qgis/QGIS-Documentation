@@ -467,7 +467,7 @@ Advanced TOC
          if isinstance(child, QgsLayerTreeGroup):
             # Recursive call to get nested groups
             getGroupLayers(child)
-        else:
+         else:
             print('  - layer:' + child.name())
 
 
