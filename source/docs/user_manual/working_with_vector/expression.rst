@@ -762,7 +762,8 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 Hash Functions
 ----------------
 
-This group contains hash functions (self explaining?).
+This group contains hash functions.
+All these functions return the hash (a string hex value) of the string argument.
 
 .. csv-table::
    :header: "Function", "Description"
@@ -788,8 +789,11 @@ This group contains hash functions (self explaining?).
 
    |
 
-**Some examples:**
+**An example:**
 
+* Return the md4 hash ("c0fc71c241cdebb6e888cbac0e2b68eb") of the string "QGIS" ::
+    md4( 'QGIS' )
+    
 Layout Functions
 ----------------
 
@@ -805,7 +809,7 @@ This group contains functions to manipulate print layout items properties.
 
    |
 
-**Some example:**
+**An example:**
 
 * Get the scale of the 'Map 0' in the current print layout::
 
