@@ -883,41 +883,54 @@ annotations to the map canvas.
 #. Click :guilabel:`Apply` to verify that it looks as expected or :guilabel:`OK`
    if you're satisfied.
 
-.. index:: Copyright
+.. index:: Copyright, Title
 .. _copyright_decoration:
 
-Copyright Label
-...............
+Copyright and Title Labels
+..........................
 
-|copyrightLabel| :sup:`Copyright label` adds a copyright label to the map
-using your choice of text.
+You can decorate your map with labels that apply as meta information; these are
+texts of your choice you can use as **Title** or as **Copyright** of the map.
+To add these decorations:
 
-#. Select :menuselection:`View --> Decorations --> Copyright Label` to open
-   the dialog
+#. Either select :menuselection:`View --> Decorations -->` |copyrightLabel|
+   :menuselection:`Copyright Label...` or :menuselection:`View --> Decorations
+   -->` |label| :menuselection:`Title Label...` to open the corresponding dialog
+
+   .. _figure_decorations_title:
+
+   .. figure:: img/titleLabel.png
+      :align: center
+
+      The Title Decoration Dialog
 
    .. _figure_decorations_copyright:
 
    .. figure:: img/copyright.png
       :align: center
 
-      The Copyright Dialog
+      The Copyright Decoration Dialog
 
-#. Make sure |checkbox| :guilabel:`Enable Copyright Label` is checked.
+#. Make sure |checkbox| :guilabel:`Enable Copyright Label` (or |checkbox|
+   :guilabel:`Enable Title Label`) is checked.
 #. Enter the text you want to place on the map.
-   You can include expressions
-   (using the :guilabel:`Insert an Expression` button).
-#. Choose the font for the label from the :guilabel:`Font` |selectString| combo box. Set the
-   font color and opacity by clicking the black arrow to the right of the font combo box.
-#. Choose the placement of the label from the :guilabel:`Placement`
-   |selectString| combo box.
+   You can make it dynamic using the :guilabel:`Insert an Expression` button.
+#. Choose the :guilabel:`Font` for the label using the :ref:`font selector
+   widget <font_selector>` with full access to QGIS :ref:`text formatting
+   <text_format>` options. Quickly set the font color and opacity by clicking
+   the black arrow to the right of the font combo box.
+#. Select the :ref:`color <color-selector>` to apply to the title's
+   :guilabel:`Background`
+#. Choose the :guilabel:`Placement` of the label in the canvas: options are
+   :guilabel:`Top left`, :guilabel:`Top Center` (default for title decoration),
+   :guilabel:`Top Right`, :guilabel:`Bottom left`, :guilabel:`Bottom Center`,
+   and :guilabel:`Bottom Right` (default for copyright decoration)
 #. Refine the placement of the item by setting a horizontal and/or vertical
    :guilabel:`Margin from Edge`. These values can be in **Millimeters** or
    **Pixels** or set as a **Percentage** of the width or height of the map canvas.
-#. You can change the color to apply
-#. Click :guilabel:`Apply` to verify that it looks as expected or :guilabel:`OK` if you're satisfied.
+#. Click :guilabel:`Apply` to verify that it looks as expected or
+   :guilabel:`OK` if you're satisfied.
 
-In the example above, which is the default, QGIS places a copyright symbol
-followed by the date in the bottom-right corner of the map canvas.
 
 .. index:: North arrow
 .. _northarrow_decoration:
@@ -2308,6 +2321,8 @@ The values presented in the varying size assistant above will set the size
 .. |indicatorMemory| image:: /static/common/mIndicatorMemory.png
    :width: 1.5em
 .. |invertSelection| image:: /static/common/mActionInvertSelection.png
+   :width: 1.5em
+.. |label| image:: /static/common/mActionLabel.png
    :width: 1.5em
 .. |labeling| image:: /static/common/labelingSingle.png
    :width: 1.5em
