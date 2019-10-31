@@ -46,7 +46,7 @@ you need to adapt some lines like this:
 .. code-block:: python
 
    from qgis.core import QgsApplication
-   from .processing_provider import Provider
+   from .processing_provider.provider import Provider
 
 
    class YourPluginName():
