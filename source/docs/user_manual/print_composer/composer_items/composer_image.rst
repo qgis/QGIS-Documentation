@@ -1,11 +1,16 @@
 .. index:: Image, Picture, Layout; Image item, Layout; North arrow
-.. _layout_picture_item:
 
 The Picture and the North Arrow Items
 =====================================
-
 The :guilabel:`Picture` item is a tool that helps decorate your map with
-pictures, logos... It's also the one that provides the in-built north arrows.
+pictures, logos... It can also be used to add north arrows, despite the
+dedicated :ref:`North arrow <layout_northarrow_item>` tool.
+
+.. _layout_picture_item:
+
+The Picture Item
+----------------
+
 You can add a picture with the |addImage| :sup:`Add Picture` following
 :ref:`items creation instructions <create_layout_item>` and manipulate it the
 same way as exposed in :ref:`interact_layout_item`.
@@ -95,9 +100,24 @@ is a convenient feature for north arrows that you can align with either:
 
 You can also apply a declination :guilabel:`Offset` to the picture rotation.
 
-North Arrows
-------------
-You can use the |northArrow| :sup:`Add North Arrow`  shortcut directly from the Toolbox in the print layout and you can pimp it as a :guilabel:`Picture` item as described above (see also figure_layout_image_).
+.. index:: North arrow
+.. _layout_northarrow_item:
+
+The North Arrow Item
+--------------------
+
+You can add a north arrow with the |northArrow| :sup:`Add North Arrow` following
+:ref:`items creation instructions <create_layout_item>` and manipulate it the
+same way as exposed in :ref:`interact_layout_item`.
+
+Since north arrows are images, the :guilabel:`North Arrow` item has the same
+properties as the :ref:`picture item <layout_picture_item>`. The main
+differences are:
+
+* A default north arrow is used when adding the item instead of a blank frame
+* The north arrow item is synced with a map item by default: the :guilabel:`Sync
+  with map` property is filled with the map over which the north arrow item is
+  drawn. If none, then it falls back to the :ref:`reference map <reference_map>`.
    
 .. note::
 
