@@ -478,7 +478,7 @@ The XML tags read by eVis
 
 A complete sample XML file with three queries is displayed below:
 
-::
+.. code-block:: xml
 
    <?xml version="1.0"?>
    <doc>
