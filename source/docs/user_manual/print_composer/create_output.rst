@@ -437,20 +437,21 @@ In the code sample, we create a dynamic bullet list of the related child feature
 
 .. code:: html
 
-   // Declare the two layers we will use
+   // Declare the two HTML div elements we will use for the parent feature id
+   // and information about the children
    <div id="parent"></div>
    <div id="my_children"></div>
 
    <script type="text/javascript">
       function setFeature(feature)
       {
-      // Show the parent feature's identifier (using field "ID")
+      // Show the parent feature's identifier (using its "ID" field)
       document.getElementById('parent').innerHTML = feature.properties.ID;
+      //clear the existing relation contents
       document.getElementById('my_children').innerHTML = ''; 
-      //clear existing relation contents
       feature.properties.my_relation.forEach(function(child_feature) {
       // for each related child feature, create a list element
-      // with the feature's name (using field "NAME")
+      // with the feature's name (using its "NAME" field)
          var node = document.createElement("li");
          node.appendChild(document.createTextNode(child_feature.NAME));
          document.getElementById('my_children').appendChild(node);
