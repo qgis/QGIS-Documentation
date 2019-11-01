@@ -156,6 +156,93 @@ Outputs
 
 .. _qgisreclassifybylayer:
 
+
+Raster layer zonal statistics
+-----------------------------
+Calculates statistics for a raster layer's values, categorized by zones defined in 
+another raster layer. 
+
+Parameters
+..........
+``Input layer`` [raster]
+  Raster layer in input
+
+``Band number`` [raster band]
+  If the raster is multiband choose the band you want to calculate the statistics.
+
+  Default: *1*
+
+``Zones layer`` [raster]
+  Raster layer
+
+``Zones band number`` [raster band]
+  If the raster is multiband choose the band that defines the zones
+
+  Default: *1*
+  
+Outputs
+.......
+
+``Statistics`` [table]
+  The output layer contains the following information **for each zone**:
+
+  * Area (m\ :sup:`2`): square meters of the area;
+  * Sum: total sum of the values;
+  * Count: count of how many pixels belong to the zone;
+  * Minimum value: minimum value of the raster;
+  * Maximum value: maximum value of the raster;
+  * Mean value: mean of the values;
+  
+
+Raster surface volume
+---------------------
+Calculates the volume under a raster grid's surface.
+
+Parameters
+..........
+``Input layer`` [raster]
+  Raster layer in input
+
+``Band number`` [raster band]
+  If the raster is multiband choose the band you want to calculate the statistics.
+
+  Default: *1*
+
+``Base level`` [number]
+  Value of the level considered as a basis.
+  
+  Default: *0.0*
+
+``Methods`` [enumeration]
+  Define the method for the volume calculation.
+  
+  Options:
+
+  * 0 --- 'Count Only Above Base Level'
+  * 1 --- 'Count Only Below Base Level'
+  * 2 --- 'Subtract Volume Below Base level'
+  * 3 --- 'Add Volume Below Base level'
+  
+  Default: *0*
+
+Outputs
+.......
+
+``Surface volume report`` [html]
+  The output report contains the following information:
+
+  * Volume: calculated volume;
+  * Area (m\ :sup:`2`): square meters of the area;
+  * Count: Total number of pixels analised;
+
+``Surface volume table`` [table]
+  The output table contains the following information:
+
+  * Volume: calculated volume;
+  * Area (m\ :sup:`2`): square meters of the area;
+  * Count: Total number of pixels analised;
+
+
 Reclassify by layer
 -------------------
 Reclassifies a raster band by assigning new class values based on the ranges
