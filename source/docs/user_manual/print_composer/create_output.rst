@@ -429,26 +429,28 @@ directly inserted into the HTML is that it gives you a full,
 unstructured GeoJSON feature to work with. This means that you can use the
 existing Javascript libraries and functions which operate on GeoJSON
 feature representations.
+
 The following code includes all related child features from the defined relation.
 Using the JavaScript ``setFeature`` function it allows you to make flexible HTML
 which represents relations in whatever format you like (lists, tables, etc).
 In the code sample, we create a dynamic bullet list of the related child features.
 
-.. code::
+.. code:: html
 
-   <script>
-   <div id="name"></div>
+   // Declare the two layers we will use
+   <div id="parent"></div>
    <div id="my_children"></div>
-   </script>
 
    <script type="text/javascript">
       function setFeature(feature)
       {
-      document.getElementById('name').innerHTML = feature.properties.NAME;
+      // Show the parent feature's identifier (using field "ID")
+      document.getElementById('parent').innerHTML = feature.properties.ID;
       document.getElementById('my_children').innerHTML = ''; 
       //clear existing relation contents
       feature.properties.my_relation.forEach(function(child_feature) {
-      // for each related child feature, create a LI element with the feature's name
+      // for each related child feature, create a list element
+      // with the feature's name (using field "NAME")
          var node = document.createElement("li");
          node.appendChild(document.createTextNode(child_feature.NAME));
          document.getElementById('my_children').appendChild(node);
@@ -458,7 +460,7 @@ In the code sample, we create a dynamic bullet list of the related child feature
 
 During the atlas creation there will be an iteration over the coverage layer
 containing the parent features. On every page, you will see a bullet list of
-the related child features.
+the related child features following the parent's identifier.
    
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
