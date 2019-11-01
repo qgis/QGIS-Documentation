@@ -417,6 +417,52 @@ the image file format set in :guilabel:`Atlas` panel or to SVG file.
 
 .. _Multiple_format_map_series_using_QGIS_2.6: https://sigsemgrilhetas.wordpress.com/2014/11/09/series-de-mapas-com-formatos-multiplos-em-qgis-2-6-parte-1-multiple-format-map-series-using-qgis-2-6-part-1
 
+.. _relations_in_atlas:
+
+Use project defined relations for atlas creation
+------------------------------------------------
+
+For users with HTML and Javascript knowledge it's possible to operate on
+GeoJSON objects and use project defined relations from the QGIS project.
+The difference between this approach and using expressions
+directly inserted into the HTML is that it gives you a full,
+unstructured GeoJSON feature to work with. This means that you can use the
+existing Javascript libraries and functions which operate on GeoJSON
+feature representations.
+
+The following code includes all related child features from the defined relation.
+Using the JavaScript ``setFeature`` function it allows you to make flexible HTML
+which represents relations in whatever format you like (lists, tables, etc).
+In the code sample, we create a dynamic bullet list of the related child features.
+
+.. code:: html
+
+   // Declare the two HTML div elements we will use for the parent feature id
+   // and information about the children
+   <div id="parent"></div>
+   <div id="my_children"></div>
+
+   <script type="text/javascript">
+      function setFeature(feature)
+      {
+      // Show the parent feature's identifier (using its "ID" field)
+      document.getElementById('parent').innerHTML = feature.properties.ID;
+      //clear the existing relation contents
+      document.getElementById('my_children').innerHTML = ''; 
+      feature.properties.my_relation.forEach(function(child_feature) {
+      // for each related child feature, create a list element
+      // with the feature's name (using its "NAME" field)
+         var node = document.createElement("li");
+         node.appendChild(document.createTextNode(child_feature.NAME));
+         document.getElementById('my_children').appendChild(node);
+         });
+      }
+   </script>
+
+During the atlas creation there will be an iteration over the coverage layer
+containing the parent features. On every page, you will see a bullet list of
+the related child features following the parent's identifier.
+   
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
