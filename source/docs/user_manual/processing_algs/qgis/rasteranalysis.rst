@@ -154,18 +154,17 @@ Outputs
     * Area (m\ :sup:`2`): square meters of the area for each pixel class.
 
 
-.. _qgisreclassifybylayer:
-
+.. _qgisrasterlayerzonalstats:
 
 Raster layer zonal statistics
 -----------------------------
 Calculates statistics for a raster layer's values, categorized by zones defined in 
-another raster layer. 
+another raster layer. See also :ref:`qgiszonalstatistics`
 
 Parameters
 ..........
 ``Input layer`` [raster]
-  Raster layer in input
+  Input raster layer
 
 ``Band number`` [raster band]
   If the raster is multiband choose the band you want to calculate the statistics.
@@ -173,12 +172,22 @@ Parameters
   Default: *1*
 
 ``Zones layer`` [raster]
-  Raster layer
+  Raster layer defining zones. Zones are given by contiguous pixels
+  having the same pixel value.
 
 ``Zones band number`` [raster band]
   If the raster is multiband choose the band that defines the zones
 
   Default: *1*
+  
+``Reference layer`` [raster] [list]  
+  Raster layer used to calculate the centroids that will be used as reference to
+  determine zones in the output layer:
+
+  * Input layer
+  * Zones layer
+  
+  Default: *0*
   
 Outputs
 .......
@@ -186,25 +195,28 @@ Outputs
 ``Statistics`` [table]
   The output layer contains the following information **for each zone**:
 
-  * Area (m\ :sup:`2`): square meters of the area;
+  * Area (m\ :sup:`2`): the area in square meters;
   * Sum: total sum of the values;
-  * Count: count of how many pixels belong to the zone;
-  * Minimum value: minimum value of the raster;
-  * Maximum value: maximum value of the raster;
+  * Count: number of pixels that belong to the zone;
+  * Minimum value: minimum pixel value of the raster;
+  * Maximum value: maximum pixel value of the raster;
   * Mean value: mean of the values;
   
+.. _qgisrastersurfacevolume:
 
 Raster surface volume
 ---------------------
-Calculates the volume under a raster grid's surface.
-
+Calculates the volume under a raster grid's surface relative
+to a given base level (height). This is mainly useful for 
+Digital Elevation Models (DEM).
+ 
 Parameters
 ..........
 ``Input layer`` [raster]
-  Raster layer in input
+  Input raster layer containing elevation data.
 
 ``Band number`` [raster band]
-  If the raster is multiband choose the band you want to calculate the statistics.
+  If the raster is multiband choose the band for which you want to calculate the statistics.
 
   Default: *1*
 
@@ -233,15 +245,16 @@ Outputs
 
   * Volume: calculated volume;
   * Area (m\ :sup:`2`): square meters of the area;
-  * Count: Total number of pixels analised;
+  * Count: Total number of pixels analized;
 
 ``Surface volume table`` [table]
-  The output table contains the following information:
+  The output table contains the following information  (see description above):
 
-  * Volume: calculated volume;
-  * Area (m\ :sup:`2`): square meters of the area;
-  * Count: Total number of pixels analised;
+  * Volume
+  * Area (m\ :sup:`2`)
+  * Count
 
+.. _qgisreclassifybylayer:
 
 Reclassify by layer
 -------------------
