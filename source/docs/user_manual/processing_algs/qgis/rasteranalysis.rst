@@ -176,7 +176,7 @@ Parameters
   having the same pixel value.
 
 ``Zones band number`` [raster band]
-  If the raster is multiband choose the band that defines the zones
+  If the raster is multiband, choose the band that defines the zones
 
   Default: *1*
   
@@ -195,12 +195,12 @@ Outputs
 ``Statistics`` [table]
   The output layer contains the following information **for each zone**:
 
-  * Area (m\ :sup:`2`): the area in square meters;
-  * Sum: total sum of the values;
+  * m\ :sup:`2`: the area in square map units;
+  * Sum: total sum of the pixel values;
   * Count: number of pixels that belong to the zone;
-  * Minimum value: minimum pixel value of the raster;
-  * Maximum value: maximum pixel value of the raster;
-  * Mean value: mean of the values;
+  * Min: minimum pixel value of the raster;
+  * Max: maximum pixel value of the raster;
+  * Mean: mean of the pixel values;
   
 .. _qgisrastersurfacevolume:
 
@@ -213,10 +213,10 @@ Digital Elevation Models (DEM).
 Parameters
 ..........
 ``Input layer`` [raster]
-  Input raster layer containing elevation data.
+  Input raster surface.
 
 ``Band number`` [raster band]
-  If the raster is multiband choose the band for which you want to calculate the statistics.
+  If the raster is multiband, choose the band for which you want to calculate the statistics.
 
   Default: *1*
 
@@ -240,19 +240,15 @@ Parameters
 Outputs
 .......
 
-``Surface volume report`` [html]
-  The output report contains the following information:
+  * Volume: the calculated volume;
+  * m\ :sup:`2`: the area (in square map units);
+  * Pixel_count: the total number of pixels that have been analyzed;
 
-  * Volume: calculated volume;
-  * Area (m\ :sup:`2`): square meters of the area;
-  * Count: Total number of pixels analized;
+``Surface volume report`` (``OUTPUT_HTML_FILE``)[html]
+  The output report in html format.
 
-``Surface volume table`` [table]
-  The output table contains the following information  (see description above):
-
-  * Volume
-  * Area (m\ :sup:`2`)
-  * Count
+``Surface volume table`` (``OUTPUT_TABLE``)[table]
+  The output table.
 
 .. _qgisreclassifybylayer:
 
