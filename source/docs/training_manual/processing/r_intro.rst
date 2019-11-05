@@ -7,14 +7,15 @@ Use R scripts in Processing
 Module contributed by Matteo Ghetta - funded by
 `Scuola Superiore Sant'Anna <https://www.santannapisa.it/it>`_
 
-Processing allows to write and run R scripts inside QGIS.
+Processing (with the ``Processing R Provider`` plugin) makes it possible to write
+and run R scripts inside QGIS.
 
 .. warning:: R has to be installed on your computer and the PATH has to correctly
    set up. Moreover Processing just calls the external R packages, it is not able
-   to install them. So be sure to install external packages directly in R. See the related
-   :ref:`chapter <creating_r_scripts>` in the user manual.
+   to install them. So be sure to install external packages directly in R.
+   See the related :ref:`chapter <creating_r_scripts>` in the user manual.
 
-.. note:: If you have some *packages* problem, maybe it is related to missing
+.. note:: If you have *package* problems, it may be related to missing
    *mandatory* packages required by Processing, like ``sp``, ``rgdal`` and ``raster``.
 
 Adding scripts
@@ -50,31 +51,40 @@ Open the editor and start writing at the beginning of it.
 
 You **must** specify some parameters **before** the script body:
 
-#. the name of the group in which you want to put your script::
+#. the name of the group (`plots` in this case) in which you want to put your
+   script (if the group does not exist, it will be created)::
 
     ##plots=group
 
-   so you will find your script in the **plots** group in the Processing toolbox.
+   You will find your script in the **plots** R group in the Processing toolbox.
 
-#. you have to tell Processing that you want to display a plot (just in this example)::
+#. you have to tell Processing that you want to display a plot (in this example)::
 
     ##showplots
 
-   this way in the **Result Viewer** of Processing you'll see the plot.
+   You will then find a link to the plot in **Result Viewer** of Processing.
 
-#. You need also to tell Processing with which kind of data you are working with.
+#. You also need to tell Processing about your input data.
    In this example we want to create a plot from a field of a vector layer::
 
     ##Layer=vector
 
-   Processing knows now that the input is a vector. The name *Layer* is not important,
-   what matters is the **vector** parameter.
+   Processing now knows that the input is a vector. The name *Layer* is not
+   important, what matters is the **vector** parameter.
 
-#. Finally, you have to specify the input field of the vector layer you want to plot::
+#. Finally, you have to specify the input field of the vector layer (using the
+   name you have provided above - *Layer*)::
 
     ##X=Field Layer
 
-   So Processing knows that you have called **X** the **Field Layer**.
+   Processing now knows that you need a field of *Layer*, and that you will
+   call it **X**.
+
+#. It is also possible to define the name of your script using ``name``::
+
+    ##My box plot script=name
+    
+   If not defined, the file name will be used as the name of the script.
 
 Script body
 -----------
@@ -83,10 +93,11 @@ Now that you have set up the *heading* of the script you can add the function::
 
     boxplot(Layer[[X]])
 
-Notice that **boxplot** is the name of the R function itself that calls **Layer**
-as dataset and **X** as the field of the dataset.
+**boxplot** is the name of the R function, the parameter **Layer**
+is the name of the input dataset and **X** is the name
+of the field of that dataset (as defined above).
 
-.. warning:: The parameter **X** is within a double square bracket ``[[]]``
+.. warning:: The parameter **X** has to be within double square brackets ``[[]]``
 
 The final script looks like this::
 
@@ -98,25 +109,26 @@ The final script looks like this::
 
 .. image:: img/r_intro/r_intro_3.png
 
-Save the script in the default path suggested by Processing. The name you choose
-will be the same as the name of the script you'll find in the Processing toolbox.
+Save the script in the default path suggested by Processing (processing/rscripts).
+If you have not defined a ``name`` in the script heading, the name you choose will
+become the name of the script in the Processing toolbox.
 
-.. note:: You can save the script in other paths, but Processing isn't able to
-   upload them automatically and you have to upload all the scripts manually
+.. note:: You can save the script wherever you like, but Processing will then not
+   be able to upload them automatically, so you have to upload it manually.
 
 Now just run it using the button on the top of the editor window:
 
 .. image:: img/r_intro/r_intro_4.png
 
-Otherwise, once the editor window has been closed, use the text box of Processing
-to find your script:
+Once the editor window has been closed, use the text box of Processing to find your
+script:
 
 .. image:: img/r_intro/r_intro_5.png
 
-You are now able to fill the parameters required in the Processing algorithm window:
+You can now fill the parameters required in the Processing algorithm window:
 
-* as **Layer** choose the *sample points* one
-* fill the **X** field with the **value** parameter
+* as **Layer** choose *sample points*
+* as **X** field choose *value*
 
 Click on **Run**.
 
@@ -125,7 +137,7 @@ Click on **Run**.
 The **Result window** should be automatically opened, if not, just click on
 :menuselection:`Processing --> Result Viewer...`.
 
-This is the final result you'll see:
+Click on the link in the viewer and you will see:
 
 .. image:: img/r_intro/r_intro_7.png
 
@@ -134,7 +146,7 @@ This is the final result you'll see:
 Create a vector
 ===============
 
-With an R script you can also create a vector and automatically load it in QGIS.
+With an R script you can also create a vector and automatically load it into QGIS.
 
 The following example has been taken from the ``Random sampling grid`` script
 that you can download from the online collection :menuselection:`R --> Tools -->
@@ -161,12 +173,12 @@ As before we have to set some parameters before the script body:
 
     ##Size=number 10
 
-   .. note:: 10 is going to be the default value. You can change this number or
-      you can leave the parameter without a default number
+   .. note:: 10 is the default value. You can change this number or
+      you can leave the parameter without a default number.
 
 #. specify that the output is a vector layer::
 
-    ##Output= output vector
+    ##Output=output vector
 
 Script body
 -----------
@@ -175,10 +187,10 @@ Now you can add the body of the function:
 
 #. run the ``spsample`` function::
 
-    pts=spsample(Layer,Size,type="random")
+    pts=spsample(Layer, Size, type="random")
 
-   this way the function takes the extent of the *Layer*, the number of points
-   is taken from the *Size* parameter and the point generation is *random*
+   The function takes the extent of the *Layer*, the number of points
+   is taken from the *Size* parameter and the point generation is *random*.
 
 #. Write the line that contains the parameters of the output::
 
@@ -189,13 +201,13 @@ The final script looks like this::
     ##Point pattern analysis=group
     ##Layer=vector
     ##Size=number 10
-    ##Output= output vector
-    pts=spsample(Layer,Size,type="random")
+    ##Output=output vector
+    pts=spsample(Layer, Size, type="random")
     Output=SpatialPointsDataFrame(pts, as.data.frame(pts))
 
 .. image:: img/r_intro/r_intro_8.png
 
-Save it and run it, clicking on the running button.
+Save it and run it, clicking on the run button.
 
 In the new window type in the right parameters:
 
@@ -203,17 +215,18 @@ In the new window type in the right parameters:
 
 and click on run.
 
-Resulting points will be displayed in the map canvas
+The result layer will be added to the table of contents and its points will
+be displayed in the map canvas:
 
 .. image:: img/r_intro/r_intro_10.png
 
 
-R - Processing syntax
-=====================
+Text and graph output from R - syntax
+=====================================
 
-Beware that Processing uses some special syntax to get the results out of R:
+Processing uses some special syntax to get the results out of R:
 
 * ``>`` before your command, as in ``>lillie.test(Layer[[Field]])`` means
   the result should be sent to R output (Result viewer)
-* ``+`` after a plot to call overlay plots. For example ``plot(Layer[[X]],
+* ``+`` after a plot enables overlay plots. For example ``plot(Layer[[X]],
   Layer[[Y]]) + abline(h=mean(Layer[[X]]))``
