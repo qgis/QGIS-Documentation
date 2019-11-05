@@ -3037,7 +3037,9 @@ in the current edit session.
 Gap check exceptions
 ....................
 
-Sometimes it is desirable to keep gaps inside an area that otherwise is fully covered by polygons. For example, a land use layer may have acceptable holes for lakes.
+Sometimes it is desirable to keep gaps inside an area in a polygon
+layer that otherwise is fully covered by polygons.
+For example, a land use layer may have acceptable holes for lakes.
 It is possible to define areas that are ignored in the gap check. Since gaps inside
 these areas are allowed, we will refer to them as *Allowed Gaps Areas*.
 
@@ -3052,11 +3054,12 @@ This buffer is applied to each polygon on the *Allowed Gaps Layer*.
 This makes it possible to make the tests less susceptible to small changes in the
 outlines at the borders of gaps.
 
-When *Allowed Gaps* are enabled, an additional fix :guilabel:`Add Allowed Gap` for
+When *Allowed Gaps* are enabled, an additional button (:guilabel:`Add Allowed Gap`) for
 detected gap errors is available in the geometry validation dock, where gaps are reported
 during digitizing.
-If the :guilabel:`Add Allowed Gap` fix is activated a new polygon with the geometry of the detected gap is inserted
-on the *Allowed Gaps Layer*. This makes it possible to quickly flag gaps as allowed.
+If the :guilabel:`Add Allowed Gap` button is pushed, a new polygon with the geometry
+of the detected gap is inserted into the *Allowed Gaps Layer*.
+This makes it possible to quickly flag gaps as allowed.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
