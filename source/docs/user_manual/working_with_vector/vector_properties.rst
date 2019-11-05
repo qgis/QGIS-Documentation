@@ -3038,17 +3038,23 @@ Gap check exceptions
 ....................
 
 Sometimes it is desirable to keep gaps inside an area that otherwise is fully covered by polygons. For example, a land use layer may have acceptable holes for lakes.
-It is possible to define areas, which are ignored in the gap check. Since inside these areas gaps are allowed, we will further refer to them as *Allowed Gaps Areas*.
+It is possible to define areas that are ignored in the gap check. Since gaps inside
+these areas are allowed, we will refer to them as *Allowed Gaps Areas*.
 
 In the options for the gap checks under :guilabel:`Allowed Gaps`, an *Allowed Gaps layer*
 can be configured.
 
-Whenever the gap check is executed, gaps which are covered by the *Allowed Gaps Layer* are not reported as topology errors.
+Whenever the gap check is executed, gaps which are covered by one or more polygons
+in the *Allowed Gaps Layer* are not reported as topology errors.
 
-It is also possible to configure an additional :guilabel:`Buffer`. This buffer is applied to each polygon on the *Allowed Gaps Layer*. This makes it possible to make the tests less susceptible to small changes on outlines at the borders of gaps.
+It is also possible to configure an additional :guilabel:`Buffer`.
+This buffer is applied to each polygon on the *Allowed Gaps Layer*.
+This makes it possible to make the tests less susceptible to small changes in the
+outlines at the borders of gaps.
 
 When *Allowed Gaps* are enabled, an additional fix :guilabel:`Add Allowed Gap` for
-detected gap errors is available in the geometry validation dock, where gaps are reported during digitizing.
+detected gap errors is available in the geometry validation dock, where gaps are reported
+during digitizing.
 If the :guilabel:`Add Allowed Gap` fix is activated a new polygon with the geometry of the detected gap is inserted
 on the *Allowed Gaps Layer*. This makes it possible to quickly flag gaps as allowed.
 
