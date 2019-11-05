@@ -10,12 +10,14 @@ Module contributed by Matteo Ghetta - funded by
 Processing (with the ``Processing R Provider`` plugin) makes it possible to write
 and run R scripts inside QGIS.
 
-.. warning:: R has to be installed on your computer and the PATH has to correctly
+.. warning::
+   R has to be installed on your computer and the PATH has to correctly
    set up. Moreover Processing just calls the external R packages, it is not able
    to install them. So be sure to install external packages directly in R.
    See the related :ref:`chapter <creating_r_scripts>` in the user manual.
 
-.. note:: If you have *package* problems, it may be related to missing
+.. note::
+   If you have *package* problems, it may be related to missing
    *mandatory* packages required by Processing, like ``sp``, ``rgdal`` and ``raster``.
 
 Adding scripts
@@ -26,7 +28,8 @@ the :menuselection:`R --> Tools --> Create new R script`.
 
 .. image:: img/r_intro/r_intro_1.png
 
-.. note:: If you cannot see R in Processing, you have to activate it in
+.. note::
+   If you cannot see R in Processing, you have to activate it in
    :menuselection:`Processing --> Options --> Providers`
 
 It opens a *script editor window* in which you have to specify some parameters
@@ -97,7 +100,8 @@ Now that you have set up the *heading* of the script you can add the function::
 is the name of the input dataset and **X** is the name
 of the field of that dataset (as defined above).
 
-.. warning:: The parameter **X** has to be within double square brackets ``[[]]``
+.. warning::
+   The parameter **X** has to be within double square brackets ``[[]]``
 
 The final script looks like this::
 
@@ -113,7 +117,8 @@ Save the script in the default path suggested by Processing (processing/rscripts
 If you have not defined a ``name`` in the script heading, the name you choose will
 become the name of the script in the Processing toolbox.
 
-.. note:: You can save the script wherever you like, but Processing will then not
+.. note::
+   You can save the script wherever you like, but Processing will then not
    be able to upload them automatically, so you have to upload it manually.
 
 Now just run it using the button on the top of the editor window:
@@ -141,7 +146,8 @@ Click on the link in the viewer and you will see:
 
 .. image:: img/r_intro/r_intro_7.png
 
-.. note:: You can open, copy and save the image by right clicking on the plot
+.. note::
+   You can open, copy and save the image by right clicking on the plot
 
 Create a vector
 ===============
