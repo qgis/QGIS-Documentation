@@ -1965,7 +1965,7 @@ specified in three different ways:
 * ``load from the environment``: use a function, for example in
   :file:`startup.py` or from an installed plugin
 * ``load from an external file``: a file chooser will let you
-  select a Python file from your filesystem or enter an URL for a remote file.
+  select a Python file from your filesystem or enter a URL for a remote file.
 * ``provide code in this dialog``: a Python editor will appear where you can
   directly type the function to use.
 
