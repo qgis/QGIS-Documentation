@@ -3037,25 +3037,20 @@ in the current edit session.
 Gap check exceptions
 ....................
 
-It is possible to define areas, which are ignored in the gap check. For example,
-a land use layer may have acceptable holes for lakes.
+Sometimes it is desirable to keep gaps inside an area that otherwise is fully covered by polygons. For example, a land use layer may have acceptable holes for lakes.
+It is possible to define areas, which are ignored in the gap check. Since inside these areas gaps are allowed, we will further refer to them as *Allowed Gaps Areas*.
 
-In the options for the gap checks under Allowed Gaps, an *allowed gaps layer*
-can be defined. On this additional layer, acceptable gaps are managed.
+In the options for the gap checks under :guilabel:`Allowed Gaps`, an *Allowed Gaps layer*
+can be configured.
 
---image:: img/acceptable_gaps.png
+Whenever the gap check is executed, gaps which are covered by the *Allowed Gaps Layer* are not reported as topology errors.
 
-Whenever the gap check is executed, any gap which is covered by a polygon
-from the *allowed gaps layer* is ignored.
+It is also possible to configure an additional :guilabel:`Buffer`. This buffer is applied to each polygon on the *Allowed Gaps Layer*. This makes it possible to make the tests less susceptible to small changes on outlines at the borders of gaps.
 
-If a buffer size is specified, the polygons will be buffered with an
-additional size in map units. This allows for the check to be more robust
-for small changes in the borders of allowed gaps.
-
-When *allowed gaps* are enabled, an additional fix *Add Allowed Gap* for
-detected gap errors is available. If this fix is applied for a gap, a new
-polygon with the shape of the gap will be added to the *allowed gaps layer*.
-
+When *Allowed Gaps* are enabled, an additional fix :guilabel:`Add Allowed Gap` for
+detected gap errors is available in the geometry validation dock, where gaps are reported during digitizing.
+If the :guilabel:`Add Allowed Gap` fix is activated a new polygon with the geometry of the detected gap is inserted
+on the *Allowed Gaps Layer*. This makes it possible to quickly flag gaps as allowed.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
