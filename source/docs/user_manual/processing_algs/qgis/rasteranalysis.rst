@@ -159,7 +159,9 @@ Outputs
 Raster layer zonal statistics
 -----------------------------
 Calculates statistics for a raster layer's values, categorized by zones defined in 
-another raster layer. See also :ref:`qgiszonalstatistics`
+another raster layer.
+
+.. seealso:: :ref:`qgiszonalstatistics`
 
 Parameters
 ..........
@@ -201,43 +203,49 @@ Outputs
   * Min: the minimum pixel value in the zone;
   * Max: the maximum pixel value in the zone;
   * Mean: the mean of the pixel values in the zone;
-  
+
+
 .. _qgisrastersurfacevolume:
 
 Raster surface volume
 ---------------------
-Calculates the volume under a raster grid's surface relative
-to a given base level. This is mainly useful for 
-Digital Elevation Models (DEM).
+Calculates the volume under a raster surface relative to a given base
+level. This is mainly useful for Digital Elevation Models (DEM).
 
 Parameters
 ..........
+
 ``Input layer`` [raster]
   Input raster surface.
 
 ``Band number`` [raster band]
-  If the raster is multiband, choose the band you want to define the surface.
+  If the raster is multiband, choose the band that shall define the
+  surface.
 
   Default: *1*
 
 ``Base level`` [number]
-  Define a base or reference value. This base value is used in the volume
+  Define a base or reference value. This base is used in the volume
   calculation according to the ``Method`` parameter (see below). 
   
   Default: *0.0*
   
 ``Method`` [enumeration]
-  Define the method for the volume calculation given by the difference between the raster pixel
-  value and the ``Base level``. 
+  Define the method for the volume calculation given by the difference
+  between the raster pixel value and the ``Base level``. 
   
   Options:
   
-  * 0 --- Count Only Above Base Level: only pixels above the base level will add to the volume.
-  * 1 --- Count Only Below Base Level: only pixels below the base level will add to the volume.
-  * 2 --- Subtract Volumes Below Base level: pixels above the base level will add to the volume,
-    pixels below the base level will subtract from the volume.
-  * 3 --- Add Volumes Below Base level: Add the volume regardless whether the pixel is above
-    or below the base level. This is equivalent to sum the absolute values of the difference 
+  * 0 --- Count Only Above Base Level: only pixels above the base level
+    will add to the volume.
+  * 1 --- Count Only Below Base Level: only pixels below the base level
+    will add to the volume.
+  * 2 --- Subtract Volumes Below Base level: pixels above the base level
+    will add to the volume, pixels below the base level will subtract
+    from the volume.
+  * 3 --- Add Volumes Below Base level: Add the volume regardless
+    whether the pixel is above or below the base level.
+    This is equivalent to sum the absolute values of the difference
     between the pixel value and the base level.
   
   Default: *0*
@@ -245,22 +253,29 @@ Parameters
 Outputs
 .......
 
-* Volume: the calculated volume;
-* Area: the area in square raster units;
-* Pixel_count: the total number of pixels that have been analyzed;
-  
-``Surface volume report`` (``OUTPUT_HTML_FILE``)[html]
-  The output report in html format.
+``Volume`` (``VOLUME``)
+  The calculated volume;
 
-``Surface volume table`` (``OUTPUT_TABLE``)[table]
-  The output table.
+``Area`` (``AREA``)
+  The area in square map units;
+
+``Pixel_count`` (``PIXEL_COUNT``)
+  The total number of pixels that have been analyzed;
+
+``Surface volume report`` (``OUTPUT_HTML_FILE``) [html]
+  The output report (containing volume, area and pixel count) in HTML
+  format.
+
+``Surface volume table`` (``OUTPUT_TABLE``) [table]
+  The output table (containing volume, area and pixel count).
+
 
 .. _qgisreclassifybylayer:
 
 Reclassify by layer
 -------------------
-Reclassifies a raster band by assigning new class values based on the ranges
-specified in a vector table.
+Reclassifies a raster band by assigning new class values based on the
+ranges specified in a vector table.
 
 Parameters
 ..........
