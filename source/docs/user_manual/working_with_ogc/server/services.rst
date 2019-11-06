@@ -1601,7 +1601,7 @@ available service endpoints. The **Landing Page** must provide links to
 
    Server WFS3 landing page
 
-
+.. _`ogc_api_features_api_definition`:
 
 API Definition
 ^^^^^^^^^^^^^^^^^^^^
@@ -1652,6 +1652,8 @@ The HTML representation also provides a browsable map with the available feature
 
    Server WFS3 collection detail page
 
+
+.. _`ogc_api_features_features_list`:
 
 Features list
 ^^^^^^^^^^^^^^^^^^^^^
@@ -1716,13 +1718,39 @@ URL example:
 Feature filtering
 --------------------
 
-The features can be filtered/searched by specifying one or more filters.
+The features available in a collection can be filtered/searched by specifying one or more filters.
 
 
 Date and time filter
 ^^^^^^^^^^^^^^^^^^^^
 
-This kind of filter is not currently supported by QGIS WFS3 implementation.
+Collections with date and/or datetime attributes can be filtered by specifying a ``datetime`` argument in the query string.
+By default the first date/datetime field is used for filtering, this behavior can be configured by settings a "Date" or "Time"
+dimension in the :menuselection:`QGIS Server --> Dimension` section of the layer properties dialog.
+
+The date and time filtering syntax is fully described in the :ref:`ogc_api_features_api_definition` and
+also supports ranges (begin and end values are included) in addition to single values.
+
+
+URL examples:
+
+returns only the the features with date dimension matching ``2019-01-01``
+
+.. code-block:: none
+
+    http://localhost/qgis_server/wfs3/collection_one/items.json?datetime=2019-01-01
+
+returns only the the features with datetime dimension matching ``2019-01-01T01:01:01``
+
+.. code-block:: none
+
+    http://localhost/qgis_server/wfs3/collection_one/items.json?datetime=2019-01-01T01:01:01
+
+returns only the the features with datetime dimension in the range ``2019-01-01T01:01:01`` ``2019-01-01T10:10:10``
+
+.. code-block:: none
+
+    http://localhost/qgis_server/wfs3/collection_one/items.json?datetime=2019-01-01T01:01:01/2019-01-01T10:10:10
 
 
 Bounding box filter
@@ -1785,6 +1813,22 @@ filters all features where attribute ``name`` ends with "value"
 .. code-block:: none
 
     http://localhost/qgis_server/wfs3/collection_one/items.json?attribute_one=*value
+
+
+Attribute selection
+-------------------
+
+The features attributes returned by a :ref:`ogc_api_features_features_list` call can be narrowed
+by adding a comma separated list of attribute names in the optional ``properties`` query string
+argument.
+
+URL example:
+
+returns only the ``name`` attribute
+
+.. code-block:: none
+
+    http://localhost/qgis_server/wfs3/collection_one/items.json?properties=name
 
 
 .. _`server_wfs3_settings`:
