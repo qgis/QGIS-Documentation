@@ -154,6 +154,107 @@ Outputs
     * Area (m\ :sup:`2`): square meters of the area for each pixel class.
 
 
+.. _qgisrasterlayerzonalstats:
+
+Raster layer zonal statistics
+-----------------------------
+Calculates statistics for a raster layer's values, categorized by zones defined in 
+another raster layer. See also :ref:`qgiszonalstatistics`
+
+Parameters
+..........
+``Input layer`` [raster]
+  Input raster layer
+
+``Band number`` [raster band]
+  If the raster is multiband choose the band for which you want to calculate the statistics.
+
+  Default: *1*
+
+``Zones layer`` [raster]
+  Raster layer defining zones. Zones are given by contiguous pixels
+  having the same pixel value.
+
+``Zones band number`` [raster band]
+  If the raster is multiband, choose the band that defines the zones.
+
+  Default: *1*
+  
+``Reference layer`` [raster] [list]  
+  Raster layer used to calculate the centroids that will be used as reference to
+  determine zones in the output layer:
+
+  * Input layer
+  * Zones layer
+  
+  Default: *0*
+  
+Outputs
+.......
+
+``Statistics`` [table]
+  The output layer contains the following information **for each zone**:
+
+  * Area: the area in square raster units in the zone;
+  * Sum: the total sum of the pixel values in the zone;
+  * Count: the number of pixels in the zone;
+  * Min: the minimum pixel value in the zone;
+  * Max: the maximum pixel value in the zone;
+  * Mean: the mean of the pixel values in the zone;
+  
+.. _qgisrastersurfacevolume:
+
+Raster surface volume
+---------------------
+Calculates the volume under a raster grid's surface relative
+to a given base level. This is mainly useful for 
+Digital Elevation Models (DEM).
+
+Parameters
+..........
+``Input layer`` [raster]
+  Input raster surface.
+
+``Band number`` [raster band]
+  If the raster is multiband, choose the band you want to define the surface.
+
+  Default: *1*
+
+``Base level`` [number]
+  Define a base or reference value. This base value is used in the volume
+  calculation according to the ``Method`` parameter (see below). 
+  
+  Default: *0.0*
+  
+``Method`` [enumeration]
+  Define the method for the volume calculation given by the difference between the raster pixel
+  value and the ``Base level``. 
+  
+  Options:
+  
+  * 0 --- Count Only Above Base Level: only pixels above the base level will add to the volume.
+  * 1 --- Count Only Below Base Level: only pixels below the base level will add to the volume.
+  * 2 --- Subtract Volumes Below Base level: pixels above the base level will add to the volume,
+    pixels below the base level will subtract from the volume.
+  * 3 --- Add Volumes Below Base level: Add the volume regardless whether the pixel is above
+    or below the base level. This is equivalent to sum the absolute values of the difference 
+    between the pixel value and the base level.
+  
+  Default: *0*
+  
+Outputs
+.......
+
+* Volume: the calculated volume;
+* Area: the area in square raster units;
+* Pixel_count: the total number of pixels that have been analyzed;
+  
+``Surface volume report`` (``OUTPUT_HTML_FILE``)[html]
+  The output report in html format.
+
+``Surface volume table`` (``OUTPUT_TABLE``)[table]
+  The output table.
+
 .. _qgisreclassifybylayer:
 
 Reclassify by layer
