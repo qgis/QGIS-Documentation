@@ -11,7 +11,7 @@ Processing (with the ``Processing R Provider`` plugin) makes it possible to writ
 and run R scripts inside QGIS.
 
 .. warning::
-   R has to be installed on your computer and the PATH has to correctly
+   R has to be installed on your computer and the PATH has to be correctly
    set up. Moreover Processing just calls the external R packages, it is not able
    to install them. So be sure to install external packages directly in R.
    See the related :ref:`chapter <creating_r_scripts>` in the user manual.
@@ -25,6 +25,10 @@ Adding scripts
 
 Adding a script is very simple. Open the Processing toolbox and just click on
 the :menuselection:`R --> Tools --> Create new R script`.
+In case this tool is not available, you have to create the script in for
+instance a text editor and save it in your R scripts folder - when it has
+been saved, it will be available for editing by right-clicking on the script
+name in the processing toolbox and then choose :menuselection:`Edit Script...`).
 
 .. image:: img/r_intro/r_intro_1.png
 
