@@ -58,18 +58,20 @@ Open the editor and start writing at the beginning of it.
 
 You **must** specify some parameters **before** the script body:
 
-#. the name of the group (`plots` in this case) in which you want to put your
+#. The name of the group (`plots` in this case) in which you want to put your
    script (if the group does not exist, it will be created)::
 
     ##plots=group
 
    You will find your script in the **plots** R group in the Processing toolbox.
 
-#. you have to tell Processing that you want to display a plot (in this example)::
+#. You have to tell Processing that you want to display a plot (in this example)::
 
     ##showplots
 
-   You will then find a link to the plot in **Result Viewer** of Processing.
+   You will then find a link to the plot in the **Result Viewer** panel (can
+   be turned on / off in :menuselection:`View --> Panels` and with
+   :menuselection:`Processing --> Results Viewer`).
 
 #. You also need to tell Processing about your input data.
    In this example we want to create a plot from a field of a vector layer::
@@ -101,11 +103,11 @@ Now that you have set up the *heading* of the script you can add the function::
     boxplot(Layer[[X]])
 
 **boxplot** is the name of the R function, the parameter **Layer**
-is the name of the input dataset and **X** is the name
-of the field of that dataset (as defined above).
+is the name that you have defined for the input dataset and **X** is the
+name you have defined for the field of that dataset.
 
 .. warning::
-   The parameter **X** has to be within double square brackets ``[[]]``
+   The parameter **X** has to be within double square brackets (``[[]]``).
 
 The final script looks like this::
 
@@ -118,12 +120,13 @@ The final script looks like this::
 .. image:: img/r_intro/r_intro_3.png
 
 Save the script in the default path suggested by Processing (processing/rscripts).
-If you have not defined a ``name`` in the script heading, the name you choose will
-become the name of the script in the Processing toolbox.
+If you have not defined a ``name`` in the script heading, the file name you
+choose will become the name of the script in the Processing toolbox.
 
 .. note::
    You can save the script wherever you like, but Processing will then not
-   be able to upload them automatically, so you have to upload it manually.
+   be able to include it in the processing toolbox automatically, so you have
+   to upload it manually.
 
 Now just run it using the button on the top of the editor window:
 
@@ -136,8 +139,8 @@ script:
 
 You can now fill the parameters required in the Processing algorithm window:
 
-* as **Layer** choose *sample points*
-* as **X** field choose *value*
+* for **Layer** choose *sample_points*
+* for the **X** field choose *value*
 
 Click on **Run**.
 
@@ -151,19 +154,22 @@ Click on the link in the viewer and you will see:
 .. image:: img/r_intro/r_intro_7.png
 
 .. note::
-   You can open, copy and save the image by right clicking on the plot
+   You can open, copy and save the image by right clicking on the plot.
 
 Create a vector
 ===============
 
-With an R script you can also create a vector and automatically load it into QGIS.
+You can also create a vector layer and have it automatically loaded
+into QGIS.
 
-The following example has been taken from the ``Random sampling grid`` script
-that you can download from the online collection :menuselection:`R --> Tools -->
-Download R scripts from the on-line collection`.
+The following example has been taken from the ``Random sampling grid``
+script that you can download from the online collection
+:menuselection:`R --> Tools --> Download R scripts from the on-line collection`
+(may not be available).
 
-The aim of this exercise is to create a random point vector in a layer extent using
-the ``spsample`` function of the ``sp`` package.
+The aim of this exercise is to create a random point vector layer
+using an input vector layer to restrict the extent using the ``spsample``
+function of the ``sp`` package.
 
 
 Script parameters
@@ -171,22 +177,24 @@ Script parameters
 
 As before we have to set some parameters before the script body:
 
-#. specify the name of the group in which you want to put your script, for
-   example *Point pattern analysis*::
+#. Specify the name of the group in which you want to put your script, in
+   this case *Point pattern analysis*::
 
     ##Point pattern analysis=group
-#. set the layer that will contain the random points::
+#. Define an input parameter (a vector layer) that will contstrain the
+   placement of the random points::
 
     ##Layer=vector
 
-#. set the number of points that are going to be created::
+#. Set an input parameter for the number of points that are going to be
+   created (``Size``, with a default value of ``10``)::
 
     ##Size=number 10
 
-   .. note:: 10 is the default value. You can change this number or
-      you can leave the parameter without a default number.
+   .. note:: Since a default value (``10``) is defined, the user can
+      change this number or can leave the parameter without a number.
 
-#. specify that the output is a vector layer::
+#. Specify that there is an output vector layer (called ``Output``)::
 
     ##Output=output vector
 
@@ -195,14 +203,18 @@ Script body
 
 Now you can add the body of the function:
 
-#. run the ``spsample`` function::
+#. Use the ``spsample`` function::
 
     pts=spsample(Layer, Size, type="random")
 
-   The function takes the extent of the *Layer*, the number of points
-   is taken from the *Size* parameter and the point generation is *random*.
+   The function uses the *Layer* to constrain the placement of the
+   points (if it is a line layer, a points will have to be on one of
+   the lines in the layer, if it is a polygon layer, a point will
+   have to be within a polygon).
+   The number of points is taken from the *Size* parameter.
+   The sampling method is *random*.
 
-#. Write the line that contains the parameters of the output::
+#. Generate the output (the ``Output`` parameter)::
 
     Output=SpatialPointsDataFrame(pts, as.data.frame(pts))
 
@@ -225,8 +237,8 @@ In the new window type in the right parameters:
 
 and click on run.
 
-The result layer will be added to the table of contents and its points will
-be displayed in the map canvas:
+The result layer will be added to the table of contents and its
+points will be displayed on the map canvas:
 
 .. image:: img/r_intro/r_intro_10.png
 
@@ -234,7 +246,8 @@ be displayed in the map canvas:
 Text and graph output from R - syntax
 =====================================
 
-Processing uses some special syntax to get the results out of R:
+Processing (with the ``Processing R Provider plugin``) uses special
+syntax to get the results out of R:
 
 * ``>`` before your command, as in ``>lillie.test(Layer[[Field]])`` means
   the result should be sent to R output (Result viewer)
