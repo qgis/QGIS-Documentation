@@ -165,7 +165,8 @@ into QGIS.
 The following example has been taken from the ``Random sampling grid``
 script that you can download from the online collection
 :menuselection:`R --> Tools --> Download R scripts from the on-line collection`
-(may not be available).
+(the scripts in the on-line collection can be found on
+https://github.com/qgis/QGIS-Processing/tree/master/rscripts).
 
 The aim of this exercise is to create a random point vector layer
 using an input vector layer to restrict the extent using the ``spsample``
