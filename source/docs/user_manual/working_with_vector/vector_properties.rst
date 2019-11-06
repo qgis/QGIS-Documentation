@@ -3047,7 +3047,7 @@ Sometimes it is desirable to keep gaps inside an area in a polygon
 layer that otherwise is fully covered by polygons.
 For example, a land use layer may have acceptable holes for lakes.
 It is possible to define areas that are ignored in the gap check. Since gaps inside
-these areas are allowed, we will refer to them as *Allowed Gaps Areas*.
+these areas are allowed, we will refer to them as *Allowed Gaps* areas.
 
 In the options for the gap checks under :guilabel:`Allowed Gaps`, an *Allowed Gaps layer*
 can be configured.
