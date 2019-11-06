@@ -3015,7 +3015,7 @@ Topology Checks
 ---------------
 
 In the :guilabel:`Topology checks` section, additional topology validation
-checks can be activated. Topology checks will be executed when the user 
+checks can be activated. Topology checks will be executed when the user
 saves the layer. Check errors will be reported in the geometry validation
 panel. As long as validation errors are present, the layer can not be saved.
 Topology checks are executed in the area of the bounding box of the modified
@@ -3037,8 +3037,35 @@ in the current edit session.
    * - The |checkbox| :guilabel:`Missing vertex` check will
        check for shared boundaries of neighbouring polygons
        where one border misses a vertex which is present on
-       the other one. 
+       the other one.
      - .. image:: img/missingvertexcheck.png
+
+Gap check exceptions
+....................
+
+Sometimes it is desirable to keep gaps inside an area in a polygon
+layer that otherwise is fully covered by polygons.
+For example, a land use layer may have acceptable holes for lakes.
+It is possible to define areas that are ignored in the gap check. Since gaps inside
+these areas are allowed, we will refer to them as *Allowed Gaps Areas*.
+
+In the options for the gap checks under :guilabel:`Allowed Gaps`, an *Allowed Gaps layer*
+can be configured.
+
+Whenever the gap check is executed, gaps which are covered by one or more polygons
+in the *Allowed Gaps Layer* are not reported as topology errors.
+
+It is also possible to configure an additional :guilabel:`Buffer`.
+This buffer is applied to each polygon on the *Allowed Gaps Layer*.
+This makes it possible to make the tests less susceptible to small changes in the
+outlines at the borders of gaps.
+
+When *Allowed Gaps* are enabled, an additional button (:guilabel:`Add Allowed Gap`) for
+detected gap errors is available in the geometry validation dock, where gaps are reported
+during digitizing.
+If the :guilabel:`Add Allowed Gap` button is pushed, a new polygon with the geometry
+of the detected gap is inserted into the *Allowed Gaps Layer*.
+This makes it possible to quickly flag gaps as allowed.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
