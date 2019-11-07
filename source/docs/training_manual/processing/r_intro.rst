@@ -163,9 +163,8 @@ You can also create a vector layer and have it automatically loaded
 into QGIS.
 
 The following example has been taken from the ``Random sampling grid``
-script that you can download from the online collection
-:menuselection:`R --> Tools --> Download R scripts from the on-line collection`
-(the scripts in the on-line collection can be found on
+script that can be found in the online collection of R scripts
+(the scripts in this online collection can be found in
 https://github.com/qgis/QGIS-Processing/tree/master/rscripts).
 
 The aim of this exercise is to create a random point vector layer
