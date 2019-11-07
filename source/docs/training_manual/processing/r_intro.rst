@@ -163,7 +163,7 @@ You can also create a vector layer and have it automatically loaded
 into QGIS.
 
 The following example has been taken from the ``Random sampling grid``
-script that you can be found in the on-line collection of R scripts
+script that can be found in the online collection of R scripts
 (the scripts in this on-line collection can be found in
 https://github.com/qgis/QGIS-Processing/tree/master/rscripts).
 
