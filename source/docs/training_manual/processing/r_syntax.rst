@@ -15,7 +15,7 @@ Each script starts with the **Input** and **Output** preceded with ``##``.
 Inputs
 ======
 
-Before you specify teh inputs you can also set the algorithm group in which your
+Before you specify the inputs you can also set the algorithm group in which your
 script will be put. If the group already exists, the algorithm will be added to
 the other, else a new group will be automatically created:
 
