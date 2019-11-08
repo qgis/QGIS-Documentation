@@ -23,12 +23,15 @@ and run R scripts inside QGIS.
 Adding scripts
 ==============
 
-Adding a script is very simple. Open the Processing toolbox and just click on
-the :menuselection:`R --> Tools --> Create new R script`.
-In case this tool is not available, you have to create the script in for
-instance a text editor and save it in your R scripts folder - when it has
-been saved, it will be available for editing by right-clicking on the script
-name in the processing toolbox and then choose :menuselection:`Edit Script...`).
+Adding a script is simple.
+The easiest way is to open the Processing toolbox and choose
+:menuselection:`Create new R script...` from the R menu (labelled with an
+R icon) at the top of the Processing Toolbox.
+You can also create the script in for instance a text editor and save it in
+your R scripts folder (processing/rscripts).
+When it has been saved there, it will be available for editing by
+right-clicking on the script name in the processing toolbox and then choose
+:menuselection:`Edit Script...`).
 
 .. image:: img/r_intro/r_intro_1.png
 
@@ -48,7 +51,8 @@ Creating plots
 
 In this tutorial we are going to create a **boxplot** of a vector layer field.
 
-Open the :file:`r_intro.qgs` QGIS project under the :file:`exercise_data/processing/r_intro/` folder.
+Open the :file:`r_intro.qgs` QGIS project under the
+:file:`exercise_data/processing/r_intro/` folder.
 
 
 Script parameters
