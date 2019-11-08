@@ -805,8 +805,8 @@ Optionally, you can activate following checkboxes:
    Normally, an Oracle Spatial layer is defined by an entry in the
    **USER_SDO_METADATA** table.
 
-   To ensure selection tools work correctly it is recommended that your
-   datasets have a **primary key**.
+   To ensure that selection tools work correctly, it is recommended that your
+   tables have a **primary key**.
 
 .. _create_db2_connection:
 
