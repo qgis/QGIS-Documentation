@@ -1724,33 +1724,35 @@ The features available in a collection can be filtered/searched by specifying on
 Date and time filter
 ^^^^^^^^^^^^^^^^^^^^
 
-Collections with date and/or datetime attributes can be filtered by specifying a ``datetime`` argument in the query string.
-By default the first date/datetime field is used for filtering, this behavior can be configured by settings a "Date" or "Time"
-dimension in the :menuselection:`QGIS Server --> Dimension` section of the layer properties dialog.
+Collections with date and/or datetime attributes can be filtered by specifying a ``datetime`` argument
+in the query string.
+By default the first date/datetime field is used for filtering. This behavior
+can be configured by setting a "Date" or "Time"
 
-The date and time filtering syntax is fully described in the :ref:`ogc_api_features_api_definition` and
-also supports ranges (begin and end values are included) in addition to single values.
+The date and time filtering syntax is fully described in the
+:ref:`ogc_api_features_api_definition` and also supports ranges (begin and end values
+are included) in addition to single values.
 
 
 URL examples:
 
-returns only the the features with date dimension matching ``2019-01-01``
+returns only the features with date dimension matching ``2019-01-01``
 
 .. code-block:: none
 
     http://localhost/qgis_server/wfs3/collection_one/items.json?datetime=2019-01-01
 
-returns only the the features with datetime dimension matching ``2019-01-01T01:01:01``
+returns only the features with datetime dimension matching ``2019-01-01T01:01:01``
 
 .. code-block:: none
 
     http://localhost/qgis_server/wfs3/collection_one/items.json?datetime=2019-01-01T01:01:01
 
-returns only the the features with datetime dimension in the range ``2019-01-01T01:01:01`` ``2019-01-01T10:10:10``
+returns only the features with datetime dimension in the range ``2019-01-01T01:01:01`` - ``2019-01-01T12:00:00``
 
 .. code-block:: none
 
-    http://localhost/qgis_server/wfs3/collection_one/items.json?datetime=2019-01-01T01:01:01/2019-01-01T10:10:10
+    http://localhost/qgis_server/wfs3/collection_one/items.json?datetime=2019-01-01T01:01:01/2019-01-01T12:00:00
 
 
 Bounding box filter
@@ -1818,7 +1820,7 @@ filters all features where attribute ``name`` ends with "value"
 Attribute selection
 -------------------
 
-The features attributes returned by a :ref:`ogc_api_features_features_list` call can be narrowed
+The feature attributes returned by a :ref:`ogc_api_features_features_list` call can be limited
 by adding a comma separated list of attribute names in the optional ``properties`` query string
 argument.
 
