@@ -28,7 +28,7 @@ The easiest way is to open the Processing toolbox and choose
 :menuselection:`Create new R script...` from the R menu (labelled with an
 R icon) at the top of the Processing Toolbox.
 You can also create the script in for instance a text editor and save it in
-your R scripts folder (processing/rscripts).
+your R scripts folder (:file:`processing/rscripts`).
 When it has been saved there, it will be available for editing by
 right-clicking on the script name in the processing toolbox and then choose
 :menuselection:`Edit Script...`).
