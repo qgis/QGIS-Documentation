@@ -303,8 +303,6 @@ Sorted on class name.
      - A band of a raster layer
    * - :class:`QgsProcessingParameterBoolean <qgis.core.QgsProcessingParameterBoolean>`
      - A boolean value
-   * - :class:`QgsProcessingParameterColor <qgis.core.QgsProcessingParameterColor>`
-     - A color
    * - :class:`QgsProcessingParameterCrs <qgis.core.QgsProcessingParameterCrs>`
      - A Coordinate Reference System
    * - :class:`QgsProcessingParameterDistance <qgis.core.QgsProcessingParameterDistance>`
