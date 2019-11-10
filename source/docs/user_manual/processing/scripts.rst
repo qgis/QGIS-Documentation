@@ -356,8 +356,6 @@ Sorted on class name.
 
    * - Class
      - Description
-   * - :class:`QgsProcessingOutputNumber <qgis.core.QgsProcessingOutputNumber>`
-     - A double numeric parameter for distance values
    * - :class:`QgsProcessingOutputFile <qgis.core.QgsProcessingOutputFile>`
      - A filename of an existing file
    * - :class:`QgsProcessingOutputFolder <qgis.core.QgsProcessingOutputFolder>`
