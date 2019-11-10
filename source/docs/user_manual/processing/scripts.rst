@@ -282,6 +282,101 @@ Processing algorithm standard functions:
     In this case, that's the buffer and rasterized output layers, and the
     count of features processed.
     The dictionary keys must match the original parameter/output names.
+    
+.. _processing_algs_input_output:
+
+Input and output types for Processing Algorithms
+-------------------------------------------------------
+
+Here is the list of input and output types that are supported in
+Processing with their corresponding alg decorator constants
+(:file:`algfactory.py` contains the complete list of alg constants).
+Sorted on class name.
+
+.. list-table:: Input types
+   :widths: 55 21
+   :header-rows: 1
+
+   * - Class
+     - Description
+   * - :class:`QgsProcessingParameterBand <qgis.core.QgsProcessingParameterBand>`
+     - A band of a raster layer
+   * - :class:`QgsProcessingParameterBoolean <qgis.core.QgsProcessingParameterBoolean>`
+     - A boolean value
+   * - :class:`QgsProcessingParameterCrs <qgis.core.QgsProcessingParameterCrs>`
+     - A Coordinate Reference System
+   * - :class:`QgsProcessingParameterDistance <qgis.core.QgsProcessingParameterDistance>`
+     - A double numeric parameter for distance values
+   * - :class:`QgsProcessingParameterEnum <qgis.core.QgsProcessingParameterEnum>`
+     - An enumeration, allowing for selection from a set of predefined values
+   * - :class:`QgsProcessingParameterExpression <qgis.core.QgsProcessingParameterExpression>`
+     - An expression
+   * - :class:`QgsProcessingParameterExtent <qgis.core.QgsProcessingParameterExtent>`
+     - A spatial extent defined by xmin, xmax, ymin, ymax
+   * - :class:`QgsProcessingParameterFeatureSink <qgis.core.QgsProcessingParameterFeatureSink>`
+     - A feature sink
+   * - :class:`QgsProcessingParameterFeatureSource <qgis.core.QgsProcessingParameterFeatureSource>`
+     - A feature source
+   * - :class:`QgsProcessingParameterField <qgis.core.QgsProcessingParameterField>`
+     - A field in the attribute table of a vector layer
+   * - :class:`QgsProcessingParameterFile <qgis.core.QgsProcessingParameterFile>`
+     - A filename of an existing file
+   * - :class:`QgsProcessingParameterFileDestination <qgis.core.QgsProcessingParameterFileDestination>`
+     - A filename for a newly created output file
+   * - :class:`QgsProcessingParameterFolderDestination <qgis.core.QgsProcessingParameterFolderDestination>`
+     - A folder
+   * - :class:`QgsProcessingParameterMapLayer <qgis.core.QgsProcessingParameterMapLayer>`
+     - A map layer
+   * - :class:`QgsProcessingParameterMatrix <qgis.core.QgsProcessingParameterMatrix>`
+     - A matrix
+   * - :class:`QgsProcessingParameterMultipleLayers <qgis.core.QgsProcessingParameterMultipleLayers>`
+     - A set of layers
+   * - :class:`QgsProcessingParameterNumber <qgis.core.QgsProcessingParameterNumber>`
+     - A numerical value
+   * - :class:`QgsProcessingParameterPoint <qgis.core.QgsProcessingParameterPoint>`
+     - A point
+   * - :class:`QgsProcessingParameterRange <qgis.core.QgsProcessingParameterRange>`
+     - A number range
+   * - :class:`QgsProcessingParameterRasterLayer <qgis.core.QgsProcessingParameterRasterLayer>`
+     - A raster layer
+   * - :class:`QgsProcessingParameterRasterDestination <qgis.core.QgsProcessingParameterRasterDestination>`
+     - A raster layer
+   * - :class:`QgsProcessingParameterString <qgis.core.QgsProcessingParameterString>`
+     - A text string
+   * - :class:`QgsProcessingParameterVectorLayer <qgis.core.QgsProcessingParameterVectorLayer>`
+     - A vector layer
+   * - :class:`QgsProcessingParameterVectorDestination <qgis.core.QgsProcessingParameterVectorDestination>`
+     - A vector layer
+
+|
+
+.. list-table:: Output types
+   :widths: 50 25
+   :header-rows: 1
+
+   * - Class
+     - Description
+   * - :class:`QgsProcessingOutputFile <qgis.core.QgsProcessingOutputFile>`
+     - A filename of an existing file
+   * - :class:`QgsProcessingOutputFolder <qgis.core.QgsProcessingOutputFolder>`
+     - A folder
+   * - :class:`QgsProcessingOutputHtml <qgis.core.QgsProcessingOutputHtml>`
+     - HTML
+   * - :class:`QgsProcessingOutputLayerDefinition <qgis.core.QgsProcessingOutputLayerDefinition>`
+     - A layer definition
+   * - :class:`QgsProcessingOutputMapLayer <qgis.core.QgsProcessingOutputMapLayer>`
+     - A map layer
+   * - :class:`QgsProcessingOutputMultipleLayers <qgis.core.QgsProcessingOutputMultipleLayers>`
+     - A set of layers
+   * - :class:`QgsProcessingOutputNumber <qgis.core.QgsProcessingOutputNumber>`
+     - A numerical value
+   * - :class:`QgsProcessingOutputRasterLayer <qgis.core.QgsProcessingOutputRasterLayer>`
+     - A raster layer
+   * - :class:`QgsProcessingOutputString <qgis.core.QgsProcessingOutputString>`
+     - A text string
+   * - :class:`QgsProcessingOutputVectorLayer <qgis.core.QgsProcessingOutputVectorLayer>`
+     - A vector layer
+
  
 Handing algorithm output
 ------------------------
