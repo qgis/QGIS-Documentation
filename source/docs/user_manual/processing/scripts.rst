@@ -329,8 +329,6 @@ Sorted on class name.
      - A map layer
    * - :class:`QgsProcessingParameterMatrix <qgis.core.QgsProcessingParameterMatrix>`
      - A matrix
-   * - :class:`QgsProcessingParameterMeshLayer <qgis.core.QgsProcessingParameterMeshLayer>`
-     - A mesh layer
    * - :class:`QgsProcessingParameterMultipleLayers <qgis.core.QgsProcessingParameterMultipleLayers>`
      - A set of layers
    * - :class:`QgsProcessingParameterNumber <qgis.core.QgsProcessingParameterNumber>`
