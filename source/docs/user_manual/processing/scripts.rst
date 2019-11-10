@@ -341,8 +341,6 @@ Sorted on class name.
      - A raster layer
    * - :class:`QgsProcessingParameterRasterDestination <qgis.core.QgsProcessingParameterRasterDestination>`
      - A raster layer
-   * - :class:`QgsProcessingParameterScale <qgis.core.QgsProcessingParameterScale>`
-     - A map scale
    * - :class:`QgsProcessingParameterString <qgis.core.QgsProcessingParameterString>`
      - A text string
    * - :class:`QgsProcessingParameterVectorLayer <qgis.core.QgsProcessingParameterVectorLayer>`
