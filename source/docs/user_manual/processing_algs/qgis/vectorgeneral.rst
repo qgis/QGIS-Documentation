@@ -261,30 +261,41 @@ Outputs
 
 Find projection
 ---------------
-Allows creation of a shortlist of possible candidate coordinate reference systems
+Creates a shortlist of candidate coordinate reference systems, for instance
 for a layer with an unknown projection.
 
-The expected area which the layer should reside in must be specified via the
-target area parameter. Additionally, the coordinate reference system for this
-target area must also be set.
+The area that the layer is expected to cover must be specified via the
+target area parameter.
+The coordinate reference system for this target area must be known to
+QGIS.
 
-The algorithm operates by testing the layer's extent in every known reference
-system and listing any in which the bounds would fall near the target area if the
-layer was in this projection.
+The algorithm operates by testing the layer's extent in every known
+reference system and then listing any for which the bounds would be near
+the target area if the layer was in this projection.
 
 Parameters
 ..........
+
 ``Input layer`` [vector: any]
   Layer with unknown projection.
 
 ``Target area for layer`` [extent]
-  This is the area in which the layer is expected to be.
+  The area that the layer covers.
+  The options for specifying the extent are:
+
+    * Use Canvas Extent
+    * Select Extent on Canvas
+    * Use Layer Extent
+
+  It is also possible to provide the extent coordinates directly
+  (xmin, xmax, ymin, ymax).
 
 ``Target area CRS`` [crs]
   Choose the target CRS of the target area selected.
 
 Outputs
 .......
+
 ``CRS candidates`` [table]
   The algorithm writes a table with all the CRS (EPSG codes) of the matching
   criteria.
