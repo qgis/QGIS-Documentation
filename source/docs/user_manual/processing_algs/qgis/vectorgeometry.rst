@@ -1264,6 +1264,60 @@ Outputs
 ``Fixed geometries`` [vector: line, polygon]
   Layer with fixed geometries.
 
+
+.. _qgisforcerhr:
+
+Force right-hand-rule |36|
+--------------------------
+
+This algorithm forces polygon geometries to respect the
+Right-Hand-Rule, in which the area that is bounded by a polygon
+is to the right of the boundary.
+In particular, the exterior ring is oriented in a clockwise
+direction and the interior rings in a counter-clockwise
+direction.
+The algorithm consumes and produces features with polygon
+geometries.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  -  Name
+      -  Identifier
+      -  Type
+      -  Description
+
+   *  -  **Input features**
+      -  
+      -  [vector: polygon]
+      -  The input vector
+
+
+Outputs
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  -  Name
+      -  Identifier
+      -  Type
+      -  Description
+
+   *  -  **Reoriented**
+      -  
+      -  [vector: line]
+      -  The input features with reoriented polygons
+
+
+
 .. _qgisantimeridiansplit:
 
 Geodesic line split at antimeridian |36|
