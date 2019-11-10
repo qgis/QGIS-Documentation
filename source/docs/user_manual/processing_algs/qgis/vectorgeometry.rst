@@ -2832,7 +2832,7 @@ Parameters
       -  Description
 
    *  -  **Input layer**
-      -  
+      -  ``INPUT``
       -  [vector: line]
       -  The input line features
 
@@ -2840,6 +2840,12 @@ Parameters
       -  ``LENGTH``
       -  [numeric]
       -  The maximum length of a line in the output.
+
+   *  -  **Split**
+      -  ``OUTPUT``
+      -  [vector: line]
+      -  The sink for the output line features.
+
 
 Outputs
 .......
@@ -2855,7 +2861,7 @@ Outputs
       -  Description
 
    *  -  **Split**
-      -  
+      -  ``OUTPUT``
       -  [vector: line]
       -  The new line features - all with line geometries that have a
          length that is less than or equal to the length specified in
