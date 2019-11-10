@@ -350,53 +350,104 @@ Check validity
 --------------
 Performs a validity check on the geometries of a vector layer.
 
-The geometries are classified in three groups (valid, invalid and error) and a
-vector layer is generated with the features in each of these categories:
+The geometries are classified in three groups (valid, invalid and error) and
+for each group, a vector layer with its features is generated:
 
-* The **valid** layer contains only the valid features (without topological errors).
-* The **invalid** layer contains all the invalid features found by the algorithm.
-* The **error** layer is the point layer where the invalid features have been found.
+* The **Valid output** layer contains only the valid features (without
+  topological errors).
+* The **Invalid output** layer contains all the invalid features found
+  by the algorithm.
+* The **Error output** layer is a point layer that points to where the
+  invalid features were found.
 
-The attribute table of each generated vector layer will contain some additional
-information (numbers of error found and type of error):
+The attribute tables of the generated layers will contain some additional
+information ("message" for the **error** layer, "FID" and "_errors" for the
+**invalid** layer and  only "FID" for the **valid** layer):
 
 .. figure:: img/check_validity.png
    :align: center
 
-   Left the input layer. Right: in green the valid layer, in orange the invalid layer
+   Left: the input layer. Right: the valid layer (green), the invalid layer (orange)
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Source layer to check.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Method`` [enumeration]
-  Check validity method.
+   *  - Name
+      - Identifier
+      - Type
+      - Description
 
-  Options:
+   *  -  **Method**
+      - METHOD
+      - [enumeration]
 
-  * 0 --- The one selected in digitizing settings
-  * 1 --- QGIS
-  * 2 --- GEOS
+        Default: 2
+      - Method to use to check validity.
+        Options:
 
-  Default: *2*
+        * 0: The one selected in digitizing settings
+        * 1: QGIS
+        * 2: GEOS
+
+   *  -  **Ignore ring self intersection**
+      - IGNORE_RING_SELF_INTERSECTION
+      - [boolean]
+      - Ignore self intersecting rings when checking for validity.
 
 Outputs
 .......
 
-``Valid output`` [vector: any]
-  Vector layer containing copy of the valid features of the source layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Invalid output`` [vector: any]
-  Vector layer containing copy of the invalid features of the source layer with
-  the field  ``_errors`` listing the summary of the error found.
+   *  - Name
+      - Identifier
+      - Type
+      - Description
 
-``Error output`` [vector: point]
-  Point layer of the exact position of the validity problems detected with the
-  ``message`` field describing the error(s) found.
+   *  -  **Valid output**
+      - VALID_OUTPUT
+      - [vector: any]
+      - Vector layer containing a copy of the valid features of
+        the source layer.
+
+   *  - **Invalid output**
+      - INVALID_OUTPUT
+      - [vector: any]
+      - Vector layer containing copy of the invalid features of
+        the source layer with the field  ``_errors`` listing the
+        summary of the error found.
+
+   *  - **Error output**
+      - ERROR_OUTPUT
+      - [vector: point]
+      - Point layer of the exact position of the validity
+        problems detected with the ``message`` field describing
+        the error(s) found.
+
+   *  - **Count of errors**
+      - ERROR_COUNT
+      - [number]
+      - The number of geometries that caused errors.
+
+   *  - **Count of invalid features**
+      - INVALID_COUNT
+      - [number]
+      - The number of invalid geometries.
+
+   *  -  **Count of valid features**
+      - VALID_COUNT
+      - [number]
+      - The number of valid geometries.
 
 
 .. _qgiscollect:
