@@ -301,8 +301,8 @@ See also
 
 .. _qgisremoveduplicatesbyattribute:
 
-Remove by attribute
--------------------
+Remove duplicates by attribute
+------------------------------
 Removes duplicate rows by only considering the specified field
 / fields.
 The first matching row will be retained, and duplicates will be
