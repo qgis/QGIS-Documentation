@@ -337,16 +337,15 @@ Parameters
    *  -  **Filtered (no duplicates)**
       -  ``OUTPUT``
       -  [feature sink]
-      -  Filtered (no duplicates).  Feature sink containing the
-         remaining features
+      -  Feature sink containing the remaining features.
 
    *  -  **Filtered (duplicates)**
    
          (Optional)
       - ``DUPLICATES``
       -  [feature sink]
-      -  Filtered (duplicates).  Feature sink containing the
-         removed features
+      -  Feature sink containing the removed features.
+         Will not be produced if not specifed (left as ``[Skip output]``).
 
 
 Outputs
