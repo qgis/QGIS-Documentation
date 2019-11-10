@@ -301,8 +301,8 @@ See also
 
 .. _qgisremoveduplicatesbyattribute:
 
-Remove duplicates by attribute
-------------------------------
+Remove duplicates by attribute |36|
+-----------------------------------
 Removes duplicate rows by only considering the specified field
 / fields.
 The first matching row will be retained, and duplicates will be
@@ -362,7 +362,7 @@ Outputs
       -  Type
       -  Description
 
-   *  -  **Input layer**
+   *  -  **Count of retained records**
       -  ``RETAINED_COUNT``
       -  [Number]
       -  Count of retained records
