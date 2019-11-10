@@ -356,8 +356,6 @@ Sorted on class name.
 
    * - Class
      - Description
-   * - :class:`QgsProcessingOutputBoolean <qgis.core.QgsProcessingOutputBoolean>`
-     - A boolean value
    * - :class:`QgsProcessingOutputNumber <qgis.core.QgsProcessingOutputNumber>`
      - A double numeric parameter for distance values
    * - :class:`QgsProcessingOutputFile <qgis.core.QgsProcessingOutputFile>`
