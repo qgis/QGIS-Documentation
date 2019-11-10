@@ -325,8 +325,6 @@ Sorted on class name.
      - A filename for a newly created output file
    * - :class:`QgsProcessingParameterFolderDestination <qgis.core.QgsProcessingParameterFolderDestination>`
      - A folder
-   * - :class:`QgsProcessingParameterLayout <qgis.core.QgsProcessingParameterLayout>`
-     - A layout
    * - :class:`QgsProcessingParameterLayoutItem <qgis.core.QgsProcessingParameterLayoutItem>`
      - A layout item
    * - :class:`QgsProcessingParameterMapLayer <qgis.core.QgsProcessingParameterMapLayer>`
