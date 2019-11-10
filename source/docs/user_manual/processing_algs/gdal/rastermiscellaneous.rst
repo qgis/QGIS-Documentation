@@ -89,47 +89,103 @@ This algorithm is derived from the `GDAL buildvrt utility <https://gdal.org/gdal
 Parameters
 ..........
 
-``Input layers`` [raster] [list]
-  GDAL-supported raster layers.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Resolution`` [enumeration]
-  The output resolution of the mosaic. By default the average resolution of th
-  raster files will be chosen.
+   *  -  Name
+      -  Identifier
+      -  Type
+      -  Description
+      
+   *  - **Input layers**
+      - INPUT
+      - [raster] [list]
+      - GDAL-supported raster layers.
 
-  Options:
+   *  - **Resolution**
+      - RESOLUTION
+      - [enumeration]
 
-  * 0 --- average
-  * 1 --- highest
-  * 2 --- lowest
+        Default: *0*
+      - The output resolution of the mosaic.
+        By default the average resolution of the raster files
+        will be chosen.
+        
+        Options:
 
-  Default: *0*
+        * 0 --- average
+        * 1 --- highest
+        * 2 --- lowest
 
-``Place each input file into a separate band`` [boolean]
-  With 'True' you can define that each raster file goes into a separated stacked band
-  in the VRT band.
+   *  - **Place each input file into a separate band**
+      - SEPARATE
+      - [boolean]
 
-  Default: *True*
+        Default: *True*
+      - With 'True' you can define that each raster file goes into
+        a separated stacked band in the VRT band.
 
-``Allow projection difference`` [boolean]
-  Allows that the output bands have different projections derived from the
-  projection of the input raster layers.
+   *  - **Allow projection difference**
+      - PROJ_DIFFERENCE
+      - [boolean]
 
-  Default: *False*
+        Default: *False*
+      - Allows that the output bands have different projections
+        derived from the projection of the input raster layers.
 
+   *  - **Add alpha mask band to VRT when source raster has none**
+      - ADD_ALPHA
+      - [boolean]
+      - Adds an alpha mask band to the VRT when the source raster
+        has none.
 
-``Add alpha mask band to VRT when source raster has none`` [boolean]
-  Adds an alpha mask band to the VRT when the source raster has none.
+   *  - **Override projection for the output file**
+   
+        (optional)
+      - ASSIGN_CRS
+      - [crs]
+      - Overrides the projection for the output file. No reprojection is done.
+  
+   *  - **Nodata value(s) for input bands (space separated)**
+      - SRC_NODATA
+      - [number] [list]
+      - Space separated Nodata value(s) for input band(s)
 
-``Override projection for the output file`` [crs]
-  Optional
+   *  - **Resampling algorithm**
+      - RESAMPLING
+      - [enumeration]
+      - The resampling algorithm to be used
 
-  Overrides the projection for the output file. No reprojection is done.
+        Options:
+
+        * 0 --- nearest
+        * 1 --- bilinear
+        * 2 --- cubic
+        * 3 --- cubicspline
+        * 4 --- lanczos
+        * 5 --- average
+        * 6 --- mode
 
 Outputs
-.......
+..........
 
-``Virtual`` [raster]
-  Output raster file
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  -  Name
+      -  Identifier
+      -  Type
+      -  Description
+
+   *  -  **ParameterVrtDestination**
+      -  OUTPUT
+      -  [raster]
+      -  Output raster layer
+
 
 .. _gdalmerge:
 
