@@ -2831,7 +2831,7 @@ Parameters
       -  Type
       -  Description
 
-   *  -  **Input features**
+   *  -  **Input layer**
       -  
       -  [vector: line]
       -  The input line features
