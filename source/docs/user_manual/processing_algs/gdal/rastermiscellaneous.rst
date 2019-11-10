@@ -77,8 +77,8 @@ Outputs
 
 .. _gdalbuildvirtualraster:
 
-Build virtual raster
---------------------
+Build virtual raster |36|
+-------------------------
 Builds a VRT (Virtual Dataset) that is a mosaic of the list of input GDAL-supported rasters.
 With a mosaic you can merge several raster files.
 
@@ -370,3 +370,5 @@ Outputs
   The name of the output file to create/append to. The default shapefile will
   be created if it doesn't already exist, otherwise it will append to the
   existing file.
+
+.. |36| replace:: ``NEW in 3.6``
