@@ -287,6 +287,18 @@ on the upper part and then write its description in the text box below.
 Model help is saved as part of the model itself.
 
 
+Exporting a model as a Python script
+--------------------------------------
+
+As we will see in a later chapter, Processing algorithms can be called from the
+QGIS Python console, and new Processing algorithms can be created as well using
+Python. A quick way of creating such a Python script is to create a model and
+then to export is as a Python file.
+
+To do so, right click on the name of the model in the Processing Toolbox and
+choose :guilabel:`Export Model as Python Algorithm`.
+
+
 About available algorithms
 --------------------------
 
