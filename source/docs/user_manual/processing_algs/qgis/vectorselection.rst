@@ -299,6 +299,92 @@ See also
 :ref:`qgisrandomextractwithinsubsets`
 
 
+.. _qgisremoveduplicatesbyattribute:
+
+Remove by attribute
+-------------------
+Removes duplicate rows by only considering the specified field
+/ fields.
+The first matching row will be retained, and duplicates will be
+discarded.
+
+Optionally, these duplicate records can be saved to a separate
+output for analysis.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  -  Name
+      -  Identifier
+      -  Type
+      -  Description
+
+   *  -  **Input layer**
+      -   ``INPUT``
+      -  [vector: any]
+      -  The input layer
+
+   *  -  **Fields**
+      -  ``FIELDS``
+      -  [tablefields]
+      -  Fields to match duplicates by
+
+   *  -  **Filtered (no duplicates)**
+      -  ``OUTPUT``
+      -  [feature sink]
+      -  Filtered (no duplicates).  Feature sink containing the
+         remaining features
+
+   *  -  **Filtered (duplicates)**
+   
+         (Optional)
+      - ``DUPLICATES``
+      -  [feature sink]
+      -  Filtered (duplicates).  Feature sink containing the
+         removed features
+
+
+Outputs
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  -  Name
+      -  Identifier
+      -  Type
+      -  Description
+
+   *  -  **Input layer**
+      -  ``RETAINED_COUNT``
+      -  [Number]
+      -  Count of retained records
+
+   *  -  **Count of discarded duplicate records**
+      -  ``DUPLICATE_COUNT``
+      -  [Number]
+      -  Count of discarded duplicate records
+
+   *  -  **Filtered (no duplicates)**
+      -  ``OUTPUT``
+      -  [String]
+      -  The link to the output (duplicates removed)
+
+   *  -  **Filtered (duplicates)**
+   
+         (Optional)
+      -  ``DUPLICATES``
+      -  [String]
+      -  The link to a vector layer containing the removed duplicates (if defined)
+
+
 .. _qgisselectbyattribute:
 
 Select by attribute
