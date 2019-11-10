@@ -514,3 +514,5 @@ Parameters
 See also
 ........
 :ref:`qgisextractbylocation`
+
+.. |36| replace:: ``NEW in 3.6``
