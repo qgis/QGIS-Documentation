@@ -299,9 +299,6 @@ Sorted on class name.
 
    * - Class
      - Description
-   * - :class:`QgsProcessingParameterAuthConfig <qgis.core.QgsProcessingParameterAuthConfig>`
-     - Allows users to select from available authentication configurations or
-       create new authentication configurations
    * - :class:`QgsProcessingParameterBand <qgis.core.QgsProcessingParameterBand>`
      - A band of a raster layer
    * - :class:`QgsProcessingParameterBoolean <qgis.core.QgsProcessingParameterBoolean>`
