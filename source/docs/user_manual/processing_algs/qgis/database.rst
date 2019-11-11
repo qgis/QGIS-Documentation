@@ -182,7 +182,7 @@ Parameters
      - Description
    * - **Input layers**
      - LAYERS
-     - [layer] [list]
+     - [vector: any] [list]
      - The (vector) layers to import into the GeoPackage.
        If a raster layer is specified, a ``QgsProcessingException``
        will be thrown.
