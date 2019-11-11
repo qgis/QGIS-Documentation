@@ -2914,6 +2914,65 @@ Outputs
   Vector layer with snapped geometries.
 
 
+.. _qgissplitlinesbylength:
+
+Split lines by maximum length |36|
+----------------------------------
+This algorithm takes a line (or curve) layer and splits each feature into
+multiple parts, where each part is of a specified maximum length.
+Z and M values at the start and end of the new line substrings are
+linearly interpolated from existing values.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  -  Name
+      -  Identifier
+      -  Type
+      -  Description
+
+   *  -  **Input layer**
+      -  ``INPUT``
+      -  [vector: line]
+      -  The input line features
+
+   *  -  **Length**
+      -  ``LENGTH``
+      -  [numeric]
+      -  The maximum length of a line in the output.
+
+   *  -  **Split**
+      -  ``OUTPUT``
+      -  [vector: line]
+      -  The sink for the output line features.
+
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  -  Name
+      -  Identifier
+      -  Type
+      -  Description
+
+   *  -  **Split**
+      -  ``OUTPUT``
+      -  [vector: line]
+      -  The new line features - all with line geometries that have a
+         length that is less than or equal to the length specified in
+         the LENGTH paramter.
+
+
 .. _qgissubdivide:
 
 Subdivide
