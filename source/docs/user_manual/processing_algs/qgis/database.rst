@@ -191,7 +191,7 @@ Parameters
      - [boolean]
      
        Default: False
-     - If the specified GeoPackage, checking this option
+     - If the specified GeoPackage exists, checking this option
        will remove it and create a new one.
    * - **Save layer styles into GeoPackage**
      - SAVE_STYLES
