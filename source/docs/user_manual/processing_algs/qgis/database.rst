@@ -184,15 +184,19 @@ Parameters
      - LAYERS
      - [vector: any] [list]
      - The (vector) layers to import into the GeoPackage.
-       If a raster layer is specified, a ``QgsProcessingException``
+       Raster layers are not supported. If a raster layer is
+       added, a
+       :class:`QgsProcessingException <qgis.core.QgsProcessingException>`
        will be thrown.
    * - **Overwrite existing GeoPackage**
      - OVERWRITE
      - [boolean]
      
        Default: False
-     - If the specified GeoPackage exists, checking this option
-       will remove it and create a new one.
+     - If the specified GeoPackage exists, setting this option to
+       ``True`` will make sure that it is deleted and a new one
+       will be created before the layers are added.
+       If this option is ``False``, the layers will be appended.
    * - **Save layer styles into GeoPackage** |38|
      - SAVE_STYLES
      - [boolean]
