@@ -159,8 +159,8 @@ Parameters
 
 .. _qgispackage:
 
-Package layers |38|
--------------------
+Package layers
+--------------
 Adds layers to a GeoPackage.
 
 If the GeoPackage exists and ``Overwrite existing GeoPackage``
