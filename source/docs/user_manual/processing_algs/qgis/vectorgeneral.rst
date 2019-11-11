@@ -508,6 +508,99 @@ Outputs
 ``Joined layer`` [vector: any]
   The final vector with all the joined features.
 
+.. _qgisjoinattributesbynearest:
+
+Join Attributes by Nearest |38|
+-------------------------------
+
+K-nearest neighbor joins!
+
+The algorithm takes an input vector layer and creates a new vector
+layer with additional fields in its attribute table
+The additional attributes and their values are taken from a second
+vector layer.
+Features are joined by finding the closest features from each layer.
+
+By default only the nearest feature is joined, but the join can also
+join to the k-nearest neighboring features.
+
+If a maximum distance is specified, only features which are closer
+than this distance will be matched.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Name
+      - Identifier
+      - Type
+      - Description
+   *  - **Input layer**
+      - INPUT
+      - [vector:any]
+      - The input layer.
+   *  - **Input layer 2**
+      - INPUT_2
+      - [vector:any]
+      - The join layer.
+   *  - **Layer 2 fields to copy (leave empty to copy all fields)**
+      - FIELDS_TO_COPY
+      - [fields]
+      - Join layer fields to copy (if empty, all fields will be
+        copied).
+   *  - **Discard records which could not be joined**
+      - DISCARD_NONMATCHING
+      - [boolean]
+      - Discard records which can not be joined
+   *  - **Joined field prefix**
+      - PREFIX
+      - [string]
+      - Joined field prefix
+   *  - **Maximum nearest neighbors**
+      - NEIGHBORS
+      - [number]
+      - Maximum number of nearest neighbors
+   *  - **Maximum distance**
+      - MAX_DISTANCE
+      - Number
+      - Maximum search distance
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Name
+      - Identifier
+      - Type
+      - Description
+   *  - **Joined layer**
+      - OUTPUT
+      - [vector:any]
+      - The output joined layer.
+   *  - **Unjoinable features from first layer**
+      - NON_MATCHING
+      - [vector:any]
+      - Layer containing the features from first layer that
+        could not be joined to any features in the join layer.
+   *  - **Number of joined features from input table**
+      - JOINED_COUNT
+      - [number]
+      - Number of features from the input table that have been
+        joined.
+   *  - **Number of unjoinable features from input table**
+      - UNJOINABLE_COUNT
+      - [number]
+      - Number of features from the input table that could not
+        be joined.
+
 
 .. _qgismergevectorlayers:
 
@@ -695,5 +788,6 @@ Parameters
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |38| replace:: ``NEW in 3.8``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
