@@ -249,7 +249,7 @@ producing any output other than the final files.
 At the bottom of the :guilabel:`Log` tab you will find buttons to
 ``Save Log to File``, ``Copy Log to Clipboard`` and ``Clear Log``.
 These are particularly handy when you have checked the
-``Keep dialog open after running algorithm`` in ``General`` part
+``Keep dialog open after running algorithm`` in the ``General`` part
 of the Processing options.
 
 On the right hand side of the dialog you will find a short description of the
