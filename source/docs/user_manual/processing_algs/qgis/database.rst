@@ -201,7 +201,7 @@ Parameters
      - Save the layer styles
    * - **Destination GeoPackage**
      - OUTPUT
-     - [geopackage file]
+     - [file]
      - If not specified the GeoPackage will be saved in
        the temporary folder.
 
