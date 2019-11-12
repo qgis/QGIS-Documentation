@@ -181,7 +181,7 @@ Parameters
       - Description
    *  - **Input layer**
       - INPUT
-      - [vector:any]
+      - [vector: point]
       - The input layer.
    *  - **Coordinate system**
       - CRS
