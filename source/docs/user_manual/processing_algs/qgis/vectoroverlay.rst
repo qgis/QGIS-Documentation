@@ -175,7 +175,7 @@ Parameters
   Field(s) of the overlay layer to keep in the output. If no fields are
   chosen all fields are taken.
   
-``Overlay fields prefix`` [string] |3.8|
+``Overlay fields prefix`` [string] |38|
 
 Prefix to add to the field names of the overlay layer's fields to avoid
   name collisions with fields in the input layer.
