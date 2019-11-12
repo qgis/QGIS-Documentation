@@ -165,7 +165,7 @@ Parameters
 
 ``Input fields to keep`` [tablefield: any] [list]
   Optional
-
+  
   Field(s) of the input layer to keep in the output. If no fields are
   chosen all fields are taken.
 
@@ -176,8 +176,7 @@ Parameters
   chosen all fields are taken.
   
 ``Overlay fields prefix`` [string] |38|
-
-Prefix to add to the field names of the overlay layer's fields to avoid
+  Prefix to add to the field names of the overlay layer's fields to avoid
   name collisions with fields in the input layer.
 
 Outputs
@@ -229,7 +228,7 @@ Parameters
 
 ``Intersect fields prefix`` [string] |3.8|
 
-Prefix to add to the field names of the intersect layer's fields to
+  Prefix to add to the field names of the intersect layer's fields to
   avoid name collisions with fields in the input layer.
 
 Outputs
@@ -367,7 +366,7 @@ Parameters
 
 ``Overlay fields prefix`` [string] |3.8|
 
-Prefix to add to the field names of the overlay layer's fields to
+  Prefix to add to the field names of the overlay layer's fields to
   avoid name collisions with fields in the input layer.
 
 Outputs
