@@ -5,7 +5,7 @@ Appendices
 .. _gpl_appendix:
 
 Appendix A: GNU General Public License
---------------------------
+--------------------------------------
 
 Version 2, June 1991
 
