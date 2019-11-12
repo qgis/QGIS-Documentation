@@ -851,7 +851,8 @@ A QML file contains all the information QGIS can handle for the
 rendering of feature geometries including symbol definitions,
 sizes and rotations, labelling, opacity and blend mode and more.
 
-The figure below
+The figure below shows the top level tags of a QML file (with
+only ``renderer_v2`` and its ``symbol`` tag expanded).
 
 .. _figure_qml:
 
