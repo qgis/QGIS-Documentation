@@ -229,7 +229,7 @@ Parameters
 
 ``Intersect fields prefix`` [string] |3.8|
 
-  Prefix to add to the field names of the intersect layer's fields to
+Prefix to add to the field names of the intersect layer's fields to
   avoid name collisions with fields in the input layer.
 
 Outputs
