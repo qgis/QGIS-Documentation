@@ -226,7 +226,7 @@ Parameters
   Field(s) of the intersect layer to keep in the output. If no fields are
   chosen all fields are taken.
 
-``Intersect fields prefix`` [string] |3.8|
+``Intersect fields prefix`` [string] |38|
   Prefix to add to the field names of the intersect layer's fields to
   avoid name collisions with fields in the input layer.
 
@@ -299,7 +299,7 @@ Parameters
 ``Overlay layer`` [vector: any]
   Second layer to extract (parts of) features from.
 
-``Overlay fields prefix`` [string] |3.8|
+``Overlay fields prefix`` [string] |38|
   Prefix to add to the field names of the overlay layer's fields to
   avoid name collisions with fields in the input layer.
 
@@ -362,7 +362,7 @@ Parameters
 
   Layer that will be combined to the first one.
 
-``Overlay fields prefix`` [string] |3.8|
+``Overlay fields prefix`` [string] |38|
   Prefix to add to the field names of the overlay layer's fields to
   avoid name collisions with fields in the input layer.
 
