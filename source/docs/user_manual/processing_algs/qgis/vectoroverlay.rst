@@ -177,7 +177,7 @@ Parameters
   
 ``Overlay fields prefix`` [string] |3.8|
 
-  Prefix to add to the field names of the overlay layer's fields to avoid
+Prefix to add to the field names of the overlay layer's fields to avoid
   name collisions with fields in the input layer.
 
 Outputs
