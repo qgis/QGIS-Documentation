@@ -188,8 +188,8 @@ Parameters
       - [crs]
         
         Default: "EPSG:4326"
-      - Join layer fields to copy (if empty, all fields will be
-        copied).
+      - Coordinate reference system to use for the generated x and
+        y fields.
    *  - **Field prefix**
         
         Optional
