@@ -161,8 +161,8 @@ Outputs
 
 .. _qgisaddxyfieldstolayer:
 
-Add X/Y fields to layer
------------------------
+Add X/Y fields to layer |38|
+----------------------------
 Adds X and Y (or latitude/longitude) fields to a point layer.
 The X/Y fields can be calculated in a different CRS to the layer
 (e.g. creating latitude/longitude fields for a layer in a project CRS).
@@ -444,6 +444,7 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |38| replace:: ``NEW in 3.8``
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png
