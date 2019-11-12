@@ -218,7 +218,7 @@ Outputs
       - OUTPUT
       - [vector:point]
       - The output layer - identical to the input layer but with two
-        new double fields, ``y`` and ``y``.
+        new double fields, ``x`` and ``y``.
 
 
 .. _qgisadvancedpythonfieldcalculator:
