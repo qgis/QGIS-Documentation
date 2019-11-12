@@ -161,24 +161,71 @@ Parameters
 
 Package layers
 --------------
-Collects a number of existing layers and packages them together into a single
-GeoPackage database.
+Adds layers to a GeoPackage.
+
+If the GeoPackage exists and ``Overwrite existing GeoPackage``
+is checked, it will be overwritten (removed and recreated).
+If the GeoPackage exists and ``Overwrite existing GeoPackage``
+is not checked, the layers will be appended to the GeoPackage.
 
 Parameters
 ..........
 
-``Input layers`` [vector: any] [list]
-  All the vector layers to import into the GeoPackage database.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Overwrite existing GeoPackage`` [boolean]
-  Replaces an existing database with a new one.
-
-  Default: *False*
+   * - Name
+     - Identifier
+     - Type
+     - Description
+   * - **Input layers**
+     - LAYERS
+     - [vector: any] [list]
+     - The (vector) layers to import into the GeoPackage.
+       Raster layers are not supported. If a raster layer is
+       added, a
+       :class:`QgsProcessingException <qgis.core.QgsProcessingException>`
+       will be thrown.
+   * - **Overwrite existing GeoPackage**
+     - OVERWRITE
+     - [boolean]
+     
+       Default: False
+     - If the specified GeoPackage exists, setting this option to
+       ``True`` will make sure that it is deleted and a new one
+       will be created before the layers are added.
+       If this option is ``False``, the layers will be appended.
+   * - **Save layer styles into GeoPackage** |38|
+     - SAVE_STYLES
+     - [boolean]
+     
+       Default: True
+     - Save the layer styles
+   * - **Destination GeoPackage**
+     - OUTPUT
+     - [file]
+     - If not specified the GeoPackage will be saved in
+       the temporary folder.
 
 Outputs
 .......
-``Destination GeoPackage``
-  If not specified the GeoPackage database will be saved in the temporary folder.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Name
+     - Identifier
+     - Type
+     - Description
+
+   * - **Layers within new package**
+     - OUTPUT_LAYERS
+     - [string] [list]
+     - The list of layers added to the GeoPackage.
 
 
 .. _qgispostgisexecuteandloadsql:
@@ -306,3 +353,12 @@ No new layer is created. The SQL query is executed in place on the layer.
 See also
 ........
 For some SQL query examples see :ref:`PostGIS SQL Query Examples <qgis_postgis_execute_sql_example>`.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |38| replace:: ``NEW in 3.8``
