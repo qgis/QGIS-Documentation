@@ -4,7 +4,7 @@ Appendices
 .. index:: License document
 .. _gpl_appendix:
 
-GNU General Public License
+Appendix A: GNU General Public License
 --------------------------
 
 Version 2, June 1991
@@ -784,8 +784,8 @@ to permit their use in free software.
 .. index:: QGIS File Formats
 .. _qgisfileformats_appendix:
 
-Appendix 2: QGIS File Formats
-----------------------------
+Appendix B: QGIS File Formats
+-----------------------------
 
 .. index:: QGIS Project File
 .. index:: QGS
