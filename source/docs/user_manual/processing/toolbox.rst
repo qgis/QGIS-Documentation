@@ -77,7 +77,7 @@ corresponds to the ``Centroids`` algorithm).
 .. figure:: img/parameters_dialog.png
    :align: center
 
-   Parameters Dialog
+   Algorithm Dialog - Parameters
 
 
 This dialog is used to set the input values that the algorithm needs to be
@@ -228,14 +228,28 @@ table can be of one of the following types.
   can choose the reference layer and all its properties (cell size, extent, CRS)
   will be used.
 
-Along with the :guilabel:`Parameters` tab, you will find another tab named
-:guilabel:`Log`. Information provided by the algorithm during its execution is
-written in this tab, and allow you to track the execution and be aware and have
+Along with the :guilabel:`Parameters` tab, there is another tab named
+:guilabel:`Log` (see figure below).
+Information provided by the algorithm during its execution is written
+in this tab, and allow you to track the execution and be aware and have
 more details about the algorithm as it runs. Notice that not all algorithms
 write information to this tab, and many of them might run silently without
 producing any output other than the final files.
 
-On the right hand side of the dialog you wil find a short description of the
+.. _figure_alg_dialog_log:
+
+.. figure:: img/algdialoglog.png
+   :align: center
+
+   Algorithm Dialog - Log
+
+At the bottom of the :guilabel:`Log` tab you will find buttons to
+``Save Log to File``, ``Copy Log to Clipboard`` and ``Clear Log``.
+These are particularly handy when you have checked the
+``Keep dialog open after running algorithm`` in the ``General`` part
+of the Processing options.
+
+On the right hand side of the dialog you will find a short description of the
 algorithm, which will help you understand its purpose and its basic ideas.
 If such a description is not available, the description panel will not be shown.
 
