@@ -300,7 +300,6 @@ Parameters
   Second layer to extract (parts of) features from.
 
 ``Overlay fields prefix`` [string] |3.8|
-
   Prefix to add to the field names of the overlay layer's fields to
   avoid name collisions with fields in the input layer.
 
@@ -364,7 +363,6 @@ Parameters
   Layer that will be combined to the first one.
 
 ``Overlay fields prefix`` [string] |3.8|
-
   Prefix to add to the field names of the overlay layer's fields to
   avoid name collisions with fields in the input layer.
 
