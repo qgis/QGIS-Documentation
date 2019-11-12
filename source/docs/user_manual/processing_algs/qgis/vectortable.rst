@@ -194,8 +194,9 @@ Parameters
         
         Optional
       - PREFIX
-      - [vector:any]
-      - The join layer.
+      - [string]
+      - Prefix to add to the new field names to avoid name collisions
+        with fields in the input layer.
    *  - **Added fields**
       - OUTPUT
       - [vector:point]
