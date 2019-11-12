@@ -185,7 +185,7 @@ Parameters
       - The input layer.
    *  - **Coordinate system**
       - CRS
-      - [string]
+      - [crs]
         
         Default: "EPSG:4326"
       - Join layer fields to copy (if empty, all fields will be
