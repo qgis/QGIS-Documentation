@@ -165,7 +165,7 @@ Add X/Y fields to layer |38|
 ----------------------------
 Adds X and Y (or latitude/longitude) fields to a point layer.
 The X/Y fields can be calculated in a different CRS to the layer
-(e.g. creating latitude/longitude fields for a layer in a project CRS).
+(e.g. creating latitude/longitude fields for a layer in a projected CRS).
 
 Parameters
 ..........
