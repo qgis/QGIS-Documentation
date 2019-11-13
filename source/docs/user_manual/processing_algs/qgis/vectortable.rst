@@ -158,6 +158,70 @@ Outputs
 
   Default: *Skip Output*
 
+
+.. _qgisaddxyfieldstolayer:
+
+Add X/Y fields to layer |38|
+----------------------------
+Adds X and Y (or latitude/longitude) fields to a point layer.
+The X/Y fields can be calculated in a different CRS to the layer
+(e.g. creating latitude/longitude fields for a layer in a projected CRS).
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Name
+      - Identifier
+      - Type
+      - Description
+   *  - **Input layer**
+      - INPUT
+      - [vector: point]
+      - The input layer.
+   *  - **Coordinate system**
+      - CRS
+      - [crs]
+        
+        Default: "EPSG:4326"
+      - Coordinate reference system to use for the generated x and
+        y fields.
+   *  - **Field prefix**
+        
+        Optional
+      - PREFIX
+      - [string]
+      - Prefix to add to the new field names to avoid name collisions
+        with fields in the input layer.
+   *  - **Added fields**
+      - OUTPUT
+      - [vector:point]
+      - Choice between ``Create Temporary Layer``, ``Save to File``,
+        ``Save to Geopackage`` and ``Save to PostGIS Table``
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Name
+      - Identifier
+      - Type
+      - Description
+   *  - **Added fields**
+      - OUTPUT
+      - [vector:point]
+      - The output layer - identical to the input layer but with two
+        new double fields, ``x`` and ``y``.
+
+
 .. _qgisadvancedpythonfieldcalculator:
 
 Advanced Python field calculator
@@ -381,6 +445,7 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |38| replace:: ``NEW in 3.8``
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png
