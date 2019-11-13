@@ -7,6 +7,40 @@ Cartography
       :local:
       :depth: 1
 
+.. _qgiscombinestyles:
+
+Combine style databases |310|
+---------------------------------------
+Combines multiple QGIS style databases into a single style database.
+If items of the same type with the same name exist in different source
+databases these will be renamed to have unique names in the output combined database.
+
+Parameters
+..........
+
+``Input databases`` [file] [list]
+  Files containing QGIS style items.
+
+``Objects to combine`` [list]
+  Types of style items in the input databases you would like to put in the new
+  database. These can be:
+  
+  * :ref:`Symbols <edit_symbol>`
+  * :ref:`Color ramps <color-ramp>`
+  * :ref:`Text formats <text_format>`
+  * :ref:`Label settings <showlabels>`
+
+Outputs
+.......
+
+``Output style database`` [file]
+  Output :file:`.XML` file combining the selected style items.
+
+See also
+........
+:ref:`qgisstylefromproject`
+
+
 .. _qgiscategorizeusingstyle:
 
 Create categorized renderer from styles
@@ -64,40 +98,6 @@ Outputs
   Optional
 
   Lists symbols from the provided style database which could not match any category.
-
-
-.. _qgiscombinestyles:
-
-Combine style databases |310|
----------------------------------------
-Combines multiple QGIS style databases into a single style database.
-If items of the same type with the same name exist in different source
-databases these will be renamed to have unique names in the output combined database.
-
-Parameters
-..........
-
-``Input databases`` [file] [list]
-  Files containing QGIS style items.
-
-``Objects to combine`` [list]
-  Types of style items in the input databases you would like to put in the new
-  database. These can be:
-  
-  * :ref:`Symbols <edit_symbol>`
-  * :ref:`Color ramps <color-ramp>`
-  * :ref:`Text formats <text_format>`
-  * :ref:`Label settings <showlabels>`
-
-Outputs
-.......
-
-``Output style database`` [file]
-  Output :file:`.XML` file combining the selected style items.
-
-See also
-........
-:ref:`qgisstylefromproject`
 
 
 .. _qgisstylefromproject:
