@@ -165,7 +165,7 @@ Parameters
 
 ``Input fields to keep`` [tablefield: any] [list]
   Optional
-
+  
   Field(s) of the input layer to keep in the output. If no fields are
   chosen all fields are taken.
 
@@ -174,6 +174,10 @@ Parameters
 
   Field(s) of the overlay layer to keep in the output. If no fields are
   chosen all fields are taken.
+  
+``Overlay fields prefix`` [string] |38|
+  Prefix to add to the field names of the overlay layer's fields to avoid
+  name collisions with fields in the input layer.
 
 Outputs
 .......
@@ -221,6 +225,10 @@ Parameters
 
   Field(s) of the intersect layer to keep in the output. If no fields are
   chosen all fields are taken.
+
+``Intersect fields prefix`` [string] |38|
+  Prefix to add to the field names of the intersect layer's fields to
+  avoid name collisions with fields in the input layer.
 
 Outputs
 .......
@@ -291,6 +299,10 @@ Parameters
 ``Overlay layer`` [vector: any]
   Second layer to extract (parts of) features from.
 
+``Overlay fields prefix`` [string] |38|
+  Prefix to add to the field names of the overlay layer's fields to
+  avoid name collisions with fields in the input layer.
+
 Outputs
 .......
 
@@ -350,6 +362,10 @@ Parameters
 
   Layer that will be combined to the first one.
 
+``Overlay fields prefix`` [string] |38|
+  Prefix to add to the field names of the overlay layer's fields to
+  avoid name collisions with fields in the input layer.
+
 Outputs
 .......
 
@@ -363,5 +379,6 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |38| replace:: ``NEW in 3.8``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
