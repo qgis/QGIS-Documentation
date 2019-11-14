@@ -37,16 +37,16 @@ Parameters
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Name
-      - Identifier
+   *  - Label
+      - Name
       - Type
       - Description
    *  - **Layer**
-      - INPUT
+      - ``INPUT``
       - [layer:any]
       - Layer to load in the legend
    *  - **Loaded layer name**
-      - NAME
+      - ``NAME``
       - [string]
       - Name of the loaded layer
 
@@ -58,12 +58,12 @@ Outputs
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Name
-      - Identifier
+   *  - Label
+      - Name
       - Type
       - Description
    *  - **Layer**
-      - OUTPUT
+      - ``OUTPUT``
       - [vector:any]
       - The (renamed) output layer
 
@@ -82,16 +82,16 @@ Parameters
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Name
-      - Identifier
+   *  - Label
+      - Name
       - Type
       - Description
    *  - **Layer**
-      - INPUT
+      - ``INPUT``
       - [layer:any]
       - Layer to rename
    *  - **New name**
-      - NAME
+      - ``NAME``
       - [string]
       - The new name of the layer
 
@@ -103,12 +103,12 @@ Outputs
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Name
-      - Identifier
+   *  - Label
+      - Name
       - Type
       - Description
    *  - **Layer**
-      - OUTPUT
+      - ``OUTPUT``
       - [layer:any]
       - The (renamed) output layer
 
@@ -127,16 +127,16 @@ Parameters
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Name
-      - Identifier
+   *  - Label
+      - Name
       - Type
       - Description
    *  - **Input 1**
-      - INPUT_1
+      - ``INPUT_1``
       - [string]
       - First string
    *  - **Input 2**
-      - INPUT_2
+      - ``INPUT_2``
       - [string]
       - Second string
 
@@ -148,12 +148,12 @@ Outputs
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Name
-      - Identifier
+   *  - Label
+      - Name
       - Type
       - Description
    *  - **Concatenation**
-      - CONCATENATION
+      - ``CONCATENATION``
       - [string]
       - The concatenated string
 
@@ -175,27 +175,27 @@ Parameters
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Name
-      - Identifier
+   *  - Label
+      - Name
       - Type
       - Description
    *  - **Input layer**
-      - INPUT
+      - ``INPUT``
       - [vector: any]
       - Input vector layer
    *  - **Distance field**
-      - DISTANCE
+      - ``DISTANCE``
       - [tablefield: numeric]
       - Attribute for the distance radius of the buffer
    *  - **Segments**
-      - SEGMENTS
+      - ``SEGMENTS``
       - [number]
         
         Default: *5*
       - Controls the number of line segments to use to approximate a
         quarter circle when creating rounded offsets.
    *  - **Dissolve result**
-      - DISSOLVE
+      - ``DISSOLVE``
       - [boolean]
         
         Default: *False*
@@ -207,7 +207,7 @@ Parameters
         
            Normal and dissolved buffer
    *  - **End cap style**
-      - END_CAP_STYLE
+      - ``END_CAP_STYLE``
       - [enumeration]
       - Controls how line endings are handled in the buffer.
         
@@ -216,12 +216,12 @@ Parameters
         
            Round, flat and square cap styles
    *  - **Join style**
-      - JOIN_STYLE
+      - ``JOIN_STYLE``
       - [enumeration]
       - Specifies whether round, miter or beveled joins should be used
         when offsetting corners in a line.
    *  - **Miter limit**
-      - MITER_LIMIT
+      - ``MITER_LIMIT``
       - [number]
         
         Default: 2.0
@@ -237,12 +237,12 @@ Outputs
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Name
-      - Identifier
+   *  - Label
+      - Name
       - Type
       - Description
    *  - **Buffer**
-      - OUTPUT
+      - ``OUTPUT``
       - [vector: polygon]
       - Buffer polygon vector layer.
 
