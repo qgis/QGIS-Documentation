@@ -27,7 +27,7 @@ The results are written to a new raster layer with a GDAL-supported format.
 .. figure:: img/raster_calculator.png
    :align: center
 
-   Raster Calculator
+   Raster Calculator (``abs``, ``min`` and ``max`` added in 3.10)
 
 
 The **Raster bands** list contains all loaded raster layers that can be used.
