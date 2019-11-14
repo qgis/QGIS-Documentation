@@ -126,7 +126,7 @@ Outputs
       - Description
    *  - **Output layer**
       - ``OUTPUT``
-      - [vector:any]
+      - [vector: any]
       - The output (masked) layer.
         The default format is "ESRI Shapefile".
 
@@ -203,7 +203,7 @@ Parameters
         
         Default: False
       - Calculate statistics (min, max, sum and mean) for the numeric
-        attribute specified, include it in the output layer
+        attribute specified and include them in the output layer
    *  - **Numeric attribute to calculate statistics on**
         
         (optional)
@@ -237,6 +237,6 @@ Outputs
       - Description
    *  - **Dissolved**
       - ``OUTPUT``
-      - [vector:any]
-      - The output mulitpart geometry layer (with dissolved geometries)
+      - [vector: any]
+      - The output multipart geometry layer (with dissolved geometries)
 
