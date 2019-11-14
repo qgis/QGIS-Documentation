@@ -334,7 +334,7 @@ Parameters
 
 Feature filter (Modeler only)
 -----------------------------
-This algorithm filters features from the input layer and redirects
+Filters features from the input layer and redirects
 them to one or several outputs.
 If you do not know about any attribute names that are common to all
 possible input layers, filtering is only possible on the feature
@@ -355,13 +355,13 @@ Parameters
       - Description
    *  - **Input layer**
       - INPUT
-      - [vector:any]
+      - [vector: any]
       - The input layer.
    *  - **Outputs and filters**
         
         (one or more)
       - OUTPUT_<name of the filter>
-      - [vector:any]
+      - [vector: any]
       - The output layers with filters (as many as there are filters).
 
 Outputs
@@ -380,7 +380,7 @@ Outputs
         
         (one or more)
       - native:filter_1:OUTPUT_<name of filter>
-      - [vector:any]
+      - [vector: any]
       - The output layers with filtered features (as many as there are
         filters).
 
