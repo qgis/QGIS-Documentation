@@ -330,6 +330,62 @@ Parameters
   Folder in which to store the output files.
 
 
+.. _qgisfeaturefilter:
+
+Feature filter (Modeler only)
+-----------------------------
+Filters features from the input layer and redirects
+them to one or several outputs.
+If you do not know about any attribute names that are common to all
+possible input layers, filtering is only possible on the feature
+geometry and general record mechanisms, such as ``$id`` and ``uuid``.  
+
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Input layer**
+      - INPUT
+      - [vector: any]
+      - The input layer.
+   *  - **Outputs and filters**
+        
+        (one or more)
+      - OUTPUT_<name of the filter>
+      - [vector: any]
+      - The output layers with filters (as many as there are filters).
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Output**
+        
+        (one or more)
+      - native:filter_1:OUTPUT_<name of filter>
+      - [vector: any]
+      - The output layers with filtered features (as many as there are
+        filters).
+
+
+
 .. _qgisfieldcalculator:
 
 Field calculator
