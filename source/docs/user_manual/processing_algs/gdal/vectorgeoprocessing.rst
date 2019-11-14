@@ -65,7 +65,7 @@ Outputs
       - Description
    *  - **Output layer**
       - ``OUTPUT``
-      - [vector:any]
+      - [vector: any]
       - The output (clipped) layer.
         The default format is "ESRI Shapefile".
 
