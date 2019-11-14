@@ -9,8 +9,8 @@ Raster analysis
 
 .. _qgisrasterbooleanand:
 
-Raster boolean AND
-------------------
+Raster boolean AND |38|
+-----------------------
 Calculates the boolean AND for a set of input rasters.
 If all of the input rasters have a non-zero value for a pixel, that
 pixel will be set to ``1`` in the output raster.
@@ -122,8 +122,8 @@ Outputs
 
 .. _qgisrasterbooleanor:
 
-Raster boolean OR
-------------------
+Raster boolean OR |38|
+----------------------
 Calculates the boolean OR for a set of input rasters.
 If all of the input rasters have a zero value for a pixel, that
 pixel will be set to ``0`` in the output raster.
@@ -763,3 +763,5 @@ Parameters
   * Variety
   * Variance
   * All
+
+.. |38| replace:: ``NEW in 3.8``
