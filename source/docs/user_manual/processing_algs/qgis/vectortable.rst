@@ -349,8 +349,8 @@ Parameters
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Name
-      - Identifier
+   *  - Label
+      - Name
       - Type
       - Description
    *  - **Input layer**
@@ -372,8 +372,8 @@ Outputs
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Name
-      - Identifier
+   *  - Label
+      - Name
       - Type
       - Description
    *  - **Output**
