@@ -861,7 +861,7 @@ select, load and finally style, you can simply add a .qlr file that
 points to the correct MS SQL layer with all the necessary style
 included.
 
-In the future a .qlr file may hold a reference to more then one layer.
+In the future a .qlr file may hold a reference to more than one layer.
 
 .. _figure_qlrtop:
 
