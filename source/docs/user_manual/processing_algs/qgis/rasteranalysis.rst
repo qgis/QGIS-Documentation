@@ -11,7 +11,7 @@ Raster analysis
 
 Raster boolean AND |38|
 -----------------------
-Calculates the boolean AND for a set of input rasters.
+Calculates the boolean ``AND`` for a set of input rasters.
 If all of the input rasters have a non-zero value for a pixel, that
 pixel will be set to ``1`` in the output raster.
 If any of the input rasters have ``0`` values for the pixel it will
@@ -24,7 +24,7 @@ as this layer.
 
 By default, a nodata pixel in ANY of the input layers will result in a
 nodata pixel in the output raster.
-If the 'Treat nodata values as false' option is checked, then nodata
+If the :guilabel:`Treat nodata values as false` option is checked, then nodata
 inputs will be treated the same as a ``0`` input value.
 
 
@@ -42,7 +42,7 @@ Parameters
       - Description
    *  - **Input layers**
       - ``INPUT``
-      - [raster selection]
+      - [raster] [list]
       - List of input raster layers
    *  - **Reference layer**
       - ``REF_LAYER``
@@ -52,18 +52,20 @@ Parameters
    *  - **Treat nodata values as false**
       - ``NODATA_AS_FALSE``
       - [boolean]
-      - Treat nodata values as false when performing the operation
+      - Treat nodata values in the input files as 0 when performing the operation
    *  - **Output no data value**
       - ``NO_DATA``
-      - [integer]
+      - [number]
+        
+        Default: -9999,0
       - Value to use for nodata in the output layer
    *  - **Output data type**
       - ``DATA_TYPE``
       - [enumeration]
         
-        Default: float32
+        Default: Float32
       - Output raster data type.
-        See https://qgis.org/api/classQgis.html#aeb8e0dfb7dc6eb09e552bf3dff9c84d5
+        See :api:`classQgis.html#aeb8e0dfb7dc6eb09e552bf3dff9c84d5`
         for a list of data types.
    *  - **Output layer**
       - ``OUTPUT``
@@ -109,11 +111,11 @@ Outputs
    *  - **True pixel count**
       - ``TRUE_PIXEL_COUNT``
       - [integer]
-      - The count of True pixels in the output raster layer
+      - The count of True pixels (value = 1) in the output raster layer
    *  - **False pixel count**
       - ``FALSE_PIXEL_COUNT``
       - [integer]
-      - The count of False pixels in the output raster layer
+      - The count of False pixels (value = 0) in the output raster layer
    *  - **Output layer**
       - ``OUTPUT``
       - [raster]
@@ -763,5 +765,12 @@ Parameters
   * Variety
   * Variance
   * All
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
 
 .. |38| replace:: ``NEW in 3.8``
