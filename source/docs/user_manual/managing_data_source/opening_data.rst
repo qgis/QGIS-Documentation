@@ -1,4 +1,4 @@
-.. index:: Vector, OGR, Raster, GDAL, Data, Format
+.. index:: Vector, OGR, Raster, GDAL, Data, Format, QLR
 .. index:: PostGreSQL, PostGIS, GeoPackage, SpatiaLite, GRASS, DXF
 .. index:: ArcInfo Binary Grid, ArcInfo ASCII Grid, GeoTIFF, Erdas Imagine
 
@@ -32,7 +32,8 @@ and often write a lot of formats:
 * Support of web data services (WM(T)S, WFS, WCS, CSW, ArcGIS Servers...) is
   also handled by QGIS providers (see :ref:`working_with_ogc`).
 * You can also read supported files from archived folders and use QGIS native
-  formats such as virtual and memory layers.
+  formats such as QML files (:ref:`qgisstylefile`) and virtual and memory
+  layers.
 
 As of the date of this document, more than 80 vector and 140 raster formats are
 supported by `GDAL <https://gdal.org/>`_ and QGIS native providers.
@@ -923,6 +924,19 @@ loading tool:
   opened with (see :ref:`vector_new_scratch_layer` for more information)
 * Virtual Layers: a layer resulting from a query on other layer(s)
   (see :ref:`vector_virtual_layers` for more information)
+
+
+.. index:: QGIS Layer Definition File, QLR
+
+QLR - QGIS Layer Definition File
+================================
+
+Layers with styling can be stored using the QLR format
+(:ref:`qgislayerdefinitionfile`).
+The QLR format makes it possible to share "complete" QGIS layers with other
+QGIS users.
+A QLR file contains a link to the data source and all the QGIS style
+information necessary to style it completely.
 
 
 Connecting to web services
