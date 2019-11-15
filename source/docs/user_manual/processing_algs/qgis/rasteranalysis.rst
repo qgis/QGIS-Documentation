@@ -7,6 +7,238 @@ Raster analysis
       :local:
       :depth: 1
 
+.. _qgisrasterbooleanand:
+
+Raster boolean AND |38|
+-----------------------
+Calculates the boolean ``AND`` for a set of input rasters.
+If all of the input rasters have a non-zero value for a pixel, that
+pixel will be set to ``1`` in the output raster.
+If any of the input rasters have ``0`` values for the pixel it will
+be set to ``0`` in the output raster.
+
+The reference layer parameter specifies an existing raster layer to
+use as a reference when creating the output raster.
+The output raster will have the same extent, CRS, and pixel dimensions
+as this layer.
+
+By default, a nodata pixel in ANY of the input layers will result in a
+nodata pixel in the output raster.
+If the :guilabel:`Treat nodata values as false` option is checked,
+then nodata inputs will be treated the same as a ``0`` input value.
+
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Name
+      - Identifier
+      - Type
+      - Description
+   *  - **Input layers**
+      - ``INPUT``
+      - [raster] [list]
+      - List of input raster layers
+   *  - **Reference layer**
+      - ``REF_LAYER``
+      - [raster]
+      - The reference layer to create the output layer
+        from (extent, CRS, pixel dimensions)
+   *  - **Treat nodata values as false**
+      - ``NODATA_AS_FALSE``
+      - [boolean]
+      - Treat nodata values in the input files as 0 when performing the
+        operation
+   *  - **Output no data value**
+      - ``NO_DATA``
+      - [number]
+        
+        Default: -9999,0
+      - Value to use for nodata in the output layer
+   *  - **Output data type**
+      - ``DATA_TYPE``
+      - [enumeration]
+        
+        Default: Float32
+      - Output raster data type.
+        See :api:`classQgis.html#aeb8e0dfb7dc6eb09e552bf3dff9c84d5`
+        for a list of data types.
+   *  - **Output layer**
+      - ``OUTPUT``
+      - [raster]
+      - Output raster layer
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Name
+      - Identifier
+      - Type
+      - Description
+   *  - **Extent**
+      - ``EXTENT``
+      - [extent]
+      - The extent of the output raster layer
+   *  - **CRS authority identifier**
+      - ``CRS_AUTHID``
+      - [crs]
+      - The coordinate reference system of the output raster layer
+   *  - **Width in pixels**
+      - ``WIDTH_IN_PIXELS``
+      - [integer]
+      - The width in pixels of the output raster layer
+   *  - **Height in pixels**
+      - ``HEIGHT_IN_PIXELS``
+      - [integer]
+      - The height in pixels of the output raster layer
+   *  - **Total pixel count**
+      - ``TOTAL_PIXEL_COUNT``
+      - [integer]
+      - The count of pixels in the output raster layer
+   *  - **NODATA pixel count**
+      - ``NODATA_PIXEL_COUNT``
+      - [integer]
+      - The count of nodata pixels in the output raster layer
+   *  - **True pixel count**
+      - ``TRUE_PIXEL_COUNT``
+      - [integer]
+      - The count of True pixels (value = 1) in the output raster layer
+   *  - **False pixel count**
+      - ``FALSE_PIXEL_COUNT``
+      - [integer]
+      - The count of False pixels (value = 0) in the output raster layer
+   *  - **Output layer**
+      - ``OUTPUT``
+      - [raster]
+      - Output raster layer containing the result
+
+
+.. _qgisrasterbooleanor:
+
+Raster boolean OR |38|
+----------------------
+Calculates the boolean ``OR`` for a set of input rasters.
+If all of the input rasters have a zero value for a pixel, that
+pixel will be set to ``0`` in the output raster.
+If any of the input rasters have ``1`` values for the pixel it will
+be set to ``1`` in the output raster.
+
+The reference layer parameter specifies an existing raster layer to
+use as a reference when creating the output raster.
+The output raster will have the same extent, CRS, and pixel dimensions
+as this layer.
+
+By default, a nodata pixel in ANY of the input layers will result in a
+nodata pixel in the output raster.
+If the :guilabel:`Treat nodata values as false` option is checked,
+then nodata inputs will be treated the same as a ``0`` input value.
+
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Name
+      - Identifier
+      - Type
+      - Description
+   *  - **Input layers**
+      - ``INPUT``
+      - [raster] [list]
+      - List of input raster layers
+   *  - **Reference layer**
+      - ``REF_LAYER``
+      - [raster]
+      - The reference layer to create the output layer
+        from (extent, CRS, pixel dimensions)
+   *  - **Treat nodata values as false**
+      - ``NODATA_AS_FALSE``
+      - [boolean]
+      - Treat nodata values in the input files as 0 when performing the
+        operation
+   *  - **Output no data value**
+      - ``NO_DATA``
+      - [number]
+        
+        Default: -9999,0
+      - Value to use for nodata in the output layer
+   *  - **Output data type**
+      - ``DATA_TYPE``
+      - [enumeration]
+        
+        Default: Float32
+      - Output raster data type.
+        See :api:`classQgis.html#aeb8e0dfb7dc6eb09e552bf3dff9c84d5`
+        for a list of data types.
+   *  - **Output layer**
+      - ``OUTPUT``
+      - [raster]
+      - Output raster layer
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Name
+      - Identifier
+      - Type
+      - Description
+   *  - **Extent**
+      - ``EXTENT``
+      - [extent]
+      - The extent of the output raster layer
+   *  - **CRS authority identifier**
+      - ``CRS_AUTHID``
+      - [crs]
+      - The coordinate reference system of the output raster layer
+   *  - **Width in pixels**
+      - ``WIDTH_IN_PIXELS``
+      - [integer]
+      - The width in pixels of the output raster layer
+   *  - **Height in pixels**
+      - ``HEIGHT_IN_PIXELS``
+      - [integer]
+      - The height in pixels of the output raster layer
+   *  - **Total pixel count**
+      - ``TOTAL_PIXEL_COUNT``
+      - [integer]
+      - The count of pixels in the output raster layer
+   *  - **NODATA pixel count**
+      - ``NODATA_PIXEL_COUNT``
+      - [integer]
+      - The count of nodata pixels in the output raster layer
+   *  - **True pixel count**
+      - ``TRUE_PIXEL_COUNT``
+      - [integer]
+      - The count of True pixels (value = 1) in the output raster layer
+   *  - **False pixel count**
+      - ``FALSE_PIXEL_COUNT``
+      - [integer]
+      - The count of False pixels (value = 0) in the output raster layer
+   *  - **Output layer**
+      - ``OUTPUT``
+      - [raster]
+      - Output raster layer containing the result
+ 
+
 .. _qgisrastercalculator:
 
 Raster calculator
@@ -537,3 +769,12 @@ Parameters
   * Variety
   * Variance
   * All
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |38| replace:: ``NEW in 3.8``
