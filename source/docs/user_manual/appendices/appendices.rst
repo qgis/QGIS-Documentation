@@ -838,6 +838,45 @@ The figures below show the top level tags in a QGS file and the expanded
    The expanded top level ProjectLayers tag of a QGS file
 
 
+.. index:: QGIS Layer Definition File
+.. index:: QLR
+.. _qgislayerdefinitionfile:
+
+The QGIS Layer Definition file - QLR
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+A Layer Definition file (QLR) contains the layer source pointer and
+style information.
+
+The use case for this file is simple: To have a single file for
+opening a data source and bringing in all the related style
+information.
+QLR files also allow you to mask the underlying datasource in an
+easy to open file.
+
+An example of QLR usage is for opening MS SQL layers.
+Rather then having to go to the MS SQL connection dialog, connect,
+select, load and finally style, you can simply add a .qlr file that
+points to the correct MS SQL layer with all the necessary style
+included.
+
+In the future a .qlr file may hold a reference to more then one layer.
+
+.. _figure_qlrtop:
+
+.. figure:: img/qlrtop.png
+   :align: center
+
+   The top level tags of a QML file
+
+.. _figure_qlrrenderer:
+
+.. figure:: img/qlrrenderer.png
+   :align: center
+
+   The expanded renderer_v2 top level tag of a QML file
+
+
 .. index:: QGIS Style File
 .. index:: QML
 .. _qgisstylefile:
