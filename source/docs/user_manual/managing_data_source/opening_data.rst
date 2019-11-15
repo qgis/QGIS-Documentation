@@ -929,7 +929,7 @@ loading tool:
 .. index:: QGIS Layer Definition File, QLR
 
 QLR - QGIS Layer Definition File
-===============================
+================================
 
 Layers with styling can be stored using the QLR format
 (:ref:`qgislayerdefinitionfile`).
