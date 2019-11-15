@@ -926,15 +926,17 @@ loading tool:
   (see :ref:`vector_virtual_layers` for more information)
 
 
-.. index:: QGIS Style File Format, QLR
+.. index:: QGIS Layer Definition File, QLR
 
 QLR - QGIS Layer Definition File
 ===============================
 
-Layers with styling can be stored using the QLR format (:ref:`layerdefinitionfile`).
+Layers with styling can be stored using the QLR format
+(:ref:`qgislayerdefinitionfile`).
 The QLR format makes it possible to share "complete" QGIS layers with other
-QGIS users.  A QLR file contains a linke to the data source and all the QGIS style
-information.
+QGIS users.
+A QLR file contains a link to the data source and all the QGIS style
+information necessary to style it completely.
 
 
 Connecting to web services
