@@ -793,7 +793,7 @@ Appendix B: QGIS File Formats
 .. index:: QGD
 .. _qgisprojectfile:
 
-The QGIS Project File Format - QGS/QGZ
+QGS/QGZ - The QGIS Project File Format
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The **QGS** format is an XML format for storing QGIS projects.
@@ -827,14 +827,14 @@ The figures below show the top level tags in a QGS file and the expanded
 
 .. figure:: img/qgstoplevel.png
    :align: center
-
+   
    The top level tags in a QGS file
 
 .. _figure_qgs_projectlayers:
 
 .. figure:: img/qgsprojectlayers.png
    :align: center
-
+   
    The expanded top level ProjectLayers tag of a QGS file
 
 
@@ -842,11 +842,12 @@ The figures below show the top level tags in a QGS file and the expanded
 .. index:: QLR
 .. _qgislayerdefinitionfile:
 
-The QGIS Layer Definition file - QLR
+QLR - The QGIS Layer Definition file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-A Layer Definition file (QLR) contains the layer source pointer and
-style information.
+A Layer Definition file (QLR) is an XML file that contains a pointer
+to the layer data source in addition to style information for the
+layer.
 
 The use case for this file is simple: To have a single file for
 opening a data source and bringing in all the related style
@@ -864,24 +865,17 @@ In the future a .qlr file may hold a reference to more then one layer.
 
 .. _figure_qlrtop:
 
-.. figure:: img/qlrtop.png
+.. figure:: img/qlr.png
    :align: center
-
-   The top level tags of a QML file
-
-.. _figure_qlrrenderer:
-
-.. figure:: img/qlrrenderer.png
-   :align: center
-
-   The expanded renderer_v2 top level tag of a QML file
+   
+   The top level tags of a QLR file
 
 
 .. index:: QGIS Style File
 .. index:: QML
 .. _qgisstylefile:
 
-The QGIS Style File Format - QML
+QML - The QGIS Style File Format
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 QML is an XML format for storing layer styling.
@@ -898,5 +892,5 @@ only ``renderer_v2`` and its ``symbol`` tag expanded).
 .. figure:: img/qml.png
    :align: center
 
-   The top level tags of a QML file (only renderer_v2 and its
-   symbol tag expanded)
+   The top level tags of a QML file (only the renderer_v2 tag
+   with its symbol tag is expanded)
