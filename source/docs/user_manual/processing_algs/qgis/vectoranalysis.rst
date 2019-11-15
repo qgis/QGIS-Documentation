@@ -90,16 +90,18 @@ Outputs
 Count points in polygon
 -----------------------
 Takes a point and a polygon layer and counts the number of points from the
-first one in each polygon of the second one.
+point layer in each of the polygons of the polygon layer.
 
-A new polygons layer is generated, with the exact same content as the input polygons
+A new polygon layer is generated, with the exact same content as the input polygon
 layer, but containing an additional field with the points count corresponding to
 each polygon.
 
 .. figure:: img/count_points_polygon.png
   :align: center
 
-  The labels identify the point count
+  The labels in the polygons show the point count
+
+|
 
 An optional weight field can be used to assign weights to each point. Alternatively,
 a unique class field can be specified. If both options are used, the weight field
@@ -109,39 +111,73 @@ will take precedence and the unique class field will be ignored.
 
 Parameters
 ..........
-``Polygons`` [vector: polygon]
-  Polygon layer whose features are associated with the count of points
-  they contain.
 
-``Points`` [vector: point]
-  Point layer to count features from.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Weight field`` [tablefield: any]
-  Optional
-
-  A field with numeric-like values from the point layer.
-  The count generated will be the sum of the weight field for each point contained
-  by the polygon.
-
-``Class field`` [tablefield: any]
-  Optional
-
-  Points are classified based on the selected attribute and if several points with
-  the same attribute value are within the polygon, only one of them is counted.
-  The final count of the points in a polygon is, therefore, the count of different
-  classes that are found in it.
-
-``Count field name`` [string]
-  The name of the field to store the count of points.
-
-  Default: *NUMPOINTS*
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Polygons**
+      - ``POLYGONS``
+      - [vector: polygon]
+      - Polygon layer whose features are associated with the count of
+        points they contain
+   *  - **Points**
+      - ``POINTS``
+      - [vector: point]
+      - Point layer with features to count
+   *  - **Weight field**
+        
+        Optional
+      - ``WEIGHT``
+      - [tablefield: any]
+      - A field from the point layer.
+        The count generated will be the sum of the weight field of the
+        points contained by the polygon.
+        If the weight field is not numeric, the count will be ``0``.
+   *  - **Class field**
+        
+        Optional
+      - ``CLASSFIELD``
+      - [tablefield: any]
+      - Points are classified based on the selected attribute and if
+        several points with the same attribute value are within the
+        polygon, only one of them is counted.
+        The final count of the points in a polygon is, therefore, the
+        count of different classes that are found in it.
+   *  - **Count field name**
+      - ``FIELD``
+      - [string]
+        
+        Default: 'NUMPOINTS'
+      - The name of the field to store the count of points
+   *  - **Count**
+      - ``OUTPUT``
+      - [vector: polygon]
+      - Specification of the output layer
 
 Outputs
 .......
 
-``Count`` [vector: polygon]
-  Resulting layer with the attribute table containing the new column of the
-  points count.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Count**
+      - ``OUTPUT``
+      - [vector: polygon]
+      - Resulting layer with the attribute table containing the
+        new column with the points count
+
 
 
 .. _qgisdbscanclustering:
