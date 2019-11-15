@@ -926,6 +926,27 @@ loading tool:
   (see :ref:`vector_virtual_layers` for more information)
 
 
+.. index:: QGIS Layer Definition File, QLR file
+
+QLR - QGIS Layer Definition File
+================================
+
+Layer definitions can be saved as a
+:ref:`Layer Definition File <qgislayerdefinitionfile>` (QLR -
+:file:`.qlr`) using
+:menuselection:`Export --> Save As Layer Definition File...` in the layer
+context menu.
+
+The QLR format makes it possible to share "complete" QGIS layers with
+other QGIS users.
+QLR files contain links to the data sources and all the QGIS style
+information necessary to style the layer.
+
+QLR files are shown in the Browser Panel and can be used to add
+layers (with their saved styles) to the Layers Panel.
+You can also drag and drop QLR files from the system file manager into
+the map canvas.
+
 Connecting to web services
 ==========================
 
