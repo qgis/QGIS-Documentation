@@ -1,8 +1,8 @@
 .. only:: html
 
 
-Appendix
-========
+Appendices
+==========
 
 .. index:: License document
 .. _gpl_appendix:
