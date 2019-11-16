@@ -134,11 +134,24 @@ you to define a subset of the features in the layer using a SQL-like WHERE
 clause and to display the result in the main window. As long as the query is
 active, only the features corresponding to its result are available in the
 project.
+
+You can use one or more layer attributes to define the filter in the `Query
+Builder`.
+An example of the use of more than one attribute is shown in
+Figure_vector_querybuilder_.
+In the example, the filter combines the attributes ``thetime``
+(``DateTime`` field: ``"thetime" > '2017-12-24 18:00:00```,
+``"thetime" < '2019-05-17'``),
+``name`` (``String`` field: ``"name" < 'ca'``) and ``FID``
+(``Integer`` field: ``FID > 1``), using the AND, OR and NOT operators and
+parenthesis.
+
+The filter is made at the data provider (OGR, PostgreSQL, MSSQL...) level.
+
 For example, using the ``TYPE_2`` field of the :file:`regions` layer from the
 QGIS sample data, you could constrain the file to display only regions that
 are of ``borough`` type in the project (see Figure_vector_querybuilder_ for
-such an example). The filter is made at the data provider (OGR, PostgreSQL,
-MSSQL...) level.
+such an example).
 
 
 .. _figure_vector_querybuilder:
