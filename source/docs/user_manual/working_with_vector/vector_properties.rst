@@ -145,6 +145,11 @@ In the example, the filter combines the attributes ``thetime``
 ``name`` (``String`` field: ``"name" < 'ca'``) and ``FID``
 (``Integer`` field: ``FID > 1``), using the AND, OR and NOT operators and
 parenthesis.
+The expression::
+
+  "thetime" > '2017-05-17' AND
+  "thetime" < '2019-12-24 18:00:00' AND
+  NOT ("name" > 'S' OR FID > 10)
 
 The filter is made at the data provider (OGR, PostgreSQL, MSSQL...) level.
 
