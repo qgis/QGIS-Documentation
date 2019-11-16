@@ -26,16 +26,124 @@ Statistics are generated as an HTML file and are available in the
 Parameters
 ..........
 
-``Input vector`` [vector: any]
-  Vector layer to calculate the statistic on.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Field to calculate statistics on`` [tablefield: any]
-  Any supported table field to calculate the statistics.
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Input vector**
+      - ``INPUT_LAYER``
+      - [vector: any]
+      - Vector layer to calculate the statistic on
+   *  - **Field to calculate statistics on**
+      - ``FIELD_NAME``
+      - [tablefield: any]
+      - Any supported table field to calculate the statistics
+   *  - **Statistics**
+      - ``OUTPUT_HTML_FILE``
+      - [file]
+      - HTML file for the calculated statistics
 
 Outputs
 .......
-``Statistics`` [html]
-  HTML file with calculated statistics.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Statistics**
+      - ``OUTPUT_HTML_FILE``
+      - [file]
+      - HTML file with the calculated statistics
+   *  - **Count**
+      - ``COUNT``
+      - [number]
+      - 
+   *  - **Number of unique values**
+      - ``UNIQUE``
+      - [number]
+      - 
+   *  - **Number of empty (null) values**
+      - ``EMPTY``
+      - [number]
+      - 
+   *  - **Number of non-empty values**
+      - ``FILLED``
+      - [number]
+      - 
+   *  - **Minimum value**
+      - ``MIN``
+      - [number]
+      - 
+   *  - **Maximum value**
+      - ``MAX``
+      - [number]
+      - 
+   *  - **Minimum length**
+      - ``MIN_LENGTH``
+      - [number]
+      - 
+   *  - **Maximum length**
+      - ``MAX_LENGTH``
+      - [number]
+      - 
+   *  - **Mean length**
+      - ``MEAN_LENGTH``
+      - [number]
+      - 
+   *  - **Coefficient of Variation**
+      - ``CV``
+      - [number]
+      - 
+   *  - **Sum**
+      - ``SUM``
+      - [number]
+      - 
+   *  - **Mean value**
+      - ``MEAN``
+      - [number]
+      - 
+   *  - **Standard deviation**
+      - ``STD_DEV``
+      - [number]
+      - 
+   *  - **Range**
+      - ``RANGE``
+      - [number]
+      - 
+   *  - **Median**
+      - ``MEDIAN``
+      - [number]
+      - 
+   *  - **Minority (rarest occurring value)**
+      - ``MINORITY``
+      - [number]
+      - 
+   *  - **Majority (most frequently occurring value)**
+      - ``MAJORITY``
+      - [number]
+      - 
+   *  - **First quartile**
+      - ``FIRSTQUARTILE``
+      - [number]
+      - 
+   *  - **Third quartile**
+      - ``THIRDQUARTILE``
+      - [number]
+      - 
+   *  - **Interquartile Range (IQR)**
+      - ``IQR``
+      - [number]
+      - 
 
 
 .. _qgisclimbalongline:
@@ -59,30 +167,61 @@ finding the first non-duplicate name).
 Parameters
 ..........
 
-``Line layer`` [vector: line]
-  Line layer to calculate the climb for. Must have Z values.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Line layer**
+      - ``OUTPUT_HTML_FILE``
+      - [vector: line]
+      - Line layer to calculate the climb for. Must have Z values
+   *  - **Climb layer**
+      - ``OUTPUT``
+      - [vector: line]
+      - The output (line) layer
 
 Outputs
 .......
-``Climb layer`` [vector: line]
-  Line layer containing new attributes with the results from climb calculations.
-  Key in the result dictionary: ``OUTPUT``.
 
-``Total climb`` [number]
-  The sum of the climb for all the line geometries in the layer.
-  Key in the result dictionary: ``TOTALCLIMB``.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Total descent`` [number]
-  The sum of the descent for all the line geometries in the layer.
-  Key in the result dictionary: ``TOTALDESCENT``.
-
-``Minimum elevation`` [number]
-  The minimum elevation for the geometries in the layer.
-  Key in the result dictionary: ``MINELEVATION``.
-
-``Maximum elevation`` [number]
-  The maximum elevation for the geometries in the layer.
-  Key in the result dictionary: ``MAXELEVATION``.
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Climb layer**
+      - ``OUTPUT``
+      - [vector: line]
+      - Line layer containing new attributes with the
+        results from climb calculations.
+   *  - **Total climb**
+      - ``TOTALCLIMB``
+      - [number]
+      - The sum of the climb for all the line geometries
+        in the input layer
+   *  - **Total descent**
+      - ``TOTALDESCENT``
+      - [number]
+      - The sum of the descent for all the line geometries
+        in the input layer
+   *  - **Minimum elevation**
+      - ``MINELEVATION``
+      - [number]
+      - The minimum elevation for the geometries in the
+        layer
+   *  - **Maximum elevation**
+      - ``MAXELEVATION``
+      - [number]
+      - The maximum elevation for the geometries in the
+        layer
 
 
 .. _qgiscountpointsinpolygon:
@@ -193,40 +332,77 @@ and the maximum distance allowed between clustered points.
 Parameters
 ..........
 
-``Input layer`` [vector: point]
-  Layer to analyze.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Minimum cluster size`` [number]
-  Minimum number of features to generate a cluster.
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Input layer**
+      - ``INPUT``
+      - [vector: point]
+      - Layer to analyze
+   *  - **Minimum cluster size**
+      - ``MIN_SIZE``
+      - [number]
+        
+        Default: 5
+      - Minimum number of features to generate a cluster
+   *  - **Maximum distance between clustered points**
+      - ``EPS``
+      - [number]
+        
+        Default: 1.0
+      - Distance beyond which two features can not belong
+        to the same cluster (eps)
+   *  - **Cluster field name**
+      - ``FIELD_NAME``
+      - [string]
+        
+        Default: 'CLUSTER_ID'
+      - Name of the field where the associated cluster number
+        shall be stored
+   *  - **Treat border points as noise (DBSCAN\*)**
+        
+        Optional
+      - ``DBSCAN*``
+      - [boolean]
+        
+        Default: False
+      - If checked, points on the border of a cluster are
+        themselves treated as unclustered points, and only
+        points in the interior of a cluster are tagged as
+        clustered.
+   *  - **Clusters**
+      - ``OUTPUT``
+      - [vector: point]
+      - Vector layer for the result of the clustering
 
-  Default: *5*
-
-``Maximum distance between clustered points`` [number]
-  Distance beyond which two features can not belong to
-  the same cluster.
-
-  Default: *1.0*
-
-``Treat border points as noise (DBSCAN*)`` [boolean]
-  Optional
-
-  If checked, points on the border of a cluster are themselves treated as
-  unclustered points, and only points on the interior of a cluster are tagged
-  as clustered.
-
-  Default: *FALSE*
-
-``Cluster field name`` [string]
-  Name of the field where to store the associated cluster number.
-
-  Default: *CLUSTER_ID*
 
 Outputs
 .......
 
-``Clusters`` [vector: point]
-  Vector layer containing the original features with a field
-  setting the cluster they belong to.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Clusters**
+      - ``OUTPUT``
+      - [vector: point]
+      - Vector layer containing the original features with a
+        field setting the cluster they belong to
+   *  - **Number of clusters**
+      - ``NUM_CLUSTERS``
+      - [number]
+      - The number of clusters discovered
 
 See also
 ........
@@ -245,45 +421,87 @@ or in another layer.
 Parameters
 ..........
 
-``Input point layer`` [vector: point]
-  Point layer for which the distance matrix is calculated (**from** points).
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Input unique ID field`` [tablefield: any]
-  Field to use to uniquely identify features of the input layer.
-  Used in the output attribute table.
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Input point layer**
+      - ``INPUT``
+      - [vector: point]
+      - Point layer for which the distance matrix is calculated
+        (**from** points)
+   *  - **Input unique ID field**
+      - ``INPUT_FIELD``
+      - [tablefield: any]
+      - Field to use to uniquely identify features of the
+        input layer. Used in the output attribute table.
+   *  - **Target point layer**
+      - ``TARGET``
+      - [vector: point]
+      - Point layer containing the nearest point(s) to search
+        (**to** points)
+   *  - **Target unique ID field**
+      - ``TARGET_FIELD``
+      - [tablefield: any]
+      - Field to use to uniquely identify features of the target
+        layer.
+        Used in the output attribute table.
+   *  - **Output matrix type**
+      - ``MATRIX_TYPE``
+      - [enumeration]
+        
+        Default: 0
+      - Different types of calculation are available:
+        
+        * 0 --- Linear (N * *k* x 3) distance matrix: for each
+          input point, reports the distance to each of the *k*
+          nearest target points.
+          The output matrix consists of up to *k* rows per
+          input point, and each row has three columns:
+          *InputID*, *TargetID* and *Distance*.
+        * 1 --- Standard (N x T) distance matrix
+        * 2 --- Summary distance matrix (mean, std. dev., min,
+          max): for each input point, reports statistics on
+          the distances to its target points.
+   *  - **Use only the nearest (k) target points**
+      - ``NEAREST_POINTS``
+      - [number]
+        
+        Default: 0
+      - You can choose to calculate the distance to all the
+        points in the target layer (*0*) or limit to a number
+        (*k*) of closest features.
 
-``Target point layer`` [vector: point]
-  Point layer containing the nearest point(s) to search (**to** points).
-
-``Target unique ID field`` [tablefield: any]
-  Field to use to uniquely identify features of the target layer.
-  Used in the output attribute table.
-
-``Output matrix type`` [enumeration]
-  Different types of calculation are available:
-
-  * 0 --- Linear (N * *k* x 3) distance matrix: for each input point, reports
-    the distance to each of the *k* nearest target points. The output matrix consists
-    of up to *k* rows per input point, and each row has three columns: *InputID*,
-    *TargetID* and *Distance*.
-  * 1 --- Standard (N x T) distance matrix
-  * 2 --- Summary distance matrix (mean, std. dev., min, max): for each input
-    point, reports statistics on the distances to its target points.
-
-  Default: *0*
-
-``Use only the nearest (k) target points`` [number]
-  You can choose to calculate the distance to all the points in the target layer
-  or limit to a number (*k*) of closest features.
-
-  Default: *0* --- all the points are used.
+   *  - **Distance matrix**
+      - ``OUTPUT``
+      - [vector: point]
+      - 
 
 Outputs
 .......
 
-``Distance matrix`` [vector: point]
-  Point (or MultiPoint for the "Linear (N * *k* x 3)" case) vector layer containing the distance calculation for each input feature.
-  Its features and attribute table depend on the selected output matrix type.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Distance matrix**
+      - ``OUTPUT``
+      - [vector: point]
+      - Point (or MultiPoint for the "Linear (N * *k* x 3)"
+        case) vector layer containing the distance calculation
+        for each input feature.
+        Its features and attribute table depend on the selected
+        output matrix type.
 
 
 .. _qgisdistancetonearesthublinetohub:
@@ -304,32 +522,65 @@ in a destination layer. Distances are calculated based on the :ref:`center
 Parameters
 ..........
 
-``Source points layer`` [vector: any]
-  Vector layer for which the nearest feature is searched.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Destination hubs layer`` [vector: any]
-  Vector layer containing the features to search for.
-
-``Hub layer name attribute`` [tablefield: any]
-  Field to use to uniquely identify features of the destination layer.
-  Used in the output attribute table.
-
-``Measurement unit`` [enumeration]
-  Units in which to report the distance to the closest feature:
-
-  * 0 --- Meters
-  * 1 --- Feet
-  * 2 --- Miles
-  * 3 --- Kilometers
-  * 4 --- Layer units
-
-  Default: *0*
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Source points layer**
+      - ``INPUT``
+      - [vector: any]
+      - Vector layer for which the nearest feature is searched
+   *  - **Destination hubs layer**
+      - ``HUBS``
+      - [vector: any]
+      - Vector layer containing the features to search for
+   *  - **Hub layer name attribute**
+      - ``FIELD``
+      - [tablefield: any]
+      - Field to use to uniquely identify features of the
+        destination layer.
+        Used in the output attribute table
+   *  - **Measurement unit**
+      - ``UNIT``
+      - [enumeration]
+        
+        Default: 0
+      - Units in which to report the distance to the closest
+        feature:
+        
+        * 0 --- Meters
+        * 1 --- Feet
+        * 2 --- Miles
+        * 3 --- Kilometers
+        * 4 --- Layer units
+   *  - **Hub distance**
+      - ``OUTPUT``
+      - [vector: line]
+      - Line vector layer for the distance matrix output
 
 Outputs
 .......
-``Hub distance`` [vector: line]
- Line vector layer with the attributes of the input features, the identifier
- of their closest feature and the calculated distance.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Hub distance**
+      - ``OUTPUT``
+      - [vector: line]
+      - Line vector layer with the attributes of the input
+        features, the identifier of their closest feature
+        and the calculated distance.
 
 
 .. _qgisdistancetonearesthubpoints:
@@ -343,32 +594,65 @@ nearest feature (based on its center point) and the distance between the points.
 Parameters
 ..........
 
-``Source points layer`` [vector: any]
-  Vector layer for which the nearest feature is searched.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Destination hubs layer`` [vector: any]
-  Vector layer containing the features to search for.
-
-``Hub layer name attribute`` [tablefield: any]
-  Field to use to uniquely identify features of the destination layer.
-  Used in the output attribute table.
-
-``Measurement unit`` [enumeration]
-  Units in which to report the distance to the closest feature:
-
-  * 0 --- Meters
-  * 1 --- Feet
-  * 2 --- Miles
-  * 3 --- Kilometers
-  * 4 --- Layer units
-
-  Default: *0*
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Source points layer**
+      - ``INPUT``
+      - [vector: any]
+      - Vector layer for which the nearest feature is searched
+   *  - **Destination hubs layer**
+      - ``HUBS``
+      - [vector: any]
+      - Vector layer containing the features to search for
+   *  - **Hub layer name attribute**
+      - ``FIELD``
+      - [tablefield: any]
+      - Field to use to uniquely identify features of the
+        destination layer.
+        Used in the output attribute table
+   *  - **Measurement unit**
+      - ``UNIT``
+      - [enumeration]
+        
+        Default: 0
+      - Units in which to report the distance to the closest
+        feature:
+        
+        * 0 --- Meters
+        * 1 --- Feet
+        * 2 --- Miles
+        * 3 --- Kilometers
+        * 4 --- Layer units
+   *  - **Hub distance**
+      - ``OUTPUT``
+      - [vector: point]
+      - Point vector layer for the distance matrix output.
 
 Outputs
 .......
-``Hub distance`` [vector: point]
-  Point vector layer with the attributes of the input features, the identifier
-  of their closest feature and the calculated distance.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Hub distance**
+      - ``OUTPUT``
+      - [vector: point]
+      - Point vector layer with the attributes of the
+        input features, the identifier of their closest
+        feature and the calculated distance.
 
 
 .. _qgishublines:
@@ -392,34 +676,68 @@ will be taken as the connecting location.
 Parameters
 ..........
 
-``Hub point layer`` [vector: any]
-  Input layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Hub ID field`` [tablefield: any]
-  Field of the hub layer with ID to join.
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Hub layer**
+      - ``HUBS``
+      - [vector: any]
+      - Input layer
+   *  - **Hub ID field**
+      - ``HUB_FIELD``
+      - [tablefield: any]
+      - Field of the hub layer with ID to join
+   *  - **Hub layer fields to copy (leave empty to copy all fields)**
+        
+        Optional
+      - ``HUB_FIELDS``
+      - [tablefield: any] [list]
+      - The field(s) of the hub layer to be copied.
+        If no field(s) are chosen all fields are taken.
+   *  - **Spoke layer**
+      - ``SPOKES``
+      - [vector: any]
+      - Additional spoke point layer
+   *  - **Spoke ID field**
+      - ``SPOKE_FIELD``
+      - [tablefield: any]
+      - Field of the spoke layer with ID to join
+   *  - **Spoke layer fields to copy (leave empty to copy all fields)**
+        
+        Optional
+      - ``SPOKE_FIELDS``
+      - [tablefield: any] [list]
+      - Field(s) of the spoke layer to be copied.
+        If no fields are chosen all fields are taken.
+   *  - **Hub lines**
+      - ``OUTPUT``
+      - [vector: lines]
+      - The resulting line layer
 
-``Hub layer fields to copy``
-  Optional
 
-  Choose here the field(s) of the hub layer to copy. If no field(s) are chosen
-  all fields are taken.
-
-``Spoke point layer`` [vector: any]
-  Additional spoke point layer.
-
-``Spoke ID field`` [tablefield: any]
-  Field of the spoke layer with ID to join.
-
-``Spoke layer fields to copy``
-  Optional
-
-  Field(s) of the spoke layer to be copied. If no fields are chosen all fields
-  are taken.
 
 Outputs
 .......
-``Hub lines`` [vector: lines]
-  The resulting line layer.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Hub lines**
+      - ``OUTPUT``
+      - [vector: lines]
+      - The resulting line layer
 
 
 .. _qgiskmeansclustering:
