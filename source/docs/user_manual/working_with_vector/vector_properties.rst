@@ -135,23 +135,28 @@ clause and to display the result in the main window. As long as the query is
 active, only the features corresponding to its result are available in the
 project.
 
-You can use one or more layer attributes to define the filter in the `Query
-Builder`.
-An example of the use of more than one attribute is shown in
-Figure_vector_querybuilder_.
-In the example, the filter combines the attributes ``thetime``
-(``DateTime`` field: ``"thetime" > '2017-12-24 18:00:00'``,
-``"thetime" < '2019-05-17'``),
-``name`` (``String`` field: ``"name" < 'ca'``) and ``FID``
-(``Integer`` field: ``FID > 1``), using the AND, OR and NOT operators and
-parenthesis.
-The expression::
+You can use one or more layer attributes to define the filter in the ``Query
+Builder``.
+The use of more than one attribute is shown in Figure_vector_querybuilder_.
+In the example, the filter combines the attributes
 
-  "thetime" > '2017-05-17' AND
-  "thetime" < '2019-12-24 18:00:00' AND
-  NOT ("name" > 'S' OR FID > 10)
+* ``toa`` (``DateTime`` field: ``cast("toa" as character) > '2017-05-17'`` and
+  ``cast("toa" as character) < '2019-12-24T18:00:00'``),
+* ``name`` (``String`` field: ``"name" > 'S'``) and
+* ``FID`` (``Integer`` field: ``FID > 10``)
+using the AND, OR and NOT operators and parenthesis.
+This syntax (including the DateTime format for the ``toa`` field) works for
+GeoPackage datasets.
 
 The filter is made at the data provider (OGR, PostgreSQL, MSSQL...) level.
+So the syntax depends on the data provider (DateTime is for instance not
+supported for the ESRI Shapefile format).
+The complete expression::
+
+  cast("toa" as character) > '2017-05-17' AND
+  cast("toa" as character) < '2019-12-24T18:00:00' AND
+  NOT ("name" > 'S' OR FID > 10)
+
 
 .. _figure_vector_querybuilder:
 
