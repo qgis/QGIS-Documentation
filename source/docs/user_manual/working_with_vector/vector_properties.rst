@@ -140,7 +140,7 @@ Builder`.
 An example of the use of more than one attribute is shown in
 Figure_vector_querybuilder_.
 In the example, the filter combines the attributes ``thetime``
-(``DateTime`` field: ``"thetime" > '2017-12-24 18:00:00```,
+(``DateTime`` field: ``"thetime" > '2017-12-24 18:00:00'``,
 ``"thetime" < '2019-05-17'``),
 ``name`` (``String`` field: ``"name" < 'ca'``) and ``FID``
 (``Integer`` field: ``FID > 1``), using the AND, OR and NOT operators and
