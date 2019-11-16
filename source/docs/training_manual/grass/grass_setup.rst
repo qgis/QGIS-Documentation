@@ -163,11 +163,11 @@ you will see the |grassMapsetOpen| icon next to the Mapset that is opened.
 
 You can easily **drag and drop** layers from a folder to the GRASS Mapset.
 
-Let's try to import the :file:`roads.shp` layer into the ``grass_mapset`` Mapset
+Let's try to import the :file:`roads` layer into the ``grass_mapset`` Mapset
 of the ``SouthAfrica`` Location.
 
-Open the :file:`shapefile/` folder and simply drag the :file:`roads.shp` layer
-into the ``grass_mapset`` Mapset.
+Go to the Browser, and simply drag the :file:`roads` layer  from the
+:file:`training_data.gpkg` GeoPackage file into the ``grass_mapset`` Mapset.
 
 .. image:: img/grass_browser_import.png
    :align: center
