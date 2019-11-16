@@ -761,25 +761,54 @@ is based on the centroid of the feature.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Layer to analyze.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Number of clusters`` [number]
-  Number of clusters to create with the features.
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Input layer**
+      - ``INPUT``
+      - [vector: any]
+      - Layer to analyze
+   *  - **Number of clusters**
+      - ``CLUSTERS``
+      - [number]
+        
+        Default: 5
+      - Number of clusters to create with the features
+   *  - **Cluster field name**
+      - ``FIELD_NAME``
+      - [string]
+                
+        Default: 'CLUSTER_ID'
+      - Name of the cluster number field
+   *  - **Clusters**
+      - ``OUTPUT``
+      - [vector: any]
+      - Vector layer for generated the clusters
 
-  Default: *5*
-
-``Cluster field name`` [tablefield: any]
-  Name of the field where to store the associated cluster number.
-
-  Default: *CLUSTER_ID*
 
 Outputs
 .......
 
-``Clusters`` [vector: any]
-  Vector layer containing the original features with a field
-  setting the cluster they belong to.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Clusters**
+      - ``OUTPUT``
+      - [vector: any]
+      - Vector layer containing the original features with
+        a field specifying the cluster they belong to
 
 
 See also
@@ -798,20 +827,63 @@ Lists unique values of an attribute table field and counts their number.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Layer to analyze.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Target field`` [tablefield: any]
-  Field to analyze.
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Input layer**
+      - ``INPUT``
+      - [vector: any]
+      - Layer to analyze
+   *  - **Target field(s)**
+      - ``FIELDS``
+      - [tablefield: any]
+      - Field to analyze
+   *  - **Unique values**
+      - ``OUTPUT``
+      - [table]
+      - Summary table layer with unique values
+   *  - **HTML report**
+      - ``OUTPUT_HTML_FILE``
+      - [html]
+      - HTML report of unique values in the
+        :menuselection:`Processing --> Results viewer`
 
 Outputs
 .......
 
-``Unique values`` [table]
-  Summary table layer with unique values.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``HTML report`` [html]
-  HTML report of unique values in the :menuselection:`Processing --> Results viewer`.
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Unique values**
+      - ``OUTPUT``
+      - [table]
+      - Summary table layer with unique values
+   *  - **HTML report**
+      - ``OUTPUT_HTML_FILE``
+      - [html]
+      - HTML report of unique values.  Can be opened from the
+        :menuselection:`Processing --> Results viewer`
+   *  - **Total unique values**
+      - ``TOTAL_VALUES``
+      - [number]
+      - The number of uniqe values in the input field
+   *  - **UNIQUE_VALUES**
+      - ``Unique values``
+      - [string]
+      - A string with the comma separated list of unique values found
+        in the input field
 
 
 .. _qgismeancoordinates:
@@ -832,25 +904,52 @@ each category.
 
 Parameters
 ..........
+ 
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Input layer`` [vector: any]
-  Input vector layer.
-
-``Weight field`` [tablefield: numeric]
-  Optional
-
-  Field to use if you want to perform a weighted mean.
-
-``Unique ID field`` [tablefield: numeric]
-  Optional
-
-  Unique field on which the calculation of the mean will be made.
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Input layer**
+      - ``INPUT``
+      - [vector: any]
+      - Input vector layer
+   *  - **Weight field**
+        
+        Optional
+      - ``WEIGHT``
+      - [tablefield: numeric]
+      - Field to use if you want to perform a weighted mean
+   *  - **Unique ID field**
+      - ``UID``
+      - [tablefield: numeric]
+      - Unique field on which the calculation of the mean will
+        be made
+   *  - **Mean coordinates**
+      - ``OUTPUT``
+      - [vector: point]
+      - The (point vector) layer for the result
 
 Outputs
 .......
-``Mean coordinates`` [vector: point]
-  Resulting point(s) layer.
 
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Mean coordinates**
+      - ``OUTPUT``
+      - [vector: point]
+      - Resulting point(s) layer
 
 .. _qgisoverlapanalysis:
 
@@ -928,14 +1027,62 @@ Output is generated as an HTML file with the computed statistical values:
 
 Parameters
 ..........
+ 
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Points`` [vector: point]
-  Point vector layer to calculate the statistics on.
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Input layer**
+      - ``INPUT``
+      - [vector: point]
+      - Point vector layer to calculate the statistics on
+   *  - **Nearest neighbour**
+      - ``OUTPUT_HTML_FILE``
+      - [html]
+      - HTML file for the computed statistics
+
 
 Outputs
 .......
-``Nearest neighbour`` [html]
-  HTML file in output with the computed statistics.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Nearest neighbour**
+      - ``OUTPUT_HTML_FILE``
+      - [html]
+      - HTML file with the computed statistics
+   *  - **Observed mean distance**
+      - ``OBSERVED_MD``
+      - [number]
+      - Observed mean distance
+   *  - **Expected mean distance**
+      - ``EXPECTED_MD``
+      - [number]
+      - Expected mean distance
+   *  - **Nearest neighbour index**
+      - ``NN_INDEX``
+      - [number]
+      - Nearest neighbour index
+   *  - **Number of points**
+      - ``POINT_COUNT``
+      - [number]
+      - Number of points
+   *  - **Z-Score**
+      - ``Z_SCORE``
+      - [number]
+      - Z-Score
 
 
 .. _qgisstatisticsbycategories:
@@ -944,7 +1091,8 @@ Statistics by categories
 ------------------------
 Calculates statistics of fields depending on a parent class.
 
-The output is a table layer with the following statistics calculated:
+For numerical fields, a table layer with the following statistics
+is output:
 
 * count
 * unique
@@ -961,24 +1109,64 @@ The output is a table layer with the following statistics calculated:
 * q3
 * iqr
 
+For string fields, the following statistics will be calculated:
+
+* count
+* unique
+* empty
+* filled
+* min
+* max
+* min_length
+* max_length
+* mean_length
+
 Parameters
 ..........
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Input vector layer`` [vector: any]
-  Input vector layer with unique classes and values.
-
-``Field to calculate the statistics on`` [tablefield: any]
-  Optional
-
-  If empty only the count will be calculated.
-
-``Field(s) with categories`` [tablefield: any] [list]
-  Field(s) of the categories.
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Input vector layer**
+      - ``INPUT``
+      - [vector: any]
+      - Input vector layer with unique classes and values
+   *  - **Field to calculate statistics on (if empty, only count is calculated)**
+        
+        Optional
+      - ``VALUES_FIELD_NAME``
+      - [tablefield: any]
+      - If empty only the count will be calculated
+   *  - **Field(s) with categories**
+      - ``CATEGORIES_FIELD_NAME``
+      - [vector: any] [list]
+      - The fields that (combined) define the categories
+   *  - **Statistics by category**
+      - ``OUTPUT``
+      - [table]
+      - Table for the generated statistics
 
 Outputs
 .......
-``N unique values`` [table]
-  Table with statistics field.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Statistics by category**
+      - ``OUTPUT``
+      - [table]
+      - Table containing the statistics
 
 
 .. _qgissumlinelengths:
@@ -998,27 +1186,59 @@ The names of these two fields can be configured in the algorithm parameters.
 
 Parameters
 ..........
+ 
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Lines`` [vector: line]
-  Input vector line layer.
-
-``Polygons`` [vector: polygon]
-  Polygon vector layer.
-
-``Lines length field name`` [string]
-  Name of the field of the lines length.
-
-  Default: *LENGTH*
-
-``Lines count field name`` [string]
-  Name of the field of the lines count.
-
-  Default: *COUNT*
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Lines**
+      - ``LINES``
+      - [vector: line]
+      - Input vector line layer
+   *  - **Polygons**
+      - ``POLYGONS``
+      - [vector: polygon]
+      - Polygon vector layer
+   *  - **Lines length field name**
+      - ``LEN_FIELD``
+      - [string]
+        
+        Default: 'LENGTH'
+      - Name of the field for the lines length
+   *  - **Lines count field name**
+      - ``COUNT_FIELD``
+      - [string]
+        
+        Default: 'COUNT'
+      - Name of the field for the lines count
+   *  - **Line length**
+      - ``OUTPUT``
+      - [vector: polygon]
+      - The output polygon vector layer
 
 Outputs
 .......
-``Line length`` [vector: polygon]
-  Polygon output layer with fields of lines length and line count.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Line length**
+      - ``OUTPUT``
+      - [vector: polygon]
+      - Polygon output layer with fields of lines length and
+        line count
+
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
