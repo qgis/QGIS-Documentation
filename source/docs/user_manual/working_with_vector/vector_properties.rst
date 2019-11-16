@@ -148,12 +148,6 @@ parenthesis.
 
 The filter is made at the data provider (OGR, PostgreSQL, MSSQL...) level.
 
-For example, using the ``TYPE_2`` field of the :file:`regions` layer from the
-QGIS sample data, you could constrain the file to display only regions that
-are of ``borough`` type in the project (see Figure_vector_querybuilder_ for
-such an example).
-
-
 .. _figure_vector_querybuilder:
 
 .. figure:: img/queryBuilder.png
