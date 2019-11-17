@@ -397,7 +397,8 @@ Vertex tool
 
 .. note:: **QGIS 3 major changes**
 
-    In QGIS 3, the node tool has been fully redesigned and renamed. It was previously
+    In QGIS 3, the node tool has been fully redesigned and renamed to *vertex tool*.
+    It was previously
     working with "click and drag" ergonomy, and now uses a "click - click"
     workflow. This allows major improvements like taking profit of the advanced
     digitizing panel with the vertex tool while digitizing or editing objects of
@@ -1212,7 +1213,7 @@ of the lines that is concerned; any segment of a geometry can be modified.
 .. note:: You must activate segment snapping for this tool to work.
 
 The tool asks you to select a limit (a segment) with respect to which another
-segment will be extended or trimmed. Unlike the node tool, a check is performed to
+segment will be extended or trimmed. Unlike the vertex tool, a check is performed to
 modify only the layer being edited.
 
 When both segments are in 3D, the tool performs an interpolation on the limit segment
