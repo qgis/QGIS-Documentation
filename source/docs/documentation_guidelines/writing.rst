@@ -608,11 +608,9 @@ to help you with the layout and the description::
   -----------------------
   Takes a point and a polygon layer and counts the number of points from the
   point layer in each of the polygons of the polygon layer.
-  
   A new polygon layer is generated, with the exact same content as the input polygon
   layer, but containing an additional field with the points count corresponding to
   each polygon.
-  
   .. figure:: img/count_points_polygon.png
     :align: center
   
@@ -649,11 +647,11 @@ to help you with the layout and the description::
           
           Optional
         - ``WEIGHT``
-        - [tablefield: any]
+        - [tablefield: numeric]
         - A field from the point layer.
           The count generated will be the sum of the weight field of the
-          points contained by the polygon.
-          If the weight field is not numeric, the count will be ``0``.
+          points contained by the polygon
+          (if the weight field was not numeric, the count would be ``0``).
      *  - **Class field**
           
           Optional
