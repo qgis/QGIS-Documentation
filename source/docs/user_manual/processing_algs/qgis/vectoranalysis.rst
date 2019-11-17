@@ -38,7 +38,7 @@ Parameters
    *  - **Input vector**
       - ``INPUT_LAYER``
       - [vector: any]
-      - Vector layer to calculate the statistic on
+      - Vector layer to calculate the statistics on
    *  - **Field to calculate statistics on**
       - ``FIELD_NAME``
       - [tablefield: any]
