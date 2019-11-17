@@ -144,6 +144,7 @@ In the example, the filter combines the attributes
   ``cast("toa" as character) < '2019-12-24T18:00:00'``),
 * ``name`` (``String`` field: ``"name" > 'S'``) and
 * ``FID`` (``Integer`` field: ``FID > 10``)
+
 using the AND, OR and NOT operators and parenthesis.
 This syntax (including the DateTime format for the ``toa`` field) works for
 GeoPackage datasets.
