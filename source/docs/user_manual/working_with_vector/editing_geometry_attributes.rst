@@ -502,7 +502,7 @@ Red circles will appear when hovering vertices.
 
 Each change made with the vertex  is stored as a separate entry in the
 :guilabel:`Undo` dialog. Remember that all operations support topological editing when
-this is turned on. On-the-fly projection is also supported, and the node
+this is turned on. On-the-fly projection is also supported, and the vertex
 tool provides tooltips to identify a vertex by hovering the pointer over it.
 
 .. index:: Vertex editor panel
