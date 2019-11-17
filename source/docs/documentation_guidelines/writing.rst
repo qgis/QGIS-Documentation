@@ -650,8 +650,7 @@ to help you with the layout and the description::
         - [tablefield: numeric]
         - A field from the point layer.
           The count generated will be the sum of the weight field of the
-          points contained by the polygon
-          (if the weight field was not numeric, the count would be ``0``).
+          points contained by the polygon.
      *  - **Class field**
           
           Optional
