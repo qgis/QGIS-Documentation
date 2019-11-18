@@ -670,7 +670,11 @@ to help you with the layout and the description::
      *  - **Count**
         - ``OUTPUT``
         - [vector: polygon]
-        - Specification of the output layer
+          
+          Default: [Create temporary layer]
+        - Specification of the output layer type (temporary, file,
+          GeoPackage or PostGIS table).
+          Encoding can also be specified.
   
   Outputs
   .......
