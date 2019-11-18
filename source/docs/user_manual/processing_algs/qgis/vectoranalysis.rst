@@ -1029,7 +1029,7 @@ Outputs
 
 .. _qgisoverlapanalysis:
 
-Overlap Analysis |38|
+Overlap analysis |38|
 ---------------------
 This algorithm calculates the area and percentage cover by
 which features from an input layer are overlapped by features
