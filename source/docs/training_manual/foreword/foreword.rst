@@ -232,7 +232,9 @@ Latest Version
 You can always obtain the latest version of this document by visiting the online
 version which is part of the QGIS documentation website (https://docs.qgis.org).
 
-.. note:: There are links to online and PDF versions of the Documentation and Training manuals.
+.. note::
+   The documentation website contains links to both online and PDF versions of
+   the Training manual and other parts of the QGIS documentation.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
