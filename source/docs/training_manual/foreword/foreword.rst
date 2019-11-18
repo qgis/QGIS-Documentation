@@ -1,6 +1,13 @@
 Foreword
 ========
 
+Welcome to our course!
+We will be showing you how to use QGIS easily and efficiently.
+If you are new to GIS, we will tell you what you need to get started.
+If you are an experienced user, you will see how QGIS fulfills all the
+functions you expect from a GIS program, and more!
+
+
 Background
 ----------
 
