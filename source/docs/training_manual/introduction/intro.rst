@@ -1,14 +1,12 @@
 |LS| A Brief Introduction
 ===============================================================================
 
-In this module we guide you in creating your first QGIS map.
-
 Now that you know why you want to use QGIS, we can show you how.
 The first lesson will guide you in creating your first QGIS map.
 
 After completing this section, you will be able to correctly identify the
-main elements of the screen in QGIS and know what each of them does, and
-load an ESRI Shapefile format dataset into QGIS.
+main elements of the screen in QGIS and know what each of them does.
+You will also be able to load an *ESRI Shapefile* format dataset into QGIS.
 
 
 .. warning::
