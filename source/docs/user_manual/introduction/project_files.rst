@@ -155,9 +155,6 @@ Other ways to produce output files are:
   :menuselection:`New Print Layout...` opens a dialog where you can layout and
   print the current map canvas (see section :ref:`label_printlayout`).
 
-.. _GeoPDFGDAL: https://gdal.org/drivers/raster/pdf.html
-.. _GeoPDFQGIS: https://north-road.com/2019/09/03/qgis-3-10-loves-geopdf/
-
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
