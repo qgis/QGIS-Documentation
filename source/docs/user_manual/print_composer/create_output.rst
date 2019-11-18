@@ -177,7 +177,14 @@ override the layout export settings. So check :ref:`these settings
    PDF Export Options
 
 .. note:: Exporting a print layout to formats like :file:`.PDF` or :file:`.TIFF`
-  creates by default a georeferenced output (no world file needed).
+  creates a georeferenced output (no world file needed) by default.
+
+.. note:: Since QGIS 3.10, with GDAL 3, GeoPDF export is supported, a number
+  of GeoPDF specific options are available:
+  :guilabel:`Format` (GeoPDF format - there are some GeoPDF variations),
+  :guilabel:`Include multiple map themes` (specify map themes to include),
+  :guilabel:`Include vector feature information` (choose the layers and
+  group them into logical PDF groups).
 
 .. index:: Atlas generation
 
