@@ -235,9 +235,6 @@ version which is part of the QGIS documentation website (https://docs.qgis.org).
 .. note:: There are links to online and PDF versions of the Documentation and Training manuals.
 
 
-Tim Sutton, May 2012
-
-
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
