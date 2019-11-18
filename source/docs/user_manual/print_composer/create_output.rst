@@ -177,7 +177,7 @@ override the layout export settings. So check :ref:`these settings
    PDF Export Options
 
 .. note:: Exporting a print layout to formats like :file:`.PDF` or :file:`.TIFF`
-  creates by default a georeferenced output (no world file needed).
+  creates a georeferenced output (no world file needed) by default.
 
 .. index:: Atlas generation
 
