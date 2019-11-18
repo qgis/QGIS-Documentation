@@ -144,6 +144,21 @@ Other ways to produce output files are:
   vector layers you want to export to DXF. Through the 'Symbology mode' symbols
   from the original QGIS Symbology can be exported with high fidelity
   (see section :ref:`create_dxf_files`).
+* Exporting to PDF files: :menuselection:`Project --> Import/Export --> Export
+  Map to PDF...` opens a dialog where you can define the part
+  (:guilabel:`Extent`) of the map to be exported, the :guilabel:`Scale`,
+  :guilabel:`Resolution`, :guilabel:`Output width` (pixels) and
+  :guilabel:`Output height` (pixels).
+  You can also choose to :guilabel:`Draw active decorations` and
+  :guilabel:`Draw annotations`, as well as :guilabel:`Rasterize map`.
+  Since QGIS 3.10, with GDAL 3 it is also possible to
+  :guilabel:`Create geospatial PDF`, choose the GeoPDF :guilabel:`Format` and
+  :guilabel:`Include vector feature information` in the GeoPDF file
+  (GeoPDFGDAL_).
+  Checking the last one will include all the geometry and attribute information
+  from features visible within the page in the output GeoPDF file.
+  Since QGIS 3.10, with GDAL 3 a GeoPDF file can also be used as a data source.
+  For more on GeoPDF support in QGIS, see: GeoPDFQGIS_.
 * Designing print maps: :menuselection:`Project -->` |newLayout|
   :menuselection:`New Print Layout...` opens a dialog where you can layout and
   print the current map canvas (see section :ref:`label_printlayout`).
