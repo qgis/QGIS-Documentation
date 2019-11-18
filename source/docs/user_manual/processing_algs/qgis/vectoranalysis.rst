@@ -951,64 +951,6 @@ Outputs
       - [vector: point]
       - Resulting point(s) layer
 
-.. _qgisoverlapanalysis:
-
-Overlap Analysis |38|
----------------------
-This algorithm calculates the area and percentage cover by
-which features from an input layer are overlapped by features
-from a selection of overlay layers.
-
-New attributes are added to the output layer reporting the
-total area of overlap and percentage of the input feature
-overlapped by each of the selected overlay layers.
-
-Parameters
-..........
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-   :stub-columns: 0
-
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Input layer**
-      - INPUT
-      - [vector:any]
-      - The input layer.
-   *  - **Overlap layers**
-      - LAYERS
-      - [vector:any] [list]
-      - The overlay layers.
-   *  - **Output layer**
-      - OUTPUT
-      - [vector:any]
-      - Choice between ``Create Temporary Layer``, ``Save to File``,
-        ``Save to Geopackage`` and ``Save to PostGIS Table``
-
-Outputs
-.......
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-   :stub-columns: 0
-
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Output layer**
-      - OUTPUT
-      - [vector:any]
-      - The output layer with additional fields reporting the
-        overlap (in map units and percentage) of the input feature
-        overlapped by each of the selected layers.
-
-
 .. _qgisnearestneighbouranalysis:
 
 Nearest neighbour analysis
@@ -1083,6 +1025,64 @@ Outputs
       - ``Z_SCORE``
       - [number]
       - Z-Score
+
+
+.. _qgisoverlapanalysis:
+
+Overlap Analysis |38|
+---------------------
+This algorithm calculates the area and percentage cover by
+which features from an input layer are overlapped by features
+from a selection of overlay layers.
+
+New attributes are added to the output layer reporting the
+total area of overlap and percentage of the input feature
+overlapped by each of the selected overlay layers.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Input layer**
+      - ``INPUT``
+      - [vector: any]
+      - The input layer.
+   *  - **Overlap layers**
+      - ``LAYERS``
+      - [vector: any] [list]
+      - The overlay layers.
+   *  - **Output layer**
+      - ``OUTPUT``
+      - [vector: any]
+      - Choice between ``Create Temporary Layer``, ``Save to File``,
+        ``Save to Geopackage`` and ``Save to PostGIS Table``
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Output layer**
+      - ``OUTPUT``
+      - [vector: any]
+      - The output layer with additional fields reporting the
+        overlap (in map units and percentage) of the input feature
+        overlapped by each of the selected layers.
 
 
 .. _qgisstatisticsbycategories:
