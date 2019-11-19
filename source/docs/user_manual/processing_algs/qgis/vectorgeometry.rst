@@ -328,8 +328,8 @@ Parameters
 ``Input layer`` [vector: any]
   Vector layer in input.
 
-``Create point on surface for each part`` [boolean |dataDefined|]
-  If checked a point for each different part of the geometry will be created.
+``Create Centroid for each part`` [boolean |dataDefined|]
+  If checked a centroid for each different part of the geometry will be created.
 
   Default: *False*
 
