@@ -15,6 +15,8 @@ Combines multiple QGIS style databases into a single style database.
 If items of the same type with the same name exist in different source
 databases these will be renamed to have unique names in the output combined database.
 
+.. seealso:: :ref:`qgisstylefromproject`
+
 Parameters
 ..........
 
@@ -35,10 +37,6 @@ Outputs
 
 ``Output style database`` [file]
   Output :file:`.XML` file combining the selected style items.
-
-See also
-........
-:ref:`qgisstylefromproject`
 
 
 .. _qgiscategorizeusingstyle:
@@ -111,6 +109,8 @@ The extracted symbols are saved to a QGIS style database (:file:`XML` format),
 which can be managed and imported via the :ref:`Style Manager <vector_style_manager>`
 dialog.
 
+.. seealso:: :ref:`qgiscombinestyles`
+
 Parameters
 ..........
 
@@ -131,10 +131,6 @@ Outputs
 
 ``Output style database`` [file]
   Output :file:`.XML` file storing the selected style items.
-
-See also
-........
-:ref:`qgiscombinestyles`
 
 
 .. _qgisprintlayoutmapextenttolayer:

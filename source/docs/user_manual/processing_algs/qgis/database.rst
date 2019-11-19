@@ -304,6 +304,9 @@ Allows a SQL database query to be performed on a PostgreSQL database connected t
 The algorithm **won't** create any new layer: it is designed to run queries on
 the layer itself.
 
+.. seealso:: For some SQL query examples see :ref:`PostGIS SQL Query Examples
+ <qgis_postgis_execute_sql_example>`.
+ 
 Parameters
 ..........
 
@@ -318,10 +321,6 @@ Parameters
 Outputs
 .......
 No new layer is created. The SQL query is executed in place on the layer.
-
-See also
-........
-For some SQL query examples see :ref:`PostGIS SQL Query Examples <qgis_postgis_execute_sql_example>`.
 
 
 .. _qgisspatialiteexecutesql:
@@ -350,9 +349,8 @@ Outputs
 .......
 No new layer is created. The SQL query is executed in place on the layer.
 
-See also
-........
-For some SQL query examples see :ref:`PostGIS SQL Query Examples <qgis_postgis_execute_sql_example>`.
+.. seealso:: For some SQL query examples see :ref:`PostGIS SQL Query Examples
+ <qgis_postgis_execute_sql_example>`.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

@@ -25,6 +25,8 @@ them to the right.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+.. seealso:: :ref:`qgisoffsetline`, :ref:`qgisarraytranslatedfeatures`
+
 Parameters
 ..........
 
@@ -72,10 +74,6 @@ Outputs
   Output line layer with offset features.
   The original features are also copied.
 
-See also
-........
-:ref:`qgisoffsetline`, :ref:`qgisarraytranslatedfeatures`
-
 
 .. _qgisarraytranslatedfeatures:
 
@@ -92,6 +90,8 @@ M values present in the geometry can also be translated.
    Input layers in blue tones, output layers with translated features in red tones
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
+.. seealso:: :ref:`qgistranslategeometry`, :ref:`qgisarrayoffsetlines`
 
 Parameters
 ..........
@@ -130,10 +130,6 @@ Outputs
 ``Translated`` [vector: any]
   Output vector layer with translated (moved) copies of the features.
   The original features are also copied.
-
-See also
-........
-:ref:`qgistranslategeometry`, :ref:`qgisarrayoffsetlines`
 
 
 .. _qgiscreategrid:

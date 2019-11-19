@@ -68,8 +68,8 @@ example: Array("Field1", "Field2").
 Geometries (if present) are combined into one multipart geometry for each group.
 Output attributes are computed depending on each given aggregate definition.
 
-This algorithm allows to use the default aggregation functions of the QGIS Expression
-engine.
+This algorithm allows to use the default :ref:`aggregates functions <aggregates_function>`
+of the QGIS Expression engine.
 
 Parameters
 ..........
@@ -133,11 +133,6 @@ Outputs
 ``Aggregated`` [vector: any]
   Multigeometry vector layer with the aggregated values.
 
-See also
-........
-For a  complete description of the aggregates function, refer to the dedicated
-:ref:`aggregates_function` chapter.
-
 
 .. _qgisboundary:
 
@@ -190,6 +185,8 @@ Polygon and line geometries are supported.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+.. seealso:: :ref:`qgisminimumboundinggeometry`
+
 Parameters
 ..........
 
@@ -201,10 +198,6 @@ Outputs
 
 ``Bounds`` [vector: polygon]
   Bounding boxes of input layer.
-
-See also
-........
-:ref:`qgisminimumboundinggeometry`
 
 
 .. _qgisbuffer:
@@ -224,6 +217,9 @@ case the buffer will result in a smaller polygon.
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
+
+.. seealso:: :ref:`qgisvariabledistancebuffer`, :ref:`qgismultiringconstantbuffer`,
+ :ref:`qgisbufferbym`
 
 Parameters
 ..........
@@ -294,11 +290,6 @@ Outputs
 ``Buffer`` [vector: polygon]
   Buffer polygon vector layer.
 
-See also
-........
-:ref:`qgisvariabledistancebuffer`, :ref:`qgismultiringconstantbuffer`,
-:ref:`qgisbufferbym`
-
 
 .. _qgiscentroids:
 
@@ -322,6 +313,8 @@ associated to the original features.
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
+.. seealso:: :ref:`qgispointonsurface`
+
 Parameters
 ..........
 
@@ -338,10 +331,6 @@ Outputs
 
 ``Centroids`` [vector: point]
   Points vector layer in output.
-
-See also
-........
-:ref:`qgispointonsurface`
 
 
 .. _qgischeckvalidity:
@@ -468,6 +457,8 @@ See the 'Promote to multipart' or 'Aggregate' algorithms for alternative options
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
+.. seealso:: :ref:`qgisaggregate`, :ref:`qgispromotetomulti`
+
 Parameters
 ..........
 
@@ -485,16 +476,14 @@ Outputs
 ``Collected`` [vector: any]
   Vector layer with collected geometries.
 
-See also
-........
-:ref:`qgisaggregate`, :ref:`qgispromotetomulti`
-
 
 .. _qgisconcavehull:
 
 Concave hull (alpha shapes)
 ---------------------------
 Computes the concave hull of the features in an input point layer.
+
+.. seealso:: :ref:`qgisconvexhull`, :ref:`qgisknearestconcavehull`
 
 Parameters
 ..........
@@ -526,10 +515,6 @@ Outputs
 ``Concave hull`` [vector: polygon]
   Output concave hull.
 
-See also
-........
-:ref:`qgisconvexhull`, :ref:`qgisknearestconcavehull`
-
 
 .. _qgisknearestconcavehull:
 
@@ -550,6 +535,8 @@ convex hull.
 If a field is selected, the algorithm will group the features in the
 input layer using unique values in that field and generate individual
 polygons in the output layer for each group.
+
+.. seealso:: :ref:`qgisconcavehull`
 
 Parameters
 ..........
@@ -579,10 +566,6 @@ Outputs
 ``Concave hull`` [vector: polygon]
   Output concave hull.
 
-See also
-........
-:ref:`qgisconcavehull`
-
 
 .. _qgisconvertgeometrytype:
 
@@ -592,6 +575,8 @@ Generates a new layer based on an existing one, with a different type of geometr
 
 Not all conversions are possible. For instance, a line layer can be converted to
 a point layer, but a point layer cannot be converted to a line layer.
+
+.. seealso:: :ref:`qgispolygonize`, :ref:`qgislinestopolygons`
 
 Parameters
 ..........
@@ -617,10 +602,6 @@ Outputs
 ``Converted`` [vector: any]
   Converted vector layer depending on the parameters chosen.
 
-See also
-........
-:ref:`qgispolygonize`, :ref:`qgislinestopolygons`
-
 
 .. _qgisconvexhull:
 
@@ -640,6 +621,8 @@ covers the whole layer or grouped subsets of features.
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
+.. seealso:: :ref:`qgisminimumboundinggeometry`, :ref:`qgisconcavehull`
+
 Parameters
 ..........
 ``Input point layer`` [vector: any]
@@ -649,10 +632,6 @@ Outputs
 .......
 ``Convex hull`` [vector: polygon]
   Output convex hull.
-
-See also
-........
-:ref:`qgisminimumboundinggeometry`, :ref:`qgisconcavehull`
 
 
 .. _qgisextenttolayer:
@@ -666,6 +645,8 @@ It can be used in models to convert a literal extent (``xmin``, ``xmax``, ``ymin
 ``ymax`` format) into a layer which can be used for other algorithms which require
 a layer based input.
 
+.. seealso:: :ref:`qgispointtolayer`
+
 Parameters
 ..........
 
@@ -677,10 +658,6 @@ Outputs
 
 ``Extent``
   Layer with a polygon feature representing the input extent.
-
-See also
-........
-:ref:`qgispointtolayer`
 
 
 .. _qgiswedgebuffers:
@@ -696,6 +673,8 @@ Creates wedge shaped buffers from input points.
 
 The native output from this algorithm are CurvePolygon geometries, but these may
 be automatically segmentized to Polygons depending on the output format.
+
+.. seealso:: :ref:`qgisbuffer`, :ref:`qgisbufferbym`, :ref:`qgistaperedbuffer`
 
 Parameters
 ..........
@@ -731,10 +710,6 @@ Outputs
 
 ``Buffers`` [vector: polygon]
   Wedge buffer polygon vector layer.
-
-See also
-........
-:ref:`qgisbuffer`, :ref:`qgisbufferbym`, :ref:`qgistaperedbuffer`
 
 
 .. _qgisdelaunaytriangulation:
@@ -824,6 +799,8 @@ The number of new vertices to add to each segment is specified as an input param
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
+.. seealso:: :ref:`qgisdensifygeometriesgivenaninterval`
+
 Parameters
 ..........
 
@@ -840,10 +817,6 @@ Outputs
 
 ``Densified`` [vector: line, polygon]
   Densified layer with vertices added.
-
-See also
-........
-:ref:`qgisdensifygeometriesgivenaninterval`
 
 
 .. _qgisdensifygeometriesgivenaninterval:
@@ -874,6 +847,8 @@ over the segment.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+.. seealso:: :ref:`qgisdensifygeometries`
+
 Parameters
 ..........
 
@@ -890,10 +865,6 @@ Outputs
 
 ``Densified`` [vector: line, polygon]
   Densified layer with vertices added using the specified interval.
-
-See also
-........
-:ref:`qgisdensifygeometries`
 
 
 .. _qgisdissolve:
@@ -952,6 +923,8 @@ scaled by a preset amount.
 If Z values already exist in the layer, they will be overwritten with the new value.
 If no Z values exist, the geometry will be upgraded to include the Z dimension.
 
+.. seealso:: :ref:`qgissetmfromraster`, :ref:`qgissetzvalue`
+
 Parameters
 ..........
 ``Input layer`` [vector: any]
@@ -979,16 +952,14 @@ Outputs
 ``Updated`` [vector: any]
   A vector layer with geometries that have Z values extracted from the provided raster layer.
 
-See also
-........
-:ref:`qgissetmfromraster`, :ref:`qgissetzvalue`
-
 
 .. _qgisdropmzvalues:
 
 Drop m/z values
 ---------------
 Removes any M (measure) or Z (altitude) values from input geometries.
+
+.. seealso:: :ref:`qgissetmvalue`, :ref:`qgissetzvalue`
 
 Parameters
 ..........
@@ -1009,10 +980,6 @@ Outputs
 .......
 ``Z/M Dropped`` [vector: any]
   A vector layer that is identical to the input layer, except that M and/or Z values have been removed from its geometries.
-
-See also
-........
-:ref:`qgissetmvalue`, :ref:`qgissetzvalue`
 
 
 .. _qgiseliminateselectedpolygons:
@@ -1093,6 +1060,8 @@ Lines are extended using the bearing of the first and last segment in the line.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+.. seealso:: :ref:`qgislinesubstring`
+
 Parameters
 ..........
 
@@ -1110,10 +1079,6 @@ Outputs
 
 ``Extended`` [vector: line]
   Extended vector line layer.
-
-See also
-........
-:ref:`qgislinesubstring`
 
 
 .. _qgisextractspecificvertices:
@@ -1209,6 +1174,8 @@ similarly if the maximum value is not specified then only the minimum value is t
 .. note:: Depending on the input geometry attributes and the filters used,
   the resultant geometries created by this algorithm may no longer be valid.
 
+.. seealso:: :ref:`qgisfilterverticesbyz`, :ref:`qgisextractvertices`
+
 Parameters
 ..........
 
@@ -1235,10 +1202,6 @@ Outputs
 ``Filtered`` [vector: line, polygon]
   Vector layer of the features with only the filtered vertices.
 
-See also
-........
-:ref:`qgisfilterverticesbyz`, :ref:`qgisextractvertices`
-
 
 .. _qgisfilterverticesbyz:
 
@@ -1259,6 +1222,8 @@ similarly if the maximum value is not specified then only the minimum value is t
 .. note:: Depending on the input geometry attributes and the filters used,
   the resultant geometries created by this algorithm may no longer be valid.
   You may need to run the :ref:`qgisfixgeometries` algorithm to ensure their validity.
+
+.. seealso:: :ref:`qgisfilterverticesbym`, :ref:`qgisextractvertices`
 
 Parameters
 ..........
@@ -1285,10 +1250,6 @@ Outputs
 
 ``Filtered`` [vector: line, polygon]
   Vector layer of the features with only the filtered vertices.
-
-See also
-........
-:ref:`qgisfilterverticesbym`, :ref:`qgisextractvertices`
 
 
 .. _qgisfixgeometries:
@@ -1474,6 +1435,8 @@ the resultant feature will have a null geometry.
 
    Interpolated point at 500m of the beginning of the line
 
+.. seealso:: :ref:`qgispointsalonglines`
+
 Parameters
 ..........
 
@@ -1489,9 +1452,6 @@ Outputs
 ``Interpolated points`` [vector: point]
   Point vector layer with features at a set distance along the line or polygon boundary.
 
-See also
-........
-:ref:`qgispointsalonglines`
 
 .. _qgiskeepnbiggestparts:
 
@@ -1544,6 +1504,8 @@ calculating the substring.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+.. seealso:: :ref:`qgisextendlines`
+
 Parameters
 ..........
 
@@ -1562,10 +1524,6 @@ Outputs
 ``Substring`` [vector: line]
   Vector line layer of the substring
 
-See also
-........
-:ref:`qgisextendlines`
-
 
 .. _qgislinestopolygons:
 
@@ -1577,6 +1535,8 @@ The attribute table of the output layer is the same as the one from of the input
 line layer.
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
+
+.. seealso:: :ref:`qgispolygonstolines`, :ref:`qgispolygonize`
 
 Parameters
 ..........
@@ -1671,6 +1631,8 @@ Calculates the minimum enclosing circle which covers each feature in an input la
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+.. seealso:: :ref:`qgisminimumboundinggeometry`
+
 Parameters
 ..........
 
@@ -1688,10 +1650,6 @@ Outputs
 ``Minimum enclosing circles`` [vector: polygon]
   Enclosing circles for each polygon feature.
 
-See also
-........
-:ref:`qgisminimumboundinggeometry`
-
 
 .. _qgismultiringconstantbuffer:
 
@@ -1706,6 +1664,10 @@ using a fixed or dynamic distance and ring numbers.
    Multi-ring buffer for line, point and polygon layer
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
+.. seealso:: :ref:`qgisbuffer`, :ref:`qgisvariabledistancebuffer`,
+ :ref:`qgisrectanglesovalsdiamondsfixed`, :ref:`qgisrectanglesovalsdiamondsvariable`,
+ :ref:`qgissinglesidedbuffer`
 
 Parameters
 ..........
@@ -1729,11 +1691,6 @@ Outputs
 ``Multi-ring buffer (constant distance)``
   Multi ring buffer polygon vector layer.
 
-See also
-........
-:ref:`qgisbuffer`, :ref:`qgisvariabledistancebuffer`, :ref:`qgisrectanglesovalsdiamondsfixed`,
-:ref:`qgisrectanglesovalsdiamondsvariable`, :ref:`qgissinglesidedbuffer`
-
 
 .. _qgismultiparttosingleparts:
 
@@ -1753,6 +1710,8 @@ into single features.
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
+.. seealso:: :ref:`qgiscollect`, :ref:`qgispromotetomulti`
+
 Parameters
 ..........
 
@@ -1764,10 +1723,6 @@ Outputs
 
 ``Single parts`` [vector: any]
   Singlepart layer in output with updated attribute table.
-
-See also
-........
-:ref:`qgiscollect`, :ref:`qgispromotetomulti`
 
 
 .. _qgisoffsetline:
@@ -1783,6 +1738,8 @@ the left, and negative distances will offset them to the right.
    In blue the source layer, in red the offset one
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
+.. seealso:: :ref:`qgisarrayoffsetlines`, :ref:`qgistranslategeometry`
 
 Parameters
 ..........
@@ -1824,10 +1781,6 @@ Outputs
 ``Offset`` [vector: line]
   Offset line layer.
 
-See also
-........
-:ref:`qgisarrayoffsetlines`, :ref:`qgistranslategeometry`
-
 
 .. _qgisorientedminimumboundingbox:
 
@@ -1842,6 +1795,8 @@ Calculates the minimum area rotated rectangle which covers each feature in an in
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+.. seealso:: :ref:`qgisminimumboundinggeometry`
+
 Parameters
 ..........
 
@@ -1853,10 +1808,6 @@ Outputs
 
 ``Bounding boxes`` [vector: polygon]
   Oriented minimum bounding boxes for each polygon feature.
-
-See also
-........
-:ref:`qgisminimumboundinggeometry`
 
 
 .. _qgisorthogonalize:
@@ -1905,6 +1856,8 @@ Returns a point guaranteed to lie on the surface of a geometry.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+.. seealso:: :ref:`qgiscentroids`
+
 Parameters
 ..........
 
@@ -1922,10 +1875,6 @@ Outputs
 ``Point`` [vector: point]
   Point vector layer.
 
-See also
-........
-:ref:`qgiscentroids`
-
 
 .. _qgispointsalonglines:
 
@@ -1942,6 +1891,8 @@ the start and end of the geometry the points should be created.
    :align: center
 
    Points created along the source line layer
+
+.. seealso:: :ref:`qgisinterpolatepoint`
 
 Parameters
 ..........
@@ -1972,9 +1923,6 @@ Outputs
 ``Points`` [vector: point]
   Point vector layer with features placed along the line or polygon boundary.
 
-See also
-........
-:ref:`qgisinterpolatepoint`
 
 .. _qgispointsdisplacement:
 
@@ -2024,6 +1972,8 @@ geometry matching a point parameter.
 It can be used in models to convert a point into a layer which can be used
 for other algorithms which require a layer based input.
 
+.. seealso:: :ref:`qgisextenttolayer`
+
 Parameters
 ..........
 
@@ -2036,10 +1986,6 @@ Outputs
 
 ``Point`` [vector: point]
   Point vector layer containing the input point.
-
-See also
-........
-:ref:`qgisextenttolayer`
 
 
 .. _qgispoleofinaccessibility:
@@ -2095,6 +2041,8 @@ line layer features.
 .. note:: The line layer must have closed shapes in order to be transformed into
   a polygon.
 
+.. seealso:: :ref:`qgispolygonstolines`
+
 Parameters
 ..........
 
@@ -2128,6 +2076,8 @@ of the polygons in the input layer.
    Black lines as the result of the algorithm
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
+
+.. seealso:: :ref:`qgispolygonize`
 
 Parameters
 ..........
@@ -2188,6 +2138,8 @@ compatible with data providers that require multipart features.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+.. seealso:: :ref:`qgisaggregate`, :ref:`qgiscollect`
+
 Parameters
 ..........
 
@@ -2199,10 +2151,6 @@ Outputs
 
 ``Multiparts`` [vector: any]
   Multiparts vector layer.
-
-See also
-........
-:ref:`qgisaggregate`, :ref:`qgiscollect`
 
 
 .. _qgisrectanglesovalsdiamondsfixed:
@@ -2218,6 +2166,8 @@ Parameters can vary depending on the shape chosen.
    :align: center
 
    Different buffer shapes
+
+.. seealso:: :ref:`qgisrectanglesovalsdiamondsvariable`
 
 Parameters
 ..........
@@ -2262,10 +2212,6 @@ Outputs
 ``Output`` [vector: polygon]
   Buffer shape in output.
 
-See also
-........
-:ref:`qgisrectanglesovalsdiamondsvariable`
-
 
 .. _qgisrectanglesovalsdiamondsvariable:
 
@@ -2280,6 +2226,8 @@ Buffer shape parameters are specified through attribute of the input layer.
    :align: center
 
    Different buffer shapes with different parameters
+
+.. seealso:: :ref:`qgisrectanglesovalsdiamondsfixed`
 
 Parameters
 ..........
@@ -2323,10 +2271,6 @@ Outputs
 
 ``Output`` [vector: polygon]
   Buffer shape in output.
-
-See also
-........
-:ref:`qgisrectanglesovalsdiamondsfixed`
 
 
 .. _qgisremoveduplicatevertices:
@@ -2413,6 +2357,8 @@ Inverts the direction of a line layer.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+.. seealso:: :ref:`qgisswapxy`
+
 Parameters
 ..........
 
@@ -2435,6 +2381,8 @@ The rotation occurs around each feature's centroid, or optionally
 around a unique preset point.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
+.. seealso:: :ref:`qgistranslategeometry`
 
 Parameters
 ..........
@@ -2472,6 +2420,9 @@ from the original arc center to consecutive output vertices on the linearized
 geometry).
 Non-curved geometries will be retained without change.
 
+.. seealso:: :ref:`qgissegmentizebymaxdistance`, :ref:`qgissimplifygeometries`,
+ :ref:`qgissmoothgeometry`
+
 Parameters
 ..........
 
@@ -2489,10 +2440,6 @@ Outputs
 ``Segmentized`` [vector: line, polygon]
   Vector layer with segmentized geometries.
 
-See also
-........
-:ref:`qgissegmentizebymaxdistance`, :ref:`qgissimplifygeometries`, :ref:`qgissmoothgeometry`
-
 
 .. _qgissegmentizebymaxdistance:
 
@@ -2503,6 +2450,8 @@ Segmentizes a geometry by converting curved sections to linear sections.
 The segmentization is performed by specifying the maximum allowed offset
 distance between the original curve and the segmentized representation.
 Non-curved geometries will be retained without change.
+
+.. seealso:: :ref:`qgissegmentizebymaxangle`, :ref:`qgissimplifygeometries`, :ref:`qgissmoothgeometry`
 
 Parameters
 ..........
@@ -2522,10 +2471,6 @@ Outputs
 ``Segmentized`` [vector: line, polygon]
   Vector layer with segmentized geometries.
 
-See also
-........
-:ref:`qgissegmentizebymaxangle`, :ref:`qgissimplifygeometries`, :ref:`qgissmoothgeometry`
-
 
 .. _qgissetmvalue:
 
@@ -2539,6 +2484,8 @@ specified value used as the initial M value for all geometries.
 
 .. tip:: Use the |identify|:sup:`Identify Features` button to check the added M value:
  the results are available in the :guilabel:`Identify Results` dialog.
+
+.. seealso:: :ref:`qgissetmfromraster`, :ref:`qgissetzvalue`, :ref:`qgisdropmzvalues`
 
 Parameters
 ..........
@@ -2557,10 +2504,6 @@ Outputs
 ``M Added`` [vector: any]
   Vector layer in output with M value.
 
-See also
-........
-:ref:`qgissetmfromraster`, :ref:`qgissetzvalue`, :ref:`qgisdropmzvalues`
-
 
 .. _qgissetmfromraster:
 
@@ -2573,6 +2516,8 @@ scaled by a preset amount.
 
 If M values already exist in the layer, they will be overwritten with the new value.
 If no M values exist, the geometry will be upgraded to include M values.
+
+.. seealso:: :ref:`qgissetzfromraster`, :ref:`qgissetmvalue`
 
 Parameters
 ..........
@@ -2601,10 +2546,6 @@ Outputs
 ``Updated`` [vector: any]
   A vector layer with M values extracted from the provided raster layer.
 
-See also
-........
-:ref:`qgissetzfromraster`, :ref:`qgissetmvalue`
-
 
 .. _qgissetzvalue:
 
@@ -2618,6 +2559,8 @@ specified value used as the initial Z value for all geometries.
 
 .. tip:: Use the |identify|:sup:`Identify Features` button to check the added Z value:
  the results are available in the :guilabel:`Identify Results` dialog.
+
+.. seealso:: :ref:`qgissetzfromraster`, :ref:`qgissetmvalue`, :ref:`qgisdropmzvalues`
 
 Parameters
 ..........
@@ -2635,10 +2578,6 @@ Outputs
 
 ``Z Added`` [vector: any]
   Vector layer in output with Z value.
-
-See also
-........
-:ref:`qgissetzfromraster`, :ref:`qgissetmvalue`, :ref:`qgisdropmzvalues` 
 
 
 .. _qgissimplifygeometries:
@@ -2704,6 +2643,8 @@ Buffer always results in a polygon layer.
    :align: center
 
    Left versus right side buffer on the same vector line layer
+
+.. seealso:: :ref:`qgisbuffer`
 
 Parameters
 ..........
@@ -2777,6 +2718,8 @@ or lower would preserve right angles in the geometry.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+.. seealso:: :ref:`qgissimplifygeometries`
+
 Parameters
 ..........
 
@@ -2825,6 +2768,8 @@ another layer, or to geometries within the same layer.
 
 Matching is done based on a tolerance distance, and vertices will be inserted or
 removed as required to make the geometries match the reference geometries.
+
+.. seealso:: :ref:`qgissnappointstogrid`
 
 Parameters
 ..........
@@ -2880,6 +2825,8 @@ axis will disable snapping for that axis.
 .. note:: Snapping to grid may generate an invalid geometry in some corner cases.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
+.. seealso:: :ref:`qgissnapgeometries`
 
 Parameters
 ..........
@@ -3051,6 +2998,8 @@ buffer diameter.
 
    Tapered buffer example
 
+.. seealso:: :ref:`qgisbufferbym`, :ref:`qgisbuffer`, :ref:`qgiswedgebuffers`
+
 Parameters
 ..........
 
@@ -3077,10 +3026,6 @@ Outputs
 
 ``Buffered`` [vector: polygon]
   Variable buffer polygon layer.
-
-See also
-........
-:ref:`qgisbufferbym`, :ref:`qgisbuffer`, :ref:`qgiswedgebuffers`
 
 
 .. _qgistessellate:
@@ -3184,6 +3129,8 @@ Z and M values present in the geometry can also be translated.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+.. seealso:: :ref:`qgisarraytranslatedfeatures`, :ref:`qgisoffsetline`
+
 Parameters
 ..........
 
@@ -3216,10 +3163,6 @@ Outputs
 ``Translated`` [vector: any]
   Translated (moved) vector layer.
 
-See also
-........
-:ref:`qgisarraytranslatedfeatures`, :ref:`qgisoffsetline`
-
 
 .. _qgisvariabledistancebuffer:
 
@@ -3229,6 +3172,8 @@ Computes a buffer area for all the features in an input layer.
 
 The size of the buffer for a given feature is defined by an attribute,
 so it allows different features to have different buffer sizes.
+
+.. seealso:: :ref:`qgisbuffer`
 
 Parameters
 ..........
@@ -3309,11 +3254,6 @@ Outputs
       - [vector: polygon]
       - Buffer polygon vector layer.
 
-See also
-........
-
-:ref:`qgisbuffer`
-
 
 .. _qgisbufferbym:
 
@@ -3326,6 +3266,8 @@ as the diameter of the buffer at each vertex.
    :align: center
 
    Variable buffer example
+
+.. seealso:: :ref:`qgistaperedbuffer`, :ref:`qgisbuffer`, :ref:`qgissetmvalue`
 
 Parameters
 ..........
@@ -3345,10 +3287,6 @@ Outputs
 
 ``Buffered`` [vector: polygon]
   Variable buffer polygon layer.
-
-See also
-........
-:ref:`qgistaperedbuffer`, :ref:`qgisbuffer`, :ref:`qgissetmvalue`
 
 
 .. _qgisvoronoipolygons:

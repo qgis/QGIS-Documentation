@@ -103,6 +103,8 @@ features while the second will contain all the non-matching features.
 The criteria for adding features to the resulting layer is defined based on the
 values of an attribute from the input layer.
 
+.. seealso:: :ref:`qgisselectbyattribute`
+
 Parameters
 ..........
 
@@ -143,10 +145,6 @@ Outputs
 ``Extracted (non-matching)`` [vector: any]
   Vector layer with not matching features.
 
-See also
-........
-:ref:`qgisselectbyattribute`
-
 
 .. _qgisextractbyexpression:
 
@@ -158,6 +156,8 @@ features while the second will contain all the non-matching features.
 The criteria for adding features to the resulting layer is based on a QGIS expression.
 
 For more information about expressions see the :ref:`vector_expressions`.
+
+.. seealso:: :ref:`qgisselectbyexpression`
 
 Parameters
 ..........
@@ -177,10 +177,6 @@ Outputs
 ``Non-matching`` [vector: any]
   Vector layer with not matching features.
 
-See also
-........
-:ref:`qgisselectbyexpression`
-
 
 .. _qgisextractbylocation:
 
@@ -190,6 +186,8 @@ Creates a new vector layer that only contains matching features from an input la
 
 The criteria for adding features to the resulting layer is defined based on the
 spatial relationship between each feature and the features in an additional layer.
+
+.. seealso:: :ref:`qgisselectbylocation`
 
 Parameters
 ..........
@@ -211,10 +209,6 @@ Outputs
 ``Extracted (location)`` [vector: any]
   Vector layer of the spatial intersection.
 
-See also
-........
-:ref:`qgisselectbylocation`
-
 
 .. _qgisrandomextract:
 
@@ -225,6 +219,8 @@ features in the input layer.
 
 The subset is defined randomly, based on feature IDs, using a percentage or count
 value to define the total number of features in the subset.
+
+.. seealso:: :ref:`qgisrandomselection`
 
 Parameters
 ..........
@@ -251,10 +247,6 @@ Outputs
 ``Extracted (random)`` [vector: any]
   Vector layer containing random selected features.
 
-See also
-........
-:ref:`qgisrandomselection`
-
 
 .. _qgisrandomextractwithinsubsets:
 
@@ -267,6 +259,8 @@ The subset is defined randomly, based on feature IDs, using a percentage or coun
 value to define the total number of features in the subset.
 The percentage/count value is not applied to the whole layer, but instead to each
 category. Categories are defined according to a given attribute.
+
+.. seealso:: :ref:`qgisrandomselectionwithinsubsets`
 
 Parameters
 ..........
@@ -296,10 +290,6 @@ Outputs
 ``Extracted (random stratified)`` [vector: any]
   Vector layer containing random selected features.
 
-See also
-........
-:ref:`qgisrandomselectionwithinsubsets`
-
 
 .. _qgisrandomselection:
 
@@ -312,6 +302,8 @@ The subset is defined randomly, based on feature IDs, using a percentage or coun
 value to define the total number of features in the subset.
 
 ``Default menu``: :menuselection:`Vector --> Research Tools`
+
+.. seealso:: :ref:`qgisrandomextract`
 
 Parameters
 ..........
@@ -331,10 +323,6 @@ Parameters
   Number or percentage of features to select.
 
   Default: *10*
-
-See also
-........
-:ref:`qgisrandomextract`
 
 
 .. _qgisrandomselectionwithinsubsets:
@@ -356,6 +344,8 @@ an input parameter for the algorithm.
 No new outputs are created.
 
 ``Default menu``: :menuselection:`Vector --> Research Tools`
+
+.. seealso:: :ref:`qgisrandomextractwithinsubsets`
 
 Parameters
 ..........
@@ -379,10 +369,6 @@ Parameters
 
   Default: *10*
 
-See also
-........
-:ref:`qgisrandomextractwithinsubsets`
-
 
 .. _qgisselectbyattribute:
 
@@ -394,6 +380,8 @@ The criteria for selected features is defined based on the values of an attribut
 from the input layer.
 
 No new outputs are created.
+
+.. seealso:: :ref:`qgisextractbyattribute`
 
 Parameters
 ..........
@@ -436,10 +424,6 @@ Parameters
 
   Default: *0*
 
-See also
-........
-:ref:`qgisextractbyattribute`
-
 
 .. _qgisselectbyexpression:
 
@@ -450,6 +434,8 @@ features is based on a QGIS expression. For more information about expressions
 see the :ref:`vector_expressions`.
 
 No new outputs are created.
+
+.. seealso:: :ref:`qgisextractbyexpression`
 
 Parameters
 ..........
@@ -470,10 +456,6 @@ Parameters
 
   Default: *0*
 
-See also
-........
-:ref:`qgisextractbyexpression`
-
 
 .. _qgisselectbylocation:
 
@@ -486,6 +468,8 @@ the features in an additional layer.
 No new outputs are created.
 
 ``Default menu``: :menuselection:`Vector --> Research Tools`
+
+.. seealso:: :ref:`qgisextractbylocation`
 
 Parameters
 ..........
@@ -510,8 +494,5 @@ Parameters
 
   Default: *0*
 
-See also
-........
-:ref:`qgisextractbylocation`
 
 .. |36| replace:: ``NEW in 3.6``

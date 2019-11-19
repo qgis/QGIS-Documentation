@@ -309,8 +309,6 @@ Console usage
 
   processing.runalg('taudem:slopeareacombination', slope_grid, area_grid, slope_exponent, area_exponent, slope_area_grid)
 
-See also
-........
 
 Stream Definition By Threshold
 ------------------------------
@@ -373,8 +371,6 @@ Console usage
 
   processing.runalg('taudem:streamdefinitionbythreshold', -ssa, -thresh, -mask, -src)
 
-See also
-........
 
 Stream Drop Analysis
 --------------------
@@ -705,9 +701,6 @@ Console usage
 
   processing.runalg('taudem:streamreachandwatershed', -fel, -p, -ad8, -src, -o, -sw, -ord, -w, -net, -tree, -coord)
 
-See also
-........
-
 
 Gage Watershed
 --------------
@@ -751,9 +744,6 @@ Console usage
 
   processing.runalg('taudem:gagewatershed2', -p, -o, -gw, -id)
 
-See also
-........
-
 
 Topographic Wetness Index
 -------------------------
@@ -785,5 +775,3 @@ Console usage
 
   processing.runalg('taudem:topographicwetnessindex', -sca, -slp, -twi)
 
-See also
-........

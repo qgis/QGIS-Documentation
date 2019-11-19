@@ -318,7 +318,6 @@ Outputs
         new column with the points count
 
 
-
 .. _qgisdbscanclustering:
 
 DBSCAN clustering
@@ -328,6 +327,8 @@ clustering of applications with noise (DBSCAN) algorithm.
 
 The algorithm requires two parameters, a minimum cluster size,
 and the maximum distance allowed between clustered points.
+
+.. seealso:: :ref:`qgiskmeansclustering`
 
 Parameters
 ..........
@@ -404,10 +405,6 @@ Outputs
       - [number]
       - The number of clusters discovered
 
-See also
-........
-:ref:`qgiskmeansclustering`
-
 
 .. _qgisdistancematrix:
 
@@ -417,6 +414,8 @@ Calculates for point features distances to their nearest features in the same la
 or in another layer.
 
 ``Default menu``: :menuselection:`Vector --> Analysis Tools`
+
+.. seealso:: :ref:`qgisjoinattributesbynearest`
 
 Parameters
 ..........
@@ -518,6 +517,7 @@ in a destination layer. Distances are calculated based on the :ref:`center
 
   Display the nearest hub for the red input features
 
+.. seealso:: :ref:`qgisdistancetonearesthubpoints`, :ref:`qgisjoinattributesbynearest`
 
 Parameters
 ..........
@@ -590,6 +590,8 @@ Distance to nearest hub (points)
 Creates a point layer representing the :ref:`center <qgispointonsurface>` of the
 input features with the addition of two fields containing the identifier of the
 nearest feature (based on its center point) and the distance between the points.
+
+.. seealso:: :ref:`qgisdistancetonearesthublinetohub`, :ref:`qgisjoinattributesbynearest`
 
 Parameters
 ..........
@@ -758,6 +760,8 @@ is based on the centroid of the feature.
 
   A five class point clusters
 
+.. seealso:: :ref:`qgisdbscanclustering`
+
 Parameters
 ..........
 
@@ -809,11 +813,6 @@ Outputs
       - [vector: any]
       - Vector layer containing the original features with
         a field specifying the cluster they belong to
-
-
-See also
-........
-:ref:`qgisdbscanclustering`
 
 
 .. _qgislistuniquevalues:
