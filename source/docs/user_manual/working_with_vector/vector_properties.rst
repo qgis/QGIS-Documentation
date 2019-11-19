@@ -127,11 +127,29 @@ you to define a subset of the features in the layer using a SQL-like WHERE
 clause and to display the result in the main window. As long as the query is
 active, only the features corresponding to its result are available in the
 project.
-For example, using the ``TYPE_2`` field of the :file:`regions` layer from the
-QGIS sample data, you could constrain the file to display only regions that
-are of ``borough`` type in the project (see Figure_vector_querybuilder_ for
-such an example). The filter is made at the data provider (OGR, PostgreSQL,
-MSSQL...) level.
+
+You can use one or more layer attributes to define the filter in the ``Query
+Builder``.
+The use of more than one attribute is shown in Figure_vector_querybuilder_.
+In the example, the filter combines the attributes
+
+* ``toa`` (``DateTime`` field: ``cast("toa" as character) > '2017-05-17'`` and
+  ``cast("toa" as character) < '2019-12-24T18:00:00'``),
+* ``name`` (``String`` field: ``"name" > 'S'``) and
+* ``FID`` (``Integer`` field: ``FID > 10``)
+
+using the AND, OR and NOT operators and parenthesis.
+This syntax (including the DateTime format for the ``toa`` field) works for
+GeoPackage datasets.
+
+The filter is made at the data provider (OGR, PostgreSQL, MSSQL...) level.
+So the syntax depends on the data provider (DateTime is for instance not
+supported for the ESRI Shapefile format).
+The complete expression::
+
+  cast("toa" as character) > '2017-05-17' AND
+  cast("toa" as character) < '2019-12-24T18:00:00' AND
+  NOT ("name" > 'S' OR FID > 10)
 
 
 .. _figure_vector_querybuilder:
