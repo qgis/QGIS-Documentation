@@ -304,7 +304,7 @@ See also
 
 Centroids
 ---------
-Creates a new point layer, with points representing the centroid of the geometries
+Creates a new point layer, with points representing the centroids of the geometries
 of the input layer.
 
 The centroid can be a single point representing the barycenter (of all parts) of the feature,
@@ -328,8 +328,8 @@ Parameters
 ``Input layer`` [vector: any]
   Vector layer in input.
 
-``Create Centroid for each part`` [boolean |dataDefined|]
-  If checked a centroid for each different part of the geometry will be created.
+``Create centroid for each part`` [boolean |dataDefined|]
+  If checked, a centroid for each part of the geometry will be created.
 
   Default: *False*
 
@@ -1912,7 +1912,7 @@ Parameters
   Input vector layer.
 
 ``Create point on surface for each part`` [boolean |dataDefined|]
-  If checked a point for each different part of the geometry will be created.
+  If checked, a point for each part of the geometry will be created.
 
   Default: *False*
 
