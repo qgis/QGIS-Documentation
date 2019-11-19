@@ -420,7 +420,7 @@ Web
 
 This is what the :guilabel:`Web` menu looks like if all the core plugins
 are enabled.
-If no web plugins are enabled, there will be no guilabel:`Web` menu.
+If no web plugins are enabled, there will be no :guilabel:`Web` menu.
 
 ===============================================  ===========================  ===============================
 Menu Option                                      Toolbar                      Reference
