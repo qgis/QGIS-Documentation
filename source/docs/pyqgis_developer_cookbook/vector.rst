@@ -721,7 +721,7 @@ the :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` constructor.
 
 The constructor also takes a URI defining the geometry type of the layer,
 one of: ``"Point"``, ``"LineString"``, ``"Polygon"``, ``"MultiPoint"``,
-``"MultiLineString"``, or ``"MultiPolygon"``.
+``"MultiLineString"``, ``"MultiPolygon"`` or ``"None"``.
 
 The URI can also specify the coordinate reference system, fields, and indexing
 of the memory provider in the URI. The syntax is:
