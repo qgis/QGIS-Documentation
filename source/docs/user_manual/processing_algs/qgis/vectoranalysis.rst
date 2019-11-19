@@ -29,16 +29,125 @@ Statistics are generated as an HTML file and are available in the
 Parameters
 ..........
 
-``Input vector`` [vector: any]
-  Vector layer to calculate the statistic on.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Field to calculate statistics on`` [tablefield: any]
-  Any supported table field to calculate the statistics.
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Input vector**
+      - ``INPUT_LAYER``
+      - [vector: any]
+      - Vector layer to calculate the statistics on
+   *  - **Field to calculate statistics on**
+      - ``FIELD_NAME``
+      - [tablefield: any]
+      - Any supported table field to calculate the statistics
+   *  - **Statistics**
+      - ``OUTPUT_HTML_FILE``
+      - [file]
+      - HTML file for the calculated statistics
 
 Outputs
 .......
-``Statistics`` [html]
-  HTML file with calculated statistics.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Statistics**
+      - ``OUTPUT_HTML_FILE``
+      - [file]
+      - HTML file with the calculated statistics
+   *  - **Count**
+      - ``COUNT``
+      - [number]
+      - 
+   *  - **Number of unique values**
+      - ``UNIQUE``
+      - [number]
+      - 
+   *  - **Number of empty (null) values**
+      - ``EMPTY``
+      - [number]
+      - 
+   *  - **Number of non-empty values**
+      - ``FILLED``
+      - [number]
+      - 
+   *  - **Minimum value**
+      - ``MIN``
+      - [number]
+      - 
+   *  - **Maximum value**
+      - ``MAX``
+      - [number]
+      - 
+   *  - **Minimum length**
+      - ``MIN_LENGTH``
+      - [number]
+      - 
+   *  - **Maximum length**
+      - ``MAX_LENGTH``
+      - [number]
+      - 
+   *  - **Mean length**
+      - ``MEAN_LENGTH``
+      - [number]
+      - 
+   *  - **Coefficient of Variation**
+      - ``CV``
+      - [number]
+      - 
+   *  - **Sum**
+      - ``SUM``
+      - [number]
+      - 
+   *  - **Mean value**
+      - ``MEAN``
+      - [number]
+      - 
+   *  - **Standard deviation**
+      - ``STD_DEV``
+      - [number]
+      - 
+   *  - **Range**
+      - ``RANGE``
+      - [number]
+      - 
+   *  - **Median**
+      - ``MEDIAN``
+      - [number]
+      - 
+   *  - **Minority (rarest occurring value)**
+      - ``MINORITY``
+      - [number]
+      - 
+   *  - **Majority (most frequently occurring value)**
+      - ``MAJORITY``
+      - [number]
+      - 
+   *  - **First quartile**
+      - ``FIRSTQUARTILE``
+      - [number]
+      - 
+   *  - **Third quartile**
+      - ``THIRDQUARTILE``
+      - [number]
+      - 
+   *  - **Interquartile Range (IQR)**
+      - ``IQR``
+      - [number]
+      - 
+
 
 
 .. _qgiscountpointsinpolygon:
@@ -57,6 +166,8 @@ each polygon.
 
   The labels identify the point count
 
+|
+
 An optional weight field can be used to assign weights to each point. Alternatively,
 a unique class field can be specified. If both options are used, the weight field
 will take precedence and the unique class field will be ignored.
@@ -65,39 +176,73 @@ will take precedence and the unique class field will be ignored.
 
 Parameters
 ..........
-``Polygons`` [vector: polygon]
-  Polygon layer whose features are associated with the count of points
-  they contain.
 
-``Points`` [vector: point]
-  Point layer to count features from.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Weight field`` [tablefield: any]
-  Optional
-
-  A field with numeric-like values from the point layer.
-  The count generated will be the sum of the weight field for each point contained
-  by the polygon.
-
-``Class field`` [tablefield: any]
-  Optional
-
-  Points are classified based on the selected attribute and if several points with
-  the same attribute value are within the polygon, only one of them is counted.
-  The final count of the points in a polygon is, therefore, the count of different
-  classes that are found in it.
-
-``Count field name`` [string]
-  The name of the field to store the count of points.
-
-  Default: *NUMPOINTS*
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Polygons**
+      - ``POLYGONS``
+      - [vector: polygon]
+      - Polygon layer whose features are associated with the count of
+        points they contain
+   *  - **Points**
+      - ``POINTS``
+      - [vector: point]
+      - Point layer with features to count
+   *  - **Weight field**
+        
+        Optional
+      - ``WEIGHT``
+      - [tablefield: any]
+      - A field from the point layer.
+        The count generated will be the sum of the weight field of the
+        points contained by the polygon.
+        If the weight field is not numeric, the count will be ``0``.
+   *  - **Class field**
+        
+        Optional
+      - ``CLASSFIELD``
+      - [tablefield: any]
+      - Points are classified based on the selected attribute and if
+        several points with the same attribute value are within the
+        polygon, only one of them is counted.
+        The final count of the points in a polygon is, therefore, the
+        count of different classes that are found in it.
+   *  - **Count field name**
+      - ``FIELD``
+      - [string]
+        
+        Default: 'NUMPOINTS'
+      - The name of the field to store the count of points
+   *  - **Count**
+      - ``OUTPUT``
+      - [vector: polygon]
+      - Specification of the output layer
 
 Outputs
 .......
 
-``Count`` [vector: polygon]
-  Resulting layer with the attribute table containing the new column of the
-  points count.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Count**
+      - ``OUTPUT``
+      - [vector: polygon]
+      - Resulting layer with the attribute table containing the
+        new column with the points count
+
 
 
 .. _qgisdbscanclustering:
@@ -113,40 +258,78 @@ and the maximum distance allowed between clustered points.
 Parameters
 ..........
 
-``Input layer`` [vector: point]
-  Layer to analyze.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Minimum cluster size`` [number]
-  Minimum number of features to generate a cluster.
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Input layer**
+      - ``INPUT``
+      - [vector: point]
+      - Layer to analyze
+   *  - **Minimum cluster size**
+      - ``MIN_SIZE``
+      - [number]
 
-  Default: *5*
+        Default: 5
+      - Minimum number of features to generate a cluster
+   *  - **Maximum distance between clustered points**
+      - ``EPS``
+      - [number]
 
-``Maximum distance between clustered points`` [number]
-  Distance beyond which two features can not belong to
-  the same cluster.
+        Default: 1.0
+      - Distance beyond which two features can not belong
+        to the same cluster (eps)
+   *  - **Cluster field name**
+      - ``FIELD_NAME``
+      - [string]
 
-  Default: *1.0*
+        Default: 'CLUSTER_ID'
+      - Name of the field where the associated cluster number
+        shall be stored
+   *  - **Treat border points as noise (DBSCAN\*)**
 
-``Treat border points as noise (DBSCAN*)`` [boolean]
-  Optional
+        Optional
+      - ``DBSCAN*``
+      - [boolean]
 
-  If checked, points on the border of a cluster are themselves treated as
-  unclustered points, and only points on the interior of a cluster are tagged
-  as clustered.
+        Default: False
+      - If checked, points on the border of a cluster are
+        themselves treated as unclustered points, and only
+        points in the interior of a cluster are tagged as
+        clustered.
+   *  - **Clusters**
+      - ``OUTPUT``
+      - [vector: point]
+      - Vector layer for the result of the clustering
 
-  Default: *FALSE*
-
-``Cluster field name`` [string]
-  Name of the field where to store the associated cluster number.
-
-  Default: *CLUSTER_ID*
 
 Outputs
 .......
 
-``Clusters`` [vector: point]
-  Vector layer containing the original features with a field
-  setting the cluster they belong to.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Clusters**
+      - ``OUTPUT``
+      - [vector: point]
+      - Vector layer containing the original features with a
+        field setting the cluster they belong to
+   *  - **Number of clusters**
+      - ``NUM_CLUSTERS``
+      - [number]
+      - The number of clusters discovered
+
 
 See also
 ........
@@ -165,45 +348,88 @@ or in another layer.
 Parameters
 ..........
 
-``Input point layer`` [vector: point]
-  Point layer for which the distance matrix is calculated (**from** points).
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Input unique ID field`` [tablefield: any]
-  Field to use to uniquely identify features of the input layer.
-  Used in the output attribute table.
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Input point layer**
+      - ``INPUT``
+      - [vector: point]
+      - Point layer for which the distance matrix is calculated
+        (**from** points)
+   *  - **Input unique ID field**
+      - ``INPUT_FIELD``
+      - [tablefield: any]
+      - Field to use to uniquely identify features of the
+        input layer. Used in the output attribute table.
+   *  - **Target point layer**
+      - ``TARGET``
+      - [vector: point]
+      - Point layer containing the nearest point(s) to search
+        (**to** points)
+   *  - **Target unique ID field**
+      - ``TARGET_FIELD``
+      - [tablefield: any]
+      - Field to use to uniquely identify features of the target
+        layer.
+        Used in the output attribute table.
+   *  - **Output matrix type**
+      - ``MATRIX_TYPE``
+      - [enumeration]
 
-``Target point layer`` [vector: point]
-  Point layer containing the nearest point(s) to search (**to** points).
+        Default: 0
+      - Different types of calculation are available:
 
-``Target unique ID field`` [tablefield: any]
-  Field to use to uniquely identify features of the target layer.
-  Used in the output attribute table.
+        * 0 --- Linear (N * *k* x 3) distance matrix: for each
+          input point, reports the distance to each of the *k*
+          nearest target points.
+          The output matrix consists of up to *k* rows per
+          input point, and each row has three columns:
+          *InputID*, *TargetID* and *Distance*.
+        * 1 --- Standard (N x T) distance matrix
+        * 2 --- Summary distance matrix (mean, std. dev., min,
+          max): for each input point, reports statistics on
+          the distances to its target points.
+   *  - **Use only the nearest (k) target points**
+      - ``NEAREST_POINTS``
+      - [number]
 
-``Output matrix type`` [enumeration]
-  Different types of calculation are available:
+        Default: 0
+      - You can choose to calculate the distance to all the
+        points in the target layer (*0*) or limit to a number
+        (*k*) of closest features.
 
-  * 0 --- Linear (N * *k* x 3) distance matrix: for each input point, reports
-    the distance to each of the *k* nearest target points. The output matrix consists
-    of up to *k* rows per input point, and each row has three columns: *InputID*,
-    *TargetID* and *Distance*.
-  * 1 --- Standard (N x T) distance matrix
-  * 2 --- Summary distance matrix (mean, std. dev., min, max): for each input
-    point, reports statistics on the distances to its target points.
-
-  Default: *0*
-
-``Use only the nearest (k) target points`` [number]
-  You can choose to calculate the distance to all the points in the target layer
-  or limit to a number (*k*) of closest features.
-
-  Default: *0* --- all the points are used.
+   *  - **Distance matrix**
+      - ``OUTPUT``
+      - [vector: point]
+      - 
 
 Outputs
 .......
 
-``Distance matrix`` [vector: point]
-  Point (or MultiPoint for the "Linear (N * *k* x 3)" case) vector layer containing the distance calculation for each input feature.
-  Its features and attribute table depend on the selected output matrix type.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Distance matrix**
+      - ``OUTPUT``
+      - [vector: point]
+      - Point (or MultiPoint for the "Linear (N * *k* x 3)"
+        case) vector layer containing the distance calculation
+        for each input feature.
+        Its features and attribute table depend on the selected
+        output matrix type.
+
 
 
 .. _qgisdistancetonearesthublinetohub:
@@ -224,32 +450,66 @@ in a destination layer. Distances are calculated based on the :ref:`center
 Parameters
 ..........
 
-``Source points layer`` [vector: any]
-  Vector layer for which the nearest feature is searched.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Destination hubs layer`` [vector: any]
-  Vector layer containing the features to search for.
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Source points layer**
+      - ``INPUT``
+      - [vector: any]
+      - Vector layer for which the nearest feature is searched
+   *  - **Destination hubs layer**
+      - ``HUBS``
+      - [vector: any]
+      - Vector layer containing the features to search for
+   *  - **Hub layer name attribute**
+      - ``FIELD``
+      - [tablefield: any]
+      - Field to use to uniquely identify features of the
+        destination layer.
+        Used in the output attribute table
+   *  - **Measurement unit**
+      - ``UNIT``
+      - [enumeration]
 
-``Hub layer name attribute`` [tablefield: any]
-  Field to use to uniquely identify features of the destination layer.
-  Used in the output attribute table.
+        Default: 0
+      - Units in which to report the distance to the closest
+        feature:
 
-``Measurement unit`` [enumeration]
-  Units in which to report the distance to the closest feature:
-
-  * 0 --- Meters
-  * 1 --- Feet
-  * 2 --- Miles
-  * 3 --- Kilometers
-  * 4 --- Layer units
-
-  Default: *0*
+        * 0 --- Meters
+        * 1 --- Feet
+        * 2 --- Miles
+        * 3 --- Kilometers
+        * 4 --- Layer units
+   *  - **Hub distance**
+      - ``OUTPUT``
+      - [vector: line]
+      - Line vector layer for the distance matrix output
 
 Outputs
 .......
-``Hub distance`` [vector: line]
- Line vector layer with the attributes of the input features, the identifier
- of their closest feature and the calculated distance.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Hub distance**
+      - ``OUTPUT``
+      - [vector: line]
+      - Line vector layer with the attributes of the input
+        features, the identifier of their closest feature
+        and the calculated distance.
+
 
 
 .. _qgisdistancetonearesthubpoints:
@@ -263,32 +523,66 @@ nearest feature (based on its center point) and the distance between the points.
 Parameters
 ..........
 
-``Source points layer`` [vector: any]
-  Vector layer for which the nearest feature is searched.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Destination hubs layer`` [vector: any]
-  Vector layer containing the features to search for.
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Source points layer**
+      - ``INPUT``
+      - [vector: any]
+      - Vector layer for which the nearest feature is searched
+   *  - **Destination hubs layer**
+      - ``HUBS``
+      - [vector: any]
+      - Vector layer containing the features to search for
+   *  - **Hub layer name attribute**
+      - ``FIELD``
+      - [tablefield: any]
+      - Field to use to uniquely identify features of the
+        destination layer.
+        Used in the output attribute table
+   *  - **Measurement unit**
+      - ``UNIT``
+      - [enumeration]
 
-``Hub layer name attribute`` [tablefield: any]
-  Field to use to uniquely identify features of the destination layer.
-  Used in the output attribute table.
+        Default: 0
+      - Units in which to report the distance to the closest
+        feature:
 
-``Measurement unit`` [enumeration]
-  Units in which to report the distance to the closest feature:
-
-  * 0 --- Meters
-  * 1 --- Feet
-  * 2 --- Miles
-  * 3 --- Kilometers
-  * 4 --- Layer units
-
-  Default: *0*
+        * 0 --- Meters
+        * 1 --- Feet
+        * 2 --- Miles
+        * 3 --- Kilometers
+        * 4 --- Layer units
+   *  - **Hub distance**
+      - ``OUTPUT``
+      - [vector: point]
+      - Point vector layer for the distance matrix output.
 
 Outputs
 .......
-``Hub distance`` [vector: point]
-  Point vector layer with the attributes of the input features, the identifier
-  of their closest feature and the calculated distance.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Hub distance**
+      - ``OUTPUT``
+      - [vector: point]
+      - Point vector layer with the attributes of the
+        input features, the identifier of their closest
+        feature and the calculated distance.
+
 
 
 .. _qgishublines:
@@ -312,34 +606,69 @@ will be taken as the connecting location.
 Parameters
 ..........
 
-``Hub point layer`` [vector: any]
-  Input layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Hub ID field`` [tablefield: any]
-  Field of the hub layer with ID to join.
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Hub layer**
+      - ``HUBS``
+      - [vector: any]
+      - Input layer
+   *  - **Hub ID field**
+      - ``HUB_FIELD``
+      - [tablefield: any]
+      - Field of the hub layer with ID to join
+   *  - **Hub layer fields to copy (leave empty to copy all fields)**
 
-``Hub layer fields to copy``
-  Optional
+        Optional
+      - ``HUB_FIELDS``
+      - [tablefield: any] [list]
+      - The field(s) of the hub layer to be copied.
+        If no field(s) are chosen all fields are taken.
+   *  - **Spoke layer**
+      - ``SPOKES``
+      - [vector: any]
+      - Additional spoke point layer
+   *  - **Spoke ID field**
+      - ``SPOKE_FIELD``
+      - [tablefield: any]
+      - Field of the spoke layer with ID to join
+   *  - **Spoke layer fields to copy (leave empty to copy all fields)**
 
-  Choose here the field(s) of the hub layer to copy. If no field(s) are chosen
-  all fields are taken.
+        Optional
+      - ``SPOKE_FIELDS``
+      - [tablefield: any] [list]
+      - Field(s) of the spoke layer to be copied.
+        If no fields are chosen all fields are taken.
+   *  - **Hub lines**
+      - ``OUTPUT``
+      - [vector: lines]
+      - The resulting line layer
 
-``Spoke point layer`` [vector: any]
-  Additional spoke point layer.
 
-``Spoke ID field`` [tablefield: any]
-  Field of the spoke layer with ID to join.
-
-``Spoke layer fields to copy``
-  Optional
-
-  Field(s) of the spoke layer to be copied. If no fields are chosen all fields
-  are taken.
 
 Outputs
 .......
-``Hub lines`` [vector: lines]
-  The resulting line layer.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Hub lines**
+      - ``OUTPUT``
+      - [vector: lines]
+      - The resulting line layer
+
 
 
 .. _qgiskmeansclustering:
@@ -363,25 +692,55 @@ is based on the centroid of the feature.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Layer to analyze.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Number of clusters`` [number]
-  Number of clusters to create with the features.
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Input layer**
+      - ``INPUT``
+      - [vector: any]
+      - Layer to analyze
+   *  - **Number of clusters**
+      - ``CLUSTERS``
+      - [number]
 
-  Default: *5*
+        Default: 5
+      - Number of clusters to create with the features
+   *  - **Cluster field name**
+      - ``FIELD_NAME``
+      - [string]
 
-``Cluster field name`` [tablefield: any]
-  Name of the field where to store the associated cluster number.
+        Default: 'CLUSTER_ID'
+      - Name of the cluster number field
+   *  - **Clusters**
+      - ``OUTPUT``
+      - [vector: any]
+      - Vector layer for generated the clusters
 
-  Default: *CLUSTER_ID*
 
 Outputs
 .......
 
-``Clusters`` [vector: any]
-  Vector layer containing the original features with a field
-  setting the cluster they belong to.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Clusters**
+      - ``OUTPUT``
+      - [vector: any]
+      - Vector layer containing the original features with
+        a field specifying the cluster they belong to
+
 
 
 See also
@@ -400,20 +759,64 @@ Lists unique values of an attribute table field and counts their number.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Layer to analyze.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Target field`` [tablefield: any]
-  Field to analyze.
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Input layer**
+      - ``INPUT``
+      - [vector: any]
+      - Layer to analyze
+   *  - **Target field(s)**
+      - ``FIELDS``
+      - [tablefield: any]
+      - Field to analyze
+   *  - **Unique values**
+      - ``OUTPUT``
+      - [table]
+      - Summary table layer with unique values
+   *  - **HTML report**
+      - ``OUTPUT_HTML_FILE``
+      - [html]
+      - HTML report of unique values in the
+        :menuselection:`Processing --> Results viewer`
 
 Outputs
 .......
 
-``Unique values`` [table]
-  Summary table layer with unique values.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``HTML report`` [html]
-  HTML report of unique values in the :menuselection:`Processing --> Results viewer`.
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Unique values**
+      - ``OUTPUT``
+      - [table]
+      - Summary table layer with unique values
+   *  - **HTML report**
+      - ``OUTPUT_HTML_FILE``
+      - [html]
+      - HTML report of unique values.  Can be opened from the
+        :menuselection:`Processing --> Results viewer`
+   *  - **Total unique values**
+      - ``TOTAL_VALUES``
+      - [number]
+      - The number of uniqe values in the input field
+   *  - **UNIQUE_VALUES**
+      - ``Unique values``
+      - [string]
+      - A string with the comma separated list of unique values found
+        in the input field
+
 
 
 .. _qgismeancoordinates:
@@ -435,24 +838,51 @@ each category.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Weight field`` [tablefield: numeric]
-  Optional
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Input layer**
+      - ``INPUT``
+      - [vector: any]
+      - Input vector layer
+   *  - **Weight field**
 
-  Field to use if you want to perform a weighted mean.
-
-``Unique ID field`` [tablefield: numeric]
-  Optional
-
-  Unique field on which the calculation of the mean will be made.
+        Optional
+      - ``WEIGHT``
+      - [tablefield: numeric]
+      - Field to use if you want to perform a weighted mean
+   *  - **Unique ID field**
+      - ``UID``
+      - [tablefield: numeric]
+      - Unique field on which the calculation of the mean will
+        be made
+   *  - **Mean coordinates**
+      - ``OUTPUT``
+      - [vector: point]
+      - The (point vector) layer for the result
 
 Outputs
 .......
-``Mean coordinates`` [vector: point]
-  Resulting point(s) layer.
 
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Mean coordinates**
+      - ``OUTPUT``
+      - [vector: point]
+      - Resulting point(s) layer
 
 .. _qgisnearestneighbouranalysis:
 
@@ -473,6 +903,62 @@ Output is generated as an HTML file with the computed statistical values:
 Parameters
 ..........
 
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Input layer**
+      - ``INPUT``
+      - [vector: point]
+      - Point vector layer to calculate the statistics on
+   *  - **Nearest neighbour**
+      - ``OUTPUT_HTML_FILE``
+      - [html]
+      - HTML file for the computed statistics
+
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Nearest neighbour**
+      - ``OUTPUT_HTML_FILE``
+      - [html]
+      - HTML file with the computed statistics
+   *  - **Observed mean distance**
+      - ``OBSERVED_MD``
+      - [number]
+      - Observed mean distance
+   *  - **Expected mean distance**
+      - ``EXPECTED_MD``
+      - [number]
+      - Expected mean distance
+   *  - **Nearest neighbour index**
+      - ``NN_INDEX``
+      - [number]
+      - Nearest neighbour index
+   *  - **Number of points**
+      - ``POINT_COUNT``
+      - [number]
+      - Number of points
+   *  - **Z-Score**
+      - ``Z_SCORE``
+      - [number]
+      - Z-Score
+
 ``Points`` [vector: point]
   Point vector layer to calculate the statistics on.
 
@@ -488,7 +974,8 @@ Statistics by categories
 ------------------------
 Calculates statistics of fields depending on a parent class.
 
-The output is a table layer with the following statistics calculated:
+For numerical fields, a table layer with the following statistics
+is output:
 
 * count
 * unique
@@ -505,24 +992,68 @@ The output is a table layer with the following statistics calculated:
 * q3
 * iqr
 
+For string fields, the following statistics will be calculated:
+
+* count
+* unique
+* empty
+* filled
+* min
+* max
+* min_length
+* max_length
+* mean_length
+
 Parameters
 ..........
 
-``Input vector layer`` [vector: any]
-  Input vector layer with unique classes and values.
+Parameters
+..........
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Field to calculate the statistics on`` [tablefield: any]
-  Optional
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Input vector layer**
+      - ``INPUT``
+      - [vector: any]
+      - Input vector layer with unique classes and values
+   *  - **Field to calculate statistics on (if empty, only count is calculated)**
 
-  If empty only the count will be calculated.
-
-``Field(s) with categories`` [tablefield: any] [list]
-  Field(s) of the categories.
+        Optional
+      - ``VALUES_FIELD_NAME``
+      - [tablefield: any]
+      - If empty only the count will be calculated
+   *  - **Field(s) with categories**
+      - ``CATEGORIES_FIELD_NAME``
+      - [vector: any] [list]
+      - The fields that (combined) define the categories
+   *  - **Statistics by category**
+      - ``OUTPUT``
+      - [table]
+      - Table for the generated statistics
 
 Outputs
 .......
-``N unique values`` [table]
-  Table with statistics field.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Statistics by category**
+      - ``OUTPUT``
+      - [table]
+      - Table containing the statistics
+
 
 
 .. _qgissumlinelengths:
@@ -543,23 +1074,54 @@ The names of these two fields can be configured in the algorithm parameters.
 Parameters
 ..........
 
-``Lines`` [vector: line]
-  Input vector line layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Polygons`` [vector: polygon]
-  Polygon vector layer.
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Lines**
+      - ``LINES``
+      - [vector: line]
+      - Input vector line layer
+   *  - **Polygons**
+      - ``POLYGONS``
+      - [vector: polygon]
+      - Polygon vector layer
+   *  - **Lines length field name**
+      - ``LEN_FIELD``
+      - [string]
 
-``Lines length field name`` [string]
-  Name of the field of the lines length.
+        Default: 'LENGTH'
+      - Name of the field for the lines length
+   *  - **Lines count field name**
+      - ``COUNT_FIELD``
+      - [string]
 
-  Default: *LENGTH*
-
-``Lines count field name`` [string]
-  Name of the field of the lines count.
-
-  Default: *COUNT*
+        Default: 'COUNT'
+      - Name of the field for the lines count
+   *  - **Line length**
+      - ``OUTPUT``
+      - [vector: polygon]
+      - The output polygon vector layer
 
 Outputs
 .......
-``Line length`` [vector: polygon]
-  Polygon output layer with fields of lines length and line count.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Line length**
+      - ``OUTPUT``
+      - [vector: polygon]
+      - Polygon output layer with fields of lines length and
+        line count
