@@ -41,6 +41,8 @@ mask geometry.
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
+.. seealso:: :ref:`qgisintersection`
+
 Parameters
 ..........
 ``Input layer`` [vector: any]
@@ -54,10 +56,6 @@ Outputs
 
 ``Clipped`` [vector: any]
   Layer containing features from the input layer split by the overlay layer.
-
-See also
-........
-:ref:`qgisintersection`
 
 
 .. _qgisdifference:
@@ -83,6 +81,8 @@ Attributes are not modified (see :ref:`warning <warning_difference>`).
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
+.. seealso:: :ref:`qgissymmetricaldifference`
+
 Parameters
 ..........
 
@@ -98,10 +98,6 @@ Outputs
 
 ``Difference`` [vector: any]
   Layer containing (parts of) features from the input layer not overlapping the overlay layer.
-
-See also
-........
-:ref:`qgissymmetricaldifference`
 
 
 .. _qgisextractbyextent:
@@ -154,6 +150,8 @@ Attributes are not modified (see :ref:`warning <warning_difference>`).
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
+.. seealso:: :ref:`qgisclip`
+
 Parameters
 ..........
 
@@ -184,10 +182,6 @@ Outputs
 
 ``Intersection`` [vector: any]
   Layer containing (parts of) features from the input layer overlapping the overlay layer.
-
-See also
-........
-:ref:`qgisclip`
 
 
 .. _qgislineintersections:
@@ -290,6 +284,8 @@ Attributes are not modified (see :ref:`warning <warning_difference>`).
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
+.. seealso:: :ref:`qgisdifference`
+
 Parameters
 ..........
 
@@ -308,10 +304,6 @@ Outputs
 
 ``Symmetrical difference`` [vector: any]
   Layer containing (parts of) features from each layer not overlapping the other layer.
-
-See also
-........
-:ref:`qgisdifference`
 
 
 .. _qgisunion:

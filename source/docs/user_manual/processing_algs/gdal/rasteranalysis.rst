@@ -180,6 +180,8 @@ This algorithm is derived from the `GDAL grid utility <https://gdal.org/gdal_gri
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
+.. seealso:: `GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_
+
 Parameters
 ..........
 
@@ -244,11 +246,6 @@ Outputs
 
 Interpolated raster file.
 
-See also
-........
-
-`GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_
-
 
 .. _gdalgriddatametrics:
 
@@ -259,6 +256,8 @@ Computes some data metrics using the specified window and output grid geometry.
 This algorithm is derived from the `GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
+
+.. seealso:: `GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_
 
 Parameters
 ..........
@@ -341,10 +340,6 @@ Outputs
 ``Output file`` [raster]
   Interpolated raster file.
 
-See also
-........
-`GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_
-
 
 .. _gdalgridinversedistance:
 
@@ -359,6 +354,8 @@ The function will compute interpolated value for the given position in output gr
 This algorithm is derived from the `GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
+
+.. seealso:: `GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_
 
 Parameters
 ..........
@@ -444,11 +441,6 @@ Outputs
 ``Output file`` [raster]
   Interpolated raster file.
 
-See also
-.........
-
-`GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_
-
 
 .. _gdalgridinversedistancenearestneighbor:
 
@@ -459,6 +451,8 @@ Computes the Inverse Distance to a Power gridding combined to the nearest neighb
 Ideal when a maximum number of data points to use is required.
 
 This algorithm is derived from the `GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
+
+.. seealso:: `GDAL grid <https://gdal.org/gdal_grid.html>`_
 
 Parameters
 ..........
@@ -526,11 +520,6 @@ Outputs
 
 ``Output file`` [raster]
   Interpolated raster file.
-
-See also
-........
-
-`GDAL grid <https://gdal.org/gdal_grid.html>`_
 
 
 .. _gdalgridlinear:
@@ -608,6 +597,8 @@ This algorithm is derived from the `GDAL grid utility <https://gdal.org/gdal_gri
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
+.. seealso:: `GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_
+
 Parameters
 ..........
 
@@ -664,11 +655,6 @@ Outputs
 
 ``Output file`` [raster]
   Interpolated raster file.
-
-See also
-........
-
-`GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_
 
 
 .. _gdalhillshade:

@@ -38,9 +38,8 @@ Outputs
 ``Assigned CRS`` [vector: any]
   Vector layer with assigned projection.
 
-See also
-........
-:ref:`qgisdefinecurrentprojection`, :ref:`qgisfindprojection`, :ref:`qgisreprojectlayer`
+.. seealso:: :ref:`qgisdefinecurrentprojection`, :ref:`qgisfindprojection`,
+ :ref:`qgisreprojectlayer`
 
 
 .. _qgisbuildvirtualvector:
@@ -130,9 +129,7 @@ Parameters
 ``CRS`` [crs]
   CRS to associate to the input vector layer.
 
-See also
-........
-:ref:`qgisassignprojection`, :ref:`qgisfindprojection`, :ref:`qgisreprojectlayer`
+.. seealso:: :ref:`qgisassignprojection`, :ref:`qgisfindprojection`, :ref:`qgisreprojectlayer`
 
 
 .. _qgisdeleteduplicategeometries:
@@ -300,9 +297,8 @@ Outputs
   The algorithm writes a table with all the CRS (EPSG codes) of the matching
   criteria.
 
-See also
-........
-:ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`, :ref:`qgisreprojectlayer`
+..seealso:: :ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`,
+ :ref:`qgisreprojectlayer`
 
 
 .. _qgisjoinattributestable:
@@ -314,6 +310,8 @@ version of the input one, with additional attributes in its attribute table.
 
 The additional attributes and their values are taken from a second vector layer.
 An attribute is selected in each of them to define the join criteria.
+
+.. seealso:: :ref:`qgisjoinattributesbynearest`, :ref:`qgisjoinattributesbylocation`
 
 Parameters
 ..........
@@ -375,6 +373,9 @@ A spatial criteria is applied to select the values from the second layer that ar
 added to each feature from the first layer.
 
 ``Default menu``: :menuselection:`Vector --> Data Management Tools`
+
+.. seealso:: :ref:`qgisjoinattributesbynearest`, :ref:`qgisjoinattributestable`,
+ :ref:`qgisjoinbylocationsummary`
 
 Parameters
 ..........
@@ -445,6 +446,8 @@ added to each feature from the first layer.
 
 The algorithm calculates a statistical summary for the values from matching
 features in the second layer (e.g. maximum value, mean value, etc).
+
+.. seealso:: :ref:`qgisjoinattributesbylocation`
 
 Parameters
 ..........
@@ -526,6 +529,9 @@ join to the k-nearest neighboring features.
 
 If a maximum distance is specified, only features which are closer
 than this distance will be matched.
+
+.. seealso:: :ref:`qgisnearestneighbouranalysis`, :ref:`qgisjoinattributestable`,
+ :ref:`qgisjoinattributesbylocation`, :ref:`qgisdistancematrix`
 
 Parameters
 ..........
@@ -625,6 +631,8 @@ All layers will be reprojected to match this CRS.
 
 ``Default menu``: :menuselection:`Vector --> Data Management Tools`
 
+.. seealso:: :ref:`qgissplitvectorlayer`
+
 Parameters
 ..........
 
@@ -643,10 +651,6 @@ Outputs
 
 ``Merged`` [vector: any]
   Merged vector layer containing all the features and attributes from input layers.
-
-See also
-........
-:ref:`qgissplitvectorlayer`
 
 
 .. _qgisorderbyexpression:
@@ -695,6 +699,9 @@ the same features and attributes of the input layer.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+.. seealso:: :ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`,
+ :ref:`qgisfindprojection`
+
 Parameters
 ..........
 
@@ -711,10 +718,6 @@ Outputs
 
 ``Reprojected layer`` [vector: any]
   The resulting reprojected layer.
-
-See also
-........
-:ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`, :ref:`qgisfindprojection`
 
 
 .. _qgissetstyleforvectorlayer:
@@ -750,6 +753,8 @@ It is the opposite operation of *merging*.
 
 ``Default menu``: :menuselection:`Vector --> Data Management Tools`
 
+.. seealso:: :ref:`qgismergevectorlayers`
+
 Parameters
 ..........
 
@@ -761,10 +766,6 @@ Parameters
 
 ``Output directory`` [folder]
   Directory where all the split layers will be saved.
-
-See also
-........
-:ref:`qgismergevectorlayers`
 
 
 .. _qgistruncatetable:
