@@ -81,33 +81,87 @@ the :ref:`project file <sec_projects>`. It provides you with tools to:
   use a :ref:`print layout <label_printlayout>` for more complex output
 * Set the project properties and the snapping options when editing layers.
 
-.. csv-table::
-   :header: "Menu Option", "Shortcut", "Toolbar", "Reference"
-   :widths: 30, 18, 12, 35
-   :class: longtable
+.. list-table::
+   :header-rows: 1
+   :widths: 30 18 12 35
+   :stub-columns: 0
 
-   "|fileNew| :guilabel:`New`", ":kbd:`Ctrl+N`", ":guilabel:`Project`", ":ref:`sec_projects`"
-   ":menuselection:`New from template -->`", "", "", ":ref:`sec_projects`"
-   "|fileOpen| :guilabel:`Open...`", ":kbd:`Ctrl+O`", ":guilabel:`Project`", ":ref:`sec_projects`"
-   ":menuselection:`Open from --> PostgreSQL`", "", "", ":ref:`sec_projects`"
-   ":menuselection:`Open Recent -->`", "", "", ":ref:`sec_projects`"
-   ":guilabel:`Close`", "", "", ":ref:`sec_projects`"
-   "|fileSave| :guilabel:`Save`", ":kbd:`Ctrl+S`", ":guilabel:`Project`", ":ref:`sec_projects`"
-   "|fileSaveAs| :guilabel:`Save As...`", ":kbd:`Ctrl+Shift+S`", ":guilabel:`Project`", ":ref:`sec_projects`"
-   ":menuselection:`Save to --> PostgreSQL`", "", "", ":ref:`sec_projects`"
-   ":guilabel:`Revert...`"
-   ":guilabel:`Properties...`", ":kbd:`Ctrl+Shift+P`", "", ":ref:`project_properties`"
-   ":guilabel:`Snapping Options...`", "", "", ":ref:`snapping_tolerance`"
-   ":menuselection:`Import/Export -->`"
-   "|saveMapAsImage| :guilabel:`Export Map to Image...`", "", "", ":ref:`sec_output`"
-   "|saveAsPDF| :guilabel:`Export Map to PDF...`", "", "", ":ref:`sec_output`"
-   ":guilabel:`Export Project to DXF...`", "", "", ":ref:`sec_output`"
-   ":guilabel:`Import Layers from DWG/DXF...`", "", "", ":ref:`import_dxfdwg`"
-   "|newLayout| :guilabel:`New Print Layout...`", ":kbd:`Ctrl+P`", ":guilabel:`Project`", ":ref:`label_printlayout`"
-   "|newReport| :guilabel:`New Report...`", "", "", ":ref:`label_printlayout`"
-   "|layoutManager| :guilabel:`Layout Manager...`", "", ":guilabel:`Project`", ":ref:`label_printlayout`"
-   ":menuselection:`Layouts -->`", "", "", ":ref:`label_printlayout`"
-   "|fileExit| :guilabel:`Exit QGIS`", ":kbd:`Ctrl+Q`"
+   * - Menu Option
+     - Shortcut
+     - Toolbar
+     - Reference
+   * - |fileNew| :guilabel:`New`
+     - :kbd:`Ctrl+N`
+     - :guilabel:`Project`
+     - :ref:`sec_projects`
+   * - :menuselection:`New from template -->`
+     -
+     -
+     - :ref:`sec_projects`
+   * - |fileOpen| :guilabel:`Open...`
+     - :kbd:`Ctrl+O`
+     - :guilabel:`Project`
+     - :ref:`sec_projects`
+   * - :menuselection:`Open from -->`
+     -
+     -
+     - :ref:`sec_projects`
+   * - :menuselection:`Open Recent -->`
+     -
+     -
+     - :ref:`sec_projects`
+   * - :guilabel:`Close`
+     -
+     -
+     - :ref:`sec_projects`
+   * - |fileSave| :guilabel:`Save`
+     - :kbd:`Ctrl+S`
+     - :guilabel:`Project`
+     - :ref:`sec_projects`
+   * - |fileSaveAs| :guilabel:`Save As...`
+     - :kbd:`Ctrl+Shift+S`
+     - :guilabel:`Project`
+     - :ref:`sec_projects`
+   * - :menuselection:`Save to -->`
+     -
+     -
+     - :ref:`sec_projects`
+   * - :guilabel:`Revert...`
+     -
+     -
+     -
+   * - :guilabel:`Properties...`
+     - :kbd:`Ctrl+Shift+P`
+     -
+     - :ref:`project_properties`
+   * - :guilabel:`Snapping Options...`
+     -
+     -
+     - :ref:`snapping_tolerance`
+   * - :menuselection:`Import/Export -->`
+     -
+     -
+     -
+   * - |newLayout| :guilabel:`New Print Layout...`
+     - :kbd:`Ctrl+P`
+     - :guilabel:`Project`
+     - :ref:`label_printlayout`
+   * - |newReport| :guilabel:`New Report...`
+     -
+     -
+     - :ref:`label_printlayout`
+   * - |layoutManager| :guilabel:`Layout Manager...`
+     -
+     - :guilabel:`Project`
+     - :ref:`label_printlayout`
+   * - :menuselection:`Layouts -->`
+     -
+     -
+     - :ref:`label_printlayout`
+   * - |fileExit| :guilabel:`Exit QGIS`
+     - :kbd:`Ctrl+Q`
+     -
+     -
 
 .. only:: html
 
@@ -166,6 +220,7 @@ layer attributes or geometry (see :ref:`editingvector` for details).
    "|rotatePointSymbols| :guilabel:`Rotate Point Symbols`", "", ":guilabel:`Advanced Digitizing`", ":ref:`rotate_symbol`"
    "|offsetPointSymbols| :guilabel:`Offset Point Symbols`", "", ":guilabel:`Advanced Digitizing`", ":ref:`offset_symbol`"
    "|reverseLine| :guilabel:`Reverse Line`", "", ":guilabel:`Advanced Digitizing`"
+   "|trimExtend| :guilabel:`Trim/extend Line`", "", ":guilabel:`Advanced Digitizing`"
 
 .. only:: html
 
@@ -1137,6 +1192,8 @@ open the Plugin Manager dialog.
 .. |topologyChecker| image:: /static/common/mActionTopologyChecker.png
    :width: 1.5em
 .. |tracking| image:: /static/common/tracking.png
+   :width: 1.5em
+.. |trimExtend| image:: /static/common/mActionTrimExtend.png
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
