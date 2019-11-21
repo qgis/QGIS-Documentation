@@ -6,4 +6,5 @@ Course Introduction
    :maxdepth: 2
 
    foreword
+   intro
    preparing_data
