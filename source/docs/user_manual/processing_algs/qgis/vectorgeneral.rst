@@ -23,6 +23,9 @@ projection.
 
 Attributes are not modified by this algorithm.
 
+.. seealso:: :ref:`qgisdefinecurrentprojection`, :ref:`qgisfindprojection`,
+ :ref:`qgisreprojectlayer`
+
 Parameters
 ..........
 ``Input layer`` [vector: any]
@@ -37,9 +40,6 @@ Outputs
 .......
 ``Assigned CRS`` [vector: any]
   Vector layer with assigned projection.
-
-.. seealso:: :ref:`qgisdefinecurrentprojection`, :ref:`qgisfindprojection`,
- :ref:`qgisreprojectlayer`
 
 
 .. _qgisbuildvirtualvector:
@@ -121,6 +121,9 @@ layer and will not output a new layer.
 
 ``Default menu``: :menuselection:`Vector --> Data Management Tools`
 
+.. seealso:: :ref:`qgisassignprojection`, :ref:`qgisfindprojection`,
+ :ref:`qgisreprojectlayer`
+
 Parameters
 ..........
 ``Input layer`` [vector: any]
@@ -128,8 +131,6 @@ Parameters
 
 ``CRS`` [crs]
   CRS to associate to the input vector layer.
-
-.. seealso:: :ref:`qgisassignprojection`, :ref:`qgisfindprojection`, :ref:`qgisreprojectlayer`
 
 
 .. _qgisdeleteduplicategeometries:
@@ -270,6 +271,9 @@ The algorithm operates by testing the layer's extent in every known
 reference system and then listing any for which the bounds would be near
 the target area if the layer was in this projection.
 
+.. seealso:: :ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`,
+ :ref:`qgisreprojectlayer`
+
 Parameters
 ..........
 
@@ -296,9 +300,6 @@ Outputs
 ``CRS candidates`` [table]
   The algorithm writes a table with all the CRS (EPSG codes) of the matching
   criteria.
-
-..seealso:: :ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`,
- :ref:`qgisreprojectlayer`
 
 
 .. _qgisjoinattributestable:
@@ -432,6 +433,7 @@ Outputs
   Optional
 
   Vector layer of only the input features that do not spatially match any join feature.
+
 
 .. _qgisjoinbylocationsummary:
 
