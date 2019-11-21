@@ -16,7 +16,7 @@ Clips any GDAL-supported raster file to a given extent.
 
 This algorithm is derived from the `GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
 
-``Default menu``: :menuselection:`Raster --> Extraction`
+``Default menu``: :menuselection:`GDAL --> Raster --> Extraction`
 
 Parameters
 ..........
@@ -128,7 +128,7 @@ Clips any GDAL-supported raster by a vector mask layer.
 
 This algorithm is derived from the `GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
 
-``Default menu``: :menuselection:`Raster --> Extraction`
+``Default menu``: :menuselection:`GDAL --> Raster --> Extraction`
 
 Parameters
 ..........
@@ -198,12 +198,16 @@ Parameters
         Optional
       - ``X_RESOLUTION``
       - [number]
+        
+        Default: None
       - 
    *  - **Y Resolution to output band** |36|
         
         Optional
       - ``Y_RESOLUTION``
       - [number]
+        
+        Default: None
       - 
    *  - **Use multithreaded warping implementation** |36|
       - ``MULTITHREADING``
@@ -290,7 +294,7 @@ Extracts contour lines from any GDAL-supported elevation raster.
 
 This algorithm is derived from the `GDAL contour utility <https://gdal.org/gdal_contour.html>`_ .
 
-``Default menu``: :menuselection:`Raster --> Extraction`
+``Default menu``: :menuselection:`GDAL --> Raster --> Extraction`
 
 Parameters
 ..........
