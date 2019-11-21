@@ -19,51 +19,58 @@ This algorithm is derived from the `ogr2ogr utility <https://gdal.org/ogr2ogr.ht
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Destination Format`` [enumeration]
-  Defines the destination format. By default this is ESRI Shapefile.
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Input layer**
+      - ``INPUT``
+      - [vector: any]
+      - Input vector layer
+   *  - **Additional creation options**
+        
+        (optional)
+      - ``OPTIONS``
+      - [string]
+        
+        Default: '' (no additional options)
+      - Additional GDAL creation options.
+   *  - **Converted**
+      - ``OUTPUT``
+      - [vector: any]
+      - Specification of the output vector layer.
+        One of 
+        * Save to a Temporary File
+        * Save to File...
+        
+        The file encoding can also be changed here.
 
-  Options:
-
-  * 0 --- ESRI Shapefile
-  * 1 --- GeoJSON
-  * 2 --- GeoRSS
-  * 3 --- SQLite
-  * 4 --- GMT
-  * 5 --- MapInfo File
-  * 6 --- INTERLIS 1
-  * 7 --- INTERLIS 2
-  * 8 --- GML
-  * 9 --- Geoconcept
-  * 10 --- DXF
-  * 11 --- DGN
-  * 12 --- CSV
-  * 13 --- BNA
-  * 14 --- S57
-  * 15 --- KML
-  * 16 --- GPX
-  * 17 --- PGDump
-  * 18 --- GPSTrackMaker
-  * 19 --- ODS
-  * 20 --- XLSX
-  * 21 --- PDF
-
-  Default: *0*
-
-``Creation Options`` [string]
-  Optional
-
-  <put parameter description here>
-
-  Default: *(not set)*
+        For ``Save to File``, the output format has to be specified.
+        All GDAL vector formats are supported.
+        For ``Save to a Temporary File`` the QGIS default vector format
+        will be used.
 
 Outputs
 .......
 
-``Output layer`` [vector: any]
-  Output vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Converted**
+      - ``OUTPUT``
+      - [vector: any]
+      - The output vector layer
 
 
 .. _gdalrasterize:
