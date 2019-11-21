@@ -267,6 +267,9 @@ feature:
 
   UPDATE my_table SET area=ST_AREA(geom);
 
+.. seealso:: :ref:`qgispostgisexecutesql`, :ref:`qgisexecutesql`,
+ :ref:`qgisspatialiteexecutesql`
+
 Parameters
 ..........
 
@@ -307,6 +310,9 @@ the layer itself.
 .. seealso:: For some SQL query examples see :ref:`PostGIS SQL Query Examples
  <qgis_postgis_execute_sql_example>`.
  
+.. seealso:: :ref:`qgispostgisexecuteandloadsql`, :ref:`qgisexecutesql`,
+ :ref:`qgisspatialiteexecutesql`
+
 Parameters
 ..........
 
@@ -331,6 +337,8 @@ SpatiaLite execute SQL
 Allows a SQL database query to be performed on a SpatiaLite database connected to QGIS.
 The algorithm **won't** create any new layer: it is designed to run queries on
 the layer itself.
+
+.. seealso:: :ref:`qgispostgisexecutesql`, :ref:`qgisexecutesql`
 
 Parameters
 ..........
