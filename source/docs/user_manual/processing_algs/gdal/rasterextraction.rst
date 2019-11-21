@@ -418,5 +418,5 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
    
-   .. |36| replace:: ``NEW in 3.6``
+.. |36| replace:: ``NEW in 3.6``
 .. |310| replace:: ``NEW in 3.10``
