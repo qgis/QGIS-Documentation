@@ -16,7 +16,7 @@ Clips any GDAL-supported raster file to a given extent.
 
 This algorithm is derived from the `GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
 
-``Default menu``: :menuselection:`GDAL --> Raster --> Extraction`
+``Default menu``: :menuselection:`Raster --> Extraction`
 
 Parameters
 ..........
@@ -128,14 +128,14 @@ Clips any GDAL-supported raster by a vector mask layer.
 
 This algorithm is derived from the `GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
 
-``Default menu``: :menuselection:`GDAL --> Raster --> Extraction`
+``Default menu``: :menuselection:`Raster --> Extraction`
 
 Parameters
 ..........
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 20 20 40
+   :widths: 30 20 20 30
    :stub-columns: 0
 
    *  - Label
@@ -149,7 +149,7 @@ Parameters
    *  - **Mask layer**
       - ``EXTENT``
       - [vector: polygon]
-      - Vector mask for clipping the rasterraster
+      - Vector mask for clipping the raster
    *  - **Source CRS**
       - ``SOURCE_CRS``
       - [crs]
@@ -162,7 +162,7 @@ Parameters
         
         Optional
       - ``NODATA``
-      - [numeric]
+      - [number]
         
         Default: None
       - Defines a value that should be inserted for the nodata
@@ -294,7 +294,7 @@ Extracts contour lines from any GDAL-supported elevation raster.
 
 This algorithm is derived from the `GDAL contour utility <https://gdal.org/gdal_contour.html>`_ .
 
-``Default menu``: :menuselection:`GDAL --> Raster --> Extraction`
+``Default menu``: :menuselection:`Raster --> Extraction`
 
 Parameters
 ..........
@@ -320,7 +320,7 @@ Parameters
       - ``INTERVAL``
       - [number]
         
-        Default: 10
+        Default: 10.0
       - Defines the interval between the contour lines in the given
         units of the elevation raster (minimum value 0)
    *  - **Attribute name (if not set, no elevation attribute is attached)**
@@ -384,7 +384,8 @@ Parameters
         :ref:`GDAL driver options section <gdal_createoptions>`).
    *  - **Contours**
       - ``OUTPUT``
-      - [vector line]
+      - [vector: line]
+        
         Default: '[Save to temporary file]'
       - Specification of the output raster layer.
         One of 
@@ -408,7 +409,14 @@ Outputs
    *  - **Contours**
       - ``OUTPUT``
       - [vector: line]
-      - Output vector layer wiht contour lines
+      - Output vector layer with contour lines
 
-.. |36| replace:: ``NEW in 3.6``
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+   
+   .. |36| replace:: ``NEW in 3.6``
 .. |310| replace:: ``NEW in 3.10``
