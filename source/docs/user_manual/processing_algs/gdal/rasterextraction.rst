@@ -90,7 +90,7 @@ Parameters
       - [string]
         
         Default: None
-      - 
+      - Add extra GDAL command line options
    *  - **Clipped (extent)**
       - ``OUTPUT``
       - [raster]
@@ -192,7 +192,7 @@ Parameters
       - [boolean]
         
         Default: False
-      - 
+      - Shall the output resolution (cell size) be specified
    *  - **X Resolution to output bands** |36|
         
         Optional
@@ -200,7 +200,7 @@ Parameters
       - [number]
         
         Default: None
-      - 
+      - The with of the cells in the output raster
    *  - **Y Resolution to output band** |36|
         
         Optional
@@ -208,7 +208,7 @@ Parameters
       - [number]
         
         Default: None
-      - 
+      - The height of the cells in the output raster
    *  - **Use multithreaded warping implementation** |36|
       - ``MULTITHREADING``
       - [boolean]
@@ -256,7 +256,7 @@ Parameters
       - [string]
         
         Default: None
-      - 
+      - Add extra GDAL command line options
    *  - **Clipped (mask)**
       - ``OUTPUT``
       - [raster]
@@ -369,7 +369,7 @@ Parameters
       - [string]
         
         Default: None
-      - 
+      - Add extra GDAL command line options
    *  - **Additional creation options**
         
         Optional
