@@ -1,9 +1,42 @@
 Foreword
 ========
+Welcome to our course!
+We will be showing you how to use QGIS easily and efficiently.
+If you are new to GIS, we will tell you what you need to get started.
+If you are an experienced user, you will see how QGIS fulfills all the
+functions you expect from a GIS program, and more!
+
+Why QGIS?
+---------
+As information becomes increasingly spatially aware, there is no shortage of
+tools able to fulfill some or all commonly used GIS functions. Why should
+anyone be using QGIS over some other GIS software package?
+
+Here are only some of the reasons:
+
+- *It's free, as in lunch.* Installing and using the QGIS program costs you a
+  grand total of zero money. No initial fee, no recurring fee, nothing.
+
+- *It's free, as in liberty.* If you need extra functionality in QGIS, you
+  can do more than just hope it will be included in the next release. You can
+  sponsor the development of a feature, or add it yourself if you are
+  familiar with programming. 
+
+- *It's constantly developing.* Because anyone can add new features and improve
+  on existing ones, QGIS never stagnates. The development of a new tool can
+  happen as quickly as you need it to.
+
+- *Extensive help and documentation is available.* If you're stuck with
+  anything, you can turn to the extensive documentation, your fellow QGIS
+  users, or even the developers.
+
+- *Cross-platform.* QGIS can be installed on MacOS, Windows and Linux.
+
+Now that you know why you want to use QGIS, these exercises will make you
+know how.
 
 Background
 ----------
-
 In 2008 we launched the :ref:`Gentle Introduction to GIS
 <gentle_introduction_gis>`, a completely free, open content resource for
 people who want to learn about GIS without being overloaded with jargon and new
@@ -24,6 +57,86 @@ This training manual is intended to provide all the materials needed to run a 5
 day course on QGIS, PostgreSQL and PostGIS. The course is structured with
 content to suit novice, intermediate and advanced users alike and has many
 exercises complete with annotated answers throughout the text.
+
+About the exercises
+===================
+
+How to use this tutorial
+------------------------
+Any text :guilabel:`that looks like this` refers to something that you can
+see in the QGIS user interface.
+
+Text that :menuselection:`looks --> like --> this` directs you through menus.
+
+:kbd:`This kind of text` refers to something you can type, such as a command,
+path, or file name.
+
+Tiered course objectives
+------------------------
+This course caters to different user experience levels. Depending on which
+category you consider yourself to be in, you can expect a different set of
+course outcomes. Each category contains information that is essential for the
+next one, so it's important to do all exercises that are at or below your level
+of experience.
+
+|basic| Basic
+.............
+In this category, the course assumes that you have little or no prior
+experience with theoretical GIS knowledge or the operation of GIS software.
+
+Limited theoretical background will be provided to explain the purpose of an
+action you will be performing in the program, but the emphasis is on learning
+by doing.
+
+When you complete the course, you will have a better concept of the
+possibilities of GIS, and how to harness their power via QGIS.
+
+|moderate| Intermediate
+.......................
+In this category, it is assumed that you have working knowledge and experience
+of the everyday uses of GIS software.
+
+Building on the instructions for the beginner level will provide you with
+familiar ground, as well as to make you aware of the cases where QGIS does
+things slightly differently from other software you may be used to. You will
+also learn how to use analysis functions in QGIS.
+
+When you complete the course, you should be comfortable with using QGIS for all
+of the functions you usually need for everyday use.
+
+|hard| Advanced
+...............
+In this category, the assumption is that you are experienced with GIS software,
+have knowledge of and experience with spatial databases, using data on a remote
+server, perhaps writing scripts for analysis purposes, etc.
+
+Building on the instructions for the other two levels will familiarize you with
+the approach that the QGIS interface follows, and will ensure that you know how
+to access the basic functions that you need. You will also be shown how to make
+use of the QGIS plugin system, database access, and so on.
+
+When you complete the course, you should be well-acquainted with the everyday
+operation of QGIS, as well as its more advanced functions.
+
+.. _data_downloadlink:
+
+Data
+----
+
+The sample data that accompanies this resource is freely available and comes
+from the following sources:
+
+* Streets and Places datasets from OpenStreetMap
+  (https://www.openstreetmap.org/)
+* Property boundaries (urban and rural), water bodies from NGI
+  (http://www.ngi.gov.za/)
+* SRTM DEM from the CGIAR-CGI (http://srtm.csi.cgiar.org/)
+
+Download the prepared dataset from the `Training data repository <training_data_>`_
+and unzip the file. All the necessary data are provided in the :file:`exercise_data`
+folder.
+
+.. _training_data: https://github.com/qgis/QGIS-Training-Data/archive/v2.0.zip
 
 License
 -------
@@ -61,7 +174,8 @@ guidelines are as follows:
   at office@linfiniti.com and we will advise you if what you intend doing is
   acceptable.
 * If you publish this work under a self publishing site such as
-  https://www.lulu.com we request that you donate the profits to the QGIS project.
+  https://www.lulu.com we request that you donate the profits to the QGIS
+  project.
 * You may not commercialise this work, except with the expressed permission of
   the authors. To be clear, by commercialisation we mean that you may not sell
   for profit, create commercial derivative works (e.g. selling content for use
@@ -73,10 +187,8 @@ guidelines are as follows:
   not profit off the sales of the book itself - all such profits should be
   contributed back to QGIS.
 
-
 Sponsoring Chapters
 -------------------
-
 This work is by no means a complete treatise on all the things you can do with
 QGIS and we encourage others to add new materials to fill any gaps. Linfiniti
 Consulting CC. can also create additional materials for you as a commercial
@@ -85,7 +197,6 @@ of the core content and be published under the same license.
 
 Authors
 -------
-
 * Rüdiger Thiede (rudi@linfiniti.com) - Rudi has written the QGIS instructional
   materials and parts of the PostGIS materials.
 * Tim Sutton (tim@linfiniti.com) - Tim has overseen and guided the project and
@@ -98,52 +209,40 @@ Authors
 
 Individual Contributors
 -----------------------
-
 Your name here!
 
 Sponsors
 --------
-
 * Cape Peninsula University of Technology
-
-.. _data_downloadlink:
-
-Data
-----
-
-The sample data that accompanies this resource is freely available and comes
-from the following sources:
-
-* Streets and Places datasets from OpenStreetMap (https://www.openstreetmap.org/)
-* Property boundaries (urban and rural), water bodies from NGI (http://www.ngi.gov.za/)
-* SRTM DEM from the CGIAR-CGI (http://srtm.csi.cgiar.org/)
-
-Download the prepared dataset from the `Training data repository <training_data_>`_
-and unzip the file. All the necessary data are provided in the :file:`exercise_data`
-folder.
-
-.. _training_data: https://github.com/qgis/QGIS-Training-Data/archive/v2.0.zip
 
 
 Source files and Issue reports
 -------------------------------
+The source of this document is available at GitHub
+`QGIS Documentation repository <https://github.com/qgis/QGIS-Documentation>`_.
+Consult `GitHub.com <https://github.com/>`_ for instructions on how to
+use the git version control system.
 
-The source of this document is available at GitHub `QGIS Documentation repository
-<https://github.com/qgis/QGIS-Documentation>`_. Consult `GitHub.com
-<https://github.com/>`_ for instructions on how to use the git version control
-system.
-
-Despite our efforts, you could find some errors or miss some information while following
-this training. Please report them at https://github.com/qgis/QGIS-Documentation/issues.
+Despite our efforts, you could find some errors or miss some information
+while following this training.
+Please report them at https://github.com/qgis/QGIS-Documentation/issues.
 
 Latest Version
 --------------
-
 You can always obtain the latest version of this document by visiting the online
 version which is part of the QGIS documentation website (https://docs.qgis.org).
 
-.. note:: There are links to online and PDF versions of the Documentation and Training manuals.
+.. note::
+   The documentation website contains links to both online and PDF versions of
+   the Training manual and other parts of the QGIS documentation.
 
 
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
 
-Tim Sutton, May 2012
+.. |basic| image:: /static/global/basic.png
+.. |hard| image:: /static/global/hard.png
+.. |moderate| image:: /static/global/moderate.png
