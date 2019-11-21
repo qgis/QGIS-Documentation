@@ -21,53 +21,103 @@ This algorithm is derived from the `GDAL grid utility <https://gdal.org/gdal_gri
 Parameters
 ..........
 
-``Input layer`` [raster]
-  Input raster file.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Nodata value, leave as none to take the nodata value from input`` [string]
-  Defines a value that should be inserted for the nodata values in the output raster.
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Input layer**
+      - ``INPUT``
+      - [raster]
+      - The input raster
+   *  - **Clipping extent**
+      - ``EXTENT``
+      - [extent]
+      - Extent that should be used for the output raster.
+        Only pixels within the specified bounding box will be
+        included in the output.
+   *  - **Assign a specified nodata value to output bands**
+        
+        Optional
+      - ``NODATA``
+      - [numeric]
+        
+        Default: None
+      - Defines a value that should be inserted for the nodata
+        values in the output raster
+   *  - **Additional creation options**
+        
+        Optional
+      - ``OPTIONS``
+      - [string]
+        
+        Default: ''
+      - For adding one or more creation options that control the
+        raster to be created (colors, block size, file
+        compression...).
+        For convenience, you can rely on predefined profiles (see
+        :ref:`GDAL driver options section <gdal_createoptions>`).
+   *  - **Output data type**
+      - ``DATA_TYPE``
+      - [enumeration]
+        
+        Default: 0
+      - Defines the format of the output raster file.
 
-  Default: *none*
+        Options:
 
-``Clipping extent`` [extent]
-  Extent that should be used for the output raster. Selects only features within the
-  specified bounding box.
+        * 0 --- Use input layer data type
+        * 1 --- Byte
+        * 2 --- Int16
+        * 3 --- UInt16
+        * 4 --- UInt32
+        * 5 --- Int32
+        * 6 --- Float32
+        * 7 --- Float64
+        * 8 --- CInt16
+        * 9 --- CInt32
+        * 10 --- CFloat32
+        * 11 --- CFloat64
 
-  Default: *0,1,0,1*
-
-``Additional creation options``
-  Optional
-
-  Allows to add one or more creation options that can be used to control
-  particulars (colorimetry, block size, file compression...) about the file to be
-  created. For convenience, you can rely on predefined profiles (see
-  :ref:`GDAL driver options section <gdal_createoptions>`).
-
-``Output data type`` [enumeration]
-  Defines the format of the output raster file.
-
-  Options:
-
-  * 0 --- Use input layer data type
-  * 1 --- Byte
-  * 2 --- Int16
-  * 3 --- UInt16
-  * 4 --- UInt32
-  * 5 --- Int32
-  * 6 --- Float32
-  * 7 --- Float64
-  * 8 --- CInt16
-  * 9 --- CInt32
-  * 10 --- CFloat32
-  * 11 --- CFloat64
-
-  Default: *0*
+   *  - **Additional command-line parameters**
+        
+        Optional
+      - ``EXTRA``
+      - [string]
+        
+        Default: None
+      - Add extra GDAL command line options
+   *  - **Clipped (extent)**
+      - ``OUTPUT``
+      - [raster]
+        Default: '[Save to temporary file]'
+      - Specification of the output raster layer.
+        One of 
+        * Save to a Temporary File
+        * Save to File...
+        
+        The file encoding can also be changed here
 
 Outputs
 .......
 
-``Clipped (extent)`` [raster]
-  Output raster layer clipped by the given extent.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Clipped (extent)**
+      - ``OUTPUT``
+      - [raster]
+      - Output raster layer clipped by the given extent
 
 
 .. _gdalcliprasterbymasklayer:
@@ -83,66 +133,157 @@ This algorithm is derived from the `GDAL grid utility <https://gdal.org/gdal_gri
 Parameters
 ..........
 
-``Input layer`` [raster]
-  Input raster layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 30 20 20 30
+   :stub-columns: 0
 
-``Mask layer`` [vector: polygon]
-  Defines the vector mask for clipping the raster.
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Input layer**
+      - ``INPUT``
+      - [raster]
+      - The input raster
+   *  - **Mask layer**
+      - ``EXTENT``
+      - [vector: polygon]
+      - Vector mask for clipping the raster
+   *  - **Source CRS**
+      - ``SOURCE_CRS``
+      - [crs]
+      - 
+   *  - **Target CRS**
+      - ``TARGET_CRS``
+      - [crs]
+      - 
+   *  - **Assign a specified nodata value to output bands**
+        
+        Optional
+      - ``NODATA``
+      - [number]
+        
+        Default: None
+      - Defines a value that should be inserted for the nodata
+        values in the output raster
+   *  - **Create an output alpha band**
+      - ``ALPHA_BAND``
+      - [boolean]
+        
+        Default: False
+      - Creates an alpha band for the result.
+        The alpha band then includes the transparency values of
+        the pixels.
+   *  - **Match the extent of the clipped raster to the extent of the mask layer**
+      - ``CROP_TO_CUTLINE``
+      - [boolean]
+        
+        Default: True
+      - Applies the vector layer extent to the output raster if checked.
+   *  - **Keep resolution of input raster**
+      - ``KEEP_RESOLUTION``
+      - [boolean]
+        
+        Default: False
+      - The resolution of the output raster will not be changed
+   *  - **Set output file resolution** |36|
+      - ``SET_RESOLUTION``
+      - [boolean]
+        
+        Default: False
+      - Shall the output resolution (cell size) be specified
+   *  - **X Resolution to output bands** |36|
+        
+        Optional
+      - ``X_RESOLUTION``
+      - [number]
+        
+        Default: None
+      - The with of the cells in the output raster
+   *  - **Y Resolution to output band** |36|
+        
+        Optional
+      - ``Y_RESOLUTION``
+      - [number]
+        
+        Default: None
+      - The height of the cells in the output raster
+   *  - **Use multithreaded warping implementation** |36|
+      - ``MULTITHREADING``
+      - [boolean]
+        
+        Default: False
+      - 
+   *  - **Additional creation options**
+        
+        Optional
+      - ``OPTIONS``
+      - [string]
+        
+        Default: ''
+      - For adding one or more creation options that control the
+        raster to be created (colors, block size, file
+        compression...).
+        For convenience, you can rely on predefined profiles (see
+        :ref:`GDAL driver options section <gdal_createoptions>`).
+   *  - **Output data type**
+      - ``DATA_TYPE``
+      - [enumeration]
+        
+        Default: 0
+      - Defines the format of the output raster file.
 
-``Nodata value, leave as none to take the nodata value from input`` [string]
-  Defines a value for the no-data areas of the input raster.
+        Options:
 
-  Default: *none*
+        * 0 --- Use Input Layer Data Type
+        * 1 --- Byte
+        * 2 --- Int16
+        * 3 --- UInt16
+        * 4 --- UInt32
+        * 5 --- Int32
+        * 6 --- Float32
+        * 7 --- Float64
+        * 8 --- CInt16
+        * 9 --- CInt32
+        * 10 --- CFloat32
+        * 11 --- CFloat64
 
-``Create an output alpha band`` [boolean]
-  Creates an alpha band for the result. The alpha band then includes the transparency
-  values of the pixels.
-
-  Default: *False*
-
-``Match the extent of the clipped raster to the extent of the mask layer`` [boolean]
-  Applies the vector layer extent to the output raster if checked.
-
-  Default: *True*
-
-``Keep resolution of output raster`` [boolean]
-  The resolution of the output raster will not be changed.
-
-  Default: *False*
-
-``Additional creation options``
-  Optional
-
-  Allows to add one or more creation options that can be used to control
-  particulars (colorimetry, block size, file compression...) about the file to be
-  created. For convenience, you can rely on predefined profiles (see
-  :ref:`GDAL driver options section <gdal_createoptions>`).
-
-``Output data type`` [enumeration]
-  Defines the format of the output raster file.
-
-  Options:
-
-  * 0 --- Use input layer data type
-  * 1 --- Byte
-  * 2 --- Int16
-  * 3 --- UInt16
-  * 4 --- UInt32
-  * 5 --- Int32
-  * 6 --- Float32
-  * 7 --- Float64
-  * 8 --- CInt16
-  * 9 --- CInt32
-  * 10 --- CFloat32
-  * 11 --- CFloat64
-
-  Default: *0*
+   *  - **Additional command-line parameters** |310|
+        
+        Optional
+      - ``EXTRA``
+      - [string]
+        
+        Default: None
+      - Add extra GDAL command line options
+   *  - **Clipped (mask)**
+      - ``OUTPUT``
+      - [raster]
+        Default: '[Save to temporary file]'
+      - Specification of the output raster layer.
+        One of 
+        * Save to a Temporary File
+        * Save to File...
+        
+        The file encoding can also be changed here
 
 Outputs
 .......
 
-``Clipped (mask)`` [raster]
-  Output raster layer clipped by the vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Clipped (mask)**
+      - ``OUTPUT``
+      - [raster]
+      - Output raster layer clipped by the vector layer
 
 
 .. _gdalcontour:
@@ -158,51 +299,124 @@ This algorithm is derived from the `GDAL contour utility <https://gdal.org/gdal_
 Parameters
 ..........
 
-``Input layer`` [raster]
-  Input elevation raster.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Band number`` [raster band]
-  Raster band to extract.
-
-``Interval between contour lines`` [number]
-  Defines the interval between the contour lines in the given units of the
-  elevation raster.
-
-  Default: *10.0*
-
-``Attribute name (if not set, no elevation attribute is attached)`` [string]
-  Optional
-
-  Defines the attribute name for the field containing the values of the
-  contour lines. If nothing is defines the default name will be 'ELEV'.
-
-  Default: *ELEV*
-
-``Offset from zero relative to which to interpret intervals`` [number]
-  Optional
-
-  Default: *0.0*
-
-``Produce 3D vector`` [boolean]
-  Forces production of 3D vectors instead of 2D. Includes elevation at every vertex.
-
-  Default: *False*
-
-``Treat all raster values as valid`` [boolean]
-  Ignores any nodata values in the dataset.
-
-  Default: *False*
-
-``Input pixel value to treat as "nodata"`` [number]
-  Optional
-
-  Default: *Not set*
-
-``Additional creation options`` [string]
-  Optional
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Input layer**
+      - ``INPUT``
+      - [raster]
+      - Input raster
+   *  - **Band number**
+      - ``BAND``
+      - [raster band]
+      - Raster band to create the contours from
+   *  - **Interval between contour lines**
+      - ``INTERVAL``
+      - [number]
+        
+        Default: 10.0
+      - Defines the interval between the contour lines in the given
+        units of the elevation raster (minimum value 0)
+   *  - **Attribute name (if not set, no elevation attribute is attached)**
+        
+        Optional
+      - ``FIELD_NAME``
+      - [string]
+        
+        Default: 'ELEV'
+      - Defines the attribute name for the field containing the
+        values of the contour lines.
+   *  - **Produce 3D vector**
+      - ``CREATE_3D``
+      - [boolean]
+        
+        Default: False
+      - Forces production of 3D vectors instead of 2D.
+        Includes elevation at every vertex.
+   *  - **Treat all raster values as valid**
+      - ``IGNORE_NODATA``
+      - [boolean]
+        
+        Default: False
+      - Ignores any nodata values in the dataset.
+   *  - **Input pixel value to treat as "nodata"**
+        
+        Optional
+      - ``NODATA``
+      - [number]
+        
+        Default: None
+      - Defines a value that should be inserted for the nodata
+        values in the output raster
+   *  - **Offset from zero relative to which to interpret intervals**
+        
+        Optional
+      - ``OFFSET``
+      - [number]
+        
+        Default: 0.0
+      - 
+   *  - **Additional command-line parameters** |310|
+        
+        Optional
+      - ``EXTRA``
+      - [string]
+        
+        Default: None
+      - Add extra GDAL command line options
+   *  - **Additional creation options**
+        
+        Optional
+      - ``OPTIONS``
+      - [string]
+        
+        Default: ''
+      - For adding one or more creation options that control the
+        raster to be created (colors, block size, file
+        compression...).
+        For convenience, you can rely on predefined profiles (see
+        :ref:`GDAL driver options section <gdal_createoptions>`).
+   *  - **Contours**
+      - ``OUTPUT``
+      - [vector: line]
+        
+        Default: '[Save to temporary file]'
+      - Specification of the output raster layer.
+        One of 
+        * Save to a Temporary File
+        * Save to File...
+        
+        The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Contours`` [vector: line]
-  Output file for contour lines.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Contours**
+      - ``OUTPUT``
+      - [vector: line]
+      - Output vector layer with contour lines
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+   
+.. |36| replace:: ``NEW in 3.6``
+.. |310| replace:: ``NEW in 3.10``
