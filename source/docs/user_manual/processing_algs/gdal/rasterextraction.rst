@@ -44,7 +44,7 @@ Parameters
         
         Optional
       - ``NODATA``
-      - [numeric]
+      - [number]
         
         Default: None
       - Defines a value that should be inserted for the nodata
@@ -94,9 +94,11 @@ Parameters
    *  - **Clipped (extent)**
       - ``OUTPUT``
       - [raster]
+        
         Default: '[Save to temporary file]'
       - Specification of the output raster layer.
-        One of 
+        One of:
+        
         * Save to a Temporary File
         * Save to File...
         
@@ -262,7 +264,8 @@ Parameters
       - [raster]
         Default: '[Save to temporary file]'
       - Specification of the output raster layer.
-        One of 
+        One of:
+        
         * Save to a Temporary File
         * Save to File...
         
@@ -388,7 +391,8 @@ Parameters
         
         Default: '[Save to temporary file]'
       - Specification of the output raster layer.
-        One of 
+        One of:
+        
         * Save to a Temporary File
         * Save to File...
         
