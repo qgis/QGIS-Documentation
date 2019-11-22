@@ -142,6 +142,8 @@ Finds and removes duplicated geometries.
 Attributes are not checked, so in case two features have identical geometries
 but different attributes, only one of them will be added to the result layer.
 
+.. seealso:: :ref:`qgisdropgeometries`, :ref:`qgisremovenullgeometries`
+
 Parameters
 ..........
 ``Input layer`` [vector: any]
@@ -165,6 +167,8 @@ If the file is saved in a local folder, you can choose between many file formats
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+.. seealso:: :ref:`qgisdeleteduplicategeometries`, :ref:`qgisremovenullgeometries`
+
 Parameters
 ..........
 ``Input layer`` [vector: any]
@@ -183,7 +187,9 @@ Execute SQL
 -----------
 Runs a simple or complex query with ``SQL`` syntax on the source layer.
 
-The result of the query will be added as new layer.
+The result of the query will be added as a new layer.
+
+.. seealso:: :ref:`qgisspatialiteexecutesql`, :ref:`qgispostgisexecutesql`
 
 Parameters
 ..........
@@ -730,6 +736,8 @@ Sets the style of a vector layer. The style must be defined in a
 QML file.
 
 No new output are created: the style is immediately assigned to the vector layer.
+
+.. seealso:: :ref:`qgissetstyleforrasterlayer`
 
 Parameters
 ..........
