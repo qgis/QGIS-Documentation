@@ -44,7 +44,8 @@ Parameters
       - ``OUTPUT``
       - [vector: any]
       - Specification of the output vector layer.
-        One of 
+        One of:
+        
         * Save to a Temporary File
         * Save to File...
         
@@ -106,8 +107,7 @@ Parameters
       - [tablefield: numeric]
       - Defines the attribute field from which the attributes for
         the pixels should be chosen
- 
-  *  - **A fixed value to burn**
+   *  - **A fixed value to burn**
       - ``BURN``
         
         Optional
@@ -121,10 +121,11 @@ Parameters
         
         Default: 0
       - Units to use when defining the output raster size/resolution
-        Options:
+        Options: 
+        
           * 0 --- Pixels
           * 1 --- Georeferenced units
-
+        
    *  - **Width/Horizontal resolution**
       - ``WIDTH``
       - [number]
@@ -155,7 +156,6 @@ Parameters
         
         Default: 0.0
       - Assigns a specified nodata value to output bands
-
    *  - **Additional creation options**
         
         Optional
@@ -174,9 +174,9 @@ Parameters
         
         Default: 5
       - Defines the format of the output raster file.
-
+        
         Options:
-
+        
         * 0 --- Use input layer data type
         * 1 --- Byte
         * 2 --- Int16
@@ -209,9 +209,11 @@ Parameters
    *  - **Rasterized**
       - ``OUTPUT``
       - [raster]
+        
         Default: '[Save to temporary file]'
       - Specification of the output raster layer.
-        One of 
+        One of:
+        
         * Save to a Temporary File
         * Save to File...
         
