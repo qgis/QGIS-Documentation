@@ -57,3 +57,101 @@ This training manual is intended to provide all the materials needed to run a 5
 day course on QGIS, PostgreSQL and PostGIS. The course is structured with
 content to suit novice, intermediate and advanced users alike and has many
 exercises complete with annotated answers throughout the text.
+
+License
+-------
+
+.. image:: img/license.png
+
+The Free Quantum GIS Training Manual by Linfiniti Consulting CC. is based on
+an earlier version from Linfiniti and is licensed under a
+`Creative Commons Attribution 4.0 International <https://creativecommons.org/licenses/by/4.0/>`_.
+Permissions beyond the scope of this license may be available at below.
+
+
+We have published this QGIS training manual under a liberal license that allows
+you to freely copy, modify and redistribute this work. A complete copy of the
+license is available at the end of this document. In simple terms, the usage
+guidelines are as follows:
+
+* You may not represent this work as your own work, or remove any authorship
+  text or credits from this work.
+* You may not redistribute this work under more restrictive permissions than
+  those under which it was provided to you.
+* If you add a substantive portion to the work and contribute it back to the
+  project (at least one complete module) you may add your name to the end of
+  the authors list for this document (which will appear on the front page)
+* If you contribute minor changes and corrections you may add yourself to the
+  contributors list below.
+* If you translate this document in its entirety, you may add your name to the
+  authors list in the form "Translated by Joe Bloggs".
+* If you sponsor a module or lesson, you may request the author to include an
+  acknowledgement in the beginning of each lesson contributed, e.g.:
+
+.. note:: This lesson was sponsored by MegaCorp.
+
+* If you are unsure about what you may do under this license, please contact us
+  at office@linfiniti.com and we will advise you if what you intend doing is
+  acceptable.
+* If you publish this work under a self publishing site such as
+  https://www.lulu.com we request that you donate the profits to the QGIS
+  project.
+* You may not commercialise this work, except with the expressed permission of
+  the authors. To be clear, by commercialisation we mean that you may not sell
+  for profit, create commercial derivative works (e.g. selling content for use
+  as articles in a magazine). The exception to this is if all the profits are
+  given to the QGIS project. You may (and we encourage you to do so) use this
+  work as a text book when conducting training courses, even if the course
+  itself is commercial in nature. In other words, you are welcome to make money
+  by running a training course that uses this work as a text book, but you may
+  not profit off the sales of the book itself - all such profits should be
+  contributed back to QGIS.
+
+Sponsoring Chapters
+-------------------
+This work is by no means a complete treatise on all the things you can do with
+QGIS and we encourage others to add new materials to fill any gaps. Linfiniti
+Consulting CC. can also create additional materials for you as a commercial
+service, with the understanding that all such works produced should become part
+of the core content and be published under the same license.
+
+Authors
+-------
+* Rüdiger Thiede (rudi@linfiniti.com) - Rudi has written the QGIS instructional
+  materials and parts of the PostGIS materials.
+* Tim Sutton (tim@linfiniti.com) - Tim has overseen and guided the project and
+  co-authored the PostgreSQL and PostGIS parts. Tim also authored the custom
+  sphinx theme used for this manual.
+* Horst Düster (horst.duester@kappasys.ch ) - Horst co-authored the PostgreSQL
+  and PostGIS parts
+* Marcelle Sutton (marcelle@linfiniti.com) - Marcelle provided proof-reading
+  and editorial advice during the creation of this work.
+
+Individual Contributors
+-----------------------
+Your name here!
+
+Sponsors
+--------
+* Cape Peninsula University of Technology
+
+
+Source files and Issue reports
+-------------------------------
+The source of this document is available at GitHub
+`QGIS Documentation repository <https://github.com/qgis/QGIS-Documentation>`_.
+Consult `GitHub.com <https://github.com/>`_ for instructions on how to
+use the git version control system.
+
+Despite our efforts, you could find some errors or miss some information
+while following this training.
+Please report them at https://github.com/qgis/QGIS-Documentation/issues.
+
+Latest Version
+--------------
+You can always obtain the latest version of this document by visiting the online
+version which is part of the QGIS documentation website (https://docs.qgis.org).
+
+.. note::
+   The documentation website contains links to both online and PDF versions of
+   the Training manual and other parts of the QGIS documentation.
