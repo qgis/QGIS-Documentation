@@ -105,6 +105,8 @@ Sets the style of a raster layer. The style must be defined as a ``QML`` file.
 
 No new output are created: the ``QML`` style is assigned to the raster layer chosen.
 
+.. seealso:: :ref:`qgissetstyleforvectorlayer`
+
 Parameters
 ..........
 

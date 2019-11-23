@@ -71,6 +71,8 @@ Output attributes are computed depending on each given aggregate definition.
 This algorithm allows to use the default :ref:`aggregates functions <aggregates_function>`
 of the QGIS Expression engine.
 
+.. seealso:: :ref:`qgiscollect`, :ref:`qgisdissolve`
+
 Parameters
 ..........
 
@@ -360,6 +362,8 @@ information ("message" for the **error** layer, "FID" and "_errors" for the
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
+.. seealso:: :ref:`qgisfixgeometries`
+
 Parameters
 ..........
 
@@ -457,7 +461,7 @@ See the 'Promote to multipart' or 'Aggregate' algorithms for alternative options
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
-.. seealso:: :ref:`qgisaggregate`, :ref:`qgispromotetomulti`
+.. seealso:: :ref:`qgisaggregate`, :ref:`qgispromotetomulti`, :ref:`qgisdissolve`
 
 Parameters
 ..........
@@ -891,6 +895,8 @@ that happens to be processed.
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
+.. seealso:: :ref:`qgisaggregate`, :ref:`qgiscollect`
+
 Parameters
 ..........
 
@@ -997,6 +1003,8 @@ similar but not identical.
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
+.. seealso:: :ref:`qgisfixgeometries`
+
 Parameters
 ..........
 ``Input layer`` [vector: polygon]
@@ -1032,6 +1040,8 @@ intermediate vertices between them.
    The original line layer and the exploded one
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
+.. seealso:: :ref:`qgissubdivide`, :ref:`qgislinesubstring`
 
 Parameters
 ..........
@@ -1103,6 +1113,8 @@ Additional fields are added to the vertices indicating the specific vertex posit
 the part (as well as its ring for polygons), distance along the original geometry
 and bisector angle of vertex for the original geometry.
 
+.. seealso:: :ref:`qgisextractvertices`, :ref:`qgisfilterverticesbym`, :ref:`qgisfilterverticesbyz`
+
 Parameters
 ..........
 ``Input layer`` [vector: line, polygon]
@@ -1142,6 +1154,9 @@ distance along original geometry and bisector angle of vertex for original geome
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
+.. seealso:: :ref:`qgisextractspecificvertices`, :ref:`qgisfilterverticesbym`,
+ :ref:`qgisfilterverticesbyz`
+
 Parameters
 ..........
 
@@ -1174,7 +1189,8 @@ similarly if the maximum value is not specified then only the minimum value is t
 .. note:: Depending on the input geometry attributes and the filters used,
   the resultant geometries created by this algorithm may no longer be valid.
 
-.. seealso:: :ref:`qgisfilterverticesbyz`, :ref:`qgisextractvertices`
+.. seealso:: :ref:`qgisfilterverticesbyz`, :ref:`qgisextractvertices`,
+ :ref:`qgisextractspecificvertices`
 
 Parameters
 ..........
@@ -1223,7 +1239,8 @@ similarly if the maximum value is not specified then only the minimum value is t
   the resultant geometries created by this algorithm may no longer be valid.
   You may need to run the :ref:`qgisfixgeometries` algorithm to ensure their validity.
 
-.. seealso:: :ref:`qgisfilterverticesbym`, :ref:`qgisextractvertices`
+.. seealso:: :ref:`qgisfilterverticesbym`, :ref:`qgisextractvertices`,
+ :ref:`qgisextractspecificvertices`
 
 Parameters
 ..........
@@ -1263,6 +1280,8 @@ without further intervention. Always outputs multi-geometry layer.
 .. note:: M values will be dropped from the output.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
+.. seealso:: :ref:`qgischeckvalidity`
 
 Parameters
 ..........
@@ -1582,6 +1601,8 @@ Outputs
 Minimum bounding geometry
 -------------------------
 Creates geometries which enclose the features from an input layer.
+
+.. seealso:: :ref:`qgisminimumenclosingcircle`
 
 Parameters
 ..........
@@ -2295,6 +2316,9 @@ will be maintained.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+.. seealso:: :ref:`qgisextractvertices`, :ref:`qgisextractspecificvertices`,
+ :ref:`qgisdeleteduplicategeometries`
+
 Parameters
 ..........
 
@@ -2329,6 +2353,8 @@ All other features will be copied unchanged.
 
 The features with null geometries can be saved to a separate layer.
 
+.. seealso:: :ref:`qgisdeleteduplicategeometries`
+
 Parameters
 ..........
 ``Input layer`` [vector: any]
@@ -2357,8 +2383,6 @@ Inverts the direction of a line layer.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
-.. seealso:: :ref:`qgisswapxy`
-
 Parameters
 ..........
 
@@ -2382,7 +2406,7 @@ around a unique preset point.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
-.. seealso:: :ref:`qgistranslategeometry`
+.. seealso:: :ref:`qgistranslategeometry`, :ref:`qgisswapxy`
 
 Parameters
 ..........
@@ -2601,6 +2625,9 @@ snapping geometries to grid.
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
+.. seealso:: :ref:`qgissmoothgeometry`, :ref:`qgisdensifygeometries`,
+ :ref:`qgisdensifygeometriesgivenaninterval`
+
 Parameters
 ..........
 
@@ -2718,7 +2745,8 @@ or lower would preserve right angles in the geometry.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
-.. seealso:: :ref:`qgissimplifygeometries`
+.. seealso:: :ref:`qgissimplifygeometries`, :ref:`qgisdensifygeometries`,
+ :ref:`qgisdensifygeometriesgivenaninterval`
 
 Parameters
 ..........
@@ -2943,6 +2971,8 @@ Curved geometries will be segmentized before subdivision.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+.. seealso:: :ref:`qgisexplodelines`, :ref:`qgislinesubstring`
+
 Parameters
 ..........
 
@@ -2972,6 +3002,8 @@ It can be used to repair geometries which have accidentally had their latitude
 and longitude values reversed.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
+.. seealso:: :ref:`qgistranslategeometry`, :ref:`qgisrotatefeatures`
 
 Parameters
 ..........
@@ -3129,7 +3161,8 @@ Z and M values present in the geometry can also be translated.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
-.. seealso:: :ref:`qgisarraytranslatedfeatures`, :ref:`qgisoffsetline`
+.. seealso:: :ref:`qgisarraytranslatedfeatures`, :ref:`qgisoffsetline`,
+ :ref:`qgisrotatefeatures`, :ref:`qgisswapxy`
 
 Parameters
 ..........
