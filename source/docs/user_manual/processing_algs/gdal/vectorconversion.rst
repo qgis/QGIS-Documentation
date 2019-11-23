@@ -108,9 +108,9 @@ Parameters
       - Defines the attribute field from which the attributes for
         the pixels should be chosen
    *  - **A fixed value to burn**
-      - ``BURN``
         
         Optional
+      - ``BURN``
       - [number]
         
         Default: 0.0
