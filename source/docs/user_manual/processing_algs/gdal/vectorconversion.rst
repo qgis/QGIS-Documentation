@@ -120,8 +120,7 @@ Parameters
       - [enumeration]
         
         Default: 0
-      - Units to use when defining the output raster size/resolution
-        Options: 
+      - Units to use when defining the output raster size/resolution. One of:
         
         * 0 --- Pixels
         * 1 --- Georeferenced units
