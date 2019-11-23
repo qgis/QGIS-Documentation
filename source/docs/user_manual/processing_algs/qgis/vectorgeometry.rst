@@ -2383,8 +2383,6 @@ Inverts the direction of a line layer.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
-.. seealso:: :ref:`qgisswapxy`
-
 Parameters
 ..........
 
@@ -2408,7 +2406,7 @@ around a unique preset point.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
-.. seealso:: :ref:`qgistranslategeometry`
+.. seealso:: :ref:`qgistranslategeometry`, :ref:`qgisswapxy`
 
 Parameters
 ..........
@@ -3005,7 +3003,7 @@ and longitude values reversed.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
-.. seealso:: :ref:`qgisreverselinedirection`
+.. seealso:: :ref:`qgistranslategeometry`, :ref:`qgisrotatefeatures`
 
 Parameters
 ..........
@@ -3163,7 +3161,8 @@ Z and M values present in the geometry can also be translated.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
-.. seealso:: :ref:`qgisarraytranslatedfeatures`, :ref:`qgisoffsetline`
+.. seealso:: :ref:`qgisarraytranslatedfeatures`, :ref:`qgisoffsetline`,
+ :ref:`qgisrotatefeatures`, :ref:`qgisswapxy`
 
 Parameters
 ..........
