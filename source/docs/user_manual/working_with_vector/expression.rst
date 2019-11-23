@@ -620,7 +620,7 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    "flip_coordinates", "Returns a copy of the geometry with the X and Y coordinates
    swapped (see also :ref:`qgisswapxy`)"
    "force_rhr |36|", "Forces a geometry to respect the Right-Hand-Rule (see also
-   :ref:`qgisforcerhr)"
+   :ref:`qgisforcerhr`)"
    "geom_from_gml", "Returns a geometry created from a GML representation of geometry"
    "geom_from_wkt", "Returns a geometry created from a well-known text (WKT) representation"
    "geom_to_wkt", "Returns the well-known text (WKT) representation of the geometry without SRID metadata"
