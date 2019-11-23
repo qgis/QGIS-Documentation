@@ -123,8 +123,8 @@ Parameters
       - Units to use when defining the output raster size/resolution
         Options: 
         
-          * 0 --- Pixels
-          * 1 --- Georeferenced units
+        * 0 --- Pixels
+        * 1 --- Georeferenced units
         
    *  - **Width/Horizontal resolution**
       - ``WIDTH``
