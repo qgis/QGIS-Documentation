@@ -52,6 +52,11 @@ In Main properties you can:
 * Choose which :guilabel:`Map` item the current legend will refer to.
   By default, the map over which the legend item is drawn is picked. If none,
   then it falls back to the :ref:`reference map <reference_map>`.
+  
+  .. note:: :ref:`Variables <variables_functions>` of the linked map item
+   (@map_id, @map_scale, @map_extent...) are also accessible from data-defined
+   properties of the legend.
+
 * Wrap the text of the legend on a given character: each time the character
   appears, it's replaced with a line break;
 * Set the symbols and text placement in the legend: the :guilabel:`Arrangement`

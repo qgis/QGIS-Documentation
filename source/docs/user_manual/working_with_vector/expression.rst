@@ -1142,6 +1142,13 @@ To use these functions in an expression, they should be preceded by @ character
    "layout_page", "Returns the page number of the current item in the layout"
    "layout_pageheight", "Returns the active page height in the layout (in mm)"
    "layout_pagewidth", "Returns the active page width in the layout (in mm)"
+   "legend_column_count |36|", "Returns the number of columns in the legend"
+   "legend_filter_by_map |36|", "Indicates if the content of the legend is
+   filtered by the map"
+   "legend_filter_out_atlas |36|", "Indicates if the atlas is filtered out of the legend"
+   "legend_split_layers |36|", "Indicates if layers can be split in the legend"
+   "legend_title |36|", "Returns the title of the legend"
+   "legend_wrap_string |36|", "Returns the character(s) used to wrap the legend text"
    "map_crs", "Returns the Coordinate reference system of the current map"
    "map_crs_acronym |36|", "Returns the acronym of the Coordinate reference
    system of the current map"
