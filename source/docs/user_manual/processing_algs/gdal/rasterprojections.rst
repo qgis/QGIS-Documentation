@@ -35,10 +35,29 @@ Parameters
       - [raster]
       - Input raster layer
    *  - **Desired CRS**
-      - ``INPUT_LAYER``
+      - ``CRS``
       - [crs]
-      - Defines the coordinate system to apply to the input raster layer
+   *  - **Layer with projection**
+      - ``OUTPUT``
+      - [raster]
+      - Specification of the output raster layer
 
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Layer with projection**
+     - ``OUTPUT``
+     - [raster]
+     - The output raster layer (with a the projection information)
 
 .. _gdalextractprojection:
 
@@ -54,28 +73,57 @@ This algorithm is derived from the `GDAL srsinfo utility <https://gdal.org/gdals
 Parameters
 ..........
 
-``Input file`` [raster]
-  Input raster.
-  The raster layer has to be file based, as the algorithm uses the path
-  to the raster file as the location of the generated :file:`.wld` file.
-  Using a non-file raster layer will lead to an error.
 
-``Create also .prj file`` [boolean]
-  If this is activated a :file:`.prj` file containing the projection
-  information is also created.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-  Default: *False*
+   * - Label
+     - Name
+     - Type
+     - Description
+   *  - **Input file**
+      - ``INPUT_LAYER``
+      - [raster]
+      - Input raster
+        The raster layer has to be file based, as the algorithm
+        uses the path to the raster file as the location of the
+        generated :file:`.wld` file.
+        Using a non-file raster layer will lead to an error.
+   *  - **Create also .prj file**
+      - ``PRJ_FILE_CREATE``
+      - [boolean]
+        
+        Default: False
+      - If this is activated a :file:`.prj` file containing the
+        projection information is also created.
+      
 
 Outputs
 .......
 
-``World file`` [file]
-  Text file with extension :file:`.wld` containing transformation parameters
-  for  the raster file.
 
-``ESRI Shapefile prj file`` [file]
-  Text file with :file:`.prj` extension that describes the CRS.
-  Will be None if ``Create also .prj file`` is False.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **World file**
+      - ``WORLD_FILE``
+      - [file]
+      - Text file with extension :file:`.wld` containing transformation
+        parameters for  the raster file.
+   *  - **ESRI Shapefile prj file**
+      - ``PRJ_FILE``
+      - [file]
+      - Text file with :file:`.prj` extension that describes the CRS.
+        Will be None if ``Create also .prj file`` is False.
+  
 
 .. _gdalwarpreproject:
 
@@ -90,6 +138,17 @@ This algorithm is derived from the `GDAL warp utility <https://gdal.org/gdalwarp
 
 Parameters
 ..........
+
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
 
 ``Input layer`` [raster]
   Input raster layer to reproject.
@@ -187,6 +246,17 @@ Parameters
 
 Outputs
 .......
+
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
 
 ``Reprojected`` [raster]
   Reprojected output raster layer.
