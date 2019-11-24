@@ -237,7 +237,7 @@ Parameters
    * - **Georeferenced extents of output file to be created**
        
        Optional
-     - ``TARSource CRSGET_EXTENT``
+     - ``TARGET_EXTENT``
      - [extent]
      - Sets the georeferenced extent of the output file to be
        created (in the ``target CRS`` by default.
@@ -263,7 +263,7 @@ Parameters
        perform input/output operations simultaneously.
        Note that the computation itself is not multithreaded.
    * - **Additional command-line parameters**
-       Source CRS
+       
        Optional
      - ``EXTRA``
      - [string]
