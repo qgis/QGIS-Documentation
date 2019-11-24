@@ -355,6 +355,12 @@ The attribute tables of the generated layers will contain some additional
 information ("message" for the **error** layer, "FID" and "_errors" for the
 **invalid** layer and  only "FID" for the **valid** layer):
 
+.. warning:: Is mandatory to have activated the option **Stop algorithm execution when a geometry is invalid**  in :menuselection:`Settings --> Options --> Processing --> General --> Invalid Feature`
+             otherwise the outputs will be empty.
+
+The attribute table of each generated vector layer will contain some additional
+information (numbers of error found and type of error):
+
 .. figure:: img/check_validity.png
    :align: center
 
@@ -441,6 +447,76 @@ Outputs
       - VALID_COUNT
       - [number]
       - The number of valid geometries.
+
+
+Type of error messages and their meanings
+.........................................
+
+If the GEOS method is used the following error messages can occur:
+
++--------------------------------------+-------------+-----------------------------------------+
+| Message error                        | Explanation | Example                                 |
++--------------------------------------+-------------+-----------------------------------------+
+| Topology validation error            |             |    .. figure:: img/geos_valid_error.png | 
+|                                      |             |       :align: center                    |
++--------------------------------------+-------------+-----------------------------------------+
+| Repeated point                       |             |    .. figure:: img/geos_rep_point.png   |
+|                                      |             |       :align: center                    |
++--------------------------------------+-------------+-----------------------------------------+
+| Hole lies outside shell              |             |    .. figure:: img/geos_hole_lies.png   |
+|                                      |             |       :align: center                    |
++--------------------------------------+-------------+-----------------------------------------+
+| Holes are nested                     |             |    .. figure:: img/geos_hole_nest.png   |
+|                                      |             |        :align: center                   |
++--------------------------------------+-------------+-----------------------------------------+
+| Interior is disconnected             |             |    .. figure:: img/geos_int_discon.png  |
+|                                      |             |       :align: center                    |
++--------------------------------------+-------------+-----------------------------------------+
+| Self-intersection                    |             |    .. figure:: img/geos_self_inter.png  |
+|                                      |             |       :align: center                    |
++--------------------------------------+-------------+-----------------------------------------+
+| Ring self-intersection               |             |    .. figure:: img/geos_ring_inter.png  |
+|                                      |             |       :align: center                    |
++--------------------------------------+-------------+-----------------------------------------+
+| Nested shells                        |             |    .. figure:: img/geos_nest_shell.png  |
+|                                      |             |       :align: center                    | 
++--------------------------------------+-------------+-----------------------------------------+
+| Duplicate rings                      |             |    .. figure:: img/geos_dupl_rings.png  |
+|                                      |             |       :align: center                    |
++--------------------------------------+-------------+-----------------------------------------+
+| Too few points in geometry component |             |    .. figure:: img/geos_few_points.png  |
+|                                      |             |       :align: center                    |
++--------------------------------------+-------------+-----------------------------------------+
+| Invalid coordinate                   |             |    .. figure:: img/geos_inv_coordi.png  |
+|                                      |             |       :align: center                    | 
++--------------------------------------+-------------+-----------------------------------------+
+| Ring is not closed                   |             |    .. figure:: img/geos_inv_coordi.png  |
+|                                      |             |       :align: center                    |
++--------------------------------------+-------------+-----------------------------------------+
+
+If the QGIS method is used the following error messages can occur:
+
++------------------------------------------------------------------------------------------+-------------+
+| Message error                                    | Explanation                           | Example     |
++------------------------------------------------------------------------------------------+-------------+
+| Segment %1 of ring %2 of polygon %3 intersects   |                                       |             |
+| segment %4 of ring %5 of polygon %6 at %7        |                                       |             |
++------------------------------------------------------------------------------------------+-------------+
+| Ring %1 with less than four points               |                                       |             |
++------------------------------------------------------------------------------------------+-------------+
+| Ring %1 not closed                               |                                       |             |
++------------------------------------------------------------------------------------------+-------------+
+| Line %1 with less than two points                |                                       |             |
++------------------------------------------------------------------------------------------+-------------+
+| Line %1 contains %n duplicate node(s) at %2      |                                       |             |
++------------------------------------------------------------------------------------------+-------------+
+| Segments %1 and %2 of line %3 intersect at %4    |                                       |             |
++------------------------------------------------------------------------------------------+-------------+
+| Ring self-intersection                           |                                       |             |
++------------------------------------------------------------------------------------------+-------------+
+| Ring %1 of polygon %2 not in exterior ring       |                                       |             |
++------------------------------------------------------------------------------------------+-------------+
+
 
 
 .. _qgiscollect:
