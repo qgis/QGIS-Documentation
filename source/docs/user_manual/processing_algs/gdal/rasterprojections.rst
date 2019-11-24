@@ -56,6 +56,7 @@ Outputs
      - [raster]
      - The output raster layer (with the new projection information)
 
+
 .. _gdalextractprojection:
 
 Extract projection
