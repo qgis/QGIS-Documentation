@@ -73,7 +73,6 @@ This algorithm is derived from the `GDAL srsinfo utility <https://gdal.org/gdals
 Parameters
 ..........
 
-
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -98,11 +97,9 @@ Parameters
         Default: False
       - If this is activated a :file:`.prj` file containing the
         projection information is also created.
-      
 
 Outputs
 .......
-
 
 .. list-table::
    :header-rows: 1
@@ -139,19 +136,21 @@ This algorithm is derived from the `GDAL warp utility <https://gdal.org/gdalwarp
 Parameters
 ..........
 
-
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-
-``Input layer`` [raster]
-  Input raster layer to reproject.
+   * - Label
+     - Name
+     - Type
+     - Description
+   *  - **Input layer**
+      - ``INPUT_LAYER``
+      - [raster]
+      - Input raster layer to reproject
+      
+      
 
 ``Source CRS`` [crs]
   Optional
