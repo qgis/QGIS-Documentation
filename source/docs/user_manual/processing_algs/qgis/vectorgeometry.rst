@@ -454,45 +454,45 @@ Type of error messages and their meanings
 
 If the GEOS method is used the following error messages can occur:
 
-+--------------------------------------+-------------+-----------------------------------------+
-| Message error                        | Explanation | Example                                 |
-+--------------------------------------+-------------+-----------------------------------------+
-| Topology validation error            |             |    .. figure:: img/geos_valid_error.png | 
-|                                      |             |       :align: center                    |
-+--------------------------------------+-------------+-----------------------------------------+
-| Repeated point                       |             |    .. figure:: img/geos_rep_point.png   |
-|                                      |             |       :align: center                    |
-+--------------------------------------+-------------+-----------------------------------------+
-| Hole lies outside shell              |             |    .. figure:: img/geos_hole_lies.png   |
-|                                      |             |       :align: center                    |
-+--------------------------------------+-------------+-----------------------------------------+
-| Holes are nested                     |             |    .. figure:: img/geos_hole_nest.png   |
-|                                      |             |        :align: center                   |
-+--------------------------------------+-------------+-----------------------------------------+
-| Interior is disconnected             |             |    .. figure:: img/geos_int_discon.png  |
-|                                      |             |       :align: center                    |
-+--------------------------------------+-------------+-----------------------------------------+
-| Self-intersection                    |             |    .. figure:: img/geos_self_inter.png  |
-|                                      |             |       :align: center                    |
-+--------------------------------------+-------------+-----------------------------------------+
-| Ring self-intersection               |             |    .. figure:: img/geos_ring_inter.png  |
-|                                      |             |       :align: center                    |
-+--------------------------------------+-------------+-----------------------------------------+
-| Nested shells                        |             |    .. figure:: img/geos_nest_shell.png  |
-|                                      |             |       :align: center                    | 
-+--------------------------------------+-------------+-----------------------------------------+
-| Duplicate rings                      |             |    .. figure:: img/geos_dupl_rings.png  |
-|                                      |             |       :align: center                    |
-+--------------------------------------+-------------+-----------------------------------------+
-| Too few points in geometry component |             |    .. figure:: img/geos_few_points.png  |
-|                                      |             |       :align: center                    |
-+--------------------------------------+-------------+-----------------------------------------+
-| Invalid coordinate                   |             |    .. figure:: img/geos_inv_coordi.png  |
-|                                      |             |       :align: center                    | 
-+--------------------------------------+-------------+-----------------------------------------+
-| Ring is not closed                   |             |    .. figure:: img/geos_inv_coordi.png  |
-|                                      |             |       :align: center                    |
-+--------------------------------------+-------------+-----------------------------------------+
++--------------------------------------+----------------------------------------------+-----------------------------------------+
+| Message error                        | Explanation                                  | Example                                 |
++--------------------------------------+----------------------------------------------+-----------------------------------------+
+| Repeated point                       | This error happens when                      |    .. figure:: img/geos_rep_point.png   |
+|                                      | a given vertex is repeated.                  |       :align: center                    |
++--------------------------------------+----------------------------------------------+-----------------------------------------+
+| Ring self-intersection               | This error happens when                      |    .. figure:: img/geos_ring_inter.png  |
+|                                      | a geometry touch itself and generate a ring. |       :align: center                    |
++--------------------------------------+----------------------------------------------+-----------------------------------------+
+| Self-intersection                    | This error happens when                      |    .. figure:: img/geos_self_inter.png  |
+|                                      | a geometry touch itself.                     |       :align: center                    |
++--------------------------------------+----------------------------------------------+-----------------------------------------+
+| Topology validation error            |                                              |    .. figure:: img/geos_valid_error.png | 
+|                                      |                                              |       :align: center                    |
++--------------------------------------+----------------------------------------------+-----------------------------------------+
+| Hole lies outside shell              |                                              |    .. figure:: img/geos_hole_lies.png   |
+|                                      |                                              |       :align: center                    |
++--------------------------------------+----------------------------------------------+-----------------------------------------+
+| Holes are nested                     |                                              |    .. figure:: img/geos_hole_nest.png   |
+|                                      |                                              |        :align: center                   |
++--------------------------------------+----------------------------------------------+-----------------------------------------+
+| Interior is disconnected             |                                              |    .. figure:: img/geos_int_discon.png  |
+|                                      |                                              |       :align: center                    |
++--------------------------------------+----------------------------------------------+-----------------------------------------+
+| Nested shells                        |                                              |    .. figure:: img/geos_nest_shell.png  |
+|                                      |                                              |       :align: center                    | 
++--------------------------------------+----------------------------------------------+-----------------------------------------+
+| Duplicate rings                      |                                              |    .. figure:: img/geos_dupl_rings.png  |
+|                                      |                                              |       :align: center                    |
++--------------------------------------+----------------------------------------------+-----------------------------------------+
+| Too few points in geometry component |                                              |    .. figure:: img/geos_few_points.png  |
+|                                      |                                              |       :align: center                    |
++--------------------------------------+----------------------------------------------+-----------------------------------------+
+| Invalid coordinate                   |                                              |    .. figure:: img/geos_inv_coordi.png  |
+|                                      |                                              |       :align: center                    | 
++--------------------------------------+----------------------------------------------+-----------------------------------------+
+| Ring is not closed                   |                                              |    .. figure:: img/geos_inv_coordi.png  |
+|                                      |                                              |       :align: center                    |
++--------------------------------------+----------------------------------------------+-----------------------------------------+
 
 If the QGIS method is used the following error messages can occur:
 
