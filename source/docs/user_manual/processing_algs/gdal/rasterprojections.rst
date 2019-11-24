@@ -1,4 +1,3 @@
-
 Raster projections
 ==================
 
@@ -96,7 +95,6 @@ Parameters
         Default: False
       - If this is activated a :file:`.prj` file containing the
         projection information is also created.
-
 
 Outputs
 .......
@@ -286,9 +284,21 @@ Parameters
 
        The file encoding can also be changed here.
 
-
 Outputs
 .......
 
-``Reprojected`` [raster]
-  Reprojected output raster layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Reprojected**
+     - ``OUTPUT``
+     - [raster]
+       
+       Default: ``[Save to temporary file]``
+     - Reprojected output raster layer
