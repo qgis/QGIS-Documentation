@@ -22,11 +22,40 @@ This algorithm is derived from the the `GDAL edit utility <https://www.gdal.org/
 Parameters
 ..........
 
-``Input layer`` [raster]
-  Input raster layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Desired CRS`` [CRS]
-  Defines the coordinate system to apply to the input raster layer.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT_LAYER``
+     - [raster]
+     - Input raster layer
+   * - **Desired CRS**
+     - ``CRS``
+     - [crs]
+     - The projection (CRS) of the output layer
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Layer with projection**
+     - ``OUTPUT``
+     - [raster]
+     - The output raster layer (with the new projection information)
 
 
 .. _gdalextractprojection:
@@ -43,135 +72,219 @@ This algorithm is derived from the `GDAL srsinfo utility <https://www.gdal.org/g
 Parameters
 ..........
 
-``Input file`` [raster]
-  Input raster.
-  The raster layer has to be file based, as the algorithm uses the path
-  to the raster file as the location of the generated :file:`.wld` file.
-  Using a non-file raster layer will lead to an error.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Create also .prj file`` [boolean]
-  If this is activated a :file:`.prj` file containing the projection
-  information is also created.
+   * - Label
+     - Name
+     - Type
+     - Description
+   *  - **Input file**
+      - ``INPUT_LAYER``
+      - [raster]
+      - Input raster
+        The raster layer has to be file based, as the algorithm
+        uses the path to the raster file as the location of the
+        generated :file:`.wld` file.
+        Using a non-file raster layer will lead to an error.
+   *  - **Create also .prj file**
+      - ``PRJ_FILE_CREATE``
+      - [boolean]
 
-  Default: *False*
+        Default: False
+      - If this is activated a :file:`.prj` file containing the
+        projection information is also created.
+
 
 Outputs
 .......
 
-``World file`` [file]
-  Text file with extension :file:`.wld` containing transformation parameters
-  for  the raster file.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``ESRI Shapefile prj file`` [file]
-  Text file with :file:`.prj` extension that describes the CRS.
-  Will be None if ``Create also .prj file`` is False.
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **World file**
+      - ``WORLD_FILE``
+      - [file]
+      - Text file with extension :file:`.wld` containing transformation
+        parameters for  the raster file.
+   *  - **ESRI Shapefile prj file**
+      - ``PRJ_FILE``
+      - [file]
+      - Text file with :file:`.prj` extension that describes the CRS.
+        Will be None if ``Create also .prj file`` is False.
+
 
 .. _gdalwarpreproject:
 
 Warp (reproject)
 ----------------
-Transfers a raster layer into another Coordinate Reference System (CRS).
+Reprojects a raster layer into another Coordinate Reference System (CRS).
 The output file resolution and the resampling method can be chosen.
 
-This algorithm is derived from the `GDAL warp utility <https://www.gdal.org/gdalwarp.html>`_ .
+This algorithm is derived from the
+`GDAL warp utility <https://www.gdal.org/gdalwarp.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Projections`
 
 Parameters
 ..........
 
-``Input layer`` [raster]
-  Input raster layer to reproject.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Source CRS`` [crs]
-  Optional
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Input raster layer to reproject
+   * - **Source CRS**
 
-  Defines the CRS of the input raster layer.
+       Optional
+     - ``SOURCE_CRS``
+     - [crs]
+     - Defines the CRS of the output raster layer
+   * - **Target CRS**
 
-``Target CRS`` [crs]
-  Defines the CRS of the output raster layer.
+       Optional
+     - ``TARGET_CRS``
+     - [crs]
 
-  Default: *EPSG:4326*
+       Default: ``EPSG:4326``
+     - The CRS of the output layer
+   * - **Resampling method to use**
+     - ``RESAMPLING``
+     - [enumeration]
 
-``Resampling method to use`` [enumeration]
-  Pixel value resampling method to use.
+       Default: 0
+     - Pixel value resampling method to use.
+       Options:
 
-  Options:
+       * 0 --- Nearest neighbour
+       * 1 --- Bilinear
+       * 2 --- Cubic
+       * 3 --- Cubic spline
+       * 4 --- Lanczos windowed sinc
+       * 5 --- Average
+       * 6 --- Mode
+       * 7 --- Maximum
+       * 8 --- Minimum
+       * 9 --- Median
+       * 10 --- First quartile
+       * 11 --- Third quartile
 
-  * 0 --- Nearest neighbour
-  * 1 --- Bilinear
-  * 2 --- Cubic
-  * 3 --- Cubic spline
-  * 4 --- Lanczos windowed sinc
-  * 5 --- Average
-  * 6 --- Mode
-  * 7 --- Maximum
-  * 8 --- Minimum
-  * 9 --- Median
-  * 10 --- First quartile
-  * 11 --- Third quartile
+   * - **Nodata value for output bands**
 
-  Default: *0*
+       Optional
+     - ``NODATA``
+     - [number]
 
-``Nodata value for output bands`` [number]
-  Sets nodata value for output bands. If not provided, then nodata values will
-  be copied from the source dataset.
+       Default: None
+     - Sets nodata value for output bands.
+       If not provided, then nodata values will be copied from
+       the source dataset.
+   * - **Output file resolution in target georeferenced units**
 
-``Output file resolution in target georeferenced units`` [number]
-  Defines the output file resolution of reprojection result.
+       Optional
+     - ``TARGET_RESOLUTION``
+     - [number]
 
-``Additional creation options``
-  Optional
+       Default: None
+     - Defines the output file resolution of reprojection result
+   * - **Additional creation options**
 
-  Allows to add one or more creation options that can be used to control
-  particulars (colorimetry, block size, file compression...) about the file to be
-  created. For convenience, you can rely on predefined profiles (see
-  :ref:`GDAL driver options section <gdal_createoptions>`).
+       Optional
+     - ``OPTIONS``
+     - [string]
 
-``Output data type`` [enumeration]
-  Defines the data type of the output bands.
+       Default: ''
+     - For adding one or more creation options that control the
+       raster to be created (colors, block size, file
+       compression...).
+       For convenience, you can rely on predefined profiles (see
+       :ref:`GDAL driver options section <gdal_createoptions>`).
+   * - **Output data type**
+     - ``DATA_TYPE``
+     - [enumeration]
 
-  Options:
+       Default: 0
+     - Defines the format of the output raster file.
 
-  * 0 --- Use input layer data type
-  * 1 --- Byte
-  * 2 --- Int16
-  * 3 --- UInt16
-  * 4 --- UInt32
-  * 5 --- Int32
-  * 6 --- Float32
-  * 7 --- Float64
-  * 8 --- CInt16
-  * 9 --- CInt32
-  * 10 --- CFloat32
-  * 11 --- CFloat64
+       Options:
 
-  Default: *0*
+       * 0 --- Use input layer data type
+       * 1 --- Byte
+       * 2 --- Int16
+       * 3 --- UInt16
+       * 4 --- UInt32
+       * 5 --- Int32
+       * 6 --- Float32
+       * 7 --- Float64
+       * 8 --- CInt16
+       * 9 --- CInt32
+       * 10 --- CFloat32
+       * 11 --- CFloat64
 
-``Georeferenced extents of output file to be created (xmin, xmax, ymin, ymax)`` [extent]
-  Optional
+   * - **Georeferenced extents of output file to be created (xmin, xmax, ymin, ymax)**
 
-  Sets the georeferenced extent of the output file to be created (in the ``target CRS``
-  by default. In the ``CRS of the target raster extent``, if specified).
+       Optional
+     - ``TARGET_EXTENT``
+     - [extent]
+     - Sets the georeferenced extent of the output file to be
+       created (in the ``target CRS`` by default.
+       In the ``CRS of the target raster extent``, if specified).
+   * - **CRS of the target raster extent**
 
-``CRS of the target raster extent`` [crs]
-  Optional
+       Optional
+     - ``TARGET_EXTENT_CRS``
+     - [crs]
+     - Specifies the CRS in which to interpret the coordinates given
+       for the extent of the output file.
+       This must not be confused with the target CRS of the output
+       dataset.
+       It is instead a convenience e.g. when knowing the output
+       coordinates in a geodetic long/lat CRS, but wanting a result
+       in a projected coordinate system.
+   * - **Use multithreaded warping implementation**
+     - ``MULTITHREADING``
+     - [boolean]
 
-  Specifies the CRS in which to interpret the coordinates given for the extent
-  of the output file. This must not be confused with the target CRS of the output
-  dataset. It is instead a convenience e.g. when knowing the output coordinates
-  in a geodetic long/lat CRS, but wanting a result in a projected coordinate system.
+       Default: False
+     - Two threads will be used to process chunks of the image and
+       perform input/output operations simultaneously.
+       Note that the computation itself is not multithreaded.
+   * - **Additional command-line parameters**
+       
+       Optional
+     - ``EXTRA``
+     - [string]
 
-``Use multithreaded warping implementation`` [boolean]
-  Two threads will be used to process chunks of the image and perform input/output
-  operations simultaneously. Note that the computation itself is not multithreaded.
+       Default: None
+     - Add extra GDAL command line options.
+   * - **Reprojected**
+     - ``OUTPUT``
+     - [raster]
 
-  Default: *False*
+       Default: '[Save to temporary file]'
+     - Specification of the output raster layer.
+       One of:
 
-``Additional command line parameters`` [string]
-  Optional
+       * Save to a Temporary File
+       * Save to File...
 
-  Allows adding more advanced reprojection parameters.
+       The file encoding can also be changed here.
 
 
 Outputs
