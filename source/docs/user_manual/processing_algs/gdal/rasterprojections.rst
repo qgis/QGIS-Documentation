@@ -21,11 +21,23 @@ This algorithm is derived from the the `GDAL edit utility <https://gdal.org/gdal
 Parameters
 ..........
 
-``Input layer`` [raster]
-  Input raster layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Desired CRS`` [CRS]
-  Defines the coordinate system to apply to the input raster layer.
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Input layer**
+      - ``INPUT_LAYER``
+      - [raster]
+      - Input raster layer
+   *  - **Desired CRS**
+      - ``INPUT_LAYER``
+      - [crs]
+      - Defines the coordinate system to apply to the input raster layer
 
 
 .. _gdalextractprojection:
