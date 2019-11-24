@@ -141,7 +141,7 @@ Parameters
    :header-rows: 1
    :widths: 20 20 20 40
    :stub-columns: 0
-
+   
    * - Label
      - Name
      - Type
@@ -171,7 +171,7 @@ Parameters
        Default: 0
      - Pixel value resampling method to use.
        Options:
-
+       
        * 0 --- Nearest neighbour
        * 1 --- Bilinear
        * 2 --- Cubic
@@ -184,7 +184,7 @@ Parameters
        * 9 --- Median
        * 10 --- First quartile
        * 11 --- Third quartile
-
+       
    * - **Nodata value for output bands**
        
        Optional
@@ -221,7 +221,7 @@ Parameters
        
        Default: 0
      - Defines the format of the output raster file.
-
+       
        Options:
        
        * 0 --- Use input layer data type
@@ -257,10 +257,10 @@ Parameters
        It is instead a convenience e.g. when knowing the output
        coordinates in a geodetic long/lat CRS, but wanting a result
        in a projected coordinate system.
-   * - **Use multithreaded warping implementatio**
-     - `[boolean]
+   * - **Use multithreaded warping implementation**
+     - [boolean]
        
-       Default: FalseSource CRS
+       Default: False
      - Two threads will be used to process chunks of the image and
        perform input/output operations simultaneously.
        Note that the computation itself is not multithreaded.
@@ -272,7 +272,6 @@ Parameters
        
        Default: None
      - Add extra GDAL command line options.
-       Add extra GDAL command line options
    * - **Reprojected**
      - ``OUTPUT``
      - [raster
