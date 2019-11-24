@@ -54,7 +54,7 @@ Outputs
    * - **Layer with projection**
      - ``OUTPUT``
      - [raster]
-     - The output raster layer (with a the projection information)
+     - The output raster layer (with the new projection information)
 
 .. _gdalextractprojection:
 
@@ -123,10 +123,11 @@ Outputs
 
 Warp (reproject)
 ----------------
-Transfers a raster layer into another Coordinate Reference System (CRS).
+Reprojects a raster layer into another Coordinate Reference System (CRS).
 The output file resolution and the resampling method can be chosen.
 
-This algorithm is derived from the `GDAL warp utility <https://gdal.org/gdalwarp.html>`_ .
+This algorithm is derived from the
+`GDAL warp utility <https://gdal.org/gdalwarp.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Projections`
 
