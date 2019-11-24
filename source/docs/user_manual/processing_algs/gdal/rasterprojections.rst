@@ -117,7 +117,7 @@ Outputs
       - ``PRJ_FILE``
       - [file]
       - Text file with :file:`.prj` extension that describes the CRS.
-        Will be ``None`` if :guilable:`Create also .prj file` is False.
+        Will be ``None`` if :guilabel:`Create also .prj file` is False.
 
 
 .. _gdalwarpreproject:
