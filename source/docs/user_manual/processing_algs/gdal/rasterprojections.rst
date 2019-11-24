@@ -38,10 +38,6 @@ Parameters
      - ``CRS``
      - [crs]
      - The projection (CRS) of the output layer
-   * - **Layer with projection**
-     - ``OUTPUT``
-     - [raster]
-     - Specification of the output raster layer
 
 Outputs
 .......
@@ -275,7 +271,7 @@ Parameters
      - Add extra GDAL command line options.
    * - **Reprojected**
      - ``OUTPUT``
-     - [raster
+     - [raster]
        
        Default: '[Save to temporary file]'
      - Specification of the output raster layer.
