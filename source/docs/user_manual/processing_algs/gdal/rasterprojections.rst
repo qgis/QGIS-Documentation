@@ -258,6 +258,7 @@ Parameters
        coordinates in a geodetic long/lat CRS, but wanting a result
        in a projected coordinate system.
    * - **Use multithreaded warping implementation**
+     - ``MULTITHREADING``
      - [boolean]
        
        Default: False
