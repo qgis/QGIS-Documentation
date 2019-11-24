@@ -21,7 +21,7 @@ Two plugins are convenient when writing Python plugins.
   You may need to enable experimental plugins.
 * *Plugin reloader*. This will let you reload a plugin instead of
   having to close and restart QGIS to have the plugin reloaded.
-* *First Aid*. This will let you have a remote Python console and
+* *First Aid*. This will let you have a Python console and local debugger
   to inspect variables when an exception is raised from a plugin.
 
 
@@ -41,15 +41,25 @@ a self compiled QGIS, but only this has been tested. Paths must be adapted.
 #. Click the small gear and then :guilabel:`Add`.
 #. Select :guilabel:`Virtualenv environment`.
 #. Select a generic location for all your Python projects such as
-   :file:`~/dev/qgis/python_venv` because we will use this Python interpreter for all our plugins.
+   :file:`~/dev/qgis/venv` because we will use this Python interpreter for all our plugins.
 #. Choose a Python 3 base interpreter available on your system and check
    the next two options :guilabel:`Inherit global site-packages`
    and :guilabel:`Make available to all projects`.
+
+.. figure:: img/pycharm-add-venv.png
+   :align: center
+   :width: 40em
+
 #. Click :guilabel:`OK`, come back on the small gear and click :guilabel:`Show all`.
 #. In the new window, select your new interpreter ``QGIS`` and click the last icon in
    the vertical menu :guilabel:`Show paths for the selected interpreter.`
 #. Finally, add the following absolute path to the list
    :file:`~/dev/qgis/build/master/output/python`.
+
+.. figure:: img/pycharm-adding-path.png
+   :align: center
+   :width: 40em
+
 #. Restart PyCharm and you can start using this new Python virtual environment
    for all your plugins.
 
@@ -58,8 +68,9 @@ provided by QGIS like ``from qgis.PyQt.QtCore import QDir``.
 The autocompletion should work and PyCharm can inspect your code.
 
 In the professional version of PyCharm, remote debugging is working well. For the
-Community edition, remote debugging is not available. You can only do debugging inside
-unit tests.
+Community edition, remote debugging is not available. You can only have access to a local debugger,
+it means the code must run *inside* PyCharm (as script or unittest), not in QGIS itself. For Python
+code running *in* QGIS, you might use the *First Aid* plugin mentioned above.
 
 .. warning:: |outofdate|
 
