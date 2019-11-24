@@ -114,12 +114,12 @@ Outputs
       - ``WORLD_FILE``
       - [file]
       - Text file with extension :file:`.wld` containing transformation
-        parameters for  the raster file.
+        parameters for the raster file.
    *  - **ESRI Shapefile prj file**
       - ``PRJ_FILE``
       - [file]
       - Text file with :file:`.prj` extension that describes the CRS.
-        Will be None if ``Create also .prj file`` is False.
+        Will be ``None`` if :guilable:`Create also .prj file` is False.
 
 
 .. _gdalwarpreproject:
@@ -155,7 +155,7 @@ Parameters
        Optional
      - ``SOURCE_CRS``
      - [crs]
-     - Defines the CRS of the output raster layer
+     - Defines the CRS of the input raster layer
    * - **Target CRS**
 
        Optional
@@ -243,8 +243,8 @@ Parameters
      - ``TARGET_EXTENT``
      - [extent]
      - Sets the georeferenced extent of the output file to be
-       created (in the ``target CRS`` by default.
-       In the ``CRS of the target raster extent``, if specified).
+       created (in the :guilabel:`Target CRS` by default.
+       In the :guilabel:`CRS of the target raster extent`, if specified).
    * - **CRS of the target raster extent**
 
        Optional
