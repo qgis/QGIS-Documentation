@@ -124,10 +124,10 @@ Parameters
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   * -  Name
-     -  Identifier
-     -  Type
-     -  Description
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Input layers**
      - ``INPUT``
      - [raster] [list]
@@ -229,8 +229,8 @@ Outputs
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   * - Name
-     - Identifier
+   * - Label
+     - Name
      - Type
      - Description
 
