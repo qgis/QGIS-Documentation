@@ -23,114 +23,87 @@ This algorithm is derived from the `GDAL addo utility <https://www.gdal.org/gdal
 Parameters
 ..........
 
-``Input layer`` [raster]
-  Input raster layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Overview levels`` [string]
-  Defines the number of overview levels calculated by the original resolution
-  of the input raster layer. By default 4 levels will be taken into consideration.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Input raster layer
+   * - **Overview levels**
+     - ``LEVELS``
+     - [string]
+       
+       Default: '2 4 8 16'
+     - Defines the number of overview levels calculated by the original
+       resolution of the input raster layer.
+       By default 4 levels will be taken into consideration.
+   * - **Remove all existing overviews**
+     - ``CLEAN``
+     - [boolean]
+       
+       Default: False
+     - Removes existing overviews from the raster.
+       By default these are not removed.
+   * - **Resampling method**
+       
+       Optional
+     - ``RESAMPLING``
+     - [enumeration]
+       
+       Default: 0
+     - Calculates the overviews with a defined resampling method.
+       Possible resampling methods are:
+       
+       * 0 -- :guilabel:`Nearest Neighbour` (nearest)
+       * 1 -- :guilabel:`Average` (average)
+       * 2 -- :guilabel:`Gaussian` (gauss)
+       * 3 -- :guilabel:`Cubic Convolution` (cubic)
+       * 4 -- :guilabel:`B-Spline Convolution` (cubicspline)
+       * 5 -- :guilabel:`Lanczos Windowed Sinc` (lanczos)
+       * 6 -- :guilabel:`Average MP` (average_mp)
+       * 7 -- :guilabel:`Average in Mag/Phase Space` (average_magphase)
+       * 8 -- :guilabel:`Mode` (mode)
 
-  Default: *2 4 8 16*
+   * - **Overviews format**
+       
+       Optional
+     - ``FORMAT``
+     - [enumeration]
+       
+       Default: 0
+     - The overviews can be stored internally, or externally as GTiff
+       or ERDAS Imagine file.
+       By default the overviews are stored in the output raster.
+       Possible formats methods are:
 
-``Remove all existing overviews`` [boolean]
-  Removes existing overviews from the raster. By default these aren't removed.
-
-  Default: *False*
-
-``Resampling method`` [enumeration]
-  Optional
-
-  Calculates the overviews with a defined resampling method.
-
-  Options:
-
-  * 0 --- Nearest neighbour
-  * 1 --- Average
-  * 2 --- Gaussian
-  * 3 --- Cubic convolution
-  * 4 --- B-Spline convolution
-  * 5 --- Lanczos windowed sinc
-  * 6 --- Average MP
-  * 7 --- Average in mag/phase space
-  * 8 --- Mode
-
-  Default: *0*
-
-``Overview format`` [enumeration]
-  Optional
-
-  The overviews can be stored internally, or externally as GTiff or ERDAS Imagine file.
-  By default the overviews are stored in the output raster.
-
-  Options:
-
-  * 0 --- Internal (if possible)
-  * 1 --- External (GTiff .ovr)
-  * 2 --- External (ERDAS Imagine .aux)
-
-  Default: *0*
-
-Outputs
-.......
-
-``Output layer`` [raster]
-  Output raster layer with overviews.
-
-.. _gdalbuildvirtualraster:
-
-Build virtual raster
---------------------
-Builds a VRT (Virtual Dataset) that is a mosaic of the list of input GDAL-supported rasters.
-With a mosaic you can merge several raster files.
-
-This algorithm is derived from the `GDAL buildvrt utility <https://www.gdal.org/gdalbuildvrt.html>`_ .
-
-``Default menu``: :menuselection:`Raster --> Miscellaneous`
-
-Parameters
-..........
-
-``Input layers`` [raster] [list]
-  GDAL-supported raster layers.
-
-``Resolution`` [enumeration]
-  The output resolution of the mosaic. By default the average resolution of th
-  raster files will be chosen.
-
-  Options:
-
-  * 0 --- average
-  * 1 --- highest
-  * 2 --- lowest
-
-  Default: *0*
-
-``Place each input file into a separate band`` [boolean]
-  With 'True' you can define that each raster file goes into a separated stacked band
-  in the VRT band.
-
-  Default: *True*
-
-``Allow projection difference`` [boolean]
-  Allows that the output bands have different projections derived from the
-  projection of the input raster layers.
-
-  Default: *False*
-
-
-``Add alpha mask band to VRT when source raster has none`` [boolean]
-  Adds an alpha mask band to the VRT when the source raster has none.
-
-``Override projection for the output file`` [crs]
-  Optional
-
-  Overrides the projection for the output file. No reprojection is done.
+       * 0 -- Internal (if possible)
+       * 1 -- External (GTiff .ovr)
+       * 2 -- External (ERDAS Imagine .aux)
 
 Outputs
 .......
 
-``Virtual`` [raster]
-  Output raster file
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Pyramidized**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster layer with overviews
+
 
 .. _gdalmerge:
 
@@ -147,62 +120,112 @@ This algorithm is derived from the `GDAL merge utility <https://www.gdal.org/gda
 Parameters
 ..........
 
-``Input layers`` [raster] [list]
-  Input raster layers.
 
-``Grab pseudocolor table from first layer`` [boolean]
-  The pseudocolor table from the first layer will be used for the
-  coloring.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-  Default: *False*
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layers**
+     - ``INPUT``
+     - [raster] [list]
+     - Input raster layers
+   * - **Grab pseudocolor table from first layer**
+     - ``PCT``
+     - [boolean]
+       
+       Default: False
+     - The pseudocolor table from the first layer will be used
+       for the coloring
+   * - **Place each input file into a separate band**
+     - ``SEPARATE``
+     - [boolean]
+       
+       Default: False
+     - 
+   * - **Output data type**
+     - ``DATA_TYPE``
+     - [enumeration]
+       
+       Default: 5
+     - Defines the format of the output raster file.
 
-``Layer stack`` [boolean]
-  If 'True' is chosen each input file will be placed into a separate stacked band.
+       Options:
 
-  Default: *False*
-
-``Output raster type`` [enumeration]
-  Defines the output raster type. By default this will be 'Float32'.
-
-  Options:
-
-  * 0 --- Byte
-  * 1 --- Int16
-  * 2 --- UInt16
-  * 3 --- UInt32
-  * 4 --- Int32
-  * 5 --- Float32
-  * 6 --- Float64
-  * 7 --- CInt16
-  * 8 --- CInt32
-  * 9 --- CFloat32
-  * 10 --- CFloat64
-
-  Default: *5*
-
-``Input pixel value to treat as "nodata"`` [number]
-  Optional
-
-  Ignores pixels from files being merged in with this pixel value.
-
-``Assign specified "nodata" value to output`` [number]
-  Optional
-
-  Assigns the specified nodata value to output bands.
-
-``Additional creation options``
-  Optional
-
-  Allows to add one or more creation options that can be used to control
-  particulars (colorimetry, block size, file compression...) about the file to be
-  created. For convenience, you can rely on predefined profiles (see
-  :ref:`GDAL driver options section <gdal_createoptions>`).
+       * 0 --- Byte
+       * 1 --- Int16
+       * 2 --- UInt16
+       * 3 --- UInt32
+       * 4 --- Int32
+       * 5 --- Float32
+       * 6 --- Float64
+       * 7 --- CInt16
+       * 8 --- CInt32
+       * 9 --- CFloat32
+       * 10 --- CFloat64
+       
+   * - **Input pixel value to treat as "nodata**
+       
+       Optional
+     - ``NODATA_INPUT``
+     - [number]
+       
+       Default: None
+     - Ignores pixels from files being merged in with this pixel value
+   * - **Assign specified "nodata" value to output**
+       
+       Optional
+     - ``NODATA_OUTPUT``
+     - [number]
+       
+       Default: None
+     - Assigns the specified nodata value to output bands.
+   * - **Additional creation options**
+       
+       Optional
+     - ``OPTIONS``
+     - [string]
+        
+       Default: ''
+     - For adding one or more creation options that control the
+       raster to be created (colors, block size, file
+       compression...).
+       For convenience, you can rely on predefined profiles (see
+       :ref:`GDAL driver options section <gdal_createoptions>`).
+   * - **Merged**
+     - ``OUTPUT``
+     - [raster]
+       
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster layer.
+       One of:
+       
+       * Save to a Temporary File
+       * Save to File...
+       
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Output layer`` [raster]
-  Output raster layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Merged**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster layer
+
 
 .. _gdalgdalinfo:
 
@@ -217,31 +240,78 @@ This algorithm is derived from the `GDAL info utility <https://www.gdal.org/gdal
 Parameters
 ..........
 
-``Input layer`` [raster]
-  Raster layer in input.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Force computation of the actual min/max values for each band`` [boolean]
-  Forces computation of the actual min/max values for each band in the dataset.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Input raster layer
+   * - **Force computation of the actual min/max values for each band**
+     - ``MIN_MAX``
+     - [boolean]
+       
+       Default: False
+     - Forces computation of the actual min/max values for each band in
+       the dataset
+   * - **Read and display image statistics (force computation if necessary)**
+     - ``STATS``
+     - [boolean]
+       
+       Default: False
+     - Reads and displays image statistics. Forces computation if no
+       statistics are stored in an image.
+   * - **Suppress GCP info**
+     - ``NO_GCP``
+     - [boolean]
+       
+       Default: False
+     - Suppresses ground control points list printing.
+       It may be useful for datasets with huge amount of GCPs, such as
+       L1B AVHRR or HDF4 MODIS which contain thousands of them.
+   * - **Suppress metadata info**
+     - ``NO_METADATA``
+     - [boolean]
+       
+       Default: False
+     - Suppresses metadata printing.
+       Some datasets may contain a lot of metadata strings.
+   * - **Layer information**
+     - ``OUTPUT``
+     - [html]
+       
+       Default: ``[Save to temporary file]``
+     - Specify the HTML file for output.
 
-``Read and display image statistics (force computation if necessary)`` [boolean]
-  Reads and displays image statistics. Forces computation if no statistics are stored in an image.
+       One of:
+       
+       * Save to a Temporary File
+       * Save to File...
 
-``Suppress GCP info`` [boolean]
-  Suppresses ground control points list printing. It may be useful for datasets with huge amount of GCPs,
-  such as L1B AVHRR or HDF4 MODIS which contain thousands of them.
-
-  Default: *False*
-
-``Suppress metadata info`` [boolean]
-  Suppresses metadata printing. Some datasets may contain a lot of metadata strings.
-
-  Default: *False*
-
+       The file encoding can also be changed here.
+  
 Outputs
 .......
 
-``Layer information`` [html]
-  Raster information in output.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Layer information**
+     - ``OUTPUT``
+     - [html]
+     - The HTML file containing information about the input raster layer
 
 
 .. _gdaltileindex:
@@ -260,58 +330,96 @@ This algorithm is derived from the
 Parameters
 ..........
 
-``Input files`` [raster] [list]
-  The input raster files. Can be multiple files.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Field name to hold the file path to the indexed rasters`` [string]
-  Optional
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input files**
+     - ``LAYERS``
+     - [raster] [list]
+     - The input raster files. Can be multiple files.
+   * - **Field name to hold the file path to the indexed rasters**
+     - ``PATH_FIELD_NAME``
+       Optional
+     - [string]
+       
+       Default: 'location'
+     - The output field name to hold the file path/location to the
+       indexed rasters.
+   * - **Store absolute path to the indexed rasters**
+     - ``ABSOLUTE_PATH``
+     - [boolean]
+       
+       Default: False
+     - Set whether the absolute path to the raster files is
+       stored in the tile index file.
+       By default the raster filenames will be put in the
+       file exactly as they are specified in the command.
+   * - **Skip files with different projection reference**
+     - ``PROJ_DIFFERENCE``
+     - [boolean]
+       
+       Default: False
+     - Only files with same projection as files already inserted
+       in the tile index will be inserted.
+       Default does not check projection and accepts all inputs.
+   * - **Transform geometries to the given CRS**
+       
+       Optional
+     - ``TARGET_CRS``
+     - [crs]
+     - Geometries of input files will be transformed to the specified
+       target coordinate reference system.
+       Default creates simple rectangular polygons in the same
+       coordinate reference system as the input rasters.
+   * - **The name of the field to store the SRS of each tile**
+       
+       Optional
+     - ``CRS_FIELD_NAME``
+     - [string]
+     - The name of the field to store the SRS of each tile
+   * - **The format in which the CRS of each tile must be written**
+     - ``CRS_FORMAT``
+     - [enumeration]
+       Default: 0
+     - Format for the CRS. One of:
 
-  The output field name to hold the file path/location to the indexed rasters.
+       * 0 -- Auto (``AUTO``)
+       * 1 -- Well-known text (``WKT``)
+       * 2 -- EPSG (``EPSG``)
+       * 3 -- Proj.4 (``PROJ``)
 
-  Default: *location*
-
-``Store absolute path to the indexed rasters`` [boolean]
-  Set whether the absolute path to the raster files is stored in the tile index file.
-  By default the raster filenames will be put in the file exactly as they are
-  specified in the command.
-
-  Default: *False*
-
-``Skip files with different projection reference`` [boolean]
-  Only files with same projection as files already inserted in the tile index
-  will be inserted. Default does not check projection and accepts all inputs.
-
-  Default: *False*
-
-``Transform geometries to the given CRS`` [crs]
-  Optional
-
-  Geometries of input files will be transformed to the desired target coordinate
-  reference system.
-  Default creates simple rectangular polygons in the same coordinate reference
-  system as the input rasters.
-
-``The name of the field to store the SRS of each tile`` [string]
-  Optional
-
-  The name of the field to store the SRS of each tile.
-
-``The format in which the CRS of each tile must be written`` [enumeration]
-  Optional
-
-  Possible values are:
-
-  * 0 --- Auto
-  * 1 --- Well-known text (WKT)
-  * 2 --- EPSG
-  * 3 --- Proj.4
-
-  Default: *0*
+   * - **Tile index**
+     - ``OUTPUT``
+     - [vector: polygon]
+       
+       Default: ``[Save to temporary file]``
+     - Specify the polygon vector layer to write the index to.
+       One of:
+       
+       * ``Save to a Temporary File``
+       * ``Save to File``
+       
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Tile index`` [vector: polygon]
-  The name of the output file to create/append to. The default shapefile will
-  be created if it doesn't already exist, otherwise it will append to the
-  existing file.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Tile index**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The polygon vector layer with the tile index.
