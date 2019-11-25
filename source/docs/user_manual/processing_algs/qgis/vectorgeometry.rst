@@ -478,8 +478,8 @@ If the GEOS method is used the following error messages can occur:
 | Interior is disconnected             |                                              |    .. figure:: img/geos_int_discon.png  |
 |                                      |                                              |       :align: center                    |
 +--------------------------------------+----------------------------------------------+-----------------------------------------+
-| Nested shells                        |                                              |    .. figure:: img/geos_nest_shell.png  |
-|                                      |                                              |       :align: center                    | 
+| Nested shells                        | This error happens when a polygon geometry   |    .. figure:: img/geos_nest_shell.png  |
+|                                      | is on top of another polygon geometry.       |       :align: center                    | 
 +--------------------------------------+----------------------------------------------+-----------------------------------------+
 | Duplicate rings                      |                                              |    .. figure:: img/geos_dupl_rings.png  |
 |                                      |                                              |       :align: center                    |
