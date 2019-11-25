@@ -321,14 +321,6 @@ Parameters
         
         Default: 0.0
       - 
-   *  - **Additional command-line parameters** |310|
-        
-        Optional
-      - ``EXTRA``
-      - [string]
-        
-        Default: None
-      - Add extra GDAL command line options
    *  - **Additional creation options**
         
         Optional
