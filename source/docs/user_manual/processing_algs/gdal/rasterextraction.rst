@@ -192,34 +192,6 @@ Parameters
         
         Default: False
       - The resolution of the output raster will not be changed
-   *  - **Set output file resolution** |36|
-      - ``SET_RESOLUTION``
-      - [boolean]
-        
-        Default: False
-      - Shall the output resolution (cell size) be specified
-   *  - **X Resolution to output bands** |36|
-        
-        Optional
-      - ``X_RESOLUTION``
-      - [number]
-        
-        Default: None
-      - The with of the cells in the output raster
-   *  - **Y Resolution to output band** |36|
-        
-        Optional
-      - ``Y_RESOLUTION``
-      - [number]
-        
-        Default: None
-      - The height of the cells in the output raster
-   *  - **Use multithreaded warping implementation** |36|
-      - ``MULTITHREADING``
-      - [boolean]
-        
-        Default: False
-      - 
    *  - **Additional creation options**
         
         Optional
@@ -254,25 +226,6 @@ Parameters
         * 10 --- CFloat32
         * 11 --- CFloat64
 
-   *  - **Additional command-line parameters** |310|
-        
-        Optional
-      - ``EXTRA``
-      - [string]
-        
-        Default: None
-      - Add extra GDAL command line options
-   *  - **Clipped (mask)**
-      - ``OUTPUT``
-      - [raster]
-        Default: '[Save to temporary file]'
-      - Specification of the output raster layer.
-        One of:
-        
-        * Save to a Temporary File
-        * Save to File...
-        
-        The file encoding can also be changed here
 
 Outputs
 .......
