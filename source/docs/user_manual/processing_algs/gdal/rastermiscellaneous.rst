@@ -314,7 +314,7 @@ Parameters
        * 9 --- CFloat32
        * 10 --- CFloat64
        
-   * - **Input pixel value to treat as "nodata**
+   * - **Input pixel value to treat as "nodata"**
        
        Optional
      - ``NODATA_INPUT``
