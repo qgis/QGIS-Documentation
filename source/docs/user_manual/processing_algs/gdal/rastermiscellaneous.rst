@@ -27,8 +27,8 @@ Parameters
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   * - Name
-     - Identifier
+   * - Label
+     - Name
      - Type
      - Description
    * - **Input layers**
@@ -107,8 +107,8 @@ Outputs
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   * - Name
-     - Identifier
+   * - Label
+     - Name
      - Type
      - Description
    * - **Pyramidized**
@@ -249,8 +249,8 @@ Parameters
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   * - Name
-     - Identifier
+   * - Label
+     - Name
      - Type
      - Description
    * - **Input layers**
@@ -344,8 +344,8 @@ Outputs
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   * - Name
-     - Identifier
+   * - Label
+     - Name
      - Type
      - Description
    * - **Merged**
@@ -372,8 +372,8 @@ Parameters
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   * - Name
-     - Identifier
+   * - Label
+     - Name
      - Type
      - Description
    * - **Input layer**
@@ -387,7 +387,7 @@ Parameters
        Default: False
      - Forces computation of the actual min/max values for each band in
        the dataset
-   * - **Read and display image statistics (force computation if necessary**
+   * - **Read and display image statistics (force computation if necessary)**
      - ``STATS``
      - [boolean]
        
@@ -435,8 +435,8 @@ Outputs
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   * - Name
-     - Identifier
+   * - Label
+     - Name
      - Type
      - Description
    * - **Layer information**
@@ -466,8 +466,8 @@ Parameters
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   * - Name
-     - Identifier
+   * - Label
+     - Name
      - Type
      - Description
    * - **Input files**
@@ -538,8 +538,8 @@ Outputs
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   * - Name
-     - Identifier
+   * - Label
+     - Name
      - Type
      - Description
    * - **Tile index**
