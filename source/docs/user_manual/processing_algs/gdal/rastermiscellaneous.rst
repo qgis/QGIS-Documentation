@@ -105,6 +105,141 @@ Outputs
      - Output raster layer with overviews
 
 
+.. _gdalbuildvirtualraster:
+
+Build virtual raster
+--------------------
+Builds a VRT (Virtual Dataset) that is a mosaic of the list of input GDAL-supported rasters.
+With a mosaic you can merge several raster files.
+
+This algorithm is derived from the `GDAL buildvrt utility <https://gdal.org/gdalbuildvrt.html>`_ .
+
+``Default menu``: :menuselection:`Raster --> Miscellaneous`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * -  Name
+     -  Identifier
+     -  Type
+     -  Description
+   * - **Input layers**
+     - ``INPUT``
+     - [raster] [list]
+     - GDAL-supported raster layers.
+   * - **Resolution**
+     - ``RESOLUTION``
+     - [enumeration]
+       
+       Default: 0
+     - The output resolution of the mosaic.
+       By default the average resolution of the raster files
+       will be chosen.
+       
+       Options:
+       
+       * 0 --- Average (``average``)
+       * 1 --- Highest (``highest``)
+       * 2 --- Lowest (``lowest``)
+
+   * - **Place each input file into a separate band**
+     - ``SEPARATE``
+     - [boolean]
+       
+       Default: True
+     - With 'True' you can define that each raster file goes into
+       a separated stacked band in the VRT band.
+   * - **Allow projection difference**
+     - ``PROJ_DIFFERENCE``
+     - [boolean]
+       
+       Default: False
+     - Allows that the output bands have different projections
+       derived from the projection of the input raster layers.
+   * - **Add alpha mask band to VRT when source raster has none**
+     - ``ADD_ALPHA``
+     - [boolean]
+       
+       Default: False
+     - Adds an alpha mask band to the VRT when the source raster
+       has none.
+   * - **Override projection for the output file**
+       
+       (optional)
+     - ``ASSIGN_CRS``
+     - [crs]
+       
+       Default: None
+     - Overrides the projection for the output file. No reprojection is done.
+
+   * - **Resampling algorithm**
+     - ``RESAMPLING``
+     - [enumeration]
+       
+       Default: 0
+     - The resampling algorithm to be used
+
+       Options:
+       
+       * 0 --- Nearest Neighbour (``nearest``)
+       * 1 --- Bilinear (``bilinear``)
+       * 2 --- Cubic Convolution (``cubic``)
+       * 3 --- B-Spline Convolution (``cubicspline``)
+       * 4 --- Lanczos Windowed Sinc (``lanczos``)
+       * 5 --- Average (``average``)
+       * 6 --- Mode (``mode``)
+
+   * - **Nodata value(s) for input bands (space separated)**
+       
+       Optional
+     - ``SRC_NODATA``
+     - [string]
+       
+       Default: None
+     - Space separated Nodata value(s) for input band(s)
+   * -  **Additional command-line parameters**
+     -  ``EXTRA``
+     -  [string]
+        
+        Default: None
+     -  Add extra GDAL command line options
+   * -  **Virtual**
+     -  ``OUTPUT``
+     -  [raster]    
+        
+        Default: ``[Save to temporary file]``
+     -  Specification of the output raster layer.
+        One of:
+        
+        * Save to a Temporary File
+        * Save to File...
+        
+        The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Name
+     - Identifier
+     - Type
+     - Description
+
+   * - **Virtual**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster layer
+
+
 .. _gdalmerge:
 
 Merge
