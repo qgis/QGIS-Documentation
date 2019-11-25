@@ -128,3 +128,32 @@
   Default: *Intersect*
 
 **end_geometric_predicates**
+
+.. The following section is included in database algorithms such as
+ qgispostgisexecutesql, qgispostgisexecuteandloadsql
+ 
+**postgisexecutesqlexample**
+
+**Example**
+
+#. Set all the values of an existing field to a fixed value. The SQL query string
+   will be:
+
+   .. code-block:: sql
+
+    UPDATE your_table SET field_to_update=20;
+
+   In the example above, the values of the field ``field_to_update`` of the table
+   ``your_table`` will be all set to ``20``.
+
+#. Create a new ``area`` column and calculate the area of each feature with the
+   ``ST_AREA`` PostGIS function.
+
+   .. code-block:: sql
+
+    -- Create the new column "area" on the table your_table"
+    ALTER TABLE your_table ADD COLUMN area double precision;
+    -- Update the "area" column and calculate the area of each feature:
+    UPDATE your_table SET area=ST_AREA(geom);
+
+**end_postgisexecutesqlexample**

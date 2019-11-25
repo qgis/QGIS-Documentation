@@ -239,33 +239,12 @@ run queries on the layer itself.
 
 .. _qgis_postgis_execute_sql_example:
 
-Example
-.......
-1. Set all the values of an existing field to a fixed value. The SQL query string
-will be:
+.. include:: qgis_algs_include.rst
+   :start-after: **postgisexecutesqlexample**
+   :end-before: **end_postgisexecutesqlexample**
 
-.. code-block:: sql
-
-  UPDATE your_table SET field_to_update=20;
-
-in the example above, the values of the field ``field_to_update`` of the table
-``your_table`` will be all set to ``20``.
-
-2. Create a new ``area`` column and calculate the area of each feature with the
-``ST_AREA`` PostGIS function.
-
-Run the first query and create the new column ``area`` on the table ``my_table``:
-
-.. code-block:: sql
-
-  ALTER TABLE my_table ADD COLUMN area double precision;
-
-Run the second query and update the ``area`` column and calculate the area of each
-feature:
-
-.. code-block:: sql
-
-  UPDATE my_table SET area=ST_AREA(geom);
+.. seealso:: :ref:`qgispostgisexecutesql`, :ref:`qgisexecutesql`,
+ :ref:`qgisspatialiteexecutesql`
 
 Parameters
 ..........
@@ -304,9 +283,13 @@ Allows a SQL database query to be performed on a PostgreSQL database connected t
 The algorithm **won't** create any new layer: it is designed to run queries on
 the layer itself.
 
-.. seealso:: For some SQL query examples see :ref:`PostGIS SQL Query Examples
- <qgis_postgis_execute_sql_example>`.
- 
+.. include:: qgis_algs_include.rst
+   :start-after: **postgisexecutesqlexample**
+   :end-before: **end_postgisexecutesqlexample**
+
+.. seealso:: :ref:`qgispostgisexecuteandloadsql`, :ref:`qgisexecutesql`,
+ :ref:`qgisspatialiteexecutesql`
+
 Parameters
 ..........
 
@@ -332,6 +315,11 @@ Allows a SQL database query to be performed on a SpatiaLite database connected t
 The algorithm **won't** create any new layer: it is designed to run queries on
 the layer itself.
 
+.. seealso:: :ref:`qgispostgisexecutesql`, :ref:`qgisexecutesql`
+
+ For some SQL query examples see :ref:`PostGIS SQL Query Examples
+ <qgis_postgis_execute_sql_example>`.
+
 Parameters
 ..........
 
@@ -348,9 +336,6 @@ Parameters
 Outputs
 .......
 No new layer is created. The SQL query is executed in place on the layer.
-
-.. seealso:: For some SQL query examples see :ref:`PostGIS SQL Query Examples
- <qgis_postgis_execute_sql_example>`.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
