@@ -60,15 +60,15 @@ Parameters
      - Calculates the overviews with a defined resampling method.
        Possible resampling methods are:
        
-       * 0 -- :guilabel:`Nearest Neighbour` (nearest)
-       * 1 -- :guilabel:`Average` (average)
-       * 2 -- :guilabel:`Gaussian` (gauss)
-       * 3 -- :guilabel:`Cubic Convolution` (cubic)
-       * 4 -- :guilabel:`B-Spline Convolution` (cubicspline)
-       * 5 -- :guilabel:`Lanczos Windowed Sinc` (lanczos)
-       * 6 -- :guilabel:`Average MP` (average_mp)
-       * 7 -- :guilabel:`Average in Mag/Phase Space` (average_magphase)
-       * 8 -- :guilabel:`Mode` (mode)
+       * 0 -- Nearest Neighbour (``nearest``)
+       * 1 -- Average (``average``)
+       * 2 -- Gaussian (``gauss``)
+       * 3 -- Cubic Convolution (``cubic``)
+       * 4 -- B-Spline Convolution (``cubicspline``)
+       * 5 -- Lanczos Windowed Sinc (``lanczos``)
+       * 6 -- Average MP (``average_mp``)
+       * 7 -- Average in Mag/Phase Space (``average_magphase``)
+       * 8 -- Mode (``mode``)
 
    * - **Overviews format**
        
@@ -94,6 +94,10 @@ Parameters
        
        Default: None
      - Add extra GDAL command line options
+   * - **Pyramidized**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster layer
 
 Outputs
 .......
@@ -115,8 +119,8 @@ Outputs
 
 .. _gdalbuildvirtualraster:
 
-Build virtual raster |36|
--------------------------
+Build virtual raster
+--------------------
 Builds a VRT (Virtual Dataset) that is a mosaic of the list of input GDAL-supported rasters.
 With a mosaic you can merge several raster files.
 
@@ -132,126 +136,120 @@ Parameters
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  -  Name
-      -  Identifier
-      -  Type
-      -  Description
-      
-   *  - **Input layers**
-      - ``INPUT``
-      - [raster] [list]
-      - GDAL-supported raster layers.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layers**
+     - ``INPUT``
+     - [raster] [list]
+     - GDAL-supported raster layers.
+   * - **Resolution**
+     - ``RESOLUTION``
+     - [enumeration]
+       
+       Default: 0
+     - The output resolution of the mosaic.
+       By default the average resolution of the raster files
+       will be chosen.
+       
+       Options:
+       
+       * 0 --- Average (``average``)
+       * 1 --- Highest (``highest``)
+       * 2 --- Lowest (``lowest``)
 
-   *  - **Resolution**
-      - ``RESOLUTION``
-      - [enumeration]
+   * - **Place each input file into a separate band**
+     - ``SEPARATE``
+     - [boolean]
+       
+       Default: True
+     - With 'True' you can define that each raster file goes into
+       a separated stacked band in the VRT band.
+   * - **Allow projection difference**
+     - ``PROJ_DIFFERENCE``
+     - [boolean]
+       
+       Default: False
+     - Allows that the output bands have different projections
+       derived from the projection of the input raster layers.
+   * - **Add alpha mask band to VRT when source raster has none**
+     - ``ADD_ALPHA``
+     - [boolean]
+       
+       Default: False
+     - Adds an alpha mask band to the VRT when the source raster
+       has none.
+   * - **Override projection for the output file**
+       
+       (optional)
+     - ``ASSIGN_CRS``
+     - [crs]
+       
+       Default: None
+     - Overrides the projection for the output file. No reprojection is done.
 
-        Default: 0
-      - The output resolution of the mosaic.
-        By default the average resolution of the raster files
-        will be chosen.
-        
-        Options:
+   * - **Resampling algorithm**
+     - ``RESAMPLING``
+     - [enumeration]
+       
+       Default: 0
+     - The resampling algorithm to be used
 
-        * 0 --- :guilabel:`Average` (average)
-        * 1 --- :guilabel:`Highest` (highest)
-        * 2 --- :guilabel:`Lowest` (lowest)
+       Options:
+       
+       * 0 --- Nearest Neighbour (``nearest``)
+       * 1 --- Bilinear (``bilinear``)
+       * 2 --- Cubic Convolution (``cubic``)
+       * 3 --- B-Spline Convolution (``cubicspline``)
+       * 4 --- Lanczos Windowed Sinc (``lanczos``)
+       * 5 --- Average (``average``)
+       * 6 --- Mode (``mode``)
 
-   *  - **Place each input file into a separate band**
-      - ``SEPARATE``
-      - [boolean]
-
-        Default: True
-      - With 'True' you can define that each raster file goes into
-        a separated stacked band in the VRT band.
-
-   *  - **Allow projection difference**
-      - ``PROJ_DIFFERENCE``
-      - [boolean]
-
-        Default: False
-      - Allows that the output bands have different projections
-        derived from the projection of the input raster layers.
-
-   *  - **Add alpha mask band to VRT when source raster has none**
-      - ``ADD_ALPHA``
-      - [boolean]
-        
-        Default: False
-      - Adds an alpha mask band to the VRT when the source raster
-        has none.
-
-   *  - **Override projection for the output file**
-   
-        (optional)
-      - ``ASSIGN_CRS``
-      - [crs]
+   * - **Nodata value(s) for input bands (space separated)**
+       
+       Optional
+     - ``SRC_NODATA``
+     - [string]
+       
+       Default: None
+     - Space separated Nodata value(s) for input band(s)
+   * -  **Additional command-line parameters**
+     -  ``EXTRA``
+     -  [string]
         
         Default: None
-      - Overrides the projection for the output file. No reprojection is done.
-
-   *  - **Resampling algorithm**
-      - ``RESAMPLING``
-      - [enumeration]
+     -  Add extra GDAL command line options
+   * -  **Virtual**
+     -  ``OUTPUT``
+     -  [raster]    
         
-        Default: 0
-      - The resampling algorithm to be used
-
-        Options:
-
-        * 0 --- :guilabel:`Nearest Neighbour` (nearest)
-        * 1 --- :guilabel:`Bilinear` (bilinear)
-        * 2 --- :guilabel:`Cubic Convolution` (cubic)
-        * 3 --- :guilabel:`B-Spline Convolution` (cubicspline)
-        * 4 --- :guilabel:`Lanczos Windowed Sinc` (lanczos)
-        * 5 --- :guilabel:`Average` (average)
-        * 6 --- :guilabel:`Mode` (mode)
-  
-   *  - **Nodata value(s) for input bands (space separated)**
+        Default: ``[Save to temporary file]``
+     -  Specification of the output raster layer.
+        One of:
         
-        Optional
-      - ``SRC_NODATA``
-      - [number] [list]
+        * Save to a Temporary File
+        * Save to File...
         
-        Default: None
-      - Space separated Nodata value(s) for input band(s)
-
-   *  -  **Additional command-line parameters**
-      -  ``EXTRA``
-      -  [string]
-         
-         Default: None
-      -  Add extra GDAL command line options
-
-   *  -  **Virtual**
-      -  ``OUTPUT``
-      -  [raster]       
-         Default: '[Save to temporary file]'
-      -  Specification of the output raster layer.
-         One of:
-         
-         * :guilabel:`Save to a Temporary File`
-         * :guilabel:`Save to File...`
-         
-         The file encoding can also be changed here.
+        The file encoding can also be changed here.
 
 Outputs
-..........
+.......
 
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  -  Name
-      -  Identifier
-      -  Type
-      -  Description
+   * - Label
+     - Name
+     - Type
+     - Description
 
-   *  -  **Virtual**
-      -  ``OUTPUT``
-      -  [raster]
-      -  Output raster layer
+   * - **Virtual**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster layer
 
 
 .. _gdalmerge:
@@ -294,7 +292,7 @@ Parameters
      - [boolean]
        
        Default: False
-     - 
+     - Place each input file into a separate band
    * - **Output data type**
      - ``DATA_TYPE``
      - [enumeration]
@@ -316,7 +314,7 @@ Parameters
        * 9 --- CFloat32
        * 10 --- CFloat64
        
-   * - **Input pixel value to treat as "nodata**
+   * - **Input pixel value to treat as "nodata"**
        
        Optional
      - ``NODATA_INPUT``
@@ -562,8 +560,8 @@ Parameters
      - Specify the polygon vector layer to write the index to.
        One of:
        
-       * ``Save to a Temporary File``
-       * ``Save to File``
+       * Save to a Temporary File
+       * Save to File
        
        The file encoding can also be changed here.
 
