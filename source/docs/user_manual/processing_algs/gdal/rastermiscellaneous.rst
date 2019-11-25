@@ -31,7 +31,7 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Input layers**
+   * - **Input layer**
      - ``INPUT``
      - [raster]
      - Input raster layer
@@ -60,15 +60,15 @@ Parameters
      - Calculates the overviews with a defined resampling method.
        Possible resampling methods are:
        
-       * 0 -- Nearest Neighbour
-       * 1 -- Average
-       * 2 -- Gaussian
-       * 3 -- Cubic Convolution
-       * 4 -- B-Spline Convolution
-       * 5 -- Lanczos Windowed Sinc
-       * 6 -- Average MP
-       * 7 -- Average in Mag/Phase Space
-       * 8 -- Mode
+       * 0 -- :guilabel:`Nearest Neighbour` (nearest)
+       * 1 -- :guilabel:`Average` (average)
+       * 2 -- :guilabel:`Gaussian` (gauss)
+       * 3 -- :guilabel:`Cubic Convolution` (cubic)
+       * 4 -- :guilabel:`B-Spline Convolution` (cubicspline)
+       * 5 -- :guilabel:`Lanczos Windowed Sinc` (lanczos)
+       * 6 -- :guilabel:`Average MP` (average_mp)
+       * 7 -- :guilabel:`Average in Mag/Phase Space` (average_magphase)
+       * 8 -- :guilabel:`Mode` (mode)
 
    * - **Overviews format**
        
@@ -94,10 +94,6 @@ Parameters
        
        Default: None
      - Add extra GDAL command line options
-   * - **Pyramidized**
-     - ``OUTPUT``
-     - [raster]
-     - Output raster layer
 
 Outputs
 .......
@@ -142,12 +138,12 @@ Parameters
       -  Description
       
    *  - **Input layers**
-      - INPUT
+      - ``INPUT``
       - [raster] [list]
       - GDAL-supported raster layers.
 
    *  - **Resolution**
-      - RESOLUTION
+      - ``RESOLUTION``
       - [enumeration]
 
         Default: 0
@@ -157,12 +153,12 @@ Parameters
         
         Options:
 
-        * 0 --- average
-        * 1 --- highest
-        * 2 --- lowest
+        * 0 --- :guilabel:`Average` (average)
+        * 1 --- :guilabel:`Highest` (highest)
+        * 2 --- :guilabel:`Lowest` (lowest)
 
    *  - **Place each input file into a separate band**
-      - SEPARATE
+      - ``SEPARATE``
       - [boolean]
 
         Default: True
@@ -170,7 +166,7 @@ Parameters
         a separated stacked band in the VRT band.
 
    *  - **Allow projection difference**
-      - PROJ_DIFFERENCE
+      - ``PROJ_DIFFERENCE``
       - [boolean]
 
         Default: False
@@ -178,37 +174,66 @@ Parameters
         derived from the projection of the input raster layers.
 
    *  - **Add alpha mask band to VRT when source raster has none**
-      - ADD_ALPHA
+      - ``ADD_ALPHA``
       - [boolean]
+        
+        Default: False
       - Adds an alpha mask band to the VRT when the source raster
         has none.
 
    *  - **Override projection for the output file**
    
         (optional)
-      - ASSIGN_CRS
+      - ``ASSIGN_CRS``
       - [crs]
+        
+        Default: None
       - Overrides the projection for the output file. No reprojection is done.
-  
-   *  - **Nodata value(s) for input bands (space separated)**
-      - SRC_NODATA
-      - [number] [list]
-      - Space separated Nodata value(s) for input band(s)
 
    *  - **Resampling algorithm**
-      - RESAMPLING
+      - ``RESAMPLING``
       - [enumeration]
+        
+        Default: 0
       - The resampling algorithm to be used
 
         Options:
 
-        * 0 --- nearest
-        * 1 --- bilinear
-        * 2 --- cubic
-        * 3 --- cubicspline
-        * 4 --- lanczos
-        * 5 --- average
-        * 6 --- mode
+        * 0 --- :guilabel:`Nearest Neighbour` (nearest)
+        * 1 --- :guilabel:`Bilinear` (bilinear)
+        * 2 --- :guilabel:`Cubic Convolution` (cubic)
+        * 3 --- :guilabel:`B-Spline Convolution` (cubicspline)
+        * 4 --- :guilabel:`Lanczos Windowed Sinc` (lanczos)
+        * 5 --- :guilabel:`Average` (average)
+        * 6 --- :guilabel:`Mode` (mode)
+  
+   *  - **Nodata value(s) for input bands (space separated)**
+        
+        Optional
+      - ``SRC_NODATA``
+      - [number] [list]
+        
+        Default: None
+      - Space separated Nodata value(s) for input band(s)
+
+   *  -  **Additional command-line parameters**
+      -  ``EXTRA``
+      -  [string]
+         
+         Default: None
+      -  Add extra GDAL command line options
+
+   *  -  **Virtual**
+      -  ``OUTPUT``
+      -  [raster]       
+         Default: '[Save to temporary file]'
+      -  Specification of the output raster layer.
+         One of:
+         
+         * :guilabel:`Save to a Temporary File`
+         * :guilabel:`Save to File...`
+         
+         The file encoding can also be changed here.
 
 Outputs
 ..........
@@ -223,8 +248,8 @@ Outputs
       -  Type
       -  Description
 
-   *  -  **ParameterVrtDestination**
-      -  OUTPUT
+   *  -  **Virtual**
+      -  ``OUTPUT``
       -  [raster]
       -  Output raster layer
 
@@ -259,17 +284,38 @@ Parameters
      - Input raster layers
    * - **Grab pseudocolor table from first layer**
      - ``PCT``
-     - [Boolean]
+     - [boolean]
        
        Default: False
      - The pseudocolor table from the first layer will be used
        for the coloring
    * - **Place each input file into a separate band**
      - ``SEPARATE``
-     - [Boolean]
+     - [boolean]
        
        Default: False
      - 
+   * - **Output data type**
+     - ``DATA_TYPE``
+     - [enumeration]
+       
+       Default: 5
+     - Defines the format of the output raster file.
+
+       Options:
+
+       * 0 --- Byte
+       * 1 --- Int16
+       * 2 --- UInt16
+       * 3 --- UInt32
+       * 4 --- Int32
+       * 5 --- Float32
+       * 6 --- Float64
+       * 7 --- CInt16
+       * 8 --- CInt32
+       * 9 --- CFloat32
+       * 10 --- CFloat64
+       
    * - **Input pixel value to treat as "nodata**
        
        Optional
@@ -304,37 +350,18 @@ Parameters
         
        Default: None
      - Add extra GDAL command line options
-   * - **Output data type**
-     - ``DATA_TYPE``
-     - [enumeration]
-       
-       Default: 5
-     - Defines the format of the output raster file.
-
-       Options:
-
-       * 0 --- Use input layer data type
-       * 1 --- Byte
-       * 2 --- Int16
-       * 3 --- UInt16
-       * 4 --- UInt32
-       * 5 --- Int32
-       * 6 --- Float32
-       * 7 --- Float64
-       * 8 --- CInt16
-       * 9 --- CInt32
-       * 10 --- CFloat32
-       * 11 --- CFloat64
-       
    * - **Merged**
      - ``OUTPUT``
      - [raster]
+       
+       Default: ``[Save to temporary file]``
      - Specification of the output raster layer.
-       One of 
+       One of:
+       
        * Save to a Temporary File
        * Save to File...
        
-       The file encoding can also be changed here
+       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -418,6 +445,8 @@ Parameters
    * - **Layer information**
      - ``OUTPUT``
      - [html]
+       
+       Default: ``[Save to temporary file]``
      - Specify the HTML file for output.
 
        One of:
@@ -499,7 +528,7 @@ Parameters
      - Only files with same projection as files already inserted
        in the tile index will be inserted.
        Default does not check projection and accepts all inputs.
-   * - **Transform geometries to the given CR**
+   * - **Transform geometries to the given CRS**
        
        Optional
      - ``TARGET_CRS``
@@ -528,7 +557,15 @@ Parameters
    * - **Tile index**
      - ``OUTPUT``
      - [vector: polygon]
-     - The polygon vector file to write the index to.
+       
+       Default: ``[Save to temporary file]``
+     - Specify the polygon vector layer to write the index to.
+       One of:
+       
+       * ``Save to a Temporary File``
+       * ``Save to File``
+       
+       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -545,7 +582,7 @@ Outputs
    * - **Tile index**
      - ``OUTPUT``
      - [vector: polygon]
-     - The polygon vector file with the tile index.
+     - The polygon vector layer with the tile index.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
