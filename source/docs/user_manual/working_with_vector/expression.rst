@@ -754,20 +754,21 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 
     CASE WHEN $area > 10 000 THEN 'Larger' ELSE 'Smaller' END
 
-* You can manipulate the current geometry with the variable $geometry to create
+* You can manipulate the current geometry using the variable ``$geometry`` to create
   a buffer or get the point on surface::
 
     buffer( $geometry, 10 )
     point_on_surface( $geometry )
 
-* Given a point feature, generate a closed line to whom it's the center point::
+* Given a point feature, generate a closed line (using ``make_line``) around the
+  point's geometry::
 
     make_line(
       -- using an array of points placed around the original
       array_foreach(
-        -- list of angles to place a projected point (every 90°)
+        -- list of angles for placing the projected points (every 90°)
         array:=generate_series( 0, 360, 90 ),
-        -- translate point for 20 units using the associated angle
+        -- translate the point 20 units in the given direction (angle)
         expression:=project( $geometry, distance:=20, azimuth:=radians( @element ) )
       )
     )
