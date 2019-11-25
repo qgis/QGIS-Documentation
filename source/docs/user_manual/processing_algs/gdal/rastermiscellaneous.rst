@@ -61,15 +61,15 @@ Parameters
      - Calculates the overviews with a defined resampling method.
        Possible resampling methods are:
        
-       * 0 -- :guilabel:`Nearest Neighbour` (nearest)
-       * 1 -- :guilabel:`Average` (average)
-       * 2 -- :guilabel:`Gaussian` (gauss)
-       * 3 -- :guilabel:`Cubic Convolution` (cubic)
-       * 4 -- :guilabel:`B-Spline Convolution` (cubicspline)
-       * 5 -- :guilabel:`Lanczos Windowed Sinc` (lanczos)
-       * 6 -- :guilabel:`Average MP` (average_mp)
-       * 7 -- :guilabel:`Average in Mag/Phase Space` (average_magphase)
-       * 8 -- :guilabel:`Mode` (mode)
+       * 0 -- Nearest Neighbour (``nearest``)
+       * 1 -- Average (``average``)
+       * 2 -- Gaussian (``gauss``)
+       * 3 -- Cubic Convolution (``cubic``)
+       * 4 -- B-Spline Convolution (``cubicspline``)
+       * 5 -- Lanczos Windowed Sinc (``lanczos``)
+       * 6 -- Average MP (``average_mp``)
+       * 7 -- Average in Mag/Phase Space (``average_magphase``)
+       * 8 -- Mode (``mode``)
 
    * - **Overviews format**
        
