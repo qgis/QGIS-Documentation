@@ -27,51 +27,97 @@ for features can also be specified.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Field name`` [string]
-  Name of the field with autoincremental values.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - The input vector layer.
+   * - **Field name**
+     - ``FIELD_NAME``
+     - [string]
 
-  Default: *AUTO*
+       Default: 'AUTO'
+     - Name of the field with autoincremental values
+   * - **Start values at**
 
-``Start values at`` [number]
-  Optional
+       Optional
+     - ``START``
+     - [number]
 
-  Choose the initial number of the incremental count.
+       Default: 0
+     - Choose the initial number of the incremental count
+   * - **Group values by**
 
-  Default: *0*
+       Optional
+     - ``GROUP_FIELDS``
+     - [tablefield: any] [list]
+     - Select grouping field(s): instead of a single count
+       run for the whole layer, a separate count is processed
+       for each value returned by the combination of these
+       fields.
+   * - **Sort expression**
 
-``Group values by`` [tablefield: any] [list]
-  Optional
+       Optional
+     - ``SORT_EXPRESSION``
+     - [expression]
+     - Use an expression to sort the features in the layer
+       either globally or if set, based on group fields.
+   * - **Sort ascending**
+     - ``SORT_ASCENDING``
+     - [boolean]
 
-  Select grouping field(s): instead of a single count run for the whole layer,
-  a separate count is processed for each value returned by the combination of
-  these fields.
+       Default: True
+     - When a ``sort expression`` is set, use this option
+       to control the order in which features are assigned
+       values.
+   * - **Sort nulls first**
+     - ``SORT_NULLS_FIRST``
+     - [boolean]
 
-``Sort expression`` [expression]
-  Optional
+       Default: False
+     - When a ``sort expression`` is set, use this option
+       to set whether *Null* values are counted first or
+       last.
+   * - **Incremented**
+     - ``OUTPUT``
+     - [vector: any]
 
-  Use an expression to sort the features in the layer either globally
-  or if set, based on group fields.
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer with the auto increment
+       field.
+       One of:
 
-``Sort ascending`` [boolean]
-  When a ``sort expression`` is set, use this option to control the order in
-  which features are assigned values.
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-  Default: *True*
-
-``Sort nulls first`` [boolean]
-  When a ``sort expression`` is set, use this option to set whether
-  *Null* values are counted first or last.
-
-  Default: *False*
-
+       The file encoding can also be changed here.
+       
 Outputs
 .......
 
-``Incremented`` [vector: any]
-  Vector layer with auto incremental field.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Incremented**
+     - ``OUTPUT``
+     - [vector: any]
+     - Vector layer with auto incremental field
 
 
 .. _qgisaddfieldtoattributestable:
@@ -88,36 +134,79 @@ instead.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Field name`` [string]
-  Name of the new field.
+   * - Label
+     - Name
+     - Type
+     - Description
 
-``Field type`` [enumeration]
-  Type of the new field. You can choose between:
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - The input layer
+   * - **Field name**
+     - ``FIELD_NAME``
+     - [string]
+     - Name of the new field
+   * - **Field type**
+     - ``FIELD_TYPE``
+     - [enumeration]
 
-  * 0 --- Integer
-  * 1 --- Float
-  * 2 --- String
+       Default: 0
+     - Type of the new field. You can choose between:
 
-  Default: *0*
+       * 0 --- Integer
+       * 1 --- Float
+       * 2 --- String
 
-``Field length`` [number]
-  Length of the field.
+   * - **Field length**
+     - ``FIELD_LENGTH``
+     - [number]
 
-  Default: *10*
+       Default: 10
+     - Length of the field
+   * - **Field precision**
+     - ``FIELD_PRECISION``
+     - [number]
 
-``Field precision`` [number]
-  Precision of the field. Useful with Float field type.
+       Default: 0
+     - Precision of the field. Useful with Float field type.
+   * - **Added**
+     - ``OUTPUT``
+     - [vector: any]
 
-  Default: *0*
+       Default: ``[Create temporary layer]``
+     - Specification of the output vector layer.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
+
 
 Outputs
 .......
 
-``Added`` [vector: any]
-  Vector layer with new field added.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Added**
+     - ``OUTPUT``
+     - [vector: any]
+     - Vector layer with new field added
 
 
 .. _qgisadduniquevalueindexfield:
@@ -139,28 +228,85 @@ instead.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Class field`` [tablefield: any]
-  Features of the same value are given the same index.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - The input layer.
+   * - **Class field**
+     - ``FIELD``
+     - [tablefield: any]
+     - Features that have the same value for this field will get the
+       same index.
+   * - **Output field name**
+     - ``FIELD_NAME``
+     - [string]
 
-``Output field name`` [tablefield: any]
-  Name of the new field containing the indexes.
+       Default: 'NUM_FIELD'
+     - Name of the new field containing the indexes.
+   * - **Layer with index field**
+     - ``OUTPUT``
+     - [vector: any]
 
-  Default: *NUM_FIELD*
+       Default: ``[Create temporary layer]``
+     - Vector layer with the numeric field containing indexes.
+       One of:
+
+       * Skip Output
+       * Create Temporary Layer
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
+   * - **Class summary**
+     - ``SUMMARY_OUTPUT``
+     - [table]
+
+       Default: ``[Skip output]``
+     - Specification of table to contain the summary of the class field
+       mapped to the corresponding unique value.
+       One of:
+
+       * Skip Output
+       * Create Temporary Layer
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
+
 
 Outputs
 .......
 
-``Layer with index field`` [vector: any]
-  Vector layer with the numeric field containing indexes.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Class summary`` [table]
-  Table with summary of the class field mapped to the corresponding unique value.
+   * - Label
+     - Name
+     - Type
+     - Description
 
-  Default: *Skip Output*
-
+   * - **Layer with index field**
+     - ``OUTPUT``
+     - [vector: any]
+     - Vector layer with the numeric field containing indexes.
+   * - **Class summary**
+     - ``SUMMARY_OUTPUT``
+     - [table]
+     - Table with summary of the class field mapped to the corresponding
+       unique value.
 
 .. _qgisadvancedpythonfieldcalculator:
 
@@ -174,53 +320,100 @@ The expression is defined as a Python function.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Result field name`` [string]
-  Name of the new field.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Result field name**
+     - ``FIELD_NAME``
+     - [string]
 
-  Default: *NewField*
+       Default: 'NewField'
+     - Name of the new field
+   * - **Field type**
+     - ``FIELD_TYPE``
+     - [enumeration]
 
-``Field type`` [enumeration]
-  Type of the new field. You can choose between:
+       Default: 0
+     - Type of the new field. One of:
 
-  * 0 --- Integer
-  * 1 --- Float
-  * 2 --- String
+       * 0 --- Integer
+       * 1 --- Float
+       * 2 --- String
 
-  Default: *0*
+   * - **Field length**
+     - ``FIELD_LENGTH``
+     - [number]
 
-``Field length`` [number]
-  Length of the field.
+       Default: 10
+     - Length of the field
+   * - **Field precision**
+     - ``FIELD_PRECISION``
+     - [number]
 
-  Default: *10*
+       Default: 3
+     - Precision of the field. Useful with Float field type.
+   * - **Global expression**
 
-``Field precision`` [number]
-  Precision of the field. Useful with Float field type.
+       Optional
+     - ``GLOBAL``
+     - [string]
+     - The code in the global expression section will be
+       executed only once before the calculator starts
+       iterating through all the features of the input layer.
+       Therefore, this is the correct place to import
+       necessary modules or to calculate variables that
+       will be used in subsequent calculations.
+   * - **Formula**
+     - ``FORMULA``
+     - [string]
+     - The Python formula to evaluate.
+       Example: To calculate the area of an input polygon layer you
+       can add::
+       
+         value = $geom.area()
+       
+   * - **Calculated**
+     - ``OUTPUT``
+     - [vector: any]
 
-  Default: *3*
+       Default: ``[Create temporary layer]``
+     - Specify the vector layer with the new calculated
+       field. One of:
 
-``Global expression`` [string]
-  Optional
+       * Create Temporary Layer
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
 
-  The code in the global expression section will be executed only once before the
-  calculator starts iterating through all the features of the input layer.
-  Therefore, this is the correct place to import necessary modules or to calculate
-  variables that will be used in subsequent calculations.
-
-``Formula`` [string]
-  Add here the Python formula to evaluate. For example to calculate the area of
-  an input polygon layer you can add::
-
-    value = $geom.area()
+       The file encoding can also be changed here.
 
 
 Outputs
 .......
 
-``Calculated`` [vector: any]
-  Vector layer with the new calculated field.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Calculated**
+     - ``OUTPUT``
+     - [vector: any]
+     - Vector layer with the new calculated field
 
 
 .. _qgisdeletecolumn:
@@ -233,17 +426,53 @@ without the selected columns.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer to drop field(s) from.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Fields to drop`` [tablefield: any] [list]
-  Select the field(s) to drop.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer to drop field(s) from
+   * - **Fields to drop**
+     - ``COLUMN``
+     - [tablefield: any] [list]
+     - The field(s) to drop
+   * - **Remaining fields**
+     - ``OUTPUT``
+     - [vector: any]
+
+       Default: ``[Create temporary layer]``
+     - Vector layer with the remaining fields. One of:
+
+       * Create Temporary Layer
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Fields dropped`` [vector: any]
-  Vector layer without the field(s) chosen.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Remaining fields**
+     - ``OUTPUT``
+     - [vector: any]
+     - Vector layer with the remaining fields
 
 
 .. _qgisfeaturefilter:
@@ -265,20 +494,20 @@ Parameters
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Input layer**
-      - INPUT
-      - [vector: any]
-      - The input layer.
-   *  - **Outputs and filters**
-        
-        (one or more)
-      - OUTPUT_<name of the filter>
-      - [vector: any]
-      - The output layers with filters (as many as there are filters).
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - The input layer.
+   * - **Outputs and filters**
+
+       (one or more)
+     - ``OUTPUT_<name of the filter>``
+     - [vector: any]
+     - The output layers with filters (as many as there are filters).
 
 Outputs
 .......
@@ -288,17 +517,17 @@ Outputs
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Output**
-        
-        (one or more)
-      - native:filter_1:OUTPUT_<name of filter>
-      - [vector: any]
-      - The output layers with filtered features (as many as there are
-        filters).
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output**
+
+       (one or more)
+     - ``native:filter_1:OUTPUT_<name of filter>``
+     - [vector: any]
+     - The output layers with filtered features (as many as there are
+       filters).
 
 
 
@@ -312,6 +541,85 @@ supported expressions and functions.
 A new layer is created with the result of the expression.
 
 The field calculator is very useful when used in :ref:`processing.modeler`.
+
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - The layer to calculate on
+   * - **Output field name**
+     - ``FIELD_NAME``
+     - [string]
+     - The name of the field for the results
+   * - **Output field type**
+     - ``FIELD_TYPE``
+     - [enumeration]
+       
+       Default: 0
+     - The type of the field.  One of:
+
+       * 0 --- Float
+       * 1 --- Integer
+       * 2 --- String
+       * 3 --- Date
+
+   * - **Output field width**
+     - ``FIELD_LENGTH``
+     - [number]
+
+       Default: 10
+     - The length of the result field (minimum 0)
+   * - **Field precision**
+     - ``FIELD_PRECISION``
+     - [number]
+
+       Default: 3
+     - The precision of the result field (minimum 0, maximum 15)
+   * - **Create new field**
+     - ``NEW_FIELD``
+     - [boolean]
+
+       Default: True
+     - Should the result field be a new field
+   * - **Formula**
+     - ``FORMULA``
+     - [expression]
+     - The formula to use to calculate the result
+   * - **Output file**
+     - ``OUTPUT``
+     - [vector:any]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output layer.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Calculated**
+     - ``OUTPUT``
+     - [vector: any]
+     - Output layer with the calculated field values
 
 
 .. _qgisrefactorfields:
@@ -341,48 +649,93 @@ Refactor layer fields allows to:
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Layer to edit the attribute table structure.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Fields mapping`` [list]
-  List of output fields with their definitions.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - The layer to modify
+   * - **Fields mapping**
+     - ``FIELDS_MAPPING``
+     - [list]
+     - List of output fields with their definitions.
+       The embedded table lists all the fields of the source
+       layer and allows you to edit them:
 
-  The embedded table lists all the fields of the source
-  layer and allows you to edit them:
+       * Click |newAttribute| to create a new field.
+       * Click |deleteAttribute| to remove a field.
+       * Use |arrowUp| and |arrowDown| to change the selected field order.
+       * Click |clearText| to reset to the default view.
 
-  * Click the |newAttribute| button to create a new field.
-  * Click |deleteAttribute| to remove a field.
-  * Use |arrowUp| and |arrowDown| to change the selected field order.
-  * Click |clearText| to reset to the default view.
+       For each of the fields you'd like to reuse, you need to
+       fill the following options:
 
-  For each of the fields you'd like to reuse, you need to
-  fill the following options:
+       :guilabel:`Source expression` (``expression``) [expression]
+         Field or expression from the input layer.
 
-  ``Source expression`` [expression]
-    Field or expression from the input layer.
+       :guilabel:`Field name` (``name``) [string]
+         Name of the field in the output layer.
+         By default input field name is kept.
 
-  ``Field name`` [string]
-    Name of the field in the output layer.
-    By default input field name is kept.
+       :guilabel:`Type` (``type``) [enumeration]
+         Data type of the output field.
+         One of:
 
-  ``Type`` [enumeration]
-    Data type of the output field.
+         * Date (14)
+         * DateTime (16)
+         * Double (6)
+         * Integer (2)
+         * Integer64 (4)
+         * String (10)
+         * Boolean (1)
 
-  ``Length`` [number]
-    Length of the output field.
+       :guilabel:`Length` (``length``) [number]
+         Length of the output field.
 
-  ``Precision`` [number]
-    Precision of the output field.
+       :guilabel:`Precision` (``precision``) [number]
+         Precision of the output field.
 
-``Load fields from layer`` [vector: any]
-  Load fields from another vector layer to update the field list.
+       Fields from another layer can be loaded into the field list
+       in :guilabel:`Load fields from layer`.
+   * - **Refactored**
+     - ``OUTPUT``
+     - [vector: any]
+
+       Default: ``[Create temporary layer]``
+     - Specification of the output layer.
+       One of:
+
+       * Create Temporary Layer
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
+
 
 Outputs
 .......
 
-``Refactored`` [vector: any]
-  Output layer with refactored fields.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Refactored**
+     - ``OUTPUT``
+     - [vector: any]
+     - Output layer with refactored fields
 
 .. _qgistexttofloat:
 
@@ -398,17 +751,57 @@ If the conversion is not possible the selected column will have ``NULL`` values.
 Parameters
 ..........
 
-``Input Layer`` [vector: any]
-  Input vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Text attribute to convert to float`` [tablefield: string]
-  String field to convert in a floating field type.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - The input vector layer.
+   * - **Text attribute to convert to float**
+     - ``FIELD``
+     - [tablefield: string]
+     - The string field for the input layer that is to be converted to a
+       float field.
+   * - **Float from text**
+     - ``OUTPUT``
+     - [vector: any]
+
+       Default: ``[Create Temporary Layer]``
+     - Specification of the output layer.
+       One of:
+
+       * Create Temporary Layer
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Float from text`` [vector: any]
-  Output vector layer with string field converted into float.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Float from text**
+     - ``OUTPUT``
+     - [vector: any]
+     - Output vector layer with the string field converted into
+       a float field
+
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
