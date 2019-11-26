@@ -619,7 +619,8 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    or (Multi-)Linestring geometry with an extension specified by X and Y"
    "flip_coordinates", "Returns a copy of the geometry with the X and Y coordinates
    swapped (see also :ref:`qgisswapxy`)"
-   "force_rhr |36|", "Forces a geometry to respect the Right-Hand-Rule"
+   "force_rhr |36|", "Forces a geometry to respect the Right-Hand-Rule (see also
+   :ref:`qgisforcerhr`)"
    "geom_from_gml", "Returns a geometry created from a GML representation of geometry"
    "geom_from_wkt", "Returns a geometry created from a well-known text (WKT) representation"
    "geom_to_wkt", "Returns the well-known text (WKT) representation of the geometry without SRID metadata"
@@ -655,7 +656,7 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    "m", "Returns the M value of a point geometry"
    "make_circle", "Creates a circular geometry based on center point and radius"
    "make_ellipse", "Creates an elliptical geometry based on center point, axes and azimuth"
-   "make_line", "Creates a line geometry from a series of point geometries"
+   "make_line", "Creates a line geometry from a series or an array of point geometries"
    "make_point(x,y,z,m)", "Returns a point geometry from X and Y (and optional Z or M) values"
    "make_point_m(x,y,m)", "Returns a point geometry from X and Y coordinates and M values"
    "make_polygon", "Creates a polygon geometry from an outer ring and optional series
@@ -745,12 +746,6 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 
 **Some examples:**
 
-* You can manipulate the current geometry with the variable $geometry to create
-  a buffer or get the point on surface::
-
-   buffer( $geometry, 10 )
-   point_on_surface( $geometry )
-
 * Return the X coordinate of the current feature's centroid::
 
     x( $geometry )
@@ -758,6 +753,25 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 * Send back a value according to feature's area::
 
     CASE WHEN $area > 10 000 THEN 'Larger' ELSE 'Smaller' END
+
+* You can manipulate the current geometry using the variable ``$geometry`` to create
+  a buffer or get a point on the geometry's surface::
+
+    buffer( $geometry, 10 )
+    point_on_surface( $geometry )
+
+* Given a point feature, generate a closed line (using ``make_line``) around the
+  point's geometry::
+
+    make_line(
+      -- using an array of points placed around the original
+      array_foreach(
+        -- list of angles for placing the projected points (every 90°)
+        array:=generate_series( 0, 360, 90 ),
+        -- translate the point 20 units in the given direction (angle)
+        expression:=project( $geometry, distance:=20, azimuth:=radians( @element ) )
+      )
+    )
 
 
 Layout Functions
