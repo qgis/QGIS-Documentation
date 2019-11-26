@@ -795,7 +795,7 @@ Parameters
        The embedded table lists all the fields of the source
        layer and allows you to edit them:
 
-       * Click the |newAttribute| button to create a new field.
+       * Click |newAttribute| to create a new field.
        * Click |deleteAttribute| to remove a field.
        * Use |arrowUp| and |arrowDown| to change the selected field order.
        * Click |clearText| to reset to the default view.
