@@ -277,10 +277,10 @@ Options:
 Setting the min and max values
 ..............................
 
-By default, QGIS reports the :guilabel:`Min` and :guilabel:`Max` values of the band(s)
-of the raster. A few very low and/or high values can have a
-negative impact on the rendering of the raster. The :ref:`Min/Max Value Settings
-<minmaxvalues>` menu helps you control the values to render.
+By default, QGIS reports the :guilabel:`Min` and :guilabel:`Max` values of
+the band(s) of the raster. A few very low and/or high values can have a
+negative impact on the rendering of the raster. The :guilabel:`Min/Max Value
+Settings` frame helps you control the values to render.
 
 .. _figure_raster_minmaxvalues:
 
