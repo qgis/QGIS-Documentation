@@ -148,13 +148,13 @@ To export a layout as SVG:
      :ref:`layout_export_settings`).
    * |checkbox| :guilabel:`Export RDF metadata` of the document such as the
      title, author, date, description...
-   * |checkbox| :guilabel:`Simplify geometries to reduce output file size`
-     This avoids exporting ALL geometry vertices, which can result in a ridiculously
-     complex and large export file size or fail to load in other applications.
+   * |checkbox| :guilabel:`Simplify geometries to reduce output file size`: this
+     avoids exporting ALL geometry vertices, which can result in a ridiculously
+     complex and large export file size that could fail to load in other applications.
      Geometries will be simplified while exporting the layout in order to remove
-     any redundant vertices which are not discernably different at the export resolution
-     (e.g. if export resolution is ``300 dpi``, vertices less than ``1/600 inch`` different
-     from each other will be removed).
+     any redundant vertices which are not discernably different at the export
+     resolution (e.g. if the export resolution is ``300 dpi``, vertices that are
+     less than ``1/600 inch`` apart will be removed).
    * Set the :guilabel:`Text export`: controls whether text labels are exported
      as proper text objects (:guilabel:`Always export texts as text
      objects`) or as paths only (:guilabel:`Always export texts as paths`).
@@ -220,13 +220,13 @@ To export a layout as PDF:
      Sometimes, this can cause visible "seams" in the rasters
      for generated files. Checking this option would fix that, at the cost of a
      higher memory usage during exports.
-   * |checkbox| :guilabel:`Simplify geometries to reduce output file size`
-     This avoids exporting ALL geometry vertices, which can result in a ridiculously
-     complex and large export file size or fail to load in other applications.
+   * |checkbox| :guilabel:`Simplify geometries to reduce output file size`: this
+     avoids exporting ALL geometry vertices, which can result in a ridiculously
+     complex and large export file size that could fail to load in other applications.
      Geometries will be simplified while exporting the layout in order to remove
-     any redundant vertices which are not discernably different at the export resolution
-     (e.g. if export resolution is ``300 dpi``, vertices less than ``1/600 inch`` different
-     from each other will be removed).
+     any redundant vertices which are not discernably different at the export
+     resolution (e.g. if the export resolution is ``300 dpi``, vertices that are
+     less than ``1/600 inch`` apart will be removed).
 
 
 .. _figure_layout_output_pdf:
