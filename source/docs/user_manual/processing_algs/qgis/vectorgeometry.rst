@@ -359,7 +359,7 @@ information ("message" for the **error** layer, "FID" and "_errors" for the
    It is mandatory to have activated the option
    **Stop algorithm execution when a geometry is invalid**  in
    :menuselection:`Settings --> Options --> Processing --> General --> Invalid Feature`
-             otherwise the outputs will be empty.
+   otherwise the outputs will be empty.
 
 The attribute table of each generated vector layer will contain some additional
 information (numbers of error found and type of error):
