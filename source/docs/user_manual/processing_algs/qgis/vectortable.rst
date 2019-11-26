@@ -181,9 +181,9 @@ Parameters
        One of:
        
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File
-       * Save to Geopackage
-       * Save to PostGIS Table
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
        
        The file encoding can also be changed here.
 
@@ -258,9 +258,9 @@ Parameters
       
        * Skip Output
        * Create Temporary Layer
-       * Save to File
-       * Save to Geopackage
-       * Save to PostGIS Table
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
        
        The file encoding can also be changed here.
    * - **Class summary**
@@ -274,9 +274,9 @@ Parameters
       
        * Skip Output
        * Create Temporary Layer
-       * Save to File
-       * Save to Geopackage
-       * Save to PostGIS Table
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
        
        The file encoding can also be changed here.
 
@@ -350,9 +350,9 @@ Parameters
        One of:
        
        * Create Temporary Layer
-       * Save to File
-       * Save to Geopackage
-       * Save to PostGIS Table
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
        
        The file encoding can also be changed here.
 
@@ -387,53 +387,99 @@ The expression is defined as a Python function.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Result field name`` [string]
-  Name of the new field.
-
-  Default: *NewField*
-
-``Field type`` [enumeration]
-  Type of the new field. You can choose between:
-
-  * 0 --- Integer
-  * 1 --- Float
-  * 2 --- String
-
-  Default: *0*
-
-``Field length`` [number]
-  Length of the field.
-
-  Default: *10*
-
-``Field precision`` [number]
-  Precision of the field. Useful with Float field type.
-
-  Default: *3*
-
-``Global expression`` [string]
-  Optional
-
-  The code in the global expression section will be executed only once before the
-  calculator starts iterating through all the features of the input layer.
-  Therefore, this is the correct place to import necessary modules or to calculate
-  variables that will be used in subsequent calculations.
-
-``Formula`` [string]
-  Add here the Python formula to evaluate. For example to calculate the area of
-  an input polygon layer you can add::
-
-    value = $geom.area()
-
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Result field name**
+     - ``FIELD_NAME``
+     - [string]
+       
+       Default: 'NewField'
+     - Name of the new field
+   * - **Field type**
+     - ``FIELD_TYPE``
+     - [enumeration]
+       
+       Default: 0
+     - Type of the new field. One of:
+       
+       * 0 --- Integer
+       * 1 --- Float
+       * 2 --- String
+       
+   * - **Field length**
+     - ``FIELD_LENGTH``
+     - [number]
+       
+       Default: 10
+     - Length of the field
+   * - **Field precision**
+     - ``FIELD_PRECISION``
+     - [number]
+       
+       Default: 3
+     - Precision of the field. Useful with Float field type.
+   * - **Global expression**
+       
+       Optional
+     - ``GLOBAL``
+     - [string]
+     - The code in the global expression section will be
+       executed only once before the calculator starts
+       iterating through all the features of the input layer.
+       Therefore, this is the correct place to import
+       necessary modules or to calculate variables that
+       will be used in subsequent calculations.
+   * - **Formula**
+     - ``FORMULA``
+     - [string]
+     - The Python formula to evaluate.
+       Example: To calculate the area of an input polygon layer you
+       can add::
+       
+         value = $geom.area()
+       
+   * - **Calculated**
+     - ``OUTPUT``
+     - [vector: any]
+       
+       Default: ``[Create temporary layer]``
+     - Specify the vector layer with the new calculated
+       field. One of:
+       
+       * Create Temporary Layer
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+       
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Calculated`` [vector: any]
-  Vector layer with the new calculated field.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Calculated**
+     - ``OUTPUT``
+     - [vector: any]
+     - Vector layer with the new calculated field
 
 
 .. _qgisdeletecolumn:
@@ -445,6 +491,7 @@ without the selected columns.
 
 Parameters
 ..........
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -465,7 +512,16 @@ Parameters
    * - **Remaining fields**
      - ``OUTPUT``
      - [vector: any]
-     - Vector layer with the remaining fields
+       
+       Default: ``[Create temporary layer]``
+     - Vector layer with the remaining fields. One of:
+       
+       * Create Temporary Layer
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+       
+       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -520,7 +576,14 @@ Parameters
    * - **Destination folder**
      - ``FOLDER``
      - [folder]
-     - Folder in which to store the output files
+       
+       Default: ``[Save to a temporary folder]``
+     - Folder in which to store the output files.  One of:
+       
+       * Save to a Temporary Directory
+       * Save to Directory...
+       
+       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -623,11 +686,11 @@ Parameters
      - ``INPUT``
      - [vector: any]
      - The layer to calculate on
-   * - **Result field name**
+   * - **Output field name**
      - ``FIELD_NAME``
      - [string]
      - The name of the field for the results
-   * - **Field type**
+   * - **Output field type**
      - ``FIELD_TYPE``
      - [enumeration]
      - The type of the field.  One of:
@@ -637,7 +700,7 @@ Parameters
        * 2 --- String
        * 3 --- Date
        
-   * - **Field length**
+   * - **Output field width**
      - ``FIELD_LENGTH``
      - [number]
        
@@ -659,18 +722,12 @@ Parameters
      - ``FORMULA``
      - [expression]
      - The formula to use to calculate the result
-   * - **Calculated**
+   * - **Output file**
      - ``OUTPUT``
      - [vector:any]
+       
+       Default: ``[Save to temporary file]``
      - Specification of the output layer.
-       One of:
-       
-       * Create Temporary Layer
-       * Save to File
-       * Save to Geopackage
-       * Save to PostGIS Table
-       
-       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -778,9 +835,9 @@ Parameters
        One of:
        
        * Create Temporary Layer
-       * Save to File
-       * Save to Geopackage
-       * Save to PostGIS Table
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
        
        The file encoding can also be changed here.
 
@@ -843,9 +900,9 @@ Parameters
        One of:
        
        * Create Temporary Layer
-       * Save to File
-       * Save to Geopackage
-       * Save to PostGIS Table
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
        
        The file encoding can also be changed here.
 
