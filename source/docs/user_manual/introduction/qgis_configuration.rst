@@ -1042,6 +1042,8 @@ the global predefined scales.
 
    General tab of Project Properties dialog
 
+.. _project_metadata:
+
 Metadata Properties
 -------------------
 
