@@ -24,51 +24,97 @@ for features can also be specified.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Field name`` [string]
-  Name of the field with autoincremental values.
-
-  Default: *AUTO*
-
-``Start values at`` [number]
-  Optional
-
-  Choose the initial number of the incremental count.
-
-  Default: *0*
-
-``Group values by`` [tablefield: any] [list]
-  Optional
-
-  Select grouping field(s): instead of a single count run for the whole layer,
-  a separate count is processed for each value returned by the combination of
-  these fields.
-
-``Sort expression`` [expression]
-  Optional
-
-  Use an expression to sort the features in the layer either globally
-  or if set, based on group fields.
-
-``Sort ascending`` [boolean]
-  When a ``sort expression`` is set, use this option to control the order in
-  which features are assigned values.
-
-  Default: *True*
-
-``Sort nulls first`` [boolean]
-  When a ``sort expression`` is set, use this option to set whether
-  *Null* values are counted first or last.
-
-  Default: *False*
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - The input vector layer.
+   * - **Field name**
+     - ``FIELD_NAME``
+     - [string]
+       
+       Default: 'AUTO'
+     - Name of the field with autoincremental values
+   * - **Start values at**
+       
+       Optional
+     - ``START``
+     - [number]
+       
+       Default: 0
+     - Choose the initial number of the incremental count
+   * - **Group values by**
+       
+       Optional
+     - ``GROUP_FIELDS``
+     - [tablefield: any] [list]
+     - Select grouping field(s): instead of a single count
+       run for the whole layer, a separate count is processed
+       for each value returned by the combination of these
+       fields.
+   * - **Sort expression**
+       
+       Optional
+     - ``SORT_EXPRESSION``
+     - [expression]
+     - Use an expression to sort the features in the layer
+       either globally or if set, based on group fields.
+   * - **Sort ascending**
+     - ``SORT_ASCENDING``
+     - [boolean]
+       
+       Default: True
+     - When a ``sort expression`` is set, use this option
+       to control the order in which features are assigned
+       values.
+   * - **Sort nulls first**
+     - ``SORT_NULLS_FIRST``
+     - [boolean]
+       
+       Default: False
+     - When a ``sort expression`` is set, use this option
+       to set whether *Null* values are counted first or
+       last.
+   * - **Incremented**
+     - ``OUTPUT``
+     - [vector: any]
+       
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer with the auto increment
+       field.
+       One of:
+      
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+      
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Incremented`` [vector: any]
-  Vector layer with auto incremental field.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Incremented**
+     - ``OUTPUT``
+     - [vector: any]
+     - Vector layer with auto incremental field
 
 
 .. _qgisaddfieldtoattributestable:
@@ -85,36 +131,78 @@ instead.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Field name`` [string]
-  Name of the new field.
+   * - Label
+     - Name
+     - Type
+     - Description
 
-``Field type`` [enumeration]
-  Type of the new field. You can choose between:
-
-  * 0 --- Integer
-  * 1 --- Float
-  * 2 --- String
-
-  Default: *0*
-
-``Field length`` [number]
-  Length of the field.
-
-  Default: *10*
-
-``Field precision`` [number]
-  Precision of the field. Useful with Float field type.
-
-  Default: *0*
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - The input layer
+   * - **Field name**
+     - ``FIELD_NAME``
+     - [string]
+     - Name of the new field
+   * - **Field type**
+     - ``FIELD_TYPE``
+     - [enumeration]
+       
+       Default: 0
+     - Type of the new field. You can choose between:
+       
+       * 0 --- Integer
+       * 1 --- Float
+       * 2 --- String
+       
+   * - **Field length**
+     - ``FIELD_LENGTH``
+     - [number]
+       
+       Default: 10
+     - Length of the field
+   * - **Field precision**
+     - ``FIELD_PRECISION``
+     - [number]
+       
+       Default: 0
+     - Precision of the field. Useful with Float field type.
+   * - **Added**
+     - ``OUTPUT``
+     - [vector: any]
+       
+       Default: ``[Create temporary layer]``
+     - Specification of the output vector layer.
+       One of:
+       
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File
+       * Save to Geopackage
+       * Save to PostGIS Table
+       
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Added`` [vector: any]
-  Vector layer with new field added.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Added**
+     - ``OUTPUT``
+     - [vector: any]
+     - Vector layer with new field added
 
 
 .. _qgisadduniquevalueindexfield:
@@ -136,27 +224,85 @@ instead.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Class field`` [tablefield: any]
-  Features of the same value are given the same index.
-
-``Output field name`` [tablefield: any]
-  Name of the new field containing the indexes.
-
-  Default: *NUM_FIELD*
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - The input layer.
+   * - **Class field**
+     - ``FIELD``
+     - [tablefield: any]
+     - Features that have the same value for this field will get the
+       same index.
+   * - **Output field name**
+     - ``FIELD_NAME``
+     - [string]
+       
+       Default: 'NUM_FIELD'
+     - Name of the new field containing the indexes.
+   * - **Layer with index field**
+     - ``OUTPUT``
+     - [vector: any]
+       
+       Default: ``[Skip output]``
+     - Vector layer with the numeric field containing indexes.
+       One of:
+      
+       * Skip Output
+       * Create Temporary Layer
+       * Save to File
+       * Save to Geopackage
+       * Save to PostGIS Table
+       
+       The file encoding can also be changed here.
+   * - **Class summary**
+     - ``SUMMARY_OUTPUT``
+     - [table]
+       
+       Default: ``[Skip output]``
+     - Specification of table to contain the summary of the class field
+       mapped to the corresponding unique value.
+       One of:
+      
+       * Skip Output
+       * Create Temporary Layer
+       * Save to File
+       * Save to Geopackage
+       * Save to PostGIS Table
+       
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Layer with index field`` [vector: any]
-  Vector layer with the numeric field containing indexes.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Class summary`` [table]
-  Table with summary of the class field mapped to the corresponding unique value.
-
-  Default: *Skip Output*
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Layer with index field**
+     - ``OUTPUT``
+     - [vector: any]
+     - Vector layer with the numeric field containing indexes.
+   * - **Class summary**
+     - ``SUMMARY_OUTPUT``
+     - [table]
+       
+       Default: ``[Skip Output]``
+     - Table with summary of the class field mapped to the corresponding
+       unique value.  
 
 
 .. _qgisaddxyfieldstolayer:
@@ -175,32 +321,32 @@ Parameters
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Name
-      - Identifier
-      - Type
-      - Description
-   *  - **Input layer**
-      - INPUT
-      - [vector: point]
-      - The input layer.
-   *  - **Coordinate system**
-      - CRS
-      - [crs]
-        
-        Default: "EPSG:4326"
-      - Coordinate reference system to use for the generated x and
-        y fields.
-   *  - **Field prefix**
-        
-        Optional
-      - PREFIX
-      - [string]
-      - Prefix to add to the new field names to avoid name collisions
-        with fields in the input layer.
-   *  - **Added fields**
-      - OUTPUT
-      - [vector:point]
-      - Specification of the output layer.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: point]
+     - The input layer.
+   * - **Coordinate system**
+     - ``CRS``
+     - [crs]
+       
+       Default: "EPSG:4326"
+     - Coordinate reference system to use for the generated x and
+       y fields.
+   * - **Field prefix**
+       
+       Optional
+     - ``PREFIX``
+     - [string]
+     - Prefix to add to the new field names to avoid name collisions
+       with fields in the input layer.
+   * - **Added fields**
+     - ``OUTPUT``
+     - [vector:point]
+     - Specification of the output layer.
        One of:
        
        * Create Temporary Layer
@@ -218,15 +364,15 @@ Outputs
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Name
-      - Identifier
-      - Type
-      - Description
-   *  - **Added fields**
-      - OUTPUT
-      - [vector:point]
-      - The output layer - identical to the input layer but with two
-        new double fields, ``x`` and ``y``.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Added fields**
+     - ``OUTPUT``
+     - [vector:point]
+     - The output layer - identical to the input layer but with two
+       new double fields, ``x`` and ``y``.
 
 
 .. _qgisadvancedpythonfieldcalculator:
@@ -304,22 +450,22 @@ Parameters
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Input layer**
-      - ``INPUT``
-      - [vector: any]
-      - Input vector layer to drop field(s) from
-   *  - **Fields to drop**
-      - ``COLUMN``
-      - [tablefield: any] [list]
-      - The field(s) to drop
-   *  - **Remaining fields**
-      - ``OUTPUT``
-      - [vector: any]
-      - Vector layer with the remaining fields
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer to drop field(s) from
+   * - **Fields to drop**
+     - ``COLUMN``
+     - [tablefield: any] [list]
+     - The field(s) to drop
+   * - **Remaining fields**
+     - ``OUTPUT``
+     - [vector: any]
+     - Vector layer with the remaining fields
 
 Outputs
 .......
@@ -329,14 +475,14 @@ Outputs
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Remaining fields**
-      - ``OUTPUT``
-      - [vector: any]
-      - Vector layer with the remaining fields
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Remaining fields**
+     - ``OUTPUT``
+     - [vector: any]
+     - Vector layer with the remaining fields
 
 
 .. _qgisextractbinary:
@@ -355,26 +501,26 @@ Parameters
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Input layer**
-      - ``INPUT``
-      - [vector: any]
-      - Input vector layer containing the binary data
-   *  - **Binary field**
-      - ``FIELD``
-      - [tablefield: any]
-      - Field containing the binary data
-   *  - **Destination folder**
-      - ``FOLDER``
-      - [folder]
-      - Folder in which to store the output files
-   *  - **File name**
-      - ``FILENAME``
-      - [expression]
-      - Field or expression-based text to name each output file
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer containing the binary data
+   * - **Binary field**
+     - ``FIELD``
+     - [tablefield: any]
+     - Field containing the binary data
+   * - **File name**
+     - ``FILENAME``
+     - [expression]
+     - Field or expression-based text to name each output file
+   * - **Destination folder**
+     - ``FOLDER``
+     - [folder]
+     - Folder in which to store the output files
 
 Outputs
 .......
@@ -384,17 +530,14 @@ Outputs
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Folder**
-      - ``FOLDER``
-      - [folder]
-      - The folder that contains the output file.
-    
-      
-
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Folder**
+     - ``FOLDER``
+     - [folder]
+     - The folder that contains the output file.
 
 
 .. _qgisfeaturefilter:
@@ -416,20 +559,20 @@ Parameters
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Input layer**
-      - ``INPUT``
-      - [vector: any]
-      - The input layer.
-   *  - **Outputs and filters**
-        
-        (one or more)
-      - ``OUTPUT_<name of the filter>``
-      - [vector: any]
-      - The output layers with filters (as many as there are filters).
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - The input layer.
+   * - **Outputs and filters**
+       
+       (one or more)
+     - ``OUTPUT_<name of the filter>``
+     - [vector: any]
+     - The output layers with filters (as many as there are filters).
 
 Outputs
 .......
@@ -439,17 +582,17 @@ Outputs
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Output**
-        
-        (one or more)
-      - ``native:filter_1:OUTPUT_<name of filter>``
-      - [vector: any]
-      - The output layers with filtered features (as many as there are
-        filters).
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output**
+       
+       (one or more)
+     - ``native:filter_1:OUTPUT_<name of filter>``
+     - [vector: any]
+     - The output layers with filtered features (as many as there are
+       filters).
 
 
 
