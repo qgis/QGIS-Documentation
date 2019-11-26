@@ -755,7 +755,7 @@ This group contains functions that operate on geometry objects (e.g., length, ar
     CASE WHEN $area > 10 000 THEN 'Larger' ELSE 'Smaller' END
 
 * You can manipulate the current geometry using the variable ``$geometry`` to create
-  a buffer or get the point on surface::
+  a buffer or get a point on the geometry's surface::
 
     buffer( $geometry, 10 )
     point_on_surface( $geometry )
