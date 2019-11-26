@@ -61,5 +61,5 @@ Outputs
      - Description
    * - **File destination**
      - ``OUTPUT``
-     - [vector: any]
-     - Downloaded file (from the chosen URL)
+     - [string]
+     - The location of the downloaded file
