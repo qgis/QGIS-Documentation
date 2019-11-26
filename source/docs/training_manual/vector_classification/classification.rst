@@ -251,7 +251,8 @@ That's where rule-based classification comes in handy.
 * A new dialog then appears.
 * Click the ellipsis :guilabel:`...` button next to the :guilabel:`Filter` text area.
 * Using the query builder that appears, enter the criterion
-  :kbd:`"landuse" = 'residential' AND "name" <> 'Swellendam'` ,
+  :kbd:`"landuse" = 'residential' AND "name" <> 'Swellendam'` (or
+  :kbd:`"landuse" = 'residential' AND "name" != 'Swellendam'`),
   click :guilabel:`Ok` and choose a pale blue-grey for it and
   remove the border:
 
