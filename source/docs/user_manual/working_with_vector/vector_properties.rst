@@ -326,58 +326,7 @@ Categorized Renderer
 
 The |categorizedSymbol| :guilabel:`Categorized` renderer is used to render the
 features of a layer, using a user-defined symbol whose aspect reflects the
-discrete values of a field or an expression. The Categorized menu allows you to
-
-* select an existing field (using the Column listbox) or
-* type or build an :ref:`expression <vector_expressions>` using the
-  |expression| :sup:`Set column expression`.
-  The expression used to classify features can be of any type; it can for example:
-
-  * be a comparison, e.g. ``myfield >= 100``, ``$id = @atlas_featureid``,
-    ``myfield % 2 = 0``, ``within( $geometry, @atlas_geometry )``. In this case,
-    QGIS returns values ``1`` (**True**) and ``0`` (**False**).
-  * combine different fields, e.g. ``concat( field1, ' ', field2 )`` particularly
-    useful when you want to process classification on two or more fields
-    simultaneously.
-  * be a calculation on fields, e.g. ``myfield % 2``, ``year( myfield )``
-    ``field_1 + field_2``.
-  * be used to transform linear values in discrete classes, e.g.:
-
-    ::
-
-     CASE WHEN x > 1000 THEN 'Big' ELSE 'Small' END
-
-  * combine several discrete values in one single category, e.g.:
-
-    ::
-
-     CASE
-     WHEN building IN ('residence', 'mobile home') THEN 'residential'
-     WHEN building IN ('commercial', 'industrial') THEN 'Commercial and Industrial'
-     END
-
-
-  .. note:: While you can use any kind of expression to categorize features,
-    for some complex expressions it might be simpler to use :ref:`rule-based
-    rendering <rule_based_rendering>`.
-
-* the symbol (using the :ref:`symbol-selector` dialog) which will be used as
-  base symbol for each class;
-* the range of colors (using the Color ramp listbox) from which color applied
-  to the symbol is selected.
-
-Then click on :guilabel:`Classify` button to create classes from the distinct
-value of the attribute column. Each class can be disabled unchecking the
-checkbox at the left of the class name.
-
-To change symbol, value and/or label of the class, just double click
-on the item you want to change.
-
-Right-click shows a contextual menu to **Copy/Paste**, **Change color**, **Change
-transparency**, **Change output unit**, **Change symbol width**.
-
-The example in figure_categorized_symbology_ shows the category rendering dialog used
-for the rivers layer of the QGIS sample dataset.
+discrete values of a field or an expression.
 
 .. _figure_categorized_symbology:
 
@@ -386,21 +335,100 @@ for the rivers layer of the QGIS sample dataset.
 
    Categorized Symbolizing options
 
-.. _tip_change_multiple_symbols:
+To apply a categorized symbology to a layer:
 
-.. tip:: **Select and change multiple symbols**
+#. Select the :guilabel:`Value` of classification: it can be an existing field
+   or an |expression| :ref:`expression <vector_expressions>` you can type in
+   the box or build using the associated button. Using expressions for categorizing
+   avoids the need to create ad hoc field for symbology purpose (eg, if your
+   classification criteria is derived from one or more attributes).
 
-   The Symbology allows you to select multiple symbols and right
-   click to change color, transparency, size, or width of selected
-   entries.
+   The expression used to classify features can be of any type; eg, it can:
 
-.. tip:: **Match categories to symbol name**
+   * be a comparison, e.g. ``myfield >= 100``, ``$id = @atlas_featureid``,
+     ``myfield % 2 = 0``, ``within( $geometry, @atlas_geometry )``. In this case,
+     QGIS returns values ``1`` (**True**) and ``0`` (**False**).
+   * combine different fields, e.g. ``concat( field1, ' ', field2 )`` particularly
+     useful when you want to process classification on two or more fields
+     simultaneously.
+   * be a calculation on fields, e.g. ``myfield % 2``, ``year( myfield )``
+     ``field_1 + field_2``.
+   * be used to transform linear values in discrete classes, e.g.:
 
-   In the [Advanced] menu, under the classes, you can choose one of the two
-   first actions to match symbol name to a category name in your classification.
-   *Matched to saved symbols* match category name with a symbol name from your
-   *Style Manager*. *Match to symbols from file* match category name to a
-   symbol name from an external file.
+     ::
+
+      CASE WHEN x > 1000 THEN 'Big' ELSE 'Small' END
+
+   * combine several discrete values in one single category, e.g.:
+
+     ::
+
+      CASE
+      WHEN building IN ('residence', 'mobile home') THEN 'residential'
+      WHEN building IN ('commercial', 'industrial') THEN 'Commercial and Industrial'
+      END
+
+   .. tip:: While you can use any kind of expression to categorize features,
+    for some complex expressions it might be simpler to use :ref:`rule-based
+    rendering <rule_based_rendering>`.
+
+#. Configure the :ref:`Symbol <symbol-selector>` which will be used as
+   base symbol for all the classes;
+#. Indicate the :ref:`Color ramp <color-ramp>`, ie the range of colors from which
+   the color applied to each symbol is selected.
+
+   Besides the common options of the :ref:`color ramp widget <color_ramp_widget>`,
+   you can apply a |unchecked| :guilabel:`Random Color Ramp` to the categories.
+   And click the :guilabel:`Shuffle Random Colors` entry to regenerate a new set
+   of random colors if not satisfactory.
+#. Then click on the :guilabel:`Classify` button to create classes from the
+   distinct values of the provided field or expression.
+#. :guilabel:`Apply` the changes if the :ref:`live update <layer_styling_panel>`
+   is not in use and each feature in the map canvas will be rendered with the
+   symbol of its class.
+
+   By default, QGIS appends an :guilabel:`all other values` class to the list.
+   While empty at the beginning, this class is used as a default class for any
+   feature not falling into the other classes (eg, when you create features
+   with new values of classification).
+
+Further tweaks can be done to the default classification:
+
+* You can |signPlus| :sup:`Add` new categories, |signMinus| :sup:`Remove` the
+  selected one(s) or :guilabel:`Delete All` of them.
+* Each class can be disabled by unchecking the checkbox at the left of the
+  class name; the corresponding features are hidden on the map.
+* Drag-and-drop the rows to reorder the classes
+* To change the symbol, the value or the legend of a class, double click the item.
+
+Right-clicking over selected item(s) shows a contextual menu to:
+
+* :guilabel:`Copy Symbol` and :guilabel:`Paste Symbol`, a convenient way
+  to apply a category's representation to others
+* :guilabel:`Change Color...` of the selected symbol(s)
+* :guilabel:`Change Opacity...` of the selected symbol(s)
+* :guilabel:`Change output Unit...` of the selected symbol(s)
+* :guilabel:`Merge Categories`: Groups multiple selected categories into a single
+  one. This allows simpler styling of layers with a large number of categories,
+  where it may be possible to group numerous distinct categories into a smaller
+  and more manageable set of categories which apply to multiple values.
+
+  .. tip:: Since the symbol kept for the merged categories is the one of the
+   topmost selected category in the list, you may want to move the category
+   whose symbol you wish to reuse at the top before merging.
+
+* :guilabel:`Unmerge Categories` that were previously merged
+
+The :guilabel:`Advanced` menu gives access to options to speed classification
+or fine-tune the symbols rendering:
+
+* :guilabel:`Match to saved symbols`: Using the :ref:`symbols library
+  <vector_style_manager>`, assigns to each category a symbol whose name
+  represents the classification value of the category
+* :guilabel:`Match to symbols from file...`: Provided a file with symbols,
+  assigns to each category a symbol whose name represents the classification
+  value of the category
+* :ref:`Symbol levels... <Symbols_levels>` to define order of symbols rendering.
 
 
 .. index:: Natural Breaks (Jenks), Pretty Breaks, Equal Interval, Quantile, Histogram
