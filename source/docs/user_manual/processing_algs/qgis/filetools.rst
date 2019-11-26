@@ -34,7 +34,7 @@ Parameters
      - The URL of the file to download.
    * - **File destination**
      - ``OUTPUT``
-     - [vector: any]
+     - [string]
 
        Default: ``[Save to temporary file]``
      - Specification of the file destination.
