@@ -345,7 +345,9 @@ Parameters
        with fields in the input layer.
    * - **Added fields**
      - ``OUTPUT``
-     - [vector:point]
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
      - Specification of the output layer.
        One of:
        
