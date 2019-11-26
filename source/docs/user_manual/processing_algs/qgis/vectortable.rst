@@ -695,6 +695,8 @@ Parameters
    * - **Output field type**
      - ``FIELD_TYPE``
      - [enumeration]
+       
+       Default: 0
      - The type of the field.  One of:
        
        * 0 --- Float
