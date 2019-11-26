@@ -252,7 +252,7 @@ Parameters
      - ``OUTPUT``
      - [vector: any]
        
-       Default: ``[Skip output]``
+       Default: ``[Create temporary layer]``
      - Vector layer with the numeric field containing indexes.
        One of:
       
