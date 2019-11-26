@@ -833,6 +833,8 @@ Parameters
    * - **Refactored**
      - ``OUTPUT``
      - [vector: any]
+       
+       Default: ``[Create temporary layer]``
      - Specification of the output layer.
        One of:
        
