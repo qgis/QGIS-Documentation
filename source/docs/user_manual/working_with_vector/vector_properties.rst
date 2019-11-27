@@ -340,8 +340,8 @@ To apply a categorized symbology to a layer:
 #. Select the :guilabel:`Value` of classification: it can be an existing field
    or an :ref:`expression <vector_expressions>` you can type in the box or build
    using the associated |expression| button. Using expressions for categorizing
-   avoids the need to create ad hoc field for symbology purpose (eg, if your
-   classification criteria is derived from one or more attributes).
+   avoids the need to create an ad hoc field for symbology purposes (eg, if your
+   classification criteria are derived from one or more attributes).
 
    The expression used to classify features can be of any type; eg, it can:
 
@@ -370,13 +370,13 @@ To apply a categorized symbology to a layer:
       field_1 + field_2
       substr( field_1, -3 )
 
-   * be used to transform linear values in discrete classes, e.g.:
+   * be used to transform linear values to discrete classes, e.g.:
 
      ::
 
       CASE WHEN x > 1000 THEN 'Big' ELSE 'Small' END
 
-   * combine several discrete values in one single category, e.g.:
+   * combine several discrete values into a single category, e.g.:
 
      ::
 
@@ -389,31 +389,31 @@ To apply a categorized symbology to a layer:
     for some complex expressions it might be simpler to use :ref:`rule-based
     rendering <rule_based_rendering>`.
 
-#. Configure the :ref:`Symbol <symbol-selector>` which will be used as
+#. Configure the :ref:`Symbol <symbol-selector>`, which will be used as
    base symbol for all the classes;
 #. Indicate the :ref:`Color ramp <color-ramp>`, ie the range of colors from which
    the color applied to each symbol is selected.
 
    Besides the common options of the :ref:`color ramp widget <color_ramp_widget>`,
    you can apply a |unchecked| :guilabel:`Random Color Ramp` to the categories.
-   And click the :guilabel:`Shuffle Random Colors` entry to regenerate a new set
-   of random colors if not satisfactory.
+   You can click the :guilabel:`Shuffle Random Colors` entry to regenerate a new set
+   of random colors if you are not satisfied.
 #. Then click on the :guilabel:`Classify` button to create classes from the
    distinct values of the provided field or expression.
 #. :guilabel:`Apply` the changes if the :ref:`live update <layer_styling_panel>`
-   is not in use and each feature in the map canvas will be rendered with the
+   is not in use and each feature on the map canvas will be rendered with the
    symbol of its class.
 
    By default, QGIS appends an :guilabel:`all other values` class to the list.
    While empty at the beginning, this class is used as a default class for any
    feature not falling into the other classes (eg, when you create features
-   with new values of classification).
+   with new values for the classification field / expression).
 
 Further tweaks can be done to the default classification:
 
-* You can |signPlus| :sup:`Add` new categories, |signMinus| :sup:`Remove` the
-  selected one(s) or :guilabel:`Delete All` of them.
-* Each class can be disabled by unchecking the checkbox at the left of the
+* You can |signPlus| :sup:`Add` new categories, |signMinus| :sup:`Remove`
+  selected categories or :guilabel:`Delete All` of them.
+* A class can be disabled by unchecking the checkbox to the left of the
   class name; the corresponding features are hidden on the map.
 * Drag-and-drop the rows to reorder the classes
 * To change the symbol, the value or the legend of a class, double click the item.
@@ -433,7 +433,7 @@ Right-clicking over selected item(s) shows a contextual menu to:
 
   .. tip:: Since the symbol kept for the merged categories is the one of the
    topmost selected category in the list, you may want to move the category
-   whose symbol you wish to reuse at the top before merging.
+   whose symbol you wish to reuse to the top before merging.
 
 * :guilabel:`Unmerge Categories` that were previously merged
 
@@ -446,7 +446,7 @@ or fine-tune the symbols rendering:
 * :guilabel:`Match to symbols from file...`: Provided a file with symbols,
   assigns to each category a symbol whose name represents the classification
   value of the category
-* :ref:`Symbol levels... <Symbols_levels>` to define order of symbols rendering.
+* :ref:`Symbol levels... <Symbols_levels>` to define the order of symbols rendering.
 
 
 .. index:: Natural Breaks (Jenks), Pretty Breaks, Equal Interval, Quantile, Histogram
