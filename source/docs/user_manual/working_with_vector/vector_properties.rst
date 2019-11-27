@@ -338,21 +338,38 @@ discrete values of a field or an expression.
 To apply a categorized symbology to a layer:
 
 #. Select the :guilabel:`Value` of classification: it can be an existing field
-   or an |expression| :ref:`expression <vector_expressions>` you can type in
-   the box or build using the associated button. Using expressions for categorizing
+   or an :ref:`expression <vector_expressions>` you can type in the box or build
+   using the associated |expression| button. Using expressions for categorizing
    avoids the need to create ad hoc field for symbology purpose (eg, if your
    classification criteria is derived from one or more attributes).
 
    The expression used to classify features can be of any type; eg, it can:
 
-   * be a comparison, e.g. ``myfield >= 100``, ``$id = @atlas_featureid``,
-     ``myfield % 2 = 0``, ``within( $geometry, @atlas_geometry )``. In this case,
-     QGIS returns values ``1`` (**True**) and ``0`` (**False**).
-   * combine different fields, e.g. ``concat( field1, ' ', field2 )`` particularly
-     useful when you want to process classification on two or more fields
-     simultaneously.
-   * be a calculation on fields, e.g. ``myfield % 2``, ``year( myfield )``
-     ``field_1 + field_2``.
+   * be a comparison. In this case, QGIS returns values ``1`` (**True**) and
+     ``0`` (**False**). Some examples:
+
+     ::
+
+      myfield >= 100
+      $id = @atlas_featureid
+      myfield % 2 = 0
+      within( $geometry, @atlas_geometry )
+
+   * combine different fields:
+
+     ::
+
+      concat( field_1, ' ', field_2 )
+
+   * be a calculation on fields:
+
+     ::
+
+      myfield % 2
+      year( myfield )
+      field_1 + field_2
+      substr( field_1, -3 )
+
    * be used to transform linear values in discrete classes, e.g.:
 
      ::
@@ -408,6 +425,7 @@ Right-clicking over selected item(s) shows a contextual menu to:
 * :guilabel:`Change Color...` of the selected symbol(s)
 * :guilabel:`Change Opacity...` of the selected symbol(s)
 * :guilabel:`Change output Unit...` of the selected symbol(s)
+* :guilabel:`Change Width...` of the selected line symbol(s)
 * :guilabel:`Merge Categories`: Groups multiple selected categories into a single
   one. This allows simpler styling of layers with a large number of categories,
   where it may be possible to group numerous distinct categories into a smaller
