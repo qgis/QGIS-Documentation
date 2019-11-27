@@ -362,7 +362,7 @@ information ("message" for the **error** layer, "FID" and "_errors" for the
    otherwise the outputs will be empty.
 
 The attribute table of each generated vector layer will contain some additional
-information (numbers of error found and type of error):
+information (number of errors found and types of error):
 
 .. figure:: img/check_validity.png
    :align: center
