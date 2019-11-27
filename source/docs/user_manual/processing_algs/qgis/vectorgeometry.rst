@@ -355,11 +355,6 @@ The attribute tables of the generated layers will contain some additional
 information ("message" for the **error** layer, "FID" and "_errors" for the
 **invalid** layer and  only "FID" for the **valid** layer):
 
-.. warning::
-   It is mandatory to have activated the option
-   **Stop algorithm execution when a geometry is invalid**  in
-   :menuselection:`Settings --> Options --> Processing --> General --> Invalid Feature`
-   otherwise the outputs will be empty.
 
 The attribute table of each generated vector layer will contain some additional
 information (number of errors found and types of error):
