@@ -455,71 +455,108 @@ Outputs
 Type of error messages and their meanings
 .........................................
 
-If the GEOS method is used the following error messages can occur:
 
-+--------------------------------------+----------------------------------------------+-----------------------------------------+
-| Message error                        | Explanation                                  | Example                                 |
-+======================================+==============================================+=========================================+
-| Repeated point                       | This error happens when                      |    .. figure:: img/geos_rep_point.png   |
-|                                      | a given vertex is repeated.                  |       :align: center                    |
-+--------------------------------------+----------------------------------------------+-----------------------------------------+
-| Ring self-intersection               | This error happens when                      |    .. figure:: img/geos_ring_inter.png  |
-|                                      | a geometry touch itself and generate a ring. |       :align: center                    |
-+--------------------------------------+----------------------------------------------+-----------------------------------------+
-| Self-intersection                    | This error happens when                      |    .. figure:: img/geos_self_inter.png  |
-|                                      | a geometry touch itself.                     |       :align: center                    |
-+--------------------------------------+----------------------------------------------+-----------------------------------------+
-| Topology validation error            |                                              |    .. figure:: img/geos_valid_error.png | 
-|                                      |                                              |       :align: center                    |
-+--------------------------------------+----------------------------------------------+-----------------------------------------+
-| Hole lies outside shell              |                                              |    .. figure:: img/geos_hole_lies.png   |
-|                                      |                                              |       :align: center                    |
-+--------------------------------------+----------------------------------------------+-----------------------------------------+
-| Holes are nested                     |                                              |    .. figure:: img/geos_hole_nest.png   |
-|                                      |                                              |        :align: center                   |
-+--------------------------------------+----------------------------------------------+-----------------------------------------+
-| Interior is disconnected             |                                              |    .. figure:: img/geos_int_discon.png  |
-|                                      |                                              |       :align: center                    |
-+--------------------------------------+----------------------------------------------+-----------------------------------------+
-| Nested shells                        | This error happens when a polygon geometry   |    .. figure:: img/geos_nest_shell.png  |
-|                                      | is on top of another polygon geometry.       |       :align: center                    | 
-+--------------------------------------+----------------------------------------------+-----------------------------------------+
-| Duplicate rings                      |                                              |    .. figure:: img/geos_dupl_rings.png  |
-|                                      |                                              |       :align: center                    |
-+--------------------------------------+----------------------------------------------+-----------------------------------------+
-| Too few points in geometry component |                                              |    .. figure:: img/geos_few_points.png  |
-|                                      |                                              |       :align: center                    |
-+--------------------------------------+----------------------------------------------+-----------------------------------------+
-| Invalid coordinate                   |                                              |    .. figure:: img/geos_inv_coordi.png  |
-|                                      |                                              |       :align: center                    | 
-+--------------------------------------+----------------------------------------------+-----------------------------------------+
-| Ring is not closed                   |                                              |    .. figure:: img/geos_inv_coordi.png  |
-|                                      |                                              |       :align: center                    |
-+--------------------------------------+----------------------------------------------+-----------------------------------------+
+.. list-table:: If the GEOS method is used the following error messages can occur: 
+   :widths: 30 30 40
+   :header-rows: 1
 
-If the QGIS method is used the following error messages can occur:
+   * - Message error
+     - Explanation
+     - Example
 
-+------------------------------------------------------------------------------------------+-------------+
-| Message error                                    | Explanation                           | Example     |
-+------------------------------------------------------------------------------------------+-------------+
-| Segment %1 of ring %2 of polygon %3 intersects   |                                       |             |
-| segment %4 of ring %5 of polygon %6 at %7        |                                       |             |
-+------------------------------------------------------------------------------------------+-------------+
-| Ring %1 with less than four points               |                                       |             |
-+------------------------------------------------------------------------------------------+-------------+
-| Ring %1 not closed                               |                                       |             |
-+------------------------------------------------------------------------------------------+-------------+
-| Line %1 with less than two points                |                                       |             |
-+------------------------------------------------------------------------------------------+-------------+
-| Line %1 contains %n duplicate node(s) at %2      |                                       |             |
-+------------------------------------------------------------------------------------------+-------------+
-| Segments %1 and %2 of line %3 intersect at %4    |                                       |             |
-+------------------------------------------------------------------------------------------+-------------+
-| Ring self-intersection                           |                                       |             |
-+------------------------------------------------------------------------------------------+-------------+
-| Ring %1 of polygon %2 not in exterior ring       |                                       |             |
-+------------------------------------------------------------------------------------------+-------------+
+   * - Repeated point
+     - This error happens when a given vertex is repeated.
+     - .. figure:: img/geos_rep_point.png
+          :align: center
 
+   * - Ring self-intersection
+     - This error happens when a geometry touches itself and generate a ring.
+     - .. figure:: img/geos_ring_inter.png
+          :align: center
+
+   * - Self-intersection   
+     - This error happens when a geometry touches itself.
+     - .. figure:: img/geos_self_inter.png
+          :align: center
+
+   * - Topology validation error    
+     - 
+     - 
+
+   * - Hole lies outside shell
+     - 
+     -
+
+   * - Holes are nested
+     - 
+     -
+
+   * - Interior is disconnected
+     - 
+     -
+
+   * - Nested shells
+     - This error happens when a polygon geometry is on top of another polygon geometry. 
+     - .. figure:: img/geos_nest_shell.png
+          :align: center
+
+   * - Duplicate rings
+     - 
+     - 
+
+   * - Too few points in geometry component
+     - 
+     -
+
+   * - Invalid coordinate
+     - 
+     -
+
+   * - Ring is not closed
+     - 
+     - 
+
+|
+
+.. list-table:: If the QGIS method is used the following error messages can occur: 
+   :widths: 50 50 50
+   :header-rows: 1
+
+   * - Message error
+     - Explanation
+     - Example
+
+   * - Segment %1 of ring %2 of polygon %3 intersects segment %4 of ring %5 of polygon %6 at %7
+     - 
+     -
+
+   * - Ring %1 with less than four points
+     - 
+     -
+
+   * - Ring %1 not closed 
+     - 
+     -
+
+   * - Line %1 with less than two points
+     - 
+     -
+
+   * - Line %1 contains %n duplicate node(s) at %2 
+     - 
+     - 
+
+   * - Segments %1 and %2 of line %3 intersect at %4 
+     - 
+     -
+
+   * - Ring self-intersection 
+     - 
+     -
+
+   * - Ring %1 of polygon %2 not in exterior ring
+     -
+     -
 
 
 .. _qgiscollect:
