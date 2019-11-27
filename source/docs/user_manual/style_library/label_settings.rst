@@ -213,7 +213,7 @@ Shadow tab
    Text settings - Shadow tab
 
 To add a shadow below the text, enable the |labelshadow| :guilabel:`Shadow`
-tab and activate the |checkbox| :guilabel:`Draw drop shadow`. Then:
+tab and activate the |checkbox| :guilabel:`Draw drop shadow`. Then you can:
 
 * Indicate the item used to generate the shadow with :guilabel:`Draw under`.
   It can be the :guilabel:`Lowest label component` or a particular
@@ -229,7 +229,7 @@ tab and activate the |checkbox| :guilabel:`Draw drop shadow`. Then:
   then the zero point of the angle is always oriented to the north and
   doesn't depend on the orientation of the label's item.
 
-* You can influence the appearance of the shadow with the :guilabel:`Blur
+* Influence the appearance of the shadow with the :guilabel:`Blur
   radius`. The higher the number, the softer the shadows, in the units of
   your choice.
 
