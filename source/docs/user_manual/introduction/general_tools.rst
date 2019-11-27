@@ -2047,12 +2047,13 @@ screen resolution, paper size, or the terrain). Available units are:
 * :guilabel:`Millimeters`
 * :guilabel:`Points`
 * :guilabel:`Pixels`
+* :guilabel:`Inches`
 * :guilabel:`Meters at Scale`: This allows you to always set the size in meters,
   regardless of what the underlying map units are (e.g. they can be in inches, feet,
   geographic degrees, ...). The size in meters is calculated based on the current project
   ellipsoid setting and a projection of the distances in meters at the center of the
   current map extent.
-* :guilabel:`Map Units`: The size is scaled according to the map view scale.
+* and :guilabel:`Map Units`: The size is scaled according to the map view scale.
   Because this can lead to too big or too small values, use the |options| button
   next to the entry to constrain the size to a range of values based on:
   
@@ -2069,8 +2070,6 @@ screen resolution, paper size, or the terrain). Available units are:
      :align: center
 
      Adjust scaling range dialog  
-
-* and :guilabel:`Inches`
 
 
 .. index::
