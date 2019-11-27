@@ -405,14 +405,14 @@ Parameters
      - [tablefield: any] [list]
        
        Default: None
-     - Field(s) of the overlay layer to keep in the output.
+     - Field(s) of the intersect layer to keep in the output.
        If no fields are chosen all fields are taken.
    * - **Intersect fields prefix** |38|
        
        Optional
      - ``OVERLAY_FIELDS_PREFIX``
      - [string]
-     - Prefix to add to the field names of the overlay
+     - Prefix to add to the field names of the intersect
        layer's fields to avoid name collisions with fields
        in the input layer.
    * - **Intersection**
