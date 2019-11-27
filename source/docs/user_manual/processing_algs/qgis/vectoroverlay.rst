@@ -69,7 +69,7 @@ Parameters
        
        Default: ``[Create temporary layer]``
      - Specify the layer to contain the features from the input layer
-       are inside the overlay layer.
+       that are inside the overlay (clipping) layer.
        One of:
 
        * Create Temporary Layer
@@ -148,8 +148,8 @@ Parameters
      - [vector: any]
        
        Default: ``[Create temporary layer]``
-     - Specify the layer to contain the features from the input layer
-       are inside the overlay layer.
+     - Specify the layer to contain the (parts of) features from the input
+       layer that are not inside the overlay layer.
        One of:
 
        * Create Temporary Layer
@@ -222,7 +222,7 @@ Parameters
        
        Default: ``[Create temporary layer]``
      - Specify the layer to contain the features from the input layer
-       that are inside the overlay layer.
+       that are inside the clip extent.
        One of:
 
        * Create Temporary Layer
@@ -417,11 +417,11 @@ Parameters
        in the input layer.
    * - **Intersection**
      - ``OUTPUT``
-     - [vector: any]
+     - [vector: point]
        
        Default: ``[Create temporary layer]``
-     - Specify the layer to contain (the parts of) the features from
-       the input layer that are inside the overlay layer.
+     - Specify the layer to contain the intersection points of the lines
+       from the input and overlay layers.
        One of:
 
        * Create Temporary Layer
@@ -491,8 +491,9 @@ Parameters
      - [vector: line, polygon]
        
        Default: ``[Create temporary layer]``
-     - Specify the layer to contain (the parts of) the features from
-       the input layer that are inside the overlay layer.
+     - Specify the layer to contain the splitted (in case they are
+       intersected by a line in the split layer) line/polygon features
+       from the input layer.
        One of:
 
        * Create Temporary Layer
@@ -576,7 +577,8 @@ Parameters
        
        Default: ``[Create temporary layer]``
      - Specify the layer to contain (the parts of) the features from
-       the input layer that are inside the overlay layer.
+       the input and overlay layers that so not overlap features from the
+       other layer.
        One of:
 
        * Create Temporary Layer
@@ -677,8 +679,8 @@ Parameters
      - [vector: any]
        
        Default: ``[Create temporary layer]``
-     - Specify the layer to contain (the parts of) the features from
-       the input layer that are inside the overlay layer.
+     - Specify the layer to contain the (split and duplicated) features
+       from the input layer and the overlay layer.
        One of:
 
        * Create Temporary Layer
