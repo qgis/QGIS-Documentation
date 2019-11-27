@@ -470,7 +470,7 @@ Type of error messages and their meanings
           :align: center
 
    * - Ring self-intersection
-     - This error happens when a geometry touches itself and generate a ring.
+     - This error happens when a geometry touches itself and generates a ring.
      - .. figure:: img/geos_ring_inter.png
           :align: center
 
