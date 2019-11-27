@@ -254,7 +254,8 @@ That's where rule-based classification comes in handy.
 * A new dialog then appears.
 * Click the ellipsis :guilabel:`...` button next to the :guilabel:`Filter` text area.
 * Using the query builder that appears, enter the criterion
-  :kbd:`"landuse" = 'residential' AND "name" != ' |majorUrbanName| '` ,
+  :kbd:`"landuse" = 'residential' AND "name" <> 'Swellendam'` (or
+  :kbd:`"landuse" = 'residential' AND "name" != 'Swellendam'`),
   click :guilabel:`Ok` and choose a pale blue-grey for it and
   remove the border:
 
@@ -264,9 +265,9 @@ That's where rule-based classification comes in handy.
 .. image:: img/rule_style_result.png
    :align: center
 
-* Add a new criterion :kbd:`"landuse" != 'residential' AND "AREA" >= 0.00005`
+* Add a new criterion :kbd:`"landuse" <> 'residential' AND "AREA" >= 0.00005`
   and choose a mid-green color.
-* Add another new criterion :kbd:`"name"  =  ' |majorUrbanName| '` and assign it
+* Add another new criterion :kbd:`"name"  =  'Swellendam'` and assign it
   a darker grey-blue color in order to indicate the town's importance in the
   region.
 * Click and drag this criterion to the top of the list.
