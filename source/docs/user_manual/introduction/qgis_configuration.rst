@@ -118,6 +118,8 @@ General Settings
 System Settings
 ---------------
 
+.. _svg_paths:
+
 **SVG paths**
 
 Add or Remove :guilabel:`Path(s) to search for Scalable Vector Graphic (SVG)
