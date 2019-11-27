@@ -22,10 +22,10 @@ of the overlay layer will be added to the resulting layer.
 
 .. warning:: **Feature modification**
 
-  The attributes of the features are **not modified**, although properties
-  such as area or length of the features will be modified by the clipping operation.
-  If such properties are stored as attributes, those attributes will have to be
-  manually updated.
+   The attributes of the features are **not modified**, although properties
+   such as area or length of the features will be modified by the clipping operation.
+   If such properties are stored as attributes, those attributes will have to be
+   manually updated.
 
 This algorithm uses spatial indexes on the providers, prepared geometries and
 apply a clipping operation if the geometry isn't wholly contained by the
@@ -141,8 +141,8 @@ Parameters
    * - **Overlay layer**
      - ``OVERLAY``
      - [vector: polygon]
-     - Layer containing the overlapping features to compare to,
-       acting as a subtracting layer.
+     - Layer containing the geometries that will be subtracted from the
+       iniput layer geometries.
    * - **Difference**
      - ``OUTPUT``
      - [vector: any]
@@ -265,7 +265,7 @@ Attributes are not modified (see :ref:`warning <warning_difference>`).
 .. figure:: img/intersection.png
   :align: center
 
-  Intersection operation between a two-features input layer and a single feature
+  The intersection operation: A two-features input layer and a single feature
   overlay layer (left) - resulting features are moved for clarity (right)
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
@@ -291,8 +291,7 @@ Parameters
    * - **Overlay layer**
      - ``OVERLAY``
      - [vector: any]
-     - Layer containing the overlapping features to compare to,
-       acting as a subtracting layer.
+     - Layer containing the features to check for overlap.
    * - **Input fields to keep (leave empty to keep all fields)**
        
        Optional
@@ -316,7 +315,7 @@ Parameters
        Optional
      - ``OVERLAY_FIELDS_PREFIX``
      - [string]
-     - Prefix to add to the field names of the overlay
+     - Prefix to add to the field names of the intersect
        layer's fields to avoid name collisions with fields
        in the input layer.
    * - **Intersection**
@@ -325,7 +324,8 @@ Parameters
        
        Default: ``[Create temporary layer]``
      - Specify the layer to contain (the parts of) the features from
-       the input layer that are inside the overlay layer.
+       the input layer that overlap one or more features from the
+       overlay layer.
        One of:
 
        * Create Temporary Layer
