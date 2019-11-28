@@ -335,7 +335,7 @@ discrete values of a field or an expression.
 
    Categorized Symbolizing options
 
-To apply a categorized symbology to a layer:
+To use categorized symbology for a layer:
 
 #. Select the :guilabel:`Value` of classification: it can be an existing field
    or an :ref:`expression <vector_expressions>` you can type in the box or build
