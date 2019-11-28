@@ -577,7 +577,7 @@ guidelines:
   Vector field generic                      ``tablefield: any``
   Raster layer                              ``raster``                 |rasterLayer|
   Raster band                               ``raster band``
-  HTML file                                 ``HTML``
+  HTML file                                 ``html``
   Table layer                               ``table``                  |tableLayer|
   Expression                                ``expression``             |expression|
   Point geometry                            ``coordinates``
@@ -591,6 +591,8 @@ guidelines:
   Folder path                               ``folder``
   File                                      ``file``
   Matrix                                    ``matrix``
+  Layer                                     ``layer``
+  Same output type as input type            ``same as input``  
   ========================================  =========================  ====================
 
 |
