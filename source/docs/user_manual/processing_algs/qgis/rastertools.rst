@@ -164,10 +164,6 @@ Parameters
        
        The file encoding can also be changed here.
 
-  Default: *project CRS*
-
-
-
 Outputs
 .......
 
@@ -200,8 +196,37 @@ No new output are created: the ``QML`` style is assigned to the raster layer cho
 Parameters
 ..........
 
-``Raster layer`` [raster]
-  Raster layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Style file`` [file]
-  Path of the ``QML`` style file.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Raster layer**
+     - ``INPUT``
+     - [raster]
+     - The raster layer
+   * - **Style file**
+     - ``STYLE``
+     - [file]
+     - Path to the ``QML`` style file.
+  
+Output
+------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Raster layer**
+     - ``INPUT``
+     - [raster]
+     - The raster layer with the chosen style
