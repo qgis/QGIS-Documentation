@@ -696,7 +696,7 @@ Parameters
      - ``COLUMN_PREFIX``
      - [string]
        
-       Default: 'HISTO_'
+       Default: 'HISTO\_'
      - Prefix for output column name(s).
    * - **Output zones**
      - ``OUTPUT``
