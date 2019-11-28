@@ -25,10 +25,10 @@ of the overlay layer will be added to the resulting layer.
 
 .. warning:: **Feature modification**
 
-  The attributes of the features are **not modified**, although properties
-  such as area or length of the features will be modified by the clipping operation.
-  If such properties are stored as attributes, those attributes will have to be
-  manually updated.
+   The attributes of the features are **not modified**, although properties
+   such as area or length of the features will be modified by the clipping operation.
+   If such properties are stored as attributes, those attributes will have to be
+   manually updated.
 
 This algorithm uses spatial indexes on the providers, prepared geometries and
 apply a clipping operation if the geometry isn't wholly contained by the
@@ -44,23 +44,63 @@ mask geometry.
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
+.. seealso:: :ref:`qgisintersection`
+
 Parameters
 ..........
-``Input layer`` [vector: any]
-  Layer containing the features to be clipped.
 
-``Overlay layer`` [vector: polygon]
-  Layer containing the clipping features.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Layer containing the features to be clipped
+   * - **Overlay layer**
+     - ``OVERLAY``
+     - [vector: polygon]
+     - Layer containing the clipping features
+   * - **Clipped**
+     - ``OUTPUT``
+     - [vector: any]
+
+       Default: ``[Create temporary layer]``
+     - Specify the layer to contain the features from the input layer
+       that are inside the overlay (clipping) layer.
+       One of:
+
+       * Create Temporary Layer
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
+
 
 Outputs
 .......
 
-``Clipped`` [vector: any]
-  Layer containing features from the input layer split by the overlay layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-See also
-........
-:ref:`qgisintersection`
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Clipped**
+     - ``OUTPUT``
+     - [vector: any]
+     - Layer containing features from the input layer split by the overlay layer.
+
+
 
 
 .. _qgisdifference:
