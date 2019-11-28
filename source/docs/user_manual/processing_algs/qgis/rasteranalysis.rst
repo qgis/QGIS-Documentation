@@ -16,15 +16,17 @@ Raster calculator
 -----------------
 Performs algebraic operations using raster layers.
 
-The resulting layer will have its values computed according to an expression.
-The expression can contain numerical values, operators and references to any of
-the layers in the current project.
+The resulting layer will have its values computed according to an
+expression.
+The expression can contain numerical values, operators and references
+to any of the layers in the current project.
 
 .. note:: When using the calculator in :ref:`processing_batch` or from the
-  :ref:`console` the files to use have to be specified. The corresponding layers
-  are referred using the base name of the file (without the full path). For instance,
-  if using a layer at ``path/to/my/rasterfile.tif``, the first band of that layer
-  will be referred as ``rasterfile.tif@1``.
+  :ref:`console` the files to use have to be specified. The corresponding 
+  layers are referred using the base name of the file (without the full
+  path).
+  For instance, if using a layer at ``path/to/my/rasterfile.tif``, the first
+  band of that layer will be referred as ``rasterfile.tif@1``.
 
 Parameters
 ..........
@@ -349,74 +351,117 @@ specified in a vector table.
 Parameters
 ..........
 
-``Raster Layer`` [raster]
-  Raster layer to reclassify.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Band number`` [raster band]
-  Band of the raster you want to recalculate values.
-
-  Default: *1*
-
-``Layer containing class breaks`` [vector: any]
-  Vector layer containing the values to use for classification.
-
-``Minimum class value field`` [tablefield: numeric]
-  Field to extract the minimum value of the range of each class.
-
-``Maximum class value field`` [tablefield: numeric]
-  Field to extract the maximum value of the range of each class.
-
-``Output value field`` [tablefield: numeric]
-  Field to extract the new value to assign to the pixels that fall in the class,
-  i.e. between the corresponding min and max values.
-
-``Output no data value`` [number]
-  Value to apply to no data values.
-
-  Default: *-9999.0*
-
-``Range boundaries`` [enumeration]
-  Defines comparison rules to apply to values classification.
-
-  Options:
-
-  * 0 --- min < value <= max
-  * 1 --- min <= value < max
-  * 2 --- min <= value <= max
-  * 3 --- min < value < max
-
-  Default: *0*
-
-``Use no data when no range matches`` [boolean]
-  Applies the no data value to band values that do not fall in any class.
-  If False, the original value is kept.
-
-  Default: *False*
-
-``Output data type`` [enumeration]
-  Defines the format of the output raster file.
-
-  Options:
-
-  * 0 --- Byte
-  * 1 --- Int16
-  * 2 --- UInt16
-  * 3 --- UInt32
-  * 4 --- Int32
-  * 5 --- Float32
-  * 6 --- Float64
-  * 7 --- CInt16
-  * 8 --- CInt32
-  * 9 --- CFloat32
-  * 10 --- CFloat64
-
-  Default: *5*
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Raster layer**
+     - ``INPUT_RASTER``
+     - [raster]
+     - Raster layer to reclassify
+   * - **Band number**
+     - ``RASTER_BAND``
+     - [raster band]
+       
+       Default: The first band
+     - If the raster is multiband, choose the band you want to
+       reclassify.
+   * - **Layer containing class breaks**
+     - ``INPUT_TABLE``
+     - [vector: any]
+     - Vector layer containing the values to use for classification.
+   * - **Minimum class value field**
+     - ``MIN_FIELD``
+     - [tablefield: numeric]
+     - Field with the minimum value of the range for the class.
+   * - **Maximum class value field**
+     - ``MAX_FIELD``
+     - [tablefield: numeric]
+     - Field with the maximum value of the range for the class.
+   * - **Output value field**
+     - ``VALUE_FIELD``
+     - [tablefield: numeric]
+     - Field with the value that will be assigned to the pixels that
+       fall in the class (between the corresponding min and max
+       values).
+   * - **Output no data value**
+     - ``NO_DATA``
+     - [number]
+       
+       Default: -9999.0
+     - Value to apply to no data values.
+   * - **Range boundaries**
+     - ``RANGE_BOUNDARIES``
+     - [enumeration]
+       
+       Default: 0
+     - Defines comparison rules for the classification.
+       Options:
+       
+       * 0 --- min < value <= max
+       * 1 --- min <= value < max
+       * 2 --- min <= value <= max
+       * 3 --- min < value < max
+       
+   * - **Use no data when no range matches value**
+     - ``NODATA_FOR_MISSING``
+     - [boolean]
+       
+       Default: False
+     - Values that do not belong to a class will result in the
+       no data value.
+       If False, the original value is kept.
+   * - **Output data type**
+     - ``DATA_TYPE``
+     - [enumeration]
+       
+       Default: 5
+     - Defines the data type of the output raster file.
+       Options:
+       
+       * 0 --- Byte
+       * 1 --- Int16
+       * 2 --- UInt16
+       * 3 --- UInt32
+       * 4 --- Int32
+       * 5 --- Float32
+       * 6 --- Float64
+       * 7 --- CInt16
+       * 8 --- CInt32
+       * 9 --- CFloat32
+       * 10 --- CFloat64
+       
+   * - **Reclassified raster**
+     - ``OUTPUT``
+     - [raster]
+     - Specification of the output raster. One of:
+       
+       * Save to a Temporary File
+       * Save to File...
+       
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Reclassified raster`` [raster]
-  Raster layer in output with reclassified band values.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Reclassified raster**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster layer with reclassified band values
 
 
 .. _qgisreclassifybytable:
@@ -429,66 +474,106 @@ specified in a fixed table.
 Parameters
 ..........
 
-``Raster Layer`` [raster]
-  Raster layer to reclassify.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Band number`` [raster band]
-  Band of the raster you want to recalculate values.
-
-  Default: *1*
-
-``Reclassification table`` [table]
-  A 3-columns table to fill with the values to set the boundaries of each class
-  (``Minimum`` and ``Maximum``) and the new ``Value`` to assign to the band
-  values that fall in the class.
-
-``Output no data value`` [number]
-  Value to apply to no data values.
-
-  Default: *-9999.0*
-
-``Range boundaries`` [enumeration]
-  Defines comparison rules to apply to values classification.
-
-  Options:
-
-  * 0 --- min < value <= max
-  * 1 --- min <= value < max
-  * 2 --- min <= value <= max
-  * 3 --- min < value < max
-
-  Default: *0*
-
-``Use no data when no range matches`` [boolean]
-  Applies the no data value to band values that do not fall in any class.
-  If False, the original value is kept.
-
-  Default: *False*
-
-``Output data type`` [enumeration]
-  Defines the format of the output raster file.
-
-  Options:
-
-  * 0 --- Byte
-  * 1 --- Int16
-  * 2 --- UInt16
-  * 3 --- UInt32
-  * 4 --- Int32
-  * 5 --- Float32
-  * 6 --- Float64
-  * 7 --- CInt16
-  * 8 --- CInt32
-  * 9 --- CFloat32
-  * 10 --- CFloat64
-
-  Default: *5*
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Raster layer**
+     - ``INPUT_RASTER``
+     - [raster]
+     - Raster layer to reclassify
+   * - **Band number**
+     - ``RASTER_BAND``
+     - [raster band]
+       
+       Default: The first band
+     - If the raster is multiband, choose the band you want to
+       reclassify.
+   * - **Reclassification table**
+     - ``INPUT_TABLE``
+     - [matrix]
+     - A 3-columns table (formatted as a list of nine numbers)
+       containing the values to use for class boundaries  (``Minimum``
+       and ``Maximum``) and the new ``Value`` to assign to the band
+       values that fall in the class.
+   * - **Output no data value**
+     - ``NO_DATA``
+     - [number]
+       
+       Default: -9999.0
+     - Value to apply to no data values.
+   * - **Range boundaries**
+     - ``RANGE_BOUNDARIES``
+     - [enumeration]
+       
+       Default: 0
+     - Defines comparison rules for the classification.
+       Options:
+       
+       * 0 --- min < value <= max
+       * 1 --- min <= value < max
+       * 2 --- min <= value <= max
+       * 3 --- min < value < max
+       
+   * - **Use no data when no range matches value**
+     - ``NODATA_FOR_MISSING``
+     - [boolean]
+       
+       Default: False
+     - Values that do not belong to a class will result in the
+       no data value.
+       If False, the original value is kept.
+   * - **Output data type**
+     - ``DATA_TYPE``
+     - [enumeration]
+       
+       Default: 5
+     - Defines the data type of the output raster file.
+       Options:
+       
+       * 0 --- Byte
+       * 1 --- Int16
+       * 2 --- UInt16
+       * 3 --- UInt32
+       * 4 --- Int32
+       * 5 --- Float32
+       * 6 --- Float64
+       * 7 --- CInt16
+       * 8 --- CInt32
+       * 9 --- CFloat32
+       * 10 --- CFloat64
+       
+   * - **Reclassified raster**
+     - ``OUTPUT``
+     - [raster]
+     - Specification of the output raster. One of:
+       
+       * Save to a Temporary File
+       * Save to File...
+       
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Reclassified raster`` [raster]
-  Raster layer in output with reclassified band values.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Reclassified raster**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster layer with reclassified band values
 
 
 .. _qgisrastersampling:
@@ -498,39 +583,79 @@ Sample raster values
 Extracts raster values at the point locations. If the raster layer is multiband,
 each band is sampled.
 
-The attribute table of the resulting layer will have as many new columns as the
-raster layer band count.
+The attribute table of the resulting layer will have as many new columns
+as there are bands in the raster layer.
 
 Parameters
 ..........
 
-``Input Point Layer`` [vector: point]
-  Point vector layer in input to use for the sampling.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Raster Layer to sample`` [raster]
-  Raster layer with corresponding band(s) to sample at given point locations.
-
-``Output column prefix`` [string]
-  Prefix for the column(s) name.
-
-  Default: ``rvalue``
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Point Layer**
+     - ``INPUT``
+     - [vector: point]
+     - Point vector layer in input to use for the sampling.
+   * - **Raster Layer to sample**
+     - ``RASTERCOPY``
+     - [raster]
+     - Raster layer to sample at input point layer locations.
+   * - **Output column prefix**
+     - ``COLUMN_PREFIX``
+     - [string]
+       
+       Default: 'rvalue'
+     - Prefix for the column(s) name.
+   * - **Sampled Points**
+     - ``OUTPUT``
+     - [vector: point]
+       
+       Default: ``[Create temporary layer]``
+     - Specify the output point vector layer for the sampled raster
+       values.
+       One of:
+       
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+       
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Sampled Points`` [vector: point]
-  Layer in output with additional column(s) of sampled raster values.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Sampled Points**
+     - ``OUTPUT``
+     - [vector: point]
+     - Output point vector layer with additional column(s) containing
+       the sampled raster values.
 
 
 .. _qgiszonalhistogram:
 
 Zonal histogram
 ---------------
-Appends fields representing counts of each unique value from a raster layer contained
-within polygon features.
+Appends fields representing counts of each unique value from a raster
+layer contained within zones defined as polygons.
 
-The output layer attribute table will have as many fields as the unique values
-of the raster layer that intersects the polygon(s).
+The output layer attribute table will have as many fields as the
+unique values of the raster layer that intersects the polygon(s).
 
 .. figure:: img/raster_histogram.png
   :align: center
@@ -541,68 +666,154 @@ of the raster layer that intersects the polygon(s).
 Parameters
 ..........
 
-``Raster layer`` [raster]
-  Raster layer in input.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Band number`` [raster band]
-  If the raster is multiband, choose the band you want to calculate the statistics.
-
-``Vector layer containing the zones`` [vector: polygon]
-  Overlaying vector layer where unique raster values will be appended.
-
-``Output column prefix`` [string]
-  Optional
-
-  Prefix string for output columns.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Raster Layer to sample**
+     - ``INPUT_RASTER``
+     - [raster]
+     - Input raster layer
+   * - **Band number**
+     - ``RASTER_BAND``
+     - [raster band]
+       
+       Default: The first band
+     - If the raster is multiband, choose the band to use for the
+       zonal histogram.
+   * - **Vector layer containing the zones**
+     - ``INPUT_VECTOR``
+     - [vector: polygon]
+     - Pologyn vector layer that defines the zones.
+   * - **Output column prefix**
+       
+       Optional
+     - ``COLUMN_PREFIX``
+     - [string]
+       
+       Default: 'HISTO_'
+     - Prefix for output column name(s).
+   * - **Output zones**
+     - ``OUTPUT``
+     - [vector: polygon]
+       
+       Default: ``[Create temporary layer]``
+     - Specify the output polygon vector layer with count of raster
+       values.
+       One of:
+       
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+       
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Output zones`` [vector: polygon]
-  Output polygon vector layer with unique count of raster values.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output zones**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Output polygon vector layer with count of raster values.
+  
 
 .. _qgiszonalstatistics:
 
 Zonal statistics
 ----------------
-Calculates statistics of a raster layer for each feature of an overlapping polygon
-vector layer.
+Calculates statistics of a raster layer for each feature of an overlapping
+polygon vector layer.
 
-.. warning:: No new output file will be created. The algorithm adds new columns
-  to the source vector layer.
+.. warning:: No new output file will be created. The algorithm adds new
+  columns to the input vector layer.
 
 Parameters
 ..........
 
-``Raster layer`` [raster]
-  Raster layer in input.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Band number`` [raster band]
-  If the raster is multiband choose the band you want to calculate the statistics.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Raster Layer**
+     - ``INPUT_RASTER``
+     - [raster]
+     - Input raster layer
+   * - **Band number**
+     - ``RASTER_BAND``
+     - [raster band]
+       
+       Default: The first band
+     - If the raster is multiband, choose the band to use for the
+       zonal histogram.
+   * - **Vector layer containing the zones**
+     - ``INPUT_VECTOR``
+     - [vector: polygon]
+     - Pologyn vector layer that defines the zones (and that will
+       be updated with new statistics columns).
+   * - **Output column prefix**
+       
+       Optional
+     - ``COLUMN_PREFIX``
+     - [string]
+       
+       Default: '_'
+     - Prefix for the output column name(s).
+   * - **Statistics to calculate**
+     - ``STATS``
+     - [enumeration] [list]
+       
+       Default: [0 1 2]
+     - List of statistical operators for the output.
+       The available operators are:
+       
+       * 0 -- Count
+       * 1 -- Sum
+       * 2 -- Mean
+       * 3 -- Median
+       * 4 -- St. dev.
+       * 5 -- Min
+       * 6 -- Max
+       * 7 -- Range
+       * 8 -- Minority
+       * 9 -- Majority (mode)
+       * 10 -- Variety
+       * 11 -- Variance
+       * 12 -- All
 
-  Default: *1*
+Outputs
+.......
 
-``Vector layer containing zones`` [vector: polygon]
-  Polygon vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Output column prefix`` [string]
-  Prefix string for output columns.
-
-  Default: ``_``
-
-``Statistics to calculate`` [enumeration] [list]
-  List of statistical operator for the output. The available operators are:
-
-  * Count
-  * Sum
-  * Mean
-  * Median
-  * St. dev.
-  * Min
-  * Max
-  * Range
-  * Minority
-  * Majority (mode)
-  * Variety
-  * Variance
-  * All
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Vector layer containing the zones**
+     - ``INPUT_VECTOR``
+     - [vector: polygon]
+     - The input polygon vector layer with new fields added for the
+       zone statistics.
