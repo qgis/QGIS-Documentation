@@ -25,42 +25,87 @@ tile size.
 Parameters
 ..........
 
-``Minimum extent to render (xmin, xmax, ymin, ymax)`` [extent]
-  Extent of the output raster layer. It will internally be extended to be a multiple
-  of the tile size.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Tile size`` [number]
-  Size of the tile of the output raster layer.
-
-  Default: *1024*
-
-``Map units per pixel`` [number]
-  Pixel size (in map units).
-
-  Default: *100*
-
-``Make background transparent`` [boolean]
-  Allows to export the map with a transparent background, i.e. outputs a RGBA
-  image if set to ``True`` instead of RGB.
-
-  Default: *False*
-
-``Map theme to render`` [enumeration]
-  Optional
-
-  If you have some map theme set, you can choose one of them for the final raster
-  layer.
-
-``Single layer to render`` [enumeration]
-  Optional
-
-  Choose a single layer for the output raster layer.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Minimum extent to render (xmin, xmax, ymin, ymax)**
+     - ``EXTENT``
+     - [extent]
+     - Specify the extent of the output raster layer.
+       One of:
+       
+       * Use Canvas Extent
+       * Select Extent on Canvas
+       * Use Layer Extent...
+       
+       It will internally be extended to be a multiple of the tile size.
+   * - **Tile size**
+     - ``TILE_SIZE``
+     - [number]
+       
+       Default: 1024
+     - Size of the tile of the output raster layer. Minimium value: 64.
+   * - **Map units per pixel**
+     - ``MAP_UNITS_PER_PIXEL``
+     - [number]
+       
+       Default: 100.0
+     - Pixel size (in map units). Minimum value: 0.0
+   * - **Make background transparent**
+     - ``MAKE_BACKGROUND_TRANSPARENT``
+     - [boolean]
+        
+       Default: False
+     - Allows exporting the map with a transparent background.
+       Outputs an RGBA (instead of RGB) image if set to ``True``.
+   * - **Map theme to render**
+       
+       Optional
+     - ``MAP_THEME``
+     - [enumeration]
+     - If you have map themes set, you can choose one of them
+       for the rendering.
+   * - **Single layer to render**
+       
+       Optional
+     - ``LAYER``
+     - [enumeration]
+     - Choose a single layer for the rendering
+   * - **Output layer**
+     - ``OUTPUT``
+     - [raster]
+       
+       Default: Save to temporary file
+     - Specification of the output raster. One of:
+       
+       * Save to a Temporary File
+       * Save to File...
+       
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Output layer`` [raster]
-  Output raster layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output layer**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster layer
+  
 
 .. _qgiscreateconstantrasterlayer:
 
@@ -72,7 +117,19 @@ the same value chosen.
 Parameters
 ..........
 
-``Desired extent (xmin, xmax, ymin, ymax)`` [extent]
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Constant**
+     - ``OUTPUT``
+     - [raster]
+     - Raster covering the desired extent with pixel size and value chosen``Desired extent (xmin, xmax, ymin, ymax)`` [extent]
   Extent for the raster layer.
 
 ``Target CRS`` [crs]
@@ -93,8 +150,19 @@ Parameters
 Outputs
 .......
 
-``Constant`` [raster]
-  Raster covering the desired extent with pixel size and value chosen.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Constant**
+     - ``OUTPUT``
+     - [raster]
+     - Raster covering the desired extent with pixel size and value chosen
 
 
 .. _qgissetstyleforrasterlayer:
