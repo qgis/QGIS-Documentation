@@ -552,7 +552,11 @@ Type of error messages and their meanings
    * - Ring %1 of polygon %2 not in exterior ring
      -
      -
-
+    
+   * - Polygon %1 lies inside polygon %2
+     - This error happens when a part of MultiPolygon geometry is inside in a hole of a MultiPolygon geometry. 
+     - .. figure:: img/geos_nest_shell.png
+          :align: center
 
 .. _qgiscollect:
 
