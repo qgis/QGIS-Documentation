@@ -589,6 +589,8 @@ guidelines:
   String                                    ``string``                 |inputText|
   Boolean                                   ``boolean``                |checkbox|
   Folder path                               ``folder``
+  File                                      ``matrix``
+  Matrix                                    ``file``
   ========================================  =========================  ====================
 
 |
