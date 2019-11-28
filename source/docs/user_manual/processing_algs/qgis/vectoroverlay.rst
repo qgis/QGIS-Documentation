@@ -17,7 +17,6 @@ Clips a vector layer using the features of an additional polygon layer.
 Only the parts of the features in the input layer that fall within the polygons
 of the overlay layer will be added to the resulting layer.
 
-
 .. _warning_difference:
 
 .. warning:: **Feature modification**
@@ -204,7 +203,7 @@ Parameters
      - [vector: any]
      - Layer to extract (parts of) features from.
    * - **Extent (xmin, xmax, ymin, ymax)**
-     - ``OVERLAY``
+     - ``EXTENT``
      - [extent]
      - Extent for clipping.
    * - **Clip features to extent**
