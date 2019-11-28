@@ -353,6 +353,7 @@ Parameters
        * Save to File...
        * Save to Geopackage...
        * Save to PostGIS Table
+       
        Vector layer containing randomly selected features
 
 Outputs
@@ -851,4 +852,3 @@ Outputs
 See also
 ........
 :ref:`qgisextractbylocation`
-
