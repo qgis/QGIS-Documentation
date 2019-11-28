@@ -29,60 +29,97 @@ the layers in the current project.
 Parameters
 ..........
 
-``Layers (double click to add)`` [raster selection]
-  List of all raster layers loaded in the legend. Raster layers are referred by
-  their name and the number of the band: ``layer_name@band_number``. For instance,
-  the first band from a layer named ``DEM`` will be referred as ``DEM@1``.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Values and operators`` [calculator]
-  Contains some calculator like buttons that can be used to fill the expression
-  box. Besides the visible buttons also the following functions are supported:
-  ``sin()``, ``cos()``, ``tan()``, ``atan2()``, ``ln()``, ``log10()``.
-
-``Expression`` [string]
-  Expression that will be used to calculate the output raster layer. You can use
-  the operator buttons provided to type directly the expression in this box.
-
-``Predefined expressions`` [enumeration]
-  You can use the existing ``NDVI`` expression or you can define new expressions
-  to use for some default and advanced calculations.
-
-  Clicking on the :kbd:`Save...` button you can enter a new expression while
-  using the :kbd:`Add...` button you can use the expression and set the parameters.
-
-
-  Default: *NDVI*
-
-``Reference layers(s)(used for automated extent, cellsize and CRS)`` [raster] [list]
-  Optional
-
-  Layer(s) that will be used to fetch extent, cell size and CRS. Choosing the
-  layer in this box avoids to fill all the other parameters by hand.
-
-``Cell size (use 0 or empty to set it automatically)`` [number]
-  Optional
-
-  Cell size of the output raster layer. If the cell size is not specified, the
-  minimum cell size of selected reference layer(s) will be used. The cell size is
-  assumed to be the same in both X and Y axes.
-
-``Output extent (xmin, xmax, ymin, ymax)`` [extent]
-  Optional
-
-  Extent of the output raster layer. If the extent is not specified, the minimum
-  extent that covers selected reference layer(s) will be used.
-
-``Output CRS`` [crs]
-  Optional
-
-  CRS of the output raster layer. If the output CRS is not specified, the CRS of
-  the first reference layer will be used.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Operators**
+     -  GUI only
+     - 
+     - Contains some calculator like buttons that can be used to fill
+       the expression box.
+   * - **Expression**
+     -  ``EXPRESSION``
+     - [string]
+     - Expression that will be used to calculate the output raster layer.
+       You can use the operator buttons provided to type directly the
+       expression in this box.
+   * - **Predefined expressions**
+     - GUI only
+     - 
+     - You can use the predefined ``NDVI`` expression or you can define
+       new expressions for calculations.
+       The :kbd:`Add...` button loads a defined expression (and lets
+       you set the parameters).
+       The :kbd:`Save...` button lets you define a new expression.
+   * - **Reference layer(s) (used for automated extent, cellsize, and CRS)**
+       
+       Optional
+     - ``LAYERS``
+     - [raster] [list]
+     - Layer(s) that will be used to fetch extent, cell size and CRS.
+       By choosing the layer in this box you avoid filling in all the
+       other parameters by hand.
+       Raster layers are referred by their name and the number of
+       the band: ``layer_name@band_number``.
+       For instance, the first band from a layer named ``DEM`` will be
+       referred as ``DEM@1``.
+   * - **Cell size (use 0 or empty to set it automatically)**
+       
+       Optional
+     - ``CELLSIZE``
+     - [number]
+     - Cell size of the output raster layer.
+       If the cell size is not specified, the minimum cell size of
+       selected reference layer(s) will be used.
+       The cell size will be the same for the X and Y axes.
+   * - **Output extent**
+     - ``EXTENT``
+     - [extent]
+     - Extent of the output raster layer.
+       If the extent is not specified, the minimum extent that covers
+       all the selected reference layers will be used.
+   * - **Output CRS**
+       
+       Optional
+     - ``CRS``
+     - [crs]
+     - CRS of the output raster layer.
+       If the output CRS is not specified, the CRS of the first
+       reference layer will be used.
+   * - **Output**
+     - ``OUTPUT``
+     - [raster]
+       
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster. One of:
+       
+       * Save to a Temporary File
+       * Save to File...
+       
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Output`` [raster]
-  Output raster file containing calculated values.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster file with the calculated values.
 
 
 .. _qgisrasterlayerstatistics:
@@ -95,29 +132,95 @@ The output is loaded in the :menuselection:`Processing --> Results viewer` menu.
 Parameters
 ..........
 
-``Input layer`` [raster]
-  Raster layer in input
 
-``Band number`` [raster band]
-  If the raster is multiband choose the band you want to calculate the statistics.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-  Default: *1*
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Input raster layer
+   * - **Band number**
+     - ``BAND``
+     - [raster band]
+       
+       Default: The first band
+     - If the raster is multiband, choose the band you want to get
+       statistics for.
+   * - **Output**
+     - ``OUTPUT_HTML_FILE``
+     - [file]
+       
+       Default: ``[Save to temporary file]``
+     - Specification of the output file:
+       
+       * Skip Output
+       * Save to a Temporary File
+       * Save to File...
+       
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Statistics`` [html]
-  The output file contains the following information:
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-  * Analyzed file: path of the raster layer;
-  * Minimum value: minimum value of the raster;
-  * Maximum value: maximum value of the raster;
-  * Range: difference between the maximum and minimum values;
-  * Sum: total sum of the values;
-  * Mean value: mean of the values;
-  * Standard deviation: standard deviation of the values;
-  * Sum of the squares: sum of the squared differences of each observation from
-    the overall mean.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Maximum value**
+     - ``MAX``
+     - [number]
+     - 
+   * - **Mean value**
+     - ``MEAN``
+     - [number]
+     - 
+   * - **Minimum value**
+     - ``MIN``
+     - [number]
+     - 
+   * - **Output**
+     - ``OUTPUT_HTML_FILE``
+     - [html]
+     - The output file contains the following information:
+       
+       * Analyzed file: path of the raster layer
+       * Minimum value: minimum value of the raster
+       * Maximum value: maximum value of the raster
+       * Range: difference between the maximum and minimum values
+       * Sum: total sum of the values
+       * Mean value: mean of the values
+       * Standard deviation: standard deviation of the values
+       * Sum of the squares: sum of the squared differences of
+         each observation from the overall mean
+       
+   * - **Range**
+     - ``RANGE``
+     - [number]
+     - 
+   * - **Standard deviation**
+     - ``STD_DEV``
+     - [number]
+     - 
+   * - **Sum**
+     - ``SUM``
+     - [number]
+     - 
+   * - **Sum of the squares**
+     - ``SUM_OF_SQUARES``
+     - [number]
+     - 
 
 
 .. _qgisrasterlayeruniquevaluesreport:
@@ -129,32 +232,111 @@ Returns the count and area of each unique value in a given raster layer.
 Parameters
 ..........
 
-``Input layer`` [raster]
-  Raster layer in input
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Band number`` [raster band]
-  If the raster is multiband choose the band you want to calculate the statistics.
-
-  Default: *1*
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Input raster layer
+   * - **Band number**
+     - ``BAND``
+     - [raster band]
+       
+       Default: The first band
+     - If the raster is multiband, choose the band you want to get
+       statistics for.
+   * - **Unique values report**
+     - ``OUTPUT_HTML_FILE``
+     - [file]
+       
+       Default: ``[Save to temporary file]``
+     - Specification of the output file:
+       
+       * Skip Output
+       * Save to a Temporary File
+       * Save to File...
+       
+       The file encoding can also be changed here.
+   * - **Unique values table**
+     - ``OUTPUT_TABLE``
+     - [table]
+       
+       Default: ``[Skip output]``
+     - Specification of the table for unique values:
+       
+       * Skip Output
+       * Create Temporary Layer
+       * Save to File...
+       * Save to GeoPackage...
+       * Save to PostGIS Table...
+       
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Unique values report`` [html]
-  The output file contains the following information:
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-  * Analyzed file: the path of the raster layer;
-  * Extent: xmin, ymin, xmax, ymax coordinates of the extent;
-  * Projection: projection of the layer;
-  * Width in pixels: number of columns and pixel width size;
-  * Height in pixels: number of rows and pixel width size;
-  * Total pixel count: count of all the pixels;
-  * NODATA pixel count: count of pixels with NODATA value;
-  * Final table with 3 different columns:
-
-    * Value: unique value of each pixel;
-    * Pixel count: count of how many pixels belong to each value;
-    * Area (m\ :sup:`2`): square meters of the area for each pixel class.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **CRS authority identifier**
+     - ``CRS_AUTHID``
+     - [crs]
+     - 
+   * - **Extent**
+     - ``EXTENT``
+     - [extent]
+     - 
+   * - **Height in pixels**
+     - ``HEIGHT_IN_PIXELS``
+     - [number]
+     - 
+   * - **NODATA pixel count**
+     - ``NODATA_PIXEL_COUNT``
+     - [number]
+     - 
+   * - **Total pixel count**
+     - ``TOTAL_PIXEL_COUNT``
+     - [number]
+     - 
+   * - **Unique values report**
+     - ``OUTPUT_HTML_FILE``
+     - [html]
+     - The output HTML file contains the following information:
+       
+       * Analyzed file: the path of the raster layer
+       * Extent: xmin, ymin, xmax, ymax coordinates of the extent
+       * Projection: projection of the layer
+       * Width in pixels: number of columns and pixel width size
+       * Height in pixels: number of rows and pixel width size
+       * Total pixel count: count of all the pixels
+       * NODATA pixel count: count of pixels with NODATA value
+   * - **Unique values table**
+     - ``OUTPUT_TABLE``
+     - [table]
+     - A table with three columns:
+         
+       * *value*: pixel value
+       * *count*: count of pixels with this value
+       * *m*\ :sup:`2`: total area in square meters of pixels with
+         this value.
+       
+   * - **Width in pixels**
+     - ``WIDTH_IN_PIXELS``
+     - [number]
+     - 
 
 
 .. _qgisreclassifybylayer:
