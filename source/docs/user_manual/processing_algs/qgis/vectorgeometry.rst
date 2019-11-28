@@ -555,7 +555,7 @@ Type of error messages and their meanings
     
    * - Polygon %1 lies inside polygon %2
      - This error happens when a part of MultiPolygon geometry is inside in a hole of a MultiPolygon geometry. 
-     - .. figure:: img/geos_nest_shell.png
+     - .. figure:: img/qgis_poliinside_.png
           :align: center
 
 .. _qgiscollect:
