@@ -152,12 +152,12 @@ Parameters
      - ``BAND``
      - [raster band]
        
-       Default: The first band
+       Default: The first band of the input layer
      - If the raster is multiband, choose the band you want to get
        statistics for.
    * - **Output**
      - ``OUTPUT_HTML_FILE``
-     - [file]
+     - [html]
        
        Default: ``[Save to temporary file]``
      - Specification of the output file:
@@ -251,7 +251,7 @@ Parameters
      - ``BAND``
      - [raster band]
        
-       Default: The first band
+       Default: The first band of the input layer
      - If the raster is multiband, choose the band you want to get
        statistics for.
    * - **Unique values report**
@@ -368,7 +368,7 @@ Parameters
      - ``RASTER_BAND``
      - [raster band]
        
-       Default: The first band
+       Default: The first band of the raster layer
      - If the raster is multiband, choose the band you want to
        reclassify.
    * - **Layer containing class breaks**
@@ -491,7 +491,7 @@ Parameters
      - ``RASTER_BAND``
      - [raster band]
        
-       Default: The first band
+       Default: The first band of the raster layer
      - If the raster is multiband, choose the band you want to
        reclassify.
    * - **Reclassification table**
@@ -683,7 +683,7 @@ Parameters
      - ``RASTER_BAND``
      - [raster band]
        
-       Default: The first band
+       Default: The first band raster layer to sample
      - If the raster is multiband, choose the band to use for the
        zonal histogram.
    * - **Vector layer containing the zones**
@@ -762,7 +762,7 @@ Parameters
      - ``RASTER_BAND``
      - [raster band]
        
-       Default: The first band
+       Default: The first band of the raster layer
      - If the raster is multiband, choose the band to use for the
        zonal histogram.
    * - **Vector layer containing the zones**
