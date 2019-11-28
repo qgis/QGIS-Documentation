@@ -17,86 +17,135 @@ Converts raster data to XYZ ASCII file format.
 Parameters
 ..........
 
-``Input layer`` [raster]
-  Raster layer to convert.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Band number`` [raster band]
-  Number of the band to export values from.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Raster layer to convert
+   * - **Band number**
+     - ``BAND``
+     - [raster band]
 
-  Default: *1*
+       Default: The first band of the input layer
+     - If the raster is multiband, choose the band you want to
+       convert
+   * - **Output comma-separated values**
+     - ``CSV``
+     - [boolean]
 
-``Output comma-separated values`` [boolean]
-  Sets whether the output file should be of comma-separated values (csv) type.
+       Default: False
+     - Sets whether the output file should be of type comma-separated
+       values (csv).
+   * - **XYZ ASCII file**
+     - ``OUTPUT``
+     - [file]
 
-  Default: *False*
+       Default: ``[Save to temporary file]``
+     - Specification of the output file.
+       One of:
+       
+       * Save to a Temporary File
+       * Save to File...
+       
+       The file encoding can also be changed here.
   
 Outputs
 .......
 
-``XYZ ASCII file`` [table]
-  Table file containing the values exported from the raster band.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **XYZ ASCII file**
+     - ``INPUT``
+     - [table]
+     - Table file containing the values exported from the raster band.
 
 
 .. _gdalpcttorgb:
 
 PCT to RGB
 ----------
-Converts an 8bit paletted image to 24bit RGB.
-It will convert a pseudocolor band on the input file into an output RGB file of the desired format.
+Converts an 8 bit paletted image to a 24 bit RGB.
+It will convert a pseudocolor band from the input file to
+an RGB file of the desired format.
 
-This algorithm is derived from the `GDAL pct2rgb utility <https://gdal.org/pct2rgb.html>`_ .
+This algorithm is derived from the
+`GDAL pct2rgb utility <https://gdal.org/pct2rgb.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Conversion`
 
 Parameters
 ..........
 
-``Input layer`` [raster]
-  Input 8bit raster image.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Band number`` [enumeration]
-  Band to convert to RGB.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Input 8 bit raster image
+   * - **Band number**
+     - ``BAND``
+     - [raster band]
 
-  Options:
+       Default: The first band of the input layer
+     - If the raster is multiband, choose the band you want to
+       convert
+   * - **Generate a RGBA file**
+     - ``RGBA``
+     - [boolean]
 
-  * 0 --- 1
-  * 1 --- 2
-  * 2 --- 3
-  * 3 --- 4
-  * 4 --- 5
-  * 5 --- 6
-  * 6 --- 7
-  * 7 --- 8
-  * 8 --- 9
-  * 9 --- 10
-  * 10 --- 11
-  * 11 --- 12
-  * 12 --- 13
-  * 13 --- 14
-  * 14 --- 15
-  * 15 --- 16
-  * 16 --- 17
-  * 17 --- 18
-  * 18 --- 19
-  * 19 --- 20
-  * 20 --- 21
-  * 21 --- 22
-  * 22 --- 23
-  * 23 --- 24
-  * 24 --- 25
+       Default: False
+     - Sets whether the output file should be of type RGBA.
+   * - **PCT to RGB**
+     - ``OUTPUT``
+     - [file]
 
-  Default: *0*
-
-``Generate a RGBA file`` [boolean]
-  Sets whether the output file should be of RGBA type.
-
-  Default: *False*
+       Default: ``[Save to temporary file]``
+     - Specification of the output file.
+       One of:
+       
+       * Save to a Temporary File
+       * Save to File...
+       
+       The file encoding can also be changed here.
   
 Outputs
 .......
 
-``PCT to RGB`` [raster]
-  24bit RGB raster image
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **PCT to RGB**
+     - ``INPUT``
+     - [raster]
+     - 24bit RGB raster image
 
 
 .. _gdalpolygonize:
@@ -114,28 +163,67 @@ This algorithm is derived from the `GDAL polygonize utility <https://gdal.org/gd
 Parameters
 ..........
 
-``Input layer`` [raster]
-  Input raster layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Band number`` [raster band]
-  Band to extract data from.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Input raster layer
+   * - **Band number**
+     - ``BAND``
+     - [raster band]
 
-``Name of the field to create`` [string]
-  Defines the field name in which the attributes of the connected regions are
-  entered. If no field name is defined the name will be 'DN'.
+       Default: The first band of the input layer
+     - If the raster is multiband, choose the band you want to use
+   * - **Name of the field to create**
+     - ``FIELD``
+     - [string]
+       
+       Default: 'DN'
+     - Specify the field name for the attributes of the connected
+       regions.
+   * - **Use 8-connectedness**
+     - ``EIGHT_CONNECTEDNESS``
+     - [boolean]
 
-  Default: *DN*
+       Default: False
+     - Sets whether the output file should be of type RGBA.
+   * - **Vectorized**
+     - ``OUTPUT``
+     - [vector: polygon]
 
-``Use 8-connectedness`` [boolean]
-  <put parameter description here>
-
-  Default: *False*
-
+       Default: ``[Save to temporary file]``
+     - Specification of the output (polygon) vector layer.
+       One of:
+       
+       * Save to a Temporary File
+       * Save to File...
+       
+       The file encoding can also be changed here.
+  
 Outputs
 .......
 
-``Vectorized`` [vector: polygon]
-  Output vector layer. Default format is \*.shp.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Vectorized**
+     - ``INPUT``
+     - [vector: polygon]
+     - Output vector layer
 
 
 .. _gdalrearrange_bands:
@@ -150,11 +238,49 @@ This algorithm is derived from the `GDAL translate utility <https://gdal.org/gda
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input raster layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``selected band(s)`` [raster band] [list]
-  Ordered list of the bands to use to create the new raster.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Input raster layer
+   * - **Selected band(s)**
+     - ``BAND``
+     - [raster band] [list]
+       
+       Default: None
+     - Ordered list of the bands to use to create the new raster
+   * - **Output data type**
+     - ``DATA_TYPE``
+     - [enumeration]
+       
+       Default: 5
+     - Defines the data type of the output raster file.
+       Options:
+       
+       * 0 --- Byte
+       * 1 --- Int16
+       * 2 --- UInt16
+       * 3 --- UInt32
+       * 4 --- Int32
+       * 5 --- Float32
+       * 6 --- Float64
+       * 7 --- CInt16
+       * 8 --- CInt32
+       * 9 --- CFloat32
+       * 10 --- CFloat64
+       
+
+     
+     ```` 
+  .
 
 ``Additional creation options``
   Optional
@@ -184,11 +310,37 @@ Parameters
 
   Default: *0*
 
+     
+     
+   * - **Vectorized**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output (polygon) vector layer.
+       One of:
+       
+       * Save to a Temporary File
+       * Save to File...
+       
+       The file encoding can also be changed here.
+  
 Outputs
 .......
 
-``Converted`` [raster]
-  Output raster layer with rearranged bands.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Converted**
+     - ``INPUT``
+     - [raster]
+     - Output raster layer with rearranged bands.
 
 
 .. _gdalrgbtopct:
