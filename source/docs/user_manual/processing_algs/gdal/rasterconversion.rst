@@ -276,11 +276,7 @@ Parameters
        * 8 --- CInt32
        * 9 --- CFloat32
        * 10 --- CFloat64
-       
 
-     
-     ```` 
-  .
 
 ``Additional creation options``
   Optional
