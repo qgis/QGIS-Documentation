@@ -68,7 +68,7 @@ Parameters
      - Value to be evaluated
    * - **Extracted (attribute)**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
        
        Default: ``[Create Temporary Layer]``
      - Specify the output vector layer for matching features.
@@ -82,10 +82,10 @@ Parameters
        The file encoding can also be changed here.
    * - **Extracted (non-matching)**
      - ``FAIL_OUTPUT``
-     - [vector: any]
+     - [same as input]
        
        Default: ``[Skip output]``
-     - Specify the output vector layer for with non-matching
+     - Specify the output vector layer for non-matching
        features.
        One of:
        
@@ -109,12 +109,12 @@ Outputs
      - Description
    * - **Extracted (attribute)**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
      - Vector layer with matching features from the input
        layer
    * - **Extracted (non-matching)**
      - ``FAIL_OUTPUT``
-     - [vector: any]
+     - [same as input]
      - Vector layer with non-matching features from the
        input layer
 
@@ -156,7 +156,7 @@ Parameters
      - Expression to filter the vector layer
    * - **Matching features**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
        
        Default: ``[Create Temporary Layer]``
      - Specify the output vector layer for matching features.
@@ -170,7 +170,7 @@ Parameters
        The file encoding can also be changed here.
    * - **Non-matching**
      - ``FAIL_OUTPUT``
-     - [vector: any]
+     - [same as input]
        
        Default: ``[Skip output]``
      - Specify the output vector layer for non-matching
@@ -197,12 +197,12 @@ Outputs
      - Description
    * - **Matching features**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
      - Vector layer with matching features from the input
        layer
    * - **Non-matching**
      - ``FAIL_OUTPUT``
-     - [vector: any]
+     - [same as input]
      - Vector layer with non-matching features from the
        input layer
 
@@ -239,6 +239,7 @@ Parameters
    * - **Where the features (geometric predicate)**
      - ``PREDICATE``
      - [enumeration] [list]
+       
        Default: [0]
      - Spatial condition for the selection.
        One or more of:
@@ -261,7 +262,7 @@ Parameters
      - Intersection vector layer
    * - **Extracted (location)**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
        
        Default: ``[Create temporary layer]``
      - Specify the output vector layer for the features that
@@ -288,7 +289,7 @@ Outputs
      - Description
    * - **Extracted (location)**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
      - Vector layer with features from the input layer that
        have the chosen spatial relationship(s) with one or
        more features in the comparison layer.
@@ -370,7 +371,7 @@ Outputs
      - Description
    * - **Extracted (random)**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
      - Vector layer containing randomly selected features from
        the input layer
 
@@ -429,7 +430,7 @@ Parameters
      - Number or percentage of features to select
    * - **Extracted (random stratified)**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
        
        Default: ``[Create temporary layer]``
      - Specify the output vector layer for the randomly
@@ -457,7 +458,7 @@ Outputs
      - Description
    * - **Extracted (random stratified)**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
      - Vector layer containing randomly selected features from
        the input layer
 
@@ -525,7 +526,7 @@ Outputs
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [same as input]
      - The input layer with features selected
 
 See also
@@ -604,7 +605,7 @@ Outputs
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [same as input]
      - The input layer with features selected
 
 See also
@@ -695,7 +696,7 @@ Outputs
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [same as input]
      - The input layer with features selected
 
 See also
@@ -760,7 +761,7 @@ Outputs
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [same as input]
      - The input layer with features selected
 
 See also
@@ -846,7 +847,7 @@ Outputs
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
+     - [same as input]
      - The input layer with features selected
      
 See also
