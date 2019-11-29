@@ -34,28 +34,28 @@ Parameters
    * - **Band number**
      - ``BAND``
      - [raster band]
-       
+
        Default: The first band of the input layer
      - If the raster is multiband, choose the band you want to
        convert
    * - **Output comma-separated values**
      - ``CSV``
      - [boolean]
-       
+
        Default: False
      - Sets whether the output file should be of type comma-separated
        values (csv).
    * - **XYZ ASCII file**
      - ``OUTPUT``
      - [file]
-       
+
        Default: ``[Save to temporary file]``
      - Specification of the output file.
        One of:
-       
+
        * Save to a Temporary File
        * Save to File...
-       
+
        The file encoding can also be changed here.
   
 Outputs
@@ -108,14 +108,14 @@ Parameters
    * - **Band number**
      - ``BAND``
      - [raster band]
-       
+
        Default: The first band of the input layer
      - If the raster is multiband, choose the band you want to
        convert
    * - **Generate a RGBA file**
      - ``RGBA``
      - [boolean]
-       
+
        Default: False
      - Sets whether the output file should be of type RGBA.
    * - **PCT to RGB**
@@ -125,10 +125,10 @@ Parameters
        Default: ``[Save to temporary file]``
      - Specification of the output file.
        One of:
-       
+
        * Save to a Temporary File
        * Save to File...
-       
+
        The file encoding can also be changed here.
   
 Outputs
@@ -180,44 +180,44 @@ Parameters
    * - **Band number**
      - ``BAND``
      - [raster band]
-       
+
        Default: The first band of the input layer
      - If the raster is multiband, choose the band you want to use
    * - **Name of the field to create**
      - ``FIELD``
      - [string]
-       
+
        Default: 'DN'
      - Specify the field name for the attributes of the connected
        regions.
    * - **Use 8-connectedness**
      - ``EIGHT_CONNECTEDNESS``
      - [boolean]
-       
+
        Default: False
      - If not set, raster cells must have a common border to be considered
        connected (*4-connected*).
        If set, touching raster cells are also considered connected
        (*8-connected*).
    * - **Additional command-line parameters** |310|
-       
+
        Optional
      - ``EXTRA``
      - [string]   
-       
+
        Default: None
      - Add extra GDAL command line options
    * - **Vectorized**
      - ``OUTPUT``
      - [vector: polygon]
-       
+
        Default: ``[Save to temporary file]``
      - Specification of the output (polygon) vector layer.
        One of:
-       
+
        * Save to a Temporary File
        * Save to File...
-       
+
        The file encoding can also be changed here.
   
 Outputs
@@ -268,15 +268,15 @@ Parameters
    * - **Selected band(s)**
      - ``BANDS``
      - [raster band] [list]
-       
+
        Default: None
      - Ordered list of the bands to use to create the new raster
    * - **Additional creation options**
-       
+
        Optional
      - ``OPTIONS``
      - [string]
-       
+
        Default: ''
      - For adding one or more creation options that control the
        raster to be created (colors, block size, file
@@ -286,11 +286,11 @@ Parameters
    * - **Output data type**
      - ``DATA_TYPE``
      - [enumeration]
-       
+
        Default: 0
      - Defines the data type of the output raster file.
        Options:
-       
+
        * 0 --- Use Input Layer Data Type
        * 1 --- Byte
        * 2 --- Int16
@@ -303,17 +303,17 @@ Parameters
        * 9 --- CInt32
        * 10 --- CFloat32
        * 11 --- CFloat64
-       
+
    * - **Converted**
      - ``OUTPUT``
      - [raster]
-       
+
        Default: Save to temporary file
      - Specification of the output raster. One of:
-       
+
        * Save to a Temporary File
        * Save to File...
-       
+
        The file encoding can also be changed here.
   
 Outputs
@@ -370,20 +370,20 @@ Parameters
    * - **Number of colors**
      - ``NCOLORS``
      - [number]
-       
+
        Default: 2
      - The number of colors the resulting image will contain.
        A value from 2-256 is possible.
    * - **RGB to PCT**
      - ``OUTPUT``
      - [raster]
-       
+
        Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
-       
+
        * Save to a Temporary File
        * Save to File...
-       
+
        The file encoding can also be changed here.
 
 Outputs
@@ -433,7 +433,7 @@ Parameters
      - [raster]
      - Input raster layer
    * - **Override the projection of the output file**
-       
+
        Optional
      - ``TARGET_CRS``
      - [crs]
@@ -443,21 +443,21 @@ Parameters
        Optional
      - ``NODATA``
      - [number]
-       
+
        Default: Not set
      - Defines the value to use for nodata in the output raster
    * - **Copy all subdatasets of this file to individual output files**
      - ``COPY_SUBDATASETS``
      - [boolean]
-       
+
        Default: False
      - Create individual files for subdatasets
    * - **Additional creation options**
-       
+
        Optional
      - ``OPTIONS``
      - [string]
-       
+
        Default: ''
      - For adding one or more creation options that control the
        raster to be created (colors, block size, file
@@ -465,21 +465,21 @@ Parameters
        For convenience, you can rely on predefined profiles (see
        :ref:`GDAL driver options section <gdal_createoptions>`).
    * - **Additional command-line parameters** |310|
-       
+
        Optional
      - ``EXTRA``
      - [string]   
-       
+
        Default: None
      - Add extra GDAL command line options
    * - **Output data type**
      - ``DATA_TYPE``
      - [enumeration]
-       
+
        Default: 0
      - Defines the data type of the output raster file.
        Options:
-       
+
        * 0 --- Use Input Layer Data Type
        * 1 --- Byte
        * 2 --- Int16
@@ -492,18 +492,18 @@ Parameters
        * 9 --- CInt32
        * 10 --- CFloat32
        * 11 --- CFloat64
-       
+
    * - **Converted**
      - ``OUTPUT``
      - [raster]
-       
+
        Default: ``[Save to temporary file]``
      - Specification of the output (translated) raster layer.
        One of:
-       
+
        * Save to a Temporary File
        * Save to File...
-       
+
        The file encoding can also be changed here.
 
 Outputs
