@@ -40,6 +40,16 @@ Parameters
      - Name
      - Type
      - Description
+   * - **Layers**
+     -  GUI only
+     - 
+     - Shows the list of all raster layers loaded in the legend.
+       These can be used to fill the expression box (double click to
+       add).
+       Raster layers are referred by their name and the number of the
+       band: ``layer_name@band_number``.
+       For instance, the first band from a layer named ``DEM`` will
+       be referred as ``DEM@1``.
    * - **Operators**
      -  GUI only
      - 
@@ -80,7 +90,7 @@ Parameters
        If the cell size is not specified, the minimum cell size of
        the selected reference layer(s) will be used.
        The cell size will be the same for the X and Y axes.
-   * - **Output extent**
+   * - **Output extent (xmin, xmax, ymin, ymax)**
      - ``EXTENT``
      - [extent]
      - Extent of the output raster layer.
@@ -133,7 +143,6 @@ The output is loaded in the :menuselection:`Processing --> Results viewer` menu.
 
 Parameters
 ..........
-
 
 .. list-table::
    :header-rows: 1
@@ -495,7 +504,7 @@ Parameters
      - If the raster is multiband, choose the band you want to
        reclassify.
    * - **Reclassification table**
-     - ``INPUT_TABLE``
+     - ``TABLE``
      - [matrix]
      - A 3-columns table (formatted as a list of nine numbers)
        containing the values to use for class boundaries  (``Minimum``
@@ -506,7 +515,7 @@ Parameters
      - [number]
        
        Default: -9999.0
-     - Value to apply to no data values.
+     - Value to use for nodata in the output
    * - **Range boundaries**
      - ``RANGE_BOUNDARIES``
      - [enumeration]
@@ -675,7 +684,7 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Raster Layer to sample**
+   * - **Raster layer**
      - ``INPUT_RASTER``
      - [raster]
      - Input raster layer
