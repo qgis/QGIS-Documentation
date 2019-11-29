@@ -66,8 +66,8 @@ Parameters
         
         Default: Float32
       - Output raster data type.
-        See :api:`classQgis.html#aeb8e0dfb7dc6eb09e552bf3dff9c84d5`
-        for a list of data types.
+        See list of :api:`data types
+        <classQgis.html#aeb8e0dfb7dc6eb09e552bf3dff9c84d5>`.
    *  - **Output layer**
       - ``OUTPUT``
       - [raster]
@@ -182,8 +182,8 @@ Parameters
         
         Default: Float32
       - Output raster data type.
-        See :api:`classQgis.html#aeb8e0dfb7dc6eb09e552bf3dff9c84d5`
-        for a list of data types.
+        See list of :api:`data types
+        <classQgis.html#aeb8e0dfb7dc6eb09e552bf3dff9c84d5>`.
    *  - **Output layer**
       - ``OUTPUT``
       - [raster]
