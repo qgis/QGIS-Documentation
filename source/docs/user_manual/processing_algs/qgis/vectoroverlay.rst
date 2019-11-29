@@ -142,8 +142,9 @@ Parameters
      - [vector: any]
      
      - Layer containing the geometries that will be subtracted from the
-       input layer geometries. It's expected to have at least as many
-       dimensions as the input layer geometries.
+       input layer geometries. It is expected to have at least as many
+       dimensions (point: 0D, line: 1D, polygon: 2D, volume: 3D) as the input
+       layer geometries.
    * - **Difference**
      - ``OUTPUT``
      - [same as input]
@@ -296,7 +297,8 @@ Parameters
      - [vector: any]
      - Layer containing the features to check for overlap.
        Its features' geometry is expected to have at least as many
-       dimensions as the input layer's.
+       dimensions (point: 0D, line: 1D, polygon: 2D, volume: 3D)
+       as the input layer's.
    * - **Input fields to keep (leave empty to keep all fields)**
        
        Optional
