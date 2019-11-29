@@ -661,15 +661,59 @@ and ``-V`` to get verbose output:
 
   ## 0 tests passed, 1 tests failed out of 1
 
-  The following tests FAILED:
+  The following tests FAILED./output/bin/qgis_dxfexporttest:
   ## 1- qgis_applicationtest (Failed)
   Errors while running CTest
+
+Running individual tests
+........................
+
+C++ tests are ordinary applications. You can run them from the build folder
+like any executable.
+
+.. code-block:: bash
+
+  $ ./output/bin/qgis_dxfexporttest
+  
+  ********* Start testing of TestQgsDxfExport *********
+  Config: Using QtTest library 5.12.5, Qt 5.12.5 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 9.2.1 20190827 (Red Hat 9.2.1-1))
+  PASS   : TestQgsDxfExport::initTestCase()
+  PASS   : TestQgsDxfExport::testPoints()
+  PASS   : TestQgsDxfExport::testLines()
+  ...
+  Totals: 19 passed, 4 failed, 0 skipped, 0 blacklisted, 612ms
+  ********* Finished testing of TestQgsDxfExport *********
+
+These tests also take `command line arguments
+<https://doc-snapshots.qt.io/qt5-5.9/qtest-overview.html#qt-test-command-line-arguments>`_,
+this allows to run a specific subset of tests.
+
+.. code-block:: bash
+
+  $ ./output/bin/qgis_dxfexporttest testPoints   
+  ********* Start testing of TestQgsDxfExport *********
+  Config: Using QtTest library 5.12.5, Qt 5.12.5 (x86_64-little_endian-lp64 shared (dynamic) release build; by GCC 9.2.1 20190827 (Red Hat 9.2.1-1))
+  PASS   : TestQgsDxfExport::initTestCase()
+  PASS   : TestQgsDxfExport::testPoints()
+  PASS   : TestQgsDxfExport::cleanupTestCase()
+  Totals: 3 passed, 0 failed, 0 skipped, 0 blacklisted, 272ms
+  ********* Finished testing of TestQgsDxfExport *********
 
 Debugging unit tests
 --------------------
 
+C++ Tests
+.........
+
 For C++ unit tests, QtCreator automatically adds run targets, so you can start
-them in the debugger.
+them from the debugger.
+
+If you go to *Projects* and there to the *Build & Run* --> Desktop *Run* tab, you can
+also specify command line parameters that will allow to run only a subset of the tests
+inside a .cpp file in the debugger.
+
+Python Tests
+............
 
 It's also possible to start Python unit tests from QtCreator with GDB. For
 this, you need to go to :guilabel:`Projects` and choose :guilabel:`Run` under
