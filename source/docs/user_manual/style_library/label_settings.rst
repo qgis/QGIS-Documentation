@@ -212,7 +212,7 @@ Shadow tab
 
    Text settings - Shadow tab
 
-To add a shadow below the text, enable the |labelshadow| :guilabel:`Shadow`
+To add a shadow to the text, enable the |labelshadow| :guilabel:`Shadow`
 tab and activate the |checkbox| :guilabel:`Draw drop shadow`. Then you can:
 
 * Indicate the item used to generate the shadow with :guilabel:`Draw under`.
@@ -251,7 +251,7 @@ tab and activate the |checkbox| :guilabel:`Draw drop shadow`. Then you can:
    used.
 
 * Define the shadow's :guilabel:`Opacity`
-* Rescale the shadow's size based on the label's using the :guilabel:`Scale`
+* Rescale the shadow's size using the :guilabel:`Scale`
   factor
 * Choose the shadow's :guilabel:`Color`
 * Use the :guilabel:`Blend mode` option to determine how your label's shadow
