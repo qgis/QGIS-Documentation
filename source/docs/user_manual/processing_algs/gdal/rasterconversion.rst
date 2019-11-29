@@ -195,7 +195,7 @@ Parameters
      - [boolean]
        
        Default: False
-     - If not set, raster cells must have a common border to be consider
+     - If not set, raster cells must have a common border to be considered
        connected (*4-connected*).
        If set, touching raster cells are also considered connected
        (*8-connected*).
@@ -378,7 +378,7 @@ Parameters
      - ``OUTPUT``
      - [raster]
        
-       Default: Save to temporary file
+       Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
        
        * Save to a Temporary File
@@ -496,6 +496,8 @@ Parameters
    * - **Converted**
      - ``OUTPUT``
      - [raster]
+       
+       Default: ``[Save to temporary file]``
      - Specification of the output (translated) raster layer.
        One of:
        
