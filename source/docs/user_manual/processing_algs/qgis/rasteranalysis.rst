@@ -56,9 +56,9 @@ Parameters
      - 
      - You can use the predefined ``NDVI`` expression or you can define
        new expressions for calculations.
-       The :kbd:`Add...` button loads a defined expression (and lets
+       The :guilabel:`Add...` button loads a defined expression (and lets
        you set the parameters).
-       The :kbd:`Save...` button lets you define a new expression.
+       The :guilabel:`Save...` button lets you define a new expression.
    * - **Reference layer(s) (used for automated extent, cellsize, and CRS)**
        
        Optional
@@ -78,7 +78,7 @@ Parameters
      - [number]
      - Cell size of the output raster layer.
        If the cell size is not specified, the minimum cell size of
-       selected reference layer(s) will be used.
+       the selected reference layer(s) will be used.
        The cell size will be the same for the X and Y axes.
    * - **Output extent**
      - ``EXTENT``
@@ -689,7 +689,7 @@ Parameters
    * - **Vector layer containing the zones**
      - ``INPUT_VECTOR``
      - [vector: polygon]
-     - Pologyn vector layer that defines the zones.
+     - Polygon vector layer that defines the zones.
    * - **Output column prefix**
        
        Optional
