@@ -50,7 +50,7 @@ Parameters
      - [number]
        
        Default: 1024
-     - Size of the tile of the output raster layer. Minimium value: 64.
+     - Size of the tile of the output raster layer. Minimum value: 64.
    * - **Map units per pixel**
      - ``MAP_UNITS_PER_PIXEL``
      - [number]
