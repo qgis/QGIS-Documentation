@@ -12,31 +12,40 @@ Introduction
 ============
 
 This repository is meant to write and manage the Official Documentation of
-`QGIS <https://qgis.org>`_, an Open Source GIS Software.
+`QGIS <https://qgis.org>`_, a free and Open Source Geographic Information System (GIS)
+Software, under the `Open Source Geospatial (OSGeo) <https://www.osgeo.org>`_ foundation umbrella.
 
-Latest stable documentation is on https://docs.qgis.org/3.4 and its PDF versions
-are available at https://docs.qgis.org/3.4/pdf.
+QGIS is developed using the Qt toolkit, C++ and Python and runs on Linux, macOS and Windows platforms.
+It is released under the GNU General Public License version 2 or greater.
+Source files at https://github.com/qgis/QGIS.
 
-The ongoing work for future releases is published as QGIS Testing Documentation.
-It's built from the ``master`` branch and NOT translated. QGIS Testing Documentation
-is on https://docs.qgis.org/testing and https://docs.qgis.org/testing/pdf/
+QGIS aims to be an easy to use GIS, providing common functions and features. QGIS supports a number
+of raster, vector and mesh data formats, as well as important web service
+protocols, such as WMS, WFS and WCS. Support for new formats and
+protocols can easily be added using the plugin architecture.
+More information and download link at https://qgis.org.
 
-Previous releases are also available:
+QGIS documentation is available at https://docs.qgis.org:
 
-- QGIS 2.18 docs https://docs.qgis.org/2.18 and https://docs.qgis.org/2.18/pdf/
-- QGIS 2.14 docs https://docs.qgis.org/2.14 and https://docs.qgis.org/2.14/pdf/
-- QGIS 2.8 docs https://docs.qgis.org/2.8 and https://docs.qgis.org/2.8/pdf/
-- QGIS 2.6 docs https://docs.qgis.org/2.6
-- QGIS 2.2 docs https://docs.qgis.org/2.2
-- QGIS 2.0 docs https://docs.qgis.org/2.0	
-- QGIS 1.8 docs https://docs.qgis.org/1.8
+* The latest stable documentation and translations are on https://docs.qgis.org/latest and its PDF versions
+  are available at https://docs.qgis.org/latest/pdf.
+* The ongoing work for future releases is published as QGIS Testing Documentation.
+  It's built from the ``master`` branch and NOT translated. QGIS Testing Documentation
+  is on https://docs.qgis.org/testing and https://docs.qgis.org/testing/pdf/
 
-Translations of released docs are also available via the docs.qgis.org language path:
-for example for the 3.4 German language: https://docs.qgis.org/3.4/de.
-Note that only the current stable branch is available for translation.
+Documentation is published for every long term release and is available for QGIS
+`3.4 <https://docs.qgis.org/3.4>`_,
+`2.18 <https://docs.qgis.org/2.18>`_,
+`2.14 <https://docs.qgis.org/2.14>`_,
+`2.6 <https://docs.qgis.org/2.6>`_,
+`2.2 <https://docs.qgis.org/2.2>`_,
+`2.0 <https://docs.qgis.org/2.0>`_
+and `1.8 <https://docs.qgis.org/1.8>`_.
+Translations and PDF versions are also provided.
 
-Documentation is static generated website using Sphinx (http://sphinx-doc.org/),
-based on restructured text sources (rst: http://docutils.sourceforge.net/rst.html)
+The documentation web site contents and the PDFs are generated using
+`Sphinx <http://sphinx-doc.org/>`_,
+based on `restructured text sources (rst) <http://docutils.sourceforge.net/rst.html>`_
 and html (jinja2) templates.
 
 Most sources are in source/docs. Only frontpage and landing pages are in theme/qgis-theme
@@ -435,4 +444,3 @@ A list of contributors is available at
 https://docs.qgis.org/testing/en/docs/user_manual/preamble/contributors.html
 
 To join us, find information at https://qgis.org/en/site/getinvolved/index.html
-
