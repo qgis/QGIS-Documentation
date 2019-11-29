@@ -40,7 +40,7 @@ mask geometry.
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
-.. seealso:: :ref:`qgisintersection`
+.. seealso:: :ref:`qgisintersection`, :ref:`qgisdifference`
 
 Parameters
 ..........
@@ -64,7 +64,7 @@ Parameters
      - Layer containing the clipping features
    * - **Clipped**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
        
        Default: ``[Create temporary layer]``
      - Specify the layer to contain the features from the input layer
@@ -92,7 +92,7 @@ Outputs
      - Description
    * - **Clipped**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
      - Layer containing features from the input layer split by the overlay layer.
 
 
@@ -119,7 +119,7 @@ Attributes are not modified (see :ref:`warning <warning_difference>`).
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
-.. seealso:: :ref:`qgissymmetricaldifference`
+.. seealso:: :ref:`qgissymmetricaldifference`, :ref:`qgisclip`
 
 Parameters
 ..........
@@ -139,12 +139,15 @@ Parameters
      - Layer to extract (parts of) features from.
    * - **Overlay layer**
      - ``OVERLAY``
-     - [vector: polygon]
+     - [vector: any]
+     
      - Layer containing the geometries that will be subtracted from the
-       iniput layer geometries.
+       input layer geometries. It is expected to have at least as many
+       dimensions (point: 0D, line: 1D, polygon: 2D, volume: 3D) as the input
+       layer geometries.
    * - **Difference**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
        
        Default: ``[Create temporary layer]``
      - Specify the layer to contain the (parts of) features from the input
@@ -172,7 +175,7 @@ Outputs
      - Description
    * - **Difference**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
      - Layer containing (parts of) features from the input layer
        not overlapping the overlay layer.
 
@@ -185,6 +188,8 @@ Creates a new vector layer that only contains features which fall within a speci
 extent.
 
 Any features which intersect the extent will be included.
+
+.. seealso:: :ref:`qgisclip`
 
 Parameters
 ..........
@@ -217,7 +222,7 @@ Parameters
        instead of taking the whole geometry as output.
    * - **Extracted**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
        
        Default: ``[Create temporary layer]``
      - Specify the layer to contain the features from the input layer
@@ -245,7 +250,7 @@ Outputs
      - Description
    * - **Extracted**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
      - Layer containing the clipped features.
 
 
@@ -269,7 +274,7 @@ Attributes are not modified (see :ref:`warning <warning_difference>`).
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
-.. seealso:: :ref:`qgisclip`
+.. seealso:: :ref:`qgisclip`, :ref:`qgisdifference`
 
 Parameters
 ..........
@@ -291,6 +296,9 @@ Parameters
      - ``OVERLAY``
      - [vector: any]
      - Layer containing the features to check for overlap.
+       Its features' geometry is expected to have at least as many
+       dimensions (point: 0D, line: 1D, polygon: 2D, volume: 3D)
+       as the input layer's.
    * - **Input fields to keep (leave empty to keep all fields)**
        
        Optional
@@ -319,7 +327,7 @@ Parameters
        in the input layer.
    * - **Intersection**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
        
        Default: ``[Create temporary layer]``
      - Specify the layer to contain (the parts of) the features from
@@ -348,7 +356,7 @@ Outputs
      - Description
    * - **Intersection**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
      - Layer containing (parts of) features from the input
        layer that overlap the overlay layer.
 
@@ -359,12 +367,10 @@ Line intersections
 ------------------
 Creates point features where the lines from the two layers intersect.
 
-
 .. figure:: img/line_intersection.png
   :align: center
 
   Points of intersection
-
 
 ``Default menu``: :menuselection:`Vector --> Analysis Tools`
 
@@ -487,7 +493,7 @@ Parameters
      - Line layer whose lines are used to define the breaking points.
    * - **Split**
      - ``OUTPUT``
-     - [vector: line, polygon]
+     - [same as input]
        
        Default: ``[Create temporary layer]``
      - Specify the layer to contain the splitted (in case they are
@@ -516,7 +522,7 @@ Outputs
      - Description
    * - **Split**
      - ``OUTPUT``
-     - [vector: line, polygon]
+     - [same as input]
      - Output vector layer with split lines or polygons from input layer.
 
 
@@ -540,7 +546,7 @@ Attributes are not modified (see :ref:`warning <warning_difference>`).
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
-.. seealso:: :ref:`qgisdifference`
+.. seealso:: :ref:`qgisdifference`, :ref:`qgisclip`, :ref:`qgisintersection`
 
 Parameters
 ..........
@@ -562,6 +568,7 @@ Parameters
      - ``OVERLAY``
      - [vector: any]
      - Second layer to extract (parts of) features from.
+       Ideally the geometry type should be the same as input layer.
    * - **Overlay fields prefix** |38|
        
        Optional
@@ -572,7 +579,7 @@ Parameters
        in the input layer.
    * - **Symmetrical difference**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
        
        Default: ``[Create temporary layer]``
      - Specify the layer to contain (the parts of) the features from
@@ -601,7 +608,7 @@ Outputs
      - Description
    * - **Symmetrical difference**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
      - Layer containing (parts of) features from each layer
        not overlapping the other layer.
 
@@ -643,6 +650,8 @@ from both layers for overlapping features.
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
+.. seealso:: :ref:`qgisclip`, :ref:`qgisdifference`, :ref:`qgisintersection`
+
 Parameters
 ..........
 
@@ -665,6 +674,7 @@ Parameters
      - ``OVERLAY``
      - [vector: any]
      - Layer that will be combined to the first one.
+       Ideally the geometry type should be the same as input layer.
    * - **Overlay fields prefix** |38|
        
        Optional
@@ -675,7 +685,7 @@ Parameters
        in the input layer.
    * - **Union**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
        
        Default: ``[Create temporary layer]``
      - Specify the layer to contain the (split and duplicated) features
@@ -703,7 +713,7 @@ Outputs
      - Description
    * - **Union**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
      - Layer containing all the overlapping and
        non-overlapping parts from the processed layer(s).
 
