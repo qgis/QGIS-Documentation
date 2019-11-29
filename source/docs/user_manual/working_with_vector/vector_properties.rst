@@ -2213,47 +2213,22 @@ with the field type. The available widgets are:
 Joins Properties
 ================
 
-|join| The :guilabel:`Joins` tab allows you to join a loaded attribute
-table to a loaded vector layer. After clicking |signPlus|, the
-:guilabel:`Add vector join` dialog appears. As key columns, you have to define a
-join layer you want to connect with the target vector layer.
-Then, you have to specify the join field that is common to both the join layer
-and the target layer. Now you can also specify a subset of fields from the joined
-layer based on the checkbox |checkbox| :guilabel:`Choose which fields are joined`.
-As a result of the join, all information from the join layer and the target layer
-are displayed in the attribute table of the target layer as joined information.
-If you specified a subset of fields only these fields are displayed in the attribute
-table of the target layer.
+|join| The :guilabel:`Joins` tab allows you to associate features
+of the current layer (called ``Target layer``) to features from another
+loaded vector layer (or table). The join is based on an attribute that is shared by the
+layers. The layers can be geometryless (tables) or not but their join attribute
+should be of the same type.
 
-If the target layer is editable, then some icons will be displayed in the
-attribute table next to fields, in order to inform their status:
+To create a join:
 
-* |joinNotEditable|: the join layer is not configured to be
-  editable. If you want to be able to edit join features from the target
-  attribute table, then you have to check the option
-  |checkbox| :guilabel:`Editable join layer`.
-* |joinedLayerNotEditable|: the join layer is well configured to be
-  editable, but its current status is read only.
-* |joinHasNotUpsertOnEdit|: the join layer is editable but synchronization
-  mechanisms are not activated. If you want to automatically add a feature in
-  the join layer when a feature is created in the target layer, then you have
-  to check the option |checkbox| :guilabel:`Upsert on edit`. Symmetrically, the
-  option |checkbox| :guilabel:`Delete cascade` may be activated if you want to
-  automatically delete join features.
-
-Moreover, the |checkbox| :guilabel:`Dynamic form` option helps to synchronize
-join fields on the fly, according to the :guilabel:`Target field`. This way,
-constraints for join fields are also correctly updated. Note that it's
-deactivated by default because it may be very time consuming if you have a lot
-of features or a myriad of joins.
-
-Otherwise, the |checkbox| :guilabel:`Cache join layer in virtual memory` option
-allows to cache values in memory (without geometries) from the joined layer in
-order to speed up lookups.
-
-QGIS currently has support for joining non-spatial table formats supported by OGR
-(e.g., CSV, DBF and Excel), delimited text and the PostgreSQL provider
-(see figure_joins_).
+#. Click the |signPlus| :sup:`Add new join` button. The :guilabel:`Add vector
+   join` dialog appears.
+#. Select the :guilabel:`Join layer` you want to connect with the target vector
+   layer
+#. Specify the :guilabel:`Join field` and the :guilabel:`Target field` that are
+   common to both the join layer and the target layer
+#. Press :guilabel:`OK` and a summary of selected parametersis added to the
+   :guilabel:`Join` panel.
 
 .. _figure_joins:
 
@@ -2262,11 +2237,41 @@ QGIS currently has support for joining non-spatial table formats supported by OG
 
    Join an attribute table to an existing vector layer
 
-Additionally, the add vector join dialog allows you to:
+The steps above will create a join, where **ALL** the attributes of the
+first matching feature in the join layer is added to the target layer's feature.
+QGIS provides more options to tweak the join:
 
-* |checkbox| :guilabel:`Create attribute index on the join field`
-* |checkbox| :guilabel:`Choose which fields are joined`
-* Create a |checkbox| :guilabel:`Custom field name prefix`
+* |checkbox| :guilabel:`Cache join layer in virtual memory`: allows you to cache
+  values in memory (without geometries) from the joined layer in order to speed
+  up lookups.
+* |unchecked| :guilabel:`Create attribute index on the join field`
+* |unchecked| :guilabel:`Dynamic form`: helps to synchronize join fields on the
+  fly, according to the :guilabel:`Target field`. This way, constraints for
+  join fields are also correctly updated. Note that it's deactivated by default
+  because it may be very time consuming if you have a lot of features or a
+  myriad of joins.
+* If the target layer is editable, then some icons will be displayed in the
+  attribute table next to fields, in order to inform about their status:
+
+  * |joinNotEditable|: the join layer is not configured to be
+    editable. If you want to be able to edit join features from the target
+    attribute table, then you have to check the option
+    |checkbox| :guilabel:`Editable join layer`.
+  * |joinedLayerNotEditable|: the join layer is well configured to be
+    editable, but its current status is read only.
+  * |joinHasNotUpsertOnEdit|: the join layer is editable, but synchronization
+    mechanisms are not activated. If you want to automatically add a feature in
+    the join layer when a feature is created in the target layer, then you have
+    to check the option |checkbox| :guilabel:`Upsert on edit`. Symmetrically,
+    the option |checkbox| :guilabel:`Delete cascade` may be activated if you
+    want to automatically delete join features.
+* |unchecked| :guilabel:`Joined fields`: instead of adding all the fields from
+  the joined layer, you can specify a subset.
+* |unchecked| :guilabel:`Custom field name prefix` for joined fields, in order
+  to avoid name collision
+
+QGIS currently has support for joining non-spatial table formats supported by
+OGR (e.g., CSV, DBF and Excel), delimited text and the PostgreSQL provider.
 
 
 .. _vector_auxiliary_storage:
