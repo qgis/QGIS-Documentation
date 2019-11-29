@@ -2167,10 +2167,10 @@ with the field type. The available widgets are:
 Joins Properties
 ================
 
-|join| The :guilabel:`Joins` tab allows you to associate to features
-of the current layer (called ``Target layer``) features from another
-loaded vector layer. The join criteria is an attribute shared by both
-layers. The layers can be geometryless or not but their join attribute
+|join| The :guilabel:`Joins` tab allows you to associate features
+of the current layer (called ``Target layer``) to features from another
+loaded vector layer (or table). The join is based on an attribute that is shared by the
+layers. The layers can be geometryless (tables) or not but their join attribute
 should be of the same type.
 
 To create a join:
@@ -2191,9 +2191,9 @@ To create a join:
 
    Join an attribute table to an existing vector layer
 
-The steps above are enough to create a join, adding to the target layer's
-features **ALL** the attributes of their first matching feature in the join
-layer. QGIS provides more options to tweak the join:
+The steps above will create a join, where **ALL** the attributes of the
+first matching feature in the join layer is added to the target layer's feature.
+QGIS provides more options to tweak the join:
 
 * |checkbox| :guilabel:`Cache join layer in virtual memory`: allows you to cache
   values in memory (without geometries) from the joined layer in order to speed
@@ -2205,7 +2205,7 @@ layer. QGIS provides more options to tweak the join:
   because it may be very time consuming if you have a lot of features or a
   myriad of joins.
 * If the target layer is editable, then some icons will be displayed in the
-  attribute table next to fields, in order to inform their status:
+  attribute table next to fields, in order to inform about their status:
 
   * |joinNotEditable|: the join layer is not configured to be
     editable. If you want to be able to edit join features from the target
@@ -2213,7 +2213,7 @@ layer. QGIS provides more options to tweak the join:
     |checkbox| :guilabel:`Editable join layer`.
   * |joinedLayerNotEditable|: the join layer is well configured to be
     editable, but its current status is read only.
-  * |joinHasNotUpsertOnEdit|: the join layer is editable but synchronization
+  * |joinHasNotUpsertOnEdit|: the join layer is editable, but synchronization
     mechanisms are not activated. If you want to automatically add a feature in
     the join layer when a feature is created in the target layer, then you have
     to check the option |checkbox| :guilabel:`Upsert on edit`. Symmetrically,
