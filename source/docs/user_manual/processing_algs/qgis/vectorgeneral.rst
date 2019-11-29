@@ -156,7 +156,7 @@ Outputs
   The final layer without any duplicated geometries.
 
 
-.. _qgisdeleteduplicatesbyattribute2:
+.. _qgisdeleteduplicatesbyattribute:
 
 Delete duplicates by attribute |36|
 -----------------------------------
