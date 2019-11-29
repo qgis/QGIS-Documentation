@@ -661,7 +661,7 @@ and ``-V`` to get verbose output:
 
   ## 0 tests passed, 1 tests failed out of 1
 
-  The following tests FAILED./output/bin/qgis_dxfexporttest:
+  The following tests FAILED:
   ## 1- qgis_applicationtest (Failed)
   Errors while running CTest
 
