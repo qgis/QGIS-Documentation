@@ -108,42 +108,99 @@ values of an attribute from the input layer.
 Parameters
 ..........
 
-``Input Layer`` [vector: any]
-  Vector layer to extract features from.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Selection attribute`` [tablefield: any]
-  Filtering field of the layer.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Layer to extract features from.
+   * - **Selection attribute**
+     - ``FIELD``
+     - [tablefield: any]
+     - Filtering field of the layer
+   * - **Operator**
+     - ``OPERATOR``
+     - [enumeration]
 
-``Operator`` [enumeration]
-  Many different operators are available:
+       Default: 0
+     - Many different operators are available:
 
-  * 0 --- =
-  * 1 --- ≠
-  * 2 --- >
-  * 3 --- >=
-  * 4 --- <
-  * 5 --- <=
-  * 6 --- begins with
-  * 7 --- contains
-  * 8 --- is null
-  * 9 --- is not null
-  * 10 --- does not contain
+       * 0 --- =
+       * 1 --- ≠
+       * 2 --- >
+       * 3 --- >=
+       * 4 --- <
+       * 5 --- <=
+       * 6 --- begins with
+       * 7 --- contains
+       * 8 --- is null
+       * 9 --- is not null
+       * 10 --- does not contain
 
-  Default: ``0``
+   * - **Value**
 
-``Value`` [string]
-  Optional
+       Optional
+     - ``VALUE``
+     - [string]
+     - Value to be evaluated
+   * - **Extracted (attribute)**
+     - ``OUTPUT``
+     - [same as input]
 
-  Value to be evaluated.
+       Default: ``[Create Temporary Layer]``
+     - Specify the output vector layer for matching features.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+   * - **Extracted (non-matching)**
+     - ``FAIL_OUTPUT``
+     - [same as input]
+
+       Default: ``[Skip output]``
+     - Specify the output vector layer for non-matching
+       features.
+       One of:
+
+       * Skip Output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
 Outputs
 .......
 
-``Extracted (attribute)`` [vector: any]
-  Vector layer with matching features.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Extracted (non-matching)`` [vector: any]
-  Vector layer with not matching features.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Extracted (attribute)**
+     - ``OUTPUT``
+     - [same as input]
+     - Vector layer with matching features from the input
+       layer
+   * - **Extracted (non-matching)**
+     - ``FAIL_OUTPUT``
+     - [same as input]
+     - Vector layer with non-matching features from the
+       input layer
 
 
 .. _qgisextractbyexpression:
@@ -162,20 +219,74 @@ For more information about expressions see the :ref:`vector_expressions`.
 Parameters
 ..........
 
-``Input Layer`` [vector: any]
-  Input vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Expression`` [expression]
-  Expression to filter the vector layer.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Expression**
+     - ``EXPRESSION``
+     - [expression]
+     - Expression to filter the vector layer
+   * - **Matching features**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Create Temporary Layer]``
+     - Specify the output vector layer for matching features.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+   * - **Non-matching**
+     - ``FAIL_OUTPUT``
+     - [same as input]
+
+       Default: ``[Skip output]``
+     - Specify the output vector layer for non-matching
+       features.
+       One of:
+
+       * Skip Output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
 Outputs
 .......
 
-``Matching features`` [vector: any]
-  Vector layer with matching features.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Non-matching`` [vector: any]
-  Vector layer with not matching features.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Matching features**
+     - ``OUTPUT``
+     - [same as input]
+     - Vector layer with matching features from the input
+       layer
+   * - **Non-matching**
+     - ``FAIL_OUTPUT``
+     - [same as input]
+     - Vector layer with non-matching features from the
+       input layer
 
 
 .. _qgisextractbylocation:
@@ -192,22 +303,76 @@ spatial relationship between each feature and the features in an additional laye
 Parameters
 ..........
 
-``Extract features from`` [vector: any]
-  Input vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-.. include:: qgis_algs_include.rst
-   :start-after: **geometric_predicates**
-   :end-before: **end_geometric_predicates**
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Extract features from**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Where the features (geometric predicate)**
+     - ``PREDICATE``
+     - [enumeration] [list]
 
-``By comparing to the features from`` [vector: any]
-  Intersection vector layer.
+       Default: [0]
+     - Spatial condition for the selection.
+       One or more of:
 
+       * 0 --- intersect
+       * 1 --- contain
+       * 2 --- disjoint
+       * 3 --- equal
+       * 4 --- touch
+       * 5 --- overlap
+       * 6 --- are within
+       * 7 --- cross
+
+       If more than one condition is chosen, at least one
+       of them (OR operation) has to be met for a feature
+       to be extracted.
+   * - **By comparing to the features from**
+     - ``INTERSECT``
+     - [vector: any]
+     - Intersection vector layer
+   * - **Extracted (location)**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer for the features that
+       have the chosen spatial relationship(s) with one or more
+       features in the comparison layer.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
 Outputs
 .......
 
-``Extracted (location)`` [vector: any]
-  Vector layer of the spatial intersection.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Extracted (location)**
+     - ``OUTPUT``
+     - [same as input]
+     - Vector layer with features from the input layer that
+       have the chosen spatial relationship(s) with one or
+       more features in the comparison layer.
 
 
 .. _qgisrandomextract:
@@ -225,27 +390,68 @@ value to define the total number of features in the subset.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Source vector layer to select the features from.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Method`` [enumeration]
-  Method of the random selection:
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Source vector layer to select the features from
+   * - **Method**
+     - ``METHOD``
+     - [enumeration]
 
-  * 0 --- Number of selected features
-  * 1 --- Percentage of selected features
+       Default: 0
+     - Random selection methodn. One of:
 
-  Default: *0*
+       * 0 --- Number of selected features
+       * 1 --- Percentage of selected features
 
-``Number/percentage of selected features`` [number]
-  Number or percentage of features to select.
+   * - **Number/percentage of selected features**
+     - ``NUMBER``
+     - [number]
 
-  Default: *10*
+       Default: 10
+     - Number or percentage of features to select
+   * - **Extracted (random)**
+     - ``OUTPUT``
+     - [vector: any]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer for the randomly
+       selected features.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       Vector layer containing randomly selected features
 
 Outputs
 .......
 
-``Extracted (random)`` [vector: any]
-  Vector layer containing random selected features.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Extracted (random)**
+     - ``OUTPUT``
+     - [same as input]
+     - Vector layer containing randomly selected features from
+       the input layer
 
 
 .. _qgisrandomextractwithinsubsets:
@@ -265,30 +471,72 @@ category. Categories are defined according to a given attribute.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Source vector layer to select the features from.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``ID field`` [tablefield: any]
-  Category of the source vector layer to select the features from.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Vector layer to select the features from
+   * - **ID field**
+     - ``FIELD``
+     - [tablefield: any]
+     - Category of the source vector layer to select the features from
+   * - **Method**
+     - ``METHOD``
+     - [enumeration]
 
-``Method`` [enumeration]
-  Method of the random selection:
+       Default: 0
+     - Random selection method. One of:
 
-  * 0 --- Number of selected features
-  * 1 --- Percentage of selected features
+       * 0 --- Number of selected features
+       * 1 --- Percentage of selected features
 
-  Default: *0*
+   * - **Number/percentage of selected features**
+     - ``NUMBER``
+     - [number]
 
-``Number/percentage of selected features`` [number]
-  Number or percentage of features to select.
+       Default: 10
+     - Number or percentage of features to select
+   * - **Extracted (random stratified)**
+     - ``OUTPUT``
+     - [same as input]
 
-  Default: *10*
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer for the randomly
+       selected features.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Extracted (random stratified)`` [vector: any]
-  Vector layer containing random selected features.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Extracted (random stratified)**
+     - ``OUTPUT``
+     - [same as input]
+     - Vector layer containing randomly selected features from
+       the input layer
 
 
 .. _qgisrandomselection:
@@ -308,21 +556,52 @@ value to define the total number of features in the subset.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Source vector layer to select the features from.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Method`` [enumeration]
-  Method of the random selection:
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Vector layer for the selection
+   * - **Method**
+     - ``METHOD``
+     - [enumeration]
 
-  * 0 --- Number of selected features
-  * 1 --- Percentage of selected features
+       Default: 0
+     - Random selection method. One of:
 
-  Default: *0*
+       * 0 --- Number of selected features
+       * 1 --- Percentage of selected features
 
-``Number/percentage of selected features`` [number]
-  Number or percentage of features to select.
+   * - **Number/percentage of selected features**
+     - ``NUMBER``
+     - [number]
 
-  Default: *10*
+       Default: 10
+     - Number or percentage of features to select
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [same as input]
+     - The input layer with features selected
 
 
 .. _qgisrandomselectionwithinsubsets:
@@ -350,24 +629,56 @@ No new outputs are created.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Source vector layer to select the features from.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``ID field`` [tablefield: any]
-  Category of the source vector layer.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Vector layer to select features in
+   * - **ID field**
+     - ``FIELD``
+     - [tablefield: any]
+     - Category of the input layer to select the features from
+   * - **Method**
+     - ``METHOD``
+     - [enumeration]
 
-``Method`` [enumeration]
-  Method of the random selection:
+       Default: 0
+     - Random selection method. One of:
 
-  * 0 --- Number of selected features
-  * 1 --- Percentage of selected features
+       * 0 --- Number of selected features
+       * 1 --- Percentage of selected features
 
-  Default: *0*
+   * - **Number/percentage of selected features**
+     - ``NUMBER``
+     - [number]
 
-``Number/percentage of selected features`` [number]
-  Number or percentage of features to select.
+       Default: 10
+     - Number or percentage of features to select
 
-  Default: *10*
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [same as input]
+     - The input layer with features selected
 
 
 .. _qgisselectbyattribute:
@@ -386,43 +697,77 @@ No new outputs are created.
 Parameters
 ..........
 
-``Input Layer`` [vector: any]
-  Input vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Selection attribute`` [tablefield: any]
-  Filtering field of the layer.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Vector layer to select features in
+   * - **Selection attribute**
+     - ``FIELD``
+     - [tablefield: any]
+     - Filtering field of the layer
+   * - **Operator**
+     - ``OPERATOR``
+     - [enumeration]
 
-``Operator`` [enumeration]
-  Many different operators are available:
+       Default: 0
+     - Many different operators are available:
 
-  * 0 --- =
-  * 1 --- ≠
-  * 2 --- >
-  * 3 --- >=
-  * 4 --- <
-  * 5 --- <=
-  * 6 --- begins with
-  * 7 --- contains
-  * 8 --- is null
-  * 9 --- is not null
-  * 10 --- does not contain
+       * 0 --- =
+       * 1 --- ≠
+       * 2 --- >
+       * 3 --- >=
+       * 4 --- <
+       * 5 --- <=
+       * 6 --- begins with
+       * 7 --- contains
+       * 8 --- is null
+       * 9 --- is not null
+       * 10 --- does not contain
 
-  Default: ``0``
+   * - **Value**
 
-``Value`` [string]
-  Optional
+       Optional
+     - ``VALUE``
+     - [string]
+     - Value to be evaluated
+   * - **Modify current selection by**
+     - ``METHOD``
+     - [enumeration]
 
-  Value to be evaluated.
+       Default: 0
+     - How the selection of the algorithm should be managed.
+       One of:
 
-``Modify current selection by`` [enumeration]
-  How the selection of the algorithm should be managed. You have many options:
+       * 0 --- creating new selection
+       * 1 --- adding to current selection
+       * 2 --- selecting within current selection
+       * 3 --- removing from current selection
 
-  * 0 --- creating new selection
-  * 1 --- adding to current selection
-  * 2 --- selecting within current selection
-  * 3 --- removing from current selection
+Outputs
+.......
 
-  Default: *0*
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [same as input]
+     - The input layer with features selected
 
 
 .. _qgisselectbyexpression:
@@ -440,21 +785,52 @@ No new outputs are created.
 Parameters
 ..........
 
-``Input Layer`` [vector: any]
-  Input vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Expression`` [expression]
-  Expression to filter the vector layer.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Expression**
+     - ``EXPRESSION``
+     - [expression]
+     - Expression to filter the input layer
+   * - **Modify current selection by**
+     - ``METHOD``
+     - [enumeration]
 
-``Modify current selection by`` [enumeration]
-  How the selection of the algorithm should be managed. You have many options:
+       Default: 0
+     - How the selection of the algorithm should be managed.
+       One of:
 
-  * 0 --- creating new selection
-  * 1 --- adding to current selection
-  * 2 --- selecting within current selection
-  * 3 --- removing from current selection
+       * 0 --- creating new selection
+       * 1 --- adding to current selection
+       * 2 --- selecting within current selection
+       * 3 --- removing from current selection
 
-  Default: *0*
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [same as input]
+     - The input layer with features selected
 
 
 .. _qgisselectbylocation:
@@ -474,25 +850,71 @@ No new outputs are created.
 Parameters
 ..........
 
-``Select features from`` [vector: any]
-  Source vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-.. include:: qgis_algs_include.rst
-   :start-after: **geometric_predicates**
-   :end-before: **end_geometric_predicates**
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Select features from**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Where the features (geometric predicate)**
+     - ``PREDICATE``
+     - [enumeration] [list]
 
-``By comparing to the features from`` [vector: any]
-  Intersection vector layer
+       Default: [0]
+     - Spatial condition for the selection.
+       One or more of:
 
-``Modify current selection by`` [enumeration]
-  How the selection of the algorithm should be managed. You have many options:
+       * 0 --- intersect
+       * 1 --- contain
+       * 2 --- disjoint
+       * 3 --- equal
+       * 4 --- touch
+       * 5 --- overlap
+       * 6 --- are within
+       * 7 --- cross
 
-  * 0 --- creating new selection
-  * 1 --- adding to current selection
-  * 2 --- selecting within current selection
-  * 3 --- removing from current selection
+       If more than one condition is chosen, at least one
+       of them (OR operation) has to be met for a feature
+       to be extracted.
+   * - **By comparing to the features from**
+     - ``INTERSECT``
+     - [vector: any]
+     - Intersection vector layer
+   * - **Modify current selection by**
+     - ``METHOD``
+     - [enumeration]
 
-  Default: *0*
+       Default: 0
+     - How the selection of the algorithm should be managed.
+       One of:
 
+       * 0 --- creating new selection
+       * 1 --- adding to current selection
+       * 2 --- selecting within current selection
+       * 3 --- removing from current selection
 
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [same as input]
+     - The input layer with features selected
+     
 .. |36| replace:: ``NEW in 3.6``
