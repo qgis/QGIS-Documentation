@@ -145,7 +145,7 @@ Outputs
    * - **PCT to RGB**
      - ``INPUT``
      - [raster]
-     - 24bit RGB raster image
+     - 24 bit RGB raster image
 
 
 .. _gdalpolygonize:
