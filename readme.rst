@@ -15,17 +15,19 @@ This repository is meant to write and manage the Official Documentation of
 `QGIS <https://qgis.org>`_, a free and Open Source Geographic Information System (GIS)
 Software, under the `Open Source Geospatial (OSGeo) <https://www.osgeo.org>`_ foundation umbrella.
 
-QGIS is developed using the Qt toolkit and C++ and runs on Linux, macOS and Windows platforms.
+QGIS is developed using the Qt toolkit, C++ and Python and runs on Linux, macOS and Windows platforms.
 It is released under the GNU General Public License version 2 or greater.
 Source files at https://github.com/qgis/QGIS.
 
 QGIS aims to be an easy to use GIS, providing common functions and features. QGIS supports a number
-of raster, vector and mesh data formats, with new support easily added using the plugin architecture.
+of raster, vector and mesh data formats, as well as important web service
+protocols, such as WMS, WFS and WCS. Support for new formats and
+protocols can easily be added using the plugin architecture.
 More information and download link at https://qgis.org.
 
 QGIS documentation is available at https://docs.qgis.org:
 
-* Latest stable documentation and translations are on https://docs.qgis.org/latest and its PDF versions
+* The latest stable documentation and translations are on https://docs.qgis.org/latest and its PDF versions
   are available at https://docs.qgis.org/latest/pdf.
 * The ongoing work for future releases is published as QGIS Testing Documentation.
   It's built from the ``master`` branch and NOT translated. QGIS Testing Documentation
@@ -41,7 +43,8 @@ Documentation is published for every long term release and is available for QGIS
 and `1.8 <https://docs.qgis.org/1.8>`_.
 Translations and PDF versions are also provided.
 
-Documentation is a static generated website using `Sphinx <http://sphinx-doc.org/>`_,
+The documentation web site contents and the PDFs are generated using
+`Sphinx <http://sphinx-doc.org/>`_,
 based on `restructured text sources (rst) <http://docutils.sourceforge.net/rst.html>`_
 and html (jinja2) templates.
 
