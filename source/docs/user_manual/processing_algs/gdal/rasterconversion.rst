@@ -12,6 +12,7 @@ Raster conversion
 
 gdal2xyz
 --------
+
 Converts raster data to XYZ ASCII file format.
 
 Parameters
@@ -33,21 +34,21 @@ Parameters
    * - **Band number**
      - ``BAND``
      - [raster band]
-
+       
        Default: The first band of the input layer
      - If the raster is multiband, choose the band you want to
        convert
    * - **Output comma-separated values**
      - ``CSV``
      - [boolean]
-
+       
        Default: False
      - Sets whether the output file should be of type comma-separated
        values (csv).
    * - **XYZ ASCII file**
      - ``OUTPUT``
      - [file]
-
+       
        Default: ``[Save to temporary file]``
      - Specification of the output file.
        One of:
@@ -107,14 +108,14 @@ Parameters
    * - **Band number**
      - ``BAND``
      - [raster band]
-
+       
        Default: The first band of the input layer
      - If the raster is multiband, choose the band you want to
        convert
    * - **Generate a RGBA file**
      - ``RGBA``
      - [boolean]
-
+       
        Default: False
      - Sets whether the output file should be of type RGBA.
    * - **PCT to RGB**
@@ -143,7 +144,7 @@ Outputs
      - Type
      - Description
    * - **PCT to RGB**
-     - ``INPUT``
+     - ``OUTPUT``
      - [raster]
      - 24 bit RGB raster image
 
@@ -179,7 +180,7 @@ Parameters
    * - **Band number**
      - ``BAND``
      - [raster band]
-
+       
        Default: The first band of the input layer
      - If the raster is multiband, choose the band you want to use
    * - **Name of the field to create**
@@ -192,13 +193,24 @@ Parameters
    * - **Use 8-connectedness**
      - ``EIGHT_CONNECTEDNESS``
      - [boolean]
-
+       
        Default: False
-     - Sets whether the output file should be of type RGBA.
+     - If not set, raster cells must have a common border to be consider
+       connected (*4-connected*).
+       If set, touching raster cells are also considered connected
+       (*8-connected*).
+   * - **Additional command-line parameters** |310|
+       
+       Optional
+     - ``EXTRA``
+     - [string]   
+       
+       Default: None
+     - Add extra GDAL command line options
    * - **Vectorized**
      - ``OUTPUT``
      - [vector: polygon]
-
+       
        Default: ``[Save to temporary file]``
      - Specification of the output (polygon) vector layer.
        One of:
@@ -221,7 +233,7 @@ Outputs
      - Type
      - Description
    * - **Vectorized**
-     - ``INPUT``
+     - ``OUTPUT``
      - [vector: polygon]
      - Output vector layer
 
@@ -231,9 +243,11 @@ Outputs
 Rearrange bands
 ---------------
 Creates a new raster using selected band(s) from a given raster layer.
-The algorithm also makes it possible to reorder the bands for the newly-created raster.
+The algorithm also makes it possible to reorder the bands for the
+newly-created raster.
 
-This algorithm is derived from the `GDAL translate utility <https://gdal.org/gdal_translate.html>`_ .
+This algorithm is derived from the
+`GDAL translate utility <https://gdal.org/gdal_translate.html>`_ .
 
 Parameters
 ..........
@@ -252,69 +266,50 @@ Parameters
      - [raster]
      - Input raster layer
    * - **Selected band(s)**
-     - ``BAND``
+     - ``BANDS``
      - [raster band] [list]
        
        Default: None
      - Ordered list of the bands to use to create the new raster
+   * - **Additional creation options**
+       
+       Optional
+     - ``OPTIONS``
+     - [string]
+       
+       Default: ''
+     - For adding one or more creation options that control the
+       raster to be created (colors, block size, file
+       compression...).
+       For convenience, you can rely on predefined profiles (see
+       :ref:`GDAL driver options section <gdal_createoptions>`).
    * - **Output data type**
      - ``DATA_TYPE``
      - [enumeration]
        
-       Default: 5
+       Default: 0
      - Defines the data type of the output raster file.
        Options:
        
-       * 0 --- Byte
-       * 1 --- Int16
-       * 2 --- UInt16
-       * 3 --- UInt32
-       * 4 --- Int32
-       * 5 --- Float32
-       * 6 --- Float64
-       * 7 --- CInt16
-       * 8 --- CInt32
-       * 9 --- CFloat32
-       * 10 --- CFloat64
-
-
-``Additional creation options``
-  Optional
-
-  Allows to add one or more creation options that can be used to control
-  particulars (colorimetry, block size, file compression...) about the file to be
-  created. For convenience, you can rely on predefined profiles (see
-  :ref:`GDAL driver options section <gdal_createoptions>`).
-
-``Output data type`` [enumeration]
-  Defines the type of the resulting raster image.
-
-  Options:
-
-  * 0 --- Use input layer data type
-  * 1 --- Byte
-  * 2 --- Int16
-  * 3 --- UInt16
-  * 4 --- UInt32
-  * 5 --- Int32
-  * 6 --- Float32
-  * 7 --- Float64
-  * 8 --- CInt16
-  * 9 --- CInt32
-  * 10 --- CFloat32
-  * 11 --- CFloat64
-
-  Default: *0*
-
-     
-     
-   * - **Vectorized**
+       * 0 --- Use Input Layer Data Type
+       * 1 --- Byte
+       * 2 --- Int16
+       * 3 --- UInt16
+       * 4 --- UInt32
+       * 5 --- Int32
+       * 6 --- Float32
+       * 7 --- Float64
+       * 8 --- CInt16
+       * 9 --- CInt32
+       * 10 --- CFloat32
+       * 11 --- CFloat64
+       
+   * - **Converted**
      - ``OUTPUT``
-     - [vector: polygon]
-
-       Default: ``[Save to temporary file]``
-     - Specification of the output (polygon) vector layer.
-       One of:
+     - [raster]
+       
+       Default: Save to temporary file
+     - Specification of the output raster. One of:
        
        * Save to a Temporary File
        * Save to File...
@@ -334,7 +329,7 @@ Outputs
      - Type
      - Description
    * - **Converted**
-     - ``INPUT``
+     - ``OUTPUT``
      - [raster]
      - Output raster layer with rearranged bands.
 
@@ -343,7 +338,7 @@ Outputs
 
 RGB to PCT
 ----------
-Converts a 24bit RGB image into a 8bit paletted. Computes an optimal pseudo-color
+Converts a 24 bit RGB image into a 8 bit paletted. Computes an optimal pseudo-color
 table for the given RGB-image using a median cut algorithm on a downsampled RGB
 histogram. Then it converts the image into a pseudo-colored image using the color
 table. This conversion utilizes Floyd-Steinberg dithering (error diffusion) to
@@ -359,82 +354,178 @@ This algorithm is derived from the `GDAL rgb2pct utility <https://gdal.org/rgb2p
 Parameters
 ..........
 
-``Input layer`` [raster]
-  Input RGB image raster.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Number of colors`` [number]
-  The number of colors the resulting image will contain. A value from 2-256 is possible.
-
-  Default: *2*
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Input (RGB) raster layer
+   * - **Number of colors**
+     - ``NCOLORS``
+     - [number]
+       
+       Default: 2
+     - The number of colors the resulting image will contain.
+       A value from 2-256 is possible.
+   * - **RGB to PCT**
+     - ``OUTPUT``
+     - [raster]
+       
+       Default: Save to temporary file
+     - Specification of the output raster. One of:
+       
+       * Save to a Temporary File
+       * Save to File...
+       
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``RGB to PCT`` [raster]
-  8-bit output raster.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **RGB to PCT**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster layer.
 
 
 .. _gdaltranslate:
 
 Translate (convert format)
 --------------------------
+
 Converts raster data between different formats.
 
-This algorithm is derived from the `GDAL translate utility <https://gdal.org/gdal_translate.html>`_ .
+This algorithm is derived from the
+`GDAL translate utility <https://gdal.org/gdal_translate.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Conversion`
 
 Parameters
 ..........
 
-``Input layer`` [raster]
-  <put parameter description here>
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Override the projection of the output file`` [crs]
-  <put parameter description here>
-
-``Assign a specified nodata value to output bands`` [number]
-  Optional
-
-  <put parameter description here>
-
-  Default: *Not set*
-
-``Copy all subdatasets of this file to individual output files`` [boolean]
-  <put parameter description here>
-
-  Default: *False*
-
-``Additional creation options``
-  Optional
-
-  Allows to add one or more creation options that can be used to control
-  particulars (colorimetry, block size, file compression...) about the file to be
-  created. For convenience, you can rely on predefined profiles (see
-  :ref:`GDAL driver options section <gdal_createoptions>`).
-
-``Output data type`` [enumeration]
-  Defines the type of the resulting raster image.
-
-  Options:
-
-  * 0 --- Use input layer data type
-  * 1 --- Byte
-  * 2 --- Int16
-  * 3 --- UInt16
-  * 4 --- UInt32
-  * 5 --- Int32
-  * 6 --- Float32
-  * 7 --- Float64
-  * 8 --- CInt16
-  * 9 --- CInt32
-  * 10 --- CFloat32
-  * 11 --- CFloat64
-
-  Default: *0*
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Input raster layer
+   * - **Override the projection of the output file**
+       
+       Optional
+     - ``TARGET_CRS``
+     - [crs]
+     - Specify a projection for the output file
+   * - **Assign a specified nodata value to output bands**
+       
+       Optional
+     - ``NODATA``
+     - [number]
+       
+       Default: Not set
+     - Defines the value to use for nodata in the output raster
+   * - **Copy all subdatasets of this file to individual output files**
+     - ``COPY_SUBDATASETS``
+     - [boolean]
+       
+       Default: False
+     - Create individual files for subdatasets
+   * - **Additional creation options**
+       
+       Optional
+     - ``OPTIONS``
+     - [string]
+       
+       Default: ''
+     - For adding one or more creation options that control the
+       raster to be created (colors, block size, file
+       compression...).
+       For convenience, you can rely on predefined profiles (see
+       :ref:`GDAL driver options section <gdal_createoptions>`).
+   * - **Additional command-line parameters** |310|
+       
+       Optional
+     - ``EXTRA``
+     - [string]   
+       
+       Default: None
+     - Add extra GDAL command line options
+   * - **Output data type**
+     - ``DATA_TYPE``
+     - [enumeration]
+       
+       Default: 0
+     - Defines the data type of the output raster file.
+       Options:
+       
+       * 0 --- Use Input Layer Data Type
+       * 1 --- Byte
+       * 2 --- Int16
+       * 3 --- UInt16
+       * 4 --- UInt32
+       * 5 --- Int32
+       * 6 --- Float32
+       * 7 --- Float64
+       * 8 --- CInt16
+       * 9 --- CInt32
+       * 10 --- CFloat32
+       * 11 --- CFloat64
+       
+   * - **Converted**
+     - ``OUTPUT``
+     - [raster]
+     - Specification of the output (translated) raster layer.
+       One of:
+       
+       * Save to a Temporary File
+       * Save to File...
+       
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Converted`` [raster]
-  <put output description here>
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Converted**
+     - ``OUTPUT``
+     - [raster]
+     - Output (translated) raster layer.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |310| replace:: ``NEW in 3.10``
