@@ -44,13 +44,13 @@ Parameters
        * Select Extent on Canvas
        * Use Layer Extent...
        
-       It will internally be extended to be a multiple of the tile size.
+       It will internally be extended to a multiple of the tile size.
    * - **Tile size**
      - ``TILE_SIZE``
      - [number]
        
        Default: 1024
-     - Size of the tile of the output raster layer. Minimium value: 64.
+     - Size of the tile of the output raster layer. Minimum value: 64.
    * - **Map units per pixel**
      - ``MAP_UNITS_PER_PIXEL``
      - [number]
@@ -69,8 +69,7 @@ Parameters
        Optional
      - ``MAP_THEME``
      - [enumeration]
-     - If you have map themes set, you can choose one of them
-       for the rendering.
+     - Use an existing :ref:`map theme <map_themes>` for the rendering.
    * - **Single layer to render**
        
        Optional
@@ -135,7 +134,7 @@ Parameters
        * Select Extent on Canvas
        * Use Layer Extent...
        
-       It will internally be extended to be a multiple of the tile size.
+       It will internally be extended to a multiple of the tile size.
    * - **Target CRS**
      - ``TARGET_CRS``
      - [crs]
@@ -147,7 +146,7 @@ Parameters
      - [number]
        
        Default: 0.1
-     - Pixel size (X=Y) in map units). Minimum value: 0.01
+     - Pixel size (X=Y) in map units. Minimum value: 0.01
    * - **Constant value**
      - ``NUMBER``
      - [number]
