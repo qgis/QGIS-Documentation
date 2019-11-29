@@ -666,7 +666,7 @@ and ``-V`` to get verbose output:
   Errors while running CTest
 
 Running individual tests
-........................
+------------------------
 
 C++ tests are ordinary applications. You can run them from the build folder
 like any executable.
