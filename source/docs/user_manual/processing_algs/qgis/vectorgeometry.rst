@@ -3203,7 +3203,7 @@ Variable distance buffer (*Graphical Modeler only*)
 ----------------------------------------------------
 Computes a buffer area for all the features in an input layer.
 This algorithm is only available from the Processing
-:guilable:`Graphical Modeler`.
+:guilabel:`Graphical Modeler`.
 
 The size of the buffer for a given feature is defined by an attribute,
 so it allows different features to have different buffer sizes.
