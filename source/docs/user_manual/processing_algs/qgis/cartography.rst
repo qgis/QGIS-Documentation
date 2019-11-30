@@ -20,13 +20,6 @@ databases these will be renamed to have unique names in the output combined data
 Parameters
 ..........
 
-``Objects to combine`` [list]
-  Types of style items in the input databases you would like to put in the new
-  database. 
-
-Parameters
-..........
-
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -41,7 +34,7 @@ Parameters
      - [file] [list]
      - Input line or polygon vector layer
    * - **Objects to combine**
-     - ``INPUT``
+     - ``OBJECTS``
      - [enumeration] [list]
      - Files containing QGIS style items. One or more of:
 
@@ -221,23 +214,76 @@ dialog.
 Parameters
 ..........
 
-``Input project`` [file]
-  A QGIS project file to extract the style items from.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Objects to extract`` [list]
-  Types of style items in the input project you would like to put in the new
-  database. These can be:
-  
-  * :ref:`Symbols <edit_symbol>`
-  * :ref:`Color ramps <color-ramp>`
-  * :ref:`Text formats <text_format>`
-  * :ref:`Label settings <showlabels>`
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input project (leave blank to use current)**
+
+       Optional
+     - ``INPUT``
+     - [file]
+     - A QGIS project file to extract the style items from
+   * - **Objects to extract**
+     - ``OBJECTS``
+     - [enumeration] [list]
+     - Files containing QGIS style items. One or more of:
+
+       * 0 --- :ref:`Symbols <edit_symbol>`
+       * 1 --- :ref:`Color ramps <color-ramp>`
+       * 2 --- :ref:`Text formats <text_format>`
+       * 3 --- :ref:`Label settings <showlabels>`
+
+   * - **Output style database**
+     - ``OUTPUT``
+     - [file]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output (bounding box) layer.
+       One of:
+
+       * Save to a Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Output style database`` [file]
-  Output :file:`.XML` file storing the selected style items.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Color ramp count**
+     - ``COLORRAMPS``
+     - [number]
+     - Number of color ramps
+   * - **Label settings count**
+     - ``LABELSETTINGS``
+     - [number]
+     - Number of label settings
+   * - **Output style database**
+     - ``OUTPUT``
+     - [file]
+     - Output :file:`.XML` file for the selected style items
+   * - **Symbol count**
+     - ``SYMBOLS``
+     - [number]
+     - Number of symbols
+   * - **Text format count**
+     - ``TEXTFORMATS``
+     - [number]
+     - Number of text formats
 
 
 .. _qgisprintlayoutmapextenttolayer:
@@ -258,16 +304,8 @@ the original map item CRS will be used.
 Parameters
 ..........
 
-``Print layout`` [enumeration]
-  A print layout in the current project.
 
-``Map item`` [enumeration]
-  Optional
-
-  The map item(s) whose information you want to extract.
-  If none is provided then all the map items are processed.
-
-  Default: *All the map items*
+  
 
 ``Override CRS`` [crs]
   Optional
@@ -276,11 +314,92 @@ Parameters
 
   Default: *The layout CRS*
 
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Print layout**
+     - ``LAYOUT``
+     - [enumeration]
+     - A print layout in the current project
+   * - **`Map item**
+
+       Optional
+     - ``MAP``
+     - [enumeration]
+
+       Default: *All the map items*
+     - The map item(s) whose information you want to
+       extract.
+       If none is provided then all the map items
+       are processed.
+   * - **Overrride CRS**
+
+       Optional
+     - ``CRS``
+     - [enumeration] [list]
+     - Files containing QGIS style items. One or more of:
+
+       * 0 --- :ref:`Symbols <edit_symbol>`
+       * 1 --- :ref:`Color ramps <color-ramp>`
+       * 2 --- :ref:`Text formats <text_format>`
+       * 3 --- :ref:`Label settings <showlabels>`
+
+   * - **Extent**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer for the extent. One of:
+
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+
 Outputs
 .......
 
-``Extent`` [vector: polygon]
-  A vector layer storing the selected map item(s) information.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Map heigh**
+     - ``HEIGHT``
+     - [number]
+     - 
+   * - **Extent**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Output polygon vector layer containing the input layout extent
+   * - **Map rotation**
+     - ``ROTATION``
+     - [number]
+     - 
+   * - **Map scale**
+     - ``SCALE``
+     - [number]
+     - 
+   * - **Map width**
+     - ``WIDTH``
+     - [number]
+     - 
 
 
 .. _qgistopologicalcoloring:
@@ -306,47 +425,96 @@ can see each color class has the same amount of features.
 Parameters
 ..........
 
-``Input layer`` [vector: polygon]
-  Polygon vector layer.
 
-``Minimum number of colors`` [number]
-  Minimum colors number to assign.
+Parameters
+..........
 
-  Default: *4*
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Minimum distance between features`` [number]
-  Prevent nearby (but non-touching) features from being assigned equal colors.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: polygon]
+     - The input polygon layer
+   * - **Minimum number of colors**
+     - ``MIN_COLORS``
+     - [number]
 
-  Default: *0.0*
+       Default: 4
+     - The minimum number of colors to assign
+   * - **Minimum distance between features**
+     - ``MIN_DISTANCE``
+     - [number]
 
-``Balance color assignment`` [enumeration]
-  Options are:
+       Default: 0.0
+     - Prevent nearby (but non-touching) features from
+       being assigned equal colors 
 
-  * 0 --- By feature count
+   * - *Balance color assignment**
+     - ``BALANCE``
+     - [enumeration]
 
-    Attempts to assign colors so that the count of features assigned to each
-    individual color index is balanced.
+       Default: 0
+     - Options are:
 
-  * 1 --- By assigned area
+       * 0 --- By feature count
+         
+         Attempts to assign colors so that the count of
+         features assigned to each individual color index
+         is balanced.
+         
+       * 1 --- By assigned area
+         
+         Assigns colors so that the total area of features
+         assigned to each color is balanced.
+         This mode can be useful to help avoid large
+         features resulting in one of the colors appearing
+         more dominant on a colored map.
+         
+       * 2 --- By distance between colors
+         
+         Assigns colors in order to maximize the distance
+         between features of the same color.
+         This mode helps to create a more uniform
+         distribution of colors across a map.
 
-    Assigns colors so that the total area of features assigned to each color is
-    balanced. This mode can be useful to help avoid large features resulting in
-    one of the colors appearing more dominant on a colored map.
+   * - **Colored**
+     - ``OUTPUT``
+     - [vector: polygon]
 
+       Default: ``[Create temporary layer]``
+     - Specify the output layer. One of:
 
-  * 2 --- By distance between colors
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-    Assigns colors in order to maximize the distance between features of the same
-    color. This mode helps to create a more uniform distribution of colors across
-    a map.
-
-  Default: *0*
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Colored`` [vector: polygon]
-  Polygon vector layer with the addition of the ``color_id`` column.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Colored**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Polygon vector layer with an added ``color_id`` column
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
