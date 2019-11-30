@@ -75,9 +75,10 @@ To export a layout as an image:
      antialiasing` option.
    * If you want to export your layout as a **georeferenced image** (e.g., to
      share with other projects), check the |unchecked| :guilabel:`Generate
-     world file` option and an *ESRI World File* with the same name as the page on which the
-     :ref:`reference map <reference_map>` set in the :guilabel:`Layout` panel is
-     placed will be created along with the export(s).
+     world file` option, and an *ESRI World File* with the same name as the
+     exported image, but a different extension (:file:`.tfw` for TIFF,
+     :file:`.pnw` for PNG, :file:`jgw` for JPEG, ...) will be created when
+     exporting.
      This option can also be checked by default in the :ref:`layout panel
      <layout_panel>`.
 
