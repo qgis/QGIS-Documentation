@@ -3199,9 +3199,11 @@ Outputs
 
 .. _qgisvariabledistancebuffer:
 
-Variable distance buffer (Processing Modeler only)
---------------------------------------------------
+Variable distance buffer (*Graphical Modeler only*)
+----------------------------------------------------
 Computes a buffer area for all the features in an input layer.
+This algorithm is only available from the Processing
+:guilable:`Graphical Modeler`.
 
 The size of the buffer for a given feature is defined by an attribute,
 so it allows different features to have different buffer sizes.
@@ -3216,59 +3218,59 @@ Parameters
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Input layer**
-      - ``INPUT``
-      - [vector: any]
-      - Input vector layer
-   *  - **Distance field**
-      - ``DISTANCE``
-      - [tablefield: numeric]
-      - Attribute for the distance radius of the buffer
-   *  - **Segments**
-      - ``SEGMENTS``
-      - [number]
-        
-        Default: *5*
-      - Controls the number of line segments to use to approximate a
-        quarter circle when creating rounded offsets.
-   *  - **Dissolve result**
-      - ``DISSOLVE``
-      - [boolean]
-        
-        Default: *False*
-      - Choose to dissolve the final buffer, resulting in a single
-        feature covering all input features.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Distance field**
+     - ``DISTANCE``
+     - [tablefield: numeric]
+     - Attribute for the distance radius of the buffer
+   * - **Segments**
+     - ``SEGMENTS``
+     - [number]
 
-        .. figure:: img/buffer_dissolve.png
-           :align: center
-        
-           Normal and dissolved buffer
-   *  - **End cap style**
-      - ``END_CAP_STYLE``
-      - [enumeration]
-      - Controls how line endings are handled in the buffer.
-        
-        .. figure:: img/buffer_cap_style.png
-           :align: center
-        
-           Round, flat and square cap styles
-   *  - **Join style**
-      - ``JOIN_STYLE``
-      - [enumeration]
-      - Specifies whether round, miter or beveled joins should be used
-        when offsetting corners in a line.
-   *  - **Miter limit**
-      - ``MITER_LIMIT``
-      - [number]
-        
-        Default: 2.0
-      - Only applicable for mitered join styles, and controls the
-        maximum distance from the offset curve to use when creating a
-        mitered join.
+       Default: *5*
+     - Controls the number of line segments to use to approximate a
+       quarter circle when creating rounded offsets.
+   * - **Dissolve result**
+     - ``DISSOLVE``
+     - [boolean]
+
+       Default: *False*
+     - Choose to dissolve the final buffer, resulting in a single
+       feature covering all input features.
+
+       .. figure:: img/buffer_dissolve.png
+          :align: center
+       
+          Normal and dissolved buffer
+   * - **End cap style**
+     - ``END_CAP_STYLE``
+     - [enumeration]
+     - Controls how line endings are handled in the buffer.
+       
+       .. figure:: img/buffer_cap_style.png
+          :align: center
+       
+          Round, flat and square cap styles
+   * - **Join style**
+     - ``JOIN_STYLE``
+     - [enumeration]
+     - Specifies whether round, miter or beveled joins should be used
+       when offsetting corners in a line.
+   * - **Miter limit**
+     - ``MITER_LIMIT``
+     - [number]
+       
+       Default: 2.0
+     - Only applicable for mitered join styles, and controls the
+       maximum distance from the offset curve to use when creating a
+       mitered join.
 
 Outputs
 .......
@@ -3278,14 +3280,14 @@ Outputs
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Buffer**
-      - ``OUTPUT``
-      - [vector: polygon]
-      - Buffer polygon vector layer.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Buffer**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Buffer polygon vector layer.
 
 
 .. _qgisbufferbym:
@@ -3342,19 +3344,59 @@ any other point.
 Parameters
 ..........
 
-``Input layer`` [vector: point]
-  Input point vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Buffer region`` [number]
-  Area of the Voronoi polygons or of the input layer.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: point]
+     - Input point vector layer
+   * - **Buffer region (% of extent)**
+     - ``BUFFER``
+     - [number]
 
-  Default: *0.0*
+       Default: 0.0
+     - The extent of the output layer will be this much
+       bigger than the extent of the input layer
+   * - **Voronoi polygons**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output layer (with the Voronoi polygons).
+       One of:
+
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+
 
 Outputs
 .......
 
-``Voronoi polygons`` [vector: polygon]
-  Voronoi polygons of the input point vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Voronoi polygons**
+      - ``OUTPUT``
+      - [vector: polygon]
+      - Voronoi polygons of the input point vector layer
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
