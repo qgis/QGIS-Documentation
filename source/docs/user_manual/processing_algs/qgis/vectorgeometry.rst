@@ -66,7 +66,6 @@ Parameters
      - Specify the output (input copy with geometry) layer
        One of:
 
-       * Skip output
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
@@ -209,7 +208,6 @@ Parameters
      - Specify the output (aggregate) layer
        One of:
 
-       * Skip output
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
@@ -281,7 +279,6 @@ Parameters
      - Specify the output (boundary) layer.
        One of:
 
-       * Skip output
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
@@ -352,7 +349,6 @@ Parameters
      - Specify the output (bounding box) layer.
        One of:
 
-       * Skip output
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
@@ -472,8 +468,8 @@ Parameters
      - [boolean]
 
        Default: False
-     - Dissolve the final buffer. If ``True``, overlapping buffers
-       will be dissolved (combined) into a new feature.
+     - Dissolve the final buffer. If ``True`` (checked), overlapping
+       buffers will be dissolved (combined) into a new feature.
          
        .. figure:: img/buffer_dissolve.png
           :align: center
@@ -538,19 +534,55 @@ associated to the original features.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Vector layer in input.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Create centroid for each part`` [boolean |dataDefined|]
-  If checked, a centroid for each part of the geometry will be created.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input line vector layer
+   * - **Create centroid for each part**
+     - ``ALL_PARTS``
+     - [boolean |dataDefined|]
 
-  Default: *False*
+       Default: False
+     - If True (checked), a centroid will be created for each part
+       of the geometry
+   * - **Centroids**
+     - ``OUTPUT``
+     - [vector: point]
+     - Specify the output (centroid) layer.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Centroids`` [vector: point]
-  Points vector layer in output.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Centroids**
+     - ``OUTPUT``
+     - [vector: point]
+     - Output point vector layer (centroids)
 
 
 .. _qgischeckvalidity:
@@ -590,27 +622,78 @@ Parameters
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Name
-      - Identifier
-      - Type
-      - Description
+   * - Name
+     - Identifier
+     - Type
+     - Description
+   * - **Input layer**
+     - INPUT
+     - [vector: any]
+     - Input vector layer
+   * - **Method**
+     - METHOD
+     - [enumeration]
 
-   *  -  **Method**
-      - METHOD
-      - [enumeration]
+       Default: 2
+     - Method to use to check validity.
+       Options:
 
-        Default: 2
-      - Method to use to check validity.
-        Options:
+       * 0: The one selected in digitizing settings
+       * 1: QGIS
+       * 2: GEOS
+   * - **Ignore ring self intersection**
+     - IGNORE_RING_SELF_INTERSECTION
+     - [boolean]
 
-        * 0: The one selected in digitizing settings
-        * 1: QGIS
-        * 2: GEOS
+       Default: False
+     - Ignore self intersecting rings when checking for validity.
+   * -  **Valid output**
+     - VALID_OUTPUT
+     - [vector: any]
 
-   *  -  **Ignore ring self intersection**
-      - IGNORE_RING_SELF_INTERSECTION
-      - [boolean]
-      - Ignore self intersecting rings when checking for validity.
+       Default: ``[Create temporary layer]``
+     - Specify the vector layer to contain a copy of the valid
+       features of the source layer. One of:
+
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+   * - **Invalid output**
+     - INVALID_OUTPUT
+     - [vector: any]
+
+       Default: ``[Create temporary layer]``
+     - Vector layer containing copy of the invalid features of
+       the source layer with the field  ``_errors`` listing the
+       summary of the error found. One of:
+
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+   * - **Error output**
+     - ERROR_OUTPUT
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Point layer of the exact position of the validity
+       problems detected with the ``message`` field describing
+       the error(s) found. One of:
+
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table 
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -620,45 +703,39 @@ Outputs
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Name
-      - Identifier
-      - Type
-      - Description
-
-   *  -  **Valid output**
-      - VALID_OUTPUT
-      - [vector: any]
-      - Vector layer containing a copy of the valid features of
-        the source layer.
-
-   *  - **Invalid output**
-      - INVALID_OUTPUT
-      - [vector: any]
-      - Vector layer containing copy of the invalid features of
-        the source layer with the field  ``_errors`` listing the
-        summary of the error found.
-
-   *  - **Error output**
-      - ERROR_OUTPUT
-      - [vector: point]
-      - Point layer of the exact position of the validity
-        problems detected with the ``message`` field describing
-        the error(s) found.
-
-   *  - **Count of errors**
-      - ERROR_COUNT
-      - [number]
-      - The number of geometries that caused errors.
-
-   *  - **Count of invalid features**
-      - INVALID_COUNT
-      - [number]
-      - The number of invalid geometries.
-
-   *  -  **Count of valid features**
-      - VALID_COUNT
-      - [number]
-      - The number of valid geometries.
+   * - Name
+     - Identifier
+     - Type
+     - Description
+   * - **Count of errors**
+     - ERROR_COUNT
+     - [number]
+     - The number of geometries that caused errors.
+   * - **Error output**
+     - ERROR_OUTPUT
+     - [vector: point]
+     - Point layer of the exact position of the validity
+       problems detected with the ``message`` field describing
+       the error(s) found.
+   * - **Count of invalid features**
+     - INVALID_COUNT
+     - [number]
+     - The number of invalid geometries.
+   * - **Invalid output**
+     - INVALID_OUTPUT
+     - [vector: any]
+     - Vector layer containing copy of the invalid features of
+       the source layer with the field  ``_errors`` listing the
+       summary of the error found.
+   * -  **Count of valid features**
+     - VALID_COUNT
+     - [number]
+     - The number of valid geometries.
+   * -  **Valid output**
+     - VALID_OUTPUT
+     - [vector: any]
+     - Vector layer containing a copy of the valid features of
+       the source layer.
 
 
 .. _qgiscollect:
@@ -3555,7 +3632,6 @@ Parameters
      - Specify the output (buffer) layer
        One of:
 
-       * Skip output
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
@@ -3629,7 +3705,6 @@ Parameters
      - Specify the output layer (with the Voronoi polygons).
        One of:
 
-       * Skip output
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
