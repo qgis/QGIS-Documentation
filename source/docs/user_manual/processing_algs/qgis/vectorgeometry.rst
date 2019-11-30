@@ -12,7 +12,8 @@ Vector geometry
 
 Add geometry attributes
 -----------------------
-Computes geometric properties of the features in a vector layer.
+Computes geometric properties of the features in a vector layer and includes
+them in the output layer.
 
 It generates a new vector layer with the same content as the input one, but with
 additional attributes, containing geometric measurements based on a selected CRS.
@@ -21,33 +22,74 @@ The attributes added to the table depend on the geometry type and dimension of
 the input layer:
 
 * for **point** layers: X (``xcoord``), Y (``ycoord``), Z (``zcoord``) coordinates
-  and/or M value (``mvalue``);
-* for **line** layers: ``length`` and, particularly for LineString and CompoundCurve
-  geometry type also adds feature's ``sinuosity`` and straight distance (``straightdis``);
-* for **polygon** layers: ``perimeter`` and ``area``.
+  and/or M value (``mvalue``)
+* for **line** layers: ``length`` and, for the LineString and CompoundCurve
+  geometry types, the feature ``sinuosity`` and straight distance (``straightdis``)
+* for **polygon** layers: ``perimeter`` and ``area``
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
+
 Parameters
 ..........
-``Input layer`` [vector: any]
-  Vector layer in input.
 
-``Calculate using`` [enumeration]
-  Calculation parameters to use for the geometric properties.
-  Options are:
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-  * 0 --- Layer CRS
-  * 1 --- Project CRS
-  * 2 --- Ellipsoidal
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Calculate using**
+     - ``CALC_METHOD``
+     - [enumeration]
 
-  Default: *0*
+       Default: 0
+     - Calculation parameters to use for the geometric properties.
+       One of:
+
+       * 0 --- Layer CRS
+       * 1 --- Project CRS
+       * 2 --- Ellipsoidal
+
+   * - **Added geom info**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output (fopy with geometry) layer
+       One of:
+
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Added geom info`` [vector: any]
-  Copy of the input vector layer with the addition of the geometry fields.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Added geom info**
+     - ``OUTPUT``
+     - [same as input]
+     - Copy of the input vector layer with the addition of the geometry fields
 
 
 .. _qgisaggregate:
@@ -3294,8 +3336,8 @@ Outputs
 
 Variable width buffer (by M value)
 ----------------------------------
-Creates variable width buffers along lines, using the M value of the line geometries
-as the diameter of the buffer at each vertex.
+Creates variable width buffers along lines, using the M value of the
+line geometries as the diameter of the buffer at each vertex.
 
 .. figure:: img/variable_buffer_m.png
    :align: center
@@ -3307,21 +3349,60 @@ as the diameter of the buffer at each vertex.
 Parameters
 ..........
 
-``Input layer`` [vector: line]
-  Line vector layer in input.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Segments`` [number |dataDefined|]
-  Number of the buffer segments. It can be a unique value (same value for all the
-  features) or it can be taken from features data (different value depending
-  on the feature attribute).
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input line vector layer
+   * - **Segments**
+     - ``SEGMENTS``
+     - [number | dataDefined]
 
-  Default: *16*
+       Default: 16
+     - Number of the buffer segments per quarter circle.
+       It can be a unique value (same value for all the features),
+       or it can be taken from features data (the value can
+       depend on feature attributes).
+   * - **Buffered**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output (buffer) layer
+       One of:
+
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Buffered`` [vector: polygon]
-  Variable buffer polygon layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Buffered**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Variable buffer polygon layer
 
 
 .. _qgisvoronoipolygons:
@@ -3389,14 +3470,14 @@ Outputs
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Voronoi polygons**
-      - ``OUTPUT``
-      - [vector: polygon]
-      - Voronoi polygons of the input point vector layer
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Voronoi polygons**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Voronoi polygons of the input point vector layer
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
