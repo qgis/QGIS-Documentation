@@ -355,6 +355,10 @@ The attribute tables of the generated layers will contain some additional
 information ("message" for the **error** layer, "FID" and "_errors" for the
 **invalid** layer and  only "FID" for the **valid** layer):
 
+
+The attribute table of each generated vector layer will contain some additional
+information (number of errors found and types of error):
+
 .. figure:: img/check_validity.png
    :align: center
 
@@ -442,6 +446,117 @@ Outputs
       - [number]
       - The number of valid geometries.
 
+
+Type of error messages and their meanings
+.........................................
+
+
+.. list-table:: If the GEOS method is used the following error messages can occur: 
+   :widths: 30 30 40
+   :header-rows: 1
+
+   * - Message error
+     - Explanation
+     - Example
+
+   * - Repeated point
+     - This error happens when a given vertex is repeated.
+     - .. figure:: img/geos_rep_point.png
+          :align: center
+
+   * - Ring self-intersection
+     - This error happens when a geometry touches itself and generates a ring.
+     - .. figure:: img/geos_ring_inter.png
+          :align: center
+
+   * - Self-intersection   
+     - This error happens when a geometry touches itself.
+     - .. figure:: img/geos_self_inter.png
+          :align: center
+
+   * - Topology validation error    
+     - 
+     - 
+
+   * - Hole lies outside shell
+     - 
+     -
+
+   * - Holes are nested
+     - 
+     -
+
+   * - Interior is disconnected
+     - 
+     -
+
+   * - Nested shells
+     - This error happens when a polygon geometry is on top of another polygon geometry. 
+     - .. figure:: img/geos_nest_shell.png
+          :align: center
+
+   * - Duplicate rings
+     - 
+     - 
+
+   * - Too few points in geometry component
+     - 
+     -
+
+   * - Invalid coordinate
+     - 
+     -
+
+   * - Ring is not closed
+     - 
+     - 
+
+|
+
+.. list-table:: If the QGIS method is used the following error messages can occur: 
+   :widths: 50 50 50
+   :header-rows: 1
+
+   * - Message error
+     - Explanation
+     - Example
+
+   * - Segment %1 of ring %2 of polygon %3 intersects segment %4 of ring %5 of polygon %6 at %7
+     - 
+     -
+
+   * - Ring %1 with less than four points
+     - 
+     -
+
+   * - Ring %1 not closed 
+     - 
+     -
+
+   * - Line %1 with less than two points
+     - 
+     -
+
+   * - Line %1 contains %n duplicate node(s) at %2 
+     - 
+     - 
+
+   * - Segments %1 and %2 of line %3 intersect at %4 
+     - 
+     -
+
+   * - Ring self-intersection 
+     - 
+     -
+
+   * - Ring %1 of polygon %2 not in exterior ring
+     -
+     -
+    
+   * - Polygon %1 lies inside polygon %2
+     - This error happens when a part of MultiPolygon geometry is inside in a hole of a MultiPolygon geometry. 
+     - .. figure:: img/qgis_poliinside_.png
+          :align: center
 
 .. _qgiscollect:
 
