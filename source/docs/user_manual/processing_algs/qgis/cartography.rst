@@ -20,23 +20,65 @@ databases these will be renamed to have unique names in the output combined data
 Parameters
 ..........
 
-``Input databases`` [file] [list]
-  Files containing QGIS style items.
-
 ``Objects to combine`` [list]
   Types of style items in the input databases you would like to put in the new
-  database. These can be:
-  
-  * :ref:`Symbols <edit_symbol>`
-  * :ref:`Color ramps <color-ramp>`
-  * :ref:`Text formats <text_format>`
-  * :ref:`Label settings <showlabels>`
+  database. 
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input databases**
+     - ``INPUT``
+     - [file] [list]
+     - Input line or polygon vector layer
+   * - **Objects to combine**
+     - ``INPUT``
+     - [enumeration] [list]
+     - Files containing QGIS style items. One or more of:
+
+       * 0 --- :ref:`Symbols <edit_symbol>`
+       * 1 --- :ref:`Color ramps <color-ramp>`
+       * 2 --- :ref:`Text formats <text_format>`
+       * 3 --- :ref:`Label settings <showlabels>`
+
+   * - **Output style database**
+     - ``OBJECTS``
+     - [file]
+       
+       Default: ``[Save to temporary file]``
+     - Specify the output (bounding box) layer.
+       One of:
+
+       * Save to a Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Output style database`` [file]
-  Output :file:`.XML` file combining the selected style items.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output style database**
+     - ``OUTPUT``
+     - [file]
+     - Output :file:`.XML` file combining the selected style items
 
 
 .. _qgiscategorizeusingstyle:
@@ -58,44 +100,109 @@ could not be matched to symbols, and symbols which were not matched to categorie
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Vector layer to apply a categorized style to.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Categorize using expression`` [expression]
-  Field or expression to categorize the features.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Vector layer to apply a categorized style to
+   * - **Categorize using expression**
+     - ``FIELD``
+     - [expression]
+     - Field or expression to categorize the features
+   * - **Style database (leave blank to use saved symbols)**
+     - ``STYLE``
+     - [file]
+     - File (:file:`.XML`) containing the symbols to apply to
+       the input layer categories.
+       The file can be obtained from the Style Manager
+       :ref:`Share symbols <share_symbols>` tool.
+       If no file is specified, QGIS local symbols library is
+       used.
+   * - **Use case-sensitive match to symbol names**
+     - ``CASE_SENSITIVE``
+     - [boolean]
 
-``Style database (leave blank to use saved symbols)`` [file]
-  File (:file:`.XML`) containing the symbols to apply to the input layer categories.
-  The file can be obtained from the Style Manager
-  :ref:`Share symbols <share_symbols>` tool.
-  If no file is specified, QGIS local symbols library is used.
+       Default: False
+     - If True (checked), applies a case sensitive comparison
+       between the categories and symbols names
+   * - **Ignore non-alphanumeric characters while matching**
+     - ``TOLERANT``
+     - [boolean]
 
-``Use case-sensitive match to symbol names`` [boolean]
-  If checked, applies a case sensitive comparison between the categories and symbols names.
+       Default: False
+     - If True (checked), non-alphanumeric characters in the
+       categories and symbols names will be ignored, allowing
+       greater tolerance during the match.
+   * - **Non-matching categories**
 
-  Default: *False*
+       Optional
+     - ``NON_MATCHING_CATEGORIES``
+     - [table]
 
-``Ignore non-alphanumeric characters while matching`` [boolean]
-  If checked, non-alphanumeric characters in the categories and symbols names will be
-  ignored, allowing greater tolerance during the match.
+       Default: ``[Skip output]``
+     - Output table for categories which does not match any symbol in
+       the database. One of:
 
-  Default: *False*
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+   * - **Non-matching symbol names**
+
+       Optional
+     - ``NON_MATCHING_SYMBOLS``
+     - [table]
+
+       Default: ``[Skip output]``
+     - Output table for symbols from the provided style database which
+       does not match any category. One of:
+
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Categorized layer`` [vector: any]
-  Input vector layer with the categorized style applied. No new layer is output.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Non-matching categories`` [table]
-  Optional
-
-  Lists categories which could not be matched to any symbol in the provided style database.
-
-``Non-matching symbol names`` [table]
-  Optional
-
-  Lists symbols from the provided style database which could not match any category.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Categorized layer**
+     - ``OUTPUT``
+     - [same as input]
+     - The input vector layer with the categorized style applied.
+       No new layer is output.
+   * - **Non-matching categories**
+     - ``NON_MATCHING_CATEGORIES``
+     - [table]
+     - Lists categories which could not be matched to any symbol in
+       the provided style database
+   * - **Non-matching symbol names**
+     - ``NON_MATCHING_SYMBOLS``
+     - [table]
+     - Lists symbols from the provided style database which could
+       not match any category
 
 
 .. _qgisstylefromproject:
