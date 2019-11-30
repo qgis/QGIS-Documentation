@@ -63,7 +63,7 @@ Parameters
      - [same as input]
 
        Default: ``[Create temporary layer]``
-     - Specify the output (fopy with geometry) layer
+     - Specify the output (input copy with geometry) layer
        One of:
 
        * Skip output
@@ -118,101 +118,194 @@ of the QGIS Expression engine.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Vector layer in input to aggregate the features from.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Group by expression`` [tablefield: any]
-  Choose the grouping field. If *NULL* all features will be grouped.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Group by expression**
+     - ``GROUP_BY``
+     - [tablefield: any]
 
-  Default: *NULL*
+       Default: 'NULL'
+     - Choose the grouping field. If *NULL* all features will be grouped
+   * - **Aggregates**
+     - ``AGGREGATES``
+     - [list]
+     - List of output layer field definitions.
+       Example of a field definition:
+       
+       *{'aggregate': 'sum', 'delimiter': ',', 'input': ' $area',
+       'length': 10, 'name': 'totarea', 'precision': 0, 'type': 6}*
+       
+       By default, the list contains all the fields of the input layer.
+       In the GUI, you can edit these fields and their definitions,
+       and you can also:
 
-``Aggregates`` [list]
-  List of the fields in the output layer with their definitions.
+       * Click the |newAttribute| button to add a new field.
+       * Click |deleteAttribute| to delete the selected field.
+       * Use |arrowUp| and |arrowDown| to change order of the fields.
+       * Click |clearText| to reset to the default (the fields of the
+         input layer).
 
-  By default, the embedded table lists all the fields of the source
-  layer and allows you to edit them:
+       For each of the fields you'd like to retrieve information from,
+       you need to define the following:
 
-  * Click the |newAttribute| button to create a new field.
-  * Click |deleteAttribute| to remove a field.
-  * Use |arrowUp| and |arrowDown| to change the selected field order.
-  * Click |clearText| to reset to the default view.
+       ``Input expression`` [expression] (``input``)
+         Field or expression from the input layer.
 
-  For each of the fields you'd like to retrieve information from, you need to
-  fill the following options:
+       ``Aggregate function`` [enumeration] (``aggregate``)
+         :ref:`Function <aggregates_function>` to use on the input expression
+         to return the aggregated value.
 
-  ``Input expression`` [expression]
-    Field or expression from the input layer.
+         Default: *concatenate* (for string data type), *sum* (for numeric
+         data type)
 
-  ``Aggregate function`` [enumeration]
-    :ref:`Function <aggregates_function>` to use on the input expression
-    to return the aggregated value.
+       ``Delimiter`` [string] (``delimiter``)
+         Text string to separate aggregated values, for example in case of
+         concatenation.
 
-    Default: *concatenate* (for string data type), *sum* (for numeric data type)
+         Default: *,*
 
-  ``Delimiter`` [string]
-    Text string to separate aggregated values, for example in case of concatenation.
+       ``Output field name`` [string] (``name``)
+         Name of the aggregated field in the output layer.
+         By default input field name is kept.
 
-    Default: *,*
+       ``Type`` [enumeration] (``type``)
+         Data type of the output field. One of:
+         
+         * 1 --- Boolean
+         * 2 --- Integer
+         * 4 --- Integer64
+         * 6 --- Double
+         * 10 --- String
+         * 14 --- Date
+         * 16 --- DateTime
 
-  ``Output field name`` [string]
-    Name of the aggregated field in the output layer.
-    By default input field name is kept.
+       ``Length`` [number] (``length``)
+         Length of the output field.
 
-  ``Type`` [enumeration]
-    Data type of the output field.
+       ``Precision`` [number] (``precision``)
+         Precision of the output field.
+   
+   * - **Load fields from layer**
+     - GUI only
+     - [vector: any]
+     - You can load fields from another layer and use them for the
+       aggregation
+   * - **Aggregated**
+     - ``OUTPUT``
+     - [same as input]
 
-  ``Length`` [number]
-    Length of the output field.
+       Default: ``[Create temporary layer]``
+     - Specify the output (aggregate) layer
+       One of:
 
-  ``Precision`` [number]
-    Precision of the output field.
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-``Load fields from layer`` [vector: any]
-  You can also load the fields from another layer and use these fields for the
-  aggregation.
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Aggregated`` [vector: any]
-  Multigeometry vector layer with the aggregated values.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Aggregated**
+     - ``OUTPUT``
+     - [same as input]
+     - Multigeometry vector layer with the aggregated values
 
 
 .. _qgisboundary:
 
 Boundary
 ---------
-Returns the closure of the combinatorial boundary of the input geometries (i.e.
-the topological boundary of the geometry).
+Returns the closure of the combinatorial boundary of the input geometries
+(i.e. the topological boundary of the geometry).
 
-Only valid for polygon or line layers.
+Only for polygon and line layers.
 
-For **polygon geometries** , the boundary consists of all the line strings for
-each ring of the polygon.
+For **polygon geometries** , the boundary consists of all the lines making
+up the rings of the polygon.
 
 .. figure:: img/boundary_polygon.png
    :align: center
 
-   Black dash boundary lines of the source polygon layer
+   Boundaries (black dashed line) of the source polygon layer
 
 For **lines geometries**, the boundaries are the vertices between each features.
 
 .. figure:: img/boundary_lines.png
    :align: center
 
-   Boundary layer for lines. In yellow a selected feature.
+   Boundary layer (red points) for lines. In yellow a selected feature.
 
 Parameters
 ..........
 
-``Input layer`` [vector: line, polygon]
-  Input vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line, polygon]
+     - Input line or polygon vector layer
+   * - **Boundary**
+     - ``OUTPUT``
+     - [vector: point, line]
+     - Specify the output (boundary) layer.
+       One of:
+
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Boundary`` [vector: point, line]
-  Boundary from the input layer (point for line, and line for polygon).
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Boundary**
+     - ``OUTPUT``
+     - [vector: point, line]
+     - Boundaries from the input layer (point for line, and line
+       for polygon)
 
 
 .. _qgisboundingboxes:
@@ -237,11 +330,52 @@ Parameters
 ``Input layer`` [vector: line, polygon]
   Input vector layer.
 
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line, polygon]
+     - Input line or polygon vector layer
+   * - **Bounds**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Specify the output (bounding box) layer.
+       One of:
+
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+
 Outputs
 .......
 
-``Bounds`` [vector: polygon]
-  Bounding boxes of input layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Bounds**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Bounding boxes of input layer
 
 
 .. _qgisbuffer:
@@ -268,71 +402,113 @@ case the buffer will result in a smaller polygon.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Distance`` [number |dataDefined|]
-  Distance radius of the buffer calculated from the boundary of each feature.
-  Moreover you can use the Data Defined button on the right to choose a field
-  from which the radius will be calculated: this way you can have different radius
-  for each feature (see :ref:`qgisvariabledistancebuffer`).
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Distance**
+     - ``DISTANCE``
+     - [number |dataDefined|]
 
-  Default: *10.0*
+       Default: 10.0
+     - Buffer distance (from the boundary of each feature).
+       You can use the Data Defined button on the right to choose
+       a field from which the radius will be calculated.
+       This way you can have different radius for each feature
+       (see :ref:`qgisvariabledistancebuffer`).
+   * - **Segments**
+     - ``SEGMENTS``
+     - [number]
 
-``Segments`` [number]
-  Controls the number of line segments to use to approximate a quarter circle when
-  creating rounded offsets.
+       Default: 5
+     - Controls the number of line segments to use to approximate
+       a quarter circle when creating rounded offsets.
+   * - **End cap style**
+     - ``END_CAP_STYLE``
+     - [enumeration]
 
-  Default: *5*
+       Default: 0
+     - Controls how line endings are handled in the buffer.
+       One of:
 
-``End cap style`` [enumeration]
-  Controls how line endings are handled in the buffer.
-  Options are:
+       * 0 --- Round
+       * 1 --- Flat
+       * 2 --- Square
 
-  * 0 --- Round
-  * 1 --- Flat
-  * 2 --- Square
+       .. figure:: img/buffer_cap_style.png
+          :align: center
+       
+          Round, flat and square cap styles
+   * - **Join style**
+     - ``JOIN_STYLE``
+     - [enumeration]
 
-  Default: *0*
+       Default: *0*
+     - Specifies whether round, miter or beveled joins should be
+       used when offsetting corners in a line.
+       Options are:
 
-  .. figure:: img/buffer_cap_style.png
-     :align: center
+       * 0 --- Round
+       * 1 --- Miter
+       * 2 --- Bevel
 
-     Round, flat and square cap styles
+   * - **Miter limit**
+     - ``MITER_LIMIT``
+     - [number]
 
-``Join style`` [enumeration]
-  Specifies whether round, miter or beveled joins should be used when offsetting
-  corners in a line.
-  Options are:
+       Default: 2.0
+     - Only applicable for miter join styles. Minimum: 1
+   * - **Dissolve result**
+     - ``DISSOLVE``
+     - [boolean]
 
-  * 0 --- Round
-  * 1 --- Miter
-  * 2 --- Bevel
+       Default: False
+     - Dissolve the final buffer. If ``True``, overlapping buffers
+       will be dissolved (combined) into a new feature.
+         
+       .. figure:: img/buffer_dissolve.png
+          :align: center
+     
+          Standard and dissolved buffer
+   * - **Buffered**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Specify the output (buffer) layer.
+       One of:
 
-  Default: *0*
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-``Miter limit`` [number]
-  Only applicable for miter join styles.
-
-  Default: *2.0*
-
-``Dissolve result`` [boolean]
-  Choose to dissolve the final buffer. If chosen each buffer that overlaps with
-  another one will be dissolved and an unique feature will be created.
-
-  Default: *False*
-
-  .. figure:: img/buffer_dissolve.png
-     :align: center
-
-     Standard and dissolved buffer
-
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Buffer`` [vector: polygon]
-  Buffer polygon vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Buffered**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Output (buffer) polygon layer
 
 
 .. _qgiscentroids:
