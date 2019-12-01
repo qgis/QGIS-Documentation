@@ -465,7 +465,7 @@ Parameters
        Default: 2.0
      - Controls the maximum distance from the offset curve to use
        when creating a mitered join (only applicable for miter
-       join styles.
+       join styles).
        Minimum: 1.
    * - **Dissolve result**
      - ``DISSOLVE``
@@ -677,7 +677,7 @@ Parameters
        Default: ``[Create temporary layer]``
      - Vector layer containing copy of the invalid features of
        the source layer with the field  ``_errors`` listing the
-       summary of the error found. One of:
+       summary of the error(s) found. One of:
 
        * Skip output
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
@@ -734,7 +734,7 @@ Outputs
      - [same as input]
      - Vector layer containing copy of the invalid features of
        the source layer with the field  ``_errors`` listing the
-       summary of the error found.
+       summary of the error(s) found.
    * -  **Count of valid features**
      - ``VALID_COUNT``
      - [number]
@@ -743,7 +743,7 @@ Outputs
      - ``VALID_OUTPUT``
      - [same as input]
      - Vector layer containing a copy of the valid features of
-       the source layer.Type of error messages and their meanings
+       the source layer. Type of error messages and their meanings
 
 
 .. list-table:: If the GEOS method is used the following error messages can occur: 
@@ -848,7 +848,7 @@ Outputs
      - 
 
    * - Polygon %1 lies inside polygon %2
-     - This error happens when a part of MultiPolygon geometry is inside in a hole of a MultiPolygon geometry. 
+     - This error happens when a part of MultiPolygon geometry is inside a hole of a MultiPolygon geometry. 
      - .. figure:: img/qgis_poliinside_.png
           :align: center
 
