@@ -634,11 +634,11 @@ Parameters
      - Type
      - Description
    * - **Input layer**
-     - INPUT
+     - ``INPUT_LAYER``
      - [vector: any]
      - Input vector layer
    * - **Method**
-     - METHOD
+     - ``METHOD``
      - [enumeration]
 
        Default: 2
@@ -649,13 +649,13 @@ Parameters
        * 1: QGIS
        * 2: GEOS
    * - **Ignore ring self intersection**
-     - IGNORE_RING_SELF_INTERSECTION
+     - ``IGNORE_RING_SELF_INTERSECTION``
      - [boolean]
 
        Default: False
      - Ignore self intersecting rings when checking for validity.
    * -  **Valid output**
-     - VALID_OUTPUT
+     - ``VALID_OUTPUT``
      - [same as input]
 
        Default: ``[Create temporary layer]``
@@ -670,7 +670,7 @@ Parameters
 
        The file encoding can also be changed here.
    * - **Invalid output**
-     - INVALID_OUTPUT
+     - ``INVALID_OUTPUT``
      - [same as input]
 
        Default: ``[Create temporary layer]``
@@ -686,7 +686,7 @@ Parameters
 
        The file encoding can also be changed here.
    * - **Error output**
-     - ERROR_OUTPUT
+     - ``ERROR_OUTPUT``
      - [vector: point]
 
        Default: ``[Create temporary layer]``
@@ -715,31 +715,31 @@ Outputs
      - Type
      - Description
    * - **Count of errors**
-     - ERROR_COUNT
+     - ``ERROR_COUNT``
      - [number]
      - The number of geometries that caused errors.
    * - **Error output**
-     - ERROR_OUTPUT
+     - ``ERROR_OUTPUT``
      - [vector: point]
      - Point layer of the exact position of the validity
        problems detected with the ``message`` field describing
        the error(s) found.
    * - **Count of invalid features**
-     - INVALID_COUNT
+     - ``INVALID_COUNT``
      - [number]
      - The number of invalid geometries.
    * - **Invalid output**
-     - INVALID_OUTPUT
+     - ``INVALID_OUTPUT``
      - [same as input]
      - Vector layer containing copy of the invalid features of
        the source layer with the field  ``_errors`` listing the
        summary of the error found.
    * -  **Count of valid features**
-     - VALID_COUNT
+     - ``VALID_COUNT``
      - [number]
      - The number of valid geometries.
    * -  **Valid output**
-     - VALID_OUTPUT
+     - ``VALID_OUTPUT``
      - [same as input]
      - Vector layer containing a copy of the valid features of
        the source layer.
