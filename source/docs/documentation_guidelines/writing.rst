@@ -62,7 +62,7 @@ common to all lists:
 Inline Tags
 -----------
 
-You can use tags emphasize some items.
+You can use tags to emphasize items.
 
 * **Menu GUI**: to mark a complete sequence of menu selections,
   including selecting submenus and choosing a specific operation,
@@ -85,7 +85,7 @@ You can use tags emphasize some items.
 
      :file:`README.rst`
 
-* **Icons with popup text that belongs them**
+* **Icons with popup text**
 
   .. code-block:: rst
 
@@ -121,7 +121,7 @@ You can use tags emphasize some items.
 Labels/references
 -----------------
 
-References use anchors inside the text to create hyperlinks to sections
+Anchors inside the text can be used to create hyperlinks to sections
 or pages.
 
 The example below creates the anchor of a section (e.g., Label/reference title)
@@ -160,7 +160,7 @@ title of this section!):
 see :ref:`my_anchor` for more information.
 
 So, reference 1 (my_anchor_) and reference 2 (:ref:`my_anchor`).
-Because the reference often displays a full caption, there is not really
+Because the reference often displays a full caption, it is not really
 necessary to use the word *section*.
 Note that you can also use a custom caption to describe the reference:
 
@@ -257,7 +257,7 @@ The result looks like this:
    A caption: A logo I like
 
 To avoid conflicts with other references, always begin figure
-anchors with ``_figure_`` and use terms that easily connects to the
+anchors with ``_figure_`` and use terms that easily connect to the
 figure caption. While only the centered alignment is mandatory for the image,
 feel free to use any other options for figures (such as ``width``,
 ``height``, ``scale``...) if needed.
@@ -446,7 +446,8 @@ You may also want to give examples and insert code snippets. In this case,
 write the comment below a line with the ``::`` directive inserted.  For
 a better rendering, especially to apply color highlighting to code according
 to its language, use the code-block directive, e.g. ``.. code-block:: xml``.
-More details at `Showing code <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#showing-code-examples>`_.
+More details at
+`Showing code <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#showing-code-examples>`_.
 
 .. note::
 
@@ -479,8 +480,8 @@ Add new Screenshots
 -------------------
 
 Here are some hints to create new, nice looking screenshots.
-The images should be placed in an :file:`img/` folder that is located in
-the same folder as the referencing :file:`.rst` file.
+The images should be placed in an image (:file:`img/`) folder that
+is located in the same folder as the referencing :file:`.rst` file.
 
 * You can find some prepared QGIS-projects that are used to create screenshots
   in the :file:`./qgis-projects` folder of this repository.
