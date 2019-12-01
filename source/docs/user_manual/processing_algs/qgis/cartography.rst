@@ -45,7 +45,7 @@ Parameters
        * 3 --- :ref:`Label settings <showlabels>`
 
    * - **Output style database**
-     - ``OBJECTS``
+     - ``OUTPUT``
      - [file]
        
        Default: ``[Save to temporary file]``
@@ -69,10 +69,26 @@ Outputs
      - Name
      - Type
      - Description
+   * - **Color ramp count**
+     - ``COLORRAMPS``
+     - [number]
+     - 
+   * - **Label settings count**
+     - ``LABELSETTINGS``
+     - [number]
+     - 
    * - **Output style database**
      - ``OUTPUT``
      - [file]
      - Output :file:`.XML` file combining the selected style items
+   * - **Symbol count**
+     - ``SYMBOLS``
+     - [number]
+     - 
+   * - **Text format count**
+     - ``TEXTFORMATS``
+     - [number]
+     - 
 
 
 .. _qgiscategorizeusingstyle:
@@ -303,20 +319,6 @@ be exported. If it is not specified, all map extents from the layout will be exp
 Optionally, a specific output CRS can be specified. If it is not specified,
 the original map item CRS will be used.
 
-Parameters
-..........
-
-
-  
-
-``Override CRS`` [crs]
-  Optional
-
-  Select the CRS of the layer in which the information will be reported.
-
-  Default: *The layout CRS*
-
-
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -345,13 +347,11 @@ Parameters
 
        Optional
      - ``CRS``
-     - [enumeration] [list]
-     - Files containing QGIS style items. One or more of:
+     - [crs]
 
-       * 0 --- :ref:`Symbols <edit_symbol>`
-       * 1 --- :ref:`Color ramps <color-ramp>`
-       * 2 --- :ref:`Text formats <text_format>`
-       * 3 --- :ref:`Label settings <showlabels>`
+       Default: *The layout CRS*
+     - Select the CRS for the layer in which the information
+       will be reported.
 
    * - **Extent**
      - ``OUTPUT``
@@ -380,7 +380,7 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Map heigh**
+   * - **Map height**
      - ``HEIGHT``
      - [number]
      - 
@@ -425,8 +425,6 @@ can see each color class has the same amount of features.
 Parameters
 ..........
 
-
-
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -445,15 +443,16 @@ Parameters
      - [number]
 
        Default: 4
-     - The minimum number of colors to assign
+     - The minimum number of colors to assign.
+       Minimum 1, maximum 1000.
    * - **Minimum distance between features**
      - ``MIN_DISTANCE``
      - [number]
 
        Default: 0.0
      - Prevent nearby (but non-touching) features from
-       being assigned equal colors 
-
+       being assigned equal colors.
+       Minimum 0.0.
    * - *Balance color assignment**
      - ``BALANCE``
      - [enumeration]
