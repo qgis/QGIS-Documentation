@@ -358,7 +358,7 @@ the original map item CRS will be used.
      - [vector: polygon]
 
        Default: ``[Create temporary layer]``
-     - Specify the output vector layer for the extent. One of:
+     - Specify the output vector layer for the extent(s). One of:
 
        * Skip output
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
@@ -387,7 +387,7 @@ Outputs
    * - **Extent**
      - ``OUTPUT``
      - [vector: polygon]
-     - Output polygon vector layer containing an extent that covers all
+     - Output polygon vector layer containing an extents of all
        the input layout map item(s)
    * - **Map rotation**
      - ``ROTATION``
