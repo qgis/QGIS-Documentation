@@ -737,8 +737,10 @@ Outputs
      - ``VALID_OUTPUT``
      - [same as input]
      - Vector layer containing a copy of the valid features of
-       the source layer. Type of error messages and their meanings
+       the source layer.
 
+Type of error messages and their meanings
+.........................................
 
 .. list-table:: If the GEOS method is used the following error messages can occur: 
    :widths: 30 30 40
