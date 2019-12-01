@@ -1,17 +1,18 @@
 :orphan:
 
+**network_advanced_parameters**
+
 .. The following section is included in network analysis algorithms, ie
  qgisserviceareafrompoint, qgisserviceareafromlayer, qgisshortestpathlayertopoint,
  qgisshortestpathpointtolayer and qgisshortestpathpointtopoint
 
-**network_advanced_parameters**
    * - **Direction field**
 
        Optional
      - ``DIRECTION_FIELD``
      - [tablefield: string]
 
-       Default: *0.0*
+       Default: 0.0
      - The field used to specify directions for the network edges.
        
        The values used in this field are specified with the three
@@ -105,11 +106,11 @@
 
 **end_network_advanced_parameters**
 
+**geometric_predicates**
+
 .. The following section is included in vector selection algorithms such as
  qgisselectbylocation, qgisextractbylocation
  
-**geometric_predicates**
-
 .. figure:: img/selectbylocation.png
    :align: center
        
@@ -166,11 +167,11 @@
 
 **end_geometric_predicates**
 
+**postgisexecutesqlexample**
+
 .. The following section is included in database algorithms such as
  qgispostgisexecutesql, qgispostgisexecuteandloadsql
  
-**postgisexecutesqlexample**
-
 **Example**
 
 #. Set all the values of an existing field to a fixed value. The SQL query string
