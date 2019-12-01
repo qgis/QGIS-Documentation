@@ -16,8 +16,8 @@ instructions <create_layout_item>` to add a new scale bar item that you can
 later manipulate the same way as exposed in :ref:`interact_layout_item`.
 
 By default, a new scale bar item shows the scale of the map item over which
-it's drawn. If no map item is below, the :ref:`reference map <reference_map>` is
-used. You can customize it thanks to the :guilabel:`Item Properties` panel.
+it is drawn. If there is no map item below, the :ref:`reference map <reference_map>` is
+used. You can customize it in the :guilabel:`Item Properties` panel.
 Other than the :ref:`items common properties <item_common_properties>`, this
 feature has the following functionalities (see figure_layout_scalebar_):
 
@@ -42,7 +42,7 @@ The :guilabel:`Main properties` group of the scale bar
 
    Scale Bar Main properties group
 
-#. First, choose the map the scale bar will be attached to.
+#. First, choose the map the scale bar will be attached to
 #. Then, choose the style of the scale bar. Six styles are available:
 
    * **Single box** and **Double box** styles, which contain one or two lines
@@ -101,7 +101,7 @@ figure_layout_scalebar_display_):
 You can define how the scale bar will be displayed in its frame.
 
 * :guilabel:`Box margin` : space between text and frame borders
-* :guilabel:`Labels margin` : space between text and scale bar drawing
+* :guilabel:`Label margin` : space between text and scale bar drawing
 * :guilabel:`Vertical label placement`: it can be above or below the scale bar
   segment
 * :guilabel:`Horizontal label placement`: which would be centered at the scale
