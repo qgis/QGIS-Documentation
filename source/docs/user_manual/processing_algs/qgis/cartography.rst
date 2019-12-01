@@ -198,11 +198,6 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Categorized layer**
-     - ``OUTPUT``
-     - [same as input]
-     - The input vector layer with the categorized style applied.
-       No new layer is output.
    * - **Non-matching categories**
      - ``NON_MATCHING_CATEGORIES``
      - [table]
@@ -213,6 +208,11 @@ Outputs
      - [table]
      - Lists symbols from the provided style database which could
        not match any category
+   * - **Categorized layer**
+     - ``OUTPUT``
+     - [same as input]
+     - The input vector layer with the categorized style applied.
+       No new layer is output.
 
 
 .. _qgisstylefromproject:
