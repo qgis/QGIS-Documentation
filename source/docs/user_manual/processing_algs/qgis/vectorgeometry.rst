@@ -609,12 +609,18 @@ The attribute tables of the generated layers will contain some additional
 information ("message" for the **error** layer, "FID" and "_errors" for the
 **invalid** layer and  only "FID" for the **valid** layer):
 
+
+The attribute table of each generated vector layer will contain some additional
+information (number of errors found and types of error):
+
 .. figure:: img/check_validity.png
    :align: center
 
    Left: the input layer. Right: the valid layer (green), the invalid layer (orange)
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
+
+.. seealso:: :ref:`qgisfixgeometries`
 
 Parameters
 ..........
@@ -624,27 +630,78 @@ Parameters
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Name
-      - Identifier
-      - Type
-      - Description
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT_LAYER``
+     - [vector: any]
+     - Input vector layer
+   * - **Method**
+     - ``METHOD``
+     - [enumeration]
 
-   *  -  **Method**
-      - METHOD
-      - [enumeration]
+       Default: 2
+     - Method to use to check validity.
+       Options:
 
-        Default: 2
-      - Method to use to check validity.
-        Options:
+       * 0: The one selected in digitizing settings
+       * 1: QGIS
+       * 2: GEOS
+   * - **Ignore ring self intersection**
+     - ``IGNORE_RING_SELF_INTERSECTION``
+     - [boolean]
 
-        * 0: The one selected in digitizing settings
-        * 1: QGIS
-        * 2: GEOS
+       Default: False
+     - Ignore self intersecting rings when checking for validity.
+   * -  **Valid output**
+     - ``VALID_OUTPUT``
+     - [same as input]
 
-   *  -  **Ignore ring self intersection**
-      - IGNORE_RING_SELF_INTERSECTION
-      - [boolean]
-      - Ignore self intersecting rings when checking for validity.
+       Default: ``[Create temporary layer]``
+     - Specify the vector layer to contain a copy of the valid
+       features of the source layer. One of:
+
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+   * - **Invalid output**
+     - ``INVALID_OUTPUT``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Vector layer containing copy of the invalid features of
+       the source layer with the field  ``_errors`` listing the
+       summary of the error found. One of:
+
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+   * - **Error output**
+     - ``ERROR_OUTPUT``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Point layer of the exact position of the validity
+       problems detected with the ``message`` field describing
+       the error(s) found. One of:
+
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table 
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -654,45 +711,148 @@ Outputs
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Name
-      - Identifier
-      - Type
-      - Description
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Count of errors**
+     - ``ERROR_COUNT``
+     - [number]
+     - The number of geometries that caused errors.
+   * - **Error output**
+     - ``ERROR_OUTPUT``
+     - [vector: point]
+     - Point layer of the exact position of the validity
+       problems detected with the ``message`` field describing
+       the error(s) found.
+   * - **Count of invalid features**
+     - ``INVALID_COUNT``
+     - [number]
+     - The number of invalid geometries.
+   * - **Invalid output**
+     - ``INVALID_OUTPUT``
+     - [same as input]
+     - Vector layer containing copy of the invalid features of
+       the source layer with the field  ``_errors`` listing the
+       summary of the error found.
+   * -  **Count of valid features**
+     - ``VALID_COUNT``
+     - [number]
+     - The number of valid geometries.
+   * -  **Valid output**
+     - ``VALID_OUTPUT``
+     - [same as input]
+     - Vector layer containing a copy of the valid features of
+       the source layer.Type of error messages and their meanings
+.........................................
 
-   *  -  **Valid output**
-      - VALID_OUTPUT
-      - [vector: any]
-      - Vector layer containing a copy of the valid features of
-        the source layer.
 
-   *  - **Invalid output**
-      - INVALID_OUTPUT
-      - [vector: any]
-      - Vector layer containing copy of the invalid features of
-        the source layer with the field  ``_errors`` listing the
-        summary of the error found.
+.. list-table:: If the GEOS method is used the following error messages can occur: 
+   :widths: 30 30 40
+   :header-rows: 1
 
-   *  - **Error output**
-      - ERROR_OUTPUT
-      - [vector: point]
-      - Point layer of the exact position of the validity
-        problems detected with the ``message`` field describing
-        the error(s) found.
+   * - Message error
+     - Explanation
+     - Example
 
-   *  - **Count of errors**
-      - ERROR_COUNT
-      - [number]
-      - The number of geometries that caused errors.
+   * - Repeated point
+     - This error happens when a given vertex is repeated.
+     - .. figure:: img/geos_rep_point.png
+          :align: center
 
-   *  - **Count of invalid features**
-      - INVALID_COUNT
-      - [number]
-      - The number of invalid geometries.
+   * - Ring self-intersection
+     - This error happens when a geometry touches itself and generates a ring.
+     - .. figure:: img/geos_ring_inter.png
+          :align: center
 
-   *  -  **Count of valid features**
-      - VALID_COUNT
-      - [number]
-      - The number of valid geometries.
+   * - Self-intersection   
+     - This error happens when a geometry touches itself.
+     - .. figure:: img/geos_self_inter.png
+          :align: center
+
+   * - Topology validation error    
+     - 
+     - 
+
+   * - Hole lies outside shell
+     - 
+     -
+
+   * - Holes are nested
+     - 
+     -
+
+   * - Interior is disconnected
+     - 
+     -
+
+   * - Nested shells
+     - This error happens when a polygon geometry is on top of another polygon geometry. 
+     - .. figure:: img/geos_nest_shell.png
+          :align: center
+
+   * - Duplicate rings
+     - 
+     - 
+
+   * - Too few points in geometry component
+     - 
+     -
+
+   * - Invalid coordinate
+     - 
+     -
+
+   * - Ring is not closed
+     - 
+     - 
+
+|
+
+.. list-table:: If the QGIS method is used the following error messages can occur: 
+   :widths: 50 50 50
+   :header-rows: 1
+
+   * - Message error
+     - Explanation
+     - Example
+
+   * - Segment %1 of ring %2 of polygon %3 intersects segment %4 of ring %5 of polygon %6 at %7
+     - 
+     -
+
+   * - Ring %1 with less than four points
+     - 
+     -
+
+   * - Ring %1 not closed 
+     - 
+     -
+
+   * - Line %1 with less than two points
+     - 
+     -
+
+   * - Line %1 contains %n duplicate node(s) at %2 
+     - 
+     - 
+
+   * - Segments %1 and %2 of line %3 intersect at %4 
+     - 
+     -
+
+   * - Ring self-intersection 
+     - 
+     -
+
+   * - Ring %1 of polygon %2 not in exterior ring
+     -
+     -
+    
+   * - Polygon %1 lies inside polygon %2
+     - This error happens when a part of MultiPolygon geometry is inside in a hole of a MultiPolygon geometry. 
+     - .. figure:: img/qgis_poliinside_.png
+          :align: center
 
 
 .. _qgiscollect:
@@ -713,26 +873,59 @@ See the 'Promote to multipart' or 'Aggregate' algorithms for alternative options
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
+.. seealso:: :ref:`qgisaggregate`, :ref:`qgispromotetomulti`, :ref:`qgisdissolve`
+
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Vector layer to be transformed.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Unique ID fields`` [tablefield: any] [list]
-  Optional
-
-  Choose one or more attributes to collect the geometries.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Unique ID fields**
+     - ``FIELD``
+     - [tablefield: any] [list]
+     - Choose one or more attributes to collect the geometries
+   * - **Collected**
+     - ``OUTPUT``
+     - [same as input]
+     - Vector layer with collected geometries
 
 Outputs
 .......
 
-``Collected`` [vector: any]
-  Vector layer with collected geometries.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-See also
-........
-:ref:`qgisaggregate`, :ref:`qgispromotetomulti`
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Collected**
+     - ``INPUT_LAYER``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer for the collected geometries.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 
 .. _qgisconcavehull:
@@ -740,6 +933,8 @@ See also
 Concave hull (alpha shapes)
 ---------------------------
 Computes the concave hull of the features in an input point layer.
+
+.. seealso:: :ref:`qgisconvexhull`, :ref:`qgisknearestconcavehull`
 
 Parameters
 ..........
