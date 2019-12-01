@@ -744,7 +744,6 @@ Outputs
      - [same as input]
      - Vector layer containing a copy of the valid features of
        the source layer.Type of error messages and their meanings
-.........................................
 
 
 .. list-table:: If the GEOS method is used the following error messages can occur: 
@@ -776,15 +775,15 @@ Outputs
 
    * - Hole lies outside shell
      - 
-     -
+     - 
 
    * - Holes are nested
      - 
-     -
+     - 
 
    * - Interior is disconnected
      - 
-     -
+     - 
 
    * - Nested shells
      - This error happens when a polygon geometry is on top of another polygon geometry. 
@@ -797,16 +796,15 @@ Outputs
 
    * - Too few points in geometry component
      - 
-     -
+     - 
 
    * - Invalid coordinate
      - 
-     -
+     - 
 
    * - Ring is not closed
      - 
      - 
-
 |
 
 .. list-table:: If the QGIS method is used the following error messages can occur: 
@@ -819,19 +817,19 @@ Outputs
 
    * - Segment %1 of ring %2 of polygon %3 intersects segment %4 of ring %5 of polygon %6 at %7
      - 
-     -
+     - 
 
    * - Ring %1 with less than four points
      - 
-     -
+     - 
 
    * - Ring %1 not closed 
      - 
-     -
+     - 
 
    * - Line %1 with less than two points
      - 
-     -
+     - 
 
    * - Line %1 contains %n duplicate node(s) at %2 
      - 
@@ -839,16 +837,16 @@ Outputs
 
    * - Segments %1 and %2 of line %3 intersect at %4 
      - 
-     -
+     - 
 
    * - Ring self-intersection 
      - 
-     -
+     - 
 
    * - Ring %1 of polygon %2 not in exterior ring
-     -
-     -
-    
+     - 
+     - 
+
    * - Polygon %1 lies inside polygon %2
      - This error happens when a part of MultiPolygon geometry is inside in a hole of a MultiPolygon geometry. 
      - .. figure:: img/qgis_poliinside_.png
