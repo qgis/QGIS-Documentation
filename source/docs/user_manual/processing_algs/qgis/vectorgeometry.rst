@@ -325,12 +325,6 @@ Polygon and line geometries are supported.
 Parameters
 ..........
 
-``Input layer`` [vector: line, polygon]
-  Input vector layer.
-
-Parameters
-..........
-
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -911,7 +905,7 @@ Outputs
      - Type
      - Description
    * - **Collected**
-     - ``INPUT_LAYER``
+     - ``OUTPUT``
      - [same as input]
 
        Default: ``[Create temporary layer]``
