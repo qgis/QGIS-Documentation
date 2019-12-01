@@ -879,19 +879,54 @@ See the 'Promote to multipart' or 'Aggregate' algorithms for alternative options
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Vector layer to be transformed.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Unique ID fields`` [tablefield: any] [list]
-  Optional
-
-  Choose one or more attributes to collect the geometries.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Unique ID fields**
+     - ``FIELD``
+     - [tablefield: any] [list]
+     - Choose one or more attributes to collect the geometries
+   * - **Collected**
+     - ``OUTPUT``
+     - [same as input]
+     - Vector layer with collected geometries
 
 Outputs
 .......
 
-``Collected`` [vector: any]
-  Vector layer with collected geometries.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Collected**
+     - ``INPUT_LAYER``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer for the collected geometries.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 
 .. _qgisconcavehull:
