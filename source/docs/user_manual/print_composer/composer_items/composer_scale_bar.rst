@@ -15,8 +15,9 @@ Use the |scaleBar| :guilabel:`Add Scale Bar` tool following :ref:`items creation
 instructions <create_layout_item>` to add a new scale bar item that you can
 later manipulate the same way as exposed in :ref:`interact_layout_item`.
 
-By default, a new scale bar item shows the scale of the most recently added map
-item. You can customize it thanks to the :guilabel:`Item Properties` panel.
+By default, a new scale bar item shows the scale of the map item over which
+it is drawn. If there is no map item below, the :ref:`reference map <reference_map>` is
+used. You can customize it in the :guilabel:`Item Properties` panel.
 Other than the :ref:`items common properties <item_common_properties>`, this
 feature has the following functionalities (see figure_layout_scalebar_):
 
@@ -41,20 +42,21 @@ The :guilabel:`Main properties` group of the scale bar
 
    Scale Bar Main properties group
 
-* First, choose the map the scale bar will be attached to.
-* Then, choose the style of the scale bar. Six styles are available:
+#. First, choose the map the scale bar will be attached to
+#. Then, choose the style of the scale bar. Six styles are available:
 
-  * **Single box** and **Double box** styles, which contain one or two lines of
-    boxes alternating colors;
-  * **Middle**, **Up** or **Down** line ticks;
-  * **Numeric**, where the scale ratio is printed (i.e., 1:50000).
+   * **Single box** and **Double box** styles, which contain one or two lines
+     of boxes alternating colors;
+   * **Middle**, **Up** or **Down** line ticks;
+   * **Numeric**, where the scale ratio is printed (e.g., ``1:50000``).
+#. Set properties as appropriate
 
 Units and Segments
 ------------------
 
 The :guilabel:`Units` and :guilabel:`Segments` groups of the scale bar
-:guilabel:`Item Properties` panel provide the following functionalities
-(see figure_layout_scalebar_units_):
+:guilabel:`Item Properties` panel (not available for the **Numeric** style)
+provide the following functionalities (see figure_layout_scalebar_units_):
 
 .. _figure_layout_scalebar_units:
 
@@ -99,13 +101,17 @@ figure_layout_scalebar_display_):
 You can define how the scale bar will be displayed in its frame.
 
 * :guilabel:`Box margin` : space between text and frame borders
-* :guilabel:`Labels margin` : space between text and scale bar drawing
+* :guilabel:`Label margin` : space between text and scale bar drawing
+* :guilabel:`Vertical label placement`: it can be above or below the scale bar
+  segment
+* :guilabel:`Horizontal label placement`: which would be centered at the scale
+  bar segment's edge or center
 * :guilabel:`Line width` : line width of the scale bar drawing
 * :guilabel:`Join style` : Corners at the end of scale bar in Bevel, Miter or
   Round style (only available for Scale bar style Single Box & Double Box)
 * :guilabel:`Cap style` : End of all lines in style Square, Round or Flat
   (only available for Scale bar style Line Ticks Up, Down and Middle)
-* :guilabel:`Alignment` : Puts text on the left, middle or right side of the
+* :guilabel:`Alignment` : Puts text on the left, center or right side of the
   frame (works only for Scale bar style Numeric)
 
 Fonts and colors
@@ -122,11 +128,11 @@ The :guilabel:`Fonts and colors` group of the scale bar
 
    Scale Bar Fonts and colors groups
 
-You can define the fonts and :ref:`colors <color-selector>` used for the scale
-bar.
+You can define the :ref:`fonts <font_selector>` and :ref:`colors <color-selector>`
+used for the scale bar.
 
-* Use the :guilabel:`Font` button to set the font of scale bar label
-* :guilabel:`Font color`: set the font color
+* Use the :guilabel:`Font` button to set the :ref:`properties <text_format>`
+  (size, font, color, letter spacing, shadow, background...) of the scale bar label
 * :guilabel:`Fill color`: set the first fill color
 * :guilabel:`Secondary fill color`: set the second fill color
 * :guilabel:`Line color`: set the color of the lines of the Scale Bar
