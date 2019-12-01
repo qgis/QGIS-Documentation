@@ -32,11 +32,12 @@ Parameters
    * - **Input databases**
      - ``INPUT``
      - [file] [list]
-     - Input line or polygon vector layer
+     - Files containing QGIS style items
    * - **Objects to combine**
      - ``OBJECTS``
      - [enumeration] [list]
-     - Files containing QGIS style items. One or more of:
+     - Types of style items in the input databases you would like to
+       put in the new database.  These can be:
 
        * 0 --- :ref:`Symbols <edit_symbol>`
        * 1 --- :ref:`Color ramps <color-ramp>`
@@ -48,7 +49,7 @@ Parameters
      - [file]
        
        Default: ``[Save to temporary file]``
-     - Specify the output (bounding box) layer.
+     - Output :file:`.XML` file combining the selected style items
        One of:
 
        * Save to a Temporary Layer (``TEMPORARY_OUTPUT``)
@@ -141,7 +142,7 @@ Parameters
      - [table]
 
        Default: ``[Skip output]``
-     - Output table for categories which does not match any symbol in
+     - Output table for categories which do not match any symbol in
        the database. One of:
 
        * Skip output
@@ -159,7 +160,7 @@ Parameters
 
        Default: ``[Skip output]``
      - Output table for symbols from the provided style database which
-       does not match any category. One of:
+       do not match any category. One of:
 
        * Skip output
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
@@ -232,7 +233,8 @@ Parameters
    * - **Objects to extract**
      - ``OBJECTS``
      - [enumeration] [list]
-     - Files containing QGIS style items. One or more of:
+     - Types of style items in the input project you would like to
+       put in the new database. These can be:
 
        * 0 --- :ref:`Symbols <edit_symbol>`
        * 1 --- :ref:`Color ramps <color-ramp>`
@@ -244,7 +246,7 @@ Parameters
      - [file]
 
        Default: ``[Save to temporary file]``
-     - Specify the output (bounding box) layer.
+     - Specify the output :file:`.XML` file for the selected style items
        One of:
 
        * Save to a Temporary Layer (``TEMPORARY_OUTPUT``)
@@ -314,8 +316,6 @@ Parameters
 
   Default: *The layout CRS*
 
-Parameters
-..........
 
 .. list-table::
    :header-rows: 1
@@ -330,7 +330,7 @@ Parameters
      - ``LAYOUT``
      - [enumeration]
      - A print layout in the current project
-   * - **`Map item**
+   * - **Map item**
 
        Optional
      - ``MAP``
@@ -387,7 +387,7 @@ Outputs
    * - **Extent**
      - ``OUTPUT``
      - [vector: polygon]
-     - Output polygon vector layer containing the input layout extent
+     - Output polygon vector layer containing the extent of the input layout map item(s)
    * - **Map rotation**
      - ``ROTATION``
      - [number]
@@ -426,8 +426,6 @@ Parameters
 ..........
 
 
-Parameters
-..........
 
 .. list-table::
    :header-rows: 1
