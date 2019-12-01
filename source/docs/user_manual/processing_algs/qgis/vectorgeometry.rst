@@ -462,7 +462,10 @@ Parameters
      - [number]
 
        Default: 2.0
-     - Only applicable for miter join styles. Minimum: 1
+     - Controls the maximum distance from the offset curve to use
+       when creating a mitered join (only applicable for miter
+       join styles.
+       Minimum: 1.
    * - **Dissolve result**
      - ``DISSOLVE``
      - [boolean]
@@ -546,7 +549,7 @@ Parameters
    * - **Input layer**
      - ``INPUT``
      - [vector: any]
-     - Input line vector layer
+     - Input vector layer
    * - **Create centroid for each part**
      - ``ALL_PARTS``
      - [boolean |dataDefined|]
@@ -626,8 +629,8 @@ Parameters
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   * - Name
-     - Identifier
+   * - Label
+     - Name
      - Type
      - Description
    * - **Input layer**
@@ -653,7 +656,7 @@ Parameters
      - Ignore self intersecting rings when checking for validity.
    * -  **Valid output**
      - VALID_OUTPUT
-     - [vector: any]
+     - [same as input]
 
        Default: ``[Create temporary layer]``
      - Specify the vector layer to contain a copy of the valid
@@ -668,7 +671,7 @@ Parameters
        The file encoding can also be changed here.
    * - **Invalid output**
      - INVALID_OUTPUT
-     - [vector: any]
+     - [same as input]
 
        Default: ``[Create temporary layer]``
      - Vector layer containing copy of the invalid features of
@@ -707,8 +710,8 @@ Outputs
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   * - Name
-     - Identifier
+   * - Label
+     - Name
      - Type
      - Description
    * - **Count of errors**
@@ -727,7 +730,7 @@ Outputs
      - The number of invalid geometries.
    * - **Invalid output**
      - INVALID_OUTPUT
-     - [vector: any]
+     - [same as input]
      - Vector layer containing copy of the invalid features of
        the source layer with the field  ``_errors`` listing the
        summary of the error found.
@@ -737,7 +740,7 @@ Outputs
      - The number of valid geometries.
    * -  **Valid output**
      - VALID_OUTPUT
-     - [vector: any]
+     - [same as input]
      - Vector layer containing a copy of the valid features of
        the source layer.
 
@@ -1728,8 +1731,8 @@ Parameters
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  -  Name
-      -  Identifier
+   *  -  Label
+      -  Name
       -  Type
       -  Description
 
@@ -1747,8 +1750,8 @@ Outputs
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  -  Name
-      -  Identifier
+   *  -  Label
+      -  Name
       -  Type
       -  Description
 
@@ -3316,8 +3319,8 @@ Parameters
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  -  Name
-      -  Identifier
+   *  -  Label
+      -  Name
       -  Type
       -  Description
 
@@ -3345,8 +3348,8 @@ Outputs
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  -  Name
-      -  Identifier
+   *  -  Label
+      -  Name
       -  Type
       -  Description
 
