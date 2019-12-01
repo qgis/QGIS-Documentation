@@ -387,7 +387,7 @@ Outputs
    * - **Extent**
      - ``OUTPUT``
      - [vector: polygon]
-     - Output polygon vector layer containing an extents of all
+     - Output polygon vector layer containing extents of all
        the input layout map item(s)
    * - **Map rotation**
      - ``ROTATION``
