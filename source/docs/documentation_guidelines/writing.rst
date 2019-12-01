@@ -145,7 +145,7 @@ see my_anchor_ for more information.
 
 Notice that it will jump to the line/thing following the 'anchor'.
 You do not need to use apostrophes, but you do need to have empty lines
-before and after the anchor.
+after the anchor.
 
 Another way to jump to the same place **from anywhere in the
 documentation** is to use the ``:ref:`` role.
@@ -338,7 +338,7 @@ My drawn table, mind you this is unfortunately not regarded as a caption
 
 You can reference to it like this my_drawn_table_.
 
-To create even more complex tables, you can use
+For even more complex tables, it is easier to use ``list-table``:
 
 .. code-block:: rst
 
@@ -413,7 +413,7 @@ is recommended to use the block-level tag:
 
    .. index:: WMS, WFS, Loading layers
 
-It is also recommanded to use index parameters such as ``single``, ``pair``
+It is also recommended to use index parameters such as ``single``, ``pair``
 and ``see``, in order to build a more structured and interconnected index table.
 See `Index generating <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#index-generating-markup>`_
 for more information on index creation.
@@ -424,7 +424,7 @@ Special Comments
 
 Sometimes, you may want to emphasize some points of the description, either to
 warn, remind or give some hints to the user. In QGIS Documentation, we use reST
-special directives such as ``.. warning::``, ``.. note::`` and ``.. tip::``.
+special directives such as ``.. warning::``, ``.. seealso::`, ``.. note::`` and ``.. tip::``.
 These directives generate frames that highlight your comments. See `Paragraph Level markup
 <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#paragraph-level-markup>`_
 for more information.
@@ -520,7 +520,7 @@ the same folder as the referencing :file:`.rst` file.
 Translated Screenshots
 ----------------------
 
-Here are somea additional hints for those that want to create screenshots for
+Here are some additional hints for those that want to create screenshots for
 a translated user guide.
 Translated images should be placed in a :file:`img/<your_language>/` folder.
 
@@ -624,7 +624,7 @@ guidelines:
 
   |
 
-* Studying an existing and well documented algorithm, and copy
+* Study an existing and well documented algorithm, and copy
   all the useful layouts.
 * If the algorithm does not provide any output, just skip that section
 * When you are finished, just follow the guidelines described in :ref:`step_by_step`
