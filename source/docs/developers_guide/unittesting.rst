@@ -685,8 +685,8 @@ like any executable.
   ********* Finished testing of TestQgsDxfExport *********
 
 These tests also take `command line arguments
-<https://doc-snapshots.qt.io/qt5-5.9/qtest-overview.html#qt-test-command-line-arguments>`_,
-this allows to run a specific subset of tests.
+<https://doc-snapshots.qt.io/qt5-5.9/qtest-overview.html#qt-test-command-line-arguments>`_.
+This makes it possible to run a specific subset of tests:
 
 .. code-block:: bash
 
@@ -709,7 +709,7 @@ For C++ unit tests, QtCreator automatically adds run targets, so you can start
 them from the debugger.
 
 If you go to *Projects* and there to the *Build & Run* --> Desktop *Run* tab, you can
-also specify command line parameters that will allow to run only a subset of the tests
+also specify command line parameters that will allow a subset of the tests to be run
 inside a .cpp file in the debugger.
 
 Python Tests
