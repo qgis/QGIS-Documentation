@@ -584,10 +584,12 @@ guidelines:
   in the parameter descriptions.
 * Add the default value of the parameter, e.g.::
 
-    ``Number of points`` [number]
-      Number of points to create
+    * - **Number of points**
+      - ``NUMBER_OF_POINTS``
+      - [number]
 
-      Default: 1
+        Default: 1
+      - Number of points to create
 
 * Describe the *type* of input supported the parameters. There are several types
   available you can pick one from:
@@ -626,7 +628,6 @@ guidelines:
 
 * Study an existing and well documented algorithm, and copy
   all the useful layouts.
-* If the algorithm does not provide any output, just skip that section
 * When you are finished, just follow the guidelines described in :ref:`step_by_step`
   to commit your changes and make a Pull Request
 
