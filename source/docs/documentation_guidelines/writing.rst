@@ -521,11 +521,11 @@ is located in the same folder as the referencing :file:`.rst` file.
 Translated Screenshots
 ----------------------
 
-Here are some additional hints for those that want to create screenshots for
-a translated user guide.
-Translated images should be placed in a :file:`img/<your_language>/` folder.
+Here are some additional hints for those that want to create
+screenshots for a translated user guide:
 
-* Use the same filename as the english 'original' screenshot
+Translated images should be placed in a :file:`img/<your_language>/`
+folder.  Use the same filename as the english 'original' screenshot.
 
 
 Documenting Processing algorithms
