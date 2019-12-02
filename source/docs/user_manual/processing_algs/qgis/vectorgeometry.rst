@@ -1104,6 +1104,69 @@ Outputs
   Layer with a polygon feature representing the input extent.
 
 
+.. _qgispointtolayer:
+
+Create layer from point |310|
+-----------------------------
+
+This algorithm creates a new vector layer that contains a single
+feature with geometry matching a point parameter.
+It can be used in models to convert a point into a layer which
+can be used for other algorithms which require a layer based
+input.
+
+.. seealso:: :ref:`qgisextenttolayer`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Point**
+     - ``INPUT``
+     - [coordinates]
+     - Input point, including CRS info
+       (example: ``397254,6214446 [EPSG:32632]``).
+       If the CRS is not provided, the Project CRS will be used.
+       GUI: The point can be specified by clicking on the map canvas.
+   * - **Point**
+     - ``OUTPUT``
+     - [vector: point]
+     - Specify the output layer.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Point**
+     - ``OUTPUT``
+     - [vector: point]
+     - The output point vector layer containing the input point.
+
+
 .. _qgiswedgebuffers:
 
 Create wedge buffers
@@ -2421,32 +2484,6 @@ Outputs
 
 ``Displaced`` [vector: point]
   Point vector layer with displaced features.
-
-
-.. _qgispointtolayer:
-
-Point to layer
---------------
-
-Creates a new vector layer that contains a single feature with
-geometry matching a point parameter.
-It can be used in models to convert a point into a layer which can be used
-for other algorithms which require a layer based input.
-
-.. seealso:: :ref:`qgisextenttolayer`
-
-Parameters
-..........
-
-``Point`` [coordinates]
-  Input point (example: ``397254,6214446 [EPSG:32632]``).
-
-
-Outputs
-.......
-
-``Point`` [vector: point]
-  Point vector layer containing the input point.
 
 
 .. _qgispoleofinaccessibility:
@@ -3882,6 +3919,7 @@ Outputs
    source folder.
 
 .. |36| replace:: ``NEW in 3.6``
+.. |310| replace:: ``NEW in 3.10``
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png
