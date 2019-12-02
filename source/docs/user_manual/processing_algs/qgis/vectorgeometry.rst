@@ -1106,7 +1106,7 @@ Outputs
 
 .. _qgispointtolayer:
 
-Create layer from point |310|
+Create layer from point |38|
 -----------------------------
 
 This algorithm creates a new vector layer that contains a single
@@ -1134,8 +1134,10 @@ Parameters
      - [coordinates]
      - Input point, including CRS info
        (example: ``397254,6214446 [EPSG:32632]``).
+       
        If the CRS is not provided, the Project CRS will be used.
-       GUI: The point can be specified by clicking on the map canvas.
+       
+       The point can be specified by clicking on the map canvas.
    * - **Point**
      - ``OUTPUT``
      - [vector: point]
@@ -3919,6 +3921,7 @@ Outputs
    source folder.
 
 .. |36| replace:: ``NEW in 3.6``
+.. |38| replace:: ``NEW in 3.8``
 .. |310| replace:: ``NEW in 3.10``
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
