@@ -739,7 +739,7 @@ Outputs
        the source layer.
 
 Types of error messages and their meanings
-.........................................
+..........................................
 
 .. list-table:: If the GEOS method is used the following error messages can occur: 
    :widths: 30 30 40
