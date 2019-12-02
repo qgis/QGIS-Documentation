@@ -1541,9 +1541,9 @@ Extracts M values from geometries into feature attributes.
 By default only the M value from the first vertex of each
 feature is extracted, however the algorithm can optionally
 calculate statistics on all of the geometry's M values,
-including sums, means, and minimums and maximums.
+including sum, mean, minimum and maximum.
 
-.. seealso:: :ref:`qgisextractzvalues`
+.. seealso:: :ref:`qgisextractzvalues`, :ref:`qgissetmvalue`, :ref:`qgisdropmzvalues`
 
 Parameters
 ..........
@@ -1564,6 +1564,8 @@ Parameters
    * - **Summaries to calculate**
      - ``SUMMARIES``
      - [enumeration]
+
+       Default: [0]
      - Statistics on the M values of a geometry.
        One or more of:
        
@@ -1617,8 +1619,8 @@ Outputs
      - Description
    * - **Extracted**
      - ``OUTPUT``
-     - [vector: polygon]
-     - Bounding boxes of input layer
+     - [same as input]
+     - The output vector layer (with M values)
 
 
 .. _qgisextractspecificvertices:
@@ -1710,9 +1712,9 @@ Extracts Z values from geometries into feature attributes.
 By default only the Z value from the first vertex of each
 feature is extracted, however the algorithm can optionally
 calculate statistics on all of the geometry's Z values,
-including sums, means, and minimums and maximums.
+including sum, mean, minimum and maximum.
 
-.. seealso:: :ref:`qgisextractmvalues`
+.. seealso:: :ref:`qgisextractzvalues`, :ref:`qgissetzvalue`, :ref:`qgisdropmzvalues`
 
 Parameters
 ..........
@@ -1733,7 +1735,9 @@ Parameters
    * - **Summaries to calculate**
      - ``SUMMARIES``
      - [enumeration]
-     - Statistics on the M values of a geometry.
+     
+       Default: [0]
+     - Statistics on the Z values of a geometry.
        One or more of:
        
        * 0 --- First
@@ -1757,8 +1761,8 @@ Parameters
      - ``COLUMN_PREFIX``
      - [string]
 
-       Default: 'm\_'
-     - The prefix for the output (M) column
+       Default: 'z\_'
+     - The prefix for the output (Z) column
    * - **Extracted**
      - ``OUTPUT``
      - [same as input]
@@ -1786,7 +1790,7 @@ Outputs
      - Description
    * - **Extracted**
      - ``OUTPUT``
-     - [vector: polygon]
+     - [same as input]
      - The output vector layer (with Z values)
 
 
