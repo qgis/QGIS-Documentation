@@ -396,7 +396,7 @@ useful (coherent, consistent and really connected to each other):
   ``Atlas generation``, ``WMS``, ``pgsql2shp``.
 * Keep an eye on the existing `Index list <https://docs.qgis.org/testing/en/genindex.html>`_
   in order to reuse the most convenient expression with the right spelling
-  and avoid unneccessary duplicates.
+  and avoid unnecessary duplicates.
 
 Several index tags exist in RST. You can use the inline ``:index:`` tag
 within normal text:
