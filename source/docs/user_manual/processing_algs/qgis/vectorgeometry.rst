@@ -1109,11 +1109,10 @@ Outputs
 Create layer from point |38|
 -----------------------------
 
-This algorithm creates a new vector layer that contains a single
+Creates a new vector layer that contains a single
 feature with geometry matching a point parameter.
-It can be used in models to convert a point into a layer which
-can be used for other algorithms which require a layer based
-input.
+It can be used in models to convert a point into a point layer
+for algorithms which require a layer based input.
 
 .. seealso:: :ref:`qgisextenttolayer`
 
