@@ -1531,6 +1531,98 @@ Outputs
   Extended vector line layer.
 
 
+.. _qgisextractmvalues:
+
+Extract M values
+----------------
+
+Extracts M values from geometries into feature attributes.
+
+By default only the M value from the first vertex of each
+feature is extracted, however the algorithm can optionally
+calculate statistics on all of the geometry's M values,
+including sum, mean, minimum and maximum.
+
+.. seealso:: :ref:`qgisextractzvalues`, :ref:`qgissetmvalue`, :ref:`qgisdropmzvalues`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Summaries to calculate**
+     - ``SUMMARIES``
+     - [enumeration]
+
+       Default: [0]
+     - Statistics on the M values of a geometry.
+       One or more of:
+       
+       * 0 --- First
+       * 1 --- Last
+       * 2 --- Count
+       * 3 --- Sum
+       * 4 --- Mean
+       * 5 --- Median
+       * 6 --- St.dev (pop)
+       * 7 --- Minimum
+       * 8 --- Maximum
+       * 9 --- Range
+       * 10 --- Minority
+       * 11 --- Majority
+       * 12 --- Variety
+       * 13 --- Q1
+       * 14 --- Q3
+       * 15 --- IQR
+
+   * - **Output column prefix**
+     - ``COLUMN_PREFIX``
+     - [string]
+
+       Default: 'm\_'
+     - The prefix for the output (M) column
+   * - **Extracted**
+     - ``OUTPUT``
+     - [same as input]
+     - Specify the output layer.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Extracted**
+     - ``OUTPUT``
+     - [same as input]
+     - The output vector layer (with M values)
+
+
 .. _qgisextractspecificvertices:
 
 Extract specific vertices
@@ -1608,6 +1700,98 @@ Outputs
 
 ``Vertices`` [vector: point]
   Point layer with features representing all the vertices in the input layer.
+
+
+.. _qgisextractzvalues:
+
+Extract Z values
+----------------
+
+Extracts Z values from geometries into feature attributes.
+
+By default only the Z value from the first vertex of each
+feature is extracted, however the algorithm can optionally
+calculate statistics on all of the geometry's Z values,
+including sum, mean, minimum and maximum.
+
+.. seealso:: :ref:`qgisextractzvalues`, :ref:`qgissetzvalue`, :ref:`qgisdropmzvalues`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Summaries to calculate**
+     - ``SUMMARIES``
+     - [enumeration]
+     
+       Default: [0]
+     - Statistics on the Z values of a geometry.
+       One or more of:
+       
+       * 0 --- First
+       * 1 --- Last
+       * 2 --- Count
+       * 3 --- Sum
+       * 4 --- Mean
+       * 5 --- Median
+       * 6 --- St.dev (pop)
+       * 7 --- Minimum
+       * 8 --- Maximum
+       * 9 --- Range
+       * 10 --- Minority
+       * 11 --- Majority
+       * 12 --- Variety
+       * 13 --- Q1
+       * 14 --- Q3
+       * 15 --- IQR
+
+   * - **Output column prefix**
+     - ``COLUMN_PREFIX``
+     - [string]
+
+       Default: 'z\_'
+     - The prefix for the output (Z) column
+   * - **Extracted**
+     - ``OUTPUT``
+     - [same as input]
+     - Specify the output layer.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Extracted**
+     - ``OUTPUT``
+     - [same as input]
+     - The output vector layer (with Z values)
 
 
 .. _qgisfilterverticesbym:
