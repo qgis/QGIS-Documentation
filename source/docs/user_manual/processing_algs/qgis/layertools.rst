@@ -27,11 +27,33 @@ The output layer contains a single bounding box for the whole input layer.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Layer**
+      - ``INPUT``
+      - [layer:any]
+      - Input vector layer
+      
 
 Outputs
 .......
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Extent`` [vector: polygon]
-  Polygon vector layer.
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Extent**
+      - ``OUTPUT``
+      - [vector: polygon]
+      - Output extent (minimum bounding box)
