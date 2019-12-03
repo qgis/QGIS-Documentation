@@ -1111,6 +1111,8 @@ Using the |styleManager| :guilabel:`Style Manager` button, you can also quickly
 access the :ref:`Style Manager <vector_style_manager>` dialog and configure
 symbols and color ramps.
 
+.. _project_colors:
+
 There is also an additional section where you can define specific colors for the
 running project. Like the :ref:`global colors <colors_options>`, you can:
 
@@ -1134,10 +1136,14 @@ These colors are identified as :guilabel:`Project colors` and listed as part of
   you can:
 
   #. Define the color as a project color
-  #. Apply it using the ``project_color('color_label')`` expression in
-     color :ref:`data defined override widget <data_defined>`
-  #. Update the color once in a :guilabel:`Project colors` list
-  #. And the change is reflected EVERYWHERE.
+  #. Click the :ref:`data defined override widget <data_defined>` next to
+     the color property you want to set
+  #. Hover over the :guilabel:`Color` menu and select the project color. The
+     property is then assigned the expression ``project_color('color_label')``
+     and the color widget reflects that color.
+  #. Repeat steps 2 and 3 as much as needed
+  #. Update the project color once and the change is reflected EVERYWHERE
+     it's in use.
 
 Data Sources Properties
 -----------------------
