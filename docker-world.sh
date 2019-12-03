@@ -30,7 +30,9 @@ git pull
 
 for l in $langs
   do
+    echo "Starting to build language: $l"
     time /bin/bash ./docker-run.sh full LANG=$l
+    echo "Finished building language: $l"
     # we changed source/conf.py during build (exclude processing algs for pdf (see Makefile)
     # let's get a fresh checkout of source/conf.py
     git checkout source/conf.py
@@ -39,7 +41,8 @@ for l in $langs
     # 1 dec 2017 rsycn to local disk
     time rsync -hvrzc --progress output/pdf/$l /var/www/qgisdata/QGIS-Documentation-3.4/live/html/pdf
     time rsync -hvrzc --progress output/html/$l /var/www/qgisdata/QGIS-Documentation-3.4/live/html
+    echo "Finished rsyncing docs language: $l"
   done
 
 now=`date`
-echo "Finished: $now"
+echo "Finished docker-world.sh: $now"
