@@ -20,15 +20,6 @@ Loads a layer to the current project.
 Parameters
 ..........
 
-``Layer`` [layer: any]
-  Layer to load in the legend.
-
-``Loaded layer name`` [string]
-  Name of the loaded layer.
-
-Parameters
-..........
-
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
