@@ -37,8 +37,8 @@ the overlay of these symbol layers that are combined afterwards to shape a
 new global symbol. Besides, a dynamic symbol representation is updated as soon as
 symbol properties change.
 
-A set of tools is available to manage the symbol tree items and according to the
-level selected, you'll get enabled different tools at the bottom of the dialog to:
+Depending on the level selected in the symbol tree items, various tools are
+made available to help you manage the tree:
 
 * |signPlus| add new symbol layer: you can stack as many symbols as you want
 * |signMinus| remove the selected symbol layer
@@ -74,51 +74,67 @@ more symbols (including, of any other type) or symbol layers.
 
 You can setup some parameters that apply to the global symbol:
 
-* :guilabel:`Unit`: it can be **Millimeter**, **Points**, **Pixels**,
-  **Meters at Scale**, **Map unit** or **Inches**
-* :guilabel:`Transparency`
+* :guilabel:`Unit`: it can be **Millimeters**, **Points**, **Pixels**,
+  **Meters at Scale**, **Map units** or **Inches** (see :ref:`unit_selector`
+  for more details)
+* :guilabel:`Opacity`
 * :guilabel:`Color`: when this parameter is changed by the user, its value is
   echoed to all unlocked sub-symbols color
 * :guilabel:`Size` and :guilabel:`Rotation` for marker symbols
 * :guilabel:`Width` for line symbols
 
-.. note::
+  .. tip::
 
-  The :ref:`Data-defined override <data_defined>` button beside the last layer-related
-  parameters is inactive when setting the symbol from the Style manager dialog.
-  When the symbol is connected to a map layer, this button helps you create
-  proportional or multivariate analysis rendering.
+    Use the :guilabel:`Size` (for marker symbols) or the :guilabel:`Width` (for
+    line symbols) properties at the symbol level to proportionally resize all
+    of its embedded :ref:`symbol layers <symbol_layer>` dimensions.
 
-The symbols used at this level are items you can pick from the :ref:`symbols
-library <vector_style_manager>`. Available symbols of the corresponding type
-are shown and, through the editable drop-down list just above, can be filtered
-by free-form text or by :ref:`categories <group_symbols>`.
-You can also update the list of symbols using the
-|styleManager| :sup:`Style Manager` button and open the eponym dialog. There,
-you can use any capabilities as exposed in :ref:`vector_style_manager` section.
+  .. note::
 
-The symbols are displayed either:
+    The :ref:`Data-defined override <data_defined>` button next to the width, size
+    or rotation parameters is inactive when setting the symbol from the Style manager
+    dialog. When the symbol is connected to a map layer, this button helps you create
+    :ref:`proportional or multivariate analysis <proportional_symbols>` rendering.
 
-* in an icon list (with thumbnail, name and associated tags) using the
-  |openTable| :sup:`List View` button below the frame;
-* or as icon preview using the |iconView| :sup:`Icon View` button.
+* A preview of the :ref:`symbols library <vector_style_manager>`: Symbols of the
+  same type are shown and, through the editable drop-down list just above, can be
+  filtered by free-form text or by :ref:`categories <group_symbols>`.
+  You can also update the list of symbols using the
+  |styleManager| :sup:`Style Manager` button and open the eponym dialog. There,
+  you can use any capabilities as exposed in :ref:`vector_style_manager` section.
 
-Press the :guilabel:`Save Symbol` button to add any symbol being edited to the symbols
-library. With the :guilabel:`Advanced` |selectString| option, you can:
+  The symbols are displayed either:
 
-* set the **symbol levels**: defining the way symbol layers are connected to
-  each other in the map canvas (see :ref:`Symbols_levels` for more information)
-* and for line and fill symbols, **clip features to canvas extent**.
+  * in an icon list (with thumbnail, name and associated tags) using the
+    |openTable| :sup:`List View` button below the frame;
+  * or as icon preview using the |iconView| :sup:`Icon View` button.
 
-.. Todo: Explain what does advanced "clip features to canvas" option mean for the symbol?
+* Press the :guilabel:`Save Symbol` button to add the symbol being edited to the
+  symbols library. 
+* With the :guilabel:`Advanced` |selectString| option, you can:
 
-.. tip::
+  * for line and fill symbols, :guilabel:`Clip features to canvas extent`.
 
-   Note that once you have set the size in the lower levels of the
-   :guilabel:`Symbol layers` dialog, the size of the whole symbol can be changed
-   with the :guilabel:`Size` (for marker symbols) or the :guilabel:`Width` (for
-   line symbols) menu in the first level again. The size of the lower levels
-   changes accordingly, while the size ratio is maintained.
+    .. Todo: Explain what does advanced "clip features to canvas" option mean for the symbol?
+
+  * for fill symbols, :guilabel:`Force right-hand rule orientation`: allows
+    forcing rendered fill symbols to follow the standard "right hand rule" for ring
+    orientation (i.e, polygons where the exterior ring is clockwise, and the interior
+    rings are all counter-clockwise).
+
+    The orientation fix is applied while rendering only, and the original feature
+    geometry is unchanged. This allows for creation of fill symbols with consistent
+    appearance, regardless of the dataset being rendered and the ring orientation
+    of individual features.
+  * Depending on the :ref:`symbology <vector_style_menu>` of the layer a symbol is
+    being applied to, additional settings are available in the :guilabel:`Advanced`
+    menu:
+
+    * :ref:`Symbol levels... <Symbols_levels>` to define the order of symbols
+      rendering
+    * :ref:`Data-defined Size Legend <data_defined_size_legend>`
+    * :guilabel:`Match to Saved Symbols...` and :guilabel:`Match to Symbols from
+      File...` to automatically :ref:`assign symbols to classes <categorized_advanced_menu>`
 
 .. _symbol_layer:
 
@@ -139,8 +155,9 @@ Some common options and widgets are available to build a symbol layer,
 regardless it's of marker, line or fill sub-type:
 
 * the :ref:`color selector <color-selector>` widget to ease color manipulation
-* :guilabel:`Units`: it can be **Millimeter**, **Points**, **Pixels**,
-  **Meters at Scale**, **Map unit** or **Inches**
+* :guilabel:`Units`: it can be **Millimeters**, **Points**, **Pixels**,
+  **Meters at Scale**, **Map units** or **Inches** (see :ref:`unit_selector`
+  for more details)
 * the |dataDefined| :sup:`data-defined override` widget near almost all options,
   extending capabilities of customizing each symbol (see :ref:`data_defined` for
   more information)

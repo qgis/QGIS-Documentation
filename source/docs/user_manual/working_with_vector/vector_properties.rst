@@ -437,6 +437,8 @@ Right-clicking over selected item(s) shows a contextual menu to:
 
 * :guilabel:`Unmerge Categories` that were previously merged
 
+.. _categorized_advanced_menu:
+
 The :guilabel:`Advanced` menu gives access to options to speed classification
 or fine-tune the symbols rendering:
 
