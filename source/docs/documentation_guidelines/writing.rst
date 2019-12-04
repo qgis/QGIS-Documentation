@@ -622,7 +622,22 @@ guidelines:
   File                                      ``file``
   Matrix                                    ``matrix``
   Layer                                     ``layer``
-  Same output type as input type            ``same as input``  
+  Same output type as input type            ``same as input``
+  Definition                                ``definition``
+  Point                                     ``point``
+  MultipleLayers                            ``multipleLayers``
+  Range                                     ``Range``
+  AuthConfig                                ``AuthConfig``
+  Mesh                                      ``Mesh``
+  Layout                                    ``Layout``
+  LayoutItem                                ``LayoutItem``
+  Color                                     ``Color``
+  ----------------------------------------  -------------------------  --------------------
+  Aggregates                                ``aggregates``
+  ExecuteSql                                ``executesql``
+  InterpolationData                         ``interpolationdata``
+  FieldsMapping                             ``fieldsmapping``
+  ReliefColors                              ``reliefcolors``
   ========================================  =========================  ====================
 
   |
