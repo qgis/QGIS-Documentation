@@ -182,8 +182,8 @@ In Figure_Heatmap_data_processing_, the airports of Alaska are shown.
    Airports of Alaska
 
 
-#. Open the :guilable:`Heatmap (Kernel Density Estimation)` algorithm from
-   the QGIS :guilable:`Interpolation` group
+#. Open the :guilabel:`Heatmap (Kernel Density Estimation)` algorithm from
+   the QGIS :guilabel:`Interpolation` group
 #. In the :guilabel:`Point layer` |selectString| field, select ``airports``
    from the list of point layers loaded in the current project.
 #. Change the :guilabel:`Radius` to ``1000000`` meters.
