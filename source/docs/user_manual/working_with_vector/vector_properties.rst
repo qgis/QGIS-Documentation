@@ -1954,9 +1954,9 @@ in figure_fields_form_.
 
    Resulting built-in form with tabs and named groups
 
-#. Choose ``Drag and drop designer`` from the :guilabel:`Attribute editor
-   layout` combobox. This enables the :guilabel:`Form Layout` panel next to the
-   :guilabel:`Available widgets` one, filled with existing fields. 
+#. Choose ``Drag and drop designer`` from the :guilabel:`Select attribute layout
+   editor` combobox. This enables the :guilabel:`Form Layout` panel next to the
+   :guilabel:`Available widgets` panel, filled with existing fields. 
 #. Select any fields you would not want to use in your :guilabel:`Form Layout`
    panel and hit the |signMinus| button to remove them. Drag and drop fields
    from the other panel to readd them. The same field can be added multiple times.
@@ -1967,8 +1967,8 @@ in figure_fields_form_.
   
    #. The first step is to use the |signPlus| icon to create a tab in which
       fields and groups will be displayed
-   #. You can create as many containers as you want. If relevant, press again
-      the |signPlus| icon to create another tab or a group frame under
+   #. You can create as many containers as you want. If relevant, press
+      the |signPlus| icon again to create another tab or a group frame under
       an existing tab (see figure_fields_layout_).
 
       .. _figure_fields_layout:
@@ -1978,8 +1978,8 @@ in figure_fields_form_.
 
          Dialog to create containers with the **Attribute editor layout**
 
-#. The next step is to assign to each container the relevant fields,
-   by simple drag and drop. Groups and tabs can also be moved, the same way.
+#. The next step is to assign the relevant fields to each container,
+   by simple drag and drop. Groups and tabs can also be moved in the same way.
 #. At their creation time you can set some properties of the containers.
    At any time you can update them with a double-click. QGIS opens a form in
    which you can:
@@ -1988,18 +1988,18 @@ in figure_fields_form_.
    * rename the container
    * set over how many columns the embedded fields should be distributed
    * enter an expression to control the container's visibility.
-     The expression will be re-evaluated everytime values in the form change
+     The expression will be re-evaluated every time values in the form change,
      and the tab or group box shown/hidden accordingly
    * show the container as a group box (only available for tabs).
    * add a background color
 
-#. Likewise double-click a field label and you can specify whether the label
+#. Likewise, double-click a field label and you can specify whether the label
    of its widget should be visible or not in the form.
 
 #. In case the layer is involved in ``one or many to many relations`` (see 
    :ref:`vector_relations`), referencing layers are listed in the
    :guilabel:`Relations` frame and their form can be embedded in the current
-   layer form by drag-and-drop. Like the other items, double-click the relation
+   layer form by drag-and-drop. As for the other items, double-click the relation
    label to configure some options:
 
    * choose to hide or show the item label
@@ -2007,7 +2007,7 @@ in figure_fields_form_.
    * show the unlink button
 
 #. Apply the layer's properties dialog
-#. Use the |identify| tool on a feature and it should display the new form.
+#. Use the |identify| tool on a feature, and it should display the new form.
 
 
 .. _provide_ui_file:
