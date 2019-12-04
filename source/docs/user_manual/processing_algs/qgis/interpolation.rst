@@ -18,7 +18,6 @@ The density is calculated based on the number of points in a location, with larg
 numbers of clustered points resulting in larger values. Heatmaps allow easy identification
 of *hotspots* and clustering of points.
 
-
 Parameters
 ..........
 
@@ -295,10 +294,152 @@ Parameters
   ``Pixel Size Y`` [number]
     Vertical resolution of each pixel in output raster, in layer units.
 
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Point layer**
+     - ``INPUT``
+     - [vector: point]
+     - Point vector layer to use for the heatmap
+   * - **Radius**
+     - ``RADIUS``
+     - [number]
+
+       Default: 100.0
+     - Heatmap search radius (or kernel bandwidth) in map units.
+       The radius specifies the distance around a point at which the
+       influence of the point will be felt.
+       Larger values result in greater smoothing, but smaller values
+       may show finer details and variation in point density.
+   * - **Output raster size**
+     - ``PIXEL_SIZE``
+     - [number]
+
+       Default: 0.1
+     - Pixel size of the output raster layer in layer units.
+       
+       In the GUI, the size can be specified by the number of rows
+       (``Number of rows``) / columns (``Number of columns``) **or**
+       the pixel size( ``Pixel Size X`` / ``Pixel Size Y``).
+       Increasing the number of rows or columns will decrease the cell
+       size and increase the file size of the output raster.
+       The values in ``Rows``, ``Columns``, ``Pixel Size X`` and
+       ``Pixel Size Y`` will be updated simultaneously - doubling the
+       number of rows will double the number of columns, and the cell
+       size will be halved.
+       The extent of the output raster will remain the same
+       (approximately).
+   * - **Radius from field**
+
+       Optional
+     - ``RADIUS_FIELD``
+     - [tablefield: numeric]
+     - Sets the search radius for each feature from an attribute
+       field in the input layer.
+   * - **Weight from field**
+
+       Optional
+     - ``WEIGHT_FIELD``
+     - [tablefield: numeric]
+     - Allows input features to be weighted by an attribute field.
+       This can be used to increase the influence certain features
+       have on the resultant heatmap.
+   * - **Kernel shape**
+     - ``KERNEL``
+     - [enumeration]
+
+       Default: *0*
+     - Controls the rate at which the influence of a point decreases
+       as the distance from the point increases.
+       Different kernels decay at different rates, so a triweight
+       kernel gives features greater weight for distances closer to
+       the point then the Epanechnikov kernel does.
+       Consequently, triweight results in “sharper” hotspots and
+       Epanechnikov results in “smoother” hotspots.
+       
+       There are many shapes available (please see the
+       `Wikipedia page <https://en.wikipedia.org/wiki/Kernel_(statistics)#Kernel_functions_in_common_use>`_
+       for further information):
+
+       * 0 --- Quartic
+       * 1 --- Triangular
+       * 2 --- Uniform
+       * 3 --- Triweight
+       * 4 --- Epanechnikov
+
+   * - **Decay ratio (Triangular kernels only)**
+
+       Optional
+     - ``DECAY``
+     - [number]
+
+       Default: *0.0*
+     - Can be used with Triangular kernels to further control
+       how heat from a feature decreases with distance from the
+       feature.
+
+       * A value of 0 (=minimum) indicates that the heat will
+         be concentrated in the center of the given radius and
+         completely extinguished at the edge.
+       * A value of 0.5 indicates that pixels at the edge of
+         the radius will be given half the heat as pixels at
+         the center of the search radius.
+       * A value of 1 means the heat is spread evenly over
+         the whole search radius circle.
+         (This is equivalent to the ‘Uniform’ kernel.)
+       * A value greater than 1 indicates that the heat is
+         higher towards the edge of the search radius than at
+         the center.
+
+   * - **Output value scaling**
+     - ``OUTPUT_VALUE``
+     - [enumeration]
+
+       Default: *Raw*
+     - Allow to change the values of the output heatmap raster.
+       One of:
+
+       * 0 --- Raw
+       * 1 --- Scaled
+
+   * - **Heatmap**
+     - ``OUTPUT``
+     - [raster]
+       
+       Default: ``[Save to temporary file]``
+     - Specify the output raster layer with kernel density values.
+       One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
+
 Outputs
 .......
-``Interpolated`` [raster]
-  Raster layer of interpolated values.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Interpolated**
+     - ``OUTPUT``
+     - [raster]
+     - Raster layer of interpolated values
 
 
 .. _qgistininterpolation:
