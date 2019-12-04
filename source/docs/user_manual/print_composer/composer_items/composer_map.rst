@@ -187,15 +187,15 @@ Double-click the added grid to rename it.
 
    Map Grids Dialog
 
-After you add a grid, press the :guilabel:`Modify Grid...` button to access
+To modify a grid, select it and press the :guilabel:`Modify Grid...` button
+to open the :guilabel:`Map Grid Properties` panel and access its
 configuration options.
 
 Grid Appearance
 ...............
 
 In the :guilabel:`Map Grid Properties` panel, check |checkbox|
-:guilabel:`Grid enabled` to allow the display of the grid onto the map item
-and settings its properties.
+:guilabel:`Grid enabled` to show the grid on the map item.
 
 As grid type, you can specify to use a:
 
@@ -210,7 +210,7 @@ As grid type, you can specify to use a:
 
 Other than the grid type, you can define: 
 
-* the :guilabel:`CRS` which could be different from the project CRS
+* the :guilabel:`CRS`, which could be different from the project CRS
 * the :guilabel:`Interval` type to use for the grid references. Available
   options are ``Map Unit``, ``Fit Segment Width``, ``Millimeter`` or ``Centimeter``:
 
@@ -218,7 +218,7 @@ Other than the grid type, you can define:
     on the map extent to a "pretty" interval. When selected, the ``Minimum`` and 
     ``Maximum`` intervals can be set.
   * the other options allow you to set the distance between two consecutive grid
-    references in ``X`` and ``Y`` directions.
+    references in the ``X`` and ``Y`` directions.
 
 * the :guilabel:`Offset` from the map item edges, in the ``X`` and/or the ``Y``
   direction
