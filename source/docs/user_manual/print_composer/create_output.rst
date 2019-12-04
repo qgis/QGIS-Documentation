@@ -504,7 +504,7 @@ the image file format set in :guilabel:`Atlas` panel or to SVG.
 
 .. note::
    With multi-page output, an atlas behaves like a layout in that only the
-   page that contains the :ref:`_reference_map` will get a world file (for
+   page that contains the :ref:`reference_map` will get a world file (for
    each feature output).
 
 .. tip:: **Print a specific atlas feature**
