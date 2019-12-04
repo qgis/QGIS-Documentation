@@ -1959,8 +1959,8 @@ to:
 * choose a color from the color selector dialog
 
 .. note:: When the color widget is set to a :ref:`project color <project_colors>`
-  through the data-defined override properties, the above functions allowing to
-  change the color are unavailable. You'd first need to :guilabel:`Unlink color`
+  through the data-defined override properties, the above functions for
+  changing the color are unavailable. You'd first need to :guilabel:`Unlink color`
   or :guilabel:`Clear` the definition.
 
 .. _figure_color_selector:
