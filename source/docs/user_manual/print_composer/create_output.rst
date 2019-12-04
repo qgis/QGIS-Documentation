@@ -87,7 +87,7 @@ To export a layout as an image:
 
      .. note::
         For multi-page output, only the page that contain the
-        :ref:`_reference_map` will get a world file (assuming that the
+        :ref:`reference_map` will get a world file (assuming that the
         :guilabel:`Generate world file` option is checked).
 
 
