@@ -22,101 +22,149 @@ of *hotspots* and clustering of points.
 Parameters
 ..........
 
-``Point layer`` [vector: point]
-  Point vector layer to use for the heatmap.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Radius`` [number]
-  Heatmap search radius (or kernel bandwidth) in map units. The radius
-  specifies the distance around a point at which the influence of the point will
-  be felt.
-  Larger values result in greater smoothing, but smaller values may show finer
-  details and variation in point density.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Point layer**
+     - ``INPUT``
+     - [vector: point]
+     - Point vector layer to use for the heatmap
+   * - **Radius**
+     - ``RADIUS``
+     - [number]
 
-  Default: *100.0*
+       Default: 100.0
+     - Heatmap search radius (or kernel bandwidth) in map units.
+       The radius specifies the distance around a point at which the
+       influence of the point will be felt.
+       Larger values result in greater smoothing, but smaller values
+       may show finer details and variation in point density.
+   * - **Output raster size**
+     - ``PIXEL_SIZE``
+     - [number]
 
-``Output raster size`` [number]
-  Allows to add the output heatmap raster layer size by specifying the rows and columns
-  **or** the X and Y pixel size.
+       Default: 0.1
+     - Pixel size of the output raster layer in layer units.
+       
+       In the GUI, the size can be specified by the number of rows
+       (``Number of rows``) / columns (``Number of columns``) **or**
+       the pixel size( ``Pixel Size X`` / ``Pixel Size Y``).
+       Increasing the number of rows or columns will decrease the cell
+       size and increase the file size of the output raster.
+       The values in ``Rows``, ``Columns``, ``Pixel Size X`` and
+       ``Pixel Size Y`` will be updated simultaneously - doubling the
+       number of rows will double the number of columns, and the cell
+       size will be halved.
+       The extent of the output raster will remain the same
+       (approximately).
+   * - **Radius from field**
 
-  Increasing the number of rows or columns will decrease the cell size and increase
-  the file size of the output file. At the same time, the values in ``Rows`` and
-  ``Columns`` will also be updated, so doubling the number of rows will automatically
-  double the number of columns and the cell sizes will also be halved.
-  The extent of the output raster will remain the same.
+       Optional
+     - ``RADIUS_FIELD``
+     - [tablefield: numeric]
+     - Sets the search radius for each feature from an attribute
+       field in the input layer.
+   * - **Weight from field**
 
-  ``Number of rows`` [number]
-    Total number of rows of the output raster layer.
+       Optional
+     - ``WEIGHT_FIELD``
+     - [tablefield: numeric]
+     - Allows input features to be weighted by an attribute field.
+       This can be used to increase the influence certain features
+       have on the resultant heatmap.
+   * - **Kernel shape**
+     - ``KERNEL``
+     - [enumeration]
 
-  ``Number of columns`` [number]
-    Total number of columns of the output raster layer.
+       Default: *0*
+     - Controls the rate at which the influence of a point decreases
+       as the distance from the point increases.
+       Different kernels decay at different rates, so a triweight
+       kernel gives features greater weight for distances closer to
+       the point then the Epanechnikov kernel does.
+       Consequently, triweight results in “sharper” hotspots and
+       Epanechnikov results in “smoother” hotspots.
+       
+       There are many shapes available (please see the
+       `Wikipedia page <https://en.wikipedia.org/wiki/Kernel_(statistics)#Kernel_functions_in_common_use>`_
+       for further information):
 
-  ``Pixel Size X`` [number]
-    Horizontal resolution of each pixel in output raster, in layer units.
+       * 0 --- Quartic
+       * 1 --- Triangular
+       * 2 --- Uniform
+       * 3 --- Triweight
+       * 4 --- Epanechnikov
 
-  ``Pixel Size Y`` [number]
-    Vertical resolution of each pixel in output raster, in layer units.
+   * - **Decay ratio (Triangular kernels only)**
 
-``Radius from field`` [tablefield: numeric]
-  Optional
+       Optional
+     - ``DECAY``
+     - [number]
 
-  Sets the search radius for each feature from an attribute field in the input layer.
+       Default: *0.0*
+     - Can be used with Triangular kernels to further control
+       how heat from a feature decreases with distance from the
+       feature.
 
-``Weight from field`` [tablefield: numeric]
-  Optional
+       * A value of 0 (=minimum) indicates that the heat will
+         be concentrated in the center of the given radius and
+         completely extinguished at the edge.
+       * A value of 0.5 indicates that pixels at the edge of
+         the radius will be given half the heat as pixels at
+         the center of the search radius.
+       * A value of 1 means the heat is spread evenly over
+         the whole search radius circle.
+         (This is equivalent to the ‘Uniform’ kernel.)
+       * A value greater than 1 indicates that the heat is
+         higher towards the edge of the search radius than at
+         the center.
 
-  Allows input features to be weighted by an attribute field. This can be used to
-  increase the influence certain features have on the resultant heatmap.
+   * - **Output value scaling**
+     - ``OUTPUT_VALUE``
+     - [enumeration]
 
-``Kernel shape`` [enumeration]
-  Controls the rate at which the influence of a point decreases as the distance
-  from the point increases. Different kernels decay at different rates, so a triweight
-  kernel gives features greater weight for distances closer to the point then the
-  Epanechnikov kernel does. Consequently, triweight results in “sharper” hotspots
-  and Epanechnikov results in “smoother” hotspots.
+       Default: *Raw*
+     - Allow to change the values of the output heatmap raster.
+       One of:
 
-  There are many shapes available (please see the `Wikipedia page <https://en.wikipedia.org/wiki/Kernel_(statistics)#Kernel_functions_in_common_use>`_
-  for further information):
+       * 0 --- Raw
+       * 1 --- Scaled
 
-  * 0 --- Quartic
-  * 1 --- Triangular
-  * 2 --- Uniform
-  * 3 --- Triweight
-  * 4 --- Epanechnikov
+   * - **Heatmap**
+     - ``OUTPUT``
+     - [raster]
+       
+       Default: ``[Save to temporary file]``
+     - Specify the output raster layer with kernel density values.
+       One of:
 
-  Default: *0*
+       * Save to a Temporary File
+       * Save to File...
 
-``Decay ratio (Triangular kernels only)`` [number]
-  Optional
-
-  Can be used with Triangular kernels to further control how heat from a feature
-  decreases with distance from the feature.
-
-  * A value of 0 (=minimum) indicates that the heat will be concentrated in the
-    center of the given radius and completely extinguished at the edge.
-  * A value of 0.5 indicates that pixels at the edge of the radius will be given
-    half the heat as pixels at the center of the search radius.
-  * A value of 1 means the heat is spread evenly over the whole search radius circle.
-    (This is equivalent to the ‘Uniform’ kernel.)
-  * A value greater than 1 indicates that the heat is higher towards the edge of
-    the search radius than at the center.
-
-  Default: *0.0*
-
-``Output value scaling`` [enumeration]
-  Allow to change the values of the output heatmap raster.
-
-  Options:
-
-  * 0 --- Raw
-  * 1 --- Scaled
-
-  Default: *Raw*
+       The file encoding can also be changed here.
 
 Outputs
 .......
-``Heatmap`` [raster]
-  Raster layer with kernel density values.
 
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Heatmap**
+     - ``OUTPUT``
+     - [raster]
+     - Raster layer with kernel density values
 
 Example: Creating a Heatmap
 ...........................
@@ -135,7 +183,8 @@ In Figure_Heatmap_data_processing_, the airports of Alaska are shown.
    Airports of Alaska
 
 
-#. Open the Heatmap algorithm from the Interpolation group
+#. Open the :guilable:`Heatmap (Kernel Density Estimation)` algorithm from
+   the QGIS :guilable:`Interpolation` group
 #. In the :guilabel:`Point layer` |selectString| field, select ``airports``
    from the list of point layers loaded in the current project.
 #. Change the :guilabel:`Radius` to ``1000000`` meters.
@@ -151,9 +200,10 @@ In Figure_Heatmap_data_processing_, the airports of Alaska are shown.
 
    The Heatmap Dialog
 
-QGIS will generate the heatmap and add the results to your map window. By default, the heatmap
-is shaded in greyscale, with lighter areas showing higher concentrations of airports. The heatmap
-can now be styled in QGIS to improve its appearance.
+QGIS will generate the heatmap and add it to your map window.
+By default, the heatmap is shaded in greyscale, with lighter areas
+showing higher concentrations of airports.
+Rhe heatmap can now be styled in QGIS to improve its appearance.
 
 .. _figure_heatmap_created_processing:
 
@@ -168,7 +218,7 @@ can now be styled in QGIS to improve its appearance.
    :guilabel:`Properties`).
 #. Select the :guilabel:`Symbology` tab.
 #. Change the :guilabel:`Render type` |selectString| to 'Singleband pseudocolor'.
-#. Select a suitable :guilabel:`Color map` |selectString|, for instance ``YlOrRed``.
+#. Select a suitable :guilabel:`Color ramp` |selectString|, for instance ``YlOrRd``.
 #. Click the :guilabel:`Classify` button.
 #. Press :guilabel:`OK` to update the layer.
 
