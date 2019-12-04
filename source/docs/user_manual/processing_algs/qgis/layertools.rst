@@ -32,15 +32,29 @@ Parameters
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Layer**
-      - ``INPUT``
-      - [layer:any]
-      - Input vector layer
-      
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Layer**
+     - ``INPUT``
+     - [layer]
+     - Input layer
+   * - **Extent**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
+     - Specify the polygon vector layer for the output extent.
+       One of:
+
+       * Skip Output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -56,4 +70,5 @@ Outputs
    *  - **Extent**
       - ``OUTPUT``
       - [vector: polygon]
-      - Output extent (minimum bounding box)
+      - Output (polygon) vector layer with the extent
+        (minimum bounding box)
