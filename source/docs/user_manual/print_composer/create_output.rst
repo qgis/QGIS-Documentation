@@ -12,8 +12,8 @@
    .. contents::
       :local:
 
-The :ref:`figure below <figure_layout_output>` shows an example of print layout
-including each type of layout items described in the previous section.
+The :ref:`figure below <figure_layout_output>` shows an example print layout
+including all the types of layout items described in the previous section.
 
 .. _figure_layout_output:
 
@@ -31,29 +31,30 @@ layout to different file formats, and it is possible to modify the resolution
 (print quality) and paper size:
 
 * The |filePrint| :sup:`Print` icon allows you to print the layout to a
-  connected printer or a PostScript file, depending on installed printer drivers.
+  connected printer or a PostScript file, depending on the installed printer
+  drivers.
 * The |saveMapAsImage| :sup:`Export as image` icon exports the print layout
-  in several image formats such as :file:`PNG`, :file:`BMP`, :file:`TIF`,
-  :file:`JPG`, and many others...
+  image formats such as :file:`PNG`, :file:`BMP`, :file:`TIF`, :file:`JPG`,
+  and many others...
 * The |saveAsSVG| :sup:`Export as SVG` icon saves the print layout
   as an :file:`SVG` (Scalable Vector Graphic).
 * The |saveAsPDF| :sup:`Export as PDF` icon saves the defined print layout
-  directly as a :file:`PDF`.
+  directly as a :file:`PDF` (Portable Document Format) file.
 
 Export settings
 ===============
 
 Whenever you export a print layout, there are a selection of export settings QGIS needs
-to check in order to return the most appropriate output. These configurations
+to check in order to produce the most appropriate output. These configurations
 are:
 
-* the :ref:`Export settings <layout_export_settings>` of the :guilabel:`Layout`
-  panel, such as :guilabel:`Export resolution`, :guilabel:`Print as raster`,
-  :guilabel:`Always export as vectors` or :guilabel:`Save world file`;
-* the :guilabel:`Exclude page from exports` in the :ref:`page item properties
-  <page_properties>` panel;
-* the :guilabel:`Exclude item from exports` in the :ref:`item properties
-  <layout_Rendering_Mode>` panel.
+* The :ref:`Export settings <layout_export_settings>` of the :guilabel:`Layout`
+  panel, such as :guilabel:`Export resolution`, :guilabel:`Print as raster`
+  :guilabel:`Always export as vectors` or :guilabel:`Save world file`
+* :guilabel:`Exclude page from exports` in the :ref:`page item properties
+  <page_properties>` panel
+* :guilabel:`Exclude item from exports` in the :ref:`item properties
+  <layout_Rendering_Mode>` panel
 
 
 .. _export_layout_image:
@@ -69,8 +70,7 @@ To export a layout as an image:
    If the layout contains more than one page, each page will be exported to
    a file with the given filename with the page number appended
    (e.g. :file:`myill_2.png`).
-   
-#. In the next :guilabel:`Image Export Options` dialog:
+#. In the next (:guilabel:`Image Export Options`) dialog:
 
    * You can override the print layout :guilabel:`Export resolution` and the
      exported page dimensions (as set in :guilabel:`Layout` panel).
@@ -86,8 +86,9 @@ To export a layout as an image:
      <layout_panel>`.
 
      .. note::
-        For multi-page output, only the first page / image will get a world
-        file (when the :guilabel:`Generate world file` option is checked).
+        For multi-page output, only the page that contain the
+        :ref:`_reference_map` will get a world file (assuming that the
+        :guilabel:`Generate world file` option is checked).
 
 
    .. index:: Crop layout to content
@@ -501,6 +502,10 @@ With :menuselection:`Atlas --> Export Atlas as Images...` or
 select a folder. Each page of each atlas feature composition is exported to
 the image file format set in :guilabel:`Atlas` panel or to SVG.
 
+.. note::
+   With multi-page output, an atlas behaves like a layout in that only the
+   page that contains the :ref:`_reference_map` will get a world file (for
+   each feature output).
 
 .. tip:: **Print a specific atlas feature**
 
