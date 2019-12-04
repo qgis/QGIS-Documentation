@@ -18,72 +18,112 @@ be created (see eg :ref:`vector_create_stored_connection`).
 Parameters
 ..........
 
-``Layer to import`` [vector: any]
-  Vector layer to add to the database.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Database (connection name)`` [string]
-  Name of the database connection (not the database name). Existing connections
-  will be shown in the combobox.
+   * - Name
+     - Identifier
+     - Type
+     - Description
+   * - **Layer to import**
+     - ``INPUT``
+     - [vector: any]
+     - Vector layer to add to the database
+   * - **Database (connection name)**
+     - ``DATABASE``
+     - [string]
+     - Name of the database connection (not the database name).
+       Existing connections will be shown in the combobox.
+   * - **Schema (schema name)**
+       
+       Optional
+     - ``SCHEMA``
+     - [string]
 
-``Schema (schema name)`` [string]
-  Optional
+       Default: 'public'
+     - Name of the schema to store the data.
+       It can be a new one or already exist.
+   * - **Table to import to (leave blank to use layer name)**
 
-  Name of the schema to store the data. It can be a new one or already exist.
+       Optional
+     - ``TABLENAME``
+     - [string]
 
-  Default: *public*
+       Default: ''
+     - Defines a table name for the imported vector file.
+       If nothing is added, the layer name will be used.
+   * - **Primary key field**
 
-``Table to import to (leave blank to use layer name)`` [string]
-  Optional
+       Optional
+     - ``PRIMARY_KEY``
+     - [tablefield: any]
+     - Sets the primary key field from an existing field
+       in the vector layer.
+       A column with **unique** values can be used as
+       Primary key for the database.
+   * - **Geometry column**
+     - ``GEOMETRY_COLUMN``
+     - [string]
+       
+       Default: 'geom'
+     - Defines the name of the geometry column in the
+       new PostGIS table.
+       Geometry information for the features is stored
+       in this column.
+   * - **Encoding**
 
-  Defines a table name for the imported vector file.
-  If nothing is added, the layer name will be used.
+       Optional
+     - ``ENCODING``
+     - [string]
+       
+       Default: 'UTF-8'
+     - Defines the encoding of the output layer
+   * - **Overwrite**
+     - ``OVERWRITE``
+     - [boolean]
+       
+       Default: True
+     - If the specified database exists, setting this option to
+       ``True`` will make sure that it is deleted and a new
+       database will be created before the layers are added.
+       If this option is ``False``, the layers will be
+       appended.
+   * - **Create spatial index**
+     - ``CREATEINDEX``
+     - [boolean]
+       
+       Default: True
+     - Specifies whether to create a spatial index or not
+   * - **Convert field names to lowercase**
+     - ``LOWERCASE_NAMES``
+     - [boolean]
+       
+       Default: True
+     - Convert the field names of the input vector layer
+       to lowercase
+   * - **Drop length constraint on character fields**
+     - ``DROP_STRING_LENGTH``
+     - [boolean]
+       
+       Default: False
+     - Should length constraints on character fields be
+       dropped or not
+   * - **Create single-part geometries instead of multi-part**
+     - ``FORCE_SINGLEPART``
+     - [boolean]
+       
+       Default: False
+     - Should the features of the output layer be
+       single-part instead of multi-part.
+       By default the existing geometries information
+       are preserved.
 
-``Primary key field`` [tablefield: any]
-  Optional
+Outputs
+.......
 
-  Sets the primary key field from an existing field in the vector layer.
-  A column with **unique** values can be used as Primary key for the database.
-
-``Geometry column`` [string]
-  Defines the name of the geometry column in the new PostGIS table.
-  Geometry information for the features is stored in this column.
-
-  Default: *geom*
-
-``Encoding`` [string]
-  Optional
-
-  Defines the encoding of the layer in the new PostGIS table.
-
-  Default: *UTF-8*
-
-``Overwrite`` [boolean]
-  Overwrites existing tables having the same name.
-
-  Default: *True*
-
-``Create spatial index`` [boolean]
-  Specifies whether to create a spatial index or not.
-
-  Default: *True*
-
-``Convert field names to lowercase`` [boolean]
-  Converts the field names of the input vector layer to lowercase.
-
-  Default: *True*
-
-``Drop length constraints on character fields`` [boolean]
-  Specifies whether the length constraints on character fields should be dropped
-  or not.
-
-  Default: *False*
-
-``Create single-part geometries instead of multi-part`` [boolean]
-  Specifies if the features of the loaded layer should be single-part instead of
-  multi-part.
-  By default the existing geometries information are preserved.
-
-  Default: *False*
+The algorithm has no output.
 
 
 .. _qgisimportintospatialite:
@@ -98,63 +138,99 @@ be created (see eg :ref:`label_spatialite`).
 Parameters
 ..........
 
-``Layer to import`` [vector: any]
-  Vector layer to add to the database.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``File database`` [vector]
-  The SQLite/SpatiaLite database file to connect to.
+   * - Name
+     - Identifier
+     - Type
+     - Description
+   * - **Layer to import**
+     - ``INPUT``
+     - [vector: any]
+     - Vector layer to add to the database
+   * - **File database**
+     - ``DATABASE``
+     - [vector: any]
+     - The SQLite/SpatiaLite database file to connect to
+   * - **Table to import to (leave blank to use layer name)**
 
-``Table to import to (leave blank to use layer name)`` [string]
-  Optional
+       Optional
+     - ``TABLENAME``
+     - [string]
 
-  Defines a table name for the imported vector file.
-  If nothing is added, the layer name will be used.
+       Default: ''
+     - Defines the table name for the imported vector file.
+       If nothing is specified, the layer name will be used.
+   * - **Primary key field**
 
-``Primary key field`` [tablefield: any]
-  Optional
+       Optional
+     - ``tablefield: any``
+     - [tablefield: any]
+     - Use a field in the input vector layer as the primary key
+   * - **Geometry column**
+     - ``GEOMETRY_COLUMN``
+     - [string]
+       
+       Default: 'geom'
+     - Defines the name of the geometry column in the new
+       SpatiaLite table.
+       Geometry information for the features is stored in this
+       column.
+   * - **Encoding**
 
-  Sets the primary key field from an existing field in the vector layer.
+       Optional
+     - ``ENCODING``
+     - [string]
+       
+       Default: 'UTF-8'
+     - Defines the encoding of the output layer
+   * - **Overwrite**
+     - ``OVERWRITE``
+     - [boolean]
+       
+       Default: True
+     - If the specified database exists, setting this option to
+       ``True`` will make sure that it is deleted and a new
+       database will be created before the layers are added.
+       If this option is ``False``, the layers will be
+       appended.
+   * - **Create spatial index**
+     - ``CREATEINDEX``
+     - [boolean]
+       
+       Default: True
+     - Specifies whether to create a spatial index or not
+   * - **Convert field names to lowercase**
+     - ``LOWERCASE_NAMES``
+     - [boolean]
+       
+       Default: True
+     - Convert the field names of the input vector layer
+       to lowercase
+   * - **Drop length constraint on character fields**
+     - ``DROP_STRING_LENGTH``
+     - [boolean]
+       
+       Default: False
+     - Should length constraints on character fields be
+       dropped or not
+   * - **Create single-part geometries instead of multi-part**
+     - ``FORCE_SINGLEPART``
+     - [boolean]
+       
+       Default: False
+     - Should the features of the output layer be
+       single-part instead of multi-part.
+       By default the existing geometries information
+       are preserved.
 
-``Geometry column`` [string]
-  Defines the name of the geometry column in the new SpatiaLite table.
-  Geometry information for the features is stored in this column.
+Outputs
+.......
 
-  Default: *geom*
-
-``Encoding`` [string]
-  Optional
-
-  Defines the encoding of the layer in the new SpatiaLite table.
-
-  Default: *UTF-8*
-
-``Overwrite`` [boolean]
-  Overwrites existing table having the same name.
-
-  Default: *True*
-
-``Create spatial index`` [boolean]
-  Specifies whether to create a spatial index or not.
-
-  Default: *True*
-
-``Convert field names to lowercase`` [boolean]
-  Converts the field names of the input vector layer to lowercase.
-
-  Default: *True*
-
-``Drop length constraints on character fields`` [boolean]
-  Specifies whether the length constraints on character fields should be dropped
-  or not.
-
-  Default: *False*
-
-``Create single-part geometries instead of multi-part`` [boolean]
-  Specifies if the features of the loaded layer should be single-part instead of
-  multi-part.
-  By default the existing geometries information are preserved.
-
-  Default: *False*
+The algorithm has no output.
 
 
 .. _qgispackage:
@@ -249,29 +325,58 @@ run queries on the layer itself.
 Parameters
 ..........
 
-``Database (connection name)`` [string]
-  Name of the database connection (not the database name). Existing connections
-  will be shown in the combobox.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``SQL query`` [string]
-  Defines the SQL query, for example ``UPDATE my_table SET field=10``.
+   * - Name
+     - Identifier
+     - Type
+     - Description
 
-``Unique ID field name`` [tablefield: any]
-  Sets the primary key field from an existing field in the table.
+   * - **Database (connection name)**
+     - ``DATABASE``
+     - [string]
+     - The database connection (not the database name).
+       Existing connections will be shown in the combobox.
+   * - **SQL query**
+     - ``SQL``
+     - [string]
+     - Defines the SQL query, for example
+       ``'UPDATE my_table SET field=10'``.
+   * - **Unique ID field name**
+     - ``ID_FIELD``
+     - [string]
+       
+       Default: id
+     - Sets the primary key field (a column in the result table)
+   * - **Geometry field name**
 
-  Default: *id*
-
-``Geometry column`` [string]
-  Optional
-
-  Name of the geometry column in the table.
-
-  Default: *geom*
+       Optional
+     - ``GEOMETRY_FIELD``
+     - [string]
+       
+       Default: 'geom'
+     - Name of the geometry column (a column in the result table)
 
 Outputs
 .......
-No new layer is created. The SQL query is executed in place on the layer and
-its result (as a subset of the input table) is automatically loaded in QGIS.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Name
+     - Identifier
+     - Type
+     - Description
+
+   * - **SQL layer**
+     - ``OUTPUT``
+     - [vector: any]
+     - The resulting vector layer to be loaded into QGIS.
 
 
 .. _qgispostgisexecutesql:
@@ -290,20 +395,36 @@ the layer itself.
 .. seealso:: :ref:`qgispostgisexecuteandloadsql`, :ref:`qgisexecutesql`,
  :ref:`qgisspatialiteexecutesql`
 
+
 Parameters
 ..........
 
-``Database`` [string]
-  Name of the database, not the connection name.
-  By default you don't have to fill in the name, the current database
-  connection will be chosen.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``SQL query`` [string]
-  Defines the SQL query, for example ``UPDATE my_table SET field=10``.
+   * - Name
+     - Identifier
+     - Type
+     - Description
+
+   * - **Database (connection name)**
+     - ``DATABASE``
+     - [string]
+     - The database connection (not the database name).
+       Existing connections will be shown in the combobox.
+   * - **SQL query**
+     - ``SQL``
+     - [string]
+     - Defines the SQL query, for example
+       ``'UPDATE my_table SET field=10'``.
 
 Outputs
 .......
-No new layer is created. The SQL query is executed in place on the layer.
+
+No output is created.
+The SQL query is executed in place.
 
 
 .. _qgisspatialiteexecutesql:
@@ -323,19 +444,35 @@ the layer itself.
 Parameters
 ..........
 
-``Database`` [vector]
-  The SQLite/SpatiaLite database file to connect to.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-  Default: *(not set)*
+   * - Name
+     - Identifier
+     - Type
+     - Description
 
-``SQL query`` [string]
-  Defines the SQL query, for example ``UPDATE my_table SET field=10``.
-
-  Default: *(not set)*
+   * - **File Database**
+     - ``DATABASE``
+     - [vector]
+       
+       Default: not set
+     - The SQLite/SpatiaLite database file to connect to
+   * - **SQL query**
+     - ``SQL``
+     - [string]
+       
+       Default: ''
+     - Defines the SQL query, for example
+       ``'UPDATE my_table SET field=10'``.
 
 Outputs
 .......
-No new layer is created. The SQL query is executed in place on the layer.
+
+No output is created.
+The SQL query is executed in place.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
