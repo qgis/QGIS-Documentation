@@ -1958,6 +1958,11 @@ to:
 * pick a color from anywhere on your computer display
 * choose a color from the color selector dialog
 
+.. note:: When the color widget is set to a :ref:`project color <project_colors>`
+  through the data-defined override properties, the above functions for
+  changing the color are unavailable. You'd first need to :guilabel:`Unlink color`
+  or :guilabel:`Clear` the definition.
+
 .. _figure_color_selector:
 
 .. figure:: img/quick_color_selector.png
@@ -2141,7 +2146,11 @@ Clicking the |dataDefined| :sup:`Data defined override` icon shows the following
   using to the :ref:`vector_auxiliary_storage` mechanism.
 * :guilabel:`Field type`: an entry to select from the layer's fields that match the
   valid input type.
-* An entry to list the :guilabel:`Variable` available.
+* :guilabel:`Color`: when the widget is linked to a color property, this menu
+  gives access to the colors defined as part of the current :ref:`project's
+  colors <project_colors>` scheme.
+* :guilabel:`Variable`: a menu to access the available user-defined :ref:`variables
+  <general_tools_variables>`
 * :guilabel:`Edit...` button to create or edit the expression to apply, using
   the :guilabel:`Expression String Builder` dialog. To help you correctly fill
   in the expression, a reminder of the expected output's format is provided in
