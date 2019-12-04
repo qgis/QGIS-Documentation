@@ -12,8 +12,8 @@
    .. contents::
       :local:
 
-The :ref:`figure below <figure_layout_output>` shows an example of print layout
-including each type of layout items described in the previous section.
+The :ref:`figure below <figure_layout_output>` shows an example print layout
+including all the types of layout items described in the previous section.
 
 .. _figure_layout_output:
 
@@ -31,29 +31,30 @@ layout to different file formats, and it is possible to modify the resolution
 (print quality) and paper size:
 
 * The |filePrint| :sup:`Print` icon allows you to print the layout to a
-  connected printer or a PostScript file, depending on installed printer drivers.
+  connected printer or a PostScript file, depending on the installed printer
+  drivers.
 * The |saveMapAsImage| :sup:`Export as image` icon exports the print layout
-  in several image formats such as :file:`PNG`, :file:`BMP`, :file:`TIF`,
-  :file:`JPG`, and many others...
+  image formats such as :file:`PNG`, :file:`BMP`, :file:`TIF`, :file:`JPG`,
+  and many others...
 * The |saveAsSVG| :sup:`Export as SVG` icon saves the print layout
   as an :file:`SVG` (Scalable Vector Graphic).
 * The |saveAsPDF| :sup:`Export as PDF` icon saves the defined print layout
-  directly as a :file:`PDF`.
+  directly as a :file:`PDF` (Portable Document Format) file.
 
 Export settings
 ===============
 
 Whenever you export a print layout, there are a selection of export settings QGIS needs
-to check in order to return the most appropriate output. These configurations
+to check in order to produce the most appropriate output. These configurations
 are:
 
-* the :ref:`Export settings <layout_export_settings>` of the :guilabel:`Layout`
-  panel, such as :guilabel:`Export resolution`, :guilabel:`Print as raster`,
-  :guilabel:`Always export as vectors` or :guilabel:`Save world file`;
-* the :guilabel:`Exclude page from exports` in the :ref:`page item properties
-  <page_properties>` panel;
-* the :guilabel:`Exclude item from exports` in the :ref:`item properties
-  <layout_Rendering_Mode>` panel.
+* The :ref:`Export settings <layout_export_settings>` of the :guilabel:`Layout`
+  panel, such as :guilabel:`Export resolution`, :guilabel:`Print as raster`
+  :guilabel:`Always export as vectors` or :guilabel:`Save world file`
+* :guilabel:`Exclude page from exports` in the :ref:`page item properties
+  <page_properties>` panel
+* :guilabel:`Exclude item from exports` in the :ref:`item properties
+  <layout_Rendering_Mode>` panel
 
 
 .. _export_layout_image:
@@ -64,10 +65,12 @@ Export as Image
 To export a layout as an image:
 
 #. Click the |saveMapAsImage| :sup:`Export as image` icon
-#. Select the image format, the folder and filename to use. If the layout
-   contains more than one page, each page will be exported to a file with the
-   given filename with the page number appended.
-#. In the next :guilabel:`Image Export Options` dialog:
+#. Select the image format, the folder and filename (e.g. :file:`myill.png`)
+   to use.
+   If the layout contains more than one page, each page will be exported to
+   a file with the given filename with the page number appended
+   (e.g. :file:`myill_2.png`).
+#. In the next (:guilabel:`Image Export Options`) dialog:
 
    * You can override the print layout :guilabel:`Export resolution` and the
      exported page dimensions (as set in :guilabel:`Layout` panel).
@@ -81,6 +84,11 @@ To export a layout as an image:
      exporting.
      This option can also be checked by default in the :ref:`layout panel
      <layout_panel>`.
+
+     .. note::
+        For multi-page output, only the page that contains the
+        :ref:`reference map <reference_map>` will get a world file (assuming that the
+        :guilabel:`Generate world file` option is checked).
 
 
    .. index:: Crop layout to content
@@ -108,21 +116,23 @@ To export a layout as an image:
 
    Image Export Options, output is resized to items extent
 
-.. tip:: **Use image formats that support transparency when items extend beyond the paper extent**
+.. tip::
+   **Use image formats that support transparency when items extend
+   beyond the paper extent**
 
- Since layout items may be placed outside the paper extent, using the :guilabel:`Crop
- to content` option while exporting can result in an image that extends beyond the paper extent.
- Since the background outside of the paper extent will be transparent, for image
- formats that do not support transparency (eg, :file:`.BMP`, :file:`.JPG`) it
- will be rendered as full black,
- "corrupting" the image.
+   Layout items may be placed outside the paper extent. When exporting
+   with the :guilabel:`Crop to content` option, the resulting
+   image may therefore extend beyond the paper extent.
+   Since the background outside of the paper extent will be transparent,
+   for image  formats that do not support transparency
+   (e.g. ``BMP`` and ``JPG``) the transparent background  will be
+   rendered as full black, "corrupting" the image.
+   Use transparency-compatible formats (e.g. ``TIFF`` and ``PNG``)
+   in such cases.
 
- Use transparency-compatible formats like :file:`.TIFF` or :file:`.PNG` in such
- a case.
-
-.. note:: When supported by the format (eg, :file:`PNG` does) and the
- underlying Qt library, the exported image may include :ref:`project metadata
- <project_metadata>` (author, title, date, description...)
+.. note:: When supported by the format (e.g. :file:`PNG`) and the
+   underlying Qt library, the exported image may include :ref:`project
+   metadata <project_metadata>` (author, title, date, description...)
 
 
 .. _export_layout_svg:
@@ -134,7 +144,7 @@ To export a layout as SVG:
 
 #. Click the |saveAsSVG| :sup:`Export as SVG` icon
 #. Fill in the path and filename (used as a base name for all the
-   files in case of multi-page composition)
+   files in case of multi-page composition, as for image export)
 #. In the next :guilabel:`SVG Export Options` dialog, you can override the
    layout default :ref:`export settings <layout_export_settings>` or configure
    new ones:
@@ -193,7 +203,7 @@ Export as PDF
 To export a layout as PDF:
 
 #. Click the |saveAsPDF| :sup:`Export as PDF` icon
-#. Fill in the path and filename: unlike the other tools, all the
+#. Fill in the path and filename: unlike for image and SVG export, all the
    pages in the layout are exported to a single PDF file.
 #. In the next :guilabel:`PDF Export Options` dialog, you can override the
    layout default :ref:`export settings <layout_export_settings>` or configure
@@ -215,19 +225,20 @@ To export a layout as PDF:
      the rendering quality is decreased, AND there’s issues with rendering when
      certain text settings like buffers are in place. That’s why exporting as
      paths is recommended.
-   * |unchecked| :guilabel:`Create Geospatial PDF (GeoPDF)`
+   * |unchecked| :guilabel:`Create Geospatial PDF (GeoPDF)` |310|:
+     Generate a georeferenced PDF file (requires GDAL version 3 or later).
    * |unchecked| :guilabel:`Disable tiled raster layer exports`: When exporting
-     files, QGIS uses a built-in raster layer tiled rendering that saves memory.
-     Sometimes, this can cause visible "seams" in the rasters
-     for generated files. Checking this option would fix that, at the cost of a
-     higher memory usage during exports.
-   * |checkbox| :guilabel:`Simplify geometries to reduce output file size`: this
-     avoids exporting ALL geometry vertices, which can result in a ridiculously
-     complex and large export file size that could fail to load in other applications.
-     Geometries will be simplified while exporting the layout in order to remove
-     any redundant vertices which are not discernably different at the export
-     resolution (e.g. if the export resolution is ``300 dpi``, vertices that are
-     less than ``1/600 inch`` apart will be removed).
+     files, QGIS uses tiled based rendering that saves memory.
+     Sometimes, this can cause visible "seams" in the rasters for generated files.
+     Checking this option would fix that, at the cost of a higher memory usage
+     during exports.
+   * |checkbox| :guilabel:`Simplify geometries to reduce output file size`:
+     Geometries will be simplified while exporting the layout by removing
+     vertices that are not discernably different at the export resolution
+     (e.g. if the export resolution is ``300 dpi``, vertices that are less
+     than ``1/600 inch`` apart will be removed).
+     This can reduce the size and complexity of the export file (very large
+     files can fail to load in other applications).
 
 
 .. _figure_layout_output_pdf:
@@ -237,15 +248,16 @@ To export a layout as PDF:
 
    PDF Export Options
 
-.. note:: Exporting a print layout to formats like :file:`.PDF` or :file:`.TIFF`
-  creates a georeferenced output (no world file needed) by default.
+.. note:: Since QGIS 3.10, with GDAL 3, GeoPDF export is supported, and a number
+   of GeoPDF specific options are available:
+   
+   * :guilabel:`Format` (GeoPDF format - there are some GeoPDF variations),
+   * :guilabel:`Include multiple map themes` (specify map themes to include),
+   * :guilabel:`Include vector feature information` (choose the layers and
+     group them into logical PDF groups).
 
-.. note:: Since QGIS 3.10, with GDAL 3, GeoPDF export is supported, a number
-  of GeoPDF specific options are available:
-  :guilabel:`Format` (GeoPDF format - there are some GeoPDF variations),
-  :guilabel:`Include multiple map themes` (specify map themes to include),
-  :guilabel:`Include vector feature information` (choose the layers and
-  group them into logical PDF groups).
+.. note:: Exporting a print layout to formats that supports georeferencing
+   (e.g. ``PDF`` and ``TIFF``) creates a georeferenced output by default.
 
 .. index:: Atlas generation
 
@@ -254,30 +266,34 @@ To export a layout as PDF:
 Generate an Atlas
 =================
 
-Atlas functions allow you to create map books in an automated way. Atlas uses
-the features of a vector or table layer called **coverage layer** and creates
-an output for each **atlas feature**. The most common usage is to zoom a map
-item to the current atlas feature. Further use cases include:
+Atlas functions allow you to create map books in an automated way.
+Atlas uses the features of a table or vector layer
+(:guilabel:`Coverage layer`) to create an output for each feature
+(**atlas feature**) in the table / layer.
+The most common usage is to zoom a map item to the current atlas
+feature.
+Further use cases include:
 
 * a map item showing, for another layer, only features that share the same
-  attribute as the atlas feature or are within its geometry;
-* a label or html item whose text is replaced as features are iterated over;
+  attribute as the atlas feature or are within its geometry.
+* a label or HTML item whose text is replaced as features are iterated over
 * a table item showing attributes of associated :ref:`parent or children
   <vector_relations>` features of the current atlas feature...
 
-For each feature, an output is processed for all pages and items according
+For each feature, the output is processed for all pages and items according
 to their exports settings.
 
 .. tip:: **Use variables for more flexibility**
 
-  QGIS provides a large panel of functions and :ref:`variables <general_tools_variables>`,
-  including atlas related ones, that you can use to manipulate the layout
-  items but also the layers symbology according to atlas status.
-  Combining these features gives you a lot of flexibility and helps you
-  easily produce advanced mappings.
+   QGIS provides a large panel of functions and
+   :ref:`variables <general_tools_variables>`, including atlas related ones,
+   that you can use to manipulate the layout items, but also the symbology of
+   the layers, according to atlas status.
+   Combining these features gives you a lot of flexibility and helps you
+   easily produce advanced maps.
 
 To enable the generation of an atlas and access atlas parameters, refer to
-the :guilabel:`Atlas` panel. This panel contains the following functionalities
+the :guilabel:`Atlas` panel. This panel contains the following
 (see figure_layout_atlas_):
 
 .. _figure_layout_atlas:
@@ -287,36 +303,41 @@ the :guilabel:`Atlas` panel. This panel contains the following functionalities
 
    Atlas Panel
 
-* |checkbox| :guilabel:`Generate an atlas`, which enables or disables the atlas
-  generation;
-* A :guilabel:`Coverage layer` |selectString| combo box that allows you to
-  choose the table or vector layer containing the features to iterate over;
-* An optional |checkbox| :guilabel:`Hidden coverage layer` that, if checked,
-  will hide the coverage layer (but not the other layers) during the generation;
-* An optional :guilabel:`Page name` combo box to give a more explicit name to
-  each feature page(s) when previewing atlas. You can select a field of
-  the coverage layer or set an :ref:`expression <vector_expressions>`. If this
-  option is empty, QGIS will use an internal ID, according to the filter and/or
-  the sort order applied to the layer;
-* An optional :guilabel:`Filter with` text area that allows you to specify an
-  expression for filtering features from the coverage layer. If the expression
-  is not empty, only features that evaluate to ``True`` will be processed;
-* An optional |checkbox| :guilabel:`Sort by` that allows you to
-  sort features of the coverage layer, using a field of the coverage layer or
-  an expression. The sort order (either ascending or descending) is set by the
-  two-state *Sort direction* button that displays an up or a down arrow.
+* |checkbox| :guilabel:`Generate an atlas` enables or disables atlas
+  generation.
+* :guilabel:`Configuration`
 
-You also have options to set the output of the atlas:
+  * A :guilabel:`Coverage layer` |selectString| combo box that allows you to
+    choose the table or vector layer containing the features to iterate over.
+  * An optional |checkbox| :guilabel:`Hidden coverage layer` that, if checked,
+    will hide the coverage layer (but not the other layers) during the generation.
+  * An optional :guilabel:`Page name` combo box to specify the name for the
+    feature page(s).
+    You can select a field of the coverage layer or set an
+    :ref:`expression <vector_expressions>`.
+    If this option is empty, QGIS will use an internal ID, according to the
+    filter and/or the sort order applied to the layer.
+  * An optional |checkbox| :guilabel:`Filter with` text area that allows you
+    to specify an
+    expression for filtering features from the coverage layer. If the expression
+    is not empty, only features that evaluate to ``True`` will be processed.
+  * An optional |checkbox| :guilabel:`Sort by` that allows you to
+    sort features of the coverage layer (and the output), using a field of the
+    coverage layer or an expression.
+    The sort order (either ascending or descending) is set by the two-state
+    *Sort direction* button that displays an up or a down arrow.
 
-* An :guilabel:`Output filename expression` textbox that is used to generate
-  a filename for each geometry if needed. It is based on expressions. This field
-  is meaningful only for rendering to multiple files;
-* A |checkbox| :guilabel:`Single file export when possible` that allows you to
-  force the generation of a single file if this is possible with the chosen output
-  format (PDF, for instance). If this field is checked, the value of the
-  :guilabel:`Output filename expression` field is meaningless;
-* An :guilabel:`Image export format` drop-down list to select the output format
-  when using the |saveMapAsImage| :sup:`Export atlas as Images...` button.
+* :guilabel:`Output` - this is where the output of the atlas can be configured:
+
+  * An :guilabel:`Output filename expression` textbox that is used to generate
+    a filename for each atlas feature. It is based on expressions.
+    is meaningful only for rendering to multiple files.
+  * A |checkbox| :guilabel:`Single file export when possible` that allows you to
+    force the generation of a single file if this is possible with the chosen output
+    format (``PDF``, for instance). If this field is checked, the value of the
+    :guilabel:`Output filename expression` field is meaningless.
+  * An :guilabel:`Image export format` drop-down list to select the output format
+    when using the |saveMapAsImage| :sup:`Export atlas as Images...` button.
 
 Control map by atlas
 --------------------
@@ -324,7 +345,7 @@ Control map by atlas
 The most common usage of atlas is with the map item, zooming to the current atlas
 feature, as iteration goes over the coverage layer. This behavior is set in
 the :guilabel:`Controlled by atlas` group properties of the map item. See
-:ref:`controlled_atlas` for different settings you can apply on map item.
+:ref:`controlled_atlas` for different settings you can apply on the map item.
 
 .. _atlas_labels:
 
@@ -332,12 +353,12 @@ Customize labels with expression
 --------------------------------
 
 In order to adapt labels to the feature the atlas iterates over, you can
-include expressions. What you should take care of is to place expression part
+include expressions. Make sure that you place the expression part
 (including functions, fields or variables) between ``[%`` and ``%]`` (see
 :ref:`layout_label_item` for more details).
 
-For example, for a city layer with fields CITY_NAME and ZIPCODE, you could
-insert this:
+For example, for a city layer with fields ``CITY_NAME`` and ``ZIPCODE``,
+you could insert this:
 
 .. code::
 
@@ -351,9 +372,11 @@ or, another combination:
    The area of [% upper(CITY_NAME)%],[%ZIPCODE%] is
    [%format_number($area/1000000,2) %] km2
 
-The information ``[% concat( upper(CITY_NAME), ',', ZIPCODE, ' is ',  format_number($area/1000000, 2) ) %]``
-is an expression used inside the label. Both expressions would result in the
-generated atlas as::
+The information
+``[% concat( upper(CITY_NAME), ',', ZIPCODE, ' is ',  format_number($area/1000000, 2) ) %]``
+is an expression used inside the label.
+Both expressions would result in the following type of label in the
+generated atlas::
 
   The area of PARIS,75001 is 1.94 km2
 
@@ -363,26 +386,29 @@ generated atlas as::
 Explore Data-defined override buttons with atlas
 ------------------------------------------------
 
-There are several places where you can use a |dataDefined| :sup:`Data defined
-override` button to override the selected setting. These options are
-particularly useful with atlas generation. See :ref:`data_defined` for more
-details on this widget.
+There are several places where you can use a |dataDefined|
+:sup:`Data defined override` button to override the selected setting.
+This is particularly useful with atlas generation.
+See :ref:`data_defined` for more details on this widget.
 
 For the following examples the :file:`Regions` layer of the QGIS sample
-dataset is used and selected as coverage layer for the atlas generation.
-We also assume it's a single page layout containing a map and a label items.
+dataset is used and selected as :guilabel:`Coverage layer` for
+the atlas generation.
+We assume that it is a single page layout containing a map item and
+a label item.
 
-When the height (north-south) of the extents of a region is greater
-than its width (east-west), you rather want to use *Portrait* instead of
-*Landscape* orientation to optimize the use of paper. With a |dataDefined|
-:sup:`Data Defined Override` button you can dynamically set the paper
-orientation.
+When the height (north-south) of a region extent is greater than its
+width (east-west), you should use *Portrait* instead of *Landscape*
+orientation to optimize the use of paper.
+With a |dataDefined| :sup:`Data Defined Override` button you can
+dynamically set the paper orientation.
 
 Right-click on the page and select :guilabel:`Page Properties` to open the
 panel. We want to set the orientation dynamically, using an expression
-depending on the region geometry so press the |dataDefined| button of
+depending on the region geometry, so press the |dataDefined| button of
 field :guilabel:`Orientation`, select :guilabel:`Edit...` to open the
-:guilabel:`Expression string builder` dialog and enter the following expression:
+:guilabel:`Expression string builder` dialog and enter the following
+expression:
 
 .. code::
 
@@ -390,17 +416,17 @@ field :guilabel:`Orientation`, select :guilabel:`Edit...` to open the
    THEN 'Landscape' ELSE 'Portrait' END
 
 Now if you :ref:`preview the atlas <atlas_preview>`, the paper orients itself
-automatically but items placement may not be ideal. For each Region you need to
+automatically, but item placements may not be ideal. For each Region you need to
 reposition the location of the layout items as well. For the map item you can
 use the |dataDefined| button of its :guilabel:`Width` property to set it
-dynamic using following expression:
+dynamic using the following expression:
 
 .. code::
 
    @layout_pagewidth - 20
 
 Likewise, use the |dataDefined| button of the :guilabel:`Height` property to
-provide following expression and constrain map item size:
+provide the following expression to constrain map item size:
 
 .. code::
 
@@ -412,8 +438,8 @@ and :guilabel:`Y` positions.
 
 Let's add a title above the map in the center of the page. Select the label
 item and set the horizontal alignment to |radioButtonOn| :guilabel:`Center`.
-Next move the label to the right position, activate from :guilabel:`Reference
-point` any of the middle buttons, and provide the following expression for
+Next move the label to the right position, choose the middle button for
+the :guilabel:`Reference point`, and provide the following expression for
 field :guilabel:`X`:
 
 .. code::
@@ -421,13 +447,15 @@ field :guilabel:`X`:
    @layout_pagewidth / 2
 
 For all other layout items you can set the position in a similar way so they
-are correctly positioned when the page is automatically rotated in portrait or
-landscape. You can also do more tweaks such as customizing the title with
-feature attributes (see :ref:`atlas_labels` example), updating images with
-atlas feature, resizing the legend columns number according to page orientation...
+are correctly positioned both for portrait and landscape.
+You can also do more tweaks such as customizing the title with
+feature attributes (see :ref:`atlas_labels` example), changing images,
+resizing the number of legend columns number according to page orientation,
+...
 
-Information provided is an update of the excellent blog (in English and Portuguese)
-on the Data Defined Override options Multiple_format_map_series_using_QGIS_2.6_ .
+The information provided here is an update of the excellent blog (in English
+and Portuguese) on the Data Defined Override options
+Multiple_format_map_series_using_QGIS_2.6_ .
 
 This is just one example of how you can use some advanced settings with atlas.
 
@@ -443,27 +471,28 @@ Preview and generate an atlas
 
    Atlas Preview toolbar
 
-Once the atlas settings have been configured and layout items (map, table,
-image...) linked to it, you can create a preview of all the pages by clicking
-:menuselection:`Atlas --> Preview Atlas` or |atlas| :sup:`Preview Atlas` icon.
-You can then use the arrows in the same toolbar to navigate through all the
-features:
+Once the atlas settings have been configured, and layout items (map, table,
+image...) linked to it, you can create a preview of all the pages by choosing
+:menuselection:`Atlas --> Preview Atlas` or clicking the
+|atlas| :sup:`Preview Atlas` icon.
+You can then use the arrows to navigate through all the features:
 
 * |atlasFirst| :sup:`First feature`
 * |atlasPrev| :sup:`Previous feature`
 * |atlasNext| :sup:`Next feature`
 * |atlasLast| :sup:`Last feature`
 
-You can also use the combo box to directly select and preview a specific feature.
-The combo box shows atlas features name according to the expression set in the
+You can also use the combo box to select and preview a specific feature.
+The combo box shows atlas feature names according to the expression set in the
 atlas :guilabel:`Page name` option.
 
-
 As for simple compositions, an atlas can be generated in different ways (see
-:ref:`create-output` for more information). Instead of :menuselection:`Layout`
-menu, rather use tools from :menuselection:`Atlas` menu or toolbar.
+:ref:`create-output` for more information -
+just use tools from the :menuselection:`Atlas` menu or toolbar instead of the
+:menuselection:`Layout` menu.
 
-This means that you can directly print your compositions with :menuselection:`Atlas --> Print Atlas`.
+This means that you can directly print your compositions with
+:menuselection:`Atlas --> Print Atlas`.
 You can also create a PDF using :menuselection:`Atlas --> Export Atlas as PDF...`:
 You will be asked for a directory to save all the generated PDF files,
 except if the |checkbox| :guilabel:`Single file export when possible` has been
@@ -472,8 +501,12 @@ selected. In that case, you'll be prompted to give a filename.
 With :menuselection:`Atlas --> Export Atlas as Images...` or
 :menuselection:`Atlas --> Export Atlas as SVG...` tool, you're also prompted to
 select a folder. Each page of each atlas feature composition is exported to
-the image file format set in :guilabel:`Atlas` panel or to SVG file.
+the image file format set in :guilabel:`Atlas` panel or to SVG.
 
+.. note::
+   With multi-page output, an atlas behaves like a layout in that only the
+   page that contains the :ref:`reference_map` will get a world file (for
+   each feature output).
 
 .. tip:: **Print a specific atlas feature**
 
@@ -490,12 +523,12 @@ the image file format set in :guilabel:`Atlas` panel or to SVG file.
 Use project defined relations for atlas creation
 ------------------------------------------------
 
-For users with HTML and Javascript knowledge it's possible to operate on
+For users with HTML and Javascript knowledge it is possible to operate on
 GeoJSON objects and use project defined relations from the QGIS project.
 The difference between this approach and using expressions
 directly inserted into the HTML is that it gives you a full,
-unstructured GeoJSON feature to work with. This means that you can use the
-existing Javascript libraries and functions which operate on GeoJSON
+unstructured GeoJSON feature to work with. This means that you can use
+existing Javascript libraries and functions that operate on GeoJSON
 feature representations.
 
 The following code includes all related child features from the defined relation.
@@ -513,22 +546,22 @@ In the code sample, we create a dynamic bullet list of the related child feature
    <script type="text/javascript">
       function setFeature(feature)
       {
-      // Show the parent feature's identifier (using its "ID" field)
-      document.getElementById('parent').innerHTML = feature.properties.ID;
-      //clear the existing relation contents
-      document.getElementById('my_children').innerHTML = ''; 
-      feature.properties.my_relation.forEach(function(child_feature) {
-      // for each related child feature, create a list element
-      // with the feature's name (using its "NAME" field)
-         var node = document.createElement("li");
-         node.appendChild(document.createTextNode(child_feature.NAME));
-         document.getElementById('my_children').appendChild(node);
-         });
+        // Show the parent feature's identifier (using its "ID" field)
+        document.getElementById('parent').innerHTML = feature.properties.ID;
+        //clear the existing relation contents
+        document.getElementById('my_children').innerHTML = ''; 
+        feature.properties.my_relation.forEach(function(child_feature) {
+        // for each related child feature, create a list element
+        // with the feature's name (using its "NAME" field)
+          var node = document.createElement("li");
+          node.appendChild(document.createTextNode(child_feature.NAME));
+          document.getElementById('my_children').appendChild(node);
+        });
       }
    </script>
 
-During the atlas creation there will be an iteration over the coverage layer
-containing the parent features. On every page, you will see a bullet list of
+During atlas creation there will be an iteration over the coverage layer
+containing the parent features. On each page, you will see a bullet list of
 the related child features following the parent's identifier.
    
 
@@ -538,6 +571,7 @@ the related child features following the parent's identifier.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |310| replace:: ``NEW in 3.10``
 .. |atlas| image:: /static/common/mIconAtlas.png
    :width: 1.5em
 .. |atlasFirst| image:: /static/common/mActionAtlasFirst.png
