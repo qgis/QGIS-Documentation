@@ -120,12 +120,12 @@ To export a layout as an image:
    **Use image formats that support transparency when items extend
    beyond the paper extent**
 
-   Layout items may be placed outside the paper extent.  When using the
-   :guilabel:`Crop to content` option while exporting, the resulting
+   Layout items may be placed outside the paper extent. When exporting
+   with the :guilabel:`Crop to content` option, the resulting
    image may therefore extend beyond the paper extent.
    Since the background outside of the paper extent will be transparent,
    for image  formats that do not support transparency
-   (e.g. ``BMP`` and ``.JPG``) the transparent background  will be
+   (e.g. ``BMP`` and ``JPG``) the transparent background  will be
    rendered as full black, "corrupting" the image.
    Use transparency-compatible formats (e.g. ``TIFF`` and ``PNG``)
    in such cases.
@@ -317,7 +317,8 @@ the :guilabel:`Atlas` panel. This panel contains the following
     :ref:`expression <vector_expressions>`.
     If this option is empty, QGIS will use an internal ID, according to the
     filter and/or the sort order applied to the layer.
-  * An optional :guilabel:`Filter with` text area that allows you to specify an
+  * An optional |checkbox| :guilabel:`Filter with` text area that allows you
+    to specify an
     expression for filtering features from the coverage layer. If the expression
     is not empty, only features that evaluate to ``True`` will be processed.
   * An optional |checkbox| :guilabel:`Sort by` that allows you to
@@ -326,14 +327,14 @@ the :guilabel:`Atlas` panel. This panel contains the following
     The sort order (either ascending or descending) is set by the two-state
     *Sort direction* button that displays an up or a down arrow.
 
-* :guilabel:`Output` - this  is where set the output of the atla can be configured:
+* :guilabel:`Output` - this is where the output of the atlas can be configured:
 
   * An :guilabel:`Output filename expression` textbox that is used to generate
-    a filename for each geometry if needed. It is based on expressions. This field
+    a filename for each atlas feature. It is based on expressions.
     is meaningful only for rendering to multiple files.
   * A |checkbox| :guilabel:`Single file export when possible` that allows you to
     force the generation of a single file if this is possible with the chosen output
-    format (PDF, for instance). If this field is checked, the value of the
+    format (``PDF``, for instance). If this field is checked, the value of the
     :guilabel:`Output filename expression` field is meaningless.
   * An :guilabel:`Image export format` drop-down list to select the output format
     when using the |saveMapAsImage| :sup:`Export atlas as Images...` button.
