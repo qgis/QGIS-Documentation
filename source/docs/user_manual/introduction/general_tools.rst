@@ -2018,14 +2018,13 @@ Symbol Widget
 
 The :guilabel:`Symbol` selector widget is a convenient shortcut when you want
 to set symbol properties of a feature. Clicking the drop-down arrow shows the
-following options:
+following symbol options, together with the features of the
+:ref:`color drop-down widget <color_widget>`:
 
-* :guilabel:`Configure Symbol...`: same as pressing the symbol selector widget.
+* :guilabel:`Configure Symbol...`: the same as pressing the symbol selector widget.
   It opens a dialog to set the :ref:`symbol parameters <edit_symbol>`.
 * :guilabel:`Copy Symbol` from the current item
 * :guilabel:`Paste Symbol` to the current item, speeding configuration
-* and the features of the :ref:`color drop-down widget <color_widget>`.
-
 
 .. index:: Font selection; Text format
 .. _font_selector:
