@@ -13,8 +13,8 @@ Creating a Report
       :local:
 
 
-What is?
-========
+What is it?
+===========
 
 This section will help you set up an automatic report in QGIS. By definition a
 GIS report is a document containing information organized in a narrative,
@@ -27,9 +27,9 @@ GIS projects in a simple, quick and structured way.
 Get started
 ===========
 
-:guilabel:`Reports` menu is an extension of Print Layout. This functionality can
-be found in :menuselection:`Project --> New Report` or inside of
-:menuselection:`Project --> Layout Manager`.
+:guilabel:`Reports` menu is an extension of :ref:`Print Layout <label_printlayout>`.
+This functionality can be found in :menuselection:`Project --> New Report` or
+inside of :menuselection:`Project --> Layout Manager`.
 
 In the :guilabel:`Layout Manager` dialog the report can be created through
 :guilabel:`New from template` and select the dropdown option :guilabel:`Empty

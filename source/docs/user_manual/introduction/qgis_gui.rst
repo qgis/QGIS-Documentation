@@ -81,33 +81,105 @@ the :ref:`project file <sec_projects>`. It provides you with tools to:
   use a :ref:`print layout <label_printlayout>` for more complex output
 * Set the project properties and the snapping options when editing layers.
 
-.. csv-table::
-   :header: "Menu Option", "Shortcut", "Toolbar", "Reference"
-   :widths: 30, 18, 12, 35
-   :class: longtable
+.. list-table::
+   :header-rows: 1
+   :widths: 30 18 12 35
+   :stub-columns: 0
 
-   "|fileNew| :guilabel:`New`", ":kbd:`Ctrl+N`", ":guilabel:`Project`", ":ref:`sec_projects`"
-   ":menuselection:`New from template -->`", "", "", ":ref:`sec_projects`"
-   "|fileOpen| :guilabel:`Open...`", ":kbd:`Ctrl+O`", ":guilabel:`Project`", ":ref:`sec_projects`"
-   ":menuselection:`Open from --> PostgreSQL`", "", "", ":ref:`sec_projects`"
-   ":menuselection:`Open Recent -->`", "", "", ":ref:`sec_projects`"
-   ":guilabel:`Close`", "", "", ":ref:`sec_projects`"
-   "|fileSave| :guilabel:`Save`", ":kbd:`Ctrl+S`", ":guilabel:`Project`", ":ref:`sec_projects`"
-   "|fileSaveAs| :guilabel:`Save As...`", ":kbd:`Ctrl+Shift+S`", ":guilabel:`Project`", ":ref:`sec_projects`"
-   ":menuselection:`Save to --> PostgreSQL`", "", "", ":ref:`sec_projects`"
-   ":guilabel:`Revert...`"
-   ":guilabel:`Properties...`", ":kbd:`Ctrl+Shift+P`", "", ":ref:`project_properties`"
-   ":guilabel:`Snapping Options...`", "", "", ":ref:`snapping_tolerance`"
-   ":menuselection:`Import/Export -->`"
-   "|saveMapAsImage| :guilabel:`Export Map to Image...`", "", "", ":ref:`sec_output`"
-   "|saveAsPDF| :guilabel:`Export Map to PDF...`", "", "", ":ref:`sec_output`"
-   ":guilabel:`Export Project to DXF...`", "", "", ":ref:`sec_output`"
-   ":guilabel:`Import Layers from DWG/DXF...`", "", "", ":ref:`import_dxfdwg`"
-   "|newLayout| :guilabel:`New Print Layout...`", ":kbd:`Ctrl+P`", ":guilabel:`Project`", ":ref:`label_printlayout`"
-   "|newReport| :guilabel:`New Report...`", "", "", ":ref:`label_printlayout`"
-   "|layoutManager| :guilabel:`Layout Manager...`", "", ":guilabel:`Project`", ":ref:`label_printlayout`"
-   ":menuselection:`Layouts -->`", "", "", ":ref:`label_printlayout`"
-   "|fileExit| :guilabel:`Exit QGIS`", ":kbd:`Ctrl+Q`"
+   * - Menu Option
+     - Shortcut
+     - Toolbar
+     - Reference
+   * - |fileNew| :guilabel:`New`
+     - :kbd:`Ctrl+N`
+     - :guilabel:`Project`
+     - :ref:`sec_projects`
+   * - :menuselection:`New from template -->`
+     -
+     -
+     - :ref:`sec_projects`
+   * - |fileOpen| :guilabel:`Open...`
+     - :kbd:`Ctrl+O`
+     - :guilabel:`Project`
+     - :ref:`sec_projects`
+   * - :menuselection:`Open from -->`
+
+       * :guilabel:`GeoPackage...`
+       * :guilabel:`PostgreSQL...`
+
+     -
+     -
+     - :ref:`sec_projects`
+   * - :menuselection:`Open Recent -->`
+     -
+     -
+     - :ref:`sec_projects`
+   * - :guilabel:`Close`
+     -
+     -
+     - :ref:`sec_projects`
+   * - |fileSave| :guilabel:`Save`
+     - :kbd:`Ctrl+S`
+     - :guilabel:`Project`
+     - :ref:`sec_projects`
+   * - |fileSaveAs| :guilabel:`Save As...`
+     - :kbd:`Ctrl+Shift+S`
+     - :guilabel:`Project`
+     - :ref:`sec_projects`
+   * - :menuselection:`Save to -->`
+
+       * :guilabel:`Templates...`
+       * :guilabel:`GeoPackage...`
+       * :guilabel:`PostgreSQL...`
+
+     -
+     -
+     - :ref:`sec_projects`
+   * - :guilabel:`Revert...`
+     -
+     -
+     -
+   * - :guilabel:`Properties...`
+     - :kbd:`Ctrl+Shift+P`
+     -
+     - :ref:`project_properties`
+   * - :guilabel:`Snapping Options...`
+     -
+     -
+     - :ref:`snapping_tolerance`
+   * - :menuselection:`Import/Export -->`
+
+       * |saveMapAsImage| :guilabel:`Export Map to Image...`
+       * |saveAsPDF| :guilabel:`Export Map to PDF...`
+       * :guilabel:`Export Project to DXF...`
+       * :guilabel:`Import Layers from DWG/DXF...`
+
+     -
+     -
+     - \
+
+       * :ref:`sec_output`
+       * :ref:`import_dxfdwg`
+   * - |newLayout| :guilabel:`New Print Layout...`
+     - :kbd:`Ctrl+P`
+     - :guilabel:`Project`
+     - :ref:`label_printlayout`
+   * - |newReport| :guilabel:`New Report...`
+     -
+     -
+     - :ref:`create-reports`
+   * - |layoutManager| :guilabel:`Layout Manager...`
+     -
+     - :guilabel:`Project`
+     - :ref:`label_printlayout`
+   * - :menuselection:`Layouts -->`
+     -
+     -
+     - :ref:`label_printlayout`
+   * - |fileExit| :guilabel:`Exit QGIS`
+     - :kbd:`Ctrl+Q`
+     -
+     -
 
 .. only:: html
 
@@ -166,6 +238,7 @@ layer attributes or geometry (see :ref:`editingvector` for details).
    "|rotatePointSymbols| :guilabel:`Rotate Point Symbols`", "", ":guilabel:`Advanced Digitizing`", ":ref:`rotate_symbol`"
    "|offsetPointSymbols| :guilabel:`Offset Point Symbols`", "", ":guilabel:`Advanced Digitizing`", ":ref:`offset_symbol`"
    "|reverseLine| :guilabel:`Reverse Line`", "", ":guilabel:`Advanced Digitizing`"
+   "|trimExtend| :guilabel:`Trim/extend Line`", "", ":guilabel:`Advanced Digitizing`",":ref:`trim_extend_feature`"
 
 .. only:: html
 
@@ -214,7 +287,7 @@ The menu also allows you to reorganize the QGIS interface itself using actions l
    :class: longtable
 
    "|newMap| :guilabel:`New Map View`", ":kbd:`Ctrl+M`", ":guilabel:`Map Navigation`"
-   "|new3DMap| :guilabel:`New 3D Map View`", ":kbd:`Ctrl+Shift+M`", "", ":ref:`label_3dmapview`"
+   "|new3DMap| :guilabel:`New 3D Map View`", ":kbd:`Ctrl+Alt+M`", "", ":ref:`label_3dmapview`"
    "|pan| :guilabel:`Pan Map`", "", ":guilabel:`Map Navigation`", ":ref:`zoom_pan`"
    "|panToSelected| :guilabel:`Pan Map to Selection`", "", ":guilabel:`Map Navigation`"
    "|zoomIn| :guilabel:`Zoom In`", ":kbd:`Ctrl+Alt++`", ":guilabel:`Map Navigation`", ":ref:`zoom_pan`"
@@ -225,14 +298,15 @@ The menu also allows you to reorganize the QGIS interface itself using actions l
    "|zoomFullExtent| :guilabel:`Zoom Full`", ":kbd:`Ctrl+Shift+F`", ":guilabel:`Map Navigation`"
    "|zoomToLayer| :guilabel:`Zoom To Layer`", "", ":guilabel:`Map Navigation`"
    "|zoomToSelected| :guilabel:`Zoom To Selection`", ":kbd:`Ctrl+J`", ":guilabel:`Map Navigation`"
+   "|zoomActual| :guilabel:`Zoom To Native Resolution (100%)`", "", ":guilabel:`Map Navigation`"
    "|zoomLast| :guilabel:`Zoom Last`", "", ":guilabel:`Map Navigation`"
    "|zoomNext| :guilabel:`Zoom Next`", "", ":guilabel:`Map Navigation`"
-   "|zoomActual| :guilabel:`Zoom To Native Resolution (100%)`", "", ":guilabel:`Map Navigation`"
    ":menuselection:`Decorations -->`", "", "", ":ref:`decorations`"
    ":menuselection:`Preview mode -->`"
    "|mapTips| :guilabel:`Show Map Tips`", "", ":guilabel:`Attributes`", ":ref:`maptips`"
-   "|newBookmark| :guilabel:`New Bookmark...`", ":kbd:`Ctrl+B`", ":guilabel:`Map Navigation`", ":ref:`sec_bookmarks`"
-   "|showBookmarks| :guilabel:`Show Bookmarks`", ":kbd:`Ctrl+Shift+B`", ":guilabel:`Map Navigation`", ":ref:`sec_bookmarks`"
+   "|newBookmark| :guilabel:`New Spatial Bookmark...`", ":kbd:`Ctrl+B`", ":guilabel:`Map Navigation`", ":ref:`sec_bookmarks`"
+   "|showBookmarks| :guilabel:`Show Spatial Bookmarks`", ":kbd:`Ctrl+Shift+B`", ":guilabel:`Map Navigation`", ":ref:`sec_bookmarks`"
+   "|showBookmarks| :guilabel:`Show Spatial Bookmark Manager`", "", "", ""
    "|draw| :guilabel:`Refresh`", ":kbd:`F5`", ":guilabel:`Map Navigation`"
    "|showAllLayers| :guilabel:`Show All Layers`", ":kbd:`Ctrl+Shift+U`", "", ":ref:`label_legend`"
    "|hideAllLayers| :guilabel:`Hide All Layers`", ":kbd:`Ctrl+Shift+H`", "", ":ref:`label_legend`"
@@ -474,7 +548,7 @@ Processing
    :widths: auto
 
    "|processing| :guilabel:`Toolbox`", ":kbd:`Ctrl+Alt+T`", ":ref:`processing.toolbox`"
-   "|processingModel| :guilabel:`Graphical Modeler...`", ":kbd:`Ctrl+Alt+M`", ":ref:`processing.modeler`"
+   "|processingModel| :guilabel:`Graphical Modeler...`", ":kbd:`Ctrl+Alt+G`", ":ref:`processing.modeler`"
    "|processingHistory| :guilabel:`History...`", ":kbd:`Ctrl+Alt+H`", ":ref:`processing.history`"
    "|processingResult| :guilabel:`Results Viewer`", ":kbd:`Ctrl+Alt+R`", ":ref:`processing.results`"
    "|processSelected| :guilabel:`Edit Features In-Place`", "", ":ref:`processing_inplace_edit`"
@@ -1137,6 +1211,8 @@ open the Plugin Manager dialog.
 .. |topologyChecker| image:: /static/common/mActionTopologyChecker.png
    :width: 1.5em
 .. |tracking| image:: /static/common/tracking.png
+   :width: 1.5em
+.. |trimExtend| image:: /static/common/mActionTrimExtend.png
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em

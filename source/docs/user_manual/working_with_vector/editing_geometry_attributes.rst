@@ -1197,6 +1197,7 @@ coordinates while moving the symbol in the map canvas.
    :sup:`Vertex Tool (Current Layer)` or |moveFeaturePoint| :sup:`Move Feature`
    tool for this purpose.
 
+.. _trim_extend_feature:
 
 Trim/Extend Feature
 -------------------
