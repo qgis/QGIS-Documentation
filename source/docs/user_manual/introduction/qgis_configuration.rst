@@ -118,11 +118,31 @@ General Settings
 System Settings
 ---------------
 
+.. _svg_paths:
+
 **SVG paths**
 
 Add or Remove :guilabel:`Path(s) to search for Scalable Vector Graphic (SVG)
-symbols`. These SVG files are then available to symbolize features or
-decorate your map composition.
+symbols`. These SVG files are then available to symbolize or label the features
+or decorate your map composition.
+
+When using an SVG file in a symbol or a label, QGIS allows you to:
+
+* load the file from the disk: the file is identified through the file path and
+  QGIS needs to resolve the path in order to display the corresponding image
+* load the file from a remote URL: as above, on the success of the connection
+  depends the image retrieval
+* embed the SVG file into the item: the file is saved as a base64 string within
+  the symbol or label, and also in the project, an associated style or a print
+  layout template file. THe SVG file is then always rendered as part of the item.
+  A convenient way to share projects with custom SVG symbols.
+
+  It's as well possible to extract the embedded SVG file from a symbol or label
+  and save it on disk.
+
+.. note:: The abovementioned ways of loading/storing an SVG file in a project
+ are also applicable to raster images you may want to use for customizing
+ symbols, labels or decorations.
 
 **Plugin paths**
 
