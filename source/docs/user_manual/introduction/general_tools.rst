@@ -1957,6 +1957,7 @@ to:
 * copy the current color and paste it into another widget
 * pick a color from anywhere on your computer display
 * choose a color from the color selector dialog
+* drag-and-drop the color from one widget to another for quick modification
 
 .. note:: When the color widget is set to a :ref:`project color <project_colors>`
   through the data-defined override properties, the above functions for
@@ -2008,6 +2009,23 @@ wider set of color ramps and options:
    :align: center
 
    Quick color ramp selection widget
+
+.. index:: Symbol
+.. _symbol_widget_selector:
+
+Symbol Widget
+--------------
+
+The :guilabel:`Symbol` selector widget is a convenient shortcut when you want
+to set symbol properties of a feature. Clicking the drop-down arrow shows the
+following options:
+
+* :guilabel:`Configure Symbol...`: same as pressing the symbol selector widget.
+  It opens a dialog to set the :ref:`symbol parameters <edit_symbol>`.
+* :guilabel:`Copy Symbol` from the current item
+* :guilabel:`Paste Symbol` to the current item, speeding configuration
+* and the features of the :ref:`color drop-down widget <color_widget>`.
+
 
 .. index:: Font selection; Text format
 .. _font_selector:
