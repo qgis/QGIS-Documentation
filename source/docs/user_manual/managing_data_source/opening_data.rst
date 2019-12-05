@@ -333,7 +333,7 @@ Loading a mesh layer
 Mesh layers (currently :file:`.grb`, :file:`.grb2`, :file:`.bin`, :file:`.grib`, :file:`grib1`,
 :file:`grib2`, :file:`nc`, :file:`2dm`, :file:`3Di Results`) can be loaded by clicking the
 |addMeshLayer| :guilabel:`Mesh` tab in the datasource manager. For further instructions, read
-:ref:``
+:ref:`label_meshdata`.
 
 
 Importing a delimited text file
@@ -951,7 +951,8 @@ Description of these capabilities and how-to are provided in chapter
    If you need to create a new substitution manually,
    please add it also to the substitutions.txt file in the
    source folder.
-
+.. |addMeshLayer| image:: /static/common/mActionAddMeshLayer.png
+   :width: 1.5em
 .. |addDb2Layer| image:: /static/common/mActionAddDb2Layer.png
    :width: 1.5em
 .. |addDelimitedTextLayer| image:: /static/common/mActionAddDelimitedTextLayer.png
