@@ -47,16 +47,6 @@ made available to help you manage the tree:
 * |duplicateLayer| duplicate a (group of) symbol layer(s)
 * move up or down the symbol layer
 
-When a symbol layer is selected in the tree, you can also:
-
-* control its visibility with the |checkbox| :guilabel:`Enable layer` option.
-  Disabled symbol layers are not drawn, but are saved and can be enabled at a
-  later stage. This makes it easier to customize parts of the symbol based on
-  the feature attributes or to tweak symbol appearance without having to
-  totally delete a symbol layer;
-* apply :ref:`rendering effects <draw_effects>` using the |checkbox|
-  :guilabel:`Draw effects` button.
-
 .. _edit_symbol:
 
 Configuring a symbol
@@ -161,6 +151,14 @@ regardless it's of marker, line or fill sub-type:
 * the |dataDefined| :sup:`data-defined override` widget near almost all options,
   extending capabilities of customizing each symbol (see :ref:`data_defined` for
   more information)
+* the |checkbox| :guilabel:`Enable layer` option controls the symbol layer's
+  visibility. Disabled symbol layers are not drawn when rendering the symbol but
+  are saved in the symbol. Being able to hide symbol layers is convenient when
+  looking for the best design of your symbol as you don't need to remove any for
+  the testing. Also, with the data-defined property, this makes it easier to
+  display different symbol layers based on expression (eg, feature attributes).
+* the |checkbox| :guilabel:`Draw effects` button for :ref:`effects rendering
+  <draw_effects>`.
 
 .. note::
 
