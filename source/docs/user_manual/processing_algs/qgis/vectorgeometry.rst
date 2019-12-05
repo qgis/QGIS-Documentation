@@ -1382,7 +1382,7 @@ Dissolve
 Takes a vector layer and combines its features into new features.
 One or more attributes can be specified to dissolve features belonging to the
 same class (having the same value for the specified attributes), alternatively
-all features can be dissolved into a single one.
+all features can be dissolved to a single feature.
 
 All output geometries will be converted to multi geometries. In case the input is
 a polygon layer, common boundaries of adjacent polygons being dissolved will get
@@ -1413,7 +1413,9 @@ Parameters
   Features having the same value for the selected field(s) will be replaced
   with a single one and their geometries are merged.
 
-  If no field is provided then all the features are dissolved in a single feature.
+  If no field is provided then all the features are dissolved,
+  resulting in a single feature.
+
 
 Outputs
 .......
