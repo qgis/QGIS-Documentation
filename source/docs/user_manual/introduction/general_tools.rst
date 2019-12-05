@@ -11,6 +11,7 @@ General Tools
 
    .. contents::
       :local:
+      :depth: 2
 
 .. _`context_help`:
 
