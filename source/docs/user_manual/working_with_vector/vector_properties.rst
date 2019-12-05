@@ -1959,7 +1959,7 @@ in figure_fields_form_.
    :guilabel:`Available widgets` panel, filled with existing fields. 
 #. Select any fields you would not want to use in your :guilabel:`Form Layout`
    panel and hit the |signMinus| button to remove them. Drag and drop fields
-   from the other panel to readd them. The same field can be added multiple times.
+   from the other panel to re-add them. The same field can be added multiple times.
 #. Drag and drop fields within the :guilabel:`Form Layout` to reorder
    their position.
 #. Add containers (tab or group frames) to associate fields that belong to
@@ -1980,8 +1980,8 @@ in figure_fields_form_.
 
 #. The next step is to assign the relevant fields to each container,
    by simple drag and drop. Groups and tabs can also be moved in the same way.
-#. At their creation time you can set some properties of the containers.
-   At any time you can update them with a double-click. QGIS opens a form in
+#. At their creation time you can set properties of the containers
+   These, and other properties can be updated with a double-click - QGIS opens a form in
    which you can:
 
    * choose to hide or show the item label
