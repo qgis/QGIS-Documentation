@@ -1943,11 +1943,9 @@ the right panel:
 The drag and drop designer
 ..........................
 
-Choose ``Drag and drop designer`` from the :guilabel:`Attribute editor layout`
-combobox and you enable a :guilabel:`Form Layout` panel next to the
-:guilabel:`Available widgets` one. From this panel you can create an editor
-form with several tabs and named groups to present the attribute fields, as
-shown for example in figure_fields_form_.
+The drag and drop designer allows you to create a form with several containers
+(tabs or groups) to present the attribute fields, as shown for example
+in figure_fields_form_.
 
 .. _figure_fields_form:
 
@@ -1956,48 +1954,61 @@ shown for example in figure_fields_form_.
 
    Resulting built-in form with tabs and named groups
 
-To create the form, you can drag and drop fields from the :guilabel:`Available
-Widgets` panel to the :guilabel:`Form Layout` one to have fields added to
-your custom form and drag and drop fields inside the :guilabel:`Form Layout`
-to reorder their position.
+#. Choose ``Drag and drop designer`` from the :guilabel:`Select attribute layout
+   editor` combobox. This enables the :guilabel:`Form Layout` panel next to the
+   :guilabel:`Available widgets` panel, filled with existing fields. 
+#. Select any fields you would not want to use in your :guilabel:`Form Layout`
+   panel and hit the |signMinus| button to remove them. Drag and drop fields
+   from the other panel to re-add them. The same field can be added multiple times.
+#. Drag and drop fields within the :guilabel:`Form Layout` to reorder
+   their position.
+#. Add containers (tab or group frames) to associate fields that belong to
+   the same category and better structure the form.
+  
+   #. The first step is to use the |signPlus| icon to create a tab in which
+      fields and groups will be displayed
+   #. You can create as many containers as you want. If relevant, press
+      the |signPlus| icon again to create another tab or a group frame under
+      an existing tab (see figure_fields_layout_).
 
-You can also use categories (tab or group frames) to better structure the form.
-The first step is to use the |signPlus| icon to create a tab in which fields
-and groups will be displayed (see figure_fields_layout_). You can create as many
-categories as you want. Use |signMinus| button to remove any unwanted elements.
-The next step will be to assign to each category the relevant fields, by simple
-drag and drop. You can use the same fields many times.
+      .. _figure_fields_layout:
 
-.. _figure_fields_layout:
+      .. figure:: img/attribute_editor_layout.png
+         :align: center
 
-.. figure:: img/attribute_editor_layout.png
-   :align: center
+         Dialog to create containers with the **Attribute editor layout**
 
-   Dialog to create categories with the **Attribute editor layout**
+#. The next step is to assign the relevant fields to each container,
+   by simple drag and drop. Groups and tabs can also be moved in the same way.
+#. At their creation time you can set properties of the containers
+   These, and other properties can be updated with a double-click - QGIS opens a form in
+   which you can:
 
+   * choose to hide or show the item label
+   * rename the container
+   * set over how many columns the embedded fields should be distributed
+   * enter an expression to control the container's visibility.
+     The expression will be re-evaluated every time values in the form change,
+     and the tab or group box shown/hidden accordingly
+   * show the container as a group box (only available for tabs).
+   * add a background color
 
-You can configure tabs or groups with a double-click. QGIS opens a form in which
-you can:
+#. Likewise, double-click a field label and you can specify whether the label
+   of its widget should be visible or not in the form.
 
-* choose to hide or show the item label;
-* rename the category;
-* set over how many columns the fields under the category should be distributed;
-* enter an expression to control the category visibility. The expression will be
-  re-evaluated everytime values in the form change and the tab or groupbox
-  shown/hidden accordingly;
-* show the category as a group box (only available for tabs).
+#. In case the layer is involved in ``one or many to many relations`` (see 
+   :ref:`vector_relations`), referencing layers are listed in the
+   :guilabel:`Relations` frame and their form can be embedded in the current
+   layer form by drag-and-drop. As for the other items, double-click the relation
+   label to configure some options:
 
-With a double-click on a field label, you can also specify whether the label of
-its widget should be visible or not in the form.
+   * choose to hide or show the item label
+   * show the link button
+   * show the unlink button
 
-In case the layer is involved in ``one or many to many relations`` (see :ref:`vector_relations`),
-referencing layers are listed in the :guilabel:`Relations` frame and their form
-can be embedded in the current layer form by drag-and-drop. Like the other
-items, double-click the relation label to configure some options:
+#. Apply the layer's properties dialog
+#. Use the |identify| tool on a feature, and it should display the new form.
 
-* choose to hide or show the item label;
-* show the link button;
-* show the unlink button.
 
 .. _provide_ui_file:
 
