@@ -2017,7 +2017,7 @@ following options:
 
 * :guilabel:`Configure Symbol...`: same as pressing the symbol selector widget.
   It opens a dialog to set the :ref:`symbol parameters <edit_symbol>`.
-* :guilabel:`Copy Symbol` of the current item
+* :guilabel:`Copy Symbol` from the current item
 * :guilabel:`Paste Symbol` to the current item, speeding configuration
 * and the features of the :ref:`color drop-down widget <color_widget>`.
 
