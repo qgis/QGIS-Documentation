@@ -85,7 +85,7 @@ Parameters
        last.
    * - **Incremented**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
        
        Default: ``[Create temporary layer]``
      - Specify the output vector layer with the auto increment
@@ -113,7 +113,7 @@ Outputs
      - Description
    * - **Incremented**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
      - Vector layer with auto incremental field
 
 
@@ -174,7 +174,7 @@ Parameters
      - Precision of the field. Useful with Float field type.
    * - **Added**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
        
        Default: ``[Create temporary layer]``
      - Specification of the output vector layer.
@@ -201,7 +201,7 @@ Outputs
      - Description
    * - **Added**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
      - Vector layer with new field added
 
 
@@ -294,7 +294,7 @@ Outputs
      - Description
    * - **Layer with index field**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
      - Vector layer with the numeric field containing indexes.
    * - **Class summary**
      - ``SUMMARY_OUTPUT``
@@ -372,7 +372,7 @@ Outputs
      - Description
    * - **Added fields**
      - ``OUTPUT``
-     - [vector:point]
+     - [vector: point]
      - The output layer - identical to the input layer but with two
        new double fields, ``x`` and ``y``.
 
@@ -453,7 +453,7 @@ Parameters
        
    * - **Calculated**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
        
        Default: ``[Create temporary layer]``
      - Specify the vector layer with the new calculated
@@ -480,7 +480,7 @@ Outputs
      - Description
    * - **Calculated**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
      - Vector layer with the new calculated field
 
 
@@ -513,7 +513,7 @@ Parameters
      - The field(s) to drop
    * - **Remaining fields**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
        
        Default: ``[Create temporary layer]``
      - Vector layer with the remaining fields. One of:
@@ -539,7 +539,7 @@ Outputs
      - Description
    * - **Remaining fields**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
      - Vector layer with the remaining fields
 
 
@@ -636,7 +636,7 @@ Parameters
        
        (one or more)
      - ``OUTPUT_<name of the filter>``
-     - [vector: any]
+     - [same as input]
      - The output layers with filters (as many as there are filters).
 
 Outputs
@@ -655,7 +655,7 @@ Outputs
        
        (one or more)
      - ``native:filter_1:OUTPUT_<name of filter>``
-     - [vector: any]
+     - [same as input]
      - The output layers with filtered features (as many as there are
        filters).
 
@@ -728,7 +728,7 @@ Parameters
      - The formula to use to calculate the result
    * - **Output file**
      - ``OUTPUT``
-     - [vector:any]
+     - [vector: any]
        
        Default: ``[Save to temporary file]``
      - Specification of the output layer.
@@ -899,7 +899,7 @@ Parameters
        float field.
    * - **Float from text**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
        
        Default: ``[Create Temporary Layer]``
      - Specification of the output layer.
@@ -926,7 +926,7 @@ Outputs
      - Description
    * - **Float from text**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
      - Output vector layer with the string field converted into
        a float field
 
