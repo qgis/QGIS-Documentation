@@ -176,33 +176,29 @@ Parameters
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  -  Label
-      -  Name
-      -  Type
-      -  Description
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - The input layer
+   * - **Fields**
+     - ``FIELDS``
+     - [tablefield: any] [list]
+     - Fields to match duplicates by
+   * - **Filtered (no duplicates)**
+     - ``OUTPUT``
+     - [feature sink]
+     - Feature sink containing the remaining features.
+   * - **Filtered (duplicates)**
 
-   *  -  **Input layer**
-      -   ``INPUT``
-      -  [vector: any]
-      -  The input layer
-
-   *  -  **Fields**
-      -  ``FIELDS``
-      -  [tablefields]
-      -  Fields to match duplicates by
-
-   *  -  **Filtered (no duplicates)**
-      -  ``OUTPUT``
-      -  [feature sink]
-      -  Feature sink containing the remaining features.
-
-   *  -  **Filtered (duplicates)**
-   
-         (Optional)
-      - ``DUPLICATES``
-      -  [feature sink]
-      -  Feature sink containing the removed features.
-         Will not be produced if not specifed (left as ``[Skip output]``).
+       (Optional)
+     - ``DUPLICATES``
+     - [feature sink]
+     - Feature sink containing the removed features.
+       Will not be produced if not specifed (left as ``[Skip output]``).
 
 
 Outputs
@@ -213,32 +209,28 @@ Outputs
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  -  Label
-      -  Name
-      -  Type
-      -  Description
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Count of retained records**
+     - ``RETAINED_COUNT``
+     - [Number]
+     - Count of retained records
+   * - **Count of discarded duplicate records**
+     - ``DUPLICATE_COUNT``
+     - [Number]
+     - Count of discarded duplicate records
+   * - **Filtered (no duplicates)**
+     - ``OUTPUT``
+     - [String]
+     - The link to the output (duplicates removed)
+   * - **Filtered (duplicates)**
 
-   *  -  **Count of retained records**
-      -  ``RETAINED_COUNT``
-      -  [Number]
-      -  Count of retained records
-
-   *  -  **Count of discarded duplicate records**
-      -  ``DUPLICATE_COUNT``
-      -  [Number]
-      -  Count of discarded duplicate records
-
-   *  -  **Filtered (no duplicates)**
-      -  ``OUTPUT``
-      -  [String]
-      -  The link to the output (duplicates removed)
-
-   *  -  **Filtered (duplicates)**
-   
-         (Optional)
-      -  ``DUPLICATES``
-      -  [String]
-      -  The link to a vector layer containing the removed duplicates (if defined)
+       (Optional)
+     - ``DUPLICATES``
+     - [String]
+     - The link to a vector layer containing the removed duplicates (if defined)
 
 
 .. _qgisdropgeometries:
@@ -634,39 +626,39 @@ Parameters
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Name
-      - Identifier
-      - Type
-      - Description
-   *  - **Input layer**
-      - INPUT
-      - [vector:any]
-      - The input layer.
-   *  - **Input layer 2**
-      - INPUT_2
-      - [vector:any]
-      - The join layer.
-   *  - **Layer 2 fields to copy (leave empty to copy all fields)**
-      - FIELDS_TO_COPY
-      - [fields]
-      - Join layer fields to copy (if empty, all fields will be
-        copied).
-   *  - **Discard records which could not be joined**
-      - DISCARD_NONMATCHING
-      - [boolean]
-      - Discard records which can not be joined
-   *  - **Joined field prefix**
-      - PREFIX
-      - [string]
-      - Joined field prefix
-   *  - **Maximum nearest neighbors**
-      - NEIGHBORS
-      - [number]
-      - Maximum number of nearest neighbors
-   *  - **Maximum distance**
-      - MAX_DISTANCE
-      - Number
-      - Maximum search distance
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - INPUT
+     - [vector: any]
+     - The input layer.
+   * - **Input layer 2**
+     - INPUT_2
+     - [vector: any]
+     - The join layer.
+   * - **Layer 2 fields to copy (leave empty to copy all fields)**
+     - FIELDS_TO_COPY
+     - [fields]
+     - Join layer fields to copy (if empty, all fields will be
+       copied).
+   * - **Discard records which could not be joined**
+     - DISCARD_NONMATCHING
+     - [boolean]
+     - Discard records which can not be joined
+   * - **Joined field prefix**
+     - PREFIX
+     - [string]
+     - Joined field prefix
+   * - **Maximum nearest neighbors**
+     - NEIGHBORS
+     - [number]
+     - Maximum number of nearest neighbors
+   * - **Maximum distance**
+     - MAX_DISTANCE
+     - Number
+     - Maximum search distance
 
 Outputs
 .......
@@ -676,29 +668,29 @@ Outputs
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Name
-      - Identifier
-      - Type
-      - Description
-   *  - **Joined layer**
-      - OUTPUT
-      - [vector:any]
-      - The output joined layer.
-   *  - **Unjoinable features from first layer**
-      - NON_MATCHING
-      - [vector:any]
-      - Layer containing the features from first layer that
-        could not be joined to any features in the join layer.
-   *  - **Number of joined features from input table**
-      - JOINED_COUNT
-      - [number]
-      - Number of features from the input table that have been
-        joined.
-   *  - **Number of unjoinable features from input table**
-      - UNJOINABLE_COUNT
-      - [number]
-      - Number of features from the input table that could not
-        be joined.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Joined layer**
+     - OUTPUT
+     - [same as input]
+     - The output joined layer.
+   * - **Unjoinable features from first layer**
+     - NON_MATCHING
+     - [same as input]
+     - Layer containing the features from first layer that
+       could not be joined to any features in the join layer.
+   * - **Number of joined features from input table**
+     - JOINED_COUNT
+     - [number]
+     - Number of features from the input table that have been
+       joined.
+   * - **Number of unjoinable features from input table**
+     - UNJOINABLE_COUNT
+     - [number]
+     - Number of features from the input table that could not
+       be joined.
 
 
 .. _qgismergevectorlayers:
