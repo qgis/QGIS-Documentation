@@ -631,33 +631,33 @@ Parameters
      - Type
      - Description
    * - **Input layer**
-     - INPUT
+     - ``INPUT``
      - [vector: any]
      - The input layer.
    * - **Input layer 2**
-     - INPUT_2
+     - ``INPUT_2``
      - [vector: any]
      - The join layer.
    * - **Layer 2 fields to copy (leave empty to copy all fields)**
-     - FIELDS_TO_COPY
+     - ``FIELDS_TO_COPY``
      - [fields]
      - Join layer fields to copy (if empty, all fields will be
        copied).
    * - **Discard records which could not be joined**
-     - DISCARD_NONMATCHING
+     - ``DISCARD_NONMATCHING``
      - [boolean]
      - Discard records which can not be joined
    * - **Joined field prefix**
-     - PREFIX
+     - ``PREFIX``
      - [string]
      - Joined field prefix
    * - **Maximum nearest neighbors**
-     - NEIGHBORS
+     - ``NEIGHBORS``
      - [number]
      - Maximum number of nearest neighbors
    * - **Maximum distance**
-     - MAX_DISTANCE
-     - Number
+     - ``MAX_DISTANCE``
+     - [number]
      - Maximum search distance
 
 Outputs
@@ -673,21 +673,21 @@ Outputs
      - Type
      - Description
    * - **Joined layer**
-     - OUTPUT
+     - ``OUTPUT``
      - [same as input]
      - The output joined layer.
    * - **Unjoinable features from first layer**
-     - NON_MATCHING
+     - ``NON_MATCHING``
      - [same as input]
      - Layer containing the features from first layer that
        could not be joined to any features in the join layer.
    * - **Number of joined features from input table**
-     - JOINED_COUNT
+     - ``JOINED_COUNT``
      - [number]
      - Number of features from the input table that have been
        joined.
    * - **Number of unjoinable features from input table**
-     - UNJOINABLE_COUNT
+     - ``UNJOINABLE_COUNT``
      - [number]
      - Number of features from the input table that could not
        be joined.
