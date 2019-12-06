@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project testing\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-11 14:48+0200\n"
+"POT-Creation-Date: 2019-12-06 11:48+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -150,7 +150,7 @@ msgid ""
 "or the distance units of a layer)."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:289
+#: ../../source/docs/user_manual/processing/scripts.rst:287
 msgid "processAlgorithm (mandatory)"
 msgstr ""
 
@@ -166,26 +166,26 @@ msgstr ""
 
 #: ../../source/docs/user_manual/processing/scripts.rst:266
 msgid ""
-"``processing.run`` can be used to run other processing algoritms from a "
+"``processing.run`` can be used to run other processing algorithms from a "
 "processing algorithm. The first parameter is the name of the algorithm, "
 "the second is a dictionary of the parameters to the algorithm. "
 "``is_child_algorithm`` is normally set to ``True`` when running an "
 "algorithm from within another algorithm. ``context`` and ``feedback`` "
-"informs the algorithm about the environment to run in and the channel for"
-" communicating with the user (catching cancel request, reporting "
-"progress, providing textual feedback). When using the (parent) algoritm's"
-" parameters as parameters to \"child\" algorithms, the original parameter"
-" values should be used (e.g. ``parameters['OUTPUT']``)."
+"inform the algorithm about the environment to run in and the channel for "
+"communicating with the user (catching cancel request, reporting progress,"
+" providing textual feedback). When using the (parent) algorithm's "
+"parameters as parameters to \"child\" algorithms, the original parameter "
+"values should be used (e.g. ``parameters['OUTPUT']``)."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:280
+#: ../../source/docs/user_manual/processing/scripts.rst:278
 msgid ""
 "It is good practice to check the feedback object for cancelation as much "
 "as is sensibly possible! Doing so allows for responsive cancelation, "
 "instead of forcing users to wait for unwanted processing to occur."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:285
+#: ../../source/docs/user_manual/processing/scripts.rst:283
 msgid ""
 "The algorithm should return values for all the output parameters it has "
 "defined as a dictionary. In this case, that's the buffer and rasterized "
@@ -194,24 +194,346 @@ msgid ""
 msgstr ""
 
 #: ../../source/docs/user_manual/processing/scripts.rst:292
-msgid "Handing algorithm output"
+msgid "Input and output types for Processing Algorithms"
 msgstr ""
 
 #: ../../source/docs/user_manual/processing/scripts.rst:294
+msgid ""
+"Here is the list of input and output types that are supported in "
+"Processing with their corresponding alg decorator constants "
+"(:file:`algfactory.py` contains the complete list of alg constants). "
+"Sorted on class name."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:299
+msgid "Input types"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:303
+#: ../../source/docs/user_manual/processing/scripts.rst:360
+msgid "Class"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:304
+#: ../../source/docs/user_manual/processing/scripts.rst:361
+msgid "Description"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:305
+msgid ":class:`QgsProcessingParameterBand <qgis.core.QgsProcessingParameterBand>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:306
+msgid "A band of a raster layer"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:307
+msgid ""
+":class:`QgsProcessingParameterBoolean "
+"<qgis.core.QgsProcessingParameterBoolean>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:308
+msgid "A boolean value"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:309
+msgid ":class:`QgsProcessingParameterCrs <qgis.core.QgsProcessingParameterCrs>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:310
+msgid "A Coordinate Reference System"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:311
+msgid ""
+":class:`QgsProcessingParameterDistance "
+"<qgis.core.QgsProcessingParameterDistance>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:312
+msgid "A double numeric parameter for distance values"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:313
+msgid ":class:`QgsProcessingParameterEnum <qgis.core.QgsProcessingParameterEnum>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:314
+msgid "An enumeration, allowing for selection from a set of predefined values"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:315
+msgid ""
+":class:`QgsProcessingParameterExpression "
+"<qgis.core.QgsProcessingParameterExpression>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:316
+msgid "An expression"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:317
+msgid ""
+":class:`QgsProcessingParameterExtent "
+"<qgis.core.QgsProcessingParameterExtent>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:318
+msgid "A spatial extent defined by xmin, xmax, ymin, ymax"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:319
+msgid ""
+":class:`QgsProcessingParameterFeatureSink "
+"<qgis.core.QgsProcessingParameterFeatureSink>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:320
+msgid "A feature sink"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:321
+msgid ""
+":class:`QgsProcessingParameterFeatureSource "
+"<qgis.core.QgsProcessingParameterFeatureSource>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:322
+msgid "A feature source"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:323
+msgid ""
+":class:`QgsProcessingParameterField "
+"<qgis.core.QgsProcessingParameterField>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:324
+msgid "A field in the attribute table of a vector layer"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:325
+msgid ":class:`QgsProcessingParameterFile <qgis.core.QgsProcessingParameterFile>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:326
+#: ../../source/docs/user_manual/processing/scripts.rst:363
+msgid "A filename of an existing file"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:327
+msgid ""
+":class:`QgsProcessingParameterFileDestination "
+"<qgis.core.QgsProcessingParameterFileDestination>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:328
+msgid "A filename for a newly created output file"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:329
+msgid ""
+":class:`QgsProcessingParameterFolderDestination "
+"<qgis.core.QgsProcessingParameterFolderDestination>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:330
+#: ../../source/docs/user_manual/processing/scripts.rst:365
+msgid "A folder"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:331
+msgid ""
+":class:`QgsProcessingParameterMapLayer "
+"<qgis.core.QgsProcessingParameterMapLayer>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:332
+#: ../../source/docs/user_manual/processing/scripts.rst:371
+msgid "A map layer"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:333
+msgid ""
+":class:`QgsProcessingParameterMatrix "
+"<qgis.core.QgsProcessingParameterMatrix>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:334
+msgid "A matrix"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:335
+msgid ""
+":class:`QgsProcessingParameterMultipleLayers "
+"<qgis.core.QgsProcessingParameterMultipleLayers>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:336
+#: ../../source/docs/user_manual/processing/scripts.rst:373
+msgid "A set of layers"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:337
+msgid ""
+":class:`QgsProcessingParameterNumber "
+"<qgis.core.QgsProcessingParameterNumber>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:338
+#: ../../source/docs/user_manual/processing/scripts.rst:375
+msgid "A numerical value"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:339
+msgid ""
+":class:`QgsProcessingParameterPoint "
+"<qgis.core.QgsProcessingParameterPoint>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:340
+msgid "A point"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:341
+msgid ""
+":class:`QgsProcessingParameterRange "
+"<qgis.core.QgsProcessingParameterRange>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:342
+msgid "A number range"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:343
+msgid ""
+":class:`QgsProcessingParameterRasterLayer "
+"<qgis.core.QgsProcessingParameterRasterLayer>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:344
+#: ../../source/docs/user_manual/processing/scripts.rst:346
+#: ../../source/docs/user_manual/processing/scripts.rst:377
+msgid "A raster layer"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:345
+msgid ""
+":class:`QgsProcessingParameterRasterDestination "
+"<qgis.core.QgsProcessingParameterRasterDestination>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:347
+msgid ""
+":class:`QgsProcessingParameterString "
+"<qgis.core.QgsProcessingParameterString>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:348
+#: ../../source/docs/user_manual/processing/scripts.rst:379
+msgid "A text string"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:349
+msgid ""
+":class:`QgsProcessingParameterVectorLayer "
+"<qgis.core.QgsProcessingParameterVectorLayer>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:350
+#: ../../source/docs/user_manual/processing/scripts.rst:352
+#: ../../source/docs/user_manual/processing/scripts.rst:381
+msgid "A vector layer"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:351
+msgid ""
+":class:`QgsProcessingParameterVectorDestination "
+"<qgis.core.QgsProcessingParameterVectorDestination>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:356
+msgid "Output types"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:362
+msgid ":class:`QgsProcessingOutputFile <qgis.core.QgsProcessingOutputFile>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:364
+msgid ":class:`QgsProcessingOutputFolder <qgis.core.QgsProcessingOutputFolder>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:366
+msgid ":class:`QgsProcessingOutputHtml <qgis.core.QgsProcessingOutputHtml>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:367
+msgid "HTML"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:368
+msgid ""
+":class:`QgsProcessingOutputLayerDefinition "
+"<qgis.core.QgsProcessingOutputLayerDefinition>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:369
+msgid "A layer definition"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:370
+msgid ""
+":class:`QgsProcessingOutputMapLayer "
+"<qgis.core.QgsProcessingOutputMapLayer>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:372
+msgid ""
+":class:`QgsProcessingOutputMultipleLayers "
+"<qgis.core.QgsProcessingOutputMultipleLayers>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:374
+msgid ":class:`QgsProcessingOutputNumber <qgis.core.QgsProcessingOutputNumber>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:376
+msgid ""
+":class:`QgsProcessingOutputRasterLayer "
+"<qgis.core.QgsProcessingOutputRasterLayer>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:378
+msgid ":class:`QgsProcessingOutputString <qgis.core.QgsProcessingOutputString>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:380
+msgid ""
+":class:`QgsProcessingOutputVectorLayer "
+"<qgis.core.QgsProcessingOutputVectorLayer>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:385
+msgid "Handing algorithm output"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/scripts.rst:387
 msgid ""
 "When you declare an output representing a layer (raster or vector), the "
 "algorithm will try to add it to QGIS once it is finished."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:297
+#: ../../source/docs/user_manual/processing/scripts.rst:390
 msgid "Raster layer output: QgsProcessingParameterRasterDestination."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:298
+#: ../../source/docs/user_manual/processing/scripts.rst:391
 msgid "Vector layer output: QgsProcessingParameterVectorDestination."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:300
+#: ../../source/docs/user_manual/processing/scripts.rst:393
 msgid ""
 "So even if the ``processing.run()`` method does not add the layers it "
 "creates into the user's current project, the two output layers (buffer "
@@ -220,7 +542,7 @@ msgid ""
 "user does not specify a destination)."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:306
+#: ../../source/docs/user_manual/processing/scripts.rst:399
 msgid ""
 "If a layer is created as output of an algorithm, it should be declared as"
 " such. Otherwise, you will not be able to properly use the algorithm in "
@@ -228,7 +550,7 @@ msgid ""
 "really creates."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:312
+#: ../../source/docs/user_manual/processing/scripts.rst:405
 msgid ""
 "You can return strings, numbers and more by specifying them in the result"
 " dictionary (as demonstrated for \"NUMBEROFFEATURES\"), but they should "
@@ -238,11 +560,11 @@ msgid ""
 "part of a model."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:321
+#: ../../source/docs/user_manual/processing/scripts.rst:414
 msgid "Communicating with the user"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:323
+#: ../../source/docs/user_manual/processing/scripts.rst:416
 msgid ""
 "If your algorithm takes a long time to process, it is a good idea to "
 "inform the user about the progress.  You can use ``feedback`` "
@@ -250,7 +572,7 @@ msgid ""
 "this."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:327
+#: ../../source/docs/user_manual/processing/scripts.rst:420
 msgid ""
 "The progress text and progressbar can be updated using two methods: "
 ":meth:`setProgressText(text) "
@@ -258,7 +580,7 @@ msgid ""
 ":meth:`setProgress(percent) <qgis.core.QgsFeedback.setProgress>`."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:331
+#: ../../source/docs/user_manual/processing/scripts.rst:424
 msgid ""
 "You can provide more information to the user using "
 ":meth:`pushCommandInfo(text) "
@@ -269,7 +591,7 @@ msgid ""
 "<qgis.core.QgsProcessingFeedback.reportError>`."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:337
+#: ../../source/docs/user_manual/processing/scripts.rst:430
 msgid ""
 "If your script has a problem, the correct way of handling it is to raise "
 "a :class:`QgsProcessingException <qgis.core.QgsProcessingException>`. You"
@@ -279,11 +601,11 @@ msgid ""
 "modeler, Python console, ...)"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:346
+#: ../../source/docs/user_manual/processing/scripts.rst:439
 msgid "Documenting your scripts"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:348
+#: ../../source/docs/user_manual/processing/scripts.rst:441
 msgid ""
 "You can document your scripts by overloading the :meth:`helpString() "
 "<qgis.core.QgsProcessingAlgorithm.helpString>` and :meth:`helpUrl() "
@@ -291,11 +613,11 @@ msgid ""
 ":class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:354
+#: ../../source/docs/user_manual/processing/scripts.rst:447
 msgid "Flags"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:356
+#: ../../source/docs/user_manual/processing/scripts.rst:449
 msgid ""
 "You can override the :meth:`flags "
 "<qgis.core.QgsProcessingAlgorithm.flags>` method of "
@@ -305,7 +627,7 @@ msgid ""
 "that it is not thread safe, and more."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:364
+#: ../../source/docs/user_manual/processing/scripts.rst:457
 msgid ""
 "By default, Processing runs algorithms in a separate thread in order to "
 "keep QGIS responsive while the processing task runs. If your algorithm is"
@@ -316,11 +638,11 @@ msgid ""
 "instead."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:373
+#: ../../source/docs/user_manual/processing/scripts.rst:466
 msgid "Best practices for writing script algorithms"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:375
+#: ../../source/docs/user_manual/processing/scripts.rst:468
 msgid ""
 "Here's a quick summary of ideas to consider when creating your script "
 "algorithms and, especially, if you want to share them with other QGIS "
@@ -329,17 +651,17 @@ msgid ""
 "batch processing interface."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:381
+#: ../../source/docs/user_manual/processing/scripts.rst:474
 msgid ""
 "Do not load resulting layers. Let Processing handle your results and load"
 " your layers if needed."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:383
+#: ../../source/docs/user_manual/processing/scripts.rst:476
 msgid "Always declare the outputs your algorithm creates."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:384
+#: ../../source/docs/user_manual/processing/scripts.rst:477
 msgid ""
 "Do not show message boxes or use any GUI element from the script. If you "
 "want to communicate with the user, use the methods of the feedback object"
@@ -348,11 +670,10 @@ msgid ""
 "<qgis.core.QgsProcessingException>`."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/scripts.rst:390
+#: ../../source/docs/user_manual/processing/scripts.rst:483
 msgid ""
 "There are already many processing algorithms available in QGIS. You can "
-"find code on "
-"https://github.com/qgis/QGIS/tree/release-3_4/python/plugins/processing/algs/qgis."
+"find code on :source:`python/plugins/processing/algs/qgis`."
 msgstr ""
 
 #~ msgid "|updatedisclaimer|"
@@ -833,5 +1154,34 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Handing data produced by the algorithm"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``processing.run`` can be used to run"
+#~ " other processing algoritms from a "
+#~ "processing algorithm. The first parameter "
+#~ "is the name of the algorithm, the"
+#~ " second is a dictionary of the "
+#~ "parameters to the algorithm. "
+#~ "``is_child_algorithm`` is normally set to "
+#~ "``True`` when running an algorithm from"
+#~ " within another algorithm. ``context`` and"
+#~ " ``feedback`` informs the algorithm about"
+#~ " the environment to run in and "
+#~ "the channel for communicating with the"
+#~ " user (catching cancel request, reporting"
+#~ " progress, providing textual feedback). "
+#~ "When using the (parent) algoritm's "
+#~ "parameters as parameters to \"child\" "
+#~ "algorithms, the original parameter values "
+#~ "should be used (e.g. "
+#~ "``parameters['OUTPUT']``)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "There are already many processing "
+#~ "algorithms available in QGIS. You can"
+#~ " find code on "
+#~ "https://github.com/qgis/QGIS/tree/release-3_4/python/plugins/processing/algs/qgis."
 #~ msgstr ""
 

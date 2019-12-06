@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project 3.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-07 15:33+0200\n"
+"POT-Creation-Date: 2019-12-06 11:48+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,8 +41,8 @@ msgid ""
 msgstr ""
 
 #: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:29
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:197
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:254
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:209
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:275
 msgid "Parameters"
 msgstr ""
 
@@ -70,7 +70,9 @@ msgstr ""
 msgid "Default: *100.0*"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:51
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:63
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:252
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:319
 msgid "``Output raster size`` [number]"
 msgstr ""
 
@@ -90,38 +92,86 @@ msgid ""
 "the same."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:56
-msgid "``Radius from field`` [tablefield: numeric]"
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:54
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:243
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:310
+msgid "``Number of rows`` [number]"
 msgstr ""
 
 #: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:54
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:59
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:83
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:243
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:310
+msgid "Total number of rows of the output raster layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:57
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:246
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:313
+msgid "``Number of columns`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:57
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:246
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:313
+msgid "Total number of columns of the output raster layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:60
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:249
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:316
+msgid "``Pixel Size X`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:60
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:249
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:316
+msgid "Horizontal resolution of each pixel in output raster, in layer units."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:63
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:252
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:319
+msgid "``Pixel Size Y`` [number]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:63
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:252
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:319
+msgid "Vertical resolution of each pixel in output raster, in layer units."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:68
+msgid "``Radius from field`` [tablefield: numeric]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:66
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:71
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:95
 msgid "Optional"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:56
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:68
 msgid ""
 "Sets the search radius for each feature from an attribute field in the "
 "input layer."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:62
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:74
 msgid "``Weight from field`` [tablefield: numeric]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:61
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:73
 msgid ""
 "Allows input features to be weighted by an attribute field. This can be "
 "used to increase the influence certain features have on the resultant "
 "heatmap."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:80
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:92
 msgid "``Kernel shape`` [enumeration]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:65
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:77
 msgid ""
 "Controls the rate at which the influence of a point decreases as the "
 "distance from the point increases. Different kernels decay at different "
@@ -131,119 +181,118 @@ msgid ""
 "“smoother” hotspots."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:71
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:83
 msgid ""
 "There are many shapes available (please see the `Wikipedia page "
 "<https://en.wikipedia.org/wiki/Kernel_(statistics)#Kernel_functions_in_common_use>`_"
 " for further information):"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:74
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:86
 msgid "0 --- Quartic"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:75
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:87
 msgid "1 --- Triangular"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:76
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:88
 msgid "2 --- Uniform"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:77
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:89
 msgid "3 --- Triweight"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:78
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:90
 msgid "4 --- Epanechnikov"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:80
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:276
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:92
 msgid "Default: *0*"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:97
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:109
 msgid "``Decay ratio (Triangular kernels only)`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:85
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:97
 msgid ""
 "Can be used with Triangular kernels to further control how heat from a "
 "feature decreases with distance from the feature."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:88
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:100
 msgid ""
 "A value of 0 (=minimum) indicates that the heat will be concentrated in "
 "the center of the given radius and completely extinguished at the edge."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:90
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:102
 msgid ""
 "A value of 0.5 indicates that pixels at the edge of the radius will be "
 "given half the heat as pixels at the center of the search radius."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:92
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:104
 msgid ""
 "A value of 1 means the heat is spread evenly over the whole search radius"
 " circle. (This is equivalent to the ‘Uniform’ kernel.)"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:94
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:106
 msgid ""
 "A value greater than 1 indicates that the heat is higher towards the edge"
 " of the search radius than at the center."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:97
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:109
 msgid "Default: *0.0*"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:107
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:119
 msgid "``Output value scaling`` [enumeration]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:100
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:112
 msgid "Allow to change the values of the output heatmap raster."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:102
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:114
 msgid "Options:"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:104
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:116
 msgid "0 --- Raw"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:105
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:117
 msgid "1 --- Scaled"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:107
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:119
 msgid "Default: *Raw*"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:110
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:234
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:294
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:122
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:255
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:322
 msgid "Outputs"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:113
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:125
 msgid "``Heatmap`` [raster]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:112
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:124
 msgid "Raster layer with kernel density values."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:116
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:128
 msgid "Example: Creating a Heatmap"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:117
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:129
 msgid ""
 "For the following example, we will use the ``airports`` vector point "
 "layer from the QGIS sample dataset (see :ref:`label_sampledata`). Another"
@@ -252,46 +301,46 @@ msgid ""
 "<http://www.qgistutorials.com/en/docs/creating_heatmaps.html>`_."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:122
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:134
 msgid "In Figure_Heatmap_data_processing_, the airports of Alaska are shown."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:129
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:141
 msgid "Airports of Alaska"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:132
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:144
 msgid "Open the Heatmap algorithm from the Interpolation group"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:133
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:145
 msgid ""
 "In the :guilabel:`Point layer` |selectString| field, select ``airports`` "
 "from the list of point layers loaded in the current project."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:135
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:147
 msgid "Change the :guilabel:`Radius` to ``1000000`` meters."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:136
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:148
 msgid ""
 "Change the :guilabel:`Pixel size X` to ``1000``. The :guilabel:`Pixel "
 "size Y`, :guilabel:`Rows` and :guilabel:`Columns` will be automatically "
 "updated."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:138
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:150
 msgid ""
 "Click on :guilabel:`Run` to create and load the airports heatmap (see "
 "Figure_Heatmap_created_processing_)."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:146
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:158
 msgid "The Heatmap Dialog"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:148
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:160
 msgid ""
 "QGIS will generate the heatmap and add the results to your map window. By"
 " default, the heatmap is shaded in greyscale, with lighter areas showing "
@@ -299,95 +348,95 @@ msgid ""
 "to improve its appearance."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:157
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:169
 msgid "The heatmap after loading looks like a grey surface"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:160
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:172
 msgid ""
 "Open the properties dialog of the ``heatmap_airports`` layer (select the "
 "layer ``heatmap_airports``, open the context menu with the right mouse "
 "button and select :guilabel:`Properties`)."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:163
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:175
 msgid "Select the :guilabel:`Symbology` tab."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:164
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:176
 msgid ""
 "Change the :guilabel:`Render type` |selectString| to 'Singleband "
 "pseudocolor'."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:165
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:177
 msgid ""
 "Select a suitable :guilabel:`Color map` |selectString|, for instance "
 "``YlOrRed``."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:166
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:178
 msgid "Click the :guilabel:`Classify` button."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:167
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:179
 msgid "Press :guilabel:`OK` to update the layer."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:169
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:181
 msgid "The final result is shown in Figure_Heatmap_styled_processing_."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:176
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:188
 msgid "Styled heatmap of airports of Alaska"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:184
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:196
 msgid "IDW Interpolation"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:185
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:197
 msgid ""
 "Generates an Inverse Distance Weighted (IDW) interpolation of a point "
 "vector layer."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:187
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:199
 msgid ""
 "Sample points are weighted during interpolation such that the influence "
 "of one point relative to another declines with distance from the unknown "
 "point you want to create."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:190
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:202
 msgid ""
 "The IDW interpolation method also has some disadvantages: the quality of "
 "the interpolation result can decrease, if the distribution of sample data"
 " points is uneven."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:193
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:205
 msgid ""
 "Furthermore, maximum and minimum values in the interpolated surface can "
 "only occur at sample data points."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:200
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:257
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:212
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:278
 msgid "``Vector layer`` [vector: point]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:200
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:257
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:212
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:278
 msgid "Point vector layer to use for the interpolation."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:208
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:265
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:220
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:286
 msgid "``Interpolation attribute`` [tablefield: numeric]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:203
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:215
 msgid ""
 "Field used for the interpolation. Once you have chosen the layer and the "
 "field click on the |signPlus| button to add the layer and the field to "
@@ -397,88 +446,76 @@ msgid ""
 "``Break lines`` in the ``Type`` column of the table."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:211
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:268
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:223
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:289
 msgid "``Use Z-coordinate for interpolation`` [boolean]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:211
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:268
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:223
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:289
 msgid "Uses the layer's stored Z values."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:216
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:228
 msgid "``Distance coefficient Power`` [number]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:214
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:226
 msgid "Sets the distance coefficient for the interpolation."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:216
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:228
 msgid "Default: *2.0*"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:221
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:281
-msgid "``Number of columns`` [number]"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:219
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:279
-msgid "Total number of columns of the output raster layer."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:221
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:226
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:281
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:286
-msgid "Default: *300*"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:226
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:286
-msgid "``Number of rows`` [number]"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:224
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:284
-msgid "Total number of rows of the output raster layer."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:231
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:291
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:233
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:300
 msgid "``Extent (xmin, xmax, ymin, ymax)`` [extent]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:229
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:289
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:231
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:298
 msgid ""
 "Extent of the output raster layer. You have to declare the output extent "
 "by either choosing it from the map canvas, selecting it from another "
 "layer or type it manually."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:237
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:296
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:236
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:303
+msgid ""
+"Allows to set the size of the interpolated output raster layer by "
+"specifying the rows and columns **or** the X and Y pixel size."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:239
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:306
+msgid ""
+"Increasing the number of rows or columns will decrease the cell size. "
+"Similarly, the values in ``Rows`` and ``Columns`` will be updated when "
+"one of them are changed."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:258
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:324
 msgid "``Interpolated`` [raster]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:236
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:257
 msgid "Raster layer of interpolated values."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:242
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:263
 msgid "TIN Interpolation"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:243
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:264
 msgid ""
 "Generates a Triangulated Irregular Network (TIN) interpolation of a point"
 " vector layer."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:245
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:266
 msgid ""
 "With the TIN method you can create a surface formed by triangles of "
 "nearest neighbor points. To do this, circumcircles around selected sample"
@@ -487,13 +524,13 @@ msgid ""
 "surfaces are not smooth."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:250
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:271
 msgid ""
 "The algorithm creates both the raster layer of the interpolated values "
 "and the vector line layer with the triangulation boundaries."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:260
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:281
 msgid ""
 "Field used for the interpolation. Once you have chosen the layer and the "
 "field click on the |signPlus| button to add the layer and the field to "
@@ -503,31 +540,34 @@ msgid ""
 "``Break lines`` in the ``Type`` column of the table."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:276
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:295
 msgid "``Interpolation method`` [enumeration]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:271
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:292
 msgid "There are two different choices:"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:273
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:294
 msgid "0 --- Linear"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:274
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:295
 msgid "1 --- Clough-Toucher (cubic)"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:296
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:324
 msgid "Raster layer of triangulated values."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:300
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:328
 msgid "``Triangulation`` [vector: line]"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:299
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:327
 msgid "Triangulation lines as vector layer."
 msgstr ""
+
+#~ msgid "Default: *300*"
+#~ msgstr ""
 

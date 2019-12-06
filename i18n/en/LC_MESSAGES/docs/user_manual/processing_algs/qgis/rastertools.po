@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project 3.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-07 15:33+0200\n"
+"POT-Creation-Date: 2019-12-06 11:48+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,216 +18,514 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.1\n"
 
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:8
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:5
 msgid "Raster tools"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:19
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:16
 msgid "Convert map to raster"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:20
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:17
 msgid "Creates a raster image of map canvas content."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:22
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:19
 msgid ""
 "A :ref:`map theme <map_themes>` can be selected to render a predetermined"
 " set of layers with a defined style for each layer."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:25
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:22
 msgid "Alternatively, a single layer can be selected if no map theme is set."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:27
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:24
 msgid ""
 "If neither map theme nor layer is set, the current map content will be "
 "rendered. The minimum extent entered will internally be extended to be a "
 "multiple of the tile size."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:32
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:79
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:115
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:29
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:119
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:199
 msgid "Parameters"
 msgstr ""
 
 #: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:36
-msgid "``Minimum extent to render (xmin, xmax, ymin, ymax)`` [extent]"
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:102
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:126
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:177
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:206
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:227
+msgid "Label"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:35
-msgid ""
-"Extent of the output raster layer. It will internally be extended to be a"
-" multiple of the tile size."
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:37
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:103
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:127
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:178
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:207
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:228
+msgid "Name"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:41
-msgid "``Tile size`` [number]"
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:38
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:104
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:128
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:179
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:208
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:229
+msgid "Type"
 msgstr ""
 
 #: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:39
-msgid "Size of the tile of the output raster layer."
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:105
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:129
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:180
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:209
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:230
+msgid "Description"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:40
+msgid "**Minimum extent to render (xmin, xmax, ymin, ymax)**"
 msgstr ""
 
 #: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:41
-msgid "Default: *1024*"
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:131
+msgid "``EXTENT``"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:42
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:132
+msgid "[extent]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:43
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:133
+msgid "Specify the extent of the output raster layer. One of:"
 msgstr ""
 
 #: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:46
-msgid "``Map units per pixel`` [number]"
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:136
+msgid "Use Canvas Extent"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:44
-msgid "Pixel size (in map units)."
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:47
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:137
+msgid "Select Extent on Canvas"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:46
-msgid "Default: *100*"
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:48
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:138
+msgid "Use Layer Extent..."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:50
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:140
+msgid "It will internally be extended to a multiple of the tile size."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:51
+msgid "**Tile size**"
 msgstr ""
 
 #: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:52
-msgid "``Make background transparent`` [boolean]"
+msgid "``TILE_SIZE``"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:49
-msgid ""
-"Allows to export the map with a transparent background, i.e. outputs a "
-"RGBA image if set to ``True`` instead of RGB."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:52
-msgid "Default: *False*"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:58
-msgid "``Map theme to render`` [enumeration]"
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:53
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:59
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:149
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:155
+msgid "[number]"
 msgstr ""
 
 #: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:55
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:61
-msgid "Optional"
+msgid "Default: 1024"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:56
+msgid "Size of the tile of the output raster layer. Minimum value: 64."
 msgstr ""
 
 #: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:57
+msgid "**Map units per pixel**"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:58
+msgid "``MAP_UNITS_PER_PIXEL``"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:61
+msgid "Default: 100.0"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:62
+msgid "Pixel size (in map units). Minimum value: 0.0"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:63
+msgid "**Make background transparent**"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:64
+msgid "``MAKE_BACKGROUND_TRANSPARENT``"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:65
+msgid "[boolean]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:67
+msgid "Default: False"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:68
 msgid ""
-"If you have some map theme set, you can choose one of them for the final "
-"raster layer."
+"Allows exporting the map with a transparent background. Outputs an RGBA "
+"(instead of RGB) image if set to ``True``."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:63
-msgid "``Single layer to render`` [enumeration]"
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:70
+msgid "**Map theme to render**"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:63
-msgid "Choose a single layer for the output raster layer."
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:72
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:78
+msgid "Optional"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:66
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:100
-msgid "Outputs"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:69
-msgid "``Output layer`` [raster]"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:69
-msgid "Output raster layer."
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:73
+msgid "``MAP_THEME``"
 msgstr ""
 
 #: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:74
-msgid "Create constant raster layer"
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:80
+msgid "[enumeration]"
 msgstr ""
 
 #: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:75
-msgid ""
-"Given an extent and a value, generates a raster layer with all the pixels"
-" having the same value chosen."
+msgid "Use an existing :ref:`map theme <map_themes>` for the rendering."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:76
+msgid "**Single layer to render**"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:79
+msgid "``LAYER``"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:81
+msgid "Choose a single layer for the rendering"
 msgstr ""
 
 #: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:82
-msgid "``Desired extent (xmin, xmax, ymin, ymax)`` [extent]"
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:106
+msgid "**Output layer**"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:82
-msgid "Extent for the raster layer."
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:83
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:107
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:160
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:182
+msgid "``OUTPUT``"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:84
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:108
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:161
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:183
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:212
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:233
+msgid "[raster]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:86
+msgid "Default: Save to temporary file"
 msgstr ""
 
 #: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:87
-msgid "``Target CRS`` [crs]"
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:162
+msgid "Specification of the output raster. One of:"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:85
-msgid "CRS for the output raster layer."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:87
-msgid "Default: *project CRS*"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:92
-msgid "``Pixel size`` [number]"
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:89
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:164
+msgid "Save to a Temporary File"
 msgstr ""
 
 #: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:90
-msgid "Pixel size (X=Y) in map units."
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:165
+msgid "Save to File..."
 msgstr ""
 
 #: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:92
-msgid "Default: *0.1*"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:97
-msgid "``Constant value`` [number]"
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:167
+msgid "The file encoding can also be changed here."
 msgstr ""
 
 #: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:95
-msgid "Constant pixel value for the raster layer."
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:97
-msgid "Default: *1*"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:104
-msgid "``Constant`` [raster]"
-msgstr ""
-
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:103
-msgid "Raster covering the desired extent with pixel size and value chosen."
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:170
+msgid "Outputs"
 msgstr ""
 
 #: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:109
+msgid "Output raster layer"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:115
+msgid "Create constant raster layer"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:116
+msgid "Generates a raster layer where all pixels have the same value."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:130
+msgid "**Desired extent (xmin, xmax, ymin, ymax)**"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:141
+msgid "**Target CRS**"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:142
+msgid "``TARGET_CRS``"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:143
+msgid "[crs]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:145
+msgid "Default: Project CRS"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:146
+msgid "CRS for the output raster layer"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:147
+msgid "**Pixel size**"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:148
+msgid "``PIXEL_SIZE``"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:151
+msgid "Default: 0.1"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:152
+msgid "Pixel size (X=Y) in map units. Minimum value: 0.01"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:153
+msgid "**Constant value**"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:154
+msgid "``NUMBER``"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:157
+msgid "Default: 1"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:158
+msgid "Constant pixel value for the output raster layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:159
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:181
+msgid "**Constant**"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:184
+msgid ""
+"Raster covering the desired extent with the specified pixel size and "
+"value."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:191
 msgid "Set style for raster layer"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:110
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:192
 msgid ""
 "Sets the style of a raster layer. The style must be defined as a ``QML`` "
 "file."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:112
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:194
 msgid ""
 "No new output are created: the ``QML`` style is assigned to the raster "
 "layer chosen."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:118
-msgid "``Raster layer`` [raster]"
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:196
+msgid ":ref:`qgissetstyleforvectorlayer`"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:118
-msgid "Raster layer."
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:210
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:231
+msgid "**Raster layer**"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:120
-msgid "``Style file`` [file]"
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:211
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:232
+msgid "``INPUT``"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:121
-msgid "Path of the ``QML`` style file."
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:213
+msgid "The raster layer"
 msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:214
+msgid "**Style file**"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:215
+msgid "``STYLE``"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:216
+msgid "[file]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:217
+msgid "Path to the ``QML`` style file."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:220
+msgid "Output"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rastertools.rst:234
+msgid "The raster layer with the chosen style"
+msgstr ""
+
+#~ msgid "``Minimum extent to render (xmin, xmax, ymin, ymax)`` [extent]"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Extent of the output raster layer. "
+#~ "It will internally be extended to "
+#~ "be a multiple of the tile size."
+#~ msgstr ""
+
+#~ msgid "``Tile size`` [number]"
+#~ msgstr ""
+
+#~ msgid "Size of the tile of the output raster layer."
+#~ msgstr ""
+
+#~ msgid "Default: *1024*"
+#~ msgstr ""
+
+#~ msgid "``Map units per pixel`` [number]"
+#~ msgstr ""
+
+#~ msgid "Pixel size (in map units)."
+#~ msgstr ""
+
+#~ msgid "Default: *100*"
+#~ msgstr ""
+
+#~ msgid "``Make background transparent`` [boolean]"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Allows to export the map with a"
+#~ " transparent background, i.e. outputs a "
+#~ "RGBA image if set to ``True`` "
+#~ "instead of RGB."
+#~ msgstr ""
+
+#~ msgid "Default: *False*"
+#~ msgstr ""
+
+#~ msgid "``Map theme to render`` [enumeration]"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you have some map theme set,"
+#~ " you can choose one of them for"
+#~ " the final raster layer."
+#~ msgstr ""
+
+#~ msgid "``Single layer to render`` [enumeration]"
+#~ msgstr ""
+
+#~ msgid "Choose a single layer for the output raster layer."
+#~ msgstr ""
+
+#~ msgid "``Output layer`` [raster]"
+#~ msgstr ""
+
+#~ msgid "Output raster layer."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Given an extent and a value, "
+#~ "generates a raster layer with all "
+#~ "the pixels having the same value "
+#~ "chosen."
+#~ msgstr ""
+
+#~ msgid "``Desired extent (xmin, xmax, ymin, ymax)`` [extent]"
+#~ msgstr ""
+
+#~ msgid "Extent for the raster layer."
+#~ msgstr ""
+
+#~ msgid "``Target CRS`` [crs]"
+#~ msgstr ""
+
+#~ msgid "CRS for the output raster layer."
+#~ msgstr ""
+
+#~ msgid "Default: *project CRS*"
+#~ msgstr ""
+
+#~ msgid "``Pixel size`` [number]"
+#~ msgstr ""
+
+#~ msgid "Pixel size (X=Y) in map units."
+#~ msgstr ""
+
+#~ msgid "Default: *0.1*"
+#~ msgstr ""
+
+#~ msgid "``Constant value`` [number]"
+#~ msgstr ""
+
+#~ msgid "Constant pixel value for the raster layer."
+#~ msgstr ""
+
+#~ msgid "Default: *1*"
+#~ msgstr ""
+
+#~ msgid "``Constant`` [raster]"
+#~ msgstr ""
+
+#~ msgid "Raster covering the desired extent with pixel size and value chosen."
+#~ msgstr ""
+
+#~ msgid "``Raster layer`` [raster]"
+#~ msgstr ""
+
+#~ msgid "Raster layer."
+#~ msgstr ""
+
+#~ msgid "``Style file`` [file]"
+#~ msgstr ""
+
+#~ msgid "Path of the ``QML`` style file."
+#~ msgstr ""
 

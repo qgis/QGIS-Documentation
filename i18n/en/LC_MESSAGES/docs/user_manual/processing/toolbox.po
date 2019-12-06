@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project testing\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-07 15:33+0200\n"
+"POT-Creation-Date: 2019-12-06 11:48+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -121,7 +121,7 @@ msgid ""
 msgstr ""
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:86
-msgid "Parameters Dialog"
+msgid "Algorithm Dialog - Parameters"
 msgstr ""
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:89
@@ -327,24 +327,36 @@ msgstr ""
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:237
 msgid ""
-"Along with the :guilabel:`Parameters` tab, you will find another tab "
-"named :guilabel:`Log`. Information provided by the algorithm during its "
-"execution is written in this tab, and allow you to track the execution "
-"and be aware and have more details about the algorithm as it runs. Notice"
-" that not all algorithms write information to this tab, and many of them "
-"might run silently without producing any output other than the final "
-"files."
+"Along with the :guilabel:`Parameters` tab, there is another tab named "
+":guilabel:`Log` (see figure below). Information provided by the algorithm"
+" during its execution is written in this tab, and allow you to track the "
+"execution and be aware and have more details about the algorithm as it "
+"runs. Notice that not all algorithms write information to this tab, and "
+"many of them might run silently without producing any output other than "
+"the final files."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/toolbox.rst:244
+#: ../../source/docs/user_manual/processing/toolbox.rst:250
+msgid "Algorithm Dialog - Log"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/toolbox.rst:252
 msgid ""
-"On the right hand side of the dialog you wil find a short description of "
-"the algorithm, which will help you understand its purpose and its basic "
+"At the bottom of the :guilabel:`Log` tab you will find buttons to ``Save "
+"Log to File``, ``Copy Log to Clipboard`` and ``Clear Log``. These are "
+"particularly handy when you have checked the ``Keep dialog open after "
+"running algorithm`` in the ``General`` part of the Processing options."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/toolbox.rst:258
+msgid ""
+"On the right hand side of the dialog you will find a short description of"
+" the algorithm, which will help you understand its purpose and its basic "
 "ideas. If such a description is not available, the description panel will"
 " not be shown."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/toolbox.rst:248
+#: ../../source/docs/user_manual/processing/toolbox.rst:262
 msgid ""
 "For a more detailed help file, which might include description of every "
 "parameter it uses, or examples, you will find a :guilabel:`Help` button "
@@ -353,11 +365,11 @@ msgid ""
 "documentation (for some third-party providers)."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/toolbox.rst:256
+#: ../../source/docs/user_manual/processing/toolbox.rst:270
 msgid "A note on projections"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/toolbox.rst:258
+#: ../../source/docs/user_manual/processing/toolbox.rst:272
 msgid ""
 "Processing algorithm execution are always performed in the input layer "
 "coordinate reference system (CRS). Due to QGIS's on-the-fly reprojecting "
@@ -370,7 +382,7 @@ msgid ""
 "layer."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/toolbox.rst:267
+#: ../../source/docs/user_manual/processing/toolbox.rst:281
 msgid ""
 "This is however less true for most of the external applications whose "
 "algorithms are exposed through the processing framework as they assume "
@@ -378,7 +390,7 @@ msgid ""
 "ready to be analyzed."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/toolbox.rst:271
+#: ../../source/docs/user_manual/processing/toolbox.rst:285
 msgid ""
 "By default, the parameters dialog will show a description of the CRS of "
 "each layer along with its name, making it easy to select layers that "
@@ -388,25 +400,25 @@ msgid ""
 "definition in selection boxes` option."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/toolbox.rst:277
+#: ../../source/docs/user_manual/processing/toolbox.rst:291
 msgid ""
 "If you try to execute an algorithm using as input two or more layers with"
 " unmatching CRSs, a warning dialog will be shown. This occurs thanks to "
 "the :guilabel:`Warn before executing if layer CRS's do not match` option."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/toolbox.rst:281
+#: ../../source/docs/user_manual/processing/toolbox.rst:295
 msgid ""
 "You still can execute the algorithm, but be aware that in most cases that"
 " will produce wrong results, such as empty layers due to input layers not"
 " overlapping."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/toolbox.rst:284
+#: ../../source/docs/user_manual/processing/toolbox.rst:298
 msgid "**Use Processing algorithms to do intermediate reprojection**"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/toolbox.rst:286
+#: ../../source/docs/user_manual/processing/toolbox.rst:300
 msgid ""
 "When an algorithm can not successfully perform on multiple input layers "
 "due to unmatching CRSs, use QGIS internal algorithm such as "
@@ -414,33 +426,33 @@ msgid ""
 " before executing the algorithm using these outputs."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/toolbox.rst:293
+#: ../../source/docs/user_manual/processing/toolbox.rst:307
 msgid "Data objects generated by algorithms"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/toolbox.rst:295
+#: ../../source/docs/user_manual/processing/toolbox.rst:309
 msgid ""
 "Data objects generated by an algorithm can be of any of the following "
 "types:"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/toolbox.rst:297
+#: ../../source/docs/user_manual/processing/toolbox.rst:311
 msgid "A raster layer"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/toolbox.rst:298
+#: ../../source/docs/user_manual/processing/toolbox.rst:312
 msgid "A vector layer"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/toolbox.rst:299
+#: ../../source/docs/user_manual/processing/toolbox.rst:313
 msgid "A table"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/toolbox.rst:300
+#: ../../source/docs/user_manual/processing/toolbox.rst:314
 msgid "An HTML file (used for text and graphical outputs)"
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/toolbox.rst:302
+#: ../../source/docs/user_manual/processing/toolbox.rst:316
 msgid ""
 "These are all saved to disk, and the parameters table will contain a text"
 " box corresponding to each one of these outputs, where you can type the "
@@ -452,14 +464,14 @@ msgid ""
 "SpatiaLite database, or a memory layer."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/toolbox.rst:310
+#: ../../source/docs/user_manual/processing/toolbox.rst:324
 msgid ""
 "To select an output channel, just click on the button on the right side "
 "of the text box, and you will see a small context menu with the available"
 " options."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/toolbox.rst:313
+#: ../../source/docs/user_manual/processing/toolbox.rst:327
 msgid ""
 "In the most usual case, you will select saving to a file. If you select "
 "that option, you will be prompted with a save file dialog, where you can "
@@ -468,7 +480,7 @@ msgid ""
 "the algorithm."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/toolbox.rst:318
+#: ../../source/docs/user_manual/processing/toolbox.rst:332
 msgid ""
 "The format of the output is defined by the filename extension. The "
 "supported formats depend on what is supported by the algorithm itself. To"
@@ -483,7 +495,7 @@ msgid ""
 "QGIS."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/toolbox.rst:329
+#: ../../source/docs/user_manual/processing/toolbox.rst:343
 msgid ""
 "If you do not enter any filename in the output text box (or select the "
 "corresponding option in the context menu), the result will be saved as a "
@@ -493,7 +505,7 @@ msgid ""
 "layers)."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/toolbox.rst:335
+#: ../../source/docs/user_manual/processing/toolbox.rst:349
 msgid ""
 "You can set a default folder for output data objects. Go to the settings "
 "dialog (you can open it from the :menuselection:`Settings --> Options -->"
@@ -503,7 +515,7 @@ msgid ""
 ":file:`myfile.shp`) when executing an algorithm."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/toolbox.rst:342
+#: ../../source/docs/user_manual/processing/toolbox.rst:356
 msgid ""
 "When running an algorithm that uses a vector layer in iterative mode, the"
 " entered file path is used as the base path for all generated files, "
@@ -512,7 +524,7 @@ msgid ""
 "all such generated files."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/toolbox.rst:347
+#: ../../source/docs/user_manual/processing/toolbox.rst:361
 msgid ""
 "Apart from raster layers and tables, algorithms also generate graphics "
 "and text as HTML files. These results are shown at the end of the "
@@ -522,7 +534,7 @@ msgid ""
 "from the QGIS main menu."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/toolbox.rst:353
+#: ../../source/docs/user_manual/processing/toolbox.rst:367
 msgid ""
 "Some external applications might have files (with no particular extension"
 " restrictions) as output, but they do not belong to any of the categories"
@@ -533,14 +545,14 @@ msgid ""
 "created, but you won't see anything new in your QGIS working session."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/toolbox.rst:361
+#: ../../source/docs/user_manual/processing/toolbox.rst:375
 msgid ""
 "For all the other types of output, you will find a checkbox that you can "
 "use to tell the algorithm whether to load the file once it is generated "
 "by the algorithm or not. By default, all files are opened."
 msgstr ""
 
-#: ../../source/docs/user_manual/processing/toolbox.rst:365
+#: ../../source/docs/user_manual/processing/toolbox.rst:379
 msgid ""
 "Optional outputs are not supported. That is, all outputs are created. "
 "However, you can uncheck the corresponding checkbox if you are not "
@@ -973,5 +985,34 @@ msgstr ""
 #~ "their own configuration items, which we"
 #~ " will explain later when covering "
 #~ "particular algorithm providers."
+#~ msgstr ""
+
+#~ msgid "Parameters Dialog"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Along with the :guilabel:`Parameters` tab, "
+#~ "you will find another tab named "
+#~ ":guilabel:`Log`. Information provided by the"
+#~ " algorithm during its execution is "
+#~ "written in this tab, and allow you"
+#~ " to track the execution and be "
+#~ "aware and have more details about "
+#~ "the algorithm as it runs. Notice "
+#~ "that not all algorithms write "
+#~ "information to this tab, and many "
+#~ "of them might run silently without "
+#~ "producing any output other than the "
+#~ "final files."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "On the right hand side of the "
+#~ "dialog you wil find a short "
+#~ "description of the algorithm, which will"
+#~ " help you understand its purpose and"
+#~ " its basic ideas. If such a "
+#~ "description is not available, the "
+#~ "description panel will not be shown."
 #~ msgstr ""
 

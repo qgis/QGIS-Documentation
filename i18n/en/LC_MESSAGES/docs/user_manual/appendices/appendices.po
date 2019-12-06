@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project testing\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-07 15:33+0200\n"
+"POT-Creation-Date: 2019-12-06 11:48+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,11 +19,11 @@ msgstr ""
 "Generated-By: Babel 2.5.1\n"
 
 #: ../../source/docs/user_manual/appendices/appendices.rst:8
-msgid "Appendix"
+msgid "Appendices"
 msgstr ""
 
 #: ../../source/docs/user_manual/appendices/appendices.rst:14
-msgid "GNU General Public License"
+msgid "Appendix A: GNU General Public License"
 msgstr ""
 
 #: ../../source/docs/user_manual/appendices/appendices.rst:16
@@ -1095,6 +1095,152 @@ msgid ""
 " use in free software."
 msgstr ""
 
+#: ../../source/docs/user_manual/appendices/appendices.rst:794
+msgid "Appendix B: QGIS File Formats"
+msgstr ""
+
+#: ../../source/docs/user_manual/appendices/appendices.rst:803
+msgid "QGS/QGZ - The QGIS Project File Format"
+msgstr ""
+
+#: ../../source/docs/user_manual/appendices/appendices.rst:805
+msgid ""
+"The **QGS** format is an XML format for storing QGIS projects. The "
+"**QGZ** format is a compressed (zip) archive containing a QGS file and a "
+"QGD file. The **QGD** file is the associated sqlite database of the qgis "
+"project that contain auxiliary data for the project. If there are no "
+"auxiliary data, the QGD file will be empty."
+msgstr ""
+
+#: ../../source/docs/user_manual/appendices/appendices.rst:812
+msgid ""
+"A QGIS file contains everything that is needed for storing a QGIS "
+"project, including:"
+msgstr ""
+
+#: ../../source/docs/user_manual/appendices/appendices.rst:815
+msgid "project title"
+msgstr ""
+
+#: ../../source/docs/user_manual/appendices/appendices.rst:816
+msgid "project CRS"
+msgstr ""
+
+#: ../../source/docs/user_manual/appendices/appendices.rst:817
+msgid "the layer tree"
+msgstr ""
+
+#: ../../source/docs/user_manual/appendices/appendices.rst:818
+msgid "snapping settings"
+msgstr ""
+
+#: ../../source/docs/user_manual/appendices/appendices.rst:819
+msgid "relations"
+msgstr ""
+
+#: ../../source/docs/user_manual/appendices/appendices.rst:820
+msgid "the map canvas extent"
+msgstr ""
+
+#: ../../source/docs/user_manual/appendices/appendices.rst:821
+msgid "project models"
+msgstr ""
+
+#: ../../source/docs/user_manual/appendices/appendices.rst:822
+msgid "legend"
+msgstr ""
+
+#: ../../source/docs/user_manual/appendices/appendices.rst:823
+msgid "mapview docks (2D and 3D)"
+msgstr ""
+
+#: ../../source/docs/user_manual/appendices/appendices.rst:824
+msgid ""
+"the layers with links to the underlying datasets (data sources) and other"
+" layer properties including extent, SRS, joins, styles, renderer, blend "
+"mode, opacity and more."
+msgstr ""
+
+#: ../../source/docs/user_manual/appendices/appendices.rst:827
+msgid "project properties"
+msgstr ""
+
+#: ../../source/docs/user_manual/appendices/appendices.rst:829
+msgid ""
+"The figures below show the top level tags in a QGS file and the expanded "
+"``ProjectLayers`` tag."
+msgstr ""
+
+#: ../../source/docs/user_manual/appendices/appendices.rst:837
+msgid "The top level tags in a QGS file"
+msgstr ""
+
+#: ../../source/docs/user_manual/appendices/appendices.rst:844
+msgid "The expanded top level ProjectLayers tag of a QGS file"
+msgstr ""
+
+#: ../../source/docs/user_manual/appendices/appendices.rst:852
+msgid "QLR - The QGIS Layer Definition file"
+msgstr ""
+
+#: ../../source/docs/user_manual/appendices/appendices.rst:854
+msgid ""
+"A Layer Definition file (QLR) is an XML file that contains a pointer to "
+"the layer data source in addition to QGIS style information for the "
+"layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/appendices/appendices.rst:858
+msgid ""
+"The use case for this file is simple: To have a single file for opening a"
+" data source and bringing in all the related style information. QLR files"
+" also allow you to mask the underlying datasource in an easy to open "
+"file."
+msgstr ""
+
+#: ../../source/docs/user_manual/appendices/appendices.rst:864
+msgid ""
+"An example of QLR usage is for opening MS SQL layers. Rather than having "
+"to go to the MS SQL connection dialog, connect, select, load and finally "
+"style, you can simply add a .qlr file that points to the correct MS SQL "
+"layer with all the necessary style included."
+msgstr ""
+
+#: ../../source/docs/user_manual/appendices/appendices.rst:870
+msgid "In the future a .qlr file may hold a reference to more than one layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/appendices/appendices.rst:877
+msgid "The top level tags of a QLR file"
+msgstr ""
+
+#: ../../source/docs/user_manual/appendices/appendices.rst:885
+msgid "QML - The QGIS Style File Format"
+msgstr ""
+
+#: ../../source/docs/user_manual/appendices/appendices.rst:887
+msgid "QML is an XML format for storing layer styling."
+msgstr ""
+
+#: ../../source/docs/user_manual/appendices/appendices.rst:889
+msgid ""
+"A QML file contains all the information QGIS can handle for the rendering"
+" of feature geometries including symbol definitions, sizes and rotations,"
+" labelling, opacity and blend mode and more."
+msgstr ""
+
+#: ../../source/docs/user_manual/appendices/appendices.rst:893
+msgid ""
+"The figure below shows the top level tags of a QML file (with only "
+"``renderer_v2`` and its ``symbol`` tag expanded)."
+msgstr ""
+
+#: ../../source/docs/user_manual/appendices/appendices.rst:901
+msgid ""
+"The top level tags of a QML file (only the renderer_v2 tag with its "
+"symbol tag is expanded)"
+msgstr ""
+
 #~ msgid "|updatedisclaimer|"
 #~ msgstr ""
 
@@ -1151,5 +1297,11 @@ msgstr ""
 #~ "version, but may differ in detail "
 #~ "to address new problems or concerns."
 #~ "  See http://www.gnu.org/copyleft/."
+#~ msgstr ""
+
+#~ msgid "Appendix"
+#~ msgstr ""
+
+#~ msgid "GNU General Public License"
 #~ msgstr ""
 

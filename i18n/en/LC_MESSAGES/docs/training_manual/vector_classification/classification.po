@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project testing\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-07 15:33+0200\n"
+"POT-Creation-Date: 2019-12-06 11:48+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -401,29 +401,29 @@ msgstr ""
 #: ../../source/docs/training_manual/vector_classification/classification.rst:259
 msgid ""
 "Using the query builder that appears, enter the criterion "
-":kbd:`\"landuse\" = 'residential' AND \"name\" != ' |majorUrbanName| '` ,"
-" click :guilabel:`Ok` and choose a pale blue-grey for it and remove the "
-"border:"
+":kbd:`\"landuse\" = 'residential' AND \"name\" <> 'Swellendam'` (or "
+":kbd:`\"landuse\" = 'residential' AND \"name\" != 'Swellendam'`), click "
+":guilabel:`Ok` and choose a pale blue-grey for it and remove the border:"
 msgstr ""
 
-#: ../../source/docs/training_manual/vector_classification/classification.rst:270
+#: ../../source/docs/training_manual/vector_classification/classification.rst:271
 msgid ""
-"Add a new criterion :kbd:`\"landuse\" != 'residential' AND \"AREA\" >= "
+"Add a new criterion :kbd:`\"landuse\" <> 'residential' AND \"AREA\" >= "
 "0.00005` and choose a mid-green color."
 msgstr ""
 
-#: ../../source/docs/training_manual/vector_classification/classification.rst:272
+#: ../../source/docs/training_manual/vector_classification/classification.rst:273
 msgid ""
-"Add another new criterion :kbd:`\"name\"  =  ' |majorUrbanName| '` and "
-"assign it a darker grey-blue color in order to indicate the town's "
-"importance in the region."
+"Add another new criterion :kbd:`\"name\"  =  'Swellendam'` and assign it "
+"a darker grey-blue color in order to indicate the town's importance in "
+"the region."
 msgstr ""
 
-#: ../../source/docs/training_manual/vector_classification/classification.rst:275
+#: ../../source/docs/training_manual/vector_classification/classification.rst:276
 msgid "Click and drag this criterion to the top of the list."
 msgstr ""
 
-#: ../../source/docs/training_manual/vector_classification/classification.rst:277
+#: ../../source/docs/training_manual/vector_classification/classification.rst:278
 msgid ""
 "These filters are exclusive, in that they collectively exclude some areas"
 " on the map (i.e. those which are smaller that 0.00005, are not "
@@ -431,35 +431,35 @@ msgid ""
 " polygons take the style of the default :guilabel:`(no filter)` category."
 msgstr ""
 
-#: ../../source/docs/training_manual/vector_classification/classification.rst:282
+#: ../../source/docs/training_manual/vector_classification/classification.rst:283
 msgid ""
 "We know that the excluded polygons on our map cannot be residential "
 "areas, so give the default category a suitable pale green color."
 msgstr ""
 
-#: ../../source/docs/training_manual/vector_classification/classification.rst:285
+#: ../../source/docs/training_manual/vector_classification/classification.rst:286
 msgid "Your dialog should now look like this:"
 msgstr ""
 
-#: ../../source/docs/training_manual/vector_classification/classification.rst:290
+#: ../../source/docs/training_manual/vector_classification/classification.rst:291
 msgid "Apply this symbology."
 msgstr ""
 
-#: ../../source/docs/training_manual/vector_classification/classification.rst:292
+#: ../../source/docs/training_manual/vector_classification/classification.rst:293
 msgid "Your map will look something like this:"
 msgstr ""
 
-#: ../../source/docs/training_manual/vector_classification/classification.rst:297
+#: ../../source/docs/training_manual/vector_classification/classification.rst:298
 msgid ""
 "Now you have a map with |majorUrbanName| the most prominent residential "
 "area and other non-residential areas colored according to their size."
 msgstr ""
 
-#: ../../source/docs/training_manual/vector_classification/classification.rst:301
+#: ../../source/docs/training_manual/vector_classification/classification.rst:302
 msgid "|IC|"
 msgstr ""
 
-#: ../../source/docs/training_manual/vector_classification/classification.rst:303
+#: ../../source/docs/training_manual/vector_classification/classification.rst:304
 msgid ""
 "Symbology allows us to represent the attributes of a layer in an easy-to-"
 "read way. It allows us as well as the map reader to understand the "
@@ -468,11 +468,11 @@ msgid ""
 " techniques to solve them."
 msgstr ""
 
-#: ../../source/docs/training_manual/vector_classification/classification.rst:310
+#: ../../source/docs/training_manual/vector_classification/classification.rst:311
 msgid "|WN|"
 msgstr ""
 
-#: ../../source/docs/training_manual/vector_classification/classification.rst:312
+#: ../../source/docs/training_manual/vector_classification/classification.rst:313
 msgid ""
 "Now we have a nice-looking map, but how are we going to get it out of "
 "QGIS and into a format we can print out, or make into an image or PDF? "
@@ -502,5 +502,28 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Switch to the :guilabel:`Style` tab."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Using the query builder that appears,"
+#~ " enter the criterion :kbd:`\"landuse\" ="
+#~ " 'residential' AND \"name\" != ' "
+#~ "|majorUrbanName| '` , click :guilabel:`Ok` "
+#~ "and choose a pale blue-grey for"
+#~ " it and remove the border:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Add a new criterion :kbd:`\"landuse\" !="
+#~ " 'residential' AND \"AREA\" >= 0.00005` "
+#~ "and choose a mid-green color."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Add another new criterion :kbd:`\"name\"  "
+#~ "=  ' |majorUrbanName| '` and assign "
+#~ "it a darker grey-blue color in "
+#~ "order to indicate the town's importance"
+#~ " in the region."
 #~ msgstr ""
 

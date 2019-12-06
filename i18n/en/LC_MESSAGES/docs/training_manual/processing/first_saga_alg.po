@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project testing\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-28 10:31+0100\n"
+"POT-Creation-Date: 2019-12-06 11:48+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,30 +18,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.1\n"
 
-#: ../../source/docs/training_manual/processing/first_saga_alg.rst:6
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:8
 msgid "Running an external algorithm"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/first_saga_alg.rst:9
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:11
 msgid ""
 "In this lesson we will see how to use algorithms that depend on a third-"
 "party application, particularly SAGA, which is one of the main algorithm "
 "providers."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/first_saga_alg.rst:11
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:15
 msgid ""
 "All the algorithms that we have run so far are part of processing "
 "framework. That is, they are *native* algorithms implemented in the "
 "plugin and run by QGIS just like the plugin itself is run. However, one "
 "of the greatest features of the processing framework is that it can use "
-"algorithms from external applications and extend the possibilites of "
+"algorithms from external applications and extend the possibilities of "
 "those applications. Such algorithms are wrapped and included in the "
 "toolbox, so you can easily use them from QGIS, and use QGIS data to run "
 "them."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/first_saga_alg.rst:13
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:23
 msgid ""
 "Some of the algorithms that you see in the simplified view require third "
 "party applications to be installed in your system. One algorithm provider"
@@ -53,7 +53,7 @@ msgid ""
 "to be our main backend, so we will discuss it here."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/first_saga_alg.rst:15
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:31
 msgid ""
 "If you are on Windows, the best way to work with external algorithms is "
 "to install QGIS using the standalone installer. It will take care of "
@@ -62,13 +62,13 @@ msgid ""
 "and go to the *Providers/SAGA* group."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/first_saga_alg.rst:19
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:38
 msgid ""
 "The SAGA path should already be configured and pointing to the folder "
 "where SAGA is installed."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/first_saga_alg.rst:21
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:40
 msgid ""
 "If you have installed QGIS not using the standalone installer, then you "
 "must enter the path to your SAGA installation (which you must have "
@@ -76,7 +76,7 @@ msgid ""
 "changing according to the releases of SAGA]."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/first_saga_alg.rst:23
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:44
 msgid ""
 "In case you are using Linux, you do not have to set the path to your SAGA"
 " installation in the processing configuration. Instead, you must install "
@@ -90,7 +90,7 @@ msgid ""
 "compatibility in the configuration dialog, under the *SAGA* group."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/first_saga_alg.rst:27
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:56
 msgid ""
 "Once SAGA is installed, you can launch a SAGA algorithm double clicking "
 "on its name, as with any other algorithm. Since we are using the "
@@ -100,34 +100,34 @@ msgid ""
 " see something like this."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/first_saga_alg.rst:31
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:64
 msgid ""
 "In our case, and assuming that SAGA is correctly installed and "
 "configured, you should not see this window, and you will get to the "
 "parameters dialog instead."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/first_saga_alg.rst:33
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:67
 msgid ""
 "Let's try with a SAGA--based algorithm, the one called *Split shapes "
 "layer randomly*."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/first_saga_alg.rst:37
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:71
 msgid ""
 "Use the points layer in the project corresponding to this lesson as "
 "input, and the default parameter values, and you will get something like "
 "this (the split is random, so your result might be different)."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/first_saga_alg.rst:41
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:77
 msgid ""
 "The input layer has been split in two layers, each one with the same "
 "number of points. This result has been computed by SAGA, and later taken "
 "by QGIS and added to the QGIS project."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/first_saga_alg.rst:43
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:81
 msgid ""
 "If all goes fine, you will not notice any difference between this SAGA--"
 "based algorithm and one of the others that we have previously run. "
@@ -137,7 +137,7 @@ msgid ""
 "like this will be shown."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/first_saga_alg.rst:47
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:89
 msgid ""
 "This kind of problems might happen, even if SAGA (or any other "
 "application that we are calling from the processing framework) is "
@@ -145,11 +145,11 @@ msgid ""
 "Let's produce one of those error messages."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/first_saga_alg.rst:49
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:93
 msgid "Open the *Create graticule* algorithm and use the following values."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/first_saga_alg.rst:54
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:98
 msgid ""
 "We are using  width and height values that is larger than the specified "
 "extent, so SAGA cannot produce any output. In other words, the parameter "
@@ -158,14 +158,14 @@ msgid ""
 "the expected layer, and you will see the error message shown above."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/first_saga_alg.rst:56
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:104
 msgid ""
 "In SAGA >= 2.2.3, the command will adjust automatically wrong input data,"
 " so you'll not get an error. To provoke an error, use negative values for"
 " division."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/first_saga_alg.rst:58
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:107
 msgid ""
 "Understanding this kind of problems will help you solve them and find an "
 "explanation to what is happening. As you can see in the error message, a "
@@ -175,10 +175,28 @@ msgid ""
 "external applications as well."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/first_saga_alg.rst:60
+#: ../../source/docs/training_manual/processing/first_saga_alg.rst:113
 msgid ""
 "In the next lesson we will introduce the processing log, where "
 "information about commands run by geoalgorithms is kept, and you will see"
 " how to get more detail when issues like this appear."
 msgstr ""
+
+#~ msgid ""
+#~ "All the algorithms that we have "
+#~ "run so far are part of processing"
+#~ " framework. That is, they are "
+#~ "*native* algorithms implemented in the "
+#~ "plugin and run by QGIS just like"
+#~ " the plugin itself is run. However,"
+#~ " one of the greatest features of "
+#~ "the processing framework is that it "
+#~ "can use algorithms from external "
+#~ "applications and extend the possibilites "
+#~ "of those applications. Such algorithms "
+#~ "are wrapped and included in the "
+#~ "toolbox, so you can easily use "
+#~ "them from QGIS, and use QGIS data"
+#~ " to run them."
+#~ msgstr ""
 
