@@ -198,8 +198,8 @@ Appropriate for point geometry features, marker symbols have several
 
 .. _raster_image_marker:
 
-* **Raster image marker**: use images (:file:`PNG`, :file:`JPG`, :file:`BMP`...)
-  to render as marker symbol. The image can be a file on the disk, a remote URL
+* **Raster image marker**: use an image (:file:`PNG`, :file:`JPG`, :file:`BMP` ...)
+  as marker symbol. The image can be a file on the disk, a remote URL
   or an embedded file encoded as a base64 string (:ref:`more details <svg_paths>`).
   Width and height of the image can be set independently or using the
   |lockedGray| :sup:`Lock aspect ratio`.
