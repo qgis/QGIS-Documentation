@@ -733,7 +733,7 @@ Advanced digitizing
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 | |addRing|                 | Add Ring                                | |addPart|              | Add Part                |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
-| |fillRing|                | Fill Ring                               |                        |                         |
+| |fillRing|                | Fill Ring                               | |reverseLine|          | Swap direction          |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
 | |deleteRing|              | Delete Ring                             | |deletePart|           | Delete Part             |
 +---------------------------+-----------------------------------------+------------------------+-------------------------+
@@ -1035,7 +1035,18 @@ input widget. Your changes may then be saved with the |saveEdits| :sup:`Save Lay
 
 QGIS options dialog (Digitizing tab then **Curve offset tools** section) allows
 you to configure some parameters like **Join style**, **Quadrant segments**,
-**Miter limit**.
+**Miter lim-it**.
+
+.. index::
+   single: Digitizing tools; Reverse Line
+.. _reverse_line:
+
+Reverse Line
+------------
+
+You can change the direction of a line feature for digitizing purposes. 
+Activate the reverse line tool by clicking |reverseLine| :sup:`Reverse line`. 
+Select the line with the cursor to change the direction of the line.
 
 
 .. index::
@@ -1551,7 +1562,8 @@ To edit features in-place:
    If you need to create a new substitution manually,
    please add it also to the substitutions.txt file in the
    source folder.
-
+.. |reverseLine| image:: /static/common/mActionReverseLine.png
+   :width: 1.5em
 .. |addPart| image:: /static/common/mActionAddPart.png
    :width: 1.5em
 .. |addRing| image:: /static/common/mActionAddRing.png
