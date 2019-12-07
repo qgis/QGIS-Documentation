@@ -434,17 +434,53 @@ The points correspond to the pixel centroids that intersect the line layer.
 Parameters
 ..........
 
-``Raster layer`` [raster]
-  Raster layer in input.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Vector layer`` [vector: line]
-  Line vector layer to follow.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Raster layer**
+     - ``INPUT_RASTER``
+     - [raster]
+     - Input raster layer
+   * - **Vector layer**
+     - ``INPUT_VECTOR``
+     - [vector: line]
+     - Input line vector layer
+   * - **Points along line**
+     - ``OUTPUT``
+     - [vector: point]
 
+       Default: ``[Create temporary layer]``
+     - Resulting point layer with pixel centroids. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+       
 Outputs
 .......
 
-``Points from polygons`` [vector: point]
-  Resulting point layer of pixel centroid.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Points along line**
+     - ``OUTPUT``
+     - [vector: point]
+     - Resulting point layer with pixel centroids
 
 
 .. _qgisgeneratepointspixelcentroidsinsidepolygons:
@@ -464,17 +500,53 @@ The points correspond to the pixel centroids that intersect the polygon layer.
 Parameters
 ..........
 
-``Raster layer`` [raster]
-  Raster layer in input.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Vector layer`` [vector: polygon]
-  Polygon vector layer.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Raster layer**
+     - ``INPUT_RASTER``
+     - [raster]
+     - Input raster layer
+   * - **Vector layer**
+     - ``INPUT_VECTOR``
+     - [vector: polygon]
+     - Input polygon vector layer
+   * - **Points from polygons**
+     - ``OUTPUT``
+     - [vector: point]
 
+       Default: ``[Create temporary layer]``
+     - Resulting point layer of pixel centroids. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+       
 Outputs
 .......
 
-``Points from polygons`` [vector: point]
-  Resulting point layer of pixel centroid.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Points from polygons**
+     - ``OUTPUT``
+     - [vector: point]
+     - Resulting point layer of pixel centroids
 
 
 .. _qgisimportphotos:
