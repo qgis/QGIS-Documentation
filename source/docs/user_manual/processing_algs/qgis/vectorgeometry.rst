@@ -63,7 +63,7 @@ Parameters
      - [same as input]
 
        Default: ``[Create temporary layer]``
-     - Specify the output (input copy with geometry) layer
+     - Specify the output (input copy with geometry) layer.
        One of:
 
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
