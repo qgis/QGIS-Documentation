@@ -796,7 +796,10 @@ Types of error messages and their meanings
      -
 
    * - Invalid coordinate
-     - This error happens when A point don't have a single coordinate pair. The coordinate pair don't contains a latitude value and a longitude value in that order. 
+     - For a point geometry, this error happens when the geometry does not
+       have a proper coordinate pair.
+       The coordinate pair does not contain a latitude value and a longitude
+       value in that order. 
      -
 
    * - Ring is not closed
