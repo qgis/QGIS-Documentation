@@ -613,7 +613,7 @@ information (number of errors found and types of error):
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
-.. seealso:: :ref:`qgisfixgeometries`
+.. seealso:: :ref:`qgisfixgeometries` and the core plugin :ref:`geometry_checker`
 
 Parameters
 ..........
@@ -750,7 +750,7 @@ Types of error messages and their meanings
      - Example
 
    * - Repeated point
-     - This error happens when a given vertex is repeated.
+     - This error happens when a given node is repeated.
      - .. figure:: img/geos_rep_point.png
           :align: center
 
@@ -786,15 +786,16 @@ Types of error messages and their meanings
           :align: center
 
    * - Duplicate rings
-     - 
-     - 
+     - This error happens when a part of MultiPolygon geometry is inside a hole of a MultiPolygon geometry. 
+     - .. figure:: img/geos_dupl_rings.png
+          :align: center 
 
    * - Too few points in geometry component
      - 
      -
 
    * - Invalid coordinate
-     - 
+     - This error happens when A point don't have a single coordinate pair. The coordinate pair don't contains a latitude value and a longitude value in that order. 
      -
 
    * - Ring is not closed
@@ -828,16 +829,19 @@ Types of error messages and their meanings
      -
 
    * - Line %1 contains %n duplicate node(s) at %2 
-     - 
-     - 
+     - This error happens when a given node is repeated.
+     - .. figure:: img/geos_rep_point.png
+          :align: center 
 
    * - Segments %1 and %2 of line %3 intersect at %4 
-     - 
-     -
+     - This error happens when segments lines intersects between them.
+     - .. figure:: img/qgis_seg_line_int.png
+          :align: center
 
    * - Ring self-intersection 
-     - 
-     -
+     - This error happens when a geometry touches itself and generates a ring.
+     - .. figure:: img/geos_ring_inter.png
+          :align: center
 
    * - Ring %1 of polygon %2 not in exterior ring
      -
