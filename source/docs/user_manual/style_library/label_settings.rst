@@ -311,6 +311,8 @@ can alter the angle of the label placement with the :guilabel:`Rotation`
 setting. Thus, placement in a selected quadrant with a defined rotation is
 possible.
 
+.. _labels_line_placement:
+
 Placement for line layers
 -------------------------
 
@@ -404,75 +406,91 @@ Rendering tab
 In the |render| :guilabel:`Rendering` tab, you can tune when the labels can
 be rendered and their interaction with other labels and features.
 
-Under :guilabel:`Label options`, you find the :ref:`scale-based <label_scaledepend>`
-and the :guilabel:`Pixel size-based` visibility settings.
+Label options
+-------------
 
-The :guilabel:`Label z-index` determines the order in which labels are rendered,
-as well in relation with other feature labels in the layer (using data-defined
-override expression), as with labels from other layers. Labels with a higher
-z-index are rendered on top of labels (from any layer) with lower z-index.
+Under :guilabel:`Label options`:
 
-Additionally, the logic has been tweaked so that if 2 labels have
-matching z-indexes, then:
+* You find the :ref:`scale-based <label_scaledepend>`
+  and the :guilabel:`Pixel size-based` visibility settings.
 
-* if they are from the same layer, the smaller label will be drawn above the larger label
-* if they are from different layers, the labels will be drawn in the same order
-  as their layers themselves (ie respecting the order set in the map legend).
+* The :guilabel:`Label z-index` determines the order in which labels are rendered,
+  as well in relation with other feature labels in the layer (using data-defined
+  override expression), as with labels from other layers. Labels with a higher
+  z-index are rendered on top of labels (from any layer) with lower z-index.
 
-Note that this setting doesn't make labels to be drawn below the
-features from other layers, it just controls the order in which
-labels are drawn on top of all the layer's features.
+  Additionally, the logic has been tweaked so that if two labels have
+  matching z-indexes, then:
 
-While rendering labels and in order to display readable labels,
-QGIS automatically evaluates the position of the labels and can hide some of them
-in case of collision. You can however choose to |checkbox| :guilabel:`Show all
-labels for this layer (including colliding labels)` in order to manually fix
-their placement.
+  * if they are from the same layer, the smaller label will be drawn above the
+    larger label
+  * if they are from different layers, the labels will be drawn in the same order
+    as their layers themselves (ie respecting the order set in the map legend).
 
-With data-defined expressions in :guilabel:`Show label` and :guilabel:`Always Show`
-you can fine tune which labels should be rendered.
+  .. note:: This setting doesn't make labels to be drawn below the
+     features from other layers, it just controls the order in which
+     labels are drawn on top of all the layers' features.
 
+* While rendering labels and in order to display readable labels,
+  QGIS automatically evaluates the position of the labels and can hide some of them
+  in case of collision. You can however choose to |checkbox| :guilabel:`Show all
+  labels for this layer (including colliding labels)` in order to manually fix
+  their placement (see :ref:`label_toolbar`).
+* With data-defined expressions in :guilabel:`Show label` and :guilabel:`Always Show`
+  you can fine tune which labels should be rendered.
+* Allow to :guilabel:`Show upside-down labels`: alternatives are **Never**,
+  **when rotation defined** or **always**.
 
-Under :guilabel:`Feature options`, you can choose to :guilabel:`label every
-part of a multi-part feature` and :guilabel:`limit the number of features to be
-labeled`. Both line and polygon layers offer the option to set a minimum size
-for the features to be labeled, using :guilabel:`Suppress labeling of features
-smaller than`.
-For polygon features, you can also filter the labels to show according to
-whether they completely fit within the feature or not.
-For line features, you can choose to :guilabel:`Merge connected lines
-to avoid duplicate labels`, rendering a quite airy map in conjunction with
-the :guilabel:`Distance` or :guilabel:`Repeat` options in Placement tab.
+Feature options
+---------------
 
+Under :guilabel:`Feature options`:
 
-From the :guilabel:`Obstacles` frame, you can manage the covering relation between
-labels and features. Activate the |checkbox| :guilabel:`Discourage labels from
-covering features` option to decide whether features of the layer should act as
-obstacles for any label (including labels from other features in the same layer).
+* You can choose to :guilabel:`label every part of a multi-part feature`
+  and :guilabel:`limit the number of features to be labeled`.
+* Both line and polygon layers offer the option to set a minimum size for
+  the features to be labeled, using :guilabel:`Suppress labeling of features
+  smaller than`.
+* For polygon features, you can also filter the labels to show according to
+  whether they completely fit within their feature or not.
+* For line features, you can choose to :guilabel:`Merge connected lines
+  to avoid duplicate labels`, rendering a quite airy map in conjunction with
+  the :guilabel:`Distance` or :guilabel:`Repeat` options in the :ref:`Placement
+  <labels_line_placement>` tab.
+
+Obstacles
+---------
+
 An obstacle is a feature QGIS tries as far as possible to not place labels over.
-Instead of the whole layer, you can define a subset of features to use as obstacles,
-using the |dataDefined| :sup:`data-defined override` control next to the option.
+From the :guilabel:`Obstacles` frame, you can manage the covering relation
+between labels and features:
 
-The |slider| priority control slider for obstacles allows you to make labels
-prefer to overlap features from certain layers rather than others.
-A **Low weight** obstacle priority means that features of the layer are less
-considered as obstacles and thus more likely to be covered by labels.
-This priority can also be data-defined, so that within the same layer,
-certain features are more likely to be covered than others.
+* Activate the |checkbox| :guilabel:`Discourage labels from covering features`
+  option to decide whether features of the layer should act as obstacles for
+  any label (including labels from other features in the same layer).
+  
+  Instead of the whole layer, you can define a subset of features to use as obstacles,
+  using the |dataDefined| :sup:`data-defined override` control next to the option.
 
-For polygon layers, you can choose the type of obstacle features could be
-by minimising the labels placement:
+* The |slider| priority control slider for obstacles allows you to make labels
+  prefer to overlap features from certain layers rather than others.
+  A **Low weight** obstacle priority means that features of the layer are less
+  considered as obstacles and thus more likely to be covered by labels.
+  This priority can also be data-defined, so that within the same layer,
+  certain features are more likely to be covered than others.
 
-* **over the feature's interior**: avoids placing labels over the interior of
-  the polygon (prefers placing labels totally outside or just slightly inside
-  the polygon)
-* or **over the feature's boundary**: avoids placing labels over boundary of
-  the polygon (prefers placing labels outside or completely inside the
-  polygon). E.g., it can be useful for regional boundary layers, where the
-  features cover an entire area. In this case, it's impossible to avoid
-  placing labels within these features, and it looks much better to avoid
-  placing them over the boundaries between features.
+* For polygon layers, you can choose the type of obstacle the features could be,
+  by minimising the labels placement:
 
+  * **over the feature's interior**: avoids placing labels over the interior of
+    the polygon (prefers placing labels totally outside or just slightly inside
+    the polygon)
+  * or **over the feature's boundary**: avoids placing labels over boundary of
+    the polygon (prefers placing labels outside or completely inside the
+    polygon). E.g., it can be useful for regional boundary layers, where the
+    features cover an entire area. In this case, it's impossible to avoid
+    placing labels within these features, and it looks much better to avoid
+    placing them over the boundaries between features.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
