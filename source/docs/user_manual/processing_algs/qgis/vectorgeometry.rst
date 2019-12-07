@@ -787,6 +787,7 @@ Types of error messages and their meanings
 
    * - Duplicate rings
      - This error happens when a part of MultiPolygon geometry is inside a hole of a MultiPolygon geometry. 
+
      - .. figure:: img/geos_dupl_rings.png
           :align: center 
 
