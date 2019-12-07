@@ -438,7 +438,7 @@ Under :guilabel:`Label options`:
   their placement (see :ref:`label_toolbar`).
 * With data-defined expressions in :guilabel:`Show label` and :guilabel:`Always Show`
   you can fine tune which labels should be rendered.
-* Allow to :guilabel:`Show updside-down labels` which could be **Never**,
+* Allow to :guilabel:`Show upside-down labels`: alternatives are **Never**,
   **when rotation defined** or **always**.
 
 Feature options
