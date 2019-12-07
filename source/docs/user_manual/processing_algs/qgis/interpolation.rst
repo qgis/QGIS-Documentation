@@ -369,53 +369,6 @@ vector line layer with the triangulation boundaries.
 Parameters
 ..........
 
-``Vector layer`` [vector: point]
-  Point vector layer to use for the interpolation.
-
-``Interpolation attribute`` [tablefield: numeric]
-  Field used for the interpolation. Once you have chosen the layer and the field
-  click on the |signPlus| button to add the layer and the field to the list.
-  Click on the |signMinus| button to remove the layer from the list.
-  It is possible to insert lines or polygons as constraints for the triangulation,
-  by specifying either ``Points``, ``Structure lines`` or ``Break lines`` in the
-  ``Type`` column of the table.
-
-``Use Z-coordinate for interpolation`` [boolean]
-  Uses the layer's stored Z values.
-
-``Interpolation method`` [enumeration]
-  There are two different choices:
-
-  * 0 --- Linear
-  * 1 --- Clough-Toucher (cubic)
-
-``Extent (xmin, xmax, ymin, ymax)`` [extent]
-  Extent of the output raster layer. You have to declare the output extent by
-  either choosing it from the map canvas, selecting it from another layer or type
-  it manually.
-
-``Output raster size`` [number]
-  Allows to set the size of the interpolated output raster layer by specifying the rows and columns
-  **or** the X and Y pixel size.
-
-  Increasing the number of rows or columns will decrease the cell size. Similarly, the values in ``Rows`` and
-  ``Columns`` will be updated when one of them are changed.
-
-  ``Number of rows`` [number]
-    Total number of rows of the output raster layer.
-
-  ``Number of columns`` [number]
-    Total number of columns of the output raster layer.
-
-  ``Pixel Size X`` [number]
-    Horizontal resolution of each pixel in output raster, in layer units.
-
-  ``Pixel Size Y`` [number]
-    Vertical resolution of each pixel in output raster, in layer units.
-
-Parameters
-..........
-
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
