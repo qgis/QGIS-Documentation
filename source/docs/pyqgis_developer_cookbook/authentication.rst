@@ -364,7 +364,7 @@ and can be used as in the following snippet:
   tabGui.insertTab( 1, gui, "Configurations" )
 
 The above example is taken from the QGIS source :source:`code
-<src/providers/postgres/qgspgnewconnection.cpp#L42>`
+<src/providers/postgres/qgspgnewconnection.cpp#L42>`.
 The second parameter of the GUI constructor refers to data provider type. The
 parameter is used to restrict the compatible :term:`Authentication Method`\s with
 the specified provider.
