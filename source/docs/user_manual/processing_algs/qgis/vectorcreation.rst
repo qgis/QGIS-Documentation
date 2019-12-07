@@ -30,49 +30,87 @@ them to the right.
 Parameters
 ..........
 
-``Input layer`` [vector: line]
-  Line vector layer in input to elaborate the offset on.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Number of features to create`` [number |dataDefined|]
-  Number of offset copies to generate for each feature.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input line vector layer to use for the offsets.
+   * - **Number of features to create**
+     - ``COUNT``
+     - [number |dataDefined|]
 
-  Default: *10*
+       Default: 10
+     - Number of offset copies to generate for each feature
+   * - **Offset step distance**
+     - ``OFFSET``
+     - [number |dataDefined|]
 
-``Offset step distance`` [number |dataDefined|]
-  Distance between two consecutive offset copies.
+       Default: 1.0
+     - Distance between two consecutive offset copies
+   * - **Segments**
+     - ``SEGMENTS``
+     - [number]
 
-  Default: *1.0*
+       Default: 8
+     - Number of line segments to use to approximate a quarter
+       circle when creating rounded offsets
+   * - **Join style**
+     - ``JOIN_STYLE``
+     - [enumeration]
 
-``Segments`` [number]
-  Number of line segments to use to approximate a quarter circle when creating
-  rounded offsets.
+       Default: 0
+     - Specify whether round, miter or beveled joins should be
+       used when offsetting corners in a line. One of:
 
-  Default: *8*
+       * 0 --- Round
+       * 1 --- Miter
+       * 2 --- Bevel
 
-``Join style`` [enumeration]
-  Specify whether round, miter or beveled joins should be used when offsetting
-  corners in a line.
+   * - **Miter limit**
+     - ``MITER_LIMIT``
+     - [number]
 
-  Options:
+       Default: 2.0
+     - Only applicable for mitered join styles, and controls
+       the maximum distance from the offset curve to use when
+       creating a mitered join.
+   * - **Offset lines**
+     - ``OUTPUT``
+     - [vector: line]
+     - Specify the output line layer with offset features. One of:
 
-  * 0 --- Round
-  * 1 --- Miter
-  * 2 --- Bevel
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-  Default: *0*
-
-``Miter limit`` [number]
-  Only applicable for mitered join styles, and controls the maximum distance from
-  the offset curve to use when creating a mitered join.
-
-  Default: *2.0*
-
+       The file encoding can also be changed here.
+       
 Outputs
 .......
 
-``Offset lines`` [vector: line]
-  Output line layer with offset features.
-  The original features are also copied.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Offset lines**
+     - ``OUTPUT``
+     - [vector: line]
+     - Output line layer with offset features.
+       The original features are also copied.
 
 
 .. _qgisarraytranslatedfeatures:
