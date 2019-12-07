@@ -320,10 +320,6 @@ Using the |addOgrLayer| :sup:`Add Vector Layer` tool:
    mounts.
 
 
-.. index:: CSV, Delimited text files
-   see: Comma Separated Values; CSV
-.. _vector_loading_csv:
-
 Loading a mesh layer
 --------------------
 
@@ -332,6 +328,10 @@ Mesh layers (currently :file:`.grb`, :file:`.grb2`, :file:`.bin`, :file:`.grib`,
 |addMeshLayer| :guilabel:`Mesh` tab in the datasource manager. For further instructions, read
 :ref:`label_meshdata`.
 
+
+.. index:: CSV, Delimited text files
+   see: Comma Separated Values; CSV
+.. _vector_loading_csv:
 
 Importing a delimited text file
 -------------------------------
