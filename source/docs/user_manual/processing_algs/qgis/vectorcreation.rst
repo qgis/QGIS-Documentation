@@ -244,50 +244,92 @@ units of this CRS.
 Parameters
 ..........
 
-``Grid type`` [enumeration]
-  Shape of the grid. Many options available:
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-  * 0 --- Point
-  * 1 --- Line
-  * 2 --- Rectangle (polygon)
-  * 3 --- Diamond (polygon)
-  * 4 --- Hexagon (polygon)
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Grid type**
+     - ``TYPE``
+     - [enumeration]
 
-  Default: *0*
+       Default: 0
+     - Shape of the grid. One of:
 
-``Grid extent`` [extent]
-  Extent of the grid.
+       * 0 --- Point
+       * 1 --- Line
+       * 2 --- Rectangle (polygon)
+       * 3 --- Diamond (polygon)
+       * 4 --- Hexagon (polygon)
 
-``Horizontal spacing`` [number]
-  Size of a grid cell on the X-axis.
+   * - **Grid extent**
+     - ``EXTENT``
+     - [extent]
+     - Extent of the grid
+   * - **Horizontal spacing**
+     - ``HSPACING``
+     - [number]
 
-  Default: *1.0*
+       Default: 1.0
+     - Size of a grid cell on the X-axis
+   * - **Vertical spacing**
+     - ``VSPACING``
+     - [number]
 
-``Vertical spacing`` [number]
-  Size of a grid cell on the Y-axis.
+       Default: 1.0
+     - Size of a grid cell on the Y-axis
+   * - **Horizontal overlay**
+     - ``HOVERLAY``
+     - [number]
 
-  Default: *1.0*
+       Default: 0.0
+     - Overlay distance between two consecutive grid cells on the X-axis
+   * - **Vertical overlay**
+     - ``VOVERLAY``
+     - [number]
 
-``Horizontal overlay`` [number]
-  Overlay distance between two consecutive grid cells on the X-axis.
+       Default: 0.0
+     - Overlay distance between two consecutive grid cells on the Y-axis
+   * - **Grid CRS**
+     - ``CRS``
+     - [crs]
 
-  Default: *0.0*
+       Default: *Project CRS*
+     - Coordinate reference system to apply to the grid
+   * - **Grid**
+     - ``OUTPUT``
+     - [vector: point, vector: line or vector: polygon]
+       
+       Default: ``[Create temporary layer]``
+     - Resulting vector grid layer. One of:
 
-``Vertical overlay`` [number]
-  Overlay distance between two consecutive grid cells on the Y-axis.
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-  Default: *0.0*
-
-``Grid CRS`` [crs]
-  Coordinate reference system to apply to the grid.
-
-  Default: *Project CRS*
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Grid`` [vector: any]
-  Resulting vector grid layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Grid**
+     - ``OUTPUT``
+     - [vector: point, vector: line or vector: polygon]
+     - Resulting vector grid layer
 
 
 .. _qgiscreatepointslayerfromtable:
