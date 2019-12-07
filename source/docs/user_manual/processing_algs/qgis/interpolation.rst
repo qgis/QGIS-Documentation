@@ -266,7 +266,7 @@ Parameters
      - [string]
      - Vector layer(s) and field(s) to use for the interpolation, coded
        in a string (see the ``ParameterInterpolationData`` class in
-       python/plugins/processing/algs/qgis/ui/InterpolationWidgets.py
+       :source:`InterpolationWidgets <python/plugins/processing/algs/qgis/ui/InterpolationWidgets.py>`
        for more details).
 
        The following GUI elements are provided to compose the
@@ -431,7 +431,7 @@ Parameters
      - [string]
      - Vector layer(s) and field(s) to use for the interpolation, coded
        in a string (see the ``ParameterInterpolationData`` class in
-       python/plugins/processing/algs/qgis/ui/InterpolationWidgets.py
+       :source:`InterpolationWidgets <python/plugins/processing/algs/qgis/ui/InterpolationWidgets.py>`
        for more details).
 
        The following GUI elements are provided to compose the
