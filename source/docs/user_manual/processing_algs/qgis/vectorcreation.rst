@@ -85,6 +85,8 @@ Parameters
    * - **Offset lines**
      - ``OUTPUT``
      - [vector: line]
+
+       Default: ``[Create temporary layer]``
      - Specify the output line layer with offset features. One of:
 
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
@@ -117,57 +119,104 @@ Outputs
 
 Array of translated features
 ----------------------------
-Creates copies of features in a layer, by creating multiple translated versions of each.
-Each copy is incrementally displaced by a preset amount in the X, Y and/or Z axis.
+Creates copies of features in a layer by creating multiple translated
+versions of each.
+Each copy is incrementally displaced by a preset amount in the X, Y and/or
+Z axis.
 
 M values present in the geometry can also be translated.
 
 .. figure:: img/translate_array.png
    :align: center
 
-   Input layers in blue tones, output layers with translated features in red tones
+   Input layers in blue tones, output layers with translated features in
+   red tones
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgistranslategeometry`, :ref:`qgisarrayoffsetlines`
 
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Vector layer to translate features.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Number of features to create`` [number |dataDefined|]
-  Number of copies to generate for each feature.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input vector layer to translate
+   * - **Number of features to create**
+     - ````
+     - [number |dataDefined|]
 
-  Default: *10*
+       Default: 10
+     - Number of copies to generate for each feature
+   * - **Step distance (x-axis)**
+     - ````
+     - [number |dataDefined|]
 
-``Step distance (x-axis)`` [number |dataDefined|]
-  Displacement to apply on the X axis.
+       Default: 0.0
+     - Displacement to apply on the X axis
+   * - **Step distance (y-axis)**
+     - ````
+     - [number |dataDefined|]
 
-  Default: *0.0*
+       Default: 0.0
+     - Displacement to apply on the Y axis
+   * - **Step distance (z-axis)**
+     - ````
+     - [number |dataDefined|]
 
-``Step distance (y-axis)`` [number |dataDefined|]
-  Displacement to apply on the Y axis.
+       Default: 0.0
+     - Displacement to apply on the Z axis
+   * - **Step distance (m values)**
+     - ````
+     - [number |dataDefined|]
 
-  Default: *0.0*
+       Default: 0.0
+     - Displacement to apply on M
+   * - **Translated**
+     - ``OUTPUT``
+     - [same as input]
 
-``Step distance (z-axis)`` [number |dataDefined|]
-  Displacement to apply on the Z axis.
+       Default: ``[Create temporary layer]``
+     - Output vector layer with translated (moved) copies
+       of the features.
+       The original features are also copied. One of:
 
-  Default: *0.0*
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-``Step distance (m values)`` [number |dataDefined|]
-  Offset value to apply on M.
-
-  Default: *0.0*
-
+       The file encoding can also be changed here.
+       
 Outputs
 .......
 
-``Translated`` [vector: any]
-  Output vector layer with translated (moved) copies of the features.
-  The original features are also copied.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Translated**
+     - ``OUTPUT``
+     - [same as input]
+     - Output vector layer with translated (moved)
+       copies of the features.
+       The original features are also copied.
 
 
 .. _qgiscreategrid:
