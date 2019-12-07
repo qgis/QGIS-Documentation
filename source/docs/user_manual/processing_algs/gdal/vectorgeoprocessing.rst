@@ -48,7 +48,7 @@ Parameters
       - Additional GDAL creation options.
    *  - **Clipped (extent)**
       - ``OUTPUT``
-      - [vector: any]
+      - [same as input]
       - The output (clipped) layer
 
 Outputs
@@ -65,7 +65,7 @@ Outputs
       - Description
    *  - **Output layer**
       - ``OUTPUT``
-      - [vector: any]
+      - [same as input]
       - The output (clipped) layer.
         The default format is "ESRI Shapefile".
 
@@ -109,7 +109,7 @@ Parameters
       - Additional GDAL creation options.
    *  - **Clipped (mask)**
       - ``OUTPUT``
-      - [vector: any]
+      - [same as input]
       - The output (masked) layer
 
 Outputs
@@ -126,7 +126,7 @@ Outputs
       - Description
    *  - **Output layer**
       - ``OUTPUT``
-      - [vector: any]
+      - [same as input]
       - The output (masked) layer.
         The default format is "ESRI Shapefile".
 
@@ -220,7 +220,7 @@ Parameters
       - Additional GDAL creation options.
    *  - **Dissolved**
       - ``OUTPUT``
-      -  [vector: any]
+      -  [same as input]
       - The output layer
 
 Outputs
@@ -237,6 +237,6 @@ Outputs
       - Description
    *  - **Dissolved**
       - ``OUTPUT``
-      - [vector: any]
+      - [same as input]
       - The output multipart geometry layer (with dissolved geometries)
 
