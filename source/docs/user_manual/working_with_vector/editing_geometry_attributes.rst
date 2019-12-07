@@ -1044,7 +1044,7 @@ you to configure some parameters like **Join style**, **Quadrant segments**,
 Reverse Line
 ------------
 
-You can change the direction of a line feature for digitizing purposes. 
+You can change the direction of a line feature. 
 Activate the reverse line tool by clicking |reverseLine| :sup:`Reverse line`. 
 Select the line with the cursor to change the direction of the line.
 
