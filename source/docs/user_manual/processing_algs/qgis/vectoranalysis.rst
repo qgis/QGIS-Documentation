@@ -1078,7 +1078,7 @@ Outputs
      - Description
    * - **Output layer**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
      - The output layer with additional fields reporting the
        overlap (in map units and percentage) of the input feature
        overlapped by each of the selected layers.
