@@ -190,16 +190,35 @@ Parameters
      - Fields to match duplicates by
    * - **Filtered (no duplicates)**
      - ``OUTPUT``
-     - [feature sink]
-     - Feature sink containing the remaining features.
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output layer containing the unique features.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
    * - **Filtered (duplicates)**
 
        (Optional)
      - ``DUPLICATES``
-     - [feature sink]
-     - Feature sink containing the removed features.
-       Will not be produced if not specifed (left as ``[Skip output]``).
+     - [same as input]
 
+       Default: ``[Skip output]``
+     - Specify the output layer containing only the duplicates.
+       One of:
+
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 ..........
@@ -216,21 +235,22 @@ Outputs
    * - **Count of retained records**
      - ``RETAINED_COUNT``
      - [Number]
-     - Count of retained records
+     - Count of unique records
    * - **Count of discarded duplicate records**
      - ``DUPLICATE_COUNT``
      - [Number]
      - Count of discarded duplicate records
    * - **Filtered (no duplicates)**
      - ``OUTPUT``
-     - [String]
-     - The link to the output (duplicates removed)
+     - [same as input]
+     - Vector layer containing the unique features.
    * - **Filtered (duplicates)**
 
        (Optional)
      - ``DUPLICATES``
-     - [String]
-     - The link to a vector layer containing the removed duplicates (if defined)
+     - [same as input]
+     - Vector layer containing the removed features.
+       Will not be produced if not specifed (left as ``[Skip output]``).
 
 
 .. _qgisdropgeometries:
@@ -646,7 +666,9 @@ Parameters
    * - **Discard records which could not be joined**
      - ``DISCARD_NONMATCHING``
      - [boolean]
-     - Discard records which can not be joined
+     
+       Default: False
+     - Remove from the output the input layer records which could not be joined
    * - **Joined field prefix**
      - ``PREFIX``
      - [string]
@@ -654,11 +676,41 @@ Parameters
    * - **Maximum nearest neighbors**
      - ``NEIGHBORS``
      - [number]
+     
+       Default: 1
      - Maximum number of nearest neighbors
    * - **Maximum distance**
      - ``MAX_DISTANCE``
      - [number]
      - Maximum search distance
+   * - **Joined layer**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specify the vector layer containing the joined features. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+   * - **Unjoinable features from first layer**
+     - ``NON_MATCHING``
+     - [same as input]
+
+       Default: ``[Skip output]``
+     - Specify the vector layer containing the features that could
+       not be joined. One of:
+
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table 
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
