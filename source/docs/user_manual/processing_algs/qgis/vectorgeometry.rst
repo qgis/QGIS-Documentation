@@ -750,7 +750,7 @@ Types of error messages and their meanings
      - Example
 
    * - Repeated point
-     - This error happens when a given node is repeated.
+     - This error happens when a given vertex is repeated.
      - .. figure:: img/geos_rep_point.png
           :align: center
 
