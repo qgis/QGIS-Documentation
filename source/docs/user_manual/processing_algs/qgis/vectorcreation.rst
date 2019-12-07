@@ -154,31 +154,31 @@ Parameters
      - [vector: line]
      - Input vector layer to translate
    * - **Number of features to create**
-     - ````
+     - ``COUNT``
      - [number |dataDefined|]
 
        Default: 10
      - Number of copies to generate for each feature
    * - **Step distance (x-axis)**
-     - ````
+     - ``DELTA_X``
      - [number |dataDefined|]
 
        Default: 0.0
      - Displacement to apply on the X axis
    * - **Step distance (y-axis)**
-     - ````
+     - ``DELTA_Y``
      - [number |dataDefined|]
 
        Default: 0.0
      - Displacement to apply on the Y axis
    * - **Step distance (z-axis)**
-     - ````
+     - ``DELTA_Z``
      - [number |dataDefined|]
 
        Default: 0.0
      - Displacement to apply on the Z axis
    * - **Step distance (m values)**
-     - ````
+     - ``DELTA_M``
      - [number |dataDefined|]
 
        Default: 0.0
@@ -344,36 +344,77 @@ Besides X and Y coordinates you can also specify Z and M fields.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer or geometryless table.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``X field`` [tablefield: any]
-  Field containing the X coordinate.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer or a table.
+   * - **X field**
+     - ``XFIELD``
+     - [tablefield: any]
+     - Field containing the X coordinate
+   * - **Y field**
+     - ``YFIELD``
+     - [tablefield: any]
+     - Field containing the Y coordinate
+   * - **Z field**
 
-``Y field`` [tablefield: any]
-  Field containing the Y coordinate.
+       Optional
+     - ``ZFIELD``
+     - [tablefield: any]
+     - Field containing the Z coordinate
+   * - **M field**
 
-``Z field`` [tablefield: any]
-  Optional
+       Optional
+     - ``MFIELD``
+     - [tablefield: any]
+     - Field containing the M value
+   * - **Target CRS**
+     - ``CRS``
+     - [crs]
 
-  Field containing the Z coordinate.
+       Default: ``EPSG:4326``
+     - Coordinate reference system to use for layer.
+       The provided coordinates are assumed to be compliant.
 
-``M field`` [tablefield: any]
-  Optional
+   * - **Translated**
+     - ``OUTPUT``
+     - [vector: point]
 
-  Field containing the M coordinate.
+       Default: ``[Create temporary layer]``
+     - Specify the resulting point layer. One of:
 
-``Target CRS`` [crs]
-  Coordinate reference system to use for layer.
-  Provided coordinates are assumed to be compliant.
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-  Default: *EPSG:4326*
-
+       The file encoding can also be changed here.
+       
 Outputs
 .......
 
-``Points from table`` [vector: point]
-  The resulting point layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Points from table**
+     - ``OUTPUT``
+     - [vector: point]
+     - The resulting point layer
 
 
 .. _qgisgeneratepointspixelcentroidsalongline:
