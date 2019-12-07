@@ -185,7 +185,7 @@ As before we have to set some parameters before the script body:
    this case *Point pattern analysis*::
 
     ##Point pattern analysis=group
-#. Define an input parameter (a vector layer) that will contstrain the
+#. Define an input parameter (a vector layer) that will constrain the
    placement of the random points::
 
     ##Layer=vector
