@@ -838,7 +838,8 @@ Types of error messages and their meanings
           :align: center 
 
    * - Segments %1 and %2 of line %3 intersect at %4 
-     - This error happens when segments lines intersects between them.
+     - This error happens when a line self intersects (two segments of the
+       line intersect each other).
      - .. figure:: img/qgis_seg_line_int.png
           :align: center
 
