@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 |LS| Creating Detailed Maps with the Atlas Tool
 ===============================================================================
 
@@ -484,4 +480,3 @@ then use it to your enhance your data and maps visibility.
    :width: 1.5em
 .. |select| image:: /static/common/mActionSelect.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

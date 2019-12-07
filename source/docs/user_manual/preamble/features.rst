@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. _qgis.documentation.features:
 
 ********
@@ -97,7 +93,7 @@ Publish maps on the Internet
 ----------------------------
 
 QGIS can be used as a WMS, WMTS, WMS-C or WFS and WFS-T client, and as
-a WMS, WCS or WFS server. (See section :ref:`sec_ogc`.) Additionally,
+a WMS, WCS or WFS server (see section :ref:`sec_ogc`). Additionally,
 you can publish your data on the Internet using a webserver with UMN
 MapServer or GeoServer installed.
 
@@ -201,12 +197,3 @@ More info:
 
 https://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-files/
 https://linuxaria.com/article/open-files-in-linux
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

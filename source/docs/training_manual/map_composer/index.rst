@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 *******************************************************************************
 |MOD| Creating Maps
 *******************************************************************************
@@ -13,6 +9,7 @@ quality maps with all the requisite map components.
    :maxdepth: 2
 
    map_composer
+   dynamic_layout
    day_1_assignment
 
 
@@ -23,4 +20,3 @@ quality maps with all the requisite map components.
    source folder.
 
 .. |MOD| replace:: Module:
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

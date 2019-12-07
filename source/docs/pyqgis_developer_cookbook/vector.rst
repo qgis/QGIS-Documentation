@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. _vector:
 
 *******************
@@ -572,13 +568,19 @@ From an instance of :class:`QgsVectorFileWriter <qgis.core.QgsVectorFileWriter>`
 .. code-block:: python
 
   # Write to a GeoPackage (default)
-  error = QgsVectorFileWriter.writeAsVectorFormat(layer, "/path/to/folder/my_data", "")
+  error = QgsVectorFileWriter.writeAsVectorFormat(layer,
+                                                  "/path/to/folder/my_data",
+                                                  "")
   if error[0] == QgsVectorFileWriter.NoError:
       print("success!")
 
+.. code-block:: python
+
   # Write to an ESRI Shapefile format dataset using UTF-8 text encoding
-  error = QgsVectorFileWriter.writeAsVectorFormat(layer, "/path/to/folder/my_esridata",
-                                                  "UTF-8", driverName="ESRI Shapefile")
+  error = QgsVectorFileWriter.writeAsVectorFormat(layer,
+                                                  "/path/to/folder/my_esridata",
+                                                  "UTF-8",
+                                                  driverName="ESRI Shapefile")
   if error[0] == QgsVectorFileWriter.NoError:
       print("success again!")
 
@@ -587,6 +589,60 @@ Only some drivers need this for correct operation - Shapefile is one of them
 (other drivers will ignore this parameter).
 Specifying the correct encoding is important if you are using international
 (non US-ASCII) characters.
+
+.. code-block:: python
+
+  # Write to an ESRI GDB file
+  opts = QgsVectorFileWriter.SaveVectorOptions()
+  opts.driverName = "FileGDB"
+  # if no geometry
+  opts.overrideGeometryType = QgsWkbTypes.NullGeometry
+  opts.actionOnExistingFile = QgsVectorFileWriter.ActionOnExistingFile.CreateOrOverwriteLayer
+  opts.layerName = 'my_new_layer_name'
+  error = QgsVectorFileWriter.writeAsVectorFormat(layer=vlayer,
+                                                  fileName=gdb_path,
+                                                  options=opts) 
+  if error[0] == QgsVectorFileWriter.NoError: 
+    print("success!")
+  else:
+    print(error)
+
+You can also convert fields to make them compatible with different formats by
+using the  :class:`FieldValueConverter <qgis.core.QgsVectorFileWriter.FieldValueConverter>`.
+For example, to convert array variable types (e.g. in Postgres) to a text type,
+you can do the following:
+
+.. code-block:: python
+
+  LIST_FIELD_NAME = 'xxxx'
+
+  class ESRIValueConverter(QgsVectorFileWriter.FieldValueConverter):
+
+    def __init__(self, layer, list_field):
+      QgsVectorFileWriter.FieldValueConverter.__init__(self)
+        self.layer = layer
+        self.list_field_idx = self.layer.fields().indexFromName(list_field) 
+
+    def convert(self, fieldIdxInLayer, value):
+      if fieldIdxInLayer == self.list_field_idx:
+        return QgsListFieldFormatter().representValue(layer=vlayer,
+                                                      fieldIndex=self.list_field_idx,
+                                                      config={},
+                                                      cache=None,
+                                                      value=value)
+      else:
+        return value
+
+    def fieldDefinition(self, field):
+      idx = self.layer.fields().indexFromName(field.name())
+      if idx == self.list_field_idx:
+        return QgsField(LIST_FIELD_NAME, QVariant.String)
+      else:
+        return self.layer.fields()[idx]
+
+  converter = ESRIValueConverter(vlayer, LIST_FIELD_NAME)
+  #opts is a QgsVectorFileWriter.SaveVectorOptions as above
+  opts.fieldValueConverter = converter
 
 A destination CRS may also be specified --- if a valid instance of
 :class:`QgsCoordinateReferenceSystem <qgis.core.QgsCoordinateReferenceSystem>`
@@ -665,7 +721,7 @@ the :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` constructor.
 
 The constructor also takes a URI defining the geometry type of the layer,
 one of: ``"Point"``, ``"LineString"``, ``"Polygon"``, ``"MultiPoint"``,
-``"MultiLineString"``, or ``"MultiPolygon"``.
+``"MultiLineString"``, ``"MultiPolygon"`` or ``"None"``.
 
 The URI can also specify the coordinate reference system, fields, and indexing
 of the memory provider in the URI. The syntax is:
@@ -1224,56 +1280,36 @@ symbols and chooses randomly one of them for every feature
 
 .. code-block:: python
 
-    import random
-    from qgis.core import QgsWkbTypes, QgsSymbol, QgsFeatureRenderer
+  import random
+  from qgis.core import QgsWkbTypes, QgsSymbol, QgsFeatureRenderer
 
 
-    class RandomRenderer(QgsFeatureRenderer):
-      def __init__(self, syms=None):
-        QgsFeatureRenderer.__init__(self, "RandomRenderer")
-        self.syms = syms if syms else [QgsSymbol.defaultSymbol(QgsWkbTypes.geometryType(QgsWkbTypes.Point))]
+  class RandomRenderer(QgsFeatureRenderer):
+    def __init__(self, syms=None):
+      QgsFeatureRenderer.__init__(self, "RandomRenderer")
+      self.syms = syms if syms else [
+        QgsSymbol.defaultSymbol(QgsWkbTypes.geometryType(QgsWkbTypes.Point)),
+        QgsSymbol.defaultSymbol(QgsWkbTypes.geometryType(QgsWkbTypes.Point))
+      ]
 
-      def symbolForFeature(self, feature):
-        return random.choice(self.syms)
+    def symbolForFeature(self, feature, context):
+      return random.choice(self.syms)
 
-      def startRender(self, context, vlayer):
-        for s in self.syms:
-          s.startRender(context)
+    def startRender(self, context, fields):
+      super().startRender(context, fields)
+      for s in self.syms:
+        s.startRender(context, fields)
 
-      def stopRender(self, context):
-        for s in self.syms:
-          s.stopRender(context)
+    def stopRender(self, context):
+      super().stopRender(context)
+      for s in self.syms:
+        s.stopRender(context)
 
-      def usedAttributes(self):
-        return []
+    def usedAttributes(self, context):
+      return []
 
-      def clone(self):
-        return RandomRenderer(self.syms)
-
-    from qgis.gui import QgsRendererWidget
-    class RandomRendererWidget(QgsRendererWidget):
-      def __init__(self, layer, style, renderer):
-        QgsRendererWidget.__init__(self, layer, style)
-        if renderer is None or renderer.type() != "RandomRenderer":
-          self.r = RandomRenderer()
-        else:
-          self.r = renderer
-        # setup UI
-        self.btn1 = QgsColorButton()
-        self.btn1.setColor(self.r.syms[0].color())
-        self.vbox = QVBoxLayout()
-        self.vbox.addWidget(self.btn1)
-        self.setLayout(self.vbox)
-        self.btn1.clicked.connect(self.setColor1)
-
-      def setColor1(self):
-        color = QColorDialog.getColor(self.r.syms[0].color(), self)
-        if not color.isValid(): return
-        self.r.syms[0].setColor(color)
-        self.btn1.setColor(self.r.syms[0].color())
-
-      def renderer(self):
-        return self.r
+    def clone(self):
+      return RandomRenderer(self.syms)
 
 The constructor of the parent :class:`QgsFeatureRenderer <qgis.core.QgsFeatureRenderer>`
 class needs a renderer name (which has to be unique among renderers). The
@@ -1293,7 +1329,9 @@ first symbol
 
 .. code-block:: python
 
+
   from qgis.gui import QgsRendererWidget, QgsColorButton
+
 
   class RandomRendererWidget(QgsRendererWidget):
     def __init__(self, layer, style, renderer):
@@ -1308,17 +1346,15 @@ first symbol
       self.vbox = QVBoxLayout()
       self.vbox.addWidget(self.btn1)
       self.setLayout(self.vbox)
-      self.connect(self.btn1, SIGNAL("clicked()"), self.setColor1)
+      self.btn1.colorChanged.connect(self.setColor1)
 
     def setColor1(self):
-      color = QColorDialog.getColor(self.r.syms[0].color(), self)
+      color = self.btn1.color()
       if not color.isValid(): return
       self.r.syms[0].setColor(color)
-      self.btn1.setColor(self.r.syms[0].color())
 
     def renderer(self):
       return self.r
-
 
 The constructor receives instances of the active layer (:class:`QgsVectorLayer
 <qgis.core.QgsVectorLayer>`), the global style (:class:`QgsStyle
@@ -1391,13 +1427,4 @@ Further Topics
 * exploring symbol layer and renderer registries
 
 
-.. _supported formats by OGR: https://www.gdal.org/ogr_formats.html
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
+.. _supported formats by OGR: https://gdal.org/ogr_formats.html

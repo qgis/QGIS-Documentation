@@ -22,7 +22,7 @@ If no replacement exists:
 #. check the documentation repository whether the icon is available in
    :file:`/static/common` folder. If no image, then you need to find and
    copy the icon image file from `QGIS repository <https://github.com/qgis/QGIS>`_
-   (often under https://github.com/qgis/QGIS/tree/master/images/themes/default folder)
+   (often under :source:`images/themes/default` folder)
    and paste (in ``.png`` format) under :file:`/static/common` folder.
    For convenience and update, it's advised to keep filename when possible.
 #. create the reference to the substitution in the :file:`/source/substitutions.txt`
@@ -205,6 +205,7 @@ Icon                            Substitution                        Icon        
 |expression|                    ``|expression|``                    |dataDefineOn|                  ``|dataDefineOn|``
 |dataDefineExpressionOn|        ``|dataDefineExpressionOn|``        |dataDefineError|               ``|dataDefineError|``
 |dataDefineExpressionError|     ``|dataDefineExpressionError|``
+|addExpression|                 ``|addExpression|``
 |expressionFilter|              ``|expressionFilter|``              |filterMap|                     ``|filterMap|``
 ==============================  ==================================  ==============================  ==================================
 
@@ -225,6 +226,11 @@ Icon                     Substitution                 Icon                     S
 |labelbackground|        ``|labelbackground|``        |labelbuffer|            ``|labelbuffer|``
 |labelformatting|        ``|labelformatting|``        |labelplacement|         ``|labelplacement|``
 |labelshadow|            ``|labelshadow|``            |render|                 ``|render|``
+|labelcallout|           ``|labelcallout|``
+|pinLabels|              ``|pinLabels|``              |showHideLabels|         ``|showHideLabels|``
+|moveLabel|              ``|moveLabel|``              |rotateLabel|            ``|rotateLabel|``
+|showPinnedLabels|       ``|showPinnedLabels|``       |showUnplacedLabel|      ``|showUnplacedLabel|``
+|changeLabelProperties|  ``|changeLabelProperties|``   
 =======================  ===========================  =======================  ===========================
 
 Help
@@ -477,6 +483,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |addDelimitedTextLayer| image:: /static/common/mActionAddDelimitedTextLayer.png
    :width: 1.5em
+.. |addExpression| image:: /static/common/mActionAddExpression.png
+   :width: 1.5em
 .. |addHtml| image:: /static/common/mActionAddHtml.png
    :width: 1.5em
 .. |addLayer| image:: /static/common/mActionAddLayer.png
@@ -562,6 +570,8 @@ Icon                            Substitution                        Icon        
 .. |categorizedSymbol| image:: /static/common/rendererCategorizedSymbol.png
    :width: 1.5em
 .. |centroids| image:: /static/common/centroids.png
+   :width: 1.5em
+.. |changeLabelProperties| image:: /static/common/mActionChangeLabelProperties.png
    :width: 1.5em
 .. |checkGeometry| image:: /static/common/check_geometry.png
    :width: 1.5em
@@ -836,6 +846,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |labelbuffer| image:: /static/common/labelbuffer.png
    :width: 1.5em
+.. |labelcallout| image:: /static/common/labelcallout.png
+   :width: 1.5em
 .. |labelformatting| image:: /static/common/labelformatting.png
    :width: 1.5em
 .. |labeling| image:: /static/common/labelingSingle.png
@@ -908,6 +920,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |moveItemsToTop| image:: /static/common/mActionMoveItemsToTop.png
    :width: 1.5em
+.. |moveLabel| image:: /static/common/mActionMoveLabel.png
+   :width: 1.5em
 .. |multiEdit| image:: /static/common/mActionMultiEdit.png
    :width: 1.5em
 .. |new3DMap| image:: /static/common/mActionNew3DMap.png
@@ -965,6 +979,8 @@ Icon                            Substitution                        Icon        
 .. |pencil| image:: /static/common/pencil.png
    :width: 1.5em
 .. |piechart| image:: /static/common/pie-chart.png
+   :width: 1.5em
+.. |pinLabels| image:: /static/common/mActionPinLabels.png
    :width: 1.5em
 .. |plugin| image:: /static/common/plugin.png
    :width: 1.5em
@@ -1034,6 +1050,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |rotateFeature| image:: /static/common/mActionRotateFeature.png
    :width: 1.5em
+.. |rotateLabel| image:: /static/common/mActionRotateLabel.png
+   :width: 1.5em
 .. |rotatePointSymbols| image:: /static/common/mActionRotatePointSymbols.png
    :width: 1.5em
 .. |ruleBasedSymbol| image:: /static/common/rendererRuleBasedSymbol.png
@@ -1088,15 +1106,21 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |showEditorConsole| image:: /static/common/iconShowEditorConsole.png
    :width: 1.5em
+.. |showHideLabels| image:: /static/common/mActionShowHideLabels.png
+   :width: 1.5em
 .. |showMapTheme| image:: /static/common/mActionShowPresets.png
    :width: 1.5em
 .. |showMeshCalculator| image:: /static/common/mActionShowMeshCalculator.png
+   :width: 1.5em
+.. |showPinnedLabels| image:: /static/common/mActionShowPinnedLabels.png
    :width: 1.5em
 .. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
    :width: 1.5em
 .. |showRasterCalculator| image:: /static/common/mActionShowRasterCalculator.png
    :width: 1.5em
 .. |showSelectedLayers| image:: /static/common/mActionShowSelectedLayers.png
+   :width: 1.5em
+.. |showUnplacedLabel| image:: /static/common/mActionShowUnplacedLabel.png
    :width: 1.5em
 .. |signMinus| image:: /static/common/symbologyRemove.png
    :width: 1.5em

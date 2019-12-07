@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 |LS| Using DB Manager to work with Spatial Databases in QGIS 
 ===============================================================================
 
@@ -286,4 +282,3 @@ Next, we will look at how to use many of these same techniques with
 .. |basic| image:: /static/global/basic.png
 .. |dbManager| image:: /static/common/dbmanager.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

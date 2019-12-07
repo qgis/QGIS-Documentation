@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 Pre- and post-execution script hooks
 ====================================
 
@@ -50,7 +46,7 @@ and check if this output is a file-based output and can be copied. If so, we det
 top-level directory in which output files are located and then copy all files to
 our directory.
 
-To activate this hook we neeed to open the Processing options, find the entry named 
+To activate this hook we need to open the Processing options, find the entry named 
 *Post-execution script file* in the *General* group, and specify the filename of the
 hook script there. the specified hook will be executed after each Processing algorithm.
 
@@ -80,12 +76,3 @@ check them for geometry errors. If at least one feature contains an invalid geom
 To activate this hook we need enter its filename in the *Pre-execution script
 file* option in the Processing configuration dialog. 
 The hook will be executed before running any Processing algorithm.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

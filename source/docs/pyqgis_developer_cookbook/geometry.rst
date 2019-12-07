@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. index:: Geometry; Handling
 
 .. _geometry:
@@ -290,13 +286,5 @@ methods to analyze and transform vector data. Here are some links to the code
 of a few of them.
 
 * Distance and area using the :class:`QgsDistanceArea <qgis.core.QgsDistanceArea>` class:
-  `Distance matrix algorithm <https://github.com/qgis/QGIS/blob/master/python/plugins/processing/algs/qgis/PointDistance.py>`_
-* `Lines to polygons algorithm <https://github.com/qgis/QGIS/blob/master/python/plugins/processing/algs/qgis/LinesToPolygons.py>`_
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
+  :source:`Distance matrix algorithm <python/plugins/processing/algs/qgis/PointDistance.py>`
+* :source:`Lines to polygons algorithm <python/plugins/processing/algs/qgis/LinesToPolygons.py>`

@@ -1,8 +1,4 @@
-.. only:: html
-
-   |updatedisclaimer|
-
-.. index:: Vector, OGR, Raster, GDAL, Data, Format
+.. index:: Vector, OGR, Raster, GDAL, Data, Format, QLR
 .. index:: PostGreSQL, PostGIS, GeoPackage, SpatiaLite, GRASS, DXF
 .. index:: ArcInfo Binary Grid, ArcInfo ASCII Grid, GeoTIFF, Erdas Imagine
 
@@ -24,22 +20,23 @@ and often write a lot of formats:
 * Vector data formats include ESRI formats (Shapefile, Geodatabase...),
   MapInfo and MicroStation file formats, AutoCAD DWG/DXF, GeoPackage, GeoJSON,
   GRASS, GPX, KML, Comma Separated Values, and many more...
-  Read the complete list of `OGR vector supported formats
-  <https://www.gdal.org/ogr_formats.html>`_.
+  Read the complete list of `vector supported formats
+  <https://gdal.org/drivers/vector/index.html>`_.
 * Raster data formats include ArcInfo Binary Grid, ArcInfo ASCII Grid, JPEG,
   GeoTIFF, ERDAS IMAGINE, MBTiles, R or Idrisi rasters, ASCII Gridded XYZ,
   GDAL Virtual, SRTM, Sentinel Data, and many more...
   Read the complete list of `raster supported formats
-  <https://www.gdal.org/formats_list.html>`_.
+  <https://gdal.org/drivers/raster/index.html>`_.
 * Database formats include PostgreSQL/PostGIS, SQLite/SpatiaLite, Oracle, DB2
   or MSSQL Spatial, MySQL...
 * Support of web data services (WM(T)S, WFS, WCS, CSW, ArcGIS Servers...) is
   also handled by QGIS providers (see :ref:`working_with_ogc`).
 * You can also read supported files from archived folders and use QGIS native
-  formats such as virtual and memory layers.
+  formats such as QML files (:ref:`qgisstylefile`) and virtual and memory
+  layers.
 
 As of the date of this document, more than 80 vector and 140 raster formats are
-supported by the `GDAL/OGR <https://www.gdal.org/>`_ and QGIS native providers.
+supported by `GDAL <https://gdal.org/>`_ and QGIS native providers.
 
 .. note::
 
@@ -326,6 +323,15 @@ Using the |addOgrLayer| :sup:`Add Vector Layer` tool:
 .. index:: CSV, Delimited text files
    see: Comma Separated Values; CSV
 .. _vector_loading_csv:
+
+Loading a mesh layer
+--------------------
+
+Mesh layers (currently :file:`.grb`, :file:`.grb2`, :file:`.bin`, :file:`.grib`, :file:`grib1`,
+:file:`grib2`, :file:`nc`, :file:`2dm`, :file:`3Di Results`) can be loaded by clicking the
+|addMeshLayer| :guilabel:`Mesh` tab in the datasource manager. For further instructions, read
+:ref:`label_meshdata`.
+
 
 Importing a delimited text file
 -------------------------------
@@ -722,10 +728,10 @@ The service file looks like::
   like ``export PGSERVICE=water_service`` before doing your psql commands.
 
   You can find all the parameters `here
-  <https://www.postgresql.org/docs/current/static/libpq-connect.html#LIBPQ-PARAMKEYWORDS>`_
+  <https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-PARAMKEYWORDS>`_
 
 .. note:: If you don't want to save the passwords in the service file you can
-  use the `.pg_pass <https://www.postgresql.org/docs/current/static/libpq-pgpass.html>`_
+  use the `.pg_pass <https://www.postgresql.org/docs/current/libpq-pgpass.html>`_
   option.
 
 
@@ -806,6 +812,9 @@ Optionally, you can activate following checkboxes:
 
    Normally, an Oracle Spatial layer is defined by an entry in the
    **USER_SDO_METADATA** table.
+
+   To ensure that selection tools work correctly, it is recommended that your
+   tables have a **primary key**.
 
 
 .. _create_db2_connection:
@@ -926,6 +935,27 @@ loading tool:
   (see :ref:`vector_virtual_layers` for more information)
 
 
+.. index:: QGIS Layer Definition File, QLR file
+
+QLR - QGIS Layer Definition File
+================================
+
+Layer definitions can be saved as a
+:ref:`Layer Definition File <qgislayerdefinitionfile>` (QLR -
+:file:`.qlr`) using
+:menuselection:`Export --> Save As Layer Definition File...` in the layer
+context menu.
+
+The QLR format makes it possible to share "complete" QGIS layers with
+other QGIS users.
+QLR files contain links to the data sources and all the QGIS style
+information necessary to style the layer.
+
+QLR files are shown in the Browser Panel and can be used to add
+layers (with their saved styles) to the Layers Panel.
+You can also drag and drop QLR files from the system file manager into
+the map canvas.
+
 Connecting to web services
 ==========================
 
@@ -942,7 +972,8 @@ Description of these capabilities and how-to are provided in chapter
    If you need to create a new substitution manually,
    please add it also to the substitutions.txt file in the
    source folder.
-
+.. |addMeshLayer| image:: /static/common/mActionAddMeshLayer.png
+   :width: 1.5em
 .. |addDb2Layer| image:: /static/common/mActionAddDb2Layer.png
    :width: 1.5em
 .. |addDelimitedTextLayer| image:: /static/common/mActionAddDelimitedTextLayer.png
@@ -985,4 +1016,3 @@ Description of these capabilities and how-to are provided in chapter
    :width: 2.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

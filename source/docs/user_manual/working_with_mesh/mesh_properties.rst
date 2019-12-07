@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. _`label_meshdata`:
 
 ***********************
@@ -292,7 +288,7 @@ Rendering
 .........
 
 In the tab |rendering_mesh|,  QGIS offers two possibilities to display the grid,
-as shown in the image :ref:` Mesh rendering <figure_mesh_symbology_grid>`:
+as shown in the image :ref:`Mesh rendering <figure_mesh_symbology_grid>`:
 
 *	``Native Mesh Rendering`` that shows quadrants
 *	``Triangular Mesh Rendering`` that display triangles
@@ -342,7 +338,6 @@ The line width and color can be changed in this dialog, and both the grid render
 .. |slider| image:: /static/common/slider.png
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |vector_active| image:: /static/common/vector_active.png
    :width: 2em
 .. |vector_inactive| image:: /static/common/vector_inactive.png

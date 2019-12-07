@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 |LS| Feature Topology
 ===============================================================================
 
@@ -67,10 +63,10 @@ joined to form one area:
    :align: center
 
 Instead of creating new polygons to join the forest areas, we're going to use
-the :guilabel:`Node Tool` to edit the existing polygons and join them.
+the :guilabel:`*Vertex Tool` to edit the existing polygons and join them.
 
 * Enter edit mode, if it isn't active already.
-* Select the :guilabel:`Node Tool`.
+* Select the :guilabel:`Vertex Tool`.
 * Pick an area of forest, select a corner and move it to an adjoining corner so
   two forest sections meet:
 
@@ -87,7 +83,7 @@ The topologically correct border looks like this:
 .. image:: img/areas_joined.png
    :align: center
 
-Go ahead and join a few more areas using the :guilabel:`Node Tool`. You can also
+Go ahead and join a few more areas using the :guilabel:`Vertex Tool`. You can also
 use the :guilabel:`Add Feature` tool if it is appropriate. If you are using our
 example data, you should have a forest area looking something like this:
 
@@ -105,7 +101,7 @@ This is the :guilabel:`Simplify Feature` tool:
 
 * Click on it to activate it.
 * Click on one of the areas which you joined using either the
-  :guilabel:`Node Tool` or :guilabel:`Add Feature` tool. You'll see this dialog:
+  :guilabel:`Vertex Tool` or :guilabel:`Add Feature` tool. You'll see this dialog:
 
 .. image:: img/simplify_line_dialog.png
    :align: center
@@ -316,4 +312,3 @@ so that attribute editing is simpler and more effective.
    :width: 1.5em
 .. |undo| image:: /static/common/mActionUndo.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

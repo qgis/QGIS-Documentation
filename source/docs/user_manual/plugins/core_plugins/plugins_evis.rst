@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. index:: Geocoding photo, eVis
 .. _`evis`:
 
@@ -16,7 +12,8 @@ eVis Plugin
 (This section is derived
 from Horning, N., K. Koy, P. Ersts. 2009. eVis (v1.1.0) User's Guide. American
 Museum of Natural History, Center for Biodiversity and Conservation. Available
-from https://biodiversityinformatics.amnh.org/, and released under the GNU FDL.)
+from https://www.amnh.org/research/center-for-biodiversity-conservation/capacity-development/biodiversity-informatics,
+and released under the GNU FDL.)
 
 The Biodiversity Informatics Facility at the American Museum of Natural History's
 (AMNH) Center for Biodiversity and Conservation (CBC)
@@ -464,35 +461,24 @@ XML format for eVis predefined queries
 
 The XML tags read by eVis
 
-+------------------+------------------------------------------------------------------------------------------------+
-| Tag              | Description                                                                                    |
-+==================+================================================================================================+
-| query            | Defines the beginning and end of a query statement.                                            |
-+------------------+------------------------------------------------------------------------------------------------+
-| shortdescription | A short description of the query that appears in the eVis drop-down menu.                      |
-+------------------+------------------------------------------------------------------------------------------------+
-| description      | A more detailed description of the query displayed in the Predefined Query text window.        |
-+------------------+------------------------------------------------------------------------------------------------+
-| databasetype     | The database type, defined in the Database Type drop-down menu in the Database Connection tab. |
-+------------------+------------------------------------------------------------------------------------------------+
-| databaseport     | The port as defined in the Port text box in the Database Connection tab.                       |
-+------------------+------------------------------------------------------------------------------------------------+
-| databasename     | The database name as defined in the Database Name text box in the Database Connection tab.     |
-+------------------+------------------------------------------------------------------------------------------------+
-| databaseusername | The database username as defined in the Username text box in the Database Connection tab.      |
-+------------------+------------------------------------------------------------------------------------------------+
-| databasepassword | The database password as defined in the Password text box in the Database Connection tab.      |
-+------------------+------------------------------------------------------------------------------------------------+
-| sqlstatement     | The SQL command.                                                                               |
-+------------------+------------------------------------------------------------------------------------------------+
-| autoconnect      | A flag ("true"" or "false") to specify if the above tags should be used to automatically       |
-|                  | connect to the database without running the database connection routine in the Database        |
-|                  | Connection tab.                                                                                |
-+------------------+------------------------------------------------------------------------------------------------+
+.. csv-table::
+   :header: "Tag", "Description"
+   :widths: 18, 77
+
+   "query", "Defines the beginning and end of a query statement."
+   "shortdescription", "A short description of the query that appears in the eVis drop-down menu."
+   "description", "A more detailed description of the query displayed in the Predefined Query text window."
+   "databasetype", "The database type, defined in the Database Type drop-down menu in the Database Connection tab."
+   "databaseport", "The port as defined in the Port text box in the Database Connection tab."
+   "databasename", "The database name as defined in the Database Name text box in the Database Connection tab."
+   "databaseusername", "The database username as defined in the Username text box in the Database Connection tab."
+   "databasepassword", "The database password as defined in the Password text box in the Database Connection tab."
+   "sqlstatement", "The SQL command."
+   "autoconnect", "A flag (""true"" or ""false"") to specify if the above tags should be used to automatically connect to the database without running the database connection routine in the Database Connection tab."                                                                                
 
 A complete sample XML file with three queries is displayed below:
 
-::
+.. code-block:: xml
 
    <?xml version="1.0"?>
    <doc>
@@ -562,4 +548,3 @@ A complete sample XML file with three queries is displayed below:
    :width: 1.5em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

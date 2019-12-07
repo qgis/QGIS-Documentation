@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 Vector geometry
 ===============
 
@@ -16,7 +12,8 @@ Vector geometry
 
 Add geometry attributes
 -----------------------
-Computes geometric properties of the features in a vector layer.
+Computes geometric properties of the features in a vector layer and includes
+them in the output layer.
 
 It generates a new vector layer with the same content as the input one, but with
 additional attributes, containing geometric measurements based on a selected CRS.
@@ -25,33 +22,73 @@ The attributes added to the table depend on the geometry type and dimension of
 the input layer:
 
 * for **point** layers: X (``xcoord``), Y (``ycoord``), Z (``zcoord``) coordinates
-  and/or M value (``mvalue``);
-* for **line** layers: ``length`` and, particularly for LineString and CompoundCurve
-  geometry type also adds feature's ``sinuosity`` and straight distance (``straightdis``);
-* for **polygon** layers: ``perimeter`` and ``area``.
+  and/or M value (``mvalue``)
+* for **line** layers: ``length`` and, for the LineString and CompoundCurve
+  geometry types, the feature ``sinuosity`` and straight distance (``straightdis``)
+* for **polygon** layers: ``perimeter`` and ``area``
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
+
 Parameters
 ..........
-``Input layer`` [vector: any]
-  Vector layer in input.
 
-``Calculate using`` [enumeration]
-  Calculation parameters to use for the geometric properties.
-  Options are:
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-  * 0 --- Layer CRS
-  * 1 --- Project CRS
-  * 2 --- Ellipsoidal
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Calculate using**
+     - ``CALC_METHOD``
+     - [enumeration]
 
-  Default: *0*
+       Default: 0
+     - Calculation parameters to use for the geometric properties.
+       One of:
+
+       * 0 --- Layer CRS
+       * 1 --- Project CRS
+       * 2 --- Ellipsoidal
+
+   * - **Added geom info**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output (input copy with geometry) layer
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Added geom info`` [vector: any]
-  Copy of the input vector layer with the addition of the geometry fields.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Added geom info**
+     - ``OUTPUT``
+     - [same as input]
+     - Copy of the input vector layer with the addition of the geometry fields
 
 
 .. _qgisaggregate:
@@ -72,112 +109,200 @@ example: Array("Field1", "Field2").
 Geometries (if present) are combined into one multipart geometry for each group.
 Output attributes are computed depending on each given aggregate definition.
 
-This algorithm allows to use the default aggregation functions of the QGIS Expression
-engine.
+This algorithm allows to use the default :ref:`aggregates functions <aggregates_function>`
+of the QGIS Expression engine.
+
+.. seealso:: :ref:`qgiscollect`, :ref:`qgisdissolve`
 
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Vector layer in input to aggregate the features from.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Group by expression`` [tablefield: any]
-  Choose the grouping field. If *NULL* all features will be grouped.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Group by expression**
+     - ``GROUP_BY``
+     - [tablefield: any]
 
-  Default: *NULL*
+       Default: 'NULL'
+     - Choose the grouping field. If *NULL* all features will be grouped
+   * - **Aggregates**
+     - ``AGGREGATES``
+     - [list]
+     - List of output layer field definitions.
+       Example of a field definition:
+       
+       *{'aggregate': 'sum', 'delimiter': ',', 'input': ' $area',
+       'length': 10, 'name': 'totarea', 'precision': 0, 'type': 6}*
+       
+       By default, the list contains all the fields of the input layer.
+       In the GUI, you can edit these fields and their definitions,
+       and you can also:
 
-``Aggregates`` [list]
-  List of the fields in the output layer with their definitions.
+       * Click the |newAttribute| button to add a new field.
+       * Click |deleteAttribute| to delete the selected field.
+       * Use |arrowUp| and |arrowDown| to change order of the fields.
+       * Click |clearText| to reset to the default (the fields of the
+         input layer).
 
-  By default, the embedded table lists all the fields of the source
-  layer and allows you to edit them:
+       For each of the fields you'd like to retrieve information from,
+       you need to define the following:
 
-  * Click the |newAttribute| button to create a new field.
-  * Click |deleteAttribute| to remove a field.
-  * Use |arrowUp| and |arrowDown| to change the selected field order.
-  * Click |clearText| to reset to the default view.
+       ``Input expression`` [expression] (``input``)
+         Field or expression from the input layer.
 
-  For each of the fields you'd like to retrieve information from, you need to
-  fill the following options:
+       ``Aggregate function`` [enumeration] (``aggregate``)
+         :ref:`Function <aggregates_function>` to use on the input expression
+         to return the aggregated value.
 
-  ``Input expression`` [expression]
-    Field or expression from the input layer.
+         Default: *concatenate* (for string data type), *sum* (for numeric
+         data type)
 
-  ``Aggregate function`` [enumeration]
-    :ref:`Function <aggregates_function>` to use on the input expression
-    to return the aggregated value.
+       ``Delimiter`` [string] (``delimiter``)
+         Text string to separate aggregated values, for example in case of
+         concatenation.
 
-    Default: *concatenate* (for string data type), *sum* (for numeric data type)
+         Default: *,*
 
-  ``Delimiter`` [string]
-    Text string to separate aggregated values, for example in case of concatenation.
+       ``Output field name`` [string] (``name``)
+         Name of the aggregated field in the output layer.
+         By default input field name is kept.
 
-    Default: *,*
+       ``Type`` [enumeration] (``type``)
+         Data type of the output field. One of:
+         
+         * 1 --- Boolean
+         * 2 --- Integer
+         * 4 --- Integer64
+         * 6 --- Double
+         * 10 --- String
+         * 14 --- Date
+         * 16 --- DateTime
 
-  ``Output field name`` [string]
-    Name of the aggregated field in the output layer.
-    By default input field name is kept.
+       ``Length`` [number] (``length``)
+         Length of the output field.
 
-  ``Type`` [enumeration]
-    Data type of the output field.
+       ``Precision`` [number] (``precision``)
+         Precision of the output field.
+   
+   * - **Load fields from layer**
+     - GUI only
+     - [vector: any]
+     - You can load fields from another layer and use them for the
+       aggregation
+   * - **Aggregated**
+     - ``OUTPUT``
+     - [same as input]
 
-  ``Length`` [number]
-    Length of the output field.
+       Default: ``[Create temporary layer]``
+     - Specify the output (aggregate) layer
+       One of:
 
-  ``Precision`` [number]
-    Precision of the output field.
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-``Load fields from layer`` [vector: any]
-  You can also load the fields from another layer and use these fields for the
-  aggregation.
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Aggregated`` [vector: any]
-  Multigeometry vector layer with the aggregated values.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-See also
-........
-For a  complete description of the aggregates function, refer to the dedicated
-:ref:`aggregates_function` chapter.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Aggregated**
+     - ``OUTPUT``
+     - [same as input]
+     - Multigeometry vector layer with the aggregated values
 
 
 .. _qgisboundary:
 
 Boundary
 ---------
-Returns the closure of the combinatorial boundary of the input geometries (i.e.
-the topological boundary of the geometry).
+Returns the closure of the combinatorial boundary of the input geometries
+(i.e. the topological boundary of the geometry).
 
-Only valid for polygon or line layers.
+Only for polygon and line layers.
 
-For **polygon geometries** , the boundary consists of all the line strings for
-each ring of the polygon.
+For **polygon geometries** , the boundary consists of all the lines making
+up the rings of the polygon.
 
 .. figure:: img/boundary_polygon.png
    :align: center
 
-   Black dash boundary lines of the source polygon layer
+   Boundaries (black dashed line) of the source polygon layer
 
 For **lines geometries**, the boundaries are the vertices between each features.
 
 .. figure:: img/boundary_lines.png
    :align: center
 
-   Boundary layer for lines. In yellow a selected feature.
+   Boundary layer (red points) for lines. In yellow a selected feature.
 
 Parameters
 ..........
 
-``Input layer`` [vector: line, polygon]
-  Input vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line, polygon]
+     - Input line or polygon vector layer
+   * - **Boundary**
+     - ``OUTPUT``
+     - [vector: point, line]
+     - Specify the output (boundary) layer.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Boundary`` [vector: point, line]
-  Boundary from the input layer (point for line, and line for polygon).
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Boundary**
+     - ``OUTPUT``
+     - [vector: point, line]
+     - Boundaries from the input layer (point for line, and line
+       for polygon)
 
 
 .. _qgisboundingboxes:
@@ -194,21 +319,53 @@ Polygon and line geometries are supported.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+.. seealso:: :ref:`qgisminimumboundinggeometry`
+
 Parameters
 ..........
 
-``Input layer`` [vector: line, polygon]
-  Input vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line, polygon]
+     - Input line or polygon vector layer
+   * - **Bounds**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Specify the output (bounding box) layer.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Bounds`` [vector: polygon]
-  Bounding boxes of input layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-See also
-........
-:ref:`qgisminimumboundinggeometry`
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Bounds**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Bounding boxes of input layer
 
 
 .. _qgisbuffer:
@@ -229,86 +386,129 @@ case the buffer will result in a smaller polygon.
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
+.. seealso:: :ref:`qgisvariabledistancebuffer`, :ref:`qgismultiringconstantbuffer`,
+ :ref:`qgisbufferbym`
+
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Distance`` [number |dataDefined|]
-  Distance radius of the buffer calculated from the boundary of each feature.
-  Moreover you can use the Data Defined button on the right to choose a field
-  from which the radius will be calculated: this way you can have different radius
-  for each feature (see :ref:`qgisvariabledistancebuffer`).
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Distance**
+     - ``DISTANCE``
+     - [number |dataDefined|]
 
-  Default: *10.0*
+       Default: 10.0
+     - Buffer distance (from the boundary of each feature).
+       You can use the Data Defined button on the right to choose
+       a field from which the radius will be calculated.
+       This way you can have different radius for each feature
+       (see :ref:`qgisvariabledistancebuffer`).
+   * - **Segments**
+     - ``SEGMENTS``
+     - [number]
 
-``Segments`` [number]
-  Controls the number of line segments to use to approximate a quarter circle when
-  creating rounded offsets.
+       Default: 5
+     - Controls the number of line segments to use to approximate
+       a quarter circle when creating rounded offsets.
+   * - **End cap style**
+     - ``END_CAP_STYLE``
+     - [enumeration]
 
-  Default: *5*
+       Default: 0
+     - Controls how line endings are handled in the buffer.
+       One of:
 
-``End cap style`` [enumeration]
-  Controls how line endings are handled in the buffer.
-  Options are:
+       * 0 --- Round
+       * 1 --- Flat
+       * 2 --- Square
 
-  * 0 --- Round
-  * 1 --- Flat
-  * 2 --- Square
+       .. figure:: img/buffer_cap_style.png
+          :align: center
+       
+          Round, flat and square cap styles
+   * - **Join style**
+     - ``JOIN_STYLE``
+     - [enumeration]
 
-  Default: *0*
+       Default: *0*
+     - Specifies whether round, miter or beveled joins should be
+       used when offsetting corners in a line.
+       Options are:
 
-  .. figure:: img/buffer_cap_style.png
-     :align: center
+       * 0 --- Round
+       * 1 --- Miter
+       * 2 --- Bevel
 
-     Round, flat and square cap styles
+   * - **Miter limit**
+     - ``MITER_LIMIT``
+     - [number]
 
-``Join style`` [enumeration]
-  Specifies whether round, miter or beveled joins should be used when offsetting
-  corners in a line.
-  Options are:
+       Default: 2.0
+     - Controls the maximum distance from the offset curve to use
+       when creating a mitered join (only applicable for miter
+       join styles).
+       Minimum: 1.
+   * - **Dissolve result**
+     - ``DISSOLVE``
+     - [boolean]
 
-  * 0 --- Round
-  * 1 --- Miter
-  * 2 --- Bevel
+       Default: False
+     - Dissolve the final buffer. If ``True`` (checked), overlapping
+       buffers will be dissolved (combined) into a new feature.
+         
+       .. figure:: img/buffer_dissolve.png
+          :align: center
+     
+          Standard and dissolved buffer
+   * - **Buffered**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Specify the output (buffer) layer.
+       One of:
 
-  Default: *0*
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-``Miter limit`` [number]
-  Only applicable for miter join styles.
-
-  Default: *2.0*
-
-``Dissolve result`` [boolean]
-  Choose to dissolve the final buffer. If chosen each buffer that overlaps with
-  another one will be dissolved and an unique feature will be created.
-
-  Default: *False*
-
-  .. figure:: img/buffer_dissolve.png
-     :align: center
-
-     Standard and dissolved buffer
-
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Buffer`` [vector: polygon]
-  Buffer polygon vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-See also
-........
-:ref:`qgisvariabledistancebuffer`, :ref:`qgismultiringconstantbuffer`,
-:ref:`qgisbufferbym`
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Buffered**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Output (buffer) polygon layer
 
 
 .. _qgiscentroids:
 
 Centroids
 ---------
-Creates a new point layer, with points representing the centroid of the geometries
+Creates a new point layer, with points representing the centroids of the geometries
 of the input layer.
 
 The centroid can be a single point representing the barycenter (of all parts) of the feature,
@@ -326,26 +526,60 @@ associated to the original features.
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
+.. seealso:: :ref:`qgispointonsurface`
+
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Vector layer in input.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Create point on surface for each part`` [boolean |dataDefined|]
-  If checked a point for each different part of the geometry will be created.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Create centroid for each part**
+     - ``ALL_PARTS``
+     - [boolean |dataDefined|]
 
-  Default: *False*
+       Default: False
+     - If True (checked), a centroid will be created for each part
+       of the geometry
+   * - **Centroids**
+     - ``OUTPUT``
+     - [vector: point]
+     - Specify the output (centroid) layer.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Centroids`` [vector: point]
-  Points vector layer in output.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-See also
-........
-:ref:`qgispointonsurface`
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Centroids**
+     - ``OUTPUT``
+     - [vector: point]
+     - Output point vector layer (centroids)
 
 
 .. _qgischeckvalidity:
@@ -354,54 +588,265 @@ Check validity
 --------------
 Performs a validity check on the geometries of a vector layer.
 
-The geometries are classified in three groups (valid, invalid and error) and a
-vector layer is generated with the features in each of these categories:
+The geometries are classified in three groups (valid, invalid and error) and
+for each group, a vector layer with its features is generated:
 
-* The **valid** layer contains only the valid features (without topological errors).
-* The **invalid** layer contains all the invalid features found by the algorithm.
-* The **error** layer is the point layer where the invalid features have been found.
+* The **Valid output** layer contains only the valid features (without
+  topological errors).
+* The **Invalid output** layer contains all the invalid features found
+  by the algorithm.
+* The **Error output** layer is a point layer that points to where the
+  invalid features were found.
+
+The attribute tables of the generated layers will contain some additional
+information ("message" for the **error** layer, "FID" and "_errors" for the
+**invalid** layer and  only "FID" for the **valid** layer):
+
 
 The attribute table of each generated vector layer will contain some additional
-information (numbers of error found and type of error):
+information (number of errors found and types of error):
 
 .. figure:: img/check_validity.png
    :align: center
 
-   Left the input layer. Right: in green the valid layer, in orange the invalid layer
+   Left: the input layer. Right: the valid layer (green), the invalid layer (orange)
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
+
+.. seealso:: :ref:`qgisfixgeometries`
 
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Source layer to check.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Method`` [enumeration]
-  Check validity method.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT_LAYER``
+     - [vector: any]
+     - Input vector layer
+   * - **Method**
+     - ``METHOD``
+     - [enumeration]
 
-  Options:
+       Default: 2
+     - Method to use to check validity.
+       Options:
 
-  * 0 --- The one selected in digitizing settings
-  * 1 --- QGIS
-  * 2 --- GEOS
+       * 0: The one selected in digitizing settings
+       * 1: QGIS
+       * 2: GEOS
+   * - **Ignore ring self intersection**
+     - ``IGNORE_RING_SELF_INTERSECTION``
+     - [boolean]
 
-  Default: *2*
+       Default: False
+     - Ignore self intersecting rings when checking for validity.
+   * -  **Valid output**
+     - ``VALID_OUTPUT``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specify the vector layer to contain a copy of the valid
+       features of the source layer. One of:
+
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+   * - **Invalid output**
+     - ``INVALID_OUTPUT``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Vector layer containing copy of the invalid features of
+       the source layer with the field  ``_errors`` listing the
+       summary of the error(s) found. One of:
+
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+   * - **Error output**
+     - ``ERROR_OUTPUT``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Point layer of the exact position of the validity
+       problems detected with the ``message`` field describing
+       the error(s) found. One of:
+
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table 
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Valid output`` [vector: any]
-  Vector layer containing copy of the valid features of the source layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Invalid output`` [vector: any]
-  Vector layer containing copy of the invalid features of the source layer with
-  the field  ``_errors`` listing the summary of the error found.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Count of errors**
+     - ``ERROR_COUNT``
+     - [number]
+     - The number of geometries that caused errors.
+   * - **Error output**
+     - ``ERROR_OUTPUT``
+     - [vector: point]
+     - Point layer of the exact position of the validity
+       problems detected with the ``message`` field describing
+       the error(s) found.
+   * - **Count of invalid features**
+     - ``INVALID_COUNT``
+     - [number]
+     - The number of invalid geometries.
+   * - **Invalid output**
+     - ``INVALID_OUTPUT``
+     - [same as input]
+     - Vector layer containing copy of the invalid features of
+       the source layer with the field  ``_errors`` listing the
+       summary of the error(s) found.
+   * -  **Count of valid features**
+     - ``VALID_COUNT``
+     - [number]
+     - The number of valid geometries.
+   * -  **Valid output**
+     - ``VALID_OUTPUT``
+     - [same as input]
+     - Vector layer containing a copy of the valid features of
+       the source layer.
 
-``Error output`` [vector: point]
-  Point layer of the exact position of the validity problems detected with the
-  ``message`` field describing the error(s) found.
+Types of error messages and their meanings
+..........................................
 
+.. list-table:: If the GEOS method is used the following error messages can occur: 
+   :widths: 30 30 40
+   :header-rows: 1
+
+   * - Error message
+     - Explanation
+     - Example
+
+   * - Repeated point
+     - This error happens when a given vertex is repeated.
+     - .. figure:: img/geos_rep_point.png
+          :align: center
+
+   * - Ring self-intersection
+     - This error happens when a geometry touches itself and generates a ring.
+     - .. figure:: img/geos_ring_inter.png
+          :align: center
+
+   * - Self-intersection   
+     - This error happens when a geometry touches itself.
+     - .. figure:: img/geos_self_inter.png
+          :align: center
+
+   * - Topology validation error    
+     - 
+     - 
+
+   * - Hole lies outside shell
+     - 
+     -
+
+   * - Holes are nested
+     - 
+     -
+
+   * - Interior is disconnected
+     - 
+     -
+
+   * - Nested shells
+     - This error happens when a polygon geometry is on top of another polygon geometry. 
+     - .. figure:: img/geos_nest_shell.png
+          :align: center
+
+   * - Duplicate rings
+     - 
+     - 
+
+   * - Too few points in geometry component
+     - 
+     -
+
+   * - Invalid coordinate
+     - 
+     -
+
+   * - Ring is not closed
+     - 
+     - 
+
+|
+
+.. list-table:: If the QGIS method is used the following error messages can occur: 
+   :widths: 50 50 50
+   :header-rows: 1
+
+   * - Error message
+     - Explanation
+     - Example
+
+   * - Segment %1 of ring %2 of polygon %3 intersects segment %4 of ring %5 of polygon %6 at %7
+     - 
+     -
+
+   * - Ring %1 with less than four points
+     - 
+     -
+
+   * - Ring %1 not closed 
+     - 
+     -
+
+   * - Line %1 with less than two points
+     - 
+     -
+
+   * - Line %1 contains %n duplicate node(s) at %2 
+     - 
+     - 
+
+   * - Segments %1 and %2 of line %3 intersect at %4 
+     - 
+     -
+
+   * - Ring self-intersection 
+     - 
+     -
+
+   * - Ring %1 of polygon %2 not in exterior ring
+     -
+     -
+    
+   * - Polygon %1 lies inside polygon %2
+     - This error happens when a part of MultiPolygon geometry is inside a hole of a MultiPolygon geometry. 
+     - .. figure:: img/qgis_poliinside_.png
+          :align: center
 
 .. _qgiscollect:
 
@@ -421,26 +866,59 @@ See the 'Promote to multipart' or 'Aggregate' algorithms for alternative options
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
+.. seealso:: :ref:`qgisaggregate`, :ref:`qgispromotetomulti`, :ref:`qgisdissolve`
+
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Vector layer to be transformed.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Unique ID fields`` [tablefield: any] [list]
-  Optional
-
-  Choose one or more attributes to collect the geometries.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Unique ID fields**
+     - ``FIELD``
+     - [tablefield: any] [list]
+     - Choose one or more attributes to collect the geometries
+   * - **Collected**
+     - ``OUTPUT``
+     - [same as input]
+     - Vector layer with collected geometries
 
 Outputs
 .......
 
-``Collected`` [vector: any]
-  Vector layer with collected geometries.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-See also
-........
-:ref:`qgisaggregate`, :ref:`qgispromotetomulti`
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Collected**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer for the collected geometries.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 
 .. _qgisconcavehull:
@@ -448,6 +926,8 @@ See also
 Concave hull (alpha shapes)
 ---------------------------
 Computes the concave hull of the features in an input point layer.
+
+.. seealso:: :ref:`qgisconvexhull`, :ref:`qgisknearestconcavehull`
 
 Parameters
 ..........
@@ -479,10 +959,6 @@ Outputs
 ``Concave hull`` [vector: polygon]
   Output concave hull.
 
-See also
-........
-:ref:`qgisconvexhull`, :ref:`qgisknearestconcavehull`
-
 
 .. _qgisknearestconcavehull:
 
@@ -503,6 +979,8 @@ convex hull.
 If a field is selected, the algorithm will group the features in the
 input layer using unique values in that field and generate individual
 polygons in the output layer for each group.
+
+.. seealso:: :ref:`qgisconcavehull`
 
 Parameters
 ..........
@@ -532,10 +1010,6 @@ Outputs
 ``Concave hull`` [vector: polygon]
   Output concave hull.
 
-See also
-........
-:ref:`qgisconcavehull`
-
 
 .. _qgisconvertgeometrytype:
 
@@ -545,6 +1019,8 @@ Generates a new layer based on an existing one, with a different type of geometr
 
 Not all conversions are possible. For instance, a line layer can be converted to
 a point layer, but a point layer cannot be converted to a line layer.
+
+.. seealso:: :ref:`qgispolygonize`, :ref:`qgislinestopolygons`
 
 Parameters
 ..........
@@ -570,10 +1046,6 @@ Outputs
 ``Converted`` [vector: any]
   Converted vector layer depending on the parameters chosen.
 
-See also
-........
-:ref:`qgispolygonize`, :ref:`qgislinestopolygons`
-
 
 .. _qgisconvexhull:
 
@@ -593,6 +1065,8 @@ covers the whole layer or grouped subsets of features.
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
+.. seealso:: :ref:`qgisminimumboundinggeometry`, :ref:`qgisconcavehull`
+
 Parameters
 ..........
 ``Input point layer`` [vector: any]
@@ -602,10 +1076,6 @@ Outputs
 .......
 ``Convex hull`` [vector: polygon]
   Output convex hull.
-
-See also
-........
-:ref:`qgisminimumboundinggeometry`, :ref:`qgisconcavehull`
 
 
 .. _qgisextenttolayer:
@@ -619,6 +1089,8 @@ It can be used in models to convert a literal extent (``xmin``, ``xmax``, ``ymin
 ``ymax`` format) into a layer which can be used for other algorithms which require
 a layer based input.
 
+.. seealso:: :ref:`qgispointtolayer`
+
 Parameters
 ..........
 
@@ -631,9 +1103,69 @@ Outputs
 ``Extent``
   Layer with a polygon feature representing the input extent.
 
-See also
-........
-:ref:`qgispointtolayer`
+
+.. _qgispointtolayer:
+
+Create layer from point |38|
+-----------------------------
+
+Creates a new vector layer that contains a single
+feature with geometry matching a point parameter.
+It can be used in models to convert a point into a point layer
+for algorithms which require a layer based input.
+
+.. seealso:: :ref:`qgisextenttolayer`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Point**
+     - ``INPUT``
+     - [coordinates]
+     - Input point, including CRS info
+       (example: ``397254,6214446 [EPSG:32632]``).
+       
+       If the CRS is not provided, the Project CRS will be used.
+       
+       The point can be specified by clicking on the map canvas.
+   * - **Point**
+     - ``OUTPUT``
+     - [vector: point]
+     - Specify the output layer.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Point**
+     - ``OUTPUT``
+     - [vector: point]
+     - The output point vector layer containing the input point.
 
 
 .. _qgiswedgebuffers:
@@ -649,6 +1181,8 @@ Creates wedge shaped buffers from input points.
 
 The native output from this algorithm are CurvePolygon geometries, but these may
 be automatically segmentized to Polygons depending on the output format.
+
+.. seealso:: :ref:`qgisbuffer`, :ref:`qgisbufferbym`, :ref:`qgistaperedbuffer`
 
 Parameters
 ..........
@@ -684,10 +1218,6 @@ Outputs
 
 ``Buffers`` [vector: polygon]
   Wedge buffer polygon vector layer.
-
-See also
-........
-:ref:`qgisbuffer`, :ref:`qgisbufferbym`, :ref:`qgistaperedbuffer`
 
 
 .. _qgisdelaunaytriangulation:
@@ -777,6 +1307,8 @@ The number of new vertices to add to each segment is specified as an input param
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
+.. seealso:: :ref:`qgisdensifygeometriesgivenaninterval`
+
 Parameters
 ..........
 
@@ -793,10 +1325,6 @@ Outputs
 
 ``Densified`` [vector: line, polygon]
   Densified layer with vertices added.
-
-See also
-........
-:ref:`qgisdensifygeometriesgivenaninterval`
 
 
 .. _qgisdensifygeometriesgivenaninterval:
@@ -827,6 +1355,8 @@ over the segment.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+.. seealso:: :ref:`qgisdensifygeometries`
+
 Parameters
 ..........
 
@@ -844,10 +1374,6 @@ Outputs
 ``Densified`` [vector: line, polygon]
   Densified layer with vertices added using the specified interval.
 
-See also
-........
-:ref:`qgisdensifygeometries`
-
 
 .. _qgisdissolve:
 
@@ -856,7 +1382,7 @@ Dissolve
 Takes a vector layer and combines its features into new features.
 One or more attributes can be specified to dissolve features belonging to the
 same class (having the same value for the specified attributes), alternatively
-all features can be dissolved into a single one.
+all features can be dissolved to a single feature.
 
 All output geometries will be converted to multi geometries. In case the input is
 a polygon layer, common boundaries of adjacent polygons being dissolved will get
@@ -873,6 +1399,8 @@ that happens to be processed.
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
+.. seealso:: :ref:`qgisaggregate`, :ref:`qgiscollect`
+
 Parameters
 ..........
 
@@ -885,7 +1413,9 @@ Parameters
   Features having the same value for the selected field(s) will be replaced
   with a single one and their geometries are merged.
 
-  If no field is provided then all the features are dissolved in a single feature.
+  If no field is provided then all the features are dissolved,
+  resulting in a single feature.
+
 
 Outputs
 .......
@@ -904,6 +1434,8 @@ scaled by a preset amount.
 
 If Z values already exist in the layer, they will be overwritten with the new value.
 If no Z values exist, the geometry will be upgraded to include the Z dimension.
+
+.. seealso:: :ref:`qgissetmfromraster`, :ref:`qgissetzvalue`
 
 Parameters
 ..........
@@ -932,16 +1464,14 @@ Outputs
 ``Updated`` [vector: any]
   A vector layer with geometries that have Z values extracted from the provided raster layer.
 
-See also
-........
-:ref:`qgissetmfromraster`, :ref:`qgissetzvalue`
-
 
 .. _qgisdropmzvalues:
 
 Drop m/z values
 ---------------
 Removes any M (measure) or Z (altitude) values from input geometries.
+
+.. seealso:: :ref:`qgissetmvalue`, :ref:`qgissetzvalue`
 
 Parameters
 ..........
@@ -963,10 +1493,6 @@ Outputs
 ``Z/M Dropped`` [vector: any]
   A vector layer that is identical to the input layer, except that M and/or Z values have been removed from its geometries.
 
-See also
-........
-:ref:`qgissetmvalue`, :ref:`qgissetzvalue`
-
 
 .. _qgiseliminateselectedpolygons:
 
@@ -982,6 +1508,8 @@ are a result of polygon intersection processes where boundaries of the inputs ar
 similar but not identical.
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
+
+.. seealso:: :ref:`qgisfixgeometries`
 
 Parameters
 ..........
@@ -1019,6 +1547,8 @@ intermediate vertices between them.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+.. seealso:: :ref:`qgissubdivide`, :ref:`qgislinesubstring`
+
 Parameters
 ..........
 ``Input layer`` [vector: line]
@@ -1046,6 +1576,8 @@ Lines are extended using the bearing of the first and last segment in the line.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+.. seealso:: :ref:`qgislinesubstring`
+
 Parameters
 ..........
 
@@ -1064,9 +1596,97 @@ Outputs
 ``Extended`` [vector: line]
   Extended vector line layer.
 
-See also
-........
-:ref:`qgislinesubstring`
+
+.. _qgisextractmvalues:
+
+Extract M values
+----------------
+
+Extracts M values from geometries into feature attributes.
+
+By default only the M value from the first vertex of each
+feature is extracted, however the algorithm can optionally
+calculate statistics on all of the geometry's M values,
+including sum, mean, minimum and maximum.
+
+.. seealso:: :ref:`qgisextractzvalues`, :ref:`qgissetmvalue`, :ref:`qgisdropmzvalues`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Summaries to calculate**
+     - ``SUMMARIES``
+     - [enumeration]
+
+       Default: [0]
+     - Statistics on the M values of a geometry.
+       One or more of:
+       
+       * 0 --- First
+       * 1 --- Last
+       * 2 --- Count
+       * 3 --- Sum
+       * 4 --- Mean
+       * 5 --- Median
+       * 6 --- St.dev (pop)
+       * 7 --- Minimum
+       * 8 --- Maximum
+       * 9 --- Range
+       * 10 --- Minority
+       * 11 --- Majority
+       * 12 --- Variety
+       * 13 --- Q1
+       * 14 --- Q3
+       * 15 --- IQR
+
+   * - **Output column prefix**
+     - ``COLUMN_PREFIX``
+     - [string]
+
+       Default: 'm\_'
+     - The prefix for the output (M) column
+   * - **Extracted**
+     - ``OUTPUT``
+     - [same as input]
+     - Specify the output layer.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Extracted**
+     - ``OUTPUT``
+     - [same as input]
+     - The output vector layer (with M values)
 
 
 .. _qgisextractspecificvertices:
@@ -1090,6 +1710,8 @@ Additional fields are added to the vertices indicating the specific vertex posit
 (e.g., 0, -1, etc), the original vertex index, the vertex’s part and its index within
 the part (as well as its ring for polygons), distance along the original geometry
 and bisector angle of vertex for the original geometry.
+
+.. seealso:: :ref:`qgisextractvertices`, :ref:`qgisfilterverticesbym`, :ref:`qgisfilterverticesbyz`
 
 Parameters
 ..........
@@ -1130,6 +1752,9 @@ distance along original geometry and bisector angle of vertex for original geome
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
+.. seealso:: :ref:`qgisextractspecificvertices`, :ref:`qgisfilterverticesbym`,
+ :ref:`qgisfilterverticesbyz`
+
 Parameters
 ..........
 
@@ -1141,6 +1766,98 @@ Outputs
 
 ``Vertices`` [vector: point]
   Point layer with features representing all the vertices in the input layer.
+
+
+.. _qgisextractzvalues:
+
+Extract Z values
+----------------
+
+Extracts Z values from geometries into feature attributes.
+
+By default only the Z value from the first vertex of each
+feature is extracted, however the algorithm can optionally
+calculate statistics on all of the geometry's Z values,
+including sum, mean, minimum and maximum.
+
+.. seealso:: :ref:`qgisextractzvalues`, :ref:`qgissetzvalue`, :ref:`qgisdropmzvalues`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Summaries to calculate**
+     - ``SUMMARIES``
+     - [enumeration]
+     
+       Default: [0]
+     - Statistics on the Z values of a geometry.
+       One or more of:
+       
+       * 0 --- First
+       * 1 --- Last
+       * 2 --- Count
+       * 3 --- Sum
+       * 4 --- Mean
+       * 5 --- Median
+       * 6 --- St.dev (pop)
+       * 7 --- Minimum
+       * 8 --- Maximum
+       * 9 --- Range
+       * 10 --- Minority
+       * 11 --- Majority
+       * 12 --- Variety
+       * 13 --- Q1
+       * 14 --- Q3
+       * 15 --- IQR
+
+   * - **Output column prefix**
+     - ``COLUMN_PREFIX``
+     - [string]
+
+       Default: 'z\_'
+     - The prefix for the output (Z) column
+   * - **Extracted**
+     - ``OUTPUT``
+     - [same as input]
+     - Specify the output layer.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Extracted**
+     - ``OUTPUT``
+     - [same as input]
+     - The output vector layer (with Z values)
 
 
 .. _qgisfilterverticesbym:
@@ -1161,6 +1878,9 @@ similarly if the maximum value is not specified then only the minimum value is t
 
 .. note:: Depending on the input geometry attributes and the filters used,
   the resultant geometries created by this algorithm may no longer be valid.
+
+.. seealso:: :ref:`qgisfilterverticesbyz`, :ref:`qgisextractvertices`,
+ :ref:`qgisextractspecificvertices`
 
 Parameters
 ..........
@@ -1188,10 +1908,6 @@ Outputs
 ``Filtered`` [vector: line, polygon]
   Vector layer of the features with only the filtered vertices.
 
-See also
-........
-:ref:`qgisfilterverticesbyz`, :ref:`qgisextractvertices`
-
 
 .. _qgisfilterverticesbyz:
 
@@ -1212,6 +1928,9 @@ similarly if the maximum value is not specified then only the minimum value is t
 .. note:: Depending on the input geometry attributes and the filters used,
   the resultant geometries created by this algorithm may no longer be valid.
   You may need to run the :ref:`qgisfixgeometries` algorithm to ensure their validity.
+
+.. seealso:: :ref:`qgisfilterverticesbym`, :ref:`qgisextractvertices`,
+ :ref:`qgisextractspecificvertices`
 
 Parameters
 ..........
@@ -1239,10 +1958,6 @@ Outputs
 ``Filtered`` [vector: line, polygon]
   Vector layer of the features with only the filtered vertices.
 
-See also
-........
-:ref:`qgisfilterverticesbym`, :ref:`qgisextractvertices`
-
 
 .. _qgisfixgeometries:
 
@@ -1256,6 +1971,8 @@ without further intervention. Always outputs multi-geometry layer.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+.. seealso:: :ref:`qgischeckvalidity`
+
 Parameters
 ..........
 
@@ -1267,6 +1984,60 @@ Outputs
 
 ``Fixed geometries`` [vector: line, polygon]
   Layer with fixed geometries.
+
+
+.. _qgisforcerhr:
+
+Force right-hand-rule |36|
+--------------------------
+
+This algorithm forces polygon geometries to respect the
+Right-Hand-Rule, in which the area that is bounded by a polygon
+is to the right of the boundary.
+In particular, the exterior ring is oriented in a clockwise
+direction and the interior rings in a counter-clockwise
+direction.
+The algorithm consumes and produces features with polygon
+geometries.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  -  Label
+      -  Name
+      -  Type
+      -  Description
+
+   *  -  **Input features**
+      -  
+      -  [vector: polygon]
+      -  The input vector
+
+
+Outputs
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  -  Label
+      -  Name
+      -  Type
+      -  Description
+
+   *  -  **Reoriented**
+      -  
+      -  [vector: line]
+      -  The input features with reoriented polygons
+
+
 
 .. _qgisantimeridiansplit:
 
@@ -1373,6 +2144,8 @@ the resultant feature will have a null geometry.
 
    Interpolated point at 500m of the beginning of the line
 
+.. seealso:: :ref:`qgispointsalonglines`
+
 Parameters
 ..........
 
@@ -1388,9 +2161,6 @@ Outputs
 ``Interpolated points`` [vector: point]
   Point vector layer with features at a set distance along the line or polygon boundary.
 
-See also
-........
-:ref:`qgispointsalonglines`
 
 .. _qgiskeepnbiggestparts:
 
@@ -1443,6 +2213,8 @@ calculating the substring.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+.. seealso:: :ref:`qgisextendlines`
+
 Parameters
 ..........
 
@@ -1461,10 +2233,6 @@ Outputs
 ``Substring`` [vector: line]
   Vector line layer of the substring
 
-See also
-........
-:ref:`qgisextendlines`
-
 
 .. _qgislinestopolygons:
 
@@ -1476,6 +2244,8 @@ The attribute table of the output layer is the same as the one from of the input
 line layer.
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
+
+.. seealso:: :ref:`qgispolygonstolines`, :ref:`qgispolygonize`
 
 Parameters
 ..........
@@ -1521,6 +2291,8 @@ Outputs
 Minimum bounding geometry
 -------------------------
 Creates geometries which enclose the features from an input layer.
+
+.. seealso:: :ref:`qgisminimumenclosingcircle`
 
 Parameters
 ..........
@@ -1570,6 +2342,8 @@ Calculates the minimum enclosing circle which covers each feature in an input la
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+.. seealso:: :ref:`qgisminimumboundinggeometry`
+
 Parameters
 ..........
 
@@ -1587,10 +2361,6 @@ Outputs
 ``Minimum enclosing circles`` [vector: polygon]
   Enclosing circles for each polygon feature.
 
-See also
-........
-:ref:`qgisminimumboundinggeometry`
-
 
 .. _qgismultiringconstantbuffer:
 
@@ -1605,6 +2375,10 @@ using a fixed or dynamic distance and ring numbers.
    Multi-ring buffer for line, point and polygon layer
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
+.. seealso:: :ref:`qgisbuffer`, :ref:`qgisvariabledistancebuffer`,
+ :ref:`qgisrectanglesovalsdiamondsfixed`, :ref:`qgisrectanglesovalsdiamondsvariable`,
+ :ref:`qgissinglesidedbuffer`
 
 Parameters
 ..........
@@ -1628,11 +2402,6 @@ Outputs
 ``Multi-ring buffer (constant distance)``
   Multi ring buffer polygon vector layer.
 
-See also
-........
-:ref:`qgisbuffer`, :ref:`qgisvariabledistancebuffer`, :ref:`qgisrectanglesovalsdiamondsfixed`,
-:ref:`qgisrectanglesovalsdiamondsvariable`, :ref:`qgissinglesidedbuffer`
-
 
 .. _qgismultiparttosingleparts:
 
@@ -1652,6 +2421,8 @@ into single features.
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
+.. seealso:: :ref:`qgiscollect`, :ref:`qgispromotetomulti`
+
 Parameters
 ..........
 
@@ -1663,10 +2434,6 @@ Outputs
 
 ``Single parts`` [vector: any]
   Singlepart layer in output with updated attribute table.
-
-See also
-........
-:ref:`qgiscollect`, :ref:`qgispromotetomulti`
 
 
 .. _qgisoffsetline:
@@ -1682,6 +2449,8 @@ the left, and negative distances will offset them to the right.
    In blue the source layer, in red the offset one
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
+.. seealso:: :ref:`qgisarrayoffsetlines`, :ref:`qgistranslategeometry`
 
 Parameters
 ..........
@@ -1723,10 +2492,6 @@ Outputs
 ``Offset`` [vector: line]
   Offset line layer.
 
-See also
-........
-:ref:`qgisarrayoffsetlines`, :ref:`qgistranslategeometry`
-
 
 .. _qgisorientedminimumboundingbox:
 
@@ -1741,6 +2506,8 @@ Calculates the minimum area rotated rectangle which covers each feature in an in
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+.. seealso:: :ref:`qgisminimumboundinggeometry`
+
 Parameters
 ..........
 
@@ -1752,10 +2519,6 @@ Outputs
 
 ``Bounding boxes`` [vector: polygon]
   Oriented minimum bounding boxes for each polygon feature.
-
-See also
-........
-:ref:`qgisminimumboundinggeometry`
 
 
 .. _qgisorthogonalize:
@@ -1804,6 +2567,8 @@ Returns a point guaranteed to lie on the surface of a geometry.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+.. seealso:: :ref:`qgiscentroids`
+
 Parameters
 ..........
 
@@ -1811,7 +2576,7 @@ Parameters
   Input vector layer.
 
 ``Create point on surface for each part`` [boolean |dataDefined|]
-  If checked a point for each different part of the geometry will be created.
+  If checked, a point for each part of the geometry will be created.
 
   Default: *False*
 
@@ -1820,10 +2585,6 @@ Outputs
 
 ``Point`` [vector: point]
   Point vector layer.
-
-See also
-........
-:ref:`qgiscentroids`
 
 
 .. _qgispointsalonglines:
@@ -1841,6 +2602,8 @@ the start and end of the geometry the points should be created.
    :align: center
 
    Points created along the source line layer
+
+.. seealso:: :ref:`qgisinterpolatepoint`
 
 Parameters
 ..........
@@ -1871,9 +2634,6 @@ Outputs
 ``Points`` [vector: point]
   Point vector layer with features placed along the line or polygon boundary.
 
-See also
-........
-:ref:`qgisinterpolatepoint`
 
 .. _qgispointsdisplacement:
 
@@ -1911,34 +2671,6 @@ Outputs
 
 ``Displaced`` [vector: point]
   Point vector layer with displaced features.
-
-
-.. _qgispointtolayer:
-
-Point to layer
---------------
-
-Creates a new vector layer that contains a single feature with
-geometry matching a point parameter.
-It can be used in models to convert a point into a layer which can be used
-for other algorithms which require a layer based input.
-
-Parameters
-..........
-
-``Point`` [coordinates]
-  Input point (example: ``397254,6214446 [EPSG:32632]``).
-
-
-Outputs
-.......
-
-``Point`` [vector: point]
-  Point vector layer containing the input point.
-
-See also
-........
-:ref:`qgisextenttolayer`
 
 
 .. _qgispoleofinaccessibility:
@@ -1994,6 +2726,8 @@ line layer features.
 .. note:: The line layer must have closed shapes in order to be transformed into
   a polygon.
 
+.. seealso:: :ref:`qgispolygonstolines`
+
 Parameters
 ..........
 
@@ -2027,6 +2761,8 @@ of the polygons in the input layer.
    Black lines as the result of the algorithm
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
+
+.. seealso:: :ref:`qgispolygonize`
 
 Parameters
 ..........
@@ -2087,6 +2823,8 @@ compatible with data providers that require multipart features.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+.. seealso:: :ref:`qgisaggregate`, :ref:`qgiscollect`
+
 Parameters
 ..........
 
@@ -2098,10 +2836,6 @@ Outputs
 
 ``Multiparts`` [vector: any]
   Multiparts vector layer.
-
-See also
-........
-:ref:`qgisaggregate`, :ref:`qgiscollect`
 
 
 .. _qgisrectanglesovalsdiamondsfixed:
@@ -2117,6 +2851,8 @@ Parameters can vary depending on the shape chosen.
    :align: center
 
    Different buffer shapes
+
+.. seealso:: :ref:`qgisrectanglesovalsdiamondsvariable`
 
 Parameters
 ..........
@@ -2161,10 +2897,6 @@ Outputs
 ``Output`` [vector: polygon]
   Buffer shape in output.
 
-See also
-........
-:ref:`qgisrectanglesovalsdiamondsvariable`
-
 
 .. _qgisrectanglesovalsdiamondsvariable:
 
@@ -2179,6 +2911,8 @@ Buffer shape parameters are specified through attribute of the input layer.
    :align: center
 
    Different buffer shapes with different parameters
+
+.. seealso:: :ref:`qgisrectanglesovalsdiamondsfixed`
 
 Parameters
 ..........
@@ -2223,10 +2957,6 @@ Outputs
 ``Output`` [vector: polygon]
   Buffer shape in output.
 
-See also
-........
-:ref:`qgisrectanglesovalsdiamondsfixed`
-
 
 .. _qgisremoveduplicatevertices:
 
@@ -2249,6 +2979,9 @@ will be maintained.
   this method.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
+.. seealso:: :ref:`qgisextractvertices`, :ref:`qgisextractspecificvertices`,
+ :ref:`qgisdeleteduplicategeometries`
 
 Parameters
 ..........
@@ -2283,6 +3016,8 @@ Removes any features which do not have a geometry from a vector layer.
 All other features will be copied unchanged.
 
 The features with null geometries can be saved to a separate layer.
+
+.. seealso:: :ref:`qgisdeleteduplicategeometries`
 
 Parameters
 ..........
@@ -2335,6 +3070,8 @@ around a unique preset point.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+.. seealso:: :ref:`qgistranslategeometry`, :ref:`qgisswapxy`
+
 Parameters
 ..........
 
@@ -2371,6 +3108,9 @@ from the original arc center to consecutive output vertices on the linearized
 geometry).
 Non-curved geometries will be retained without change.
 
+.. seealso:: :ref:`qgissegmentizebymaxdistance`, :ref:`qgissimplifygeometries`,
+ :ref:`qgissmoothgeometry`
+
 Parameters
 ..........
 
@@ -2388,10 +3128,6 @@ Outputs
 ``Segmentized`` [vector: line, polygon]
   Vector layer with segmentized geometries.
 
-See also
-........
-:ref:`qgissegmentizebymaxdistance`, :ref:`qgissimplifygeometries`, :ref:`qgissmoothgeometry`
-
 
 .. _qgissegmentizebymaxdistance:
 
@@ -2402,6 +3138,8 @@ Segmentizes a geometry by converting curved sections to linear sections.
 The segmentization is performed by specifying the maximum allowed offset
 distance between the original curve and the segmentized representation.
 Non-curved geometries will be retained without change.
+
+.. seealso:: :ref:`qgissegmentizebymaxangle`, :ref:`qgissimplifygeometries`, :ref:`qgissmoothgeometry`
 
 Parameters
 ..........
@@ -2421,10 +3159,6 @@ Outputs
 ``Segmentized`` [vector: line, polygon]
   Vector layer with segmentized geometries.
 
-See also
-........
-:ref:`qgissegmentizebymaxangle`, :ref:`qgissimplifygeometries`, :ref:`qgissmoothgeometry`
-
 
 .. _qgissetmvalue:
 
@@ -2438,6 +3172,8 @@ specified value used as the initial M value for all geometries.
 
 .. tip:: Use the |identify|:sup:`Identify Features` button to check the added M value:
  the results are available in the :guilabel:`Identify Results` dialog.
+
+.. seealso:: :ref:`qgissetmfromraster`, :ref:`qgissetzvalue`, :ref:`qgisdropmzvalues`
 
 Parameters
 ..........
@@ -2456,10 +3192,6 @@ Outputs
 ``M Added`` [vector: any]
   Vector layer in output with M value.
 
-See also
-........
-:ref:`qgissetmfromraster`, :ref:`qgissetzvalue`, :ref:`qgisdropmzvalues`
-
 
 .. _qgissetmfromraster:
 
@@ -2472,6 +3204,8 @@ scaled by a preset amount.
 
 If M values already exist in the layer, they will be overwritten with the new value.
 If no M values exist, the geometry will be upgraded to include M values.
+
+.. seealso:: :ref:`qgissetzfromraster`, :ref:`qgissetmvalue`
 
 Parameters
 ..........
@@ -2500,10 +3234,6 @@ Outputs
 ``Updated`` [vector: any]
   A vector layer with M values extracted from the provided raster layer.
 
-See also
-........
-:ref:`qgissetzfromraster`, :ref:`qgissetmvalue`
-
 
 .. _qgissetzvalue:
 
@@ -2517,6 +3247,8 @@ specified value used as the initial Z value for all geometries.
 
 .. tip:: Use the |identify|:sup:`Identify Features` button to check the added Z value:
  the results are available in the :guilabel:`Identify Results` dialog.
+
+.. seealso:: :ref:`qgissetzfromraster`, :ref:`qgissetmvalue`, :ref:`qgisdropmzvalues`
 
 Parameters
 ..........
@@ -2534,10 +3266,6 @@ Outputs
 
 ``Z Added`` [vector: any]
   Vector layer in output with Z value.
-
-See also
-........
-:ref:`qgissetzfromraster`, :ref:`qgissetmvalue`, :ref:`qgisdropmzvalues` 
 
 
 .. _qgissimplifygeometries:
@@ -2560,6 +3288,9 @@ snapping geometries to grid.
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
+
+.. seealso:: :ref:`qgissmoothgeometry`, :ref:`qgisdensifygeometries`,
+ :ref:`qgisdensifygeometriesgivenaninterval`
 
 Parameters
 ..........
@@ -2603,6 +3334,8 @@ Buffer always results in a polygon layer.
    :align: center
 
    Left versus right side buffer on the same vector line layer
+
+.. seealso:: :ref:`qgisbuffer`
 
 Parameters
 ..........
@@ -2676,6 +3409,9 @@ or lower would preserve right angles in the geometry.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+.. seealso:: :ref:`qgissimplifygeometries`, :ref:`qgisdensifygeometries`,
+ :ref:`qgisdensifygeometriesgivenaninterval`
+
 Parameters
 ..........
 
@@ -2724,6 +3460,8 @@ another layer, or to geometries within the same layer.
 
 Matching is done based on a tolerance distance, and vertices will be inserted or
 removed as required to make the geometries match the reference geometries.
+
+.. seealso:: :ref:`qgissnappointstogrid`
 
 Parameters
 ..........
@@ -2780,6 +3518,8 @@ axis will disable snapping for that axis.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+.. seealso:: :ref:`qgissnapgeometries`
+
 Parameters
 ..........
 
@@ -2813,6 +3553,65 @@ Outputs
   Vector layer with snapped geometries.
 
 
+.. _qgissplitlinesbylength:
+
+Split lines by maximum length |36|
+----------------------------------
+This algorithm takes a line (or curve) layer and splits each feature into
+multiple parts, where each part is of a specified maximum length.
+Z and M values at the start and end of the new line substrings are
+linearly interpolated from existing values.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  -  Label
+      -  Name
+      -  Type
+      -  Description
+
+   *  -  **Input layer**
+      -  ``INPUT``
+      -  [vector: line]
+      -  The input line features
+
+   *  -  **Length**
+      -  ``LENGTH``
+      -  [numeric]
+      -  The maximum length of a line in the output.
+
+   *  -  **Split**
+      -  ``OUTPUT``
+      -  [vector: line]
+      -  The sink for the output line features.
+
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  -  Label
+      -  Name
+      -  Type
+      -  Description
+
+   *  -  **Split**
+      -  ``OUTPUT``
+      -  [vector: line]
+      -  The new line features - all with line geometries that have a
+         length that is less than or equal to the length specified in
+         the LENGTH paramter.
+
+
 .. _qgissubdivide:
 
 Subdivide
@@ -2835,6 +3634,8 @@ Curved geometries will be segmentized before subdivision.
   and may contain self-intersections.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
+.. seealso:: :ref:`qgisexplodelines`, :ref:`qgislinesubstring`
 
 Parameters
 ..........
@@ -2866,6 +3667,8 @@ and longitude values reversed.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+.. seealso:: :ref:`qgistranslategeometry`, :ref:`qgisrotatefeatures`
+
 Parameters
 ..........
 
@@ -2890,6 +3693,8 @@ buffer diameter.
    :align: center
 
    Tapered buffer example
+
+.. seealso:: :ref:`qgisbufferbym`, :ref:`qgisbuffer`, :ref:`qgiswedgebuffers`
 
 Parameters
 ..........
@@ -2917,10 +3722,6 @@ Outputs
 
 ``Buffered`` [vector: polygon]
   Variable buffer polygon layer.
-
-See also
-........
-:ref:`qgisbufferbym`, :ref:`qgisbuffer`, :ref:`qgiswedgebuffers`
 
 
 .. _qgistessellate:
@@ -3024,6 +3825,9 @@ Z and M values present in the geometry can also be translated.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+.. seealso:: :ref:`qgisarraytranslatedfeatures`, :ref:`qgisoffsetline`,
+ :ref:`qgisrotatefeatures`, :ref:`qgisswapxy`
+
 Parameters
 ..........
 
@@ -3056,45 +3860,169 @@ Outputs
 ``Translated`` [vector: any]
   Translated (moved) vector layer.
 
-See also
-........
-:ref:`qgisarraytranslatedfeatures`, :ref:`qgisoffsetline`
+
+.. _qgisvariabledistancebuffer:
+
+Variable distance buffer (*Graphical Modeler only*)
+----------------------------------------------------
+Computes a buffer area for all the features in an input layer.
+This algorithm is only available from the :ref:`processing.modeler`.
+
+The size of the buffer for a given feature is defined by an attribute,
+so it allows different features to have different buffer sizes.
+
+.. seealso:: :ref:`qgisbuffer`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Distance field**
+     - ``DISTANCE``
+     - [tablefield: numeric]
+     - Attribute for the distance radius of the buffer
+   * - **Segments**
+     - ``SEGMENTS``
+     - [number]
+
+       Default: *5*
+     - Controls the number of line segments to use to approximate a
+       quarter circle when creating rounded offsets.
+   * - **Dissolve result**
+     - ``DISSOLVE``
+     - [boolean]
+
+       Default: *False*
+     - Choose to dissolve the final buffer, resulting in a single
+       feature covering all input features.
+
+       .. figure:: img/buffer_dissolve.png
+          :align: center
+       
+          Normal and dissolved buffer
+   * - **End cap style**
+     - ``END_CAP_STYLE``
+     - [enumeration]
+     - Controls how line endings are handled in the buffer.
+       
+       .. figure:: img/buffer_cap_style.png
+          :align: center
+       
+          Round, flat and square cap styles
+   * - **Join style**
+     - ``JOIN_STYLE``
+     - [enumeration]
+     - Specifies whether round, miter or beveled joins should be used
+       when offsetting corners in a line.
+   * - **Miter limit**
+     - ``MITER_LIMIT``
+     - [number]
+       
+       Default: 2.0
+     - Only applicable for mitered join styles, and controls the
+       maximum distance from the offset curve to use when creating a
+       mitered join.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Buffer**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Buffer polygon vector layer.
 
 
 .. _qgisbufferbym:
 
 Variable width buffer (by M value)
 ----------------------------------
-Creates variable width buffers along lines, using the M value of the line geometries
-as the diameter of the buffer at each vertex.
+Creates variable width buffers along lines, using the M value of the
+line geometries as the diameter of the buffer at each vertex.
 
 .. figure:: img/variable_buffer_m.png
    :align: center
 
    Variable buffer example
 
+.. seealso:: :ref:`qgistaperedbuffer`, :ref:`qgisbuffer`, :ref:`qgissetmvalue`
+
 Parameters
 ..........
 
-``Input layer`` [vector: line]
-  Line vector layer in input.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Segments`` [number |dataDefined|]
-  Number of the buffer segments. It can be a unique value (same value for all the
-  features) or it can be taken from features data (different value depending
-  on the feature attribute).
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input line vector layer
+   * - **Segments**
+     - ``SEGMENTS``
+     - [number | dataDefined]
 
-  Default: *16*
+       Default: 16
+     - Number of the buffer segments per quarter circle.
+       It can be a unique value (same value for all the features),
+       or it can be taken from features data (the value can
+       depend on feature attributes).
+   * - **Buffered**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output (buffer) layer
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Buffered`` [vector: polygon]
-  Variable buffer polygon layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-See also
-........
-:ref:`qgistaperedbuffer`, :ref:`qgisbuffer`, :ref:`qgissetmvalue`
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Buffered**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Variable buffer polygon layer
 
 
 .. _qgisvoronoipolygons:
@@ -3117,19 +4045,58 @@ any other point.
 Parameters
 ..........
 
-``Input layer`` [vector: point]
-  Input point vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Buffer region`` [number]
-  Area of the Voronoi polygons or of the input layer.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: point]
+     - Input point vector layer
+   * - **Buffer region (% of extent)**
+     - ``BUFFER``
+     - [number]
 
-  Default: *0.0*
+       Default: 0.0
+     - The extent of the output layer will be this much
+       bigger than the extent of the input layer
+   * - **Voronoi polygons**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output layer (with the Voronoi polygons).
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+
 
 Outputs
 .......
 
-``Voronoi polygons`` [vector: polygon]
-  Voronoi polygons of the input point vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Voronoi polygons**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Voronoi polygons of the input point vector layer
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -3139,6 +4106,8 @@ Outputs
    source folder.
 
 .. |36| replace:: ``NEW in 3.6``
+.. |38| replace:: ``NEW in 3.8``
+.. |310| replace:: ``NEW in 3.10``
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png
@@ -3155,4 +4124,3 @@ Outputs
    :width: 1.5em
 .. |newAttribute| image:: /static/common/mActionNewAttribute.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

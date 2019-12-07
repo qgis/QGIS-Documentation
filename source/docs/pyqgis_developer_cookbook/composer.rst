@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. index:: Map rendering, Map printing
 
 .. _layout:
@@ -85,7 +81,7 @@ then exported to PDF, raster images or directly printed on a printer.
 The layout consists of a bunch of classes. They all belong to the core
 library. QGIS application has a convenient GUI for placement of the elements,
 though it is not available in the GUI library. If you are not familiar with
-`Qt Graphics View framework <http://doc.qt.io/qt-5/graphicsview.html>`_,
+`Qt Graphics View framework <https://doc.qt.io/qt-5/graphicsview.html>`_,
 then you are encouraged to check the documentation now, because the layout
 is based on it.
 
@@ -224,12 +220,3 @@ example, the pages are exported to PNG images:
 Notice that the outputs will be saved in the base path folder, using the output
 filename expression configured on atlas.
 
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 |LS| Using Print Layout
 ===============================================================================
 
@@ -290,12 +286,6 @@ For our purposes, we're going to use PDF.
 
 Congratulations on your first completed QGIS map project!
 
-|WN|
--------------------------------------------------------------------------------
-
-On the next page, you will be given an assignment to complete. This will allow
-you to practice the techniques you have learned so far.
-
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -306,7 +296,6 @@ you to practice the techniques you have learned so far.
 .. |FA| replace:: Follow Along:
 .. |IC| replace:: In Conclusion
 .. |LS| replace:: Lesson:
-.. |WN| replace:: What's Next?
 .. |addLegend| image:: /static/common/mActionAddLegend.png
    :width: 1.5em
 .. |addMap| image:: /static/common/mActionAddMap.png
@@ -332,7 +321,6 @@ you to practice the techniques you have learned so far.
    :width: 1.5em
 .. |signMinus| image:: /static/common/symbologyRemove.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
    :width: 1.5em
 .. |zoomIn| image:: /static/common/mActionZoomIn.png

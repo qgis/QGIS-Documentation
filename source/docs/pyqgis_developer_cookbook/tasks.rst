@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. index:: Tasks
 
 .. _tasks:
@@ -41,14 +37,14 @@ There are several ways to create a QGIS task:
 
   .. code-block:: python
 
-    QgsTask.fromFunction(u'heavy function', heavyFunction,
+    QgsTask.fromFunction('heavy function', heavyFunction,
                          onfinished=workdone)
 
 * Create a task from a processing algorithm
 
   .. code-block:: python
 
-    QgsProcessingAlgRunnerTask(u'native:buffer', params, context,
+    QgsProcessingAlgRunnerTask('native:buffer', params, context,
                                feedback)
 
 .. warning::
@@ -290,9 +286,9 @@ parameter ``wait_time``.
           raise exception
 
   # Creae a few tasks
-  task1 = QgsTask.fromFunction(u'Waste cpu 1', doSomething,
+  task1 = QgsTask.fromFunction('Waste cpu 1', doSomething,
                                on_finished=completed, wait_time=4)
-  task2 = QgsTask.fromFunction(u'Waste cpu 2', dosomething,
+  task2 = QgsTask.fromFunction('Waste cpu 2', dosomething,
                                on_finished=completed, wait_time=3)
   QgsApplication.taskManager().addTask(task1)
   QgsApplication.taskManager().addTask(task2)
@@ -330,7 +326,7 @@ added to the project in a safe way.
                context.takeResultLayer(output_layer.id()))
 
   alg = QgsApplication.processingRegistry().algorithmById(
-                                        u'qgis:randompointsinextent')
+                                        'qgis:randompointsinextent')
   context = QgsProcessingContext()
   feedback = QgsProcessingFeedback()
   params = {
@@ -344,13 +340,4 @@ added to the project in a safe way.
   task.executed.connect(partial(task_finished, context))
   QgsApplication.taskManager().addTask(task)
 
-See also: https://www.opengis.ch/2018/06/22/threads-in-pyqgis3/.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
+See also: https://opengis.ch/2018/06/22/threads-in-pyqgis3/.

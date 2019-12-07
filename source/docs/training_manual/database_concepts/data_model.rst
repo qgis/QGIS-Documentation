@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 |LS| Implementing the Data Model
 ===============================================================================
 
@@ -17,7 +13,7 @@ Install PostgreSQL
 
 .. note:: Although outside the scope of this document, Mac users can install
   PostgreSQL using
-  `Homebrew <http://russbrooks.com/2010/11/25/install-postgresql-9-on-os-x>`_.
+  `Homebrew <www.russbrooks.com/2010/11/25/install-postgresql-9-on-os-x>`_.
   Windows users can use the
   `graphical installer <https://www.postgresql.org/download/windows/>`_.
   Please note that the documentation will assume users are running QGIS under
@@ -420,4 +416,3 @@ Next you'll learn how to use the DBMS to add new data.
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
 .. |moderate| image:: /static/global/moderate.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

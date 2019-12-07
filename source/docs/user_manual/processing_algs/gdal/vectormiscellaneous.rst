@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 Vector miscellaneous
 ====================
 
@@ -17,7 +13,7 @@ Vector miscellaneous
 Execute SQL
 -----------
 
-This algorithm is derived from the `GDAL ogr2ogr utility <https://www.gdal.org/ogr2ogr.html>`_ .
+This algorithm is derived from the `GDAL ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_ .
 
 Parameters
 ..........
@@ -61,7 +57,7 @@ an available connection. The connection has to :ref:`be defined properly
 <vector_create_stored_connection>` beforehand. Be aware that the checkboxes 'Save Username'
 and 'Save Password' are activated. Then you can use the algorithm.
 
-This algorithm is derived from the `GDAL ogr2ogr utility <https://www.gdal.org/ogr2ogr.html>`_ .
+This algorithm is derived from the `GDAL ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_ .
 
 Parameters
 ..........
@@ -102,6 +98,8 @@ Parameters
   Default: *0*
 
 ``Assign an output CRS`` [crs]
+  Optional
+
   Defines the output CRS of the database table.
 
 ``Reproject to this CRS on output`` [crs]
@@ -251,7 +249,7 @@ Export to PostgreSQL (new connection)
 Imports vector layers inside a PostGreSQL database. A new connection
 to the PostGIS database must be created.
 
-This algorithm is derived from the `GDAL ogr2ogr utility <https://www.gdal.org/ogr2ogr.html>`_ .
+This algorithm is derived from the `GDAL ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_ .
 
 Parameters
 ..........
@@ -473,7 +471,7 @@ into a HTML-file.
 The information includes the geometry type, feature count, the spatial extent,
 the projection information and many more.
 
-This algorithm is derived from the `GDAL ogrinfo utility <https://www.gdal.org/ogrinfo.html>`_ .
+This algorithm is derived from the `GDAL ogrinfo utility <https://gdal.org/ogrinfo.html>`_ .
 
 Parameters
 ..........
@@ -487,12 +485,3 @@ Outputs
 ``Layer information`` [html]
   Name of the output HTML-file that includes the file information.
   If no HTML-file is defined the output will be written into a temporary file.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 *******************************************************************************
 |MOD| Spatial Database Concepts with PostGIS
 *******************************************************************************
@@ -25,7 +21,7 @@ available from Boundless Geo:
 * `Spatial Database Tips and Tricks
   <http://workshops.boundlessgeo.com/postgis-spatialdbtips/>`_
 
-See also `PostGIS online <http://postgisonline.org/>`_.
+See also `PostGIS In Action <www.postgis.us/>`_.
 
 .. toctree::
    :maxdepth: 2
@@ -44,4 +40,3 @@ See also `PostGIS online <http://postgisonline.org/>`_.
    source folder.
 
 .. |MOD| replace:: Module:
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

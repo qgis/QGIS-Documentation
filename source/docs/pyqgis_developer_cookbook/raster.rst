@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. index::
    pair: Raster; Raster layers
 
@@ -108,7 +104,7 @@ Single Band Rasters
 Let's say we want a render single band raster layer with colors ranging from
 green to yellow (corresponding to pixel values from 0 to 255).
 In the first stage we will prepare a
-class:`QgsRasterShader <qgis.core.QgsRasterShader>` object and configure
+:class:`QgsRasterShader <qgis.core.QgsRasterShader>` object and configure
 its shader function:
 
 .. code-block:: python
@@ -220,4 +216,3 @@ For instance, something like ``{1: 323.0}``
    source folder.
 
 .. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

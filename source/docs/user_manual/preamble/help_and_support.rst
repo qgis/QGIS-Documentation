@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. _`label_helpsupport`:
 
 ******************
@@ -90,7 +86,7 @@ easily catch up. Just go to https://qgis.org/irclogs and read the
 IRC-logs.
 
 Commercial support for QGIS is also available. Check the website
-https://qgis.org/en/commercial-support.html for more information.
+https://qgis.org/en/site/forusers/commercial_support.html for more information.
 
 BugTracker
 ==========
@@ -145,12 +141,3 @@ https://github.com/qgis/QGIS/wiki where you can find a
 variety of useful information relating to QGIS development, release
 plans, links to download sites, message-translation hints and
 more. Check it out, there are some goodies inside!
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

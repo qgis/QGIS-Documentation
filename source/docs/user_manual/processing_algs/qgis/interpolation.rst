@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 Interpolation
 =============
 
@@ -47,6 +43,18 @@ Parameters
   ``Columns`` will also be updated, so doubling the number of rows will automatically
   double the number of columns and the cell sizes will also be halved.
   The extent of the output raster will remain the same.
+
+  ``Number of rows`` [number]
+    Total number of rows of the output raster layer.
+
+  ``Number of columns`` [number]
+    Total number of columns of the output raster layer.
+
+  ``Pixel Size X`` [number]
+    Horizontal resolution of each pixel in output raster, in layer units.
+
+  ``Pixel Size Y`` [number]
+    Vertical resolution of each pixel in output raster, in layer units.
 
 ``Radius from field`` [tablefield: numeric]
   Optional
@@ -213,20 +221,29 @@ Parameters
 
   Default: *2.0*
 
-``Number of columns`` [number]
-  Total number of columns of the output raster layer.
-
-  Default: *300*
-
-``Number of rows`` [number]
-  Total number of rows of the output raster layer.
-
-  Default: *300*
-
 ``Extent (xmin, xmax, ymin, ymax)`` [extent]
   Extent of the output raster layer. You have to declare the output extent by
   either choosing it from the map canvas, selecting it from another layer or type
   it manually.
+
+``Output raster size`` [number]
+  Allows to set the size of the interpolated output raster layer by specifying the rows and columns
+  **or** the X and Y pixel size.
+
+  Increasing the number of rows or columns will decrease the cell size. Similarly, the values in ``Rows`` and
+  ``Columns`` will be updated when one of them are changed.
+
+  ``Number of rows`` [number]
+    Total number of rows of the output raster layer.
+
+  ``Number of columns`` [number]
+    Total number of columns of the output raster layer.
+
+  ``Pixel Size X`` [number]
+    Horizontal resolution of each pixel in output raster, in layer units.
+
+  ``Pixel Size Y`` [number]
+    Vertical resolution of each pixel in output raster, in layer units.
 
 Outputs
 .......
@@ -271,22 +288,29 @@ Parameters
   * 0 --- Linear
   * 1 --- Clough-Toucher (cubic)
 
-  Default: *0*
-
-``Number of columns`` [number]
-  Total number of columns of the output raster layer.
-
-  Default: *300*
-
-``Number of rows`` [number]
-  Total number of rows of the output raster layer.
-
-  Default: *300*
-
 ``Extent (xmin, xmax, ymin, ymax)`` [extent]
   Extent of the output raster layer. You have to declare the output extent by
   either choosing it from the map canvas, selecting it from another layer or type
   it manually.
+
+``Output raster size`` [number]
+  Allows to set the size of the interpolated output raster layer by specifying the rows and columns
+  **or** the X and Y pixel size.
+
+  Increasing the number of rows or columns will decrease the cell size. Similarly, the values in ``Rows`` and
+  ``Columns`` will be updated when one of them are changed.
+
+  ``Number of rows`` [number]
+    Total number of rows of the output raster layer.
+
+  ``Number of columns`` [number]
+    Total number of columns of the output raster layer.
+
+  ``Pixel Size X`` [number]
+    Horizontal resolution of each pixel in output raster, in layer units.
+
+  ``Pixel Size Y`` [number]
+    Vertical resolution of each pixel in output raster, in layer units.
 
 Outputs
 .......
@@ -309,4 +333,3 @@ Outputs
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

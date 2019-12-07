@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. _creating_layers:
 
 *****************
@@ -382,7 +378,7 @@ Depending on the format of export, some of these options are available or not:
 * :guilabel:`Datasource Options`, :guilabel:`Layer Options` or
   :guilabel:`Custom Options` which allow you to configure advanced parameters
   depending on the output format. Some are exposed in :ref:`supported_format`
-  but for full details, see the `GDAL <https://www.gdal.org>`_ driver documentation.
+  but for full details, see the `GDAL <https://gdal.org>`_ driver documentation.
 
 .. _figure_save_vector:
 
@@ -419,12 +415,12 @@ tool to export multiple layers as a single DXF layers. It's accessible in the
 In the :guilabel:`DXF Export` dialog:
 
 #. Indicate the destination layer file.
-#. Choose the symbology mode and scale (see the `OGR Feature Styles
-   <ogr_features_note>`_ note) if applicable.
+#. Choose the symbology mode and scale (see the :ref:`OGR Feature Styles
+   <ogr_features_note>` note) if applicable.
 #. Select the data :guilabel:`Encoding`.
 #. Select the :guilabel:`CRS` to apply: the selected layers will be reprojected
    to the given CRS.
-#. select the layers to include in the DXF files either by checking each in the
+#. Select the layers to include in the DXF files either by checking each in the
    table widget or automatically pick them from an existing :ref:`map theme
    <map_themes>`. The :guilabel:`Select All` and :guilabel:`Deselect All` buttons
    can also help to quickly set the data to export.
@@ -688,6 +684,5 @@ used in conjunction with this spatial index syntax.
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |virtualLayer| image:: /static/common/mActionAddVirtualLayer.png
    :width: 1.5em

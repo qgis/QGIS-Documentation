@@ -9,62 +9,59 @@ Translation Guidelines
 
 This  manual is aiming to help the translator.
 First the general process of how technically a translation is done
-is explained.  Later the translation is explained from an actual English
+is explained. Later the translation is explained from an actual English
 rst document that is translated to Dutch.
 Finally a summary of :ref:`Rules of translation <translation_summary>` is given.
 
-Although these guidelines focus on QGIS documentation, the methods and
-the rules described below are also applicable to QGIS applications and
-website translation.
+.. note:: Although these guidelines focus on QGIS documentation, the methods and
+ the rules described below are also applicable to QGIS applications and
+ website translation.
 
 .. _translation_process:
 
 Translation process
 ===================
 
-To create documentation first ``.rst`` documents are created.
-A prebuild script creates translation files named ``.po`` files for the english
-language in the folder :file:`/QGIS-Documentation/i18n/en`.
+QGIS Documentation is written in English with :file:`.rst` files.
+In order to provide translations:
 
-These "originals" are copied by the script to the i18n folders for other languages.
+#. A prebuild script creates translation files named :file:`.po` files for the
+   English language in the folder :file:`/QGIS-Documentation/i18n/en`.
+#. These "originals" are then copied by the script to the :file:`i18n` folders for
+   other languages.
+#. The sentences in the :file:`.po` files are pushed to the Transifex web platform,
+   and made available for translators who can begin to translate from English to their
+   language with the editor.
+#. At the end of the day, a script pulls back all validated translations
+#. At the next build of the documentation (which occurs at least once a day), a
+   script reuses the sentences to create translated output
+#. When afterwards an :file:`.rst` document is updated a new :file:`.po` file is
+   created in the English part. The contents of this new file will be merged
+   with already existing :file:`.po` files for each language. This means that
+   when a new line is added to an :file:`.rst` document that was already
+   translated, only the new/updated sentences are added in the translated
+   :file:`.po` file and needs to be translated. The amount of work for updating
+   translations for next release should be relatively small.
 
-The sentences in the ``.po`` files need to be translated from english to the
-language with a translation tool editor.
-
-When you want to contribute, first get a ``.po`` file and add
-translations for the sentences in the ``.po`` file.
-When you are finished the ``.po`` file is placed back in the right place and
-during the next build the build script now creates ``.mo`` files next to
-the ``.po`` files.
-These ``.mo`` files are actually used by the script to create translated output.
-
-When afterwards an rst document is updated a new ``.po`` file is created in the
-english part. The contents of this new file will be merged with already existing
-``.po`` files for each language. This means that when a new line is added to
-an rst document that was already translated, only the new/updated sentences are
-added in the translated ``.po`` file and needs to be translated. The amount of
-work for updating translations for next versions of QGIS should be relative
-small.
-
+.. note:: The process above is the same followed to translate QGIS website, QGIS
+ Desktop and QGIS Server. The difference with the applications is that instead
+ of :file:`.po` files, all the translatable strings in the :file:`.py`,
+ :file:`.cpp`, :file:`.yaml` and others... files that shape the application are
+ pushed to and pulled from transifex as a single :file:`.ts` file.
+ 
 Two different tools are currently used to do translations in QGIS:
 
-* the Transifex web platform, the easiest and recommanded way to translate QGIS,
+* The `Transifex web platform <https://www.transifex.com/>`_, the easiest and
+  recommended way to translate QGIS,
   transparently does the process described above and pulls all the translatable
-  texts in one place for the translator. He then just picks the files he wants
-  and does the translation
-* Qt Linguist, a Qt development tool that requires the translator to pick and
-  replace the ``.po`` files from the source code.
+  texts in one place for the translator. Just pick the files you want and translate.
+  Translated files are stored in the platform until another release is pushed.
+* `Qt Linguist <https://doc.qt.io/qt-5/qtlinguist-index.html>`_, a Qt
+  development tool, requires the translator to pull locally
+  the :file:`.po` (or :file:`.ts`) files from the source code, translate and
+  then push back.
 
 Note that whatever tool you choose, rules of translations are the same.
-
-.. warning::
-
-   **An important note:** If you want to translate content within
-   the docs folder (not web), never do this in the master branch. For translations
-   there are always translation branches available, once a document is fully
-   updated in english for a certain version. As an example, to translate
-   the manual of QGIS 2.8, you have to use the manual_en_v2.8 branch.
-
 
 .. _translate_file:
 
@@ -86,15 +83,15 @@ So why did I choose this document?
 #. It includes images, captions, headers, references and replacements.
 #. I wrote it so it is easier for me to translate ;-)
 
-The build process has created the English ``.po`` file which can be found here::
+The build process has created the English :file:`.po` file which can be found here::
 
  QGIS-Documentation/i18n/en/LC_MESSAGES/docs/user_manual/plugins/plugins_heatmap.po
 
-The equivalent Dutch ``.po`` file (basically a copy) can be found here::
+The equivalent Dutch :file:`.po` file (basically a copy) can be found here::
 
  QGIS-Documentation/i18n/nl/LC_MESSAGES/docs/user_manual/plugins/plugins_heatmap.po
 
-Along this file you will see a tiny ``.mo`` file which indicates that it
+Along this file you will see a tiny :file:`.mo` file which indicates that it
 does not hold any translations yet.
 
 
@@ -103,16 +100,38 @@ does not hold any translations yet.
 Translation in Transifex
 ........................
 
-In order to translate QGIS with Transifex, you first need to `join the project
-<https://qgis.org/en/site/getinvolved/translate.html#join-a-project>`_. Once
-you got a team, click on the corresponding project and your language.
-You get a list of all translatable ``.po`` files. Click on the
-``docs_user-manual_plugins_plugins-heatmap`` to select the heatmap plugin file
-and choose ``Translate`` in the prompted dialog.
-Note that you can also choose to download the file and translate it
-with tools like Qt Linguist.
-The next page lists all the sentences in the file. All you need to do is select
-the text and translate following the :ref:`guidelines <translate_manual>`.
+In order to translate using Transifex, you need to:
+
+#. `create an account on Transifex and join the QGIS project
+   <https://qgis.org/en/site/getinvolved/translate.html#join-a-project>`_.
+#. Once you are part of a language team, click on the corresponding project
+   (in this case ``QGIS Documentation``). A list of available languages with
+   their ratio of translation is displayed.
+
+   .. _figure_transifex_languages:
+
+   .. figure:: img/transifex_choose_language.png
+      :align: center
+
+      Select language for translation in the Transifex menu
+   
+#. Hover over your language and click either:
+
+   * :guilabel:`View resources`: translatable :file:`.po` files with their ratio
+     of translation, number of strings and some more metadata are now displayed.
+   * or :guilabel:`Translate`: opens the interface of translation with all the
+     available :file:`.po` files
+#. Identify the file you'd like to translate (in our case we are looking for the
+   ``docs_user-manual_plugins_plugins-heatmap``, the heatmap plugin file)
+   or any unfinished file and click on it: strings in the files are loaded
+   and you can use the interface to filter, translate, suggest translation... 
+
+   .. tip:: For the documentation or the website, clicking the ``Fix me`` link
+     in the footer of a page brings you directly to its corresponding translation
+     page in Transifex.
+ 
+#. All you need to do is select each text and translate following the
+   :ref:`guidelines <translate_manual>`.
 
 For further information on the use of Transifex Web Editor, see
 https://docs.transifex.com/translation/translating-with-the-web-editor.
@@ -123,7 +142,20 @@ https://docs.transifex.com/translation/translating-with-the-web-editor.
 Translation in Qt Linguist
 ..........................
 
-With Qt Linguist, you need to manually grab the ``.po`` file.
+With Qt Linguist, you need to:
+
+#. manually grab the :file:`.po` or :file:`.ts`  file(s). This can be achieved
+   by downloading the file(s) either from Transifex platform or from the
+   :file:`i18n/$language` folder of the source repository (in GitHub),
+#. proceed to the translation locally
+#. upload the modified files to their sources (Transifex or GitHub).
+
+While downloading and uploading translatable files can be done with Transifex,
+it's not advised to use this process. Since there's no
+versioning system on Transifex, the file you upload will simply replace the
+existing one and potentially overwrite any modification made by others on the
+platform in the meantime.
+
 When you open the file in Qt Linguist for the first time you will see the
 following dialog:
 
@@ -157,19 +189,26 @@ In the menu you see the following buttons which are convenient to use.
   field, then hit this button. If the item does not need translation just leave the
   text field for translation empty and also hit this button which indicates the
   item is done and you continue with the next item.
-
 * |linguist_previous| The Goto Previous button, can be used to go to the
   previous translation item.
-
 * |linguist_next| The Goto Next button, can be used to go to the next
   translation item.
-
 * |linguist_next_todo| The Next Todo button, jumps to the first translation
   item that still needs a translation. Handy when the original document has
   changed and only several new/changed sentences need to be translated.
-
 * |linguist_previous_todo| The Previous Todo button, searches backward and
   jumps to the first translation item it finds that still needs a translation.
+
+For further information on the use of Qt Linguist, see
+https://doc-snapshots.qt.io/qt5-5.12/linguist-translators.html
+
+.. warning::
+
+   If you want to download content to translate from the source
+   repository, never do this in the ``master`` branch. For translations
+   there are always translation branches available, once a document is fully
+   updated in English for a certain version. As an example, to translate
+   the manual of QGIS 2.8, you have to use the manual_en_v2.8 branch.
 
 
 .. _translate_manual:
@@ -219,7 +258,7 @@ identifier!
 In this case ``load_core_plugin`` is a unique reference identifier placed before
 an rst item that has a caption. The ref statement will be replaced with the text
 of the header and turned into a hyperlink. When the header this reference is
-refering to is translated, all references to this header will be automatically
+referring to is translated, all references to this header will be automatically
 translated as well.
 
 The next item contains the rst-tag ``:menuselection:`` followed by text
@@ -242,8 +281,8 @@ A bit further we meet the following tricky translation item:
    plugin (see figure_heatmap_settings_).
 
 It holds a reference to a figure ``figure_heatmap_settings_``, and like a reference
-to section this reference should not be changed!! The reference definition
-itself from the rst-document is not included in the ``.po`` file and can therefore
+to a section this reference should not be changed!! The reference definition
+from the rst-document is not included in the :file:`.po` file and can therefore
 not be changed. This means the reference to figures can not be translated. When
 HTML is created you will see ``figure_heatmap_settings``. When a PDF document is
 created ``figure_heatmap_settings_`` is replaced with a figure number.

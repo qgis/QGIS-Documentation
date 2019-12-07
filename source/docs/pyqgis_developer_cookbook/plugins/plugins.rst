@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. index:: Plugins; Folder, Python; Developing plugins
 
 .. _structuring_plugins:
@@ -20,14 +16,10 @@ In order to create a plugin, here are some steps to follow:
    Why do you do it?
    What problem do you want to solve?
    Is there already another plugin for that problem?
-#. *Create files*: The essentials:
-   a starting point :file:`__init__.py`;
-   fill in the :ref:`plugin_metadata` :file:`metadata.txt`.
-   Then implement your own design. A main Python plugin body e.g. :file:`mainplugin.py`.
-   Probably a form in Qt Designer :file:`form.ui`, with its :file:`resources.qrc`.
-#. *Write code*: Write the code inside the :file:`mainplugin.py`
-#. *Test*: Close and re-open QGIS and import your plugin again. Check if
-   everything is OK.
+#. *Create files*: some are essentials (see :ref:`plugin_files_architecture`)
+#. *Write code*: Write the code in appropriate files
+#. *Test*: :ref:`Reload your plugin <plugin_reloader_trick>` to check if
+   everything is OK
 #. *Publish*: Publish your plugin in QGIS repository or make your own
    repository as an "arsenal" of personal "GIS weapons".
 
@@ -75,13 +67,13 @@ What is the meaning of the files:
 * :file:`metadata.txt` = Contains general info, version, name and some other
   metadata used by plugins website and plugin infrastructure.
 
-`Here <https://www.dimitrisk.gr/qgis/creator/>`_
-is an online automated way of creating the basic files (skeleton) of a typical
+`Here <https://github.com/wonder-sk/qgis-minimal-plugin>`_
+is a way of creating the basic files (skeleton) of a typical
 QGIS Python plugin.
 
 There is a QGIS plugin called
 `Plugin Builder 3 <https://plugins.qgis.org/plugins/pluginbuilder3/>`_
-that creates a plugin template for QGIS and doesn't require an internet connection.
+that creates a plugin template for QGIS.
 This is the recommended option, as it produces 3.x compatible sources.
 
 .. warning::
@@ -125,10 +117,12 @@ description            True      short text which describes the plugin, no HTML 
 about                  True      longer text which describes the plugin in details, no HTML allowed
 version                True      short string with the version dotted notation
 author                 True      author name
-email                  True      email of the author, only shown on the website to logged in users, but visible in the Plugin Manager after the plugin is installed
+email                  True      email of the author, only shown on the website to logged in users,
+                                 but visible in the Plugin Manager after the plugin is installed
 changelog              False     string, can be multiline, no HTML allowed
 experimental           False     boolean flag, `True` or `False`
-deprecated             False     boolean flag, `True` or `False`, applies to the whole plugin and not just to the uploaded version
+deprecated             False     boolean flag, `True` or `False`, applies to the whole plugin
+                                 and not just to the uploaded version
 tags                   False     comma separated list, spaces are allowed inside individual tags
 homepage               False     a valid URL pointing to the homepage of your plugin
 repository             True      a valid URL for the source code repository
@@ -138,13 +132,15 @@ icon                   False     a file name or a relative path (relative to
                                  package) of a web friendly image (PNG, JPEG)
 category               False     one of `Raster`, `Vector`, `Database` and `Web`
 plugin_dependencies    False     PIP-like comma separated list of other plugins to install
+hasProcessingProvider  False     boolean flag, `True` or `False`, determines if
+                                 the plugin provides processing algorithms
 =====================  ========  =======================================
 
 |
 
-By default, plugins are placed in the `Plugins` menu (we will see in the next
-section  how to add a menu entry for your plugin) but they can also be placed
-the  into :menuselection:`Raster`, :menuselection:`Vector`,
+By default, plugins are placed in the :menuselection:`Plugins` menu (we will see
+in the next section how to add a menu entry for your plugin) but they can also
+be placed into :menuselection:`Raster`, :menuselection:`Vector`,
 :menuselection:`Database` and :menuselection:`Web` menus.
 
 A corresponding "category" metadata entry exists to specify that, so the plugin
@@ -536,8 +532,8 @@ You have to distribute ``.ts`` files with your plugin.
 Load the plugin
 ---------------
 
-In order to see the translation of your plugin just open QGIS, change the
-language (:menuselection:`Settings --> Options --> Language`) and restart QGIS.
+In order to see the translation of your plugin, open QGIS, change the
+language (:menuselection:`Settings --> Options --> General`) and restart QGIS.
 
 You should see your plugin in the correct language.
 
@@ -551,18 +547,23 @@ You should see your plugin in the correct language.
 Tips and Tricks
 ===============
 
+
+.. _plugin_reloader_trick:
+
 Plugin Reloader
 ---------------
 
 During development of your plugin you will frequently need to reload it in QGIS
-for testing. This is very easy using the Plugin Reloader plugin. You can find it
-as an experimental plugin with the Plugin Manager.
+for testing. This is very easy using the **Plugin Reloader** plugin. You can find it
+with the :ref:`Plugin Manager <plugins>`.
 
 Accessing Plugins
 -----------------
 
 You can access all the classes of installed plugins from within QGIS using python,
-which can be handy for debugging purposes.::
+which can be handy for debugging purposes.
+
+::
 
 	my_plugin = qgis.utils.plugins['My Plugin']
 
@@ -580,12 +581,3 @@ with the Plugin Manager.
 
 Information and requirements are here: `plugins.qgis.org <https://plugins.qgis.org/>`_.
 
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

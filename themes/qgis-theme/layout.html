@@ -24,8 +24,27 @@
   {%- set titlesuffix = "" %}
 {%- endif %}
 
+{%- macro outdated_block() %}
+    <div class="row outdated">
+    This documentation is for a QGIS version which has reached end of life. Visit the <a href="https://docs.qgis.org/latest/{{ language }}/">latest version</a> instead.
+    </div>
+{%- endmacro %}
+
+{%- macro isTesting_block() %}
+    <div class="row isTesting">
+    This documentation is a work in progress. For the Long Term Release and translations, please visit the <a href="https://docs.qgis.org/latest/{{ language }}/">latest version</a>.
+    </div>
+{%- endmacro %}
+
 {%- macro relbar() %}
-    <div class="related">
+    {%- if outdated %}
+      {%- set navigation_classes = "related related-outdated" %}
+    {%- elif isTesting %}
+      {%- set navigation_classes = "related related-isTesting" %}
+    {%- else %}
+      {%- set navigation_classes = "related" %}
+    {%- endif %}
+    <div class="{{ navigation_classes }}">
       {# QGIS hide this # navigation h3 #} 
       {#<h3>{{ _('Navigation') }}</h3>#}
       <ul>

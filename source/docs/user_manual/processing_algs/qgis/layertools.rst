@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 Layer tools
 ===========
 
@@ -31,20 +27,48 @@ The output layer contains a single bounding box for the whole input layer.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Layer**
+     - ``INPUT``
+     - [layer]
+     - Input layer
+   * - **Extent**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
+     - Specify the polygon vector layer for the output extent.
+       One of:
+
+       * Skip Output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Extent`` [vector: polygon]
-  Polygon vector layer.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Extent**
+      - ``OUTPUT``
+      - [vector: polygon]
+      - Output (polygon) vector layer with the extent
+        (minimum bounding box)

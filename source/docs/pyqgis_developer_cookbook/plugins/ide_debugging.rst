@@ -1,14 +1,8 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. index:: Plugins; Debugging
 
 **********************************************
 IDE settings for writing and debugging plugins
 **********************************************
-
-.. warning:: |outofdate|
 
 .. contents::
    :local:
@@ -17,6 +11,68 @@ IDE settings for writing and debugging plugins
 Although each programmer has his preferred IDE/Text editor, here are some
 recommendations for setting up popular IDE's for writing and debugging QGIS
 Python plugins.
+
+Useful plugins for writing Python plugins
+=========================================
+
+Two plugins are convenient when writing Python plugins.
+
+* Go to :menuselection:`Plugins --> Manage and Install plugins…`.
+  You may need to enable experimental plugins.
+* *Plugin reloader*. This will let you reload a plugin instead of
+  having to close and restart QGIS to have the plugin reloaded.
+* *First Aid*. This will let you have a Python console and local debugger
+  to inspect variables when an exception is raised from a plugin.
+
+
+Configuring PyCharm on Ubuntu with a compiled QGIS
+==================================================
+
+PyCharm is an IDE for Python developed by JetBrains. There is a free version
+called Community Edition and a paid one called Professional. You can download
+PyCharm on the website: https://www.jetbrains.com/pycharm/download
+
+We are assuming that you have compiled QGIS on Ubuntu with the given
+build directory :file:`~/dev/qgis/build/master`. It's not compulsory to have
+a self compiled QGIS, but only this has been tested. Paths must be adapted.
+
+#. In PyCharm, in your :guilabel:`Project Properties`, :guilabel:`Project Interpreter`,
+   we are going to create a Python Virtual environment called ``QGIS``.
+#. Click the small gear and then :guilabel:`Add`.
+#. Select :guilabel:`Virtualenv environment`.
+#. Select a generic location for all your Python projects such as
+   :file:`~/dev/qgis/venv` because we will use this Python interpreter for all our plugins.
+#. Choose a Python 3 base interpreter available on your system and check
+   the next two options :guilabel:`Inherit global site-packages`
+   and :guilabel:`Make available to all projects`.
+
+.. figure:: img/pycharm-add-venv.png
+   :align: center
+   :width: 40em
+
+#. Click :guilabel:`OK`, come back on the small gear and click :guilabel:`Show all`.
+#. In the new window, select your new interpreter ``QGIS`` and click the last icon in
+   the vertical menu :guilabel:`Show paths for the selected interpreter.`
+#. Finally, add the following absolute path to the list
+   :file:`~/dev/qgis/build/master/output/python`.
+
+.. figure:: img/pycharm-adding-path.png
+   :align: center
+   :width: 40em
+
+#. Restart PyCharm and you can start using this new Python virtual environment
+   for all your plugins.
+
+PyCharm will be aware of the QGIS API and also of the PyQt API if you use Qt
+provided by QGIS like ``from qgis.PyQt.QtCore import QDir``.
+The autocompletion should work and PyCharm can inspect your code.
+
+In the professional version of PyCharm, remote debugging is working well. For the
+Community edition, remote debugging is not available. You can only have access to a local debugger,
+it means the code must run *inside* PyCharm (as script or unittest), not in QGIS itself. For Python
+code running *in* QGIS, you might use the *First Aid* plugin mentioned above.
+
+.. warning:: |outofdate|
 
 A note on configuring your IDE on Windows
 =========================================
@@ -82,23 +138,20 @@ Installation
 
 To use Eclipse, make sure you have installed the following
 
-* `Eclipse <https://eclipse.org>`_
-* `Aptana Studio 3 Plugin <www.aptana.com/>`_ or `PyDev <https://www.pydev.org>`_
+* `Eclipse <https://www.eclipse.org>`_
+* `Aptana Studio 3 Plugin <www.aptana.com>`_ or `PyDev <https://www.pydev.org>`_
 * QGIS 2.x
 
 Preparing QGIS
 --------------
 
-There is some preparation to be done on QGIS itself. Two plugins are of
-interest: **Remote Debug** and **Plugin reloader**.
+There is some preparation to be done on QGIS itself. One plugin is of
+interest: **Remote Debug**.
 
 * Go to :menuselection:`Plugins --> Manage and Install plugins...`
-* Search for *Remote Debug* ( at the moment it's still experimental, so enable
+* Search for *Remote Debug* (at the moment it's still experimental, so enable
   experimental plugins under the :guilabel:`Options` tab in case it does not show up).
   Install it.
-* Search for *Plugin reloader* and install it as well. This will let you reload
-  a plugin instead of having to close and restart QGIS to have the plugin
-  reloaded.
 
 Setting up Eclipse
 ------------------
@@ -263,4 +316,3 @@ And when the application hits your breakpoint you can type in the console!
    source folder.
 
 .. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. index:: GRASS
 .. _sec_grass:
 
@@ -599,7 +595,8 @@ working environment, about 200 of the available GRASS modules and functionalitie
 are also provided by graphical dialogs within the GRASS plugin Toolbox.
 
 A complete list of GRASS modules available in the graphical Toolbox in QGIS
-version |CURRENT| is available in the GRASS wiki at https://grass.osgeo.org/wiki/GRASS-QGIS_relevant_module_list.
+version |CURRENT| is available in the GRASS wiki at
+https://grasswiki.osgeo.org/wiki/GRASS-QGIS_relevant_module_list.
 
 It is also possible to customize the GRASS Toolbox content. This procedure is
 described in section :ref:`sec_toolbox-customizing`.
@@ -940,4 +937,3 @@ https://qgis.org/en/site/getinvolved/development/addinggrasstools.html.
    :width: 2.5em
 .. |showPluginManager| image:: /static/common/mActionShowPluginManager.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

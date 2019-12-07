@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. _`processing.modeler`:
 
 The graphical modeler
@@ -291,6 +287,18 @@ on the upper part and then write its description in the text box below.
 Model help is saved as part of the model itself.
 
 
+Exporting a model as a Python script
+--------------------------------------
+
+As we will see in a later chapter, Processing algorithms can be called from the
+QGIS Python console, and new Processing algorithms can be created as well using
+Python. A quick way of creating such a Python script is to create a model and
+then to export is as a Python file.
+
+To do so, right click on the name of the model in the Processing Toolbox and
+choose :guilabel:`Export Model as Python Algorithm`.
+
+
 About available algorithms
 --------------------------
 
@@ -313,4 +321,3 @@ not appear in the list of algorithms that you can find in the modeler dialog.
    :width: 1.5em
 .. |qgsProjectFile| image:: /static/common/mIconQgsProjectFile.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

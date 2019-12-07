@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. Purpose: This chapter aims to describe generic tools that can be used even
 .. if the user is in another chapter.
 
@@ -15,6 +11,7 @@ General Tools
 
    .. contents::
       :local:
+      :depth: 2
 
 .. _`context_help`:
 
@@ -147,7 +144,7 @@ You can create as many map themes as you need: whenever the current combination
 in the map legend (visible layers, their active style, the map legend nodes)
 does not match any existing map theme contents as defined above, click on
 :guilabel:`Add Theme...` to create a new map theme, or use
-:menuselection:`Replace Theme -->` to update the current map theme.
+:menuselection:`Replace Theme -->` to update a map theme.
 Use the :menuselection:`Remove Current Theme` button to delete the active theme.
 
 Map themes are helpful to switch quickly between different preconfigured
@@ -164,6 +161,8 @@ At the bottom of the toolbar, the main component of the Layers panel is the
 frame listing vector or raster layers added to the project, optionally
 organized in groups. Depending on the item selected in the panel, a
 right-click shows a dedicated set of options presented below.
+
+.. tabularcolumns:: |l|c|c|c|
 
 =================================================================  ==================  =================  =============
 Option                                                             Vector Layer        Raster Layer       Group
@@ -472,6 +471,8 @@ on any vector layer. This panel allows you to select:
   dialog. Depending on the field's (or expression's values) type, available
   statistics are:
 
+.. tabularcolumns:: |l|c|c|c|c|
+
 ================================== ============ ============  ============  ============
  Statistics                         String       Integer       Float         Date
 ================================== ============ ============  ============  ============
@@ -765,9 +766,10 @@ Spatial Bookmarks
 -----------------
 
 Spatial Bookmarks allow you to "bookmark" a geographic location and return to
-it later. By default, bookmarks are saved on the computer, meaning that they are available
-from any project in the same computer. If you wish to store the bookmark in the project
-file (:file:`.qgs`) then you can do this by selecting the :guilabel:`In Project` checkbox.
+it later. By default, bookmarks are saved on the computer (as :guilabel:`User
+Bookmarks`), meaning that they are available from any project of the same
+user profile. They can also be saved for a single project (named
+:guilabel:`Project Bookmarks`) and stored within the project file.
 
 Creating a Bookmark
 ...................
@@ -775,12 +777,25 @@ Creating a Bookmark
 To create a bookmark:
 
 #. Zoom or pan to the area of interest.
-#. Select the menu option :menuselection:`View --> New Bookmark` or press
-   :kbd:`Ctrl+B`. The :guilabel:`Spatial Bookmarks` panel opens with the newly
-   created bookmark.
-#. Enter a descriptive name for the bookmark (up to 255 characters).
-#. Check the :guilabel:`In Project` box if you wish to save the bookmark in the project file.
-#. Press :kbd:`Enter` to add the bookmark or click elsewhere.
+#. Select the menu option :menuselection:`View --> New Spatial Bookmark...` or
+   press :kbd:`Ctrl+B`. The :guilabel:`Bookmark Editor` dialog opens.
+
+   .. _figure_create_bookmarks:
+
+   .. figure:: img/bookmark_editor.png
+      :align: center
+
+      The Bookmark Editor Dialog
+
+#. Enter a descriptive name for the bookmark
+#. Enter or select a group name in which to store related bookmarks
+#. Select the extent of the area you wish to save, using the extent selector;
+   the extent can be calculated from a loaded layer extent, the current map
+   canvas or drawn over the current map canvas.
+#. Indicate the :guilabel:`CRS` to use for the extent
+#. Select whether the bookmark will be :guilabel:`Saved in` :guilabel:`User
+   Bookmarks` or :guilabel:`Project Bookmarks`
+#. Press :guilabel:`Save` to add the bookmark to the list
 
 Note that you can have multiple bookmarks with the same name.
 
@@ -821,7 +836,7 @@ Grid
 |transformed| :sup:`Grid` allows you to add a coordinate grid and coordinate
 annotations to the map canvas.
 
-#. Select :menuselection:`View --> Decorations --> Grid` to open the dialog.
+#. Select :menuselection:`View --> Decorations --> Grid...` to open the dialog.
 
    .. _figure_decorations_grid:
 
@@ -831,46 +846,92 @@ annotations to the map canvas.
       The Grid Dialog
 
 #. Tick |checkbox| :guilabel:`Enable grid` and set grid
-   definitions according to the layers loaded in the map canvas.
-#. Tick |checkbox| :guilabel:`Draw annotations` and set
-   annotation definitions according to the layers loaded in the map canvas.
-#. Click :guilabel:`Apply` to verify that it looks as expected or :guilabel:`OK` if you're satisfied.
+   definitions according to the layers loaded in the map canvas:
+   
+   * The :guilabel:`Grid type`: it can be :guilabel:`Line` or :guilabel:`Marker`
+   * The associated :ref:`Line symbol <vector_line_symbols>` or :ref:`marker
+     symbol <vector_marker_symbols>` used to represent the grid marks
+   * The :guilabel:`Interval X` and :guilabel:`Interval Y` between the grid
+     marks, in map units
+   * An :guilabel:`Offset X` and :guilabel:`Offset Y` distance of the grid
+     marks from the bottom left corner of the map canvas, in map units
+   * The interval and offset parameters can be set based on the:
 
-.. index:: Copyright
+     * :guilabel:`Canvas Extents`: generates a grid with an interval that is
+       approximatively 1/5 of the canvas width 
+     * :guilabel:`Active Raster Layer` resolution
+#. Tick |checkbox| :guilabel:`Draw annotations` to display the coordinates of
+   the grid marks and set:
+
+   * The :guilabel:`Annotation direction`, ie how the labels would be placed
+     relative to their grid line. It can be:
+   
+     * :guilabel:`Horizontal` or :guilabel:`Vertical` for all the labels
+     * :guilabel:`Horizontal and Vertical`, ie each label is parallel to the
+       grid mark it refers to
+     * :guilabel:`Boundary direction`, ie each label follows the canvas
+       boundary, and is perpendicular to the grid mark it refers to
+   * The :guilabel:`Annotation font` using the OS :ref:`font selector widget
+     <font_selector>`
+   * The :guilabel:`Distance to map frame`, margin between annotations and map
+     canvas limits. Convenient when exporting the map canvas eg to an image
+     format or PDF, and avoid annotations to be on the "paper" limits.
+
+     .. Todo: Add a reference link to export map canvas to image or pdf section when done
+
+   * The :guilabel:`Coordinate precision`
+
+#. Click :guilabel:`Apply` to verify that it looks as expected or :guilabel:`OK`
+   if you're satisfied.
+
+.. index:: Copyright, Title
 .. _copyright_decoration:
 
-Copyright Label
-...............
+Copyright and Title Labels
+..........................
 
-|copyrightLabel| :sup:`Copyright label` adds a copyright label to the map
-using your choice of text.
+You can decorate your map with labels that apply as meta information; these are
+texts of your choice you can use as **Title** or as **Copyright** of the map.
+To add these decorations:
 
-#. Select :menuselection:`View --> Decorations --> Copyright Label` to open
-   the dialog
+#. Either select :menuselection:`View --> Decorations -->` |copyrightLabel|
+   :menuselection:`Copyright Label...` or :menuselection:`View --> Decorations
+   -->` |label| :menuselection:`Title Label...` to open the corresponding dialog
+
+   .. _figure_decorations_title:
+
+   .. figure:: img/titleLabel.png
+      :align: center
+
+      The Title Decoration Dialog
 
    .. _figure_decorations_copyright:
 
    .. figure:: img/copyright.png
       :align: center
 
-      The Copyright Dialog
+      The Copyright Decoration Dialog
 
-#. Make sure |checkbox| :guilabel:`Enable Copyright Label` is checked.
+#. Make sure |checkbox| :guilabel:`Enable Copyright Label` (or |checkbox|
+   :guilabel:`Enable Title Label`) is checked.
 #. Enter the text you want to place on the map.
-   You can include expressions
-   (using the :guilabel:`Insert an Expression` button).
-#. Choose the font for the label from the :guilabel:`Font` |selectString| combo box. Set the
-   font color and opacity by clicking the black arrow to the right of the font combo box.
-#. Choose the placement of the label from the :guilabel:`Placement`
-   |selectString| combo box.
+   You can make it dynamic using the :guilabel:`Insert an Expression` button.
+#. Choose the :guilabel:`Font` for the label using the :ref:`font selector
+   widget <font_selector>` with full access to QGIS :ref:`text formatting
+   <text_format>` options. Quickly set the font color and opacity by clicking
+   the black arrow to the right of the font combo box.
+#. Select the :ref:`color <color-selector>` to apply to the title's
+   :guilabel:`Background`
+#. Choose the :guilabel:`Placement` of the label in the canvas: options are
+   :guilabel:`Top left`, :guilabel:`Top Center` (default for title decoration),
+   :guilabel:`Top Right`, :guilabel:`Bottom left`, :guilabel:`Bottom Center`,
+   and :guilabel:`Bottom Right` (default for copyright decoration)
 #. Refine the placement of the item by setting a horizontal and/or vertical
    :guilabel:`Margin from Edge`. These values can be in **Millimeters** or
    **Pixels** or set as a **Percentage** of the width or height of the map canvas.
-#. You can change the color to apply
-#. Click :guilabel:`Apply` to verify that it looks as expected or :guilabel:`OK` if you're satisfied.
+#. Click :guilabel:`Apply` to verify that it looks as expected or
+   :guilabel:`OK` if you're satisfied.
 
-In the example above, which is the default, QGIS places a copyright symbol
-followed by the date in the bottom-right corner of the map canvas.
 
 .. index:: North arrow
 .. _northarrow_decoration:
@@ -1008,7 +1069,8 @@ added using the corresponding tools in the :guilabel:`Attributes Toolbar`:
   of a vector layer in a customized :file:`ui` file (see figure_custom_annotation_).
   This is similar to the :ref:`custom attribute forms <provide_ui_file>`,
   but displayed in an annotation item. Also see this video
-  https://youtu.be/0pDBuSbQ02o?t=2m25s from Tim Sutton for more information.
+  https://www.youtube.com/watch?v=0pDBuSbQ02o&feature=youtu.be&t=2m25s
+  from Tim Sutton for more information.
 
 .. _figure_custom_annotation:
 
@@ -1239,6 +1301,10 @@ tools:
    Right-click in the polygon and choose it from the context menu that shows a
    list of all the polygons that contain the clicked point.
    All the overlapping features from the active layer are selected.
+   
+.. tip:: Use the `Reselect Features` tool to reselect your previous selection. 
+   Very useful when you have painstakingly made a selection, and then click 
+   somewhere else accidentally and clear your selection. 
 
 While using the |selectRectangle| :guilabel:`Select Feature(s)` tool,
 holding :kbd:`Shift` or :kbd:`Ctrl` toggles whether a feature is selected
@@ -1323,6 +1389,8 @@ automatically filling the search box with existing values.
 Alongside each field, there is a drop-down list with options to
 control the search behaviour:
 
+.. tabularcolumns:: |l|c|c|c|
+
 ============================================= ============ ============  ============
  Field search option                           String       Numeric       Date
 ============================================= ============ ============  ============
@@ -1343,7 +1411,9 @@ control the search behaviour:
  :guilabel:`Ends with`                         |checkbox|
 ============================================= ============ ============  ============
 
-|
+.. only:: html
+
+   |
 
 For string comparisons, it is also possible to use the |checkbox|
 :guilabel:`Case sensitive` option.
@@ -1888,6 +1958,12 @@ to:
 * copy the current color and paste it into another widget
 * pick a color from anywhere on your computer display
 * choose a color from the color selector dialog
+* drag-and-drop the color from one widget to another for quick modification
+
+.. note:: When the color widget is set to a :ref:`project color <project_colors>`
+  through the data-defined override properties, the above functions for
+  changing the color are unavailable. You'd first need to :guilabel:`Unlink color`
+  or :guilabel:`Clear` the definition.
 
 .. _figure_color_selector:
 
@@ -1934,6 +2010,89 @@ wider set of color ramps and options:
    :align: center
 
    Quick color ramp selection widget
+
+.. index:: Symbol
+.. _symbol_widget_selector:
+
+Symbol Widget
+--------------
+
+The :guilabel:`Symbol` selector widget is a convenient shortcut when you want
+to set symbol properties of a feature. Clicking the drop-down arrow shows the
+following symbol options, together with the features of the
+:ref:`color drop-down widget <color_widget>`:
+
+* :guilabel:`Configure Symbol...`: the same as pressing the symbol selector widget.
+  It opens a dialog to set the :ref:`symbol parameters <edit_symbol>`.
+* :guilabel:`Copy Symbol` from the current item
+* :guilabel:`Paste Symbol` to the current item, speeding configuration
+
+.. index:: Font selection; Text format
+.. _font_selector:
+
+Font Selector
+--------------
+
+The :guilabel:`Font` selector widget is a convenient shortcut when you want to
+set font properties for textual information (feature labels, decoration labels,
+map legend text, ...). Clicking the drop-down arrow shows the following options:
+
+.. _figure_fontselector_widget:
+
+.. figure:: img/fontselector_widget.png
+   :align: center
+
+   Font selector drop-down menu
+
+* :guilabel:`Font Size` in the associated unit
+* :menuselection:`Recent Fonts -->` menu with the active font checked (at the top)
+* :guilabel:`Configure Format...`: same as pressing the font selector widget. It
+  opens a dialog to set text format parameters. Depending on the context, it can
+  be the OS default :guilabel:`Text format` dialog or the QGIS custom dialog
+  with advanced formatting options (opacity, orientation, buffer, background,
+  shadow, ...) as described in section :ref:`text_format`.
+* :guilabel:`Copy Format` of the text
+* and :guilabel:`Paste Format` to the text, speeding configuration.
+
+
+.. index:: Unit selection; Map scale
+.. _unit_selector:
+
+Unit Selector
+--------------
+
+Size properties of the items (labels, symbols, layout elements, ...) in QGIS are not
+necessarily bound to either the project units or the units of a particular layer.
+For a large set of properties, the :guilabel:`Unit` selector drop-down menu
+allows you to tweak their values according to the rendering you want (based on
+screen resolution, paper size, or the terrain). Available units are:
+
+* :guilabel:`Millimeters`
+* :guilabel:`Points`
+* :guilabel:`Pixels`
+* :guilabel:`Inches`
+* :guilabel:`Meters at Scale`: This allows you to always set the size in meters,
+  regardless of what the underlying map units are (e.g. they can be in inches, feet,
+  geographic degrees, ...). The size in meters is calculated based on the current project
+  ellipsoid setting and a projection of the distances in meters at the center of the
+  current map extent.
+* and :guilabel:`Map Units`: The size is scaled according to the map view scale.
+  Because this can lead to too big or too small values, use the |options| button
+  next to the entry to constrain the size to a range of values based on:
+  
+  * The :guilabel:`Minimum scale` and the :guilabel:`Maximum scale`: The value
+    is scaled based on the map view scale until you reach any of these scale limits.
+    Out of the range of scale, the value at the nearest scale limit is kept. 
+  * and/or The :guilabel:`Minimum size` and the :guilabel:`Maximum size` in ``mm``:
+    The value is scaled based on the map view scale until it reaches any of these
+    limits; Then the limit size is kept.
+
+  .. _figure_adjust_scaling_units:
+
+  .. figure:: img/adjust_scaling.png
+     :align: center
+
+     Adjust scaling range dialog  
 
 
 .. index::
@@ -2005,7 +2164,11 @@ Clicking the |dataDefined| :sup:`Data defined override` icon shows the following
   using to the :ref:`vector_auxiliary_storage` mechanism.
 * :guilabel:`Field type`: an entry to select from the layer's fields that match the
   valid input type.
-* An entry to list the :guilabel:`Variable` available.
+* :guilabel:`Color`: when the widget is linked to a color property, this menu
+  gives access to the colors defined as part of the current :ref:`project's
+  colors <project_colors>` scheme.
+* :guilabel:`Variable`: a menu to access the available user-defined :ref:`variables
+  <general_tools_variables>`
 * :guilabel:`Edit...` button to create or edit the expression to apply, using
   the :guilabel:`Expression String Builder` dialog. To help you correctly fill
   in the expression, a reminder of the expected output's format is provided in
@@ -2185,6 +2348,8 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em
+.. |label| image:: /static/common/mActionLabel.png
+   :width: 1.5em
 .. |labeling| image:: /static/common/labelingSingle.png
    :width: 1.5em
 .. |mapIdentification| image:: /static/common/mActionMapIdentification.png
@@ -2255,7 +2420,6 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |zoomActual| image:: /static/common/mActionZoomActual.png
    :width: 1.5em
 .. |zoomIn| image:: /static/common/mActionZoomIn.png

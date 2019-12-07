@@ -347,7 +347,7 @@ Further reading
 * DeMers, Michael N. (2005). Fundamentals of Geographic Information Systems. 3rd
   Edition. Wiley. ISBN: 9814126195
 
-**Website:** https://en.wikipedia.org/wiki/GIS#Raster
+**Website:** https://en.wikipedia.org/wiki/GIS_file_formats#Raster
 
 The QGIS User Guide also has more detailed information on working with raster
 data in QGIS.

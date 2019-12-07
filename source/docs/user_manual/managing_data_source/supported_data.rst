@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. _supported_format:
 
 ***********************************
@@ -49,7 +45,8 @@ Many of the features available in QGIS work the same, regardless the vector
 data source. However, because of the differences in formats specifications
 (ESRI Shapefile, MapInfo and MicroStation file formats, AutoCAD DXF, PostGIS,
 SpatiaLite, DB2, Oracle Spatial and MSSQL Spatial databases, and many more),
-QGIS may handle differently some of their properties.
+QGIS may handle differently some of their properties. Support is provided by
+the `OGR Simple Feature Library <https://gdal.org/drivers/vector/index.html>`_.
 This section describes how to work with these specificities.
 
 .. note::
@@ -71,8 +68,7 @@ ESRI Shapefile
 
 ESRI Shapefile is still one of the most used vector file format in QGIS.
 However, this file format has some limitation that some other file format have
-not (like GeoPackage, SpatiaLite). Support is provided by the
-`OGR Simple Feature Library <https://www.gdal.org/ogr/>`_.
+not (like GeoPackage, SpatiaLite).
 
 A Shapefile format dataset consists of several files.
 The following three are required:
@@ -517,7 +513,7 @@ following instructions at :ref:`general_saveas`. You would need to select
 :guilabel:`Layer name`.
 
 Also, you can select ``SQLite`` as format and then add ``SPATIALITE=YES`` in the
-:guilabel:`Custom Options --> Data source` field. This tells GDAL to create
+:menuselection:`Custom Options --> Data source` field. This tells GDAL to create
 a SpatiaLite database. See also https://gdal.org/drivers/vector/sqlite.html.
 
 QGIS also supports editable views in SpatiaLite. For SpatiaLite data management,
@@ -556,7 +552,7 @@ actually come from GDAL which is responsible for the writing of the file:
   box of the geometries at the feature and feature collection level
 
 Besides GeoJSON there is also an option to export to
-"GeoJSON - Newline Delimited" (see https://www.gdal.org/drv_geojsonseq.html).
+"GeoJSON - Newline Delimited" (see https://gdal.org/drv_geojsonseq.html).
 Instead of a FeatureCollection with Features, you can stream one type
 (probably only Features) sequentially separated with newlines.
 
@@ -639,4 +635,3 @@ the name **db2.bat** and including it in the directory **%OSGEO4W_ROOT%/etc/ini*
    :width: 1em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. _introduction:
 
 ************
@@ -31,9 +27,9 @@ Python application.
 
 .. index:: API
 
-There is a `complete QGIS API <https://qgis.org/api/>`_ reference that
-documents the classes from the QGIS libraries. `The Pythonic QGIS API
-(pyqgis) <https://qgis.org/pyqgis>`_ is nearly identical to the C++ API.
+There is a :api:`complete QGIS API <>` reference that
+documents the classes from the QGIS libraries. :pyqgis:`The Pythonic QGIS API
+(pyqgis) <>` is nearly identical to the C++ API.
 
 A good resource for learning how to perform common tasks is to
 download existing plugins from the
@@ -346,11 +342,3 @@ The reason for using SIP instead of the more widely used SWIG is that the
 QGIS code depends on Qt libraries. Python bindings for Qt (PyQt) are
 done using SIP and this allows seamless integration of PyQGIS with
 PyQt.
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

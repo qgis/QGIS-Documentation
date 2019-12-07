@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. Purpose: This chapter aims to describe how the user starts to use QGIS. It
 .. should be kept short with only few steps to get QGIS working with two layers.
 
@@ -171,10 +167,29 @@ Where :file:`qgis_sample_data` represents the path to the unzipped dataset.
    #. Select the ERDAS IMG file :file:`landcover.img` and double-click it.
       The landcover layer is added in the background while the Data Source
       Manager window remains open.
+
+      .. _figure_addstartraster:
+
+      .. figure:: img/add_raster.png
+         :align: center
+
+         Adding data to a new project in QGIS
+
    #. To load the lakes data, browse to the folder :file:`qgis_sample_data/gml/`,
       and double-click the :file:`lakes.gml` file to open it.
-   #. A :guilabel:`Coordinate Reference System Selector` dialog opens with
-      :guilabel:`NAD27 / Alaska Alberts` selected, click :guilabel:`OK`.
+   #. A :guilabel:`Coordinate Reference System Selector` dialog opens. In the
+      :guilabel:`Filter` menu, type ``2964``, filtering the list of Coordinate
+      Reference Systems below.
+
+      .. _figure_selectCRS:
+
+      .. figure:: img/selectCRS.png
+         :align: center
+
+         Select the Coordinate Reference System of data
+
+   #. Select the :guilabel:`NAD27 / Alaska Alberts` entry
+   #. Click :guilabel:`OK`
    #. Close the Data Source Manager window
 
 You now have the two layers available in your project in some random colours.
@@ -188,12 +203,29 @@ Let's do some customization on the lakes layer.
 
    #. Click on the |symbology| :guilabel:`Symbology` tab
    #. Select blue as fill color.
-   #. Press :guilabel:`Apply`. Lakes are now displayed in blue in the map canvas.
+
+      .. _figure_selectColor:
+
+      .. figure:: img/selectFillColor.png
+         :align: center
+
+         Selecting Lakes color
+
+   #. Press :guilabel:`OK`. Lakes are now displayed in blue in the map canvas.
 #. To display the name of the lakes:
 
+   #. Reopen the :file:`lakes` layer :guilabel:`Properties` dialog
    #. Click on the |labeling| :guilabel:`Labels` tab
    #. Select :guilabel:`Single labels` in the drop-down menu to enable labeling.
    #. From the :guilabel:`Label with` list, choose the ``NAMES`` field.
+
+      .. _figure_showLabels:
+
+      .. figure:: img/showLabels.png
+         :align: center
+
+         Showing Lakes names
+
    #. Press :guilabel:`Apply`. Names will now load over the boundaries.
 #. You can improve readability of the labels by adding a white buffer around them:
 
@@ -202,7 +234,7 @@ Let's do some customization on the lakes layer.
    #. Choose ``3`` as buffer size
    #. Click :guilabel:`Apply`
    #. Check if the result looks good, and update the value if needed.
-   #. Finally click :guilabel:`OK` to close the guilabel:`Layer Properties`
+   #. Finally click :guilabel:`OK` to close the :guilabel:`Layer Properties`
       dialog and apply the changes.
 
 Let's now add some decorations in order to shape the map and export it out of
@@ -227,6 +259,10 @@ QGIS, configure them and generate your map in an image format you can use in
 other softwares. Let's move on to learn more about the available functionality,
 features and settings, and how to use them.
 
+.. note::
+ To continue learning QGIS through step-by-step exercises, follow the
+ :ref:`Training manual <QGIS-training-manual-index-reference>`.
+
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -250,7 +286,6 @@ features and settings, and how to use them.
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |win| image:: /static/common/win.png
    :width: 1em
 .. |zoomIn| image:: /static/common/mActionZoomIn.png

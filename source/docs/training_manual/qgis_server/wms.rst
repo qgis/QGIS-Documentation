@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 |LS| Serving WMS
 ===============================================================================
 
@@ -166,7 +162,7 @@ scale so you could get a blank image as response.
 You can also play around with others parameters from above, like changing the
 returned image type to ``image/png``.
 
-|moderate| |FA| Use Filter, Opacities and Filter parameters
+|moderate| |FA| Use Filter, Opacities and Styles parameters
 -------------------------------------------------------------------------------
 
 Let's do another request that adds another layer, some of the
@@ -323,4 +319,3 @@ Next, you'll see how to use QGIS as a frontend for the famous GRASS GIS.
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
 .. |moderate| image:: /static/global/moderate.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

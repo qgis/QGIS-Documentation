@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. index:: Raster analysis
 .. _sec_raster_analysis:
 
@@ -31,7 +27,7 @@ The results are written to a new raster layer with a GDAL-supported format.
 .. figure:: img/raster_calculator.png
    :align: center
 
-   Raster Calculator
+   Raster Calculator (``abs``, ``min`` and ``max`` added in 3.10)
 
 
 The **Raster bands** list contains all loaded raster layers that can be used.
@@ -172,4 +168,3 @@ layers. You can also choose one or more other options (see figure_raster_align_)
    :width: 1.5em
 .. |symbologyEdit| image:: /static/common/symbologyEdit.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

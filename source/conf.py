@@ -29,6 +29,7 @@ extensions = [
     'sphinx.ext.imgmath',
     'sphinx.ext.intersphinx',
     'sphinx.ext.doctest',
+    'sphinx.ext.extlinks',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -109,7 +110,15 @@ pygments_style = 'sphinx'
 # If true, keep warnings as "system message" paragraphs in the built documents.
 #keep_warnings = False
 
-intersphinx_mapping = {'pyqgis_api': ('https://qgis.org/pyqgis/master/', None)}
+intersphinx_mapping = {'pyqgis_api': ('https://qgis.org/pyqgis/{}/'.format(version if version != 'testing' else 'master'), None)}
+
+# This config value must be a dictionary of external sites, mapping unique short
+# alias names to a base URL and a prefix.
+extlinks = {'api': ('https://qgis.org/api/{}%s'.format(''.join([version, '/']) if version != 'testing' else ''), None),
+            'pyqgis': ('https://qgis.org/pyqgis/{}/%s'.format(version if version != 'testing' else 'master'), None),
+            'source': ('https://github.com/qgis/QGIS/blob/{}/%s'.format(
+                ''.join(['release-', version]).replace('.', '_') if version != 'testing' else 'master'), None)
+           }
 
 # -- Options for HTML output ---------------------------------------------------
 
@@ -121,6 +130,15 @@ html_theme = 'basic'
 # further.  For a list of options available for each theme, see the
 # documentation.
 html_theme_options = {
+}
+
+html_context = {
+    # When a QGIS version reaches end of life, set this to True to show an information
+    # message on the top of the page.
+    'outdated': False,
+    # When a new QGIS version is released, set this to False to remove the disclaimer
+    # information message on the top of the page.
+    'isTesting': True
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
@@ -224,17 +242,10 @@ latex_elements = {
     '''
 }
 
-rst_prolog = """
-.. role:: disclaimer
-"""
-#.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit https://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
-#"""
-
-# Substitutions below are sorted and should be in lowerCamelCase
-# NOTE that for inline images (like button and menu icons inline in text) you HAVE TO make a substitution
-# so ONLY use common for this kind of images
+# rst_prolog = ""
 
 # rst_epilog = ""
+
 
 # -- Options for LaTeX output --------------------------------------------------
 

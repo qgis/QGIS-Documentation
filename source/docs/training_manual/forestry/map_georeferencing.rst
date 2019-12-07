@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 |LS| Georeferencing a Map
 ===============================================================================
 
@@ -73,7 +69,7 @@ Next you should define the transformation settings for georeferencing the map:
 * Click :guilabel:`OK`.
    
 The map contains several cross-hairs marking the coordinates in the map,
-we will use those to georeferenciate this image. You can use the zooming and
+we will use those to georeference this image. You can use the zooming and
 panning tools as you usually do in QGIS to inspect the image in the
 Georeferencer's window.
 
@@ -110,8 +106,7 @@ can be seen also in the :guilabel:`GCP table` in the :guilabel:`dX[pixels]` and
 coordinates you have entered to find what the problem is. You can use the image
 above as a guide.
 
-Once you are happy with your control points save your ground control points,
-in case that you will need them later, and you will:
+Once you are happy with your control points, you can save them for later use:
 
 * :menuselection:`File --> Save GCP points as...`.
 * In the folder :kbd:`exercise_data\\forestry\\digitizing`, name the file
@@ -141,7 +136,8 @@ next lesson.
 |IC|
 -------------------------------------------------------------------------------
 
-As you have seen, georeferencing a paper map is a relatively straight forward operation.
+You have now georeferenced a paper map, making it possible to use it as a map
+layer in QGIS.
 
 |WN|
 -------------------------------------------------------------------------------
@@ -161,4 +157,3 @@ and add the inventory data to them.
 .. |LS| replace:: Lesson:
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/global/basic.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

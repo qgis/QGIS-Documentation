@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 Vector general
 ==============
 
@@ -27,6 +23,9 @@ projection.
 
 Attributes are not modified by this algorithm.
 
+.. seealso:: :ref:`qgisdefinecurrentprojection`, :ref:`qgisfindprojection`,
+ :ref:`qgisreprojectlayer`
+
 Parameters
 ..........
 ``Input layer`` [vector: any]
@@ -41,10 +40,6 @@ Outputs
 .......
 ``Assigned CRS`` [vector: any]
   Vector layer with assigned projection.
-
-See also
-........
-:ref:`qgisdefinecurrentprojection`, :ref:`qgisfindprojection`, :ref:`qgisreprojectlayer`
 
 
 .. _qgisbuildvirtualvector:
@@ -126,6 +121,9 @@ layer and will not output a new layer.
 
 ``Default menu``: :menuselection:`Vector --> Data Management Tools`
 
+.. seealso:: :ref:`qgisassignprojection`, :ref:`qgisfindprojection`,
+ :ref:`qgisreprojectlayer`
+
 Parameters
 ..........
 ``Input layer`` [vector: any]
@@ -133,10 +131,6 @@ Parameters
 
 ``CRS`` [crs]
   CRS to associate to the input vector layer.
-
-See also
-........
-:ref:`qgisassignprojection`, :ref:`qgisfindprojection`, :ref:`qgisreprojectlayer`
 
 
 .. _qgisdeleteduplicategeometries:
@@ -147,6 +141,8 @@ Finds and removes duplicated geometries.
 
 Attributes are not checked, so in case two features have identical geometries
 but different attributes, only one of them will be added to the result layer.
+
+.. seealso:: :ref:`qgisdropgeometries`, :ref:`qgisremovenullgeometries`
 
 Parameters
 ..........
@@ -160,6 +156,91 @@ Outputs
   The final layer without any duplicated geometries.
 
 
+.. _qgisdeleteduplicatesbyattribute:
+
+Delete duplicates by attribute |36|
+-----------------------------------
+Deletes duplicate rows by only considering the specified field
+/ fields.
+The first matching row will be retained, and duplicates will be
+discarded.
+
+Optionally, these duplicate records can be saved to a separate
+output for analysis.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  -  Label
+      -  Name
+      -  Type
+      -  Description
+
+   *  -  **Input layer**
+      -   ``INPUT``
+      -  [vector: any]
+      -  The input layer
+
+   *  -  **Fields**
+      -  ``FIELDS``
+      -  [tablefields]
+      -  Fields to match duplicates by
+
+   *  -  **Filtered (no duplicates)**
+      -  ``OUTPUT``
+      -  [feature sink]
+      -  Feature sink containing the remaining features.
+
+   *  -  **Filtered (duplicates)**
+   
+         (Optional)
+      - ``DUPLICATES``
+      -  [feature sink]
+      -  Feature sink containing the removed features.
+         Will not be produced if not specifed (left as ``[Skip output]``).
+
+
+Outputs
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  -  Label
+      -  Name
+      -  Type
+      -  Description
+
+   *  -  **Count of retained records**
+      -  ``RETAINED_COUNT``
+      -  [Number]
+      -  Count of retained records
+
+   *  -  **Count of discarded duplicate records**
+      -  ``DUPLICATE_COUNT``
+      -  [Number]
+      -  Count of discarded duplicate records
+
+   *  -  **Filtered (no duplicates)**
+      -  ``OUTPUT``
+      -  [String]
+      -  The link to the output (duplicates removed)
+
+   *  -  **Filtered (duplicates)**
+   
+         (Optional)
+      -  ``DUPLICATES``
+      -  [String]
+      -  The link to a vector layer containing the removed duplicates (if defined)
+
+
 .. _qgisdropgeometries:
 
 Drop geometries
@@ -170,6 +251,8 @@ the attribute table of the source layer.
 If the file is saved in a local folder, you can choose between many file formats.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
+.. seealso:: :ref:`qgisdeleteduplicategeometries`, :ref:`qgisremovenullgeometries`
 
 Parameters
 ..........
@@ -189,7 +272,9 @@ Execute SQL
 -----------
 Runs a simple or complex query with ``SQL`` syntax on the source layer.
 
-The result of the query will be added as new layer.
+The result of the query will be added as a new layer.
+
+.. seealso:: :ref:`qgisspatialiteexecutesql`, :ref:`qgispostgisexecutesql`
 
 Parameters
 ..........
@@ -265,37 +350,47 @@ Outputs
 
 Find projection
 ---------------
-Allows creation of a shortlist of possible candidate coordinate reference systems
+Creates a shortlist of candidate coordinate reference systems, for instance
 for a layer with an unknown projection.
 
-The expected area which the layer should reside in must be specified via the
-target area parameter. Additionally, the coordinate reference system for this
-target area must also be set.
+The area that the layer is expected to cover must be specified via the
+target area parameter.
+The coordinate reference system for this target area must be known to
+QGIS.
 
-The algorithm operates by testing the layer's extent in every known reference
-system and listing any in which the bounds would fall near the target area if the
-layer was in this projection.
+The algorithm operates by testing the layer's extent in every known
+reference system and then listing any for which the bounds would be near
+the target area if the layer was in this projection.
+
+.. seealso:: :ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`,
+ :ref:`qgisreprojectlayer`
 
 Parameters
 ..........
+
 ``Input layer`` [vector: any]
   Layer with unknown projection.
 
 ``Target area for layer`` [extent]
-  This is the area in which the layer is expected to be.
+  The area that the layer covers.
+  The options for specifying the extent are:
+
+  * Use Canvas Extent
+  * Select Extent on Canvas
+  * Use Layer Extent
+
+  It is also possible to provide the extent coordinates directly
+  (xmin, xmax, ymin, ymax).
 
 ``Target area CRS`` [crs]
   Choose the target CRS of the target area selected.
 
 Outputs
 .......
+
 ``CRS candidates`` [table]
   The algorithm writes a table with all the CRS (EPSG codes) of the matching
   criteria.
-
-See also
-........
-:ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`, :ref:`qgisreprojectlayer`
 
 
 .. _qgisjoinattributestable:
@@ -307,6 +402,8 @@ version of the input one, with additional attributes in its attribute table.
 
 The additional attributes and their values are taken from a second vector layer.
 An attribute is selected in each of them to define the join criteria.
+
+.. seealso:: :ref:`qgisjoinattributesbynearest`, :ref:`qgisjoinattributesbylocation`
 
 Parameters
 ..........
@@ -369,6 +466,9 @@ added to each feature from the first layer.
 
 ``Default menu``: :menuselection:`Vector --> Data Management Tools`
 
+.. seealso:: :ref:`qgisjoinattributesbynearest`, :ref:`qgisjoinattributestable`,
+ :ref:`qgisjoinbylocationsummary`
+
 Parameters
 ..........
 ``Input layer`` [vector: any]
@@ -425,6 +525,7 @@ Outputs
 
   Vector layer of only the input features that do not spatially match any join feature.
 
+
 .. _qgisjoinbylocationsummary:
 
 Join attributes by location (summary)
@@ -438,6 +539,8 @@ added to each feature from the first layer.
 
 The algorithm calculates a statistical summary for the values from matching
 features in the second layer (e.g. maximum value, mean value, etc).
+
+.. seealso:: :ref:`qgisjoinattributesbylocation`
 
 Parameters
 ..........
@@ -501,6 +604,102 @@ Outputs
 ``Joined layer`` [vector: any]
   The final vector with all the joined features.
 
+.. _qgisjoinattributesbynearest:
+
+Join Attributes by Nearest |38|
+-------------------------------
+
+K-nearest neighbor joins!
+
+The algorithm takes an input vector layer and creates a new vector
+layer with additional fields in its attribute table
+The additional attributes and their values are taken from a second
+vector layer.
+Features are joined by finding the closest features from each layer.
+
+By default only the nearest feature is joined, but the join can also
+join to the k-nearest neighboring features.
+
+If a maximum distance is specified, only features which are closer
+than this distance will be matched.
+
+.. seealso:: :ref:`qgisnearestneighbouranalysis`, :ref:`qgisjoinattributestable`,
+ :ref:`qgisjoinattributesbylocation`, :ref:`qgisdistancematrix`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Name
+      - Identifier
+      - Type
+      - Description
+   *  - **Input layer**
+      - INPUT
+      - [vector:any]
+      - The input layer.
+   *  - **Input layer 2**
+      - INPUT_2
+      - [vector:any]
+      - The join layer.
+   *  - **Layer 2 fields to copy (leave empty to copy all fields)**
+      - FIELDS_TO_COPY
+      - [fields]
+      - Join layer fields to copy (if empty, all fields will be
+        copied).
+   *  - **Discard records which could not be joined**
+      - DISCARD_NONMATCHING
+      - [boolean]
+      - Discard records which can not be joined
+   *  - **Joined field prefix**
+      - PREFIX
+      - [string]
+      - Joined field prefix
+   *  - **Maximum nearest neighbors**
+      - NEIGHBORS
+      - [number]
+      - Maximum number of nearest neighbors
+   *  - **Maximum distance**
+      - MAX_DISTANCE
+      - Number
+      - Maximum search distance
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Name
+      - Identifier
+      - Type
+      - Description
+   *  - **Joined layer**
+      - OUTPUT
+      - [vector:any]
+      - The output joined layer.
+   *  - **Unjoinable features from first layer**
+      - NON_MATCHING
+      - [vector:any]
+      - Layer containing the features from first layer that
+        could not be joined to any features in the join layer.
+   *  - **Number of joined features from input table**
+      - JOINED_COUNT
+      - [number]
+      - Number of features from the input table that have been
+        joined.
+   *  - **Number of unjoinable features from input table**
+      - UNJOINABLE_COUNT
+      - [number]
+      - Number of features from the input table that could not
+        be joined.
+
 
 .. _qgismergevectorlayers:
 
@@ -525,6 +724,8 @@ All layers will be reprojected to match this CRS.
 
 ``Default menu``: :menuselection:`Vector --> Data Management Tools`
 
+.. seealso:: :ref:`qgissplitvectorlayer`
+
 Parameters
 ..........
 
@@ -543,10 +744,6 @@ Outputs
 
 ``Merged`` [vector: any]
   Merged vector layer containing all the features and attributes from input layers.
-
-See also
-........
-:ref:`qgissplitvectorlayer`
 
 
 .. _qgisorderbyexpression:
@@ -595,6 +792,9 @@ the same features and attributes of the input layer.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+.. seealso:: :ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`,
+ :ref:`qgisfindprojection`
+
 Parameters
 ..........
 
@@ -612,10 +812,6 @@ Outputs
 ``Reprojected layer`` [vector: any]
   The resulting reprojected layer.
 
-See also
-........
-:ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`, :ref:`qgisfindprojection`
-
 
 .. _qgissetstyleforvectorlayer:
 
@@ -625,6 +821,8 @@ Sets the style of a vector layer. The style must be defined in a
 QML file.
 
 No new output are created: the style is immediately assigned to the vector layer.
+
+.. seealso:: :ref:`qgissetstyleforrasterlayer`
 
 Parameters
 ..........
@@ -650,6 +848,8 @@ It is the opposite operation of *merging*.
 
 ``Default menu``: :menuselection:`Vector --> Data Management Tools`
 
+.. seealso:: :ref:`qgismergevectorlayers`
+
 Parameters
 ..........
 
@@ -659,15 +859,8 @@ Parameters
 ``Unique ID field`` [tablefield: any]
   Field of the attribute table on which the layer will be split.
 
-Outputs
-.......
-
 ``Output directory`` [folder]
-  Directory where all the split layer will be saved.
-
-See also
-........
-:ref:`qgismergevectorlayers`
+  Directory where all the split layers will be saved.
 
 
 .. _qgistruncatetable:
@@ -691,6 +884,7 @@ Parameters
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |36| replace:: ``NEW in 3.6``
+.. |38| replace:: ``NEW in 3.8``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

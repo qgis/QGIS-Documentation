@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 Stream Network Analysis
 =======================
 
@@ -181,7 +177,7 @@ Parameters
   with respect to the stream raster grid.
 
 ``Maximum Number of Grid Cells to traverse`` [number]
-  This input paramater is the maximum number of grid cells that the points in
+  This input parameter is the maximum number of grid cells that the points in
   the input outlet shapefile will be moved before they are saved to the output
   outlet shapefile.
 
@@ -193,12 +189,12 @@ Outputs
 ``Output Outlet Shapefile`` [vector: point]
   A point shape file defining points of interest or outlets. This file has one
   point in it for each point in the input outlet shapefile. If the original
-  point was located on a stream, then the point was not moved. If the origianl
+  point was located on a stream, then the point was not moved. If the original
   point was not on a stream, the point was moved downslope according to the D8
   flow direction until it reached a stream or the maximum distance had been
   reached. This file has an additional field "dist_moved" added to it which is
   the number of cells that the point was moved. This field is 0 if the cell was
-  originally on a stream, -1 if it was not moved becuase there was not a stream
+  originally on a stream, -1 if it was not moved because there was not a stream
   within the maximum distance, or some positive value if it was moved.
 
 
@@ -313,8 +309,6 @@ Console usage
 
   processing.runalg('taudem:slopeareacombination', slope_grid, area_grid, slope_exponent, area_exponent, slope_area_grid)
 
-See also
-........
 
 Stream Definition By Threshold
 ------------------------------
@@ -322,7 +316,7 @@ Stream Definition By Threshold
 Description
 ...........
 
-Operates on any grid and outputs an indicator (1, 0) grid identifing cells with
+Operates on any grid and outputs an indicator (1, 0) grid identifying cells with
 input values >= the threshold value. The standard use is to use an accumulated
 source area grid to as the input grid to generate a stream raster grid as the
 output. If you use the optional input mask grid, it limits the domain being
@@ -377,8 +371,6 @@ Console usage
 
   processing.runalg('taudem:streamdefinitionbythreshold', -ssa, -thresh, -mask, -src)
 
-See also
-........
 
 Stream Drop Analysis
 --------------------
@@ -478,7 +470,7 @@ Parameters
 
 ``Spacing for Threshold Values`` [enumeration]
   This parameter indicates whether logarithmic or linear spacing should be used
-  when looking for possible threshold values using drop ananlysis.
+  when looking for possible threshold values using drop analysis.
 
   Options:
 
@@ -523,7 +515,8 @@ See also
   for Drainage Density", Geomorphology, 5(1/2): 59-76.
 * Tarboton, D. G. and D. P. Ames, (2001), "Advances in the mapping of flow
   networks from digital elevation data", World Water and Environmental Resources
-  Congress, Orlando, Florida, May 20-24, ASCE, http://www.engineering.usu.edu/dtarb/asce2001.pdf.
+  Congress, Orlando, Florida, May 20-24, ASCE,
+  https://www.researchgate.net/publication/2329568_Advances_in_the_Mapping_of_Flow_Networks_From_Digital_Elevation_Data.
 
 Stream Reach and Watershed
 --------------------------
@@ -594,7 +587,7 @@ Parameters
   Optional
 
   A point shape file defining points of interest. If this file is used, the
-  tool will only deliiniate the stream network upstream of these outlets.
+  tool will only deliniate the stream network upstream of these outlets.
   Additionally, points in the Outlets Shapefile are used to logically split
   stream reaches to facilitate representing watersheds upstream and downstream
   of monitoring points. This tool REQUIRES THAT THERE BE an integer attribute
@@ -708,9 +701,6 @@ Console usage
 
   processing.runalg('taudem:streamreachandwatershed', -fel, -p, -ad8, -src, -o, -sw, -ord, -w, -net, -tree, -coord)
 
-See also
-........
-
 
 Gage Watershed
 --------------
@@ -754,9 +744,6 @@ Console usage
 
   processing.runalg('taudem:gagewatershed2', -p, -o, -gw, -id)
 
-See also
-........
-
 
 Topographic Wetness Index
 -------------------------
@@ -764,7 +751,7 @@ Topographic Wetness Index
 Description
 ...........
 
-<put algortithm description here>
+<put algorithm description here>
 
 Parameters
 ..........
@@ -788,14 +775,3 @@ Console usage
 
   processing.runalg('taudem:topographicwetnessindex', -sca, -slp, -twi)
 
-See also
-........
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

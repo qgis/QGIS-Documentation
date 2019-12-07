@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 ******************
 QGIS Configuration
 ******************
@@ -122,11 +118,32 @@ General Settings
 System Settings
 ---------------
 
+.. _svg_paths:
+
 **SVG paths**
 
 Add or Remove :guilabel:`Path(s) to search for Scalable Vector Graphic (SVG)
-symbols`. These SVG files are then available to symbolize features or
-decorate your map composition.
+symbols`. These SVG files are then available to symbolize or label the features
+or decorate your map composition.
+
+When using an SVG file in a symbol or a label, QGIS allows you to:
+
+* load the file from the file system: the file is identified through the file path and
+  QGIS needs to resolve the path in order to display the corresponding image
+* load the file from a remote URL: as above, the image will only be loaded on successful
+  retrieval of the remote resource
+* embed the SVG file into the item: the file is embedded inside
+  the current project, style database, or print layout template.
+  The SVG file is then always rendered as part of the item.
+  This is a convenient way to create self-contained projects with custom SVG symbols
+  which can be easily shared amongst different users and installations of QGIS.
+
+  It is also possible to extract the embedded SVG file from a symbol or label
+  and save it on disk.
+
+.. note:: The above mentioned options for loading and storing an SVG file in a project
+ are also applicable to raster images you may want to use for customizing
+ symbols, labels or decorations.
 
 **Plugin paths**
 
@@ -553,7 +570,8 @@ This tab helps you configure general settings when :ref:`editing vector layer
 
 **Snapping**
 
-* |checkbox| :guilabel:`Enable snapping by default`
+* |checkbox| :guilabel:`Enable snapping by default` activates snapping when
+  a project is opened
 * Define :guilabel:`Default snap mode` |selectString| ('Vertex', 'Vertex and segment',
   'Segment')
 * Define :guilabel:`Default snapping tolerance` in map units or pixels
@@ -634,7 +652,7 @@ You can define the :guilabel:`Default font` used within the :ref:`print layout
 GDAL Settings
 -------------
 
-`GDAL <https://www.gdal.org>`_ is a data exchange library for vector and raster
+`GDAL <https://gdal.org>`_ is a data exchange library for vector and raster
 files. It provides drivers to read and or write data in different formats.
 The :guilabel:`GDAL` tab currently exposes the drivers for raster formats with
 their capabilities.
@@ -643,7 +661,7 @@ GDAL driver options
 ...................
 
 This frame provides ways to customize the behavior of drivers that support read
-and write access: 
+and write access:
 
 .. _gdal_createoptions:
 
@@ -774,7 +792,7 @@ Network Settings
 
 Defines the :guilabel:`Directory` and a :guilabel:`Size` for the cache.
 Also offers tools to :guilabel:`automatically clear the connection authentication
-cache on SSL errors (recommanded)`.
+cache on SSL errors (recommended)`.
 
 **Proxy for web access**
 
@@ -795,7 +813,8 @@ cache on SSL errors (recommanded)`.
 Credentials of proxy are set using the :ref:`authentication widget <authentication>`.
 
 Excluding some URLs can be added to the text box below the proxy settings (see
-Figure_Network_Tab_).
+Figure_Network_Tab_). No proxy will be used if the target url starts with one of the string
+listed in this text box.
 
 If you need more detailed information about the different proxy settings,
 please refer to the manual of the underlying QT library documentation at
@@ -931,7 +950,7 @@ and access user profiles. A user profile is a unified application configuration
 that allows to store in a single folder:
 
 * all the :ref:`global settings <gui_options>`, including locale,
-  projections`, authentication settings, color palettes, shortcuts...
+  projections, authentication settings, color palettes, shortcuts...
 * GUI configurations and :ref:`customization <sec_customization>`
 * installed :ref:`plugins <plugins>` and their configurations
 * project templates and history of saved project with their image preview
@@ -1044,6 +1063,8 @@ the global predefined scales.
 
    General tab of Project Properties dialog
 
+.. _project_metadata:
+
 Metadata Properties
 -------------------
 
@@ -1111,6 +1132,8 @@ Using the |styleManager| :guilabel:`Style Manager` button, you can also quickly
 access the :ref:`Style Manager <vector_style_manager>` dialog and configure
 symbols and color ramps.
 
+.. _project_colors:
+
 There is also an additional section where you can define specific colors for the
 running project. Like the :ref:`global colors <colors_options>`, you can:
 
@@ -1134,10 +1157,14 @@ These colors are identified as :guilabel:`Project colors` and listed as part of
   you can:
 
   #. Define the color as a project color
-  #. Apply it using the ``project_color('color_label')`` expression in
-     color :ref:`data defined override widget <data_defined>`
-  #. Update the color once in a :guilabel:`Project colors` list
-  #. And the change is reflected EVERYWHERE.
+  #. Click the :ref:`data defined override widget <data_defined>` next to
+     the color property you want to set
+  #. Hover over the :guilabel:`Color` menu and select the project color. The
+     property is then assigned the expression ``project_color('color_label')``
+     and the color widget reflects that color.
+  #. Repeat steps 2 and 3 as much as needed
+  #. Update the project color once and the change is reflected EVERYWHERE
+     it's in use.
 
 Data Sources Properties
 -----------------------
@@ -1723,6 +1750,5 @@ in the QGIS user profile.
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |win| image:: /static/common/win.png
    :width: 1em

@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 ***************
 Getting Started
 ***************
@@ -401,7 +397,7 @@ Then at the bottom of httpd.conf add:
 
     SetEnv GDAL_DATA "C:\OSGeo4W64\share\gdal"
     SetEnv QGIS_AUTH_DB_DIR_PATH "C:\OSGeo4W64\apps\qgis\resources"
-    SetEnv PYTHONHOME "C:\OSGeo4W64\apps\Python36"
+    SetEnv PYTHONHOME "C:\OSGeo4W64\apps\Python37"
     SetEnv PATH "C:\OSGeo4W64\bin;C:\OSGeo4W64\apps\qgis\bin;C:\OSGeo4W64\apps\Qt5\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem"
     SetEnv QGIS_PREFIX_PATH "C:\OSGeo4W64\apps\qgis"
     SetEnv QT_PLUGIN_PATH "C:\OSGeo4W64\apps\qgis\qtplugins;C:\OSGeo4W64\apps\Qt5\plugins"
@@ -625,4 +621,3 @@ the path to the SVG image so that it represents a valid relative path.
    :width: 1.3em
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

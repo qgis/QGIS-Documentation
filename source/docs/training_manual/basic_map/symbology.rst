@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 |LS| Symbology
 ===============================================================================
 
@@ -597,7 +593,8 @@ even nice to look at!
 |FR|
 -------------------------------------------------------------------------------
 
-`Examples of Beautiful Maps <https://gis.stackexchange.com/questions/3083/examples-of-beautiful-maps>`_
+`Examples of Beautiful Maps
+<https://gis.stackexchange.com/questions/3083/seeking-examples-of-beautiful-maps>`_
 
 |WN|
 -------------------------------------------------------------------------------
@@ -636,7 +633,6 @@ map.
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |zoomIn| image:: /static/common/mActionZoomIn.png
    :width: 1.5em
 .. |zoomOut| image:: /static/common/mActionZoomOut.png

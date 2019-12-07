@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. _working_with_ogc:
 
 ***********************
@@ -526,7 +522,8 @@ the legend at full resolution.
 
 In the print layout, the legend will be integrated at it's original (downloaded)
 dimension. Resolution of the legend graphic can be set in the item properties
-under :guilabel:`Legend --> WMS LegendGraphic` to match your printing requirements
+under :menuselection:`Legend --> WMS LegendGraphic` to match your printing
+requirements.
 
 The legend will display contextual information based on your current scale. The
 WMS legend will be shown only if the WMS server has GetLegendGraphic capability
@@ -726,7 +723,6 @@ features and view the attribute table.
    :width: 2.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |wcs| image:: /static/common/mActionAddWcsLayer.png
    :width: 1.5em
 .. |wfs| image:: /static/common/mActionAddWfsLayer.png

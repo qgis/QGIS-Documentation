@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. _tm_working_vector_data:
 
 |LS| Working with Vector Data
@@ -70,12 +66,12 @@ GIS-specific DBMSes (such as PostGIS) have extra functions, because they need to
 handle spatial data.
 
 The `GeoPackage <https://www.geopackage.org/>`_ open format is a container that
-allows you to store GIS data (layers) in a single file. Unlike the ESRI
-Shapefile format (e.g. the :file:`roads.shp` dataset you previously loaded that
-contains only roads vector data), a single GeoPackage file can contain various
-data (both vector and/or and raster data) in different coordinate reference systems,
-as well as tables without spatial information; all these features allow you to
-share data easily and avoid file duplication.
+allows you to store GIS data (layers) in a single file.
+Unlike the ESRI Shapefile format (e.g. the :file:`protected_areas.shp` dataset
+you loaded earlier), a single GeoPackage file can contain various data (both
+vector and raster data) in different coordinate reference systems, as well as
+tables without spatial information; all these features allow you to share data
+easily and avoid file duplication.
 
 In order to load a layer from a GeoPackage, you will first need to create the
 connection to it:
@@ -244,4 +240,3 @@ lesson.
    :width: 1.5em
 .. |spatialite| image:: /static/common/mIconSpatialite.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

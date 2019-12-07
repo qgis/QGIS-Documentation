@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 |LS| Creating a New Vector Dataset
 ===============================================================================
 
@@ -150,7 +146,7 @@ From left to right on the toolbar, they are:
 - :guilabel:`Save Edits`: saves changes made to the layer.
 - :guilabel:`Add Feature`: start digitizing a new feature.
 - :guilabel:`Move Feature(s)`: move an entire feature around.
-- :guilabel:`Node Tool`: move only one part of a feature.
+- :guilabel:`Vertex Tool`: move only one part of a feature.
 - :guilabel:`Delete Selected`: delete the selected feature.
 - :guilabel:`Cut Features`: cut the selected feature.
 - :guilabel:`Copy Features`: copy the selected feature.
@@ -197,7 +193,7 @@ digitizing until you're done creating the feature as above. Then:
 You can use:
 
 * the :guilabel:`Move Feature(s)` tool to move the entire feature,
-* the :guilabel:`Node Tool` to move only one point where you may have
+* the :guilabel:`Vertex Tool` to move only one point where you may have
   miss-clicked,
 * :guilabel:`Delete Selected` to get rid of the feature entirely so you can try
   again, and
@@ -310,6 +306,5 @@ be useful.
 .. |saveEdits| image:: /static/common/mActionSaveEdits.png
    :width: 1.5em
 .. |schoolAreaType1| replace:: athletics field
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |vertexToolActiveLayer| image:: /static/common/mActionVertexToolActiveLayer.png
    :width: 1.5em

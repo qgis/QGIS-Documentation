@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 CRSs. Reprojecting
 ============================================================
 
@@ -21,7 +17,7 @@ some general rules about how they are handled by geoalgorithms when creating a n
 .. image:: img/crs/crs_layer.png
 
 * If there are no input layer, it will use the project CRS, unless the algorithm
-  contains a specific CRS field (as it happenend in the last lesson with the
+  contains a specific CRS field (as it happened in the last lesson with the
   graticule algorithm)
 
 Open the project corresponding to this lesson and you will see two layers named
@@ -65,7 +61,7 @@ Those coordinate values are given in the layer CRS, since we chose that option.
 However, even if you choose another option, the output CRS of the layer would
 have been the same, since the input CRS is used to set the CRS of the output layer.
 Choosing another option will cause the values to be different, but not the
-resulting point to change or the CRS of the ouput layer to be different to
+resulting point to change or the CRS of the output layer to be different to
 the CRS of the input one.
 
 
@@ -110,12 +106,3 @@ coordinates are different. You can see that by running the *Export/Add geometry
 columns* algorithm using this new layer as input, and veryfing that the added
 coordinates are different to the ones in the attribute tables of both of the
 two layers that we had computed before.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

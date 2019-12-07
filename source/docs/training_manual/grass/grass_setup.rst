@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 |LS| GRASS Setup
 ===============================================================================
 
@@ -51,7 +47,7 @@ data (raster, vector, etc) in a particular structure, but don't worry, GRASS wil
 take care of this for you.
 
 Just remember: ``Location`` contains ``Mapset`` that contains the data. For more
-information visit the `GRASS website <https://grass.osgeo.org/grass75/manuals/grass_database.html>`_.
+information visit the `GRASS website <https://grass.osgeo.org/grass77/manuals/grass_database.html>`_.
 
 .. figure:: img/grass_database.png
    :align: center
@@ -164,11 +160,11 @@ you will see the |grassMapsetOpen| icon next to the Mapset that is opened.
 
 You can easily **drag and drop** layers from a folder to the GRASS Mapset.
 
-Let's try to import the :file:`roads.shp` layer into the ``grass_mapset`` Mapset
+Let's try to import the :file:`roads` layer into the ``grass_mapset`` Mapset
 of the ``SouthAfrica`` Location.
 
-Open the :file:`shapefile/` folder and simply drag the :file:`roads.shp` layer
-into the ``grass_mapset`` Mapset.
+Go to the Browser, and simply drag the :file:`roads` layer  from the
+:file:`training_data.gpkg` GeoPackage file into the ``grass_mapset`` Mapset.
 
 .. image:: img/grass_browser_import.png
    :align: center
@@ -365,4 +361,3 @@ operations that GRASS offers.
    :width: 1.5em
 .. |hard| image:: /static/global/hard.png
 .. |srtmFileName| replace:: :file:`srtm_41_19_4326.tif`
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

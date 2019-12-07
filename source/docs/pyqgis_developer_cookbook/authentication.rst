@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. index:: Plugins; Developing, Python; Authentication infrastructure
 
 .. highlight:: python
@@ -33,7 +29,7 @@ plugin and its tests. This is the first plugin that used Authentication
 infrastructure. The plugin code and its tests can be found at this
 `link <https://github.com/boundlessgeo/qgis-geoserver-plugin>`_.
 Other good code reference can be read from the authentication infrastructure
-`tests code <https://github.com/qgis/QGIS/blob/master/tests/src/python/test_qgsauthsystem.py>`_
+:source:`tests code <tests/src/python/test_qgsauthsystem.py>`.
 
 
 .. _Authentication_manager_glossary:
@@ -262,7 +258,7 @@ enabled service like a WMS or WFS or to a DB connection.
 
     In [19]: authM = QgsApplication.authManager()
     In [20]: authM.authMethod("Identity-Cert").supportedDataProviders()
-    Out[20]: [u'ows', u'wfs', u'wcs', u'wms', u'postgres']
+    Out[20]: ['ows', 'wfs', 'wcs', 'wms', 'postgres']
 
 For example, to access a WMS service using stored credentials identified with
 ``authcfg = 'fm1s770'``, we just have to use the ``authcfg`` in the data source
@@ -309,11 +305,8 @@ PKI examples with other data providers
 ......................................
 
 Other example can be read directly in the QGIS tests upstream as in
-test_authmanager_pki_ows_ or test_authmanager_pki_postgres_.
-
-.. _test_authmanager_pki_ows: https://github.com/qgis/QGIS/blob/master/tests/src/python/test_authmanager_pki_ows.py
-.. _test_authmanager_pki_postgres: https://github.com/qgis/QGIS/blob/master/tests/src/python/test_authmanager_pki_postgres.py
-
+:source:`test_authmanager_pki_ows <tests/src/python/test_authmanager_pki_ows.py>` or
+:source:`test_authmanager_pki_postgres <tests/src/python/test_authmanager_pki_postgres.py>`.
 
 
 .. _Adapt_plugins_to_use_Auth_infrastructure:
@@ -370,8 +363,8 @@ and can be used as in the following snippet:
   # GUI has to be integrated
   tabGui.insertTab( 1, gui, "Configurations" )
 
-The above example is taken from the QGIS source `code
-<https://github.com/qgis/QGIS/blob/master/src/providers/postgres/qgspgnewconnection.cpp#L42>`_
+The above example is taken from the QGIS source :source:`code
+<src/providers/postgres/qgspgnewconnection.cpp#L42>`
 The second parameter of the GUI constructor refers to data provider type. The
 parameter is used to restrict the compatible :term:`Authentication Method`\s with
 the specified provider.
@@ -397,7 +390,8 @@ and can be used as in the following snippet:
  gui = QgsAuthConfigSelect( parent )
  gui.show()
 
-an integrated example can be found in the related `test <https://github.com/qgis/QGIS/blob/master/tests/src/python/test_qgsauthsystem.py#L80>`_
+an integrated example can be found in the related :source:`test
+<tests/src/python/test_qgsauthsystem.py#L80>`.
 
 .. _Authorities_Editor_GUI:
 
@@ -427,4 +421,3 @@ and can be used as in the following snippet:
    source folder.
 
 .. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

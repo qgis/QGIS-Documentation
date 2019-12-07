@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 File tools
 ==========
 
@@ -16,26 +12,54 @@ File tools
 
 Download file
 --------------
-Downloads a URL on the file system. In other words you can copy/paste an URL and
-download the content into a file.
+Downloads a file specified using a URL (using for instance ``http:`` or
+``file:``).
+In other words you can copy/paste a URL and download the file.
 
 Parameters
 ..........
 
-``URL`` [string]
-  Valid URL as a string character.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **URL**
+     - ``URL``
+     - [string]
+     - The URL of the file to download.
+   * - **File destination**
+     - ``OUTPUT``
+     - [string]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the file destination.
+       One of:
+
+       * Skip Output
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
+       
 
 Outputs
 .......
 
-``File destination`` [file]
-  Downloaded file of the chosen URL.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **File destination**
+     - ``OUTPUT``
+     - [string]
+     - The location of the downloaded file

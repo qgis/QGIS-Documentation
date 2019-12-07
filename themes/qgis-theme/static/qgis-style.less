@@ -350,7 +350,7 @@ div.section:before {
 /* span achors are a little more difficult,
 these are for internal refs, eg: en/docs/user_manual/working_with_vector/editing_geometry_attributes.html#sec-advanced-edit
 hopefully this is unique enough for the :ref: spans we use */
-/* RD: no, this makes normal spans 60px high, so a lot of whitespace in 
+/* RD: no, this makes normal spans 60px high, so a lot of whitespace in
 normal pages. So while working for som internal refs, disable it now till
 somebody comes up with a better idea */
 /*div.section > span:before {
@@ -827,22 +827,6 @@ section.menu nav.subnav ul li a:hover {
 .toctree-l4 {
   font-size: 90%;
 }
-/* color for qgis version disclaimer (used when files need to be revised) */
-.disclaimer {
-  display: block; /* only to be make visible in testing */
-  color: black;
-  margin-top: 17px;
-  padding: 9px 30px 14px 50px;
-  background-color: #fbfbfb;
-  border-bottom: 1px solid #dfdfdf;
-  border-left: 1px solid #ececec;
-  border-right: 1px solid #ececec;
-  border-top: 1px solid #f5f5f5;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  box-shadow: 0 1px 3px #CCCCCC;
-}
 /* (Sphinx) admonition changes, as used in documentation */
 .admonition-title {
   font-size: larger;
@@ -851,7 +835,7 @@ section.menu nav.subnav ul li a:hover {
   margin-left: 44px !important;
 }
 /* theming of warning boxes class=".admonition .warning" */
-.warning, .disclaimer {
+.warning {
   background-image: url("images/warning.png");
   background-position: 15px 8px;
   background-repeat: no-repeat;
@@ -868,6 +852,12 @@ section.menu nav.subnav ul li a:hover {
   background-position: 15px 8px;
   background-repeat: no-repeat;
 }
+/* theming of warning boxes class=".admonition .important" */
+.important {
+    background-image: url("images/warning.png");
+    background-position: 15px 8px;
+    background-repeat: no-repeat;
+  }
 .admonition,
 .bordered-block {
   background-color: #fbfbfb;
@@ -908,4 +898,25 @@ section.menu nav.subnav ul li a:hover {
   color: #E22;
   padding-left: 3px;
   padding-right: 3px;
+}
+.outdated {
+  /* only to be visible for outdated releases*/
+  background: #ffbaba;
+  color: #6a0e0e;
+}
+.isTesting {
+  /* only to be visible in testing*/
+  background: #f3fbfb;
+  color: black;
+}
+.outdated, .isTesting {
+  /* top banner for testing and outdated docs*/
+  padding-top: 0.5rem;
+  margin-left: 0;
+  padding-left: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+.related-outdated, .related-isTesting{
+  margin-top: 2.5rem;
 }

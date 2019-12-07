@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 Vector creation
 ===============
 
@@ -28,6 +24,8 @@ them to the right.
    In blue the source layer, in red the offset one
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
+.. seealso:: :ref:`qgisoffsetline`, :ref:`qgisarraytranslatedfeatures`
 
 Parameters
 ..........
@@ -76,10 +74,6 @@ Outputs
   Output line layer with offset features.
   The original features are also copied.
 
-See also
-........
-:ref:`qgisoffsetline`, :ref:`qgisarraytranslatedfeatures`
-
 
 .. _qgisarraytranslatedfeatures:
 
@@ -96,6 +90,8 @@ M values present in the geometry can also be translated.
    Input layers in blue tones, output layers with translated features in red tones
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
+.. seealso:: :ref:`qgistranslategeometry`, :ref:`qgisarrayoffsetlines`
 
 Parameters
 ..........
@@ -134,10 +130,6 @@ Outputs
 ``Translated`` [vector: any]
   Output vector layer with translated (moved) copies of the features.
   The original features are also copied.
-
-See also
-........
-:ref:`qgistranslategeometry`, :ref:`qgisarrayoffsetlines`
 
 
 .. _qgiscreategrid:
@@ -661,4 +653,3 @@ Outputs
    :width: 1.3em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

@@ -1,14 +1,11 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. _r-syntax:
 
 *******************************
 R Syntax in Processing scripts
 *******************************
 
-Module contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna <https://www.santannapisa.it/it/istituto/scienze-della-vita/agricultural-water-management>`_
+Module contributed by Matteo Ghetta - funded by
+`Scuola Superiore Sant'Anna <https://www.santannapisa.it/it>`_
 
 Writing R scripts in Processing could be quite tricky because of the syntax that
 has to be adopted.
@@ -18,7 +15,7 @@ Each script starts with the **Input** and **Output** preceded with ``##``.
 Inputs
 ======
 
-Before you specify teh inputs you can also set the algorithm group in which your
+Before you specify the inputs you can also set the algorithm group in which your
 script will be put. If the group already exists, the algorithm will be added to
 the other, else a new group will be automatically created:
 
@@ -204,12 +201,3 @@ the script takes a field of the vector layer in input and creates a *QQ Plot* to
 test the normality of the distribution.
 
 The plot is automatically added to the *Result Viewer* of Processing.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

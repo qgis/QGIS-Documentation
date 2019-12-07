@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. index:: GPS tracking
 .. _`sec_gpstracking`:
 
@@ -145,7 +141,7 @@ MS Windows
 ..........
 
 Easiest way to make it work is to use a middleware (freeware, not open) called
-`GPSGate <https://update.gpsgate.com/install/GpsGateClient.exe>`_.
+`GPSGate <https://gpsgate.com/download/gpsgate_client>`_.
 
 Launch the program, make it scan for GPS devices (works for both USB and BT
 ones) and then in QGIS just click :guilabel:`Connect` in the Live tracking panel
@@ -237,4 +233,3 @@ or without it, by connecting the QGIS live tracking tool directly to the device
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
    :width: 1.5em
 .. |slider| image:: /static/common/slider.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

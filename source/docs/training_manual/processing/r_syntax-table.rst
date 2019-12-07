@@ -1,14 +1,11 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. _r-syntax-table:
 
 **************************************
 R Syntax Summary table for Processing
 **************************************
 
-Module contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna <https://www.santannapisa.it/it/istituto/scienze-della-vita/agricultural-water-management>`_
+Module contributed by Matteo Ghetta - funded by
+`Scuola Superiore Sant'Anna <https://www.santannapisa.it/it>`_
 
 Processing allows a lot of different input and output parameter that can be used
 in the script body.
@@ -97,12 +94,3 @@ Examples
 
 In order to better understand all the input and output parameters, please have a
 look at the :ref:`R Syntax chapter <r-syntax>`.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

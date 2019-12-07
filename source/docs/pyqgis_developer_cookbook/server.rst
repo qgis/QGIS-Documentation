@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. index:: Server plugins; Developing, Python; Developing server plugins
 
 .. _server_plugins:
@@ -29,9 +25,10 @@ Server Filter Plugins architecture
 ==================================
 
 Server python plugins are loaded once when the FCGI application starts. They
-register one or more :class:`QgsServerFilter <qgis.server.QgsServerFilter>` (from this point, you might
-find useful a quick look to the `server plugins API docs <https://qgis.org/api/group__server.html>`_).
-Each filter should implement at least one of three callbacks:
+register one or more :class:`QgsServerFilter <qgis.server.QgsServerFilter>`
+(from this point, you might find useful a quick look to the :api:`server plugins
+API docs <group__server.html>`). Each filter should implement at least one of
+three callbacks:
 
 * :meth:`requestReady() <qgis.server.QgsServerFilter.requestReady>`
 * :meth:`responseComplete() <qgis.server.QgsServerFilter.responseComplete>`
@@ -124,7 +121,7 @@ Raising exception from a plugin
 Some work has still to be done on this topic: the current implementation can
 distinguish between handled and unhandled exceptions by setting a
 :class:`QgsRequestHandler <qgis.server.QgsRequestHandler>` property to an
-instance of :class:`QgsMapServiceException <qgis.server.QgsMapServiceException>`,
+instance of QgsMapServiceException,
 this way the main C++ code can catch handled python exceptions and ignore
 unhandled exceptions (or better: log them).
 
@@ -545,4 +542,3 @@ to completely disable the cache.
    source folder.
 
 .. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

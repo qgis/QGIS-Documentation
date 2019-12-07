@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 Vector overlay
 ==============
 
@@ -21,15 +17,14 @@ Clips a vector layer using the features of an additional polygon layer.
 Only the parts of the features in the input layer that fall within the polygons
 of the overlay layer will be added to the resulting layer.
 
-
 .. _warning_difference:
 
 .. warning:: **Feature modification**
 
-  The attributes of the features are **not modified**, although properties
-  such as area or length of the features will be modified by the clipping operation.
-  If such properties are stored as attributes, those attributes will have to be
-  manually updated.
+   The attributes of the features are **not modified**, although properties
+   such as area or length of the features will be modified by the clipping operation.
+   If such properties are stored as attributes, those attributes will have to be
+   manually updated.
 
 This algorithm uses spatial indexes on the providers, prepared geometries and
 apply a clipping operation if the geometry isn't wholly contained by the
@@ -45,23 +40,60 @@ mask geometry.
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
+.. seealso:: :ref:`qgisintersection`, :ref:`qgisdifference`
+
 Parameters
 ..........
-``Input layer`` [vector: any]
-  Layer containing the features to be clipped.
 
-``Overlay layer`` [vector: polygon]
-  Layer containing the clipping features.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Layer containing the features to be clipped
+   * - **Overlay layer**
+     - ``OVERLAY``
+     - [vector: polygon]
+     - Layer containing the clipping features
+   * - **Clipped**
+     - ``OUTPUT``
+     - [same as input]
+       
+       Default: ``[Create temporary layer]``
+     - Specify the layer to contain the features from the input layer
+       that are inside the overlay (clipping) layer.
+       One of:
+
+       * Create Temporary Layer
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Clipped`` [vector: any]
-  Layer containing features from the input layer split by the overlay layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-See also
-........
-:ref:`qgisintersection`
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Clipped**
+     - ``OUTPUT``
+     - [same as input]
+     - Layer containing features from the input layer split by the overlay layer.
 
 
 .. _qgisdifference:
@@ -87,25 +119,65 @@ Attributes are not modified (see :ref:`warning <warning_difference>`).
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
+.. seealso:: :ref:`qgissymmetricaldifference`, :ref:`qgisclip`
+
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Layer to extract (parts of) features from.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Overlay layer`` [vector: any]
-  Layer containing the overlapping features to compare to,
-  acting as a subtracting layer.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Layer to extract (parts of) features from.
+   * - **Overlay layer**
+     - ``OVERLAY``
+     - [vector: any]
+     
+     - Layer containing the geometries that will be subtracted from the
+       input layer geometries. It is expected to have at least as many
+       dimensions (point: 0D, line: 1D, polygon: 2D, volume: 3D) as the input
+       layer geometries.
+   * - **Difference**
+     - ``OUTPUT``
+     - [same as input]
+       
+       Default: ``[Create temporary layer]``
+     - Specify the layer to contain the (parts of) features from the input
+       layer that are not inside the overlay layer.
+       One of:
+
+       * Create Temporary Layer
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Difference`` [vector: any]
-  Layer containing (parts of) features from the input layer not overlapping the overlay layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-See also
-........
-:ref:`qgissymmetricaldifference`
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Difference**
+     - ``OUTPUT``
+     - [same as input]
+     - Layer containing (parts of) features from the input layer
+       not overlapping the overlay layer.
 
 
 .. _qgisextractbyextent:
@@ -117,25 +189,69 @@ extent.
 
 Any features which intersect the extent will be included.
 
+.. seealso:: :ref:`qgisclip`
+
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Layer to extract (parts of) features from.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Extent (xmin, xmax, ymin, ymax)`` [extent]
-  Extent of the clipping.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Layer to extract (parts of) features from.
+   * - **Extent (xmin, xmax, ymin, ymax)**
+     - ``EXTENT``
+     - [extent]
+     - Extent for clipping.
+   * - **Clip features to extent**
+     - ``CLIP``
+     - [boolean]
+       
+       Default: False
+     - If checked, output geometries will be automatically converted
+       to multi geometries to ensure uniform output types.
+       Moreover the geometries will be clipped to the extent chosen
+       instead of taking the whole geometry as output.
+   * - **Extracted**
+     - ``OUTPUT``
+     - [same as input]
+       
+       Default: ``[Create temporary layer]``
+     - Specify the layer to contain the features from the input layer
+       that are inside the clip extent.
+       One of:
 
-``Clip features to the extent`` [boolean]
-  If checked, output geometries will be automatically converted to multi geometries
-  to ensure uniform output types. Moreover the geometries will be clipped to the
-  extent chosen instead of taking the whole geometry as output.
+       * Create Temporary Layer
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Extracted`` [vector: any]
-  Layer containing the clipped features.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Extracted**
+     - ``OUTPUT``
+     - [same as input]
+     - Layer containing the clipped features.
 
 
 .. _qgisintersection:
@@ -153,84 +269,189 @@ Attributes are not modified (see :ref:`warning <warning_difference>`).
 .. figure:: img/intersection.png
   :align: center
 
-  Intersection operation between a two-features input layer and a single feature
+  The intersection operation: A two-features input layer and a single feature
   overlay layer (left) - resulting features are moved for clarity (right)
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
+.. seealso:: :ref:`qgisclip`, :ref:`qgisdifference`
+
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Layer to extract (parts of) features from.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Overlay layer`` [vector: any]
-  Layer containing the overlapping features to compare to.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Layer to extract (parts of) features from.
+   * - **Overlay layer**
+     - ``OVERLAY``
+     - [vector: any]
+     - Layer containing the features to check for overlap.
+       Its features' geometry is expected to have at least as many
+       dimensions (point: 0D, line: 1D, polygon: 2D, volume: 3D)
+       as the input layer's.
+   * - **Input fields to keep (leave empty to keep all fields)**
+       
+       Optional
+     - ``INPUT_FIELDS``
+     - [tablefield: any] [list]
+       
+       Default: None
+     - Field(s) of the input layer to keep in the output.
+       If no fields are chosen all fields are taken.
+   * - **Overlay fields to keep (leave empty to keep all fields)**
+       
+       Optional
+     - ``OVERLAY_FIELDS``
+     - [tablefield: any] [list]
+       
+       Default: None
+     - Field(s) of the overlay layer to keep in the output.
+       If no fields are chosen all fields are taken.
+   * - **Overlay fields prefix** |38|
+       
+       Optional
+     - ``OVERLAY_FIELDS_PREFIX``
+     - [string]
+     - Prefix to add to the field names of the intersect
+       layer's fields to avoid name collisions with fields
+       in the input layer.
+   * - **Intersection**
+     - ``OUTPUT``
+     - [same as input]
+       
+       Default: ``[Create temporary layer]``
+     - Specify the layer to contain (the parts of) the features from
+       the input layer that overlap one or more features from the
+       overlay layer.
+       One of:
 
-``Input fields to keep`` [tablefield: any] [list]
-  Optional
+       * Create Temporary Layer
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
 
-  Field(s) of the input layer to keep in the output. If no fields are
-  chosen all fields are taken.
-
-``Overlay fields to keep`` [tablefield: any] [list]
-  Optional
-
-  Field(s) of the overlay layer to keep in the output. If no fields are
-  chosen all fields are taken.
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Intersection`` [vector: any]
-  Layer containing (parts of) features from the input layer overlapping the overlay layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-See also
-........
-:ref:`qgisclip`
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Intersection**
+     - ``OUTPUT``
+     - [same as input]
+     - Layer containing (parts of) features from the input
+       layer that overlap the overlay layer.
 
 
 .. _qgislineintersections:
 
 Line intersections
 ------------------
-Creates point features where the lines from both layers intersect.
-
+Creates point features where the lines from the two layers intersect.
 
 .. figure:: img/line_intersection.png
   :align: center
 
   Points of intersection
 
-
 ``Default menu``: :menuselection:`Vector --> Analysis Tools`
 
 Parameters
 ..........
 
-``Input layer`` [vector: line]
-  Input layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Intersect layer`` [vector: line]
-  Layer to use in the intersection operation.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input line layer.
+   * - **Intersect layer**
+     - ``INTERSECT``
+     - [vector: line]
+     - Layer to use to find line intersections.
+   * - **Input fields to keep (leave empty to keep all fields)**
+       
+       Optional
+     - ``INPUT_FIELDS``
+     - [tablefield: any] [list]
+       
+       Default: None
+     - Field(s) of the input layer to keep in the output.
+       If no fields are chosen all fields are taken.
+   * - **Intersect fields to keep (leave empty to keep all fields)**
+       
+       Optional
+     - ``INTERSECT_FIELDS``
+     - [tablefield: any] [list]
+       
+       Default: None
+     - Field(s) of the intersect layer to keep in the output.
+       If no fields are chosen all fields are taken.
+   * - **Intersect fields prefix** |38|
+       
+       Optional
+     - ``OVERLAY_FIELDS_PREFIX``
+     - [string]
+     - Prefix to add to the field names of the intersect
+       layer's fields to avoid name collisions with fields
+       in the input layer.
+   * - **Intersection**
+     - ``OUTPUT``
+     - [vector: point]
+       
+       Default: ``[Create temporary layer]``
+     - Specify the layer to contain the intersection points of the lines
+       from the input and overlay layers.
+       One of:
 
-``Input fields to keep`` [tablefield: any] [list]
-  Optional
+       * Create Temporary Layer
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
 
-  Field(s) of the input layer to keep in the output. If no fields are
-  chosen all fields are taken.
-
-``Intersect fields to keep`` [tablefield: any] [list]
-  Optional
-
-  Field(s) of the intersect layer to keep in the output. If no fields are
-  chosen all fields are taken.
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Intersections`` [vector: point]
-  Point vector layer of the intersection.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Intersections**
+     - ``OUTPUT``
+     - [vector: point]
+     - Point vector layer with the intersections.
 
 
 .. _qgissplitwithlines:
@@ -253,17 +474,56 @@ Output will contain multi geometries for split features.
 Parameters
 ..........
 
-``Input layer`` [vector: line, polygon]
-  Layer containing the lines or polygons to split.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Split layer`` [vector: line]
-  Line layer whose lines are used to define the breaking points.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line, polygon]
+     - Layer containing the lines or polygons to split.
+   * - **Split layer**
+     - ``LINES``
+     - [vector: line]
+     - Line layer whose lines are used to define the breaking points.
+   * - **Split**
+     - ``OUTPUT``
+     - [same as input]
+       
+       Default: ``[Create temporary layer]``
+     - Specify the layer to contain the splitted (in case they are
+       intersected by a line in the split layer) line/polygon features
+       from the input layer.
+       One of:
+
+       * Create Temporary Layer
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Split`` [vector: line, polygon]
-  Output layer with split lines or polygons from input layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Split**
+     - ``OUTPUT``
+     - [same as input]
+     - Output vector layer with split lines or polygons from input layer.
 
 
 .. _qgissymmetricaldifference:
@@ -286,24 +546,71 @@ Attributes are not modified (see :ref:`warning <warning_difference>`).
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
+.. seealso:: :ref:`qgisdifference`, :ref:`qgisclip`, :ref:`qgisintersection`
+
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  First layer to extract (parts of) features from.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Overlay layer`` [vector: any]
-  Second layer to extract (parts of) features from.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - First layer to extract (parts of) features from.
+   * - **Overlay layer**
+     - ``OVERLAY``
+     - [vector: any]
+     - Second layer to extract (parts of) features from.
+       Ideally the geometry type should be the same as input layer.
+   * - **Overlay fields prefix** |38|
+       
+       Optional
+     - ``OVERLAY_FIELDS_PREFIX``
+     - [string]
+     - Prefix to add to the field names of the overlay
+       layer's fields to avoid name collisions with fields
+       in the input layer.
+   * - **Symmetrical difference**
+     - ``OUTPUT``
+     - [same as input]
+       
+       Default: ``[Create temporary layer]``
+     - Specify the layer to contain (the parts of) the features from
+       the input and overlay layers that so not overlap features from the
+       other layer.
+       One of:
+
+       * Create Temporary Layer
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Symmetrical difference`` [vector: any]
-  Layer containing (parts of) features from each layer not overlapping the other layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-See also
-........
-:ref:`qgisdifference`
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Symmetrical difference**
+     - ``OUTPUT``
+     - [same as input]
+     - Layer containing (parts of) features from each layer
+       not overlapping the other layer.
 
 
 .. _qgisunion:
@@ -343,22 +650,72 @@ from both layers for overlapping features.
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
+.. seealso:: :ref:`qgisclip`, :ref:`qgisdifference`, :ref:`qgisintersection`
+
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer to split at any intersections.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Overlay layer`` [vector: any]
-  Optional
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer to split at any intersections.
+   * - **Overlay layer**
+       
+       Optional
+     - ``OVERLAY``
+     - [vector: any]
+     - Layer that will be combined to the first one.
+       Ideally the geometry type should be the same as input layer.
+   * - **Overlay fields prefix** |38|
+       
+       Optional
+     - ``OVERLAY_FIELDS_PREFIX``
+     - [string]
+     - Prefix to add to the field names of the overlay
+       layer's fields to avoid name collisions with fields
+       in the input layer.
+   * - **Union**
+     - ``OUTPUT``
+     - [same as input]
+       
+       Default: ``[Create temporary layer]``
+     - Specify the layer to contain the (split and duplicated) features
+       from the input layer and the overlay layer.
+       One of:
 
-  Layer that will be combined to the first one.
+       * Create Temporary Layer
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Union`` [vector: any]
-  Layer containing all the overlapping and non-overlapping parts from the processed layer(s).
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Union**
+     - ``OUTPUT``
+     - [same as input]
+     - Layer containing all the overlapping and
+       non-overlapping parts from the processed layer(s).
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -367,6 +724,6 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |38| replace:: ``NEW in 3.8``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

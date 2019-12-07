@@ -76,10 +76,6 @@ html: updatestatic
 
 # pdf will also make html
 pdf: html
-	# add the 'processing algorithms' part OUT of the pdf by adding it to exclude_patterns of build
-	# NOTE: this exclusion line will be removed in docker-world.sh via a git checkout!
-	@echo "exclude_patterns += ['docs/user_manual/processing_algs/*']" >> $(SOURCEDIR)/conf.py;
-
 	@if [ $(LANG) = "ko" -o $(LANG) = "hi" ]; then \
 		cp -f $(SOURCEDIR)/conf.py $(SOURCEDIR)/i18n/$(LANG)/; \
 		cat $(SOURCEDIR)/i18n/$(LANG)/conf.py.diff >> $(SOURCEDIR)/i18n/$(LANG)/conf.py; \
@@ -242,7 +238,11 @@ fasthtml: updatestatic
 	# No internationalization is performed
 	$(SPHINXBUILD) -n -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html/$(LANG)
 
-.PHONY: doctest
+linkcheck:
+	$(SPHINXBUILD) -n -b linkcheck $(ALLSPHINXOPTS) $(BUILDDIR)/linkcheck
+	@echo
+	@echo "Check finished. Report is in $(BUILDDIR)/linkcheck/output.txt".
+
 doctest:
 	$(SPHINXBUILD) -b doctest $(ALLSPHINXOPTS) $(BUILDDIR)/doctest
 	@echo "Testing of doctests in the sources finished, look at the " \

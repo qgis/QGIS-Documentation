@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 Writing new Processing algorithms as Python scripts
 ===================================================
 
@@ -12,9 +8,8 @@ Writing new Processing algorithms as Python scripts
 
 There are two options for writing Processing algorithms using Python.
 
-* Extending
-  :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`
-* Using the @alg decorator
+* :ref:`Extending<scripts_extend>` :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`
+* :ref:`Using the @alg decorator<scripts_alg>`
 
 Within QGIS, you can use :guilabel:`Create new script` in the
 :guilabel:`Scripts` menu at the top of the :guilabel:`Processing Toolbox`
@@ -28,6 +23,8 @@ This opens a template that extends
 If you save the script in the :file:`scripts` folder
 (the default location) with a :file:`.py` extension, the algorithm will
 become available in the :guilabel:`Processing Toolbox`.
+
+.. _scripts_extend:
 
 Extending QgsProcessingAlgorithm
 --------------------------------
@@ -51,7 +48,7 @@ The following code
                            QgsProcessingParameterFeatureSource,
                            QgsProcessingParameterVectorDestination,
                            QgsProcessingParameterRasterDestination)
-    import processing
+    from qgis import processing
 
 
     class ExampleProcessingAlgorithm(QgsProcessingAlgorithm):
@@ -59,48 +56,48 @@ The following code
         This is an example algorithm that takes a vector layer,
         creates some new layers and returns some results.
         """
-    
+
         def tr(self, string):
             """
             Returns a translatable string with the self.tr() function.
             """
             return QCoreApplication.translate('Processing', string)
-    
+
         def createInstance(self):
             # Must return a new copy of your algorithm.
             return ExampleProcessingAlgorithm()
-    
+
         def name(self):
             """
             Returns the unique algorithm name.
             """
             return 'bufferrasterextend'
-    
+
         def displayName(self):
             """
             Returns the translated algorithm name.
             """
             return self.tr('Buffer and export to raster (extend)')
-    
+
         def group(self):
             """
             Returns the name of the group this algorithm belongs to.
             """
             return self.tr('Example scripts')
-    
+
         def groupId(self):
             """
             Returns the unique ID of the group this algorithm belongs
             to.
             """
             return 'examplescripts'
-    
+
         def shortHelpString(self):
             """
             Returns a localised short help string for the algorithm.
             """
             return self.tr('Example algorithm short description')
-    
+
         def initAlgorithm(self, config=None):
             """
             Here we define the inputs and outputs of the algorithm.
@@ -151,7 +148,7 @@ The following code
                     self.tr('Number of features processed')
                 )
             )
-    
+
         def processAlgorithm(self, parameters, context, feedback):
             """
             Here is where the processing itself takes place.
@@ -198,11 +195,11 @@ The following code
                 # users and handle cancelation requests.
                 context=context,
                 feedback=feedback)
-                
+
             # Check for cancelation
             if feedback.isCanceled():
                 return {}
-                
+
             # Run the separate rasterization algorithm using the buffer result 
             # as an input.
             rasterized_result = processing.run(
@@ -219,10 +216,10 @@ The following code
                 is_child_algorithm=True,
                 context=context,
                 feedback=feedback)
-                
+
             if feedback.isCanceled():
                 return {}
-                
+
             # Return the results
             return {'OUTPUT': rasterized_result['OUTPUT'],
                     'BUFFER_OUTPUT': buffer_result['OUTPUT'],
@@ -234,63 +231,62 @@ Processing algorithm standard functions:
     Must return a new copy of your algorithm.
     If you change the name of the class, make sure you also update the value
     returned here to match!
-    
+
 * name (mandatory)
     Returns the unique algorithm name, used for identifying the algorithm.
-    
+
 * displayName (mandatory)
     Returns the translated algorithm name.
-    
+
 * group
     Returns the name of the group this algorithm belongs to.
-    
+
 * groupId
     Returns the unique ID of the group this algorithm belongs to.
-    
+
 * shortHelpString
     Returns a localised short help string for the algorithm.
-    
+
 * initAlgorithm (mandatory)
     Here we define the inputs and outputs of the algorithm.
-    
+
     ``INPUT`` and ``OUTPUT`` are recommended names for the main input and
     main output parameters, respectively.
-    
+
     If a parameter depends on another parameter, ``parentParameterName``
     is used to specify this relationship (could be the field / band of a
     layer or the distance units of a layer).
 
 * processAlgorithm (mandatory)
     This is where the processing takes place.
-    
+
     Parameters are retrieved using special purpose functions, for
     instance ``parameterAsSource`` and ``parameterAsDouble``.
-    
-    ``processing.run`` can be used to run other processing algoritms from
+
+    ``processing.run`` can be used to run other processing algorithms from
     a processing algorithm. The first parameter is the name of the
-    algorithm, the second is a dictionary of the parameters to the
-    algorithm.
+    algorithm, the second is a dictionary of the parameters to the algorithm.
     ``is_child_algorithm`` is normally set to ``True`` when running an
     algorithm from within another algorithm.
-    ``context`` and ``feedback`` informs the algorithm about the
+    ``context`` and ``feedback`` inform the algorithm about the
     environment to run in and the channel for communicating with the user
-    (catching cancel request, reporting progress, providing textual
-    feedback).
-    When using the (parent) algoritm's parameters as parameters to "child"
+    (catching cancel request, reporting progress, providing textual feedback).
+    When using the (parent) algorithm's parameters as parameters to "child"
     algorithms, the original parameter values should be used (e.g.
     ``parameters['OUTPUT']``).
-    
+
     It is good practice to check the feedback object for cancelation
     as much as is sensibly possible! Doing so allows for responsive
     cancelation, instead of forcing users to wait for unwanted processing
     to occur.
-    
+
     The algorithm should return values for all the output
     parameters it has defined as a dictionary.
     In this case, that's the buffer and rasterized output layers, and the
     count of features processed.
     The dictionary keys must match the original parameter/output names.
- 
+
+.. _scripts_alg:
 
 The @alg decorator
 ------------------
@@ -316,7 +312,7 @@ The following code uses the @alg decorator to
 
 .. testcode:: 
 
-    import processing
+    from qgis import processing
     from qgis.processing import alg
     from qgis.core import QgsProject
     
@@ -399,16 +395,22 @@ help simplify the coding of the algorithm.
 * The @alg.input decorator is used to define the inputs of the algorithm.
 * The @alg.output decorator is used to define the outputs of the algorithm.
 
+.. _processing_algs_input_output:
+
+Input and output types for Processing Algorithms
+-------------------------------------------------------
+
 Here is the list of input and output types that are supported in
 Processing with their corresponding alg decorator constants
 (:file:`algfactory.py` contains the complete list of alg constants).
+Sorted on class name.
 
-.. list-table:: Input and output types
-   :widths: 50 20 30
+.. list-table:: Input types
+   :widths: 24 55 21
    :header-rows: 1
 
    * - Class
-     - alg
+     - Alg constant
      - Description
    * - :class:`QgsProcessingParameterAuthConfig <qgis.core.QgsProcessingParameterAuthConfig>`
      - ``alg.AUTH_CFG``
@@ -421,7 +423,7 @@ Processing with their corresponding alg decorator constants
      - ``alg.BOOL``
      - A boolean value
    * - :class:`QgsProcessingParameterColor <qgis.core.QgsProcessingParameterColor>`
-     - Currently missing
+     - ``alg.COLOR``
      - A color
    * - :class:`QgsProcessingParameterCrs <qgis.core.QgsProcessingParameterCrs>`
      - ``alg.CRS``
@@ -450,6 +452,15 @@ Processing with their corresponding alg decorator constants
    * - :class:`QgsProcessingParameterFolderDestination <qgis.core.QgsProcessingParameterFolderDestination>`
      - ``alg.FOLDER_DEST``
      - A folder
+   * - :class:`QgsProcessingParameterNumber <qgis.core.QgsProcessingParameterNumber>`
+     - ``alg.INT``
+     - An integer
+   * - :class:`QgsProcessingParameterLayout <qgis.core.QgsProcessingParameterLayout>`
+     - ``alg.LAYOUT``
+     - A layout
+   * - :class:`QgsProcessingParameterLayoutItem <qgis.core.QgsProcessingParameterLayoutItem>`
+     - ``alg.LAYOUT_ITEM``
+     - A layout item
    * - :class:`QgsProcessingParameterMapLayer <qgis.core.QgsProcessingParameterMapLayer>`
      - ``alg.MAPLAYER``
      - A map layer
@@ -477,6 +488,9 @@ Processing with their corresponding alg decorator constants
    * - :class:`QgsProcessingParameterRasterDestination <qgis.core.QgsProcessingParameterRasterDestination>`
      - ``alg.RASTER_LAYER_DEST``
      - A raster layer
+   * - :class:`QgsProcessingParameterScale <qgis.core.QgsProcessingParameterScale>`
+     - ``alg.SCALE``
+     - A map scale
    * - :class:`QgsProcessingParameterFeatureSink <qgis.core.QgsProcessingParameterFeatureSink>`
      - ``alg.SINK``
      - A feature sink
@@ -493,6 +507,54 @@ Processing with their corresponding alg decorator constants
      - ``alg.VECTOR_LAYER_DEST``
      - A vector layer
 
+|
+
+.. list-table:: Output types
+   :widths: 25 50 25
+   :header-rows: 1
+
+   * - Class
+     - Alg constant
+     - Description
+   * - :class:`QgsProcessingOutputBoolean <qgis.core.QgsProcessingOutputBoolean>`
+     - ``alg.BOOL``
+     - A boolean value
+   * - :class:`QgsProcessingOutputNumber <qgis.core.QgsProcessingOutputNumber>`
+     - ``alg.DISTANCE``
+     - A double numeric parameter for distance values
+   * - :class:`QgsProcessingOutputFile <qgis.core.QgsProcessingOutputFile>`
+     - ``alg.FILE``
+     - A filename of an existing file
+   * - :class:`QgsProcessingOutputFolder <qgis.core.QgsProcessingOutputFolder>`
+     - ``alg.FOLDER``
+     - A folder
+   * - :class:`QgsProcessingOutputHtml <qgis.core.QgsProcessingOutputHtml>`
+     - ``alg.HTML``
+     - HTML
+   * - :class:`QgsProcessingOutputNumber <qgis.core.QgsProcessingOutputNumber>`
+     - ``alg.INT``
+     - A integer
+   * - :class:`QgsProcessingOutputLayerDefinition <qgis.core.QgsProcessingOutputLayerDefinition>`
+     - ``alg.LAYERDEF``
+     - A layer definition
+   * - :class:`QgsProcessingOutputMapLayer <qgis.core.QgsProcessingOutputMapLayer>`
+     - ``alg.MAPLAYER``
+     - A map layer
+   * - :class:`QgsProcessingOutputMultipleLayers <qgis.core.QgsProcessingOutputMultipleLayers>`
+     - ``alg.MULTILAYER``
+     - A set of layers
+   * - :class:`QgsProcessingOutputNumber <qgis.core.QgsProcessingOutputNumber>`
+     - ``alg.NUMBER``
+     - A numerical value
+   * - :class:`QgsProcessingOutputRasterLayer <qgis.core.QgsProcessingOutputRasterLayer>`
+     - ``alg.RASTER_LAYER``
+     - A raster layer
+   * - :class:`QgsProcessingOutputString <qgis.core.QgsProcessingOutputString>`
+     - ``alg.STRING``
+     - A text string
+   * - :class:`QgsProcessingOutputVectorLayer <qgis.core.QgsProcessingOutputVectorLayer>`
+     - ``alg.VECTOR_LAYER``
+     - A vector layer
 
 Handing algorithm output
 ------------------------
@@ -596,13 +658,4 @@ interface.
   throw a :class:`QgsProcessingException <qgis.core.QgsProcessingException>`.
 
 There are already many processing algorithms available in QGIS.
-You can find code on
-https://github.com/qgis/QGIS/tree/master/python/plugins/processing/algs/qgis.
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
+You can find code on :source:`python/plugins/processing/algs/qgis`.

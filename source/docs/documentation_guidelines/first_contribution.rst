@@ -320,42 +320,67 @@ type while ``#`` are comments.
 Local repository
 ----------------
 
-Now you are ready to get a local clone of **your** QGIS-Documentation repository:
+Now you are ready to get a local clone of **your** QGIS-Documentation repository.
+
+You can clone  your QGIS repository using the web URL as follows:
 
 .. code-block:: bash
 
+  # move to the folder in which you intend to store the local repository
   $ cd ~/Documents/Development/QGIS/
-  $ git clone git@github.com:<YourName>/QGIS-Documentation.git
+  $ git clone https://github.com/<YourName>/QGIS-Documentation.git
 
 The former command line is simply an example.
 You should adapt both the path and the repository URL, replacing ``<YourName>``
 with your user name.
 
-.. tip:: **Permission denied (publickey) error?**
-
-   If you get a Permission denied (publickey) error, there may be a problem with
-   your SSH key. See `GitHub help <https://help.github.com/articles/error-permission-denied-publickey/>`_ for details.
-
-Check it:
+Check the following:
 
 .. code-block:: bash
 
+  # Enter the local repository
+  $ cd ./QGIS-Documentation
   $ git remote -v
-  origin  git@github.com:<YourName>/QGIS-Documentation.git (fetch)
-  origin  git@github.com:<YourName>/QGIS-Documentation.git (push)
+  origin  https://github.com/<YourName>/QGIS-Documentation.git (fetch)
+  origin  https://github.com/<YourName>/QGIS-Documentation.git (push)
   $ git branch
   * master
-
 
 * *origin* is the name of the remote repository of your QGIS-Documentation
   repository.
 * *master* is the default main branch. You should never use it to contribute!
   **Never!**
 
+Alternatively you can clone your QGIS repository using the SSH protocol:
+
+.. code-block:: bash
+
+  # move to the folder in which you intend to store the local repository
+  $ cd ~/Documents/Development/QGIS/
+  $ git clone git@github.com:<YourName>/QGIS-Documentation.git
+
+.. tip:: **Permission denied (publickey) error?**
+
+   If you get a Permission denied (publickey) error with the former command, there may be a problem with
+   your SSH key. See `GitHub help <https://help.github.com/articles/error-permission-denied-publickey/>`_ for details.
+
+Check the following if you used the SSH protocol:
+
+.. code-block:: bash
+
+  # Enter the local repository
+  $ cd ./QGIS-Documentation
+  $ git remote -v
+  origin  git@github.com:<YourName>/QGIS-Documentation.git (fetch)
+  origin  git@github.com:<YourName>/QGIS-Documentation.git (push)
+  $ git branch
+  * master
+
 You can start to work here but in the long terme process you will get a lot of
 issue when you will push your contribution (called Pull Request in github
 process) as the master branch of the QGIS-Documentation repository will diverge
 from your local/remote repository.
+You then need to keep track of the main remote repository and work with branches.
 
 Add another remote repository
 ------------------------------
@@ -363,6 +388,18 @@ Add another remote repository
 To be able to follow the work in the main project, add a new remote repository
 in your local repository. This new remote repository is the QGIS-Documentation
 repository from QGIS project:
+
+.. code-block:: bash
+
+  $ git remote add upstream https://github.com/qgis/QGIS-Documentation.git
+  $ git remote -v
+  origin  https://github.com/<YourName>/QGIS-Documentation.git (fetch)
+  origin  https://github.com/<YourName>/QGIS-Documentation.git (push)
+  upstream        https://github.com/qgis/QGIS-Documentation.git (fetch)
+  upstream        https://github.com/qgis/QGIS-Documentation.git (push)
+
+Similarly, you can use the SSH protocol to add a remote repository in your local
+repository:
 
 .. code-block:: bash
 
@@ -387,53 +424,32 @@ So now you have the choice between two remote repository:
 Update your base branch
 -----------------------
 
-For testing doc (``master`` branch)
-...................................
-
-Before working on a new contribution, you should always update your local master
-branch in your local repository. Just run this command line:
+Before working on a new contribution, you should always update your
+master branch in your local repository. Assuming you are willing to push changes
+to the testing documentation, run the following command lines:
 
 .. code-block:: bash
 
   # switch to master branch (it is easy to forget this step!)
   $ git checkout master
-  # get "information" from the master branch in upstream repository
+  # get "information" from the master branch in the upstream repository
   # (aka qgis/QGIS-Documentation's repository)
   $ git fetch upstream master
   # merge update from upstream/master to the current local branch
   # (which should be master, see step 1)
   $ git merge upstream/master
-  # update **your** remote repository
+  # update **your** remote repository (aka <YourName>/QGIS-Documentation)
   $ git push origin master
 
-Now you have a local and remote repositories which have both ``master`` branch up to date with
-QGIS-Documentation from QGIS organisation. You can start to work on your
-contribution.
+Now you have your local and remote repositories which both have their ``master``
+branch up to date with the official ``master`` branch of QGIS-Documentation.
+You can start to work on your contribution.
 
-For released doc (``release_`` branch)
-......................................
+.. note:: Switch the branch if you wish to contribute to released doc
 
-Along the testing documentation, we continue to fix issues in QGIS |CURRENT| doc,
-meaning that you can also contribute to it. Following the previous section sample code,
-you can easily do that by selecting the corresponding branch.
-
-When you clone the repository (see :ref:`local_repository`), your clone has all
-the branches of the upstream repository.
-As above, you need to ensure your branch is up to date with the upstream's:
-
-.. code-block:: bash
-
-  # change branch e.g. for 2.18 LTR
-  $ git checkout release_2.18
-  # get "information" from the release_2.18 branch in upstream repository
-  $ git fetch upstream release_2.18
-  # merge update from upstream/release_2.18 to the current local branch
-  $ git merge upstream/release_2.18
-  # update **your** remote repository
-  $ git push origin release_2.18
-
-In this way your local and remote branches for the |CURRENT| version are up to
-date with the one of the official upstream repository.
+  Along with the testing documentation, we continue to fix issues in QGIS |CURRENT| doc,
+  meaning that you can also contribute to it. Follow the previous section sample code,
+  replacing ``master`` with the corresponding branch of the latest documentation.
 
 .. _contribute:
 
@@ -446,15 +462,17 @@ base branch! Always!
 
 .. code-block:: bash
 
+   # Create a new branch
    $ git checkout -b myNewBranch
    # checkout means go to the branch
    # and -b flag creates a new branch if needed, based on current branch
+   # Let's check the list of existing branches (* indicates the current branch)
    $ git branch
    master
    release_2.18
+   ...
    * myNewBranch
-   # a list of existing branch where * means the current branch
-   # You can now add your contribution, by editing the concerned file
+   # You can now add your contribution, by editing the concerned file(s)
    # with any application (in this case, vim is used)
    $ vim myFile
    # once done

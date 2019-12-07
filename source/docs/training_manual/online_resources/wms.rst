@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. _`wms-services`:
 
 |LS| Web Mapping Services
@@ -246,7 +242,6 @@ Using a WMS, you can add inactive maps as backdrops for your existing map data.
 -------------------------------------------------------------------------------
 
 * `Spatineo Directory <https://directory.spatineo.com/>`_
-* `Geopole.org <https://geopole.org/>`_
 * `OpenStreetMap.org list of WMS servers
   <https://wiki.openstreetmap.org/wiki/WMS>`_
 
@@ -277,6 +272,5 @@ Feature Service (WFS). That's the topic of the next lesson.
 .. |hard| image:: /static/global/hard.png
 .. |majorUrbanName| replace:: Swellendam
 .. |moderate| image:: /static/global/moderate.png
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |wms| image:: /static/common/mActionAddWmsLayer.png
    :width: 1.5em

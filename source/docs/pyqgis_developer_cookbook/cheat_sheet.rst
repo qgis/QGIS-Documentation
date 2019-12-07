@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. _cheat-sheet:
 
 **********************
@@ -463,14 +459,25 @@ Advanced TOC
 
 .. testcode::
 
-    from qgis.core import QgsLayerTreeGroup, QgsLayerTreeLayer
+   from qgis.core import QgsLayerTreeGroup, QgsLayerTreeLayer
+   
+   def get_group_layers(group):
+      print('- group: ' + group.name())
+      for child in group.children():
+         if isinstance(child, QgsLayerTreeGroup):
+            # Recursive call to get nested groups
+            get_group_layers(child)
+         else:
+            print('  - layer: ' + child.name())
 
-    for child in root.children():
-        if isinstance(child, QgsLayerTreeGroup):
-            print ("- group: " + child.name())
-        elif isinstance(child, QgsLayerTreeLayer):
-            print ("- layer: " + child.name())
 
+   root = QgsProject.instance().layerTreeRoot()
+   for child in root.children():
+      if isinstance(child, QgsLayerTreeGroup):
+         get_group_layers(child)
+      elif isinstance(child, QgsLayerTreeLayer):
+         print ('- layer: ' + child.name()) 
+   
 .. testoutput::
    :hide:
 
@@ -482,6 +489,12 @@ Advanced TOC
 .. code-block:: python
 
     print (root.findGroup("My Group"))
+
+**Find layer by id**
+
+.. code-block:: python
+
+    print (root.findLayer(layer.layerId()))
 
 **Add layer**
 
@@ -529,6 +542,33 @@ Advanced TOC
     cloned_group1.setName("Group X")
     node_layer1.setName("Layer X")
 
+**Move loaded layer**
+
+.. code-block:: python
+
+    layer = QgsProject.instance().mapLayersByName("layer name you like")[0]
+    root = QgsProject.instance().layerTreeRoot()
+
+    mylayer = root.findLayer(layer.id())
+    myClone = mylayer.clone()
+    parent = mylayer.parent()
+
+    group = root.findGroup("My Group")
+    # Insert in first position
+    group.insertChildNode(0, myClone)
+
+    parent.removeChildNode(mylayer)
+
+**Load layer in a specific group**
+
+.. code-block:: python
+
+    QgsProject.instance().addMapLayer(layer, False)
+
+    root = QgsProject.instance().layerTreeRoot()
+    g = root.findGroup("My Group")
+    g.insertChildNode(0, QgsLayerTreeLayer(layer))
+
 **Changing visibility**
 
 .. code-block:: python
@@ -536,6 +576,16 @@ Advanced TOC
     print (cloned_group1.isVisible())
     cloned_group1.setItemVisibilityChecked(False)
     node_layer1.setItemVisibilityChecked(False)
+
+**Is group selected**
+
+.. code-block:: python
+
+    def isMyGroupSelected( groupName ):
+        myGroup = QgsProject.instance().layerTreeRoot().findGroup( groupName )        
+        return myGroup in iface.layerTreeView().selectedNodes()
+
+    print (isMyGroupSelected( 'my group name' ))
 
 **Expand node**
 
@@ -623,7 +673,7 @@ Random selection
 
 .. code-block:: python
 
-    import processing
+    from qgis import processing
 
     processing.algorithmHelp("qgis:randomselection")
 
@@ -634,7 +684,7 @@ which is added to the project.
 
 .. code-block:: python
 
-    import processing
+    from qgis import processing
     result = processing.run("native:buffer", {'INPUT': layer, 'OUTPUT': 'memory:'})
     QgsProject.instance().addMapLayer(result['OUTPUT'])
 
@@ -745,20 +795,24 @@ Decorators
     # Repaint the canvas map
     iface.mapCanvas().refresh()
 
+Composer
+==========
+
+**Get print layout by name**
+
+.. testcode::
+
+    composerTitle = 'MyComposer' # Name of the composer
+
+    project = QgsProject.instance()
+    projectLayoutManager = project.layoutManager()
+    layout = projectLayoutManager.layoutByName(composerTitle)
+
 Sources
 =======
 
-* `QGIS Python (PyQGIS) API <https://qgis.org/pyqgis/>`_
-* `QGIS C++ API <https://qgis.org/api/>`_
+* :pyqgis:`QGIS Python (PyQGIS) API <>`
+* :api:`QGIS C++ API <>`
 * `StackOverFlow QGIS questions <https://stackoverflow.com/questions/tagged/qgis>`_
 * `Script by Klas Karlsson <https://raw.githubusercontent.com/klakar/QGIS_resources/master/collections/Geosupportsystem/python/qgis_basemaps.py>`_
 * `Boundless lib-qgis-common repository <https://github.com/boundlessgeo/lib-qgis-commons>`_
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

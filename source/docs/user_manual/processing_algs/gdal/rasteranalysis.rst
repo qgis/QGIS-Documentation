@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 Raster analysis
 ===============
 
@@ -22,7 +18,7 @@ have a value from 0-360° measured in degrees from north indicating the azimuth.
 On the northern hemisphere, the north side of slopes is often shaded (small azimuth from 0°-90°),
 while the southern side receives more solar radiation (higher azimuth from 180°-270°).
 
-This algorithm is derived from the `GDAL DEM utility <https://www.gdal.org/gdaldem.html>`_ .
+This algorithm is derived from the `GDAL DEM utility <https://gdal.org/gdaldem.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -74,7 +70,7 @@ The Algorithm outputs a 4-band raster with values computed from the elevation
 and a text-based color configuration file. By default, the colors between the given
 elevation values are blended smoothly and the result is a nice colorized elevation raster.
 
-This algorithm is derived from the `GDAL DEM utility <https://www.gdal.org/gdaldem.html>`_ .
+This algorithm is derived from the `GDAL DEM utility <https://gdal.org/gdaldem.html>`_ .
 
 Parameters
 ..........
@@ -128,7 +124,7 @@ models for instance). It is also suitable for filling small holes and cracks in 
 varying images (like airphotos). It is generally not so great for interpolating a raster
 from sparse point data.
 
-This algorithm is derived from the `GDAL fillnodata utility <https://www.gdal.org/gdal_fillnodata.html>`_ .
+This algorithm is derived from the `GDAL fillnodata utility <https://gdal.org/gdal_fillnodata.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -180,9 +176,11 @@ and averages all data points within the window. Search ellipse can be rotated by
 located at the grid node. Also the minimum number of data points to average can be set, if there are not enough points
 in window, the grid node considered empty and will be filled with specified NODATA value.
 
-This algorithm is derived from the `GDAL grid utility <https://www.gdal.org/gdal_grid.html>`_ .
+This algorithm is derived from the `GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
+
+.. seealso:: `GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_
 
 Parameters
 ..........
@@ -248,11 +246,6 @@ Outputs
 
 Interpolated raster file.
 
-See also
-........
-
-`GDAL grid tutorial <https://www.gdal.org/grid_tutorial.html>`_
-
 
 .. _gdalgriddatametrics:
 
@@ -260,9 +253,11 @@ Grid (Data metrics)
 -------------------
 Computes some data metrics using the specified window and output grid geometry.
 
-This algorithm is derived from the `GDAL grid utility <https://www.gdal.org/gdal_grid.html>`_ .
+This algorithm is derived from the `GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
+
+.. seealso:: `GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_
 
 Parameters
 ..........
@@ -345,10 +340,6 @@ Outputs
 ``Output file`` [raster]
   Interpolated raster file.
 
-See also
-........
-`GDAL grid tutorial <https://www.gdal.org/grid_tutorial.html>`_
-
 
 .. _gdalgridinversedistance:
 
@@ -360,9 +351,11 @@ You should supply the input arrays with the scattered data values
 including coordinates of every data point and output grid geometry.
 The function will compute interpolated value for the given position in output grid.
 
-This algorithm is derived from the `GDAL grid utility <https://www.gdal.org/gdal_grid.html>`_ .
+This algorithm is derived from the `GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
+
+.. seealso:: `GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_
 
 Parameters
 ..........
@@ -448,11 +441,6 @@ Outputs
 ``Output file`` [raster]
   Interpolated raster file.
 
-See also
-.........
-
-`GDAL grid tutorial <https://www.gdal.org/grid_tutorial.html>`_
-
 
 .. _gdalgridinversedistancenearestneighbor:
 
@@ -462,7 +450,9 @@ Grid (IDW with nearest neighbor searching)
 Computes the Inverse Distance to a Power gridding combined to the nearest neighbor method.
 Ideal when a maximum number of data points to use is required.
 
-This algorithm is derived from the `GDAL grid utility <https://www.gdal.org/gdal_grid.html>`_ .
+This algorithm is derived from the `GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
+
+.. seealso:: `GDAL grid <https://gdal.org/gdal_grid.html>`_
 
 Parameters
 ..........
@@ -531,11 +521,6 @@ Outputs
 ``Output file`` [raster]
   Interpolated raster file.
 
-See also
-........
-
-`GDAL grid <https://www.gdal.org/gdal_grid.html>`_
-
 
 .. _gdalgridlinear:
 
@@ -548,7 +533,7 @@ within the triangle.
 If the point is not in any triangle, depending on the radius, the algorithm will
 use the value of the nearest point or the NODATA value.
 
-This algorithm is derived from the `GDAL grid utility <https://www.gdal.org/gdal_grid.html>`_ .
+This algorithm is derived from the `GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
 
 Parameters
 ..........
@@ -608,9 +593,11 @@ The Nearest Neighbor method doesn't perform any interpolation or smoothing, it j
 found in grid node search ellipse and returns it as a result. If there are no points found, the specified NODATA value
 will be returned.
 
-This algorithm is derived from the `GDAL grid utility <https://www.gdal.org/gdal_grid.html>`_ .
+This algorithm is derived from the `GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
+
+.. seealso:: `GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_
 
 Parameters
 ..........
@@ -669,11 +656,6 @@ Outputs
 ``Output file`` [raster]
   Interpolated raster file.
 
-See also
-........
-
-`GDAL grid tutorial <https://www.gdal.org/grid_tutorial.html>`_
-
 
 .. _gdalhillshade:
 
@@ -683,7 +665,7 @@ Outputs a raster with a nice shaded relief effect. It’s very useful for visual
 the terrain. You can optionally specify the azimuth and altitude of the light source, a vertical
 exaggeration factor and a scaling factor to account for differences between vertical and horizontal units.
 
-This algorithm is derived from the `GDAL DEM utility <https://www.gdal.org/gdaldem.html>`__ .
+This algorithm is derived from the `GDAL DEM utility <https://gdal.org/gdaldem.html>`__ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -748,7 +730,7 @@ This algorithm will scan an image and try to set all pixels that are nearly or e
 colors around the collar to black or white. This is often used to "fix up" lossy compressed airphotos so that color
 pixels can be treated as transparent when mosaicking.
 
-This algorithm is derived from the `GDAL nearblack utility <https://www.gdal.org/nearblack.html>`_ .
+This algorithm is derived from the `GDAL nearblack utility <https://gdal.org/nearblack.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -784,7 +766,7 @@ Generates a raster proximity map indicating the distance from the center of each
 to the center of the nearest pixel identified as a target pixel. Target pixels are those in the source raster for which
 the raster pixel value is in the set of target pixel values.
 
-This algorithm is derived from the `GDAL proximity utility <https://www.gdal.org/gdal_proximity.html>`_ .
+This algorithm is derived from the `GDAL proximity utility <https://gdal.org/gdal_proximity.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -867,7 +849,7 @@ The determination of the roughness plays a role in the analysis of terrain eleva
 it's useful for calculations of the river morphology, in climatology and physical geography
 in general.
 
-This algorithm is derived from the `GDAL DEM utility <https://www.gdal.org/gdaldem.html>`_ .
+This algorithm is derived from the `GDAL DEM utility <https://gdal.org/gdaldem.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -902,7 +884,7 @@ Removes raster polygons smaller than a provided threshold size (in pixels) and
 replaces them with the pixel value of the largest neighbour polygon. It is
 useful if you have a large amount of small areas on your raster map.
 
-This algorithm is derived from the `GDAL sieve utility <https://www.gdal.org/gdal_sieve.html>`_ .
+This algorithm is derived from the `GDAL sieve utility <https://gdal.org/gdal_sieve.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -942,7 +924,7 @@ Generates a slope map from any GDAL-supported elevation raster. Slope is the
 angle of inclination to the horizontal. You have the option of specifying the
 type of slope value you want: degrees or percent slope.
 
-This algorithm is derived from the `GDAL DEM utility <https://www.gdal.org/gdaldem.html>`_ .
+This algorithm is derived from the `GDAL DEM utility <https://gdal.org/gdaldem.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -992,7 +974,7 @@ Outputs a single-band raster with values computed from the elevation.
 TPI stands for Topographic Position Index, which is defined as the difference
 between a central pixel and the mean of its surrounding cells.
 
-This algorithm is derived from the `GDAL DEM utility <https://www.gdal.org/gdaldem.html>`_ .
+This algorithm is derived from the `GDAL DEM utility <https://gdal.org/gdaldem.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -1027,7 +1009,7 @@ Outputs a single-band raster with values computed from the elevation.
 TRI stands for Terrain Ruggedness Index, which is defined as the mean difference
 between a central pixel and its surrounding cells.
 
-This algorithm is derived from the `GDAL DEM utility <https://www.gdal.org/gdaldem.html>`_ .
+This algorithm is derived from the `GDAL DEM utility <https://gdal.org/gdaldem.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -1052,12 +1034,3 @@ Outputs
 
 ``Output file`` [raster]
   TRI raster file.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`

@@ -1,5 +1,3 @@
-|updatedisclaimer|
-
 .. index:: Attribute table
 .. _sec_attribute_table:
 
@@ -55,9 +53,9 @@ If you prefer shortcuts, :kbd:`F6` will open the attribute table.
 This will open a new window that displays the feature attributes for the
 layer (figure_attributes_table_). According to the setting in
 :menuselection:`Settings --> Options --> Data sources` menu, the attribute table
-will open in a docked window or a regular window. The total number of features in the layer
-and the number of currently selected/filtered features are shown in the
-attribute table title, as well as if the layer is spatially limited.
+will open in a docked window or a regular window. The total number of features
+in the layer and the number of currently selected/filtered features are shown
+in the attribute table title, as well as if the layer is spatially limited.
 
 
 .. _figure_attributes_table:
@@ -72,57 +70,35 @@ following functionality:
 
 .. _table_attribute_1:
 
-+-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| Icon                    | Label                               | Purpose                                    | Default Shortcut    |
-+=========================+=====================================+============================================+=====================+
-| |toggleEditing|         | Toggle editing mode                 | Enable editing functionalities             | :kbd:`Ctrl+E`       |
-+-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |multiEdit|             | Toggle multi edit mode              | Update multiple fields of many features    |                     |
-+-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |saveEdits|             | Save Edits                          | Save current modifications                 |                     |
-+-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |draw|                  | Reload the table                    |                                            |                     |
-+-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |newTableRow|           | Add feature                         | Add new geometryless feature               |                     |
-+-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |deleteSelectedFeatures|| Delete selected features            | Remove selected features from the layer    |                     |
-+-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |editCut|               | Cut selected features to clipboard  |                                            | :kbd:`Ctrl+X`       |
-+-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |copySelected|          | Copy selected features to clipboard |                                            | :kbd:`Ctrl+C`       |
-+-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |editPaste|             | Paste features from clipboard       | Insert new features from copied ones       | :kbd:`Ctrl+V`       |
-+-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |expressionSelect|      | Select features using an Expression |                                            |                     |
-+-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |selectAll|             | Select All                          | Select all features in the layer           | :kbd:`Ctrl+A`       |
-+-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |invertSelection|       | Invert selection                    | Invert the current selection in the layer  | :kbd:`Ctrl+R`       |
-+-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |deselectAll|           | Deselect all                        | Deselect all features in the current layer | :kbd:`Ctrl+Shift+A` |
-+-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |filterMap|             | Filter/Select features using form   |                                            | :kbd:`Ctrl+F`       |
-+-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |selectedToTop|         | Move selected to top                | Move selected rows to the top of the table |                     |
-+-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |panToSelected|         | Pan map to the selected rows        |                                            | :kbd:`Ctrl+P`       |
-+-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |zoomToSelected|        | Zoom map to the selected rows       |                                            | :kbd:`Ctrl+J`       |
-+-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |newAttribute|          | New field                           | Add a new field to the data source         | :kbd:`Ctrl+W`       |
-+-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |deleteAttribute|       | Delete field                        | Remove a field from the data source        |                     |
-+-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |calculateField|        | Open field calculator               | Update field for many features in a row    | :kbd:`Ctrl+I`       |
-+-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |conditionalFormatting| | Conditional formatting              | Enable table formatting                    |                     |
-+-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |dock|                  | Dock attribute table                | Allows to dock/undock the attribute table  |                     |
-+-------------------------+-------------------------------------+--------------------------------------------+---------------------+
-| |actionRun|             | Actions                             | Lists the actions related to the layer     |                     |
-+-------------------------+-------------------------------------+--------------------------------------------+---------------------+
+.. csv-table:: Available Tools
+   :header: "Icon", "Label", "Purpose", "Default Shortcut"
+   :widths: auto
+   :class: longtable
 
-Table Attribute 1: Available Tools
+   "|toggleEditing|", "Toggle editing mode", "Enable editing functionalities", ":kbd:`Ctrl+E`"
+   "|multiEdit|", "Toggle multi edit mode", "Update multiple fields of many features"
+   "|saveEdits|", "Save Edits", "Save current modifications"
+   "|draw|", "Reload the table"
+   "|newTableRow|", "Add feature", "Add new geometryless feature"
+   "|deleteSelectedFeatures|", "Delete selected features", "Remove selected features from the layer"
+   "|editCut|", "Cut selected features to clipboard", "", ":kbd:`Ctrl+X`"
+   "|copySelected|", "Copy selected features to clipboard", "", ":kbd:`Ctrl+C`"
+   "|editPaste|", "Paste features from clipboard", "Insert new features from copied ones", ":kbd:`Ctrl+V`"
+   "|expressionSelect|", "Select features using an Expression"
+   "|selectAll|", "Select All", "Select all features in the layer", ":kbd:`Ctrl+A`"
+   "|invertSelection|", "Invert selection", "Invert the current selection in the layer", ":kbd:`Ctrl+R`"
+   "|deselectAll|", "Deselect all", "Deselect all features in the current layer", ":kbd:`Ctrl+Shift+A`"
+   "|filterMap|", "Filter/Select features using form", "", ":kbd:`Ctrl+F`"
+   "|selectedToTop|", "Move selected to top", "Move selected rows to the top of the table"
+   "|panToSelected|", "Pan map to the selected rows", "", ":kbd:`Ctrl+P`"
+   "|zoomToSelected|", "Zoom map to the selected rows", "", ":kbd:`Ctrl+J`"
+   "|newAttribute|", "New field", "Add a new field to the data source", ":kbd:`Ctrl+W`"
+   "|deleteAttribute|", "Delete field", "Remove a field from the data source"
+   "|calculateField|", "Open field calculator", "Update field for many features in a row", ":kbd:`Ctrl+I`"
+   "|conditionalFormatting|", "Conditional formatting", "Enable table formatting"
+   "|dock|", "Dock attribute table", "Allows to dock/undock the attribute table"
+   "|actionRun|", "Actions", "Lists the actions related to the layer"
+
 
 .. note:: Depending on the format of the data and the OGR library built with
    your QGIS version, some tools may not be available.
@@ -1060,6 +1036,5 @@ table.
    :width: 1.5em
 .. |unlink| image:: /static/common/mActionUnlink.png
    :width: 1.5em
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit https://docs.qgis.org/3.4 for QGIS 3.4 docs and translations.`
 .. |zoomToSelected| image:: /static/common/mActionZoomToSelected.png
    :width: 1.5em
