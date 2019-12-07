@@ -25,101 +25,149 @@ of *hotspots* and clustering of points.
 Parameters
 ..........
 
-``Point layer`` [vector: point]
-  Point vector layer to use for the heatmap.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Radius`` [number]
-  Heatmap search radius (or kernel bandwidth) in map units. The radius
-  specifies the distance around a point at which the influence of the point will
-  be felt.
-  Larger values result in greater smoothing, but smaller values may show finer
-  details and variation in point density.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Point layer**
+     - ``INPUT``
+     - [vector: point]
+     - Point vector layer to use for the heatmap
+   * - **Radius**
+     - ``RADIUS``
+     - [number]
 
-  Default: *100.0*
+       Default: 100.0
+     - Heatmap search radius (or kernel bandwidth) in map units.
+       The radius specifies the distance around a point at which the
+       influence of the point will be felt.
+       Larger values result in greater smoothing, but smaller values
+       may show finer details and variation in point density.
+   * - **Output raster size**
+     - ``PIXEL_SIZE``
+     - [number]
 
-``Output raster size`` [number]
-  Allows to add the output heatmap raster layer size by specifying the rows and columns
-  **or** the X and Y pixel size.
+       Default: 0.1
+     - Pixel size of the output raster layer in layer units.
+       
+       In the GUI, the size can be specified by the number of rows
+       (``Number of rows``) / columns (``Number of columns``) **or**
+       the pixel size( ``Pixel Size X`` / ``Pixel Size Y``).
+       Increasing the number of rows or columns will decrease the cell
+       size and increase the file size of the output raster.
+       The values in ``Rows``, ``Columns``, ``Pixel Size X`` and
+       ``Pixel Size Y`` will be updated simultaneously - doubling the
+       number of rows will double the number of columns, and the cell
+       size will be halved.
+       The extent of the output raster will remain the same
+       (approximately).
+   * - **Radius from field**
 
-  Increasing the number of rows or columns will decrease the cell size and increase
-  the file size of the output file. At the same time, the values in ``Rows`` and
-  ``Columns`` will also be updated, so doubling the number of rows will automatically
-  double the number of columns and the cell sizes will also be halved.
-  The extent of the output raster will remain the same.
+       Optional
+     - ``RADIUS_FIELD``
+     - [tablefield: numeric]
+     - Sets the search radius for each feature from an attribute
+       field in the input layer.
+   * - **Weight from field**
 
-  ``Number of rows`` [number]
-    Total number of rows of the output raster layer.
+       Optional
+     - ``WEIGHT_FIELD``
+     - [tablefield: numeric]
+     - Allows input features to be weighted by an attribute field.
+       This can be used to increase the influence certain features
+       have on the resultant heatmap.
+   * - **Kernel shape**
+     - ``KERNEL``
+     - [enumeration]
 
-  ``Number of columns`` [number]
-    Total number of columns of the output raster layer.
+       Default: *0*
+     - Controls the rate at which the influence of a point decreases
+       as the distance from the point increases.
+       Different kernels decay at different rates, so a triweight
+       kernel gives features greater weight for distances closer to
+       the point then the Epanechnikov kernel does.
+       Consequently, triweight results in “sharper” hotspots and
+       Epanechnikov results in “smoother” hotspots.
+       
+       There are many shapes available (please see the
+       `Wikipedia page <https://en.wikipedia.org/wiki/Kernel_(statistics)#Kernel_functions_in_common_use>`_
+       for further information):
 
-  ``Pixel Size X`` [number]
-    Horizontal resolution of each pixel in output raster, in layer units.
+       * 0 --- Quartic
+       * 1 --- Triangular
+       * 2 --- Uniform
+       * 3 --- Triweight
+       * 4 --- Epanechnikov
 
-  ``Pixel Size Y`` [number]
-    Vertical resolution of each pixel in output raster, in layer units.
+   * - **Decay ratio (Triangular kernels only)**
 
-``Radius from field`` [tablefield: numeric]
-  Optional
+       Optional
+     - ``DECAY``
+     - [number]
 
-  Sets the search radius for each feature from an attribute field in the input layer.
+       Default: *0.0*
+     - Can be used with Triangular kernels to further control
+       how heat from a feature decreases with distance from the
+       feature.
 
-``Weight from field`` [tablefield: numeric]
-  Optional
+       * A value of 0 (=minimum) indicates that the heat will
+         be concentrated in the center of the given radius and
+         completely extinguished at the edge.
+       * A value of 0.5 indicates that pixels at the edge of
+         the radius will be given half the heat as pixels at
+         the center of the search radius.
+       * A value of 1 means the heat is spread evenly over
+         the whole search radius circle.
+         (This is equivalent to the ‘Uniform’ kernel.)
+       * A value greater than 1 indicates that the heat is
+         higher towards the edge of the search radius than at
+         the center.
 
-  Allows input features to be weighted by an attribute field. This can be used to
-  increase the influence certain features have on the resultant heatmap.
+   * - **Output value scaling**
+     - ``OUTPUT_VALUE``
+     - [enumeration]
 
-``Kernel shape`` [enumeration]
-  Controls the rate at which the influence of a point decreases as the distance
-  from the point increases. Different kernels decay at different rates, so a triweight
-  kernel gives features greater weight for distances closer to the point then the
-  Epanechnikov kernel does. Consequently, triweight results in “sharper” hotspots
-  and Epanechnikov results in “smoother” hotspots.
+       Default: *Raw*
+     - Allow to change the values of the output heatmap raster.
+       One of:
 
-  There are many shapes available (please see the `Wikipedia page <https://en.wikipedia.org/wiki/Kernel_(statistics)#Kernel_functions_in_common_use>`_
-  for further information):
+       * 0 --- Raw
+       * 1 --- Scaled
 
-  * 0 --- Quartic
-  * 1 --- Triangular
-  * 2 --- Uniform
-  * 3 --- Triweight
-  * 4 --- Epanechnikov
+   * - **Heatmap**
+     - ``OUTPUT``
+     - [raster]
+       
+       Default: ``[Save to temporary file]``
+     - Specify the output raster layer with kernel density values.
+       One of:
 
-  Default: *0*
+       * Save to a Temporary File
+       * Save to File...
 
-``Decay ratio (Triangular kernels only)`` [number]
-  Optional
-
-  Can be used with Triangular kernels to further control how heat from a feature
-  decreases with distance from the feature.
-
-  * A value of 0 (=minimum) indicates that the heat will be concentrated in the
-    center of the given radius and completely extinguished at the edge.
-  * A value of 0.5 indicates that pixels at the edge of the radius will be given
-    half the heat as pixels at the center of the search radius.
-  * A value of 1 means the heat is spread evenly over the whole search radius circle.
-    (This is equivalent to the ‘Uniform’ kernel.)
-  * A value greater than 1 indicates that the heat is higher towards the edge of
-    the search radius than at the center.
-
-  Default: *0.0*
-
-``Output value scaling`` [enumeration]
-  Allow to change the values of the output heatmap raster.
-
-  Options:
-
-  * 0 --- Raw
-  * 1 --- Scaled
-
-  Default: *Raw*
+       The file encoding can also be changed here.
 
 Outputs
 .......
-``Heatmap`` [raster]
-  Raster layer with kernel density values.
 
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Heatmap**
+     - ``OUTPUT``
+     - [raster]
+     - Raster layer with kernel density values
 
 Example: Creating a Heatmap
 ...........................
@@ -205,53 +253,105 @@ at sample data points.
 Parameters
 ..........
 
-``Vector layer`` [vector: point]
-  Point vector layer to use for the interpolation.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Interpolation attribute`` [tablefield: numeric]
-  Field used for the interpolation. Once you have chosen the layer and the field
-  click on the |signPlus| button to add the layer and the field to the list.
-  Click on the |signMinus| button to remove the layer from the list.
-  It is possible to insert lines or polygons as constraints for the interpolation,
-  by specifying either ``Points``, ``Structure lines`` or ``Break lines`` in the
-  ``Type`` column of the table.
+   * - Label
+     - Name
+     - Type
+     - Description
 
-``Use Z-coordinate for interpolation`` [boolean]
-  Uses the layer's stored Z values.
+   * - **Input layers(s)**
+     - ``INTERPOLATION_DATA``
+     - [string]
+     - Vector layer(s) and field(s) to use for the interpolation, coded
+       in a string (see the ``ParameterInterpolationData`` class in
+       :source:`InterpolationWidgets <python/plugins/processing/algs/qgis/ui/InterpolationWidgets.py>`
+       for more details).
 
-``Distance coefficient Power`` [number]
-  Sets the distance coefficient for the interpolation.
+       The following GUI elements are provided to compose the
+       interpolation data string:
 
-  Default: *2.0*
+       * **Vector layer** [vector: any]
+       * **Interpolation attribute** [tablefield: numeric]:
+         Attribute to use in the interpolation
+       * **Use Z-coordinate for interpolation** [boolean]:
+         Uses the layer's stored Z values (Default: False)
 
-``Extent (xmin, xmax, ymin, ymax)`` [extent]
-  Extent of the output raster layer. You have to declare the output extent by
-  either choosing it from the map canvas, selecting it from another layer or type
-  it manually.
+       For each of the added layer-field combinations, a type can
+       be chosen:
 
-``Output raster size`` [number]
-  Allows to set the size of the interpolated output raster layer by specifying the rows and columns
-  **or** the X and Y pixel size.
+       * :guilabel:`Points`
+       * :guilabel:`Structured lines`
+       * :guilabel:`Break lines`
 
-  Increasing the number of rows or columns will decrease the cell size. Similarly, the values in ``Rows`` and
-  ``Columns`` will be updated when one of them are changed.
+       In the string, the layer-field elements are separated by
+       ``'::|::'``.
+       The sub-elements of the layer-field elements are separated by
+       ``'::~::'``.
+   * - **Distance coefficient P**
+     - ``DISTANCE_COEFFICIENT``
+     - [number]
 
-  ``Number of rows`` [number]
-    Total number of rows of the output raster layer.
+       Default: 2.0
+     - Sets the distance coefficient for the interpolation.
+       Minimum: 0.0, maximum: 100.0.
+   * - **Extent (xmin, xmax, ymin, ymax)**
+     - ``EXTENT``
+     - [extent]
+     - Extent of the output raster layer.
+       You have to declare the output extent by either choosing it from
+       the map canvas, selecting it from another layer or type it
+       manually.
+   * - **Output raster size**
+     - ``PIXEL_SIZE``
+     - [number]
 
-  ``Number of columns`` [number]
-    Total number of columns of the output raster layer.
+       Default: 0.1
+     - Pixel size of the output raster layer in layer units.
+       
+       In the GUI, the size can be specified by the number of rows
+       (``Number of rows``) / columns (``Number of columns``) **or**
+       the pixel size( ``Pixel Size X`` / ``Pixel Size Y``).
+       Increasing the number of rows or columns will decrease the cell
+       size and increase the file size of the output raster.
+       The values in ``Rows``, ``Columns``, ``Pixel Size X`` and
+       ``Pixel Size Y`` will be updated simultaneously - doubling the
+       number of rows will double the number of columns, and the cell
+       size will be halved.
+       The extent of the output raster will remain the same
+       (approximately).
+   * - **Interpolated**
+     - ``OUTPUT``
+     - [raster]
+       
+       Default: ``[Save to temporary file]``
+     - Raster layer of interpolated values.
+       One of:
 
-  ``Pixel Size X`` [number]
-    Horizontal resolution of each pixel in output raster, in layer units.
+       * Save to a Temporary File
+       * Save to File...
 
-  ``Pixel Size Y`` [number]
-    Vertical resolution of each pixel in output raster, in layer units.
+       The file encoding can also be changed here.
 
 Outputs
 .......
-``Interpolated`` [raster]
-  Raster layer of interpolated values.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Interpolated**
+     - ``OUTPUT``
+     - [raster]
+     - Raster layer of interpolated values
 
 
 .. _qgistininterpolation:
@@ -271,57 +371,123 @@ vector line layer with the triangulation boundaries.
 Parameters
 ..........
 
-``Vector layer`` [vector: point]
-  Point vector layer to use for the interpolation.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Interpolation attribute`` [tablefield: numeric]
-  Field used for the interpolation. Once you have chosen the layer and the field
-  click on the |signPlus| button to add the layer and the field to the list.
-  Click on the |signMinus| button to remove the layer from the list.
-  It is possible to insert lines or polygons as constraints for the triangulation,
-  by specifying either ``Points``, ``Structure lines`` or ``Break lines`` in the
-  ``Type`` column of the table.
+   * - Label
+     - Name
+     - Type
+     - Description
 
-``Use Z-coordinate for interpolation`` [boolean]
-  Uses the layer's stored Z values.
+   * - **Input layers(s)**
+     - ``INTERPOLATION_DATA``
+     - [string]
+     - Vector layer(s) and field(s) to use for the interpolation, coded
+       in a string (see the ``ParameterInterpolationData`` class in
+       :source:`InterpolationWidgets <python/plugins/processing/algs/qgis/ui/InterpolationWidgets.py>`
+       for more details).
 
-``Interpolation method`` [enumeration]
-  There are two different choices:
+       The following GUI elements are provided to compose the
+       interpolation data string:
 
-  * 0 --- Linear
-  * 1 --- Clough-Toucher (cubic)
+       * **Vector layer** [vector: any]
+       * **Interpolation attribute** [tablefield: numeric]:
+         Attribute to use in the interpolation
+       * **Use Z-coordinate for interpolation** [boolean]:
+         Uses the layer's stored Z values (Default: False)
 
-``Extent (xmin, xmax, ymin, ymax)`` [extent]
-  Extent of the output raster layer. You have to declare the output extent by
-  either choosing it from the map canvas, selecting it from another layer or type
-  it manually.
+       For each of the added layer-field combinations, a type can
+       be chosen:
 
-``Output raster size`` [number]
-  Allows to set the size of the interpolated output raster layer by specifying the rows and columns
-  **or** the X and Y pixel size.
+       * :guilabel:`Points`
+       * :guilabel:`Structured lines`
+       * :guilabel:`Break lines`
 
-  Increasing the number of rows or columns will decrease the cell size. Similarly, the values in ``Rows`` and
-  ``Columns`` will be updated when one of them are changed.
+       In the string, the layer-field elements are separated by
+       ``'::|::'``.
+       The sub-elements of the layer-field elements are separated by
+       ``'::~::'``.
+   * - **Interpolation method**
+     - ``METHOD``
+     - [enumeration]
 
-  ``Number of rows`` [number]
-    Total number of rows of the output raster layer.
+       Default: 0
+     - Set the interpolation method to be used. One of:
+       
+       * :guilabel:`Linear`
+       * :guilabel:`Clough-Toucher (cubic)`
+     
+   * - **Extent (xmin, xmax, ymin, ymax)**
+     - ``EXTENT``
+     - [extent]
+     - Extent of the output raster layer.
+       You have to declare the output extent by either choosing it from
+       the map canvas, selecting it from another layer or type it
+       manually.
+   * - **Output raster size**
+     - ``PIXEL_SIZE``
+     - [number]
 
-  ``Number of columns`` [number]
-    Total number of columns of the output raster layer.
+       Default: 0.1
+     - Pixel size of the output raster layer in layer units.
+       
+       In the GUI, the size can be specified by the number of rows
+       (``Number of rows``) / columns (``Number of columns``) **or**
+       the pixel size( ``Pixel Size X`` / ``Pixel Size Y``).
+       Increasing the number of rows or columns will decrease the cell
+       size and increase the file size of the output raster.
+       The values in ``Rows``, ``Columns``, ``Pixel Size X`` and
+       ``Pixel Size Y`` will be updated simultaneously - doubling the
+       number of rows will double the number of columns, and the cell
+       size will be halved.
+       The extent of the output raster will remain the same
+       (approximately).       
+   * - **Interpolated**
+     - ``OUTPUT``
+     - [raster]
 
-  ``Pixel Size X`` [number]
-    Horizontal resolution of each pixel in output raster, in layer units.
+       Default: ``[Save to temporary file]``
+     - The output TIN interpolation as a raster layer. One of:
 
-  ``Pixel Size Y`` [number]
-    Vertical resolution of each pixel in output raster, in layer units.
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
+   * - **Triangulation**
+     - ``TRIANGULATION``
+     - [vector: line]
+
+       Default: ``[Skip output]``
+     - The output TIN as a vector layer. One of:
+
+       * Skip Output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
 Outputs
 .......
-``Interpolated`` [raster]
-  Raster layer of triangulated values.
 
-``Triangulation`` [vector: line]
-  Triangulation lines as vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Interpolated**
+     - ``OUTPUT``
+     - [raster]
+     - The output TIN interpolation as a raster layer
+   * - **Triangulation**
+     - ``TRIANGULATION``
+     - [vector: line]
+     - The output TIN as a vector layer.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
