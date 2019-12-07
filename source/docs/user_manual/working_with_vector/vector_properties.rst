@@ -1231,15 +1231,16 @@ options:
   generated, the better the labeling will be - but at a cost of rendering
   speed. Smaller number of candidates results in less labels placed but faster
   redraws.
-* |checkbox| :guilabel:`Draw text as outlines`: controls whether text labels are
-  drawn (and exported) as either proper text objects OR as paths only. If they
-  are exported as text objects then they can be edited in external applications
-  (e.g. Inkscape) as normal text. BUT the side effect is that the rendering
-  quality is decreased, AND there's issues with rendering when certain text settings
-  like buffers are in place. That's why drawing as outlines is recommended. Note
-  that when :ref:`exporting a layout to svg <export_layout_svg>` there's actually
-  an override for this setting - so you can leave the project rendering as outlines
-  but for a :file:`.svg` export export the labels as text.
+* :guilabel:`Text rendering`|selectString| : controls whether text labels are
+  drawn (and exported) as either proper text objects (:guilabel:`Always Render Labels as Text`)
+  OR as paths only (:guilabel:`Always Render Labels as Paths (recommended)`). 
+  If they are exported as text objects then they can be edited
+  in external applications (e.g. Inkscape) as normal text. BUT the side effect is that
+  the rendering quality is decreased, AND there's issues with rendering when
+  certain text settings like buffers are in place. That's why rendering as paths
+  is recommended. Note that when :ref:`exporting a layout to svg <export_layout_svg>`
+  there's actually an override for this setting - so you can leave the project
+  rendering as paths but for a :file:`.svg` export export the labels as text.
 * |checkbox| :guilabel:`Allow truncated labels on edges of map`: controls
   whether labels which fall partially outside of the map extent should be
   rendered. If checked, these labels will be shown (when there's no way to
