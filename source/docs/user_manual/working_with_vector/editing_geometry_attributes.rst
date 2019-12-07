@@ -1035,7 +1035,7 @@ input widget. Your changes may then be saved with the |saveEdits| :sup:`Save Lay
 
 QGIS options dialog (Digitizing tab then **Curve offset tools** section) allows
 you to configure some parameters like **Join style**, **Quadrant segments**,
-**Miter lim-it**.
+**Miter limit**.
 
 .. index::
    single: Digitizing tools; Reverse Line
