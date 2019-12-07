@@ -155,8 +155,8 @@ regardless it's of marker, line or fill sub-type:
   visibility. Disabled symbol layers are not drawn when rendering the symbol but
   are saved in the symbol. Being able to hide symbol layers is convenient when
   looking for the best design of your symbol as you don't need to remove any for
-  the testing. Also, with the data-defined property, this makes it easier to
-  display different symbol layers based on expression (eg, feature attributes).
+  the testing. The data-defined override then makes it possible to hide or
+  display different symbol layers based on expressions (using, for instance, feature attributes).
 * the |checkbox| :guilabel:`Draw effects` button for :ref:`effects rendering
   <draw_effects>`.
 
