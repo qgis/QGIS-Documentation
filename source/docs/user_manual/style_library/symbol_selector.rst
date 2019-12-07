@@ -13,7 +13,7 @@ The Symbol Selector
 The Symbol selector is the main dialog to design a symbol.
 You can create or edit Marker, Line or Fill Symbols.
 
-.. _figure_symbol_marker:
+.. _figure_symbol_selector:
 
 .. figure:: img/symbolselector.png
    :align: center
@@ -178,16 +178,32 @@ Marker Symbols
 Appropriate for point geometry features, marker symbols have several
 :guilabel:`Symbol layer types`:
 
-* **Simple marker** (default);
+* **Simple marker** (default)
+
+  .. _figure_simple_marker_symbol:
+
+  .. figure:: img/simpleMarkerSymbol.png
+     :align: center
+
+     Designing a Simple Marker Symbol
+
 * **Ellipse marker**: a simple marker symbol layer, with customizable width and
-  height;
+  height
 * **Filled marker**: similar to the simple marker symbol layer, except that it
   uses a :ref:`fill sub symbol <vector_fill_symbols>` to render the marker.
   This allows use of all the existing QGIS fill (and stroke) styles for
-  rendering markers, e.g. gradient or shapeburst fills;
-* **Font marker**: use installed fonts as marker symbols;
-* **Geometry generator** (see :ref:`geometry_generator_symbol`);
-* **Vector Field marker** (see :ref:`vector_field_marker`);
+  rendering markers, e.g. gradient or shapeburst fills.
+* **Font marker**: use installed fonts as marker symbols
+* **Geometry generator** (see :ref:`geometry_generator_symbol`)
+
+.. _raster_image_marker:
+
+* **Raster image marker**: use an image (:file:`PNG`, :file:`JPG`, :file:`BMP` ...)
+  as marker symbol. The image can be a file on the disk, a remote URL
+  or an embedded file encoded as a base64 string (:ref:`more details <svg_paths>`).
+  Width and height of the image can be set independently or using the
+  |lockedGray| :sup:`Lock aspect ratio`.
+* **Vector Field marker** (see :ref:`vector_field_marker`)
 
 .. _svg_marker:
 
@@ -195,7 +211,8 @@ Appropriate for point geometry features, marker symbols have several
   :menuselection:`Settings --> Options... --> System` menu) to render as marker
   symbol. Width and height of the symbol can be set independently or using the
   |lockedGray| :sup:`Lock aspect ratio`. Each SVG file colors and stroke can
-  also be adapted.
+  also be adapted. The image can be a file on the disk, a remote URL or an
+  embedded file encoded as a base64 string (:ref:`more details <svg_paths>`).
 
   .. note:: SVG version requirements
 
@@ -222,25 +239,6 @@ Appropriate for point geometry features, marker symbols have several
     </rect>
     </svg>
 
-For each marker symbol layer type, you can set some of the following properties:
-
-* :guilabel:`Size`
-* :guilabel:`Fill color` using all the capabilities of the :ref:`color-selector`
-  widget, extended by a shortcut to apply a :guilabel:`Transparent fill`
-  in the drop-down menu;
-* :guilabel:`Stroke color` using all the capabilities of the color selector
-  widget, extended by a shortcut to apply a :guilabel:`Transparent stroke`
-  in the drop-down menu;
-* :guilabel:`Stroke style`
-* :guilabel:`Stroke width`
-* :guilabel:`Join style`
-* :guilabel:`Rotation`
-* :guilabel:`Offset`: You can shift the symbol in the :guilabel:`X` or
-  :guilabel:`Y` direction;
-* :guilabel:`Anchor point`.
-
-In most of the marker symbols dialog, you also have a frame with previews of
-predefined symbols you can choose from.
 
 .. _vector_line_symbols:
 
