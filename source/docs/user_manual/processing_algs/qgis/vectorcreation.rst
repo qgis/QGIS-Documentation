@@ -566,23 +566,80 @@ if present in the photo, will be added to the point as attributes.
 Parameters
 ..........
 
-``Input folder`` [folder]
-  Path to the source folder containing the geotagged photos.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Scan recursively`` [boolean]
-  If checked, the folder and its subfolders will be scanned.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input folder**
+     - ``FOLDER``
+     - [folder]
+     - Path to the source folder containing the geotagged photos
+   * - **Scan recursively**
+     - ``RECURSIVE``
+     - [boolean]
+     - If checked, the folder and its subfolders will be scanned
+   * - **Photos**
+     - ``OUTPUT``
+     - [vector: point]
 
+       Default: ``[Create temporary layer]``
+     - Specify the point vector layer for the geotagged photos.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+   * - **Invalid photos table**
+
+       Optional
+     - ``INVALID``
+     - [table]
+
+       Default: ``[Skip output]``
+     - Specify the table of unreadable or non-geotagged photos.
+       One of:
+
+       * Skip Output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+       
 Outputs
 .......
 
-``Photos`` [vector: point]
-  Point vector layer with geotagged photos. The form of the layer is automatically
-  filled with paths and photo previews settings.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Invalid photos table`` [table]
-  Optional
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Photos**
+     - ``OUTPUT``
+     - [vector: point]
+     - Point vector layer with geotagged photos.
+       The form of the layer is automatically filled with
+       paths and photo previews settings.
+   * - **Invalid photos table**
 
-  Table of unreadable or non-geotagged photos can also be created.
+       Optional
+     - ``INVALID``
+     - [table]
+     - Table of unreadable or non-geotagged photos can
+       also be created.
 
 
 .. _qgispointstopath:
@@ -595,6 +652,55 @@ Points can be grouped by a field to output individual line features per group.
 
 Parameters
 ..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Raster layer**
+     - ``INPUT_RASTER``
+     - [raster]
+     - Input raster layer
+   * - **Vector layer**
+     - ``INPUT_VECTOR``
+     - [vector: polygon]
+     - Input polygon vector layer
+   * - **Points from polygons**
+     - ``OUTPUT``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Resulting point layer of pixel centroids. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+       
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Points from polygons**
+     - ``OUTPUT``
+     - [vector: point]
+     - Resulting point layer of pixel centroids
+
 
 ``Input point layer`` [vector: point]
   point vector layer to be converted.
