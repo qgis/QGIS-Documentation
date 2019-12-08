@@ -18,56 +18,129 @@ Creates a bar plot from a category and a layer field.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer to use for the plot.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Category field name`` [tablefield: any]
-  Categorical field to use for grouping the bars (X axis).
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Category field name**
+     - ``NAME_FIELD``
+     - [tablefield: any]
+     - Categorical field to use for grouping the bars (X axis)
+   * - **Value field**
+     - ``VALUE_FIELD``
+     - [tablefield: any]
+     - Value to use for the plot (Y axis).
+   * - **Bar plot**
+     - ``OUTPUT``
+     - [html]
 
-``Value field`` [tablefield: any]
-  Value to use for the plot (Y axis).
+       Default: ``[Save to temporary file]``
+     - Specify the HTML file for the plot. One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Bar plot`` [html]
-  ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Bar plot**
+     - ``OUTPUT``
+     - [html]
+     - HTML file with the plot.
+       Available in the :menuselection:`Processing --> Result Viewer`.
 
 
 .. _qgisboxplot:
 
 Box plot
 --------
-Creates a box plot from a category and a layer field.
-
+Creates a box plot from a category field and a numerical layer field.
 
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer to use for the plot.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Category field name`` [tablefield: any]
-  Categorical field to use for grouping the boxes (X axis).
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Category field name**
+     - ``NAME_FIELD``
+     - [tablefield: any]
+     - Categorical field to use for grouping the boxes (X axis)
+   * - **Value field**
+     - ``VALUE_FIELD``
+     - [tablefield: any]
+     - Value to use for the plot (Y axis).
+   * - **Additional statistic lines**
+     - ``MSD``
+     - [enumeration]
+       
+       Default: 0
+     - Additional statistics information to add to the plot.
+       One of:
+       
+       * 0 --- Show Mean
+       * 1 --- Show Standard Deviation
+       * 2 --- Don't show mean and standard deviation
 
-``Value field`` [tablefield: any]
-  Value to use for the plot (Y axis).
+   * - **Bar plot**
+     - ``OUTPUT``
+     - [html]
 
-``Additional statistic lines`` [enumeration]
-  Additional statistics information to add to the plot. Options available are:
+       Default: ``[Save to temporary file]``
+     - Specify the HTML file for the plot. One of:
 
-  * Show Mean
-  * Show Standard Deviation
-  * Don't show mean and standard deviation
+       * Save to a Temporary File
+       * Save to File...
 
-  Default: *Show Mean*
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Box plot`` [html]
-  ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Box plot**
+     - ``OUTPUT``
+     - [html]
+     - HTML file with the plot.
+       Available in the :menuselection:`Processing --> Result Viewer`.
 
 
 .. _qgismeanandstandarddeviationplot:
@@ -80,21 +153,56 @@ Creates a box plot with mean and standard deviation values.
 Parameters
 ..........
 
-``Input table`` [vector: any]
-  Input vector layer to use for the plot.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Category name field`` [tablefield: any]
-  Categorical field to use for grouping the boxes (X axis).
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Category field name**
+     - ``NAME_FIELD``
+     - [tablefield: any]
+     - Categorical field to use for grouping the boxes (X axis)
+   * - **Value field**
+     - ``VALUE_FIELD``
+     - [tablefield: any]
+     - Value to use for the plot (Y axis).
+   * - **Plot**
+     - ``OUTPUT``
+     - [html]
 
-``Value field`` [tablefield: any]
-  Value to use for the plot (Y axis).
+       Default: ``[Save to temporary file]``
+     - Specify the HTML file for the plot. One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Plot`` [html]
-  ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Plot**
+     - ``OUTPUT``
+     - [html]
+     - HTML file with the plot.
+       Available in the :menuselection:`Processing --> Result Viewer`.
 
 
 .. _qgispolarplot:
@@ -110,21 +218,56 @@ a numeric one).
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer to use for the plot.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Category field name`` [tablefield: any]
-  Categorical field to group the features.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Category field name**
+     - ``NAME_FIELD``
+     - [tablefield: any]
+     - Categorical field to use for grouping the features (X axis)
+   * - **Value field**
+     - ``VALUE_FIELD``
+     - [tablefield: any]
+     - Value to use for the plot (Y axis).
+   * - **Polar plot**
+     - ``OUTPUT``
+     - [html]
 
-``Value field`` [tablefield: numeric]
-  Value to use for the plot.
+       Default: ``[Save to temporary file]``
+     - Specify the HTML file for the plot. One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Polar plot`` [html]
-  ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Polar plot**
+     - ``OUTPUT``
+     - [html]
+     - HTML file with the plot.
+       Available in the :menuselection:`Processing --> Result Viewer`.
 
 
 .. _qgisrasterlayerhistogram:
@@ -136,23 +279,59 @@ Generates a histogram with the values of a raster layer.
 Parameters
 ..........
 
-``Input layer`` [raster]
-  Input raster layer to use for the plot.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Band number`` [raster band]
-  Raster band to use for the histogram.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Input raster layer
+   * - **Band number**
+     - ``BAND``
+     - [raster band]
+     - Raster band to use for the histogram
+   * - **number of bins**
+     - ``BINS``
+     - [number]
 
-``number of bins`` [number]
-  Total bins of the histogram.
+       Default: 10
+     - The number of bins to use in the histogram (X axis).
+       Minimum 2.
+   * - **Histogram**
+     - ``OUTPUT``
+     - [html]
 
-  Default: *10*
+       Default: ``[Save to temporary file]``
+     - Specify the HTML file for the plot. One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Histogram`` [html]
-  ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Histogram**
+     - ``OUTPUT``
+     - [html]
+     - HTML file with the plot.
+       Available in the :menuselection:`Processing --> Result Viewer`.
 
 
 .. _qgisvectorlayerhistogram:
@@ -161,28 +340,64 @@ Vector layer histogram
 ----------------------
 Generates a histogram with the values of the attribute of a vector layer.
 
-The attribute to use for computing the histogram must be a numeric attribute.
+The attribute to use for computing the histogram must be numeric.
 
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer to use for the plot.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Category field name`` [tablefield: any]
-  Field to use for the histogram.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Attribute**
+     - ``FIELD``
+     - [tablefield: any]
+     - Value to use for the plot (Y axis).
+   * - **number of bins**
+     - ``BINS``
+     - [number]
 
-``number of bins`` [number]
-  Total bins of the histogram.
+       Default: 10
+     - The number of bins to use in the histogram (X axis).
+       Minimum 2.
+   * - **Histogram**
+     - ``OUTPUT``
+     - [html]
 
-  Default: *10*
+       Default: ``[Save to temporary file]``
+     - Specify the HTML file for the plot. One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Histogram`` [html]
-  ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Histogram**
+     - ``OUTPUT``
+     - [html]
+     - HTML file with the plot.
+       Available in the :menuselection:`Processing --> Result Viewer`.
 
 
 .. _qgisvectorlayerscatterplot:
@@ -195,21 +410,56 @@ Creates a simple ``X`` - ``Y`` scatter plot for a vector layer.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer to use for the plot.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``X attribute`` [tablefield: any]
-  Field to use for the X axis.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **X attribute**
+     - ``XFIELD``
+     - [tablefield: any]
+     - Field to use for the X axis
+   * - **Y attribute**
+     - ``YFIELD``
+     - [tablefield: any]
+     - Field to use for the Y axis
+   * - **Scatterplot**
+     - ``OUTPUT``
+     - [html]
 
-``Y attribute`` [tablefield: any]
-  Field to use for the Y axis.
+       Default: ``[Save to temporary file]``
+     - Specify the HTML file for the plot. One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Scatterplot`` [html]
-  ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Scatterplot**
+     - ``OUTPUT``
+     - [html]
+     - HTML file with the plot.
+       Available in the :menuselection:`Processing --> Result Viewer`.
 
 
 .. _qgisscatter3dplot:
@@ -222,20 +472,57 @@ Creates a 3D scatter plot for a vector layer.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer to use for the plot.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``X attribute`` [tablefield: any]
-  Field to use for the X axis.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **X attribute**
+     - ``XFIELD``
+     - [tablefield: any]
+     - Field to use for the X axis
+   * - **Y attribute**
+     - ``YFIELD``
+     - [tablefield: any]
+     - Field to use for the Y axis
+   * - **Z attribute**
+     - ``ZFIELD``
+     - [tablefield: any]
+     - Field to use for the Z axis
+   * - **Histogram**
+     - ``OUTPUT``
+     - [html]
 
-``Y attribute`` [tablefield: any]
-  Field to use for the Y axis.
+       Default: ``[Save to temporary file]``
+     - Specify the HTML file for the plot. One of:
 
-``Z attribute`` [tablefield: any]
-  Field to use for the Z axis.
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Scatterplot`` [html]
-  ``html`` file of the plot available in the :menuselection:`Processing --> Result Viewer`.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Scatterplot**
+     - ``OUTPUT``
+     - [html]
+     - HTML file with the plot.
+       Available in the :menuselection:`Processing --> Result Viewer`.
