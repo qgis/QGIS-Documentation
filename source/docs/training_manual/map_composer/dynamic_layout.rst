@@ -65,7 +65,7 @@ will adapt dynamically.
    In the :guilabel:`Items` panel enter the name ``header``.
 #. Again, go to the :guilabel:`Item Properties` and open the :guilabel:`Position and Size` section.
    Using |dataDefineExpressionOn| :sup:`Data defined override`,
-   choose the ``@rg_layout_margin`` variable for :guilabel:`X` as well as for :guilabel:`Y`.
+   choose the ``@sw_layout_margin`` variable for :guilabel:`X` as well as for :guilabel:`Y`.
    :guilabel:`Width` shall be defined by the expression
    
    ::
