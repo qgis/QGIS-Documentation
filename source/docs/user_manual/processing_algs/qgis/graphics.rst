@@ -521,7 +521,7 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Scatterplot**
+   * - **Histogram**
      - ``OUTPUT``
      - [html]
      - HTML file with the plot.
