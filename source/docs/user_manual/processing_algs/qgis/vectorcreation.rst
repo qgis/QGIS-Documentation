@@ -769,16 +769,10 @@ Parameters
      - [number]
 
        Default: 1
-     - Number of point to create
+     - Number of points to create
    * - **Minimum distance between points**
      - ``MIN_DISTANCE``
      - [number]
-   * - **Minimum distance between points**
-     - ``MIN_DISTANCE``
-     - [number]
-
-       Default: 0.0
-     - The minimum distance between points
 
        Default: 0.0
      - The minimum distance between points
