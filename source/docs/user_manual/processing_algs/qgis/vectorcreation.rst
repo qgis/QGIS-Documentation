@@ -961,10 +961,13 @@ Outputs
 
 Random points inside polygons
 -----------------------------
-Creates a new point layer with a given number of random points, all of them within
-a given layer.
+Creates a new point layer with a given number of random points
+inside each polygon of the input polygon layer.
 
-Together with the point number. two different sampling strategies can be chosen.
+Two sampling strategies are available:
+
+* Points count: number of points for each feature
+* Points density: density of points for each feature
 
 A minimum distance can be specified, to avoid points being too close to each other.
 
@@ -973,33 +976,72 @@ A minimum distance can be specified, to avoid points being too close to each oth
 Parameters
 ..........
 
-``Input layer`` [vector: polygon]
-  Polygon vector layer in input. All the points will be created withing each
-  feature of this layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Sampling strategy`` [enumeration]
-  Choose between:
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: polygon]
+     - Input polygon polygon vector layer
+   * - **Sampling strategy**
+     - ``STRATEGY``
+     - [enumeration]
 
-  * 0 --- Points count: number of points for each feature
-  * 1 --- points density: density of points for each feature
+       Default: 0
+     - Sampling strategy to use. One of:
+       
+       * 0 --- Points count: number of points for each feature
+       * 1 --- points density: density of points for each feature
 
-  Default: *0*
+   * - **Number or density of points**
+     - ``VALUE``
+     - [expression]
 
-``Number or density of points`` [expression]
-  You can choose the points number also with an expression.
+       Default: 1.0
+     - The number or density of points, depending on the chosen
+       ``Sampling strategy``.
+   * - **Minimum distance between points**
+     - ``MIN_DISTANCE``
+     - [number]
 
-  Default: *1.0*
+       Default: 0.0
+     - The minimum distance between points
+   * - **Random points**
+     - ``OUTPUT``
+     - [vector: point]
 
-``Minimum distance`` [number]
-  A minimum distance that points must respect.
+       Default: ``[Create temporary layer]``
+     - The output random points. One of:
 
-  default: *0.0*
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Random points`` [vector: point]
-  Final random point layer inside polygon.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Random points**
+     - ``OUTPUT``
+     - [vector: point]
+     - The output random points layer.
 
 
 .. _qgispixelstopoints:
