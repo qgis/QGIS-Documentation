@@ -773,6 +773,12 @@ Parameters
    * - **Minimum distance between points**
      - ``MIN_DISTANCE``
      - [number]
+   * - **Minimum distance between points**
+     - ``MIN_DISTANCE``
+     - [number]
+
+       Default: 0.0
+     - The minimum distance between points
 
        Default: 0.0
      - The minimum distance between points
@@ -1126,68 +1132,158 @@ Any nodata pixels are skipped in the output.
 Parameters
 ..........
 
-``Raster layer`` [raster]
-  Raster layer in input.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Band number`` [raster band]
-  Raster band to extract data from.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Raster layer**
+     - ``INPUT_RASTER``
+     - [raster]
+     - Input raster layer
+   * - **Band number**
+     - ``RASTER_BAND``
+     - [raster band]
+     - Raster band to extract data from
+   * - **Field name**
+     - ``FIELD_NAME``
+     - [string]
 
-``Field name`` [string]
-  Name of the field to store the raster band value.
+       Default: 'VALUE'
+     - Name of the field to store the raster band value
+   * - **Vector points**
+     - ``OUTPUT``
+     - [vector: polygons]
 
-  Default: *VALUE*
+       Default: ``[Create temporary layer]``
+     - Specify the Resulting polygon layer of pixel extents.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Vector polygons`` [vector: polygon]
-  Resulting polygon layer of pixels extent.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Vector points**
+     - ``OUTPUT``
+     - [Vector polygons]
+     - Resulting polygon layer of pixel extents
 
 
 .. _qgisregularpoints:
 
 Regular points
 --------------
-Creates a new point layer with a given number of regular points, all of them within
-a given extent.
+Creates a new point layer with its points placed in a regular grid
+within a given extent.
 
-Together with the point number. two different sampling strategies can be chosen.
+The grid is specified either by the spacing between the points (same
+spacing for all dimensions) or by the number of points to generate.
+In the latter case, the spacing will be determined from the extent.
+In order to generate a full square grid, at least the number of
+points specified by the user is generated for the latter case.
 
-A distance factor can be specified, to avoid points being too close to each other.
+Random offsets to the point spacing can be applied, resulting in a
+non-regular point pattern.
 
 ``Default menu``: :menuselection:`Vector --> Research Tools`
 
 Parameters
 ..........
 
-``Input extent`` [extent]
-  Map extent for the random points.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Point spacing/count`` [number]
-  Spacing between the points.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input extent (xmin, xmax, ymin, ymax)**
+     - ``EXTENT``
+     - [extent]
+     - Map extent for the random points
+   * - **Point spacing/count**
+     - ``SPACING``
+     - [number]
 
-  Default: *100*
+       Default: 100
+     - Spacing between the points, or the number of points, depending
+       on whether ``Use point spacing`` is checked or not.
+   * - **Initial inset from corner (LH side)**
+     - ``INSET``
+     - [number]
 
-``Initial inset from corner (LH side)`` [number]
-  Choose to move the initial points coordinate from the left upper corner.
+       Default: 0.0
+     - Offset the points relative to the upper left corner.
+       The value is used for both the X and Y axis.
+   * - **Apply random offset to point spacing**
+     - ``RANDOMIZE``
+     - [boolean]
 
-  Default: *0.0*
+       Default: False
+     - If checked the points will have a random spacing
+   * - **Use point spacing**
+     - ``IS_SPACING``
+     - [boolean]
 
-``Apply random offset to point spacing`` [boolean]
-  If checked the points will have a random spacing.
+       Default: True
+     - If unchecked the point spacing is not taken into account
+   * - **Output layer CRS**
+     - ``CRS``
+     - [crs]
 
-  Default: *False*
+       Default: *Project CRS*
+     - CRS of the random points layer
+   * - **Regular points**
+     - ``OUTPUT``
+     - [vector: point]
 
-``Use point spacing`` [boolean]
-  If unchecked the point spacing is not taken into account.
+       Default: ``[Create temporary layer]``
+     - Specify the output regular point layer. One of:
 
-  Default: *True*
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Regular points`` [vector: point]
-  Regular point layer in output.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Regular points**
+     - ``OUTPUT``
+     - [vector: point]
+     - The output regular point layer.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
