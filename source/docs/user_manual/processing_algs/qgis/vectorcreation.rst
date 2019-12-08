@@ -1057,22 +1057,60 @@ Any nodata pixels are skipped in the output.
 Parameters
 ..........
 
-``Raster layer`` [raster]
-  Raster layer in input.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Band number`` [raster band]
-  Raster band to extract data from.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Raster layer**
+     - ``INPUT_RASTER``
+     - [raster]
+     - Input raster layer
+   * - **Band number**
+     - ``RASTER_BAND``
+     - [raster band]
+     - Raster band to extract data from
+   * - **Field name**
+     - ``FIELD_NAME``
+     - [string]
 
-``Field name`` [string]
-  Name of the field to store the raster band value.
+       Default: 'VALUE'
+     - Name of the field to store the raster band value
+   * - **Vector points**
+     - ``OUTPUT``
+     - [vector: point]
 
-  Default: *VALUE*
+       Default: ``[Create temporary layer]``
+     - Specify the resulting point layer of pixels centroids.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Vector points`` [vector: point]
-  Resulting point layer of pixels centroid.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Vector points**
+     - ``OUTPUT``
+     - [vector: point]
+     - Resulting point layer with pixels centroids
 
 
 .. _qgispixelstopolygons:
