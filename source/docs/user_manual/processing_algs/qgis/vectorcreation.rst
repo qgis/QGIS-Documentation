@@ -770,7 +770,7 @@ Parameters
 
        Default: 1
      - Number of point to create
-   * - **Minimum distance**
+   * - **Minimum distance between points**
      - ``MIN_DISTANCE``
      - [number]
 
@@ -805,7 +805,7 @@ Outputs
    * - **Random points**
      - ``OUTPUT``
      - [vector: point]
-     - The output random points.
+     - The output random points layer.
 
 
 .. _qgisrandompointsinextent:
@@ -822,62 +822,139 @@ A minimum distance can be specified, to avoid points being too close to each oth
 Parameters
 ..........
 
-``Input extent`` [extent]
-  Map extent for the random points.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Points number`` [number]
-  Number of point to create.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input extent**
+     - ``EXTENT``
+     - [extent]
+     - Map extent for the random points
+   * - **Number of points**
+     - ``POINTS_NUMBER``
+     - [number]
 
-  Default: *1*
+       Default: 1
+     - Number of point to create
+   * - **Minimum distance between points**
+     - ``MIN_DISTANCE``
+     - [number]
 
-``Minimum distance`` [number]
-  A minimum distance that points must respect.
+       Default: 0.0
+     - The minimum distance between points
+   * - **Target CRS**
+     - ``TARGET_CRS``
+     - [crs]
 
-  Default: *0.0*
+       Default: *Project CRS*
+     - CRS of the random points layer
+   * - **Random points**
+     - ``OUTPUT``
+     - [vector: point]
 
-``Target CRS`` [crs]
-  CRS of the random points layer.
+       Default: ``[Create temporary layer]``
+     - The output random points. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Random points`` [vector: point]
-  Final random point layer in extent.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Random points**
+     - ``OUTPUT``
+     - [vector: point]
+     - The output random points layer.
 
 
 .. _qgisrandompointsinlayerbounds:
 
 Random points in layer bounds
 -----------------------------
-Creates a new point layer with a given number of random points, all of them within
-the extent of a given layer.
+Creates a new point layer with a given number of random points,
+all of them within the extent of a given layer.
 
-A minimum distance can be specified, to avoid points being too close to each other.
+A minimum distance can be specified, to avoid points being too
+close to each other.
 
 ``Default menu``: :menuselection:`Vector --> Research Tools`
 
 Parameters
 ..........
 
-``Input layer`` [vector: polygon]
-  Input polygon layer for the extent.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Points number`` [number]
-  Number of point to create.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: polygon]
+     - Input polygon layer defining the area
+   * - **Number of points**
+     - ``POINTS_NUMBER``
+     - [number]
 
-  Default: *1*
+       Default: 1
+     - Number of point to create
+   * - **Minimum distance between points**
+     - ``MIN_DISTANCE``
+     - [number]
 
-``Minimum distance`` [number]
-  A minimum distance that points must respect.
+       Default: 0.0
+     - The minimum distance between points
+   * - **Random points**
+     - ``OUTPUT``
+     - [vector: point]
 
-  default: *0.0*
+       Default: ``[Create temporary layer]``
+     - The output random points. One of:
 
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Random points`` [vector: point]
-  Final random point layer in layer bounds.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Random points**
+     - ``OUTPUT``
+     - [vector: point]
+     - The output random points layer.
 
 
 .. _qgisrandompointsinsidepolygons:
