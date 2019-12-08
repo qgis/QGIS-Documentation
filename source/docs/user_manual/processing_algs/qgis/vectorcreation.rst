@@ -95,7 +95,7 @@ Parameters
        * Save to PostGIS Table
 
        The file encoding can also be changed here.
-       
+
 Outputs
 .......
 
@@ -198,7 +198,7 @@ Parameters
        * Save to PostGIS Table
 
        The file encoding can also be changed here.
-       
+
 Outputs
 .......
 
@@ -303,7 +303,7 @@ Parameters
    * - **Grid**
      - ``OUTPUT``
      - [vector: point, vector: line or vector: polygon]
-       
+
        Default: ``[Create temporary layer]``
      - Resulting vector grid layer. One of:
 
@@ -464,7 +464,7 @@ Parameters
        * Save to PostGIS Table
 
        The file encoding can also be changed here.
-       
+
 Outputs
 .......
 
@@ -530,7 +530,7 @@ Parameters
        * Save to PostGIS Table
 
        The file encoding can also be changed here.
-       
+
 Outputs
 .......
 
@@ -646,9 +646,16 @@ Outputs
 
 Points to path
 --------------
-Converts a point layer to a line layer, by joining points in a defined order.
+Converts a point layer to a line layer, by joining points in an
+order defined by a field in the input point layer (if the order
+field is a date/time field, the format must be specified).
 
-Points can be grouped by a field to output individual line features per group.
+Points can be grouped by a field to distinguish line features.
+
+In addition to the line vector layer, a text file is output
+that describes the resulting line as a start point and a
+sequence of bearings / directions (relative to azimuth) and
+distances.
 
 Parameters
 ..........
@@ -662,20 +669,37 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Raster layer**
-     - ``INPUT_RASTER``
-     - [raster]
-     - Input raster layer
-   * - **Vector layer**
-     - ``INPUT_VECTOR``
-     - [vector: polygon]
-     - Input polygon vector layer
-   * - **Points from polygons**
-     - ``OUTPUT``
+   * - **Input point layer**
+     - ``INPUT``
      - [vector: point]
+     - Input point vector layer
+   * - **Order field**
+     - ``ORDER_FIELD``
+     - [tablefield: any]
+     - Field containing the order to connect the points in the path
+   * - **Group field**
+
+       Optional
+     - ``GROUP_FIELD``
+     - [tablefield: any]
+     - Point features of the same value in the field will be
+       grouped in the same line.
+       If not set, a single path is drawn with all the input
+       points.
+   * - **Date format (if order field is DateTime)**
+
+       Optional
+     - ``DATE_FORMAT``
+     - [string]
+     - The format to use for the ``Order field`` parameter.
+       Specify this only if the ``Order field`` is of type
+       Date/Time.
+   * - **Paths**
+     - ``OUTPUT``
+     - [vector: line]
 
        Default: ``[Create temporary layer]``
-     - Resulting point layer of pixel centroids. One of:
+     - Specify the line vector layer of the path. One of:
 
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
@@ -683,7 +707,14 @@ Parameters
        * Save to PostGIS Table
 
        The file encoding can also be changed here.
-       
+   * - **Directory for text output**
+     - ``OUTPUT_TEXT_DIR``
+     - [folder]
+
+       Default: ``[Skip output]``
+     - Specify the directory that will containing the description
+       files of points and paths.
+
 Outputs
 .......
 
@@ -696,40 +727,14 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Points from polygons**
+   * - **Paths**
      - ``OUTPUT``
-     - [vector: point]
-     - Resulting point layer of pixel centroids
-
-
-``Input point layer`` [vector: point]
-  point vector layer to be converted.
-
-``Order field`` [tablefield: any]
-  Field containing the order to connect the points in the path.
-
-``Group field`` [tablefield: any]
-  Optional
-
-  Point features of the same value in the field will be grouped in the same line.
-  If not set, a single path is drawn with all the input points.
-
-``Date format (if order field is DateTime)`` [string]
-  Optional
-
-  Indicates the format to use for the ``order field`` parameter.
-  Fill this option only if the ``order field`` is of a Date/Time format.
-
-  Default: *(not set)*
-
-Outputs
-.......
-
-``Paths`` [vector: line]
-  Line vector layer of the path.
-
-``Directory for text output`` [folder]
-  Directory containing description files of points and paths.
+     - [vector: line]
+     - Line vector layer of the path
+   * - **Directory for text output**
+     - ``OUTPUT``
+     - [folder]
+     - Directory containing description files of points and paths
 
 
 .. _qgisrandompointsalongline:
@@ -746,24 +751,61 @@ A minimum distance can be specified, to avoid points being too close to each oth
 Parameters
 ..........
 
-``Input layer`` [vector: line]
-  Line vector layer in input.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Number of points`` [number]
-  Number of point to create.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input point layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input line vector layer
+   * - **Number of points**
+     - ``POINTS_NUMBER``
+     - [number]
 
-  Default: *1*
+       Default: 1
+     - Number of point to create
+   * - **Minimum distance**
+     - ``MIN_DISTANCE``
+     - [number]
 
-``Minimum distance`` [number]
-  A minimum distance that points must respect.
+       Default: 0.0
+     - The minimum distance between points
+   * - **Random points**
+     - ``OUTPUT``
+     - [vector: point]
 
-  Default: *0.0*
+       Default: ``[Create temporary layer]``
+     - The output random points. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Random points`` [vector: point]
-  Final random point layer along line.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Random points**
+     - ``OUTPUT``
+     - [vector: point]
+     - The output random points.
 
 
 .. _qgisrandompointsinextent:
