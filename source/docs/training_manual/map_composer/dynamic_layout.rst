@@ -242,7 +242,7 @@ will adapt dynamically.
    To include a logo of your organisation you have to save your logo under your home directory and enter
    the path under :menuselection:`Main Properties --> Image Source`.
 #. Our layout still needs a north arrow.
-   This will also be insterted by using |addNewImage| :sup:`Adds a new Picture to the layout`.
+   This will also be inserted by using |addNewImage| :sup:`Adds a new Picture to the layout`.
    Set the name to ``north arrow``, go to :guilabel:`Main Properties` and select the
    :file:`Arrow_02.svg`.
    The position is defined by
