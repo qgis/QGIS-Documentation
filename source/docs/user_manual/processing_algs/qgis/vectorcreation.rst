@@ -28,115 +28,198 @@ them to the right.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+.. seealso:: :ref:`qgisoffsetline`, :ref:`qgisarraytranslatedfeatures`
+
 Parameters
 ..........
 
-``Input layer`` [vector: line]
-  Line vector layer in input to elaborate the offset on.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Number of features to create`` [number |dataDefined|]
-  Number of offset copies to generate for each feature.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input line vector layer to use for the offsets.
+   * - **Number of features to create**
+     - ``COUNT``
+     - [number |dataDefined|]
 
-  Default: *10*
+       Default: 10
+     - Number of offset copies to generate for each feature
+   * - **Offset step distance**
+     - ``OFFSET``
+     - [number |dataDefined|]
 
-``Offset step distance`` [number |dataDefined|]
-  Distance between two consecutive offset copies.
+       Default: 1.0
+     - Distance between two consecutive offset copies
+   * - **Segments**
+     - ``SEGMENTS``
+     - [number]
 
-  Default: *1.0*
+       Default: 8
+     - Number of line segments to use to approximate a quarter
+       circle when creating rounded offsets
+   * - **Join style**
+     - ``JOIN_STYLE``
+     - [enumeration]
 
-``Segments`` [number]
-  Number of line segments to use to approximate a quarter circle when creating
-  rounded offsets.
+       Default: 0
+     - Specify whether round, miter or beveled joins should be
+       used when offsetting corners in a line. One of:
 
-  Default: *8*
+       * 0 --- Round
+       * 1 --- Miter
+       * 2 --- Bevel
 
-``Join style`` [enumeration]
-  Specify whether round, miter or beveled joins should be used when offsetting
-  corners in a line.
+   * - **Miter limit**
+     - ``MITER_LIMIT``
+     - [number]
 
-  Options:
+       Default: 2.0
+     - Only applicable for mitered join styles, and controls
+       the maximum distance from the offset curve to use when
+       creating a mitered join.
+   * - **Offset lines**
+     - ``OUTPUT``
+     - [vector: line]
 
-  * 0 --- Round
-  * 1 --- Miter
-  * 2 --- Bevel
+       Default: ``[Create temporary layer]``
+     - Specify the output line layer with offset features. One of:
 
-  Default: *0*
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-``Miter limit`` [number]
-  Only applicable for mitered join styles, and controls the maximum distance from
-  the offset curve to use when creating a mitered join.
-
-  Default: *2.0*
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Offset lines`` [vector: line]
-  Output line layer with offset features.
-  The original features are also copied.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-See also
-........
-:ref:`qgisoffsetline`, :ref:`qgisarraytranslatedfeatures`
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Offset lines**
+     - ``OUTPUT``
+     - [vector: line]
+     - Output line layer with offset features.
+       The original features are also copied.
 
 
 .. _qgisarraytranslatedfeatures:
 
 Array of translated features
 ----------------------------
-Creates copies of features in a layer, by creating multiple translated versions of each.
-Each copy is incrementally displaced by a preset amount in the X, Y and/or Z axis.
+Creates copies of features in a layer by creating multiple translated
+versions of each.
+Each copy is incrementally displaced by a preset amount in the X, Y and/or
+Z axis.
 
 M values present in the geometry can also be translated.
 
 .. figure:: img/translate_array.png
    :align: center
 
-   Input layers in blue tones, output layers with translated features in red tones
+   Input layers in blue tones, output layers with translated features in
+   red tones
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
+
+.. seealso:: :ref:`qgistranslategeometry`, :ref:`qgisarrayoffsetlines`
 
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Vector layer to translate features.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Number of features to create`` [number |dataDefined|]
-  Number of copies to generate for each feature.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input vector layer to translate
+   * - **Number of features to create**
+     - ``COUNT``
+     - [number |dataDefined|]
 
-  Default: *10*
+       Default: 10
+     - Number of copies to generate for each feature
+   * - **Step distance (x-axis)**
+     - ``DELTA_X``
+     - [number |dataDefined|]
 
-``Step distance (x-axis)`` [number |dataDefined|]
-  Displacement to apply on the X axis.
+       Default: 0.0
+     - Displacement to apply on the X axis
+   * - **Step distance (y-axis)**
+     - ``DELTA_Y``
+     - [number |dataDefined|]
 
-  Default: *0.0*
+       Default: 0.0
+     - Displacement to apply on the Y axis
+   * - **Step distance (z-axis)**
+     - ``DELTA_Z``
+     - [number |dataDefined|]
 
-``Step distance (y-axis)`` [number |dataDefined|]
-  Displacement to apply on the Y axis.
+       Default: 0.0
+     - Displacement to apply on the Z axis
+   * - **Step distance (m values)**
+     - ``DELTA_M``
+     - [number |dataDefined|]
 
-  Default: *0.0*
+       Default: 0.0
+     - Displacement to apply on M
+   * - **Translated**
+     - ``OUTPUT``
+     - [same as input]
 
-``Step distance (z-axis)`` [number |dataDefined|]
-  Displacement to apply on the Z axis.
+       Default: ``[Create temporary layer]``
+     - Output vector layer with translated (moved) copies
+       of the features.
+       The original features are also copied. One of:
 
-  Default: *0.0*
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-``Step distance (m values)`` [number |dataDefined|]
-  Offset value to apply on M.
-
-  Default: *0.0*
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Translated`` [vector: any]
-  Output vector layer with translated (moved) copies of the features.
-  The original features are also copied.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-See also
-........
-:ref:`qgistranslategeometry`, :ref:`qgisarrayoffsetlines`
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Translated**
+     - ``OUTPUT``
+     - [same as input]
+     - Output vector layer with translated (moved)
+       copies of the features.
+       The original features are also copied.
 
 
 .. _qgiscreategrid:
@@ -164,50 +247,92 @@ units of this CRS.
 Parameters
 ..........
 
-``Grid type`` [enumeration]
-  Shape of the grid. Many options available:
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-  * 0 --- Point
-  * 1 --- Line
-  * 2 --- Rectangle (polygon)
-  * 3 --- Diamond (polygon)
-  * 4 --- Hexagon (polygon)
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Grid type**
+     - ``TYPE``
+     - [enumeration]
 
-  Default: *0*
+       Default: 0
+     - Shape of the grid. One of:
 
-``Grid extent`` [extent]
-  Extent of the grid.
+       * 0 --- Point
+       * 1 --- Line
+       * 2 --- Rectangle (polygon)
+       * 3 --- Diamond (polygon)
+       * 4 --- Hexagon (polygon)
 
-``Horizontal spacing`` [number]
-  Size of a grid cell on the X-axis.
+   * - **Grid extent**
+     - ``EXTENT``
+     - [extent]
+     - Extent of the grid
+   * - **Horizontal spacing**
+     - ``HSPACING``
+     - [number]
 
-  Default: *1.0*
+       Default: 1.0
+     - Size of a grid cell on the X-axis
+   * - **Vertical spacing**
+     - ``VSPACING``
+     - [number]
 
-``Vertical spacing`` [number]
-  Size of a grid cell on the Y-axis.
+       Default: 1.0
+     - Size of a grid cell on the Y-axis
+   * - **Horizontal overlay**
+     - ``HOVERLAY``
+     - [number]
 
-  Default: *1.0*
+       Default: 0.0
+     - Overlay distance between two consecutive grid cells on the X-axis
+   * - **Vertical overlay**
+     - ``VOVERLAY``
+     - [number]
 
-``Horizontal overlay`` [number]
-  Overlay distance between two consecutive grid cells on the X-axis.
+       Default: 0.0
+     - Overlay distance between two consecutive grid cells on the Y-axis
+   * - **Grid CRS**
+     - ``CRS``
+     - [crs]
 
-  Default: *0.0*
+       Default: *Project CRS*
+     - Coordinate reference system to apply to the grid
+   * - **Grid**
+     - ``OUTPUT``
+     - [vector: point, vector: line or vector: polygon]
 
-``Vertical overlay`` [number]
-  Overlay distance between two consecutive grid cells on the Y-axis.
+       Default: ``[Create temporary layer]``
+     - Resulting vector grid layer. One of:
 
-  Default: *0.0*
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-``Grid CRS`` [crs]
-  Coordinate reference system to apply to the grid.
-
-  Default: *Project CRS*
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Grid`` [vector: any]
-  Resulting vector grid layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Grid**
+     - ``OUTPUT``
+     - [vector: point, vector: line or vector: polygon]
+     - Resulting vector grid layer
 
 
 .. _qgiscreatepointslayerfromtable:
@@ -222,36 +347,77 @@ Besides X and Y coordinates you can also specify Z and M fields.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer or geometryless table.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``X field`` [tablefield: any]
-  Field containing the X coordinate.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer or a table.
+   * - **X field**
+     - ``XFIELD``
+     - [tablefield: any]
+     - Field containing the X coordinate
+   * - **Y field**
+     - ``YFIELD``
+     - [tablefield: any]
+     - Field containing the Y coordinate
+   * - **Z field**
 
-``Y field`` [tablefield: any]
-  Field containing the Y coordinate.
+       Optional
+     - ``ZFIELD``
+     - [tablefield: any]
+     - Field containing the Z coordinate
+   * - **M field**
 
-``Z field`` [tablefield: any]
-  Optional
+       Optional
+     - ``MFIELD``
+     - [tablefield: any]
+     - Field containing the M value
+   * - **Target CRS**
+     - ``TARGET_CRS``
+     - [crs]
 
-  Field containing the Z coordinate.
+       Default: ``EPSG:4326``
+     - Coordinate reference system to use for layer.
+       The provided coordinates are assumed to be compliant.
 
-``M field`` [tablefield: any]
-  Optional
+   * - **Translated**
+     - ``OUTPUT``
+     - [vector: point]
 
-  Field containing the M coordinate.
+       Default: ``[Create temporary layer]``
+     - Specify the resulting point layer. One of:
 
-``Target CRS`` [crs]
-  Coordinate reference system to use for layer.
-  Provided coordinates are assumed to be compliant.
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-  Default: *EPSG:4326*
-
+       The file encoding can also be changed here.
+       
 Outputs
 .......
 
-``Points from table`` [vector: point]
-  The resulting point layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Points from table**
+     - ``OUTPUT``
+     - [vector: point]
+     - The resulting point layer
 
 
 .. _qgisgeneratepointspixelcentroidsalongline:
@@ -271,17 +437,53 @@ The points correspond to the pixel centroids that intersect the line layer.
 Parameters
 ..........
 
-``Raster layer`` [raster]
-  Raster layer in input.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Vector layer`` [vector: line]
-  Line vector layer to follow.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Raster layer**
+     - ``INPUT_RASTER``
+     - [raster]
+     - Input raster layer
+   * - **Vector layer**
+     - ``INPUT_VECTOR``
+     - [vector: line]
+     - Input line vector layer
+   * - **Points along line**
+     - ``OUTPUT``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Resulting point layer with pixel centroids. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Points from polygons`` [vector: point]
-  Resulting point layer of pixel centroid.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Points along line**
+     - ``OUTPUT``
+     - [vector: point]
+     - Resulting point layer with pixel centroids
 
 
 .. _qgisgeneratepointspixelcentroidsinsidepolygons:
@@ -301,17 +503,53 @@ The points correspond to the pixel centroids that intersect the polygon layer.
 Parameters
 ..........
 
-``Raster layer`` [raster]
-  Raster layer in input.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Vector layer`` [vector: polygon]
-  Polygon vector layer.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Raster layer**
+     - ``INPUT_RASTER``
+     - [raster]
+     - Input raster layer
+   * - **Vector layer**
+     - ``INPUT_VECTOR``
+     - [vector: polygon]
+     - Input polygon vector layer
+   * - **Points from polygons**
+     - ``OUTPUT``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Resulting point layer of pixel centroids. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Points from polygons`` [vector: point]
-  Resulting point layer of pixel centroid.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Points from polygons**
+     - ``OUTPUT``
+     - [vector: point]
+     - Resulting point layer of pixel centroids
 
 
 .. _qgisimportphotos:
@@ -331,64 +569,175 @@ if present in the photo, will be added to the point as attributes.
 Parameters
 ..........
 
-``Input folder`` [folder]
-  Path to the source folder containing the geotagged photos.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Scan recursively`` [boolean]
-  If checked, the folder and its subfolders will be scanned.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input folder**
+     - ``FOLDER``
+     - [folder]
+     - Path to the source folder containing the geotagged photos
+   * - **Scan recursively**
+     - ``RECURSIVE``
+     - [boolean]
+     - If checked, the folder and its subfolders will be scanned
+   * - **Photos**
+     - ``OUTPUT``
+     - [vector: point]
 
+       Default: ``[Create temporary layer]``
+     - Specify the point vector layer for the geotagged photos.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+   * - **Invalid photos table**
+
+       Optional
+     - ``INVALID``
+     - [table]
+
+       Default: ``[Skip output]``
+     - Specify the table of unreadable or non-geotagged photos.
+       One of:
+
+       * Skip Output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+       
 Outputs
 .......
 
-``Photos`` [vector: point]
-  Point vector layer with geotagged photos. The form of the layer is automatically
-  filled with paths and photo previews settings.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Invalid photos table`` [table]
-  Optional
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Photos**
+     - ``OUTPUT``
+     - [vector: point]
+     - Point vector layer with geotagged photos.
+       The form of the layer is automatically filled with
+       paths and photo previews settings.
+   * - **Invalid photos table**
 
-  Table of unreadable or non-geotagged photos can also be created.
+       Optional
+     - ``INVALID``
+     - [table]
+     - Table of unreadable or non-geotagged photos can
+       also be created.
 
 
 .. _qgispointstopath:
 
 Points to path
 --------------
-Converts a point layer to a line layer, by joining points in a defined order.
+Converts a point layer to a line layer, by joining points in an
+order defined by a field in the input point layer (if the order
+field is a date/time field, the format must be specified).
 
-Points can be grouped by a field to output individual line features per group.
+Points can be grouped by a field to distinguish line features.
+
+In addition to the line vector layer, a text file is output
+that describes the resulting line as a start point and a
+sequence of bearings / directions (relative to azimuth) and
+distances.
 
 Parameters
 ..........
 
-``Input point layer`` [vector: point]
-  point vector layer to be converted.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Order field`` [tablefield: any]
-  Field containing the order to connect the points in the path.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input point layer**
+     - ``INPUT``
+     - [vector: point]
+     - Input point vector layer
+   * - **Order field**
+     - ``ORDER_FIELD``
+     - [tablefield: any]
+     - Field containing the order to connect the points in the path
+   * - **Group field**
 
-``Group field`` [tablefield: any]
-  Optional
+       Optional
+     - ``GROUP_FIELD``
+     - [tablefield: any]
+     - Point features of the same value in the field will be
+       grouped in the same line.
+       If not set, a single path is drawn with all the input
+       points.
+   * - **Date format (if order field is DateTime)**
 
-  Point features of the same value in the field will be grouped in the same line.
-  If not set, a single path is drawn with all the input points.
+       Optional
+     - ``DATE_FORMAT``
+     - [string]
+     - The format to use for the ``Order field`` parameter.
+       Specify this only if the ``Order field`` is of type
+       Date/Time.
+   * - **Paths**
+     - ``OUTPUT``
+     - [vector: line]
 
-``Date format (if order field is DateTime)`` [string]
-  Optional
+       Default: ``[Create temporary layer]``
+     - Specify the line vector layer of the path. One of:
 
-  Indicates the format to use for the ``order field`` parameter.
-  Fill this option only if the ``order field`` is of a Date/Time format.
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-  Default: *(not set)*
+       The file encoding can also be changed here.
+   * - **Directory for text output**
+     - ``OUTPUT_TEXT_DIR``
+     - [folder]
+
+       Default: ``[Skip output]``
+     - Specify the directory that will containing the description
+       files of points and paths.
 
 Outputs
 .......
 
-``Paths`` [vector: line]
-  Line vector layer of the path.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Directory for text output`` [folder]
-  Directory containing description files of points and paths.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Paths**
+     - ``OUTPUT``
+     - [vector: line]
+     - Line vector layer of the path
+   * - **Directory for text output**
+     - ``OUTPUT``
+     - [folder]
+     - Directory containing description files of points and paths
 
 
 .. _qgisrandompointsalongline:
@@ -405,24 +754,61 @@ A minimum distance can be specified, to avoid points being too close to each oth
 Parameters
 ..........
 
-``Input layer`` [vector: line]
-  Line vector layer in input.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Number of points`` [number]
-  Number of point to create.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input point layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input line vector layer
+   * - **Number of points**
+     - ``POINTS_NUMBER``
+     - [number]
 
-  Default: *1*
+       Default: 1
+     - Number of points to create
+   * - **Minimum distance between points**
+     - ``MIN_DISTANCE``
+     - [number]
 
-``Minimum distance`` [number]
-  A minimum distance that points must respect.
+       Default: 0.0
+     - The minimum distance between points
+   * - **Random points**
+     - ``OUTPUT``
+     - [vector: point]
 
-  Default: *0.0*
+       Default: ``[Create temporary layer]``
+     - The output random points. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Random points`` [vector: point]
-  Final random point layer along line.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Random points**
+     - ``OUTPUT``
+     - [vector: point]
+     - The output random points layer.
 
 
 .. _qgisrandompointsinextent:
@@ -439,72 +825,152 @@ A minimum distance can be specified, to avoid points being too close to each oth
 Parameters
 ..........
 
-``Input extent`` [extent]
-  Map extent for the random points.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Points number`` [number]
-  Number of point to create.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input extent**
+     - ``EXTENT``
+     - [extent]
+     - Map extent for the random points
+   * - **Number of points**
+     - ``POINTS_NUMBER``
+     - [number]
 
-  Default: *1*
+       Default: 1
+     - Number of point to create
+   * - **Minimum distance between points**
+     - ``MIN_DISTANCE``
+     - [number]
 
-``Minimum distance`` [number]
-  A minimum distance that points must respect.
+       Default: 0.0
+     - The minimum distance between points
+   * - **Target CRS**
+     - ``TARGET_CRS``
+     - [crs]
 
-  Default: *0.0*
+       Default: *Project CRS*
+     - CRS of the random points layer
+   * - **Random points**
+     - ``OUTPUT``
+     - [vector: point]
 
-``Target CRS`` [crs]
-  CRS of the random points layer.
+       Default: ``[Create temporary layer]``
+     - The output random points. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Random points`` [vector: point]
-  Final random point layer in extent.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Random points**
+     - ``OUTPUT``
+     - [vector: point]
+     - The output random points layer.
 
 
 .. _qgisrandompointsinlayerbounds:
 
 Random points in layer bounds
 -----------------------------
-Creates a new point layer with a given number of random points, all of them within
-the extent of a given layer.
+Creates a new point layer with a given number of random points,
+all of them within the extent of a given layer.
 
-A minimum distance can be specified, to avoid points being too close to each other.
+A minimum distance can be specified, to avoid points being too
+close to each other.
 
 ``Default menu``: :menuselection:`Vector --> Research Tools`
 
 Parameters
 ..........
 
-``Input layer`` [vector: polygon]
-  Input polygon layer for the extent.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Points number`` [number]
-  Number of point to create.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: polygon]
+     - Input polygon layer defining the area
+   * - **Number of points**
+     - ``POINTS_NUMBER``
+     - [number]
 
-  Default: *1*
+       Default: 1
+     - Number of point to create
+   * - **Minimum distance between points**
+     - ``MIN_DISTANCE``
+     - [number]
 
-``Minimum distance`` [number]
-  A minimum distance that points must respect.
+       Default: 0.0
+     - The minimum distance between points
+   * - **Random points**
+     - ``OUTPUT``
+     - [vector: point]
 
-  default: *0.0*
+       Default: ``[Create temporary layer]``
+     - The output random points. One of:
 
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Random points`` [vector: point]
-  Final random point layer in layer bounds.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Random points**
+     - ``OUTPUT``
+     - [vector: point]
+     - The output random points layer.
 
 
 .. _qgisrandompointsinsidepolygons:
 
 Random points inside polygons
 -----------------------------
-Creates a new point layer with a given number of random points, all of them within
-a given layer.
+Creates a new point layer with a given number of random points
+inside each polygon of the input polygon layer.
 
-Together with the point number. two different sampling strategies can be chosen.
+Two sampling strategies are available:
+
+* Points count: number of points for each feature
+* Points density: density of points for each feature
 
 A minimum distance can be specified, to avoid points being too close to each other.
 
@@ -513,33 +979,72 @@ A minimum distance can be specified, to avoid points being too close to each oth
 Parameters
 ..........
 
-``Input layer`` [vector: polygon]
-  Polygon vector layer in input. All the points will be created withing each
-  feature of this layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Sampling strategy`` [enumeration]
-  Choose between:
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: polygon]
+     - Input polygon polygon vector layer
+   * - **Sampling strategy**
+     - ``STRATEGY``
+     - [enumeration]
 
-  * 0 --- Points count: number of points for each feature
-  * 1 --- points density: density of points for each feature
+       Default: 0
+     - Sampling strategy to use. One of:
+       
+       * 0 --- Points count: number of points for each feature
+       * 1 --- points density: density of points for each feature
 
-  Default: *0*
+   * - **Number or density of points**
+     - ``EXPRESSION``
+     - [expression]
 
-``Number or density of points`` [expression]
-  You can choose the points number also with an expression.
+       Default: 1.0
+     - The number or density of points, depending on the chosen
+       ``Sampling strategy``.
+   * - **Minimum distance between points**
+     - ``MIN_DISTANCE``
+     - [number]
 
-  Default: *1.0*
+       Default: 0.0
+     - The minimum distance between points
+   * - **Random points**
+     - ``OUTPUT``
+     - [vector: point]
 
-``Minimum distance`` [number]
-  A minimum distance that points must respect.
+       Default: ``[Create temporary layer]``
+     - The output random points. One of:
 
-  default: *0.0*
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Random points`` [vector: point]
-  Final random point layer inside polygon.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Random points**
+     - ``OUTPUT``
+     - [vector: point]
+     - The output random points layer.
 
 
 .. _qgispixelstopoints:
@@ -555,22 +1060,60 @@ Any nodata pixels are skipped in the output.
 Parameters
 ..........
 
-``Raster layer`` [raster]
-  Raster layer in input.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Band number`` [raster band]
-  Raster band to extract data from.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Raster layer**
+     - ``INPUT_RASTER``
+     - [raster]
+     - Input raster layer
+   * - **Band number**
+     - ``RASTER_BAND``
+     - [raster band]
+     - Raster band to extract data from
+   * - **Field name**
+     - ``FIELD_NAME``
+     - [string]
 
-``Field name`` [string]
-  Name of the field to store the raster band value.
+       Default: 'VALUE'
+     - Name of the field to store the raster band value
+   * - **Vector points**
+     - ``OUTPUT``
+     - [vector: point]
 
-  Default: *VALUE*
+       Default: ``[Create temporary layer]``
+     - Specify the resulting point layer of pixels centroids.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Vector points`` [vector: point]
-  Resulting point layer of pixels centroid.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Vector points**
+     - ``OUTPUT``
+     - [vector: point]
+     - Resulting point layer with pixels centroids
 
 
 .. _qgispixelstopolygons:
@@ -586,68 +1129,158 @@ Any nodata pixels are skipped in the output.
 Parameters
 ..........
 
-``Raster layer`` [raster]
-  Raster layer in input.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Band number`` [raster band]
-  Raster band to extract data from.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Raster layer**
+     - ``INPUT_RASTER``
+     - [raster]
+     - Input raster layer
+   * - **Band number**
+     - ``RASTER_BAND``
+     - [raster band]
+     - Raster band to extract data from
+   * - **Field name**
+     - ``FIELD_NAME``
+     - [string]
 
-``Field name`` [string]
-  Name of the field to store the raster band value.
+       Default: 'VALUE'
+     - Name of the field to store the raster band value
+   * - **Vector points**
+     - ``OUTPUT``
+     - [vector: polygons]
 
-  Default: *VALUE*
+       Default: ``[Create temporary layer]``
+     - Specify the Resulting polygon layer of pixel extents.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Vector polygons`` [vector: polygon]
-  Resulting polygon layer of pixels extent.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Vector points**
+     - ``OUTPUT``
+     - [Vector polygons]
+     - Resulting polygon layer of pixel extents
 
 
 .. _qgisregularpoints:
 
 Regular points
 --------------
-Creates a new point layer with a given number of regular points, all of them within
-a given extent.
+Creates a new point layer with its points placed in a regular grid
+within a given extent.
 
-Together with the point number. two different sampling strategies can be chosen.
+The grid is specified either by the spacing between the points (same
+spacing for all dimensions) or by the number of points to generate.
+In the latter case, the spacing will be determined from the extent.
+In order to generate a full square grid, at least the number of
+points specified by the user is generated for the latter case.
 
-A distance factor can be specified, to avoid points being too close to each other.
+Random offsets to the point spacing can be applied, resulting in a
+non-regular point pattern.
 
 ``Default menu``: :menuselection:`Vector --> Research Tools`
 
 Parameters
 ..........
 
-``Input extent`` [extent]
-  Map extent for the random points.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Point spacing/count`` [number]
-  Spacing between the points.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input extent (xmin, xmax, ymin, ymax)**
+     - ``EXTENT``
+     - [extent]
+     - Map extent for the random points
+   * - **Point spacing/count**
+     - ``SPACING``
+     - [number]
 
-  Default: *100*
+       Default: 100
+     - Spacing between the points, or the number of points, depending
+       on whether ``Use point spacing`` is checked or not.
+   * - **Initial inset from corner (LH side)**
+     - ``INSET``
+     - [number]
 
-``Initial inset from corner (LH side)`` [number]
-  Choose to move the initial points coordinate from the left upper corner.
+       Default: 0.0
+     - Offset the points relative to the upper left corner.
+       The value is used for both the X and Y axis.
+   * - **Apply random offset to point spacing**
+     - ``RANDOMIZE``
+     - [boolean]
 
-  Default: *0.0*
+       Default: False
+     - If checked the points will have a random spacing
+   * - **Use point spacing**
+     - ``IS_SPACING``
+     - [boolean]
 
-``Apply random offset to point spacing`` [boolean]
-  If checked the points will have a random spacing.
+       Default: True
+     - If unchecked the point spacing is not taken into account
+   * - **Output layer CRS**
+     - ``CRS``
+     - [crs]
 
-  Default: *False*
+       Default: *Project CRS*
+     - CRS of the random points layer
+   * - **Regular points**
+     - ``OUTPUT``
+     - [vector: point]
 
-``Use point spacing`` [boolean]
-  If unchecked the point spacing is not taken into account.
+       Default: ``[Create temporary layer]``
+     - Specify the output regular point layer. One of:
 
-  Default: *True*
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Regular points`` [vector: point]
-  Regular point layer in output.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Regular points**
+     - ``OUTPUT``
+     - [vector: point]
+     - The output regular point layer.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
