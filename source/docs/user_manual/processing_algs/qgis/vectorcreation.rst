@@ -378,7 +378,7 @@ Parameters
      - [tablefield: any]
      - Field containing the M value
    * - **Target CRS**
-     - ``CRS``
+     - ``TARGET_CRS``
      - [crs]
 
        Default: ``EPSG:4326``
