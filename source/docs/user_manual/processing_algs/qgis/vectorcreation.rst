@@ -1008,7 +1008,7 @@ Parameters
 
        Default: 1.0
      - The number or density of points, depending on the chosen
-       ``Sampling strategy``.
+       :guilabel:`Sampling strategy`.
    * - **Minimum distance between points**
      - ``MIN_DISTANCE``
      - [number]
