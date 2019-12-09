@@ -845,7 +845,7 @@ Types of error messages and their meanings
           :align: center
 
    * - Ring self-intersection 
-     - This error happens when an inner ring / boundary (island) of a polygon
+     - This error happens when an outer or inner (island) ring / boundary of a polygon
        geometry intersects itself.
      - .. figure:: img/geos_ring_inter.png
           :align: center
