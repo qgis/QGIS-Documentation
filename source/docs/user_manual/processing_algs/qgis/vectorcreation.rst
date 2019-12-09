@@ -154,7 +154,7 @@ Parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: line]
+     - [vector: any]
      - Input vector layer to translate
    * - **Number of features to create**
      - ``COUNT``
@@ -305,7 +305,7 @@ Parameters
      - Coordinate reference system to apply to the grid
    * - **Grid**
      - ``OUTPUT``
-     - [vector: point, vector: line or vector: polygon]
+     - [vector: any]
 
        Default: ``[Create temporary layer]``
      - Resulting vector grid layer. One of:
@@ -331,8 +331,9 @@ Outputs
      - Description
    * - **Grid**
      - ``OUTPUT``
-     - [vector: point, vector: line or vector: polygon]
-     - Resulting vector grid layer
+     - [vector: any]
+     - Resulting vector grid layer.  The output geometry type (point,
+       line or polygon) depends on the :guilabel:`Grid type`.
 
 
 .. _qgiscreatepointslayerfromtable:
@@ -388,7 +389,7 @@ Parameters
      - Coordinate reference system to use for layer.
        The provided coordinates are assumed to be compliant.
 
-   * - **Translated**
+   * - **Points from table**
      - ``OUTPUT``
      - [vector: point]
 
@@ -520,7 +521,7 @@ Parameters
      - ``INPUT_VECTOR``
      - [vector: polygon]
      - Input polygon vector layer
-   * - **Points from polygons**
+   * - **Points inside polygons**
      - ``OUTPUT``
      - [vector: point]
 
@@ -546,7 +547,7 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Points from polygons**
+   * - **Points inside polygons**
      - ``OUTPUT``
      - [vector: point]
      - Resulting point layer of pixel centroids
@@ -585,6 +586,8 @@ Parameters
    * - **Scan recursively**
      - ``RECURSIVE``
      - [boolean]
+
+       Default: False
      - If checked, the folder and its subfolders will be scanned
    * - **Photos**
      - ``OUTPUT``
@@ -715,7 +718,7 @@ Parameters
      - [folder]
 
        Default: ``[Skip output]``
-     - Specify the directory that will containing the description
+     - Specify the directory that will contain the description
        files of points and paths.
 
 Outputs
@@ -921,7 +924,7 @@ Parameters
      - [number]
 
        Default: 1
-     - Number of point to create
+     - Number of points to create
    * - **Minimum distance between points**
      - ``MIN_DISTANCE``
      - [number]
@@ -1000,15 +1003,15 @@ Parameters
      - Sampling strategy to use. One of:
        
        * 0 --- Points count: number of points for each feature
-       * 1 --- points density: density of points for each feature
+       * 1 --- Points density: density of points for each feature
 
-   * - **Number or density of points**
+   * - **Expression**
      - ``EXPRESSION``
-     - [expression]
+     - [number |dataDefined|]
 
        Default: 1.0
      - The number or density of points, depending on the chosen
-       ``Sampling strategy``.
+       :guilabel:`Sampling strategy`.
    * - **Minimum distance between points**
      - ``MIN_DISTANCE``
      - [number]
@@ -1152,12 +1155,12 @@ Parameters
 
        Default: 'VALUE'
      - Name of the field to store the raster band value
-   * - **Vector points**
+   * - **Vector polygons**
      - ``OUTPUT``
-     - [vector: polygons]
+     - [vector: polygon]
 
        Default: ``[Create temporary layer]``
-     - Specify the Resulting polygon layer of pixel extents.
+     - Specify the resulting polygon layer of pixel extents.
        One of:
 
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
@@ -1179,9 +1182,9 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Vector points**
+   * - **Vector polygons**
      - ``OUTPUT``
-     - [Vector polygons]
+     - [vector polygon]
      - Resulting polygon layer of pixel extents
 
 
@@ -1195,7 +1198,7 @@ within a given extent.
 The grid is specified either by the spacing between the points (same
 spacing for all dimensions) or by the number of points to generate.
 In the latter case, the spacing will be determined from the extent.
-In order to generate a full square grid, at least the number of
+In order to generate a full rectangulare grid, at least the number of
 points specified by the user is generated for the latter case.
 
 Random offsets to the point spacing can be applied, resulting in a
