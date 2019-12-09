@@ -661,19 +661,29 @@ Outputs
 
 Join by lines (hub lines)
 -------------------------
-Creates hub and spoke diagrams by connecting lines from points on the spoke layer
-to matching points in the hub layer.
+Creates hub and spoke diagrams by connecting lines from points on
+the Spoke layer to matching points in the Hub layer.
 
-Determination of which hub goes with each point is based on a match between the
-Hub ID field on the hub points and the Spoke ID field on the spoke points.
+Determination of which hub goes with each point is based on a match
+between the Hub ID field on the hub points and the Spoke ID field on
+the spoke points.
 
-If input layers are not point layers, a point on the surface of the geometries
-will be taken as the connecting location.
+If input layers are not point layers, a point on the surface of the
+geometries will be taken as the connecting location.
+
+Optionally, geodesic lines can be created, which represent the
+shortest path on the surface of an ellipsoid.
+When geodesic mode is used, it is possible to split the created lines
+at the antimeridian (±180 degrees longitude), which can improve
+rendering of the lines.
+Additionally, the distance between vertices can be specified.
+A smaller distance results in a denser, more accurate line.
+
 
 .. figure:: img/join_lines.png
   :align: center
 
-  Join points on common field
+  Join points based on a common field / attribute
 
 Parameters
 ..........
@@ -717,6 +727,20 @@ Parameters
      - [tablefield: any] [list]
      - Field(s) of the spoke layer to be copied.
        If no fields are chosen all fields are taken.
+   * - **Create geodesic lines**
+     - ``GEODESIC``
+     - [boolean]
+     - Create geodesic lines (the shortest path on the surface of
+       an ellipsoid)
+   * - **Distance between vertices (geodesic lines only)**
+     - ``GEODESIC_DISTANCE``
+     - [number]
+     - A smaller distance results in a denser, more accurate line
+   * - **Split lines at antimeridian (±180 degrees longitude)**
+     - ``ANTIMERIDIAN_SPLIT``
+     - [boolean]
+     - Split lines at ±180 degrees longitude (to improve rendering
+       of the lines)
    * - **Hub lines**
      - ``OUTPUT``
      - [vector: line]
