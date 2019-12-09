@@ -183,7 +183,7 @@ Parameters
      - Prevent nearby (but non-touching) features from
        being assigned equal colors.
        Minimum 0.0.
-   * - *Balance color assignment**
+   * - **Balance color assignment**
      - ``BALANCE``
      - [enumeration]
 
