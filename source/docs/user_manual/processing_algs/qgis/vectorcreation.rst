@@ -328,7 +328,7 @@ Outputs
      - Description
    * - **Grid**
      - ``OUTPUT``
-     - [vector: point, vector: line or vector: polygon]
+     - [vector: any]
      - Resulting vector grid layer
 
 
