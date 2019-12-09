@@ -329,7 +329,8 @@ Outputs
    * - **Grid**
      - ``OUTPUT``
      - [vector: any]
-     - Resulting vector grid layer
+     - Resulting vector grid layer. The output geometry type (point, line or polygon) depends
+       on the :guilabel:`Grid type`.
 
 
 .. _qgiscreatepointslayerfromtable:
@@ -1194,7 +1195,7 @@ within a given extent.
 The grid is specified either by the spacing between the points (same
 spacing for all dimensions) or by the number of points to generate.
 In the latter case, the spacing will be determined from the extent.
-In order to generate a full square grid, at least the number of
+In order to generate a full rectangular grid, at least the number of
 points specified by the user is generated for the latter case.
 
 Random offsets to the point spacing can be applied, resulting in a
@@ -1230,7 +1231,7 @@ Parameters
      - [number]
 
        Default: 0.0
-     - Offset the points relative to the upper left corner.
+     - Offsets the points relative to the upper left corner.
        The value is used for both the X and Y axis.
    * - **Apply random offset to point spacing**
      - ``RANDOMIZE``
