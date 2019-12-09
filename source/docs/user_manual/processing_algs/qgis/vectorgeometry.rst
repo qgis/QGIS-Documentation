@@ -833,7 +833,8 @@ Types of error messages and their meanings
      -
 
    * - Line %1 contains %n duplicate node(s) at %2 
-     - This error happens when a given node is repeated.
+     - This error happens when consecutive points on a line have the same
+       coordinates.
      - .. figure:: img/geos_rep_point.png
           :align: center 
 
