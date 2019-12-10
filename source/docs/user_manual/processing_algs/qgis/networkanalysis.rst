@@ -18,28 +18,43 @@ cost greater than a given value (the cost can be distance or time).
 
 Parameters
 ..........
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Vector layer representing the network`` [vector: line]
-  Line vector layer representing the network to be covered.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Vector layer representing network**
+     - ``INPUT``
+     - [vector: line]
+     - Line vector layer representing the network to be covered
+   * - **Vector layer with start points**
+     - ``START_POINT``
+     - [vector: point]
+     - Point vector layer whose features are used as start points
+       to generate the service areas
+   * - **Path type to calculate**
+     - ``STRATEGY``
+     - [enumeration]
 
-``Vector layer with start points`` [vector: point]
-  Point vector layer whose features are used as start points to generate the service areas.
+       Default: 0
+     - The type of path to calculate. One of:
 
-``Path type to calculate`` [enumeration]
-  The type of path to calculate.
+       * 0 --- Shortest
+       * 1 --- Fastest
 
-  Options are:
+   * - **Travel cost**
+     - ``TRAVEL_COST``
+     - [number]
 
-  * 0 --- Shortest
-  * 1 --- Fastest
-
-  Default: *0*
-
-``Travel cost`` [number]
-  The value is estimated as a distance (in the network layer units) when looking for
-  the *Shortest* path and as time (in seconds) for the *Fastest* path.
-
-  Default: *0.0*
+       Default: *0.0*
+     - The value is estimated as a distance (in the network
+       layer units) when looking for the *Shortest* path and
+       as time (in seconds) for the *Fastest* path.
+  
 
 ``Advanced parameters``
   .. include:: qgis_algs_include.rst
@@ -53,15 +68,42 @@ Parameters
 
     Default: *False*
 
+
+   * - **Service area (lines)**
+     - ``OUTPUT``
+     - [vector: line]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output line layer for the service area.
+       One of:
+
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+
 Outputs
 .......
 
-``Service area (lines)`` [vector: line]
-  Line layer representing the parts of the network that can be serviced by the start points.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Service area (boundary nodes)`` [vector: point]
-  Point layer representing the furthest points on the network from the start points,
-  for the given cost.
+   * - Label
+     - Name
+     - Type
+     - Description
+
+   * - **Service area (lines)**
+     - ``OUTPUT``
+     - [vector: line]
+     - Line layer representing the parts of the network
+       that can be serviced by the start points, for the
+       given cost.
 
 
 .. _qgisserviceareafrompoint:
@@ -76,27 +118,43 @@ a cost greater than a given value (the cost can be distance or time).
 Parameters
 ..........
 
-``Vector layer representing the network`` [vector: line]
-  Line vector layer representing the network to be covered.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Start point (x, y)`` [coordinates]
-  Coordinate of the point to calculate the service area around.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Vector layer representing the network**
+     - ``INPUT``
+     - [vector: line]
+     - Line vector layer representing the network to be covered
+   * - **Start point (x, y)**
+     - ``START_POINTS``
+     - [coordinates]
+     - Coordinate of the point to calculate the service
+       area around.
+   * - **Path type to calculate**
+     - ``STRATEGY``
+     - [enumeration]
 
-``Path type to calculate`` [enumeration]
-  The type of path to calculate.
+       Default: 0
+     - The type of path to calculate. One of:
 
-  Options are:
+       * 0 --- Shortest
+       * 1 --- Fastest
 
-  * 0 --- Shortest
-  * 1 --- Fastest
+   * - **Travel cost**
+     - ``TRAVEL_COST``
+     - [number]
 
-  Default: *0*
-
-``Travel cost`` [number]
-  The value is estimated as a distance (in the network layer units) when looking for
-  the *Shortest* path and as time (in seconds) for the *Fastest* path.
-
-  Default: *0.0*
+       Default: *0.0*
+     - The value is estimated as a distance (in the network
+       layer units) when looking for the *Shortest* path and
+       as time (in seconds) for the *Fastest* path.
+  
 
 ``Advanced parameters``
   .. include:: qgis_algs_include.rst
@@ -110,15 +168,42 @@ Parameters
 
     Default: *False*
 
+
+   * - **Service area (lines)**
+     - ``OUTPUT``
+     - [vector: line]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output line layer for the service area.
+       One of:
+
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+
 Outputs
 .......
 
-``Service area (lines)`` [vector: line]
-  Line layer representing the parts of the network that can be serviced by the start point.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Service area (boundary nodes)`` [vector: point]
-  Point layer representing the furthest points on the network from the start point,
-  for the given cost.
+   * - Label
+     - Name
+     - Type
+     - Description
+
+   * - **Service area (lines)**
+     - ``OUTPUT``
+     - [vector: line]
+     - Line layer representing the parts of the network
+       that can be serviced by the start point, for the
+       given cost.
 
 
 .. _qgisshortestpathlayertopoint:
@@ -131,35 +216,80 @@ by a vector layer and a given end point.
 Parameters
 ..........
 
-``Vector layer representing the network`` [vector: line]
-  Line vector layer representing the network to be covered.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Path type to calculate`` [enumeration]
-  The type of path to calculate.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Vector layer representing network**
+     - ``INPUT``
+     - [vector: line]
+     - Line vector layer representing the network to be covered
+   * - **Path type to calculate**
+     - ``STRATEGY``
+     - [enumeration]
 
-  Options are:
+       Default: 0
+     - The type of path to calculate. One of:
 
-  * 0 --- Shortest
-  * 1 --- Fastest
+       * 0 --- Shortest
+       * 1 --- Fastest
 
-  Default: *0*
-
-``Vector layer with start points`` [vector: point]
-  Point vector layer whose features are used as start points of the routes.
-
-``End point (x, y)`` [coordinates]
-  Point feature representing the end point of the routes.
+   * - **Vector layer with start points**
+     - ``START_POINTS``
+     - [vector: point]
+     - Point vector layer whose features are used as start
+       points of the routes
+   * - **End point (x, y)**
+     - `END_POINT``
+     - [coordinates]
+     - Point feature representing the end point of the routes
+     
+     
+  
 
 ``Advanced parameters``
   .. include:: qgis_algs_include.rst
      :start-after: **network_advanced_parameters**
      :end-before: **end_network_advanced_parameters**
 
+  
+   * - **Shortest path**
+     - ``OUTPUT``
+     - [vector: line]
+     - Specify the output line layer for the shortest paths.
+       One of:
+
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+
 Outputs
 .......
 
-``Shortest path`` [vector: line]
-  Line layer of the shortest or fastest path from each of the start points to the end point.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+
+   * - **Shortest path**
+     - ``OUTPUT``
+     - [vector: line]
+     - Line layer of the shortest or fastest path
+       from each of the start points to the end point
 
 
 .. _qgisshortestpathpointtolayer:
@@ -172,35 +302,78 @@ end points defined by a point vector layer.
 Parameters
 ..........
 
-``Vector layer representing the network`` [vector: line]
-  Line vector layer representing the network to be covered.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Path type to calculate`` [enumeration]
-  The type of path to calculate.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Vector layer representing network**
+     - ``INPUT``
+     - [vector: line]
+     - Line vector layer representing the network to be covered
+   * - **Path type to calculate**
+     - ``STRATEGY``
+     - [enumeration]
 
-  Options are:
+       Default: 0
+     - The type of path to calculate. One of:
 
-  * 0 --- Shortest
-  * 1 --- Fastest
+       * 0 --- Shortest
+       * 1 --- Fastest
 
-  Default: *0*
-
-``Start point (x, y)`` [coordinates]
-  Point feature representing the start point of the routes.
-
-``Vector layer with end points`` [vector: point]
-  Point vector layer whose features are used as end points of the routes.
+   * - **Start point (x, y)**
+     - `START_POINT``
+     - [coordinates]
+     - Point feature representing the start point of the routes
+   * - **Vector layer with end points**
+     - ``END_POINTS``
+     - [vector: point]
+     - Point vector layer whose features are used as end
+       points of the routes
+     
+  
 
 ``Advanced parameters``
   .. include:: qgis_algs_include.rst
      :start-after: **network_advanced_parameters**
      :end-before: **end_network_advanced_parameters**
 
+  
+   * - **Shortest path**
+     - ``OUTPUT``
+     - [vector: line]
+     - Specify the output line layer for the shortest paths.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+
 Outputs
 .......
 
-``Shortest path`` [vector: line]
-  Line layer of the shortest or fastest path from the start point to each of the end points.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+
+   * - **Shortest path**
+     - ``OUTPUT``
+     - [vector: line]
+     - Line layer of the shortest or fastest path
+       from each of the start points to the end point
 
 
 .. _qgisshortestpathpointtopoint:
@@ -236,8 +409,75 @@ Parameters
      :start-after: **network_advanced_parameters**
      :end-before: **end_network_advanced_parameters**
 
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Vector layer representing network**
+     - ``INPUT``
+     - [vector: line]
+     - Line vector layer representing the network to be covered
+   * - **Path type to calculate**
+     - ``STRATEGY``
+     - [enumeration]
+
+       Default: 0
+     - The type of path to calculate. One of:
+
+       * 0 --- Shortest
+       * 1 --- Fastest
+
+   * - **Start point (x, y)**
+     - `START_POINT``
+     - [coordinates]
+     - Point feature representing the start point of the routes
+   * - **End point (x, y)**
+     - `END_POINT``
+     - [coordinates]
+     - Point feature representing the end point of the routes
+     
+  
+
+``Advanced parameters``
+  .. include:: qgis_algs_include.rst
+     :start-after: **network_advanced_parameters**
+     :end-before: **end_network_advanced_parameters**
+
+  
+   * - **Shortest path**
+     - ``OUTPUT``
+     - [vector: line]
+     - Specify the output line layer for the shortest paths.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+
 Outputs
 .......
 
-``Shortest path`` [vector: line]
-  Line layer of the shortest or fastest path from the start point to the end point.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+
+   * - **Shortest path**
+     - ``OUTPUT``
+     - [vector: line]
+     - Line layer of the shortest or fastest path
+       from each of the start point to the end point
