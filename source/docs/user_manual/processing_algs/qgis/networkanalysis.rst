@@ -18,6 +18,7 @@ cost greater than a given value (the cost can be distance or time).
 
 Parameters
 ..........
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -32,7 +33,7 @@ Parameters
      - [vector: line]
      - Line vector layer representing the network to be covered
    * - **Vector layer with start points**
-     - ``START_POINT``
+     - ``START_POINTS``
      - [vector: point]
      - Point vector layer whose features are used as start points
        to generate the service areas
@@ -202,9 +203,6 @@ Outputs
      - [vector: point]
      - The output point layer with the service area boundary
        nodes.
-       Can only be generated if
-       :guilabel:`Include upper/lower bound points` is set /
-       True.
    * - **Service area (lines)**
      - ``OUTPUT_LINES``
      - [vector: line]
@@ -239,7 +237,7 @@ Parameters
      - [vector: line]
      - Line vector layer representing the network to be covered
    * - **Start point (x, y)**
-     - ``START_POINTS``
+     - ``START_POINT``
      - [coordinates]
      - Coordinate of the point to calculate the service
        area around.
@@ -361,7 +359,7 @@ Parameters
        edge at the boundaries of the service area.
        One point is the start of that edge, the other is the end.
    * - **Service area (lines)**
-     - ``OUTPUT``
+     - ``OUTPUT_LINES``
      - [vector: line]
 
        Default: ``[Create temporary layer]``
@@ -409,9 +407,6 @@ Outputs
      - [vector: point]
      - The output point layer with the service area boundary
        nodes.
-       Can only be generated if
-       :guilabel:`Include upper/lower bound points` is set /
-       True.
    * - **Service area (lines)**
      - ``OUTPUT_LINES``
      - [vector: line]
@@ -553,14 +548,6 @@ Parameters
        Default: 0
      - Two lines with nodes closer than the specified
        tolerance are considered connected
-   * - **Include upper/lower bound points**
-     - ``INCLUDE_BOUNDS``
-     - [boolean]
-
-       Default: False
-     - Creates a point layer output with two points for each
-       edge at the boundaries of the service area.
-       One point is the start of that edge, the other is the end.
    * - **Shortest path**
      - ``OUTPUT``
      - [vector: line]
@@ -728,14 +715,6 @@ Parameters
        Default: 0
      - Two lines with nodes closer than the specified
        tolerance are considered connected
-   * - **Include upper/lower bound points**
-     - ``INCLUDE_BOUNDS``
-     - [boolean]
-
-       Default: False
-     - Creates a point layer output with two points for each
-       edge at the boundaries of the service area.
-       One point is the start of that edge, the other is the end.
    * - **Shortest path**
      - ``OUTPUT``
      - [vector: line]
