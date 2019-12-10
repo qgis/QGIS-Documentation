@@ -5,67 +5,95 @@
  qgisshortestpathpointtolayer and qgisshortestpathpointtopoint
 
 **network_advanced_parameters**
+   * - **Direction field**
 
-``Direction field`` [tablefield: string]
-  Optional
+       Optional
+     - ``DIRECTION_FIELD``
+     - [tablefield: string]
 
-  The field used to specify directions for the network edges.
+       Default: *0.0*
+     - The field used to specify directions for the network edges.
+       
+       The values used in this field are specified with the three
+       parameters ``Value for forward direction``,
+       ``Value for backward direction`` and
+       ``Value for both directions``.
+       Forward and reverse directions correspond to a one-way edge,
+       "both directions" indicates a two-way edge.
+       If a feature does not have a value in this field, or no field
+       is set then the   default direction setting (provided with
+       the ``Default direction`` parameter) is used.
+   * - **Value for forward direction**
 
-  The values used in this field are specified with the three parameters ``Value for
-  forward direction``, ``Value for backward direction`` and ``Value for both directions``.
-  Forward and reverse directions correspond to a one-way edge, "both directions"
-  indicates a two-way edge.
+       Optional
+     - ``VALUE_FORWARD``
+     - [string]
 
-  If a feature does not have a value in this field, or no field is set then the
-  default direction setting (provided with the ``Default direction`` parameter)
-  is used.
+       Default: '' (empty string)
+     - Value set in the direction field to identify edges with a
+       forward direction
+   * - **Value for backward direction**
 
-``Value for forward direction`` [string]
-  Optional
+       Optional
+     - ``VALUE_BACKWARD``
+     - [string]
 
-  Value set in the direction field to identify edges with a forward direction.
+       Default: '' (empty string)
+     - Value set in the direction field to identify edges with a
+       backward direction
+   * - **Value for both directions**
 
-``Value for backward direction`` [string]
-  Optional
+       Optional
+     - ``VALUE_BOTH``
+     - [string]
 
-  Value set in the direction field to identify edges with a backward direction.
+       Default: '' (empty string)
+     - Value set in the direction field to identify
+       bidirectional edges
+   * - **Default direction**
 
-``Value for both directions`` [string]
-  Optional
+       Optional
+     - ``DEFAULT_DIRECTION``
+     - [enumeration]
 
-  Value set in the direction field to identify bidirectional edges.
+       Default: 2
+     - If a feature has no value set in the direction field or
+       if no direction field is set, then this direction value
+       is used. One of:
 
-``Default direction`` [enumeration]
-  If a feature has no value set in the direction field or if no direction field is set,
-  then this direction value is used.
+       * 0 --- Forward direction
+       * 1 --- Backward direction
+       * 2 --- Both directions
 
-  Available options are:
+   * - **Speed field**
 
-  * 0 --- Forward direction
-  * 1 --- Backward direction
-  * 2 --- Both directions
+       Optional
+     - ``SPEED_FIELD``
+     - [tablefield: string]
+     - Field providing the speed value (in ``km/h``) for the
+       edges of the network when looking for the fastest path.
+       
+       If a feature does not have a value in this field, or
+       no field is set then the default speed value (provided
+       with the ``Default speed`` parameter) is used.
+   * - **Default speed (km/h)**
 
-  Default: *2*
+       Optional
+     - ``DEFAULT_SPEED``
+     - [number]
 
-``Speed field`` [tablefield: string]
-  Optional
+       Default: 50.0
+     - Value to use to calculate the travel time if no speed
+       field is provided for an edge
+   * - **Topology tolerance**
 
-  Field providing the speed value (in ``km/h``) for the edges of the network when
-  looking for the fastest path.
+       Optional
+     - ``TOLERANCE``
+     - [number]
 
-  If a feature does not have a value in this field, or no field is set then the
-  default speed value (provided with the ``Default speed`` parameter) is used.
-
-  ``Default speed (km/h)`` [number]
-    Value to use to calculate the travel time if no speed field is provided for an edge.
-
-    Default: *50.0*
-
-  ``Topology tolerance`` [number]
-    Two lines with nodes closer than the specified tolerance are considered connected.
-
-    Default: *0.0*
-
+       Default: 0.0
+     - Two lines with nodes closer than the specified
+       tolerance are considered connected
 **end_network_advanced_parameters**
 
 .. The following section is included in vector selection algorithms such as
