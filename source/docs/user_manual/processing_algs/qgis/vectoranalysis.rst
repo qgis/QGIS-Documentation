@@ -738,8 +738,9 @@ Parameters
      - ``GEODESIC_DISTANCE``
      - [number]
 
-       Default: 1000.0
-     - A smaller distance results in a denser, more accurate line
+       Default: 1000.0 (kilometers)
+     - Distance between consecutive vertices (in kilometers).
+       A smaller distance results in a denser, more accurate line
    * - **Split lines at antimeridian (±180 degrees longitude)**
      - ``ANTIMERIDIAN_SPLIT``
      - [boolean]
