@@ -730,15 +730,21 @@ Parameters
    * - **Create geodesic lines**
      - ``GEODESIC``
      - [boolean]
+
+       Default: False
      - Create geodesic lines (the shortest path on the surface of
        an ellipsoid)
    * - **Distance between vertices (geodesic lines only)**
      - ``GEODESIC_DISTANCE``
      - [number]
+
+       Default: 1000.0
      - A smaller distance results in a denser, more accurate line
    * - **Split lines at antimeridian (±180 degrees longitude)**
      - ``ANTIMERIDIAN_SPLIT``
      - [boolean]
+
+       Default: False
      - Split lines at ±180 degrees longitude (to improve rendering
        of the lines)
    * - **Hub lines**
