@@ -54,12 +54,10 @@ Parameters
      - The value is estimated as a distance (in the network
        layer units) when looking for the *Shortest* path and
        as time (in seconds) for the *Fastest* path.
-  
 
-``Advanced parameters``
-  .. include:: qgis_algs_include.rst
-     :start-after: **network_advanced_parameters**
-     :end-before: **end_network_advanced_parameters**
+.. include:: qgis_algs_include.rst
+   :start-after: **network_advanced_parameters**
+   :end-before: **end_network_advanced_parameters**
 
   ``Include upper/lower bound points`` [boolean]
     Creates a point layer output with two points for each edge at the boundaries of the
@@ -154,12 +152,10 @@ Parameters
      - The value is estimated as a distance (in the network
        layer units) when looking for the *Shortest* path and
        as time (in seconds) for the *Fastest* path.
-  
 
-``Advanced parameters``
-  .. include:: qgis_algs_include.rst
-     :start-after: **network_advanced_parameters**
-     :end-before: **end_network_advanced_parameters**
+.. include:: qgis_algs_include.rst
+   :start-after: **network_advanced_parameters**
+   :end-before: **end_network_advanced_parameters**
 
   ``Include upper/lower bound points`` [boolean]
     Creates a point layer output with two points for each edge at the boundaries of the
@@ -248,15 +244,10 @@ Parameters
      - `END_POINT``
      - [coordinates]
      - Point feature representing the end point of the routes
-     
-     
-  
 
-``Advanced parameters``
-  .. include:: qgis_algs_include.rst
-     :start-after: **network_advanced_parameters**
-     :end-before: **end_network_advanced_parameters**
-
+.. include:: qgis_algs_include.rst
+   :start-after: **network_advanced_parameters**
+   :end-before: **end_network_advanced_parameters**
   
    * - **Shortest path**
      - ``OUTPUT``
@@ -334,15 +325,11 @@ Parameters
      - [vector: point]
      - Point vector layer whose features are used as end
        points of the routes
-     
-  
 
-``Advanced parameters``
-  .. include:: qgis_algs_include.rst
-     :start-after: **network_advanced_parameters**
-     :end-before: **end_network_advanced_parameters**
+.. include:: qgis_algs_include.rst
+   :start-after: **network_advanced_parameters**
+   :end-before: **end_network_advanced_parameters**
 
-  
    * - **Shortest path**
      - ``OUTPUT``
      - [vector: line]
@@ -385,31 +372,6 @@ Computes the optimal (shortest or fastest) route between a given start point and
 Parameters
 ..........
 
-``Vector layer representing the network`` [vector: line]
-  Line vector layer representing the network to be covered.
-
-``Path type to calculate`` [enumeration]
-  The type of path to calculate.
-
-  Options are:
-
-  * 0 --- Shortest
-  * 1 --- Fastest
-
-  Default: *0*
-
-``Start point (x, y)`` [coordinates]
-  Point feature representing the start point of the route.
-
-``End point (x, y)`` [coordinates]
-  Point feature representing the end point of the route.
-
-``Advanced parameters``
-  .. include:: qgis_algs_include.rst
-     :start-after: **network_advanced_parameters**
-     :end-before: **end_network_advanced_parameters**
-
-
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -441,14 +403,10 @@ Parameters
      - `END_POINT``
      - [coordinates]
      - Point feature representing the end point of the routes
-     
-  
 
-``Advanced parameters``
-  .. include:: qgis_algs_include.rst
-     :start-after: **network_advanced_parameters**
-     :end-before: **end_network_advanced_parameters**
-
+.. include:: qgis_algs_include.rst
+   :start-after: **network_advanced_parameters**
+   :end-before: **end_network_advanced_parameters**
   
    * - **Shortest path**
      - ``OUTPUT``
