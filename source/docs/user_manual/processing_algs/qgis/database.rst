@@ -88,8 +88,9 @@ Parameters
      - If the specified table exists, setting this option to
        ``True`` will make sure that it is deleted and a new
        table will be created before the features are added.
-       If this option is ``False``, the features will be
-       appended to the table.
+       If this option is ``False`` and the table exists, the
+       algorithm will throw an exception ("relation already
+       exists").
    * - **Create spatial index**
      - ``CREATEINDEX``
      - [boolean]
@@ -192,11 +193,13 @@ Parameters
      - [boolean]
        
        Default: True
-     - If the specified database exists, setting this option to
+     - If the specified table exists, setting this option to
        ``True`` will make sure that it is deleted and a new
-       database will be created before the layers are added.
-       If this option is ``False``, the layers will be
-       appended.
+       table will be created before the features of the layer is
+       added.
+       If this option is ``False`` and the table exists, the
+       algorithm will throw an exception ("table already
+       exists").
    * - **Create spatial index**
      - ``CREATEINDEX``
      - [boolean]
@@ -242,7 +245,7 @@ Adds layers to a GeoPackage.
 If the GeoPackage exists and ``Overwrite existing GeoPackage``
 is checked, it will be overwritten (removed and recreated).
 If the GeoPackage exists and ``Overwrite existing GeoPackage``
-is not checked, the layers will be appended to the GeoPackage.
+is not checked, it will still be overwritten!
 
 Parameters
 ..........
@@ -272,7 +275,9 @@ Parameters
      - If the specified GeoPackage exists, setting this option to
        ``True`` will make sure that it is deleted and a new one
        will be created before the layers are added.
-       If this option is ``False``, the layers will be appended.
+       If this option is ``False`` and the GeoPackage exists, it
+       will still be deleted and a new one will be created before
+       the layers are appended!
    * - **Save layer styles into GeoPackage** |38|
      - SAVE_STYLES
      - [boolean]
