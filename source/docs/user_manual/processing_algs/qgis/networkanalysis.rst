@@ -203,9 +203,10 @@ Outputs
        Can only be generated if
        :guilabel:`Include upper/lower bound points` is set /
        True.
+       
        .. include:: qgis_algs_include.rst
-          :start-after: **network_advanced_parameters**
-          :end-before: **end_network_advanced_parameters**
+         :start-after: **network_advanced_parameters**
+         :end-before: **end_network_advanced_parameters**
          
    * - **Service area (lines)**
      - ``OUTPUT_LINES``
