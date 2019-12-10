@@ -55,14 +55,12 @@ Parameters
        layer units) when looking for the *Shortest* path and
        as time (in seconds) for the *Fastest* path.
 
-.. include:: qgis_algs_include.rst
-   :start-after: **network_advanced_parameters**
-   :end-before: **end_network_advanced_parameters**
+   .. include:: qgis_algs_include.rst
+      :start-after: **network_advanced_parameters**
+      :end-before: **end_network_advanced_parameters**
 
   ``Include upper/lower bound points`` [boolean]
-    Creates a point layer output with two points for each edge at the boundaries of the
-    service area.
-    One point is the start of that edge, the other is the end.
+    
 
     Default: *False*
 
