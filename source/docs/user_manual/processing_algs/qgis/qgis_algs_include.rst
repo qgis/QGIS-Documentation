@@ -102,6 +102,7 @@
      - Creates a point layer output with two points for each
        edge at the boundaries of the service area.
        One point is the start of that edge, the other is the end.
+
 **end_network_advanced_parameters**
 
 .. The following section is included in vector selection algorithms such as
