@@ -56,8 +56,8 @@ Parameters
        as time (in seconds) for the *Fastest* path.
 
 .. include:: qgis_algs_include.rst
-   :start-after: **network_advanced_parameters**
-   :end-before: **end_network_advanced_parameters**
+     :start-after: **network_advanced_parameters**
+     :end-before: **end_network_advanced_parameters**
 
    * - **Service area (lines)**
      - ``OUTPUT``
