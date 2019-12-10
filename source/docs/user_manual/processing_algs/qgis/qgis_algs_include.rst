@@ -94,6 +94,14 @@
        Default: 0.0
      - Two lines with nodes closer than the specified
        tolerance are considered connected
+   * - **Include upper/lower bound points**
+     - ``INCLUDE_BOUNDS``
+     - [boolean]
+
+       Default: False
+     - Creates a point layer output with two points for each
+       edge at the boundaries of the service area.
+       One point is the start of that edge, the other is the end.
 **end_network_advanced_parameters**
 
 .. The following section is included in vector selection algorithms such as
