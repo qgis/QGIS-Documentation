@@ -34,7 +34,7 @@ Parameters
      - ``INPUT``
      - [vector: any]
      - Input vector layer
-   * - **Category field name**
+   * - **Category name field**
      - ``NAME_FIELD``
      - [tablefield: any]
      - Categorical field to use for grouping the bars (X axis)
@@ -95,7 +95,7 @@ Parameters
      - ``INPUT``
      - [vector: any]
      - Input vector layer
-   * - **Category field name**
+   * - **Category name field**
      - ``NAME_FIELD``
      - [tablefield: any]
      - Categorical field to use for grouping the boxes (X axis)
@@ -115,7 +115,7 @@ Parameters
        * 1 --- Show Standard Deviation
        * 2 --- Don't show mean and standard deviation
 
-   * - **Bar plot**
+   * - **Box plot**
      - ``OUTPUT``
      - [html]
 
@@ -165,11 +165,11 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Input layer**
+   * - **Input table**
      - ``INPUT``
      - [vector: any]
      - Input vector layer
-   * - **Category field name**
+   * - **Category name field**
      - ``NAME_FIELD``
      - [tablefield: any]
      - Categorical field to use for grouping the boxes (X axis)
@@ -234,7 +234,7 @@ Parameters
      - ``INPUT``
      - [vector: any]
      - Input vector layer
-   * - **Category field name**
+   * - **Category name field**
      - ``NAME_FIELD``
      - [tablefield: any]
      - Categorical field to use for grouping the features (X axis)
