@@ -11,7 +11,9 @@ Database
 
 Export to PostgreSQL
 --------------------
-Exports a vector layer to a PostgreSQL database.
+Exports a vector layer to a PostgreSQL database, creating a new relation.
+If a relation with the same name exists, it will be removed before the
+new relation is created.
 Prior to this a connection between QGIS and the PostgreSQL database has to
 be created (see eg :ref:`vector_create_stored_connection`).
 
