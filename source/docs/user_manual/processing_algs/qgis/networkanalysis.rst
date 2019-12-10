@@ -50,7 +50,7 @@ Parameters
      - ``TRAVEL_COST``
      - [number]
 
-       Default: *0.0*
+       Default: 0
      - The value is estimated as a distance (in the network
        layer units) when looking for the *Shortest* path and
        as time (in seconds) for the *Fastest* path.
@@ -60,7 +60,7 @@ Parameters
      - ``DIRECTION_FIELD``
      - [tablefield: string]
 
-       Default: *0.0*
+       Default: None
      - The field used to specify directions for the network edges.
        
        The values used in this field are specified with the three
@@ -119,6 +119,8 @@ Parameters
        Optional
      - ``SPEED_FIELD``
      - [tablefield: string]
+
+       Default: None
      - Field providing the speed value (in ``km/h``) for the
        edges of the network when looking for the fastest path.
        
@@ -131,7 +133,7 @@ Parameters
      - ``DEFAULT_SPEED``
      - [number]
 
-       Default: 50.0
+       Default: 50
      - Value to use to calculate the travel time if no speed
        field is provided for an edge
    * - **Topology tolerance**
@@ -140,7 +142,7 @@ Parameters
      - ``TOLERANCE``
      - [number]
 
-       Default: 0.0
+       Default: 0
      - Two lines with nodes closer than the specified
        tolerance are considered connected
    * - **Include upper/lower bound points**
@@ -260,7 +262,7 @@ Parameters
      - ``TRAVEL_COST``
      - [number]
 
-       Default: *0.0*
+       Default: 0
      - The value is estimated as a distance (in the network
        layer units) when looking for the *Shortest* path and
        as time (in seconds) for the *Fastest* path.
@@ -270,7 +272,7 @@ Parameters
      - ``DIRECTION_FIELD``
      - [tablefield: string]
 
-       Default: *0.0*
+       Default: None
      - The field used to specify directions for the network edges.
        
        The values used in this field are specified with the three
@@ -329,6 +331,8 @@ Parameters
        Optional
      - ``SPEED_FIELD``
      - [tablefield: string]
+
+       Default: None
      - Field providing the speed value (in ``km/h``) for the
        edges of the network when looking for the fastest path.
        
@@ -341,7 +345,7 @@ Parameters
      - ``DEFAULT_SPEED``
      - [number]
 
-       Default: 50.0
+       Default: 50
      - Value to use to calculate the travel time if no speed
        field is provided for an edge
    * - **Topology tolerance**
@@ -350,7 +354,7 @@ Parameters
      - ``TOLERANCE``
      - [number]
 
-       Default: 0.0
+       Default: 0
      - Two lines with nodes closer than the specified
        tolerance are considered connected
    * - **Include upper/lower bound points**
@@ -469,7 +473,7 @@ Parameters
      - ``DIRECTION_FIELD``
      - [tablefield: string]
 
-       Default: *0.0*
+       Default: None
      - The field used to specify directions for the network edges.
        
        The values used in this field are specified with the three
@@ -528,6 +532,8 @@ Parameters
        Optional
      - ``SPEED_FIELD``
      - [tablefield: string]
+
+       Default: None
      - Field providing the speed value (in ``km/h``) for the
        edges of the network when looking for the fastest path.
        
@@ -540,7 +546,7 @@ Parameters
      - ``DEFAULT_SPEED``
      - [number]
 
-       Default: 50.0
+       Default: 50
      - Value to use to calculate the travel time if no speed
        field is provided for an edge
    * - **Topology tolerance**
@@ -549,7 +555,7 @@ Parameters
      - ``TOLERANCE``
      - [number]
 
-       Default: 0.0
+       Default: 0
      - Two lines with nodes closer than the specified
        tolerance are considered connected
    * - **Include upper/lower bound points**
@@ -642,7 +648,7 @@ Parameters
      - ``DIRECTION_FIELD``
      - [tablefield: string]
 
-       Default: *0.0*
+       Default: None
      - The field used to specify directions for the network edges.
        
        The values used in this field are specified with the three
@@ -701,6 +707,8 @@ Parameters
        Optional
      - ``SPEED_FIELD``
      - [tablefield: string]
+
+       Default: None
      - Field providing the speed value (in ``km/h``) for the
        edges of the network when looking for the fastest path.
        
@@ -713,7 +721,7 @@ Parameters
      - ``DEFAULT_SPEED``
      - [number]
 
-       Default: 50.0
+       Default: 50
      - Value to use to calculate the travel time if no speed
        field is provided for an edge
    * - **Topology tolerance**
@@ -722,7 +730,7 @@ Parameters
      - ``TOLERANCE``
      - [number]
 
-       Default: 0.0
+       Default: 0
      - Two lines with nodes closer than the specified
        tolerance are considered connected
    * - **Include upper/lower bound points**
@@ -812,7 +820,7 @@ Parameters
      - ``DIRECTION_FIELD``
      - [tablefield: string]
 
-       Default: *0.0*
+       Default: None
      - The field used to specify directions for the network edges.
        
        The values used in this field are specified with the three
@@ -871,6 +879,8 @@ Parameters
        Optional
      - ``SPEED_FIELD``
      - [tablefield: string]
+
+       Default: None
      - Field providing the speed value (in ``km/h``) for the
        edges of the network when looking for the fastest path.
        
@@ -883,7 +893,7 @@ Parameters
      - ``DEFAULT_SPEED``
      - [number]
 
-       Default: 50.0
+       Default: 50
      - Value to use to calculate the travel time if no speed
        field is provided for an edge
    * - **Topology tolerance**
@@ -892,7 +902,7 @@ Parameters
      - ``TOLERANCE``
      - [number]
 
-       Default: 0.0
+       Default: 0
      - Two lines with nodes closer than the specified
        tolerance are considered connected
    * - **Include upper/lower bound points**
