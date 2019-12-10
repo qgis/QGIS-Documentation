@@ -237,9 +237,9 @@ Parameters
      - [coordinates]
      - Point feature representing the end point of the routes
 
-.. include:: qgis_algs_include.rst
-   :start-after: **network_advanced_parameters**
-   :end-before: **end_network_advanced_parameters**
+   .. include:: qgis_algs_include.rst
+      :start-after: **network_advanced_parameters**
+      :end-before: **end_network_advanced_parameters**
   
    * - **Shortest path**
      - ``OUTPUT``
