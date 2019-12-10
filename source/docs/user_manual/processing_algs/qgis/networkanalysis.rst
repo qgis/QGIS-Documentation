@@ -59,12 +59,6 @@ Parameters
       :start-after: **network_advanced_parameters**
       :end-before: **end_network_advanced_parameters**
 
-  ``Include upper/lower bound points`` [boolean]
-    
-
-    Default: *False*
-
-
    * - **Service area (lines)**
      - ``OUTPUT``
      - [vector: line]
