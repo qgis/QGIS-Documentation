@@ -88,9 +88,7 @@ Parameters
      - [string]
 
        Default: '' (empty string)
-     - Value set in the direction field to identError in "include" directive:
-
-no content permitted.ify edges with a
+     - Value set in the direction field to identify edges with a
        backward direction
    * - **Value for both directions**
 
