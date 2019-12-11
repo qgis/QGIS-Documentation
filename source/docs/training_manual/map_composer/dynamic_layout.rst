@@ -16,8 +16,9 @@ will adapt dynamically.
    click the |newLayout| :sup:`New Print Layout` icon in the toolbar or
    choose :menuselection:`File --> New Print Layout`. You will be prompted to
    choose a title for the new layer.
-#. We want to create a map layout consisting of a header and a map with the regions of
-   Alaska. The layout should have a margin of 7.5 mm and the header should be 36mm high.
+#. We want to create a map layout consisting of a header and a map of the region near
+   Swellendam, South Africa.
+   The layout should have a margin of 7.5 mm and the header should be 36mm high.
 #. Create a map item called ``main map`` on the canvas and go to the :guilabel:`Layout` panel.
    Scroll down to the :guilabel:`Variables` section and find the :guilabel:`Layout` part.
    Here we set some variables you can use all over the dynamic print layout. Go to the :guilabel:`Layout` panel
@@ -64,7 +65,7 @@ will adapt dynamically.
    In the :guilabel:`Items` panel enter the name ``header``.
 #. Again, go to the :guilabel:`Item Properties` and open the :guilabel:`Position and Size` section.
    Using |dataDefineExpressionOn| :sup:`Data defined override`,
-   choose the ``@rg_layout_margin`` variable for :guilabel:`X` as well as for :guilabel:`Y`.
+   choose the ``@sw_layout_margin`` variable for :guilabel:`X` as well as for :guilabel:`Y`.
    :guilabel:`Width` shall be defined by the expression
    
    ::
@@ -241,7 +242,7 @@ will adapt dynamically.
    To include a logo of your organisation you have to save your logo under your home directory and enter
    the path under :menuselection:`Main Properties --> Image Source`.
 #. Our layout still needs a north arrow.
-   This will also be insterted by using |addNewImage| :sup:`Adds a new Picture to the layout`.
+   This will also be inserted by using |addNewImage| :sup:`Adds a new Picture to the layout`.
    Set the name to ``north arrow``, go to :guilabel:`Main Properties` and select the
    :file:`Arrow_02.svg`.
    The position is defined by

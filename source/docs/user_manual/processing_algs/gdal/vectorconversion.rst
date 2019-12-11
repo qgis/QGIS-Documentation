@@ -42,7 +42,7 @@ Parameters
       - Additional GDAL creation options.
    *  - **Converted**
       - ``OUTPUT``
-      - [vector: any]
+      - [same as input]
       - Specification of the output vector layer.
         One of:
         
@@ -70,7 +70,7 @@ Outputs
       - Description
    *  - **Converted**
       - ``OUTPUT``
-      - [vector: any]
+      - [same as input]
       - The output vector layer
 
 

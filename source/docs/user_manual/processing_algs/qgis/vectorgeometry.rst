@@ -63,7 +63,7 @@ Parameters
      - [same as input]
 
        Default: ``[Create temporary layer]``
-     - Specify the output (input copy with geometry) layer
+     - Specify the output (input copy with geometry) layer.
        One of:
 
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
@@ -613,7 +613,7 @@ information (number of errors found and types of error):
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
-.. seealso:: :ref:`qgisfixgeometries`
+.. seealso:: :ref:`qgisfixgeometries` and the core plugin :ref:`geometry_checker`
 
 Parameters
 ..........
@@ -786,15 +786,21 @@ Types of error messages and their meanings
           :align: center
 
    * - Duplicate rings
-     - 
-     - 
+     - This error happens when two rings (exterior or interior) of a polygon geometry
+       are identical
+
+     - .. figure:: img/geos_dupl_rings.png
+          :align: center 
 
    * - Too few points in geometry component
      - 
      -
 
    * - Invalid coordinate
-     - 
+     - For a point geometry, this error happens when the geometry does not
+       have a proper coordinate pair.
+       The coordinate pair does not contain a latitude value and a longitude
+       value in that order. 
      -
 
    * - Ring is not closed
@@ -828,16 +834,22 @@ Types of error messages and their meanings
      -
 
    * - Line %1 contains %n duplicate node(s) at %2 
-     - 
-     - 
+     - This error happens when consecutive points on a line have the same
+       coordinates.
+     - .. figure:: img/geos_rep_point.png
+          :align: center 
 
    * - Segments %1 and %2 of line %3 intersect at %4 
-     - 
-     -
+     - This error happens when a line self intersects (two segments of the
+       line intersect each other).
+     - .. figure:: img/qgis_seg_line_int.png
+          :align: center
 
    * - Ring self-intersection 
-     - 
-     -
+     - This error happens when an outer or inner (island) ring / boundary of a polygon
+       geometry intersects itself.
+     - .. figure:: img/geos_ring_inter.png
+          :align: center
 
    * - Ring %1 of polygon %2 not in exterior ring
      -

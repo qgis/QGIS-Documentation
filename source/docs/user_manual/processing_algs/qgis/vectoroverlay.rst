@@ -583,7 +583,7 @@ Parameters
        
        Default: ``[Create temporary layer]``
      - Specify the layer to contain (the parts of) the features from
-       the input and overlay layers that so not overlap features from the
+       the input and overlay layers that do not overlap features from the
        other layer.
        One of:
 
