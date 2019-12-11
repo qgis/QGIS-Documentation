@@ -339,86 +339,6 @@ Outputs
      - Output raster
 
 
-.. _gdalgridaverage:
-
-Grid (Moving average)
----------------------
-The Moving Average is a simple data averaging algorithm. It uses a moving window of elliptic form to search values
-and averages all data points within the window. Search ellipse can be rotated by specified angle, the center of ellipse
-located at the grid node. Also the minimum number of data points to average can be set, if there are not enough points
-in window, the grid node considered empty and will be filled with specified NODATA value.
-
-This algorithm is derived from the `GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
-
-``Default menu``: :menuselection:`Raster --> Analysis`
-
-.. seealso:: `GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_
-
-Parameters
-..........
-
-``Input layer`` [vector: point]
-  Point vector layer
-
-``Radius 1`` [number]
-  The first radius (X axis if rotation angle is 0) of search ellipse.
-
-  Default: *0.0*
-
-``Radius 2`` [number]
-  The second radius (Y axis if rotation angle is 0) of search ellipse.
-
-  Default: *0.0*
-
-``Angle`` [number]
-  Angle of ellipse rotation in degrees.
-  Ellipse rotated counter clockwise.
-
-  Default: *0.0*
-
-``Min points`` [number]
-  Minimum number of data points to average.
-  If less amount of points found the grid node considered empty and will be filled with NODATA marker.
-
-  Default: *0.0*
-
-``Nodata`` [number]
-  No data marker to fill empty points.
-
-  Default: *0.0*
-
-``Z field`` [tablefield: numeric]
-  Optional
-
-  Field for the interpolation.
-
-``Output raster type`` [enumeration]
-  Raster file type.
-
-  Options:
-
-  * 0 --- Byte
-  * 1 --- Int16
-  * 2 --- UInt16
-  * 3 --- UInt32
-  * 4 --- Int32
-  * 5 --- Float32
-  * 6 --- Float64
-  * 7 --- CInt16
-  * 8 --- CInt32
-  * 9 --- CFloat32
-  * 10 --- CFloat64
-
-  Default: *5*
-
-Outputs
-.......
-
-``Output file`` [raster]
-
-Interpolated raster file.
-
-
 .. _gdalgriddatametrics:
 
 Grid (Data metrics)
@@ -434,83 +354,296 @@ This algorithm is derived from the `GDAL grid utility <https://gdal.org/gdal_gri
 Parameters
 ..........
 
-``Input layer`` [vector: point]
-  Point vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Metrics`` [enumeration]
-  List of available metrics:
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: point]
+     - Input point vector layer
+   * - **Data metric to use**
+     - ``METRIC``
+     - [enumeration]
 
-  Options:
+       Default: 0
+     - One of:
 
-  * 0 --- Minimum, minimum value found in grid node search ellipse.
-  * 1 --- Maximum, maximum value found in grid node search ellipse
-  * 2 --- Range, a difference between the minimum and maximum values found in grid node search ellipse
-  * 3 --- Count, a number of data points found in grid node search ellipse
-  * 4 --- Average distance, an average distance between the grid node (center of the search ellipse) and all of the data points found in grid node search ellipse
-  * 5 --- Average distance between points, an average distance between the data points found in grid node search ellipse. The distance between each pair of points within ellipse is calculated and average of all distances is set as a grid node value
+       * 0 --- Minimum, minimum value found in grid node search ellipse
+       * 1 --- Maximum, maximum value found in grid node search ellipse
+       * 2 --- Range, a difference between the minimum and maximum
+         values found in grid node search ellipse
+       * 3 --- Count, a number of data points found in grid node search
+         ellipse
+       * 4 --- Average distance, an average distance between the grid
+         node (center of the search ellipse) and all of the data
+         points found in grid node search ellipse
+       * 5 --- Average distance between points, an average distance
+         between the data points found in grid node search ellipse.
+         The distance between each pair of points within ellipse
+         is calculated and average of all distances is set as a
+         grid node value
 
-  Default: *0*
+   * - **The first radius of search ellipse**
+     - ``RADIUS_1``
+     - [number]
 
-``Radius 1`` [number]
-  The first radius (X axis if rotation angle is 0) of search ellipse.
-  Set this parameter to zero to use whole point array.
+       Default: 0.0
+     - The first radius (X axis if rotation angle is 0) of
+       the search ellipse
+   * - **The second radius of search ellipse**
+     - ``RADIUS_Z``
+     - [number]
 
-  Default: *0.0*
+       Default: 0.0
+     - The second radius (Y axis if rotation angle is 0)
+       of the search ellipse
+   * - **Angle of search ellipse rotation in degrees (counter clockwise)**
+     - ``ANGLE``
+     - [number]
 
-``Radius 2`` [number]
-  The second radius (Y axis if rotation angle is 0) of search ellipse.
-  Set this parameter to zero to use whole point array.
+       Default: 0.0
+     - Angle of ellipse rotation in degrees.
+       Ellipse rotated counter clockwise.
+   * - **Minimum number of data points to use**
+     - ``MIN_POINTS``
+     - [number]
 
-  Default: *0.0*
+       Default: 0.0
+     - Minimum number of data points to average.
+       If less amount of points found the grid node
+       considered empty and will be filled with
+       NODATA marker.
+   * - **Nodata**
+     - ``NODATA``
+     - [number]
 
-``Angle`` [number]
-  Angle of search ellipse rotation in degrees (counter clockwise).
+       Default: 0.0
+     - No data marker to fill empty points
+   * - **Z value from field**
 
-  Default: *0.0*
+       Optional
+     - ``Z_FIELD``
+     - [tablefield: any]
+     - Field for the interpolation
+   * - **Additional creation options**
 
-``Min points`` [number]
-  Minimum number of data points to use.
-  If less amount of points found the grid node considered empty and
-  will be filled with NODATA marker.
+       Optional
+     - ``OPTIONS``
+     - [string]
 
-  This is only used if search ellipse is set (both radii are non-zero).
+       Default: ''
+     - For adding one or more creation options that control the
+       raster to be created (colors, block size, file
+       compression...).
+       For convenience, you can rely on predefined profiles (see
+       :ref:`GDAL driver options section <gdal_createoptions>`).
+   * - **Additional command-line parameters**
 
-  Default: *0.0*
+       Optional
+     - ``EXTRA``
+     - [string]   
 
-``Nodata`` [number]
-  NODATA marker to fill empty points.
+       Default: None
+     - Add extra GDAL command line options
+   * - **Output data type**
+     - ``DATA_TYPE``
+     - [enumeration]
 
-  Default: *0.0*
+       Default: 5
+     - Defines the data type of the output raster file.
+       Options:
 
-``Z field`` [tablefield: numeric]
-  Optional
+       * 0 --- Byte
+       * 1 --- Int16
+       * 2 --- UInt16
+       * 3 --- UInt32
+       * 4 --- Int32
+       * 5 --- Float32
+       * 6 --- Float64
+       * 7 --- CInt16
+       * 8 --- CInt32
+       * 9 --- CFloat32
+       * 10 --- CFloat64
 
-  Field for the interpolation.
+   * - **Interpolated (data metrics)**
+     - ``OUTPUT``
+     - [raster]
 
-``Output raster type`` [enumeration]
-  Raster file type.
+       Default: ``[Save to temporary file]``
+     - Specify the output raster layer with interpolated values.
+       One of:
 
-  Options:
+       * Save to a Temporary File
+       * Save to File...
 
-  * 0 --- Byte
-  * 1 --- Int16
-  * 2 --- UInt16
-  * 3 --- UInt32
-  * 4 --- Int32
-  * 5 --- Float32
-  * 6 --- Float64
-  * 7 --- CInt16
-  * 8 --- CInt32
-  * 9 --- CFloat32
-  * 10 --- CFloat64
-
-  Default: *5*
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Output file`` [raster]
-  Interpolated raster file.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Interpolated (data metrics)**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster with interpolated values
+
+
+.. _gdalgridinversedistancenearestneighbor:
+
+Grid (IDW with nearest neighbor searching)
+------------------------------------------
+
+Computes the Inverse Distance to a Power gridding combined to the nearest neighbor method.
+Ideal when a maximum number of data points to use is required.
+
+This algorithm is derived from the `GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
+
+.. seealso:: `GDAL grid <https://gdal.org/gdal_grid.html>`_
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Point layer**
+     - ``INPUT``
+     - [vector: point]
+     - Input point vector layer
+   * - **Weighting power**
+     - ``POWER``
+     - [number]
+
+       Default: 2.0
+     - Weighting power
+   * - **Smothing**
+     - ``SMOOTHING``
+     - [number]
+
+       Default: 0.0
+     - Smoothing parameter
+   * - **The radius of the search circle**
+     - ``SMOOTHING``
+     - [number]
+
+       Default: 1.0
+     - The radius of the search circle
+   * - **Maximum number of data points to use**
+     - ``MAX_POINTS``
+     - [number]
+
+       Default: 12
+     - Do not search for more points than this number.
+   * - **Minimum number of data points to use**
+     - ``MIN_POINTS``
+     - [number]
+
+       Default: 0
+     - Minimum number of data points to average.
+       If less amount of points found the grid node
+       considered empty and will be filled with
+       NODATA marker.
+   * - **Nodata**
+     - ``NODATA``
+     - [number]
+
+       Default: 0.0
+     - No data marker to fill empty points
+   * - **Z value from field**
+
+       Optional
+     - ``Z_FIELD``
+     - [tablefield: any]
+     - Field for the interpolation
+   * - **Additional creation options**
+
+       Optional
+     - ``OPTIONS``
+     - [string]
+
+       Default: ''
+     - For adding one or more creation options that control the
+       raster to be created (colors, block size, file
+       compression...).
+       For convenience, you can rely on predefined profiles (see
+       :ref:`GDAL driver options section <gdal_createoptions>`).
+   * - **Additional command-line parameters**
+
+       Optional
+     - ``EXTRA``
+     - [string]   
+
+       Default: None
+     - Add extra GDAL command line options
+   * - **Output data type**
+     - ``DATA_TYPE``
+     - [enumeration]
+
+       Default: 5
+     - Defines the data type of the output raster file.
+       Options:
+
+       * 0 --- Byte
+       * 1 --- Int16
+       * 2 --- UInt16
+       * 3 --- UInt32
+       * 4 --- Int32
+       * 5 --- Float32
+       * 6 --- Float64
+       * 7 --- CInt16
+       * 8 --- CInt32
+       * 9 --- CFloat32
+       * 10 --- CFloat64
+
+   * - **Interpolated (IDW with NN search)**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output raster layer with interpolated values.
+       One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Interpolated (IDW with NN search)**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster with interpolated values
 
 
 .. _gdalgridinversedistance:
@@ -529,169 +662,152 @@ This algorithm is derived from the `GDAL grid utility <https://gdal.org/gdal_gri
 
 .. seealso:: `GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_
 
-Parameters
-..........
-
-``Input layer`` [vector: point]
-  Point vector layer.
-
-``Power`` [number]
-  Weighting power.
-
-  Default: *2.0*
-
-``Smothing`` [number]
-  Smoothing parameter.
-
-  Default: *0.0*
-
-``Radius 1`` [number]
-  The first radius (X axis if rotation angle is 0) of search ellipse.
-
-  Default: *0.0*
-
-``Radius 2`` [number]
-  The second radius (Y axis if rotation angle is 0) of search ellipse.
-
-  Default: *0.0*
-
-``Angle`` [number]
-  Angle of ellipse rotation in degrees.
-
-  Ellipse rotated counter clockwise.
-
-  Default: *0.0*
-
-``Max points`` [number]
-  Maximum number of data points to use.
-
-  Do not search for more points than this number. If less amount of points found
-  the grid node is considered empty and will be filled with NODATA marker.
-
-  Default: *0.0*
-
-``Min points`` [number]
-  Minimum number of data points to use.
-
-  If less amount of points found the grid node is considered empty and will be
-  filled with NODATA marker.
-
-  Default: *0.0*
-
-``Nodata`` [number]
-  No data marker to fill empty points.
-
-  Default: *0.0*
-
-``Z field`` [tablefield: numeric]
-  Optional
-
-  Field for the interpolation.
-
-``Output raster type`` [enumeration]
-  Raster file type.
-
-  Options:
-
-  * 0 --- Byte
-  * 1 --- Int16
-  * 2 --- UInt16
-  * 3 --- UInt32
-  * 4 --- Int32
-  * 5 --- Float32
-  * 6 --- Float64
-  * 7 --- CInt16
-  * 8 --- CInt32
-  * 9 --- CFloat32
-  * 10 --- CFloat64
-
-  Default: *5*
-
-Outputs
-.......
-
-``Output file`` [raster]
-  Interpolated raster file.
-
-
-.. _gdalgridinversedistancenearestneighbor:
-
-Grid (IDW with nearest neighbor searching)
-------------------------------------------
-
-Computes the Inverse Distance to a Power gridding combined to the nearest neighbor method.
-Ideal when a maximum number of data points to use is required.
-
-This algorithm is derived from the `GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
-
-.. seealso:: `GDAL grid <https://gdal.org/gdal_grid.html>`_
 
 Parameters
 ..........
 
-``Input layer`` [vector: point]
-  Point vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Power`` [number]
-  Weighting power
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Point layer**
+     - ``INPUT``
+     - [vector: point]
+     - Input point vector layer
+   * - **Weighting power**
+     - ``POWER``
+     - [number]
 
-  Default: *2.0*
+       Default: 2.0
+     - Weighting power
+   * - **Smothing**
+     - ``SMOOTHING``
+     - [number]
 
-``Smothing`` [number]
-  Smoothing parameter.
+       Default: 0.0
+     - Smoothing parameter
+   * - **The first radius of search ellipse**
+     - ``RADIUS_1``
+     - [number]
 
-  Default: *0.0*
+       Default: 0.0
+     - The first radius (X axis if rotation angle is 0) of
+       the search ellipse
+   * - **The second radius of search ellipse**
+     - ``RADIUS_Z``
+     - [number]
 
-``Radius`` [number]
-  The radius of the search circle, which should be non-zero.
+       Default: 0.0
+     - The second radius (Y axis if rotation angle is 0)
+       of the search ellipse
+   * - **Angle of search ellipse rotation in degrees (counter clockwise)**
+     - ``ANGLE``
+     - [number]
 
-  Default: *1.0*
+       Default: 0.0
+     - Angle of ellipse rotation in degrees.
+       Ellipse rotated counter clockwise.
+   * - **Maximum number of data points to use**
+     - ``MAX_POINTS``
+     - [number]
 
-``max_points`` [number]
-  Maximum number of data points to use. Do not search for more points than this number.
+       Default: 12
+     - Do not search for more points than this number.
+   * - **Minimum number of data points to use**
+     - ``MIN_POINTS``
+     - [number]
 
-  Default: *12*
+       Default: 0
+     - Minimum number of data points to average.
+       If less amount of points found the grid node
+       considered empty and will be filled with
+       NODATA marker.
+   * - **Nodata**
+     - ``NODATA``
+     - [number]
 
-``min_points`` [number]
-  Minimum number of data points to use. If less amount of points found the grid node is
-  considered empty and will be filled with NODATA marker.
+       Default: 0.0
+     - No data marker to fill empty points
+   * - **Z value from field**
 
-  Default: *0*
+       Optional
+     - ``Z_FIELD``
+     - [tablefield: any]
+     - Field for the interpolation
+   * - **Additional creation options**
 
-``Nodata`` [number]
-  No data marker to fill empty points.
+       Optional
+     - ``OPTIONS``
+     - [string]
 
-  Default: *0.0*
+       Default: ''
+     - For adding one or more creation options that control the
+       raster to be created (colors, block size, file
+       compression...).
+       For convenience, you can rely on predefined profiles (see
+       :ref:`GDAL driver options section <gdal_createoptions>`).
+   * - **Additional command-line parameters**
 
-``Z field`` [tablefield: numeric]
-  Optional
+       Optional
+     - ``EXTRA``
+     - [string]   
 
-  Field for the interpolation.
+       Default: None
+     - Add extra GDAL command line options
+   * - **Output data type**
+     - ``DATA_TYPE``
+     - [enumeration]
 
-``Output raster type`` [enumeration]
-  Raster file type.
+       Default: 5
+     - Defines the data type of the output raster file.
+       Options:
 
-  Options:
+       * 0 --- Byte
+       * 1 --- Int16
+       * 2 --- UInt16
+       * 3 --- UInt32
+       * 4 --- Int32
+       * 5 --- Float32
+       * 6 --- Float64
+       * 7 --- CInt16
+       * 8 --- CInt32
+       * 9 --- CFloat32
+       * 10 --- CFloat64
 
-  * 0 --- Byte
-  * 1 --- Int16
-  * 2 --- UInt16
-  * 3 --- UInt32
-  * 4 --- Int32
-  * 5 --- Float32
-  * 6 --- Float64
-  * 7 --- CInt16
-  * 8 --- CInt32
-  * 9 --- CFloat32
-  * 10 --- CFloat64
+   * - **Interpolated (IDW with NN search)**
+     - ``OUTPUT``
+     - [raster]
 
-  Default: *5*
+       Default: ``[Save to temporary file]``
+     - Specify the output raster layer with interpolated values.
+       One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Output file`` [raster]
-  Interpolated raster file.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Interpolated (IDW with NN search)**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster with interpolated values
 
 
 .. _gdalgridlinear:
@@ -710,51 +826,259 @@ This algorithm is derived from the `GDAL grid utility <https://gdal.org/gdal_gri
 Parameters
 ..........
 
-``Input layer`` [vector: point]
-  Point vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Search distance`` [number]
-  In case the point to be interpolated does not fit into a triangle of the Delaunay
-  triangulation, use that maximum distance to search a nearest neighbour, or use
-  nodata otherwise. If set to ``-1``, the search distance is infinite.
-  If set to ``0``, no data value will be always used.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Point layer**
+     - ``INPUT``
+     - [vector: point]
+     - Input point vector layer
+   * - **Search distance**
+     - ``RADIUS``
+     - [number]
 
-  Default: *-1.0*
+       Default: -1.0
+     - In case the point to be interpolated does not fit into a 
+       triangle of the Delaunay triangulation, use that maximum
+       distance to search a nearest neighbour, or use nodata
+       otherwise.
+       If set to ``-1``, the search distance is infinite.
+       If set to ``0``, no data value will be used.
+   * - **Nodata**
+     - ``NODATA``
+     - [number]
 
-``Nodata`` [number]
-  No data marker to fill empty points.
+       Default: 0.0
+     - No data marker to fill empty points
+   * - **Z value from field**
 
-  Default: *0.0*
+       Optional
+     - ``Z_FIELD``
+     - [tablefield: any]
+     - Field for the interpolation
+   * - **Additional creation options**
 
-``Z field`` [tablefield: numeric]
-  Optional
+       Optional
+     - ``OPTIONS``
+     - [string]
 
-  Field for the interpolation.
+       Default: ''
+     - For adding one or more creation options that control the
+       raster to be created (colors, block size, file
+       compression...).
+       For convenience, you can rely on predefined profiles (see
+       :ref:`GDAL driver options section <gdal_createoptions>`).
+   * - **Additional command-line parameters**
 
-``Output raster type`` [enumeration]
-  Raster file type.
+       Optional
+     - ``EXTRA``
+     - [string]   
 
-  Options:
+       Default: None
+     - Add extra GDAL command line options
+   * - **Output data type**
+     - ``DATA_TYPE``
+     - [enumeration]
 
-  * 0 --- Byte
-  * 1 --- Int16
-  * 2 --- UInt16
-  * 3 --- UInt32
-  * 4 --- Int32
-  * 5 --- Float32
-  * 6 --- Float64
-  * 7 --- CInt16
-  * 8 --- CInt32
-  * 9 --- CFloat32
-  * 10 --- CFloat64
+       Default: 5
+     - Defines the data type of the output raster file.
+       Options:
 
-  Default: *5*
+       * 0 --- Byte
+       * 1 --- Int16
+       * 2 --- UInt16
+       * 3 --- UInt32
+       * 4 --- Int32
+       * 5 --- Float32
+       * 6 --- Float64
+       * 7 --- CInt16
+       * 8 --- CInt32
+       * 9 --- CFloat32
+       * 10 --- CFloat64
+
+   * - **Interpolated (Linear)**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output raster layer with interpolated values.
+       One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Output file`` [raster]
-  Interpolated raster file.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Interpolated (Linear)**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster with interpolated values
+
+
+.. _gdalgridaverage:
+
+Grid (Moving average)
+---------------------
+The Moving Average is a simple data averaging algorithm.
+It uses a moving window of elliptic form to search values and averages
+all data points within the window.
+Search ellipse can be rotated by specified angle, the center of ellipse
+located at the grid node.
+Also the minimum number of data points to average can be set, if there
+are not enough points in window, the grid node considered empty and
+will be filled with specified NODATA value.
+
+This algorithm is derived from the
+`GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
+
+``Default menu``: :menuselection:`Raster --> Analysis`
+
+.. seealso:: `GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: point]
+     - Input point vector layer
+   * - **The first radius of search ellipse**
+     - ``RADIUS_1``
+     - [number]
+
+       Default: 0.0
+     - The first radius (X axis if rotation angle is 0) of
+       the search ellipse
+   * - **The second radius of search ellipse**
+     - ``RADIUS_Z``
+     - [number]
+
+       Default: 0.0
+     - The second radius (Y axis if rotation angle is 0)
+       of the search ellipse
+   * - **Angle of search ellipse rotation in degrees (counter clockwise)**
+     - ``ANGLE``
+     - [number]
+
+       Default: 0.0
+     - Angle of ellipse rotation in degrees.
+       Ellipse rotated counter clockwise.
+   * - **Minimum number of data points to use**
+     - ``MIN_POINTS``
+     - [number]
+
+       Default: 0.0
+     - Minimum number of data points to average.
+       If less amount of points found the grid node
+       considered empty and will be filled with
+       NODATA marker.
+   * - **Nodata**
+     - ``NODATA``
+     - [number]
+
+       Default: 0.0
+     - No data marker to fill empty points
+   * - **Z value from field**
+
+       Optional
+     - ``Z_FIELD``
+     - [tablefield: any]
+     - Field for the interpolation
+   * - **Additional creation options**
+
+       Optional
+     - ``OPTIONS``
+     - [string]
+
+       Default: ''
+     - For adding one or more creation options that control the
+       raster to be created (colors, block size, file
+       compression...).
+       For convenience, you can rely on predefined profiles (see
+       :ref:`GDAL driver options section <gdal_createoptions>`).
+   * - **Additional command-line parameters**
+
+       Optional
+     - ``EXTRA``
+     - [string]   
+
+       Default: None
+     - Add extra GDAL command line options
+   * - **Output data type**
+     - ``DATA_TYPE``
+     - [enumeration]
+
+       Default: 5
+     - Defines the data type of the output raster file.
+       Options:
+
+       * 0 --- Byte
+       * 1 --- Int16
+       * 2 --- UInt16
+       * 3 --- UInt32
+       * 4 --- Int32
+       * 5 --- Float32
+       * 6 --- Float64
+       * 7 --- CInt16
+       * 8 --- CInt32
+       * 9 --- CFloat32
+       * 10 --- CFloat64
+
+   * - **Interpolated (moving average)**
+     - ``OUTPUT``
+     - [raster] 
+
+       Default: ``[Save to temporary file]``
+     - Specify the output raster layer. One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Interpolated (moving average)**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster with interpolated values
 
 
 .. _gdalgridnearestneighbor:
@@ -774,122 +1098,263 @@ This algorithm is derived from the `GDAL grid utility <https://gdal.org/gdal_gri
 Parameters
 ..........
 
-``Input layer`` [vector: point]
-  Point vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Radius 1`` [number]
-  The first radius (X axis if rotation angle is 0) of search ellipse.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Point layer**
+     - ``INPUT``
+     - [vector: point]
+     - Input point vector layer
+   * - **The first radius of search ellipse**
+     - ``RADIUS_1``
+     - [number]
 
-  Default: *0.0*
+       Default: 0.0
+     - The first radius (X axis if rotation angle is 0) of
+       the search ellipse
+   * - **The second radius of search ellipse**
+     - ``RADIUS_Z``
+     - [number]
 
-``Radius 2`` [number]
-  The second radius (Y axis if rotation angle is 0) of search ellipse.
+       Default: 0.0
+     - The second radius (Y axis if rotation angle is 0)
+       of the search ellipse
+   * - **Angle of search ellipse rotation in degrees (counter clockwise)**
+     - ``ANGLE``
+     - [number]
 
-  Default: *0.0*
+       Default: 0.0
+     - Angle of ellipse rotation in degrees.
+       Ellipse rotated counter clockwise.
+   * - **Nodata**
+     - ``NODATA``
+     - [number]
 
-``Angle`` [number]
-  Angle of ellipse rotation in degrees.
-  Ellipse rotated counter clockwise.
+       Default: 0.0
+     - No data marker to fill empty points
+   * - **Z value from field**
 
-  Default: *0.0*
+       Optional
+     - ``Z_FIELD``
+     - [tablefield: any]
+     - Field for the interpolation
+   * - **Additional creation options**
 
-``Nodata`` [number]
-  No data marker to fill empty points.
+       Optional
+     - ``OPTIONS``
+     - [string]
 
-  Default: *0.0*
+       Default: ''
+     - For adding one or more creation options that control the
+       raster to be created (colors, block size, file
+       compression...).
+       For convenience, you can rely on predefined profiles (see
+       :ref:`GDAL driver options section <gdal_createoptions>`).
+   * - **Additional command-line parameters**
 
-``Z field`` [tablefield: numeric]
-  Optional
+       Optional
+     - ``EXTRA``
+     - [string]   
 
-  Field for the interpolation.
+       Default: None
+     - Add extra GDAL command line options
+   * - **Output data type**
+     - ``DATA_TYPE``
+     - [enumeration]
 
-``Output raster type`` [enumeration]
-  Raster file type
+       Default: 5
+     - Defines the data type of the output raster file.
+       Options:
 
-  Options:
+       * 0 --- Byte
+       * 1 --- Int16
+       * 2 --- UInt16
+       * 3 --- UInt32
+       * 4 --- Int32
+       * 5 --- Float32
+       * 6 --- Float64
+       * 7 --- CInt16
+       * 8 --- CInt32
+       * 9 --- CFloat32
+       * 10 --- CFloat64
 
-  * 0 --- Byte
-  * 1 --- Int16
-  * 2 --- UInt16
-  * 3 --- UInt32
-  * 4 --- Int32
-  * 5 --- Float32
-  * 6 --- Float64
-  * 7 --- CInt16
-  * 8 --- CInt32
-  * 9 --- CFloat32
-  * 10 --- CFloat64
+   * - **Interpolated (Nearest neighbour)**
+     - ``OUTPUT``
+     - [raster]
 
-  Default: *5*
+       Default: ``[Save to temporary file]``
+     - Specify the output raster layer with interpolated values.
+       One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Output file`` [raster]
-  Interpolated raster file.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Interpolated (Nearest neighbour)**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster with interpolated values
 
 
 .. _gdalhillshade:
 
 Hillshade
 ---------
-Outputs a raster with a nice shaded relief effect. It’s very useful for visualizing
-the terrain. You can optionally specify the azimuth and altitude of the light source, a vertical
-exaggeration factor and a scaling factor to account for differences between vertical and horizontal units.
+Outputs a raster with a nice shaded relief effect.
+It’s very useful for visualizing the terrain.
+You can optionally specify the azimuth and altitude of the light
+source, a vertical exaggeration factor and a scaling factor to account
+for differences between vertical and horizontal units.
 
-This algorithm is derived from the `GDAL DEM utility <https://gdal.org/gdaldem.html>`__ .
+This algorithm is derived from the
+`GDAL DEM utility <https://gdal.org/gdaldem.html>`__ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
 Parameters
 ..........
 
-``Input layer`` [raster]
-  Elevation raster layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Band number`` [number]
-  Band containing the elevation information.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Input Elevation raster layer
+   * - **Band number**
+     - ``BAND``
+     - [raster band]
 
-  Default: *1*
+       Default: 1
+     - Band containing the elevation information
+   * - **Z factor (vertical exaggeration)**
+     - ``Z_FACTOR``
+     - [number]
 
-``Compute edges`` [boolean]
-  Generates edges from the elevation raster.
+       Default: 1.0
+     - The factor exaggerates the height of the output elevation
+       raster
+   * - **Scale (ratio of vert. units to horiz.)**
+     - ``SCALE``
+     - [number]
 
-  Default: *False*
+       Default: 1.0
+     - The ratio of vertical units to horizontal units
+   * - **Azimuth of the light**
+     - ``AZIMUTH``
+     - [number]
 
-``Use Zevenbergen&Thorne formula (instead of the Horn's one)`` [boolean]
-  Activates Zevenbergen&Thorne formula for smooth landscapes.
+       Default: 315.0
+     - Defines the azimuth of the light shining on the elevation
+       raster in degrees.
+       If it comes from the top of the raster the value is 0, if it
+       comes from the east it is 90 a.s.o.
+   * - **Altitude of the light**
+     - ``ALTITUDE``
+     - [number]
 
-  Default: *False*
+       Default: 45.0
+     - Defines the altitude of the light, in degrees.
+       90 if the light comes from above the elevation raster, 0 if it
+       is raking light.
+   * - **Compute edges**
+     - ``COMPUTE_EDGES``
+     - [boolean]
 
-``Z factor (vertical exaggeration)`` [number]
-  The factor exaggerates the height of the output elevation raster.
+       Default: False
+     - Generates edges from the elevation raster
+   * - **Use Zevenbergen&Thorne formula (instead of the Horn's one)**
+     - ``ZEVENBERGEN``
+     - [boolean]
 
-  Default: *1.0*
+       Default: False
+     - Activates Zevenbergen&Thorne formula for smooth landscapes
+   * - **Combined shading**
+     - ``COMBINED``
+     - [boolean]
 
-``Scale (ratio of vert. units to horiz.)`` [number]
-  The ratio of vertical units to horizontal units.
+       Default: False
+     - 
+   * - **Multidirectional shading**
+     - ``MULTIDIRECTIONAL``
+     - [boolean]
 
-  Default: *1.0*
+       Default: False
+     - 
+   * - **Additional creation options**
 
-``Azimuth of the light`` [number]
-  Defines the azimuth of the light shining on the elevation raster in degrees.
-  If it comes from the top of the raster the value is 0, if it comes from the east
-  it is 90 a.s.o. .
+       Optional
+     - ``OPTIONS``
+     - [string]
 
-  Default: *315.0*
+       Default: ''
+     - For adding one or more creation options that control the
+       raster to be created (colors, block size, file
+       compression...).
+       For convenience, you can rely on predefined profiles (see
+       :ref:`GDAL driver options section <gdal_createoptions>`).
+   * - **Additional command-line parameters**
 
-``Altitude of the light`` [number]
-  Defines the altitude of the light, in degrees. 90 if the light comes from above the elevation
-  raster, 0 if it is raking light.
+       Optional
+     - ``EXTRA``
+     - [string]   
 
-  Default: *45.0*
+       Default: None
+     - Add extra GDAL command line options
+   * - **Interpolated (Linear)**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output raster layer with interpolated values.
+       One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Output file`` [raster]
-  Output raster.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Hillshade**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster with interpolated values
 
 
 .. _gdalnearblack:
@@ -912,16 +1377,87 @@ Parameters
 ``Input layer`` [raster]
   Raster file in input.
 
-``How far from black (white)`` [number]
-  Select how far from black, white or custom colors the pixel values can be and
-  still considered near black, white or custom color.
 
-  Default: *15*
+Parameters
+..........
 
-``Search for nearly white pixels instead of nearly black`` [boolean]
-  Search for nearly white (255) pixels instead of nearly black pixels.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-  Default: *False*
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Input Elevation raster layer
+   * - **How far from black (white)**
+     - ``NEAR``
+     - [number]
+
+       Default: 15
+     - Select how far from black, white or custom colors the pixel
+       values can be and still considered near black, white or custom
+       color.
+   * - **Search for nearly white pixels instead of nearly black**
+     - ``WHITE``
+     - [boolean]
+
+       Default: False
+     - Search for nearly white (255) pixels instead of nearly black
+       pixels
+   * - **Additional creation options**
+
+       Optional
+     - ``OPTIONS``
+     - [string]
+
+       Default: ''
+     - For adding one or more creation options that control the
+       raster to be created (colors, block size, file
+       compression...).
+       For convenience, you can rely on predefined profiles (see
+       :ref:`GDAL driver options section <gdal_createoptions>`).
+   * - **Additional command-line parameters**
+
+       Optional
+     - ``EXTRA``
+     - [string]   
+
+       Default: None
+     - Add extra GDAL command line options
+   * - **Nearblack**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output raster layer. One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Nearblack**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster
+
 
 Outputs
 .......
