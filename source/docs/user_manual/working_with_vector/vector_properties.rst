@@ -1240,7 +1240,8 @@ options:
   the rendering quality is decreased, AND there's issues with rendering when
   certain text settings like buffers are in place. That's why rendering as paths
   is recommended. Note that when :ref:`exporting a layout to svg <export_layout_svg>`
-  there's actually an override for this setting - so you can leave the project
+  there's an override for this setting.
+  So you can have `Always Render Labels as Paths` for the project, and choose 
   rendering as paths but for a :file:`.svg` export export the labels as text.
 * |checkbox| :guilabel:`Allow truncated labels on edges of map`: controls
   whether labels which fall partially outside of the map extent should be
