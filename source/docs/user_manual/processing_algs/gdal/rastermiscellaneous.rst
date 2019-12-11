@@ -38,7 +38,7 @@ Parameters
    * - **Overview levels**
      - ``LEVELS``
      - [string]
-       
+
        Default: '2 4 8 16'
      - Defines the number of overview levels calculated by the original
        resolution of the input raster layer.
@@ -46,20 +46,20 @@ Parameters
    * - **Remove all existing overviews**
      - ``CLEAN``
      - [boolean]
-       
+
        Default: False
      - Removes existing overviews from the raster.
        By default these are not removed.
    * - **Resampling method**
-       
+
        Optional
      - ``RESAMPLING``
      - [enumeration]
-       
+
        Default: 0
      - Calculates the overviews with a defined resampling method.
        Possible resampling methods are:
-       
+
        * 0 -- Nearest Neighbour (``nearest``)
        * 1 -- Average (``average``)
        * 2 -- Gaussian (``gauss``)
@@ -71,11 +71,11 @@ Parameters
        * 8 -- Mode (``mode``)
 
    * - **Overviews format**
-       
+
        Optional
      - ``FORMAT``
      - [enumeration]
-       
+
        Default: 0
      - The overviews can be stored internally, or externally as GTiff
        or ERDAS Imagine file.
@@ -87,11 +87,11 @@ Parameters
        * 2 -- External (ERDAS Imagine .aux)
 
    * - **Additional command-line parameters**
-       
+
        Optional
      - ``EXTRA``
      - [string]   
-       
+
        Default: None
      - Add extra GDAL command line options
    * - **Pyramidized**
@@ -147,14 +147,14 @@ Parameters
    * - **Resolution**
      - ``RESOLUTION``
      - [enumeration]
-       
+
        Default: 0
      - The output resolution of the mosaic.
        By default the average resolution of the raster files
        will be chosen.
-       
+
        Options:
-       
+
        * 0 --- Average (``average``)
        * 1 --- Highest (``highest``)
        * 2 --- Lowest (``lowest``)
@@ -162,42 +162,42 @@ Parameters
    * - **Place each input file into a separate band**
      - ``SEPARATE``
      - [boolean]
-       
+
        Default: True
      - With 'True' you can define that each raster file goes into
        a separated stacked band in the VRT band.
    * - **Allow projection difference**
      - ``PROJ_DIFFERENCE``
      - [boolean]
-       
+
        Default: False
      - Allows that the output bands have different projections
        derived from the projection of the input raster layers.
    * - **Add alpha mask band to VRT when source raster has none**
      - ``ADD_ALPHA``
      - [boolean]
-       
+
        Default: False
      - Adds an alpha mask band to the VRT when the source raster
        has none.
    * - **Override projection for the output file**
-       
+
        (optional)
      - ``ASSIGN_CRS``
      - [crs]
-       
+
        Default: None
      - Overrides the projection for the output file. No reprojection is done.
 
    * - **Resampling algorithm**
      - ``RESAMPLING``
      - [enumeration]
-       
+
        Default: 0
      - The resampling algorithm to be used
 
        Options:
-       
+
        * 0 --- Nearest Neighbour (``nearest``)
        * 1 --- Bilinear (``bilinear``)
        * 2 --- Cubic Convolution (``cubic``)
@@ -207,31 +207,31 @@ Parameters
        * 6 --- Mode (``mode``)
 
    * - **Nodata value(s) for input bands (space separated)**
-       
+
        Optional
      - ``SRC_NODATA``
      - [string]
-       
+
        Default: None
      - Space separated Nodata value(s) for input band(s)
-   * -  **Additional command-line parameters**
-     -  ``EXTRA``
-     -  [string]
-        
-        Default: None
-     -  Add extra GDAL command line options
-   * -  **Virtual**
-     -  ``OUTPUT``
-     -  [raster]    
-        
-        Default: ``[Save to temporary file]``
-     -  Specification of the output raster layer.
-        One of:
-        
-        * Save to a Temporary File
-        * Save to File...
-        
-        The file encoding can also be changed here.
+   * - **Additional command-line parameters**
+     - ``EXTRA``
+     - [string]
+
+       Default: None
+     - Add extra GDAL command line options
+   * - **Virtual**
+     - ``OUTPUT``
+     - [raster]    
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster layer.
+       One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -283,14 +283,14 @@ Parameters
    * - **Grab pseudocolor table from first layer**
      - ``PCT``
      - [boolean]
-       
+
        Default: False
      - The pseudocolor table from the first layer will be used
        for the coloring
    * - **Place each input file into a separate band**
      - ``SEPARATE``
      - [boolean]
-       
+
        Default: False
      - Place each input file into a separate band
    * - **Output data type**
@@ -313,29 +313,29 @@ Parameters
        * 8 --- CInt32
        * 9 --- CFloat32
        * 10 --- CFloat64
-       
+
    * - **Input pixel value to treat as "nodata"**
-       
+
        Optional
      - ``NODATA_INPUT``
      - [number]
-       
+
        Default: None
      - Ignores pixels from files being merged in with this pixel value
    * - **Assign specified "nodata" value to output**
-       
+
        Optional
      - ``NODATA_OUTPUT``
      - [number]
-       
+
        Default: None
      - Assigns the specified nodata value to output bands.
    * - **Additional creation options**
-       
+
        Optional
      - ``OPTIONS``
      - [string]
-        
+
        Default: ''
      - For adding one or more creation options that control the
        raster to be created (colors, block size, file
@@ -345,20 +345,20 @@ Parameters
    * - **Additional command-line parameters**
      - ``EXTRA``
      - [string]
-        
+
        Default: None
      - Add extra GDAL command line options
    * - **Merged**
      - ``OUTPUT``
      - [raster]
-       
+
        Default: ``[Save to temporary file]``
      - Specification of the output raster layer.
        One of:
-       
+
        * Save to a Temporary File
        * Save to File...
-       
+
        The file encoding can also be changed here.
 
 Outputs
@@ -408,7 +408,7 @@ Parameters
    * - **Force computation of the actual min/max values for each band**
      - ``MIN_MAX``
      - [boolean]
-       
+
        Default: False
      - Forces computation of the actual min/max values for each band in
        the dataset
@@ -422,7 +422,7 @@ Parameters
    * - **Suppress GCP info**
      - ``NO_GCP``
      - [boolean]
-       
+
        Default: False
      - Suppresses ground control points list printing.
        It may be useful for datasets with huge amount of GCPs, such as
@@ -430,30 +430,29 @@ Parameters
    * - **Suppress metadata info**
      - ``NO_METADATA``
      - [boolean]
-       
+
        Default: False
      - Suppresses metadata printing.
        Some datasets may contain a lot of metadata strings.
    * - **Additional command-line parameters**
      - ``EXTRA``
      - [string]
-       
+
        Default: None
      - Add extra GDAL command line options
    * - **Layer information**
      - ``OUTPUT``
      - [html]
-       
+
        Default: ``[Save to temporary file]``
      - Specify the HTML file for output.
-
        One of:
-       
+
        * Save to a Temporary File
        * Save to File...
 
        The file encoding can also be changed here.
-  
+
 Outputs
 .......
 
@@ -505,14 +504,14 @@ Parameters
      - ``PATH_FIELD_NAME``
        Optional
      - [string]
-       
+
        Default: 'location'
      - The output field name to hold the file path/location to the
        indexed rasters.
    * - **Store absolute path to the indexed rasters**
      - ``ABSOLUTE_PATH``
      - [boolean]
-       
+
        Default: False
      - Set whether the absolute path to the raster files is
        stored in the tile index file.
@@ -521,13 +520,13 @@ Parameters
    * - **Skip files with different projection reference**
      - ``PROJ_DIFFERENCE``
      - [boolean]
-       
+
        Default: False
      - Only files with same projection as files already inserted
        in the tile index will be inserted.
        Default does not check projection and accepts all inputs.
    * - **Transform geometries to the given CRS**
-       
+
        Optional
      - ``TARGET_CRS``
      - [crs]
@@ -536,7 +535,7 @@ Parameters
        Default creates simple rectangular polygons in the same
        coordinate reference system as the input rasters.
    * - **The name of the field to store the SRS of each tile**
-       
+
        Optional
      - ``CRS_FIELD_NAME``
      - [string]
@@ -555,14 +554,14 @@ Parameters
    * - **Tile index**
      - ``OUTPUT``
      - [vector: polygon]
-       
+
        Default: ``[Save to temporary file]``
      - Specify the polygon vector layer to write the index to.
        One of:
-       
+
        * Save to a Temporary File
        * Save to File
-       
+
        The file encoding can also be changed here.
 
 Outputs
