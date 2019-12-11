@@ -1242,7 +1242,7 @@ options:
   is recommended. Note that when :ref:`exporting a layout to svg <export_layout_svg>`
   there's an override for this setting.
   So you can have `Always Render Labels as Paths` for the project, and choose 
-  rendering as paths but for a :file:`.svg` export export the labels as text.
+  `Always Render Labels as Text` for :file:`.svg` export.
 * |checkbox| :guilabel:`Allow truncated labels on edges of map`: controls
   whether labels which fall partially outside of the map extent should be
   rendered. If checked, these labels will be shown (when there's no way to
