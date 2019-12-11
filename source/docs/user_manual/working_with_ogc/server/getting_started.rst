@@ -172,7 +172,7 @@ QGIS Server is now available at http://localhost/qgisserver.
     `multiwatch <https://redmine.lighttpd.net/projects/multiwatch/wiki>`_ tool, which is also
     packaged in Debian.
 
-Of course, we can add an init script (like a ``qgis-server.service`` file
+Of course, you can add an init script (like a ``qgis-server.service`` file
 with Systemd) to start QGIS Server at boot time or whenever you want. To use a init script with systemd,
 copy/paste this content in :file:`/etc/systemd/system/qgis-server.service`
 
@@ -203,19 +203,21 @@ We can enable this init file:
 
 QGIS Server should be available and you can watch the live logs with:
 
-.. code-block::bash
+.. code-block:: bash
 
    sudo journalctl -f -u qgis-server
 
-As mentioned above, we can setup `multiwatch` to increase the number of process to 2 for instance:
+As mentioned above, we can setup ``multiwatch`` to increase
+the number of process to 2 for instance:
 
 .. code-block:: bash
 
    sudo apt install multiwatch
 
-Either in your bash line or in your init file, launch your QGIS Server by adding this line before the path to the :file:`qgis_mapserv.fcgi`:
+Either in your bash line or in your init file, launch your QGIS Server
+by adding this line before the path to the :file:`qgis_mapserv.fcgi`:
 
-..code-block:: bash
+.. code-block:: bash
 
    /usr/bin/multiwatch -f 2
 
