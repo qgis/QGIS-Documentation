@@ -1239,7 +1239,7 @@ options:
   in external applications (e.g. Inkscape) as normal text. BUT the side effect is that
   the rendering quality is decreased, and there are issues with rendering when
   certain text settings like buffers are in place. That's why rendering as paths
-  is recommended. Note that when :ref:`exporting a layout to svg <export_layout_svg>`
+  is recommended. Note that when :ref:`exporting a layout to svg <export_layout_svg>`,
   there's an override for this setting.
   So you can have `Always Render Labels as Paths` for the project, and choose 
   `Always Render Labels as Text` for :file:`.svg` export.
