@@ -237,7 +237,7 @@ Parameters
      - Write area percentage to “Area” field of the CSV file
        instead of the absolute area
    * - **Hypsometric curves**
-     - ``OUTPUT``
+     - ``OUTPUT_DIRECTORY``
      - [folder]
      - Specify the output folder for the hypsometric curves.
        One of:
