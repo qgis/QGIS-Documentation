@@ -716,7 +716,7 @@ This algorithm has no output.
 .. _gdalogrinfo:
 
 Vector Information
------------
+------------------
 Creates an information file that lists information about an OGR-supported
 data source. The output will be shown in a 'Result' window and can be written
 into a HTML-file.
