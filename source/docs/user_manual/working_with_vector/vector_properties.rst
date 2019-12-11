@@ -1232,7 +1232,8 @@ options:
   speed. Smaller number of candidates results in less labels placed but faster
   redraws.
 * :guilabel:`Text rendering`|selectString| : controls whether text labels are
-  drawn (and exported) as either proper text objects (:guilabel:`Always Render Labels as Text`)
+  drawn (and exported) as either proper text objects
+  (:guilabel:`Always Render Labels as Text`)
   OR as paths only (:guilabel:`Always Render Labels as Paths (recommended)`). 
   If they are exported as text objects then they can be edited
   in external applications (e.g. Inkscape) as normal text. BUT the side effect is that
