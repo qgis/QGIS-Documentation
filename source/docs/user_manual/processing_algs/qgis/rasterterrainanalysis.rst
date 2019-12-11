@@ -47,14 +47,15 @@ Parameters
      - [raster]
      - Digital Terrain Model raster layer
    * - **Z factor**
-     - ``Z-FACTOR``
+     - ``Z_FACTOR``
      - [number]
 
-       Default: 1
-     - Vertical exaggeration.
+       Default: 1.0
+     - Vertical exaggeration.       
        This parameter is useful when the Z units differ from
-       the X and Y ones, for example miles and meters.
-       You can use this parameter to adjust the final result.
+       the X and Y units, for example feet and meters.
+       You can use this parameter to adjust for this.
+       The default is 1 (no exaggeration).
    * - **Aspect**
      - ``OUTPUT``
      - [raster]
@@ -132,25 +133,29 @@ Parameters
      - [raster]
      - Digital Terrain Model raster layer
    * - **Z factor**
-     - ``Z-FACTOR``
+     - ``Z_FACTOR``
      - [number]
 
-       Default: 1
-     - Increasing this value of this parameter will exaggerate the final
-       result (making it look more "hilly").
+       Default: 1.0
+     - Vertical exaggeration.       
+       This parameter is useful when the Z units differ from
+       the X and Y units, for example feet and meters.
+       You can use this parameter to adjust for this.
+       Increasing the value of this parameter will
+       exaggerate the final result (making it look more "hilly").
        The default is 1 (no exaggeration).
    * - **Azimuth (horizontal angle)**
      - ``AZIMUTH``
      - [number]
 
-       Default: 300
+       Default: 300.0
      - Set the horizontal angle (in degrees) of the sun (clockwise
        direction). Range: 0 to 360. 0 is north.
    * - **Vertical angle**
      - ``V_ANGLE``
      - [number]
 
-       Default: 40
+       Default: 40.0
      - Set the vertical angle (in degrees) of the sun, that is the
        height of the sun.
        Values can go from 0 (minimum elevation) to 90 (maximum
@@ -215,16 +220,14 @@ Parameters
        calculating altitudes
    * - **Boundary layer**
      - ``BOUNDARY_LAYER``
-     - [number]
-
-       Default: 1
+     - [vector: polygon]
      - Polygon vector layer with boundaries of areas used
        to calculate hypsometric curves
    * - **Step**
      - ``STEP``
      - [number]
 
-       Default: 100
+       Default: 100.0
      - Vertical distance between curves
    * - **Use % of area instead of absolute value**
      - ``USE_PERCENTAGE``
@@ -302,12 +305,16 @@ Parameters
      - [raster]
      - Digital Terrain Model raster layer
    * - **Z factor**
-     - ``Z-FACTOR``
+     - ``Z_FACTOR``
      - [number]
 
-       Default: 1
-     - Increasing this value of this parameter will exaggerate the final
-       result (making it look more "hilly").
+       Default: 1.0
+     - Vertical exaggeration.       
+       This parameter is useful when the Z units differ from
+       the X and Y units, for example feet and meters.
+       You can use this parameter to adjust for this.
+       Increasing the value of this parameter will
+       exaggerate the final result (making it look more "hilly").
        The default is 1 (no exaggeration).
    * - **Generate relief classes automatically**
      - ``AUTO_COLORS``
@@ -418,12 +425,16 @@ Parameters
      - [raster]
      - Digital Terrain Model raster layer
    * - **Z factor**
-     - ``Z-FACTOR``
+     - ``Z_FACTOR``
      - [number]
 
-       Default: 1
-     - Increasing this value of this parameter will exaggerate the final
-       result (making it look more "hilly").
+       Default: 1.0
+     - Vertical exaggeration.       
+       This parameter is useful when the Z units differ from
+       the X and Y units, for example feet and meters.
+       You can use this parameter to adjust for this.
+       Increasing the value of this parameter will
+       exaggerate the final result (making it look more rugged).
        The default is 1 (no exaggeration).
    * - **Ruggedness**
      - ``OUTPUT``
@@ -487,12 +498,16 @@ Parameters
      - [raster]
      - Digital Terrain Model raster layer
    * - **Z factor**
-     - ``Z-FACTOR``
+     - ``Z_FACTOR``
      - [number]
 
-       Default: 1
-     - Increasing this value of this parameter will exaggerate the final
-       result (making it look more "hilly").
+       Default: 1.0
+     - Vertical exaggeration.       
+       This parameter is useful when the Z units differ from
+       the X and Y units, for example feet and meters.
+       You can use this parameter to adjust for this.
+       Increasing the value of this parameter will
+       exaggerate the final result (making it steeper).
        The default is 1 (no exaggeration).
    * - **Slope**
      - ``OUTPUT``
