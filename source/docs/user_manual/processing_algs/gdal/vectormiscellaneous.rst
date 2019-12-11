@@ -57,8 +57,8 @@ Parameters
       - Additional GDAL creation options.
    *  - **SQL result**
       - ``OUTPUT``
-      - [same as input]
-      - Specification of the output vector layer.
+      - [vector any]
+      - Specification of the output layer.
         One of:
         
         * Save to a Temporary File
@@ -788,6 +788,4 @@ Outputs
    * - **Layer information**
      - ``OUTPUT``
      - [html]
-
-       Default: ``[Save to temporary file]``
      - The output HTML-file that includes the file information.
