@@ -1237,7 +1237,7 @@ options:
   OR as paths only (:guilabel:`Always Render Labels as Paths (recommended)`). 
   If they are exported as text objects then they can be edited
   in external applications (e.g. Inkscape) as normal text. BUT the side effect is that
-  the rendering quality is decreased, AND there's issues with rendering when
+  the rendering quality is decreased, and there are issues with rendering when
   certain text settings like buffers are in place. That's why rendering as paths
   is recommended. Note that when :ref:`exporting a layout to svg <export_layout_svg>`
   there's an override for this setting.
