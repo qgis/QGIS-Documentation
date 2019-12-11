@@ -190,7 +190,7 @@ Hypsometric curves
 Calculates hypsometric curves for an input Digital Elevation Model.
 Curves are produced as CSV files in an output folder specified by the user.
 
-A hypsometric curve is a cumulative historgram of elevation values in
+A hypsometric curve is a cumulative histogram of elevation values in
 a geographical area.
 
 You can use hypsometric curves to detect differences in the landscape due
@@ -522,4 +522,3 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - The output slope raster layer
-
