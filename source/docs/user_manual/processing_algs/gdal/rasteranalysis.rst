@@ -25,39 +25,99 @@ This algorithm is derived from the `GDAL DEM utility <https://gdal.org/gdaldem.h
 Parameters
 ..........
 
-``Input layer`` [raster]
-  Elevation raster layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Band number`` [number]
-  The number of a band containing elevation values.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Input elevation raster layer
+   * - **Band number**
+     - ``BAND``
+     - [raster band]
+       
+       Default: 1
+     - The number of the band to use as elevation
+   * - **Return trigonometric angle (instead of azimuth)**
+     - ``TRIG_ANGLE``
+     - [boolean]
+       
+       Default: False
+     - Activating the trigonometric angle results in different
+       categories: 0° (=East), 90° (North), 180° (=West), 270°
+       (=South).
+   * - **Return 0 for flat (instead of -9999)**
+     - ``ZERO_FLAT``
+     - [boolean]
+       
+       Default: False
+     - Activating this option will insert a 0-value for the value -9999 on flat areas.
+   * - **Compute edges**
+     - ``COMPUTE_EDGES``
+     - [boolean]
+       
+       Default: False
+     - Generates edges from the elevation raster
+   * - **Use Zevenbergen&Thorne formula (instead of the Horn's one)**
+     - ``ZEVENBERGEN``
+     - [boolean]
+       
+       Default: False
+     - Activates Zevenbergen&Thorne formula for smooth landscapes
+   * - **Additional creation options**
 
-  Default: *1*
+       Optional
+     - ``OPTIONS``
+     - [string]
 
-``Compute edges`` [boolean]
-  Generates edges from the elevation raster.
+       Default: ''
+     - For adding one or more creation options that control the
+       raster to be created (colors, block size, file
+       compression...).
+       For convenience, you can rely on predefined profiles (see
+       :ref:`GDAL driver options section <gdal_createoptions>`).
+   * - **Additional command-line parameters**
+       
+       Optional
+     - ``EXTRA``
+     - [string]   
+       
+       Default: None
+     - Add extra GDAL command line options
+   * - **Aspect**
+     - ``OUTPUT``
+     - [raster]    
+        
+       Default: ``[Save to temporary file]``
+     - Output raster layer. One of:
 
-  Default: *False*
+       * Save to a Temporary File
+       * Save to File...
 
-``Use Zevenbergen&Thorne formula (instead of the Horn's one)`` [boolean]
-  Activates Zevenbergen&Thorne formula for smooth landscapes.
-
-  Default: *False*
-
-``Return trigonometric angle (instead of azimuth)`` [boolean]
-  Activating the trigonometric angle results in different categories: 0° (=East), 90° (North), 180° (=West), 270° (=South).
-
-  Default: *False*
-
-``Return 0 for flat (instead of -9999)`` [boolean]
-  Activating this option will insert a 0-value for the value -9999 on flat areas.
-
-  Default: *False*
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Output file`` [raster]
-  Output raster with angle values in degrees.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Aspect**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster with angle values in degrees
 
 
 .. _gdalcolorrelief:
@@ -75,40 +135,94 @@ This algorithm is derived from the `GDAL DEM utility <https://gdal.org/gdaldem.h
 Parameters
 ..........
 
-``Input layer`` [raster]
-  Elevation raster layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Band number`` [number]
-  The number of a band containing elevation values.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Input elevation raster layer
+   * - **Band number**
+     - ``BAND``
+     - [raster band]
+       
+       Default: 1
+     - The number of the band to use as elevation
+   * - **Compute edges**
+     - ``COMPUTE_EDGES``
+     - [boolean]
+       
+       Default: False
+     - Generates edges from the elevation raster
+   * - **Color configuration file**
+     - ``COLOR_TABLE``
+     - [file]
+     - A text-based color configuration file
+   * - **Matching mode**
+     - ``MATCH_MODE``
+     - [enumeration]
+       
+       Default: 0
+     - One of:
 
-  Default: *1*
+       * 0 --- Use strict color matching
+       * 1 --- Use closest RGBA quadruples
+       * 2 --- Use smoothly blended colours
 
-``Compute edges`` [boolean]
-  Generates edges from the elevation raster.
+   * - **Additional creation options**
 
-  Default: *False*
+       Optional
+     - ``OPTIONS``
+     - [string]
 
-``Color configuration file`` [file]
-  A text-based color configuration file.
+       Default: ''
+     - For adding one or more creation options that control the
+       raster to be created (colors, block size, file
+       compression...).
+       For convenience, you can rely on predefined profiles (see
+       :ref:`GDAL driver options section <gdal_createoptions>`).
+   * - **Additional command-line parameters**
+       
+       Optional
+     - ``EXTRA``
+     - [string]   
+       
+       Default: None
+     - Add extra GDAL command line options
+   * - **Color relief**
+     - ``OUTPUT``
+     - [raster]    
+        
+       Default: ``[Save to temporary file]``
+     - Output raster layer. One of:
 
-``Matching mode`` [enumeration]
-  The "0,0,0,0" RGBA mode results in color interpolation whereas the Exact color and
-  Nearest color modes avoid interpolation of values that don't match an index of the
-  color configuration file.
+       * Save to a Temporary File
+       * Save to File...
 
-  Options:
-
-  * 0 --- "0,0,0,0" RGBA
-  * 1 --- Exact color
-  * 2 --- Nearest color
-
-  Default: *0*
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Output file`` [raster]
-  A 4-band output raster.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Color relief**
+     - ``OUTPUT``
+     - [raster]
+     - A 4-band output raster
 
 
 .. _gdalfillnodata:
@@ -131,40 +245,98 @@ This algorithm is derived from the `GDAL fillnodata utility <https://gdal.org/gd
 Parameters
 ..........
 
-``Input layer`` [raster]
-  Raster layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Search distance`` [number]
-  The number of pixels to search in all directions to interpolate from.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Input raster layer
+   * - **Band number**
+     - ``BAND``
+     - [raster band]
 
-  Default: *100*
+       Default: 1
+     - The band to operate on. Nodata values must be
+       represented by the value 0.
+   * - **Maximum distance (in pixels) to search out for values to interpolate**
+     - ``DISTANCE``
+     - [number]
 
-``Smooth iterations`` [number]
-  The number of 3x3 filter passes to run (0 or more) to smoothen the results
-  of the interpolation.
+       Default: 10
+     - The number of pixels to search in all directions to find values
+       to interpolate from
+   * - **Number of smoothing iterations to run after the interpolation**
+     - ``ITERATIONS``
+     - [number]
 
-  Default: *0*
+       Default: 0
+     - The number of 3x3 filter passes to run (0 or more) to smoothen
+       the results of the interpolation.
+   * - **Do not use default validity mask for the input band**
+     - ``NO_MASK``
+     - [boolean]
 
-``Band to operate on`` [number]
-  The band to operate on. Nodata values must be represented by the value 0.
+       Default: False
+     - Activates the user-defined validity mask
+   * - **Validity mask**
+     - ``MASK_LAYER``
+     - [raster]
+     - A mask that defines which areas are to be filled.
+   * - **Additional creation options**
 
-  Default: *1*
+       Optional
+     - ``OPTIONS``
+     - [string]
 
-``Validity mask`` [raster]
-  Optional
+       Default: ''
+     - For adding one or more creation options that control the
+       raster to be created (colors, block size, file
+       compression...).
+       For convenience, you can rely on predefined profiles (see
+       :ref:`GDAL driver options section <gdal_createoptions>`).
+   * - **Additional command-line parameters**
+       
+       Optional
+     - ``EXTRA``
+     - [string]   
+       
+       Default: None
+     - Add extra GDAL command line options
+   * - **Filled**
+     - ``OUTPUT``
+     - [raster]    
 
-  A mask that defines which areas are to be filled.
+       Default: ``[Save to temporary file]``
+     - Specification of the output raster layer. One of:
 
-``Do not use default validity mask`` [boolean]
-  Activates the user-defined validity mask.
+       * Save to a Temporary File
+       * Save to File...
 
-  Default: *False*
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Output layer`` [raster]
-  Output raster in any GDAL-supported format.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Filled**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster
 
 
 .. _gdalgridaverage:
