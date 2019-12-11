@@ -33,7 +33,7 @@ functionalities:
 The Toolbar
 -----------
 
-The Map :guilabel:`Item Properties` panel embeds a toolbar with following
+The Map :guilabel:`Item Properties` panel embeds a toolbar with the following
 functionalities:
 
 * |draw| :sup:`Update map preview`
@@ -41,13 +41,15 @@ functionalities:
 * |viewExtentInCanvas| :sup:`View current map extent in main canvas`
 * |setToCanvasScale| :sup:`Set map scale to match main canvas scale`
 * |viewScaleInCanvas| :sup:`Set main canvas to match current map scale`
-* |showBookmarks| :sup:`Bookmarks` to assign a bookmark to the map item
-* |moveItemContent| :sup:`Interactively edit map extent`: allows to pan
+* |showBookmarks| :sup:`Bookmarks`: set the map item extent to match
+  an existing spatial bookmark
+* |moveItemContent| :sup:`Interactively edit map extent`: pan and
+  zoom interactively
   within the map item
-* |labeling| :sup:`Labeling settings`: controls features labels behaviour
+* |labeling| :sup:`Labeling settings`: control feature label behaviour
   (placement, visibility...) in the layout map item extent:
 
-  * set a :guilabel:`Margin from map edges`, a variable distance from the
+  * set a :guilabel:`Margin from map edges`, a data definable distance from the
     map item's limits inside which no label should be displayed
   * |unchecked| :guilabel:`Allow truncated labels on edges of map`: controls
     whether labels which fall partially outside of the map item allowed extent
@@ -58,13 +60,14 @@ functionalities:
     scalebars, north arrows, inset maps, etc) to be marked as a blockers for
     the map labels in the **active** map item. This prevents any map labels
     from being placed under those items - causing the labeling engine to either
-    try alternative placement for these labels (or discarding them altogether).
+    try alternative placement for these labels or discard them altogether.
 
     If a :guilabel:`Margin from map edges` is set, the map labels are not
     placed closer than the specified distance from the checked layout items.
-  * :guilabel:`Show unplaced labels`: independant from the :ref:`main canvas
-    setting <automated_placement>`, it can be used to determine whether labels
-    are missing from the layout map.
+  * :guilabel:`Show unplaced labels`: can be used to determine whether labels
+    are missing from the layout map (e.g. due to conflicts with other
+    map labels or due to insufficient space to place the label) by
+    highlighting them in a :ref:`predefined color <automated_placement>`.
 
 
 .. _`layout_main_properties`:
