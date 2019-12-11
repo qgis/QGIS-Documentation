@@ -1231,7 +1231,7 @@ options:
   generated, the better the labeling will be - but at a cost of rendering
   speed. Smaller number of candidates results in less labels placed but faster
   redraws.
-* :guilabel:`Text rendering`|selectString| : controls whether text labels are
+* :guilabel:`Text rendering`: controls whether text labels are
   drawn (and exported) as either proper text objects
   (:guilabel:`Always Render Labels as Text`)
   OR as paths only (:guilabel:`Always Render Labels as Paths (recommended)`). 
