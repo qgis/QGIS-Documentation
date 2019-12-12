@@ -809,6 +809,10 @@ Parameters
   :start-after: **network_advanced_parameters**
   :end-before: **end_network_advanced_parameters**
 
+.. note:: The **Include upper/lower bound points** advanced
+   parameter is not available for this algorithm (it is
+   used for the *Service area* algorithms).
+
 Outputs
 .......
 
