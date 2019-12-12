@@ -1226,23 +1226,20 @@ options:
 
    The labels automated placement engine
 
-* The :guilabel:`Number of candidates` controls set how many label placement
+* The :guilabel:`Number of candidates` controls how many label placement
   candidates should be generated for each feature type. The more candidates
   generated, the better the labeling will be - but at a cost of rendering
   speed. Smaller number of candidates results in less labels placed but faster
   redraws.
-* :guilabel:`Text rendering`: controls whether text labels are
-  drawn (and exported) as either proper text objects
-  (:guilabel:`Always Render Labels as Text`)
-  OR as paths only (:guilabel:`Always Render Labels as Paths (recommended)`). 
-  If they are exported as text objects then they can be edited
-  in external applications (e.g. Inkscape) as normal text. BUT the side effect is that
-  the rendering quality is decreased, and there are issues with rendering when
-  certain text settings like buffers are in place. That's why rendering as paths
-  is recommended. Note that when :ref:`exporting a layout to svg <export_layout_svg>`,
-  there's an override for this setting.
-  So you can have `Always Render Labels as Paths` for the project, and choose 
-  `Always Render Labels as Text` for :file:`.svg` export.
+* :guilabel:`Text rendering`: sets the default value for labels rendering
+  widgets when :ref:`exporting a map canvas <output_canvas_pdf>` or
+  :ref:`a layout <create-output>` to PDF or SVG. 
+  If :guilabel:`Always render labels as text` is selected then labels can be
+  edited in external applications (e.g. Inkscape) as normal text. BUT the side
+  effect is that the rendering quality is decreased, and there are issues with
+  rendering when certain text settings like buffers are in place. That's why
+  :guilabel:`Always render labels as paths (recommended)` which exports labels
+  as outlines, is recommended.
 * |checkbox| :guilabel:`Allow truncated labels on edges of map`: controls
   whether labels which fall partially outside of the map extent should be
   rendered. If checked, these labels will be shown (when there's no way to
