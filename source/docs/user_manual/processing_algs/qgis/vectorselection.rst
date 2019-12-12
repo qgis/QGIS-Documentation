@@ -330,7 +330,7 @@ Parameters
      - [enumeration]
        
        Default: 0
-     - Random selection methodn. One of:
+     - Random selection method. One of:
        
        * 0 --- Number of selected features
        * 1 --- Percentage of selected features
