@@ -788,11 +788,10 @@ Parameters
      - ``END_POINT``
      - [coordinates]
      - Point feature representing the end point of the routes
-
-       .. include:: qgis_algs_include.rst
-         :start-after: **network_advanced_parameters**
-         :end-before: **end_network_advanced_parameters**
-
+   * - **Advanced parameters**
+     - GUI only
+     - 
+     - Group of advanced network analysis parameters - se below.
    * - **Shortest path**
      - ``OUTPUT``
      - [vector: line]
@@ -805,6 +804,10 @@ Parameters
        * Save to PostGIS Table
 
        The file encoding can also be changed here.
+
+.. include:: qgis_algs_include.rst
+  :start-after: **network_advanced_parameters**
+  :end-before: **end_network_advanced_parameters**
 
 Outputs
 .......
