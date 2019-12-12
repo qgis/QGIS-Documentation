@@ -143,6 +143,9 @@ Other ways to produce output files are:
   vector layers you want to export to DXF. Through the 'Symbology mode' symbols
   from the original QGIS Symbology can be exported with high fidelity
   (see section :ref:`create_dxf_files`).
+
+.. _`output_canvas_pdf`:
+
 * Exporting to PDF files: :menuselection:`Project --> Import/Export --> Export
   Map to PDF...` opens a dialog where you can define the part
   (:guilabel:`Extent`) of the map to be exported, the :guilabel:`Scale`,
