@@ -6,6 +6,10 @@
  qgisserviceareafrompoint, qgisserviceareafromlayer, qgisshortestpathlayertopoint,
  qgisshortestpathpointtolayer and qgisshortestpathpointtopoint
 
+.. list-table::
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
    * - **Direction field**
 
        Optional
