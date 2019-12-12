@@ -75,7 +75,7 @@ your work.
 
 #. Click on the :guilabel:`Save As` button: |fileSaveAs|
 #. Save the map under a :file:`solution` folder next to :file:`exercise_data`
-   and call it :file:`basic_map.qgs`.
+   and call it :file:`basic_map.qgz`.
 
 .. _backlink-interface-preparation-1:
 
