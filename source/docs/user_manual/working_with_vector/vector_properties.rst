@@ -1231,7 +1231,7 @@ options:
   generated, the better the labeling will be - but at a cost of rendering
   speed. Smaller number of candidates results in less labels placed but faster
   redraws.
-* :guilabel:`Text rendering`: sets the default value for labels rendering
+* :guilabel:`Text rendering`: sets the default value for label rendering
   widgets when :ref:`exporting a map canvas <output_canvas_pdf>` or
   :ref:`a layout <create-output>` to PDF or SVG. 
   If :guilabel:`Always render labels as text` is selected then labels can be
