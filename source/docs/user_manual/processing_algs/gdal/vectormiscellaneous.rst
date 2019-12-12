@@ -41,7 +41,7 @@ Parameters
       - ``DIALECT``
       - [enumeration]
 
-        Default: 
+        Default: 0
       - SQL dialect to use.  One of:
 
         * 0 --- None
@@ -129,8 +129,6 @@ Parameters
         Default: ''
       - Sets the encoding to apply to the data
    *  - **Output geometry type**
-
-        Optional
       - ``GTYPE``
       - [enumeration]
 
@@ -226,7 +224,7 @@ Parameters
       - ``DIM``
       - [enumeration]
       
-        Default: 0
+        Default: 0 (2D)
       - Defines if the vector file to be imported has 2D or 3D data.
         One of:
 
@@ -414,8 +412,6 @@ Parameters
         Default: ''
       - Sets the encoding to apply to the data
    *  - **Output geometry type**
-
-        Optional
       - ``GTYPE``
       - [enumeration]
 
@@ -550,7 +546,7 @@ Parameters
       - ``DIM``
       - [enumeration]
       
-        Default: 0
+        Default: 0 (2D)
       - Defines if the vector file to be imported has 2D or 3D data.
         One of:
 
