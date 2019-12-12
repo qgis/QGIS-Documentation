@@ -6,6 +6,18 @@
  qgisserviceareafrompoint, qgisserviceareafromlayer, qgisshortestpathlayertopoint,
  qgisshortestpathpointtolayer and qgisshortestpathpointtopoint
 
+Advanced parameters
+...................
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Direction field**
 
        Optional
