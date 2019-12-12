@@ -1222,6 +1222,7 @@ To use these functions in an expression, they should be preceded by @ character
    "qgis_version_no", "Returns current QGIS version number"
    "snapping_results", "Gives access to snapping results while digitizing a
    feature (only available in add feature)"
+   "scale_value |310|", "Returns current scale bar distance value"
    "symbol_angle", "Returns the angle of the symbol used to render the feature
    (valid for marker symbols only)"
    "symbol_color", "Returns the color of the symbol used to renderthe feature"

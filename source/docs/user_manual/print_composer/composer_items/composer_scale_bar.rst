@@ -129,10 +129,22 @@ The :guilabel:`Fonts and colors` group of the scale bar
    Scale Bar Fonts and colors groups
 
 You can define the :ref:`fonts <font_selector>` and :ref:`colors <color-selector>`
-used for the scale bar.
+used for the scale bar. These properties are data-definable.
 
 * Use the :guilabel:`Font` button to set the :ref:`properties <text_format>`
-  (size, font, color, letter spacing, shadow, background...) of the scale bar label
+  (size, font, color, letter spacing, shadow, background...) of the scale bar
+  label.
+
+  Example: The following code applied to the bold property of the scale labels
+  will display texts in bold when they are a multiple of 500:
+
+  ::
+
+     -- returns True (or 1) if the value displayed on the bar
+     -- is a multiple of 500
+
+     @scale_value % 500 = 0
+
 * :guilabel:`Fill color`: set the first fill color
 * :guilabel:`Secondary fill color`: set the second fill color
 * :guilabel:`Line color`: set the color of the lines of the Scale Bar
