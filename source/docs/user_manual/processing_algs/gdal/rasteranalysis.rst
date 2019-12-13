@@ -50,8 +50,7 @@ Parameters
        
        Default: False
      - Activating the trigonometric angle results in different
-       categories: 0° (=East), 90° (=North), 180° (=West), 270°
-       (=South).
+       categories: 0° (East), 90° (North), 180° (West), 270° (South).
    * - **Return 0 for flat instead of -9999**
      - ``ZERO_FLAT``
      - [boolean]
@@ -429,7 +428,7 @@ Parameters
 
        Optional
      - ``Z_FIELD``
-     - [tablefield: any]
+     - [tablefield: numeric]
      - Field for the interpolation
    * - **Additional creation options**
 
@@ -573,7 +572,7 @@ Parameters
 
        Optional
      - ``Z_FIELD``
-     - [tablefield: any]
+     - [tablefield: numeric]
      - Field for the interpolation
    * - **Additional creation options**
 
@@ -860,7 +859,7 @@ Parameters
 
        Optional
      - ``Z_FIELD``
-     - [tablefield: any]
+     - [tablefield: numeric]
      - Field for the interpolation
    * - **Additional creation options**
 
@@ -1009,7 +1008,7 @@ Parameters
 
        Optional
      - ``Z_FIELD``
-     - [tablefield: any]
+     - [tablefield: numeric]
      - Field for the interpolation
    * - **Additional creation options**
 
@@ -1142,7 +1141,7 @@ Parameters
 
        Optional
      - ``Z_FIELD``
-     - [tablefield: any]
+     - [tablefield: numeric]
      - Field for the interpolation
    * - **Additional creation options**
 
