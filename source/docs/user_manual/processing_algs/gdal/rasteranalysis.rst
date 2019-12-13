@@ -12,13 +12,17 @@ Raster analysis
 
 Aspect
 ------
+
 Generates an aspect map from any GDAL-supported elevation raster.
 Aspect is the compass direction that a slope faces. The pixels will
-have a value from 0-360° measured in degrees from north indicating the azimuth.
-On the northern hemisphere, the north side of slopes is often shaded (small azimuth from 0°-90°),
-while the southern side receives more solar radiation (higher azimuth from 180°-270°).
+have a value from 0-360° measured in degrees from north indicating the
+azimuth.
+On the northern hemisphere, the north side of slopes is often shaded
+(small azimuth from 0°-90°), while the southern side receives more
+solar radiation (higher azimuth from 180°-270°).
 
-This algorithm is derived from the `GDAL DEM utility <https://gdal.org/gdaldem.html>`_ .
+This algorithm is derived from the
+`GDAL DEM utility <https://gdal.org/gdaldem.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -41,32 +45,33 @@ Parameters
    * - **Band number**
      - ``BAND``
      - [raster band]
-       
+
        Default: 1
      - The number of the band to use as elevation
    * - **Return trigonometric angle instead of azimuth**
      - ``TRIG_ANGLE``
      - [boolean]
-       
+
        Default: False
      - Activating the trigonometric angle results in different
        categories: 0° (East), 90° (North), 180° (West), 270° (South).
    * - **Return 0 for flat instead of -9999**
      - ``ZERO_FLAT``
      - [boolean]
-       
+
        Default: False
-     - Activating this option will insert a 0-value for the value -9999 on flat areas.
+     - Activating this option will insert a 0-value for the value
+       -9999 on flat areas.
    * - **Compute edges**
      - ``COMPUTE_EDGES``
      - [boolean]
-       
+
        Default: False
      - Generates edges from the elevation raster
    * - **Use Zevenbergen&Thorne formula instead of the Horn's one**
      - ``ZEVENBERGEN``
      - [boolean]
-       
+
        Default: False
      - Activates Zevenbergen&Thorne formula for smooth landscapes
    * - **Additional creation options**
@@ -82,17 +87,17 @@ Parameters
        For convenience, you can rely on predefined profiles (see
        :ref:`GDAL driver options section <gdal_createoptions>`).
    * - **Additional command-line parameters**
-       
+
        Optional
      - ``EXTRA``
      - [string]   
-       
+
        Default: None
      - Add extra GDAL command line options
    * - **Aspect**
      - ``OUTPUT``
      - [raster]    
-        
+
        Default: ``[Save to temporary file]``
      - Output raster layer. One of:
 
@@ -125,11 +130,13 @@ Color relief
 ------------
 Generates a color relief map from any GDAL-supported elevation raster.
 Color reliefs can particularly be used to depict elevations.
-The Algorithm outputs a 4-band raster with values computed from the elevation
-and a text-based color configuration file. By default, the colors between the given
-elevation values are blended smoothly and the result is a nice colorized elevation raster.
+The Algorithm outputs a 4-band raster with values computed from the
+elevation and a text-based color configuration file.
+By default, the colors between the given elevation values are blended
+smoothly and the result is a nice colorized elevation raster.
 
-This algorithm is derived from the `GDAL DEM utility <https://gdal.org/gdaldem.html>`_ .
+This algorithm is derived from the
+`GDAL DEM utility <https://gdal.org/gdaldem.html>`_ .
 
 Parameters
 ..........
@@ -150,13 +157,13 @@ Parameters
    * - **Band number**
      - ``BAND``
      - [raster band]
-       
+
        Default: 1
      - The number of the band to use as elevation
    * - **Compute edges**
      - ``COMPUTE_EDGES``
      - [boolean]
-       
+
        Default: False
      - Generates edges from the elevation raster
    * - **Color configuration file**
@@ -166,7 +173,7 @@ Parameters
    * - **Matching mode**
      - ``MATCH_MODE``
      - [enumeration]
-       
+
        Default: 2
      - One of:
 
@@ -187,17 +194,17 @@ Parameters
        For convenience, you can rely on predefined profiles (see
        :ref:`GDAL driver options section <gdal_createoptions>`).
    * - **Additional command-line parameters**
-       
+
        Optional
      - ``EXTRA``
      - [string]   
-       
+
        Default: None
      - Add extra GDAL command line options
    * - **Color relief**
      - ``OUTPUT``
      - [raster]    
-        
+
        Default: ``[Save to temporary file]``
      - Output raster layer. One of:
 
@@ -228,16 +235,20 @@ Outputs
 
 Fill nodata
 -----------
-Fill raster regions with no data values by interpolation from edges. The values for
-the no-data regions are calculated by the sourrounding pixel values using inverse distance
-weighting. After the interpolation a smoothing of the results takes placce.
-Input can be any GDAL-supported raster layer. This algorithm is generally suitable for
-interpolating missing regions of fairly continuously varying rasters (such as elevation
-models for instance). It is also suitable for filling small holes and cracks in more irregularly
-varying images (like airphotos). It is generally not so great for interpolating a raster
-from sparse point data.
+Fill raster regions with no data values by interpolation from edges.
+The values for the no-data regions are calculated by the sourrounding
+pixel values using inverse distance weighting.
+After the interpolation a smoothing of the results takes placce.
+Input can be any GDAL-supported raster layer. This algorithm is
+generally suitable for interpolating missing regions of fairly
+continuously varying rasters (such as elevation models for instance).
+It is also suitable for filling small holes and cracks in more
+irregularly varying images (like airphotos).
+It is generally not so great for interpolating a raster from sparse
+point data.
 
-This algorithm is derived from the `GDAL fillnodata utility <https://gdal.org/gdal_fillnodata.html>`_ .
+This algorithm is derived from the
+`GDAL fillnodata utility <https://gdal.org/gdal_fillnodata.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -301,11 +312,11 @@ Parameters
        For convenience, you can rely on predefined profiles (see
        :ref:`GDAL driver options section <gdal_createoptions>`).
    * - **Additional command-line parameters**
-       
+
        Optional
      - ``EXTRA``
      - [string]   
-       
+
        Default: None
      - Add extra GDAL command line options
    * - **Filled**
@@ -342,9 +353,11 @@ Outputs
 
 Grid (Data metrics)
 -------------------
-Computes some data metrics using the specified window and output grid geometry.
+Computes some data metrics using the specified window and output grid
+geometry.
 
-This algorithm is derived from the `GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
+This algorithm is derived from the
+`GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -362,7 +375,7 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Input layer**
+   * - **Point layer**
      - ``INPUT``
      - [vector: point]
      - Input point vector layer
@@ -373,12 +386,14 @@ Parameters
        Default: 0
      - One of:
 
-       * 0 --- Minimum, minimum value found in grid node search ellipse
-       * 1 --- Maximum, maximum value found in grid node search ellipse
+       * 0 --- Minimum, minimum value found in grid node search
+         ellipse
+       * 1 --- Maximum, maximum value found in grid node search
+         ellipse
        * 2 --- Range, a difference between the minimum and maximum
          values found in grid node search ellipse
-       * 3 --- Count, a number of data points found in grid node search
-         ellipse
+       * 3 --- Count, a number of data points found in grid node
+         search ellipse
        * 4 --- Average distance, an average distance between the grid
          node (center of the search ellipse) and all of the data
          points found in grid node search ellipse
@@ -396,7 +411,7 @@ Parameters
      - The first radius (X axis if rotation angle is 0) of
        the search ellipse
    * - **The second radius of search ellipse**
-     - ``RADIUS_Z``
+     - ``RADIUS_2``
      - [number]
 
        Default: 0.0
@@ -506,10 +521,12 @@ Outputs
 Grid (IDW with nearest neighbor searching)
 ------------------------------------------
 
-Computes the Inverse Distance to a Power gridding combined to the nearest neighbor method.
+Computes the Inverse Distance to a Power gridding combined to the
+nearest neighbor method.
 Ideal when a maximum number of data points to use is required.
 
-This algorithm is derived from the `GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
+This algorithm is derived from the
+`GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
 
 .. seealso:: `GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_
 
@@ -542,7 +559,7 @@ Parameters
        Default: 0.0
      - Smoothing parameter
    * - **The radius of the search circle**
-     - ``SMOOTHING``
+     - ``RADIUS``
      - [number]
 
        Default: 1.0
@@ -649,13 +666,15 @@ Outputs
 
 Grid (Inverse distance to a power)
 ----------------------------------
-The Inverse Distance to a Power gridding method is a weighted average interpolator.
+The Inverse Distance to a Power gridding method is a weighted average
+interpolator.
 
 You should supply the input arrays with the scattered data values
 including coordinates of every data point and output grid geometry.
 The function will compute interpolated value for the given position in output grid.
 
-This algorithm is derived from the `GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
+This algorithm is derived from the
+`GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -698,7 +717,7 @@ Parameters
      - The first radius (X axis if rotation angle is 0) of
        the search ellipse
    * - **The second radius of search ellipse**
-     - ``RADIUS_Z``
+     - ``RADIUS_2``
      - [number]
 
        Default: 0.0
@@ -814,13 +833,14 @@ Outputs
 Grid (Linear)
 -------------
 The Linear method perform linear interpolation by computing a Delaunay
-triangulation of the point cloud, finding in which triangle of the triangulation
-the point is, and by doing linear interpolation from its barycentric coordinates
-within the triangle.
-If the point is not in any triangle, depending on the radius, the algorithm will
-use the value of the nearest point or the NODATA value.
+triangulation of the point cloud, finding in which triangle of the
+triangulation the point is, and by doing linear interpolation from its
+barycentric coordinates within the triangle.
+If the point is not in any triangle, depending on the radius, the
+algorithm will use the value of the nearest point or the NODATA value.
 
-This algorithm is derived from the `GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
+This algorithm is derived from the
+`GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
 
 Parameters
 ..........
@@ -939,8 +959,8 @@ Grid (Moving average)
 The Moving Average is a simple data averaging algorithm.
 It uses a moving window of elliptic form to search values and averages
 all data points within the window.
-Search ellipse can be rotated by specified angle, the center of ellipse
-located at the grid node.
+Search ellipse can be rotated by specified angle, the center of
+ellipse located at the grid node.
 Also the minimum number of data points to average can be set, if there
 are not enough points in window, the grid node considered empty and
 will be filled with specified NODATA value.
@@ -964,7 +984,7 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Input layer**
+   * - **Point layer**
      - ``INPUT``
      - [vector: point]
      - Input point vector layer
@@ -976,7 +996,7 @@ Parameters
      - The first radius (X axis if rotation angle is 0) of
        the search ellipse
    * - **The second radius of search ellipse**
-     - ``RADIUS_Z``
+     - ``RADIUS_2``
      - [number]
 
        Default: 0.0
@@ -1084,11 +1104,14 @@ Outputs
 
 Grid (Nearest neighbor)
 -----------------------
-The Nearest Neighbor method doesn't perform any interpolation or smoothing, it just takes the value of nearest point
-found in grid node search ellipse and returns it as a result. If there are no points found, the specified NODATA value
-will be returned.
+The Nearest Neighbor method doesn't perform any interpolation or
+smoothing, it just takes the value of nearest point found in grid node
+search ellipse and returns it as a result.
+If there are no points found, the specified NODATA value will be
+returned.
 
-This algorithm is derived from the `GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
+This algorithm is derived from the
+`GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -1118,7 +1141,7 @@ Parameters
      - The first radius (X axis if rotation angle is 0) of
        the search ellipse
    * - **The second radius of search ellipse**
-     - ``RADIUS_Z``
+     - ``RADIUS_2``
      - [number]
 
        Default: 0.0
@@ -1362,20 +1385,16 @@ Near black
 ----------
 Converts nearly black/white borders to black.
 
-This algorithm will scan an image and try to set all pixels that are nearly or exactly black, white or one or more custom
-colors around the collar to black or white. This is often used to "fix up" lossy compressed airphotos so that color
-pixels can be treated as transparent when mosaicking.
+This algorithm will scan an image and try to set all pixels that are
+nearly or exactly black, white or one or more custom colors around the
+collar to black or white.
+This is often used to "fix up" lossy compressed airphotos so that
+color pixels can be treated as transparent when mosaicking.
 
-This algorithm is derived from the `GDAL nearblack utility <https://gdal.org/nearblack.html>`_ .
+This algorithm is derived from the
+`GDAL nearblack utility <https://gdal.org/nearblack.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
-
-Parameters
-..........
-
-``Input layer`` [raster]
-  Raster file in input.
-
 
 Parameters
 ..........
@@ -1469,11 +1488,14 @@ Outputs
 
 Proximity (raster distance)
 ---------------------------
-Generates a raster proximity map indicating the distance from the center of each pixel
-to the center of the nearest pixel identified as a target pixel. Target pixels are those in the source raster for which
-the raster pixel value is in the set of target pixel values.
+Generates a raster proximity map indicating the distance from the
+center of each pixel to the center of the nearest pixel identified as
+a target pixel.
+Target pixels are those in the source raster for which the raster
+pixel value is in the set of target pixel values.
 
-This algorithm is derived from the `GDAL proximity utility <https://gdal.org/gdal_proximity.html>`_ .
+This algorithm is derived from the
+`GDAL proximity utility <https://gdal.org/gdal_proximity.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -1517,7 +1539,7 @@ Parameters
        Default: 1
      - Indicate whether distances generated should be in pixel
        or georeferenced coordinates. One of:
-       
+
        * 0 --- Georeferenced coordinates
        * 1 --- Pixel coordinates
 
@@ -1533,7 +1555,6 @@ Parameters
        this distance.
        If a nodata value is not provided, the output
        band will be queried for its nodata value.
-       
        If the output band does not have a nodata value,
        then the value 65535 will be used.
        Distance is interpreted according to the value of
@@ -1631,14 +1652,16 @@ Outputs
 
 Roughness
 ---------
-Outputs a single-band raster with values computed from the elevation. Roughness
-is the degree of irregularity of the surface. It's calculated by the largest inter-cell
-difference of a central pixel and its surrounding cell.
-The determination of the roughness plays a role in the analysis of terrain elevation data,
-it's useful for calculations of the river morphology, in climatology and physical geography
-in general.
+Outputs a single-band raster with values computed from the elevation.
+Roughness is the degree of irregularity of the surface.
+It's calculated by the largest inter-cell difference of a central
+pixel and its surrounding cell.
+The determination of the roughness plays a role in the analysis of
+terrain elevation data, it's useful for calculations of the river
+morphology, in climatology and physical geography in general.
 
-This algorithm is derived from the `GDAL DEM utility <https://gdal.org/gdaldem.html>`_ .
+This algorithm is derived from the
+`GDAL DEM utility <https://gdal.org/gdaldem.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -1661,13 +1684,13 @@ Parameters
    * - **Band number**
      - ``BAND``
      - [raster band]
-       
+
        Default: 1
      - The number of the band to use as elevation
    * - **Compute edges**
      - ``COMPUTE_EDGES``
      - [boolean]
-       
+
        Default: False
      - Generates edges from the elevation raster
    * - **Additional creation options**
@@ -1685,7 +1708,7 @@ Parameters
    * - **Roughness**
      - ``OUTPUT``
      - [raster]    
-        
+
        Default: ``[Save to temporary file]``
      - Specify the output raster layer. One of:
 
@@ -1717,11 +1740,14 @@ Outputs
 
 Sieve
 -----
-Removes raster polygons smaller than a provided threshold size (in pixels) and
-replaces them with the pixel value of the largest neighbour polygon. It is
-useful if you have a large amount of small areas on your raster map.
+Removes raster polygons smaller than a provided threshold size (in
+pixels) and replaces them with the pixel value of the largest
+neighbour polygon.
+It is useful if you have a large amount of small areas on your raster
+map.
 
-This algorithm is derived from the `GDAL sieve utility <https://gdal.org/gdal_sieve.html>`_ .
+This algorithm is derived from the
+`GDAL sieve utility <https://gdal.org/gdal_sieve.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -1744,20 +1770,20 @@ Parameters
    * - **Threshold**
      - ``THRESHOLD``
      - [number]
-       
+
        Default: 10
      - Only raster polygons smaller than this size
        will be removed
    * - **Use 8-connectedness**
      - ``EIGHT_CONNECTEDNESS``
      - [boolean]
-       
+
        Default: False
      - Use eight connectedness instead of four connectedness
    * - **Do not use the default validity mask for the input band**
      - ``NO_MASK``
      - [boolean]
-       
+
        Default: False
      - 
    * - **Validity mask**
@@ -1767,17 +1793,17 @@ Parameters
      - [raster]
      - Validity mask to use instead of the default
    * - **Additional command-line parameters**
-       
+
        Optional
      - ``EXTRA``
      - [string]   
-       
+
        Default: None
      - Add extra GDAL command line options
    * - **Sieved**
      - ``OUTPUT``
      - [raster]    
-        
+
        Default: ``[Save to temporary file]``
      - Specify the output raster layer. One of:
 
@@ -1808,11 +1834,13 @@ Outputs
 
 Slope
 -----
-Generates a slope map from any GDAL-supported elevation raster. Slope is the
-angle of inclination to the horizontal. You have the option of specifying the
-type of slope value you want: degrees or percent slope.
+Generates a slope map from any GDAL-supported elevation raster.
+Slope is the angle of inclination to the horizontal. 
+You have the option of specifying the type of slope value you want:
+degrees or percent slope.
 
-This algorithm is derived from the `GDAL DEM utility <https://gdal.org/gdaldem.html>`_ .
+This algorithm is derived from the
+`GDAL DEM utility <https://gdal.org/gdaldem.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -1953,13 +1981,13 @@ Parameters
    * - **Band number**
      - ``BAND``
      - [raster band]
-       
+
        Default: 1
      - The number of the band to use as elevation
    * - **Compute edges**
      - ``COMPUTE_EDGES``
      - [boolean]
-       
+
        Default: False
      - Generates edges from the elevation raster
    * - **Additional creation options**
@@ -1977,7 +2005,7 @@ Parameters
    * - **Terrain Ruggedness Index**
      - ``OUTPUT``
      - [raster]    
-        
+
        Default: ``[Save to temporary file]``
      - Specify the output raster layer. One of:
 
@@ -2010,10 +2038,12 @@ Outputs
 Topographic Position Index (TPI)
 --------------------------------
 Outputs a single-band raster with values computed from the elevation.
-TPI stands for Topographic Position Index, which is defined as the difference
-between a central pixel and the mean of its surrounding cells.
+TPI stands for Topographic Position Index, which is defined as the
+difference between a central pixel and the mean of its surrounding
+cells.
 
-This algorithm is derived from the `GDAL DEM utility <https://gdal.org/gdaldem.html>`_ .
+This algorithm is derived from the
+`GDAL DEM utility <https://gdal.org/gdaldem.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Analysis`
 
@@ -2036,13 +2066,13 @@ Parameters
    * - **Band number**
      - ``BAND``
      - [raster band]
-       
+
        Default: 1
      - The number of the band to use for elevation values
    * - **Compute edges**
      - ``COMPUTE_EDGES``
      - [boolean]
-       
+
        Default: False
      - Generates edges from the elevation raster
    * - **Additional creation options**
@@ -2060,7 +2090,7 @@ Parameters
    * - **Terrain Ruggedness Index**
      - ``OUTPUT``
      - [raster]    
-        
+
        Default: ``[Save to temporary file]``
      - Specify the output raster layer. One of:
 
