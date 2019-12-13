@@ -147,11 +147,6 @@ Outputs
      - [vector: any]
      - The output virtual vector made from the chosen sources
 
-Outputs
-.......
-```` [vector: any]
-  .
-
 
 .. _qgiscreateattributeindex:
 
@@ -197,7 +192,7 @@ Outputs
      - Name
      - Type
      - Description
-   * - ** **
+   * - 
      - ``OUTPUT``
      - [same as input]
      - 
@@ -244,7 +239,7 @@ Outputs
      - Name
      - Type
      - Description
-   * - ** **
+   * - 
      - ``OUTPUT``
      - [same as input]
      - 
@@ -301,11 +296,10 @@ Outputs
      - Name
      - Type
      - Description
-   * - ** **
+   * - 
      - ``INPUT``
      - [same as input]
      - The input vector layer with the defined projection
-
 
 
 .. _qgisdeleteduplicategeometries:
@@ -637,14 +631,51 @@ Saves the selected features as a new layer.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Layer to save the selection from.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Layer**
+     - ``INPUT``
+     - [vector: any]
+     - Layer to save the selection from
+   * - **Selected features**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specify the vector layer for the selected features.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
-.......
+..........
 
-``Selection`` [vector: any]
-  Vector layer with only the selected features, or no feature if none was selected.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Selected features**
+     - ``OUTPUT``
+     - [same as input]
+     - Vector layer with only the selected features,
+       or no feature if none was selected.
 
 
 .. _qgisfindprojection:
@@ -669,29 +700,63 @@ the target area if the layer was in this projection.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Layer with unknown projection.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Target area for layer`` [extent]
-  The area that the layer covers.
-  The options for specifying the extent are:
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Layer**
+     - ``INPUT``
+     - [vector: any]
+     - Layer to save the selection from
+   * - **Target area for layer (xmin, xmax, ymin, ymax)**
+     - ``TARGET_AREA``
+     - [extent]
+     - The area that the layer covers.
+       The options for specifying the extent are:
 
-  * Use Canvas Extent
-  * Select Extent on Canvas
-  * Use Layer Extent
+       * Use Canvas Extent
+       * Select Extent on Canvas
+       * Use Layer Extent
 
-  It is also possible to provide the extent coordinates directly
-  (xmin, xmax, ymin, ymax).
+       It is also possible to provide the extent
+       coordinates directly (xmin, xmax, ymin, ymax).
+   * - **CRS candidates**
+     - ``OUTPUT``
+     - [table]
 
-``Target area CRS`` [crs]
-  Choose the target CRS of the target area selected.
+       Default: ``[Create temporary layer]``
+     - Specify the table (geometryless layer) for the CRS
+       suggetions (EPSG codes). One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
-.......
+..........
 
-``CRS candidates`` [table]
-  The algorithm writes a table with all the CRS (EPSG codes) of the matching
-  criteria.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **CRS candidates**
+     - ``OUTPUT``
+     - [table]
+     - The algorithm writes a table with all the
+       CRS (EPSG codes) of the matching criteria.
 
 
 .. _qgisjoinattributestable:
