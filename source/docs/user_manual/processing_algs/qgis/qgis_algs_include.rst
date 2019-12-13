@@ -107,6 +107,116 @@ Advanced parameters
        Default: 0.0
      - Two lines with nodes closer than the specified
        tolerance are considered connected
+
+**end_network_advanced_parameters**
+
+**network_advanced_parameters_service_area**
+
+.. The following section is included in network analysis algorithms, ie
+ qgisserviceareafrompoint, qgisserviceareafromlayer, qgisshortestpathlayertopoint,
+ qgisshortestpathpointtolayer and qgisshortestpathpointtopoint
+
+Advanced parameters
+...................
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Direction field**
+
+       Optional
+     - ``DIRECTION_FIELD``
+     - [tablefield: string]
+
+       Default: 0.0
+     - The field used to specify directions for the network edges.
+       
+       The values used in this field are specified with the three
+       parameters ``Value for forward direction``,
+       ``Value for backward direction`` and
+       ``Value for both directions``.
+       Forward and reverse directions correspond to a one-way edge,
+       "both directions" indicates a two-way edge.
+       If a feature does not have a value in this field, or no field
+       is set then the   default direction setting (provided with
+       the ``Default direction`` parameter) is used.
+   * - **Value for forward direction**
+
+       Optional
+     - ``VALUE_FORWARD``
+     - [string]
+
+       Default: '' (empty string)
+     - Value set in the direction field to identify edges with a
+       forward direction
+   * - **Value for backward direction**
+
+       Optional
+     - ``VALUE_BACKWARD``
+     - [string]
+
+       Default: '' (empty string)
+     - Value set in the direction field to identify edges with a
+       backward direction
+   * - **Value for both directions**
+
+       Optional
+     - ``VALUE_BOTH``
+     - [string]
+
+       Default: '' (empty string)
+     - Value set in the direction field to identify
+       bidirectional edges
+   * - **Default direction**
+
+       Optional
+     - ``DEFAULT_DIRECTION``
+     - [enumeration]
+
+       Default: 2
+     - If a feature has no value set in the direction field or
+       if no direction field is set, then this direction value
+       is used. One of:
+
+       * 0 --- Forward direction
+       * 1 --- Backward direction
+       * 2 --- Both directions
+
+   * - **Speed field**
+
+       Optional
+     - ``SPEED_FIELD``
+     - [tablefield: string]
+     - Field providing the speed value (in ``km/h``) for the
+       edges of the network when looking for the fastest path.
+       
+       If a feature does not have a value in this field, or
+       no field is set then the default speed value (provided
+       with the ``Default speed`` parameter) is used.
+   * - **Default speed (km/h)**
+
+       Optional
+     - ``DEFAULT_SPEED``
+     - [number]
+
+       Default: 50.0
+     - Value to use to calculate the travel time if no speed
+       field is provided for an edge
+   * - **Topology tolerance**
+
+       Optional
+     - ``TOLERANCE``
+     - [number]
+
+       Default: 0.0
+     - Two lines with nodes closer than the specified
+       tolerance are considered connected
    * - **Include upper/lower bound points**
      - ``INCLUDE_BOUNDS``
      - [boolean]
@@ -116,7 +226,7 @@ Advanced parameters
        edge at the boundaries of the service area.
        One point is the start of that edge, the other is the end.
 
-**end_network_advanced_parameters**
+**end_network_advanced_parameters_service_area**
 
 **geometric_predicates**
 
