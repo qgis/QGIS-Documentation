@@ -641,73 +641,74 @@ to help you with the layout and the description::
   -----------------------
   Takes a point and a polygon layer and counts the number of points from the
   point layer in each of the polygons of the polygon layer.
-  A new polygon layer is generated, with the exact same content as the input polygon
-  layer, but containing an additional field with the points count corresponding to
-  each polygon.
+  A new polygon layer is generated, with the exact same content as the input
+  polygon layer, but containing an additional field with the points count
+  corresponding to each polygon.
+
   .. figure:: img/count_points_polygon.png
     :align: center
-  
+
     The labels in the polygons show the point count
-  
-  An optional weight field can be used to assign weights to each point. Alternatively,
-  a unique class field can be specified. If both options are used, the weight field
-  will take precedence and the unique class field will be ignored.
-  
+
+  An optional weight field can be used to assign weights to each point.
+  Alternatively, a unique class field can be specified. If both options
+  are used, the weight field will take precedence and the unique class field
+  will be ignored.
+
   ``Default menu``: :menuselection:`Vector --> Analysis Tools`
-  
+
   Parameters
   ..........
-  
+
   .. list-table::
      :header-rows: 1
      :widths: 20 20 20 40
-     :stub-columns: 0
-  
-     *  - Label
-        - Name
-        - Type
-        - Description
-     *  - **Polygons**
-        - ``POLYGONS``
-        - [vector: polygon]
-        - Polygon layer whose features are associated with the count of
-          points they contain
-     *  - **Points**
-        - ``POINTS``
-        - [vector: point]
-        - Point layer with features to count
-     *  - **Weight field**
-          
-          Optional
-        - ``WEIGHT``
-        - [tablefield: numeric]
-        - A field from the point layer.
-          The count generated will be the sum of the weight field of the
-          points contained by the polygon.
-     *  - **Class field**
-          
-          Optional
-        - ``CLASSFIELD``
-        - [tablefield: any]
-        - Points are classified based on the selected attribute and if
-          several points with the same attribute value are within the
-          polygon, only one of them is counted.
-          The final count of the points in a polygon is, therefore, the
-          count of different classes that are found in it.
-     *  - **Count field name**
-        - ``FIELD``
-        - [string]
-          
-          Default: 'NUMPOINTS'
-        - The name of the field to store the count of points
-     *  - **Count**
-        - ``OUTPUT``
-        - [vector: polygon]
-          
-          Default: [Create temporary layer]
-        - Specification of the output layer type (temporary, file,
-          GeoPackage or PostGIS table).
-          Encoding can also be specified.
+
+     * - Label
+       - Name
+       - Type
+       - Description
+     * - **Polygons**
+       - ``POLYGONS``
+       - [vector: polygon]
+       - Polygon layer whose features are associated with the count of
+         points they contain
+     * - **Points**
+       - ``POINTS``
+       - [vector: point]
+       - Point layer with features to count
+     * - **Weight field**
+
+         Optional
+       - ``WEIGHT``
+       - [tablefield: numeric]
+       - A field from the point layer.
+         The count generated will be the sum of the weight field of the
+         points contained by the polygon.
+     * - **Class field**
+
+         Optional
+       - ``CLASSFIELD``
+       - [tablefield: any]
+       - Points are classified based on the selected attribute and if
+         several points with the same attribute value are within the
+         polygon, only one of them is counted.
+         The final count of the points in a polygon is, therefore, the
+         count of different classes that are found in it.
+     * - **Count field name**
+       - ``FIELD``
+       - [string]
+
+         Default: 'NUMPOINTS'
+       - The name of the field to store the count of points
+     * - **Count**
+       - ``OUTPUT``
+       - [vector: polygon]
+
+         Default: [Create temporary layer]
+       - Specification of the output layer type (temporary, file,
+         GeoPackage or PostGIS table).
+         Encoding can also be specified.
   
   Outputs
   .......
@@ -715,17 +716,16 @@ to help you with the layout and the description::
   .. list-table::
      :header-rows: 1
      :widths: 20 20 20 40
-     :stub-columns: 0
   
-     *  - Label
-        - Name
-        - Type
-        - Description
-     *  - **Count**
-        - ``OUTPUT``
-        - [vector: polygon]
-        - Resulting layer with the attribute table containing the
-          new column with the points count
+     * - Label
+       - Name
+       - Type
+       - Description
+     * - **Count**
+       - ``OUTPUT``
+       - [vector: polygon]
+       - Resulting layer with the attribute table containing the
+         new column with the points count
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
