@@ -559,7 +559,7 @@ Parameters
        Default: 0.0
      - Smoothing parameter
    * - **The radius of the search circle**
-     - ``SMOOTHING``
+     - ``RADIUS``
      - [number]
 
        Default: 1.0
