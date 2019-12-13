@@ -590,8 +590,8 @@ this specific URL in the WCS GetCapabilities response.
 Fine tuning your OWS
 ----------------------
 
-For vector layers, the :guilabel:`Fields` menu of the
-:menuselection:`Layer --> Properties` dialog allows you to define for each
+For vector layers, the :guilabel:`Fields` menu of the :menuselection:`Layer -->
+Layer Properties` dialog allows you to define for each
 attribute if it will be published or not.
 By default, all the attributes are published by your WMS and WFS.
 If you don't want a specific attribute to be published, uncheck the corresponding
