@@ -1117,7 +1117,7 @@ This algorithm is derived from the
 
 .. seealso:: `GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_
 
-ParametersRADIUS_2 (ikke Z) (3.10);  (og EXTRA)
+Parameters
 ..........
 
 .. list-table::
