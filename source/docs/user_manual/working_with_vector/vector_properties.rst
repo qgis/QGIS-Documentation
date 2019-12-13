@@ -18,7 +18,8 @@ To access the :guilabel:`Layer Properties` dialog:
 
 * In the :guilabel:`Layers` panel, double-click the layer or right-click
   and select :guilabel:`Properties...` from the pop-up menu;
-* Go to :menuselection:`Layer --> Properties...` menu when the layer is selected.
+* Go to :menuselection:`Layer --> Layer Properties...` menu when the layer
+  is selected.
 
 The vector :guilabel:`Layer Properties` dialog provides the following sections:
 
