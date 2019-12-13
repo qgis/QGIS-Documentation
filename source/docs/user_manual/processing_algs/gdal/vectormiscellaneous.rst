@@ -13,6 +13,9 @@ Vector miscellaneous
 Execute SQL
 -----------
 
+Runs a simple or complex query with SQL syntax on the source layer.
+The result of the query will be added as a new layer.
+
 This algorithm is derived from the
 `GDAL ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_ .
 
@@ -57,7 +60,7 @@ Parameters
       - Additional GDAL creation options.
    *  - **SQL result**
       - ``OUTPUT``
-      - [vector any]
+      - [vector: any]
       - Specification of the output layer.
         One of:
         
@@ -68,7 +71,7 @@ Parameters
 
         For ``Save to File``, the output format has to be specified.
         All GDAL vector formats are supported.
-        For ``Save to a Temporary File`` the QGIS default vector
+        For ``Save to a Temporary File`` the default output vector layer
         format will be used.
 
 Outputs
@@ -240,7 +243,7 @@ Parameters
         Default: ''
       - Defines a distance tolerance for the simplification of the
         vector geometries to be imported.
-        By default no simplification there is no simplification.
+        By default there is no simplification.
    *  - **Maximum distance between 2 nodes (densification)**
 
         Optional
@@ -250,7 +253,7 @@ Parameters
         Default: ''
       - The maximum distance between two nodes.
         Used to create intermediate points.
-        By default there is no maximum distance.
+        By default there is no densification.
    *  - **Select features by extent (defined in input layer CRS)**
 
         Optional
@@ -277,7 +280,7 @@ Parameters
 
         Default: ''
       - Defines with a SQL "WHERE" statement which features should be
-        selected for the output table
+        selected from the input layer
    *  - **Group N features per transaction (Default: 2000)**
 
         Optional
@@ -296,8 +299,8 @@ Parameters
 
         Default: True
       - If there is a table with the same name in the database,
-        it won't be overwritten.
-        By default this takes place.
+        and if this is set to true, the table will be overwritten.
+        By default the existing table is overwritten.
    *  - **Append to existing table**
 
         Optional
@@ -317,7 +320,7 @@ Parameters
 
         Default: False
       - If activated the vector data will be appended to an
-        existing table, there won't be created a new table.
+        existing table, there won't be a new table created.
         New fields found in input layer are added to the
         table.
         By default a new table will be created.
@@ -501,7 +504,7 @@ Parameters
         
         Default: 'public'
       - Defines the schema to which the database table will be
-        assigned to.
+        added to.
    *  - **Table name, leave blank to use input name**
 
         Optional
