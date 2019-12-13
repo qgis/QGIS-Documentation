@@ -44,15 +44,15 @@ Parameters
        
        Default: 1
      - The number of the band to use as elevation
-   * - **Return trigonometric angle (instead of azimuth)**
+   * - **Return trigonometric angle instead of azimuth**
      - ``TRIG_ANGLE``
      - [boolean]
        
        Default: False
      - Activating the trigonometric angle results in different
-       categories: 0° (=East), 90° (North), 180° (=West), 270°
+       categories: 0° (=East), 90° (=North), 180° (=West), 270°
        (=South).
-   * - **Return 0 for flat (instead of -9999)**
+   * - **Return 0 for flat instead of -9999**
      - ``ZERO_FLAT``
      - [boolean]
        
@@ -64,7 +64,7 @@ Parameters
        
        Default: False
      - Generates edges from the elevation raster
-   * - **Use Zevenbergen&Thorne formula (instead of the Horn's one)**
+   * - **Use Zevenbergen&Thorne formula instead of the Horn's one**
      - ``ZEVENBERGEN``
      - [boolean]
        
@@ -168,7 +168,7 @@ Parameters
      - ``MATCH_MODE``
      - [enumeration]
        
-       Default: 0
+       Default: 2
      - One of:
 
        * 0 --- Use strict color matching
@@ -288,7 +288,7 @@ Parameters
    * - **Validity mask**
      - ``MASK_LAYER``
      - [raster]
-     - A mask that defines which areas are to be filled.
+     - A raster layer that defines the areas to fill.
    * - **Additional creation options**
 
        Optional
@@ -512,7 +512,7 @@ Ideal when a maximum number of data points to use is required.
 
 This algorithm is derived from the `GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
 
-.. seealso:: `GDAL grid <https://gdal.org/gdal_grid.html>`_
+.. seealso:: `GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_
 
 Parameters
 ..........
@@ -716,7 +716,7 @@ Parameters
      - ``MAX_POINTS``
      - [number]
 
-       Default: 12
+       Default: 0
      - Do not search for more points than this number.
    * - **Minimum number of data points to use**
      - ``MIN_POINTS``
@@ -737,7 +737,7 @@ Parameters
 
        Optional
      - ``Z_FIELD``
-     - [tablefield: any]
+     - [tablefield: numeric]
      - Field for the interpolation
    * - **Additional creation options**
 
@@ -779,7 +779,7 @@ Parameters
        * 9 --- CFloat32
        * 10 --- CFloat64
 
-   * - **Interpolated (IDW with NN search)**
+   * - **Interpolated (IDW)**
      - ``OUTPUT``
      - [raster]
 
@@ -804,7 +804,7 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Interpolated (IDW with NN search)**
+   * - **Interpolated (IDW)**
      - ``OUTPUT``
      - [raster]
      - Output raster with interpolated values
@@ -1326,7 +1326,7 @@ Parameters
 
        Default: None
      - Add extra GDAL command line options
-   * - **Interpolated (Linear)**
+   * - **Hillshade**
      - ``OUTPUT``
      - [raster]
 
@@ -1500,7 +1500,7 @@ Parameters
 
        Default: 1
      - Band containing the elevation information
-   * - **A list of target pixel values in the source image to be considered target pixels**
+   * - **A list of pixel values in the source image to be considered target pixels**
 
        Optional
      - ``VALUES``
