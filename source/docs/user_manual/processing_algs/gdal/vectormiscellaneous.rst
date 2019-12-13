@@ -552,8 +552,8 @@ Parameters
      - Defines if the vector file to be imported has 2D or 3D data.
        One of:
 
-       * 0 --- 2
-       * 1 --- 3
+       * 0 --- 2D
+       * 1 --- 3D
 
    * - **Distance tolerance for simplification**
 
@@ -637,7 +637,6 @@ Parameters
      - [boolean]
 
        Default: False
-     - 
      - If checked / True the vector data will be appended to an
        existing table.
        New fields found in the input layer are ignored.
