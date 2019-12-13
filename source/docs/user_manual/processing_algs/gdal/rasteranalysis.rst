@@ -1481,69 +1481,151 @@ This algorithm is derived from the `GDAL proximity utility <https://gdal.org/gda
 Parameters
 ..........
 
-``Input layer`` [raster]
-  Raster in input.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Values`` [string]
-  A list of target pixel values in the source image to be considered target pixels. If not specified, all non-zero
-  pixels will be considered target pixels.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Input Elevation raster layer
+   * - **Band number**
+     - ``BAND``
+     - [raster band]
 
-  Default: *(not set)*
+       Default: 1
+     - Band containing the elevation information
+   * - **A list of target pixel values in the source image to be considered target pixels**
 
-``Dist units`` [enumeration]
-  Indicate whether distances generated should be in pixel or georeferenced coordinates.
+       Optional
+     - ``VALUES``
+     - [string]
 
-  Options:
+       Default: ''
+     - A list of target pixel values in the source image
+       to be considered target pixels.
+       If not specified, all non-zero pixels will be
+       considered target pixels.
+   * - **Distance units**
+     - ``UNITS``
+     - [enumeration]
 
-  * 0 --- GEO
-  * 1 --- PIXEL
+       Default: 1
+     - Indicate whether distances generated should be in pixel
+       or georeferenced coordinates. One of:
+       
+       * 0 --- Georeferenced coordinates
+       * 1 --- Pixel coordinates
 
-  Default: *0*
+   * - **The maximum distance to be generated**
 
-``Max dist (negative value to ignore)`` [number]
-  The maximum distance to be generated. The nodata value will be used for pixels beyond this distance. If a nodata
-  value is not provided, the output band will be queried for its nodata value.
+       Optional
+     - ``MAX_DISTANCE``
+     - [number]
 
-  If the output band does not have a nodata value, then the value 65535 will be used.
-  Distance is interpreted in pixels unless *distunits* GEO is specified.
+       Default: 0.0
+     - The maximum distance to be generated.
+       The nodata value will be used for pixels beyond
+       this distance.
+       If a nodata value is not provided, the output
+       band will be queried for its nodata value.
+       
+       If the output band does not have a nodata value,
+       then the value 65535 will be used.
+       Distance is interpreted according to the value of
+       *Distance units*.
+   * - **Value to be applied to all pixels that are within the maxdist of target pixels**
 
-  Default: *-1*
+       Optional
+     - ``REPLACE``
+     - [number]
 
-``No data (negative value to ignore)`` [number]
-  Specify a nodata value to use for the destination proximity raster.
+       Default: 0.0
+     - Specify a value to be applied to all pixels that
+       are closer than the maximum distance from target
+       pixels (including the target pixels) instead of
+       a distance value.
+   * - **Nodata value to use for the destination proximity raster**
 
-  Default: *-1*
+       Optional
+     - ``NODATA``
+     - [number]
 
-``Fixed buf val (negative value to ignore)`` [number]
-  Specify a value to be applied to all pixels that are within the -maxdist of target pixels
-  (including the target pixels) instead of a distance value.
+       Default: 0.0
+     - Specify the nodata value to use for the output raster
+   * - **Additional creation options**
 
-  Default: *-1*
+       Optional
+     - ``OPTIONS``
+     - [string]
 
-``Output raster type`` [enumeration]
-  Raster file type.
+       Default: ''
+     - For adding one or more creation options that control the
+       raster to be created (colors, block size, file
+       compression...).
+       For convenience, you can rely on predefined profiles (see
+       :ref:`GDAL driver options section <gdal_createoptions>`).
+   * - **Additional command-line parameters**
 
-  Options:
+       Optional
+     - ``EXTRA``
+     - [string]   
 
-  * 0 --- Byte
-  * 1 --- Int16
-  * 2 --- UInt16
-  * 3 --- UInt32
-  * 4 --- Int32
-  * 5 --- Float32
-  * 6 --- Float64
-  * 7 --- CInt16
-  * 8 --- CInt32
-  * 9 --- CFloat32
-  * 10 --- CFloat64
+       Default: None
+     - Add extra GDAL command line options
+   * - **Output data type**
+     - ``DATA_TYPE``
+     - [enumeration]
 
-  Default: *5*
+       Default: 5
+     - Defines the data type of the output raster file.
+       Options:
+
+       * 0 --- Byte
+       * 1 --- Int16
+       * 2 --- UInt16
+       * 3 --- UInt32
+       * 4 --- Int32
+       * 5 --- Float32
+       * 6 --- Float64
+       * 7 --- CInt16
+       * 8 --- CInt32
+       * 9 --- CFloat32
+       * 10 --- CFloat64
+
+   * - **Proximity map**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output raster layer. One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Output layer`` [raster]
-  Raster file in output.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Proximity map**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster
 
 
 .. _gdalroughness:
@@ -1564,24 +1646,72 @@ This algorithm is derived from the `GDAL DEM utility <https://gdal.org/gdaldem.h
 Parameters
 ..........
 
-``Input layer`` [raster]
-  Elevation raster layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Band number`` [number]
-  The number of a band containing elevation values.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Input elevation raster layer
+   * - **Band number**
+     - ``BAND``
+     - [raster band]
+       
+       Default: 1
+     - The number of the band to use as elevation
+   * - **Compute edges**
+     - ``COMPUTE_EDGES``
+     - [boolean]
+       
+       Default: False
+     - Generates edges from the elevation raster
+   * - **Additional creation options**
 
-  Default: *1*
+       Optional
+     - ``OPTIONS``
+     - [string]
 
-``Compute edges`` [boolean]
-  Generates edges from the elevation raster.
+       Default: ''
+     - For adding one or more creation options that control the
+       raster to be created (colors, block size, file
+       compression...).
+       For convenience, you can rely on predefined profiles (see
+       :ref:`GDAL driver options section <gdal_createoptions>`).
+   * - **Roughness**
+     - ``OUTPUT``
+     - [raster]    
+        
+       Default: ``[Save to temporary file]``
+     - Specify the output raster layer. One of:
 
-  Default: *False*
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Output file`` [raster]
-  Single-band output raster. The value -9999 is used as the output nodata value.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Roughness**
+     - ``OUTPUT``
+     - [raster]
+     - Single-band output roughness raster.
+       The value -9999 is used as nodata value.
 
 
 .. _gdalsieve:
@@ -1599,29 +1729,80 @@ This algorithm is derived from the `GDAL sieve utility <https://gdal.org/gdal_si
 Parameters
 ..........
 
-``Input layer`` [raster]
-  Raster layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Threshold`` [number]
-  Only raster polygons smaller than this size will be removed.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Input elevation raster layer
+   * - **Threshold**
+     - ``THRESHOLD``
+     - [number]
+       
+       Default: 10
+     - Only raster polygons smaller than this size
+       will be removed
+   * - **Use 8-connectedness**
+     - ``EIGHT_CONNECTEDNESS``
+     - [boolean]
+       
+       Default: False
+     - Use eight connectedness instead of four connectedness
+   * - **Do not use the default validity mask for the input band**
+     - ``NO_MASK``
+     - [boolean]
+       
+       Default: False
+     - 
+   * - **Validity mask**
 
-  Default: *2*
+       Optional
+     - ``MASK_LAYER``
+     - [raster]
+     - Validity mask to use instead of the default
+   * - **Additional command-line parameters**
+       
+       Optional
+     - ``EXTRA``
+     - [string]   
+       
+       Default: None
+     - Add extra GDAL command line options
+   * - **Sieved**
+     - ``OUTPUT``
+     - [raster]    
+        
+       Default: ``[Save to temporary file]``
+     - Specify the output raster layer. One of:
 
-``Pixel connection`` [enumeration]
-  Either four connectedness or eight connectedness should be used when determining.
+       * Save to a Temporary File
+       * Save to File...
 
-  Options:
-
-  * 0 --- 4
-  * 1 --- 8
-
-  Default: *0*
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Output layer`` [raster]
-  Output raster layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Sieved**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster layer.
 
 
 .. _gdalslope:
@@ -1639,33 +1820,98 @@ This algorithm is derived from the `GDAL DEM utility <https://gdal.org/gdaldem.h
 Parameters
 ..........
 
-``Input layer`` [raster]
-  Elevation raster layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Band number`` [number]
-  The number of a band containing elevation values.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Input Elevation raster layer
+   * - **Band number**
+     - ``BAND``
+     - [raster band]
 
-  Default: *1*
+       Default: 1
+     - Band containing the elevation information
+   * - **Ratio of vertical units to horizontal**
+     - ``SCALE``
+     - [number]
 
-``Compute edges`` [boolean]
-  Generates edges from the elevation raster.
+       Default: 1.0
+     - The ratio of vertical units to horizontal units
+   * - **Slope expressed as percent (instead of degrees)**
+     - ``AS_PERCENT``
+     - [boolean]
 
-  Default: *False*
+       Default: False
+     - Express slope as percent instead of degrees
+   * - **Compute edges**
+     - ``COMPUTE_EDGES``
+     - [boolean]
 
-``Use Zevenbergen&Thorne formula (instead of the Horn's one)`` [boolean]
-  Activates Zevenbergen&Thorne formula for smooth landscapes.
+       Default: False
+     - Generates edges from the elevation raster
+   * - **Use Zevenbergen&Thorne formula (instead of the Horn's one)**
+     - ``ZEVENBERGEN``
+     - [boolean]
 
-  Default: *False*
+       Default: False
+     - Activates Zevenbergen&Thorne formula for smooth landscapes
+   * - **Additional creation options**
 
-``Slope expressed as percent (instead of degrees)`` [boolean]
-  You have the option to use slope expressed as degrees.
+       Optional
+     - ``OPTIONS``
+     - [string]
 
-  Default: *False*
+       Default: ''
+     - For adding one or more creation options that control the
+       raster to be created (colors, block size, file
+       compression...).
+       For convenience, you can rely on predefined profiles (see
+       :ref:`GDAL driver options section <gdal_createoptions>`).
+   * - **Additional command-line parameters**
 
-``Scale (ratio of vert. units to horiz.)`` [number]
-  The ratio of vertical units to horizontal units.
+       Optional
+     - ``EXTRA``
+     - [string]   
 
-  Default: *1.0*
+       Default: None
+     - Add extra GDAL command line options
+   * - **Slope**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output raster layer. One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Slope**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster
+
 
 Outputs
 .......
@@ -1674,9 +1920,95 @@ Outputs
   32-bit float output raster.
 
 
+.. _gdaltriterrainruggednessindex:
+
+Terrain Ruggedness Index (TRI)
+------------------------------
+Outputs a single-band raster with values computed from the
+elevation.
+TRI stands for Terrain Ruggedness Index, which is defined
+as the mean difference between a central pixel and its
+surrounding cells.
+
+This algorithm is derived from the
+`GDAL DEM utility <https://gdal.org/gdaldem.html>`_ .
+
+``Default menu``: :menuselection:`Raster --> Analysis`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Input elevation raster layer
+   * - **Band number**
+     - ``BAND``
+     - [raster band]
+       
+       Default: 1
+     - The number of the band to use as elevation
+   * - **Compute edges**
+     - ``COMPUTE_EDGES``
+     - [boolean]
+       
+       Default: False
+     - Generates edges from the elevation raster
+   * - **Additional creation options**
+
+       Optional
+     - ``OPTIONS``
+     - [string]
+
+       Default: ''
+     - For adding one or more creation options that control the
+       raster to be created (colors, block size, file
+       compression...).
+       For convenience, you can rely on predefined profiles (see
+       :ref:`GDAL driver options section <gdal_createoptions>`).
+   * - **Terrain Ruggedness Index**
+     - ``OUTPUT``
+     - [raster]    
+        
+       Default: ``[Save to temporary file]``
+     - Specify the output raster layer. One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Terrain Ruggedness Index**
+     - ``OUTPUT``
+     - [raster]
+     - Output ruggedness raster.
+       The value -9999 is used as nodata value.
+
+
 .. _gdaltpitopographicpositionindex:
 
-TPI (Topographic Position Index)
+Topographic Position Index (TPI)
 --------------------------------
 Outputs a single-band raster with values computed from the elevation.
 TPI stands for Topographic Position Index, which is defined as the difference
@@ -1689,56 +2021,68 @@ This algorithm is derived from the `GDAL DEM utility <https://gdal.org/gdaldem.h
 Parameters
 ..........
 
-``Input layer`` [raster]
-  Elevation raster layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Band number`` [number]
-  The number of a band containing elevation values.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - Input elevation raster layer
+   * - **Band number**
+     - ``BAND``
+     - [raster band]
+       
+       Default: 1
+     - The number of the band to use for elevation values
+   * - **Compute edges**
+     - ``COMPUTE_EDGES``
+     - [boolean]
+       
+       Default: False
+     - Generates edges from the elevation raster
+   * - **Additional creation options**
 
-  Default: *1*
+       Optional
+     - ``OPTIONS``
+     - [string]
 
-``Compute edges`` [boolean]
-  Generates edges from the elevation raster.
+       Default: ''
+     - For adding one or more creation options that control the
+       raster to be created (colors, block size, file
+       compression...).
+       For convenience, you can rely on predefined profiles (see
+       :ref:`GDAL driver options section <gdal_createoptions>`).
+   * - **Terrain Ruggedness Index**
+     - ``OUTPUT``
+     - [raster]    
+        
+       Default: ``[Save to temporary file]``
+     - Specify the output raster layer. One of:
 
-  Default: *False*
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Output file`` [raster]
-  TPI raster in output.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-
-.. _gdaltriterrainruggednessindex:
-
-TRI (Terrain Ruggedness Index)
-------------------------------
-Outputs a single-band raster with values computed from the elevation.
-TRI stands for Terrain Ruggedness Index, which is defined as the mean difference
-between a central pixel and its surrounding cells.
-
-This algorithm is derived from the `GDAL DEM utility <https://gdal.org/gdaldem.html>`_ .
-
-``Default menu``: :menuselection:`Raster --> Analysis`
-
-Parameters
-..........
-
-``Input layer`` [raster]
-  Elevation raster layer.
-
-``Band number`` [number]
-  The number of a band containing elevation values.
-
-  Default: *1*
-
-``Compute edges`` [boolean]
-  Generates edges from the elevation raster.
-
-  Default: *False*
-
-Outputs
-.......
-
-``Output file`` [raster]
-  TRI raster file.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Terrain Ruggedness Index**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster.
