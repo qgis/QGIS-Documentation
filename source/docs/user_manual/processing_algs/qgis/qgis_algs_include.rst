@@ -110,7 +110,7 @@ Advanced parameters
 
 **end_network_advanced_parameters**
 
-**end_network_advanced_parameters_service_area**
+**network_advanced_parameters_service_area**
 
 .. The following section is included in network analysis algorithms, ie
  qgisserviceareafrompoint, qgisserviceareafromlayer, qgisshortestpathlayertopoint,
