@@ -180,8 +180,7 @@ Parameters
      - [string]
 
        Default: 'public'
-     - Defines the schema to which the database table will be
-       assigned to.
+     - Defines the schema for the database table
    * - **Table to export to (leave blank to use layer name)**
 
        Optional
@@ -299,8 +298,8 @@ Parameters
 
        Default: True
      - If there is a table with the same name in the database,
-       and if this is set to true, the table will be overwritten.
-       By default the existing table is overwritten.
+       and if this option is set to True, the table will be
+       overwritten.
    * - **Append to existing table**
 
        Optional
@@ -308,8 +307,8 @@ Parameters
      - [boolean]
 
        Default: False
-     - If activated the vector data will be appended to an
-       existing table, there won't be created a new table.
+     - If checked / True the vector data will be appended to an
+       existing table.
        New fields found in the input layer are ignored.
        By default a new table will be created.
    * - **Append and add new fields to existing table**
@@ -341,7 +340,8 @@ Parameters
      - [boolean]
 
        Default: False
-     - Prevents that a spatial index in the output table will be created
+     - Prevents a spatial index for the output table from being created.
+       By default, a spatial index is added.
    * - **Continue after a failure, skipping the failed feature**
 
        Optional
@@ -503,8 +503,7 @@ Parameters
      - [string]
 
        Default: 'public'
-     - Defines the schema to which the database table will be
-       added to.
+     - Defines the schema for the database table
    * - **Table name, leave blank to use input name**
 
        Optional
@@ -575,7 +574,7 @@ Parameters
        Default: ''
      - The maximum distance between two nodes.
        Used to create intermediate points.
-       By default there is no maximum distance.
+       By default there is no densification.
    * - **Select features by extent (defined in input layer CRS)**
 
        Optional
@@ -630,8 +629,7 @@ Parameters
 
        Default: True
      - If there is a table with the same name in the database,
-       it won't be overwritten.
-       By default this takes place.
+       and if this option is set to True, the table will be overwritten.
    * - **Append to existing table**
 
        Optional
@@ -639,8 +637,9 @@ Parameters
      - [boolean]
 
        Default: False
-     - If activated the vector data will be appended to an
-       existing table, there won't be created a new table.
+     - 
+     - If checked / True the vector data will be appended to an
+       existing table.
        New fields found in the input layer are ignored.
        By default a new table will be created.
    * - **Append and add new fields to existing table**
@@ -756,7 +755,7 @@ Parameters
      - [boolean]
 
        Default: False
-      - 
+     - 
    * - **Layer information**
      - ``OUTPUT``
      - [html]
