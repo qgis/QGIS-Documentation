@@ -92,7 +92,7 @@ Outputs
      - Vector layer created by the query
 
 
-.. _importvectorintopostgisdatabaseavailableconnection:
+.. _gdalimportvectorintopostgisdatabaseavailableconnection:
 
 Export to PostgreSQL (available connections)
 --------------------------------------------
@@ -381,7 +381,7 @@ Outputs
 This algorithm has no output.
 
 
-.. _importvectorintopostgisdatabasenewconnection:
+.. _gdalimportvectorintopostgisdatabasenewconnection:
 
 Export to PostgreSQL (new connection)
 -------------------------------------
