@@ -28,18 +28,59 @@ Attributes are not modified by this algorithm.
 
 Parameters
 ..........
-``Input layer`` [vector: any]
-  Vector layer with wrong or missing CRS.
 
-``Assigned CRS`` [crs]
-  Select the new CRS to assign to the vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-  Default: *EPSG:4326 - WGS84*
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - The input layer
+   * - **Assigned CRS**
+     - ``CRS``
+     - [crs]
+       
+       Default: ``EPSG:4326 - WGS84``
+     - Select the new CRS to assign to the vector layer
+   * - **Assigned CRS**
+
+       (Optional)
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Skip output]``
+     - Specify the output layer containing only the duplicates.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
-.......
-``Assigned CRS`` [vector: any]
-  Vector layer with assigned projection.
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Assigned CRS**
+     - ``OUTPUT``
+     - [same as input]
+     - Vector layer with assigned projection
 
 
 .. _qgisbuildvirtualvector:
@@ -54,18 +95,62 @@ layers but accept only one ``vrt`` in which the layers are specified.
 
 Parameters
 ..........
-``Input datasources`` [vector: any] [list]
-  Select the vector layers you want to use to build the virtual vector.
 
-``Create "unioned" VRT`` [boolean]
-  Check if you want to unite all the vectors in a single ``vrt`` file.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-  Default: *False*
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input datasources**
+     - ``INPUT``
+     - [vector: any] [list]
+     - Select the vector layers you want to use to build
+       the virtual vector
+   * - **Create "unioned" VRT**
+     - ``UNIONED``
+     - [boolean]
+       
+       Default: False
+     - Check if you want to unite all the vectors in a
+       single ``vrt`` file
+   * - **Virtual vector**
+     - ``OUTPUT``
+     - [vector: any]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output layer containing only the duplicates.
+       One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
+
+Outputs
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Virtual vector**
+     - ``OUTPUT``
+     - [vector: any]
+     - The output virtual vector made from the chosen sources
 
 Outputs
 .......
-``Virtual vector`` [vector: any]
-  The final virtual vector made by all the source vector chosen.
+```` [vector: any]
+  .
 
 
 .. _qgiscreateattributeindex:
@@ -81,11 +166,41 @@ No outputs are created: the index is stored on the layer itself.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Attribute to index`` [tablefield: any]
-  Field of the vector layer.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Layer**
+     - ``INPUT``
+     - [vector: any] [list]
+     - Select the vector layers you want to use to build
+       the virtual vector
+   * - **Attribute to index**
+     - ``FIELD``
+     - [tablefield: any]
+     - Field of the vector layer
+
+Outputs
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - ** **
+     - ``OUTPUT``
+     - [same as input]
+     - 
 
 
 .. _qgiscreatespatialindex:
@@ -102,8 +217,37 @@ No new output layers are created.
 
 Parameters
 ..........
-``Input layer`` [vector: any]
-  Vector layer in input.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Layer**
+     - ``INPUT``
+     - [vector: any] [list]
+     - Input vector layer
+
+Outputs
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - ** **
+     - ``OUTPUT``
+     - [same as input]
+     - 
 
 
 .. _qgisdefinecurrentprojection:
@@ -126,11 +270,42 @@ layer and will not output a new layer.
 
 Parameters
 ..........
-``Input layer`` [vector: any]
-  Vector layer with missing projection information.
 
-``CRS`` [crs]
-  CRS to associate to the input vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Vector layer with missing projection information
+   * - **CRS**
+     - ``CRS``
+     - [crs]
+     - Select the CRS to assign to the vector layer
+
+Outputs
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - ** **
+     - ``INPUT``
+     - [same as input]
+     - The input vector layer with the defined projection
+
 
 
 .. _qgisdeleteduplicategeometries:
@@ -146,14 +321,48 @@ but different attributes, only one of them will be added to the result layer.
 
 Parameters
 ..........
-``Input layer`` [vector: any]
-  The layer with duplicate geometries you want to clean.
 
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - The layer with duplicate geometries you want to clean
+   * - **Cleaned**
+     - ``OUTPUT``
+     - [same as input]
+     - Specify the output layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
-.......
-``Cleaned`` [vector: any]
-  The final layer without any duplicated geometries.
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Cleaned**
+     - ``OUTPUT``
+     - [same as input]
+     - The output layer without any duplicated geometries
 
 
 .. _qgisdeleteduplicatesbyattribute:
@@ -184,10 +393,12 @@ Parameters
      - ``INPUT``
      - [vector: any]
      - The input layer
-   * - **Fields**
+   * - **Fields to match duplicates by**
      - ``FIELDS``
      - [tablefield: any] [list]
-     - Fields to match duplicates by
+     - Fields defining duplicates.
+       Features with identical values for all these fields are
+       considered duplicates.
    * - **Filtered (no duplicates)**
      - ``OUTPUT``
      - [same as input]
@@ -232,10 +443,13 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Count of retained records**
-     - ``RETAINED_COUNT``
-     - [Number]
-     - Count of unique records
+   * - **Filtered (duplicates)**
+
+       (Optional)
+     - ``DUPLICATES``
+     - [same as input]
+     - Vector layer containing the removed features.
+       Will not be produced if not specifed (left as ``[Skip output]``).
    * - **Count of discarded duplicate records**
      - ``DUPLICATE_COUNT``
      - [Number]
@@ -244,13 +458,10 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - Vector layer containing the unique features.
-   * - **Filtered (duplicates)**
-
-       (Optional)
-     - ``DUPLICATES``
-     - [same as input]
-     - Vector layer containing the removed features.
-       Will not be produced if not specifed (left as ``[Skip output]``).
+   * - **Count of retained records**
+     - ``RETAINED_COUNT``
+     - [Number]
+     - Count of unique records
 
 
 .. _qgisdropgeometries:
@@ -268,14 +479,49 @@ If the file is saved in a local folder, you can choose between many file formats
 
 Parameters
 ..........
-``Input layer`` [vector: any]
-  Vector layer.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - The input vector layer
+   * - **Dropped geometries**
+     - ``OUTPUT``
+     - [table]
+     - Specify the output geometryless layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
-.......
+..........
 
-``Dropped geometry`` [table]
-  Geometryless table as a copy of the original attribute table.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Dropped geometries**
+     - ``OUTPUT``
+     - [table]
+     - The output geometryless layer.
+       A copy of the original attribute table.
 
 
 .. _qgisexecutesql:
@@ -290,50 +536,93 @@ The result of the query will be added as a new layer.
 
 Parameters
 ..........
-``Additional input datasources`` [vector: any] [list]
-  List of layers to query. In the SQL editor you can refer these layers with
-  their **real** name or also with **input1**, **input2**, **inputN** depending
-  on how many layers have been chosen.
 
-``SQL query`` [string]
-  Type here the string of your SQL query, e.g. ``SELECT * FROM input1``.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Unique identifier field`` [string]
-  Optional
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Additional input datasources (called input1, .., inputN in the query)**
+     - ``INPUT_DATASOURCES``
+     - [vector: any] [list]
+     - List of layers to query. In the SQL editor you can
+       refer these layers with their **real** name or also
+       with **input1**, **input2**, **inputN** depending
+       on how many layers have been chosen.
+   * - **SQL query**
+     - ``INPUT_QUERY``
+     - [string]
+     - Type the string of your SQL query, e.g. ``SELECT * FROM input1``.
+   * - **Unique identifier field**
 
-  Specify the column with unique ID.
+       Optional
+     - ``INPUT_UID_FIELD``
+     - [string]
+     - Specify the column with unique ID
+   * - **Geometry field**
 
-``Geometry field`` [string]
-  Optional
+       Optional
+     - ``INPUT_GEOMETRY_FIELD``
+     - [string]
+     - Specify the geometry field
+   * - **Geometry type**
 
-  Specify the geometry field.
+       Optional
+     - ``INPUT_GEOMETRY_TYPE``
+     - [enumeration]
 
-``Geometry type`` [enumeration]
-  Optional
+       Default: 0
+     - Choose the geometry of the result.
+       By default the algorithm will autodetect it.
+       One of:
 
-  Choose the final geometry of the result. By default the algorithm will autodetect
-  it. Available options are:
+       * 0 --- Autodetect
+       * 1 --- No geometry
+       * 2 --- Point
+       * 3 --- LineString
+       * 4 --- Polygon
+       * 5 --- MultiPoint
+       * 6 --- MultiLineString
+       * 7 --- MultiPolygon
 
-  * 0 --- Autodetect
-  * 1 --- No geometry
-  * 2 --- Point
-  * 3 --- LineString
-  * 4 --- Polygon
-  * 5 --- MultiPoint
-  * 6 --- MultiLineString
-  * 7 --- MultiPolygon
+   * - **CRS**
 
-  Default: *0*
+       Optional
+     - ``INPUT_GEOMETRY_CRS``
+     - [crs]
+     - The CRS to assign to the output layer
+   * - **SQL Output**
+     - ``OUTPUT``
+     - [vector: any]
+     - Specify the output layer created by the query. One of:
 
-``CRS`` [crs]
-  Optional
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-  The CRS to assign to the output layer.
+       The file encoding can also be changed here.
 
 Outputs
-.......
-``SQL Output`` [vector: any]
-  Vector layer created by the query.
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **SQL Output**
+     - ``OUTPUT``
+     - [vector: any]
+     - Vector layer created by the query
 
 
 .. _qgissaveselectedfeatures:
