@@ -773,50 +773,127 @@ An attribute is selected in each of them to define the join criteria.
 
 Parameters
 ..........
-``Input layer`` [vector: any]
-  Source input vector layer. The final attribute table will be added to **this**
-  vector layer.
 
-``Table field`` [tablefield: any]
-  Field of the source layer with the unique identifier.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Input layer 2`` [vector: any]
-  Layer with the attribute table to join.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer. The output layer will consist of
+       the features of this layer with attributes from
+       matching features in the second layer.
+   * - **Table field**
+     - ``FIELD``
+     - [tablefield: any]
+     - Field of the source layer to use for the join
+   * - **Input layer 2**
+     - ``INPUT_2``
+     - [vector: any]
+     - Layer with the attribute table to join
+   * - **Table field 2**
+     - ``FIELD_2``
+     - [tablefield: any]
+     - Field of the second (join) layer to use for the join
+   * - **Layer 2 fields to copy**
 
-``Table field 2`` [tablefield: any]
-  Table of the joining layer with the common unique field identifier.
+       Optional
+     - ``FIELDS_TO_COPY``
+     - [tablefield: any] [list]
+     - Select the specific fields you want to add.
+       By default all the fields are added.
+   * - **Join type**
+     - ``METHOD``
+     - [enumeration]
 
-``Layer 2 fields to copy`` [tablefield: any]
-  Optional
+       Default: 1
+     - The type of the final joined layer. One of:
 
-  Select the specific fields you want to add. By default all the fields are added.
+       * 0 --- Create separate feature for each matching feature (one-to-many)
+       * 1 --- Take attributes of the first matching feature only (one-to-one)
 
-``Join type`` [enumeration]
-  Choose the type of the final joined layer between:
+   * - **Discard records which could not be joined**
+     - ``DISCARD_NONMATCHING``
+     - [boolean]
 
-  * 0 --- Create separate feature for each matching feature (one-to-many)
-  * 1 --- Take attributes of the first matching feature only (one-to-one)
+       Default: True
+     - Check if you don't want to add the features that cannot be joined
+   * - **Joined field prefix**
 
-  Default: *1*
+       Optional
+     - ``PREFIX``
+     - [string]
+     - Add a prefix to joined fields in order to easily identify
+       them and avoid field name collision
+   * - **Joined layer**
+     - ``OUTPUT``
+     - [same as input]
 
-``Discard records which could not be joined`` [boolean]
-  Check if you don't want to add the features that cannot be joined.
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer for the join.
+       One of:
 
-``Joined field prefix`` [string]
-  Optional
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-  Add a prefix to joined fields in order to easily identify them and avoid field
-  name collision.
+       The file encoding can also be changed here.
+   * - **Unjoinable features from first layer**
+     - ``NON_MATCHING``
+     - [same as input]
+
+       Default: ``[Skip output]``
+     - Specify the output vector layer for unjoinable
+       features from first layer.
+       One of:
+
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
-.......
-``Joined layer`` [vector: any]
-  Final vector layer with the attribute table as result of the join.
+..........
 
-``Unjoinable features from first layer`` [vector: any]
-  Optional
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-  Vector layer of the non matching features resulting from the join.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Number of unjoinable features from input table**
+     - ``JOINED_COUNT``
+     - [number]
+     - 
+   * - **Unjoinable features from first layer**
+
+       Optional
+     - ``NON_MATCHING``
+     - [same as input]
+     - Vector layer with the non-matched features
+   * - **Joined layer**
+     - ``OUTPUT``
+     - [same as input]
+     - Output vector layer with added attributes from the join
+   * - **Number of joined features from input table**
+
+       Optional
+     - ``UNJOINABLE_COUNT``
+     - [number]
+     - 
 
 
 .. _qgisjoinattributesbylocation:
@@ -837,59 +914,129 @@ added to each feature from the first layer.
 
 Parameters
 ..........
-``Input layer`` [vector: any]
-  Source vector layer.
 
-``Join layer`` [vector: any]
-  The attributes of this vector layer will be **added** to the source layer
-  attribute table.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Geometric predicate`` [enumeration] [list]
-  Check the geometric criteria.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer. The output layer will consist of
+       the features of this layer with attributes from
+       matching features in the second layer.
+   * - **Join layer**
+     - ``JOIN``
+     - [vector: any]
+     - The attributes of this vector layer will be **added**
+       to the source layer attribute table.
+   * - **Geometric predicate**
+     - ``PREDICATE``
+     - [enumeration] [list]
 
-  Options:
+       Default: [0]
+     - Select the geometric criteria. One or more of:
 
-  * 0 --- intersects
-  * 1 --- contains
-  * 2 --- equals
-  * 3 --- touches
-  * 4 --- overlaps
-  * 5 --- within
-  * 6 --- crosses
+       * 0 --- intersects
+       * 1 --- contains
+       * 2 --- equals
+       * 3 --- touches
+       * 4 --- overlaps
+       * 5 --- within
+       * 6 --- crosses
 
-  Default: *0*
+   * - **Fields to add (leave empty to use all fields)**
 
-``Fields to add`` [tablefield: any]
-  Optional
+       Optional
+     - ``JOIN_FIELDS``
+     - [tablefield: any] [list]
+     - Select the specific fields you want to add.
+       By default all the fields are added.
+   * - **Join type**
+     - ``METHOD``
+     - [enumeration]
 
-  Select the specific fields you want to add. By default all the fields are added.
+       Default: 1
+     - The type of the final joined layer. One of:
 
-``Join type`` [enumeration]
-  Choose the type of the final joined layer between:
+       * 0 --- Create separate feature for each matching feature (one-to-many)
+       * 1 --- Take attributes of the first matching feature only (one-to-one)
 
-  * 0 --- Create separate feature for each located feature (one-to-many)
-  * 1 --- Take attributes of the first located feature only (one-to-one)
+   * - **Discard records which could not be joined**
+     - ``DISCARD_NONMATCHING``
+     - [boolean]
+     
+       Default: False
+     - Remove from the output the input layer records which could not be joined
+   * - **Joined field prefix**
 
-  Default: *0*
+       Optional
+     - ``PREFIX``
+     - [string]
+     - Add a prefix to joined fields in order to easily identify
+       them and avoid field name collision
+   * - **Joined layer**
+     - ``OUTPUT``
+     - [same as input]
 
-``Discard records which could not be joined`` [boolean]
-  Check if you don't want to add the features that cannot be joined.
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer for the join.
+       One of:
 
-``Joined field prefix`` [string]
-  Optional
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-  Add a prefix to joined fields in order to easily identify them and avoid field
-  name collision.
+       The file encoding can also be changed here.
+   * - **Unjoinable features from first layer**
+     - ``NON_MATCHING``
+     - [same as input]
+
+       Default: ``[Skip output]``
+     - Specify the output vector layer for unjoinable
+       features from first layer.
+       One of:
+
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
-.......
-``Joined layer`` [vector: any]
-  The final vector with all the joined features.
+..........
 
-``Unjoinable features from first layer`` [vector: any]
-  Optional
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-  Vector layer of only the input features that do not spatially match any join feature.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Number of joined features from input table**
+     - ``JOINED_COUNT``
+     - [number]
+     - 
+   * - **Unjoinable features from first layer**
+
+       Optional
+     - ``NON_MATCHING``
+     - [same as input]
+     - Vector layer of the non-matched features
+   * - **Joined layer**
+     - ``OUTPUT``
+     - [same as input]
+     - Output vector layer with added attributes from the join
 
 
 .. _qgisjoinbylocationsummary:
