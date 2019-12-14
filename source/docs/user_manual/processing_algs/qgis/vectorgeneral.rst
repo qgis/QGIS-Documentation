@@ -1057,65 +1057,124 @@ features in the second layer (e.g. maximum value, mean value, etc).
 
 Parameters
 ..........
-``Input layer`` [vector: any]
-  Source vector layer.
 
-``Join layer`` [vector: any]
-  The attributes of this vector layer will be **added** to the source layer
-  attribute table.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Geometric predicate`` [enumeration] [list]
-  Check the geometric criteria.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer. The output layer will consist of
+       the features of this layer with attributes from
+       matching features in the second layer.
+   * - **Join layer**
+     - ``JOIN``
+     - [vector: any]
+     - The attributes of this vector layer will be **added**
+       to the source layer attribute table.
+   * - **Geometric predicate**
+     - ``PREDICATE``
+     - [enumeration] [list]
 
-  Options:
+       Default: [0]
+     - Select the geometric criteria. One or more of:
 
-  * 0 --- intersects
-  * 1 --- contains
-  * 2 --- equals
-  * 3 --- touches
-  * 4 --- overlaps
-  * 5 --- within
-  * 6 --- crosses
+       * 0 --- intersects
+       * 1 --- contains
+       * 2 --- equals
+       * 3 --- touches
+       * 4 --- overlaps
+       * 5 --- within
+       * 6 --- crosses
 
-  Default: *0*
+   * - **Fields to summarize (leave empty to use all fields)**
 
-``Fields to summarize`` [tablefield: any] [list]
-  Optional
+       Optional
+     - ``JOIN_FIELDS``
+     - [tablefield: any] [list]
+     - Select the specific fields you want to add and summarize.
+       By default all the fields are added.
+   * - **Summaries to calculate**
 
-  Select the specific fields you want to add. By default all the fields are added.
+       Optional
+     - ``SUMMARIES``
+     - [enumeration] [list]
 
-``Summaries to calculate`` [enumeration] [list]
-  Optional
+       Default: []
+     - Choose which type of summary you want to add to
+       each field and for each feature. One or mor of:
 
-  Choose which type of summary you want to add to each field and for each feature.
+       * 0 --- count
+       * 1 --- unique
+       * 2 --- min
+       * 3 --- max
+       * 4 --- range
+       * 5 --- sum
+       * 6 --- mean
+       * 7 --- median
+       * 8 --- stddev
+       * 9 --- minority
+       * 10 --- majority
+       * 11 --- q1
+       * 12 --- q3
+       * 13 --- iqr
+       * 14 --- empty
+       * 15 --- filled
+       * 16 --- min_length
+       * 17 --- max_length
+       * 18 --- mean_length
 
-  * 0 --- count
-  * 1 --- unique
-  * 2 --- min
-  * 3 --- max
-  * 4 --- range
-  * 5 --- sum
-  * 6 --- mean
-  * 7 --- median
-  * 8 --- stddev
-  * 9 --- minority
-  * 10 --- majority
-  * 11 --- q1
-  * 12 --- q3
-  * 13 --- iqr
-  * 14 --- empty
-  * 15 --- filled
-  * 16 --- min_length
-  * 17 --- max_length
-  * 18 --- mean_length
+   * - **Discard records which could not be joined**
+     - ``DISCARD_NONMATCHING``
+     - [boolean]
+     
+       Default: False
+     - Remove from the output the input layer records which could not be joined
+   * - **Joined field prefix**
 
-``Discard records which could not be joined`` [boolean]
-  Check if you don't want to add the features that cannot be joined.
+       Optional
+     - ``PREFIX``
+     - [string]
+     - Add a prefix to joined fields in order to easily identify
+       them and avoid field name collision
+   * - **Joined layer**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer for the join.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
-.......
-``Joined layer`` [vector: any]
-  The final vector with all the joined features.
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Joined layer**
+     - ``OUTPUT``
+     - [same as input]
+     - Output vector layer with added attributes from the join
+
 
 .. _qgisjoinattributesbynearest:
 
@@ -1274,21 +1333,60 @@ All layers will be reprojected to match this CRS.
 Parameters
 ..........
 
-``Layers to merge`` [vector: any] [list]
-  All the layers that have to be merged into a single layer.
-  Layers should be of the same geometry type.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Destination CRS`` [crs]
-  Optional
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Layers**
+     - ``LAYERS``
+     - [vector: any] [list]
+     - The layers that are to be merged into a
+       single layer.
+       Layers should be of the same geometry type.
+   * - **Destination CRS**
 
-  Choose the CRS of the output layer. If not specified the
-  CRS of the first input layer is taken.
+       Optional
+     - ``CRS``
+     - [crs]
+     - Choose the CRS for the output layer.
+       If not specified, the CRS of the first input
+       layer is used.
+   * - **Merged**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
-.......
+..........
 
-``Merged`` [vector: any]
-  Merged vector layer containing all the features and attributes from input layers.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Merged**
+     - ``OUTPUT``
+     - [same as input]
+     - Output vector layer containing all the
+       features and attributes from the input layers.
 
 
 .. _qgisorderbyexpression:
@@ -1304,28 +1402,66 @@ not be kept every time.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Vector layer to sort.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Expression`` [expression]
-  Expression to use for the vector sorting.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer to sort
+   * - **Expression**
+     - ``EXPRESSION``
+     - [expression]
+     - Expression to use for the sorting
+   * - **Sort ascending**
+     - ``ASCENDING``
+     - [boolean]
+       
+       Default: True
+     - If checked the vector layer will be sorted from
+       small to large values.
+   * - **Sort nulls first**
+     - ``NULLS_FIRST``
+     - [boolean]
+       
+       Default: False
+     - If checked, Null values are placed first
+   * - **Ordered**
+     - ``OUTPUT``
+     - [same as input]
 
-``Sort ascending`` [boolean]
-  If checked the vector layer will be sorted from the smallest to the
-  biggest values found.
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
 
-  Default: *True*
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-``Sort nulls first`` [boolean]
-  If checked Null values are placed at the beginning of the sorted layer.
-
-  Default: *False*
+       The file encoding can also be changed here.
 
 Outputs
-.......
+..........
 
-``Output layer`` [vector: any]
-  Sorted vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Ordered**
+     - ``OUTPUT``
+     - [same as input]
+     - Output (sorted) vector layer
 
 
 .. _qgisreprojectlayer:
@@ -1343,19 +1479,55 @@ the same features and attributes of the input layer.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Layer to reproject.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Target CRS`` [crs]
-  Destination coordinate reference system.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer to reproject
+   * - **Target CRS**
+     - ``TARGET_CRS``
+     - [crs]
 
-  Default: *EPSG:4326*
+       Default: ``EPSG:4326 - WGS 84``
+     - Destination coordinate reference system
+   * - **Reprojected**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
-.......
+..........
 
-``Reprojected layer`` [vector: any]
-  The resulting reprojected layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Reprojected**
+     - ``OUTPUT``
+     - [same as input]
+     - Output (reprojected) vector layer
 
 
 .. _qgissetstyleforvectorlayer:
@@ -1371,11 +1543,111 @@ No new output are created: the style is immediately assigned to the vector layer
 
 Parameters
 ..........
-``Vector layer`` [vector: any]
-  The layer you want to change the style.
 
-``Style file`` [file]
-  ``qml`` file of the style.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer you want to set the style for
+   * - **Style file**
+     - ``STYLE``
+     - [file]
+     - ``qml`` file of the style
+
+Outputs
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Layer**
+     - ``INPUT``
+     - [same as input]
+     - The input vector layer with the new style
+
+
+.. _qgissplitfeaturesbycharacter:
+
+Split feature by character
+--------------------------
+Features are split into multiple output features by splitting
+a field's value at a specified character.
+For instance, if a layer contains features with multiple
+comma separated values contained in a single field, this
+algorithm can be used to split these values up across multiple
+output features.
+Geometries and other attributes remain unchanged in the output.
+Optionally, the separator string can be a regular expression
+for added flexibility.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Split using values in the field**
+     - ``FIELD``
+     - [tablefield: any]
+     - Field to use for splitting
+   * - **Split value using character**
+     - ``CHAR``
+     - [string]
+     - Character to use for splitting
+   * - **Split**
+     - ``OUTPUT``
+     - [same as input]
+       
+       Default: ``Create temporary layer``
+     - Specify output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+
+Outputs
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Split**
+     - ``OUTPUT``
+     - [same as input]
+     - The output vector layer.
 
 
 .. _qgissplitvectorlayer:
@@ -1398,14 +1670,56 @@ It is the opposite operation of *merging*.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Unique ID field`` [tablefield: any]
-  Field of the attribute table on which the layer will be split.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Unique ID field**
+     - ``FIELD``
+     - [tablefield: any]
+     - Field to use for splitting
+   * - **Output directory**
+     - ``OUTPUT``
+     - [folder]
+       
+       Default: ``Save to temporary folder``
+     - Specify the directory for the output layers.
+       One of:
 
-``Output directory`` [folder]
-  Directory where all the split layers will be saved.
+       * Save to a Temporary Directory
+       * Save to Directory...
+
+       The file encoding can also be changed here.
+
+Outputs
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output directory**
+     - ``OUTPUT``
+     - [folder]
+     - The directory for the output layers
+   * - **Output layers**
+     - ``OUTPUT_LAYERS``
+     - [same as input] [list]
+     - The output vector layers resulting from the split.
 
 
 .. _qgistruncatetable:
@@ -1421,6 +1735,37 @@ Parameters
 ..........
 ``Input layer`` [vector: any]
   Vector layer in input.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+
+Outputs
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Truncated layer**
+     - ``OUTPUT``
+     - [folder]
+     - The truncated (empty) layer
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
