@@ -1582,8 +1582,8 @@ Outputs
 
 .. _qgissplitfeaturesbycharacter:
 
-Split feature by character
---------------------------
+Split features by character |310|
+---------------------------------
 Features are split into multiple output features by splitting
 a field's value at a specified character.
 For instance, if a layer contains features with multiple
@@ -1776,5 +1776,6 @@ Outputs
 
 .. |36| replace:: ``NEW in 3.6``
 .. |38| replace:: ``NEW in 3.8``
+.. |310| replace:: ``NEW in 3.10``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
