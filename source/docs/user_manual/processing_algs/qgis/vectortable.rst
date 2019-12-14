@@ -177,7 +177,7 @@ Parameters
      - [same as input]
        
        Default: ``[Create temporary layer]``
-     - Specification of the output vector layer.
+     - Specifify the output vector layer.
        One of:
        
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
@@ -268,7 +268,7 @@ Parameters
      - [table]
        
        Default: ``[Skip output]``
-     - Specification of table to contain the summary of the class field
+     - Specify the table to contain the summary of the class field
        mapped to the corresponding unique value.
        One of:
       
@@ -348,7 +348,7 @@ Parameters
      - [vector: point]
 
        Default: ``[Create temporary layer]``
-     - Specification of the output layer.
+     - Specifify of the output layer.
        One of:
        
        * Create Temporary Layer
@@ -516,7 +516,8 @@ Parameters
      - [same as input]
        
        Default: ``[Create temporary layer]``
-     - Vector layer with the remaining fields. One of:
+     - Specify the output vector layer with the remaining fields.
+       One of:
        
        * Create Temporary Layer
        * Save to File...
@@ -541,6 +542,86 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - Vector layer with the remaining fields
+
+
+.. _qgisexplodehstorefield:
+
+Explode HStore Field |36|
+-------------------------
+Creates a copy of the input layer and adds a new field
+for every unique key in the HStore field.
+The expected field list is an optional comma separated
+list.
+If this list is specified, only these fields are added
+and the HStore field is updated.
+By default, all unique keys are added.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **HStore field**
+     - ``FIELD``
+     - [tablefield: any]
+     - The field(s) to drop
+   * - **Expected list of fields separated by a comma**
+
+       Optional
+     - ``EXPECTED_FIELDS``
+     - [string]
+       
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer with the remaining fields.
+       One of:
+       
+       * Create Temporary Layer
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+       
+       The file encoding can also be changed here.
+   * - **Exploded**
+     - ``OUTPUT``
+     - [same as input]
+       
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
+       
+       * Create Temporary Layer
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+       
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Exploded**
+     - ``OUTPUT``
+     - [same as input]
+     - Output vector layer
 
 
 .. _qgisextractbinary:
@@ -902,8 +983,7 @@ Parameters
      - [same as input]
        
        Default: ``[Create Temporary Layer]``
-     - Specification of the output layer.
-       One of:
+     - Specifify the output layer. One of:
        
        * Create Temporary Layer
        * Save to File...
