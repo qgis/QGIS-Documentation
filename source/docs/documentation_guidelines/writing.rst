@@ -632,7 +632,7 @@ guidelines:
   Layout                                    ``Layout``
   LayoutItem                                ``LayoutItem``
   Color                                     ``Color``
-  scale                                     ``scale``
+  Scale                                     ``scale``
   ----------------------------------------  -------------------------  --------------------
   Aggregates                                ``aggregates``
   ExecuteSql                                ``executesql``
