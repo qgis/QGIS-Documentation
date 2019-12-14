@@ -148,6 +148,137 @@ Outputs
      - The output virtual vector made from the chosen sources
 
 
+.. _qgislayertobookmarks:
+
+Conver layer to spatial bookmarks |310|
+---------------------------------------
+Creates a new layer containing polygon features for stored
+spatial bookmarks.
+The export can be filtered to only bookmarks belonging to
+the current project, to all user bookmarks, or a
+combination of both.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Layer**
+     - ``INPUT``
+     - [vector: any] [list]
+     - The input vector layer
+   * - **Bookmark destination**
+     - ``DESTINATION``
+     - [enumeration]
+       
+       Default: 0
+     - Select the destination for the bookmarks.
+       One of:
+       
+       * 0 --- Project bookmarks
+       * 1 --- User bookmarks
+   * - **Name field**
+     - ``NAME_EXPRESSION``
+     - [expression]
+     - 
+   * - **Group field**
+     - ``GROUP_EXPRESSION``
+     - [expression]
+     - 
+
+Outputs
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Count of bookmarks added**
+     - ``COUNT``
+     - [number]
+     - 
+
+
+.. _qgisbookmarktoslayer:
+
+Conver spatial bookmarks to layer |310|
+---------------------------------------
+This algorithm creates a new layer containing polygon
+features for stored spatial bookmarks.
+The export can be filtered to only bookmarks belonging
+to the current project, to all user bookmarks, or a
+combination of both.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Bookmark source**
+     - ``SOURCE``
+     - [enumeration] [list]
+       
+       Default: [0,1]
+     - Select the source(s) of the bookmarks.
+       One or more of:
+       
+       * 0 --- Project bookmarks
+       * 1 --- User bookmarks
+   * - **Output CRS**
+     - ``CRS``
+     - [crs]
+       
+       Default: ``EPSG:4326 - WGS 84``
+     - The CRS of the output layer
+   * - **Output**
+     - ``OUTPUT``
+     - [vector: any]
+     - Specify the output layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+
+Outputs
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output**
+     - ``OUTPUT``
+     - [number]
+     - The output (bookmarks) vector layer
+
+
 .. _qgiscreateattributeindex:
 
 Create attribute index
