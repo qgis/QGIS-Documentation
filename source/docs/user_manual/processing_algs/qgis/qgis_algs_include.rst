@@ -117,7 +117,7 @@ Advanced parameters
  qgisshortestpathpointtolayer and qgisshortestpathpointtopoint
 
 .. list-table::
-   :header-rows: 1
+   :header-rows: 0
    :widths: 20 20 20 40
    :stub-columns: 0
 
