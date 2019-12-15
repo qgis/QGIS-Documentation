@@ -285,6 +285,10 @@ Parameters
      - ``END_POINT``
      - [coordinates]
      - Point feature representing the end point of the routes
+   * - **Advanced parameters**
+     - GUI only
+     - 
+     - The **Advanced parameters** group:
    * - **Direction field**
 
        Optional
@@ -374,6 +378,10 @@ Parameters
        Default: 0.0
      - Two lines with nodes closer than the specified
        tolerance are considered connected
+   * - 
+     - 
+     - 
+     - End of the **Advanced parameters** group
    * - **Shortest path**
      - ``OUTPUT``
      - [vector: line]
