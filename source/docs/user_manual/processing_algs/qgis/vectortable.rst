@@ -557,6 +557,9 @@ If this list is specified, only these fields are added
 and the HStore field is updated.
 By default, all unique keys are added.
 
+`HStore <https://www.postgresql.org/docs/10/hstore.html>`_
+is a simple key-value store used in PostgreSQL.
+
 Parameters
 ..........
 
