@@ -557,8 +557,10 @@ If this list is specified, only these fields are added
 and the HStore field is updated.
 By default, all unique keys are added.
 
-`HStore <https://www.postgresql.org/docs/10/hstore.html>`_
-is a simple key-value store used in PostgreSQL.
+The PostgreSQL `HStore <https://www.postgresql.org/docs/10/hstore.html>`_
+is a simple key-value store used in PostgreSQL and OGR (when reading an
+`OSM file <https://gdal.org/drivers/vector/osm.html#other-tags-field>`_
+with the ``other_tags`` field.
 
 Parameters
 ..........
@@ -585,17 +587,11 @@ Parameters
        Optional
      - ``EXPECTED_FIELDS``
      - [string]
-       
-       Default: ``[Create temporary layer]``
-     - Specify the output vector layer with the remaining fields.
-       One of:
-       
-       * Create Temporary Layer
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
-       
-       The file encoding can also be changed here.
+
+       Default: ''
+     - Comma-separated list of fields to extract.
+       The HStore field will be updated by removing these keys.
+
    * - **Exploded**
      - ``OUTPUT``
      - [same as input]
