@@ -177,7 +177,7 @@ Parameters
      - [same as input]
        
        Default: ``[Create temporary layer]``
-     - Specifify the output vector layer.
+     - Specify the output vector layer.
        One of:
        
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
@@ -348,7 +348,7 @@ Parameters
      - [vector: point]
 
        Default: ``[Create temporary layer]``
-     - Specifify of the output layer.
+     - Specify the output layer.
        One of:
        
        * Create Temporary Layer
@@ -550,6 +550,7 @@ Explode HStore Field |36|
 -------------------------
 Creates a copy of the input layer and adds a new field
 for every unique key in the HStore field.
+
 The expected field list is an optional comma separated
 list.
 If this list is specified, only these fields are added
@@ -983,7 +984,7 @@ Parameters
      - [same as input]
        
        Default: ``[Create Temporary Layer]``
-     - Specifify the output layer. One of:
+     - Specify the output layer. One of:
        
        * Create Temporary Layer
        * Save to File...
