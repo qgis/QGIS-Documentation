@@ -55,10 +55,23 @@ Parameters
      - The value is estimated as a distance (in the network
        layer units) when looking for the *Shortest* path and
        as time (in seconds) for the *Fastest* path.
-   * - **Advanced parameters**
-     - GUI only
-     - 
-     - Group of advanced network analysis parameters - se below.
+
+.. include:: qgis_algs_include.rst
+  :start-after: **network_advanced_parameters_table**
+  :end-before: **end_network_advanced_parameters_table**
+  
+.. list-table::
+   :header-rows: 0
+   :widths: 20 20 20 40
+   :stub-columns: 0
+   * - **Include upper/lower bound points**
+     - ``INCLUDE_BOUNDS``
+     - [boolean]
+
+       Default: False
+     - Creates a point layer output with two points for each
+       edge at the boundaries of the service area.
+       One point is the start of that edge, the other is the end.
    * - **Service area (lines)**
      - ``OUTPUT_LINES``
      - [vector: line]
@@ -89,10 +102,6 @@ Parameters
        * Save to PostGIS Table
 
        The file encoding can also be changed here.
-
-.. include:: qgis_algs_include.rst
-  :start-after: **network_advanced_parameters_service_area**
-  :end-before: **end_network_advanced_parameters_service_area**
 
 Outputs
 .......
