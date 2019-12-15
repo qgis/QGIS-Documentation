@@ -56,10 +56,6 @@ Parameters
        layer units) when looking for the *Shortest* path and
        as time (in seconds) for the *Fastest* path.
 
-.. include:: qgis_algs_include.rst
-  :start-after: **network_advanced_parameters_table**
-  :end-before: **end_network_advanced_parameters_table**
-
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
