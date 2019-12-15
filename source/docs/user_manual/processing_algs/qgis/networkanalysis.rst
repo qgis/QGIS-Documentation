@@ -214,8 +214,8 @@ Parameters
        The file encoding can also be changed here.
 
 .. include:: qgis_algs_include.rst
-  :start-after: **network_advanced_parameters**
-  :end-before: **end_network_advanced_parameters**
+  :start-after: **network_advanced_parameters_service_area**
+  :end-before: **end_network_advanced_parameters_service_area**
 
 Outputs
 .......
