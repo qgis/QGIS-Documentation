@@ -1,0 +1,23 @@
+name: HTML build
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        fetch-depth: 1
+    - name: Install requirements
+      run: pip3 install -r REQUIREMENTS.txt
+    - name: Build
+      run: make html
+    - name: Upload build artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: HTML build
+        path: output
+
