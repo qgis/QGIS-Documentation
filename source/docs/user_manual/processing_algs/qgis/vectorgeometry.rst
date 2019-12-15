@@ -943,33 +943,72 @@ Computes the concave hull of the features in an input point layer.
 
 Parameters
 ..........
-``Input point layer`` [vector: point]
-  Point vector layer to calculate the concave hull.
 
-``Threshold`` [number]
-  Number from 0 (maximum concave hull) to 1 (convex hull).
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-  Default: *0.3*
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input point layer**
+     - ``INPUT``
+     - [vector: point]
+     - Input point vector layer
+   * - **Threshold**
+     - ``ALPHA``
+     - [number]
 
-  .. figure:: img/concave_hull_threshold.png
-     :align: center
+       Default: 0.3
+     - Number from 0 (maximum concave hull) to 1 (convex hull).
+     
+       .. figure:: img/concave_hull_threshold.png
+          :align: center
 
-     Different thresholds used (0.3, 0.6, 0.9)
+          Different thresholds used (0.3, 0.6, 0.9)
 
-``Allow holes`` [boolean]
-  Choose whether to allow holes in the final concave hull.
+   * - **Allow holes**
+     - ``HOLES``
+     - [boolean]
 
-  Default: *True*
+       Default: True
+     - Choose whether to allow holes in the final concave hull
+   * - **Split multipart geometry into singlepart geometries**
+     - ``NO_MULTIGEOMETRY``
+     - [boolean]
 
-``Split multipart geometry into singlepart geometries`` [boolean]
-  Check if you want to have singlepart geometries instead of multipart ones.
+       Default: True
+     - Choose whether to allow holes in the final concave hull
+   * - **Concave hull**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Specify the output vector layer. One of:
 
-  Default: *False*
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
-``Concave hull`` [vector: polygon]
-  Output concave hull.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Concave hull**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output vector layer
 
 
 .. _qgisknearestconcavehull:
@@ -996,31 +1035,71 @@ polygons in the output layer for each group.
 
 Parameters
 ..........
-``Input layer`` [vector: any]
-  Vector layer to calculate the concave hull.
 
-``Number of neighboring points to consider`` [number]
-  Determines the concaveness of the output polygon.
-  A small number will result in a concave hull that follows
-  the points very closely, while a high number will make
-  the polygon look more like the convex hull (if the number
-  is equal to or larger than the number of features, the
-  result will be the convex hull).
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-  Default (and minimum): *3*
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input point layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Number of neighboring points to consider (a lower number is more concave, a higher number is smoother)**
+     - ``KNEIGHBORS``
+     - [number]
 
-``Field`` [tablefield: any]
-  Optional
+       Default: 3
+     - Determines the concaveness of the output polygon.
+       A small number will result in a concave hull that
+       follows the points very closely, while a high
+       number will make the polygon look more like the
+       convex hull (if the number is equal to or larger
+       than the number of features, the result will be
+       the convex hull).
+       Minimum value: 3.
+   * - **Field**
 
-  If specified, one concave hull polygon is generated for each unique
-  value of the field (by selecting features using this value).
+       Optional
+     - ``FIELD``
+     - [tablefield: any]
 
-  Default: *None*
+       Default: None
+     - If specified, one concave hull polygon is generated
+       for each unique value of the field (by selecting
+       features using this value).
+   * - **Concave hull**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
-``Concave hull`` [vector: polygon]
-  Output concave hull.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Concave hull**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output vector layer
 
 
 .. _qgisconvertgeometrytype:
@@ -1036,27 +1115,69 @@ a point layer, but a point layer cannot be converted to a line layer.
 
 Parameters
 ..........
-``Input layer`` [vector: any]
-  Input vector layer to transform.
 
-``New geometry type`` [enumeration]
-  Geometry type to apply to the output features.
-  Options are:
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-  * 0 --- Centroids
-  * 1 --- Nodes
-  * 2 --- Linestrings
-  * 3 --- Multilinestrings
-  * 4 --- Polygons
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **New geometry type**
+     - ``TYPE``
+     - [enumeration]
 
-  .. note:: Conversion types availability depends on the input layer and the
-    conversion chosen: e.g. it is not possible to convert a point to a line.
+       Default: The first in the list
+     - Geometry type to apply to the output features.
+       One of:
+       
+       * 0 --- Centroids
+       * 1 --- Nodes
+       * 2 --- Linestrings
+       * 3 --- Multilinestrings
+       * 4 --- Polygons
+
+       .. note:: The available conversion types depend on
+          the input layer and the conversion chosen:
+          e.g. it is not possible to convert a point to a line.
+
+   * - **Converted**
+     - ``OUTPUT``
+     - [vector: any]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Converted`` [vector: any]
-  Converted vector layer depending on the parameters chosen.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Converted**
+     - ``OUTPUT``
+     - [vector: any]
+     - Output vector layer - the type depends on the parameters
 
 
 .. _qgisconvexhull:
@@ -1081,13 +1202,48 @@ covers the whole layer or grouped subsets of features.
 
 Parameters
 ..........
-``Input point layer`` [vector: any]
-  Point vector layer to calculate the convex hull.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Convex hull**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
-``Convex hull`` [vector: polygon]
-  Output convex hull.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Convex hull**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output (convex hull) vector layer
 
 
 .. _qgisextenttolayer:
@@ -1106,14 +1262,47 @@ a layer based input.
 Parameters
 ..........
 
-``Extent (xmin, xmax, ymin, ymax)`` [extent]
-  Extent to represent.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Extent (xmin, xmax, ymin, ymax)**
+     - ``INPUT``
+     - [extent]
+     - Input extent
+   * - **Extent**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Extent``
-  Layer with a polygon feature representing the input extent.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Extent**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output (extent) vector layer
 
 
 .. _qgispointtolayer:
@@ -1199,45 +1388,93 @@ be automatically segmentized to Polygons depending on the output format.
 Parameters
 ..........
 
-``Input layer`` [vector: point]
-  Input point vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Azimuth (degrees from North)`` [number |dataDefined|]
-  Angle (in degrees) as the middle value of the wedge.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: point]
+     - Input point vector layer
+   * - **Azimuth (degrees from North)**
+     - ``AZIMUTH``
+     - [number |dataDefined|]
 
-``Wedge width (in degrees)`` [number |dataDefined|]
-  Width (in degrees) of the buffer. The wedge will extend to half of the angular
-  width either side of the azimuth direction.
+       Default: 0.0
+     - Angle (in degrees) as the middle value of the
+       wedge
+   * - **Wedge width (in degrees)**
+     - ``WIDTH``
+     - [number |dataDefined|]
 
-  .. figure:: img/wedge_buffers_azimuth_width.png
-    :align: center
+       Default: 45.0
+     - Width (in degrees) of the buffer.
+       The wedge will extend to half of the angular
+       width either side of the azimuth direction.
 
-    Azimuth and width values of the wedge buffer
+       .. figure:: img/wedge_buffers_azimuth_width.png
+         :align: center
 
-``Outer radius`` [number |dataDefined|]
-  The outer *size* (length) of the wedge: the size is meant from the source point
-  to the edge of the wedge shape.
+         Azimuth and width values of the wedge buffer
 
-``Inner radius`` [number |dataDefined|]
-  Optional
+   * - **Outer radius**
+     - ``OUTER_RADIUS``
+     - [number |dataDefined|]
 
-  Inner radius value. If 0 the wedge will begin from the source point.
+       Default: 1.0
+     - The outer *size* (length) of the wedge:
+       the size is meant from the source point to the
+       edge of the wedge shape.
+   * - **Inner radius**
 
-  Default: *0.0*
+       Optional
+     - ``INNER_RADIUS``
+     - [number |dataDefined|]
+
+       Default: 0.0
+     - Inner radius value.
+       If 0 the wedge will begin from the source point.
+   * - **Buffers**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Buffers`` [vector: polygon]
-  Wedge buffer polygon vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Buffers**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output (wedge buffer) vector layer
 
 
 .. _qgisdelaunaytriangulation:
 
 Delaunay triangulation
 ----------------------
-Creates a polygon layer with the delaunay triangulation corresponding to a point
-layer.
+Creates a polygon layer with the Delaunay triangulation corresponding
+to the input point layer.
 
 .. figure:: img/delaunay.png
    :align: center
@@ -1249,13 +1486,47 @@ layer.
 Parameters
 ..........
 
-``Input layer`` [vector: point]
-  Point vector layer to compute the triangulation on.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: point]
+     - Input point vector layer
+   * - **Delaunay triangulation**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
-``Delaunay triangulation`` [vector: polygon]
-  Resulting polygon layer of delaunay triangulation.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Delaunay triangulation**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output (Delaunay triangulation) vector layer
 
 
 .. _qgisdeleteholes:
@@ -1280,22 +1551,57 @@ holes being removed.
 Parameters
 ..........
 
-``Input layer`` [vector: polygon]
-  Polygon layer with holes.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Remove holes with area less than`` [number |dataDefined|]
-  Optional
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: point]
+     - Input polygon vector layer
+   * - **Remove holes with area less than**
 
-  Only holes with an area less than this threshold will be deleted. If ``0.0`` is
-  added, **all** the holes will be deleted.
+       Optional
+     - ``MIN_AREA``
+     - [number |dataDefined|]
 
-  Default: *0.0*
+       Default: 0.0
+     - Only holes with an area less than this
+       threshold will be deleted.
+       If ``0.0`` is added, **all** the holes will be deleted.
+   * - **Cleaned**
+     - ``OUTPUT``
+     - [same as input]
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Cleaned`` [vector: polygon]
-  Vector layer without holes or holes larger than specified area.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Cleaned**
+     - ``OUTPUT``
+     - [same as input]
+     - The output (cleaned) vector layer
 
 
 .. _qgisdensifygeometries:
@@ -1324,19 +1630,53 @@ The number of new vertices to add to each segment is specified as an input param
 Parameters
 ..........
 
-``Input layer`` [vector: line, polygon]
-  Polygon or line vector layer to densify.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Vertices to add`` [number]
-  Number of vertices to add to each segment.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line, polygon]
+     - Input line or polygon vector layer
+   * - **Vertices to add**
+     - ``VERTICES``
+     - [number]
 
-  Default: *1*
+       Default: 1
+     - Number of vertices to add to each segment
+   * - **Densified**
+     - ``OUTPUT``
+     - [same as input]
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Densified`` [vector: line, polygon]
-  Densified layer with vertices added.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Densified**
+     - ``OUTPUT``
+     - [same as input]
+     - The output (densified) vector layer
 
 
 .. _qgisdensifygeometriesgivenaninterval:
@@ -1372,19 +1712,53 @@ over the segment.
 Parameters
 ..........
 
-``Input layer`` [vector: line, polygon]
-  Polygon or line vector layer to densify.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Interval between vertices to add`` [number]
-  Maximum distance between two consecutive vertices.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line, polygon]
+     - Input line or polygon vector layer
+   * - **Interval between vertices to add**
+     - ``INTERVAL``
+     - [number |dataDefined|]
 
-  Default: *1.0*
+       Default: 1.0
+     - Maximum distance between two consecutive vertices
+   * - **Densified**
+     - ``OUTPUT``
+     - [same as input]
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Densified`` [vector: line, polygon]
-  Densified layer with vertices added using the specified interval.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Densified**
+     - ``OUTPUT``
+     - [same as input]
+     - The output (densified) vector layer
 
 
 .. _qgisdissolve:
@@ -1416,24 +1790,61 @@ that happens to be processed.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Vector layer to dissolve.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Dissolve field(s)`` [tablefield: any] [list]
-  Optional
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line, polygon]
+     - Input line or polygon vector layer
+   * - **Dissolve field(s)**
 
-  Features having the same value for the selected field(s) will be replaced
-  with a single one and their geometries are merged.
+       Optional
+     - ``FIELD``
+     - [tablefield: any] [list]
 
-  If no field is provided then all the features are dissolved,
-  resulting in a single feature.
+       Default: []
+     - Features having the same value for the
+       selected field(s) will be replaced with a
+       single one and their geometries are merged.
 
+       If no field is provided then all the
+       features are dissolved, resulting in a
+       single feature.
+   * - ***Dissolved**
+     - ``OUTPUT``
+     - [same as input]
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Dissolved`` [vector: any]
-  Multi geometry type layer with merged geometries but non aggregated values in fields.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Dissolved**
+     - ``OUTPUT``
+     - [same as input]
+     - The output multi-geometry vector layer
 
 
 .. _qgissetzfromraster:
@@ -1451,30 +1862,77 @@ If no Z values exist, the geometry will be upgraded to include the Z dimension.
 
 Parameters
 ..........
-``Input layer`` [vector: any]
-  Input vector layer to set the Z values to.
 
-``Raster layer`` [raster]
-  Raster layer to take the Z values from.
+Parameters
+..........
 
-``Band number`` [raster band]
-  The raster band to take the Z values from if the raster is multiband.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Value for nodata or non-intersecting vertices`` [number |dataDefined|]
-  Value to use in case the vertex does not intersect (a valid pixel of) the raster.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Raster layer**
+     - ``RASTER``
+     - [raster]
 
-  Default: *0*
+       Default: []
+     - Raster layer with Z values
+   * - **Band number**
+     - ``BAND``
+     - [raster band]
 
-``Scale`` [number |dataDefined|]
-  Scaling value: the band values are multiplied by this value.
+       Default: 1
+     - The raster band with the Z values from
+   * - **Value for nodata or non-intersecting vertices**
+     - ``NODATA``
+     - [number |dataDefined|]
 
-  Default: *1.0*
+       Default: 0
+     - Value to use in case the vertex does not intersect
+       (a valid pixel of) the raster
+   * - **Scale factor**
+     - ``SCALE``
+     - [number |dataDefined|]
+
+       Default: 1.0
+     - Scaling value: the band values are multiplied
+       by this value.
+   * - **Updated**
+     - ``OUTPUT``
+     - [same as input]
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Updated`` [vector: any]
-  A vector layer with geometries that have Z values extracted from the provided raster layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Updated**
+     - ``OUTPUT``
+     - [same as input]
+     - The output vector layer
 
 
 .. _qgisdropmzvalues:
