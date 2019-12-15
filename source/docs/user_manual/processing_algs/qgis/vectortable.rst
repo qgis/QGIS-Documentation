@@ -557,8 +557,8 @@ If this list is specified, only these fields are added
 and the HStore field is updated.
 By default, all unique keys are added.
 
-`HStore <https://www.postgresql.org/docs/10/hstore.html>`_
-is a simple key-value store used in PostgreSQL and in OGR (when reading an
+The PostgreSQL `HStore <https://www.postgresql.org/docs/10/hstore.html>`_
+is a simple key-value store used in PostgreSQL and OGR (when reading an
 `OSM file <https://gdal.org/drivers/vector/osm.html#other-tags-field>`_
 with the ``other_tags`` field.
 
@@ -588,9 +588,9 @@ Parameters
      - ``EXPECTED_FIELDS``
      - [string]
 
-       Default: empty
-     - List of fields separated by a comma to extract. The
-HStore field will be updated by removing these keys.
+       Default: ''
+     - Comma-separated list of fields to extract.
+       The HStore field will be updated by removing these keys.
 
    * - **Exploded**
      - ``OUTPUT``
