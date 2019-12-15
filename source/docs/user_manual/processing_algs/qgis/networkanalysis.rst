@@ -460,7 +460,7 @@ Parameters
        points of the routes
    * - **Direction field**
 
-       Optional
+       Optional *Advanced*
      - ``DIRECTION_FIELD``
      - [tablefield: string]
 
@@ -478,7 +478,7 @@ Parameters
        the ``Default direction`` parameter) is used.
    * - **Value for forward direction**
 
-       Optional
+       Optional *Advanced*
      - ``VALUE_FORWARD``
      - [string]
 
@@ -487,7 +487,7 @@ Parameters
        forward direction
    * - **Value for backward direction**
 
-       Optional
+       Optional *Advanced*
      - ``VALUE_BACKWARD``
      - [string]
 
@@ -496,7 +496,7 @@ Parameters
        backward direction
    * - **Value for both directions**
 
-       Optional
+       Optional *Advanced*
      - ``VALUE_BOTH``
      - [string]
 
@@ -505,7 +505,7 @@ Parameters
        bidirectional edges
    * - **Default direction**
 
-       Optional
+       Optional *Advanced*
      - ``DEFAULT_DIRECTION``
      - [enumeration]
 
@@ -520,7 +520,7 @@ Parameters
 
    * - **Speed field**
 
-       Optional
+       Optional *Advanced*
      - ``SPEED_FIELD``
      - [tablefield: string]
      - Field providing the speed value (in ``km/h``) for the
@@ -531,7 +531,7 @@ Parameters
        with the ``Default speed`` parameter) is used.
    * - **Default speed (km/h)**
 
-       Optional
+       Optional *Advanced*
      - ``DEFAULT_SPEED``
      - [number]
 
@@ -540,7 +540,7 @@ Parameters
        field is provided for an edge
    * - **Topology tolerance**
 
-       Optional
+       Optional *Advanced*
      - ``TOLERANCE``
      - [number]
 
@@ -591,19 +591,23 @@ Parameters
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 20 20 40
+   :widths: 20 15 15 20 30
    :stub-columns: 0
 
    * - Label
      - Name
+     - Advanced
      - Type
      - Description
+
    * - **Vector layer representing network**
      - ``INPUT``
+     - 
      - [vector: line]
      - Line vector layer representing the network to be covered
    * - **Path type to calculate**
      - ``STRATEGY``
+     - 
      - [enumeration]
 
        Default: 0
@@ -614,16 +618,19 @@ Parameters
 
    * - **Start point (x, y)**
      - ``START_POINT``
+     - 
      - [coordinates]
      - Point feature representing the start point of the routes
    * - **End point (x, y)**
      - ``END_POINT``
+     - 
      - [coordinates]
      - Point feature representing the end point of the routes
    * - **Direction field**
 
        Optional
      - ``DIRECTION_FIELD``
+     - X
      - [tablefield: string]
 
        Default: 0.0
@@ -642,6 +649,7 @@ Parameters
 
        Optional
      - ``VALUE_FORWARD``
+     - X
      - [string]
 
        Default: '' (empty string)
@@ -651,6 +659,7 @@ Parameters
 
        Optional
      - ``VALUE_BACKWARD``
+     - X
      - [string]
 
        Default: '' (empty string)
@@ -660,6 +669,7 @@ Parameters
 
        Optional
      - ``VALUE_BOTH``
+     - X
      - [string]
 
        Default: '' (empty string)
@@ -669,6 +679,7 @@ Parameters
 
        Optional
      - ``DEFAULT_DIRECTION``
+     - X
      - [enumeration]
 
        Default: 2
@@ -684,6 +695,7 @@ Parameters
 
        Optional
      - ``SPEED_FIELD``
+     - X
      - [tablefield: string]
      - Field providing the speed value (in ``km/h``) for the
        edges of the network when looking for the fastest path.
@@ -695,6 +707,7 @@ Parameters
 
        Optional
      - ``DEFAULT_SPEED``
+     - X
      - [number]
 
        Default: 50.0
@@ -704,6 +717,7 @@ Parameters
 
        Optional
      - ``TOLERANCE``
+     - X
      - [number]
 
        Default: 0.0
@@ -711,6 +725,7 @@ Parameters
        tolerance are considered connected
    * - **Shortest path**
      - ``OUTPUT``
+     - 
      - [vector: line]
      - Specify the output line layer for the shortest paths.
        One of:
