@@ -61,7 +61,7 @@ Parameters
   :end-before: **end_network_advanced_parameters_table**
   
 .. list-table::
-   :header-rows: 0
+   :header-rows: 1
    :widths: 20 20 20 40
    :stub-columns: 0
    * - **Include upper/lower bound points**
