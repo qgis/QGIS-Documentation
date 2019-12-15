@@ -1749,10 +1749,14 @@ Parameters
      - ``CHAR``
      - [string]
      - Character to use for splitting
-   * - **Advanced parameters**
-     - GUI only
+   * - **Use regular expression separator**
+       
+       *Advanced*
+     - ``REGEX``
+     - [boolean]
+       
+       Default: False
      - 
-     - Group of advanced parameters - se below.
    * - **Split**
      - ``OUTPUT``
      - [same as input]
@@ -1766,25 +1770,6 @@ Parameters
        * Save to PostGIS Table
 
        The file encoding can also be changed here.
-
-Advanced parameters
-...................
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-   :stub-columns: 0
-
-   * - Label
-     - Name
-     - Type
-     - Description
-   * - **Use regular expression separator**
-     - ``REGEX``
-     - [boolean]
-       
-       Default: False
-     - 
 
 Outputs
 ..........
