@@ -98,27 +98,24 @@ panel provides the following functionalities (see figure_layout_legend_items_):
   * The |projectProperties| button is used to edit the layer, group name or title.
     First you need to select the legend item. Double-clicking the item also
     opens the text box to rename it.
+  * |expression| allows you to add expressions to each symbol label of a given
+    layer. New variables (``@symbol_label``,``@symbol_id`` and ``@symbol_count``)
+    help you interact with the legend entry.
   * The |sum| button adds a feature count for each class of vector layer.
-  * With the |filterMap| :sup:`Filter legend by map content` button, only the
-    legend items visible in the map will be listed in the legend. This tool
-    remains available when |checkbox| :guilabel:`Auto-update` is active.
   * The |expressionFilter| :sup:`Filter legend by expression` helps you filter
     which of the legend items of a layer will be displayed, i.e. using a layer
     that has different legend items (e.g., from a rule-based or categorized
     symbology), you can specify a boolean expression to remove from the legend
     tree, styles that have no feature satisfying a condition. Note that the
     features are nevertheless kept and shown in the layout map item.
-  * |addExpression| :sup:`Add symbol expression` allows you to add expressions
-    to each symbol label of a given layer. New variables (``@symbol_label``,
-    ``@symbol_id`` and ``@symbol_count``) help you interact with the legend
-    entry.
+  
 
     For example, given a categorized layer, you can append to each class in the
     legend their number of features, ie *class (number)*:
 
     #. Select the layer entry in the legend tree
-    #. Press the |addExpression| :sup:`Add symbol expression` button, opening
-       the :guilabel:`Expression String Builder` dialog
+    #. Press the |expressiom| button, opening the :guilabel:`Expression String Builder`
+       dialog
     #. Enter the following expression::
 
         concat( @symbol_label, ' (', @symbol_count, ')' )
@@ -130,12 +127,15 @@ panel provides the following functionalities (see figure_layout_legend_items_):
   of symbology, right-click any item offers you options to hide layer's name or
   raise it as a group or subgroup. In case you have made some changes to a layer,
   you can revert them by choosing :guilabel:`Reset to defaults` from the
-  contextual menu.
+  contextual menu of the legend entry.
 
   After changing the symbology in the QGIS main window, you can click on
   :guilabel:`Update All` to adapt the changes in the legend element of the print
   layout.
-
+  
+* With the |checkbox| :guilabel:`Only show items inside linked map`, only the
+  legend items visible in the linked map will be listed in the legend. This tool
+  remains available when |checkbox| :guilabel:`Auto-update` is active
 * While generating an atlas with polygon features, you can filter out legend
   items that lie outside the current atlas feature. To do that, check the
   |checkbox| :guilabel:`Only show items inside current atlas feature` option.
@@ -239,7 +239,7 @@ columns and lines can be customized through this dialog.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |addExpression| image:: /static/common/mActionAddExpression.png
+.. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
 .. |addGroup| image:: /static/common/mActionAddGroup.png
    :width: 1.5em
