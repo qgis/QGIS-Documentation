@@ -257,8 +257,8 @@ layer types:
 
      Designing a Simple Line Symbol
 
-  Along with common properties of the :ref:`simple marker symbol
-  <simple_marker_symbol>`, a simple line properties are:
+  The simple line symbol layer type has many of the same properties as the
+  :ref:`simple marker symbol <simple_marker_symbol>`, and in addition:
 
   * :guilabel:`Cap style`
   * |checkbox| :guilabel:`Use custom dash pattern`: overrides the
@@ -276,34 +276,34 @@ layer types:
 
 .. _marker_line_symbol:
 
-* **Marker line**: allows for a repeating :ref:`marker symbol
-  <vector_marker_symbols>` to be drawn over the length of a line symbol.
+* **Marker line**: repeats a :ref:`marker symbol
+  <vector_marker_symbols>` over the length of a line.
 
   * The markers placement can be at a regular distance or based on the line
     geometry: first, last or each vertex, on the central point of the line
     or of each segment, or on every curve point.
-  * The markers placement can also be offset along the line
+  * The markers placement can also be given an offset along the line
   * The |checkbox| :guilabel:`Rotate marker` option allows you to set whether
-    each marker symbol should follow the line orientation or its own rotation.
+    each marker symbol should be oriented relative to the line direction or not.
 
     Because a line is often a succession of segments of different directions,
-    the marker's rotation is calculated by averaging the line over a specified
-    distance either side of the symbol. For example, setting the
-    :guilabel:`Average angle over` property to ``4mm`` means to take the points
-    along the line ``2mm`` from either side of the symbol placement, and use
-    these instead to calculate the line angle for that symbol.
+    the rotation of the marker is calculated by averaging over a specified
+    distance along the line. For example, setting the
+    :guilabel:`Average angle over` property to ``4mm`` means that the two points
+    along the line that are ``2mm`` before and after the symbol placement are used
+    to calculate the line angle for that marker symbol.
     This has the effect of smoothing (or removing) any tiny local deviations
-    from the overall line direction, resulting in much nicer visual orientation
-    of the marker line.
+    from the overall line direction, resulting in much nicer visual orientations
+    of the marker line symbols.
   * The marker line can also be offset from the line itself.
 
 .. _hashed_line_symbol:
 
-* **Hashed line**: allows for a repeating line segment (a hash) to be drawn
+* **Hashed line**: repeats a line segment (a hash)
   over the length of a line symbol, with a line sub-symbol used to render each
   individual segment. In other words, a hashed line is like a marker line in
   which marker symbols are replaced with segments. As such, the hashed lines
-  have :ref:`same properties <marker_line_symbol>` as marker line symbols,
+  have the :ref:`same properties <marker_line_symbol>` as marker line symbols,
   along with:
 
   * :guilabel:`Hash length`
