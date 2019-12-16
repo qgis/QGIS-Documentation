@@ -693,6 +693,9 @@ Below are listed default panels provided by QGIS:
 Map View
 ========
 
+Exploring the map view
+----------------------
+
 Also called **Map canvas**, this is the "business end" of QGIS ---
 maps are displayed in this area. The map displayed in this window
 will depend on the vector and raster layers you have chosen to load.
@@ -737,6 +740,24 @@ the view reflect changes you make in the legend area.
    the map area and click on the arrow keys to pan left, right, up and down. You can
    also pan the map by moving the mouse while holding down the space bar or the
    middle mouse button (or holding down the mouse wheel).
+
+.. _`exportingmapcanvas`:
+
+Exporting the map view
+----------------------
+
+Maps you make can be layout and exported to various formats using the advanced
+capabilities of the :ref:`print layout or report <label_printlayout>`.
+It's also possible to directly export the current rendering, without a layout.
+This quick "screenshot" of the map view has some convenient features.
+
+To export the map canvas with the current rendering:
+
+#. Go to :menuselection:`Project --> Import/Export`
+#. Depending on your output format, select either
+
+   * |saveMapAsImage| :guilabel:`Export Map to Image...`
+   * or |saveAsPDF| :guilabel:`Export Map to PDF...`
 
 
 .. index:: 3D Map view
