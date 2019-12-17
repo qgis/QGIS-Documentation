@@ -200,7 +200,7 @@ Appropriate for point geometry features, marker symbols have several
 
 * **Raster image marker**: use an image (:file:`PNG`, :file:`JPG`, :file:`BMP` ...)
   as marker symbol. The image can be a file on the disk, a remote URL
-  or an embedded file encoded as a base64 string (:ref:`more details <svg_paths>`).
+  or embedded in the style database (:ref:`more details <svg_paths>`).
   Width and height of the image can be set independently or using the
   |lockedGray| :sup:`Lock aspect ratio`.
 * **Vector Field marker** (see :ref:`vector_field_marker`)
@@ -211,8 +211,8 @@ Appropriate for point geometry features, marker symbols have several
   :menuselection:`Settings --> Options... --> System` menu) to render as marker
   symbol. Width and height of the symbol can be set independently or using the
   |lockedGray| :sup:`Lock aspect ratio`. Each SVG file colors and stroke can
-  also be adapted. The image can be a file on the disk, a remote URL or an
-  embedded file encoded as a base64 string (:ref:`more details <svg_paths>`).
+  also be adapted. The image can be a file on the disk, a remote URL or
+  embedded in the style database (:ref:`more details <svg_paths>`).
 
   .. note:: SVG version requirements
 
@@ -326,55 +326,59 @@ Fill Symbols
 Appropriate for polygon geometry features, fill symbols have also several
 symbol layer types:
 
-* **Simple fill** (default): the following settings are available:
+* **Simple fill** (default): fills a polygon with a uniform color
 
-  * :guilabel:`Fill color` using all the capabilities of the :ref:`color-selector`
-    widget, extended by a shortcut to apply a :guilabel:`Transparent fill`
-  * :guilabel:`Fill style`
-  * :guilabel:`Stroke color` using all the capabilities of the color selector
-    widget, extended by a shortcut to apply a :guilabel:`Transparent stroke`
-  * :guilabel:`Stroke width`
-  * :guilabel:`Stroke style`
-  * :guilabel:`Join style`
-  * :guilabel:`Offset`: You can shift the symbol in the :guilabel:`X` or
-    :guilabel:`Y` direction;
+  .. _figure_simple_fill_symbol:
 
-* **Centroid fill**: places a marker symbol at the centroid of the visible
-  feature. The position of the marker may however not be the real centroid
-  of the feature because calculation takes into account the polygon(s)
+  .. figure:: img/simpleFillSymbol.png
+     :align: center
+
+     Designing a Simple Fill Symbol
+
+* **Centroid fill**: places a :ref:`marker symbol <vector_marker_symbols>`
+  at the centroid of the visible feature.
+  The position of the marker may not be the real centroid
+  of the feature, because calculation takes into account the polygon(s)
   clipped to area visible in map canvas for rendering and ignores holes.
   Use the geometry generator symbol if you want the exact centroid. 
   
-  The marker can be placed on every part of a multi-part feature or
-  only on its biggest part, and forced to be inside the polygon;
+  The marker(s) can be placed on every part of a multi-part feature or
+  only on its biggest part, and forced to be inside the polygon.
 
-* **Geometry generator** (see :ref:`geometry_generator_symbol`);
+* **Geometry generator** (see :ref:`geometry_generator_symbol`)
 * **Gradient fill**: uses a radial, linear or conical gradient, based on either
   simple two color gradients or a predefined :ref:`gradient color ramp
-  <color-ramp>` to fill polygon layers. Gradient can be rotated and applied on
+  <color-ramp>` to fill polygons. The gradient can be rotated and applied on
   a single feature basis or across the whole map extent. Also start and end
   points can be set via coordinates or using the centroid (of feature or map);
-* **Line pattern fill**: fills the polygon with a hatching pattern of line
-  symbol layer. You can set the spacing between lines and an offset from the
-  feature boundary;
-* **Point pattern fill**: fills the polygon with a hatching pattern of marker
-  symbol layer. You can set the spacing between lines and an offset from the
+* **Line pattern fill**: fills the polygon with a hatching pattern of
+  :ref:`line symbol layer <vector_line_symbols>`. You can set a rotation, the
+  spacing between lines and an offset from the feature boundary;
+* **Point pattern fill**: fills the polygon with a hatching pattern of 
+  :ref:`marker symbol layer <vector_marker_symbols>`. You can set the distance
+  and a displacement between rows of markers, and an offset from the
   feature boundary; 
-* **Raster image fill**: you can fill polygons with a tiled raster image.
-  Options include (data defined) file name, opacity, image size (in pixels, mm
-  or map units), coordinate mode (feature or view) and rotation;
+* **Raster image fill**: fills the polygon with tiles from a raster image (:file:`PNG`
+  :file:`JPG`, :file:`BMP` ...). The image can be a file on the disk, a remote URL
+  or an embedded file encoded as a string (:ref:`more details <svg_paths>`).
+  Options include (data defined) opacity, image width, coordinate mode (object
+  or viewport), rotation and offset.
 * **SVG fill**: fills the polygon using :ref:`SVG markers <svg_marker>`;
-* **Shapeburst fill**: this option buffered a gradient fill, where a gradient
+* **Shapeburst fill**: buffers a gradient fill, where a gradient
   is drawn from the boundary of a polygon towards the polygon's centre.
   Configurable parameters include distance from the boundary to shade, use of
   color ramps or simple two color gradients, optional blurring of the fill and
   offsets;
 * **Outline: Arrow**: uses a line :ref:`arrow symbol <arrow_symbol>` layer to
   represent the polygon boundary;
+* **Outline: Hashed line**: uses a :ref:`hash line symbol <hashed_line_symbol>`
+  layer to represent the polygon boundary (the interior rings, the
+  exterior ring or all the rings).
 * **Outline: Marker line**: uses a marker line symbol layer to represent the
-  polygon boundary;
+  polygon boundary (the interior rings, the exterior ring or all the rings).
 * **Outline: simple line**: uses a simple line symbol layer to represent the
-  polygon boundary. The :guilabel:`Draw line only inside polygon` option helps
+  polygon boundary (the interior rings, the exterior ring or all the rings).
+  The :guilabel:`Draw line only inside polygon` option displays the
   polygon borders inside the polygon and can be useful to clearly represent
   adjacent polygon boundaries.
 
