@@ -1519,7 +1519,7 @@ default it will display the following information:
     * ``X`` and ``Y`` coordinate values of the point clicked
     * the number of the closest vertex to the point clicked
     * ``X`` and ``Y`` coordinate values of the
-      closest vertex (and ``Z`/`M`` if applicable)
+      closest vertex (and ``Z``/``M`` if applicable)
     * if you click on a curved segment,
       the radius of that section is also displayed.
 
