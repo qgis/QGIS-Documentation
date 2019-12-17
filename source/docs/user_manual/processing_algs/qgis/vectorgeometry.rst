@@ -2097,14 +2097,48 @@ intermediate vertices between them.
 
 Parameters
 ..........
-``Input layer`` [vector: line]
-  Line vector layer in input to explode.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input line vector layer
+   * - **Exploded**
+     - ``OUTPUT``
+     - [vector: line]
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Exploded`` [vector: line]
-  Output vector line with features representing each segment of the input layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Exploded**
+     - ``OUTPUT``
+     - [vector: line]
+     - The output vector layer.
 
 
 .. _qgisextendlines:
@@ -2127,20 +2161,57 @@ Lines are extended using the bearing of the first and last segment in the line.
 Parameters
 ..........
 
-``Input layer`` [vector: line]
-  Line vector layer to extend.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Start distance`` [number |dataDefined|]
-  Distance by which to extend the first segment of the line (starting point).
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input line vector layer
+   * - **Start distance**
+     - ``START_DISTANCE``
+     - [number |dataDefined|]
+     - Distance by which to extend the first segment
+       of the line (starting point)
+   * - **End distance**
+     - ``END_DISTANCE``
+     - [number |dataDefined|]
+     - Distance by which to extend the last segment of
+       the line (ending point)
+   * - **Extended**
+     - ``OUTPUT``
+     - [vector: line]
+     - Specify the output vector layer. One of:
 
-``End distance`` [number |dataDefined|]
-  Distance by which to extend the last segment of the line (ending point).
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Extended`` [vector: line]
-  Extended vector line layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Extended**
+     - ``OUTPUT``
+     - [vector: line]
+     - The output (line) vector layer.
 
 
 .. _qgisextractmvalues:
@@ -2261,20 +2332,56 @@ and bisector angle of vertex for the original geometry.
 
 Parameters
 ..........
-``Input layer`` [vector: line, polygon]
-  Vector layer in input to extract the vertices from.
 
-``Vertex indices`` [number]
-  Type the indices of the vertices to extract. The algorithm accepts comma separated
-  values for many vertices to extract (e.g. ``-2, 3, 5, 7``).
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-  Default: *0*
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input line vector layer
+   * - **Vertex indices**
+     - ``VERTICES``
+     - [string]
+       
+       Default: '0'
+     - Comma-separated string of the indices of the vertices
+       to extract.
+   * - **Vertices**
+     - ``OUTPUT``
+     - [vector: point]
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Vertices`` [vector: point]
-  Point layer with features representing the specific vertices in the input layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Vertices**
+     - ``OUTPUT``
+     - [vector: point]
+     - The output (point) vector layer containing the specified vertices
+       from the input layer geometries.
 
 
 .. _qgisextractvertices:
@@ -2307,11 +2414,48 @@ Parameters
 ``Input layer`` [vector: any]
   Vector layer in input to extract the vertices from.
 
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input line vector layer
+   * - **Vertices**
+     - ``OUTPUT``
+     - [vector: point]
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+
 Outputs
 .......
 
-``Vertices`` [vector: point]
-  Point layer with features representing all the vertices in the input layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Vertices**
+     - ``OUTPUT``
+     - [vector: point]
+     - The output (point) vector layer containing the vertices
+       from the input layer geometries.
 
 
 .. _qgisextractzvalues:
@@ -2431,28 +2575,63 @@ similarly if the maximum value is not specified then only the minimum value is t
 Parameters
 ..........
 
-``Input layer`` [vector: line, polygon]
-  Vector layer to remove vertices from.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Minimum`` [number |dataDefined|]
-  Optional
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line, polygon]
+     - Input line vector layer
+   * - **Minimum**
+       
+       Optional
+     - ``MIN``
+     - [number |dataDefined|]
 
-  Minimum M value allowed to keep a vertex.
+       Default: *Not set*
+     - Minimum M value
+   * - **Maximum**
+       
+       Optional
+     - ``MAX``
+     - [number |dataDefined|]
 
-  Default: *Not set*
+       Default: *Not set*
+     - Maximum M value
+   * - **Filtered**
+     - ``OUTPUT``
+     - [vector: line]
+     - Specify the output vector layer. One of:
 
-``Maximum`` [number |dataDefined|]
-  Optional
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-  Maximum M value allowed to keep a vertex.
-
-  Default: *Not set*
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Filtered`` [vector: line, polygon]
-  Vector layer of the features with only the filtered vertices.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Filtered**
+     - ``OUTPUT``
+     - [same as input]
+     - The output vector layer.
 
 
 .. _qgisfilterverticesbyz:
@@ -2481,28 +2660,63 @@ similarly if the maximum value is not specified then only the minimum value is t
 Parameters
 ..........
 
-``Input layer`` [vector: line, polygon]
-  Vector layer to remove vertices from.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Minimum`` [number |dataDefined|]
-  Optional
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line, polygon]
+     - Input line vector layer
+   * - **Minimum**
+       
+       Optional
+     - ``MIN``
+     - [number |dataDefined|]
 
-  Minimum Z value allowed to keep a vertex.
+       Default: *Not set*
+     - Minimum Z value
+   * - **Maximum**
+       
+       Optional
+     - ``MAX``
+     - [number |dataDefined|]
 
-  Default: *Not set*
+       Default: *Not set*
+     - Maximum Z value
+   * - **Filtered**
+     - ``OUTPUT``
+     - [vector: line]
+     - Specify the output vector layer. One of:
 
-``Maximum`` [number |dataDefined|]
-  Optional
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-  Maximum Z value allowed to keep a vertex.
-
-  Default: *Not set*
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Filtered`` [vector: line, polygon]
-  Vector layer of the features with only the filtered vertices.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Filtered**
+     - ``OUTPUT``
+     - [same as input]
+     - The output vector layer.
 
 
 .. _qgisfixgeometries:
@@ -2522,14 +2736,47 @@ without further intervention. Always outputs multi-geometry layer.
 Parameters
 ..........
 
-``Input layer`` [vector: line, polygon]
-  Polygon or vector layer in input.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Fixed geometries**
+     - ``OUTPUT``
+     - [same as input]
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Fixed geometries`` [vector: line, polygon]
-  Layer with fixed geometries.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Fixed geometries**
+     - ``OUTPUT``
+     - [same as input]
+     - The output vector layer.
 
 
 .. _qgisforcerhr:
@@ -2554,35 +2801,42 @@ Parameters
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  -  Label
-      -  Name
-      -  Type
-      -  Description
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: polygon]
+     - Input vector layer
+   * - **Reoriented**
+     - ``OUTPUT``
+     - [same as input]
+     - Specify the output vector layer. One of:
 
-   *  -  **Input features**
-      -  
-      -  [vector: polygon]
-      -  The input vector
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
+       The file encoding can also be changed here.
 
 Outputs
-..........
+.......
 
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  -  Label
-      -  Name
-      -  Type
-      -  Description
-
-   *  -  **Reoriented**
-      -  
-      -  [vector: line]
-      -  The input features with reoriented polygons
-
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Reoriented**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output vector layer.
 
 
 .. _qgisantimeridiansplit:
