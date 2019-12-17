@@ -1863,9 +1863,6 @@ If no Z values exist, the geometry will be upgraded to include the Z dimension.
 Parameters
 ..........
 
-Parameters
-..........
-
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -1939,29 +1936,68 @@ Outputs
 
 Drop m/z values
 ---------------
-Removes any M (measure) or Z (altitude) values from input geometries.
+Removes M (measure) or Z (altitude) values from input geometries.
 
 .. seealso:: :ref:`qgissetmvalue`, :ref:`qgissetzvalue`
 
 Parameters
 ..........
-``Input layer`` [vector: any]
-  Input vector layer from which M and/or Z values will be dropped.
 
-``Drop M Values`` [boolean]
-  Removes the M values from the geometries.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-  Default: *False*
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input line or polygon vector layer
+   * - **Drop M Values**
+     - ``DROP_M_VALUES``
+     - [boolean]
 
-``Drop Z Values`` [boolean]
-  Removes the Z values from the geometries.
+       Default: False
+     - Removes the M values from the geometries
+   * - **Drop Z Values**
+     - ``DROP_Z_VALUES``
+     - [boolean]
 
-  Default: *False*
+       Default: False
+     - Removes the Z values from the geometries
+   * - **Z/M Dropped**
+     - ``OUTPUT``
+     - [same as input]
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
-``Z/M Dropped`` [vector: any]
-  A vector layer that is identical to the input layer, except that M and/or Z values have been removed from its geometries.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Z/M Dropped**
+     - ``OUTPUT``
+     - [same as input]
+     - The output vector layer (identical to the input layer,
+       except that M and/or Z values have been removed from
+       the geometries).
 
 
 .. _qgiseliminateselectedpolygons:
@@ -1983,20 +2019,60 @@ similar but not identical.
 
 Parameters
 ..........
-``Input layer`` [vector: polygon]
-  Input polygon vector layer to clean.
 
-``Merge selection with the neighboring polygon with the`` [enumeration]
-  Choose the parameter to use in order to get rid of the selected polygons:
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-  * Largest Area
-  * Smallest Area
-  * Largest Common Boundary
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: polygon]
+     - Input line or polygon vector layer
+   * - **Merge selection with the neighboring polygon with the**
+     - ``MODE``
+     - [enumeration]
+
+       Default: None
+     - Choose the parameter to use in order to get rid of
+       the selected polygons:
+
+       * 0 --- Largest Area
+       * 1 --- Smallest Area
+       * 2 --- Largest Common Boundary
+
+   * - **Eliminated**
+     - ``OUTPUT``
+     - [same as input]
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
-``Eliminated`` [vector: polygon]
-  Cleaned vector layer as result of the parameters chosen.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Eliminated**
+     - ``OUTPUT``
+     - [same as input]
+     - The output vector layer.
 
 
 .. _qgisexplodelines:
