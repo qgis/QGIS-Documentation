@@ -99,7 +99,7 @@ panel provides the following functionalities (see figure_layout_legend_items_):
     First you need to select the legend item. Double-clicking the item also
     opens the text box to rename it.
   * |expression| allows you to add expressions to each symbol label of a given
-    layer. New variables (``@symbol_label``,``@symbol_id`` and ``@symbol_count``)
+    layer. New variables (``@symbol_label``, ``@symbol_id`` and ``@symbol_count``)
     help you interact with the legend entry.
   * The |sum| button adds a feature count for each class of vector layer.
   * The |expressionFilter| :sup:`Filter legend by expression` helps you filter
