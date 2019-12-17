@@ -372,7 +372,7 @@ symbol layer types:
 * **Outline: Arrow**: uses a line :ref:`arrow symbol <arrow_symbol>` layer to
   represent the polygon boundary;
 * **Outline: Hashed line**: uses a :ref:`hash line symbol <hashed_line_symbol>`
-  layer to represent the   polygon boundary, that is the interior rings, the
+  layer to represent the polygon boundary (the interior rings, the
   exterior ring or all the rings).
 * **Outline: Marker line**: uses a marker line symbol layer to represent the
   polygon boundary (the interior rings, the exterior ring or all the rings).
