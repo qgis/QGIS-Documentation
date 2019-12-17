@@ -16,7 +16,7 @@ will adapt dynamically.
 #. After everything is rendered and symbolized to your liking,
    click the |newLayout| :sup:`New Print Layout` icon in the toolbar or
    choose :menuselection:`File --> New Print Layout`. You will be prompted to
-   choose a title for the new layer.
+   choose a title for the new print layout.
 #. We want to create a map layout consisting of a header and a map of the region near
    Swellendam, South Africa.
    The layout should have a margin of 7.5 mm and the header should be 36mm high.
@@ -50,7 +50,7 @@ will adapt dynamically.
    
    ::
     
-    @layout_pageheight -  @sw_layout_header -  @sw_layout_margin * 2
+    @layout_pageheight -  @sw_layout_height_header -  @sw_layout_margin * 2
     
 #. We will also create a grid containing the coordinates of the main canvas map extent.
    Go to :guilabel:`Item Properties` again and choose the :guilabel:`Grids` section.
@@ -77,7 +77,7 @@ will adapt dynamically.
    
    ::
     
-    @sw_layout_header
+    @sw_layout_height_header
     
 #. We will insert a horizontal line and two vertical lines to divide the header into different sections
    using the |addNodesShape| :sup:`Add Node Item`. Create a horizontal line and two vertical lines.
@@ -218,7 +218,7 @@ will adapt dynamically.
    
    ::
     
-     @sw_layout_header - 15.5
+     @sw_layout_height_header - 15.5
 
 .. figure:: img/dynamic_layout_organisation.png
 
