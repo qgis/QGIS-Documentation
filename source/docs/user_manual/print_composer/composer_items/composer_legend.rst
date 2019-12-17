@@ -114,7 +114,7 @@ panel provides the following functionalities (see figure_layout_legend_items_):
     legend their number of features, ie *class (number)*:
 
     #. Select the layer entry in the legend tree
-    #. Press the |expressiom| button, opening the :guilabel:`Expression String Builder`
+    #. Press the |expression| button, opening the :guilabel:`Expression String Builder`
        dialog
     #. Enter the following expression::
 
