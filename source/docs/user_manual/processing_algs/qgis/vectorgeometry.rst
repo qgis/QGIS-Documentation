@@ -4181,31 +4181,74 @@ A convenient tool to scatter overlaid features.
 Parameters
 ..........
 
-``Input layer`` [vector: point]
-  Input point vector layer.
 
-``Minimum distance to other points`` [number]
-  Distance below which point features are considered close.
-  Close features are distributed altogether.
 
-  Default: *1.0*
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Displacement distance`` [number]
-  Radius of the circle on which close features are placed.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: point]
+     - Input point vector layer
+   * - **Minimum distance to other points**
+     - ``PROXIMITY``
+     - [number]
+     
+       Default: 1.0
+     - Distance below which point features are
+       considered close.
+       Close features are distributed altogether.
+   * - **Displacement distance**
+     - ``DISTANCE``
+     - [number]
+     
+       Default: 1.0
+     - Radius of the circle on which close features are placed
+   * - **Horizontal distribution for two point case**
+     - ``HORIZONTAL``
+     - [boolean]
 
-  Default: *1.0*
+       Default: False
+     - When only two points are identified as close,
+       aligns them horizontally on the circle instead
+       of vertically.
 
-``Horizontal distribution for two point case`` [boolean]
-  When only two points are identified as close, aligns them horizontally
-  on the circle instead of vertically.
+   * - **Displaced**
+     - ``OUTPUT``
+     - [vector: point]
 
-  Default: *False*
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Displaced`` [vector: point]
-  Point vector layer with displaced features.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Displaced**
+     - ``OUTPUT``
+     - [vector: point]
+     - Output point vector layer
 
 
 .. _qgispoleofinaccessibility:
@@ -4231,19 +4274,55 @@ a new attribute in the output layer.
 Parameters
 ..........
 
-``Input layer`` [vector: polygon]
-  Input polygon vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Tolerance`` [number]
-  Set the tolerance for the calculation.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: polygon]
+     - Input vector layer
+   * - **Tolerance**
+     - ``TOLERANCE``
+     - [number]
 
-  Default: *1.0*
+       Default: 1.0
+     - Set the tolerance for the calculation
+   * - **Point**
+     - ``OUTPUT``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output polygon vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Point`` [vector: point]
-  Point as pole of inaccessibility for the source polygon vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Point**
+     - ``OUTPUT``
+     - [vector: point]
+     - The output point vector layer
 
 
 .. _qgispolygonize:
@@ -4266,21 +4345,56 @@ line layer features.
 Parameters
 ..........
 
-``Input layer`` [vector: line]
-  Input line vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Keep table structure of line layer`` [boolean]
-  Optional
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input line vector layer
+   * - **Keep table structure of line layer**
+     - ``KEEP_FIELDS``
+     - [boolean]
 
-  Check to copy the original attribute of the line layer.
+       Default: False
+     - Check to copy the original attributes of the input layer
+   * - **Polygons from lines**
+     - ``OUTPUT``
+     - [vector: polygon]
 
-  Default: *False*
+       Default: ``[Create temporary layer]``
+     - Specify the output polygon vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Polygons from lines`` [vector: polygon]
-  Vector layer with polygonized features.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Polygons from lines**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output polygon vector layer
+
 
 
 .. _qgispolygonstolines:
@@ -4302,47 +4416,120 @@ of the polygons in the input layer.
 Parameters
 ..........
 
-``Input layer`` [vector: polygon]
-  Input polygon vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: polygon]
+     - Input polygon vector layer
+   * - **Lines**
+     - ``OUTPUT``
+     - [vector: line]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output line vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Lines`` [vector: line]
-  Lines from the polygon layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Lines**
+     - ``OUTPUT``
+     - [vector: line]
+     - The output line vector layer
 
 
 .. _qgisprojectpointcartesian:
 
 Project points (Cartesian)
 --------------------------
-Projects point geometries by a specified distance and bearing (azimuth), creating
-a new point layer with the projected points.
+Projects point geometries by a specified distance and bearing
+(azimuth), creating a new point layer with the projected
+points.
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 Parameters
 ..........
 
-``Input layer`` [vector: point]
-  Point vector layer to project.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Bearing (degrees from North)`` [number |dataDefined|]
-  Clockwise angle starting from North, in degree (°) unit.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: point]
+     - Input point vector layer
+   * - **Bearing (degrees from North)**
+     - ``BEARING``
+     - [number |dataDefined|]
 
-  Default: *0.0*
+       Default: 0.0
+     - Clockwise angle starting from North, in degree (°) unit
+   * - **Distance**
+     - ``DISTANCE``
+     - [number |dataDefined|]
 
-``Distance`` [number |dataDefined|]
-  Distance to offset geometries, in layer units.
+       Default: 1.0
+     - Distance to offset geometries, in layer units
+   * - **Projected**
+     - ``OUTPUT``
+     - [vector: point]
 
-  Default: *1.0*
+       Default: ``[Create temporary layer]``
+     - Specify the output point vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Projected`` [vector: point]
-  Projected layer at given degrees and distance.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Projected**
+     - ``OUTPUT``
+     - [vector: point]
+     - The output (projected) point vector layer
 
 .. _qgispromotetomulti:
 
@@ -4363,14 +4550,49 @@ compatible with data providers that require multipart features.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Multiparts**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output multipart vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Multiparts`` [vector: any]
-  Multiparts vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Multiparts**
+     - ``OUTPUT``
+     - [same as input]
+     - The output multipart vector layer
 
 
 .. _qgisrectanglesovalsdiamondsfixed:
