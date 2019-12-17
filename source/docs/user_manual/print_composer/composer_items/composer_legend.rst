@@ -101,13 +101,14 @@ panel provides the following functionalities (see figure_layout_legend_items_):
   * |expression| allows you to add expressions to each symbol label of a given
     layer. New variables (``@symbol_label``, ``@symbol_id`` and ``@symbol_count``)
     help you interact with the legend entry.
-  * The |sum| button adds a feature count for each class of vector layer.
   * The |expressionFilter| :sup:`Filter legend by expression` helps you filter
     which of the legend items of a layer will be displayed, i.e. using a layer
     that has different legend items (e.g., from a rule-based or categorized
     symbology), you can specify a boolean expression to remove from the legend
     tree, styles that have no feature satisfying a condition. Note that the
     features are nevertheless kept and shown in the layout map item.
+  * The |sum| button adds a feature count for each class of vector layer.
+  
   
 
     For example, given a categorized layer, you can append to each class in the
