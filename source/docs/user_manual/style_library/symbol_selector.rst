@@ -176,6 +176,8 @@ Marker Symbols
 Appropriate for point geometry features, marker symbols have several
 :guilabel:`Symbol layer types`:
 
+.. _simple_marker_symbol:
+
 * **Simple marker** (default)
 
   .. _figure_simple_marker_symbol:
@@ -248,14 +250,19 @@ layer types:
 
 * **Simple line** (default): available settings are:
 
-  * :guilabel:`Color`
-  * :guilabel:`Stroke width`
-  * :guilabel:`Stroke style`
-  * :guilabel:`Join style`
+  .. _figure_simple_line_symbol:
+
+  .. figure:: img/simpleLineSymbol.png
+     :align: center
+
+     Designing a Simple Line Symbol
+
+  The simple line symbol layer type has many of the same properties as the
+  :ref:`simple marker symbol <simple_marker_symbol>`, and in addition:
+
   * :guilabel:`Cap style`
-  * :guilabel:`Offset`
-  * |checkbox| :guilabel:`Use custom dash pattern`: overrides the :guilabel:`Stroke
-    style` setting with a custom dash.
+  * |checkbox| :guilabel:`Use custom dash pattern`: overrides the
+    :guilabel:`Stroke style` setting with a custom dash.
 
 .. _arrow_symbol:
 
@@ -264,14 +271,52 @@ layer types:
   the line feature must have at least three vertices. It also uses a
   :ref:`fill symbol <vector_fill_symbols>` such as gradients or shapeburst
   to render the arrow body. Combined with the geometry generator, this type of
-  layer symbol helps you representing flow maps;
-* **Geometry generator** (see :ref:`geometry_generator_symbol`);
-* **Marker line**: displays a marker symbol along the line. It can be at
-  a regular distance or based on its geometry: first, last or each vertex, on
-  central point or on every curve point. You can set an offset along the line
-  for the marker symbol, or offset the line itself. The :guilabel:`Rotate
-  marker` option allows you to set whether the marker symbol should follow the
-  line orientation or not.
+  layer symbol helps you representing flow maps.
+* **Geometry generator** (see :ref:`geometry_generator_symbol`)
+
+.. _marker_line_symbol:
+
+* **Marker line**: repeats a :ref:`marker symbol
+  <vector_marker_symbols>` over the length of a line.
+
+  * The markers placement can be at a regular distance or based on the line
+    geometry: first, last or each vertex, on the central point of the line
+    or of each segment, or on every curve point.
+  * The markers placement can also be given an offset along the line
+  * The |checkbox| :guilabel:`Rotate marker` option allows you to set whether
+    each marker symbol should be oriented relative to the line direction or not.
+
+    Because a line is often a succession of segments of different directions,
+    the rotation of the marker is calculated by averaging over a specified
+    distance along the line. For example, setting the
+    :guilabel:`Average angle over` property to ``4mm`` means that the two points
+    along the line that are ``2mm`` before and after the symbol placement are used
+    to calculate the line angle for that marker symbol.
+    This has the effect of smoothing (or removing) any tiny local deviations
+    from the overall line direction, resulting in much nicer visual orientations
+    of the marker line symbols.
+  * The marker line can also be offset from the line itself.
+
+.. _hashed_line_symbol:
+
+* **Hashed line**: repeats a line segment (a hash)
+  over the length of a line symbol, with a line sub-symbol used to render each
+  individual segment. In other words, a hashed line is like a marker line in
+  which marker symbols are replaced with segments. As such, the hashed lines
+  have the :ref:`same properties <marker_line_symbol>` as marker line symbols,
+  along with:
+
+  * :guilabel:`Hash length`
+  * :guilabel:`Hash rotation`
+
+  .. _figure_hashed_line_symbol:
+
+  .. figure:: img/hashedLineSymbol.png
+     :align: center
+     :width: 100%
+
+     Examples of hashed lines
+
 
 .. _vector_fill_symbols:
 
