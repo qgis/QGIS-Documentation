@@ -30,6 +30,46 @@ functionalities:
    Map Item Properties Panel
 
 
+The Toolbar
+-----------
+
+The Map :guilabel:`Item Properties` panel embeds a toolbar with the following
+functionalities:
+
+* |draw| :sup:`Update map preview`
+* |setToCanvasExtent| :sup:`Set map canvas to match main canvas extent`
+* |viewExtentInCanvas| :sup:`View current map extent in main canvas`
+* |setToCanvasScale| :sup:`Set map scale to match main canvas scale`
+* |viewScaleInCanvas| :sup:`Set main canvas to match current map scale`
+* |showBookmarks| :sup:`Bookmarks`: set the map item extent to match
+  an existing spatial bookmark
+* |moveItemContent| :sup:`Interactively edit map extent`: pan and
+  zoom interactively
+  within the map item
+* |labeling| :sup:`Labeling settings`: control feature label behaviour
+  (placement, visibility...) in the layout map item extent:
+
+  * set a :guilabel:`Margin from map edges`, a data definable distance from the
+    map item's limits inside which no label should be displayed
+  * |unchecked| :guilabel:`Allow truncated labels on edges of map`: controls
+    whether labels which fall partially outside of the map item allowed extent
+    should be rendered. If checked, these labels will be shown (when there’s
+    no way to place them fully within the visible area). If unchecked then
+    partially visible labels will be skipped.
+  * :guilabel:`Label blocking items`: allows other layout items (such as
+    scalebars, north arrows, inset maps, etc) to be marked as a blockers for
+    the map labels in the **active** map item. This prevents any map labels
+    from being placed under those items - causing the labeling engine to either
+    try alternative placement for these labels or discard them altogether.
+
+    If a :guilabel:`Margin from map edges` is set, the map labels are not
+    placed closer than the specified distance from the checked layout items.
+  * :guilabel:`Show unplaced labels`: can be used to determine whether labels
+    are missing from the layout map (e.g. due to conflicts with other
+    map labels or due to insufficient space to place the label) by
+    highlighting them in a :ref:`predefined color <automated_placement>`.
+
+
 .. _`layout_main_properties`:
 
 Main properties
@@ -347,15 +387,29 @@ drawing over the selected map frame. You can customize it with:
    :width: 1.5em
 .. |draw| image:: /static/common/mActionDraw.png
    :width: 1.5em
+.. |labeling| image:: /static/common/labelingSingle.png
+   :width: 1.5em
 .. |moveItemContent| image:: /static/common/mActionMoveItemContent.png
    :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
    :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
    :width: 1.5em
+.. |setToCanvasExtent| image:: /static/common/mActionSetToCanvasExtent.png
+   :width: 1.5em
+.. |setToCanvasScale| image:: /static/common/mActionSetToCanvasScale.png
+   :width: 1.5em
+.. |showBookmarks| image:: /static/common/mActionShowBookmarks.png
+   :width: 1.5em
 .. |showMapTheme| image:: /static/common/mActionShowPresets.png
    :width: 1.5em
 .. |signMinus| image:: /static/common/symbologyRemove.png
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |unchecked| image:: /static/common/checkbox_unchecked.png
+   :width: 1.3em
+.. |viewExtentInCanvas| image:: /static/common/mActionViewExtentInCanvas.png
+   :width: 1.5em
+.. |viewScaleInCanvas| image:: /static/common/mActionViewScaleInCanvas.png
    :width: 1.5em
