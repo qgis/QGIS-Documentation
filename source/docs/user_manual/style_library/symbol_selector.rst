@@ -337,8 +337,8 @@ symbol layer types:
 
 * **Centroid fill**: places a :ref:`marker symbol <vector_marker_symbols>`
   at the centroid of the visible feature.
-  The position of the marker may however not be the real centroid
-  of the feature because calculation takes into account the polygon(s)
+  The position of the marker may not be the real centroid
+  of the feature, because calculation takes into account the polygon(s)
   clipped to area visible in map canvas for rendering and ignores holes.
   Use the geometry generator symbol if you want the exact centroid. 
   
@@ -358,7 +358,7 @@ symbol layer types:
   :ref:`marker symbol layer <vector_marker_symbols>`. You can set the distance
   and a displacement between rows of markers, and an offset from the
   feature boundary; 
-* **Raster image fill**: fills the polygon with a tiled raster image (:file:`PNG`
+* **Raster image fill**: fills the polygon with tiles from a raster image (:file:`PNG`
   :file:`JPG`, :file:`BMP` ...). The image can be a file on the disk, a remote URL
   or an embedded file encoded as a string (:ref:`more details <svg_paths>`).
   Options include (data defined) opacity, image width, coordinate mode (object
@@ -373,13 +373,12 @@ symbol layer types:
   represent the polygon boundary;
 * **Outline: Hashed line**: uses a :ref:`hash line symbol <hashed_line_symbol>`
   layer to represent the   polygon boundary, that is the interior rings, the
-  exterior ring or all the rings.
+  exterior ring or all the rings).
 * **Outline: Marker line**: uses a marker line symbol layer to represent the
-  polygon boundary, that is the interior rings, the exterior ring or all the
-  rings.
+  polygon boundary (the interior rings, the exterior ring or all the rings).
 * **Outline: simple line**: uses a simple line symbol layer to represent the
-  polygon boundary, that is the interior rings, the exterior ring or all the
-  rings. The :guilabel:`Draw line only inside polygon` option displays the
+  polygon boundary (the interior rings, the exterior ring or all the rings).
+  The :guilabel:`Draw line only inside polygon` option displays the
   polygon borders inside the polygon and can be useful to clearly represent
   adjacent polygon boundaries.
 
