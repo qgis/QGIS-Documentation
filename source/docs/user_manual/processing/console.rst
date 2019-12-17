@@ -451,7 +451,8 @@ input and output. Below is an alphabetically sorted list:
 
 * :class:`QgsProcessingParameterBand <qgis.core.QgsProcessingParameterBand>`
 * :class:`QgsProcessingParameterBoolean <qgis.core.QgsProcessingParameterBoolean>`
-* :class:`QgsProcessingParameterColor <qgis.core.QgsProcessingParameterColor>`
+
+  .. * :class:`QgsProcessingParameterColor <qgis.core.QgsProcessingParameterColor>`
 * :class:`QgsProcessingParameterCrs <qgis.core.QgsProcessingParameterCrs>`
 * :class:`QgsProcessingParameterDistance <qgis.core.QgsProcessingParameterDistance>`
 * :class:`QgsProcessingParameterEnum <qgis.core.QgsProcessingParameterEnum>`

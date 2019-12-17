@@ -422,9 +422,10 @@ Sorted on class name.
    * - :class:`QgsProcessingParameterBoolean <qgis.core.QgsProcessingParameterBoolean>`
      - ``alg.BOOL``
      - A boolean value
-   * - :class:`QgsProcessingParameterColor <qgis.core.QgsProcessingParameterColor>`
-     - ``alg.COLOR``
-     - A color
+     
+       .. * - :class:`QgsProcessingParameterColor <qgis.core.QgsProcessingParameterColor>`
+            - ``alg.COLOR``
+            - A color
    * - :class:`QgsProcessingParameterCrs <qgis.core.QgsProcessingParameterCrs>`
      - ``alg.CRS``
      - A Coordinate Reference System
@@ -516,9 +517,10 @@ Sorted on class name.
    * - Class
      - Alg constant
      - Description
-   * - :class:`QgsProcessingOutputBoolean <qgis.core.QgsProcessingOutputBoolean>`
-     - ``alg.BOOL``
-     - A boolean value
+
+       .. * - :class:`QgsProcessingOutputBoolean <qgis.core.QgsProcessingOutputBoolean>`
+          - ``alg.BOOL``
+          - A boolean value
    * - :class:`QgsProcessingOutputNumber <qgis.core.QgsProcessingOutputNumber>`
      - ``alg.DISTANCE``
      - A double numeric parameter for distance values
