@@ -944,7 +944,8 @@ Parameters
      - ``FIELD_2``
      - [tablefield: any]
      - Field of the second (join) layer to use for the join
-       The type of the field must be equal to (or compatible with) the input table field type.
+       The type of the field must be equal to (or compatible with)
+       the input table field type.
    * - **Layer 2 fields to copy**
 
        Optional
