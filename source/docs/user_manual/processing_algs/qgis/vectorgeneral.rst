@@ -324,7 +324,7 @@ Outputs
    * - **Indexed layer**
      - ``OUTPUT``
      - [same as input]
-     - A copy of the input vector layer with an indexed for the specified field
+     - A copy of the input vector layer with an index for the specified field
 
 
 .. _qgiscreatespatialindex:
