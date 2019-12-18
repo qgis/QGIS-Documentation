@@ -41,7 +41,7 @@ Parameters
    * - **Input layer**
      - ``INPUT``
      - [vector: any]
-     - The input layer
+     - Vector layer with wrong or missing CRS
    * - **Assigned CRS**
      - ``CRS``
      - [crs]
@@ -54,7 +54,7 @@ Parameters
      - ``OUTPUT``
      - [same as input]
 
-       Default: ``[Skip output]``
+       Default: ``[Create temporary layer]``
      - Specify the output layer containing only the duplicates.
        One of:
 
@@ -119,7 +119,7 @@ Parameters
        single ``vrt`` file
    * - **Virtual vector**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
 
        Default: ``[Save to temporary file]``
      - Specify the output layer containing only the duplicates.
@@ -150,13 +150,10 @@ Outputs
 
 .. _qgislayertobookmarks:
 
-Conver layer to spatial bookmarks |310|
----------------------------------------
-Creates a new layer containing polygon features for stored
-spatial bookmarks.
-The export can be filtered to only bookmarks belonging to
-the current project, to all user bookmarks, or a
-combination of both.
+Convert layer to spatial bookmarks |310|
+----------------------------------------
+Creates spatial bookmarks corresponding to the extent of features
+contained in a layer.
 
 Parameters
 ..........
@@ -172,7 +169,7 @@ Parameters
      - Description
    * - **Input Layer**
      - ``INPUT``
-     - [vector: any] [list]
+     - [vector: line, polygon]
      - The input vector layer
    * - **Bookmark destination**
      - ``DESTINATION``
@@ -187,11 +184,11 @@ Parameters
    * - **Name field**
      - ``NAME_EXPRESSION``
      - [expression]
-     - 
+     - Field or expression that will give names to the generated bookmarks
    * - **Group field**
      - ``GROUP_EXPRESSION``
      - [expression]
-     - 
+     - Field or expression that will provide groups for the generated bookmarks
 
 Outputs
 ..........
@@ -211,11 +208,11 @@ Outputs
      - 
 
 
-.. _qgisbookmarktoslayer:
+.. _qgisbookmarkstolayer:
 
-Conver spatial bookmarks to layer |310|
----------------------------------------
-This algorithm creates a new layer containing polygon
+Convert spatial bookmarks to layer |310|
+----------------------------------------
+Creates a new layer containing polygon
 features for stored spatial bookmarks.
 The export can be filtered to only bookmarks belonging
 to the current project, to all user bookmarks, or a
@@ -251,7 +248,9 @@ Parameters
      - The CRS of the output layer
    * - **Output**
      - ``OUTPUT``
-     - [vector: any]
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
      - Specify the output layer. One of:
 
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
@@ -275,7 +274,7 @@ Outputs
      - Description
    * - **Output**
      - ``OUTPUT``
-     - [number]
+     - [vector: polygon]
      - The output (bookmarks) vector layer
 
 
@@ -303,9 +302,8 @@ Parameters
      - Description
    * - **Input Layer**
      - ``INPUT``
-     - [vector: any] [list]
-     - Select the vector layers you want to use to build
-       the virtual vector
+     - [vector: any]
+     - Select the vector layer you want to create an attribute index for
    * - **Attribute to index**
      - ``FIELD``
      - [tablefield: any]
@@ -323,10 +321,10 @@ Outputs
      - Name
      - Type
      - Description
-   * - 
+   * - **Indexed layer**
      - ``OUTPUT``
      - [same as input]
-     - 
+     - A copy of the input vector layer with an indexed for the specified field
 
 
 .. _qgiscreatespatialindex:
@@ -355,7 +353,7 @@ Parameters
      - Description
    * - **Input Layer**
      - ``INPUT``
-     - [vector: any] [list]
+     - [vector: any]
      - Input vector layer
 
 Outputs
@@ -370,10 +368,10 @@ Outputs
      - Name
      - Type
      - Description
-   * - 
+   * - Indexed layer
      - ``OUTPUT``
      - [same as input]
-     - 
+     - A copy of the input vector layer with a spatial index
 
 
 .. _qgisdefinecurrentprojection:
@@ -463,6 +461,8 @@ Parameters
    * - **Cleaned**
      - ``OUTPUT``
      - [same as input]
+
+       Default: ``[Create temporary layer]``
      - Specify the output layer. One of:
 
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
@@ -484,10 +484,18 @@ Outputs
      - Name
      - Type
      - Description
+   * - **Count of discarded duplicate records**
+     - ``DUPLICATE_COUNT``
+     - [number]
+     - Count of discarded duplicate records
    * - **Cleaned**
      - ``OUTPUT``
      - [same as input]
      - The output layer without any duplicated geometries
+   * - **Count of retained records**
+     - ``RETAINED_COUNT``
+     - [number]
+     - Count of unique records
 
 
 .. _qgisdeleteduplicatesbyattribute:
@@ -570,14 +578,16 @@ Outputs
      - Description
    * - **Filtered (duplicates)**
 
-       (Optional)
+       Optional
      - ``DUPLICATES``
      - [same as input]
+     
+       Default: ``[Skip output]``
      - Vector layer containing the removed features.
-       Will not be produced if not specifed (left as ``[Skip output]``).
+       Will not be produced if not specified (left as ``[Skip output]``).
    * - **Count of discarded duplicate records**
      - ``DUPLICATE_COUNT``
-     - [Number]
+     - [number]
      - Count of discarded duplicate records
    * - **Filtered (no duplicates)**
      - ``OUTPUT``
@@ -585,7 +595,7 @@ Outputs
      - Vector layer containing the unique features.
    * - **Count of retained records**
      - ``RETAINED_COUNT``
-     - [Number]
+     - [number]
      - Count of unique records
 
 
@@ -723,6 +733,8 @@ Parameters
    * - **SQL Output**
      - ``OUTPUT``
      - [vector: any]
+
+       Default: ``[Create temporary layer]``
      - Specify the output layer created by the query. One of:
 
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
@@ -843,7 +855,7 @@ Parameters
    * - **Input Layer**
      - ``INPUT``
      - [vector: any]
-     - Layer to save the selection from
+     - Layer with unknown projection
    * - **Target area for layer (xmin, xmax, ymin, ymax)**
      - ``TARGET_AREA``
      - [extent]
@@ -862,7 +874,7 @@ Parameters
 
        Default: ``[Create temporary layer]``
      - Specify the table (geometryless layer) for the CRS
-       suggetions (EPSG codes). One of:
+       suggestions (EPSG codes). One of:
 
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
@@ -886,7 +898,7 @@ Outputs
    * - **CRS candidates**
      - ``OUTPUT``
      - [table]
-     - The algorithm writes a table with all the
+     - A table with all the
        CRS (EPSG codes) of the matching criteria.
 
 
@@ -954,7 +966,7 @@ Parameters
      - [boolean]
 
        Default: True
-     - Check if you don't want to add the features that cannot be joined
+     - Check if you don't want to keep the features that could not be joined
    * - **Joined field prefix**
 
        Optional
@@ -1092,7 +1104,6 @@ Parameters
      - ``METHOD``
      - [enumeration]
 
-       Default: 1
      - The type of the final joined layer. One of:
 
        * 0 --- Create separate feature for each matching feature (one-to-many)
@@ -1231,7 +1242,7 @@ Parameters
      - [tablefield: any] [list]
      - Select the specific fields you want to add and summarize.
        By default all the fields are added.
-   * - **Summaries to calculate**
+   * - **Summaries to calculate (leave empty to use all fields)**
 
        Optional
      - ``SUMMARIES``
@@ -1304,7 +1315,7 @@ Outputs
    * - **Joined layer**
      - ``OUTPUT``
      - [same as input]
-     - Output vector layer with added attributes from the join
+     - Output vector layer with summarized attributes from the join
 
 
 .. _qgisjoinattributesbynearest:
@@ -1830,7 +1841,7 @@ Parameters
      - ``OUTPUT``
      - [folder]
        
-       Default: ``Save to temporary folder``
+       Default: ``[Save to temporary folder]``
      - Specify the directory for the output layers.
        One of:
 
