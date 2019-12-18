@@ -944,6 +944,7 @@ Parameters
      - ``FIELD_2``
      - [tablefield: any]
      - Field of the second (join) layer to use for the join
+       (must be compatible with the input table field).
    * - **Layer 2 fields to copy**
 
        Optional
@@ -1103,7 +1104,6 @@ Parameters
    * - **Join type**
      - ``METHOD``
      - [enumeration]
-
      - The type of the final joined layer. One of:
 
        * 0 --- Create separate feature for each matching feature (one-to-many)
@@ -1761,8 +1761,6 @@ Parameters
      - [string]
      - Character to use for splitting
    * - **Use regular expression separator**
-       
-       *Advanced*
      - ``REGEX``
      - [boolean]
        
