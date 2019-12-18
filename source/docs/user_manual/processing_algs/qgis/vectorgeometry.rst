@@ -2869,45 +2869,84 @@ Parameters can vary depending on the shape chosen.
 Parameters
 ..........
 
-``Input layer`` [vector: point]
-  Input point vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Buffer shape`` [enumeration]
-  Different shapes available:
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: point]
+     - Input point vector layer
+   * - **Buffer shape**
+     - ``SHAPE``
+     - [enumeration]
+     - The shape to use. One of:
 
-  * 0 --- Rectangles
-  * 1 --- Ovals
-  * 2 --- Diamonds
+       * 0 --- Rectangles
+       * 1 --- Ovals
+       * 2 --- DiamondsInput vector layer
 
-  Default: *0*
+   * - **Width**
+     - ``WIDTH``
+     - [number]
 
-``Width`` [number]
-  Width of the buffer shape.
+       Default: 1.0
+     - Width of the buffer shape
+   * - **Height**
+     - ``HEIGHT``
+     - [number]
 
-  Default: *1.0*
+       Default: 1.0
+     - Height of the buffer shape
+   * - **Rotation**
 
-``Height`` [number]
-  Height of the buffer shape.
+       Optional
+     - ``ROTATION``
+     - [number]
 
-  Default: *1.0*
+       Default: None
+     - Rotation of the buffer shape
+   * - **Number of segment**
+     - ``SEGMENTS``
+     - [number]
 
-``Rotation`` [number]
-  Optional
+       Default: 36
+     - Number of segments for a full circle (*Ovals* shape)
+   * - **Output**
+     - ``OUTPUT``
+     - [vector: polygon]
 
-  Rotation of the buffer shape.
+       Default: ``[Create temporary layer]``
+     - Specify the output multipart vector layer. One of:
 
-  Default: *0.0*
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-``Number of segment`` [number]
-  How many segment should have the buffer shape.
-
-  Default: *36*
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Output`` [vector: polygon]
-  Buffer shape in output.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output vector layer
 
 
 .. _qgisrectanglesovalsdiamondsvariable:
@@ -2929,45 +2968,84 @@ Buffer shape parameters are specified through attribute of the input layer.
 Parameters
 ..........
 
-``Input layer`` [vector: point]
-  Input point vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Buffer shape`` [enumeration]
-  Different shape available:
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: point]
+     - Input point vector layer
+   * - **Buffer shape**
+     - ``SHAPE``
+     - [enumeration]
 
-  * 0 --- Rectangles
-  * 1 --- Ovals
-  * 2 --- Diamonds
+       Default: 0
+     - The shape to use. One of:
 
-  Default: *0*
+       * 0 --- Rectangles
+       * 1 --- Ovals
+       * 2 --- DiamondsInput vector layer
 
-``Width`` [tablefield: numeric]
-  Width of the buffer shape.
+   * - **Width field**
+     - ``WIDTH``
+     - [tablefield: numeric]
 
-  Default: *1.0*
+       Default: First
+     - Width of the buffer shape
+   * - **Height field**
+     - ``HEIGHT``
+     - [tablefield: numeric]
 
-``Height`` [tablefield: numeric]
-  Height of the buffer shape.
+       Default: First
+     - Height of the buffer shape
+   * - **Rotation field**
 
-  Default: *1.0*
+       Optional
+     - ``ROTATION``
+     - [tablefield: numeric]
+     - Rotation of the buffer shape
+   * - **Number of segment**
+     - ``SEGMENTS``
+     - [number]
 
-``Rotation`` [tablefield: numeric]
-  Optional
+       Default: 36
+     - Number of segments for a full circle (*Ovals* shape)
+   * - **Output**
+     - ``OUTPUT``
+     - [vector: polygon]
 
-  Rotation of the buffer shape.
+       Default: ``[Create temporary layer]``
+     - Specify the output multipart vector layer. One of:
 
-  Default: *0.0*
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-``Number of segment`` [number]
-  How many segment should have the buffer shape.
-
-  Default: *36*
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Output`` [vector: polygon]
-  Buffer shape in output.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output vector layer
 
 
 .. _qgisremoveduplicatevertices:
