@@ -83,8 +83,8 @@ panel provides the following functionalities (see figure_layout_legend_items_):
 
 * The legend will be updated automatically if |checkbox| :guilabel:`Auto-update`
   is checked. When :guilabel:`Auto-update` is unchecked this will give you more
-  control over the legend items. The icons below the legend items list will be
-  activated.
+  control over the legend items. All the icons below the legend items list will
+  be activated.
 * The legend items window lists all legend items and allows you to change item
   order, group layers, remove and restore items in the list, edit layer names
   and add a filter.
@@ -101,15 +101,6 @@ panel provides the following functionalities (see figure_layout_legend_items_):
   * |expression| allows you to add expressions to each symbol label of a given
     layer. New variables (``@symbol_label``, ``@symbol_id`` and ``@symbol_count``)
     help you interact with the legend entry.
-  * The |expressionFilter| :sup:`Filter legend by expression` helps you filter
-    which of the legend items of a layer will be displayed, i.e. using a layer
-    that has different legend items (e.g., from a rule-based or categorized
-    symbology), you can specify a boolean expression to remove from the legend
-    tree, styles that have no feature satisfying a condition. Note that the
-    features are nevertheless kept and shown in the layout map item.
-  * The |sum| button adds a feature count for each class of vector layer.
-  
-  
 
     For example, given a categorized layer, you can append to each class in the
     legend their number of features, ie *class (number)*:
@@ -122,6 +113,14 @@ panel provides the following functionalities (see figure_layout_legend_items_):
         concat( @symbol_label, ' (', @symbol_count, ')' )
 
     #. Press :guilabel:`OK`
+
+  * The |sum| button adds a feature count for each class of vector layer.
+  * The |expressionFilter| :sup:`Filter legend by expression` helps you filter
+    which of the legend items of a layer will be displayed, i.e. using a layer
+    that has different legend items (e.g., from a rule-based or categorized
+    symbology), you can specify a boolean expression to remove from the legend
+    tree, styles that have no feature satisfying a condition. Note that the
+    features are nevertheless kept and shown in the layout map item.
 
   While the default behavior of the legend item is to mimic the
   :guilabel:`Layers` panel tree, displaying the same groups, layers and classes
