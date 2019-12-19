@@ -3352,50 +3352,92 @@ Buffer always results in a polygon layer.
 Parameters
 ..........
 
-``Input layer`` [vector: line]
-  Input line vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Distance`` [number]
-  Distance radius of the buffer.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Distance**
+     - ``DISTANCE``
+     - [number]
 
-  Default: *10.0*
+       Default: 10.0
+     - Buffer distance (from the boundary of each feature).
+   * - **Side**
+     - ``SIDE``
+     - [enumeration]
+     - Which side to create the buffer on.
+       One of:
 
-``Side`` [enumeration]
-  Choose which side the buffer should be created:
+       * 0 -- Left
+       * 1 -- Right
 
-  * 0 -- Left
-  * 1 -- Right
+   * - **Segments**
+     - ``SEGMENTS``
+     - [number]
 
-  Default: *0*
+       Default: 8
+     - Controls the number of line segments to use to approximate
+       a quarter circle when creating rounded offsets.
+   * - **Join style**
+     - ``JOIN_STYLE``
+     - [enumeration]
+     - Specifies whether round, miter or beveled joins should be
+       used when offsetting corners in a line.
+       Options are:
 
-``Segments`` [number]
-  Controls the number of line segments to use to approximate a quarter circle when
-  creating rounded offsets.
+       * 0 --- Round
+       * 1 --- Miter
+       * 2 --- Bevel
 
-  Default: *8*
+   * - **Miter limit**
+     - ``MITER_LIMIT``
+     - [number]
 
-``Join style`` [enumeration]
-  Specifies whether round, miter or beveled joins should be used when offsetting
-  corners in a line.
-  Options are:
+       Default: 2.0
+     - Controls the maximum distance from the offset curve to use
+       when creating a mitered join (only applicable for miter
+       join styles).
+       Minimum: 1.0
+   * - **Buffer**
+     - ``OUTPUT``
+     - [vector: polygon]
+       
+       Default: ``[Create temporary layer]``
+     - Specify the output (buffer) layer.
+       One of:
 
-  * 0 --- Round
-  * 1 --- Miter
-  * 2 --- Bevel
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-  Default: *0*
-
-``Miter limit`` [number]
-  Only applicable for mitered join styles, and controls the maximum distance from
-  the offset curve to use when creating a mitered join.
-
-  Default: *2.0*
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Buffer`` [vector: polygon]
-  One side buffer polygon vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Buffer**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Output (buffer) polygon layer
 
 
 .. _qgissmoothgeometry:
@@ -3427,40 +3469,84 @@ or lower would preserve right angles in the geometry.
 Parameters
 ..........
 
-``Input layer`` [vector: line, polygon]
-  Polygon or line vector to smooth.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Iterations`` [number |dataDefined|]
-  With many iterations the resulting layer will have many nodes.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line, polygon]
+     - Inputline or polygon vector layer
+   * - **Iterations**
+     - ``ITERATIONS``
+     - [number |dataDefined|]
 
-  Default: *1*
+       Default: 1
+     - Increasing the number of iterations will give smoother
+       geometries (and more vertices).
+       
+       .. figure:: img/smooth_geometry_1.png
+          :align: center
+         
+          Different number of iterations cause smoother geometries
 
-  .. figure:: img/smooth_geometry_1.png
-     :align: center
+   * - **Offset**
+     - ``OFFSET``
+     - [number |dataDefined|]
 
-     Different number of iterations cause smoother geometries
+       Default: 0.25
+     - Increasing values will *move* the smoothed lines / boundaries
+       further away from the input lines / booundaries.
+       
+       .. figure:: img/smooth_geometry_2.png
+          :align: center
+       
+          Blue: the input layer. Offset 0.25 gives the red line, while
+          offset 0.50 gives the green line.
 
-``Offset`` [number |dataDefined|]
-  Larger values will *move* the resulting layer borders from the input layer ones.
+   * - **Maximum node angle to smooth**
+     - ``MAX_ANGLE``
+     - [number |dataDefined|]
 
-  Default: *0.25*
+       Default: 180.0
+     - Every node below this value will be smoothed
+   * - **Smoothed**
+     - ``OUTPUT``
+     - [same as input]
+       
+       Default: ``[Create temporary layer]``
+     - Specify the output (buffer) layer.
+       One of:
 
-  .. figure:: img/smooth_geometry_2.png
-     :align: center
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-     In blue the input layer. Offset value of 0.25 results in the red line while
-     offset value of 0.50 results in the green line
-
-``Maximum node angle to smooth`` [number |dataDefined|]
-  Every node below this value will be smoothed.
-
-  Default: *180.0*
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Smoothed`` [vector: line, polygon]
-  The smoothed vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Smoothed**
+     - ``OUTPUT``
+     - [same as input]
+     - Output (smoothed) vector layer
 
 
 .. _qgissnapgeometries:
