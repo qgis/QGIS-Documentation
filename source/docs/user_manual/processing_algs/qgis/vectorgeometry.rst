@@ -3470,8 +3470,7 @@ this will not be smoothed. For example, setting the maximum angle to
 :ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgissimplifygeometries`,
-:ref:`qgisdensifygeometries`,
-:ref:`qgisdensifygeometriesgivenaninterval`
+   :ref:`qgisdensifygeometries`, :ref:`qgisdensifygeometriesgivenaninterval`
 
 Parameters
 ..........
