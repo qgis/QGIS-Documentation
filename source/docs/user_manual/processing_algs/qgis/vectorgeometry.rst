@@ -3481,7 +3481,7 @@ Parameters
    * - **Input layer**
      - ``INPUT``
      - [vector: line, polygon]
-     - Inputline or polygon vector layer
+     - Input line or polygon vector layer
    * - **Iterations**
      - ``ITERATIONS``
      - [number |dataDefined|]
@@ -3564,39 +3564,81 @@ removed as required to make the geometries match the reference geometries.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Vector layer to align.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Reference layer`` [vector: any]
-  Vector layer to snap to.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Reference layer**
+     - ``REFERENCE_LAYER``
+     - [vector: any]
+     - Vector layer to snap to
+   * - **Tolerance**
+     - ``TOLERANCE``
+     - [number]
 
-``Tolerance`` [number]
-  Control how close input vertices need to be to the reference layer geometries
-  before they are snapped. This distance is specified in layer units.
+       Default: 10.0
+     - Control how close input vertices need to be to the
+       reference layer geometries before they are snapped.
+       This distance is specified in layer units.
+   * - *Behavior**
+     - ``BEHAVIOR``
+     - [enumeration]
 
-  Default: *10.0*
+       Default: 0
+     - Snapping can be done to an existing node or a
+       segment (its closest point to the vertex to move).
+       Available snapping options:
 
-``Behavior`` [enumeration]
-  Snapping can be done on an existing node or a segment (its closest point
-  to the vertex to move).
-  Choose between different snapping options:
+       * 0 --- Prefer aligning nodes, insert extra vertices where required
+       * 1 --- Prefer closest point, insert extra vertices where required
+       * 2 --- Prefer aligning nodes, don't insert new vertices
+       * 3 --- Prefer closest point, don't insert new vertices
+       * 4 --- Move end points only, prefer aligning nodes
+       * 5 --- Move end points only, prefer closest point
+       * 6 --- Snap end points to end points only
+       * 7 --- Snap to anchor nodes (single layer only)
 
-  * 0 --- Prefer aligning nodes, insert extra vertices where required
-  * 1 --- Prefer closest point, insert extra vertices where required
-  * 2 --- Prefer aligning nodes, don't insert new vertices
-  * 3 --- Prefer closest point, don't insert new vertices
-  * 4 --- Move end points only, prefer aligning nodes
-  * 5 --- Move end points only, prefer closest point
-  * 6 --- Snap end points to end points only
-  * 7 --- Snap to anchor nodes (single layer only)
+   * - **Snapped geometry**
+     - ``OUTPUT``
+     - [same as input]
+       
+       Default: ``[Create temporary layer]``
+     - Specify the output (buffer) layer.
+       One of:
 
-  Default: *Prefer aligning nodes, insert extra vertices where required*
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Snapped geometry`` [vector: any]
-  Vector layer with snapped geometries.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Snapped geometry**
+     - ``OUTPUT``
+     - [same as input]
+     - Output (snapped) vector layer
 
 
 .. _qgissnappointstogrid:
@@ -3621,34 +3663,75 @@ axis will disable snapping for that axis.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer to snap.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``X Grid Spacing`` [number |dataDefined|]
-  Spacing of the grid on the X axis.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **X Grid Spacing**
+     - ``HSPACING``
+     - [number |dataDefined|]
 
-  Default: *1.0*
+       Default: 1.0
+     - Grid spacing on the X axis
+   * - **Y Grid Spacing**
+     - ``VSPACING``
+     - [number |dataDefined|]
 
-``Y Grid Spacing`` [number |dataDefined|]
-  Spacing of the grid on the Y axis.
+       Default: 1.0
+     - Grid spacing on the Y axis
+   * - **Z Grid Spacing**
+     - ``ZSPACING``
+     - [number |dataDefined|]
 
-  Default: *1.0*
+       Default: 0.0
+     - Grid spacing on the Z axis
+   * - **M Grid Spacing**
+     - ``MSPACING``
+     - [number |dataDefined|]
 
-``Z Grid Spacing`` [number |dataDefined|]
-  Spacing of the grid on the Z axis.
+       Default: 0.0
+     - Grid spacing on the M axis
+   * - **Snapped**
+     - ``OUTPUT``
+     - [same as input]
+       
+       Default: ``[Create temporary layer]``
+     - Specify the output (buffer) layer.
+       One of:
 
-  Default: *0.0*
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-``M Grid Spacing`` [number |dataDefined|]
-  Spacing of the grid on the M axis.
-
-  Default: *0.0*
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Snapped`` [vector: any]
-  Vector layer with snapped geometries.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Snapped**
+     - ``OUTPUT``
+     - [same as input]
+     - Output (snapped) vector layer
 
 
 .. _qgissplitlinesbylength:
@@ -3668,26 +3751,34 @@ Parameters
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  -  Label
-      -  Name
-      -  Type
-      -  Description
+   * - Label
+     - Name
+     - Type
+     - Description
 
-   *  -  **Input layer**
-      -  ``INPUT``
-      -  [vector: line]
-      -  The input line features
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - The input line features
+   * - **Maximum line length**
+     - ``LENGTH``
+     - [number |dataDefined|]
+     - The maximum length of a line in the output.
+   * - **Split**
+     - ``OUTPUT``
+     - [vector: line]
 
-   *  -  **Length**
-      -  ``LENGTH``
-      -  [numeric]
-      -  The maximum length of a line in the output.
+       Default: ``[Create temporary layer]``
+     - Specify the output line vector layer.
+       One of:
 
-   *  -  **Split**
-      -  ``OUTPUT``
-      -  [vector: line]
-      -  The sink for the output line features.
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
+       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -3697,17 +3788,17 @@ Outputs
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  -  Label
-      -  Name
-      -  Type
-      -  Description
+   * - Label
+     - Name
+     - Type
+     - Description
 
-   *  -  **Split**
-      -  ``OUTPUT``
-      -  [vector: line]
-      -  The new line features - all with line geometries that have a
-         length that is less than or equal to the length specified in
-         the LENGTH paramter.
+   * - **Split**
+     - ``OUTPUT``
+     - [vector: line]
+     - The new line features - all with line geometries that have a
+       length that is less than or equal to the length specified in
+       the LENGTH paramter.
 
 
 .. _qgissubdivide:
@@ -3738,20 +3829,61 @@ Curved geometries will be segmentized before subdivision.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Vector layer that will have its feature geometries subdivided.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Maximum nodes in parts`` [number |dataDefined|]
-  Maximum number of vertices each new geometry part is allowed to have.
-  Fewer *sub-parts* for higher values.
+   * - Label
+     - Name
+     - Type
+     - Description
 
-  Default: *256*
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - The input vector layer
+   * - **Maximum nodes in parts**
+     - ``MAX_NODES``
+     - [number |dataDefined|]
+
+       Default: 256
+     - Maximum number of vertices each new
+       geometry part is allowed to have.
+       Fewer *sub-parts* for higher values.
+   * - **Subdivided**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output line vector layer.
+       One of:
+
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Subdivided`` [vector: any]
-  Output vector layer with subdivided geometries.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+
+   * - **Subdivided**
+     - ``OUTPUT``
+     - [same as input]
+     - Output vector layer
 
 
 .. _qgisswapxy:
@@ -3773,11 +3905,54 @@ Parameters
 ``Input layer`` [vector: any]
   Input vector layer to swap.
 
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - The input vector layer
+   * - **Swapped**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output line vector layer.
+       One of:
+
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+
 Outputs
 .......
 
-``Swapped`` [vector: any]
-  Output swapped vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+
+   * - **Swapped**
+     - ``OUTPUT``
+     - [same as input]
+     - Output (swapped) vector layer
 
 
 .. _qgistaperedbuffer:
