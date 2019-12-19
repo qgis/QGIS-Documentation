@@ -271,7 +271,7 @@ of them, compared to the abundance of pixels with values below the mean. That's
 also why the histogram extends so far to the right, even though there is no
 visible red line marking the frequency of values higher than about ``250``.
 
-.. note:: If the mean and maxmimum values are not the same as those of the example,
+.. note:: If the mean and maximum values are not the same as those of the example,
     it can be due to the min/max value calculation. Open the :guilabel:`Symbology`
     tab and expand the :guilabel:`Min / Max Value Settings` menu. Choose
     |radioButtonOn|:guilabel:`Min / max` and click on :guilabel:`Apply`.
