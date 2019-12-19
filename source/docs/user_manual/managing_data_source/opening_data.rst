@@ -336,10 +336,10 @@ Mesh layers (currently :file:`.grb`, :file:`.grb2`, :file:`.bin`, :file:`.grib`,
 Importing a delimited text file
 -------------------------------
 
-Delimited text file (e.g. :file:`.csv`, :file:`.txt`) can be loaded in QGIS
-using the tools described above. However, loaded this way, it'll show up like a
-simple table data. Sometimes, delimited text files can contain geometric data
-you'd want to visualize; this is what the |addDelimitedTextLayer|:guilabel:`Add
+Delimited text file (e.g. :file:`.txt`,:file:`.csv`, :file:`.dat`, :file: `.wkt`) 
+can be loaded in QGIS using the tools described above. However, loaded this way,
+it'll show up like a simple table data. Sometimes, delimited text files can contain
+geometric data you'd want to visualize; this is what the |addDelimitedTextLayer|:guilabel:`Add
 Delimited Text Layer` is designed for.
 
 Click the |dataSourceManager| :sup:`Open Data Source Manager` icon to open the
@@ -401,10 +401,11 @@ Geometry definition
 Once the file is parsed, set :guilabel:`Geometry definition` to
 
 * |radioButtonOn|:guilabel:`Point coordinates` and provide the :guilabel:`X
-  field` and :guilabel:`Y field` if the layer is of point geometry type and
-  contain such coordinate fields. If the coordinates are defined as
-  degrees/minutes/seconds, activate the |checkbox|:guilabel:`DMS coordinates`
-  checkbox;
+  field`, the :guilabel:`Y field`, :guilabel:`Z field` (for 3-dimensional data)
+  and the :guilabel:`M field`(for the measurement dimension) if the layer is of 
+  point geometry type and contains such coordinate fields. If the coordinates
+  are defined as degrees/minutes/seconds, activate the
+  |checkbox|:guilabel:`DMS coordinates`checkbox;
 * |radioButtonOn|:guilabel:`Well known text (WKT)` option if the spatial
   information is represented by WKT: select the :guilabel:`Geometry field`
   containing the WKT definition and choose the approriate :guilabel:`Geometry
