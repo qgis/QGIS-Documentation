@@ -274,7 +274,7 @@ visible red line marking the frequency of values higher than about ``250``.
 .. note:: If the mean and maxmimum values are not the same as those of the example,
     it can be due to the min/max value calculation. Open the :guilabel:`Symbology`
     tab and expand the :guilabel:`Min / Max Value Settings` menu. Choose
-    ``|radioButtonOn| Min / max`` and click on :guilabel:`Apply`.
+    |radioButtonOn|:guilabel:`Min / max` and click on :guilabel:`Apply`.
 
 Therefore, keep in mind that a histogram shows you the distribution of values,
 and not all values are necessarily visible on the graph.
