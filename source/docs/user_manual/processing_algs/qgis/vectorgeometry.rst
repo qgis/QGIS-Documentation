@@ -109,8 +109,8 @@ example: Array("Field1", "Field2").
 Geometries (if present) are combined into one multipart geometry for each group.
 Output attributes are computed depending on each given aggregate definition.
 
-This algorithm allows to use the default :ref:`aggregates functions <aggregates_function>`
-of the QGIS Expression engine.
+This algorithm allows to use the default
+:ref:`aggregates functions <aggregates_function>` of the QGIS Expression engine.
 
 .. seealso:: :ref:`qgiscollect`, :ref:`qgisdissolve`
 
@@ -517,8 +517,9 @@ Centroids
 Creates a new point layer, with points representing the centroids of the geometries
 of the input layer.
 
-The centroid can be a single point representing the barycenter (of all parts) of the feature,
-so it can be outside the feature borders. It can also be a point on each part of the feature.
+The centroid can be a single point representing the barycenter (of all parts) of the
+feature, so it can be outside the feature borders.
+It can also be a point on each part of the feature.
 
 The attributes associated to each point in the output layer are the same ones
 associated to the original features.
@@ -789,7 +790,8 @@ Types of error messages and their meanings
      -
 
    * - Nested shells
-     - This error happens when a polygon geometry is on top of another polygon geometry. 
+     - This error happens when a polygon geometry is on top of another polygon
+       geometry. 
      - .. figure:: img/geos_nest_shell.png
           :align: center
 
@@ -1031,8 +1033,8 @@ vertices.
 
 The number of neighbors to consider determines the concaveness of the
 output polygon.
-A lower number will result in a concave hull that follows the points very
-closely, while a higher number will have a smoother shape.
+A lower number will result in a concave hull that follows the points
+very closely, while a higher number will have a smoother shape.
 The minimum number of neighbor points to consider is 3.
 A value equal to or greater than the number of points will result in a
 convex hull.
@@ -1065,12 +1067,11 @@ Parameters
 
        Default: 3
      - Determines the concaveness of the output polygon.
-       A small number will result in a concave hull that
-       follows the points very closely, while a high
-       number will make the polygon look more like the
-       convex hull (if the number is equal to or larger
-       than the number of features, the result will be
-       the convex hull).
+       A small number will result in a concave hull that follows the
+       points very closely, while a high number will make the polygon
+       look more like the convex hull (if the number is equal to or
+       larger than the number of features, the result will be the
+       convex hull).
        Minimum value: 3.
    * - **Field**
 
@@ -1079,9 +1080,9 @@ Parameters
      - [tablefield: any]
 
        Default: None
-     - If specified, one concave hull polygon is generated
-       for each unique value of the field (by selecting
-       features using this value).
+     - If specified, one concave hull polygon is generated for each
+       unique value of the field (by selecting features using this
+       value).
    * - **Concave hull**
      - ``OUTPUT``
      - [vector: polygon]
@@ -1118,10 +1119,12 @@ Outputs
 
 Convert geometry type
 ---------------------
-Generates a new layer based on an existing one, with a different type of geometry.
+Generates a new layer based on an existing one, with a different type
+of geometry.
 
-Not all conversions are possible. For instance, a line layer can be converted to
-a point layer, but a point layer cannot be converted to a line layer.
+Not all conversions are possible. For instance, a line layer can be
+converted to a point layer, but a point layer cannot be converted to a 
+line layer.
 
 .. seealso:: :ref:`qgispolygonize`, :ref:`qgislinestopolygons`
 
@@ -1198,19 +1201,22 @@ Convex hull
 -----------
 Calculates the convex hull for each feature in an input layer.
 
-See the 'Minimum bounding geometry' algorithm for a convex hull calculation which
-covers the whole layer or grouped subsets of features.
+See the 'Minimum bounding geometry' algorithm for a convex hull
+calculation which covers the whole layer or grouped subsets of
+features.
 
 .. figure:: img/convex_hull.png
    :align: center
 
    Black lines identify the convex hull for each layer feature
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
-.. seealso:: :ref:`qgisminimumboundinggeometry`, :ref:`qgisconcavehull`
+.. seealso:: :ref:`qgisminimumboundinggeometry`,
+   :ref:`qgisconcavehull`
 
 Parameters
 ..........
@@ -1264,12 +1270,12 @@ Outputs
 
 Create layer from extent
 ------------------------
-Creates a new vector layer that contains a single feature with geometry matching
-the extent of the input layer.
+Creates a new vector layer that contains a single feature with
+geometry matching the extent of the input layer.
 
-It can be used in models to convert a literal extent (``xmin``, ``xmax``, ``ymin``,
-``ymax`` format) into a layer which can be used for other algorithms which require
-a layer based input.
+It can be used in models to convert a literal extent (``xmin``,
+``xmax``, ``ymin``, ``ymax`` format) into a layer which can be used
+for other algorithms which require a layer based input.
 
 .. seealso:: :ref:`qgispointtolayer`
 
@@ -1326,10 +1332,10 @@ Outputs
 Create layer from point |38|
 -----------------------------
 
-Creates a new vector layer that contains a single
-feature with geometry matching a point parameter.
-It can be used in models to convert a point into a point layer
-for algorithms which require a layer based input.
+Creates a new vector layer that contains a single feature with
+geometry matching a point parameter.
+It can be used in models to convert a point into a point layer for
+algorithms which require a layer based input.
 
 .. seealso:: :ref:`qgisextenttolayer`
 
@@ -1398,10 +1404,12 @@ Creates wedge shaped buffers from input points.
 
    Wedge buffers
 
-The native output from this algorithm are CurvePolygon geometries, but these may
-be automatically segmentized to Polygons depending on the output format.
+The native output from this algorithm are CurvePolygon geometries, but
+these may be automatically segmentized to Polygons depending on the
+output format.
 
-.. seealso:: :ref:`qgisbuffer`, :ref:`qgisbufferbym`, :ref:`qgistaperedbuffer`
+.. seealso:: :ref:`qgisbuffer`, :ref:`qgisbufferbym`,
+   :ref:`qgistaperedbuffer`
 
 Parameters
 ..........
@@ -1424,16 +1432,15 @@ Parameters
      - [number |dataDefined|]
 
        Default: 0.0
-     - Angle (in degrees) as the middle value of the
-       wedge
+     - Angle (in degrees) as the middle value of the wedge
    * - **Wedge width (in degrees)**
      - ``WIDTH``
      - [number |dataDefined|]
 
        Default: 45.0
      - Width (in degrees) of the buffer.
-       The wedge will extend to half of the angular
-       width either side of the azimuth direction.
+       The wedge will extend to half of the angular width either side
+       of the azimuth direction.
 
        .. figure:: img/wedge_buffers_azimuth_width.png
          :align: center
@@ -1446,8 +1453,8 @@ Parameters
 
        Default: 1.0
      - The outer *size* (length) of the wedge:
-       the size is meant from the source point to the
-       edge of the wedge shape.
+       the size is meant from the source point to the edge of the
+       wedge shape.
    * - **Inner radius**
 
        Optional
@@ -1555,20 +1562,22 @@ Outputs
 
 Delete holes
 ------------
-Takes a polygon layer and removes holes in polygons. It creates a new vector layer
-in which polygons with holes have been replaced by polygons with only their external
-ring. Attributes are not modified.
+Takes a polygon layer and removes holes in polygons.
+It creates a new vector layer in which polygons with holes have been
+replaced by polygons with only their external ring.
+Attributes are not modified.
 
-An optional minimum area parameter allows removing only holes which are smaller
-than a specified area threshold. Leaving this parameter at ``0.0`` results in all
-holes being removed.
+An optional minimum area parameter allows removing only holes which
+are smaller than a specified area threshold. Leaving this parameter at
+``0.0`` results in all holes being removed.
 
 .. figure:: img/delete_holes.png
    :align: center
 
    Before and after the cleaning
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 Parameters
 ..........
@@ -1593,8 +1602,8 @@ Parameters
      - [number |dataDefined|]
 
        Default: 0.0
-     - Only holes with an area less than this
-       threshold will be deleted.
+     - Only holes with an area less than this threshold will be
+       deleted.
        If ``0.0`` is added, **all** the holes will be deleted.
    * - **Cleaned**
      - ``OUTPUT``
@@ -1632,20 +1641,22 @@ Outputs
 
 Densify by count
 ----------------
-Takes a polygon or line layer and generates a new one in which the geometries have
-a larger number of vertices than the original one.
+Takes a polygon or line layer and generates a new one in which the
+geometries have a larger number of vertices than the original one.
 
-If the geometries have Z or M values present then these will be linearly interpolated
-at the added vertices.
+If the geometries have Z or M values present then these will be
+linearly interpolated at the added vertices.
 
-The number of new vertices to add to each segment is specified as an input parameter.
+The number of new vertices to add to each segment is specified as an
+input parameter.
 
 .. figure:: img/densify_geometry.png
    :align: center
 
    Red points show the vertices before and after the densify
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
@@ -1709,29 +1720,30 @@ Outputs
 
 Densify by interval
 -------------------
-Takes a polygon or line layer and generates a new one in which the geometries have
-a larger number of vertices than the original one.
+Takes a polygon or line layer and generates a new one in which the
+geometries have a larger number of vertices than the original one.
 
-The geometries are densified by adding regularly placed extra vertices inside each
-segment so that the maximum distance between any two vertices does not exceed the
-specified distance.
+The geometries are densified by adding regularly placed extra vertices
+inside each segment so that the maximum distance between any two
+vertices does not exceed the specified distance.
 
-If the geometries have Z or M values present then these will be linearly interpolated
-at the added vertices.
+If the geometries have Z or M values present then these will be
+linearly interpolated at the added vertices.
 
 **Example**
 
-Specifying a distance 3 would cause the segment ``[0 0] -> [10 0]`` to be converted
-to ``[0 0] -> [2.5 0] -> [5 0] -> [7.5 0] -> [10 0]``, since 3 extra vertices are required
-on the segment and spacing these at 2.5 increments allows them to be evenly spaced
-over the segment.
+Specifying a distance 3 would cause the segment ``[0 0] -> [10 0]`` to
+be converted to ``[0 0] -> [2.5 0] -> [5 0] -> [7.5 0] -> [10 0]``,
+since 3 extra vertices are required on the segment and spacing these
+at 2.5 increments allows them to be evenly spaced over the segment.
 
 .. figure:: img/densify_geometry_interval.png
    :align: center
 
    Densify geometry at a given interval
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgisdensifygeometries`
 
@@ -1794,17 +1806,19 @@ Outputs
 Dissolve
 --------
 Takes a vector layer and combines its features into new features.
-One or more attributes can be specified to dissolve features belonging to the
-same class (having the same value for the specified attributes), alternatively
-all features can be dissolved to a single feature.
+One or more attributes can be specified to dissolve features belonging
+to the same class (having the same value for the specified
+attributes), alternatively all features can be dissolved to a single
+feature.
 
-All output geometries will be converted to multi geometries. In case the input is
-a polygon layer, common boundaries of adjacent polygons being dissolved will get
-erased.
+All output geometries will be converted to multi geometries.
+In case the input is a polygon layer, common boundaries of adjacent
+polygons being dissolved will get erased.
 
-The resulting attribute table will have the same fields as the input layer.
-The values in the output layer's fields are the ones of the first input feature
-that happens to be processed.
+The resulting attribute table will have the same fields as the input
+layer.
+The values in the output layer's fields are the ones of the first
+input feature that happens to be processed.
 
 .. figure:: img/dissolve.png
    :align: center
@@ -1881,12 +1895,14 @@ Outputs
 
 Drape (set Z value from raster)
 -------------------------------
-Uses values sampled from a band within a raster layer to set the Z value for every
-overlapping vertex in the feature geometry. The raster values can optionally be
-scaled by a preset amount.
+Uses values sampled from a band within a raster layer to set the Z
+value for every overlapping vertex in the feature geometry.
+The raster values can optionally be scaled by a preset amount.
 
-If Z values already exist in the layer, they will be overwritten with the new value.
-If no Z values exist, the geometry will be upgraded to include the Z dimension.
+If Z values already exist in the layer, they will be overwritten with
+the new value.
+If no Z values exist, the geometry will be upgraded to include the Z
+dimension.
 
 .. seealso:: :ref:`qgissetmfromraster`, :ref:`qgissetzvalue`
 
@@ -2038,14 +2054,15 @@ Outputs
 
 Eliminate selected polygons
 ---------------------------
-Combines selected polygons of the input layer with certain adjacent polygons by
-erasing their common boundary. The adjacent polygon can be either the one with
-the largest or smallest area or the one sharing the largest common boundary with
-the polygon to be eliminated.
+Combines selected polygons of the input layer with certain adjacent
+polygons by erasing their common boundary.
+The adjacent polygon can be either the one with the largest or
+smallest area or the one sharing the largest common boundary with the
+polygon to be eliminated.
 
-Eliminate is normally used to get rid of sliver polygons, i.e. tiny polygons that
-are a result of polygon intersection processes where boundaries of the inputs are
-similar but not identical.
+Eliminate is normally used to get rid of sliver polygons, i.e. tiny
+polygons that are a result of polygon intersection processes where
+boundaries of the inputs are similar but not identical.
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
@@ -2115,11 +2132,12 @@ Outputs
 
 Explode lines
 -------------
-Takes a lines layer and creates a new one in which each line layer is replaced by
-a set of lines representing the segments in the original line.
+Takes a lines layer and creates a new one in which each line layer is
+replaced by a set of lines representing the segments in the original
+line.
 
-Each line in the resulting layer contains only a start and an end point, with no
-intermediate vertices between them.
+Each line in the resulting layer contains only a start and an end
+point, with no intermediate vertices between them.
 
 
 .. figure:: img/explode_lines.png
@@ -2127,7 +2145,8 @@ intermediate vertices between them.
 
    The original line layer and the exploded one
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgissubdivide`, :ref:`qgislinesubstring`
 
@@ -2183,16 +2202,20 @@ Outputs
 
 Extend lines
 ------------
-Extends line geometry by a specified amount at the start and end of the line.
+Extends line geometry by a specified amount at the start and end of
+the line.
 
-Lines are extended using the bearing of the first and last segment in the line.
+Lines are extended using the bearing of the first and last segment in
+the line.
 
 .. figure:: img/extend_lines.png
    :align: center
 
-   The red dashes represent the initial and final extension of the original layer
+   The red dashes represent the initial and final extension of the
+   original layer
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgislinesubstring`
 
@@ -2215,13 +2238,13 @@ Parameters
    * - **Start distance**
      - ``START_DISTANCE``
      - [number |dataDefined|]
-     - Distance by which to extend the first segment
-       of the line (starting point)
+     - Distance by which to extend the first segment of the line
+       (starting point)
    * - **End distance**
      - ``END_DISTANCE``
      - [number |dataDefined|]
-     - Distance by which to extend the last segment of
-       the line (ending point)
+     - Distance by which to extend the last segment of the line
+       (ending point)
    * - **Extended**
      - ``OUTPUT``
      - [vector: line]
@@ -2261,10 +2284,10 @@ Extract M values
 
 Extracts M values from geometries into feature attributes.
 
-By default only the M value from the first vertex of each
-feature is extracted, however the algorithm can optionally
-calculate statistics on all of the geometry's M values,
-including sum, mean, minimum and maximum.
+By default only the M value from the first vertex of each feature is
+extracted, however the algorithm can optionally calculate statistics
+on all of the geometry's M values, including sum, mean, minimum and
+maximum.
 
 .. seealso:: :ref:`qgisextractzvalues`, :ref:`qgissetmvalue`, :ref:`qgisdropmzvalues`
 
@@ -2352,25 +2375,29 @@ Outputs
 
 Extract specific vertices
 -------------------------
-Takes a line or polygon layer and generates a point layer with points representing
-specific vertices in the input lines or polygons.
+Takes a line or polygon layer and generates a point layer with points
+representing specific vertices in the input lines or polygons.
 
-For instance, this algorithm can be used to extract the first or last vertices in
-the geometry. The attributes associated to each point are the same ones associated
+For instance, this algorithm can be used to extract the first or last
+vertices in the geometry.
+The attributes associated to each point are the same ones associated
 to the line or polygon that the point belongs to.
 
-The vertex indices parameter accepts a comma separated string specifying the indices
-of the vertices to extract. The first vertex corresponds to an index of 0, the second
-vertex has an index of 1, etc. Negative indices can be used to find vertices at the
-end of the geometry, e.g., an index of -1 corresponds to the last vertex, -2
-corresponds to the second last vertex, etc.
+The vertex indices parameter accepts a comma separated string
+specifying the indices of the vertices to extract.
+The first vertex corresponds to an index of 0, the second vertex has
+an index of 1, etc. Negative indices can be used to find vertices at
+the end of the geometry, e.g., an index of -1 corresponds to the last
+vertex, -2 corresponds to the second last vertex, etc.
 
-Additional fields are added to the vertices indicating the specific vertex position
-(e.g., 0, -1, etc), the original vertex index, the vertex’s part and its index within
-the part (as well as its ring for polygons), distance along the original geometry
-and bisector angle of vertex for the original geometry.
+Additional fields are added to the vertices indicating the specific
+vertex position (e.g., 0, -1, etc), the original vertex index, the
+vertex’s part and its index within the part (as well as its ring for
+polygons), distance along the original geometry and bisector angle of
+vertex for the original geometry.
 
-.. seealso:: :ref:`qgisextractvertices`, :ref:`qgisfilterverticesbym`, :ref:`qgisfilterverticesbyz`
+.. seealso:: :ref:`qgisextractvertices`, :ref:`qgisfilterverticesbym`,
+   :ref:`qgisfilterverticesbyz`
 
 Parameters
 ..........
@@ -2393,8 +2420,8 @@ Parameters
      - [string]
        
        Default: '0'
-     - Comma-separated string of the indices of the vertices
-       to extract.
+     - Comma-separated string of the indices of the vertices to
+       extract.
    * - **Vertices**
      - ``OUTPUT``
      - [vector: point]
@@ -2424,23 +2451,24 @@ Outputs
    * - **Vertices**
      - ``OUTPUT``
      - [vector: point]
-     - The output (point) vector layer containing the specified vertices
-       from the input layer geometries.
+     - The output (point) vector layer containing the specified
+       vertices from the input layer geometries.
 
 
 .. _qgisextractvertices:
 
 Extract vertices
 ----------------
-Takes a line or polygon layer and generates a point layer with points representing
-the vertices in the input lines or polygons.
+Takes a line or polygon layer and generates a point layer with points
+representing the vertices in the input lines or polygons.
 
-The attributes associated to each point are the same ones associated to the line
-or polygon that the point belongs to.
+The attributes associated to each point are the same ones associated
+to the line or polygon that the point belongs to.
 
-Additional fields are added to the vertices indicating the vertex index (beginning at 0),
-the feature’s part and its index within the part (as well as its ring for polygons),
-distance along original geometry and bisector angle of vertex for original geometry.
+Additional fields are added to the vertices indicating the vertex
+index (beginning at 0), the feature’s part and its index within the
+part (as well as its ring for polygons), distance along original
+geometry and bisector angle of vertex for original geometry.
 
 .. figure:: img/extract_nodes.png
    :align: center
@@ -2449,8 +2477,8 @@ distance along original geometry and bisector angle of vertex for original geome
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
-.. seealso:: :ref:`qgisextractspecificvertices`, :ref:`qgisfilterverticesbym`,
- :ref:`qgisfilterverticesbyz`
+.. seealso:: :ref:`qgisextractspecificvertices`,
+:ref:`qgisfilterverticesbym`, :ref:`qgisfilterverticesbyz`
 
 Parameters
 ..........
@@ -2500,8 +2528,8 @@ Outputs
    * - **Vertices**
      - ``OUTPUT``
      - [vector: point]
-     - The output (point) vector layer containing the vertices
-       from the input layer geometries.
+     - The output (point) vector layer containing the vertices from
+       the input layer geometries.
 
 
 .. _qgisextractzvalues:
@@ -2511,12 +2539,13 @@ Extract Z values
 
 Extracts Z values from geometries into feature attributes.
 
-By default only the Z value from the first vertex of each
-feature is extracted, however the algorithm can optionally
-calculate statistics on all of the geometry's Z values,
-including sum, mean, minimum and maximum.
+By default only the Z value from the first vertex of each feature is
+extracted, however the algorithm can optionally calculate statistics
+on all of the geometry's Z values, including sum, mean, minimum and
+maximum.
 
-.. seealso:: :ref:`qgisextractzvalues`, :ref:`qgissetzvalue`, :ref:`qgisdropmzvalues`
+.. seealso:: :ref:`qgisextractzvalues`, :ref:`qgissetzvalue`,
+   :ref:`qgisdropmzvalues`
 
 Parameters
 ..........
@@ -2602,20 +2631,24 @@ Outputs
 
 Filter vertices by M value
 --------------------------
-Filters away vertices based on their M value, returning geometries with only vertex
-points that have a M value greater than or equal to the specified minimum value and/or
-less than or equal to the maximum value.
+Filters away vertices based on their M value, returning geometries
+with only vertex points that have a M value greater than or equal to
+the specified minimum value and/or less than or equal to the maximum
+value.
 
-If the minimum value is not specified then only the maximum value is tested, and
-similarly if the maximum value is not specified then only the minimum value is tested.
+If the minimum value is not specified then only the maximum value is
+tested, and similarly if the maximum value is not specified then only
+the minimum value is tested.
 
 .. figure:: img/filter_zm.png
    :align: center
 
-   The red line represents the black line with only vertices whose M value is <=10.
+   The red line represents the black line with only vertices whose M
+   value is <=10.
 
-.. note:: Depending on the input geometry attributes and the filters used,
-  the resultant geometries created by this algorithm may no longer be valid.
+.. note:: Depending on the input geometry attributes and the filters
+   used, the resultant geometries created by this algorithm may no
+   longer be valid.
 
 .. seealso:: :ref:`qgisfilterverticesbyz`, :ref:`qgisextractvertices`,
  :ref:`qgisextractspecificvertices`
@@ -2688,21 +2721,26 @@ Outputs
 
 Filter vertices by Z value
 --------------------------
-Filters away vertices based on their Z value, returning geometries with only vertex
-points that have a Z value greater than or equal to the specified minimum value and/or
-less than or equal to the maximum value.
+Filters away vertices based on their Z value, returning geometries
+with only vertex points that have a Z value greater than or equal to
+the specified minimum value and/or less than or equal to the maximum
+value.
 
-If the minimum value is not specified then only the maximum value is tested, and
-similarly if the maximum value is not specified then only the minimum value is tested.
+If the minimum value is not specified then only the maximum value is
+tested, and similarly if the maximum value is not specified then only
+the minimum value is tested.
 
 .. figure:: img/filter_zm.png
    :align: center
 
-   The red line represents the black line with only vertices whose Z value is <=10.
+   The red line represents the black line with only vertices whose Z
+   value is <=10.
 
-.. note:: Depending on the input geometry attributes and the filters used,
-  the resultant geometries created by this algorithm may no longer be valid.
-  You may need to run the :ref:`qgisfixgeometries` algorithm to ensure their validity.
+.. note:: Depending on the input geometry attributes and the filters
+   used, the resultant geometries created by this algorithm may no
+   longer be valid.
+   You may need to run the :ref:`qgisfixgeometries` algorithm to
+   ensure their validity.
 
 .. seealso:: :ref:`qgisfilterverticesbym`, :ref:`qgisextractvertices`,
  :ref:`qgisextractspecificvertices`
@@ -2776,12 +2814,14 @@ Outputs
 Fix geometries
 --------------
 Attempts to create a valid representation of a given invalid geometry
-without losing any of the input vertices. Already valid geometries are returned
-without further intervention. Always outputs multi-geometry layer.
+without losing any of the input vertices.
+Already valid geometries are returned without further intervention.
+Always outputs multi-geometry layer.
 
 .. note:: M values will be dropped from the output.
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgischeckvalidity`
 
@@ -2838,14 +2878,12 @@ Outputs
 Force right-hand-rule |36|
 --------------------------
 
-This algorithm forces polygon geometries to respect the
+This algorithm forces polygon geometries to respect the 
 Right-Hand-Rule, in which the area that is bounded by a polygon
 is to the right of the boundary.
 In particular, the exterior ring is oriented in a clockwise
-direction and the interior rings in a counter-clockwise
-direction.
-The algorithm consumes and produces features with polygon
-geometries.
+direction and the interior rings in a counter-clockwise direction.
+The algorithm consumes and produces features with polygon geometries.
 
 Parameters
 ..........
@@ -2900,19 +2938,22 @@ Outputs
 Geodesic line split at antimeridian |36|
 ----------------------------------------
 
-This algorithm splits a line into multiple geodesic segments, whenever the line
-crosses the antimeridian (±180 degrees longitude).
+This algorithm splits a line into multiple geodesic segments, whenever
+the line crosses the antimeridian (±180 degrees longitude).
 
-Splitting at the antimeridian helps the visual display of the lines in some
-projections. The returned geometry will always be a multi-part geometry.
+Splitting at the antimeridian helps the visual display of the lines in
+some projections.
+The returned geometry will always be a multi-part geometry.
 
-Whenever line segments in the input geometry cross the antimeridian, they will
-be split into two segments, with the latitude of the breakpoint being determined
-using a geodesic line connecting the points either side of this segment. The
-current project ellipsoid setting will be used when calculating this breakpoint.
+Whenever line segments in the input geometry cross the antimeridian,
+they will be split into two segments, with the latitude of the
+breakpoint being determined using a geodesic line connecting the
+points either side of this segment.
+The current project ellipsoid setting will be used when calculating
+this breakpoint.
 
-If the input geometry contains M or Z values, these will be linearly interpolated
-for the new vertices created at the antimeridian.
+If the input geometry contains M or Z values, these will be linearly
+interpolated for the new vertices created at the antimeridian.
 
 Parameters
 ..........
@@ -2966,14 +3007,16 @@ Outputs
 
 Geometry by expression
 ----------------------
-Updates existing geometries (or creates new geometries) for input features by use
-of a QGIS expression.
+Updates existing geometries (or creates new geometries) for input
+features by use of a QGIS expression.
 
-This allows complex geometry modifications which can utilize all the flexibility
-of the QGIS expression engine to manipulate and create geometries for output features.
+This allows complex geometry modifications which can utilize all the
+flexibility of the QGIS expression engine to manipulate and create
+geometries for output features.
 
-For help with QGIS expression functions, see the inbuilt help for specific functions
-which is available in the :ref:`expression builder <vector_expressions>`.
+For help with QGIS expression functions, see the inbuilt help for
+specific functions which is available in the
+:ref:`expression builder <vector_expressions>`.
 
 Parameters
 ..........
@@ -2996,9 +3039,9 @@ Parameters
      - [enumeration]
 
        Default: 0
-     - The output geometry strongly depends on the
-       expression: for instance, if you create a buffer
-       the geometry type has to be polygon.
+     - The output geometry strongly depends on the expression: for
+       instance, if you create a buffer the geometry type has to be
+       polygon.
        One of:
 
        * 0 --- Polygon
@@ -3023,10 +3066,9 @@ Parameters
        
        Default: '$geometry'
      - Add the geometry expression you want to use.
-       You can use the button to open the Expression
-       Dialog.
-       The dialog has lists all the relevant expressions,
-       together with their help and guide.
+       You can use the button to open the Expression Dialog.
+       The dialog has lists all the relevant expressions, together
+       with their help and guide.
    * - **Modified geometry**
      - ``OUTPUT``
      - [vector: any]
@@ -3063,13 +3105,13 @@ Outputs
 
 Interpolate point on line
 -------------------------
-Creates a point geometry interpolated at a set distance along line or curve
-geometries.
+Creates a point geometry interpolated at a set distance along line or
+curve geometries.
 
 Z and M values are linearly interpolated from existing values.
 
-If a multipart geometry is encountered, only the first part is considered when
-calculating the substring.
+If a multipart geometry is encountered, only the first part is
+considered when calculating the substring.
 
 If the specified distance is greater than the input feature's length,
 the resultant feature will have a null geometry.
@@ -3139,14 +3181,16 @@ Outputs
 
 Keep N biggest parts
 --------------------
-Takes a layer with polygons or multipolygons and returns a new layer in which
-only the *n* largest polygons of each multipolygon feature are kept.
+Takes a layer with polygons or multipolygons and returns a new layer
+in which only the *n* largest polygons of each multipolygon feature
+are kept.
 If a feature has *n* or fewer parts, the feature will just be copied.
 
 .. figure:: img/n_biggest.png
    :align: center
 
-   Clockwise from left-up: original multipart feature, one, two and three biggest parts kept
+   Clockwise from left-up: original multipart feature, one, two and
+   three biggest parts kept
 
 Parameters
 ..........
@@ -3169,8 +3213,8 @@ Parameters
      - [number]
      
        Default: 1
-     - How many parts to keep. If 1, only the biggest
-       part of the feature will be kept.
+     - How many parts to keep. If 1, only the biggest part of the
+       feature will be kept.
    * - **Parts**
      - ``OUTPUT``
      - [vector: polygon]
@@ -3200,26 +3244,28 @@ Outputs
    * - **Parts**
      - ``OUTPUT``
      - [vector: polygon]
-     - The output polygon vector layer with the
-       N biggest parts of each feature
+     - The output polygon vector layer with the N biggest parts of
+       each feature
 
 
 .. _qgislinesubstring:
 
 Line substring
 --------------
-Returns the portion of a line (or curve) which falls between the specified start
-and end distances (measured from the beginning of the line).
+Returns the portion of a line (or curve) which falls between the
+specified start and end distances (measured from the beginning of the
+line).
 
 Z and M values are linearly interpolated from existing values.
 
-If a multipart geometry is encountered, only the first part is considered when
-calculating the substring.
+If a multipart geometry is encountered, only the first part is
+considered when calculating the substring.
 
 .. figure:: img/substring.png
    :align: center
 
-   Substring line with starting distance set at 0 meters and the ending distance at 250 meters.
+   Substring line with starting distance set at 0 meters and the
+   ending distance at 250 meters.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
@@ -3287,11 +3333,11 @@ Outputs
 
 Lines to polygons
 -----------------
-Generates a polygon layer using as polygon rings the
-lines from an input line layer.
+Generates a polygon layer using as polygon rings the lines from an
+input line layer.
 
-The attribute table of the output layer is the same
-as the one from of the input line layer.
+The attribute table of the output layer is the same as the one from of
+the input line layer.
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
@@ -3349,14 +3395,15 @@ Outputs
 
 Merge lines
 -----------
-Joins all connected parts of MultiLineString geometries into single LineString
-geometries.
+Joins all connected parts of MultiLineString geometries into single
+LineString geometries.
 
-If any parts of the input MultiLineString geometries are not connected, the
-resultant geometry will be a MultiLineString containing any lines which could be
-merged and any non-connected line parts.
+If any parts of the input MultiLineString geometries are not
+connected, the resultant geometry will be a MultiLineString containing
+any lines which could be merged and any non-connected line parts.
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 Parameters
 ..........
@@ -3416,8 +3463,7 @@ Outputs
 
 Minimum bounding geometry
 -------------------------
-Creates geometries which enclose the features from an
-input layer.
+Creates geometries which enclose the features from an input layer.
 
 The following enclosing geometry types are supported:
 
@@ -3427,9 +3473,8 @@ The following enclosing geometry types are supported:
 * convex hull
 
 The features can be grouped by a field.
-The output layer will then contain one feature per
-grouped value with a minimal geometry covering just
-the features with matching values.
+The output layer will then contain one feature per grouped value with
+a minimal geometry covering just the features with matching values.
 
 .. seealso:: :ref:`qgisminimumenclosingcircle`
 
@@ -3455,9 +3500,8 @@ Parameters
      - ``FIELD``
      - [tablefield: any]
      - Features can be grouped by a field.
-       If set, this causes the output layer to
-       contain one feature per grouped value
-       with a minimal geometry covering only the
+       If set, this causes the output layer to contain one feature per
+       grouped value with a minimal geometry covering only the
        features with matching values.
    * - **Geometry type**
      - ``TYPE``
@@ -3474,8 +3518,8 @@ Parameters
        .. figure:: img/minimum_bounding.png
           :align: center
 
-          Clockwise from upper left: envelope, oriented
-          rectangle, circle, convex hull
+          Clockwise from upper left: envelope, oriented rectangle,
+          circle, convex hull
 
    * - **Bounding geometry**
      - ``OUTPUT``
@@ -3513,8 +3557,8 @@ Outputs
 
 Minimum enclosing circles
 -------------------------
-Calculates the minimum enclosing circles of the features
-in the input layer.
+Calculates the minimum enclosing circles of the features in the input
+layer.
 
 .. figure:: img/minimum_enclosing_circles.png
    :align: center
@@ -3605,11 +3649,6 @@ input layer, using a fixed or dynamic distance and number of rings.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer.
-
-
-
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -3630,17 +3669,17 @@ Parameters
        Default: 1
      - The number of rings.
        It can be a unique value (same number of rings for all the
-       features) or it can be taken from features data (the
-       number of rings depends on feature values).
+       features) or it can be taken from features data (the number of
+       rings depends on feature values).
    * - **Distance between rings**
      - ``DISTANCE``
      - [number |dataDefined|]
 
        Default: 1.0
      - Distance between the rings.
-       It can be a unique value (same distance for all the
-       features) or it can be taken from features data
-       (the distance depends on feature values).
+       It can be a unique value (same distance for all the features)
+       or it can be taken from features data (the distance depends on
+       feature values).
    * - **Multi-ring buffer (constant distance)**
      - ``OUTPUT``
      - [vector: polygon]
@@ -3680,14 +3719,14 @@ Multipart to singleparts
 Splits multipart features in the input layer into singlepart
 features.
 
-The attributes of the output layer is the same of the
-original ones but divided into single features.
+The attributes of the output layer is the same of the original ones
+but divided into single features.
 
 .. figure:: img/multipart.png
    :align: center
 
-   Left the multipart source layer and right the single
-   part output result
+   Left the multipart source layer and right the single part output
+   result
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
@@ -3748,15 +3787,17 @@ Outputs
 
 Offset lines
 ------------
-Offsets lines by a specified distance. Positive distances will offset lines to
-the left, and negative distances will offset them to the right.
+Offsets lines by a specified distance.
+Positive distances will offset lines to the left, and negative
+distances will offset them to the right.
 
 .. figure:: img/offset_lines.png
    :align: center
 
    In blue the source layer, in red the offset one
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgisarrayoffsetlines`, :ref:`qgistranslategeometry`
 
@@ -3871,8 +3912,8 @@ Outputs
 
 Oriented minimum bounding box
 -----------------------------
-Calculates the minimum area rotated rectangle for each feature
-in the input layer.
+Calculates the minimum area rotated rectangle for each feature in the
+input layer.
 
 .. figure:: img/oriented_minimum_bounding_box.png
    :align: center
@@ -3936,11 +3977,10 @@ Outputs
 
 Orthogonalize
 -------------
-Attempts to orthogonalize the geometries of the input line
-or polygon layer.
-This process shifts the vertices in the geometries to try
-to make every angle in the geometry either a right angle or
-a straight line.
+Attempts to orthogonalize the geometries of the input line or polygon
+layer.
+This process shifts the vertices in the geometries to try to make
+every angle in the geometry either a right angle or a straight line.
 
 .. figure:: img/orthogonize.png
    :align: center
@@ -3970,20 +4010,18 @@ Parameters
    * - **Maximum angle tolerance (degrees)**
      - ``ANGLE_TOLERANCE``
      - [number]
-     - Specify the maximum deviation from a right
-       angle or straight line a vertex can have for
-       it to be adjusted.
-       Smaller tolerances mean that only vertices
-       which are already closer to right angles will
-       be adjusted, and larger tolerances mean that
-       vertices which deviate further from right
-       angles will also be adjusted.
+     - Specify the maximum deviation from a right angle or straight
+       line a vertex can have for it to be adjusted.
+       Smaller tolerances mean that only vertices which are already
+       closer to right angles will be adjusted, and larger tolerances
+       mean that vertices which deviate further from right angles will
+       also be adjusted.
    * - **Maximum algorithm iterations**
      - ``MAX_ITERATIONS``
      - [number]
-     - Setting a larger number for the maximum number
-       of iterations will result in a more orthogonal
-       geometry at the cost of extra processing time.
+     - Setting a larger number for the maximum number of iterations
+       will result in a more orthogonal geometry at the cost of extra
+       processing time.
    * - **Bounding boxes**
      - ``OUTPUT``
      - [vector: polygon]
@@ -4020,8 +4058,8 @@ Outputs
 
 Point on Surface
 ----------------
-For each feature of the input layer, return a point that
-is guaranteed to lie on the surface of the feature geometry.
+For each feature of the input layer, return a point that is guaranteed
+to lie on the surface of the feature geometry.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
@@ -4047,8 +4085,8 @@ Parameters
    * - **Create point on surface for each part**
      - ``ANGLE_TOLERANCE``
      - [boolean |dataDefined|]
-     - If checked, a point will be created for each part
-       of the geometry.
+     - If checked, a point will be created for each part of the
+       geometry.
    * - **Point**
      - ``OUTPUT``
      - [vector: point]
@@ -4085,12 +4123,13 @@ Outputs
 
 Points along geometry
 ---------------------
-Creates points at regular intervals along line or polygon geometries. Created
-points will have new attributes added for the distance along the geometry and the
-angle of the line at the point.
+Creates points at regular intervals along line or polygon geometries.
+Created points will have new attributes added for the distance along
+the geometry and the angle of the line at the point.
 
-An optional start and end offset can be specified, which controls how far from
-the start and end of the geometry the points should be created.
+An optional start and end offset can be specified, which controls how
+far from the start and end of the geometry the points should be
+created.
 
 .. figure:: img/points_along_line.png
    :align: center
@@ -4120,23 +4159,21 @@ Parameters
      - [number |dataDefined|]
      
        Default: 1.0
-     - Distance between two consecutive points along the
-       line
+     - Distance between two consecutive points along the line
    * - **Start offset**
      - ``START_OFFSET``
      - [number |dataDefined|]
 
        Default: 0.0
-     - Distance from the beginning of the input line,
-       representing the position of the first point.
+     - Distance from the beginning of the input line, representing the
+       position of the first point.
    * - **End offset**
      - ``END_OFFSET``
      - [number |dataDefined|]
 
        Default: 0.0
-     - Distance from the end of the input line,
-       representing the position beyond which no point
-       feature shoud be created.
+     - Distance from the end of the input line, representing the
+       position beyond which no point feature shoud be created.
    * - **Interpolated points**
      - ``OUTPUT``
      - [vector: point]
@@ -4166,22 +4203,21 @@ Outputs
    * - **Interpolated points**
      - ``OUTPUT``
      - [vector: point]
-     - Point vector layer with features placed along
-       linea or polygon boundaries of the input layer.
+     - Point vector layer with features placed along lines or polygon
+       boundaries of the input layer.
 
 
 .. _qgispointsdisplacement:
 
 Points displacement
 -------------------
-Given a distance of proximity, identifies nearby point features and radially
-distributes them over a circle whose center represents their barycenter.
+Given a distance of proximity, identifies nearby point features and
+radially distributes them over a circle whose center represents their
+barycenter.
 A convenient tool to scatter overlaid features.
 
 Parameters
 ..........
-
-
 
 .. list-table::
    :header-rows: 1
@@ -4215,9 +4251,8 @@ Parameters
      - [boolean]
 
        Default: False
-     - When only two points are identified as close,
-       aligns them horizontally on the circle instead
-       of vertically.
+     - When only two points are identified as close, aligns them
+       horizontally on the circle instead of vertically.
 
    * - **Displaced**
      - ``OUTPUT``
@@ -4255,16 +4290,17 @@ Outputs
 
 Pole of inaccessibility
 -----------------------
-Calculates the pole of inaccessibility for a polygon layer, which is the most
-distant internal point from the boundary of the surface.
+Calculates the pole of inaccessibility for a polygon layer, which is
+the most distant internal point from the boundary of the surface.
 
-This algorithm uses the 'polylabel' algorithm (Vladimir Agafonkin, 2016), which
-is an iterative approach guaranteed to find the true pole of inaccessibility within
-a specified tolerance. A more precise tolerance (lower value) requires more iterations
-and will take longer to calculate.
+This algorithm uses the 'polylabel' algorithm (Vladimir Agafonkin,
+2016), which is an iterative approach guaranteed to find the true pole
+of inaccessibility within a specified tolerance.
+A more precise tolerance (lower value) requires more iterations and
+will take longer to calculate.
 
-The distance from the calculated pole to the polygon boundary will be stored as
-a new attribute in the output layer.
+The distance from the calculated pole to the polygon boundary will be
+stored as a new attribute in the output layer.
 
 .. figure:: img/pole_inaccessibility.png
    :align: center
@@ -4329,16 +4365,16 @@ Outputs
 
 Polygonize
 ----------
-Creates a polygon layer whose features boundaries are generated from a **closed**
-line layer features.
+Creates a polygon layer whose features boundaries are generated from a
+line layer of **closed** features.
 
 .. figure:: img/polygonize.png
    :align: center
 
    The yellow polygons generated from the closed lines
 
-.. note:: The line layer must have closed shapes in order to be transformed into
-  a polygon.
+.. note:: The line layer must have closed shapes in order to be
+   transformed into a polygon.
 
 .. seealso:: :ref:`qgispolygonstolines`
 
@@ -4401,8 +4437,8 @@ Outputs
 
 Polygons to lines
 -----------------
-Takes a polygon layer and creates a line layer, with lines representing the boundaries
-of the polygons in the input layer.
+Takes a polygon layer and creates a line layer, with lines
+representing the boundaries of the polygons in the input layer.
 
 .. figure:: img/polygon_to_lines.png
    :align: center
@@ -4466,8 +4502,7 @@ Outputs
 Project points (Cartesian)
 --------------------------
 Projects point geometries by a specified distance and bearing
-(azimuth), creating a new point layer with the projected
-points.
+(azimuth), creating a new point layer with the projected points.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
@@ -4535,15 +4570,18 @@ Outputs
 
 Promote to multipart
 --------------------
-Takes a vector layer with singlepart geometries and generates a new one in which
-all geometries are multipart.
+Takes a vector layer with singlepart geometries and generates a new
+one in which all geometries are multipart.
 
-Input features which are already multipart features will remain unchanged.
+Input features which are already multipart features will remain
+unchanged.
 
-This algorithm can be used to force geometries to multipart types in order to be
-compatible with data providers that require multipart features.
+This algorithm can be used to force geometries to multipart types in
+order to be compatible with data providers that require multipart
+features.
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgisaggregate`, :ref:`qgiscollect`
 
