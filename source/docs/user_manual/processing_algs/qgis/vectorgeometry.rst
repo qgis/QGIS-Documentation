@@ -3338,7 +3338,8 @@ Outputs
 
 Single sided buffer
 -------------------
-Computes a buffer on lines by a specified distance on one side of the line only.
+Computes a buffer on lines by a specified distance on one side of
+the line only.
 
 Buffer always results in a polygon layer.
 
@@ -3444,27 +3445,33 @@ Outputs
 
 Smooth
 ------
-Smooths the geometries in a line or polygon layer. It creates a new layer with
-the same features as the ones in the input layer, but with geometries containing
-a **higher number of vertices and corners** in the geometries smoothed out.
+Smooths the geometries in a line or polygon layer.
+It creates a new layer with the same features as the ones in the
+input layer, but with geometries containing a
+**higher number of vertices and corners** in the geometries smoothed
+out.
 
-The iterations parameter dictates how many smoothing iterations will be applied
-to each geometry. A higher number of iterations results in smoother geometries
-with the cost of greater number of nodes in the geometries.
+The iterations parameter dictates how many smoothing iterations will
+be applied to each geometry.
+A higher number of iterations results in smoother geometries with the
+cost of greater number of nodes in the geometries.
 
-The offset parameter controls how "tightly" the smoothed geometries follow the
-original geometries. Smaller values results in a tighter fit, and larger values
-will create a looser fit.
+The offset parameter controls how "tightly" the smoothed geometries
+follow the original geometries. Smaller values results in a tighter
+fit, and larger values will create a looser fit.
 
-The maximum angle parameter can be used to prevent smoothing of nodes with large
-angles. Any node where the angle of the segments to either side is larger than
-this will not be smoothed. For example, setting the maximum angle to 90 degrees
-or lower would preserve right angles in the geometry.
+The maximum angle parameter can be used to prevent smoothing of nodes
+with large angles.
+Any node where the angle of the segments to either side is larger than
+this will not be smoothed. For example, setting the maximum angle to
+90 degrees or lower would preserve right angles in the geometry.
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
-.. seealso:: :ref:`qgissimplifygeometries`, :ref:`qgisdensifygeometries`,
- :ref:`qgisdensifygeometriesgivenaninterval`
+.. seealso:: :ref:`qgissimplifygeometries`,
+:ref:`qgisdensifygeometries`,
+:ref:`qgisdensifygeometriesgivenaninterval`
 
 Parameters
 ..........
@@ -3556,8 +3563,9 @@ Snap geometries to layer
 Snaps the geometries in a layer either to the geometries from
 another layer, or to geometries within the same layer.
 
-Matching is done based on a tolerance distance, and vertices will be inserted or
-removed as required to make the geometries match the reference geometries.
+Matching is done based on a tolerance distance, and vertices will be
+inserted or removed as required to make the geometries match the
+reference geometries.
 
 .. seealso:: :ref:`qgissnappointstogrid`
 
@@ -3598,8 +3606,10 @@ Parameters
        segment (its closest point to the vertex to move).
        Available snapping options:
 
-       * 0 --- Prefer aligning nodes, insert extra vertices where required
-       * 1 --- Prefer closest point, insert extra vertices where required
+       * 0 --- Prefer aligning nodes, insert extra vertices where
+         required
+       * 1 --- Prefer closest point, insert extra vertices where
+         required
        * 2 --- Prefer aligning nodes, don't insert new vertices
        * 3 --- Prefer closest point, don't insert new vertices
        * 4 --- Move end points only, prefer aligning nodes
@@ -3645,18 +3655,20 @@ Outputs
 
 Snap points to grid
 -------------------
-Modifies the coordinates of geometries in a vector layer, so that all points or
-vertices are snapped to the closest point of a grid.
+Modifies the coordinates of geometries in a vector layer, so that all
+points or vertices are snapped to the closest point of a grid.
 
-If the snapped geometry cannot be calculated (or is totally collapsed) the feature's
-geometry will be cleared.
+If the snapped geometry cannot be calculated (or is totally collapsed)
+the feature's geometry will be cleared.
 
-Snapping can be performed on the X, Y, Z or M axis. A grid spacing of 0 for any
-axis will disable snapping for that axis.
+Snapping can be performed on the X, Y, Z or M axis. A grid spacing of
+0 for any axis will disable snapping for that axis.
 
-.. note:: Snapping to grid may generate an invalid geometry in some corner cases.
+.. note:: Snapping to grid may generate an invalid geometry in some
+   corner cases.
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgissnapgeometries`
 
@@ -3738,8 +3750,8 @@ Outputs
 
 Split lines by maximum length |36|
 ----------------------------------
-This algorithm takes a line (or curve) layer and splits each feature into
-multiple parts, where each part is of a specified maximum length.
+This algorithm takes a line (or curve) layer and splits each feature
+into multiple parts, where each part is of a specified maximum length.
 Z and M values at the start and end of the new line substrings are
 linearly interpolated from existing values.
 
@@ -3805,24 +3817,26 @@ Outputs
 
 Subdivide
 ---------
-Subdivides the geometry. The returned geometry will be a collection containing
-subdivided parts from the original geometry, where no part has more than the
-specified maximum number of nodes.
+Subdivides the geometry. The returned geometry will be a collection
+containing subdivided parts from the original geometry, where no part
+has more than the specified maximum number of nodes.
 
-This is useful for dividing a complex geometry into less complex parts, easier to
-spatially index and faster to perform spatial operations.
+This is useful for dividing a complex geometry into less complex
+parts, easier to spatially index and faster to perform spatial
+operations.
 Curved geometries will be segmentized before subdivision.
 
 .. figure:: img/subdivide.png
    :align: center
 
-   Left the input layer, middle maximum nodes value is 100 and right maximum value
-   is 200
+   Left the input layer, middle maximum nodes value is 100 and right
+   maximum value is 200
 
-.. note:: Subdividing a geometry can generate geometry parts that may not be valid
-  and may contain self-intersections.
+.. note:: Subdividing a geometry can generate geometry parts that may
+   not be valid and may contain self-intersections.
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgisexplodelines`, :ref:`qgislinesubstring`
 
@@ -3892,19 +3906,16 @@ Swap X and Y coordinates
 ------------------------
 Switches the X and Y coordinate values in input geometries.
 
-It can be used to repair geometries which have accidentally had their latitude
-and longitude values reversed.
+It can be used to repair geometries which have accidentally had their
+latitude and longitude values reversed.
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgistranslategeometry`, :ref:`qgisrotatefeatures`
 
 Parameters
 ..........
-
-``Input layer`` [vector: any]
-  Input vector layer to swap.
-
 
 .. list-table::
    :header-rows: 1
@@ -3959,72 +3970,153 @@ Outputs
 
 Tapered buffers
 ---------------
-Creates tapered buffer along line geometries, using a specified start and end
-buffer diameter.
+Creates tapered buffer along line geometries, using a specified start
+and end buffer diameter.
 
 .. figure:: img/tapered_buffer.png
    :align: center
 
    Tapered buffer example
 
-.. seealso:: :ref:`qgisbufferbym`, :ref:`qgisbuffer`, :ref:`qgiswedgebuffers`
+.. seealso:: :ref:`qgisbufferbym`, :ref:`qgisbuffer`,
+   :ref:`qgiswedgebuffers`
 
 Parameters
 ..........
 
-``Input layer`` [vector: line]
-  Input line vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Start width`` [number |dataDefined|]
-  Represents the radius of the buffer applied at the start point of the line feature.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input line vector layer
+   * - **Start width**
+     - ``START_WIDTH``
+     - [number |dataDefined|]
 
-  Default: *0.0*
+       Default: 0.0
+     - Represents the radius of the buffer applied
+       at the start point of the line feature
+   * - **End width**
+     - ``END_WIDTH``
+     - [number |dataDefined|]
 
-``End width`` [number |dataDefined|]
-  Represents the radius of the buffer applied at the end point of the line feature.
+       Default: 0.0
+     - Represents the radius of the buffer applied
+       at the end point of the line feature.
+   * - **Segments**
+     - ``SEGMENTS``
+     - [number |dataDefined|]
 
-  Default: *1.0*
+       Default: 16
+     - Controls the number of line segments to use to approximate
+       a quarter circle when creating rounded offsets.
+   * - **Buffered**
+     - ``OUTPUT``
+     - [vector: polygon]
+       
+       Default: ``[Create temporary layer]``
+     - Specify the output (buffer) layer.
+       One of:
 
-``Segments`` [number |dataDefined|]
-  Number of the buffer segments.
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-  Default: *16*
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Buffered`` [vector: polygon]
-  Variable buffer polygon layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Buffered**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Output (buffer) polygon layer
 
 
 .. _qgistessellate:
 
 Tessellate
 ----------
-Tessellates a polygon geometry layer, dividing the geometries into triangular
-components.
+Tessellates a polygon geometry layer, dividing the geometries into
+triangular components.
 
-The output layer consists of multipolygon geometries for each input feature,
-with each multipolygon consisting of multiple triangle component polygons.
+The output layer consists of multipolygon geometries for each input
+feature, with each multipolygon consisting of multiple triangle
+component polygons.
 
 .. figure:: img/tessellated.png
    :align: center
 
    Tessellated polygon (right)
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 Parameters
 ..........
 
-``Input layer`` [vector: polygon]
-  Polygon vector layer in input.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: polygon]
+     - Input polygon vector layer
+   * - **Tesselated**
+     - ``OUTPUT``
+     - [vector: polygon]
+       
+       Default: ``[Create temporary layer]``
+     - Specify the output layer.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Tesselated`` [vector: polygon]
-  Output a multipolygonZ layer with tessellated features.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Tesselated**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Output multipolygonZ layer
 
 
 .. _qgistransect:
@@ -4033,17 +4125,19 @@ Transect
 --------
 Creates transects on vertices for (multi)linestring.
 
-A transect is a line oriented from an angle (by default perpendicular) to the
-input polylines (at vertices).
+A transect is a line oriented from an angle (by default perpendicular)
+to the input polylines (at vertices).
 
-Field(s) from feature(s) are returned in the transect with these new fields:
+Field(s) from feature(s) are returned in the transect with these
+new fields:
 
 * TR_FID: ID of the original feature
 * TR_ID: ID of the transect. Each transect have an unique ID
 * TR_SEGMENT: ID of the segment of the linestring
 * TR_ANGLE: Angle in degrees from the original line at the vertex
 * TR_LENGTH: Total length of the transect returned
-* TR_ORIENT: Side of the transect (only on the left or right of the line, or both side)
+* TR_ORIENT: Side of the transect (only on the left or right of
+  the line, or both side)
 
 .. figure:: img/transect.png
    :align: center
@@ -4053,33 +4147,70 @@ Field(s) from feature(s) are returned in the transect with these new fields:
 Parameters
 ..........
 
-``Input layer`` [vector: line]
-  Input line vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Length of the transect`` [number |dataDefined|]
-  Length in map unit of the transect.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input line vector layer
+   * - **Length of the transect**
+     - ``LENGTH``
+     - [number |dataDefined|]
 
-  Default: *5.0*
+       Default: 5.0
+     - Length in map unit of the transect
+   * - **Angle in degrees from the original line at the vertices**
+     - ``ANGLE``
+     - [number |dataDefined|]
 
-``Angle in degrees from the original line at the vertices`` [number |dataDefined|]
-  Change the angle of the transect.
+       Default: 90.0
+     - Change the angle of the transect
+   * - **Side to create the transect**
+     - ``SIDE``
+     - [enumeration]
+     - Choose the side of the transect. Available options are:
+       * 0 --- Left
+       * 1 --- Right
+       * 2 --- Both
 
-  Default: *90.0*
+   * - **Transect**
+     - ``OUTPUT``
+     - [vector: line]
+       
+       Default: ``[Create temporary layer]``
+     - Specify the output line layer.
+       One of:
 
-``Side to create the transect`` [enumeration]
-  Choose the side of the transect. Available options are:
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-  * 0 --- Left
-  * 1 --- Right
-  * 2 --- Both
-
-  Default: *0*
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Transect`` [vector: line]
-  Transect of the source line vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Transect**
+     - ``OUTPUT``
+     - [vector: line]
+     - Output line layer
 
 
 .. _qgistranslategeometry:
@@ -4096,42 +4227,83 @@ Z and M values present in the geometry can also be translated.
 
    Dashed lines represent the translated geometry of the input layer
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
-.. seealso:: :ref:`qgisarraytranslatedfeatures`, :ref:`qgisoffsetline`,
- :ref:`qgisrotatefeatures`, :ref:`qgisswapxy`
+.. seealso:: :ref:`qgisarraytranslatedfeatures`,
+   :ref:`qgisoffsetline`, :ref:`qgisrotatefeatures`, :ref:`qgisswapxy`
 
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Vector layer in input.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Offset distance (x-axis)`` [number |dataDefined|]
-  Displacement to apply on the X axis.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Offset distance (x-axis)**
+     - ``DELTA_X``
+     - [number |dataDefined|]
 
-  Default: *0.0*
+       Default: 0.0
+     - Displacement to apply on the X axis
+   * - **Offset distance (y-axis)**
+     - ``DELTA_Y``
+     - [number |dataDefined|]
 
-``Offset distance (y-axis)`` [number |dataDefined|]
-  Displacement to apply on the Y axis.
+       Default: 0.0
+     - Displacement to apply on the Y axis
+   * - **Offset distance (z-axis)**
+     - ``DELTA_Z``
+     - [number |dataDefined|]
 
-  Default: *0.0*
+       Default: 0.0
+     - Displacement to apply on the Z axis
+   * - **Offset distance (m values)**
+     - ``DELTA_M``
+     - [number |dataDefined|]
 
-``Offset distance (z-axis)`` [number |dataDefined|]
-  Displacement to apply on the Z axis.
+       Default: 0.0
+     - Displacement to apply on the M axis
+   * - **Translated**
+     - ``OUTPUT``
+     - [same as input]
+       
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer.
+       One of:
 
-  Default: *0.0*
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-``Offset distance (m values)`` [number |dataDefined|]
-  Offset value to apply on M.
-
-  Default: *0.0*
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Translated`` [vector: any]
-  Translated (moved) vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Translated**
+     - ``OUTPUT``
+     - [same as input]
+     - Output vector layer
 
 
 .. _qgisvariabledistancebuffer:
@@ -4238,7 +4410,8 @@ line geometries as the diameter of the buffer at each vertex.
 
    Variable buffer example
 
-.. seealso:: :ref:`qgistaperedbuffer`, :ref:`qgisbuffer`, :ref:`qgissetmvalue`
+.. seealso:: :ref:`qgistaperedbuffer`, :ref:`qgisbuffer`,
+   :ref:`qgissetmvalue`
 
 Parameters
 ..........
@@ -4302,11 +4475,12 @@ Outputs
 
 Voronoi polygons
 ----------------
-Takes a points layer and generates a polygon layer containing the Voronoi polygons
-(known also as Thiessen polygons) corresponding to those input points.
+Takes a point layer and generates a polygon layer containing
+the Voronoi polygons (known also as Thiessen polygons) corresponding
+to those input points.
 
-Any location within a Voronoi polygon is closer to the associated point than to
-any other point.
+Any location within a Voronoi polygon is closer to the associated
+point than to any other point.
 
 .. figure:: img/voronoi.png
    :align: center
