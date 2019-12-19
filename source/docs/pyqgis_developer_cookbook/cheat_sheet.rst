@@ -30,7 +30,7 @@ User Interface
     from qgis.PyQt.QtGui import QIcon
 
     icon = QIcon(r"/path/to/logo/file.png")
-    iface.mainWindow().setWindowIcon(icon)  
+    iface.mainWindow().setWindowIcon(icon)
     iface.mainWindow().setWindowTitle("My QGIS")
 
 Settings
@@ -39,9 +39,9 @@ Settings
 **Get QSettings list**
 
 .. testcleanup::
-    
+
     QSettings().clear()
-    
+
 .. testcode::
 
     from qgis.PyQt.QtCore import QSettings
@@ -60,7 +60,7 @@ Toolbars
 
     from qgis.utils import iface
 
-    toolbar = iface.helpToolBar()   
+    toolbar = iface.helpToolBar()
     parent = toolbar.parentWidget()
     parent.removeToolBar(toolbar)
 
@@ -86,7 +86,7 @@ Menus
     from qgis.utils import iface
 
     # for example Help Menu
-    menu = iface.helpMenu() 
+    menu = iface.helpMenu()
     menubar = menu.parentWidget()
     menubar.removeAction(menu.menuAction())
 
@@ -110,7 +110,7 @@ Canvas
 
     from qgis.PyQt.QtCore import Qt
 
-    iface.mapCanvas().setCanvasColor(Qt.black)    
+    iface.mapCanvas().setCanvasColor(Qt.black)
     iface.mapCanvas().refresh()
 
 **Map Update interval**
@@ -163,7 +163,7 @@ Layers
 
    layers TOC = ['layer name you like']
 
-Otherwise 
+Otherwise
 
 .. testcode::
 
@@ -223,7 +223,7 @@ Otherwise
     from qgis.core import QgsFeature, QgsGeometry
 
     feat = QgsFeature()
-    geom = QgsGeometry() 
+    geom = QgsGeometry()
     feat.setGeometry(geom)
     feat.setFields(layer.fields())
 
@@ -310,10 +310,10 @@ Otherwise
 
     from qgis.core import QgsProject
 
-    for layer in QgsProject.instance().mapLayers().values():   
+    for layer in QgsProject.instance().mapLayers().values():
         crs = layer.crs().authid()
         layer.setName('{} ({})'.format(layer.name(), crs))
-        
+
 **Hide a field column**
 
 .. testcode::
@@ -408,15 +408,15 @@ Table of contents
 
     ltv = iface.layerTreeView()
     mp = ltv.menuProvider()
-    ltv.setMenuProvider(None) 
+    ltv.setMenuProvider(None)
     # Restore
-    ltv.setMenuProvider(mp) 
+    ltv.setMenuProvider(mp)
 
 Advanced TOC
 ============
 
 .. testsetup::
-    
+
     from qgis.core import QgsVectorLayer, QgsProject, QgsLayerTreeLayer
 
     layer = QgsVectorLayer("Point?crs=EPSG:4326", "layer name you like", "memory")
@@ -427,13 +427,19 @@ Advanced TOC
 
 **Root node**
 
-.. code-block:: python
+.. testcode::
 
     from qgis.core import QgsProject
 
     root = QgsProject.instance().layerTreeRoot()
     print (root)
     print (root.children())
+
+.. testoutput::
+   :hide:
+
+   <qgis._core.QgsLayerTree object at 0x7f068bbc0c18>
+   [<qgis._core.QgsLayerTreeGroup object at 0x7f068bbc01f8>]
 
 **Access the first child node**
 
@@ -460,7 +466,7 @@ Advanced TOC
 .. testcode::
 
    from qgis.core import QgsLayerTreeGroup, QgsLayerTreeLayer
-   
+
    def get_group_layers(group):
       print('- group: ' + group.name())
       for child in group.children():
@@ -476,8 +482,8 @@ Advanced TOC
       if isinstance(child, QgsLayerTreeGroup):
          get_group_layers(child)
       elif isinstance(child, QgsLayerTreeLayer):
-         print ('- layer: ' + child.name()) 
-   
+         print ('- layer: ' + child.name())
+
 .. testoutput::
    :hide:
 
@@ -582,7 +588,7 @@ Advanced TOC
 .. code-block:: python
 
     def isMyGroupSelected( groupName ):
-        myGroup = QgsProject.instance().layerTreeRoot().findGroup( groupName )        
+        myGroup = QgsProject.instance().layerTreeRoot().findGroup( groupName )
         return myGroup in iface.layerTreeView().selectedNodes()
 
     print (isMyGroupSelected( 'my group name' ))
@@ -596,7 +602,7 @@ Advanced TOC
 
 .. testoutput::
    :hide:
-   
+
    True
 
 **Hidden node trick**
@@ -615,7 +621,7 @@ Advanced TOC
     index = model.node2index( node )
     ltv.setRowHidden( index.row(), index.parent(), True )
     node.setCustomProperty( 'nodeHidden', 'true')
-    ltv.setCurrentIndex(model.node2index(root))  
+    ltv.setCurrentIndex(model.node2index(root))
 
 **Node signals**
 
@@ -635,8 +641,8 @@ Advanced TOC
 .. code-block:: python
 
     from qgis.core import QgsProject, QgsLayerTreeModel
-    from qgis.gui import QgsLayerTreeView 
-    
+    from qgis.gui import QgsLayerTreeView
+
     root = QgsProject.instance().layerTreeRoot()
     model = QgsLayerTreeModel(root)
     view = QgsLayerTreeView()
@@ -655,7 +661,7 @@ Processing algorithms
     for alg in QgsApplication.processingRegistry().algorithms():
         print("{}:{} --> {}".format(alg.provider().name(), alg.name(), alg.displayName()))
 
-Otherwise 
+Otherwise
 
 .. testcode::
 
@@ -711,7 +717,7 @@ which is added to the project.
 
     from qgis.core import QgsExpression
 
-    len(QgsExpression.Functions()) 
+    len(QgsExpression.Functions())
 
 Decorators
 ==========
@@ -773,7 +779,7 @@ Decorators
             xOffset  = deviceWidth  - xOffset - size.width()
             add_copyright(p, text, xOffset, yOffset)
 
-        elif case == 3: 
+        elif case == 3:
             # Bottom Right
             yOffset  = deviceHeight - yOffset - size.height()
             xOffset  = deviceWidth  - xOffset - size.width()
@@ -783,7 +789,7 @@ Decorators
             # Top Center
             xOffset = deviceWidth / 2
             add_copyright(p, text, xOffset, yOffset)
-        
+
         else:
             # Bottom Center
             yOffset = deviceHeight - yOffset - size.height()
