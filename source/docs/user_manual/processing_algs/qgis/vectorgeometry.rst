@@ -2854,8 +2854,8 @@ Outputs
 
 Rectangles, ovals, diamonds (fixed)
 -----------------------------------
-Creates a buffer area for all the features in an input layer with different shape
-choice.
+Creates a buffer area for all the features in an input layer with
+different shape choice.
 
 Parameters can vary depending on the shape chosen.
 
@@ -2953,10 +2953,11 @@ Outputs
 
 Rectangles, ovals, diamonds (variable)
 --------------------------------------
-Creates a buffer area for all the features in an input layer with different shape
-choice.
+Creates a buffer area for all the features in an input layer with
+different shape choice.
 
-Buffer shape parameters are specified through attribute of the input layer.
+Buffer shape parameters are specified through attribute of the input
+layer.
 
 .. figure:: img/rectangles_ovals_diamond_variable.png
    :align: center
@@ -3052,26 +3053,29 @@ Outputs
 
 Remove duplicate vertices
 -------------------------
-Removes duplicate vertices from features, wherever removing the vertices does not
-result in a degenerate geometry.
+Removes duplicate vertices from features, wherever removing the
+vertices does not result in a degenerate geometry.
 
-The tolerance parameter specifies the tolerance for coordinates when determining
-whether vertices are identical.
+The tolerance parameter specifies the tolerance for coordinates when
+determining whether vertices are identical.
 
-By default, Z values are not considered when detecting duplicate vertices.
-E.g. two vertices with the same X and Y coordinate but different Z values will still
-be considered duplicate and one will be removed. If the Use Z Value parameter is true,
-then the Z values are also tested and vertices with the same X and Y but different Z
-will be maintained.
+By default, Z values are not considered when detecting duplicate
+vertices.
+E.g. two vertices with the same X and Y coordinate but different Z
+values will still be considered duplicate and one will be removed.
+If the Use Z Value parameter is true, then the Z values are also
+tested and vertices with the same X and Y but different Z will be
+maintained.
 
-.. note:: Duplicate vertices are not tested between different parts of a multipart
-  geometry, e.g. a multipoint geometry with overlapping points will not be changed by
-  this method.
+.. note:: Duplicate vertices are not tested between different parts of
+   a multipart geometry, e.g. a multipoint geometry with overlapping
+   points will not be changed by this method.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
-.. seealso:: :ref:`qgisextractvertices`, :ref:`qgisextractspecificvertices`,
- :ref:`qgisdeleteduplicategeometries`
+.. seealso:: :ref:`qgisextractvertices`,
+   :ref:`qgisextractspecificvertices`,
+   :ref:`qgisdeleteduplicategeometries`
 
 Parameters
 ..........
@@ -3286,7 +3290,8 @@ Rotates feature geometries by the specified angle clockwise.
 The rotation occurs around each feature's centroid, or optionally
 around a unique preset point.
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgistranslategeometry`, :ref:`qgisswapxy`
 
@@ -3360,16 +3365,17 @@ Outputs
 
 Segmentize by maximum angle
 ---------------------------
-Segmentizes a geometry by converting curved sections to linear sections.
+Segmentizes a geometry by converting curved sections to linear
+sections.
 
-The segmentization is performed by specifying the maximum allowed radius angle
-between vertices on the straightened geometry (e.g the angle of the arc created
-from the original arc center to consecutive output vertices on the linearized
-geometry).
+The segmentization is performed by specifying the maximum allowed
+radius angle between vertices on the straightened geometry (e.g the
+angle of the arc created from the original arc center to consecutive
+output vertices on the linearized geometry).
 Non-curved geometries will be retained without change.
 
-.. seealso:: :ref:`qgissegmentizebymaxdistance`, :ref:`qgissimplifygeometries`,
- :ref:`qgissmoothgeometry`
+.. seealso:: :ref:`qgissegmentizebymaxdistance`,
+   :ref:`qgissimplifygeometries`, :ref:`qgissmoothgeometry`
 
 Parameters
 ..........
@@ -3431,13 +3437,16 @@ Outputs
 
 Segmentize by maximum distance
 ------------------------------
-Segmentizes a geometry by converting curved sections to linear sections.
+Segmentizes a geometry by converting curved sections to linear
+sections.
 
-The segmentization is performed by specifying the maximum allowed offset
-distance between the original curve and the segmentized representation.
+The segmentization is performed by specifying the maximum allowed
+offset distance between the original curve and the segmentized
+representation.
 Non-curved geometries will be retained without change.
 
-.. seealso:: :ref:`qgissegmentizebymaxangle`, :ref:`qgissimplifygeometries`, :ref:`qgissmoothgeometry`
+.. seealso:: :ref:`qgissegmentizebymaxangle`,
+   :ref:`qgissimplifygeometries`, :ref:`qgissmoothgeometry`
 
 Parameters
 ..........
@@ -3750,8 +3759,6 @@ snapping geometries to grid.
 
 Parameters
 ..........
-
-
 
 .. list-table::
    :header-rows: 1
