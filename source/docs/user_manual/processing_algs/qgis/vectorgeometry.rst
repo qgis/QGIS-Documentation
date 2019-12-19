@@ -2483,9 +2483,6 @@ geometry and bisector angle of vertex for original geometry.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Vector layer in input to extract the vertices from.
-
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
