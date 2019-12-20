@@ -405,7 +405,7 @@ Once the file is parsed, set :guilabel:`Geometry definition` to
   and the :guilabel:`M field`(for the measurement dimension) if the layer is of 
   point geometry type and contains such coordinate fields. If the coordinates
   are defined as degrees/minutes/seconds, activate the
-  |checkbox|:guilabel:`DMS coordinates`checkbox;
+  |checkbox|:guilabel:`DMS coordinates` checkbox;
 * |radioButtonOn|:guilabel:`Well known text (WKT)` option if the spatial
   information is represented by WKT: select the :guilabel:`Geometry field`
   containing the WKT definition and choose the approriate :guilabel:`Geometry
