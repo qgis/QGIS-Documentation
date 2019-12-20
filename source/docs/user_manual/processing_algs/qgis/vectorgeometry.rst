@@ -2478,7 +2478,7 @@ geometry and bisector angle of vertex for original geometry.
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
 .. seealso:: :ref:`qgisextractspecificvertices`,
-:ref:`qgisfilterverticesbym`, :ref:`qgisfilterverticesbyz`
+   :ref:`qgisfilterverticesbym`, :ref:`qgisfilterverticesbyz`
 
 Parameters
 ..........
