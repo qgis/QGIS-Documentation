@@ -402,7 +402,7 @@ Once the file is parsed, set :guilabel:`Geometry definition` to
 
 * |radioButtonOn|:guilabel:`Point coordinates` and provide the :guilabel:`X
   field`, the :guilabel:`Y field`, :guilabel:`Z field` (for 3-dimensional data)
-  and the :guilabel:`M field`(for the measurement dimension) if the layer is of 
+  and the :guilabel:`M field` (for the measurement dimension) if the layer is of 
   point geometry type and contains such coordinate fields. If the coordinates
   are defined as degrees/minutes/seconds, activate the
   |checkbox|:guilabel:`DMS coordinates` checkbox;
