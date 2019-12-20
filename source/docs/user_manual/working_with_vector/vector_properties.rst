@@ -1202,7 +1202,7 @@ Below are displayed options to customize the labels, under various tabs:
 * |labelbuffer| :ref:`Buffer <labels_buffer>`
 * |labelbackground| :ref:`Background <labels_background>`
 * |labelshadow| :ref:`Shadow <labels_shadow>`
-* |labelcallout| :guilabel:`Callouts`
+* |labelcallout| :ref:`Callouts <labels_callouts>`
 * |labelplacement| :ref:`Placement <labels_placement>`
 * |render| :ref:`Rendering <labels_rendering>`
 

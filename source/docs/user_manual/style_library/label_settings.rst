@@ -24,10 +24,10 @@ configure them in the abovementioned dialogs.
  manager, with some sample of label settings in it.
 
 The :guilabel:`Label Settings` dialog allows you to configure smart labeling
-for vector layers. Setting
-a label includes configuring the :ref:`text format <text_format>`, and how
-the label relates with the features or other labels (through :ref:`placement
-<labels_placement>`, :ref:`rendering <labels_rendering>` and callout).
+for vector layers. Setting a label includes configuring the :ref:`text format
+<text_format>`, and how the label relates with the features or other labels
+(through :ref:`placement <labels_placement>`, :ref:`rendering <labels_rendering>`
+and :ref:`callout <labels_callouts>`).
 
 .. _text_format:
 
@@ -267,6 +267,54 @@ tab and activate the |checkbox| :guilabel:`Draw drop shadow`. Then you can:
 * Use the :guilabel:`Blend mode` option to determine how your label's shadow
   will mix with the map components below them (more details at
   :ref:`blend-modes`).
+
+
+.. _labels_callouts:
+
+Callouts tab
+============
+
+A common practice when placing labels on a crowded map is to use **callouts** -
+labels which are placed outside (or displaced from) their associated feature
+are identified with a dynamic line connecting the label and the feature.
+If one of the two endings (either the label or the feature) is moved,
+the shape of the connector is recomputed.
+
+.. _figure_label_callouts:
+
+.. figure:: img/label_callouts.png
+   :align: center
+
+   Labels with various callouts settings
+
+To add a callout to a label, enable the |labelcallout| :guilabel:`Callouts`
+tab and activate the |checkbox| :guilabel:`Draw callouts`. Then you can:
+
+#. Select the :guilabel:`Style` of connector, one of:
+
+   * :guilabel:`Simple lines`: a straight line, the shortest path
+   * :guilabel:`Manhattan style`: a 90° broken line
+
+#. Select the :guilabel:`Line style` with full capabilities of a :ref:`line
+   symbol <vector_line_symbols>` including layer effects, and data-defined
+   settings
+#. Set the :guilabel:`Minimum length` of callout lines
+#. Set the :guilabel:`Offset from feature` option: controls the distance
+   from the feature (or its anchor point if a polygon) where callout lines end.
+   Eg, this avoids drawing lines right up against the edges of the features.
+#. Set the :guilabel:`Offset from label area` option: controls the distance
+   from the label closest corner where callout lines end.
+   This avoids drawing lines right up against the text.
+#. |checkbox| :guilabel:`Draw lines to all features parts` from the feature's
+   label
+#. Set an :guilabel:`Anchor point` on the (polygon) feature to use as end
+   point of the connector line : available options are:
+
+   * :guilabel:`Pole of inaccessibility`
+   * :guilabel:`Point on exterior`
+   * :guilabel:`Point on surface`
+   * :guilabel:`Centroid`
+
 
 .. _labels_placement:
 
@@ -516,6 +564,8 @@ between labels and features:
 .. |labelbackground| image:: /static/common/labelbackground.png
    :width: 1.5em
 .. |labelbuffer| image:: /static/common/labelbuffer.png
+   :width: 1.5em
+.. |labelcallout| image:: /static/common/labelcallout.png
    :width: 1.5em
 .. |labelformatting| image:: /static/common/labelformatting.png
    :width: 1.5em
