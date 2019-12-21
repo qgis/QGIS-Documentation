@@ -791,11 +791,56 @@ In the dialog that opens:
    (with extension ``PNGW`` for ``PNG`` image, ``JPGW`` for ``JPG`` ones...)
    is saved in the same folder as your image. The ``PDF`` format embeds the
    information in the same file.
+#. When exporting to PDF, more options are available in the :guilabel:`Save
+   map as PDF...` dialog:
+
+   .. _figure_savemappdf:
+
+   .. figure:: img/saveMapAsPDF.png
+      :align: center
+
+      The Save Map as PDF dialog
+
+   * |checkbox| :guilabel:`Export RDF metadata` of the document such as the
+     title, author, date, description...
+   * |unchecked| :guilabel:`Create Geospatial PDF (GeoPDF)` |310|: Generate a
+     `georeferenced PDF file <https://gdal.org/drivers/raster/pdf.html>`_
+     (requires GDAL version 3 or later). You can:
+
+     * Choose the GeoPDF :guilabel:`Format`
+     * |checkbox| :guilabel:`Include vector feature information` in the GeoPDF
+       file: will include all the geometry and attribute information from
+       features visible within the map in the output GeoPDF file.
+
+     .. note::
+
+       Since QGIS 3.10, with GDAL 3 a GeoPDF file can also be used as a
+       data source. For more on GeoPDF support in QGIS, see
+       https://north-road.com/2019/09/03/qgis-3-10-loves-geopdf/.
+
+   * :guilabel:`Rasterize map`
+   * |checkbox| :guilabel:`Simplify geometries to reduce output file size`:
+     Geometries will be simplified while exporting the map by removing
+     vertices that are not discernably different at the export resolution
+     (e.g. if the export resolution is ``300 dpi``, vertices that are less
+     than ``1/600 inch`` apart will be removed).
+     This can reduce the size and complexity of the export file (very large
+     files can fail to load in other applications).
+   * Set the :guilabel:`Text export`: controls whether text labels are exported
+     as proper text objects (:guilabel:`Always export texts as text
+     objects`) or as paths only (:guilabel:`Always export texts as paths`).
+     If they are exported as text objects then they can be edited in external
+     applications (e.g. Inkscape) as normal text. BUT the side effect is that
+     the rendering quality is decreased, AND there are issues with rendering when
+     certain text settings like buffers are in place. That’s why exporting as
+     paths is recommended.
+
 #. Click :guilabel:`Save` to select file location, name and format.
 
    When exporting to image, it's also possible to :guilabel:`Copy to clipboard`
    the expected result of the above settings and paste the map in another
    application such as LibreOffice, GIMP...
+
 
 .. index:: 3D Map view
 .. _`label_3dmapview`:
@@ -1063,6 +1108,7 @@ open the Plugin Manager dialog.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |310| replace:: ``NEW in 3.10``
 .. |addAllToOverview| image:: /static/common/mActionAddAllToOverview.png
    :width: 1.5em
 .. |addPart| image:: /static/common/mActionAddPart.png
