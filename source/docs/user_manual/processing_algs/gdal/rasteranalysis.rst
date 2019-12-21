@@ -1380,13 +1380,6 @@ Outputs
      - Output raster
 
 
-Outputs
-.......
-
-``Output layer`` [raster]
-  Raster file in output.
-
-
 .. _gdalproximity:
 
 Proximity (raster distance)
@@ -1818,12 +1811,6 @@ Outputs
      - [raster]
      - Output raster
 
-
-Outputs
-.......
-
-``Output file`` [raster]
-  32-bit float output raster.
 
 
 .. _gdaltriterrainruggednessindex:
