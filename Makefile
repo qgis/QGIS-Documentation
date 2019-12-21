@@ -7,7 +7,7 @@ SPHINXOPTS      =
 SPHINXINTLOPTS  = $(SPHINXOPTS) -D language=$(LANG)
 SPHINXBUILD     ?= sphinx-build
 SPHINXINTL      ?= sphinx-intl
-SOURCEDIR       = source
+SOURCEDIR       = .
 BUILDDIR        = build
 SITEDIR         = /var/www/html/qgisdocs
 

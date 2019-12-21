@@ -95,7 +95,7 @@ html_theme_options = {
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
-html_theme_path = ['../themes']
+html_theme_path = ['./themes']
 
 
 # Add any paths that contain custom static files (such as style sheets) here,
