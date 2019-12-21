@@ -109,8 +109,8 @@ example: Array("Field1", "Field2").
 Geometries (if present) are combined into one multipart geometry for each group.
 Output attributes are computed depending on each given aggregate definition.
 
-This algorithm allows to use the default :ref:`aggregates functions <aggregates_function>`
-of the QGIS Expression engine.
+This algorithm allows to use the default
+:ref:`aggregates functions <aggregates_function>` of the QGIS Expression engine.
 
 .. seealso:: :ref:`qgiscollect`, :ref:`qgisdissolve`
 
@@ -276,6 +276,8 @@ Parameters
    * - **Boundary**
      - ``OUTPUT``
      - [vector: point, line]
+
+       Default: ``[Create temporary layer]``
      - Specify the output (boundary) layer.
        One of:
 
@@ -340,6 +342,8 @@ Parameters
    * - **Bounds**
      - ``OUTPUT``
      - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
      - Specify the output (bounding box) layer.
        One of:
 
@@ -475,6 +479,8 @@ Parameters
    * - **Buffered**
      - ``OUTPUT``
      - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
      - Specify the output (buffer) layer.
        One of:
 
@@ -511,8 +517,9 @@ Centroids
 Creates a new point layer, with points representing the centroids of the geometries
 of the input layer.
 
-The centroid can be a single point representing the barycenter (of all parts) of the feature,
-so it can be outside the feature borders. It can also be a point on each part of the feature.
+The centroid can be a single point representing the barycenter (of all parts) of the
+feature, so it can be outside the feature borders.
+It can also be a point on each part of the feature.
 
 The attributes associated to each point in the output layer are the same ones
 associated to the original features.
@@ -554,6 +561,8 @@ Parameters
    * - **Centroids**
      - ``OUTPUT``
      - [vector: point]
+
+       Default: ``[Create temporary layer]``
      - Specify the output (centroid) layer.
        One of:
 
@@ -781,7 +790,8 @@ Types of error messages and their meanings
      -
 
    * - Nested shells
-     - This error happens when a polygon geometry is on top of another polygon geometry. 
+     - This error happens when a polygon geometry is on top of another polygon
+       geometry. 
      - .. figure:: img/geos_nest_shell.png
           :align: center
 
@@ -943,33 +953,74 @@ Computes the concave hull of the features in an input point layer.
 
 Parameters
 ..........
-``Input point layer`` [vector: point]
-  Point vector layer to calculate the concave hull.
 
-``Threshold`` [number]
-  Number from 0 (maximum concave hull) to 1 (convex hull).
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-  Default: *0.3*
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input point layer**
+     - ``INPUT``
+     - [vector: point]
+     - Input point vector layer
+   * - **Threshold**
+     - ``ALPHA``
+     - [number]
 
-  .. figure:: img/concave_hull_threshold.png
-     :align: center
+       Default: 0.3
+     - Number from 0 (maximum concave hull) to 1 (convex hull).
+     
+       .. figure:: img/concave_hull_threshold.png
+          :align: center
 
-     Different thresholds used (0.3, 0.6, 0.9)
+          Different thresholds used (0.3, 0.6, 0.9)
 
-``Allow holes`` [boolean]
-  Choose whether to allow holes in the final concave hull.
+   * - **Allow holes**
+     - ``HOLES``
+     - [boolean]
 
-  Default: *True*
+       Default: True
+     - Choose whether to allow holes in the final concave hull
+   * - **Split multipart geometry into singlepart geometries**
+     - ``NO_MULTIGEOMETRY``
+     - [boolean]
 
-``Split multipart geometry into singlepart geometries`` [boolean]
-  Check if you want to have singlepart geometries instead of multipart ones.
+       Default: True
+     - Choose whether to allow holes in the final concave hull
+   * - **Concave hull**
+     - ``OUTPUT``
+     - [vector: polygon]
 
-  Default: *False*
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
-``Concave hull`` [vector: polygon]
-  Output concave hull.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Concave hull**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output vector layer
 
 
 .. _qgisknearestconcavehull:
@@ -982,8 +1033,8 @@ vertices.
 
 The number of neighbors to consider determines the concaveness of the
 output polygon.
-A lower number will result in a concave hull that follows the points very
-closely, while a higher number will have a smoother shape.
+A lower number will result in a concave hull that follows the points
+very closely, while a higher number will have a smoother shape.
 The minimum number of neighbor points to consider is 3.
 A value equal to or greater than the number of points will result in a
 convex hull.
@@ -996,67 +1047,152 @@ polygons in the output layer for each group.
 
 Parameters
 ..........
-``Input layer`` [vector: any]
-  Vector layer to calculate the concave hull.
 
-``Number of neighboring points to consider`` [number]
-  Determines the concaveness of the output polygon.
-  A small number will result in a concave hull that follows
-  the points very closely, while a high number will make
-  the polygon look more like the convex hull (if the number
-  is equal to or larger than the number of features, the
-  result will be the convex hull).
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-  Default (and minimum): *3*
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input point layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Number of neighboring points to consider (a lower number is more concave, a higher number is smoother)**
+     - ``KNEIGHBORS``
+     - [number]
 
-``Field`` [tablefield: any]
-  Optional
+       Default: 3
+     - Determines the concaveness of the output polygon.
+       A small number will result in a concave hull that follows the
+       points very closely, while a high number will make the polygon
+       look more like the convex hull (if the number is equal to or
+       larger than the number of features, the result will be the
+       convex hull).
+       Minimum value: 3.
+   * - **Field**
 
-  If specified, one concave hull polygon is generated for each unique
-  value of the field (by selecting features using this value).
+       Optional
+     - ``FIELD``
+     - [tablefield: any]
 
-  Default: *None*
+       Default: None
+     - If specified, one concave hull polygon is generated for each
+       unique value of the field (by selecting features using this
+       value).
+   * - **Concave hull**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
-``Concave hull`` [vector: polygon]
-  Output concave hull.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Concave hull**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output vector layer
 
 
 .. _qgisconvertgeometrytype:
 
 Convert geometry type
 ---------------------
-Generates a new layer based on an existing one, with a different type of geometry.
+Generates a new layer based on an existing one, with a different type
+of geometry.
 
-Not all conversions are possible. For instance, a line layer can be converted to
-a point layer, but a point layer cannot be converted to a line layer.
+Not all conversions are possible. For instance, a line layer can be
+converted to a point layer, but a point layer cannot be converted to a 
+line layer.
 
 .. seealso:: :ref:`qgispolygonize`, :ref:`qgislinestopolygons`
 
 Parameters
 ..........
-``Input layer`` [vector: any]
-  Input vector layer to transform.
 
-``New geometry type`` [enumeration]
-  Geometry type to apply to the output features.
-  Options are:
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-  * 0 --- Centroids
-  * 1 --- Nodes
-  * 2 --- Linestrings
-  * 3 --- Multilinestrings
-  * 4 --- Polygons
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **New geometry type**
+     - ``TYPE``
+     - [enumeration]
 
-  .. note:: Conversion types availability depends on the input layer and the
-    conversion chosen: e.g. it is not possible to convert a point to a line.
+       Default: The first in the list
+     - Geometry type to apply to the output features.
+       One of:
+       
+       * 0 --- Centroids
+       * 1 --- Nodes
+       * 2 --- Linestrings
+       * 3 --- Multilinestrings
+       * 4 --- Polygons
+
+       .. note:: The available conversion types depend on
+          the input layer and the conversion chosen:
+          e.g. it is not possible to convert a point to a line.
+
+   * - **Converted**
+     - ``OUTPUT``
+     - [vector: any]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Converted`` [vector: any]
-  Converted vector layer depending on the parameters chosen.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Converted**
+     - ``OUTPUT``
+     - [vector: any]
+     - Output vector layer - the type depends on the parameters
 
 
 .. _qgisconvexhull:
@@ -1065,55 +1201,130 @@ Convex hull
 -----------
 Calculates the convex hull for each feature in an input layer.
 
-See the 'Minimum bounding geometry' algorithm for a convex hull calculation which
-covers the whole layer or grouped subsets of features.
+See the 'Minimum bounding geometry' algorithm for a convex hull
+calculation which covers the whole layer or grouped subsets of
+features.
 
 .. figure:: img/convex_hull.png
    :align: center
 
    Black lines identify the convex hull for each layer feature
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
-.. seealso:: :ref:`qgisminimumboundinggeometry`, :ref:`qgisconcavehull`
+.. seealso:: :ref:`qgisminimumboundinggeometry`,
+   :ref:`qgisconcavehull`
 
 Parameters
 ..........
-``Input point layer`` [vector: any]
-  Point vector layer to calculate the convex hull.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Convex hull**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
-``Convex hull`` [vector: polygon]
-  Output convex hull.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Convex hull**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output (convex hull) vector layer
 
 
 .. _qgisextenttolayer:
 
 Create layer from extent
 ------------------------
-Creates a new vector layer that contains a single feature with geometry matching
-the extent of the input layer.
+Creates a new vector layer that contains a single feature with
+geometry matching the extent of the input layer.
 
-It can be used in models to convert a literal extent (``xmin``, ``xmax``, ``ymin``,
-``ymax`` format) into a layer which can be used for other algorithms which require
-a layer based input.
+It can be used in models to convert a literal extent (``xmin``,
+``xmax``, ``ymin``, ``ymax`` format) into a layer which can be used
+for other algorithms which require a layer based input.
 
 .. seealso:: :ref:`qgispointtolayer`
 
 Parameters
 ..........
 
-``Extent (xmin, xmax, ymin, ymax)`` [extent]
-  Extent to represent.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Extent (xmin, xmax, ymin, ymax)**
+     - ``INPUT``
+     - [extent]
+     - Input extent
+   * - **Extent**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Extent``
-  Layer with a polygon feature representing the input extent.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Extent**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output (extent) vector layer
 
 
 .. _qgispointtolayer:
@@ -1121,10 +1332,10 @@ Outputs
 Create layer from point |38|
 -----------------------------
 
-Creates a new vector layer that contains a single
-feature with geometry matching a point parameter.
-It can be used in models to convert a point into a point layer
-for algorithms which require a layer based input.
+Creates a new vector layer that contains a single feature with
+geometry matching a point parameter.
+It can be used in models to convert a point into a point layer for
+algorithms which require a layer based input.
 
 .. seealso:: :ref:`qgisextenttolayer`
 
@@ -1152,6 +1363,8 @@ Parameters
    * - **Point**
      - ``OUTPUT``
      - [vector: point]
+
+       Default: ``[Create temporary layer]``
      - Specify the output layer.
        One of:
 
@@ -1191,53 +1404,104 @@ Creates wedge shaped buffers from input points.
 
    Wedge buffers
 
-The native output from this algorithm are CurvePolygon geometries, but these may
-be automatically segmentized to Polygons depending on the output format.
+The native output from this algorithm are CurvePolygon geometries, but
+these may be automatically segmentized to Polygons depending on the
+output format.
 
-.. seealso:: :ref:`qgisbuffer`, :ref:`qgisbufferbym`, :ref:`qgistaperedbuffer`
+.. seealso:: :ref:`qgisbuffer`, :ref:`qgisbufferbym`,
+   :ref:`qgistaperedbuffer`
 
 Parameters
 ..........
 
-``Input layer`` [vector: point]
-  Input point vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Azimuth (degrees from North)`` [number |dataDefined|]
-  Angle (in degrees) as the middle value of the wedge.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: point]
+     - Input point vector layer
+   * - **Azimuth (degrees from North)**
+     - ``AZIMUTH``
+     - [number |dataDefined|]
 
-``Wedge width (in degrees)`` [number |dataDefined|]
-  Width (in degrees) of the buffer. The wedge will extend to half of the angular
-  width either side of the azimuth direction.
+       Default: 0.0
+     - Angle (in degrees) as the middle value of the wedge
+   * - **Wedge width (in degrees)**
+     - ``WIDTH``
+     - [number |dataDefined|]
 
-  .. figure:: img/wedge_buffers_azimuth_width.png
-    :align: center
+       Default: 45.0
+     - Width (in degrees) of the buffer.
+       The wedge will extend to half of the angular width either side
+       of the azimuth direction.
 
-    Azimuth and width values of the wedge buffer
+       .. figure:: img/wedge_buffers_azimuth_width.png
+         :align: center
 
-``Outer radius`` [number |dataDefined|]
-  The outer *size* (length) of the wedge: the size is meant from the source point
-  to the edge of the wedge shape.
+         Azimuth and width values of the wedge buffer
 
-``Inner radius`` [number |dataDefined|]
-  Optional
+   * - **Outer radius**
+     - ``OUTER_RADIUS``
+     - [number |dataDefined|]
 
-  Inner radius value. If 0 the wedge will begin from the source point.
+       Default: 1.0
+     - The outer *size* (length) of the wedge:
+       the size is meant from the source point to the edge of the
+       wedge shape.
+   * - **Inner radius**
 
-  Default: *0.0*
+       Optional
+     - ``INNER_RADIUS``
+     - [number |dataDefined|]
+
+       Default: 0.0
+     - Inner radius value.
+       If 0 the wedge will begin from the source point.
+   * - **Buffers**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Buffers`` [vector: polygon]
-  Wedge buffer polygon vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Buffers**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output (wedge buffer) vector layer
 
 
 .. _qgisdelaunaytriangulation:
 
 Delaunay triangulation
 ----------------------
-Creates a polygon layer with the delaunay triangulation corresponding to a point
-layer.
+Creates a polygon layer with the Delaunay triangulation corresponding
+to the input point layer.
 
 .. figure:: img/delaunay.png
    :align: center
@@ -1249,73 +1513,150 @@ layer.
 Parameters
 ..........
 
-``Input layer`` [vector: point]
-  Point vector layer to compute the triangulation on.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: point]
+     - Input point vector layer
+   * - **Delaunay triangulation**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
-``Delaunay triangulation`` [vector: polygon]
-  Resulting polygon layer of delaunay triangulation.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Delaunay triangulation**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output (Delaunay triangulation) vector layer
 
 
 .. _qgisdeleteholes:
 
 Delete holes
 ------------
-Takes a polygon layer and removes holes in polygons. It creates a new vector layer
-in which polygons with holes have been replaced by polygons with only their external
-ring. Attributes are not modified.
+Takes a polygon layer and removes holes in polygons.
+It creates a new vector layer in which polygons with holes have been
+replaced by polygons with only their external ring.
+Attributes are not modified.
 
-An optional minimum area parameter allows removing only holes which are smaller
-than a specified area threshold. Leaving this parameter at ``0.0`` results in all
-holes being removed.
+An optional minimum area parameter allows removing only holes which
+are smaller than a specified area threshold. Leaving this parameter at
+``0.0`` results in all holes being removed.
 
 .. figure:: img/delete_holes.png
    :align: center
 
    Before and after the cleaning
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 Parameters
 ..........
 
-``Input layer`` [vector: polygon]
-  Polygon layer with holes.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Remove holes with area less than`` [number |dataDefined|]
-  Optional
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: point]
+     - Input polygon vector layer
+   * - **Remove holes with area less than**
 
-  Only holes with an area less than this threshold will be deleted. If ``0.0`` is
-  added, **all** the holes will be deleted.
+       Optional
+     - ``MIN_AREA``
+     - [number |dataDefined|]
 
-  Default: *0.0*
+       Default: 0.0
+     - Only holes with an area less than this threshold will be
+       deleted.
+       If ``0.0`` is added, **all** the holes will be deleted.
+   * - **Cleaned**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Cleaned`` [vector: polygon]
-  Vector layer without holes or holes larger than specified area.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Cleaned**
+     - ``OUTPUT``
+     - [same as input]
+     - The output (cleaned) vector layer
 
 
 .. _qgisdensifygeometries:
 
 Densify by count
 ----------------
-Takes a polygon or line layer and generates a new one in which the geometries have
-a larger number of vertices than the original one.
+Takes a polygon or line layer and generates a new one in which the
+geometries have a larger number of vertices than the original one.
 
-If the geometries have Z or M values present then these will be linearly interpolated
-at the added vertices.
+If the geometries have Z or M values present then these will be
+linearly interpolated at the added vertices.
 
-The number of new vertices to add to each segment is specified as an input parameter.
+The number of new vertices to add to each segment is specified as an
+input parameter.
 
 .. figure:: img/densify_geometry.png
    :align: center
 
    Red points show the vertices before and after the densify
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
@@ -1324,67 +1665,140 @@ The number of new vertices to add to each segment is specified as an input param
 Parameters
 ..........
 
-``Input layer`` [vector: line, polygon]
-  Polygon or line vector layer to densify.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Vertices to add`` [number]
-  Number of vertices to add to each segment.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line, polygon]
+     - Input line or polygon vector layer
+   * - **Vertices to add**
+     - ``VERTICES``
+     - [number]
 
-  Default: *1*
+       Default: 1
+     - Number of vertices to add to each segment
+   * - **Densified**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Densified`` [vector: line, polygon]
-  Densified layer with vertices added.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Densified**
+     - ``OUTPUT``
+     - [same as input]
+     - The output (densified) vector layer
 
 
 .. _qgisdensifygeometriesgivenaninterval:
 
 Densify by interval
 -------------------
-Takes a polygon or line layer and generates a new one in which the geometries have
-a larger number of vertices than the original one.
+Takes a polygon or line layer and generates a new one in which the
+geometries have a larger number of vertices than the original one.
 
-The geometries are densified by adding regularly placed extra vertices inside each
-segment so that the maximum distance between any two vertices does not exceed the
-specified distance.
+The geometries are densified by adding regularly placed extra vertices
+inside each segment so that the maximum distance between any two
+vertices does not exceed the specified distance.
 
-If the geometries have Z or M values present then these will be linearly interpolated
-at the added vertices.
+If the geometries have Z or M values present then these will be
+linearly interpolated at the added vertices.
 
 **Example**
 
-Specifying a distance 3 would cause the segment ``[0 0] -> [10 0]`` to be converted
-to ``[0 0] -> [2.5 0] -> [5 0] -> [7.5 0] -> [10 0]``, since 3 extra vertices are required
-on the segment and spacing these at 2.5 increments allows them to be evenly spaced
-over the segment.
+Specifying a distance 3 would cause the segment ``[0 0] -> [10 0]`` to
+be converted to ``[0 0] -> [2.5 0] -> [5 0] -> [7.5 0] -> [10 0]``,
+since 3 extra vertices are required on the segment and spacing these
+at 2.5 increments allows them to be evenly spaced over the segment.
 
 .. figure:: img/densify_geometry_interval.png
    :align: center
 
    Densify geometry at a given interval
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgisdensifygeometries`
 
 Parameters
 ..........
 
-``Input layer`` [vector: line, polygon]
-  Polygon or line vector layer to densify.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Interval between vertices to add`` [number]
-  Maximum distance between two consecutive vertices.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line, polygon]
+     - Input line or polygon vector layer
+   * - **Interval between vertices to add**
+     - ``INTERVAL``
+     - [number |dataDefined|]
 
-  Default: *1.0*
+       Default: 1.0
+     - Maximum distance between two consecutive vertices
+   * - **Densified**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Densified`` [vector: line, polygon]
-  Densified layer with vertices added using the specified interval.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Densified**
+     - ``OUTPUT``
+     - [same as input]
+     - The output (densified) vector layer
 
 
 .. _qgisdissolve:
@@ -1392,17 +1806,19 @@ Outputs
 Dissolve
 --------
 Takes a vector layer and combines its features into new features.
-One or more attributes can be specified to dissolve features belonging to the
-same class (having the same value for the specified attributes), alternatively
-all features can be dissolved to a single feature.
+One or more attributes can be specified to dissolve features belonging
+to the same class (having the same value for the specified
+attributes), alternatively all features can be dissolved to a single
+feature.
 
-All output geometries will be converted to multi geometries. In case the input is
-a polygon layer, common boundaries of adjacent polygons being dissolved will get
-erased.
+All output geometries will be converted to multi geometries.
+In case the input is a polygon layer, common boundaries of adjacent
+polygons being dissolved will get erased.
 
-The resulting attribute table will have the same fields as the input layer.
-The values in the output layer's fields are the ones of the first input feature
-that happens to be processed.
+The resulting attribute table will have the same fields as the input
+layer.
+The values in the output layer's fields are the ones of the first
+input feature that happens to be processed.
 
 .. figure:: img/dissolve.png
    :align: center
@@ -1416,108 +1832,237 @@ that happens to be processed.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Vector layer to dissolve.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Dissolve field(s)`` [tablefield: any] [list]
-  Optional
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line, polygon]
+     - Input line or polygon vector layer
+   * - **Dissolve field(s)**
 
-  Features having the same value for the selected field(s) will be replaced
-  with a single one and their geometries are merged.
+       Optional
+     - ``FIELD``
+     - [tablefield: any] [list]
 
-  If no field is provided then all the features are dissolved,
-  resulting in a single feature.
+       Default: []
+     - Features having the same value for the
+       selected field(s) will be replaced with a
+       single one and their geometries are merged.
 
+       If no field is provided then all the
+       features are dissolved, resulting in a
+       single feature.
+   * - ***Dissolved**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Dissolved`` [vector: any]
-  Multi geometry type layer with merged geometries but non aggregated values in fields.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Dissolved**
+     - ``OUTPUT``
+     - [same as input]
+     - The output multi-geometry vector layer
 
 
 .. _qgissetzfromraster:
 
 Drape (set Z value from raster)
 -------------------------------
-Uses values sampled from a band within a raster layer to set the Z value for every
-overlapping vertex in the feature geometry. The raster values can optionally be
-scaled by a preset amount.
+Uses values sampled from a band within a raster layer to set the Z
+value for every overlapping vertex in the feature geometry.
+The raster values can optionally be scaled by a preset amount.
 
-If Z values already exist in the layer, they will be overwritten with the new value.
-If no Z values exist, the geometry will be upgraded to include the Z dimension.
+If Z values already exist in the layer, they will be overwritten with
+the new value.
+If no Z values exist, the geometry will be upgraded to include the Z
+dimension.
 
 .. seealso:: :ref:`qgissetmfromraster`, :ref:`qgissetzvalue`
 
 Parameters
 ..........
-``Input layer`` [vector: any]
-  Input vector layer to set the Z values to.
 
-``Raster layer`` [raster]
-  Raster layer to take the Z values from.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Band number`` [raster band]
-  The raster band to take the Z values from if the raster is multiband.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Raster layer**
+     - ``RASTER``
+     - [raster]
 
-``Value for nodata or non-intersecting vertices`` [number |dataDefined|]
-  Value to use in case the vertex does not intersect (a valid pixel of) the raster.
+       Default: []
+     - Raster layer with Z values
+   * - **Band number**
+     - ``BAND``
+     - [raster band]
 
-  Default: *0*
+       Default: 1
+     - The raster band with the Z values from
+   * - **Value for nodata or non-intersecting vertices**
+     - ``NODATA``
+     - [number |dataDefined|]
 
-``Scale`` [number |dataDefined|]
-  Scaling value: the band values are multiplied by this value.
+       Default: 0
+     - Value to use in case the vertex does not intersect
+       (a valid pixel of) the raster
+   * - **Scale factor**
+     - ``SCALE``
+     - [number |dataDefined|]
 
-  Default: *1.0*
+       Default: 1.0
+     - Scaling value: the band values are multiplied
+       by this value.
+   * - **Updated**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Updated`` [vector: any]
-  A vector layer with geometries that have Z values extracted from the provided raster layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Updated**
+     - ``OUTPUT``
+     - [same as input]
+     - The output vector layer
 
 
 .. _qgisdropmzvalues:
 
 Drop m/z values
 ---------------
-Removes any M (measure) or Z (altitude) values from input geometries.
+Removes M (measure) or Z (altitude) values from input geometries.
 
 .. seealso:: :ref:`qgissetmvalue`, :ref:`qgissetzvalue`
 
 Parameters
 ..........
-``Input layer`` [vector: any]
-  Input vector layer from which M and/or Z values will be dropped.
 
-``Drop M Values`` [boolean]
-  Removes the M values from the geometries.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-  Default: *False*
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input line or polygon vector layer
+   * - **Drop M Values**
+     - ``DROP_M_VALUES``
+     - [boolean]
 
-``Drop Z Values`` [boolean]
-  Removes the Z values from the geometries.
+       Default: False
+     - Removes the M values from the geometries
+   * - **Drop Z Values**
+     - ``DROP_Z_VALUES``
+     - [boolean]
 
-  Default: *False*
+       Default: False
+     - Removes the Z values from the geometries
+   * - **Z/M Dropped**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
-``Z/M Dropped`` [vector: any]
-  A vector layer that is identical to the input layer, except that M and/or Z values have been removed from its geometries.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Z/M Dropped**
+     - ``OUTPUT``
+     - [same as input]
+     - The output vector layer (identical to the input layer,
+       except that M and/or Z values have been removed from
+       the geometries).
 
 
 .. _qgiseliminateselectedpolygons:
 
 Eliminate selected polygons
 ---------------------------
-Combines selected polygons of the input layer with certain adjacent polygons by
-erasing their common boundary. The adjacent polygon can be either the one with
-the largest or smallest area or the one sharing the largest common boundary with
-the polygon to be eliminated.
+Combines selected polygons of the input layer with certain adjacent
+polygons by erasing their common boundary.
+The adjacent polygon can be either the one with the largest or
+smallest area or the one sharing the largest common boundary with the
+polygon to be eliminated.
 
-Eliminate is normally used to get rid of sliver polygons, i.e. tiny polygons that
-are a result of polygon intersection processes where boundaries of the inputs are
-similar but not identical.
+Eliminate is normally used to get rid of sliver polygons, i.e. tiny
+polygons that are a result of polygon intersection processes where
+boundaries of the inputs are similar but not identical.
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
@@ -1525,31 +2070,74 @@ similar but not identical.
 
 Parameters
 ..........
-``Input layer`` [vector: polygon]
-  Input polygon vector layer to clean.
 
-``Merge selection with the neighboring polygon with the`` [enumeration]
-  Choose the parameter to use in order to get rid of the selected polygons:
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-  * Largest Area
-  * Smallest Area
-  * Largest Common Boundary
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: polygon]
+     - Input line or polygon vector layer
+   * - **Merge selection with the neighboring polygon with the**
+     - ``MODE``
+     - [enumeration]
+
+       Default: None
+     - Choose the parameter to use in order to get rid of
+       the selected polygons:
+
+       * 0 --- Largest Area
+       * 1 --- Smallest Area
+       * 2 --- Largest Common Boundary
+
+   * - **Eliminated**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
-``Eliminated`` [vector: polygon]
-  Cleaned vector layer as result of the parameters chosen.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Eliminated**
+     - ``OUTPUT``
+     - [same as input]
+     - The output vector layer.
 
 
 .. _qgisexplodelines:
 
 Explode lines
 -------------
-Takes a lines layer and creates a new one in which each line layer is replaced by
-a set of lines representing the segments in the original line.
+Takes a lines layer and creates a new one in which each line layer is
+replaced by a set of lines representing the segments in the original
+line.
 
-Each line in the resulting layer contains only a start and an end point, with no
-intermediate vertices between them.
+Each line in the resulting layer contains only a start and an end
+point, with no intermediate vertices between them.
 
 
 .. figure:: img/explode_lines.png
@@ -1557,56 +2145,136 @@ intermediate vertices between them.
 
    The original line layer and the exploded one
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgissubdivide`, :ref:`qgislinesubstring`
 
 Parameters
 ..........
-``Input layer`` [vector: line]
-  Line vector layer in input to explode.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input line vector layer
+   * - **Exploded**
+     - ``OUTPUT``
+     - [vector: line]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Exploded`` [vector: line]
-  Output vector line with features representing each segment of the input layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Exploded**
+     - ``OUTPUT``
+     - [vector: line]
+     - The output vector layer.
 
 
 .. _qgisextendlines:
 
 Extend lines
 ------------
-Extends line geometry by a specified amount at the start and end of the line.
+Extends line geometry by a specified amount at the start and end of
+the line.
 
-Lines are extended using the bearing of the first and last segment in the line.
+Lines are extended using the bearing of the first and last segment in
+the line.
 
 .. figure:: img/extend_lines.png
    :align: center
 
-   The red dashes represent the initial and final extension of the original layer
+   The red dashes represent the initial and final extension of the
+   original layer
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgislinesubstring`
 
 Parameters
 ..........
 
-``Input layer`` [vector: line]
-  Line vector layer to extend.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Start distance`` [number |dataDefined|]
-  Distance by which to extend the first segment of the line (starting point).
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input line vector layer
+   * - **Start distance**
+     - ``START_DISTANCE``
+     - [number |dataDefined|]
+     - Distance by which to extend the first segment of the line
+       (starting point)
+   * - **End distance**
+     - ``END_DISTANCE``
+     - [number |dataDefined|]
+     - Distance by which to extend the last segment of the line
+       (ending point)
+   * - **Extended**
+     - ``OUTPUT``
+     - [vector: line]
 
-``End distance`` [number |dataDefined|]
-  Distance by which to extend the last segment of the line (ending point).
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Extended`` [vector: line]
-  Extended vector line layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Extended**
+     - ``OUTPUT``
+     - [vector: line]
+     - The output (line) vector layer.
 
 
 .. _qgisextractmvalues:
@@ -1616,10 +2284,10 @@ Extract M values
 
 Extracts M values from geometries into feature attributes.
 
-By default only the M value from the first vertex of each
-feature is extracted, however the algorithm can optionally
-calculate statistics on all of the geometry's M values,
-including sum, mean, minimum and maximum.
+By default only the M value from the first vertex of each feature is
+extracted, however the algorithm can optionally calculate statistics
+on all of the geometry's M values, including sum, mean, minimum and
+maximum.
 
 .. seealso:: :ref:`qgisextractzvalues`, :ref:`qgissetmvalue`, :ref:`qgisdropmzvalues`
 
@@ -1673,6 +2341,8 @@ Parameters
    * - **Extracted**
      - ``OUTPUT``
      - [same as input]
+
+       Default: ``[Create temporary layer]``
      - Specify the output layer.
        One of:
 
@@ -1705,57 +2375,100 @@ Outputs
 
 Extract specific vertices
 -------------------------
-Takes a line or polygon layer and generates a point layer with points representing
-specific vertices in the input lines or polygons.
+Takes a line or polygon layer and generates a point layer with points
+representing specific vertices in the input lines or polygons.
 
-For instance, this algorithm can be used to extract the first or last vertices in
-the geometry. The attributes associated to each point are the same ones associated
+For instance, this algorithm can be used to extract the first or last
+vertices in the geometry.
+The attributes associated to each point are the same ones associated
 to the line or polygon that the point belongs to.
 
-The vertex indices parameter accepts a comma separated string specifying the indices
-of the vertices to extract. The first vertex corresponds to an index of 0, the second
-vertex has an index of 1, etc. Negative indices can be used to find vertices at the
-end of the geometry, e.g., an index of -1 corresponds to the last vertex, -2
-corresponds to the second last vertex, etc.
+The vertex indices parameter accepts a comma separated string
+specifying the indices of the vertices to extract.
+The first vertex corresponds to an index of 0, the second vertex has
+an index of 1, etc. Negative indices can be used to find vertices at
+the end of the geometry, e.g., an index of -1 corresponds to the last
+vertex, -2 corresponds to the second last vertex, etc.
 
-Additional fields are added to the vertices indicating the specific vertex position
-(e.g., 0, -1, etc), the original vertex index, the vertex’s part and its index within
-the part (as well as its ring for polygons), distance along the original geometry
-and bisector angle of vertex for the original geometry.
+Additional fields are added to the vertices indicating the specific
+vertex position (e.g., 0, -1, etc), the original vertex index, the
+vertex’s part and its index within the part (as well as its ring for
+polygons), distance along the original geometry and bisector angle of
+vertex for the original geometry.
 
-.. seealso:: :ref:`qgisextractvertices`, :ref:`qgisfilterverticesbym`, :ref:`qgisfilterverticesbyz`
+.. seealso:: :ref:`qgisextractvertices`, :ref:`qgisfilterverticesbym`,
+   :ref:`qgisfilterverticesbyz`
 
 Parameters
 ..........
-``Input layer`` [vector: line, polygon]
-  Vector layer in input to extract the vertices from.
 
-``Vertex indices`` [number]
-  Type the indices of the vertices to extract. The algorithm accepts comma separated
-  values for many vertices to extract (e.g. ``-2, 3, 5, 7``).
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-  Default: *0*
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input line vector layer
+   * - **Vertex indices**
+     - ``VERTICES``
+     - [string]
+       
+       Default: '0'
+     - Comma-separated string of the indices of the vertices to
+       extract.
+   * - **Vertices**
+     - ``OUTPUT``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Vertices`` [vector: point]
-  Point layer with features representing the specific vertices in the input layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Vertices**
+     - ``OUTPUT``
+     - [vector: point]
+     - The output (point) vector layer containing the specified
+       vertices from the input layer geometries.
 
 
 .. _qgisextractvertices:
 
 Extract vertices
 ----------------
-Takes a line or polygon layer and generates a point layer with points representing
-the vertices in the input lines or polygons.
+Takes a line or polygon layer and generates a point layer with points
+representing the vertices in the input lines or polygons.
 
-The attributes associated to each point are the same ones associated to the line
-or polygon that the point belongs to.
+The attributes associated to each point are the same ones associated
+to the line or polygon that the point belongs to.
 
-Additional fields are added to the vertices indicating the vertex index (beginning at 0),
-the feature’s part and its index within the part (as well as its ring for polygons),
-distance along original geometry and bisector angle of vertex for original geometry.
+Additional fields are added to the vertices indicating the vertex
+index (beginning at 0), the feature’s part and its index within the
+part (as well as its ring for polygons), distance along original
+geometry and bisector angle of vertex for original geometry.
 
 .. figure:: img/extract_nodes.png
    :align: center
@@ -1764,20 +2477,56 @@ distance along original geometry and bisector angle of vertex for original geome
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
-.. seealso:: :ref:`qgisextractspecificvertices`, :ref:`qgisfilterverticesbym`,
- :ref:`qgisfilterverticesbyz`
+.. seealso:: :ref:`qgisextractspecificvertices`,
+   :ref:`qgisfilterverticesbym`, :ref:`qgisfilterverticesbyz`
 
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Vector layer in input to extract the vertices from.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input line vector layer
+   * - **Vertices**
+     - ``OUTPUT``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Vertices`` [vector: point]
-  Point layer with features representing all the vertices in the input layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Vertices**
+     - ``OUTPUT``
+     - [vector: point]
+     - The output (point) vector layer containing the vertices from
+       the input layer geometries.
 
 
 .. _qgisextractzvalues:
@@ -1787,12 +2536,13 @@ Extract Z values
 
 Extracts Z values from geometries into feature attributes.
 
-By default only the Z value from the first vertex of each
-feature is extracted, however the algorithm can optionally
-calculate statistics on all of the geometry's Z values,
-including sum, mean, minimum and maximum.
+By default only the Z value from the first vertex of each feature is
+extracted, however the algorithm can optionally calculate statistics
+on all of the geometry's Z values, including sum, mean, minimum and
+maximum.
 
-.. seealso:: :ref:`qgisextractzvalues`, :ref:`qgissetzvalue`, :ref:`qgisdropmzvalues`
+.. seealso:: :ref:`qgisextractzvalues`, :ref:`qgissetzvalue`,
+   :ref:`qgisdropmzvalues`
 
 Parameters
 ..........
@@ -1844,6 +2594,8 @@ Parameters
    * - **Extracted**
      - ``OUTPUT``
      - [same as input]
+
+       Default: ``[Create temporary layer]``
      - Specify the output layer.
        One of:
 
@@ -1876,20 +2628,24 @@ Outputs
 
 Filter vertices by M value
 --------------------------
-Filters away vertices based on their M value, returning geometries with only vertex
-points that have a M value greater than or equal to the specified minimum value and/or
-less than or equal to the maximum value.
+Filters away vertices based on their M value, returning geometries
+with only vertex points that have a M value greater than or equal to
+the specified minimum value and/or less than or equal to the maximum
+value.
 
-If the minimum value is not specified then only the maximum value is tested, and
-similarly if the maximum value is not specified then only the minimum value is tested.
+If the minimum value is not specified then only the maximum value is
+tested, and similarly if the maximum value is not specified then only
+the minimum value is tested.
 
 .. figure:: img/filter_zm.png
    :align: center
 
-   The red line represents the black line with only vertices whose M value is <=10.
+   The red line represents the black line with only vertices whose M
+   value is <=10.
 
-.. note:: Depending on the input geometry attributes and the filters used,
-  the resultant geometries created by this algorithm may no longer be valid.
+.. note:: Depending on the input geometry attributes and the filters
+   used, the resultant geometries created by this algorithm may no
+   longer be valid.
 
 .. seealso:: :ref:`qgisfilterverticesbyz`, :ref:`qgisextractvertices`,
  :ref:`qgisextractspecificvertices`
@@ -1897,49 +2653,91 @@ similarly if the maximum value is not specified then only the minimum value is t
 Parameters
 ..........
 
-``Input layer`` [vector: line, polygon]
-  Vector layer to remove vertices from.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Minimum`` [number |dataDefined|]
-  Optional
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line, polygon]
+     - Input line vector layer
+   * - **Minimum**
+       
+       Optional
+     - ``MIN``
+     - [number |dataDefined|]
 
-  Minimum M value allowed to keep a vertex.
+       Default: *Not set*
+     - Minimum M value
+   * - **Maximum**
+       
+       Optional
+     - ``MAX``
+     - [number |dataDefined|]
 
-  Default: *Not set*
+       Default: *Not set*
+     - Maximum M value
+   * - **Filtered**
+     - ``OUTPUT``
+     - [vector: line]
 
-``Maximum`` [number |dataDefined|]
-  Optional
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
 
-  Maximum M value allowed to keep a vertex.
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-  Default: *Not set*
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Filtered`` [vector: line, polygon]
-  Vector layer of the features with only the filtered vertices.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Filtered**
+     - ``OUTPUT``
+     - [same as input]
+     - The output vector layer.
 
 
 .. _qgisfilterverticesbyz:
 
 Filter vertices by Z value
 --------------------------
-Filters away vertices based on their Z value, returning geometries with only vertex
-points that have a Z value greater than or equal to the specified minimum value and/or
-less than or equal to the maximum value.
+Filters away vertices based on their Z value, returning geometries
+with only vertex points that have a Z value greater than or equal to
+the specified minimum value and/or less than or equal to the maximum
+value.
 
-If the minimum value is not specified then only the maximum value is tested, and
-similarly if the maximum value is not specified then only the minimum value is tested.
+If the minimum value is not specified then only the maximum value is
+tested, and similarly if the maximum value is not specified then only
+the minimum value is tested.
 
 .. figure:: img/filter_zm.png
    :align: center
 
-   The red line represents the black line with only vertices whose Z value is <=10.
+   The red line represents the black line with only vertices whose Z
+   value is <=10.
 
-.. note:: Depending on the input geometry attributes and the filters used,
-  the resultant geometries created by this algorithm may no longer be valid.
-  You may need to run the :ref:`qgisfixgeometries` algorithm to ensure their validity.
+.. note:: Depending on the input geometry attributes and the filters
+   used, the resultant geometries created by this algorithm may no
+   longer be valid.
+   You may need to run the :ref:`qgisfixgeometries` algorithm to
+   ensure their validity.
 
 .. seealso:: :ref:`qgisfilterverticesbym`, :ref:`qgisextractvertices`,
  :ref:`qgisextractspecificvertices`
@@ -1947,28 +2745,65 @@ similarly if the maximum value is not specified then only the minimum value is t
 Parameters
 ..........
 
-``Input layer`` [vector: line, polygon]
-  Vector layer to remove vertices from.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Minimum`` [number |dataDefined|]
-  Optional
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line, polygon]
+     - Input line vector layer
+   * - **Minimum**
+       
+       Optional
+     - ``MIN``
+     - [number |dataDefined|]
 
-  Minimum Z value allowed to keep a vertex.
+       Default: *Not set*
+     - Minimum Z value
+   * - **Maximum**
+       
+       Optional
+     - ``MAX``
+     - [number |dataDefined|]
 
-  Default: *Not set*
+       Default: *Not set*
+     - Maximum Z value
+   * - **Filtered**
+     - ``OUTPUT``
+     - [vector: line]
 
-``Maximum`` [number |dataDefined|]
-  Optional
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
 
-  Maximum Z value allowed to keep a vertex.
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-  Default: *Not set*
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Filtered`` [vector: line, polygon]
-  Vector layer of the features with only the filtered vertices.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Filtered**
+     - ``OUTPUT``
+     - [same as input]
+     - The output vector layer.
 
 
 .. _qgisfixgeometries:
@@ -1976,26 +2811,63 @@ Outputs
 Fix geometries
 --------------
 Attempts to create a valid representation of a given invalid geometry
-without losing any of the input vertices. Already valid geometries are returned
-without further intervention. Always outputs multi-geometry layer.
+without losing any of the input vertices.
+Already valid geometries are returned without further intervention.
+Always outputs multi-geometry layer.
 
 .. note:: M values will be dropped from the output.
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgischeckvalidity`
 
 Parameters
 ..........
 
-``Input layer`` [vector: line, polygon]
-  Polygon or vector layer in input.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Fixed geometries**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Fixed geometries`` [vector: line, polygon]
-  Layer with fixed geometries.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Fixed geometries**
+     - ``OUTPUT``
+     - [same as input]
+     - The output vector layer.
 
 
 .. _qgisforcerhr:
@@ -2003,14 +2875,12 @@ Outputs
 Force right-hand-rule |36|
 --------------------------
 
-This algorithm forces polygon geometries to respect the
+This algorithm forces polygon geometries to respect the 
 Right-Hand-Rule, in which the area that is bounded by a polygon
 is to the right of the boundary.
 In particular, the exterior ring is oriented in a clockwise
-direction and the interior rings in a counter-clockwise
-direction.
-The algorithm consumes and produces features with polygon
-geometries.
+direction and the interior rings in a counter-clockwise direction.
+The algorithm consumes and produces features with polygon geometries.
 
 Parameters
 ..........
@@ -2020,35 +2890,44 @@ Parameters
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  -  Label
-      -  Name
-      -  Type
-      -  Description
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: polygon]
+     - Input vector layer
+   * - **Reoriented**
+     - ``OUTPUT``
+     - [same as input]
 
-   *  -  **Input features**
-      -  
-      -  [vector: polygon]
-      -  The input vector
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
 
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
-..........
+.......
 
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  -  Label
-      -  Name
-      -  Type
-      -  Description
-
-   *  -  **Reoriented**
-      -  
-      -  [vector: line]
-      -  The input features with reoriented polygons
-
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Reoriented**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output vector layer.
 
 
 .. _qgisantimeridiansplit:
@@ -2056,97 +2935,180 @@ Outputs
 Geodesic line split at antimeridian |36|
 ----------------------------------------
 
-This algorithm splits a line into multiple geodesic segments, whenever the line
-crosses the antimeridian (±180 degrees longitude).
+This algorithm splits a line into multiple geodesic segments, whenever
+the line crosses the antimeridian (±180 degrees longitude).
 
-Splitting at the antimeridian helps the visual display of the lines in some
-projections. The returned geometry will always be a multi-part geometry.
+Splitting at the antimeridian helps the visual display of the lines in
+some projections.
+The returned geometry will always be a multi-part geometry.
 
-Whenever line segments in the input geometry cross the antimeridian, they will
-be split into two segments, with the latitude of the breakpoint being determined
-using a geodesic line connecting the points either side of this segment. The
-current project ellipsoid setting will be used when calculating this breakpoint.
+Whenever line segments in the input geometry cross the antimeridian,
+they will be split into two segments, with the latitude of the
+breakpoint being determined using a geodesic line connecting the
+points either side of this segment.
+The current project ellipsoid setting will be used when calculating
+this breakpoint.
 
-If the input geometry contains M or Z values, these will be linearly interpolated
-for the new vertices created at the antimeridian.
+If the input geometry contains M or Z values, these will be linearly
+interpolated for the new vertices created at the antimeridian.
 
 Parameters
 ..........
-``Input layer`` [vector: line]
-  Vector input line layer
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input line vector layer
+   * - **Split**
+     - ``OUTPUT``
+     - [vector: line]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output line vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Split`` [vector: line]
-  Vector line layer resulting from geodesic split.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Split**
+     - ``OUTPUT``
+     - [vector: line]
+     - The output (geodesic split) line vector layer.
+
 
 .. _qgisgeometrybyexpression:
 
 Geometry by expression
 ----------------------
-Updates existing geometries (or creates new geometries) for input features by use
-of a QGIS expression.
+Updates existing geometries (or creates new geometries) for input
+features by use of a QGIS expression.
 
-This allows complex geometry modifications which can utilize all the flexibility
-of the QGIS expression engine to manipulate and create geometries for output features.
+This allows complex geometry modifications which can utilize all the
+flexibility of the QGIS expression engine to manipulate and create
+geometries for output features.
 
-For help with QGIS expression functions, see the inbuilt help for specific functions
-which is available in the :ref:`expression builder <vector_expressions>`.
+For help with QGIS expression functions, see the inbuilt help for
+specific functions which is available in the
+:ref:`expression builder <vector_expressions>`.
 
 Parameters
 ..........
-``Input layer`` [vector: any]
-  Vector input layer.
 
-``Output geometry type`` [enumeration]
-  The output geometry strongly depends on the expression you will choose: for
-  instance, if you want to create a buffer then the geometry type has to be
-  a polygon.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-  Available options are:
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input line vector layer
+   * - **Output geometry type**
+     - ``OUTPUT_GEOMETRY``
+     - [enumeration]
 
-  * 0 --- Polygon
-  * 1 --- Line
-  * 2 --- Point
+       Default: 0
+     - The output geometry strongly depends on the expression: for
+       instance, if you create a buffer the geometry type has to be
+       polygon.
+       One of:
 
-  Default: *0*
+       * 0 --- Polygon
+       * 1 --- Line
+       * 2 --- Point
 
-``Output geometry has z dimension`` [boolean]
-  Choose if the output geometry should have the Z dimension.
+   * - **Output geometry has z values**
+     - ``WITH_Z``
+     - [boolean]
+     
+       Default: False
+     - Choose if the output geometry should include the M dimension
+   * - **Output geometry has m values**
+     - ``WITH_M``
+     - [boolean]
+     
+       Default: False
+     - Choose if the output geometry should include the Z dimension
+   * - **Geometry expression**
+     - ``EXPRESSION``
+     - [expression]
+       
+       Default: '$geometry'
+     - Add the geometry expression you want to use.
+       You can use the button to open the Expression Dialog.
+       The dialog has lists all the relevant expressions, together
+       with their help and guide.
+   * - **Modified geometry**
+     - ``OUTPUT``
+     - [vector: any]
 
-  Default: *False*
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
 
-``Output geometry has m values`` [boolean]
-  Choose if the output geometry should have the M dimension.
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-  Default: *False*
-
-``Geometry expression`` [expression]
-  Add the geometry expression you want to use. You can use the button to open
-  the Expression Dialog: the dialog has a list of all the usable expression
-  together with their help and guide.
-
-  Default: *$geometry*
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Modified geometry`` [vector: any]
-  Vector layer resulting from the expression added.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Modified geometry**
+     - ``OUTPUT``
+     - [vector: any]
+     - The output vector layer
 
 
 .. _qgisinterpolatepoint:
 
 Interpolate point on line
 -------------------------
-Creates a point geometry interpolated at a set distance along line or curve
-geometries.
+Creates a point geometry interpolated at a set distance along line or
+curve geometries.
 
 Z and M values are linearly interpolated from existing values.
 
-If a multipart geometry is encountered, only the first part is considered when
-calculating the substring.
+If a multipart geometry is encountered, only the first part is
+considered when calculating the substring.
 
 If the specified distance is greater than the input feature's length,
 the resultant feature will have a null geometry.
@@ -2161,67 +3123,146 @@ the resultant feature will have a null geometry.
 Parameters
 ..........
 
-``Input layer`` [vector: line, polygon]
-  Line or polygon vector layer  from which to interpolate point placement.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Distance`` [number |dataDefined|]
-  Distance from the beginning of the line.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line, polygon]
+     - Input line or polygon vector layer
+   * - **Distance**
+     - ``DISTANCE``
+     - [number |dataDefined|]
+     
+       Default: 0.0
+     - Distance from the beginning of the line
+   * - **Interpolated points**
+     - ``OUTPUT``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Interpolated points`` [vector: point]
-  Point vector layer with features at a set distance along the line or polygon boundary.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Interpolated points**
+     - ``OUTPUT``
+     - [vector: point]
+     - The output point vector layer
 
 
 .. _qgiskeepnbiggestparts:
 
-Keep n biggest parts
+Keep N biggest parts
 --------------------
-Takes a layer with polygons or multipolygons and returns a new layer in which
-only the *n* largest polygons of each multipolygon feature are kept.
+Takes a layer with polygons or multipolygons and returns a new layer
+in which only the *n* largest polygons of each multipolygon feature
+are kept.
 If a feature has *n* or fewer parts, the feature will just be copied.
 
 .. figure:: img/n_biggest.png
    :align: center
 
-   Clockwise from left-up: original multipart feature, one, two and three biggest parts kept
+   Clockwise from left-up: original multipart feature, one, two and
+   three biggest parts kept
 
 Parameters
 ..........
 
-``Polygons`` [vector: polygon]
-  Input polygon layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``To keep`` [number]
-  Choose how many parts to keep. If 1 is selected, only the
-  biggest part of the feature will be kept.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Polygons**
+     - ``INPUT``
+     - [vector: polygon]
+     - Input polygon vector layer
+   * - **Parts to keep**
+     - ``PARTS``
+     - [number]
+     
+       Default: 1
+     - How many parts to keep. If 1, only the biggest part of the
+       feature will be kept.
+   * - **Parts**
+     - ``OUTPUT``
+     - [vector: polygon]
 
-  Default: *1*
+       Default: ``[Create temporary layer]``
+     - Specify the output polygon vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Biggest parts`` [vector: polygon]
-  Resulting polygon layer with the n biggest parts of each feature.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Parts**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output polygon vector layer with the N biggest parts of
+       each feature
 
 
 .. _qgislinesubstring:
 
 Line substring
 --------------
-Returns the portion of a line (or curve) which falls between the specified start
-and end distances (measured from the beginning of the line).
+Returns the portion of a line (or curve) which falls between the
+specified start and end distances (measured from the beginning of the
+line).
 
 Z and M values are linearly interpolated from existing values.
 
-If a multipart geometry is encountered, only the first part is considered when
-calculating the substring.
+If a multipart geometry is encountered, only the first part is
+considered when calculating the substring.
 
 .. figure:: img/substring.png
    :align: center
 
-   Substring line with starting distance set at 0 meters and the ending distance at 250 meters.
+   Substring line with starting distance set at 0 meters and the
+   ending distance at 250 meters.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
@@ -2230,30 +3271,70 @@ calculating the substring.
 Parameters
 ..........
 
-``Input layer`` [vector: line]
-  Line vector layer to extract the substring from.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Start distance`` [number |dataDefined|]
-  Distance along the input line, representing the start point of the output feature.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input line vector layer
+   * - **Start distance**
+     - ``START_DISTANCE``
+     - [number |dataDefined|]
+     - Distance along the input line to the start point of
+       the output feature
+   * - **End distance**
+     - ``END_DISTANCE``
+     - [number |dataDefined|]
+     - Distance along the input line to the end point of
+       the output feature
+   * - **Substring**
+     - ``OUTPUT``
+     - [vector: line]
 
-``End distance`` [number |dataDefined|]
-  Distance along the input line, representing the end point of the output feature.
+       Default: ``[Create temporary layer]``
+     - Specify the output line vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Substring`` [vector: line]
-  Vector line layer of the substring
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Substring**
+     - ``OUTPUT``
+     - [vector: line]
+     - The output line vector layer.
 
 
 .. _qgislinestopolygons:
 
-Lines to polygon
-----------------
-Generates a polygon layer using as polygon rings the lines from an input line layer.
+Lines to polygons
+-----------------
+Generates a polygon layer using as polygon rings the lines from an
+input line layer.
 
-The attribute table of the output layer is the same as the one from of the input
-line layer.
+The attribute table of the output layer is the same as the one from of
+the input line layer.
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
@@ -2262,28 +3343,64 @@ line layer.
 Parameters
 ..........
 
-``Input layer`` [vector: line]
-  Line vector layer to convert.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input line vector layer
+   * - **Polygons**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output polygon vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Polygons`` [vector: polygon]
-  Polygon vector layer from the line input vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Polygons**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output polygon vector layer.
 
 
 .. _qgismergelines:
 
 Merge lines
 -----------
-Joins all connected parts of MultiLineString geometries into single LineString
-geometries.
+Joins all connected parts of MultiLineString geometries into single
+LineString geometries.
 
-If any parts of the input MultiLineString geometries are not connected, the
-resultant geometry will be a MultiLineString containing any lines which could be
-merged and any non-connected line parts.
+If any parts of the input MultiLineString geometries are not
+connected, the resultant geometry will be a MultiLineString containing
+any lines which could be merged and any non-connected line parts.
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 Parameters
 ..........
@@ -2291,11 +3408,52 @@ Parameters
 ``Input layer`` [vector: line]
   MultiLineString vector layer.
 
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input line vector layer
+   * - **Merged**
+     - ``OUTPUT``
+     - [vector: lines]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output line vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+
 Outputs
 .......
 
-``Merged`` [vector: lines]
-  Single LineString vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Merged**
+     - ``OUTPUT``
+     - [vector: lines]
+     - The output (merged) line vector layer.
 
 
 .. _qgisminimumboundinggeometry:
@@ -2304,132 +3462,271 @@ Minimum bounding geometry
 -------------------------
 Creates geometries which enclose the features from an input layer.
 
+The following enclosing geometry types are supported:
+
+* bounding boxe (envelope)
+* oriented rectangle
+* circle
+* convex hull
+
+The features can be grouped by a field.
+The output layer will then contain one feature per grouped value with
+a minimal geometry covering just the features with matching values.
+
 .. seealso:: :ref:`qgisminimumenclosingcircle`
 
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Field`` [tablefield: any]
-  Optional
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Field**
 
-  Features can be grouped by a field. If set, this causes the output
-  layer to contain one feature per grouped value with a minimal geometry covering
-  only the features with matching values.
+       Optional
+     - ``FIELD``
+     - [tablefield: any]
+     - Features can be grouped by a field.
+       If set, this causes the output layer to contain one feature per
+       grouped value with a minimal geometry covering only the
+       features with matching values.
+   * - **Geometry type**
+     - ``TYPE``
+     - [enumeration]
 
-``Geometry type`` [enumeration]
-  Numerous enclosing geometry types are supported:
+       Default: 0
+     - Enclosing geometry types. One of:
 
-  * 0 --- Envelope (Bounding Box)
-  * 1 --- Minimum Oriented Rectangle
-  * 2 --- Minimum Enclosing Circle
-  * 3 --- Convex Hull
+       * 0 --- Envelope (Bounding Box)
+       * 1 --- Minimum Oriented Rectangle
+       * 2 --- Minimum Enclosing Circle
+       * 3 --- Convex Hull
 
-  Default: *0*
+       .. figure:: img/minimum_bounding.png
+          :align: center
 
-  .. figure:: img/minimum_bounding.png
-     :align: center
+          Clockwise from upper left: envelope, oriented rectangle,
+          circle, convex hull
 
-     Clockwise from left-up: envelopes, oriented rectangle, circle, convex hull
+   * - **Bounding geometry**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output polygon vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Bounding geometry`` [vector: polygon]
-  Bounding polygon layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Bounding geometry**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output (bounding) polygon vector layer.
 
 
 .. _qgisminimumenclosingcircle:
 
 Minimum enclosing circles
 -------------------------
-Calculates the minimum enclosing circle which covers each feature in an input layer.
+Calculates the minimum enclosing circles of the features in the input
+layer.
 
 .. figure:: img/minimum_enclosing_circles.png
    :align: center
 
    Enclosing circles for each feature
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgisminimumboundinggeometry`
 
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Number of segment in circles`` [number]
-  Choose the number of segment for each circle.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Number of segment in circles**
+     - ``SEGMENTS``
+     - [number]
 
-  Default: *72*
+       Default: 72
+     - The number of segment used to approximate a circle.
+       Minimum 8, maximum 100000.
+   * - **Minimum enclosing circles**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output polygon vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Minimum enclosing circles`` [vector: polygon]
-  Enclosing circles for each polygon feature.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Minimum enclosing circles**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output polygon vector layer.
 
 
 .. _qgismultiringconstantbuffer:
 
 Multi-ring buffer (constant distance)
 -------------------------------------
-Computes multi-ring (*donuts*) buffer for all the features in an input layer,
-using a fixed or dynamic distance and ring numbers.
+Computes multi-ring (*donut*) buffer for all the features of the
+input layer, using a fixed or dynamic distance and number of rings.
 
 .. figure:: img/multiringbuffer.png
    :align: center
 
-   Multi-ring buffer for line, point and polygon layer
+   Multi-ring buffer for a line, point and polygon layer
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
-.. seealso:: :ref:`qgisbuffer`, :ref:`qgisvariabledistancebuffer`,
- :ref:`qgisrectanglesovalsdiamondsfixed`, :ref:`qgisrectanglesovalsdiamondsvariable`,
- :ref:`qgissinglesidedbuffer`
+.. seealso:: :ref:`qgisbuffer`,
+   :ref:`qgisvariabledistancebuffer`,
+   :ref:`qgisrectanglesovalsdiamondsfixed`,
+   :ref:`qgisrectanglesovalsdiamondsvariable`,
+   :ref:`qgissinglesidedbuffer`
 
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Number of rings`` [number |dataDefined|]
-  Total number of rings that the buffer must have. It can be a unique value (same
-  ring number for all the features) or it can be taken from features data (different
-  ring number depending on the feature values).
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Number of rings**
+     - ``RINGS``
+     - [number |dataDefined|]
 
-``Distance between rings`` [number |dataDefined|]
-  Distance between the single rings. It can be a unique value (same distance for
-  all the features) or it can be taken from features data (different distance
-  depending on the feature values).
+       Default: 1
+     - The number of rings.
+       It can be a unique value (same number of rings for all the
+       features) or it can be taken from features data (the number of
+       rings depends on feature values).
+   * - **Distance between rings**
+     - ``DISTANCE``
+     - [number |dataDefined|]
+
+       Default: 1.0
+     - Distance between the rings.
+       It can be a unique value (same distance for all the features)
+       or it can be taken from features data (the distance depends on
+       feature values).
+   * - **Multi-ring buffer (constant distance)**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output polygon vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Multi-ring buffer (constant distance)``
-  Multi ring buffer polygon vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Multi-ring buffer (constant distance)**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output polygon vector layer.
 
 
 .. _qgismultiparttosingleparts:
 
 Multipart to singleparts
 ------------------------
-Splits the multipart input layers into single features.
+Splits multipart features in the input layer into singlepart
+features.
 
-The attributes of the output layers are the same of the original ones but divided
-into single features.
+The attributes of the output layer is the same of the original ones
+but divided into single features.
 
 .. figure:: img/multipart.png
    :align: center
 
-   Left the multipart source layer and right the single part output result
+   Left the multipart source layer and right the single part output
+   result
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
@@ -2438,177 +3735,398 @@ into single features.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Multipart input layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Single parts**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output polygon vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Single parts`` [vector: any]
-  Singlepart layer in output with updated attribute table.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Single parts**
+     - ``OUTPUT``
+     - [same as input]
+     - The output vector layer.
 
 
 .. _qgisoffsetline:
 
 Offset lines
 ------------
-Offsets lines by a specified distance. Positive distances will offset lines to
-the left, and negative distances will offset them to the right.
+Offsets lines by a specified distance.
+Positive distances will offset lines to the left, and negative
+distances will offset them to the right.
 
 .. figure:: img/offset_lines.png
    :align: center
 
    In blue the source layer, in red the offset one
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgisarrayoffsetlines`, :ref:`qgistranslategeometry`
 
 Parameters
 ..........
 
-``Input layer`` [vector: line]
-  Line vector layer in input to elaborate the offset on.
 
-``Distance`` [number |dataDefined|]
-  Distance of the offset.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-  Default: *10.0*
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input line vector layer
+   * - **Distance**
+     - ``DISTANCE``
+     - [number |dataDefined|]
 
-``Segment`` [number]
-  Number of line segments to use to approximate a quarter circle when creating
-  rounded offsets.
+       Default: 10.0
+     - Offset distance.
+       You can use the Data Defined button on the right to choose
+       a field from which the radius will be calculated.
+       This way you can have different radius for each feature
+       (see :ref:`qgisvariabledistancebuffer`).
+   * - **Segments**
+     - ``SEGMENTS``
+     - [number]
 
-  Default: *8*
+       Default: 8
+     - Controls the number of line segments to use to approximate
+       a quarter circle when creating rounded offsets.
+   * - **End cap style**
+     - ``END_CAP_STYLE``
+     - [enumeration]
 
-``Join style`` [enumeration]
-  Specify whether round, miter or beveled joins should be used when offsetting
-  corners in a line.
-  Options are:
+       Default: 0
+     - Controls how line endings are handled in the buffer.
+       One of:
 
-  * 0 --- Round
-  * 1 --- Miter
-  * 2 --- Bevel
+       * 0 --- Round
+       * 1 --- Flat
+       * 2 --- Square
 
-  Default: *0*
+       .. figure:: img/buffer_cap_style.png
+          :align: center
+       
+          Round, flat and square cap styles
 
-``Miter limit`` [number]
-  Only applicable for mitered join styles, and controls the maximum distance from
-  the offset curve to use when creating a mitered join.
+   * - **Join style**
+     - ``JOIN_STYLE``
+     - [enumeration]
 
-  Default: *2.0*
+       Default: *0*
+     - Specifies whether round, miter or beveled joins should be
+       used when offsetting corners in a line.
+       Options are:
+
+       * 0 --- Round
+       * 1 --- Miter
+       * 2 --- Bevel
+
+   * - **Miter limit**
+     - ``MITER_LIMIT``
+     - [number]
+
+       Default: 2.0
+     - Controls the maximum distance from the offset curve to use
+       when creating a mitered join (only applicable for miter
+       join styles).
+       Minimum: 1.
+   * - **Offset**
+     - ``OUTPUT``
+     - [vector: line]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output (buffer) layer.
+       One of:
+
+       * Skip output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Offset`` [vector: line]
-  Offset line layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Offset**
+     - ``OUTPUT``
+     - [vector: line]
+     - Output line layer
 
 
 .. _qgisorientedminimumboundingbox:
 
 Oriented minimum bounding box
 -----------------------------
-Calculates the minimum area rotated rectangle which covers each feature in an input layer.
+Calculates the minimum area rotated rectangle for each feature in the
+input layer.
 
 .. figure:: img/oriented_minimum_bounding_box.png
    :align: center
 
    Oriented minimum bounding box
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgisminimumboundinggeometry`
 
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Bounding boxes**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output polygon vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Bounding boxes`` [vector: polygon]
-  Oriented minimum bounding boxes for each polygon feature.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Bounding boxes**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output polygon vector layer.
 
 
 .. _qgisorthogonalize:
 
 Orthogonalize
 -------------
-Takes a line or polygon layer and attempts to orthogonalize all the geometries
-in the layer. This process shifts the vertices in the geometries to try to make every
-angle in the geometry either a right angle or a straight line.
+Attempts to orthogonalize the geometries of the input line or polygon
+layer.
+This process shifts the vertices in the geometries to try to make
+every angle in the geometry either a right angle or a straight line.
 
 .. figure:: img/orthogonize.png
    :align: center
 
-   In blue the source layer while the red line is the orthogonalized result
+   In blue the source layer and in the red orthogonalized
+   result
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 Parameters
 ..........
 
-``Input layer`` [vector: line, polygon]
-  Input vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Maximum angle tolerance (degrees)`` [number]
-  Specify the maximum deviation from a right angle or straight line a vertex can
-  have for it to be adjusted. Smaller tolerances mean that only vertices which are
-  already closer to right angles will be adjusted, and larger tolerances mean
-  that vertices which deviate further from right angles will also be adjusted.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line, polygon]
+     - Input line or polygon vector layer
+   * - **Maximum angle tolerance (degrees)**
+     - ``ANGLE_TOLERANCE``
+     - [number]
+     - Specify the maximum deviation from a right angle or straight
+       line a vertex can have for it to be adjusted.
+       Smaller tolerances mean that only vertices which are already
+       closer to right angles will be adjusted, and larger tolerances
+       mean that vertices which deviate further from right angles will
+       also be adjusted.
+   * - **Maximum algorithm iterations**
+     - ``MAX_ITERATIONS``
+     - [number]
+     - Setting a larger number for the maximum number of iterations
+       will result in a more orthogonal geometry at the cost of extra
+       processing time.
+   * - **Bounding boxes**
+     - ``OUTPUT``
+     - [vector: polygon]
 
-``Maximum algorithm iterations`` [number]
-  Setting a larger number for the maximum iterations will result in a more
-  orthogonal geometry at the cost of extra processing time.
+       Default: ``[Create temporary layer]``
+     - Specify the output polygon vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Orthogonalized`` [vector: line, polygon]
-  Final layer with angles adjusted depending on the parameters chosen.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Orthogonalized**
+     - ``OUTPUT``
+     - [same as input]
+     - The output polygon vector layer.
 
 
 .. _qgispointonsurface:
 
-Point on surface
+Point on Surface
 ----------------
-Returns a point guaranteed to lie on the surface of a geometry.
+For each feature of the input layer, return a point that is guaranteed
+to lie on the surface of the feature geometry.
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgiscentroids`
 
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Create point on surface for each part`` [boolean |dataDefined|]
-  If checked, a point for each part of the geometry will be created.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Create point on surface for each part**
+     - ``ANGLE_TOLERANCE``
+     - [boolean |dataDefined|]
+     - If checked, a point will be created for each part of the
+       geometry.
+   * - **Point**
+     - ``OUTPUT``
+     - [vector: point]
 
-  Default: *False*
+       Default: ``[Create temporary layer]``
+     - Specify the output polygon vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Point`` [vector: point]
-  Point vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Point**
+     - ``OUTPUT``
+     - [vector: point]
+     - The output point vector layer.
 
 
 .. _qgispointsalonglines:
 
 Points along geometry
 ---------------------
-Creates points at regular intervals along line or polygon geometries. Created
-points will have new attributes added for the distance along the geometry and the
-angle of the line at the point.
+Creates points at regular intervals along line or polygon geometries.
+Created points will have new attributes added for the distance along
+the geometry and the angle of the line at the point.
 
-An optional start and end offset can be specified, which controls how far from
-the start and end of the geometry the points should be created.
+An optional start and end offset can be specified, which controls how
+far from the start and end of the geometry the points should be
+created.
 
 .. figure:: img/points_along_line.png
    :align: center
@@ -2620,85 +4138,166 @@ the start and end of the geometry the points should be created.
 Parameters
 ..........
 
-``Input layer`` [vector: line, polygon]
-  Input vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Distance`` [number]
-  Distance between two consecutive points along a geometry.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line, polygon]
+     - Input line vector layer
+   * - **Distance**
+     - ``DISTANCE``
+     - [number |dataDefined|]
+     
+       Default: 1.0
+     - Distance between two consecutive points along the line
+   * - **Start offset**
+     - ``START_OFFSET``
+     - [number |dataDefined|]
 
-  Default: *100*
+       Default: 0.0
+     - Distance from the beginning of the input line, representing the
+       position of the first point.
+   * - **End offset**
+     - ``END_OFFSET``
+     - [number |dataDefined|]
 
-``Start offset`` [number]
-  Distance from the beginning of the input line, representing the position of
-  the first point.
+       Default: 0.0
+     - Distance from the end of the input line, representing the
+       position beyond which no point feature shoud be created.
+   * - **Interpolated points**
+     - ``OUTPUT``
+     - [vector: point]
 
-  Default: *0*
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
 
-``End offset`` [number]
-  Distance from the end of the input line, representing the position beyond which
-  no point feature shoud be created.
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-  Default: *0*
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Points`` [vector: point]
-  Point vector layer with features placed along the line or polygon boundary.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Interpolated points**
+     - ``OUTPUT``
+     - [vector: point]
+     - Point vector layer with features placed along lines or polygon
+       boundaries of the input layer.
 
 
 .. _qgispointsdisplacement:
 
 Points displacement
 -------------------
-Given a distance of proximity, identifies nearby point features and radially
-distributes them over a circle whose center represents their barycenter.
+Given a distance of proximity, identifies nearby point features and
+radially distributes them over a circle whose center represents their
+barycenter.
 A convenient tool to scatter overlaid features.
 
 Parameters
 ..........
 
-``Input layer`` [vector: point]
-  Input point vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Minimum distance to other points`` [number]
-  Distance below which point features are considered close.
-  Close features are distributed altogether.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: point]
+     - Input point vector layer
+   * - **Minimum distance to other points**
+     - ``PROXIMITY``
+     - [number]
+     
+       Default: 1.0
+     - Distance below which point features are
+       considered close.
+       Close features are distributed altogether.
+   * - **Displacement distance**
+     - ``DISTANCE``
+     - [number]
+     
+       Default: 1.0
+     - Radius of the circle on which close features are placed
+   * - **Horizontal distribution for two point case**
+     - ``HORIZONTAL``
+     - [boolean]
 
-  Default: *1.0*
+       Default: False
+     - When only two points are identified as close, aligns them
+       horizontally on the circle instead of vertically.
 
-``Displacement distance`` [number]
-  Radius of the circle on which close features are placed.
+   * - **Displaced**
+     - ``OUTPUT``
+     - [vector: point]
 
-  Default: *1.0*
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
 
-``Horizontal distribution for two point case`` [boolean]
-  When only two points are identified as close, aligns them horizontally
-  on the circle instead of vertically.
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-  Default: *False*
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Displaced`` [vector: point]
-  Point vector layer with displaced features.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Displaced**
+     - ``OUTPUT``
+     - [vector: point]
+     - Output point vector layer
 
 
 .. _qgispoleofinaccessibility:
 
 Pole of inaccessibility
 -----------------------
-Calculates the pole of inaccessibility for a polygon layer, which is the most
-distant internal point from the boundary of the surface.
+Calculates the pole of inaccessibility for a polygon layer, which is
+the most distant internal point from the boundary of the surface.
 
-This algorithm uses the 'polylabel' algorithm (Vladimir Agafonkin, 2016), which
-is an iterative approach guaranteed to find the true pole of inaccessibility within
-a specified tolerance. A more precise tolerance (lower value) requires more iterations
-and will take longer to calculate.
+This algorithm uses the 'polylabel' algorithm (Vladimir Agafonkin,
+2016), which is an iterative approach guaranteed to find the true pole
+of inaccessibility within a specified tolerance.
+A more precise tolerance (lower value) requires more iterations and
+will take longer to calculate.
 
-The distance from the calculated pole to the polygon boundary will be stored as
-a new attribute in the output layer.
+The distance from the calculated pole to the polygon boundary will be
+stored as a new attribute in the output layer.
 
 .. figure:: img/pole_inaccessibility.png
    :align: center
@@ -2708,64 +4307,135 @@ a new attribute in the output layer.
 Parameters
 ..........
 
-``Input layer`` [vector: polygon]
-  Input polygon vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Tolerance`` [number]
-  Set the tolerance for the calculation.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: polygon]
+     - Input vector layer
+   * - **Tolerance**
+     - ``TOLERANCE``
+     - [number]
 
-  Default: *1.0*
+       Default: 1.0
+     - Set the tolerance for the calculation
+   * - **Point**
+     - ``OUTPUT``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output polygon vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Point`` [vector: point]
-  Point as pole of inaccessibility for the source polygon vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Point**
+     - ``OUTPUT``
+     - [vector: point]
+     - The output point vector layer
 
 
 .. _qgispolygonize:
 
 Polygonize
 ----------
-Creates a polygon layer whose features boundaries are generated from a **closed**
-line layer features.
+Creates a polygon layer whose features boundaries are generated from a
+line layer of **closed** features.
 
 .. figure:: img/polygonize.png
    :align: center
 
    The yellow polygons generated from the closed lines
 
-.. note:: The line layer must have closed shapes in order to be transformed into
-  a polygon.
+.. note:: The line layer must have closed shapes in order to be
+   transformed into a polygon.
 
 .. seealso:: :ref:`qgispolygonstolines`
 
 Parameters
 ..........
 
-``Input layer`` [vector: line]
-  Input line vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Keep table structure of line layer`` [boolean]
-  Optional
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input line vector layer
+   * - **Keep table structure of line layer**
+     - ``KEEP_FIELDS``
+     - [boolean]
 
-  Check to copy the original attribute of the line layer.
+       Default: False
+     - Check to copy the original attributes of the input layer
+   * - **Polygons from lines**
+     - ``OUTPUT``
+     - [vector: polygon]
 
-  Default: *False*
+       Default: ``[Create temporary layer]``
+     - Specify the output polygon vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Polygons from lines`` [vector: polygon]
-  Vector layer with polygonized features.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Polygons from lines**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output polygon vector layer
+
 
 
 .. _qgispolygonstolines:
 
 Polygons to lines
 -----------------
-Takes a polygon layer and creates a line layer, with lines representing the boundaries
-of the polygons in the input layer.
+Takes a polygon layer and creates a line layer, with lines
+representing the boundaries of the polygons in the input layer.
 
 .. figure:: img/polygon_to_lines.png
    :align: center
@@ -2779,75 +4449,185 @@ of the polygons in the input layer.
 Parameters
 ..........
 
-``Input layer`` [vector: polygon]
-  Input polygon vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: polygon]
+     - Input polygon vector layer
+   * - **Lines**
+     - ``OUTPUT``
+     - [vector: line]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output line vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Lines`` [vector: line]
-  Lines from the polygon layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Lines**
+     - ``OUTPUT``
+     - [vector: line]
+     - The output line vector layer
 
 
 .. _qgisprojectpointcartesian:
 
 Project points (Cartesian)
 --------------------------
-Projects point geometries by a specified distance and bearing (azimuth), creating
-a new point layer with the projected points.
+Projects point geometries by a specified distance and bearing
+(azimuth), creating a new point layer with the projected points.
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 Parameters
 ..........
 
-``Input layer`` [vector: point]
-  Point vector layer to project.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Bearing (degrees from North)`` [number |dataDefined|]
-  Clockwise angle starting from North, in degree (°) unit.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: point]
+     - Input point vector layer
+   * - **Bearing (degrees from North)**
+     - ``BEARING``
+     - [number |dataDefined|]
 
-  Default: *0.0*
+       Default: 0.0
+     - Clockwise angle starting from North, in degree (°) unit
+   * - **Distance**
+     - ``DISTANCE``
+     - [number |dataDefined|]
 
-``Distance`` [number |dataDefined|]
-  Distance to offset geometries, in layer units.
+       Default: 1.0
+     - Distance to offset geometries, in layer units
+   * - **Projected**
+     - ``OUTPUT``
+     - [vector: point]
 
-  Default: *1.0*
+       Default: ``[Create temporary layer]``
+     - Specify the output point vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Projected`` [vector: point]
-  Projected layer at given degrees and distance.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Projected**
+     - ``OUTPUT``
+     - [vector: point]
+     - The output (projected) point vector layer
 
 .. _qgispromotetomulti:
 
 Promote to multipart
 --------------------
-Takes a vector layer with singlepart geometries and generates a new one in which
-all geometries are multipart.
+Takes a vector layer with singlepart geometries and generates a new
+one in which all geometries are multipart.
 
-Input features which are already multipart features will remain unchanged.
+Input features which are already multipart features will remain
+unchanged.
 
-This algorithm can be used to force geometries to multipart types in order to be
-compatible with data providers that require multipart features.
+This algorithm can be used to force geometries to multipart types in
+order to be compatible with data providers that require multipart
+features.
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgisaggregate`, :ref:`qgiscollect`
 
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Multiparts**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output multipart vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Multiparts`` [vector: any]
-  Multiparts vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Multiparts**
+     - ``OUTPUT``
+     - [same as input]
+     - The output multipart vector layer
 
 
 .. _qgisrectanglesovalsdiamondsfixed:
