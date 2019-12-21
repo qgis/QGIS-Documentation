@@ -2946,7 +2946,7 @@ Outputs
    * - **Output**
      - ``OUTPUT``
      - [vector: polygon]
-     - The output vector layer
+     - The output vector layer (with the buffer shapes)
 
 
 .. _qgisrectanglesovalsdiamondsvariable:
@@ -3046,7 +3046,7 @@ Outputs
    * - **Output**
      - ``OUTPUT``
      - [vector: polygon]
-     - The output vector layer
+     - The output vector layer (with the buffer shapes)
 
 
 .. _qgisremoveduplicatevertices:
@@ -3105,9 +3105,9 @@ Parameters
      - [boolean |dataDefined|]
 
        Default: False
-     - Use also the Z coordinate when detecting duplicate vertices
-       (two points that share X and Y coordinates but have different
-       Z values are not considered duplicates).
+     - If the :guilabel;`Use Z Value` parameter is true, then the Z values are also
+       tested and vertices with the same X and Y but different Z will be
+       maintained.
    * - **Cleaned**
      - ``OUTPUT``
      - [same as input]
@@ -3463,7 +3463,7 @@ Parameters
    * - **Input layer**
      - ``INPUT``
      - [vector: line, polygon]
-     - Input line vector layer
+     - Input line or polygon vector layer
    * - **Maximum offset distance**
      - ``DISTANCE``
      - [number |dataDefined|]
@@ -3608,8 +3608,6 @@ Parameters
    * - **Raster layer**
      - ``RASTER``
      - [raster]
-
-       Default: []
      - Raster layer with M values
    * - **Band number**
      - ``BAND``
