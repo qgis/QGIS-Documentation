@@ -759,6 +759,43 @@ To export the map canvas with the current rendering:
    * |saveMapAsImage| :guilabel:`Export Map to Image...`
    * or |saveAsPDF| :guilabel:`Export Map to PDF...`
 
+The two tools provide you with a common set of options.
+In the dialog that opens:
+
+.. _figure_savemapimage:
+
+.. figure:: img/saveMapAsImage.png
+   :align: center
+
+   The Save Map as Image dialog
+
+#. Choose the :guilabel:`Extent` to export: it can be the current view extent
+   (the default), the extent of a layer or a custom extent drawn over the map
+   canvas. Coordinates of the selected area are displayed and manually editable.
+#. Enter the :guilabel:`Scale` of the map or select it from the
+   :ref:`predefined scales <predefinedscales>`: changing the scale will resize
+   the extent to export (from the center).
+#. Set the :guilabel:`Resolution` of the output
+#. Control the :guilabel:`Output width` and :guilabel:`Output height` in pixels
+   of the image: based by default on the current resolution and extent,
+   they can be customized and will resize the map extent (from the center).
+   The size ratio can be locked, which may be particularly convenient when
+   drawing the extent on the canvas.
+#. |checkbox| :guilabel:`Draw active decorations`: in use :ref:`decorations
+   <decorations>` (scale bar, title, grid, north arrow...) are exported
+   with the map
+#. |checkbox| :guilabel:`Draw annotations` to export any :ref:`annotation
+   <sec_annotations>`
+#. |checkbox| :guilabel:`Append georeference information (embedded or via world
+   file)`: depending on the output format, a world file of the same name
+   (with extension ``PNGW`` for ``PNG`` image, ``JPGW`` for ``JPG`` ones...)
+   is saved in the same folder as your image. The ``PDF`` format embeds the
+   information in the same file.
+#. Click :guilabel:`Save` to select file location, name and format.
+
+   When exporting to image, it's also possible to :guilabel:`Copy to clipboard`
+   the expected result of the above settings and paste the map in another
+   application such as LibreOffice, GIMP...
 
 .. index:: 3D Map view
 .. _`label_3dmapview`:
@@ -1038,6 +1075,8 @@ open the Plugin Manager dialog.
    :width: 1.5em
 .. |capturePolygon| image:: /static/common/mActionCapturePolygon.png
    :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
 .. |circularStringCurvePoint| image:: /static/common/mActionCircularStringCurvePoint.png
    :width: 1.5em
 .. |circularStringRadius| image:: /static/common/mActionCircularStringRadius.png

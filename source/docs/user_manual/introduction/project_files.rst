@@ -132,11 +132,11 @@ already discussed saving as a project file in :ref:`sec_projects`.
 Other ways to produce output files are:
 
 * Creating images: :menuselection:`Project --> Import/Export -->` |saveMapAsImage|
-  :menuselection:`Export Map
-  to Image...` opens a file dialog where you select the name, path and type of
-  image (PNG, JPG and many other formats). This will also create a world file
-  (with extension ``PNGW`` or ``JPGW``) that is saved in the same folder as your
-  image. This world file is used to georeference the image.
+  :menuselection:`Export Map to Image...` outputs the map canvas rendering to
+  various image formats (PNG, JPG, TIFF...) at custom scale, resolution...
+  This will also create a world file (eg, with extension ``PNGW`` or ``JPGW``)
+  that is saved in the same folder as your image. This world file is used
+  to georeference the image. See :ref:`exportingmapcanvas` for more details.
 * Exporting to DXF files: :menuselection:`Project --> Import/Export --> Export
   Project to DXF...` opens
   a dialog where you can define the 'Symbology mode', the 'Symbology scale' and
