@@ -4634,8 +4634,8 @@ Outputs
 
 Rectangles, ovals, diamonds (fixed)
 -----------------------------------
-Creates a buffer area for all the features in an input layer with different shape
-choice.
+Creates a buffer area for all the features in an input layer with
+different shape choice.
 
 Parameters can vary depending on the shape chosen.
 
@@ -4649,55 +4649,95 @@ Parameters can vary depending on the shape chosen.
 Parameters
 ..........
 
-``Input layer`` [vector: point]
-  Input point vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Buffer shape`` [enumeration]
-  Different shapes available:
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: point]
+     - Input point vector layer
+   * - **Buffer shape**
+     - ``SHAPE``
+     - [enumeration]
+     - The shape to use. One of:
 
-  * 0 --- Rectangles
-  * 1 --- Ovals
-  * 2 --- Diamonds
+       * 0 --- Rectangles
+       * 1 --- Ovals
+       * 2 --- Diamonds
 
-  Default: *0*
+   * - **Width**
+     - ``WIDTH``
+     - [number]
 
-``Width`` [number]
-  Width of the buffer shape.
+       Default: 1.0
+     - Width of the buffer shape
+   * - **Height**
+     - ``HEIGHT``
+     - [number]
 
-  Default: *1.0*
+       Default: 1.0
+     - Height of the buffer shape
+   * - **Rotation**
 
-``Height`` [number]
-  Height of the buffer shape.
+       Optional
+     - ``ROTATION``
+     - [number]
 
-  Default: *1.0*
+       Default: None
+     - Rotation of the buffer shape
+   * - **Number of segment**
+     - ``SEGMENTS``
+     - [number]
 
-``Rotation`` [number]
-  Optional
+       Default: 36
+     - Number of segments for a full circle (*Ovals* shape)
+   * - **Output**
+     - ``OUTPUT``
+     - [vector: polygon]
 
-  Rotation of the buffer shape.
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
 
-  Default: *0.0*
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-``Number of segment`` [number]
-  How many segment should have the buffer shape.
-
-  Default: *36*
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Output`` [vector: polygon]
-  Buffer shape in output.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output vector layer (with the buffer shapes)
 
 
 .. _qgisrectanglesovalsdiamondsvariable:
 
 Rectangles, ovals, diamonds (variable)
 --------------------------------------
-Creates a buffer area for all the features in an input layer with different shape
-choice.
+Creates a buffer area for all the features in an input layer with
+different shape choice.
 
-Buffer shape parameters are specified through attribute of the input layer.
+Buffer shape parameters are specified through attribute of the input
+layer.
 
 .. figure:: img/rectangles_ovals_diamond_variable.png
    :align: center
@@ -4709,94 +4749,175 @@ Buffer shape parameters are specified through attribute of the input layer.
 Parameters
 ..........
 
-``Input layer`` [vector: point]
-  Input point vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Buffer shape`` [enumeration]
-  Different shape available:
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: point]
+     - Input point vector layer
+   * - **Buffer shape**
+     - ``SHAPE``
+     - [enumeration]
 
-  * 0 --- Rectangles
-  * 1 --- Ovals
-  * 2 --- Diamonds
+       Default: 0
+     - The shape to use. One of:
 
-  Default: *0*
+       * 0 --- Rectangles
+       * 1 --- Ovals
+       * 2 --- Diamonds
 
-``Width`` [tablefield: numeric]
-  Width of the buffer shape.
+   * - **Width field**
+     - ``WIDTH``
+     - [tablefield: numeric]
 
-  Default: *1.0*
+       Default: First
+     - Width of the buffer shape
+   * - **Height field**
+     - ``HEIGHT``
+     - [tablefield: numeric]
 
-``Height`` [tablefield: numeric]
-  Height of the buffer shape.
+       Default: First
+     - Height of the buffer shape
+   * - **Rotation field**
 
-  Default: *1.0*
+       Optional
+     - ``ROTATION``
+     - [tablefield: numeric]
+     - Rotation of the buffer shape
+   * - **Number of segment**
+     - ``SEGMENTS``
+     - [number]
 
-``Rotation`` [tablefield: numeric]
-  Optional
+       Default: 36
+     - Number of segments for a full circle (*Ovals* shape)
+   * - **Output**
+     - ``OUTPUT``
+     - [vector: polygon]
 
-  Rotation of the buffer shape.
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
 
-  Default: *0.0*
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-``Number of segment`` [number]
-  How many segment should have the buffer shape.
-
-  Default: *36*
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Output`` [vector: polygon]
-  Buffer shape in output.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - The output vector layer (with the buffer shapes)
 
 
 .. _qgisremoveduplicatevertices:
 
 Remove duplicate vertices
 -------------------------
-Removes duplicate vertices from features, wherever removing the vertices does not
-result in a degenerate geometry.
+Removes duplicate vertices from features, wherever removing the
+vertices does not result in a degenerate geometry.
 
-The tolerance parameter specifies the tolerance for coordinates when determining
-whether vertices are identical.
+The tolerance parameter specifies the tolerance for coordinates when
+determining whether vertices are identical.
 
-By default, Z values are not considered when detecting duplicate vertices.
-E.g. two vertices with the same X and Y coordinate but different Z values will still
-be considered duplicate and one will be removed. If the Use Z Value parameter is true,
-then the Z values are also tested and vertices with the same X and Y but different Z
-will be maintained.
+By default, Z values are not considered when detecting duplicate
+vertices.
+E.g. two vertices with the same X and Y coordinate but different Z
+values will still be considered duplicate and one will be removed.
+If the :guilabel;`Use Z Value` parameter is true, then the Z values are also
+tested and vertices with the same X and Y but different Z will be
+maintained.
 
-.. note:: Duplicate vertices are not tested between different parts of a multipart
-  geometry, e.g. a multipoint geometry with overlapping points will not be changed by
-  this method.
+.. note:: Duplicate vertices are not tested between different parts of
+   a multipart geometry, e.g. a multipoint geometry with overlapping
+   points will not be changed by this method.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
-.. seealso:: :ref:`qgisextractvertices`, :ref:`qgisextractspecificvertices`,
- :ref:`qgisdeleteduplicategeometries`
+.. seealso:: :ref:`qgisextractvertices`,
+   :ref:`qgisextractspecificvertices`,
+   :ref:`qgisdeleteduplicategeometries`
 
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer with duplicate vertices.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Tolerance`` [number |dataDefined|]
-  Vertices closer than the specified distance are considered duplicates.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Tolerance**
+     - ``TOLERANCE``
+     - [number |dataDefined|]
 
-  Default:*0.000001*
+       Default: 0.000001
+     - Vertices closer than the specified distance are considered
+       duplicates
+   * - **Use Z value**
+     - ``USE_Z_VALUE``
+     - [boolean |dataDefined|]
 
-``Use Z value`` [boolean |dataDefined|]
-  Allows to consider the Z coordinate when detecting duplicate vertices ie two points
-  at the same X,Y coordinate but with different Z value are not set as duplicates.
+       Default: False
+     - If the :guilabel;`Use Z Value` parameter is true, then the Z values are also
+       tested and vertices with the same X and Y but different Z will be
+       maintained.
+   * - **Cleaned**
+     - ``OUTPUT``
+     - [same as input]
 
-  Default: *False*
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Cleaned`` [vector: any]
-  Vector layer without duplicate vertices.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Cleaned**
+     - ``OUTPUT``
+     - [same as input]
+     - The output vector layer (without duplicate vertices)
 
 
 .. _qgisremovenullgeometries:
@@ -4813,17 +4934,70 @@ The features with null geometries can be saved to a separate layer.
 
 Parameters
 ..........
-``Input layer`` [vector: any]
-  Input vector layer with NULL geometries.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer (with non-NULL geometries)
+   * - **Non null geometries**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer for the non-NULL geometries.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
+   * - **Null geometries**
+     - ``NULL_OUTPUT``
+     - [same as input]
+
+       Default: ``[Skip output]``
+     - Specify the output vector layer for the NULL geometries.
+       One of:
+
+       * Skip Output
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Non null geometries`` [vector: any]
-  Vector layer without NULL geometries.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Null geometries`` [vector: any]
-  Vector layer with only NULL geometries.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Null geometries**
+     - ``NULL_OUTPUT``
+     - [same as input]
+     - The output vector layer (only NULL geometries)
+   * - **Non null geometries**
+     - ``OUTPUT``
+     - [same as input]
+     - The output vector layer (without NULL geometries)
 
 
 .. _qgisreverselinedirection:
@@ -4842,14 +5016,50 @@ Inverts the direction of a line layer.
 Parameters
 ..........
 
-``Input layer`` [vector: line]
-  Input line vector layer to invert the direction.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input line vector layer
+   * - **Reversed**
+     - ``OUTPUT``
+     - [vector: line]
+     
+       Default: ``[Create temporary layer]``
+     - Specify the output line vector layer.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Reversed`` [vector: line]
-  Inverted line vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Reversed**
+     - ``OUTPUT``
+     - [vector: line]
+     - The output line vector layer (with reversed lines)
 
 
 .. _qgisrotatefeatures:
@@ -4860,96 +5070,219 @@ Rotates feature geometries by the specified angle clockwise.
 The rotation occurs around each feature's centroid, or optionally
 around a unique preset point.
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgistranslategeometry`, :ref:`qgisswapxy`
 
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Vector layer in input.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Rotation (degrees clockwise)`` [number |dataDefined|]
-  Angle of the rotation in degrees.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Rotation (degrees clockwise)**
+     - ``ANGLE``
+     - [number |dataDefined|]
 
-  Default: *0.0*
+       Default: 0.0
+     - Angle of the rotation in degrees
+   * - **Rotation anchor point (x, y)**
 
-``Rotation anchor point (x, y)`` [point]
-  Optional
+       Optional
+     - ``ANCHOR``
+     - [point]
 
-  X,Y coordinates of the point to rotate the features around.
-  If not set the rotation occurs around each feature's centroid.
+       Default: None
+     - X,Y coordinates of the point to rotate the
+       features around.
+       If not set the rotation occurs around each
+       feature's centroid.
+   * - **Rotated**
+     - ``OUTPUT``
+     - [same as input]
+     
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer (with rotated geometries).
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Rotated`` [vector: any]
-  Vector layer with rotated geometries.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Rotated**
+     - ``OUTPUT``
+     - [same as input]
+     - The output vector layer with rotated geometries
 
 
 .. _qgissegmentizebymaxangle:
 
 Segmentize by maximum angle
 ---------------------------
-Segmentizes a geometry by converting curved sections to linear sections.
+Segmentizes a geometry by converting curved sections to linear
+sections.
 
-The segmentization is performed by specifying the maximum allowed radius angle
-between vertices on the straightened geometry (e.g the angle of the arc created
-from the original arc center to consecutive output vertices on the linearized
-geometry).
+The segmentization is performed by specifying the maximum allowed
+radius angle between vertices on the straightened geometry (e.g the
+angle of the arc created from the original arc center to consecutive
+output vertices on the linearized geometry).
 Non-curved geometries will be retained without change.
 
-.. seealso:: :ref:`qgissegmentizebymaxdistance`, :ref:`qgissimplifygeometries`,
- :ref:`qgissmoothgeometry`
+.. seealso:: :ref:`qgissegmentizebymaxdistance`,
+   :ref:`qgissimplifygeometries`, :ref:`qgissmoothgeometry`
 
 Parameters
 ..........
 
-``Input layer`` [vector: line, polygon]
-  Vector layer in input.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Maximum angle between vertices (degrees)`` [number |dataDefined|]
-  Maximum allowed radius angle between vertices on the straightened geometry.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line, polygon]
+     - Input line or polygon vector layer
+   * - **Maximum angle between vertices (degrees)**
+     - ``ANGLE``
+     - [number |dataDefined|]
 
-  Default: *5.0*
+       Default: 5.0
+     - Maximum allowed radius angle between vertices
+       on the straightened geometry
+   * - **Segmentized**
+     - ``OUTPUT``
+     - [same as input]
+     
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer (with segmentized geometries).
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Segmentized`` [vector: line, polygon]
-  Vector layer with segmentized geometries.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Segmentized**
+     - ``OUTPUT``
+     - [same as input]
+     - The output vector layer with segmentized geometries
 
 
 .. _qgissegmentizebymaxdistance:
 
 Segmentize by maximum distance
 ------------------------------
-Segmentizes a geometry by converting curved sections to linear sections.
+Segmentizes a geometry by converting curved sections to linear
+sections.
 
-The segmentization is performed by specifying the maximum allowed offset
-distance between the original curve and the segmentized representation.
+The segmentization is performed by specifying the maximum allowed
+offset distance between the original curve and the segmentized
+representation.
 Non-curved geometries will be retained without change.
 
-.. seealso:: :ref:`qgissegmentizebymaxangle`, :ref:`qgissimplifygeometries`, :ref:`qgissmoothgeometry`
+.. seealso:: :ref:`qgissegmentizebymaxangle`,
+   :ref:`qgissimplifygeometries`, :ref:`qgissmoothgeometry`
 
 Parameters
 ..........
 
-``Input layer`` [vector: line, polygon]
-  Vector layer in input.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Maximum offset distance`` [number |dataDefined|]
-  Maximum allowed offset distance between the original curve and the segmentized
-  representation, in the layer units.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line, polygon]
+     - Input line or polygon vector layer
+   * - **Maximum offset distance**
+     - ``DISTANCE``
+     - [number |dataDefined|]
 
-  Default: *1.0*
+       Default: 1.0
+     - Maximum allowed offset distance between the
+       original curve and the segmentized representation,
+       in the layer units.
+   * - **Segmentized**
+     - ``OUTPUT``
+     - [same as input]
+     
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer (with segmentized geometries).
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Segmentized`` [vector: line, polygon]
-  Vector layer with segmentized geometries.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Segmentized**
+     - ``OUTPUT``
+     - [same as input]
+     - The output vector layer with segmentized geometries
 
 
 .. _qgissetmvalue:
@@ -4970,19 +5303,56 @@ specified value used as the initial M value for all geometries.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``M Value`` [number |dataDefined|]
-  New M value to assign to the features.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **M Value**
+     - ``M_VALUE``
+     - [number |dataDefined|]
 
-  Default: *0.0*
+       Default: 0.0
+     - M value to assign to the feature geometries
+   * - **M Added**
+     - ``OUTPUT``
+     - [same as input]
+     
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``M Added`` [vector: any]
-  Vector layer in output with M value.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **M Added**
+     - ``OUTPUT``
+     - [same as input]
+     - The output vector layer (with M values assigned to the geometries)
 
 
 .. _qgissetmfromraster:
@@ -5001,30 +5371,74 @@ If no M values exist, the geometry will be upgraded to include M values.
 
 Parameters
 ..........
-``Input layer`` [vector: any]
-  Input vector layer to set the M values to.
 
-``Raster layer`` [raster]
-  Raster layer to take the M values from.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Band number`` [raster band]
-  The raster band to take the M values from if the raster is multiband.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Raster layer**
+     - ``RASTER``
+     - [raster]
+     - Raster layer with M values
+   * - **Band number**
+     - ``BAND``
+     - [raster band]
 
-``Value for nodata or non-intersecting vertices`` [number |dataDefined|]
-  Value to use in case the vertex does not intersect (a valid pixel of) the raster.
+       Default: 1
+     - The raster band from which the M values are taken
+   * - **Value for nodata or non-intersecting vertices**
+     - ``NODATA``
+     - [number |dataDefined|]
+       Default: 0.0
+     - Value to use in case the vertex does not intersect
+       (a valid pixel of) the raster
+   * - **Scale factor**
+     - ``SCALE``
+     - [number |dataDefined|]
 
-  Default: *0.0*
+       Default: 1.0
+     - Scaling value: the band values are multiplied
+       by this value.
+   * - **Updated**
+     - ``OUTPUT``
+     - [same as input]
+     
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer (with updated M values).
+       One of:
 
-``Scale factor`` [number |dataDefined|]
-  Scaling value: the band values are multiplied by this value.
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
 
-  Default: *1.0*
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Updated`` [vector: any]
-  A vector layer with M values extracted from the provided raster layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Updated**
+     - ``OUTPUT``
+     - [same as input]
+     - The output vector layer (with updated M values)
 
 
 .. _qgissetzvalue:
@@ -5045,19 +5459,56 @@ specified value used as the initial Z value for all geometries.
 Parameters
 ..........
 
-``Input layer`` [vector: any]
-  Input vector layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Z Value`` [number |dataDefined|]
-  New Z value to assign to the features.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Z Value**
+     - ``Z_VALUE``
+     - [number |dataDefined|]
 
-  Default: *0.0*
+       Default: 0.0
+     - Z value to assign to the feature geometries
+   * - **Z Added**
+     - ``OUTPUT``
+     - [same as input]
+     
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Z Added`` [vector: any]
-  Vector layer in output with Z value.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Z Added**
+     - ``OUTPUT``
+     - [same as input]
+     - The output vector layer (with Z values assigned)
 
 
 .. _qgissimplifygeometries:
@@ -5087,31 +5538,70 @@ snapping geometries to grid.
 Parameters
 ..........
 
-``Input layer`` [vector: line, polygon]
-  Polygon or line vector to simplify.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Simplification method`` [enumeration]
-  Method of the simplification.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line, polygon]
+     - Input line or polygon vector layer
+   * - **Simplification method**
+     - ``METHOD``
+     - [enumeration]
 
-  Options:
+       Default: 0
+     - Simplification method. One of:
 
-  * 0 --- Distance (Douglas-Peucker)
-  * 1 --- Snap to grid
-  * 2 --- Area (Visvalingam)
+       * 0 --- Distance (Douglas-Peucker)
+       * 1 --- Snap to grid
+       * 2 --- Area (Visvalingam)
 
-  Default: *0*
+   * - **Tolerance**
+     - ``TOLERANCE``
+     - [number |dataDefined|]
 
-``Tolerance`` [number |dataDefined|]
-  Threshold tolerance (in units of the layer): if the distance between two nodes is smaller than the
-  tolerance value, the segment will be simplified and vertices will be removed.
+       Default: 1.0
+     - Threshold tolerance (in units of the layer):
+       if the distance between two nodes is smaller than
+       the tolerance value, the segment will be simplified
+       and vertices will be removed.
+   * - **Simplified**
+     - ``OUTPUT``
+     - [same as input]
+     
+       Default: ``[Create temporary layer]``
+     - Specify the output (simplified) vector layer.
+       One of:
 
-  Default: *1.0*
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Simplified`` [vector: line, polygon]
-  Simplified vector layers in output.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Simplified**
+     - ``OUTPUT``
+     - [same as input]
+     - The output (simplified) vector layer
 
 
 .. _qgissinglesidedbuffer:
