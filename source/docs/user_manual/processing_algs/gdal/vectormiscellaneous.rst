@@ -750,7 +750,7 @@ Parameters
 
        Default: True
      - 
-   * - **Supress metadata info**
+   * - **Suppress metadata info**
 
        Optional
      - ``NO_METADATA``
