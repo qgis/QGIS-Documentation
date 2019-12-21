@@ -2889,7 +2889,7 @@ Parameters
 
        * 0 --- Rectangles
        * 1 --- Ovals
-       * 2 --- DiamondsInput vector layer
+       * 2 --- Diamonds
 
    * - **Width**
      - ``WIDTH``
@@ -2922,7 +2922,7 @@ Parameters
      - [vector: polygon]
 
        Default: ``[Create temporary layer]``
-     - Specify the output multipart vector layer. One of:
+     - Specify the output vector layer. One of:
 
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
@@ -2991,7 +2991,7 @@ Parameters
 
        * 0 --- Rectangles
        * 1 --- Ovals
-       * 2 --- DiamondsInput vector layer
+       * 2 --- Diamonds
 
    * - **Width field**
      - ``WIDTH``
@@ -3022,7 +3022,7 @@ Parameters
      - [vector: polygon]
 
        Default: ``[Create temporary layer]``
-     - Specify the output multipart vector layer. One of:
+     - Specify the output vector layer. One of:
 
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
@@ -3063,7 +3063,7 @@ By default, Z values are not considered when detecting duplicate
 vertices.
 E.g. two vertices with the same X and Y coordinate but different Z
 values will still be considered duplicate and one will be removed.
-If the Use Z Value parameter is true, then the Z values are also
+If the :guilabel;`Use Z Value` parameter is true, then the Z values are also
 tested and vertices with the same X and Y but different Z will be
 maintained.
 
@@ -3113,7 +3113,7 @@ Parameters
      - [same as input]
 
        Default: ``[Create temporary layer]``
-     - Specify the output multipart vector layer. One of:
+     - Specify the output vector layer. One of:
 
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
@@ -3137,7 +3137,7 @@ Outputs
    * - **Cleaned**
      - ``OUTPUT``
      - [same as input]
-     - The output vector layer
+     - The output vector layer (without duplicate vertices)
 
 
 .. _qgisremovenullgeometries:
@@ -3167,7 +3167,7 @@ Parameters
    * - **Input layer**
      - ``INPUT``
      - [vector: any]
-     - Input vector layer
+     - Input vector layer (with non-NULL geometries)
    * - **Non null geometries**
      - ``OUTPUT``
      - [same as input]
@@ -3309,8 +3309,8 @@ Parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: line]
-     - Input line vector layer
+     - [vector: any]
+     - Input vector layer
    * - **Rotation (degrees clockwise)**
      - ``ANGLE``
      - [number |dataDefined|]
@@ -3323,7 +3323,7 @@ Parameters
      - ``ANCHOR``
      - [point]
 
-       Default: 0.0
+       Default: None
      - X,Y coordinates of the point to rotate the
        features around.
        If not set the rotation occurs around each
@@ -3333,7 +3333,7 @@ Parameters
      - [same as input]
      
        Default: ``[Create temporary layer]``
-     - Specify the output line vector layer.
+     - Specify the output vector layer (with rotated geometries).
        One of:
 
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
@@ -3392,7 +3392,7 @@ Parameters
    * - **Input layer**
      - ``INPUT``
      - [vector: line, polygon]
-     - Input line vector layer
+     - Input line or polygon vector layer
    * - **Maximum angle between vertices (degrees)**
      - ``ANGLE``
      - [number |dataDefined|]
@@ -3405,7 +3405,7 @@ Parameters
      - [same as input]
      
        Default: ``[Create temporary layer]``
-     - Specify the output line vector layer.
+     - Specify the output vector layer (with segmentized geometries).
        One of:
 
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
@@ -3477,7 +3477,7 @@ Parameters
      - [same as input]
      
        Default: ``[Create temporary layer]``
-     - Specify the output line vector layer.
+     - Specify the output vector layer (with segmentized geometries).
        One of:
 
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
@@ -3547,7 +3547,7 @@ Parameters
      - [same as input]
      
        Default: ``[Create temporary layer]``
-     - Specify the output line vector layer.
+     - Specify the output vector layer.
        One of:
 
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
@@ -3572,7 +3572,7 @@ Outputs
    * - **M Added**
      - ``OUTPUT``
      - [same as input]
-     - The output vector layer
+     - The output vector layer (with M values assigned to the geometries)
 
 
 .. _qgissetmfromraster:
@@ -3616,7 +3616,7 @@ Parameters
      - [raster band]
 
        Default: 1
-     - The raster band with the M values
+     - The raster band from which the M values are taken
    * - **Value for nodata or non-intersecting vertices**
      - ``NODATA``
      - [number |dataDefined|]
@@ -3635,7 +3635,7 @@ Parameters
      - [same as input]
      
        Default: ``[Create temporary layer]``
-     - Specify the output line vector layer.
+     - Specify the output vector layer (with updated M values).
        One of:
 
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
@@ -3660,7 +3660,7 @@ Outputs
    * - **Updated**
      - ``OUTPUT``
      - [same as input]
-     - The output vector layer
+     - The output vector layer (with updated M values)
 
 
 .. _qgissetzvalue:
@@ -3705,7 +3705,7 @@ Parameters
      - [same as input]
      
        Default: ``[Create temporary layer]``
-     - Specify the output line vector layer.
+     - Specify the output vector layer.
        One of:
 
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
@@ -3730,7 +3730,7 @@ Outputs
    * - **Z Added**
      - ``OUTPUT``
      - [same as input]
-     - The output vector layer
+     - The output vector layer (with Z values assigned)
 
 
 .. _qgissimplifygeometries:
@@ -3798,7 +3798,7 @@ Parameters
      - [same as input]
      
        Default: ``[Create temporary layer]``
-     - Specify the output line vector layer.
+     - Specify the output (simplified) vector layer.
        One of:
 
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
