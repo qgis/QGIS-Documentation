@@ -1279,13 +1279,6 @@ Parameters
      
        Default: False
      - Remove from the output the input layer records which could not be joined
-   * - **Joined field prefix**
-
-       Optional
-     - ``PREFIX``
-     - [string]
-     - Add a prefix to joined fields in order to easily identify
-       them and avoid field name collision
    * - **Joined layer**
      - ``OUTPUT``
      - [same as input]
