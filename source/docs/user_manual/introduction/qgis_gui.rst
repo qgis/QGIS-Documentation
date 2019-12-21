@@ -158,7 +158,9 @@ the :ref:`project file <sec_projects>`. It provides you with tools to:
      -
      - \
 
-       * :ref:`sec_output`
+       * :ref:`exportingmapcanvas`
+       * :ref:`exportingmapcanvas`
+       * :ref:`create_dxf_files`
        * :ref:`import_dxfdwg`
    * - |newLayout| :guilabel:`New Print Layout...`
      - :kbd:`Ctrl+P`
