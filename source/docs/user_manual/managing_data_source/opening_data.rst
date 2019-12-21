@@ -340,7 +340,6 @@ Delimited text file (e.g. :file:`.txt`,:file:`.csv`, :file:`.dat`, :file: `.wkt`
 can be loaded in QGIS using the tools described above. However, loaded this way,
 it'll show up like a simple table data. Sometimes, delimited text files can contain
 geometric data you'd want to visualize; this is what the |addDelimitedTextLayer|:guilabel:`Add
-Delimited Text Layer` is designed for.
 
 Click the |dataSourceManager| :sup:`Open Data Source Manager` icon to open the
 :guilabel:`Data Source Manager` dialog and enable the |addDelimitedTextLayer|
