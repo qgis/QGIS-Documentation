@@ -336,7 +336,7 @@ Mesh layers (currently :file:`.grb`, :file:`.grb2`, :file:`.bin`, :file:`.grib`,
 Importing a delimited text file
 -------------------------------
 
-Delimited text file (e.g. :file:`.txt`,:file:`.csv`, :file:`.dat`, :file: `.wkt`) 
+Delimited text files (e.g. :file:`.txt`, :file:`.csv`, :file:`.dat`, :file: `.wkt`) 
 can be loaded in QGIS using the tools described above. However, loaded this way,
 it'll show up like a simple table data. Sometimes, delimited text files can contain
 coordinates / geometries that you could want to visualize; this is what the
