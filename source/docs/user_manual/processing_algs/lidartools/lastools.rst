@@ -1273,7 +1273,7 @@ Parameters
        Default: None
      -
    * - **Output ASCII file**
-     - ``OUTPUT``
+     - ``OUTPUT_GENERIC``
      - [file]
 
        Default: ``[Create temporary layer]``
@@ -1297,7 +1297,7 @@ Outputs
      - Type
      - Description
    * - **Output ASCII file**
-     - ``OUTPUT``
+     - ``OUTPUT_GENERIC``
      - [file]
      - The output file
 
