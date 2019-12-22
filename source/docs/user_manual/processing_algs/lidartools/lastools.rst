@@ -1220,31 +1220,86 @@ las2txt
 Description
 ...........
 
-<put algorithm description here>
+Translates a LAS/LAZ file to a text file.
 
 Parameters
 ..........
 
-``verbose`` [boolean]
-  <put parameter description here>
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-  Default: *False*
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **verbose**
+     - ``VERBOSE``
+     - [boolean]
+     
+       Default: False
+     -
+   * - **run new 64 bit executable**
+     - ``CPU64``
+     - [boolean]
+     
+       Default: False
+     -
+   * - **open LAStools GUI**
+     - ``GUI``
+     - [boolean]
+     
+       Default: False
+     -
+   * - **input LAS/LAZ file**
+     - ``INPUT_LASLAZ``
+     - [file]
+     
+       Default: None
+     -
+   * - **parse_string**
+     - ``PARSE``
+     - [string]
 
-``input LAS/LAZ file`` [file]
-  Optional
+       Default: 'xyz'
+     -
+   * - **additional command line parameters**
+       
+       Optional
+     - ``ADDITIONAL OPTIONS``
+     - [string]
+     
+       Default: None
+     -
+   * - **Output ASCII file**
+     - ``OUTPUT_GENERIC``
+     - [file]
 
-  <put parameter description here>
+       Default: ``[Create temporary layer]``
+     - Specify the output file.  One of:
 
-``parse_string`` [string]
-  <put parameter description here>
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
 
-  Default: *xyz*
-
+       The file encoding can also be changed here.
+  
 Outputs
 .......
 
-``Output ASCII file`` [file]
-  <put output description here>
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output ASCII file**
+     - ``OUTPUT_GENERIC``
+     - [file]
+     - The output file
 
 
 lasindex
