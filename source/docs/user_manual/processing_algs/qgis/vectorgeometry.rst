@@ -949,6 +949,12 @@ Concave hull (alpha shapes)
 ---------------------------
 Computes the concave hull of the features in an input point layer.
 
+.. figure:: img/concave_hull_threshold.png
+    :align: center
+
+    Concave hulls with different thresholds (0.3, 0.6, 0.9)
+
+
 .. seealso:: :ref:`qgisconvexhull`, :ref:`qgisknearestconcavehull`
 
 Parameters
@@ -973,12 +979,6 @@ Parameters
 
        Default: 0.3
      - Number from 0 (maximum concave hull) to 1 (convex hull).
-     
-       .. figure:: img/concave_hull_threshold.png
-          :align: center
-
-          Different thresholds used (0.3, 0.6, 0.9)
-
    * - **Allow holes**
      - ``HOLES``
      - [boolean]
@@ -3461,17 +3461,22 @@ Outputs
 Minimum bounding geometry
 -------------------------
 Creates geometries which enclose the features from an input layer.
+The features can be grouped by a field.
+The output layer will then contain one feature per grouped value with
+a minimal geometry covering just the features with matching values.
 
 The following enclosing geometry types are supported:
 
-* bounding boxe (envelope)
+* bounding box (envelope)
 * oriented rectangle
 * circle
 * convex hull
 
-The features can be grouped by a field.
-The output layer will then contain one feature per grouped value with
-a minimal geometry covering just the features with matching values.
+.. figure:: img/minimum_bounding.png
+    :align: center
+
+    Clockwise from top left: envelope, oriented rectangle,
+    circle, convex hull
 
 .. seealso:: :ref:`qgisminimumenclosingcircle`
 
@@ -3511,12 +3516,6 @@ Parameters
        * 1 --- Minimum Oriented Rectangle
        * 2 --- Minimum Enclosing Circle
        * 3 --- Convex Hull
-
-       .. figure:: img/minimum_bounding.png
-          :align: center
-
-          Clockwise from upper left: envelope, oriented rectangle,
-          circle, convex hull
 
    * - **Bounding geometry**
      - ``OUTPUT``
@@ -3832,23 +3831,6 @@ Parameters
        Default: 8
      - Controls the number of line segments to use to approximate
        a quarter circle when creating rounded offsets.
-   * - **End cap style**
-     - ``END_CAP_STYLE``
-     - [enumeration]
-
-       Default: 0
-     - Controls how line endings are handled in the buffer.
-       One of:
-
-       * 0 --- Round
-       * 1 --- Flat
-       * 2 --- Square
-
-       .. figure:: img/buffer_cap_style.png
-          :align: center
-       
-          Round, flat and square cap styles
-
    * - **Join style**
      - ``JOIN_STYLE``
      - [enumeration]
@@ -5726,9 +5708,20 @@ be applied to each geometry.
 A higher number of iterations results in smoother geometries with the
 cost of greater number of nodes in the geometries.
 
+.. figure:: img/smooth_geometry_1.png
+    :align: center
+
+    Increasing number of iterations causes smoother geometries
+
 The offset parameter controls how "tightly" the smoothed geometries
 follow the original geometries. Smaller values results in a tighter
 fit, and larger values will create a looser fit.
+
+.. figure:: img/smooth_geometry_2.png
+    :align: center
+
+    Blue: the input layer. Offset 0.25 gives the red line, while
+    offset 0.50 gives the green line.
 
 The maximum angle parameter can be used to prevent smoothing of nodes
 with large angles.
@@ -5765,12 +5758,6 @@ Parameters
        Default: 1
      - Increasing the number of iterations will give smoother
        geometries (and more vertices).
-       
-       .. figure:: img/smooth_geometry_1.png
-          :align: center
-         
-          Different number of iterations cause smoother geometries
-
    * - **Offset**
      - ``OFFSET``
      - [number |dataDefined|]
@@ -5778,13 +5765,6 @@ Parameters
        Default: 0.25
      - Increasing values will *move* the smoothed lines / boundaries
        further away from the input lines / booundaries.
-       
-       .. figure:: img/smooth_geometry_2.png
-          :align: center
-       
-          Blue: the input layer. Offset 0.25 gives the red line, while
-          offset 0.50 gives the green line.
-
    * - **Maximum node angle to smooth**
      - ``MAX_ANGLE``
      - [number |dataDefined|]
