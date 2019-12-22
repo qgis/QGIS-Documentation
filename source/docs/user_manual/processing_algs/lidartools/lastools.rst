@@ -1264,7 +1264,7 @@ Parameters
 
        Default: 'xyz'
      -
-   * - **additional command line paramters**
+   * - **additional command line parameters**
        
        Optional
      - ``ADDITIONAL OPTIONS``
