@@ -1093,7 +1093,7 @@ Parameters
      - ``OUTPUT``
      - [same as input]
      - Choice between ``Create Temporary Layer``, ``Save to File``,
-       ``Save to Geopackage`` and ``Save to PostGIS Table``
+       ``Save to Geopackage`` and ``Save to PostGIS Table...``
 
 Outputs
 .......
