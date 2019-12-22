@@ -95,7 +95,7 @@ Outputs
      - Vector layer created by the query
 
 
-.. _gdalimportvectorintopostgisdatabaseavailableconnection:
+.. _gdalimportvectorintopostgisdatabaseavailableconnections:
 
 Export to PostgreSQL (available connections)
 --------------------------------------------
