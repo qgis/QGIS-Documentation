@@ -74,11 +74,18 @@ code running *in* QGIS, you might use the *First Aid* plugin mentioned above.
 
 .. warning:: |outofdate|
 
-A note on configuring your IDE on Windows
-=========================================
+A note on configuring your IDE on Linux and Windows
+====================================================
 
-On Linux there is no additional configuration needed to develop plugins.
-But on Windows you need to make sure you that you have the same environment
+On Linux, all that usually needs to be done is to add the QGIS library locations to the user's `PYTHONPATH` environment variable.  Under most distros, this can be done by editing `~/.bashrc` or `~/.bash-profile` with the following line (tested on OpenSUSE Tumbleweed):
+
+`export PYTHONPATH="$PYTHONPATH:/usr/share/qgis/python/plugins:/usr/share/qgis/python"`
+
+Save the file and implement the environment settings by using the following shell command:
+
+`source ~/.bashrc`
+
+On Windows, you need to make sure you that you have the same environment
 settings and use the same libraries and interpreter as QGIS. The fastest
 way to do this, is to modify the startup batch file of QGIS.
 
