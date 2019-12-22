@@ -2375,13 +2375,13 @@ Outputs
 
 Extract specific vertices
 -------------------------
-Takes a line or polygon layer and generates a point layer with points
-representing specific vertices in the input lines or polygons.
+Takes a vector layer and generates a point layer with points
+representing specific vertices in the input geometries.
 
 For instance, this algorithm can be used to extract the first or last
 vertices in the geometry.
 The attributes associated to each point are the same ones associated
-to the line or polygon that the point belongs to.
+to the feature that the vertex belongs to.
 
 The vertex indices parameter accepts a comma separated string
 specifying the indices of the vertices to extract.
@@ -2413,8 +2413,8 @@ Parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: line]
-     - Input line vector layer
+     - [vector: any]
+     - Input vector layer
    * - **Vertex indices**
      - ``VERTICES``
      - [string]
@@ -2459,11 +2459,11 @@ Outputs
 
 Extract vertices
 ----------------
-Takes a line or polygon layer and generates a point layer with points
-representing the vertices in the input lines or polygons.
+Takes a vector layer and generates a point layer with points
+representing the vertices in the input geometries.
 
 The attributes associated to each point are the same ones associated
-to the line or polygon that the point belongs to.
+to the feature that the vertex belongs to.
 
 Additional fields are added to the vertices indicating the vertex
 index (beginning at 0), the feature’s part and its index within the
@@ -2494,8 +2494,8 @@ Parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: line]
-     - Input line vector layer
+     - [vector: any]
+     - Input vector layer
    * - **Vertices**
      - ``OUTPUT``
      - [vector: point]
@@ -2665,7 +2665,8 @@ Parameters
    * - **Input layer**
      - ``INPUT``
      - [vector: line, polygon]
-     - Input line vector layer
+     - Input line or polygon vector layer
+       to remove vertices from
    * - **Minimum**
        
        Optional
@@ -2673,7 +2674,7 @@ Parameters
      - [number |dataDefined|]
 
        Default: *Not set*
-     - Minimum M value
+     - Minimum of M values allowed
    * - **Maximum**
        
        Optional
@@ -2681,10 +2682,10 @@ Parameters
      - [number |dataDefined|]
 
        Default: *Not set*
-     - Maximum M value
+     - Maximum of M values allowed
    * - **Filtered**
      - ``OUTPUT``
-     - [vector: line]
+     - [same as input]
 
        Default: ``[Create temporary layer]``
      - Specify the output vector layer. One of:
@@ -2711,7 +2712,8 @@ Outputs
    * - **Filtered**
      - ``OUTPUT``
      - [same as input]
-     - The output vector layer.
+     - The output vector layer of features
+       with only the filtered vertices.
 
 
 .. _qgisfilterverticesbyz:
@@ -2757,7 +2759,8 @@ Parameters
    * - **Input layer**
      - ``INPUT``
      - [vector: line, polygon]
-     - Input line vector layer
+     - Input line or polygon vector layer
+       to remove vertices from
    * - **Minimum**
        
        Optional
@@ -2765,7 +2768,7 @@ Parameters
      - [number |dataDefined|]
 
        Default: *Not set*
-     - Minimum Z value
+     - Minimum of Z values allowed
    * - **Maximum**
        
        Optional
@@ -2773,10 +2776,10 @@ Parameters
      - [number |dataDefined|]
 
        Default: *Not set*
-     - Maximum Z value
+     - Maximum of Z values allowed
    * - **Filtered**
      - ``OUTPUT``
-     - [vector: line]
+     - [same as input]
 
        Default: ``[Create temporary layer]``
      - Specify the output vector layer. One of:
@@ -2803,7 +2806,8 @@ Outputs
    * - **Filtered**
      - ``OUTPUT``
      - [same as input]
-     - The output vector layer.
+     - The output vector layer of features
+       with only the filtered vertices.
 
 
 .. _qgisfixgeometries:
