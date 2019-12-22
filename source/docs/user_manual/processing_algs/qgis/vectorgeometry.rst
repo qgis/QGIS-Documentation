@@ -1416,7 +1416,7 @@ See also
 
 .. _qgisdropmzvalues:
 
-Drop m/z values
+Drop M/Z values
 ---------------
 Removes any M (measure) or Z (altitude) values from input geometries.
 
