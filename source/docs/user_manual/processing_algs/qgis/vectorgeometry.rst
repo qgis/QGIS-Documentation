@@ -2279,8 +2279,8 @@ Outputs
 
 .. _qgisextractmvalues:
 
-Extract M values
-----------------
+Extract M values |36|
+---------------------
 
 Extracts M values from geometries into feature attributes.
 
@@ -2531,8 +2531,8 @@ Outputs
 
 .. _qgisextractzvalues:
 
-Extract Z values
-----------------
+Extract Z values |36|
+---------------------
 
 Extracts Z values from geometries into feature attributes.
 
