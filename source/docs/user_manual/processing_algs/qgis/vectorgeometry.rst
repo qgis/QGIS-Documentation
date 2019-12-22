@@ -990,7 +990,8 @@ Parameters
      - [boolean]
 
        Default: True
-     - Choose whether to allow holes in the final concave hull
+     - Check if you want to have singlepart geometries
+       instead of multipart ones.
    * - **Concave hull**
      - ``OUTPUT``
      - [vector: polygon]
@@ -1057,7 +1058,7 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Input point layer**
+   * - **Input layer**
      - ``INPUT``
      - [vector: any]
      - Input vector layer
@@ -1593,7 +1594,7 @@ Parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: point]
+     - [vector: polygon]
      - Input polygon vector layer
    * - **Remove holes with area less than**
 
@@ -1732,7 +1733,7 @@ linearly interpolated at the added vertices.
 
 **Example**
 
-Specifying a distance 3 would cause the segment ``[0 0] -> [10 0]`` to
+Specifying a distance of 3 would cause the segment ``[0 0] -> [10 0]`` to
 be converted to ``[0 0] -> [2.5 0] -> [5 0] -> [7.5 0] -> [10 0]``,
 since 3 extra vertices are required on the segment and spacing these
 at 2.5 increments allows them to be evenly spaced over the segment.
@@ -1843,8 +1844,8 @@ Parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: line, polygon]
-     - Input line or polygon vector layer
+     - [vector: any]
+     - Input vector layer
    * - **Dissolve field(s)**
 
        Optional
@@ -1858,7 +1859,7 @@ Parameters
 
        If no field is provided then all the
        features are dissolved, resulting in a
-       single feature.
+       single (multipart) feature.
    * - ***Dissolved**
      - ``OUTPUT``
      - [same as input]
@@ -1888,7 +1889,7 @@ Outputs
    * - **Dissolved**
      - ``OUTPUT``
      - [same as input]
-     - The output multi-geometry vector layer
+     - The output vector layer with dissolved geometries
 
 
 .. _qgissetzfromraster:
@@ -1925,15 +1926,13 @@ Parameters
    * - **Raster layer**
      - ``RASTER``
      - [raster]
-
-       Default: []
      - Raster layer with Z values
    * - **Band number**
      - ``BAND``
      - [raster band]
 
        Default: 1
-     - The raster band with the Z values from
+     - The raster band to take the Z values from
    * - **Value for nodata or non-intersecting vertices**
      - ``NODATA``
      - [number |dataDefined|]
@@ -1977,7 +1976,7 @@ Outputs
    * - **Updated**
      - ``OUTPUT``
      - [same as input]
-     - The output vector layer
+     - The output vector layer with Z values assigned geometries
 
 
 .. _qgisdropmzvalues:
@@ -2003,7 +2002,7 @@ Parameters
    * - **Input layer**
      - ``INPUT``
      - [vector: any]
-     - Input line or polygon vector layer
+     - Input vector layer with M or Z values
    * - **Drop M Values**
      - ``DROP_M_VALUES``
      - [boolean]
@@ -2083,7 +2082,7 @@ Parameters
    * - **Input layer**
      - ``INPUT``
      - [vector: polygon]
-     - Input line or polygon vector layer
+     - Input polygon vector layer
    * - **Merge selection with the neighboring polygon with the**
      - ``MODE``
      - [enumeration]
@@ -2098,7 +2097,7 @@ Parameters
 
    * - **Eliminated**
      - ``OUTPUT``
-     - [same as input]
+     - [vector: polygon]
 
        Default: ``[Create temporary layer]``
      - Specify the output vector layer. One of:
@@ -2124,8 +2123,8 @@ Outputs
      - Description
    * - **Eliminated**
      - ``OUTPUT``
-     - [same as input]
-     - The output vector layer.
+     - [vector: polygon]
+     - The output polygon vector layer.
 
 
 .. _qgisexplodelines:
@@ -2195,7 +2194,8 @@ Outputs
    * - **Exploded**
      - ``OUTPUT``
      - [vector: line]
-     - The output vector layer.
+     - The output line vector layer with features representing
+       each segment of the input layer.
 
 
 .. _qgisextendlines:
@@ -2274,7 +2274,7 @@ Outputs
    * - **Extended**
      - ``OUTPUT``
      - [vector: line]
-     - The output (line) vector layer.
+     - The output (extended) line vector layer.
 
 
 .. _qgisextractmvalues:
@@ -2867,7 +2867,7 @@ Outputs
    * - **Fixed geometries**
      - ``OUTPUT``
      - [same as input]
-     - The output vector layer.
+     - The output vector layer with fixed geometries.
 
 
 .. _qgisforcerhr:
@@ -2875,9 +2875,8 @@ Outputs
 Force right-hand-rule |36|
 --------------------------
 
-This algorithm forces polygon geometries to respect the 
-Right-Hand-Rule, in which the area that is bounded by a polygon
-is to the right of the boundary.
+Forces polygon geometries to respect the Right-Hand-Rule,
+in which the area that is bounded by a polygon is to the right of the boundary.
 In particular, the exterior ring is oriented in a clockwise
 direction and the interior rings in a counter-clockwise direction.
 The algorithm consumes and produces features with polygon geometries.
@@ -2900,7 +2899,7 @@ Parameters
      - Input vector layer
    * - **Reoriented**
      - ``OUTPUT``
-     - [same as input]
+     - [vector: polygon]
 
        Default: ``[Create temporary layer]``
      - Specify the output vector layer. One of:
@@ -2927,7 +2926,7 @@ Outputs
    * - **Reoriented**
      - ``OUTPUT``
      - [vector: polygon]
-     - The output vector layer.
+     - The output vector layer with reoriented geometries.
 
 
 .. _qgisantimeridiansplit:
@@ -2935,7 +2934,7 @@ Outputs
 Geodesic line split at antimeridian |36|
 ----------------------------------------
 
-This algorithm splits a line into multiple geodesic segments, whenever
+Splits a line into multiple geodesic segments, whenever
 the line crosses the antimeridian (±180 degrees longitude).
 
 Splitting at the antimeridian helps the visual display of the lines in
@@ -2997,7 +2996,7 @@ Outputs
    * - **Split**
      - ``OUTPUT``
      - [vector: line]
-     - The output (geodesic split) line vector layer.
+     - The output line vector layer split at the antimeridian.
 
 
 .. _qgisgeometrybyexpression:
@@ -3011,9 +3010,8 @@ This allows complex geometry modifications which can utilize all the
 flexibility of the QGIS expression engine to manipulate and create
 geometries for output features.
 
-For help with QGIS expression functions, see the inbuilt help for
-specific functions which is available in the
-:ref:`expression builder <vector_expressions>`.
+For help with QGIS expression functions, see the inbuilt help available
+in the :ref:`expression builder <vector_expressions>`.
 
 Parameters
 ..........
@@ -3029,8 +3027,8 @@ Parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: line]
-     - Input line vector layer
+     - [vector: any]
+     - Input vector layer
    * - **Output geometry type**
      - ``OUTPUT_GEOMETRY``
      - [enumeration]
@@ -3050,13 +3048,13 @@ Parameters
      - [boolean]
      
        Default: False
-     - Choose if the output geometry should include the M dimension
+     - Choose if the output geometry should include the Z dimension
    * - **Output geometry has m values**
      - ``WITH_M``
      - [boolean]
      
        Default: False
-     - Choose if the output geometry should include the Z dimension
+     - Choose if the output geometry should include the M dimension
    * - **Geometry expression**
      - ``EXPRESSION``
      - [expression]
@@ -3064,7 +3062,7 @@ Parameters
        Default: '$geometry'
      - Add the geometry expression you want to use.
        You can use the button to open the Expression Dialog.
-       The dialog has lists all the relevant expressions, together
+       The dialog lists all the relevant expressions, together
        with their help and guide.
    * - **Modified geometry**
      - ``OUTPUT``
@@ -3171,8 +3169,8 @@ Outputs
    * - **Interpolated points**
      - ``OUTPUT``
      - [vector: point]
-     - The output point vector layer
-
+     - The output point vector layer with features
+       at a set distance along the line or polygon boundary
 
 .. _qgiskeepnbiggestparts:
 
@@ -3186,7 +3184,7 @@ If a feature has *n* or fewer parts, the feature will just be copied.
 .. figure:: img/n_biggest.png
    :align: center
 
-   Clockwise from left-up: original multipart feature, one, two and
+   Clockwise from top left: original multipart feature, one, two and
    three biggest parts kept
 
 Parameters
@@ -3210,7 +3208,7 @@ Parameters
      - [number]
      
        Default: 1
-     - How many parts to keep. If 1, only the biggest part of the
+     - Number of parts to keep. If 1, only the biggest part of the
        feature will be kept.
    * - **Parts**
      - ``OUTPUT``
@@ -3426,7 +3424,7 @@ Parameters
      - Input line vector layer
    * - **Merged**
      - ``OUTPUT``
-     - [vector: lines]
+     - [vector: line]
 
        Default: ``[Create temporary layer]``
      - Specify the output line vector layer. One of:
@@ -3452,7 +3450,7 @@ Outputs
      - Description
    * - **Merged**
      - ``OUTPUT``
-     - [vector: lines]
+     - [vector: line]
      - The output (merged) line vector layer.
 
 
@@ -3626,7 +3624,7 @@ Outputs
 
 Multi-ring buffer (constant distance)
 -------------------------------------
-Computes multi-ring (*donut*) buffer for all the features of the
+Computes multi-ring (*donut*) buffer for the features of the
 input layer, using a fixed or dynamic distance and number of rings.
 
 .. figure:: img/multiringbuffer.png
@@ -3750,7 +3748,7 @@ Parameters
      - Input vector layer
    * - **Single parts**
      - ``OUTPUT``
-     - [vector: polygon]
+     - [same as input]
 
        Default: ``[Create temporary layer]``
      - Specify the output polygon vector layer. One of:
@@ -3876,7 +3874,7 @@ Parameters
      - [vector: line]
 
        Default: ``[Create temporary layer]``
-     - Specify the output (buffer) layer.
+     - Specify the output (offset) layer.
        One of:
 
        * Skip output
@@ -3902,7 +3900,7 @@ Outputs
    * - **Offset**
      - ``OUTPUT``
      - [vector: line]
-     - Output line layer
+     - Output (offset) line layer
 
 
 .. _qgisorientedminimumboundingbox:
@@ -4007,6 +4005,8 @@ Parameters
    * - **Maximum angle tolerance (degrees)**
      - ``ANGLE_TOLERANCE``
      - [number]
+     
+       Default: 15
      - Specify the maximum deviation from a right angle or straight
        line a vertex can have for it to be adjusted.
        Smaller tolerances mean that only vertices which are already
@@ -4016,12 +4016,14 @@ Parameters
    * - **Maximum algorithm iterations**
      - ``MAX_ITERATIONS``
      - [number]
+     
+       Default: 1000
      - Setting a larger number for the maximum number of iterations
        will result in a more orthogonal geometry at the cost of extra
        processing time.
-   * - **Bounding boxes**
+   * - **Orthogonalized**
      - ``OUTPUT``
-     - [vector: polygon]
+     - [same as input]
 
        Default: ``[Create temporary layer]``
      - Specify the output polygon vector layer. One of:
@@ -4048,14 +4050,14 @@ Outputs
    * - **Orthogonalized**
      - ``OUTPUT``
      - [same as input]
-     - The output polygon vector layer.
+     - The output polygon vector layer with adjusted angles.
 
 
 .. _qgispointonsurface:
 
 Point on Surface
 ----------------
-For each feature of the input layer, return a point that is guaranteed
+For each feature of the input layer, returns a point that is guaranteed
 to lie on the surface of the feature geometry.
 
 |checkbox| Allows
@@ -4089,7 +4091,7 @@ Parameters
      - [vector: point]
 
        Default: ``[Create temporary layer]``
-     - Specify the output polygon vector layer. One of:
+     - Specify the output point vector layer. One of:
 
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
@@ -4150,7 +4152,7 @@ Parameters
    * - **Input layer**
      - ``INPUT``
      - [vector: line, polygon]
-     - Input line vector layer
+     - Input line or polygon vector layer
    * - **Distance**
      - ``DISTANCE``
      - [number |dataDefined|]
@@ -4392,6 +4394,8 @@ Parameters
      - [vector: line]
      - Input line vector layer
    * - **Keep table structure of line layer**
+
+       Optional
      - ``KEEP_FIELDS``
      - [boolean]
 
@@ -4426,7 +4430,7 @@ Outputs
    * - **Polygons from lines**
      - ``OUTPUT``
      - [vector: polygon]
-     - The output polygon vector layer
+     - The output polygon vector layer from lines
 
 
 
@@ -4491,15 +4495,14 @@ Outputs
    * - **Lines**
      - ``OUTPUT``
      - [vector: line]
-     - The output line vector layer
+     - The output line vector layer from polygons
 
 
 .. _qgisprojectpointcartesian:
 
 Project points (Cartesian)
 --------------------------
-Projects point geometries by a specified distance and bearing
-(azimuth), creating a new point layer with the projected points.
+Projects point geometries by a specified distance and bearing (azimuth).
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
