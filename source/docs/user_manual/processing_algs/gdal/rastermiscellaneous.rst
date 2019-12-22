@@ -682,3 +682,4 @@ Outputs
    source folder.
    
 .. |36| replace:: ``NEW in 3.6``
+.. |38| replace:: ``NEW in 3.8``
