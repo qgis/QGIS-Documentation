@@ -222,7 +222,7 @@ To export a layout as PDF:
      objects`) or as paths only (:guilabel:`Always export texts as paths`).
      If they are exported as text objects then they can be edited in external
      applications (e.g. Inkscape) as normal text. BUT the side effect is that
-     the rendering quality is decreased, AND there’s issues with rendering when
+     the rendering quality is decreased, AND there are issues with rendering when
      certain text settings like buffers are in place. That’s why exporting as
      paths is recommended.
    * |unchecked| :guilabel:`Create Geospatial PDF (GeoPDF)` |310|:
