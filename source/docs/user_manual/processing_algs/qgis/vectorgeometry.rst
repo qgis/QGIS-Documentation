@@ -3462,8 +3462,8 @@ Minimum bounding geometry
 -------------------------
 Creates geometries which enclose the features from an input layer.
 The features can be grouped by a field.
-The output layer will then contain one feature per grouped value with
-a minimal geometry covering just the features with matching values.
+The output layer will then contain one feature per group value with
+a geometry (MBB) that covers the geometries of the features with matching value.
 
 The following enclosing geometry types are supported:
 
