@@ -257,6 +257,20 @@ Outputs
 gdal2tiles
 ----------
 
+Generates a directory with small tiles and metadata, following the OSGeo
+Tile Map Service Specification.
+Simple web pages with viewers based on Google Maps, OpenLayers and
+Leaflet are generated as well.
+To explore your maps on-line in the web browser, you only need to upload
+the generated directory onto a web server.
+
+GDAL2Tiles also creates the necessary metadata for Google Earth
+(KML SuperOverlay), in case the supplied map uses EPSG:4326 projection.
+
+ESRI world files and embedded georeferencing is used during tile generation,
+but you can publish a picture without proper georeferencing too.
+
+See `the GDAL gdal2tiles documentation <https://gdal.org/programs/gdal2tiles.html>`_.
 Parameters
 ..........
 
