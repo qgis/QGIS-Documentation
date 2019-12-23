@@ -294,9 +294,9 @@ Parameters
        Default: 0
      - One of:
 
-       * 0 --- Mercator
-       * 1 --- Geodetic
-       * 2 --- Raster
+       * 0 --- Mercator (``mercator``)
+       * 1 --- Geodetic (``geodetic``)
+       * 2 --- Raster (``raster``)
 
    * - **Zoom levels to render**
 
@@ -313,11 +313,11 @@ Parameters
        Default: 0
      - One of:
 
-       * 0 --- All
-       * 1 --- GoogleMaps
-       * 2 --- OpenLayers
-       * 3 --- Leaflet
-       * 4 --- None
+       * 0 --- All (``all``)
+       * 1 --- GoogleMaps (``google``)
+       * 2 --- OpenLayers (``openlayers``)
+       * 3 --- Leaflet (``leaflet``)
+       * 4 --- None (``none``)
 
    * - **Title of the map**
 
@@ -342,13 +342,13 @@ Parameters
 
        Options:
 
-       * 0 --- Average
-       * 1 --- Nearest neighbour
-       * 2 --- Bilinear
-       * 3 --- Cubic
-       * 4 --- Cubic spline
-       * 5 --- Lanczos Windowed sinc
-       * 6 --- Antialias
+       * 0 --- Average (``average``)
+       * 1 --- Nearest neighbour (``near``)
+       * 2 --- Bilinear (``bilinear``)
+       * 3 --- Cubic (``cubic``)
+       * 4 --- Cubic spline (``cubicspline``)
+       * 5 --- Lanczos Windowed sinc (``lanczos``)
+       * 6 --- Antialias (``antialias``)
 
    * - **The spatial reference system used for the source input data**
 
