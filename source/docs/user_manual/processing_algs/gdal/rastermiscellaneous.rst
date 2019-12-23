@@ -306,6 +306,8 @@ Parameters
        * 4 --- None
 
    * - **Title of the map**
+
+       Optional
      - ``TITLE``
      - [string]
 
@@ -365,7 +367,7 @@ Parameters
      - [string]
 
        Default: ''
-     - Your Bing maps API key.
+     - Your Google maps API key.
    * - **Bing Maps API key (https://www.bingmapsportal.com/)**
 
        Optional
@@ -397,7 +399,7 @@ Parameters
      - [folder]
 
        Default: ``[Save to temporary file]``
-     - Specificy the output raster folder for the tiles.
+     - Specify the output folder for the tiles.
 
 Outputs
 .......
@@ -416,11 +418,6 @@ Outputs
      - ``OUTPUT``
      - [folder]
      - The output folder (for the tiles)
-
-
-
-
-
 
 
 .. _gdalmerge:
