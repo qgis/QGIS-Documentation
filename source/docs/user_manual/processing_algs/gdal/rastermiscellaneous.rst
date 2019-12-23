@@ -387,6 +387,8 @@ Performs a pan-sharpening operation.
 It can create a "classic" output dataset (such as GeoTIFF),
 or a VRT dataset describing the pan-sharpening operation.
 
+See `GDAL Pansharpen <https://gdal.org/programs/gdal_pansharpen.html>`_.
+
 Parameters
 ..........
 
