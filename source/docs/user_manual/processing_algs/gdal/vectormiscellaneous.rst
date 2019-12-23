@@ -92,7 +92,7 @@ Outputs
      - Vector layer created by the query
 
 
-.. _gdalimportvectorintopostgisdatabaseavailableconnection:
+.. _gdalimportvectorintopostgisdatabaseavailableconnections:
 
 Export to PostgreSQL (available connections)
 --------------------------------------------
@@ -747,7 +747,7 @@ Parameters
 
        Default: True
      - 
-   * - **Supress metadata info**
+   * - **Suppress metadata info**
 
        Optional
      - ``NO_METADATA``

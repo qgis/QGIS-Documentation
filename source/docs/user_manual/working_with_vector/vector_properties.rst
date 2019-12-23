@@ -1233,7 +1233,7 @@ options:
   speed. Smaller number of candidates results in less labels placed but faster
   redraws.
 * :guilabel:`Text rendering`: sets the default value for label rendering
-  widgets when :ref:`exporting a map canvas <output_canvas_pdf>` or
+  widgets when :ref:`exporting a map canvas <exportingmapcanvas>` or
   :ref:`a layout <create-output>` to PDF or SVG. 
   If :guilabel:`Always render labels as text` is selected then labels can be
   edited in external applications (e.g. Inkscape) as normal text. BUT the side

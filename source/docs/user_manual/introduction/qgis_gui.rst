@@ -158,7 +158,9 @@ the :ref:`project file <sec_projects>`. It provides you with tools to:
      -
      - \
 
-       * :ref:`sec_output`
+       * :ref:`exportingmapcanvas`
+       * :ref:`exportingmapcanvas`
+       * :ref:`create_dxf_files`
        * :ref:`import_dxfdwg`
    * - |newLayout| :guilabel:`New Print Layout...`
      - :kbd:`Ctrl+P`
@@ -693,6 +695,9 @@ Below are listed default panels provided by QGIS:
 Map View
 ========
 
+Exploring the map view
+----------------------
+
 Also called **Map canvas**, this is the "business end" of QGIS ---
 maps are displayed in this area. The map displayed in this window
 will depend on the vector and raster layers you have chosen to load.
@@ -737,6 +742,106 @@ the view reflect changes you make in the legend area.
    the map area and click on the arrow keys to pan left, right, up and down. You can
    also pan the map by moving the mouse while holding down the space bar or the
    middle mouse button (or holding down the mouse wheel).
+
+.. _`exportingmapcanvas`:
+
+Exporting the map view
+----------------------
+
+Maps you make can be layout and exported to various formats using the advanced
+capabilities of the :ref:`print layout or report <label_printlayout>`.
+It's also possible to directly export the current rendering, without a layout.
+This quick "screenshot" of the map view has some convenient features.
+
+To export the map canvas with the current rendering:
+
+#. Go to :menuselection:`Project --> Import/Export`
+#. Depending on your output format, select either
+
+   * |saveMapAsImage| :guilabel:`Export Map to Image...`
+   * or |saveAsPDF| :guilabel:`Export Map to PDF...`
+
+The two tools provide you with a common set of options.
+In the dialog that opens:
+
+.. _figure_savemapimage:
+
+.. figure:: img/saveMapAsImage.png
+   :align: center
+
+   The Save Map as Image dialog
+
+#. Choose the :guilabel:`Extent` to export: it can be the current view extent
+   (the default), the extent of a layer or a custom extent drawn over the map
+   canvas. Coordinates of the selected area are displayed and manually editable.
+#. Enter the :guilabel:`Scale` of the map or select it from the
+   :ref:`predefined scales <predefinedscales>`: changing the scale will resize
+   the extent to export (from the center).
+#. Set the :guilabel:`Resolution` of the output
+#. Control the :guilabel:`Output width` and :guilabel:`Output height` in pixels
+   of the image: based by default on the current resolution and extent,
+   they can be customized and will resize the map extent (from the center).
+   The size ratio can be locked, which may be particularly convenient when
+   drawing the extent on the canvas.
+#. |checkbox| :guilabel:`Draw active decorations`: in use :ref:`decorations
+   <decorations>` (scale bar, title, grid, north arrow...) are exported
+   with the map
+#. |checkbox| :guilabel:`Draw annotations` to export any :ref:`annotation
+   <sec_annotations>`
+#. |checkbox| :guilabel:`Append georeference information (embedded or via world
+   file)`: depending on the output format, a world file of the same name
+   (with extension ``PNGW`` for ``PNG`` image, ``JPGW`` for ``JPG`` ones...)
+   is saved in the same folder as your image. The ``PDF`` format embeds the
+   information in the same file.
+#. When exporting to PDF, more options are available in the :guilabel:`Save
+   map as PDF...` dialog:
+
+   .. _figure_savemappdf:
+
+   .. figure:: img/saveMapAsPDF.png
+      :align: center
+
+      The Save Map as PDF dialog
+
+   * |checkbox| :guilabel:`Export RDF metadata` of the document such as the
+     title, author, date, description...
+   * |unchecked| :guilabel:`Create Geospatial PDF (GeoPDF)` |310|: Generate a
+     `georeferenced PDF file <https://gdal.org/drivers/raster/pdf.html>`_
+     (requires GDAL version 3 or later). You can:
+
+     * Choose the GeoPDF :guilabel:`Format`
+     * |checkbox| :guilabel:`Include vector feature information` in the GeoPDF
+       file: will include all the geometry and attribute information from
+       features visible within the map in the output GeoPDF file.
+
+     .. note::
+
+       Since QGIS 3.10, with GDAL 3 a GeoPDF file can also be used as a
+       data source. For more on GeoPDF support in QGIS, see
+       https://north-road.com/2019/09/03/qgis-3-10-loves-geopdf/.
+
+   * :guilabel:`Rasterize map`
+   * |checkbox| :guilabel:`Simplify geometries to reduce output file size`:
+     Geometries will be simplified while exporting the map by removing
+     vertices that are not discernably different at the export resolution
+     (e.g. if the export resolution is ``300 dpi``, vertices that are less
+     than ``1/600 inch`` apart will be removed).
+     This can reduce the size and complexity of the export file (very large
+     files can fail to load in other applications).
+   * Set the :guilabel:`Text export`: controls whether text labels are exported
+     as proper text objects (:guilabel:`Always export texts as text
+     objects`) or as paths only (:guilabel:`Always export texts as paths`).
+     If they are exported as text objects then they can be edited in external
+     applications (e.g. Inkscape) as normal text. BUT the side effect is that
+     the rendering quality is decreased, AND there are issues with rendering when
+     certain text settings like buffers are in place. That’s why exporting as
+     paths is recommended.
+
+#. Click :guilabel:`Save` to select file location, name and format.
+
+   When exporting to image, it's also possible to :guilabel:`Copy to clipboard`
+   the expected result of the above settings and paste the map in another
+   application such as LibreOffice, GIMP...
 
 
 .. index:: 3D Map view
@@ -1005,6 +1110,7 @@ open the Plugin Manager dialog.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |310| replace:: ``NEW in 3.10``
 .. |addAllToOverview| image:: /static/common/mActionAddAllToOverview.png
    :width: 1.5em
 .. |addPart| image:: /static/common/mActionAddPart.png
@@ -1017,6 +1123,8 @@ open the Plugin Manager dialog.
    :width: 1.5em
 .. |capturePolygon| image:: /static/common/mActionCapturePolygon.png
    :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
 .. |circularStringCurvePoint| image:: /static/common/mActionCircularStringCurvePoint.png
    :width: 1.5em
 .. |circularStringRadius| image:: /static/common/mActionCircularStringRadius.png
