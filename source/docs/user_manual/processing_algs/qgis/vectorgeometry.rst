@@ -1149,7 +1149,7 @@ Parameters
      - ``TYPE``
      - [enumeration]
 
-       Default: The first in the list
+       Default: 0
      - Geometry type to apply to the output features.
        One of:
        
@@ -1952,7 +1952,8 @@ Parameters
      - [same as input]
 
        Default: ``[Create temporary layer]``
-     - Specify the output vector layer. One of:
+     - Specify the output vector layer (with Z values
+       from the raster layer). One of:
 
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
@@ -1976,7 +1977,8 @@ Outputs
    * - **Updated**
      - ``OUTPUT``
      - [same as input]
-     - The output vector layer with Z values assigned geometries
+     - The output vector layer with Z values from the
+       raster layer
 
 
 .. _qgisdropmzvalues:
@@ -2045,8 +2047,8 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - The output vector layer (identical to the input layer,
-       except that M and/or Z values have been removed from
-       the geometries).
+       except that the M and/or Z dimensions have been removed
+       from the geometries).
 
 
 .. _qgiseliminateselectedpolygons:
