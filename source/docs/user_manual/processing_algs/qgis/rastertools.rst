@@ -187,6 +187,8 @@ Outputs
 Generate XYZ tiles (Directory) |38|
 -----------------------------------
 
+Generates raster “XYZ” tiles using the current QGIS project
+as individual images to a directory structure.
 
 Parameters
 ..........
@@ -255,14 +257,17 @@ Parameters
 
        Default: 75
      - Minimum 1, maximum 100.
-   * - **Metatile size**
+   * - **Metatile size** |310|
 
        Optional
      - ``METATILESIZE``
      - [number]
 
        Default: 4
-     - Minimum 1, maximum 20.
+     - Specify a custom metatile size when generating XYZ tiles.
+       Larger values may speed up the rendering of tiles and provide better labelling
+       (fewer gaps without labels) at the expense of using more memory.
+       Minimum 1, maximum 20.
    * - **Tile width**
 
        Optional
@@ -337,6 +342,9 @@ Outputs
 Generate XYZ tiles (MBTiles) |38|
 ---------------------------------
 
+Generates raster “XYZ” tiles using the current QGIS project
+as a single file in the “MBTiles” format.
+
 Parameters
 ..........
 
@@ -404,14 +412,17 @@ Parameters
 
        Default: 75
      - Minimum 1, maximum 100.
-   * - **Metatile size**
+   * - **Metatile size** |310|
 
        Optional
      - ``METATILESIZE``
      - [number]
 
        Default: 4
-     - Minimum 1, maximum 20.
+     - Specify a custom metatile size when generating XYZ tiles.
+       Larger values may speed up the rendering of tiles and provide better labelling
+       (fewer gaps without labels) at the expense of using more memory.
+       Minimum 1, maximum 20.
    * - **Output file (for MBTiles)**
      - ``OUTPUT_FILE``
      - [file]
@@ -498,4 +509,5 @@ Output
    please add it also to the substitutions.txt file in the
    source folder.
    
+.. |310| replace:: ``NEW in 3.10``
 .. |38| replace:: ``NEW in 3.8``
