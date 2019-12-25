@@ -231,7 +231,7 @@ Parameters
 
        Default: 96
      - Minimum 48, maximum 600.
-   * - **Background color**
+   * - **Background color** |310|
 
        Optional
      - ``BACKGROUND_COLOR``
@@ -386,7 +386,7 @@ Parameters
 
        Default: 96
      - Minimum 48, maximum 600.
-   * - **Background color**
+   * - **Background color** |310|
 
        Optional
      - ``BACKGROUND_COLOR``
