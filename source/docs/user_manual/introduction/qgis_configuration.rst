@@ -202,6 +202,8 @@ CRS Settings
 ------------
 
 **Default CRS for new projects**
+.. note:: For more information on how QGIS handles layers projection, please
+  read the dedicated section at :ref:`label_projections`.
 
 .. _figure_crs_options:
 
@@ -242,9 +244,6 @@ In this group, you can control whether reprojecting layers to another CRS should
   * |checkbox| :guilabel:`Ask for datum transformation if several are available`
   * a predefined list of datum transformations to apply by default.
     See :ref:`datum_transformation` for more details.
-
-.. note:: For more information on how QGIS handles layers projection, please
-  read the dedicated section at :ref:`label_projections`.
 
 
 .. _datasources_options:
@@ -1079,6 +1078,9 @@ this is not enforced. See :ref:`vector layer metadata properties
 
 CRS Properties
 --------------
+
+.. note:: For more information on how QGIS handles project projection, please
+  read the dedicated section at :ref:`label_projections`.
 
 The |crs| :guilabel:`CRS` tab helps you set the coordinate reference system
 to use in this project. It can be:
