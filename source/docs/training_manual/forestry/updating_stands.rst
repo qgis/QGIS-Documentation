@@ -30,7 +30,6 @@ CIR images downloaded from that service (M4134F_21062012 and M4143E_21062012).
 
 * Open QGIS and set the project's CRS to :guilabel:`ETRS89 / ETRS-TM35FIN` in
   :menuselection:`Project --> Properties... --> CRS`.
-* Make sure that :guilabel:`Enable 'on the fly' CRS transformation` is checked.
 * From the :file:`exercise_data\\forestry\\` folder, add the CIR image
   :file:`rautjarvi_aerial.tif` that is containing the digitized lakes.
 * Then save the QGIS project as :file:`digitizing_2012.qgs`.
