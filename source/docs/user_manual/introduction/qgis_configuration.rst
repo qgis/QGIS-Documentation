@@ -203,6 +203,14 @@ CRS Settings
 
 **Default CRS for new projects**
 
+.. _figure_crs_options:
+
+.. figure:: img/options_crs.png
+   :align: center
+
+   CRS Settings in QGIS
+
+
 There is an option to automatically set new project’s CRS:
 
 * |radioButtonOn|:guilabel:`Use CRS from first layer added`: the CRS of the project
@@ -238,12 +246,6 @@ In this group, you can control whether reprojecting layers to another CRS should
 .. note:: For more information on how QGIS handles layers projection, please
   read the dedicated section at :ref:`label_projections`.
 
-.. _figure_crs_options:
-
-.. figure:: ../working_with_projections/img/crsdialog.png
-   :align: center
-
-   CRS Settings in QGIS
 
 .. _datasources_options:
 

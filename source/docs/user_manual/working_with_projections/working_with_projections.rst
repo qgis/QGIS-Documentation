@@ -126,7 +126,7 @@ This choice will be saved for use in subsequent QGIS sessions.
 
 .. _figure_projection_options:
 
-.. figure:: img/crsdialog.png
+.. figure:: ../introduction/img/options_crs.png
    :align: center
 
    The CRS tab in the QGIS Options Dialog
