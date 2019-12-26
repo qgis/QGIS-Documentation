@@ -101,7 +101,8 @@ Icon                            Substitution                        Icon        
 |hideSelectedLayers|            ``|hideSelectedLayers|``            |hideDeselectedLayers|          ``|hideDeselectedLayers|``
 |addLayer|                      ``|addLayer|``
 |indicatorEmbedded|             ``|indicatorEmbedded|``             |indicatorFilter|               ``|indicatorFilter|``
-|indicatorMemory|               ``|indicatorMemory|``               |favourites|                    ``|favourites|``
+|indicatorMemory|               ``|indicatorMemory|``               |indicatorNoCRS|                ``|indicatorNoCRS|``
+|favourites|                    ``|favourites|``
 ==============================  ==================================  ==============================  ==================================
 
 File
@@ -814,6 +815,8 @@ Icon                            Substitution                        Icon        
 .. |indicatorFilter| image:: /static/common/mIndicatorFilter.png
    :width: 1.5em
 .. |indicatorMemory| image:: /static/common/mIndicatorMemory.png
+   :width: 1.5em
+.. |indicatorNoCRS| image:: /static/common/mIndicatorNoCRS.png
    :width: 1.5em
 .. |inputText| image:: /static/common/inputtext.png
 .. |installPluginFromZip| image:: /static/common/mActionInstallPluginFromZip.png
