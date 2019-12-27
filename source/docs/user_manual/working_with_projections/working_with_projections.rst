@@ -64,6 +64,8 @@ place your layer in the wrong position on the Earth's surface! Sometimes, accomp
 metadata will describe the correct CRS for a layer, in other cases you will need
 to contact the original author of the data to determine the correct CRS to use.
 
+.. _project_crs:
+
 Project Coordinate Reference Systems
 ====================================
 

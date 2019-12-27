@@ -400,6 +400,7 @@ the GIS and all layers that you then load, no matter what coordinate reference
 system they have, will be automatically displayed in the projection you defined.
 This functionality allows you to overlay layers within the map window of your
 GIS, even though they may be in **different** reference systems.
+In QGIS, this functionality is applied by default.
 
 Common problems / things to be aware of
 =======================================
@@ -438,17 +439,21 @@ Now you try!
 
 Here are some ideas for you to try with your learners:
 
-* Start QGIS and load two layers of the same area but with different projections
-  and let your pupils find the coordinates of several places on the two layers.
-  You can show them that it is not possible to overlay the two layers. Then define
-  the coordinate reference system as Geographic/WGS 84 inside the
-  :guilabel:`Project Properties` dialog and activate the checkbox |checkbox|
-  :guilabel:`Enable on-the-fly CRS transformation`. Load the two layers of the
-  same area again and let your pupils see how on-the-fly projection works.
-* You can open the :guilabel:`Project Properties` dialog in QGIS and show your
-  pupils the many different Coordinate Reference Systems so they get an idea of
-  the complexity of this topic. With 'on-the-fly' CRS transformation enabled you
-  can select different CRS to display the same layer in different projections.
+#. Start QGIS
+#. In :menuselection:`Project --> Properties... --> CRS` check :guilabel:`No
+   projection (or unknown/non-Earth projection)`
+#. Load two layers of the same area but with different projections
+#. Let your pupils find the coordinates of several places on the two layers.
+   You can show them that it is not possible to overlay the two layers.
+#. Then define the coordinate reference system as Geographic/WGS 84 inside the
+   :guilabel:`Project Properties` dialog
+#. Load the two layers of the same area again and let your pupils see how
+   setting a CRS for the project (hence, enabling "on-the-fly" projection)
+   works.
+#. You can open the :guilabel:`Project Properties` dialog in QGIS and show your
+   pupils the many different Coordinate Reference Systems so they get an idea of
+   the complexity of this topic. You can select different CRSs to display the
+   same layer in different projections.
 
 Something to think about
 ========================

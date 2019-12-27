@@ -442,7 +442,7 @@ For any editable vector layer, the
 capabilities of
 feature vertices similar to CAD programs. It is possible to simply select
 multiple vertices at once and to move, add or delete them altogether.
-The vertex tool also works with 'on the fly' projection turned on and supports
+The vertex tool also supports
 the topological editing feature. This tool is selection persistent, so when some
 operation is done, selection stays active for this feature and tool.
 

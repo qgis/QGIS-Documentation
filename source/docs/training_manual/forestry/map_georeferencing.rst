@@ -35,7 +35,7 @@ For this exercise you will use a previously scanned map, you can find it as
 -------------------------------------------------------------------------------
 
 Open QGIS and set the project's CRS to :kbd:`ETRS89 / ETRS-TM35FIN` in
-:menuselection:`Project --> Properties --> CRS`, which is the currently used CRS in Finland. Make sure that :guilabel:`Enable 'on the fly' CRS transformation` is checked, since we will be working with old data that is another CRS.
+:menuselection:`Project --> Properties --> CRS`, which is the currently used CRS in Finland.
 
 .. image:: img/f_1.png
    :align: center
