@@ -180,16 +180,6 @@ text buffer` checkbox in the |labelbuffer| :guilabel:`Buffer` tab. Then you can:
 * Check |unchecked| :guilabel:`Draw effects` to add advanced :ref:`paint effects
   <draw_effects>` for customizing the visualization of the labels.
 
-It is also possible to use a marker symbol for the buffer, for example highway
-shield labels.
-
-* From :guilabel:`Shape` choose :guilabel:`Marker Symbol`
-* Choose the :guilabel:`Size type` of the symbol: it can be :guilabel:`Buffer` or 
-  :guilabel:`Fixed`. The :guilabel:`Size` of the background marker symbol can be in
-  :guilabel:`Millimeters`, :guilabel:`Points`, :guilabel:`Pixels`, :guilabel:`Meters at Scale`,
-  :guilabel:`Map units` and :guilabel:`Inches`.
-* Proceed with :guilabel:`Opacity`, :guilabel:`Blend mode` and |unchecked| :guilabel:`Draw effects`
-  as described in the previous section.
 
 .. _labels_background:
 
