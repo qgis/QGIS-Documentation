@@ -185,7 +185,7 @@ shield labels.
 
 * From :guilabel:`Shape` choose :guilabel:`Marker Symbol`
 * Choose the :guilabel:`Size type` of the symbol: it can be :guilabel:`Buffer` or 
-  :guilabel:´Fixed. The :guilabel:`Size` of the background marker symbol can be in
+  :guilabel:`Fixed`. The :guilabel:`Size` of the background marker symbol can be in
   :guilabel:`Millimeters`, :guilabel:`Points`, :guilabel:`Pixels`, :guilabel:`Meters at Scale`,
   :guilabel:`Map units` and :guilabel:`Inches`.
 * Proceed with :guilabel:`Opacity`, :guilabel:`Blend mode` and |unchecked| :guilabel:`Draw effects`
