@@ -379,6 +379,102 @@ Outputs
      - Output raster layer
 
 
+.. _gdalpansharp:
+
+Pansharpening |38|
+------------------
+Performs a pan-sharpening operation.
+It can create a "classic" output dataset (such as GeoTIFF),
+or a VRT dataset describing the pan-sharpening operation.
+
+See `GDAL Pansharpen <https://gdal.org/programs/gdal_pansharpen.html>`_.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Spectral dataset**
+     - ``SPECTRAL``
+     - [raster]
+     - Input (spectral) raster layer
+   * - **Panchromatic dataset**
+     - ``PANCHROMATIC``
+     - [raster]
+     - Input (panchromatic) raster layer
+   * - **Resampling algorithm**
+     - ``RESAMPLING``
+     - [enumeration]
+
+       Default: 2
+     - The resampling algorithm to be used
+
+       Options:
+
+       * 0 --- Nearest Neighbour (``nearest``)
+       * 1 --- Bilinear (``bilinear``)
+       * 2 --- Cubic (``cubic``)
+       * 3 --- Cubic Spline (``cubicspline``)
+       * 4 --- Lanczos Windowed Sinc (``lanczos``)
+       * 5 --- Average (``average``)
+
+   * - **Additional creation options**
+
+       Optional
+     - ``OPTIONS``
+     - [string]
+
+       Default: ''
+     - For adding one or more creation options that control the
+       raster to be created (colors, block size, file
+       compression...).
+       For convenience, you can rely on predefined profiles (see
+       :ref:`GDAL driver options section <gdal_createoptions>`).
+   * - **Additional command-line parameters**
+
+       Optional
+     - ``EXTRA``
+     - [string]   
+
+       Default: None
+     - Add extra GDAL command line options
+   * - **Output**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output (sharpened) raster layer. One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output**
+     - ``OUTPUT``
+     - [raster]
+     - Output (sharpened) raster layer
+
+
 .. _gdalgdalinfo:
 
 Raster information
@@ -588,3 +684,4 @@ Outputs
    source folder.
    
 .. |36| replace:: ``NEW in 3.6``
+.. |38| replace:: ``NEW in 3.8``
