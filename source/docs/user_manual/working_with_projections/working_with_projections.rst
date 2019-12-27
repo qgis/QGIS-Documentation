@@ -75,7 +75,7 @@ layer:
    no CRS`. One of:
 
    * |radioButtonOn| :guilabel:`Leave as unknown CRS (take no action)`:
-     there's no prompt to select a CRS when a layer without CRS is loaded,
+     there will be no prompt to select a CRS when a layer without CRS is loaded,
      defering CRS choice to a later time. Convenient when loading a lot of
      layers at once. Such layers will be identifiable in the :guilabel:`Layers`
      panel by the |indicatorNoCRS| icon next to them.
@@ -98,15 +98,15 @@ layer:
    or have a wrong one:
 
    #. Select the layers in the :guilabel:`Layers` panel
-   #. Press :kbd:`Ctrl+Shift+C`. You could also right-click over a layer
-      or go to :menuselection:`Layer --> Set CRS of layer(s)`
+   #. Press :kbd:`Ctrl+Shift+C`. You could also right-click over one of the
+      selected layers or go to :menuselection:`Layer --> Set CRS of layer(s)`
    #. Find and select the right CRS to use
    #. And press :guilabel:`OK`. The new CRS is now mentioned in the
-      :guilabel:`Source` tab of the layer's properties dialog.
+      :guilabel:`Source` tab of the layers' properties dialog.
 
    Note that changing the CRS in this setting does not alter the underlying
    data source in any way, rather it just changes how QGIS interprets the raw
-   coordinates from the layer in the current QGIS project only.
+   coordinates from the layer in the current QGIS project.
 
 
 .. index:: CRS, Proj, On-the-fly transformation
@@ -182,7 +182,7 @@ Available options are:
   or *user-defined*. A preview of the CRS extent on earth is displayed to
   help you select the appropriate one.
   Layers added to the project are on-the-fly translated to this CRS in order
-  to overlay them regardless their original CRS. Use of units, ellipsoid setting
+  to overlay them regardless their original CRS. Use of units and ellipsoid setting
   are available and make sense and you can perform calculations accordingly.
 
 Whenever you select a new CRS for your QGIS project, the measurement units will automatically be

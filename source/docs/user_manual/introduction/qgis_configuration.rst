@@ -201,7 +201,7 @@ source code.
 CRS Settings
 ------------
 
-.. note:: For more information on how QGIS handles layers projection, please
+.. note:: For more information on how QGIS handles layer projection, please
   read the dedicated section at :ref:`label_projections`.
 
 .. _figure_crs_options:
@@ -216,18 +216,18 @@ CRS Settings
 There is an option to automatically set new project’s CRS:
 
 * |radioButtonOn|:guilabel:`Use CRS from first layer added`: the CRS of the
-  project is turned to match the CRS of the first layer loaded into it
+  project will be set to the CRS of the first layer loaded into it
 * |radioButtonOff|:guilabel:`Use a default CRS`: a preselected CRS is applied by
   default to any new project and is left unchanged when adding layers to the
   project.
 
-The choice will be saved for use in subsequent QGIS sessions and in any case,
-the Coordinate Reference System of the project can still be overridden from
+The choice will be saved for use in subsequent QGIS sessions.
+The Coordinate Reference System of the project can still be overridden from
 the :menuselection:`Project --> Properties... --> CRS` tab.
 
 **CRS for layers**
 
-:guilabel:`Default CRS for layers` to select a default CRS to use when you
+:guilabel:`Default CRS for layers`: select a default CRS to use when you
 create a layer
 
 You can also define the action to take when a new layer is created,
