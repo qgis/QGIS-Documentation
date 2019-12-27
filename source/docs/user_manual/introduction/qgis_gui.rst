@@ -710,7 +710,7 @@ looks for its CRS. If a different CRS is set by default for the project (see
 that CRS and, the map view is zoomed to that extent if you start with a
 blank QGIS project.
 If there are already layers in the project, no map canvas resize is processed
-and only features falling in the current map canvas extent will be visualized.
+and only features falling in the current map canvas extent will be visible.
 
 The map view can be panned, shifting the display to another region
 of the map, and it can be zoomed in and out. Various other operations can be

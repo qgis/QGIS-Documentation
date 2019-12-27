@@ -448,11 +448,11 @@ Here are some ideas for you to try with your learners:
 #. Then define the coordinate reference system as Geographic/WGS 84 inside the
    :guilabel:`Project Properties` dialog
 #. Load the two layers of the same area again and let your pupils see how
-   setting a CRS for the project (hence, enabling the "on-the-fly" projection)
+   setting a CRS for the project (hence, enabling "on-the-fly" projection)
    works.
 #. You can open the :guilabel:`Project Properties` dialog in QGIS and show your
    pupils the many different Coordinate Reference Systems so they get an idea of
-   the complexity of this topic. You can select different CRS to display the
+   the complexity of this topic. You can select different CRSs to display the
    same layer in different projections.
 
 Something to think about
