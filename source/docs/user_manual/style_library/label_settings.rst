@@ -186,19 +186,54 @@ text buffer` checkbox in the |labelbuffer| :guilabel:`Buffer` tab. Then you can:
 Background tab
 --------------
 
-In the |labelbackground| :guilabel:`Background` tab, you can define with
-:guilabel:`Size X` and :guilabel:`Size Y` the shape of your background.
-Use :guilabel:`Size type` to insert an additional 'Buffer' into your background.
-The buffer size is set by default here.
-The background then consists of the buffer plus the background in :guilabel:`Size X`
-and :guilabel:`Size Y`. You can set a :guilabel:`Rotation` where you can choose
-between 'Sync with label', 'Offset of label' and 'Fixed'.
-Using 'Offset of label' and 'Fixed', you can rotate the background.
-Define an :guilabel:`Offset X,Y` with X and Y values, and the background
-will be shifted. When applying :guilabel:`Radius X,Y`, the background gets
-rounded corners.
-Again, it is possible to mix the background with the underlying layers in the
-map canvas using the :guilabel:`Blend mode` (see :ref:`blend-modes`).
+The |labelbackground| :guilabel:`Background` tab allows you to configure a
+shape that stays at the bottom of the labels. To add a background, activate
+the |unchecked| :guilabel:`Draw Background` checkbox and select
+the :guilabel:`Shape` type. It can be:
+
+* of a regular type such as :guilabel:`Rectangle`, :guilabel:`Square`,
+  :guilabel:`Circle` or :guilabel:`Ellipse`
+* an :guilabel:`SVG` symbol from a file, a URL or embedded in the project
+  or style database (:ref:`more details <svg_paths>`)
+* or a :guilabel:`Marker Symbol` you can create or select from the
+  :ref:`symbol library <vector_marker_symbols>`.
+
+.. _figure_textsettings_background:
+
+.. figure:: img/textsettings_background.png
+   :align: center
+
+   Text settings - Background tab
+
+Depending on the selected shape, you'd need to configure some of the following
+properties:
+
+* The :guilabel:`Size type` of the frame, which can be:
+
+  * :guilabel:`Fixed`: using a unique size for all the labels, regardless the
+    whole text size
+  * or a :guilabel:`Buffer` over the text's bounding box
+* The :guilabel:`Size` of the frame in X and Y directions, using any
+  :ref:`supported units <unit_selector>`
+* A :guilabel:`Rotation` of the background, between :guilabel:`Sync with label`,
+  :guilabel:`Offset of label` and :guilabel:`Fixed`. The last two require
+  an angle in degrees.
+* An :guilabel:`Offset X,Y` to shift the background item in X and/or Y directions
+* A :guilabel:`Radius X,Y` to round corners of the background shape (applies
+  to rectangle and square shapes only)
+* An :guilabel:`Opacity` of the background
+* A :guilabel:`Blend mode` to mix the background with the other items in the
+  rendering (see :ref:`blend-modes`).
+* The :guilabel:`Fill color`, :guilabel:`Stroke color` and
+  :guilabel:`Stroke width` for shape types other than the marker symbol.
+  Use the :guilabel:`Load symbol parameters` to revert changes on an SVG symbol
+  to its default settings.
+* A :guilabel:`Pen join style`: it can be :guilabel:`Round`, :guilabel:`Miter`
+  or :guilabel:`Bevel` (applies to rectangle and square shapes only)
+* |unchecked| :guilabel:`Draw effects` to add advanced |paintEffects|
+  :ref:`paint effects <draw_effects>` for improving text readability,
+  eg through outer glows and blurs.
+
 
 .. _labels_shadow:
 
@@ -514,6 +549,8 @@ between labels and features:
 .. |labelplacement| image:: /static/common/labelplacement.png
    :width: 1.5em
 .. |labelshadow| image:: /static/common/labelshadow.png
+   :width: 1.5em
+.. |paintEffects| image:: /static/common/mIconPaintEffects.png
    :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
    :width: 1.5em
