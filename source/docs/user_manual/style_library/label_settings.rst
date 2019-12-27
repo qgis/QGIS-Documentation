@@ -67,9 +67,7 @@ In the |text| :guilabel:`Text` tab, you can set:
 * the :guilabel:`Font`, from the ones available on your machine
 * the :guilabel:`Style`: along with the common styles of the font, you can set
   whether the text should be underlined or striked through
-* the :guilabel:`Size` that can be in :guilabel:`Points`, :guilabel:`Pixels`,
-  :guilabel:`Millimeters`, :guilabel:`Map units`, :guilabel:`Meters at scale`,
-  or :guilabel:`Inches`
+* the :guilabel:`Size` in any :ref:`supported units <unit_selector>`
 * the :guilabel:`Color`
 * and the :guilabel:`Opacity`.
 
@@ -161,9 +159,7 @@ Buffer tab
 To create a buffer around the label, activate the |checkbox| :guilabel:`Draw
 text buffer` checkbox in the |labelbuffer| :guilabel:`Buffer` tab. Then you can:
 
-* Set the buffer's :guilabel:`Size` that can be in :guilabel:`Points`,
-  :guilabel:`Pixels`, :guilabel:`Millimeters`, :guilabel:`Map units`,
-  :guilabel:`Meters at scale` or :guilabel:`Inches`
+* Set the buffer's :guilabel:`Size` in any :ref:`supported units <unit_selector>`
 * Select the buffer's :guilabel:`Color`
 * |checkbox| :guilabel:`Color buffer's fill`: The buffer expands from the
   label's outline, so, if the option is activated, the label's interior is
@@ -177,8 +173,9 @@ text buffer` checkbox in the |labelbuffer| :guilabel:`Buffer` tab. Then you can:
 * Use the :guilabel:`Blend mode` option to determine how your label's buffer
   will mix with the map components below them (more details at
   :ref:`blend-modes`).
-* Check |unchecked| :guilabel:`Draw effects` to add advanced :ref:`paint effects
-  <draw_effects>` for customizing the visualization of the labels.
+* Check |unchecked| :guilabel:`Draw effects` to add advanced |paintEffects|
+  :ref:`paint effects <draw_effects>` for improving text readability,
+  eg through outer glows and blurs.
 
 
 .. _labels_background:
