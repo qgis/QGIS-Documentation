@@ -252,6 +252,192 @@ Outputs
      - Output raster layer
 
 
+.. _gdalgdal2tiles:
+
+gdal2tiles
+----------
+
+Generates a directory with small tiles and metadata, following the `OSGeo
+Tile Map Service Specification <https://wiki.osgeo.org/wiki/Tile_Map_Service_Specification>`_.
+
+See also  the `OpenGIS Web Map Tile Service Implementation Standard
+<https://www.opengeospatial.org/standards/wmts>`_.
+Simple web pages with viewers based on Google Maps, OpenLayers and
+Leaflet are generated as well.
+To explore your maps on-line in the web browser, you only need to upload
+the generated directory onto a web server.
+
+This algorithm also creates the necessary metadata for Google Earth
+(KML SuperOverlay), in case the supplied map uses ``EPSG:4326`` projection.
+
+ESRI world files and embedded georeferencing is used during tile generation,
+but you can publish a picture without proper georeferencing too.
+
+This algorithm is derived from the `GDAL gdal2tiles utility <https://gdal.org/programs/gdal2tiles.html>`_.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - GDAL-supported raster layer.
+   * - **Tile cutting profile**
+     - ``PROFILE``
+     - [enumeration]
+
+       Default: 0
+     - One of:
+
+       * 0 --- Mercator (``mercator``)
+       * 1 --- Geodetic (``geodetic``)
+       * 2 --- Raster (``raster``)
+
+   * - **Zoom levels to render**
+
+       Optional
+     - ``ZOOM``
+     - [string]
+
+       Default: ''
+     - 
+   * - **Web viewer to generate**
+     - ``VIEWER``
+     - [enumerate]
+
+       Default: 0
+     - One of:
+
+       * 0 --- All (``all``)
+       * 1 --- GoogleMaps (``google``)
+       * 2 --- OpenLayers (``openlayers``)
+       * 3 --- Leaflet (``leaflet``)
+       * 4 --- None (``none``)
+
+   * - **Title of the map**
+
+       Optional
+     - ``TITLE``
+     - [string]
+
+       Default: ''
+     - 
+   * - **Copyright of the map**
+     - ``COPYRIGHT``
+     - [string]
+
+       Default: ''
+     - 
+   * - **Resampling method**
+     - ``RESAMPLING``
+     - [enumeration]
+
+       Default: 0
+     - The resampling algorithm to be used
+
+       Options:
+
+       * 0 --- Average (``average``)
+       * 1 --- Nearest neighbour (``near``)
+       * 2 --- Bilinear (``bilinear``)
+       * 3 --- Cubic (``cubic``)
+       * 4 --- Cubic spline (``cubicspline``)
+       * 5 --- Lanczos Windowed sinc (``lanczos``)
+       * 6 --- Antialias (``antialias``)
+
+   * - **The spatial reference system used for the source input data**
+
+       Optional
+     - ``SOURCE_CRS``
+     - [crs]
+
+       Default: None
+     - 
+   * - **Transparency value to assign to the input data**
+
+       Optional
+     - ``NODATA``
+     - [number]
+
+       Default: 0.0
+     - 
+   * - **URL address where the generated tiles are going to be published**
+
+       Optional
+     - ``URL``
+     - [string]
+
+       Default: ''
+     - 
+   * - **Google Maps API key (http://code.google.com/apis/maps/signup.html)**
+
+       Optional
+     - ``GOOGLE_KEY``
+     - [string]
+
+       Default: ''
+     - Your Google maps API key.
+   * - **Bing Maps API key (https://www.bingmapsportal.com/)**
+
+       Optional
+     - ``BING_KEY``
+     - [string]
+
+       Default: ''
+     - Your Bing maps API key.
+   * - **Generate only missing files**
+     - ``RESUME``
+     - [boolean]
+
+       Default: False
+     - 
+   * - **Generate KML for Google Earth**
+     - ``KML``
+     - [boolean]
+
+       Default: False
+     - 
+   * - **Avoid automatic generation of KML files for EPSG:4326**
+     - ``NO_KML``
+     - [boolean]
+
+       Default: False
+     - 
+   * - **Output directory**
+     - ``OUTPUT``
+     - [folder]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output folder for the tiles.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+
+   * - **Output directory**
+     - ``OUTPUT``
+     - [folder]
+     - The output folder (for the tiles)
+
+
 .. _gdalmerge:
 
 Merge
@@ -377,6 +563,102 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output raster layer
+
+
+.. _gdalpansharp:
+
+Pansharpening |38|
+------------------
+Performs a pan-sharpening operation.
+It can create a "classic" output dataset (such as GeoTIFF),
+or a VRT dataset describing the pan-sharpening operation.
+
+See `GDAL Pansharpen <https://gdal.org/programs/gdal_pansharpen.html>`_.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Spectral dataset**
+     - ``SPECTRAL``
+     - [raster]
+     - Input (spectral) raster layer
+   * - **Panchromatic dataset**
+     - ``PANCHROMATIC``
+     - [raster]
+     - Input (panchromatic) raster layer
+   * - **Resampling algorithm**
+     - ``RESAMPLING``
+     - [enumeration]
+
+       Default: 2
+     - The resampling algorithm to be used
+
+       Options:
+
+       * 0 --- Nearest Neighbour (``nearest``)
+       * 1 --- Bilinear (``bilinear``)
+       * 2 --- Cubic (``cubic``)
+       * 3 --- Cubic Spline (``cubicspline``)
+       * 4 --- Lanczos Windowed Sinc (``lanczos``)
+       * 5 --- Average (``average``)
+
+   * - **Additional creation options**
+
+       Optional
+     - ``OPTIONS``
+     - [string]
+
+       Default: ''
+     - For adding one or more creation options that control the
+       raster to be created (colors, block size, file
+       compression...).
+       For convenience, you can rely on predefined profiles (see
+       :ref:`GDAL driver options section <gdal_createoptions>`).
+   * - **Additional command-line parameters**
+
+       Optional
+     - ``EXTRA``
+     - [string]   
+
+       Default: None
+     - Add extra GDAL command line options
+   * - **Output**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output (sharpened) raster layer. One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output**
+     - ``OUTPUT``
+     - [raster]
+     - Output (sharpened) raster layer
 
 
 .. _gdalgdalinfo:
@@ -588,3 +870,4 @@ Outputs
    source folder.
    
 .. |36| replace:: ``NEW in 3.6``
+.. |38| replace:: ``NEW in 3.8``
