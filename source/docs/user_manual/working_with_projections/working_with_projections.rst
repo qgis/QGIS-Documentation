@@ -49,7 +49,7 @@ to manually assign the correct CRS to the layer. For PostGIS layers, QGIS uses
 the spatial reference identifier that was specified when that PostGIS layer was
 created. For data supported by OGR or GDAL, QGIS relies on the presence of a
 recognized means of specifying the CRS. For instance, for the Shapefile format
-this is a file containing the Well-Known Text (:index:`WKT`)
+this is a file containing an ESRI Well-Known Text (:index:`WKT`)
 representation of the layer's CRS. This projection file has the same base name
 as the :file:`.shp` file and a :file:`.prj` extension. For example,
 :file:`alaska.shp` would have a corresponding projection file named
@@ -94,14 +94,14 @@ layer:
 
 .. tip::
 
-   To assign at once the same CRS to multiple layers that have no crs
-   or have a wrong one:
+   To assign the same CRS to multiple layers that have no crs
+   or have a wrong one in one operation:
 
    #. Select the layers in the :guilabel:`Layers` panel
    #. Press :kbd:`Ctrl+Shift+C`. You could also right-click over one of the
       selected layers or go to :menuselection:`Layer --> Set CRS of layer(s)`
    #. Find and select the right CRS to use
-   #. And press :guilabel:`OK`. The new CRS is now mentioned in the
+   #. And press :guilabel:`OK`. You can confirm that it has been set correctly in the
       :guilabel:`Source` tab of the layers' properties dialog.
 
    Note that changing the CRS in this setting does not alter the underlying
@@ -181,7 +181,7 @@ Available options are:
 * or an existing coordinate reference system that can be *geographic*, *projected*
   or *user-defined*. A preview of the CRS extent on earth is displayed to
   help you select the appropriate one.
-  Layers added to the project are on-the-fly translated to this CRS in order
+  Layers added to the project are translated on-the-fly to this CRS in order
   to overlay them regardless their original CRS. Use of units and ellipsoid setting
   are available and make sense and you can perform calculations accordingly.
 

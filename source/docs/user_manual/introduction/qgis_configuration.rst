@@ -1092,8 +1092,8 @@ to use in this project. It can be:
 * |checkbox| :guilabel:`No projection (or unknown/non-Earth projection)`:
   layers are drawn based on their raw coordinates
 * or an existing coordinate reference system that can be *geographic*,
-  *projected* or *user-defined*. Layers added to the project are on-the-fly
-  translated to this CRS in order to overlay them regardless their original CRS.
+  *projected* or *user-defined*. Layers added to the project are translated
+  on-the-fly to this CRS in order to overlay them regardless their original CRS.
 
 The |crs| :guilabel:`CRS` tab also helps you control the layers reprojection
 settings by configuring the datum transformation preferences to apply in the
