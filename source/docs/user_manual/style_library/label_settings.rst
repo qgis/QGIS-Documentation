@@ -67,7 +67,7 @@ In the |text| :guilabel:`Text` tab, you can set:
 * the :guilabel:`Font`, from the ones available on your machine
 * the :guilabel:`Style`: along with the common styles of the font, you can set
   whether the text should be underlined or striked through
-* the :guilabel:`Size` in any :ref:`supported units <unit_selector>`
+* the :guilabel:`Size` in any :ref:`supported unit <unit_selector>`
 * the :guilabel:`Color`
 * and the :guilabel:`Opacity`.
 
@@ -159,7 +159,7 @@ Buffer tab
 To create a buffer around the label, activate the |checkbox| :guilabel:`Draw
 text buffer` checkbox in the |labelbuffer| :guilabel:`Buffer` tab. Then you can:
 
-* Set the buffer's :guilabel:`Size` in any :ref:`supported units <unit_selector>`
+* Set the buffer's :guilabel:`Size` in any :ref:`supported unit <unit_selector>`
 * Select the buffer's :guilabel:`Color`
 * |checkbox| :guilabel:`Color buffer's fill`: The buffer expands from the
   label's outline, so, if the option is activated, the label's interior is
@@ -184,11 +184,11 @@ Background tab
 --------------
 
 The |labelbackground| :guilabel:`Background` tab allows you to configure a
-shape that stays at the bottom of the labels. To add a background, activate
+shape that stays below each label. To add a background, activate
 the |unchecked| :guilabel:`Draw Background` checkbox and select
 the :guilabel:`Shape` type. It can be:
 
-* of a regular type such as :guilabel:`Rectangle`, :guilabel:`Square`,
+* a regular shape such as :guilabel:`Rectangle`, :guilabel:`Square`,
   :guilabel:`Circle` or :guilabel:`Ellipse`
 * an :guilabel:`SVG` symbol from a file, a URL or embedded in the project
   or style database (:ref:`more details <svg_paths>`)
@@ -202,21 +202,21 @@ the :guilabel:`Shape` type. It can be:
 
    Text settings - Background tab
 
-Depending on the selected shape, you'd need to configure some of the following
+Depending on the selected shape, you need to configure some of the following
 properties:
 
 * The :guilabel:`Size type` of the frame, which can be:
 
-  * :guilabel:`Fixed`: using a unique size for all the labels, regardless the
-    whole text size
+  * :guilabel:`Fixed`: using the same size for all the labels, regardless the
+    size of the text
   * or a :guilabel:`Buffer` over the text's bounding box
 * The :guilabel:`Size` of the frame in X and Y directions, using any
   :ref:`supported units <unit_selector>`
 * A :guilabel:`Rotation` of the background, between :guilabel:`Sync with label`,
   :guilabel:`Offset of label` and :guilabel:`Fixed`. The last two require
   an angle in degrees.
-* An :guilabel:`Offset X,Y` to shift the background item in X and/or Y directions
-* A :guilabel:`Radius X,Y` to round corners of the background shape (applies
+* An :guilabel:`Offset X,Y` to shift the background item in the X and/or Y directions
+* A :guilabel:`Radius X,Y` to round the corners of the background shape (applies
   to rectangle and square shapes only)
 * An :guilabel:`Opacity` of the background
 * A :guilabel:`Blend mode` to mix the background with the other items in the
