@@ -139,7 +139,7 @@ Right-clicking over a selection of items also allows you to:
 * :guilabel:`Add to Favorites`;
 * :guilabel:`Remove from Favorites`;
 * :menuselection:`Add to Tag -->` and select the appropriate tag or create a new
-  one to use; the currently selected tabs are labelled;
+  one to use; the currently assigned tags are checked;
 * :guilabel:`Clear Tags`: detaching the symbols from any tag;
 * :guilabel:`Remove Item(s)`;
 * :guilabel:`Edit Item`: applies to the item you right-click over;
