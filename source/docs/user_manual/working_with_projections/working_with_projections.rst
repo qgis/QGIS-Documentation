@@ -32,7 +32,7 @@ these standard projections are identified through use of an authority:code
 combination, where the authority is an organisation name such as "EPSG" or
 "IGNF", and the code is a unique number associated with a specific CRS. For
 instance, the common WGS 84 latitude/longitude CRS is known by the identifier
-``EPSG:4326``, and the web mapping standard CRS is ``EPSG:3857``. 
+``EPSG:4326``, and the web mapping standard CRS is ``EPSG:3857``.
 
 Custom, user-created CRSs are stored in a user CRS database. See
 section :ref:`sec_custom_projections` for information on managing your custom
@@ -113,8 +113,6 @@ layer:
    single: CRS; Default CRS
 .. _project_crs:
 
-.. _project_crs:
-
 Project Coordinate Reference Systems
 ====================================
 
@@ -135,7 +133,7 @@ Choosing an inappropriate CRS can cause your maps to look distorted,
 and poorly reflect the real-world relative sizes and positions of features.
 Usually, while working in smaller geographic areas, there will be a number of
 standard CRSs used within a particular country or administrative area.
-It's important to research which CRSs are appropriate or standard choices 
+It's important to research which CRSs are appropriate or standard choices
 for the area you are mapping, and ensure that your QGIS project follows
 these standards.
 
@@ -195,11 +193,11 @@ default.
 .. tip:: **Setting the project CRS from a layer**
 
    You can assign a CRS to the project using a layer CRS:
-   
+
    #. In the :guilabel:`Layers` panel, right-click on the layer you want
       to pick the CRS
    #. Select :guilabel:`Set project CRS from Layer`.
-   
+
    The project's CRS is redefined using the layer's CRS. Map canvas extent,
    coordinates display are updated accordingly and all the layers in
    the project are on-the-fly translated to the new project CRS.
@@ -283,10 +281,10 @@ enter known WGS 84 latitude and longitude values in :guilabel:`North` and
 :guilabel:`East` fields, respectively. Click on :guilabel:`Calculate`, and compare the
 results with the known values in your coordinate reference system.
 
-Integrate an NTv2-transformation in QGIS 
+Integrate an NTv2-transformation in QGIS
 ----------------------------------------
 
-To integrate an NTv2 transformation file in QGIS you need one more step: 
+To integrate an NTv2 transformation file in QGIS you need one more step:
 
 #. Place the NTv2 file (.gsb) in the CRS/Proj folder that QGIS uses
    (e.g. :file:`C:\\OSGeo4W64\\share\\proj` for windows users)
@@ -313,14 +311,15 @@ whenever you use layers with different coordinate systems QGIS transparently
 reprojects them to the project CRS. For some CRS, there are a number of possible
 transforms available to reproject to the project's CRS!
 
-By default, QGIS will attempt to use the most accurate transformation available. 
+By default, QGIS will attempt to use the most accurate transformation available.
 However, in some cases this may not be possible, e.g. whenever additional
 support files are required to use a transformation. Whenever a more accurate
 transformation is available, but is not currently usable, QGIS will show
 an informative warning message advising you of the more accurate transformation
 and how to enable it on your system. Usually, this requires download of
 an external package of transformation support files, and extracting these
-to the :file:`proj` folder under your QGIS :ref:`user profile <user_profiles>` folder.
+to the :file:`proj` folder under your QGIS :ref:`user profile <user_profiles>`
+folder.
 
 If desired, QGIS can also prompt you whenever multiple possible transformations
 can be made between two CRSs, and allow you to make an informed selection
