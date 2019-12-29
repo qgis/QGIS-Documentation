@@ -1202,7 +1202,7 @@ Below are displayed options to customize the labels, under various tabs:
 * |labelbuffer| :ref:`Buffer <labels_buffer>`
 * |labelbackground| :ref:`Background <labels_background>`
 * |labelshadow| :ref:`Shadow <labels_shadow>`
-* |labelcallout| :guilabel:`Callouts`
+* |labelcallout| :ref:`Callouts <labels_callouts>`
 * |labelplacement| :ref:`Placement <labels_placement>`
 * |render| :ref:`Rendering <labels_rendering>`
 
@@ -1483,7 +1483,7 @@ The Label Toolbar
 The :guilabel:`Label Toolbar` provides some tools to manipulate |labeling|
 :ref:`label <vector_labels_tab>` or |diagram| :ref:`diagram <sec_diagram>`
 properties, but only if the corresponding data-defined option is indicated
-(otherwise, buttons are disabled). Layer might also need to be in edit mode.
+(otherwise, buttons are disabled).
 
 .. _figure_labels_tools:
 
