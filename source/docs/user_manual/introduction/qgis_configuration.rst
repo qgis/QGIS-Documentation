@@ -201,26 +201,40 @@ source code.
 CRS Settings
 ------------
 
-**Default CRS for new projects**
+.. note:: For more information on how QGIS handles layer projection, please
+  read the dedicated section at :ref:`label_projections`.
+
+.. _figure_crs_options:
+
+.. figure:: img/options_crs.png
+   :align: center
+
+   CRS Settings in QGIS
+
+**CRS for projects**
 
 There is an option to automatically set new project’s CRS:
 
-* |radioButtonOn|:guilabel:`Use CRS from first layer added`: the CRS of the project
-  is turned to match the CRS of the first layer loaded into it
+* |radioButtonOn|:guilabel:`Use CRS from first layer added`: the CRS of the
+  project will be set to the CRS of the first layer loaded into it
 * |radioButtonOff|:guilabel:`Use a default CRS`: a preselected CRS is applied by
   default to any new project and is left unchanged when adding layers to the
   project.
 
-The choice will be saved for use in subsequent QGIS sessions and in any case,
-the Coordinate Reference System of the project can still be overridden from
-the :menuselection:`Project --> Project properties --> CRS` tab.
+The choice will be saved for use in subsequent QGIS sessions.
+The Coordinate Reference System of the project can still be overridden from
+the :menuselection:`Project --> Properties... --> CRS` tab.
 
-**CRS for new layers**
+**CRS for layers**
 
-This area allows you to define the action to take when a new layer is created,
+:guilabel:`Default CRS for layers`: select a default CRS to use when you
+create a layer
+
+You can also define the action to take when a new layer is created,
 or when a layer without a CRS is loaded.
 
-* |radioButtonOn| :guilabel:`Prompt for CRS`
+* |radioButtonOn| :guilabel:`Leave as unknown CRS (take no action)`
+* |radioButtonOff| :guilabel:`Prompt for CRS`
 * |radioButtonOff| :guilabel:`Use project CRS`
 * |radioButtonOff| :guilabel:`Use a default CRS`
 
@@ -235,15 +249,6 @@ In this group, you can control whether reprojecting layers to another CRS should
   * a predefined list of datum transformations to apply by default.
     See :ref:`datum_transformation` for more details.
 
-.. note:: For more information on how QGIS handles layers projection, please
-  read the dedicated section at :ref:`label_projections`.
-
-.. _figure_crs_options:
-
-.. figure:: ../working_with_projections/img/crsdialog.png
-   :align: center
-
-   CRS Settings in QGIS
 
 .. _datasources_options:
 
@@ -1078,27 +1083,17 @@ this is not enforced. See :ref:`vector layer metadata properties
 CRS Properties
 --------------
 
+.. note:: For more information on how QGIS handles project projection, please
+  read the dedicated section at :ref:`label_projections`.
+
 The |crs| :guilabel:`CRS` tab helps you set the coordinate reference system
 to use in this project. It can be:
 
 * |checkbox| :guilabel:`No projection (or unknown/non-Earth projection)`:
-  this setting can be used to guess a layer CRS or when using QGIS for non
-  earth uses like role-playing game maps, building mapping or microscopic stuff.
-  In this case:
-
-  * No reprojection is done while rendering the layers: features are just drawn
-    using their raw coordinates.
-  * The ellipsoid is locked out and forced to ``None/Planimetric``.
-  * The distance and area units, and the coordinate display are locked out and
-    forced to "unknown units"; all measurements are done in unknown map units,
-    and no conversion is possible.
-
-* or an existing coordinate reference system that can be *geographic*, *projected*
-  or *user-defined*. A preview of the CRS extent on earth is displayed to
-  help you select the appropriate one.
-  Layers added to the project are on-the-fly translated to this CRS in order
-  to overlay them regardless their original CRS. Use of units, ellipsoid setting
-  are available and make sense and you can perform calculations accordingly.
+  layers are drawn based on their raw coordinates
+* or an existing coordinate reference system that can be *geographic*,
+  *projected* or *user-defined*. Layers added to the project are translated
+  on-the-fly to this CRS in order to overlay them regardless their original CRS.
 
 The |crs| :guilabel:`CRS` tab also helps you control the layers reprojection
 settings by configuring the datum transformation preferences to apply in the
@@ -1711,6 +1706,8 @@ in the QGIS user profile.
 .. |fileOpen| image:: /static/common/mActionFileOpen.png
    :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png
+   :width: 1.5em
+.. |indicatorNoCRS| image:: /static/common/mIndicatorNoCRS.png
    :width: 1.5em
 .. |interfaceCustomization| image:: /static/common/mActionInterfaceCustomization.png
    :width: 1.5em
