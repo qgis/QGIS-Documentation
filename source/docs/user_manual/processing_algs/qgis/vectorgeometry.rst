@@ -747,6 +747,9 @@ Outputs
      - Vector layer containing a copy of the valid features of
        the source layer.
 
+.. index:: GEOS, QGIS
+.. _typesofgeomerrors:
+
 Types of error messages and their meanings
 ..........................................
 
