@@ -53,7 +53,7 @@ Outputs
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 20 20 40
+   :widths: 35 20 20 25
    :stub-columns: 0
 
    * - Label
@@ -82,11 +82,11 @@ Outputs
      - 
    * - **Minimum value**
      - ``MIN``
-     - [number]
+     - [same as input]
      - 
    * - **Maximum value**
      - ``MAX``
-     - [number]
+     - [same as input]
      - 
    * - **Minimum length**
      - ``MIN_LENGTH``
@@ -126,11 +126,11 @@ Outputs
      - 
    * - **Minority (rarest occurring value)**
      - ``MINORITY``
-     - [number]
+     - [same as input]
      - 
    * - **Majority (most frequently occurring value)**
      - ``MAJORITY``
-     - [number]
+     - [same as input]
      - 
    * - **First quartile**
      - ``FIRSTQUARTILE``
