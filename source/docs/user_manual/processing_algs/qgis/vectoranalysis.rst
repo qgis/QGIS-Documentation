@@ -1119,40 +1119,12 @@ Outputs
 
 Statistics by categories
 ------------------------
-Calculates statistics of fields depending on a parent class.
-
-For numerical fields, a table layer with the following statistics
-is output:
-
-* count
-* unique
-* min
-* max
-* range
-* sum
-* mean
-* median
-* stdev
-* minority
-* majority
-* q1
-* q3
-* iqr
-
-For string fields, the following statistics will be calculated:
-
-* count
-* unique
-* empty
-* filled
-* min
-* max
-* min_length
-* max_length
-* mean_length
+Calculates statistics of a field depending on a parent class.
+The parent class is a combination of values from other fields.
 
 Parameters
 ..........
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -1197,6 +1169,100 @@ Outputs
      - ``OUTPUT``
      - [table]
      - Table containing the statistics
+
+|
+
+Depending on the type of the field being analyzed,
+following statistics are returned for each grouped value:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 62 12 12 12
+
+   * - Statistics
+     - String
+     - Numeric
+     - Date
+   * - Count (``COUNT``)
+     - |checkbox|
+     - |checkbox|
+     - |checkbox|
+   * - Unique values (``UNIQUE``)
+     - |checkbox|
+     -
+     - |checkbox|
+   * - Empty (null) values (``EMPTY``)
+     - |checkbox|
+     -
+     - |checkbox|
+   * - Non-empty values (``FILLED``)
+     - |checkbox|
+     -
+     - |checkbox|
+   * - Minimal value (``MIN``)
+     - |checkbox|
+     - |checkbox|
+     - |checkbox|
+   * - Maximal value (``MAX``)
+     - |checkbox|
+     - |checkbox|
+     - |checkbox|
+   * - Range (``RANGE``)
+     -
+     - |checkbox|
+     -
+   * - Sum (``SUM``)
+     -
+     - |checkbox|
+     -
+   * - Mean value (``MEAN``)
+     -
+     - |checkbox|
+     -
+   * - Median value (``MEDIAN``)
+     -
+     - |checkbox|
+     -
+   * - Standard Deviation (``STD_DEV``)
+     -
+     - |checkbox|
+     -
+   * - Coefficient of variation (``CV``)
+     -
+     - |checkbox|
+     -
+   * - Minority (rarest occurring value - ``MINORITY``)
+     -
+     - |checkbox|
+     -
+   * - Majority (most frequently occurring value - ``MAJORITY``)
+     -
+     - |checkbox|
+     -
+   * - First Quartile (``FIRSTQUARTILE``)
+     -
+     - |checkbox|
+     -
+   * - Third Quartile (``THIRDQUARTILE``)
+     -
+     - |checkbox|
+     -
+   * - Inter Quartile Range (``IQR``)
+     -
+     - |checkbox|
+     -
+   * - Minimum Length (``MIN_LENGTH``)
+     - |checkbox|
+     -
+     -
+   * - Mean Length (``MEAN_LENGTH``)
+     - |checkbox|
+     -
+     -
+   * - Maximum Length (``MAX_LENGTH``)
+     - |checkbox|
+     -
+     -
 
 
 .. _qgissumlinelengths:
@@ -1276,5 +1342,7 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |38| replace:: ``NEW in 3.8``
 .. |310| replace:: ``NEW in 3.10``
+.. |38| replace:: ``NEW in 3.8``
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
