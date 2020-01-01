@@ -627,7 +627,7 @@ Parameters
 
        Optional
      - ``EXTRA``
-     - [string]   
+     - [string]
 
        Default: None
      - Add extra GDAL command line options
@@ -689,50 +689,80 @@ Parameters
    * - **Input layer A**
      - ``INPUT_A``
      - [raster]
-     - First input raster layer
+     - First input raster layer (mandatory)
    * - **Number of raster band for A**
      - ``BAND_A``
      - [raster band]
-     - Band for input layer A
+     - Band for input layer A (mandatory)
    * - **Input layer B**
+
+       Optional
      - ``INPUT_B``
      - [raster]
+
+       Default: None
      - Second input raster layer
    * - **Number of raster band for B**
+
+       Optional
      - ``BAND_B``
      - [raster band]
      - Band for input layer B
    * - **Input layer C**
+
+       Optional
      - ``INPUT_C``
      - [raster]
+
+       Default: None
      - Third input raster layer
    * - **Number of raster band for C**
+
+       Optional
      - ``BAND_C``
      - [raster band]
      - Band for input layer C
    * - **Input layer D**
+
+       Optional
      - ``INPUT_D``
      - [raster]
+
+       Default: None
      - Fourth input raster layer
    * - **Number of raster band for D**
+
+       Optional
      - ``BAND_D``
      - [raster band]
      - Band for input layer D
    * - **Input layer E**
+
+       Optional
      - ``INPUT_E``
      - [raster]
+
+       Default: None
      - Fifth input raster layer
    * - **Number of raster band for E**
+
+       Optional
      - ``BAND_E``
      - [raster band]
      - Band for input layer E
    * - **Input layer F**
+
+       Optional
      - ``INPUT_F``
      - [raster]
      - Sixth input raster layer
    * - **Number of raster band for F**
+
+       Optional
      - ``BAND_F``
      - [raster band]
+
+       Default: None
      - Band for input layer F
    * - **Calculation in gdalnumeric syntax using +-/\* or any numpy array functions (i.e. logical_and())**
      - ``FORMULA``
@@ -797,7 +827,7 @@ Parameters
      - ``EXTRA``
      - [string]   
 
-       Default: None
+       Default: ''
      - Add extra GDAL command line options
    * - **Calculated**
      - ``OUTPUT``
