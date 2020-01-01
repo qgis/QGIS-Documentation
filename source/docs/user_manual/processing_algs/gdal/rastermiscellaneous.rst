@@ -661,6 +661,174 @@ Outputs
      - Output (sharpened) raster layer
 
 
+.. _gdalrastercalculator:
+
+Raster calculator
+-----------------
+Command line raster calculator with numpy syntax.
+Use any basic arithmetic supported by numpy arrays,
+such as +, -, *, and \ along with logical operators,
+such as >.
+Note that all input rasters must have the same
+dimensions, but no projection checking is performed.
+
+See `GDAL Raster calculator <https://gdal.org/programs/gdal_calc.html>`_.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer A**
+     - ``INPUT_A``
+     - [raster]
+     - First input raster layer
+   * - **Number of raster band for A**
+     - ``BAND_A``
+     - [raster band]
+     - Band for input layer A
+   * - **Input layer B**
+     - ``INPUT_B``
+     - [raster]
+     - Second input raster layer
+   * - **Number of raster band for B**
+     - ``BAND_B``
+     - [raster band]
+     - Band for input layer B
+   * - **Input layer C**
+     - ``INPUT_C``
+     - [raster]
+     - Third input raster layer
+   * - **Number of raster band for C**
+     - ``BAND_C``
+     - [raster band]
+     - Band for input layer C
+   * - **Input layer D**
+     - ``INPUT_D``
+     - [raster]
+     - Fourth input raster layer
+   * - **Number of raster band for D**
+     - ``BAND_D``
+     - [raster band]
+     - Band for input layer D
+   * - **Input layer E**
+     - ``INPUT_E``
+     - [raster]
+     - Fifth input raster layer
+   * - **Number of raster band for E**
+     - ``BAND_E``
+     - [raster band]
+     - Band for input layer E
+   * - **Input layer F**
+     - ``INPUT_F``
+     - [raster]
+     - Sixth input raster layer
+   * - **Number of raster band for F**
+     - ``BAND_F``
+     - [raster band]
+     - Band for input layer F
+   * - **Calculation in gdalnumeric syntax using +-/\* or any numpy array functions (i.e. logical_and())**
+     - ``FORMULA``
+     - [string]
+
+       Default: ''
+     - The calculation formula.
+       Examples:
+       
+       * ``A*(A>0)`` --- output is the value of the A raster if
+         the value of A is greater or equal to 0.
+         If not, output 0.
+       * ``A*(A>0 and A>B)``--- output the value of A if that value
+         is bigger than 0 and bigger than the value of B.
+         If not output 0.
+       * ``A*logical_or(A<=177,A>=185)`` --- output the value of A
+         if A <= 177 or A >= 185.
+         If not, output 0.
+       * ``sqrt(A*A+B*B)`` --- Output the square root of the sum of
+         the value of A squared and the value of B squared.
+
+   * - **Set output nodata value**
+
+       Optional
+     - ``NO_DATA``
+     - [number]
+
+       Default: None
+     - Value to use for nodata
+   * - **Output raster type**
+     - ``RTYPE``
+     - [enumeration]
+       
+       Default: 5
+     - Defines the format of the output raster file.
+
+       Options:
+
+       * 0 --- Byte
+       * 1 --- Int16
+       * 2 --- UInt16
+       * 3 --- UInt32
+       * 4 --- Int32
+       * 5 --- Float32
+       * 6 --- Float64
+
+   * - **Additional creation options**
+
+       Optional
+     - ``OPTIONS``
+     - [string]
+
+       Default: ''
+     - For adding one or more creation options that control the
+       raster to be created (colors, block size, file
+       compression...).
+       For convenience, you can rely on predefined profiles (see
+       :ref:`GDAL driver options section <gdal_createoptions>`).
+   * - **Additional command-line parameters**
+
+       Optional
+     - ``EXTRA``
+     - [string]   
+
+       Default: None
+     - Add extra GDAL command line options
+   * - **Calculated**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output (sharpened) raster layer. One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Calculated**
+     - ``OUTPUT``
+     - [raster]
+     - Output (calculated) raster layer
+
+
 .. _gdalgdalinfo:
 
 Raster information
