@@ -213,8 +213,8 @@ Parameters
      - [file]
      - Path to the ``QML`` style file.
   
-Output
-------
+Outputs
+.......
 
 .. list-table::
    :header-rows: 1
