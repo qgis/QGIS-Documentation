@@ -667,7 +667,7 @@ Raster calculator
 -----------------
 Command line raster calculator with numpy syntax.
 Use any basic arithmetic supported by numpy arrays,
-such as +, -, *, and \ along with logical operators,
+such as +, -, \*, and \ along with logical operators,
 such as >.
 Note that all input rasters must have the same
 dimensions, but no projection checking is performed.
