@@ -843,8 +843,6 @@ Retiles a set of input tiles.
 All the input tiles must be georeferenced in the same
 coordinate system and have a matching number of bands.
 Optionally pyramid levels are generated.
-It is possible to generate shape file(s) for the tiled
-output.
 
 This algorithm is derived from the
 `GDAL Retile utility <https://gdal.org/gdal_retile.html>`_ .
