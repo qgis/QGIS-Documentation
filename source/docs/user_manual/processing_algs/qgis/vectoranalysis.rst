@@ -148,8 +148,8 @@ Outputs
 
 .. _qgisclimbalongline:
 
-Climb along line
-----------------
+Climb along line |310|
+----------------------
 
 This algorithm calculates the total climb and descent along line geometries.
 The input layer must have Z values present. If Z values are not available,
@@ -1277,3 +1277,4 @@ Outputs
    source folder.
 
 .. |38| replace:: ``NEW in 3.8``
+.. |310| replace:: ``NEW in 3.10``

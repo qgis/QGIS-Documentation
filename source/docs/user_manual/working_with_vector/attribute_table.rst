@@ -794,6 +794,11 @@ you to assign the current airport to another region.
 Moreover if you toggle the editing mode of the airport layer, the ``fk_region``
 field has also an autocompleter function: while typing you will see all the
 values of the ``id`` field of the region layer.
+Here it is possible to digitize a polygon for the region layer using the |signPlus| button
+if you chose the option ``Allow adding new features`` in the 
+:menuselection:`Properties --> Attributes Form` menu of the airport layer.
+
+
 
 .. index:: Many-to-many relation; Relation
 .. _many_to_many_relation:
@@ -1029,6 +1034,8 @@ table.
 .. |selectedToTop| image:: /static/common/mActionSelectedToTop.png
    :width: 1.5em
 .. |sort| image:: /static/common/sort.png
+   :width: 1.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
