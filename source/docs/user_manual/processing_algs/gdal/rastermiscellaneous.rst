@@ -667,7 +667,7 @@ Raster calculator
 -----------------
 Command line raster calculator with numpy syntax.
 Use any basic arithmetic supported by numpy arrays,
-such as +, -, \*, and \ along with logical operators,
+such as +, -, \*, and / along with logical operators,
 such as >.
 Note that all input rasters must have the same
 dimensions, but no projection checking is performed.
@@ -772,16 +772,16 @@ Parameters
      - The calculation formula.
        Examples:
        
-       * ``A*(A>0)`` --- output is the value of the A raster if
-         the value of A is greater or equal to 0.
-         If not, output 0.
-       * ``A*(A>0 and A>B)``--- output the value of A if that value
+       * ``A*(A>0)`` --- outputs the value of the raster A if
+         the value of A is greater than 0.
+         If not, outputs 0.
+       * ``A*(A>0 and A>B)``--- outputs the value of A if that value
          is bigger than 0 and bigger than the value of B.
-         If not output 0.
-       * ``A*logical_or(A<=177,A>=185)`` --- output the value of A
+         If not, outputs 0.
+       * ``A*logical_or(A<=177,A>=185)`` --- outputs the value of A
          if A <= 177 or A >= 185.
-         If not, output 0.
-       * ``sqrt(A*A+B*B)`` --- Output the square root of the sum of
+         If not, outputs 0.
+       * ``sqrt(A*A+B*B)`` --- Outputs the square root of the sum of
          the value of A squared and the value of B squared.
 
    * - **Set output nodata value**
@@ -834,7 +834,7 @@ Parameters
      - [raster]
 
        Default: ``[Save to temporary file]``
-     - Specify the output (sharpened) raster layer. One of:
+     - Specify the output (calculated) raster layer. One of:
 
        * Save to a Temporary File
        * Save to File...
