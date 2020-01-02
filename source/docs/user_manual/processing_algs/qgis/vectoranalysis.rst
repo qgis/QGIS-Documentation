@@ -1173,7 +1173,7 @@ Outputs
 |
 
 Depending on the type of the field being analyzed,
-following statistics are returned for each grouped value:
+the following statistics are returned for each grouped value:
 
 .. list-table::
    :header-rows: 1
