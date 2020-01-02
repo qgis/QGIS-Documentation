@@ -782,7 +782,7 @@ Parameters
    * - **Input files**
      - ``INPUT``
      - [raster] [list]
-     - The input raster files (can be multiple files).
+     - The input raster files
    * - **Tile width**
      - ``TILE_SIZE_X``
      - [number]
@@ -906,7 +906,7 @@ Parameters
      - [file]
 
        Default: ``[Skip output]``
-     - Specify the output folder for the tiles.
+     - 
        One of:
 
        * Skip Output
@@ -934,7 +934,7 @@ Outputs
    * - **CSV file containing the tile(s) georeferencing information**
      - ``OUTPUT_CSV``
      - [file]
-     - The output folder for the tiles.
+     - The CSV file with georeferencing information for the tiles.
 
 
 .. _gdaltileindex:
