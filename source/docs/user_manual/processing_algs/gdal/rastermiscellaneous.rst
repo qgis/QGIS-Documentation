@@ -627,7 +627,7 @@ Parameters
 
        Optional
      - ``EXTRA``
-     - [string]   
+     - [string]
 
        Default: None
      - Add extra GDAL command line options
