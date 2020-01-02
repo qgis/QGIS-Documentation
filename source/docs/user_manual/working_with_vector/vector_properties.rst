@@ -32,7 +32,7 @@ The vector :guilabel:`Layer Properties` dialog provides the following sections:
    * - |labeling| :ref:`Labels <vector_labels_tab>`:sup:`[1]`
      - |diagram| :ref:`Diagrams <sec_diagram>`
      - |3d| :guilabel:`3D View`:sup:`[1]`
-   * - |sourceFields| :ref:`Source Fields <vector_fields_menu>`
+   * - |sourceFields| :ref:`Fields <vector_fields_menu>`
      - |formView| :ref:`Attributes Form <vector_attributes_menu>`
      - |join| :ref:`Joins <sec_joins>`
    * - |auxiliaryStorage| :ref:`Auxiliary Storage <vector_auxiliary_storage>`
@@ -1840,10 +1840,10 @@ See :ref:`data_defined_labeling` for more information.
 .. index:: Fields, Forms
 .. _vector_fields_menu:
 
-Source Fields Properties
-========================
+Fields Properties
+=================
 
-|sourceFields| The :guilabel:`Source Fields` tab provides information on
+|sourceFields| The :guilabel:`Fields` tab provides information on
 fields related to the layer and helps you organize them.
 
 The layer can be made :ref:`editable <editingvector>` using the |toggleEditing|
@@ -1867,7 +1867,7 @@ field label in a feature form.
 
 Other than the fields contained in the dataset, virtual fields and
 :ref:`Auxiliary Storage <vector_auxiliary_storage>` included, the
-:guilabel:`Source Fields` tab also lists fields from any :ref:`joined layers <sec_joins>`.
+:guilabel:`Fields` tab also lists fields from any :ref:`joined layers <sec_joins>`.
 Depending on the origin of the field, a different background color is applied to it.
 
 For each listed field, the dialog also lists read-only characteristics such as
@@ -1879,7 +1879,7 @@ layer as ``WMS`` or ``WFS``, you can also check here which fields could be retri
 .. figure:: img/fields_properties.png
    :align: center
 
-   Source Field properties tab
+   Fields properties tab
 
 
 .. _vector_attributes_menu:
@@ -2093,9 +2093,9 @@ General options
   It can also be used as field name replacement in the :ref:`expression builder
   <vector_expressions>`, easing expressions understanding and reviews.
   Aliases are saved in project file.
-* :guilabel:`Comment`: displays the field's comment as shown in the :guilabel:`Source
-  Fields` tab, in a read-only state. This information is shown as tooltip when
-  hovering over the field label in a feature form.
+* :guilabel:`Comment`: displays the field's comment as shown in the
+  :guilabel:`Fields` tab, in a read-only state. This information is shown as
+  tooltip when hovering over the field label in a feature form.
 * |checkbox| :guilabel:`Editable`: uncheck this option to set the field read-only
   (not manually modifiable) even when the layer is in edit mode. Note that
   checking this setting doesn't override any edit limitation from the provider.
@@ -2305,7 +2305,8 @@ source (X and Y positions, rotation angle, font style, color and so on).
 The Auxiliary Storage mechanism provides the solution to these limitations
 and awkward configurations. Auxiliary fields are a roundabout way to
 automatically manage and store these data-defined properties (labels,
-diagram, symbology...) in a SQLite database thanks to editable joins. This allows you to store properties for layers that aren't editable.
+diagram, symbology...) in a SQLite database thanks to editable joins.
+This allows you to store properties for layers that aren't editable.
 
 A tab is available in vector layer properties dialog to manage auxiliary
 storage:
