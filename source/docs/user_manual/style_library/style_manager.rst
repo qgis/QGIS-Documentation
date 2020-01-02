@@ -143,6 +143,8 @@ Right-clicking over a selection of items also allows you to:
 * :guilabel:`Clear Tags`: detaching the symbols from any tag;
 * :guilabel:`Remove Item(s)`;
 * :guilabel:`Edit Item`: applies to the item you right-click over;
+* :guilabel:`Copy Item`;
+* :guilabel:`Paste Item ...`;
 * :guilabel:`Export Selected Symbol(s) as PNG...` (only available with symbols);
 * :guilabel:`Export Selected Symbol(s) as SVG...` (only available with symbols);
 
