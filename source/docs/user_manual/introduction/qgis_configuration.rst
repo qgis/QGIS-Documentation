@@ -440,6 +440,9 @@ Rendering Settings
 
 * With :guilabel:`RGB band selection`, you can define the number for the Red,
   Green and Blue band.
+* For newly added rasters you can define the :guilabel:`Zoomed in resampling`
+  and the :guilabel:`Zoomed out resampling`. You can choose between three default
+  resampling methods: 'Nearest Neighbour', 'Bilinear' and 'Cubic'.
 
 *Contrast enhancement*
 
