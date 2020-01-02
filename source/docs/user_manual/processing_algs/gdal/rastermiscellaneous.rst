@@ -757,15 +757,15 @@ Outputs
 
 Retile
 ------
-This utility will retile a set of input tile(s).
-All the input tile(s) must be georeferenced in the same
+Retiles a set of input tiles.
+All the input tiles must be georeferenced in the same
 coordinate system and have a matching number of bands.
 Optionally pyramid levels are generated.
 It is possible to generate shape file(s) for the tiled
 output.
 
 This algorithm is derived from the
-`GDAL Retile utility <https://gdal.org/gdal_retile.htmll>`_ .
+`GDAL Retile utility <https://gdal.org/gdal_retile.html>`_ .
 
 Parameters
 ..........
@@ -795,7 +795,7 @@ Parameters
 
        Default: 256
      - Height of the tiles in pixels (minimum 0)
-   * - **Overlap in pixels between consequtive tiles**
+   * - **Overlap in pixels between consecutive tiles**
      - ``OVERLAP``
      - [number]
 
@@ -835,7 +835,7 @@ Parameters
      - [string]
 
        Default: ';'
-     - CSV file delimiter
+     - Delimiter to use in the CSV file containing the tile(s) georeferencing information
    * - **Additional creation options**
 
        Optional
