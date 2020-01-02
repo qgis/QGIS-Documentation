@@ -672,7 +672,9 @@ such as >.
 Note that all input rasters must have the same
 dimensions, but no projection checking is performed.
 
-See `GDAL Raster calculator <https://gdal.org/programs/gdal_calc.html>`_.
+See the `GDAL Raster Calculator utility docs <https://gdal.org/programs/gdal_calc.html>`_.
+
+.. seealso:: :ref:`qgisrastercalculator`
 
 Parameters
 ..........
