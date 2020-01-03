@@ -276,7 +276,7 @@ Grid Frame
 ..........
 
 There are different options to style the frame that holds the map.
-Following options are available: ``No Frame``, ``Zebra``, ``Zebra (nautical)``,
+The following options are available: ``No Frame``, ``Zebra``, ``Zebra (nautical)``,
 ``Interior ticks``, ``Exterior ticks``, ``Interior and Exterior ticks``,
 ``Line border`` and ``Line border (nautical)``.
 
