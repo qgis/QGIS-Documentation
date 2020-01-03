@@ -309,9 +309,9 @@ described in the section 'accuracy of map projections' above, the larger the are
 (for example South Africa) the more distortion of angular conformity, distance
 and area occur. To avoid too much distortion, the world is divided into **60 equal
 zones** that are all **6 degrees** wide in longitude from East to West. The **UTM
-zones** are numbered **1 to 60**, starting at the **international date line**
+zones** are numbered **1 to 60**, starting at the **antimeridian**
 (**zone 1** at 180 degrees West longitude) and progressing East back to the
-**international date line** (**zone 60** at 180 degrees East longitude) as shown
+**antemeridian** (**zone 60** at 180 degrees East longitude) as shown
 in figure_utm_zones_.
 
 .. _figure_utm_zones:
