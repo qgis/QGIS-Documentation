@@ -350,28 +350,29 @@ You can:
 
 * Rename it with a double-click;
 * With the |signPlus| and |signMinus| buttons, add or remove overviews;
-* With the |arrowUp| and |arrowDown| buttons, move up and down an overview in
-  the list, hence move it on top or bottom of another one, within the map item.
+* With the |arrowUp| and |arrowDown| buttons, move an overview up and down in
+  the list, placing it above or below other overviews in the map item.
 
 Then select the overview item in the list and check the |checkbox|
-:guilabel:`Draw "<name_overview>" overview` to enable the overview
-drawing over the selected map frame. You can customize it with:
+:guilabel:`Draw "<name_overview>" overview` to enable the drawing
+of the overview on the selected map frame. You can customize it with:
 
 * The :guilabel:`Map frame` selects the map item whose
-  extents will be drawn on the present map item.
+  extents will be shown on the present map item.
 * The :guilabel:`Frame Style` uses the :ref:`symbol properties
   <symbol-selector>` to render the overview frame.
 * The :guilabel:`Blending mode` allows you to set different transparency blend
   modes.
 * The |checkbox| :guilabel:`Invert overview` creates a mask around the extents
   when activated: the referenced map extents are shown clearly, whereas
-  everything else is blended with the frame fill color.
+  the rest of the map item is blended with the frame fill color
+  (if a fill color is used).
 * The |checkbox| :guilabel:`Center on overview` pans the map item content so
   that the overview frame is displayed at the center of the map. You can only
   activate one overview item to center, when you have several overviews.
 * The :guilabel:`Position` controls exactly where in the map item's layer stack
-  the overview will be placed, e.g. allowing them to draw a overview
-  extent below some feature layers such as roads whilst drawing it
+  the overview will be placed, e.g. allowing an overview extent to be
+  drawn below some feature layers such as roads whilst drawing it
   above other background layers. Available options are:
 
   * :guilabel:`Below map`
