@@ -8,6 +8,99 @@ Vector geoprocessing
       :depth: 1
 
 
+.. _gdalbuffervectors:
+
+Buffer vectors
+--------------
+Create buffers around the features of a vector layer.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Input layer**
+      - ``INPUT``
+      - [vector: line]
+      - The input vector layer
+   *  - **Geometry column name**
+      - ``GEOMETRY``
+      - [string]
+
+        Default: 'geometry'
+      - The name of the input layer geometry column to use
+   *  - **Buffer distance**
+      - ``DISTANCE``
+      - [number]
+
+        Default: 10.0
+      - Minimum: 0.0
+   *  - **Dissolve by attribute**
+
+        Optional
+      - ``FIELD``
+      - [tablefield: any]
+
+        Default: None
+      - Field to use for dissolving
+   *  - **Dissolve results**
+      - ``DISSOLVE``
+      - [boolean]
+
+        Default: False
+      - 
+   *  - **Produce one feature for each geometry in any kind of
+        geometry collection in the source file**
+      - ``EXPLODE_COLLECTIONS``
+      - [boolean]
+
+        Default: False
+      - 
+   *  - **Additional creation options**
+
+        (optional)
+      - ``OPTIONS``
+      - [string]
+
+        Default: '' (no additional options)
+      - Additional GDAL creation options.
+   *  - **Buffer**
+      - ``OUTPUT``
+      - [vector: polygon]
+
+        Default: ``[Save to temporary file]``
+      - Specify the output buffer layer. One of:
+
+        * Save to a Temporary File
+        * Save to File...
+
+        The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Buffer**
+      - ``OUTPUT``
+      - [vector: polygon]
+      - The output buffer layer
+
+
 .. _gdalclipvectorbyextent:
 
 Clip vector by extent
@@ -44,12 +137,19 @@ Parameters
       - ``OPTIONS``
       - [string]
         
-        Default: "" (no additional options)
+        Default: '' (no additional options)
       - Additional GDAL creation options.
    *  - **Clipped (extent)**
       - ``OUTPUT``
       - [same as input]
-      - The output (clipped) layer
+
+        Default: ``[Save to temporary file]``
+      - Specify the output (clipped) layer. One of:
+
+        * Save to a Temporary File
+        * Save to File...
+
+        The file encoding can also be changed here.
 
 Outputs
 .......
@@ -63,7 +163,7 @@ Outputs
       - Name
       - Type
       - Description
-   *  - **Output layer**
+   *  - **Clipped (extent)**
       - ``OUTPUT``
       - [same as input]
       - The output (clipped) layer.
@@ -105,12 +205,19 @@ Parameters
       - ``OPTIONS``
       - [string]
         
-        Default: "" (no additional options)
+        Default: '' (no additional options)
       - Additional GDAL creation options.
    *  - **Clipped (mask)**
       - ``OUTPUT``
       - [same as input]
-      - The output (masked) layer
+
+        Default: ``[Save to temporary file]``
+      - The output (masked) layer. One of:
+
+        * Save to a Temporary File
+        * Save to File...
+
+        The file encoding can also be changed here.
 
 Outputs
 .......
@@ -124,7 +231,7 @@ Outputs
       - Name
       - Type
       - Description
-   *  - **Output layer**
+   *  - **Clipped (mask)**
       - ``OUTPUT``
       - [same as input]
       - The output (masked) layer.
@@ -166,8 +273,8 @@ Parameters
       - ``GEOMETRY``
       - [string]
         
-        Default: "geometry"
-      - The name of the geometry column of the input layer to use
+        Default: 'geometry'
+      - The name of the input layer geometry column to use
         for dissolving.
    *  - **Produce one feature for each geometry in any kind of
         geometry collection in the source file**
@@ -216,12 +323,19 @@ Parameters
       - ``OPTIONS``
       - [string]
         
-        Default: ""
+        Default: '' (no additional options)
       - Additional GDAL creation options.
    *  - **Dissolved**
       - ``OUTPUT``
-      -  [same as input]
-      - The output layer
+      - [same as input]
+
+        Default: ``[Save to temporary file]``
+      - Specify the output layer. One of:
+
+        * Save to a Temporary File
+        * Save to File...
+
+        The file encoding can also be changed here.
 
 Outputs
 .......
@@ -239,4 +353,252 @@ Outputs
       - ``OUTPUT``
       - [same as input]
       - The output multipart geometry layer (with dissolved geometries)
+      
+      
+.. _gdaloffsetcurve:
 
+Offset curve
+------------
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Input layer**
+      - ``INPUT``
+      - [vector: line]
+      - The input line layer
+   *  - **Geometry column name**
+      - ``GEOMETRY``
+      - [string]
+        
+        Default: 'geometry'
+      - The name of the input layer geometry column to use
+   *  - **Offset distance (left-sided: positive, right-sided: negative**
+      - ``DISTANCE``
+      - [number]
+        
+        Default: 10.0
+      - 
+   *  - **Additional creation options**
+        
+        (optional)
+      - ``OPTIONS``
+      - [string]
+        
+        Default: '' (no additional options)
+      - Additional GDAL creation options.
+   *  - **Offset curve**
+      - ``OUTPUT``
+      - [vector: line]
+
+        Default: ``[Save to temporary file]``
+      - Specify the output line layer. One of:
+
+        * Save to a Temporary File
+        * Save to File...
+
+        The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Offset curve**
+      - ``OUTPUT``
+      - [vector: line]
+      - The output offset curve
+
+
+.. _gdalonesidebuffer:
+
+One side buffer
+---------------
+Create a buffer on one side (right or left) of the lines in a line
+vector layer.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Input layer**
+      - ``INPUT``
+      - [vector: line]
+      - The input line layer
+   *  - **Geometry column name**
+      - ``GEOMETRY``
+      - [string]
+
+        Default: 'geometry'
+      - The name of the input layer geometry column to use
+   *  - **Buffer distance**
+      - ``DISTANCE``
+      - [number]
+
+        Default: 10.0
+      - 
+   *  - **Buffer side**
+      - ``BUFFER_SIDE``
+      - [enumeration]
+
+        Default: 0
+      - One of:
+
+        * 0 --- Right
+        * 1 --- Left
+
+   *  - **Dissolve by attribute**
+
+        Optional
+      - ``FIELD``
+      - [tablefield: any]
+
+        Default: None
+      - Field to use for dissolving
+   *  - **Dissolve results**
+      - ``DISSOLVE``
+      - [boolean]
+
+        Default: False
+      - 
+   *  - **Produce one feature for each geometry in any kind of
+        geometry collection in the source file**
+      - ``EXPLODE_COLLECTIONS``
+      - [boolean]
+
+        Default: False
+      - 
+   *  - **Additional creation options**
+
+        (optional)
+      - ``OPTIONS``
+      - [string]
+
+        Default: '' (no additional options)
+      - Additional GDAL creation options.
+   *  - **One-sided buffer**
+      - ``OUTPUT``
+      - [vector: polygon]
+
+        Default: ``[Save to temporary file]``
+      - Specify the output buffer layer. One of:
+
+        * Save to a Temporary File
+        * Save to File...
+
+        The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **One-sided buffer**
+      - ``OUTPUT``
+      - [vector: polygon]
+      - The output buffer layer
+      
+      
+.. _gdalpointsalonglines:
+
+Points along lines
+------------------
+Generate a point on each line of a line vector layer.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Input layer**
+      - ``INPUT``
+      - [vector: line]
+      - The input line layer
+   *  - **Geometry column name**
+      - ``GEOMETRY``
+      - [string]
+        
+        Default: 'geometry'
+      - The name of the input layer geometry column to use
+   *  - **Distance from line start represented as a fraction of line
+        length**
+      - ``DISTANCE``
+      - [number]
+        
+        Default: 0.5 (middle of the line)
+      - 
+   *  - **Additional creation options**
+        
+        (optional)
+      - ``OPTIONS``
+      - [string]
+        
+        Default: '' (no additional options)
+      - Additional GDAL creation options.
+   *  - **Points along line**
+      - ``OUTPUT``
+      - [vector: point]
+
+        Default: ``[Save to temporary file]``
+      - Specify the output point layer.
+        One of:
+
+        * Save to a Temporary File
+        * Save to File...
+
+        The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Points along line**
+      - ``OUTPUT``
+      - [vector: point]
+      - The output point layer
