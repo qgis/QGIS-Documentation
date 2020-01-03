@@ -627,7 +627,7 @@ Parameters
 
        Optional
      - ``EXTRA``
-     - [string]   
+     - [string]
 
        Default: None
      - Add extra GDAL command line options
@@ -659,6 +659,206 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output (sharpened) raster layer
+
+
+.. _gdalrastercalculator:
+
+Raster calculator
+-----------------
+Command line raster calculator with numpy syntax.
+Use any basic arithmetic supported by numpy arrays,
+such as +, -, \*, and / along with logical operators,
+such as >.
+Note that all input rasters must have the same
+dimensions, but no projection checking is performed.
+
+See the `GDAL Raster Calculator utility docs <https://gdal.org/programs/gdal_calc.html>`_.
+
+.. seealso:: :ref:`qgisrastercalculator`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer A**
+     - ``INPUT_A``
+     - [raster]
+     - First input raster layer (mandatory)
+   * - **Number of raster band for A**
+     - ``BAND_A``
+     - [raster band]
+     - Band for input layer A (mandatory)
+   * - **Input layer B**
+
+       Optional
+     - ``INPUT_B``
+     - [raster]
+
+       Default: None
+     - Second input raster layer
+   * - **Number of raster band for B**
+
+       Optional
+     - ``BAND_B``
+     - [raster band]
+     - Band for input layer B
+   * - **Input layer C**
+
+       Optional
+     - ``INPUT_C``
+     - [raster]
+
+       Default: None
+     - Third input raster layer
+   * - **Number of raster band for C**
+
+       Optional
+     - ``BAND_C``
+     - [raster band]
+     - Band for input layer C
+   * - **Input layer D**
+
+       Optional
+     - ``INPUT_D``
+     - [raster]
+
+       Default: None
+     - Fourth input raster layer
+   * - **Number of raster band for D**
+
+       Optional
+     - ``BAND_D``
+     - [raster band]
+     - Band for input layer D
+   * - **Input layer E**
+
+       Optional
+     - ``INPUT_E``
+     - [raster]
+
+       Default: None
+     - Fifth input raster layer
+   * - **Number of raster band for E**
+
+       Optional
+     - ``BAND_E``
+     - [raster band]
+     - Band for input layer E
+   * - **Input layer F**
+
+       Optional
+     - ``INPUT_F``
+     - [raster]
+     - Sixth input raster layer
+   * - **Number of raster band for F**
+
+       Optional
+     - ``BAND_F``
+     - [raster band]
+
+       Default: None
+     - Band for input layer F
+   * - **Calculation in gdalnumeric syntax using +-/\* or any numpy array functions (i.e. logical_and())**
+     - ``FORMULA``
+     - [string]
+
+       Default: ''
+     - The calculation formula.
+       Examples:
+       
+       * ``A*(A>0)`` --- outputs the value of the raster A if
+         the value of A is greater than 0.
+         If not, outputs 0.
+       * ``A*(A>0 and A>B)``--- outputs the value of A if that value
+         is bigger than 0 and bigger than the value of B.
+         If not, outputs 0.
+       * ``A*logical_or(A<=177,A>=185)`` --- outputs the value of A
+         if A <= 177 or A >= 185.
+         If not, outputs 0.
+       * ``sqrt(A*A+B*B)`` --- Outputs the square root of the sum of
+         the value of A squared and the value of B squared.
+
+   * - **Set output nodata value**
+
+       Optional
+     - ``NO_DATA``
+     - [number]
+
+       Default: None
+     - Value to use for nodata
+   * - **Output raster type**
+     - ``RTYPE``
+     - [enumeration]
+       
+       Default: 5
+     - Defines the format of the output raster file.
+
+       Options:
+
+       * 0 --- Byte
+       * 1 --- Int16
+       * 2 --- UInt16
+       * 3 --- UInt32
+       * 4 --- Int32
+       * 5 --- Float32
+       * 6 --- Float64
+
+   * - **Additional creation options**
+
+       Optional
+     - ``OPTIONS``
+     - [string]
+
+       Default: ''
+     - For adding one or more creation options that control the
+       raster to be created (colors, block size, file
+       compression...).
+       For convenience, you can rely on predefined profiles (see
+       :ref:`GDAL driver options section <gdal_createoptions>`).
+   * - **Additional command-line parameters**
+
+       Optional
+     - ``EXTRA``
+     - [string]   
+
+       Default: ''
+     - Add extra GDAL command line options
+   * - **Calculated**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output (calculated) raster layer. One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Calculated**
+     - ``OUTPUT``
+     - [raster]
+     - Output (calculated) raster layer
 
 
 .. _gdalgdalinfo:
@@ -751,6 +951,188 @@ Outputs
      - ``OUTPUT``
      - [html]
      - The HTML file containing information about the input raster layer
+
+
+.. _gdalretile:
+
+Retile
+------
+Retiles a set of input tiles.
+All the input tiles must be georeferenced in the same
+coordinate system and have a matching number of bands.
+Optionally pyramid levels are generated.
+
+This algorithm is derived from the
+`GDAL Retile utility <https://gdal.org/gdal_retile.html>`_ .
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input files**
+     - ``INPUT``
+     - [raster] [list]
+     - The input raster files
+   * - **Tile width**
+     - ``TILE_SIZE_X``
+     - [number]
+
+       Default: 256
+     - Width of the tiles in pixels (minimum 0)
+   * - **Tile height**
+     - ``TILE_SIZE_Y``
+     - [number]
+
+       Default: 256
+     - Height of the tiles in pixels (minimum 0)
+   * - **Overlap in pixels between consecutive tiles**
+     - ``OVERLAP``
+     - [number]
+
+       Default: 0
+     - 
+   * - **Number of pyramid levels to build**
+     - ``LEVELS``
+     - [number]
+
+       Default: 1
+     - Minimum: 0
+   * - **Source coordinate reference system**
+     - ``SOURCE_CRS``
+     - [crs]
+
+       Default: None
+     - 
+   * - **Resampling method**
+     - ``RESAMPLING``
+     - [enumeration]
+
+       Default: 0
+     - The resampling algorithm to be used
+
+       Options:
+
+       * 0 --- Nearest Neighbour (``nearest``)
+       * 1 --- Bilinear (``bilinear``)
+       * 2 --- Cubic (``cubic``)
+       * 3 --- Cubic Spline (``cubicspline``)
+       * 4 --- Lanczos Windowed Sinc (``lanczos``)
+
+   * - **Column delimiter used in the CSV file**
+
+       Optional
+     - ``DELIMITER``
+     - [string]
+
+       Default: ';'
+     - Delimiter to use in the CSV file containing the tile(s) georeferencing information
+   * - **Additional creation options**
+
+       Optional
+     - ``OPTIONS``
+     - [string]
+
+       Default: ''
+     - For adding one or more creation options that control the
+       raster to be created (colors, block size, file
+       compression...).
+       For convenience, you can rely on predefined profiles (see
+       :ref:`GDAL driver options section <gdal_createoptions>`).
+   * - **Additional command-line parameters**
+
+       Optional
+     - ``EXTRA``
+     - [string]
+
+       Default: ''
+     - Add extra GDAL command line options
+   * - **Output data type**
+     - ``DATA_TYPE``
+     - [enumeration]
+       
+       Default: 5
+     - Defines the format of the output raster file.
+
+       Options:
+
+       * 0 --- Byte
+       * 1 --- Int16
+       * 2 --- UInt16
+       * 3 --- UInt32
+       * 4 --- Int32
+       * 5 --- Float32
+       * 6 --- Float64
+       * 7 --- CInt16
+       * 8 --- CInt32
+       * 9 --- CFloat32
+       * 10 --- CFloat64
+
+   * - **Build only the pyramids**
+     - ``ONLY_PYRAMIDS``
+     - [boolean]
+
+       Default: False
+     - 
+   * - **Use separate directory for each tile row**
+     - ``DIR_FOR_ROW``
+     - [boolean]
+
+       Default: False
+     - 
+   * - **Output directory**
+     - ``OUTPUT``
+     - [folder]
+
+       Default: ``[Save to temporary folder]``
+     - Specify the output folder for the tiles.
+       One of:
+
+       * Save to Temporary Directory
+       * Save to Directory...
+
+       The file encoding can also be changed here.
+   * - **CSV file containing the tile(s) georeferencing information**
+     - ``OUTPUT_CSV``
+     - [file]
+
+       Default: ``[Skip output]``
+     - 
+       One of:
+
+       * Skip Output
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output directory**
+     - ``OUTPUT``
+     - [folder]
+     - The output folder for the tiles.
+   * - **CSV file containing the tile(s) georeferencing information**
+     - ``OUTPUT_CSV``
+     - [file]
+     - The CSV file with georeferencing information for the tiles.
 
 
 .. _gdaltileindex:

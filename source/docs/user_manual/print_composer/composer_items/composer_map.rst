@@ -276,17 +276,18 @@ Grid Frame
 ..........
 
 There are different options to style the frame that holds the map.
-Following options are available: ``No Frame``, ``Zebra``, ``Interior ticks``,
-``Exterior ticks``, ``Interior and Exterior ticks`` and ``Line border``.
+The following options are available: ``No Frame``, ``Zebra``, ``Zebra (nautical)``,
+``Interior ticks``, ``Exterior ticks``, ``Interior and Exterior ticks``,
+``Line border`` and ``Line border (nautical)``.
+
+When compatible, it's possible to set the :guilabel:`Frame size`, a
+:guilabel:`Frame margin`, the :guilabel:`Frame line thickness` with associated
+color and the :guilabel:`Frame fill colors`.
+
+Using ``Latitude/Y only`` and ``Longitude/X only`` values in the divisions
+section you can prevent a mix of latitude/Y and longitude/X coordinates showing
+on each side when working with rotated maps or reprojected grids.
 Also you can choose to set visible or not each side of the grid frame.
-
-
-When compatible, it's possible to set the :guilabel:`Frame size`,
-:guilabel:`Frame line thickness`, :guilabel:`Frame fill colors`.
-With ``Latitude/Y only`` and ``Longitude/X only`` settings in the divisions
-section you have the possibility to prevent a mix of latitude/Y and longitude/X
-coordinates showing on a side when working with rotated maps or reprojected
-grids.
 
 .. _Figure_layout_map_frame:
 

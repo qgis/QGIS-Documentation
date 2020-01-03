@@ -21,7 +21,7 @@ jobs:
           pip install -r REQUIREMENTS.txt
     - name: Build sphinx documentation
       run: |
-          make html
+          make fasthtml
     - name: Upload build artifact
       uses: actions/upload-artifact@v1
       with:

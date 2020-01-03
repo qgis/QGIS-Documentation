@@ -144,7 +144,8 @@ Right-clicking over a selection of items also allows you to:
 * :guilabel:`Remove Item(s)`;
 * :guilabel:`Edit Item`: applies to the item you right-click over;
 * :guilabel:`Copy Item`;
-* :guilabel:`Paste Item ...`;
+* :guilabel:`Paste Item ...`: pasting to one of the categories of the style manager
+  or elsewhere in QGIS (symbol or color buttons) 
 * :guilabel:`Export Selected Symbol(s) as PNG...` (only available with symbols);
 * :guilabel:`Export Selected Symbol(s) as SVG...` (only available with symbols);
 
