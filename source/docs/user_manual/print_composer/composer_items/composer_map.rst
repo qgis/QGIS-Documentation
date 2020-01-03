@@ -351,22 +351,35 @@ You can:
 * Rename it with a double-click;
 * With the |signPlus| and |signMinus| buttons, add or remove overviews;
 * With the |arrowUp| and |arrowDown| buttons, move up and down an overview in
-  the list, hence move it on top or bottom of another one, over the map item.
+  the list, hence move it on top or bottom of another one, within the map item.
 
 Then select the overview item in the list and check the |checkbox|
 :guilabel:`Draw "<name_overview>" overview` to enable the overview
 drawing over the selected map frame. You can customize it with:
 
-* The :guilabel:`Map frame` combo list can be used to select the map item whose
+* The :guilabel:`Map frame` selects the map item whose
   extents will be drawn on the present map item.
-* The :guilabel:`Frame Style` allows you to change the style of the overview frame.
-* The :guilabel:`Blending mode` allows you to set different transparency blend modes.
-* The |checkbox| :guilabel:`Invert overview` creates a mask around the extents when
-  activated: the referenced map extents are shown clearly, whereas everything else
-  is blended with the frame color.
-* The |checkbox| :guilabel:`Center on overview` puts the extent of the overview
-  frame in the center of the overview map. You can only activate one overview
-  item to center, when you have added several overviews.
+* The :guilabel:`Frame Style` uses the :ref:`symbol properties
+  <symbol-selector>` to render the overview frame.
+* The :guilabel:`Blending mode` allows you to set different transparency blend
+  modes.
+* The |checkbox| :guilabel:`Invert overview` creates a mask around the extents
+  when activated: the referenced map extents are shown clearly, whereas
+  everything else is blended with the frame fill color.
+* The |checkbox| :guilabel:`Center on overview` pans the map item content so
+  that the overview frame is displayed at the center of the map. You can only
+  activate one overview item to center, when you have several overviews.
+* The :guilabel:`Position` controls exactly where in the map item's layer stack
+  the overview will be placed, e.g. allowing them to draw a overview
+  extent below some feature layers such as roads whilst drawing it
+  above other background layers. Available options are:
+
+  * :guilabel:`Below map`
+  * :guilabel:`Below map layer` and :guilabel:`Above map layer`, selecting in
+    :guilabel:`Stacking layer` the layer to consider
+  * :guilabel:`Below map labels` and :guilabel:`Above map labels`: since
+    labels are drawn over all the features, the overview is placed respectively
+    above all the map layers or above the map item.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
