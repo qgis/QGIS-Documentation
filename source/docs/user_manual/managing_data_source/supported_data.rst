@@ -59,6 +59,24 @@ This section describes how to work with these specificities.
    types like CircularString, CompoundCurve, CurvePolygon, MultiCurve,
    MultiSurface feature type. QGIS will convert them to (multi)polygon feature.
 
+.. index:: GeoPackage
+.. _vector_geopackage:
+
+GeoPackage
+----------
+The GeoPackage (GPKG) format is platform-independent, and is implemented
+as a SQLite database container.
+The format was defined by the Open Geospatial Consortium (OGC), and was
+published in 2014.
+
+GeoPackage can be used to store the following in a SQLite database:
+
+* vector features
+* tile matrix sets of imagery and raster maps
+* attributes (non-spatial data)
+* extensions
+
+GeoPackage is the default format for vector data in QGIS.
 
 .. index:: ESRI, Shapefile, OGR
 .. _vector_shapefiles:
