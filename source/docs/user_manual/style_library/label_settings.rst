@@ -48,7 +48,7 @@ To create text formats, you can:
 
 #. Press the |signPlus| :sup:`Add item` button. The :guilabel:`Text Settings`
    dialog opens with the following properties. As usual, these properties
-   can be :ref:`data-defined <data_defined>`.
+   are :ref:`data-definable <data_defined>`.
 
 
 .. _labels_text:
