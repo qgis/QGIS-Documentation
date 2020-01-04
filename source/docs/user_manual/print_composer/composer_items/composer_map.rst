@@ -348,10 +348,11 @@ an overview.
 Initially this overview is named 'Overview 1' (see Figure_layout_map_overview_).
 You can:
 
-* Rename it with a double-click;
-* With the |signPlus| and |signMinus| buttons, add or remove overviews;
+* Rename it with a double-click
+* With the |signPlus| and |signMinus| buttons, add or remove overviews
 * With the |arrowUp| and |arrowDown| buttons, move an overview up and down in
-  the list, placing it above or below other overviews in the map item.
+  the list, placing it above or below other overviews in the map item
+  (when they are at the same :ref:`stack position <overview_stack_position>`).
 
 Then select the overview item in the list and check the |checkbox|
 :guilabel:`Draw "<name_overview>" overview` to enable the drawing
@@ -369,18 +370,24 @@ of the overview on the selected map frame. You can customize it with:
   (if a fill color is used).
 * The |checkbox| :guilabel:`Center on overview` pans the map item content so
   that the overview frame is displayed at the center of the map. You can only
-  activate one overview item to center, when you have several overviews.
+  use one overview item to center, when you have several overviews.
+  
+.. _`overview_stack_position`:
+
 * The :guilabel:`Position` controls exactly where in the map item's layer stack
   the overview will be placed, e.g. allowing an overview extent to be
   drawn below some feature layers such as roads whilst drawing it
   above other background layers. Available options are:
 
   * :guilabel:`Below map`
-  * :guilabel:`Below map layer` and :guilabel:`Above map layer`, selecting in
-    :guilabel:`Stacking layer` the layer to consider
-  * :guilabel:`Below map labels` and :guilabel:`Above map labels`: since
-    labels are drawn over all the features, the overview is placed respectively
-    above all the map layers or above the map item.
+  * :guilabel:`Below map layer` and :guilabel:`Above map layer`: place the
+    overview frame below and above the geometries of a layer, respectively.
+    The layer is selected in the :guilabel:`Stacking layer` option.
+  * :guilabel:`Below map labels`: given that labels are always rendered above
+    all the feature geometries in a map item, places the overview frame above
+    all the geometries and below any label.
+  * :guilabel:`Above map labels`: places the overview frame above all the
+    geometries and labels in the map item.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
