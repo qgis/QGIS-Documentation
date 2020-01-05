@@ -123,13 +123,13 @@ drop it, just like for inputs.
 An execution dialog will appear, with a content similar to the one
 found in the execution panel that is shown when executing the
 algorithm from the toolbox.
-The one shown next corresponds to the QGIS
+The ones shown next correspond to the QGIS
 'Drape (set Z value from raster)' algorithm and the QGIS 'Climb along
 line' algorithm.
 
 .. _figure_model_parameter_alg:
 
-.. figure:: img/models_parameters4.png img/models_parameters4b.png
+.. figure:: img/models_parameters4.png
    :align: center
 
    Model Algorithm parameters
