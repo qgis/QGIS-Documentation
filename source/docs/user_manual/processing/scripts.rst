@@ -406,7 +406,7 @@ Processing with their corresponding alg decorator constants
 Sorted on class name.
 
 .. list-table:: Input types
-   :widths: 24 55 21
+   :widths: 55 24 21
    :header-rows: 1
 
    * - Class
