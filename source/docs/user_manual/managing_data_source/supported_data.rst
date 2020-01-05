@@ -77,8 +77,7 @@ GeoPackage can be used to store the following in a SQLite database:
 * attributes (non-spatial data)
 * extensions
 
-Since version 3.8, GeoPackage can also be used to stor QGIS Project
-files.
+Since QGIS version 3.8, GeoPackage can also store QGIS projects.
 
 GeoPackage is the default format for vector data in QGIS.
 
