@@ -64,8 +64,9 @@ This section describes how to work with these specificities.
 
 GeoPackage
 ----------
-The GeoPackage (GPKG) format is platform-independent, and is implemented
-as a SQLite database container.
+The `GeoPackage https://www.geopackage.org/>`_ (GPKG) format is
+platform-independent, and is implemented as a SQLite database
+container.
 The format was defined by the Open Geospatial Consortium (OGC), and was
 published in 2014.
 
