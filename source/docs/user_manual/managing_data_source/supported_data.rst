@@ -64,7 +64,7 @@ This section describes how to work with these specificities.
 
 GeoPackage
 ----------
-The `GeoPackage https://www.geopackage.org/>`_ (GPKG) format is
+The `GeoPackage <https://www.geopackage.org/>`_ (GPKG) format is
 platform-independent, and is implemented as a SQLite database
 container.
 The format was defined by the Open Geospatial Consortium (OGC), and was
@@ -76,6 +76,9 @@ GeoPackage can be used to store the following in a SQLite database:
 * tile matrix sets of imagery and raster maps
 * attributes (non-spatial data)
 * extensions
+
+Since version 3.8, GeoPackage can also be used to stor QGIS Project
+files.
 
 GeoPackage is the default format for vector data in QGIS.
 
