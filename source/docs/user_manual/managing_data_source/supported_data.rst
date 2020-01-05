@@ -78,6 +78,7 @@ GeoPackage can be used to store the following in a SQLite database:
 * extensions
 
 Since QGIS version 3.8, GeoPackage can also store QGIS projects.
+GeoPackage layers can have JSON fields.
 
 GeoPackage is the default format for vector data in QGIS.
 
