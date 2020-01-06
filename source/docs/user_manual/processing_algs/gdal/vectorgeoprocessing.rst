@@ -28,7 +28,7 @@ Parameters
       - Description
    *  - **Input layer**
       - ``INPUT``
-      - [vector: line]
+      - [vector: any]
       - The input vector layer
    *  - **Geometry column name**
       - ``GEOMETRY``
@@ -382,7 +382,7 @@ Parameters
         
         Default: 'geometry'
       - The name of the input layer geometry column to use
-   *  - **Offset distance (left-sided: positive, right-sided: negative**
+   *  - **Offset distance (left-sided: positive, right-sided: negative)**
       - ``DISTANCE``
       - [number]
         
@@ -423,14 +423,14 @@ Outputs
    *  - **Offset curve**
       - ``OUTPUT``
       - [vector: line]
-      - The output offset curve
+      - The output offset curve layer
 
 
 .. _gdalonesidebuffer:
 
 One side buffer
 ---------------
-Create a buffer on one side (right or left) of the lines in a line
+Creates a buffer on one side (right or left) of the lines in a line
 vector layer.
 
 Parameters
@@ -479,7 +479,7 @@ Parameters
 
         Default: None
       - Field to use for dissolving
-   *  - **Dissolve results**
+   *  - **Dissolve all results**
       - ``DISSOLVE``
       - [boolean]
 
@@ -534,7 +534,8 @@ Outputs
 
 Points along lines
 ------------------
-Generate a point on each line of a line vector layer.
+Generates a point on each line of a line vector layer at a distance from start.
+The distance is provided as a fraction of the line length.
 
 Parameters
 ..........
