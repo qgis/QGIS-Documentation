@@ -55,7 +55,8 @@ Parameters
       - [boolean]
 
         Default: False
-      - 
+      - If set, the result is dissolved. If no field is set for dissolving,
+        all the buffers are dissolved into one feature.
    *  - **Produce one feature for each geometry in any kind of
         geometry collection in the source file**
       - ``EXPLODE_COLLECTIONS``
@@ -359,6 +360,9 @@ Outputs
 
 Offset curve
 ------------
+Offsets lines by a specified distance.
+Positive distances will offset lines to the left, and negative distances will
+offset them to the right.
 
 Parameters
 ..........
@@ -484,7 +488,12 @@ Parameters
       - [boolean]
 
         Default: False
-      - 
+      - If set, the result is dissolved. If no field is set for dissolving,
+        all the buffers are dissolved into one feature.
+--
+
+
+
    *  - **Produce one feature for each geometry in any kind of
         geometry collection in the source file**
       - ``EXPLODE_COLLECTIONS``
