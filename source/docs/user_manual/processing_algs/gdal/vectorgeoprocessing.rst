@@ -142,10 +142,6 @@ Parameters
       - Additional GDAL creation options.
    *  - **Clipped (extent)**
       - ``OUTPUT``
-<<<<<<< HEAD
-      - [vector: any]
-      - The output (clipped) layer
-=======
       - [same as input]
 
         Default: ``[Save to temporary file]``
@@ -155,7 +151,6 @@ Parameters
         * Save to File...
 
         The file encoding can also be changed here.
->>>>>>> d5ae31d23... Add the remaining algorithms in the GDAL Vector geoprocessing group (#4733)
 
 Outputs
 .......
@@ -215,10 +210,6 @@ Parameters
       - Additional GDAL creation options.
    *  - **Clipped (mask)**
       - ``OUTPUT``
-<<<<<<< HEAD
-      - [vector: any]
-      - The output (masked) layer
-=======
       - [same as input]
 
         Default: ``[Save to temporary file]``
@@ -228,7 +219,6 @@ Parameters
         * Save to File...
 
         The file encoding can also be changed here.
->>>>>>> d5ae31d23... Add the remaining algorithms in the GDAL Vector geoprocessing group (#4733)
 
 Outputs
 .......
@@ -338,10 +328,6 @@ Parameters
       - Additional GDAL creation options.
    *  - **Dissolved**
       - ``OUTPUT``
-<<<<<<< HEAD
-      -  [vector: any]
-      - The output layer
-=======
       - [same as input]
 
         Default: ``[Save to temporary file]``
@@ -351,7 +337,6 @@ Parameters
         * Save to File...
 
         The file encoding can also be changed here.
->>>>>>> d5ae31d23... Add the remaining algorithms in the GDAL Vector geoprocessing group (#4733)
 
 Outputs
 .......
@@ -369,8 +354,6 @@ Outputs
       - ``OUTPUT``
       - [vector: any]
       - The output multipart geometry layer (with dissolved geometries)
-<<<<<<< HEAD
-=======
 
 
 .. _gdaloffsetcurve:
@@ -625,4 +608,3 @@ Outputs
       - ``OUTPUT``
       - [vector: point]
       - The output point layer
->>>>>>> d5ae31d23... Add the remaining algorithms in the GDAL Vector geoprocessing group (#4733)
