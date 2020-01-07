@@ -157,7 +157,7 @@ Right-click an item in the browser tree helps you to:
   tree. Hidden folders can be managed from the :menuselection:`Settings -->
   Options --> Data Sources` tab;
 * manage your :ref:`spatial bookmarks <sec_bookmarks>`: bookmarks can be created,
-  XML-files;
+  exported and imported as ``XML`` files;
 * create connection to databases or web servers;
 * refresh, rename or delete schema.
 
