@@ -47,7 +47,8 @@ To create text formats, you can:
       Text formats in Style Manager dialog
 
 #. Press the |signPlus| :sup:`Add item` button. The :guilabel:`Text Settings`
-   dialog opens with the following properties.
+   dialog opens with the following properties. As usual, these properties
+   are :ref:`data-definable <data_defined>`.
 
 
 .. _labels_text:

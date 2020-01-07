@@ -508,6 +508,6 @@ Outputs
    If you need to create a new substitution manually,
    please add it also to the substitutions.txt file in the
    source folder.
-   
+
 .. |310| replace:: ``NEW in 3.10``
 .. |38| replace:: ``NEW in 3.8``

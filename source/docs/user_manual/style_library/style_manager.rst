@@ -219,7 +219,7 @@ Using the Browser panel
 .......................
 
 It's also possible to import style items into the active user profile style
-database diretly from the :guilabel:`Browser` panel:
+database directly from the :guilabel:`Browser` panel:
    
 #. Select the style :file:`.xml` file in the browser
 #. Drag-and-drop it over the map canvas or right-click and select

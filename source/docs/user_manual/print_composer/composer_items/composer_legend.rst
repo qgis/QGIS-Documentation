@@ -239,8 +239,6 @@ columns and lines can be customized through this dialog.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |expression| image:: /static/common/mIconExpression.png
-   :width: 1.5em
 .. |addGroup| image:: /static/common/mActionAddGroup.png
    :width: 1.5em
 .. |addLegend| image:: /static/common/mActionAddLegend.png
@@ -251,9 +249,9 @@ columns and lines can be customized through this dialog.
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |expressionFilter| image:: /static/common/mIconExpressionFilter.png
+.. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
-.. |filterMap| image:: /static/common/mActionFilterMap.png
+.. |expressionFilter| image:: /static/common/mIconExpressionFilter.png
    :width: 1.5em
 .. |projectProperties| image:: /static/common/mActionProjectProperties.png
    :width: 1.5em
