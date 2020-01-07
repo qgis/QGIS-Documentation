@@ -228,6 +228,8 @@ Converts vector geometries (points, lines and polygons) into a raster image.
 This algorithm is derived from the
 `GDAL rasterize utility <https://gdal.org/gdal_rasterize.html>`_ .
 
+``Default menu``: :menuselection:`Raster --> Conversion`
+
 Parameters
 ..........
 
