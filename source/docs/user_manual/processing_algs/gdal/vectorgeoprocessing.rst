@@ -133,11 +133,11 @@ Parameters
         output vector file.
         It has to be defined in target CRS coordinates.
    *  - **Additional creation options**
-        
+
         (optional)
       - ``OPTIONS``
       - [string]
-        
+
         Default: '' (no additional options)
       - Additional GDAL creation options.
    *  - **Clipped (extent)**
@@ -201,11 +201,11 @@ Parameters
       - [vector: polygon]
       - Layer to be used as clipping extent for the input vector layer.
    *  - **Additional creation options**
-        
+
         (optional)
       - ``OPTIONS``
       - [string]
-        
+
         Default: '' (no additional options)
       - Additional GDAL creation options.
    *  - **Clipped (mask)**
@@ -265,7 +265,7 @@ Parameters
       - [vector: any]
       - The input layer to dissolve
    *  - **Dissolve field**
-        
+
         (optional)
       - ``FIELD``
       - [tablefield: any]
@@ -273,7 +273,7 @@ Parameters
    *  - **Geometry column name**
       - ``GEOMETRY``
       - [string]
-        
+
         Default: 'geometry'
       - The name of the input layer geometry column to use
         for dissolving.
@@ -281,49 +281,49 @@ Parameters
         geometry collection in the source file**
       - ``EXPLODE_COLLECTIONS``
       - [boolean]
-        
+
         Default: False
       - Produce one feature for each geometry in any kind of geometry
         collection in the source file
    *  - **Keep input attributes**
       - ``KEEP_ATTRIBUTES``
       - [boolean]
-        
+
         Default: False
       - Keep all attributes from the input layer
    *  - **Count dissolved features**
       - ``COUNT_FEATURES``
       - [boolean]
-        
+
         Default: False
       - Count the dissolved features and include it in the output
         layer.
    *  - **Compute area and perimeter of dissolved features**
       - ``COMPUTE_AREA``
       - [boolean]
-        
+
         Default: False
       - Compute the area and perimeter of dissolved features and include
         them in the output layer
    *  - **Compute min/max/sum/mean for attribute**
       - ``COMPUTE_STATISTICS``
       - [boolean]
-        
+
         Default: False
       - Calculate statistics (min, max, sum and mean) for the numeric
         attribute specified and include them in the output layer
    *  - **Numeric attribute to calculate statistics on**
-        
+
         (optional)
       - ``STATISTICS_ATTRIBUTE``
       - [tablefield: numeric]
       - The numeric attribute to calculate statistics on
    *  - **Additional creation options**
-        
+
         (optional)
       - ``OPTIONS``
       - [string]
-        
+
         Default: '' (no additional options)
       - Additional GDAL creation options.
    *  - **Dissolved**
@@ -354,8 +354,8 @@ Outputs
       - ``OUTPUT``
       - [same as input]
       - The output multipart geometry layer (with dissolved geometries)
-      
-      
+
+
 .. _gdaloffsetcurve:
 
 Offset curve
@@ -383,21 +383,21 @@ Parameters
    *  - **Geometry column name**
       - ``GEOMETRY``
       - [string]
-        
+
         Default: 'geometry'
       - The name of the input layer geometry column to use
    *  - **Offset distance (left-sided: positive, right-sided: negative)**
       - ``DISTANCE``
       - [number]
-        
+
         Default: 10.0
       - 
    *  - **Additional creation options**
-        
+
         (optional)
       - ``OPTIONS``
       - [string]
-        
+
         Default: '' (no additional options)
       - Additional GDAL creation options.
    *  - **Offset curve**
@@ -490,10 +490,6 @@ Parameters
         Default: False
       - If set, the result is dissolved. If no field is set for dissolving,
         all the buffers are dissolved into one feature.
---
-
-
-
    *  - **Produce one feature for each geometry in any kind of
         geometry collection in the source file**
       - ``EXPLODE_COLLECTIONS``
@@ -537,8 +533,8 @@ Outputs
       - ``OUTPUT``
       - [vector: polygon]
       - The output buffer layer
-      
-      
+
+
 .. _gdalpointsalonglines:
 
 Points along lines
@@ -565,22 +561,22 @@ Parameters
    *  - **Geometry column name**
       - ``GEOMETRY``
       - [string]
-        
+
         Default: 'geometry'
       - The name of the input layer geometry column to use
    *  - **Distance from line start represented as a fraction of line
         length**
       - ``DISTANCE``
       - [number]
-        
+
         Default: 0.5 (middle of the line)
       - 
    *  - **Additional creation options**
-        
+
         (optional)
       - ``OPTIONS``
       - [string]
-        
+
         Default: '' (no additional options)
       - Additional GDAL creation options.
    *  - **Points along line**
