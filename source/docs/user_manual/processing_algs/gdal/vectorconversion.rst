@@ -80,6 +80,8 @@ Outputs
 Rasterize (overwrite with attribute)
 ------------------------------------
 Overwrites a raster layer with values from a vector layer.
+New values are assigned based on the attribute value of
+the overlapping vector feature.
 
 This algorithm is derived from the
 `GDAL rasterize utility <https://gdal.org/gdal_rasterize.html>`_ .
@@ -109,14 +111,15 @@ Parameters
         Optional
       - ``FIELD``
       - [tablefield: numeric]
-      - Defines the attribute field from which the attributes for
-        the pixels should be chosen
+      - Defines the attribute field to use to set the pixels values
    *  - **Add burn in values to existing raster values**
       - ``ADD``
       - [boolean]
 
         Default: False
-      - 
+      - If False, pixels are assigned the selected field's value.
+        If True, the selected field's value is added to the value
+        of the input raster layer.
    *  - **Additional command-line parameters**
 
         Optional
@@ -148,7 +151,9 @@ Outputs
 
 Rasterize (overwrite with fixed value)
 --------------------------------------
-Overwrites a raster layer with a fixed value.
+Overwrites parts of a raster layer with a fixed value.
+The pixels to overwrite are chosen based on the supplied (overlapping)
+vector layer.
 
 This algorithm is derived from the
 `GDAL rasterize utility <https://gdal.org/gdal_rasterize.html>`_ .
@@ -174,17 +179,19 @@ Parameters
       - [raster]
       - Input raster layer
    *  - **A fixed value to burn**
-
-        Optional
       - ``BURN``
       - [number]
+
+        Default: 0.0
       - The value to burn
    *  - **Add burn in values to existing raster values**
       - ``ADD``
       - [boolean]
 
         Default: False
-      - 
+      - If False, pixels are assigned the fixed value.
+        If True, the fixed value is added to the value of
+        the input raster layer.
    *  - **Additional command-line parameters**
 
         Optional
