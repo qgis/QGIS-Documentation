@@ -156,7 +156,7 @@ Right-click an item in the browser tree helps you to:
 * in case of folder, bookmark it into your favourites, hide it from the browser
   tree. Hidden folders can be managed from the :menuselection:`Settings -->
   Options --> Data Sources` tab;
-* manage your spatial bookmarks. Bookmarks can be created, exported and imported as
+* manage your :ref:`spatial bookmarks <sec_bookmarks>`: bookmarks can be created,
   XML-files;
 * create connection to databases or web servers;
 * refresh, rename or delete schema.
