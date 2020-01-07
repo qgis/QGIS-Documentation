@@ -1707,8 +1707,6 @@ in the QGIS user profile.
    :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png
    :width: 1.5em
-.. |indicatorNoCRS| image:: /static/common/mIndicatorNoCRS.png
-   :width: 1.5em
 .. |interfaceCustomization| image:: /static/common/mActionInterfaceCustomization.png
    :width: 1.5em
 .. |kde| image:: /static/common/kde.png

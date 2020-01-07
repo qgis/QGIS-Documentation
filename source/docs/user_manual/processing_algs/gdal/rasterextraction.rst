@@ -421,6 +421,6 @@ Outputs
    If you need to create a new substitution manually,
    please add it also to the substitutions.txt file in the
    source folder.
-   
-.. |36| replace:: ``NEW in 3.6``
+
 .. |310| replace:: ``NEW in 3.10``
+.. |36| replace:: ``NEW in 3.6``
