@@ -12,6 +12,8 @@ processing.
       :local:
       :depth: 1
 
+.. _lastoolsblast2dem:
+
 blast2dem
 ---------
 
@@ -174,6 +176,7 @@ Outputs
      - [raster]
      - The output raster
 
+.. _lastoolsblast2iso:
 
 blast2iso
 ---------
@@ -298,6 +301,8 @@ Outputs
      - [vector: line]
      - The output line vector layer with contours
 
+
+.. _lastoolslas2dem:
 
 las2dem
 -------
@@ -473,6 +478,8 @@ Outputs
      - The output raster
 
 
+.. _lastoolslas2iso:
+
 las2iso
 -------
 
@@ -603,6 +610,8 @@ Outputs
      - [vector: line]
      - The output line vector layer with contours
 
+
+.. _lastoolslas2las_filter:
 
 las2las_filter
 --------------
@@ -844,6 +853,8 @@ Outputs
      - [file]
      - The output LAS/LAZ format file
 
+
+.. _lastoolslas2las_project:
 
 las2las_project
 ---------------
@@ -1486,6 +1497,8 @@ Outputs
      - The output LAS/LAZ format file
 
 
+.. _lastoolslas2las_transform:
+
 las2las_transform
 ------------------
 
@@ -1721,6 +1734,8 @@ Outputs
      - The output (merged) LAS/LAZ format file
 
 
+.. _lastoolslas2txt:
+
 las2txt
 -------
 
@@ -1810,6 +1825,8 @@ Outputs
      - The output file
 
 
+.. _lastoolslasindex:
+
 lasindex
 --------
 
@@ -1893,6 +1910,8 @@ Outputs
      - 
      - No output
 
+
+.. _lastoolslasgrid:
 
 lasgrid
 -------
@@ -2060,6 +2079,8 @@ Outputs
      - [raster]
      - The output raster
 
+
+.. _lastoolslasinfo:
 
 lasinfo
 -------
@@ -2250,6 +2271,8 @@ Outputs
      - The file with the output
 
 
+.. _lastoolslasmerge:
+
 lasmerge
 --------
 Merge up to seven LAS/LAZ files into one.
@@ -2379,9 +2402,10 @@ Outputs
      - The output (merged) LAS/LAZ format file
 
 
+.. _lastoolslasprecision:
+
 lasprecision
 ------------
-
 
 Parameters
 ..........
@@ -2452,6 +2476,8 @@ Outputs
      - The output ASCII file
 
 
+.. _lastoolslasquery:
+
 lasquery
 --------
 
@@ -2505,6 +2531,8 @@ Parameters
 Outputs
 .......
 
+
+.. _lastoolslasvalidate:
 
 lasvalidate
 -----------
@@ -2569,6 +2597,8 @@ Outputs
      - [file]
      - The output XML file
 
+
+.. _lastoolslaszip:
 
 laszip
 ------
@@ -2667,6 +2697,8 @@ Outputs
      - [file]
      - The output file
 
+
+.. _lastoolstxt2las:
 
 txt2las
 -------
