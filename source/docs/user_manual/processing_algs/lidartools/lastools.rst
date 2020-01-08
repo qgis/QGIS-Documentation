@@ -294,7 +294,7 @@ Outputs
      - Type
      - Description
    * - **Output vector file**
-     - ``OUTPUT``
+     - ``OUTPUT_VECTOR``
      - [vector: line]
      - The output line vector layer with contours
 
@@ -599,7 +599,7 @@ Outputs
      - Type
      - Description
    * - **Output vector file**
-     - ``OUTPUT``
+     - ``OUTPUT_VECTOR``
      - [vector: line]
      - The output line vector layer with contours
 
@@ -812,7 +812,7 @@ Parameters
      - Specifies other command-line switches not available
        via this menu but known to the (advanced) LAStools user.
    * - **Output LAS/LAZ file**
-     - ``OUTPUT_VECTOR``
+     - ``OUTPUT_LASLAZ``
      - [file]
 
        Default: ``[Skip output]``
@@ -840,7 +840,7 @@ Outputs
      - Type
      - Description
    * - **Output LAS/LAZ file**
-     - ``OUTPUT``
+     - ``OUTPUT_LASLAZ``
      - [file]
      - The output LAS/LAZ format file
 
@@ -861,14 +861,28 @@ Parameters
      - Name
      - Type
      - Description
-   * - **input directory**
-     - ``INPUT_DIRECTORY``
-     - [folder]
-     - The folder that containing the input point cloud data sets
-   * - **input wildcard(s)**
-     - ``INPUT_WILDCARD``
-     - [string]
-     - Wildcard to use to select input files.
+   * - **verbose**
+     - ``VERBOSE``
+     - [boolean]
+
+       Default: False
+     - Generates more textual control output to the console
+   * - **run new 64 bit executable**
+     - ``CPU64``
+     - [boolean]
+
+       Default: False
+     -
+   * - **open LAStools GUI**
+     - ``GUI``
+     - [boolean]
+
+       Default: False
+     - Starts the GUI of LAStools with pre-populated input files
+   * - **input LAS/LAZ file**
+     - ``INPUT_LASLAZ``
+     - [file]
+     - Input LAS/LAZ file
    * - **source projection**
      - ``SOURCE_PROJECTION``
      - [enumeration]
@@ -885,10 +899,6 @@ Parameters
        * 6 --- latlong
        * 7 --- ecef
 
-   * - **source epsg code**
-     - ``SOURCE_EPSG_CODE``
-     - [number]
-     - 
    * - **source utm zone**
      - ``SOURCE_UTM``
      - [enumeration]
@@ -1170,10 +1180,6 @@ Parameters
        * 6 --- latlong
        * 7 --- ecef
 
-   * - **target epsg code**
-     - ``TARGET_EPSG_CODE``
-     - [number]
-     - 
    * - **target utm zone**
      - ``TARGET_UTM``
      - [enumeration]
@@ -1439,22 +1445,6 @@ Parameters
        * 126 --- WY_W
        * 127 --- WY_WC
 
-   * - **output appendix**
-     - ``OUTPUT_APPENDIX``
-     - [string]
-
-       Default: ''
-     - 
-   * - **output format**
-     - ``OUTPUT_POINT_FORMAT``
-     - [enumeration]
-
-       Default: 0
-     - One of:
-
-       * 0 --- laz
-       * 1 --- las
-
    * - **additional command line parameter(s)**
 
        Optional
@@ -1464,33 +1454,8 @@ Parameters
        Default: ''
      - Specifies other command-line switches not available
        via this menu but known to the (advanced) LAStools user.
-   * - **number of cores**
-     - ``CORES``
-     - [number]
-
-       Default: 4
-     - Number of cores to use for the processing.
-       Minimum: 1, maximum: 32.
-   * - **verbose**
-     - ``VERBOSE``
-     - [boolean]
-
-       Default: False
-     - Generates more textual control output to the console
-   * - **run new 64 bit executable**
-     - ``CPU64``
-     - [boolean]
-
-       Default: False
-     -
-   * - **open LAStools GUI**
-     - ``GUI``
-     - [boolean]
-
-       Default: False
-     - Starts the GUI of LAStools with pre-populated input files
-   * - **Output directory**
-     - ``OUTPUT_DIRECTORY``
+   * - **Output LAS/LAZ file**
+     - ``OUTPUT_LASLAZ``
      - [folder]
 
        Default: ``[Save to temporary folder]``
@@ -1516,7 +1481,7 @@ Outputs
      - Type
      - Description
    * - **Output LAS/LAZ file**
-     - ``OUTPUT``
+     - ``OUTPUT_LASLAZ``
      - [file]
      - The output LAS/LAZ format file
 
@@ -1723,7 +1688,7 @@ Parameters
      - Specifies other command-line switches not available
        via this menu but known to the (advanced) LAStools user.
    * - **Output LAS/LAZ file**
-     - ``OUTPUT``
+     - ``OUTPUT_LASLAZ``
      - [file]
 
        Default: ``[Skip output]``
@@ -1751,7 +1716,7 @@ Outputs
      - Type
      - Description
    * - **Output LAS/LAZ file**
-     - ``OUTPUT``
+     - ``OUTPUT_LASLAZ``
      - [file]
      - The output (merged) LAS/LAZ format file
 
@@ -2254,7 +2219,7 @@ Parameters
      - Specifies other command-line switches not available
        via this menu but known to the (advanced) LAStools user.
    * - **Output ASCII file**
-     - ``OUTPUT``
+     - ``OUTPUT_GENERIC``
      - [file]
 
        Default: ``[Skip output]``
@@ -2280,7 +2245,7 @@ Outputs
      - Type
      - Description
    * - **Output ASCII file**
-     - ``OUTPUT``
+     - ``OUTPUT_GENERIC``
      - [file]
      - The file with the output
 
@@ -2381,7 +2346,7 @@ Parameters
      - Specifies other command-line switches not available
        via this menu but known to the (advanced) LAStools user.
    * - **Output LAS/LAZ file**
-     - ``OUTPUT``
+     - ``OUTPUT_LASLAZ``
      - [file]
 
        Default: ``[Skip output]``
@@ -2409,7 +2374,7 @@ Outputs
      - Type
      - Description
    * - **Output LAS/LAZ file**
-     - ``OUTPUT``
+     - ``OUTPUT_LASLAZ``
      - [file]
      - The output (merged) LAS/LAZ format file
 
@@ -2456,7 +2421,7 @@ Parameters
      - Specifies other command-line switches not available
        via this menu but known to the (advanced) LAStools user.
    * - **Output ASCII file**
-     - ``OUTPUT``
+     - ``OUTPUT_GENERIC``
      - [file]
 
        Default: ``[Skip output]``
@@ -2482,7 +2447,7 @@ Outputs
      - Type
      - Description
    * - **Output ASCII file**
-     - ``OUTPUT``
+     - ``OUTPUT_GENERIC``
      - [file]
      - The output ASCII file
 
@@ -2574,7 +2539,7 @@ Parameters
      - Specifies other command-line switches not available
        via this menu but known to the (advanced) LAStools user.
    * - **Output XML file**
-     - ``OUTPUT``
+     - ``OUTPUT_GENERIC``
      - [file]
 
        Default: ``[Skip output]``
@@ -2600,7 +2565,7 @@ Outputs
      - Type
      - Description
    * - **Output XML file**
-     - ``OUTPUT``
+     - ``OUTPUT_GENERIC``
      - [file]
      - The output XML file
 
@@ -2670,7 +2635,7 @@ Parameters
      - Specifies other command-line switches not available
        via this menu but known to the (advanced) LAStools user.
    * - **Output LAS/LAZ file**
-     - ``OUTPUT``
+     - ``OUTPUT_LASLAZ``
      - [file]
 
        Default: ``[Skip output]``
@@ -2698,7 +2663,7 @@ Outputs
      - Type
      - Description
    * - **Output LAS/LAZ file**
-     - ``OUTPUT``
+     - ``OUTPUT_LASLAZ``
      - [file]
      - The output file
 
@@ -3065,7 +3030,7 @@ Parameters
      - Specifies other command-line switches not available
        via this menu but known to the (advanced) LAStools user.
    * - **Output LAS/LAZ file**
-     - ``OUTPUT``
+     - ``OUTPUT_LASLAZ``
      - [file]
 
        Default: ``[Skip output]``
@@ -3093,6 +3058,6 @@ Outputs
      - Type
      - Description
    * - **output LAS/LAZ file**
-     - ``OUTPUT``
+     - ``OUTPUT_LASLAZ``
      - [file]
      - The output file
