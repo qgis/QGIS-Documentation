@@ -15,8 +15,9 @@ QGIS GUI
 .. index::
    single: Main window
 
-When QGIS starts, a GUI displays as shown in the figure below (the
-numbers 1 through 5 in yellow circles are discussed below).
+The QGIS graphical user interface (GUI) is shown in the figure below
+(the numbers 1 through 5 in yellow circles indicate important
+elements of the QGIS GUI, and are discussed below).
 
 .. _figure_startup:
 
@@ -37,7 +38,7 @@ The QGIS GUI is divided into five components:
 #. Map View
 #. Status Bar
 
-Scroll down for detailed explanations of these features. 
+Scroll down for detailed explanations of these features.
 
 .. index:: Menu
 .. _label_menubar:
@@ -45,41 +46,48 @@ Scroll down for detailed explanations of these features.
 Menu Bar
 ========
 
-The Menu bar provides access to various QGIS functions using a standard
-hierarchical menu. The Menus, their options, associated 
-icons and keyboard shortcuts are outlined below. These keyboard
-shortcuts are the default settings, but they can be reconfigured using
-the :guilabel:`Keyboard Shortcuts` via the :menuselection:`Settings -->` menu.
+The Menu bar provides access to QGIS functions using standard
+hierarchical menus.
+The Menus, their options, associated icons and keyboard shortcuts are
+described below.
+The keyboard shortcuts can be reconfigured
+(:menuselection:`Settings --> Keyboard Shortcuts`).
 
-Most Menu options have a corresponding tool and vice-versa. However, the Menus
-are not organized exactly like the toolbars. The locations of menu options
-in the toolbars are indicated below in the table. Plugins may add new
-options to Menus. For more information about tools and toolbars, see 
+Most menu options have a corresponding tool and vice-versa.
+However, the Menus are not organized exactly like the toolbars.
+The locations of menu options in the toolbars are indicated below
+in the table.
+Plugins may add new options to Menus.
+For more information about tools and toolbars, see
 :ref:`label_toolbars`.
 
-.. note:: QGIS is a cross-platform application - while the same tools are
-   available on all platforms, they may be placed in different menus on
-   different operating systems. The lists below show the most common locations
-   including known variations.
+.. note:: QGIS is a cross-platform application.  Tools are generally
+   available on all platforms, but they may be placed in different
+   menus, depending on the operating systems.
+   The lists below show the most common locations, including known
+   variations.
 
 .. index:: Project
 
 Project
 -------
 
-The :menuselection:`Project` menu provides access and exit points of
-the :ref:`project file <sec_projects>`. It provides you with tools to:
+The :menuselection:`Project` menu provides access and exit points for
+:ref:`project files <sec_projects>`. It provides tools to:
 
-* Create a :guilabel:`New` file from scratch or using another project file as
-  a template (see :ref:`Project files options <projectfiles_options>` for
-  template configuration)
-* :guilabel:`Open...` a project file from either a file browser or PostgreSQL database
+* Create a :guilabel:`New` project file from scratch or use another
+  project file as a template (see
+  :ref:`Project files options <projectfiles_options>` for template
+  configuration)
+* :guilabel:`Open...` a project from a file, a GeoPackage or a
+  PostgreSQL database
 * :guilabel:`Close` a project or revert it to its last saved state
-* :guilabel:`Save` a project in :file:`.qgs` or :file:`.qgz` file format, either as a file
-  or within a PostgreSQL database
-* Export the map canvas to different formats or
-  use a :ref:`print layout <label_printlayout>` for more complex output
-* Set the project properties and the snapping options when editing layers.
+* :guilabel:`Save` a project in :file:`.qgs` or :file:`.qgz` file
+  format, either as a file or within a GeoPackage or PostgreSQL
+  database
+* Export the map canvas to different formats or use a
+  :ref:`print layout <label_printlayout>` for more complex output
+* Set project properties and snapping options for geometry editing.
 
 .. list-table::
    :header-rows: 1
@@ -195,51 +203,178 @@ Edit
 The :menuselection:`Edit` menu provides most of the native tools needed to edit
 layer attributes or geometry (see :ref:`editingvector` for details).
 
-.. csv-table::
-   :header: "Menu Option", "Shortcut", "Toolbar", "Reference"
-   :widths: 30, 18, 12, 35
-   :class: longtable
 
-   "|undo| :guilabel:`Undo`", ":kbd:`Ctrl+Z`", ":guilabel:`Digitizing`", ":ref:`undoredo_edits`"
-   "|redo| :guilabel:`Redo`", ":kbd:`Ctrl+Shift+Z`", ":guilabel:`Digitizing`", ":ref:`undoredo_edits`"
-   "|editCut| :guilabel:`Cut Features`", ":kbd:`Ctrl+X`", ":guilabel:`Digitizing`", ":ref:`clipboard_feature`"
-   "|editCopy| :guilabel:`Copy Features`", ":kbd:`Ctrl+C`", ":guilabel:`Digitizing`", ":ref:`clipboard_feature`"
-   "|editPaste| :guilabel:`Paste Features`", ":kbd:`Ctrl+V`", ":guilabel:`Digitizing`", ":ref:`clipboard_feature`"
-   ":menuselection:`Paste Features as -->`", "", "", ":ref:`sec_attribute_table`"
-   ":menuselection:`Select -->`", "", ":guilabel:`Attributes`", ":ref:`sec_selection`"
-   "|newTableRow| :guilabel:`Add Record`", ":kbd:`Ctrl+.`", ":guilabel:`Digitizing`"
-   "|capturePoint| :guilabel:`Add Point Feature`", ":kbd:`Ctrl+.`", ":guilabel:`Digitizing`", ":ref:`add_feature`"
-   "|capturePoint| :guilabel:`Add Line Feature`", ":kbd:`Ctrl+.`", ":guilabel:`Digitizing`", ":ref:`add_feature`"
-   "|capturePolygon| :guilabel:`Add Polygon Feature`", ":kbd:`Ctrl+.`", ":guilabel:`Digitizing`", ":ref:`add_feature`"
-   "|circularStringCurvePoint| :guilabel:`Add Circular String`", "", ":guilabel:`Shape Digitizing`", ":ref:`add_circular_string`"
-   "|circularStringRadius| :guilabel:`Add Circular String by Radius`", "", ":guilabel:`Shape Digitizing`", ":ref:`add_circular_string`"
-   ":menuselection:`Add Circle -->`", "", ":guilabel:`Shape Digitizing`"
-   ":menuselection:`Add Rectangle -->`", "", ":guilabel:`Shape Digitizing`"
-   ":menuselection:`Add Regular Polygon -->`", "", ":guilabel:`Shape Digitizing`"
-   ":menuselection:`Add Ellipse -->`", "", ":guilabel:`Shape Digitizing`"
-   "|moveFeature| :guilabel:`Move Feature(s)`", "", ":guilabel:`Advanced Digitizing`", ":ref:`move_feature`"
-   "|moveFeatureCopy| :guilabel:`Copy and Move Feature(s)`", "", ":guilabel:`Advanced Digitizing`", ":ref:`move_feature`"
-   "|deleteSelectedFeatures| :guilabel:`Delete Selected`", "", ":guilabel:`Digitizing`", ":ref:`delete_feature`"
-   "|multiEdit| :guilabel:`Modify Attributes of Selected Features`", "", ":guilabel:`Digitizing`", ":ref:`calculate_fields_values`"
-   "|rotateFeature| :guilabel:`Rotate Feature(s)`", "", ":guilabel:`Advanced Digitizing`", ":ref:`rotate_feature`"
-   "|simplifyFeatures| :guilabel:`Simplify Feature`", "", ":guilabel:`Advanced Digitizing`", ":ref:`simplify_feature`"
-   "|addRing| :guilabel:`Add Ring`", "", ":guilabel:`Advanced Digitizing`", ":ref:`add_ring`"
-   "|addPart| :guilabel:`Add Part`", "", ":guilabel:`Advanced Digitizing`", ":ref:`add_part`"
-   "|fillRing| :guilabel:`Fill Ring`", "", ":guilabel:`Advanced Digitizing`", ":ref:`fill_ring`"
-   "|deleteRing| :guilabel:`Delete Ring`", "", ":guilabel:`Advanced Digitizing`", ":ref:`delete_ring`"
-   "|deletePart| :guilabel:`Delete Part`", "", ":guilabel:`Advanced Digitizing`", ":ref:`delete_part`"
-   "|reshape| :guilabel:`Reshape Features`", "", ":guilabel:`Advanced Digitizing`", ":ref:`reshape_feature`"
-   "|offsetCurve| :guilabel:`Offset Curve`", "", ":guilabel:`Advanced Digitizing`", ":ref:`offset_curve`"
-   "|splitFeatures| :guilabel:`Split Features`", "", ":guilabel:`Advanced Digitizing`", ":ref:`split_feature`"
-   "|splitParts| :guilabel:`Split Parts`", "", ":guilabel:`Advanced Digitizing`", ":ref:`split_part`"
-   "|mergeFeatures| :guilabel:`Merge Selected Features`", "", ":guilabel:`Advanced Digitizing`", ":ref:`mergeselectedfeatures`"
-   "|mergeFeatAttributes| :guilabel:`Merge Attributes of Selected Features`", "", ":guilabel:`Advanced Digitizing`", ":ref:`mergeattributesfeatures`"
-   "|vertexTool| :guilabel:`Vertex Tool (All Layers)`", "", ":guilabel:`Digitizing`", ":ref:`vertex_tool`"
-   "|vertexToolActiveLayer| :guilabel:`Vertex Tool (Current Layer)`", "", ":guilabel:`Digitizing`", ":ref:`vertex_tool`"
-   "|rotatePointSymbols| :guilabel:`Rotate Point Symbols`", "", ":guilabel:`Advanced Digitizing`", ":ref:`rotate_symbol`"
-   "|offsetPointSymbols| :guilabel:`Offset Point Symbols`", "", ":guilabel:`Advanced Digitizing`", ":ref:`offset_symbol`"
-   "|reverseLine| :guilabel:`Reverse Line`", "", ":guilabel:`Advanced Digitizing`"
-   "|trimExtend| :guilabel:`Trim/extend Line`", "", ":guilabel:`Advanced Digitizing`",":ref:`trim_extend_feature`"
+.. list-table::
+   :header-rows: 1
+   :widths: 30 18 12 35
+   :stub-columns: 0
+
+   * - Menu Option
+     - Shortcut
+     - Toolbar
+     - Reference
+   * - |undo| :guilabel:`Undo`
+     - :kbd:`Ctrl+Z`
+     - :guilabel:`Digitizing`
+     - :ref:`undoredo_edits`
+   * - |redo| :guilabel:`Redo`
+     - :kbd:`Ctrl+Shift+Z`
+     - :guilabel:`Digitizing`
+     - :ref:`undoredo_edits`
+   * - |editCut| :guilabel:`Cut Features`
+     - :kbd:`Ctrl+X`
+     - :guilabel:`Digitizing`
+     - :ref:`clipboard_feature`
+   * - |editCopy| :guilabel:`Copy Features`
+     - :kbd:`Ctrl+C`
+     - :guilabel:`Digitizing`
+     - :ref:`clipboard_feature`
+   * - |editPaste| :guilabel:`Paste Features`
+     - :kbd:`Ctrl+V`
+     - :guilabel:`Digitizing`
+     - :ref:`clipboard_feature`
+   * - :menuselection:`Paste Features as -->`
+
+       * :guilabel:`New Vector Layer...`
+       * :guilabel:`Temporary Scratch Layer...`
+
+     - .
+
+       * 
+       * Ctrl+Alt+V
+
+     - 
+     - :ref:`sec_attribute_table`
+   * - :menuselection:`Select -->`
+     - 
+     - :guilabel:`Attributes`
+     - :ref:`sec_selection`
+   * - |newTableRow| :guilabel:`Add Record`
+     - :kbd:`Ctrl+.`
+     - :guilabel:`Digitizing`
+   * - |capturePoint| :guilabel:`Add Point Feature`
+     - :kbd:`Ctrl+.`
+     - :guilabel:`Digitizing`
+     - :ref:`add_feature`
+   * - |capturePoint| :guilabel:`Add Line Feature`
+     - :kbd:`Ctrl+.`
+     - :guilabel:`Digitizing`
+     - :ref:`add_feature`
+   * - |capturePolygon| :guilabel:`Add Polygon Feature`
+     - :kbd:`Ctrl+.`
+     - :guilabel:`Digitizing`
+     - :ref:`add_feature`
+   * - |circularStringCurvePoint| :guilabel:`Add Circular String`
+     - 
+     - :guilabel:`Shape Digitizing`
+     - :ref:`add_circular_string`
+   * - |circularStringRadius| :guilabel:`Add Circular String by Radius`
+     - 
+     - :guilabel:`Shape Digitizing`
+     - :ref:`add_circular_string`
+   * - :menuselection:`Add Circle -->`
+     - 
+     - :guilabel:`Shape Digitizing`
+   * - :menuselection:`Add Rectangle -->`
+     - 
+     - :guilabel:`Shape Digitizing`
+   * - :menuselection:`Add Regular Polygon -->`
+     - 
+     - :guilabel:`Shape Digitizing`
+   * - :menuselection:`Add Ellipse -->`
+     - 
+     - :guilabel:`Shape Digitizing`
+   * - |moveFeature| :guilabel:`Move Feature(s)`
+     - 
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`move_feature`
+   * - |moveFeatureCopy| :guilabel:`Copy and Move Feature(s)`
+     - 
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`move_feature`
+   * - |deleteSelectedFeatures| :guilabel:`Delete Selected`
+     - 
+     - :guilabel:`Digitizing`
+     - :ref:`delete_feature`
+   * - |multiEdit| :guilabel:`Modify Attributes of Selected Features`
+     - 
+     - :guilabel:`Digitizing`
+     - :ref:`calculate_fields_values`
+   * - |rotateFeature| :guilabel:`Rotate Feature(s)`
+     - 
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`rotate_feature`
+   * - |simplifyFeatures| :guilabel:`Simplify Feature`
+     - 
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`simplify_feature`
+   * - |addRing| :guilabel:`Add Ring`
+     - 
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`add_ring`
+   * - |addPart| :guilabel:`Add Part`
+     - 
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`add_part`
+   * - |fillRing| :guilabel:`Fill Ring`
+     - 
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`fill_ring`
+   * - |deleteRing| :guilabel:`Delete Ring`
+     - 
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`delete_ring`
+   * - |deletePart| :guilabel:`Delete Part`
+     - 
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`delete_part`
+   * - |reshape| :guilabel:`Reshape Features`
+     - 
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`reshape_feature`
+   * - |offsetCurve| :guilabel:`Offset Curve`
+     - 
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`offset_curve`
+   * - |splitFeatures| :guilabel:`Split Features`
+     - 
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`split_feature`
+   * - |splitParts| :guilabel:`Split Parts`
+     - 
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`split_part`
+   * - |mergeFeatures| :guilabel:`Merge Selected Features`
+     - 
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`mergeselectedfeatures`
+   * - |mergeFeatAttributes| :guilabel:`Merge Attributes of Selected Features`
+     - 
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`mergeattributesfeatures`
+   * - |vertexTool| :guilabel:`Vertex Tool (All Layers)`
+     - 
+     - :guilabel:`Digitizing`
+     - :ref:`vertex_tool`
+   * - |vertexToolActiveLayer| :guilabel:`Vertex Tool (Current Layer)`
+     - 
+     - :guilabel:`Digitizing`
+     - :ref:`vertex_tool`
+   * - |rotatePointSymbols| :guilabel:`Rotate Point Symbols`
+     - 
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`rotate_symbol`
+   * - |offsetPointSymbols| :guilabel:`Offset Point Symbols`
+     - 
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`offset_symbol`
+   * - |reverseLine| :guilabel:`Reverse Line`
+     - 
+     - :guilabel:`Advanced Digitizing`
+   * - |trimExtend| :guilabel:`Trim/extend Line`
+     - 
+     - :guilabel:`Advanced Digitizing`
+     - :ref:`trim_extend_feature`    
 
 .. only:: html
 
