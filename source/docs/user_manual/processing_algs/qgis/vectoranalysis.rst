@@ -149,7 +149,6 @@ Outputs
       - 
 
 
-
 .. _qgiscountpointsinpolygon:
 
 Count points in polygon
@@ -244,7 +243,6 @@ Outputs
         new column with the points count
 
 
-
 .. _qgisdbscanclustering:
 
 DBSCAN clustering
@@ -307,7 +305,6 @@ Parameters
       - [vector: point]
       - Vector layer for the result of the clustering
 
-
 Outputs
 .......
 
@@ -329,7 +326,6 @@ Outputs
       - ``NUM_CLUSTERS``
       - [number]
       - The number of clusters discovered
-
 
 See also
 ........
@@ -431,7 +427,6 @@ Outputs
         output matrix type.
 
 
-
 .. _qgisdistancetonearesthublinetohub:
 
 Distance to nearest hub (line to hub)
@@ -445,7 +440,6 @@ in a destination layer. Distances are calculated based on the :ref:`center
   :align: center
 
   Display the nearest hub for the red input features
-
 
 Parameters
 ..........
@@ -509,7 +503,6 @@ Outputs
       - Line vector layer with the attributes of the input
         features, the identifier of their closest feature
         and the calculated distance.
-
 
 
 .. _qgisdistancetonearesthubpoints:
@@ -584,7 +577,6 @@ Outputs
         feature and the calculated distance.
 
 
-
 .. _qgishublines:
 
 Join by lines (hub lines)
@@ -651,7 +643,6 @@ Parameters
       - The resulting line layer
 
 
-
 Outputs
 .......
 
@@ -668,7 +659,6 @@ Outputs
       - ``OUTPUT``
       - [vector: lines]
       - The resulting line layer
-
 
 
 .. _qgiskmeansclustering:
@@ -740,8 +730,6 @@ Outputs
       - [vector: any]
       - Vector layer containing the original features with
         a field specifying the cluster they belong to
-
-
 
 See also
 ........
@@ -818,7 +806,6 @@ Outputs
         in the input field
 
 
-
 .. _qgismeancoordinates:
 
 Mean coordinate(s)
@@ -884,6 +871,7 @@ Outputs
       - [vector: point]
       - Resulting point(s) layer
 
+
 .. _qgisnearestneighbouranalysis:
 
 Nearest neighbour analysis
@@ -921,7 +909,6 @@ Parameters
       - [html]
       - HTML file for the computed statistics
 
-
 Outputs
 .......
 
@@ -958,14 +945,6 @@ Outputs
       - ``Z_SCORE``
       - [number]
       - Z-Score
-
-``Points`` [vector: point]
-  Point vector layer to calculate the statistics on.
-
-Outputs
-.......
-``Nearest neighbour`` [html]
-  HTML file in output with the computed statistics.
 
 
 .. _qgisstatisticsbycategories:
@@ -1007,8 +986,6 @@ For string fields, the following statistics will be calculated:
 Parameters
 ..........
 
-Parameters
-..........
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -1053,7 +1030,6 @@ Outputs
       - ``OUTPUT``
       - [table]
       - Table containing the statistics
-
 
 
 .. _qgissumlinelengths:
