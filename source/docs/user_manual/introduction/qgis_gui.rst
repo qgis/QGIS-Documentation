@@ -91,7 +91,7 @@ The :menuselection:`Project` menu provides access and exit points for
 
 .. list-table::
    :header-rows: 1
-   :widths: 30 18 12 35
+   :widths: 40 15 15 30
    :stub-columns: 0
 
    * - Menu Option
@@ -449,7 +449,7 @@ polyline or polygon, are activated accordingly:
 
 .. list-table::
    :header-rows: 1
-   :widths: 30 18 12 35
+   :widths: 40 15 15 30
    :stub-columns: 0
 
    * - Menu Option
@@ -497,7 +497,7 @@ actions like:
 
 .. list-table::
    :header-rows: 1
-   :widths: 30 18 12 35
+   :widths: 40 15 15 30
    :stub-columns: 0
 
    * - Menu Option
@@ -729,7 +729,7 @@ copy or paste layer properties (style, scale, CRS...).
 
 .. list-table::
    :header-rows: 1
-   :widths: 30 18 12 35
+   :widths: 40 15 15 30
    :stub-columns: 0
 
    * - Menu Option
@@ -901,7 +901,7 @@ Settings
 
 .. list-table::
    :header-rows: 1
-   :widths: 30 18 12 35
+   :widths: 40 15 15 30
    :stub-columns: 0
 
    * - Menu Option
@@ -952,7 +952,7 @@ Plugins
 
 .. list-table::
    :header-rows: 1
-   :widths: 30 18 12 35
+   :widths: 40 15 15 30
    :stub-columns: 0
 
    * - Menu Option
@@ -983,7 +983,7 @@ are enabled.
 
 .. list-table::
    :header-rows: 1
-   :widths: 30 18 12 35
+   :widths: 40 15 15 30
    :stub-columns: 0
 
    * - Menu Option
@@ -1088,7 +1088,7 @@ are enabled.
 
 .. list-table::
    :header-rows: 1
-   :widths: 30 18 12 35
+   :widths: 40 15 15 30
    :stub-columns: 0
 
    * - Menu Option
@@ -1193,7 +1193,7 @@ If no database plugins are enabled, there will be no
 
 .. list-table::
    :header-rows: 1
-   :widths: 30 18 12 35
+   :widths: 40 15 15 30
    :stub-columns: 0
 
    * - Menu Option
@@ -1221,7 +1221,7 @@ If no web plugins are enabled, there will be no :guilabel:`Web` menu.
 
 .. list-table::
    :header-rows: 1
-   :widths: 30 18 12 35
+   :widths: 40 15 15 30
    :stub-columns: 0
 
    * - Menu Option
@@ -1252,7 +1252,7 @@ The :menuselection:`Mesh` menu provides tools needed to manipulate
 
 .. list-table::
    :header-rows: 1
-   :widths: 30 18 12 35
+   :widths: 40 15 15 30
    :stub-columns: 0
 
    * - Menu Option
@@ -1274,7 +1274,7 @@ Processing
 
 .. list-table::
    :header-rows: 1
-   :widths: 30 18 12 35
+   :widths: 40 15 15 30
    :stub-columns: 0
 
    * - Menu Option
@@ -1313,7 +1313,7 @@ Help
 
 .. list-table::
    :header-rows: 1
-   :widths: 30 18 12 35
+   :widths: 40 15 15 30
    :stub-columns: 0
 
    * - Menu Option
