@@ -1,0 +1,30 @@
+
+
+
+
+name: "Set Issue Label for issues from main QGIS repo"
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Naturalclar/issue-action@v1.0.0
+        with:
+          keywords: '["QGIS Version: 3.4"]'
+          labels: '["3.4"]'
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+
+      - uses: Naturalclar/issue-action@v1.0.0
+        with:
+          keywords: '["QGIS Version: 3.10"]'
+          labels: '["3.10"]'
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+
+      - uses: Naturalclar/issue-action@v1.0.0
+        with:
+          keywords: '["QGIS Version: 3.12"]'
+          labels: '["3.12"]'
+          github-token: "${{ secrets.GITHUB_TOKEN }}"

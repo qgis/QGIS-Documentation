@@ -1251,5 +1251,4 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |36| replace:: ``NEW in 3.6``
 .. |38| replace:: ``NEW in 3.8``

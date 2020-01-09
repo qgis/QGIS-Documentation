@@ -1033,9 +1033,9 @@ table.
    :width: 1.5em
 .. |selectedToTop| image:: /static/common/mActionSelectedToTop.png
    :width: 1.5em
-.. |sort| image:: /static/common/sort.png
-   :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |sort| image:: /static/common/sort.png
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em

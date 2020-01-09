@@ -14,7 +14,8 @@ Convert format
 --------------
 Converts any OGR-supported vector layer into another OGR-supported format.
 
-This algorithm is derived from the `ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_ .
+This algorithm is derived from the
+`ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_ .
 
 Parameters
 ..........
@@ -74,13 +75,158 @@ Outputs
      - The output vector layer
 
 
+.. _gdalrasterize_over:
+
+Rasterize (overwrite with attribute)
+------------------------------------
+Overwrites a raster layer with values from a vector layer.
+New values are assigned based on the attribute value of
+the overlapping vector feature.
+
+This algorithm is derived from the
+`GDAL rasterize utility <https://gdal.org/gdal_rasterize.html>`_ .
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Input layer**
+      - ``INPUT``
+      - [vector: any]
+      - Input vector layer
+   *  - **Input raster layer**
+      - ``INPUT_RASTER``
+      - [raster]
+      - Input raster layer
+   *  - **Field to use for a burn-in value**
+
+        Optional
+      - ``FIELD``
+      - [tablefield: numeric]
+      - Defines the attribute field to use to set the pixels values
+   *  - **Add burn in values to existing raster values**
+      - ``ADD``
+      - [boolean]
+
+        Default: False
+      - If False, pixels are assigned the selected field's value.
+        If True, the selected field's value is added to the value
+        of the input raster layer.
+   *  - **Additional command-line parameters**
+
+        Optional
+      - ``EXTRA``
+      - [string]
+
+        Default: ''
+      - Add extra GDAL command line options
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Rasterized**
+      - ``OUTPUT``
+      - [raster]
+      - The overwritten input raster layer
+
+
+.. _gdalrasterize_over_fixed_value:
+
+Rasterize (overwrite with fixed value)
+--------------------------------------
+Overwrites parts of a raster layer with a fixed value.
+The pixels to overwrite are chosen based on the supplied (overlapping)
+vector layer.
+
+This algorithm is derived from the
+`GDAL rasterize utility <https://gdal.org/gdal_rasterize.html>`_ .
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Input layer**
+      - ``INPUT``
+      - [vector: any]
+      - Input vector layer
+   *  - **Input raster layer**
+      - ``INPUT_RASTER``
+      - [raster]
+      - Input raster layer
+   *  - **A fixed value to burn**
+      - ``BURN``
+      - [number]
+
+        Default: 0.0
+      - The value to burn
+   *  - **Add burn in values to existing raster values**
+      - ``ADD``
+      - [boolean]
+
+        Default: False
+      - If False, pixels are assigned the fixed value.
+        If True, the fixed value is added to the value of
+        the input raster layer.
+   *  - **Additional command-line parameters**
+
+        Optional
+      - ``EXTRA``
+      - [string]
+
+        Default: ''
+      - Add extra GDAL command line options
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   *  - Label
+      - Name
+      - Type
+      - Description
+   *  - **Rasterized**
+      - ``OUTPUT``
+      - [raster]
+      - The overwritten input raster layer
+
+
 .. _gdalrasterize:
 
 Rasterize (vector to raster)
 ----------------------------
 Converts vector geometries (points, lines and polygons) into a raster image.
 
-This algorithm is derived from the `GDAL rasterize utility <https://gdal.org/gdal_rasterize.html>`_ .
+This algorithm is derived from the
+`GDAL rasterize utility <https://gdal.org/gdal_rasterize.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Conversion`
 
@@ -132,7 +278,7 @@ Parameters
        Default: 0.0
      - Sets the width (if size units is "Pixels") or horizontal
        resolution (if size units is "Georeferenced units") of the
-       output raster.  Minimum value: 0.0.
+       output raster. Minimum value: 0.0.
    * - **Height/Vertical resolution**
      - ``HEIGHT``
      - [number]

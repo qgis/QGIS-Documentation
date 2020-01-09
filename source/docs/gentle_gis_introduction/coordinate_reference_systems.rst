@@ -497,7 +497,5 @@ In the section that follows we will take a closer look at **Map Production**.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |checkbox| image:: /static/common/checkbox.png
-   :width: 1.3em
 .. |gentleLogo| image:: img/gentlelogo.png
    :width: 3em
