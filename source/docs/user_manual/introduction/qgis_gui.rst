@@ -697,55 +697,221 @@ Using the same data sources, you can also:
   read-only copies which you cannot modify (see
   :ref:`nesting_projects`)
   
-The :menuselection:`Layer` menu also contains tools to configure, copy
-or paste layer properties (style, scale, CRS...).
+The :menuselection:`Layer` menu also contains tools to configure,
+copy or paste layer properties (style, scale, CRS...).
 
-.. csv-table::
-   :header: "Menu Option", "Shortcut", "Toolbar", "Reference"
-   :widths: 30, 18, 18, 30
-   :class: longtable
 
-   "|dataSourceManager| :guilabel:`Data Source Manager`", ":kbd:`Ctrl+L`", ":guilabel:`Data Source Manager`",":ref:`Opening Data <datasourcemanager>`"
-   ":menuselection:`Create Layer -->`", "", ":guilabel:`Data Source Manager`", ":ref:`sec_create_vector`"
-   ":menuselection:`Add Layer -->`", "", ":guilabel:`Data Source Manager`", ":ref:`opening_data`"
-   ":guilabel:`Embed Layers and Groups...`", "", "", ":ref:`nesting_projects`"
-   ":guilabel:`Add from Layer Definition File...`", "", "", ":ref:`layer_definition_file`"
-   "|editCopy| :guilabel:`Copy Style`", "", "", ":ref:`save_layer_property`"
-   "|editPaste| :guilabel:`Paste Style`", "", "", ":ref:`save_layer_property`"
-   "|editCopy| :guilabel:`Copy Layer`"
-   "|editPaste| :guilabel:`Paste Layer/Group`"
-   "|openTable| :guilabel:`Open Attribute Table`", ":kbd:`F6`", ":guilabel:`Attributes`", ":ref:`sec_attribute_table`"
-   "|toggleEditing| :guilabel:`Toggle Editing`", "", ":guilabel:`Digitizing`", ":ref:`sec_edit_existing_layer`"
-   "|fileSave| :guilabel:`Save Layer Edits`", "", ":guilabel:`Digitizing`", ":ref:`save_feature_edits`"
-   "|allEdits| :menuselection:`Current Edits -->`", "", ":guilabel:`Digitizing`", ":ref:`save_feature_edits`"
-   ":guilabel:`Save As...`", "", "", ":ref:`general_saveas`"
-   ":guilabel:`Save As Layer Definition File...`", "", "", ":ref:`layer_definition_file`"
-   "|removeLayer| :guilabel:`Remove Layer/Group`", ":kbd:`Ctrl+D`"
-   "|duplicateLayer| :guilabel:`Duplicate Layer(s)`"
-   ":guilabel:`Set Scale Visibility of Layer(s)`"
-   ":guilabel:`Set CRS of Layer(s)`", ":kbd:`Ctrl+Shift+C`", "", ":ref:`layer_crs`"
-   ":guilabel:`Set Project CRS from Layer`", "", "", ":ref:`project_crs`"
-   ":guilabel:`Layer Properties...`", "", "", ":ref:`vector_properties_dialog`"
-   ":guilabel:`Filter...`", ":kbd:`Ctrl+F`", "", ":ref:`vector_query_builder`"
-   "|labeling| :guilabel:`Labeling`", "", "", ":ref:`vector_labels_tab`"
-   "|inOverview| :guilabel:`Show in Overview`", "", "", ":ref:`overview_panels`"
-   "|addAllToOverview| :guilabel:`Show All in Overview`", "", "", ":ref:`overview_panels`"
-   "|removeAllOVerview| :guilabel:`Hide All from Overview`", "", "", ":ref:`overview_panels`"
+.. list-table::
+   :header-rows: 1
+   :widths: 30 18 12 35
+   :stub-columns: 0
+
+   * - Menu Option
+     - Shortcut
+     - Toolbar
+     - Reference
+   * - |dataSourceManager| :guilabel:`Data Source Manager`
+     - :kbd:`Ctrl+L`
+     - :guilabel:`Data Source Manager`
+     - :ref:`Opening Data <datasourcemanager>`
+   * - :menuselection:`Create Layer -->`
+
+       * New GeoPackage Layer...
+       * New Shapefile Layer...
+       * New SpatiaLite Layer...
+       * New Temporary Scratch Layer...
+       * New Virtual Layer...
+
+     - .
+
+       * :kbd:`Ctrl+Shift+N`
+       *
+       *
+       *
+       *
+
+     - :guilabel:`Data Source Manager`
+     - :ref:`sec_create_vector`
+   * - :menuselection:`Add Layer -->`
+
+       * Add Vector Layer...
+       * Add Raster Layer...
+       * Add Mesh Layer...
+       * Add Delimited Text Layer...
+       * Add PostGIS Layer...
+       * Add SpatiaLite Layer...
+       * Add MSSQL Spatial Layer...
+       * Add DB2 Spatial Layer...
+       * Add/Edit Virtual Layer...
+       * Add WMS/WMTS Layer...
+       * Add ArcGIS MapServer Layer...
+       * Add WCS Layer...
+       * Add WFS Layer...
+       * Add ArcGIS FeatureServer Layer...
+
+     - .
+
+       * kbd:`Ctrl+Shift+V`
+       * kbd:`Ctrl+Shift+R`
+       *
+       * kbd:`Ctrl+Shift+R`
+       * kbd:`Ctrl+Shift+D`
+       * kbd:`Ctrl+Shift+L`
+       *
+       * kbd:`Ctrl+Shift+2`
+       *
+       * kbd:`Ctrl+Shift+W`
+       *
+       *
+       *
+       *
+
+     - :guilabel:`Data Source Manager`
+     - :ref:`opening_data`
+   * - :guilabel:`Embed Layers and Groups...`
+     - 
+     - 
+     - :ref:`nesting_projects`
+   * - :guilabel:`Add from Layer Definition File...`
+     - 
+     - 
+     - :ref:`layer_definition_file`
+   * - |editCopy| :guilabel:`Copy Style`
+     - 
+     - 
+     - :ref:`save_layer_property`
+   * - |editPaste| :guilabel:`Paste Style`
+     - 
+     - 
+     - :ref:`save_layer_property`
+   * - |editCopy| :guilabel:`Copy Layer`
+     - 
+     - 
+     - 
+   * - |editPaste| :guilabel:`Paste Layer/Group`
+     - 
+     - 
+     - 
+   * - |openTable| :guilabel:`Open Attribute Table`
+     - :kbd:`F6`
+     - :guilabel:`Attributes`
+     - :ref:`sec_attribute_table`
+   * - |toggleEditing| :guilabel:`Toggle Editing`
+     - 
+     - :guilabel:`Digitizing`
+     - :ref:`sec_edit_existing_layer`
+   * - |fileSave| :guilabel:`Save Layer Edits`
+     - 
+     - :guilabel:`Digitizing`
+     - :ref:`save_feature_edits`
+   * - |allEdits| :menuselection:`Current Edits -->`
+
+       * Save for Selected Layer(s)
+       * Rollback for Selected Layer(s)
+       * Cancel for Selected Layer(s)
+       * Save for all Layers
+       * Rollback for all Layers
+       * Cancel for all Layers
+
+     - 
+     - :guilabel:`Digitizing`
+     - :ref:`save_feature_edits`
+   * - :guilabel:`Save As...`
+     - 
+     - 
+     - :ref:`general_saveas`
+   * - :guilabel:`Save As Layer Definition File...`
+     - 
+     - 
+     - :ref:`layer_definition_file`
+   * - |removeLayer| :guilabel:`Remove Layer/Group`
+     - :kbd:`Ctrl+D`
+     - 
+     - 
+   * - |duplicateLayer| :guilabel:`Duplicate Layer(s)`
+     - 
+     - 
+     - 
+   * - :guilabel:`Set Scale Visibility of Layer(s)`
+     - 
+     - 
+     - 
+   * - :guilabel:`Set CRS of Layer(s)`
+     - :kbd:`Ctrl+Shift+C`
+     - 
+     - :ref:`layer_crs`
+   * - :guilabel:`Set Project CRS from Layer`
+     - 
+     - 
+     - :ref:`project_crs`
+   * - :guilabel:`Layer Properties...`
+     - 
+     - 
+     - :ref:`vector_properties_dialog`
+   * - :guilabel:`Filter...`
+     - :kbd:`Ctrl+F`
+     - 
+     - :ref:`vector_query_builder`
+   * - |labeling| :guilabel:`Labeling`
+     - 
+     - 
+     - :ref:`vector_labels_tab`
+   * - |inOverview| :guilabel:`Show in Overview`
+     - 
+     - 
+     - :ref:`overview_panels`
+   * - |addAllToOverview| :guilabel:`Show All in Overview`
+     - 
+     - 
+     - :ref:`overview_panels`
+   * - |removeAllOVerview| :guilabel:`Hide All from Overview`
+     - 
+     - 
+     - :ref:`overview_panels`"
 
 
 Settings
 --------
 
-.. csv-table::
-   :header: "Menu Option", "Reference"
-   :widths: auto
+.. list-table::
+   :header-rows: 1
+   :widths: 30 18 12 35
+   :stub-columns: 0
 
-   ":menuselection:`User Profiles -->`", ":ref:`user_profiles`"
-   "|styleManager| :guilabel:`Style Manager...`", ":ref:`vector_style_manager`"
-   "|customProjection| :guilabel:`Custom Projections...`", ":ref:`sec_custom_projections`"
-   "|keyboardShortcuts| :guilabel:`Keyboard Shortcuts...`", ":ref:`shortcuts`"
-   "|interfaceCustomization| :guilabel:`Interface Customization...`", ":ref:`sec_customization`"
-   "|options| :guilabel:`Options...`", ":ref:`gui_options`"
+   * - Menu Option
+     - Shortcut
+     - Toolbar
+     - Reference
+   * - :menuselection:`User Profiles -->`
+
+       * default
+       * Open Active Profile Folder
+       * New Profile...
+
+     -
+     -
+     - :ref:`user_profiles`
+   * - |styleManager| :guilabel:`Style Manager...`
+     -
+     -
+     - :ref:`vector_style_manager`
+   * - |customProjection| :guilabel:`Custom Projections...`
+     -
+     -
+     - :ref:`sec_custom_projections`
+   * - |keyboardShortcuts| :guilabel:`Keyboard Shortcuts...`
+     -
+     -
+     - :ref:`shortcuts`
+   * - |interfaceCustomization| :guilabel:`Interface Customization...`
+   -
+   -
+   - :ref:`sec_customization`
+ * - |options| :guilabel:`Options...`
+   -
+   -
+   - :ref:`gui_options`
+
 
 .. only :: html
 
@@ -758,12 +924,23 @@ menu such as :menuselection:`Panels -->`,
 Plugins
 -------
 
-.. csv-table::
-   :header: "Menu Option", "Shortcut", "Toolbar", "Reference"
-   :widths: auto
+.. list-table::
+   :header-rows: 1
+   :widths: 30 18 12 35
+   :stub-columns: 0
 
-   "|showPluginManager| :guilabel:`Manage and Install Plugins...`", "", "", ":ref:`managing_plugins`"
-   "|pythonFile| :guilabel:`Python Console`", ":kbd:`Ctrl+Alt+P`", ":guilabel:`Plugins`", ":ref:`console`"
+   * - Menu Option
+     - Shortcut
+     - Toolbar
+     - Reference
+   * - |showPluginManager| :guilabel:`Manage and Install Plugins...`
+     -
+     -
+     - :ref:`managing_plugins`
+   * - "|pythonFile| :guilabel:`Python Console`
+     - :kbd:`Ctrl+Alt+P`
+     - :guilabel:`Plugins`
+     - :ref:`console`
 
 .. only:: html
 
@@ -771,38 +948,57 @@ Plugins
 
 When starting QGIS for the first time not all core plugins are loaded.
 
+
 Vector
 ------
 
 This is what the :guilabel:`Vector` menu looks like if all core plugins
 are enabled.
 
-.. csv-table::
-   :header: "Menu Option", "Shortcut", "Toolbar", "Reference"
-   :widths: 30, 15, 15, 40
+.. list-table::
+   :header-rows: 1
+   :widths: 30 18 12 35
+   :stub-columns: 0
 
-   "|coordinateCapture| :guilabel:`Coordinate Capture`", "", ":guilabel:`Vector`", ":ref:`coordcapt`"
-   "|geometryChecker| :guilabel:`Check Geometries...`", "", ":guilabel:`Vector`", ":ref:`geometry_checker`"
-   "|gpsImporter| :guilabel:`GPS Tools`", "", ":guilabel:`Vector`", ":ref:`plugin_gps`"
-   "|topologyChecker| :guilabel:`Topology Checker`", "", ":guilabel:`Vector`", ":ref:`topology`"
-   ":menuselection:`Geoprocessing Tools -->`", ":kbd:`Alt+O` + :kbd:`G`","", ":ref:`processing.options`"
-   ":menuselection:`Geometry Tools -->`", ":kbd:`Alt+O` + :kbd:`E`","", ":ref:`processing.options`"
-   ":menuselection:`Analysis Tools -->`", ":kbd:`Alt+O` + :kbd:`A`","", ":ref:`processing.options`"
-   ":menuselection:`Data Management Tools -->`", ":kbd:`Alt+O` + :kbd:`D`","", ":ref:`processing.options`"
-   ":menuselection:`Research Tools -->`", ":kbd:`Alt+O` + :kbd:`R`","", ":ref:`processing.options`"
+   * - Menu Option
+     - Shortcut
+     - Toolbar
+     - Reference
+   * - :menuselection:`Geoprocessing Tools -->`
+     - :kbd:`Alt+O` + :kbd:`G`","
+     -
+     - :ref:`processing.options`
+   * - :menuselection:`Geometry Tools -->`
+     - :kbd:`Alt+O` + :kbd:`E`","
+     -
+     - :ref:`processing.options`
+   * - :menuselection:`Analysis Tools -->`
+     - :kbd:`Alt+O` + :kbd:`A`","
+     -
+     - :ref:`processing.options`
+   * - :menuselection:`Data Management Tools -->`
+     - :kbd:`Alt+O` + :kbd:`D`","
+     -
+     - :ref:`processing.options`
+   * - :menuselection:`Research Tools -->`
+     - :kbd:`Alt+O` + :kbd:`R`","
+     -
+     - :ref:`processing.options`"
 
 .. only:: html
 
    |
 
-By default, QGIS adds :ref:`Processing <sec_processing_intro>` algorithms to the
-:guilabel:`Vector` menu, grouped by sub-menus. This provides shortcuts
-for many common vector-based GIS tasks from different providers.
-If not all these sub-menus are available, enable
-the Processing plugin in :menuselection:`Plugins --> Manage and Install Plugins...`.
+By default, QGIS adds :ref:`Processing <sec_processing_intro>`
+algorithms to the :guilabel:`Vector` menu, grouped by sub-menus.
+This provides shortcuts for many common vector-based GIS tasks from
+different providers.
+If not all these sub-menus are available, enable the Processing plugin
+in :menuselection:`Plugins --> Manage and Install Plugins...`.
 
-Note that the list of the :guilabel:`Vector` menu tools can be extended with
-any Processing algorithms or some external :ref:`plugins <plugins>`.
+Note that the list of the :guilabel:`Vector` menu tools can be extended
+with any Processing algorithms or some external
+:ref:`plugins <plugins>`.
 
 
 Raster
@@ -925,7 +1121,7 @@ If no database plugins are enabled, there will be no :guilabel:`Database` menu.
      - Toolbar
      - Reference
    * - |dbManager| :guilabel:`DB Manager...`
-     - 
+     -
      - :guilabel:`Database`
      - :ref:`dbmanager`
 
@@ -956,7 +1152,7 @@ If no web plugins are enabled, there will be no :guilabel:`Web` menu.
    
        * |metasearch| Metasearch
        * Help
-     - 
+     -
      - :guilabel:`Web`
      - :ref:`metasearch`
 
@@ -983,9 +1179,9 @@ The :menuselection:`Mesh` menu provides tools needed to manipulate
      - Toolbar
      - Reference
    * - |showMeshCalculator| :menuselection:`Mesh Calculator...`
-     - 
      -
-     - 
+     -
+     -
 
 .. only:: html
 
@@ -1021,7 +1217,7 @@ Processing
      -
      - :ref:`processing.results`
    * - |processSelected| :guilabel:`Edit Features In-Place`
-     - 
+     -
      -
      - :ref:`processing_inplace_edit`  
 
