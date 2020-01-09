@@ -167,6 +167,7 @@ The :menuselection:`Project` menu provides access and exit points for
      - \
 
        * :ref:`exportingmapcanvas`
+       * :ref:`exportingmapcanvas`
        * :ref:`create_dxf_files`
        * :ref:`import_dxfdwg`
    * - |newLayout| :guilabel:`New Print Layout...`
@@ -242,16 +243,16 @@ layer attributes or geometry (see :ref:`editingvector` for details).
      - :ref:`sec_attribute_table`
    * - :menuselection:`Select -->`
 
-       * :guilabel:`Select Feature(s)`
-       * :guilabel:`Select Features by Polygon`
-       * :guilabel:`Select Features by Freehand`
-       * :guilabel:`Select Features by Radius`
-       * :guilabel:`Select Features by Value...`
-       * :guilabel:`Select Features by Expression...`
-       * :guilabel:`Deselect Features from All Layers`
+       * |selectRectangle| :guilabel:`Select Feature(s)`
+       * |selectPolygon| :guilabel:`Select Features by Polygon`
+       * |selectFreehand| :guilabel:`Select Features by Freehand`
+       * |selectRadius| :guilabel:`Select Features by Radius`
+       * |formSelect| :guilabel:`Select Features by Value...`
+       * |expressionSelect| :guilabel:`Select Features by Expression...`
+       * |deselectAll| :guilabel:`Deselect Features from All Layers`
        * :guilabel:`Reselect Features`
-       * :guilabel:`Select All Features`
-       * :guilabel:`Ivert Feature Selection`
+       * |selectAll| :guilabel:`Select All Features`
+       * |invertSelection| :guilabel:`Ivert Feature Selection`
 
      - .
 
@@ -1895,6 +1896,8 @@ open the Plugin Manager dialog.
    :width: 2em
 .. |deleteSelectedFeatures| image:: /static/common/mActionDeleteSelectedFeatures.png
    :width: 1.5em
+.. |deselectAll| image:: /static/common/mActionDeselectAll.png
+   :width: 1.5em
 .. |draw| image:: /static/common/mActionDraw.png
    :width: 1.5em
 .. |duplicateLayer| image:: /static/common/mActionDuplicateLayer.png
@@ -1904,6 +1907,8 @@ open the Plugin Manager dialog.
 .. |editCut| image:: /static/common/mActionEditCut.png
    :width: 1.5em
 .. |editPaste| image:: /static/common/mActionEditPaste.png
+   :width: 1.5em
+.. |expressionSelect| image:: /static/common/mIconExpressionSelect.png
    :width: 1.5em
 .. |extents| image:: /static/common/extents.png
    :width: 1.5em
@@ -1917,6 +1922,8 @@ open the Plugin Manager dialog.
 .. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
    :width: 1.5em
 .. |fillRing| image:: /static/common/mActionFillRing.png
+   :width: 1.5em
+.. |formSelect| image:: /static/common/mIconFormSelect.png
    :width: 1.5em
 .. |geometryChecker| image:: /static/common/geometrychecker.png
    :width: 1.5em
@@ -1939,6 +1946,8 @@ open the Plugin Manager dialog.
 .. |inOverview| image:: /static/common/mActionInOverview.png
    :width: 1.5em
 .. |interfaceCustomization| image:: /static/common/mActionInterfaceCustomization.png
+   :width: 1.5em
+.. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em
 .. |kde| image:: /static/common/kde.png
    :width: 1.5em
@@ -2041,6 +2050,16 @@ open the Plugin Manager dialog.
 .. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
    :width: 1.5em
 .. |search| image:: /static/common/search.png
+   :width: 1.5em
+.. |selectAll| image:: /static/common/mActionSelectAll.png
+   :width: 1.5em
+.. |selectFreehand| image:: /static/common/mActionSelectFreehand.png
+   :width: 1.5em
+.. |selectPolygon| image:: /static/common/mActionSelectPolygon.png
+   :width: 1.5em
+.. |selectRadius| image:: /static/common/mActionSelectRadius.png
+   :width: 1.5em
+.. |selectRectangle| image:: /static/common/mActionSelectRectangle.png
    :width: 1.5em
 .. |showAllLayers| image:: /static/common/mActionShowAllLayers.png
    :width: 1.5em
