@@ -811,18 +811,87 @@ Raster
 This is what the :guilabel:`Raster` menu looks like if all core plugins
 are enabled.
 
-.. csv-table::
-   :header: "Menu Option", "Toolbar", "Reference"
-   :widths: auto
 
-   "|showRasterCalculator| :guilabel:`Raster calculator...`", "", ":ref:`label_raster_calc`"
-   ":guilabel:`Align Raster...`", "", ":ref:`label_raster_align`"
-   ":menuselection:`Analysis -->`", "", ":ref:`processing.options`"
-   ":menuselection:`Projection -->`", "", ":ref:`processing.options`"
-   ":menuselection:`Miscellaneous -->`", "", ":ref:`processing.options`"
-   ":menuselection:`Extraction -->`", "", ":ref:`processing.options`"
-   ":menuselection:`Conversion -->`", "", ":ref:`processing.options`"
-   "|georefRun| :guilabel:`Georeferencer`", ":guilabel:`Raster`",":ref:`georef`"
+.. list-table::
+   :header-rows: 1
+   :widths: 30 18 12 35
+   :stub-columns: 0
+
+   * - Menu Option
+     - Shortcut
+     - Toolbar
+     - Reference
+   * - |showRasterCalculator| :guilabel:`Raster calculator...`
+     -
+     -
+     - :ref:`label_raster_calc`
+   * - :guilabel:`Align Raster...`
+     -
+     -
+     - :ref:`label_raster_align`
+   * - |georefRun| :guilabel:`Georeferencer`
+     - :guilabel:`Raster`
+     -
+     - :ref:`georef`
+   * - :menuselection:`Analysis -->`
+
+       * Aspect...
+       * Fill nodata...
+       * Grid (Moving Average)...
+       * Grid (Data Metrics)...
+       * Grid (Inverse Distance to a Power)...
+       * Grid (Nearest Neighbor)...
+       * Hillshade...
+       * Proximity (Raster Distance)...
+       * Roughness...
+       * Sieve...
+       * Slope...
+       * Topographic Position Index (TPI)...
+       * Terrain Ruggedness Index (TRI)...
+
+     -
+     -
+     - :ref:`processing.options`
+   * - :menuselection:`Projection -->`
+
+       * Assign Projection...
+       * Extract Projection...
+       * Warp (Reproject)...
+
+     -
+     -
+     - :ref:`processing.options`
+   * - :menuselection:`Miscellaneous -->`
+
+       * Build Virtual Raster...
+       * Raster Information...
+       * Merge...
+       * Build Overviews (Pyramids)...
+       * Tile Index...
+
+     -
+     -
+     - :ref:`processing.options`
+   * - :menuselection:`Extraction -->`
+
+       * Clip Raster by Extent...
+       * Clip Raster by Mask Layer...
+       * Contour...
+
+     -
+     -
+     - :ref:`processing.options`
+   * - :menuselection:`Conversion -->`
+
+       * PCT to RGB...
+       * Polygonize (Raster to Vector)...
+       * Rasterize (Vector to Raster)...
+       * RGB to PCT...
+       * Translate (Convert Format)...
+
+     -
+     -
+     - :ref:`processing.options`
 
 .. only:: html
 
@@ -832,7 +901,8 @@ By default, QGIS adds :ref:`Processing <sec_processing_intro>` algorithms to the
 :guilabel:`Raster` menu, grouped by sub-menus. This provides a shortcut
 for many common raster-based GIS tasks from different providers.
 If not all these sub-menus are available, enable
-the Processing plugin in :menuselection:`Plugins --> Manage and Install Plugins...`.
+the Processing plugin in
+:menuselection:`Plugins --> Manage and Install Plugins...`.
 
 Note that the list of the :guilabel:`Raster` menu tools can be extended with
 any Processing algorithms or some external :ref:`plugins <plugins>`.
@@ -845,13 +915,19 @@ This is what the :guilabel:`Database` menu looks like if all the core plugins
 are enabled.
 If no database plugins are enabled, there will be no :guilabel:`Database` menu.
 
-.. csv-table::
-   :header: "Menu Option", "Toolbar", "Reference"
-   :widths: auto
+.. list-table::
+   :header-rows: 1
+   :widths: 30 18 12 35
+   :stub-columns: 0
 
-   "|dbManager| :guilabel:`DB Manager`", ":guilabel:`Database`", ":ref:`dbmanager`"
-   ":menuselection:`eVis -->`", ":guilabel:`Database`", ":ref:`evis`"
-   ":menuselection:`Offline Editing -->`", ":guilabel:`Database`", ":ref:`offlinedit`"
+   * - Menu Option
+     - Shortcut
+     - Toolbar
+     - Reference
+   * - |dbManager| :guilabel:`DB Manager...`
+     - 
+     - :guilabel:`Database`
+     - :ref:`dbmanager`
 
 .. only:: html
 
@@ -867,11 +943,22 @@ This is what the :guilabel:`Web` menu looks like if all the core plugins
 are enabled.
 If no web plugins are enabled, there will be no :guilabel:`Web` menu.
 
-.. csv-table::
-   :header: "Menu Option", "Toolbar", "Reference"
-   :widths: auto
+.. list-table::
+   :header-rows: 1
+   :widths: 30 18 12 35
+   :stub-columns: 0
 
-   "|metasearch| :menuselection:`MetaSearch`", ":guilabel:`Web`", ":ref:`metasearch`"
+   * - Menu Option
+     - Shortcut
+     - Toolbar
+     - Reference
+   * - :menuselection:`MetaSearch -->``
+   
+       * |metasearch| Metasearch
+       * Help
+     - 
+     - :guilabel:`Web`
+     - :ref:`metasearch`
 
 .. only:: html
 
@@ -886,25 +973,57 @@ Mesh
 The :menuselection:`Mesh` menu provides tools needed to manipulate
 :ref:`mesh layers <label_meshdata>`.
 
-.. csv-table::
-   :header: "Menu Option", "Toolbar", "Reference"
-   :widths: auto
+.. list-table::
+   :header-rows: 1
+   :widths: 30 18 12 35
+   :stub-columns: 0
 
-   "|showMeshCalculator| :menuselection:`Mesh Calculator`"
+   * - Menu Option
+     - Shortcut
+     - Toolbar
+     - Reference
+   * - |showMeshCalculator| :menuselection:`Mesh Calculator...`
+     - 
+     -
+     - 
+
+.. only:: html
+
+   |
 
 
 Processing
 ----------
 
-.. csv-table::
-   :header: "Menu Option", "Shortcut", "Reference"
-   :widths: auto
+.. list-table::
+   :header-rows: 1
+   :widths: 30 18 12 35
+   :stub-columns: 0
 
-   "|processing| :guilabel:`Toolbox`", ":kbd:`Ctrl+Alt+T`", ":ref:`processing.toolbox`"
-   "|processingModel| :guilabel:`Graphical Modeler...`", ":kbd:`Ctrl+Alt+G`", ":ref:`processing.modeler`"
-   "|processingHistory| :guilabel:`History...`", ":kbd:`Ctrl+Alt+H`", ":ref:`processing.history`"
-   "|processingResult| :guilabel:`Results Viewer`", ":kbd:`Ctrl+Alt+R`", ":ref:`processing.results`"
-   "|processSelected| :guilabel:`Edit Features In-Place`", "", ":ref:`processing_inplace_edit`"
+   * - Menu Option
+     - Shortcut
+     - Toolbar
+     - Reference
+   * - |processing| :guilabel:`Toolbox`
+     - :kbd:`Ctrl+Alt+T`
+     -
+     - :ref:`processing.toolbox`
+   * - |processingModel| :guilabel:`Graphical Modeler...`
+     - :kbd:`Ctrl+Alt+G`
+     -
+     - :ref:`processing.modeler`
+   * - |processingHistory| :guilabel:`History...`
+     - :kbd:`Ctrl+Alt+H`
+     -
+     - :ref:`processing.history`
+   * - |processingResult| :guilabel:`Results Viewer`
+     - :kbd:`Ctrl+Alt+R`
+     -
+     - :ref:`processing.results`
+   * - |processSelected| :guilabel:`Edit Features In-Place`
+     - 
+     -
+     - :ref:`processing_inplace_edit`  
 
 .. only:: html
 
