@@ -444,7 +444,7 @@ details).
 
    |
 
-Tools dependent on the selected layer geometry type i.e. point,
+Tools that depend on the selected layer geometry type i.e. point,
 polyline or polygon, are activated accordingly:
 
 .. list-table::
