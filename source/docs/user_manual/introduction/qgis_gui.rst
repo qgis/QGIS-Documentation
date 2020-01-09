@@ -295,22 +295,22 @@ layer attributes or geometry (see :ref:`editingvector` for details).
      - :ref:`add_circular_string`
    * - :menuselection:`Add Circle -->`
 
-       * :guilabel:`Add Circle from 2 Points`
-       * :guilabel:`Add Circle from 3 Points`
-       * :guilabel:`Add Circle from 3 Tangents`
-       * :guilabel:`Add Circle from 2 Tangents and a Point`
-       * :guilabel:`Add Circle by a Center Point and Another Point`
+       * |circle2Points| :guilabel:`Add Circle from 2 Points`
+       * |circle3Points| :guilabel:`Add Circle from 3 Points`
+       * |circle3Tangents| :guilabel:`Add Circle from 3 Tangents`
+       * |circle2TangentsPoint| :guilabel:`Add Circle from 2 Tangents and a Point`
+       * |circleCenterPoint| :guilabel:`Add Circle by a Center Point and Another Point`
 
      - 
      - :guilabel:`Shape Digitizing`
      - 
    * - :menuselection:`Add Rectangle -->`
 
-       * :guilabel:`Add Rectangle from Extent`
-       * :guilabel:`Add Rectangle from Center and a Point`
-       * :guilabel:`Add Rectangle from 3 Points (Distance from 2nd
+       * |rectangleExtent| :guilabel:`Add Rectangle from Extent`
+       * |rectangleCenter| :guilabel:`Add Rectangle from Center and a Point`
+       * |rectangle3PointsProjected| :guilabel:`Add Rectangle from 3 Points (Distance from 2nd
          and 3rd point)`
-       * :guilabel:`Add Rectangle from 3 Points (Distance from
+       * |rectangle3PointsDistance| :guilabel:`Add Rectangle from 3 Points (Distance from
          projected point on segment p1 and p2)`
 
      - 
@@ -318,19 +318,19 @@ layer attributes or geometry (see :ref:`editingvector` for details).
      - 
    * - :menuselection:`Add Regular Polygon -->`
 
-       * :guilabel:`Add Regular Polygon from Center and a Point`
-       * :guilabel:`Add Regular Polygon from Center and a Corner`
-       * :guilabel:`Add Regular Polygon from 2 Points`
+       * |regularPolygonCenterPoint| :guilabel:`Add Regular Polygon from Center and a Point`
+       * |regularPolygonCenterCorner| :guilabel:`Add Regular Polygon from Center and a Corner`
+       * |regularPolygon2Points| :guilabel:`Add Regular Polygon from 2 Points`
 
      - 
      - :guilabel:`Shape Digitizing`
      - 
    * - :menuselection:`Add Ellipse -->`
 
-       * :guilabel:`Add Ellipse from Center and 2 Points`
-       * :guilabel:`Add Ellipse from Center and a Point`
-       * :guilabel:`Add Ellipse from Extent`
-       * :guilabel:`Add Ellipse from Foci`
+       * |ellipseCenter2Points| :guilabel:`Add Ellipse from Center and 2 Points`
+       * |ellipseCenterPoint| :guilabel:`Add Ellipse from Center and a Point`
+       * |ellipseExtent| :guilabel:`Add Ellipse from Extent`
+       * |ellipseFoci| :guilabel:`Add Ellipse from Foci`
 
      - 
      - :guilabel:`Shape Digitizing`
@@ -1878,6 +1878,20 @@ open the Plugin Manager dialog.
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+
+.. |circle2Points| image:: /static/common/mActionCircle2Points.png
+   :width: 1.5em
+.. |circle2TangentsPoint| image:: /static/common/mActionCircle2TangentsPoint
+   :width: 1.5em
+.. |circle3Points| image:: /static/common/mActionCircle3Points.png
+   :width: 1.5em
+.. |circle3Tangents| image:: /static/common/mActionCircle3Tangents.png
+   :width: 1.5em
+.. |circleCenterPoint| image:: /static/common/mActionCircleCenterPoint.png
+   :width: 1.5em
+.. |circleExtent| image:: /static/common/mActionCircleExtent.png
+   :width: 1.5em
+
 .. |circularStringCurvePoint| image:: /static/common/mActionCircularStringCurvePoint.png
    :width: 1.5em
 .. |circularStringRadius| image:: /static/common/mActionCircularStringRadius.png
@@ -1908,6 +1922,16 @@ open the Plugin Manager dialog.
    :width: 1.5em
 .. |editPaste| image:: /static/common/mActionEditPaste.png
    :width: 1.5em
+
+.. |ellipseCenter2Points| image:: /static/common/mActionEllipseCenter2Points.png
+   :width: 1.5em
+.. |ellipseCenterPoint| image:: /static/common/mActionEllipseCenterPoint.png
+   :width: 1.5em
+.. |ellipseExtent| image:: /static/common/mActionEllipseExtent.png
+   :width: 1.5em
+.. |ellipseFoci| image:: /static/common/mActionEllipseFoci.png
+   :width: 1.5em
+
 .. |expressionSelect| image:: /static/common/mIconExpressionSelect.png
    :width: 1.5em
 .. |extents| image:: /static/common/extents.png
@@ -2031,8 +2055,26 @@ open the Plugin Manager dialog.
    :width: 1.5em
 .. |qgisHomePage| image:: /static/common/mActionQgisHomePage.png
    :width: 1.5em
+
+.. |rectangle3PointsDistance| image:: /static/common/mActionRectangle3PointsDistance.png
+   :width: 1.5em
+.. |rectangle3PointsProjected| image:: /static/common/mActionRectangle3PointsProjected.png
+   :width: 1.5em
+.. |rectangleCenter| image:: /static/common/mActionRectangleCenter.png
+   :width: 1.5em
+.. |rectangleExtent| image:: /static/common/mActionRectangleExtent.png
+   :width: 1.5em
+
 .. |redo| image:: /static/common/mActionRedo.png
    :width: 1.5em
+
+.. |regularPolygon2Points| image:: /static/common/mActionRegularPolygon2Points.png
+   :width: 1.5em
+.. |regularPolygonCenterCorner| image:: /static/common/mActionRegularPolygonCenterCorner.png
+   :width: 1.5em
+.. |regularPolygonCenterPoint| image:: /static/common/mActionRegularPolygonCenterPoint.png
+   :width: 1.5em
+
 .. |removeAllOVerview| image:: /static/common/mActionRemoveAllFromOverview.png
    :width: 1.5em
 .. |removeLayer| image:: /static/common/mActionRemoveLayer.png
