@@ -27,8 +27,8 @@ elements of the QGIS GUI, and are discussed below).
    QGIS GUI with Alaska sample data
 
 .. note::
-   Your window decorations (title bar, etc.) may appear different depending
-   on your operating system and window manager.
+   Your window decorations (title bar, etc.) may appear different
+   depending on your operating system and window manager.
 
 The QGIS GUI is divided into five components:
 
@@ -201,8 +201,9 @@ Under |osx| macOS, the :guilabel:`Exit QGIS` command corresponds to
 Edit
 ----
 
-The :menuselection:`Edit` menu provides most of the native tools needed to edit
-layer attributes or geometry (see :ref:`editingvector` for details).
+The :menuselection:`Edit` menu provides most of the native tools needed
+to edit layer attributes or geometry (see :ref:`editingvector` for
+details).
 
 .. list-table::
    :header-rows: 1
@@ -298,8 +299,10 @@ layer attributes or geometry (see :ref:`editingvector` for details).
        * |circle2Points| :guilabel:`Add Circle from 2 Points`
        * |circle3Points| :guilabel:`Add Circle from 3 Points`
        * |circle3Tangents| :guilabel:`Add Circle from 3 Tangents`
-       * |circle2TangentsPoint| :guilabel:`Add Circle from 2 Tangents and a Point`
-       * |circleCenterPoint| :guilabel:`Add Circle by a Center Point and Another Point`
+       * |circle2TangentsPoint|
+         :guilabel:`Add Circle from 2 Tangents and a Point`
+       * |circleCenterPoint|
+         :guilabel:`Add Circle by a Center Point and Another Point`
 
      - 
      - :guilabel:`Shape Digitizing`
@@ -307,10 +310,13 @@ layer attributes or geometry (see :ref:`editingvector` for details).
    * - :menuselection:`Add Rectangle -->`
 
        * |rectangleExtent| :guilabel:`Add Rectangle from Extent`
-       * |rectangleCenter| :guilabel:`Add Rectangle from Center and a Point`
-       * |rectangle3PointsProjected| :guilabel:`Add Rectangle from 3 Points (Distance from 2nd
+       * |rectangleCenter| :guilabel:
+         `Add Rectangle from Center and a Point`
+       * |rectangle3PointsProjected|
+         :guilabel:`Add Rectangle from 3 Points (Distance from 2nd
          and 3rd point)`
-       * |rectangle3PointsDistance| :guilabel:`Add Rectangle from 3 Points (Distance from
+       * |rectangle3PointsDistance|
+         :guilabel:`Add Rectangle from 3 Points (Distance from
          projected point on segment p1 and p2)`
 
      - 
@@ -318,17 +324,22 @@ layer attributes or geometry (see :ref:`editingvector` for details).
      - 
    * - :menuselection:`Add Regular Polygon -->`
 
-       * |regularPolygonCenterPoint| :guilabel:`Add Regular Polygon from Center and a Point`
-       * |regularPolygonCenterCorner| :guilabel:`Add Regular Polygon from Center and a Corner`
-       * |regularPolygon2Points| :guilabel:`Add Regular Polygon from 2 Points`
+       * |regularPolygonCenterPoint|
+         :guilabel:`Add Regular Polygon from Center and a Point`
+       * |regularPolygonCenterCorner|
+         :guilabel:`Add Regular Polygon from Center and a Corner`
+       * |regularPolygon2Points|
+         :guilabel:`Add Regular Polygon from 2 Points`
 
      - 
      - :guilabel:`Shape Digitizing`
      - 
    * - :menuselection:`Add Ellipse -->`
 
-       * |ellipseCenter2Points| :guilabel:`Add Ellipse from Center and 2 Points`
-       * |ellipseCenterPoint| :guilabel:`Add Ellipse from Center and a Point`
+       * |ellipseCenter2Points|
+         :guilabel:`Add Ellipse from Center and 2 Points`
+       * |ellipseCenterPoint|
+         :guilabel:`Add Ellipse from Center and a Point`
        * |ellipseExtent| :guilabel:`Add Ellipse from Extent`
        * |ellipseFoci| :guilabel:`Add Ellipse from Foci`
 
@@ -399,7 +410,8 @@ layer attributes or geometry (see :ref:`editingvector` for details).
      - 
      - :guilabel:`Advanced Digitizing`
      - :ref:`mergeselectedfeatures`
-   * - |mergeFeatAttributes| :guilabel:`Merge Attributes of Selected Features`
+   * - |mergeFeatAttributes|
+       :guilabel:`Merge Attributes of Selected Features`
      - 
      - :guilabel:`Advanced Digitizing`
      - :ref:`mergeattributesfeatures`
@@ -432,14 +444,26 @@ layer attributes or geometry (see :ref:`editingvector` for details).
 
    |
 
-Tools dependent on the selected layer geometry type i.e. point, polyline or polygon, are activated accordingly:
+Tools dependent on the selected layer geometry type i.e. point,
+polyline or polygon, are activated accordingly:
 
-.. csv-table::
-   :header: "Menu Option", "Point", "Polyline", "Polygon"
-   :widths: auto
+.. list-table::
+   :header-rows: 1
+   :widths: 30 18 12 35
+   :stub-columns: 0
 
-   ":guilabel:`Move Feature(s)`", "|moveFeaturePoint|", "|moveFeatureLine|", "|moveFeature|"
-   ":guilabel:`Copy and Move Feature(s)`", "|moveFeatureCopyPoint|", "|moveFeatureCopyLine|", "|moveFeatureCopy|"
+   * - Menu Option
+     - Point
+     - Polyline
+     - Polygon
+   * - :guilabel:`Move Feature(s)`
+     - |moveFeaturePoint|
+     - |moveFeatureLine|
+     - |moveFeature|
+   * - :guilabel:`Copy and Move Feature(s)`
+     - |moveFeatureCopyPoint|
+     - |moveFeatureCopyLine|
+     - |moveFeatureCopy|
 
 
 .. _view_menu:
@@ -457,17 +481,18 @@ for more information). For example, you can:
 * Enhance the map view with preview modes, annotations or decorations
 * Access any panel or toolbar
 
-The menu also allows you to reorganize the QGIS interface itself using actions like:
+The menu also allows you to reorganize the QGIS interface itself using
+actions like:
 
 * :guilabel:`Toggle Full Screen Mode`: covers the whole screen
   while hiding the title bar
-* :guilabel:`Toggle Panel Visibility`: shows or hides enabled :ref:`panels
-  <panels_tools>` - useful when digitizing features (for
+* :guilabel:`Toggle Panel Visibility`: shows or hides enabled
+  :ref:`panels <panels_tools>` - useful when digitizing features (for
   maximum canvas visibility) as well as for (projected/recorded)
   presentations using QGIS' main canvas
-* :guilabel:`Toggle Map Only`: hides panels, toolbars, menus and status bar
-  and only shows the map canvas. Combined with the full screen option, it makes
-  your screen display only the map
+* :guilabel:`Toggle Map Only`: hides panels, toolbars, menus and status
+  bar and only shows the map canvas. Combined with the full screen
+  option, it makes your screen display only the map
 
 
 .. list-table::
@@ -918,8 +943,8 @@ Settings
 
    |
 
-Under |kde| Linux KDE, you'll find more tools in the :menuselection:`Settings`
-menu such as :menuselection:`Panels -->`,
+Under |kde| Linux KDE, you'll find more tools in the
+:menuselection:`Settings` menu such as :menuselection:`Panels -->`,
 :menuselection:`Toolbars -->` and :guilabel:`Toggle Full Screen Mode`.
 
 Plugins
@@ -1146,23 +1171,25 @@ are enabled.
 
    |
 
-By default, QGIS adds :ref:`Processing <sec_processing_intro>` algorithms to the 
-:guilabel:`Raster` menu, grouped by sub-menus. This provides a shortcut
-for many common raster-based GIS tasks from different providers.
-If not all these sub-menus are available, enable
-the Processing plugin in
-:menuselection:`Plugins --> Manage and Install Plugins...`.
+By default, QGIS adds :ref:`Processing <sec_processing_intro>`
+algorithms to the :guilabel:`Raster` menu, grouped by sub-menus.
+This provides a shortcut for many common raster-based GIS tasks from
+different providers.
+If not all these sub-menus are available, enable the Processing plugin
+in :menuselection:`Plugins --> Manage and Install Plugins...`.
 
-Note that the list of the :guilabel:`Raster` menu tools can be extended with
-any Processing algorithms or some external :ref:`plugins <plugins>`.
+Note that the list of the :guilabel:`Raster` menu tools can be extended
+with any Processing algorithms or some external
+:ref:`plugins <plugins>`.
 
 
 Database
 --------
 
-This is what the :guilabel:`Database` menu looks like if all the core plugins
-are enabled.
-If no database plugins are enabled, there will be no :guilabel:`Database` menu.
+This is what the :guilabel:`Database` menu looks like if all the core
+plugins are enabled.
+If no database plugins are enabled, there will be no
+:guilabel:`Database` menu.
 
 .. list-table::
    :header-rows: 1
@@ -1188,8 +1215,8 @@ When starting QGIS for the first time not all core plugins are loaded.
 Web
 ---
 
-This is what the :guilabel:`Web` menu looks like if all the core plugins
-are enabled.
+This is what the :guilabel:`Web` menu looks like if all the core
+plugins are enabled.
 If no web plugins are enabled, there will be no :guilabel:`Web` menu.
 
 .. list-table::
@@ -1334,8 +1361,8 @@ Help
 QGIS
 -----
 
-This menu is only available under |osx| macOS and contains some OS related
-commands.
+This menu is only available under |osx| macOS and contains some OS
+related commands.
 
 .. csv-table::
    :header: "Menu Option", "Shortcut"
@@ -1352,24 +1379,28 @@ commands.
 
   |
 
-:guilabel:`Preferences` and :guilabel:`About QGIS` are the same commands as
-:menuselection:`Settings --> Options` and :menuselection:`Help --> About`.
-:guilabel:`Quit QGIS` corresponds to :menuselection:`Project --> Exit QGIS`
-under the other platforms.
+:guilabel:`Preferences` correspond to
+:menuselection:`Settings --> Options`, :guilabel:`About QGIS`
+ corresponds to :menuselection:`Help --> About` and
+:guilabel:`Quit QGIS` corresponds to
+:menuselection:`Project --> Exit QGIS` for other platforms.
+
 
 .. _sec_panels_and_toolbars:
 
 Panels and Toolbars
 ===================
 
-From the :menuselection:`View` menu (or |kde| :menuselection:`Settings`), you can
-switch QGIS widgets (:menuselection:`Panels -->`) and toolbars
-(:menuselection:`Toolbars -->`) on and off. To (de)activate any of them,
-right-click the menu bar or toolbar and choose the item you want.
-Each panel or toolbar can be moved and placed wherever you feel comfortable
-within the QGIS interface.
-The list can also be extended with the activation of :ref:`Core or external
-plugins <plugins>`.
+From the :menuselection:`View` menu (or |kde|
+:menuselection:`Settings`), you can switch QGIS widgets
+(:menuselection:`Panels -->`) and toolbars
+(:menuselection:`Toolbars -->`) on and off.
+To (de)activate any of them, right-click the menu bar or toolbar and
+choose the item you want.
+Panels and toolbars can be moved and placed wherever you like within
+the QGIS interface.
+The list can also be extended with the activation of :ref:`Core or
+external plugins <plugins>`.
 
 
 .. index:: Toolbars
@@ -1378,14 +1409,15 @@ plugins <plugins>`.
 Toolbars
 --------
 
-The toolbar provides access to most of the same functions as the menus, plus
-additional tools for interacting with the map. Each toolbar item has pop-up help
-available. Hover your mouse over the item and a short description of the tool's
+The toolbars provide access to most of the functions in the
+menus, plus additional tools for interacting with the map.
+Each toolbar item has pop-up help available.
+Hover your mouse over the item and a short description of the tool's
 purpose will be displayed.
 
-Every toolbar can be moved around according to your needs. Additionally,
-they can be switched off using the right mouse button context menu, or by
-holding the mouse over the toolbars.
+Every toolbar can be moved around according to your needs.
+Additionally, they can be switched off using the right mouse button
+context menu, or by holding the mouse over the toolbars.
 
 .. _figure_toolbars:
 
@@ -1400,11 +1432,12 @@ holding the mouse over the toolbars.
 .. tip:: **Restoring toolbars**
 
    If you have accidentally hidden a toolbar, you can get it
-   back by choosing menu option :menuselection:`View --> Toolbars -->`
-   (or |kde| :menuselection:`Settings --> Toolbars -->`).
-   If for some reason a toolbar (or any other widget) totally disappears
-   from the interface, you'll find tips to get it back at :ref:`restoring
-   initial GUI <tip_restoring_configuration>`.
+   back using :menuselection:`View --> Toolbars -->` (or |kde|
+   :menuselection:`Settings --> Toolbars -->`).
+   If, for some reason, a toolbar (or any other widget) totally
+   disappears from the interface, you'll find tips to get it back at
+   :ref:`restoring initial GUI <tip_restoring_configuration>`.
+
 
 .. index:: Panels
 .. _panels_tools:
@@ -1412,10 +1445,10 @@ holding the mouse over the toolbars.
 Panels
 ------
 
-Besides toolbars, QGIS provides many panels to work with by default. Panels are
-special widgets that you can interact with (selecting options, checking boxes,
-filling values...) to perform more complex tasks.
-
+QGIS provides many panels.
+Panels are special widgets that you can interact with (selecting
+options, checking boxes, filling values...) to perform more complex
+tasks.
 
 .. _figure_panels:
 
@@ -1424,7 +1457,7 @@ filling values...) to perform more complex tasks.
 
    The Panels menu
 
-Below are listed default panels provided by QGIS:
+Below is a list of the default panels provided by QGIS:
 
 * the :ref:`label_legend`
 * the :ref:`Browser Panel <browser_panel>`
@@ -1452,25 +1485,28 @@ Map View
 Exploring the map view
 ----------------------
 
-Also called **Map canvas**, this is the "business end" of QGIS ---
-maps are displayed in this area. The map displayed in this window
-will reflect the rendering (symbology, labeling, visibilities...) you applied
-to the layers you have loaded. It also depends on the layers and the project's
-Coordinate Reference System (CRS).
+The map view (also called **Map canvas**) is the "business end" of
+QGIS --- maps are displayed in this area.
+The map displayed in this window will reflect the rendering (symbology,
+labeling, visibilities...) you applied to the layers you have loaded.
+It also depends on the layers and the project's Coordinate Reference
+System (CRS).
 
 When you add a layer (see e.g. :ref:`opening_data`), QGIS automatically
-looks for its CRS. If a different CRS is set by default for the project (see
-:ref:`project_crs`) then the layer extent is "on-the-fly" translated to
-that CRS and, the map view is zoomed to that extent if you start with a
-blank QGIS project.
-If there are already layers in the project, no map canvas resize is processed
-and only features falling in the current map canvas extent will be visible.
+looks for its CRS. If a different CRS is set by default for the project
+(see :ref:`project_crs`) then the layer extent is "on-the-fly"
+translated to that CRS, and the map view is zoomed to that extent if
+you start with a blank QGIS project.
+If there are already layers in the project, no map canvas resize is
+performed, so only features falling within the current map canvas extent
+will be visible.
 
 The map view can be panned, shifting the display to another region
-of the map, and it can be zoomed in and out. Various other operations can be
-performed on the map as described in the :ref:`label_toolbars` section.
-The map view and the legend are tightly bound to each other --- the maps in
-the view reflect changes you make in the legend area.
+of the map, and it can be zoomed in and out.
+Various other operations can be performed on the map as described in
+the :ref:`label_toolbars` section.
+The map view and the legend are tightly bound to each other --- the
+maps in the view reflect changes you make in the legend area.
 
 
 .. index:: Zoom, Mouse wheel
@@ -1478,11 +1514,12 @@ the view reflect changes you make in the legend area.
 .. tip::
    **Zooming the Map with the Mouse Wheel**
 
-   You can use the mouse wheel to zoom in and out on the map. Place the mouse
-   cursor inside the map area and roll the wheel forward (away from you) to
-   zoom in and backwards (towards you) to zoom out. The zoom is centered on the
-   mouse cursor position. You can customize the behavior of the
-   mouse wheel zoom using the :guilabel:`Map tools` tab under the
+   You can use the mouse wheel to zoom in and out on the map.
+   Place the mouse cursor inside the map area and roll the wheel forward
+   (away from you) to zoom in and backwards (towards you) to zoom out.
+   The zoom is centered on the mouse cursor position.
+   You can customize the behavior of the mouse wheel zoom using the
+   :guilabel:`Map tools` tab under the
    :menuselection:`Settings --> Options` menu.
 
 
@@ -1491,19 +1528,24 @@ the view reflect changes you make in the legend area.
 .. tip::
    **Panning the Map with the Arrow Keys and Space Bar**
 
-   You can use the arrow keys to pan the map. Place the mouse cursor inside
-   the map area and click on the arrow keys to pan left, right, up and down. You can
-   also pan the map by moving the mouse while holding down the space bar or the
-   middle mouse button (or holding down the mouse wheel).
+   You can use the arrow keys to pan the map.
+   Place the mouse cursor inside the map area and click on the arrow
+   keys to pan left, right, up and down.
+   You can also pan the map by moving the mouse while holding down the
+   space bar or the middle mouse button (or holding down the mouse
+   wheel).
+
 
 .. _`exportingmapcanvas`:
 
 Exporting the map view
 ----------------------
 
-Maps you make can be layout and exported to various formats using the advanced
-capabilities of the :ref:`print layout or report <label_printlayout>`.
-It's also possible to directly export the current rendering, without a layout.
+Maps you make can be layout and exported to various formats using the
+advanced capabilities of the
+:ref:`print layout or report <label_printlayout>`.
+It's also possible to directly export the current rendering, without
+a layout.
 This quick "screenshot" of the map view has some convenient features.
 
 To export the map canvas with the current rendering:
@@ -1524,30 +1566,32 @@ In the dialog that opens:
 
    The Save Map as Image dialog
 
-#. Choose the :guilabel:`Extent` to export: it can be the current view extent
-   (the default), the extent of a layer or a custom extent drawn over the map
-   canvas. Coordinates of the selected area are displayed and manually editable.
+#. Choose the :guilabel:`Extent` to export: it can be the current
+   view extent (the default), the extent of a layer or a custom extent
+   drawn over the map canvas.
+   Coordinates of the selected area are displayed and manually editable.
 #. Enter the :guilabel:`Scale` of the map or select it from the
-   :ref:`predefined scales <predefinedscales>`: changing the scale will resize
-   the extent to export (from the center).
+   :ref:`predefined scales <predefinedscales>`: changing the scale will
+   resize the extent to export (from the center).
 #. Set the :guilabel:`Resolution` of the output
-#. Control the :guilabel:`Output width` and :guilabel:`Output height` in pixels
-   of the image: based by default on the current resolution and extent,
-   they can be customized and will resize the map extent (from the center).
-   The size ratio can be locked, which may be particularly convenient when
-   drawing the extent on the canvas.
-#. |checkbox| :guilabel:`Draw active decorations`: in use :ref:`decorations
-   <decorations>` (scale bar, title, grid, north arrow...) are exported
-   with the map
+#. Control the :guilabel:`Output width` and :guilabel:`Output height`
+   in pixels of the image: based by default on the current resolution
+   and extent, they can be customized and will resize the map extent
+   (from the center).
+   The size ratio can be locked, which may be particularly convenient
+   when drawing the extent on the canvas.
+#. |checkbox| :guilabel:`Draw active decorations`: in use
+   :ref:`decorations <decorations>` (scale bar, title, grid, north
+   arrow...) are exported with the map
 #. |checkbox| :guilabel:`Draw annotations` to export any :ref:`annotation
    <sec_annotations>`
-#. |checkbox| :guilabel:`Append georeference information (embedded or via world
-   file)`: depending on the output format, a world file of the same name
-   (with extension ``PNGW`` for ``PNG`` image, ``JPGW`` for ``JPG`` ones...)
-   is saved in the same folder as your image. The ``PDF`` format embeds the
-   information in the same file.
-#. When exporting to PDF, more options are available in the :guilabel:`Save
-   map as PDF...` dialog:
+#. |checkbox| :guilabel:`Append georeference information (embedded or
+   via world file)`: depending on the output format, a world file of
+   the same name (with extension ``PNGW`` for ``PNG`` images, ``JPGW``
+   for ``JPG``, ...) is saved in the same folder as your image.
+   The ``PDF`` format embeds the information in the PDF file.
+#. When exporting to PDF, more options are available in the
+   :guilabel:`Save map as PDF...` dialog:
 
    .. _figure_savemappdf:
 
@@ -1556,16 +1600,19 @@ In the dialog that opens:
 
       The Save Map as PDF dialog
 
-   * |checkbox| :guilabel:`Export RDF metadata` of the document such as the
-     title, author, date, description...
-   * |unchecked| :guilabel:`Create Geospatial PDF (GeoPDF)` |310|: Generate a
+   * |checkbox| :guilabel:`Export RDF metadata` of the document such
+     as the title, author, date, description...
+   * |unchecked| :guilabel:`Create Geospatial PDF (GeoPDF)` |310|:
+     Generate a
      `georeferenced PDF file <https://gdal.org/drivers/raster/pdf.html>`_
-     (requires GDAL version 3 or later). You can:
+     (requires GDAL version 3 or later).
+     You can:
 
      * Choose the GeoPDF :guilabel:`Format`
-     * |checkbox| :guilabel:`Include vector feature information` in the GeoPDF
-       file: will include all the geometry and attribute information from
-       features visible within the map in the output GeoPDF file.
+     * |checkbox| :guilabel:`Include vector feature information` in the
+       GeoPDF file: will include all the geometry and attribute
+       information from features visible within the map in the output
+       GeoPDF file.
 
      .. note::
 
@@ -1574,27 +1621,31 @@ In the dialog that opens:
        https://north-road.com/2019/09/03/qgis-3-10-loves-geopdf/.
 
    * :guilabel:`Rasterize map`
-   * |checkbox| :guilabel:`Simplify geometries to reduce output file size`:
+   * |checkbox| :guilabel:`Simplify geometries to reduce output file
+     size`:
      Geometries will be simplified while exporting the map by removing
-     vertices that are not discernably different at the export resolution
-     (e.g. if the export resolution is ``300 dpi``, vertices that are less
-     than ``1/600 inch`` apart will be removed).
-     This can reduce the size and complexity of the export file (very large
-     files can fail to load in other applications).
-   * Set the :guilabel:`Text export`: controls whether text labels are exported
-     as proper text objects (:guilabel:`Always export texts as text
-     objects`) or as paths only (:guilabel:`Always export texts as paths`).
-     If they are exported as text objects then they can be edited in external
-     applications (e.g. Inkscape) as normal text. BUT the side effect is that
-     the rendering quality is decreased, AND there are issues with rendering when
-     certain text settings like buffers are in place. That’s why exporting as
-     paths is recommended.
+     vertices that are not discernably different at the export
+     resolution (e.g. if the export resolution is ``300 dpi``, vertices
+     that are less than ``1/600 inch`` apart will be removed).
+     This can reduce the size and complexity of the export file (very
+     large files can fail to load in other applications).
+   * Set the :guilabel:`Text export`: controls whether text labels are
+     exported as proper text objects (:guilabel:`Always export texts
+     as text objects`) or as paths only (:guilabel:`Always export texts
+     as paths`).
+     If they are exported as text objects then they can be edited in
+     external applications (e.g. Inkscape) as normal text.
+     BUT the side effect is that the rendering quality is decreased,
+     AND there are issues with rendering when certain text settings
+     like buffers are in place.
+     That’s why exporting as paths is recommended.
 
 #. Click :guilabel:`Save` to select file location, name and format.
 
-   When exporting to image, it's also possible to :guilabel:`Copy to clipboard`
-   the expected result of the above settings and paste the map in another
-   application such as LibreOffice, GIMP...
+   When exporting to image, it's also possible to
+   :guilabel:`Copy to clipboard` the expected result of the above
+   settings and paste the map in another application such as
+   LibreOffice, GIMP...
 
 
 .. index:: 3D Map view
@@ -1606,14 +1657,15 @@ In the dialog that opens:
 3D visualization support is offered through the 3D map view.
 
 .. note::
-   3D visualization in QGIS requires a recent version of the
-   QT library (5.8 or later).
+   3D visualization in QGIS requires a recent version of the QT
+   library (5.8 or later).
 
-You create and open a 3D map view via :menuselection:`View -->` |new3DMap| :menuselection:`New 3D Map
-View`.
+You create and open a 3D map view via :menuselection:`View -->`
+|new3DMap| :menuselection:`New 3D Map View`.
 A floating QGIS panel will appear. The panel can be docked.
 
-To begin with, the 3D map view has the same extent and view as the 2D canvas.
+To begin with, the 3D map view has the same extent and view as the
+2D canvas.
 There is no dedicated toolbar for navigation in the 3D canvas.
 You zoom in/out and pan in the same way as in the main 2D canvas.
 You can also zoom in and out by dragging the mouse down/up with the
@@ -1623,8 +1675,8 @@ Navigation options for exploring the map in 3D:
 
 * Tilt and rotate
 
-  * To tilt the terrain (rotating it around a horizontal axis that goes
-    through the center of the window):
+  * To tilt the terrain (rotating it around a horizontal axis that
+    goes through the center of the window):
 
     * Drag the mouse forward/backward with the middle mouse button
       pressed
@@ -1632,8 +1684,8 @@ Navigation options for exploring the map in 3D:
       with the left mouse button pressed
     * Press :kbd:`Shift` and use the up/down keys
 
-  * To rotate the terrain (around a vertical axis that goes through the
-    center of the window):
+  * To rotate the terrain (around a vertical axis that goes through
+    the center of the window):
 
     * Drag the mouse right/left with the middle mouse button
       pressed
@@ -1687,46 +1739,51 @@ the 3D canvas panel to open the :guilabel:`3D configuration` window.
 In the 3D Configuration window there are various options to
 fine-tune the 3D scene:
 
-* Camera's :guilabel:`Field of view`: allowing to create panoramic scenes.
+* Camera's :guilabel:`Field of view`: allowing to create panoramic
+  scenes.
   Default value is 45\°.
-* :guilabel:`Terrain`: Before diving into the details, it is worth noting that
-  terrain in a 3D view is represented by a hierarchy of terrain tiles and as
-  the camera moves closer to the terrain, existing tiles that do not have
-  sufficient details are replaced by smaller tiles with more details.
-  Each tile has mesh geometry derived from the elevation raster layer and
-  texture from 2D map layers.
+* :guilabel:`Terrain`: Before diving into the details, it is worth
+  noting that terrain in a 3D view is represented by a hierarchy of
+  terrain tiles and as the camera moves closer to the terrain,
+  existing tiles that do not have sufficient details are replaced by
+  smaller tiles with more details.
+  Each tile has mesh geometry derived from the elevation raster layer
+  and texture from 2D map layers.
 
-  * :guilabel:`Type`: It can be :guilabel:`Flat terrain`, :guilabel:`DEM
-    (Raster Layer)` or :guilabel:`Online`.
-  * :guilabel:`Elevation`: Raster layer to be used for generation of the
-    terrain. This layer must contain a band that represents elevation.
+  * :guilabel:`Type`: It can be :guilabel:`Flat terrain`,
+    :guilabel:`DEM (Raster Layer)` or :guilabel:`Online`.
+  * :guilabel:`Elevation`: Raster layer to be used for generation of
+    the terrain.
+    This layer must contain a band that represents elevation.
   * :guilabel:`Vertical scale`: Scale factor for vertical axis.
     Increasing the scale will exaggerate the height of the landforms.
-  * :guilabel:`Tile resolution`: How many samples from the terrain raster layer
-    to use for each tile.
-    A value of 16px means that the geometry of each tile will consist of
-    16x16 elevation samples.
+  * :guilabel:`Tile resolution`: How many samples from the terrain
+    raster layer to use for each tile.
+    A value of 16px means that the geometry of each tile will consist
+    of 16x16 elevation samples.
     Higher numbers create more detailed terrain tiles at the expense of
     increased rendering complexity.
-  * :guilabel:`Skirt height`: Sometimes it is possible to see small cracks
-    between tiles of the terrain.
+  * :guilabel:`Skirt height`: Sometimes it is possible to see small
+    cracks between tiles of the terrain.
     Raising this value will add vertical walls ("skirts") around terrain
     tiles to hide the cracks.
-  * :guilabel:`Map theme`: Allows you to select the set of layers to display
-    in the map view from predefined :ref:`map themes <map_themes>`
+  * :guilabel:`Map theme`: Allows you to select the set of layers to
+    display in the map view from predefined
+    :ref:`map themes <map_themes>`.
 
-* |unchecked| :guilabel:`Terrain shading`: Allows you to choose how the terrain
-  should be rendered:
+* |unchecked| :guilabel:`Terrain shading`: Allows you to choose how the
+  terrain should be rendered:
 
   * Shading disabled - terrain color is determined only from map texture
   * Shading enabled - terrain color is determined using Phong's shading
-    model, taking into account map texture, the terrain normal vector, scene
-    light(s) and the terrain material's :guilabel:`Ambient` and :guilabel:`Specular`
-    colors and :guilabel:`Shininess`
+    model, taking into account map texture, the terrain normal vector,
+    scene light(s) and the terrain material's :guilabel:`Ambient` and
+    :guilabel:`Specular` colors and :guilabel:`Shininess`
 
-* :guilabel:`Lights`: You can add up to eight point lights, each with a particular
-  position (in :guilabel:`X`, :guilabel:`Y` and :guilabel:`Z`),
-  :guilabel:`Color`, :guilabel:`Intensity` and :guilabel:`Attenuation`.
+* :guilabel:`Lights`: You can add up to eight point lights, each with a
+  particular position (in :guilabel:`X`, :guilabel:`Y` and
+  :guilabel:`Z`), :guilabel:`Color`, :guilabel:`Intensity` and
+  :guilabel:`Attenuation`.
 
   .. _figure_3dmap_configlights:
 
@@ -1736,29 +1793,30 @@ fine-tune the 3D scene:
      The 3D Map Lights Configuration dialog
 
 
-* :guilabel:`Map tile resolution`: Width and height of the 2D map images used
-  as textures for the terrain tiles.
+* :guilabel:`Map tile resolution`: Width and height of the 2D map
+  images used as textures for the terrain tiles.
   256px means that each tile will be rendered into an image of
   256x256 pixels.
   Higher numbers create more detailed terrain tiles at the expense of
   increased rendering complexity.
-* :guilabel:`Max. screen error`: Determines the threshold for swapping terrain
-  tiles with more detailed ones (and vice versa) - i.e. how soon the
-  3D view will use higher quality tiles.
+* :guilabel:`Max. screen error`: Determines the threshold for swapping
+  terrain tiles with more detailed ones (and vice versa) - i.e. how
+  soon the 3D view will use higher quality tiles.
   Lower numbers mean more details in the scene at the expense of
   increased rendering complexity.
-* :guilabel:`Max. ground error`: The resolution of the terrain tiles at which
-  dividing tiles into more detailed ones will stop (splitting them
-  would not introduce any extra detail anyway).
+* :guilabel:`Max. ground error`: The resolution of the terrain tiles at
+  which dividing tiles into more detailed ones will stop (splitting
+  them would not introduce any extra detail anyway).
   This value limits the depth of the hierarchy of tiles: lower values 
   make the hierarchy deep, increasing rendering complexity.
-* :guilabel:`Zoom labels`: Shows the number of zoom levels (depends on the
-  map tile resolution and max. ground error).
+* :guilabel:`Zoom labels`: Shows the number of zoom levels (depends on
+  the map tile resolution and max. ground error).
 * |unchecked| :guilabel:`Show labels`: Toggles map labels on/off
-* |unchecked| :guilabel:`Show map tile info`: Include border and tile numbers
-  for the terrain tiles (useful for troubleshooting terrain issues)
-* |unchecked| :guilabel:`Show bounding boxes`: Show 3D bounding boxes of the
-  terrain tiles (useful for troubleshooting terrain issues)
+* |unchecked| :guilabel:`Show map tile info`: Include border and tile
+  numbers for the terrain tiles (useful for troubleshooting terrain
+  issues)
+* |unchecked| :guilabel:`Show bounding boxes`: Show 3D bounding boxes
+  of the terrain tiles (useful for troubleshooting terrain issues)
 * |unchecked| :guilabel:`Show camera's view center`
 
 3D vector layers
@@ -1775,70 +1833,82 @@ the 3D vector layer.
 Status Bar
 ==========
 
-The status bar provides you with general information about the map view
-and processed or available actions, and offers you tools to manage the map view.
+The status bar provides you with general information about the map
+view and processed or available actions, and offers you tools to
+manage the map view.
 
 .. _`locator_bar`:
 
-On the left side of the status bar, the locator bar, a quick search widget,
-helps you find and run any feature or options in QGIS. Simply type text
-associated with the item you are looking for (name, tag, keyword...) and you get
-a list that updates as you write. You can also limit the search scope using
-:ref:`locator filters <locator_options>`. Click the |search| button to
-select any of them and press the :guilabel:`Configure` entry for global settings.
+On the left side of the status bar, the locator bar, a quick search
+widget, helps you find and run any feature or options in QGIS.
+Simply type text associated with the item you are looking for (name,
+tag, keyword...) and you get a list that updates as you write.
+You can also limit the search scope using
+:ref:`locator filters <locator_options>`.
+Click the |search| button to select any of them and press the
+:guilabel:`Configure` entry for global settings.
 
-In the area next to the locator bar, a summary of actions you've carried out will
-be shown when needed  (such as selecting features in a layer, removing layer) or
-a long description of the tool you are hovering over (not available for all tools).
+In the area next to the locator bar, a summary of actions you've
+carried out will be shown when needed  (such as selecting features in
+a layer, removing layer) or a long description of the tool you are
+hovering over (not available for all tools).
 
-In case of lengthy operations, such as gathering of statistics in raster layers,
-executing Processing algorithms or rendering several layers in the map view, a
-progress bar is displayed in the status bar.
+In case of lengthy operations, such as gathering of statistics in
+raster layers, executing Processing algorithms or rendering several
+layers in the map view, a progress bar is displayed in the status bar.
 
-The |tracking| :guilabel:`Coordinate` option shows the current position of the mouse,
-following it while moving across the map view. You can set the units (and precision)
-in the :menuselection:`Project --> Properties... --> General` tab.
+The |tracking| :guilabel:`Coordinate` option shows the current
+position of the mouse, following it while moving across the map view.
+You can set the units (and precision) in the
+:menuselection:`Project --> Properties... --> General` tab.
 Click on the small button at the left of the textbox to toggle between
-the Coordinate option and the |extents| :guilabel:`Extents` option that displays
-the coordinates of the current bottom-left and top-right
+the Coordinate option and the |extents| :guilabel:`Extents` option
+that displays the coordinates of the current bottom-left and top-right
 corners of the map view in map units.
 
-Next to the coordinate display you will find the :guilabel:`Scale` display.
-It shows the scale of the map view. There is a scale selector, which allows you to
-choose between :ref:`predefined and custom scales <predefinedscales>`.
+Next to the coordinate display you will find the :guilabel:`Scale`
+display.
+It shows the scale of the map view. There is a scale selector, which
+allows you to choose between
+:ref:`predefined and custom scales <predefinedscales>`.
 
 .. index:: Magnification
 .. _magnifier:
 
-On the right side of the scale display, press the |lockedGray| button to lock
-the scale to use the magnifier to zoom in or out. The magnifier allows you to zoom
-in to a map without altering the map scale, making it easier to tweak the
-positions of labels and symbols accurately. The magnification level is expressed as a
-percentage. If the :guilabel:`Magnifier` has a level of 100%, then the current
-map is not magnified. Additionally, a default magnification value can be defined
-within :menuselection:`Settings --> Options --> Rendering --> Rendering behavior`,
-which is very useful for high-resolution screens to enlarge small symbols.
+On the right side of the scale display, press the |lockedGray| button
+to lock the scale to use the magnifier to zoom in or out.
+The magnifier allows you to zoom in to a map without altering the map
+scale, making it easier to tweak the positions of labels and symbols
+accurately.
+The magnification level is expressed as a percentage.
+If the :guilabel:`Magnifier` has a level of 100%, then the current map
+is not magnified.
+Additionally, a default magnification value can be defined within
+:menuselection:`Settings --> Options --> Rendering --> Rendering behavior`,
+which is very useful for high-resolution screens to enlarge small
+symbols.
 
-To the right of the magnifier tool you can define a current clockwise rotation for
-your map view in degrees.
+To the right of the magnifier tool you can define a current clockwise
+rotation for your map view in degrees.
 
-On the right side of the status bar, there is a small
-checkbox which can be used temporarily to prevent layers being rendered to the
-map view (see section :ref:`redraw_events`).
+On the right side of the status bar, there is a small checkbox which
+can be used temporarily to prevent layers being rendered to the map
+view (see section :ref:`redraw_events`).
 
 To the right of the render functions, you find the |projectionEnabled|
-:guilabel:`EPSG:code` button showing the current project CRS. Clicking on
-this opens the :guilabel:`Project Properties` dialog and lets you apply another
-CRS to the map view.
+:guilabel:`EPSG:code` button showing the current project CRS. Clicking
+on this opens the :guilabel:`Project Properties` dialog and lets you
+apply another CRS to the map view.
 
-The |messageLog| :sup:`Messages` button next to it opens the :guilabel:`Log
-Messages Panel` which has information on underlying processes (QGIS startup, plugins
-loading, processing tools...)
+The |messageLog| :sup:`Messages` button next to it opens the
+:guilabel:`Log Messages Panel` which has information on underlying
+processes (QGIS startup, plugins loading, processing tools...)
 
-Depending on the :ref:`Plugin Manager settings <setting_plugins>`, the status
-bar can sometimes show icons to the right to inform you about availability
-of |pluginNew| new or |pluginUpgrade| upgradeable plugins. Click the icon to
-open the Plugin Manager dialog.
+Depending on the :ref:`Plugin Manager settings <setting_plugins>`,
+the status bar can sometimes show icons to the right to inform you
+about availability of |pluginNew| new or |pluginUpgrade| upgradeable
+plugins.
+Click the icon to open the Plugin Manager dialog.
 
 .. index::
    single: Scale calculate
@@ -1848,13 +1918,16 @@ open the Plugin Manager dialog.
 
    When you start QGIS, the default CRS is ``WGS 84 (EPSG 4326)`` and
    units are degrees. This means that QGIS will interpret any
-   coordinate in your layer as specified in degrees. To get correct scale values,
-   you can either manually change this setting in the :guilabel:`General`
-   tab under :menuselection:`Project --> Properties...` (e.g. to meters), or you can use
-   the |projectionEnabled| :sup:`EPSG:code` icon seen above. In the latter case,
-   the units are set to what the project projection specifies (e.g., ``+units=us-ft``).
+   coordinate in your layer as specified in degrees.
+   To get correct scale values, you can either manually change this
+   setting in the :guilabel:`General` tab under
+   :menuselection:`Project --> Properties...` (e.g. to meters), or you
+   can use the |projectionEnabled| :sup:`EPSG:code` icon seen above.
+   In the latter case, the units are set to what the project projection
+   specifies (e.g., ``+units=us-ft``).
 
-   Note that CRS choice on startup can be set in :menuselection:`Settings --> Options --> CRS`.
+   Note that CRS choice on startup can be set in
+   :menuselection:`Settings --> Options --> CRS`.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
