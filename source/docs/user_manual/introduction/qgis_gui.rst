@@ -203,10 +203,9 @@ Edit
 The :menuselection:`Edit` menu provides most of the native tools needed to edit
 layer attributes or geometry (see :ref:`editingvector` for details).
 
-
 .. list-table::
    :header-rows: 1
-   :widths: 30 18 12 35
+   :widths: 40 15 15 30
    :stub-columns: 0
 
    * - Menu Option
@@ -238,20 +237,41 @@ layer attributes or geometry (see :ref:`editingvector` for details).
        * :guilabel:`New Vector Layer...`
        * :guilabel:`Temporary Scratch Layer...`
 
+     - :kbd:`Ctrl+Alt+V`
+     -
+     - :ref:`sec_attribute_table`
+   * - :menuselection:`Select -->`
+
+       * :guilabel:`Select Feature(s)`
+       * :guilabel:`Select Features by Polygon`
+       * :guilabel:`Select Features by Freehand`
+       * :guilabel:`Select Features by Radius`
+       * :guilabel:`Select Features by Value...`
+       * :guilabel:`Select Features by Expression...`
+       * :guilabel:`Deselect Features from All Layers`
+       * :guilabel:`Reselect Features`
+       * :guilabel:`Select All Features`
+       * :guilabel:`Ivert Feature Selection`
+
      - .
 
        * 
-       * Ctrl+Alt+V
+       * 
+       * 
+       * 
+       * :kbd:`F3`
+       * :kbd:`Ctrl+F3`
+       * :kbd:`Ctrl+Shift+A`
+       * 
+       * :kbd:`Ctrl+A`
+       * 
 
-     - 
-     - :ref:`sec_attribute_table`
-   * - :menuselection:`Select -->`
-     - 
      - :guilabel:`Attributes`
      - :ref:`sec_selection`
    * - |newTableRow| :guilabel:`Add Record`
      - :kbd:`Ctrl+.`
      - :guilabel:`Digitizing`
+     - 
    * - |capturePoint| :guilabel:`Add Point Feature`
      - :kbd:`Ctrl+.`
      - :guilabel:`Digitizing`
@@ -273,17 +293,47 @@ layer attributes or geometry (see :ref:`editingvector` for details).
      - :guilabel:`Shape Digitizing`
      - :ref:`add_circular_string`
    * - :menuselection:`Add Circle -->`
+
+       * :guilabel:`Add Circle from 2 Points`
+       * :guilabel:`Add Circle from 3 Points`
+       * :guilabel:`Add Circle from 3 Tangents`
+       * :guilabel:`Add Circle from 2 Tangents and a Point`
+       * :guilabel:`Add Circle by a Center Point and Another Point`
+
      - 
      - :guilabel:`Shape Digitizing`
+     - 
    * - :menuselection:`Add Rectangle -->`
+
+       * :guilabel:`Add Rectangle from Extent`
+       * :guilabel:`Add Rectangle from Center and a Point`
+       * :guilabel:`Add Rectangle from 3 Points (Distance from 2nd
+         and 3rd point)`
+       * :guilabel:`Add Rectangle from 3 Points (Distance from
+         projected point on segment p1 and p2)`
+
      - 
      - :guilabel:`Shape Digitizing`
+     - 
    * - :menuselection:`Add Regular Polygon -->`
+
+       * :guilabel:`Add Regular Polygon from Center and a Point`
+       * :guilabel:`Add Regular Polygon from Center and a Corner`
+       * :guilabel:`Add Regular Polygon from 2 Points`
+
      - 
      - :guilabel:`Shape Digitizing`
+     - 
    * - :menuselection:`Add Ellipse -->`
+
+       * :guilabel:`Add Ellipse from Center and 2 Points`
+       * :guilabel:`Add Ellipse from Center and a Point`
+       * :guilabel:`Add Ellipse from Extent`
+       * :guilabel:`Add Ellipse from Foci`
+
      - 
      - :guilabel:`Shape Digitizing`
+     - 
    * - |moveFeature| :guilabel:`Move Feature(s)`
      - 
      - :guilabel:`Advanced Digitizing`
@@ -371,10 +421,11 @@ layer attributes or geometry (see :ref:`editingvector` for details).
    * - |reverseLine| :guilabel:`Reverse Line`
      - 
      - :guilabel:`Advanced Digitizing`
-   * - |trimExtend| :guilabel:`Trim/extend Line`
+     - 
+   * - |trimExtend| :guilabel:`Trim/extend Feature`
      - 
      - :guilabel:`Advanced Digitizing`
-     - :ref:`trim_extend_feature`    
+     - :ref:`trim_extend_feature`
 
 .. only:: html
 
@@ -417,67 +468,234 @@ The menu also allows you to reorganize the QGIS interface itself using actions l
   and only shows the map canvas. Combined with the full screen option, it makes
   your screen display only the map
 
-.. csv-table::
-   :header: "Menu Option", "Shortcut", "Toolbar", "Reference"
-   :widths: auto
-   :class: longtable
 
-   "|newMap| :guilabel:`New Map View`", ":kbd:`Ctrl+M`", ":guilabel:`Map Navigation`"
-   "|new3DMap| :guilabel:`New 3D Map View`", ":kbd:`Ctrl+Alt+M`", "", ":ref:`label_3dmapview`"
-   "|pan| :guilabel:`Pan Map`", "", ":guilabel:`Map Navigation`", ":ref:`zoom_pan`"
-   "|panToSelected| :guilabel:`Pan Map to Selection`", "", ":guilabel:`Map Navigation`"
-   "|zoomIn| :guilabel:`Zoom In`", ":kbd:`Ctrl+Alt++`", ":guilabel:`Map Navigation`", ":ref:`zoom_pan`"
-   "|zoomOut| :guilabel:`Zoom Out`", ":kbd:`Ctrl+Alt+-`", ":guilabel:`Map Navigation`", ":ref:`zoom_pan`"
-   "|identify| :guilabel:`Identify Features`", ":kbd:`Ctrl+Shift+I`", ":guilabel:`Attributes`", ":ref:`identify`"
-   ":menuselection:`Measure -->`", "", ":guilabel:`Attributes`", ":ref:`sec_measure`"
-   "|sum| :guilabel:`Statistical Summary`", "", ":guilabel:`Attributes`", ":ref:`statistical_summary`"
-   "|zoomFullExtent| :guilabel:`Zoom Full`", ":kbd:`Ctrl+Shift+F`", ":guilabel:`Map Navigation`"
-   "|zoomToLayer| :guilabel:`Zoom To Layer`", "", ":guilabel:`Map Navigation`"
-   "|zoomToSelected| :guilabel:`Zoom To Selection`", ":kbd:`Ctrl+J`", ":guilabel:`Map Navigation`"
-   "|zoomActual| :guilabel:`Zoom To Native Resolution (100%)`", "", ":guilabel:`Map Navigation`"
-   "|zoomLast| :guilabel:`Zoom Last`", "", ":guilabel:`Map Navigation`"
-   "|zoomNext| :guilabel:`Zoom Next`", "", ":guilabel:`Map Navigation`"
-   ":menuselection:`Decorations -->`", "", "", ":ref:`decorations`"
-   ":menuselection:`Preview mode -->`"
-   "|mapTips| :guilabel:`Show Map Tips`", "", ":guilabel:`Attributes`", ":ref:`maptips`"
-   "|newBookmark| :guilabel:`New Spatial Bookmark...`", ":kbd:`Ctrl+B`", ":guilabel:`Map Navigation`", ":ref:`sec_bookmarks`"
-   "|showBookmarks| :guilabel:`Show Spatial Bookmarks`", ":kbd:`Ctrl+Shift+B`", ":guilabel:`Map Navigation`", ":ref:`sec_bookmarks`"
-   "|showBookmarks| :guilabel:`Show Spatial Bookmark Manager`", "", "", ""
-   "|draw| :guilabel:`Refresh`", ":kbd:`F5`", ":guilabel:`Map Navigation`"
-   "|showAllLayers| :guilabel:`Show All Layers`", ":kbd:`Ctrl+Shift+U`", "", ":ref:`label_legend`"
-   "|hideAllLayers| :guilabel:`Hide All Layers`", ":kbd:`Ctrl+Shift+H`", "", ":ref:`label_legend`"
-   "|showSelectedLayers| :guilabel:`Show Selected Layers`", "", "", ":ref:`label_legend`"
-   "|hideSelectedLayers| :guilabel:`Hide Selected Layers`", "", "", ":ref:`label_legend`"
-   "|hideDeselectedLayers| :guilabel:`Hide Deselected Layers`", "", "", ":ref:`label_legend`"
-   ":menuselection:`Panels -->`", "", "", ":ref:`sec_panels_and_toolbars`"
-   ":menuselection:`Toolbars -->`", "", "", ":ref:`sec_panels_and_toolbars`"
-   ":guilabel:`Toggle Full Screen Mode`", ":kbd:`F11`"
-   ":guilabel:`Toggle Panel Visibility`", ":kbd:`Ctrl+Tab`"
-   ":guilabel:`Toggle Map Only`", ":kbd:`Ctrl+Shift+Tab`"
+.. list-table::
+   :header-rows: 1
+   :widths: 30 18 12 35
+   :stub-columns: 0
+
+   * - Menu Option
+     - Shortcut
+     - Toolbar
+     - Reference
+   * - |newMap| :guilabel:`New Map View`
+     - :kbd:`Ctrl+M`
+     -
+     - :guilabel:`Map Navigation`
+   * - |new3DMap| :guilabel:`New 3D Map View`
+     - :kbd:`Ctrl+Alt+M`
+     - 
+     - :ref:`label_3dmapview`
+   * - |pan| :guilabel:`Pan Map`
+     - 
+     - :guilabel:`Map Navigation`
+     - :ref:`zoom_pan`
+   * - |panToSelected| :guilabel:`Pan Map to Selection`
+     - 
+     - :guilabel:`Map Navigation`
+     -
+   * - |zoomIn| :guilabel:`Zoom In`
+     - :kbd:`Ctrl+Alt++`
+     - :guilabel:`Map Navigation`
+     - :ref:`zoom_pan`
+   * - |zoomOut| :guilabel:`Zoom Out`
+     - :kbd:`Ctrl+Alt+-`
+     - :guilabel:`Map Navigation`
+     - :ref:`zoom_pan`
+   * - |identify| :guilabel:`Identify Features`
+     - :kbd:`Ctrl+Shift+I`
+     - :guilabel:`Attributes`
+     - :ref:`identify`
+   * - :menuselection:`Measure -->`
+
+       * :guilabel:`Measure Line`
+       * :guilabel:`Measure Area`
+       * :guilabel:`Measure Angle`
+
+     - .
+
+       * :kbd:`Ctrl+Shift+M`
+       * :kbd:`Ctrl+Shift+J`
+       * 
+
+     - :guilabel:`Attributes`
+     - :ref:`sec_measure`
+   * - |sum| :guilabel:`Statistical Summary`
+     - 
+     - :guilabel:`Attributes`
+     - :ref:`statistical_summary`
+   * - |zoomFullExtent| :guilabel:`Zoom Full`
+     - :kbd:`Ctrl+Shift+F`
+     - :guilabel:`Map Navigation`
+     -
+   * - |zoomToSelected| :guilabel:`Zoom To Selection`
+     - :kbd:`Ctrl+J`
+     - :guilabel:`Map Navigation`
+     -
+   * - |zoomToLayer| :guilabel:`Zoom To Layer`
+     - 
+     - :guilabel:`Map Navigation`
+     -
+   * - |zoomActual| :guilabel:`Zoom To Native Resolution (100%)`
+     - 
+     - :guilabel:`Map Navigation`
+     -
+   * - |zoomLast| :guilabel:`Zoom Last`
+     - 
+     - :guilabel:`Map Navigation`
+     -
+   * - |zoomNext| :guilabel:`Zoom Next`
+     - 
+     - :guilabel:`Map Navigation`
+     -
+   * - :menuselection:`Decorations -->`
+
+       * :guilabel:`Grid...`
+       * :guilabel:`Scale Bar...`
+       * :guilabel:`Image...`
+       * :guilabel:`North Arrow...`
+       * :guilabel:`Title Label...`
+       * :guilabel:`Copyright Label...`
+       * :guilabel:`Layout Extents...`
+
+     - 
+     - 
+     - :ref:`decorations`
+   * - :menuselection:`Preview mode -->`
+
+       * :guilabel:`Normal`
+       * :guilabel:`Simulate Photocopy (Grayscale)`
+       * :guilabel:`Simulate Fax (Mono)`
+       * :guilabel:`Simulate Color Blindness (Protanope)`
+       * :guilabel:`Simulate Color Blindness (Deuteronope)`
+
+     -
+     -
+     -
+   * - |mapTips| :guilabel:`Show Map Tips`
+     - 
+     - :guilabel:`Attributes`
+     - :ref:`maptips`
+   * - |newBookmark| :guilabel:`New Spatial Bookmark...`
+     - :kbd:`Ctrl+B`
+     - :guilabel:`Map Navigation`
+     - :ref:`sec_bookmarks`
+   * - |showBookmarks| :guilabel:`Show Spatial Bookmarks`
+     - :kbd:`Ctrl+Shift+B`
+     - :guilabel:`Map Navigation`
+     - :ref:`sec_bookmarks`
+   * - |showBookmarks| :guilabel:`Show Spatial Bookmark Manager`
+     - 
+     - 
+     - 
+   * - |draw| :guilabel:`Refresh`
+     - :kbd:`F5`
+     - :guilabel:`Map Navigation`
+     -
+   * - |showAllLayers| :guilabel:`Show All Layers`
+     - :kbd:`Ctrl+Shift+U`
+     - 
+     - :ref:`label_legend`
+   * - |hideAllLayers| :guilabel:`Hide All Layers`
+     - :kbd:`Ctrl+Shift+H`
+     - 
+     - :ref:`label_legend`
+   * - |showSelectedLayers| :guilabel:`Show Selected Layers`
+     - 
+     - 
+     - :ref:`label_legend`
+   * - |hideSelectedLayers| :guilabel:`Hide Selected Layers`
+     - 
+     - 
+     - :ref:`label_legend`
+   * - |hideDeselectedLayers| :guilabel:`Hide Deselected Layers`
+     - 
+     - 
+     - :ref:`label_legend`
+   * - :menuselection:`Panels -->`
+
+       * :guilabel:`Advanced Digitizing`
+       * :guilabel:`Browser`
+       * :guilabel:`Browser (2)`
+       * :guilabel:`GPS Information`
+       * :guilabel:`GRASS Tools`
+       * :guilabel:`Layer Order`
+       * :guilabel:`Layer Styling`
+       * :guilabel:`Layers`
+       * :guilabel:`Log Messages`
+       * :guilabel:`Overview`
+       * :guilabel:`Processing Toolbox`
+       * :guilabel:`Results Viewer`
+       * :guilabel:`Spatial Bookmars Manager`
+       * :guilabel:`Statistics`
+       * :guilabel:`Tile Scale`
+       * :guilabel:`Undo/Redo`
+
+     - 
+     - 
+     - :ref:`sec_panels_and_toolbars`
+   * - :menuselection:`Toolbars -->`
+
+       * :guilabel:`Advanced Digitizing Toolbar`
+       * :guilabel:`Attribues Toolbar`
+       * :guilabel:`Data Source Manager Toolbar`
+       * :guilabel:`Database Toolbar`
+       * :guilabel:`Digitizing Toolbar`
+       * :guilabel:`Help Toolbar`
+       * :guilabel:`Label Toolbar`
+       * :guilabel:`Manage Layers Toolbar`
+       * :guilabel:`Map Navigation Toolbar`
+       * :guilabel:`Plugins Toolbar`
+       * :guilabel:`Project Toolbar`
+       * :guilabel:`Raster Toolbar`
+       * :guilabel:`Shape Digitizing Toolbar`
+       * :guilabel:`Snapping Toolbar`
+       * :guilabel:`Vector Toolbar`
+       * :guilabel:`Web Toolbar`
+       * :guilabel:`GRASS`
+       * :guilabel:`QgsResourceSharing`
+
+     - 
+     - 
+     - :ref:`sec_panels_and_toolbars`
+   * - :guilabel:`Toggle Full Screen Mode`
+     - :kbd:`F11`
+     -
+     -
+   * - :guilabel:`Toggle Panel Visibility`
+     - :kbd:`Ctrl+Tab`
+     -
+     -
+   * - :guilabel:`Toggle Map Only`
+     - :kbd:`Ctrl+Shift+Tab`"
+     -
+     -
 
 .. only:: html
 
    |
 
-Under |kde| Linux KDE, :menuselection:`Panels -->`, :menuselection:`Toolbars -->`
-and :guilabel:`Toggle Full Screen Mode` are in the :menuselection:`Settings`
-menu.
+Under |kde| Linux KDE, :menuselection:`Panels -->`,
+:menuselection:`Toolbars -->` and :guilabel:`Toggle Full Screen Mode`
+are in the :menuselection:`Settings` menu.
 
 Layer
 -----
 
-The :menuselection:`Layer` menu provides a large set of tools to :ref:`create
-<sec_create_vector>` new data sources, :ref:`add <opening_data>` them to a project
-or :ref:`save modifications <sec_edit_existing_layer>` to them. Using the
-same data sources, you can also:
+The :menuselection:`Layer` menu provides a large set of tools to
+:ref:`create <sec_create_vector>` new data sources,
+:ref:`add <opening_data>` them to a project or
+:ref:`save modifications <sec_edit_existing_layer>` to them.
+Using the same data sources, you can also:
 
-* :guilabel:`Duplicate` a layer, generating a copy you can modify within the
-  same project
-* :guilabel:`Copy` and :guilabel:`Paste` layers or groups from one project to
-  another as a new instance whose features and properties you can modify
-  independently of the original
-* or :guilabel:`Embed Layers and Groups...` from another project, as read-only
-  copies which you cannot modify (see :ref:`nesting_projects`)
+* :guilabel:`Duplicate` a layer, generating a copy you can modify
+  within the same project
+* :guilabel:`Copy` and :guilabel:`Paste` layers or groups from one
+  project to another as a new instance whose features and properties
+  you can modify independently of the original
+* or :guilabel:`Embed Layers and Groups...` from another project, as
+  read-only copies which you cannot modify (see
+  :ref:`nesting_projects`)
   
 The :menuselection:`Layer` menu also contains tools to configure, copy
 or paste layer properties (style, scale, CRS...).
@@ -675,7 +893,6 @@ The :menuselection:`Mesh` menu provides tools needed to manipulate
    "|showMeshCalculator| :menuselection:`Mesh Calculator`"
 
 
-
 Processing
 ----------
 
@@ -698,18 +915,52 @@ When starting QGIS for the first time not all core plugins are loaded.
 Help
 ----
 
-.. csv-table::
-   :header: "Menu Option", "Shortcut", "Toolbar"
-   :widths: auto
+.. list-table::
+   :header-rows: 1
+   :widths: 30 18 12 35
+   :stub-columns: 0
 
-   "|helpContents| :guilabel:`Help Contents`", ":kbd:`F1`", ":guilabel:`Help`"
-   ":guilabel:`API Documentation`"
-   ":guilabel:`Report an Issue`"
-   ":guilabel:`Need commercial support?`"
-   "|qgisHomePage| :guilabel:`QGIS Home Page`", ":kbd:`Ctrl+H`"
-   "|success| :guilabel:`Check QGIS Version`"
-   "|logo| :guilabel:`About`"
-   "|helpSponsors| :guilabel:`QGIS Sponsors`"
+   * - Menu Option
+     - Shortcut
+     - Toolbar
+     - Reference
+   * - |helpContents| :guilabel:`Help Contents`
+     - :kbd:`F1`
+     - :guilabel:`Help`
+     -
+   * - :guilabel:`API Documentation`
+     -
+     -
+     -
+   * - :menuselection:`Plugins -->`
+     -
+     -
+     -
+   * - :guilabel:`Report an Issue`
+     -
+     -
+     -
+   * - :guilabel:`Need commercial support?`
+     -
+     -
+     -
+   * - |qgisHomePage| :guilabel:`QGIS Home Page`
+     - :kbd:`Ctrl+H`
+     -
+     -
+   * - |success| :guilabel:`Check QGIS Version`
+     -
+     -
+     -
+   * - |logo| :guilabel:`About`
+     -
+     -
+     -
+   * - |helpSponsors| :guilabel:`QGIS Sustaining Members`
+     -
+     -
+     -
+
 
 QGIS
 -----
