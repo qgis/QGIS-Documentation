@@ -27,15 +27,10 @@ Turns points (up to billions) via seamless Delaunay triangulation
 implemented using streaming into large elevation, intensity, or RGB
 rasters.
 
-<<<<<<< HEAD
-For more info see the `blast2dem <https://rapidlasso.com/blast2dem>`_ page and 
-its online `README <http://lastools.org/download/blast2dem_README.txt>`__ file.
-=======
 For more info see the
 `blast2dem <https://rapidlasso.com/blast/blast2dem>`_ page and
 its online
 `README <http://lastools.org/download/blast2dem_README.txt>`__ file.
->>>>>>> 08954a36f... Tables for alg params - lastools (#4749)
 
 Parameters
 ..........
@@ -195,15 +190,10 @@ Description
 Turns points (up to billions) via seamless Delaunay triangulation
 implemented using streaming into iso-contour lines.
 
-<<<<<<< HEAD
-For more info see the `blast2iso <https://rapidlasso.com/blast2iso>`_ page and
-its online `README <http://lastools.org/download/blast2iso_README.txt>`__ file.
-=======
 For more info see the
 `blast2iso <https://rapidlasso.com/blast/blast2iso>`_ page and
 its online
 `README <http://lastools.org/download/blast2iso_README.txt>`__ file.
->>>>>>> 08954a36f... Tables for alg params - lastools (#4749)
 
 Parameters
 ..........
@@ -327,15 +317,10 @@ Turns points (up to 20 million) via a temporary Delaunay triangulation
 that is rasterized with a user-defined step size into an elevation,
 intensity, or RGB raster.
 
-<<<<<<< HEAD
-For more info see the `las2dem <https://rapidlasso.com/las2dem>`_ page
-and its online `README <http://lastools.org/download/las2dem_README.txt>`__ file.
-=======
 For more info see the
 `las2dem <https://rapidlasso.com/lastools/las2dem>`_
 page and its online
 `README <http://lastools.org/download/las2dem_README.txt>`__ file.
->>>>>>> 08954a36f... Tables for alg params - lastools (#4749)
 
 Parameters
 ..........
@@ -508,15 +493,10 @@ Turns point clouds (up to 20 million per file) into iso-contour lines
 by creating a temporary Delaunay triangulation on which the contours
 are then traced.
 
-<<<<<<< HEAD
-For more info see the `las2iso <https://rapidlasso.com/las2iso>`_ page and its
-online `README <http://lastools.org/download/las2iso_README.txt>`__ file.
-=======
 For more info see the
 `las2iso <https://rapidlasso.com/lastools/las2iso>`_ page and its
 online `README <http://lastools.org/download/las2iso_README.txt>`__
 file.
->>>>>>> 08954a36f... Tables for alg params - lastools (#4749)
 
 Parameters
 ..........
@@ -591,14 +571,9 @@ Parameters
        specified size.
    * - **additional command line parameter(s)**
 
-<<<<<<< HEAD
-For more info see the `las2las <https://rapidlasso.com/las2las>`_ page and
-its online `README <http://lastools.org/download/las2las_README.txt>`__ file.
-=======
        Optional
      - ``ADDITIONAL_OPTIONS``
      - [string]
->>>>>>> 08954a36f... Tables for alg params - lastools (#4749)
 
        Default: ''
      - Specifies other command-line switches not available
@@ -650,205 +625,14 @@ Description
 Uses las2las to filter LiDAR points based on different attributes and
 to write the surviving subset of points to a new LAZ or LAS file.
 
-<<<<<<< HEAD
-For more info see the `las2las <https://rapidlasso.com/las2las>`_ page and
-its online `README <http://lastools.org/download/las2las_README.txt>`__ file.
-
-Parameters
-..........
-
-``verbose`` [boolean]
-  Generates more textual control output to the console.
-
-  Default: *False*
-
-``open LAStools GUI`` [boolean]
-  Starts the GUI of LAStools with pre-populated input files.
-  
-  Default: *False*
-  
-``input LAS/LAZ file`` [file]
-  The file containing the points to be processed.
-
-``transform (coordinates)`` [enumeration]
-  Either translate, scale, or clamp the X, Y, or Z coordinate by the value specified below.
-
-  Options:
-
-  * 0 --- ---
-  * 1 --- translate_x
-  * 2 --- translate_y
-  * 3 --- translate_z
-  * 4 --- scale_x
-  * 5 --- scale_y
-  * 6 --- scale_z
-  * 7 --- clamp_z_above
-  * 8 --- clamp_z_below
-
-  Default: *0*
-
-``value for transform (coordinates)`` [string]
-  The value that specifies the amount of translating, scaling, or clamping done
-  by the transform selected above.
-
-  Default: *(not set)*
-
-``second transform (coordinates)`` [enumeration]
-  Also either translate, scale, or clamp the X, Y, or Z coordinate by the value
-  specified below.
-
-  Options:
-
-  * 0 --- ---
-  * 1 --- translate_x
-  * 2 --- translate_y
-  * 3 --- translate_z
-  * 4 --- scale_x
-  * 5 --- scale_y
-  * 6 --- scale_z
-  * 7 --- clamp_z_above
-  * 8 --- clamp_z_below
-
-  Default: *0*
-
-``value for second transform (coordinates)`` [string]
-  The value that specifies the amount of translating, scaling, or clamping done
-  by the transform selected above.
-
-  Default: *(not set)*
-
-``transform (intensities, scan angles, GPS times, ...)`` [enumeration]
-  <put parameter description here>
-
-  Options:
-
-  * 0 --- ---
-  * 1 --- scale_intensity
-  * 2 --- translate_intensity
-  * 3 --- clamp_intensity_above
-  * 4 --- clamp_intensity_below
-  * 5 --- scale_scan_angle
-  * 6 --- translate_scan_angle
-  * 7 --- translate_gps_time
-  * 8 --- set_classification
-  * 9 --- set_user_data
-  * 10 --- set_point_source
-  * 11 --- scale_rgb_up
-  * 12 --- scale_rgb_down
-  * 13 --- repair_zero_returns
-
-  Default: *0*
-
-``value for transform (intensities, scan angles, GPS times, ...)`` [string]
-  The value that specifies the amount of scaling, translating, clamping or setting
-  that is done by the transform selected above.
-
-  Default: *(not set)*
-
-``second transform (intensities, scan angles, GPS times, ...)`` [enumeration]
-  <put parameter description here>
-
-  Options:
-
-  * 0 --- ---
-  * 1 --- scale_intensity
-  * 2 --- translate_intensity
-  * 3 --- clamp_intensity_above
-  * 4 --- clamp_intensity_below
-  * 5 --- scale_scan_angle
-  * 6 --- translate_scan_angle
-  * 7 --- translate_gps_time
-  * 8 --- set_classification
-  * 9 --- set_user_data
-  * 10 --- set_point_source
-  * 11 --- scale_rgb_up
-  * 12 --- scale_rgb_down
-  * 13 --- repair_zero_returns
-
-  Default: *0*
-
-``value for second transform (intensities, scan angles, GPS times, ...)`` [string]
-  The value that specifies the amount of scaling, translating, clamping or setting
-  that is done by the transform selected above.
-
-  Default: *(not set)*
-
-``operations (first 7 need an argument)`` [enumeration]
-  <put parameter description here>
-
-  Options:
-
-  * 0 --- ---
-  * 1 --- set_point_type
-  * 2 --- set_point_size
-  * 3 --- set_version_minor
-  * 4 --- set_version_major
-  * 5 --- start_at_point
-  * 6 --- stop_at_point
-  * 7 --- remove_vlr
-  * 8 --- auto_reoffset
-  * 9 --- week_to_adjusted
-  * 10 --- adjusted_to_week
-  * 11 --- scale_rgb_up
-  * 12 --- scale_rgb_down
-  * 13 --- remove_all_vlrs
-  * 14 --- remove_extra
-  * 15 --- clip_to_bounding_box
-
-  Default: *0*
-
-``argument for operation`` [string]
-  The value that is the argument for the operation selected above.
-
-  Default: *(not set)*
-
-``additional command line parameter(s)`` [string]
-  Specifies other command-line switches not available via this menu but known to
-  the (advanced) LAStools user.
-
-  Default: *---*
-
-Outputs
-.......
-
-``output LAS/LAZ file`` [file]
-  Specifies where the output point cloud is stored. Use LAZ for compressed output,
-  LAS for uncompressed output, and TXT for ASCII.
-
-
-las2txt
--------
-
-Description
-...........
-
-<put algorithm description here>
-=======
 For more info see the
 `las2las <https://rapidlasso.com/lastools/las2las>`_ page and its
 online `README <http://lastools.org/download/las2las_README.txt>`__
 file.
->>>>>>> 08954a36f... Tables for alg params - lastools (#4749)
 
 Parameters
 ..........
 
-<<<<<<< HEAD
-``verbose`` [boolean]
-  <put parameter description here>
-
-  Default: *False*
-
-``input LAS/LAZ file`` [file]
-  Optional
-
-  <put parameter description here>
-
-``parse_string`` [string]
-  <put parameter description here>
-
-  Default: *xyz*
-=======
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -1054,16 +838,10 @@ Parameters
        * Save to File...
 
        The file encoding can also be changed here.
->>>>>>> 08954a36f... Tables for alg params - lastools (#4749)
 
 Outputs
 .......
 
-<<<<<<< HEAD
-``Output ASCII file`` [file]
-  <put output description here>
-
-=======
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -1077,7 +855,6 @@ Outputs
      - ``OUTPUT_LASLAZ``
      - [file]
      - The output LAS/LAZ format file
->>>>>>> 08954a36f... Tables for alg params - lastools (#4749)
 
 
 .. _lastoolslas2las_project:
@@ -1734,15 +1511,10 @@ Description
 Uses las2las to filter LiDAR points based on different attributes and
 to write the surviving subset of points to a new LAZ or LAS file.
 
-<<<<<<< HEAD
-For more info see the `lasgrid <https://rapidlasso.com/lasgrid>`_ page and
-its online `README <http://lastools.org/download/lasgrid_README.txt>`__ file.
-=======
 For more info see the
 `las2las <https://rapidlasso.com/lastools/las2las>`_ page and its
 online `README <http://lastools.org/download/las2las_README.txt>`__
 file.
->>>>>>> 08954a36f... Tables for alg params - lastools (#4749)
 
 Parameters
 ..........
