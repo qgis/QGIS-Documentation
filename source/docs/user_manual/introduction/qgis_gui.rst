@@ -1381,7 +1381,7 @@ related commands.
 
 :guilabel:`Preferences` correspond to
 :menuselection:`Settings --> Options`, :guilabel:`About QGIS`
- corresponds to :menuselection:`Help --> About` and
+corresponds to :menuselection:`Help --> About` and
 :guilabel:`Quit QGIS` corresponds to
 :menuselection:`Project --> Exit QGIS` for other platforms.
 
