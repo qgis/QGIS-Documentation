@@ -777,16 +777,16 @@ copy or paste layer properties (style, scale, CRS...).
 
      - .
 
-       * kbd:`Ctrl+Shift+V`
-       * kbd:`Ctrl+Shift+R`
+       * :kbd:`Ctrl+Shift+V`
+       * :kbd:`Ctrl+Shift+R`
        *
-       * kbd:`Ctrl+Shift+R`
-       * kbd:`Ctrl+Shift+D`
-       * kbd:`Ctrl+Shift+L`
+       * :kbd:`Ctrl+Shift+R`
+       * :kbd:`Ctrl+Shift+D`
+       * :kbd:`Ctrl+Shift+L`
        *
-       * kbd:`Ctrl+Shift+2`
+       * :kbd:`Ctrl+Shift+2`
        *
-       * kbd:`Ctrl+Shift+W`
+       * :kbd:`Ctrl+Shift+W`
        *
        *
        *
