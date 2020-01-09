@@ -119,7 +119,7 @@ The :menuselection:`Project` menu provides access and exit points for
      -
      - :ref:`sec_projects`
    * - :menuselection:`Open Recent -->`
-     -
+     - :kbd:`Alt+J` + :kbd:`R`
      -
      - :ref:`sec_projects`
    * - :guilabel:`Close`
@@ -174,7 +174,7 @@ The :menuselection:`Project` menu provides access and exit points for
      - :guilabel:`Project`
      - :ref:`label_printlayout`
    * - |newReport| :guilabel:`New Report...`
-     -
+     - 
      -
      - :ref:`create-reports`
    * - |layoutManager| :guilabel:`Layout Manager...`
@@ -558,7 +558,7 @@ The menu also allows you to reorganize the QGIS interface itself using actions l
        * :guilabel:`Copyright Label...`
        * :guilabel:`Layout Extents...`
 
-     - 
+     - :kbd:`Alt+V` + :kbd:`D`
      - 
      - :ref:`decorations`
    * - :menuselection:`Preview mode -->`
@@ -904,13 +904,13 @@ Settings
      -
      - :ref:`shortcuts`
    * - |interfaceCustomization| :guilabel:`Interface Customization...`
-   -
-   -
-   - :ref:`sec_customization`
- * - |options| :guilabel:`Options...`
-   -
-   -
-   - :ref:`gui_options`
+     -
+     -
+     - :ref:`sec_customization`
+   * - |options| :guilabel:`Options...`
+     -
+     -
+     - :ref:`gui_options`
 
 
 .. only :: html
@@ -965,23 +965,75 @@ are enabled.
      - Toolbar
      - Reference
    * - :menuselection:`Geoprocessing Tools -->`
-     - :kbd:`Alt+O` + :kbd:`G`","
+
+       * Buffer...
+       * Clip...
+       * Convex Hull...
+       * Difference...
+       * Dissolve...
+       * Intersection...
+       * Symmetrical Difference...
+       * Union...
+       * Elimintate Selected Polygons...
+
+     - :kbd:`Alt+O` + :kbd:`G`
      -
      - :ref:`processing.options`
    * - :menuselection:`Geometry Tools -->`
-     - :kbd:`Alt+O` + :kbd:`E`","
+
+       * Centroids...
+       * Collect Geometries...
+       * Extract Vertices...
+       * Multipart to Singleparts...
+       * Polygons to Lines...
+       * Simplify...
+       * Check Validity...
+       * Delaunay Triangulation...
+       * Densify by Count...
+       * Add Geometry Attributes...
+       * Lines to Polygons...
+       * Voronoi Polygons...
+
+     - :kbd:`Alt+O` + :kbd:`E`
      -
      - :ref:`processing.options`
    * - :menuselection:`Analysis Tools -->`
-     - :kbd:`Alt+O` + :kbd:`A`","
+
+       * Line Intersection...
+       * Mean Coordinate(s)...
+       * Basic Statistics for Fields...
+       * Count Points in Polygon...
+       * Distance Matrix...
+       * List Unique Values...
+       * Nearest Neighbour Analysis...
+       * Sum Line Length...
+
+     - :kbd:`Alt+O` + :kbd:`A`
      -
      - :ref:`processing.options`
    * - :menuselection:`Data Management Tools -->`
-     - :kbd:`Alt+O` + :kbd:`D`","
+
+       * Merge Vector Layers...
+       * Reproject Layer...
+       * Create Spatial Index...
+       * Join Attributes by Location...
+       * Split Vector Layer...
+
+     - :kbd:`Alt+O` + :kbd:`D`
      -
      - :ref:`processing.options`
    * - :menuselection:`Research Tools -->`
-     - :kbd:`Alt+O` + :kbd:`R`","
+
+       * Select by Location...
+       * Extract Layer Extent...
+       * Random Points in Extent...
+       * Random Points in Layer Bounds...
+       * Random Points Inside Polygons...
+       * Random Selection...
+       * Random Selection Within Subsets...
+       * Regular Points...
+
+     - :kbd:`Alt+O` + :kbd:`R`
      -
      - :ref:`processing.options`"
 
@@ -1026,8 +1078,8 @@ are enabled.
      -
      - :ref:`label_raster_align`
    * - |georefRun| :guilabel:`Georeferencer`
+     - :kbd:`Alt+R` + :kbd:`G`
      - :guilabel:`Raster`
-     -
      - :ref:`georef`
    * - :menuselection:`Analysis -->`
 
@@ -1149,10 +1201,11 @@ If no web plugins are enabled, there will be no :guilabel:`Web` menu.
      - Toolbar
      - Reference
    * - :menuselection:`MetaSearch -->``
-   
+
        * |metasearch| Metasearch
        * Help
-     -
+
+     - :kbd:`Alt+W` + :kbd:`M`
      - :guilabel:`Web`
      - :ref:`metasearch`
 
