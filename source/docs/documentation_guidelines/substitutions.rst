@@ -126,7 +126,7 @@ Icon                            Substitution                        Icon        
 |editCopy|                      ``|editCopy|``                      |editPaste|                     ``|editPaste|``
 |editCut|                       ``|editCut|``                       |saveEdits|                     ``|saveEdits|``
 |editableEdits|                 ``|editableEdits|``
-|circle2Points|                 ``|circle2Points||``                |circle2TangentsPoint|          ``|circle2TangentsPoint|``
+|circle2Points|                 ``|circle2Points|``                 |circle2TangentsPoint|          ``|circle2TangentsPoint|``
 |circle3Points|                 ``|circle3Points|``                 |circle3Tangents|               ``|circle3Tangents|``
 |circle3Tangents|               ``|circleCenterPoint|``             |circleCenterPoint|             ``|circleCenterPoint|``
 |circleExtent|                  ``|circleExtent|``                  |ellipseCenter2Points|          ``|ellipseCenter2Points|``
