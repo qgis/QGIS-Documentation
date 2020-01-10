@@ -91,7 +91,7 @@ Parameters
    *  - **Create also .prj file**
       - ``PRJ_FILE_CREATE``
       - [boolean]
-        
+
         Default: False
       - If this is activated a :file:`.prj` file containing the
         projection information is also created.
@@ -118,7 +118,7 @@ Outputs
       - [file]
       - Text file with :file:`.prj` extension that describes the CRS.
         Will be ``None`` if :guilabel:`Create also .prj file` is False.
-  
+
 
 .. _gdalwarpreproject:
 
@@ -139,7 +139,7 @@ Parameters
    :header-rows: 1
    :widths: 20 20 20 40
    :stub-columns: 0
-   
+
    * - Label
      - Name
      - Type
@@ -149,27 +149,27 @@ Parameters
      - [raster]
      - Input raster layer to reproject
    * - **Source CRS**
-       
+
        Optional
      - ``SOURCE_CRS``
      - [crs]
      - Defines the CRS of the input raster layer
    * - **Target CRS**
-       
+
        Optional
      - ``TARGET_CRS``
      - [crs]
-       
+
        Default: ``EPSG:4326``
      - The CRS of the output layer
    * - **Resampling method to use**
      - ``RESAMPLING``
      - [enumeration]
-       
+
        Default: 0
      - Pixel value resampling method to use.
        Options:
-       
+
        * 0 --- Nearest neighbour
        * 1 --- Bilinear
        * 2 --- Cubic
@@ -182,31 +182,31 @@ Parameters
        * 9 --- Median
        * 10 --- First quartile
        * 11 --- Third quartile
-       
+
    * - **Nodata value for output bands**
-       
+
        Optional
      - ``NODATA``
      - [number]
-       
+
        Default: None
      - Sets nodata value for output bands.
        If not provided, then nodata values will be copied from
        the source dataset.
    * - **Output file resolution in target georeferenced units**
-       
+
        Optional
      - ``TARGET_RESOLUTION``
      - [number]
-       
+
        Default: None
      - Defines the output file resolution of reprojection result
    * - **Additional creation options**
-       
+
        Optional
      - ``OPTIONS``
      - [string]
-       
+
        Default: ''
      - For adding one or more creation options that control the
        raster to be created (colors, block size, file
@@ -216,10 +216,10 @@ Parameters
    * - **Output data type**
      - ``DATA_TYPE``
      - [enumeration]
-       
+
        Default: 0
      - Defines the format of the output raster file.
-       
+
        Options:
        
        * 0 --- Use input layer data type
@@ -236,7 +236,7 @@ Parameters
        * 11 --- CFloat64
        
    * - **Georeferenced extents of output file to be created**
-       
+
        Optional
      - ``TARGET_EXTENT``
      - [extent]
@@ -244,7 +244,7 @@ Parameters
        created (in the :guilabel:`Target CRS` by default.
        In the :guilabel:`CRS of the target raster extent`, if specified).
    * - **CRS of the target raster extent**
-       
+
        Optional
      - ``TARGET_EXTENT_CRS``
      - [crs]
@@ -258,30 +258,30 @@ Parameters
    * - **Use multithreaded warping implementation**
      - ``MULTITHREADING``
      - [boolean]
-       
+
        Default: False
      - Two threads will be used to process chunks of the image and
        perform input/output operations simultaneously.
        Note that the computation itself is not multithreaded.
    * - **Additional command-line parameters**
-       
+
        Optional
      - ``EXTRA``
      - [string]
-       
+
        Default: None
      - Add extra GDAL command line options.
    * - **Reprojected**
      - ``OUTPUT``
      - [raster]
-       
+
        Default: '[Save to temporary file]'
      - Specification of the output raster layer.
        One of:
-       
+
        * Save to a Temporary File
        * Save to File...
-       
+
        The file encoding can also be changed here.
 
 Outputs
@@ -299,6 +299,6 @@ Outputs
    * - **Reprojected**
      - ``OUTPUT``
      - [raster]
-       
+
        Default: ``[Save to temporary file]``
      - Reprojected output raster layer
