@@ -4901,8 +4901,7 @@ geometries.
    the added M value: the results are available in the
    :guilabel:`Identify Results` dialog.
 
-.. seealso:: :ref:`qgissetmfromraster`, :ref:`qgissetzvalue`,
-   :ref:`qgisdropmzvalues`
+.. seealso:: :ref:`qgissetmfromraster`, :ref:`qgissetzvalue`
 
 Parameters
 ..........
@@ -5064,8 +5063,7 @@ geometries.
  the added Z value: the results are available in the
  :guilabel:`Identify Results` dialog.
 
-.. seealso:: :ref:`qgissetzfromraster`, :ref:`qgissetmvalue`, 
-   :ref:`qgisdropmzvalues`
+.. seealso:: :ref:`qgissetzfromraster`, :ref:`qgissetmvalue`
 
 Parameters
 ..........
