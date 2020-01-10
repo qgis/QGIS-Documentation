@@ -2461,6 +2461,38 @@ Outputs
        with only the filtered vertices.
 
 
+.. _qgisfilterverticesbyz:
+
+Filter vertices by Z value
+--------------------------
+Filters away vertices based on their Z value, returning geometries
+with only vertex points that have a Z value greater than or equal to
+the specified minimum value and/or less than or equal to the maximum
+value.
+
+If the minimum value is not specified then only the maximum value is
+tested, and similarly if the maximum value is not specified then only
+the minimum value is tested.
+
+.. figure:: img/filter_zm.png
+   :align: center
+
+   The red line represents the black line with only vertices whose Z
+   value is <=10.
+
+.. note:: Depending on the input geometry attributes and the filters
+   used, the resultant geometries created by this algorithm may no
+   longer be valid.
+   You may need to run the :ref:`qgisfixgeometries` algorithm to
+   ensure their validity.
+
+.. seealso:: :ref:`qgisfilterverticesbym`, :ref:`qgisextractvertices`,
+ :ref:`qgisextractspecificvertices`
+
+Parameters
+..........
+
+.. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
    :stub-columns: 0
