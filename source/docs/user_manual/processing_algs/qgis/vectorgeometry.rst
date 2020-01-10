@@ -2919,6 +2919,17 @@ Outputs
      - The output line vector layer.
 
 
+.. _qgislinestopolygons:
+
+Lines to polygons
+-----------------
+Generates a polygon layer using as polygon rings the lines from an
+input line layer.
+
+The attribute table of the output layer is the same as the one from of
+the input line layer.
+
+``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
 .. seealso:: :ref:`qgispolygonstolines`, :ref:`qgispolygonize`
 
@@ -3126,6 +3137,20 @@ Outputs
      - The output (bounding) polygon vector layer.
 
 
+.. _qgisminimumenclosingcircle:
+
+Minimum enclosing circles
+-------------------------
+Calculates the minimum enclosing circles of the features in the input
+layer.
+
+.. figure:: img/minimum_enclosing_circles.png
+   :align: center
+
+   Enclosing circles for each feature
+
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgisminimumboundinggeometry`
 
@@ -3271,6 +3296,42 @@ Outputs
      - The output polygon vector layer.
 
 
+.. _qgismultiparttosingleparts:
+
+Multipart to singleparts
+------------------------
+Splits multipart features in the input layer into singlepart
+features.
+
+The attributes of the output layer is the same of the original ones
+but divided into single features.
+
+.. figure:: img/multipart.png
+   :align: center
+
+   Left the multipart source layer and right the single part output
+   result
+
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
+
+``Default menu``: :menuselection:`Vector --> Geometry Tools`
+
+.. seealso:: :ref:`qgiscollect`, :ref:`qgispromotetomulti`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
      - ``INPUT``
      - [vector: any]
      - Input vector layer
@@ -3479,6 +3540,53 @@ Outputs
      - The output polygon vector layer.
 
 
+.. _qgisorthogonalize:
+
+Orthogonalize
+-------------
+Attempts to orthogonalize the geometries of the input line or polygon
+layer.
+This process shifts the vertices in the geometries to try to make
+every angle in the geometry either a right angle or a straight line.
+
+.. figure:: img/orthogonize.png
+   :align: center
+
+   In blue the source layer and in the red orthogonalized
+   result
+
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line, polygon]
+     - Input line or polygon vector layer
+   * - **Maximum angle tolerance (degrees)**
+     - ``ANGLE_TOLERANCE``
+     - [number]
+     
+       Default: 15
+     - Specify the maximum deviation from a right angle or straight
+       line a vertex can have for it to be adjusted.
+       Smaller tolerances mean that only vertices which are already
+       closer to right angles will be adjusted, and larger tolerances
+       mean that vertices which deviate further from right angles will
+       also be adjusted.
+   * - **Maximum algorithm iterations**
+     - ``MAX_ITERATIONS``
      - [number]
      
        Default: 1000
@@ -3582,6 +3690,34 @@ Outputs
      - The output point vector layer.
 
 
+.. _qgispointsalonglines:
+
+Points along geometry
+---------------------
+Creates points at regular intervals along line or polygon geometries.
+Created points will have new attributes added for the distance along
+the geometry and the angle of the line at the point.
+
+An optional start and end offset can be specified, which controls how
+far from the start and end of the geometry the points should be
+created.
+
+.. figure:: img/points_along_line.png
+   :align: center
+
+   Points created along the source line layer
+
+.. seealso:: :ref:`qgisinterpolatepoint`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
      - Name
      - Type
      - Description
@@ -3641,6 +3777,18 @@ Outputs
      - Point vector layer with features placed along lines or polygon
        boundaries of the input layer.
 
+
+.. _qgispointsdisplacement:
+
+Points displacement
+-------------------
+Given a distance of proximity, identifies nearby point features and
+radially distributes them over a circle whose center represents their
+barycenter.
+A convenient tool to scatter overlaid features.
+
+Parameters
+..........
 
 .. list-table::
    :header-rows: 1
@@ -3709,6 +3857,34 @@ Outputs
      - Output point vector layer
 
 
+.. _qgispoleofinaccessibility:
+
+Pole of inaccessibility
+-----------------------
+Calculates the pole of inaccessibility for a polygon layer, which is
+the most distant internal point from the boundary of the surface.
+
+This algorithm uses the 'polylabel' algorithm (Vladimir Agafonkin,
+2016), which is an iterative approach guaranteed to find the true pole
+of inaccessibility within a specified tolerance.
+A more precise tolerance (lower value) requires more iterations and
+will take longer to calculate.
+
+The distance from the calculated pole to the polygon boundary will be
+stored as a new attribute in the output layer.
+
+.. figure:: img/pole_inaccessibility.png
+   :align: center
+
+   Pole of inaccessibility
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
    * - Label
      - Name
@@ -3756,6 +3932,36 @@ Outputs
      - The output point vector layer
 
 
+.. _qgispolygonize:
+
+Polygonize
+----------
+Creates a polygon layer whose features boundaries are generated from a
+line layer of **closed** features.
+
+.. figure:: img/polygonize.png
+   :align: center
+
+   The yellow polygons generated from the closed lines
+
+.. note:: The line layer must have closed shapes in order to be
+   transformed into a polygon.
+
+.. seealso:: :ref:`qgispolygonstolines`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
      - ``INPUT``
      - [vector: line]
      - Input line vector layer
@@ -3863,6 +4069,29 @@ Outputs
      - The output line vector layer from polygons
 
 
+.. _qgisprojectpointcartesian:
+
+Project points (Cartesian)
+--------------------------
+Projects point geometries by a specified distance and bearing (azimuth).
+
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
      - [vector: point]
      - Input point vector layer
    * - **Bearing (degrees from North)**
@@ -3975,6 +4204,58 @@ Outputs
      - The output multipart vector layer
 
 
+.. _qgisrectanglesovalsdiamondsfixed:
+
+Rectangles, ovals, diamonds (fixed)
+-----------------------------------
+Creates a buffer area for all the features in an input layer with
+different shape choice.
+
+Parameters can vary depending on the shape chosen.
+
+.. figure:: img/rectangles_ovals_diamond.png
+   :align: center
+
+   Different buffer shapes
+
+.. seealso:: :ref:`qgisrectanglesovalsdiamondsvariable`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: point]
+     - Input point vector layer
+   * - **Buffer shape**
+     - ``SHAPE``
+     - [enumeration]
+     - The shape to use. One of:
+
+       * 0 --- Rectangles
+       * 1 --- Ovals
+       * 2 --- Diamonds
+
+   * - **Width**
+     - ``WIDTH``
+     - [number]
+
+       Default: 1.0
+     - Width of the buffer shape
+   * - **Height**
+     - ``HEIGHT``
+     - [number]
+
+       Default: 1.0
      - Height of the buffer shape
    * - **Rotation**
 
@@ -5224,6 +5505,46 @@ Outputs
      - Output (snapped) vector layer
 
 
+.. _qgissnappointstogrid:
+
+Snap points to grid
+-------------------
+Modifies the coordinates of geometries in a vector layer, so that all
+points or vertices are snapped to the closest point of a grid.
+
+If the snapped geometry cannot be calculated (or is totally collapsed)
+the feature's geometry will be cleared.
+
+Snapping can be performed on the X, Y, Z or M axis. A grid spacing of
+0 for any axis will disable snapping for that axis.
+
+.. note:: Snapping to grid may generate an invalid geometry in some
+   corner cases.
+
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
+
+.. seealso:: :ref:`qgissnapgeometries`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **X Grid Spacing**
+     - ``HSPACING``
+     - [number |dataDefined|]
 
        Default: 1.0
      - Grid spacing on the X axis
@@ -5366,6 +5687,27 @@ Outputs
      - Output vector layer
 
 
+.. _qgisswapxy:
+
+Swap X and Y coordinates
+------------------------
+Switches the X and Y coordinate values in input geometries.
+
+It can be used to repair geometries which have accidentally had their
+latitude and longitude values reversed.
+
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
+
+.. seealso:: :ref:`qgistranslategeometry`, :ref:`qgisrotatefeatures`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
    * - Label
      - Name
@@ -5658,6 +6000,55 @@ Outputs
      - Output line layer
 
 
+.. _qgistranslategeometry:
+
+Translate
+---------
+Moves the geometries within a layer, by offsetting with a predefined
+X and Y displacement.
+
+Z and M values present in the geometry can also be translated.
+
+.. figure:: img/translate_geometry.png
+   :align: center
+
+   Dashed lines represent the translated geometry of the input layer
+
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
+
+.. seealso:: :ref:`qgisarraytranslatedfeatures`,
+   :ref:`qgisoffsetline`, :ref:`qgisrotatefeatures`, :ref:`qgisswapxy`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **Offset distance (x-axis)**
+     - ``DELTA_X``
+     - [number |dataDefined|]
+
+       Default: 0.0
+     - Displacement to apply on the X axis
+   * - **Offset distance (y-axis)**
+     - ``DELTA_Y``
+     - [number |dataDefined|]
+
+       Default: 0.0
+     - Displacement to apply on the Y axis
+   * - **Offset distance (z-axis)**
      - ``DELTA_Z``
      - [number |dataDefined|]
 
@@ -5795,6 +6186,38 @@ Outputs
      - Buffer polygon vector layer.
 
 
+.. _qgisbufferbym:
+
+Variable width buffer (by M value)
+----------------------------------
+Creates variable width buffers along lines, using the M value of the
+line geometries as the diameter of the buffer at each vertex.
+
+.. figure:: img/variable_buffer_m.png
+   :align: center
+
+   Variable buffer example
+
+.. seealso:: :ref:`qgistaperedbuffer`, :ref:`qgisbuffer`,
+   :ref:`qgissetmvalue`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input line vector layer
+   * - **Segments**
      - ``SEGMENTS``
      - [number | dataDefined]
 
@@ -5836,6 +6259,35 @@ Outputs
      - Variable buffer polygon layer
 
 
+.. _qgisvoronoipolygons:
+
+Voronoi polygons
+----------------
+Takes a point layer and generates a polygon layer containing
+the Voronoi polygons (known also as Thiessen polygons) corresponding
+to those input points.
+
+Any location within a Voronoi polygon is closer to the associated
+point than to any other point.
+
+.. figure:: img/voronoi.png
+   :align: center
+
+   Voronoi polygons
+
+``Default menu``: :menuselection:`Vector --> Geometry Tools`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
      - Description
    * - **Input layer**
      - ``INPUT``
