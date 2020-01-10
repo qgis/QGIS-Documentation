@@ -9,8 +9,10 @@ Configuring external applications
       :local:
 
 The processing framework can be extended using additional applications.
-Currently, SAGA, GRASS and R are supported. Algorithms relying on an
-external applications are managed by their own algorithm provider.
+Currently, SAGA, GRASS, R, TauDEM and LAStools are supported (and GDAL
+is shipped with QGIS).
+Algorithms that rely on external applications are managed by their own
+algorithm providers.
 Additional providers can be found as separate plugins, and installed
 using the QGIS Plugin Manager.
 
@@ -19,13 +21,12 @@ to include these additional applications, and it will explain some
 particular features of the algorithms based on them.
 Once you have correctly configured the system, you will be able to
 execute external algorithms from any component like the toolbox or the
-graphical modeler, just like you do with any other geoalgorithm.
+graphical modeler, just like you do with any other algorithm.
 
-By default, all algorithms that rely on an external application not
+By default, algorithms that rely on an external application not
 shipped with QGIS are not enabled.
-You can enable them in the settings dialog.
-Make sure that the corresponding application is already installed in
-your system.
+You can enable them in the Processing settings dialog if they are
+installed on your system.
 
 
 A note for Windows users
@@ -36,50 +37,49 @@ you might not be interested in reading the rest of this chapter.
 Make sure you install QGIS in your system using the standalone
 installer.
 That will automatically install SAGA and GRASS in your system and
-configure them so they can be run from QGIS. All the algorithms from
-these providers will be ready to be run without needing any further
-configuration.
-If installing through OSGeo4W application, make sure you select for
-installation SAGA and GRASS as well.
+configure them so they can be run from QGIS.
+All the algorithms from these providers will be ready to be run without
+needing any further configuration.
+If installing with the OSGeo4W application, make sure that you also
+select SAGA and GRASS for installation.
 
 
 A note on file formats
 ----------------------
 
-When using an external software, opening a file in QGIS does not mean
-that it can be opened and processed as well in that other software.
+When using external software, opening a file in QGIS does not mean
+that it can be opened and processed in that other software.
 In most cases, other software can read what you have opened in QGIS,
 but in some cases, that might not be true.
 When using databases or uncommon file formats, whether for raster or
 vector layers, problems might arise.
 If that happens, try to use well-known file formats that you are sure
 are understood by both programs, and check the console output (in the
-history and log dialog) to know more about what is going wrong.
+log panel) to find out what is going wrong.
 
-Using GRASS raster layers is, for instance, one case in which you
-might have trouble and not be able to complete your work if you call
-an external algorithm using such a layer as input.
-For this reason, these layers will not appear as available to
+You might for instance get trouble and not be able to complete your
+work if you call an external algorithm with a GRASS raster layers
+as input.
+For this reason, such layers will not appear as available to
 algorithms.
 
-You should, however, find no problems at all with vector layers,
-since QGIS automatically converts from the original file format to
-one accepted by the external application before passing the layer
-to it.
-This adds extra processing time, which might be significant if the
-layer has a large size, so do not be surprised if it takes more time
-to process a layer from a DB connection than it process a layer from
-a Shapefile format dataset of similar size.
+You should, however, not have problems with vector layers, since QGIS
+automatically converts from the original file format to one accepted
+by the external application before passing the layer to it.
+This adds extra processing time, which might be significant for large
+layers, so do not be surprised if it takes more time to process a
+layer from a DB connection than a layer from a Shapefile format
+dataset of similar size.
 
 Providers not using external applications can process any layer that
 you can open in QGIS, since they open it for analysis through QGIS.
 
-Regarding output formats, all formats supported by QGIS as output can
-be used, both for raster and vector layers.
+All raster and vector output formats produced by QGIS can be used
+as input layers.
 Some providers do not support certain formats, but all can export to
 common  formats that can later be transformed by QGIS automatically.
-As in the case of input layers, if this conversion is needed, that
-might increase the processing time.
+As for input layers, if a conversion is needed, that might increase
+the processing time.
 
 
 A note on vector layer selections
@@ -95,7 +95,7 @@ option is not enabled in the processing general configuration, can a
 layer be directly passed to an external application.
 
 In other cases, exporting only selected features is needed, which
-causes execution times to be longer.
+causes longer execution times.
 
 
 .. _saga_configure:
@@ -103,11 +103,11 @@ causes execution times to be longer.
 SAGA
 ----
 
-SAGA algorithms can be run from QGIS if you have SAGA installed in your
-system and you configure the processing framework properly so it can
-find SAGA executables.
-In particular, the SAGA command-line executable is needed to run SAGA
-algorithms.
+SAGA algorithms can be run from QGIS if you have SAGA installed
+and you configure the processing framework to find SAGA
+executables.
+In particular, the SAGA command-line executable is needed to run
+SAGA algorithms.
 
 If you are running Windows, both the stand-alone installer and the
 OSGeo4W installer include SAGA along with QGIS, and the path is
@@ -207,12 +207,13 @@ algorithm is running.
 
 Both the commands sent by QGIS and the additional information printed
 by SAGA can be logged along with other processing log messages, and
-you might find them useful to track in detail what is going on when
-QGIS runs a SAGA algorithm.
+you might find them useful to track what is going on when QGIS runs a
+SAGA algorithm.
 You will find two settings, namely :guilabel:`Log console output` and
-:guilabel:`Log execution commands`, to activate that logging mechanism.
+:guilabel:`Log execution commands`, to activate that logging
+mechanism.
 
-Most other providers that use an external application and call it
+Most other providers that use external applications and call them
 through the command-line have similar options, so you will find them
 as well in other places in the processing settings list.
 
@@ -230,8 +231,8 @@ examples).
 Instead, you should write your scripts and call R commands, much like
 you would do from R, and in a very similar manner to what we saw in
 the section dedicated to processing scripts.
-This section shows you the syntax to use to call those R commands from
-QGIS and how to use QGIS objects (layers, tables) in them.
+This section shows you the syntax to use to use R commands in QGIS
+and how to use QGIS objects (layers, tables) in them.
 
 The first thing you have to do, as we saw in the case of SAGA, is to
 tell QGIS where your R binaries are located. You can do this using
@@ -239,20 +240,19 @@ the :guilabel:`R folder` entry in the processing configuration dialog.
 Once you have set that parameter, you can start creating and executing
 your own R scripts.
 
-.. note:: for **Windows** user, usually the R executable file is in
+.. note:: On **Windows** the R executable file is normally in
    the :file:`C:\\Program Files\\R\\R-3.2` folder.
-   Add just the folder and **NOT** the binary!
+   Specify the folder and **NOT** the binary!
 
 Once again, this is different in Linux, and you just have to make sure
 that the R folder is included in the PATH environment variable.
-If you can start R just typing ``R`` in a console, then you are ready
-to go.
+If you can start R by typing ``R`` in a terminal window, then you are
+ready to go.
 
-To add a new algorithm that calls an R function (or a more complex R
+To add an algorithm that calls an R function (or a more complex R
 script that you have developed and you would like to have available
-from QGIS), you have to create a script file that tells the processing
-framework how to perform that operation and the corresponding R
-commands to do so.
+from QGIS), you have to create a script file that performs the R
+commands.
 
 R script files have the extension :file:`.rsx`, and creating them is
 pretty easy if you just have a basic knowledge of R syntax and R
@@ -280,95 +280,92 @@ packages like ``maptools`` and, especially, ``sp``, is mandatory.
     output=SpatialPointsDataFrame(pts, as.data.frame(pts))
 
 The first lines, which start with a double Python comment sign
-(``##``), tell QGIS the inputs of the algorithm described in the file
-and the outputs that it will generate.
-They work with exactly the same syntax as the Processing scripts that
-we have already seen, so they will not be described here again.
+(``##``), tell QGIS about the inputs of the algorithm in
+the file and the outputs that it will generate.
 
 Please have a look at the :ref:`R Intro <r-intro>` and the
-:ref:`R Syntax <r-syntax>`
-Training Manual Chapters to find more information on how to write
-your own R scripts.
+:ref:`R Syntax <r-syntax>` Training Manual Chapters to find more
+information about how to write your own R scripts.
 
 When you declare an input parameter, QGIS uses that information for
 two things: creating the user interface to ask the user for the value
-of that parameter and creating a corresponding R variable that can
+of that parameter, and creating a corresponding R variable that can
 later be used as input for R commands.
 
-In the above example, we are declaring an input of type ``vector``
+In the above example, we have declared an input of type ``vector``
 named ``polyg``.
-When executing the algorithm, QGIS will open in R the layer selected
-by the user and store it in a variable also named ``polyg``.
-So, the name of a parameter is also the name of the variable that we
-can use in R for accessing the value of that parameter (thus, you
-should avoid using reserved R words as parameter names).
+When executing the algorithm, QGIS will open the layer selected
+by the user and store it in a variable named ``polyg``.
+So, the name of a parameter is the name of the variable that we
+use in R for accessing the value of that parameter (you should
+therefore avoid using reserved R words as parameter names).
 
-Spatial elements such as vector and raster layers are read using the
-``readOGR()`` and ``brick()`` commands (you do not have to worry about
-adding those commands to your description file -- QGIS will do it),
-and they are stored as ``Spatial*DataFrame`` objects.
-Table fields are stored as strings containing the name of the selected
-field.
+Spatial parameters such as vector and raster layers are read using
+the ``readOGR()`` and ``brick()`` commands (you do not have to worry
+about adding those commands to your description file -- QGIS will
+do it), and they are stored as ``Spatial*DataFrame`` objects.
+Table fields are stored as strings containing the name of the
+selected field.
 
-Tables are opened using the ``read.csv()`` command. If a table entered
-by the user is not in CSV format, it will be converted prior to
-importing it into R.
+Tables are opened using the ``read.csv()`` command.
+If a table entered by the user is not in CSV format, it will be
+converted prior to importing it into R.
 
-Additionally, raster files can be read using the ``readGDAL()``
-command instead of ``brick()`` by using the ``##usereadgdal``.
+Raster files can be read using the ``readGDAL()`` command instead
+of ``brick()`` by specifying ``##usereadgdal``.
 
-If you are an advanced user and do not want QGIS to create the object
-representing the layer, you can use the ``##passfilenames`` tag to
+If you are an advanced user and do not want QGIS to create the
+object representing the layer, you can use ``##passfilenames`` to
 indicate that you prefer a string with the filename instead.
-In this case, it is up to you to open the file before performing any
-operation on the data it contains.
+In this case, it is up to you to open the file before performing
+any operation on the data it contains.
 
-With the above information, we can now understand the first line of
-our first example script (the first line not starting with a Python
+With the above information, we can now understand the first line
+of this script (the first line not starting with a Python
 comment).
 
 .. code-block:: python
 
     pts=spsample(polyg,numpoints,type="random")
 
-The variable ``polygon`` already contains a
-``SpatialPolygonsDataFrame`` object, so it can be used to call the
-``spsample`` method, just like the ``numpoints`` one, which indicates
-the number of points to add to the created sample grid.
+The variable ``polyg`` already contains a
+``SpatialPolygonsDataFrame`` object, so it can be used when calling
+the ``spsample`` method, just like the ``numpoints`` one, which
+specifies the number of points to add to the created sample grid.
 
-Since we have declared an output of type vector named ``out``, we have
-to create a variable named ``out`` and store a ``Spatial*DataFrame``
+Since we have declared a vector output named ``out``, we have to
+create a variable named ``out`` and store a ``Spatial*DataFrame``
 object in it (in this case, a ``SpatialPointsDataFrame``).
 You can use any name for your intermediate variables.
-Just make sure that the variable storing your final result has the
-same name that you used to declare it, and that it contains a suitable
-value.
+Just make sure that the variable storing your final result has
+the same name that you used to declare it, and that it contains a
+suitable value.
 
-In this case, the result obtained from the ``spsample`` method has to
-be converted explicitly into a ``SpatialPointsDataFrame`` object, since
-it is itself an object of class ``ppp``, which is not a suitable class
-to be returned to QGIS.
+In this case, the result obtained from the ``spsample`` method has
+to be converted explicitly into a ``SpatialPointsDataFrame`` object,
+since it is itself an object of class ``ppp``, which can not be
+returned to QGIS.
 
-If your algorithm generates raster layers, the way they are saved will
-depend on whether or not you have used the ``##dontuserasterpackage``
-option.
-If you have used it, layers are saved using the ``writeGDAL()`` method.
-If not, the ``writeRaster()`` method from the ``raster`` package will
-be used.
+If your algorithm generates raster layers, the way they are saved
+will depend on whether or not you have used the
+``##dontuserasterpackage`` option.
+If you have used it, layers are saved using the ``writeGDAL()``
+method.
+If not, the ``writeRaster()`` method from the ``raster`` package
+will be used.
 
-If you have used the ``##passfilenames`` option, outputs are generated
-using the ``raster`` package (with ``writeRaster()``), even though it
-is not used for the inputs.
+If you have used the ``##passfilenames`` option, outputs are
+generated using the ``raster`` package (with ``writeRaster()``).
 
-If your algorithm does not generate any layer, but rather a text
-result in the console instead, you have to indicate that you want the
+If your algorithm does not generate a layer, but a text result in
+the console instead, you have to indicate that you want the
 console to be shown once the execution is finished.
-To do so, just start the command lines that produce the results you
-want to print with the ``>`` ('greater') sign.
+To do so, just start the command lines that produce the results
+you want to print with the ``>`` ('greater') sign.
 The output of all other lines will not be shown.
 For instance, here is the description file of an algorithm that
-performs a normality test on a given field (column) of the attributes
-of a vector layer:
+performs a normality test on a given field (column) of the
+attributes of a vector layer:
 
 .. code-block:: python
 
@@ -389,8 +386,8 @@ method), add the following line:
 
     ##showplots
 
-This will cause QGIS to redirect all R graphical outputs to a temporary
-file, which will be opened once R execution has finished.
+This will cause QGIS to redirect all R graphical outputs to a
+temporary file, which will be opened once R execution has finished.
 
 Both graphics and console results will be shown in the processing
 results manager.
@@ -406,13 +403,14 @@ how to create your own scripts.
    (you just have to make sure that those two packages are installed
    in your R distribution).
    However, other additional libraries that you might need have to be
-   explicitly loaded by typing (for ``ggplot2``):
-   ``library(ggplot2)``.
+   explicitly loaded by typing:
+   ``library(ggplot2)`` (to load the ``ggplot2`` library).
    If the package is not already installed on your machine, Processing
    will download and install it.
    In this way the package will be also available in R Standalone.
    **Be aware** that if the package has to be downloaded, the first
    time you run the script it might take a long time.
+
 
 .. _grass_configure:
 
@@ -425,17 +423,17 @@ running Windows.
 
 By default, the Processing framework tries to configure its GRASS
 connector to use the GRASS distribution that ships along with QGIS.
-This should work without problems in most systems, but if you
+This should work without problems for most systems, but if you
 experience problems, you might have to configure the GRASS connector
 manually.
 Also, if you want to use a different GRASS installation, you can
-change that setting and point to the folder where the other version
+change the setting to point to the folder where the other version
 is installed.
 GRASS 7 is needed for algorithms to work correctly.
 
 If you are running Linux, you just have to make sure that GRASS is
 correctly installed, and that it can be run without problem from a
-console.
+terminal window.
 
 GRASS algorithms use a region for calculations.
 This region can be defined manually using values similar to the ones
@@ -445,6 +443,7 @@ each time.
 If the latter approach is the behavior you prefer, just check the
 :guilabel:`Use min covering region` option in the GRASS configuration
 parameters.
+
 
 .. _lastools_configure:
 
