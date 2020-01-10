@@ -1954,7 +1954,7 @@ Click the icon to open the Plugin Manager dialog.
 
 .. |circle2Points| image:: /static/common/mActionCircle2Points.png
    :width: 1.5em
-.. |circle2TangentsPoint| image:: /static/common/mActionCircle2TangentsPoint
+.. |circle2TangentsPoint| image:: /static/common/mActionCircle2TangentsPoint.png
    :width: 1.5em
 .. |circle3Points| image:: /static/common/mActionCircle3Points.png
    :width: 1.5em
