@@ -386,7 +386,7 @@ LAStools
 --------
 
 To use  `LAStools <https://rapidlasso.com/lastools/>`_ in QGIS, you need to
-install LAStools on your computer and install the LAStools plugin in QGIS.
+download and install LAStools on your computer and install the LAStools plugin in QGIS, which is available from the official repository.
 
 On Linux platforms, you will need `Wine <https://www.winehq.org/>`_ to be
 able to run some of the tools.
