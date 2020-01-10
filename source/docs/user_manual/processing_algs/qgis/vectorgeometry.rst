@@ -2792,6 +2792,32 @@ Outputs
      - The output point vector layer with features
        at a set distance along the line or polygon boundary
 
+
+.. _qgiskeepnbiggestparts:
+
+Keep N biggest parts
+--------------------
+Takes a layer with polygons or multipolygons and returns a new layer
+in which only the *n* largest polygons of each multipolygon feature
+are kept.
+If a feature has *n* or fewer parts, the feature will just be copied.
+
+.. figure:: img/n_biggest.png
+   :align: center
+
+   Clockwise from top left: original multipart feature, one, two and
+   three biggest parts kept
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
      - Type
      - Description
    * - **Polygons**
