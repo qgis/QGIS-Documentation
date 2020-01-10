@@ -2295,6 +2295,35 @@ Outputs
        vertices from the input layer geometries.
 
 
+.. _qgisextractvertices:
+
+Extract vertices
+----------------
+Takes a vector layer and generates a point layer with points
+representing the vertices in the input geometries.
+
+The attributes associated to each point are the same ones associated
+to the feature that the vertex belongs to.
+
+Additional fields are added to the vertices indicating the vertex
+index (beginning at 0), the feature’s part and its index within the
+part (as well as its ring for polygons), distance along original
+geometry and bisector angle of vertex for original geometry.
+
+.. figure:: img/extract_nodes.png
+   :align: center
+
+   Vertices extracted for line and polygon layer
+
+``Default menu``: :menuselection:`Vector --> Geometry Tools`
+
+.. seealso:: :ref:`qgisextractspecificvertices`,
+   :ref:`qgisfilterverticesbym`, :ref:`qgisfilterverticesbyz`
+
+Parameters
+..........
+
+.. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
    :stub-columns: 0
