@@ -381,3 +381,14 @@ automatically, taking the minimum extent that covers all the input layers used
 to execute the algorithm each time. If the latter approach is the behavior
 you prefer, just check the :guilabel:`Use min covering region` option in the
 GRASS configuration parameters.
+
+LAStools
+--------
+
+To use  `LAStools <https://rapidlasso.com/lastools/>`_ in QGIS, you need to
+install LAStools on your computer and install the LAStools plugin in QGIS.
+
+On Linux platforms, you will need `Wine <https://www.winehq.org/>`_ to be
+able to run some of the tools.
+LAStools is configured in the Processing options, where you can specify the
+location of LAStools and Wine.
