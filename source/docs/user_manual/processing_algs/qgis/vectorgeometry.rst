@@ -2062,6 +2062,30 @@ Outputs
      - The output polygon vector layer.
 
 
+.. _qgisexplodelines:
+
+Explode lines
+-------------
+Takes a lines layer and creates a new one in which each line layer is
+replaced by a set of lines representing the segments in the original
+line.
+
+Each line in the resulting layer contains only a start and an end
+point, with no intermediate vertices between them.
+
+
+.. figure:: img/explode_lines.png
+   :align: center
+
+   The original line layer and the exploded one
+
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
+
+.. seealso:: :ref:`qgissubdivide`, :ref:`qgislinesubstring`
+
+Parameters
+..........
 
 .. list-table::
    :header-rows: 1
@@ -2108,7 +2132,33 @@ Outputs
      - The output line vector layer with features representing
        each segment of the input layer.
 
+.. _qgisextendlines:
 
+Extend lines
+------------
+Extends line geometry by a specified amount at the start and end of
+the line.
+
+Lines are extended using the bearing of the first and last segment in
+the line.
+
+.. figure:: img/extend_lines.png
+   :align: center
+
+   The red dashes represent the initial and final extension of the
+   original layer
+
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
+
+.. seealso:: :ref:`qgislinesubstring`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
    :stub-columns: 0
 
    * - Label
