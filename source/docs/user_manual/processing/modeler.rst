@@ -358,8 +358,6 @@ the text box below.
 Model help is saved as part of the model itself.
 
 
-<<<<<<< HEAD
-=======
 Exporting a model as a Python script
 --------------------------------------
 
@@ -373,7 +371,6 @@ To do so, right click on the name of the model in the Processing
 Toolbox and choose :guilabel:`Export Model as Python Algorithm...`.
 
 
->>>>>>> e659c5ec4... Update the graphical modeller documentation to QGIS 3 (#4743)
 About available algorithms
 --------------------------
 
