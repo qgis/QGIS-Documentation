@@ -10,15 +10,16 @@ Raster Properties Dialog
    .. contents::
       :local:
 
-To view and set the properties for a raster layer, double click on the layer name
-in the map legend, or right click on the layer name and choose :guilabel:`Properties`
-from the context menu. This will open the :guilabel:`Raster Layer Properties` dialog.
+To view and set the properties for a raster layer, double click on
+the layer name in the map legend, or right click on the layer name and
+choose :guilabel:`Properties` from the context menu. This will open the
+:guilabel:`Raster Layer Properties` dialog.
 
 There are several tabs in the dialog:
 
 * |metadata| :ref:`Information <raster_information>`
-* |system| :ref:`Source <label_sourcetab>`
-* |symbology| :ref:`Symbology <label_symbology>`
+* |system| :ref:`Source <raster_sourcetab>`
+* |symbology| :ref:`Symbology <raster_symbology>`
 * |transparency| :ref:`Transparency <raster_transparency>`
 * |rasterHistogram| :ref:`Histogram <label_histogram>`
 * |rendering| :ref:`Rendering <raster_rendering>`
@@ -30,63 +31,68 @@ There are several tabs in the dialog:
 
 .. tip:: **Live update rendering**
 
-   The :ref:`layer_styling_panel` provides you with some of the common features
-   of the Layer properties dialog and is a good modeless widget that
-   you can use to speed up the configuration of the layer styles and
-   automatically view your changes in the map canvas.
+   The :ref:`layer_styling_panel` provides you with some of the common
+   features of the Layer properties dialog and is a good modeless
+   widget that you can use to speed up the configuration of the layer
+   styles and view your changes on the map canvas.
 
 .. note::
 
-   Because properties (symbology, label, actions, default values, forms...) of
-   embedded layers (see :ref:`nesting_projects`) are pulled from the original
-   project file and to avoid changes that may break this behavior, the layer
-   properties dialog is made unavailable for these layers.
+   Because properties (symbology, label, actions, default values,
+   forms...) of embedded layers (see :ref:`nesting_projects`) are
+   pulled from the original project file, and to avoid changes that may
+   break this behavior, the layer properties dialog is made unavailable
+   for these layers.
 
 .. _raster_information:
 
 Information Properties
 ======================
 
-The |metadata| :guilabel:`Information` tab is read-only and represents an interesting
-place to quickly grab summarized information and metadata on the current layer.
+The |metadata| :guilabel:`Information` tab is read-only and represents
+an interesting place to quickly grab summarized information and
+metadata for the current layer.
 Provided information are:
 
-* based on the provider of the layer (format of storage, path, data type, extent,
-  width/height, compression, pixel size, statistics on bands, number of columns,
-  rows and no-data values of the raster...);
-* picked from the :ref:`filled metadata <raster_metadata>`: access, links,
-  contacts, history... as well as data information (CRS, Extent, bands...).
+* based on the provider of the layer (format of storage, path, data
+  type, extent, width/height, compression, pixel size, statistics on
+  bands, number of columns, rows and no-data values of the raster...);
+* picked from the :ref:`provided metadata <raster_metadata>`: access,
+  links, contacts, history... as well as dataset information (CRS,
+  Extent, bands...).
 
-
-.. _label_sourcetab:
+.. _raster_sourcetab:
 
 Source Properties
 =================
 
-The |system| :guilabel:`Source` tab displays basic information about the selected
-raster, including:
+The |system| :guilabel:`Source` tab displays basic information about
+the selected raster, including:
 
 * the :guilabel:`Layer name` to display in the :guilabel:`Layers Panel`;
-* setting the :guilabel:`Coordinate Reference System`:
-  Displays the layer's :ref:`Coordinate Reference System (CRS) <layer_crs>`. You
-  can change the layer's CRS, selecting a recently used one in the drop-down list
-  or clicking on |setProjection| :sup:`Select CRS` button (see :ref:`crs_selector`).
-  Use this process only if the CRS applied to the layer is a wrong one or if none
-  was applied. If you wish to reproject your data into another CRS, rather use
-  layer reprojection algorithms from Processing or :ref:`Save it into another
-  layer <general_saveas>`.
+* the :guilabel:`Coordinate Reference System`:
+  Displays the layer's
+  :ref:`Coordinate Reference System (CRS) <layer_crs>`.
+  You can change the layer's CRS, by selecting a recently used one in
+  the drop-down list or clicking on |setProjection| the
+  :sup:`Select CRS` button (see :ref:`crs_selector`).
+  Use this process only if the layer CRS is a wrong or not specified.
+  If you wish to reproject your data, use a reprojection algorithm
+  from Processing or
+  :ref:`Save it as new dataset <general_saveas>`.
 
 .. _figure_raster_properties:
 
 .. figure:: img/rasterPropertiesDialog.png
    :align: center
 
-   Raster Layers - Source Properties Dialog
+   Raster Layer Properties - Source Dialog
 
 
-.. index:: Symbology, Single Band Raster, Three Band Color Raster, Multi Band Raster
+.. index:: Symbology, Single Band Raster, Three Band Color Raster,
+   Multi Band Raster
 
-.. _label_symbology:
+.. _raster_symbology:
 
 Symbology Properties
 ====================
@@ -95,19 +101,22 @@ Band rendering
 --------------
 
 QGIS offers four different :guilabel:`Render types`.
-The renderer chosen is dependent on the data type.
+The choice of renderer depends on the data type.
 
-#. :ref:`Multiband color <multiband_color>` - if the file comes as a multiband with
-   several bands (e.g., used with a satellite image with several bands).
-#. :ref:`Paletted/Unique values <paletted>` - for single band files that come with an
-   indexed palette (e.g., used with a digital topographic map) or for general use of
-   palettes for rendering raster layers.
-#. :ref:`Singleband gray <singleband_gray>` - (one band of) the image will be rendered
-   as gray; QGIS will choose this renderer if the file has neither multibands nor an
-   indexed palette nor a continuous palette (e.g., used with a shaded relief map).
-#. :ref:`Singleband pseudocolor <label_colormaptab>` - this renderer is possible for
-   files with a continuous palette, or color map (e.g., used with an elevation map).
-#. :ref:`Hillshade <hillshade_renderer>` - Creates hillshade from a band.
+#. :ref:`Multiband color <multiband_color>` - if the file comes
+   with several bands (e.g. a satellite image with several bands).
+#. :ref:`Paletted/Unique values <paletted>` - for single band files
+   that come with an indexed palette (e.g. a digital topographic
+   map) or for general use of palettes for rendering raster layers.
+#. :ref:`Singleband gray <singleband_gray>` - (one band of) the
+   image will be rendered as gray.
+   QGIS will choose this renderer if the file is neither multiband
+   nor paletted (e.g. a shaded relief map).
+#. :ref:`Singleband pseudocolor <label_colormaptab>` - this renderer
+   can be used for files with a continuous palette or color map
+   (e.g. an elevation map).
+#. :ref:`Hillshade <hillshade_renderer>` - Creates hillshade from a
+   band.
 
 
 .. _multiband_color:
@@ -115,23 +124,24 @@ The renderer chosen is dependent on the data type.
 Multiband color
 ...............
 
-With the multiband color renderer, three selected bands from the image will be
-rendered, each band representing the red, green or blue component that will be
-used to create a color image. QGIS automatically fetches
-:guilabel:`Min` and :guilabel:`Max` values for each band of the raster and scales
-the coloring accordingly. You can control the value ranges with the help
-of the :ref:`Min/Max Value Settings <minmaxvalues>` section.
+With the multiband color renderer, three selected bands from the image
+will be used as the red, green or blue component of the color image.
+QGIS automatically fetches :guilabel:`Min` and :guilabel:`Max` values
+for each band of the raster and scales the coloring accordingly.
+You can control the value ranges in the
+:ref:`Min/Max Value Settings <minmaxvalues>` section.
 
-A :guilabel:`Contrast enhancement` method can also be applied to the values:
-'No enhancement', 'Stretch to MinMax', 'Stretch and clip to MinMax' and 'Clip to min max'.
+A :guilabel:`Contrast enhancement` method can be applied to the values:
+'No enhancement', 'Stretch to MinMax', 'Stretch and clip to MinMax'
+and 'Clip to min max'.
 
 .. index:: Contrast enhancement
 
 .. note:: **Contrast enhancement**
 
-   When adding GRASS rasters, the option *Contrast enhancement* will always be
-   set automatically to *stretch to min max*, regardless of if this is set to
-   another value in the QGIS general options.
+   When adding GRASS rasters, the option *Contrast enhancement* will
+   always be set automatically to *stretch to min max*, even if this
+   is set to another value in the QGIS general options.
 
 .. _figure_raster_multiband:
 
@@ -143,11 +153,12 @@ A :guilabel:`Contrast enhancement` method can also be applied to the values:
 
 .. tip:: **Viewing a Single Band of a Multiband Raster**
 
-   If you want to view a single band of a multiband
-   image (for example, Red), you might think you would set the Green and Blue
-   bands to :guilabel:`Not Set`. But this is not the correct way. To display the Red band,
-   set the image type to :ref:`Singleband gray <singleband_gray>`, then select Red
-   as the :guilabel:`Gray band` to use.
+   If you want to view a single band of a multiband image (for
+   example, Red), you might think you would set the Green and Blue
+   bands to :guilabel:`Not Set`.
+   But the preferred way of doint this is to set the image type to
+   :ref:`Singleband gray <singleband_gray>`, and then select Red as
+   the :guilabel:`Gray band` to use.
 
 
 .. _paletted:
@@ -155,15 +166,16 @@ A :guilabel:`Contrast enhancement` method can also be applied to the values:
 Paletted/Unique values
 ......................
 
-This is the standard render option for singleband files that already include a
-color table, where each pixel value is assigned to a certain color. In that case,
-the palette is rendered automatically. If you want to change colors assigned to
-certain values, just double-click on the color and the :guilabel:`Select color`
-dialog appears. Also, in QGIS it's possible to assign a label to the color values.
-The label appears in the legend of the raster layer then.
+This is the standard render option for singleband files that include
+a color table, where a certain color is assigned to each pixel value.
+In that case, the palette is rendered automatically.
+If you want to change a color, just double-click on the color and
+the :guilabel:`Select color` dialog appears.
+It is also possible to assign a label to the each color value.
+The label will then appear in the legend of the raster layer.
 
-This option can be used for rendering all raster bands using a palette, assigning
-a color to each unique raster value.
+This option can be used for all kinds of raster bands, assigning a
+color to each unique raster value.
 
 .. _figure_raster_paletted_unique:
 
@@ -178,13 +190,15 @@ a color to each unique raster value.
 Singleband gray
 ...............
 
-This renderer allows you to render a single band layer with a :guilabel:`Color
-gradient`: 'Black to white' or 'White to black'. You can define a range of values
-to color other than the default :guilabel:`Min` and :guilabel:`Max` values of the
-whole raster, thanks to the :ref:`Min/Max Value Settings <minmaxvalues>` option.
+This renderer allows you to render a single band layer with a
+:guilabel:`Color gradient`: 'Black to white' or 'White to black'.
+You can change the range of values to color (:guilabel:`Min` and
+:guilabel:`Max`) in the
+:ref:`Min/Max Value Settings <minmaxvalues>`.
 
-Again, a :guilabel:`Contrast enhancement` method can be applied to the values:
-'No enhancement', 'Stretch to MinMax', 'Stretch and clip to MinMax' and 'Clip to min max'.
+A :guilabel:`Contrast enhancement` method can be applied to the
+values: 'No enhancement', 'Stretch to MinMax', 'Stretch and clip
+to MinMax' and 'Clip to min max'.
 
 .. _figure_raster_gray:
 
@@ -200,8 +214,9 @@ Again, a :guilabel:`Contrast enhancement` method can be applied to the values:
 Singleband pseudocolor
 ......................
 
-This is a render option for single-band files, including a continuous palette.
-You can also create individual color maps for the single bands here.
+This is a render option for single-band file that include a
+continuous palette.
+You can also create color maps for a bands of a multiband raster.
 
 .. _figure_raster_pseudocolor:
 
@@ -211,40 +226,49 @@ You can also create individual color maps for the single bands here.
    Raster Symbology - Singleband pseudocolor rendering
 
 
-Using a :guilabel:`Band` of the layer and a :ref:`values range <minmaxvalues>`,
-three types of color :guilabel:`Interpolation` are available:
+Using a :guilabel:`Band` of the layer and a
+:ref:`values range <minmaxvalues>`, three types of color
+:guilabel:`Interpolation` are available:
 
-* Discrete (a <= symbol appears in the value column)
+* Discrete (a ``<=`` symbol appears in the header of the
+  :guilabel:`Value` column)
 * Linear
-* Exact (an equal symbol appears in the Value column)
+* Exact (an ``=`` symbol appears in the header of the
+  :guilabel:`Value` column)
 
-The :guilabel:`Color ramp` drop down list lists the color ramp in your QGIS. You
-can add a new one, edit or save the one you changed. The name of the color ramp
-will be saved in the configuration and in the QML files.
+The :guilabel:`Color ramp` drop down lists the available color ramps.
+You can create a new one and edit or save the currently selected one.
+The name of the color ramp will be saved in the configuration and in
+the QML file.
 
-The :guilabel:`Label unit suffix` is a label added after the value in the
-legend.
+The :guilabel:`Label unit suffix` is a label added after the value in
+the legend.
 
-For the classification :guilabel:`Mode` |selectString| 'Equal interval', you
-only need to select the :guilabel:`number of classes` |selectNumber| and press
-the button :guilabel:`Classify`.
-In the case of the :guilabel:`Mode` |selectString| 'Continuous', QGIS creates
-classes automatically depending on the :guilabel:`Min` and :guilabel:`Max`.
+For classification :guilabel:`Mode` |selectString| 'Equal interval',
+you only need to select the :guilabel:`number of classes`
+|selectNumber| and press the button :guilabel:`Classify`.
+For :guilabel:`Mode` |selectString| 'Continuous', QGIS creates
+classes automatically depending on :guilabel:`Min` and
+:guilabel:`Max`.
 
 The button |signPlus| :sup:`Add values manually` adds a value
-to the individual color table. The button |signMinus| :sup:`Remove selected row`
-deletes a value from the individual color table. Double clicking on the value column
-lets you insert a specific value. Double clicking on the color column opens the dialog
-:guilabel:`Change color`, where you can select a color to apply on that value.
-Further, you can also add labels for each color, but this value won't be displayed
-when you use the identify feature tool.
+to the table.
+The button |signMinus| :sup:`Remove selected row` deletes a value from
+the table.
+Double clicking in the :guilabel:`Value` column lets you insert a
+specific value.
+Double clicking in the :guilabel:`Color` column opens the dialog
+:guilabel:`Change color`, where you can select a color to apply for
+that value.
+Further, you can also add labels for each color, but this value won't
+be displayed when you use the identify feature tool.
 
-You can use the buttons |fileOpen| :sup:`Load color map from file` or |fileSaveAs|
-:sup:`Export color map to file` to load an existing color table or to save the
-defined color table for other sessions.
+You can use the buttons |fileOpen| :sup:`Load color map from file`
+or |fileSaveAs| :sup:`Export color map to file` to load an existing
+color table or to save the color table for later use.
 
-The |checkbox| :guilabel:`Clip out of range values` allows QGIS to not render pixel
-greater than the :guilabel:`Max` value.
+The |checkbox| :guilabel:`Clip out of range values` allows QGIS to
+not render pixel greater than the :guilabel:`Max` value.
 
 
 .. index:: Hillshade
@@ -528,6 +552,13 @@ The |editMetadata| :guilabel:`Metadata` tab provides you with options to create
 and edit a metadata report on your layer. See :ref:`vector layer metadata
 properties <vectormetadatamenu>` for more information.
 
+.. _figure_raster_metadata:
+
+.. figure:: img/rasterMetadata.png
+   :align: center
+
+   Raster Metadata
+
 
 .. index:: Legend, Embedded widget
 .. _raster_legend:
@@ -544,6 +575,13 @@ By default, QGIS provides transparency widget but this can be extended by
 plugins registering their own widgets and assign custom actions to layers
 they manage.
 
+.. _figure_raster_legend:
+
+.. figure:: img/rasterLegend.png
+   :align: center
+
+   Raster Legend
+
 
 .. index:: QGIS Server
 .. _raster_server:
@@ -559,9 +597,9 @@ In :guilabel:`Properties`, statistics are gathered on a 'need to know'
 basis, so it may well be that a given layer's statistics have not yet been
 collected.
 
-.. _figure_raster_metadata:
+.. _figure_raster_server:
 
-.. figure:: img/rasterMetadata.png
+.. figure:: img/rasterServer.png
    :align: center
 
    QGIS Server in Raster Properties
