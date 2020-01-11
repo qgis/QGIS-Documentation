@@ -215,11 +215,6 @@ flow direction and slope associated with the lowest point of the pit.
 Parameters
 ..........
 
-``Pit Filled Elevation Grid`` [raster]
-  A grid of elevation values. This is usually the output of the
-  **"Pit Remove"** tool, in which case it is elevations with pits removed.
-
-
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
