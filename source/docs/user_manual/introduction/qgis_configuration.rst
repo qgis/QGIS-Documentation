@@ -915,7 +915,7 @@ Configurations can be shared by copying this file to other installations.
 From within QGIS, the :guilabel:`Advanced` tab offers a way to manage these
 settings through the :guilabel:`Advanced Settings Editor`.
 After you promise to be careful, the widget is populated with a tree of all
-the existing settings, whose value you can directly edit.
+the existing settings, and you can edit their value.
 Right-click over a setting or a group and you can delete it
 (to add a setting or group, you have to edit the :file:`QGIS3.ini` file).
 Changes are automatically saved in the :file:`QGIS3.ini` file.
