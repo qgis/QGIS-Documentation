@@ -245,10 +245,9 @@ In this group, you can control whether reprojecting layers to another CRS should
 
    CRS Settings in QGIS
 
-* |unchecked| :guilabel:`Planimetric measurements`: Set to ``None/Planimetric``
-  (under :menuselection:`Project --> Properties --> CRS`) the ellipsoid
-  associated to the default CRS for new projects, resulting in
-  cartesian measurements.
+* |unchecked| :guilabel:`Planimetric measurements`: sets the default for the
+  "planimetric measurements" property for newly created projects.
+
 
 .. _datasources_options:
 
