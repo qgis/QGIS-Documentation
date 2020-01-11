@@ -289,11 +289,14 @@ Render a band of the raster layer using hillshading.
 Options:
 
 * :guilabel:`Band`: The raster band to use.
-* :guilabel:`Altitude`: The elevation angle of the light source (default is ``45°``).
-* :guilabel:`Azimuth`: The azimuth of the light source (default is ``315°``).
-* :guilabel:`Z Factor`: Scaling factor for the values of the raster band (default is ``1``).
-* |checkbox| :guilabel:`Multidirectional`: Specify if multidirectional hillshading
-  is to be used (default is ``off``).
+* :guilabel:`Altitude`: The elevation angle of the light source
+  (default is ``45°``).
+* :guilabel:`Azimuth`: The azimuth of the light source (default is
+  ``315°``).
+* :guilabel:`Z Factor`: Scaling factor for the values of the raster
+  band (default is ``1``).
+* |checkbox| :guilabel:`Multidirectional`: Specify if multidirectional
+  hillshading is to be used (default is ``off``).
 
 
 .. _minmaxvalues:
@@ -301,10 +304,12 @@ Options:
 Setting the min and max values
 ..............................
 
-By default, QGIS reports the :guilabel:`Min` and :guilabel:`Max` values of
-the band(s) of the raster. A few very low and/or high values can have a
-negative impact on the rendering of the raster. The :guilabel:`Min/Max Value
-Settings` frame helps you control the values to render.
+By default, QGIS reports the :guilabel:`Min` and :guilabel:`Max`
+values of the band(s) of the raster.
+A few very low and/or high values can have a negative impact on the
+rendering of the raster.
+The :guilabel:`Min/Max Value Settings` frame helps you control the
+rendering.
 
 .. _figure_raster_minmaxvalues:
 
@@ -317,48 +322,57 @@ Settings` frame helps you control the values to render.
 Available options are:
 
 * |radioButtonOff| :guilabel:`User defined`: The default
-  :guilabel:`Min` and :guilabel:`Max` values of the band(s) can be overridden
+  :guilabel:`Min` and :guilabel:`Max` values of the band(s) can be
+  overridden
 * |radioButtonOff| :guilabel:`Cumulative count cut`: Removes outliers.
-  The standard range of values is ``2%`` to ``98%``, but can
+  The standard range of values is ``2%`` to ``98%``, but it can
   be adapted manually.
-* |radioButtonOn| :guilabel:`Min/max`: Uses the whole range of values in the image band.
-* |radioButtonOff| :guilabel:`Mean +/- standard deviation x`: Creates a color
-  table that only considers values within the standard deviation or within multiple
-  standard deviations. This is useful when you have one or two cells with abnormally
-  high values in a raster grid that are having a negative impact on the rendering
-  of the raster.
+* |radioButtonOn| :guilabel:`Min / max`: Uses the whole range of
+  values in the image band.
+* |radioButtonOff| :guilabel:`Mean +/- standard deviation x`: Creates
+  a color table that only considers values within the standard
+  deviation or within multiple standard deviations.
+  This is useful when you have one or two cells with abnormally
+  high values in a raster layer that impact the rendering of the
+  raster negatively.
 
-Calculations of the min and max values of the bands are made based on the:
+Calculations of the min and max values of the bands are made based
+on the:
 
 * :guilabel:`Statistics extent`: it can be :guilabel:`Whole raster`,
   :guilabel:`Current canvas` or :guilabel:`Updated canvas`
-* and the :guilabel:`Accuracy`, which can be either :guilabel:`Estimate (faster)`
-  or :guilabel:`Actual (slower)`.
+* :guilabel:`Accuracy`, which can be either
+  :guilabel:`Estimate (faster)` or :guilabel:`Actual (slower)`.
 
-.. note:: For some settings, you may need to press the :guilabel:`Apply` button of
-  the layer properties dialog in order to display the actual min and max values
-  in the widgets.
+.. note:: For some settings, you may need to press the
+  :guilabel:`Apply` button of the layer properties dialog in order
+  to display the actual min and max values in the widgets.
 
 
 Color rendering
 ---------------
 
-For every :guilabel:`Band rendering`, a :guilabel:`Color rendering` is possible.
+For all kinds of :guilabel:`Band rendering`, the
+:guilabel:`Color rendering` set.
 
-You can also achieve special rendering effects for your raster file(s) using one
-of the blending modes (see :ref:`blend-modes`).
+You can achieve special rendering effects for your raster file(s)
+by using one of the blending modes (see :ref:`blend-modes`).
 
-Further settings can be made in modifying the :guilabel:`Brightness`, the
-:guilabel:`Saturation` and the :guilabel:`Contrast`. You can also use a :guilabel:`Grayscale`
-option, where you can choose between 'By lightness', 'By luminosity' and 'By average'.
-For one hue in the color table, you can modify the 'Strength'.
+Further settings can be made by modifying the :guilabel:`Brightness`,
+:guilabel:`Saturation` and :guilabel:`Contrast`.
+You can also use a :guilabel:`Grayscale` option, where you can choose
+between 'Off', 'By lightness', 'By luminosity' and 'By average'.
+For one :guilabel:`Hue` in the color table, you can modify the
+'Strength'.
 
 Resampling
 ----------
 
-The :guilabel:`Resampling` option makes its appearance when you zoom in and out of an
-image. Resampling modes can optimize the appearance of the map. They calculate a new gray value
-matrix through a geometric transformation.
+The :guilabel:`Resampling` option has effect when you zoom in and out
+of an image.
+Resampling modes can optimize the appearance of the map.
+They calculate a new gray value matrix through a geometric
+transformation.
 
 .. _figure_raster_resampling:
 
@@ -368,14 +382,17 @@ matrix through a geometric transformation.
    Raster Symbology - Color rendering and Resampling settings
 
 
-When applying the 'Nearest neighbour' method, the map can have a pixelated
-structure when zooming in. This appearance can be improved by using the
-'Bilinear' or 'Cubic' method, which cause sharp features to be blurred.
-The effect is a smoother image. This method can be applied, for instance,
-to digital topographic raster maps.
+When applying the 'Nearest neighbour' method, the map can get a
+pixelated structure when zooming in.
+This appearance can be improved by using the 'Bilinear' or 'Cubic'
+method, which cause sharp edges to be blurred.
+The effect is a smoother image.
+This method can be applied to for instance digital topographic
+raster maps.
 
-At the bottom of the :guilabel:`Symbology` tab, you can see a thumbnail of the layer,
-its legend symbol, and the palette.
+At the bottom of the :guilabel:`Symbology` tab, you can see a
+thumbnail of the layer, its legend symbol, and the palette.
+
 
 .. index:: Transparency
 .. _raster_transparency:
@@ -383,12 +400,14 @@ its legend symbol, and the palette.
 Transparency Properties
 =======================
 
-|transparency| QGIS has the ability to display each raster layer at a different transparency level.
-Use the transparency slider |slider| to indicate to what extent the underlying layers
-(if any) should be visible through the current raster layer. This is very useful
-if you like to overlay more than one raster layer (e.g., a shaded relief map
-overlayed by a classified raster map). This will make the look of the map more
-three dimensional.
+|transparency| QGIS has the ability to set the transparency level
+of a raster layer.
+Use the transparency slider |slider| to set to what extent the
+underlying layers (if any) should be visible through the current
+raster layer.
+This is very useful if you overlay raster layers (e.g., a shaded
+relief map overlayed by a classified raster map).
+This will make the look of the map more three dimensional.
 
 .. _figure_raster_transparency:
 
@@ -397,31 +416,34 @@ three dimensional.
 
    Raster Transparency
 
-Additionally, you can enter a raster value that should be treated as *NODATA* in
-the :guilabel:`Additional no data value` option.
+Additionally, you can enter a raster value that should be treated as
+an additional *NODATA* value in :guilabel:`Additional no data value`.
 
-An even more flexible way to customize the transparency can be done in the
-:guilabel:`Custom transparency options` section:
+An even more flexible way to customize the transparency is available
+in the :guilabel:`Custom transparency options` section:
 
-* Use :guilabel:`Transparency band` to apply transparency on an entire band.
-* Provide a list of pixels to make transparent with the corresponding level of
-  transparency:
+* Use :guilabel:`Transparency band` to apply transparency for an entire
+  band.
+* Provide a list of pixels to make transparent with corresponding
+  levels of transparency:
 
-  #. Click the |signPlus| :sup:`Add values manually` button. A new row will
-     appear in the pixel list.
-  #. Enter the **Red**, **Green** and **Blue** values of the pixel and adjust
-     the **Percent Transparent** to apply.
-  #. Alternatively, you can directly fetch the pixel values directly from the
-     raster using the |contextHelp| :sup:`Add values from display` button.
+  #. Click the |signPlus| :sup:`Add values manually` button.
+     A new row will appear in the pixel list.
+  #. Enter the **Red**, **Green** and **Blue** values of the pixel and
+     adjust the **Percent Transparent** to apply.
+  #. Alternatively, you can fetch the pixel values directly from the
+     raster using the |contextHelp| :sup:`Add values from display`
+     button.
      Then enter the transparency value.
   #. Repeat the steps to adjust more values with custom transparency.
   #. Press the :guilabel:`Apply` button and have a look at the map.
 
-  As you can see, it is quite easy to set custom transparency, but it can be
-  quite a lot of work. Therefore, you can use the button |fileSave|
-  :sup:`Export to file` to save your transparency list to a file. The button
-  |fileOpen| :sup:`Import from file` loads your transparency settings and
-  applies them to the current raster layer.
+  As you can see, it is quite easy to set custom transparency, but
+  it can be quite a lot of work.
+  Therefore, you can use the button |fileSave| :sup:`Export to file`
+  to save your transparency list to a file.
+  The button |fileOpen| :sup:`Import from file` loads your transparency
+  settings and applies them to the current raster layer.
 
 
 .. index:: Histogram
@@ -430,23 +452,28 @@ An even more flexible way to customize the transparency can be done in the
 Histogram Properties
 ====================
 
-The |rasterHistogram| :guilabel:`Histogram` tab allows you to view the distribution
-of the bands or colors in your raster. The histogram is generated when you press the
-:guilabel:`Compute Histogram` button. All existing bands will be displayed together.
+The |rasterHistogram| :guilabel:`Histogram` tab allows you to view
+the distribution of the values in your raster.
+The histogram is generated when you press the
+:guilabel:`Compute Histogram` button.
+All existing bands will be displayed together.
 You can save the histogram as an image with the |fileSave| button.
 
-At the bottom of the histogram, you can select a raster band in the drop-down
-menu and :guilabel:`Set min/max style for` it.
-The |actionRun| :guilabel:`Prefs/Actions` drop-down menu gives you advanced
-options to customize the histogram:
+At the bottom of the histogram, you can select a raster band in the
+drop-down menu and :guilabel:`Set min/max style for` it.
+The |actionRun| :guilabel:`Prefs/Actions` drop-down menu gives you
+advanced options to customize the histogram:
 
-* With the :guilabel:`Visibility` option, you can display histograms of the individual
-  bands. You will need to select the option |radioButtonOff| :guilabel:`Show selected
-  band`.
-* The :guilabel:`Min/max options` allow you to 'Always show min/max markers', to 'Zoom
-  to min/max' and to 'Update style to min/max'.
-* The :guilabel:`Actions` option allows you to 'Reset' or 'Recompute histogram' after
-  you changed the min or max values of the band(s).
+* With the :guilabel:`Visibility` option, you can display histograms
+  for individual bands.
+  You will need to select the option |radioButtonOff|
+  :guilabel:`Show selected band`.
+* The :guilabel:`Min/max options` allow you to
+  'Always show min/max markers', to 'Zoom to min/max' and to
+  'Update style to min/max'.
+* The :guilabel:`Actions` option allows you to 'Reset' or
+  'Recompute histogram' after you have changed the min or max values
+  of the band(s).
 
 .. _figure_raster_histogram:
 
@@ -464,23 +491,25 @@ Rendering Properties
 
 In the |rendering| :guilabel:`Rendering` tab, it's possible to:
 
-* apply a :guilabel:`Scale dependent visibility` to the layer:
-  You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum
-  (exclusive)` scale, defining a range of scale in which the layer will be
-  visible. Out of this range, it's hidden. The |mapIdentification|
-  :sup:`Set to current canvas scale` button helps you use the current map
-  canvas scale as boundary of the range visibility.
+* set :guilabel:`Scale dependent visibility` for the layer:
+  You can set the :guilabel:`Maximum (inclusive)` and
+  :guilabel:`Minimum (exclusive)` scale, defining a range of scales in
+  which the layer will be visible.
+  It will be hidden outside this range.
+  The |mapIdentification| :sup:`Set to current canvas scale` button
+  helps you use the current map canvas scale as a boundary.
   See :ref:`label_scaledepend` for more information.
-* :guilabel:`Refresh layer at interval (seconds)`: set a timer to automatically
-  refresh individual layers at a matching interval. Canvas updates are
-  deferred in order to avoid refreshing multiple times if more than one layer
-  has an auto update interval set.
+* :guilabel:`Refresh layer at interval (seconds)`: set a timer to
+  automatically refresh individual layers.
+  Canvas updates are deferred in order to avoid refreshing multiple
+  times if more than one layer has an auto update interval set.
 
 You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum
-(exclusive)` scale, defining a range of scale in which the layer will be
-visible. Out of this range, it's hidden. The |mapIdentification|
-:sup:`Set to current canvas scale` button helps you use the current map
-canvas scale as boundary of the range visibility.
+(exclusive)` scale, defining a range of scales in which the layer will
+be visible.
+It will be hidden outside this range.
+The |mapIdentification| :sup:`Set to current canvas scale` button helps
+you use the current map canvas scale as boundary of.
 See :ref:`label_scaledepend` for more information.
 
 .. _figure_raster_rendering:
@@ -497,31 +526,34 @@ See :ref:`label_scaledepend` for more information.
 Pyramids Properties
 ===================
 
-Large resolution raster layers can slow navigation in QGIS. By creating lower
-resolution copies of the data (pyramids), performance can be considerably
-improved, as QGIS selects the most suitable resolution to use depending on the
-level of zoom.
+High resolution raster layers can slow navigation in QGIS.
+By creating lower resolution copies of the data (pyramids),
+performance can be considerably improved, as QGIS selects the most
+suitable resolution to use depending on the zoom level.
 
-You must have write access in the directory where the original data is stored
-to build pyramids.
+You must have write access in the directory where the original data
+is stored to build pyramids.
 
-From the :guilabel:`Resolutions` list, select resolutions for which you want to
-create pyramid by clicking on them.
+From the :guilabel:`Resolutions` list, select resolutions at which
+you want to create pyramid levels by clicking on them.
 
-If you choose **Internal (if possible)** from the :guilabel:`Overview format`
-drop-down menu, QGIS tries to build pyramids internally.
+If you choose **Internal (if possible)** from the
+:guilabel:`Overview format` drop-down menu, QGIS tries to build
+pyramids internally.
 
 .. note::
 
-   Please note that building pyramids may alter the original data file, and once
-   created they cannot be removed. If you wish to preserve a 'non-pyramided'
-   version of your raster, make a backup copy prior to building pyramids.
+   Please note that building pyramids may alter the original data
+   file, and once created they cannot be removed.
+   If you wish to preserve a 'non-pyramided' version of your raster,
+   make a backup copy prior to pyramid building.
 
-If you choose **External** and **External (Erdas Imagine)** the pyramids will
-be created in a file next to the original raster with the same name and a
-:file:`.ovr` extension.
+If you choose **External** and **External (Erdas Imagine)** the
+pyramids will be created in a file next to the original raster with
+the same name and a :file:`.ovr` extension.
 
-Several :guilabel:`Resampling methods` can be used to calculate the pyramids:
+Several :guilabel:`Resampling methods` can be used for pyramid
+calculation:
 
 * Nearest Neighbour
 * Average
@@ -548,9 +580,10 @@ Finally, click :guilabel:`Build Pyramids` to start the process.
 Metadata Properties
 ===================
 
-The |editMetadata| :guilabel:`Metadata` tab provides you with options to create
-and edit a metadata report on your layer. See :ref:`vector layer metadata
-properties <vectormetadatamenu>` for more information.
+The |editMetadata| :guilabel:`Metadata` tab provides you with options
+to create and edit a metadata report on your layer.
+See :ref:`vector layer metadata properties <vectormetadatamenu>` for
+more information.
 
 .. _figure_raster_metadata:
 
@@ -566,14 +599,15 @@ properties <vectormetadatamenu>` for more information.
 Legend Properties
 =================
 
-The |legend| :guilabel:`Legend` tab provides you with a list of widgets you can
-embed within the layer tree in the Layers panel. The idea is to have a way to
-quickly access some actions that are often used with the layer (setup
-transparency, filtering, selection, style or other stuff...).
+The |legend| :guilabel:`Legend` tab provides you with a list of
+widgets you can embed within the layer tree in the Layers panel.
+The idea is to have a way to quickly access some actions that are
+often used with the layer (setup transparency, filtering, selection,
+style or other stuff...).
 
-By default, QGIS provides transparency widget but this can be extended by
-plugins registering their own widgets and assign custom actions to layers
-they manage.
+By default, QGIS provides a transparency widget but this can be
+extended by plugins that register their own widgets and assign
+custom actions to layers they manage.
 
 .. _figure_raster_legend:
 
@@ -589,13 +623,9 @@ they manage.
 QGIS Server Properties
 ======================
 
-The |overlay| :guilabel:`QGIS Server` tab displays a wealth of information about
-the raster layer, including statistics about each band in the current raster layer.
-From this tab, entries may be made for the :guilabel:`Description`,
-:guilabel:`Attribution`, :guilabel:`MetadataUrl` and :guilabel:`Properties`.
-In :guilabel:`Properties`, statistics are gathered on a 'need to know'
-basis, so it may well be that a given layer's statistics have not yet been
-collected.
+From the |overlay| :guilabel:`QGIS Server` tab, information can
+be provided for :guilabel:`Description`, :guilabel:`Attribution`,
+:guilabel:`MetadataUrl` and :guilabel:`Properties`.
 
 .. _figure_raster_server:
 
