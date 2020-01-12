@@ -1424,7 +1424,7 @@ to select the matching features. The drop-down options are:
 
 * :guilabel:`Select features`
 * :guilabel:`Add to current selection`
-* :guilabel:`Remove from current current selection`
+* :guilabel:`Remove from current selection`
 * :guilabel:`Filter current selection`
 
 You can also clear all search options using the :guilabel:`Reset form` button.
