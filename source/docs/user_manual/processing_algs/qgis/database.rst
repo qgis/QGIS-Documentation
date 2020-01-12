@@ -277,9 +277,7 @@ Parameters
      - If the specified GeoPackage exists, setting this option to
        ``True`` will make sure that it is deleted and a new one
        will be created before the layers are added.
-       If this option is ``False`` and the GeoPackage exists, it
-       will still be deleted and a new one will be created before
-       the layers are appended!
+       If set to ``False``, layers will be appended to the GeoPackage.
    * - **Save layer styles into GeoPackage** |38|
      - SAVE_STYLES
      - [boolean]
