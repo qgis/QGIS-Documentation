@@ -11,8 +11,8 @@ QGIS Configuration
 QGIS is highly configurable. Through the :menuselection:`Settings` menu, it
 provides different tools to:
 
-* |styleManager| :guilabel:`Style Manager...`: create and manage :ref:`symbols and
-  color ramps <vector_style_manager>`.
+* |styleManager| :guilabel:`Style Manager...`: create and manage :ref:`symbols,
+  styles and color ramps <vector_style_manager>`.
 * |customProjection| :guilabel:`Custom Projections...`: create your own
   :ref:`coordinate reference systems <sec_custom_projections>`.
 * |keyboardShortcuts| :guilabel:`Keyboard Shortcuts...`: define your own set of
@@ -1227,7 +1227,7 @@ In the :guilabel:`Data Sources` tab, you can:
 .. figure:: img/project_datasources.png
    :align: center
 
-   Relations tab
+   Data Sources tab
 
 Relations Properties
 --------------------
