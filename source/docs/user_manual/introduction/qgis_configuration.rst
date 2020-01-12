@@ -11,21 +11,21 @@ QGIS Configuration
 QGIS is highly configurable. Through the :menuselection:`Settings` menu, it
 provides different tools to:
 
-* |options| :guilabel:`Options...`: set global :ref:`options <gui_options>` to
-  apply in different areas of the software. These preferences are saved in the
-  active :ref:`User profile <user_profiles>` settings and applied by default
-  whenever you open a new project with this profile.
+* |styleManager| :guilabel:`Style Manager...`: create and manage :ref:`symbols and
+  color ramps <vector_style_manager>`.
+* |customProjection| :guilabel:`Custom Projections...`: create your own
+  :ref:`coordinate reference systems <sec_custom_projections>`.
+* |keyboardShortcuts| :guilabel:`Keyboard Shortcuts...`: define your own set of
+  :ref:`keyboard shortcuts <shortcuts>`.
   Also, they can be overridden during each QGIS session by the :ref:`project
   properties <project_properties>` (accessible under :menuselection:`Project` menu).
 * |interfaceCustomization| :guilabel:`Interface Customization...`: configure the
   :ref:`application interface <sec_customization>`, hiding dialogs or tools you may
   not need.
-* |keyboardShortcuts| :guilabel:`Keyboard Shortcuts...`: define your own set of
-  :ref:`keyboard shortcuts <shortcuts>`.
-* |styleManager| :guilabel:`Style Manager...`: create and manage :ref:`symbols and
-  color ramps <vector_style_manager>`.
-* |customProjection| :guilabel:`Custom Projections...`: create your own
-  :ref:`coordinate reference systems <sec_custom_projections>`.
+* |options| :guilabel:`Options...`: set global :ref:`options <gui_options>` to
+  apply in different areas of the software. These preferences are saved in the
+  active :ref:`User profile <user_profiles>` settings and applied by default
+  whenever you open a new project with this profile.
 
 
 .. index:: Options, Configuration
