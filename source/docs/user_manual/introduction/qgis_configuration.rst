@@ -11,21 +11,21 @@ QGIS Configuration
 QGIS is highly configurable. Through the :menuselection:`Settings` menu, it
 provides different tools to:
 
-* |options| :guilabel:`Options...`: set global :ref:`options <gui_options>` to
-  apply in different areas of the software. These preferences are saved in the
-  active :ref:`User profile <user_profiles>` settings and applied by default
-  whenever you open a new project with this profile.
+* |styleManager| :guilabel:`Style Manager...`: create and manage :ref:`symbols,
+  styles and color ramps <vector_style_manager>`.
+* |customProjection| :guilabel:`Custom Projections...`: create your own
+  :ref:`coordinate reference systems <sec_custom_projections>`.
+* |keyboardShortcuts| :guilabel:`Keyboard Shortcuts...`: define your own set of
+  :ref:`keyboard shortcuts <shortcuts>`.
   Also, they can be overridden during each QGIS session by the :ref:`project
   properties <project_properties>` (accessible under :menuselection:`Project` menu).
 * |interfaceCustomization| :guilabel:`Interface Customization...`: configure the
   :ref:`application interface <sec_customization>`, hiding dialogs or tools you may
   not need.
-* |keyboardShortcuts| :guilabel:`Keyboard Shortcuts...`: define your own set of
-  :ref:`keyboard shortcuts <shortcuts>`.
-* |styleManager| :guilabel:`Style Manager...`: create and manage :ref:`symbols and
-  color ramps <vector_style_manager>`.
-* |customProjection| :guilabel:`Custom Projections...`: create your own
-  :ref:`coordinate reference systems <sec_custom_projections>`.
+* |options| :guilabel:`Options...`: set global :ref:`options <gui_options>` to
+  apply in different areas of the software. These preferences are saved in the
+  active :ref:`User profile <user_profiles>` settings and applied by default
+  whenever you open a new project with this profile.
 
 
 .. index:: Options, Configuration
@@ -924,6 +924,17 @@ the widget is populated with a tree of all QGIS settings, which you can directly
 
    Advanced Settings tab in QGIS
 
+Acceleration Settings
+---------------------
+OpenCL acceleration settings.
+
+.. _figure_acceleration_settings:
+
+.. figure:: img/acceleration_menu.png
+   :align: center
+
+   Acceleration tab
+
 
 Processing Settings
 -------------------
@@ -1066,7 +1077,7 @@ the global predefined scales.
 .. figure:: img/project_general.png
    :align: center
 
-   General tab of Project Properties dialog
+   General tab of the Project Properties dialog
 
 .. _project_metadata:
 
@@ -1211,6 +1222,13 @@ In the :guilabel:`Data Sources` tab, you can:
   * |search| :guilabel:`Filter layers...` and quickly find a particular layer to
     configure.
 
+.. _figure_datasources_tab:
+
+.. figure:: img/project_datasources.png
+   :align: center
+
+   Data Sources tab
+
 Relations Properties
 --------------------
 
@@ -1220,6 +1238,13 @@ a new user interface element in the form view (e.g. when identifying a feature
 and opening its form) will list the related entities. This provides a powerful
 way to express e.g. the inspection history on a length of pipeline or road segment.
 You can find out more about 1:n relations support in Section :ref:`vector_relations`.
+
+.. _figure_relations_tab:
+
+.. figure:: img/project_relations.png
+   :align: center
+
+   Relations tab
 
 Variables Properties
 --------------------
@@ -1254,6 +1279,14 @@ The tab :guilabel:`QGIS Server` allows you to configure your project in order
 to publish it online. Here you can define information about the QGIS
 Server WMS and WFS capabilities, extent and CRS restrictions. More information
 available in section :ref:`Creatingwmsfromproject` and subsequent.
+
+
+.. _figure_qgisserver_tab:
+
+.. figure:: img/project_qgisserver.png
+   :align: center
+
+   QGIS Server settings tab
 
 .. index:: Customization
 .. _sec_customization:
