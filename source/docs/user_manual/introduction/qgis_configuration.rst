@@ -250,6 +250,10 @@ In this group, you can control whether reprojecting layers to another CRS should
     See :ref:`datum_transformation` for more details.
 
 
+* |unchecked| :guilabel:`Planimetric measurements`: sets the default for the
+  "planimetric measurements" property for newly created projects.
+
+
 .. _datasources_options:
 
 Data Sources Settings
