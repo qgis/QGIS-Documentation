@@ -581,6 +581,12 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |centroids| image:: /static/common/centroids.png
    :width: 1.5em
+.. |changeLabelProperties| image:: /static/common/mActionChangeLabelProperties.png
+   :width: 1.5em
+.. |checkGeometry| image:: /static/common/check_geometry.png
+   :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
 .. |circle2Points| image:: /static/common/mActionCircle2Points.png
    :width: 1.5em
 .. |circle2TangentsPoint| image:: /static/common/mActionCircle2TangentsPoint.png
@@ -593,12 +599,6 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |circleExtent| image:: /static/common/mActionCircleExtent.png
    :width: 1.5em
-.. |changeLabelProperties| image:: /static/common/mActionChangeLabelProperties.png
-   :width: 1.5em
-.. |checkGeometry| image:: /static/common/check_geometry.png
-   :width: 1.5em
-.. |checkbox| image:: /static/common/checkbox.png
-   :width: 1.3em
 .. |circularStringCurvePoint| image:: /static/common/mActionCircularStringCurvePoint.png
    :width: 1.5em
 .. |circularStringRadius| image:: /static/common/mActionCircularStringRadius.png
