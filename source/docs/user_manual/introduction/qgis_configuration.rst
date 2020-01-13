@@ -903,17 +903,26 @@ if a very slow search filter is present (e.g. one which uses an online service).
 Advanced Settings
 -----------------
 
-Depending on your OS, all the settings related to QGIS (UI, tools, data providers,
-default values, plugins options...) are saved:
+.. _figure_advanced_settings:
 
-* |nix| in a text file: :file:`$HOME/.config/QGIS/QGIS2.conf`
-* |osx| in the properties list file: :file:`$HOME/Library/Preferences/org.qgis.qgis.plist`
-* |win| in the registry under: ``HKEY\CURRENT_USER\Software\QGIS\qgis``
+.. figure:: img/options_advanced.png
+   :align: center
 
-The :guilabel:`Advanced` tab offers you in a single place, regardless your OS,
-means to manage these settings through the :guilabel:`Advanced Settings Editor`.
-After you promise to be careful,
-the widget is populated with a tree of all QGIS settings, which you can directly edit.
+   Advanced Settings tab in QGIS
+
+All the settings related to QGIS (UI, tools, data providers, Processing
+configurations, default values and paths, plugins options, expressions,
+geometry checks...) are saved in a :file:`QGIS/QGIS3.ini` file under the active
+:ref:`user profile <user_profiles>` directory.
+Configurations can be shared by copying this file to other installations.
+
+From within QGIS, the :guilabel:`Advanced` tab offers a way to manage these
+settings through the :guilabel:`Advanced Settings Editor`.
+After you promise to be careful, the widget is populated with a tree of all
+the existing settings, and you can edit their value.
+Right-click over a setting or a group and you can delete it
+(to add a setting or group, you have to edit the :file:`QGIS3.ini` file).
+Changes are automatically saved in the :file:`QGIS3.ini` file.
 
 .. warning:: **Avoid using the Advanced tab settings blindly**
 
@@ -921,12 +930,6 @@ the widget is populated with a tree of all QGIS settings, which you can directly
    automatically applied. Doing changes without knowledge can break your
    QGIS installation in various ways.
 
-.. _figure_advanced_settings:
-
-.. figure:: img/options_advanced.png
-   :align: center
-
-   Advanced Settings tab in QGIS
 
 Acceleration Settings
 ---------------------
