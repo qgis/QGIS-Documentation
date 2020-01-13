@@ -1627,8 +1627,7 @@ To edit features in-place:
    If you need to create a new substitution manually,
    please add it also to the substitutions.txt file in the
    source folder.
-.. |reverseLine| image:: /static/common/mActionReverseLine.png
-   :width: 1.5em
+
 .. |addPart| image:: /static/common/mActionAddPart.png
    :width: 1.5em
 .. |addRing| image:: /static/common/mActionAddRing.png
@@ -1714,6 +1713,8 @@ To edit features in-place:
 .. |redo| image:: /static/common/mActionRedo.png
    :width: 1.5em
 .. |reshape| image:: /static/common/mActionReshape.png
+   :width: 1.5em
+.. |reverseLine| image:: /static/common/mActionReverseLine.png
    :width: 1.5em
 .. |rollbackEdits| image:: /static/common/mActionRollbackEdits.png
    :width: 1.5em

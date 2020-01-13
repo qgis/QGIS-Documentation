@@ -1474,6 +1474,15 @@ description and manipulation in :ref:`data_defined` section.
    :align: center
 
    Airports labels are formatted based on their attributes
+   
+.. tip:: **Use the data-defined override to label every part of multi-part features**
+
+   There is an option to set the labeling for multi-part features independently from
+   your label properties. Choose the  |render| :ref:`Rendering <labels_rendering>`,
+   ``Feature options``, go to the |dataDefined| :sup:`Data-define override` button
+   next to the checkbox |unchecked| :guilabel:`Label every part of multipart-features` 
+   and define the labels as described in :ref:`data_defined`.
+   
 
 .. _label_toolbar:
 
