@@ -33,11 +33,11 @@ elements of the QGIS GUI, and are discussed below).
 The main QGIS GUI (:ref:`figure_startup`) consists of five components /
 component types:
 
-#. Menu Bar (:ref:`label_menubar`)
-#. Toolbars (:ref:`sec_panels_and_toolbars`)
-#. Panels (:ref:`sec_panels_and_toolbars`)
-#. Map View (:ref:`label_mapview`)
-#. Status Bar (:ref:`label_statusbar`)
+#. :ref:`Menu Bar <label_menubar>`
+#. :ref:`Toolbars <sec_panels_and_toolbars>`
+#. :ref:`Panels <sec_panels_and_toolbars>`
+#. :ref:`Map View  <label_mapview>`
+#. :ref:`Status Bar <label_statusbar>`
 
 Scroll down for detailed explanations of these.
 
