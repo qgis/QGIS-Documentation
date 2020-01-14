@@ -951,7 +951,7 @@ Plugins
      -
      -
      - :ref:`managing_plugins`
-   * - "|pythonFile| :guilabel:`Python Console`
+   * - |pythonFile| :guilabel:`Python Console`
      - :kbd:`Ctrl+Alt+P`
      - :guilabel:`Plugins`
      - :ref:`console`
