@@ -312,8 +312,7 @@ details).
    * - :menuselection:`Add Rectangle -->`
 
        #. |rectangleExtent| :guilabel:`Add Rectangle from Extent`
-       #. |rectangleCenter| :guilabel:
-         `Add Rectangle from Center and a Point`
+       #. |rectangleCenter| :guilabel:`Add Rectangle from Center and a Point`
        #. |rectangle3PointsProjected|
          :guilabel:`Add Rectangle from 3 Points (Distance from 2nd
          and 3rd point)`
