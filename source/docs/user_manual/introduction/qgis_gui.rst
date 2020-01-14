@@ -874,7 +874,8 @@ copy or paste layer properties (style, scale, CRS...).
    * - :guilabel:`Layer Properties...`
      - 
      - 
-     - :ref:`vector_properties_dialog`
+     - :ref:`vector_properties_dialog`, :ref:`raster_properties_dialog`,
+       :ref:`label_meshproperties`
    * - :guilabel:`Filter...`
      - :kbd:`Ctrl+F`
      - 
