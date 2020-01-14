@@ -2005,13 +2005,13 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |eventBrowser| image:: /static/common/event_browser.png
    :width: 1.5em
+.. |eventId| image:: /static/common/event_id.png
+   :width: 1.5em
 
 .. |expressionSelect| image:: /static/common/mIconExpressionSelect.png
    :width: 1.5em
 
 .. |evisConnect| image:: /static/common/evis_connect.png
-   :width: 1.5em
-.. |evisFile| image:: /static/common/evis_file.png
    :width: 1.5em
 
 .. |extents| image:: /static/common/extents.png
