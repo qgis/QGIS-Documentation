@@ -1184,17 +1184,17 @@ If no database plugins are enabled, there will be no
      - Reference
    * - :guilabel:`eVis...`
 
-     #. eVis Database Connection
-     #. eVis Event If Tool
-     #. evis Event Browser
+       #. eVis Database Connection
+       #. eVis Event If Tool
+       #. evis Event Browser
 
      - :kbd:`Alt+D` + :kbd:`E`
      - :guilabel:`Database`
      - :ref:`evis`
    * - :guilabel:`Offline editing...`
 
-     #. Convert to Offline Project...
-     #. Synchronize
+       #. Convert to Offline Project...
+       #. Synchronize
 
      - :kbd:`Alt+D` + :kbd:`O`
      - :guilabel:`Database`
