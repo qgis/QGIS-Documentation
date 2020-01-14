@@ -1184,17 +1184,17 @@ If no database plugins are enabled, there will be no
      - Reference
    * - :guilabel:`eVis...`
 
-       #. eVis Database Connection
-       #. eVis Event If Tool
-       #. evis Event Browser
+       #. |evisConnect| eVis Database Connection
+       #. |eventId| eVis Event If Tool
+       #. |eventBrowser| evis Event Browser
 
      - :kbd:`Alt+D` + :kbd:`E`
      - :guilabel:`Database`
      - :ref:`evis`
    * - :guilabel:`Offline editing...`
 
-       #. Convert to Offline Project...
-       #. Synchronize
+       #. |offlineEditingCopy| Convert to Offline Project...
+       #. |offlineEditingSync| Synchronize
 
      - :kbd:`Alt+D` + :kbd:`O`
      - :guilabel:`Database`
@@ -2003,9 +2003,17 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |ellipseFoci| image:: /static/common/mActionEllipseFoci.png
    :width: 1.5em
+.. |eventBrowser| image:: /static/common/event_browser.png
+   :width: 1.5em
 
 .. |expressionSelect| image:: /static/common/mIconExpressionSelect.png
    :width: 1.5em
+
+.. |evisConnect| image:: /static/common/evis_connect.png
+   :width: 1.5em
+.. |evisFile| image:: /static/common/evis_file.png
+   :width: 1.5em
+
 .. |extents| image:: /static/common/extents.png
    :width: 1.5em
 .. |fileExit| image:: /static/common/mActionFileExit.png
@@ -2093,6 +2101,13 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |newTableRow| image:: /static/common/mActionNewTableRow.png
    :width: 1.5em
+
+
+.. |offlineEditingCopy| image:: /static/common/offline_editing_copy.png
+   :width: 1.5em
+.. |offlineEditingSync| image:: /static/common/offline_editing_sync.png
+   :width: 1.5em
+
 .. |offsetCurve| image:: /static/common/mActionOffsetCurve.png
    :width: 1.5em
 .. |offsetPointSymbols| image:: /static/common/mActionOffsetPointSymbols.png
