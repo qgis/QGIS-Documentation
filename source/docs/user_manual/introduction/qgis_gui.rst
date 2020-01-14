@@ -951,7 +951,7 @@ Plugins
      -
      -
      - :ref:`managing_plugins`
-   * - |pythonFile| :guilabel:`Python Console`
+   * - "|pythonFile| :guilabel:`Python Console`
      - :kbd:`Ctrl+Alt+P`
      - :guilabel:`Plugins`
      - :ref:`console`
@@ -976,7 +976,6 @@ are enabled.
 
    * - Menu Option
      - Shortcut
-     - Toolbar
      - Reference
    * - :menuselection:`Geoprocessing Tools -->`
 
@@ -991,7 +990,6 @@ are enabled.
        #. Elimintate Selected Polygons...
 
      - :kbd:`Alt+O` + :kbd:`G`
-     -
      - :ref:`processing.options`
    * - :menuselection:`Geometry Tools -->`
 
@@ -1009,7 +1007,6 @@ are enabled.
        #. Voronoi Polygons...
 
      - :kbd:`Alt+O` + :kbd:`E`
-     -
      - :ref:`processing.options`
    * - :menuselection:`Analysis Tools -->`
 
@@ -1023,7 +1020,6 @@ are enabled.
        #. Sum Line Length...
 
      - :kbd:`Alt+O` + :kbd:`A`
-     -
      - :ref:`processing.options`
    * - :menuselection:`Data Management Tools -->`
 
@@ -1034,7 +1030,6 @@ are enabled.
        #. Split Vector Layer...
 
      - :kbd:`Alt+O` + :kbd:`D`
-     -
      - :ref:`processing.options`
    * - :menuselection:`Research Tools -->`
 
@@ -1048,7 +1043,6 @@ are enabled.
        #. Regular Points...
 
      - :kbd:`Alt+O` + :kbd:`R`
-     -
      - :ref:`processing.options`"
 
 .. only:: html
@@ -1216,7 +1210,7 @@ If no web plugins are enabled, there will be no :guilabel:`Web` menu.
      - Shortcut
      - Toolbar
      - Reference
-   * - :menuselection:`MetaSearch -->`
+   * - :menuselection:`MetaSearch -->``
 
        #. |metasearch| Metasearch
        #. Help
