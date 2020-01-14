@@ -1216,7 +1216,7 @@ If no web plugins are enabled, there will be no :guilabel:`Web` menu.
      - Shortcut
      - Toolbar
      - Reference
-   * - :menuselection:`MetaSearch -->``
+   * - :menuselection:`MetaSearch -->`
 
        #. |metasearch| Metasearch
        #. Help
