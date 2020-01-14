@@ -30,15 +30,16 @@ elements of the QGIS GUI, and are discussed below).
    Your window decorations (title bar, etc.) may appear different
    depending on your operating system and window manager.
 
-The QGIS GUI is divided into five components:
+The main QGIS GUI (:ref:`figure_startup`) consists of five components /
+component types:
 
-#. Menu Bar
-#. Toolbars
-#. Panels
-#. Map View
-#. Status Bar
+#. Menu Bar (:ref:`label_menubar`)
+#. Toolbars (:ref:`sec_panels_and_toolbars`)
+#. Panels (:ref:`sec_panels_and_toolbars`)
+#. Map View (:ref:`label_mapview`)
+#. Status Bar (:ref:`label_statusbar`)
 
-Scroll down for detailed explanations of these features.
+Scroll down for detailed explanations of these.
 
 .. index:: Menu
 .. _label_menubar:
@@ -176,7 +177,7 @@ The :menuselection:`Project` menu provides access and exit points for
      - :guilabel:`Project`
      - :ref:`label_printlayout`
    * - |newReport| :guilabel:`New Report...`
-     -
+     - 
      -
      - :ref:`create-reports`
    * - |layoutManager| :guilabel:`Layout Manager...`
