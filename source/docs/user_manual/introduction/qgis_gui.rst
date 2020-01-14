@@ -157,19 +157,19 @@ The :menuselection:`Project` menu provides access and exit points for
      - :ref:`snapping_tolerance`
    * - :menuselection:`Import/Export -->`
 
-       * |saveMapAsImage| :guilabel:`Export Map to Image...`
-       * |saveAsPDF| :guilabel:`Export Map to PDF...`
-       * :guilabel:`Export Project to DXF...`
-       * :guilabel:`Import Layers from DWG/DXF...`
+       # |saveMapAsImage| :guilabel:`Export Map to Image...`
+       # |saveAsPDF| :guilabel:`Export Map to PDF...`
+       # :guilabel:`Export Project to DXF...`
+       # :guilabel:`Import Layers from DWG/DXF...`
 
      -
      -
      - .
 
-       * :ref:`exportingmapcanvas`
-       * :ref:`exportingmapcanvas`
-       * :ref:`create_dxf_files`
-       * :ref:`import_dxfdwg`
+       # :ref:`exportingmapcanvas`
+       # :ref:`exportingmapcanvas`
+       # :ref:`create_dxf_files`
+       # :ref:`import_dxfdwg`
    * - |newLayout| :guilabel:`New Print Layout...`
      - :kbd:`Ctrl+P`
      - :guilabel:`Project`
