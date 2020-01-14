@@ -176,7 +176,7 @@ The :menuselection:`Project` menu provides access and exit points for
      - :guilabel:`Project`
      - :ref:`label_printlayout`
    * - |newReport| :guilabel:`New Report...`
-     - 
+     -
      -
      - :ref:`create-reports`
    * - |layoutManager| :guilabel:`Layout Manager...`
