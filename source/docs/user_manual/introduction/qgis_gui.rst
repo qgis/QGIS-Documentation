@@ -1185,8 +1185,8 @@ If no database plugins are enabled, there will be no
    * - :guilabel:`eVis...`
 
        #. |evisConnect| eVis Database Connection
-       #. |eventId| eVis Event If Tool
-       #. |eventBrowser| evis Event Browser
+       #. |eventId| eVis Event Id Tool
+       #. |eventBrowser| eVis Event Browser
 
      - :kbd:`Alt+D` + :kbd:`E`
      - :guilabel:`Database`
