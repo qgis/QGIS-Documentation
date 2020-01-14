@@ -1170,7 +1170,7 @@ Database
 
 This is what the :guilabel:`Database` menu looks like if all the core
 plugins are enabled.
-If no database plugins are enabled, there will be no
+If no database plugins are enabled, there will be no 
 :guilabel:`Database` menu.
 
 .. list-table::
@@ -1182,6 +1182,23 @@ If no database plugins are enabled, there will be no
      - Shortcut
      - Toolbar
      - Reference
+   * - :guilabel:`eVis...`
+
+     #. eVis Database Connection
+     #. eVis Event If Tool
+     #. evis Event Browser
+
+     - :kbd:`Alt+D` + :kbd:`E`
+     - :guilabel:`Database`
+     - :ref:`evis`
+   * - :guilabel:`Offline editing...`
+
+     #. Convert to Offline Project...
+     #. Synchronize
+
+     - :kbd:`Alt+D` + :kbd:`O`
+     - :guilabel:`Database`
+     - :ref:`offlinedit`
    * - |dbManager| :guilabel:`DB Manager...`
      -
      - :guilabel:`Database`
