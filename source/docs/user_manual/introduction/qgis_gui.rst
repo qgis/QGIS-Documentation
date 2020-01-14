@@ -164,7 +164,7 @@ The :menuselection:`Project` menu provides access and exit points for
 
      -
      -
-     - \
+     - .
 
        * :ref:`exportingmapcanvas`
        * :ref:`exportingmapcanvas`
