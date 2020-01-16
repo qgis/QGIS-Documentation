@@ -3664,8 +3664,7 @@ input layer, using a fixed or dynamic distance and number of rings.
 
 .. seealso:: :ref:`qgisbuffer`,
    :ref:`qgisvariabledistancebuffer`,
-   :ref:`qgisrectanglesovalsdiamondsfixed`,
-   :ref:`qgisrectanglesovalsdiamondsvariable`,
+   :ref:`qgisrectanglesovalsdiamonds`,
    :ref:`qgissinglesidedbuffer`
 
 Parameters
@@ -4642,9 +4641,9 @@ Outputs
      - The output multipart vector layer
 
 
-.. _qgisrectanglesovalsdiamondsfixed:
+.. _qgisrectanglesovalsdiamonds:
 
-Rectangles, ovals, diamonds (fixed)
+Rectangles, ovals, diamonds
 -----------------------------------
 Creates a buffer area for all the features in an input layer with
 different shape choice.
@@ -4655,8 +4654,6 @@ Parameters can vary depending on the shape chosen.
    :align: center
 
    Different buffer shapes
-
-.. seealso:: :ref:`qgisrectanglesovalsdiamondsvariable`
 
 Parameters
 ..........
@@ -4685,13 +4682,13 @@ Parameters
 
    * - **Width**
      - ``WIDTH``
-     - [number]
+     - [number |dataDefined|]
 
        Default: 1.0
      - Width of the buffer shape
    * - **Height**
      - ``HEIGHT``
-     - [number]
+     - [number |dataDefined|]
 
        Default: 1.0
      - Height of the buffer shape
@@ -4699,109 +4696,9 @@ Parameters
 
        Optional
      - ``ROTATION``
-     - [number]
+     - [number |dataDefined|]
 
        Default: None
-     - Rotation of the buffer shape
-   * - **Number of segment**
-     - ``SEGMENTS``
-     - [number]
-
-       Default: 36
-     - Number of segments for a full circle (*Ovals* shape)
-   * - **Output**
-     - ``OUTPUT``
-     - [vector: polygon]
-
-       Default: ``[Create temporary layer]``
-     - Specify the output vector layer. One of:
-
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
-
-       The file encoding can also be changed here.
-
-Outputs
-.......
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-   :stub-columns: 0
-
-   * - Label
-     - Name
-     - Type
-     - Description
-   * - **Output**
-     - ``OUTPUT``
-     - [vector: polygon]
-     - The output vector layer (with the buffer shapes)
-
-
-.. _qgisrectanglesovalsdiamondsvariable:
-
-Rectangles, ovals, diamonds (variable)
---------------------------------------
-Creates a buffer area for all the features in an input layer with
-different shape choice.
-
-Buffer shape parameters are specified through attribute of the input
-layer.
-
-.. figure:: img/rectangles_ovals_diamond_variable.png
-   :align: center
-
-   Different buffer shapes with different parameters
-
-.. seealso:: :ref:`qgisrectanglesovalsdiamondsfixed`
-
-Parameters
-..........
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-   :stub-columns: 0
-
-   * - Label
-     - Name
-     - Type
-     - Description
-   * - **Input layer**
-     - ``INPUT``
-     - [vector: point]
-     - Input point vector layer
-   * - **Buffer shape**
-     - ``SHAPE``
-     - [enumeration]
-
-       Default: 0
-     - The shape to use. One of:
-
-       * 0 --- Rectangles
-       * 1 --- Ovals
-       * 2 --- Diamonds
-
-   * - **Width field**
-     - ``WIDTH``
-     - [tablefield: numeric]
-
-       Default: First
-     - Width of the buffer shape
-   * - **Height field**
-     - ``HEIGHT``
-     - [tablefield: numeric]
-
-       Default: First
-     - Height of the buffer shape
-   * - **Rotation field**
-
-       Optional
-     - ``ROTATION``
-     - [tablefield: numeric]
      - Rotation of the buffer shape
    * - **Number of segment**
      - ``SEGMENTS``
