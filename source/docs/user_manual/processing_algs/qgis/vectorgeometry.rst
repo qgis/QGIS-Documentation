@@ -4645,8 +4645,8 @@ Outputs
 
 Rectangles, ovals, diamonds
 -----------------------------------
-Creates a buffer area for all the features in an input layer with
-different shape choice.
+Creates a buffer area with a rectangle, oval or diamond shape
+for each feature of the input point layer.
 
 Parameters can vary depending on the shape chosen.
 
