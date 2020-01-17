@@ -468,8 +468,8 @@ to define rotation and size scale from specified columns.
 
 Also, analogous to the Categorized Renderer, it allows you to select:
 
-* The attribute (using the Column listbox or the |expression|
-  :sup:`Set column expression` function)
+* The value (using the fields listbox or the |expression|
+  :sup:`Set value expression` function)
 * The symbol (using the Symbol selector dialog)
 * The legend format and the precision
 * The method to use to change the symbol: color or size
@@ -515,7 +515,7 @@ Right-click shows a contextual menu to **Copy/Paste**, **Change color**, **Chang
 transparency**, **Change output unit**, **Change symbol width**.
 
 The example in figure_graduated_symbology_ shows the graduated rendering dialog for
-the rivers layer of the QGIS sample dataset.
+the major_rivers layer of the QGIS sample dataset.
 
 .. _figure_graduated_symbology:
 
