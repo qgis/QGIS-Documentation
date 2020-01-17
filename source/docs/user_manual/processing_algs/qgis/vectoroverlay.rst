@@ -317,7 +317,7 @@ Parameters
        Default: None
      - Field(s) of the overlay layer to keep in the output.
        If no fields are chosen all fields are taken.
-   * - **Overlay fields prefix** |38|
+   * - **Overlay fields prefix**
        
        Optional
      - ``OVERLAY_FIELDS_PREFIX``
@@ -412,7 +412,7 @@ Parameters
        Default: None
      - Field(s) of the intersect layer to keep in the output.
        If no fields are chosen all fields are taken.
-   * - **Intersect fields prefix** |38|
+   * - **Intersect fields prefix**
        
        Optional
      - ``OVERLAY_FIELDS_PREFIX``
@@ -569,7 +569,7 @@ Parameters
      - [vector: any]
      - Second layer to extract (parts of) features from.
        Ideally the geometry type should be the same as input layer.
-   * - **Overlay fields prefix** |38|
+   * - **Overlay fields prefix**
        
        Optional
      - ``OVERLAY_FIELDS_PREFIX``
@@ -675,7 +675,7 @@ Parameters
      - [vector: any]
      - Layer that will be combined to the first one.
        Ideally the geometry type should be the same as input layer.
-   * - **Overlay fields prefix** |38|
+   * - **Overlay fields prefix**
        
        Optional
      - ``OVERLAY_FIELDS_PREFIX``
@@ -724,6 +724,5 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |38| replace:: ``NEW in 3.8``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em

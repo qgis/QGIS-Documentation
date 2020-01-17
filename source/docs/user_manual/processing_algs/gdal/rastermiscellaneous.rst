@@ -567,7 +567,7 @@ Outputs
 
 .. _gdalpansharp:
 
-Pansharpening |38|
+Pansharpening
 ------------------
 Performs a pan-sharpening operation.
 It can create a "classic" output dataset (such as GeoTIFF),
@@ -1244,11 +1244,3 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - The polygon vector layer with the tile index.
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |38| replace:: ``NEW in 3.8``

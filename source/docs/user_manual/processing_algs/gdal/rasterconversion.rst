@@ -199,7 +199,7 @@ Parameters
        connected (*4-connected*).
        If set, touching raster cells are also considered connected
        (*8-connected*).
-   * - **Additional command-line parameters** |310|
+   * - **Additional command-line parameters**
 
        Optional
      - ``EXTRA``
@@ -464,7 +464,7 @@ Parameters
        compression...).
        For convenience, you can rely on predefined profiles (see
        :ref:`GDAL driver options section <gdal_createoptions>`).
-   * - **Additional command-line parameters** |310|
+   * - **Additional command-line parameters**
 
        Optional
      - ``EXTRA``
@@ -522,12 +522,3 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output (translated) raster layer.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |310| replace:: ``NEW in 3.10``

@@ -1356,7 +1356,7 @@ Outputs
 
 .. _qgispointtolayer:
 
-Create layer from point |38|
+Create layer from point
 -----------------------------
 
 Creates a new vector layer that contains a single feature with
@@ -2308,7 +2308,7 @@ Outputs
 
 .. _qgisextractmvalues:
 
-Extract M values |36|
+Extract M values
 ---------------------
 
 Extracts M values from geometries into feature attributes.
@@ -2560,7 +2560,7 @@ Outputs
 
 .. _qgisextractzvalues:
 
-Extract Z values |36|
+Extract Z values
 ---------------------
 
 Extracts Z values from geometries into feature attributes.
@@ -2905,7 +2905,7 @@ Outputs
 
 .. _qgisforcerhr:
 
-Force right-hand-rule |36|
+Force right-hand-rule
 --------------------------
 
 Forces polygon geometries to respect the Right-Hand-Rule,
@@ -2964,7 +2964,7 @@ Outputs
 
 .. _qgisantimeridiansplit:
 
-Geodesic line split at antimeridian |36|
+Geodesic line split at antimeridian
 ----------------------------------------
 
 Splits a line into multiple geodesic segments, whenever
@@ -6040,7 +6040,7 @@ Outputs
 
 .. _qgissplitlinesbylength:
 
-Split lines by maximum length |36|
+Split lines by maximum length
 ----------------------------------
 This algorithm takes a line (or curve) layer and splits each feature
 into multiple parts, where each part is of a specified maximum length.
@@ -6845,8 +6845,6 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |36| replace:: ``NEW in 3.6``
-.. |38| replace:: ``NEW in 3.8``
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png

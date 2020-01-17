@@ -9,7 +9,7 @@ Raster analysis
 
 .. _qgisrasterbooleanand:
 
-Raster boolean AND |38|
+Raster boolean AND
 -----------------------
 Calculates the boolean ``AND`` for a set of input rasters.
 If all of the input rasters have a non-zero value for a pixel, that
@@ -136,7 +136,7 @@ Outputs
 
 .. _qgisrasterbooleanor:
 
-Raster boolean OR |38|
+Raster boolean OR
 ----------------------
 Calculates the boolean ``OR`` for a set of input rasters.
 If all of the input rasters have a zero value for a pixel, that
@@ -602,7 +602,7 @@ Outputs
 
 .. _qgisrasterlayerzonalstats:
 
-Raster layer zonal statistics |36|
+Raster layer zonal statistics
 ----------------------------------
 Calculates statistics for a raster layer's values, categorized by zones defined in 
 another raster layer.
@@ -715,7 +715,7 @@ Outputs
 
 .. _qgisrastersurfacevolume:
 
-Raster surface volume |36|
+Raster surface volume
 --------------------------
 Calculates the volume under a raster surface relative to a given base
 level. This is mainly useful for Digital Elevation Models (DEM).
@@ -1145,13 +1145,3 @@ Parameters
   * Variety
   * Variance
   * All
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |36| replace:: ``NEW in 3.6``
-.. |38| replace:: ``NEW in 3.8``

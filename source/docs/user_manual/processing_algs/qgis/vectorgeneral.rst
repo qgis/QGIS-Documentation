@@ -150,7 +150,7 @@ Outputs
 
 .. _qgislayertobookmarks:
 
-Convert layer to spatial bookmarks |310|
+Convert layer to spatial bookmarks
 ----------------------------------------
 Creates spatial bookmarks corresponding to the extent of features
 contained in a layer.
@@ -210,7 +210,7 @@ Outputs
 
 .. _qgisbookmarkstolayer:
 
-Convert spatial bookmarks to layer |310|
+Convert spatial bookmarks to layer
 ----------------------------------------
 Creates a new layer containing polygon
 features for stored spatial bookmarks.
@@ -500,7 +500,7 @@ Outputs
 
 .. _qgisdeleteduplicatesbyattribute:
 
-Delete duplicates by attribute |36|
+Delete duplicates by attribute
 -----------------------------------
 Deletes duplicate rows by only considering the specified field
 / fields.
@@ -1314,7 +1314,7 @@ Outputs
 
 .. _qgisjoinattributesbynearest:
 
-Join Attributes by Nearest |38|
+Join Attributes by Nearest
 -------------------------------
 
 K-nearest neighbor joins!
@@ -1718,7 +1718,7 @@ Outputs
 
 .. _qgissplitfeaturesbycharacter:
 
-Split features by character |310|
+Split features by character
 ---------------------------------
 Features are split into multiple output features by splitting
 a field's value at a specified character.
@@ -1916,8 +1916,5 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |310| replace:: ``NEW in 3.10``
-.. |36| replace:: ``NEW in 3.6``
-.. |38| replace:: ``NEW in 3.8``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
