@@ -132,6 +132,12 @@ displayed at the bottom of the frame.
   macros that are written to perform an action on project events. You can
   choose between 'Never', 'Ask', 'For this session only' and
   'Always (not recommended)'.
+* :guilabel:`Default project file format`
+
+  * `QGZ Archive file format`, which supports :ref:`auxiliary data
+    <vector_auxiliary_storage>`
+  * `QGS Project saved in a clear text`, that does not suppor auxiliary data
+
 
 .. index:: Environment variables
 .. _`env_options`:
@@ -516,14 +522,14 @@ This tab offers some options regarding the behavior of the :ref:`Identify tool <
   numbers (e.g., meters to kilometers)
 * :guilabel:`Preferred distance units`: options are 'Meters', 'Kilometers',
   'Feet', 'Yards', 'Miles', 'Nautical Miles', 'Centimeters', 'Millimeters',
-  'Degrees' or 'Map Units' 
+  'Degrees' or 'Map Units'
 * :guilabel:`Preferred area units`: options are 'Square meters', 'Square
   kilometers', 'Square feet', 'Square yards', 'Square miles', 'Hectares',
   'Acres', 'Square nautical miles', 'Square centimeters', 'Square millimeters',
   'Square degrees' or 'Map Units'
 * :guilabel:`Preferred angle units`: options are 'Degrees', 'Radians',
   'Gon/gradians', 'Minutes of arc', 'Seconds of arc', 'Turns/revolutions',
-  milliradians (SI definition) or mil (NATO/military definition) 
+  milliradians (SI definition) or mil (NATO/military definition)
 
 **Panning and zooming**
 
