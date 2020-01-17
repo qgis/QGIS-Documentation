@@ -17,52 +17,57 @@ As part of an Open Source Software ecosystem, QGIS is built upon different
 libraries that, combined with its own providers, offer capabilities to read
 and often write a lot of formats:
 
-* Vector data formats include ESRI formats (Shapefile, Geodatabase...),
-  MapInfo and MicroStation file formats, AutoCAD DWG/DXF, GeoPackage, GeoJSON,
-  GRASS, GPX, KML, Comma Separated Values, and many more...
+* Vector data formats include GeoPackage, GML, GeoJSON, GPX, KML,
+  Comma Separated Values, ESRI formats (Shapefile, Geodatabase...),
+  MapInfo and MicroStation file formats, AutoCAD DWG/DXF, 
+  GRASS and many more...
   Read the complete list of `vector supported formats
   <https://gdal.org/drivers/vector/index.html>`_.
-* Raster data formats include ArcInfo Binary Grid, ArcInfo ASCII Grid, JPEG,
-  GeoTIFF, ERDAS IMAGINE, MBTiles, R or Idrisi rasters, ASCII Gridded XYZ,
-  GDAL Virtual, SRTM, Sentinel Data, and many more...
+* Raster data formats include GeoTIFF, JPEG, ASCII Gridded XYZ,
+  MBTiles, R or Idrisi rasters, GDAL Virtual, SRTM, Sentinel Data, 
+  ERDAS IMAGINE, ArcInfo Binary Grid, ArcInfo ASCII Grid, and
+  many more...
   Read the complete list of `raster supported formats
   <https://gdal.org/drivers/raster/index.html>`_.
 * Database formats include PostgreSQL/PostGIS, SQLite/SpatiaLite, Oracle, DB2
   or MSSQL Spatial, MySQL...
-* Support of web data services (WM(T)S, WFS, WCS, CSW, ArcGIS Servers...) is
+* Support of web data services (WM(T)S, WFS, WCS, CSW, ArcGIS Servers, ...) is
   also handled by QGIS providers (see :ref:`working_with_ogc`).
-* You can also read supported files from archived folders and use QGIS native
+* You can read supported files from archived folders and use QGIS native
   formats such as QML files (:ref:`qgisstylefile`) and virtual and memory
   layers.
 
-As of the date of this document, more than 80 vector and 140 raster formats are
-supported by `GDAL <https://gdal.org/>`_ and QGIS native providers.
+More than 80 vector and 140 raster formats are supported by
+`GDAL <https://gdal.org/>`_ and QGIS native providers.
 
 .. note::
 
    Not all of the listed formats may work in QGIS for various reasons. For
    example, some require external proprietary libraries, or the GDAL/OGR
    installation of your OS may not have been built to support the format you
-   want to use. To have a list of available formats, run the command line
-   ``ogrinfo --formats`` (for vector) or check :menuselection:`settings -->
-   Options --> GDAL` menu (for raster) in QGIS.
+   want to use. To see the list of available formats, run the command line
+   ``ogrinfo --formats`` (for vector) and ``gdalinfo --formats`` (for raster),
+   or check :menuselection:`settings --> Options --> GDAL` menu (for raster)
+   in QGIS.
    
 .. let's use ogrinfo until a list of vector formats is provided in a (GDAL/)OGR tab
 
 .. _datasourcemanager:
 
-In QGIS, depending on the data format, there are different tools to open it,
-mainly available in the :menuselection:`Layer --> Add Layer -->` menu
-or from the :guilabel:`Manage Layers` toolbar (enabled through :menuselection:`View
---> Toolbars` menu).
+In QGIS, depending on the data format, there are different tools to open a
+dataset, mainly available in the :menuselection:`Layer --> Add Layer -->` menu
+or from the :guilabel:`Manage Layers` toolbar (enabled through
+:menuselection:`View --> Toolbars` menu).
 However, all these tools point to a unique dialog, the :guilabel:`Data Source
-Manager` dialog that you can directly open with the |dataSourceManager|
-:sup:`Open Data Source Manager` button available on the :guilabel:`Data Source
-Manager Toolbar` or by pressing :kbd:`Ctrl+L`. Indeed, the :guilabel:`Data Source
-Manager` dialog offers a unified interface to open vector or raster file-based
-data as well as databases or web services supported by QGIS. It can be set
-modal or not with the |checkbox| :guilabel:`Modeless data source manager dialog`
-in :menuselection:`Settings --> Options --> General` menu.
+Manager` dialog, that you can open with the |dataSourceManager|
+:sup:`Open Data Source Manager` button, available on the :guilabel:`Data Source
+Manager Toolbar`, or by pressing :kbd:`Ctrl+L`.
+The :guilabel:`Data Source Manager` dialog offers a unified interface to open
+vector or raster file-based data as well as databases or web services supported
+by QGIS.
+It can be set modal or not with the |checkbox|
+:guilabel:`Modeless data source manager dialog`
+in the :menuselection:`Settings --> Options --> General` menu.
 
 
 .. _figure_datasource_manager:
@@ -73,15 +78,17 @@ in :menuselection:`Settings --> Options --> General` menu.
    QGIS Data Source Manager dialog
 
 
-Beside this main entry point, you also have the |dbManager| :guilabel:`DB Manager`
-plugin that offers advanced capabilities to analyze and manipulate connected
-databases. More information on DB Manager capabilities are exposed in :ref:`dbmanager`.
+Beside this main entry point, you also have the |dbManager|
+:guilabel:`DB Manager` plugin that offers advanced capabilities to analyze and
+manipulate connected databases.
+More information on DB Manager capabilities can be found in :ref:`dbmanager`.
 
-There are also many other tools, native or third-party plugins, that help you open
-dedicated data formats.
+There are many other tools, native or third-party plugins, that help you
+open various data formats.
 
-This chapter will describe only the tools provided by default in QGIS to load
-data. It will mainly focus on the :guilabel:`Data Source Manager` dialog but
+This chapter will describe only the tools provided by default in QGIS for
+loading data.
+It will mainly focus on the :guilabel:`Data Source Manager` dialog but
 more than describing each tab, it will also explore the tools based on the data
 provider or format specificities.
 
@@ -102,18 +109,19 @@ add your data to projects. It's available as:
 
 In both cases, the :guilabel:`Browser` helps you navigate in your file system
 and manage geodata, regardless the type of layer (raster, vector, table),
-or the datasource format (plain or compressed files, database, web services).
+or the datasource format (plain or compressed files, databases, web services).
 
-To add a layer into a project, using the :guilabel:`Browser` interface:
+To add a layer into a project using the :guilabel:`Browser` interface:
 
 #. Enable the :guilabel:`Browser` as described above.
-   A browser tree with your file system, databases and web services is
-   displayed. You may need to connect databases and web services before they appear
+   A browser tree with your file system, databases and web services is 
+   displayed.
+   You may need to connect databases and web services before they appear
    (see dedicated sections).
 #. Find the layer in the list.
 #. Double-click its name or drag-and-drop it into the :ref:`map canvas
    <label_mapview>`. Your layer is now added to the :ref:`Layers panel
-   <label_legend>` and can be viewed in the map canvas.
+   <label_legend>` and can be viewed on the map canvas.
 
    .. tip:: **Open a QGIS project directly from the browser**
 
@@ -122,25 +130,25 @@ To add a layer into a project, using the :guilabel:`Browser` interface:
 
 Once a file is loaded, you can zoom around it using the map navigation tools.
 To change the style of a layer, open the :guilabel:`Layer Properties` dialog
-by double clicking on the layer name or by right-clicking on the name in the
+by double-clicking on the layer name or by right-clicking on the name in the
 legend and choosing :menuselection:`Properties` from the context menu. See
-section :ref:`vector_style_menu` for more information on setting symbology of
+section :ref:`vector_style_menu` for more information on setting symbology for
 vector layers.
 
 
-At the top of the Browser panel, you find some icons that help you to:
+At the top of the Browser panel, you find some buttons that help you to:
 
-* |addLayer| :sup:`Add Selected Layers`: you can also add data into the map
+* |addLayer| :sup:`Add Selected Layers`: you can also add data to the map
   canvas by selecting **Add selected layer(s)** from the layer's context menu;
 * |draw| :sup:`Refresh` the browser tree;
 * |filterMap| :sup:`Filter Browser` to search for specific data. Enter a search
   word or wildcard and the browser will filter the tree to only show paths to
   matching DB tables, filenames or folders -- other data or folders won't be
-  displayed. See the Browser Panel(2) example on the figure_browser_panels_.
+  displayed. See the Browser Panel(2) example in figure_browser_panels_.
   The comparison can be case-sensitive or not. It can also be set to:
 
-  * **normal**: return any item containing the search text;
-  * using **wildcard(s)**: fine tune the search using ``?`` and/or ``*``
+  * **normal**: show items containing the search text;
+  * using **wildcard(s)**: fine tune the search using the ``?`` and/or ``*``
     characters to specify the position of the search text;
   * using a **regular expression**.
 
@@ -149,20 +157,20 @@ At the top of the Browser panel, you find some icons that help you to:
   a new widget is added at the bottom of the panel showing, if applicable,
   metadatas of the selected item.
 
-Right-click an item in the browser tree helps you to:
+Right-clicking an item in the browser tree helps you to:
 
-* in case of file or table, display its metadata or open it in your project.
-  Tables can even be renamed, deleted or truncated;
-* in case of folder, bookmark it into your favourites, hide it from the browser
+* for a file or a table, display its metadata or open it in your project.
+  Tables can even be renamed, deleted or truncated.
+* for a folder, bookmark it into your favourites or hide it from the browser
   tree. Hidden folders can be managed from the :menuselection:`Settings -->
-  Options --> Data Sources` tab;
-* manage your :ref:`spatial bookmarks <sec_bookmarks>`: bookmarks can be created,
-  exported and imported as ``XML`` files;
-* create connection to databases or web servers;
-* refresh, rename or delete schema.
+  Options --> Data Sources` tab.
+* manage your :ref:`spatial bookmarks <sec_bookmarks>`: bookmarks can be
+  created, exported and imported as ``XML`` files.
+* create a connection to databases or web servers.
+* refresh, rename or delete a schema.
 
 You can also import files into databases or copy tables from one schema/database
-to another one with a simple drag-and-drop. There is a second browser panel
+to another with a simple drag-and-drop. There is a second browser panel
 available to avoid long scrolling while dragging. Just select the file and
 drag-and-drop from one panel to the other.
 
@@ -185,22 +193,22 @@ drag-and-drop from one panel to the other.
 The DB Manager
 ==============
 
-The :guilabel:`DB Manager` Plugin is another one of the main and native tools
-to integrate and manage spatial database formats supported by
+The :guilabel:`DB Manager` Plugin is another tool
+for integrating and managing spatial database formats supported by
 QGIS (PostGIS, SpatiaLite, GeoPackage, Oracle Spatial, MSSQL, DB2, Virtual
-layers) in one user interface. It can be activated from the
+layers). It can be activated from the
 :menuselection:`Plugins --> Manage and Install Plugins...` menu.
 
 The |dbManager| :sup:`DB Manager` Plugin provides several features:
 
-* connect to databases and display its structure and contents;
-* preview tables of databases;
-* add layers to map canvas, either by double-click or drag-and-drop;
-* add layers to a database from the QGIS Browser or from another database;
-* create and add output of SQL queries to the map canvas;
-* create :ref:`virtual layers <vector_virtual_layers>`.
+* connect to databases and display their structure and contents
+* preview tables of databases
+* add layers to the map canvas, either by double-clicking or drag-and-drop.
+* add layers to a database from the QGIS Browser or from another database
+* create SQL queries and add their output to the map canvas
+* create :ref:`virtual layers <vector_virtual_layers>`
 
-More information on DB Manager capabilities are exposed in :ref:`dbmanager`.
+More information on DB Manager capabilities is found in :ref:`dbmanager`.
 
 .. _figure_db_manager_bis:
 
@@ -213,13 +221,12 @@ More information on DB Manager capabilities are exposed in :ref:`dbmanager`.
 Provider-based loading tools
 =============================
 
-Beside Browser Panel and DB Manager, the main tools provided by QGIS to add
-layers regardless the format, you'll also find tools that are specific to data
-providers.
+Beside the Browser Panel and the DB Manager, the main tools provided by QGIS
+to add layers, you'll also find tools that are specific to data providers.
 
 .. note::
 
-  Some :ref:`external plugins <plugins>` also propose tools to open specific
+  Some :ref:`external plugins <plugins>` also provide tools to open specific
   format files in QGIS.
 
 .. index:: Loading vector, Loading raster
