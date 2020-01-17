@@ -268,13 +268,13 @@ The :guilabel:`Custom Coordinate Reference System Definition` dialog requires
 only two parameters to define a user CRS:
 
 #. A descriptive name
-#. The cartographic parameters in PROJ format
+#. The cartographic parameters in PROJ or WKT format
 
-To create a new CRS, click the |signPlus| :sup:`Add new CRS` button and
-enter a descriptive name and the CRS parameters.
+To create a new CRS, click the |signPlus| :sup:`Add new CRS` button,
+enter a descriptive name, select the format, and the CRS parameters.
 
-Note that the :guilabel:`Parameters` must begin with a ``+proj=`` block,
-to represent the new coordinate reference system.
+Click **[Validade]** to test whether the CRS definition is an acceptable
+projection definition.
 
 You can test your CRS parameters to see if they give sane results. To do this,
 enter known WGS 84 latitude and longitude values in :guilabel:`North` and
