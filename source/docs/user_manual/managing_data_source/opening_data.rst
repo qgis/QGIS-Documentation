@@ -371,14 +371,16 @@ For further instructions, read :ref:`label_meshdata`.
 Importing a delimited text file
 -------------------------------
 
-Delimited text files (e.g. :file:`.txt`, :file:`.csv`, :file:`.dat`, :file: `.wkt`) 
-can be loaded in QGIS using the tools described above. However, loaded this way,
-it'll show up like a simple table data. Sometimes, delimited text files can contain
-coordinates / geometries that you could want to visualize; this is what the
-|addDelimitedTextLayer|:guilabel:`Add Delimited Text Layer` is designed for.
+Delimited text files (e.g. :file:`.txt`, :file:`.csv`, :file:`.dat`,
+:file: `.wkt`) can be loaded in QGIS using the tools described above.
+By loading this way, they will show up like simple tables.
+Sometimes, delimited text files can contain coordinates / geometries
+that you could want to visualize.
+This is what |addDelimitedTextLayer|:guilabel:`Add Delimited Text Layer`
+is designed for.
 
 Click the |dataSourceManager| :sup:`Open Data Source Manager` icon to open the
-:guilabel:`Data Source Manager` dialog and enable the |addDelimitedTextLayer|
+:guilabel:`Data Source Manager` and enable the |addDelimitedTextLayer|
 :guilabel:`Delimited Text` tab, as shown in figure_delimited_text_.
 
 .. _figure_delimited_text:
@@ -389,8 +391,9 @@ Click the |dataSourceManager| :sup:`Open Data Source Manager` icon to open the
    Delimited Text Dialog
 
 First, select the file to import (e.g., :file:`qgis_sample_data/csv/elevp.csv`)
-by clicking on the :guilabel:`Browse` button. In the :guilabel:`Layer name` field,
-provide the name to use for the layer in the project (e.g., :file:`Elevation`).
+by clicking on the :guilabel:`Browse` button.
+In the :guilabel:`Layer name` field, provide the name to use for
+the layer in the project (e.g., :file:`Elevation`).
 
 File format
 ...........
@@ -400,12 +403,13 @@ recently used delimiter, trying to identify fields and rows. To enable QGIS to
 properly parse the file, it is important to select the correct delimiter. You
 can specify a delimiter by activating:
 
-* |radioButtonOn|:guilabel:`CSV (comma separated values)` to use the comma character;
+* |radioButtonOn|:guilabel:`CSV (comma separated values)` to use the comma character.
+* |radioButtonOff|:guilabel:`Regular expression delimiter` and entering text
+  into the :guilabel:`Expression` field.
+  For example, to change the delimiter to tab, use ``\t`` (this is a regular 
+  expression for the tab character).
 * |radioButtonOff|:guilabel:`Custom delimiters`, choosing among some predefined
-  delimiters like ``comma``, ``space``, ``tab``, ``semicolon``...;
-* or |radioButtonOff|:guilabel:`Regular expression delimiter` and entering text
-  into the :guilabel:`Expression` field. For example, to change the delimiter to
-  tab, use ``\t`` (this is a regular expression for the tab character).
+  delimiters like ``comma``, ``space``, ``tab``, ``semicolon``, ... .
 
 Records and fields
 ..................
@@ -414,15 +418,15 @@ Other than settings to identify rows and fields in the data, some convenient
 options can be used to tweak the data recognition:
 
 * :guilabel:`Number of header lines to discard`: convenient when you want to
-  avoid some lines to show in the import, either because those are blank lines
-  or with another formatting.
-* |checkbox|:guilabel:`First records has field names`: values in the first row
-  of data are used as field names, otherwise QGIS adds a fields row of a type
+  avoid the first lines in the file in the import, either because those are
+  blank lines or with another formatting.
+* |checkbox|:guilabel:`First record has field names`: values in the first
+  line are used as field names, otherwise QGIS uses the field names
   ``field_1``, ``field_2``...
 * |checkbox|:guilabel:`Detect field types`: automatically recognizes the field
   type. If unchecked then all attributes are treated as text fields.
-* |checkbox|:guilabel:`Decimal separator is comma`: if necessary, you can force
-  a comma to be the decimal separator.
+* |checkbox|:guilabel:`Decimal separator is comma`: you can force
+  decimal separator to be a comma.
 * |checkbox|:guilabel:`Trim fields`: allows you to trim leading and trailing
   spaces from fields.
 * |checkbox|:guilabel:`Discard empty fields`.
@@ -436,19 +440,19 @@ Geometry definition
 Once the file is parsed, set :guilabel:`Geometry definition` to
 
 * |radioButtonOn|:guilabel:`Point coordinates` and provide the :guilabel:`X
-  field`, the :guilabel:`Y field`, :guilabel:`Z field` (for 3-dimensional data)
-  and the :guilabel:`M field` (for the measurement dimension) if the layer is of 
-  point geometry type and contains such coordinate fields. If the coordinates
+  field`, :guilabel:`Y field`, :guilabel:`Z field` (for 3-dimensional data)
+  and :guilabel:`M field` (for the measurement dimension) if the layer is of 
+  point geometry type and contains such fields. If the coordinates
   are defined as degrees/minutes/seconds, activate the
   |checkbox|:guilabel:`DMS coordinates` checkbox;
 * |radioButtonOn|:guilabel:`Well known text (WKT)` option if the spatial
-  information is represented by WKT: select the :guilabel:`Geometry field`
-  containing the WKT definition and choose the approriate :guilabel:`Geometry
+  information is represented as WKT: select the :guilabel:`Geometry field`
+  containing the WKT geometry and choose the approriate :guilabel:`Geometry
   field` or let QGIS auto-detect it;
 * If the file contains non-spatial data, activate |radioButtonOn| :guilabel:`No
   geometry (attribute only table)` and it will be loaded as an ordinary table.
 
-Besides the features geometry information, you can also set the layer's
+Beside the features geometry information, you can also set the layer's
 :guilabel:`Geometry CRS` using the |setProjection| :sup:`Select CRS` widget.
 
 Layer settings
@@ -457,18 +461,19 @@ Layer settings
 Additionally, you can enable:
 
 * |checkbox|:guilabel:`Use spatial index` to improve the performance of
-  displaying and spatially selecting features;
+  displaying and spatially selecting features.
 * |checkbox|:guilabel:`Use subset index` to improve performance of :ref:`subset
-  filters <vector_query_builder>` (when defined in the layer properties);
+  filters <vector_query_builder>` (when defined in the layer properties).
 * |checkbox|:guilabel:`Watch file` to watch for changes to the file by other
   applications while QGIS is running.
 
 
-At the end, click :guilabel:`OK` to add the layer to the map. In our example, a
-point layer named ``Elevation`` is added to the project and behaves like any
-other map layer in QGIS. However, this layer is the result of a query on the
-:file:`.csv` source layer (hence, linked to it) and would require :ref:`to be
-saved <general_saveas>` in order to get a spatial layer on disk.
+At the end, click :guilabel:`Add` to add the layer to the map.
+In our example, a point layer named ``Elevation`` is added to the project
+and behaves like any other map layer in QGIS.
+However, this layer is the result of a query on the :file:`.csv` source
+layer (hence, linked to it) and would require
+:ref:`to be saved <general_saveas>` in order to get a spatial layer on disk.
 
 
 .. _import_dxfdwg:
