@@ -493,7 +493,6 @@ Parameters
      - Specify the output (buffer) layer.
        One of:
 
-       * Skip output
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
@@ -1054,7 +1053,7 @@ Outputs
 
 Concave hull (k-nearest neighbor)
 ---------------------------------
-This algorithm generates a concave hull polygon from a set of points.
+Generates a concave hull polygon from a set of points.
 If the input layer is a line or polygon layer, it will use the
 vertices.
 
@@ -2908,11 +2907,10 @@ Outputs
 Force right-hand-rule
 --------------------------
 
-Forces polygon geometries to respect the Right-Hand-Rule,
-in which the area that is bounded by a polygon is to the right of the boundary.
+Forces polygon geometries to respect the Right-Hand-Rule, in which
+the area that is bounded by a polygon is to the right of the boundary.
 In particular, the exterior ring is oriented in a clockwise
-direction and the interior rings in a counter-clockwise direction.
-The algorithm consumes and produces features with polygon geometries.
+direction and any interior rings in a counter-clockwise direction.
 
 Parameters
 ..........
@@ -2960,7 +2958,6 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - The output vector layer with reoriented geometries.
-
 
 .. _qgisantimeridiansplit:
 
@@ -3887,7 +3884,6 @@ Parameters
      - Specify the output (offset) layer.
        One of:
 
-       * Skip output
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
@@ -5658,14 +5654,14 @@ Parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
-     - Input vector layer
+     - [vector: line]
+     - Input line vector layer
    * - **Distance**
      - ``DISTANCE``
      - [number]
 
        Default: 10.0
-     - Buffer distance (from the boundary of each feature).
+     - Buffer distance.
    * - **Side**
      - ``SIDE``
      - [enumeration]
@@ -5739,11 +5735,8 @@ Outputs
 
 Smooth
 ------
-Smooths the geometries in a line or polygon layer.
-It creates a new layer with the same features as the ones in the
-input layer, but with geometries containing a
-**higher number of vertices and corners** in the geometries smoothed
-out.
+Smooths the geometries in a line or polygon layer by
+adding more **vertices and corners** to the feature geometries.
 
 The iterations parameter dictates how many smoothing iterations will
 be applied to each geometry.
@@ -5807,7 +5800,7 @@ Parameters
 
        Default: 0.25
      - Increasing values will *move* the smoothed lines / boundaries
-       further away from the input lines / booundaries.
+       further away from the input lines / boundaries.
    * - **Maximum node angle to smooth**
      - ``MAX_ANGLE``
      - [number |dataDefined|]
@@ -5819,10 +5812,9 @@ Parameters
      - [same as input]
        
        Default: ``[Create temporary layer]``
-     - Specify the output (buffer) layer.
+     - Specify the output (smoothed) layer.
        One of:
 
-       * Skip output
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
@@ -5888,7 +5880,6 @@ Parameters
        Default: 10.0
      - Control how close input vertices need to be to the
        reference layer geometries before they are snapped.
-       This distance is specified in layer units.
    * - *Behavior**
      - ``BEHAVIOR``
      - [enumeration]
@@ -5914,10 +5905,9 @@ Parameters
      - [same as input]
        
        Default: ``[Create temporary layer]``
-     - Specify the output (buffer) layer.
+     - Specify the output (snapped) layer.
        One of:
 
-       * Skip output
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
@@ -6009,10 +5999,9 @@ Parameters
      - [same as input]
        
        Default: ``[Create temporary layer]``
-     - Specify the output (buffer) layer.
+     - Specify the output (snapped) layer.
        One of:
 
-       * Skip output
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
@@ -6042,8 +6031,8 @@ Outputs
 
 Split lines by maximum length
 ----------------------------------
-This algorithm takes a line (or curve) layer and splits each feature
-into multiple parts, where each part is of a specified maximum length.
+Takes a line (or curve) layer and splits each feature into
+multiple parts, where each part is of a specified maximum length.
 Z and M values at the start and end of the new line substrings are
 linearly interpolated from existing values.
 
@@ -6059,14 +6048,15 @@ Parameters
      - Name
      - Type
      - Description
-
    * - **Input layer**
      - ``INPUT``
      - [vector: line]
-     - The input line features
+     - The input line vector layer
    * - **Maximum line length**
      - ``LENGTH``
      - [number |dataDefined|]
+
+       Default: 10.0
      - The maximum length of a line in the output.
    * - **Split**
      - ``OUTPUT``
@@ -6076,7 +6066,6 @@ Parameters
      - Specify the output line vector layer.
        One of:
 
-       * Skip output
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
@@ -6100,9 +6089,9 @@ Outputs
    * - **Split**
      - ``OUTPUT``
      - [vector: line]
-     - The new line features - all with line geometries that have a
-       length that is less than or equal to the length specified in
-       the LENGTH paramter.
+     - The new line vector layer - the length of the feature geometries
+       is less than or equal to the length specified in
+       the LENGTH parameter.
 
 
 .. _qgissubdivide:
@@ -6162,10 +6151,9 @@ Parameters
      - [same as input]
 
        Default: ``[Create temporary layer]``
-     - Specify the output line vector layer.
+     - Specify the output (subdivided) vector layer.
        One of:
 
-       * Skip output
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
@@ -6228,10 +6216,9 @@ Parameters
      - [same as input]
 
        Default: ``[Create temporary layer]``
-     - Specify the output line vector layer.
+     - Specify the output vector layer.
        One of:
 
-       * Skip output
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
@@ -6600,14 +6587,16 @@ Outputs
 
 .. _qgisvariabledistancebuffer:
 
-Variable distance buffer (*Graphical Modeler only*)
-----------------------------------------------------
+Variable distance buffer
+--------------------------------------------------
 Computes a buffer area for all the features in an input layer.
-This algorithm is only available from the :ref:`processing.modeler`.
 
 The size of the buffer for a given feature is defined by an
 attribute, so it allows different features to have different buffer
 sizes.
+
+.. note:: This algorithm is only available from the
+  :ref:`Graphical modeler <processing.modeler>`.
 
 .. seealso:: :ref:`qgisbuffer`
 

@@ -360,7 +360,6 @@ the original map item CRS will be used.
        Default: ``[Create temporary layer]``
      - Specify the output vector layer for the extent(s). One of:
 
-       * Skip output
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
@@ -489,7 +488,6 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the output layer. One of:
 
-       * Skip output
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
