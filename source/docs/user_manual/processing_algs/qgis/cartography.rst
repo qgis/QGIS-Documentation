@@ -9,7 +9,7 @@ Cartography
 
 .. _qgiscombinestyles:
 
-Combine style databases |310|
+Combine style databases
 ---------------------------------------
 Combines multiple QGIS style databases into a single style database.
 If items of the same type with the same name exist in different source
@@ -217,7 +217,7 @@ Outputs
 
 .. _qgisstylefromproject:
 
-Create style database from project |310|
+Create style database from project
 ----------------------------------------
 Extracts all style objects (symbols, color ramps, text formats and
 label settings) from a QGIS project.
@@ -306,7 +306,7 @@ Outputs
 
 .. _qgisprintlayoutmapextenttolayer:
 
-Print layout map extent to layer |38|
+Print layout map extent to layer
 -------------------------------------
 
 Creates a polygon layer containing the extent of a print layout map item
@@ -513,13 +513,3 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - Polygon vector layer with an added ``color_id`` column
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |310| replace:: ``NEW in 3.10``
-.. |38| replace:: ``NEW in 3.8``

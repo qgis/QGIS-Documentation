@@ -189,13 +189,13 @@ Parameters
 
        Default: False
      - The resolution of the output raster will not be changed
-   * - **Set output file resolution** |36|
+   * - **Set output file resolution**
      - ``SET_RESOLUTION``
      - [boolean]
 
        Default: False
      - Shall the output resolution (cell size) be specified
-   * - **X Resolution to output bands** |36|
+   * - **X Resolution to output bands**
 
        Optional
      - ``X_RESOLUTION``
@@ -203,7 +203,7 @@ Parameters
 
        Default: None
      - The with of the cells in the output raster
-   * - **Y Resolution to output band** |36|
+   * - **Y Resolution to output band**
 
        Optional
      - ``Y_RESOLUTION``
@@ -211,7 +211,7 @@ Parameters
 
        Default: None
      - The height of the cells in the output raster
-   * - **Use multithreaded warping implementation** |36|
+   * - **Use multithreaded warping implementation**
      - ``MULTITHREADING``
      - [boolean]
 
@@ -251,7 +251,7 @@ Parameters
        * 10 --- CFloat32
        * 11 --- CFloat64
 
-   * - **Additional command-line parameters** |310|
+   * - **Additional command-line parameters**
 
        Optional
      - ``EXTRA``
@@ -365,7 +365,7 @@ Parameters
 
        Default: 0.0
      -
-   * - **Additional command-line parameters** |310|
+   * - **Additional command-line parameters**
 
        Optional
      - ``EXTRA``
@@ -414,13 +414,3 @@ Outputs
      - ``OUTPUT``
      - [vector: line]
      - Output vector layer with contour lines
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |310| replace:: ``NEW in 3.10``
-.. |36| replace:: ``NEW in 3.6``

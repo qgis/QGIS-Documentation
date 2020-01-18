@@ -184,7 +184,7 @@ Outputs
 
 .. _qgistilesxyzdirectory:
 
-Generate XYZ tiles (Directory) |38|
+Generate XYZ tiles (Directory)
 -----------------------------------
 
 Generates raster “XYZ” tiles using the current QGIS project
@@ -231,7 +231,7 @@ Parameters
 
        Default: 96
      - Minimum 48, maximum 600.
-   * - **Background color** |310|
+   * - **Background color**
 
        Optional
      - ``BACKGROUND_COLOR``
@@ -257,7 +257,7 @@ Parameters
 
        Default: 75
      - Minimum 1, maximum 100.
-   * - **Metatile size** |310|
+   * - **Metatile size**
 
        Optional
      - ``METATILESIZE``
@@ -339,7 +339,7 @@ Outputs
 
 .. _qgistilesxyzmbtiles:
 
-Generate XYZ tiles (MBTiles) |38|
+Generate XYZ tiles (MBTiles)
 ---------------------------------
 
 Generates raster “XYZ” tiles using the current QGIS project
@@ -386,7 +386,7 @@ Parameters
 
        Default: 96
      - Minimum 48, maximum 600.
-   * - **Background color** |310|
+   * - **Background color**
 
        Optional
      - ``BACKGROUND_COLOR``
@@ -412,7 +412,7 @@ Parameters
 
        Default: 75
      - Minimum 1, maximum 100.
-   * - **Metatile size** |310|
+   * - **Metatile size**
 
        Optional
      - ``METATILESIZE``
@@ -501,13 +501,3 @@ Outputs
      - ``INPUT``
      - [raster]
      - The raster layer with the chosen style
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |310| replace:: ``NEW in 3.10``
-.. |38| replace:: ``NEW in 3.8``

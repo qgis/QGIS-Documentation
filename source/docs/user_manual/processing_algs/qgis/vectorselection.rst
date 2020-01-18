@@ -834,5 +834,3 @@ Outputs
      - ``INPUT``
      - [same as input]
      - The input layer with features selected
-     
-.. |36| replace:: ``NEW in 3.6``
