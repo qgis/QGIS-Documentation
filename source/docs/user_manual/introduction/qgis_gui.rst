@@ -803,7 +803,7 @@ In the dialog that opens:
 
    * |checkbox| :guilabel:`Export RDF metadata` of the document such as the
      title, author, date, description...
-   * |unchecked| :guilabel:`Create Geospatial PDF (GeoPDF)` |310|: Generate a
+   * |unchecked| :guilabel:`Create Geospatial PDF (GeoPDF)`: Generate a
      `georeferenced PDF file <https://gdal.org/drivers/raster/pdf.html>`_
      (requires GDAL version 3 or later). You can:
 
@@ -1108,7 +1108,6 @@ open the Plugin Manager dialog.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |310| replace:: ``NEW in 3.10``
 .. |addAllToOverview| image:: /static/common/mActionAddAllToOverview.png
    :width: 1.5em
 .. |addPart| image:: /static/common/mActionAddPart.png

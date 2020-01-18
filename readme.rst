@@ -34,6 +34,7 @@ QGIS documentation is available at https://docs.qgis.org:
   is on https://docs.qgis.org/testing and https://docs.qgis.org/testing/pdf/
 
 Documentation is published for every long term release and is available for QGIS
+`3.10 <https://docs.qgis.org/3.10>`_,
 `3.4 <https://docs.qgis.org/3.4>`_,
 `2.18 <https://docs.qgis.org/2.18>`_,
 `2.14 <https://docs.qgis.org/2.14>`_,

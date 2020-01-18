@@ -528,8 +528,6 @@ and **Romania** they're highlighted in yellow.
 TILED
 ^^^^^
 
-(|38|)
-
 Set the ``TILED`` parameter to ``TRUE`` to tell QGIS Server to work in
 *tiled* mode, and to apply the *Tile buffer* configured in the QGIS
 project.
@@ -2166,11 +2164,3 @@ Similarly, external layers can be used in GetPrint requests:
    &basemap:crs=EPSG:2056
    &basemap:layers=orthofoto
    &basemap:styles=default
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |38| replace:: ``NEW in 3.8``

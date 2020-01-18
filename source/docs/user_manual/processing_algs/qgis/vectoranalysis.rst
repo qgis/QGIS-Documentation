@@ -148,7 +148,7 @@ Outputs
 
 .. _qgisclimbalongline:
 
-Climb along line |310|
+Climb along line
 ----------------------
 
 This algorithm calculates the total climb and descent along line geometries.
@@ -1059,7 +1059,7 @@ Outputs
 
 .. _qgisoverlapanalysis:
 
-Overlap analysis |38|
+Overlap analysis
 ---------------------
 This algorithm calculates the area and percentage cover by
 which features from an input layer are overlapped by features
@@ -1342,7 +1342,5 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |310| replace:: ``NEW in 3.10``
-.. |38| replace:: ``NEW in 3.8``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em

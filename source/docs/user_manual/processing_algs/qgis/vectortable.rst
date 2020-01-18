@@ -307,7 +307,7 @@ Outputs
 
 .. _qgisaddxyfieldstolayer:
 
-Add X/Y fields to layer |38|
+Add X/Y fields to layer
 ----------------------------
 Adds X and Y (or latitude/longitude) fields to a point layer.
 The X/Y fields can be calculated in a different CRS to the layer
@@ -546,7 +546,7 @@ Outputs
 
 .. _qgisexplodehstorefield:
 
-Explode HStore Field |36|
+Explode HStore Field
 -------------------------
 Creates a copy of the input layer and adds a new field
 for every unique key in the HStore field.
@@ -626,7 +626,7 @@ Outputs
 
 .. _qgisextractbinary:
 
-Extract binary field |36|
+Extract binary field
 -------------------------
 Extracts contents from a binary field, saving them to individual files.
 Filenames can be generated using values taken from an attribute in the
@@ -1017,8 +1017,6 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |36| replace:: ``NEW in 3.6``
-.. |38| replace:: ``NEW in 3.8``
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png
