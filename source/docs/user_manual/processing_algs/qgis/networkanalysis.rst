@@ -388,7 +388,6 @@ Parameters
      - Specify the output line layer for the shortest paths.
        One of:
 
-       * Skip output
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
