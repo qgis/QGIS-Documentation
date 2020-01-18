@@ -1107,7 +1107,7 @@ To change a line direction:
 
 #. Activate the reverse line tool by clicking |reverseLine|
    :sup:`Reverse line`.
-#. Click the line with the cursor. The direction of the line
+#. Click on the line. The direction of the line
    is reversed.
 
 .. index::

@@ -509,7 +509,7 @@ You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum
 be visible.
 It will be hidden outside this range.
 The |mapIdentification| :sup:`Set to current canvas scale` button helps
-you use the current map canvas scale as boundary of the range visibility.
+you use the current map canvas scale as a boundary for the range visibility.
 See :ref:`label_scaledepend` for more information.
 
 .. _figure_raster_rendering:

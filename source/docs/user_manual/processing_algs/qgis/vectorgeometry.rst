@@ -5736,7 +5736,7 @@ Outputs
 Smooth
 ------
 Smooths the geometries in a line or polygon layer by
-adding more **vertices and corners** to the features geometries.
+adding more **vertices and corners** to the feature geometries.
 
 The iterations parameter dictates how many smoothing iterations will
 be applied to each geometry.
@@ -6089,8 +6089,8 @@ Outputs
    * - **Split**
      - ``OUTPUT``
      - [vector: line]
-     - The new line vector layer - Features have geometries that have a
-       length that is less than or equal to the length specified in
+     - The new line vector layer - the length of the feature geometries
+       is less than or equal to the length specified in
        the LENGTH parameter.
 
 
