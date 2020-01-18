@@ -238,13 +238,15 @@ Loading a layer from a file
 
 To load a layer from a file, you can:
 
-* for vector data (like Shapefile, Mapinfo or DXF layers), click on
+* for vector data (like GML, ESRI Shapefile, Mapinfo and DXF layers), click on
   the |addOgrLayer| :sup:`Add Vector Layer` toolbar button, select the
   :menuselection:`Layer --> Add Layer -->` |addOgrLayer|:guilabel:`Add Vector
   Layer` menu option or press :kbd:`Ctrl+Shift+V`.
-  This will bring up a new window (see figure_vector_add_) from which you can
-  check |radioButtonOn| :guilabel:`File` and click on :guilabel:`Browse`. You can
-  also specify the encoding for the file if desired.
+  This will bring up the Data Source Manager with the Vector tab active
+  (:ref:`figure_vector_add`),
+  where you can check |radioButtonOn| :guilabel:`File` and click on the
+  :guilabel:`...` (browse) button.
+  You can also specify the encoding for the file if desired.
 
   .. _figure_vector_add:
 
@@ -256,13 +258,26 @@ To load a layer from a file, you can:
 * for raster layers, click on the |addRasterLayer| :sup:`Add Raster Layer` icon,
   select the :menuselection:`Layer --> Add Layer -->` |addRasterLayer|
   :guilabel:`Add Raster Layer` menu option or type :kbd:`Ctrl+Shift+R`.
+  This will bring up the Data Source Manager with the Raster tab active
+  (:ref:`figure_raster_add`),
+  where you can check |radioButtonOn| :guilabel:`File` and click on the
+  :guilabel:`...` (browse) button.
 
-That will bring up a standard open file dialog (see figure_vector_open_), which
-allows you to navigate the file system and load a shapefile, a geotiff or other
-supported data source. The selection box :guilabel:`Filter` |selectString|
-allows you to preselect some supported file formats. Only the formats that have
-been well tested appear in the list. Other untested formats can be loaded by
-selecting ``All files (*.*)``.
+.. _figure_raster_add:
+
+  .. figure:: img/addrasterlayerdialog.png
+     :align: center
+
+     Add Raster Layer Dialog
+
+That will bring up a standard open file dialog (see figure_vector_open_
+and figure_raster_open_), which allows you to navigate the file system
+and load a supported data source.
+The pull-down menu at the bottom allows you to select a supported
+file format.
+Only formats that have been well tested appear in the list.
+Other formats can be loaded by selecting ``All files`` (the top item
+in the pull-down menu).
 
 
 .. _figure_vector_open:
@@ -271,6 +286,14 @@ selecting ``All files (*.*)``.
    :align: center
 
    Open an OGR Supported Vector Layer Dialog
+
+.. _figure_raster_open:
+
+.. figure:: img/geotiffopendialog.png
+   :align: center
+
+   Open a GDAL Supported Raster Layer Dialog
+
 
 Selecting a file from the list and clicking :guilabel:`Open` loads it into QGIS.
 More than one layer can be loaded at the same time by holding down the
@@ -288,8 +311,8 @@ Figure_vector_loaded_ shows QGIS after loading the :file:`alaska.shp` file.
 .. note::
 
  Because some formats like MapInfo (e.g., :file:`.tab`) or Autocad (:file:`.dxf`)
- allow mixing different types of geometry in a single file, loading such format
- in QGIS opens a dialog to select geometries to use in order to have one
+ allow mixing different types of geometry in a single file, loading such
+ datasets opens a dialog to select geometries to use in order to have one
  geometry per layer.
 
 .. index:: ArcInfo Binary Coverage, Tiger Format, UK National Transfer Format
@@ -297,24 +320,26 @@ Figure_vector_loaded_ shows QGIS after loading the :file:`alaska.shp` file.
 
 Using the |addOgrLayer| :sup:`Add Vector Layer` tool:
 
-* You can also load specific formats like ``ArcInfo Binary Coverage``,
+* You can also load specific vector formats like ``ArcInfo Binary Coverage``,
   ``UK. National Transfer Format``, as well as the raw TIGER format of the
-  ``US Census Bureau`` or ``OpenfileGDB``. To do that, you'd need to select
-  |radioButtonOn| :guilabel:`Directory` as :guilabel:`Source type`. In this case
-  a directory can be selected in the dialog after pressing :guilabel:`Browse`.
+  ``US Census Bureau`` or ``OpenfileGDB``. To do that, you select
+  |radioButtonOn| :guilabel:`Directory` as :guilabel:`Source type`.
+  In this case, a directory can be selected in the dialog after pressing 
+  :guilabel:`Browse`.
 * With the |radioButtonOn| :guilabel:`Database` source type you can select an
   existing database connection or create one to the selected database type.
-  Available database types are ``ODBC``, ``OGDI Vectors``, ``Esri Personal
-  Geodatabase``, ``MySQL`` as well as ``PostgreSQL`` or ``MSSQL``.
+  Available database types are ``ODBC``, ``Esri Personal Geodatabase``,
+  ``MSSQL`` as well as ``PostgreSQL`` or ``MySQL`` .
     
-  Pressing the :guilabel:`New` button opens the :guilabel:`Create a New OGR Database
-  Connection` dialog whose parameters are among the ones you can find in
-  :ref:`vector_create_stored_connection`.
-  Pressing :guilabel:`Open` you can select from the available tables for example
-  of the PostGIS enabled database.
-* The last source type, |radioButtonOn| :guilabel:`Protocol`, enables to open
-  data from the web using for example ``GeoJSON`` or ``CouchDB`` format. After
-  selecting the type you have to fill URI of the source.
+  Pressing the :guilabel:`New` button opens the 
+  :guilabel:`Create a New OGR Database Connection` dialog whose parameters
+  are among the ones you can find in :ref:`vector_create_stored_connection`.
+  Pressing :guilabel:`Open` lets you select from the available tables, for
+  example of PostGIS enabled databases.
+* The last source type, |radioButtonOn| :guilabel:`Protocol`, allows you
+  to open data from the web using for example ``GeoJSON`` or ``CouchDB`` 
+  format.
+  After selecting the type you have to enter the URI.
 
 
 .. _tip_load_from_external_drive_OSX:
@@ -332,10 +357,11 @@ Using the |addOgrLayer| :sup:`Add Vector Layer` tool:
 Loading a mesh layer
 --------------------
 
-Mesh layers (currently :file:`.grb`, :file:`.grb2`, :file:`.bin`, :file:`.grib`, :file:`grib1`,
-:file:`grib2`, :file:`nc`, :file:`2dm`, :file:`3Di Results`) can be loaded by clicking the
-|addMeshLayer| :guilabel:`Mesh` tab in the datasource manager. For further instructions, read
-:ref:`label_meshdata`.
+Mesh layers (currently :file:`.grb`, :file:`.grb2`, :file:`.bin`,
+:file:`.grib`, :file:`grib1`, :file:`grib2`, :file:`nc`, :file:`2dm`,
+:file:`3Di Results`) can be loaded by clicking the
+|addMeshLayer| :guilabel:`Mesh` tab in the datasource manager.
+For further instructions, read :ref:`label_meshdata`.
 
 
 .. index:: CSV, Delimited text files
