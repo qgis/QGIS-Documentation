@@ -27,6 +27,8 @@ nodata pixel in the output raster.
 If the :guilabel:`Treat nodata values as false` option is checked,
 then nodata inputs will be treated the same as a ``0`` input value.
 
+.. seealso:: :ref:`qgisrasterbooleanor`
+
 
 Parameters
 ..........
@@ -52,13 +54,15 @@ Parameters
    * - **Treat nodata values as false**
      - ``NODATA_AS_FALSE``
      - [boolean]
+
+       Default: False
      - Treat nodata values in the input files as 0 when performing the
        operation
    * - **Output no data value**
      - ``NO_DATA``
      - [number]
 
-       Default: -9999,0
+       Default: -9999.0
      - Value to use for nodata in the output layer
    * - **Output data type**
      - ``DATA_TYPE``
@@ -154,6 +158,8 @@ nodata pixel in the output raster.
 If the :guilabel:`Treat nodata values as false` option is checked,
 then nodata inputs will be treated the same as a ``0`` input value.
 
+.. seealso:: :ref:`qgisrasterbooleanand`
+
 
 Parameters
 ..........
@@ -179,13 +185,15 @@ Parameters
    * - **Treat nodata values as false**
      - ``NODATA_AS_FALSE``
      - [boolean]
+
+       Default: False
      - Treat nodata values in the input files as 0 when performing the
        operation
    * - **Output no data value**
      - ``NO_DATA``
      - [number]
 
-       Default: -9999,0
+       Default: -9999.0
      - Value to use for nodata in the output layer
    * - **Output data type**
      - ``DATA_TYPE``
@@ -279,7 +287,6 @@ the layers in the current project.
 
 Parameters
 ..........
-
 
 .. list-table::
    :header-rows: 1
@@ -777,7 +784,7 @@ Parameters
      - [html]
        
        Default: ``[Save to temporary file]``
-     - Specification of the output HTML report.  One of:
+     - Specification of the output HTML report. One of:
        
        * Skip output
        * Save to Temporary File
@@ -789,7 +796,7 @@ Parameters
      - [table]
        
        Default: ``[Skip output]``
-     - Specification of the output table.  One of:
+     - Specification of the output table. One of:
        
        * Skip output
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)

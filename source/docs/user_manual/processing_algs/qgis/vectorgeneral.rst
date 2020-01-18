@@ -440,7 +440,8 @@ Finds and removes duplicated geometries.
 Attributes are not checked, so in case two features have identical geometries
 but different attributes, only one of them will be added to the result layer.
 
-.. seealso:: :ref:`qgisdropgeometries`, :ref:`qgisremovenullgeometries`
+.. seealso:: :ref:`qgisdropgeometries`, :ref:`qgisremovenullgeometries`,
+ :ref:`qgisdeleteduplicatesbyattribute`
 
 Parameters
 ..........
@@ -509,6 +510,8 @@ discarded.
 
 Optionally, these duplicate records can be saved to a separate
 output for analysis.
+
+.. seealso:: :ref:`qgisdeleteduplicategeometries`
 
 Parameters
 ..........
@@ -1314,13 +1317,10 @@ Outputs
 
 .. _qgisjoinattributesbynearest:
 
-Join Attributes by Nearest
+Join attributes by nearest
 -------------------------------
-
-K-nearest neighbor joins!
-
-The algorithm takes an input vector layer and creates a new vector
-layer with additional fields in its attribute table
+Takes an input vector layer and creates a new vector
+layer with additional fields in its attribute table.
 The additional attributes and their values are taken from a second
 vector layer.
 Features are joined by finding the closest features from each layer.

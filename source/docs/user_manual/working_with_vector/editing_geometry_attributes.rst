@@ -260,9 +260,9 @@ direction and a negative value does the opposite.
    geometry might not exactly follow an existing geometry.
 
 .. tip:: **Quickly enable or disable automatic tracing by pressing the**
-   :kbd:`t` **key**
+   :kbd:`T` **key**
 
-   By pressing the :kbd:`t` key, tracing can be enabled/disabled
+   By pressing the :kbd:`T` key, tracing can be enabled/disabled
    anytime (even while digitizing a feature), so it is possible to
    digitize parts of the feature with tracing enabled and other
    parts with tracing disabled.
@@ -1103,9 +1103,12 @@ Reverse Line
 Changing the direction of a line geometry can be useful for
 cartographical purposes or when preparing for network analysis.
 
-Activate the reverse line tool by clicking |reverseLine|
-:sup:`Reverse line`.
-Select the line with the cursor to change the direction of the line.
+To change a line direction:
+
+#. Activate the reverse line tool by clicking |reverseLine|
+   :sup:`Reverse line`.
+#. Click on the line. The direction of the line
+   is reversed.
 
 .. index::
    single: Digitizing tools; Split Features

@@ -350,12 +350,12 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the output layer.
        One of:
-       
+
        * Create Temporary Layer
        * Save to File...
        * Save to Geopackage...
-       * Save to PostGIS Table......
-       
+       * Save to PostGIS Table...
+
        The file encoding can also be changed here.
 
 Outputs
@@ -688,7 +688,7 @@ Outputs
 
 .. _qgisfeaturefilter:
 
-Feature filter (Modeler only)
+Feature filter
 -----------------------------
 Filters features from the input layer and redirects
 them to one or several outputs.
@@ -696,6 +696,8 @@ If you do not know about any attribute names that are common to all
 possible input layers, filtering is only possible on the feature
 geometry and general record mechanisms, such as ``$id`` and ``uuid``.  
 
+.. note:: This algorithm is only available from the
+  :ref:`Graphical modeler <processing.modeler>`.
 
 Parameters
 ..........
