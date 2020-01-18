@@ -263,7 +263,7 @@ To load a layer from a file, you can:
   where you can check |radioButtonOn| :guilabel:`File` and click on the
   :guilabel:`...` (browse) button.
 
-.. _figure_raster_add:
+  .. _figure_raster_add:
 
   .. figure:: img/addrasterlayerdialog.png
      :align: center
@@ -298,7 +298,7 @@ in the pull-down menu).
 Selecting a file from the list and clicking :guilabel:`Open` loads it into QGIS.
 More than one layer can be loaded at the same time by holding down the
 :kbd:`Ctrl` or :kbd:`Shift` key and clicking on multiple items in the dialog.
-Figure_vector_loaded_ shows QGIS after loading the :file:`alaska.shp` file.
+figure_vector_loaded_ shows QGIS after loading the :file:`alaska.shp` file.
 
 .. _figure_vector_loaded:
 
