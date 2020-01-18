@@ -147,15 +147,15 @@ At the top of the Browser panel, you find some buttons that help you to:
   displayed. See the Browser Panel(2) example in figure_browser_panels_.
   The comparison can be case-sensitive or not. It can also be set to:
 
-  * **normal**: show items containing the search text;
-  * using **wildcard(s)**: fine tune the search using the ``?`` and/or ``*``
-    characters to specify the position of the search text;
-  * using a **regular expression**.
+  * :guilabel:`Normal`: show items containing the search text
+  * :guilabel:`Wildcard(s)`: fine tune the search using the ``?`` and/or ``*``
+    characters to specify the position of the search text
+  * :guilabel:`Regular expression`
 
 * |collapseTree| :sup:`Collapse All` the whole tree;
 * |metadata| :sup:`Enable/disable properties widget`: when toggled on,
   a new widget is added at the bottom of the panel showing, if applicable,
-  metadatas of the selected item.
+  metadata for the selected item.
 
 Right-clicking an item in the browser tree helps you to:
 
@@ -166,7 +166,7 @@ Right-clicking an item in the browser tree helps you to:
   Options --> Data Sources` tab.
 * manage your :ref:`spatial bookmarks <sec_bookmarks>`: bookmarks can be
   created, exported and imported as ``XML`` files.
-* create a connection to databases or web servers.
+* create a connection to a database or a web service.
 * refresh, rename or delete a schema.
 
 You can also import files into databases or copy tables from one schema/database
@@ -238,8 +238,8 @@ Loading a layer from a file
 
 To load a layer from a file, you can:
 
-* for vector data (like Shapefile, Mapinfo or dxf layer), click on
-  |addOgrLayer| :sup:`Add Vector Layer` toolbar button, select the
+* for vector data (like Shapefile, Mapinfo or DXF layers), click on
+  the |addOgrLayer| :sup:`Add Vector Layer` toolbar button, select the
   :menuselection:`Layer --> Add Layer -->` |addOgrLayer|:guilabel:`Add Vector
   Layer` menu option or press :kbd:`Ctrl+Shift+V`.
   This will bring up a new window (see figure_vector_add_) from which you can
