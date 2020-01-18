@@ -122,6 +122,8 @@ extra parameters:
      be used as layer name.
    * CODEC: specify a codec to be used for encoding. Default is ``ISO-8859-1``
      check the QGIS desktop DXF export dialog for valid values.
+   * NO_MTEXT: Use TEXT instead of MTEXT for labels.
+   * FORCE_2D: Force 2D output. This is required for polyline width.
    "
    "TILED", "No", "Working in *tiled mode*"
 
