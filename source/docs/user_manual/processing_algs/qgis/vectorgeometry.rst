@@ -4648,12 +4648,13 @@ Rectangles, ovals, diamonds
 Creates a buffer area with a rectangle, oval or diamond shape
 for each feature of the input point layer.
 
-Parameters can vary depending on the shape chosen.
+The shape parameters can be fixed for all features or dynamic using a field or
+an expression.
 
 .. figure:: img/rectangles_ovals_diamond_variable.png
    :align: center
 
-   Different buffer shapes with different parameters
+   Different buffer shapes with dynamic parameters
 
 Parameters
 ..........
