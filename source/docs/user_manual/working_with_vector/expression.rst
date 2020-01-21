@@ -789,6 +789,10 @@ All these functions return the hash (a string hex value) of the string argument.
 
    |
 
+One byte (8 bits) is represented with two hex ''digits'', so md4 (16 bytes)
+produces a 16 * 2 = 32 character long hex string and keccak_512 (64 bytes)
+produces a 64 * 2 = 128 character long hex string.
+
 **An example:**
 
 * Return the md4 hash ( 'c0fc71c241cdebb6e888cbac0e2b68eb' ) of the string 'QGIS'::
