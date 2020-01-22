@@ -1044,7 +1044,7 @@ effect types, with custom options are available:
 * **Colorise**: This effect can be used to make a version of the style using one
   single hue. The base will always be a grayscale version of the symbol and you
   can:
-  
+
   * Use the |selectString| :guilabel:`Grayscale` to select how to create it:
     options are 'By lightness', 'By luminosity', 'By average' and 'Off'.
   * If |checkbox| :guilabel:`Colorise` is selected, it will be possible to mix
@@ -1190,7 +1190,7 @@ option, opening the following dialog.
 
    Layer labeling settings - Single labels
 
-At the top of the dialog, a :guilabel:`Label with` drop-down list is enabled.
+At the top of the dialog, a :guilabel:`Value` drop-down list is enabled.
 You can select an attribute column to use for labeling. By default, the
 :ref:`display field <maptips>` is used. Click |expression| if you want to define
 labels based on expressions - See :ref:`labeling_with_expressions`.
@@ -1234,7 +1234,7 @@ options:
   redraws.
 * :guilabel:`Text rendering`: sets the default value for label rendering
   widgets when :ref:`exporting a map canvas <exportingmapcanvas>` or
-  :ref:`a layout <create-output>` to PDF or SVG. 
+  :ref:`a layout <create-output>` to PDF or SVG.
   If :guilabel:`Always render labels as text` is selected then labels can be
   edited in external applications (e.g. Inkscape) as normal text. BUT the side
   effect is that the rendering quality is decreased, and there are issues with
@@ -1308,7 +1308,7 @@ Whether you choose single or rule-based labeling type, QGIS allows using
 expressions to label features.
 
 Assuming you are using the :guilabel:`Single labels` method, click the
-|expression| button near the :guilabel:`Label with` drop-down list in the
+|expression| button near the :guilabel:`Value` drop-down list in the
 |labeling| :guilabel:`Labels` tab of the properties dialog.
 
 In figure_labels_expression_, you see a sample expression to label the alaska
@@ -1474,15 +1474,15 @@ description and manipulation in :ref:`data_defined` section.
    :align: center
 
    Airports labels are formatted based on their attributes
-   
+
 .. tip:: **Use the data-defined override to label every part of multi-part features**
 
    There is an option to set the labeling for multi-part features independently from
    your label properties. Choose the  |render| :ref:`Rendering <labels_rendering>`,
    ``Feature options``, go to the |dataDefined| :sup:`Data-define override` button
-   next to the checkbox |unchecked| :guilabel:`Label every part of multipart-features` 
+   next to the checkbox |unchecked| :guilabel:`Label every part of multipart-features`
    and define the labels as described in :ref:`data_defined`.
-   
+
 
 .. _label_toolbar:
 
@@ -1528,7 +1528,7 @@ same way with diagrams:
 * |changeLabelProperties| :sup:`Change Label`. It opens a dialog to change the
   clicked label properties; it can be the label itself, its coordinates, angle,
   font, size... as long as this property has been mapped to a field. Here you can
-  set the option to |checkbox| :guilabel:`Label every part of a feature`. 
+  set the option to |checkbox| :guilabel:`Label every part of a feature`.
 
 .. warning:: **Label tools overwrite current field values**
 
@@ -1967,7 +1967,7 @@ in figure_fields_form_.
 
 #. Choose ``Drag and drop designer`` from the :guilabel:`Select attribute layout
    editor` combobox. This enables the :guilabel:`Form Layout` panel next to the
-   :guilabel:`Available widgets` panel, filled with existing fields. 
+   :guilabel:`Available widgets` panel, filled with existing fields.
 #. Select any fields you would not want to use in your :guilabel:`Form Layout`
    panel and hit the |signMinus| button to remove them. Drag and drop fields
    from the other panel to re-add them. The same field can be added multiple times.
@@ -1975,7 +1975,7 @@ in figure_fields_form_.
    their position.
 #. Add containers (tab or group frames) to associate fields that belong to
    the same category and better structure the form.
-  
+
    #. The first step is to use the |signPlus| icon to create a tab in which
       fields and groups will be displayed
    #. You can create as many containers as you want. If relevant, press
@@ -2007,7 +2007,7 @@ in figure_fields_form_.
 #. Likewise, double-click a field label and you can specify whether the label
    of its widget should be visible or not in the form.
 
-#. In case the layer is involved in ``one or many to many relations`` (see 
+#. In case the layer is involved in ``one or many to many relations`` (see
    :ref:`vector_relations`), referencing layers are listed in the
    :guilabel:`Relations` frame and their form can be embedded in the current
    layer form by drag-and-drop. As for the other items, double-click the relation
