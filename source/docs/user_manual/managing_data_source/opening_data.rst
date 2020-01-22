@@ -31,8 +31,10 @@ and often write a lot of formats:
   <https://gdal.org/drivers/raster/index.html>`_.
 * Database formats include PostgreSQL/PostGIS, SQLite/SpatiaLite, Oracle, DB2
   or MSSQL Spatial, MySQL...
-* Support of web data services (WM(T)S, WFS, WCS, CSW, ArcGIS Servers, ...) is
-  also handled by QGIS providers (see :ref:`working_with_ogc`).
+* Web map and data services (WM(T)S, WFS, WCS, CSW, XYZ tiles, ArcGIS
+  services, ...) are also handled by QGIS providers.
+  See :ref:`working_with_ogc` for more information about WMS, WMTS, WFS,
+  WCS, CSW and more).
 * You can read supported files from archived folders and use QGIS native
   formats such as QML files (:ref:`qgisstylefile`) and virtual and memory
   layers.
@@ -1041,6 +1043,27 @@ WFS(-T), WCS, CSW, ...).
 Thanks to QGIS Server, you can also publish such services.
 Chapter :ref:`sec_ogc` contains descriptions of these capabilities.
 
+.. index:: XYZ Tile services
+.. _xyz_tile:
+
+Using XYZ Tile services
+-----------------------
+
+XYZ Tile services can be found in the :guilabel:`XYZ Tiles` top level
+entry in the browser.
+The OpenStreetMap XYZ Tile service is defined by default, and you can
+add other services that use the XYZ Tile protocol by choosing
+:guilabel:`New Connection` in the XYZ Tiles context menu (right-click
+to open).
+figure_xyz_tiles_openstreetmap_ shows the dialog with the OpenStreetMap
+XYZ Tile service configuration.
+
+.. _figure_xyz_tiles_openstreetmap:
+
+.. figure:: img/xyz_tiles_dialog_osm.png
+   :align: center
+
+   XYZ Tiles - OpenStreetMap configuration
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
