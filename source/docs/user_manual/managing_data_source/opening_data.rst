@@ -1057,8 +1057,16 @@ add other services that use the XYZ Tile protocol by choosing
 to open).
 figure_xyz_tiles_openstreetmap_ shows the dialog with the OpenStreetMap
 XYZ Tile service configuration.
-Configurations can also be saved (:guilabel:`Save Connections`) and
-loaded (:guilabel:`Load Connections`) through the context menu.
+
+.. _figure_xyz_tiles_openstreetmap:
+
+.. figure:: img/xyz_tiles_dialog_osm.png
+   :align: center
+
+   XYZ Tiles - OpenStreetMap configuration
+
+Configurations can be saved (:guilabel:`Save Connections`) to XML
+and loaded (:guilabel:`Load Connections`) through the context menu.
 The XML file for OpenStreetMap looks like this::
 
   <!DOCTYPE connections>
@@ -1067,13 +1075,10 @@ The XML file for OpenStreetMap looks like this::
      zmin="0" zmax="19" password="" name="OpenStreetMap" username=""
      authcfg="" referer=""/>
   </qgsXYZTilesConnections>
-
-.. _figure_xyz_tiles_openstreetmap:
-
-.. figure:: img/xyz_tiles_dialog_osm.png
-   :align: center
-
-   XYZ Tiles - OpenStreetMap configuration
+  
+A preview is available in the :guilabel:`Preview` tab in the
+:guilabel:`Layer properties` dialog that is opened with
+:guilabel:`Properties...` in the context menu.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
