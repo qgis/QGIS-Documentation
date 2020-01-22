@@ -1079,6 +1079,7 @@ The XML file for OpenStreetMap looks like this::
 A preview is available in the :guilabel:`Preview` tab in the
 :guilabel:`Layer properties` dialog that is opened with
 :guilabel:`Properties...` in the context menu.
+Authentication configuration is supported.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
