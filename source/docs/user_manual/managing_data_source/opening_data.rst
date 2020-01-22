@@ -1057,6 +1057,16 @@ add other services that use the XYZ Tile protocol by choosing
 to open).
 figure_xyz_tiles_openstreetmap_ shows the dialog with the OpenStreetMap
 XYZ Tile service configuration.
+Configurations can also be saved (:guilabel:`Save Connections`) and
+loaded (:guilabel:`Load Connections`) through the context menu.
+The XML file for OpenStreetMap looks like this::
+
+  <!DOCTYPE connections>
+  <qgsXYZTilesConnections version="1.0">
+    <xyztiles url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+     zmin="0" zmax="19" password="" name="OpenStreetMap" username=""
+     authcfg="" referer=""/>
+  </qgsXYZTilesConnections>
 
 .. _figure_xyz_tiles_openstreetmap:
 
