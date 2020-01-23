@@ -626,12 +626,12 @@ guidelines:
   Definition                                ``definition``
   Point                                     ``point``
   MultipleLayers                            ``multipleLayers``
-  Range                                     ``Range``
-  AuthConfig                                ``AuthConfig``
-  Mesh                                      ``Mesh``
-  Layout                                    ``Layout``
-  LayoutItem                                ``LayoutItem``
-  Color                                     ``Color``
+  Range                                     ``range``
+  AuthConfig                                ``authconfig``
+  Mesh                                      ``mesh``
+  Layout                                    ``layout``
+  LayoutItem                                ``layoutitem``
+  Color                                     ``color``
   Scale                                     ``scale``
   ----------------------------------------  -------------------------  --------------------
   Aggregates                                ``aggregates``
