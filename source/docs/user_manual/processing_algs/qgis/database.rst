@@ -257,7 +257,7 @@ Parameters
      - Type
      - Description
    * - **Input layers**
-     - LAYERS
+     - ``LAYERS``
      - [vector: any] [list]
      - The (vector) layers to import into the GeoPackage.
        Raster layers are not supported. If a raster layer is
@@ -265,7 +265,7 @@ Parameters
        :class:`QgsProcessingException <qgis.core.QgsProcessingException>`
        will be thrown.
    * - **Overwrite existing GeoPackage**
-     - OVERWRITE
+     - ``OVERWRITE``
      - [boolean]
      
        Default: False
@@ -273,14 +273,14 @@ Parameters
        ``True`` will make sure that it is deleted and a new one
        will be created before the layers are added.
        If this option is ``False``, the layers will be appended.
-   * - **Save layer styles into GeoPackage** |38|
-     - SAVE_STYLES
+   * - **Save layer styles into GeoPackage**
+     - ``SAVE_STYLES``
      - [boolean]
      
        Default: True
      - Save the layer styles
    * - **Destination GeoPackage**
-     - OUTPUT
+     - ``OUTPUT``
      - [file]
      - If not specified the GeoPackage will be saved in
        the temporary folder.
@@ -299,7 +299,7 @@ Outputs
      - Description
 
    * - **Layers within new package**
-     - OUTPUT_LAYERS
+     - ``OUTPUT_LAYERS``
      - [string] [list]
      - The list of layers added to the GeoPackage.
 
@@ -473,12 +473,3 @@ Outputs
 
 No output is created.
 The SQL query is executed in place.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |38| replace:: ``NEW in 3.8``

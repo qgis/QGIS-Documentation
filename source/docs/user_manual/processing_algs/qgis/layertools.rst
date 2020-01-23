@@ -48,7 +48,6 @@ Parameters
      - Specify the polygon vector layer for the output extent.
        One of:
 
-       * Skip Output
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...

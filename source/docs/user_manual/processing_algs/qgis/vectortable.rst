@@ -307,7 +307,7 @@ Outputs
 
 .. _qgisaddxyfieldstolayer:
 
-Add X/Y fields to layer |38|
+Add X/Y fields to layer
 ----------------------------
 Adds X and Y (or latitude/longitude) fields to a point layer.
 The X/Y fields can be calculated in a different CRS to the layer
@@ -350,12 +350,12 @@ Parameters
        Default: ``[Create temporary layer]``
      - Specify the output layer.
        One of:
-       
+
        * Create Temporary Layer
        * Save to File...
        * Save to Geopackage...
-       * Save to PostGIS Table......
-       
+       * Save to PostGIS Table...
+
        The file encoding can also be changed here.
 
 Outputs
@@ -546,7 +546,7 @@ Outputs
 
 .. _qgisexplodehstorefield:
 
-Explode HStore Field |36|
+Explode HStore Field
 -------------------------
 Creates a copy of the input layer and adds a new field
 for every unique key in the HStore field.
@@ -626,7 +626,7 @@ Outputs
 
 .. _qgisextractbinary:
 
-Extract binary field |36|
+Extract binary field
 -------------------------
 Extracts contents from a binary field, saving them to individual files.
 Filenames can be generated using values taken from an attribute in the
@@ -688,7 +688,7 @@ Outputs
 
 .. _qgisfeaturefilter:
 
-Feature filter (Modeler only)
+Feature filter
 -----------------------------
 Filters features from the input layer and redirects
 them to one or several outputs.
@@ -696,6 +696,8 @@ If you do not know about any attribute names that are common to all
 possible input layers, filtering is only possible on the feature
 geometry and general record mechanisms, such as ``$id`` and ``uuid``.  
 
+.. note:: This algorithm is only available from the
+  :ref:`Graphical modeler <processing.modeler>`.
 
 Parameters
 ..........
@@ -1017,8 +1019,6 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |36| replace:: ``NEW in 3.6``
-.. |38| replace:: ``NEW in 3.8``
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png

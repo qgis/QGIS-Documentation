@@ -150,7 +150,7 @@ Outputs
 
 .. _qgislayertobookmarks:
 
-Convert layer to spatial bookmarks |310|
+Convert layer to spatial bookmarks
 ----------------------------------------
 Creates spatial bookmarks corresponding to the extent of features
 contained in a layer.
@@ -210,7 +210,7 @@ Outputs
 
 .. _qgisbookmarkstolayer:
 
-Convert spatial bookmarks to layer |310|
+Convert spatial bookmarks to layer
 ----------------------------------------
 Creates a new layer containing polygon
 features for stored spatial bookmarks.
@@ -440,7 +440,8 @@ Finds and removes duplicated geometries.
 Attributes are not checked, so in case two features have identical geometries
 but different attributes, only one of them will be added to the result layer.
 
-.. seealso:: :ref:`qgisdropgeometries`, :ref:`qgisremovenullgeometries`
+.. seealso:: :ref:`qgisdropgeometries`, :ref:`qgisremovenullgeometries`,
+ :ref:`qgisdeleteduplicatesbyattribute`
 
 Parameters
 ..........
@@ -500,7 +501,7 @@ Outputs
 
 .. _qgisdeleteduplicatesbyattribute:
 
-Delete duplicates by attribute |36|
+Delete duplicates by attribute
 -----------------------------------
 Deletes duplicate rows by only considering the specified field
 / fields.
@@ -509,6 +510,8 @@ discarded.
 
 Optionally, these duplicate records can be saved to a separate
 output for analysis.
+
+.. seealso:: :ref:`qgisdeleteduplicategeometries`
 
 Parameters
 ..........
@@ -1314,13 +1317,10 @@ Outputs
 
 .. _qgisjoinattributesbynearest:
 
-Join Attributes by Nearest |38|
+Join attributes by nearest
 -------------------------------
-
-K-nearest neighbor joins!
-
-The algorithm takes an input vector layer and creates a new vector
-layer with additional fields in its attribute table
+Takes an input vector layer and creates a new vector
+layer with additional fields in its attribute table.
 The additional attributes and their values are taken from a second
 vector layer.
 Features are joined by finding the closest features from each layer.
@@ -1718,7 +1718,7 @@ Outputs
 
 .. _qgissplitfeaturesbycharacter:
 
-Split features by character |310|
+Split features by character
 ---------------------------------
 Features are split into multiple output features by splitting
 a field's value at a specified character.
@@ -1916,8 +1916,5 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |310| replace:: ``NEW in 3.10``
-.. |36| replace:: ``NEW in 3.6``
-.. |38| replace:: ``NEW in 3.8``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em

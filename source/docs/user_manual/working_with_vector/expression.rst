@@ -190,7 +190,7 @@ This group contains functions which aggregate values over layers and fields.
    "array_agg", "Returns an array of aggregated values from a field or expression"
    "collect", "Returns the multipart geometry of aggregated geometries from an expression"
    "concatenate", "Returns all aggregated strings from a field or expression joined by a delimiter"
-   "concatenate_unique |38|", "Returns all unique aggregated strings from a field
+   "concatenate_unique", "Returns all unique aggregated strings from a field
    or expression joined by a delimiter"
    "count", "Returns the count of matching features"
    "count_distinct", "Returns the count of distinct values"
@@ -260,7 +260,7 @@ is irrelevant and values are identified by their keys.
    :class: longtable
 
    "array", "Returns an array containing all the values passed as parameter"
-   "array_all |38|", "Returns true if an array contains all the values of a given array"
+   "array_all", "Returns true if an array contains all the values of a given array"
    "array_append", "Returns an array with the given value added at the end"
    "array_cat", "Returns an array containing all the given arrays concatenated"
    "array_contains", "Returns true if an array contains the given value"
@@ -282,7 +282,7 @@ is irrelevant and values are identified by their keys.
    "array_reverse", "Returns the given array with array values in reversed order"
    "array_slice", "Returns the values of the array from the start_pos argument
    up to and including the end_pos argument"
-   "array_sort |36|", "Returns the provided array with its elements sorted"
+   "array_sort", "Returns the provided array with its elements sorted"
    "array_to_string", "Concatenates array elements into a string separated by a
    delimiter and using optional string for empty values"
    "generate_series", "Creates an array containing a sequence of numbers"
@@ -344,9 +344,9 @@ This group contains functions to handle conditional checks in expressions.
    returns a different result whether it's true or false. You can test multiple conditions"
    "coalesce", "Returns the first non-NULL value from the expression list"
    "if", "Tests a condition and returns a different result depending on the conditional check"
-   "nullif(value1, value2) |36|", "Returns a null value if value1 equals value2
+   "nullif(value1, value2)", "Returns a null value if value1 equals value2
    otherwise it returns value1. This can be used to conditionally substitute values with NULL."
-   "try |36|", "Tries an expression and returns its value if error-free,
+   "try", "Tries an expression and returns its value if error-free,
    an alternative value (if provided) or Null if an error occurs"
 
 .. only:: html
@@ -492,7 +492,7 @@ If the value is of a string type, it should be simple quoted, otherwise no quote
 is needed.
 
 
-Files and Paths Functions |38|
+Files and Paths Functions
 ------------------------------
 
 This group contains functions which manipulate file and path names.
@@ -595,7 +595,7 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    varies according to the M values at the line vertices (see also :ref:`qgisbufferbym`)"
    "centroid", "Returns the geometric center of a geometry (see also :ref:`qgiscentroids`)"
    "closest_point", "Returns the point on a geometry that is closest to a second geometry"
-   "collect_geometries |310|", "Collects a set of geometries into a multi-part geometry
+   "collect_geometries", "Collects a set of geometries into a multi-part geometry
    object (see also :ref:`qgiscollect`)"
    "combine", "Returns the combination of two geometries"
    "contains(a,b)", "Returns 1 (true) if and only if no points of b lie in the exterior of a,
@@ -619,7 +619,7 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    or (Multi-)Linestring geometry with an extension specified by X and Y"
    "flip_coordinates", "Returns a copy of the geometry with the X and Y coordinates
    swapped (see also :ref:`qgisswapxy`)"
-   "force_rhr |36|", "Forces a geometry to respect the Right-Hand-Rule (see also
+   "force_rhr", "Forces a geometry to respect the Right-Hand-Rule (see also
    :ref:`qgisforcerhr`)"
    "geom_from_gml", "Returns a geometry created from a GML representation of geometry"
    "geom_from_wkt", "Returns a geometry created from a well-known text (WKT) representation"
@@ -661,9 +661,9 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    "make_point_m(x,y,m)", "Returns a point geometry from X and Y coordinates and M values"
    "make_polygon", "Creates a polygon geometry from an outer ring and optional series
    of inner ring geometries"
-   "make_rectangle_3points |36|", "Creates a rectangle from 3 points" 
+   "make_rectangle_3points", "Creates a rectangle from 3 points" 
    "make_regular_polygon", "Creates a regular polygon"
-   "make_square |36|", "Creates a square from a diagonal"
+   "make_square", "Creates a square from a diagonal"
    "make_triangle", "Creates a triangle polygon"
    "minimal_circle", "Returns the minimal enclosing circle of an input geometry
    (see also :ref:`qgisminimumenclosingcircle`)"
@@ -810,7 +810,7 @@ It also provides some convenient functions to manipulate layers.
    :header: "Function", "Description"
    :widths: auto
 
-   "decode_uri |36|", "Takes a layer and decodes the uri of the underlying data provider.
+   "decode_uri", "Takes a layer and decodes the uri of the underlying data provider.
    Available information depends on the data provider type."
 
 .. index:: Map data structure, Dictionary, Key-value pairs, Associative arrays
@@ -829,7 +829,7 @@ and values are identified by their keys.
    :header: "Function", "Description"
    :widths: auto
 
-   "from_json |36|", "Loads a json-formatted string"
+   "from_json", "Loads a json-formatted string"
    "hstore_to_map", "Creates a map from a hstore-formatted string"
    "json_to_map", "Creates a map from a json-formatted string"
    "map", "Returns a map containing all the keys and values passed as pair of parameters"
@@ -843,7 +843,7 @@ and values are identified by their keys.
    "map_insert", "Returns a map with an added key/value"
    "map_to_hstore", "Merges map elements into a hstore-formatted string"
    "map_to_json", "Merges map elements into a json-formatted string"
-   "to_json |36|", "Creates a json-formatted string from a map, an array or other value"
+   "to_json", "Creates a json-formatted string from a map, an array or other value"
 
 
 Mathematical Functions
@@ -954,7 +954,7 @@ if one of the inputs is NULL then the result is NULL.
 
 .. _processing_functions:
 
-Processing Functions |36|
+Processing Functions
 -------------------------
 
 This group contains functions that operate on processing algorithms.
@@ -997,7 +997,7 @@ This group contains functions that operate on record identifiers.
    with the 'attribute' function to evaluate attribute values from the current feature."
    "$id", "Returns the feature id of the current row"
    "attribute", "Returns the value of a specified attribute from a feature"
-   "attributes |310|", "Returns a :ref:`map <maps_functions>` of all attributes from
+   "attributes", "Returns a :ref:`map <maps_functions>` of all attributes from
    a feature, with field names as map keys"
    "get_feature", "Returns the first feature of a layer matching a given attribute value"
    "get_feature_by_id", "Returns the feature of a layer matching the given feature ID"
@@ -1005,7 +1005,7 @@ This group contains functions that operate on record identifiers.
    "num_selected", "Returns the number of selected features on a given layer"
    "represent_value", "Returns the configured representation value for a field value
    (convenient with some :ref:`widget types <edit_widgets>`)"
-   "sql_fetch_and_increment |36|", "Manage autoincrementing values in sqlite databases"
+   "sql_fetch_and_increment", "Manage autoincrementing values in sqlite databases"
    "uuid", "Generates a Universally Unique Identifier (UUID) for each row. Each UUID is 38 characters long."
 
 .. only:: html
@@ -1135,10 +1135,10 @@ To use these functions in an expression, they should be preceded by @ character
    form or table row"
    "current_geometry", "Returns the geometry of the feature currently being edited
    in the form or the table row"
-   "fullextent_maxx |38|", "Maximum x value from full canvas extent (including all layers)"
-   "fullextent_maxy |38|", "Maximum y value from full canvas extent (including all layers)"
-   "fullextent_minx |38|", "Minimum x value from full canvas extent (including all layers)"
-   "fullextent_miny |38|", "Minimum x value from full canvas extent (including all layers)"
+   "fullextent_maxx", "Maximum x value from full canvas extent (including all layers)"
+   "fullextent_maxy", "Maximum y value from full canvas extent (including all layers)"
+   "fullextent_minx", "Minimum x value from full canvas extent (including all layers)"
+   "fullextent_miny", "Minimum x value from full canvas extent (including all layers)"
    "geometry_part_count", "Returns the number of parts in rendered feature's geometry"
    "geometry_part_num", "Returns the current geometry part number for feature being rendered"
    "geometry_point_count", "Returns the number of points in the rendered geometry's part"
@@ -1156,25 +1156,25 @@ To use these functions in an expression, they should be preceded by @ character
    "layout_page", "Returns the page number of the current item in the layout"
    "layout_pageheight", "Returns the active page height in the layout (in mm)"
    "layout_pagewidth", "Returns the active page width in the layout (in mm)"
-   "legend_column_count |36|", "Returns the number of columns in the legend"
-   "legend_filter_by_map |36|", "Indicates if the content of the legend is
+   "legend_column_count", "Returns the number of columns in the legend"
+   "legend_filter_by_map", "Indicates if the content of the legend is
    filtered by the map"
-   "legend_filter_out_atlas |36|", "Indicates if the atlas is filtered out of the legend"
-   "legend_split_layers |36|", "Indicates if layers can be split in the legend"
-   "legend_title |36|", "Returns the title of the legend"
-   "legend_wrap_string |36|", "Returns the character(s) used to wrap the legend text"
+   "legend_filter_out_atlas", "Indicates if the atlas is filtered out of the legend"
+   "legend_split_layers", "Indicates if layers can be split in the legend"
+   "legend_title", "Returns the title of the legend"
+   "legend_wrap_string", "Returns the character(s) used to wrap the legend text"
    "map_crs", "Returns the Coordinate reference system of the current map"
-   "map_crs_acronym |36|", "Returns the acronym of the Coordinate reference
+   "map_crs_acronym", "Returns the acronym of the Coordinate reference
    system of the current map"
    "map_crs_definition", "Returns the full definition of the Coordinate
    reference system of the current map"
-   "map_crs_description |36|", "Returns the name of the Coordinate reference
+   "map_crs_description", "Returns the name of the Coordinate reference
    system of the current map"
-   "map_crs_ellipsoid |36|", "Returns the acronym of the ellipsoid of the
+   "map_crs_ellipsoid", "Returns the acronym of the ellipsoid of the
    Coordinate reference system of the current map"
-   "map_crs_proj4 |36|", "Returns the Proj4 definition of the Coordinate
+   "map_crs_proj4", "Returns the Proj4 definition of the Coordinate
    reference system of the current map"
-   "map_crs_wkt |36|", "Returns the WKT definition of the Coordinate reference
+   "map_crs_wkt", "Returns the WKT definition of the Coordinate reference
    system of the current map"
    "map_extent", "Returns the geometry representing the current extent of the map"
    "map_extent_center", "Returns the point feature at the center of the map"
@@ -1222,7 +1222,7 @@ To use these functions in an expression, they should be preceded by @ character
    "qgis_version_no", "Returns current QGIS version number"
    "snapping_results", "Gives access to snapping results while digitizing a
    feature (only available in add feature)"
-   "scale_value |310|", "Returns current scale bar distance value"
+   "scale_value", "Returns current scale bar distance value"
    "symbol_angle", "Returns the angle of the symbol used to render the feature
    (valid for marker symbols only)"
    "symbol_color", "Returns the color of the symbol used to renderthe feature"
@@ -1364,9 +1364,6 @@ Further information about creating Python code can be found in the
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |310| replace:: ``NEW in 3.10``
-.. |36| replace:: ``NEW in 3.6``
-.. |38| replace:: ``NEW in 3.8``
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
