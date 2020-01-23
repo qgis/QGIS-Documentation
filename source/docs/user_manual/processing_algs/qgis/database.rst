@@ -11,7 +11,9 @@ Database
 
 Export to PostgreSQL
 --------------------
-Exports a vector layer to a PostgreSQL database.
+Exports a vector layer to a PostgreSQL database, creating a new relation.
+If a relation with the same name exists, it can be removed before the
+new relation is created.
 Prior to this a connection between QGIS and the PostgreSQL database has to
 be created (see eg :ref:`vector_create_stored_connection`).
 
@@ -88,8 +90,9 @@ Parameters
      - If the specified table exists, setting this option to
        ``True`` will make sure that it is deleted and a new
        table will be created before the features are added.
-       If this option is ``False``, the features will be
-       appended to the table.
+       If this option is ``False`` and the table exists, the
+       algorithm will throw an exception ("relation already
+       exists").
    * - **Create spatial index**
      - ``CREATEINDEX``
      - [boolean]
@@ -192,11 +195,13 @@ Parameters
      - [boolean]
        
        Default: True
-     - If the specified database exists, setting this option to
+     - If the specified table exists, setting this option to
        ``True`` will make sure that it is deleted and a new
-       database will be created before the layers are added.
-       If this option is ``False``, the layers will be
-       appended.
+       table will be created before the features of the layer is
+       added.
+       If this option is ``False`` and the table exists, the
+       algorithm will throw an exception ("table already
+       exists").
    * - **Create spatial index**
      - ``CREATEINDEX``
      - [boolean]
@@ -242,7 +247,7 @@ Adds layers to a GeoPackage.
 If the GeoPackage exists and ``Overwrite existing GeoPackage``
 is checked, it will be overwritten (removed and recreated).
 If the GeoPackage exists and ``Overwrite existing GeoPackage``
-is not checked, the layers will be appended to the GeoPackage.
+is not checked, the layer will be appended.
 
 Parameters
 ..........
@@ -272,7 +277,7 @@ Parameters
      - If the specified GeoPackage exists, setting this option to
        ``True`` will make sure that it is deleted and a new one
        will be created before the layers are added.
-       If this option is ``False``, the layers will be appended.
+       If set to ``False``, layers will be appended.
    * - **Save layer styles into GeoPackage**
      - ``SAVE_STYLES``
      - [boolean]
@@ -282,8 +287,8 @@ Parameters
    * - **Destination GeoPackage**
      - ``OUTPUT``
      - [file]
-     - If not specified the GeoPackage will be saved in
-       the temporary folder.
+     - If not specified the GeoPackage will be saved in the
+       temporary folder.
 
 Outputs
 .......
