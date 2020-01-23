@@ -543,7 +543,7 @@ actions like:
 
        #. :kbd:`Ctrl+Shift+M`
        #. :kbd:`Ctrl+Shift+J`
-       #.  
+       #. No shortcut
 
      - :guilabel:`Attributes`
      - :ref:`sec_measure`
