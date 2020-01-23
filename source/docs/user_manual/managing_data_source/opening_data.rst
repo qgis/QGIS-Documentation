@@ -33,8 +33,7 @@ and often write a lot of formats:
   or MSSQL Spatial, MySQL...
 * Web map and data services (WM(T)S, WFS, WCS, CSW, XYZ tiles, ArcGIS
   services, ...) are also handled by QGIS providers.
-  See :ref:`working_with_ogc` for more information about WMS, WMTS, WFS,
-  WCS, CSW and more).
+  See :ref:`working_with_ogc` for more information about some of these.
 * You can read supported files from archived folders and use QGIS native
   formats such as QML files (:ref:`qgisstylefile`) and virtual and memory
   layers.
@@ -666,33 +665,33 @@ The parameters required for a PostGIS connection are explained below.
 For the other database types, see their differences at
 :ref:`db_requirements`.
 
-* **Name**: A name for this connection. It can be the same as *Database*.
-* **Service**: Service parameter to be used alternatively to hostname/port (and
+* :guilabel:`Name`: A name for this connection. It can be the same as :guilabel:`Database`.
+* :guilabel:`Service`: Service parameter to be used alternatively to hostname/port (and
   potentially database). This can be defined in :file:`pg_service.conf`.
   Check the :ref:`pg-service-file` section for more details.
-* **Host**: Name of the database host. This must be a resolvable host name
+* :guilabel:`Host`: Name of the database host. This must be a resolvable host name
   such as would be used to open a TCP/IP connection or ping the host. If the
   database is on the same computer as QGIS, simply enter *localhost* here.
-* **Port**: Port number the PostgreSQL database server listens on. The default
+* :guilabel:`Port`: Port number the PostgreSQL database server listens on. The default
   port for PostGIS is ``5432``.
-* **Database**: Name of the database.
-* **SSL mode**: How the SSL connection will be negotiated with the server.
+* :guilabel:`Database`: Name of the database.
+* :guilabel:`SSL mode`: How the SSL connection will be negotiated with the server.
   Note that massive speed-ups in PostGIS layer rendering can be achieved
   by disabling SSL in the connection editor.
-  The following options are available:
+  The following options may be available:
 
-  * *Disable*: Only try an unencrypted SSL connection;
-  * *Allow*: Try a non-SSL connection. If that fails, try an SSL connection;
-  * *Prefer* (the default): Try an SSL connection. If that fails, try a
+  * :guilabel:`Disable`: Only try an unencrypted SSL connection;
+  * :guilabel:`Allow`: Try a non-SSL connection. If that fails, try an SSL connection;
+  * :guilabel:`Prefer` (the default): Try an SSL connection. If that fails, try a
     non-SSL connection;
-  * *Require*: Only try an SSL connection.
-  * *verify_ca*:
-  * *verify_full*:
+  * :guilabel:`Require`: Only try an SSL connection.
+  * :guilabel:`verify_ca`:
+  * :guilabel:`verify_full`:
 
-* **Authentication**, basic.
+* :guilabel:`Authentication`, basic.
 
-  * **User name**: User name used to log in to the database.
-  * **Password**: Password used with *Username* to connect to the database.
+  * :guilabel:`User name`: User name used to log in to the database.
+  * :guilabel:`Password`: Password used with *Username* to connect to the database.
 
   You can save any or both of the ``User name`` and ``Password`` parameters, in
   which case they will be used by default each time you need to connect to this
@@ -712,7 +711,7 @@ For the other database types, see their differences at
    See :ref:`authentication_index` for more details) or in a service connection
    file (see :ref:`pg-service-file` for example).
 
-* **Authentication**, configurations.
+* :guilabel:`Authentication`, configurations.
   Choose an authentication configuration. You can add configurations using
   the |signPlus| button. Choices are:  
 
@@ -1076,9 +1075,10 @@ The XML file for OpenStreetMap looks like this::
      authcfg="" referer=""/>
   </qgsXYZTilesConnections>
   
-A preview is available in the :guilabel:`Preview` tab in the
-:guilabel:`Layer properties` dialog that is opened with
-:guilabel:`Layer Properties...` in the context menu.
+:guilabel:`Layer Properties...` in the connection's context menu
+opens a dialog where you can get a preview of the service in the
+:guilabel:`Preview` tab.
+
 Authentication configuration is supported.
 
 Examples of XYZ Tile services:
