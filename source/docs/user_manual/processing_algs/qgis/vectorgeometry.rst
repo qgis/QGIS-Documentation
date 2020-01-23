@@ -1627,7 +1627,7 @@ Parameters
        Default: 0.0
      - Only holes with an area less than this threshold will be
        deleted.
-       If ``0.0`` is added, **all** the holes will be deleted.
+       With a value of ``0.0``, **all** the holes will be deleted.
    * - **Cleaned**
      - ``OUTPUT``
      - [same as input]
