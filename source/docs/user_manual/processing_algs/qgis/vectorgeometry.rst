@@ -1581,6 +1581,85 @@ Outputs
      - The output (cleaned) vector layer
 
 
+.. _qgisdeleteholes:
+
+Delete holes
+------------
+Takes a polygon layer and removes holes in polygons.
+It creates a new vector layer in which polygons with holes have been
+replaced by polygons with only their external ring.
+Attributes are not modified.
+
+An optional minimum area parameter allows removing only holes which
+are smaller than a specified area threshold. Leaving this parameter at
+``0.0`` results in all holes being removed.
+
+.. figure:: img/delete_holes.png
+   :align: center
+
+   Before and after the cleaning
+
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: polygon]
+     - Input polygon vector layer
+   * - **Remove holes with area less than**
+
+       Optional
+     - ``MIN_AREA``
+     - [number |dataDefined|]
+
+       Default: 0.0
+     - Only holes with an area less than this threshold will be
+       deleted.
+       With a value of ``0.0``, **all** the holes will be deleted.
+   * - **Cleaned**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Cleaned**
+     - ``OUTPUT``
+     - [same as input]
+     - The output (cleaned) vector layer
+
+
 .. _qgisdensifygeometries:
 
 Densify by count
@@ -1924,6 +2003,76 @@ Outputs
      - The output vector layer with Z values from the
        raster layer
 
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer with M or Z values
+   * - **Drop M Values**
+     - ``DROP_M_VALUES``
+     - [boolean]
+
+       Default: False
+     - Removes the M values from the geometries
+   * - **Drop Z Values**
+     - ``DROP_Z_VALUES``
+     - [boolean]
+
+       Default: False
+     - Removes the Z values from the geometries
+   * - **Z/M Dropped**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Z/M Dropped**
+     - ``OUTPUT``
+     - [same as input]
+     - The output vector layer (identical to the input layer,
+       except that the M and/or Z dimensions have been removed
+       from the geometries).
+
+
+.. _qgisdropmzvalues:
+
+Drop M/Z values
+---------------
+Removes M (measure) or Z (altitude) values from input geometries.
+
+.. seealso:: :ref:`qgissetmvalue`, :ref:`qgissetzvalue`
+
+Parameters
+..........
 
 .. list-table::
    :header-rows: 1
