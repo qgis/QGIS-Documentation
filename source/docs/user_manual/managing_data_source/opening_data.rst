@@ -327,10 +327,10 @@ Using the |addOgrLayer| :sup:`Add Vector Layer` tool:
   ``US Census Bureau`` or ``OpenfileGDB``. To do that, you select
   |radioButtonOn| :guilabel:`Directory` as :guilabel:`Source type`.
   In this case, a directory can be selected in the dialog after pressing 
-  :guilabel:`...` (browse).
+  :guilabel:`...` :sup:`Browse`.
 * With the |radioButtonOn| :guilabel:`Database` source type you can select an
   existing database connection or create one to the selected database type.
-  Available database types are ``ODBC``, ``Esri Personal Geodatabase``,
+  Some possible database types are ``ODBC``, ``Esri Personal Geodatabase``,
   ``MSSQL`` as well as ``PostgreSQL`` or ``MySQL`` .
     
   Pressing the :guilabel:`New` button opens the 
@@ -374,7 +374,7 @@ Importing a delimited text file
 -------------------------------
 
 Delimited text files (e.g. :file:`.txt`, :file:`.csv`, :file:`.dat`,
-:file: `.wkt`) can be loaded using the tools described above.
+:file:`.wkt`) can be loaded using the tools described above.
 This way, they will show up as simple tables.
 Sometimes, delimited text files can contain coordinates / geometries
 that you could want to visualize.
@@ -393,7 +393,7 @@ Click the |dataSourceManager| :sup:`Open Data Source Manager` icon to open the
    Delimited Text Dialog
 
 First, select the file to import (e.g., :file:`qgis_sample_data/csv/elevp.csv`)
-by clicking on the :guilabel:`...` (browse) button.
+by clicking on the :guilabel:`...` :sup:`Browse` button.
 In the :guilabel:`Layer name` field, provide the name to use for
 the layer in the project (e.g. :file:`Elevation`).
 
@@ -409,7 +409,7 @@ You can specify a delimiter by choosing between:
   comma character.
 * |radioButtonOff|:guilabel:`Regular expression delimiter` and enter text
   into the :guilabel:`Expression` field.
-  For example, to change the delimiter to tab, use ``\t`` (this is use in
+  For example, to change the delimiter to tab, use ``\t`` (this is used in
   regular expressions for the tab character).
 * |radioButtonOff|:guilabel:`Custom delimiters`, choosing among some predefined
   delimiters like ``comma``, ``space``, ``tab``, ``semicolon``, ... .
@@ -446,11 +446,11 @@ Once the file is parsed, set :guilabel:`Geometry definition` to
   and :guilabel:`M field` (for the measurement dimension) if the layer is of 
   point geometry type and contains such fields. If the coordinates
   are defined as degrees/minutes/seconds, activate the
-  |checkbox|:guilabel:`DMS coordinates` checkbox;
+  |checkbox|:guilabel:`DMS coordinates` checkbox.
 * |radioButtonOn|:guilabel:`Well known text (WKT)` option if the spatial
   information is represented as WKT: select the :guilabel:`Geometry field`
   containing the WKT geometry and choose the approriate :guilabel:`Geometry
-  field` or let QGIS auto-detect it;
+  field` or let QGIS auto-detect it.
 * If the file contains non-spatial data, activate |radioButtonOn| :guilabel:`No
   geometry (attribute only table)` and it will be loaded as an ordinary table.
 
@@ -607,7 +607,7 @@ Working with GRASS vector data is described in section :ref:`sec_grass`.
 Database related tools
 ----------------------
 
-.. index:: Database - connecting
+.. index:: Database - Connecting; Connecting to a database
 .. _vector_create_stored_connection:
 
 Creating a stored Connection
@@ -713,8 +713,8 @@ For the other database types, see their differences at
    file (see :ref:`pg-service-file` for example).
 
 * **Authentication**, configurations.
-  Choose an authentication configuration.  You can add configurations using
-  the plus button.  Choices are:  
+  Choose an authentication configuration. You can add configurations using
+  the |signPlus| button. Choices are:  
 
   * Basic authentication
   * PKI PKCS#12 authentication
@@ -971,7 +971,7 @@ To load a layer from a database, you can perform the following steps:
 #. Select it by clicking on it. You can select multiple layers by holding
    down the :kbd:`Shift` or :kbd:`Ctrl` key while clicking.
 #. If applicable, use the :guilabel:`Set Filter` button (or double-click
-   the layer) to start the :guilabel:`Query Builder` dialog (See section
+   the layer) to start the :guilabel:`Query Builder` dialog (see section
    :ref:`vector_query_builder`) and define which features to load from the
    selected layer. The filter expression appears in the ``sql`` column.
    This restriction can be removed or edited in the :menuselection:`Layer
@@ -1050,8 +1050,8 @@ Using XYZ Tile services
 -----------------------
 
 XYZ Tile services can be found in the :guilabel:`XYZ Tiles` top level
-entry in the browser.
-The OpenStreetMap XYZ Tile service is defined by default, and you can
+entry in the :guilabel:`Browser`.
+By default, the OpenStreetMap XYZ Tile service is configured. You can
 add other services that use the XYZ Tile protocol by choosing
 :guilabel:`New Connection` in the XYZ Tiles context menu (right-click
 to open).
@@ -1081,7 +1081,7 @@ A preview is available in the :guilabel:`Preview` tab in the
 :guilabel:`Properties...` in the context menu.
 Authentication configuration is supported.
 
-XYZ Tile services, examples:
+Examples of XYZ Tile services:
 
 * OpenStreetMap Monochrome:
   :guilabel:`URL`: http://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png,

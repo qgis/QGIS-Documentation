@@ -245,7 +245,7 @@ figure_create_temporary_. Then:
 
 By default, a new temporary scratch layer is created without any attributes. You
 can later add them using the |newAttribute| :sup:`New Field` button in the
-layer's attribute table widget or the :guilabel:`Source Fields` tab of its
+layer's attribute table dialog or the :guilabel:`Fields` tab of its
 properties dialog.
 You can also create prepopulated temporary scratch layers using e.g. the
 clipboard (see :ref:`paste_into_layer`) or as a result of a :ref:`Processing
@@ -253,7 +253,7 @@ algorithm <processing_algs>`.
 
 .. tip:: **Permanently store a memory layer on disk**
 
-  To avoid data loss when closing  aproject with temporary scratch layers,
+  To avoid data loss when closing  a project with temporary scratch layers,
   you can save these layers to any vector format supported by QGIS:
 
   * clicking the |indicatorMemory| indicator icon next to the layer;
@@ -587,7 +587,7 @@ for performance reasons.
 
 The creation dialog parameters:
 
-* :guilabel:`Unique identifier column`: this option specifies a field
+* :guilabel:`Unique identifier column`: specifies a field
   of the query that represents unique integer values that QGIS can
   use as row identifiers.
   By default, an autoincrementing integer value is used.
@@ -597,11 +597,11 @@ The creation dialog parameters:
 * :guilabel:`No geometry`: forces the virtual layer to ignore
   any geometry field. The resulting layer is an attribute-only layer.
 
-* Geometry :guilabel:`Column`: specify the name of the geometry column.
+* Geometry :guilabel:`Column`: specifies the name of the geometry column.
 
-* Geometry :guilabel:`Type`: specify the type of the geometry.
+* Geometry :guilabel:`Type`: specifies the type of the geometry.
 
-* Geometry :guilabel:`CRS`: this option allows to specify the
+* Geometry :guilabel:`CRS`: specifies the
   coordinate reference system of the virtual layer.
 
 Special comments
