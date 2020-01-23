@@ -903,7 +903,7 @@ Settings
 
 .. list-table::
    :header-rows: 1
-   :widths: 40 15 15 30
+   :widths: 50 50
    :stub-columns: 0
 
    * - Menu Option
