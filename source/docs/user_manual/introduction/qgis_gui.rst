@@ -780,18 +780,18 @@ copy or paste layer properties (style, scale, CRS...).
 
        #. :kbd:`Ctrl+Shift+V`
        #. :kbd:`Ctrl+Shift+R`
-       #.
+       #. No shortcut
        #. :kbd:`Ctrl+Shift+R`
        #. :kbd:`Ctrl+Shift+D`
        #. :kbd:`Ctrl+Shift+L`
-       #.
+       #. No shortcut
        #. :kbd:`Ctrl+Shift+2`
-       #.
+       #. No shortcut
        #. :kbd:`Ctrl+Shift+W`
-       #.
-       #.
-       #.
-       #.
+       #. No shortcut
+       #. No shortcut
+       #. No shortcut
+       #. No shortcut
 
      - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
