@@ -6353,6 +6353,7 @@ Parameters
      - ``SIDE``
      - [enumeration]
      - Choose the side of the transect. Available options are:
+
        * 0 --- Left
        * 1 --- Right
        * 2 --- Both
@@ -6611,7 +6612,7 @@ Parameters
      - Input line vector layer
    * - **Segments**
      - ``SEGMENTS``
-     - [number | dataDefined]
+     - [number |dataDefined|]
 
        Default: 16
      - Number of the buffer segments per quarter circle.
