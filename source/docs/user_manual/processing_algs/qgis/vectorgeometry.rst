@@ -6714,7 +6714,7 @@ Parameters
      - Input line vector layer
    * - **Segments**
      - ``SEGMENTS``
-     - [number | dataDefined]
+     - [number |dataDefined|]
 
        Default: 16
      - Number of the buffer segments per quarter circle.
