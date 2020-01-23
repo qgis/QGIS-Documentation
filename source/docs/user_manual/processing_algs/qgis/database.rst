@@ -247,7 +247,7 @@ Adds layers to a GeoPackage.
 If the GeoPackage exists and ``Overwrite existing GeoPackage``
 is checked, it will be overwritten (removed and recreated).
 If the GeoPackage exists and ``Overwrite existing GeoPackage``
-is not checked, it will still be overwritten!
+is not checked, the layer will be appended.
 
 Parameters
 ..........
@@ -287,8 +287,8 @@ Parameters
    * - **Destination GeoPackage**
      - OUTPUT
      - [file]
-     - If not specified the GeoPackage will be saved in
-       the temporary folder.
+     - If not specified the GeoPackage will be saved in the
+       temporary folder.
 
 Outputs
 .......
