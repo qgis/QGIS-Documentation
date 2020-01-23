@@ -294,7 +294,7 @@ To integrate an NTv2 transformation file in QGIS you need one more step:
 
    .. _figure_nadgrids:
 
-   .. figure:: img/nadgrids_example.PNG
+   .. figure:: img/nadgrids_example.png
       :align: center
 
       Setting an NTv2 transformation
