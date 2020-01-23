@@ -302,9 +302,9 @@ details).
        #. |circle3Points| :guilabel:`Add Circle from 3 Points`
        #. |circle3Tangents| :guilabel:`Add Circle from 3 Tangents`
        #. |circle2TangentsPoint|
-         :guilabel:`Add Circle from 2 Tangents and a Point`
+          :guilabel:`Add Circle from 2 Tangents and a Point`
        #. |circleCenterPoint|
-         :guilabel:`Add Circle by a Center Point and Another Point`
+          :guilabel:`Add Circle by a Center Point and Another Point`
 
      - 
      - :guilabel:`Shape Digitizing`
@@ -314,11 +314,11 @@ details).
        #. |rectangleExtent| :guilabel:`Add Rectangle from Extent`
        #. |rectangleCenter| :guilabel:`Add Rectangle from Center and a Point`
        #. |rectangle3PointsProjected|
-         :guilabel:`Add Rectangle from 3 Points (Distance from 2nd
-         and 3rd point)`
+          :guilabel:`Add Rectangle from 3 Points (Distance from 2nd
+          and 3rd point)`
        #. |rectangle3PointsDistance|
-         :guilabel:`Add Rectangle from 3 Points (Distance from
-         projected point on segment p1 and p2)`
+          :guilabel:`Add Rectangle from 3 Points (Distance from
+          projected point on segment p1 and p2)`
 
      - 
      - :guilabel:`Shape Digitizing`
@@ -326,11 +326,11 @@ details).
    * - :menuselection:`Add Regular Polygon -->`
 
        #. |regularPolygonCenterPoint|
-         :guilabel:`Add Regular Polygon from Center and a Point`
+          :guilabel:`Add Regular Polygon from Center and a Point`
        #. |regularPolygonCenterCorner|
-         :guilabel:`Add Regular Polygon from Center and a Corner`
+          :guilabel:`Add Regular Polygon from Center and a Corner`
        #. |regularPolygon2Points|
-         :guilabel:`Add Regular Polygon from 2 Points`
+          :guilabel:`Add Regular Polygon from 2 Points`
 
      - 
      - :guilabel:`Shape Digitizing`
@@ -338,9 +338,9 @@ details).
    * - :menuselection:`Add Ellipse -->`
 
        #. |ellipseCenter2Points|
-         :guilabel:`Add Ellipse from Center and 2 Points`
+          :guilabel:`Add Ellipse from Center and 2 Points`
        #. |ellipseCenterPoint|
-         :guilabel:`Add Ellipse from Center and a Point`
+          :guilabel:`Add Ellipse from Center and a Point`
        #. |ellipseExtent| :guilabel:`Add Ellipse from Extent`
        #. |ellipseFoci| :guilabel:`Add Ellipse from Foci`
 
