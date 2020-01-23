@@ -1078,7 +1078,7 @@ The XML file for OpenStreetMap looks like this::
   
 A preview is available in the :guilabel:`Preview` tab in the
 :guilabel:`Layer properties` dialog that is opened with
-:guilabel:`Properties...` in the context menu.
+:guilabel:`Layer Properties...` in the context menu.
 Authentication configuration is supported.
 
 Examples of XYZ Tile services:

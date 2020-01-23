@@ -239,7 +239,7 @@ figure_create_temporary_. Then:
 
 .. figure:: img/editNewTemporaryLayer.png
    :align: center
-   :width: 5cm
+   :width: 5 cm
 
    Creating a new Temporary Scratch layer dialog
 

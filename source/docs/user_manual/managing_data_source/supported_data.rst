@@ -172,7 +172,7 @@ First check that the file meets the following requirements:
 #. The file must have a delimited header row of field names.
    This must be the first line of the data (ideally the first row in
    the text file).
-#. If geometry should be enabled, the file row must contain field(s) 
+#. If geometry should be enabled, the file must contain field(s) 
    that define the geometry. These field(s) can have any name.
 #. The X and Y coordinates fields (if geometry is defined by 
    coordinates) must be specified as numbers.
