@@ -464,7 +464,7 @@ Parameters
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
-       * Save to PostGIS Table
+       * Save to PostGIS Table...
 
 Outputs
 .......
@@ -496,7 +496,3 @@ Outputs
 
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
-.. |signMinus| image:: /static/common/symbologyRemove.png
-   :width: 1.5em
-.. |signPlus| image:: /static/common/symbologyAdd.png
-   :width: 1.5em

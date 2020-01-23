@@ -92,7 +92,7 @@ Parameters
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
-       * Save to PostGIS Table
+       * Save to PostGIS Table...
 
        The file encoding can also be changed here.
 
@@ -195,7 +195,7 @@ Parameters
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
-       * Save to PostGIS Table
+       * Save to PostGIS Table...
 
        The file encoding can also be changed here.
 
@@ -310,7 +310,7 @@ Parameters
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
-       * Save to PostGIS Table
+       * Save to PostGIS Table...
 
        The file encoding can also be changed here.
 
@@ -396,10 +396,10 @@ Parameters
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
-       * Save to PostGIS Table
+       * Save to PostGIS Table...
 
        The file encoding can also be changed here.
-       
+
 Outputs
 .......
 
@@ -462,7 +462,7 @@ Parameters
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
-       * Save to PostGIS Table
+       * Save to PostGIS Table...
 
        The file encoding can also be changed here.
 
@@ -528,7 +528,7 @@ Parameters
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
-       * Save to PostGIS Table
+       * Save to PostGIS Table...
 
        The file encoding can also be changed here.
 
@@ -597,7 +597,7 @@ Parameters
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
-       * Save to PostGIS Table
+       * Save to PostGIS Table...
 
        The file encoding can also be changed here.
    * - **Invalid photos table**
@@ -614,10 +614,10 @@ Parameters
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
-       * Save to PostGIS Table
+       * Save to PostGIS Table...
 
        The file encoding can also be changed here.
-       
+
 Outputs
 .......
 
@@ -707,7 +707,7 @@ Parameters
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
-       * Save to PostGIS Table
+       * Save to PostGIS Table...
 
        The file encoding can also be changed here.
    * - **Directory for text output**
@@ -716,7 +716,14 @@ Parameters
 
        Default: ``[Skip output]``
      - Specify the directory that will contain the description
-       files of points and paths.
+       files of points and paths. One of:
+
+       * Skip Output
+       * Save to a Temporary Directory
+       * Save to Directory...
+
+       The file encoding can also be changed here.
+
 
 Outputs
 .......
@@ -789,7 +796,7 @@ Parameters
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
-       * Save to PostGIS Table
+       * Save to PostGIS Table...
 
        The file encoding can also be changed here.
 
@@ -866,7 +873,7 @@ Parameters
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
-       * Save to PostGIS Table
+       * Save to PostGIS Table...
 
        The file encoding can also be changed here.
 
@@ -938,7 +945,7 @@ Parameters
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
-       * Save to PostGIS Table
+       * Save to PostGIS Table...
 
        The file encoding can also be changed here.
 
@@ -998,7 +1005,7 @@ Parameters
 
        Default: 0
      - Sampling strategy to use. One of:
-       
+
        * 0 --- Points count: number of points for each feature
        * 1 --- Points density: density of points for each feature
 
@@ -1025,7 +1032,7 @@ Parameters
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
-       * Save to PostGIS Table
+       * Save to PostGIS Table...
 
        The file encoding can also be changed here.
 
@@ -1094,7 +1101,7 @@ Parameters
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
-       * Save to PostGIS Table
+       * Save to PostGIS Table...
 
        The file encoding can also be changed here.
 
@@ -1163,7 +1170,7 @@ Parameters
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
-       * Save to PostGIS Table
+       * Save to PostGIS Table...
 
        The file encoding can also be changed here.
 
@@ -1261,7 +1268,7 @@ Parameters
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
-       * Save to PostGIS Table
+       * Save to PostGIS Table...
 
        The file encoding can also be changed here.
 

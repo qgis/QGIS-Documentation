@@ -49,7 +49,7 @@ will adapt dynamically.
    
    ::
     
-    @layout_pageheight -  @sw_layout_header -  @sw_layout_margin * 2
+    @layout_pageheight -  @sw_layout_height_header -  @sw_layout_margin * 2
     
 #. We will also create a grid containing the coordinates of the main canvas map extent.
    Go to :guilabel:`Item Properties` again and choose the :guilabel:`Grids` section.
@@ -76,7 +76,7 @@ will adapt dynamically.
    
    ::
     
-    @sw_layout_header
+    @sw_layout_height_header
     
 #. We will insert a horizontal line and two vertical lines to divide the header into different sections
    using the |addNodesShape| :sup:`Add Node Item`. Create a horizontal line and two vertical lines.
@@ -217,7 +217,7 @@ will adapt dynamically.
    
    ::
     
-     @sw_layout_header - 15.5
+     @sw_layout_height_header - 15.5
 
 .. figure:: img/dynamic_layout_organisation.png
 

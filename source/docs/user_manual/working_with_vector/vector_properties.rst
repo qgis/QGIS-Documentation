@@ -18,7 +18,8 @@ To access the :guilabel:`Layer Properties` dialog:
 
 * In the :guilabel:`Layers` panel, double-click the layer or right-click
   and select :guilabel:`Properties...` from the pop-up menu;
-* Go to :menuselection:`Layer --> Properties...` menu when the layer is selected.
+* Go to :menuselection:`Layer --> Layer Properties...` menu when the layer
+  is selected.
 
 The vector :guilabel:`Layer Properties` dialog provides the following sections:
 
@@ -31,7 +32,7 @@ The vector :guilabel:`Layer Properties` dialog provides the following sections:
    * - |labeling| :ref:`Labels <vector_labels_tab>`:sup:`[1]`
      - |diagram| :ref:`Diagrams <sec_diagram>`
      - |3d| :guilabel:`3D View`:sup:`[1]`
-   * - |sourceFields| :ref:`Source Fields <vector_fields_menu>`
+   * - |sourceFields| :ref:`Fields <vector_fields_menu>`
      - |formView| :ref:`Attributes Form <vector_attributes_menu>`
      - |join| :ref:`Joins <sec_joins>`
    * - |auxiliaryStorage| :ref:`Auxiliary Storage <vector_auxiliary_storage>`
@@ -1201,7 +1202,7 @@ Below are displayed options to customize the labels, under various tabs:
 * |labelbuffer| :ref:`Buffer <labels_buffer>`
 * |labelbackground| :ref:`Background <labels_background>`
 * |labelshadow| :ref:`Shadow <labels_shadow>`
-* |labelcallout| :guilabel:`Callouts`
+* |labelcallout| :ref:`Callouts <labels_callouts>`
 * |labelplacement| :ref:`Placement <labels_placement>`
 * |render| :ref:`Rendering <labels_rendering>`
 
@@ -1226,20 +1227,20 @@ options:
 
    The labels automated placement engine
 
-* The :guilabel:`Number of candidates` controls set how many label placement
+* The :guilabel:`Number of candidates` controls how many label placement
   candidates should be generated for each feature type. The more candidates
   generated, the better the labeling will be - but at a cost of rendering
   speed. Smaller number of candidates results in less labels placed but faster
   redraws.
-* |checkbox| :guilabel:`Draw text as outlines`: controls whether text labels are
-  drawn (and exported) as either proper text objects OR as paths only. If they
-  are exported as text objects then they can be edited in external applications
-  (e.g. Inkscape) as normal text. BUT the side effect is that the rendering
-  quality is decreased, AND there's issues with rendering when certain text settings
-  like buffers are in place. That's why drawing as outlines is recommended. Note
-  that when :ref:`exporting a layout to svg <export_layout_svg>` there's actually
-  an override for this setting - so you can leave the project rendering as outlines
-  but for a :file:`.svg` export export the labels as text.
+* :guilabel:`Text rendering`: sets the default value for label rendering
+  widgets when :ref:`exporting a map canvas <exportingmapcanvas>` or
+  :ref:`a layout <create-output>` to PDF or SVG. 
+  If :guilabel:`Always render labels as text` is selected then labels can be
+  edited in external applications (e.g. Inkscape) as normal text. BUT the side
+  effect is that the rendering quality is decreased, and there are issues with
+  rendering when certain text settings like buffers are in place. That's why
+  :guilabel:`Always render labels as paths (recommended)` which exports labels
+  as outlines, is recommended.
 * |checkbox| :guilabel:`Allow truncated labels on edges of map`: controls
   whether labels which fall partially outside of the map extent should be
   rendered. If checked, these labels will be shown (when there's no way to
@@ -1473,6 +1474,15 @@ description and manipulation in :ref:`data_defined` section.
    :align: center
 
    Airports labels are formatted based on their attributes
+   
+.. tip:: **Use the data-defined override to label every part of multi-part features**
+
+   There is an option to set the labeling for multi-part features independently from
+   your label properties. Choose the  |render| :ref:`Rendering <labels_rendering>`,
+   ``Feature options``, go to the |dataDefined| :sup:`Data-define override` button
+   next to the checkbox |unchecked| :guilabel:`Label every part of multipart-features` 
+   and define the labels as described in :ref:`data_defined`.
+   
 
 .. _label_toolbar:
 
@@ -1482,7 +1492,7 @@ The Label Toolbar
 The :guilabel:`Label Toolbar` provides some tools to manipulate |labeling|
 :ref:`label <vector_labels_tab>` or |diagram| :ref:`diagram <sec_diagram>`
 properties, but only if the corresponding data-defined option is indicated
-(otherwise, buttons are disabled). Layer might also need to be in edit mode.
+(otherwise, buttons are disabled).
 
 .. _figure_labels_tools:
 
@@ -1517,7 +1527,8 @@ same way with diagrams:
   you get the text rotated.
 * |changeLabelProperties| :sup:`Change Label`. It opens a dialog to change the
   clicked label properties; it can be the label itself, its coordinates, angle,
-  font, size... as long as this property has been mapped to a field.
+  font, size... as long as this property has been mapped to a field. Here you can
+  set the option to |checkbox| :guilabel:`Label every part of a feature`. 
 
 .. warning:: **Label tools overwrite current field values**
 
@@ -1838,10 +1849,10 @@ See :ref:`data_defined_labeling` for more information.
 .. index:: Fields, Forms
 .. _vector_fields_menu:
 
-Source Fields Properties
-========================
+Fields Properties
+=================
 
-|sourceFields| The :guilabel:`Source Fields` tab provides information on
+|sourceFields| The :guilabel:`Fields` tab provides information on
 fields related to the layer and helps you organize them.
 
 The layer can be made :ref:`editable <editingvector>` using the |toggleEditing|
@@ -1865,7 +1876,7 @@ field label in a feature form.
 
 Other than the fields contained in the dataset, virtual fields and
 :ref:`Auxiliary Storage <vector_auxiliary_storage>` included, the
-:guilabel:`Source Fields` tab also lists fields from any :ref:`joined layers <sec_joins>`.
+:guilabel:`Fields` tab also lists fields from any :ref:`joined layers <sec_joins>`.
 Depending on the origin of the field, a different background color is applied to it.
 
 For each listed field, the dialog also lists read-only characteristics such as
@@ -1877,7 +1888,7 @@ layer as ``WMS`` or ``WFS``, you can also check here which fields could be retri
 .. figure:: img/fields_properties.png
    :align: center
 
-   Source Field properties tab
+   Fields properties tab
 
 
 .. _vector_attributes_menu:
@@ -2091,9 +2102,9 @@ General options
   It can also be used as field name replacement in the :ref:`expression builder
   <vector_expressions>`, easing expressions understanding and reviews.
   Aliases are saved in project file.
-* :guilabel:`Comment`: displays the field's comment as shown in the :guilabel:`Source
-  Fields` tab, in a read-only state. This information is shown as tooltip when
-  hovering over the field label in a feature form.
+* :guilabel:`Comment`: displays the field's comment as shown in the
+  :guilabel:`Fields` tab, in a read-only state. This information is shown as
+  tooltip when hovering over the field label in a feature form.
 * |checkbox| :guilabel:`Editable`: uncheck this option to set the field read-only
   (not manually modifiable) even when the layer is in edit mode. Note that
   checking this setting doesn't override any edit limitation from the provider.
@@ -2303,7 +2314,8 @@ source (X and Y positions, rotation angle, font style, color and so on).
 The Auxiliary Storage mechanism provides the solution to these limitations
 and awkward configurations. Auxiliary fields are a roundabout way to
 automatically manage and store these data-defined properties (labels,
-diagram, symbology...) in a SQLite database thanks to editable joins. This allows you to store properties for layers that aren't editable.
+diagram, symbology...) in a SQLite database thanks to editable joins.
+This allows you to store properties for layers that aren't editable.
 
 A tab is available in vector layer properties dialog to manage auxiliary
 storage:

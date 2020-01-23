@@ -277,6 +277,7 @@ symbols are:
   layer <vector_new_scratch_layer>` and its content will be discarded when you
   close this project. To avoid data loss and make the layer permanent, click
   the icon to store the layer in any of the OGR vector formats supported by QGIS.
+* |indicatorNoCRS| to identify a layer that has no/unknown CRS
 
 .. index:: Style
 
@@ -1423,8 +1424,8 @@ to select the matching features. The drop-down options are:
 
 * :guilabel:`Select features`
 * :guilabel:`Add to current selection`
+* :guilabel:`Remove from current selection`
 * :guilabel:`Filter current selection`
-* :guilabel:`Remove from current current selection`
 
 You can also clear all search options using the :guilabel:`Reset form` button.
 
@@ -1519,7 +1520,7 @@ default it will display the following information:
     * ``X`` and ``Y`` coordinate values of the point clicked
     * the number of the closest vertex to the point clicked
     * ``X`` and ``Y`` coordinate values of the
-      closest vertex (and ``Z`/`M`` if applicable)
+      closest vertex (and ``Z``/``M`` if applicable)
     * if you click on a curved segment,
       the radius of that section is also displayed.
 
@@ -2345,6 +2346,8 @@ The values presented in the varying size assistant above will set the size
 .. |indicatorFilter| image:: /static/common/mIndicatorFilter.png
    :width: 1.5em
 .. |indicatorMemory| image:: /static/common/mIndicatorMemory.png
+   :width: 1.5em
+.. |indicatorNoCRS| image:: /static/common/mIndicatorNoCRS.png
    :width: 1.5em
 .. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em

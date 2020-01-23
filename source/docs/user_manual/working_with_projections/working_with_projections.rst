@@ -32,7 +32,7 @@ these standard projections are identified through use of an authority:code
 combination, where the authority is an organisation name such as "EPSG" or
 "IGNF", and the code is a unique number associated with a specific CRS. For
 instance, the common WGS 84 latitude/longitude CRS is known by the identifier
-``EPSG:4326``, and the web mapping standard CRS is ``EPSG:3857``. 
+``EPSG:4326``, and the web mapping standard CRS is ``EPSG:3857``.
 
 Custom, user-created CRSs are stored in a user CRS database. See
 section :ref:`sec_custom_projections` for information on managing your custom
@@ -49,44 +49,108 @@ to manually assign the correct CRS to the layer. For PostGIS layers, QGIS uses
 the spatial reference identifier that was specified when that PostGIS layer was
 created. For data supported by OGR or GDAL, QGIS relies on the presence of a
 recognized means of specifying the CRS. For instance, for the Shapefile format
-this is a file containing the Well-Known Text (:index:`WKT`)
-representation of the layer's CRS. This projection file has the same base name as the
-:file:`.shp` file and a :file:`.prj` extension. For example,
+this is a file containing an ESRI Well-Known Text (:index:`WKT`)
+representation of the layer's CRS. This projection file has the same base name
+as the :file:`.shp` file and a :file:`.prj` extension. For example,
 :file:`alaska.shp` would have a corresponding projection file named
 :file:`alaska.prj`.
 
 Whenever a layer is loaded into QGIS, QGIS attempts to automatically determine
 the correct CRS for that layer. In some cases this is not possible, e.g. when
-a layer has been provided without retaining this information. Whenever QGIS cannot
-automatically determine the correct CRS for a layer, it will prompt you to manually
-select the CRS. Selecting the correct choice is crucial, as a wrong choice will
-place your layer in the wrong position on the Earth's surface! Sometimes, accompanying
-metadata will describe the correct CRS for a layer, in other cases you will need
-to contact the original author of the data to determine the correct CRS to use.
+a layer has been provided without retaining this information. You can configure
+QGIS behavior whenever it cannot automatically determine the correct CRS for a
+layer:
+
+#. Open :menuselection:`Settings -->` |options| :menuselection:`Options... --> CRS`
+
+   .. _figure_projection_options:
+
+   .. figure:: ../introduction/img/options_crs.png
+      :align: center
+
+      The CRS tab in the QGIS Options Dialog
+
+#. Under the :guilabel:`CRS for layers` group, set the action to do
+   :guilabel:`when a new layer is created, or when a layer is loaded that has
+   no CRS`. One of:
+
+   * |radioButtonOn| :guilabel:`Leave as unknown CRS (take no action)`:
+     there will be no prompt to select a CRS when a layer without CRS is loaded,
+     defering CRS choice to a later time. Convenient when loading a lot of
+     layers at once. Such layers will be identifiable in the :guilabel:`Layers`
+     panel by the |indicatorNoCRS| icon next to them.
+     They'll also be un-referenced, with coordinates from the layer treated as
+     purely numerical, non-earth values, i.e. the same behavior as all layers
+     get when :ref:`a project is set to have no CRS <project_crs>`.
+   * |radioButtonOff| :guilabel:`Prompt for CRS`: it will prompt you to
+     manually select the CRS. Selecting the correct choice is crucial,
+     as a wrong choice will place your layer in the wrong position on the
+     Earth's surface! Sometimes, accompanying metadata will describe the
+     correct CRS for a layer, in other cases you will need to contact the
+     original author of the data to determine the correct CRS to use.
+   * |radioButtonOff| :guilabel:`Use project CRS`
+   * |radioButtonOff| :guilabel:`Use default layer CRS`, as set in the
+     :guilabel:`Default CRS for layers` combobox above.
+
+.. tip::
+
+   To assign the same CRS to multiple layers that have no crs
+   or have a wrong one in one operation:
+
+   #. Select the layers in the :guilabel:`Layers` panel
+   #. Press :kbd:`Ctrl+Shift+C`. You could also right-click over one of the
+      selected layers or go to :menuselection:`Layer --> Set CRS of layer(s)`
+   #. Find and select the right CRS to use
+   #. And press :guilabel:`OK`. You can confirm that it has been set correctly in the
+      :guilabel:`Source` tab of the layers' properties dialog.
+
+   Note that changing the CRS in this setting does not alter the underlying
+   data source in any way, rather it just changes how QGIS interprets the raw
+   coordinates from the layer in the current QGIS project.
+
+
+.. index:: CRS, Proj, On-the-fly transformation
+   single: CRS; Default CRS
+.. _project_crs:
 
 Project Coordinate Reference Systems
 ====================================
 
-Every project in QGIS also has an associated Coordinate Reference System. The project
-CRS determines how data is projected from its underlying raw coordinates to
-the flat map rendered within your QGIS map canvas. Behind the scenes, QGIS
+Every project in QGIS also has an associated Coordinate Reference System.
+The project CRS determines how data is projected from its underlying raw
+coordinates to the flat map rendered within your QGIS map canvas.
+
+QGIS supports "on the fly" CRS transformation for both raster and vector data.
+This means that regardless of the underlying CRS of particular map layers in
+your project, they will always be automatically transformed into the common
+CRS defined for your project. Behind the scenes, QGIS
 transparently reprojects all layers contained within your project into the
 project's CRS, so that they will all be rendered in the correct position with
 respect to each other!
 
-It is important to make an appropriate choice of CRS for your QGIS projects. Choosing
-an inappropriate CRS can cause your maps to look distorted, and poorly reflect
-the real-world relative sizes and positions of features. Usually, while working
-in smaller geographic areas, there will be a number of standard CRSs used
-within a particular country or administrative area. It's important to research
-which CRSs are appropriate or standard choices for the area you are mapping,
-and ensure that your QGIS project follows these standards.
+It is important to make an appropriate choice of CRS for your QGIS projects.
+Choosing an inappropriate CRS can cause your maps to look distorted,
+and poorly reflect the real-world relative sizes and positions of features.
+Usually, while working in smaller geographic areas, there will be a number of
+standard CRSs used within a particular country or administrative area.
+It's important to research which CRSs are appropriate or standard choices
+for the area you are mapping, and ensure that your QGIS project follows
+these standards.
 
-The project CRS can be set through the :guilabel:`CRS` tab of the
-:guilabel:`Project properties` dialog (:menuselection:`Project --> Properties...`).
+By default, QGIS starts each new project using a global default projection.
+This default CRS is ``EPSG:4326`` (also known as "WGS 84"), and it is a global
+latitude/longitude based reference system.
+This default CRS can be changed via the :guilabel:`CRS for New Projects`
+setting in the :guilabel:`CRS` tab under :menuselection:`Settings -->` |options|
+:menuselection:`Options...` (see figure_projection_options_).
+There is an option to automatically set the project's CRS
+to match the CRS of the first layer loaded into a new project, or alternatively
+you can select a different default CRS to use for all newly created projects.
+This choice will be saved for use in subsequent QGIS sessions.
+
+The project CRS can also be set through the :guilabel:`CRS` tab of the
+:menuselection:`Project --> Properties...` dialog.
 It will also be shown in the lower-right of the QGIS status bar.
-
-.. index:: Proj
 
 .. _figure_projection_project:
 
@@ -95,10 +159,29 @@ It will also be shown in the lower-right of the QGIS status bar.
 
    Project Properties Dialog
 
-The :guilabel:`CRS` tab also has an optional setting for :guilabel:`No projection`.
-Checking this setting will disable ALL projection handling within the QGIS
-project, causing all layer and map coordinates to be treated as simple 2D Cartesian
-coordinates, with no relation to positions on the Earth's surface.
+Available options are:
+
+* |unchecked| :guilabel:`No projection (or unknown/non-Earth projection)`:
+  Checking this setting will disable ALL projection handling within the QGIS
+  project, causing all layers and map coordinates to be treated as simple 2D
+  Cartesian coordinates, with no relation to positions on the Earth's surface.
+  It can be used to guess a layer CRS (based on its raw coordinates or when
+  using QGIS for non earth uses like role-playing game maps, building mapping
+  or microscopic stuff. In this case:
+
+  * No reprojection is done while rendering the layers: features are just drawn
+    using their raw coordinates.
+  * The ellipsoid is locked out and forced to ``None/Planimetric``.
+  * The distance and area units, and the coordinate display are locked out and
+    forced to "unknown units"; all measurements are done in unknown map units,
+    and no conversion is possible.
+
+* or an existing coordinate reference system that can be *geographic*, *projected*
+  or *user-defined*. A preview of the CRS extent on earth is displayed to
+  help you select the appropriate one.
+  Layers added to the project are translated on-the-fly to this CRS in order
+  to overlay them regardless their original CRS. Use of units and ellipsoid setting
+  are available and make sense and you can perform calculations accordingly.
 
 Whenever you select a new CRS for your QGIS project, the measurement units will automatically be
 changed in the :guilabel:`General` tab of the :guilabel:`Project properties` dialog
@@ -107,66 +190,18 @@ some CRSs define their coordinates in feet instead of meters, so setting your QG
 project to one of these CRSs will also set your project to measure using feet by
 default.
 
-.. index:: CRS
-   single: CRS; Default CRS
+.. tip:: **Setting the project CRS from a layer**
 
-CRS Settings
-============
+   You can assign a CRS to the project using a layer CRS:
 
-By default, QGIS starts each new project using a global default projection. This
-default CRS is ``EPSG:4326`` (also known as "WGS 84"), and it is a global latitude/longitude based
-reference system. This default CRS can be changed via the :guilabel:`CRS for New Projects`
-setting in the :guilabel:`CRS` tab under :menuselection:`Settings -->` |options|
-:guilabel:`Options`. There is an option to automatically set the project's CRS
-to match the CRS of the first layer loaded into a new project, or alternatively
-you can select a different default CRS to use for all newly created projects.
-This choice will be saved for use in subsequent QGIS sessions.
+   #. In the :guilabel:`Layers` panel, right-click on the layer you want
+      to pick the CRS
+   #. Select :guilabel:`Set project CRS from Layer`.
 
-.. _figure_projection_options:
+   The project's CRS is redefined using the layer's CRS. Map canvas extent,
+   coordinates display are updated accordingly and all the layers in
+   the project are on-the-fly translated to the new project CRS.
 
-.. figure:: img/crsdialog.png
-   :align: center
-
-   The CRS tab in the QGIS Options Dialog
-
-When you use layers that do not have a CRS, you can define how QGIS
-responds to these layers. This can be done globally in the
-:guilabel:`CRS` tab under :menuselection:`Settings -->` |options|
-:guilabel:`Options`.
-
-The options shown in figure_projection_options_ are:
-
-* |radioButtonOn| :guilabel:`Prompt for CRS`
-* |radioButtonOff| :guilabel:`Use project CRS`
-* |radioButtonOff| :guilabel:`Use a default CRS`
-
-If you want to define the Coordinate Reference System for a certain layer
-without CRS information, you can also do that in the :guilabel:`Source` tab
-of the raster and vector properties dialog (see :ref:`label_sourcetab` for
-rasters and :ref:`vectorsourcemenu` for vectors). If your layer already has a CRS
-defined, it will be displayed as shown in :ref:`figure_vector_general`. Note
-that changing the CRS in this setting does not alter the underlying data
-source in any way, rather it just changes how QGIS interprets the raw
-coordinates from the layer in the current QGIS project only.
-
-.. tip:: **CRS in the Layers Panel**
-
-   Right-clicking on a layer in the Layers Panel (section :ref:`label_legend`)
-   provides two CRS shortcuts. :guilabel:`Set layer CRS` takes you directly
-   to the Coordinate Reference System Selector dialog (see figure_projection_project_).
-   :guilabel:`Set project CRS from Layer` redefines the project CRS using
-   the layer's CRS.
-
-.. index:: CRS; On-the-fly transformation
-.. _otf_transformation:
-
-On The Fly (OTF) CRS Transformation
-===================================
-
-QGIS supports "on the fly" CRS transformation for both raster and vector data.
-This means that regardless of the underlying CRS of particular map layers in
-your project, they will always be automatically transformed into the common
-CRS defined for your project.
 
 .. index:: CRS Selection
 .. _crs_selector:
@@ -233,23 +268,23 @@ The :guilabel:`Custom Coordinate Reference System Definition` dialog requires
 only two parameters to define a user CRS:
 
 #. A descriptive name
-#. The cartographic parameters in PROJ format
+#. The cartographic parameters in PROJ or WKT format
 
-To create a new CRS, click the |signPlus| :sup:`Add new CRS` button and
-enter a descriptive name and the CRS parameters.
+To create a new CRS, click the |signPlus| :sup:`Add new CRS` button,
+enter a descriptive name, select the format, and the CRS parameters.
 
-Note that the :guilabel:`Parameters` must begin with a ``+proj=`` block,
-to represent the new coordinate reference system.
+Click **[Validade]** to test whether the CRS definition is an acceptable
+projection definition.
 
 You can test your CRS parameters to see if they give sane results. To do this,
 enter known WGS 84 latitude and longitude values in :guilabel:`North` and
 :guilabel:`East` fields, respectively. Click on :guilabel:`Calculate`, and compare the
 results with the known values in your coordinate reference system.
 
-Integrate an NTv2-transformation in QGIS 
+Integrate an NTv2-transformation in QGIS
 ----------------------------------------
 
-To integrate an NTv2 transformation file in QGIS you need one more step: 
+To integrate an NTv2 transformation file in QGIS you need one more step:
 
 #. Place the NTv2 file (.gsb) in the CRS/Proj folder that QGIS uses
    (e.g. :file:`C:\\OSGeo4W64\\share\\proj` for windows users)
@@ -276,21 +311,22 @@ whenever you use layers with different coordinate systems QGIS transparently
 reprojects them to the project CRS. For some CRS, there are a number of possible
 transforms available to reproject to the project's CRS!
 
-By default, QGIS will attempt to use the most accurate transformation available. 
+By default, QGIS will attempt to use the most accurate transformation available.
 However, in some cases this may not be possible, e.g. whenever additional
 support files are required to use a transformation. Whenever a more accurate
 transformation is available, but is not currently usable, QGIS will show
 an informative warning message advising you of the more accurate transformation
 and how to enable it on your system. Usually, this requires download of
 an external package of transformation support files, and extracting these
-to the :file:`proj` folder under your QGIS :ref:`user profile <user_profiles>` folder.
+to the :file:`proj` folder under your QGIS :ref:`user profile <user_profiles>`
+folder.
 
 If desired, QGIS can also prompt you whenever multiple possible transformations
 can be made between two CRSs, and allow you to make an informed selection
 of which is the most appropriate transformation to use for your data.
 
 This customization is done in the :menuselection:`Settings -->` |options|
-:guilabel:`Options --> CRS` tab menu under the :guilabel:`Default datum
+:menuselection:`Options --> CRS` tab menu under the :guilabel:`Default datum
 transformations` group:
 
 * using |checkbox| :guilabel:`Ask for datum transformation if several are
@@ -336,7 +372,7 @@ transformations` group:
    Selecting a preferred default datum transformation
 
 Datum transformations set in the :menuselection:`Settings -->` |options|
-:guilabel:`Options --> CRS` tab will be inherited by all new QGIS
+:menuselection:`Options --> CRS` tab will be inherited by all new QGIS
 projects created on the system. Additionally, a particular project
 may have its own specific set of transformations specified via the
 :guilabel:`CRS` tab of the :guilabel:`Project properties` dialog
@@ -354,6 +390,8 @@ to the current project only.
    :width: 1.3em
 .. |customProjection| image:: /static/common/mActionCustomProjection.png
    :width: 1.5em
+.. |indicatorNoCRS| image:: /static/common/mIndicatorNoCRS.png
+   :width: 1.5em
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
@@ -368,3 +406,5 @@ to the current project only.
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
+.. |unchecked| image:: /static/common/checkbox_unchecked.png
+   :width: 1.3em

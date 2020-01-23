@@ -309,9 +309,9 @@ described in the section 'accuracy of map projections' above, the larger the are
 (for example South Africa) the more distortion of angular conformity, distance
 and area occur. To avoid too much distortion, the world is divided into **60 equal
 zones** that are all **6 degrees** wide in longitude from East to West. The **UTM
-zones** are numbered **1 to 60**, starting at the **international date line**
+zones** are numbered **1 to 60**, starting at the **antimeridian**
 (**zone 1** at 180 degrees West longitude) and progressing East back to the
-**international date line** (**zone 60** at 180 degrees East longitude) as shown
+**antemeridian** (**zone 60** at 180 degrees East longitude) as shown
 in figure_utm_zones_.
 
 .. _figure_utm_zones:
@@ -400,6 +400,7 @@ the GIS and all layers that you then load, no matter what coordinate reference
 system they have, will be automatically displayed in the projection you defined.
 This functionality allows you to overlay layers within the map window of your
 GIS, even though they may be in **different** reference systems.
+In QGIS, this functionality is applied by default.
 
 Common problems / things to be aware of
 =======================================
@@ -438,17 +439,21 @@ Now you try!
 
 Here are some ideas for you to try with your learners:
 
-* Start QGIS and load two layers of the same area but with different projections
-  and let your pupils find the coordinates of several places on the two layers.
-  You can show them that it is not possible to overlay the two layers. Then define
-  the coordinate reference system as Geographic/WGS 84 inside the
-  :guilabel:`Project Properties` dialog and activate the checkbox |checkbox|
-  :guilabel:`Enable on-the-fly CRS transformation`. Load the two layers of the
-  same area again and let your pupils see how on-the-fly projection works.
-* You can open the :guilabel:`Project Properties` dialog in QGIS and show your
-  pupils the many different Coordinate Reference Systems so they get an idea of
-  the complexity of this topic. With 'on-the-fly' CRS transformation enabled you
-  can select different CRS to display the same layer in different projections.
+#. Start QGIS
+#. In :menuselection:`Project --> Properties... --> CRS` check :guilabel:`No
+   projection (or unknown/non-Earth projection)`
+#. Load two layers of the same area but with different projections
+#. Let your pupils find the coordinates of several places on the two layers.
+   You can show them that it is not possible to overlay the two layers.
+#. Then define the coordinate reference system as Geographic/WGS 84 inside the
+   :guilabel:`Project Properties` dialog
+#. Load the two layers of the same area again and let your pupils see how
+   setting a CRS for the project (hence, enabling "on-the-fly" projection)
+   works.
+#. You can open the :guilabel:`Project Properties` dialog in QGIS and show your
+   pupils the many different Coordinate Reference Systems so they get an idea of
+   the complexity of this topic. You can select different CRSs to display the
+   same layer in different projections.
 
 Something to think about
 ========================
@@ -492,7 +497,5 @@ In the section that follows we will take a closer look at **Map Production**.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |checkbox| image:: /static/common/checkbox.png
-   :width: 1.3em
 .. |gentleLogo| image:: img/gentlelogo.png
    :width: 3em

@@ -60,7 +60,7 @@ Outputs
 
 Rename layer
 ------------
-This algorithm renames a layer.
+Renames a layer.
 
 Parameters
 ..........

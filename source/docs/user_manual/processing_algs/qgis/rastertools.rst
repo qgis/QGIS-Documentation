@@ -182,6 +182,278 @@ Outputs
        size and value.
 
 
+.. _qgistilesxyzdirectory:
+
+Generate XYZ tiles (Directory)
+-----------------------------------
+
+Generates raster “XYZ” tiles using the current QGIS project
+as individual images to a directory structure.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Extent (xmin, xmax, ymin, ymax)**
+     - ``EXTENT``
+     - [extent]
+     - Specify the extent of the tiles.
+       One of:
+
+       * Use Canvas Extent
+       * Select Extent on Canvas
+       * Use Layer Extent...
+
+       It will internally be extended to a multiple of the tile size.
+   * - **Minimum zoom**
+     - ``ZOOM_MIN``
+     - [number]
+
+       Default: 12
+     - Minimum 0, maximum 25.
+   * - **Maximum zoom**
+     - ``ZOOM_MAX``
+     - [number]
+
+       Default: 12
+     - Minimum 0, maximum 25.
+   * - **DPI**
+     - ``DPI``
+     - [number]
+
+       Default: 96
+     - Minimum 48, maximum 600.
+   * - **Background color**
+
+       Optional
+     - ``BACKGROUND_COLOR``
+     - [color]
+
+       Default: QColor(0, 0, 0, 0)
+     - Choose the background color for the tiles
+   * - **Tile format**
+     - ``TILE_FORMAT``
+     - [enumeration]
+
+       Default: 0
+     - One of:
+
+       * 0 --- PNG
+       * 1 --- JPG
+
+   * - **Quality (JPG only)**
+
+       Optional
+     - ``QUALITY``
+     - [number]
+
+       Default: 75
+     - Minimum 1, maximum 100.
+   * - **Metatile size**
+
+       Optional
+     - ``METATILESIZE``
+     - [number]
+
+       Default: 4
+     - Specify a custom metatile size when generating XYZ tiles.
+       Larger values may speed up the rendering of tiles and provide better labelling
+       (fewer gaps without labels) at the expense of using more memory.
+       Minimum 1, maximum 20.
+   * - **Tile width**
+
+       Optional
+     - ``TILE_WIDTH``
+     - [number]
+
+       Default: 256
+     - Minimum 1, maximum 4096.
+   * - **Tile height**
+
+       Optional
+     - ``TILE_HEIGHT``
+     - [number]
+
+       Default: 256
+     - Minimum 1, maximum 4096.
+   * - **Use inverted tile Y axis (TMS conventions)**
+
+       Optional
+     - ``TMS_CONVENTION``
+     - [boolean]
+
+       Default: False
+     - 
+   * - **Output directory**
+     - ``OUTPUT_DIRECTORY``
+     - [folder]
+
+       Default: ``[Save to temporary folder]``
+     - Specification of the output raster. One of:
+
+       * Skip Output
+       * Save to a Temporary Directory
+       * Save to Directory...
+
+       The file encoding can also be changed here.
+   * - **Output html (Leaflet)**
+     - ``OUTPUT_HTML``
+     - [html]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output HTML file. One of:
+
+       * Skip Output
+       * Save to a Temporary File
+       * Save to File...
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output directory**
+     - ``OUTPUT_DIRECTORY``
+     - [folder]
+     - Output directory (for the tiles)
+   * - **Output html (Leaflet)**
+     - ``OUTPUT_HTML``
+     - [html]
+     - The output HTML (Leaflet) file
+
+
+.. _qgistilesxyzmbtiles:
+
+Generate XYZ tiles (MBTiles)
+---------------------------------
+
+Generates raster “XYZ” tiles using the current QGIS project
+as a single file in the “MBTiles” format.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Extent (xmin, xmax, ymin, ymax)**
+     - ``EXTENT``
+     - [extent]
+     - Specify the extent of the tiles.
+       One of:
+
+       * Use Canvas Extent
+       * Select Extent on Canvas
+       * Use Layer Extent...
+
+       It will internally be extended to a multiple of the tile size.
+   * - **Minimum zoom**
+     - ``ZOOM_MIN``
+     - [number]
+
+       Default: 12
+     - Minimum 0, maximum 25.
+   * - **Maximum zoom**
+     - ``ZOOM_MAX``
+     - [number]
+
+       Default: 12
+     - Minimum 0, maximum 25.
+   * - **DPI**
+     - ``DPI``
+     - [number]
+
+       Default: 96
+     - Minimum 48, maximum 600.
+   * - **Background color**
+
+       Optional
+     - ``BACKGROUND_COLOR``
+     - [color]
+
+       Default: QColor(0, 0, 0, 0)
+     - Choose the background color for the tiles
+   * - **Tile format**
+     - ``TILE_FORMAT``
+     - [enumeration]
+
+       Default: 0
+     - One of:
+
+       * 0 --- PNG
+       * 1 --- JPG
+
+   * - **Quality (JPG only)**
+
+       Optional
+     - ``QUALITY``
+     - [number]
+
+       Default: 75
+     - Minimum 1, maximum 100.
+   * - **Metatile size**
+
+       Optional
+     - ``METATILESIZE``
+     - [number]
+
+       Default: 4
+     - Specify a custom metatile size when generating XYZ tiles.
+       Larger values may speed up the rendering of tiles and provide better labelling
+       (fewer gaps without labels) at the expense of using more memory.
+       Minimum 1, maximum 20.
+   * - **Output file (for MBTiles)**
+     - ``OUTPUT_FILE``
+     - [file]
+
+       Default: ``[Save to temporary file]``
+     - Specification of the output file. One of:
+
+       * Skip Output
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output file (for MBTiles)**
+     - ``OUTPUT_FILE``
+     - [file]
+     - The output file.
+
+
 .. _qgissetstyleforrasterlayer:
 
 Set style for raster layer
@@ -213,8 +485,8 @@ Parameters
      - [file]
      - Path to the ``QML`` style file.
   
-Output
-------
+Outputs
+.......
 
 .. list-table::
    :header-rows: 1

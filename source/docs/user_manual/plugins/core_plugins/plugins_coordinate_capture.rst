@@ -17,8 +17,8 @@ coordinates on the map canvas for two selected coordinate reference systems (CRS
    menu and click on the :guilabel:`CRS` tab. As an alternative, you can also
    click on the |crs| :sup:`CRS` icon in the lower
    right-hand corner of the status bar.
-#. Click on the |checkbox| `Enable on the fly projection` checkbox and select
-   a projected coordinate system of your choice (see also :ref:`label_projections`).
+#. Select a projected coordinate system of your choice
+   (see also :ref:`label_projections`).
 #. Activate the coordinate capture plugin in the Plugin Manager (see
    :ref:`managing_plugins`) and ensure that the dialog is visible by going to
    :menuselection:`View --> Panels` and ensuring that |checkbox|
