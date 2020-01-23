@@ -1081,6 +1081,19 @@ A preview is available in the :guilabel:`Preview` tab in the
 :guilabel:`Properties...` in the context menu.
 Authentication configuration is supported.
 
+XYZ Tile services, examples:
+
+* OpenStreetMap Monochrome:
+  :guilabel:`URL`: http://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png,
+  :guilabel:`Min. Zoom Level`: 0, :guilabel:`Max. Zoom Level`: 19.
+* Google Maps:
+  :guilabel:`URL`: https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z},
+  :guilabel:`Min. Zoom Level`: 0, :guilabel:`Max. Zoom Level`: 19.
+* Open Weather Map Temperature:
+  :guilabel:`URL`: http://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid={api_key}
+  :guilabel:`Min. Zoom Level`: 0, :guilabel:`Max. Zoom Level`: 19.
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
