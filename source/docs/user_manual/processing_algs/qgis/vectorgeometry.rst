@@ -6455,6 +6455,7 @@ Parameters
      - ``SIDE``
      - [enumeration]
      - Choose the side of the transect. Available options are:
+
        * 0 --- Left
        * 1 --- Right
        * 2 --- Both
