@@ -173,7 +173,7 @@ QGIS Server is now available at http://localhost/qgisserver.
     packaged in Debian.
 
 Of course, you can add an init script (like a ``qgis-server.service`` file
-with Systemd) to start QGIS Server at boot time or whenever you want. To use a init script with systemd,
+with systemd) to start QGIS Server at boot time or whenever you want. To use an init script with systemd,
 copy/paste this content in :file:`/etc/systemd/system/qgis-server.service`
 
 .. code-block:: bash
@@ -208,14 +208,14 @@ QGIS Server should be available and you can watch the live logs with:
    sudo journalctl -f -u qgis-server
 
 As mentioned above, we can setup ``multiwatch`` to increase
-the number of process to 2 for instance:
+the number of processes to 2 for instance:
 
 .. code-block:: bash
 
    sudo apt install multiwatch
 
 Either in your bash line or in your init file, launch your QGIS Server
-by adding this line before the path to the :file:`qgis_mapserv.fcgi`:
+by adding this line before the path to :file:`qgis_mapserv.fcgi`:
 
 .. code-block:: bash
 
@@ -225,7 +225,7 @@ fcgiwrap
 ^^^^^^^^
 
 Using `fcgiwrap <https://www.nginx.com/resources/wiki/start/topics/examples/fcgiwrap/>`_
-is much easier to setup than `spawn-fcgi` but it's much slower.
+is much easier to setup than **spawn-fcgi** but it's much slower.
 You first have to install the corresponding package:
 
 .. code-block:: bash
@@ -244,7 +244,7 @@ Then, introduce the following block in your NGINX server configuration:
          fastcgi_param  SCRIPT_FILENAME /usr/lib/cgi-bin/qgis_mapserv.fcgi;
      }
 
-Finally, restart NGINX and fcgiwrap to take into account the new configuration:
+Finally, restart NGINX and **fcgiwrap** to take into account the new configuration:
 
 .. code-block:: bash
 
