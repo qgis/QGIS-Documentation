@@ -337,7 +337,7 @@ transformations` group:
   selecting a transformation from this dialog, then the choice is remembered
   and automatically applied to any newly created QGIS projects.
 * or defining a list of appropriate datum transformations to use as defaults
-  when a layer to projects or reprojecting a layer.
+  when loading a layer to a project or reprojecting a layer.
 
   Use the |signPlus| button to open the :guilabel:`Select Datum Transformations`
   dialog. Then:
