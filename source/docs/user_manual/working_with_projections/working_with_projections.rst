@@ -359,7 +359,7 @@ transformations` group:
      A row is added to the table under :guilabel:`Default Datum Transformations`
      with information about :guilabel:`Source CRS` and :guilabel:`Destination CRS`
      as well as the datum transformations (:guilabel:`Source Datum Transformation`
-     and :guilabel:`Destonation Datum Transformation`) to be used to transform
+     and :guilabel:`Destination Datum Transformation`) to be used to transform
      between the CRSs.
 
   From now, QGIS automatically uses the selected datum transformations for
