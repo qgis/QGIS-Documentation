@@ -648,11 +648,11 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    distance along a linestring geometry. (see also :ref:`qgisinterpolatepoint`)"
    "line_locate_point", "Returns the distance along a linestring corresponding
    to the closest position the linestring comes to a specified point geometry."
+   "line_merge", "Returns a (Multi-)LineString geometry, where any connected LineStrings
+   from the input geometry have been merged into a single linestring."
    "line_substring", "Returns the portion of a line or curve geometry falling betweeen
    specified start and end distances (measured from the beginning of the line)
    (see also :ref:`qgislinesubstring`)"
-   "line_merge", "Returns a (Multi-)LineString geometry, where any connected LineStrings
-   from the input geometry have been merged into a single linestring."
    "m", "Returns the M value of a point geometry"
    "make_circle", "Creates a circular geometry based on center point and radius"
    "make_ellipse", "Creates an elliptical geometry based on center point, axes and azimuth"
@@ -728,15 +728,15 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    if geometry a is completely inside geometry b"
    "x", "Returns the X coordinate of a point geometry, or the X coordinate of the
    centroid for a non-point geometry"
-   "x_min", "Returns the minimum X coordinate of a geometry.
-   Calculations are in the Spatial Reference System of this geometry"
    "x_max", "Returns the maximum X coordinate of a geometry.
+   Calculations are in the Spatial Reference System of this geometry"
+   "x_min", "Returns the minimum X coordinate of a geometry.
    Calculations are in the Spatial Reference System of this geometry"
    "y", "Returns the Y coordinate of a point geometry, or the Y coordinate of
    the centroid for a non-point geometry"
-   "y_min", "Returns the minimum Y coordinate of a geometry.
-   Calculations are in the Spatial Reference System of this geometry"
    "y_max", "Returns the maximum Y coordinate of a geometry.
+   Calculations are in the Spatial Reference System of this geometry"
+   "y_min", "Returns the minimum Y coordinate of a geometry.
    Calculations are in the Spatial Reference System of this geometry"
    "z", "Returns the Z coordinate of a point geometry"
 
