@@ -942,7 +942,192 @@ This group contains functions that operate on geometry objects (e.g., length, ar
 
 |
 
+<<<<<<< HEAD
 **Some examples:**
+=======
+.. csv-table::
+   :header: "Function", "Description"
+   :widths: 25, 70
+   :class: longtable
+
+   "$area", "Returns the area size of the current feature"
+   "$geometry", "Returns the geometry of the current feature (can be used for
+   processing with other functions)"
+   "$length", "Returns the length of the current line feature"
+   "$perimeter", "Returns the perimeter of the current polygon feature"
+   "$x", "Returns the X coordinate of the current feature"
+   "$x_at(n)", "Returns the X coordinate of the nth node of the current feature's geometry"
+   "$y", "Returns the Y coordinate of the current feature"
+   "$y_at(n)", "Returns the Y coordinate of the nth node of the current feature's geometry"
+   "angle_at_vertex", "Returns the bisector angle (average angle) to the geometry
+   for a specified vertex on a linestring geometry. Angles are in degrees clockwise from north"
+   "area", "Returns the area of a geometry polygon feature. Calculations are in
+   the Spatial Reference System of this geometry"
+   "azimuth", "Returns the north-based azimuth as the angle in radians measured
+   clockwise from the vertical on point_a to point_b"
+   "boundary", "Returns the closure of the combinatorial boundary of the geometry
+   (ie the topological boundary of the geometry - see also :ref:`qgisboundary`)."
+   "bounds", "Returns a geometry which represents the bounding box of an input geometry.
+   Calculations are in the Spatial Reference System of this geometry
+   (see also :ref:`qgisboundingboxes`)"
+   "bounds_height", "Returns the height of the bounding box of a geometry.
+   Calculations are in the Spatial Reference System of this geometry"
+   "bounds_width", "Returns the width of the bounding box of a geometry.
+   Calculations are in the Spatial Reference System of this geometry"
+   "buffer", "Returns a geometry that represents all points whose distance from
+   this geometry is less than or equal to distance. Calculations are in the Spatial
+   Reference System of this geometry (see also :ref:`qgisbuffer`)"
+   "buffer_by_m", "Creates a buffer along a line geometry where the buffer diameter
+   varies according to the M values at the line vertices (see also :ref:`qgisbufferbym`)"
+   "centroid", "Returns the geometric center of a geometry (see also :ref:`qgiscentroids`)"
+   "closest_point", "Returns the point on a geometry that is closest to a second geometry"
+   "collect_geometries", "Collects a set of geometries into a multi-part geometry
+   object (see also :ref:`qgiscollect`)"
+   "combine", "Returns the combination of two geometries"
+   "contains(a,b)", "Returns 1 (true) if and only if no points of b lie in the exterior of a,
+   and at least one point of the interior of b lies in the interior of a"
+   "convex_hull", "Returns the convex hull of a geometry (this represents the minimum
+   convex geometry that encloses all geometries within the set) (see also :ref:`qgisconvexhull`)"
+   "crosses", "Returns 1 (true) if the supplied geometries have some, but not all,
+   interior points in common"
+   "difference(a,b)", "Returns a geometry that represents that part of geometry
+   a that does not intersect with geometry b (see also :ref:`qgisdifference`)"
+   "disjoint", "Returns 1 (true) if the geometries do not share any space together"
+   "distance", "Returns the minimum distance (based on Spatial Reference System)
+   between two geometries in projected units"
+   "distance_to_vertex", "Returns the distance along the geometry to a specified vertex"
+   "end_point", "Returns the last node from a geometry (see also :ref:`qgisextractspecificvertices`)"
+   "extend", "Extends the start and end of a linestring geometry by a specified amount
+   (see also :ref:`qgisextendlines`)"
+   "exterior_ring", "Returns a line string representing the exterior ring of a polygon geometry,
+   or null if the geometry is not a polygon"
+   "extrude(geom,x,y)", "Returns an extruded version of the input (Multi-) Curve
+   or (Multi-)Linestring geometry with an extension specified by X and Y"
+   "flip_coordinates", "Returns a copy of the geometry with the X and Y coordinates
+   swapped (see also :ref:`qgisswapxy`)"
+   "force_rhr", "Forces a geometry to respect the Right-Hand-Rule (see also
+   :ref:`qgisforcerhr`)"
+   "geom_from_gml", "Returns a geometry created from a GML representation of geometry"
+   "geom_from_wkt", "Returns a geometry created from a well-known text (WKT) representation"
+   "geom_to_wkt", "Returns the well-known text (WKT) representation of the geometry without SRID metadata"
+   "geometry", "Returns a feature's geometry"
+   "geometry_n", "Returns the nth geometry from a geometry collection,
+   or null if the input geometry is not a collection"
+   "hausdorff_distance", "Returns basically a measure of how similar or dissimilar
+   two geometries are, with a lower distance indicating more similar geometries"
+   "inclination", "Returns the inclination measured from the zenith (0) to the nadir (180) on point_a to point_b"
+   "interior_ring_n", "Returns the geometry of the nth interior ring from a polygon geometry,
+   or null if the geometry is not a polygon"
+   "intersection", "Returns a geometry that represents the shared portion of two
+   geometries (see also  :ref:`qgisintersection`)"
+   "intersects", "Tests whether a geometry intersects another. Returns 1 (true)
+   if the geometries spatially intersect (share any portion of space) and 0 if they don't"
+   "intersects_bbox", "Tests whether a geometry's bounding box overlaps another geometry's
+   bounding box. Returns 1 (true) if the geometries spatially intersect 
+   (share any portion of space) their bounding box, or 0 if they don't"
+   "is_closed", "Returns true if a line string is closed (start and end points are coincident),
+   false if a line string is not closed, or null if the geometry is not a line string"
+   "length", "Returns length of a line geometry feature (or length of a string)"
+   "line_interpolate_angle", "Returns the angle parallel to the geometry at a specified
+   distance along a linestring geometry. Angles are in degrees clockwise from north."
+   "line_interpolate_point", "Returns the point interpolated by a specified
+   distance along a linestring geometry. (see also :ref:`qgisinterpolatepoint`)"
+   "line_locate_point", "Returns the distance along a linestring corresponding
+   to the closest position the linestring comes to a specified point geometry."
+   "line_merge", "Returns a (Multi-)LineString geometry, where any connected LineStrings
+   from the input geometry have been merged into a single linestring."
+   "line_substring", "Returns the portion of a line or curve geometry falling betweeen
+   specified start and end distances (measured from the beginning of the line)
+   (see also :ref:`qgislinesubstring`)"
+   "m", "Returns the M value of a point geometry"
+   "make_circle", "Creates a circular geometry based on center point and radius"
+   "make_ellipse", "Creates an elliptical geometry based on center point, axes and azimuth"
+   "make_line", "Creates a line geometry from a series or an array of point geometries"
+   "make_point(x,y,z,m)", "Returns a point geometry from X and Y (and optional Z or M) values"
+   "make_point_m(x,y,m)", "Returns a point geometry from X and Y coordinates and M values"
+   "make_polygon", "Creates a polygon geometry from an outer ring and optional series
+   of inner ring geometries"
+   "make_rectangle_3points", "Creates a rectangle from 3 points" 
+   "make_regular_polygon", "Creates a regular polygon"
+   "make_square", "Creates a square from a diagonal"
+   "make_triangle", "Creates a triangle polygon"
+   "minimal_circle", "Returns the minimal enclosing circle of an input geometry
+   (see also :ref:`qgisminimumenclosingcircle`)"
+   "nodes_to_points", "Returns a multipoint geometry consisting of every node in
+   the input geometry (see also :ref:`qgisextractvertices`)"
+   "num_geometries", "Returns the number of geometries in a geometry collection,
+   or null if the input geometry is not a collection"
+   "num_interior_rings", "Returns the number of interior rings in a polygon or
+   geometry collection, or null if the input geometry is not a polygon or collection"
+   "num_points", "Returns the number of vertices in a geometry"
+   "num_rings", "Returns the number of rings (including exterior rings) in a polygon
+   or geometry collection, or null if the input geometry is not a polygon or collection"
+   "offset_curve", "Returns a geometry formed by offsetting a linestring geometry to the side.
+   Distances are in the Spatial Reference System of this geometry. (see also :ref:`qgisoffsetline`)"
+   "order_parts", "Orders the parts of a MultiGeometry by a given criteria"
+   "oriented_bbox", "Returns a geometry representing the minimal oriented
+   bounding box of an input geometry (see also :ref:`qgisorientedminimumboundingbox`)"
+   "overlaps", "Tests whether a geometry overlaps another. Returns 1 (true) if
+   the geometries share space, are of the same dimension, but are not completely contained by each other"
+   "perimeter", "Returns the perimeter of a geometry polygon feature.
+   Calculations are in the Spatial Reference System of this geometry"
+   "point_n", "Returns a specific node from a geometry (see also :ref:`qgisextractspecificvertices`)"
+   "point_on_surface", "Returns a point guaranteed to lie on the surface of
+   a geometry (see also :ref:`qgispointonsurface`)"
+   "pole_of_inaccessibility", "Calculates the approximate pole of inaccessibility for
+   a surface, which is the most distant internal point from the boundary of the surface
+   (see also :ref:`qgispoleofinaccessibility`)"
+   "project", "Returns a point projected from a start point using a distance and
+   bearing (azimuth) in radians (see also :ref:`qgisprojectpointcartesian`)"
+   "relate", "Tests or returns the Dimensional Extended 9 Intersection Model (DE-9IM)
+   representation of the relationship between two geometries"
+   "reverse", "Reverses the direction of a line string by reversing the order of its
+   vertices (see also :ref:`qgisreverselinedirection`)"
+   "segments_to_lines", "Returns a multi line geometry consisting of a line for
+   every segment in the input geometry (see also :ref:`qgisexplodelines`)"
+   "shortest_line", "Returns the shortest line joining two geometries.
+   The resultant line will start at geometry 1 and end at geometry 2"
+   "simplify", "Simplifies a geometry by removing nodes using a distance based
+   threshold (see also :ref:`qgissimplifygeometries`)"
+   "simplify_vw", "Simplifies a geometry by removing nodes using an area based
+   threshold (see also :ref:`qgissimplifygeometries`)"
+   "single_sided_buffer", "Returns a geometry formed by buffering out just one
+   side of a linestring geometry. Distances are in the Spatial Reference System
+   of this geometry (see also :ref:`qgissinglesidedbuffer`)"
+   "smooth", "Smooths a geometry by adding extra nodes which round off corners
+   in the geometry (see also :ref:`qgissmoothgeometry`)"
+   "start_point", "Returns the first node from a geometry (see also :ref:`qgisextractspecificvertices`)"
+   "sym_difference", "Returns a geometry that represents the portions of two
+   geometries that do not intersect (see also :ref:`qgissymmetricaldifference`)"
+   "tapered_buffer", "Creates a buffer along a line geometry where the buffer
+   diameter varies evenly over the length of the line (see also :ref:`qgistaperedbuffer`)"
+   "touches", "Tests whether a geometry touches another. Returns 1 (true) if
+   the geometries have at least one point in common, but their interiors do not intersect"
+   "transform", "Returns the geometry transformed from the source CRS to the 
+   destination CRS (see also :ref:`qgisreprojectlayer`)"
+   "translate", "Returns a translated version of a geometry. Calculations are in
+   the Spatial Reference System of the geometry (see also :ref:`qgistranslategeometry`)"
+   "union", "Returns a geometry that represents the point set union of the geometries"
+   "wedge_buffer", "Returns a wedge shaped buffer originating from a point geometry
+   given an angle and radii (see also :ref:`qgiswedgebuffers`)"
+   "within (a,b)", "Tests whether a geometry is within another. Returns 1 (true)
+   if geometry a is completely inside geometry b"
+   "x", "Returns the X coordinate of a point geometry, or the X coordinate of the
+   centroid for a non-point geometry"
+   "x_max", "Returns the maximum X coordinate of a geometry.
+   Calculations are in the Spatial Reference System of this geometry"
+   "x_min", "Returns the minimum X coordinate of a geometry.
+   Calculations are in the Spatial Reference System of this geometry"
+   "y", "Returns the Y coordinate of a point geometry, or the Y coordinate of
+   the centroid for a non-point geometry"
+   "y_max", "Returns the maximum Y coordinate of a geometry.
+   Calculations are in the Spatial Reference System of this geometry"
+   "y_min", "Returns the minimum Y coordinate of a geometry.
+   Calculations are in the Spatial Reference System of this geometry"
+   "z", "Returns the Z coordinate of a point geometry"
+
+.. only:: html
+>>>>>>> 88854850c... Fix some issues with the sorting of geometry functions (expressions) (#4816)
 
 * You can manipulate the current geometry with the variable $geometry to create
   a buffer or get the point on surface::
