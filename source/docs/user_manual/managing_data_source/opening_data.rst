@@ -271,30 +271,11 @@ To load a layer from a file, you can:
 
      Add Raster Layer Dialog
 
-That will bring up a standard open file dialog (see figure_vector_open_
-and figure_raster_open_), which allows you to navigate the file system
-and load a supported data source.
-The pull-down menu at the bottom allows you to select a supported
-file format.
-Only formats that have been well tested appear in the list.
+That will bring up a standard open file dialog, which allows you
+to navigate the file system and load a supported data source.
+Only formats that have been well tested appear in the formats filter.
 Other formats can be loaded by selecting ``All files`` (the top item
 in the pull-down menu).
-
-
-.. _figure_vector_open:
-
-.. figure:: img/shapefileopendialog.png
-   :align: center
-
-   Open an OGR Supported Vector Layer Dialog
-
-.. _figure_raster_open:
-
-.. figure:: img/geotiffopendialog.png
-   :align: center
-
-   Open a GDAL Supported Raster Layer Dialog
-
 
 Selecting a file from the list and clicking :guilabel:`Open` loads it into QGIS.
 More than one layer can be loaded at the same time by holding down the
@@ -606,7 +587,7 @@ Working with GRASS vector data is described in section :ref:`sec_grass`.
 Database related tools
 ----------------------
 
-.. index:: Database - Connecting; Connecting to a database
+.. index:: Database; Connecting
 .. _vector_create_stored_connection:
 
 Creating a stored Connection
@@ -1093,13 +1074,13 @@ Once a connection to a XYZ tile service is set, right-click over the entry to:
 Examples of XYZ Tile services:
 
 * OpenStreetMap Monochrome:
-  :guilabel:`URL`: http://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png,
+  :guilabel:`URL`: ``http://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png``,
   :guilabel:`Min. Zoom Level`: 0, :guilabel:`Max. Zoom Level`: 19.
 * Google Maps:
-  :guilabel:`URL`: https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z},
+  :guilabel:`URL`: ``https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}``,
   :guilabel:`Min. Zoom Level`: 0, :guilabel:`Max. Zoom Level`: 19.
 * Open Weather Map Temperature:
-  :guilabel:`URL`: http://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid={api_key}
+  :guilabel:`URL`: ``http://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid={api_key}``
   :guilabel:`Min. Zoom Level`: 0, :guilabel:`Max. Zoom Level`: 19.
 
 
