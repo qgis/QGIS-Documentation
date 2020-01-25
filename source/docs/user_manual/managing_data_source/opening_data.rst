@@ -406,11 +406,21 @@ Using the |addOgrLayer| :sup:`Add Vector Layer` tool:
   are among the ones you can find in :ref:`vector_create_stored_connection`.
   Pressing :guilabel:`Open` lets you select from the available tables, for
   example of PostGIS enabled databases.
-* The last source type, |radioButtonOn| :guilabel:`Protocol`, allows you
-  to open data from the web using for example ``GeoJSON`` or ``CouchDB`` 
-  format.
-  After selecting the type you have to enter the URI.
+* The |radioButtonOn| :guilabel:`Protocol: HTTP(S), cloud, etc.` source type
+  opens data stored locally or on the network, either publicly accessible,
+  or in private buckets of commercial cloud storage services.
+  Supported protocol types are:
 
+  * ``HTTP/HTTPS/FTP``, with a :guilabel:`URI` and, if required,
+    an authentication
+  * Cloud storage such as ``AWS S3``, ``Google Cloud Storage``, ``Microsoft
+    Azure Blob``, ``Alibaba OSS Cloud``, ``Open Stack Swift Storage``.
+    You need to fill in the :guilabel:`Bucket or container` and the
+    :guilabel:`Object key`.
+  * service supporting OGC ``WFS 3`` (still experimental),
+    using ``GeoJSON`` or ``GEOJSON - Newline Delimited`` format or based on
+    ``CouchDB`` database.
+    A :guilabel:`URI` is required, with optional authentication.
 
 .. _tip_load_from_external_drive_OSX:
 
