@@ -1066,9 +1066,9 @@ Once a connection to a XYZ tile service is set, right-click over the entry to:
 * :menuselection:`Export layer... --> To File`, :ref:`saving it as a raster
   <general_saveas>`
 * :guilabel:`Add layer to project`: a double-click also adds the layer
-* View the :guilabel:`Layer Properties...`: gives access to metadata and
-  preview of the data provided by the service. More settings are available
-  when the layer is loaded in the project.
+* View the :guilabel:`Layer Properties...` and get access to metadata and
+  a preview of the data provided by the service.
+  More settings are available when the layer has been loaded into the project.
 
 
 Examples of XYZ Tile services:
