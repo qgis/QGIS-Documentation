@@ -335,15 +335,33 @@ Using the |addOgrLayer| :sup:`Add Vector Layer` tool:
    and press :kbd:`Enter`. Then you can navigate to external drives and network
    mounts.
 
+.. _mesh_loading:
 
 Loading a mesh layer
 --------------------
 
-Mesh layers (currently :file:`.grb`, :file:`.grb2`, :file:`.bin`,
-:file:`.grib`, :file:`grib1`, :file:`grib2`, :file:`nc`, :file:`2dm`,
-:file:`3Di Results`) can be loaded by clicking the
-|addMeshLayer| :guilabel:`Mesh` tab in the datasource manager.
-For further instructions, read :ref:`label_meshdata`.
+A mesh is an unstructured grid usually with temporal and other components.
+The spatial component contains a collection of vertices, edges and faces
+in 2D or 3D space. More information on mesh layers at :ref:`label_meshdata`.
+
+
+To add a mesh layer to QGIS:
+
+#. Open the :menuselection:`Data Source Manager` dialog, either by selecting it
+   from the :menuselection:`Layer -->` menu or clicking the |dataSourceManager|
+   :sup:`Open Data Source Manager` button.
+#. Enable the |addMeshLayer| :guilabel:`Mesh` tab on the left panel
+#. Press the :guilabel:`...` :sup:`Browse` button to select the file.
+   :ref:`Various formats <mesh_supported_formats>` are supported.
+#. Select the layer and press :guilabel:`Add`.
+   The layer will be added using the native mesh rendering.
+
+.. _figure_mesh_datasource_manager:
+
+.. figure:: img/mesh_datasource_manager.png
+   :align: center
+
+   Mesh tab in Data Source Manager
 
 
 .. index:: CSV, Delimited text files
