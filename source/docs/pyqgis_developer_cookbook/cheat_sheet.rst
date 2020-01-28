@@ -739,7 +739,7 @@ Decorators
     INCHES_TO_MM = 0.0393700787402 # 1 millimeter = 0.0393700787402 inches
     case = 2
 
-    def add_copyright(p, text, x_offset, y_offset):
+    def add_copyright(p, text, xOffset, yOffset):
         p.translate( xOffset , yOffset  )
         text.drawContents(p)
         p.setWorldTransform( p.worldTransform() )
