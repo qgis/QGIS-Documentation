@@ -1066,7 +1066,10 @@ XYZ Tile service configuration.
 
 Configurations can be saved (:guilabel:`Save Connections`) to XML
 and loaded (:guilabel:`Load Connections`) through the context menu.
-The XML file for OpenStreetMap looks like this::
+Authentication configuration is supported.
+The XML file for OpenStreetMap looks like this:
+
+.. code-block:: xml
 
   <!DOCTYPE connections>
   <qgsXYZTilesConnections version="1.0">
@@ -1075,11 +1078,6 @@ The XML file for OpenStreetMap looks like this::
      authcfg="" referer=""/>
   </qgsXYZTilesConnections>
   
-<<<<<<< HEAD
-:guilabel:`Layer Properties...` in the connection's context menu
-opens a dialog where you can get a preview of the service in the
-:guilabel:`Preview` tab.
-=======
 Once a connection to a XYZ tile service is set, right-click over the entry to:
 
 * :guilabel:`Edit...` the XYZ connection settings
@@ -1090,9 +1088,7 @@ Once a connection to a XYZ tile service is set, right-click over the entry to:
 * View the :guilabel:`Layer Properties...` and get access to metadata and
   a preview of the data provided by the service.
   More settings are available when the layer has been loaded into the project.
->>>>>>> 8371f94c5... Update the description of the preview of XYZ Tiles in the browser after review (#4824)
 
-Authentication configuration is supported.
 
 Examples of XYZ Tile services:
 
