@@ -67,7 +67,7 @@ $(document).ready(function(){
         .attr("border", 0);
     };
 
-    $(window).load(function () {
+    $(window).on('load', function () {
         /*
         * Scroll the window to avoid the topnav bar
         * https://github.com/twitter/bootstrap/issues/1768
