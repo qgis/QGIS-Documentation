@@ -1066,7 +1066,10 @@ XYZ Tile service configuration.
 
 Configurations can be saved (:guilabel:`Save Connections`) to XML
 and loaded (:guilabel:`Load Connections`) through the context menu.
-The XML file for OpenStreetMap looks like this::
+Authentication configuration is supported.
+The XML file for OpenStreetMap looks like this:
+
+.. code-block:: xml
 
   <!DOCTYPE connections>
   <qgsXYZTilesConnections version="1.0">
@@ -1075,11 +1078,17 @@ The XML file for OpenStreetMap looks like this::
      authcfg="" referer=""/>
   </qgsXYZTilesConnections>
   
-:guilabel:`Layer Properties...` in the connection's context menu
-opens a dialog where you can get a preview of the service in the
-:guilabel:`Preview` tab.
+Once a connection to a XYZ tile service is set, right-click over the entry to:
 
-Authentication configuration is supported.
+* :guilabel:`Edit...` the XYZ connection settings
+* :guilabel:`Delete` the connection
+* :menuselection:`Export layer... --> To File`, :ref:`saving it as a raster
+  <general_saveas>`
+* :guilabel:`Add layer to project`: a double-click also adds the layer
+* View the :guilabel:`Layer Properties...` and get access to metadata and
+  a preview of the data provided by the service.
+  More settings are available when the layer has been loaded into the project.
+
 
 Examples of XYZ Tile services:
 
