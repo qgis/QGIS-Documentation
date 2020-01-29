@@ -33,6 +33,10 @@ They are geocoded by pixel resolution and the X/Y coordinate of a
 corner pixel of the raster layer. This allows QGIS to position the
 data correctly on the map canvas.
 
+The GeoPackage format is convenient for storing raster data when
+working with QGIS.
+The popular and powerful GeoTiff format is a good alternative.
+
 QGIS makes use of georeference information inside the raster layer
 (e.g., :index:`GeoTiff`) or an associated *world file* to properly
 display the data.
