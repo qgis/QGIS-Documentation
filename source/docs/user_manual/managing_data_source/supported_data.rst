@@ -76,14 +76,14 @@ GeoPackage
 ----------
 The `GeoPackage <https://www.geopackage.org/>`_ (GPKG) format is
 platform-independent, and is implemented as a SQLite database
-container.
+container, and can be used to store both vector and raster data.
 The format was defined by the Open Geospatial Consortium (OGC),
 and was published in 2014.
 
 GeoPackage can be used to store the following in a SQLite database:
 
-* vector features
-* tile matrix sets of imagery and raster maps
+* **vector** features
+* **tile matrix sets of imagery** and **raster** maps
 * attributes (non-spatial data)
 * extensions
 
