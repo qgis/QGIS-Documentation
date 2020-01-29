@@ -82,6 +82,7 @@ For such quantities it is desirable to display arrows indicating the directions.
 
    Possible visualisation of mesh data
 
+.. _mesh_supported_formats:
 
 Supported formats
 =================
@@ -97,24 +98,10 @@ Hence, the natively supported formats are:
 * Some examples of mesh datasets can be found at https://apps.ecmwf.int/datasets/data/interim-full-daily/levtype=sfc/
 
 
-Loading a mesh layer
-====================
+To load a mesh dataset into QGIS, use the |addMeshLayer| :guilabel:`Mesh` tab
+in the :guilabel:`Data Source Manager` dialog. Read :ref:`mesh_loading` for
+more details.
 
-To add a mesh layer to QGIS:
-
-#. Open the :menuselection:`Data Source Manager` dialog, either by selecting it
-   from the :menuselection:`Layer -->` menu or clicking the |dataSourceManager|
-   :sup:`Open Data Source Manager` button.
-#. Then, enable the |addMeshLayer| :guilabel:`Mesh` tab on the left panel
-#. Press the :guilabel:`...` button to select the file and press
-   :guilabel:`Add`. The layer will be added using the native mesh rendering.
-
-.. _figure_mesh_datasource_manager:
-
-.. figure:: img/mesh_datasource_manager.png
-   :align: center
-
-   Mesh tab in Data Source Manager
 
 .. _`label_meshproperties`:
 
