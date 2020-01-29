@@ -34,8 +34,18 @@ record for each cell. They are geocoded by pixel resolution and the X/Y
 coordinate of a corner pixel of the raster layer. This allows QGIS to position
 the data correctly in the map canvas.
 
+<<<<<<< HEAD
 QGIS makes use of georeference information inside the raster layer (e.g.,
 :index:`GeoTiff`) or in an appropriate world file to properly display the data.
+=======
+The GeoPackage format is convenient for storing raster data when
+working with QGIS.
+The popular and powerful GeoTiff format is a good alternative.
+
+QGIS makes use of georeference information inside the raster layer
+(e.g., :index:`GeoTiff`) or an associated *world file* to properly
+display the data.
+>>>>>>> ba10f83bd... Include GeoPackage as a suitable container for raster data (#4849)
 
 .. if there are particularities for some raster formats that are worth mention,
    put them here. Maybe some comments on working with vrt, landsat data...?
@@ -53,6 +63,7 @@ This section describes how to work with these specificities.
 
 .. note::
 
+<<<<<<< HEAD
    QGIS supports (multi)point, (multi)line, (multi)polygon, CircularString,
    CompoundCurve, CurvePolygon, MultiCurve, MultiSurface feature types, all
    with Z and/or M values.
@@ -60,6 +71,33 @@ This section describes how to work with these specificities.
    You should note also that some drivers don't support some of these feature
    types like CircularString, CompoundCurve, CurvePolygon, MultiCurve,
    MultiSurface feature type. QGIS will convert them to (multi)polygon feature.
+=======
+   QGIS supports (multi)point, (multi)line, (multi)polygon,
+   CircularString, CompoundCurve, CurvePolygon, MultiCurve,
+   MultiSurface feature types, all optionally with Z and/or M values.
+
+   You should also note that some drivers don't support some of these
+   feature types, like CircularString, CompoundCurve, CurvePolygon,
+   MultiCurve, MultiSurface feature type. QGIS will convert them.
+
+.. index:: GeoPackage
+.. _vector_geopackage:
+
+GeoPackage
+----------
+The `GeoPackage <https://www.geopackage.org/>`_ (GPKG) format is
+platform-independent, and is implemented as a SQLite database
+container, and can be used to store both vector and raster data.
+The format was defined by the Open Geospatial Consortium (OGC),
+and was published in 2014.
+
+GeoPackage can be used to store the following in a SQLite database:
+
+* **vector** features
+* **tile matrix sets of imagery** and **raster** maps
+* attributes (non-spatial data)
+* extensions
+>>>>>>> ba10f83bd... Include GeoPackage as a suitable container for raster data (#4849)
 
 
 .. index:: ESRI, Shapefile, OGR
