@@ -185,6 +185,12 @@ contextual menu to:
 
    Raster Symbology - Paletted unique value rendering
 
+The pulldown menu, that opens when clicking the :guilabel:`...`
+(:guilabel:`Advanced options`) button below the color map to the
+right, offers color map loading
+(:guilabel:`Load Color Map from File...`) and exporting
+(:guilabel:`Export Color Map to File...`), and loading of classes
+(:guilabel:`Load Classes from Layer`).
 
 .. _singleband_gray:
 
