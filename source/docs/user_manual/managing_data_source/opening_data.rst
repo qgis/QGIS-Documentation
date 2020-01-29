@@ -112,7 +112,53 @@ In both cases, the :guilabel:`Browser` helps you navigate in your file system
 and manage geodata, regardless the type of layer (raster, vector, table),
 or the datasource format (plain or compressed files, databases, web services).
 
-To add a layer into a project using the :guilabel:`Browser` interface:
+The context menu for an element in the :guilabel:`Browser` panel is opened
+by right-clicking on it.
+
+For file system directory entries, the context menu offers the following:
+
+* :guilabel:`New` -->
+
+  * :guilabel:`Directory...`
+  * :guilabel:`GeoPackage...`
+  * :guilabel:`ShapeFile...`
+* :guilabel:`Add as a Favorite`
+* :guilabel:`Hide from Browser`
+* :guilabel:`Fast Scan this Directory`
+* :guilabel:`Open Directory`
+* :guilabel:`Open in Terminal`
+* :guilabel:`Properties...`
+* :guilabel:`Directory Properties...`
+
+For leaf entries that can act as layers in the project, the context
+menu will have a selection of entries.
+For example, for non-database, non-service-based vector, raster and
+mesh data sources:
+
+* :guilabel:`Delete File "<name of file>"...`
+* :guilabel:`Export Layer` --> :guilabel:`To File...`
+* :guilabel:`Add Layer to Project`
+* :guilabel:`Layer Properties`
+* :guilabel:`File Properties`
+
+In the :guilabel:`Layer properties` entry, you will find (similar
+to what you will find in the
+:ref:`vector <vector_properties_dialog>` and
+:ref:`raster <raster_properties_dialog>` layer properties once
+the layers have been added to the project):
+
+* :guilabel:`Metadata` for the layer.
+  Metadata groups: :guilabel:`Information from provider` (if possible,
+  :guilabel:`Path` will be a hyperlink to the source),
+  :guilabel:`Identification`, :guilabel:`Extent`, :guilabel:`Access`,
+  :guilabel:`Fields` (for vector layers), :guilabel:`Bands` (for raster layers),
+  :guilabel:`Contacts`, :guilabel:`Links` (for vector layers),
+  :guilabel:`References` (for raster layers), :guilabel:`History`.
+* A :guilabel:`Preview` panel
+* The attribute table for vector sources (in the :guilabel:`Attributes`
+  panel).
+
+To add a layer to the project using the :guilabel:`Browser`:
 
 #. Enable the :guilabel:`Browser` as described above.
    A browser tree with your file system, databases and web services is 
@@ -120,9 +166,10 @@ To add a layer into a project using the :guilabel:`Browser` interface:
    You may need to connect databases and web services before they appear
    (see dedicated sections).
 #. Find the layer in the list.
-#. Double-click its name or drag-and-drop it into the :ref:`map canvas
-   <label_mapview>`. Your layer is now added to the :ref:`Layers panel
-   <label_legend>` and can be viewed on the map canvas.
+#. Use the context menu, double-click its name, or drag-and-drop it
+   into the :ref:`map canvas <label_mapview>`.
+   Your layer is now added to the :ref:`Layers panel <label_legend>` and
+   can be viewed on the map canvas.
 
    .. tip:: **Open a QGIS project directly from the browser**
 
