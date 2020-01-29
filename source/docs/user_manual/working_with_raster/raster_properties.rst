@@ -176,15 +176,15 @@ color to each unique raster value.
 If you want to change a color, just double-click on the color and
 the :guilabel:`Select color` dialog appears.
 
-It is also possible to assign a label to the each color value.
+It is also possible to assign labels to the colors.
 The label will then appear in the legend of the raster layer.
 
 Right-clicking over selected rows in the color table shows a
 contextual menu to:
 
-* :guilabel:`Change Color...` of the selected symbol(s)
-* :guilabel:`Change Opacity...` of the selected symbol(s)
-* :guilabel:`Change Label...` of the selected symbol(s)
+* :guilabel:`Change Color...` for the selection
+* :guilabel:`Change Opacity...` for the selection
+* :guilabel:`Change Label...` for the selection
 
 .. _figure_raster_paletted_unique:
 
