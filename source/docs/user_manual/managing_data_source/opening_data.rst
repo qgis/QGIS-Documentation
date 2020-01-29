@@ -114,16 +114,37 @@ or the datasource format (plain or compressed files, databases, web services).
 
 The context menu for an element in the :guilabel:`Browser` panel is opened
 by right-clicking on it.
-For entries that can be added to the project as layers the context menu
-has the following entries:
 
-* :guilabel:`Delete File ...`
+For file system directory entries, the context menu offers the following:
+
+* :guilabel:`New` -->
+
+  * :guilabel:`Directory...`
+  * :guilabel:`GeoPackage...`
+  * :guilabel:`ShapeFile...`
+* :guilabel:`Add as a Favorite`
+* :guilabel:`Hide from Browser`
+* :guilabel:`Fast Scan this Directory`
+* :guilabel:`Open Directory`
+* :guilabel:`Open in Terminal`
+* :guilabel:`Properties...`
+* :guilabel:`Directory Properties...`
+
+For leaf entries that can act as layers in the project, the context
+menu will have a selection of entries.
+For example, for vector layers:
+
+* :guilabel:`Delete File "<name of file>"...`
 * :guilabel:`Export Layer` --> :guilabel:`To File...`
 * :guilabel:`Add Layer to Project`
 * :guilabel:`Layer Properties`
 * :guilabel:`File Properties`
 
-In the :guilabel:`Layer properties` entry, you will find
+In the :guilabel:`Layer properties` entry, you will find (similar
+to what you will find in the
+:ref:`vector <vector_properties_dialog>` and
+:ref:`raster <raster_properties_dialog>` layer properties once
+the layers have been added to the project):
 
 * :guilabel:`Metadata` for the layer.
   Metadata groups: :guilabel:`Information from provider` (if possible,
@@ -132,7 +153,7 @@ In the :guilabel:`Layer properties` entry, you will find
   :guilabel:`Fields` (for vector layers), :guilabel:`Bands` (for raster layers),
   :guilabel:`Contacts`, :guilabel:`Links` (for vector layers),
   :guilabel:`References` (for raster layers), :guilabel:`History`.
-* A :guilabel:`Preview`
+* A :guilabel:`Preview` panel
 * The attribute table for vector sources (in the :guilabel:`Attributes`
   panel).
 
