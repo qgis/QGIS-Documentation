@@ -132,7 +132,7 @@ For file system directory entries, the context menu offers the following:
 
 For leaf entries that can act as layers in the project, the context
 menu will have a selection of entries.
-For example, for vector layers:
+For example, for non-database vector, raster and mesh data sources:
 
 * :guilabel:`Delete File "<name of file>"...`
 * :guilabel:`Export Layer` --> :guilabel:`To File...`
