@@ -255,8 +255,8 @@ when you use the identify feature tool.
 Right-clicking over selected rows in the color table shows a
 contextual menu to:
 
-* :guilabel:`Change Color...` of the selected symbol(s)
-* :guilabel:`Change Opacity...` of the selected symbol(s)
+* :guilabel:`Change Color...` for the selection
+* :guilabel:`Change Opacity...` for the selection
 
 You can use the buttons |fileOpen| :sup:`Load color map from file`
 or |fileSaveAs| :sup:`Export color map to file` to load an existing
