@@ -227,7 +227,7 @@ You can also create color maps for a bands of a multiband raster.
 
 
 Using a :guilabel:`Band` of the layer and a
-, three types of color
+:ref:`values range <minmaxvalues>`, three types of color
 :guilabel:`Interpolation` are available:
 
 * Discrete (a ``<=`` symbol appears in the header of the
