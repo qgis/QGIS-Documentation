@@ -219,8 +219,9 @@ Again, a :guilabel:`Contrast enhancement` method can be applied to the values:
 Singleband pseudocolor
 ......................
 
-This is a render option for single-band files, including a continuous palette.
-You can also create individual color maps for the single bands here.
+This is a render option for single-band files that include a
+continuous palette.
+You can also create color maps for a bands of a multiband raster.
 
 .. _figure_raster_pseudocolor:
 
@@ -332,9 +333,11 @@ Available options are:
 Calculations of the min and max values of the bands are made based on the:
 
 * :guilabel:`Statistics extent`: it can be :guilabel:`Whole raster`,
-  :guilabel:`Current canvas` or :guilabel:`Updated canvas`
-* and the :guilabel:`Accuracy`, which can be either :guilabel:`Estimate (faster)`
-  or :guilabel:`Actual (slower)`.
+  :guilabel:`Current canvas` or :guilabel:`Updated canvas`.
+  :guilabel:`Updated canvas` means that min/max values used for the
+  rendering will change with the canvas extent (dynamic stretching).
+* :guilabel:`Accuracy`, which can be either
+  :guilabel:`Estimate (faster)` or :guilabel:`Actual (slower)`.
 
 .. note:: For some settings, you may need to press the :guilabel:`Apply` button of
   the layer properties dialog in order to display the actual min and max values
