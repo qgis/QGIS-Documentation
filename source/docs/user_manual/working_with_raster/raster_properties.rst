@@ -214,7 +214,7 @@ to MinMax' and 'Clip to min max'.
 Singleband pseudocolor
 ......................
 
-This is a render option for single-band file that include a
+This is a render option for single-band files that include a
 continuous palette.
 You can also create color maps for a bands of a multiband raster.
 
@@ -227,7 +227,7 @@ You can also create color maps for a bands of a multiband raster.
 
 
 Using a :guilabel:`Band` of the layer and a
-:ref:`values range <minmaxvalues>`, three types of color
+, three types of color
 :guilabel:`Interpolation` are available:
 
 * Discrete (a ``<=`` symbol appears in the header of the
@@ -340,7 +340,9 @@ Calculations of the min and max values of the bands are made based
 on the:
 
 * :guilabel:`Statistics extent`: it can be :guilabel:`Whole raster`,
-  :guilabel:`Current canvas` or :guilabel:`Updated canvas`
+  :guilabel:`Current canvas` or :guilabel:`Updated canvas`.
+  :guilabel:`Updated canvas` means that min/max values used for the
+  rendering will change with the canvas extent (dynamic stretching).
 * :guilabel:`Accuracy`, which can be either
   :guilabel:`Estimate (faster)` or :guilabel:`Actual (slower)`.
 
