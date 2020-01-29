@@ -117,7 +117,7 @@ First, the :guilabel:`Favorites` (where you can place shortcuts to
 often used locations). Then comes the :guilabel:`Spatial Bookmarks`,
 followed by your :guilabel:`Project Home` (the default is the directory
 where your project file resides), your :guilabel:`Home` directory in the
-file system and he filesystem root directory (:guilabel:`/`).
+file system and the filesystem root directory (:guilabel:`/`).
 Then comes a number of container / database types and service protocols
 (that may or may not be relevant to you): :guilabel:`GeoPackage`,
 :guilabel:`SpatiaLite`, :guilabel:`PostGIS`, :guilabel:`MSSQL`,
@@ -126,11 +126,11 @@ Then comes a number of container / database types and service protocols
 :guilabel:`ArcGISFeatureServer` and :guilabel:`GeoNode`.
 
 The browser supports drag and drop within the browser, from the browser to
-the canvas and Layers panel, and vice versa.
+the canvas and :guilabel:`Layers` panel, and vice versa.
 
 Project file items inside the browser can be expanded, showing the full
 layer tree (including groups) contained within that project.
-Project items are treated the same way as any other items in the browser,
+Project items are treated the same way as any other item in the browser,
 so they can be dragged and dropped within the browser (for example to
 copy a layer item to a geopackage file) or added to the current project
 through drag and drop or double click.
