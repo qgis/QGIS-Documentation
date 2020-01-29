@@ -158,17 +158,6 @@ A :guilabel:`Contrast enhancement` method can also be applied to the values:
 Paletted/Unique values
 ......................
 
-<<<<<<< HEAD
-This is the standard render option for singleband files that already include a
-color table, where each pixel value is assigned to a certain color. In that case,
-the palette is rendered automatically. If you want to change colors assigned to
-certain values, just double-click on the color and the :guilabel:`Select color`
-dialog appears. Also, in QGIS it's possible to assign a label to the color values.
-The label appears in the legend of the raster layer then.
-
-This option can be used for rendering all raster bands using a palette, assigning
-a color to each unique raster value.
-=======
 This is the standard render option for singleband files that include
 a color table, where a certain color is assigned to each pixel value.
 In that case, the palette is rendered automatically.
@@ -188,7 +177,6 @@ contextual menu to:
 * :guilabel:`Change Color...` for the selection
 * :guilabel:`Change Opacity...` for the selection
 * :guilabel:`Change Label...` for the selection
->>>>>>> d6c09d8ab... Document contextual menu for changing symbol properties for paletted and singleband pseudocolor (#4834)
 
 .. _figure_raster_paletted_unique:
 
@@ -264,11 +252,6 @@ lets you insert a specific value. Double clicking on the color column opens the 
 Further, you can also add labels for each color, but this value won't be displayed
 when you use the identify feature tool.
 
-<<<<<<< HEAD
-You can use the buttons |fileOpen| :sup:`Load color map from file` or |fileSaveAs|
-:sup:`Export color map to file` to load an existing color table or to save the
-defined color table for other sessions.
-=======
 Right-clicking over selected rows in the color table shows a
 contextual menu to:
 
@@ -278,7 +261,6 @@ contextual menu to:
 You can use the buttons |fileOpen| :sup:`Load color map from file`
 or |fileSaveAs| :sup:`Export color map to file` to load an existing
 color table or to save the color table for later use.
->>>>>>> d6c09d8ab... Document contextual menu for changing symbol properties for paletted and singleband pseudocolor (#4834)
 
 The |checkbox| :guilabel:`Clip out of range values` allows QGIS to not render pixel
 greater than the :guilabel:`Max` value.
