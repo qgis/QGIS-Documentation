@@ -118,6 +118,11 @@ For file system directory entries, the context menu offers the following:
 * :guilabel:`New Directory...`
 * :guilabel:`Open Directory`
 
+:guilabel:`Favourites`, can also be removed and renamed:
+
+* :guilabel:`Rename favourite...`
+* :guilabel:`Remove favourite`
+
 For leaf entries that can act as layers in the project, the context
 menu will have a selection of entries.
 For example, for non-database, non-service-based vector, raster and
