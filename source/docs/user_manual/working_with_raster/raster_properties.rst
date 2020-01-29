@@ -169,13 +169,22 @@ Paletted/Unique values
 This is the standard render option for singleband files that include
 a color table, where a certain color is assigned to each pixel value.
 In that case, the palette is rendered automatically.
+
+It can be used for all kinds of raster bands, assigning a
+color to each unique raster value.
+
 If you want to change a color, just double-click on the color and
 the :guilabel:`Select color` dialog appears.
+
 It is also possible to assign a label to the each color value.
 The label will then appear in the legend of the raster layer.
 
-This option can be used for all kinds of raster bands, assigning a
-color to each unique raster value.
+Right-clicking over selected rows in the color table shows a
+contextual menu to:
+
+* Change Color. . . of the selected symbol(s)
+* Change Opacity. . . of the selected symbol(s)
+* Change Label. . . of the selected symbol(s)
 
 .. _figure_raster_paletted_unique:
 
@@ -262,6 +271,12 @@ Double clicking in the :guilabel:`Color` column opens the dialog
 that value.
 Further, you can also add labels for each color, but this value won't
 be displayed when you use the identify feature tool.
+
+Right-clicking over selected rows in the color table shows a
+contextual menu to:
+
+* Change Color. . . of the selected symbol(s)
+* Change Opacity. . . of the selected symbol(s)
 
 You can use the buttons |fileOpen| :sup:`Load color map from file`
 or |fileSaveAs| :sup:`Export color map to file` to load an existing
