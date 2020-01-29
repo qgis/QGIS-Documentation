@@ -33,6 +33,10 @@ They are geocoded by pixel resolution and the X/Y coordinate of a
 corner pixel of the raster layer. This allows QGIS to position the
 data correctly on the map canvas.
 
+The GeoPackage format is convenient for storing raster data when
+working with QGIS.
+The popular and powerful GeoTiff format is a good alternative.
+
 QGIS makes use of georeference information inside the raster layer
 (e.g., :index:`GeoTiff`) or an associated *world file* to properly
 display the data.
@@ -72,14 +76,14 @@ GeoPackage
 ----------
 The `GeoPackage <https://www.geopackage.org/>`_ (GPKG) format is
 platform-independent, and is implemented as a SQLite database
-container.
+container, and can be used to store both vector and raster data.
 The format was defined by the Open Geospatial Consortium (OGC),
 and was published in 2014.
 
 GeoPackage can be used to store the following in a SQLite database:
 
-* vector features
-* tile matrix sets of imagery and raster maps
+* **vector** features
+* **tile matrix sets of imagery** and **raster** maps
 * attributes (non-spatial data)
 * extensions
 
