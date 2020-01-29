@@ -182,9 +182,9 @@ The label will then appear in the legend of the raster layer.
 Right-clicking over selected rows in the color table shows a
 contextual menu to:
 
-* Change Color. . . of the selected symbol(s)
-* Change Opacity. . . of the selected symbol(s)
-* Change Label. . . of the selected symbol(s)
+* :guilabel:`Change Color...` of the selected symbol(s)
+* :guilabel:`Change Opacity...` of the selected symbol(s)
+* :guilabel:`Change Label...` of the selected symbol(s)
 
 .. _figure_raster_paletted_unique:
 
@@ -275,8 +275,8 @@ be displayed when you use the identify feature tool.
 Right-clicking over selected rows in the color table shows a
 contextual menu to:
 
-* Change Color. . . of the selected symbol(s)
-* Change Opacity. . . of the selected symbol(s)
+* :guilabel:`Change Color...` of the selected symbol(s)
+* :guilabel:`Change Opacity...` of the selected symbol(s)
 
 You can use the buttons |fileOpen| :sup:`Load color map from file`
 or |fileSaveAs| :sup:`Export color map to file` to load an existing
