@@ -409,8 +409,9 @@ Input types
 ...........
 
 .. list-table::
-   :widths: 55 24 21
+   :widths: 54 31 15
    :header-rows: 1
+   :stub-columns: 0
 
    * - Class
      - Alg constant
@@ -516,8 +517,9 @@ Output types
 ............
 
 .. list-table::
-   :widths: 30 25 45
+   :widths: 47 24 29
    :header-rows: 1
+   :stub-columns: 0
 
    * - Class
      - Alg constant
