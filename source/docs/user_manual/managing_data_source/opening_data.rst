@@ -112,6 +112,36 @@ In both cases, the :guilabel:`Browser` helps you navigate in your file system
 and manage geodata, regardless the type of layer (raster, vector, table),
 or the datasource format (plain or compressed files, databases, web services).
 
+The entries in the :guilabel:`Browser` panel are organised
+hierarchically, and there are several top level entries.
+First comes :guilabel:`Favorites` (where you can place shortcuts to
+often used locations).
+Then comes :guilabel:`Spatial Bookmarks`,
+followed by your :guilabel:`Project Home` (the default is the directory
+where your project file resides),
+your :guilabel:`Home` directory in the file system and the filesystem
+root directory (:guilabel:`/`).
+Then comes a number of container / database types and service protocols
+(that may or may not be relevant to you):
+:guilabel:`GeoPackage`, :guilabel:`SpatiaLite`,
+:guilabel:`PostGIS`, :guilabel:`MSSQL`,
+:guilabel:`DB2`, :guilabel:`WMS/WMTS`,
+:guilabel:`XYZ Tiles`, :guilabel:`WCS`,
+:guilabel:`WFS`, :guilabel:`OWS`,
+:guilabel:`ArcGISMapServer`, :guilabel:`ArcGISFeatureServer` and
+:guilabel:`GeoNode`.
+
+The browser supports drag and drop within the browser, from the browser to
+the canvas and :guilabel:`Layers` panel, and from the :guilabel:`Layers` panel
+to layer containers (e.g. GeoPackage) in the browser.
+
+Project file items inside the browser can be expanded, showing the full
+layer tree (including groups) contained within that project.
+Project items are treated the same way as any other item in the browser,
+so they can be dragged and dropped within the browser (for example to
+copy a layer item to a geopackage file) or added to the current project
+through drag and drop or double click.
+
 The context menu for an element in the :guilabel:`Browser` panel is opened
 by right-clicking on it.
 
@@ -136,7 +166,7 @@ For file system directory entries, the context menu offers the following:
 * :guilabel:`Remove favourite`
 
 For leaf entries that can act as layers in the project, the context
-menu will have a selection of entries.
+menu will have supporting entries.
 For example, for non-database, non-service-based vector, raster and
 mesh data sources:
 
