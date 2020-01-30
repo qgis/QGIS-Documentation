@@ -133,7 +133,7 @@ Then comes a number of container / database types and service protocols
 
 The browser supports drag and drop within the browser, from the browser to
 the canvas and :guilabel:`Layers` panel, and from the :guilabel:`Layers` panel
-to the browser.
+to layer containers (e.g. GeoPackage) in the browser.
 
 Project file items inside the browser can be expanded, showing the full
 layer tree (including groups) contained within that project.
