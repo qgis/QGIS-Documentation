@@ -112,21 +112,28 @@ In both cases, the :guilabel:`Browser` helps you navigate in your file system
 and manage geodata, regardless the type of layer (raster, vector, table),
 or the datasource format (plain or compressed files, databases, web services).
 
-In the browser panel you will find the following top level entries.
-First, the :guilabel:`Favorites` (where you can place shortcuts to
-often used locations). Then comes the :guilabel:`Spatial Bookmarks`,
+The entries in the :guilabel:`Browser` panel are organised
+hierarchically, and there are several top level entries.
+First comes :guilabel:`Favorites` (where you can place shortcuts to
+often used locations).
+Then comes :guilabel:`Spatial Bookmarks`,
 followed by your :guilabel:`Project Home` (the default is the directory
-where your project file resides), your :guilabel:`Home` directory in the
-file system and the filesystem root directory (:guilabel:`/`).
+where your project file resides),
+your :guilabel:`Home` directory in the file system and the filesystem
+root directory (:guilabel:`/`).
 Then comes a number of container / database types and service protocols
-(that may or may not be relevant to you): :guilabel:`GeoPackage`,
-:guilabel:`SpatiaLite`, :guilabel:`PostGIS`, :guilabel:`MSSQL`,
-:guilabel:`DB2`, :guilabel:`WMS/WMTS`, :guilabel:`XYZ Tiles`,
-:guilabel:`WCS`, :guilabel:`WFS`, :guilabel:`OWS`, :guilabel:`ArcGISMapServer`,
-:guilabel:`ArcGISFeatureServer` and :guilabel:`GeoNode`.
+(that may or may not be relevant to you):
+:guilabel:`GeoPackage`, :guilabel:`SpatiaLite`,
+:guilabel:`PostGIS`, :guilabel:`MSSQL`,
+:guilabel:`DB2`, :guilabel:`WMS/WMTS`,
+:guilabel:`XYZ Tiles`, :guilabel:`WCS`,
+:guilabel:`WFS`, :guilabel:`OWS`,
+:guilabel:`ArcGISMapServer`, :guilabel:`ArcGISFeatureServer` and
+:guilabel:`GeoNode`.
 
 The browser supports drag and drop within the browser, from the browser to
-the canvas and :guilabel:`Layers` panel, and vice versa.
+the canvas and :guilabel:`Layers` panel, and from the :guilabel:`Layers` panel
+to the browser.
 
 Project file items inside the browser can be expanded, showing the full
 layer tree (including groups) contained within that project.
