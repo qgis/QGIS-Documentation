@@ -405,7 +405,10 @@ Processing with their corresponding alg decorator constants
 (:file:`algfactory.py` contains the complete list of alg constants).
 Sorted on class name.
 
-.. list-table:: Input types
+Input types
+...........
+
+.. list-table::
    :widths: 55 24 21
    :header-rows: 1
 
@@ -509,8 +512,11 @@ Sorted on class name.
 
 |
 
-.. list-table:: Output types
-   :widths: 25 50 25
+Output types
+............
+
+.. list-table::
+   :widths: 30 25 45
    :header-rows: 1
 
    * - Class
