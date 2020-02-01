@@ -308,8 +308,6 @@ The line width and color can be changed in this dialog, and both the grid render
    :width: 1.5em
 .. |contour_inactive| image:: /static/common/contours_inactive.png
    :width: 2em
-.. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
-   :width: 1.5em
 .. |general| image:: /static/common/general.png
    :width: 1.5em
 .. |groupsexploring| image:: /static/common/mesh_groups_explore.png
