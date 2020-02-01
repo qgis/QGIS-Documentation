@@ -32,8 +32,10 @@ We can differentiate between several types of settings:
 
 * **global settings** --- they are bound to the user at a particular machine.
   QGIS itself stores a lot of global settings, for example, main window size or
-  default snapping tolerance. Settings are handled using the :class:`QgsSettings <qgis.core.QgsSettings>` class.
-  The :meth:`setValue() <qgis.core.QgsSettings.setValue>` and :meth:`value() <qgis.core.QgsSettings.value>` methods from this class provide
+  default snapping tolerance. Settings are handled using the
+  :class:`QgsSettings <qgis.core.QgsSettings>` class.
+  The :meth:`setValue() <qgis.core.QgsSettings.setValue>` and
+  :meth:`value() <qgis.core.QgsSettings.value>` methods from this class provide
 
   Here you can see an example of how these methods are used.
 
@@ -56,9 +58,9 @@ We can differentiate between several types of settings:
       print(myreal)
       print(nonexistent)
 
-  The second parameter of the :meth:`value() <qgis.core.QgsSettings.value>` method is optional and specifies
-  the default value that is returned if there is no previous value set for the passed setting
-  name.
+  The second parameter of the :meth:`value() <qgis.core.QgsSettings.value>`
+  method is optional and specifies the default value that is returned
+  if there is no previous value set for the passed setting name.
 
 .. index:: Settings; Project
 
@@ -70,7 +72,7 @@ We can differentiate between several types of settings:
 
   An example of usage follows.
 
- .. code-block:: python
+  .. code-block:: python
 
     proj = QgsProject.instance()
 
@@ -81,14 +83,25 @@ We can differentiate between several types of settings:
     proj.writeEntry("myplugin", "mybool", True)
 
     # read values (returns a tuple with the value, and a status boolean
-    # which communicates whether the value retrieved could be converted to its type,
-    # in these cases a string, an integer, a double and a boolean respectively)
-    mytext, type_conversion_ok = proj.readEntry("myplugin", "mytext", "default text")
-    myint, type_conversion_ok = proj.readNumEntry("myplugin", "myint", 123)
-    mydouble, type_conversion_ok = proj.readDoubleEntry("myplugin", "mydouble", 123)
-    mybool, type_conversion_ok = proj.readBoolEntry("myplugin", "mybool", 123)
+    # which communicates whether the value retrieved could be converted to
+    # its type, in these cases a string, an integer, a double and a boolean
+    # respectively)
 
-  As you can see, the :meth:`writeEntry() <qgis.core.QgsProject.writeEntry>` method is used for all data types, but
+    mytext, type_conversion_ok = proj.readEntry("myplugin",
+                                                "mytext",
+                                                "default text")
+    myint, type_conversion_ok = proj.readNumEntry("myplugin",
+                                                  "myint",
+                                                  123)
+    mydouble, type_conversion_ok = proj.readDoubleEntry("myplugin",
+                                                        "mydouble",
+                                                        123)
+    mybool, type_conversion_ok = proj.readBoolEntry("myplugin",
+                                                    "mybool",
+                                                    123)
+
+  As you can see, the :meth:`writeEntry() <qgis.core.QgsProject.writeEntry>`
+  method is used for all data types, but
   several methods exist for reading the setting value back, and the
   corresponding one has to be selected for each data type.
 
@@ -100,9 +113,11 @@ We can differentiate between several types of settings:
   of one shapefile, they will not share the settings. The settings are stored
   inside the project file, so if the user opens the project again, the layer-related
   settings will be there again. The value for a given setting is retrieved using
-  the :meth:`customProperty() <qgis.core.QgsMapLayer.customProperty>` method, and can be set using the :meth:`setCustomProperty() <qgis.core.QgsMapLayer.setCustomProperty>` one.
+  the :meth:`customProperty() <qgis.core.QgsMapLayer.customProperty>` method,
+  and can be set using the
+  :meth:`setCustomProperty() <qgis.core.QgsMapLayer.setCustomProperty>` one.
 
- .. code-block:: python
+  .. code-block:: python
 
    vlayer = QgsVectorLayer()
    # save a value
