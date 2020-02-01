@@ -89,7 +89,8 @@ layers for canvas
 
 .. code-block:: python
 
- path_to_ports_layer = os.path.join(QgsProject.instance().homePath(), "data", "ports", "ports.shp")
+ path_to_ports_layer = os.path.join(QgsProject.instance().homePath(),
+                                    "data", "ports", "ports.shp")
 
  vlayer = QgsVectorLayer(path_to_ports_layer, "Ports layer", "ogr")
  if not vlayer.isValid():
@@ -270,8 +271,9 @@ Writing Custom Map Tools
 You can write your custom tools, to implement a custom behavior to actions
 performed by users on the canvas.
 
-Map tools should inherit from the :class:`QgsMapTool <qgis.gui.QgsMapTool>`, class or any derived
-class, and selected as active tools in the canvas using the :meth:`setMapTool() <qgis.gui.QgsMapCanvas.setMapTool>`
+Map tools should inherit from the :class:`QgsMapTool <qgis.gui.QgsMapTool>`,
+class or any derived class, and selected as active tools in the canvas using
+the :meth:`setMapTool() <qgis.gui.QgsMapCanvas.setMapTool>`
 method as we have already seen.
 
 Here is an example of a map tool that allows to define a rectangular extent by
@@ -283,64 +285,67 @@ described before to show the selected rectangle as it is being defined.
 
   class RectangleMapTool(QgsMapToolEmitPoint):
     def __init__(self, canvas):
-        self.canvas = canvas
-        QgsMapToolEmitPoint.__init__(self, self.canvas)
-        self.rubberBand = QgsRubberBand(self.canvas, True)
-        self.rubberBand.setColor(Qt.red)
-        self.rubberBand.setWidth(1)
-        self.reset()
+      self.canvas = canvas
+      QgsMapToolEmitPoint.__init__(self, self.canvas)
+      self.rubberBand = QgsRubberBand(self.canvas, True)
+      self.rubberBand.setColor(Qt.red)
+      self.rubberBand.setWidth(1)
+      self.reset()
 
     def reset(self):
-        self.startPoint = self.endPoint = None
-        self.isEmittingPoint = False
-        self.rubberBand.reset(True)
+      self.startPoint = self.endPoint = None
+      self.isEmittingPoint = False
+      self.rubberBand.reset(True)
 
     def canvasPressEvent(self, e):
-        self.startPoint = self.toMapCoordinates(e.pos())
-        self.endPoint = self.startPoint
-        self.isEmittingPoint = True
-        self.showRect(self.startPoint, self.endPoint)
+      self.startPoint = self.toMapCoordinates(e.pos())
+      self.endPoint = self.startPoint
+      self.isEmittingPoint = True
+      self.showRect(self.startPoint, self.endPoint)
 
     def canvasReleaseEvent(self, e):
-        self.isEmittingPoint = False
-        r = self.rectangle()
-        if r is not None:
-          print("Rectangle:", r.xMinimum(), r.yMinimum(), r.xMaximum(), r.yMaximum())
+      self.isEmittingPoint = False
+      r = self.rectangle()
+      if r is not None:
+        print("Rectangle:", r.xMinimum(),
+              r.yMinimum(), r.xMaximum(), r.yMaximum()
+             )
 
     def canvasMoveEvent(self, e):
-        if not self.isEmittingPoint:
-          return
+      if not self.isEmittingPoint:
+        return
 
-        self.endPoint = self.toMapCoordinates(e.pos())
-        self.showRect(self.startPoint, self.endPoint)
+      self.endPoint = self.toMapCoordinates(e.pos())
+      self.showRect(self.startPoint, self.endPoint)
 
     def showRect(self, startPoint, endPoint):
-        self.rubberBand.reset(QGis.Polygon)
-        if startPoint.x() == endPoint.x() or startPoint.y() == endPoint.y():
-          return
+      self.rubberBand.reset(QGis.Polygon)
+      if startPoint.x() == endPoint.x() or startPoint.y() == endPoint.y():
+        return
 
-        point1 = QgsPoint(startPoint.x(), startPoint.y())
-        point2 = QgsPoint(startPoint.x(), endPoint.y())
-        point3 = QgsPoint(endPoint.x(), endPoint.y())
-        point4 = QgsPoint(endPoint.x(), startPoint.y())
+      point1 = QgsPoint(startPoint.x(), startPoint.y())
+      point2 = QgsPoint(startPoint.x(), endPoint.y())
+      point3 = QgsPoint(endPoint.x(), endPoint.y())
+      point4 = QgsPoint(endPoint.x(), startPoint.y())
 
-        self.rubberBand.addPoint(point1, False)
-        self.rubberBand.addPoint(point2, False)
-        self.rubberBand.addPoint(point3, False)
-        self.rubberBand.addPoint(point4, True)    # true to update canvas
-        self.rubberBand.show()
+      self.rubberBand.addPoint(point1, False)
+      self.rubberBand.addPoint(point2, False)
+      self.rubberBand.addPoint(point3, False)
+      self.rubberBand.addPoint(point4, True)    # true to update canvas
+      self.rubberBand.show()
 
     def rectangle(self):
-        if self.startPoint is None or self.endPoint is None:
-          return None
-        elif self.startPoint.x() == self.endPoint.x() or self.startPoint.y() == self.endPoint.y():
-          return None
+      if self.startPoint is None or self.endPoint is None:
+        return None
+      elif (self.startPoint.x() == self.endPoint.x() or \
+            self.startPoint.y() == self.endPoint.y()):
+        return None
 
         return QgsRectangle(self.startPoint, self.endPoint)
 
     def deactivate(self):
-        QgsMapTool.deactivate(self)
-        self.deactivated.emit()
+      QgsMapTool.deactivate(self)
+      self.deactivated.emit()
 
 .. index:: Map canvas; Custom canvas items
 
