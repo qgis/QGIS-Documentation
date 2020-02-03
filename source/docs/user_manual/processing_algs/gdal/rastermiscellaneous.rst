@@ -90,7 +90,7 @@ Parameters
 
        Optional
      - ``EXTRA``
-     - [string]   
+     - [string]
 
        Default: None
      - Add extra GDAL command line options
@@ -222,7 +222,7 @@ Parameters
      - Add extra GDAL command line options
    * - **Virtual**
      - ``OUTPUT``
-     - [raster]    
+     - [raster]
 
        Default: ``[Save to temporary file]``
      - Specification of the output raster layer.
@@ -309,7 +309,7 @@ Parameters
      - [string]
 
        Default: ''
-     - 
+     -
    * - **Web viewer to generate**
      - ``VIEWER``
      - [enumerate]
@@ -330,13 +330,13 @@ Parameters
      - [string]
 
        Default: ''
-     - 
+     -
    * - **Copyright of the map**
      - ``COPYRIGHT``
      - [string]
 
        Default: ''
-     - 
+     -
    * - **Resampling method**
      - ``RESAMPLING``
      - [enumeration]
@@ -361,7 +361,7 @@ Parameters
      - [crs]
 
        Default: None
-     - 
+     -
    * - **Transparency value to assign to the input data**
 
        Optional
@@ -369,7 +369,7 @@ Parameters
      - [number]
 
        Default: 0.0
-     - 
+     -
    * - **URL address where the generated tiles are going to be published**
 
        Optional
@@ -377,7 +377,7 @@ Parameters
      - [string]
 
        Default: ''
-     - 
+     -
    * - **Google Maps API key (http://code.google.com/apis/maps/signup.html)**
 
        Optional
@@ -399,19 +399,19 @@ Parameters
      - [boolean]
 
        Default: False
-     - 
+     -
    * - **Generate KML for Google Earth**
      - ``KML``
      - [boolean]
 
        Default: False
-     - 
+     -
    * - **Avoid automatic generation of KML files for EPSG:4326**
      - ``NO_KML``
      - [boolean]
 
        Default: False
-     - 
+     -
    * - **Output directory**
      - ``OUTPUT``
      - [folder]
@@ -567,7 +567,7 @@ Outputs
 
 .. _gdalpansharp:
 
-Pansharpening |38|
+Pansharpening
 ------------------
 Performs a pan-sharpening operation.
 It can create a "classic" output dataset (such as GeoTIFF),
@@ -773,7 +773,7 @@ Parameters
        Default: ''
      - The calculation formula.
        Examples:
-       
+
        * ``A*(A>0)`` --- outputs the value of the raster A if
          the value of A is greater than 0.
          If not, outputs 0.
@@ -797,7 +797,7 @@ Parameters
    * - **Output raster type**
      - ``RTYPE``
      - [enumeration]
-       
+
        Default: 5
      - Defines the format of the output raster file.
 
@@ -827,7 +827,7 @@ Parameters
 
        Optional
      - ``EXTRA``
-     - [string]   
+     - [string]
 
        Default: ''
      - Add extra GDAL command line options
@@ -897,7 +897,7 @@ Parameters
    * - **Read and display image statistics (force computation if necessary)**
      - ``STATS``
      - [boolean]
-       
+
        Default: False
      - Reads and displays image statistics. Forces computation if no
        statistics are stored in an image.
@@ -998,7 +998,7 @@ Parameters
      - [number]
 
        Default: 0
-     - 
+     -
    * - **Number of pyramid levels to build**
      - ``LEVELS``
      - [number]
@@ -1010,7 +1010,7 @@ Parameters
      - [crs]
 
        Default: None
-     - 
+     -
    * - **Resampling method**
      - ``RESAMPLING``
      - [enumeration]
@@ -1057,7 +1057,7 @@ Parameters
    * - **Output data type**
      - ``DATA_TYPE``
      - [enumeration]
-       
+
        Default: 5
      - Defines the format of the output raster file.
 
@@ -1080,13 +1080,13 @@ Parameters
      - [boolean]
 
        Default: False
-     - 
+     -
    * - **Use separate directory for each tile row**
      - ``DIR_FOR_ROW``
      - [boolean]
 
        Default: False
-     - 
+     -
    * - **Output directory**
      - ``OUTPUT``
      - [folder]
@@ -1104,7 +1104,7 @@ Parameters
      - [file]
 
        Default: ``[Skip output]``
-     - 
+     -
        One of:
 
        * Skip Output
@@ -1244,11 +1244,3 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - The polygon vector layer with the tile index.
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |38| replace:: ``NEW in 3.8``

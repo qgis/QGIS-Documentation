@@ -399,7 +399,7 @@ Parameters
        * Save to PostGIS Table...
 
        The file encoding can also be changed here.
-       
+
 Outputs
 .......
 
@@ -617,7 +617,7 @@ Parameters
        * Save to PostGIS Table...
 
        The file encoding can also be changed here.
-       
+
 Outputs
 .......
 
@@ -716,7 +716,14 @@ Parameters
 
        Default: ``[Skip output]``
      - Specify the directory that will contain the description
-       files of points and paths.
+       files of points and paths. One of:
+
+       * Skip Output
+       * Save to a Temporary Directory
+       * Save to Directory...
+
+       The file encoding can also be changed here.
+
 
 Outputs
 .......
@@ -998,7 +1005,7 @@ Parameters
 
        Default: 0
      - Sampling strategy to use. One of:
-       
+
        * 0 --- Points count: number of points for each feature
        * 1 --- Points density: density of points for each feature
 

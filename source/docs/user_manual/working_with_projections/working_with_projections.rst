@@ -268,13 +268,13 @@ The :guilabel:`Custom Coordinate Reference System Definition` dialog requires
 only two parameters to define a user CRS:
 
 #. A descriptive name
-#. The cartographic parameters in PROJ format
+#. The cartographic parameters in PROJ or WKT format
 
-To create a new CRS, click the |signPlus| :sup:`Add new CRS` button and
-enter a descriptive name and the CRS parameters.
+To create a new CRS, click the |signPlus| :sup:`Add new CRS` button,
+enter a descriptive name, select the format, and the CRS parameters.
 
-Note that the :guilabel:`Parameters` must begin with a ``+proj=`` block,
-to represent the new coordinate reference system.
+Click **[Validade]** to test whether the CRS definition is an acceptable
+projection definition.
 
 You can test your CRS parameters to see if they give sane results. To do this,
 enter known WGS 84 latitude and longitude values in :guilabel:`North` and
@@ -294,7 +294,7 @@ To integrate an NTv2 transformation file in QGIS you need one more step:
 
    .. _figure_nadgrids:
 
-   .. figure:: img/nadgrids_example.PNG
+   .. figure:: img/nadgrids_example.png
       :align: center
 
       Setting an NTv2 transformation
@@ -336,18 +336,19 @@ transformations` group:
   the project. If the :guilabel:`Make default` checkbox is ticked when
   selecting a transformation from this dialog, then the choice is remembered
   and automatically applied to any newly created QGIS projects.
-* or predefining a list of the appropriate default transformations to use
-  when loading layers to projects or reprojecting a layer.
+* or defining a list of appropriate datum transformations to use as defaults
+  when loading a layer to a project or reprojecting a layer.
 
   Use the |signPlus| button to open the :guilabel:`Select Datum Transformations`
   dialog. Then:
 
-  #. Indicate the :guilabel:`Source CRS` of the layer, using the drop-down menu
+  #. Choose the :guilabel:`Source CRS` of the layer, using the drop-down menu
      or the |setProjection| :sup:`Select CRS` widget.
-  #. Likewise, provide the :guilabel:`Destination CRS`.
-  #. A list of available transformations from source to
-     destination will be shown in the table. Clicking a row shows details on the settings
-     applied and the corresponding accuracy of the transformation.
+  #. Provide the :guilabel:`Destination CRS` in the same way.
+  #. A list of available transformations from source to destination will be
+     shown in the table.
+     Clicking a row shows details on the settings applied and the corresponding
+     accuracy of the transformation.
 
      In some cases a transformation may not be available for use on your system.
      In this case, the transformation will still be shown in this list but
@@ -355,14 +356,16 @@ transformations` group:
 
   #. Find your preferred transformation, select it and click :guilabel:`OK`.
 
-     A new row is added to the table under :menuselection:`CRS --> Default datum
-     transformations` with information about 'Source CRS' and 'Destination CRS'
-     as well as the 'Operation' which will be used to transform between the
-     CRSs.
+     A row is added to the table under :guilabel:`Default Datum Transformations`
+     with information about :guilabel:`Source CRS` and :guilabel:`Destination CRS`
+     as well as the datum transformations (:guilabel:`Source Datum Transformation`
+     and :guilabel:`Destination Datum Transformation`) to be used to transform
+     between the CRSs.
 
-  From now, QGIS automatically uses the selected datum transformation for
-  further transformation between these two CRSs until you |signMinus| remove
-  it from the list or |toggleEditing| replace it with another one.
+  From now, QGIS automatically uses the selected datum transformations for
+  further transformation between these two CRSs until you remove
+  it (|signMinus|) from the list or change the entry (|toggleEditing|) in
+  the list.
 
 .. _figure_projection_datum:
 

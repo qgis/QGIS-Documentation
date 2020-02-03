@@ -67,91 +67,91 @@ Outputs
    * - **Count**
      - ``COUNT``
      - [number]
-     - 
+     -
    * - **Number of unique values**
      - ``UNIQUE``
      - [number]
-     - 
+     -
    * - **Number of empty (null) values**
      - ``EMPTY``
      - [number]
-     - 
+     -
    * - **Number of non-empty values**
      - ``FILLED``
      - [number]
-     - 
+     -
    * - **Minimum value**
      - ``MIN``
      - [same as input]
-     - 
+     -
    * - **Maximum value**
      - ``MAX``
      - [same as input]
-     - 
+     -
    * - **Minimum length**
      - ``MIN_LENGTH``
      - [number]
-     - 
+     -
    * - **Maximum length**
      - ``MAX_LENGTH``
      - [number]
-     - 
+     -
    * - **Mean length**
      - ``MEAN_LENGTH``
      - [number]
-     - 
+     -
    * - **Coefficient of Variation**
      - ``CV``
      - [number]
-     - 
+     -
    * - **Sum**
      - ``SUM``
      - [number]
-     - 
+     -
    * - **Mean value**
      - ``MEAN``
      - [number]
-     - 
+     -
    * - **Standard deviation**
      - ``STD_DEV``
      - [number]
-     - 
+     -
    * - **Range**
      - ``RANGE``
      - [number]
-     - 
+     -
    * - **Median**
      - ``MEDIAN``
      - [number]
-     - 
+     -
    * - **Minority (rarest occurring value)**
      - ``MINORITY``
      - [same as input]
-     - 
+     -
    * - **Majority (most frequently occurring value)**
      - ``MAJORITY``
      - [same as input]
-     - 
+     -
    * - **First quartile**
      - ``FIRSTQUARTILE``
      - [number]
-     - 
+     -
    * - **Third quartile**
      - ``THIRDQUARTILE``
      - [number]
-     - 
+     -
    * - **Interquartile Range (IQR)**
      - ``IQR``
      - [number]
-     - 
+     -
 
 
 .. _qgisclimbalongline:
 
-Climb along line |310|
+Climb along line
 ----------------------
 
-This algorithm calculates the total climb and descent along line geometries.
+Calculates the total climb and descent along line geometries.
 The input layer must have Z values present. If Z values are not available,
 the  :ref:`qgissetzfromraster` algorithm may be used to add Z values
 from a DEM layer.
@@ -270,7 +270,7 @@ Parameters
      - [vector: point]
      - Point layer with features to count
    * - **Weight field**
-   
+
        Optional
      - ``WEIGHT``
      - [tablefield: any]
@@ -479,7 +479,7 @@ Parameters
    * - **Distance matrix**
      - ``OUTPUT``
      - [vector: point]
-     - 
+     -
 
 Outputs
 .......
@@ -753,8 +753,6 @@ Parameters
      - [vector: line]
      - The resulting line layer
 
-
-
 Outputs
 .......
 
@@ -934,7 +932,7 @@ each category.
 
 Parameters
 ..........
- 
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -972,14 +970,14 @@ Outputs
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Mean coordinates**
-      - ``OUTPUT``
-      - [vector: point]
-      - Resulting point(s) layer
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Mean coordinates**
+     - ``OUTPUT``
+     - [vector: point]
+     - Resulting point(s) layer
 
 .. _qgisnearestneighbouranalysis:
 
@@ -997,9 +995,11 @@ Output is generated as an HTML file with the computed statistical values:
 
 ``Default menu``: :menuselection:`Vector --> Analysis Tools`
 
+.. seealso:: :ref:`qgisjoinattributesbynearest`
+
 Parameters
 ..........
- 
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -1059,11 +1059,10 @@ Outputs
 
 .. _qgisoverlapanalysis:
 
-Overlap analysis |38|
+Overlap analysis
 ---------------------
-This algorithm calculates the area and percentage cover by
-which features from an input layer are overlapped by features
-from a selection of overlay layers.
+Calculates the area and percentage cover by which features from an input layer
+are overlapped by features from a selection of overlay layers.
 
 New attributes are added to the output layer reporting the
 total area of overlap and percentage of the input feature
@@ -1092,8 +1091,16 @@ Parameters
    * - **Output layer**
      - ``OUTPUT``
      - [same as input]
-     - Choice between ``Create Temporary Layer``, ``Save to File``,
-       ``Save to Geopackage`` and ``Save to PostGIS Table...``
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
@@ -1276,13 +1283,11 @@ The resulting layer has the same features as the input polygon layer, but with t
 additional attributes containing the length and count of the lines across each
 polygon.
 
-The names of these two fields can be configured in the algorithm parameters.
-
 ``Default menu``: :menuselection:`Vector --> Analysis Tools`
 
 Parameters
 ..........
- 
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -1342,7 +1347,5 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |310| replace:: ``NEW in 3.10``
-.. |38| replace:: ``NEW in 3.8``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em

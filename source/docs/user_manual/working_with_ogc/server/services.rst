@@ -122,6 +122,8 @@ extra parameters:
      be used as layer name.
    * CODEC: specify a codec to be used for encoding. Default is ``ISO-8859-1``
      check the QGIS desktop DXF export dialog for valid values.
+   * NO_MTEXT: Use TEXT instead of MTEXT for labels.
+   * FORCE_2D: Force 2D output. This is required for polyline width.
    "
    "TILED", "No", "Working in *tiled mode*"
 
@@ -527,8 +529,6 @@ and **Romania** they're highlighted in yellow.
 
 TILED
 ^^^^^
-
-(|38|)
 
 Set the ``TILED`` parameter to ``TRUE`` to tell QGIS Server to work in
 *tiled* mode, and to apply the *Tile buffer* configured in the QGIS
@@ -2166,11 +2166,3 @@ Similarly, external layers can be used in GetPrint requests:
    &basemap:crs=EPSG:2056
    &basemap:layers=orthofoto
    &basemap:styles=default
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |38| replace:: ``NEW in 3.8``

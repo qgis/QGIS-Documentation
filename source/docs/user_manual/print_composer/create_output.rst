@@ -225,7 +225,7 @@ To export a layout as PDF:
      the rendering quality is decreased, AND there are issues with rendering when
      certain text settings like buffers are in place. That’s why exporting as
      paths is recommended.
-   * |unchecked| :guilabel:`Create Geospatial PDF (GeoPDF)` |310|:
+   * |unchecked| :guilabel:`Create Geospatial PDF (GeoPDF)`:
      Generate a georeferenced PDF file (requires GDAL version 3 or later).
    * |unchecked| :guilabel:`Disable tiled raster layer exports`: When exporting
      files, QGIS uses tiled based rendering that saves memory.
@@ -571,7 +571,6 @@ the related child features following the parent's identifier.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |310| replace:: ``NEW in 3.10``
 .. |atlas| image:: /static/common/mIconAtlas.png
    :width: 1.5em
 .. |atlasFirst| image:: /static/common/mActionAtlasFirst.png

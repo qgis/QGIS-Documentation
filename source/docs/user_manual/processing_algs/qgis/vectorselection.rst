@@ -15,7 +15,7 @@ Extract by attribute
 Creates two vector layers from an input layer: one will contain only matching
 features while the second will contain all the non-matching features.
 
-The criteria for adding features to the resulting layer is defined based on the
+The criteria for adding features to the resulting layer is based on the
 values of an attribute from the input layer.
 
 .. seealso:: :ref:`qgisselectbyattribute`
@@ -126,7 +126,6 @@ Creates two vector layers from an input layer: one will contain only matching
 features while the second will contain all the non-matching features.
 
 The criteria for adding features to the resulting layer is based on a QGIS expression.
-
 For more information about expressions see the :ref:`vector_expressions`.
 
 .. seealso:: :ref:`qgisselectbyexpression`
@@ -210,8 +209,12 @@ Extract by location
 -------------------
 Creates a new vector layer that only contains matching features from an input layer.
 
-The criteria for adding features to the resulting layer is defined based on the
+The criteria for adding features to the resulting layer is based on the
 spatial relationship between each feature and the features in an additional layer.
+
+.. include:: qgis_algs_include.rst
+   :start-after: **geometric_predicates**
+   :end-before: **end_geometric_predicates**
 
 .. seealso:: :ref:`qgisselectbylocation`
 
@@ -602,10 +605,8 @@ Select by attribute
 -------------------
 Creates a selection in a vector layer.
 
-The criteria for selected features is defined based on the values of an attribute
+The criteria for selecting features is based on the values of an attribute
 from the input layer.
-
-No new outputs are created.
 
 .. seealso:: :ref:`qgisextractbyattribute`
 
@@ -689,11 +690,10 @@ Outputs
 
 Select by expression
 --------------------
-Creates a selection in a vector layer. The criteria for selecting
-features is based on a QGIS expression. For more information about expressions
-see the :ref:`vector_expressions`.
+Creates a selection in a vector layer.
 
-No new outputs are created.
+The criteria for selecting features is based on a QGIS expression.
+For more information about expressions see the :ref:`vector_expressions`.
 
 .. seealso:: :ref:`qgisextractbyexpression`
 
@@ -752,11 +752,14 @@ Outputs
 
 Select by location
 ------------------
-Creates a selection in a vector layer. The criteria for selecting
-features is based on the spatial relationship between each feature and
-the features in an additional layer.
+Creates a selection in a vector layer.
 
-No new outputs are created.
+The criteria for selecting features is based on the spatial
+relationship between each feature and the features in an additional layer.
+
+.. include:: qgis_algs_include.rst
+   :start-after: **geometric_predicates**
+   :end-before: **end_geometric_predicates**
 
 ``Default menu``: :menuselection:`Vector --> Research Tools`
 
@@ -831,5 +834,3 @@ Outputs
      - ``INPUT``
      - [same as input]
      - The input layer with features selected
-     
-.. |36| replace:: ``NEW in 3.6``

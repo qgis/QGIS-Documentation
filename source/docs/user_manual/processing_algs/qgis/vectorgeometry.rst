@@ -12,19 +12,21 @@ Vector geometry
 
 Add geometry attributes
 -----------------------
-Computes geometric properties of the features in a vector layer and includes
-them in the output layer.
+Computes geometric properties of the features in a vector layer and
+includes them in the output layer.
 
-It generates a new vector layer with the same content as the input one, but with
-additional attributes, containing geometric measurements based on a selected CRS.
+It generates a new vector layer with the same content as the input one,
+but with additional attributes, containing geometric measurements
+based on a selected CRS.
 
-The attributes added to the table depend on the geometry type and dimension of
-the input layer:
+The attributes added to the table depend on the geometry type and
+dimension of the input layer:
 
-* for **point** layers: X (``xcoord``), Y (``ycoord``), Z (``zcoord``) coordinates
-  and/or M value (``mvalue``)
-* for **line** layers: ``length`` and, for the LineString and CompoundCurve
-  geometry types, the feature ``sinuosity`` and straight distance (``straightdis``)
+* for **point** layers: X (``xcoord``), Y (``ycoord``), Z (``zcoord``)
+  coordinates and/or M value (``mvalue``)
+* for **line** layers: ``length`` and, for the LineString and
+  CompoundCurve geometry types, the feature ``sinuosity`` and straight
+  distance (``straightdis``)
 * for **polygon** layers: ``perimeter`` and ``area``
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
@@ -95,19 +97,22 @@ Outputs
 
 Aggregate
 ---------
-Takes a vector or table layer and creates a new layer by aggregating features based
-on a ``group by`` expression.
+Takes a vector or table layer and creates a new layer by aggregating
+features based on a ``group by`` expression.
 
-Features for which ``group by`` expression returns the same value are grouped together.
+Features for which ``group by`` expression returns the same value are
+grouped together.
 
-It is possible to group all source features together using constant value in ``group
-by`` parameter, example: NULL.
+It is possible to group all source features together using constant
+value in ``group by`` parameter, example: NULL.
 
-It is also possible to group features by multiple fields using Array function,
-example: Array("Field1", "Field2").
+It is also possible to group features by multiple fields using Array
+function, example: Array("Field1", "Field2").
 
-Geometries (if present) are combined into one multipart geometry for each group.
-Output attributes are computed depending on each given aggregate definition.
+Geometries (if present) are combined into one multipart geometry for
+each group.
+Output attributes are computed depending on each given aggregate
+definition.
 
 This algorithm allows to use the default
 :ref:`aggregates functions <aggregates_function>` of the QGIS Expression engine.
@@ -135,16 +140,17 @@ Parameters
      - [tablefield: any]
 
        Default: 'NULL'
-     - Choose the grouping field. If *NULL* all features will be grouped
+     - Choose the grouping field.
+       If *NULL* all features will be grouped.
    * - **Aggregates**
      - ``AGGREGATES``
      - [list]
      - List of output layer field definitions.
        Example of a field definition:
-       
+
        *{'aggregate': 'sum', 'delimiter': ',', 'input': ' $area',
        'length': 10, 'name': 'totarea', 'precision': 0, 'type': 6}*
-       
+
        By default, the list contains all the fields of the input layer.
        In the GUI, you can edit these fields and their definitions,
        and you can also:
@@ -162,15 +168,15 @@ Parameters
          Field or expression from the input layer.
 
        ``Aggregate function`` [enumeration] (``aggregate``)
-         :ref:`Function <aggregates_function>` to use on the input expression
-         to return the aggregated value.
+         :ref:`Function <aggregates_function>` to use on the input
+         expression to return the aggregated value.
 
-         Default: *concatenate* (for string data type), *sum* (for numeric
-         data type)
+         Default: *concatenate* (for string data type), *sum* (for
+         numeric data type)
 
        ``Delimiter`` [string] (``delimiter``)
-         Text string to separate aggregated values, for example in case of
-         concatenation.
+         Text string to separate aggregated values, for example in
+         case of concatenation.
 
          Default: *,*
 
@@ -180,7 +186,7 @@ Parameters
 
        ``Type`` [enumeration] (``type``)
          Data type of the output field. One of:
-         
+
          * 1 --- Boolean
          * 2 --- Integer
          * 4 --- Integer64
@@ -194,7 +200,7 @@ Parameters
 
        ``Precision`` [number] (``precision``)
          Precision of the output field.
-   
+
    * - **Load fields from layer**
      - GUI only
      - [vector: any]
@@ -237,20 +243,20 @@ Outputs
 
 Boundary
 ---------
-Returns the closure of the combinatorial boundary of the input geometries
-(i.e. the topological boundary of the geometry).
+Returns the closure of the combinatorial boundary of the input
+geometries (i.e. the topological boundary of the geometry).
 
 Only for polygon and line layers.
 
-For **polygon geometries** , the boundary consists of all the lines making
-up the rings of the polygon.
+For **polygon geometries** , the boundary consists of all the lines
+making up the rings of the polygon.
 
 .. figure:: img/boundary_polygon.png
    :align: center
 
    Boundaries (black dashed line) of the source polygon layer
 
-For **lines geometries**, the boundaries are the vertices between each features.
+For **lines geometries**, the boundaries are their end points.
 
 .. figure:: img/boundary_lines.png
    :align: center
@@ -319,7 +325,8 @@ Polygon and line geometries are supported.
 
    Black lines represent the bounding boxes of each polygon feature
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgisminimumboundinggeometry`
 
@@ -376,22 +383,24 @@ Outputs
 
 Buffer
 ------
-Computes a buffer area for all the features in an input layer, using a fixed distance.
+Computes a buffer area for all the features in an input layer, using
+a fixed distance.
 
-It is possible to define also a negative distance for polygon input layers: in this
-case the buffer will result in a smaller polygon.
+It is possible to use a negative distance for polygon input layers.
+In this case the buffer will result in a smaller polygon (setback).
 
 .. figure:: img/buffer.png
    :align: center
 
-   In yellow the buffer of point, line and polygon layer
+   Buffer (in yellow) of points, line and polygon
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
-.. seealso:: :ref:`qgisvariabledistancebuffer`, :ref:`qgismultiringconstantbuffer`,
- :ref:`qgisbufferbym`
+.. seealso:: :ref:`qgisvariabledistancebuffer`,
+   :ref:`qgismultiringconstantbuffer`, :ref:`qgisbufferbym`
 
 Parameters
 ..........
@@ -440,7 +449,7 @@ Parameters
 
        .. figure:: img/buffer_cap_style.png
           :align: center
-       
+
           Round, flat and square cap styles
    * - **Join style**
      - ``JOIN_STYLE``
@@ -471,10 +480,10 @@ Parameters
        Default: False
      - Dissolve the final buffer. If ``True`` (checked), overlapping
        buffers will be dissolved (combined) into a new feature.
-         
+
        .. figure:: img/buffer_dissolve.png
           :align: center
-     
+
           Standard and dissolved buffer
    * - **Buffered**
      - ``OUTPUT``
@@ -484,7 +493,6 @@ Parameters
      - Specify the output (buffer) layer.
        One of:
 
-       * Skip output
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
@@ -514,22 +522,24 @@ Outputs
 
 Centroids
 ---------
-Creates a new point layer, with points representing the centroids of the geometries
-of the input layer.
+Creates a new point layer, with points representing the centroids
+of the geometries of the input layer.
 
-The centroid can be a single point representing the barycenter (of all parts) of the
-feature, so it can be outside the feature borders.
-It can also be a point on each part of the feature.
+The centroid is a single point representing the barycenter (of all
+parts) of the feature, so it can be outside the feature borders.
+But can also be a point on each part of the feature.
 
-The attributes associated to each point in the output layer are the same ones
-associated to the original features.
+The attributes of the points in the output layer are the same
+as for the original features.
 
 .. figure:: img/centroids.png
    :align: center
 
-   The red stars represent the centroids of each feature of the input layer.
+   The red stars represent the centroids of the features of the
+   input layer.
 
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+|checkbox| Allows
+:ref:`features in-place modification <processing_inplace_edit>`
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
@@ -597,8 +607,9 @@ Check validity
 --------------
 Performs a validity check on the geometries of a vector layer.
 
-The geometries are classified in three groups (valid, invalid and error) and
-for each group, a vector layer with its features is generated:
+The geometries are classified in three groups (valid, invalid and
+error) and for each group, a vector layer with its features is
+generated:
 
 * The **Valid output** layer contains only the valid features (without
   topological errors).
@@ -607,22 +618,24 @@ for each group, a vector layer with its features is generated:
 * The **Error output** layer is a point layer that points to where the
   invalid features were found.
 
-The attribute tables of the generated layers will contain some additional
-information ("message" for the **error** layer, "FID" and "_errors" for the
-**invalid** layer and  only "FID" for the **valid** layer):
+The attribute tables of the generated layers will contain some
+additional information ("message" for the **error** layer, "FID" and
+"_errors" for the **invalid** layer and  only "FID" for the **valid**
+layer):
 
-
-The attribute table of each generated vector layer will contain some additional
-information (number of errors found and types of error):
+The attribute table of each generated vector layer will contain some
+additional information (number of errors found and types of error):
 
 .. figure:: img/check_validity.png
    :align: center
 
-   Left: the input layer. Right: the valid layer (green), the invalid layer (orange)
+   Left: the input layer. Right: the valid layer (green), the invalid
+   layer (orange)
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
-.. seealso:: :ref:`qgisfixgeometries` and the core plugin :ref:`geometry_checker`
+.. seealso:: :ref:`qgisfixgeometries` and the core plugin
+   :ref:`geometry_checker`
 
 Parameters
 ..........
@@ -747,10 +760,13 @@ Outputs
      - Vector layer containing a copy of the valid features of
        the source layer.
 
+.. index:: GEOS, QGIS
+.. _typesofgeomerrors:
+
 Types of error messages and their meanings
 ..........................................
 
-.. list-table:: If the GEOS method is used the following error messages can occur: 
+.. list-table:: If the GEOS method is used the following error messages can occur:
    :widths: 30 30 40
    :header-rows: 1
 
@@ -764,62 +780,63 @@ Types of error messages and their meanings
           :align: center
 
    * - Ring self-intersection
-     - This error happens when a geometry touches itself and generates a ring.
+     - This error happens when a geometry touches itself and generates
+       a ring.
      - .. figure:: img/geos_ring_inter.png
           :align: center
 
-   * - Self-intersection   
+   * - Self-intersection
      - This error happens when a geometry touches itself.
      - .. figure:: img/geos_self_inter.png
           :align: center
 
-   * - Topology validation error    
-     - 
-     - 
+   * - Topology validation error
+     -
+     -
 
    * - Hole lies outside shell
-     - 
+     -
      -
 
    * - Holes are nested
-     - 
+     -
      -
 
    * - Interior is disconnected
-     - 
+     -
      -
 
    * - Nested shells
-     - This error happens when a polygon geometry is on top of another polygon
-       geometry. 
+     - This error happens when a polygon geometry is on top of another
+       polygon geometry.
      - .. figure:: img/geos_nest_shell.png
           :align: center
 
    * - Duplicate rings
-     - This error happens when two rings (exterior or interior) of a polygon geometry
-       are identical
+     - This error happens when two rings (exterior or interior) of a
+       polygon geometry are identical
 
      - .. figure:: img/geos_dupl_rings.png
-          :align: center 
+          :align: center
 
    * - Too few points in geometry component
-     - 
+     -
      -
 
    * - Invalid coordinate
-     - For a point geometry, this error happens when the geometry does not
-       have a proper coordinate pair.
-       The coordinate pair does not contain a latitude value and a longitude
-       value in that order. 
+     - For a point geometry, this error happens when the geometry does
+       not have a proper coordinate pair.
+       The coordinate pair does not contain a latitude value and a
+       longitude value in that order.
      -
 
    * - Ring is not closed
-     - 
-     - 
+     -
+     -
 
 |
 
-.. list-table:: If the QGIS method is used the following error messages can occur: 
+.. list-table:: If the QGIS method is used the following error messages can occur:
    :widths: 50 50 50
    :header-rows: 1
 
@@ -827,68 +844,76 @@ Types of error messages and their meanings
      - Explanation
      - Example
 
-   * - Segment %1 of ring %2 of polygon %3 intersects segment %4 of ring %5 of polygon %6 at %7
-     - 
+   * - Segment %1 of ring %2 of polygon %3 intersects segment %4
+       of ring %5 of polygon %6 at %7
+     -
      -
 
    * - Ring %1 with less than four points
-     - 
+     -
      -
 
-   * - Ring %1 not closed 
-     - 
+   * - Ring %1 not closed
+     -
      -
 
    * - Line %1 with less than two points
-     - 
+     -
      -
 
-   * - Line %1 contains %n duplicate node(s) at %2 
-     - This error happens when consecutive points on a line have the same
-       coordinates.
+   * - Line %1 contains %n duplicate node(s) at %2
+     - This error happens when consecutive points on a line have the
+       same coordinates.
      - .. figure:: img/geos_rep_point.png
-          :align: center 
+          :align: center
 
-   * - Segments %1 and %2 of line %3 intersect at %4 
-     - This error happens when a line self intersects (two segments of the
-       line intersect each other).
+   * - Segments %1 and %2 of line %3 intersect at %4
+     - This error happens when a line self intersects (two segments
+       of the line intersect each other).
      - .. figure:: img/qgis_seg_line_int.png
           :align: center
 
-   * - Ring self-intersection 
-     - This error happens when an outer or inner (island) ring / boundary of a polygon
-       geometry intersects itself.
+   * - Ring self-intersection
+     - This error happens when an outer or inner (island) ring /
+       boundary of a polygon geometry intersects itself.
      - .. figure:: img/geos_ring_inter.png
           :align: center
 
    * - Ring %1 of polygon %2 not in exterior ring
      -
      -
-    
+
    * - Polygon %1 lies inside polygon %2
-     - This error happens when a part of MultiPolygon geometry is inside a hole of a MultiPolygon geometry. 
+     - This error happens when a part of a MultiPolygon geometry is
+       inside a hole of a MultiPolygon geometry.
      - .. figure:: img/qgis_poliinside_.png
           :align: center
+
 
 .. _qgiscollect:
 
 Collect geometries
 ------------------
-Takes a vector layer and collects its geometries into new multipart geometries.
+Takes a vector layer and collects its geometries into new multipart
+geometries.
 
-One or more attributes can be specified to collect only geometries belonging to
-the same class (having the same value for the specified attributes), alternatively
-all geometries can be collected.
+One or more attributes can be specified to collect only geometries
+belonging to the same class (having the same value for the specified
+attributes), alternatively all geometries can be collected.
 
-All output geometries will be converted to multi geometries, even those with just
-a single part. This algorithm does not dissolve overlapping geometries - they will
-be collected together without modifying the shape of each geometry part.
+All output geometries will be converted to multi geometries, even
+those with just a single part.
+This algorithm does not dissolve overlapping geometries - they will
+be collected together without modifying the shape of each geometry
+part.
 
-See the 'Promote to multipart' or 'Aggregate' algorithms for alternative options.
+See the 'Promote to multipart' or 'Aggregate' algorithms for
+alternative options.
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
-.. seealso:: :ref:`qgisaggregate`, :ref:`qgispromotetomulti`, :ref:`qgisdissolve`
+.. seealso:: :ref:`qgisaggregate`, :ref:`qgispromotetomulti`,
+   :ref:`qgisdissolve`
 
 Parameters
 ..........
@@ -1028,7 +1053,7 @@ Outputs
 
 Concave hull (k-nearest neighbor)
 ---------------------------------
-This algorithm generates a concave hull polygon from a set of points.
+Generates a concave hull polygon from a set of points.
 If the input layer is a line or polygon layer, it will use the
 vertices.
 
@@ -1037,8 +1062,8 @@ output polygon.
 A lower number will result in a concave hull that follows the points
 very closely, while a higher number will have a smoother shape.
 The minimum number of neighbor points to consider is 3.
-A value equal to or greater than the number of points will result in a
-convex hull.
+A value equal to or greater than the number of points will result in
+a convex hull.
 
 If a field is selected, the algorithm will group the features in the
 input layer using unique values in that field and generate individual
@@ -1124,7 +1149,7 @@ Generates a new layer based on an existing one, with a different type
 of geometry.
 
 Not all conversions are possible. For instance, a line layer can be
-converted to a point layer, but a point layer cannot be converted to a 
+converted to a point layer, but a point layer cannot be converted to a
 line layer.
 
 .. seealso:: :ref:`qgispolygonize`, :ref:`qgislinestopolygons`
@@ -1152,7 +1177,7 @@ Parameters
        Default: 0
      - Geometry type to apply to the output features.
        One of:
-       
+
        * 0 --- Centroids
        * 1 --- Nodes
        * 2 --- Linestrings
@@ -1330,7 +1355,7 @@ Outputs
 
 .. _qgispointtolayer:
 
-Create layer from point |38|
+Create layer from point
 -----------------------------
 
 Creates a new vector layer that contains a single feature with
@@ -1357,9 +1382,9 @@ Parameters
      - [coordinates]
      - Input point, including CRS info
        (example: ``397254,6214446 [EPSG:32632]``).
-       
+
        If the CRS is not provided, the Project CRS will be used.
-       
+
        The point can be specified by clicking on the map canvas.
    * - **Point**
      - ``OUTPUT``
@@ -1405,9 +1430,9 @@ Creates wedge shaped buffers from input points.
 
    Wedge buffers
 
-The native output from this algorithm are CurvePolygon geometries, but
-these may be automatically segmentized to Polygons depending on the
-output format.
+The native output from this algorithm are CurvePolygon geometries,
+but these may be automatically segmentized to Polygons depending
+on the output format.
 
 .. seealso:: :ref:`qgisbuffer`, :ref:`qgisbufferbym`,
    :ref:`qgistaperedbuffer`
@@ -1605,7 +1630,7 @@ Parameters
        Default: 0.0
      - Only holes with an area less than this threshold will be
        deleted.
-       If ``0.0`` is added, **all** the holes will be deleted.
+       With a value of ``0.0``, **all** the holes will be deleted.
    * - **Cleaned**
      - ``OUTPUT``
      - [same as input]
@@ -1724,17 +1749,18 @@ Densify by interval
 Takes a polygon or line layer and generates a new one in which the
 geometries have a larger number of vertices than the original one.
 
-The geometries are densified by adding regularly placed extra vertices
-inside each segment so that the maximum distance between any two
-vertices does not exceed the specified distance.
+The geometries are densified by adding regularly placed extra
+vertices inside each segment so that the maximum distance between
+any two vertices does not exceed the specified distance.
 
 If the geometries have Z or M values present then these will be
 linearly interpolated at the added vertices.
 
 **Example**
 
-Specifying a distance of 3 would cause the segment ``[0 0] -> [10 0]`` to
-be converted to ``[0 0] -> [2.5 0] -> [5 0] -> [7.5 0] -> [10 0]``,
+Specifying a distance of 3 would cause the segment
+``[0 0] -> [10 0]`` to be converted to
+``[0 0] -> [2.5 0] -> [5 0] -> [7.5 0] -> [10 0]``,
 since 3 extra vertices are required on the segment and spacing these
 at 2.5 increments allows them to be evenly spaced over the segment.
 
@@ -1807,8 +1833,8 @@ Outputs
 Dissolve
 --------
 Takes a vector layer and combines its features into new features.
-One or more attributes can be specified to dissolve features belonging
-to the same class (having the same value for the specified
+One or more attributes can be specified to dissolve features
+belonging to the same class (having the same value for the specified
 attributes), alternatively all features can be dissolved to a single
 feature.
 
@@ -2281,7 +2307,7 @@ Outputs
 
 .. _qgisextractmvalues:
 
-Extract M values |36|
+Extract M values
 ---------------------
 
 Extracts M values from geometries into feature attributes.
@@ -2316,7 +2342,7 @@ Parameters
        Default: [0]
      - Statistics on the M values of a geometry.
        One or more of:
-       
+
        * 0 --- First
        * 1 --- Last
        * 2 --- Count
@@ -2420,7 +2446,7 @@ Parameters
    * - **Vertex indices**
      - ``VERTICES``
      - [string]
-       
+
        Default: '0'
      - Comma-separated string of the indices of the vertices to
        extract.
@@ -2533,7 +2559,7 @@ Outputs
 
 .. _qgisextractzvalues:
 
-Extract Z values |36|
+Extract Z values
 ---------------------
 
 Extracts Z values from geometries into feature attributes.
@@ -2543,7 +2569,7 @@ extracted, however the algorithm can optionally calculate statistics
 on all of the geometry's Z values, including sum, mean, minimum and
 maximum.
 
-.. seealso:: :ref:`qgisextractzvalues`, :ref:`qgissetzvalue`,
+.. seealso:: :ref:`qgisextractmvalues`, :ref:`qgissetzvalue`,
    :ref:`qgisdropmzvalues`
 
 Parameters
@@ -2565,11 +2591,11 @@ Parameters
    * - **Summaries to calculate**
      - ``SUMMARIES``
      - [enumeration]
-     
+
        Default: [0]
      - Statistics on the Z values of a geometry.
        One or more of:
-       
+
        * 0 --- First
        * 1 --- Last
        * 2 --- Count
@@ -2670,7 +2696,7 @@ Parameters
      - Input line or polygon vector layer
        to remove vertices from
    * - **Minimum**
-       
+
        Optional
      - ``MIN``
      - [number |dataDefined|]
@@ -2678,7 +2704,7 @@ Parameters
        Default: *Not set*
      - Minimum of M values allowed
    * - **Maximum**
-       
+
        Optional
      - ``MAX``
      - [number |dataDefined|]
@@ -2764,7 +2790,7 @@ Parameters
      - Input line or polygon vector layer
        to remove vertices from
    * - **Minimum**
-       
+
        Optional
      - ``MIN``
      - [number |dataDefined|]
@@ -2772,7 +2798,7 @@ Parameters
        Default: *Not set*
      - Minimum of Z values allowed
    * - **Maximum**
-       
+
        Optional
      - ``MAX``
      - [number |dataDefined|]
@@ -2878,14 +2904,13 @@ Outputs
 
 .. _qgisforcerhr:
 
-Force right-hand-rule |36|
+Force right-hand-rule
 --------------------------
 
-Forces polygon geometries to respect the Right-Hand-Rule,
-in which the area that is bounded by a polygon is to the right of the boundary.
+Forces polygon geometries to respect the Right-Hand-Rule, in which
+the area that is bounded by a polygon is to the right of the boundary.
 In particular, the exterior ring is oriented in a clockwise
-direction and the interior rings in a counter-clockwise direction.
-The algorithm consumes and produces features with polygon geometries.
+direction and any interior rings in a counter-clockwise direction.
 
 Parameters
 ..........
@@ -2934,10 +2959,9 @@ Outputs
      - [vector: polygon]
      - The output vector layer with reoriented geometries.
 
-
 .. _qgisantimeridiansplit:
 
-Geodesic line split at antimeridian |36|
+Geodesic line split at antimeridian
 ----------------------------------------
 
 Splits a line into multiple geodesic segments, whenever
@@ -3052,19 +3076,19 @@ Parameters
    * - **Output geometry has z values**
      - ``WITH_Z``
      - [boolean]
-     
+
        Default: False
      - Choose if the output geometry should include the Z dimension
    * - **Output geometry has m values**
      - ``WITH_M``
      - [boolean]
-     
+
        Default: False
      - Choose if the output geometry should include the M dimension
    * - **Geometry expression**
      - ``EXPRESSION``
      - [expression]
-       
+
        Default: '$geometry'
      - Add the geometry expression you want to use.
        You can use the button to open the Expression Dialog.
@@ -3143,7 +3167,7 @@ Parameters
    * - **Distance**
      - ``DISTANCE``
      - [number |dataDefined|]
-     
+
        Default: 0.0
      - Distance from the beginning of the line
    * - **Interpolated points**
@@ -3212,7 +3236,7 @@ Parameters
    * - **Parts to keep**
      - ``PARTS``
      - [number]
-     
+
        Default: 1
      - Number of parts to keep. If 1, only the biggest part of the
        feature will be kept.
@@ -3409,12 +3433,6 @@ any lines which could be merged and any non-connected line parts.
 Parameters
 ..........
 
-``Input layer`` [vector: line]
-  MultiLineString vector layer.
-
-Parameters
-..........
-
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -3467,7 +3485,8 @@ Minimum bounding geometry
 Creates geometries which enclose the features from an input layer.
 The features can be grouped by a field.
 The output layer will then contain one feature per group value with
-a geometry (MBB) that covers the geometries of the features with matching value.
+a geometry (MBB) that covers the geometries of the features with
+matching value.
 
 The following enclosing geometry types are supported:
 
@@ -3642,8 +3661,7 @@ input layer, using a fixed or dynamic distance and number of rings.
 
 .. seealso:: :ref:`qgisbuffer`,
    :ref:`qgisvariabledistancebuffer`,
-   :ref:`qgisrectanglesovalsdiamondsfixed`,
-   :ref:`qgisrectanglesovalsdiamondsvariable`,
+   :ref:`qgisrectanglesovalsdiamonds`,
    :ref:`qgissinglesidedbuffer`
 
 Parameters
@@ -3865,7 +3883,6 @@ Parameters
      - Specify the output (offset) layer.
        One of:
 
-       * Skip output
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
@@ -3993,7 +4010,7 @@ Parameters
    * - **Maximum angle tolerance (degrees)**
      - ``ANGLE_TOLERANCE``
      - [number]
-     
+
        Default: 15
      - Specify the maximum deviation from a right angle or straight
        line a vertex can have for it to be adjusted.
@@ -4004,7 +4021,7 @@ Parameters
    * - **Maximum algorithm iterations**
      - ``MAX_ITERATIONS``
      - [number]
-     
+
        Default: 1000
      - Setting a larger number for the maximum number of iterations
        will result in a more orthogonal geometry at the cost of extra
@@ -4045,8 +4062,8 @@ Outputs
 
 Point on Surface
 ----------------
-For each feature of the input layer, returns a point that is guaranteed
-to lie on the surface of the feature geometry.
+For each feature of the input layer, returns a point that is
+guaranteed to lie on the surface of the feature geometry.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
@@ -4144,7 +4161,7 @@ Parameters
    * - **Distance**
      - ``DISTANCE``
      - [number |dataDefined|]
-     
+
        Default: 1.0
      - Distance between two consecutive points along the line
    * - **Start offset**
@@ -4222,7 +4239,7 @@ Parameters
    * - **Minimum distance to other points**
      - ``PROXIMITY``
      - [number]
-     
+
        Default: 1.0
      - Distance below which point features are
        considered close.
@@ -4230,7 +4247,7 @@ Parameters
    * - **Displacement distance**
      - ``DISTANCE``
      - [number]
-     
+
        Default: 1.0
      - Radius of the circle on which close features are placed
    * - **Horizontal distribution for two point case**
@@ -4419,7 +4436,6 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - The output polygon vector layer from lines
-
 
 
 .. _qgispolygonstolines:
@@ -4621,21 +4637,20 @@ Outputs
      - The output multipart vector layer
 
 
-.. _qgisrectanglesovalsdiamondsfixed:
+.. _qgisrectanglesovalsdiamonds:
 
-Rectangles, ovals, diamonds (fixed)
+Rectangles, ovals, diamonds
 -----------------------------------
-Creates a buffer area for all the features in an input layer with
-different shape choice.
+Creates a buffer area with a rectangle, oval or diamond shape
+for each feature of the input point layer.
 
-Parameters can vary depending on the shape chosen.
+The shape parameters can be fixed for all features or dynamic using a field or
+an expression.
 
-.. figure:: img/rectangles_ovals_diamond.png
+.. figure:: img/rectangles_ovals_diamond_variable.png
    :align: center
 
-   Different buffer shapes
-
-.. seealso:: :ref:`qgisrectanglesovalsdiamondsvariable`
+   Different buffer shapes with dynamic parameters
 
 Parameters
 ..........
@@ -4664,13 +4679,13 @@ Parameters
 
    * - **Width**
      - ``WIDTH``
-     - [number]
+     - [number |dataDefined|]
 
        Default: 1.0
      - Width of the buffer shape
    * - **Height**
      - ``HEIGHT``
-     - [number]
+     - [number |dataDefined|]
 
        Default: 1.0
      - Height of the buffer shape
@@ -4678,109 +4693,9 @@ Parameters
 
        Optional
      - ``ROTATION``
-     - [number]
+     - [number |dataDefined|]
 
        Default: None
-     - Rotation of the buffer shape
-   * - **Number of segment**
-     - ``SEGMENTS``
-     - [number]
-
-       Default: 36
-     - Number of segments for a full circle (*Ovals* shape)
-   * - **Output**
-     - ``OUTPUT``
-     - [vector: polygon]
-
-       Default: ``[Create temporary layer]``
-     - Specify the output vector layer. One of:
-
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
-
-       The file encoding can also be changed here.
-
-Outputs
-.......
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-   :stub-columns: 0
-
-   * - Label
-     - Name
-     - Type
-     - Description
-   * - **Output**
-     - ``OUTPUT``
-     - [vector: polygon]
-     - The output vector layer (with the buffer shapes)
-
-
-.. _qgisrectanglesovalsdiamondsvariable:
-
-Rectangles, ovals, diamonds (variable)
---------------------------------------
-Creates a buffer area for all the features in an input layer with
-different shape choice.
-
-Buffer shape parameters are specified through attribute of the input
-layer.
-
-.. figure:: img/rectangles_ovals_diamond_variable.png
-   :align: center
-
-   Different buffer shapes with different parameters
-
-.. seealso:: :ref:`qgisrectanglesovalsdiamondsfixed`
-
-Parameters
-..........
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-   :stub-columns: 0
-
-   * - Label
-     - Name
-     - Type
-     - Description
-   * - **Input layer**
-     - ``INPUT``
-     - [vector: point]
-     - Input point vector layer
-   * - **Buffer shape**
-     - ``SHAPE``
-     - [enumeration]
-
-       Default: 0
-     - The shape to use. One of:
-
-       * 0 --- Rectangles
-       * 1 --- Ovals
-       * 2 --- Diamonds
-
-   * - **Width field**
-     - ``WIDTH``
-     - [tablefield: numeric]
-
-       Default: First
-     - Width of the buffer shape
-   * - **Height field**
-     - ``HEIGHT``
-     - [tablefield: numeric]
-
-       Default: First
-     - Height of the buffer shape
-   * - **Rotation field**
-
-       Optional
-     - ``ROTATION``
-     - [tablefield: numeric]
      - Rotation of the buffer shape
    * - **Number of segment**
      - ``SEGMENTS``
@@ -4834,13 +4749,13 @@ By default, Z values are not considered when detecting duplicate
 vertices.
 E.g. two vertices with the same X and Y coordinate but different Z
 values will still be considered duplicate and one will be removed.
-If the :guilabel;`Use Z Value` parameter is true, then the Z values are also
-tested and vertices with the same X and Y but different Z will be
-maintained.
+If the :guilabel;`Use Z Value` parameter is true, then the Z values
+are also tested and vertices with the same X and Y but different Z
+will be maintained.
 
-.. note:: Duplicate vertices are not tested between different parts of
-   a multipart geometry, e.g. a multipoint geometry with overlapping
-   points will not be changed by this method.
+.. note:: Duplicate vertices are not tested between different parts
+   of a multipart geometry, e.g. a multipoint geometry with
+   overlapping points will not be changed by this method.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
@@ -4876,9 +4791,9 @@ Parameters
      - [boolean |dataDefined|]
 
        Default: False
-     - If the :guilabel;`Use Z Value` parameter is true, then the Z values are also
-       tested and vertices with the same X and Y but different Z will be
-       maintained.
+     - If the :guilabel;`Use Z Value` parameter is true, then the Z
+       values are also tested and vertices with the same X and Y but
+       different Z will be maintained.
    * - **Cleaned**
      - ``OUTPUT``
      - [same as input]
@@ -5023,7 +4938,7 @@ Parameters
    * - **Reversed**
      - ``OUTPUT``
      - [vector: line]
-     
+
        Default: ``[Create temporary layer]``
      - Specify the output line vector layer.
        One of:
@@ -5102,7 +5017,7 @@ Parameters
    * - **Rotated**
      - ``OUTPUT``
      - [same as input]
-     
+
        Default: ``[Create temporary layer]``
      - Specify the output vector layer (with rotated geometries).
        One of:
@@ -5174,7 +5089,7 @@ Parameters
    * - **Segmentized**
      - ``OUTPUT``
      - [same as input]
-     
+
        Default: ``[Create temporary layer]``
      - Specify the output vector layer (with segmentized geometries).
        One of:
@@ -5246,7 +5161,7 @@ Parameters
    * - **Segmentized**
      - ``OUTPUT``
      - [same as input]
-     
+
        Default: ``[Create temporary layer]``
      - Specify the output vector layer (with segmentized geometries).
        One of:
@@ -5282,14 +5197,18 @@ Set M value
 -----------
 Sets the M value for geometries in a layer.
 
-If M values already exist in the layer, they will be overwritten with the new value.
-If no M values exist, the geometry will be upgraded to include M values and the
-specified value used as the initial M value for all geometries.
+If M values already exist in the layer, they will be overwritten
+with the new value.
+If no M values exist, the geometry will be upgraded to include M
+values and the specified value used as the initial M value for all
+geometries.
 
-.. tip:: Use the |identify|:sup:`Identify Features` button to check the added M value:
- the results are available in the :guilabel:`Identify Results` dialog.
+.. tip:: Use the |identify|:sup:`Identify Features` button to check
+   the added M value: the results are available in the
+   :guilabel:`Identify Results` dialog.
 
-.. seealso:: :ref:`qgissetmfromraster`, :ref:`qgissetzvalue`, :ref:`qgisdropmzvalues`
+.. seealso:: :ref:`qgissetmfromraster`, :ref:`qgissetzvalue`,
+   :ref:`qgisdropmzvalues`
 
 Parameters
 ..........
@@ -5316,7 +5235,7 @@ Parameters
    * - **M Added**
      - ``OUTPUT``
      - [same as input]
-     
+
        Default: ``[Create temporary layer]``
      - Specify the output vector layer.
        One of:
@@ -5343,7 +5262,8 @@ Outputs
    * - **M Added**
      - ``OUTPUT``
      - [same as input]
-     - The output vector layer (with M values assigned to the geometries)
+     - The output vector layer (with M values assigned to the
+       geometries)
 
 
 .. _qgissetmfromraster:
@@ -5351,12 +5271,14 @@ Outputs
 Set M value from raster
 -----------------------
 
-Uses values sampled from a band within a raster layer to set the M value for every
-overlapping vertex in the feature geometry. The raster values can optionally be
-scaled by a preset amount.
+Uses values sampled from a band within a raster layer to set the M
+value for every overlapping vertex in the feature geometry.
+The raster values can optionally be scaled by a preset amount.
 
-If M values already exist in the layer, they will be overwritten with the new value.
-If no M values exist, the geometry will be upgraded to include M values.
+If M values already exist in the layer, they will be overwritten with
+the new value.
+If no M values exist, the geometry will be upgraded to include M
+values.
 
 .. seealso:: :ref:`qgissetzfromraster`, :ref:`qgissetmvalue`
 
@@ -5402,7 +5324,7 @@ Parameters
    * - **Updated**
      - ``OUTPUT``
      - [same as input]
-     
+
        Default: ``[Create temporary layer]``
      - Specify the output vector layer (with updated M values).
        One of:
@@ -5438,14 +5360,18 @@ Set Z value
 -----------
 Sets the Z value for geometries in a layer.
 
-If Z values already exist in the layer, they will be overwritten with the new value.
-If no Z values exist, the geometry will be upgraded to include Z values and the
-specified value used as the initial Z value for all geometries.
+If Z values already exist in the layer, they will be overwritten
+with the new value.
+If no Z values exist, the geometry will be upgraded to include Z
+values and the specified value used as the initial Z value for all
+geometries.
 
-.. tip:: Use the |identify|:sup:`Identify Features` button to check the added Z value:
- the results are available in the :guilabel:`Identify Results` dialog.
+.. tip:: Use the |identify|:sup:`Identify Features` button to check
+ the added Z value: the results are available in the
+ :guilabel:`Identify Results` dialog.
 
-.. seealso:: :ref:`qgissetzfromraster`, :ref:`qgissetmvalue`, :ref:`qgisdropmzvalues`
+.. seealso:: :ref:`qgissetzfromraster`, :ref:`qgissetmvalue`,
+   :ref:`qgisdropmzvalues`
 
 Parameters
 ..........
@@ -5472,7 +5398,7 @@ Parameters
    * - **Z Added**
      - ``OUTPUT``
      - [same as input]
-     
+
        Default: ``[Create temporary layer]``
      - Specify the output vector layer.
        One of:
@@ -5506,18 +5432,19 @@ Outputs
 
 Simplify
 --------
-Simplifies the geometries in a line or polygon layer. It creates a new layer with
-the same features as the ones in the input layer, but with geometries containing
-a lower number of vertices.
+Simplifies the geometries in a line or polygon layer.
+It creates a new layer with the same features as the ones in the input
+layer, but with geometries containing a lower number of vertices.
 
-The algorithm gives a choice of simplification methods, including distance based
-(the "Douglas-Peucker" algorithm), area based ("Visvalingam" algorithm) and
-snapping geometries to grid.
+The algorithm gives a choice of simplification methods, including
+distance based (the "Douglas-Peucker" algorithm), area based
+("Visvalingam" algorithm) and snapping geometries to grid.
 
 .. figure:: img/simplify_geometries.png
    :align: center
 
-   Clockwise from top left: source layer and increasing simplification tolerances
+   Clockwise from top left: source layer and increasing
+   simplification tolerances
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
@@ -5565,7 +5492,7 @@ Parameters
    * - **Simplified**
      - ``OUTPUT``
      - [same as input]
-     
+
        Default: ``[Create temporary layer]``
      - Specify the output (simplified) vector layer.
        One of:
@@ -5625,14 +5552,14 @@ Parameters
      - Description
    * - **Input layer**
      - ``INPUT``
-     - [vector: any]
-     - Input vector layer
+     - [vector: line]
+     - Input line vector layer
    * - **Distance**
      - ``DISTANCE``
      - [number]
 
        Default: 10.0
-     - Buffer distance (from the boundary of each feature).
+     - Buffer distance.
    * - **Side**
      - ``SIDE``
      - [enumeration]
@@ -5672,7 +5599,7 @@ Parameters
    * - **Buffer**
      - ``OUTPUT``
      - [vector: polygon]
-       
+
        Default: ``[Create temporary layer]``
      - Specify the output (buffer) layer.
        One of:
@@ -5706,11 +5633,8 @@ Outputs
 
 Smooth
 ------
-Smooths the geometries in a line or polygon layer.
-It creates a new layer with the same features as the ones in the
-input layer, but with geometries containing a
-**higher number of vertices and corners** in the geometries smoothed
-out.
+Smooths the geometries in a line or polygon layer by
+adding more **vertices and corners** to the feature geometries.
 
 The iterations parameter dictates how many smoothing iterations will
 be applied to each geometry.
@@ -5742,7 +5666,8 @@ this will not be smoothed. For example, setting the maximum angle to
 :ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgissimplifygeometries`,
-   :ref:`qgisdensifygeometries`, :ref:`qgisdensifygeometriesgivenaninterval`
+   :ref:`qgisdensifygeometries`,
+   :ref:`qgisdensifygeometriesgivenaninterval`
 
 Parameters
 ..........
@@ -5773,7 +5698,7 @@ Parameters
 
        Default: 0.25
      - Increasing values will *move* the smoothed lines / boundaries
-       further away from the input lines / booundaries.
+       further away from the input lines / boundaries.
    * - **Maximum node angle to smooth**
      - ``MAX_ANGLE``
      - [number |dataDefined|]
@@ -5783,12 +5708,11 @@ Parameters
    * - **Smoothed**
      - ``OUTPUT``
      - [same as input]
-       
+
        Default: ``[Create temporary layer]``
-     - Specify the output (buffer) layer.
+     - Specify the output (smoothed) layer.
        One of:
 
-       * Skip output
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
@@ -5854,7 +5778,6 @@ Parameters
        Default: 10.0
      - Control how close input vertices need to be to the
        reference layer geometries before they are snapped.
-       This distance is specified in layer units.
    * - *Behavior**
      - ``BEHAVIOR``
      - [enumeration]
@@ -5878,12 +5801,11 @@ Parameters
    * - **Snapped geometry**
      - ``OUTPUT``
      - [same as input]
-       
+
        Default: ``[Create temporary layer]``
-     - Specify the output (buffer) layer.
+     - Specify the output (snapped) layer.
        One of:
 
-       * Skip output
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
@@ -5973,12 +5895,11 @@ Parameters
    * - **Snapped**
      - ``OUTPUT``
      - [same as input]
-       
+
        Default: ``[Create temporary layer]``
-     - Specify the output (buffer) layer.
+     - Specify the output (snapped) layer.
        One of:
 
-       * Skip output
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
@@ -6006,10 +5927,10 @@ Outputs
 
 .. _qgissplitlinesbylength:
 
-Split lines by maximum length |36|
+Split lines by maximum length
 ----------------------------------
-This algorithm takes a line (or curve) layer and splits each feature
-into multiple parts, where each part is of a specified maximum length.
+Takes a line (or curve) layer and splits each feature into
+multiple parts, where each part is of a specified maximum length.
 Z and M values at the start and end of the new line substrings are
 linearly interpolated from existing values.
 
@@ -6025,14 +5946,15 @@ Parameters
      - Name
      - Type
      - Description
-
    * - **Input layer**
      - ``INPUT``
      - [vector: line]
-     - The input line features
+     - The input line vector layer
    * - **Maximum line length**
      - ``LENGTH``
      - [number |dataDefined|]
+
+       Default: 10.0
      - The maximum length of a line in the output.
    * - **Split**
      - ``OUTPUT``
@@ -6042,7 +5964,6 @@ Parameters
      - Specify the output line vector layer.
        One of:
 
-       * Skip output
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
@@ -6066,9 +5987,9 @@ Outputs
    * - **Split**
      - ``OUTPUT``
      - [vector: line]
-     - The new line features - all with line geometries that have a
-       length that is less than or equal to the length specified in
-       the LENGTH paramter.
+     - The new line vector layer - the length of the feature geometries
+       is less than or equal to the length specified in
+       the LENGTH parameter.
 
 
 .. _qgissubdivide:
@@ -6128,10 +6049,9 @@ Parameters
      - [same as input]
 
        Default: ``[Create temporary layer]``
-     - Specify the output line vector layer.
+     - Specify the output (subdivided) vector layer.
        One of:
 
-       * Skip output
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
@@ -6194,10 +6114,9 @@ Parameters
      - [same as input]
 
        Default: ``[Create temporary layer]``
-     - Specify the output line vector layer.
+     - Specify the output vector layer.
        One of:
 
-       * Skip output
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
@@ -6279,7 +6198,7 @@ Parameters
    * - **Buffered**
      - ``OUTPUT``
      - [vector: polygon]
-       
+
        Default: ``[Create temporary layer]``
      - Specify the output (buffer) layer.
        One of:
@@ -6347,7 +6266,7 @@ Parameters
    * - **Tesselated**
      - ``OUTPUT``
      - [vector: polygon]
-       
+
        Default: ``[Create temporary layer]``
      - Specify the output layer.
        One of:
@@ -6434,6 +6353,7 @@ Parameters
      - ``SIDE``
      - [enumeration]
      - Choose the side of the transect. Available options are:
+
        * 0 --- Left
        * 1 --- Right
        * 2 --- Both
@@ -6441,7 +6361,7 @@ Parameters
    * - **Transect**
      - ``OUTPUT``
      - [vector: line]
-       
+
        Default: ``[Create temporary layer]``
      - Specify the output line layer.
        One of:
@@ -6534,7 +6454,7 @@ Parameters
    * - **Translated**
      - ``OUTPUT``
      - [same as input]
-       
+
        Default: ``[Create temporary layer]``
      - Specify the output vector layer.
        One of:
@@ -6566,13 +6486,16 @@ Outputs
 
 .. _qgisvariabledistancebuffer:
 
-Variable distance buffer (*Graphical Modeler only*)
-----------------------------------------------------
+Variable distance buffer
+--------------------------------------------------
 Computes a buffer area for all the features in an input layer.
-This algorithm is only available from the :ref:`processing.modeler`.
 
-The size of the buffer for a given feature is defined by an attribute,
-so it allows different features to have different buffer sizes.
+The size of the buffer for a given feature is defined by an
+attribute, so it allows different features to have different buffer
+sizes.
+
+.. note:: This algorithm is only available from the
+  :ref:`Graphical modeler <processing.modeler>`.
 
 .. seealso:: :ref:`qgisbuffer`
 
@@ -6613,16 +6536,16 @@ Parameters
 
        .. figure:: img/buffer_dissolve.png
           :align: center
-       
+
           Normal and dissolved buffer
    * - **End cap style**
      - ``END_CAP_STYLE``
      - [enumeration]
      - Controls how line endings are handled in the buffer.
-       
+
        .. figure:: img/buffer_cap_style.png
           :align: center
-       
+
           Round, flat and square cap styles
    * - **Join style**
      - ``JOIN_STYLE``
@@ -6632,7 +6555,7 @@ Parameters
    * - **Miter limit**
      - ``MITER_LIMIT``
      - [number]
-       
+
        Default: 2.0
      - Only applicable for mitered join styles, and controls the
        maximum distance from the offset curve to use when creating a
@@ -6689,7 +6612,7 @@ Parameters
      - Input line vector layer
    * - **Segments**
      - ``SEGMENTS``
-     - [number | dataDefined]
+     - [number |dataDefined|]
 
        Default: 16
      - Number of the buffer segments per quarter circle.
@@ -6810,8 +6733,6 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |36| replace:: ``NEW in 3.6``
-.. |38| replace:: ``NEW in 3.8``
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png
