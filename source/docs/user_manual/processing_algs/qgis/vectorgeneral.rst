@@ -311,10 +311,11 @@ Outputs
 
 .. _qgisdefinecurrentprojection:
 
-Define layer projection
------------------------
-Sets an existing layer's projection to the provided CRS. It is very useful when
-a layer is missing the ``proj`` file and you know the correct projection.
+Define Shapefile projection
+---------------------------
+Sets an existing Shapefile format datasets projection to the provided CRS.
+It is very useful when a Shapefile format dataset is missing the ``prj``
+file and you know the correct projection.
 
 Contrary to the :ref:`qgisassignprojection` algorithm, it modifies the current
 layer and will not output a new layer.
