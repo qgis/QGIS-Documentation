@@ -432,8 +432,7 @@ Icon                            Substitution                        Icon        
 |plugin|                        ``|plugin|``                        |interpolation|                 ``|interpolation|``
 |gdalScript|                    ``|gdalScript|``                    |metasearch|                    ``|metasearch|``
 |geometryChecker|               ``|geometryChecker|``               |topologyChecker|               ``|topologyChecker|``
-|fromSelectedFeature|           ``|fromSelectedFeature|``
-|sqlQueryBuilder|               ``|sqlQueryBuilder|``
+|fromSelectedFeature|           ``|fromSelectedFeature|``           |sqlQueryBuilder|               ``|sqlQueryBuilder|``
 ==============================  ==================================  ==============================  ==================================
 
 Grass integration
