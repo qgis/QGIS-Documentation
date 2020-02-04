@@ -448,9 +448,9 @@ To improve tests robustness here are few tips:
    ``QgsFontUtils::standardTestFontFamily()`` ("QGIS Vera Sans").
 
 If travis reports errors for new images (for instance due to
-antialiasing or font differences), there is a tool
-(:source:`parse_dash_results.py <scripts/parse_dash_results.py>`).
-that will help you when updating the local test masks.
+antialiasing or font differences), the script
+:source:`parse_dash_results.py <scripts/parse_dash_results.py>`
+can help you when you are updating the local test masks.
 
 Adding your unit test to CMakeLists.txt
 =======================================
