@@ -449,8 +449,7 @@ To improve tests robustness here are few tips:
 
 If travis reports errors for new images (for instance due to
 antialiasing or font differences), there is a tool
-:source:`parse_dash_results.py <scripts/parse_dash_results.py>`
-(https://github.com/qgis/QGIS/blob/master/scripts/parse_dash_results.py)
+(:source:`parse_dash_results.py <scripts/parse_dash_results.py>`).
 that will help you when updating the local test masks.
 
 Adding your unit test to CMakeLists.txt
