@@ -825,17 +825,17 @@ You can perform the following tasks:
    * - Task
      - Spatial Bookmarks panel
      - Browser panel
-   * - Zoom to a Bookmark
+   * - **Zoom to a Bookmark**
      - Select the desired bookmark and click
        :guilabel:`Zoom To Bookmark` or double-click on it.
      - Right-click the bookmark and select :guilabel:`Zoom To Bookmark`,
        double-click it or drag and drop it to the map canvas.
-   * - Delete a bookmark
+   * - **Delete a bookmark**
      - Select the bookmark and click :guilabel:`Delete Bookmark`.
        Confirm your choice.
      - Right-click the bookmark and select :guilabel:`Delete Bookmark`. Confirm
        your choice.
-   * - Export bookmarks to XML
+   * - **Export bookmarks to XML**
      - Click :guilabel:`Import/Export Bookmarks` and select :guilabel:`Export
        bookmarks`.
        All bookmarks (user or project) are saved in a xml file.
@@ -843,14 +843,14 @@ You can perform the following tasks:
        project) or subfolders (groups) to determine which bookmarks to export,
        then select :guilabel:`Export Spatial Bookmarks`.
        Only the subset of Bookmarks is saved in the xml.
-   * - Import bookmarks from XML
+   * - **Import bookmarks from XML**
      - Click :guilabel:`Import/Export Bookmarks` and select :guilabel:`Import
        bookmarks`.
        All bookmarks in the xml are imported as user bookmarks.
      - Right-click the Spatial bookmarks entry, or one of its folders (user and
        project) or subfolders (groups) to determine where to import the
-       bookmarks , then select :guilabel:`Import Spatial Bookmarks`.
-   * - Edit bookmark
+       bookmarks, then select :guilabel:`Import Spatial Bookmarks`.
+   * - **Edit bookmark**
      - You can change a bookmark by changing the values in the columns. You can
        edit the name, the group, the extent and if its stored in the project or
        not.
@@ -858,11 +858,11 @@ You can perform the following tasks:
        Bookmark...`.
        The :guilabel:`Bookmark editor` will open, allowing you to redefine every
        aspect of the bookmark as if you were creating it from the first time.
-   * - Move bookmark
+   * - **Move bookmark**
      - Edit the group column and/or enable disable the :guilabel:`In project`
-       option.
+       option
      - Drag and drop the bookmark between folders (user and project) and
-       subfolders (groups).
+       subfolders (groups)
 
 
 You can also zoom to saved bookmarks by typing the bookmark name in the
