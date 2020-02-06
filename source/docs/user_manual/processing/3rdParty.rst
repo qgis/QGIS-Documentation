@@ -221,31 +221,86 @@ R. Creating R scripts
 ---------------------
 
 To enable R in Processing you need to install the
-**Processing R Provider** plugin.
+**Processing R Provider** plugin and configure R for QGIS.
+
+Configuration is done in :menuselection:`Provider-> R` in the
+:guilabel:`Processing` tab of
+:menuselection:`Settings-> Options`.
+
+Depending on your operating system, you may have to use
+:guilabel:`R folder` to specify where your R binaries are located.
+
+.. note:: On **Windows** the R executable file is normally in
+   a folder (``R-<version>``) under :file:`C:\\Program Files\\R\\`.
+   Specify the folder and **NOT** the binary!
+   
+   On **Linux** you just have to make sure that the R folder is
+   in the PATH environment variable.
+   If you can start R by typing ``R`` in a terminal window, then
+   you are ready to go.
+
+After enabling R, you will find an example script
+(:guilabel:`Scatterplot`) under R in the processing toolbox.
+
+.. figure:: img/processing_toolbox_r_install.png
+   :align: center
+
+Adding R scripts from the QGIS collection
+.........................................
 
 R integration in QGIS is different from that of SAGA in that there
-is not a predefined set of algorithms you can run (except for a few
-examples).
-Instead, you should write your scripts and call R commands, much like
+is not a predefined set of algorithms you can run (except for the
+single example script).
+
+A useful set of example R scripts is available in the QGIS
+Repository.
+Perform the following steps to load and enable them.
+
+#. Add the "QGIS Resource Sharing" plugin (you may have to
+   enable :guilabel:`Show also experimental plugins` in the Plugin
+   Manager :guilabel:`Settings`)
+#. Open it (Plugins-> Resource Sharing-> Resource Sharing)
+#. Choose the Settings tab
+#. Press the Add button, enter a Name and the URL https://github.com/havatv/qgis_rscripts.git. Skip the authentication part.
+#. Click the OK button
+#. Click Reload repositories
+#. Choose the All tab
+#. Select QGIS2 R script collection in the list, click on the Install button
+#. The collection should now be listed in the Install tab
+#. Close the plugin
+#. Open the Processing settings (Settings-> Options-> Processing tab)
+
+#. Go to Providers-> R-> R scripts folder
+
+   * On Ubuntu, set the path to (or include in the path):
+
+       /home/<user>/.local/share/QGIS/QGIS3/profiles/default/resource_sharing/repositories/github.com/havatv/qgis_rscripts/collections/R-scripts-QGIS2/processing/rscriptsqgis2
+
+   * On Windows, set the path to:
+
+       C:\Users\<user>\AppData\Roaming\QGIS\QGIS3\profiles\default\resource_sharing\repositories\github.com\havatv\qgis_rscripts\collections\R-scripts-QGIS2\processing\rscriptsqgis2
+
+   It is possible to provide several directories here, separated by a semicolon (";").
+
+All the R scrips from the QGIS 2 on-line collection should now be available in the Processing Toolbox (only some of the groups are expanded in the screenshot below):
+
+Processing toolbox with some R scripts shown
+
+The scripts at the top come from the default rscripts folder - it is included in my R scripts folder path.
+
+.. figure:: img/processing_toolbox_r_scripts.png
+   :align: center
+
+
+Instead, you can write your scripts and call R commands, much like
 you would do from R, and in a very similar manner to what we saw in
 the section dedicated to processing scripts.
 This section shows you the syntax to use to use R commands in QGIS
 and how to use QGIS objects (layers, tables) in them.
 
-The first thing you have to do, as we saw in the case of SAGA, is to
-tell QGIS where your R binaries are located. You can do this using
-the :guilabel:`R folder` entry in the processing configuration dialog.
-Once you have set that parameter, you can start creating and executing
-your own R scripts.
 
-.. note:: On **Windows** the R executable file is normally in
-   the :file:`C:\\Program Files\\R\\R-3.2` folder.
-   Specify the folder and **NOT** the binary!
 
-Once again, this is different in Linux, and you just have to make sure
-that the R folder is included in the PATH environment variable.
-If you can start R by typing ``R`` in a terminal window, then you are
-ready to go.
+
 
 To add an algorithm that calls an R function (or a more complex R
 script that you have developed and you would like to have available
