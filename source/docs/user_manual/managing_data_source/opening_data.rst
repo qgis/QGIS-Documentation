@@ -1230,8 +1230,6 @@ Examples of XYZ Tile services:
    :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
    :width: 1.5em
-.. |selectString| image:: /static/common/selectstring.png
-   :width: 2.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
