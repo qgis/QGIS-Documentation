@@ -779,8 +779,10 @@ Creating a Bookmark
 To create a bookmark:
 
 #. Zoom and pan to the area of interest.
-#. Select the menu option :menuselection:`View --> New Spatial Bookmark...`,
-   press :kbd:`Ctrl+B` or right-click the :guilabel:`Spatial Bookmarks` entry in
+#. Select the menu option :menuselection:`View -->` |newBookmark|
+   :menuselection:`New Spatial Bookmark...`,
+   press :kbd:`Ctrl+B` or right-click the |showBookmarks| :guilabel:`Spatial
+   Bookmarks` entry in
    the :guilabel:`Browser` panel and select :guilabel:`New Spatial Bookmark`.
    The :guilabel:`Bookmark Editor` dialog opens.
 
@@ -809,10 +811,13 @@ Working with Bookmarks
 To use and manage bookmarks, you can either use the :guilabel:`Spatial Bookmarks`
 panel or :guilabel:`Browser`.
 
-Select :menuselection:`View --> Show Spatial Bookmark Manager` or press :kbd:`Ctrl+7`
+Select :menuselection:`View -->` |showBookmarks| :menuselection:`Show Spatial
+Bookmark Manager` or press :kbd:`Ctrl+7`
 to open the :guilabel:`Spatial Bookmarks Manager` panel.
-Select :menuselection:`View --> Show Bookmarks` or :kbd:`Ctrl+Shift+B` to show
-the :guilabel:`Spatial Bookmarks` entry in the :guilabel:`Browser` panel.
+Select :menuselection:`View -->` |showBookmarks| :menuselection:`Show Bookmarks`
+or :kbd:`Ctrl+Shift+B` to show
+the |showBookmarks| :guilabel:`Spatial Bookmarks` entry in the
+:guilabel:`Browser` panel.
 
 You can perform the following tasks:
 
@@ -826,28 +831,28 @@ You can perform the following tasks:
      - Browser
    * - **Zoom to a Bookmark**
      - Double-click on it, or select the bookmark and press the
-       :guilabel:`Zoom to bookmark` button.
+       |zoomToBookmark| :guilabel:`Zoom to bookmark` button.
      - Double-click on it, drag and drop it to the map canvas, or right-click
        the bookmark and select :guilabel:`Zoom to Bookmark`.
    * - **Delete a bookmark**
-     - Select the bookmark and click the :guilabel:`Delete bookmark` button.
+     - Select the bookmark and click the |deleteSelected| :guilabel:`Delete bookmark` button.
        Confirm your choice.
      - Right-click the bookmark and select :guilabel:`Delete Spatial Bookmark`.
        Confirm your choice.
    * - **Export bookmarks to XML**
-     - Click the :guilabel:`Import/Export Bookmarks` button and select
-       :guilabel:`Export`.
+     - Click the |sharing| :guilabel:`Import/Export Bookmarks` button and select
+       |sharingExport| :guilabel:`Export`.
        All the bookmarks (user or project) are saved in an xml file.
      - Select one or more folders (user or project) or subfolders (groups),
-       then right-click and select :guilabel:`Export Spatial Bookmarks...`.
+       then right-click and select |sharingExport| :guilabel:`Export Spatial Bookmarks...`.
        The selected bookmark subset is saved.
    * - **Import bookmarks from XML**
-     - Click the :guilabel:`Import/Export Bookmarks` button and
-       select :guilabel:`Import`.
+     - Click the |sharing| :guilabel:`Import/Export Bookmarks` button and
+       select |sharingImport| :guilabel:`Import`.
        All bookmarks in the XML file are imported as user bookmarks.
      - Right-click the :guilabel:`Spatial Bookmarks` entry or one of its folders (user or
        project) or subfolders (groups) to determine where to import the
-       bookmarks, then select :guilabel:`Import Spatial Bookmarks`.
+       bookmarks, then select |sharingImport| :guilabel:`Import Spatial Bookmarks`.
        If performed on the :guilabel:`Spatial Bookmarks` entry, the bookmarks
        are added to :guilabel:`User Bookmarks`.
    * - **Edit bookmark**
@@ -858,11 +863,9 @@ You can perform the following tasks:
        Bookmark...`.
        The :guilabel:`Bookmark Editor` will open, allowing you to redefine every
        aspect of the bookmark as if you were creating it for the first time.
-   * - **Move bookmark**
-     - Edit the group column and/or enable disable the :guilabel:`In project`
-       option
-     - Drag and drop the bookmark between folders (user and project) and
-       subfolders (groups)
+
+       You can also drag and drop the bookmark between folders (user and
+       project) and subfolders (groups).
 
 You can also zoom to bookmarks by typing the bookmark name in the
 :ref:`locator <label_statusbar>`.
@@ -2335,6 +2338,8 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |dbManager| image:: /static/common/dbmanager.png
    :width: 1.5em
+.. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
+   :width: 1.5em
 .. |deselectAll| image:: /static/common/mActionDeselectAll.png
    :width: 1.5em
 .. |draw| image:: /static/common/mActionDraw.png
@@ -2413,6 +2418,8 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |messageLog| image:: /static/common/mMessageLog.png
    :width: 1.5em
+.. |newBookmark| image:: /static/common/mActionNewBookmark.png
+   :width: 1.5em
 .. |northArrow| image:: /static/common/north_arrow.png
    :width: 1.5em
 .. |openTable| image:: /static/common/mActionOpenTable.png
@@ -2445,7 +2452,15 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
+.. |sharing| image:: /static/common/mActionSharing.png
+   :width: 1.5em
+.. |sharingExport| image:: /static/common/mActionSharingExport.png
+   :width: 1.5em
+.. |sharingImport| image:: /static/common/mActionSharingImport.png
+   :width: 1.5em
 .. |showAllLayers| image:: /static/common/mActionShowAllLayers.png
+   :width: 1.5em
+.. |showBookmarks| image:: /static/common/mActionShowBookmarks.png
    :width: 1.5em
 .. |showMapTheme| image:: /static/common/mActionShowPresets.png
    :width: 1.5em
@@ -2476,6 +2491,8 @@ The values presented in the varying size assistant above will set the size
 .. |zoomIn| image:: /static/common/mActionZoomIn.png
    :width: 1.5em
 .. |zoomOut| image:: /static/common/mActionZoomOut.png
+   :width: 1.5em
+.. |zoomToBookmark| image:: /static/common/mActionZoomToBookmark.png
    :width: 1.5em
 .. |zoomToLayer| image:: /static/common/mActionZoomToLayer.png
    :width: 1.5em
