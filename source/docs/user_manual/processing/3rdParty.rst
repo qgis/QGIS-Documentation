@@ -215,10 +215,10 @@ Most other providers that use external applications and call them
 through the command-line have similar options, so you will find them
 as well in other places in the processing settings list.
 
-.. _creating_r_scripts:
+.. _r_scripts:
 
-R. Creating R scripts
----------------------
+R scripts
+---------
 
 To enable R in Processing you need to install the
 **Processing R Provider** plugin and configure R for QGIS.
@@ -245,12 +245,14 @@ After enabling R, you will find an example script
 .. figure:: img/processing_toolbox_r_install.png
    :align: center
 
+.. _adding_r_scripts:
+
 Adding R scripts from the QGIS collection
 .........................................
 
 R integration in QGIS is different from that of SAGA in that there
 is not a predefined set of algorithms you can run (except for the
-single example script).
+example script).
 
 A useful set of example R scripts is available in the QGIS
 Repository.
@@ -260,47 +262,62 @@ Perform the following steps to load and enable them.
    enable :guilabel:`Show also experimental plugins` in the Plugin
    Manager :guilabel:`Settings`)
 #. Open it (Plugins-> Resource Sharing-> Resource Sharing)
-#. Choose the Settings tab
-#. Press the Add button, enter a Name and the URL https://github.com/havatv/qgis_rscripts.git. Skip the authentication part.
-#. Click the OK button
-#. Click Reload repositories
-#. Choose the All tab
-#. Select QGIS2 R script collection in the list, click on the Install button
-#. The collection should now be listed in the Install tab
+#. Choose the :guilabel:`Settings` tab
+#. Click :guilabel:`Reload repositories`
+#. Choose the :guilabel:`All` tab
+#. Select :guilabel:`QGIS R script collection` in the list and
+   click on the :guilabel:`Install` button
+#. The collection should now be listed in the :guilabel:`Installed`
+   tab
 #. Close the plugin
-#. Open the Processing settings (Settings-> Options-> Processing tab)
+#. Open the Processing settings
+   (:menuselection:`Settings-> Options-> Processing` tab)
 
-#. Go to Providers-> R-> R scripts folder
+#. Go to :menuselection:`Providers-> R-> R scripts folder`
 
-   * On Ubuntu, set the path to (or include in the path):
+   * On Ubuntu, set the path to (or, better, include in the path):
 
-       /home/<user>/.local/share/QGIS/QGIS3/profiles/default/resource_sharing/repositories/github.com/havatv/qgis_rscripts/collections/R-scripts-QGIS2/processing/rscriptsqgis2
+       /home/<user>/.local/share/QGIS/QGIS3/profiles/default/resource_sharing/repositories/github.com/qgis/QGIS-Resources/collections/rscripts
 
-   * On Windows, set the path to:
+     .. figure:: img/rscript_folder.png
+        :align: center
 
-       C:\Users\<user>\AppData\Roaming\QGIS\QGIS3\profiles\default\resource_sharing\repositories\github.com\havatv\qgis_rscripts\collections\R-scripts-QGIS2\processing\rscriptsqgis2
+   * On Windows, set the path to (or, better, include in the path):
 
-   It is possible to provide several directories here, separated by a semicolon (";").
+       C:\Users\<user>\AppData\Roaming\QGIS\QGIS3\profiles\default\resource_sharing\repositories\github.com\qgis\QGIS-Resources\collections\rscripts
 
-All the R scrips from the QGIS 2 on-line collection should now be available in the Processing Toolbox (only some of the groups are expanded in the screenshot below):
+   To edit, double-click.  You can then choose to just paste / type
+   the path, or you can navigate to the directory by using the
+   :guilabel:`...` button and press the :guilabel:`Add` button in the
+   dialog that opens.
+   It is possible to provide several directories here.
+   They will be separated by a semicolon (";").
+   
+   .. figure:: img/rscript_folder_add.png
+      :align: center   
 
-Processing toolbox with some R scripts shown
-
-The scripts at the top come from the default rscripts folder - it is included in my R scripts folder path.
+All the R scrips from the QGIS 2 on-line collection should now be
+available in the Processing Toolbox (only some of the groups are
+expanded in the screenshot below):
 
 .. figure:: img/processing_toolbox_r_scripts.png
    :align: center
 
+   Processing toolbox with some R scripts shown
 
-Instead, you can write your scripts and call R commands, much like
-you would do from R, and in a very similar manner to what we saw in
-the section dedicated to processing scripts.
-This section shows you the syntax to use to use R commands in QGIS
-and how to use QGIS objects (layers, tables) in them.
-
+The scripts at the top come from the default rscripts folder -
+in this case, it is included in the :guilabel:`R scripts folder`
+path.
 
 
+.. _creating_r_scripts:
 
+Creating R scripts
+..................
+
+You can write scripts and call R commands, as you would do from R.
+This section shows you the syntax for using R commands in QGIS, and
+how to use QGIS objects (layers, tables) in them.
 
 To add an algorithm that calls an R function (or a more complex R
 script that you have developed and you would like to have available
@@ -321,7 +338,7 @@ polygons in a given polygon layer.
 This method belongs to the ``maptools`` package.
 Since almost all the algorithms that you might like to incorporate
 into QGIS will use or generate spatial data, knowledge of spatial
-packages like ``maptools`` and, especially, ``sp``, is mandatory.
+packages like ``maptools`` and ``sp``/``sf``, is necessary.
 
 .. code-block:: python
 
