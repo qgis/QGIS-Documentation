@@ -767,7 +767,7 @@ Spatial Bookmarks
 -----------------
 
 Spatial Bookmarks allow you to "bookmark" a geographic location and return to
-it later. By default, bookmarks are saved on the user's profile (as :guilabel:`User
+it later. By default, bookmarks are saved in the user's profile (as :guilabel:`User
 Bookmarks`), meaning that they are available from any project the user opens.
 They can also be saved for a single project (named
 :guilabel:`Project Bookmarks`) and stored within the project file, which can
@@ -807,13 +807,12 @@ Working with Bookmarks
 ......................
 
 To use and manage bookmarks, you can either use the :guilabel:`Spatial Bookmarks`
-panel or :guilabel:`Browser`. Select :menuselection:`View --> Show Bookmarks
-manager` or press :kbd:`Ctrl+7` to open the :guilabel:`Spatial Bookmarks`.
+panel or :guilabel:`Browser`.
 
-Select :menuselection:`View --> Show Bookmarks manager` or press :kbd:`Ctrl+7`
-to open the :guilabel:`Spatial Bookmarks`.
+Select :menuselection:`View --> Show Spatial Bookmark Manager` or press :kbd:`Ctrl+7`
+to open the :guilabel:`Spatial Bookmarks Manager` panel.
 Select :menuselection:`View --> Show Bookmarks` or :kbd:`Ctrl+Shift+B` to show
-the Spatial Bookmarks entry in the :guilabel:`Browser` panel.
+the :guilabel:`Spatial Bookmarks` entry in the :guilabel:`Browser` panel.
 
 You can perform the following tasks:
 
@@ -823,49 +822,49 @@ You can perform the following tasks:
    :stub-columns: 0
 
    * - Task
-     - Spatial Bookmarks panel
-     - Browser panel
+     - Spatial Bookmark Manager
+     - Browser
    * - **Zoom to a Bookmark**
-     - Select the desired bookmark and click
-       :guilabel:`Zoom To Bookmark` or double-click on it.
-     - Right-click the bookmark and select :guilabel:`Zoom To Bookmark`,
-       double-click it or drag and drop it to the map canvas.
+     - Double-click on it, or select the bookmark and press the
+       :guilabel:`Zoom to bookmark` button.
+     - Double-click on it, drag and drop it to the map canvas, or right-click
+       the bookmark and select :guilabel:`Zoom to Bookmark`.
    * - **Delete a bookmark**
-     - Select the bookmark and click :guilabel:`Delete Bookmark`.
+     - Select the bookmark and click the :guilabel:`Delete bookmark` button.
        Confirm your choice.
-     - Right-click the bookmark and select :guilabel:`Delete Bookmark`. Confirm
-       your choice.
+     - Right-click the bookmark and select :guilabel:`Delete Spatial Bookmark`.
+       Confirm your choice.
    * - **Export bookmarks to XML**
-     - Click :guilabel:`Import/Export Bookmarks` and select :guilabel:`Export
-       bookmarks`.
-       All bookmarks (user or project) are saved in a xml file.
-     - Right-click the Spatial bookmarks entry, or one of its folders (user and
-       project) or subfolders (groups) to determine which bookmarks to export,
-       then select :guilabel:`Export Spatial Bookmarks`.
-       Only the subset of Bookmarks is saved in the xml.
+     - Click the :guilabel:`Import/Export Bookmarks` button and select
+       :guilabel:`Export`.
+       All the bookmarks (user or project) are saved in an xml file.
+     - Select one or more folders (user or project) or subfolders (groups),
+       then right-click and select :guilabel:`Export Spatial Bookmarks...`.
+       The selected bookmark subset is saved.
    * - **Import bookmarks from XML**
-     - Click :guilabel:`Import/Export Bookmarks` and select :guilabel:`Import
-       bookmarks`.
-       All bookmarks in the xml are imported as user bookmarks.
-     - Right-click the Spatial bookmarks entry, or one of its folders (user and
+     - Click the :guilabel:`Import/Export Bookmarks` button and
+       select :guilabel:`Import`.
+       All bookmarks in the XML file are imported as user bookmarks.
+     - Right-click the :guilabel:`Spatial Bookmarks` entry or one of its folders (user or
        project) or subfolders (groups) to determine where to import the
        bookmarks, then select :guilabel:`Import Spatial Bookmarks`.
+       If performed on the :guilabel:`Spatial Bookmarks` entry, the bookmarks
+       are added to :guilabel:`User Bookmarks`.
    * - **Edit bookmark**
-     - You can change a bookmark by changing the values in the columns. You can
-       edit the name, the group, the extent and if its stored in the project or
+     - You can change a bookmark by changing the values in the table. You can
+       edit the name, the group, the extent and if it is stored in the project or
        not.
      - Right-click the desired bookmark and select :guilabel:`Edit Spatial
        Bookmark...`.
-       The :guilabel:`Bookmark editor` will open, allowing you to redefine every
-       aspect of the bookmark as if you were creating it from the first time.
+       The :guilabel:`Bookmark Editor` will open, allowing you to redefine every
+       aspect of the bookmark as if you were creating it for the first time.
    * - **Move bookmark**
      - Edit the group column and/or enable disable the :guilabel:`In project`
        option
      - Drag and drop the bookmark between folders (user and project) and
        subfolders (groups)
 
-
-You can also zoom to saved bookmarks by typing the bookmark name in the
+You can also zoom to bookmarks by typing the bookmark name in the
 :ref:`locator <label_statusbar>`.
 
 .. index:: Decorations
