@@ -432,7 +432,7 @@ Icon                            Substitution                        Icon        
 |plugin|                        ``|plugin|``                        |interpolation|                 ``|interpolation|``
 |gdalScript|                    ``|gdalScript|``                    |metasearch|                    ``|metasearch|``
 |geometryChecker|               ``|geometryChecker|``               |topologyChecker|               ``|topologyChecker|``
-|fromSelectedFeature|           ``|fromSelectedFeature|``
+|fromSelectedFeature|           ``|fromSelectedFeature|``           |sqlQueryBuilder|               ``|sqlQueryBuilder|``
 ==============================  ==================================  ==============================  ==================================
 
 Grass integration
@@ -1190,6 +1190,8 @@ Icon                            Substitution                        Icon        
 .. |splitLayer| image:: /static/common/split_layer.png
    :width: 1.5em
 .. |splitParts| image:: /static/common/mActionSplitParts.png
+   :width: 1.5em
+.. |sqlQueryBuilder| image:: /static/common/sqlquerybuilder.png
    :width: 1.5em
 .. |start| image:: /static/common/mActionStart.png
    :width: 1.5em
