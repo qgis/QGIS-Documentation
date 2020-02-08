@@ -496,6 +496,43 @@ how to create your own scripts.
    **Be aware** that if the package has to be downloaded, the first
    time you run the script it might take a long time.
 
+R libraries
+-----------
+
+The R script ``sp_test`` tries to load the R packages ``sp`` and
+``raster``.
+
+
+R libraries installed when running sf_test
+..........................................
+
+The R script *sf_test* tries to load ``sf`` and ``raster``.
+If these two packages are not installed, R may try to load and install
+them.
+
+The following R libraries end up in
+:file:`~/.local/share/QGIS/QGIS3/profiles/default/processing/rscripts`
+after ``sf_test`` has been run from the Processing Toolbox on Ubuntu with
+version 2.0 of the *Processing R Provider* plugin and R 3.4.4 (*apt*
+package ``r-base-core`` only):
+
+``abind, askpass, assertthat, backports, base64enc, BH, bit, bit64,
+blob, brew, callr, classInt, cli, colorspace, covr, crayon, crosstalk,
+curl, DBI, deldir, desc, dichromat, digest, dplyr, e1071, ellipsis,
+evaluate, fansi, farver, fastmap, gdtools, ggplot2, glue, goftest, 
+gridExtra, gtable, highr, hms, htmltools, htmlwidgets, httpuv, httr,
+jsonlite, knitr, labeling, later, lazyeval, leafem, leaflet, 
+leaflet.providers, leafpop, leafsync, lifecycle, lwgeom, magrittr, maps,
+mapview, markdown, memoise, microbenchmark, mime, munsell, odbc, openssl,
+pillar, pkgbuild, pkgconfig, pkgload, plogr, plyr, png, polyclip, praise,
+prettyunits, processx, promises, ps, purrr, R6, raster, RColorBrewer, 
+Rcpp, reshape2, rex, rgeos, rlang, rmarkdown, RPostgres, RPostgreSQL, 
+rprojroot, RSQLite, rstudioapi, satellite, scales, sf, shiny, 
+sourcetools, sp, spatstat, spatstat.data, spatstat.utils, stars, stringi, 
+stringr, svglite, sys, systemfonts, tensor, testthat, tibble, tidyselect, 
+tinytex, units, utf8, uuid, vctrs, viridis, viridisLite, webshot, withr, 
+xfun, XML, xtable``
+
 
 .. _grass_configure:
 
