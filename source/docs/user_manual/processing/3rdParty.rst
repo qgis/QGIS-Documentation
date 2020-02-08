@@ -236,14 +236,28 @@ Depending on your operating system, you may have to use
    
    On **Linux** you just have to make sure that the R folder is
    in the PATH environment variable.
-   If you can start R by typing ``R`` in a terminal window, then
-   you are ready to go.
+   If ``R`` in a terminal window starts R, then you are ready to go.
 
-After enabling R, you will find an example script
-(:guilabel:`Scatterplot`) under R in the processing toolbox.
+After installing the **Processing R Provider** plugin, you will find
+some example scripts in the :guilabel:`Processing Toolbox`:
+
+* :guilabel:`Scatterplot` runs an R function that produces a plot
+* :guilabel:`test_sf` can be used to check if the R package `sf` is
+  installed.
+  If the package is not installed, R will try to install it for you,
+  using the :guilabel:`Package repository` specified in
+  :menuselection:`Provider-> R` in the Processing options.
+  The default is `http://cran.at.r-project.org/`.
+  Installing may take some time...
+* :guilabel:`test_sp` can be used to check if the R package `sp` is
+  installed.
+  If the package is not installed, R will try to install it for you.
 
 .. figure:: img/processing_toolbox_r_install.png
    :align: center
+
+If you have R configured correctly for QGIS, these scripts can be run.
+
 
 .. _adding_r_scripts:
 
@@ -251,14 +265,15 @@ Adding R scripts from the QGIS collection
 .........................................
 
 R integration in QGIS is different from that of SAGA in that there
-is not a predefined set of algorithms you can run (except for the
-example script).
+is not a predefined set of algorithms you can run (except for some
+example script that come with the *Processing R Provider* plugin).
 
 A useful set of example R scripts is available in the QGIS
 Repository.
-Perform the following steps to load and enable them.
+Perform the following steps to load and enable them using the
+*QGIS Resource Sharing* plugin.
 
-#. Add the "QGIS Resource Sharing" plugin (you may have to
+#. Add the *QGIS Resource Sharing* plugin (you may have to
    enable :guilabel:`Show also experimental plugins` in the Plugin
    Manager :guilabel:`Settings`)
 #. Open it (Plugins-> Resource Sharing-> Resource Sharing)
@@ -328,9 +343,8 @@ R script files have the extension :file:`.rsx`, and creating them is
 pretty easy if you just have a basic knowledge of R syntax and R
 scripting.
 They should be stored in the R scripts folder.
-You can set this folder in the :guilabel:`R` settings group (available
-from the processing settings dialog), just like you do with the folder
-for regular processing scripts.
+You can specify the folder (:guilabel:`R scripts folder`) in the
+:guilabel:`R` settings group in Processing settings dialog).
 
 Let’s have a look at a very simple script file, which calls the R
 method ``spsample`` to create a random grid within the boundary of the
@@ -353,21 +367,22 @@ The first lines, which start with a double Python comment sign
 (``##``), tell QGIS about the inputs of the algorithm in
 the file and the outputs that it will generate.
 
-Please have a look at the :ref:`R Intro <r-intro>` and the
-:ref:`R Syntax <r-syntax>` Training Manual Chapters to find more
-information about how to write your own R scripts.
+.. note::
+   To find out more about how to write your own R scripts, have a
+   look at the :ref:`R Intro <r-intro>` and the
+   :ref:`R Syntax <r-syntax>` Training Manual Chapters.
 
 When you declare an input parameter, QGIS uses that information for
 two things: creating the user interface to ask the user for the value
 of that parameter, and creating a corresponding R variable that can
-later be used as input for R commands.
+later be used as R function input.
 
-In the above example, we have declared an input of type ``vector``
+In the above example, we have declared an input of type ``vector``,
 named ``polyg``.
 When executing the algorithm, QGIS will open the layer selected
 by the user and store it in a variable named ``polyg``.
 So, the name of a parameter is the name of the variable that we
-use in R for accessing the value of that parameter (you should
+can use in R for accessing the value of that parameter (you should
 therefore avoid using reserved R words as parameter names).
 
 Spatial parameters such as vector and raster layers are read using
