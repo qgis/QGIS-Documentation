@@ -313,7 +313,7 @@ Outputs
 
 Define Shapefile projection
 ---------------------------
-Sets an existing Shapefile format datasets projection to the provided CRS.
+Sets the CRS (projection) of an existing Shapefile format dataset to the provided CRS.
 It is very useful when a Shapefile format dataset is missing the ``prj``
 file and you know the correct projection.
 
