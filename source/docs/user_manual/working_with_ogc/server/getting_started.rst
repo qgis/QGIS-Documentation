@@ -173,53 +173,7 @@ QGIS Server is now available at http://localhost/qgisserver.
     packaged in Debian.
 
 Of course, you can add an init script (like a ``qgis-server.service`` file
-with systemd) to start QGIS Server at boot time or whenever you want. To use an init script with systemd,
-copy/paste this content in :file:`/etc/systemd/system/qgis-server.service`
-
-.. code-block:: bash
-
-   [Unit]
-   Description=QGIS Server Service
-
-   [Service]
-   # Add some environment variable if needed
-   Environment=QGIS_SERVER_LOG_LEVEL=0
-
-   StandardOutput=null
-   StandardError=journal
-   ExecStart=spawn-fcgi -s /var/run/qgisserver.socket -U www-data -G www-data -n /usr/lib/cgi-bin/qgis_mapserv.fcgi
-
-   [Install]
-   WantedBy=multi-user.target
-
-We can enable this init file:
-
-.. code-block:: bash
-
-   sudo systemctl enable /etc/systemd/system/qgis-server.service
-   sudo systemctl start qgis-server
-   sudo systemctl status qgis-server
-
-
-QGIS Server should be available and you can watch the live logs with:
-
-.. code-block:: bash
-
-   sudo journalctl -f -u qgis-server
-
-As mentioned above, we can setup ``multiwatch`` to increase
-the number of processes to 2 for instance:
-
-.. code-block:: bash
-
-   sudo apt install multiwatch
-
-Either in your bash line or in your init file, launch your QGIS Server
-by adding this line before the path to :file:`qgis_mapserv.fcgi`:
-
-.. code-block:: bash
-
-   /usr/bin/multiwatch -f 2
+with systemd) to start QGIS Server at boot time or whenever you want.
 
 fcgiwrap
 ^^^^^^^^
