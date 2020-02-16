@@ -374,7 +374,7 @@ Toolbox and choose :guilabel:`Export Model as Python Algorithm...`.
 About available algorithms
 --------------------------
 
-You might notice that some algorithms that can be be executed from the
+You might notice that some algorithms that can be executed from the
 toolbox do not appear in the list of available algorithms when you are
 designing a model.
 To be included in a model, an algorithm must have the correct
