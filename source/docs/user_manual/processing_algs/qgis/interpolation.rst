@@ -261,7 +261,7 @@ Parameters
      - Type
      - Description
 
-   * - **Input layers(s)**
+   * - **Input layer(s)**
      - ``INTERPOLATION_DATA``
      - [string]
      - Vector layer(s) and field(s) to use for the interpolation, coded
@@ -379,7 +379,7 @@ Parameters
      - Type
      - Description
 
-   * - **Input layers(s)**
+   * - **Input layer(s)**
      - ``INTERPOLATION_DATA``
      - [string]
      - Vector layer(s) and field(s) to use for the interpolation, coded
