@@ -33,9 +33,9 @@ We can differentiate between several types of settings:
 * **global settings** --- they are bound to the user at a particular machine.
   QGIS itself stores a lot of global settings, for example, main window size or
   default snapping tolerance. Settings are handled using the
-  :class:`QgsSettings <qgis.core.QgsSettings>` class.
-  The :meth:`setValue() <qgis.core.QgsSettings.setValue>` and
-  :meth:`value() <qgis.core.QgsSettings.value>` methods from this class provide
+  :class:`QgsSettings <qgis.core.QgsSettings>` class, through for example
+  the :meth:`setValue() <qgis.core.QgsSettings.setValue>` and
+  :meth:`value() <qgis.core.QgsSettings.value>` methods.
 
   Here you can see an example of how these methods are used.
 
