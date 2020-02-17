@@ -998,7 +998,7 @@ Parameters
    * - **Input layer**
      - ``INPUT``
      - [vector: polygon]
-     - Input polygon polygon vector layer
+     - Input polygon vector layer
    * - **Sampling strategy**
      - ``STRATEGY``
      - [enumeration]
