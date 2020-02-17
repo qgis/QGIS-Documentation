@@ -552,7 +552,7 @@ Parameters
 
        Default: 2.0
      - Weighting power
-   * - **Smothing**
+   * - **Smoothing**
      - ``SMOOTHING``
      - [number]
 
