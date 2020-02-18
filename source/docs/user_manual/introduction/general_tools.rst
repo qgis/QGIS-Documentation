@@ -767,19 +767,24 @@ Spatial Bookmarks
 -----------------
 
 Spatial Bookmarks allow you to "bookmark" a geographic location and return to
-it later. By default, bookmarks are saved on the computer (as :guilabel:`User
-Bookmarks`), meaning that they are available from any project of the same
-user profile. They can also be saved for a single project (named
-:guilabel:`Project Bookmarks`) and stored within the project file.
+it later. By default, bookmarks are saved in the user's profile (as :guilabel:`User
+Bookmarks`), meaning that they are available from any project the user opens.
+They can also be saved for a single project (named
+:guilabel:`Project Bookmarks`) and stored within the project file, which can
+be helpful if the project is to be shared with other users.
 
 Creating a Bookmark
 ...................
 
 To create a bookmark:
 
-#. Zoom or pan to the area of interest.
-#. Select the menu option :menuselection:`View --> New Spatial Bookmark...` or
-   press :kbd:`Ctrl+B`. The :guilabel:`Bookmark Editor` dialog opens.
+#. Zoom and pan to the area of interest.
+#. Select the menu option :menuselection:`View -->` |newBookmark|
+   :menuselection:`New Spatial Bookmark...`,
+   press :kbd:`Ctrl+B` or right-click the |showBookmarks| :guilabel:`Spatial
+   Bookmarks` entry in
+   the :guilabel:`Browser` panel and select :guilabel:`New Spatial Bookmark`.
+   The :guilabel:`Bookmark Editor` dialog opens.
 
    .. _figure_create_bookmarks:
 
@@ -803,21 +808,67 @@ Note that you can have multiple bookmarks with the same name.
 Working with Bookmarks
 ......................
 
-To use or manage bookmarks, select :menuselection:`View --> Show
-Bookmarks` or press :kbd:`Ctrl+7`. The :guilabel:`Spatial Bookmarks`
-panel allows you to:
+To use and manage bookmarks, you can either use the :guilabel:`Spatial Bookmarks`
+panel or :guilabel:`Browser`.
 
-* Zoom to a Bookmark: select the desired bookmark and then click
-  :guilabel:`Zoom To Bookmark`. You can also zoom to a bookmark by
-  double-clicking on it.
-* Delete a Bookmark: select the bookmark and click :guilabel:`Delete Bookmark`.
-  Confirm your choice.
-* Import or Export a bookmark: To share or transfer your bookmarks between
-  computers you can use the :guilabel:`Import/Export Bookmarks` drop-down menu
-  to export all bookmarks to an :file:`.xml` file or import bookmarks from such
-  a file.
+Select :menuselection:`View -->` |showBookmarks| :menuselection:`Show Spatial
+Bookmark Manager` or press :kbd:`Ctrl+7`
+to open the :guilabel:`Spatial Bookmarks Manager` panel.
+Select :menuselection:`View -->` |showBookmarks| :menuselection:`Show Bookmarks`
+or :kbd:`Ctrl+Shift+B` to show
+the |showBookmarks| :guilabel:`Spatial Bookmarks` entry in the
+:guilabel:`Browser` panel.
 
-You can also zoom to saved bookmarks by typing the bookmark name in the :ref:`locator <label_statusbar>`.
+You can perform the following tasks:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 40 40
+   :stub-columns: 0
+
+   * - Task
+     - Spatial Bookmark Manager
+     - Browser
+   * - **Zoom to a Bookmark**
+     - Double-click on it, or select the bookmark and press the
+       |zoomToBookmark| :guilabel:`Zoom to bookmark` button.
+     - Double-click on it, drag and drop it to the map canvas, or right-click
+       the bookmark and select :guilabel:`Zoom to Bookmark`.
+   * - **Delete a bookmark**
+     - Select the bookmark and click the |deleteSelected| :guilabel:`Delete bookmark` button.
+       Confirm your choice.
+     - Right-click the bookmark and select :guilabel:`Delete Spatial Bookmark`.
+       Confirm your choice.
+   * - **Export bookmarks to XML**
+     - Click the |sharing| :guilabel:`Import/Export Bookmarks` button and select
+       |sharingExport| :guilabel:`Export`.
+       All the bookmarks (user or project) are saved in an xml file.
+     - Select one or more folders (user or project) or subfolders (groups),
+       then right-click and select |sharingExport| :guilabel:`Export Spatial Bookmarks...`.
+       The selected bookmark subset is saved.
+   * - **Import bookmarks from XML**
+     - Click the |sharing| :guilabel:`Import/Export Bookmarks` button and
+       select |sharingImport| :guilabel:`Import`.
+       All bookmarks in the XML file are imported as user bookmarks.
+     - Right-click the :guilabel:`Spatial Bookmarks` entry or one of its folders (user or
+       project) or subfolders (groups) to determine where to import the
+       bookmarks, then select |sharingImport| :guilabel:`Import Spatial Bookmarks`.
+       If performed on the :guilabel:`Spatial Bookmarks` entry, the bookmarks
+       are added to :guilabel:`User Bookmarks`.
+   * - **Edit bookmark**
+     - You can change a bookmark by changing the values in the table. You can
+       edit the name, the group, the extent and if it is stored in the project or
+       not.
+     - Right-click the desired bookmark and select :guilabel:`Edit Spatial
+       Bookmark...`.
+       The :guilabel:`Bookmark Editor` will open, allowing you to redefine every
+       aspect of the bookmark as if you were creating it for the first time.
+
+       You can also drag and drop the bookmark between folders (user and
+       project) and subfolders (groups).
+
+You can also zoom to bookmarks by typing the bookmark name in the
+:ref:`locator <label_statusbar>`.
 
 .. index:: Decorations
 .. _decorations:
@@ -848,7 +899,7 @@ annotations to the map canvas.
 
 #. Tick |checkbox| :guilabel:`Enable grid` and set grid
    definitions according to the layers loaded in the map canvas:
-   
+
    * The :guilabel:`Grid type`: it can be :guilabel:`Line` or :guilabel:`Marker`
    * The associated :ref:`Line symbol <vector_line_symbols>` or :ref:`marker
      symbol <vector_marker_symbols>` used to represent the grid marks
@@ -859,14 +910,14 @@ annotations to the map canvas.
    * The interval and offset parameters can be set based on the:
 
      * :guilabel:`Canvas Extents`: generates a grid with an interval that is
-       approximatively 1/5 of the canvas width 
+       approximatively 1/5 of the canvas width
      * :guilabel:`Active Raster Layer` resolution
 #. Tick |checkbox| :guilabel:`Draw annotations` to display the coordinates of
    the grid marks and set:
 
    * The :guilabel:`Annotation direction`, ie how the labels would be placed
      relative to their grid line. It can be:
-   
+
      * :guilabel:`Horizontal` or :guilabel:`Vertical` for all the labels
      * :guilabel:`Horizontal and Vertical`, ie each label is parallel to the
        grid mark it refers to
@@ -946,7 +997,7 @@ with options for style and placement.
 To add a north arrow:
 
 #. Select :menuselection:`View --> Decorations --> North Arrow` to open the dialog.
-   
+
    .. _figure_decorations_north:
 
    .. figure:: img/north_arrow_dialog.png
@@ -993,7 +1044,7 @@ To add a scale bar:
 #. Make sure |checkbox| :guilabel:`Enable scale bar` is checked
 #. Choose a style from the :guilabel:`Scale bar style` |selectString| combo box
 #. Select the :guilabel:`Color of bar` |selectColor| by choosing
-   a fill color (default: black) and an outline color (default: white). The scale 
+   a fill color (default: black) and an outline color (default: white). The scale
    bar fill and outline can be made opaque by clicking on the down arrow to the right
    of the color input.
 #. Select the font for the scale bar from the :guilabel:`Font of bar` |selectString| combo box
@@ -1187,7 +1238,7 @@ Properties... --> General` menu.
    Options --> Map Tools` menu, where you can select the rubberband color, the
    precision of the measurements and the unit behavior. You can also choose your
    preferred measurement or angle units, but keep in mind that those values are
-   overridden in the current project by the selection made in the 
+   overridden in the current project by the selection made in the
    :menuselection:`Project --> Properties... --> General` menu, and by the
    selection made in the measurement widget.
 
@@ -1296,16 +1347,16 @@ tools:
 .. note:: Other than |selectPolygon| :sup:`Select Features by Polygon`, these
    manual selection tools allow you to select feature(s) on the map canvas with a
    single click.
-   
+
 .. note:: Use the |selectPolygon| :sup:`Select Features by Polygon` tool
    to use an existing polygon to select overlapping features.
    Right-click in the polygon and choose it from the context menu that shows a
    list of all the polygons that contain the clicked point.
    All the overlapping features from the active layer are selected.
-   
-.. tip:: Use the `Reselect Features` tool to reselect your previous selection. 
-   Very useful when you have painstakingly made a selection, and then click 
-   somewhere else accidentally and clear your selection. 
+
+.. tip:: Use the `Reselect Features` tool to reselect your previous selection.
+   Very useful when you have painstakingly made a selection, and then click
+   somewhere else accidentally and clear your selection.
 
 While using the |selectRectangle| :guilabel:`Select Feature(s)` tool,
 holding :kbd:`Shift` or :kbd:`Ctrl` toggles whether a feature is selected
@@ -1770,7 +1821,7 @@ with name and description.
 .. _layer_definition_file:
 
 Layer definition file
---------------------- 
+---------------------
 
 Layer definitions can be saved as a ``Layer Definition File``
 (:file:`.qlr`) using
@@ -2080,10 +2131,10 @@ screen resolution, paper size, or the terrain). Available units are:
 * and :guilabel:`Map Units`: The size is scaled according to the map view scale.
   Because this can lead to too big or too small values, use the |options| button
   next to the entry to constrain the size to a range of values based on:
-  
+
   * The :guilabel:`Minimum scale` and the :guilabel:`Maximum scale`: The value
     is scaled based on the map view scale until you reach any of these scale limits.
-    Out of the range of scale, the value at the nearest scale limit is kept. 
+    Out of the range of scale, the value at the nearest scale limit is kept.
   * and/or The :guilabel:`Minimum size` and the :guilabel:`Maximum size` in ``mm``:
     The value is scaled based on the map view scale until it reaches any of these
     limits; Then the limit size is kept.
@@ -2093,7 +2144,7 @@ screen resolution, paper size, or the terrain). Available units are:
   .. figure:: img/adjust_scaling.png
      :align: center
 
-     Adjust scaling range dialog  
+     Adjust scaling range dialog
 
 
 .. index::
@@ -2287,6 +2338,8 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |dbManager| image:: /static/common/dbmanager.png
    :width: 1.5em
+.. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
+   :width: 1.5em
 .. |deselectAll| image:: /static/common/mActionDeselectAll.png
    :width: 1.5em
 .. |draw| image:: /static/common/mActionDraw.png
@@ -2365,6 +2418,8 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |messageLog| image:: /static/common/mMessageLog.png
    :width: 1.5em
+.. |newBookmark| image:: /static/common/mActionNewBookmark.png
+   :width: 1.5em
 .. |northArrow| image:: /static/common/north_arrow.png
    :width: 1.5em
 .. |openTable| image:: /static/common/mActionOpenTable.png
@@ -2397,7 +2452,15 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
+.. |sharing| image:: /static/common/mActionSharing.png
+   :width: 1.5em
+.. |sharingExport| image:: /static/common/mActionSharingExport.png
+   :width: 1.5em
+.. |sharingImport| image:: /static/common/mActionSharingImport.png
+   :width: 1.5em
 .. |showAllLayers| image:: /static/common/mActionShowAllLayers.png
+   :width: 1.5em
+.. |showBookmarks| image:: /static/common/mActionShowBookmarks.png
    :width: 1.5em
 .. |showMapTheme| image:: /static/common/mActionShowPresets.png
    :width: 1.5em
@@ -2428,6 +2491,8 @@ The values presented in the varying size assistant above will set the size
 .. |zoomIn| image:: /static/common/mActionZoomIn.png
    :width: 1.5em
 .. |zoomOut| image:: /static/common/mActionZoomOut.png
+   :width: 1.5em
+.. |zoomToBookmark| image:: /static/common/mActionZoomToBookmark.png
    :width: 1.5em
 .. |zoomToLayer| image:: /static/common/mActionZoomToLayer.png
    :width: 1.5em

@@ -126,6 +126,15 @@ Icon                            Substitution                        Icon        
 |editCopy|                      ``|editCopy|``                      |editPaste|                     ``|editPaste|``
 |editCut|                       ``|editCut|``                       |saveEdits|                     ``|saveEdits|``
 |editableEdits|                 ``|editableEdits|``
+|circle2Points|                 ``|circle2Points|``                 |circle2TangentsPoint|          ``|circle2TangentsPoint|``
+|circle3Points|                 ``|circle3Points|``                 |circle3Tangents|               ``|circle3Tangents|``
+|circle3Tangents|               ``|circleCenterPoint|``             |circleCenterPoint|             ``|circleCenterPoint|``
+|circleExtent|                  ``|circleExtent|``                  |ellipseCenter2Points|          ``|ellipseCenter2Points|``
+|ellipseCenterPoint|            ``|ellipseCenterPoint|``            |ellipseExtent|                 ``|ellipseExtent|``
+|ellipseFoci|                   ``|ellipseFoci|``                   |rectangle3PointsDistance|      ``|rectangle3PointsDistance|``
+|rectangle3PointsProjected|     ``|rectangle3PointsProjected|``     |rectangleCenter|               ``|rectangleCenter|``
+|rectangleExtent|               ``|rectangleExtent|``               |regularPolygon2Points|         ``|regularPolygon2Points|``
+|regularPolygonCenterCorner|    ``|regularPolygonCenterCorner|``    |regularPolygonCenterPoint|     ``|regularPolygonCenterPoint|``
 ==============================  ==================================  ==============================  ==================================
 
 Identity result
@@ -423,7 +432,7 @@ Icon                            Substitution                        Icon        
 |plugin|                        ``|plugin|``                        |interpolation|                 ``|interpolation|``
 |gdalScript|                    ``|gdalScript|``                    |metasearch|                    ``|metasearch|``
 |geometryChecker|               ``|geometryChecker|``               |topologyChecker|               ``|topologyChecker|``
-|fromSelectedFeature|           ``|fromSelectedFeature|``
+|fromSelectedFeature|           ``|fromSelectedFeature|``           |sqlQueryBuilder|               ``|sqlQueryBuilder|``
 ==============================  ==================================  ==============================  ==================================
 
 Grass integration
@@ -578,6 +587,18 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |circle2Points| image:: /static/common/mActionCircle2Points.png
+   :width: 1.5em
+.. |circle2TangentsPoint| image:: /static/common/mActionCircle2TangentsPoint.png
+   :width: 1.5em
+.. |circle3Points| image:: /static/common/mActionCircle3Points.png
+   :width: 1.5em
+.. |circle3Tangents| image:: /static/common/mActionCircle3Tangents.png
+   :width: 1.5em
+.. |circleCenterPoint| image:: /static/common/mActionCircleCenterPoint.png
+   :width: 1.5em
+.. |circleExtent| image:: /static/common/mActionCircleExtent.png
+   :width: 1.5em
 .. |circularStringCurvePoint| image:: /static/common/mActionCircularStringCurvePoint.png
    :width: 1.5em
 .. |circularStringRadius| image:: /static/common/mActionCircularStringRadius.png
@@ -684,6 +705,14 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |editableEdits| image:: /static/common/mIconEditableEdits.png
    :width: 1em
+.. |ellipseCenter2Points| image:: /static/common/mActionEllipseCenter2Points.png
+   :width: 1.5em
+.. |ellipseCenterPoint| image:: /static/common/mActionEllipseCenterPoint.png
+   :width: 1.5em
+.. |ellipseExtent| image:: /static/common/mActionEllipseExtent.png
+   :width: 1.5em
+.. |ellipseFoci| image:: /static/common/mActionEllipseFoci.png
+   :width: 1.5em
 .. |eventBrowser| image:: /static/common/event_browser.png
    :width: 1.5em
 .. |eventId| image:: /static/common/event_id.png
@@ -1025,7 +1054,21 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |rasterHistogram| image:: /static/common/rasterHistogram.png
    :width: 1.5em
+.. |rectangle3PointsDistance| image:: /static/common/mActionRectangle3PointsDistance.png
+   :width: 1.5em
+.. |rectangle3PointsProjected| image:: /static/common/mActionRectangle3PointsProjected.png
+   :width: 1.5em
+.. |rectangleCenter| image:: /static/common/mActionRectangleCenter.png
+   :width: 1.5em
+.. |rectangleExtent| image:: /static/common/mActionRectangleExtent.png
+   :width: 1.5em
 .. |redo| image:: /static/common/mActionRedo.png
+   :width: 1.5em
+.. |regularPolygon2Points| image:: /static/common/mActionRegularPolygon2Points.png
+   :width: 1.5em
+.. |regularPolygonCenterCorner| image:: /static/common/mActionRegularPolygonCenterCorner.png
+   :width: 1.5em
+.. |regularPolygonCenterPoint| image:: /static/common/mActionRegularPolygonCenterPoint.png
    :width: 1.5em
 .. |removeAllOVerview| image:: /static/common/mActionRemoveAllFromOverview.png
    :width: 1.5em
@@ -1147,6 +1190,8 @@ Icon                            Substitution                        Icon        
 .. |splitLayer| image:: /static/common/split_layer.png
    :width: 1.5em
 .. |splitParts| image:: /static/common/mActionSplitParts.png
+   :width: 1.5em
+.. |sqlQueryBuilder| image:: /static/common/sqlquerybuilder.png
    :width: 1.5em
 .. |start| image:: /static/common/mActionStart.png
    :width: 1.5em
