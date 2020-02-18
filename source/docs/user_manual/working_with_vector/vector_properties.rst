@@ -1992,7 +1992,7 @@ in figure_fields_form_.
 #. The next step is to assign the relevant fields to each container,
    by simple drag and drop. Groups and tabs can also be moved in the same way.
 #. At their creation time you can set properties of the containers
-   These, and other properties can be updated with a double-click - QGIS opens a form in
+   These, and other properties can be updated by selecting the item - QGIS displays a form in
    which you can:
 
    * choose to hide or show the item label
@@ -2004,13 +2004,13 @@ in figure_fields_form_.
    * show the container as a group box (only available for tabs).
    * add a background color
 
-#. Likewise, double-click a field label and you can specify whether the label
+#. Likewise, select a field label and you can specify whether the label
    of its widget should be visible or not in the form.
 
 #. In case the layer is involved in ``one or many to many relations`` (see
    :ref:`vector_relations`), referencing layers are listed in the
    :guilabel:`Relations` frame and their form can be embedded in the current
-   layer form by drag-and-drop. As for the other items, double-click the relation
+   layer form by drag-and-drop. As for the other items, select the relation
    label to configure some options:
 
    * choose to hide or show the item label
