@@ -2340,7 +2340,7 @@ Parameters
        Optional
      - ``FILE4``
      - [file]
-     - The fouth file to merge
+     - The fourth file to merge
    * - **5th file**
 
        Optional
@@ -2741,7 +2741,7 @@ Parameters
      - ``PARSE``
      - [string]
 
-       Default: 'xyz
+       Default: 'xyz'
      - 
    * - **skip the first n lines**
      - ``SKIP``
