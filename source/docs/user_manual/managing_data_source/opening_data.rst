@@ -113,23 +113,33 @@ and manage geodata, regardless the type of layer (raster, vector, table),
 or the datasource format (plain or compressed files, databases, web services).
 
 The entries in the :guilabel:`Browser` panel are organised
-hierarchically, and there are several top level entries.
-First comes :guilabel:`Favorites` (where you can place shortcuts to
-often used locations).
-Then comes :guilabel:`Spatial Bookmarks`,
-followed by your :guilabel:`Project Home` (the default is the directory
-where your project file resides),
-your :guilabel:`Home` directory in the file system and the filesystem
-root directory (:guilabel:`/`).
-Then comes a number of container / database types and service protocols
-(that may or may not be relevant to you):
-:guilabel:`GeoPackage`, :guilabel:`SpatiaLite`,
-:guilabel:`PostGIS`, :guilabel:`MSSQL`,
-:guilabel:`DB2`, :guilabel:`WMS/WMTS`,
-:guilabel:`XYZ Tiles`, :guilabel:`WCS`,
-:guilabel:`WFS`, :guilabel:`OWS`,
-:guilabel:`ArcGISMapServer`, :guilabel:`ArcGISFeatureServer` and
-:guilabel:`GeoNode`.
+hierarchically, and there are several top level entries:
+
+#. :guilabel:`Favorites` where you can place shortcuts to often used locations
+#. :guilabel:`Spatial Bookmarks` where you can store often used map extents
+   (see :ref:`sec_bookmarks`)
+#. :guilabel:`Project Home`: for a quick access to the folder in which (most of)
+   the data related to your project are stored. The default value is the directory
+   where your project file resides.
+#. :guilabel:`Home` directory in the file system and the filesystem root directory.
+#. Connected local or network drives
+#. Then comes a number of container / database types and service protocols,
+   depending on your platform and underlying libraries:
+
+   * :guilabel:`GeoPackage`
+   * :guilabel:`SpatiaLite`
+   * :guilabel:`PostGIS`
+   * :guilabel:`MSSQL`
+   * :guilabel:`Oracle`
+   * :guilabel:`DB2`
+   * :guilabel:`WMS/WMTS`
+   * :guilabel:`XYZ Tiles`
+   * :guilabel:`WCS`
+   * :guilabel:`WFS`
+   * :guilabel:`OWS`
+   * :guilabel:`ArcGISMapServer`
+   * :guilabel:`ArcGISFeatureServer`
+   * :guilabel:`GeoNode`
 
 The browser supports drag and drop within the browser, from the browser to
 the canvas and :guilabel:`Layers` panel, and from the :guilabel:`Layers` panel
@@ -147,23 +157,21 @@ by right-clicking on it.
 
 For file system directory entries, the context menu offers the following:
 
-* :guilabel:`New` -->
+* :menuselection:`New -->` to create in the selected entry a:
 
   * :guilabel:`Directory...`
   * :guilabel:`GeoPackage...`
   * :guilabel:`ShapeFile...`
-* :guilabel:`Add as a Favorite`
-* :guilabel:`Hide from Browser`
+* :guilabel:`Add as a Favorite`: favorite folders can anytime be renamed
+  (:guilabel:`Rename favorite...`) or removed (:guilabel:`Remove favorite`)
+* :guilabel:`Hide from Browser`: hidden folders can be toggled to visible from
+  the :menuselection:`Settings --> Options --> Data Sources --> Hidden browser
+  paths` setting
 * :guilabel:`Fast Scan this Directory`
 * :guilabel:`Open Directory`
 * :guilabel:`Open in Terminal`
 * :guilabel:`Properties...`
 * :guilabel:`Directory Properties...`
-
-:guilabel:`Favourites`, can also be removed and renamed:
-
-* :guilabel:`Rename favourite...`
-* :guilabel:`Remove favourite`
 
 For leaf entries that can act as layers in the project, the context
 menu will have supporting entries.
