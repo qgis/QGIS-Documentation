@@ -2340,7 +2340,7 @@ Parameters
        Optional
      - ``FILE4``
      - [file]
-     - The fouth file to merge
+     - The fourth file to merge
    * - **5th file**
 
        Optional
