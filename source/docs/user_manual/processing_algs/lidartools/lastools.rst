@@ -2741,7 +2741,7 @@ Parameters
      - ``PARSE``
      - [string]
 
-       Default: 'xyz
+       Default: 'xyz'
      - 
    * - **skip the first n lines**
      - ``SKIP``
