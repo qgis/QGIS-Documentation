@@ -1148,9 +1148,9 @@ Convert geometry type
 Generates a new layer based on an existing one, with a different type
 of geometry.
 
-Not all conversions are possible. For instance, a line layer can be
-converted to a point layer, but a point layer cannot be converted to a
-line layer.
+Not all conversions are possible. For instance, a line feature can be
+converted to a point, but a point feature cannot be converted to a
+line. A line feature can also be converted to polygon.
 
 .. seealso:: :ref:`qgispolygonize`, :ref:`qgislinestopolygons`
 
@@ -1183,10 +1183,6 @@ Parameters
        * 2 --- Linestrings
        * 3 --- Multilinestrings
        * 4 --- Polygons
-
-       .. note:: The available conversion types depend on
-          the input layer and the conversion chosen:
-          e.g. it is not possible to convert a point to a line.
 
    * - **Converted**
      - ``OUTPUT``
