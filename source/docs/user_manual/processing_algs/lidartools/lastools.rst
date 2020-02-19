@@ -2028,7 +2028,7 @@ Parameters
        * 0 --- lowest
        * 1 --- heighest
        * 2 --- average
-       * 3 --- stdeev
+       * 3 --- stddev
 
    * - **use tile bounding box (after tiling with buffer)**
      - ``USE_TILE_BB``
