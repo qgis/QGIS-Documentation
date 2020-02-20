@@ -241,11 +241,14 @@ Depending on your operating system, you may have to use
 After installing the **Processing R Provider** plugin, you will find
 some example scripts in the :guilabel:`Processing Toolbox`:
 
-* :guilabel:`Scatterplot` runs an R function that produces a plot
-* :guilabel:`test_sf` can be used to check if the R package `sf` is
+* :guilabel:`Scatterplot` runs an R function that produces a scatter
+  plot from two numerical fields of the provided vector layer. 
+* :guilabel:`test_sf` does some operations that depend on the ``sf``
+  package and can be used to check if the R package `sf` is
   installed.
-  If the package is not installed, R will try to install it for you,
-  using the :guilabel:`Package repository` specified in
+  If the package is not installed, R will try to install it (and all
+  the packages it depends on) for you, using the
+  :guilabel:`Package repository` specified in
   :menuselection:`Provider-> R` in the Processing options.
   The default is `http://cran.at.r-project.org/`.
   Installing may take some time...
@@ -268,8 +271,7 @@ R integration in QGIS is different from that of SAGA in that there
 is not a predefined set of algorithms you can run (except for some
 example script that come with the *Processing R Provider* plugin).
 
-A useful set of example R scripts is available in the QGIS
-Repository.
+A set of example R scripts is available in the QGIS Repository.
 Perform the following steps to load and enable them using the
 *QGIS Resource Sharing* plugin.
 
@@ -285,44 +287,55 @@ Perform the following steps to load and enable them using the
 #. The collection should now be listed in the :guilabel:`Installed`
    tab
 #. Close the plugin
-#. Open the Processing settings
-   (:menuselection:`Settings-> Options-> Processing` tab)
+#. Open the Processing toolbox, and if everything has worked as it
+   should, the example scripts will be present under R, in various
+   groups (only some of the groups are expanded in the screenshot
+   below).
 
-#. Go to :menuselection:`Providers-> R-> R scripts folder`
+   .. figure:: img/processing_toolbox_r_scripts.png
+      :align: center
 
-   * On Ubuntu, set the path to (or, better, include in the path):
-
-       /home/<user>/.local/share/QGIS/QGIS3/profiles/default/resource_sharing/repositories/github.com/qgis/QGIS-Resources/collections/rscripts
-
-     .. figure:: img/rscript_folder.png
-        :align: center
-
-   * On Windows, set the path to (or, better, include in the path):
-
-       C:\Users\<user>\AppData\Roaming\QGIS\QGIS3\profiles\default\resource_sharing\repositories\github.com\qgis\QGIS-Resources\collections\rscripts
-
-   To edit, double-click.  You can then choose to just paste / type
-   the path, or you can navigate to the directory by using the
-   :guilabel:`...` button and press the :guilabel:`Add` button in the
-   dialog that opens.
-   It is possible to provide several directories here.
-   They will be separated by a semicolon (";").
-   
-   .. figure:: img/rscript_folder_add.png
-      :align: center   
-
-All the R scrips from the QGIS 2 on-line collection should now be
-available in the Processing Toolbox (only some of the groups are
-expanded in the screenshot below):
-
-.. figure:: img/processing_toolbox_r_scripts.png
-   :align: center
-
-   Processing toolbox with some R scripts shown
+      Processing toolbox with some R scripts shown
 
 The scripts at the top come from the default rscripts folder -
 in this case, it is included in the :guilabel:`R scripts folder`
 path.
+
+   
+   
+#. If, for some reason, the scripts are not there, you can try to
+
+   #. Open the Processing settings
+      (:menuselection:`Settings-> Options-> Processing` tab)
+
+   #. Go to :menuselection:`Providers-> R-> R scripts folder`
+
+      * On Ubuntu, set the path to (or, better, include in the path):
+
+          /home/<user>/.local/share/QGIS/QGIS3/profiles/default/resource_sharing/repositories/github.com/qgis/QGIS-Resources/collections/rscripts
+
+        .. figure:: img/rscript_folder.png
+           :align: center
+
+      * On Windows, set the path to (or, better, include in the path):
+
+          C:\Users\<user>\AppData\Roaming\QGIS\QGIS3\profiles\default\resource_sharing\repositories\github.com\qgis\QGIS-Resources\collections\rscripts
+
+      To edit, double-click.  You can then choose to just paste / type
+      the path, or you can navigate to the directory by using the
+      :guilabel:`...` button and press the :guilabel:`Add` button in the
+      dialog that opens.
+      It is possible to provide several directories here.
+      They will be separated by a semicolon (";").
+   
+      .. figure:: img/rscript_folder_add.png
+         :align: center   
+
+If you would like to get all the R scrips from the QGIS 2 on-line
+collection, you can select *QGIS R script collection (from QGIS 2)*
+instead of *QGIS R script collection*.
+You will find probably find that scripts that depend on vector
+data input or output will not work.
 
 
 .. _creating_r_scripts:
