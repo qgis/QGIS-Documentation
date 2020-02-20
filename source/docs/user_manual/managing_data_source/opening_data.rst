@@ -526,13 +526,13 @@ Once the file is parsed, set :guilabel:`Geometry definition` to
   point geometry type and contains such fields. If the coordinates
   are defined as degrees/minutes/seconds, activate the
   |checkbox|:guilabel:`DMS coordinates` checkbox.
-  Indicate the appropriate :guilabel:`Geometry CRS` using the |setProjection|
+  Provide the appropriate :guilabel:`Geometry CRS` using the |setProjection|
   :sup:`Select CRS` widget.
 * |radioButtonOn|:guilabel:`Well known text (WKT)` option if the spatial
   information is represented as WKT: select the :guilabel:`Geometry field`
   containing the WKT geometry and choose the approriate :guilabel:`Geometry
   field` or let QGIS auto-detect it.
-  Indicate the appropriate :guilabel:`Geometry CRS` using the |setProjection|
+  Provide the appropriate :guilabel:`Geometry CRS` using the |setProjection|
   :sup:`Select CRS` widget.
 * If the file contains non-spatial data, activate |radioButtonOn| :guilabel:`No
   geometry (attribute only table)` and it will be loaded as an ordinary table.
