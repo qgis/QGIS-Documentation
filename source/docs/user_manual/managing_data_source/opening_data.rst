@@ -112,6 +112,27 @@ In both cases, the :guilabel:`Browser` helps you navigate in your file system
 and manage geodata, regardless the type of layer (raster, vector, table),
 or the datasource format (plain or compressed files, databases, web services).
 
+At the top of the Browser panel, you find some buttons that help you to:
+
+* |addLayer| :sup:`Add Selected Layers`: you can also add data to the map
+  canvas by selecting **Add selected layer(s)** from the layer's context menu;
+* |draw| :sup:`Refresh` the browser tree;
+* |filterMap| :sup:`Filter Browser` to search for specific data. Enter a search
+  word or wildcard and the browser will filter the tree to only show paths to
+  matching DB tables, filenames or folders -- other data or folders won't be
+  displayed. See the Browser Panel(2) example in figure_browser_panels_.
+  The comparison can be case-sensitive or not. It can also be set to:
+
+  * :guilabel:`Normal`: show items containing the search text
+  * :guilabel:`Wildcard(s)`: fine tune the search using the ``?`` and/or ``*``
+    characters to specify the position of the search text
+  * :guilabel:`Regular expression`
+
+* |collapseTree| :sup:`Collapse All` the whole tree;
+* |metadata| :sup:`Enable/disable properties widget`: when toggled on,
+  a new widget is added at the bottom of the panel showing, if applicable,
+  metadata for the selected item.
+
 The entries in the :guilabel:`Browser` panel are organised
 hierarchically, and there are several top level entries.
 First comes :guilabel:`Favorites` (where you can place shortcuts to
@@ -218,27 +239,6 @@ legend and choosing :menuselection:`Properties` from the context menu. See
 section :ref:`vector_style_menu` for more information on setting symbology for
 vector layers.
 
-
-At the top of the Browser panel, you find some buttons that help you to:
-
-* |addLayer| :sup:`Add Selected Layers`: you can also add data to the map
-  canvas by selecting **Add selected layer(s)** from the layer's context menu;
-* |draw| :sup:`Refresh` the browser tree;
-* |filterMap| :sup:`Filter Browser` to search for specific data. Enter a search
-  word or wildcard and the browser will filter the tree to only show paths to
-  matching DB tables, filenames or folders -- other data or folders won't be
-  displayed. See the Browser Panel(2) example in figure_browser_panels_.
-  The comparison can be case-sensitive or not. It can also be set to:
-
-  * :guilabel:`Normal`: show items containing the search text
-  * :guilabel:`Wildcard(s)`: fine tune the search using the ``?`` and/or ``*``
-    characters to specify the position of the search text
-  * :guilabel:`Regular expression`
-
-* |collapseTree| :sup:`Collapse All` the whole tree;
-* |metadata| :sup:`Enable/disable properties widget`: when toggled on,
-  a new widget is added at the bottom of the panel showing, if applicable,
-  metadata for the selected item.
 
 Right-clicking an item in the browser tree helps you to:
 
