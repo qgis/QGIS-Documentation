@@ -112,6 +112,9 @@ In both cases, the :guilabel:`Browser` helps you navigate in your file system
 and manage geodata, regardless the type of layer (raster, vector, table),
 or the datasource format (plain or compressed files, databases, web services).
 
+Exploring the Interface
+-----------------------
+
 At the top of the Browser panel, you find some buttons that help you to:
 
 * |addLayer| :sup:`Add Selected Layers`: you can also add data to the map
@@ -162,6 +165,9 @@ Project items are treated the same way as any other item in the browser,
 so they can be dragged and dropped within the browser (for example to
 copy a layer item to a geopackage file) or added to the current project
 through drag and drop or double click.
+
+Interacting with the Browser items
+----------------------------------
 
 The context menu for an element in the :guilabel:`Browser` panel is opened
 by right-clicking on it.
