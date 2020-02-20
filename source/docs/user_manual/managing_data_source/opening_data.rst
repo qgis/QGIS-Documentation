@@ -365,6 +365,36 @@ Using the |addOgrLayer| :sup:`Add Vector Layer` tool:
    and press :kbd:`Enter`. Then you can navigate to external drives and network
    mounts.
 
+<<<<<<< HEAD
+=======
+.. _mesh_loading:
+
+Loading a mesh layer
+--------------------
+
+A mesh is an unstructured grid usually with temporal and other components.
+The spatial component contains a collection of vertices, edges and faces
+in 2D or 3D space. More information on mesh layers at :ref:`label_meshdata`.
+
+To add a mesh layer to QGIS:
+
+#. Open the :menuselection:`Data Source Manager` dialog, either by selecting it
+   from the :menuselection:`Layer -->` menu or clicking the |dataSourceManager|
+   :sup:`Open Data Source Manager` button.
+#. Enable the |addMeshLayer| :guilabel:`Mesh` tab on the left panel
+#. Press the :guilabel:`...` :sup:`Browse` button to select the file.
+   :ref:`Various formats <mesh_supported_formats>` are supported.
+#. Select the layer and press :guilabel:`Add`.
+   The layer will be added using the native mesh rendering.
+
+.. _figure_mesh_datasource_manager:
+
+.. figure:: img/mesh_datasource_manager.png
+   :align: center
+
+   Mesh tab in Data Source Manager
+
+>>>>>>> 2f39a7b0f... Group "Add delimited text layer" instructions (#4926)
 
 .. index:: CSV, Delimited text files
    see: Comma Separated Values; CSV
@@ -379,9 +409,20 @@ simple table data. Sometimes, delimited text files can contain geometric data
 you'd want to visualize; this is what the |addDelimitedTextLayer|:guilabel:`Add
 Delimited Text Layer` is designed for.
 
+<<<<<<< HEAD
 Click the |dataSourceManager| :sup:`Open Data Source Manager` icon to open the
 :guilabel:`Data Source Manager` dialog and enable the |addDelimitedTextLayer|
 :guilabel:`Delimited Text` tab, as shown in figure_delimited_text_.
+=======
+#. Click the |dataSourceManager| :sup:`Open Data Source Manager` icon to
+   open the :guilabel:`Data Source Manager` dialog
+#. Enable the |addDelimitedTextLayer| :guilabel:`Delimited Text` tab
+#. Select the delimited text file to import (e.g., :file:`qgis_sample_data/csv/elevp.csv`)
+   by clicking on the :guilabel:`...` :sup:`Browse` button.
+#. In the :guilabel:`Layer name` field, provide the name to use for
+   the layer in the project (e.g. :file:`Elevation`).
+#. Configure the settings to meet your dataset and needs, as explained below.
+>>>>>>> 2f39a7b0f... Group "Add delimited text layer" instructions (#4926)
 
 .. _figure_delimited_text:
 
@@ -390,10 +431,13 @@ Click the |dataSourceManager| :sup:`Open Data Source Manager` icon to open the
 
    Delimited Text Dialog
 
+<<<<<<< HEAD
 First, select the file to import (e.g., :file:`qgis_sample_data/csv/elevp.csv`)
 by clicking on the :guilabel:`Browse` button. In the :guilabel:`Layer name` field,
 provide the name to use for the layer in the project (e.g., :file:`Elevation`).
 
+=======
+>>>>>>> 2f39a7b0f... Group "Add delimited text layer" instructions (#4926)
 File format
 ...........
 
@@ -438,6 +482,7 @@ Geometry definition
 Once the file is parsed, set :guilabel:`Geometry definition` to
 
 * |radioButtonOn|:guilabel:`Point coordinates` and provide the :guilabel:`X
+<<<<<<< HEAD
   field` and :guilabel:`Y field` if the layer is of point geometry type and
   contain such coordinate fields. If the coordinates are defined as
   degrees/minutes/seconds, activate the |checkbox|:guilabel:`DMS coordinates`
@@ -452,6 +497,24 @@ Once the file is parsed, set :guilabel:`Geometry definition` to
 Besides the features geometry information, you can also set the layer's
 :guilabel:`Geometry CRS` using the |setProjection| :sup:`Select CRS` widget.
 
+=======
+  field`, :guilabel:`Y field`, :guilabel:`Z field` (for 3-dimensional data)
+  and :guilabel:`M field` (for the measurement dimension) if the layer is of 
+  point geometry type and contains such fields. If the coordinates
+  are defined as degrees/minutes/seconds, activate the
+  |checkbox|:guilabel:`DMS coordinates` checkbox.
+  Provide the appropriate :guilabel:`Geometry CRS` using the |setProjection|
+  :sup:`Select CRS` widget.
+* |radioButtonOn|:guilabel:`Well known text (WKT)` option if the spatial
+  information is represented as WKT: select the :guilabel:`Geometry field`
+  containing the WKT geometry and choose the approriate :guilabel:`Geometry
+  field` or let QGIS auto-detect it.
+  Provide the appropriate :guilabel:`Geometry CRS` using the |setProjection|
+  :sup:`Select CRS` widget.
+* If the file contains non-spatial data, activate |radioButtonOn| :guilabel:`No
+  geometry (attribute only table)` and it will be loaded as an ordinary table.
+
+>>>>>>> 2f39a7b0f... Group "Add delimited text layer" instructions (#4926)
 Layer settings
 ..............
 
