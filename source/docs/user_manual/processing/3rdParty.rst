@@ -244,7 +244,7 @@ some example scripts in the :guilabel:`Processing Toolbox`:
 * :guilabel:`Scatterplot` runs an R function that produces a scatter
   plot from two numerical fields of the provided vector layer. 
 * :guilabel:`test_sf` does some operations that depend on the ``sf``
-  package and can be used to check if the R package `sf` is
+  package and can be used to check if the R package ``sf`` is
   installed.
   If the package is not installed, R will try to install it (and all
   the packages it depends on) for you, using the
@@ -252,14 +252,15 @@ some example scripts in the :guilabel:`Processing Toolbox`:
   :menuselection:`Provider-> R` in the Processing options.
   The default is `http://cran.at.r-project.org/`.
   Installing may take some time...
-* :guilabel:`test_sp` can be used to check if the R package `sp` is
+* :guilabel:`test_sp` can be used to check if the R package ``sp`` is
   installed.
   If the package is not installed, R will try to install it for you.
 
 .. figure:: img/processing_toolbox_r_install.png
    :align: center
 
-If you have R configured correctly for QGIS, these scripts can be run.
+If you have R configured correctly for QGIS, you should be able to
+run these scripts.
 
 
 .. _adding_r_scripts:
@@ -287,23 +288,21 @@ Perform the following steps to load and enable them using the
 #. The collection should now be listed in the :guilabel:`Installed`
    tab
 #. Close the plugin
-#. Open the Processing toolbox, and if everything has worked as it
-   should, the example scripts will be present under R, in various
+#. Open the :guilabel:`Processing Toolbox`, and if everything is
+   OK, the example scripts will be present under R, in various
    groups (only some of the groups are expanded in the screenshot
    below).
 
    .. figure:: img/processing_toolbox_r_scripts.png
       :align: center
 
-      Processing toolbox with some R scripts shown
+      The :guilabel:`Processing Toolbox` with some R scripts shown
 
-The scripts at the top come from the default rscripts folder -
-in this case, it is included in the :guilabel:`R scripts folder`
-path.
+   The scripts at the top are the example scripts from the
+   *Processing R Provider* plugin.
 
-   
-   
-#. If, for some reason, the scripts are not there, you can try to
+#. If, for some reason, the scripts are not available in the
+   :guilabel:`Processing Toolbox`, you can try to:
 
    #. Open the Processing settings
       (:menuselection:`Settings-> Options-> Processing` tab)
