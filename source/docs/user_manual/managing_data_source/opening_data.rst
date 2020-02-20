@@ -426,7 +426,6 @@ A mesh is an unstructured grid usually with temporal and other components.
 The spatial component contains a collection of vertices, edges and faces
 in 2D or 3D space. More information on mesh layers at :ref:`label_meshdata`.
 
-
 To add a mesh layer to QGIS:
 
 #. Open the :menuselection:`Data Source Manager` dialog, either by selecting it
@@ -461,9 +460,14 @@ that you could want to visualize.
 This is what |addDelimitedTextLayer|:guilabel:`Add Delimited Text Layer`
 is designed for.
 
-Click the |dataSourceManager| :sup:`Open Data Source Manager` icon to open the
-:guilabel:`Data Source Manager` and enable the |addDelimitedTextLayer|
-:guilabel:`Delimited Text` tab, as shown in figure_delimited_text_.
+#. Click the |dataSourceManager| :sup:`Open Data Source Manager` icon to
+   open the :guilabel:`Data Source Manager` dialog
+#. Enable the |addDelimitedTextLayer| :guilabel:`Delimited Text` tab
+#. Select the delimited text file to import (e.g., :file:`qgis_sample_data/csv/elevp.csv`)
+   by clicking on the :guilabel:`...` :sup:`Browse` button.
+#. In the :guilabel:`Layer name` field, provide the name to use for
+   the layer in the project (e.g. :file:`Elevation`).
+#. Configure the settings to meet your dataset and needs, as explained below.
 
 .. _figure_delimited_text:
 
@@ -471,11 +475,6 @@ Click the |dataSourceManager| :sup:`Open Data Source Manager` icon to open the
    :align: center
 
    Delimited Text Dialog
-
-First, select the file to import (e.g., :file:`qgis_sample_data/csv/elevp.csv`)
-by clicking on the :guilabel:`...` :sup:`Browse` button.
-In the :guilabel:`Layer name` field, provide the name to use for
-the layer in the project (e.g. :file:`Elevation`).
 
 File format
 ...........
@@ -527,15 +526,16 @@ Once the file is parsed, set :guilabel:`Geometry definition` to
   point geometry type and contains such fields. If the coordinates
   are defined as degrees/minutes/seconds, activate the
   |checkbox|:guilabel:`DMS coordinates` checkbox.
+  Provide the appropriate :guilabel:`Geometry CRS` using the |setProjection|
+  :sup:`Select CRS` widget.
 * |radioButtonOn|:guilabel:`Well known text (WKT)` option if the spatial
   information is represented as WKT: select the :guilabel:`Geometry field`
   containing the WKT geometry and choose the approriate :guilabel:`Geometry
   field` or let QGIS auto-detect it.
+  Provide the appropriate :guilabel:`Geometry CRS` using the |setProjection|
+  :sup:`Select CRS` widget.
 * If the file contains non-spatial data, activate |radioButtonOn| :guilabel:`No
   geometry (attribute only table)` and it will be loaded as an ordinary table.
-
-Beside the features geometry information, you can also set the layer's
-:guilabel:`Geometry CRS` using the |setProjection| :sup:`Select CRS` widget.
 
 Layer settings
 ..............
