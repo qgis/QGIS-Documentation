@@ -227,13 +227,13 @@ plugin gets loaded into QGIS. It receives a reference to the instance of
 the :file:`mainplugin.py` --- in our case it's called ``TestPlugin`` (see below).
 This is how :file:`__init__.py` should look like
 
-::
+.. code-block:: python
 
   def classFactory(iface):
     from .mainPlugin import TestPlugin
     return TestPlugin(iface)
 
-  ## any other initialisation needed
+  # any other initialisation needed
 
 
 mainPlugin.py
@@ -242,7 +242,7 @@ mainPlugin.py
 This is where the magic happens and this is how magic looks like:
 (e.g. :file:`mainPlugin.py`)
 
-::
+.. code-block:: python
 
   from qgis.PyQt.QtGui import *
   from qgis.PyQt.QtWidgets import *
@@ -258,7 +258,9 @@ This is where the magic happens and this is how magic looks like:
 
     def initGui(self):
       # create action that will start plugin configuration
-      self.action = QAction(QIcon(":/plugins/testplug/icon.png"), "Test plugin", self.iface.mainWindow())
+      self.action = QAction(QIcon(":/plugins/testplug/icon.png"),
+                            "Test plugin",
+                            self.iface.mainWindow())
       self.action.setObjectName("testAction")
       self.action.setWhatsThis("Configuration for test plugin")
       self.action.setStatusTip("This is status tip")
@@ -292,9 +294,9 @@ This is where the magic happens and this is how magic looks like:
 The only plugin functions that must exist in the main plugin source file (e.g.
 :file:`mainPlugin.py`) are:
 
-* ``__init__``    --> which gives access to QGIS interface
-* ``initGui()``   --> called when the plugin is loaded
-* ``unload()``    --> called when the plugin is unloaded
+* ``__init__`` which gives access to QGIS interface
+* ``initGui()`` called when the plugin is loaded
+* ``unload()`` called when the plugin is unloaded
 
 In the above example, :meth:`addPluginToMenu <qgis.gui.QgisInterface.addPluginToMenu>` is used.
 This will add the corresponding menu action to the :menuselection:`Plugins`
@@ -313,14 +315,16 @@ Adding your plugin menu to one of those predefined method is recommended to
 keep consistency in how plugin entries are organized. However, you can add your
 custom menu group directly to the menu bar, as the next example demonstrates:
 
-::
+.. code-block:: python
 
     def initGui(self):
         self.menu = QMenu(self.iface.mainWindow())
         self.menu.setObjectName("testMenu")
         self.menu.setTitle("MyMenu")
 
-        self.action = QAction(QIcon(":/plugins/testplug/icon.png"), "Test plugin", self.iface.mainWindow())
+        self.action = QAction(QIcon(":/plugins/testplug/icon.png"),
+                              "Test plugin",
+                              self.iface.mainWindow())
         self.action.setObjectName("testAction")
         self.action.setWhatsThis("Configuration for test plugin")
         self.action.setStatusTip("This is status tip")
@@ -328,7 +332,8 @@ custom menu group directly to the menu bar, as the next example demonstrates:
         self.menu.addAction(self.action)
 
         menuBar = self.iface.mainWindow().menuBar()
-        menuBar.insertMenu(self.iface.firstRightStandardMenu().menuAction(), self.menu)
+        menuBar.insertMenu(self.iface.firstRightStandardMenu().menuAction(),
+                           self.menu)
 
     def unload(self):
         self.menu.deleteLater()
@@ -344,7 +349,7 @@ Resource File
 You can see that in :func:`initGui()` we've used an icon from the resource file
 (called :file:`resources.qrc` in our case)
 
-::
+.. code-block:: xml
 
   <RCC>
     <qresource prefix="/plugins/testplug" >
@@ -563,7 +568,7 @@ Accessing Plugins
 You can access all the classes of installed plugins from within QGIS using python,
 which can be handy for debugging purposes.
 
-::
+.. code-block:: python
 
 	my_plugin = qgis.utils.plugins['My Plugin']
 
