@@ -159,6 +159,7 @@ Finally, restart NGINX and fcgiwrap to take into account the new configuration:
 
 QGIS Server is now available at http://localhost/qgisserver.
 
+<<<<<<< HEAD
 spawn-fcgi
 ^^^^^^^^^^
 
@@ -168,6 +169,26 @@ of fcgiwrap, the first step is to install the package:
 .. code-block:: bash
 
   sudo apt install spawn-fcgi
+=======
+.. note::
+
+    With the above command spawn-fcgi spawns only one QGIS Server process. To use more than one QGIS
+    Server process you can combine spawn-fcgi with the
+    `multiwatch <https://redmine.lighttpd.net/projects/multiwatch/wiki>`_ tool, which is also
+    packaged in Debian.
+
+Of course, you can add an init script (like a ``qgis-server.service`` file
+with systemd) to start QGIS Server at boot time or whenever you want.
+
+fcgiwrap
+^^^^^^^^
+
+Using `fcgiwrap <https://www.nginx.com/resources/wiki/start/topics/examples/fcgiwrap/>`_
+is much easier to setup than **spawn-fcgi** but it's much slower.
+You first have to install the corresponding package:
+
+.. code-block:: bash
+>>>>>>> ddec2759b... remove multiwatch and systemd example from QGIS server
 
 
 Then, introduce the following block in your NGINX server configuration:
