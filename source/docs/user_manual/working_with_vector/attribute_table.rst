@@ -734,6 +734,9 @@ a table. And there are also some buttons available. Let's review them shortly:
 * The |saveEdits| button is for saving all the edits.
 * The |newTableRow| button will add a new record to the airport layer attribute table.
   And it will assign the new airport to the current region by default.
+* The |capturePoint| is the same as |newTableRow| but lets you digitize the
+  airport geometry in the map canvas beforehand. Note that the icon will change according
+  to geometry type.
 * The |duplicateFeature| button allows you to copy one or more child features.
 * The |deleteSelectedFeatures| button will delete the selected airport
   permanently.
@@ -1018,6 +1021,8 @@ table.
 .. |newAttribute| image:: /static/common/mActionNewAttribute.png
    :width: 1.5em
 .. |newTableRow| image:: /static/common/mActionNewTableRow.png
+   :width: 1.5em
+.. |capturePoint| image:: /static/common/mActionCapturePoint.png
    :width: 1.5em
 .. |openTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em
