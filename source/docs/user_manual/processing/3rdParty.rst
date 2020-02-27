@@ -220,37 +220,136 @@ Most other providers that use external applications and call them
 through the command-line have similar options, so you will find them
 as well in other places in the processing settings list.
 
-.. _creating_r_scripts:
+.. _r_scripts:
 
-R. Creating R scripts
----------------------
+R scripts
+---------
 
 To enable R in Processing you need to install the
-**Processing R Provider** plugin.
+**Processing R Provider** plugin and configure R for QGIS.
 
-R integration in QGIS is different from that of SAGA in that there
-is not a predefined set of algorithms you can run (except for a few
-examples).
-Instead, you should write your scripts and call R commands, much like
-you would do from R, and in a very similar manner to what we saw in
-the section dedicated to processing scripts.
-This section shows you the syntax to use to use R commands in QGIS
-and how to use QGIS objects (layers, tables) in them.
+Configuration is done in :menuselection:`Provider-> R` in the
+:guilabel:`Processing` tab of
+:menuselection:`Settings-> Options`.
 
-The first thing you have to do, as we saw in the case of SAGA, is to
-tell QGIS where your R binaries are located. You can do this using
-the :guilabel:`R folder` entry in the processing configuration dialog.
-Once you have set that parameter, you can start creating and executing
-your own R scripts.
+Depending on your operating system, you may have to use
+:guilabel:`R folder` to specify where your R binaries are located.
 
 .. note:: On **Windows** the R executable file is normally in
-   the :file:`C:\\Program Files\\R\\R-3.2` folder.
+   a folder (``R-<version>``) under :file:`C:\\Program Files\\R\\`.
    Specify the folder and **NOT** the binary!
+   
+   On **Linux** you just have to make sure that the R folder is
+   in the PATH environment variable.
+   If ``R`` in a terminal window starts R, then you are ready to go.
 
-Once again, this is different in Linux, and you just have to make sure
-that the R folder is included in the PATH environment variable.
-If you can start R by typing ``R`` in a terminal window, then you are
-ready to go.
+After installing the **Processing R Provider** plugin, you will find
+some example scripts in the :guilabel:`Processing Toolbox`:
+
+* :guilabel:`Scatterplot` runs an R function that produces a scatter
+  plot from two numerical fields of the provided vector layer. 
+* :guilabel:`test_sf` does some operations that depend on the ``sf``
+  package and can be used to check if the R package ``sf`` is
+  installed.
+  If the package is not installed, R will try to install it (and all
+  the packages it depends on) for you, using the
+  :guilabel:`Package repository` specified in
+  :menuselection:`Provider-> R` in the Processing options.
+  The default is `http://cran.at.r-project.org/`.
+  Installing may take some time...
+* :guilabel:`test_sp` can be used to check if the R package ``sp`` is
+  installed.
+  If the package is not installed, R will try to install it for you.
+
+.. figure:: img/processing_toolbox_r_install.png
+   :align: center
+
+If you have R configured correctly for QGIS, you should be able to
+run these scripts.
+
+
+.. _adding_r_scripts:
+
+Adding R scripts from the QGIS collection
+.........................................
+
+R integration in QGIS is different from that of SAGA in that there
+is not a predefined set of algorithms you can run (except for some
+example script that come with the *Processing R Provider* plugin).
+
+A set of example R scripts is available in the QGIS Repository.
+Perform the following steps to load and enable them using the
+*QGIS Resource Sharing* plugin.
+
+#. Add the *QGIS Resource Sharing* plugin (you may have to
+   enable :guilabel:`Show also experimental plugins` in the Plugin
+   Manager :guilabel:`Settings`)
+#. Open it (Plugins-> Resource Sharing-> Resource Sharing)
+#. Choose the :guilabel:`Settings` tab
+#. Click :guilabel:`Reload repositories`
+#. Choose the :guilabel:`All` tab
+#. Select :guilabel:`QGIS R script collection` in the list and
+   click on the :guilabel:`Install` button
+#. The collection should now be listed in the :guilabel:`Installed`
+   tab
+#. Close the plugin
+#. Open the :guilabel:`Processing Toolbox`, and if everything is
+   OK, the example scripts will be present under R, in various
+   groups (only some of the groups are expanded in the screenshot
+   below).
+
+   .. figure:: img/processing_toolbox_r_scripts.png
+      :align: center
+
+      The :guilabel:`Processing Toolbox` with some R scripts shown
+
+   The scripts at the top are the example scripts from the
+   *Processing R Provider* plugin.
+
+#. If, for some reason, the scripts are not available in the
+   :guilabel:`Processing Toolbox`, you can try to:
+
+   #. Open the Processing settings
+      (:menuselection:`Settings-> Options-> Processing` tab)
+
+   #. Go to :menuselection:`Providers-> R-> R scripts folder`
+
+      * On Ubuntu, set the path to (or, better, include in the path):
+
+          /home/<user>/.local/share/QGIS/QGIS3/profiles/default/resource_sharing/repositories/github.com/qgis/QGIS-Resources/collections/rscripts
+
+        .. figure:: img/rscript_folder.png
+           :align: center
+
+      * On Windows, set the path to (or, better, include in the path):
+
+          C:\Users\<user>\AppData\Roaming\QGIS\QGIS3\profiles\default\resource_sharing\repositories\github.com\qgis\QGIS-Resources\collections\rscripts
+
+      To edit, double-click.  You can then choose to just paste / type
+      the path, or you can navigate to the directory by using the
+      :guilabel:`...` button and press the :guilabel:`Add` button in the
+      dialog that opens.
+      It is possible to provide several directories here.
+      They will be separated by a semicolon (";").
+   
+      .. figure:: img/rscript_folder_add.png
+         :align: center   
+
+If you would like to get all the R scrips from the QGIS 2 on-line
+collection, you can select *QGIS R script collection (from QGIS 2)*
+instead of *QGIS R script collection*.
+You will find probably find that scripts that depend on vector
+data input or output will not work.
+
+
+.. _creating_r_scripts:
+
+Creating R scripts
+..................
+
+You can write scripts and call R commands, as you would do from R.
+This section shows you the syntax for using R commands in QGIS, and
+how to use QGIS objects (layers, tables) in them.
 
 To add an algorithm that calls an R function (or a more complex R
 script that you have developed and you would like to have available
@@ -261,9 +360,8 @@ R script files have the extension :file:`.rsx`, and creating them is
 pretty easy if you just have a basic knowledge of R syntax and R
 scripting.
 They should be stored in the R scripts folder.
-You can set this folder in the :guilabel:`R` settings group (available
-from the processing settings dialog), just like you do with the folder
-for regular processing scripts.
+You can specify the folder (:guilabel:`R scripts folder`) in the
+:guilabel:`R` settings group in Processing settings dialog).
 
 Let’s have a look at a very simple script file, which calls the R
 method ``spsample`` to create a random grid within the boundary of the
@@ -271,7 +369,7 @@ polygons in a given polygon layer.
 This method belongs to the ``maptools`` package.
 Since almost all the algorithms that you might like to incorporate
 into QGIS will use or generate spatial data, knowledge of spatial
-packages like ``maptools`` and, especially, ``sp``, is mandatory.
+packages like ``maptools`` and ``sp``/``sf``, is necessary.
 
 .. code-block:: python
 
@@ -286,21 +384,22 @@ The first lines, which start with a double Python comment sign
 (``##``), tell QGIS about the inputs of the algorithm in
 the file and the outputs that it will generate.
 
-Please have a look at the :ref:`R Intro <r-intro>` and the
-:ref:`R Syntax <r-syntax>` Training Manual Chapters to find more
-information about how to write your own R scripts.
+.. note::
+   To find out more about how to write your own R scripts, have a
+   look at the :ref:`R Intro <r-intro>` and the
+   :ref:`R Syntax <r-syntax>` Training Manual Chapters.
 
 When you declare an input parameter, QGIS uses that information for
 two things: creating the user interface to ask the user for the value
 of that parameter, and creating a corresponding R variable that can
-later be used as input for R commands.
+later be used as R function input.
 
-In the above example, we have declared an input of type ``vector``
+In the above example, we have declared an input of type ``vector``,
 named ``polyg``.
 When executing the algorithm, QGIS will open the layer selected
 by the user and store it in a variable named ``polyg``.
 So, the name of a parameter is the name of the variable that we
-use in R for accessing the value of that parameter (you should
+can use in R for accessing the value of that parameter (you should
 therefore avoid using reserved R words as parameter names).
 
 Spatial parameters such as vector and raster layers are read using
@@ -413,6 +512,43 @@ how to create your own scripts.
    In this way the package will be also available in R Standalone.
    **Be aware** that if the package has to be downloaded, the first
    time you run the script it might take a long time.
+
+R libraries
+-----------
+
+The R script ``sp_test`` tries to load the R packages ``sp`` and
+``raster``.
+
+
+R libraries installed when running sf_test
+..........................................
+
+The R script *sf_test* tries to load ``sf`` and ``raster``.
+If these two packages are not installed, R may try to load and install
+them.
+
+The following R libraries end up in
+:file:`~/.local/share/QGIS/QGIS3/profiles/default/processing/rscripts`
+after ``sf_test`` has been run from the Processing Toolbox on Ubuntu with
+version 2.0 of the *Processing R Provider* plugin and R 3.4.4 (*apt*
+package ``r-base-core`` only):
+
+``abind, askpass, assertthat, backports, base64enc, BH, bit, bit64,
+blob, brew, callr, classInt, cli, colorspace, covr, crayon, crosstalk,
+curl, DBI, deldir, desc, dichromat, digest, dplyr, e1071, ellipsis,
+evaluate, fansi, farver, fastmap, gdtools, ggplot2, glue, goftest, 
+gridExtra, gtable, highr, hms, htmltools, htmlwidgets, httpuv, httr,
+jsonlite, knitr, labeling, later, lazyeval, leafem, leaflet, 
+leaflet.providers, leafpop, leafsync, lifecycle, lwgeom, magrittr, maps,
+mapview, markdown, memoise, microbenchmark, mime, munsell, odbc, openssl,
+pillar, pkgbuild, pkgconfig, pkgload, plogr, plyr, png, polyclip, praise,
+prettyunits, processx, promises, ps, purrr, R6, raster, RColorBrewer, 
+Rcpp, reshape2, rex, rgeos, rlang, rmarkdown, RPostgres, RPostgreSQL, 
+rprojroot, RSQLite, rstudioapi, satellite, scales, sf, shiny, 
+sourcetools, sp, spatstat, spatstat.data, spatstat.utils, stars, stringi, 
+stringr, svglite, sys, systemfonts, tensor, testthat, tibble, tidyselect, 
+tinytex, units, utf8, uuid, vctrs, viridis, viridisLite, webshot, withr, 
+xfun, XML, xtable``
 
 
 .. _grass_configure:
