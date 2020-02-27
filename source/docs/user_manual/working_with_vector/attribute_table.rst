@@ -1022,7 +1022,7 @@ table.
    :width: 1.5em
 .. |newTableRow| image:: /static/common/mActionNewTableRow.png
    :width: 1.5em
-.. |newTableRowWithGeom| image:: /static/common/mActionCapturePoint.png
+.. |capturePoint| image:: /static/common/mActionCapturePoint.png
    :width: 1.5em
 .. |openTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em
