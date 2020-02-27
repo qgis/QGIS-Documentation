@@ -735,7 +735,7 @@ a table. And there are also some buttons available. Let's review them shortly:
 * The |newTableRow| button will add a new record to the airport layer attribute table.
   And it will assign the new airport to the current region by default.
 * The |newTableRowWithGeom| is the same as |newTableRow| but let you digitize the
-  airport geometry in the map canvas beforehand. Note that icon will change according
+  airport geometry in the map canvas beforehand. Note that the icon will change according
   to geometry type.
 * The |duplicateFeature| button allows you to copy one or more child features.
 * The |deleteSelectedFeatures| button will delete the selected airport
