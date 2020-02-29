@@ -299,6 +299,8 @@ following these steps.
 
     # Use pdb for debugging
     import pdb
+    # also import pyqtRemoveInputHook
+    from PyQt5.QtCore import pyqtRemoveInputHook
     # These lines allow you to set a breakpoint in the app
     pyqtRemoveInputHook()
     pdb.set_trace()
