@@ -155,6 +155,9 @@ Then comes a number of container / database types and service protocols
 :guilabel:`ArcGISMapServer`, :guilabel:`ArcGISFeatureServer` and
 :guilabel:`GeoNode`.
 
+Interacting with the Browser items
+----------------------------------
+
 The browser supports drag and drop within the browser, from the browser to
 the canvas and :guilabel:`Layers` panel, and from the :guilabel:`Layers` panel
 to layer containers (e.g. GeoPackage) in the browser.
@@ -165,9 +168,6 @@ Project items are treated the same way as any other item in the browser,
 so they can be dragged and dropped within the browser (for example to
 copy a layer item to a geopackage file) or added to the current project
 through drag and drop or double click.
-
-Interacting with the Browser items
-----------------------------------
 
 The context menu for an element in the :guilabel:`Browser` panel is opened
 by right-clicking on it.
