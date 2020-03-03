@@ -321,13 +321,14 @@ Loading a layer from a file
 
 To load a layer from a file:
 
-#. Enable the layer type tab in the :guilabel:`Data Source Manager`
-   dialog, ie:
+#. Open the layer type tab in the :guilabel:`Data Source Manager`
+   dialog, ie click the |dataSourceManager| :sup:`Open Data Source Manager`
+   button (or press :kbd:`Ctrl+L`) and enable the target tab or:
 
    * for vector data (like GML, ESRI Shapefile, Mapinfo and DXF layers):
-     click on the |addOgrLayer| :sup:`Add Vector Layer` toolbar button,
-     select the :menuselection:`Layer --> Add Layer -->` |addOgrLayer|
-     :guilabel:`Add Vector Layer` menu option or press :kbd:`Ctrl+Shift+V`.
+     press :kbd:`Ctrl+Shift+V`, select the :menuselection:`Layer --> Add Layer -->`
+     |addOgrLayer| :guilabel:`Add Vector Layer` menu option or
+     click on the |addOgrLayer| :sup:`Add Vector Layer` toolbar button.
 
      .. _figure_vector_add:
 
@@ -336,11 +337,11 @@ To load a layer from a file:
 
         Add Vector Layer Dialog
 
-   * for raster layers(like GeoTiff, MBTiles, GRIdded Binary and DWG layers):
-     click on the |addRasterLayer| :sup:`Add Raster Layer` toolbar button,
-     select the :menuselection:`Layer --> Add Layer -->` |addRasterLayer|
-     :guilabel:`Add Raster Layer` menu option or press :kbd:`Ctrl+Shift+R`.     
- 
+   * for raster data (like GeoTiff, MBTiles, GRIdded Binary and DWG layers):
+     press :kbd:`Ctrl+Shift+R`, select the :menuselection:`Layer --> Add Layer -->`
+     |addRasterLayer| :guilabel:`Add Raster Layer` menu option or
+     click on the |addRasterLayer| :sup:`Add Raster Layer` toolbar button. 
+
      .. _figure_raster_add:
 
      .. figure:: img/addrasterlayerdialog.png
@@ -392,7 +393,7 @@ Layer` tabs allow to load layers from source types other than :guilabel:`File`:
   existing database connection or create one to the selected database type.
   Some possible database types are ``ODBC``, ``Esri Personal Geodatabase``,
   ``MSSQL`` as well as ``PostgreSQL`` or ``MySQL`` .
-    
+
   Pressing the :guilabel:`New` button opens the 
   :guilabel:`Create a New OGR Database Connection` dialog whose parameters
   are among the ones you can find in :ref:`vector_create_stored_connection`.
