@@ -691,8 +691,8 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    "pole_of_inaccessibility", "Calculates the approximate pole of inaccessibility for
    a surface, which is the most distant internal point from the boundary of the surface
    (see also :ref:`qgispoleofinaccessibility`)"
-   "project", "Returns a point projected from a start point using a distance and
-   bearing (azimuth) in radians (see also :ref:`qgisprojectpointcartesian`)"
+   "project", "Returns a point projected from a start point using a distance, a
+   bearing (azimuth) and an elevation in radians (see also :ref:`qgisprojectpointcartesian`)"
    "relate", "Tests or returns the Dimensional Extended 9 Intersection Model (DE-9IM)
    representation of the relationship between two geometries"
    "reverse", "Reverses the direction of a line string by reversing the order of its
