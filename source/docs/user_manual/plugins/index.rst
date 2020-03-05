@@ -1,4 +1,4 @@
-.. _qgis.manual.introduction.index:
+.. _plugins.index:
 
 ================
 Plugins

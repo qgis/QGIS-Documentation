@@ -1057,8 +1057,12 @@ To add a scale bar:
    **Pixels** or set as a **Percentage** of the width or height of the map canvas.
 #. Click :guilabel:`Apply` to verify that it looks as expected or :guilabel:`OK` if you're satisfied.
 
+.. index:: Layout extents
+.. _layoutextents_decoration:
+
 Layout Extents
 ..............
+
 |addMap| :sup:`Layout Extents` adds the extents of :ref:`map item(s) <layout_map_item>` in print
 layout(s) to the canvas. When enabled, the extents of all map items within all print layouts are
 shown using a lightly dotted border labeled with the name of the print layout and map item.
