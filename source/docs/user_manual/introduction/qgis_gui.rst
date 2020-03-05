@@ -617,14 +617,14 @@ actions like:
      - :ref:`label_mapview`
    * - |new3DMap| :guilabel:`New 3D Map View`
      - :kbd:`Ctrl+Alt+M`
-     - 
+     -
      - :ref:`label_3dmapview`
    * - |pan| :guilabel:`Pan Map`
-     - 
+     -
      - :guilabel:`Map Nav.`
      - :ref:`zoom_pan`
    * - |panToSelected| :guilabel:`Pan Map to Selection`
-     - 
+     -
      - :guilabel:`Map Nav.`
      -
    * - |zoomIn| :guilabel:`Zoom In`
@@ -640,7 +640,7 @@ actions like:
      - :guilabel:`Attributes`
      - :ref:`identify`
    * - :menuselection:`Measure -->`
-     - 
+     -
      - :guilabel:`Attributes`
      - :ref:`sec_measure`
    * - :menuselection:`-->`
@@ -655,11 +655,11 @@ actions like:
      - :ref:`sec_measure`
    * - :menuselection:`-->`
        :guilabel:`Measure Angle`
-     - 
+     -
      - :guilabel:`Attributes`
      - :ref:`sec_measure`
    * - |sum| :guilabel:`Statistical Summary`
-     - 
+     -
      - :guilabel:`Attributes`
      - :ref:`Statistical Summ. Panel<statistical_summary>`
    * - |zoomFullExtent| :guilabel:`Zoom Full`
@@ -671,91 +671,91 @@ actions like:
      - :guilabel:`Map Nav.`
      -
    * - |zoomToLayer| :guilabel:`Zoom To Layer`
-     - 
+     -
      - :guilabel:`Map Nav.`
      -
    * - |zoomActual| :guilabel:`Zoom To Native Resolution (100%)`
-     - 
+     -
      - :guilabel:`Map Nav.`
      -
    * - |zoomLast| :guilabel:`Zoom Last`
-     - 
+     -
      - :guilabel:`Map Nav.`
      -
    * - |zoomNext| :guilabel:`Zoom Next`
-     - 
+     -
      - :guilabel:`Map Nav.`
      -
    * - :menuselection:`Decorations -->`
      - :kbd:`Alt+V` + :kbd:`D`
-     - 
+     -
      - :ref:`decorations`
    * - :menuselection:`-->`
        :guilabel:`Grid...`
-     - 
-     - 
-     - :ref:`decorations`
+     -
+     -
+     - :ref:`grid_decoration`
    * - :menuselection:`-->`
        :guilabel:`Scale Bar...`
-     - 
-     - 
-     - :ref:`decorations`
+     -
+     -
+     - :ref:`scalebar_decoration`
    * - :menuselection:`-->`
        :guilabel:`Image...`
-     - 
-     - 
+     -
+     -
      - :ref:`decorations`
    * - :menuselection:`-->`
        :guilabel:`North Arrow...`
-     - 
-     - 
-     - :ref:`decorations`
+     -
+     -
+     - :ref:`northarrow_decoration`
    * - :menuselection:`-->`
        :guilabel:`Title Label...`
-     - 
-     - 
-     - :ref:`decorations`
+     -
+     -
+     - :ref:`copyright_decoration`
    * - :menuselection:`-->`
        :guilabel:`Copyright Label...`
-     - 
-     - 
-     - :ref:`decorations`
+     -
+     -
+     - :ref:`copyright_decoration`
    * - :menuselection:`-->`
        :guilabel:`Layout Extents...`
-     - 
-     - 
-     - :ref:`decorations`
+     -
+     -
+     - :ref:`layoutextents_decoration`
    * - :menuselection:`Preview mode -->`
      -
      -
      -
    * - :menuselection:`-->`
        :guilabel:`Normal`
-     - 
-     - 
-     - 
+     -
+     -
+     -
    * - :menuselection:`-->`
        :guilabel:`Simulate Photocopy (Grayscale)`
-     - 
-     - 
-     - 
+     -
+     -
+     -
    * - :menuselection:`-->`
        :guilabel:`Simulate Fax (Mono)`
-     - 
-     - 
-     - 
+     -
+     -
+     -
    * - :menuselection:`-->`
        :guilabel:`Simulate Color Blindness (Protanope)`
-     - 
-     - 
-     - 
+     -
+     -
+     -
    * - :menuselection:`-->`
        :guilabel:`Simulate Color Blindness (Deuteronope)`
-     - 
-     - 
-     - 
+     -
+     -
+     -
    * - |mapTips| :guilabel:`Show Map Tips`
-     - 
+     -
      - :guilabel:`Attributes`
      - :ref:`maptips`
    * - |newBookmark| :guilabel:`New Spatial Bookmark...`
@@ -767,201 +767,206 @@ actions like:
      - :guilabel:`Map Nav.`
      - :ref:`sec_bookmarks`
    * - |showBookmarks| :guilabel:`Show Spatial Bookmark Manager`
-     - 
-     - 
-     - 
+     -
+     -
+     - :ref:`sec_bookmarks`
    * - |draw| :guilabel:`Refresh`
      - :kbd:`F5`
      - :guilabel:`Map Nav.`
      -
    * - |showAllLayers| :guilabel:`Show All Layers`
      - :kbd:`Ctrl+Shift+U`
-     - 
+     -
      - :ref:`label_legend`
    * - |hideAllLayers| :guilabel:`Hide All Layers`
      - :kbd:`Ctrl+Shift+H`
-     - 
+     -
      - :ref:`label_legend`
    * - |showSelectedLayers| :guilabel:`Show Selected Layers`
-     - 
-     - 
+     -
+     -
      - :ref:`label_legend`
    * - |hideSelectedLayers| :guilabel:`Hide Selected Layers`
-     - 
-     - 
+     -
+     -
      - :ref:`label_legend`
    * - |hideDeselectedLayers| :guilabel:`Hide Deselected Layers`
-     - 
-     - 
+     -
+     -
      - :ref:`label_legend`
    * - :menuselection:`Panels -->`
-     - 
-     - 
+     -
+     -
      - :ref:`sec_panels_and_toolbars`
    * - :menuselection:`-->`
        :guilabel:`Advanced Digitizing`
-     - 
-     - 
-     - :ref:`sec_panels_and_toolbars`
+     -
+     -
+     - :ref:`advanced_digitizing_panel`
    * - :menuselection:`-->`
        :guilabel:`Browser`
-     - 
-     - 
-     - :ref:`sec_panels_and_toolbars`
+     -
+     -
+     - :ref:`browser_panel`
    * - :menuselection:`-->`
        :guilabel:`Browser (2)`
-     - 
-     - 
-     - :ref:`sec_panels_and_toolbars`
+     -
+     -
+     - :ref:`browser_panel`
    * - :menuselection:`-->`
        :guilabel:`GPS Information`
-     - 
-     - 
-     - :ref:`sec_panels_and_toolbars`
+     -
+     -
+     - :ref:`sec_gpstracking`
    * - :menuselection:`-->`
        :guilabel:`GRASS Tools`
-     - 
-     - 
+     -
+     -
      - :ref:`sec_panels_and_toolbars`
    * - :menuselection:`-->`
        :guilabel:`Layer Order`
-     - 
-     - 
-     - :ref:`sec_panels_and_toolbars`
+     -
+     -
+     - :ref:`layer_order`
    * - :menuselection:`-->`
        :guilabel:`Layer Styling`
-     - 
-     - 
-     - :ref:`sec_panels_and_toolbars`
+     -
+     -
+     - :ref:`layer_styling_panel`
    * - :menuselection:`-->`
        :guilabel:`Layers`
-     - 
-     - 
-     - :ref:`sec_panels_and_toolbars`
+     -
+     -
+     - :ref:`label_legend`
    * - :menuselection:`-->`
        :guilabel:`Log Messages`
-     - 
-     - 
-     - :ref:`sec_panels_and_toolbars`
+     -
+     -
+     - :ref:`log_message_panel`
    * - :menuselection:`-->`
        :guilabel:`Overview`
-     - 
-     - 
-     - :ref:`sec_panels_and_toolbars`
+     -
+     -
+     - :ref:`overview_panels`
    * - :menuselection:`-->`
        :guilabel:`Processing Toolbox`
-     - 
-     - 
-     - :ref:`sec_panels_and_toolbars`
+     -
+     -
+     - :ref:`processing.toolbox`
    * - :menuselection:`-->`
        :guilabel:`Results Viewer`
-     - 
-     - 
-     - :ref:`sec_panels_and_toolbars`
+     -
+     -
+     - :ref:`processing.toolbox`
    * - :menuselection:`-->`
-       :guilabel:`Spatial Bookmars Manager`
-     - 
-     - 
-     - :ref:`sec_panels_and_toolbars`
+       :guilabel:`Snapping and Digitizing Options`
+     -
+     -
+     - :ref:`snapping_tolerance`
+   * - :menuselection:`-->`
+       :guilabel:`Spatial Bookmark Manager`
+     -
+     -
+     - :ref:`sec_bookmarks`
    * - :menuselection:`-->`
        :guilabel:`Statistics`
-     - 
-     - 
-     - :ref:`sec_panels_and_toolbars`
+     -
+     -
+     - :ref:`statistical_summary`
    * - :menuselection:`-->`
        :guilabel:`Tile Scale`
-     - 
-     - 
-     - :ref:`sec_panels_and_toolbars`
+     -
+     -
+     - :ref:`tilesets`
    * - :menuselection:`-->`
        :guilabel:`Undo/Redo`
-     - 
-     - 
-     - :ref:`sec_panels_and_toolbars`
+     -
+     -
+     - :ref:`undo_redo_panel`
    * - :menuselection:`Toolbars -->`
-     - 
-     - 
+     -
+     -
      - :ref:`sec_panels_and_toolbars`
    * - :menuselection:`-->`
        :guilabel:`Advanced Digitizing Toolbar`
-     - 
-     - 
-     - :ref:`sec_panels_and_toolbars`
+     -
+     -
+     - :ref:`sec_advanced_edit`
    * - :menuselection:`-->`
        :guilabel:`Attributes Toolbar`
-     - 
-     - 
-     - :ref:`sec_panels_and_toolbars`
+     -
+     -
+     -
    * - :menuselection:`-->`
        :guilabel:`Data Source Manager Toolbar`
-     - 
-     - 
-     - :ref:`sec_panels_and_toolbars`
+     -
+     -
+     - :ref:`manage_data_source`
    * - :menuselection:`-->`
        :guilabel:`Database Toolbar`
-     - 
-     - 
-     - :ref:`sec_panels_and_toolbars`
+     -
+     -
+     -
    * - :menuselection:`-->`
        :guilabel:`Digitizing Toolbar`
-     - 
-     - 
-     - :ref:`sec_panels_and_toolbars`
+     -
+     -
+     - :ref:`sec_edit_existing_layer`
    * - :menuselection:`-->`
        :guilabel:`Help Toolbar`
-     - 
-     - 
-     - :ref:`sec_panels_and_toolbars`
+     -
+     -
+     -
    * - :menuselection:`-->`
        :guilabel:`Label Toolbar`
-     - 
-     - 
-     - :ref:`sec_panels_and_toolbars`
+     -
+     -
+     - :ref:`label_toolbar`
    * - :menuselection:`-->`
        :guilabel:`Manage Layers Toolbar`
-     - 
-     - 
-     - :ref:`sec_panels_and_toolbars`
+     -
+     -
+     - :ref:`manage_data_source`
    * - :menuselection:`-->`
        :guilabel:`Map Navigation Toolbar`
-     - 
-     - 
-     - :ref:`sec_panels_and_toolbars`
+     -
+     -
+     -
    * - :menuselection:`-->`
        :guilabel:`Plugins Toolbar`
-     - 
-     - 
-     - :ref:`sec_panels_and_toolbars`
+     -
+     -
+     - :ref:`plugins.index`
    * - :menuselection:`-->`
        :guilabel:`Project Toolbar`
-     - 
-     - 
-     - :ref:`sec_panels_and_toolbars`
+     -
+     -
+     -
    * - :menuselection:`-->`
        :guilabel:`Raster Toolbar`
-     - 
-     - 
-     - :ref:`sec_panels_and_toolbars`
+     -
+     -
+     -
    * - :menuselection:`-->`
        :guilabel:`Shape Digitizing Toolbar`
-     - 
-     - 
-     - :ref:`sec_panels_and_toolbars`
+     -
+     -
+     -
    * - :menuselection:`-->`
        :guilabel:`Snapping Toolbar`
-     - 
-     - 
-     - :ref:`sec_panels_and_toolbars`
+     -
+     -
+     - :ref:`snapping_tolerance`
    * - :menuselection:`-->`
        :guilabel:`Vector Toolbar`
-     - 
-     - 
-     - :ref:`sec_panels_and_toolbars`
+     -
+     -
+     -
    * - :menuselection:`-->`
        :guilabel:`Web Toolbar`
-     - 
-     - 
-     - :ref:`sec_panels_and_toolbars`
+     -
+     -
+     -
    * - :menuselection:`-->`
        :guilabel:`GRASS`
      - 
@@ -1343,187 +1348,187 @@ are enabled.
      - Reference
    * - :menuselection:`Geoprocessing Tools -->`
      - :kbd:`Alt+O` + :kbd:`G`
-     - :ref:`processing.options`
+     -
    * - :menuselection:`-->`
        :guilabel:`Buffer...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgisbuffer`
    * - :menuselection:`-->`
        :guilabel:`Clip...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgisclip`
    * - :menuselection:`-->`
        :guilabel:`Convex Hull...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgisconvexhull`
    * - :menuselection:`-->`
        :guilabel:`Difference...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgisdifference`
    * - :menuselection:`-->`
        :guilabel:`Dissolve...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgisdissolve`
    * - :menuselection:`-->`
        :guilabel:`Intersection...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgisintersection`
    * - :menuselection:`-->`
        :guilabel:`Symmetrical Difference...`
      - 
-     - :ref:`processing.options`
+     - :ref:`qgissymmetricaldifference`
    * - :menuselection:`-->`
        :guilabel:`Union...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgisunion`
    * - :menuselection:`-->`
-       :guilabel:`Elimintate Selected Polygons...`
-     - 
-     - :ref:`processing.options`
+       :guilabel:`Eliminate Selected Polygons...`
+     -
+     - :ref:`qgiseliminateselectedpolygons`
    * - :menuselection:`Geometry Tools -->`
      - :kbd:`Alt+O` + :kbd:`E`
-     - :ref:`processing.options`
+     -
    * - :menuselection:`-->`
        :guilabel:`Centroids...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgiscentroids`
    * - :menuselection:`-->`
        :guilabel:`Collect Geometries...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgiscollect`
    * - :menuselection:`-->`
        :guilabel:`Extract Vertices...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgisextractvertices`
    * - :menuselection:`-->`
        :guilabel:`Multipart to Singleparts...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgismultiparttosingleparts`
    * - :menuselection:`-->`
        :guilabel:`Polygons to Lines...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgispolygonstolines`
    * - :menuselection:`-->`
        :guilabel:`Simplify...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgissimplifygeometries`
    * - :menuselection:`-->`
        :guilabel:`Check Validity...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgischeckvalidity`
    * - :menuselection:`-->`
        :guilabel:`Delaunay Triangulation...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgisdelaunaytriangulation`
    * - :menuselection:`-->`
        :guilabel:`Densify by Count...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgisdensifygeometries`
    * - :menuselection:`-->`
        :guilabel:`Add Geometry Attributes...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgisexportaddgeometrycolumns`
    * - :menuselection:`-->`
        :guilabel:`Lines to Polygons...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgislinestopolygons`
    * - :menuselection:`-->`
        :guilabel:`Voronoi Polygons...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgisvoronoipolygons`
    * - :menuselection:`Analysis Tools -->`
      - :kbd:`Alt+O` + :kbd:`A`
-     - :ref:`processing.options`
+     -
    * - :menuselection:`-->`
        :guilabel:`Line Intersection...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgislineintersections`
    * - :menuselection:`-->`
        :guilabel:`Mean Coordinate(s)...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgismeancoordinates`
    * - :menuselection:`-->`
        :guilabel:`Basic Statistics for Fields...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgisbasicstatisticsforfields`
    * - :menuselection:`-->`
        :guilabel:`Count Points in Polygon...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgiscountpointsinpolygon`
    * - :menuselection:`-->`
        :guilabel:`Distance Matrix...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgisdistancematrix`
    * - :menuselection:`-->`
        :guilabel:`List Unique Values...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgislistuniquevalues`
    * - :menuselection:`-->`
        :guilabel:`Nearest Neighbour Analysis...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgisnearestneighbouranalysis`
    * - :menuselection:`-->`
-       :guilabel:`Sum Line Length...`
-     - 
-     - :ref:`processing.options`
+       :guilabel:`Sum Line Lengths...`
+     -
+     - :ref:`qgissumlinelengths`
    * - :menuselection:`Data Management Tools -->`
      - :kbd:`Alt+O` + :kbd:`D`
-     - :ref:`processing.options`
+     -
    * - :menuselection:`-->`
        :guilabel:`Merge Vector Layers...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgismergevectorlayers`
    * - :menuselection:`-->`
        :guilabel:`Reproject Layer...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgisreprojectlayer`
    * - :menuselection:`-->`
        :guilabel:`Create Spatial Index...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgiscreatespatialindex`
    * - :menuselection:`-->`
        :guilabel:`Join Attributes by Location...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgisjoinattributesbylocation`
    * - :menuselection:`-->`
        :guilabel:`Split Vector Layer...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgissplitvectorlayer`
    * - :menuselection:`Research Tools -->`
      - :kbd:`Alt+O` + :kbd:`R`
-     - :ref:`processing.options`"
+     -
    * - :menuselection:`-->`
        :guilabel:`Select by Location...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgisselectbylocation`
    * - :menuselection:`-->`
        :guilabel:`Extract Layer Extent...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgispolygonfromlayerextent`
    * - :menuselection:`-->`
        :guilabel:`Random Points in Extent...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgisrandompointsinextent`
    * - :menuselection:`-->`
        :guilabel:`Random Points in Layer Bounds...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgisrandompointsinlayerbounds`
    * - :menuselection:`-->`
        :guilabel:`Random Points Inside Polygons...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgisrandompointsinsidepolygons`
    * - :menuselection:`-->`
        :guilabel:`Random Selection...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgisrandomselection`
    * - :menuselection:`-->`
        :guilabel:`Random Selection Within Subsets...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgisrandomselectionwithinsubsets`
    * - :menuselection:`-->`
        :guilabel:`Regular Points...`
-     - 
-     - :ref:`processing.options`
+     -
+     - :ref:`qgisregularpoints`
 
 .. only:: html
 
@@ -1572,168 +1577,168 @@ are enabled.
    * - :menuselection:`Analysis -->`
      -
      -
-     - :ref:`processing.options`
+     -
    * - :menuselection:`-->`
        :guilabel:`Aspect...`
-     - 
-     - 
-     - :ref:`processing.options`
+     -
+     -
+     - :ref:`gdalaspect`
    * - :menuselection:`-->`
        :guilabel:`Fill nodata...`
-     - 
-     - 
-     - :ref:`processing.options`
+     -
+     -
+     - :ref:`gdalfillnodata`
    * - :menuselection:`-->`
        :guilabel:`Grid (Moving Average)...`
-     - 
-     - 
-     - :ref:`processing.options`
+     -
+     -
+     - :ref:`gdalgridaverage`
    * - :menuselection:`-->`
        :guilabel:`Grid (Data Metrics)...`
-     - 
-     - 
-     - :ref:`processing.options`
+     -
+     -
+     - :ref:`gdalgriddatametrics`
    * - :menuselection:`-->`
        :guilabel:`Grid (Inverse Distance to a Power)...`
-     - 
-     - 
-     - :ref:`processing.options`
+     -
+     -
+     - :ref:`gdalgridinversedistance`
    * - :menuselection:`-->`
        :guilabel:`Grid (Nearest Neighbor)...`
-     - 
-     - 
-     - :ref:`processing.options`
+     -
+     -
+     - :ref:`gdalgridinversedistancenearestneighbor`
    * - :menuselection:`-->`
        :guilabel:`Hillshade...`
-     - 
-     - 
-     - :ref:`processing.options`
+     -
+     -
+     - :ref:`gdalhillshade`
    * - :menuselection:`-->`
        :guilabel:`Proximity (Raster Distance)...`
-     - 
-     - 
-     - :ref:`processing.options`
+     -
+     -
+     - :ref:`gdalproximity`
    * - :menuselection:`-->`
        :guilabel:`Roughness...`
-     - 
-     - 
-     - :ref:`processing.options`
+     -
+     -
+     - :ref:`gdalroughness`
    * - :menuselection:`-->`
        :guilabel:`Sieve...`
-     - 
-     - 
-     - :ref:`processing.options`
+     -
+     -
+     - :ref:`gdalsieve`
    * - :menuselection:`-->`
        :guilabel:`Slope...`
-     - 
-     - 
-     - :ref:`processing.options`
+     -
+     -
+     - :ref:`gdalslope`
    * - :menuselection:`-->`
        :guilabel:`Topographic Position Index (TPI)...`
-     - 
-     - 
-     - :ref:`processing.options`
+     -
+     -
+     - :ref:`gdaltpitopographicpositionindex`
    * - :menuselection:`-->`
        :guilabel:`Terrain Ruggedness Index (TRI)...`
-     - 
-     - 
-     - :ref:`processing.options`
-   * - :menuselection:`Projection -->`
      -
      -
-     - :ref:`processing.options`
+     - :ref:`gdaltriterrainruggednessindex`
+   * - :menuselection:`Projections -->`
+     -
+     -
+     -
    * - :menuselection:`-->`
        :guilabel:`Assign Projection...`
-     - 
-     - 
-     - :ref:`processing.options`
+     -
+     -
+     - :ref:`gdalassignprojection`
    * - :menuselection:`-->`
        :guilabel:`Extract Projection...`
-     - 
-     - 
-     - :ref:`processing.options`
+     -
+     -
+     - :ref:`gdalextractprojection`
    * - :menuselection:`-->`
        :guilabel:`Warp (Reproject)...`
-     - 
-     - 
-     - :ref:`processing.options`
+     -
+     -
+     - :ref:`gdalwarpreproject`
    * - :menuselection:`Miscellaneous -->`
      -
      -
-     - :ref:`processing.options`
+     -
    * - :menuselection:`-->`
        :guilabel:`Build Virtual Raster...`
-     - 
-     - 
-     - :ref:`processing.options`
+     -
+     -
+     - :ref:`gdalbuildvirtualraster`
    * - :menuselection:`-->`
        :guilabel:`Raster Information...`
-     - 
-     - 
-     - :ref:`processing.options`
+     -
+     -
+     - :ref:`gdalgdalinfo`
    * - :menuselection:`-->`
        :guilabel:`Merge...`
-     - 
-     - 
-     - :ref:`processing.options`
+     -
+     -
+     - :ref:`gdalmerge`
    * - :menuselection:`-->`
        :guilabel:`Build Overviews (Pyramids)...`
-     - 
-     - 
-     - :ref:`processing.options`
+     -
+     -
+     - :ref:`gdaloverviews`
    * - :menuselection:`-->`
        :guilabel:`Tile Index...`
-     - 
-     - 
-     - :ref:`processing.options`
+     -
+     -
+     - :ref:`gdaltileindex`
    * - :menuselection:`Extraction -->`
      -
      -
-     - :ref:`processing.options`
+     -
    * - :menuselection:`-->`
        :guilabel:`Clip Raster by Extent...`
-     - 
-     - 
-     - :ref:`processing.options`
+     -
+     -
+     - :ref:`gdalcliprasterbyextent`
    * - :menuselection:`-->`
        :guilabel:`Clip Raster by Mask Layer...`
-     - 
-     - 
-     - :ref:`processing.options`
+     -
+     -
+     - :ref:`gdalcliprasterbymasklayer`
    * - :menuselection:`-->`
        :guilabel:`Contour...`
-     - 
-     - 
-     - :ref:`processing.options`
+     -
+     -
+     - :ref:`gdalcontour`
    * - :menuselection:`Conversion -->`
      -
      -
-     - :ref:`processing.options`
+     -
    * - :menuselection:`-->`
        :guilabel:`PCT to RGB...`
-     - 
-     - 
-     - :ref:`processing.options`
+     -
+     -
+     - :ref:`gdalpcttorgb`
    * - :menuselection:`-->`
        :guilabel:`Polygonize (Raster to Vector)...`
-     - 
-     - 
-     - :ref:`processing.options`
+     -
+     -
+     - :ref:`gdalpolygonize`
    * - :menuselection:`-->`
        :guilabel:`Rasterize (Vector to Raster)...`
-     - 
-     - 
-     - :ref:`processing.options`
+     -
+     -
+     - :ref:`gdalrasterize`
    * - :menuselection:`-->`
        :guilabel:`RGB to PCT...`
-     - 
-     - 
-     - :ref:`processing.options`
+     -
+     -
+     - :ref:`gdalrgbtopct`
    * - :menuselection:`-->`
        :guilabel:`Translate (Convert Format)...`
-     - 
-     - 
-     - :ref:`processing.options`
+     -
+     -
+     - :ref:`gdaltranslate`
 
 .. only:: html
 
@@ -1769,7 +1774,7 @@ If no database plugins are enabled, there will be no
      - Shortcut
      - Toolbar
      - Reference
-   * - :guilabel:`eVis -->`
+   * - :menuselection:`eVis -->`
      - :kbd:`Alt+D` + :kbd:`E`
      - 
      - :ref:`evis`
@@ -1823,8 +1828,7 @@ If no web plugins are enabled, there will be no :guilabel:`Web` menu.
 
 .. list-table::
    :header-rows: 1
-   :widths: 40 15 15 30
-   :stub-columns: 0
+   :widths: 30 15 15 40
 
    * - Menu Option
      - Shortcut
