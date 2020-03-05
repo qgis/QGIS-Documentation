@@ -341,127 +341,127 @@ details).
      - :ref:`add_feature`
    * - |circularStringCurvePoint| :guilabel:`Add Circular String`
      - 
-     - :guilabel:`Shape Dig.`
+     - :guilabel:`Shape Digitizing`
      - :ref:`add_circular_string`
    * - |circularStringRadius| :guilabel:`Add Circular String by Radius`
      - 
-     - :guilabel:`Shape Dig.`
+     - :guilabel:`Shape Digitizing`
      - :ref:`add_circular_string`
    * - :menuselection:`Add Circle -->`
      - 
-     - :guilabel:`Shape Dig.`
+     - :guilabel:`Shape Digitizing`
      - 
    * - :menuselection:`-->`
        |circle2Points| :guilabel:`Add Circle from 2 Points`
      - 
-     - :guilabel:`Shape Dig.`
+     - :guilabel:`Shape Digitizing`
      - 
    * - :menuselection:`-->`
        |circle3Points| :guilabel:`Add Circle from 3 Points`
      - 
-     - :guilabel:`Shape Dig.`
+     - :guilabel:`Shape Digitizing`
      - 
    * - :menuselection:`-->`
        |circle3Tangents| :guilabel:`Add Circle from 3 Tangents`
      - 
-     - :guilabel:`Shape Dig.`
+     - :guilabel:`Shape Digitizing`
      - 
    * - :menuselection:`-->`
        |circle2TangentsPoint|
        :guilabel:`Add Circle from 2 Tangents and a Point`
      - 
-     - :guilabel:`Shape Dig.`
+     - :guilabel:`Shape Digitizing`
      - 
    * - :menuselection:`-->`
        |circleCenterPoint|
        :guilabel:`Add Circle by a Center Point and Another Point`
      - 
-     - :guilabel:`Shape Dig.`
+     - :guilabel:`Shape Digitizing`
      - 
    * - :menuselection:`Add Rectangle -->`
      - 
-     - :guilabel:`Shape Dig.`
+     - :guilabel:`Shape Digitizing`
      - 
    * - :menuselection:`-->`
        |rectangleExtent| :guilabel:`Add Rectangle from Extent`
      - 
-     - :guilabel:`Shape Dig.`
+     - :guilabel:`Shape Digitizing`
      - 
    * - :menuselection:`-->`
        |rectangleCenter|
        :guilabel:`Add Rectangle from Center and a Point`
      - 
-     - :guilabel:`Shape Dig.`
+     - :guilabel:`Shape Digitizing`
      - 
    * - :menuselection:`-->`
        |rectangle3PointsProjected|
        :guilabel:`Add Rectangle from 3 Points (Distance from 2nd
        and 3rd point)`
      - 
-     - :guilabel:`Shape Dig.`
+     - :guilabel:`Shape Digitizing`
      - 
    * - :menuselection:`-->`
        |rectangle3PointsDistance|
        :guilabel:`Add Rectangle from 3 Points (Distance from
        projected point on segment p1 and p2)`
      - 
-     - :guilabel:`Shape Dig.`
+     - :guilabel:`Shape Digitizing`
      - 
    * - :menuselection:`Add Regular Polygon -->`
      - 
-     - :guilabel:`Shape Dig.`
+     - :guilabel:`Shape Digitizing`
      - 
    * - :menuselection:`-->`
        |regularPolygonCenterPoint|
        :guilabel:`Add Regular Polygon from Center and a Point`
      - 
-     - :guilabel:`Shape Dig.`
+     - :guilabel:`Shape Digitizing`
      - 
    * - :menuselection:`-->`
        |regularPolygonCenterCorner|
        :guilabel:`Add Regular Polygon from Center and a Corner`
      - 
-     - :guilabel:`Shape Dig.`
+     - :guilabel:`Shape Digitizing`
      - 
    * - :menuselection:`-->`
        |regularPolygon2Points|
        :guilabel:`Add Regular Polygon from 2 Points`
      - 
-     - :guilabel:`Shape Dig.`
+     - :guilabel:`Shape Digitizing`
      - 
    * - :menuselection:`Add Ellipse -->`
      - 
-     - :guilabel:`Shape Dig.`
+     - :guilabel:`Shape Digitizing`
      - 
    * - :menuselection:`-->`
        |ellipseCenter2Points|
        :guilabel:`Add Ellipse from Center and 2 Points`
      - 
-     - :guilabel:`Shape Dig.`
+     - :guilabel:`Shape Digitizing`
      - 
    * - :menuselection:`-->`
        |ellipseCenterPoint|
        :guilabel:`Add Ellipse from Center and a Point`
      - 
-     - :guilabel:`Shape Dig.`
+     - :guilabel:`Shape Digitizing`
      - 
    * - :menuselection:`-->`
        |ellipseExtent| :guilabel:`Add Ellipse from Extent`
      - 
-     - :guilabel:`Shape Dig.`
+     - :guilabel:`Shape Digitizing`
      - 
    * - :menuselection:`-->`
        |ellipseFoci| :guilabel:`Add Ellipse from Foci`
      - 
-     - :guilabel:`Shape Dig.`
+     - :guilabel:`Shape Digitizing`
      - 
    * - |moveFeature| :guilabel:`Move Feature(s)`
      - 
-     - :guilabel:`Adv. Dig.`
+     - :guilabel:`Advanced Digitizing`
      - :ref:`move_feature`
    * - |moveFeatureCopy| :guilabel:`Copy and Move Feature(s)`
      - 
-     - :guilabel:`Adv. Dig.`
+     - :guilabel:`Advanced Digitizing`
      - :ref:`move_feature`
    * - |deleteSelectedFeatures| :guilabel:`Delete Selected`
      - 
@@ -473,56 +473,56 @@ details).
      - :ref:`calculate_fields_values`
    * - |rotateFeature| :guilabel:`Rotate Feature(s)`
      - 
-     - :guilabel:`Adv. Dig.`
+     - :guilabel:`Advanced Digitizing`
      - :ref:`rotate_feature`
    * - |simplifyFeatures| :guilabel:`Simplify Feature`
      - 
-     - :guilabel:`Adv. Dig.`
+     - :guilabel:`Advanced Digitizing`
      - :ref:`simplify_feature`
    * - |addRing| :guilabel:`Add Ring`
      - 
-     - :guilabel:`Adv. Dig.`
+     - :guilabel:`Advanced Digitizing`
      - :ref:`add_ring`
    * - |addPart| :guilabel:`Add Part`
      - 
-     - :guilabel:`Adv. Dig.`
+     - :guilabel:`Advanced Digitizing`
      - :ref:`add_part`
    * - |fillRing| :guilabel:`Fill Ring`
      - 
-     - :guilabel:`Adv. Dig.`
+     - :guilabel:`Advanced Digitizing`
      - :ref:`fill_ring`
    * - |deleteRing| :guilabel:`Delete Ring`
      - 
-     - :guilabel:`Adv. Dig.`
+     - :guilabel:`Advanced Digitizing`
      - :ref:`delete_ring`
    * - |deletePart| :guilabel:`Delete Part`
      - 
-     - :guilabel:`Adv. Dig.`
+     - :guilabel:`Advanced Digitizing`
      - :ref:`delete_part`
    * - |reshape| :guilabel:`Reshape Features`
      - 
-     - :guilabel:`Adv. Dig.`
+     - :guilabel:`Advanced Digitizing`
      - :ref:`reshape_feature`
    * - |offsetCurve| :guilabel:`Offset Curve`
      - 
-     - :guilabel:`Adv. Dig.`
+     - :guilabel:`Advanced Digitizing`
      - :ref:`offset_curve`
    * - |splitFeatures| :guilabel:`Split Features`
      - 
-     - :guilabel:`Adv. Dig.`
+     - :guilabel:`Advanced Digitizing`
      - :ref:`split_feature`
    * - |splitParts| :guilabel:`Split Parts`
      - 
-     - :guilabel:`Adv. Dig.`
+     - :guilabel:`Advanced Digitizing`
      - :ref:`split_part`
    * - |mergeFeatures| :guilabel:`Merge Selected Features`
      - 
-     - :guilabel:`Adv. Dig.`
+     - :guilabel:`Advanced Digitizing`
      - :ref:`mergeselectedfeatures`
    * - |mergeFeatAttributes|
        :guilabel:`Merge Attributes of Selected Features`
      - 
-     - :guilabel:`Adv. Dig.`
+     - :guilabel:`Advanced Digitizing`
      - :ref:`mergeattributesfeatures`
    * - |vertexTool| :guilabel:`Vertex Tool (All Layers)`
      - 
@@ -534,19 +534,19 @@ details).
      - :ref:`vertex_tool`
    * - |rotatePointSymbols| :guilabel:`Rotate Point Symbols`
      - 
-     - :guilabel:`Adv. Dig.`
+     - :guilabel:`Advanced Digitizing`
      - :ref:`rotate_symbol`
    * - |offsetPointSymbols| :guilabel:`Offset Point Symbols`
      - 
-     - :guilabel:`Adv. Dig.`
+     - :guilabel:`Advanced Digitizing`
      - :ref:`offset_symbol`
    * - |reverseLine| :guilabel:`Reverse Line`
      - 
-     - :guilabel:`Adv. Dig.`
+     - :guilabel:`Advanced Digitizing`
      - :ref:`reverse_line`
    * - |trimExtend| :guilabel:`Trim/extend Feature`
      - 
-     - :guilabel:`Adv. Dig.`
+     - :guilabel:`Advanced Digitizing`
      - :ref:`trim_extend_feature`
 
 
@@ -620,19 +620,19 @@ actions like:
      - :ref:`label_3dmapview`
    * - |pan| :guilabel:`Pan Map`
      -
-     - :guilabel:`Map Nav.`
+     - :guilabel:`Map Navigation`
      - :ref:`zoom_pan`
    * - |panToSelected| :guilabel:`Pan Map to Selection`
      -
-     - :guilabel:`Map Nav.`
+     - :guilabel:`Map Navigation`
      -
    * - |zoomIn| :guilabel:`Zoom In`
      - :kbd:`Ctrl+Alt++`
-     - :guilabel:`Map Nav.`
+     - :guilabel:`Map Navigation`
      - :ref:`zoom_pan`
    * - |zoomOut| :guilabel:`Zoom Out`
      - :kbd:`Ctrl+Alt+-`
-     - :guilabel:`Map Nav.`
+     - :guilabel:`Map Navigation`
      - :ref:`zoom_pan`
    * - |identify| :guilabel:`Identify Features`
      - :kbd:`Ctrl+Shift+I`
@@ -660,30 +660,30 @@ actions like:
    * - |sum| :guilabel:`Statistical Summary`
      -
      - :guilabel:`Attributes`
-     - :ref:`Statistical Summ. Panel<statistical_summary>`
+     - :ref:`statistical_summary`
    * - |zoomFullExtent| :guilabel:`Zoom Full`
      - :kbd:`Ctrl+Shift+F`
-     - :guilabel:`Map Nav.`
+     - :guilabel:`Map Navigation`
      -
    * - |zoomToSelected| :guilabel:`Zoom To Selection`
      - :kbd:`Ctrl+J`
-     - :guilabel:`Map Nav.`
+     - :guilabel:`Map Navigation`
      -
    * - |zoomToLayer| :guilabel:`Zoom To Layer`
      -
-     - :guilabel:`Map Nav.`
+     - :guilabel:`Map Navigation`
      -
    * - |zoomActual| :guilabel:`Zoom To Native Resolution (100%)`
      -
-     - :guilabel:`Map Nav.`
+     - :guilabel:`Map Navigation`
      -
    * - |zoomLast| :guilabel:`Zoom Last`
      -
-     - :guilabel:`Map Nav.`
+     - :guilabel:`Map Navigation`
      -
    * - |zoomNext| :guilabel:`Zoom Next`
      -
-     - :guilabel:`Map Nav.`
+     - :guilabel:`Map Navigation`
      -
    * - :menuselection:`Decorations -->`
      - :kbd:`Alt+V` + :kbd:`D`
@@ -759,11 +759,11 @@ actions like:
      - :ref:`maptips`
    * - |newBookmark| :guilabel:`New Spatial Bookmark...`
      - :kbd:`Ctrl+B`
-     - :guilabel:`Map Nav.`
+     - :guilabel:`Map Navigation`
      - :ref:`sec_bookmarks`
    * - |showBookmarks| :guilabel:`Show Spatial Bookmarks`
      - :kbd:`Ctrl+Shift+B`
-     - :guilabel:`Map Nav.`
+     - :guilabel:`Map Navigation`
      - :ref:`sec_bookmarks`
    * - |showBookmarks| :guilabel:`Show Spatial Bookmark Manager`
      -
@@ -771,7 +771,7 @@ actions like:
      - :ref:`sec_bookmarks`
    * - |draw| :guilabel:`Refresh`
      - :kbd:`F5`
-     - :guilabel:`Map Nav.`
+     - :guilabel:`Map Navigation`
      -
    * - |showAllLayers| :guilabel:`Show All Layers`
      - :kbd:`Ctrl+Shift+U`
@@ -1027,110 +1027,110 @@ copy or paste layer properties (style, scale, CRS...).
      - Reference
    * - |dataSourceManager| :guilabel:`Data Source Manager`
      - :kbd:`Ctrl+L`
-     - :guilabel:`Data Source Mgr`
+     - :guilabel:`Data Source Manager`
      - :ref:`Opening Data <datasourcemanager>`
    * - :menuselection:`Create Layer -->`
      - 
-     - :guilabel:`Data Source Mgr`
+     - :guilabel:`Data Source Manager`
      - :ref:`sec_create_vector`
    * - :menuselection:`-->`
        :guilabel:`New GeoPackage Layer...`
      - :kbd:`Ctrl+Shift+N`
-     - :guilabel:`Data Source Mgr`
+     - :guilabel:`Data Source Manager`
      - :ref:`sec_create_vector`
    * - :menuselection:`-->`
        :guilabel:`New Shapefile Layer...`
      - 
-     - :guilabel:`Data Source Mgr`
+     - :guilabel:`Data Source Manager`
      - :ref:`sec_create_vector`
    * - :menuselection:`-->`
        :guilabel:`New SpatiaLite Layer...`
      - 
-     - :guilabel:`Data Source Mgr`
+     - :guilabel:`Data Source Manager`
      - :ref:`sec_create_vector`
    * - :menuselection:`-->`
        :guilabel:`New Temporary Scratch Layer...`
      - 
-     - :guilabel:`Data Source Mgr`
+     - :guilabel:`Data Source Manager`
      - :ref:`sec_create_vector`
    * - :menuselection:`-->`
        :guilabel:`New Virtual Layer...`
      - 
-     - :guilabel:`Data Source Mgr`
+     - :guilabel:`Data Source Manager`
      - :ref:`sec_create_vector`
    * - :menuselection:`Add Layer -->`
      - 
-     - :guilabel:`Data Source Mgr`
+     - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
    * - :menuselection:`-->`
        :guilabel:`Add Vector Layer......`
      - :kbd:`Ctrl+Shift+V`
-     - :guilabel:`Data Source Mgr`
+     - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
    * - :menuselection:`-->`
        :guilabel:`Add Raster Layer...`
      - :kbd:`Ctrl+Shift+R`
-     - :guilabel:`Data Source Mgr`
+     - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
    * - :menuselection:`-->`
        :guilabel:`Add Mesh Layer...`
      - 
-     - :guilabel:`Data Source Mgr`
+     - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
    * - :menuselection:`-->`
        :guilabel:`Add Delimited Text Layer...`
      - :kbd:`Ctrl+Shift+T`
-     - :guilabel:`Data Source Mgr`
+     - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
    * - :menuselection:`-->`
        :guilabel:`Add PostGIS Layer...`
      - :kbd:`Ctrl+Shift+D`
-     - :guilabel:`Data Source Mgr`
+     - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
    * - :menuselection:`-->`
        :guilabel:`Add SpatiaLite Layer...`
      - :kbd:`Ctrl+Shift+L`
-     - :guilabel:`Data Source Mgr`
+     - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
    * - :menuselection:`-->`
        :guilabel:`Add MSSQL Spatial Layer...`
      - 
-     - :guilabel:`Data Source Mgr`
+     - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
    * - :menuselection:`-->`
        :guilabel:`Add DB2 Spatial Layer...`
      - :kbd:`Ctrl+Shift+2`
-     - :guilabel:`Data Source Mgr`
+     - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
    * - :menuselection:`-->`
        :guilabel:`Add/Edit Virtual Layer...`
      - 
-     - :guilabel:`Data Source Mgr`
+     - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
    * - :menuselection:`-->`
        :guilabel:`Add WMS/WMTS Layer...`
      - :kbd:`Ctrl+Shift+W`
-     - :guilabel:`Data Source Mgr`
+     - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
    * - :menuselection:`-->`
        :guilabel:`Add ArcGIS MapServer Layer...`
      - 
-     - :guilabel:`Data Source Mgr`
+     - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
    * - :menuselection:`-->`
        :guilabel:`Add WCS Layer...`
      - 
-     - :guilabel:`Data Source Mgr`
+     - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
    * - :menuselection:`-->`
        :guilabel:`Add WFS Layer...`
      - 
-     - :guilabel:`Data Source Mgr`
+     - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
    * - :menuselection:`-->`
        :guilabel:`Add ArcGIS FeatureServer Layer...`
      - 
-     - :guilabel:`Data Source Mgr`
+     - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
    * - :guilabel:`Embed Layers and Groups...`
      - 
@@ -1255,7 +1255,7 @@ copy or paste layer properties (style, scale, CRS...).
    * - |removeAllOVerview| :guilabel:`Hide All from Overview`
      - 
      - 
-     - :ref:`overview_panels`"
+     - :ref:`overview_panels`
 
 
 Settings
