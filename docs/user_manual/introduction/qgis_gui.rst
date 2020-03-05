@@ -2142,7 +2142,6 @@ Below is a list of the default panels provided by QGIS:
 * the :ref:`GPS Information Panel <sec_gpstracking>`
 * the :ref:`Tile Scale Panel <tilesets>`
 * the :ref:`Identify Panel <identify>`
-* the :ref:`User Input Panel <rotate_feature>`
 * the :ref:`Layer Order Panel <layer_order>`
 * the :ref:`layer_styling_panel`
 * the :ref:`statistical_summary`
