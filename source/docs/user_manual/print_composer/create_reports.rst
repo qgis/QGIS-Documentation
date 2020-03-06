@@ -164,22 +164,25 @@ do that, and edit the body:
 
 |
 
-We’ve setup this body with a map (set to follow the current report feature –
-just like how a map item in an atlas can follow the current atlas feature), and
-a label showing the state’s name. If we went ahead and exported our report now,
-we’d get something like this:
+Our body now consists of a map and a label showing the name of the
+state.
+The map is set to follow the current report feature (enabled by checking
+``Controlled by Report`` – just like a map item in an atlas will follow
+the current atlas feature when ``Controlled by Atlas`` is checked).
+If we went ahead and exported our report now, we’d get something like this:
 
 .. figure:: img/report1.png
    :align: center
 
 |
 
-
 First, the report header, then a page for each state, and finally the report
-footer. So more or less an atlas, but with a header and footer page. Let’s make
-things more interesting by adding a subsection to our state group. We do this by
-first selecting the state field group in the organizer, then hitting the
-|signPlus| :sup:`Field Group Section` button and adding a new :guilabel:`Field Group Section`:
+footer.
+So more or less an atlas, but with a header and footer page.
+Let us make things more interesting by adding a subsection to our state group.
+We do this by first selecting the *Admin Level 1* field group in the
+organizer, then hitting the |signPlus| :sup:`Add Field` button
+and adding a new :guilabel:`Field Group Section`:
 
 .. figure:: img/subsection.png
    :align: center
@@ -260,14 +263,13 @@ This results in the last part of our report exporting as:
 Export settings
 ===============
 
-Whenever you export a report, there is a selection of export settings QGIS needs
-to check in order to return the most appropriate output. As you can start to
-imagine, reports in QGIS are extremely powerful and flexible!
+When you export a report
+(:menuselection:`Report-> Export Report as Images... / SVG... / PDF...`),
+you will be asked for a file name, and then you can tune the
+export settings to get the most appropriate output.
 
-.. note:: When you are exporting a report to the available formats please choose the options (Print, SVG, Image, PDF) that have the labels saying :guilabel:`Export Report as...` otherwise you will print the current active map.
-
-    .. figure:: img/export_options_reports.png
-       :align: center
+As you can start to imagine, reports in QGIS are extremely powerful
+and flexible!
 
 |
 
