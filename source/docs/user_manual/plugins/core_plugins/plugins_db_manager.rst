@@ -99,5 +99,3 @@ button.
 
 .. |dbManager| image:: /static/common/dbmanager.png
    :width: 1.5em
-.. |sqlQueryBuilder| image:: /static/common/sqlquerybuilder.png
-   :width: 1.5em

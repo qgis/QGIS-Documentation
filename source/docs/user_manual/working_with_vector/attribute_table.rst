@@ -971,6 +971,8 @@ table.
    :width: 1.5em
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
+.. |capturePoint| image:: /static/common/mActionCapturePoint.png
+   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |conditionalFormatting| image:: /static/common/mActionConditionalFormatting.png
