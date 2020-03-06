@@ -1968,19 +1968,25 @@ in figure_fields_form_.
 #. Choose ``Drag and drop designer`` from the :guilabel:`Select attribute layout
    editor` combobox. This enables the :guilabel:`Form Layout` panel next to the
    :guilabel:`Available widgets` panel, filled with existing fields.
+   Any selected field displays its :ref:`properties <configure_field>` (that you
+   can customize) in a third panel.
 #. Select any fields you would not want to use in your :guilabel:`Form Layout`
    panel and hit the |signMinus| button to remove them. Drag and drop fields
    from the other panel to re-add them. The same field can be added multiple times.
-#. Drag and drop fields within the :guilabel:`Form Layout` to reorder
+#. Drag and drop fields within the :guilabel:`Form Layout` panel to reorder
    their position.
 #. Add containers (tab or group frames) to associate fields that belong to
    the same category and better structure the form.
 
    #. The first step is to use the |signPlus| icon to create a tab in which
       fields and groups will be displayed
-   #. You can create as many containers as you want. If relevant, press
-      the |signPlus| icon again to create another tab or a group frame under
-      an existing tab (see figure_fields_layout_).
+   #. Then set the properties of the container, ie:
+   
+      * the name
+      * the type, ie a :guilabel:`tab` or a :guilabel:`group in container`
+        (a group inside a tab or another group)
+      * and the :guilabel:`number of columns` the embedded fields
+        should be distributed over
 
       .. _figure_fields_layout:
 
@@ -1989,36 +1995,37 @@ in figure_fields_form_.
 
          Dialog to create containers with the **Attribute editor layout**
 
+      These, and other properties can be later updated by selecting the item and,
+      from the third panel:
+
+      * hide or show the container's label
+      * display the container as a group box (only available for tabs).
+      * rename the container
+      * set the number of columns 
+      * enter an expression to control the container's visibility.
+        The expression will be re-evaluated every time values in the form change,
+        and the tab or group box shown/hidden accordingly
+      * add a background color
+   #. You can create as many containers as you want if relevant; press
+      the |signPlus| icon again to create another tab or a group frame under
+      an existing tab.
+
 #. The next step is to assign the relevant fields to each container,
    by simple drag and drop. Groups and tabs can also be moved in the same way.
-#. At their creation time you can set properties of the containers
-   These, and other properties can be updated with a double-click - QGIS opens a form in
-   which you can:
+#. In the case the layer is involved in a :ref:`one or many to many relation
+   <vector_relations>`, drag-and-drop the relation name from the
+   :guilabel:`Available widgets` panel to the :guilabel:`Form Layout` panel.
+   The associated layer attribute form will be embedded at the chosen placement
+   in the current layer's form. As for the other items, select the relation label
+   to configure some properties:
 
-   * choose to hide or show the item label
-   * rename the container
-   * set over how many columns the embedded fields should be distributed
-   * enter an expression to control the container's visibility.
-     The expression will be re-evaluated every time values in the form change,
-     and the tab or group box shown/hidden accordingly
-   * show the container as a group box (only available for tabs).
-   * add a background color
-
-#. Likewise, double-click a field label and you can specify whether the label
-   of its widget should be visible or not in the form.
-
-#. In case the layer is involved in ``one or many to many relations`` (see
-   :ref:`vector_relations`), referencing layers are listed in the
-   :guilabel:`Relations` frame and their form can be embedded in the current
-   layer form by drag-and-drop. As for the other items, double-click the relation
-   label to configure some options:
-
-   * choose to hide or show the item label
+   * hide or show the relation label
    * show the link button
    * show the unlink button
 
 #. Apply the layer's properties dialog
-#. Use the |identify| tool on a feature, and it should display the new form.
+#. Open a feature attribute form (eg, using the |identify| :sup:`Identify features`
+   tool) and it should display the new form.
 
 
 .. _provide_ui_file:
@@ -2092,6 +2099,12 @@ Common settings
 
 Regardless the type of widget applied to the field, there are some common
 properties you can set to control whether and how a field can be edited.
+
+Widget display
+^^^^^^^^^^^^^^^
+
+:guilabel:`Show label`: indicates whether the field name should be displayed
+in the form.
 
 General options
 ^^^^^^^^^^^^^^^
