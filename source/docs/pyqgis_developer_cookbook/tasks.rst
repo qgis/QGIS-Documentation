@@ -288,7 +288,7 @@ parameter ``wait_time``.
   # Creae a few tasks
   task1 = QgsTask.fromFunction('Waste cpu 1', doSomething,
                                on_finished=completed, wait_time=4)
-  task2 = QgsTask.fromFunction('Waste cpu 2', dosomething,
+  task2 = QgsTask.fromFunction('Waste cpu 2', doSomething,
                                on_finished=completed, wait_time=3)
   QgsApplication.taskManager().addTask(task1)
   QgsApplication.taskManager().addTask(task2)
