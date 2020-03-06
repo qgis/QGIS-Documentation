@@ -22,7 +22,7 @@ QGIS User Guide
     managing_data_source/index
     working_with_vector/index
     working_with_raster/index
-    working_with_mesh/index
+    working_with_mesh/mesh_properties
     print_composer/index
     working_with_ogc/index
     working_with_gps/index
