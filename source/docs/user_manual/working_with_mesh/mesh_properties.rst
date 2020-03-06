@@ -4,8 +4,10 @@
  Working with Mesh Data
 ***********************
 
-.. toctree::
-   :maxdepth: 2
+.. only:: html
+
+   .. contents::
+      :local:
 
 What's a mesh?
 ==============
