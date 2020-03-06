@@ -12,42 +12,42 @@ Creating a Report
    .. contents::
       :local:
 
+This section will help you set up a report in QGIS.
 
 What is it?
 ===========
 
-This section will help you set up an automatic report in QGIS. By definition a
-GIS report is a document containing information organized in a narrative,
-graphic, maps, or tabular form, prepared on ad hoc, periodic, recurring,
-regular, or as required basis. Reports may refer to specific periods, events,
-occurrences, or subjects, locations, and may be communicated or presented in
-oral or written form. The reports in QGIS will allow the users to output their
-GIS projects in a simple, quick and structured way.
+By definition, a GIS report is a document containing information organized
+in a narrative way, containing maps, text, graphics, tables, etc.
+A report can be prepared ad hoc, periodic, recurring, regular, or as required.
+Reports may refer to specific periods, events, occurrences, subjects or
+locations.
+Reports in QGIS allow users to output their GIS projects in a simple, quick
+and structured way.
 
 Get started
 ===========
-
-:guilabel:`Reports` menu is an extension of :ref:`Print Layout <label_printlayout>`.
-This functionality can be found in :menuselection:`Project --> New Report` or
-inside of :menuselection:`Project --> Layout Manager`.
+A :guilabel:`Report` is an extensions of a :ref:`Layouts <label_printlayout>`.
+A report can be created with :menuselection:`Project --> New Report` or
+inside the :menuselection:`Project --> Layout Manager`.
 
 In the :guilabel:`Layout Manager` dialog the report can be created through
-:guilabel:`New from template` and select the dropdown option :guilabel:`Empty
-Report` and hitting :guilabel:`Create...` button.
+:guilabel:`New from template` by selecting the dropdown option
+:guilabel:`Empty Report` and hitting the :guilabel:`Create...` button.
 
 For this example, we use some administrative boundaries, populated places, ports
-and airports from dataset of `Natural Earth
-<https://www.naturalearthdata.com/downloads/>`_.
+and airports from the
+`Natural Earth dataset <https://www.naturalearthdata.com/downloads/>`_ (1:10M).
 
 .. figure:: img/project-1.png
    :align: center
 
 |
 
-Using the :menuselection:`Project --> New Report` command, we then create a new
-blank report. Initially, there’s not much to look at – the dialog which is
-displayed looks much like the print layout designer, except for the new
-:guilabel:`Report Organizer` panel shown on the left:
+Using the :menuselection:`Project --> New Report` command, we create a
+blank report. Initially, there is not much to look at – the dialog which is
+displayed looks much like the Layout designer, except for the
+:guilabel:`Report Organizer` panel to the left:
 
 .. figure:: img/report-2.png
    :align: center
@@ -56,34 +56,45 @@ Layout Report Workspace
 =======================
 
 QGIS reports can consist of multiple, nested sections. In our new blank report
-we initially have only the main report section. The only options present for
-this report section is :guilabel:`Include report header` or :guilabel:`Include
-report footer`. If we enable these options, the header will be included as the
-very first page (or pages… --- individual parts of reports can be multi-page if
-desired) in the report, and the footer would be the last page. Let’s go ahead
-and enable the header, and hit the :guilabel:`Edit` button next to it:
+we initially only have the main report section.
+The only options for this report section is :guilabel:`Include report header`
+and :guilabel:`Include report footer`.
+If we enable these options, the header will be included as the first page(s)
+(individual parts of reports can be multi-page if desired) in the report,
+and the footer will constitute the last page(s).
+Enable the header (:guilabel:`Include report header`), and hit the
+:guilabel:`Edit` button next to it:
 
 .. figure:: img/report_header.png
   :align: center
 
 |
 
-A few things happen as a result. Firstly, an edit pencil is now shown next to
-the :guilabel:`Report` section in the :guilabel:`Report Organizer`, indicating
-that the report section is currently being edited in the designer. We also see a
-new blank page shown in the designer itself, with the small :guilabel:`Report
-Header` title. In QGIS reports, every component of the report is made up of
-individual layouts. They can be created and modified using the exact same tools
-as are available for standard print layouts – so you can use any desired
-combination of labels, pictures, maps, tables, etc. Let’s add some items to our
-report header to demonstrate:
+A few things happen as a result. Firstly, an edit pencil is shown
+next to :guilabel:`Report` in the :guilabel:`Report Organizer`,
+indicating that the report section is currently being edited in
+the designer.
+We also see a new page with a small :guilabel:`Report Header` title.
+The page has *landscape* orientation by default, but the this and
+other properties of the page can be changed by right-clicking on
+the page and choosing :menuselection:`Page properties`.
+This will bring up the properties of the page under the
+:guilabel:`Items` tab, and :guilabel:`Size`,
+:guilabel:`Width`, :guilabel:`Height`, and more can be specified.
+
+In QGIS reports, every component of the report is made up of
+individual layouts.
+They can be created and modified using the same tools
+as for standard layouts – so you can use any desired combination of
+labels, pictures, maps, tables, etc.
+Let us add some items to our report header to demonstrate:
 
 .. figure:: img/header.png
    :align: center
 
 |
 
-We’ll also create a simple footer for the report, by checking the
+We will also create a simple footer for the report by checking the
 :guilabel:`Include report footer` option and hitting :guilabel:`Edit`.
 
 .. figure:: img/footer.png
@@ -91,10 +102,11 @@ We’ll also create a simple footer for the report, by checking the
 
 |
 
-Before proceeding further, let’s export this report and see what we get.
-Exporting is done from the Report menu – in this case we select
-:guilabel:`Export Report as PDF` to render the whole report to a PDF file.
-Here’s the not-very-impressive result – a two page PDF consisting of our header
+Before proceeding further, let us export this report and see what we get.
+Exporting is done from the :menuselection:`Report` menu – in this case we select
+:menuselection:`Export Report as PDF...` to render the whole report to a PDF
+file.
+Here is the not-very-impressive result – a two page PDF consisting of our header
 and footer:
 
 .. figure:: img/headerfooter.png
@@ -102,31 +114,39 @@ and footer:
 
 |
 
-Let’s make things more interesting. By hitting the |signPlus| :sup:`Add Static Layout Section`
-button in the :guilabel:`Report Organizer`, we’re given a choice of new sections
-to add to our report.
+Let us make things more interesting.
+By hitting the |signPlus| :sup:`Add Section` button in the
+:guilabel:`Report Organizer`, we are given a choice of new sections to
+add to our report.
 
 .. figure:: img/add_section.png
    :align: center
 
 |
 
-There are two options: :guilabel:`Add Static Layout Section` and a
-:guilabel:`Field Group Section`. The :guilabel:`Add Static Layout Section` is a
-single, static body layout. This can be used to embed static layouts mid-way
-through a report. Alternatively, a :guilabel:`Field Group Section` repeats its
-body layout for every feature in a layer. The features are sorted by the
-selected grouping feature (with an option for ascending/descending sort). If a
-field group section has child sections (e.g. another field group section with a
-different field, then only features with unique values for the group feature are
-iterated over. This allows nested reports with different information.
+There are two options: :guilabel:`Static Layout Section` and
+:guilabel:`Field Group Section`.
 
+The :guilabel:`Add Static Layout Section` is a single, static body layout.
+This can be used to embed static layouts mid-way through a report.
 
-For now we’ll add a Field Group to our report. At its
-most basic level, you can think of a :guilabel:`Field Group Section` as the equivalent
-of a :ref:`print atlas <atlas_generation>`. You select a layer to iterate over,
-and the report will insert a section for each feature found. Selecting the new
-:guilabel:`Field Group Section` reveals a number of new related settings:
+The :guilabel:`Field Group Section` repeats its body layout for every
+feature of a layer.
+The features are sorted by the selected grouping feature (with an option
+for ascending/descending sort).
+If a field group section has child sections (e.g. another field group
+section with a different field, then only features with unique values
+for the group feature are iterated over.
+This allows nested reports.
+
+For now we will add a :guilabel:`Field Group Section` to our report.
+At its most basic level, you can think of a
+:guilabel:`Field Group Section` as the equivalent of a
+:ref:`print atlas <atlas_generation>`.
+You select a layer to iterate over, and the report will insert a
+section for each feature found.
+Selecting the new :guilabel:`Field Group Section` reveals a number of
+new related settings:
 
 .. figure:: img/field_group.png
    :align: center
