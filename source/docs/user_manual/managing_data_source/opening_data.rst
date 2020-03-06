@@ -353,7 +353,9 @@ To load a layer from a file:
 #. Click on the :guilabel:`...` :sup:`Browse` button
 #. Navigate the file system and load a supported data source.
    More than one layer can be loaded at the same time by holding down the
-   :kbd:`Ctrl` or :kbd:`Shift` key and clicking on multiple items in the dialog.
+   :kbd:`Ctrl` key and clicking on multiple items in the dialog or holding down
+   the :kbd:`Shift` key to select a range of items by clicking on the first and last
+   items in the range.
    Only formats that have been well tested appear in the formats filter.
    Other formats can be loaded by selecting ``All files`` (the top item
    in the pull-down menu).
@@ -381,7 +383,7 @@ To load a layer from a file:
 .. index:: US Census Bureau
 
 The |addOgrLayer| :sup:`Add Vector Layer` and |addRasterLayer| :sup:`Add Raster
-Layer` tabs allow to load layers from source types other than :guilabel:`File`:
+Layer` tabs allow loading of layers from source types other than :guilabel:`File`:
 
 * You can load specific vector formats like ``ArcInfo Binary Coverage``,
   ``UK. National Transfer Format``, as well as the raw TIGER format of the
