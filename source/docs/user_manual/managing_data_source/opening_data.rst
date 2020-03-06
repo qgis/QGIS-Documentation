@@ -319,58 +319,58 @@ to add layers, you'll also find tools that are specific to data providers.
 Loading a layer from a file
 ---------------------------
 
-To load a layer from a file, you can:
+To load a layer from a file:
 
-* for vector data (like GML, ESRI Shapefile, Mapinfo and DXF layers), click on
-  the |addOgrLayer| :sup:`Add Vector Layer` toolbar button, select the
-  :menuselection:`Layer --> Add Layer -->` |addOgrLayer|:guilabel:`Add Vector
-  Layer` menu option or press :kbd:`Ctrl+Shift+V`.
-  This will bring up the Data Source Manager with the Vector tab active
-  (:ref:`figure_vector_add`),
-  where you can check |radioButtonOn| :guilabel:`File` and click on the
-  :guilabel:`...` (browse) button.
-  You can also specify the encoding for the file if desired.
+#. Open the layer type tab in the :guilabel:`Data Source Manager`
+   dialog, ie click the |dataSourceManager| :sup:`Open Data Source Manager`
+   button (or press :kbd:`Ctrl+L`) and enable the target tab or:
 
-  .. _figure_vector_add:
+   * for vector data (like GML, ESRI Shapefile, Mapinfo and DXF layers):
+     press :kbd:`Ctrl+Shift+V`, select the :menuselection:`Layer --> Add Layer -->`
+     |addOgrLayer| :guilabel:`Add Vector Layer` menu option or
+     click on the |addOgrLayer| :sup:`Add Vector Layer` toolbar button.
 
-  .. figure:: img/addvectorlayerdialog.png
-     :align: center
+     .. _figure_vector_add:
 
-     Add Vector Layer Dialog
+     .. figure:: img/addvectorlayerdialog.png
+        :align: center
 
-* for raster layers, click on the |addRasterLayer| :sup:`Add Raster Layer` icon,
-  select the :menuselection:`Layer --> Add Layer -->` |addRasterLayer|
-  :guilabel:`Add Raster Layer` menu option or type :kbd:`Ctrl+Shift+R`.
-  This will bring up the Data Source Manager with the Raster tab active
-  (:ref:`figure_raster_add`),
-  where you can check |radioButtonOn| :guilabel:`File` and click on the
-  :guilabel:`...` (browse) button.
+        Add Vector Layer Dialog
 
-  .. _figure_raster_add:
+   * for raster data (like GeoTiff, MBTiles, GRIdded Binary and DWG layers):
+     press :kbd:`Ctrl+Shift+R`, select the :menuselection:`Layer --> Add Layer -->`
+     |addRasterLayer| :guilabel:`Add Raster Layer` menu option or
+     click on the |addRasterLayer| :sup:`Add Raster Layer` toolbar button. 
 
-  .. figure:: img/addrasterlayerdialog.png
-     :align: center
+     .. _figure_raster_add:
 
-     Add Raster Layer Dialog
+     .. figure:: img/addrasterlayerdialog.png
+        :align: center
 
-That will bring up a standard open file dialog, which allows you
-to navigate the file system and load a supported data source.
-Only formats that have been well tested appear in the formats filter.
-Other formats can be loaded by selecting ``All files`` (the top item
-in the pull-down menu).
+        Add Raster Layer Dialog
 
-Selecting a file from the list and clicking :guilabel:`Open` loads it into QGIS.
-More than one layer can be loaded at the same time by holding down the
-:kbd:`Ctrl` or :kbd:`Shift` key and clicking on multiple items in the dialog.
-figure_vector_loaded_ shows QGIS after loading the :file:`alaska.shp` file.
+#. Check |radioButtonOn| :guilabel:`File` source type
+#. Click on the :guilabel:`...` :sup:`Browse` button
+#. Navigate the file system and load a supported data source.
+   More than one layer can be loaded at the same time by holding down the
+   :kbd:`Ctrl` key and clicking on multiple items in the dialog or holding down
+   the :kbd:`Shift` key to select a range of items by clicking on the first and last
+   items in the range.
+   Only formats that have been well tested appear in the formats filter.
+   Other formats can be loaded by selecting ``All files`` (the top item
+   in the pull-down menu).
+#. Press :guilabel:`Open` to load the selected file into :guilabel:`Data
+   Source Manager` dialog
+#. You can specify the encoding for vector file if desired
+#. Press :guilabel:`Add` to load the file in QGIS and display them in the map view.
+   figure_vector_loaded_ shows QGIS after loading the :file:`alaska.shp` file.
 
-.. _figure_vector_loaded:
+   .. _figure_vector_loaded:
 
-.. figure:: img/shapefileloaded.png
-   :align: center
+   .. figure:: img/shapefileloaded.png
+      :align: center
 
-   QGIS with Shapefile of Alaska loaded
-
+      QGIS with Shapefile of Alaska loaded
 
 .. note::
 
@@ -382,9 +382,10 @@ figure_vector_loaded_ shows QGIS after loading the :file:`alaska.shp` file.
 .. index:: ArcInfo Binary Coverage, Tiger Format, UK National Transfer Format
 .. index:: US Census Bureau
 
-Using the |addOgrLayer| :sup:`Add Vector Layer` tool:
+The |addOgrLayer| :sup:`Add Vector Layer` and |addRasterLayer| :sup:`Add Raster
+Layer` tabs allow loading of layers from source types other than :guilabel:`File`:
 
-* You can also load specific vector formats like ``ArcInfo Binary Coverage``,
+* You can load specific vector formats like ``ArcInfo Binary Coverage``,
   ``UK. National Transfer Format``, as well as the raw TIGER format of the
   ``US Census Bureau`` or ``OpenfileGDB``. To do that, you select
   |radioButtonOn| :guilabel:`Directory` as :guilabel:`Source type`.
@@ -394,7 +395,7 @@ Using the |addOgrLayer| :sup:`Add Vector Layer` tool:
   existing database connection or create one to the selected database type.
   Some possible database types are ``ODBC``, ``Esri Personal Geodatabase``,
   ``MSSQL`` as well as ``PostgreSQL`` or ``MySQL`` .
-    
+
   Pressing the :guilabel:`New` button opens the 
   :guilabel:`Create a New OGR Database Connection` dialog whose parameters
   are among the ones you can find in :ref:`vector_create_stored_connection`.
