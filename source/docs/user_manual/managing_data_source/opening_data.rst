@@ -406,17 +406,6 @@ Using the |addOgrLayer| :sup:`Add Vector Layer` tool:
   After selecting the type you have to enter the URI.
 
 
-.. _tip_load_from_external_drive_OSX:
-
-.. tip:: **Load layers and projects from mounted external drives on macOS**
-
-   On macOS, portable drives that are mounted beside the primary hard drive
-   do not show up as expected under :menuselection:`File --> Open...`.
-   We are working on a more macOS-native open/save dialog to fix this.
-   As a workaround, you can type ``/Volumes`` in the :guilabel:`File name` box
-   and press :kbd:`Enter`. Then you can navigate to external drives and network
-   mounts.
-
 .. _mesh_loading:
 
 Loading a mesh layer
