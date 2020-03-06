@@ -383,7 +383,8 @@ This group contains functions to convert one data type to another
    :header: "Function", "Description"
    :widths: auto
 
-   "hash", "Creates a hash (a string hex value) from a string with a given method"
+   "hash", "Creates a hash (a string hex value) from a string with a given method
+   (md4, md5, sha1, sha256, sha512, keccak_512...)"
    "md5", "Creates a md5 hash from a string"
    "sha256", "Creates a sha256 hash from a string"
    "to_date", "Converts a string into a date object"
