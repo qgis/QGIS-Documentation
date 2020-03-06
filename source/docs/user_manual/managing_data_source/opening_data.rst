@@ -162,8 +162,8 @@ For file system directory entries, the context menu offers the following:
   * :guilabel:`Directory...`
   * :guilabel:`GeoPackage...`
   * :guilabel:`ShapeFile...`
-* :guilabel:`Add as a Favorite`: favorite folders can anytime be renamed
-  (:guilabel:`Rename favorite...`) or removed (:guilabel:`Remove favorite`)
+* :guilabel:`Add as a Favorite`: favorite folders can be renamed
+  (:guilabel:`Rename favorite...`) or removed (:guilabel:`Remove favorite`) any time.
 * :guilabel:`Hide from Browser`: hidden folders can be toggled to visible from
   the :menuselection:`Settings --> Options --> Data Sources --> Hidden browser
   paths` setting
