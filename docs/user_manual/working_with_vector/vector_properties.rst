@@ -1603,12 +1603,15 @@ The current core implementation of diagrams provides support for:
 
 * |diagramNone| :guilabel:`No diagrams`: the default value with no diagram
   displayed over the features;
-* |piechart| :guilabel:`Pie charts`, a circular statistical graphic divided into
+* |piechart| :guilabel:`Pie chart`, a circular statistical graphic divided into
   slices to illustrate numerical proportion. The arc length of each slice is
   proportional to the quantity it represents;
-* |text| :guilabel:`Text diagrams`, a horizontaly divided circle showing statistics
+* |text| :guilabel:`Text diagram`, a horizontaly divided circle showing statistics
   values inside;
-* and |histogram| :guilabel:`Histograms`.
+* |histogram| :guilabel:`Histogram`, bars of varying colors for each attribute
+  aligned next to each other
+* |stackedBar| :guilabel:`Stacked bars`, Stacks bars of varying colors for each
+  attribute on top of each other vertically or horizontally
 
 In the top right corner of the :guilabel:`Diagrams` tab, the |autoPlacement|
 :sup:`Automated placement settings (applies to all layers)` button provides
@@ -1652,7 +1655,7 @@ or of the layer tree.
 .. figure:: img/diagram_tab.png
    :align: center
 
-   Diagram properties  - Attributes tab
+   Diagram properties - Attributes tab
 
 .. _diagram_appearance:
 
@@ -1663,12 +1666,18 @@ Rendering
 general settings that do not interfere with the statistic values such as:
 
 * the graphic's opacity, its outline width and color;
-* and, depending on the type of diagram:
+* depending on the type of diagram:
 
-  * the width of the bar in case of histogram;
-  * the circle background color in case of text diagram, and the font used for texts;
-  * the orientation of the left line of the first slice represented in pie chart.
-    Note that slices are displayed clockwise.
+  * in case of histogram and stacked bars, the width of the bar and the spacing
+    between the bars. You may want to set the spacing to ``0`` for stacked bars.
+    Moreover, the :guilabel:`Axis line symbol` can be made visible in the
+    map canvas and customized using :ref:`line symbol properties
+    <vector_line_symbols>`.
+  * in case of text diagram, the circle background color and 
+    the :ref:`font <font_selector>` used for texts;
+  * in case of pie charts, the :guilabel:`Start angle` of the first
+    slice and their :guilabel:`Direction` (clockwise or not).
+* the use of :ref:`paint effects <draw_effects>` on the graphics.
 
 In this tab, you can also manage and fine tune the diagram visibility with
 different options:
@@ -1686,7 +1695,6 @@ different options:
   features to use as obstacles, ie QGIS will try to not place diagrams nor labels
   over these features.
 
-
 .. _figure_diagrams_appearance:
 
 .. figure:: img/diagram_tab_appearance.png
@@ -1700,15 +1708,26 @@ Size
 ----
 
 :guilabel:`Size` is the main tab to set how the selected statistics are
-represented. The diagram size units can be 'Millimeter', 'Points', Pixels,
-'Map Units' or 'Inches'.
+represented. The diagram size :ref:`units <unit_selector>` can be 'Millimeters',
+'Points', Pixels, 'Map Units' or 'Inches'.
 You can use :
 
-* :guilabel:`Fixed size`, an unique size to represent the graphic of all the
-  features, except when displaying histogram
-* or :guilabel:`Scaled size`, based on an expression using layer attributes.
+* :guilabel:`Fixed size`, a unique size to represent the graphic of all the
+  features (not available for histogram)
+* or :guilabel:`Scaled size`, based on an expression using layer attributes:
 
-.. ToDo: better explain the scale behaviour of the different diagram types
+  #. In :guilabel:`Attribute`, select a field or build an expression
+  #. Press :guilabel:`Find` to return the :guilabel:`Maximum value` of the
+     set attribute or enter a custom value in the widget.
+  #. For histogram and stacked bars, enter a :guilabel:`Bar length` value,
+     used to represent the :guilabel:`Maximum value` of the attributes.
+     For each feature, the bar lenght will then be scaled linearly to keep
+     this matching.
+  #. For pie chart and text diagram, enter a :guilabel:`Size` value,
+     used to represent the :guilabel:`Maximum value` of the attributes.
+     For each feature, the circle area or diameter will then be scaled
+     linearly to keep this matching (from ``0``).
+     A :guilabel:`Minimum size` can however be set for small diagrams.
 
 .. _figure_diagrams_size:
 
@@ -1723,25 +1742,28 @@ Placement
 ---------
 
 :guilabel:`Placement` helps to define diagram position.
-According to the layer geometry type, it offers different options for the placement:
+Depending on the layer geometry type, it offers different options for the
+placement (more details at :ref:`Placement <labels_placement>`):
 
-* 'Over the point' or 'Around the point' for point geometry.
-  The latter variable requires a radius to follow.
-* 'Over the line' or 'Around the line' for line geometry. Like point feature,
-  the last variable requires a distance to respect and user can specify the
-  diagram placement relative to the feature ('above', 'on' and/or 'below' the line)
+* :guilabel:`Around point` or :guilabel:`Over point` for point geometry.
+  The former variable requires a radius to follow.
+* :guilabel:`Around line` or :guilabel:`Over line` for line geometry.
+  Like point feature, the first variable requires a distance to respect
+  and you can specify the diagram placement relative to the feature
+  ('above', 'on' and/or 'below' the line)
   It's possible to select several options at once.
   In that case, QGIS will look for the optimal position of the diagram. Remember that
   here you can also use the line orientation for the position of the diagram.
-* 'Over the centroid', 'Around the centroid' (with a distance set),
-  'Perimeter' and anywhere 'Inside polygon' are the options for polygon features.
+* :guilabel:`Around centroid' (with a distance set)`, :guilabel:`Over centroid`,
+  :guilabel:`Using perimeter` and :guilabel:`Inside polygon`
+  are the options for polygon features.
 
-The diagram can also be placed using feature data to fill the coordinates ``X``
-and ``Y`` fields.
+The diagram can also be placed using feature data to fill the :guilabel:`X`
+and :guilabel:`Y` coordinate fields.
 
 The placement of the diagrams can interact with the labeling, so you can
 detect and solve position conflicts between diagrams and labels by setting
-the **Priority** slider value.
+the :guilabel:`Priority` slider value.
 
 .. _figure_diagrams_placement:
 
@@ -1755,10 +1777,11 @@ the **Priority** slider value.
 Options
 -------
 
-The :guilabel:`Options` tab has settings only in case of histogram. You can
-choose whether the bar orientation should be 'Up', 'Down', 'Right' and 'Left'.
+The :guilabel:`Options` tab has settings for histogram and stacked bars.
+You can choose whether the :guilabel:`Bar orientation` should be
+:guilabel:`Up`, :guilabel:`Down`, :guilabel:`Right` or :guilabel:`Left`,
+allowing to generate horizontal or vertical diagrams.
 
-.. ToDo: explain the behaviour of this option
 
 .. index:: Size legend, Diagram legend
 .. _diagram_legend:
@@ -1767,8 +1790,8 @@ Legend
 -------
 
 From the :guilabel:`Legend` tab, you can choose to display items of the diagram
-in the :ref:`label_legend`, and in the :ref:`print layout legend <layout_legend_item>`,
-next to the layer symbology:
+in the :ref:`Layers panel <label_legend>`, and in the :ref:`print layout legend
+<layout_legend_item>`, next to the layer symbology:
 
 * check :guilabel:`Show legend entries for diagram attributes` to display in the
   legends the ``Color`` and ``Legend`` properties, as previously assigned in the
@@ -3336,6 +3359,8 @@ This makes it possible to quickly flag gaps as allowed.
 .. |sort| image:: /static/common/sort.png
    :width: 1.5em
 .. |sourceFields| image:: /static/common/mSourceFields.png
+   :width: 1.5em
+.. |stackedBar| image:: /static/common/stacked-bar.png
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
