@@ -2184,7 +2184,8 @@ While the focus is over the map view:
   moving the mouse while any of the :kbd:`Space` key, the middle mouse
   button or the mouse wheel is held down.
 * it can be zoomed in and out, with the dedicated |zoomIn| :sup:`Zoom In`
-  and |zoomIn| :sup:`Zoom Out` tools. This is also performed by rolling
+  and |zoomIn| :sup:`Zoom Out` tools. Hold the :kbd:`Alt` key to switch from
+  one tool to the other. Zooming is also performed by rolling
   the wheel forward to zoom in and backwards to zoom out.
   The zoom is centered on the mouse cursor position.
 
