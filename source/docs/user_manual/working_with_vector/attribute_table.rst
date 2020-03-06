@@ -974,6 +974,8 @@ table.
    :width: 1.5em
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
+.. |capturePoint| image:: /static/common/mActionCapturePoint.png
+   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |conditionalFormatting| image:: /static/common/mActionConditionalFormatting.png
@@ -1021,8 +1023,6 @@ table.
 .. |newAttribute| image:: /static/common/mActionNewAttribute.png
    :width: 1.5em
 .. |newTableRow| image:: /static/common/mActionNewTableRow.png
-   :width: 1.5em
-.. |capturePoint| image:: /static/common/mActionCapturePoint.png
    :width: 1.5em
 .. |openTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em
