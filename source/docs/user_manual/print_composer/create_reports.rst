@@ -266,6 +266,24 @@ This results in the last part of our report exporting as:
 .. figure:: img/ports.png
    :align: center
 
+Highlighting the current report feature in a map
+------------------------------------------------
+
+To give emphasis to the report feature in a map (apart from placing it
+at the centre of the map), you have to data define the style using
+comparison between the @id and `@atlas_featureid` attributes, as for
+atlases.
+
+For instance, if you would like to use a thicker line / border
+for the report feature than the other features you can data define
+the line widths:
+
+    if($id=@atlas_featureid, 2.0, 0.1)
+
+It is also possible to data define the colour:
+
+    if($id=@atlas_featureid, '#FF880088', '#88CCCCCC')
+
 Export settings
 ===============
 
