@@ -151,8 +151,6 @@ new related settings:
 .. figure:: img/field_group.png
    :align: center
 
-|
-
 In this case we’ve setup our Field Group so that we iterate over all the states
 from the :guilabel:`Admin Level 1` layer, using the values from the
 :guilabel:`adm1name` field. The same options for header and footer are present,
@@ -176,10 +174,11 @@ If we went ahead and exported our report now, we’d get something like this:
 
 |
 
-First, the report header, then a page for each state, and finally the report
-footer.
+First, the report header, then a page for each state, and finally
+the report footer.
 So more or less an atlas, but with a header and footer page.
-Let us make things more interesting by adding a subsection to our state group.
+Let us make things more interesting by adding a subsection to our
+state group.
 We do this by first selecting the *Admin Level 1* field group in the
 organizer, then hitting the |signPlus| :sup:`Add Field` button
 and adding a new :guilabel:`Field Group Section`:
@@ -189,18 +188,23 @@ and adding a new :guilabel:`Field Group Section`:
 
 |
 
-When a :guilabel:`Field Group Section` is iterating over its features, it will
-automatically filter these features to match the feature attributes from its
-parent groups. In this case, the subsection we added will iterate over a
-:guilabel:`Populated Places` layer, including a body section for each place
-encountered. The magic here is that the :guilabel:`Populated Places` layer has
-an attribute named :guilabel:`adm1name`, tagging each place with the state it’s
-contained within (if you’re lucky your data will already be structured like this
-– if not, run the Processing :ref:`Join Attributes by Location
-<qgisjoinattributesbylocation>` algorithm and create your own field). When we
-export this report, QGIS will grab the first state from the :guilabel:`Admin
-Level 1` layer, and then iterate over all the :guilabel:`Populated Places` with
-a matching :guilabel:`adm1name` value. Here’s what we get:
+When iterating over the features of a :guilabel:`Field Group Section`,
+the features will be filtered to match the defining field of its parent
+group (`adm1name` in this case).
+Here, the subsection we added will iterate over a
+:guilabel:`Populated Places` layer, including a body section for each
+place encountered.
+The magic here is that the :guilabel:`Populated Places` layer has an
+attribute with the same name as the defining field in the parent layer,
+:guilabel:`adm1name`, tagging each place with the state it is contained
+within (if you’re lucky your data will already be structured like this
+– if not, run the
+:ref:`Join Attributes by Location <qgisjoinattributesbylocation>`
+Processing algorithm and create your own field).
+When we export this report, QGIS will grab the first state from the
+:guilabel:`Admin Level 1` layer, and then iterate over all the
+:guilabel:`Populated Places` with a matching :guilabel:`adm1name` value.
+Here’s what we get:
 
 .. figure:: img/report3.png
    :align: center
@@ -209,10 +213,11 @@ a matching :guilabel:`adm1name` value. Here’s what we get:
 
 Here we created a basic body for the Populated Places group, including a map of
 the place and a table of some place attributes. So our report is now a report
-header, a page for each state followed by a page for every populated place
-within that state, and finally the report footer. If we were to add a header for
-the Populated Places group, it would be included just before listing the
-populated places for each state:
+header, a page for the first state, followed by a page for every populated place
+within that state, then the rest of the states with their populated places,
+and finally the report footer.
+If we were to add a header for the Populated Places group, it would be included
+just before listing the populated places for each state:
 
 .. figure:: img/report4.png
    :align: center
@@ -224,10 +229,11 @@ final place for each state is included.
 
 In addition to nested subsections, subsections in a report can also be included
 consecutively. If we add a second subsection to the `Admin Level 1 group` for
-:guilabel:`Airports`, then our report will first list ALL the populated places
-for each state, followed by all the airports within that state, before
-proceeding to the next state. In this case our report would be structured like
-this:
+:guilabel:`Airports`, then (if the :guilabel:`Airports` layer has an attribute
+:guilabel:`adm1name` that can link it to the parent group) our report will
+first list ALL the populated places for each state, followed by all the
+airports within that state, before proceeding to the next state.
+In this case our report would be structured like this:
 
 .. figure:: img/report_consec.png
    :align: center
