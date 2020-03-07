@@ -561,6 +561,8 @@ This group contains general assorted functions.
    If the variable is not found, ``NULL`` will be returned."
    "eval", "Evaluates an expression which is passed in a string.
    Useful to expand dynamic parameters passed as context variables or fields."
+   eval_template |314|", "Evaluates a template which is passed in a string.
+   Useful to expand dynamic parameters passed as context variables or fields."
    "is_layer_visible", "Returns true if a specified layer is visible"
    "layer_property", "Returns a property of a layer or a value of its metadata.
    It can be layer name, crs, geometry type, feature count..."
@@ -1055,9 +1057,13 @@ This group contains functions that operate on record identifiers.
    "attribute", "Returns the value of a specified attribute from a feature"
    "attributes", "Returns a :ref:`map <maps_functions>` of all attributes from
    a feature, with field names as map keys"
+   "display_expression |314|", "Returns the :ref:`display expression <maptips>` for a given
+   feature in a layer. If called with no parameters, it evaluates the current feature"
    "get_feature", "Returns the first feature of a layer matching a given attribute value"
    "get_feature_by_id", "Returns the feature of a layer matching the given feature ID"
    "is_selected", "Returns if a feature is selected"
+   "maptip |314|", "Returns the :ref:`maptip <maptips>` for a given feature in a layer.
+   If called with no parameters, it evaluates the current feature"
    "num_selected", "Returns the number of selected features on a given layer"
    "represent_value", "Returns the configured representation value for a field value
    (convenient with some :ref:`widget types <edit_widgets>`)"
@@ -1089,6 +1095,7 @@ This group contains functions that operate on strings
    :widths: 20, 75
    :class: longtable
 
+   "ascii |314|", "Returns the unicode code associated with the first character of a string"
    "char", "Returns the character associated with a unicode code"
    "concat", "Concatenates several strings to one"
    "format", "Formats a string using supplied arguments"
@@ -1225,7 +1232,9 @@ To use these functions in an expression, they should be preceded by @ character
    "item_uuid", "Returns the layout item unique ID"
    "layer", "Returns the current layer"
    "layer_id", "Returns the ID of current layer"
+   "layer_ids |314|", "Returns the list of all map layer IDs from the current project"
    "layer_name", "Returns the name of current layer"
+   "layers |314|", "Returns the list of all map layers from the current project"
    "layout_dpi", "Returns the composition resolution (DPI)"
    "layout_name", "Returns the layout name"
    "layout_numpages", "Returns the number of pages in the layout"
@@ -1262,6 +1271,12 @@ To use these functions in an expression, they should be preceded by @ character
    "map_layers", "Returns the list of map layers visible in the map"
    "map_rotation", "Returns the current rotation of the map"
    "map_scale", "Returns the current scale of the map"
+   "map_start_time |314|", "Returns the start of the map's temporal time range
+   (as a datetime value)"
+   "map_end_time |314|", "Returns the end of the map's temporal time range
+   (as a datetime value)"
+   "map_interval |314|", "Returns the duration of the map's temporal time range
+   (as an interval value)"
    "map_units", "Returns the units of map measurements"
    "notification_message", "Content of the notification message sent by the provider
    (available only for actions triggered by provider notifications)."
@@ -1447,6 +1462,7 @@ Further information about creating Python code can be found in the
    source folder.
 
 .. |312| replace:: ``NEW in 3.12``
+.. |314| replace:: ``NEW in 3.14``
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
