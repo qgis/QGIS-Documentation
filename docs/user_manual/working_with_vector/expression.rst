@@ -421,6 +421,9 @@ This group contains functions for handling date and time data.
    :widths: auto
 
    "age", "Returns as an interval the difference between two dates or datetimes"
+   "datetime_from_epoch |312|", "Returns a datetime whose date and time are the number of milliseconds,
+   msecs, that have passed since 1970-01-01T00:00:00.000, Coordinated Universal Time (Qt.UTC),
+   and converted to Qt.LocalTime."
    "day", "Extracts the day from a date or datetime, or the number of days from an interval"
    "day_of_week", "Returns a number corresponding to the day of the week for a specified date or datetime"
    "epoch", "Returns the interval in milliseconds between the unix epoch and a given date value"
@@ -638,7 +641,10 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    "force_rhr", "Forces a geometry to respect the Right-Hand-Rule (see also
    :ref:`qgisforcerhr`)"
    "geom_from_gml", "Returns a geometry created from a GML representation of geometry"
+   "geom_from_wkb |312|", "Returns a geometry created from a Well-Known Binary (WKB) representation"
    "geom_from_wkt", "Returns a geometry created from a well-known text (WKT) representation"
+   "geom_to_wkb |312|", "Returns the Well-Known Binary (WKB) representation of
+   a geometry as a binary blob"
    "geom_to_wkt", "Returns the well-known text (WKT) representation of the geometry without SRID metadata"
    "geometry", "Returns a feature's geometry"
    "geometry_n", "Returns the nth geometry from a geometry collection,
@@ -657,6 +663,13 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    (share any portion of space) their bounding box, or 0 if they don't"
    "is_closed", "Returns true if a line string is closed (start and end points are coincident),
    false if a line string is not closed, or null if the geometry is not a line string"
+   "is_empty |312|", "Returns true if a geometry is empty (without coordinates),
+   false if the geometry is not empty and NULL if there is no geometry"
+   "is_empty_or_null |312|", "Returns true if a geometry is NULL or empty
+   (without coordinates)  or false otherwise"
+   "is_valid |312|", "Returns true if a geometry is well-formed in 2D according to
+   the OGC rules (see `examples of OGC geometry validity
+   <https://postgis.net/docs/using_postgis_dbmanagement.html#OGC_Validity>`_)"
    "length", "Returns length of a line geometry feature (or length of a string)"
    "line_interpolate_angle", "Returns the angle parallel to the geometry at a specified
    distance along a linestring geometry. Angles are in degrees clockwise from north."
@@ -713,6 +726,8 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    representation of the relationship between two geometries"
    "reverse", "Reverses the direction of a line string by reversing the order of its
    vertices (see also :ref:`qgisreverselinedirection`)"
+   "rotate |312|", "Returns a rotated version of a geometry. Calculations are in
+   the Spatial Reference System of this geometry (see also :ref:`qgisrotatefeatures`)"
    "segments_to_lines", "Returns a multi line geometry consisting of a line for
    every segment in the input geometry (see also :ref:`qgisexplodelines`)"
    "shortest_line", "Returns the shortest line joining two geometries.
@@ -924,10 +939,10 @@ This group contains math functions (e.g., square root, sin and cos).
    "min", "Returns the smallest not null value in a set of values"
    "pi", "Returns the value of pi for calculations"
    "radians", "Converts from degrees to radians"
-   "rand", "Returns the random integer within the range specified by the minimum
-   and maximum argument (inclusive)"
-   "randf", "Returns the random float within the range specified by the minimum
-   and maximum argument (inclusive)"
+   "rand", "Returns a random integer within the range specified by the minimum
+   and maximum argument (inclusive). A seed can be used for deterministic results"
+   "randf", "Returns a random float within the range specified by the minimum
+   and maximum argument (inclusive). A seed can be used for deterministic results"
    "round", "Rounds to number of decimal places"
    "scale_exp", "Transforms a given value from an input domain to an output
    range using an exponential curve"
