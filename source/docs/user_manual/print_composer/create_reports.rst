@@ -25,6 +25,10 @@ locations.
 Reports in QGIS allow users to output their GIS projects in a simple, quick
 and structured way.
 
+The maps in QGIS reports behave in the same way as maps in atlases.
+We will conscentrate on the specifics of QGIS reports. For details on
+map handling, see the :ref:`atlas section <atlas_generation>`.
+
 Get started
 ===========
 A :guilabel:`Report` is an extensions of a :ref:`Layouts <label_printlayout>`.
@@ -166,7 +170,7 @@ Our body now consists of a map and a label showing the name of the
 state.
 The map is set to follow the current report feature (enabled by checking
 ``Controlled by Report`` – just like a map item in an atlas will follow
-the current atlas feature when ``Controlled by Atlas`` is checked).
+the current atlas feature when ``Controlled by Atlas`` is checked):
 
 .. figure:: img/controlledbyreport.png
    :align: center
@@ -242,12 +246,69 @@ In this case our report would be structured like this:
 .. figure:: img/report_consec.png
    :align: center
 
+Including pictures in a report
+------------------------------
+
+Pictures / images can be quite useful in reports, and QGIS allows
+pictures in both the static and dynamic parts of report.
+Pictures are added in the same way as for standard layouts, and for the
+static report parts (and static pictures in dynamic parts) there is not
+more to it.
+
+If you want different illustrations for the different pages of a dynamic
+report part, your layer has to have an attribute that can be used to
+define the picture to include.
+
+QGIS depends on absolute file names for images in reports.
+
+For dynamic pictures, you first add a picture to the body part,
+as usual.
+In the :guilabel:`Items properties` of the picture, you set the
+:guilabel:`Image Source` using the :guilabel:`Data defined override`
+button, and either select an attribute that contains the absolute
+path of the images or :guilabel:`Edit...` (to enter an expression
+that generates the absolute image path):
+
+.. figure:: img/report_dynamic_picture.png
+   :align: center
+
+Here is an example expression that specifies the absolute path
+to the images using the project file location
+:guilabel:`@project_path` and an attribute (`postal`) that is used
+for the file name:
+
+    format('%1/naturalearth/report/pictures/%2.png', file_path( @project_path), "postal" )
+
+.. note:: Non-ASCII characters in the absolute file path can cause
+   problems.
+
+
+Highlighting the current report feature in a map
+------------------------------------------------
+
+To give emphasis to the report feature in a map (apart from placing it
+at the centre of the map), you have to data define the style using
+comparison between the @id and `@atlas_featureid` attributes, as for
+atlases.
+
+For instance, if you would like to use a thicker line / border
+for the report feature than the other features you can data define
+the line widths:
+
+    if($id=@atlas_featureid, 2.0, 0.1)
+
+It is also possible to data define the colour (non-transparent dark
+magenta for the atlas feature and semi-transparent light gray for
+the other features):
+
+    if($id=@atlas_featureid, '#FF880088', '#88CCCCCC')
+
 Report Output
 =============
 
 The key point here is that our :guilabel:`Airports group` is a subsection of the
 :guilabel:`Admin Level 1 group` – not the :guilabel:`Populated Places group`.
-Here’s what our report could look like now:
+Here’s what our report could look like now (including a dynamic picture):
 
 .. figure:: img/report5.png
    :align: center
@@ -270,34 +331,15 @@ This results in the last part of our report exporting as:
 .. figure:: img/ports.png
    :align: center
 
-Highlighting the current report feature in a map
-------------------------------------------------
-
-To give emphasis to the report feature in a map (apart from placing it
-at the centre of the map), you have to data define the style using
-comparison between the @id and `@atlas_featureid` attributes, as for
-atlases.
-
-For instance, if you would like to use a thicker line / border
-for the report feature than the other features you can data define
-the line widths:
-
-    if($id=@atlas_featureid, 2.0, 0.1)
-
-It is also possible to data define the colour:
-
-    if($id=@atlas_featureid, '#FF880088', '#88CCCCCC')
-
 Export settings
 ===============
 
 When you export a report
 (:menuselection:`Report-> Export Report as Images... / SVG... / PDF...`),
-you will be asked for a file name, and then you can tune the
-export settings to get the most appropriate output.
+you will be asked for a file name, and then you get the oportunity to
+tune the export settings to get the most appropriate output.
 
-As you can start to imagine, reports in QGIS are extremely powerful
-and flexible!
+As you see, reports in QGIS are extremely powerful and flexible!
 
 |
 
