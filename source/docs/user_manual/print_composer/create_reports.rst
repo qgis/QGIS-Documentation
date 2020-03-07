@@ -167,6 +167,10 @@ state.
 The map is set to follow the current report feature (enabled by checking
 ``Controlled by Report`` – just like a map item in an atlas will follow
 the current atlas feature when ``Controlled by Atlas`` is checked).
+
+.. figure:: img/controlledbyreport.png
+   :align: center
+
 If we went ahead and exported our report now, we’d get something like this:
 
 .. figure:: img/report1.png
