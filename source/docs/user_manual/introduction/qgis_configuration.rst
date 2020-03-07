@@ -440,9 +440,14 @@ Rendering Settings
 
 * With :guilabel:`RGB band selection`, you can define the number for the Red,
   Green and Blue band.
-* For newly added rasters you can define the :guilabel:`Zoomed in resampling`
-  and the :guilabel:`Zoomed out resampling`. You can choose between three default
+* The :guilabel:`Zoomed in resampling`
+  and the :guilabel:`Zoomed out resampling` methods can be defined.
+  For :guilabel:`Zoomed in resampling` you can choose between three
   resampling methods: 'Nearest Neighbour', 'Bilinear' and 'Cubic'.
+  For :guilabel:`Zoomed out resampling` you can choose between 'Nearest Neighbour'
+  and 'Average'.
+  You can also set the :guilabel:`Oversampling` value (between 0.0 and 99.99 - a large
+  value means more work for QGIS - the default value is 2.0).
 
 *Contrast enhancement*
 
