@@ -308,7 +308,8 @@ Report Output
 
 The key point here is that our :guilabel:`Airports group` is a subsection of the
 :guilabel:`Admin Level 1 group` – not the :guilabel:`Populated Places group`.
-Here’s what our report could look like now (including a dynamic picture):
+Here’s what our report could look like now (including a dynamic picture and
+some highlighting):
 
 .. figure:: img/report5.png
    :align: center
