@@ -265,9 +265,9 @@ For dynamic pictures, you first add a picture to the body part,
 as usual.
 In the :guilabel:`Items properties` of the picture, you set the
 :guilabel:`Image Source` using the :guilabel:`Data defined override`
-button, and either select an attribute that contains the absolute
-path of the images or :guilabel:`Edit...` (to enter an expression
-that generates the absolute image path):
+button |dataDefined|, and either select an attribute that contains
+the absolute path of the images or :guilabel:`Edit...`
+(to enter an expression that generates the absolute image path):
 
 .. figure:: img/report_dynamic_picture.png
    :align: center
@@ -357,4 +357,6 @@ Reports in QGIS 3.0 - the Ultimate Guide!
    source folder.
 
 .. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
