@@ -141,6 +141,16 @@ using functions, layer's fields and values. It contains following widgets:
           -- using || allows regions without airports to be skipped
       )
 
+* Above the expression editor, you have on the left a set of basic operators
+  to help you build the expression. On the right, you can:
+
+  * |fileNew|:sup:`Clear the expression editor`
+  * |fileSave|:sup:`Add the current expression to user expressions`: store the
+    expression in the user profile (:file:`<userprofile>/QGIS/QGIS3.ini` file)
+    and display it under the :ref:`User expressions group <user_expressions_functions>`.
+    A label and a help text can be added for easy identification.
+  * |deleteSelected| :sup:`Remove selected expression from user expressions`
+
 * Under the expression editor, an :guilabel:`Output preview` displays the result
   of the expression evaluated on the first feature of the layer. In case of
   error, it indicates it and you can access details with the provided hyperlink.
@@ -155,11 +165,11 @@ using functions, layer's fields and values. It contains following widgets:
    Press :kbd:`Ctrl+Click` when hovering a function name in an expression to
    automatically display its help in the dialog.
 
-* A field's values widget shown when a field is selected in the function selector
+  A field's values widget shown when a field is selected in the function selector
   helps to fetch features attributes. Double-clicking a value adds it to the
   expression editor.
 
-.. tip::
+  .. tip::
 
    The right panel, showing functions help or field values, can be
    collapsed (invisible) in the dialog. Press the :guilabel:`Show Values`
@@ -169,6 +179,7 @@ using functions, layer's fields and values. It contains following widgets:
 
 .. figure:: img/function_list.png
    :align: center
+   :width: 100%
 
    The Expression tab
 
@@ -1136,6 +1147,21 @@ operators or the ``concat`` function, with some special characteristics:
    # All the above return: My country is France (FR)
 
 
+.. _user_expressions_functions:
+
+User Expressions |312|
+----------------------
+
+This group contains the expressions saved as **user expressions** using
+the |fileSave| :sup:`Add the current expression to the user expressions` button.
+It is meant for important expressions you want to have
+quick access to. They are saved under the user profile and available in all
+expression dialogs inside all projects of the current user profile.
+
+They can be deleted using the |deleteSelected| :sup:`Remove selected expression
+from user expressions` button.
+
+
 .. _variables_functions:
 
 Variables Functions
@@ -1405,13 +1431,20 @@ Further information about creating Python code can be found in the
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |312| replace:: ``NEW in 3.12``
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
+.. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
+   :width: 1.5em
 .. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
 .. |expressionSelect| image:: /static/common/mIconExpressionSelect.png
+   :width: 1.5em
+.. |fileNew| image:: /static/common/mActionFileNew.png
+   :width: 1.5em
+.. |fileSave| image:: /static/common/mActionFileSave.png
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
