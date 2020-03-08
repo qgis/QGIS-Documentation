@@ -1154,9 +1154,9 @@ User Expressions |312|
 
 This group contains the expressions saved as **user expressions** using
 the |fileSave| :sup:`Add the current expression to the user expressions` button.
-They are meant to be some important expressions you want to store and have a
-quick access to. They are saved under the user profile and available in any
-expression dialog inside any project of the current user profile.
+It is meant for important expressions you want to have
+quick access to. They are saved under the user profile and available in all
+expression dialogs inside all projects of the current user profile.
 
 They can be deleted using the |deleteSelected| :sup:`Remove selected expression
 from user expressions` button.
