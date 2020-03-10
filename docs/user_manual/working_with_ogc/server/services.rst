@@ -13,7 +13,7 @@ QGIS Server is able to serve data according to standard protocols as described
 by the **Open Geospatial Consortium (OGC)**:
 
 - WMS 1.1.0 and 1.3.0
-- WFS 1.0.0 and 1.1.0
+- WFS 1.0.0, 1.1.0, 2.0
 - WFS3 (OGC API - Features)
 - WCS 1.1.1
 - WMTS 1.0.0
@@ -1593,6 +1593,7 @@ endpoints:
 - ``.geojson``: alias for ``.json`` supported by the **Features** and
   **Feature** endpoints
 
+.. _wfs3_endpoints:
 
 Endpoints
 --------------------
