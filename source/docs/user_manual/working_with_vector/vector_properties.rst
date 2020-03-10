@@ -1968,9 +1968,9 @@ in figure_fields_form_.
 #. Choose ``Drag and drop designer`` from the :guilabel:`Select attribute layout
    editor` combobox. This enables the :guilabel:`Form Layout` panel next to the
    :guilabel:`Available widgets` panel, filled with existing fields.
-   Any selected field displays its :ref:`properties <configure_field>` (that you
+   The selected field displays its :ref:`properties <configure_field>` (that you
    can customize) in a third panel.
-#. Select any fields you would not want to use in your :guilabel:`Form Layout`
+#. Select fields you do not want to use in your :guilabel:`Form Layout`
    panel and hit the |signMinus| button to remove them. Drag and drop fields
    from the other panel to re-add them. The same field can be added multiple times.
 #. Drag and drop fields within the :guilabel:`Form Layout` panel to reorder
@@ -1995,7 +1995,7 @@ in figure_fields_form_.
 
          Dialog to create containers with the **Attribute editor layout**
 
-      These, and other properties can be later updated by selecting the item and,
+      These, and other properties can later be updated by selecting the item and,
       from the third panel:
 
       * hide or show the container's label
@@ -2006,16 +2006,16 @@ in figure_fields_form_.
         The expression will be re-evaluated every time values in the form change,
         and the tab or group box shown/hidden accordingly
       * add a background color
-   #. You can create as many containers as you want if relevant; press
+   #. You can create as many containers as you want; press
       the |signPlus| icon again to create another tab or a group frame under
       an existing tab.
 
 #. The next step is to assign the relevant fields to each container,
    by simple drag and drop. Groups and tabs can also be moved in the same way.
-#. In the case the layer is involved in a :ref:`one or many to many relation
+#. In case the layer is involved in a :ref:`one or many to many relation
    <vector_relations>`, drag-and-drop the relation name from the
    :guilabel:`Available widgets` panel to the :guilabel:`Form Layout` panel.
-   The associated layer attribute form will be embedded at the chosen placement
+   The associated layer attribute form will be embedded at the chosen place
    in the current layer's form. As for the other items, select the relation label
    to configure some properties:
 
