@@ -230,6 +230,7 @@ Icon                     Substitution                 Icon                     S
 |labelingRuleBased|      ``|labelingRuleBased|``      |labelingObstacle|       ``|labelingObstacle|``
 |piechart|               ``|piechart|``               |diagramNone|            ``|diagramNone|``
 |text|                   ``|text|``                   |histogram|              ``|histogram|``
+|stackedBar|             ``|stackedBar|``
 |annotation|             ``|annotation|``             |textAnnotation|         ``|textAnnotation|``
 |formAnnotation|         ``|formAnnotation|``         |htmlAnnotation|         ``|htmlAnnotation|``
 |svgAnnotation|          ``|svgAnnotation|``          |autoPlacement|          ``|autoPlacement|``
@@ -1211,6 +1212,8 @@ Icon                            Substitution                        Icon        
 .. |splitParts| image:: /static/common/mActionSplitParts.png
    :width: 1.5em
 .. |sqlQueryBuilder| image:: /static/common/sqlquerybuilder.png
+   :width: 1.5em
+.. |stackedBar| image:: /static/common/stacked-bar.png
    :width: 1.5em
 .. |start| image:: /static/common/mActionStart.png
    :width: 1.5em
