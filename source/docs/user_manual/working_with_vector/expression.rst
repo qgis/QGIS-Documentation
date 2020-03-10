@@ -155,11 +155,11 @@ using functions, layer's fields and values. It contains following widgets:
    Press :kbd:`Ctrl+Click` when hovering a function name in an expression to
    automatically display its help in the dialog.
 
-* A field's values widget shown when a field is selected in the function selector
+  A field's values widget shown when a field is selected in the function selector
   helps to fetch features attributes. Double-clicking a value adds it to the
   expression editor.
 
-.. tip::
+  .. tip::
 
    The right panel, showing functions help or field values, can be
    collapsed (invisible) in the dialog. Press the :guilabel:`Show Values`
