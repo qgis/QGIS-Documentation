@@ -2191,15 +2191,15 @@ While the focus is over the map view:
 
   You can customize the :guilabel:`Zoom factor` under the
   :menuselection:`Settings --> Options --> Map tools` menu.
-* it can be zoomed to the full extent of loaded layers (|zoomFullExtent|
+* it can be zoomed to the full extent of all loaded layers (|zoomFullExtent|
   :sup:`Zoom Full`), to a layer extent (|zoomToLayer| :sup:`Zoom to Layer`)
   or to the extent of selected features (|zoomToSelected| :sup:`Zoom to Selection`)
-* you can navigate back/forward through canvas view history with
+* you can navigate back/forward through the canvas view history with
   the |zoomLast|:sup:`Zoom Last` and |zoomNext|:sup:`Zoom Next` buttons
   or using the back/forward mouse buttons.
 
-By default, QGIS opens a single map view (so called "main map"), which is
-tightly bound to the :guilabel:`Layers` panel; the main map *automatically*
+By default, QGIS opens a single map view (called "main map"), which is
+tightly bound to the :guilabel:`Layers` panel. The main map *automatically*
 reflects the changes you make in the :guilabel:`Layers` panel area.
 But it's possible to have additional map views to preview different
 renderings of your dataset, side by side; while still relying on
@@ -2225,7 +2225,7 @@ other.
 
    Multiple map views with different settings
 
-At the top of an additional map canvas, there's a toolbar with following
+At the top of an additional map canvas, there's a toolbar with the following
 capabilities:
 
 * |zoomFullExtent| :sup:`Zoom Full`, |zoomToSelected| :sup:`Zoom to Selection`
