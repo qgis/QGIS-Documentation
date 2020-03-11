@@ -1340,193 +1340,257 @@ are enabled.
 
 .. list-table::
    :header-rows: 1
-   :widths: 45 15 40
+   :widths: 40 15 10 35
    :stub-columns: 0
 
    * - Menu Option
      - Shortcut
+     - Toolbar
      - Reference
+   * - |coordinateCapture| :guilabel:`Coordinate Capture`
+     -
+     - :guilabel:`Vector`
+     - :ref:`coordcapt`
+   * - |geometryChecker| :guilabel:`Check Geometries...`
+     -
+     -
+     - :ref:`geometry_checker`
+   * - |gpsImporter| :guilabel:`GPS Tools`
+     - :kbd:`Alt+O` + :kbd:`G`
+     - :guilabel:`Vector`
+     - :ref:`plugin_gps`
+   * - |topologyChecker| :guilabel:`Topology Checker`
+     -
+     - :guilabel:`Vector`
+     - :ref:`topology`
    * - :menuselection:`Geoprocessing Tools -->`
      - :kbd:`Alt+O` + :kbd:`G`
      -
+     -
    * - :menuselection:`-->`
        :guilabel:`Buffer...`
+     -
      -
      - :ref:`qgisbuffer`
    * - :menuselection:`-->`
        :guilabel:`Clip...`
      -
+     -
      - :ref:`qgisclip`
    * - :menuselection:`-->`
        :guilabel:`Convex Hull...`
+     -
      -
      - :ref:`qgisconvexhull`
    * - :menuselection:`-->`
        :guilabel:`Difference...`
      -
+     -
      - :ref:`qgisdifference`
    * - :menuselection:`-->`
        :guilabel:`Dissolve...`
+     -
      -
      - :ref:`qgisdissolve`
    * - :menuselection:`-->`
        :guilabel:`Intersection...`
      -
+     -
      - :ref:`qgisintersection`
    * - :menuselection:`-->`
        :guilabel:`Symmetrical Difference...`
+     -
      - 
      - :ref:`qgissymmetricaldifference`
    * - :menuselection:`-->`
        :guilabel:`Union...`
      -
+     -
      - :ref:`qgisunion`
    * - :menuselection:`-->`
        :guilabel:`Eliminate Selected Polygons...`
+     -
      -
      - :ref:`qgiseliminateselectedpolygons`
    * - :menuselection:`Geometry Tools -->`
      - :kbd:`Alt+O` + :kbd:`E`
      -
+     -
    * - :menuselection:`-->`
        :guilabel:`Centroids...`
+     -
      -
      - :ref:`qgiscentroids`
    * - :menuselection:`-->`
        :guilabel:`Collect Geometries...`
      -
+     -
      - :ref:`qgiscollect`
    * - :menuselection:`-->`
        :guilabel:`Extract Vertices...`
+     -
      -
      - :ref:`qgisextractvertices`
    * - :menuselection:`-->`
        :guilabel:`Multipart to Singleparts...`
      -
+     -
      - :ref:`qgismultiparttosingleparts`
    * - :menuselection:`-->`
        :guilabel:`Polygons to Lines...`
+     -
      -
      - :ref:`qgispolygonstolines`
    * - :menuselection:`-->`
        :guilabel:`Simplify...`
      -
+     -
      - :ref:`qgissimplifygeometries`
    * - :menuselection:`-->`
        :guilabel:`Check Validity...`
+     -
      -
      - :ref:`qgischeckvalidity`
    * - :menuselection:`-->`
        :guilabel:`Delaunay Triangulation...`
      -
+     -
      - :ref:`qgisdelaunaytriangulation`
    * - :menuselection:`-->`
        :guilabel:`Densify by Count...`
+     -
      -
      - :ref:`qgisdensifygeometries`
    * - :menuselection:`-->`
        :guilabel:`Add Geometry Attributes...`
      -
+     -
      - :ref:`qgisexportaddgeometrycolumns`
    * - :menuselection:`-->`
        :guilabel:`Lines to Polygons...`
+     -
      -
      - :ref:`qgislinestopolygons`
    * - :menuselection:`-->`
        :guilabel:`Voronoi Polygons...`
      -
+     -
      - :ref:`qgisvoronoipolygons`
    * - :menuselection:`Analysis Tools -->`
      - :kbd:`Alt+O` + :kbd:`A`
      -
+     -
    * - :menuselection:`-->`
        :guilabel:`Line Intersection...`
+     -
      -
      - :ref:`qgislineintersections`
    * - :menuselection:`-->`
        :guilabel:`Mean Coordinate(s)...`
      -
+     -
      - :ref:`qgismeancoordinates`
    * - :menuselection:`-->`
        :guilabel:`Basic Statistics for Fields...`
+     -
      -
      - :ref:`qgisbasicstatisticsforfields`
    * - :menuselection:`-->`
        :guilabel:`Count Points in Polygon...`
      -
+     -
      - :ref:`qgiscountpointsinpolygon`
    * - :menuselection:`-->`
        :guilabel:`Distance Matrix...`
+     -
      -
      - :ref:`qgisdistancematrix`
    * - :menuselection:`-->`
        :guilabel:`List Unique Values...`
      -
+     -
      - :ref:`qgislistuniquevalues`
    * - :menuselection:`-->`
        :guilabel:`Nearest Neighbour Analysis...`
+     -
      -
      - :ref:`qgisnearestneighbouranalysis`
    * - :menuselection:`-->`
        :guilabel:`Sum Line Lengths...`
      -
+     -
      - :ref:`qgissumlinelengths`
    * - :menuselection:`Data Management Tools -->`
      - :kbd:`Alt+O` + :kbd:`D`
      -
+     -
    * - :menuselection:`-->`
        :guilabel:`Merge Vector Layers...`
+     -
      -
      - :ref:`qgismergevectorlayers`
    * - :menuselection:`-->`
        :guilabel:`Reproject Layer...`
      -
+     -
      - :ref:`qgisreprojectlayer`
    * - :menuselection:`-->`
        :guilabel:`Create Spatial Index...`
+     -
      -
      - :ref:`qgiscreatespatialindex`
    * - :menuselection:`-->`
        :guilabel:`Join Attributes by Location...`
      -
+     -
      - :ref:`qgisjoinattributesbylocation`
    * - :menuselection:`-->`
        :guilabel:`Split Vector Layer...`
+     -
      -
      - :ref:`qgissplitvectorlayer`
    * - :menuselection:`Research Tools -->`
      - :kbd:`Alt+O` + :kbd:`R`
      -
+     -
    * - :menuselection:`-->`
        :guilabel:`Select by Location...`
+     -
      -
      - :ref:`qgisselectbylocation`
    * - :menuselection:`-->`
        :guilabel:`Extract Layer Extent...`
      -
+     -
      - :ref:`qgispolygonfromlayerextent`
    * - :menuselection:`-->`
        :guilabel:`Random Points in Extent...`
+     -
      -
      - :ref:`qgisrandompointsinextent`
    * - :menuselection:`-->`
        :guilabel:`Random Points in Layer Bounds...`
      -
+     -
      - :ref:`qgisrandompointsinlayerbounds`
    * - :menuselection:`-->`
        :guilabel:`Random Points Inside Polygons...`
+     -
      -
      - :ref:`qgisrandompointsinsidepolygons`
    * - :menuselection:`-->`
        :guilabel:`Random Selection...`
      -
+     -
      - :ref:`qgisrandomselection`
    * - :menuselection:`-->`
        :guilabel:`Random Selection Within Subsets...`
      -
+     -
      - :ref:`qgisrandomselectionwithinsubsets`
    * - :menuselection:`-->`
        :guilabel:`Regular Points...`
+     -
      -
      - :ref:`qgisregularpoints`
 
@@ -2576,6 +2640,8 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |circularStringRadius| image:: /static/common/mActionCircularStringRadius.png
    :width: 1.5em
+.. |coordinateCapture| image:: /static/common/coordinate_capture.png
+   :width: 1.5em
 .. |customProjection| image:: /static/common/mActionCustomProjection.png
    :width: 1.5em
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
@@ -2631,7 +2697,11 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |formSelect| image:: /static/common/mIconFormSelect.png
    :width: 1.5em
+.. |geometryChecker| image:: /static/common/geometrychecker.png
+   :width: 1.5em
 .. |georefRun| image:: /static/common/mGeorefRun.png
+   :width: 1.5em
+.. |gpsImporter| image:: /static/common/gps_importer.png
    :width: 1.5em
 .. |helpContents| image:: /static/common/mActionHelpContents.png
    :width: 1.5em
@@ -2806,6 +2876,8 @@ Click the icon to open the Plugin Manager dialog.
 .. |sum| image:: /static/common/mActionSum.png
    :width: 1.2em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
+   :width: 1.5em
+.. |topologyChecker| image:: /static/common/mActionTopologyChecker.png
    :width: 1.5em
 .. |tracking| image:: /static/common/tracking.png
    :width: 1.5em
