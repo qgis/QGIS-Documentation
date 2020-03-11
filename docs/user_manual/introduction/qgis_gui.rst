@@ -2562,7 +2562,6 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-
 .. |circle2Points| image:: /static/common/mActionCircle2Points.png
    :width: 1.5em
 .. |circle2TangentsPoint| image:: /static/common/mActionCircle2TangentsPoint.png
@@ -2573,9 +2572,6 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |circleCenterPoint| image:: /static/common/mActionCircleCenterPoint.png
    :width: 1.5em
-.. |circleExtent| image:: /static/common/mActionCircleExtent.png
-   :width: 1.5em
-
 .. |circularStringCurvePoint| image:: /static/common/mActionCircularStringCurvePoint.png
    :width: 1.5em
 .. |circularStringRadius| image:: /static/common/mActionCircularStringRadius.png
@@ -2606,7 +2602,6 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |editPaste| image:: /static/common/mActionEditPaste.png
    :width: 1.5em
-
 .. |ellipseCenter2Points| image:: /static/common/mActionEllipseCenter2Points.png
    :width: 1.5em
 .. |ellipseCenterPoint| image:: /static/common/mActionEllipseCenterPoint.png
@@ -2619,13 +2614,10 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |eventId| image:: /static/common/event_id.png
    :width: 1.5em
-
 .. |expressionSelect| image:: /static/common/mIconExpressionSelect.png
    :width: 1.5em
-
 .. |evisConnect| image:: /static/common/evis_connect.png
    :width: 1.5em
-
 .. |extents| image:: /static/common/extents.png
    :width: 1.5em
 .. |fileExit| image:: /static/common/mActionFileExit.png
@@ -2713,13 +2705,10 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |newTableRow| image:: /static/common/mActionNewTableRow.png
    :width: 1.5em
-
-
 .. |offlineEditingCopy| image:: /static/common/offline_editing_copy.png
    :width: 1.5em
 .. |offlineEditingSync| image:: /static/common/offline_editing_sync.png
    :width: 1.5em
-
 .. |offsetCurve| image:: /static/common/mActionOffsetCurve.png
    :width: 1.5em
 .. |offsetPointSymbols| image:: /static/common/mActionOffsetPointSymbols.png
@@ -2754,7 +2743,6 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |qgisHomePage| image:: /static/common/mActionQgisHomePage.png
    :width: 1.5em
-
 .. |rectangle3PointsDistance| image:: /static/common/mActionRectangle3PointsDistance.png
    :width: 1.5em
 .. |rectangle3PointsProjected| image:: /static/common/mActionRectangle3PointsProjected.png
@@ -2763,17 +2751,14 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |rectangleExtent| image:: /static/common/mActionRectangleExtent.png
    :width: 1.5em
-
 .. |redo| image:: /static/common/mActionRedo.png
    :width: 1.5em
-
 .. |regularPolygon2Points| image:: /static/common/mActionRegularPolygon2Points.png
    :width: 1.5em
 .. |regularPolygonCenterCorner| image:: /static/common/mActionRegularPolygonCenterCorner.png
    :width: 1.5em
 .. |regularPolygonCenterPoint| image:: /static/common/mActionRegularPolygonCenterPoint.png
    :width: 1.5em
-
 .. |removeAllOVerview| image:: /static/common/mActionRemoveAllFromOverview.png
    :width: 1.5em
 .. |removeLayer| image:: /static/common/mActionRemoveLayer.png
