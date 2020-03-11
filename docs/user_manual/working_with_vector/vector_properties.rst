@@ -1709,7 +1709,7 @@ Size
 
 :guilabel:`Size` is the main tab to set how the selected statistics are
 represented. The diagram size :ref:`units <unit_selector>` can be 'Millimeters',
-'Points', Pixels, 'Map Units' or 'Inches'.
+'Points', 'Pixels', 'Map Units' or 'Inches'.
 You can use :
 
 * :guilabel:`Fixed size`, a unique size to represent the graphic of all the
