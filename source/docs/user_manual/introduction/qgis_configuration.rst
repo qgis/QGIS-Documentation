@@ -433,8 +433,6 @@ Rendering Settings
 
 * With :guilabel:`RGB band selection`, you can define the number for the Red,
   Green and Blue band.
-<<<<<<< HEAD
-=======
 * The :guilabel:`Zoomed in resampling`
   and the :guilabel:`Zoomed out resampling` methods can be defined.
   For :guilabel:`Zoomed in resampling` you can choose between three
@@ -443,7 +441,6 @@ Rendering Settings
   and 'Average'.
   You can also set the :guilabel:`Oversampling` value (between 0.0 and 99.99 - a large
   value means more work for QGIS - the default value is 2.0).
->>>>>>> 8875efa34... Apply suggestions from code review
 
 *Contrast enhancement*
 
