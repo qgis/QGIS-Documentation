@@ -1668,14 +1668,14 @@ general settings that do not interfere with the statistic values such as:
 * the graphic's opacity, its outline width and color;
 * depending on the type of diagram:
 
-  * in case of histogram and stacked bars, the width of the bar and the spacing
+  * for histogram and stacked bars, the width of the bar and the spacing
     between the bars. You may want to set the spacing to ``0`` for stacked bars.
-    Moreover, the :guilabel:`Axis line symbol` can be made visible in the
+    Moreover, the :guilabel:`Axis line symbol` can be made visible on the
     map canvas and customized using :ref:`line symbol properties
     <vector_line_symbols>`.
-  * in case of text diagram, the circle background color and 
+  * for text diagram, the circle background color and 
     the :ref:`font <font_selector>` used for texts;
-  * in case of pie charts, the :guilabel:`Start angle` of the first
+  * for pie charts, the :guilabel:`Start angle` of the first
     slice and their :guilabel:`Direction` (clockwise or not).
 * the use of :ref:`paint effects <draw_effects>` on the graphics.
 
@@ -1713,12 +1713,12 @@ represented. The diagram size :ref:`units <unit_selector>` can be 'Millimeters',
 You can use :
 
 * :guilabel:`Fixed size`, a unique size to represent the graphic of all the
-  features (not available for histogram)
+  features (not available for histograms)
 * or :guilabel:`Scaled size`, based on an expression using layer attributes:
 
   #. In :guilabel:`Attribute`, select a field or build an expression
   #. Press :guilabel:`Find` to return the :guilabel:`Maximum value` of the
-     set attribute or enter a custom value in the widget.
+     attribute or enter a custom value in the widget.
   #. For histogram and stacked bars, enter a :guilabel:`Bar length` value,
      used to represent the :guilabel:`Maximum value` of the attributes.
      For each feature, the bar lenght will then be scaled linearly to keep
@@ -1741,7 +1741,7 @@ You can use :
 Placement
 ---------
 
-:guilabel:`Placement` helps to define diagram position.
+:guilabel:`Placement` defines the diagram position.
 Depending on the layer geometry type, it offers different options for the
 placement (more details at :ref:`Placement <labels_placement>`):
 
@@ -1777,7 +1777,7 @@ the :guilabel:`Priority` slider value.
 Options
 -------
 
-The :guilabel:`Options` tab has settings for histogram and stacked bars.
+The :guilabel:`Options` tab has settings for histograms and stacked bars.
 You can choose whether the :guilabel:`Bar orientation` should be
 :guilabel:`Up`, :guilabel:`Down`, :guilabel:`Right` or :guilabel:`Left`,
 allowing to generate horizontal or vertical diagrams.
