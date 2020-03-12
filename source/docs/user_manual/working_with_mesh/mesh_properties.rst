@@ -110,8 +110,8 @@ more details.
 Mesh Dataset Properties
 =======================
 
-Information
------------
+Information Properties
+----------------------
 
 .. _figure_mesh_info_properties:
 
@@ -125,8 +125,8 @@ place to quickly grab summarized information and metadata on the current layer.
 Provided information are (based on the provider of the layer) uri, vertex count,
 face count and dataset groups count.
 
-Source
-------
+Source Properties
+-----------------
 
 The :guilabel:`Source` tab displays basic information about the selected mesh,
 including:
@@ -142,8 +142,8 @@ including:
 Use the :guilabel:`Assign Extra Dataset to Mesh` button to add more groups
 to the current mesh layer.
 
-Symbology
----------
+Symbology Properties
+--------------------
 
 Click the |symbology| :guilabel:`Symbology` button to activate the dialog
 as shown in the following image:
