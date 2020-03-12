@@ -273,6 +273,8 @@ symbols are:
   to update the setting
 * |indicatorEmbedded| to identify an :ref:`embedded group or layer
   <nesting_projects>` and the path to their original project file
+* |indicatorBadLayer| to identify a layer whose data source was not available
+  at the project file opening. Click the icon to update the source path.
 * |indicatorMemory| to remind you that the layer is a :ref:`temporary scratch
   layer <vector_new_scratch_layer>` and its content will be discarded when you
   close this project. To avoid data loss and make the layer permanent, click
@@ -2397,6 +2399,8 @@ The values presented in the varying size assistant above will set the size
 .. |identifyByRectangle| image:: /static/common/mActionIdentifyByRectangle.png
    :width: 1.5em
 .. |inOverview| image:: /static/common/mActionInOverview.png
+   :width: 1.5em
+.. |indicatorBadLayer| image:: /static/common/mIndicatorBadLayer.png
    :width: 1.5em
 .. |indicatorEmbedded| image:: /static/common/mIndicatorEmbedded.png
    :width: 1.5em

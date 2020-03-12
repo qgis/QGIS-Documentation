@@ -102,7 +102,7 @@ Icon                            Substitution                        Icon        
 |addLayer|                      ``|addLayer|``
 |indicatorEmbedded|             ``|indicatorEmbedded|``             |indicatorFilter|               ``|indicatorFilter|``
 |indicatorMemory|               ``|indicatorMemory|``               |indicatorNoCRS|                ``|indicatorNoCRS|``
-|favourites|                    ``|favourites|``
+|indicatorBadLayer|             ``|indicatorBadLayer|``             |favourites|                    ``|favourites|``
 ==============================  ==================================  ==============================  ==================================
 
 File
@@ -838,6 +838,8 @@ Icon                            Substitution                        Icon        
 .. |identifyByRectangle| image:: /static/common/mActionIdentifyByRectangle.png
    :width: 1.5em
 .. |inOverview| image:: /static/common/mActionInOverview.png
+   :width: 1.5em
+.. |indicatorBadLayer| image:: /static/common/mIndicatorBadLayer.png
    :width: 1.5em
 .. |indicatorEmbedded| image:: /static/common/mIndicatorEmbedded.png
    :width: 1.5em
