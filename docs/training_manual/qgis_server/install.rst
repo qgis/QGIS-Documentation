@@ -41,7 +41,7 @@ Optionally, if you want to do a command line test at this time you can run the
 ``/usr/lib/cgi-bin/qgis_mapserv.fcgi`` command which should output something
 like:
 
-.. code-block:: guess
+::
 
  QFSFileEngine::open: No file name specified
  Warning 1: Unable to find driver ECW to unload from GDAL_SKIP environment variable.
@@ -268,7 +268,7 @@ choose whatever name you like (``coco.bango``, ``super.duper.training``,
 * We can check that ``myhost`` points to the localhost by running in the terminal
   the  ``ping myhost`` command which should output:
 
-.. code-block:: guess
+.. code-block:: bash
 
    qgis@qgis:~$ ping myhost
    PING myhost (127.0.0.1) 56(84) bytes of data.
