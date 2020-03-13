@@ -1673,7 +1673,7 @@ general settings that do not interfere with the statistic values such as:
     Moreover, the :guilabel:`Axis line symbol` can be made visible on the
     map canvas and customized using :ref:`line symbol properties
     <vector_line_symbols>`.
-  * for text diagram, the circle background color and 
+  * for text diagram, the circle background color and
     the :ref:`font <font_selector>` used for texts;
   * for pie charts, the :guilabel:`Start angle` of the first
     slice and their :guilabel:`Direction` (clockwise or not).
@@ -1758,8 +1758,8 @@ placement (more details at :ref:`Placement <labels_placement>`):
   :guilabel:`Using perimeter` and :guilabel:`Inside polygon`
   are the options for polygon features.
 
-The diagram can also be placed using feature data to fill the :guilabel:`X`
-and :guilabel:`Y` coordinate fields.
+The diagram can also be placed by data-defining the :guilabel:`X` and
+:guilabel:`Y` coordinate fields.
 
 The placement of the diagrams can interact with the labeling, so you can
 detect and solve position conflicts between diagrams and labels by setting
@@ -1780,7 +1780,7 @@ Options
 The :guilabel:`Options` tab has settings for histograms and stacked bars.
 You can choose whether the :guilabel:`Bar orientation` should be
 :guilabel:`Up`, :guilabel:`Down`, :guilabel:`Right` or :guilabel:`Left`,
-allowing to generate horizontal or vertical diagrams.
+for horizontal and vertical diagrams.
 
 
 .. index:: Size legend, Diagram legend
