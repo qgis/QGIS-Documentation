@@ -190,24 +190,24 @@ Option                                                             Vector Layer 
 :guilabel:`Set Layer Scale Visibility...`                          |checkbox|          |checkbox|         \
 :guilabel:`Zoom to Visible Scale`                                  |checkbox|          |checkbox|         \
 :menuselection:`Set CRS -->`                                       |checkbox|          |checkbox|         \
-* :guilabel:`Set Layer/Group CRS...`                               |checkbox|          |checkbox|         |checkbox|
-* :guilabel:`Set Project CRS from Layer`                           |checkbox|          |checkbox|         \
+:menuselection:`--> Set Layer/Group CRS...`                        |checkbox|          |checkbox|         |checkbox|
+:menuselection:`--> Set Project CRS from Layer`                    |checkbox|          |checkbox|         \
 :guilabel:`Set Group WMS Data...`                                  \                   \                  |checkbox|
 |unchecked| :guilabel:`Mutually Exclusive Group`                   \                   \                  |checkbox|
 :guilabel:`Check and all its children (Ctrl-click)`                \                   \                  |checkbox|
 :guilabel:`Uncheck and all its children (Ctrl-click)`              \                   \                  |checkbox|
 :guilabel:`Make Permanent`                                         |checkbox|          \                  \
 :menuselection:`Export -->`                                        |checkbox|          |checkbox|         |checkbox|
-* :guilabel:`Save As...`                                           \                   |checkbox|         \
-* :guilabel:`Save Features As...`                                  |checkbox|          \                  \
-* :guilabel:`Save Selected Features As...`                         |checkbox|          \                  \
-* :guilabel:`Save As Layer Definition File...`                     |checkbox|          |checkbox|         |checkbox|
-* :guilabel:`Save As QGIS Layer Style File...`                     |checkbox|          |checkbox|         \
+:menuselection:`--> Save As...`                                    \                   |checkbox|         \
+:menuselection:`--> Save Features As...`                           |checkbox|          \                  \
+:menuselection:`--> Save Selected Features As...`                  |checkbox|          \                  \
+:menuselection:`--> Save As Layer Definition File...`              |checkbox|          |checkbox|         |checkbox|
+:menuselection:`--> Save As QGIS Layer Style File...`              |checkbox|          |checkbox|         \
 :menuselection:`Styles -->`                                        |checkbox|          |checkbox|         \
-* :guilabel:`Copy Style`                                           |checkbox|          |checkbox|         \
-* :guilabel:`Paste Style`                                          |checkbox|          |checkbox|         |checkbox|
-* :guilabel:`Add...`                                               |checkbox|          |checkbox|         \
-* :guilabel:`Rename Current...`                                    |checkbox|          |checkbox|         \
+:menuselection:`--> Copy Style`                                    |checkbox|          |checkbox|         \
+:menuselection:`--> Paste Style`                                   |checkbox|          |checkbox|         |checkbox|
+:menuselection:`--> Add...`                                        |checkbox|          |checkbox|         \
+:menuselection:`--> Rename Current...`                             |checkbox|          |checkbox|         \
 :guilabel:`Properties...`                                          |checkbox|          |checkbox|         \
 =================================================================  ==================  =================  =============
 
