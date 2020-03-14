@@ -82,15 +82,6 @@ https://pypi.org/project/sphinx-intl/
 
 https://docs.transifex.com/integrations/transifex-github-integration
 
-We created a script to create the transifex yaml files for github-transifex integrations::
-
- .\scripts\create_transifex_yaml.sh
-
-To create the .tx/config to push/pull using tx client do::
-
- sphinx-intl create-txconfig
- sphinx-intl update-txconfig-resources --transifex-project-name qgisdoc
-
 To update the english po files (which are being used as SOURCE files in transifex)::
 
  # FIRST create the pot files in build/gettext (po file be based on those pot files)
@@ -98,11 +89,21 @@ To update the english po files (which are being used as SOURCE files in transife
  # then update the english po files only:
  sphinx-intl update -p build/gettext -l en
 
+To create the .tx/config to push/pull using tx client do::
+
+ sphinx-intl create-txconfig
+ sphinx-intl update-txconfig-resources --transifex-project-name qgisdoc
+
+
 To update all po files (which we do not use if we do github-transifex integration!!!)::
 
  export SPHINXINTL_LANGUAGE=de,nl, ...
  # is the same same as
  sphinx-intl <command> --language=de --language=nl ...
+
+We created a script to create the transifex yaml files for github-transifex integrations::
+
+ .\scripts\create_transifex_yaml.sh
 
 
 
