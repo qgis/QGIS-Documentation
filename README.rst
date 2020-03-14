@@ -1,4 +1,8 @@
 
+
+[![Build Status](https://travis-ci.org/qgis/QGIS-Documentation.svg?branch=qgisdoc2020)](https://travis-ci.org/qgis/QGIS-Documentation)
+
+
 Build on Linux
 ==============
 
