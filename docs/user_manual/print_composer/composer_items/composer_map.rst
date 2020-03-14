@@ -1,6 +1,3 @@
-.. only:: html
-
-
 .. index:: Layout; Map item
 .. _layout_map_item:
 
@@ -52,6 +49,8 @@ In the :guilabel:`Main properties` group (see figure_layout_map_) of the map
 * |checkbox| :guilabel:`Draw map canvas items` lets you show in the print
   layout :ref:`annotations <sec_annotations>` that are placed on the main map
   canvas.
+
+.. _`layout_layers`:
 
 Layers
 ------
@@ -188,12 +187,15 @@ Double-click the added grid to rename it.
 
    Map Grids Dialog
 
-After you add a grid, you can activate the checkbox |checkbox| :guilabel:`Draw
-grid` to allow overlaying the grid onto the map item. Press the :guilabel:`Modify Grid...`
-button to access configuration options.
+To modify a grid, select it and press the :guilabel:`Modify Grid...` button
+to open the :guilabel:`Map Grid Properties` panel and access its
+configuration options.
 
 Grid Appearance
 ...............
+
+In the :guilabel:`Map Grid Properties` panel, check |checkbox|
+:guilabel:`Grid enabled` to show the grid on the map item.
 
 As grid type, you can specify to use a:
 
@@ -206,23 +208,29 @@ As grid type, you can specify to use a:
   intersection;
 * or *Frame and annotations only*.
 
-Other than the grid type, you can define:
+Other than the grid type, you can define: 
 
-* the :guilabel:`CRS` which could not be the same as the map item's;
-* the :guilabel:`Interval` between two consecutive grid references in ``X``
-  and ``Y`` directions;
-* the :guilabel:`Interval Units` to use for the grid references, in ``Map
-  units``, ``Millimeters`` or ``Centimeters``;
-* an :guilabel:`Offset` from the map item edges, in ``X`` and ``Y`` directions;
+* the :guilabel:`CRS`, which could be different from the project CRS
+* the :guilabel:`Interval` type to use for the grid references. Available
+  options are ``Map Unit``, ``Fit Segment Width``, ``Millimeter`` or ``Centimeter``:
+
+  * choosing ``Fit Segment Width`` will dynamically select the grid interval based 
+    on the map extent to a "pretty" interval. When selected, the ``Minimum`` and 
+    ``Maximum`` intervals can be set.
+  * the other options allow you to set the distance between two consecutive grid
+    references in the ``X`` and ``Y`` directions.
+
+* the :guilabel:`Offset` from the map item edges, in the ``X`` and/or the ``Y``
+  direction
 * and the :guilabel:`Blend mode` of the grid (see :ref:`blend-modes`) when
   compatible.
 
 .. _Figure_layout_map_grid_draw:
 
-.. figure:: img/map_draw_grid.png
+.. figure:: img/map_grid_appearance.png
    :align: center
 
-   Draw Grid Dialog
+   Grid Appearance Dialog
 
 Grid Frame
 ..........
@@ -342,7 +350,9 @@ drawing over the selected map frame. You can customize it with:
 .. |moveItemContent| image:: /static/common/mActionMoveItemContent.png
    :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
+   :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
+   :width: 1.5em
 .. |showMapTheme| image:: /static/common/mActionShowPresets.png
    :width: 1.5em
 .. |signMinus| image:: /static/common/symbologyRemove.png

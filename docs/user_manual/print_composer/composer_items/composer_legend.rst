@@ -1,6 +1,3 @@
-.. only:: html
-
-
 .. index:: Legend item, Map legend
 .. _layout_legend_item:
 
@@ -49,14 +46,23 @@ panel provides the following functionalities (see figure_layout_legend_ppt_):
 
 In Main properties you can:
 
-* change the title of the legend. It can be made dynamic using the
+* Change the :guilabel:`Title` of the legend. It can be made dynamic using the
   :ref:`data-defined override <data_defined>` setting, useful for example when
-  generating atlas;
-* set the :guilabel:`Title alignment` to Left, Center or Right;
-* choose which :guilabel:`Map` item the current legend will refer to;
-* wrap the text of the legend on a given character: each time the character
-  appears, it's replaced by a line break;
-* use |checkbox| :guilabel:`Resize to fit contents` to control whether or
+  generating an atlas;
+* Choose which :guilabel:`Map` item the current legend will refer to.
+  By default, the map over which the legend item is drawn is picked. If none,
+  then it falls back to the :ref:`reference map <reference_map>`.
+  
+  .. note:: :ref:`Variables <variables_functions>` of the linked map item
+   (@map_id, @map_scale, @map_extent...) are also accessible from data-defined
+   properties of the legend.
+
+* Wrap the text of the legend on a given character: each time the character
+  appears, it's replaced with a line break;
+* Set the symbols and text placement in the legend: the :guilabel:`Arrangement`
+  can be :guilabel:`Symbols on left` or :guilabel:`Symbols on right`. The default
+  value depends on the locale in use (right-to-left based or not).
+* Use |checkbox| :guilabel:`Resize to fit contents` to control whether or
   not a legend should be automatically resized to fit its contents. If
   unchecked, then the legend will never resize and instead just stick to
   whatever size the user has set. Any content which doesn't fit the size
@@ -102,9 +108,25 @@ panel provides the following functionalities (see figure_layout_legend_items_):
     symbology), you can specify a boolean expression to remove from the legend
     tree, styles that have no feature satisfying a condition. Note that the
     features are nevertheless kept and shown in the layout map item.
+  * |addExpression| :sup:`Add symbol expression` allows you to add expressions
+    to each symbol label of a given layer. New variables (``@symbol_label``,
+    ``@symbol_id`` and ``@symbol_count``) help you interact with the legend
+    entry.
+
+    For example, given a categorized layer, you can append to each class in the
+    legend their number of features, ie *class (number)*:
+
+    #. Select the layer entry in the legend tree
+    #. Press the |addExpression| :sup:`Add symbol expression` button, opening
+       the :guilabel:`Expression String Builder` dialog
+    #. Enter the following expression::
+
+        concat( @symbol_label, ' (', @symbol_count, ')' )
+
+    #. Press :guilabel:`OK`
 
   While the default behavior of the legend item is to mimic the
-  :guilabel:`Layers panel` tree, displaying the same groups, layers and classes
+  :guilabel:`Layers` panel tree, displaying the same groups, layers and classes
   of symbology, right-click any item offers you options to hide layer's name or
   raise it as a group or subgroup. In case you have made some changes to a layer,
   you can revert them by choosing :guilabel:`Reset to defaults` from the
@@ -119,36 +141,70 @@ panel provides the following functionalities (see figure_layout_legend_items_):
   |checkbox| :guilabel:`Only show items inside current atlas feature` option.
 
 
-Fonts, Columns, Symbol
-----------------------
+Fonts
+-----
 
-The :guilabel:`Fonts`, :guilabel:`Columns` and :guilabel:`Symbol` groups of the
-legend :guilabel:`Item Properties` panel provide the following functionalities
-(see figure_layout_legend_fonts_):
+The :guilabel:`Fonts` group of the legend :guilabel:`Item Properties` panel
+provides the following functionalities:
 
 .. _figure_layout_legend_fonts:
 
 .. figure:: img/legend_fonts.png
    :align: center
 
-   Legend Fonts, Columns and Symbol groups
+   Legend Fonts properties
 
 * You can change the font of the legend title, group, subgroup and item (feature)
-  in the legend item using the font selector widget;
-* You provide the labels with a **Color** using the :ref:`color selector
-  <color-selector>` widget. The selected color will apply to all font items in the
-  legend;
-* Legend items can be arranged over several columns. Set the number of columns
-  in the :guilabel:`Count` |selectNumber| field. This value can be made dynamic
-  e.g., following atlas features, legend contents, the frame size...
+  in the legend item using the :ref:`font selector <font_selector>` widget
+* For each of these levels you can set the text :guilabel:`Alignment`: it can
+  be :guilabel:`Left` (default for left-to-right based locales),
+  :guilabel:`Center` or :guilabel:`Right` (default for right-to-left based
+  locales).
+* You set the :guilabel:`Color` of the labels using the :ref:`color selector
+  <color-selector>` widget. The selected color will apply to all the font items
+  in the legend.
 
-  * |checkbox| :guilabel:`Equal column widths` sets how legend columns should be
-    adjusted.
-  * The |checkbox| :guilabel:`Split layers` option allows a categorized or a
-    graduated layer legend to be divided between columns.
 
-* You can also change the width and height of the legend symbol, set a color and
-  a thickness in case of raster layer symbol.
+Columns
+-------
+
+Under the :guilabel:`Columns` group of the legend :guilabel:`Item Properties`
+panel, legend items can be arranged over several columns:
+
+* Set the number of columns in the :guilabel:`Count` |selectNumber| field.
+  This value can be made dynamic e.g., following atlas features, legend
+  contents, the frame size...
+* |checkbox| :guilabel:`Equal column widths` sets how legend columns should be
+  adjusted.
+* The |checkbox| :guilabel:`Split layers` option allows a categorized or a
+  graduated layer legend to be divided between columns.
+
+.. _figure_layout_legend_columns:
+
+.. figure:: img/legend_columns.png
+   :align: center
+
+   Legend Columns settings
+
+
+Symbol
+------
+
+The :guilabel:`Symbol` group of the legend :guilabel:`Item Properties` panel
+configures the size of symbols displayed next to the legend labels.
+You can:
+
+* Set the :guilabel:`Symbol width` and :guilabel:`Symbol height`
+* |checkbox| :guilabel:`Draw stroke for raster symbols`: this adds an outline
+  to the symbol representing the band color of the raster layer; you can set
+  both the :guilabel:`Stroke color` and :guilabel:`Tickness`.
+
+.. _figure_layout_legend_symbol:
+
+.. figure:: img/legend_symbol.png
+   :align: center
+
+   Legend Symbol configuration
 
 
 WMS LegendGraphic and Spacing
@@ -173,8 +229,8 @@ The WMS legend content will be provided as a raster image.
 :guilabel:`WMS LegendGraphic` is used to be able to adjust the :guilabel:`Legend
 width` and the :guilabel:`Legend height` of the WMS legend raster image.
 
-:guilabel:`Spacing` around title, group, subgroup, symbol, icon label, box,
-column or line can be customized through this dialog.
+:guilabel:`Spacing` around title, groups, subgroups, symbols, labels, boxes,
+columns and lines can be customized through this dialog.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -183,6 +239,8 @@ column or line can be customized through this dialog.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |addExpression| image:: /static/common/mActionAddExpression.png
+   :width: 1.5em
 .. |addGroup| image:: /static/common/mActionAddGroup.png
    :width: 1.5em
 .. |addLegend| image:: /static/common/mActionAddLegend.png
@@ -206,4 +264,4 @@ column or line can be customized through this dialog.
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |sum| image:: /static/common/mActionSum.png
-   :width: 1.5em
+   :width: 1.2em

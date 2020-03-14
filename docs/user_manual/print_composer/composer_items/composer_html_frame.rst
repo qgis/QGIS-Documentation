@@ -1,6 +1,3 @@
-.. only:: html
-
-
 .. index:: HTML frame
 .. _layout_html_item:
 
@@ -45,7 +42,7 @@ panel provides the following functionalities (see figure_layout_html_ppt_):
    HTML frame, the HTML Source properties
 
 * In :guilabel:`URL` you can enter the URL of a webpage you copied from your
-  Internet browser or select an HTML file using the |browseButton| :sup:`Browse`
+  Internet browser or select an HTML file using the :guilabel:`...` :sup:`Browse`
   button. There is also the option to use the |dataDefined| :sup:`Data-defined
   override` button, to provide a URL from the contents of an attribute field of
   a table or using a regular expression.
@@ -148,8 +145,6 @@ following functionalities (see figure_layout_html_breaks_):
 
 .. |addHtml| image:: /static/common/mActionAddHtml.png
    :width: 1.5em
-.. |browseButton| image:: /static/common/browsebutton.png
-   :width: 2.3em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png

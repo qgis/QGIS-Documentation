@@ -1,6 +1,3 @@
-.. only:: html
-
-
 .. _overview_layout:
 
 ******************************
@@ -26,8 +23,8 @@ atlas generator.
 
 .. index:: Layout template, Map template
 
-Sample Session
-==============
+Sample Session for beginners
+============================
 
 Before you start to work with the print layout, you need to load some raster
 or vector layers in the QGIS map canvas and adapt their properties to suit your
@@ -159,6 +156,7 @@ any elements are added.
 
 .. figure:: img/print_composer_blank.png
    :align: center
+   :width: 100%
 
    Print Layout
 
@@ -276,27 +274,28 @@ the same place, from page to page.
 Below is a list of all the available tools in this menu with some convenient
 information.
 
-================================================= ========================== ========================== =====================================
- Tool                                              Shortcut                   Toolbar                    Reference
-================================================= ========================== ========================== =====================================
- |undo| :guilabel:`Undo (last change)`             :kbd:`Ctrl+Z`              :guilabel:`Layout`         :ref:`layout_undo_panel`
- |redo| :guilabel:`Redo (last reverted change)`    :kbd:`Ctrl+Y`              :guilabel:`Layout`         :ref:`layout_undo_panel`
- |deleteSelected| :guilabel:`Delete`               :kbd:`Del`
- |editCut| :guilabel:`Cut`                         :kbd:`Ctrl+X`
- |editCopy| :guilabel:`Copy`                       :kbd:`Ctrl+C`
- |editPaste| :guilabel:`Paste`                     :kbd:`Ctrl+V`
- :guilabel:`Paste in place`                        :kbd:`Ctrl+Shift+V`
- |selectAll| :guilabel:`Select All`                :kbd:`Ctrl+A`
- |deselectAll| :guilabel:`Deselect all`            :kbd:`Ctrl+Shift+A`
- |invertSelection| :guilabel:`Invert Selection`
- :guilabel:`Select Next Item Below`                :kbd:`Ctrl+Alt+[`
- :guilabel:`Select Next Item above`                :kbd:`Ctrl+Alt+]`
- |pan| :guilabel:`Pan Layout`                      :kbd:`P`                   :guilabel:`Toolbox`
- |zoomToArea| :guilabel:`Zoom`                     :kbd:`Z`                   :guilabel:`Toolbox`
- |select| :guilabel:`Select/Move Item`             :kbd:`V`                   :guilabel:`Toolbox`        :ref:`interact_layout_item`
- |moveItemContent| :guilabel:`Move Content`        :kbd:`C`                   :guilabel:`Toolbox`        :ref:`layout_map_item`
- |editNodesShape| :guilabel:`Edit Nodes Item`                                 :guilabel:`Toolbox`        :ref:`layout_node_based_shape_item`
-================================================= ========================== ========================== =====================================
+.. csv-table:: Available Tools
+   :header: "Tool", "Shortcut", "Toolbar", "Reference"
+   :widths: 30, 17, 10, 33
+
+   "|undo| :guilabel:`Undo (last change)`", ":kbd:`Ctrl+Z`", ":guilabel:`Layout`", ":ref:`layout_undo_panel`"
+   "|redo| :guilabel:`Redo (last reverted change)`", ":kbd:`Ctrl+Y`", ":guilabel:`Layout`", ":ref:`layout_undo_panel`"
+   "|deleteSelected| :guilabel:`Delete`", ":kbd:`Del`"
+   "|editCut| :guilabel:`Cut`", ":kbd:`Ctrl+X`"
+   "|editCopy| :guilabel:`Copy`", ":kbd:`Ctrl+C`"
+   "|editPaste| :guilabel:`Paste`", ":kbd:`Ctrl+V`"
+   ":guilabel:`Paste in place`", ":kbd:`Ctrl+Shift+V`"
+   "|selectAll| :guilabel:`Select All`", ":kbd:`Ctrl+A`"
+   "|deselectAll| :guilabel:`Deselect all`", ":kbd:`Ctrl+Shift+A`"
+   "|invertSelection| :guilabel:`Invert Selection`"
+   ":guilabel:`Select Next Item Below`", ":kbd:`Ctrl+Alt+[`"
+   ":guilabel:`Select Next Item above`", ":kbd:`Ctrl+Alt+]`"
+   "|pan| :guilabel:`Pan Layout`", ":kbd:`P`", ":guilabel:`Toolbox`"
+   "|zoomToArea| :guilabel:`Zoom`", ":kbd:`Z`", ":guilabel:`Toolbox`"
+   "|select| :guilabel:`Select/Move Item`", ":kbd:`V`", ":guilabel:`Toolbox`", ":ref:`interact_layout_item`"
+   "|moveItemContent| :guilabel:`Move Content`", ":kbd:`C`", ":guilabel:`Toolbox`", ":ref:`layout_map_item`"
+   "|editNodesShape| :guilabel:`Edit Nodes Item`", "", ":guilabel:`Toolbox`", ":ref:`layout_node_based_shape_item`"
+
 
 
 View menu
@@ -405,6 +404,7 @@ in :ref:`layout_items` chapter.
  |label| :guilabel:`Add Label`                       :guilabel:`Toolbox`        :ref:`layout_label_item`
  |addLegend| :guilabel:`Add Legend`                  :guilabel:`Toolbox`        :ref:`layout_legend_item`
  |scaleBar| :guilabel:`Add Scale Bar`                :guilabel:`Toolbox`        :ref:`layout_scalebar_item`
+ |northArrow| :guilabel:`Add North Arrow`            :guilabel:`Toolbox`        :ref:`layout_northarrow_item`
  |addBasicShape| :menuselection:`Add Shape -->`      :guilabel:`Toolbox`        :ref:`layout_basic_shape_item`
  |addArrow| :guilabel:`Add Arrow`                    :guilabel:`Toolbox`        :ref:`layout_arrow_item`
  |addNodesShape| :menuselection:`Add Node Item -->`  :guilabel:`Toolbox`        :ref:`layout_node_based_shape_item`
@@ -490,14 +490,22 @@ print layout.
 
    Layout Settings in the Print Layout
 
+.. _reference_map:
+
 General settings
 ................
 
 In a print layout, you can use more than one map item.
-The :guilabel:`Reference map` selects the map item to be used as the layout's
-master map. The layout will use this map in any
-properties and variable calculating units or scale. This includes exporting
-the print layout to georeferenced formats.
+The :guilabel:`Reference map` represents the map item to use as the layout's
+master map. It's assigned as long as there's a map item in the layout.
+The layout will use this map in any of their properties and variables
+calculating units or scale. This includes exporting the print layout to
+georeferenced formats.
+
+Moreover, new layout items such as scale bar, legend or north arrow have by
+default their settings (orientation, displayed layers, scale, ...) bound to
+the map item they are drawn over, and fall back to the reference map if no
+overlaping map.
 
 .. _grid_guides:
 
@@ -599,8 +607,8 @@ More information on variables usage in the
 .. index:: Layout pages, Page properties
 .. _page_properties:
 
-The Page Properties Panel
--------------------------
+Working with the page properties
+--------------------------------
 
 A layout can be composed of several pages. For instance, a first page can show
 a map canvas, and a second page can show the attribute table associated with a
@@ -650,8 +658,8 @@ panel. Right-click on a page and select :guilabel:`Page Properties...`. The
 * the |unchecked| :guilabel:`Exclude page from exports` to control whether the
   current page with its content should be included in the :ref:`layout output
   <create-output>`;
-* the :guilabel:`Background` using the :ref:`color <color-selector>` or
-  :ref:`symbol <symbol-selector>` you want.
+* the :guilabel:`Background` of the current page using the :ref:`color
+  <color-selector>` or :ref:`symbol <symbol-selector>` you want.
 
 .. _figure_layout_page:
 
@@ -671,12 +679,14 @@ Guides are vertical or horizontal line references you can place on a layout
 page to assist you on items placement, when creating, moving or resizing them.
 To be active, guides require the :menuselection:`View --> Show Guides` and
 :menuselection:`View --> Snap to Guides` options to be checked.
-To create a guide, two ways:
+To create a guide, there are two different methods:
 
-* assuming :menuselection:`View --> Show Rulers` option is set, drag out a
+* if the :menuselection:`View --> Show Rulers` option is set, drag out a
   ruler and release the mouse button within the page area, at the desired
   position.
-* more accurate and always available, use the :guilabel:`Guides` panel.
+* for more precision, use the :guilabel:`Guides` panel from the :menuselection:`View
+  --> Toolbox -->` or by selecting :guilabel:`Manage guides for page...`
+  from the page's contextual menu.
 
 .. _figure_layout_guides_panel:
 
@@ -686,24 +696,22 @@ To create a guide, two ways:
    The Guides panel
 
 The :guilabel:`Guides` panel allows creation of snap lines at specific
-locations: click the |signPlus| :sup:`Add new guide` button and enter
-coordinates of the  horizontal or vertical line. Different units are available
-for setting.
-The panel also allows adjusting position of existing guides to exact
-coordinates: double-click a guide coordinate and replace the value.
+locations:
 
-To delete a guide, select it and press |signMinus| :sup:`Remove selected guide`
-button. Use :guilabel:`Clear All Guides` to remove all the guides in the panel.
+#. Select the :guilabel:`Page` you'd like to add the guides to
+#. Click the |signPlus| :sup:`Add new guide` button and enter the coordinates
+   of the horizontal or vertical line. The origin is at the top right corner.
+   Different units are available for this.
 
-Guides are single page only meaning that the :guilabel:`Guides` panel lists
-guides of the current page (whose number is shown at the top of the dialog).
-Likewise, it allows creation or removal of guides only in the current page.
-The :guilabel:`Apply to All Pages` button allows you to setup the guide configuration
-on a single page and easily transfer it to all other pages in the layout.
-
-.. actually, I'm not sure what does mean current page for the guides panel as
-  when multiple pages are visible, the behavior is not predictable (see bug
-  report https://issues.qgis.org/issues/17804)
+   The panel also allows adjusting the position of existing guides to exact
+   coordinates: double-click and replace the value.
+#. The :guilabel:`Guides` panel lists only the items for the current page.
+   It allows creation or removal of guides only in the current page.
+   However, you can use the :guilabel:`Apply to All Pages` button to replicate
+   the guide configuration of the current page to the other pages in the layout.
+#. To delete a guide, select it and press the |signMinus| :sup:`Remove selected
+   guide` button. Use :guilabel:`Clear All Guides` to remove all the guides
+   in the current page.
 
 .. tip:: **Snapping to existing layout items**
 
@@ -855,6 +863,8 @@ the actions done after the selected one will be removed.
 .. |newLayout| image:: /static/common/mActionNewLayout.png
    :width: 1.5em
 .. |newPage| image:: /static/common/mActionNewPage.png
+   :width: 1.5em
+.. |northArrow| image:: /static/common/north_arrow.png
    :width: 1.5em
 .. |openTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em
