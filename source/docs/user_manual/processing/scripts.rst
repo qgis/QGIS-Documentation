@@ -432,6 +432,12 @@ Input types
    * - :class:`QgsProcessingParameterCrs <qgis.core.QgsProcessingParameterCrs>`
      - ``alg.CRS``
      - A Coordinate Reference System
+   * - :class:`QgsProcessingParameterDatabaseSchema <qgis.core.QgsProcessingParameterDatabaseSchema`
+     - 
+     - A database schema
+   * - :class:`QgsProcessingParameterDatabaseTable <qgis.core.QgsProcessingParameterDatabaseTable`
+     - 
+     - A database table
    * - :class:`QgsProcessingParameterDistance <qgis.core.QgsProcessingParameterDistance>`
      - ``alg.DISTANCE``
      - A double numeric parameter for distance values
