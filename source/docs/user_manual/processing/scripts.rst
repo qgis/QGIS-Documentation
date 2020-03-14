@@ -440,7 +440,7 @@ Input types
      - A database table
    * - :class:`QgsProcessingParameterDateTime <qgis.core.QgsProcessingParameterDateTime`
      - ``alg.DATETIME``
-     - A datetime (or pure date or time)
+     - A datetime (or a pure date or time)
    * - :class:`QgsProcessingParameterDistance <qgis.core.QgsProcessingParameterDistance>`
      - ``alg.DISTANCE``
      - A double numeric parameter for distance values
