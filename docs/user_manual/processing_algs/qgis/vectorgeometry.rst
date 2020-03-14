@@ -4107,7 +4107,6 @@ Outputs
 
 .. |36| replace:: ``NEW in 3.6``
 .. |38| replace:: ``NEW in 3.8``
-.. |310| replace:: ``NEW in 3.10``
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png
