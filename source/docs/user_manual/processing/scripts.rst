@@ -489,6 +489,9 @@ Input types
    * - :class:`QgsProcessingParameterPoint <qgis.core.QgsProcessingParameterPoint>`
      - ``alg.POINT``
      - A point
+   * - :class:`QgsProcessingParameterProviderConnection <qgis.core.QgsProcessingParameterProviderConnection>`
+     - 
+     - An available connection for a database provider
    * - :class:`QgsProcessingParameterRange <qgis.core.QgsProcessingParameterRange>`
      - ``alg.RANGE``
      - A number range
