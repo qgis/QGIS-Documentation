@@ -501,6 +501,9 @@ Input types
    * - :class:`QgsProcessingParameterFeatureSource <qgis.core.QgsProcessingParameterFeatureSource>`
      - ``alg.SOURCE``
      - A feature source
+   * - :class:`QgsProcessingParameterScale <qgis.core.QgsProcessingParameterScale>`
+     - 
+     - A map scale
    * - :class:`QgsProcessingParameterString <qgis.core.QgsProcessingParameterString>`
      - ``alg.STRING``
      - A text string
