@@ -16,7 +16,7 @@ If you want for some reason start from scratch::
 
 You can also use that virtual environment later doing::
 
- source/bin/activate
+ source venv/bin/activate
 
 to activate the venv and then run the build from within that venv::
 
