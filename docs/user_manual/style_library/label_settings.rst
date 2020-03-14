@@ -24,10 +24,10 @@ configure them in the abovementioned dialogs.
  manager, with some sample of label settings in it.
 
 The :guilabel:`Label Settings` dialog allows you to configure smart labeling
-for vector layers. Setting
-a label includes configuring the :ref:`text format <text_format>`, and how
-the label relates with the features or other labels (through :ref:`placement
-<labels_placement>`, :ref:`rendering <labels_rendering>` and callout).
+for vector layers. Setting a label includes configuring the :ref:`text format
+<text_format>`, and how the label relates with the features or other labels
+(through :ref:`placement <labels_placement>`, :ref:`rendering <labels_rendering>`
+and :ref:`callout <labels_callouts>`).
 
 .. _text_format:
 
@@ -47,7 +47,8 @@ To create text formats, you can:
       Text formats in Style Manager dialog
 
 #. Press the |signPlus| :sup:`Add item` button. The :guilabel:`Text Settings`
-   dialog opens with the following properties.
+   dialog opens with the following properties. As usual, these properties
+   are :ref:`data-definable <data_defined>`.
 
 
 .. _labels_text:
@@ -67,9 +68,7 @@ In the |text| :guilabel:`Text` tab, you can set:
 * the :guilabel:`Font`, from the ones available on your machine
 * the :guilabel:`Style`: along with the common styles of the font, you can set
   whether the text should be underlined or striked through
-* the :guilabel:`Size` that can be in :guilabel:`Points`, :guilabel:`Pixels`,
-  :guilabel:`Millimeters`, :guilabel:`Map units`, :guilabel:`Meters at scale`,
-  or :guilabel:`Inches`
+* the :guilabel:`Size` in any :ref:`supported unit <unit_selector>`
 * the :guilabel:`Color`
 * and the :guilabel:`Opacity`.
 
@@ -161,9 +160,7 @@ Buffer tab
 To create a buffer around the label, activate the |checkbox| :guilabel:`Draw
 text buffer` checkbox in the |labelbuffer| :guilabel:`Buffer` tab. Then you can:
 
-* Set the buffer's :guilabel:`Size` that can be in :guilabel:`Points`,
-  :guilabel:`Pixels`, :guilabel:`Millimeters`, :guilabel:`Map units`,
-  :guilabel:`Meters at scale` or :guilabel:`Inches`
+* Set the buffer's :guilabel:`Size` in any :ref:`supported unit <unit_selector>`
 * Select the buffer's :guilabel:`Color`
 * |checkbox| :guilabel:`Color buffer's fill`: The buffer expands from the
   label's outline, so, if the option is activated, the label's interior is
@@ -177,8 +174,9 @@ text buffer` checkbox in the |labelbuffer| :guilabel:`Buffer` tab. Then you can:
 * Use the :guilabel:`Blend mode` option to determine how your label's buffer
   will mix with the map components below them (more details at
   :ref:`blend-modes`).
-* Check |unchecked| :guilabel:`Draw effects` to add advanced :ref:`paint effects
-  <draw_effects>` for customizing the visualization of the labels.
+* Check |unchecked| :guilabel:`Draw effects` to add advanced |paintEffects|
+  :ref:`paint effects <draw_effects>` for improving text readability,
+  eg through outer glows and blurs.
 
 
 .. _labels_background:
@@ -186,19 +184,54 @@ text buffer` checkbox in the |labelbuffer| :guilabel:`Buffer` tab. Then you can:
 Background tab
 --------------
 
-In the |labelbackground| :guilabel:`Background` tab, you can define with
-:guilabel:`Size X` and :guilabel:`Size Y` the shape of your background.
-Use :guilabel:`Size type` to insert an additional 'Buffer' into your background.
-The buffer size is set by default here.
-The background then consists of the buffer plus the background in :guilabel:`Size X`
-and :guilabel:`Size Y`. You can set a :guilabel:`Rotation` where you can choose
-between 'Sync with label', 'Offset of label' and 'Fixed'.
-Using 'Offset of label' and 'Fixed', you can rotate the background.
-Define an :guilabel:`Offset X,Y` with X and Y values, and the background
-will be shifted. When applying :guilabel:`Radius X,Y`, the background gets
-rounded corners.
-Again, it is possible to mix the background with the underlying layers in the
-map canvas using the :guilabel:`Blend mode` (see :ref:`blend-modes`).
+The |labelbackground| :guilabel:`Background` tab allows you to configure a
+shape that stays below each label. To add a background, activate
+the |unchecked| :guilabel:`Draw Background` checkbox and select
+the :guilabel:`Shape` type. It can be:
+
+* a regular shape such as :guilabel:`Rectangle`, :guilabel:`Square`,
+  :guilabel:`Circle` or :guilabel:`Ellipse`
+* an :guilabel:`SVG` symbol from a file, a URL or embedded in the project
+  or style database (:ref:`more details <svg_paths>`)
+* or a :guilabel:`Marker Symbol` you can create or select from the
+  :ref:`symbol library <vector_marker_symbols>`.
+
+.. _figure_textsettings_background:
+
+.. figure:: img/textsettings_background.png
+   :align: center
+
+   Text settings - Background tab
+
+Depending on the selected shape, you need to configure some of the following
+properties:
+
+* The :guilabel:`Size type` of the frame, which can be:
+
+  * :guilabel:`Fixed`: using the same size for all the labels, regardless the
+    size of the text
+  * or a :guilabel:`Buffer` over the text's bounding box
+* The :guilabel:`Size` of the frame in X and Y directions, using any
+  :ref:`supported units <unit_selector>`
+* A :guilabel:`Rotation` of the background, between :guilabel:`Sync with label`,
+  :guilabel:`Offset of label` and :guilabel:`Fixed`. The last two require
+  an angle in degrees.
+* An :guilabel:`Offset X,Y` to shift the background item in the X and/or Y directions
+* A :guilabel:`Radius X,Y` to round the corners of the background shape (applies
+  to rectangle and square shapes only)
+* An :guilabel:`Opacity` of the background
+* A :guilabel:`Blend mode` to mix the background with the other items in the
+  rendering (see :ref:`blend-modes`).
+* The :guilabel:`Fill color`, :guilabel:`Stroke color` and
+  :guilabel:`Stroke width` for shape types other than the marker symbol.
+  Use the :guilabel:`Load symbol parameters` to revert changes on an SVG symbol
+  to its default settings.
+* A :guilabel:`Pen join style`: it can be :guilabel:`Round`, :guilabel:`Miter`
+  or :guilabel:`Bevel` (applies to rectangle and square shapes only)
+* |unchecked| :guilabel:`Draw effects` to add advanced |paintEffects|
+  :ref:`paint effects <draw_effects>` for improving text readability,
+  eg through outer glows and blurs.
+
 
 .. _labels_shadow:
 
@@ -258,6 +291,54 @@ tab and activate the |checkbox| :guilabel:`Draw drop shadow`. Then you can:
   will mix with the map components below them (more details at
   :ref:`blend-modes`).
 
+
+.. _labels_callouts:
+
+Callouts tab
+============
+
+A common practice when placing labels on a crowded map is to use **callouts** -
+labels which are placed outside (or displaced from) their associated feature
+are identified with a dynamic line connecting the label and the feature.
+If one of the two endings (either the label or the feature) is moved,
+the shape of the connector is recomputed.
+
+.. _figure_label_callouts:
+
+.. figure:: img/label_callouts.png
+   :align: center
+
+   Labels with various callouts settings
+
+To add a callout to a label, enable the |labelcallout| :guilabel:`Callouts`
+tab and activate the |checkbox| :guilabel:`Draw callouts`. Then you can:
+
+#. Select the :guilabel:`Style` of connector, one of:
+
+   * :guilabel:`Simple lines`: a straight line, the shortest path
+   * :guilabel:`Manhattan style`: a 90° broken line
+
+#. Select the :guilabel:`Line style` with full capabilities of a :ref:`line
+   symbol <vector_line_symbols>` including layer effects, and data-defined
+   settings
+#. Set the :guilabel:`Minimum length` of callout lines
+#. Set the :guilabel:`Offset from feature` option: controls the distance
+   from the feature (or its anchor point if a polygon) where callout lines end.
+   Eg, this avoids drawing lines right up against the edges of the features.
+#. Set the :guilabel:`Offset from label area` option: controls the distance
+   from the label closest corner where callout lines end.
+   This avoids drawing lines right up against the text.
+#. |checkbox| :guilabel:`Draw lines to all features parts` from the feature's
+   label
+#. Set an :guilabel:`Anchor point` on the (polygon) feature to use as end
+   point of the connector line : available options are:
+
+   * :guilabel:`Pole of inaccessibility`
+   * :guilabel:`Point on exterior`
+   * :guilabel:`Point on surface`
+   * :guilabel:`Centroid`
+
+
 .. _labels_placement:
 
 Placement tab
@@ -310,6 +391,8 @@ the :guilabel:`Offset X,Y` distances between the points and their labels and
 can alter the angle of the label placement with the :guilabel:`Rotation`
 setting. Thus, placement in a selected quadrant with a defined rotation is
 possible.
+
+.. _labels_line_placement:
 
 Placement for line layers
 -------------------------
@@ -404,75 +487,91 @@ Rendering tab
 In the |render| :guilabel:`Rendering` tab, you can tune when the labels can
 be rendered and their interaction with other labels and features.
 
-Under :guilabel:`Label options`, you find the :ref:`scale-based <label_scaledepend>`
-and the :guilabel:`Pixel size-based` visibility settings.
+Label options
+-------------
 
-The :guilabel:`Label z-index` determines the order in which labels are rendered,
-as well in relation with other feature labels in the layer (using data-defined
-override expression), as with labels from other layers. Labels with a higher
-z-index are rendered on top of labels (from any layer) with lower z-index.
+Under :guilabel:`Label options`:
 
-Additionally, the logic has been tweaked so that if 2 labels have
-matching z-indexes, then:
+* You find the :ref:`scale-based <label_scaledepend>`
+  and the :guilabel:`Pixel size-based` visibility settings.
 
-* if they are from the same layer, the smaller label will be drawn above the larger label
-* if they are from different layers, the labels will be drawn in the same order
-  as their layers themselves (ie respecting the order set in the map legend).
+* The :guilabel:`Label z-index` determines the order in which labels are rendered,
+  as well in relation with other feature labels in the layer (using data-defined
+  override expression), as with labels from other layers. Labels with a higher
+  z-index are rendered on top of labels (from any layer) with lower z-index.
 
-Note that this setting doesn't make labels to be drawn below the
-features from other layers, it just controls the order in which
-labels are drawn on top of all the layer's features.
+  Additionally, the logic has been tweaked so that if two labels have
+  matching z-indexes, then:
 
-While rendering labels and in order to display readable labels,
-QGIS automatically evaluates the position of the labels and can hide some of them
-in case of collision. You can however choose to |checkbox| :guilabel:`Show all
-labels for this layer (including colliding labels)` in order to manually fix
-their placement.
+  * if they are from the same layer, the smaller label will be drawn above the
+    larger label
+  * if they are from different layers, the labels will be drawn in the same order
+    as their layers themselves (ie respecting the order set in the map legend).
 
-With data-defined expressions in :guilabel:`Show label` and :guilabel:`Always Show`
-you can fine tune which labels should be rendered.
+  .. note:: This setting doesn't make labels to be drawn below the
+     features from other layers, it just controls the order in which
+     labels are drawn on top of all the layers' features.
 
+* While rendering labels and in order to display readable labels,
+  QGIS automatically evaluates the position of the labels and can hide some of them
+  in case of collision. You can however choose to |checkbox| :guilabel:`Show all
+  labels for this layer (including colliding labels)` in order to manually fix
+  their placement (see :ref:`label_toolbar`).
+* With data-defined expressions in :guilabel:`Show label` and :guilabel:`Always Show`
+  you can fine tune which labels should be rendered.
+* Allow to :guilabel:`Show upside-down labels`: alternatives are **Never**,
+  **when rotation defined** or **always**.
 
-Under :guilabel:`Feature options`, you can choose to :guilabel:`label every
-part of a multi-part feature` and :guilabel:`limit the number of features to be
-labeled`. Both line and polygon layers offer the option to set a minimum size
-for the features to be labeled, using :guilabel:`Suppress labeling of features
-smaller than`.
-For polygon features, you can also filter the labels to show according to
-whether they completely fit within the feature or not.
-For line features, you can choose to :guilabel:`Merge connected lines
-to avoid duplicate labels`, rendering a quite airy map in conjunction with
-the :guilabel:`Distance` or :guilabel:`Repeat` options in Placement tab.
+Feature options
+---------------
 
+Under :guilabel:`Feature options`:
 
-From the :guilabel:`Obstacles` frame, you can manage the covering relation between
-labels and features. Activate the |checkbox| :guilabel:`Discourage labels from
-covering features` option to decide whether features of the layer should act as
-obstacles for any label (including labels from other features in the same layer).
+* You can choose to :guilabel:`label every part of a multi-part feature`
+  and :guilabel:`limit the number of features to be labeled`.
+* Both line and polygon layers offer the option to set a minimum size for
+  the features to be labeled, using :guilabel:`Suppress labeling of features
+  smaller than`.
+* For polygon features, you can also filter the labels to show according to
+  whether they completely fit within their feature or not.
+* For line features, you can choose to :guilabel:`Merge connected lines
+  to avoid duplicate labels`, rendering a quite airy map in conjunction with
+  the :guilabel:`Distance` or :guilabel:`Repeat` options in the :ref:`Placement
+  <labels_line_placement>` tab.
+
+Obstacles
+---------
+
 An obstacle is a feature QGIS tries as far as possible to not place labels over.
-Instead of the whole layer, you can define a subset of features to use as obstacles,
-using the |dataDefined| :sup:`data-defined override` control next to the option.
+From the :guilabel:`Obstacles` frame, you can manage the covering relation
+between labels and features:
 
-The |slider| priority control slider for obstacles allows you to make labels
-prefer to overlap features from certain layers rather than others.
-A **Low weight** obstacle priority means that features of the layer are less
-considered as obstacles and thus more likely to be covered by labels.
-This priority can also be data-defined, so that within the same layer,
-certain features are more likely to be covered than others.
+* Activate the |checkbox| :guilabel:`Discourage labels from covering features`
+  option to decide whether features of the layer should act as obstacles for
+  any label (including labels from other features in the same layer).
+  
+  Instead of the whole layer, you can define a subset of features to use as obstacles,
+  using the |dataDefined| :sup:`data-defined override` control next to the option.
 
-For polygon layers, you can choose the type of obstacle features could be
-by minimising the labels placement:
+* The |slider| priority control slider for obstacles allows you to make labels
+  prefer to overlap features from certain layers rather than others.
+  A **Low weight** obstacle priority means that features of the layer are less
+  considered as obstacles and thus more likely to be covered by labels.
+  This priority can also be data-defined, so that within the same layer,
+  certain features are more likely to be covered than others.
 
-* **over the feature's interior**: avoids placing labels over the interior of
-  the polygon (prefers placing labels totally outside or just slightly inside
-  the polygon)
-* or **over the feature's boundary**: avoids placing labels over boundary of
-  the polygon (prefers placing labels outside or completely inside the
-  polygon). E.g., it can be useful for regional boundary layers, where the
-  features cover an entire area. In this case, it's impossible to avoid
-  placing labels within these features, and it looks much better to avoid
-  placing them over the boundaries between features.
+* For polygon layers, you can choose the type of obstacle the features could be,
+  by minimising the labels placement:
 
+  * **over the feature's interior**: avoids placing labels over the interior of
+    the polygon (prefers placing labels totally outside or just slightly inside
+    the polygon)
+  * or **over the feature's boundary**: avoids placing labels over boundary of
+    the polygon (prefers placing labels outside or completely inside the
+    polygon). E.g., it can be useful for regional boundary layers, where the
+    features cover an entire area. In this case, it's impossible to avoid
+    placing labels within these features, and it looks much better to avoid
+    placing them over the boundaries between features.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -489,6 +588,8 @@ by minimising the labels placement:
    :width: 1.5em
 .. |labelbuffer| image:: /static/common/labelbuffer.png
    :width: 1.5em
+.. |labelcallout| image:: /static/common/labelcallout.png
+   :width: 1.5em
 .. |labelformatting| image:: /static/common/labelformatting.png
    :width: 1.5em
 .. |labeling| image:: /static/common/labelingSingle.png
@@ -496,6 +597,8 @@ by minimising the labels placement:
 .. |labelplacement| image:: /static/common/labelplacement.png
    :width: 1.5em
 .. |labelshadow| image:: /static/common/labelshadow.png
+   :width: 1.5em
+.. |paintEffects| image:: /static/common/mIconPaintEffects.png
    :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
    :width: 1.5em

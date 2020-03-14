@@ -30,6 +30,46 @@ functionalities:
    Map Item Properties Panel
 
 
+The Toolbar
+-----------
+
+The Map :guilabel:`Item Properties` panel embeds a toolbar with the following
+functionalities:
+
+* |draw| :sup:`Update map preview`
+* |setToCanvasExtent| :sup:`Set map canvas to match main canvas extent`
+* |viewExtentInCanvas| :sup:`View current map extent in main canvas`
+* |setToCanvasScale| :sup:`Set map scale to match main canvas scale`
+* |viewScaleInCanvas| :sup:`Set main canvas to match current map scale`
+* |showBookmarks| :sup:`Bookmarks`: set the map item extent to match
+  an existing spatial bookmark
+* |moveItemContent| :sup:`Interactively edit map extent`: pan and
+  zoom interactively
+  within the map item
+* |labeling| :sup:`Labeling settings`: control feature label behaviour
+  (placement, visibility...) in the layout map item extent:
+
+  * set a :guilabel:`Margin from map edges`, a data definable distance from the
+    map item's limits inside which no label should be displayed
+  * |unchecked| :guilabel:`Allow truncated labels on edges of map`: controls
+    whether labels which fall partially outside of the map item allowed extent
+    should be rendered. If checked, these labels will be shown (when there’s
+    no way to place them fully within the visible area). If unchecked then
+    partially visible labels will be skipped.
+  * :guilabel:`Label blocking items`: allows other layout items (such as
+    scalebars, north arrows, inset maps, etc) to be marked as a blockers for
+    the map labels in the **active** map item. This prevents any map labels
+    from being placed under those items - causing the labeling engine to either
+    try alternative placement for these labels or discard them altogether.
+
+    If a :guilabel:`Margin from map edges` is set, the map labels are not
+    placed closer than the specified distance from the checked layout items.
+  * :guilabel:`Show unplaced labels`: can be used to determine whether labels
+    are missing from the layout map (e.g. due to conflicts with other
+    map labels or due to insufficient space to place the label) by
+    highlighting them in a :ref:`predefined color <automated_placement>`.
+
+
 .. _`layout_main_properties`:
 
 Main properties
@@ -236,17 +276,18 @@ Grid Frame
 ..........
 
 There are different options to style the frame that holds the map.
-Following options are available: ``No Frame``, ``Zebra``, ``Interior ticks``,
-``Exterior ticks``, ``Interior and Exterior ticks`` and ``Line border``.
+The following options are available: ``No Frame``, ``Zebra``, ``Zebra (nautical)``,
+``Interior ticks``, ``Exterior ticks``, ``Interior and Exterior ticks``,
+``Line border`` and ``Line border (nautical)``.
+
+When compatible, it's possible to set the :guilabel:`Frame size`, a
+:guilabel:`Frame margin`, the :guilabel:`Frame line thickness` with associated
+color and the :guilabel:`Frame fill colors`.
+
+Using ``Latitude/Y only`` and ``Longitude/X only`` values in the divisions
+section you can prevent a mix of latitude/Y and longitude/X coordinates showing
+on each side when working with rotated maps or reprojected grids.
 Also you can choose to set visible or not each side of the grid frame.
-
-
-When compatible, it's possible to set the :guilabel:`Frame size`,
-:guilabel:`Frame line thickness`, :guilabel:`Frame fill colors`.
-With ``Latitude/Y only`` and ``Longitude/X only`` settings in the divisions
-section you have the possibility to prevent a mix of latitude/Y and longitude/X
-coordinates showing on a side when working with rotated maps or reprojected
-grids.
 
 .. _Figure_layout_map_frame:
 
@@ -308,25 +349,46 @@ an overview.
 Initially this overview is named 'Overview 1' (see Figure_layout_map_overview_).
 You can:
 
-* Rename it with a double-click;
-* With the |signPlus| and |signMinus| buttons, add or remove overviews;
-* With the |arrowUp| and |arrowDown| buttons, move up and down an overview in
-  the list, hence move it on top or bottom of another one, over the map item.
+* Rename it with a double-click
+* With the |signPlus| and |signMinus| buttons, add or remove overviews
+* With the |arrowUp| and |arrowDown| buttons, move an overview up and down in
+  the list, placing it above or below other overviews in the map item
+  (when they are at the same :ref:`stack position <overview_stack_position>`).
 
 Then select the overview item in the list and check the |checkbox|
-:guilabel:`Draw "<name_overview>" overview` to enable the overview
-drawing over the selected map frame. You can customize it with:
+:guilabel:`Draw "<name_overview>" overview` to enable the drawing
+of the overview on the selected map frame. You can customize it with:
 
-* The :guilabel:`Map frame` combo list can be used to select the map item whose
-  extents will be drawn on the present map item.
-* The :guilabel:`Frame Style` allows you to change the style of the overview frame.
-* The :guilabel:`Blending mode` allows you to set different transparency blend modes.
-* The |checkbox| :guilabel:`Invert overview` creates a mask around the extents when
-  activated: the referenced map extents are shown clearly, whereas everything else
-  is blended with the frame color.
-* The |checkbox| :guilabel:`Center on overview` puts the extent of the overview
-  frame in the center of the overview map. You can only activate one overview
-  item to center, when you have added several overviews.
+* The :guilabel:`Map frame` selects the map item whose
+  extents will be shown on the present map item.
+* The :guilabel:`Frame Style` uses the :ref:`symbol properties
+  <symbol-selector>` to render the overview frame.
+* The :guilabel:`Blending mode` allows you to set different transparency blend
+  modes.
+* The |checkbox| :guilabel:`Invert overview` creates a mask around the extents
+  when activated: the referenced map extents are shown clearly, whereas
+  the rest of the map item is blended with the frame fill color
+  (if a fill color is used).
+* The |checkbox| :guilabel:`Center on overview` pans the map item content so
+  that the overview frame is displayed at the center of the map. You can only
+  use one overview item to center, when you have several overviews.
+  
+.. _`overview_stack_position`:
+
+* The :guilabel:`Position` controls exactly where in the map item's layer stack
+  the overview will be placed, e.g. allowing an overview extent to be
+  drawn below some feature layers such as roads whilst drawing it
+  above other background layers. Available options are:
+
+  * :guilabel:`Below map`
+  * :guilabel:`Below map layer` and :guilabel:`Above map layer`: place the
+    overview frame below and above the geometries of a layer, respectively.
+    The layer is selected in the :guilabel:`Stacking layer` option.
+  * :guilabel:`Below map labels`: given that labels are always rendered above
+    all the feature geometries in a map item, places the overview frame above
+    all the geometries and below any label.
+  * :guilabel:`Above map labels`: places the overview frame above all the
+    geometries and labels in the map item.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -347,15 +409,29 @@ drawing over the selected map frame. You can customize it with:
    :width: 1.5em
 .. |draw| image:: /static/common/mActionDraw.png
    :width: 1.5em
+.. |labeling| image:: /static/common/labelingSingle.png
+   :width: 1.5em
 .. |moveItemContent| image:: /static/common/mActionMoveItemContent.png
    :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
    :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
    :width: 1.5em
+.. |setToCanvasExtent| image:: /static/common/mActionSetToCanvasExtent.png
+   :width: 1.5em
+.. |setToCanvasScale| image:: /static/common/mActionSetToCanvasScale.png
+   :width: 1.5em
+.. |showBookmarks| image:: /static/common/mActionShowBookmarks.png
+   :width: 1.5em
 .. |showMapTheme| image:: /static/common/mActionShowPresets.png
    :width: 1.5em
 .. |signMinus| image:: /static/common/symbologyRemove.png
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |unchecked| image:: /static/common/checkbox_unchecked.png
+   :width: 1.3em
+.. |viewExtentInCanvas| image:: /static/common/mActionViewExtentInCanvas.png
+   :width: 1.5em
+.. |viewScaleInCanvas| image:: /static/common/mActionViewScaleInCanvas.png
    :width: 1.5em

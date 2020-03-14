@@ -12,13 +12,13 @@
 
 Layers can be created in many ways, including:
 
-* empty layers from scratch;
-* layers from existing layers;
-* layers from the clipboard;
-* layers as a result of an SQL-like query based on one or many layers: the
-  :ref:`virtual layer <vector_virtual_layers>`.
+* empty layers from scratch
+* layers from existing layers
+* layers from the clipboard
+* layers as a result of an SQL-like query based on one or many layers
+  (:ref:`virtual layers <vector_virtual_layers>`)
 
-QGIS also provides tools to import/export different formats.
+QGIS also provides tools to import/export from/to different formats.
 
 .. index:: Create new layers
 .. index:: Shapefile, SpatiaLite, GPX
@@ -29,9 +29,10 @@ Creating new vector layers
 ==========================
 
 QGIS allows you to create new layers in different formats. It provides tools
-for creation from scratch for GeoPackage, Shapefile, SpatiaLite, GPX format and
-Temporary Scratch layers (aka memory layers). Creation of a :ref:`new
-GRASS layer <creating_new_grass_vectors>` is supported within the GRASS plugin.
+for creating GeoPackage, Shapefile, SpatiaLite, GPX format and
+Temporary Scratch layers (aka memory layers).
+Creation of a :ref:`new GRASS layer <creating_new_grass_vectors>`
+is supported within the GRASS plugin.
 
 
 .. index:: New GeoPackage layer
@@ -41,8 +42,9 @@ Creating a new GeoPackage layer
 -------------------------------
 
 To create a new GeoPackage layer, press the |newGeoPackageLayer|
-:menuselection:`New GeoPackage Layer...` button in the :menuselection:`Layer
---> Create Layer -->` menu or from the :guilabel:`Data Source Manager` toolbar.
+:menuselection:`New GeoPackage Layer...` button in the
+:menuselection:`Layer --> Create Layer -->` menu or from the
+:guilabel:`Data Source Manager` toolbar.
 The :guilabel:`New GeoPackage Layer` dialog will be displayed as shown in
 figure_create_geopackage_.
 
@@ -54,11 +56,11 @@ figure_create_geopackage_.
    Creating a New GeoPackage layer dialog
 
 #. The first step is to indicate the database file location. This can be done
-   by pressing the :guilabel:`...` button at the right of the
+   by pressing the :guilabel:`...` button to the right of the
    :guilabel:`Database` field and select an existing GeoPackage file
    or create a new one. QGIS will automatically add the right extension to
    the name you provide.
-#. Then, give a name for the new layer to store
+#. Give the new layer / table a name (:guilabel:`Table name`)
 #. Define the :guilabel:`Geometry type`. If not a geometryless layer, you
    can specify whether it should :guilabel:`Include Z dimension` and/or
    :guilabel:`Include M values`.
@@ -69,26 +71,27 @@ To add fields to the layer you are creating:
 #. Enter the :guilabel:`Name` of the field
 #. Select the data :guilabel:`Type`. Supported types are :guilabel:`Text data`,
    :guilabel:`Whole number` (both integer and integer64), :guilabel:`Decimal
-   number`, :guilabel:`Date` and :guilabel:`Date and time`, :guilabel:`Blob`
-   and :guilabel:`Boolean`.
+   number`, :guilabel:`Date` and :guilabel:`Date and time`,
+   :guilabel:`Binary (BLOB)` and :guilabel:`Boolean`.
 #. Depending on the selected data format, enter the :guilabel:`Maximum length`
    of values.
 #. Click on the |newAttribute| :guilabel:`Add to Fields List` button
-#. And reproduce the steps above for each field you need to add
+#. Reproduce the steps above for each field you need to add
 #. Once you are happy with the attributes, click :guilabel:`OK`.
-   QGIS will automatically add the new layer to the legend, and you can edit it
+   QGIS will add the new layer to the legend, and you can edit it
    as described in section :ref:`sec_edit_existing_layer`.
 
-By default, When creating a GeoPackage layer, QGIS generates a :guilabel:`Feature
-id column` called ``fid`` which behaves like the primary key of the layer. The
-name can be changed. Likewise, the geometry field, if availabe, is named ``geometry``
-and you can choose to :guilabel:`Create a spatial index` on it.
-These options can be found under the :guilabel:`Advanced Options` next to the
-:guilabel:`Layer identifier`, short human readable name of the layer, and the
-:guilabel:`Layer description`.
+By default, When creating a GeoPackage layer, QGIS generates a 
+:guilabel:`Feature id column` called ``fid`` which acts as the
+primary key of the layer. The name can be changed.
+The geometry field, if availabe, is named ``geometry``, and you can
+choose to :guilabel:`Create a spatial index` on it.
+These options can be found under the :guilabel:`Advanced Options`
+together with the :guilabel:`Layer identifier` (short human readable
+name of the layer) and the :guilabel:`Layer description`.
 
-Further management of GeoPackage layers can be done with the :ref:`DB Manager
-<dbmanager>`.
+Further management of GeoPackage layers can be done with the
+:ref:`DB Manager <dbmanager>`.
 
 
 .. _vector_create_shapefile:
@@ -96,19 +99,20 @@ Further management of GeoPackage layers can be done with the :ref:`DB Manager
 Creating a new Shapefile layer
 ------------------------------
 
-To create a new Shapefile layer, press the |newVectorLayer| :menuselection:`New
-Shapefile Layer...` button in the :menuselection:`Layer --> Create Layer -->`
-menu or from the :guilabel:`Data Source Manager` toolbar.
+To create a new ESRI Shapefile format layer, press the |newVectorLayer|
+:menuselection:`New Shapefile Layer...` button in the
+:menuselection:`Layer --> Create Layer -->` menu or from the
+:guilabel:`Data Source Manager` toolbar.
 The :guilabel:`New Shapefile Layer` dialog will be displayed as shown in
 figure_create_shapefile_.
 
-#. The first step is to provide a path and name for the layer using the
+#. Provide a path and file name using the
    :guilabel:`...` button next to :guilabel:`File name`. QGIS will
    automatically add the right extension to the name you provide.
 #. Next, indicate the :guilabel:`File encoding` of the data
 #. Choose the :guilabel:`Geometry type` of the layer (point, multipoint, line
    or polygon)
-#. Specify whether the geometry should have an optional :guilabel:`Z (+ M
+#. Specify whether the geometry should have :guilabel:`Z (+ M
    values)` or :guilabel:`M values`
 #. Specify the coordinate reference system using the |setProjection| button
 
@@ -128,9 +132,9 @@ To add fields to the layer you are creating:
 #. Depending on the selected data format, enter the :guilabel:`Length` and
    :guilabel:`Precision`.
 #. Click on the |newAttribute| :guilabel:`Add to Fields List` button
-#. And reproduce the steps above for each field you need to add
+#. Reproduce the steps above for each field you need to add
 #. Once you are happy with the attributes, click :guilabel:`OK`.
-   QGIS will automatically add the new layer to the legend, and you can edit it
+   QGIS will add the new layer to the legend, and you can edit it
    as described in section :ref:`sec_edit_existing_layer`.
 
 By default, A first integer ``id`` column is added but can be removed.
@@ -156,11 +160,11 @@ Figure_create_spatialite_.
    Creating a New SpatiaLite layer dialog
 
 #. The first step is to indicate the database file location. This can be done
-   by pressing the :guilabel:`...` button at the right of the
+   by pressing the :guilabel:`...` button to the right of the
    :guilabel:`Database` field and select an existing SpatiaLite file
    or create a new one. QGIS will automatically add the right extension to
    the name you provide.
-#. Then, give a name for the new layer to store
+#. Provide a name (:guilabel:`Layer name`) for the new layer
 #. Define the :guilabel:`Geometry type`. If not a geometryless layer, you
    can specify whether it should :guilabel:`Include Z dimension` and/or
    :guilabel:`Include M values`.
@@ -172,16 +176,16 @@ To add fields to the layer you are creating:
 #. Select the data :guilabel:`Type`. Supported types are :guilabel:`Text data`,
    :guilabel:`Whole number` and :guilabel:`Decimal number`.
 #. Click on the |newAttribute| :guilabel:`Add to Fields List` button
-#. And reproduce the steps above for each field you need to add
+#. Reproduce the steps above for each field you need to add
 #. Once you are happy with the attributes, click :guilabel:`OK`.
-   QGIS will automatically add the new layer to the legend, and you can edit it
+   QGIS will add the new layer to the legend, and you can edit it
    as described in section :ref:`sec_edit_existing_layer`.
 
 If desired, you can select |checkbox| :guilabel:`Create an autoincrementing
 primary key` under the guilabel:`Advanced Options` section. You can also rename
-the :guilabel:`Geometry column` which is ``geometry`` by default.
+the :guilabel:`Geometry column` (``geometry`` by default).
 
-Further management of SpatiaLite layers can be done with the :ref:`DB Manager
+Further management of SpatiaLite layers can be done with :ref:`DB Manager
 <dbmanager>`.
 
 
@@ -191,17 +195,17 @@ Further management of SpatiaLite layers can be done with the :ref:`DB Manager
 Creating a new GPX layer
 -------------------------
 
-To create a new GPX file, you need to load the GPS plugin first.
+To create a new GPX file, you first need to load the GPS plugin.
 :menuselection:`Plugins -->` |showPluginManager| :menuselection:`Plugin
 Manager...` opens the Plugin Manager Dialog. Activate the |checkbox|
 :guilabel:`GPS Tools` checkbox.
 
-When this plugin is loaded, choose :menuselection:`New -->` |createGPX|
+When this plugin is loaded, choose
+:menuselection:`Create Layer -->` |createGPX|
 :menuselection:`Create new GPX Layer...` from the :menuselection:`Layer` menu.
-In the :guilabel:`Save new GPX file as` dialog, choose where to save the
-new file and press :guilabel:`Save`. Three new layers are added to the
-:guilabel:`Layers Panel`: ``waypoints``, ``routes`` and ``tracks`` with
-predefined structure.
+In the dialog, choose where to save the new file and press :guilabel:`Save`.
+Three new layers are added to the :guilabel:`Layers Panel`:
+``waypoints``, ``routes`` and ``tracks``.
 
 
 .. index:: New Temporary Scratch layer
@@ -211,18 +215,18 @@ Creating a new Temporary Scratch Layer
 --------------------------------------
 
 Temporary Scratch Layers are in-memory layers, meaning that they are not saved
-on disk and will be discarded when QGIS is closed. They can be handy to store
+on disk and will be discarded when QGIS is closed. They can be handy for storing
 features you temporarily need or as intermediate layers during geoprocessing
 operations.
 
-To create a new Temporary Scratch layer, press the |createMemory|
-:menuselection:`New Temporary Scratch Layer...` button from the
-:menuselection:`Layer --> Create Layer -->` menu or from the :guilabel:`Data
+To create a new Temporary Scratch layer, choose the |createMemory|
+:menuselection:`New Temporary Scratch Layer...` entry in the
+:menuselection:`Layer --> Create Layer -->` menu or in the :guilabel:`Data
 Source Manager` toolbar.
 The :guilabel:`New Temporary Scratch Layer` dialog will be displayed as shown in
 figure_create_temporary_. Then:
 
-#. Indicate the :guilabel:`Layer name`
+#. Provide the :guilabel:`Layer name`
 #. Select the :guilabel:`Geometry type`. Here you can create a:
 
    * ``No geometry`` type layer, served as simple table,
@@ -239,26 +243,26 @@ figure_create_temporary_. Then:
    Creating a new Temporary Scratch layer dialog
 
 By default, a new temporary scratch layer is created without any attributes. You
-can later add them using the |newAttribute| :sup:`New Field` button from the
-layer's attribute table or the :guilabel:`Source Fields` tab of its properties
-dialog.
-But you can also create prepopulated temporary scratch layers using e.g. the
+can later add them using the |newAttribute| :sup:`New Field` button in the
+layer's attribute table dialog or the :guilabel:`Fields` tab of its
+properties dialog.
+You can also create prepopulated temporary scratch layers using e.g. the
 clipboard (see :ref:`paste_into_layer`) or as a result of a :ref:`Processing
 algorithm <processing_algs>`.
 
 .. tip:: **Permanently store a memory layer on disk**
 
-  To avoid data loss when closing project with temporary scratch layers, you can
-  save these layers to any vector format supported by QGIS:
+  To avoid data loss when closing  a project with temporary scratch layers,
+  you can save these layers to any vector format supported by QGIS:
 
   * clicking the |indicatorMemory| indicator icon next to the layer;
   * selecting the :guilabel:`Make permanent` entry in the layer contextual menu;
-  * or as of any other vector layer, using the :menuselection:`Export -->` entry
+  * using the :menuselection:`Export -->` entry
     from the contextual menu or the :menuselection:`Layer --> Save As...` menu.
 
-  Each of these commands prompts the :guilabel:`Save Vector Layer as` dialog
-  exposed in :ref:`general_saveas` section and the saved file replaces the temporary
-  one in the :guilabel:`Layers` panel.
+  Each of these commands opens the :guilabel:`Save Vector Layer as` dialog
+  described in the :ref:`general_saveas` section and the saved file
+  replaces the temporary one in the :guilabel:`Layers` panel.
 
 .. index:: Save layer
 .. _general_saveas:
@@ -266,29 +270,30 @@ algorithm <processing_algs>`.
 Creating new layers from an existing layer
 ==========================================
 
-Both raster and vector layers can be saved in a different format and/or reprojected
-to a different coordinate reference system (CRS) using the :menuselection:`Layer -->
-Save As...` menu or right-clicking on the layer in the :guilabel:`Layers panel` and
-selecting:
+Both raster and vector layers can be saved in a different format and/or
+reprojected to a different coordinate reference system (CRS) using the
+:menuselection:`Layer --> Save As...` menu or right-clicking on the
+layer in the :guilabel:`Layers panel` and selecting:
 
-* :menuselection:`Export --> Save As...` for raster layer
-* :menuselection:`Export --> Save Features As...` or :menuselection:`Export -->
-  Save Selected Features As...` for vector layer.
-* Drag'n drop layer from the layer tree to the PostGIS entry in the
-  :guilabel:`Browser Panel`. Note that you should have already a PostGIS
+* :menuselection:`Export --> Save As...` for raster layers
+* :menuselection:`Export --> Save Features As...` or
+  :menuselection:`Export --> Save Selected Features As...` for vector
+  layers.
+* Drag and drop the layer from the layer tree to the PostGIS entry in the
+  :guilabel:`Browser Panel`. Note that you must have a PostGIS
   connection in the :guilabel:`Browser Panel`.
 
 Common parameters
 -----------------
 
 The :guilabel:`Save Layer as...` dialog shows several parameters to change the
-behavior when saving the layer. Among the common parameters for raster and vector
-are:
+behavior when saving the layer.
+Among the common parameters for raster and vector are:
 
 * :guilabel:`File name`: the location of the file on the disk. It can refer to
-  the output layer or to a container that would store the layer (for
+  the output layer or to a container that stores the layer (for
   example database-like formats such as GeoPackage, SpatiaLite or Open Document
-  Spreadsheets)
+  Spreadsheets).
 * :guilabel:`CRS`: can be changed to reproject the data
 * :guilabel:`Extent` (possible values are **layer**, **Map view** or
   **user-defined** extent)
@@ -324,13 +329,13 @@ Depending on the format of export, some of these options may not be available:
 Vector specific parameters
 --------------------------
 
-Depending on the format of export, some of these options are available or not:
+Depending on the format of export, some of these options may be available:
 
 * :guilabel:`Format`: exports to any vector format GDAL can write to, such as
-  GeoPackage, ESRI Shapefile, AutoCAD DXF, ESRI FileGDB, Mapinfo TAB or MIF,
-  SpatiaLite, CSV, KML, ODS...
+  GeoPackage, GML, ESRI Shapefile, AutoCAD DXF, ESRI FileGDB, Mapinfo TAB or
+  MIF, SpatiaLite, CSV, KML, ODS, ...
 * :guilabel:`Layer name`: available when the :guilabel:`File name` refers to a
-  container-like format, this entry represents the output layer
+  container-like format, this entry represents the output layer.
 * :guilabel:`Encoding`
 * :guilabel:`Save only selected features`
 * :guilabel:`Select fields to export and their export options`. In case you set
@@ -347,7 +352,7 @@ Depending on the format of export, some of these options are available or not:
   * **Symbol Layer symbology**: save with OGR Feature Styles (see note below)
     but export the same geometry multiple times if there are multiple symbology
     symbol layers used
-  * A **Scale** value can be applied to the latest options.
+  * A **Scale** value can be applied to the latest options
 
 .. _ogr_features_note:
 
@@ -362,8 +367,8 @@ Depending on the format of export, some of these options are available or not:
 
   * :guilabel:`geometry type`: keeps the original geometry of the features when
     set to **Automatic**, otherwise removes or overrides it with any type. You
-    can add an empty geometry column to an attribute table, remove the geometry
-    column of a spatial layer.
+    can add an empty geometry column to an attribute table and remove the
+    geometry column of a spatial layer.
   * :guilabel:`Force multi-type`: forces creation of multi-geometry features in
     the layer.
   * :guilabel:`Include z-dimension` to geometries.
@@ -377,7 +382,7 @@ Depending on the format of export, some of these options are available or not:
 
 * :guilabel:`Datasource Options`, :guilabel:`Layer Options` or
   :guilabel:`Custom Options` which allow you to configure advanced parameters
-  depending on the output format. Some are exposed in :ref:`supported_format`
+  depending on the output format. Some are described in :ref:`supported_format`
   but for full details, see the `GDAL <https://gdal.org>`_ driver documentation.
 
 .. _figure_save_vector:
@@ -409,25 +414,26 @@ Creating new DXF files
 
 Besides the :guilabel:`Save As...` dialog which provides options to export a
 single layer to another format, including :file:`*.DXF`, QGIS provides another
-tool to export multiple layers as a single DXF layers. It's accessible in the
+tool to export multiple layers as a single DXF layer. It's accessible in the
 :menuselection:`Project --> Import/Export --> Export Project to DXF...` menu.
 
 In the :guilabel:`DXF Export` dialog:
 
-#. Indicate the destination layer file.
+#. Provide the destination file.
 #. Choose the symbology mode and scale (see the :ref:`OGR Feature Styles
-   <ogr_features_note>` note) if applicable.
+   <ogr_features_note>` note), if applicable.
 #. Select the data :guilabel:`Encoding`.
 #. Select the :guilabel:`CRS` to apply: the selected layers will be reprojected
    to the given CRS.
-#. Select the layers to include in the DXF files either by checking each in the
-   table widget or automatically pick them from an existing :ref:`map theme
-   <map_themes>`. The :guilabel:`Select All` and :guilabel:`Deselect All` buttons
-   can also help to quickly set the data to export.
+#. Select the layers to include in the DXF files either by checking them in the
+   table widget or automatically picking them from an existing :ref:`map theme
+   <map_themes>`.
+   The :guilabel:`Select All` and :guilabel:`Deselect All` buttons
+   can help to quickly set the data to export.
 
-   For each layer, you can also choose whether to export all the features in a
-   single DXF layer or rely on a field whose values are used to split the features
-   in generated destination layers in the DXF output.
+   For each layer, you can choose whether to export all the features in a
+   single DXF layer or rely on a field whose values are used to split the
+   features into layers in the DXF output.
   
 Optionally, you can also choose to:
 
@@ -454,18 +460,18 @@ Features that are on the clipboard can be pasted into a new layer. To do this,
 Select some features, copy them to the clipboard, and then paste them into a
 new layer using :menuselection:`Edit --> Paste Features as -->` and choosing:
 
-* :guilabel:`New Vector Layer...`: you need to select the layer CRS, poping
-  up the :guilabel:`Save vector layer as...` dialog from which you can select
-  any supported data format (see :ref:`general_saveas` for parameters);
-* or :guilabel:`Temporary Scratch Layer...`: you need to select the layer
-  CRS and give a name.
+* :guilabel:`New Vector Layer...`: the :guilabel:`Save vector layer as...`
+  dialog appears (see :ref:`general_saveas` for parameters)
+* or :guilabel:`Temporary Scratch Layer...`: you need to provide a name
+  for the layer
 
-A new layer, filled with selected features and their attributes is created and
-added to map canvas if asked.
+A new layer, filled with selected features and their attributes is
+created (and added to map canvas).
 
-.. note:: Creating layers from clipboard is possible with features selected and
-   copied within QGIS as well as features from another application, as long as
-   they are defined using well-known text (WKT) string.
+.. note:: Creating layers from the clipboard is possible with features
+   selected and copied within QGIS as well as features from another
+   application, as long as their geometries are defined using well-known
+   text (WKT).
 
 
 .. index:: Virtual layers
@@ -474,19 +480,19 @@ added to map canvas if asked.
 Creating virtual layers
 =======================
 
-Virtual layers are a special kind of vector layer.
-They allow you to define a layer as the result of an
+A virtual layer is a special kind of vector layer.
+It allows you to define a layer as the result of an
 SQL query involving any number of other vector layers that
 QGIS is able to open. Virtual layers do not carry
-data by themselves and can be seen as views to other layers.
+data by themselves and can be seen as views.
 
 To create a virtual layer, open the virtual layer creation dialog by:
 
-* clicking |virtualLayer| :guilabel:`Add Virtual Layer` option in the
-  :menuselection:`Layer --> Add Layer -->` menu;
+* choosing the |virtualLayer| :guilabel:`Add/Edit Virtual Layer` entry
+  in the :menuselection:`Layer --> Add Layer -->` menu;
 * enabling the |virtualLayer| :guilabel:`Add Virtual Layer` tab in the
   :guilabel:`Data Source Manager` dialog;
-* or using the :guilabel:`DB Manager` dialog tree item.
+* or using the :guilabel:`DB Manager` dialog tree.
 
 The dialog allows you to specify a :guilabel:`Layer name` and an SQL
 :guilabel:`Query`. The query can use the name (or id) of loaded vector
@@ -529,16 +535,16 @@ Embedding layers for use in queries
 -----------------------------------
 
 Besides the vector layers available in the map canvas, the user can add layers
-to the :guilabel:`Embedded layers` list, which he can use in queries
+to the :guilabel:`Embedded layers` list, which can be used in queries
 without the need to have them showing in the map canvas or Layers panel.
 
 To embed a layer, click :guilabel:`Add` and provide the :guilabel:`Local name`,
 :guilabel:`Provider`, :guilabel:`Encoding` and the path to the
 :guilabel:`Source`.
 
-The :guilabel:`Import` button allows adding layers loaded in the map canvas into
-the Embedded layers list. This allows to later remove those layers from the
-Layers panel without breaking any existent query.
+The :guilabel:`Import` button allows adding layers in the map canvas into
+the Embedded layers list. Those layers can then be removed from the
+Layers panel without breaking existent queries.
 
 Supported query language
 ------------------------
@@ -564,38 +570,37 @@ To refer the geometry column of a layer, use the name ``geometry``.
 
 Contrary to a pure SQL query, all the fields of a virtual layer query must
 be named. Don't forget to use the ``as`` keyword to name your columns if they
-are the result of a computation or function call.
+are the result of a computation or a function call.
 
 Performance issues
 ------------------
 
-With default parameters set, the virtual layer engine will try its best to
+With default parameters, the virtual layer engine will try its best to
 detect the type of the different columns of the query, including the type of the
 geometry column if one is present.
 
 This is done by introspecting the query when possible or by fetching the first
-row of the query (LIMIT 1) at last resort.
+row of the query (LIMIT 1) as a last resort.
 Fetching the first row of the result just to create the layer may be undesirable
 for performance reasons.
 
-The creation dialog allows to specify different parameters:
+The creation dialog parameters:
 
-* :guilabel:`Unique identifier column`: this option allows specifying which
-  field of the query represents unique integer values that QGIS can use as row
-  identifiers. By default, an autoincrementing integer value is used.
-  Defining a unique identifier column allows to speed up the selection of
+* :guilabel:`Unique identifier column`: specifies a field
+  of the query that represents unique integer values that QGIS can
+  use as row identifiers.
+  By default, an autoincrementing integer value is used.
+  Defining a unique identifier column speeds up the selection of
   rows by id.
 
-* :guilabel:`No geometry`: this option forces the virtual layer to ignore
+* :guilabel:`No geometry`: forces the virtual layer to ignore
   any geometry field. The resulting layer is an attribute-only layer.
 
-* Geometry :guilabel:`Column`: this option allows to specify the name
-  of the column that is to be used as the geometry of the layer.
+* Geometry :guilabel:`Column`: specifies the name of the geometry column.
 
-* Geometry :guilabel:`Type`: this option allows to specify the type
-  of the geometry of the virtual layer.
+* Geometry :guilabel:`Type`: specifies the type of the geometry.
 
-* Geometry :guilabel:`CRS`: this option allows to specify the
+* Geometry :guilabel:`CRS`: specifies the
   coordinate reference system of the virtual layer.
 
 Special comments
@@ -628,7 +633,7 @@ integer representing the EPSG code of a coordinate reference system.
 Use of indexes
 --------------
 
-When requesting a layer through a virtual layer, indexes of this source layer
+When requesting a layer through a virtual layer, the source layer indices
 will be used in the following ways:
 
 * if an ``=`` predicate is used on the primary key column of the layer, the
@@ -650,8 +655,8 @@ box. Example:
    FROM vtab
    WHERE _search_frame_=BuildMbr(-2.10,49.38,-1.3,49.99,4326)
 
-Spatial binary predicates like ``ST_Intersects`` are significantly sped up when
-used in conjunction with this spatial index syntax.
+Spatial binary predicates like ``ST_Intersects`` are sped up significantly
+when used in conjunction with this spatial index syntax.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

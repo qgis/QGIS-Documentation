@@ -405,9 +405,13 @@ Processing with their corresponding alg decorator constants
 (:file:`algfactory.py` contains the complete list of alg constants).
 Sorted on class name.
 
-.. list-table:: Input types
-   :widths: 24 55 21
+Input types
+...........
+
+.. list-table::
+   :widths: 54 31 15
    :header-rows: 1
+   :stub-columns: 0
 
    * - Class
      - Alg constant
@@ -497,6 +501,9 @@ Sorted on class name.
    * - :class:`QgsProcessingParameterFeatureSource <qgis.core.QgsProcessingParameterFeatureSource>`
      - ``alg.SOURCE``
      - A feature source
+   * - :class:`QgsProcessingParameterScale <qgis.core.QgsProcessingParameterScale>`
+     - 
+     - A map scale
    * - :class:`QgsProcessingParameterString <qgis.core.QgsProcessingParameterString>`
      - ``alg.STRING``
      - A text string
@@ -509,9 +516,13 @@ Sorted on class name.
 
 |
 
-.. list-table:: Output types
-   :widths: 25 50 25
+Output types
+............
+
+.. list-table::
+   :widths: 47 24 29
    :header-rows: 1
+   :stub-columns: 0
 
    * - Class
      - Alg constant

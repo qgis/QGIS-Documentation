@@ -7,7 +7,7 @@ Modeler tools
       :local:
       :depth: 1
 
-These tools are only available in the Graphial Modeler.
+These tools are only available in the Graphical Modeler.
 They are not available in the Processing Toolbox.
 
 
@@ -25,18 +25,18 @@ Parameters
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Layer**
-      - ``INPUT``
-      - [layer:any]
-      - Layer to load in the legend
-   *  - **Loaded layer name**
-      - ``NAME``
-      - [string]
-      - Name of the loaded layer
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Layer**
+     - ``INPUT``
+     - [layer]
+     - Layer to load in the legend
+   * - **Loaded layer name**
+     - ``NAME``
+     - [string]
+     - Name of the loaded layer
 
 Outputs
 .......
@@ -46,21 +46,21 @@ Outputs
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Layer**
-      - ``OUTPUT``
-      - [vector:any]
-      - The (renamed) output layer
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Layer**
+     - ``OUTPUT``
+     - [same as input]
+     - The (renamed) loaded layer
 
 
 .. _qgisrenamelayer:
 
 Rename layer
 ------------
-This algorithm renames a layer.
+Renames a layer.
 
 Parameters
 ..........
@@ -70,18 +70,18 @@ Parameters
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Layer**
-      - ``INPUT``
-      - [layer:any]
-      - Layer to rename
-   *  - **New name**
-      - ``NAME``
-      - [string]
-      - The new name of the layer
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Layer**
+     - ``INPUT``
+     - [layer]
+     - Layer to rename
+   * - **New name**
+     - ``NAME``
+     - [string]
+     - The new name of the layer
 
 Outputs
 .......
@@ -91,14 +91,14 @@ Outputs
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Layer**
-      - ``OUTPUT``
-      - [layer:any]
-      - The (renamed) output layer
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Layer**
+     - ``OUTPUT``
+     - [same as input]
+     - The (renamed) output layer
 
 
 .. _qgisstringconcatenation:
@@ -115,18 +115,18 @@ Parameters
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Input 1**
-      - ``INPUT_1``
-      - [string]
-      - First string
-   *  - **Input 2**
-      - ``INPUT_2``
-      - [string]
-      - Second string
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input 1**
+     - ``INPUT_1``
+     - [string]
+     - First string
+   * - **Input 2**
+     - ``INPUT_2``
+     - [string]
+     - Second string
 
 Outputs
 .......
@@ -136,11 +136,11 @@ Outputs
    :widths: 20 20 20 40
    :stub-columns: 0
 
-   *  - Label
-      - Name
-      - Type
-      - Description
-   *  - **Concatenation**
-      - ``CONCATENATION``
-      - [string]
-      - The concatenated string
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Concatenation**
+     - ``CONCATENATION``
+     - [string]
+     - The concatenated string

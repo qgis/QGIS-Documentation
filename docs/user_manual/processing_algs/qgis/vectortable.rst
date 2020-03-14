@@ -85,7 +85,7 @@ Parameters
        last.
    * - **Incremented**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
        
        Default: ``[Create temporary layer]``
      - Specify the output vector layer with the auto increment
@@ -95,7 +95,7 @@ Parameters
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
-       * Save to PostGIS Table
+       * Save to PostGIS Table...
       
        The file encoding can also be changed here.
 
@@ -113,7 +113,7 @@ Outputs
      - Description
    * - **Incremented**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
      - Vector layer with auto incremental field
 
 
@@ -174,16 +174,16 @@ Parameters
      - Precision of the field. Useful with Float field type.
    * - **Added**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
        
        Default: ``[Create temporary layer]``
-     - Specification of the output vector layer.
+     - Specify the output vector layer.
        One of:
        
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
-       * Save to PostGIS Table...
+       * Save to PostGIS Table......
        
        The file encoding can also be changed here.
 
@@ -201,7 +201,7 @@ Outputs
      - Description
    * - **Added**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
      - Vector layer with new field added
 
 
@@ -260,7 +260,7 @@ Parameters
        * Create Temporary Layer
        * Save to File...
        * Save to Geopackage...
-       * Save to PostGIS Table...
+       * Save to PostGIS Table......
        
        The file encoding can also be changed here.
    * - **Class summary**
@@ -268,7 +268,7 @@ Parameters
      - [table]
        
        Default: ``[Skip output]``
-     - Specification of table to contain the summary of the class field
+     - Specify the table to contain the summary of the class field
        mapped to the corresponding unique value.
        One of:
       
@@ -276,7 +276,7 @@ Parameters
        * Create Temporary Layer
        * Save to File...
        * Save to Geopackage...
-       * Save to PostGIS Table...
+       * Save to PostGIS Table......
        
        The file encoding can also be changed here.
 
@@ -294,7 +294,7 @@ Outputs
      - Description
    * - **Layer with index field**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
      - Vector layer with the numeric field containing indexes.
    * - **Class summary**
      - ``SUMMARY_OUTPUT``
@@ -307,7 +307,7 @@ Outputs
 
 .. _qgisaddxyfieldstolayer:
 
-Add X/Y fields to layer |38|
+Add X/Y fields to layer
 ----------------------------
 Adds X and Y (or latitude/longitude) fields to a point layer.
 The X/Y fields can be calculated in a different CRS to the layer
@@ -348,14 +348,14 @@ Parameters
      - [vector: point]
 
        Default: ``[Create temporary layer]``
-     - Specification of the output layer.
+     - Specify the output layer.
        One of:
-       
+
        * Create Temporary Layer
        * Save to File...
        * Save to Geopackage...
        * Save to PostGIS Table...
-       
+
        The file encoding can also be changed here.
 
 Outputs
@@ -372,7 +372,7 @@ Outputs
      - Description
    * - **Added fields**
      - ``OUTPUT``
-     - [vector:point]
+     - [vector: point]
      - The output layer - identical to the input layer but with two
        new double fields, ``x`` and ``y``.
 
@@ -453,7 +453,7 @@ Parameters
        
    * - **Calculated**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
        
        Default: ``[Create temporary layer]``
      - Specify the vector layer with the new calculated
@@ -462,7 +462,7 @@ Parameters
        * Create Temporary Layer
        * Save to File...
        * Save to Geopackage...
-       * Save to PostGIS Table...
+       * Save to PostGIS Table......
        
        The file encoding can also be changed here.
 
@@ -480,7 +480,7 @@ Outputs
      - Description
    * - **Calculated**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
      - Vector layer with the new calculated field
 
 
@@ -513,15 +513,16 @@ Parameters
      - The field(s) to drop
    * - **Remaining fields**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
        
        Default: ``[Create temporary layer]``
-     - Vector layer with the remaining fields. One of:
+     - Specify the output vector layer with the remaining fields.
+       One of:
        
        * Create Temporary Layer
        * Save to File...
        * Save to Geopackage...
-       * Save to PostGIS Table...
+       * Save to PostGIS Table......
        
        The file encoding can also be changed here.
 
@@ -539,13 +540,93 @@ Outputs
      - Description
    * - **Remaining fields**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
      - Vector layer with the remaining fields
+
+
+.. _qgisexplodehstorefield:
+
+Explode HStore Field
+-------------------------
+Creates a copy of the input layer and adds a new field
+for every unique key in the HStore field.
+
+The expected field list is an optional comma separated
+list.
+If this list is specified, only these fields are added
+and the HStore field is updated.
+By default, all unique keys are added.
+
+The PostgreSQL `HStore <https://www.postgresql.org/docs/10/hstore.html>`_
+is a simple key-value store used in PostgreSQL and OGR (when reading an
+`OSM file <https://gdal.org/drivers/vector/osm.html#other-tags-field>`_
+with the ``other_tags`` field.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer
+   * - **HStore field**
+     - ``FIELD``
+     - [tablefield: any]
+     - The field(s) to drop
+   * - **Expected list of fields separated by a comma**
+
+       Optional
+     - ``EXPECTED_FIELDS``
+     - [string]
+
+       Default: ''
+     - Comma-separated list of fields to extract.
+       The HStore field will be updated by removing these keys.
+
+   * - **Exploded**
+     - ``OUTPUT``
+     - [same as input]
+       
+       Default: ``[Create temporary layer]``
+     - Specify the output vector layer. One of:
+       
+       * Create Temporary Layer
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table......
+       
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Exploded**
+     - ``OUTPUT``
+     - [same as input]
+     - Output vector layer
 
 
 .. _qgisextractbinary:
 
-Extract binary field |36|
+Extract binary field
 -------------------------
 Extracts contents from a binary field, saving them to individual files.
 Filenames can be generated using values taken from an attribute in the
@@ -607,7 +688,7 @@ Outputs
 
 .. _qgisfeaturefilter:
 
-Feature filter (Modeler only)
+Feature filter
 -----------------------------
 Filters features from the input layer and redirects
 them to one or several outputs.
@@ -615,6 +696,8 @@ If you do not know about any attribute names that are common to all
 possible input layers, filtering is only possible on the feature
 geometry and general record mechanisms, such as ``$id`` and ``uuid``.  
 
+.. note:: This algorithm is only available from the
+  :ref:`Graphical modeler <processing.modeler>`.
 
 Parameters
 ..........
@@ -636,7 +719,7 @@ Parameters
        
        (one or more)
      - ``OUTPUT_<name of the filter>``
-     - [vector: any]
+     - [same as input]
      - The output layers with filters (as many as there are filters).
 
 Outputs
@@ -655,7 +738,7 @@ Outputs
        
        (one or more)
      - ``native:filter_1:OUTPUT_<name of filter>``
-     - [vector: any]
+     - [same as input]
      - The output layers with filtered features (as many as there are
        filters).
 
@@ -728,7 +811,7 @@ Parameters
      - The formula to use to calculate the result
    * - **Output file**
      - ``OUTPUT``
-     - [vector:any]
+     - [vector: any]
        
        Default: ``[Save to temporary file]``
      - Specification of the output layer.
@@ -843,7 +926,7 @@ Parameters
        * Create Temporary Layer
        * Save to File...
        * Save to Geopackage...
-       * Save to PostGIS Table...
+       * Save to PostGIS Table......
        
        The file encoding can also be changed here.
 
@@ -899,16 +982,15 @@ Parameters
        float field.
    * - **Float from text**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
        
        Default: ``[Create Temporary Layer]``
-     - Specification of the output layer.
-       One of:
+     - Specify the output layer. One of:
        
        * Create Temporary Layer
        * Save to File...
        * Save to Geopackage...
-       * Save to PostGIS Table...
+       * Save to PostGIS Table......
        
        The file encoding can also be changed here.
 
@@ -926,7 +1008,7 @@ Outputs
      - Description
    * - **Float from text**
      - ``OUTPUT``
-     - [vector: any]
+     - [same as input]
      - Output vector layer with the string field converted into
        a float field
 
@@ -937,8 +1019,6 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |36| replace:: ``NEW in 3.6``
-.. |38| replace:: ``NEW in 3.8``
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png

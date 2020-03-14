@@ -139,10 +139,13 @@ Right-clicking over a selection of items also allows you to:
 * :guilabel:`Add to Favorites`;
 * :guilabel:`Remove from Favorites`;
 * :menuselection:`Add to Tag -->` and select the appropriate tag or create a new
-  one to use;
+  one to use; the currently assigned tags are checked;
 * :guilabel:`Clear Tags`: detaching the symbols from any tag;
 * :guilabel:`Remove Item(s)`;
 * :guilabel:`Edit Item`: applies to the item you right-click over;
+* :guilabel:`Copy Item`;
+* :guilabel:`Paste Item ...`: pasting to one of the categories of the style manager
+  or elsewhere in QGIS (symbol or color buttons) 
 * :guilabel:`Export Selected Symbol(s) as PNG...` (only available with symbols);
 * :guilabel:`Export Selected Symbol(s) as SVG...` (only available with symbols);
 
@@ -216,7 +219,7 @@ Using the Browser panel
 .......................
 
 It's also possible to import style items into the active user profile style
-database diretly from the :guilabel:`Browser` panel:
+database directly from the :guilabel:`Browser` panel:
    
 #. Select the style :file:`.xml` file in the browser
 #. Drag-and-drop it over the map canvas or right-click and select

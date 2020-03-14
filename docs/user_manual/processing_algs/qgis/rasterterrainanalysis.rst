@@ -33,21 +33,55 @@ The following picture shows the aspect layer reclassified with a color ramp:
 Parameters
 ..........
 
-``Elevation layer`` [raster]
-  Digital Terrain Model raster layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Z factor`` [number]
-  Vertical exaggeration. This parameter is useful when the Z units differ from
-  the X and Y ones, for example miles and meters. You can use this parameter to
-  adjust the final result.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Elevation layer**
+     - ``INPUT``
+     - [raster]
+     - Digital Terrain Model raster layer
+   * - **Z factor**
+     - ``Z_FACTOR``
+     - [number]
 
-  Default: *1.0*
+       Default: 1.0
+     - Vertical exaggeration.       
+       This parameter is useful when the Z units differ from
+       the X and Y units, for example feet and meters.
+       You can use this parameter to adjust for this.
+       The default is 1 (no exaggeration).
+   * - **Aspect**
+     - ``OUTPUT``
+     - [raster]
+     - Specify the output aspect raster layer. One of:
+
+       * Save to a Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Aspect`` [raster]
-  Aspect raster layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Aspect**
+     - ``OUTPUT``
+     - [raster]
+     - The output aspect raster layer
 
 
 .. _qgishillshade:
@@ -82,37 +116,76 @@ overlap it with the elevation raster:
 
    Overlapping the hillshade with the elevation layer
 
-
 Parameters
 ..........
 
-``Elevation layer`` [raster]
-  Digital Terrain Model raster layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Z factor`` [number]
-  You can use this parameter to exaggerate the final result in order to give it
-  a stronger output.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Elevation layer**
+     - ``INPUT``
+     - [raster]
+     - Digital Terrain Model raster layer
+   * - **Z factor**
+     - ``Z_FACTOR``
+     - [number]
 
-  Default: *1.0*
+       Default: 1.0
+     - Vertical exaggeration.       
+       This parameter is useful when the Z units differ from
+       the X and Y units, for example feet and meters.
+       You can use this parameter to adjust for this.
+       Increasing the value of this parameter will
+       exaggerate the final result (making it look more "hilly").
+       The default is 1 (no exaggeration).
+   * - **Azimuth (horizontal angle)**
+     - ``AZIMUTH``
+     - [number]
 
-``Azimuth (horizontal angle)`` [number]
-  Set the horizontal angle (in degrees) of the sun. The range of these values can
-  go from 0 (North) continuing clockwise.
+       Default: 300.0
+     - Set the horizontal angle (in degrees) of the sun (clockwise
+       direction). Range: 0 to 360. 0 is north.
+   * - **Vertical angle**
+     - ``V_ANGLE``
+     - [number]
 
-  Default: *300*
+       Default: 40.0
+     - Set the vertical angle (in degrees) of the sun, that is the
+       height of the sun.
+       Values can go from 0 (minimum elevation) to 90 (maximum
+       elevation).
+   * - **Hillshade**
+     - ``OUTPUT``
+     - [raster]
+     - Specify the output hillshade raster layer. One of:
 
-``Vertical angle`` [number]
-  Set the vertical angle (in degrees) of the sun, that is the height of the sun.
-  Values can go from 0 (minimum elevation) to 90 (maximum elevation).
+       * Save to a Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
 
-  Default: *40*
-
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Hillshade`` [raster]
-  Hillshade raster layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Hillshade**
+     - ``OUTPUT``
+     - [raster]
+     - The output hillshade raster layer
 
 
 .. _qgishypsometriccurves:
@@ -120,43 +193,82 @@ Outputs
 Hypsometric curves
 ------------------
 Calculates hypsometric curves for an input Digital Elevation Model.
-Curves are produced as csv file in an output folder specified by the user.
+Curves are produced as CSV files in an output folder specified by the user.
 
-Hypsometric curves are a histogram of the cumulative distribution of elevation
-values in a geographical area. You can use hypsometric curves to detect differences
-in the landscape due to the geomorphology of the territory.
+A hypsometric curve is a cumulative histogram of elevation values in
+a geographical area.
 
+You can use hypsometric curves to detect differences in the landscape due
+to the geomorphology of the territory.
 
 Parameters
 ..........
 
-``DEM to analyze`` [raster]
-  Digital Terrain Model raster layer to use for calculating altitudes.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Boundary layer``
-  Polygonal vector layer with boundaries of areas used to calculate hypsometric
-  curves.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **DEM to analyze**
+     - ``INPUT_DEM``
+     - [raster]
+     - Digital Terrain Model raster layer to use for
+       calculating altitudes
+   * - **Boundary layer**
+     - ``BOUNDARY_LAYER``
+     - [vector: polygon]
+     - Polygon vector layer with boundaries of areas used
+       to calculate hypsometric curves
+   * - **Step**
+     - ``STEP``
+     - [number]
 
-``Step``
-  Distance between curves.
+       Default: 100.0
+     - Vertical distance between curves
+   * - **Use % of area instead of absolute value**
+     - ``USE_PERCENTAGE``
+     - [boolean]
 
-  Default: *100.0*
+       Default: False
+     - Write area percentage to “Area” field of the CSV file
+       instead of the absolute area
+   * - **Hypsometric curves**
+     - ``OUTPUT_DIRECTORY``
+     - [folder]
+     - Specify the output folder for the hypsometric curves.
+       One of:
 
-``Use % of area instead of absolute value`` [boolean]
-  Write area percentage to “Area” field of the CSV file instead of absolute area
-  value.
+       * Save to a Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
 
-  Default: *False*
-
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Hypsometric curves`` [folder]
-  Directory where output will be saved. For each feature from input vector layer
-  CSV file with area and altitude values will be created.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-  File name consists of prefix ``hystogram_`` followed by layer name and feature ID.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Hypsometric curves**
+     - ``OUTPUT_DIRECTORY``
+     - [folder]
+     - Directory containing the files with the hypsometric
+       curves.
+       For each feature from the input vector layer, a CSV file
+       with area and altitude values will be created.
+       
+       The file names start with ``histogram_``, followed by
+       layer name and feature ID.
 
 .. figure:: img/hypsometric.png
    :align: center
@@ -167,9 +279,9 @@ Outputs
 
 Relief
 ------
-Creates a shaded relief layer from digital elevation data. You can specify manually
-all the relief color or you can let the algorithm choose automatically all the
-relief classes.
+Creates a shaded relief layer from digital elevation data.
+You can specify the relief color manually, or you can let the
+algorithm choose automatically all the relief classes.
 
 .. figure:: img/relief.png
    :align: center
@@ -179,43 +291,105 @@ relief classes.
 Parameters
 ..........
 
-``Elevation layer`` [raster]
-  Digital Terrain Model raster layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Z factor`` [number]
-  You can use this parameter to exaggerate the final result in order to give it
-  a stronger output.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Elevation layer**
+     - ``INPUT``
+     - [raster]
+     - Digital Terrain Model raster layer
+   * - **Z factor**
+     - ``Z_FACTOR``
+     - [number]
 
-  Default: *1.0*
+       Default: 1.0
+     - Vertical exaggeration.       
+       This parameter is useful when the Z units differ from
+       the X and Y units, for example feet and meters.
+       You can use this parameter to adjust for this.
+       Increasing the value of this parameter will
+       exaggerate the final result (making it look more "hilly").
+       The default is 1 (no exaggeration).
+   * - **Generate relief classes automatically**
+     - ``AUTO_COLORS``
+     - [boolean]
 
-``Generate relief classes automatically`` [boolean]
-  If you check this option the algorithm will create all the relief color classes
-  automatically.
+       Default: False
+     - If you check this option the algorithm will create all
+       the relief color classes automatically       
+   * - **Relief colors**
 
-  Default: *False*
+       Optional
+     - ``COLORS``
+     - [table widget]
+     - Use the table widget if you want to choose the relief
+       colors manually.
+       You can add as many color classes as you want: for each
+       class you can choose the lower and upper bound and
+       finally by clicking on the color row you can choose the
+       color thanks to the color widget.
 
-``Relief colors`` [table widget]
-  Optional
+       .. figure:: img/relief_table.png
+          :align: center
 
-  Use the following table widget if you want to choose the relief colors manually.
-  You can add as many color classes as you want: for each class you can choose
-  the lower and upper bound and finally by clicking on the color row you can choose
-  the color thanks to the color widget.
+          Manually setting of relief color classes
 
-  .. figure:: img/relief_table.png
-     :align: center
+       The buttons in the right side panel give you the
+       chance to: add or remove color classes, change the
+       order of the color classes already defined, open an
+       existing file with color classes and save the current
+       classes as file.
+   * - **Relief**
+     - ``OUTPUT``
+     - [raster]
+       
+       Default: ``[Save to temporary file]``
+     - Specify the output relief raster layer. One of:
 
-     Manually relief color classes
+       * Save to a Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
 
-  All the buttons of the right side panel give you the chance to: add or remove
-  color classes, change the order of the color classes already defined, open an
-  existing file with color classes and save the current classes as file.
+       The file encoding can also be changed here.
+   * - **Frequency distribution**
+     - ``FREQUENCY_DISTRIBUTION``
+     - [table]
+       
+       Default: ``[Skip output]``
+     - Specify the CSV table for the output frequency distribution.
+       One of:
+
+       * Skip Output
+       * Save to a Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Relief`` [raster]
-  Relief raster layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Relief**
+     - ``OUTPUT``
+     - [raster]
+     - The output relief raster layer
+   * - **Frequency distribution**
+     - ``OUTPUT``
+     - [table]
+     - The output frequency distribution
 
 
 .. _qgisruggednessindex:
@@ -237,20 +411,59 @@ surrounding it.
 Parameters
 ..........
 
-``Elevation layer`` [raster]
-  Digital Terrain Model raster layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Z factor`` [number]
-  You can use this parameter to exaggerate the final result in order to give it
-  a stronger output.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Elevation layer**
+     - ``INPUT``
+     - [raster]
+     - Digital Terrain Model raster layer
+   * - **Z factor**
+     - ``Z_FACTOR``
+     - [number]
 
-  Default: *1.0*
+       Default: 1.0
+     - Vertical exaggeration.       
+       This parameter is useful when the Z units differ from
+       the X and Y units, for example feet and meters.
+       You can use this parameter to adjust for this.
+       Increasing the value of this parameter will
+       exaggerate the final result (making it look more rugged).
+       The default is 1 (no exaggeration).
+   * - **Ruggedness**
+     - ``OUTPUT``
+     - [raster]
+       
+       Default: ``[Save to temporary file]``
+     - Specify the output ruggedness raster layer. One of:
+
+       * Save to a Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Ruggedness`` [raster]
-  Ruggedness raster layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Ruggedness**
+     - ``OUTPUT``
+     - [raster]
+     - The output ruggedness raster layer
 
 
 .. _qgisslope:
@@ -271,17 +484,56 @@ of the terrain while to the right the calculated slope:
 Parameters
 ..........
 
-``Elevation raster`` [raster]
-  Digital Terrain Model raster layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Z factor`` [number]
-  You can use this parameter to exaggerate the final result in order to give it
-  a stronger output.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Elevation layer**
+     - ``INPUT``
+     - [raster]
+     - Digital Terrain Model raster layer
+   * - **Z factor**
+     - ``Z_FACTOR``
+     - [number]
 
-  Default: *1.0*
+       Default: 1.0
+     - Vertical exaggeration.       
+       This parameter is useful when the Z units differ from
+       the X and Y units, for example feet and meters.
+       You can use this parameter to adjust for this.
+       Increasing the value of this parameter will
+       exaggerate the final result (making it steeper).
+       The default is 1 (no exaggeration).
+   * - **Slope**
+     - ``OUTPUT``
+     - [raster]
+       
+       Default: ``[Save to temporary file]``
+     - Specify the output slope raster layer. One of:
+
+       * Save to a Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Slope`` [raster]
-  Slope raster layer.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Slope**
+     - ``OUTPUT``
+     - [raster]
+     - The output slope raster layer

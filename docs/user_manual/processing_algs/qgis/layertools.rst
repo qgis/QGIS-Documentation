@@ -48,11 +48,10 @@ Parameters
      - Specify the polygon vector layer for the output extent.
        One of:
 
-       * Skip Output
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
-       * Save to PostGIS Table
+       * Save to PostGIS Table...
 
        The file encoding can also be changed here.
 

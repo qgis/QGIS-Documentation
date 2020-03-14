@@ -18,7 +18,8 @@ To access the :guilabel:`Layer Properties` dialog:
 
 * In the :guilabel:`Layers` panel, double-click the layer or right-click
   and select :guilabel:`Properties...` from the pop-up menu;
-* Go to :menuselection:`Layer --> Properties...` menu when the layer is selected.
+* Go to :menuselection:`Layer --> Layer Properties...` menu when the layer
+  is selected.
 
 The vector :guilabel:`Layer Properties` dialog provides the following sections:
 
@@ -31,7 +32,7 @@ The vector :guilabel:`Layer Properties` dialog provides the following sections:
    * - |labeling| :ref:`Labels <vector_labels_tab>`:sup:`[1]`
      - |diagram| :ref:`Diagrams <sec_diagram>`
      - |3d| :guilabel:`3D View`:sup:`[1]`
-   * - |sourceFields| :ref:`Source Fields <vector_fields_menu>`
+   * - |sourceFields| :ref:`Fields <vector_fields_menu>`
      - |formView| :ref:`Attributes Form <vector_attributes_menu>`
      - |join| :ref:`Joins <sec_joins>`
    * - |auxiliaryStorage| :ref:`Auxiliary Storage <vector_auxiliary_storage>`
@@ -467,8 +468,8 @@ to define rotation and size scale from specified columns.
 
 Also, analogous to the Categorized Renderer, it allows you to select:
 
-* The attribute (using the Column listbox or the |expression|
-  :sup:`Set column expression` function)
+* The value (using the fields listbox or the |expression|
+  :sup:`Set value expression` function)
 * The symbol (using the Symbol selector dialog)
 * The legend format and the precision
 * The method to use to change the symbol: color or size
@@ -514,7 +515,7 @@ Right-click shows a contextual menu to **Copy/Paste**, **Change color**, **Chang
 transparency**, **Change output unit**, **Change symbol width**.
 
 The example in figure_graduated_symbology_ shows the graduated rendering dialog for
-the rivers layer of the QGIS sample dataset.
+the major_rivers layer of the QGIS sample dataset.
 
 .. _figure_graduated_symbology:
 
@@ -1043,7 +1044,7 @@ effect types, with custom options are available:
 * **Colorise**: This effect can be used to make a version of the style using one
   single hue. The base will always be a grayscale version of the symbol and you
   can:
-  
+
   * Use the |selectString| :guilabel:`Grayscale` to select how to create it:
     options are 'By lightness', 'By luminosity', 'By average' and 'Off'.
   * If |checkbox| :guilabel:`Colorise` is selected, it will be possible to mix
@@ -1189,7 +1190,7 @@ option, opening the following dialog.
 
    Layer labeling settings - Single labels
 
-At the top of the dialog, a :guilabel:`Label with` drop-down list is enabled.
+At the top of the dialog, a :guilabel:`Value` drop-down list is enabled.
 You can select an attribute column to use for labeling. By default, the
 :ref:`display field <maptips>` is used. Click |expression| if you want to define
 labels based on expressions - See :ref:`labeling_with_expressions`.
@@ -1201,7 +1202,7 @@ Below are displayed options to customize the labels, under various tabs:
 * |labelbuffer| :ref:`Buffer <labels_buffer>`
 * |labelbackground| :ref:`Background <labels_background>`
 * |labelshadow| :ref:`Shadow <labels_shadow>`
-* |labelcallout| :guilabel:`Callouts`
+* |labelcallout| :ref:`Callouts <labels_callouts>`
 * |labelplacement| :ref:`Placement <labels_placement>`
 * |render| :ref:`Rendering <labels_rendering>`
 
@@ -1226,20 +1227,20 @@ options:
 
    The labels automated placement engine
 
-* The :guilabel:`Number of candidates` controls set how many label placement
+* The :guilabel:`Number of candidates` controls how many label placement
   candidates should be generated for each feature type. The more candidates
   generated, the better the labeling will be - but at a cost of rendering
   speed. Smaller number of candidates results in less labels placed but faster
   redraws.
-* |checkbox| :guilabel:`Draw text as outlines`: controls whether text labels are
-  drawn (and exported) as either proper text objects OR as paths only. If they
-  are exported as text objects then they can be edited in external applications
-  (e.g. Inkscape) as normal text. BUT the side effect is that the rendering
-  quality is decreased, AND there's issues with rendering when certain text settings
-  like buffers are in place. That's why drawing as outlines is recommended. Note
-  that when :ref:`exporting a layout to svg <export_layout_svg>` there's actually
-  an override for this setting - so you can leave the project rendering as outlines
-  but for a :file:`.svg` export export the labels as text.
+* :guilabel:`Text rendering`: sets the default value for label rendering
+  widgets when :ref:`exporting a map canvas <exportingmapcanvas>` or
+  :ref:`a layout <create-output>` to PDF or SVG.
+  If :guilabel:`Always render labels as text` is selected then labels can be
+  edited in external applications (e.g. Inkscape) as normal text. BUT the side
+  effect is that the rendering quality is decreased, and there are issues with
+  rendering when certain text settings like buffers are in place. That's why
+  :guilabel:`Always render labels as paths (recommended)` which exports labels
+  as outlines, is recommended.
 * |checkbox| :guilabel:`Allow truncated labels on edges of map`: controls
   whether labels which fall partially outside of the map extent should be
   rendered. If checked, these labels will be shown (when there's no way to
@@ -1307,7 +1308,7 @@ Whether you choose single or rule-based labeling type, QGIS allows using
 expressions to label features.
 
 Assuming you are using the :guilabel:`Single labels` method, click the
-|expression| button near the :guilabel:`Label with` drop-down list in the
+|expression| button near the :guilabel:`Value` drop-down list in the
 |labeling| :guilabel:`Labels` tab of the properties dialog.
 
 In figure_labels_expression_, you see a sample expression to label the alaska
@@ -1474,6 +1475,15 @@ description and manipulation in :ref:`data_defined` section.
 
    Airports labels are formatted based on their attributes
 
+.. tip:: **Use the data-defined override to label every part of multi-part features**
+
+   There is an option to set the labeling for multi-part features independently from
+   your label properties. Choose the  |render| :ref:`Rendering <labels_rendering>`,
+   ``Feature options``, go to the |dataDefined| :sup:`Data-define override` button
+   next to the checkbox |unchecked| :guilabel:`Label every part of multipart-features`
+   and define the labels as described in :ref:`data_defined`.
+
+
 .. _label_toolbar:
 
 The Label Toolbar
@@ -1482,7 +1492,7 @@ The Label Toolbar
 The :guilabel:`Label Toolbar` provides some tools to manipulate |labeling|
 :ref:`label <vector_labels_tab>` or |diagram| :ref:`diagram <sec_diagram>`
 properties, but only if the corresponding data-defined option is indicated
-(otherwise, buttons are disabled). Layer might also need to be in edit mode.
+(otherwise, buttons are disabled).
 
 .. _figure_labels_tools:
 
@@ -1517,7 +1527,8 @@ same way with diagrams:
   you get the text rotated.
 * |changeLabelProperties| :sup:`Change Label`. It opens a dialog to change the
   clicked label properties; it can be the label itself, its coordinates, angle,
-  font, size... as long as this property has been mapped to a field.
+  font, size... as long as this property has been mapped to a field. Here you can
+  set the option to |checkbox| :guilabel:`Label every part of a feature`.
 
 .. warning:: **Label tools overwrite current field values**
 
@@ -1838,10 +1849,10 @@ See :ref:`data_defined_labeling` for more information.
 .. index:: Fields, Forms
 .. _vector_fields_menu:
 
-Source Fields Properties
-========================
+Fields Properties
+=================
 
-|sourceFields| The :guilabel:`Source Fields` tab provides information on
+|sourceFields| The :guilabel:`Fields` tab provides information on
 fields related to the layer and helps you organize them.
 
 The layer can be made :ref:`editable <editingvector>` using the |toggleEditing|
@@ -1865,7 +1876,7 @@ field label in a feature form.
 
 Other than the fields contained in the dataset, virtual fields and
 :ref:`Auxiliary Storage <vector_auxiliary_storage>` included, the
-:guilabel:`Source Fields` tab also lists fields from any :ref:`joined layers <sec_joins>`.
+:guilabel:`Fields` tab also lists fields from any :ref:`joined layers <sec_joins>`.
 Depending on the origin of the field, a different background color is applied to it.
 
 For each listed field, the dialog also lists read-only characteristics such as
@@ -1877,7 +1888,7 @@ layer as ``WMS`` or ``WFS``, you can also check here which fields could be retri
 .. figure:: img/fields_properties.png
    :align: center
 
-   Source Field properties tab
+   Fields properties tab
 
 
 .. _vector_attributes_menu:
@@ -1956,20 +1967,26 @@ in figure_fields_form_.
 
 #. Choose ``Drag and drop designer`` from the :guilabel:`Select attribute layout
    editor` combobox. This enables the :guilabel:`Form Layout` panel next to the
-   :guilabel:`Available widgets` panel, filled with existing fields. 
-#. Select any fields you would not want to use in your :guilabel:`Form Layout`
+   :guilabel:`Available widgets` panel, filled with existing fields.
+   The selected field displays its :ref:`properties <configure_field>` (that you
+   can customize) in a third panel.
+#. Select fields you do not want to use in your :guilabel:`Form Layout`
    panel and hit the |signMinus| button to remove them. Drag and drop fields
    from the other panel to re-add them. The same field can be added multiple times.
-#. Drag and drop fields within the :guilabel:`Form Layout` to reorder
+#. Drag and drop fields within the :guilabel:`Form Layout` panel to reorder
    their position.
 #. Add containers (tab or group frames) to associate fields that belong to
    the same category and better structure the form.
-  
+
    #. The first step is to use the |signPlus| icon to create a tab in which
       fields and groups will be displayed
-   #. You can create as many containers as you want. If relevant, press
-      the |signPlus| icon again to create another tab or a group frame under
-      an existing tab (see figure_fields_layout_).
+   #. Then set the properties of the container, ie:
+   
+      * the name
+      * the type, ie a :guilabel:`tab` or a :guilabel:`group in container`
+        (a group inside a tab or another group)
+      * and the :guilabel:`number of columns` the embedded fields
+        should be distributed over
 
       .. _figure_fields_layout:
 
@@ -1978,36 +1995,37 @@ in figure_fields_form_.
 
          Dialog to create containers with the **Attribute editor layout**
 
+      These, and other properties can later be updated by selecting the item and,
+      from the third panel:
+
+      * hide or show the container's label
+      * display the container as a group box (only available for tabs).
+      * rename the container
+      * set the number of columns 
+      * enter an expression to control the container's visibility.
+        The expression will be re-evaluated every time values in the form change,
+        and the tab or group box shown/hidden accordingly
+      * add a background color
+   #. You can create as many containers as you want; press
+      the |signPlus| icon again to create another tab or a group frame under
+      an existing tab.
+
 #. The next step is to assign the relevant fields to each container,
    by simple drag and drop. Groups and tabs can also be moved in the same way.
-#. At their creation time you can set properties of the containers
-   These, and other properties can be updated with a double-click - QGIS opens a form in
-   which you can:
+#. In case the layer is involved in a :ref:`one or many to many relation
+   <vector_relations>`, drag-and-drop the relation name from the
+   :guilabel:`Available widgets` panel to the :guilabel:`Form Layout` panel.
+   The associated layer attribute form will be embedded at the chosen place
+   in the current layer's form. As for the other items, select the relation label
+   to configure some properties:
 
-   * choose to hide or show the item label
-   * rename the container
-   * set over how many columns the embedded fields should be distributed
-   * enter an expression to control the container's visibility.
-     The expression will be re-evaluated every time values in the form change,
-     and the tab or group box shown/hidden accordingly
-   * show the container as a group box (only available for tabs).
-   * add a background color
-
-#. Likewise, double-click a field label and you can specify whether the label
-   of its widget should be visible or not in the form.
-
-#. In case the layer is involved in ``one or many to many relations`` (see 
-   :ref:`vector_relations`), referencing layers are listed in the
-   :guilabel:`Relations` frame and their form can be embedded in the current
-   layer form by drag-and-drop. As for the other items, double-click the relation
-   label to configure some options:
-
-   * choose to hide or show the item label
+   * hide or show the relation label
    * show the link button
    * show the unlink button
 
 #. Apply the layer's properties dialog
-#. Use the |identify| tool on a feature, and it should display the new form.
+#. Open a feature attribute form (eg, using the |identify| :sup:`Identify features`
+   tool) and it should display the new form.
 
 
 .. _provide_ui_file:
@@ -2082,6 +2100,12 @@ Common settings
 Regardless the type of widget applied to the field, there are some common
 properties you can set to control whether and how a field can be edited.
 
+Widget display
+^^^^^^^^^^^^^^^
+
+:guilabel:`Show label`: indicates whether the field name should be displayed
+in the form.
+
 General options
 ^^^^^^^^^^^^^^^
 
@@ -2091,9 +2115,9 @@ General options
   It can also be used as field name replacement in the :ref:`expression builder
   <vector_expressions>`, easing expressions understanding and reviews.
   Aliases are saved in project file.
-* :guilabel:`Comment`: displays the field's comment as shown in the :guilabel:`Source
-  Fields` tab, in a read-only state. This information is shown as tooltip when
-  hovering over the field label in a feature form.
+* :guilabel:`Comment`: displays the field's comment as shown in the
+  :guilabel:`Fields` tab, in a read-only state. This information is shown as
+  tooltip when hovering over the field label in a feature form.
 * |checkbox| :guilabel:`Editable`: uncheck this option to set the field read-only
   (not manually modifiable) even when the layer is in edit mode. Note that
   checking this setting doesn't override any edit limitation from the provider.
@@ -2303,7 +2327,8 @@ source (X and Y positions, rotation angle, font style, color and so on).
 The Auxiliary Storage mechanism provides the solution to these limitations
 and awkward configurations. Auxiliary fields are a roundabout way to
 automatically manage and store these data-defined properties (labels,
-diagram, symbology...) in a SQLite database thanks to editable joins. This allows you to store properties for layers that aren't editable.
+diagram, symbology...) in a SQLite database thanks to editable joins.
+This allows you to store properties for layers that aren't editable.
 
 A tab is available in vector layer properties dialog to manage auxiliary
 storage:
