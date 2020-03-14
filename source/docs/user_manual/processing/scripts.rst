@@ -477,6 +477,9 @@ Input types
    * - :class:`QgsProcessingParameterMapLayer <qgis.core.QgsProcessingParameterMapLayer>`
      - ``alg.MAPLAYER``
      - A map layer
+   * - :class:`QgsProcessingParameterMapTheme <qgis.core.QgsProcessingParameterMapTheme>`
+     - 
+     - A project map theme
    * - :class:`QgsProcessingParameterMatrix <qgis.core.QgsProcessingParameterMatrix>`
      - ``alg.MATRIX``
      - A matrix
