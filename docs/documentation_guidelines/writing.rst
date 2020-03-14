@@ -527,6 +527,74 @@ screenshots for a translated user guide:
 Translated images should be placed in a :file:`img/<your_language>/`
 folder.  Use the same filename as the english 'original' screenshot.
 
+GUI Naming conventions
+======================
+
+Usage
+-----
+
+In QGIS manuals we often refer to Graphical User Interface (GUI) elements and widgets.
+Here we indicate which names and synonyms can be use in QGIS manuals.
+
+For each preferred name a reference to an example in the manual is included.
+Use this list of names to write consistent manuals.
+
+GUI elements
+------------
+
+===================  ====================  ======================
+preferred name       Synonym 1             Synonym 2
+===================  ====================  ======================
+QGIS                 application
+title bar
+menu                 menu bar           
+menu option          menu item
+toolbar
+tool                 icon                  toolbar button
+dialog               window
+panel                docked panel          docked window
+map                  mapview               view
+status bar
+tab
+button
+checkbox
+combobox             dropdown list
+textbox
+spinbox
+radio button group
+radio button
+slider
+===================  ====================  ======================
+
+Great references to :guilabel:`titel bar`, :guilabel:`menu bar`, :guilabel:`toolbar`
+, :guilabel:`panel`, :guilabel:`map view` and :guilabel:`status bar` can be found
+in the chapter :ref:`label_qgismainwindow` .
+
+menu
+  The Menu bar provides access to QGIS functions using standard hierarchical menus.
+
+toolbar
+  The toolbars provide access using icons to most of the functions
+  in the menus, plus additional tools for interacting with the map.
+  See :ref:`label_toolbars` .
+  
+tool
+  When you are referring to a tool on a toolbar, you can use it as follows.
+
+  #. Select the |zoomIn| :sup:`Zoom In` tool on the :guilabel:`Navigation` toolbar
+  #. Select the |zoomIn| :sup:`Zoom In` icon on the :guilabel:`Navigation` toolbar     
+
+dialog
+  A dialog is a window with choices or information to interact with QGIS.  
+
+map
+  A map can be a window that shows part of a map.
+  Often you are zoomed in on a small part of the digital map.
+  A map can also be a printed or exported result.
+  
+map view
+  A map view shows in a window a view on a map.
+
 
 Documenting Processing algorithms
 =================================
@@ -639,6 +707,7 @@ to help you with the layout and the description::
 
   Count points in polygon
   -----------------------
+  
   Takes a point and a polygon layer and counts the number of points from the
   point layer in each of the polygons of the polygon layer.
   A new polygon layer is generated, with the exact same content as the input
@@ -765,3 +834,5 @@ to help you with the layout and the description::
    :width: 1.5em
 .. |win| image:: /static/common/win.png
    :width: 1em
+.. |zoomIn| image:: /static/common/mActionZoomIn.png
+   :width: 1.5em
