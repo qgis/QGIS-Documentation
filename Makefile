@@ -37,7 +37,7 @@ html:
 	fi
 
 site: html
-	rsync -az $(BUILDDIR)/html/$(LANG)/ $(SITEDIR)/
+	rsync -az $(BUILDDIR)/html/$(LANG) $(SITEDIR)/
 
 doctest:
 	$(SPHINXBUILD) -c "$(CONFDIR)" -b doctest . $(BUILDDIR)/doctest
