@@ -1,0 +1,491 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# 
+# Translators:
+# Sant-anna <delazj@gmail.com>, 2017
+# Jules GARNIER, 2018
+# christophe bocquet <christophe.bocquet@developpement-durable.gouv.fr>, 2018
+# Nicolas Boisteault <nboisteault@gmail.com>, 2018
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project testing\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-11 14:48+0200\n"
+"PO-Revision-Date: 2017-08-09 06:45+0000\n"
+"Last-Translator: Nicolas Boisteault <nboisteault@gmail.com>, 2018\n"
+"Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:12
+msgid "|LS| Install QGIS Server"
+msgstr "|LS| Installer QGIS Server"
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:14
+msgid ""
+"**The goal for this lesson:** To learn how to install **QGIS Server** on "
+"Debian Stretch. With negligible variations you can also follow it for any "
+"Debian based distribution like Ubuntu and its derivatives."
+msgstr ""
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:18
+msgid ""
+"In Ubuntu you can use your regular user, prepending ``sudo`` to commands "
+"requiring admin permissions. In Debian you can work as admin (``root``), "
+"without using ``sudo``."
+msgstr ""
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:23
+msgid "|moderate| |FA| Install from packages"
+msgstr "|moderate| Installer |FA| depuis les packages"
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:25
+msgid ""
+"In this lesson we're going to do only the install from packages as shown "
+"`here <https://qgis.org/en/site/forusers/alldownloads.html#linux>`_ ."
+msgstr ""
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:28
+msgid "Install QGIS Server with:"
+msgstr "Installez QGIS Server avec:"
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:36
+msgid ""
+"QGIS Server should be used in production without QGIS Desktop (with the "
+"accompagning X Server) installed on the same machine."
+msgstr ""
+"En production, il est préférable d'utiliser QGIS Server sans installer QGIS "
+"Desktop (avec le serveur X associé)sur la même machine."
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:40
+msgid "|moderate| |FA| QGIS Server Executable"
+msgstr "|moderate| |FA| Exécutable QGIS Server"
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:42
+msgid ""
+"The QGIS Server executable is ``qgis_mapserv.fcgi``. You can check where it "
+"has been installed by running ``find / -name 'qgis_mapserv.fcgi'`` which "
+"should output something like ``/usr/lib/cgi-bin/qgis_mapserv.fcgi``."
+msgstr ""
+"L'exécutable QGIS Server est ``qgis-mapserv.fcgi``. Vous pouvez vérifier à "
+"quel endroit il a été installé au moyen de la commande: ``find / -name "
+"'qgis_mapserv.fcgi'`` qui devrait renvoyer quelque chose comme ``/usr/lib"
+"/cgi-bin/qgis_mapserv.fcgi``."
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:46
+msgid ""
+"Optionally, if you want to do a command line test at this time you can run "
+"the ``/usr/lib/cgi-bin/qgis_mapserv.fcgi`` command which should output "
+"something like:"
+msgstr ""
+"De manière facultative, si vous voulez tester l'exécutable en ligne de "
+"commande vous pouvez lancer: ``/usr/lib/cgi-bin/qgis_mapserv.fcgi``, ce qui "
+"devrait produire un résultat semblable à:"
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:65
+msgid ""
+"This is a good thing, it tells you we're on the right track as the server is"
+" saying that we haven't asked for a supported service. We'll see later on "
+"how to make WMS requests."
+msgstr ""
+"C'est une bonne chose. Ce message signifie que nous sommes sur le bon chemin"
+" puisque le serveur répond que nous n'avons demandé aucun service supporté. "
+"Nous verrons plus loin comment faire des requêtes WMS."
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:70
+msgid "|FA| HTTP Server Configuration"
+msgstr "|FA| Configuration HTTP du Serveur"
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:72
+msgid ""
+"In order to access on the installed QGIS server from an Internet Browser we "
+"need to use an HTTP server."
+msgstr ""
+"Pour accéder au serveur QGIS depuis un navigateur internet, il faut mettre "
+"en place un serveur HTTP."
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:75
+msgid ""
+"In this lesson we're going to use the `Apache HTTP server "
+"<https://httpd.apache.org>`_, colloquially called Apache."
+msgstr ""
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:78
+msgid ""
+"First we need to install Apache by running the following command in a "
+"terminal::"
+msgstr ""
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:82
+msgid ""
+"You can run QGIS server on your default website, or configure a virtualhost "
+"specifically for this, as follows."
+msgstr ""
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:85
+msgid ""
+"In the :file:`/etc/apache2/sites-available` directory let's create a file "
+"called :file:`qgis.demo.conf`, with this content:"
+msgstr ""
+"Dans le répertoire :file:`/etc/apache2/sites-available` créons un fichier "
+"nommé :file:`qgis.demo.conf`, avec ce contenu:"
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:145
+msgid ""
+"You can do the above in a linux Desktop system by pasting and saving the "
+"above configuration after doing ``nano /etc/apache2/sites-"
+"available/qgis.demo.conf``."
+msgstr ""
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:148
+msgid ""
+"See some of the configuration options are explained in the Server "
+":ref:`server_env_variables` section."
+msgstr ""
+"Quelques unes des options de configuration sont expliquées dans la section "
+"Server :ref:`server_env_variables`."
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:151
+msgid ""
+"Let's now create the directories that will store the QGIS Server logs and "
+"the authentication database:"
+msgstr ""
+"Créons maintenant les répertoires de stockage des logs de QGIS Server et de "
+"la base d'authentification."
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:164
+msgid ""
+"``www-data`` is the Apache user on Debian based systems and we need Apache "
+"to have access to those locations or files. The ``chown www-data...`` "
+"commands changes the owner of the respective directories and files to ``www-"
+"data``."
+msgstr ""
+"``www-data`` est l'utilisateur Apache sur les systèmes basés sur Debian et "
+"il faut qu'Apache accède à ces répertoires et aux fichiers qu'ils "
+"contiennent. La commande ``chown www-data...`` attribue la propriété des "
+"fichiers et répertoires à ``www-data``."
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:169
+msgid ""
+"We can now enable the `virtual host "
+"<https://httpd.apache.org/docs/2.4/vhosts>`_, enable the ``fcgid`` mod if "
+"it's not already enabled and restart the ``apache2`` service:"
+msgstr ""
+"Il est temps maintenant d'activer le Virtual host "
+"<https://httpd.apache.org/docs/2.4/vhosts>`_, le mode fcgid si ce n'est pas "
+"déjà le cas et de redémarrer le service ``apache2``."
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:180
+msgid ""
+"If you installed QGIS Server without running an X Server (included in Linux "
+"Desktop) and if you also want to use the ``GetPrint`` command then you "
+"should install a fake X Server and tell QGIS Server to use it. You can do "
+"that by running the following commands."
+msgstr ""
+"Si vous avez installé QGIS Server sans serveur X (inclus avec Linux Desktop)"
+" et si vous voulez aussi utiliser la commande ``GetPrint`` alors il faut "
+"installer un serveur X factice et dire à QGIS Server de l'utiliser. Pour ce "
+"faire, il faut entre les commandes suivantes:"
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:185
+msgid "Install xvfb:"
+msgstr "Installer xvfb:"
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:191
+msgid "Create the service file:"
+msgstr "Créer le fichier de service:"
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:208
+msgid "Enable, start and check the status of the ``xvfb.service``:"
+msgstr "Activer, démarrer et vérifier le statut de ``xvfb.service``:"
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:216
+msgid ""
+"In the above configuration file there's a ``FcgidInitialEnv DISPLAY "
+"\":99\"`` that tells QGIS Server instances to use display no. 99. If you're "
+"running the Server in Desktop then there's no need to install xvfb and you "
+"should simply comment with ``#`` this specific setting in the configuration "
+"file. More info at https://www.itopen.it/qgis-server-setup-notes/."
+msgstr ""
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:222
+#, python-format
+msgid ""
+"Now that Apache knows that he should answer requests to http://qgis.demo we "
+"also need to setup the client system so that it knows who ``qgis.demo`` is. "
+"We do that by adding ``127.0.0.1 qgis.demo`` in the `hosts "
+"<https://en.wikipedia.org/wiki/Hosts_%28file%29>`_ file. We can do it with "
+"``sh -c \"echo '127.0.0.1 qgis.demo' >> /etc/hosts\"``. Replace "
+"``127.0.0.1`` with the IP of your server."
+msgstr ""
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:231
+msgid ""
+"Remember that both the :file:`myhost.conf` and :file:`/etc/hosts` files "
+"should be configured for our setup to work. You can also test the access to "
+"your QGIS Server from other clients on the network (e.g. Windows or Macos "
+"machines) by going to their :file:`/etc/hosts` file and point the ``myhost``"
+" name to whatever IP the server machine has on the network. You can be sure "
+"that that specific IP is not ``127.0.0.1`` as that's the local IP, only "
+"accessible from the local machine.  On ``*nix`` machines the :file:`hosts` "
+"file is located in :file:`/etc`, while on Windows it's under the "
+":file:`C:\\\\Windows\\\\System32\\\\drivers\\\\etc` directory. Under Windows"
+" you need to start your text editor with administrator privileges before "
+"opening the hosts file."
+msgstr ""
+"Souvenez-vous que les deux fichiers :file:`myhost.conf` et "
+":file:`/etc/hosts` doivent être configurés pour que notre installation "
+"fonctionne. Vous pouvez aussi tester l'accès à QGIS Server depuis d'autres "
+"clients sur le réseau (e.g. des machines Windows ou MacOS) en éditant leur "
+"fichier :file:`/etc/hosts` et en pointant le nom ``myhost`` vers l'IP du "
+"serveur sur le réseau. Vous pouvez être sûr que cette IP n'est pas "
+"``127.0.0.1`` puisque c'est l'IP local, seulement accessible sur la machine "
+"locale. Sur les machines ``*nix`` le fichier :file:`hosts` est situé dans "
+":file:`/etc`, alors que sous Windows il se trouve dans le dossier "
+":file:`C:\\\\Windows\\\\System32\\\\drivers\\\\etc`. Sous Windows vous devez"
+" démarrer votre éditeur de texte avec les privilèges administrateur avant "
+"d'ouvrir le fichier hosts."
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:243
+msgid ""
+"We can test one of the installed qgis servers with a http request from "
+"command line with ``curl http://qgis.demo/cgi-bin/qgis_mapserv.fcgi`` which "
+"should output:"
+msgstr ""
+"Nous pouvons tester un des serveur QGIS installé avec une requête http "
+"depuis la ligne de commande ``curl http://qgis.demo/cgi-"
+"bin/qgis_mapserv.fcgi`` qui devrait afficher en sortie :"
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:255
+msgid "curl can be installed with ``apt install curl``."
+msgstr ""
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:257
+msgid "Apache is now configured."
+msgstr "Apache est maintenant configuré."
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:259
+msgid ""
+"Also, from your web browser you can check the capabilities of the server:"
+msgstr ""
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:261
+msgid ""
+"http://qgis.demo/cgi-"
+"bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+msgstr ""
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:264
+msgid "|moderate| |FA| Create another virtual host"
+msgstr "|moderate| |FA| Créer un autre virtual host"
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:266
+msgid ""
+"Let's create another Apache virtual host pointing to QGIS Server. You can "
+"choose whatever name you like (``coco.bango``, ``super.duper.training``, "
+"``example.com``, etc.) but for simplicity sake we're going to use "
+"``myhost``."
+msgstr ""
+"Créons un autre virtual host Apache pointant sur QGIS Server. Vous pouvez "
+"choisir n'importe quel nom vous faisant plaisir (``coco.bango``, "
+"``super.duper.training``, ``example.com``, etc.) mais pour faire simple nous"
+" allons choisir ``myhost``."
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:270
+msgid ""
+"Let's set up the ``myhost`` name to point to the localhost IP by adding "
+"``127.0.0.1 x`` to the :file:`/etc/hosts` with the following command: ``sh "
+"-c \"echo '127.0.0.1 myhost' >> /etc/hosts\"`` or by manually editing the "
+"file with ``gedit /etc/hosts``."
+msgstr ""
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:274
+msgid ""
+"We can check that ``myhost`` points to the localhost by running in the "
+"terminal the  ``ping myhost`` command which should output:"
+msgstr ""
+"Nous pouvons vérifier que ``myhost`` pointe sur le localhost en exécutant "
+"dans le terminal la commande  ``ping myhost`` qui devrait afficher :"
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:284
+msgid ""
+"Let's try if we can access QGIS Server from the ``myhost`` site by doing: "
+"``curl http://myhost/cgi-bin/qgis_mapserv.fcgi`` or by accessing the url "
+"from your Debian box browser. You will probably get:"
+msgstr ""
+"Voyons si nous pouvons accéder à QGIS Server depuis le site ``myhost`` en "
+"exécutant : ``curl http://myhost/cgi-bin/qgis_mapserv.fcgi`` ou en accédant "
+"à l'URL depuis le navigateur de votre box Debian. Vous obtiendrez "
+"probablement :"
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:300
+msgid ""
+"Apache doesn't know that he's supposed to answer requests pointing to the "
+"server named ``myhost``. In order to setup the virtual host the simplest way"
+" would be to make a ``myhost.conf`` file in the :file:`/etc/apache2/sites-"
+"available` directory that has the same content as :file:`qgis.demo.conf` "
+"except for the ``ServerName`` line that should be ``ServerName myhost``. You"
+" could also change where the logs go as otherwise the logs for the two "
+"virtual hosts would be shared but this is optional."
+msgstr ""
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:307
+msgid ""
+"Let's now enable the virtual host with ``a2ensite myhost.conf`` and then "
+"reload the Apache service with ``service apache2 reload``."
+msgstr ""
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:309
+msgid ""
+"If you try again to access the http://myhost/cgi-bin/qgis_mapserv.fcgi url "
+"you'll notice everything is working now!"
+msgstr ""
+"Si vous essayez de nouveau d'accéder à http://myhost/cgi-"
+"bin/qgis_mapserv.fcgi vous verrez que tout fonctionne maintenant !"
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:313
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:315
+msgid ""
+"You learned how to install different QGIS Server versions from packages, how"
+" to configure Apache with QGIS Server, on Debian based Linux distros."
+msgstr ""
+"Vous avez appris comment installer les différents versions de QGIS Server "
+"depuis les paquets, comment configurer Apache avec QGIS Server, sur Debian "
+"basé sur Linux. "
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:319
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/qgis_server/install.rst:321
+msgid ""
+"Now that you've installed QGIS Server and it's accesible through the HTTP "
+"protocol, we need to learn how to access some of the services it can offer. "
+"The topic of the next lesson is to learn how to access QGIS Server WMS "
+"services."
+msgstr ""
+"Maintenant que vous avez installé QGIS Server et qu'il est accessible à "
+"travers le protocol HTTP, nous avons besoin d'apprendre comme accéder  à "
+"certains des services qu'il propose. Le sujet de la prochaine leçon est "
+"d'apprendre comment accéder au services WMS de QGIS Server. "
+
+#~ msgid ""
+#~ "In this lesson we're going to do only the install from packages as shown "
+#~ "`here <http://qgis.org/en/site/forusers/alldownloads.html#linux>`_ ."
+#~ msgstr ""
+#~ "Dans cette leçon, nous allons seulement faire l'installation depuis les "
+#~ "packages comme indiqué ici "
+#~ "<http://qgis.org/en/site/forusers/alldownloads.html#linux>`_ ."
+
+#~ msgid ""
+#~ "First add the QGIS repository by creating the :file:`/etc/apt/sources.list.d"
+#~ "/debian-qgis.list` file with the following content:"
+#~ msgstr ""
+#~ "Tous d'abord ajouter le dépôt QGIS en créant le "
+#~ "file:`/etc/apt/sources.list.d/debian-qgis.list` fichier avec le contenu "
+#~ "suivant :"
+
+#~ msgid ""
+#~ "After you add the ``gis.org`` repository public key to your apt keyring "
+#~ "(follow the above link on how to do it) you can run the ``apt-get update`` "
+#~ "command to refresh the packages list and ``apt-get dist-upgrade`` to upgrade"
+#~ " the packages."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Currently Debian stable has LTR qgis packages in the source ``jessie-"
+#~ "backports``, so the above steps are not necessary. Just add the ``jessie-"
+#~ "backports`` repository and install with the ``-t jessie-backports`` option."
+#~ msgstr ""
+#~ "La distribution Debian stable actuelle dispose des paquets qgis LTR dans les"
+#~ " sources ``jessie-backports``, par conséquent, les étapes précédentes ne "
+#~ "sont pas nécessaires. Il suffit d'ajouter le dépôt ``jessie-backports`` et "
+#~ "de lancer l'installation avec l'option ``-t jessie-backports``."
+
+#~ msgid ""
+#~ "adding ``-y`` at the end of the apt-get command will run it straight away, "
+#~ "without requiring confirmation."
+#~ msgstr ""
+#~ "ajouter ``-y`` à la fin de la commande apt-get désactive toutes les demandes"
+#~ " de confirmation."
+
+#~ msgid ""
+#~ "In this lesson we're going to use the `Apache HTTP server "
+#~ "<http://httpd.apache.org>`_, colloquially called Apache."
+#~ msgstr ""
+#~ "Dans ce cours, nous utiliserons le serveur HTTP Apache "
+#~ "<http://httpd.apache.org>`_, communément appelé Apache."
+
+#~ msgid ""
+#~ "In the above configuration file there's a ``FcgidInitialEnv DISPLAY "
+#~ "\":99\"`` that tells QGIS Server instances to use display no. 99. If you're "
+#~ "running the Server in Desktop then there's no need to install xvfb and you "
+#~ "should simply comment with ``#`` this specific setting in the configuration "
+#~ "file. More info at http://www.itopen.it/qgis-server-setup-notes/."
+#~ msgstr ""
+#~ "Dans la configuration ci-dessus, il est mentionné ``FcgidInitialEnv DISPLAY "
+#~ "\":99\"``  qui dit à QGIS Server d'utiliser l'écran no. 99. Si vous avez "
+#~ "installé le serveur sur une distribution Desktop alors il n'est pas utile "
+#~ "d'installer xvfb et vous n'avez qu'à commenter avec ``#`` ce paramètre dans "
+#~ "le fichier de configuration. Pour plus d'information: http://www.itopen.it"
+#~ "/qgis-server-setup-notes/."
+
+#~ msgid "Also, from yur client, you can check the capabilities of the server:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "http://qgis.dem/cgi-"
+#~ "bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Apache doesn't know that he's supposed to answer requests pointing to the "
+#~ "server named ``myhost``. In order to setup the virtual host the simplest way"
+#~ " would be to make a ``myhost.conf`` file in the :file:`/etc/apache/sites-"
+#~ "available` directory that has the same content as file:`qgis.demo.conf` "
+#~ "except for the ``ServerName`` line that should be ``ServerName myhost``. You"
+#~ " could also change where the logs go as otherwise the logs for the two "
+#~ "virtual hosts would be shared but this is optional."
+#~ msgstr ""
+#~ "Apache ne sait pas qu'il doit répondre aux requêtes pointant vers le serveur"
+#~ " nommé ``myhost``. Afin de configurer le virtual host le moyen le plus "
+#~ "simple serait de créer un fichier ``myhost.conf`` dans le dossier "
+#~ ":file:`/etc/apache/sites-available` avec le même contenu que le fichier "
+#~ "file:`qgis.demo.conf` à l'exception de la ligne pour le ``ServerName`` qui "
+#~ "devrait être ``ServerName myhost``. Vous pourriez aussi changer où les logs "
+#~ "sont écrits sinon les logs pour les deux virtual hosts seront mis en commun "
+#~ "mais ceci est optionnel."
+
+#~ msgid ""
+#~ "Let's now enable the virtual host with ``apt-get a2ensite myhost.conf`` and "
+#~ "then reload the Apache service with ``service apache2 reload``."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "First we need to install Apache by running the following command in a "
+#~ "terminal: ``apt-get install apache2 libapache2-mod-fcgid``."
+#~ msgstr ""
+#~ "Il faut en premier lieu installer Apache au moyen de la commande: ``apt-get "
+#~ "install apache2 libapache2-mod-fcgid``."
+
+#~ msgid "curl can be installed with ``apt-get install curl``."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Let's set up the ``myhost`` name to point to the localhost IP by adding "
+#~ "``127.0.0.1 x`` to the :file:`/etc/hosts` with the following command: ``sh "
+#~ "-c \"echo '127.0.0.1 myhost' >> /etc/hosts\"`` or by manually editing the "
+#~ "file with ``sudo gedit /etc/hosts``."
+#~ msgstr ""
