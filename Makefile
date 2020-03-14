@@ -10,12 +10,13 @@ SPHINXINTL      ?= sphinx-intl
 SOURCEDIR       = .
 BUILDDIR        = build
 SITEDIR         = /var/www/html/qgisdocs
+CONFDIR         = .
 
 
 
 # Put it first so that "make" without argument is like "make help".
 help:
-	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+	@$(SPHINXBUILD) -M help -c "$(CONFDIR)" "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 .PHONY: help Makefile
 
@@ -30,15 +31,15 @@ gettext:
 html:
 	echo "$(SPHINXOPTS) $(SPHINXINTLOPTS)"
 	if [ $(LANG) != "en" ]; then \
-		$(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXINTLOPTS) $(0); \
+		$(SPHINXBUILD) -c "$(CONFDIR)" -b html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXINTLOPTS) $(0); \
 	else \
-		$(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(0); \
+		$(SPHINXBUILD) -c "$(CONFDIR)" -b html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(0); \
 	fi
 
 site: html
 	rsync -az $(BUILDDIR)/html/ $(SITEDIR)/$(LANG)/
 
 doctest:
-	$(SPHINXBUILD) -b doctest $(ALLSPHINXOPTS) $(BUILDDIR)/doctest
+	$(SPHINXBUILD) -c "$(CONFDIR)" -b doctest $(ALLSPHINXOPTS) $(BUILDDIR)/doctest
 	@echo "Testing of doctests in the sources finished, look at the " \
 	      "results in $(BUILDDIR)/doctest/output.txt."
