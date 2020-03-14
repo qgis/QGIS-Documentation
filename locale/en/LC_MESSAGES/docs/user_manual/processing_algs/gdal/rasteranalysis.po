@@ -1,0 +1,1338 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGISDoc package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGISDoc \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-14 15:40+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:2
+msgid "Raster analysis"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:14
+msgid "Aspect"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:15
+msgid ""
+"Generates an aspect map from any GDAL-supported elevation raster. Aspect "
+"is the compass direction that a slope faces. The pixels will have a value"
+" from 0-360° measured in degrees from north indicating the azimuth. On "
+"the northern hemisphere, the north side of slopes is often shaded (small "
+"azimuth from 0°-90°), while the southern side receives more solar "
+"radiation (higher azimuth from 180°-270°)."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:21
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:73
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:852
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:927
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:977
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1012
+msgid ""
+"This algorithm is derived from the `GDAL DEM utility "
+"<https://gdal.org/gdaldem.html>`_ ."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:23
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:129
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:181
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:258
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:356
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:598
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:670
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:735
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:771
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:854
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:889
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:929
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:979
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1014
+msgid "``Default menu``: :menuselection:`Raster --> Analysis`"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:26
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:76
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:132
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:186
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:263
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:361
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:458
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:539
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:603
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:673
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:738
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:774
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:857
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:892
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:932
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:982
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1017
+msgid "Parameters"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:29
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:79
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:135
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:676
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:741
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:777
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:860
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:895
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:935
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:985
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1020
+msgid "``Input layer`` [raster]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:29
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:79
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:676
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:860
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:935
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:985
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1020
+msgid "Elevation raster layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:34
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:84
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:681
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:865
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:940
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:990
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1025
+msgid "``Band number`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:32
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:82
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:863
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:938
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:988
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1023
+msgid "The number of a band containing elevation values."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:34
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:84
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:151
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:681
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:865
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:940
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:990
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1025
+msgid "Default: *1*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:39
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:89
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:686
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:870
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:945
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:995
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1030
+msgid "``Compute edges`` [boolean]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:37
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:87
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:684
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:868
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:943
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:993
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1028
+msgid "Generates edges from the elevation raster."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:39
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:44
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:49
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:54
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:89
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:161
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:686
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:691
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:752
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:870
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:945
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:950
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:955
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:995
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1030
+msgid "Default: *False*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:44
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:691
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:950
+msgid "``Use Zevenbergen&Thorne formula (instead of the Horn's one)`` [boolean]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:42
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:689
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:948
+msgid "Activates Zevenbergen&Thorne formula for smooth landscapes."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:49
+msgid "``Return trigonometric angle (instead of azimuth)`` [boolean]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:47
+msgid ""
+"Activating the trigonometric angle results in different categories: 0° "
+"(=East), 90° (North), 180° (=West), 270° (=South)."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:54
+msgid "``Return 0 for flat (instead of -9999)`` [boolean]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:52
+msgid ""
+"Activating this option will insert a 0-value for the value -9999 on flat "
+"areas."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:57
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:108
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:164
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:243
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:338
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:439
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:519
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:582
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:654
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:717
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:755
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:835
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:873
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:913
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:963
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:998
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1033
+msgid "Outputs"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:61
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:112
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:245
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:342
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:443
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:523
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:586
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:658
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:721
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:877
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:967
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1002
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1035
+msgid "``Output file`` [raster]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:60
+msgid "Output raster with angle values in degrees."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:66
+msgid "Color relief"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:67
+msgid ""
+"Generates a color relief map from any GDAL-supported elevation raster. "
+"Color reliefs can particularly be used to depict elevations. The "
+"Algorithm outputs a 4-band raster with values computed from the elevation"
+" and a text-based color configuration file. By default, the colors "
+"between the given elevation values are blended smoothly and the result is"
+" a nice colorized elevation raster."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:92
+msgid "``Color configuration file`` [file]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:92
+msgid "A text-based color configuration file."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:105
+msgid "``Matching mode`` [enumeration]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:95
+msgid ""
+"The \"0,0,0,0\" RGBA mode results in color interpolation whereas the "
+"Exact color and Nearest color modes avoid interpolation of values that "
+"don't match an index of the color configuration file."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:99
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:226
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:271
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:321
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:422
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:502
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:565
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:637
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:788
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:818
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:905
+msgid "Options:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:101
+msgid "0 --- \"0,0,0,0\" RGBA"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:102
+msgid "1 --- Exact color"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:103
+msgid "2 --- Nearest color"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:105
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:146
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:280
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:487
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:793
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:910
+msgid "Default: *0*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:111
+msgid "A 4-band output raster."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:117
+msgid "Fill nodata"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:118
+msgid ""
+"Fill raster regions with no data values by interpolation from edges. The "
+"values for the no-data regions are calculated by the sourrounding pixel "
+"values using inverse distance weighting. After the interpolation a "
+"smoothing of the results takes placce. Input can be any GDAL-supported "
+"raster layer. This algorithm is generally suitable for interpolating "
+"missing regions of fairly continuously varying rasters (such as elevation"
+" models for instance). It is also suitable for filling small holes and "
+"cracks in more irregularly varying images (like airphotos). It is "
+"generally not so great for interpolating a raster from sparse point data."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:127
+msgid ""
+"This algorithm is derived from the `GDAL fillnodata utility "
+"<https://gdal.org/gdal_fillnodata.html>`_ ."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:135
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:895
+msgid "Raster layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:140
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:550
+msgid "``Search distance`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:138
+msgid "The number of pixels to search in all directions to interpolate from."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:140
+msgid "Default: *100*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:146
+msgid "``Smooth iterations`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:143
+msgid ""
+"The number of 3x3 filter passes to run (0 or more) to smoothen the "
+"results of the interpolation."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:151
+msgid "``Band to operate on`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:149
+msgid "The band to operate on. Nodata values must be represented by the value 0."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:156
+msgid "``Validity mask`` [raster]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:154
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:219
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:314
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:415
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:495
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:558
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:630
+msgid "Optional"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:156
+msgid "A mask that defines which areas are to be filled."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:161
+msgid "``Do not use default validity mask`` [boolean]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:159
+msgid "Activates the user-defined validity mask."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:168
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:759
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:839
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:917
+msgid "``Output layer`` [raster]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:167
+msgid "Output raster in any GDAL-supported format."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:173
+msgid "Grid (Moving average)"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:174
+msgid ""
+"The Moving Average is a simple data averaging algorithm. It uses a moving"
+" window of elliptic form to search values and averages all data points "
+"within the window. Search ellipse can be rotated by specified angle, the "
+"center of ellipse located at the grid node. Also the minimum number of "
+"data points to average can be set, if there are not enough points in "
+"window, the grid node considered empty and will be filled with specified "
+"NODATA value."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:179
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:256
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:354
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:453
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:536
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:596
+msgid ""
+"This algorithm is derived from the `GDAL grid utility "
+"<https://gdal.org/gdal_grid.html>`_ ."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:183
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:260
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:358
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:600
+msgid "`GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:189
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:266
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:364
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:461
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:542
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:606
+msgid "``Input layer`` [vector: point]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:189
+msgid "Point vector layer"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:194
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:286
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:379
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:611
+msgid "``Radius 1`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:192
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:377
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:609
+msgid "The first radius (X axis if rotation angle is 0) of search ellipse."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:194
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:199
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:205
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:211
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:216
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:286
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:292
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:297
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:306
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:311
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:374
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:379
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:384
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:391
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:399
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:407
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:412
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:471
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:492
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:555
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:611
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:616
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:622
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:627
+msgid "Default: *0.0*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:199
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:292
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:384
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:616
+msgid "``Radius 2`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:197
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:382
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:614
+msgid "The second radius (Y axis if rotation angle is 0) of search ellipse."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:205
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:297
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:391
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:622
+msgid "``Angle`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:202
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:619
+msgid "Angle of ellipse rotation in degrees. Ellipse rotated counter clockwise."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:211
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:306
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:407
+msgid "``Min points`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:208
+msgid ""
+"Minimum number of data points to average. If less amount of points found "
+"the grid node considered empty and will be filled with NODATA marker."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:216
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:311
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:412
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:492
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:555
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:627
+msgid "``Nodata`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:214
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:410
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:490
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:553
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:625
+msgid "No data marker to fill empty points."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:221
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:316
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:417
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:497
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:560
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:632
+msgid "``Z field`` [tablefield: numeric]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:221
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:316
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:417
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:497
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:560
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:632
+msgid "Field for the interpolation."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:240
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:335
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:436
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:516
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:579
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:651
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:832
+msgid "``Output raster type`` [enumeration]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:224
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:319
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:420
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:500
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:563
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:816
+msgid "Raster file type."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:228
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:323
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:424
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:504
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:567
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:639
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:820
+msgid "0 --- Byte"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:229
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:324
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:425
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:505
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:568
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:640
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:821
+msgid "1 --- Int16"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:230
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:325
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:426
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:506
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:569
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:641
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:822
+msgid "2 --- UInt16"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:231
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:326
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:427
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:507
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:570
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:642
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:823
+msgid "3 --- UInt32"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:232
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:327
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:428
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:508
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:571
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:643
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:824
+msgid "4 --- Int32"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:233
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:328
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:429
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:509
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:572
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:644
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:825
+msgid "5 --- Float32"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:234
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:329
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:430
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:510
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:573
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:645
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:826
+msgid "6 --- Float64"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:235
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:330
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:431
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:511
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:574
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:646
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:827
+msgid "7 --- CInt16"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:236
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:331
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:432
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:512
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:575
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:647
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:828
+msgid "8 --- CInt32"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:237
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:332
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:433
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:513
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:576
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:648
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:829
+msgid "9 --- CFloat32"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:238
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:333
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:434
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:514
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:577
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:649
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:830
+msgid "10 --- CFloat64"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:240
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:335
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:436
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:516
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:579
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:651
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:832
+msgid "Default: *5*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:247
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:341
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:442
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:522
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:585
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:657
+msgid "Interpolated raster file."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:253
+msgid "Grid (Data metrics)"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:254
+msgid ""
+"Computes some data metrics using the specified window and output grid "
+"geometry."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:266
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:364
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:461
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:542
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:606
+msgid "Point vector layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:280
+msgid "``Metrics`` [enumeration]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:269
+msgid "List of available metrics:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:273
+msgid "0 --- Minimum, minimum value found in grid node search ellipse."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:274
+msgid "1 --- Maximum, maximum value found in grid node search ellipse"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:275
+msgid ""
+"2 --- Range, a difference between the minimum and maximum values found in"
+" grid node search ellipse"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:276
+msgid "3 --- Count, a number of data points found in grid node search ellipse"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:277
+msgid ""
+"4 --- Average distance, an average distance between the grid node (center"
+" of the search ellipse) and all of the data points found in grid node "
+"search ellipse"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:278
+msgid ""
+"5 --- Average distance between points, an average distance between the "
+"data points found in grid node search ellipse. The distance between each "
+"pair of points within ellipse is calculated and average of all distances "
+"is set as a grid node value"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:283
+msgid ""
+"The first radius (X axis if rotation angle is 0) of search ellipse. Set "
+"this parameter to zero to use whole point array."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:289
+msgid ""
+"The second radius (Y axis if rotation angle is 0) of search ellipse. Set "
+"this parameter to zero to use whole point array."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:295
+msgid "Angle of search ellipse rotation in degrees (counter clockwise)."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:300
+msgid ""
+"Minimum number of data points to use. If less amount of points found the "
+"grid node considered empty and will be filled with NODATA marker."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:304
+msgid "This is only used if search ellipse is set (both radii are non-zero)."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:309
+msgid "NODATA marker to fill empty points."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:347
+msgid "Grid (Inverse distance to a power)"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:348
+msgid ""
+"The Inverse Distance to a Power gridding method is a weighted average "
+"interpolator."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:350
+msgid ""
+"You should supply the input arrays with the scattered data values "
+"including coordinates of every data point and output grid geometry. The "
+"function will compute interpolated value for the given position in output"
+" grid."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:369
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:466
+msgid "``Power`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:367
+msgid "Weighting power."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:369
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:466
+msgid "Default: *2.0*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:374
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:471
+msgid "``Smothing`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:372
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:469
+msgid "Smoothing parameter."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:387
+msgid "Angle of ellipse rotation in degrees."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:389
+msgid "Ellipse rotated counter clockwise."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:399
+msgid "``Max points`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:394
+msgid "Maximum number of data points to use."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:396
+msgid ""
+"Do not search for more points than this number. If less amount of points "
+"found the grid node is considered empty and will be filled with NODATA "
+"marker."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:402
+msgid "Minimum number of data points to use."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:404
+msgid ""
+"If less amount of points found the grid node is considered empty and will"
+" be filled with NODATA marker."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:448
+msgid "Grid (IDW with nearest neighbor searching)"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:450
+msgid ""
+"Computes the Inverse Distance to a Power gridding combined to the nearest"
+" neighbor method. Ideal when a maximum number of data points to use is "
+"required."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:455
+msgid "`GDAL grid <https://gdal.org/gdal_grid.html>`_"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:464
+msgid "Weighting power"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:476
+msgid "``Radius`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:474
+msgid "The radius of the search circle, which should be non-zero."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:476
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:696
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:701
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:960
+msgid "Default: *1.0*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:481
+msgid "``max_points`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:479
+msgid ""
+"Maximum number of data points to use. Do not search for more points than "
+"this number."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:481
+msgid "Default: *12*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:487
+msgid "``min_points`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:484
+msgid ""
+"Minimum number of data points to use. If less amount of points found the "
+"grid node is considered empty and will be filled with NODATA marker."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:528
+msgid "Grid (Linear)"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:529
+msgid ""
+"The Linear method perform linear interpolation by computing a Delaunay "
+"triangulation of the point cloud, finding in which triangle of the "
+"triangulation the point is, and by doing linear interpolation from its "
+"barycentric coordinates within the triangle. If the point is not in any "
+"triangle, depending on the radius, the algorithm will use the value of "
+"the nearest point or the NODATA value."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:545
+msgid ""
+"In case the point to be interpolated does not fit into a triangle of the "
+"Delaunay triangulation, use that maximum distance to search a nearest "
+"neighbour, or use nodata otherwise. If set to ``-1``, the search distance"
+" is infinite. If set to ``0``, no data value will be always used."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:550
+msgid "Default: *-1.0*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:591
+msgid "Grid (Nearest neighbor)"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:592
+msgid ""
+"The Nearest Neighbor method doesn't perform any interpolation or "
+"smoothing, it just takes the value of nearest point found in grid node "
+"search ellipse and returns it as a result. If there are no points found, "
+"the specified NODATA value will be returned."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:635
+msgid "Raster file type"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:663
+msgid "Hillshade"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:664
+msgid ""
+"Outputs a raster with a nice shaded relief effect. It’s very useful for "
+"visualizing the terrain. You can optionally specify the azimuth and "
+"altitude of the light source, a vertical exaggeration factor and a "
+"scaling factor to account for differences between vertical and horizontal"
+" units."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:668
+msgid ""
+"This algorithm is derived from the `GDAL DEM utility "
+"<https://gdal.org/gdaldem.html>`__ ."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:679
+msgid "Band containing the elevation information."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:696
+msgid "``Z factor (vertical exaggeration)`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:694
+msgid "The factor exaggerates the height of the output elevation raster."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:701
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:960
+msgid "``Scale (ratio of vert. units to horiz.)`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:699
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:958
+msgid "The ratio of vertical units to horizontal units."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:708
+msgid "``Azimuth of the light`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:704
+msgid ""
+"Defines the azimuth of the light shining on the elevation raster in "
+"degrees. If it comes from the top of the raster the value is 0, if it "
+"comes from the east it is 90 a.s.o. ."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:708
+msgid "Default: *315.0*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:714
+msgid "``Altitude of the light`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:711
+msgid ""
+"Defines the altitude of the light, in degrees. 90 if the light comes from"
+" above the elevation raster, 0 if it is raking light."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:714
+msgid "Default: *45.0*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:720
+msgid "Output raster."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:726
+msgid "Near black"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:727
+msgid "Converts nearly black/white borders to black."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:729
+msgid ""
+"This algorithm will scan an image and try to set all pixels that are "
+"nearly or exactly black, white or one or more custom colors around the "
+"collar to black or white. This is often used to \"fix up\" lossy "
+"compressed airphotos so that color pixels can be treated as transparent "
+"when mosaicking."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:733
+msgid ""
+"This algorithm is derived from the `GDAL nearblack utility "
+"<https://gdal.org/nearblack.html>`_ ."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:741
+msgid "Raster file in input."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:747
+msgid "``How far from black (white)`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:744
+msgid ""
+"Select how far from black, white or custom colors the pixel values can be"
+" and still considered near black, white or custom color."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:747
+msgid "Default: *15*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:752
+msgid "``Search for nearly white pixels instead of nearly black`` [boolean]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:750
+msgid "Search for nearly white (255) pixels instead of nearly black pixels."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:758
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:838
+msgid "Raster file in output."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:764
+msgid "Proximity (raster distance)"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:765
+msgid ""
+"Generates a raster proximity map indicating the distance from the center "
+"of each pixel to the center of the nearest pixel identified as a target "
+"pixel. Target pixels are those in the source raster for which the raster "
+"pixel value is in the set of target pixel values."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:769
+msgid ""
+"This algorithm is derived from the `GDAL proximity utility "
+"<https://gdal.org/gdal_proximity.html>`_ ."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:777
+msgid "Raster in input."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:783
+msgid "``Values`` [string]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:780
+msgid ""
+"A list of target pixel values in the source image to be considered target"
+" pixels. If not specified, all non-zero pixels will be considered target "
+"pixels."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:783
+msgid "Default: *(not set)*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:793
+msgid "``Dist units`` [enumeration]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:786
+msgid ""
+"Indicate whether distances generated should be in pixel or georeferenced "
+"coordinates."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:790
+msgid "0 --- GEO"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:791
+msgid "1 --- PIXEL"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:802
+msgid "``Max dist (negative value to ignore)`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:796
+msgid ""
+"The maximum distance to be generated. The nodata value will be used for "
+"pixels beyond this distance. If a nodata value is not provided, the "
+"output band will be queried for its nodata value."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:799
+msgid ""
+"If the output band does not have a nodata value, then the value 65535 "
+"will be used. Distance is interpreted in pixels unless *distunits* GEO is"
+" specified."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:802
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:807
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:813
+msgid "Default: *-1*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:807
+msgid "``No data (negative value to ignore)`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:805
+msgid "Specify a nodata value to use for the destination proximity raster."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:813
+msgid "``Fixed buf val (negative value to ignore)`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:810
+msgid ""
+"Specify a value to be applied to all pixels that are within the -maxdist "
+"of target pixels (including the target pixels) instead of a distance "
+"value."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:844
+msgid "Roughness"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:845
+msgid ""
+"Outputs a single-band raster with values computed from the elevation. "
+"Roughness is the degree of irregularity of the surface. It's calculated "
+"by the largest inter-cell difference of a central pixel and its "
+"surrounding cell. The determination of the roughness plays a role in the "
+"analysis of terrain elevation data, it's useful for calculations of the "
+"river morphology, in climatology and physical geography in general."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:876
+msgid ""
+"Single-band output raster. The value -9999 is used as the output nodata "
+"value."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:882
+msgid "Sieve"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:883
+msgid ""
+"Removes raster polygons smaller than a provided threshold size (in "
+"pixels) and replaces them with the pixel value of the largest neighbour "
+"polygon. It is useful if you have a large amount of small areas on your "
+"raster map."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:887
+msgid ""
+"This algorithm is derived from the `GDAL sieve utility "
+"<https://gdal.org/gdal_sieve.html>`_ ."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:900
+msgid "``Threshold`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:898
+msgid "Only raster polygons smaller than this size will be removed."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:900
+msgid "Default: *2*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:910
+msgid "``Pixel connection`` [enumeration]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:903
+msgid ""
+"Either four connectedness or eight connectedness should be used when "
+"determining."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:907
+msgid "0 --- 4"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:908
+msgid "1 --- 8"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:916
+msgid "Output raster layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:922
+msgid "Slope"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:923
+msgid ""
+"Generates a slope map from any GDAL-supported elevation raster. Slope is "
+"the angle of inclination to the horizontal. You have the option of "
+"specifying the type of slope value you want: degrees or percent slope."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:955
+msgid "``Slope expressed as percent (instead of degrees)`` [boolean]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:953
+msgid "You have the option to use slope expressed as degrees."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:966
+msgid "32-bit float output raster."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:972
+msgid "TPI (Topographic Position Index)"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:973
+msgid ""
+"Outputs a single-band raster with values computed from the elevation. TPI"
+" stands for Topographic Position Index, which is defined as the "
+"difference between a central pixel and the mean of its surrounding cells."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1001
+msgid "TPI raster in output."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1007
+msgid "TRI (Terrain Ruggedness Index)"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1008
+msgid ""
+"Outputs a single-band raster with values computed from the elevation. TRI"
+" stands for Terrain Ruggedness Index, which is defined as the mean "
+"difference between a central pixel and its surrounding cells."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/gdal/rasteranalysis.rst:1036
+msgid "TRI raster file."
+msgstr ""
+

@@ -1,0 +1,1026 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGISDoc package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGISDoc \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-14 15:40+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:2
+msgid "Vector creation"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:14
+msgid "Array of offset (parallel) lines"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:15
+msgid ""
+"Creates copies of line features in a layer, by creating multiple offset "
+"versions of each feature. Each new version is incrementally offset by a "
+"specified distance."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:18
+msgid ""
+"Positive distance will offset lines to the left, and negative distances "
+"will offset them to the right."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:24
+msgid "In blue the source layer, in red the offset one"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:26
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:92
+msgid ""
+"|checkbox| Allows :ref:`features in-place modification "
+"<processing_inplace_edit>`"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:28
+msgid ":ref:`qgisoffsetline`, :ref:`qgisarraytranslatedfeatures`"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:31
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:97
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:158
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:216
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:265
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:295
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:325
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:355
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:399
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:433
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:470
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:507
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:549
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:580
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:614
+msgid "Parameters"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:34
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:402
+msgid "``Input layer`` [vector: line]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:34
+msgid "Line vector layer in input to elaborate the offset on."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:39
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:105
+msgid "``Number of features to create`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:37
+msgid "Number of offset copies to generate for each feature."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:39
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:105
+msgid "Default: *10*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:44
+msgid "``Offset step distance`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:42
+msgid "Distance between two consecutive offset copies."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:44
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:177
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:182
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:524
+msgid "Default: *1.0*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:50
+msgid "``Segments`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:47
+msgid ""
+"Number of line segments to use to approximate a quarter circle when "
+"creating rounded offsets."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:50
+msgid "Default: *8*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:62
+msgid "``Join style`` [enumeration]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:53
+msgid ""
+"Specify whether round, miter or beveled joins should be used when "
+"offsetting corners in a line."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:56
+msgid "Options:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:58
+msgid "0 --- Round"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:59
+msgid "1 --- Miter"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:60
+msgid "2 --- Bevel"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:62
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:169
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:519
+msgid "Default: *0*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:68
+msgid "``Miter limit`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:65
+msgid ""
+"Only applicable for mitered join styles, and controls the maximum "
+"distance from the offset curve to use when creating a mitered join."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:68
+msgid "Default: *2.0*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:71
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:128
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:200
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:244
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:274
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:304
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:334
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:378
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:415
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:452
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:487
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:532
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:563
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:594
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:640
+msgid "Outputs"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:76
+msgid "``Offset lines`` [vector: line]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:74
+msgid ""
+"Output line layer with offset features. The original features are also "
+"copied."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:81
+msgid "Array of translated features"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:82
+msgid ""
+"Creates copies of features in a layer, by creating multiple translated "
+"versions of each. Each copy is incrementally displaced by a preset amount"
+" in the X, Y and/or Z axis."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:85
+msgid "M values present in the geometry can also be translated."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:90
+msgid ""
+"Input layers in blue tones, output layers with translated features in red"
+" tones"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:94
+msgid ":ref:`qgistranslategeometry`, :ref:`qgisarrayoffsetlines`"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:100
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:219
+msgid "``Input layer`` [vector: any]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:100
+msgid "Vector layer to translate features."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:103
+msgid "Number of copies to generate for each feature."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:110
+msgid "``Step distance (x-axis)`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:108
+msgid "Displacement to apply on the X axis."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:110
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:115
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:120
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:125
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:187
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:192
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:412
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:446
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:627
+msgid "Default: *0.0*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:115
+msgid "``Step distance (y-axis)`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:113
+msgid "Displacement to apply on the Y axis."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:120
+msgid "``Step distance (z-axis)`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:118
+msgid "Displacement to apply on the Z axis."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:125
+msgid "``Step distance (m values)`` [number |dataDefined|]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:123
+msgid "Offset value to apply on M."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:133
+msgid "``Translated`` [vector: any]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:131
+msgid ""
+"Output vector layer with translated (moved) copies of the features. The "
+"original features are also copied."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:138
+msgid "Create grid"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:139
+msgid ""
+"Creates a vector layer with a grid covering a given extent. Grid cells "
+"can have different shapes:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:145
+msgid "Different grid cell shapes"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:147
+msgid ""
+"The size of each element in the grid is defined using a horizontal and "
+"vertical spacing."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:150
+msgid "The CRS of the output layer must be defined."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:152
+msgid ""
+"The grid extent and the spacing values must be expressed in the "
+"coordinates and units of this CRS."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:155
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:430
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:467
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:504
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:611
+msgid "``Default menu``: :menuselection:`Vector --> Research Tools`"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:169
+msgid "``Grid type`` [enumeration]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:161
+msgid "Shape of the grid. Many options available:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:163
+msgid "0 --- Point"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:164
+msgid "1 --- Line"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:165
+msgid "2 --- Rectangle (polygon)"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:166
+msgid "3 --- Diamond (polygon)"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:167
+msgid "4 --- Hexagon (polygon)"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:172
+msgid "``Grid extent`` [extent]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:172
+msgid "Extent of the grid."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:177
+msgid "``Horizontal spacing`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:175
+msgid "Size of a grid cell on the X-axis."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:182
+msgid "``Vertical spacing`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:180
+msgid "Size of a grid cell on the Y-axis."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:187
+msgid "``Horizontal overlay`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:185
+msgid "Overlay distance between two consecutive grid cells on the X-axis."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:192
+msgid "``Vertical overlay`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:190
+msgid "Overlay distance between two consecutive grid cells on the Y-axis."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:197
+msgid "``Grid CRS`` [crs]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:195
+msgid "Coordinate reference system to apply to the grid."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:197
+msgid "Default: *Project CRS*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:204
+msgid "``Grid`` [vector: any]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:203
+msgid "Resulting vector grid layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:209
+msgid "Create points layer from table"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:210
+msgid ""
+"Creates points layer from a table with columns that contain coordinates "
+"fields."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:213
+msgid "Besides X and Y coordinates you can also specify Z and M fields."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:219
+msgid "Input vector layer or geometryless table."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:222
+msgid "``X field`` [tablefield: any]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:222
+msgid "Field containing the X coordinate."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:225
+msgid "``Y field`` [tablefield: any]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:225
+msgid "Field containing the Y coordinate."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:230
+msgid "``Z field`` [tablefield: any]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:228
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:233
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:341
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:364
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:370
+msgid "Optional"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:230
+msgid "Field containing the Z coordinate."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:235
+msgid "``M field`` [tablefield: any]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:235
+msgid "Field containing the M coordinate."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:241
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:449
+msgid "``Target CRS`` [crs]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:238
+msgid ""
+"Coordinate reference system to use for layer. Provided coordinates are "
+"assumed to be compliant."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:241
+msgid "Default: *EPSG:4326*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:248
+msgid "``Points from table`` [vector: point]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:247
+msgid "The resulting point layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:253
+msgid "Generate points (pixel centroids) along line"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:254
+msgid "Generates a point vector layer from an input raster and line layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:256
+msgid ""
+"The points correspond to the pixel centroids that intersect the line "
+"layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:262
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:292
+msgid "Points of the pixel centroids"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:268
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:298
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:552
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:583
+msgid "``Raster layer`` [raster]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:268
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:298
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:552
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:583
+msgid "Raster layer in input."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:271
+msgid "``Vector layer`` [vector: line]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:271
+msgid "Line vector layer to follow."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:278
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:308
+msgid "``Points from polygons`` [vector: point]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:277
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:307
+msgid "Resulting point layer of pixel centroid."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:283
+msgid "Generate points (pixel centroids) inside polygon"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:284
+msgid "Generates a point vector layer from an input raster and polygon layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:286
+msgid ""
+"The points correspond to the pixel centroids that intersect the polygon "
+"layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:301
+msgid "``Vector layer`` [vector: polygon]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:301
+msgid "Polygon vector layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:313
+msgid "Import geotagged photos"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:314
+msgid ""
+"Creates a point layer corresponding to the geotagged locations from JPEG "
+"images from a source folder."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:317
+msgid ""
+"The point layer will contain a single PointZ feature per input file from "
+"which the geotags could be read. Any altitude information from the "
+"geotags will be used to set the point's Z value."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:321
+msgid ""
+"Besides longitude and latitude also altitude, direction and timestamp "
+"information, if present in the photo, will be added to the point as "
+"attributes."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:328
+msgid "``Input folder`` [folder]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:328
+msgid "Path to the source folder containing the geotagged photos."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:331
+msgid "``Scan recursively`` [boolean]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:331
+msgid "If checked, the folder and its subfolders will be scanned."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:338
+msgid "``Photos`` [vector: point]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:337
+msgid ""
+"Point vector layer with geotagged photos. The form of the layer is "
+"automatically filled with paths and photo previews settings."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:344
+msgid "``Invalid photos table`` [table]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:343
+msgid "Table of unreadable or non-geotagged photos can also be created."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:349
+msgid "Points to path"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:350
+msgid ""
+"Converts a point layer to a line layer, by joining points in a defined "
+"order."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:352
+msgid ""
+"Points can be grouped by a field to output individual line features per "
+"group."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:358
+msgid "``Input point layer`` [vector: point]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:358
+msgid "point vector layer to be converted."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:361
+msgid "``Order field`` [tablefield: any]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:361
+msgid "Field containing the order to connect the points in the path."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:367
+msgid "``Group field`` [tablefield: any]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:366
+msgid ""
+"Point features of the same value in the field will be grouped in the same"
+" line. If not set, a single path is drawn with all the input points."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:375
+msgid "``Date format (if order field is DateTime)`` [string]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:372
+msgid ""
+"Indicates the format to use for the ``order field`` parameter. Fill this "
+"option only if the ``order field`` is of a Date/Time format."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:375
+msgid "Default: *(not set)*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:381
+msgid "``Paths`` [vector: line]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:381
+msgid "Line vector layer of the path."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:385
+msgid "``Directory for text output`` [folder]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:384
+msgid "Directory containing description files of points and paths."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:390
+msgid "Random points along line"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:391
+msgid ""
+"Creates a new point layer, with points placed in the lines of another "
+"layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:393
+msgid ""
+"For each line in the input layer, a given number of points is added to "
+"the resulting layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:396
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:428
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:465
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:502
+msgid ""
+"A minimum distance can be specified, to avoid points being too close to "
+"each other."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:402
+msgid "Line vector layer in input."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:407
+msgid "``Number of points`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:405
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:439
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:476
+msgid "Number of point to create."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:407
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:441
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:478
+msgid "Default: *1*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:412
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:446
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:484
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:529
+msgid "``Minimum distance`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:410
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:444
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:481
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:527
+msgid "A minimum distance that points must respect."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:419
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:456
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:491
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:536
+msgid "``Random points`` [vector: point]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:418
+msgid "Final random point layer along line."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:424
+msgid "Random points in extent"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:425
+msgid ""
+"Creates a new point layer with a given number of random points, all of "
+"them within a given extent."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:436
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:617
+msgid "``Input extent`` [extent]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:436
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:617
+msgid "Map extent for the random points."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:441
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:478
+msgid "``Points number`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:449
+msgid "CRS of the random points layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:455
+msgid "Final random point layer in extent."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:461
+msgid "Random points in layer bounds"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:462
+msgid ""
+"Creates a new point layer with a given number of random points, all of "
+"them within the extent of a given layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:473
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:511
+msgid "``Input layer`` [vector: polygon]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:473
+msgid "Input polygon layer for the extent."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:483
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:529
+msgid "default: *0.0*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:490
+msgid "Final random point layer in layer bounds."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:496
+msgid "Random points inside polygons"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:497
+msgid ""
+"Creates a new point layer with a given number of random points, all of "
+"them within a given layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:500
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:607
+msgid ""
+"Together with the point number. two different sampling strategies can be "
+"chosen."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:510
+msgid ""
+"Polygon vector layer in input. All the points will be created withing "
+"each feature of this layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:519
+msgid "``Sampling strategy`` [enumeration]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:514
+msgid "Choose between:"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:516
+msgid "0 --- Points count: number of points for each feature"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:517
+msgid "1 --- points density: density of points for each feature"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:524
+msgid "``Number or density of points`` [expression]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:522
+msgid "You can choose the points number also with an expression."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:535
+msgid "Final random point layer inside polygon."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:541
+msgid "Raster pixels to points"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:542
+msgid ""
+"Creates a vector layer of points corresponding to each pixel in a raster "
+"layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:544
+msgid ""
+"Converts a raster layer to a vector layer, by creating point features for"
+" each individual pixel's center in the raster layer. Any nodata pixels "
+"are skipped in the output."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:555
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:586
+msgid "``Band number`` [raster band]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:555
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:586
+msgid "Raster band to extract data from."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:560
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:591
+msgid "``Field name`` [string]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:558
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:589
+msgid "Name of the field to store the raster band value."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:560
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:591
+msgid "Default: *VALUE*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:567
+msgid "``Vector points`` [vector: point]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:566
+msgid "Resulting point layer of pixels centroid."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:572
+msgid "Raster pixels to polygons"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:573
+msgid ""
+"Creates a vector layer of polygons corresponding to each pixel in a "
+"raster layer."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:575
+msgid ""
+"Converts a raster layer to a vector layer, by creating polygon features "
+"for each individual pixel's extent in the raster layer. Any nodata pixels"
+" are skipped in the output."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:598
+msgid "``Vector polygons`` [vector: polygon]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:597
+msgid "Resulting polygon layer of pixels extent."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:603
+msgid "Regular points"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:604
+msgid ""
+"Creates a new point layer with a given number of regular points, all of "
+"them within a given extent."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:609
+msgid ""
+"A distance factor can be specified, to avoid points being too close to "
+"each other."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:622
+msgid "``Point spacing/count`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:620
+msgid "Spacing between the points."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:622
+msgid "Default: *100*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:627
+msgid "``Initial inset from corner (LH side)`` [number]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:625
+msgid "Choose to move the initial points coordinate from the left upper corner."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:632
+msgid "``Apply random offset to point spacing`` [boolean]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:630
+msgid "If checked the points will have a random spacing."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:632
+msgid "Default: *False*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:637
+msgid "``Use point spacing`` [boolean]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:635
+msgid "If unchecked the point spacing is not taken into account."
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:637
+msgid "Default: *True*"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:644
+msgid "``Regular points`` [vector: point]"
+msgstr ""
+
+#: ../../docs/user_manual/processing_algs/qgis/vectorcreation.rst:643
+msgid "Regular point layer in output."
+msgstr ""
+
