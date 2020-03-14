@@ -31,6 +31,13 @@ master_doc = 'docs/index'
 # of the sidebar.
 html_logo = 'static/common/logo.png'
 
+# The version info for the project you're documenting, acts as replacement for
+# |version| and |release|, also used in various other places throughout the
+# built documents.
+#
+# The short X.Y version.
+version = 'testing'
+
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
@@ -102,3 +109,60 @@ html_theme_path = ['./themes']
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['static']
+
+
+## for rtd themes, creating a html_context for the version/language part 
+
+import os
+import sys
+import yaml
+# sys.path.insert(0, os.path.abspath('.'))
+
+sys.path.insert(0, os.path.abspath('../../'))
+
+with open('docs_conf.yml', 'r') as f:
+    cfg = yaml.safe_load(f)
+
+from datetime import datetime
+supported_languages = cfg['supported_languages'].replace(' ','').split(',')
+version_list = cfg['version_list'].replace(' ','').split(',')
+url = cfg['docs_url']
+if not url.endswith('/'):
+  url += '/'
+
+if version not in version_list:
+  raise ValueError('QGIS version is not in version list', version, version_list)
+
+# This config value contains the locations and names of other projects that
+# should be linked to in this documentation.
+
+pyqgis_version = version if version != 'testing' else 'master'
+intersphinx_mapping = {'pyqgis_api': ('https://qgis.org/pyqgis/{}/'.format(pyqgis_version), None)}
+
+# This config value must be a dictionary of external sites, mapping unique short
+# alias names to a base URL and a prefix.
+
+api_version = version if version != 'testing' else ''
+source_version = ''.join(['release-', version]).replace('.', '_') if version != 'testing' else 'master'
+
+extlinks = {'api': ('https://qgis.org/api/{}/%s'.format(api_version), None),
+            'pyqgis': ('https://qgis.org/pyqgis/{}/%s'.format(pyqgis_version), None),
+            'source': ('https://github.com/qgis/QGIS/tree/{}/%s'.format(
+                source_version), None)
+           }
+
+context = {
+    # 'READTHEDOCS': True,
+    'version_downloads': False,
+    'versions': [ [v, url+v] for v in version_list],
+    'supported_languages': [ [l, url+version+'/'+l] for l in supported_languages],
+    # 'downloads': [ ['PDF', '/builders.pdf'], ['HTML', '/builders.tgz'] ],
+    'pyqgis_version': pyqgis_version,
+    'source_version': source_version,
+    'api_version': api_version
+}
+
+if 'html_context' in globals():
+    html_context.update(context)
+else:
+    html_context = context
