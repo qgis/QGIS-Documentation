@@ -40,6 +40,6 @@ site: html
 	rsync -az $(BUILDDIR)/html/ $(SITEDIR)/$(LANG)/
 
 doctest:
-	$(SPHINXBUILD) -c "$(CONFDIR)" -b doctest $(ALLSPHINXOPTS) $(BUILDDIR)/doctest
+	$(SPHINXBUILD) -c "$(CONFDIR)" -b doctest . $(BUILDDIR)/doctest
 	@echo "Testing of doctests in the sources finished, look at the " \
 	      "results in $(BUILDDIR)/doctest/output.txt."
