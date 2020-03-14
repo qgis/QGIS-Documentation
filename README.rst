@@ -39,8 +39,7 @@ You can also use your own virtual env by creating it using it first::
 Then activate the venv and install the requirements via the REQUIRMENTS.txt::
 
  source ./venv/bin/activate
- # using --pre here to get the not released yet 2.0 version of Sphinx
- pip install --pre -r REQUIREMENTS.txt
+ pip install -r REQUIREMENTS.txt
 
 and run the build from within that venv::
 
@@ -60,20 +59,31 @@ Install both in default places and with default options.
 
 Clone the repository, and go into that directory.
 
-Then create a virtual environment called 'venv' in that directory, and activate it (Google for Python Virtual Env on Windows for more details):
+Then create a virtual environment called 'venv' in that directory, and activate it (Google for Python Virtual Env on Windows for more details), but in short: use the module 'venv' to create a virtual environment called 'venv'
 
 ::
 
- pip install -r REQUIREMENTS.txt venv
  # in dos box:
+ python -m venv venv
  venv\Scripts\activate.bat
- make.bat
+
+Now install (with 'activated' virtualenv, you should see 'venv' in the prompt), install all requirements
+
+::
+
+ pip install -r REQUIREMENTS.txt
+
+Now use the make.bat script with the html argument to locally build the docs:
+
+::
+
+ make.bat html
 
 Want to build your own language? Note that you will use the translations from the
 po files from git! For example 'nl' do::
 
  set SPHINXOPTS=-D language=nl
- make.bat
+ make.bat html
 
  
 
