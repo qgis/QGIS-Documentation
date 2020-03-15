@@ -350,7 +350,8 @@ Icon                     Substitution                 Icon                     S
 |addPolygon|             ``|addPolygon|``             |addPolyline|            ``|addPolyline|``
 |addArrow|               ``|addArrow|``               |northArrow|             ``|northArrow|``
 |addMap|                 ``|addMap|``                 |addLegend|              ``|addLegend|``
-|addHtml|                ``|addHtml|``                |addTable|               ``|addTable|``
+|addHtml|                ``|addHtml|``                \                        \
+|addImage|               ``|addImage|``               |addTable|               ``|addTable|``
 |label|                  ``|label|``                  |scaleBar|               ``|scaleBar|``
 |select|                 ``|select|``                 |moveItemContent|        ``|moveItemContent|``
 |setToCanvasScale|       ``|setToCanvasScale|``       |setToCanvasExtent|      ``|setToCanvasExtent|``
