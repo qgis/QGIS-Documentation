@@ -4827,10 +4827,15 @@ Outputs
 Remove null geometries
 ----------------------
 Removes any features which do not have a geometry from a vector layer.
-
 All other features will be copied unchanged.
 
 The features with null geometries can be saved to a separate layer.
+
+If :guilabel:`Also remove empty geometries` is checked, the algorithm
+removes features whose geometries have no coordinates, i.e., geometries
+that are empty.
+In that case, also the null output will reflect this option, containing
+both null and empty geometries.
 
 .. seealso:: :ref:`qgisdeleteduplicategeometries`
 
@@ -4850,12 +4855,17 @@ Parameters
      - ``INPUT``
      - [vector: any]
      - Input vector layer (with non-NULL geometries)
+   * - **Also remove empty geometries**
+     - ``REMOVE_EMPTY``
+     - [boolean]
+     - 
    * - **Non null geometries**
      - ``OUTPUT``
      - [same as input]
 
        Default: ``[Create temporary layer]``
-     - Specify the output vector layer for the non-NULL geometries.
+     - Specify the output vector layer for the non-NULL (and
+       non-empty) geometries.
        One of:
 
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
@@ -4869,7 +4879,7 @@ Parameters
      - [same as input]
 
        Default: ``[Skip output]``
-     - Specify the output vector layer for the NULL geometries.
+     - Specify the output vector layer for the NULL (and empty) geometries.
        One of:
 
        * Skip Output
@@ -4895,11 +4905,11 @@ Outputs
    * - **Null geometries**
      - ``NULL_OUTPUT``
      - [same as input]
-     - The output vector layer (only NULL geometries)
+     - Output vector layer (for NULL and, if chosen, empty geometries)
    * - **Non null geometries**
      - ``OUTPUT``
      - [same as input]
-     - The output vector layer (without NULL geometries)
+     - The output vector layer (without NULL and, if chosen, empty geometries)
 
 
 .. _qgisreverselinedirection:
