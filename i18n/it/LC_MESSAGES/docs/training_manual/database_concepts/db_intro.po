@@ -1,0 +1,446 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# 
+# Translators:
+# Eugenio Fasser <qfasser@gmail.com>, 2019
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-04-07 15:33+0200\n"
+"PO-Revision-Date: 2019-04-07 13:43+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"Language-Team: Italian (http://www.transifex.com/qgis/qgis-documentation/language/it/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: it\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:8
+msgid "|LS| Introduction to Databases"
+msgstr "|LS| Introduzione ai database"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:10
+msgid ""
+"Before using PostgreSQL, let's make sure of our ground by covering general "
+"database theory. You will not need to enter any of the example code; it's "
+"only there for illustration purposes."
+msgstr "Prima di usare PostgreSQL, assicuriati di conoscere la teoria generale dei database. Non avrai bisogno di inserire codice; è solo a scopo illustrativo."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:14
+msgid ""
+"**The goal for this lesson:** To understand fundamental database concepts."
+msgstr "**L'obiettivo di questa lezione:** Comprendere i concetti fondamentali dei database."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:17
+msgid "What is a Database?"
+msgstr "Cos'è un database?"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:19
+msgid ""
+"A database consists of an organized collection of data for one or more uses,"
+" typically in digital form. *- Wikipedia*"
+msgstr "Un database consiste in una raccolta organizzata di dati per uno o più usi. *- Wikipedia*"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:24
+msgid ""
+"A database management system (DBMS) consists of software that operates "
+"databases, providing storage, access, security, backup and other facilities."
+" *- Wikipedia*"
+msgstr "Un sistema di gestione del database (DBMS) è costituito da un software che gestisce i database, fornendo spazio di archiviazione, accesso, sicurezza, backup e altri servizi. *- Wikipedia*"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:29
+msgid "Tables"
+msgstr "Tabelle"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:31
+msgid ""
+"In relational databases and flat file databases, a table is a set of data "
+"elements (values) that is organized using a model of vertical columns (which"
+" are identified by their name) and horizontal rows. A table has a specified "
+"number of columns, but can have any number of rows. Each row is identified "
+"by the values appearing in a particular column subset which has been "
+"identified as a candidate key. *- Wikipedia*"
+msgstr "Nei database relazionali e nei database di file flat, una tabella è un insieme di elementi di dati (valori) organizzati utilizzando un modello di colonne verticali (identificate dal loro nome) e righe orizzontali. Una tabella ha un numero specificato di colonne, ma può avere un numero qualsiasi di righe. Ogni riga è identificata dai valori che appaiono in un particolare sottoinsieme di colonne che è stato identificato come una chiave univoca. *- Wikipedia*"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:46
+msgid "In SQL databases a table is also known as a **relation.**"
+msgstr "Nei database SQL una tabella è anche nota come **relazione.**"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:49
+msgid "Columns / Fields"
+msgstr "Colonne / Campi"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:51
+msgid ""
+"A column is a set of data values of a particular simple type, one for each "
+"row of the table. The columns provide the structure according to which the "
+"rows are composed. The term field is often used interchangeably with column,"
+" although many consider it more correct to use field (or field value) to "
+"refer specifically to the single item that exists at the intersection "
+"between one row and one column. *- Wikipedia*"
+msgstr "Una colonna è un insieme di valori di dati di un particolare tipo, uno per ogni riga della tabella. Le colonne forniscono la struttura in base alla quale sono composte le righe. Il termine campo viene spesso utilizzato in modo intercambiabile con colonna, anche se molti ritengono più corretto utilizzare campo (o valore del campo) per fare riferimento in modo specifico al singolo elemento esistente all'intersezione tra una riga e una colonna. *- Wikipedia*"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:58
+msgid "A column:"
+msgstr "Una colonna:"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:67
+msgid "A field:"
+msgstr "Un campo:"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:74
+msgid "Records"
+msgstr "Record"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:76
+msgid ""
+"A record is the information stored in a table row. Each record will have a "
+"field for each of the columns in the table."
+msgstr "Un record è l'informazione memorizzata in una riga della tabella. Ogni record avrà un campo per ciascuna delle colonne nella tabella."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:84
+msgid "Datatypes"
+msgstr "Tipi di dati"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:86
+msgid ""
+"Datatypes restrict the kind of information that can be stored in a column. "
+"*- Tim and Horst*"
+msgstr "Il tipo di dato limita il tipo di informazioni che possono essere archiviate in una colonna."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:89
+msgid "There are many kinds of datatypes. Let's focus on the most common:"
+msgstr "Ci sono diversi tipi di dato. Concentrati sui più comuni:"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:91
+msgid "``String`` - to store free-form text data"
+msgstr "``Stringa`` - per memorizzare dati di testo"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:92
+msgid "``Integer`` - to store whole numbers"
+msgstr "``Intero`` - per memorizzare numeri interi"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:93
+msgid "``Real`` - to store decimal numbers"
+msgstr "``Reale`` - per memorizzare i numeri decimali"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:94
+msgid "``Date`` - to store Horst's birthday so no one forgets"
+msgstr "``Date`` - per memorizzare i compleanni"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:95
+msgid "``Boolean`` - to store simple true/false values"
+msgstr "``Booleano`` - per memorizzare i valori di vero/falso"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:97
+msgid ""
+"You can tell the database to allow you to also store nothing in a field. If "
+"there is nothing in a field, then the field content is referred to as a "
+"**'null' value**:"
+msgstr "Puoi dire al database di permetterti di non memorizzare nulla in un campo. Se non c'è nulla in un campo, allora il contenuto del campo viene definito come un valore **valore 'null'**:"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:107
+msgid "Result:"
+msgstr "Risultato:"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:118
+msgid ""
+"There are many more datatypes you can use - `check the PostgreSQL manual! "
+"<https://www.postgresql.org/docs/current/datatype.html>`_"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:122
+msgid "Modelling an Address Database"
+msgstr "Creazione di un database di indirizzi"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:124
+msgid ""
+"Let's use a simple case study to see how a database is constructed. We want "
+"to create an address database."
+msgstr "Usa un semplice caso di studio per vedere come viene costruito un database. Vuoi creare un database di indirizzi."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:128
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:195
+msgid "|TY| |basic|"
+msgstr "|TY| |basic|"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:130
+msgid ""
+"Write down the properties which make up a simple address and which we would "
+"want to store in our database."
+msgstr "Annota le proprietà che costituiscono un indirizzo semplice e che memorizzerai nel database."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:133
+msgid ":ref:`Check your results <database-concepts-1>`"
+msgstr ":ref:`Verifica i tuoi  risultati <database-concepts-1>`"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:138
+msgid "Address Structure"
+msgstr "Struttura indirizzi"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:140
+msgid ""
+"The properties that describe an address are the columns. The type of "
+"information stored in each column is its datatype. In the next section we "
+"will analyse our conceptual address table to see how we can make it better!"
+msgstr "Le proprietà di ogni indirizzo sono espresse nelle colonne. Il tipo di informazioni memorizzate in ogni colonna è il suo tipo di dati. Nella prossima sezione analizzerai la nostra tabella degli indirizzi concettuali per vedere come migliorarla"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:145
+msgid "Database Theory"
+msgstr "Teoria dei database"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:147
+msgid ""
+"The process of creating a database involves creating a model of the real "
+"world; taking real world concepts and representing them in the database as "
+"entities."
+msgstr "Il processo di creazione di un database comporta la creazione di un modello del mondo reale; prendi concetti del mondo reale e rappresentali nel database come entità."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:151
+msgid "Normalisation"
+msgstr "Normalizzazione"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:153
+msgid ""
+"One of the main ideas in a database is to avoid data duplication / "
+"redundancy. The process of removing redundancy from a database is called "
+"Normalisation."
+msgstr "Una delle idee principali in un database è di evitare la duplicazione / ridondanza dei dati. Il processo di rimozione della ridondanza da un database è chiamato Normalizzazione."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:156
+msgid ""
+"Normalization is a systematic way of ensuring that a database structure is "
+"suitable for general-purpose querying and free of certain undesirable "
+"characteristics - insertion, update, and deletion anomalies - that could "
+"lead to a loss of data integrity. *- Wikipedia*"
+msgstr "La normalizzazione è un modo sistematico per garantire che una struttura di database sia adatta per l'interrogazione e priva di determinati e indesiderabili caratteristiche - inserimento, aggiornamento e anomalia di cancellazione - che potrebbero portare a una perdita dell'integrità dei dati. *- Wikipedia*"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:161
+msgid "There are different kinds of normalisation 'forms'."
+msgstr "Esistono diversi tipi di 'moduli' di normalizzazione."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:163
+msgid "Let's take a look at a simple example:"
+msgstr "Guarda un semplice esempio:"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:190
+msgid ""
+"Imagine you have many friends with the same street name or city. Every time "
+"this data is duplicated, it consumes space. Worse still, if a city name "
+"changes, you have to do a lot of work to update your database."
+msgstr "Immagina di avere molti amici con lo stesso nome di via o città. Ogni volta che questi dati vengono duplicati, viene consumato spazio. Peggio ancora, se il nome di una città cambia, devi fare un sacco di lavoro per aggiornare il tuo database."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:196
+msgid ""
+"Redesign the theoretical `people` table above to reduce duplication and to "
+"normalise the data structure."
+msgstr "Ridisegnare la tabella sopra per ridurre la duplicazione e normalizzare la struttura dei dati."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:199
+msgid ""
+"You can read more about database normalisation `here "
+"<https://en.wikipedia.org/wiki/Database_normalization>`_"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:202
+msgid ":ref:`Check your results <database-concepts-2>`"
+msgstr ":ref:`Verifica i tuoi risultati<database-concepts-2>`"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:207
+msgid "Indexes"
+msgstr "Indici"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:209
+msgid ""
+"A database index is a data structure that improves the speed of data "
+"retrieval operations on a database table. *- Wikipedia*"
+msgstr "Un indice di database è una struttura di dati che migliora la velocità delle operazioni di recupero dei dati su una tabella di database. *- Wikipedia*"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:212
+msgid ""
+"Imagine you are reading a textbook and looking for the explanation of a "
+"concept - and the textbook has no index! You will have to start reading at "
+"one cover and work your way through the entire book until you find the "
+"information you need. The index at the back of a book helps you to jump "
+"quickly to the page with the relevant information:"
+msgstr "Immagina di leggere un libro di testo e di cercare la spiegazione di un concetto - e il libro di testo non ha indice! Dovrai iniziare a leggere dall'inizio e farti strada attraverso l'intero libro fino a trovare le informazioni di cui hai bisogno. L'indice sul retro di un libro ti aiuta a saltare rapidamente alla pagina con le informazioni pertinenti:"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:222
+msgid "Now searches on name will be faster:"
+msgstr "Ora le ricerche sul nome saranno più veloci:"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:241
+msgid "Sequences"
+msgstr "Sequenze"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:243
+msgid ""
+"A sequence is a unique number generator. It is normally used to create a "
+"unique identifier for a column in a table."
+msgstr "Una sequenza è un generatore di numeri univoco. Viene normalmente utilizzato per creare un identificativo univoco per una colonna in una tabella."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:246
+msgid ""
+"In this example, id is a sequence - the number is incremented each time a "
+"record is added to the table:"
+msgstr "In questo esempio, id è una sequenza: il numero viene incrementato ogni volta che un record viene aggiunto alla tabella:"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:257
+msgid "Entity Relationship Diagramming"
+msgstr "Diagramma Entità Relazione"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:259
+msgid ""
+"In a normalised database, you typically have many relations (tables). The "
+"entity-relationship diagram (ER Diagram) is used to design the logical "
+"dependencies between the relations. Consider our non-normalised `people` "
+"table from earlier in the lesson:"
+msgstr "In un database normalizzato, in genere si hanno molte relazioni (tabelle). Il diagramma entità-relazione (diagramma ER) viene utilizzato per progettare le dipendenze logiche tra le relazioni. Considera la tabella delle persone non normalizzate di prima nella lezione:"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:274
+msgid ""
+"With a little work we can split it into two tables, removing the need to "
+"repeat the street name for individuals who live in the same street:"
+msgstr "Con un piccolo lavoro puoi dividerlo in due tabelle, eliminando la necessità di ripetere il nome della via per le persone che vivono nella stessa strada:"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:286
+msgid "and:"
+msgstr "e:"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:297
+msgid ""
+"We can then link the two tables using the 'keys' :kbd:`streets.id` and "
+":kbd:`people.streets_id`."
+msgstr "Puoi quindi collegare le due tabelle usando le 'chiavi' :kbd:`streets.id` e :kbd:`people.streets_id`."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:300
+msgid ""
+"If we draw an ER Diagram for these two tables it would look something like "
+"this:"
+msgstr "Se disegnassi un diagramma ER per questi due tabelle, sarebbe simile a questo:"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:306
+msgid ""
+"The ER Diagram helps us to express 'one to many' relationships. In this case"
+" the arrow symbol show that one street can have many people living on it."
+msgstr "Il diagramma ER ti aiuta ad esprimere relazioni 'da uno a molti'. In questo caso il simbolo della freccia indica che una strada può avere molte persone che vivono su di essa."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:310
+msgid "|TY| |moderate|"
+msgstr "|TY| |moderate|"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:312
+msgid ""
+"Our `people` model still has some normalisation issues - try to see if you "
+"can normalise it further and show your thoughts by means of an ER Diagram."
+msgstr "Il nostro modello di 'people' ha ancora alcuni problemi di normalizzazione: prova a vedere se puoi normalizzarlo ulteriormente e mostrarlo per mezzo di un diagramma ER."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:315
+msgid ":ref:`Check your results <database-concepts-3>`"
+msgstr ":ref:`Verifica i tuoi risultati <database-concepts-3>`"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:320
+msgid "Constraints, Primary Keys and Foreign Keys"
+msgstr "Vincoli, chiavi primarie e chiavi esterne"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:322
+msgid ""
+"A database constraint is used to ensure that data in a relation matches the "
+"modeller's view of how that data should be stored. For example a constraint "
+"on your postal code could ensure that the number falls between :kbd:`1000` "
+"and :kbd:`9999`."
+msgstr "Puoi usare un vincolo di database per garantire che i dati in una relazione corrispondano a come tali dati devono essere memorizzati. Ad esempio un vincolo sul tuo codice postale potrebbe garantire che il numero sia tra 1000 e 9999."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:327
+msgid ""
+"A Primary key is one or more field values that make a record unique. Usually"
+" the primary key is called id and is a sequence."
+msgstr "Una chiave primaria è uno o più valori di campo che rendono un record univoco. Di solito la chiave primaria è chiamata id ed è una sequenza."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:330
+msgid ""
+"A Foreign key is used to refer to a unique record on another table (using "
+"that other table's primary key)."
+msgstr "Una chiave esterna viene utilizzata per fare riferimento a un record univoco su un'altra tabella (utilizzando la chiave primaria di quell'altra tabella)."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:333
+msgid ""
+"In ER Diagramming, the linkage between tables is normally based on Foreign "
+"keys linking to Primary keys."
+msgstr "Nel diagramma ER, il collegamento tra tabelle è normalmente basato su chiavi esterne che si collegano a chiavi primarie."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:336
+msgid ""
+"If we look at our people example, the table definition shows that the street"
+" column is a foreign key that references the primary key on the streets "
+"table:"
+msgstr "Se guardiamo all'esempio people, la definizione della tabella mostra che la colonna stradale è una chiave esterna che fa riferimento alla chiave primaria nella tabella streets:"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:357
+msgid "Transactions"
+msgstr "Transazioni"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:359
+msgid ""
+"When adding, changing, or deleting data in a database, it is always "
+"important that the database is left in a good state if something goes wrong."
+" Most databases provide a feature called transaction support. Transactions "
+"allow you to create a rollback position that you can return to if your "
+"modifications to the database did not run as planned."
+msgstr "Quando aggiungi, modifichi o elimini dati in un database, è sempre importante che il database sia lasciato in buono stato. La maggior parte dei database fornisce una funzionalità chiamata supporto per le transazioni. Le transazioni consentono di creare una posizione di rollback a cui è possibile tornare se le modifiche al database non sono state eseguite come pianificato."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:365
+msgid ""
+"Take a scenario where you have an accounting system. You need to transfer "
+"funds from one account and add them to another. The sequence of steps would "
+"go like this:"
+msgstr "Fai uno scenario in cui hai un sistema di contabilità. Devi trasferire fondi da un account e aggiungerli a un altro. La sequenza di passaggi sarebbe come questa:"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:369
+msgid "remove R20 from Joe"
+msgstr " rimuovi R20 da Joe"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:370
+msgid "add R20 to Anne"
+msgstr " aggiungi R20 ad Anne"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:372
+msgid ""
+"If something goes wrong during the process (e.g. power failure), the "
+"transaction will be rolled back."
+msgstr "Se qualcosa andasse storto durante il processo (ad esempio un'interruzione dell'alimentazione), la transazione verrà ripristinata."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:376
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:378
+msgid ""
+"Databases allow you to manage data in a structured way using simple code "
+"structures."
+msgstr "I database ti consentono di gestire i dati in modo strutturato utilizzando semplici strutture di codice."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:382
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:384
+msgid ""
+"Now that we've looked at how databases work in theory, let's create a new "
+"database to implement the theory we've covered."
+msgstr "Ora che hai visto come i database funzionano in teoria, crea un nuovo database per implementare la teoria trattata."
+
+#~ msgid ""
+#~ "There are many more datatypes you can use - `check the PostgreSQL manual! "
+#~ "<http://www.postgresql.org/docs/current/static/datatype.html>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can read more about database normalisation `here "
+#~ "<http://en.wikipedia.org/wiki/Database_normalization>`_"
+#~ msgstr ""

@@ -1,0 +1,1032 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# 
+# Translators:
+# Dick Groskamp, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project testing\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-11 14:48+0200\n"
+"PO-Revision-Date: 2017-08-09 06:49+0000\n"
+"Last-Translator: Dick Groskamp, 2019\n"
+"Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:9
+msgid "Getting Started"
+msgstr "Beginnen"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:18
+msgid "Installation on Debian-based systems"
+msgstr "Installatie op op Debian gebaseerde systemen"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:22
+msgid ""
+"At this point, we will give a short and simple installation how-to for a "
+"minimal working configuration on Debian based systems. However, many other "
+"distributions and OSs provide packages for QGIS Server."
+msgstr ""
+"Op dit punt zullen we een korte en eenvoudige How-to geven voor een minimaal"
+" werkende configuratie op op Debian gebaseerde systemen. Echter, ook vele "
+"andere distributies en besturingssystemen verschaffen pakketten voor QGIS "
+"Server. "
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:26
+msgid ""
+"Requirements and steps to install QGIS Server on a Debian based system are "
+"provided in `QGIS installers page "
+"<https://qgis.org/en/site/forusers/alldownloads.html>`_. Please refer to "
+"that section."
+msgstr ""
+"Vereisten en stappen om QGIS Server te installeren op een op Debian "
+"gebaseerd systeem worden gegeven op de `pagina voor installatieprogramma's "
+"voor QGIS <https://qgis.org/nl/site/forusers/alldownloads.html>`_. Bekijk "
+"dat gedeelte."
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:34
+msgid "HTTP Server configuration"
+msgstr "Configureren van de HTTP-server"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:39
+msgid "Apache"
+msgstr "Apache"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:41
+msgid ""
+"Apache and its `mod_fcgid "
+"<https://httpd.apache.org/mod_fcgid/mod/mod_fcgid.html>`_ module may be used"
+" for executing QGIS Server."
+msgstr ""
+"Apache en zijn module `mod_fcgid "
+"<https://httpd.apache.org/mod_fcgid/mod/mod_fcgid.html>`_ kunnen worden "
+"gebruikt voor het uitvoeren van QGIS Server."
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:44
+msgid "Install Apache and ``mod_fcgid``:"
+msgstr "Installeren van Apache en ``mod_fcgid``:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:50
+msgid ""
+"Here we assume that an Apache ``VirtualHost`` is already set up. For example"
+" this is what a basic ``VirtualHost`` configuration may look like:"
+msgstr ""
+"We gaan er hier van uit dat een Apache ``VirtualHost`` al is ingesteld. Dit "
+"is bijvoorbeeld hoe een basisiconfiguratie van ``VirtualHost`` eruit kan "
+"zien:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:67
+msgid ""
+"On Debian systems, a default ``VirtualHost`` is available in ``/etc/apache2"
+"/sites-available/000-default.conf``."
+msgstr ""
+"Op systemen van Debian is een standaard ``VirtualHost`` beschikbaar in "
+"``/etc/apache2/sites-available/000-default.conf``."
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:70
+msgid "Let's now add ``mod_fcgid`` configuration directives for QGIS Server:"
+msgstr ""
+"Laten we nu richtlijnen voor de configuratie van ``mod_fcgid`` voor QGIS "
+"Server toevoegen:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:95
+msgid ""
+"See the ``mod_fcgid`` documentation for more information on the ``Fcgid`` "
+"parameters used. And see below to understand when and why the ``DISPLAY`` "
+"environment variable needs to be set."
+msgstr ""
+"Bekijk de documentatie voor ``mod_fcgid`` voor meer informatie over de "
+"gebruikte parameters ``Fcgid``. En bekijk onderstaande om te begrijpen "
+"wanneer en waarom de omgevingsvariabele ``DISPLAY`` moet zijn ingesteld."
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:99
+msgid "Now restart Apache for the new configuration to be taken into account:"
+msgstr ""
+"Herstart Apache nu opnieuw om er voor te zorgen dat de nieuwe configuratie "
+"daadwerkelijk wordt doorgevoerd:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:105
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:166
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:207
+msgid "QGIS Server is now available at http://localhost/qgisserver."
+msgstr "QGIS Server is nu beschikbaar op http://localhost/qgisserver."
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:110
+msgid "NGINX"
+msgstr "NGINX"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:112
+msgid ""
+"You can also use QGIS Server with `NGINX <https://nginx.org/>`_. Unlike "
+"Apache, NGINX does not automatically spawn FastCGI processes. The FastCGI "
+"processes are to be started by something else."
+msgstr ""
+"U kunt QGIS Server ook gebruiken met `NGINX <https://nginx.org/>`_. Anders "
+"dan bij Apache voert NGINX niet automatisch FastCGI-processen uit. De "
+"processen van FastCGI moeten door iets anders worden gestart."
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:116
+msgid ""
+"On Debian-based systems, you may use **fcgiwrap** or **spawn-fcgi** to start"
+" and manage the QGIS Server processes. Official Debian packages exist for "
+"both."
+msgstr ""
+"Op op Debian gebaseerde systemen kunt u **fcgiwrap** of **spawn-fcgi** "
+"gebruiken om de processen van QGIS Server te starten of te beheren. "
+"Officiële pakketten van Debian bestaan voor beide."
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:121
+msgid ""
+"fcgiwrap is easier to set up than spawn-fcgi, because it's already wrapped "
+"in a Systemd service. But it also leads to a solution that is much slower "
+"than using spawn-fcgi. With fcgiwrap a new QGIS Server process is created on"
+" each request, meaning that the QGIS Server initialization process, which "
+"includes reading and parsing the QGIS project file, is done on each request."
+" With spawn-fcgi, the QGIS Server process remains alive between requests, "
+"resulting in much better performance. For that reason, spawn-fcgi is "
+"recommended for production use."
+msgstr ""
+"fcgiwrap is gemakkelijker in te stellen dan spawn-fcgi, omdat het al is "
+"verpakt in een service Systemd. Maar het leidt ook tot een oplossing die "
+"veel trager is dan het gebruiken van spawn-fcgi. Met fcgiwrap wordt een "
+"nieuw proces voor QGIS Server gemaakt voor elk verzoek, wat betekent dat het"
+" proces voor initialisatie van QGIS Server, wat tevens omvat het lezen en "
+"parsen van het projectbestand van QGIS, voor elk verzoek wordt uitgevoerd. "
+"Met spawn-fcgi blijft het proces van QGIS Server levend tussen verzoeken in,"
+" resultierend in een veel betre uitvoering. Om die reden wordt spawn-fcgi "
+"aanbevolen voor gebruik voor productie."
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:130
+msgid "Install NGINX:"
+msgstr "NGINX installeren:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:138
+msgid "fcgiwrap"
+msgstr "fcgiwrap"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:140
+msgid ""
+"If you want to use `fcgiwrap "
+"<https://www.nginx.com/resources/wiki/start/topics/examples/fcgiwrap/>`_ to "
+"run QGIS Server, you first have to install the corresponding package:"
+msgstr ""
+"Als u `fcgiwrap "
+"<https://www.nginx.com/resources/wiki/start/topics/examples/fcgiwrap/>`_ "
+"wilt gebruiken om QGIS Server uit te voeren, moet u eerst het "
+"corresponderende pakket installeren:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:147
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:179
+msgid ""
+"Then, introduce the following block in your NGINX server configuration:"
+msgstr ""
+"Plaats vervolgens het volgende blok in uw configuratie voor uw NGINX-server:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:159
+msgid ""
+"Finally, restart NGINX and fcgiwrap to take into account the new "
+"configuration:"
+msgstr ""
+"Herstart tenslotte NGINX en fcgiwrap om de nieuwe configuratie door te "
+"voeren:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:169
+msgid "spawn-fcgi"
+msgstr "spawn-fcgi"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:171
+msgid ""
+"If you prefer to use `spawn-fcgi <https://redmine.lighttpd.net/projects"
+"/spawn-fcgi/wiki>`_ instead of fcgiwrap, the first step is to install the "
+"package:"
+msgstr ""
+"Als het uw voorkeur heeft `spawn-fcgi <https://redmine.lighttpd.net/projects"
+"/spawn-fcgi/wiki>`_ te gebruiken in plaats van fcgiwrap, is de eerste stap "
+"om het pakket te installeren:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:189
+msgid "And restart NGINX to take into account the new configuration:"
+msgstr "En herstart NGINX om de nieuwe configuratie door te voeren:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:195
+msgid ""
+"Finally, considering that there is no default service file for spawn-fcgi, "
+"you have to manually start QGIS Server in your terminal:"
+msgstr ""
+"Tenslotte, omdat er geen standaard servicebestand is voor spawn-fcgi, dient "
+"u QGIS Server handmatig te starten in uw terminal:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:204
+msgid ""
+"Of course, you may write an init script (like a ``qgisserver.service`` file "
+"with Systemd) to start QGIS Server at boot time or whenever you want."
+msgstr ""
+"Natuurlijk kunt u zelf een init script schrijven (zoals een "
+"``qgisserver.service``-bestand voor Systemd) om QGIS Server te starten bij "
+"opstarten of wanneer u maar wilt."
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:211
+msgid ""
+"With the above command spawn-fcgi spawns only one QGIS Server process. To "
+"use more than one QGIS Server process you can combine spawn-fcgi with the "
+"`multiwatch <https://redmine.lighttpd.net/projects/multiwatch/wiki>`_ tool, "
+"which is also packaged in Debian."
+msgstr ""
+"Met de bovenstaande opdracht voert spawn-fcgi slechts één proces voor QGIS "
+"Server uit. U kunt spawn-fcgi combineren met het gereedschap `multiwatch "
+"<https://redmine.lighttpd.net/projects/multiwatch/wiki>`_, dat ook is "
+"verpakt in Debian, om meer dan één proces voor QGIS Server te gebruiken."
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:217
+msgid "Configuration"
+msgstr "Configuratie"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:219
+msgid ""
+"The **include fastcgi_params;** used in previous configuration is important "
+"as it adds the parameters from ``/etc/nginx/fastcgi_params``:"
+msgstr ""
+"De **include fastcgi_params;**, gebruikt in eerdere configuratie, is "
+"belangrijk omdat het de parameters toevoegt vanuit "
+"``/etc/nginx/fastcgi_params``:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:250
+msgid ""
+"Of course, you may override these variables in your own configuration. For "
+"example:"
+msgstr ""
+"Natuurlijk kunt u deze variabelen in uw eigen configuratie overschrijven. "
+"Bijvoorbeeld:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:259
+msgid ""
+"Moreover, you can use some :ref:`qgis-server-envvar` to configure QGIS "
+"Server. With NGINX as HTTP Server, you have to use ``fastcgi_param`` to "
+"define these variables as shown below:"
+msgstr ""
+"Meer nog, u kunt enkele :ref:`qgis-server-envvar` gebruiken om QGIS Server "
+"te configureren. Met NGINX als HTTP-server moet u ``fastcgi_param`` "
+"gebruiken om deze variabelen, zoals hieronder weergegeven, te definiëren:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:271
+msgid ""
+"When using spawn-fcgi, you may directly define environment variables before "
+"running the server. For example: ``export "
+"QGIS_SERVER_LOG_FILE=/home/user/qgis.log``"
+msgstr ""
+"Bij het gebruiken van spawn-fcgi, kunt u direct omgevingsvariabelen "
+"configureren vóór het uitvoeren van de server. Bijvoorbeeld: ``export "
+"QGIS_SERVER_LOG_FILE=/home/user/qgis.log``"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:277
+msgid "Xvfb"
+msgstr "Xvfb"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:279
+msgid ""
+"QGIS Server needs a running X Server to be fully usable. But if you don't "
+"have one, you may use xvfb to have a virtual X environment."
+msgstr ""
+"QGIS Server heeft een werkende X Server nodig om volledig bruikbaar te zijn."
+" Maar als u er geen hebt, kunt u xvfb gebruiken om een virtuele X-omgeving "
+"te maken."
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:282
+msgid "To install the package:"
+msgstr "Het pakket installeren:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:288
+msgid ""
+"Then, according to your HTTP server, you should configure the **DISPLAY** "
+"parameter or directly use **xvfb-run**."
+msgstr ""
+"Dan, overeenkomstig uw HTTP-server, zou u de parameter  **DISPLAY** moeten "
+"configureren of direct **xvfb-run** moeten gebruiken."
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:291
+msgid "For example with NGINX and spawn-fcgi using xvfb-run:"
+msgstr "Bijvoorbeeld met NGINX en spawn-fcgi met xvfb-run:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:299
+msgid ""
+"The other option is to start a virtual X server environment with a specific "
+"display number thanks to **Xvfb**:"
+msgstr ""
+"De andere optie is om een virtuele omgeving voor X-server  te starten met "
+"een specifiek getal voor de weergave, met dan aan **Xvfb**:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:306
+msgid ""
+"Then we just have to set the **DISPLAY** environment variable in the HTTP "
+"server configuration. For example with NGINX:"
+msgstr ""
+"Dan hoeven we slechts de omgevingsvariabele **DISPLAY** in te stellen in de "
+"configuratie van de HTTP-server. Bijvoorbeeld met NGINX:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:313
+msgid "Or with Apache:"
+msgstr "Of met Apache:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:321
+msgid "Installation on Windows"
+msgstr "Installeren onder Windows"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:325
+msgid ""
+"QGIS Server can also be installed on Windows systems. While the QGIS Server "
+"package is available in the 64 bit version of the OSGeo4W network installer "
+"(https://qgis.org/en/site/forusers/download.html) there is no Apache (or "
+"other web server) package available, so this must be installed by other "
+"means."
+msgstr ""
+"QGIS Server kan ook worden geïnstalleerd op systemen van Windows. Hoewel het"
+" pakket van QGIS Server beschikbaar is in de 64 bit-versie van het OSGeo4W "
+"netwerkinstallatieprogramma "
+"(https://qgis.org/nl/site/forusers/download.html) is er nog geen pakket voor"
+" Apache (of andere webserver) beschikbaar, die moeten dus op een andere "
+"manier geïnstalleerd worden."
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:330
+msgid "A simple procedure is the following:"
+msgstr "Een eenvoudige procedure is de volgende:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:332
+msgid ""
+"Download the XAMPP installer (https://www.apachefriends.org/download.html) "
+"for Windows and install Apache"
+msgstr ""
+"Download het installatieprogramma van XAMPP "
+"(https://www.apachefriends.org/download.html) voor Windows en installeer "
+"Apache"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:338
+msgid ""
+"Download the OSGeo4W installer, follow the \"Advanced Install\" and install "
+"both the QGIS Desktop and QGIS Server packages"
+msgstr ""
+"Download het installatieprogramma van OSGeo4W, volg de \"Advanced Install\" "
+"en installeer zowel de pakketten QGIS Desktop als QGIS Server"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:344
+msgid ""
+"Edit the httpd.conf file (:file:`C:\\\\xampp\\\\apache\\\\httpd.conf` if the"
+" default installation paths have been used) and make the following changes:"
+msgstr ""
+"Bewerk het bestand httpd.conf (:file:`C:\\\\xampp\\\\apache\\\\httpd.conf` "
+"als de standaard paden voor installeren zijn gebruikt) en maak de volgende "
+"wijzigingen:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:347
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:361
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:386
+msgid "From:"
+msgstr "Van:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:354
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:372
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:393
+msgid "To:"
+msgstr "Naar:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:400
+msgid "Then at the bottom of httpd.conf add:"
+msgstr "Voeg tenslotte aan het einde van httpd.conf toe:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:412
+msgid ""
+"Restart the Apache web server from the XAMPP Control Panel and open browser "
+"window to testing a GetCapabilities request to QGIS Server"
+msgstr ""
+"Herstart de Apache webserver vanuit het XAMPP Control Panel en open een "
+"venster van de browser om een verzoek GetCapabilities te testen met QGIS "
+"Server"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:415
+msgid ""
+"http://localhost/cgi-"
+"bin/qgis_mapserv.fcgi.exe?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+msgstr ""
+"http://localhost/cgi-"
+"bin/qgis_mapserv.fcgi.exe?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:419
+msgid "Serve a project"
+msgstr "Een project op de server gebruiken"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:421
+msgid "Now that QGIS Server is installed and running, we just have to use it."
+msgstr ""
+"Nu QGIS Server is geïnstalleerd en werkt, hoeven we het aleen nog maar te "
+"gebruiken."
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:423
+msgid ""
+"Obviously, we need a QGIS project to work on. Of course, you can fully "
+"customize your project by defining contact information, precise some "
+"restrictions on CRS or even exclude some layers. Everything you need to know"
+" about that is described later in :ref:`Creatingwmsfromproject`."
+msgstr ""
+"Uiteraard hebben we een project van QGIS nodig om mee te werken. Natuurlijk "
+"kunt u uw project volledig aanpassen door contactinformatie te definiëren, "
+"enkele beperkingen voor CRS bepalen of zelfs enkele lagen uitsluiten. Alles "
+"wat u daarover dient te weten wordt later beschreven in "
+":ref:`Creatingwmsfromproject`."
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:428
+msgid ""
+"But for now, we are going to use a simple project already configured. To "
+"retrieve the project:"
+msgstr ""
+"Maar voor nu gaan we een eenvoudig project gebruiken dat als is "
+"geconfigureerd. Het  project ophalen:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:438
+msgid ""
+"The project file is ``qgis-server-tutorial-data-master/world.qgs``. Of "
+"course, you can use your favorite GIS software to open this file and take a "
+"look on the configuration and available layers."
+msgstr ""
+"Het projectbestand is ``qgis-server-tutorial-data-master/world.qgs``. "
+"Natuurlijk kunt u uw favoriete software voor GIS gebruiken om dit bestand te"
+" openen en kijken naar de configuratie en beschikbare lagen."
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:442
+msgid ""
+"By opening the project and taking a quick look on layers, we know that 4 "
+"layers are currently available:"
+msgstr ""
+"Bij het openen van het project en door snel even te kijken naar de lagen, "
+"weten we dat momenteel 4 lagen beschikbaar zijn:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:445
+msgid "airports"
+msgstr "airports"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:446
+msgid "places"
+msgstr "places"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:447
+msgid "countries"
+msgstr "countries"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:448
+msgid "countries_shapeburst"
+msgstr "countries_shapeburst"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:450
+msgid ""
+"You don't have to understand the full request for now but you may retrieve a"
+" map with some of the previous layers thanks to QGIS Server by doing "
+"something like this in your web browser to retrieve the *countries* layer:"
+msgstr ""
+"U hoeft nu niet het volledige verzoek te begrijpen. maar u zou een kaart met"
+" enkele van de eerdere lagen op kunnen halen dankzij QGIS Server door iets "
+"zoals dit te doen in uw webbrowser om de laag *countries* op te halen:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:465
+msgid "If you obtain the next image, then QGIS Server is running correctly:"
+msgstr ""
+"Als u de volgende afbeelding ziet dan wordt QGIS Server correct uitgevoerd:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:470
+msgid "Server response to a basic GetMap request"
+msgstr "Antwoord van Server na een eenvoudig verzoek GetMap"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:472
+msgid ""
+"Note that you may define **PROJECT_FILE** environment variable to use a "
+"project by default instead of giving a **MAP** parameter (see :ref:`qgis-"
+"server-envvar`)."
+msgstr ""
+"Onthoud dat u de omgevingsvariabele **PROJECT_FILE** kunt definiëren om een "
+"standaard project te gebruiken in plaats van een parameter **MAP** op te "
+"geven (bekijk :ref:`qgis-server-envvar`)."
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:475
+msgid "For example with spawn-fcgi:"
+msgstr "Bijvoorbeeld met spawn-fcgi:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:489
+msgid "Configure your project"
+msgstr "Uw project configureren"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:491
+msgid ""
+"To provide a new QGIS Server WMS, WFS or WCS, you have to create a QGIS "
+"project file with some data or use one of your current project. Define the "
+"colors and styles of the layers in QGIS and the project CRS, if not already "
+"defined."
+msgstr ""
+"U moet een projectbestand van QGIS met enige gegevens maken of een van uw "
+"huidige projecten gebruiken om een nieuw QGIS Server WMS, WFS of WCS te "
+"verschaffen. Definieer de kleuren en stijlen van de lagen in QGIS en het CRS"
+" voor het project, als die nog niet gedefinieerd zijn."
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:500
+msgid "Definitions for a QGIS Server WMS/WFS/WCS project"
+msgstr "Definities voor een project QGIS Server WMS/WFS/WCS"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:502
+msgid ""
+"Then, go to the :guilabel:`QGIS Server` menu of the :menuselection:`Project "
+"--> Properties...` dialog and provide some information about the OWS in the "
+"fields under :guilabel:`Service Capabilities`. This will appear in the "
+"GetCapabilities response of the WMS, WFS or WCS. If you don't check "
+"|checkbox| :guilabel:`Service capabilities`, QGIS Server will use the "
+"information given in the :file:`wms_metadata.xml` file located in the :file"
+":`cgi-bin` folder."
+msgstr ""
+"Ga dan naar het menu :guilabel:`QGIS Server` van het dialoogvenster "
+":menuselection:`Project --> Eigenschappen…` en geef enige informatie over de"
+" OWS in de velden onder :guilabel:`Service-mogelijkheden`. Dit zal "
+"verschijnen in het antwoord GetCapabilities van de WMS, WFS of WCS. Als u "
+"|checkbox| :guilabel:`Service-mogelijkheden` niet selecteert zal QGIS Server"
+" de informatie gebruiken die is opgegeven in het bestand "
+":file:`wms_metadata.xml` dat is opgeslagen in de map :file:`cgi-bin`."
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:512
+msgid "WMS capabilities"
+msgstr "WMS-mogelijkheden"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:514
+msgid ""
+"In the :guilabel:`WMS capabilities` section, you can define the extent "
+"advertised in the WMS GetCapabilities response by entering the minimum and "
+"maximum X and Y values in the fields under :guilabel:`Advertised extent`. "
+"Clicking :guilabel:`Use Current Canvas Extent` sets these values to the "
+"extent currently displayed in the QGIS map canvas. By checking |checkbox| "
+":guilabel:`CRS restrictions`, you can restrict in which coordinate reference"
+" systems (CRS) QGIS Server will offer to render maps. It is recommended that"
+" you restrict the offered CRS as this reduces the size of the WMS "
+"GetCapabilities response. Use the |signPlus| button below to select those "
+"CRSs from the Coordinate Reference System Selector, or click "
+":guilabel:`Used` to add the CRSs used in the QGIS project to the list."
+msgstr ""
+"In het gedeelte :guilabel:`WMS-mogelijkheden` kunt u het bereik definiëren "
+"dat zal worden opgenomen in het antwoord van de WMS GetCapabilities door de "
+"minimum en maximum waarden voor X en Y in de velden onder "
+":guilabel:`Opgegeven bereik` in te voeren. Klikken op :guilabel:`Huidige "
+"bereik van kaartvenster gebruiken` stelt deze waarden in op het bereik dat "
+"momenteel wordt weergegeven in het kaartvenster van QGIS. Door |checkbox| "
+":guilabel:`CRS-beperkingen` te selecteren kunt u beperken in welke "
+"coördinaten referentiesystemen (CRS) QGIS Server zal aanbieden de kaarten te"
+" renderen. Aanbevolen wordt om u te beperken tot het aangeboden CRS omdat "
+"dat de grootte van het antwoord van WMS GetCapabilities reduceert. Gebruik "
+"de knop |signPlus| onderin om het CRS te selecteren uit de selectie voor "
+"Coördinaten ReferentieSysteem, of klik op :guilabel:`Huidige gebruikte` om "
+"het in het project van QGIS gebruikte CRS aan de lijst toe te voegen."
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:528
+msgid ""
+"If you have print layouts defined in your project, they will be listed in "
+"the `GetProjectSettings` response, and they can be used by the GetPrint "
+"request to create prints, using one of the print layout layouts as a "
+"template. This is a QGIS-specific extension to the WMS 1.3.0 specification. "
+"If you want to exclude any print layout from being published by the WMS, "
+"check |checkbox| :guilabel:`Exclude layouts` and click the |signPlus| button"
+" below. Then, select a print layout from the :guilabel:`Select print layout`"
+" dialog in order to add it to the excluded layouts list."
+msgstr ""
+"Als u afdruklay-outs hebt gedefinieerd  in uw project, zullen zij worden "
+"vermeld in het antwoord `GetProjectSettings` en zij kunnen worden gebruikt "
+"in het verzoek GetPrint om afdrukken te maken, met een van de lay-outs voor "
+"afdruklay-out als een sjabloon. Dit is een QGIS-specifieke uitbreiding aan "
+"de specificatie voor WMS 1.3.0. Indien u niet wilt dat een afdruklay-out "
+"wordt gepubliceerd door de WMS, selecteer dan |checkbox| "
+":guilabel:`Exclusief lay-outs` en klik op de knop  |signPlus| onderin. "
+"Selecteer dan een afdruklay-out vanuit het dialoogvenster :guilabel:`Lay-out"
+" selecteren` om die toe te voegen aan de lijst met uitgesloten lay-outs."
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:538
+msgid ""
+"If you want to exclude any layer or layer group from being published by the "
+"WMS, check |checkbox| :guilabel:`Exclude Layers` and click the |signPlus| "
+"button below. This opens the :guilabel:`Select restricted layers and groups`"
+" dialog, which allows you to choose the layers and groups that you don't "
+"want to be published. Use the :kbd:`Shift` or :kbd:`Ctrl` key if you want to"
+" select multiple entries. It is recommended that you exclude from publishing"
+" the layers that you don't need as this reduces the size of the WMS "
+"GetCapabilities response which leads to faster loading times on the client "
+"side."
+msgstr ""
+"Indien u niet wilt dat een laag of groep lagen wordt gepubliceerd door de "
+"WMS, selecteer dan |checkbox| :guilabel:`Kaartlagen uitsluiten` en klik op "
+"de knop |signPlus| onderin. Dit opent het dialoogvenster "
+":guilabel:`Selecteer lagen en groepen met restricties` dat u in staat stelt "
+"de lagen en groepen te kiezen die u niet wilt  publiceren. Gebruik de "
+"toetsen :kbd:`Shift` of :kbd:`Ctrl` als u meerdere items in één keer wilt "
+"selecteren. Aanbevolen wordt dat u het publiceren van lagen die u niet "
+"gebruikt uitsluit omdat dat de grootte van het antwoord WMS GetCapabilities "
+"reduceert, wat leidt tot snellere laadtijden aan de zijde van de cliënt."
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:548
+msgid ""
+"You can receive requested GetFeatureInfo as plain text, XML and GML. Default"
+" is XML, text or GML format depends the output format chosen for the "
+"GetFeatureInfo request."
+msgstr ""
+"U kunt de door u verzochte GetFeatureInfo als platte tekst, XML en GML "
+"ontvangen. XML is standaard, de indelingen tekst of GML zijn afhankelijk van"
+" de indeling die wordt gekozen in het verzoek GetFeatureInfo."
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:551
+msgid ""
+"If you wish, you can check |checkbox| :guilabel:`Add geometry to feature "
+"response`. This will include in the GetFeatureInfo response the geometries "
+"of the features in a text format."
+msgstr ""
+"Als u wilt kunt u |checkbox| :guilabel:`Geometrie aan feature response "
+"toevoegen` selecteren. Dit zal de geometrieën van de objecten in "
+"tekstindeling opnemen in het antwoord GetFeatureInfo."
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:555
+msgid ""
+"As many web clients can’t display circular arcs in geometries you have the "
+"option to segmentize the geometry before sending it to the client in a "
+"GetFeatureInfo response. This allows such clients to still display a "
+"feature’s geometry (e.g. for highlighting the feature). You need to check "
+"the |checkbox| :guilabel:`Segmentize feature info geometry` to activate the "
+"option."
+msgstr ""
+"Omdat veel webclients geen cirkelvormige bogen in geometrieën kunnen "
+"weergeven heeft u de optie om de geometrie op te delen in segmenten vóórdat "
+"het naar de cliënt wordt verzonden in een antwoord GetFeatureInfo. Dit maakt"
+" het voor dergelijke clients mogelijk om nog steeds de geometrie van een "
+"object weer te geven (bijv. voor het accentueren van het object). U dient "
+"|checkbox| :guilabel:`Informatie over segmenten van het object geometrie` te"
+" selecteren om de optie te activeren."
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:561
+msgid ""
+"You can also use the :guilabel:`GetFeatureInfo geometry precision` option to"
+" set the precision of the GetFeatureInfo geometry. This enables you to save "
+"bandwidth when you don't need the full precision."
+msgstr ""
+"U kunt ook de optie :guilabel:`GetFeatureInfo precisie voor geometrie "
+"(decimale plaatsen)` gebruiken om de precisie in te stellen voor de "
+"geometrie voor GetFeatureInfo. Dit stelt u in staat bandbreedte te besparen "
+"indien u niet de volledige precisie nodig hebt."
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:565
+msgid ""
+"If you want QGIS Server to advertise specific request URLs in the WMS "
+"GetCapabilities response, enter the corresponding URL in the "
+":guilabel:`Advertised URL` field."
+msgstr ""
+"Als u wilt dat QGIS Server specifieke URL's voor verzoeken vermeldt in het "
+"antwoord van WMS GetCapabilities, voer dan de overeenkomende URL in in het "
+"veld :guilabel:`Gegeven URL`."
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:569
+msgid ""
+"Furthermore, you can restrict the maximum size of the maps returned by the "
+"GetMap request by entering the maximum width and height into the respective "
+"fields under :guilabel:`Maximums for GetMap request`."
+msgstr ""
+"Verder kunt u de maximale grootte van de door het verzoek GetMap "
+"teruggegeven kaarten beperken door de maximale breedte en hoogte in te "
+"voeren in de respectievelijke velden onder :guilabel:`Maxima voor GetMap-"
+"verzoek`."
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:573
+msgid ""
+"If one of your layers uses the :ref:`Map Tip display <maptips>` (i.e. to "
+"show text using expressions) this will be listed inside the GetFeatureInfo "
+"output. If the layer uses a Value Map for one of its attributes, this "
+"information will also be shown in the GetFeatureInfo output."
+msgstr ""
+"Als één van uw lagen de weergave :ref:`Map Tip display <maptips>` (d.i. om "
+"tekst met behulp van expressies weer te geven) zal dit worden vermeld binnen"
+" de uitvoer van GetFeatureInfo. Als de laag een Value Map gebruikt voor één "
+"van zijn attributen, wordt die informatie ook weergegeven in de uitvoer van "
+"GetFeatureInfo. "
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:579
+msgid "WFS capabilities"
+msgstr "WFS-mogelijkheden"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:581
+msgid ""
+"In the :guilabel:`WFS capabilities` area you can select the layers you want "
+"to publish as WFS, and specify if they will allow update, insert and delete "
+"operations. If you enter a URL in the :guilabel:`Advertised URL` field of "
+"the :guilabel:`WFS capabilities` section, QGIS Server will advertise this "
+"specific URL in the WFS GetCapabilities response."
+msgstr ""
+"In het gebied :guilabel:`WFS-mogelijkheden`  kunt u de lagen selecteren die "
+"u wilt publiceren als WFS, en specificeren of zij de bewerkingen Bijwerken, "
+"Toevoegen en Verwijderen zullen toestaan. Als u een URL invoert in het veld "
+":guilabel:`Opgegeven URL` van het gedeelte :guilabel:`WFS-mogelijkheden`, "
+"zal QGIS Server deze specifieke URL opnemen in het antwoord WFS "
+"GetCapabilities."
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:589
+msgid "WCS capabilities"
+msgstr "WCS-mogelijkheden"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:591
+msgid ""
+"In the :guilabel:`WCS capabilities` area, you can select the layers that you"
+" want to publish as WCS. If you enter a URL in the :guilabel:`Advertised "
+"URL` field of the :guilabel:`WCS capabilities` section, QGIS Server will "
+"advertise this specific URL in the WCS GetCapabilities response."
+msgstr ""
+"In het gebied :guilabel:`WCS-mogelijkheden` kunt u de lagen selecteren die u"
+" wilt publiceren als WCS. Als u een URL invoert in het veld "
+":guilabel:`Opgegeven URL` van het gedeelte :guilabel:`WCS-mogelijkheden`, "
+"zal QGIS Server deze specifieke URL opnemen in het antwoord van WCS "
+"GetCapabilities."
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:597
+msgid "Fine tuning your OWS"
+msgstr "Fijn afstemmen van uw OWS"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:599
+msgid ""
+"For vector layers, the :guilabel:`Fields` menu of the :menuselection:`Layer "
+"--> Properties` dialog allows you to define for each attribute if it will be"
+" published or not. By default, all the attributes are published by your WMS "
+"and WFS. If you don't want a specific attribute to be published, uncheck the"
+" corresponding checkbox in the :guilabel:`WMS` or :guilabel:`WFS` column."
+msgstr ""
+"Voor vectorlagen geeft het menu :guilabel:`Velden` van het dialoogvenster "
+":menuselection:`Laag --> Eigenschappen` u de mogelijkheid om voor elk "
+"attribuut te definiëren of het mag worden gepubliceerd of niet. Standaard "
+"worden alle attributen gepubliceerd door uw WMS en WFS. Als u een specifiek "
+"attribuut niet wilt publiceren, deselecteer dan het overeenkomende keuzevak "
+"in de kolom :guilabel:`WMS` of :guilabel:`WFS`."
+
+#: ../../source/docs/user_manual/working_with_ogc/server/getting_started.rst:606
+msgid ""
+"You can overlay watermarks over the maps produced by your WMS by adding text"
+" annotations or SVG annotations to the project file. See the "
+":ref:`sec_annotations` section for instructions on creating annotations. For"
+" annotations to be displayed as watermarks on the WMS output, the "
+":guilabel:`Fixed map position` checkbox in the :guilabel:`Annotation text` "
+"dialog must be unchecked. This can be accessed by double clicking the "
+"annotation while one of the annotation tools is active. For SVG annotations,"
+" you will need either to set the project to save absolute paths (in the "
+":guilabel:`General` menu of the :menuselection:`Project --> Properties...` "
+"dialog) or to manually modify the path to the SVG image so that it "
+"represents a valid relative path."
+msgstr ""
+"U kunt watermerken over uw door WMS geproduceerde kaarten leggen door tekst-"
+"annotaties of SVG-annotaties toe te voegen aan het projectbestand. Bekijk "
+"het gedeelte :ref:`sec_annotations` voor instructies over het maken van "
+"annotaties. Het keuzevak :guilabel:`Vaste positie op kaart` in het "
+"dialoogvenster :guilabel:`Annotatie tekst` moet worden gedeselecteerd om "
+"annotaties als watermerken te laten weergeven op de uitvoer van WMS. Toegang"
+" hiertoe kan worden verkregen door te dubbelklikken op een annotatie als een"
+" van de gereedschappen voor annotaties actief is. Voor SVG-annotaties dient "
+"u ofwel het project in te stellen om absolute paden op te slaan (in het menu"
+" :guilabel:`Algemeen` van het dialoogvenster :menuselection:`Project --> "
+"Eigenschappen…`) of door het pad  voor de SVG-afbeelding handmatig zo aan te"
+" passen dat het een geldig relatief pad weergeeft."
+
+#~ msgid "|updatedisclaimer|"
+#~ msgstr "|updatedisclaimer|"
+
+#~ msgid "Installation"
+#~ msgstr "Installeren"
+
+#~ msgid "Debian/Ubuntu"
+#~ msgstr "Debian/Ubuntu"
+
+#~ msgid "Firstly, add the following Debian GIS repository:"
+#~ msgstr "Voeg als eerste de volgende GIS opslagplaats voor Debian toe:"
+
+#~ msgid "Now, install QGIS Server:"
+#~ msgstr "Installeer nu QGIS Server:"
+
+#~ msgid ""
+#~ "You can also use QGIS Server with `NGINX <http://nginx.org/>`_. Unlike "
+#~ "Apache, NGINX does not automatically spawn a FastCGI process. Actually, you "
+#~ "have to use another component to start these processes."
+#~ msgstr ""
+#~ "U kunt QGIS Server ook gebruiken met `NGINX <http://nginx.org/>`_. Anders "
+#~ "dan bij Apache voert NGINX niet automatisch een proces voor FastCGI uit. "
+#~ "Feitelijk dient u een andere component te gebruiken om deze processen te "
+#~ "starten."
+
+#~ msgid ""
+#~ "To do that on Debian based systems, you may use **fcgiwrap** or **spawn-"
+#~ "fcgi** based on your preferences to run QGIS Server. In both case, you have "
+#~ "to install NGINX:"
+#~ msgstr ""
+#~ "Om dat te doen op op Debian gebaseerde systemen kunt u **fcgiwrap** of "
+#~ "**spawn-fcgi** gebruiken, gebaseerd op uw voorkeuren, om QGIS Server uit te "
+#~ "voeren. In beide gevallen dient u NGINX te installeren:"
+
+#~ msgid ""
+#~ "If you want to use fcgiwrap to run QGIS Server, you firstly have to install "
+#~ "the corresponding package:"
+#~ msgstr ""
+#~ "Als u fcgiwrap wilt gebruiken om QGIS Server uit te voeren, moet u eerst het"
+#~ " corresponderende pakket installeren:"
+
+#~ msgid ""
+#~ "If you prefer to use spawn-fcgi instead of fcgiwrap, the first step is to "
+#~ "install the package:"
+#~ msgstr ""
+#~ "Als het uw voorkeur heeft spawn-fcgi  te gebruiken in plaats van fcgiwrap, "
+#~ "is de eerste stap om het pakket te installeren:"
+
+#~ msgid ""
+#~ "Then, go to the :guilabel:`QGIS Server` menu of the :menuselection:`Project "
+#~ "--> Project Properties` dialog and provide some information about the OWS in"
+#~ " the fields under :guilabel:`Service Capabilities`. This will appear in the "
+#~ "GetCapabilities response of the WMS, WFS or WCS. If you don't check "
+#~ "|checkbox| :guilabel:`Service capabilities`, QGIS Server will use the "
+#~ "information given in the :file:`wms_metadata.xml` file located in the :file"
+#~ ":`cgi-bin` folder."
+#~ msgstr ""
+#~ "Ga dan naar het menu :guilabel:`QGIS Server` van het dialoogvenster "
+#~ ":menuselection:`Project --> Eigenschappen…` en geef enige informatie over de"
+#~ " OWS in de velden onder :guilabel:`Service-mogelijkheden`. Dit zal "
+#~ "verschijnen in het antwoord GetCapabilities van de WMS, WFS of WCS. Als u "
+#~ "|checkbox| :guilabel:`Service-mogelijkheden` niet selecteert zal QGIS Server"
+#~ " de informatie gebruiken die is opgegeven in het bestand "
+#~ ":file:`wms_metadata.xml` dat is opgeslagen in de map :file:`cgi-bin`."
+
+#~ msgid ""
+#~ "If you're using the QGIS project with styling based on SVG files using "
+#~ "relative paths then you should know that the server considers the path "
+#~ "relative to its :file:`qgis_mapserv.fcgi` file (not to the :file:`qgs` "
+#~ "file). So, if you deploy a project on the server and the SVG files are not "
+#~ "placed accordingly, the output images may not respect the Desktop styling. "
+#~ "To ensure this doesn't happen, you can simply copy the SVG files relative to"
+#~ " the :file:`qgis_mapserv.fcgi`. You can also create a symbolic link in the "
+#~ "directory where the fcgi file resides that points to the directory "
+#~ "containing the SVG files (on Linux/Unix)."
+#~ msgstr ""
+#~ "Indien u het project van QGIS gebruikt met opmaak gebaseerd op SVG-bestanden"
+#~ " die relatieve paden gebruiken dan zou u moeten weten dat de server het pad "
+#~ "beschouwt als relatief ten opzichte van zijn bestand "
+#~ ":file:`qgis_mapserv.fcgi` (niet ten opzichte van het bestand :file:`qgs`). "
+#~ "Dus, indien u een project opzet op de server en de bestanden van SVG zijn "
+#~ "niet overeenkomstig geplaatst, zouden de uitgevoerde afbeeldingen niet "
+#~ "hoeven voldoen aan de opmaak van de Desktop. U kunt eenvoudigweg de SVG-"
+#~ "bestanden relatief kopiëren ten opzichte van :file:`qgis_mapserv.fcgi` om er"
+#~ " voor te zorgen dat dit niet voorkomt. U kunt ook een symbolische koppeling "
+#~ "maken in de map waar het fcgi-bestand staat, die verwijst naar de map die de"
+#~ " SVG-bestanden bevat (op Linux/Unix)."
+
+#~ msgid ""
+#~ "In the :guilabel:`WMS capabilities` section, you can define the extent "
+#~ "advertised in the WMS GetCapabilities response by entering the minimum and "
+#~ "maximum X and Y values in the fields under :guilabel:`Advertised extent`. "
+#~ "Clicking :guilabel:`Use Current Canvas Extent` sets these values to the "
+#~ "extent currently displayed in the QGIS map canvas. By checking |checkbox| "
+#~ ":guilabel:`CRS restrictions`, you can restrict in which coordinate reference"
+#~ " systems (CRS) QGIS Server will offer to render maps. Use the |signPlus| "
+#~ "button below to select those CRSs from the Coordinate Reference System "
+#~ "Selector, or click :guilabel:`Used` to add the CRSs used in the QGIS project"
+#~ " to the list."
+#~ msgstr ""
+#~ "In het gedeelte :guilabel:`WMS-mogelijkheden` kunt u het bereik definiëren "
+#~ "dat zal worden opgenomen in het antwoord van de WMS GetCapabilities door de "
+#~ "minimum en maximum waarden voor X en Y in de velden onder "
+#~ ":guilabel:`Opgegeven bereik` in te voeren. Klikken op :guilabel:`Huidige "
+#~ "bereik van kaartvenster gebruiken` stelt deze waarden in op het bereik dat "
+#~ "momenteel wordt weergegeven in het kaartvenster van QGIS. Door |checkbox| "
+#~ ":guilabel:`CRS-beperkingen` te selecteren kunt u beperken in welke "
+#~ "coördinaten referentiesystemen (CRS) QGIS Server zal aanbieden de kaarten te"
+#~ " renderen. Gebruik de knop |signPlus| onderin om het CRS te selecteren uit "
+#~ "de selectie voor Coördinaten ReferentieSysteem, of klik op "
+#~ ":guilabel:`Huidige gebruikte` om het in het project van QGIS gebruikte CRS "
+#~ "aan de lijst toe te voegen."
+
+#~ msgid ""
+#~ "If you have print composers defined in your project, they will be listed in "
+#~ "the `GetProjectSettings` response, and they can be used by the GetPrint "
+#~ "request to create prints, using one of the print composer layouts as a "
+#~ "template. This is a QGIS-specific extension to the WMS 1.3.0 specification. "
+#~ "If you want to exclude any print composer from being published by the WMS, "
+#~ "check |checkbox| :guilabel:`Exclude composers` and click the |signPlus| "
+#~ "button below. Then, select a print composer from the :guilabel:`Select print"
+#~ " composer` dialog in order to add it to the excluded composers list."
+#~ msgstr ""
+#~ "Als u printvormgevingen hebt gedefinieerd  in uw project, zullen zij worden "
+#~ "vermeld in het antwoord GetCapabilities en zij kunnen worden gebruikt in het"
+#~ " verzoek GetPrint om afdrukken te maken, met behulp van een van de lay-outs "
+#~ "voor de printvormgeving als een sjabloon. Dit is een QGIS-specifieke "
+#~ "uitbreiding aan de specificatie voor WMS 1.3.0. Indien u niet wilt dat een "
+#~ "printvormgeving wordt gepubliceerd door de WMS, selecteer dan |checkbox| "
+#~ ":guilabel:`Printvormgeving uitsluiten` en klik op de knop  |signPlus| "
+#~ "onderin. Selecteer dan een printvormgeving vanuit het dialoogvenster "
+#~ ":guilabel:`Selecteer printvormgeving` om die toe te voegen aan de lijst met "
+#~ "uitgesloten printvormgevingen."
+
+#~ msgid ""
+#~ "If you want to exclude any layer or layer group from being published by the "
+#~ "WMS, check |checkbox| :guilabel:`Exclude Layers` and click the |signPlus| "
+#~ "button below. This opens the :guilabel:`Select restricted layers and groups`"
+#~ " dialog, which allows you to choose the layers and groups that you don't "
+#~ "want to be published. Use the :kbd:`Shift` or :kbd:`Ctrl` key if you want to"
+#~ " select multiple entries."
+#~ msgstr ""
+#~ "Indien u niet wilt dat een laag of groep lagen wordt gepubliceerd door de "
+#~ "WMS, selecteer dan |checkbox| :guilabel:`Kaartlagen uitsluiten` en klik op "
+#~ "de knop |signPlus| onderin. Dit opent het dialoogvenster "
+#~ ":guilabel:`Selecteer lagen en groepen met restricties` dat u in staat stelt "
+#~ "de lagen en groepen te kiezen die u niet wilt  publiceren. Gebruik de "
+#~ "toetsen :kbd:`Shift` of :kbd:`Ctrl` als u meerdere items wilt selecteren."
+
+#~ msgid ""
+#~ "If you wish, you can check |checkbox| :guilabel:`Add geometry to feature "
+#~ "response`. This will include in the GetFeatureInfo response the geometries "
+#~ "of the features in a text format. If you want QGIS Server to advertise "
+#~ "specific request URLs in the WMS GetCapabilities response, enter the "
+#~ "corresponding URL in the :guilabel:`Advertised URL` field. Furthermore, you "
+#~ "can restrict the maximum size of the maps returned by the GetMap request by "
+#~ "entering the maximum width and height into the respective fields under "
+#~ ":guilabel:`Maximums for GetMap request`."
+#~ msgstr ""
+#~ "Als u dat wilt kunt u |checkbox| :guilabel:`Geometrie aan feature response "
+#~ "toevoegen` selecteren. Dit zal in het antwoord van GetFeatureInfo de "
+#~ "geometrieën opnemen van de objecten in tekstindeling. Als u wilt dat QGIS "
+#~ "Server specifieke URL's voor verzoeken opneemt in het antwoord van WMS "
+#~ "GetCapabilities, voer dan de overeenkomende URL in in het veld "
+#~ ":guilabel:`Opgegeven URL`. Verder kunt u de maximale grootte van de kaarten "
+#~ "instellen die worden teruggegeven door het verzoek GetMap door de  maximum "
+#~ "breedte en hoogte in te voeren in de respectievelijke velden onder "
+#~ ":guilabel:`Maxima voor GetMap-verzoek`."
+
+#~ msgid ""
+#~ "You can overlay watermarks over the maps produced by your WMS by adding text"
+#~ " annotations or SVG annotations to the project file. See the "
+#~ ":ref:`sec_annotations` section for instructions on creating annotations. For"
+#~ " annotations to be displayed as watermarks on the WMS output, the "
+#~ ":guilabel:`Fixed map position` checkbox in the :guilabel:`Annotation text` "
+#~ "dialog must be unchecked. This can be accessed by double clicking the "
+#~ "annotation while one of the annotation tools is active. For SVG annotations,"
+#~ " you will need either to set the project to save absolute paths (in the "
+#~ ":guilabel:`General` menu of the :menuselection:`Project --> Project "
+#~ "Properties` dialog) or to manually modify the path to the SVG image so that "
+#~ "it represents a valid relative path."
+#~ msgstr ""
+#~ "U kunt watermerken over uw door WMS geproduceerde kaarten leggen door tekst-"
+#~ "annotaties of SVG-annotaties toe te voegen aan het projectbestand. Bekijk "
+#~ "het gedeelte :ref:`sec_annotations` voor instructies over het maken van "
+#~ "annotaties. Het keuzevak :guilabel:`Vaste positie op kaart` in het "
+#~ "dialoogvenster :guilabel:`Annotatie tekst` moet worden gedeselecteerd om "
+#~ "annotaties als watermerken te laten weergeven op de uitvoer van WMS. Toegang"
+#~ " hiertoe kan worden verkregen door te dubbelklikken op een annotatie als een"
+#~ " van de gereedschappen voor annotaties actief is. Voor SVG-annotaties dient "
+#~ "u ofwel het project in te stellen om absolute paden op te slaan (in het menu"
+#~ " :guilabel:`Algemeen` van het dialoogvenster :menuselection:`Project --> "
+#~ "Projecteigenschappen`) of door het pad  voor de SVG-afbeelding handmatig zo "
+#~ "aan te passen dat het een geldig relatief pad weergeeft."
+
+#~ msgid ""
+#~ "Once QGIS Server is installed, let's configure the environment and enable "
+#~ "it."
+#~ msgstr ""
+#~ "Als QGIS Server eenmaal is geïnstalleerd, kunnen we de omgeving configureren"
+#~ " en inschakelen."
+
+#~ msgid ""
+#~ "Install the Apache server in a separate virtual host listening on port "
+#~ "``80``. Enable the rewrite module to pass HTTP BASIC auth headers:"
+#~ msgstr ""
+#~ "Installeer de Apache server in een afzonderlijke virtual host luisterend "
+#~ "naar poort ``80``. Schakel de module rewrite in om HTTP BASIC auth headers "
+#~ "door te kunnen geven:"
+
+#~ msgid ""
+#~ "This is the virtual host configuration, stored in :file:`/etc/apache2/sites-"
+#~ "available/001-qgis-server.conf`:"
+#~ msgstr ""
+#~ "Dit is de configuratie voor de virtual host, opgeslagen in "
+#~ ":file:`/etc/apache2/sites-available/001-qgis-server.conf`:"
+
+#~ msgid ""
+#~ "Moreover, you can use some :ref:`qgis-server-envvar` to configure QGIS "
+#~ "Server. With Apache as HTTP Server, you have to use ``FcgidInitialEnv`` to "
+#~ "define these variables as shown below:"
+#~ msgstr ""
+#~ "Meer nog, u kunt enkele :ref:`qgis-server-envvar` gebruiken om QGIS Server "
+#~ "te configureren. Met Apache als HTTP-server moet u ``FcgidInitialEnv`` "
+#~ "gebruiken om deze variabelen, zoals hieronder weergegeven, te definiëren:"
+
+#~ msgid "Start"
+#~ msgstr "Start"
+
+#~ msgid "Now enable the virtual host and restart Apache:"
+#~ msgstr "Schakel nu de virtual host in en start Apache opnieuw:"
+
+#~ msgid ""
+#~ "QGIS Server is now available at http://localhost/cgi-bin/qgis-server.cgi."
+#~ msgstr ""
+#~ "QGIS Server is nu beschikbaar op http://localhost/cgi-bin/qgis-server.cgi."

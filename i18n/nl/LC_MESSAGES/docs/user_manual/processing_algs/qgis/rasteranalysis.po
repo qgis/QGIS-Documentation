@@ -1,0 +1,1846 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+# 
+# Translators:
+# Dick Groskamp, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-06 11:48+0100\n"
+"PO-Revision-Date: 2019-04-07 13:57+0000\n"
+"Last-Translator: Dick Groskamp, 2019\n"
+"Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:8
+msgid "Raster analysis"
+msgstr "Rasteranalyse"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:19
+msgid "Raster calculator"
+msgstr "Raster calculator"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:20
+msgid "Performs algebraic operations using raster layers."
+msgstr "Voert algebraïsche bewerkingen uit op rasterlagen."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:22
+msgid ""
+"The resulting layer will have its values computed according to an "
+"expression. The expression can contain numerical values, operators and "
+"references to any of the layers in the current project."
+msgstr ""
+"De resulterende laag zal zijn waarden hebben berekend overeenkomstig een "
+"expressie. De expressie mag numerieke waarden, operatoren en verwijzingen "
+"bevatten naar elk van de lagen in het huidige project."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:27
+msgid ""
+"When using the calculator in :ref:`processing_batch` or from the "
+":ref:`console` the files to use have to be specified. The corresponding "
+"layers are referred using the base name of the file (without the full path)."
+" For instance, if using a layer at ``path/to/my/rasterfile.tif``, the first "
+"band of that layer will be referred as ``rasterfile.tif@1``."
+msgstr ""
+"Bij het gebruiken van de calculator in :ref:`processing_batch` of vanuit de "
+":ref:`console` moeten de te gebruiken bestanden worden gespecificeerd. Naar "
+"de corresponderende lagen wordt verwezen met de basisnaam van het bestand "
+"(zonder het volledige pad). Als bijvoorbeeld een laag wordt gebruikt vanuit "
+"``pad/naar/mijn/rasterbestand.tif``, zal naar de eerste band van die laag "
+"worden verwezen als ``rasterbestand.tif@1``."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:35
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:148
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:247
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:364
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:487
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:602
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:679
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:758
+msgid "Parameters"
+msgstr "Parameters"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:42
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:130
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:155
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:191
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:254
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:304
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:371
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:469
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:494
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:581
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:609
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:651
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:686
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:737
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:765
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:823
+msgid "Label"
+msgstr "Label"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:43
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:131
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:156
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:192
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:255
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:305
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:372
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:470
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:495
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:582
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:610
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:652
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:687
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:738
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:766
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:824
+msgid "Name"
+msgstr "Naam"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:44
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:132
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:157
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:193
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:256
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:306
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:373
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:471
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:496
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:583
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:611
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:653
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:688
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:739
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:767
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:825
+msgid "Type"
+msgstr "Type"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:45
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:133
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:158
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:194
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:257
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:307
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:374
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:472
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:497
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:584
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:612
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:654
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:689
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:740
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:768
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:826
+msgid "Description"
+msgstr "Beschrijving"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:46
+msgid "**Layers**"
+msgstr "**Lagen**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:47
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:57
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:68
+msgid "GUI only"
+msgstr "Alleen GUI"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:49
+msgid ""
+"Shows the list of all raster layers loaded in the legend. These can be used "
+"to fill the expression box (double click to add). Raster layers are referred"
+" by their name and the number of the band: ``layer_name@band_number``. For "
+"instance, the first band from a layer named ``DEM`` will be referred as "
+"``DEM@1``."
+msgstr ""
+"Vermeld de lijst met alle rasterlagen die zijn geladen in de legenda. Deze "
+"kunnen worden gebruikt om het vak voor de expressie te vullen (dubbelklikken"
+" om toe te voegen). Naar rasterlagen wordt verwezen met hun naam en het "
+"nummer van de band: ``laag_naam@band_nummer``. Naar bijvoorbeeld de eerste "
+"band van een laag genaamd ``DEM`` zal worden verwezen als ``DEM@1``."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:56
+msgid "**Operators**"
+msgstr "**Operatoren**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:59
+msgid ""
+"Contains some calculator like buttons that can be used to fill the "
+"expression box."
+msgstr ""
+"Bevat enkele knoppen, zoals op rekenmachines, die kunnen worden gebruikt om "
+"het vak voor de expressie te vullen."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:61
+msgid "**Expression**"
+msgstr "**Expressie**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:62
+msgid "``EXPRESSION``"
+msgstr "``EXPRESSION``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:63
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:623
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:709
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:789
+msgid "[string]"
+msgstr "[tekenreeks]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:64
+msgid ""
+"Expression that will be used to calculate the output raster layer. You can "
+"use the operator buttons provided to type directly the expression in this "
+"box."
+msgstr ""
+"Expressie die zal worden gebruikt om de uitvoer rasterlaag te berekenen. U "
+"kunt de verschafte knoppen met operatoren gebruiken om de expressie direct "
+"in dit vak te typen."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:67
+msgid "**Predefined expressions**"
+msgstr "**Vooraf gedefinieerde expressies**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:70
+msgid ""
+"You can use the predefined ``NDVI`` expression or you can define new "
+"expressions for calculations. The :guilabel:`Add...` button loads a defined "
+"expression (and lets you set the parameters). The :guilabel:`Save...` button"
+" lets you define a new expression."
+msgstr ""
+"U kunt de vooraf gedefinieerde expressie ``NDVI`` of u kunt nieuwe "
+"expressies voor berekeningen maken. De knop :guilabel:`Toevoegen…` laadt een"
+" gedefinieerde expressie (en laat u de parameters instellen). De knop "
+":guilabel:`Opslaan…` laat u een nieuwe expressie definiëren."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:75
+msgid "**Reference layer(s) (used for automated extent, cellsize, and CRS)**"
+msgstr ""
+"**Verwijzingsla(a)g(en) (gebruikt voor automatisch bereik, celgrootte en "
+"CRS)**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:77
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:89
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:104
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:707
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:787
+msgid "Optional"
+msgstr "Optioneel"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:78
+msgid "``LAYERS``"
+msgstr "``LAYERS``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:79
+msgid "[raster] [list]"
+msgstr "[raster] [lijst]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:80
+msgid ""
+"Layer(s) that will be used to fetch extent, cell size and CRS. By choosing "
+"the layer in this box you avoid filling in all the other parameters by hand."
+" Raster layers are referred by their name and the number of the band: "
+"``layer_name@band_number``. For instance, the first band from a layer named "
+"``DEM`` will be referred as ``DEM@1``."
+msgstr ""
+"La(a)g(en) die zullen worden gebruikt om bereik, celgrootte en CRS op te "
+"halen. Door de laag in dit vak te selecteren vermijd u het handmatig "
+"invullen van alle andere parameters. Naar rasterlagen wordt verwezen met hun"
+" naam en het nummer van de band: ``laag_naam@band_nummer``. Naar "
+"bijvoorbeeld de eerste band van een laag genaamd ``DEM`` zal worden verwezen"
+" als ``DEM@1``."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:87
+msgid "**Cell size (use 0 or empty to set it automatically)**"
+msgstr "**Celgrootte (gebruik 0 of laat leeg om automatisch in te stellen)**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:90
+msgid "``CELLSIZE``"
+msgstr "``CELLSIZE``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:91
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:197
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:201
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:205
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:224
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:228
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:232
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:236
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:318
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:322
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:326
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:352
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:406
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:518
+msgid "[number]"
+msgstr "[getal]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:92
+msgid ""
+"Cell size of the output raster layer. If the cell size is not specified, the"
+" minimum cell size of the selected reference layer(s) will be used. The cell"
+" size will be the same for the X and Y axes."
+msgstr ""
+"Celgrootte van de uitvoer rasterlaag. Als de celgrootte niet wordt "
+"gespecificeerd, zal de minimum celgrootte van de geselecteerde "
+"verwijzingsla(a)g(en) worden gebruikt. De celgrootte is hetzelfde voor zowel"
+" de X- als de Y-as."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:96
+msgid "**Output extent (xmin, xmax, ymin, ymax)**"
+msgstr "**Uitvoer bereik (xmin, xmax, ymin, ymax)**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:97
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:313
+msgid "``EXTENT``"
+msgstr "``EXTENT``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:98
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:314
+msgid "[extent]"
+msgstr "[bereik]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:99
+msgid ""
+"Extent of the output raster layer. If the extent is not specified, the "
+"minimum extent that covers all the selected reference layers will be used."
+msgstr ""
+"Bereik van de uitvoer rasterlaag. Als het bereik niet is gespecificeerd, zal"
+" het minimale bereik, dat alle geselecteerde verwijzingslagen bedekt, worden"
+" gebruikt."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:102
+msgid "**Output CRS**"
+msgstr "**Uitvoer CRS**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:105
+msgid "``CRS``"
+msgstr "``CRS``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:106
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:310
+msgid "[crs]"
+msgstr "[crs]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:107
+msgid ""
+"CRS of the output raster layer. If the output CRS is not specified, the CRS "
+"of the first reference layer will be used."
+msgstr ""
+"CRS van de uitvoer rasterlaag. Als het CRS niet is gespecificeerd, zal het "
+"CRS van de eerste verwijzingslaag worden gebruikt."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:110
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:134
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:170
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:207
+msgid "**Output**"
+msgstr "**Uitvoer**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:111
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:135
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:452
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:474
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:564
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:586
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:628
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:656
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:714
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:742
+msgid "``OUTPUT``"
+msgstr "``OUTPUT``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:112
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:136
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:161
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:260
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:377
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:453
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:475
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:500
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:565
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:587
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:619
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:692
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:771
+msgid "[raster]"
+msgstr "[raster]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:114
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:174
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:273
+msgid "Default: ``[Save to temporary file]``"
+msgstr "Standaard: ``[Opslaan naar tijdelijk bestand]``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:115
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:454
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:566
+msgid "Specification of the output raster. One of:"
+msgstr "Specificatie van het uitvoerraster. Één van:"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:117
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:178
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:277
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:456
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:568
+msgid "Save to a Temporary File"
+msgstr "Opslaan naar tijdelijk bestand"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:118
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:179
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:278
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:290
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:457
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:569
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:637
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:723
+msgid "Save to File..."
+msgstr "Opslaan naar bestand…"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:120
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:181
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:280
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:294
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:459
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:571
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:641
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:727
+msgid "The file encoding can also be changed here."
+msgstr "De bestandscodering kan hier ook gewijzigd worden."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:123
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:184
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:297
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:462
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:574
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:644
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:730
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:816
+msgid "Outputs"
+msgstr "Uitvoer"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:137
+msgid "Output raster file with the calculated values."
+msgstr "Uitvoer rasterbestand met de berekende waarden."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:143
+msgid "Raster layer statistics"
+msgstr "Raster laagstatistieken"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:144
+msgid ""
+"Calculates basic statistics from the values in a given band of the raster "
+"layer. The output is loaded in the :menuselection:`Processing --> Results "
+"viewer` menu."
+msgstr ""
+"Berekent basisstatistieken uit de waarden van een opgegeven band van de "
+"rasterlaag. De uitvoer wordt geladen in het menu :menuselection:`Processing "
+"--> Resultaten bekijken`."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:159
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:258
+msgid "**Input layer**"
+msgstr "**Invoerlaag**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:160
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:259
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:614
+msgid "``INPUT``"
+msgstr "``INPUT``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:162
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:261
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:693
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:772
+msgid "Input raster layer"
+msgstr "**Invoer rasterlaag**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:163
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:262
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:379
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:502
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:694
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:773
+msgid "**Band number**"
+msgstr "**Bandnummer**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:164
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:263
+msgid "``BAND``"
+msgstr "``BAND``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:165
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:264
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:381
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:504
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:696
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:775
+msgid "[raster band]"
+msgstr "[rasterband]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:167
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:266
+msgid "Default: The first band of the input layer"
+msgstr "Standaard: De eerste band van de invoerlaag"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:168
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:267
+msgid ""
+"If the raster is multiband, choose the band you want to get statistics for."
+msgstr ""
+"Als het raster meerdere banden bevat, kies de band waarvan u de statistieken"
+" wilt hebben."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:171
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:208
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:270
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:329
+msgid "``OUTPUT_HTML_FILE``"
+msgstr "``OUTPUT_HTML_FILE``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:172
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:209
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:330
+msgid "[html]"
+msgstr "[html]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:175
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:274
+msgid "Specification of the output file:"
+msgstr "Specificatie van het uitvoerbestand."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:177
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:276
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:288
+msgid "Skip Output"
+msgstr "Uitvoer overslaan"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:195
+msgid "**Maximum value**"
+msgstr "**Maximum waarde**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:196
+msgid "``MAX``"
+msgstr "``MAX``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:199
+msgid "**Mean value**"
+msgstr "**Gemiddelde waarde**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:200
+msgid "``MEAN``"
+msgstr "``MEAN``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:203
+msgid "**Minimum value**"
+msgstr "**Minimum waarde**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:204
+msgid "``MIN``"
+msgstr "``MIN``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:210
+msgid "The output file contains the following information:"
+msgstr "Het uitvoerbestand dat de volgende informatie bevat:"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:212
+msgid "Analyzed file: path of the raster layer"
+msgstr "Geanalyseerd bestand: pad van de rasterlaag"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:213
+msgid "Minimum value: minimum value of the raster"
+msgstr "Minimum waarde: minimum waarde van het raster"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:214
+msgid "Maximum value: maximum value of the raster"
+msgstr "Maximum waarde: maximum waarde van het raster"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:215
+msgid "Range: difference between the maximum and minimum values"
+msgstr "Bereik: verschil tussen de maximum en de minimum waarden"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:216
+msgid "Sum: total sum of the values"
+msgstr "Som: totale som van de waarden"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:217
+msgid "Mean value: mean of the values"
+msgstr "Gemiddelde waarde: gemiddelde van de waarden"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:218
+msgid "Standard deviation: standard deviation of the values"
+msgstr "Standaard afwijking: standaard afwijking van de waarden"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:219
+msgid ""
+"Sum of the squares: sum of the squared differences of each observation from "
+"the overall mean"
+msgstr ""
+"Som van de vierkanten: som van de vierkante verschillen van elke observatie "
+"uit het algehele gemiddelde"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:222
+msgid "**Range**"
+msgstr "**Bereik**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:223
+msgid "``RANGE``"
+msgstr "``RANGE``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:226
+msgid "**Standard deviation**"
+msgstr "**Standaard afwijking**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:227
+msgid "``STD_DEV``"
+msgstr "``STD_DEV``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:230
+msgid "**Sum**"
+msgstr "**Som**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:231
+msgid "``SUM``"
+msgstr "``SUM``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:234
+msgid "**Sum of the squares**"
+msgstr "**Kwadraatsom**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:235
+msgid "``SUM_OF_SQUARES``"
+msgstr "``SUM_OF_SQUARES``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:243
+msgid "Raster layer unique values report"
+msgstr "Rasterlaag rapport unieke waarden"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:244
+msgid ""
+"Returns the count and area of each unique value in a given raster layer."
+msgstr ""
+"Geeft de telling en het gebied terug van elke unieke waarde in een opgegeven"
+" rasterlaag."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:269
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:328
+msgid "**Unique values report**"
+msgstr "**Rapport Unieke waarden**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:271
+msgid "[file]"
+msgstr "[bestand]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:281
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:340
+msgid "**Unique values table**"
+msgstr "**Tabel Unieke waarden**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:282
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:341
+msgid "``OUTPUT_TABLE``"
+msgstr "``OUTPUT_TABLE``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:283
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:342
+msgid "[table]"
+msgstr "[tabel]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:285
+msgid "Default: ``[Skip output]``"
+msgstr "Standaard: ``[Uitvoer overslaan]``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:286
+msgid "Specification of the table for unique values:"
+msgstr "Specificatie van de tabel voor unieke waarden:"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:289
+msgid "Create Temporary Layer"
+msgstr "Tijdelijke laag maken"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:291
+msgid "Save to GeoPackage..."
+msgstr "Opslaan naar GeoPackage…"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:292
+msgid "Save to PostGIS Table..."
+msgstr "Opslaan als tabel voor PostGIS…"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:308
+msgid "**CRS authority identifier**"
+msgstr "**CRS identificatie autoriteit**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:309
+msgid "``CRS_AUTHID``"
+msgstr "``CRS_AUTHID``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:312
+msgid "**Extent**"
+msgstr "**Bereik**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:316
+msgid "**Height in pixels**"
+msgstr "**Hoogte in pixels**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:317
+msgid "``HEIGHT_IN_PIXELS``"
+msgstr "``HEIGHT_IN_PIXELS``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:320
+msgid "**NODATA pixel count**"
+msgstr "**Telling pixels NODATA**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:321
+msgid "``NODATA_PIXEL_COUNT``"
+msgstr "``NODATA_PIXEL_COUNT``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:324
+msgid "**Total pixel count**"
+msgstr "**Totaal aantal pixels**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:325
+msgid "``TOTAL_PIXEL_COUNT``"
+msgstr "``TOTAL_PIXEL_COUNT``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:331
+msgid "The output HTML file contains the following information:"
+msgstr "Het uitvoer HTML-bestand bevat de volgende informatie:"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:333
+msgid "Analyzed file: the path of the raster layer"
+msgstr "Geanalyseerd bestand: het pad van de rasterlaag"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:334
+msgid "Extent: xmin, ymin, xmax, ymax coordinates of the extent"
+msgstr "Bereik: xmin, ymin, xmax, ymax coördinaten van het bereik"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:335
+msgid "Projection: projection of the layer"
+msgstr "Projectie: projectie van de laag"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:336
+msgid "Width in pixels: number of columns and pixel width size"
+msgstr "Breedte in pixels: aantal kolommen en grootte pixelbreedte"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:337
+msgid "Height in pixels: number of rows and pixel width size"
+msgstr "Hoogte in pixels: aantal rijen en grootte pixelbreedte"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:338
+msgid "Total pixel count: count of all the pixels"
+msgstr "Totaal aantal pixels: telling van alle pixels"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:339
+msgid "NODATA pixel count: count of pixels with NODATA value"
+msgstr "Aantal pixels NODATA: telling aantal pixels met waarde NODATA"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:343
+msgid "A table with three columns:"
+msgstr "Een tabel met drie kolommen:"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:345
+msgid "*value*: pixel value"
+msgstr "*waarde*: pixelwaarde"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:346
+msgid "*count*: count of pixels with this value"
+msgstr "*aantal*: telling van pixels met deze waarde"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:347
+msgid "*m*\\ :sup:`2`: total area in square meters of pixels with this value."
+msgstr ""
+"*m*\\ :sup:`2`: totale gebied in vierkante meters van pixels met deze "
+"waarde."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:350
+msgid "**Width in pixels**"
+msgstr "**Breedte in pixels**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:351
+msgid "``WIDTH_IN_PIXELS``"
+msgstr "``WIDTH_IN_PIXELS``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:359
+msgid "Reclassify by layer"
+msgstr "Opnieuw classificeren op laag"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:360
+msgid ""
+"Reclassifies a raster band by assigning new class values based on the ranges"
+" specified in a vector table."
+msgstr ""
+"Classificeert een rasterband opnieuw door nieuwe waarden voor klassen toe te"
+" wijzen, gebaseerd op de gespecificeerde bereiken in een vectortabel."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:375
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:498
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:690
+msgid "**Raster layer**"
+msgstr "**Rasterlaag**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:376
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:499
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:691
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:770
+msgid "``INPUT_RASTER``"
+msgstr "``INPUT_RASTER``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:378
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:501
+msgid "Raster layer to reclassify"
+msgstr "Rasterlaag die opnieuw moet worden geclassificeerd"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:380
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:503
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:695
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:774
+msgid "``RASTER_BAND``"
+msgstr "``RASTER_BAND``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:383
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:506
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:777
+msgid "Default: The first band of the raster layer"
+msgstr "Standaard: De eerste band van de rasterlaag"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:384
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:507
+msgid "If the raster is multiband, choose the band you want to reclassify."
+msgstr ""
+"Als het raster meerdere banden bevat, kies dan de band die u opnieuw wilt "
+"classificeren."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:386
+msgid "**Layer containing class breaks**"
+msgstr "**Laag die de overgangen van klassen bevat**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:387
+msgid "``INPUT_TABLE``"
+msgstr "``INPUT_TABLE``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:388
+msgid "[vector: any]"
+msgstr "[vector: elke]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:389
+msgid "Vector layer containing the values to use for classification."
+msgstr ""
+"Vectorlaag die de waarden bevat die moeten worden gebruikt voor het "
+"classificeren."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:390
+msgid "**Minimum class value field**"
+msgstr "**Veld voor minimum waarde klasse**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:391
+msgid "``MIN_FIELD``"
+msgstr "``MIN_FIELD``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:392
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:396
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:400
+msgid "[tablefield: numeric]"
+msgstr "[tabelveld: numeriek]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:393
+msgid "Field with the minimum value of the range for the class."
+msgstr "Veld met de minimum waarde van het bereik voor de klasse."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:394
+msgid "**Maximum class value field**"
+msgstr "**Veld voor maximum waarde klasse**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:395
+msgid "``MAX_FIELD``"
+msgstr "``MAX_FIELD``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:397
+msgid "Field with the maximum value of the range for the class."
+msgstr "Veld met de maximum waarde van het bereik voor de klasse."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:398
+msgid "**Output value field**"
+msgstr "**Veld uitvoerwaarde**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:399
+msgid "``VALUE_FIELD``"
+msgstr "``VALUE_FIELD``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:401
+msgid ""
+"Field with the value that will be assigned to the pixels that fall in the "
+"class (between the corresponding min and max values)."
+msgstr ""
+"Veld met de waarde die zal worden toegewezen aan de pixels die vallen in de "
+"klasse (tussen de overeenkomende min en max waarden)."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:404
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:516
+msgid "**Output no data value**"
+msgstr "**Uitvoer waarde 'Geen gegevens'**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:405
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:517
+msgid "``NO_DATA``"
+msgstr "``NO_DATA``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:408
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:520
+msgid "Default: -9999.0"
+msgstr "Standaard: -9999.0"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:409
+msgid "Value to apply to no data values."
+msgstr "Waarde om toe te passen op waarden Geen gegevens."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:410
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:522
+msgid "**Range boundaries**"
+msgstr "**Grenzen bereik**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:411
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:523
+msgid "``RANGE_BOUNDARIES``"
+msgstr "``RANGE_BOUNDARIES``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:412
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:433
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:524
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:545
+msgid "[enumeration]"
+msgstr "[enumeratie]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:414
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:526
+msgid "Default: 0"
+msgstr "Standaard: 0"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:415
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:527
+msgid "Defines comparison rules for the classification. Options:"
+msgstr "Definieert regels voor vergelijking voor het classificeren. Opties:"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:418
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:530
+msgid "0 --- min < value <= max"
+msgstr "0 --- min < waarde <= max"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:419
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:531
+msgid "1 --- min <= value < max"
+msgstr "1 --- min <= waarde < max"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:420
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:532
+msgid "2 --- min <= value <= max"
+msgstr "2 --- min <= waarde <= max"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:421
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:533
+msgid "3 --- min < value < max"
+msgstr "3 --- min < waarde < max"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:423
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:535
+msgid "**Use no data when no range matches value**"
+msgstr "**Geen gegevens gebruiken als geen bereik overeenkomt met waarde**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:424
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:536
+msgid "``NODATA_FOR_MISSING``"
+msgstr "``NODATA_FOR_MISSING``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:425
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:537
+msgid "[boolean]"
+msgstr "[Booleaanse waarde]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:427
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:539
+msgid "Default: False"
+msgstr "Standaard: False"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:428
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:540
+msgid ""
+"Values that do not belong to a class will result in the no data value. If "
+"False, the original value is kept."
+msgstr ""
+"Waarden die niet behoren tot een klasse zullen resulteren in de waarde 'Geen"
+" gegevens'. Indien False wordt de originele waarde behouden."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:431
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:543
+msgid "**Output data type**"
+msgstr "**Type uitvoergegevens**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:432
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:544
+msgid "``DATA_TYPE``"
+msgstr "``DATA_TYPE``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:435
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:547
+msgid "Default: 5"
+msgstr "Standaard: 5"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:436
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:548
+msgid "Defines the data type of the output raster file. Options:"
+msgstr "Definieert het gegevenstype voor het uitvoer rasterbestand. Opties:"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:439
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:551
+msgid "0 --- Byte"
+msgstr "0 --- Byte"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:440
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:552
+msgid "1 --- Int16"
+msgstr "1 --- Int16"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:441
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:553
+msgid "2 --- UInt16"
+msgstr "2 --- UInt16"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:442
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:554
+msgid "3 --- UInt32"
+msgstr "3 --- UInt32"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:443
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:555
+msgid "4 --- Int32"
+msgstr "4 --- Int32"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:444
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:556
+msgid "5 --- Float32"
+msgstr "5 --- Float32"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:445
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:557
+msgid "6 --- Float64"
+msgstr "6 --- Float64"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:446
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:558
+msgid "7 --- CInt16"
+msgstr "7 --- CInt16"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:447
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:559
+msgid "8 --- CInt32"
+msgstr "8 --- CInt32"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:448
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:560
+msgid "9 --- CFloat32"
+msgstr "9 --- CFloat32"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:449
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:561
+msgid "10 --- CFloat64"
+msgstr "10 --- CFloat64"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:451
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:473
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:563
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:585
+msgid "**Reclassified raster**"
+msgstr "**Opnieuw geclassificeerd raster**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:476
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:588
+msgid "Output raster layer with reclassified band values"
+msgstr "Uitvoer rasterlaag met opnieuw geclassificeerde bandwaarden"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:482
+msgid "Reclassify by table"
+msgstr "Opnieuw classificeren op tabel"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:483
+msgid ""
+"Reclassifies a raster band by assigning new class values based on the ranges"
+" specified in a fixed table."
+msgstr ""
+"Classificeert een rasterband opnieuw door nieuwe waarden voor klassen toe te"
+" wijzen, gebaseerd op de gespecificeerde bereiken in een vaste tabel."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:509
+msgid "**Reclassification table**"
+msgstr "**Tabel voor opnieuw classificeren**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:510
+msgid "``TABLE``"
+msgstr "``TABLE``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:511
+msgid "[matrix]"
+msgstr "[matrix]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:512
+msgid ""
+"A 3-columns table (formatted as a list of nine numbers) containing the "
+"values to use for class boundaries  (``Minimum`` and ``Maximum``) and the "
+"new ``Value`` to assign to the band values that fall in the class."
+msgstr ""
+"Een tabel met 3 kolommen (opgemaakt als een lijst met negen nummers) die de "
+"waarden bevat voor de grenzen van de klassen, (``Minimum`` en ``Maximum``) "
+"en de nieuwe ``Waarde`` om toe te wijzen aan de bandwaarden die in die "
+"klasse vallen."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:521
+msgid "Value to use for nodata in the output"
+msgstr "Te gebruiken waarde voor 'Geen gegevens' in de uitvoer"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:594
+msgid "Sample raster values"
+msgstr "Monster rasterwaarden"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:595
+msgid ""
+"Extracts raster values at the point locations. If the raster layer is "
+"multiband, each band is sampled."
+msgstr ""
+"Neemt rasterwaarden uit op locaties van punten. Als de rasterlaag multiband "
+"is worden uit elke band monsters genomen."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:598
+msgid ""
+"The attribute table of the resulting layer will have as many new columns as "
+"there are bands in the raster layer."
+msgstr ""
+"De attributentabel van de resulterende laag zal net zoveel nieuwe kolommen "
+"hebben als het aantal banden voor de rasterlaag."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:613
+msgid "**Input Point Layer**"
+msgstr "**Invoer puntenlaag**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:615
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:629
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:657
+msgid "[vector: point]"
+msgstr "[vector: punt]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:616
+msgid "Point vector layer in input to use for the sampling."
+msgstr "Punten vectorlaag om te gebruiken voor het nemen van de monsters."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:617
+msgid "**Raster Layer to sample**"
+msgstr "**Rasterlaag waarvan monsters moeten worden genomen**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:618
+msgid "``RASTERCOPY``"
+msgstr "``RASTERCOPY``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:620
+msgid "Raster layer to sample at input point layer locations."
+msgstr ""
+"Rasterlaag waaruit monsters moeten worden genomen op locaties van de invoer "
+"puntenlaag."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:621
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:705
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:785
+msgid "**Output column prefix**"
+msgstr "**Voorvoegsel uitvoerkolom**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:622
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:708
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:788
+msgid "``COLUMN_PREFIX``"
+msgstr "``COLUMN_PREFIX``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:625
+msgid "Default: 'rvalue'"
+msgstr "Standaard: 'rvalue'"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:626
+msgid "Prefix for the column(s) name."
+msgstr "Voorvoegsel voor de naam van de kolom(men)."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:627
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:655
+msgid "**Sampled Points**"
+msgstr "**Monsterpunten**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:631
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:717
+msgid "Default: ``[Create temporary layer]``"
+msgstr "Standaard: ``[Tijdelijke laag maken]``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:632
+msgid ""
+"Specify the output point vector layer for the sampled raster values. One of:"
+msgstr ""
+"Specificeer de uitvoer vector puntenlaag voor de waarden van de genomen "
+"monsters. Één van:"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:636
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:722
+msgid "Create Temporary Layer (``TEMPORARY_OUTPUT``)"
+msgstr "Tijdelijke laag maken (``TEMPORARY_OUTPUT``)"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:638
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:724
+msgid "Save to Geopackage..."
+msgstr "Opslaan naar GeoPackage…"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:639
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:725
+msgid "Save to PostGIS Table"
+msgstr "Opslaan als tabel voor PostGIS"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:658
+msgid ""
+"Output point vector layer with additional column(s) containing the sampled "
+"raster values."
+msgstr ""
+"Uitvoer vector puntenlaag met aanvullende kolom(men) van monsters van de "
+"rasterwaarden."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:665
+msgid "Zonal histogram"
+msgstr "Zonehistogram"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:666
+msgid ""
+"Appends fields representing counts of each unique value from a raster layer "
+"contained within zones defined as polygons."
+msgstr ""
+"Voegt velden toe die het aantal unieke waarden uit een rasterlaag, opgenomen"
+" in als polygonen gedefinieerde zones, weergeven. "
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:669
+msgid ""
+"The output layer attribute table will have as many fields as the unique "
+"values of the raster layer that intersects the polygon(s)."
+msgstr ""
+"De attributentabel van de uitvoerlaag zal net zoveel velden hebben als het "
+"aantal unieke waarden van de rasterlaag die kruisen met de polygo(o)n(en)."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:675
+msgid "Raster layer histogram example"
+msgstr "Voorbeeld histogram rasterlaag"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:698
+msgid "Default: The first band raster layer to sample"
+msgstr ""
+"Standaard: De eerste band van de rasterlaag waaruit monsters moeten worden "
+"genomen"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:699
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:778
+msgid ""
+"If the raster is multiband, choose the band to use for the zonal histogram."
+msgstr ""
+"Als het raster meerdere banden bevat, kies dan de band die u wilt gebruiken "
+"voor het zonehistogram."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:701
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:780
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:827
+msgid "**Vector layer containing the zones**"
+msgstr "**Vectorlaag die de zones bevat**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:702
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:781
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:828
+msgid "``INPUT_VECTOR``"
+msgstr "``INPUT_VECTOR``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:703
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:715
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:743
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:782
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:829
+msgid "[vector: polygon]"
+msgstr "[vector: polygoon]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:704
+msgid "Polygon vector layer that defines the zones."
+msgstr "Polygoon vectorlaag die de zones definieert."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:711
+msgid "Default: 'HISTO\\_'"
+msgstr "Standaard: 'HISTO\\_'"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:712
+msgid "Prefix for output column name(s)."
+msgstr "Voorvoegsel voor de naam van de uitvoerkolom(men)."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:713
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:741
+msgid "**Output zones**"
+msgstr "**Uitvoer zones**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:718
+msgid ""
+"Specify the output polygon vector layer with count of raster values. One of:"
+msgstr ""
+"Specificeer de uitvoer polygoon vectorlaag voor de telling van de "
+"rasterwaarden. Één van:"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:744
+msgid "Output polygon vector layer with count of raster values."
+msgstr "Uitvoer polygoon vectorlaag met telling van rasterwaarden."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:750
+msgid "Zonal statistics"
+msgstr "Gebiedsstatistieken"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:751
+msgid ""
+"Calculates statistics of a raster layer for each feature of an overlapping "
+"polygon vector layer."
+msgstr ""
+"Berekent statistieken van een rasterlaag voor elk object van een "
+"overlappende polygoon vectorlaag."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:754
+msgid ""
+"No new output file will be created. The algorithm adds new columns to the "
+"input vector layer."
+msgstr ""
+"Een bestand voor uitvoer zal niet worden gemaakt. Het algoritme voegt nieuwe"
+" kolommen toe aan de vectorlaag voor de invoer."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:769
+msgid "**Raster Layer**"
+msgstr "**Rasterlaag**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:783
+msgid ""
+"Pologyn vector layer that defines the zones (and that will be updated with "
+"new statistics columns)."
+msgstr ""
+"Polygoon vectorlaag die de zones definieert (en die zullen worden bijgewerkt"
+" met nieuwe kolommen voor statistieken)."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:791
+msgid "Default: '_'"
+msgstr "Standaard: '_'"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:792
+msgid "Prefix for the output column name(s)."
+msgstr "Voorvoegsel voor de naam van de uitvoerkolom(men)."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:793
+msgid "**Statistics to calculate**"
+msgstr "**Te berekenen statistieken**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:794
+msgid "``STATS``"
+msgstr "``STATS``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:795
+msgid "[enumeration] [list]"
+msgstr "[enumeratie] [lijst]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:797
+msgid "Default: [0 1 2]"
+msgstr "Standaard: [0 1 2]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:798
+msgid ""
+"List of statistical operators for the output. The available operators are:"
+msgstr ""
+"Lijst met statistische operatoren voor de uitvoer. De beschikbare operatoren"
+" zijn:"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:801
+msgid "0 -- Count"
+msgstr "0 -- Aantal"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:802
+msgid "1 -- Sum"
+msgstr "1 -- Som"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:803
+msgid "2 -- Mean"
+msgstr "2 -- Gemiddelde"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:804
+msgid "3 -- Median"
+msgstr "3 -- Mediaan"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:805
+msgid "4 -- St. dev."
+msgstr "4 -- St. afw."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:806
+msgid "5 -- Min"
+msgstr "5 -- Min"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:807
+msgid "6 -- Max"
+msgstr "6 -- Max"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:808
+msgid "7 -- Range"
+msgstr "7 -- Bereik"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:809
+msgid "8 -- Minority"
+msgstr "8 -- Minderheid"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:810
+msgid "9 -- Majority (mode)"
+msgstr "9 -- Meerderheid (modus)"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:811
+msgid "10 -- Variety"
+msgstr "10 -- Variëteit"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:812
+msgid "11 -- Variance"
+msgstr "11 -- Variantie"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:813
+msgid "12 -- All"
+msgstr "12 -- Alle"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/rasteranalysis.rst:830
+msgid ""
+"The input polygon vector layer with new fields added for the zone "
+"statistics."
+msgstr ""
+"De invoer polygoon vectorlaag met toegevoegde nieuwe velden voor de "
+"zonestatistieken."
+
+#~ msgid "``Layers (double click to add)`` [raster selection]"
+#~ msgstr "``Lagen (dubbelklikken om toe te voegen) `` [rasterselectie]"
+
+#~ msgid ""
+#~ "List of all raster layers loaded in the legend. Raster layers are referred "
+#~ "by their name and the number of the band: ``layer_name@band_number``. For "
+#~ "instance, the first band from a layer named ``DEM`` will be referred as "
+#~ "``DEM@1``."
+#~ msgstr ""
+#~ "Lijst met alle rasterlagen die zijn geladen in de legenda. Naar rasterlagen "
+#~ "wordt verwezen met hun naam en het nummer van de band: "
+#~ "``laag_naam@band_nummer``. Naar bijvoorbeeld de eerste band van een laag "
+#~ "genaamd ``DEM`` zal worden verwezen als ``DEM@1``."
+
+#~ msgid "``Values and operators`` [calculator]"
+#~ msgstr "``Waarden en operatoren`` [calculator]"
+
+#~ msgid ""
+#~ "Contains some calculator like buttons that can be used to fill the "
+#~ "expression box. Besides the visible buttons also the following functions are"
+#~ " supported: ``sin()``, ``cos()``, ``tan()``, ``atan2()``, ``ln()``, "
+#~ "``log10()``."
+#~ msgstr ""
+#~ "Bevat enkele knoppen zoals op calculators die kunnen worden gebruikt om het "
+#~ "vak voor de expressie te vullen. Naast de zichtbare knoppen worden ook de "
+#~ "volgende functies ondersteund: ``sin()``, ``cos()``, ``tan()``, ``atan2()``,"
+#~ " ``ln()``, ``log10()``."
+
+#~ msgid "``Expression`` [string]"
+#~ msgstr "``Expressie`` [string]"
+
+#~ msgid "``Predefined expressions`` [enumeration]"
+#~ msgstr "``Vooraf gedefinieerde expressies `` [enumeratie]"
+
+#~ msgid ""
+#~ "You can use the existing ``NDVI`` expression or you can define new "
+#~ "expressions to use for some default and advanced calculations."
+#~ msgstr ""
+#~ "U kunt de bestaande expressie ``NDVI`` gebruiken of u kunt nieuwe expressies"
+#~ " definiëren om te gebruiken voor standaard en geavanceerde berekeningen."
+
+#~ msgid ""
+#~ "Clicking on the :kbd:`Save...` button you can enter a new expression while "
+#~ "using the :kbd:`Add...` button you can use the expression and set the "
+#~ "parameters."
+#~ msgstr ""
+#~ "Door te klikken op de knop :kbd:`Opslaan…` kunt u een nieuwe expressie "
+#~ "invoeren terwijl bij het drukken op de knop :kbd:`Toevoegen…` u de expressie"
+#~ " kunt gebruiken en de parameters kunt instellen."
+
+#~ msgid "Default: *NDVI*"
+#~ msgstr "Standaard: *NDVI*"
+
+#~ msgid ""
+#~ "``Reference layers(s)(used for automated extent, cellsize and CRS)`` "
+#~ "[raster] [list]"
+#~ msgstr ""
+#~ "``Verwijzingsla(a)g(en) (gebruikt voor automatisch bereik, celgrootte en "
+#~ "CRS)`` [raster] [lijst]"
+
+#~ msgid ""
+#~ "Layer(s) that will be used to fetch extent, cell size and CRS. Choosing the "
+#~ "layer in this box avoids to fill all the other parameters by hand."
+#~ msgstr ""
+#~ "La(a)g(en) die zullen worden gebruikt om bereik, celgrootte en CRS op te "
+#~ "halen. Kiezen van de laag in dit vak vermijd het handmatig invullen van de "
+#~ "andere parameters."
+
+#~ msgid "``Cell size (use 0 or empty to set it automatically)`` [number]"
+#~ msgstr ""
+#~ "``Celgrootte (gebruik 0 of laat leeg om automatisch in te stellen)`` [getal]"
+
+#~ msgid ""
+#~ "Cell size of the output raster layer. If the cell size is not specified, the"
+#~ " minimum cell size of selected reference layer(s) will be used. The cell "
+#~ "size is assumed to be the same in both X and Y axes."
+#~ msgstr ""
+#~ "Celgrootte van de uitvoer rasterlaag. Als de celgrootte niet wordt "
+#~ "gespecificeerd, zal de minimum celgrootte van de geselecteerde "
+#~ "verwijzingsla(a)g(en) worden gebruikt. Voor de celgrootte wordt aangenomen "
+#~ "dat die hetzelfde is in zowel de X- als de Y-as."
+
+#~ msgid "``Output extent (xmin, xmax, ymin, ymax)`` [extent]"
+#~ msgstr "``Bereik uitvoer (xmin, xmax, ymin, ymax)`` [bereik]"
+
+#~ msgid ""
+#~ "Extent of the output raster layer. If the extent is not specified, the "
+#~ "minimum extent that covers selected reference layer(s) will be used."
+#~ msgstr ""
+#~ "Bereik van de uitvoer rasterlaag. Als het bereik niet is gespecificeerd, zal"
+#~ " het minimale bereik, dat geselecteerde verwijzingsla(a)g(en) bedekt, worden"
+#~ " gebruikt."
+
+#~ msgid "``Output CRS`` [crs]"
+#~ msgstr "``Uitvoer CRS`` [crs]"
+
+#~ msgid "``Output`` [raster]"
+#~ msgstr "``Uitvoer`` [raster]"
+
+#~ msgid "Output raster file containing calculated values."
+#~ msgstr "Uitvoer rasterbestand dat de berekende waarden bevat."
+
+#~ msgid "``Input layer`` [raster]"
+#~ msgstr "``Invoerlaag`` [raster]"
+
+#~ msgid "Raster layer in input"
+#~ msgstr "Rasterlaag voor invoer"
+
+#~ msgid "``Band number`` [raster band]"
+#~ msgstr "``Bandnummer`` [rasterband]"
+
+#~ msgid ""
+#~ "If the raster is multiband choose the band you want to calculate the "
+#~ "statistics."
+#~ msgstr ""
+#~ "Als het raster meerdere banden bevat, kies dan de band waarvoor u de "
+#~ "statistieken wilt berekenen."
+
+#~ msgid "Default: *1*"
+#~ msgstr "Standaard: *1*"
+
+#~ msgid "``Statistics`` [html]"
+#~ msgstr "``Statistieken`` [html]"
+
+#~ msgid "Analyzed file: path of the raster layer;"
+#~ msgstr "Geanalyseerd bestand: pad van de rasterlaag;"
+
+#~ msgid "Minimum value: minimum value of the raster;"
+#~ msgstr "Minimum waarde: minimum waarde van het raster;"
+
+#~ msgid "Maximum value: maximum value of the raster;"
+#~ msgstr "Maximum waarde: maximum waarde van het raster;"
+
+#~ msgid "Range: difference between the maximum and minimum values;"
+#~ msgstr "Bereik: verschil tussen de maximum en de minimum waarden;"
+
+#~ msgid "Sum: total sum of the values;"
+#~ msgstr "Som: totale som van de waarden;"
+
+#~ msgid "Mean value: mean of the values;"
+#~ msgstr "Gemiddelde waarde: gemiddelde van de waarden;"
+
+#~ msgid "Standard deviation: standard deviation of the values;"
+#~ msgstr "Standaard afwijking: standaard afwijking van de waarden;"
+
+#~ msgid ""
+#~ "Sum of the squares: sum of the squared differences of each observation from "
+#~ "the overall mean."
+#~ msgstr ""
+#~ "Som van de vierkanten: som van de vierkante verschillen van elke observatie "
+#~ "uit het algehele gemiddelde."
+
+#~ msgid "``Unique values report`` [html]"
+#~ msgstr "``Rapport Unieke waarden `` [HTML]"
+
+#~ msgid "Analyzed file: the path of the raster layer;"
+#~ msgstr "Geanalyseerd bestand: het pad van de rasterlaag;"
+
+#~ msgid "Extent: xmin, ymin, xmax, ymax coordinates of the extent;"
+#~ msgstr "Bereik: xmin, ymin, xmax, ymax coördinaten van het bereik;"
+
+#~ msgid "Projection: projection of the layer;"
+#~ msgstr "Projectie: projectie van de laag;"
+
+#~ msgid "Width in pixels: number of columns and pixel width size;"
+#~ msgstr "Breedte in pixels: aantal kolommen en grootte pixelbreedte;"
+
+#~ msgid "Height in pixels: number of rows and pixel width size;"
+#~ msgstr "Hoogte in pixels: aantal rijen en grootte pixelbreedte;"
+
+#~ msgid "Total pixel count: count of all the pixels;"
+#~ msgstr "Totaal aantal pixels: telling van alle pixels;"
+
+#~ msgid "NODATA pixel count: count of pixels with NODATA value;"
+#~ msgstr "Aantal pixels NODATA: telling aantal pixels met waarde NODATA;"
+
+#~ msgid "Final table with 3 different columns:"
+#~ msgstr "Uiteindelijke tabel met 3 verschillende kolommen"
+
+#~ msgid "Value: unique value of each pixel;"
+#~ msgstr "Waarde: unieke waarde van elke pixel;"
+
+#~ msgid "Pixel count: count of how many pixels belong to each value;"
+#~ msgstr "Aantal pixels: telling aantal pixels die behoren tot elke waarde;"
+
+#~ msgid "Area (m\\ :sup:`2`): square meters of the area for each pixel class."
+#~ msgstr "Gebied (m²): vierkante meters van het gebied voor elke pixelklasse."
+
+#~ msgid "``Raster Layer`` [raster]"
+#~ msgstr "``Rasterlaag`` [raster]"
+
+#~ msgid "Raster layer to reclassify."
+#~ msgstr "Rasterlaag die opnieuw moet worden geclassificeerd."
+
+#~ msgid "Band of the raster you want to recalculate values."
+#~ msgstr "Band van het raster waarvan u de waarden opnieuw wilt berekenen."
+
+#~ msgid "``Layer containing class breaks`` [vector: any]"
+#~ msgstr "``Laag die de overgangen van klassen bevat`` [vector: elke]"
+
+#~ msgid "``Minimum class value field`` [tablefield: numeric]"
+#~ msgstr "``Veld voor minimum waarde klasse`` [tabelveld: numeriek]"
+
+#~ msgid "Field to extract the minimum value of the range of each class."
+#~ msgstr ""
+#~ "Veld waaruit de minimum waarde van het bereik van elke klasse moet worden "
+#~ "genomen."
+
+#~ msgid "``Maximum class value field`` [tablefield: numeric]"
+#~ msgstr "``Veld voor maximum waarde klasse`` [tabelveld: numeriek]"
+
+#~ msgid "Field to extract the maximum value of the range of each class."
+#~ msgstr ""
+#~ "Veld waaruit de maximum waarde van het bereik van elke klasse moet worden "
+#~ "genomen."
+
+#~ msgid "``Output value field`` [tablefield: numeric]"
+#~ msgstr "``Veld uitvoerwaarde`` [tabelveld: numeriek]"
+
+#~ msgid ""
+#~ "Field to extract the new value to assign to the pixels that fall in the "
+#~ "class, i.e. between the corresponding min and max values."
+#~ msgstr ""
+#~ "Veld waaruit de nieuwe waarde moet worden uitgenomen om toe te wijzen aan de"
+#~ " pixels die vallen in die klasse, d.i. tussen de overeenkomende minimum en "
+#~ "maximum waarden."
+
+#~ msgid "``Output no data value`` [number]"
+#~ msgstr "``Uitvoer waarde 'Geen gegevens'`` [getal]"
+
+#~ msgid "Default: *-9999.0*"
+#~ msgstr "Standaard: *-9999.0*"
+
+#~ msgid "``Range boundaries`` [enumeration]"
+#~ msgstr "``Grenzen bereik`` [enumeratie]"
+
+#~ msgid "Defines comparison rules to apply to values classification."
+#~ msgstr ""
+#~ "Definieert regels voor vergelijking om toe te passen op het classificeren "
+#~ "van waarden."
+
+#~ msgid "Options:"
+#~ msgstr "Opties:"
+
+#~ msgid "Default: *0*"
+#~ msgstr "Standaard: *0*"
+
+#~ msgid "``Use no data when no range matches`` [boolean]"
+#~ msgstr ""
+#~ "``Geen gegevens gebruiken als geen bereik overeenkomt met waarde`` [boolean]"
+
+#~ msgid ""
+#~ "Applies the no data value to band values that do not fall in any class. If "
+#~ "False, the original value is kept."
+#~ msgstr ""
+#~ "Toegepast op de waarden Geen gegevens voor bandwaarden die niet in enige "
+#~ "klasse vallen. Indien False wordt de originele waarde behouden."
+
+#~ msgid "Default: *False*"
+#~ msgstr "Standaard: *False*"
+
+#~ msgid "``Output data type`` [enumeration]"
+#~ msgstr "``Type uitvoergegevens`` [enumeratie]"
+
+#~ msgid "Defines the format of the output raster file."
+#~ msgstr "Definieert de indeling voor het uitvoerraster."
+
+#~ msgid "Default: *5*"
+#~ msgstr "Standaard: *5*"
+
+#~ msgid "``Reclassified raster`` [raster]"
+#~ msgstr "``Opnieuw geclassificeerd raster`` [raster]"
+
+#~ msgid "Raster layer in output with reclassified band values."
+#~ msgstr "Rasterlaag voor uitvoer met opnieuw geclassificeerde bandwaarden."
+
+#~ msgid "``Reclassification table`` [table]"
+#~ msgstr "``Tabel voor opnieuw classificeren`` [tabel]"
+
+#~ msgid ""
+#~ "A 3-columns table to fill with the values to set the boundaries of each "
+#~ "class (``Minimum`` and ``Maximum``) and the new ``Value`` to assign to the "
+#~ "band values that fall in the class."
+#~ msgstr ""
+#~ "Een tabel met 3 kolommen, te vullen met waarden om de grenzen van elke "
+#~ "klasse in te stellen (``Minimum`` en ``Maximum``) en de nieuw toe te wijzen "
+#~ "``Waarde`` aan de bandwaarden die in die klasse vallen."
+
+#~ msgid ""
+#~ "The attribute table of the resulting layer will have as many new columns as "
+#~ "the raster layer band count."
+#~ msgstr ""
+#~ "De attributentabel van de resulterende laag zal net zoveel kolommen hebben "
+#~ "als het aantal banden voor de rasterlaag."
+
+#~ msgid "``Input Point Layer`` [vector: point]"
+#~ msgstr "``Invoer puntenlaag`` [vector: punt]"
+
+#~ msgid "``Raster Layer to sample`` [raster]"
+#~ msgstr "``Rasterlaag waarvan monsters moeten worden genomen`` [raster]"
+
+#~ msgid ""
+#~ "Raster layer with corresponding band(s) to sample at given point locations."
+#~ msgstr ""
+#~ "Rasterlaag met corresponderende band(en) waaruit monsters moeten worden "
+#~ "genomen op opgegeven locaties voor punten."
+
+#~ msgid "``Output column prefix`` [string]"
+#~ msgstr "``Voorvoegsel uitvoerkolom:`` [string]"
+
+#~ msgid "Default: ``rvalue``"
+#~ msgstr "Standaard: ``rvalue``"
+
+#~ msgid "``Sampled Points`` [vector: point]"
+#~ msgstr "``Monsterpunten`` [vector: punt]"
+
+#~ msgid "Layer in output with additional column(s) of sampled raster values."
+#~ msgstr ""
+#~ "Laag voor uitvoer met aanvullende kolom(men) van monsters van de "
+#~ "rasterwaarden."
+
+#~ msgid ""
+#~ "Appends fields representing counts of each unique value from a raster layer "
+#~ "contained within polygon features."
+#~ msgstr ""
+#~ "Voegt velden toe die het aantal unieke waarden uit een rasterlaag, opgenomen"
+#~ " in als polygonen gedefinieerde zones, weergeven. "
+
+#~ msgid "``Raster layer`` [raster]"
+#~ msgstr "``Rasterlaag`` [raster]"
+
+#~ msgid "Raster layer in input."
+#~ msgstr "Rasterlaag voor invoer."
+
+#~ msgid ""
+#~ "If the raster is multiband, choose the band you want to calculate the "
+#~ "statistics."
+#~ msgstr ""
+#~ "Als het raster meerdere banden bevat, kies dan de band waarvoor u de "
+#~ "statistieken wilt berekenen."
+
+#~ msgid "``Vector layer containing the zones`` [vector: polygon]"
+#~ msgstr "``Vectorlaag bevat zones`` [vector: polygoon]"
+
+#~ msgid "Overlaying vector layer where unique raster values will be appended."
+#~ msgstr ""
+#~ "Overliggende vectorlaag waarop unieke rasterwaarden zullen worden "
+#~ "toegevoegd."
+
+#~ msgid "Prefix string for output columns."
+#~ msgstr "Voorvoegsel voor uit te voeren kolommen."
+
+#~ msgid "``Output zones`` [vector: polygon]"
+#~ msgstr "``Uitvoer zones`` [vector: polygoon]"
+
+#~ msgid "Output polygon vector layer with unique count of raster values."
+#~ msgstr "Uitvoer polygoon vectorlaag met telling van unieke rasterwaarden."
+
+#~ msgid ""
+#~ "No new output file will be created. The algorithm adds new columns to the "
+#~ "source vector layer."
+#~ msgstr ""
+#~ "Een bestand voor uitvoer zal niet worden gemaakt. Het algoritme voegt nieuwe"
+#~ " kolommen toe aan de bron-vectorlaag."
+
+#~ msgid "``Vector layer containing zones`` [vector: polygon]"
+#~ msgstr "``Vectorlaag bevat zones`` [vector: polygoon]"
+
+#~ msgid "Polygon vector layer."
+#~ msgstr "Polygoon vectorlaag."
+
+#~ msgid "Default: ``_``"
+#~ msgstr "Standaard: ``_``"
+
+#~ msgid "``Statistics to calculate`` [enumeration] [list]"
+#~ msgstr "``Te berekenen statistieken`` [enumeratie] [lijst]"
+
+#~ msgid ""
+#~ "List of statistical operator for the output. The available operators are:"
+#~ msgstr ""
+#~ "Lijst met statistische operatoren voor de uitvoer. De beschikbare operatoren"
+#~ " zijn:"
+
+#~ msgid "Count"
+#~ msgstr "Telling"
+
+#~ msgid "Sum"
+#~ msgstr "Som"
+
+#~ msgid "Mean"
+#~ msgstr "Gemiddelde"
+
+#~ msgid "Median"
+#~ msgstr "Mediaan"
+
+#~ msgid "St. dev."
+#~ msgstr "Std. afw."
+
+#~ msgid "Min"
+#~ msgstr "Min"
+
+#~ msgid "Max"
+#~ msgstr "Max"
+
+#~ msgid "Range"
+#~ msgstr "Bereik"
+
+#~ msgid "Minority"
+#~ msgstr "Minderheid"
+
+#~ msgid "Majority (mode)"
+#~ msgstr "Meerderheid (modus)"
+
+#~ msgid "Variety"
+#~ msgstr "Variëteit"
+
+#~ msgid "Variance"
+#~ msgstr "Variantie"
+
+#~ msgid "All"
+#~ msgstr "Alles"

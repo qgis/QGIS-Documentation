@@ -1,0 +1,128 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# 
+# Translators:
+# fairtommy <fairtommy@gmail.com>, 2019
+# Hiroyuki Kimura <z_kimura@k-side.net>, 2014
+# fairtommy <fairtommy@gmail.com>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-04-07 15:33+0200\n"
+"PO-Revision-Date: 2019-04-07 13:43+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"Language-Team: Japanese (http://www.transifex.com/qgis/qgis-documentation/language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:8
+msgid "|LS| Import and Export"
+msgstr "|LS| インポートとエクスポート"
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:10
+msgid ""
+"Of course, a database with no easy way to migrate data into it and out of it"
+" would not be of much use. Fortunately, there are a number of tools that "
+"will let you easily move data into and out of PostGIS."
+msgstr "もちろん、データを出し入れする簡単な方法がないデータベースはあまり役に立たないでしょう。幸い、PostGISにデータを簡単に出し入れできるようにするツールはたくさんあります。"
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:15
+msgid "shp2pgsql"
+msgstr "shp2pgsql"
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:17
+msgid ""
+"shp2pgsql is a commandline tool to import ESRI Shapefile to the database. "
+"Under Unix, you can use the following command for importing a new PostGIS "
+"table:"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:26
+msgid "Under Windows, you have to perform the import process in two steps:"
+msgstr "Windows では, 2ステップでインポート処理を実行します :"
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:33
+msgid "You may encounter this error:"
+msgstr "次のようなエラーが発生することがあります :"
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:40
+msgid ""
+"This is a known issue regarding the creation *in situ* of a spatial index "
+"for the data you're importing. To avoid the error, exclude the :kbd:`-I` "
+"parameter. This will mean that no spatial index is being created directly, "
+"and you'll need to create it in the database after the data have been "
+"imported. (The creation of a spatial index will be covered in the next "
+"lesson.)"
+msgstr "これは、インポートするデータのために空間索引 *in situ* を作成するための既知の問題です。 エラーを回避するためには、 :kbd:`-I` パラメーターを外します。これは空間索引が直接作成されないことを意味します。データがインポートされた後にデータベースに空間索引を作成する必要があります（空間索引の作成は、 次のレッスンで説明します）。"
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:47
+msgid "pgsql2shp"
+msgstr "pgsql2shp"
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:49
+msgid ""
+"pgsql2shp is a commandline tool to export PostGIS Tables, Views or SQL "
+"select queries. To do this under Unix:"
+msgstr "pgsql2shp は, PostGIS のテーブル, ビュー, または SQL の select クエリをエクスポートするためのコマンドラインツールです. Unix では次のように実行します :"
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:57
+msgid "To export the data using a query:"
+msgstr "クエリを使用してデータをエクスポートするには :"
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:65
+msgid "ogr2ogr"
+msgstr "ogr2ogr"
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:67
+msgid ""
+"ogr2ogr is a very powerful tool to convert data into and from postgis to "
+"many data formats. ogr2ogr is part of the GDAL/OGR Software and has to be "
+"installed separately. To export a table from PostGIS to GML, you can use "
+"this command:"
+msgstr "ogr2ogr は, PostGIS を多くのデータフォーマットに変換する強力なツールです. ogr2ogr は, GDAL/OGR ソフトウェアの一部であり, 個別にインストールする必要があります. テーブルを PostGIS から GML へエクスポートするには, このコマンドを使用することができます :"
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:77
+msgid "DB Manager"
+msgstr "DB Manager"
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:79
+msgid ""
+"You may have noticed another option in the :guilabel:`Database` menu labeled"
+" :guilabel:`DB Manager`. This is a tool that provides a unified interface "
+"for interacting with spatial databases including PostGIS. It also allows you"
+" to import and export from databases to other formats. Since the next module"
+" is largely devoted to using this tool, we will only briefly mention it "
+"here."
+msgstr ":guilabel:`データベース` メニュー内の :guilabel:`DBマネージャ` という別のオプションに気づいているかもしれません. これは PostGIS を含む空間データベースと対話する統一的なインターフェイスを持つ新しいツールです。このツールもインポートしたデータベースから他のフォーマットにエクスポートできます。次のモジュールは主にこのツールを使うことを念頭に置いているので、ここで簡単にそれを説明します。"
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:88
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:90
+msgid ""
+"Importing and exporting data to and from the database can be done in many "
+"various ways. Especially when using disparate data sources, you will "
+"probably use these functions (or others like them) on a regular basis."
+msgstr "データベースとの間でデータをインポート及びエクスポートは, 多様な方法で行うことができます. 異なるデータソースを使用する場合は特に,　この機能(またはこの機能に似た機能)を使用します."
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:95
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/spatial_databases/import_export.rst:97
+msgid "Next we'll look at how to query the data we've created before."
+msgstr "次に,私たちが以前に作成したデータを参照する方法を見ていきます."
+
+#~ msgid ""
+#~ "shp2pgsql is a commandline tool to import ESRI shapefiles to the database. "
+#~ "Under Unix, you can use the following command for importing a new PostGIS "
+#~ "table:"
+#~ msgstr ""

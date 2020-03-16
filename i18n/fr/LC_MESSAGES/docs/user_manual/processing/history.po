@@ -1,0 +1,135 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# 
+# Translators:
+# Francis Gasc <francisgasc@gmail.com>, 2020
+# MarieSilvestre, 2013-2014,2016
+# Médéric RIBREUX <mederic.ribreux__translate@medspx.fr>, 2017
+# Sant-anna <delazj@gmail.com>, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-06 11:48+0100\n"
+"PO-Revision-Date: 2020-02-01 15:59+0000\n"
+"Last-Translator: Francis Gasc <francisgasc@gmail.com>\n"
+"Language-Team: French (http://www.transifex.com/qgis/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/user_manual/processing/history.rst:10
+msgid "The history manager"
+msgstr "Le gestionnaire d'historique"
+
+#: ../../source/docs/user_manual/processing/history.rst:18
+msgid "The processing history"
+msgstr "L'historique des traitements"
+
+#: ../../source/docs/user_manual/processing/history.rst:20
+msgid ""
+"Every time you execute an algorithm, information about the process is stored"
+" in the history manager. Along with the parameters used, the date and time "
+"of the execution are also saved."
+msgstr "A chaque exécution d'un algorithme, les informations du traitement, paramètres utilisés, date et heure d'exécution, sont sauvegardées dans le gestionnaire d'historiques."
+
+#: ../../source/docs/user_manual/processing/history.rst:24
+msgid ""
+"This way, it is easy to track and control all the work that has been "
+"developed using the Processing framework, and to reproduce it."
+msgstr "Ainsi, il est possible de suivre et vérifier les tâches effectuées et de les reproduire facilement."
+
+#: ../../source/docs/user_manual/processing/history.rst:27
+msgid ""
+"The history manager is a set of registry entries grouped according to their "
+"date of execution, making it easier to find information about an algorithm "
+"executed at any particular moment."
+msgstr "Le gestionnaire d'historiques est un ensemble d'entrées de registre, regroupées selon la date d'exécution, permettant de retrouver facilement quel algorithme a été exécuté à un moment donné."
+
+#: ../../source/docs/user_manual/processing/history.rst:36
+msgid "History"
+msgstr "Historique"
+
+#: ../../source/docs/user_manual/processing/history.rst:38
+msgid ""
+"Process information is kept as a command-line expression, even if the "
+"algorithm was launched from the toolbox. This makes it also useful for those"
+" learning how to use the command-line interface, since they can call an "
+"algorithm using the toolbox and then check the history manager to see how "
+"that same algorithm could be called from the command line."
+msgstr "Les informations de traitement sont sauvegardées sous forme de ligne de commande, même si l'algorithme a été exécuté depuis la boîte à outils. Cela permet également de comprendre l'interface en ligne de commande en visualisant la commande effectivement lancée depuis la boîte à outils."
+
+#: ../../source/docs/user_manual/processing/history.rst:44
+msgid ""
+"Apart from browsing the entries in the registry, you can also re-execute "
+"processes by simply double-clicking on the corresponding entry: the "
+"algorithm dialog opens with parameters already filled; you can then change "
+"any of them to fit your needs and re-run the algorithm."
+msgstr "En plus de parcourir les entrées du registre, vous pouvez également ré-exécuter des processus en double-cliquant simplement sur l'entrée correspondante: la boîte de dialogue d'algorithme s'ouvre avec des paramètres déjà remplis; vous pouvez ensuite modifier l'un d'eux pour l'adapter à vos besoins et ré-exécuter l'algorithme."
+
+#: ../../source/docs/user_manual/processing/history.rst:49
+msgid ""
+"The :guilabel:`History` dialog also provides a convenient way to contribute "
+"to the consolidation of the testing infrastructure of QGIS Processing "
+"algorithms and scripts. Right-click on a command you previously executed and"
+" you can :guilabel:`Create Test...` for the concerned algorithm, following "
+"instructions at :source:`python/plugins/processing/tests/README.md`."
+msgstr "La boîte de dialogue: :guilabel:`Historique` fournit également un moyen pratique de contribuer à la consolidation de l'infrastructure de test des algorithmes et scripts de traitement QGIS. Cliquez avec le bouton droit sur une commande que vous avez précédemment exécutée et vous pouvez :guilabel:`Créer un test ...` pour l'algorithme concerné, en suivant les instructions sur :source:`python / plugins / processing / tests / README.md`."
+
+#: ../../source/docs/user_manual/processing/history.rst:57
+msgid "The processing log"
+msgstr "Le journal des traitements"
+
+#: ../../source/docs/user_manual/processing/history.rst:59
+msgid ""
+"The history dialog only contains the execution calls, but not the "
+"information produced by the algorithm when executed. That information is "
+"written to the QGIS log (:menuselection:`View --> Panels --> Log Messages "
+"Panel`), in a :guilabel:`Processing` tab."
+msgstr "La boîte de dialogue d'historique contient uniquement les appels d'exécution, mais pas les informations produites par l'algorithme lors de son exécution. Ces informations sont écrites dans le journal QGIS ( :menuselection:`View -> Panels -> Log Messages Panel`), dans un onglet :guilabel:`Processing`."
+
+#: ../../source/docs/user_manual/processing/history.rst:64
+msgid ""
+"Third-party algorithms are usually executed by calling their command-line "
+"interfaces, which communicate with the user via the console. Although that "
+"console is not shown, usually a full dump of it is written to the log each "
+"time you run one of those algorithms. To avoid cluttering the log with that "
+"information, you can disable it for each provider, looking for the "
+"corresponding option in the provider entry of the settings dialog."
+msgstr "Les algorithmes tiers sont généralement exécutés en appelant leurs interfaces de ligne de commande, qui communiquent avec l'utilisateur via la console. Bien que cette console ne soit pas affichée, un vidage complet est généralement écrit dans le journal chaque fois que vous exécutez l'un de ces algorithmes. Pour éviter d'encombrer le journal avec ces informations, vous pouvez le désactiver pour chaque fournisseur, en recherchant l'option correspondante dans l'entrée fournisseur de la boîte de dialogue des paramètres."
+
+#: ../../source/docs/user_manual/processing/history.rst:71
+msgid ""
+"Some algorithms, even if they can produce a result with the given input "
+"data, might add comments or additional information to log if they detect "
+"potential problems with the data, in order to warn you. Make sure you check "
+"those messages in the log if you are having unexpected results."
+msgstr "Certains algorithmes génèrent des messages d'avertissements ou des commentaires dans le journal, même si le traitement semble avoir réussi. Vérifiez ces messages si les résultats ne semblent pas cohérents."
+
+#~ msgid "|updatedisclaimer|"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Apart from browsing the entries in the registry, you can also re-execute "
+#~ "processes by simply double-clicking on the corresponding entry."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The history dialog only contains the execution calls, but not the "
+#~ "information produced by the algorithm when executed. That information is "
+#~ "written to the QGIS log, in a :guilabel:`Processing` tab."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The :guilabel:`History` dialog also provides a convenient way to contribute "
+#~ "to the consolidation of the testing infrastructure of QGIS Processing "
+#~ "algorithms and scripts. Right-click on a command you previously executed and"
+#~ " you can :guilabel:`Create Test...` for the concerned algorithm, following "
+#~ "instructions at "
+#~ "https://github.com/qgis/QGIS/blob/master/python/plugins/processing/tests/README.md."
+#~ msgstr ""

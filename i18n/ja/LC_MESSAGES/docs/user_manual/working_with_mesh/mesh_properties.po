@@ -1,0 +1,640 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+# 
+# Translators:
+# fairtommy <fairtommy@gmail.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-06 11:48+0100\n"
+"PO-Revision-Date: 2019-04-07 13:51+0000\n"
+"Last-Translator: fairtommy <fairtommy@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:9
+msgid "Working with Mesh Data"
+msgstr "メッシュデータの操作"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:15
+msgid "What's a mesh?"
+msgstr "メッシュとは？"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:17
+msgid ""
+"A mesh is an unstructured grid usually with temporal and other components. "
+"The spatial component contains a collection of vertices, edges and faces in "
+"2D or 3D space:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:21
+msgid ""
+"**vertices** - XY(Z) points (in the layer's coordinate reference system)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:22
+msgid "**edges** - connect pairs of vertices"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:23
+msgid ""
+"**faces** - a face is a set of edges forming a closed shape - typically a "
+"triangle or a quadrilateral (quad), rarely polygons with more vertices"
+msgstr "**面** - 面は閉じた形状を形成する辺の集合です。通常は三角形または四辺形（quad）ですが、頂点数が多い多角形はめったにありません。"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:32
+msgid "Different mesh types"
+msgstr "さまざまなメッシュタイプ"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:34
+msgid "QGIS can currently render mesh data using triangles or regular quads."
+msgstr "QGISでは現在、三角形または正四角形を使用してメッシュデータをレンダリングできます。"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:36
+msgid ""
+"Mesh provides information about the spatial structure. In addition, the mesh"
+" can have datasets (groups) that assign a value to every vertex. For "
+"example, having a triangular mesh with numbered vertices as shown in the "
+"image below:"
+msgstr ""
+"メッシュは空間構造に関する情報を提供します。さらに、メッシュはすべての頂点に値を割り当てるデータセット（グループ）を持つことができます。たとえば、次の図に示すように頂点が番号付けされた三角メッシュを作成します："
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:45
+msgid "Triangular grid with numbered vertices"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:47
+msgid ""
+"Each vertex can store different datasets (typically multiple quantities), "
+"and those datasets can also have a temporal dimension. Thus, a single file "
+"may contain multiple datasets."
+msgstr ""
+"各頂点は異なるデータセット（通常は複数の数量）を格納でき、それらのデータセットは時間的な次元を持つこともできます。したがって、1つのファイルに複数のデータセットを含めることができます。"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:51
+msgid ""
+"The following table gives an idea about the information that can be stored "
+"in mesh datasets. Table columns represent indices of mesh vertices, each row"
+" represents one dataset. Datasets can have different datatypes. In this "
+"case, it stores wind velocity at 10m at a particular moments in time (t1, "
+"t2, t3)."
+msgstr ""
+"次の表は、メッシュデータセットに格納できる情報についての概念を示しています。テーブルの列はメッシュの頂点のインデックスを表し、各行は1つのデータセットを表します。データセットはさまざまなデータ型を持つことができます。この場合、それには時間内の特定の瞬間（t1、t2、t3）での地上10mでの風速が格納されます。"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:57
+msgid ""
+"In a similar way, the mesh dataset can also store vector values for each "
+"vertex. For example, wind direction vector at the given time stamps:"
+msgstr "同様に、メッシュデータセットは各頂点のベクトル値も格納できます。たとえば、与えられたタイムスタンプでの風向ベクトルは、"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:61
+msgid "10 metre wind"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:61
+msgid "1"
+msgstr "1"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:61
+msgid "2"
+msgstr "2"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:61
+msgid "3"
+msgstr "3"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:61
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:63
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:64
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:65
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:66
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:67
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:68
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:69
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:70
+msgid "..."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:63
+msgid "10 metre speed at time=t1"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:63
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:65
+msgid "17251"
+msgstr "17251"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:63
+msgid "24918"
+msgstr "24918"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:63
+msgid "32858"
+msgstr "32858"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:64
+msgid "10 metre speed at time=t2"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:64
+msgid "19168"
+msgstr "19168"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:64
+msgid "23001"
+msgstr "23001"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:64
+msgid "36418"
+msgstr "36418"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:65
+msgid "10 metre speed at time=t3"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:65
+msgid "21085"
+msgstr "21085"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:65
+msgid "30668"
+msgstr "30668"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:67
+msgid "10m wind direction time=t1"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:67
+msgid "[20,2]"
+msgstr "[20,2]"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:67
+msgid "[20,3]"
+msgstr "[20,3]"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:67
+msgid "[20,4.5]"
+msgstr "[20,4.5]"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:68
+msgid "10m wind direction time=t2"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:68
+msgid "[21,3]"
+msgstr "[21,3]"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:68
+msgid "[21,4]"
+msgstr "[21,4]"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:68
+msgid "[21,5.5]"
+msgstr "[21,5.5]"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:69
+msgid "10m wind direction time=t3"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:69
+msgid "[22,4]"
+msgstr "[22,4]"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:69
+msgid "[22,5]"
+msgstr "[22,5]"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:69
+msgid "[22,6.5]"
+msgstr "[22,6.5]"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:75
+msgid ""
+"We can visualize the data by assigning colors to values (similarly to how it"
+" is done with :ref:`Singleband pseudocolor <label_colormaptab>` raster "
+"rendering) and interpolating data between vertices according to the mesh "
+"topology. It is common that some quantities are 2D vectors rather than being"
+" simple scalar values (e.g. wind direction). For such quantities it is "
+"desirable to display arrows indicating the directions."
+msgstr ""
+"色を値に割り当てて （ :ref:`Singleband pseudocolor <label_colormaptab>` ラスタレンダリングと同様に）"
+" "
+"、メッシュトポロジに従って頂点間でデータを補間することでデータを視覚化できます。いくつかの量が単純なスカラー値ではなく２Ｄベクトルであることはよくあることです（例えば風向）。そのような量については、方向を示す矢印を表示することが望ましい。"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:87
+msgid "Possible visualisation of mesh data"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:91
+msgid "Supported formats"
+msgstr "サポートされる形式"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:93
+msgid ""
+"QGIS accesses mesh data using the `MDAL drivers "
+"<https://github.com/lutraconsulting/MDAL>`_. Hence, the natively supported "
+"formats are:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:96
+msgid "``NetCDF``: Generic format for scientific data"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:97
+msgid "``GRIB``: Format commonly used in meteorology"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:98
+msgid ""
+"``XMDF``: As an example, hydraulic outputs from TUFLOW modelling package"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:99
+msgid ""
+"``DAT``: Outputs of various hydrodynamic modelling packages (e.g. BASEMENT, "
+"HYDRO_AS-2D, TUFLOW)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:100
+msgid ""
+"``3Di``: 3Di modelling package format based on Climate and Forecast "
+"Conventions (http://cfconventions.org/)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:101
+msgid ""
+"Some examples of mesh datasets can be found at "
+"https://apps.ecmwf.int/datasets/data/interim-full-daily/levtype=sfc/"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:105
+msgid "Loading a mesh layer"
+msgstr "メッシュレイヤーをロードする"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:107
+msgid "To add a mesh layer to QGIS:"
+msgstr "QGISにメッシュレイヤーを追加するには："
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:109
+msgid ""
+"Open the :menuselection:`Data Source Manager` dialog, either by selecting it"
+" from the :menuselection:`Layer -->` menu or clicking the "
+"|dataSourceManager| :sup:`Open Data Source Manager` button."
+msgstr ""
+":menuselection:`レイヤー - >` メニューから選択するか |dataSourceManager| "
+":sup:`データソースマネージャを開く`ボタンをクリックして :menuselection:`データソースマネージャ` ダイアログを開きます。 。"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:112
+msgid "Then, enable the |addMeshLayer| :guilabel:`Mesh` tab on the left panel"
+msgstr "次に、左パネルの |addMeshLayer| :guilabel:`メッシュ` タブを有効にします"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:113
+msgid ""
+"Press the :guilabel:`...` button to select the file and press "
+":guilabel:`Add`. The layer will be added using the native mesh rendering."
+msgstr ""
+":guilabel:`...` ボタンを押してファイルを選択し、 :guilabel:`追加` "
+"を押してください。レイヤーはネイティブメッシュレンダリングを使用して追加されます。"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:121
+msgid "Mesh tab in Data Source Manager"
+msgstr "データソースマネージャ内のメッシュタブ"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:126
+msgid "Mesh Dataset Properties"
+msgstr "メッシュデータセットのプロパティ"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:129
+msgid "Information"
+msgstr "情報"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:136
+msgid "Mesh Layer Properties"
+msgstr "メッシュレイヤのプロパティ"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:138
+msgid ""
+"The :guilabel:`Information` tab is read-only and represents an interesting "
+"place to quickly grab summarized information and metadata on the current "
+"layer. Provided information are (based on the provider of the layer) uri, "
+"vertex count, face count and dataset groups count."
+msgstr ""
+":guilabel:`情報` "
+"タブは読み取り専用で、現在のレイヤーの要約された情報とメタデータを素早くつかむための興味深い場所を表しています。提供される情報は、（レイヤのプロバイダに基づく）URI、頂点数、面数、およびデータセットグループ数です。"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:144
+msgid "Source"
+msgstr "ソース"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:146
+msgid ""
+"The :guilabel:`Source` tab displays basic information about the selected "
+"mesh, including:"
+msgstr "：guilabel：:guilabel:`ソース` タブは選択されたメッシュに関する基本的な情報を表示します、たとえば："
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:149
+msgid "the Layer name to display in the :guilabel:`Layers` panel"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:150
+msgid ""
+"setting the Coordinate Reference System: Displays the layer’s Coordinate "
+"Reference System (CRS) as a PROJ.4 string. You can change the layer’s CRS by"
+" selecting a recently used one in the drop-down list or clicking on "
+"|setProjection| :guilabel:`Select CRS` button (see :ref:`crs_selector`). Use"
+" this process only if the CRS applied to the layer is wrong or if none was "
+"applied."
+msgstr ""
+"座標参照系の設定：レイヤーの座標参照系（CRS）をPROJ.4文字列として表示します。ドロップダウンリストで最近使用したものを選択するか、 "
+"|setProjection|  :guilabel:`CRSを選択` ボタン（ :ref:`crs_selector` "
+"を参照）をクリックして、レイヤのCRSを変更できます。この手順は、レイヤに適用されているCRSが正しくない場合、または適用されていない場合にのみ使用してください。"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:157
+msgid ""
+"Use the :guilabel:`Assign Extra Dataset to Mesh` button to add more groups "
+"to the current mesh layer."
+msgstr ""
+"現在のメッシュレイヤにさらにグループを追加するには、 :guilabel:`メッシュへの追加データセットの割り当て` ボタンを使用してください。"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:161
+msgid "Style"
+msgstr "スタイル"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:163
+msgid ""
+"Click the |symbology| :guilabel:`Style` button to activate the dialog as "
+"shown in the following image:"
+msgstr " |symbology| :guilabel:`スタイル` ボタンをクリックし、次の図に示すようにダイアログをアクティブにします："
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:172
+msgid "Mesh Layer Style"
+msgstr "メッシュレイヤのスタイル"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:174
+msgid "Style properties are divided in several tabs:"
+msgstr "スタイルプロパティはいくつかのタブに分けられます："
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:176
+msgid ":ref:`General <mesh_symbology_general>`"
+msgstr ":ref:`一般 <mesh_symbology_general>`"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:177
+msgid ":ref:`Contours Symbology <mesh_symbology_contours>`"
+msgstr ":ref:`等高線の表記法 <mesh_symbology_contours>`"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:178
+msgid ":ref:`Vectors Symbology <mesh_symbology_vectors>`"
+msgstr ":ref:`ベクタの表記法 <mesh_symbology_contours>`"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:179
+msgid ":ref:`Rendering <mesh_symbology_rendering>`"
+msgstr ":ref:`レンダリング<mesh_symbology_rendering>`"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:184
+msgid "General"
+msgstr "一般"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:186
+msgid "The tab |general| presents the following items:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:188
+msgid "groups available in the mesh dataset"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:189
+msgid ""
+"dataset in the selected group(s), for example, if the layer has a temporal "
+"dimension"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:190
+msgid "metadata if available"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:191
+msgid ":ref:`blending mode <blend-modes>` available for the selected dataset."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:194
+msgid ""
+"The slider |slider|, combo box |selectString| and |groupsexploring| buttons "
+"allow to explore another dimension of the data, if available. As the slider "
+"moves, the metadata is presented accordingly. See the figure :ref:`Mesh "
+"groups <figure_mesh_groups>` below as an example. The map canvas will "
+"display the selected dataset group as well."
+msgstr ""
+"スライダー |slider| 、コンボボックス |selectString| そして |groupsexploring| ボタンでは、 "
+"可能であれば、データの別の次元を探索できます。スライダが動くと、それに応じてメタデータが表示されます。例として以下の図 :ref:`メッシュグループ "
+"<figure_mesh_groups>` を参照してください。.地図キャンバスには、選択したデータセットグループも表示されます。"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:205
+msgid "Dataset in Selected Group(s)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:208
+msgid "You can apply symbology to each group using the tabs."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:214
+msgid "Contours Symbology"
+msgstr "等高線の表記法"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:216
+msgid ""
+"Under :guilabel:`Groups`, click on |contour_inactive| to show contours with "
+"default visualization parameters."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:219
+msgid ""
+"In the tab |contour_active| you can see and change the current visualization"
+" options of contours for the selected group, as shown in the image "
+":ref:`Styling contours in a mesh <figure_mesh_symbology_contours>` below:"
+msgstr ""
+"下の画像 :ref:`メッシュ中の等高線をスタイル設定する <figure_mesh_symbology_contours>` に示すように、タブ "
+"|contour_active| では選択したグループの等高線の現在の視覚化オプションを確認して変更できます："
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:227
+msgid "Styling Contours in a Mesh Layer"
+msgstr "メッシュレイヤで等高線のスタイルを設定する"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:229
+msgid ""
+"Use the slide bar or combo box to set the opacity of the current group."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:231
+msgid ""
+"Use :guilabel:`Load` to adjust the min and max values of the current group."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:233
+msgid ""
+"The :guilabel:`Interpolation` list contains three options to render "
+"contours: :guilabel:`Linear`, :guilabel:`Discrete` and :guilabel:`Exact`."
+msgstr ""
+":guilabel:`補間` リストには、等高線を描画するための3つのオプションがあります： :guilabel:`線形` 、 :guilabel: "
+"`離散` 、 :guilabel:`正確` 。"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:236
+msgid ""
+"The :guilabel:`Color ramp` widget opens the :ref:`color ramp drop-down "
+"shortcut <color_ramp_widget>`."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:238
+msgid ""
+"The :guilabel:`Label unit suffix` is a label added after the value in the "
+"legend."
+msgstr ":guilabel:`ラベル単位接尾辞` は凡例の値の後に追加されるラベルです。"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:240
+msgid ""
+"By selecting :guilabel:`Continuous` in the classification :guilabel:`Mode`, "
+"QGIS creates classes automatically considering the :guilabel:`Min` and "
+":guilabel:`Max` values. With ‘Equal interval’, you only need to select the "
+"number of classes using the combo box  :guilabel:`Classes`  and press the "
+"button :guilabel:`Classify`."
+msgstr ""
+":guilabel:`モード` の中で :guilabel:`連続` を選択すると、QGISは :guilabel:`最小` と "
+":guilabel:`最大` の値を考慮して自動的にクラスを作成します。 「等間隔」では、コンボボックス :guilabel:`クラス` "
+"を使ってクラスの数を選択し、ボタン :guilabel:`分類` を押すだけで済みます。"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:245
+msgid ""
+"The button |signPlus| :sup:`Add values manually` adds a value to the "
+"individual color table. The button |signMinus| :sup:`Remove selected row` "
+"deletes a value from the individual color table. Double clicking on the "
+"value column lets you insert a specific value. Double clicking on the color "
+"column opens the dialog :guilabel:`Change color`, where you can select a "
+"color to apply on that value."
+msgstr ""
+"ボタン |signPlus| :sup:`手動で値を追加` は個々のカラーテーブルに値を追加します。ボタン |signMinus| "
+":sup:`選択した行を削除` "
+"は個々のカラーテーブルから値を削除します。値の列をダブルクリックすると、特定の値を挿入できます。色の列をダブルクリックすると、ダイアログ "
+":guilabel:`色の変更` が開き、その値に適用する色を選択できます。"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:255
+msgid "Vectors Symbology"
+msgstr "ベクタの表記法"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:257
+msgid ""
+"In the tab |general|, click on |vector_inactive| to display vectors if "
+"available. The map canvas will display the vectors in the selected group "
+"with default parameters. Click on the tab |vector_active| to change the "
+"visualization parameters for vectors as shown in the image below:"
+msgstr ""
+"|general| タブで |vector_inactive| "
+"をクリックします。利用可能な場合はベクトルを表示します。地図キャンバスには、選択したグループのベクトルがデフォルトのパラメータで表示されます。 "
+"|vector_active| タブをクリックして、次の図に示すように、ベクトルの視覚化パラメータを変更します。"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:266
+msgid "Styling Vectors in a Mesh Layer"
+msgstr "メッシュレイヤでベクタのスタイルを設定する"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:268
+msgid ""
+"The line width can be set using the combo box or typing the value. The color"
+" widget opens the dialog :guilabel:`Change color`, where you can select a "
+"color to apply to vectors."
+msgstr ""
+"線幅はコンボボックスまたは値を入力して設定できます。カラーウィジェットはダイアログ :guilabel:`色の変更` "
+"を開きます。ここでベクトルに適用する色を選択できます。"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:272
+msgid ""
+"Enter values for :guilabel:`Min` and :guilabel:`Max` to filter vectors "
+"according to their magnitude."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:274
+msgid ""
+"Check on the box |checkbox| :guilabel:`Display Vectors on User Grid` and "
+"specify the :guilabel:`X spacing` and the :guilabel:`Y spacing`, QGIS will "
+"render the vector considering the given spacing."
+msgstr ""
+"チェックボックス :guilabel:`ユーザーグリッドにベクトルを表示する` をオンにして :guilabel:`Xの間隔` と "
+":guilabel:`Yの間隔` を指定すると、QGISは与えられた間隔を考慮してベクトルを描画します。"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:278
+msgid ""
+"With the Head Options :guilabel:`Head Options`, QGIS allows the shape of the"
+" arrow head to be set by specifying width and length (in percentage)."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:281
+msgid ""
+"Vector's :guilabel:`Arrow length` can be rendered in QGIS in three different"
+" ways:"
+msgstr "ベクタの :guilabel:`矢印の長さ` は3つの異なる方法でQGISで描画できます。"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:283
+msgid ""
+"Defined by Min and Max: You specify the minimum and maximum length for the "
+"vectors, QGIS will adjust their visualization accordingly"
+msgstr "最小値と最大値で定義：ベクトルの最小長と最大長を指定します。QGISはそれに応じて視覚化を調整します。"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:285
+msgid "Scale to magnitude: You specify the (multiplying) factor to use"
+msgstr "大きさへのスケール：使用する（倍率）係数を指定します"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:286
+msgid "Fixed: all the vectors are shown with the same length"
+msgstr "固定：すべてのベクトルが同じ長さで表示されます"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:291
+msgid "Rendering"
+msgstr "レンダリング"
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:293
+msgid ""
+"In the tab |rendering_mesh|,  QGIS offers two possibilities to display the "
+"grid, as shown in the image :ref:`Mesh rendering "
+"<figure_mesh_symbology_grid>`:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:296
+msgid "``Native Mesh Rendering`` that shows quadrants"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:297
+msgid "``Triangular Mesh Rendering`` that display triangles"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:305
+msgid "Mesh Rendering"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_mesh/mesh_properties.rst:308
+msgid ""
+"The line width and color can be changed in this dialog, and both the grid "
+"renderings can be turned off."
+msgstr "このダイアログでは線幅と色を変更でき、両方のグリッドレンダリングをオフにできます。"
+
+#~ msgid ""
+#~ "The :guilabel:`Color ramp` widget opens the :ref:`color ramp drop-down "
+#~ "shorcut <color_ramp_widget>`."
+#~ msgstr ""
+#~ ":guilabel:`カラーランプ` ウィジェットは :ref:`カラーランプドロップダウンショーカット <color_ramp_widget>` "
+#~ "を開きます。"
+
+#~ msgid ""
+#~ "In the tab |rendering_mesh|,  QGIS offers two possibilities to display the "
+#~ "grid, as shown in the image :ref:` Mesh rendering "
+#~ "<figure_mesh_symbology_grid>`:"
+#~ msgstr ""
+#~ "タブ |rendering_mesh| では、画像 :ref:` メッシュのレンダリング <figure_mesh_symbology_grid>` "
+#~ "に示されるように、QGISではグリッドを表示するための2つの可能性を提供しています："

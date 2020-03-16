@@ -1,0 +1,1094 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# 
+# Translators:
+# Shumpei Tokumaru <tokumaru@mvc.biglobe.ne.jp>, 2017
+# fairtommy <fairtommy@gmail.com>, 2017
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project testing\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-06 11:48+0100\n"
+"PO-Revision-Date: 2016-07-18 09:36+0000\n"
+"Last-Translator: fairtommy <fairtommy@gmail.com>, 2017\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:14
+msgid "Creating an Output"
+msgstr "出力を作成する"
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:21
+msgid ""
+"The :ref:`figure below <figure_layout_output>` shows an example of print "
+"layout including each type of layout items described in the previous "
+"section."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:30
+msgid ""
+"Print Layout with map view, legend, image, scale bar, coordinates, text and "
+"HTML frame added"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:35
+msgid ""
+"From the :menuselection:`Layout` menu or toolbar, you can output the print "
+"layout to different file formats, and it is possible to modify the "
+"resolution (print quality) and paper size:"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:39
+msgid ""
+"The |filePrint| :sup:`Print` icon allows you to print the layout to a "
+"connected printer or a PostScript file, depending on installed printer "
+"drivers."
+msgstr ""
+"|filePrint| :sup:`印刷` アイコンでは, インストールしているプリンタドライバに従い, "
+"レイアウトを接続しているプリンタやPostScriptファイルに出力できます."
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:41
+msgid ""
+"The |saveMapAsImage| :sup:`Export as image` icon exports the print layout in"
+" several image formats such as :file:`PNG`, :file:`BMP`, :file:`TIF`, "
+":file:`JPG`, and many others..."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:44
+msgid ""
+"The |saveAsSVG| :sup:`Export as SVG` icon saves the print layout as an "
+":file:`SVG` (Scalable Vector Graphic)."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:46
+msgid ""
+"The |saveAsPDF| :sup:`Export as PDF` icon saves the defined print layout "
+"directly as a :file:`PDF`."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:50
+msgid "Export settings"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:52
+msgid ""
+"Whenever you export a print layout, there are a selection of export settings"
+" QGIS needs to check in order to return the most appropriate output. These "
+"configurations are:"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:56
+msgid ""
+"the :ref:`Export settings <layout_export_settings>` of the "
+":guilabel:`Layout` panel, such as :guilabel:`Export resolution`, "
+":guilabel:`Print as raster`, :guilabel:`Always export as vectors` or "
+":guilabel:`Save world file`;"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:59
+msgid ""
+"the :guilabel:`Exclude page from exports` in the :ref:`page item properties "
+"<page_properties>` panel;"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:61
+msgid ""
+"the :guilabel:`Exclude item from exports` in the :ref:`item properties "
+"<layout_Rendering_Mode>` panel."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:68
+msgid "Export as Image"
+msgstr "画像としてエクスポート"
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:70
+msgid ""
+"Clicking the |saveMapAsImage| :sup:`Export as image` icon will ask you to "
+"select the image format and enter the filename to use to export the print "
+"layout: in the case of multi-page composition, each page will be exported to"
+" a file with the given name appended with the page number."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:75
+msgid ""
+"In the next :guilabel:`Image Export Options` dialog, you can optionally "
+"override the print layout resolution and the exported page dimensions (set "
+"in :guilabel:`Layout` panel)."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:82
+msgid ""
+"By checking |checkbox| :guilabel:`Crop to content` option, the image output "
+"by the layout will include the minimal area enclosing all the items (map, "
+"legend, scale bar, shapes, label, image...) of each page of the composition:"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:86
+msgid ""
+"If the composition includes a single page, then the output is resized to "
+"include EVERYTHING on the composition. The page can then be reduced or "
+"extended to all items depending on their position (on, above, below, left or"
+" right of the page)."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:90
+msgid ""
+"In case of a multi-page layout, each page will be resized to include items "
+"in its area (left and right sides for all pages, plus top for the first page"
+" and bottom for the last page). Each resized page is exported to a separate "
+"file."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:94
+msgid ""
+"The :guilabel:`Crop to content` dialog also allows to add some margins "
+"around the cropped bounds."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:102
+msgid "Image Export Options, output is resized to items extent"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:104
+msgid ""
+"**Use image formats that support transparency when items extend beyond the "
+"paper extent**"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:106
+msgid ""
+"Since layout items may be placed outside the paper extent, using the "
+":guilabel:`Crop to content` option while exporting can result in an image "
+"that extends beyond the paper extent. Since the background outside of the "
+"paper extent will be transparent, for image formats that do not support "
+"transparency (eg, :file:`.BMP`, :file:`.JPG`) it will be rendered as full "
+"black, \"corrupting\" the image."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:113
+msgid ""
+"Use transparency-compatible formats like :file:`.TIFF` or :file:`.PNG` in "
+"such a case."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:116
+msgid ""
+"If you need to export your layout as a **georeferenced image** (e.g., to "
+"share with other projects), check the |unchecked| :guilabel:`Generate world "
+"file` option and a world file named like the page on which the map reference"
+" set in :guilabel:`Layout` panel is placed will be created along the "
+"export(s). This option can also be checked by default in the :ref:`layout "
+"panel <layout_panel>`."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:123
+msgid ""
+"When needed, images rendering can also be improved with the "
+":guilabel:`Enable antialiasing` option."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:130
+msgid "Export as SVG"
+msgstr "SVGとしてエクスポート"
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:132
+msgid ""
+"With |saveAsSVG| :sup:`Export as SVG`, you also need to fill the filename "
+"(used as a basename for all files in case of multi-page composition) and "
+"then can apply |checkbox| :guilabel:`Crop to content` :ref:`option "
+"<crop_to_content>`."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:136
+msgid ""
+"The SVG export options dialog also allows to override the layout default "
+"export and offers other settings:"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:139
+msgid ""
+"|unchecked|:guilabel:`Export map layers as SVG groups`: may affect label "
+"placement."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:141
+msgid ""
+"|checkbox|:guilabel:`Render map labels as outlines`: unchecking this will "
+"allow you to edit labels as texts in vector illustration software."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:143
+msgid ""
+"|unchecked|:guilabel:`Always export as vectors`: some rendering options "
+"require items to be rasterized for a better rendering. Check this option to "
+"keep the objects as vectors with the risk that the appearance of the output "
+"file may not match the print layout preview (for more details, see "
+":ref:`layout_export_settings`)."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:148
+msgid "|checkbox|:guilabel:`Export RDF metadata`."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:155
+msgid "SVG Export Options"
+msgstr "SVGエクスポートオプション"
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:159
+msgid ""
+"Currently, the SVG output is very basic. This is not a QGIS problem, but a "
+"problem with the underlying Qt library. This will hopefully be sorted out in"
+" future versions."
+msgstr ""
+"現在, SVG出力は基本的な機能しか提供していません. これはQGIS側の問題ではなく, Qtライブラリに起因しています. "
+"将来のバージョンで改善されることを望みます."
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:167
+msgid "Export as PDF"
+msgstr "PDFとしてエクスポート"
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:169
+msgid ""
+"The |saveAsPDF| :sup:`Export as PDF` tool exports all the composition pages "
+"into a single PDF file you'd need to provide path and name. Unlike the other"
+" formats, exporting to :file:`.PDF` does not provide means to override the "
+"layout export settings. So check :ref:`these settings "
+"<layout_export_settings>` to ensure they are compatible with your needs."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:180
+msgid "PDF Export Options"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:182
+msgid ""
+"Exporting a print layout to formats like :file:`.PDF` or :file:`.TIFF` "
+"creates a georeferenced output (no world file needed) by default."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:190
+msgid "Generate an Atlas"
+msgstr "地図帳を作成"
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:192
+msgid ""
+"Atlas functions allow you to create map books in an automated way. Atlas "
+"uses the features of a vector or table layer called **coverage layer** and "
+"creates an output for each **atlas feature**. The most common usage is to "
+"zoom a map item to the current atlas feature. Further use cases include:"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:197
+msgid ""
+"a map item showing, for another layer, only features that share the same "
+"attribute as the atlas feature or are within its geometry;"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:199
+msgid ""
+"a label or html item whose text is replaced as features are iterated over;"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:200
+msgid ""
+"a table item showing attributes of associated :ref:`parent or children "
+"<vector_relations>` features of the current atlas feature..."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:203
+msgid ""
+"For each feature, an output is processed for all pages and items according "
+"to their exports settings."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:206
+msgid "**Use variables for more flexibility**"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:208
+msgid ""
+"QGIS provides a large panel of functions and :ref:`variables "
+"<general_tools_variables>`, including atlas related ones, that you can use "
+"to manipulate the layout items but also the layers symbology according to "
+"atlas status. Combining these features gives you a lot of flexibility and "
+"helps you easily produce advanced mappings."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:214
+msgid ""
+"To enable the generation of an atlas and access atlas parameters, refer to "
+"the :guilabel:`Atlas` panel. This panel contains the following "
+"functionalities (see figure_layout_atlas_):"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:223
+msgid "Atlas Panel"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:225
+msgid ""
+"|checkbox| :guilabel:`Generate an atlas`, which enables or disables the "
+"atlas generation;"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:227
+msgid ""
+"A :guilabel:`Coverage layer` |selectString| combo box that allows you to "
+"choose the table or vector layer containing the features to iterate over;"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:229
+msgid ""
+"An optional |checkbox| :guilabel:`Hidden coverage layer` that, if checked, "
+"will hide the coverage layer (but not the other layers) during the "
+"generation;"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:231
+msgid ""
+"An optional :guilabel:`Page name` combo box to give a more explicit name to "
+"each feature page(s) when previewing atlas. You can select a field of the "
+"coverage layer or set an :ref:`expression <vector_expressions>`. If this "
+"option is empty, QGIS will use an internal ID, according to the filter "
+"and/or the sort order applied to the layer;"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:236
+msgid ""
+"An optional :guilabel:`Filter with` text area that allows you to specify an "
+"expression for filtering features from the coverage layer. If the expression"
+" is not empty, only features that evaluate to ``True`` will be processed;"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:239
+msgid ""
+"An optional |checkbox| :guilabel:`Sort by` that allows you to sort features "
+"of the coverage layer, using a field of the coverage layer or an expression."
+" The sort order (either ascending or descending) is set by the two-state "
+"*Sort direction* button that displays an up or a down arrow."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:244
+msgid "You also have options to set the output of the atlas:"
+msgstr "地図帳の出力に関するオプションもあります:"
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:246
+msgid ""
+"An :guilabel:`Output filename expression` textbox that is used to generate a"
+" filename for each geometry if needed. It is based on expressions. This "
+"field is meaningful only for rendering to multiple files;"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:249
+msgid ""
+"A |checkbox| :guilabel:`Single file export when possible` that allows you to"
+" force the generation of a single file if this is possible with the chosen "
+"output format (PDF, for instance). If this field is checked, the value of "
+"the :guilabel:`Output filename expression` field is meaningless;"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:253
+msgid ""
+"An :guilabel:`Image export format` drop-down list to select the output "
+"format when using the |saveMapAsImage| :sup:`Export atlas as Images...` "
+"button."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:257
+msgid "Control map by atlas"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:259
+msgid ""
+"The most common usage of atlas is with the map item, zooming to the current "
+"atlas feature, as iteration goes over the coverage layer. This behavior is "
+"set in the :guilabel:`Controlled by atlas` group properties of the map item."
+" See :ref:`controlled_atlas` for different settings you can apply on map "
+"item."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:267
+msgid "Customize labels with expression"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:269
+msgid ""
+"In order to adapt labels to the feature the atlas iterates over, you can "
+"include expressions. What you should take care of is to place expression "
+"part (including functions, fields or variables) between ``[%`` and ``%]`` "
+"(see :ref:`layout_label_item` for more details)."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:274
+msgid ""
+"For example, for a city layer with fields CITY_NAME and ZIPCODE, you could "
+"insert this:"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:282
+msgid "or, another combination:"
+msgstr "または他の方法としては:"
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:289
+#, python-format
+msgid ""
+"The information ``[% concat( upper(CITY_NAME), ',', ZIPCODE, ' is ',  "
+"format_number($area/1000000, 2) ) %]`` is an expression used inside the "
+"label. Both expressions would result in the generated atlas as::"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:299
+msgid "Explore Data-defined override buttons with atlas"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:301
+msgid ""
+"There are several places where you can use a |dataDefined| :sup:`Data "
+"defined override` button to override the selected setting. These options are"
+" particularly useful with atlas generation. See :ref:`data_defined` for more"
+" details on this widget."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:306
+msgid ""
+"For the following examples the :file:`Regions` layer of the QGIS sample "
+"dataset is used and selected as coverage layer for the atlas generation. We "
+"also assume it's a single page layout containing a map and a label items."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:310
+msgid ""
+"When the height (north-south) of the extents of a region is greater than its"
+" width (east-west), you rather want to use *Portrait* instead of *Landscape*"
+" orientation to optimize the use of paper. With a |dataDefined| :sup:`Data "
+"Defined Override` button you can dynamically set the paper orientation."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:316
+msgid ""
+"Right-click on the page and select :guilabel:`Page Properties` to open the "
+"panel. We want to set the orientation dynamically, using an expression "
+"depending on the region geometry so press the |dataDefined| button of field "
+":guilabel:`Orientation`, select :guilabel:`Edit...` to open the "
+":guilabel:`Expression string builder` dialog and enter the following "
+"expression:"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:327
+msgid ""
+"Now if you :ref:`preview the atlas <atlas_preview>`, the paper orients "
+"itself automatically but items placement may not be ideal. For each Region "
+"you need to reposition the location of the layout items as well. For the map"
+" item you can use the |dataDefined| button of its :guilabel:`Width` property"
+" to set it dynamic using following expression:"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:337
+msgid ""
+"Likewise, use the |dataDefined| button of the :guilabel:`Height` property to"
+" provide following expression and constrain map item size:"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:344
+msgid ""
+"To ensure the map item is centered in the page, set its :guilabel:`Reference"
+" point` to the upper left radio button and enter ``10`` for its "
+":guilabel:`X` and :guilabel:`Y` positions."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:348
+msgid ""
+"Let's add a title above the map in the center of the page. Select the label "
+"item and set the horizontal alignment to |radioButtonOn| :guilabel:`Center`."
+" Next move the label to the right position, activate from "
+":guilabel:`Reference point` any of the middle buttons, and provide the "
+"following expression for field :guilabel:`X`:"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:358
+msgid ""
+"For all other layout items you can set the position in a similar way so they"
+" are correctly positioned when the page is automatically rotated in portrait"
+" or landscape. You can also do more tweaks such as customizing the title "
+"with feature attributes (see :ref:`atlas_labels` example), updating images "
+"with atlas feature, resizing the legend columns number according to page "
+"orientation..."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:364
+msgid ""
+"Information provided is an update of the excellent blog (in English and "
+"Portuguese) on the Data Defined Override options "
+"Multiple_format_map_series_using_QGIS_2.6_ ."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:367
+msgid ""
+"This is just one example of how you can use some advanced settings with "
+"atlas."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:372
+msgid "Preview and generate an atlas"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:379
+msgid "Atlas Preview toolbar"
+msgstr "地図帳プレビューツールバー"
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:381
+msgid ""
+"Once the atlas settings have been configured and layout items (map, table, "
+"image...) linked to it, you can create a preview of all the pages by "
+"clicking :menuselection:`Atlas --> Preview Atlas` or |atlas| :sup:`Preview "
+"Atlas` icon. You can then use the arrows in the same toolbar to navigate "
+"through all the features:"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:387
+msgid "|atlasFirst| :sup:`First feature`"
+msgstr "|atlasFirst| :sup:`最初の地物`"
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:388
+msgid "|atlasPrev| :sup:`Previous feature`"
+msgstr "|atlasPrev| :sup:`前の地物`"
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:389
+msgid "|atlasNext| :sup:`Next feature`"
+msgstr "|atlasNext| :sup:`次の地物`"
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:390
+msgid "|atlasLast| :sup:`Last feature`"
+msgstr "|atlasLast| :sup:`最後の地物`"
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:392
+msgid ""
+"You can also use the combo box to directly select and preview a specific "
+"feature. The combo box shows atlas features name according to the expression"
+" set in the atlas :guilabel:`Page name` option."
+msgstr ""
+"コンボボックスを使い, 特定の地物を直接選んでプレビューすることができます. コンボボックスでは, 地図帳 :guilabel:`ページ名` "
+"オプションで設定した式に従い地物名が表示されます."
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:397
+msgid ""
+"As for simple compositions, an atlas can be generated in different ways (see"
+" :ref:`create-output` for more information). Instead of "
+":menuselection:`Layout` menu, rather use tools from :menuselection:`Atlas` "
+"menu or toolbar."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:401
+msgid ""
+"This means that you can directly print your compositions with "
+":menuselection:`Atlas --> Print Atlas`. You can also create a PDF using "
+":menuselection:`Atlas --> Export Atlas as PDF...`: You will be asked for a "
+"directory to save all the generated PDF files, except if the |checkbox| "
+":guilabel:`Single file export when possible` has been selected. In that "
+"case, you'll be prompted to give a filename."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:407
+msgid ""
+"With :menuselection:`Atlas --> Export Atlas as Images...` or "
+":menuselection:`Atlas --> Export Atlas as SVG...` tool, you're also prompted"
+" to select a folder. Each page of each atlas feature composition is exported"
+" to the image file format set in :guilabel:`Atlas` panel or to SVG file."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:413
+msgid "**Print a specific atlas feature**"
+msgstr "**特定の地図帳地物を印刷**"
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:415
+msgid ""
+"If you want to print or export the composition of only one feature of the "
+"atlas, simply start the preview, select the desired feature in the drop-down"
+" list and click on :menuselection:`Layout --> Print` (or "
+":menuselection:`Export...` to any supported file format)."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:426
+msgid "Use project defined relations for atlas creation"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:428
+msgid ""
+"For users with HTML and Javascript knowledge it's possible to operate on "
+"GeoJSON objects and use project defined relations from the QGIS project. The"
+" difference between this approach and using expressions directly inserted "
+"into the HTML is that it gives you a full, unstructured GeoJSON feature to "
+"work with. This means that you can use the existing Javascript libraries and"
+" functions which operate on GeoJSON feature representations."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:436
+msgid ""
+"The following code includes all related child features from the defined "
+"relation. Using the JavaScript ``setFeature`` function it allows you to make"
+" flexible HTML which represents relations in whatever format you like "
+"(lists, tables, etc). In the code sample, we create a dynamic bullet list of"
+" the related child features."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_output.rst:465
+msgid ""
+"During the atlas creation there will be an iteration over the coverage layer"
+" containing the parent features. On every page, you will see a bullet list "
+"of the related child features following the parent's identifier."
+msgstr ""
+
+#~ msgid "|updatedisclaimer|"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Figure_composer_output_ shows the Print Composer with an example print "
+#~ "layout, including each type of map item described in the previous section."
+#~ msgstr ""
+#~ "Figure_composer_output_ "
+#~ "は、前のセクションで説明した地図アイテムの各タイプを含む例示的な印刷レイアウトでプリントコンポーザーを、示しています。"
+
+#~ msgid ""
+#~ "Print Composer with map view, legend, image, scale bar, coordinates, text "
+#~ "and HTML frame added"
+#~ msgstr "地図ビュー、凡例、画像、スケールバー、座標、テキスト、HTMLフレームを追加したプリントコンポーザー"
+
+#~ msgid ""
+#~ "Before printing a layout you have the possibility to view your composition "
+#~ "without bounding boxes. This can be enabled by deactivating "
+#~ ":menuselection:`View -->` |checkbox| :guilabel:`Show bounding boxes` or "
+#~ "pressing the shortcut :kbd:`Ctrl+Shift+B`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The Print Composer allows you to create several output formats, and it is "
+#~ "possible to define the resolution (print quality) and paper size:"
+#~ msgstr "プリントコンポーザーではいくつかの出力フォーマットを作成でき、解像度 (印字品質) と用紙サイズを定義できます。"
+
+#~ msgid ""
+#~ "The |saveMapAsImage| :sup:`Export as image` icon exports the Composer canvas"
+#~ " in several image formats, such as PNG, BPM, TIF, JPG,..."
+#~ msgstr ""
+#~ "|saveMapAsImage| :sup:`画像としてエクスポート` アイコンでは、コンポーザーキャンバスをPNG, BPM, TIF, "
+#~ "JPG,...フォーマットなどの画像としてエクスポートできます。"
+
+#~ msgid ""
+#~ "The |saveAsSVG| :sup:`Export as SVG` icon saves the Print Composer canvas as"
+#~ " an SVG (Scalable Vector Graphic)."
+#~ msgstr ""
+#~ "|saveAsSVG| :sup:`SVGとしてエクスポート` アイコンでは, プリントコンポーザーキャンバスをSVG (Scalable Vector"
+#~ " Graphic) として保存できます."
+
+#~ msgid ""
+#~ "The |saveAsPDF| :sup:`Export as PDF` icon saves the defined Print Composer "
+#~ "canvas directly as a PDF."
+#~ msgstr ""
+#~ "|saveAsPDF| :sup:`PDFとしてエクスポート` アイコンでは, 定義したプリントコンポーザーキャンバスを直接PDFに保存できます."
+
+#~ msgid ""
+#~ "Clicking the |saveMapAsImage| :sup:`Export as image` icon will ask you to "
+#~ "enter the filename to use to export composition: in the case of multi-page "
+#~ "composition, each page will be exported to a file with the given name "
+#~ "appended with the page number."
+#~ msgstr ""
+#~ "|saveMapAsImage| をクリックすると、 :sup:`画像としてエクスポート` "
+#~ "アイコンは、コンポジションのエクスポートに使用するファイル名を入力するように要求します。複数ページのコンポジションの場合、各ページは指定された名前にページ番号が付加されたファイルにエクスポートされます。"
+
+#~ msgid ""
+#~ "You can then override the print resolution (set in Composition panel) and "
+#~ "resize exported image dimensions."
+#~ msgstr "次に、印刷解像度を上書きして（コンポジションパネルで設定）、エクスポートされた画像のサイズを変更できます。"
+
+#~ msgid ""
+#~ "By checking |checkbox| :guilabel:`Crop to content` option, the images "
+#~ "outputted by the composer will include only the area of the composition with"
+#~ " content. There's also an option for margins to add around the item bounds "
+#~ "if required."
+#~ msgstr ""
+#~ "|checkbox| :guilabel:`内容を切り取る` "
+#~ "オプションをチェックすると、コンポーザーが出力する画像にはコンポジションのある領域のみが含まれます。必要に応じて、余白を項目境界の周りに追加するオプションもあります。"
+
+#~ msgid ""
+#~ "If the composition includes a single page, then the output will be sized to "
+#~ "include EVERYTHING on the composition. If it's a multi-page composition, "
+#~ "then each page will be cropped to only include the area of that page with "
+#~ "items."
+#~ msgstr "構成が単一ページであれば, 出力は構成内容すべてを含むサイズとなります. 複数ページの場合は, 各ページがその要素の領域に縮められます."
+
+#~ msgid "Image Export Options"
+#~ msgstr "画像エクスポートオプション"
+
+#~ msgid ""
+#~ "If you need to export your layout as a **georeferenced image** (e.g., to "
+#~ "share with other projects), you need to enable this feature under the "
+#~ ":ref:`composer_composition_tab`."
+#~ msgstr ""
+#~ ":ref:`composer_composition_tab` （他のプロジェクトと共有するために、例えば） **地理参照画像** "
+#~ "としてレイアウトをエクスポートする必要がある場合は、下のこの機能を有効にする必要があります。"
+
+#~ msgid ""
+#~ "If the output format is a TIFF format, all you need to do is making sure to "
+#~ "select the correct map item to use in |selectString| :guilabel:`Reference "
+#~ "map`, and the output will always be a GeoTIFF. For other image formats, you "
+#~ "also need to check the |checkbox| :guilabel:`Save world file` option. With "
+#~ "this option, the 'Export as image' action will create a world file along "
+#~ "with the exported image."
+#~ msgstr ""
+#~ "出力形式がTIFF形式である場合、行う必要があることは |selectString| :guilabel:`参照地図` "
+#~ "中で使用する正しい地図項目を確実に選択するだけで、出力は常にGeoTIFFになります。他の画像形式の場合は、 |checkbox| "
+#~ ":guilabel:`ワールドファイルを保存` "
+#~ "オプションもチェックする必要があります。このオプションを使用すると、「画像としてエクスポート」操作では、エクスポートされた画像と一緒にワールドファイルが作成されます。"
+
+#~ msgid ""
+#~ "Exporting large rasters can sometimes fail, even if there seems to be enough"
+#~ " memory. This is a problem with the underlying Qt management of rasters."
+#~ msgstr ""
+#~ "大きなラスターをエクスポートすると、時には十分なメモリがあるように思われる場合でも、失敗する可能性があります。これは、ラスターの根底にあるQtの管理に問題があります。"
+
+#~ msgid ""
+#~ "With |saveAsSVG| :sup:`Export as SVG`, you also need to fill the filename "
+#~ "(used as a basename for all files in case of multi_page composition) and "
+#~ "then can apply |checkbox| :guilabel:`Crop to content` :ref:`option "
+#~ "<crop_to_content>`."
+#~ msgstr ""
+#~ "|saveAsSVG| :sup:`SVGとしてエクスポート` でも, ファイル名を入力する必要があります "
+#~ "(複数ページ構成の場合はベース名として使用されます) そして |checkbox| :guilabel:`内容を切り取る` :ref:`オプション "
+#~ "<crop_to_content>` も適用されます."
+
+#~ msgid "The SVG export options dialog also allows to:"
+#~ msgstr "SVGのエクスポートオプション]ダイアログボックスでは以下もできます："
+
+#~ msgid ":guilabel:`export map layers as svg groups`:"
+#~ msgstr ":guilabel:`地図レイヤーをSVGグループとしてエクスポートする`:"
+
+#~ msgid "render map labels as outlines"
+#~ msgstr "アウトラインとして地図ラベルを描画する"
+
+#~ msgid ""
+#~ "The |saveAsPDF| :sup:`Export as PDF` exports all the composition into a "
+#~ "single PDF file."
+#~ msgstr "|saveAsPDF| :sup:`PDFとしてエクスポート` では, すべての構成を1つのPDFファイルとしてエクスポートします."
+
+#~ msgid ""
+#~ "If you applied to your composition or any shown layer an advanced effect "
+#~ "such as blend modes, transparency or symbol effects, these cannot be printed"
+#~ " as vectors, and the effects may be lost. Checking :guilabel:`Print as a "
+#~ "raster` in the :ref:`composer_composition_tab` helps to keep the effects but"
+#~ " rasterize the composition. Note that the :guilabel:`Force layer to render "
+#~ "as raster` in the Rendering tab of Layer Properties dialog is a layer-level "
+#~ "alternative that avoids global composition rasterization."
+#~ msgstr ""
+#~ "組成物または任意の示すレイヤーに、このようなブレンドモード、透明度やシンボル効果などの高度な効果を適用した場合、これらはベクターとして印刷できずに効果が失われることがあります。"
+#~ " :ref:`composer_composition_tab` 中の :guilabel:`ラスターとして印刷` "
+#~ "をチェックすると、効果を維持するが構図をラスター化するのに役立ちます。[レイヤプロパティ]ダイアログの[レンダリング]タブで "
+#~ ":guilabel:`レイヤーにラスターとしてレンダリングすることを強制` "
+#~ "はグローバルの構図ラスター化を避けるレイヤーレベルの代替であることに注意してください。"
+
+#~ msgid ""
+#~ "If you need to export your layout as a **georeferenced PDF**, in the "
+#~ ":ref:`composer_composition_tab`, make sure to select the correct map item to"
+#~ " use in |selectString| :guilabel:`Reference map`."
+#~ msgstr ""
+#~ "**地理参照PDF** としてレイアウトをエクスポートする必要がある場合は、 :ref:`composer_composition_tab` 中で、 "
+#~ "|selectString|  :guilabel:`参照地図` 中で使用する正しい地図項目を選択したことを確かめてください。"
+
+#~ msgid ""
+#~ "The Print Composer includes generation functions that allow you to create "
+#~ "map books in an automated way. The concept is to use a coverage layer, which"
+#~ " contains geometries and fields. For each geometry in the coverage layer, a "
+#~ "new output will be generated where the content of some canvas maps will be "
+#~ "moved to highlight the current geometry. Fields associated with this "
+#~ "geometry can be used within text labels."
+#~ msgstr ""
+#~ "プリントコンポーザーには地図帳を自動で作成する機能が含まれています。コンセプトとしては、ジオメトリとフィールドを含む被覆レイヤーの使用を考えます。被覆レイヤーの各ジオメトリに対して、キャンバス地図の内容がハイライトの現ジオメトリに移動し、新しい出力が作成されます。ジオメトリに関係づくフィールドはテキストラベルで使用できます。"
+
+#~ msgid ""
+#~ "Every page will be generated with each feature. To enable the generation of "
+#~ "an atlas and access generation parameters, refer to the `Atlas generation` "
+#~ "panel.This panel contains the following widgets (see "
+#~ "figure_composer_atlas_):"
+#~ msgstr ""
+#~ "すべてのページには、各地物で作成されます。地図帳の作成を可能にし、作成パラメーターにアクセスするために、 `地図帳の作成` "
+#~ "パネルを参照ください。このパネルには、以下のウィジェットが含まれます（ figure_composer_atlas_ 参照）："
+
+#~ msgid "Atlas Generation Panel"
+#~ msgstr "[地図帳の作成]パネル"
+
+#~ msgid ""
+#~ "|checkbox| :guilabel:`Generate an atlas`, which enables or disables the "
+#~ "atlas generation."
+#~ msgstr "|checkbox| :guilabel:`地図帳を作成` で, 地図上の作成の有効/無効を切り替えます."
+
+#~ msgid ""
+#~ "A :guilabel:`Coverage layer` |selectString| combo box that allows you to "
+#~ "choose the (vector) layer containing the features on which to iterate over."
+#~ msgstr ""
+#~ ":guilabel:`カバレッジレイヤー` |selectString| "
+#~ "反復処理するための地物を含む（ベクター）レイヤーを選択することを可能にするコンボボックス。"
+
+#~ msgid ""
+#~ "An optional |checkbox| :guilabel:`Hidden coverage layer` that, if checked, "
+#~ "will hide the coverage layer (but not the other ones) during the generation."
+#~ msgstr ""
+#~ "オプション |checkbox| :guilabel:`隠されたカバレッジレイヤー` "
+#~ "、チェックした場合は生成時にカバレッジレイヤーを非表示にします（ただしその他のレイヤーはしません）。"
+
+#~ msgid ""
+#~ "An optional :guilabel:`Page name` combo box to give a more explicit name to "
+#~ "each feature page(s) when previewing atlas. You can select an attribute of "
+#~ "the coverage layer or set an expression. If this option is empty, QGIS will "
+#~ "use an internal ID, according to the filter and/or the sort order applied to"
+#~ " the layer."
+#~ msgstr ""
+#~ ":guilabel:`ページ名称` "
+#~ "コンボボックスで、地図のプレビュー時に、各地物ページ(複数可)に対してより明示的に名前を付けることができます。被覆レイヤーの属性を選ぶか式を設定します。空白にすると、フィルタやレイヤーの順序に基づくQGISの内部IDが使用されます。"
+
+#~ msgid ""
+#~ "An optional :guilabel:`Filter with` text area that allows you to specify an "
+#~ "expression for filtering features from the coverage layer. If the expression"
+#~ " is not empty, only features that evaluate to ``True`` will be selected. The"
+#~ " button on the right allows you to display the expression builder."
+#~ msgstr ""
+#~ ":guilabel:`フィルタ` テキストエリアでは、カバレッジレイヤーの地物に対するフィルタの式を記述できます。式が空白でなければ、 評価が "
+#~ "``True`` の地物が選択されることになります。右のボタンを押すと式ビルダーが表示されます."
+
+#~ msgid ""
+#~ "An optional |checkbox| :guilabel:`Sort by` that, if checked, allows you to "
+#~ "sort features of the coverage layer. The associated combo box allows you to "
+#~ "choose which column will be used as the sorting key. Sort order (either "
+#~ "ascending or descending) is set by a two-state button that displays an up or"
+#~ " a down arrow."
+#~ msgstr ""
+#~ "|checkbox| :guilabel:`並べ替え` をチェックすると, "
+#~ "カバレッジレイヤーの地物を並べ替えることができます。コンボボックスで並べ替えのキーとしてどの列を使用するかを選択できます。並べ替える順序 (昇順か降順)"
+#~ " は上矢印か下矢印のボタンで指定します."
+
+#~ msgid ""
+#~ "An :guilabel:`Output filename expression` textbox that is used to generate a"
+#~ " filename for each geometry if needed. It is based on expressions. This "
+#~ "field is meaningful only for rendering to multiple files."
+#~ msgstr ""
+#~ ":guilabel:`出力ファイル名の式` テキストボックスで, 必要に応じ各ジオメトリのファイル名を作成できます. "
+#~ "このフィールドは複数ファイルの作成に対してのみ意味を持ちます."
+
+#~ msgid ""
+#~ "A |checkbox| :guilabel:`Single file export when possible` that allows you to"
+#~ " force the generation of a single file if this is possible with the chosen "
+#~ "output format (PDF, for instance). If this field is checked, the value of "
+#~ "the :guilabel:`Output filename expression` field is meaningless."
+#~ msgstr ""
+#~ "|checkbox| :guilabel:`可能であれば一つのファイルに出力` では, 出力フォーマットを指定し (たとえば PDF), "
+#~ "ファイルをできる限り一つにまとめて出力します. この項目をチェックすると, :guilabel:`出力ファイル名の式` の内容は意味を持たなくなります."
+
+#~ msgid ""
+#~ "You can use multiple map items with the atlas generation; each map will be "
+#~ "rendered according to the coverage features. To enable atlas generation for "
+#~ "a specific map item, you need to check |checkbox|:guilabel:`Controlled by "
+#~ "Atlas` under the item properties of the map item. Once checked, you can set:"
+#~ msgstr ""
+#~ "地図帳の作成で複数の地図項目を使うことができます; 各地図は被覆地物により表現されます. 特定の地図項目に対して地図帳を作成するには, "
+#~ "地図項目の項目プロパティで |checkbox|:guilabel:`地図帳による制御を有効にする` をチェックする必要があります. "
+#~ "チェックすると以下が設定できます:"
+
+#~ msgid ""
+#~ "A |radiobuttonon| :guilabel:`Margin around feature` that allows you to "
+#~ "select the amount of space added around each geometry within the allocated "
+#~ "map. Its value is meaningful only when using the auto-scaling mode."
+#~ msgstr ""
+#~ "|radiobuttonon| :guilabel:`地物のマージン` では, 配置地図の周りの余白のサイズを選ぶことができます. "
+#~ "この値は自動縮尺モードの場合のみ意味を持ちます."
+
+#~ msgid ""
+#~ "A |radioButtonOff| :guilabel:`Predefined scale` (best fit). It will use the "
+#~ "best fitting option from the list of predefined scales in your project "
+#~ "properties settings (see :menuselection:`Project --> Project Properties --> "
+#~ "General --> Project Scales` to configure these predefined scales)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A |radioButtonOff| :guilabel:`Fixed scale` that allows you to toggle between"
+#~ " auto-scale and fixed-scale mode. In fixed-scale mode, the map will only be "
+#~ "translated for each geometry to be centered. In auto-scale mode, the map's "
+#~ "extents are computed in such a way that each geometry will appear in its "
+#~ "entirety."
+#~ msgstr ""
+#~ "|radioButtonOff| :guilabel:`固定縮尺` では, 自動縮尺と固定縮尺を切り替えることができます. 固定縮尺モードでは, "
+#~ "各ジオメトリは中心位置に転送されます. 自動縮尺モードでは, 地図の範囲が各ジオメトリがそのまま表示されるように計算されます."
+
+#~ msgid "Labels"
+#~ msgstr "ラベル"
+
+#~ msgid ""
+#~ "In order to adapt labels to the feature the atlas plugin iterates over, you "
+#~ "can include expressions. What you should take care of is to place expression"
+#~ " part (including functions, fields or variables) between ``[%`` and ``%]``. "
+#~ "For example, for a city layer with fields CITY_NAME and ZIPCODE, you could "
+#~ "insert this:"
+#~ msgstr ""
+#~ "ラベルを地図帳プラグインが繰り返し処理する地物に合わせるために, 式を入力することができます。設定するところは ``[%`` と ``%]`` "
+#~ "の間で、式 （関数、フィールド、変数を含む）を入力します。たとえば、フィールド CITY_NAME と ZIPCODE を持つ city "
+#~ "レイヤーの場合, 次のように入力します:"
+
+#~ msgid ""
+#~ "The information ``[% upper(CITY_NAME) || ',' || ZIPCODE || ' is ' "
+#~ "format_number($area/1000000,2) %]`` is an expression used inside the label. "
+#~ "Both expressions would result in the generated atlas as::"
+#~ msgstr ""
+#~ "情報 ``[% upper(CITY_NAME) || ',' || ZIPCODE || ' is ' "
+#~ "format_number($area/1000000,2) %]`` はラベルの中で使われる式です。どちらの式でも、作成された地図帳は::"
+
+#~ msgid "Data Defined Override Buttons"
+#~ msgstr "データで定義されたプロパティ上書きボタン"
+
+#~ msgid ""
+#~ "There are several places where you can use a |dataDefined| :sup:`Data "
+#~ "Defined Override` button to override the selected setting. These options are"
+#~ " particularly useful with Atlas Generation."
+#~ msgstr ""
+#~ "何か所かに |dataDefined| :sup:`データで定義されたプロパティ上書き` ボタンがあり, 選択した設定を上書きできます. "
+#~ "これらのオプションは特に地図帳の作成に便利です."
+
+#~ msgid ""
+#~ "For the following examples the `Regions` layer of the QGIS sample dataset is"
+#~ " used and selected for Atlas Generation. We also assume the paper format `A4"
+#~ " (210X297)` is selected in the :guilabel:`Composition` panel for field "
+#~ ":guilabel:`Presets`."
+#~ msgstr ""
+#~ "以下の例についてはQGISサンプルデータセットの `Regions` レイヤーが使用され、地図帳生成のために選択されました。フィールドの "
+#~ ":guilabel:`Composition` パネル :guilabel:`Presets` また、用紙フォーマット `A4(210X297)` "
+#~ "で選択されていることを前提としています。"
+
+#~ msgid ""
+#~ "With a `Data Defined Override` button you can dynamically set the paper "
+#~ "orientation. When the height (north-south) of the extents of a region is "
+#~ "greater than its width (east-west), you rather want to use `portrait` "
+#~ "instead of `landscape` orientation to optimize the use of paper."
+#~ msgstr ""
+#~ "`データで定義されたプロパティ上書き` ボタンで, 用紙の位置づけを動的に変更できます. 領域の広がりの高さ (南北) が幅 (東西) より大きい場合,"
+#~ " 用紙を `横` ではなく `縦` の向きで使用したいことでしょう."
+
+#~ msgid ""
+#~ "In the :guilabel:`Composition` you can set the field :guilabel:`Orientation`"
+#~ " and select `Landscape` or `Portrait`. We want to set the orientation "
+#~ "dynamically using an expression depending on the region geometry. Press the "
+#~ "|dataDefined| button of field :guilabel:`Orientation`, select "
+#~ ":menuselection:`Edit...` so the :guilabel:`Expression string builder` dialog"
+#~ " opens. Enter the following expression:"
+#~ msgstr ""
+#~ ":guilabel:`コンポジション` タブで :guilabel:`方向` を設定でき `横` または `縦` を選べます. "
+#~ "ここで式を使うことにより領域によって方向を動的に変更したい場合, :guilabel:`方向` の |dataDefined| ボタンを押します. "
+#~ ":menuselection:`編集...` を選ぶと, :guilabel:`式ビルダー` ダイアログが開きます. 次の式を入力してください:"
+
+#~ msgid ""
+#~ "Now the paper orients itself automatically. For each Region you need to "
+#~ "reposition the location of the composer item as well. For the map item you "
+#~ "can use the |dataDefined| button of field :guilabel:`Width` to set it "
+#~ "dynamically using following expression:"
+#~ msgstr ""
+#~ "これで用紙の方向が自動になります. 各領域で同様にコンポーザーアイテムの位置を再配置する必要があります. 地図アイテムでは :guilabel:`幅` "
+#~ "の |dataDefined| ボタンを使い, 次の式で動的な設定を行えます:"
+
+#~ msgid ""
+#~ "Use the |dataDefined| button of field :guilabel:`Height` to provide "
+#~ "following expression:"
+#~ msgstr ":guilabel:`高さ` フィールドの |dataDefined| ボタンを使い, 次の式を入力します:"
+
+#~ msgid ""
+#~ "When you want to give a title above the map in the center of the page, "
+#~ "insert a label item above the map. First use the item properties of the "
+#~ "label item to set the horizontal alignment to |radioButtonOn| "
+#~ ":guilabel:`Center`. Next activate from :guilabel:`Reference point` the upper"
+#~ " middle checkbox. You can provide the following expression for field "
+#~ ":guilabel:`X` :"
+#~ msgstr ""
+#~ "ページの中央, 地図の少し上に表題を設定したい場合, 地図の上へラベルアイテムを挿入します. "
+#~ "まずラベルアイテムのアイテムプロパティで水平方向位置合わせを :guilabel:`中央` にします. 次に :guilabel:`参照点` "
+#~ "で上中央のチェックボックスをクリックします. そしてフィールド :guilabel:`X` に次の式を入力します:"
+
+#~ msgid ""
+#~ "For all other composer items you can set the position in a similar way so "
+#~ "they are correctly positioned when the page is automatically rotated in "
+#~ "portrait or landscape."
+#~ msgstr "他のコンポーザーアイテムに対しても似た方法で設定ができ, ページが縦か横になった場合に正しい位置に調整できます."
+
+#~ msgid ""
+#~ "Information provided is derived from the excellent blog (in English and "
+#~ "Portuguese) on the Data Defined Override options "
+#~ "Multiple_format_map_series_using_QGIS_2.6_ ."
+#~ msgstr ""
+#~ "データで定義されたプロパティ上書きオプションについての情報が提供されている素晴らしいブログ (英語とポルトガル語) があります "
+#~ "Multiple_format_map_series_using_QGIS_2.6_ ."
+
+#~ msgid ""
+#~ "This is just one example of how you can use the Data Defined Override "
+#~ "option."
+#~ msgstr "これはデータで定義されたプロパティ上書きオプションをどのように使うかの一つの例と言えます."
+
+#~ msgid "Preview and generate"
+#~ msgstr "プレビューと作成"
+
+#~ msgid ""
+#~ "Once the atlas settings have been configured and composer items (map, table,"
+#~ " image...) linked to it, you can create a preview of all the pages by "
+#~ "clicking :menuselection:`Atlas --> Preview Atlas` or |atlas| :sup:`Preview "
+#~ "Atlas` icon. You can then use the arrows in the same toolbar to navigate "
+#~ "through all the features:"
+#~ msgstr ""
+#~ "地図帳設定がなされ, アイテム (地図, テーブル, 画像...) が関連付けられると, :menuselection:`地図帳 --> "
+#~ "地図帳のプレビュー` または |atlas| :sup:`地図帳のプレビュー` アイコンをクリックして地図帳の全ページをプレビューすることができます. "
+#~ "そして同じツールバーの矢印を使いすべての地物を確認できます: "
+
+#~ msgid ""
+#~ "As for simple compositions, an atlas can be generated in different ways (see"
+#~ " :ref:`create-output` for more information). Instead of "
+#~ ":menuselection:`Composer` menu, rather use tools from :menuselection:`Atlas`"
+#~ " menu or Atlas toolbar."
+#~ msgstr ""
+#~ "単純な構成では, 地図帳は違った方法で作成できます (詳細は :ref:`出力の作成` 参照). :menuselection:`コンポーザー` "
+#~ "メニューの代わりに, :menuselection:`地図帳` メニューまたは地図帳ツールバーのツールを使用します."
+
+#~ msgid ""
+#~ "This means that you can directly print your compositions with "
+#~ ":menuselection:`Atlas --> Print Atlas`. You can also create a PDF using "
+#~ ":menuselection:`Atlas --> Export Atlas as PDF...`: The user will be asked "
+#~ "for a directory to save all the generated PDF files, except if the "
+#~ "|checkbox| :guilabel:`Single file export when possible` has been selected. "
+#~ "In that case, you'll be prompted to give a filename."
+#~ msgstr ""
+#~ "これは構成を :menuselection:`地図帳 --> 地図帳の印刷` で直接印刷できることを意味します. また "
+#~ ":menuselection:`地図帳 --> 地図帳をPDFとして出力...` でPDFを作成できます: |checkbox| "
+#~ ":guilabel:`可能であれば単一ファイルで出力` がチェックされていなければ, すべてのPDFファイルを保存するか確認されます. その場合, "
+#~ "ファイル名を指定します. "
+
+#~ msgid ""
+#~ "With :menuselection:`Atlas --> Export Atlas as Images...` or "
+#~ ":menuselection:`Atlas --> Export Atlas as SVG...` tool, you're also prompted"
+#~ " to select a folder. Each page of each atlas feature composition is exported"
+#~ " to an image or SVG file."
+#~ msgstr ""
+#~ ":menuselection:`地図帳 --> 画像として出力...` または :menuselection:`地図帳 --> SVGとして出力...`"
+#~ " ツールでは, フォルダの選択を求められます。各地図帳地物の各ページが1つの画像またはSVGファイルとして出力されます。"
+
+#~ msgid ""
+#~ "If you want to print or export the composition of only one feature of the "
+#~ "atlas, simply start the preview, select the desired feature in the drop-down"
+#~ " list and click on :menuselection:`Composer --> Print` (or "
+#~ ":menuselection:`export...` to any supported file format)."
+#~ msgstr ""
+#~ "地図帳のひとつのみの地物の構成を印刷または出力したいのであれば, ドロップダウンリストからその地物を選び :menuselection:`コンポーザー "
+#~ "--> 印刷` をクリックします (または :menuselection:`出力...` で他のファイルフォーマットをクリックします)."
+
+#~ msgid ""
+#~ "Exporting a print layout to formats like :file:`.PDF` or :file:`.TIFF` "
+#~ "creates by default a georeferenced output (no world file needed)."
+#~ msgstr ""

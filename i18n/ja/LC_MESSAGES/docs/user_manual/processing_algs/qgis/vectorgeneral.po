@@ -1,0 +1,1162 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+# 
+# Translators:
+# fairtommy <fairtommy@gmail.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-06 11:48+0100\n"
+"PO-Revision-Date: 2019-04-07 13:57+0000\n"
+"Last-Translator: fairtommy <fairtommy@gmail.com>, 2019\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:8
+msgid "Vector general"
+msgstr "ベクタ一般"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:20
+msgid "Assign projection"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:21
+msgid "Assigns a new projection to a vector layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:23
+msgid ""
+"It creates a new layer with the exact same features and geometries as the "
+"input one, but assigned to a new CRS. The geometries are **not** "
+"reprojected, they are just assigned to a different CRS."
+msgstr ""
+"これが作成するのは、入力されたものとまったく同じ地物とジオメトリを持つ新しいレイヤですが、新しいCRSに割り当てられています。ジオメトリは再投影 "
+"**されません** 。異なるCRSに割り当てられるだけです。"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:27
+msgid ""
+"This algorithm can be used to repair layers which have been assigned an "
+"incorrect projection."
+msgstr "このアルゴリズムは、誤った投影法が割り当てられたレイヤーを修復するために使用できます。"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:30
+msgid "Attributes are not modified by this algorithm."
+msgstr "このアルゴリズムでは属性は変更されません。"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:33
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:63
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:89
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:111
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:132
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:154
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:177
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:197
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:254
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:282
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:314
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:375
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:445
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:531
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:565
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:601
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:632
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:656
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:682
+msgid "Parameters"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:35
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:92
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:114
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:134
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:157
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:179
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:257
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:284
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:317
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:377
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:447
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:568
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:604
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:659
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:685
+msgid "``Input layer`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:35
+msgid "Vector layer with wrong or missing CRS."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:40
+msgid "``Assigned CRS`` [crs]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:38
+msgid "Select the new CRS to assign to the vector layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:40
+msgid "Default: *EPSG:4326 - WGS84*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:43
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:73
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:160
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:182
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:239
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:260
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:293
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:351
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:421
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:502
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:544
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:585
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:612
+msgid "Outputs"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:45
+msgid "``Assigned CRS`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:45
+msgid "Vector layer with assigned projection."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:48
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:140
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:299
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:550
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:618
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:668
+msgid "See also"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:49
+msgid ""
+":ref:`qgisdefinecurrentprojection`, :ref:`qgisfindprojection`, "
+":ref:`qgisreprojectlayer`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:55
+msgid "Build virtual vector"
+msgstr "仮想ベクタの作成"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:56
+msgid ""
+"Creates a virtual vector layer that contains a set of vector layer. The "
+"output virtual vector layer will not be open in the current project."
+msgstr "複数のベクタレイヤを含む仮想ベクタレイヤを作成します。出力の仮想ベクタレイヤは現在のプロジェクトでは開きません。"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:59
+msgid ""
+"This algorithm is especially useful in case another algorithm needs multiple"
+" layers but accept only one ``vrt`` in which the layers are specified."
+msgstr ""
+"このアルゴリズムは、他のアルゴリズムが複数のレイヤを必要としているが、レイヤが指定されている1つの ``vrt`` だけを受け入れる場合に特に便利です。"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:65
+msgid "``Input datasources`` [vector: any] [list]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:65
+msgid "Select the vector layers you want to use to build the virtual vector."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:70
+msgid "``Create \"unioned\" VRT`` [boolean]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:68
+msgid "Check if you want to unite all the vectors in a single ``vrt`` file."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:70
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:582
+msgid "Default: *False*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:76
+msgid "``Virtual vector`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:75
+msgid "The final virtual vector made by all the source vector chosen."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:81
+msgid "Create attribute index"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:82
+msgid ""
+"Creates an index against a field of the attribute table to speed up queries."
+" The support for index creation depends on both the layer's data provider "
+"and the field type."
+msgstr ""
+"照会を高速化するために、属性テーブルのフィールドに対して索引を作成します。索引作成のサポートは、レイヤのデータプロバイダとフィールドタイプの両方によって異なります。"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:86
+msgid "No outputs are created: the index is stored on the layer itself."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:92
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:179
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:659
+msgid "Vector layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:96
+msgid "``Attribute to index`` [tablefield: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:95
+msgid "Field of the vector layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:101
+msgid "Create spatial index"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:102
+msgid ""
+"Creates an index to speed up access to the features in a layer based on "
+"their spatial location. Support for spatial index creation is dependent on "
+"the layer's data provider."
+msgstr ""
+"空間的な位置に基づいてレイヤ内の地物へのアクセスを高速化するためのインデックスを作成します。空間インデックス作成のサポートは、レイヤのデータプロバイダによって異なります。"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:106
+msgid "No new output layers are created."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:108
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:129
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:372
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:528
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:653
+msgid "``Default menu``: :menuselection:`Vector --> Data Management Tools`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:113
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:684
+msgid "Vector layer in input."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:119
+msgid "Define layer projection"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:120
+msgid ""
+"Sets an existing layer's projection to the provided CRS. It is very useful "
+"when a layer is missing the ``proj`` file and you know the correct "
+"projection."
+msgstr ""
+"提供されたCRSに既存のレイヤの投影法を設定します。レイヤに ``proj`` ファイルがなくて正しい投影法を知っているときにとても便利です。"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:123
+msgid ""
+"Contrary to the :ref:`qgisassignprojection` algorithm, it modifies the "
+"current layer and will not output a new layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:126
+msgid ""
+"For Shapefile datasets, the ``.prj`` and ``.qpj`` files will be overwritten "
+"- or created if missing - to match the provided CRS."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:134
+msgid "Vector layer with missing projection information."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:137
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:236
+msgid "``CRS`` [crs]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:137
+msgid "CRS to associate to the input vector layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:141
+msgid ""
+":ref:`qgisassignprojection`, :ref:`qgisfindprojection`, "
+":ref:`qgisreprojectlayer`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:147
+msgid "Delete duplicate geometries"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:148
+msgid "Finds and removes duplicated geometries."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:150
+msgid ""
+"Attributes are not checked, so in case two features have identical "
+"geometries but different attributes, only one of them will be added to the "
+"result layer."
+msgstr "属性はチェックされません。そのため、属性は違っても同じジオメトリを持つ地物は、一つしか出力されません。"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:156
+msgid "The layer with duplicate geometries you want to clean."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:163
+msgid "``Cleaned`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:162
+msgid "The final layer without any duplicated geometries."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:168
+msgid "Drop geometries"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:169
+msgid ""
+"Creates a simple *geometryless* copy of the input layer attribute table. It "
+"keeps the attribute table of the source layer."
+msgstr "入力レイヤ属性テーブルの単純な *ジオメトリのない* コピーを作成します。ソースレイヤの属性テーブルを保持します。"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:172
+msgid ""
+"If the file is saved in a local folder, you can choose between many file "
+"formats."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:174
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:598
+msgid ""
+"|checkbox| Allows :ref:`features in-place modification "
+"<processing_inplace_edit>`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:186
+msgid "``Dropped geometry`` [table]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:185
+msgid "Geometryless table as a copy of the original attribute table."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:191
+msgid "Execute SQL"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:192
+msgid ""
+"Runs a simple or complex query with ``SQL`` syntax on the source layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:194
+msgid "The result of the query will be added as new layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:201
+msgid "``Additional input datasources`` [vector: any] [list]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:199
+msgid ""
+"List of layers to query. In the SQL editor you can refer these layers with "
+"their **real** name or also with **input1**, **input2**, **inputN** "
+"depending on how many layers have been chosen."
+msgstr ""
+"問い合わせるレイヤのリスト。 SQLエディタでは、これらのレイヤを実際の名前でも参照できますし、選択したレイヤ数に応じて **input1** 、 "
+"**input2** 、 **inputN** でも参照できます。"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:204
+msgid "``SQL query`` [string]"
+msgstr "``SQLクエリ`` [文字列]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:204
+msgid "Type here the string of your SQL query, e.g. ``SELECT * FROM input1``."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:209
+msgid "``Unique identifier field`` [string]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:207
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:212
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:217
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:234
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:329
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:345
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:356
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:399
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:415
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:426
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:469
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:474
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:538
+msgid "Optional"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:209
+msgid "Specify the column with unique ID."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:214
+msgid "``Geometry field`` [string]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:214
+msgid "Specify the geometry field."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:231
+msgid "``Geometry type`` [enumeration]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:219
+msgid ""
+"Choose the final geometry of the result. By default the algorithm will "
+"autodetect it. Available options are:"
+msgstr "結果の最終的なジオメトリを選択します。デフォルトでは、アルゴリズムにより自動検出されます。利用可能なオプションは以下のとおりです："
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:222
+msgid "0 --- Autodetect"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:223
+msgid "1 --- No geometry"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:224
+msgid "2 --- Point"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:225
+msgid "3 --- LineString"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:226
+msgid "4 --- Polygon"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:227
+msgid "5 --- MultiPoint"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:228
+msgid "6 --- MultiLineString"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:229
+msgid "7 --- MultiPolygon"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:231
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:396
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:409
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:466
+msgid "Default: *0*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:236
+msgid "The CRS to assign to the output layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:242
+msgid "``SQL Output`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:241
+msgid "Vector layer created by the query."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:247
+msgid "Extract selected features"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:248
+msgid "Saves the selected features as a new layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:250
+msgid ""
+"If the selected layer has no selected features, the newly created layer will"
+" be empty."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:257
+msgid "Layer to save the selection from."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:264
+msgid "``Selection`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:263
+msgid ""
+"Vector layer with only the selected features, or no feature if none was "
+"selected."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:269
+msgid "Find projection"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:270
+msgid ""
+"Allows creation of a shortlist of possible candidate coordinate reference "
+"systems for a layer with an unknown projection."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:273
+msgid ""
+"The expected area which the layer should reside in must be specified via the"
+" target area parameter. Additionally, the coordinate reference system for "
+"this target area must also be set."
+msgstr ""
+"レイヤが存在する必要があると期待される領域は、target "
+"areaパラメータで指定する必要があります。さらに、このターゲット領域の座標参照系も設定する必要があります。"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:277
+msgid ""
+"The algorithm operates by testing the layer's extent in every known "
+"reference system and listing any in which the bounds would fall near the "
+"target area if the layer was in this projection."
+msgstr ""
+"このアルゴリズムは、既知のすべての参照システムでレイヤの範囲をテストし、レイヤがこの投影内にある場合に境界がターゲット領域の近くになる可能性があるものをすべてリストすることによって動作します。"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:284
+msgid "Layer with unknown projection."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:287
+msgid "``Target area for layer`` [extent]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:287
+msgid "This is the area in which the layer is expected to be."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:290
+msgid "``Target area CRS`` [crs]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:290
+msgid "Choose the target CRS of the target area selected."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:296
+msgid "``CRS candidates`` [table]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:295
+msgid ""
+"The algorithm writes a table with all the CRS (EPSG codes) of the matching "
+"criteria."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:300
+msgid ""
+":ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`, "
+":ref:`qgisreprojectlayer`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:306
+msgid "Join attributes by field value"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:307
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:365
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:434
+msgid ""
+"Takes an input vector layer and creates a new vector layer that is an "
+"extended version of the input one, with additional attributes in its "
+"attribute table."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:310
+msgid ""
+"The additional attributes and their values are taken from a second vector "
+"layer. An attribute is selected in each of them to define the join criteria."
+msgstr "追加の属性とその値は、2番目のベクトルレイヤから取得されます。結合基準を定義するために、それぞれで属性が選択されます。"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:316
+msgid ""
+"Source input vector layer. The final attribute table will be added to "
+"**this** vector layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:320
+msgid "``Table field`` [tablefield: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:320
+msgid "Field of the source layer with the unique identifier."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:323
+msgid "``Input layer 2`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:323
+msgid "Layer with the attribute table to join."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:326
+msgid "``Table field 2`` [tablefield: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:326
+msgid "Table of the joining layer with the common unique field identifier."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:331
+msgid "``Layer 2 fields to copy`` [tablefield: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:331
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:401
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:471
+msgid ""
+"Select the specific fields you want to add. By default all the fields are "
+"added."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:339
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:409
+msgid "``Join type`` [enumeration]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:334
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:404
+msgid "Choose the type of the final joined layer between:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:336
+msgid "0 --- Create separate feature for each matching feature (one-to-many)"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:337
+msgid "1 --- Take attributes of the first matching feature only (one-to-one)"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:339
+msgid "Default: *1*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:342
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:412
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:499
+msgid "``Discard records which could not be joined`` [boolean]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:342
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:412
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:499
+msgid "Check if you don't want to add the features that cannot be joined."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:348
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:418
+msgid "``Joined field prefix`` [string]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:347
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:417
+msgid ""
+"Add a prefix to joined fields in order to easily identify them and avoid "
+"field name collision."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:353
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:423
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:505
+msgid "``Joined layer`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:353
+msgid "Final vector layer with the attribute table as result of the join."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:359
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:428
+msgid "``Unjoinable features from first layer`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:358
+msgid "Vector layer of the non matching features resulting from the join."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:364
+msgid "Join attributes by location"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:368
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:437
+msgid ""
+"The additional attributes and their values are taken from a second vector "
+"layer. A spatial criteria is applied to select the values from the second "
+"layer that are added to each feature from the first layer."
+msgstr ""
+"追加の属性とその値は、第２のベクタレイヤから取得されます。第１のレイヤからの各地物に追加される第２のレイヤからの値を選択するために空間的基準が適用されます。"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:377
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:447
+msgid "Source vector layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:381
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:451
+msgid "``Join layer`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:380
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:450
+msgid ""
+"The attributes of this vector layer will be **added** to the source layer "
+"attribute table."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:396
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:466
+msgid "``Geometric predicate`` [enumeration] [list]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:384
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:454
+msgid "Check the geometric criteria."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:386
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:456
+msgid "Options:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:388
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:458
+msgid "0 --- intersects"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:389
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:459
+msgid "1 --- contains"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:390
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:460
+msgid "2 --- equals"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:391
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:461
+msgid "3 --- touches"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:392
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:462
+msgid "4 --- overlaps"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:393
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:463
+msgid "5 --- within"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:394
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:464
+msgid "6 --- crosses"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:401
+msgid "``Fields to add`` [tablefield: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:406
+msgid "0 --- Create separate feature for each located feature (one-to-many)"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:407
+msgid "1 --- Take attributes of the first located feature only (one-to-one)"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:423
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:504
+msgid "The final vector with all the joined features."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:428
+msgid ""
+"Vector layer of only the input features that do not spatially match any join"
+" feature."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:433
+msgid "Join attributes by location (summary)"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:441
+msgid ""
+"The algorithm calculates a statistical summary for the values from matching "
+"features in the second layer (e.g. maximum value, mean value, etc)."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:471
+msgid "``Fields to summarize`` [tablefield: any] [list]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:496
+msgid "``Summaries to calculate`` [enumeration] [list]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:476
+msgid ""
+"Choose which type of summary you want to add to each field and for each "
+"feature."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:478
+msgid "0 --- count"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:479
+msgid "1 --- unique"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:480
+msgid "2 --- min"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:481
+msgid "3 --- max"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:482
+msgid "4 --- range"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:483
+msgid "5 --- sum"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:484
+msgid "6 --- mean"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:485
+msgid "7 --- median"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:486
+msgid "8 --- stddev"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:487
+msgid "9 --- minority"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:488
+msgid "10 --- majority"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:489
+msgid "11 --- q1"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:490
+msgid "12 --- q3"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:491
+msgid "13 --- iqr"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:492
+msgid "14 --- empty"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:493
+msgid "15 --- filled"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:494
+msgid "16 --- min_length"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:495
+msgid "17 --- max_length"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:496
+msgid "18 --- mean_length"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:510
+msgid "Merge vector layers"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:511
+msgid ""
+"Combines multiple vector layers of the **same geometry** type into a single "
+"one."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:513
+msgid ""
+"If attributes tables are different, the attribute table of the resulting "
+"layer will contain the attributes from all input layers. Non-matching fields"
+" will be appended at the end of the attribute table."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:517
+msgid ""
+"If any input layers contain Z or M values, then the output layer will also "
+"contain these values. Similarly, if any of the input layers are multi-part, "
+"the output layer will also be a multi-part layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:521
+msgid ""
+"Optionally, the destination coordinate reference system (CRS) for the merged"
+" layer can be set. If it is not set, the CRS will be taken from the first "
+"input layer. All layers will be reprojected to match this CRS."
+msgstr ""
+"任意で、併合されるレイヤの目的座標参照系（ＣＲＳ）を設定できます。設定されていない場合、CRSは最初の入力レイヤから取得されます。すべてのレイヤがこのCRSと一致するように再投影されます。"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:535
+msgid "``Layers to merge`` [vector: any] [list]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:534
+msgid ""
+"All the layers that have to be merged into a single layer. Layers should be "
+"of the same geometry type."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:541
+msgid "``Destination CRS`` [crs]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:540
+msgid ""
+"Choose the CRS of the output layer. If not specified the CRS of the first "
+"input layer is taken."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:547
+msgid "``Merged`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:547
+msgid ""
+"Merged vector layer containing all the features and attributes from input "
+"layers."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:551
+msgid ":ref:`qgissplitvectorlayer`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:557
+msgid "Order by expression"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:558
+msgid ""
+"Sorts a vector layer according to an expression: changes the feature index "
+"according to an expression."
+msgstr "式に従ってベクタレイヤをソートします：式に従って地物インデックスを変更します。"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:561
+msgid ""
+"Be careful, it might not work as expected with some providers, the order "
+"might not be kept every time."
+msgstr "期待通りに機能しない可能性がありますので注意して下さい。順序が毎回維持されない場合があります。"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:568
+msgid "Vector layer to sort."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:571
+msgid "``Expression`` [expression]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:571
+msgid "Expression to use for the vector sorting."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:577
+msgid "``Sort ascending`` [boolean]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:574
+msgid ""
+"If checked the vector layer will be sorted from the smallest to the biggest "
+"values found."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:577
+msgid "Default: *True*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:582
+msgid "``Sort nulls first`` [boolean]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:580
+msgid ""
+"If checked Null values are placed at the beginning of the sorted layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:589
+msgid "``Output layer`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:588
+msgid "Sorted vector layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:594
+msgid "Reproject layer"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:595
+msgid ""
+"Reprojects a vector layer in a different CRS. The reprojected layer will "
+"have the same features and attributes of the input layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:604
+msgid "Layer to reproject."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:609
+msgid "``Target CRS`` [crs]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:607
+msgid "Destination coordinate reference system."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:609
+msgid "Default: *EPSG:4326*"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:615
+msgid "``Reprojected layer`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:615
+msgid "The resulting reprojected layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:619
+msgid ""
+":ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`, "
+":ref:`qgisfindprojection`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:625
+msgid "Set style for vector layer"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:626
+msgid ""
+"Sets the style of a vector layer. The style must be defined in a QML file."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:629
+msgid ""
+"No new output are created: the style is immediately assigned to the vector "
+"layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:634
+msgid "``Vector layer`` [vector: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:634
+msgid "The layer you want to change the style."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:638
+msgid "``Style file`` [file]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:637
+msgid "``qml`` file of the style."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:643
+msgid "Split vector layer"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:644
+msgid ""
+"Creates a set of vectors in an output folder based on an input layer and an "
+"attribute. The output folder will contain as many layers as the unique "
+"values found in the desired field."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:648
+msgid ""
+"The number of geopackage files generated is equal to the number of different"
+" values found for the specified attribute."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:651
+msgid "It is the opposite operation of *merging*."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:662
+msgid "``Unique ID field`` [tablefield: any]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:662
+msgid "Field of the attribute table on which the layer will be split."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:665
+msgid "``Output directory`` [folder]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:665
+msgid "Directory where all the split layers will be saved."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:669
+msgid ":ref:`qgismergevectorlayers`"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:675
+msgid "Truncate table"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:676
+msgid "Truncates a layer, by deleting all features from within the layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/qgis/vectorgeneral.rst:678
+msgid ""
+"This algorithm modifies the layer in place, and deleted features cannot be "
+"restored!"
+msgstr ""
+
+#~ msgid ""
+#~ "The number of files generated is equal to the number of different values "
+#~ "found for the specified attribute."
+#~ msgstr ""
+
+#~ msgid "Directory where all the split layer will be saved."
+#~ msgstr ""

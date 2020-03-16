@@ -1,0 +1,1278 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# 
+# Translators:
+# Benoît de Cabissole, 2015
+# MarieSilvestre, 2016,2019
+# Médéric RIBREUX <mederic.ribreux__translate@medspx.fr>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-06 11:48+0100\n"
+"PO-Revision-Date: 2019-12-06 11:51+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"Language-Team: French (http://www.transifex.com/qgis/qgis-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:8
+msgid "Stream Network Analysis"
+msgstr "Analyse de réseau hydrographique"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:17
+msgid "D8 Extreme Upslope Value"
+msgstr "Valeur extrême de pente positive D8"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:20
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:84
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:144
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:211
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:272
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:325
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:389
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:534
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:721
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:767
+msgid "Description"
+msgstr "Description"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:22
+msgid ""
+"Evaluates the extreme (either maximum or minimum) upslope value from an "
+"input grid based on the D8 flow model. This is intended initially for use in"
+" stream raster generation to identify a threshold of the slope times area "
+"product that results in an optimum (according to drop analysis) stream "
+"network."
+msgstr "Évalue la valeur extrême (maximale ou minimale) de pente positive à partir d'une grille d'entrée basée sur le modèle de flux D8. Ceci est initialement prévu pour être utilisé, lors de la génération d'un raster hydrographique, pour identifier un seuil du produit de la surface par la pente qui aboutit à un réseau hydrographique optimum (selon l'analyse de dénivelée)."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:27
+msgid ""
+"If the optional outlet point shapefile is used, only the outlet cells and "
+"the cells upslope (by the D8 flow model) of them are in the domain to be "
+"evaluated."
+msgstr "Si le shapefile optionnel de point d'exutoire est utilisé, seules les cellules d'exutoires et les cellules de pente positive (par le modèle de flux D8) de ceux-ci sont dans le domaine qui doit être évalué."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:30
+msgid ""
+"By default, the tool checks for edge contamination. This is defined as the "
+"possibility that a result may be underestimated due to grid cells outside of"
+" the domain not being counted. This occurs when drainage is inwards from the"
+" boundaries or areas with \"no data\" values for elevation. The algorithm "
+"recognizes this and reports \"no data\" for the result for these grid cells."
+" It is common to see streaks of \"no data\" values extending inwards from "
+"boundaries along flow paths that enter the domain at a boundary. This is the"
+" desired effect and indicates that the result for these grid cells is "
+"unknown due to it being dependent on terrain outside of the domain of data "
+"available. Edge contamination checking may be turned off in cases where you "
+"know this is not an issue or want to ignore these problems, if for example, "
+"the DEM has been clipped along a watershed outline."
+msgstr "Par défaut, l'outil vérifie la contamination des bords. Il s'agit de la possibilité qu'un résultat soit sous-estimée à cause de la non-prise en compte des cellules en dehors du domaine. Cela se produit lorsque le drainage se fait vers l'intérieur des limites ou avec des régions ayant des valeurs \"sans donnée\" pour l'élévation. L'algorithme le reconnaît et renvoie les valeurs \"sans donnée\" comme résultat pour ces cellules. Il est courant de constater des traînées de valeurs \"sans donnée\" se propageant des limites vers l'intérieur du domaine, le long des chemins de flux qui entre dans le domaine au niveau d'une limite. C'est l'effet désiré et cela indique que la surface contributive de ces cellules est inconnue car elle est dépendante du terrain qui se situe en dehors du domaine des données disponibles. La vérification de la contamination des arcs peut être désactivée lorsque vous savez qu'il ne s'agit pas d'un problème ou que vous voulez ignorer ces problèmes, par exemple, si le MNE a été découpé le long d'une limite de bassin versant."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:43
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:95
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:165
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:226
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:279
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:340
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:420
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:569
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:728
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:772
+msgid "Parameters"
+msgstr "Paramètres"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:49
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:734
+msgid "``D8 Flow Directions Grid`` [raster]"
+msgstr "``Grille de Direction de Flux D8`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:46
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:168
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:432
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:576
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:731
+msgid ""
+"A grid of D8 flow directions which are defined, for each cell, as the "
+"direction of the one of its eight adjacent or diagonal neighbors with the "
+"steepest downward slope. This grid can be obtained as the output of the "
+"**\"D8 Flow Directions\"** tool."
+msgstr "Une grille de directions de flux D8 qui est définie, pour chaque cellule, comme la direction d'une de ses 8 voisines, adjacentes ou diagonales, ayant la pente descendante la plus raide. Cette grille peut être obtenue depuis la sortie de l'outil **\"Directions de flux D8\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:54
+msgid "``Upslope Values Grid`` [raster]"
+msgstr "``Grille de valeur de pente positive`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:52
+msgid ""
+"This is the grid of values of which the maximum or minimum upslope value is "
+"selected. The values most commonly used are the slope times area product "
+"needed when generating stream rasters according to drop analysis."
+msgstr "Il s'agit de la grille des valeurs parmi lesquelles la valeur maximale ou minimale de la pente ascendante est sélectionnée. Les valeurs les plus couramment utilisées sont celles du produit aire par pente qui est necéssaire pour générer les rasters hydrographiques par l'analyse de dénivelée."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:60
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:183
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:452
+msgid "``Outlets Shapefile`` [vector: point]"
+msgstr "``Shapefile des exutoires`` [vecteur: point]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:57
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:359
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:596
+msgid "Optional"
+msgstr "En option"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:59
+msgid ""
+"A point shape file defining outlets of interest. If this input file is used,"
+" only the area upslope of these outlets will be evaluated by the tool."
+msgstr "Un Shapefile de points définissant les exutoires d'intérêt. Si le fichier en entrée est utilisé, seules les cellules en amont de ces exutoires seront évaluées par l'outil."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:65
+msgid "``Check for edge contamination`` [boolean]"
+msgstr "``Vérifier la contamination des arcs`` [booléen]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:63
+msgid ""
+"A flag that indicates whether the tool should check for edge contamination."
+msgstr "Un drapeau indiquant si l'outil doit vérifier la contamination des arcs."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:65
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:71
+msgid "Default: *True*"
+msgstr "Par défaut : *Vrai*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:71
+msgid "``Use max upslope value`` [boolean]"
+msgstr "``Utiliser la valeur de seuil supérieur maximale`` [booléen]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:68
+msgid ""
+"A flag to indicate whether the maximum or minimum upslope value is to be "
+"calculated."
+msgstr "Un drapeau pour indiquer si la valeur de seuil supérieur minimale ou maximale doit être calculée."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:74
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:132
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:193
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:251
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:304
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:369
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:493
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:615
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:742
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:781
+msgid "Outputs"
+msgstr "Sorties"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:78
+msgid "``Extreme Upslope Values Grid`` [raster]"
+msgstr "``Grille de valeurs extrèmes de pente positive`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:77
+msgid "A grid of the maximum/minimum upslope values."
+msgstr "Une grille avec les valeurs maximales/minimales de pente positive."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:81
+msgid "Length Area Stream Source"
+msgstr "Longueur de la surface hydrographique source"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:86
+msgid ""
+"Creates an indicator grid (1, 0) that evaluates ``A >= (M)(Ly)`` based on "
+"upslope path length, D8 contributing area grid inputs, and parameters ``M`` "
+"and ``y``. This grid indicates likely stream source grid cells. This is an "
+"experimental method with theoretical basis in Hack's law which states that "
+"for streams ``L ~ A 0.6``. However for hillslopes with parallel flow ``L ~ "
+"A``. So a transition from hillslopes to streams may be represented by ``L ~ "
+"A 0.8`` suggesting identifying grid cells as stream cells if ``A > M (L "
+"(1/0.8))``."
+msgstr "Créé une grille d'indicateur (1, 0) qui évalue ``A >= (M)(Ly)`` en se basant sur la longueur de la pente ascendante, la grill de surface contributive D8 et les paramètres ``M`` et ``y``. Cette grille indique les cellules de source de cours d'eau potentielles. Il s'agit d'une méthode expérimentale basée sur la théorie de la loi de Hack qui stipule que pour chaque cours d'eau, ``L ~ A 0.6``. Néanmoins, pour les pentes présentant des flux parallèles, ``L ~ A``. Donc une transition des pentes aux cours d'eau peut être représentée par ``L ~ A 0.8`` en suggérant que les cellules identifiées sont des cellules de cours d'eau lorsque ``A > M (L (1/0.8))``."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:104
+msgid "``Length Grid`` [raster]"
+msgstr "``Grille de longueur`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:98
+msgid ""
+"A grid of the maximum upslope length for each cell. This is calculated as "
+"the length of the flow path from the furthest cell that drains to each cell."
+" Length is measured between cell centers taking into account cell size and "
+"whether the direction is adjacent or diagonal. It is this length (``L``) "
+"that is used in the formula, ``A >(M)(Ly)``, to determine which cells are "
+"considered stream cells. This grid can be obtained as an output from the "
+"**\"Grid Network\"** tool."
+msgstr "Une grille de la pente ascendante maximale pour chaque cellule. Elle est calculée par la longueur du cheminement de flux à partir de la cellule la plus éloignée qui se déverse dans la cellule calculée. La longueur est mesurée entre le centre des cellules en prenant en compte la taille des cellules et si la direction est adjacente ou diagonale. Il s'agit de la longueur (``L``) qui est utilisée dans la formule ``A >(M)(Ly)`` pour déterminer quelles sont les cellules de cours d'eau. Cette grille peut être obtenue par l'outil **\"Réseau de grille\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:113
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:289
+msgid "``Contributing Area Grid`` [raster]"
+msgstr "``Grille de surface contributive`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:107
+msgid ""
+"A grid of contributing area values for each cell that were calculated using "
+"the D8 algorithm. The contributing area for a cell is the sum of its own "
+"contribution plus the contribution from all upslope neighbors that drain to "
+"it, measured as a number of cells. This grid is typically obtained as the "
+"output of the **\"D8 Contributing Area\"** tool. In this tool, it is the "
+"contributing area (``A``) that is compared in the formula ``A > (M)(Ly)`` to"
+" determine the transition to a stream."
+msgstr "Une grille des valeurs de surface contributive de chaque cellule calculées à l'aide de l'algorithme D8. La surface contributive d'une cellule est calculée par sa contribution additionnée avec la contribution de toutes ses voisines en amont qui s'y déversent dedans, mesurée en nombre de cellules. Cette grille est généralement obtenue par l'outil **\"Surface contributive D8\"**. Dans cet outil la surface contributive (``A``) est comparée dans la formule ``A > (M)(Ly)`` pour déterminer la transition vers un cours d'eau."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:119
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:356
+msgid "``Threshold`` [number]"
+msgstr "``Seuil`` [nombre]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:116
+msgid ""
+"The multiplier threshold (``M``) parameter which is used in the formula: ``A"
+" > (M)(Ly)``, to identify the beginning of streams."
+msgstr "Le paramètre de seuil de multiplication (``M``) qui est utilisé dans la formule: ``A > (M)(Ly)`` pour identifier le début des cours d'eau."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:119
+msgid "Default: *0.03*"
+msgstr "Par défaut : *0.03*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:129
+msgid "``Exponent`` [number]"
+msgstr "``Exposant`` [nombre]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:122
+msgid ""
+"The exponent (``y``) parameter which is used in the formula: ``A > "
+"(M)(Ly)``, to identify the beginning of streams. In branching systems, "
+"Hack's law suggests that ``L = 1/M A(1/y)`` with ``1/y = 0.6`` (or 0.56) "
+"(``y`` about 1.7). In parallel flow systems ``L`` is proportional to ``A`` "
+"(``y`` about 1). This method tries to identify the transition between these "
+"two paradigms by using an exponent ``y`` somewhere in between (``y`` about "
+"1.3)."
+msgstr "Le paramètre de l'exposant (``y``) qui est utilisé dans la formule: ``A > (M)(Ly)`` pour identifier le commencement des cours d'eau. Dans les systèmes en branches, la loi de Hack suggère que  ``L = 1/M A(1/y)`` avec ``1/y = 0.6`` (ou 0.56) (``y`` vaut environ 1.7). Dans les systèmes de flux parallèles ``L`` est proportionnelle à ``A`` (``y`` égale 1). Cette méthode tente d'identifier la transition entre ces deux paradigmes en utilisant un exposant ``y`` entre ces deux valeurs (``y`` vaut environ 1.3)."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:129
+msgid "Default: *1.3*"
+msgstr "Par défaut : *1.3*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:138
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:257
+msgid "``Stream Source Grid`` [raster]"
+msgstr "``Grille hydrographique source`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:135
+msgid ""
+"An indicator grid (1,0) that evaluates A >= (M)(L^y), based on the maximum "
+"upslope path length, the D8 contributing area grid inputs, and parameters "
+"``M`` and ``y``. This grid indicates likely stream source grid cells."
+msgstr "Une grille d'indicateur (1, 0) qui évalue A >= (M)(L^y) en se basant sur la longueur de la pente ascendante maximale, les entrées de grille de surface contributive D8 et les paramètres ``M`` et ``y``. Cette grille indique les cellules sources potentielles des cours d'eau."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:141
+msgid "Move Outlets To Streams"
+msgstr "Déplacer les exutoires en flux"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:146
+msgid ""
+"Moves outlet points that are not aligned with a stream cell from a stream "
+"raster grid, downslope along the D8 flow direction until a stream raster "
+"cell is encountered, the \"max_dist\" number of grid cells are examined, or "
+"the flow path exits the domain (i.e. a \"no data\" value is encountered for "
+"the D8 flow direction). The output file is a new outlets shapefile where "
+"each point has been moved to coincide with the stream raster grid, if "
+"possible. A field \"dist_moved\" is added to the new outlets shapefile to "
+"indicate the changes made to each point. Points that are already on a stream"
+" cell are not moved and their \"dist_moved\" field is assigned a value 0. "
+"Points that are initially not on a stream cell are moved by sliding them "
+"downslope along the D8 flow direction until one of the following occurs: a) "
+"A stream raster grid cell is encountered before traversing the \"max_dist\" "
+"number of grid cells. In which case, the point is moved and the "
+"\"dist_moved\" field is assigned a value indicating how many grid cells the "
+"point was moved. b) More than the \"max_number\" of grid cells are "
+"traversed, or c) the traversal ends up going out of the domain (i.e., a \"no"
+" data\" D8 flow direction value is encountered). In which case, the point is"
+" not moved and the \"dist_moved\" field is assigned a value of -1."
+msgstr "Déplace des points exutoires, qui ne sont pas alignés avec une cellule de cours d'eau à partir d'une grille de raster hydrographique, en aval dans la direction de flux D8 jusqu'à ce qu'un cours d'eau soit rencontré, les \"max-dist\" cellules sont examinées, ou bien que le cheminement du flux sorte du domaine (c'est à dire qu'une valeur \"sans donnée\" est rencontrée dans la direction du flux D8). Le fichier de sortie est un Shapefile des nouveaux exutoires où chaque point a été déplacé pour coïncider avec la grille de raster hydrographique, si possible. Un champ \"dist_moved\" est ajouté au fichier pour indiquer les changements effectués sur chaque point. Les points qui sont déjà sur une cellule de cours d'eau ne sont pas déplacés et leur champ \"dist_moved\" vaut 0. Les points qui ne sont pas au départ dans une cellule de cours d'eau sont déplacés en aval suivant la direction du flux D8 jusqu'à ce qu'une des situations suivantes apparaisse: a) Une cellule de cours d'eau est rencontrée avant de dépasser la valeur \"max_dist\" du nombre de cellules. Dans ce cas, le point est déplacé et le champ \"dist_moved\" reçoit une valeur indiquant le nombre de cellules de déplacement. b) Plus de \"max_number\" cellules ont été parcourues ou, c) la traversée sort du domaine (une valeur de direction de flux D8 \"sans sonnée\" est rencontrée). Dans ces cas, le point n'est pas déplacé et le champ \"dist_moved\" reçoit une valeur de -1."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:171
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:435
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:579
+msgid "``D8 Flow Direction Grid`` [raster]"
+msgstr "``Grille de Direction de Flux D8`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:177
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:373
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:593
+msgid "``Stream Raster Grid`` [raster]"
+msgstr "``Grille raster hydrographique`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:174
+msgid ""
+"This output is an indicator grid (1, 0) that indicates the location of "
+"streams, with a value of 1 for each of the stream cells and 0 for the "
+"remainder of the cells. This file is produced by several different tools in "
+"the **\"Stream Network Analysis\"** toolset."
+msgstr "Cette sortie est une grille d'indicateur (1, 0) qui indique l'emplacement des cours d'eau avec une valeur de 1 pour les cellules de cours d'eau et 0 pour les autres. Ce fichier est produit par plusieurs outils de l'**\"Analyse de Réseau de cours d'eau\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:180
+msgid ""
+"A point shape file defining points of interest or outlets that should "
+"ideally be located on a stream, but may not be exactly on the stream due to "
+"the fact that the shapefile point locations may not have been accurately "
+"registered with respect to the stream raster grid."
+msgstr "Un Shapefile de points définissant des points d'intérêt ou des exutoires qui devraient se trouver idéalement sur un cours d'eau mais qui peuvent ne pas y être exactement dessus dû au manque de précision lors de la numérisation des points par rapport à la grille raster hydrographique."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:190
+msgid "``Maximum Number of Grid Cells to traverse`` [number]"
+msgstr "``Nombre maximum de cellules de grille à traverser`` [nombre]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:186
+msgid ""
+"This input parameter is the maximum number of grid cells that the points in "
+"the input outlet shapefile will be moved before they are saved to the output"
+" outlet shapefile."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:190
+msgid "Default: *50*"
+msgstr "Par défaut : *50*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:205
+msgid "``Output Outlet Shapefile`` [vector: point]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:196
+msgid ""
+"A point shape file defining points of interest or outlets. This file has one"
+" point in it for each point in the input outlet shapefile. If the original "
+"point was located on a stream, then the point was not moved. If the original"
+" point was not on a stream, the point was moved downslope according to the "
+"D8 flow direction until it reached a stream or the maximum distance had been"
+" reached. This file has an additional field \"dist_moved\" added to it which"
+" is the number of cells that the point was moved. This field is 0 if the "
+"cell was originally on a stream, -1 if it was not moved because there was "
+"not a stream within the maximum distance, or some positive value if it was "
+"moved."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:208
+msgid "Peuker Douglas"
+msgstr "Peuker Douglas"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:213
+msgid ""
+"Creates an indicator grid (1, 0) of upward curved grid cells according to "
+"the Peuker and Douglas algorithm."
+msgstr "Crée une grille d'indicateurs (1, 0) de cellules de la grille incurvées vers le haut selon l'algorithme de Peuker et Douglas."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:216
+msgid ""
+"With this tool, the DEM is first smoothed by a kernel with weights at the "
+"center, sides, and diagonals. The Peuker and Douglas (1975) method (also "
+"explained in Band, 1986), is then used to identify upwardly curving grid "
+"cells. This technique flags the entire grid, then examines in a single pass "
+"each quadrant of 4 grid cells, and unflags the highest. The remaining "
+"flagged cells are deemed \"upwardly curved\", and when viewed, resemble a "
+"channel network. This proto-channel network generally lacks connectivity and"
+" requires thinning, issues that were discussed in detail by Band (1986)."
+msgstr "Avec cet outil, le MNE est d'abord lissé par un noyau pondéré au centre, sur les côtés et sur les diagonales. La méthode de Peuker et Douglas (1975) (également expliquée par Band en 1986), est ensuite utilisée pour identifier les cellules de courbure vers le haut. Cette technique pose une étiquette sur toute la grille et examine ensuite, en une seule passe, chaque quadrant de 4 cellules et dé-étiquette le plus élevé. Les cellules qui sont étiquetées sont considérées comme \"incurvées vers le haut\" et lorsqu'elles sont visualisées, elles forment un réseau de canaux. Ce réseau de proto-canaux n'est généralement pas très bien connecté et requiert de l'affinage, problèmes qui ont été soulevés en détail par Band (1986)."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:230
+msgid "``Elevation Grid`` [raster]"
+msgstr "``Grille d'élévation`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:229
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:438
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:572
+msgid ""
+"A grid of elevation values. This is usually the output of the **\"Pit "
+"Remove\"** tool, in which case it is elevations with pits removed."
+msgstr "Une grille des valeurs d'élévation. Elle est généralement la sortie de l'outil **\"Supprimer les fosses\"**, auquel cas ce sont des élévations avec les fosses supprimées."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:236
+msgid "``Center Smoothing Weight`` [number]"
+msgstr "``Pondération lissée centrale`` [nombre]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:233
+msgid ""
+"The center weight parameter used by a kernel to smooth the DEM before the "
+"tool identifies upwardly curved grid cells."
+msgstr "Le paramètre du poids centré utilisé par le noyau pour lisser le MNE avant que l'outil identifie les cellules d'incurvation vers le haut."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:236
+msgid "Default: *0.4*"
+msgstr "Par défaut : *0.4*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:242
+msgid "``Side Smoothing Weight`` [number]"
+msgstr "``Pondération lissée latérale`` [nombre]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:239
+msgid ""
+"The side weight parameter used by a kernel to smooth the DEM before the tool"
+" identifies upwardly curved grid cells."
+msgstr "Le paramètre du poids latéral utilisé par le noyau pour lisser le MNE avant que l'outil identifie les cellules d'incurvation vers le haut."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:242
+msgid "Default: *0.1*"
+msgstr "Par défaut : *0.1*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:248
+msgid "``Diagonal Smoothing Weight`` [number]"
+msgstr "``Pondération lissée diagonale`` [nombre]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:245
+msgid ""
+"The diagonal weight parameter used by a kernel to smooth the DEM before the "
+"tool identifies upwardly curved grid cells."
+msgstr "Le paramètre du poids diagonal utilisé par le noyau pour lisser le MNE avant que l'outil identifie les cellules d'incurvation vers le haut."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:248
+msgid "Default: *0.05*"
+msgstr "Par défaut : *0.05*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:254
+msgid ""
+"An indicator grid (1, 0) of upward curved grid cells according to the Peuker"
+" and Douglas algorithm, and if viewed, resembles a channel network. This "
+"proto-channel network generally lacks connectivity and requires thinning, "
+"issues that were discussed in detail by Band (1986)."
+msgstr "Une grille d'indicateur (1, 0) des cellules incurvées vers le haut selon l'algorithme de Peuker et Douglas. En termes de visualisation, elle ressemble à un réseau de canaux.  Ce réseau de proto-canaux n'est généralement pas très bien connecté et requiert de l'affinage, problèmes qui ont été soulevés en détail par Band (1986)."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:260
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:319
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:383
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:516
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:714
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:760
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:794
+msgid "See also"
+msgstr "Voir également"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:262
+msgid ""
+"Band, L. E., (1986), \"Topographic partition of watersheds with digital "
+"elevation models\", Water Resources Research, 22(1): 15-24."
+msgstr "Band, L. E., (1986), \"Topographic partition of watersheds with digital elevation models\", Water Resources Research, 22(1): 15-24."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:264
+msgid ""
+"Peuker, T. K. and D. H. Douglas, (1975), \"Detection of surface-specific "
+"points by local parallel processing of discrete terrain elevation data\", "
+"Comput. Graphics Image Process., 4: 375-387."
+msgstr "Peuker, T. K. and D. H. Douglas, (1975), \"Detection of surface-specific points by local parallel processing of discrete terrain elevation data\", Comput. Graphics Image Process., 4: 375-387."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:269
+msgid "Slope Area Combination"
+msgstr "Combinaison pente-surface"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:274
+msgid ""
+"Creates a grid of slope-area values = ``(Sm) (An)`` based on slope and "
+"specific catchment area grid inputs, and parameters ``m`` and ``n``. This "
+"tool is intended for use as part of the slope-area stream raster delineation"
+" method."
+msgstr "Crée une grille de valeurs de pente-surface ``(Sm) (An)`` basée sur des grilles d'entrée de pente et de bassin versant, et des paramètres ``m`` et ``n``. Cet outil est destiné à être utilisé en tant qu'une partie de la méthode de délimitation des rasters de pente-surface de cours d'eau."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:283
+msgid "``Slope Grid`` [raster]"
+msgstr "``Grille de pente`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:282
+msgid ""
+"This input is a grid of slope values. This grid can be obtained from the "
+"**\"D-Infinity Flow Directions\"** tool."
+msgstr "Cette entrée est une grille des valeurs de pente. Cette grille peut être obtenue à partir de l'outil **\"Directions de flux D-Infinity\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:286
+msgid ""
+"A grid giving the specific catchment area for each cell taken as its own "
+"contribution (grid cell length or summation of weights) plus the "
+"proportional contribution from upslope neighbors that drain in to it. This "
+"grid is typically obtained from the **\"D-Infinity Contributing Area\"** "
+"tool."
+msgstr "Une grille donnant le bassin versant spécifique de chaque cellule calculé comme sa contribution (longueur de cellule ou somme des poids) additionnée à la contribution des voisines en amont qui s'y déversent dedans. Cette grille peut être obtenue par l'outil **\"Surface contributive D-Infinity\"**."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:295
+msgid "``Slope Exponent`` [number]"
+msgstr "``Exposant de pente`` [nombre]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:292
+msgid ""
+"The slope exponent (``m``) parameter which will be used in the formula: "
+"``(Sm)(An)``, that is used to create the slope-area grid."
+msgstr "Le paramètre d'exposant de pente (``m``) qui sera utilisé dans la formule : ``(Sm)(An)``, qui est utilisée pour créer la grille pente-surface."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:295
+msgid "Default: *2*"
+msgstr "Par défaut : *2*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:301
+msgid "``Area Exponent`` [number]"
+msgstr "``Exposant de surface`` [nombre]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:298
+msgid ""
+"The area exponent (``n``) parameter which will be used in the formula: "
+"``(Sm)(An)``, that is used to create the slope-area grid."
+msgstr "Le paramètre d'exposant de surface (``n``) qui sera utilisé dans la formule : ``(Sm)(An)``, qui est utilisée pour créer la grille pente-surface."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:301
+msgid "Default: *1*"
+msgstr "Par défaut : *1*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:309
+msgid "``Slope Area Grid`` [raster]"
+msgstr "``Grille pente-surface`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:307
+msgid ""
+"A grid of slope-area values = ``(Sm)(An)`` calculated from the slope grid, "
+"specific catchment area grid, ``m`` slope exponent parameter, and ``n`` area"
+" exponent parameter."
+msgstr "Une grille de valeurs pente-surface ``(Sm)(An)`` basée à partir d'une grille de pente, d'une grille de bassin et des paramètres ``m``, exposant de pente, et ``n``, exposant de surface."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:312
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:376
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:509
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:707
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:753
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:787
+msgid "Console usage"
+msgstr "Utilisation de la console"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:322
+msgid "Stream Definition By Threshold"
+msgstr "Définition de flux par seuil"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:327
+msgid ""
+"Operates on any grid and outputs an indicator (1, 0) grid identifying cells "
+"with input values >= the threshold value. The standard use is to use an "
+"accumulated source area grid to as the input grid to generate a stream "
+"raster grid as the output. If you use the optional input mask grid, it "
+"limits the domain being evaluated to cells with mask values >= 0. When you "
+"use a D-infinity contributing area grid (:file:`*sca`) as the mask grid, it "
+"functions as an edge contamination mask. The threshold logic is:"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:349
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:448
+msgid "``Accumulated Stream Source Grid`` [raster]"
+msgstr "``Grille de Flux Source Accumulé`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:343
+msgid ""
+"This grid nominally accumulates some characteristic or combination of "
+"characteristics of the watershed. The exact characteristic(s) varies "
+"depending on the stream network raster algorithm being used. This grid needs"
+" to have the property that grid cell values are monotonically increasing "
+"downslope along D8 flow directions, so that the resulting stream network is "
+"continuous. While this grid is often from an accumulation, other sources "
+"such as a maximum upslope function will also produce a suitable grid."
+msgstr "Cette grille fait la somme nominale de certaines caractéristiques ou d'une combinaison de ces caractéristiques sur un bassin versant. Les caractéristiques exactes varient selon l'algorithme de raster de réseau hydrographique utilisé. Cette grille implique que la valeur des cellules incrémente monotonement vers l'aval, selon les directions de flux D8, de manière à ce que le réseau hydrographique en résultant soit continu. Même si cette grille est souvent obtenue à partir d'une accumulation, d'autres sources telle que la fonction de pente ascendante maximum produira également une grille convenable."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:352
+msgid ""
+"This parameter is compared to the value in the Accumulated Stream Source "
+"grid (:file:`*ssa`) to determine if the cell should be considered a stream "
+"cell. Streams are identified as grid cells for which ssa value is >= this "
+"threshold."
+msgstr "Ce paramètre est comparé à la valeur de la grille source d'accumulation de cours d'eau (:file:`*ssa`) pour déterminer si la cellule doit être considérée comme une cellule de cours d'eau. Les cours d'eau sont identifiés par les cellules où la valeur ssa est >= à ce seuil."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:356
+msgid "Default: *100*"
+msgstr "Par défaut : *100*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:366
+msgid "``Mask Grid`` [raster]"
+msgstr "``Grille de masque`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:361
+msgid ""
+"This optional input is a grid that is used to mask the domain of interest "
+"and output is only provided where this grid is >= 0. A common use of this "
+"input is to use a D-Infinity contributing area grid as the mask so that the "
+"delineated stream network is constrained to areas where D-infinity "
+"contributing area is available, replicating the functionality of an edge "
+"contamination mask."
+msgstr "Cette entrée optionnelle est une grille qui est utilisée pour masquer le domaine d'intérêt et la sortie n'est calculée que lorsque cette grille est >=0. Un cas d'utilisation courant est d'utiliser une grille de surface contributive D-Infinity comme masque de manière à ce que le réseau hydrographique délimité soit contraint aux surfaces où la surface contributive D-Infinity est disponible, répliquant la fonctionnalité de masque de contamination des arcs."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:372
+msgid ""
+"This is an indicator grid (1, 0) that indicates the location of streams, "
+"with a value of 1 for each of the stream cells and 0 for the remainder of "
+"the cells."
+msgstr "Il s'agit d'une grille d'indicateur (1, 0) qui indique l'emplacement des cours d'eau avec une valeur de 1 pour les cellules de cours d'eau et 0 pour les autres."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:386
+msgid "Stream Drop Analysis"
+msgstr "Analyse de déclivité des cours d'eau"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:391
+msgid ""
+"Applies a series of thresholds (determined from the input parameters) to the"
+" input accumulated stream source grid (:file:`*ssa`) grid and outputs the "
+"results in the :file:`*drp.txt` file the stream drop statistics table. This "
+"function is designed to aid in the determination of a geomorphologically "
+"objective threshold to be used to delineate streams. Drop Analysis attempts "
+"to select the right threshold automatically by evaluating a stream network "
+"for a range of thresholds and examining the constant drop property of the "
+"resulting Strahler streams. Basically it asks the question: Is the mean "
+"stream drop for first order streams statistically different from the mean "
+"stream drop for higher order streams, using a T-test. Stream drop is the "
+"difference in elevation from the beginning to the end of a stream defined as"
+" the sequence of links of the same stream order. If the T-test shows a "
+"significant difference then the stream network does not obey this \"law\" so"
+" a larger threshold needs to be chosen. The smallest threshold for which the"
+" T-test does not show a significant difference gives the highest resolution "
+"stream network that obeys the constant stream drop \"law\" from "
+"geomorphology, and is the threshold chosen for the \"objective\" or "
+"automatic mapping of streams from the DEM. This function can be used in the "
+"development of stream network rasters, where the exact watershed "
+"characteristic(s) that were accumulated in the accumulated stream source "
+"grid vary based on the method being used to determine the stream network "
+"raster."
+msgstr "Applique une série de seuils (déterminés à partir de paramètres d'entrée) à une grille de source de cours d'eau accumulés (:file:`*saa`) et extrait les résultats dans un fichier :file:`*drp.txt` sous la forme d'une table de statistiques de déclivité des cours d'eau. Cette fonction est conçue pour faciliter la détermination des seuils géo-morphologiques à utiliser pour délimiter les cours d'eau. L'analyse de la déclivité tente de sélectionner le seuil approprié de manière automatique en évaluant un réseau hydrographique pour trouver une plage des seuils et en examinant la propriété de déclivité constante des cours d'eau de Strahler qui en résultent. Il pose simplement la question : est-ce-que la déclivité moyenne des cours d'eau de premier ordre est statistiquement différente de la déclivité moyenne des cours d'eau d'ordres supérieurs, en utilisant un test T. La déclivité d'un cours d'eau est la différence d'élévation entre le début et la fin d'un cours d'eau définie par une série de liens du même ordre. Si le test T montre une différence significative alors le réseau hydrographique n'obéit pas à la \"loi\", est un seuil plus élevé doit être choisi. Le plus petit seuil pour lequel le test T ne montre pas de différence significative donne le réseau hydrographique ayant la plus grande résolution qui obéit à la \"loi\" de déclivité constante de géomorphologie. Il est également le seuil choisi pour la création \"objective\" ou automatique de cours d'eau à partir d'un MNE. Cette fonction peut être utilisée dans le développement des rasters de réseau hydrographique où les caractéristiques exactes des bassins versants qui ont été accumulés dans la grille de source de cours d'eau varient selon la méthode employée pour construire le raster de réseau hydrographique."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:415
+msgid ""
+"The constant stream drop \"law\" was identified by Broscoe (1959). For the "
+"science behind using this to determine a stream delineation threshold, see "
+"Tarboton et al. (1991, 1992), Tarboton and Ames (2001)."
+msgstr "La \"loi\" de déclivité constante des cours d'eau a été identifiée par Broscoe (1959). Pour plus de détails scientifiques sur la méthode utilisée pour déterminer les seuils de délimitation des cours d'eau, consultez Tarboton et al. (1991, 1992), Tarboton et Ames (2001)."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:429
+msgid "``D8 Contributing Area Grid`` [raster]"
+msgstr "``Grille de surface contributive D8`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:423
+msgid ""
+"A grid of contributing area values for each cell that were calculated using "
+"the D8 algorithm. The contributing area for a cell is the sum of its own "
+"contribution plus the contribution from all upslope neighbors that drain to "
+"it, measured as a number of cells or the sum of weight loadings. This grid "
+"can be obtained as the output of the **\"D8 Contributing Area\"** tool. This"
+" grid is used in the evaluation of drainage density reported in the stream "
+"drop table."
+msgstr "Une grille des valeurs de surface contributive de chaque cellule calculées à l'aide de l'algorithme D8. La surface contributive de chaque cellule est calculée par sa contribution additionnée à la contribution des voisines en amont qui s'y déversent dedans, mesurée en nombre de cellules ou en sommes charges de pondération. Cette grille peut être obtenue par l'outil **\"Surface contributive D8\"**. Cette grille est utilisée dans l'évaluation de la densité de drainage dans une table de diminution de flux."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:439
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:573
+msgid "``Pit Filled Elevation Grid`` [raster]"
+msgstr "``Grille d'élévation de remplissage de fosse`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:442
+msgid ""
+"This grid must be monotonically increasing along the downslope D8 flow "
+"directions. It it compared to a series of thresholds to determine the "
+"beginning of the streams. It is often generated by accumulating some "
+"characteristic or combination of characteristics of the watershed with the "
+"**\"D8 Contributing Area\"** tool, or using the maximum option of the **\"D8"
+" Flow Path Extreme\"** tool. The exact method varies depending on the "
+"algorithm being used."
+msgstr "Cette grille doit avoir des valeurs qui augmentent monotonement vers l'aval selon les directions de flux D8. Elle est comparée à une série de seuils pour déterminer le démarrage des cours d'eau. Elle est généralement construite par l'accumulation d'une caractéristique ou d'une combinaison de certaines caractéristiques du bassin-versant à partir de l'outil **\"Surface contributive D8\"** ou en utilisant l'option maximum de l'outil **\"Cheminement de flux extrême D8\"**. La méthode exacte varie selon l'algorithme utilisé."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:451
+msgid ""
+"A point shapefile defining the outlets upstream of which drop analysis is "
+"performed."
+msgstr "Un Shapefile de points définissant les exutoires des cours d'eau à partir desquels l'analyse de déclivité sera réalisée."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:461
+msgid "``Minimum Threshold`` [number]"
+msgstr "``Seuil minimum`` [nombre]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:455
+msgid ""
+"This parameter is the lowest end of the range searched for possible "
+"threshold values using drop analysis. This technique looks for the smallest "
+"threshold in the range where the absolute value of the t-statistic is less "
+"than 2. For the science behind the drop analysis see Tarboton et al. (1991, "
+"1992), Tarboton and Ames (2001)."
+msgstr "Ce paramètre est le minimum d'une plage de recherche des valeurs de seuil en utilisant l'analyse de déclivité. Cette technique recherche le plus petit seuil dans la plage où la valeur absolue de la statistique t est inférieure à 2. Pour plus de détails scientifiques sur l'analyse de déclivité, voir Tarboton et al. (1991, 1992), Tarboton et Ames (2001)."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:461
+msgid "Default: *5*"
+msgstr "Par défaut : *5*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:470
+msgid "``Maximum Threshold`` [number]"
+msgstr "``Seuil maximum`` [nombre]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:464
+msgid ""
+"This parameter is the highest end of the range searched for possible "
+"threshold values using drop analysis. This technique looks for the smallest "
+"threshold in the range where the absolute value of the t-statistic is less "
+"than 2. For the science behind the drop analysis see Tarboton et al. (1991, "
+"1992), Tarboton and Ames (2001)."
+msgstr "Ce paramètre est le maximum d'une plage de recherche des valeurs de seuil en utilisant l'analyse de déclivité. Cette technique recherche le plus petit seuil dans la plage où la valeur absolue de la statistique t est inférieure à 2. Pour plus de détails scientifiques sur l'analyse de déclivité, voir Tarboton et al. (1991, 1992), Tarboton et Ames (2001)."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:470
+msgid "Default: *500*"
+msgstr "Par défaut : *500*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:479
+msgid "``Number of Threshold Values`` [number]"
+msgstr "``Nombre de valeurs de seuil`` [nombre]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:473
+msgid ""
+"The parameter is the number of steps to divide the search range into when "
+"looking for possible threshold values using drop analysis. This technique "
+"looks for the smallest threshold in the range where the absolute value of "
+"the t-statistic is less than 2. For the science behind the drop analysis see"
+" Tarboton et al. (1991, 1992), Tarboton and Ames (2001)."
+msgstr "Ce paramètre est le nombre de pas de division d'une plage de recherche des valeurs de seuil en utilisant l'analyse de déclivité. Cette technique recherche le plus petit seuil dans la plage où la valeur absolue de la statistique t est inférieure à 2. Pour plus de détails scientifiques sur l'analyse de déclivité, voir Tarboton et al. (1991, 1992), Tarboton et Ames (2001)."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:479
+msgid "Default: *10*"
+msgstr "Par défaut : *10*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:490
+msgid "``Spacing for Threshold Values`` [enumeration]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:482
+msgid ""
+"This parameter indicates whether logarithmic or linear spacing should be "
+"used when looking for possible threshold values using drop analysis."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:485
+msgid "Options:"
+msgstr "Options :"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:487
+msgid "0 --- Logarithmic"
+msgstr "0 --- Logarithmique"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:488
+msgid "1 --- Linear"
+msgstr "1 --- Linéaire"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:490
+msgid "Default: *0*"
+msgstr "Par défaut : *0*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:506
+msgid "``D-Infinity Drop to Stream Grid`` [file]"
+msgstr "``Grille de déclivité de flux D-Infinity`` [fichier]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:496
+msgid "This is a comma delimited text file with the following header line:"
+msgstr "C'est un fichier texte délimité par des virgules avec la ligne d'en-tête suivante :"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:500
+msgid "::"
+msgstr "::"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:500
+msgid ""
+"Threshold,DrainDen,NoFirstOrd,NoHighOrd,MeanDFirstOrd,MeanDHighOrd,StdDevFirstOrd,StdDevHighOrd,T"
+msgstr "Threshold,DrainDen,NoFirstOrd,NoHighOrd,MeanDFirstOrd,MeanDHighOrd,StdDevFirstOrd,StdDevHighOrd,T"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:502
+msgid ""
+"The file then contains one line of data for each threshold value examined, "
+"and then a summary line that indicates the optimum threshold value. This "
+"technique looks for the smallest threshold in the range where the absolute "
+"value of the t-statistic is less than 2. For the science behind the drop "
+"analysis, see Tarboton et al. (1991, 1992), Tarboton and Ames (2001)."
+msgstr "Le fichier contient ensuite une ligne de donnée pour chaque valeur de seuil examinée, et ensuite une ligne de résumé qui indique la valeur de seuil optimale. Cette technique recherche le plus petit seuil dans la plage où la valeur absolue de la statistique t est inférieure à 2. Pour plus de détails scientifiques sur l'analyse de déclivité, voir Tarboton et al. (1991, 1992), Tarboton et Ames (2001)."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:518
+msgid ""
+"Broscoe, A. J., (1959), \"Quantitative analysis of longitudinal stream "
+"profiles of small watersheds\", Office of Naval Research, Project NR "
+"389-042, Technical Report No. 18, Department of Geology, Columbia "
+"University, New York."
+msgstr "Broscoe, A. J., (1959), \"Quantitative analysis of longitudinal stream profiles of small watersheds\", Office of Naval Research, Project NR 389-042, Technical Report No. 18, Department of Geology, Columbia University, New York."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:521
+msgid ""
+"Tarboton, D. G., R. L. Bras and I. Rodriguez-Iturbe, (1991), \"On the "
+"Extraction of Channel Networks from Digital Elevation Data\", Hydrologic "
+"Processes, 5(1): 81-100."
+msgstr "Tarboton, D. G., R. L. Bras et I. Rodriguez-Iturbe, (1991), \"On the Extraction of Channel Networks from Digital Elevation Data\", Hydrologic Processes, 5(1): 81-100."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:524
+msgid ""
+"Tarboton, D. G., R. L. Bras and I. Rodriguez-Iturbe, (1992), \"A Physical "
+"Basis for Drainage Density\", Geomorphology, 5(1/2): 59-76."
+msgstr "Tarboton, D. G., R. L. Bras et I. Rodriguez-Iturbe, (1992), \"A Physical Basis for Drainage Density\", Geomorphology, 5(1/2): 59-76."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:526
+msgid ""
+"Tarboton, D. G. and D. P. Ames, (2001), \"Advances in the mapping of flow "
+"networks from digital elevation data\", World Water and Environmental "
+"Resources Congress, Orlando, Florida, May 20-24, ASCE, "
+"http://www.engineering.usu.edu/dtarb/asce2001.pdf."
+msgstr "Tarboton, D. G. et D. P. Ames, (2001), \"Advances in the mapping of flow networks from digital elevation data\", World Water and Environmental Resources Congress, Orlando, Florida, May 20-24, ASCE, http://www.engineering.usu.edu/dtarb/asce2001.pdf."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:531
+msgid "Stream Reach and Watershed"
+msgstr "Portée de cours d'eau et bassin versant"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:536
+msgid ""
+"This tool produces a vector network and shapefile from the stream raster "
+"grid. The flow direction grid is used to connect flow paths along the stream"
+" raster. The Strahler order of each stream segment is computed. The "
+"subwatershed draining to each stream segment (reach) is also delineated and "
+"labeled with the value identifier that corresponds to the WSNO (watershed "
+"number) attribute in the Stream Reach Shapefile."
+msgstr "Cet outil produit un réseau de vecteur et un Shapefile à partir d'une grille raster hydrographique. La grille de direction de flux est utilisée pour connecter les flux aux cours d'eau. L'ordre de Strahler de chaque segment de cours d'eau est calculé. Le sous-bassin versant se déversant dans chaque segment de cours d'eau (portée) est également délimité et étiqueté avec la valeur de l'identifiant qui correspond à l'attribut WSNO (numéro du bassin versant) du Shapefile de porté de cours d'eau."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:543
+msgid ""
+"This tool orders the stream network according to the Strahler ordering "
+"system. Streams that don't have any other streams draining in to them are "
+"order 1. When two stream reaches of different order join the order of the "
+"downstream reach is the order of the highest incoming reach. When two "
+"reaches of equal order join the downstream reach order is increased by 1. "
+"When more than two reaches join the downstream reach order is calculated as "
+"the maximum of the highest incoming reach order or the second highest "
+"incoming reach order + 1. This generalizes the common definition to cases "
+"where more than two reaches join at a point. The network topological "
+"connectivity is stored in the Stream Network Tree file, and coordinates and "
+"attributes from each grid cell along the network are stored in the Network "
+"Coordinates file."
+msgstr "Cet outil ordonne le réseau hydrographique selon le système d'ordre de Strahler. Les cours d'eau qui n'ont pas d'autre cours d'eau qui se déverse en eux sont d'ordre 1. Lorsque deux portées de différents ordres d'un cours d'eau se joignent, l'ordre de la portée en aval du cours d'eau est l'ordre le plus élevé des portées. Lorsque deux portées de même ordre d'un cours d'eau se joignent, l'ordre de la portée en aval est incrémenté de 1. Lorsque plus de deux portées d'un cours d'eau se joignent, l'ordre de la portée en aval est calculé en prenant l'ordre maximal des portées ou le second plus grand ordre des portées +1. Cela permet de généraliser la définition pour les cas où plus de deux portées se joignent en un point. La connectivité topologique du réseau est stockée dans le fichier d'arbre du réseau hydrographique et les coordonnées et les attributs de chaque cellule le long du réseau sont stockés dans le fichier des coordonnées du réseau."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:555
+msgid ""
+"The stream raster grid is used as the source for the stream network, and the"
+" flow direction grid is used to trace connections within the stream network."
+" Elevations and contributing area are used to determine the elevation and "
+"contributing area attributes in the network coordinate file. Points in the "
+"outlets shapefile are used to logically split stream reaches to facilitate "
+"representing watersheds upstream and downstream of monitoring points. The "
+"program uses the attribute field \"id\" in the outlets shapefile as "
+"identifiers in the Network Tree file. This tool then translates the text "
+"file vector network representation in the Network Tree and Coordinates files"
+" into a shapefile. Further attributes are also evaluated. The program has an"
+" option to delineate a single watershed by representing the entire area "
+"draining to the Stream Network as a single value in the output watershed "
+"grid."
+msgstr "La grille raster hydrographique est utilisée comme source de réseau des cours d'eau et la grille de direction de flux est utilisée pour tracer les connections avec le réseau hydrographique. Les élévations et la surface contributive sont utilisées pour déterminer les attributs d'élévation et de surface contributive dans le fichier des coordonnées du réseau. Les points du Shapefile des exutoires sont utilisés pour séparer les portées de cours d'eau de manière logique pour faciliter la représentation des bassins versants en amont et en aval des points surveillés. Le programme utilise l'attribut \"id\" du Shapefile des exutoires comme identifiant dans le fichier de l'arbre du réseau. Cet outil transforme ensuite en Shapefiles la représentation du réseau dans les fichiers texte d'arbre du réseau et de coordonnées. Les autres attributs sont également évalués. Le programme dispose d'une option pour délimiter un seul bassin versant en représentant la surface totale de drainage du réseau hydrographique en une seule valeur dans la grille de sortie de bassin versant."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:587
+msgid "``D8 Drainage Area`` [raster]"
+msgstr "``Grille de surface de drainage D8`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:582
+msgid ""
+"A grid giving the contributing area value in terms of the number of grid "
+"cells (or the summation of weights) for each cell taken as its own "
+"contribution plus the contribution from upslope neighbors that drain in to "
+"it using the D8 algorithm. This is usually the output of the **\"D8 "
+"Contributing Area\"** tool and is used to determine the contributing area "
+"attribute in the Network Coordinate file."
+msgstr "Une grille fournissant la surface contributive de chaque cellule calculée par le nombre de cellules (ou la somme des poids) en additionnant la contribution de la cellule et celle des voisines en amont qui s'y déversent dedans, en utilisant l'algorithme D8. Cette grille peut être obtenue par l'outil **\"Surface contributive D8\"** et est utilisée pour déterminer l'attribut de la surface contributive dans le fichier des coordonnées du réseau."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:590
+msgid ""
+"An indicator grid indicating streams, by using a grid cell value of 1 on "
+"streams and 0 off streams. Several of the **\"Stream Network Analysis\"** "
+"tools produce this type of grid. The Stream Raster Grid is used as the "
+"source for the stream network."
+msgstr "Une grille indiquant les cours d'eau, une valeur de cellule à 1 pour les cours d'eau et 0 pour le reste. C'est généralement une grille issue de la sortie d'un des outils de l'**\"Analyse de Réseau Hydrographique\"**. La grille raster hydrographique est utilisée comme source du réseau des cours d'eau."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:604
+msgid "``Outlets Shapefile as Network Nodes`` [vector: point]"
+msgstr "``Shapefile des exutoires en tant que noeuds du réseau`` [vecteur: point]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:598
+msgid ""
+"A point shape file defining points of interest. If this file is used, the "
+"tool will only deliniate the stream network upstream of these outlets. "
+"Additionally, points in the Outlets Shapefile are used to logically split "
+"stream reaches to facilitate representing watersheds upstream and downstream"
+" of monitoring points. This tool REQUIRES THAT THERE BE an integer attribute"
+" field \"id\" in the Outlets Shapefile, because the \"id\" values are used "
+"as identifiers in the Network Tree file."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:612
+msgid "``Delineate Single Watershed`` [boolean]"
+msgstr "``Délimiter un seul bassin versant`` [booléen]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:607
+msgid ""
+"This option causes the tool to delineate a single watershed by representing "
+"the entire area draining to the Stream Network as a single value in the "
+"output watershed grid. Otherwise a seperate watershed is delineated for each"
+" stream reach. Default is *False* (seperate watershed)."
+msgstr "Cette option indique à l'outil de délimiter un seul bassin versant en représentant la surface totale de drainage du réseau hydrographique avec une seule valeur dans la grille de bassin versant en sortie. Sinon, un bassin versant pour chaque portée de cours d'eau est généré. La valeur par défaut est *False* (bassins versants séparés)."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:612
+msgid "Default: *False*"
+msgstr "Par défaut : *Faux*"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:627
+msgid "``Stream Order Grid`` [raster]"
+msgstr "``Grille d'ordre de flux`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:618
+msgid ""
+"The Stream Order Grid has cells values of streams ordered according to the "
+"Strahler order system. The Strahler ordering system defines order 1 streams "
+"as stream reaches that don't have any other reaches draining in to them. "
+"When two stream reaches of different order join the order of the downstream "
+"reach is the order of the highest incoming reach. When two reaches of equal "
+"order join the downstream reach order is increased by 1. When more than two "
+"reaches join the downstream reach order is calculated as the maximum of the "
+"highest incoming reach order or the second highest incoming reach order + 1."
+" This generalizes the common definition to cases where more than two flow "
+"paths reaches join at a point."
+msgstr "La grille d'ordre des cours d'eau contient des valeurs de cellules des cours d'eau ordonnées selon le système d'ordre de Strahler. Le système d'ordre de Strahler définit les portées qui n'ont pas d'autres portées qui s'y déversent dedans en cours d'eau d'ordre 1. Lorsque deux portées de différents ordres d'un cours d'eau se joignent, l'ordre de la portée en aval du cours d'eau est l'ordre le plus élevé des portées. Lorsque deux portées de même ordre d'un cours d'eau se joignent, l'ordre de la portée en aval est incrémenté de 1. Lorsque plus de deux portées d'un cours d'eau se joignent, l'ordre de la portée en aval est calculé en prenant l'ordre maximal des portées ou le second plus grand ordre des portées +1. Cela permet de généraliser la définition pour les cas où plus de deux portées se joignent en un point."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:632
+msgid "``Watershed Grid`` [raster]"
+msgstr "``Grille de bassin versant`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:630
+msgid ""
+"This output grid identified each reach watershed with a unique ID number, or"
+" in the case where the delineate single watershed option was checked, the "
+"entire area draining to the stream network is identified with a single ID."
+msgstr "Cette grille de sortie identifie chaque bassin-versant de portée avec un identifiant unique ou, lorsque l'option de délimitation unique de bassin versant a été activée, la surface totale de drainage du réseau hydrographique, identifiée avec un seul identifiant."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:671
+msgid "``Stream Reach Shapefile`` [vector: line]"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:635
+msgid ""
+"This output is a polyline shapefile giving the links in a stream network. "
+"The columns in the attribute table are:"
+msgstr "Il s'agit d'un Shapefile de multi-lignes donnant les liens dans un réseau hydrographique. Les colonnes de la table d'attributs sont :"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:638
+msgid ""
+"LINKNO --- Link Number. A unique number associated with each link (segment "
+"of channel between junctions). This is arbitrary and will vary depending on "
+"number of processes used"
+msgstr "LINKNO --- Le numéro de lien. Un numéro unique associé à chaque lien (segment de canal entre les jonctions). Ce numéro est arbitraire et peut varier en fonction du nombre de processus utilisés"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:641
+msgid ""
+"DSLINKNO --- Link Number of the downstream link. -1 indicates that this does"
+" not exist"
+msgstr "DSLINKNO --- Numéro de lien du lien de cours d'eau aval. -1 indique qu'il n'existe pas"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:643
+msgid ""
+"USLINKNO1 --- Link Number of first upstream link. (-1 indicates no link "
+"upstream, i.e. for a source link)"
+msgstr "USLINKNO1 --- Numéro de lien du lien de cours d'eau amont. (-1 indique qu'il n'y a pas de cours d'eau amont, par exemple pour le lien d'une source)"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:645
+msgid ""
+"USLINKNO2 --- Link Number of second upstream link. (-1 indicates no second "
+"link upstream, i.e. for a source link or an internal monitoring point where "
+"the reach is logically split but the network does not bifurcate)"
+msgstr "USLINKNO2 --- Numéro de lien du second lien de cours d'eau amont. (-1 indique qu'il n'y a pas de second cours d'eau amont, par exemple pour le lien d'une source ou un point de surveillance interne où la portée est logiquement séparée mais que le réseau ne bifurque pas)"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:648
+msgid ""
+"DSNODEID --- Node identifier for node at downstream end of stream reach. "
+"This identifier corresponds to the \"id\" attribute from the Outlets "
+"shapefile used to designate nodes"
+msgstr "DSNODEID --- Identifiant de nœud pour le nœud à l'extrémité aval d'une portée de cours d'eau. Cet identifiant correspond à l'attribut \"id\" du Shapefile des exutoires utilisé pour désigner les nœuds"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:651
+msgid "Order --- Strahler Stream Order"
+msgstr "Ordre --- Ordre de flux de Strahler"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:652
+msgid ""
+"Length --- Length of the link. The units are the horizontal map units of the"
+" underlying DEM grid"
+msgstr "Longueur --- Longueur du lien. Les unités sont les unités horizontales de la carte de la grille MNE sous-jacente"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:654
+msgid ""
+"Magnitude --- Shreve Magnitude of the link. This is the total number of "
+"sources upstream"
+msgstr "Magnitude --- Magnitude de Shreve du lien. C'est le nombre total de sources en amont"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:656
+msgid ""
+"DS_Cont_Ar --- Drainage area at the downstream end of the link. Generally "
+"this is one grid cell upstream of the downstream end because the drainage "
+"area at the downstream end grid cell includes the area of the stream being "
+"joined"
+msgstr "DS_Cont_Ar --- Surface de drainage à l'extrémité aval du lien. Généralement, il s'agit de la cellule en amont de l'extrémité aval car la surface de drainage à la cellule d'extrémité aval inclut la surface du cours d'eau qui est joint"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:660
+msgid "Drop --- Drop in elevation from the start to the end of the link"
+msgstr "Déclivité --- Déclivité de l'élévation depuis le début jusqu'à la fin du lien"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:661
+msgid "Slope --- Average slope of the link (computed as drop/length)"
+msgstr "Pente --- Pente moyenne du lien (calculée comme déclivité/longueur)"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:662
+msgid ""
+"Straight_L --- Straight line distance from the start to the end of the link"
+msgstr "Straight_L --- Distance en ligne droite du début à la fin du lien"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:663
+msgid "US_Cont_Ar --- Drainage area at the upstream end of the link"
+msgstr "US_Cont_Ar --- Surface de drainage à l'extrême amont du lien"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:664
+msgid ""
+"WSNO --- Watershed number. Cross reference to the :file:`*w.shp` and "
+":file:`*w` grid files giving the identification number of the watershed "
+"draining directly to the link"
+msgstr "WSNO --- Numéro de bassin versant. Référence croisée aux fichiers grille :file:`*w.shp` et :file:`*w` en donnant le numéro d'identification du bassin versant se déversant directement dans le lien"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:667
+msgid ""
+"DOUT_END --- Distance to the eventual outlet (i.e. the most downstream point"
+" in the stream network) from the downstream end of the link"
+msgstr "DOUT_END --- Distance à un éventuel exutoire (c-à-d. le point le plus en aval du réseau hydrographique) à partir de l'extrémité aval du lien"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:669
+msgid ""
+"DOUT_START --- Distance to the eventual outlet from the upstream end of the "
+"link"
+msgstr "DOUT_START --- Distance à un éventuel exutoire à partir de l'extrémité amont du lien"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:671
+msgid ""
+"DOUT_MID --- Distance to the eventual outlet from the midpoint of the link"
+msgstr "DOUT_MID --- Distance à un éventuel exutoire à partir du point central du lien"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:694
+msgid "``Network Connectivity Tree`` [file]"
+msgstr "\"Arbre de connectivité du réseau\" [fichier]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:674
+msgid ""
+"This output is a text file that details the network topological connectivity"
+" is stored in the Stream Network Tree file. Columns are as follows:"
+msgstr "Cette sortie est un fichier texte qui détaille la connectivité topologique du réseau. Il est stocké dans le fichier d'arbre de connectivité des flux. Les colonnes sont les suivantes :"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:677
+msgid ""
+"Link Number (Arbitrary --- will vary depending on number of processes used)"
+msgstr "Numéro de lien (arbitraire --- dépendra du nombre de processus utilisés)"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:678
+msgid ""
+"Start Point Number in Network coordinates (:file:`*coord.dat)` file (Indexed"
+" from 0)"
+msgstr "Numéro du point de départ dans le fichier (:file:`*coord.dat`) des coordonnées du réseau (indexé depuis 0)"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:680
+msgid ""
+"End Point Number in Network coordinates (:file:`*coord.dat`) file (Indexed "
+"from 0)"
+msgstr "Numéro du point d'arrivée dans le fichier (:file:`*coord.dat`) des coordonnées du réseau (indexé depuis 0)"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:682
+msgid ""
+"Next (Downstream) Link Number. Points to Link Number. -1 indicates no links "
+"downstream, i.e. a terminal link"
+msgstr "Prochain numéro (aval) de lien. Pointe vers un numéro de lien. -1 indique qu'il n'y a pas de liens aval, c-à-d. un lien terminal"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:684
+msgid ""
+"First Previous (Upstream) Link Number. Points to Link Number. -1 indicates "
+"no upstream links"
+msgstr "Premier numéro (amont) de lien précédent. Pointe vers un numéro de lien. -1 indique qu'il n'y a pas de liens amont"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:686
+msgid ""
+"Second Previous (Upstream) Link Numbers. Points to Link Number. -1 indicates"
+" no upstream links. Where only one previous link is -1, it indicates an "
+"internal monitoring point where the reach is logically split, but the "
+"network does not bifurcate"
+msgstr "Numéros de second lien de cours d'eau (amont). Pointe vers un numéro de lien. -1 indique qu'il n'y a pas de cours d'eau amont. Lorsqu'un seul lien précédent vaut -1, cela indique un point de surveillance interne où la portée est logiquement séparée mais que le réseau ne bifurque pas"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:690
+msgid "Strahler Order of Link"
+msgstr "Ordre de Strahler du lien"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:691
+msgid ""
+"Monitoring point identifier at downstream end of link. -1 indicates "
+"downstream end is not a monitoring point"
+msgstr "Identifiant de point de surveillance sur une extrémité aval d'un lien. -1 indique que l'extrémité aval n'est pas un point de surveillance"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:693
+msgid ""
+"Network magnitude of the link, calculated as the number of upstream sources "
+"(following Shreve)"
+msgstr "Magnitude du réseau du lien, calculée par le nombre de sources amont (selon Shreve)"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:704
+msgid "``Network Coordinates`` [file]"
+msgstr "``Coordonnées du réseau`` [fichier]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:697
+msgid ""
+"This output is a text file that contains the coordinates and attributes of "
+"points along the stream network. Columns are as follows:"
+msgstr "La sortie est un fichier texte qui contient les coordonnées et les attributs des points le long du réseau hydrographique. Les colonnes sont les suivantes :"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:700
+msgid "X coordinate"
+msgstr "Coordonnée X"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:701
+msgid "Y Coordinate"
+msgstr "Coordonnée Y"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:702
+msgid "Distance along channels to the downstream end of a terminal link"
+msgstr "Distance le long des canaux jusqu'à l'extrémité aval d'un lien terminal"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:703
+msgid "Elevation"
+msgstr "Élévation"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:704
+msgid "Contributing area"
+msgstr "Surface contributive"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:718
+msgid "Gage Watershed"
+msgstr "Jauge de bassin versant"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:723
+msgid ""
+"Calculates Gage Watersheds Grid. Each grid cell is labeled with the "
+"identifier (from column ``id``) of the gage to which it drains directly "
+"without passing through any other gages."
+msgstr "Calcule la grille de jauge de bassin versant. Chaque cellule est étiquetée avec l'identifiant (de la colonne ``id``) de la jauge à travers laquelle l'eau s'écoule directement sans passer à travers aucune autre jauge."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:739
+msgid "``Gages Shapefile`` [vector: point]"
+msgstr "``Fichier Shape des jauges`` [vecteur: point]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:737
+msgid ""
+"A point shapefile defining the gages to which watersheds will be delineated."
+" This shapefile should have a colmun ``id``. Grid cells draining directly to"
+" each point in this shapefile will be labeled with this id."
+msgstr "Un fichier shape de points définissant les jauges qui permettront de délimiter les bassins versants. Ce fichier shape doit avoir une colonne ``id``. Les cellules de grille dont l'eau s'écoule directement à travers chaque point de ce fichier seront étiquetées avec l'identifiant correspondant."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:747
+msgid "``Gage Watershed Grid`` [raster]"
+msgstr "``Grille de jauge de bassin versant`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:745
+msgid ""
+"A grid identifies each gage watershed. Each grid cell is labeled with the "
+"identifier (from column ``id``) of the gage to which it drains directly "
+"without passing through any other gages."
+msgstr "Une grille identifiant chaque jauge du bassin versant. Chaque cellule est étiquetée avec l'identifiant (de la colonne ``id``) de la jauge à travers laquelle l'eau s'écoule directement sans passer à travers aucune autre jauge."
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:750
+msgid "``Downstream Identifiers File`` [file]"
+msgstr "``Fichier d'identifiants de sens de courant`` [fichier]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:750
+msgid "Text file giving watershed downslope connectivity"
+msgstr "Un fichier texte donnant la connectivité de pente du bassin versant"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:764
+msgid "Topographic Wetness Index"
+msgstr "Index Topographique d'Humidité"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:769
+msgid "<put algorithm description here>"
+msgstr ""
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:775
+msgid "``D-Infinity Specific Catchment Area Grid`` [raster]"
+msgstr "``Grille de bassin versant spécifique D-Infinity`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:775
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:778
+msgid "<put parameter description here>"
+msgstr "<mettre la description du paramètre ici>"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:778
+msgid "``D-Infinity Slope Grid`` [raster]"
+msgstr "``Grille de pente D-Infinity`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:784
+msgid "``Topographic Wetness Index Grid`` [raster]"
+msgstr "``Grille d'index topographique d'humidité`` [raster]"
+
+#: ../../source/docs/user_manual/processing_algs/taudem/stream_network_analysis_tools.rst:784
+msgid "<put output description here>"
+msgstr "<mettre la description de la sortie ici>"
+
+#~ msgid "|updatedisclaimer|"
+#~ msgstr ""
+
+#~ msgid "Optional."
+#~ msgstr ""
+
+#~ msgid "``Output Outlet Shapefile`` [vector]"
+#~ msgstr ""
+
+#~ msgid "``Spacing for Threshold Values`` [selection]"
+#~ msgstr ""
+
+#~ msgid "``Stream Reach Shapefile`` [vector]"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This input paramater is the maximum number of grid cells that the points in "
+#~ "the input outlet shapefile will be moved before they are saved to the output"
+#~ " outlet shapefile."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A point shape file defining points of interest or outlets. This file has one"
+#~ " point in it for each point in the input outlet shapefile. If the original "
+#~ "point was located on a stream, then the point was not moved. If the origianl"
+#~ " point was not on a stream, the point was moved downslope according to the "
+#~ "D8 flow direction until it reached a stream or the maximum distance had been"
+#~ " reached. This file has an additional field \"dist_moved\" added to it which"
+#~ " is the number of cells that the point was moved. This field is 0 if the "
+#~ "cell was originally on a stream, -1 if it was not moved becuase there was "
+#~ "not a stream within the maximum distance, or some positive value if it was "
+#~ "moved."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Operates on any grid and outputs an indicator (1, 0) grid identifing cells "
+#~ "with input values >= the threshold value. The standard use is to use an "
+#~ "accumulated source area grid to as the input grid to generate a stream "
+#~ "raster grid as the output. If you use the optional input mask grid, it "
+#~ "limits the domain being evaluated to cells with mask values >= 0. When you "
+#~ "use a D-infinity contributing area grid (:file:`*sca`) as the mask grid, it "
+#~ "functions as an edge contamination mask. The threshold logic is:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This parameter indicates whether logarithmic or linear spacing should be "
+#~ "used when looking for possible threshold values using drop ananlysis."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A point shape file defining points of interest. If this file is used, the "
+#~ "tool will only deliiniate the stream network upstream of these outlets. "
+#~ "Additionally, points in the Outlets Shapefile are used to logically split "
+#~ "stream reaches to facilitate representing watersheds upstream and downstream"
+#~ " of monitoring points. This tool REQUIRES THAT THERE BE an integer attribute"
+#~ " field \"id\" in the Outlets Shapefile, because the \"id\" values are used "
+#~ "as identifiers in the Network Tree file."
+#~ msgstr ""
+
+#~ msgid "<put algortithm description here>"
+#~ msgstr ""

@@ -1,0 +1,749 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# 
+# Translators:
+# Choro <u.ko.kubot@gmail.com>, 2013
+# Choro <u.ko.kubot@gmail.com>, 2013-2014
+# fairtommy <fairtommy@gmail.com>, 2019-2020
+# Kayama Yoichi <yoichi.kayama@gmail.com>, 2013-2014
+# fairtommy <fairtommy@gmail.com>, 2017
+# Kayama Yoichi <yoichi.kayama@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-11 14:48+0200\n"
+"PO-Revision-Date: 2020-03-06 04:36+0000\n"
+"Last-Translator: fairtommy <fairtommy@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/qgis/qgis-documentation/language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:11
+msgid "Working with Projections"
+msgstr "投影法の利用方法"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:20
+msgid ""
+"A Coordinate Reference System, or CRS, is a method of associating numerical "
+"coordinates with a position on the surface of the Earth. QGIS has support "
+"for approximately 7,000 standard CRSs, each with different use cases, pros "
+"and cons! Choosing an appropriate reference system for your QGIS projects "
+"and data can be a complex task, but fortunately QGIS helps guide you through"
+" this choice, and makes working with different CRSs as transparent and "
+"accurate as possible."
+msgstr "座標参照系（CRS）は、数値座標を地球の表面上の位置に関連付ける方法です。 QGISでは、約7,000の標準CRSに対応しており、それぞれそれぞれに異なる使途、長短があります！実際のQGISプロジェクトおよびデータに対して適切な参照系を選択するのは複雑な作業になることがありますが、幸いQGISではこの選択を導き、さまざまなCRSをできるだけ透明かつ正確に使用できるようにしています。"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:31
+msgid "Overview of Projection Support"
+msgstr "投影法サポート概要"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:33
+msgid ""
+"QGIS has support for approximately 7,000 known CRSs. These standard CRSs are"
+" based on those defined by the European Petroleum Search Group (EPSG) and "
+"the Institut Geographique National de France (IGNF), and are made available "
+"in QGIS through the underlying \"Proj\" projection library. Commonly, these "
+"standard projections are identified through use of an authority:code "
+"combination, where the authority is an organisation name such as \"EPSG\" or"
+" \"IGNF\", and the code is a unique number associated with a specific CRS. "
+"For instance, the common WGS 84 latitude/longitude CRS is known by the "
+"identifier ``EPSG:4326``, and the web mapping standard CRS is ``EPSG:3857``."
+msgstr "QGISでは約7,000の既知のCRSをサポートしています。これらの標準CRSは、欧州石油探査グループ（European Petroleum Search Group：EPSG）およびフランス国土地理院（Institut Geographique National de France：IGNF）によって定義されたものに基づいており、基礎となる「Proj」投影ライブラリを通じてQGISで利用できます。通常、これらの標準的な予測は、組織：コードの組み合わせを使用して識別されます。ここで、組織は「EPSG」や「IGNF」などの組織名であり、コードは特定のCRSに関連付けられた一意の番号です。たとえば、一般的なWGS 84緯度/経度CRSは識別子「EPSG：4326」で知られており、Webマッピング標準CRSは「EPSG：3857」です。"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:43
+msgid ""
+"Custom, user-created CRSs are stored in a user CRS database. See section "
+":ref:`sec_custom_projections` for information on managing your custom "
+"coordinate reference systems."
+msgstr "ユーザが作成したカスタムCRSは、ユーザCRSデータベースに保存されます。カスタム座標参照システムの管理についてはセクション :ref:`sec_custom_projections` 参照。"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:48
+msgid "Layer Coordinate Reference Systems"
+msgstr "レイヤ座標参照系"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:50
+msgid ""
+"In order to correctly project data into a specific target CRS, either your "
+"data must contain information about its coordinate reference system or you "
+"will need to manually assign the correct CRS to the layer. For PostGIS "
+"layers, QGIS uses the spatial reference identifier that was specified when "
+"that PostGIS layer was created. For data supported by OGR or GDAL, QGIS "
+"relies on the presence of a recognized means of specifying the CRS. For "
+"instance, for the Shapefile format this is a file containing the Well-Known "
+"Text (:index:`WKT`) representation of the layer's CRS. This projection file "
+"has the same base name as the :file:`.shp` file and a :file:`.prj` "
+"extension. For example, :file:`alaska.shp` would have a corresponding "
+"projection file named :file:`alaska.prj`."
+msgstr "特定の投影先CRSにデータを正しく投影するには、データにその座標参照系に関する情報が含まれているか、正しいCRSをレイヤーに手動で割り当てる必要があります。 PostGISレイヤーの場合、QGISはそのPostGISレイヤーの作成時に指定された空間参照識別子を使用します。 OGRまたはGDALでサポートされるデータの場合、QGISはCRSを指定するための認識された手段の存在に依存しています。たとえば、シェープファイル形式の場合、これはレイヤーのCRSの既知のテキスト（ :index:`WKT` ）表現を含むファイルです。この投影ファイルには、 :file:`.shp` ファイルと同じベース名と :file:`.prj` 拡張子が付いています。たとえば、 :file:`alaska.shp` には、 :file:`alaska.prj` という名前の対応する投影ファイルがあります。"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:62
+msgid ""
+"Whenever a layer is loaded into QGIS, QGIS attempts to automatically "
+"determine the correct CRS for that layer. In some cases this is not "
+"possible, e.g. when a layer has been provided without retaining this "
+"information. Whenever QGIS cannot automatically determine the correct CRS "
+"for a layer, it will prompt you to manually select the CRS. Selecting the "
+"correct choice is crucial, as a wrong choice will place your layer in the "
+"wrong position on the Earth's surface! Sometimes, accompanying metadata will"
+" describe the correct CRS for a layer, in other cases you will need to "
+"contact the original author of the data to determine the correct CRS to use."
+msgstr "レイヤがQGISに読み込まれるたびに、QGISはそのレイヤの正しいCRSを自動的に決定しようとします。これは場合によっては、例えばこの情報を保持せずにレイヤが提供されたときなどは、不可能です。 QGISでレイヤの正しいCRSを自動的に判断できない場合は常に、CRSを手動で選択するように求められます。正しい選択を選択することは非常に重要です。選択を間違えると、レイヤが地球の表面上の間違った位置に配置されるためです。付随するメタデータがレイヤの正しいCRSを記述する場合もありますが、他の場合は、データの元の作成者に連絡して使用する正しいCRSを決定する必要があります。"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:72
+msgid "Project Coordinate Reference Systems"
+msgstr "プロジェクトの座標参照系"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:74
+msgid ""
+"Every project in QGIS also has an associated Coordinate Reference System. "
+"The project CRS determines how data is projected from its underlying raw "
+"coordinates to the flat map rendered within your QGIS map canvas. Behind the"
+" scenes, QGIS transparently reprojects all layers contained within your "
+"project into the project's CRS, so that they will all be rendered in the "
+"correct position with respect to each other!"
+msgstr "QGISの各プロジェクトにも、関連付けられた座標参照系があります。プロジェクトCRSは、データが基礎となる生の座標からQGIS地図キャンバス内にレンダリングされた平らな地図へとどのように投影されるかを決定します。舞台裏では、QGISはプロジェクト内に含まれるすべてのレイヤをプロジェクトのCRSに透過的に再投影するため、すべてのレイヤーは相互に正しい位置にレンダリングされます！"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:81
+msgid ""
+"It is important to make an appropriate choice of CRS for your QGIS projects."
+" Choosing an inappropriate CRS can cause your maps to look distorted, and "
+"poorly reflect the real-world relative sizes and positions of features. "
+"Usually, while working in smaller geographic areas, there will be a number "
+"of standard CRSs used within a particular country or administrative area. "
+"It's important to research which CRSs are appropriate or standard choices "
+"for the area you are mapping, and ensure that your QGIS project follows "
+"these standards."
+msgstr "QGISプロジェクトに適切なCRSを選択することが大切です。不適切なCRSを選択すると、地図は歪んで表示され、現実世界の相対的なサイズと地物の位置が正しく反映されない可能性があります。通常、狭い地理的領域で作業している間、特定の国または行政区域内で使用される多くの標準CRSがあります。どのCRSが図化する地域に適当または標準の選択であるかを調査し、QGISプロジェクトがこれらの標準に従っていることを確認することが大切です。"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:89
+msgid ""
+"The project CRS can be set through the :guilabel:`CRS` tab of the "
+":guilabel:`Project properties` dialog (:menuselection:`Project --> "
+"Properties...`). It will also be shown in the lower-right of the QGIS status"
+" bar."
+msgstr "プロジェクトCRSは、 :guilabel:`プロジェクトのプロパティ` ダイアログ（ :menuselection:`プロジェクト->プロパティ...` ）の :guilabel:`CRS` タブで設定できます。また、QGISステータスバーの右下にも表示されます。"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:100
+msgid "Project Properties Dialog"
+msgstr "[プロジェクトのプロパティ]ダイアログ"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:102
+msgid ""
+"The :guilabel:`CRS` tab also has an optional setting for :guilabel:`No "
+"projection`. Checking this setting will disable ALL projection handling "
+"within the QGIS project, causing all layer and map coordinates to be treated"
+" as simple 2D Cartesian coordinates, with no relation to positions on the "
+"Earth's surface."
+msgstr ":guilabel:`CRS` タブには、 :guilabel:`投影なし` のオプション設定もあります。この設定をチェックすると、QGISプロジェクト内のすべての投影処理が無効になり、すべてのレイヤと地図の座標が単純な2Dデカルト座標として扱われ、地球の表面上の位置に関係しなくなります。"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:107
+msgid ""
+"Whenever you select a new CRS for your QGIS project, the measurement units "
+"will automatically be changed in the :guilabel:`General` tab of the "
+":guilabel:`Project properties` dialog (:menuselection:`Project --> "
+"Properties...`) to match the selected CRS. For instance, some CRSs define "
+"their coordinates in feet instead of meters, so setting your QGIS project to"
+" one of these CRSs will also set your project to measure using feet by "
+"default."
+msgstr "QGISプロジェクトに新しいCRSを選択するたびに、測定単位は :guilabel:`プロジェクトのプロパティ` ダイアログの :guilabel:`一般` タブで自動的に変更されます（ :menuselection:`プロジェクト->プロパティ...` ）選択したCRSに一致します。たとえば、一部のCRSはメートルではなくフィートで座標を定義するため、QGISプロジェクトをこれらのCRSのいずれかに設定すると、デフォルトでフィートを使用して測定するようにプロジェクトが設定されます。"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:118
+msgid "CRS Settings"
+msgstr "CRS 設定"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:120
+msgid ""
+"By default, QGIS starts each new project using a global default projection. "
+"This default CRS is ``EPSG:4326`` (also known as \"WGS 84\"), and it is a "
+"global latitude/longitude based reference system. This default CRS can be "
+"changed via the :guilabel:`CRS for New Projects` setting in the "
+":guilabel:`CRS` tab under :menuselection:`Settings -->` |options| "
+":guilabel:`Options`. There is an option to automatically set the project's "
+"CRS to match the CRS of the first layer loaded into a new project, or "
+"alternatively you can select a different default CRS to use for all newly "
+"created projects. This choice will be saved for use in subsequent QGIS "
+"sessions."
+msgstr "デフォルトでは、QGISはグローバルなデフォルトの投影法を使用して新しいプロジェクトを開始します。このデフォルトのCRSは ``EPSG:4326`` （「WGS 84」とも呼ばれます）であり、グローバルな緯度/経度に基づく参照系です。このデフォルトのCRSは :guilabel:`CRS` タブの :menuselection:`設定->` |options| :guilabel:`オプション` の :guilabel:`新しいプロジェクトのCRS` 設定で変更できます。新しいプロジェクトに読み込まれた最初のレイヤーのCRSに一致するようにプロジェクトのCRSを自動的に設定するオプションがあります。あるいは、新しく作成されたすべてのプロジェクトに使用する別のデフォルトCRSを選択できます。この選択は、後続のQGISセッションで使用するために保存されます。"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:134
+msgid "The CRS tab in the QGIS Options Dialog"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:136
+msgid ""
+"When you use layers that do not have a CRS, you can define how QGIS responds"
+" to these layers. This can be done globally in the :guilabel:`CRS` tab under"
+" :menuselection:`Settings -->` |options| :guilabel:`Options`."
+msgstr "CRSを持っていないレイヤーを使用するときは、QGISが、これらのレイヤーにどのように応答するかを定義できます。これは :menuselection:`設定 -->` |options| :guilabel:`オプション` 下の :guilabel:`CRS` タブで、グローバルに行うことができます。"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:141
+msgid "The options shown in figure_projection_options_ are:"
+msgstr "figure_projection_options_ に示されるオプションは:"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:143
+msgid "|radioButtonOn| :guilabel:`Prompt for CRS`"
+msgstr "|radioButtonOn| :guilabel:`CRS` のプロンプト"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:144
+msgid "|radioButtonOff| :guilabel:`Use project CRS`"
+msgstr "|radioButtonOff| :guilabel:`プロジェクトCRSを使用する`"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:145
+msgid "|radioButtonOff| :guilabel:`Use a default CRS`"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:147
+msgid ""
+"If you want to define the Coordinate Reference System for a certain layer "
+"without CRS information, you can also do that in the :guilabel:`Source` tab "
+"of the raster and vector properties dialog (see :ref:`label_sourcetab` for "
+"rasters and :ref:`vectorsourcemenu` for vectors). If your layer already has "
+"a CRS defined, it will be displayed as shown in "
+":ref:`figure_vector_general`. Note that changing the CRS in this setting "
+"does not alter the underlying data source in any way, rather it just changes"
+" how QGIS interprets the raw coordinates from the layer in the current QGIS "
+"project only."
+msgstr "CRS情報なしのレイヤの座標参照系を定義したい場合は、ラスタとベクタプロパティダイアログの :guilabel:`ソース` タブで行うこともできます（ラスタについては :ref:`label_sourcetab` およびベクタについては :ref:`vectorsourcemenu` を参照）。レイヤーにすでにCRSが定義されている場合 :ref:`figure_vector_general` に示されているように表示されます。この設定でCRSを変更しても、基になるデータソースは変更されず、QGISが現在のQGISプロジェクトのみのレイヤから生の座標を解釈する方法を変更するだけです。"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:156
+msgid "**CRS in the Layers Panel**"
+msgstr "**レイヤーパネル中のCRS**"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:158
+msgid ""
+"Right-clicking on a layer in the Layers Panel (section :ref:`label_legend`) "
+"provides two CRS shortcuts. :guilabel:`Set layer CRS` takes you directly to "
+"the Coordinate Reference System Selector dialog (see "
+"figure_projection_project_). :guilabel:`Set project CRS from Layer` "
+"redefines the project CRS using the layer's CRS."
+msgstr "レイヤーパネル (セクション :ref:`label_legend`) でレイヤ名を右ボタンでクリックすると2個のCRSショートカットが表示されます :guilabel:`レイヤーCRSを設定` を選択すると座標参照系選択ダイアログ ( figure_projection_project_ 参照) が表示されます. :guilabel:`レイヤーからプロジェクト CRSを設定する` を選択するとレイヤのCRSを使ってプロジェクトのCRSを再定義します"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:168
+msgid "On The Fly (OTF) CRS Transformation"
+msgstr "その場で (OTF) CRS変換"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:170
+msgid ""
+"QGIS supports \"on the fly\" CRS transformation for both raster and vector "
+"data. This means that regardless of the underlying CRS of particular map "
+"layers in your project, they will always be automatically transformed into "
+"the common CRS defined for your project."
+msgstr "QGISではラスタデータとベクタデータの両方に対して、「その場で」CRS変換をサポートしています。これは、プロジェクト内の地図レイヤは基礎となるCRSに関係なく、プロジェクトに定義された共通CRSに常に自動的に変換されることを意味します。"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:179
+msgid "Coordinate Reference System Selector"
+msgstr "座標系選択"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:181
+msgid ""
+"This dialog helps you assign a Coordinate Reference System to a project or a"
+" layer, provided a set of projection databases. Items in the dialog are:"
+msgstr "このダイアログは、投影データベースのセットを提供するプロジェクトまたはレイヤーに座標系を割り当てるのに役立ちます。ダイアログ内の項目は："
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:184
+msgid ""
+"**Filter**: If you know the EPSG code, the identifier, or the name for a "
+"Coordinate Reference System, you can use the search feature to find it. "
+"Enter the EPSG code, the identifier or the name."
+msgstr "**フィルタ** ：利用したい座標系のEPSG コードの識別子または名前を知っている場合は、検索機能を使用して見つけることができます  EPSG コードの識別子、または名前を入力して下さい。"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:187
+msgid ""
+"**Recently used coordinate reference systems**: If you have certain CRSs "
+"that you frequently use in your everyday GIS work, these will be displayed "
+"in this list. Click on one of these items to select the associated CRS."
+msgstr "**最近利用した座標参照系** ：日常のGISでの作業でよく使うCRSがあれば、このリストに表示されます。これらのひとつをクリックすると,CRSを選択できます。"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:190
+msgid ""
+"**Coordinate reference systems of the world**: This is a list of all CRSs "
+"supported by QGIS, including Geographic, Projected and Custom coordinate "
+"reference systems. To define a CRS, select it from the list by expanding the"
+" appropriate node and selecting the CRS. The active CRS is preselected."
+msgstr "**世界の座標参照系** ：これは、投影された地理的、およびカスタムは、基準座標系を含め、QGISでサポートされているすべてのCRSのリストです。CRSを定義するには、該当するノードを展開し、CRSを選択して、リストから選択します。アクティブCRSは、予め選択されています。"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:194
+msgid ""
+"**PROJ text**: This is the CRS string used by the PROJ projection engine. "
+"This text is read-only and provided for informational purposes."
+msgstr "**PROJ text** ：投影変換エンジンであるPROJで使われるCRS文字列です。この文字列は読み取り専用で、情報提供のために提供されます。"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:197
+msgid ""
+"The CRS selector also shows a rough preview of the geographic area for which"
+" a selected CRS is valid for use. Many CRSs are designed only for use in "
+"small geographic areas, and you should not use these outside of the area "
+"they were designed for. The preview map shades an approximate area of use "
+"whenever a CRS is selected from the list. In addition, this preview map also"
+" shows an indicator of the current main canvas map extent."
+msgstr "CRSセレクタには、選択したCRSが有効に使用されている地理的領域の大まかなプレビューも表示されます。多くのCRSは、狭い地理的領域でのみ使用するように設計されています。これらのCRSは、設計された領域以外では使用しないでください。プレビュー地図は、CRSがリストから選択されるたびに、おおよその使用領域をシェーディングします。さらに、このプレビュー地図には、現在のメインキャンバス地図範囲のインジケータも表示されます。"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:210
+msgid "Custom Coordinate Reference System"
+msgstr "カスタム座標参照系"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:212
+msgid ""
+"If QGIS does not provide the coordinate reference system you need, you can "
+"define a custom CRS. To define a CRS, select |customProjection| "
+":guilabel:`Custom CRS...` from the :menuselection:`Settings` menu. Custom "
+"CRSs are stored in your QGIS user database. In addition to your custom CRSs,"
+" this database also contains your spatial bookmarks and other custom data."
+msgstr "QGISで必要な座標参照系が提供されていない場合は、カスタムCRSを定義できます。CRSを定義するには :menuselection:`設定` メニュー から |customProjection| :guilabel:`カスタムCRS...` を選択します。カスタムCRSはQGISのユーザーデータベースに格納されます。カスタムのCRSに加えて、このデータベースには、空間ブックマークやその他のカスタムデータが含まれます。"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:223
+msgid "Custom CRS Dialog"
+msgstr "カスタムCRSダイアログ"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:226
+msgid ""
+"Defining a custom CRS in QGIS requires a good understanding of the PROJ "
+"projection library. To begin, refer to \"Cartographic Projection Procedures "
+"for the UNIX Environment - A User's Manual\" by Gerald I. Evenden, U.S. "
+"Geological Survey Open-File Report 90-284, 1990 (available at "
+"ftp://ftp.remotesensing.org/proj/OF90-284.pdf)."
+msgstr "QGISでカスタムCRSを定義するにはPROJ投影ライブラリの十分な理解が必要です。手始めには、「UNIX環境のための地図投影手順 - ユーザーズマニュアル」ジェラルド I. Evenden著、米国地質調査所オープンファイルレポート、90-284頁、1990年（ ftp://ftp.remotesensing.org/proj/OF90-284.pdf で入手可能）を参照。"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:232
+msgid ""
+"This manual describes the use of ``proj`` and related command line "
+"utilities. The cartographic parameters used with ``proj`` are described in "
+"the user manual and are the same as those used by QGIS."
+msgstr "このマニュアルは、 ``proj`` および関連コマンドラインユーティリティの使用を記載しています。 ``proj`` と共に使用される地図作成パラメータは、ユーザマニュアルで説明され、QGISで使用されるものと同じです。"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:236
+msgid ""
+"The :guilabel:`Custom Coordinate Reference System Definition` dialog "
+"requires only two parameters to define a user CRS:"
+msgstr ":guilabel:`カスタム座標参照系定義` ダイアログでは、CRSを定義するために必要とするパラメーターは２つだけです。"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:239
+msgid "A descriptive name"
+msgstr "わかりやすい名前"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:240
+msgid "The cartographic parameters in PROJ format"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:242
+msgid ""
+"To create a new CRS, click the |signPlus| :sup:`Add new CRS` button and "
+"enter a descriptive name and the CRS parameters."
+msgstr "新しいCRSを作成するには、 |signPlus| :sup:`新しいCRSを追加` ボタンをクリックし、わかりやすい名前とCRSのパラメーターを入力します。"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:245
+msgid ""
+"Note that the :guilabel:`Parameters` must begin with a ``+proj=`` block, to "
+"represent the new coordinate reference system."
+msgstr "注 新しいCRSを表現するには、 パラメーターは ``+proj=`` -ブロックで開始されていなければいけません。"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:248
+msgid ""
+"You can test your CRS parameters to see if they give sane results. To do "
+"this, enter known WGS 84 latitude and longitude values in :guilabel:`North` "
+"and :guilabel:`East` fields, respectively. Click on :guilabel:`Calculate`, "
+"and compare the results with the known values in your coordinate reference "
+"system."
+msgstr "まともな結果が得られるかを見ることで、CRSパラメーターをテストできます。これを行うには、知っているWGS84緯度経度の値を :guilabel:`北` 、 :guilabel:`東` フィールドにそれぞれ入力します。 :guilabel:`計算` をクリックして、出てきた結果と、定義したCRSでの知っている値とを比較します。"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:254
+msgid "Integrate an NTv2-transformation in QGIS"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:256
+msgid ""
+"To integrate an NTv2 transformation file in QGIS you need one more step:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:258
+msgid ""
+"Place the NTv2 file (.gsb) in the CRS/Proj folder that QGIS uses (e.g. "
+":file:`C:\\\\OSGeo4W64\\\\share\\\\proj` for windows users)"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:260
+msgid ""
+"Add **nadgrids** (``+nadgrids=nameofthefile.gsb``) to the Proj definition in"
+" the :guilabel:`Parameters` field of the :guilabel:`Custom Coordinate "
+"Reference System Definition` (:menuselection:`Settings --> Custom "
+"Projections...`)."
+msgstr "**nadgrids** （ ``+nadgrids=nameofthefile.gsb`` ）を :guilabel:`カスタム座標系定義` （ :menuselection:`設定-->カスタム投影...` ）の :guilabel:`パラメータ` フィールドのProj定義に追加します。"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:269
+msgid "Setting an NTv2 transformation"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:276
+msgid "Datum Transformations"
+msgstr "測地系変換"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:278
+msgid ""
+"In QGIS, 'on-the-fly' CRS transformation is enabled by default, meaning that"
+" whenever you use layers with different coordinate systems QGIS "
+"transparently reprojects them to the project CRS. For some CRS, there are a "
+"number of possible transforms available to reproject to the project's CRS! "
+"QGIS optionally allows you to define a particular transformation to use, "
+"otherwise QGIS uses a default one."
+msgstr "QGISでは、「その場で」CRS変換がデフォルトで有効になっています。つまり、異なる座標系を持つレイヤを使用すると、QGISはそれらをプロジェクトCRSに透過的に再投影します。一部のCRSには、プロジェクトのCRSに再投影するために使用可能な多くの変換があります！ QGISでは、オプションで、使用する特定の変換を定義できます。それ以外の場合、QGISはデフォルトの変換を使用します。"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:284
+msgid ""
+"This customization is done in the :menuselection:`Settings -->` |options| "
+":guilabel:`Options --> CRS` tab menu under the :guilabel:`Default datum "
+"transformations` group:"
+msgstr "このカスタマイズは :guilabel:`デフォルトの測地系変換` グループの下の :menuselection:`設定->` |options| :guilabel:`オプション-> CRS` タブメニューで行われます："
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:288
+msgid ""
+"using |checkbox| :guilabel:`Ask for datum transformation if several are "
+"available`: when more than one appropriate datum transformation exists for a"
+" source/destination CRS combination, a dialog will automatically be opened "
+"prompting users to choose which of these datum transformations to use for "
+"the project;"
+msgstr "|checkbox| :guilabel:`複数のデータム変換がある場合はデータム変換を要求` を使用：元/先CRSの組み合わせに対して複数の適切なデータム変換が存在する場合、プロジェクトに使用するデータム変換を選択するようユーザーに促します;"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:293
+msgid ""
+"or predefining a list of the appropriate default transformations to use when"
+" loading layers to projects or reprojecting a layer."
+msgstr "または、レイヤをプロジェクトにロードするとき、またはレイヤを再投影するときに使用する適切なデフォルト変換のリストを事前定義します。"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:296
+msgid ""
+"Use the |signPlus| button to open the :guilabel:`Select Datum "
+"Transformations` dialog. Then:"
+msgstr "|signPlus| ボタンを使用して :guilabel:`測地系変換を選択` ダイアログを開きます。次に："
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:299
+msgid ""
+"Indicate the :guilabel:`Source CRS` of the layer, using the drop-down menu "
+"or the |setProjection| :sup:`Select CRS` widget."
+msgstr "ドロップダウンメニューまたは |setProjection| :sup:`CRSを選択` ウィジェットを使用して、レイヤの :guilabel:`変換元CRS` を指定します。"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:301
+msgid "Likewise, provide the :guilabel:`Destination CRS`."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:302
+msgid ""
+"Depending on the transform grid files (based on GDAL and PROJ version "
+"installed on your system), a list of available transformations from source "
+"to destination is built in the table. Clicking a row shows details on the "
+"settings applied (epsg code, accuracy of the transform, number of stations "
+"involved...)."
+msgstr "変換グリッドファイル（システムにインストールされているGDALおよびPROJのバージョンに基づく）に応じて、変換元から変換先への使用可能な変換の一覧が表に組み込まれています。行をクリックすると、適用された設定の詳細が表示されます（epsgコード、変換の精度、関連する測点数など）。"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:307
+msgid ""
+"You can choose to only display current valid transformations by checking the"
+" |checkbox| :guilabel:`Hide deprecated` option."
+msgstr "|checkbox| :guilabel:`非推奨のオプションを隠す` オプションをチェックすることにより、現在の有効な変換のみを表示することを選択できます。"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:310
+msgid ""
+"Find your preferred transformation, select it and click :guilabel:`OK`."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:312
+msgid ""
+"A new row is added to the table under :menuselection:`CRS --> Default datum "
+"transformations` with information about 'Source CRS' and 'Destination CRS' "
+"as well as 'Source datum transform' and 'Destination datum transform'."
+msgstr "テーブルに :menuselection:`CRS->デフォルトデータム変換` の下に新しい行が追加され、「変換元CRS」と「変換先CRS」、および「変換元測地系」と「変換先測地系」に関する情報が追加されます。"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:316
+msgid ""
+"From now, QGIS automatically uses the selected datum transformation for "
+"further transformation between these two CRSs until you |signMinus| remove "
+"it from the list or |toggleEditing| replace it with another one."
+msgstr "これ以降、QGISは自動的に選択された測地基準系変換をこれら2つのCRS間の変換に使用します。リストから削除するか、 |toggleEditing| 別のものと交換してください。"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:325
+msgid "Selecting a preferred default datum transformation"
+msgstr "デフォルトの測地系変換を選択する"
+
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:327
+msgid ""
+"Datum transformations set in the :menuselection:`Settings -->` |options| "
+":guilabel:`Options --> CRS` tab will be inherited by all new QGIS projects "
+"created on the system. Additionally, a particular project may have its own "
+"specific set of transformations specified via the :guilabel:`CRS` tab of the"
+" :guilabel:`Project properties` dialog (:menuselection:`Project --> "
+"Properties...`). These settings apply to the current project only."
+msgstr ":menuselection:`設定->` |options| :guilabel:`オプション->CRS` タブで設定された測地系変換は、その系で作成されたすべての新しいQGISプロジェクトに継承されます。さらに、特定のプロジェクトには、 :guilabel:`プロジェクトプロパティ` ダイアログ（ :menuselection:`プロジェクト->プロパティ...` ）の :guilabel:`CRS` タブで指定された独自の変換セットがある場合があります。これらの設定は、現在のプロジェクトにのみ適用されます。"
+
+#~ msgid "|updatedisclaimer|"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In order to use OTF projection, either your data must contain information "
+#~ "about its coordinate reference system or you will need to define a global, "
+#~ "layer or project-wide CRS. For PostGIS layers, QGIS uses the spatial "
+#~ "reference identifier that was specified when the layer was created. For data"
+#~ " supported by OGR, QGIS relies on the presence of a recognized means of "
+#~ "specifying the CRS. In the case of shapefiles, this means a file containing "
+#~ "the well-known text (:index:`WKT`) specification of the CRS. This projection"
+#~ " file has the same base name as the shapefile and a :file:`.prj` extension. "
+#~ "For example, a shapefile named :file:`alaska.shp` would have a corresponding"
+#~ " projection file named :file:`alaska.prj`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Whenever you select a new CRS, the layer units will automatically be changed"
+#~ " in the :guilabel:`General` tab of the |options| :guilabel:`Project "
+#~ "Properties` dialog under the :guilabel:`Project` (or |kde| "
+#~ ":guilabel:`Settings`) menu."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you want to define the coordinate reference system for a certain layer "
+#~ "without CRS information, you can also do that in the :guilabel:`General` tab"
+#~ " of the raster and vector properties dialog (see :ref:`label_generaltab` for"
+#~ " rasters and :ref:`vectorgeneralmenu` for vectors). If your layer already "
+#~ "has a CRS defined, it will be displayed as shown in "
+#~ ":ref:`figure_vector_general`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Select |projectProperties| :menuselection:`Project Properties --> CRS` from "
+#~ "the :menuselection:`Project` ( or |kde| :menuselection:`Settings`) menu. You"
+#~ " can then  activate the |checkbox| :guilabel:`Enable on the fly CRS "
+#~ "transformation (OTF)` checkbox in the |crs| :guilabel:`CRS` tab and select "
+#~ "the CRS to use (see :ref:`crs_selector`)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Sometimes, you receive a layer and you don't know its projection. Assuming "
+#~ "that you have another layer with a valid crs that should overlaps with it, "
+#~ "enable the OTF reprojection and, in the :guilabel:`General` tab of the Layer"
+#~ " properties dialog, use the Coordinate Reference System selector to assign a"
+#~ " projection. Your layer position is then moved accordingly. You may have to "
+#~ "do some trial and error in order to find the right position, hence its "
+#~ "original CRS."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can test your CRS parameters to see if they give sane results. To do "
+#~ "this, enter known WGS 84 latitude and longitude values in :guilabel:`North` "
+#~ "and :guilabel:`East` fields, respectively. Click on **[Calculate]**, and "
+#~ "compare the results with the known values in your coordinate reference "
+#~ "system."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "OTF depends on being able to transform data into a 'default CRS', and QGIS "
+#~ "uses WGS84. For some CRS there are a number of transforms available. QGIS "
+#~ "allows you to define the transformation used otherwise QGIS uses a default "
+#~ "transformation."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the :guilabel:`CRS` tab under :menuselection:`Settings -->` |options| "
+#~ ":guilabel:`Options` you can:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "set QGIS to ask you when it needs define a transformation using "
+#~ "|radioButtonOn| :guilabel:`Ask for datum transformation when no default is "
+#~ "defined`"
+#~ msgstr ""
+
+#~ msgid "edit a list of user defaults for transformations."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "QGIS asks which transformation to use by opening a dialogue box displaying "
+#~ "PROJ.4 text describing the source and destination transforms. Further "
+#~ "information may be found by hovering over a transform. User defaults can be "
+#~ "saved by selecting |radioButtonOn| :guilabel:`Remember selection`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "QGIS allows users to define a global and project-wide CRS (coordinate "
+#~ "reference system) for layers without a pre-defined CRS. It also allows the "
+#~ "user to define custom coordinate reference systems and supports on-the-fly "
+#~ "(OTF) projection of vector and raster layers. All of these features allow "
+#~ "the user to display layers with different CRSs and have them overlay "
+#~ "properly."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "QGIS has support for approximately 2,700 known CRSs. Definitions for each "
+#~ "CRS are stored in a SQLite database that is installed with QGIS. Normally, "
+#~ "you do not need to manipulate the database directly. In fact, doing so may "
+#~ "cause projection support to fail. Custom CRSs are stored in a user database."
+#~ " See section :ref:`sec_custom_projections` for information on managing your "
+#~ "custom coordinate reference systems."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The CRSs available in QGIS are based on those defined by the European "
+#~ "Petroleum Search Group (EPSG) and the Institut Geographique National de "
+#~ "France (IGNF) and are largely abstracted from the spatial reference tables "
+#~ "used in GDAL. EPSG identifiers are present in the database and can be used "
+#~ "to specify a CRS in QGIS."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In order to use OTF projection, either your data must contain information "
+#~ "about its coordinate reference system or you will need to define a global, "
+#~ "layer or project-wide CRS. For PostGIS layers, QGIS uses the spatial "
+#~ "reference identifier that was specified when the layer was created. For data"
+#~ " supported by OGR, QGIS relies on the presence of a recognized means of "
+#~ "specifying the CRS. In the case of Shapefile, this means a file containing "
+#~ "the well-known text (:index:`WKT`) specification of the CRS. This projection"
+#~ " file has the same base name as the :file:`.shp` file and a :file:`.prj` "
+#~ "extension. For example, a shapefile named :file:`alaska.shp` would have a "
+#~ "corresponding projection file named :file:`alaska.prj`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Whenever you select a new CRS, the layer units will automatically be changed"
+#~ " in the :guilabel:`General` tab of the |options| :guilabel:`Project "
+#~ "Properties` dialog under the :guilabel:`Project` menu."
+#~ msgstr ""
+
+#~ msgid "Global Projection Specification"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "QGIS starts each new project using the global default projection. The global"
+#~ " default CRS is EPSG:4326 - WGS 84 (``proj=longlat +ellps=WGS84 +datum=WGS84"
+#~ " +no_defs``), and it comes predefined in QGIS. This default can be changed "
+#~ "via the |setProjection| :sup:`Select CRS` button in the first section, which"
+#~ " is used to define the default coordinate reference system for new projects,"
+#~ " as shown in figure_projection_options_. This choice will be saved for use "
+#~ "in subsequent QGIS sessions."
+#~ msgstr ""
+
+#~ msgid "CRS tab in the QGIS Options Dialog"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When you use layers that do not have a CRS, you need to define how QGIS "
+#~ "responds to these layers. This can be done globally or project-wide in the "
+#~ ":guilabel:`CRS` tab under :menuselection:`Settings -->` |options| "
+#~ ":guilabel:`Options`."
+#~ msgstr ""
+
+#~ msgid "|radioButtonOff| :guilabel:`Use default CRS displayed below`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you want to define the coordinate reference system for a certain layer "
+#~ "without CRS information, you can also do that in the :guilabel:`Source` tab "
+#~ "of the raster and vector properties dialog (see :ref:`label_sourcetab` for "
+#~ "rasters and :ref:`vectorsourcemenu` for vectors). If your layer already has "
+#~ "a CRS defined, it will be displayed as shown in "
+#~ ":ref:`figure_vector_general`."
+#~ msgstr ""
+
+#~ msgid "Define On The Fly (OTF) CRS Transformation"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "QGIS supports on the fly CRS transformation for both raster and vector data."
+#~ " However, OTF is not activated by default. When OTF is off, each layer is "
+#~ "drawn using the coordinates as read from the data source. When OTF is on, "
+#~ "each layer's coordinates are transformed to the CRS of the project."
+#~ msgstr ""
+
+#~ msgid "There are three ways to enable On The Fly CRS Transformation:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Select |projectProperties| :menuselection:`Properties... --> CRS` from the "
+#~ ":menuselection:`Project` menu. You can then  activate the |checkbox| "
+#~ ":guilabel:`Enable on the fly CRS transformation (OTF)` checkbox in the |crs|"
+#~ " :guilabel:`CRS` tab and select the CRS to use (see :ref:`crs_selector`)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click on the |geographic| :sup:`CRS status` icon in the lower right-hand "
+#~ "corner of the status bar, leading you to the previous dialog."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Turn OTF on by default in the |crs| :guilabel:`CRS` tab of the "
+#~ ":menuselection:`Settings --> Options` dialog by selecting |checkbox| "
+#~ ":guilabel:`Enable 'on the fly' reprojection by default` or "
+#~ ":guilabel:`Automatically enable 'on the fly' reprojection if layers have "
+#~ "different CRS`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you have already loaded a layer and you want to enable OTF reprojection, "
+#~ "the best practice is to open the |crs| :guilabel:`CRS` tab of the "
+#~ ":guilabel:`Project Properties` dialog, activate the |checkbox| "
+#~ ":guilabel:`Enable 'on the fly' CRS transformation` checkbox, and select a "
+#~ "CRS. The |geographic| :sup:`CRS status` icon will no longer be greyed out, "
+#~ "and all layers will be OTF projected to the CRS shown next to the icon."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**Filter**: If you know the EPSG code, the identifier, or the name for a "
+#~ "coordinate reference system, you can use the search feature to find it. "
+#~ "Enter the EPSG code, the identifier or the name."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**PROJ.4 text**: This is the CRS string used by the PROJ.4 projection "
+#~ "engine. This text is read-only and provided for informational purposes."
+#~ msgstr ""
+
+#~ msgid "**Looking for a layer CRS? Use the CRS selector.**"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Sometimes, you receive a layer and you don't know its projection. Assuming "
+#~ "that you have another layer with a valid crs that should overlaps with it, "
+#~ "enable the OTF reprojection and, in the :guilabel:`Source` tab of the Layer "
+#~ "properties dialog, use the Coordinate Reference System selector to assign a "
+#~ "projection. Your layer position is then moved accordingly. You may have to "
+#~ "do some trial and error in order to find the right position, hence its "
+#~ "original CRS."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When operating across layers, for example, computing intersections between "
+#~ "two layers, it is important that both layers have the same CRS. To change "
+#~ "the projection of an existing layer, it is **insufficient** to simply change"
+#~ " the CRS in that layer's properties. Instead you must save the layer as a "
+#~ "new layer, and choose the desired CRS for the new layer."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Defining a custom CRS in QGIS requires a good understanding of the PROJ.4 "
+#~ "projection library. To begin, refer to \"Cartographic Projection Procedures "
+#~ "for the UNIX Environment - A User's Manual\" by Gerald I. Evenden, U.S. "
+#~ "Geological Survey Open-File Report 90-284, 1990 (available at "
+#~ "ftp://ftp.remotesensing.org/proj/OF90-284.pdf)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This manual describes the use of the ``proj.4`` and related command line "
+#~ "utilities. The cartographic parameters used with ``proj.4`` are described in"
+#~ " the user manual and are the same as those used by QGIS."
+#~ msgstr ""
+
+#~ msgid "The cartographic parameters in PROJ.4 format"
+#~ msgstr ""
+
+#~ msgid "Default datum transformations"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In QGIS, 'on-the-fly' CRS transformation is enabled by default, meaning that"
+#~ " whenever you use layers with different coordinates system, QGIS "
+#~ "transparently reprojects them while rendering to the project CRS. For some "
+#~ "CRS, there are a number of transforms available. QGIS allows you to define "
+#~ "the transformation to use otherwise QGIS uses a default one."
+#~ msgstr ""

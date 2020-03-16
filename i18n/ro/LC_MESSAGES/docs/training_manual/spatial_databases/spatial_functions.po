@@ -1,0 +1,340 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# 
+# Translators:
+# Sorin Călinică <scalinica@gmail.com>, 2015-2016
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-04-07 15:33+0200\n"
+"PO-Revision-Date: 2019-04-07 13:43+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"Language-Team: Romanian (http://www.transifex.com/qgis/qgis-documentation/language/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:8
+msgid "|LS| PostGIS Setup"
+msgstr "|LS| Instalare PostGIS"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:10
+msgid ""
+"Setting up PostGIS functions will allow you to access spatial functions from"
+" within PostgreSQL."
+msgstr "Instalând funcțiile PostGIS vom putea accesa funcțiile spațiale din interiorul PostgreSQL."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:13
+msgid ""
+"**The goal for this lesson:** To install spatial functions and briefly demo "
+"their effects."
+msgstr "**Scopul acestei lecții:** De a instala funcțiile spațiale, și pentru scurte demonstrații a aplicării lor."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:16
+msgid ""
+"We will assume the use of PostGIS version 2.1 in this exercise. The "
+"installation and database configuration are different for older versions, "
+"but the rest of this material in this module will still work. Consult the "
+"documentation for your platform for help with installation and database "
+"configuration."
+msgstr "Vom utiliza PostGIS versiunea 2.1 în acest exercițiu. Instalarea și configurarea bazei de date sunt diferite pentru versiuni mai vechi, dar restul acestui material din acest modul va fi, în continuare, funcțional. Consultați documentația pentru platforma dvs, pentru asistență referitoare la instalarea și configurarea bazei de date."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:23
+msgid "Installing under Ubuntu"
+msgstr "Instalarea sub Ubuntu"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:25
+msgid "Postgis is easily installed from apt."
+msgstr "PostGIS este ușor de instalat din apt."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:32
+msgid "Really, it's that easy..."
+msgstr "Într-adevăr, este atât de ușor ..."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:34
+msgid ""
+"Depending on which version of Ubuntu you are using, and which repositories "
+"you have configured, these commands will install PostGIS 1.5, or 2.x. You "
+"can find the version installed by issuing a ``select "
+"PostGIS_full_version();`` query with psql or another tool."
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:39
+msgid ""
+"To install the absolute latest version of PostGIS, you can use the following"
+" commands."
+msgstr "Pentru a instala cea mai recentă versiune a PostGIS, puteți folosi următoarele comenzi."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:51
+msgid "Installing under Windows"
+msgstr "Instalare sub Windows"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:53
+msgid ""
+"Installing on Windows is a little more complicated, but still not hard. Note"
+" that you need to be online to install the postgis stack."
+msgstr "Instalarea pe Windows este un pic mai complicată, dar nu este chiar dificilă. Rețineți că trebuie să fiți online pentru a instala pachetul PostGIS."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:56
+msgid ""
+"First Visit `the download page <https://www.postgresql.org/download/>`_."
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:58
+msgid ""
+"Then follow `this guide "
+"<https://www.bostongis.com/PrinterFriendly.aspx?content_name=postgis_tut01>`_."
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:61
+msgid ""
+"More information about installing on Windows can be found on the `PostGIS "
+"website <https://postgis.net/windows_downloads>`_."
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:65
+msgid "Installing on Other Platforms"
+msgstr "Instalarea pe Alte Platforme"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:67
+msgid ""
+"The `PostGIS website download <https://postgis.net/install/>`_ has "
+"information about installing on other platforms including macOS and on other"
+" linux distributions"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:71
+msgid "Configuring Databases to use PostGIS"
+msgstr "Configurarea Bazei de Date pentru a utiliza PostGIS"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:73
+msgid ""
+"Once PostGIS is installed, you will need to configure your database to use "
+"the extensions. If you have installed PostGIS version > 2.0, this is as "
+"simple as issuing the following command with psql using the address database"
+" from our previous exercise."
+msgstr "După ce PostGIS este instalat, va trebui să configurați baza de date pentru a utiliza extensiile. Dacă ați instalat versiunea PostGIS > 2.0, aceasta este la fel de simplu ca și execuția următoarei comenzi în psql, folosind baza de date de adrese din exercițiul nostru anterior."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:82
+msgid ""
+"If you are using PostGIS 1.5 and a version of PostgreSQL lower than 9.1, you"
+" will need to follow a different set of steps in order to install the "
+"postgis extensions for your database. Please consult the `PostGIS "
+"Documentation "
+"<https://postgis.net/docs/postgis_installation.html#create_new_db>`_ for "
+"instructions on how to do this. There are also some instructions in the "
+"`previous version "
+"<http://manual.linfiniti.com/en/postgis/spatial_functions.html#install-"
+"plpgsql>`_ of this manual."
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:91
+msgid "Looking at the installed PostGIS functions"
+msgstr "Funcțiile PostGIS instalate"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:93
+msgid ""
+"PostGIS can be thought of as a collection of in-database functions that "
+"extend the core capabilities of PostgreSQL so that it can deal with spatial "
+"data. By 'deal with', we mean store, retrieve, query and manipulate. In "
+"order to do this, a number of functions are installed into the database."
+msgstr "PostGIS poate fi considerat ca o colecție de funcții din baza de date, care extind capabilitățile de bază ale PostgreSQL, astfel încât să poatădatelor spațiale. Prin 'a face față', înțelegem stocarea, preluarea, interogarea și manipularea. Pentru a face acest lucru, sunt instalate o serie de funcții în baza de date."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:98
+msgid ""
+"Our PostgreSQL ``address`` database is now geospatially enabled, thanks to "
+"PostGIS. We are going to delve a lot deeper into this in the coming "
+"sections, but let's give you a quick little taster. Let's say we want to "
+"create a point from text. First we use the psql command to find functions "
+"relating to point. If you are not already connected to the ``address`` "
+"database, do so now. Then run:"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:108
+msgid ""
+"This is the command we're looking for: :kbd:`st_pointfromtext`.  To page "
+"through the list, use the down arrow, then press :kbd:`Q` to quit back to "
+"the psql shell."
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:111
+msgid "Try running this command:"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:117
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:151
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:218
+msgid "Result:"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:126
+msgid "Three things to note:"
+msgstr "Trei lucruri de reținut:"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:128
+msgid ""
+"We defined a point at position 1,1 (EPSG:4326 is assumed) using "
+":kbd:`POINT(1 1)`,"
+msgstr "Am definit un punct la poziția 1,1 (EPSG:4326 se presupune), folosind :kbd:`POINT(1 1)`,"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:130
+msgid ""
+"We ran an sql statement, but not on any table, just on data entered from the"
+" SQL prompt,"
+msgstr "Am rulat o instrucțiune SQL, dar nu pe orice tabelă, doar pe datele introduse din promptul SQL,"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:132
+msgid "The resulting row does not make much sense."
+msgstr "Rândul rezultat nu prea are sens."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:134
+msgid ""
+"The resulting row is in the OGC format called 'Well Known Binary' (WKB). We "
+"will look at this format in detail in the next section."
+msgstr "Rândul rezultat se află în formatul OGC denumit 'Well Known Binary' (WKB). Vom analiza în detaliu acest format în secțiunea următoare."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:137
+msgid ""
+"To get the results back as text, we can do a quick scan through the function"
+" list for something that returns text:"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:144
+msgid ""
+"The query we're looking for now is ``st_astext``. Let's combine it with the "
+"previous query:"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:160
+msgid ""
+"Here, we entered the string :kbd:`POINT(1,1)`, turned it into a point using "
+":kbd:`st_pointfromtext()`, and turned it back into a human-readable form "
+"with :kbd:`st_astext()`, which gave us back our original string."
+msgstr "Aici, am intrat în șirul :kbd:`POINT(1,1)`, transformându-l într-un punct folosind :kbd:`st_pointfromtext()`, și aducându-l înapoi într-o formă ușor de înțeles de către utilizator cu :kbd:`st_astext()`, care returează șirul de caractere inițial."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:165
+msgid ""
+"One last example before we really get into the detail of using PostGIS:"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:171
+msgid ""
+"What did that do? It created a buffer of 1 degree around our point, and "
+"returned the result as text."
+msgstr "Care este rezultatul acestuia? S-a creat un tampon de 1 grad în jurul punctului nostru, și s-a returnat un rezultat sub formă de text."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:175
+msgid "Spatial Reference Systems"
+msgstr "Sistemele de Referință Spațială"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:177
+msgid ""
+"In addition to the PostGIS functions, the extension contains a collection of"
+" spatial reference system (SRS) definitions as defined by the European "
+"Petroleum Survey Group (EPSG). These are used during operations such as "
+"coordinate reference system (CRS) conversions."
+msgstr "În plus față de funcțiile PostGIS, extensia conține o colecție cu definiții ale sistemelor de referință spațială (SRS), așa cum au fost stabilite de către European Petroleum Survey Group (EPSG). Acestea sunt utilizate pentru operațiuni de conversie a sistemelor de coordonate de referință (CRS)."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:182
+msgid ""
+"We can inspect these SRS definitions in our database as they are stored in "
+"normal database tables."
+msgstr "Putem inspecta aceste definiții SRS din baza noastră de date, pe măsură ce acestea sunt stocate în tabelele normale ale bazei de date."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:185
+msgid ""
+"First, let's look at the schema of the table by entering the following "
+"command in the psql prompt:"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:192
+msgid "The result should be this:"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:207
+msgid ""
+"You can use standard SQL queries (as we have learned from our introductory "
+"sections), to view and manipulate this table - though its not a good idea to"
+" update or delete any records unless you know what you are doing."
+msgstr "Puteți utiliza interogări SQL standard (așa cum am învățat din secțiunile introductive), pentru a vizualiza și manipula acest tabel - totuși, actualizarea sau ștergerea înregistrărilor nu reprezintă o idee bună dacă nu știți ce faceți."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:211
+msgid ""
+"One SRID you may be interested in is EPSG:4326 - the geographic / lat lon "
+"reference system using the WGS 84 ellipsoid. Let's take a look at it:"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:232
+msgid ""
+"The :kbd:`srtext` is the projection definition in well known text (you may "
+"recognise this from .prj files in your shapefile collection)."
+msgstr ":kbd:`srtext` reprezintă definiția proiecției în well known text (puteți recunoaște acest lucru din fișierele .prj din colecția dvs. de fișiere shape)."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:236
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:238
+msgid ""
+"You now have PostGIS functions installed in your copy of PostgreSQL. With "
+"this you'll be able to make use of PostGIS' extensive spatial functions."
+msgstr "Acum aveți funcțiile PostGIS instalate în copia dvs. de PostgreSQL. Astfel, veți putea să faceți uz de funcțiile spațiale extinse ale PostGIS."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:242
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_functions.rst:244
+msgid "Next you'll learn how spatial features are represented in a database."
+msgstr "Mai departe, veți învăța cum se reprezintă entitățile spațiale într-o bază de date."
+
+#~ msgid ""
+#~ "Depending on which version of Ubuntu you are using, and which repositories "
+#~ "you have configured, these commands will install PostGIS 1.5, or 2.x. You "
+#~ "can find the version installed by issuing a :kbd:`select "
+#~ "PostGIS_full_version();` query with psql or another tool."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "First Visit `the download page <http://www.postgresql.org/download/>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Then follow `this guide "
+#~ "<http://www.bostongis.com/PrinterFriendly.aspx?content_name=postgis_tut01>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "More information about installing on Windows can be found on the `PostGIS "
+#~ "website <http://postgis.net/windows_downloads>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The `PostGIS website download <http://postgis.net/install/>`_ has "
+#~ "information about installing on other platforms including macOS and on other"
+#~ " linux distributions"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you are using PostGIS 1.5 and a version of PostgreSQL lower than 9.1, you"
+#~ " will need to follow a different set of steps in order to install the "
+#~ "postgis extensions for your database. Please consult the `PostGIS "
+#~ "Documentation "
+#~ "<http://postgis.net/docs/postgis_installation.html#create_new_db>`_ for "
+#~ "instructions on how to do this. There are also some instructions in the "
+#~ "`previous version "
+#~ "<http://manual.linfiniti.com/en/postgis/spatial_functions.html#install-"
+#~ "plpgsql>`_ of this manual."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This is the command we're looking for: :kbd:`st_pointfromtext`.  To page "
+#~ "through the list, use the down arrow, then press :kbd:`q` to quit back to "
+#~ "the psql shell."
+#~ msgstr ""

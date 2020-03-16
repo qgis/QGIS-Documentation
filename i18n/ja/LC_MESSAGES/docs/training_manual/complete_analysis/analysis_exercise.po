@@ -1,0 +1,2151 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# 
+# Translators:
+# Choro <u.ko.kubot@gmail.com>, 2014
+# fairtommy <fairtommy@gmail.com>, 2019
+# fairtommy <fairtommy@gmail.com>, 2017-2018
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-11 14:48+0200\n"
+"PO-Revision-Date: 2019-11-08 06:54+0000\n"
+"Last-Translator: fairtommy <fairtommy@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/qgis/qgis-documentation/language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:8
+msgid "|LS| Supplementary Exercise"
+msgstr "|LS| 補足の実習"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:10
+msgid ""
+"In this lesson, you will be guided through a complete GIS analysis in QGIS."
+msgstr "このレッスンでは、QGISでの完全なGIS解析を通して案内します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:12
+msgid ""
+"Lesson developed by Linfiniti and S Motala (Cape Peninsula University of "
+"Technology)"
+msgstr "LinfinitiとS Motala（ケープ半島工科大学）が開発したレッスン"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:16
+msgid "Problem Statement"
+msgstr "問題の状態"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:18
+msgid ""
+"You are tasked with finding areas in and around the Cape Peninsula that are "
+"a suitable habitat for a rare fynbos plant species. The extent of your area "
+"of investigation in the Cape Peninsula is: south of Melkbosstrand, west of "
+"Strand. Botanists have provided you with the following preferences exhibited"
+" by the species in question:"
+msgstr "あなたはケープ半島とその周辺で、珍しいフィンボスの植物種に適した生息地である領域を見つける任務を課されています。ケープ半島内での調査地域の範囲は次のとおりです。Melkbosstrandの南、ストランドの西。問題の植物種は以下の嗜好を示すことを植物学者が示してくれています："
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:24
+msgid "It grows on east facing slopes."
+msgstr "東向き斜面に生息します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:25
+msgid "It grows on slopes with a gradient between 15% and 60%."
+msgstr "15％と60％の間の勾配の斜面に生息します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:26
+msgid "It grows in areas that have a total annual rainfall of > 1200 mm."
+msgstr "年間総降水量1200ミリメートル超の領域に生息します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:27
+msgid "It will only be found at least 250 m away from any human settlement."
+msgstr "どの集落からも少なくとも250メートル離れたところで発見されます。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:28
+msgid ""
+"The area of vegetation in which it occurs should be at least 6000m2 in area."
+msgstr "それが発生した植生の面積は、面積が少なくとも6000平方メートルである必要があります。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:30
+msgid ""
+"As a volunteer for Cape Nature, you have agreed to search for the plant on "
+"the closest suitable piece of land to your house. Use your GIS skills to "
+"determine where you should go to look."
+msgstr "ケープ自然保護ボランティアとして、あなたは自宅に最も近い適当な土地の一画でその植物を探すことに合意しました。GISのスキルを使用してどこを見に行くべきか決定しましょう。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:35
+msgid "Solution Outline"
+msgstr "ソリューションの概要"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:37
+msgid ""
+"In order to solve this problem, you will have to download data from "
+"https://www.dropbox.com/s/q5evvkizuunrcs0/more_analysis.zip?dl=0 and place "
+"it under :file:`exercise_data/more_analysis` folder. You will use it to find"
+" the candidate area that is closest to your house. If you don't live in Cape"
+" Town (where this problem is based) you can choose any house in the Cape "
+"Town region. The solution will involve:"
+msgstr "この問題を解決するために、 https://www.dropbox.com/s/q5evvkizuunrcs0/more_analysis.zip?dl=0 からデータをダウンロードして :file:`exercise_data/more_analysis` フォルダの下に置く必要があるでしょう。自宅に最も近い候補地域を見つけるために使用します。ケープタウン（この問題の基になる）に住んでいない場合は、ケープタウンの地域のどの家でも選択できます。解決策に含まれるのは："
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:45
+msgid ""
+"analysing the DEM to find the east facing slopes and the slopes with the "
+"correct gradients;"
+msgstr "DEMを分析し、東向き斜面および該当する勾配を有する斜面を見つける。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:47
+msgid ""
+"analysing the rainfall raster to find the areas with the correct amount of "
+"rainfall;"
+msgstr "降雨ラスターを分析し、該当する降雨量の領域を見つける。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:49
+msgid ""
+"analysing the Zoning vector layer to find areas that are away from human "
+"settlement and are of the correct size."
+msgstr "ゾーニングベクターレイヤーを分析し、集落から離れていて該当するサイズである領域を見つける。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:53
+msgid "Setting up the Map"
+msgstr "地図を設定する"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:55
+msgid ""
+"Click on the \"CRS status\" button in the extreme lower right corner of the "
+"screen. Under the :guilabel:`CRS` tab of the screen that appears, you will "
+"see the box :guilabel:`Coordinate reference systems of the world.`"
+msgstr "画面の一番右下にある「CRSステータス」ボタンをクリックします。表示される画面の :guilabel:`CRS` タブの下に :guilabel:`ワールド座標参照系` ボックスが表示されるでしょう。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:58
+msgid ""
+"In this box, navigate to :menuselection:`Projected Coordinate Systems --> "
+"Universal Transverse Mercator (UTM)`."
+msgstr "このボックスで、 :menuselection:`投影座標系 --> ユニバーサル横メルカトル(UTM)` に移動します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:60
+msgid ""
+"Select the entry :guilabel:`WGS 84 / UTM zone 33S` (with the EPSG code "
+"``32733``)."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:62
+msgid ""
+"Click :guilabel:`OK`. The map is now in the ``UTM33S`` coordinate reference "
+"system."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:64
+msgid ""
+"Save the map by clicking on the :guilabel:`Save Project As` toolbar button, "
+"or use the :menuselection:`File --> Save Project As...` menu item."
+msgstr ":guilabel:`プロジェクトに名前を付けて保存` ツールバーボタンをクリックして地図を保存するか、 :menuselection:`ファイル --> プロジェクトに名前を付けて保存...` メニュー項目を使用します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:66
+msgid ""
+"Save the map in a directory called :file:`Rasterprac` that you should create"
+" somewhere on your computer. You will save whatever layers you create in "
+"this directory as well."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:74
+msgid "Loading Data into the Map"
+msgstr "地図へデータを読み込む"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:76
+msgid ""
+"In order to process the data, you will need to load the necessary layers "
+"(street names, zones, rainfall, DEM) into the map canvas."
+msgstr "データを処理するために、地図キャンバスに必要なレイヤー（通りの名前、ゾーン、降雨、DEM）をロードする必要があります。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:80
+msgid "For vectors..."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:82
+msgid ""
+"Click on the |dataSourceManager| :sup:`Open Data Source Manager` button and "
+"enable the |addOgrLayer| :guilabel:`Vector` tab in the dialog that appears, "
+"or use the :menuselection:`Layer --> Add Layer -->` |addOgrLayer| "
+":menuselection:`Add Vector Layer...` menu item."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:86
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:118
+msgid "Ensure that the :guilabel:`File` radio button is selected."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:87
+msgid ""
+"Click on the :guilabel:`...` button to browse for :guilabel:`Vector "
+"dataset(s)`."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:88
+msgid ""
+"In the dialog that appears, open the "
+":file:`exercise_data/more_analysis/streets` directory."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:90
+msgid "Select the file :file:`Street_Names_UTM33S.shp`."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:91
+msgid "Click :guilabel:`Open`."
+msgstr ":guilabel:`開く` をクリックします。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:93
+msgid ""
+"The dialog closes and shows the original dialog, with the file path "
+"specified in the text field next to the :guilabel:`Vector dataset(s)` "
+"button. This allows you to ensure that the correct file is selected. It is "
+"also possible to enter the file path in this field manually, should you wish"
+" to do so."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:98
+msgid ""
+"Click :guilabel:`Add`. The vector layer will load in your map. Its color is "
+"automatically assigned. It will be changed later."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:100
+msgid "Rename the layer to :guilabel:`Streets`."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:102
+msgid ""
+"Right-click on it in the :guilabel:`Layers` panel (by default, the pane "
+"along the left-hand side of the screen)."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:104
+msgid ""
+"Click :guilabel:`Rename` in the dialog that appears and rename it, pressing "
+"the :kbd:`Enter` key when done."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:106
+msgid ""
+"Repeat the vector adding process, but this time select the "
+":file:`Generalised_Zoning_Dissolve_UTM33S.shp` file in the :file:`Zoning` "
+"directory."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:109
+msgid "Rename it to ``Zoning``."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:112
+msgid "For rasters..."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:114
+msgid ""
+"Click on the |dataSourceManager| :sup:`Open Data Source Manager` button and "
+"enable the |addRasterLayer| :guilabel:`Raster` tab in the dialog that "
+"appears, or use the :menuselection:`Layer --> Add Layer -->` "
+"|addRasterLayer| :menuselection:`Add Raster Layer...` menu item."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:119
+msgid ""
+"Navigate to the appropriate file, select it, and click :guilabel:`Open`."
+msgstr "該当するファイルに移動し、それを選択し、 :guilabel:`開く` をクリックしてください。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:120
+msgid ""
+"Do this for each of the two raster files. The files you want are "
+":file:`DEM/reproject/DEM` and :file:`Rainfall/reprojected/rainfall.tif`."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:123
+msgid ""
+"Rename the rainfall raster to ``Rainfall`` (with an initial capital). "
+"Initially when you load them, the images will be gray rectangles. Don't "
+"worry, this will be changed later."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:126
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:267
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:294
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:463
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:487
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:530
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:716
+msgid "Save the map."
+msgstr "地図を保存します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:128
+msgid ""
+"In order to properly see what's going on, the symbology for the layers needs"
+" to be changed."
+msgstr "何が起こっているのかを適切に確認するために、レイヤーのためのシンボルを変更する必要があります。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:132
+msgid "Changing the symbology of vector layers"
+msgstr "ベクターレイヤーのシンボル体系を変更する"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:134
+msgid ""
+"In the :guilabel:`Layers` panel, right-click on the :guilabel:`Streets` "
+"layer."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:135
+msgid "Select :guilabel:`Properties` from the menu that appears."
+msgstr "表示されているメニューで :guilabel:`プロパティ` を選択します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:136
+msgid "Switch to the :guilabel:`Symbology` tab in the dialog that appears."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:137
+msgid ""
+"Click on the button labelled :guilabel:`Change`, with a square showing the "
+"current color of the :guilabel:`Streets` layer."
+msgstr ":guilabel:`街路` レイヤーの現在の色を示す四角が付いた :guilabel:`変更` とラベルのついたボタンをクリックしてください。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:139
+msgid "Select a new color in the dialog that appears."
+msgstr "表示されるダイアログで新しい色を選択します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:140
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:283
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:419
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:450
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:527
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:546
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:581
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:640
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:671
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:714
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:744
+msgid "Click :guilabel:`OK`."
+msgstr ":guilabel:`OK` をクリックします。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:141
+msgid ""
+"Click :guilabel:`OK` again in the :guilabel:`Layer Properties` dialog. This "
+"will change the color of the :guilabel:`Streets` layer."
+msgstr ":guilabel:`レイヤープロパティ` ダイアログの :guilabel:`OK` をもう一度クリックします。これは :guilabel:`街路` レイヤーの色を変更します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:143
+msgid ""
+"Follow a similar process for the :guilabel:`Zoning` layer and choose an "
+"appropriate color for it."
+msgstr ":guilabel:`Zoning` レイヤーについて同様のプロセスに従って、そのための適切な色を選択してください。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:149
+msgid "Changing the symbology of raster layers"
+msgstr "ラスターレイヤーのシンボル体系を変更する"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:151
+msgid "Raster layer symbology is somewhat different."
+msgstr "ラスターレイヤーシンボル体系はいくらか違います。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:153
+msgid ""
+"Open the :guilabel:`Properties` dialog for the :guilabel:`Rainfall` raster."
+msgstr ":guilabel:`Rainfall` ラスターの :guilabel:`プロパティ` ダイアログを開きます。 "
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:154
+msgid ""
+"Switch to the :guilabel:`Symbology` tab. You'll notice that this dialog is "
+"very different from the version used for vector layers."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:156
+msgid "Ensure that the button :guilabel:`Use standard deviation` is selected."
+msgstr ":guilabel:`標準偏差を使用する` が選択されていることを確認します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:157
+msgid ""
+"Change the value in the associated box to ``2.00`` (it should be set to "
+"``0.00`` by default)."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:159
+msgid ""
+"Under the heading :guilabel:`Contrast enhancement`, change the value of the "
+":guilabel:`Current` dropdown list to :guilabel:`Stretch to MinMax`."
+msgstr ":guilabel:`コントラスト強調` 見出しの下に、 :guilabel:`Current` ドロップダウンリストの値を :guilabel:`最大最小に引き延ばす` に変更します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:161
+msgid ""
+"Click :guilabel:`OK`. The \"Rainfall\" raster, if visible, should change "
+"colors, allowing you to see different brightness values for each pixel."
+msgstr ":guilabel:`OK` をクリックします。「降水量」ラスターは、見える場合は、画素毎に異なる輝度値が見えるように、色を変更しなければなりません。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:163
+msgid ""
+"Repeat this process for the DEM, but set the standard deviations used for "
+"stretching to ``4.00``."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:167
+msgid "Changing the layer order"
+msgstr "レイヤー順序を変更する"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:169
+msgid ""
+"In the :guilabel:`Layers` panel, click and drag layers up and down to change"
+" the order they appear in on the map."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:171
+msgid ""
+"Newer versions of QGIS may have a :guilabel:`Control rendering order` "
+"checkbox beneath the :guilabel:`Layers` panel. Ensure that it is checked."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:174
+msgid ""
+"Now that all the data is loaded and properly visible, the analysis can "
+"begin. It is best if the clipping operation is done first. This is so that "
+"no processing power is wasted on computing values in areas that aren't going"
+" to be used anyway."
+msgstr "これですべてのデータがロードされ正常に表示されますので、分析を開始できます。クリップ操作が最初に行われるならば、最高です。使用するつもりのない領域の値を計算することに処理能力を無駄使いしないようにするためです。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:180
+msgid "Find the Correct Districts"
+msgstr "正しい地区の検索"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:182
+msgid ""
+"Load the vector layer :file:`admin_boundaries/Western_Cape_UTM33S.shp` into "
+"your map."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:184
+msgid "Rename it to :guilabel:`Districts`."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:185
+msgid ""
+"Right-click on the :guilabel:`Districts` layer in the :guilabel:`Layers` "
+"panel."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:186
+msgid ""
+"In the menu that appears,  select the :guilabel:`Query...` menu item. The "
+":guilabel:`Query Builder` dialog appears."
+msgstr "表示されるメニューで、 :guilabel:`クエリ...` メニュー項目を選択します。 :guilabel:`クエリビルダー` ダイアログが表示されます。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:189
+msgid ""
+"You will now build a query to select only the following list of districts:"
+msgstr "今、地区の次のリストだけを選択するためのクエリを作成します："
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:191
+msgid "``Bellville``"
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:192
+msgid "``Cape``"
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:193
+msgid "``Goodwood``"
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:194
+msgid "``Kuils River``"
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:195
+msgid "``Mitchells Plain``"
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:196
+msgid "``Simons Town`` and"
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:197
+msgid "``Wynberg``."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:199
+msgid ""
+"In the :guilabel:`Fields` list, double-click on the :guilabel:`NAME_2` "
+"field. It appears in the :guilabel:`SQL where clause` text field below."
+msgstr ":guilabel:`フィールド` リスト中で :guilabel:`NAME_2` フィールドをダブルクリックします。以下の :guilabel:`SQLのwhere句` のテキストフィールドに表示されます。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:201
+msgid ""
+"Click the :guilabel:`=` button; an ``=`` sign is added to the SQL query."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:202
+msgid ""
+"Click the :guilabel:`All` button below the (currently empty) "
+":guilabel:`Values` list. After a short delay, this will populate the "
+":guilabel:`Values` list with the values of the selected field "
+"(:guilabel:`NAME_2`)."
+msgstr "（現在空） :guilabel:`値` リストの下の :guilabel:`すべて` ボタンをクリックします。短い遅延の後、これは選択したフィールドの値（:guilabel:`NAME_2` ）を持つ :guilabel:`値` リストを投入します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:206
+msgid ""
+"Double-click the value :guilabel:`Bellville` in the :guilabel:`Values` list."
+" As before, this will be added to the SQL query."
+msgstr ":guilabel:`値` リストの中で :guilabel:`Bellville` をダブルクリックします。前述のように、これはSQLクエリに追加されます。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:209
+msgid ""
+"In order to select more than one district, you'll need to use the "
+":guilabel:`OR` boolean operator."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:212
+msgid "Click the :guilabel:`OR` button and it will be added to the SQL query."
+msgstr ":guilabel:`OR` ボタンをクリックすると、それがSQLクエリに追加されます。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:213
+msgid ""
+"Using a process similar to the above, add the following to the existing SQL "
+"query:"
+msgstr "上記と同様のプロセスを使用して、既存のSQLクエリに次の行を追加します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:220
+msgid ""
+"Add another :guilabel:`OR` operator, then work your way through the list of "
+"districts above in a similar fashion."
+msgstr "別の :guilabel:`OR` 演算子を追加し、その後、同様の方法で、上記の地区のリストを通して作業を続けます。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:223
+msgid "The final query should be"
+msgstr "最終的なクエリはこうであるべきです"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:231
+msgid ""
+"Click :guilabel:`OK`. The districts shown in your map are now limited to "
+"those in the list above."
+msgstr ":guilabel:`OK` をクリックします。地図に表示される地区は現在、上記のリストのものに限定されています。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:235
+msgid "Clip the Rasters"
+msgstr "ラスターのクリップ"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:237
+msgid ""
+"Now that you have an area of interest, you can clip the rasters to this "
+"area."
+msgstr "今、興味の領域を持っている、このエリアへのラスターをクリップできます。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:239
+msgid ""
+"Ensure that the only layers that are visible are the :guilabel:`DEM`, "
+":guilabel:`Rainfall` and :guilabel:`Districts` layers."
+msgstr "見えるレイヤーは :guilabel:`DEM` 、:guilabel:`Rainfall` 、:guilabel:`Districts` レイヤーだけであることを確認してください。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:241
+msgid ":guilabel:`Districts` must be on top so that they are visible."
+msgstr ":guilabel:`Districts` は見えるように最上になければなりません。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:242
+msgid ""
+"Open the clipping dialog by selecting the menu item :menuselection:`Raster "
+"--> Extraction --> Clipper`."
+msgstr ":menuselection:`ラスター --> 抽出 --> Clipper` メニュー項目を選択することにより、クリッピングダイアログを開きます。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:244
+msgid ""
+"In the :guilabel:`Input file (raster)` dropdown list, select the "
+":guilabel:`DEM` layer."
+msgstr " :guilabel:`入力ファイル（ラスター）レイヤー` ドロップダウンリストで :guilabel:`DEM` レイヤーを選択します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:246
+msgid ""
+"Specify an output location in the :guilabel:`Output file` text field by "
+"clicking the :guilabel:`Select...` button."
+msgstr ":guilabel:`選択...` ボタンをクリックして、 :guilabel:`出力ファイル` テキストフィールドに出力先を指定します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:248
+msgid "Navigate to your :file:`Rasterprac` directory."
+msgstr ":file:`Rasterprac` ディレクトリに移動します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:249
+msgid "Enter a file name."
+msgstr "ファイル名を入力します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:250
+msgid "Save the file. Leave the :guilabel:`No data value` checkbox unchecked."
+msgstr "ファイルを保存します。:guilabel:`データ値なし` チェックボックスはチェックなしのままにしておきます。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:251
+msgid ""
+"Use the :guilabel:`Extent` clipping mode by ensuring the correct radio "
+"button is selected."
+msgstr "正しいラジオボタンが選択されていることを確保することによって :guilabel:`範囲` クリップモードを使用してください。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:253
+msgid ""
+"Click and drag an area in the canvas, so that the area which includes the "
+"districts is selected."
+msgstr "地区を含む領域が選択されるように、キャンバス内のエリアをクリックしてドラッグ。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:255
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:312
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:334
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:459
+msgid "Check the :guilabel:`Open output file after running algorithm` box."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:256
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:313
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:335
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:380
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:460
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:610
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:627
+msgid "Click :guilabel:`Run`."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:257
+msgid ""
+"After the clipping operation is completed, DO NOT CLOSE the "
+":guilabel:`Clipper` dialog. (Doing so would cause you to lose the clipping "
+"area that you have already defined.)"
+msgstr "クリップ操作が完了した後、:guilabel:`クリップ` ダイアログを閉じないでください。（そうすると、すでに定義されているクリップ領域を失う原因となります。）"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:260
+msgid ""
+"Select the :guilabel:`Rainfall` raster in the :guilabel:`Input file "
+"(raster)` dropdown list and choose a different output file name."
+msgstr ":guilabel:`入力ファイル（ラスター）` ドロップダウンリストで :guilabel:`Rainfall` ラスターを選択し、別の出力ファイル名を選択します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:262
+msgid ""
+"Do not change any other options. Do not alter the existing clipping area "
+"which you drew previously. Leave everything the same and click "
+":guilabel:`Run`."
+msgstr "他のオプションを変更しないでください。以前に描いた既存のクリップ領域を変更しないでください。すべてのものを同じままに残し、:guilabel:`実行` をクリックしてください。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:265
+msgid ""
+"After the second clipping operation has completed, you may close the "
+":guilabel:`Clipper` dialog."
+msgstr "第二のクリップ操作が完了したら、:guilabel:`クリップ` ダイアログを閉じることができます。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:270
+msgid "Clean up the map"
+msgstr "地図をクリーンアップします。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:272
+msgid ""
+"Remove the original :guilabel:`Rainfall` and :guilabel:`DEM` layers from the"
+" :guilabel:`Layers` panel:"
+msgstr ":guilabel:`レイヤー` パネルから元の :guilabel:`降雨` と :guilabel:`DEM` レイヤーを削除します："
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:274
+msgid "Right-click on these layers and select :guilabel:`Remove`."
+msgstr "これらのレイヤー上で右クリックし、 :guilabel:`削除` を選択します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:276
+msgid ""
+"This will not remove the data from your storage device, it will merely take "
+"it out of your map."
+msgstr "これは、記憶装置からデータを削除しません。地図から外すだけです。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:279
+msgid "Deactivate the labels on the :guilabel:`Streets` layer:"
+msgstr ":guilabel:`街路` レイヤーのラベルを無効にします。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:281
+msgid "Click the :guilabel:`Labeling` button."
+msgstr ":guilabel:`ラベル付け` ボタンをクリックします。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:282
+msgid "Uncheck the :guilabel:`Label this layer with` box."
+msgstr ":guilabel:`このレイヤーにラベル付け` ボックスのチェックをオフにします。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:285
+msgid "Show all the :guilabel:`Streets` again:"
+msgstr "再度 :guilabel:`街路` をすべて表示します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:287
+msgid "Right-click on the layer in the :guilabel:`Layers` panel."
+msgstr ":guilabel:`レイヤー` パネルでレイヤーを右クリックします。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:288
+msgid "Select :guilabel:`Query`."
+msgstr ":guilabel:`クエリ` を選択します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:289
+msgid ""
+"In the :guilabel:`Query` dialog that appears, click the :guilabel:`Clear` "
+"button, then click :guilabel:`OK`."
+msgstr "表示された :guilabel:`クエリ` ダイアログで、 :guilabel:`クリア` ボタンをクリックし、 :guilabel:`OK` をクリックします。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:291
+msgid "Wait while the data is loaded. All the streets will now be visible."
+msgstr "データがロードされるまで待ちます。すべての街は今、表示されます。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:293
+msgid ""
+"Change the raster symbology as before (see "
+":ref:`changing_raster_symbology`)."
+msgstr "以前のようにラスターシンボルを変更します（ *:ref:`changing_raster_symbology` 参照）。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:295
+msgid ""
+"You can now hide the vector layers by unchecking the box next to them in the"
+" :guilabel:`Layers` panel. This will make the map render faster and will "
+"save you some time."
+msgstr "今 :guilabel:`レイヤー` パネル中のベクターレイヤーを、横にあるボックスをオフにして非表示できます 。これにより、地図のレンダリングが速くなりますし、時間の節約になります。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:299
+msgid ""
+"In order to create the hillshade, you will need to use an algorithm that was"
+" written for this purpose."
+msgstr "陰影起伏を作成するには、この目的のために書かれたアルゴリズムを使用する必要があります。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:304
+msgid "Create the hillshade"
+msgstr "陰影図の作成"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:306
+msgid ""
+"In the :guilabel:`Layers` panel, ensure that the :guilabel:`DEM` is the "
+"active layer (i.e., it is highlighted by having been clicked on)."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:308
+msgid ""
+"Click on the :menuselection:`Raster --> Analysis --> Hillshade` menu item to"
+" open the :guilabel:`Hillshade` dialog."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:310
+msgid ""
+"Specify an appropriate location for the output layer and call it "
+":guilabel:`hillshade`."
+msgstr "出力レイヤーのための適切な場所を指定し、それを :guilabel:`hillshade` と呼びます。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:314
+msgid "Wait for it to finish processing."
+msgstr "処理が完了するのを待ちます。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:316
+msgid ""
+"The new :guilabel:`hillshade` layer has appeared in your :guilabel:`Layers "
+"list`."
+msgstr "新しい :guilabel:`hillshade` レイヤーが :guilabel:`レイヤーリスト` に現れています。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:319
+msgid ""
+"Right-click on the :guilabel:`hillshade` layer in your :guilabel:`Layers "
+"list` and bring up the :guilabel:`Properties` dialog."
+msgstr ":guilabel:`レイヤーリスト` 中で :guilabel:`hillshade` レイヤーを右クリックし、:guilabel:`プロパティ` ダイアログを呼び出します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:321
+msgid ""
+"Click on the :guilabel:`Transparency` tab and set the transparency slider to"
+" ``80%``."
+msgstr ":guilabel:`透明度` タブをクリックして透明度スライダを ``80%`` に設定します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:323
+msgid "Click :guilabel:`Run` on the dialog."
+msgstr "ダイアログで :guilabel:`実行` をクリックします。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:324
+msgid ""
+"Note the effect when the transparent hillshade is superimposed over the "
+"clipped DEM."
+msgstr "透明な陰影起伏がクリップされたDEM上に重ね合わされたときに効果に注意されたいです。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:328
+msgid "Slope"
+msgstr "傾斜"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:330
+msgid "Click on the menu item :menuselection:`Raster --> Terrain analysis`."
+msgstr ":menuselection:`ラスター --> 地形分析` メニュー項目をクリックします。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:331
+msgid ""
+"Select the :guilabel:`Slope` analysis type, with the clipped DEM as the "
+"input layer."
+msgstr "クリップされたDEMを入力レイヤーとして :guilabel:`傾斜` 分析タイプを選択します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:333
+msgid "Specify an appropriate file name and location for output purposes."
+msgstr "出力の目的のために適切なファイル名と場所を指定します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:337
+msgid ""
+"The slope image has been calculated and added to the map. However, as usual "
+"it is just a gray rectangle. To properly see what's going on, change the "
+"symbology as follows."
+msgstr "勾配画像が計算され、地図に追加されました。しかし、いつものように単なる灰色の四角形です。何が起こっているかを適切に確認するには、次のようにシンボルを変更します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:341
+msgid ""
+"Open the layer :guilabel:`Properties` dialog (as usual, via the right-click "
+"menu of the layer)."
+msgstr "（いつものようにレイヤーの右クリックメニューを経由して） レイヤー :guilabel:`Properties` ダイアログを開きます。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:343
+msgid "Click on the :guilabel:`Symbology` tab."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:344
+msgid ""
+"Where it says :guilabel:`Grayscale` (in the :guilabel:`Color map` dropdown "
+"menu), change it to :guilabel:`Pseudocolor`."
+msgstr "( :guilabel:`カラーマップ` ドロップダウンメニューで) :guilabel:`グレースケール` となっているところを :guilabel:`疑似カラー` に変更します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:346
+msgid ""
+"Ensure that the :guilabel:`Use standard deviation` radio button is selected."
+msgstr ":guilabel:`標準偏差を使用` ラジオボタンが選択されていることを確認します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:349
+msgid "Aspect"
+msgstr "傾斜方位"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:351
+msgid ""
+"Use the same approach as for calculating the slope, but select "
+":guilabel:`Aspect` in the initial dialog box."
+msgstr "傾斜を計算するのと同じアプローチを使用しますが、最初のダイアログボックスで :guilabel:`傾斜方向` を選択します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:354
+msgid "Remember to save the map periodically."
+msgstr "定期的に地図を保存することを忘れないで下さい。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:357
+msgid "Reclassifying rasters"
+msgstr "ラスターを再分類する"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:359
+msgid "Click the menu item :menuselection:`Raster --> Raster calculator`."
+msgstr "メニュー項目 :menuselection:`ラスター --> ラスター計算機` をクリックしてください。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:360
+msgid ""
+"Specify your :file:`Rasterprac` directory as the location for the output "
+"layer."
+msgstr "出力レイヤーのための場所として :file:`Rasterprac` ディレクトリを指定します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:362
+msgid ""
+"Ensure that the :guilabel:`Open output file after running algorithm` box is "
+"selected."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:364
+msgid ""
+"In the :guilabel:`Raster bands` list on the left, you will see all the "
+"raster layers in your :guilabel:`Layers` panel. If your Slope layer is "
+"called :guilabel:`slope`, it will be listed as :guilabel:`slope@1`."
+msgstr "左の :guilabel:`ラスタバンド` リストに、:guilabel:`レイヤ` パネル中のすべてのラスタレイヤが表示されます。傾斜レイヤが :guilabel:`傾斜` という名であれば、それは :guilabel:`傾斜@1` 、と表示されます。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:368
+msgid ""
+"The slope needs to be between ``15`` and ``60`` degrees. Everything less "
+"than ``15`` or greater than ``60`` must therefore be excluded."
+msgstr "傾きが ``15`` と ``60`` 度の間にあることが必要です。したがって ``15`` 未満 ``60`` 超はすべて排除しなければなりません。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:371
+msgid ""
+"Using the list items and buttons in the interface, build the following "
+"expression:"
+msgstr "インターフェイスのリスト項目とボタンを使用して以下の式を作成します："
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:378
+msgid ""
+"Set the :guilabel:`Output layer` field to an appropriate location and file "
+"name."
+msgstr "適切な場所とファイル名で :guilabel:`出力レイヤー` フィールドを設定してください。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:382
+msgid ""
+"Now find the correct aspect (east-facing: between ``45`` and ``135`` "
+"degrees) using the same approach."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:385
+msgid "Build the following expression:"
+msgstr "次の式を組み立てます:"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:391
+msgid ""
+"Find the correct rainfall (greater than ``1200mm``) the same way. Build the "
+"following expression:"
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:398
+msgid ""
+"Having reclassified all the rasters, you will now see them displayed as gray"
+" rectangles in your map (assuming that they have been added to the map "
+"correctly). To properly display raster data with only two classes (``1`` and"
+" ``0``, meaning true or false), you will need to change their symbology."
+msgstr "すべてのラスターを再分類した今、それらは（それらは正しく地図に追加されていると仮定して）自分の地図に灰色の長方形として表示が表示されます。（ ``1`` と ``0`` は真または偽を意味する）2つのクラスだけでラスターデータを正しく表示するには、それらのシンボルを変更する必要があります。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:404
+msgid "Setting the style for the reclassified layers"
+msgstr "再分類されたレイヤーにスタイルを設定する"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:406
+msgid ""
+"Open the :guilabel:`Symbology` tab in the layer's :guilabel:`Properties` "
+"dialog as usual."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:408
+msgid ""
+"Under the heading :guilabel:`Load min / max values from band`, select the "
+":guilabel:`Actual (slower)` radio button."
+msgstr ":guilabel:`バンドから最小/最大値ロード` 見出しの下の :guilabel:`実際（遅い）` ラジオボタンを選択します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:410
+msgid "Click the :guilabel:`Load` button."
+msgstr ":guilabel:`読み込み` ボタンをクリックします:"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:412
+msgid ""
+"The :guilabel:`Custom min / max values` fields should now populate with "
+"``0`` and ``1``, respectively. (If they do not, then there was a mistake "
+"with your reclassification of the data, and you will need to go over that "
+"part again.)"
+msgstr "今 :guilabel:`カスタム最小/最大値` フィールドにはれぞれ ``0`` と ``1`` が取り込まれているはずです。（そうでない場合、データの再分類で間違いがあったので、その部分を再びやり直す必要があります。）"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:417
+msgid ""
+"Under the heading :guilabel:`Contrast enhancement`, set the "
+":guilabel:`Current` dropdown list to :guilabel:`Stretch To MinMax`."
+msgstr ":guilabel:`コントラスト強調` 見出しの下で :guilabel:`Current` ドロップダウンリストを :guilabel:`MinMaxへ引き延ばしする` に設定します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:420
+msgid ""
+"Do this for all three reclassified rasters, and remember to save your work!"
+msgstr "3つのすべてのためにこれを行うには、ラスターを再分類し、作業を保存することを忘れないでください！ "
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:422
+msgid ""
+"The only criterion that remains is that the area must be ``250m`` away from "
+"urban areas. We will satisfy this requirement by ensuring that the areas we "
+"compute are ``250m`` or more from the edge of a rural area. Hence, we need "
+"to find all rural areas first."
+msgstr "残る基準は、その領域が都市地域から ``250m`` 離れてなければならないことだけです。この要件をは、計算する領域が農村地域の端から ``250m`` 以上であることを確実にすることで満たします。したがってまず、すべての農村地域を見つける必要があります。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:428
+msgid "Finding rural areas"
+msgstr "農村地域を検索する"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:430
+msgid "Hide all layers in the :guilabel:`Layers` panel."
+msgstr ":guilabel:`レイヤー` パネルですべてのレイヤーを非表示にします。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:431
+msgid "Unhide the :guilabel:`Zoning` vector layer."
+msgstr ":guilabel:`Zoning` を再表示します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:432
+msgid "Right-click on it and bring up the :guilabel:`Query` dialog."
+msgstr "その上で右クリックして :guilabel:`クエリ` ダイアログを起動します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:433
+msgid "Build the following query:"
+msgstr "次のクエリをビルドします:"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:439
+msgid ""
+"See the earlier instructions for building the :guilabel:`Streets` query if "
+"you get stuck."
+msgstr "行き詰まったら :guilabel:`Streets` クエリを構築するための以前の説明書を参照してください。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:441
+msgid "When you're done, close the :guilabel:`Query` dialog."
+msgstr "それを実行したら :guilabel:`クエリ` ダイアログを閉じます。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:443
+msgid ""
+"You should see a collection of polygons from the :guilabel:`Zoning` layer. "
+"You will need to save these to a new layer file."
+msgstr ":guilabel:`Zoning` レイヤーからポリゴンのコレクションが表示されるはずです。新しいレイヤーファイルにこれらを保存する必要があります。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:446
+msgid ""
+"On the right-click menu for :guilabel:`Zoning`, select :guilabel:`Save "
+"as...`."
+msgstr ":guilabel:`Zoning` の右クリックメニューで :guilabel:`名前を付けて保存...` を選択します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:448
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:458
+msgid "Save your layer under the :guilabel:`Zoning` directory."
+msgstr ":guilabel:`Zoning` ディレクトリの下にレイヤーを保存します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:449
+msgid "Name the output file :file:`rural.shp`."
+msgstr "出力ファイルの名前を :file:`rural.shp` とします。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:451
+msgid "Add the layer to your map."
+msgstr "レイヤーを地図に追加します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:452
+msgid ""
+"Click the menu item :menuselection:`Vector --> Geoprocessing Tools --> "
+"Dissolve`."
+msgstr ":menuselection:`ベクター --> ジオプロセッシングツール --> ディゾルブ` をクリックします。 "
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:454
+msgid ""
+"Select the :guilabel:`rural` layer as your input vector layer, while leaving"
+" the :guilabel:`Use only selected features` box unchecked."
+msgstr ":guilabel:`選択地物のみ使用` ボックスのチェックはないままで、入力ベクターレイヤーとして :guilabel:`rural` レイヤーを選択します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:456
+msgid ""
+"Leave empty the :guilabel:`Dissolve field(s)` option to combine all selected"
+" features in a single one."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:461
+msgid "Close the :guilabel:`Dissolve` dialog."
+msgstr ":guilabel:`ディゾルブ` ダイアログを閉じます。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:462
+msgid "Remove the :guilabel:`rural` and :guilabel:`Zoning` layers."
+msgstr ":guilabel:`rural` と :guilabel:`Zoning` レイヤーを外します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:465
+msgid ""
+"Now you need to exclude the areas that are within ``250m`` from the edge of "
+"the rural areas. Do this by creating a negative buffer, as explained below."
+msgstr "ここで農村地域の端から ``250m`` 内にある領域を除外する必要があります。これは以下に説明するように、負のバッファを作成することによって行います。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:469
+msgid "Creating a negative buffer"
+msgstr "負のバッファを作成する"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:471
+msgid ""
+"Click the menu item :menuselection:`Vector --> Geoprocessing Tools --> "
+"Buffer(s)`."
+msgstr "メニュー項目 :menuselection:`ベクター --> バッファ --> ジオプロセッシングツール` をクリックしてください。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:473
+msgid ""
+"In the dialog that appears, select the :guilabel:`rural_dissolve` layer as "
+"your input vector layer (:guilabel:`Use only selected features` should not "
+"be checked)."
+msgstr "表示されるダイアログで、入力ベクターレイヤーとして :guilabel:`rural_dissolve` レイヤーを選択します（ :guilabel:`選択された地物のみ使用` はチェックすべきではありません）。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:476
+msgid ""
+"Select the :guilabel:`Buffer distance` button and enter the value ``-250`` "
+"into the associated field; the negative value means that the buffer must be "
+"an internal buffer."
+msgstr ":guilabel:`バッファ距離` ボタンを選択し、関連するフィールドに値 ``-250`` を入力してください。負の値は、バッファが内部バッファでなければならないことを意味しています。 "
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:479
+msgid "Check the :guilabel:`Dissolve buffer results` box."
+msgstr ":guilabel:`バッファ結果をディゾルブする` ボックスにチェックします。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:480
+msgid ""
+"Set the output file to the same directory as the other rural vector files."
+msgstr "他の農村のベクターファイルと同じディレクトリに出力ファイルを設定します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:481
+msgid "Name the output file :file:`rural_buffer.shp`."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:482
+msgid "Click :guilabel:`Save`."
+msgstr ":guilabel:`保存` をクリックします。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:483
+msgid "Click :guilabel:`OK` and wait for the processing to complete."
+msgstr ":guilabel:`OK` をクリックして処理が完了するのを待ちます。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:484
+msgid "Select :guilabel:`Yes` on the dialog that appears."
+msgstr "現れたダイアログで :guilabel:`はい` を選択します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:485
+msgid "Close the :guilabel:`Buffer` dialog."
+msgstr ":guilabel:`バッファ` ダイアログを閉じます。 "
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:486
+msgid "Remove the :guilabel:`rural_dissolve` layer."
+msgstr ":guilabel:`rural_dissolve` レイヤーを削除します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:489
+msgid ""
+"In order to incorporate the rural zones into the same analysis with the "
+"three existing rasters, it will need to be rasterized as well. But in order "
+"for the rasters to be compatible for analysis, they will need to be the same"
+" size. Therefore, before you can rasterize, you'll need to clip the vector "
+"to the same area as the three rasters. A vector can only be clipped by "
+"another vector, so you will first need to create a bounding box polygon the "
+"same size as the rasters."
+msgstr "3つの既存のラスターと同じ分析に農村地帯を組み込むためには、それは同様にラスター化する必要があります。しかし、ラスターは、分析のために互換性があるようにするために、同じサイズにする必要があります。そのため、ラスター化する前に次の3つのラスターと同じエリアにベクターをクリップする必要があります。ベクターは別のベクターによってクリップできるのみなので、最初にラスターと同じサイズのバウンディングボックスポリゴンを作成する必要があります。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:498
+msgid "Creating a bounding box vector"
+msgstr "バウンディングボックスベクターを作成する"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:500
+msgid ""
+"Click on the menu item :menuselection:`Layer --> New --> New Shapefile "
+"Layer...`."
+msgstr "メニュー項目 :menuselection:`レイヤー --> 新規 --> 新規シェープファイルレイヤー...` をクリックします。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:501
+msgid ""
+"Under the :guilabel:`Type` heading, select the :guilabel:`Polygon` button."
+msgstr ":guilabel:`タイプ` 見出しの下で :guilabel:`ポリゴン` ボタンを選択します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:502
+msgid ""
+"Click :guilabel:`Specify CRS` and set the coordinate reference system "
+":guilabel:`WGS 84 / UTM zone 33S : EPSG:32733`."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:504
+msgid "Click OK."
+msgstr "OKをクリックします。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:505
+msgid ""
+"Click :guilabel:`OK` on the :guilabel:`New Vector Layer` dialog as well."
+msgstr ":guilabel:`新しいベクターレイヤー` ダイアログでも :guilabel:`OK` をクリックします。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:506
+msgid "Save the vector in the :guilabel:`Zoning` directory."
+msgstr ":guilabel:`Zoning` ディレクトリにベクターを保存します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:507
+msgid "Name the output file :file:`bbox.shp`."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:508
+msgid ""
+"Hide all layers except the new :guilabel:`bbox` layer and one of the "
+"reclassified rasters."
+msgstr "新しい :guilabel:`bbox` レイヤーと再分類ラスターのレイヤーを除くすべてのレイヤーを非表示にします。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:510
+msgid ""
+"Ensure that the :guilabel:`bbox` layer is highlighted in the "
+":guilabel:`Layers` panel."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:512
+msgid ""
+"Navigate to the :menuselection:`View > Toolbars` menu item and ensure that "
+":guilabel:`Digitizing` is selected. You should then see a toolbar icon with "
+"a pencil or koki on it. This is the :guilabel:`Toggle editing` button."
+msgstr ":menuselection:`表示>ツールバー` メニュー項目に移動し、 :guilabel:`デジタル化` が選択されていることを確認します。その後、その上に鉛筆やコーキーと、ツールバーのアイコンが表示されるはずです。 :guilabel:`編集を切り替え` ボタンです。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:515
+msgid ""
+"Click the :guilabel:`Toggle editing` button to enter *edit mode*. This "
+"allows you to edit a vector layer."
+msgstr ":guilabel:`編集を切り替え` ボタンをクリックして *編集モード* に入ってください。これにより、ベクターレイヤーが編集できるようになります。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:517
+msgid ""
+"Click the :guilabel:`Add feature` button, which should be nearby the "
+":guilabel:`Toggle editing` button. It may be hidden behind a double arrow "
+"button; if so, click the double arrows to show the :guilabel:`Digitizing` "
+"toolbar's hidden buttons."
+msgstr ":guilabel:`地物を追加` ボタンをクリックします、:guilabel:`編集を切り替え` ボタンの近くにあるはずです。これは、二重の矢印ボタンの後ろに隠れてすることができます。 :guilabel:`デジタイズ` ツールバーの非表示のボタンもしそうなら、表示するために二重矢印をクリックしてください。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:521
+msgid ""
+"With the :guilabel:`Add feature` tool activated, left-click on the corners "
+"of the raster. You may need to zoom in with the mouse wheel to ensure that "
+"it is accurate. To pan across the map in this mode, click and drag in the "
+"map with the middle mouse button or mouse wheel."
+msgstr ":guilabel:`地物を追加` ツールをアクティブにして、ラスターの角を左クリックしてください。それが正確であることを保証するために、マウスのホイールでズームインする必要があるかもしれません。このモードでは、地図をパンするには、マウスの中央ボタンかマウスホイールをクリックしたまま地図内でドラッグします。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:525
+msgid "For the fourth and final point, right-click to finalize the shape."
+msgstr "第四及び最終点に関しては、形状を確定するために右クリックします。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:526
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:713
+msgid "Enter any arbitrary number for the shape ID."
+msgstr "シェープIDの任意の番号を入力します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:528
+msgid "Click the :guilabel:`Save edits` button."
+msgstr ":guilabel:`編集を保存` ボタンをクリックします。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:529
+msgid ""
+"Click the :guilabel:`Toggle editing` button to stop your editing session."
+msgstr ":guilabel:`編集を切り替え` ボタンをクリックして、編集セッションを停止してください。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:532
+msgid ""
+"Now that you have a bounding box, you can use it to clip the rural buffer "
+"layer."
+msgstr "これでバウンディングボックスができましたので、農村地域のバッファレイヤーをクリップするためにそれを使用できます。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:536
+msgid "Clipping a vector layer"
+msgstr "ベクターレイヤーをクリップする"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:538
+msgid ""
+"Ensure that only the :guilabel:`bbox` and :guilabel:`rural_buffer` layers "
+"are visible, with the latter on top."
+msgstr ":guilabel:`bbox` と :guilabel:`rural_buffer` レイヤーだけが、後者を上にして、表示されていることを確認してください。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:540
+msgid ""
+"Click the menu item :menuselection:`Vector > Geoprocessing Tools > Clip`."
+msgstr ":menuselection:`ベクター>ジオプロセッシングツール>クリップ` メニュー項目をクリックしてください。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:541
+msgid ""
+"In the dialog that appears, set the input vector layer to "
+":guilabel:`rural_buffer` and the clip layer to :guilabel:`bbox`, with both "
+":guilabel:`Use only selected features` boxes unchecked."
+msgstr "表示されたダイアログで、入力ベクターレイヤーを :guilabel:`rural_buffer` に、クリップレイヤーを :guilabel:`bbox` に、両方とも :guilabel:`選択地物のみ使用` ボックスをチェックしないで、設定します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:544
+msgid "Put the output file under the :guilabel:`Zoning` directory."
+msgstr ":guilabel:`Zoning` ディレクトリの下に、出力ファイルを置きます。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:545
+msgid "Name the output file :guilabel:`rural_clipped`."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:547
+msgid "When prompted to add the layer to the TOC, click :guilabel:`Yes`."
+msgstr "TOCにレイヤーを追加するように求められたら、 :guilabel:`はい` をクリックしてください。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:548
+msgid "Close the dialog."
+msgstr "ダイアログを閉じます。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:549
+msgid "Compare the three vectors and see the results for yourself."
+msgstr "3つのベクターを比較し、自分のために結果を参照してください。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:550
+msgid ""
+"Remove the :guilabel:`bbox` and :guilabel:`rural_buffer` layers, then save "
+"your map."
+msgstr ":guilabel:`bbox` と :guilabel:`rural_buffer` レイヤーを削除し、地図を保存します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:553
+msgid "Now it's ready to be rasterized."
+msgstr "これでラスター化する準備ができました。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:556
+msgid "Rasterizing a vector layer"
+msgstr "ベクターレイヤーをラスター化する"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:558
+msgid ""
+"You'll need to specify a pixel size for a new raster that you create, so "
+"first you'll need to know the size of one of your existing rasters."
+msgstr "作成した新しいラスターのピクセルサイズを指定する必要がありますので、まず既存のラスターの1つの大きさを知っておく必要があります。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:561
+msgid ""
+"Open the :guilabel:`Properties` dialog of any of the three existing rasters."
+msgstr "3つの既存のラスターのいずれかの :guilabel:`プロパティ` ダイアログを開きます。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:562
+msgid "Switch to the :guilabel:`Metadata` tab."
+msgstr ":guilabel:`メタデータ` タブに切り替えます。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:563
+msgid ""
+"Make a note of the :guilabel:`X` and :guilabel:`Y` values under the heading "
+":guilabel:`Dimensions` in the Metadata table."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:565
+msgid "Close the :guilabel:`Properties` dialog."
+msgstr ":guilabel:`プロパティ` ダイアログを閉じます。 "
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:566
+msgid ""
+"Click on the :menuselection:`Raster --> Conversion --> Rasterize` menu item."
+" You may receive a warning about a dataset being unsupported. Click it away "
+"and ignore it."
+msgstr ":menuselection:`ラスター --> 変換 --> ラスター化` メニュー項目 をクリックしてください。データセットがサポートされていないことについて警告を受けることがあります。それをクリックして消し、無視します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:569
+msgid "Select :guilabel:`rural_clipped` as your input layer."
+msgstr "入力レイヤーとして :guilabel:`rural_clipped` を選択します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:570
+msgid "Set an output file location inside the :guilabel:`Zoning` directory."
+msgstr ":guilabel:`Zoning` ディレクトリ内の出力ファイルの場所を設定します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:571
+msgid "Name the output file :file:`rural_raster.tif`."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:572
+msgid ""
+"Check the :guilabel:`New size` box and enter the :guilabel:`X` and "
+":guilabel:`Y` values you made a note of earlier."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:574
+msgid "Check the :guilabel:`Load into canvas` box."
+msgstr ":guilabel:`キャンバスにロードします` ボタンをチェックします。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:575
+msgid ""
+"Click the pencil icon next to the text field which shows the command that "
+"will be run. At the end of the existing text, add a space and then the text "
+"``-burn 1``. This tells the Rasterize function to \"burn\" the existing "
+"vector into the new raster and give the areas covered by the vector the new "
+"value of ``1`` (as opposed to the rest of the image, which will "
+"automatically be ``0``)."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:582
+msgid "The new raster should show up in your map once it has been computed."
+msgstr "それが計算された後、新たなラスターが地図に表示されるはずです。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:583
+msgid ""
+"The new raster will look like a grey rectangle – you may change the display "
+"style as you did for the reclassified rasters."
+msgstr "新しいラスターはグレーの長方形のようになります - 再分類ラスターのために行ったように、表示スタイルを変更できます。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:585
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:647
+msgid "Save your map."
+msgstr "地図を保存します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:587
+msgid ""
+"Now that you have all four criteria each in a separate raster, you need to "
+"combine them to see which areas satisfy all the criteria. To do so, the "
+"rasters will be multiplied with each other. When this happens, all "
+"overlapping pixels with a value of ``1`` will retain the value of ``1``, but"
+" if a pixel has the value of ``0`` in any of the four rasters, then it will "
+"be ``0`` in the result. In this way, the result will contain only the "
+"overlapping areas."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:595
+msgid "Combining rasters"
+msgstr "ラスターを組み合わせる"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:597
+msgid "Click the :menuselection:`Raster --> Raster calculator` menu item."
+msgstr ":menuselection:`ラスター --> ラスター計算機...` メニュー項目をクリックします。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:598
+msgid ""
+"Build the following expression (with the appropriate names for your layers, "
+"depending on what you called them):"
+msgstr "（それらを呼ばれるものに応じて、そのレイヤーのための適切な名前で）次の式を構築します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:606
+msgid "Set the output location to the :file:`Rasterprac` directory."
+msgstr "出力場所を :file:`Rasterprac` に設定します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:607
+msgid "Name the output raster :file:`cross_product.tif`."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:608
+msgid ""
+"Ensure that the :guilabel:`Open output file after running algorithm` box is "
+"checked."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:611
+msgid ""
+"Change the symbology of the new raster in the same way as you set the style "
+"for the other reclassified rasters.  The new raster now properly displays "
+"the areas where all the criteria are satisfied."
+msgstr "他の再分類ラスターのスタイルを設定するのと同じ方法で、新しいラスターのシンボルを変更します。新しいラスターが正しく、すべての基準が満たされている領域を表示します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:615
+msgid ""
+"To get the final result, you need to select the areas that are greater than "
+"``6000m^2``. However, computing these areas accurately is only possible for "
+"a vector layer, so you will need to vectorize the raster."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:620
+msgid "Vectorizing the raster"
+msgstr "ラスターをベクター化する"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:622
+msgid ""
+"Click on the menu item :menuselection:`Raster --> Conversion --> "
+"Polygonize`."
+msgstr "メニュー項目 :menuselection:`ラスター --> 変換 --> ポリゴン化` をクリックしてください。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:623
+msgid "Select the :file:`cross_product.tif` raster."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:624
+msgid "Set the output location to :file:`Rasterprac`."
+msgstr "出力場所を :file:`Rasterprac` に設定します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:625
+msgid "Name the file :file:`candidate_areas.shp`."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:626
+msgid ""
+"Ensure that :guilabel:`Open output file after running algorithm` is checked."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:628
+msgid "Close the dialog when processing is complete."
+msgstr "処理が完了したらダイアログを閉じます。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:630
+msgid ""
+"All areas of the raster have been vectorized, so you need to select only the"
+" areas that have a value of ``1``."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:633
+msgid "Open the :guilabel:`Query` dialog for the new vector."
+msgstr "新しいベクターのため :guilabel:`クエリ` ダイアログを開きます。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:634
+msgid "Build this query:"
+msgstr "クエリのビルド:"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:641
+msgid ""
+"Create a new vector file from the results by saving the "
+":guilabel:`candidate_areas` vector after the query is complete (and only the"
+" areas with a value of ``1`` are visible). Use the :guilabel:`Save as...` "
+"function in the layer's right-click menu for this."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:645
+msgid "Save the file in the :file:`Rasterprac` directory."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:646
+msgid "Name the file :guilabel:`candidate_areas_only.shp`."
+msgstr ":guilabel:`候補領域のみ.shp` と名前を付けます。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:650
+msgid "Calculating the area for each polygon"
+msgstr "各ポリゴンの面積を計算する"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:652
+msgid "Open the new vector layer's right-click menu."
+msgstr "新規ベクターレイヤーの右クリックメニューを表示します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:653
+msgid "Select :guilabel:`Open attribute table`."
+msgstr ":guilabel:`属性テーブルを開く` を選択します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:654
+msgid ""
+"Click the :guilabel:`Toggle editing mode` button along the bottom of the "
+"table, or press :kbd:`Ctrl+E`."
+msgstr "テーブルの下に沿った :guilabel:`編集モード切り替え` ボタンをクリックするか、:kbd:`Ctrlキー+E` を押します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:656
+msgid ""
+"Click the :guilabel:`Open field calculator` button along the bottom of the "
+"table, or press :kbd:`Ctrl+I`."
+msgstr "テーブル底部に沿った :guilabel:`フィールド計算機を開く` ボタンをクリックするか、:kbd:`Ctrlキー+I` を押します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:658
+msgid ""
+"Under the :guilabel:`New field` heading in the dialog that appears, enter "
+"the field name ``area``. The output field type should be an integer, and the"
+" field width should be ``10``."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:661
+msgid "In :guilabel:`Field calculator expression`, type:"
+msgstr ":guilabel:`フィールド演算式` に、タイプします:"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:667
+msgid ""
+"This means that the field calculator will calculate the area of each polygon"
+" in the vector layer and will then populate a new integer column (called "
+":guilabel:`area`) with the computed value."
+msgstr "計算された値で、このフィールドの計算は、ベクターレイヤーの各ポリゴンの面積を計算し、次いで（ :guilabel:`面積` と呼ばれる）新しい整数列を投入することを意味します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:672
+msgid ""
+"Do the same thing for another new field called :guilabel:`id`. In "
+":guilabel:`Field calculator expression`, type:"
+msgstr ":guilabel:`id` と呼ばれる別の新しいフィールドに同じことを行います。:guilabel:`フィールド演算式` 中にキーボード入力します："
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:679
+msgid ""
+"This ensures that each polygon has a unique ID for identification purposes."
+msgstr "これは、各ポリゴンは識別目的のためのユニークなIDを持っていることを保証します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:680
+msgid ""
+"Click :guilabel:`Toggle editing mode` again, and save your edits if prompted"
+" to do so."
+msgstr "再び :guilabel:`編集モード切り替え` をクリックし、編集内容を保存するようプロンプトが表示されたら、そうします。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:684
+msgid "Selecting areas of a given size"
+msgstr "与えられたサイズの面積を選択する"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:686
+msgid "Now that the areas are known:"
+msgstr "今この面積が知られています："
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:688
+msgid ""
+"Build a query (as usual) to select only the polygons larger than "
+"``6000m^2``.  The query is:"
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:695
+msgid "Save the selection as a new vector layer called :file:`solution.shp`."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:697
+msgid ""
+"You now have your solution areas, from which you will pick the one nearest "
+"to your house."
+msgstr "今はもう解領域が出ているので、家に最も近いものを選択します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:701
+msgid "Digitize your house"
+msgstr "あなたの家のデジタイズ"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:703
+msgid ""
+"Create a new vector layer as before, but this time, select the "
+":guilabel:`Type` value as being a :guilabel:`Point`."
+msgstr "以前のように新しいベクターレイヤーを作成しますが、今回は :guilabel:`type` 値が :guilabel:`Point` となるよう選択します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:705
+msgid "Ensure that it is in the correct CRS!"
+msgstr "それが正しいCRSであることを確認します！"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:706
+msgid "Name the new layer :file:`house.shp`."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:707
+msgid "Finish creating the new layer."
+msgstr "新規レイヤー作成を終了します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:708
+msgid "Enter edit mode (while the new layer is selected)."
+msgstr "（新規レイヤーが選択された状態で）編集モードにします。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:709
+msgid ""
+"Click the point where your house or other current place of residence is, "
+"using the streets as a guide. You might have to open other layers to help "
+"you find your house. If you don't live anywhere nearby, just click somewhere"
+" among the streets where a house could conceivably be."
+msgstr "街路をガイドとして使用しながら、家または居住の他の現在の場所がある点をクリックします。家を見つけるのを助けるために他のレイヤーを開く必要があります。近くのどこにも住んでいない場合は、単に家が考えられるかもしれない街の中のどこかをクリックします。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:715
+msgid "Save your edits and exit edit mode."
+msgstr "編集内容を保存し、編集モードを終了します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:718
+msgid ""
+"You will need to find the centroids (\"centers of mass\") for the solution "
+"area polygons in order to decide which is closest to your house."
+msgstr "どれが家に最も近いかを決定するため、ソリューションエリアのポリゴンの重心（「質量中心」）を見つける必要があります。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:722
+msgid "Calculate polygon centroids"
+msgstr "ポリゴンの中心点の算出"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:724
+msgid ""
+"Click on the :menuselection:`Vector --> Geometry Tools --> Centroids` menu "
+"item."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:726
+msgid "Specify the input layer as :guilabel:`solution.shp`."
+msgstr "入力レイヤーを :guilabel:`solution.shp` と指定します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:727
+msgid "Provide the output location as :file:`Rasterprac`."
+msgstr "出力場所を :file:`Rasterprac` と指定します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:728
+msgid "Call the destination file :file:`solution_centroids.shp`."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:729
+msgid ""
+"Check |checkbox| :guilabel:`Open output file after running algorithm` to add"
+" the result to the TOC (:guilabel:`Layers` panel)."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:731
+msgid "Click :guilabel:`Run` and close the dialog."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:732
+msgid ""
+"Drag the new layer to the top of the layer order so that you can see it."
+msgstr "新しいレイヤーを、見えるようレイヤーの順序の一番上にドラッグします。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:735
+msgid "Calculate which centroid is closest to your house"
+msgstr "あなたの家に最も近い重心の計算"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:737
+msgid ""
+"Click on the menu item :menuselection:`Vector --> Analysis Tools --> "
+"Distance matrix`."
+msgstr "メニュー項目 :menuselection:`ベクター --> 分析ツール --> 距離行列` をクリックします。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:739
+msgid ""
+"The input layer should be your house, and the target layer "
+":guilabel:`solution_centroids`. Both of these should use the :guilabel:`id` "
+"field as their unique ID field."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:742
+msgid "The output matrix type should be :guilabel:`linear`."
+msgstr "出力マトリクス型は :guilabel:`linear` になるはずです。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:743
+msgid "Set an appropriate output location and name."
+msgstr "適切な出力場所と名前を設定します。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:745
+msgid ""
+"Open the file in a text editor (or import it into a spreadsheet). Note which"
+" target ID is associated with the shortest :guilabel:`Distance`. There may "
+"be more than one at the same distance."
+msgstr "テキストエディタでファイルを開きます(またはスプレッドシートにインポート)。最短 :guilabel:`距離` に関連付けられたターゲットIDに注意してください。同距離に複数あることもあります。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:748
+msgid ""
+"Build a query in QGIS to select only the solution areas closest to your "
+"house (selecting it using the :guilabel:`id` field)."
+msgstr ""
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:751
+msgid "This is the final answer to the research question."
+msgstr "これは、研究の質問への最終的な答えです。"
+
+#: ../../source/docs/training_manual/complete_analysis/analysis_exercise.rst:753
+msgid ""
+"For your submission, include the semi-transparent hillshade layer over an "
+"appealing raster of your choice (such as the :guilabel:`DEM` or the "
+":guilabel:`slope` raster, for example). Also include the polygon of the "
+"closest solution area(s), as well as your house. Follow all the best "
+"practices for cartography in creating your output map."
+msgstr "提出のために、お好みの魅力的なラスター (例えば :guilabel:`DEM` とか :guilabel:`傾斜` ラスター、など)の上に半透明の陰影起伏のレイヤーを、また、最も近いソリューション領域(複数可)のポリゴンだけでなく、家を含めます。 出力図を作成する際は地図作成のためのすべてのベストプラクティスに従ってください。"
+
+#~ msgid ""
+#~ "Select the entry :guilabel:`WGS 84 / UTM zone 33S` (with the EPSG code "
+#~ ":kbd:`32733`)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click :guilabel:`OK`. The map is now in the :kbd:`UTM33S` coordinate "
+#~ "reference system."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Save the map in a directory called :kbd:`Rasterprac` that you should create "
+#~ "somewhere on your computer. You will save whatever layers you create in this"
+#~ " directory as well."
+#~ msgstr ""
+
+#~ msgid "For vectors ..."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click on the :guilabel:`Add Vector Layer` button, or use the "
+#~ ":menuselection:`Layer --> Add Vector Layer...` menu item."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the dialog that appears, ensure that the :guilabel:`File` radio button is"
+#~ " selected."
+#~ msgstr ""
+
+#~ msgid "Click on the :guilabel:`Browse` button."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the dialog that appears, open the "
+#~ ":guilabel:`exercise_data/more_analysis/streets` directory."
+#~ msgstr ""
+
+#~ msgid "Select the file :guilabel:`Street_Names_UTM33S.shp`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The dialog closes and shows the original dialog, with the file path "
+#~ "specified in the text field next to the :guilabel:`Browse` button. This "
+#~ "allows you to ensure that the correct file is selected. It is also possible "
+#~ "to enter the file path in this field manually, should you wish to do so."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click :guilabel:`Open`. The vector layer will load in your map. Its color is"
+#~ " automatically assigned. It will be changed later."
+#~ msgstr ""
+
+#~ msgid "Rename the layer to :kbd:`Streets`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Right-click on it in the :guilabel:`Layers list` (by default, the pane along"
+#~ " the left-hand side of the screen)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click :guilabel:`Rename` in the dialog that appears and rename it, pressing "
+#~ "the :guilabel:`Enter` key when done."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Repeat the vector adding process, but this time select the "
+#~ ":guilabel:`Generalised_Zoning_Dissolve_UTM33S.shp` file in the "
+#~ ":guilabel:`Zoning` directory."
+#~ msgstr ""
+
+#~ msgid "Rename it to :kbd:`Zoning`."
+#~ msgstr ""
+
+#~ msgid "For rasters ..."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click on the :guilabel:`Add Raster Layer` button, or use the "
+#~ ":menuselection:`Layer --> Add Raster Layer...` menu item."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Do this for each of the two raster files. The files you want are "
+#~ ":guilabel:`DEM/reproject/DEM` and "
+#~ ":guilabel:`Rainfall/reprojected/rainfall.tif`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Rename the rainfall raster to :kbd:`Rainfall` (with an initial capital). "
+#~ "Initially when you load them, the images will be gray rectangles. Don't "
+#~ "worry, this will be changed later."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the :guilabel:`Layers list`, right-click on the :guilabel:`Streets` "
+#~ "layer."
+#~ msgstr ""
+
+#~ msgid "Switch to the :guilabel:`Style` tab in the dialog that appears."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Switch to the :guilabel:`Style` tab. You'll notice that this style dialog is"
+#~ " very different from the version used for vector layers."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Change the value in the associated box to :kbd:`2.00` (it should be set to "
+#~ ":kbd:`0.00` by default)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Repeat this process for the DEM, but set the standard deviations used for "
+#~ "stretching to :kbd:`4.00`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the :guilabel:`Layers list`, click and drag layers up and down to change "
+#~ "the order they appear in on the map."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Newer versions of QGIS may have a :guilabel:`Control rendering order` "
+#~ "checkbox beneath the :guilabel:`Layers list`. Ensure that it is checked."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Load the vector layer :kbd:`admin_boundaries/Western_Cape_UTM33S.shp` into "
+#~ "your map."
+#~ msgstr ""
+
+#~ msgid "Rename it to :kbd:`Districts`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Right-click on the :guilabel:`Districts` layer in the :guilabel:`Layers "
+#~ "list`."
+#~ msgstr ""
+
+#~ msgid ":kbd:`Bellville`,"
+#~ msgstr ""
+
+#~ msgid ":kbd:`Cape`,"
+#~ msgstr ""
+
+#~ msgid ":kbd:`Goodwood`,"
+#~ msgstr ""
+
+#~ msgid ":kbd:`Kuils River`,"
+#~ msgstr ""
+
+#~ msgid ":kbd:`Mitchells Plain`,"
+#~ msgstr ""
+
+#~ msgid ":kbd:`Simons Town`, and"
+#~ msgstr ""
+
+#~ msgid ":kbd:`Wynberg`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click the :guilabel:`=` button; an :kbd:`=` sign is added to the SQL query."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In order to select more than one district, you'll need to use the :kbd:`OR` "
+#~ "boolean operator."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Add another :kbd:`OR` operator, then work your way through the list of "
+#~ "districts above in a similar fashion."
+#~ msgstr ""
+
+#~ msgid "Navigate to your :kbd:`Rasterprac` directory."
+#~ msgstr ""
+
+#~ msgid "Check the :guilabel:`Load into canvas when finished` box."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Do not change any other options. Do not alter the existing clipping area "
+#~ "which you drew previously. Leave everything the same and click "
+#~ ":guilabel:`OK`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Remove the original :guilabel:`Rainfall` and :guilabel:`DEM` layers from the"
+#~ " :guilabel:`Layers list`:"
+#~ msgstr ""
+
+#~ msgid "Right-click on the layer in the :guilabel:`Layers list`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Change the raster symbology as before (see *Changing the symbology of raster"
+#~ " layers*)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can now hide the vector layers by unchecking the box next to them in the"
+#~ " :guilabel:`Layers list`. This will make the map render faster and will save"
+#~ " you some time."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In order to create the hillshade, you will need to use a plugin that was "
+#~ "written for this purpose."
+#~ msgstr ""
+
+#~ msgid "Activating the :guilabel:`Raster Terrain Analysis` plugin"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This plugin is included by default in QGIS 1.8. However, it may not be "
+#~ "immediately visible. To check if it is accessible on your system:"
+#~ msgstr ""
+
+#~ msgid "Click on the menu item :menuselection:`Plugins --> Manage Plugins...`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Ensure that the box next to :guilabel:`Raster Terrain Analysis plugin` is "
+#~ "selected."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You will now have access to this plugin via the :menuselection:`Raster --> "
+#~ "Terrain analysis` menu item."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Remember that plugins may sometimes depend on certain Python modules being "
+#~ "installed on your system.  Should a plugin refuse to work while complaining "
+#~ "of missing dependencies, please ask your tutor or lecturer for assistance."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the :guilabel:`Layers list`, ensure that the :guilabel:`DEM` is the "
+#~ "active layer (i.e., it is highlighted by having been clicked on)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click on the :menuselection:`Raster --> Terrain analysis --> Hillshade` menu"
+#~ " item to open the :guilabel:`Hillshade` dialog."
+#~ msgstr ""
+
+#~ msgid "Check the :guilabel:`Add result to project` box."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click on the :guilabel:`Transparency` tab and set the transparency slider to"
+#~ " :kbd:`80%`."
+#~ msgstr ""
+
+#~ msgid "Click :guilabel:`OK` on the dialog."
+#~ msgstr ""
+
+#~ msgid "Click on the :guilabel:`Style` tab."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Specify your :kbd:`Rasterprac` directory as the location for the output "
+#~ "layer."
+#~ msgstr ""
+
+#~ msgid "Ensure that the :guilabel:`Add result to project` box is selected."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the :guilabel:`Raster bands` list on the left, you will see all the "
+#~ "raster layers in your :guilabel:`Layers list`. If your Slope layer is called"
+#~ " :guilabel:`slope`, it will be listed as :guilabel:`slope@1`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The slope needs to be between :kbd:`15` and :kbd:`60` degrees. Everything "
+#~ "less than :kbd:`15` or greater than :kbd:`60` must therefore be excluded."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Now find the correct aspect (east-facing: between :kbd:`45` and :kbd:`135` "
+#~ "degrees) using the same approach."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Find the correct rainfall (greater than :kbd:`1200mm`) the same way. Build "
+#~ "the following expression:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Having reclassified all the rasters, you will now see them displayed as gray"
+#~ " rectangles in your map (assuming that they have been added to the map "
+#~ "correctly). To properly display raster data with only two classes (:kbd:`1` "
+#~ "and :kbd:`0`, meaning true or false), you will need to change their "
+#~ "symbology."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Open the :guilabel:`Style` tab in the layer's :guilabel:`Properties` dialog "
+#~ "as usual."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The :guilabel:`Custom min / max values` fields should now populate with "
+#~ ":kbd:`0` and :kbd:`1`, respectively. (If they do not, then there was a "
+#~ "mistake with your reclassification of the data, and you will need to go over"
+#~ " that part again.)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The only criterion that remains is that the area must be :kbd:`250m` away "
+#~ "from urban areas. We will satisfy this requirement by ensuring that the "
+#~ "areas we compute are :kbd:`250m` or more from the edge of a rural area. "
+#~ "Hence, we need to find all rural areas first."
+#~ msgstr ""
+
+#~ msgid "Hide all layers in the :guilabel:`Layers list`."
+#~ msgstr ""
+
+#~ msgid "Name the output file :kbd:`rural.shp`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Under :guilabel:`Dissolve field`, select :guilabel:`--- Dissolve all ---`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click :guilabel:`OK`. A dialog will appear asking whether you want to add "
+#~ "the new layer to the TOC (\"Table of Contents\", referring to the "
+#~ ":guilabel:`Layers list`)."
+#~ msgstr ""
+
+#~ msgid "Click :guilabel:`Yes`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Now you need to exclude the areas that are within :kbd:`250m` from the edge "
+#~ "of the rural areas. Do this by creating a negative buffer, as explained "
+#~ "below."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Select the :guilabel:`Buffer distance` button and enter the value "
+#~ ":kbd:`-250` into the associated field; the negative value means that the "
+#~ "buffer must be an internal buffer."
+#~ msgstr ""
+
+#~ msgid "Name the output file :kbd:`rural_buffer.shp`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click :guilabel:`Specify CRS` and set the coordinate reference system "
+#~ ":kbd:`WGS 84 / UTM zone 33S : EPSG:32733`."
+#~ msgstr ""
+
+#~ msgid "Name the output file :kbd:`bbox.shp`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Ensure that the :guilabel:`bbox` layer is highlighted in the "
+#~ ":guilabel:`Layers list`."
+#~ msgstr ""
+
+#~ msgid "Name the output file :kbd:`rural_clipped`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Make a note of the :kbd:`X` and :kbd:`Y` values under the heading "
+#~ ":guilabel:`Dimensions` in the Metadata table."
+#~ msgstr ""
+
+#~ msgid "Name the output file :kbd:`rural_raster.tif`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Check the :guilabel:`New size` box and enter the :kbd:`X` and :kbd:`Y` "
+#~ "values you made a note of earlier."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click the pencil icon next to the text field which shows the command that "
+#~ "will be run. At the end of the existing text, add a space and then the text "
+#~ ":kbd:`-burn 1`. This tells the Rasterize function to \"burn\" the existing "
+#~ "vector into the new raster and give the areas covered by the vector the new "
+#~ "value of :kbd:`1` (as opposed to the rest of the image, which will "
+#~ "automatically be :kbd:`0`)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Now that you have all four criteria each in a separate raster, you need to "
+#~ "combine them to see which areas satisfy all the criteria. To do so, the "
+#~ "rasters will be multiplied with each other. When this happens, all "
+#~ "overlapping pixels with a value of :kbd:`1` will retain the value of "
+#~ ":kbd:`1`, but if a pixel has the value of :kbd:`0` in any of the four "
+#~ "rasters, then it will be :kbd:`0` in the result. In this way, the result "
+#~ "will contain only the overlapping areas."
+#~ msgstr ""
+
+#~ msgid "Set the output location to the :kbd:`Rasterprac` directory."
+#~ msgstr ""
+
+#~ msgid "Name the output raster :kbd:`cross_product.tif`."
+#~ msgstr ""
+
+#~ msgid "Ensure that the :guilabel:`Add result to project` box is checked."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To get the final result, you need to select the areas that are greater than "
+#~ ":kbd:`6000m^2`. However, computing these areas accurately is only possible "
+#~ "for a vector layer, so you will need to vectorize the raster."
+#~ msgstr ""
+
+#~ msgid "Select the :guilabel:`cross_product` raster."
+#~ msgstr ""
+
+#~ msgid "Set the output location to :kbd:`Rasterprac`."
+#~ msgstr ""
+
+#~ msgid "Name the file :kbd:`candidate_areas.shp`."
+#~ msgstr ""
+
+#~ msgid "Ensure that :guilabel:`Load into canvas when finished` is checked."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "All areas of the raster have been vectorized, so you need to select only the"
+#~ " areas that have a value of :kbd:`1`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Create a new vector file from the results by saving the "
+#~ ":guilabel:`candidate_areas` vector after the query is complete (and only the"
+#~ " areas with a value of :kbd:`1` are visible). Use the :guilabel:`Save as...`"
+#~ " function in the layer's right-click menu for this."
+#~ msgstr ""
+
+#~ msgid "Save the file in the :kbd:`Rasterprac` directory."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Under the :guilabel:`New field` heading in the dialog that appears, enter "
+#~ "the field name :kbd:`area`. The output field type should be an integer, and "
+#~ "the field width should be :kbd:`10`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Build a query (as usual) to select only the polygons larger than "
+#~ ":kbd:`6000m^2`.  The query is:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Save the selection as a new vector layer called :guilabel:`solution.shp`."
+#~ msgstr ""
+
+#~ msgid "Name the new layer :kbd:`house.shp`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click on the :menuselection:`Vector --> Geometry Tools --> Polygon "
+#~ "centroids` menu item."
+#~ msgstr ""
+
+#~ msgid "Provide the output location as :kbd:`Rasterprac`."
+#~ msgstr ""
+
+#~ msgid "Call the destination file :kbd:`solution_centroids.shp`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click :guilabel:`OK` and add the result to the TOC (:guilabel:`Layers "
+#~ "list`), then close the dialog."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The input layer should be your house, and the target layer "
+#~ ":guilabel:`solution_centroids`. Both of these should use the :kbd:`id` field"
+#~ " as their unique ID field."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Build a query in QGIS to select only the solution areas closest to your "
+#~ "house (selecting it using the :kbd:`id` field)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Make a note of the :`guilabel:`X` and :guilabel:`Y` values under the heading"
+#~ " :guilabel:`Dimensions` in the Metadata table."
+#~ msgstr ""

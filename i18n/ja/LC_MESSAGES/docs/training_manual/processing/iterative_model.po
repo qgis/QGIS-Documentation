@@ -1,0 +1,101 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# 
+# Translators:
+# fairtommy <fairtommy@gmail.com>, 2018
+# fairtommy <fairtommy@gmail.com>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-28 10:31+0100\n"
+"PO-Revision-Date: 2018-11-30 03:04+0000\n"
+"Last-Translator: fairtommy <fairtommy@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/qgis/qgis-documentation/language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:6
+msgid "More iterative execution of algorithms"
+msgstr "アルゴリズムの反復実行（続）"
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:8
+msgid ""
+"This lesson shows how to combine the iterative execution of algorithms with "
+"the modeler to get more automation."
+msgstr "このレッスンでは、より一層の自動化をするために、アルゴリズムの反復実行をモデラーと組み合わせる方法を示します。"
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:11
+msgid ""
+"The iterative execution of algorithms is available not just for built-in "
+"algorithms, but also for the algorithms that you can create yourself, such "
+"as models. We are going to see how to combine a model and the iterative "
+"execution of algorithms, so we can obtain more complex results with ease."
+msgstr "アルゴリズムの反復実行は、内蔵されたアルゴリズムに対してのみでなく、モデルなど、自作できるアルゴリズムに対しても使用可能です。より複雑な結果を簡単に得られるように、モデルとアルゴリズムの反復実行を組み合わせる方法を見ていきます。"
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:14
+msgid ""
+"The data the we are going to use for this lesson is the same one that we "
+"already used for the last one. In this case, instead of just clipping the "
+"DEM with each watershed polygon, we will add some extra steps and calculate "
+"a hypsometric curve for each of them, to study how elevation is distributed "
+"within the watershed."
+msgstr "このレッスンのために使用しようとしているデータは、すでに直前に使用したのと同じものです。この場合は、各分水界ポリゴンでDEMをクリッピングするだけでなく、いくつかの余分なステップを追加し、各々についてそれぞれの面積高度曲線を計算し、高度が流域内にどう分布するかを考察します。"
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:16
+msgid ""
+"Since we have a workflow that involves several steps (clipping + computing "
+"the hypsometric curve), we should go to the modeler and create the "
+"corresponding model for that workflow."
+msgstr "いくつかのステップ（面積高度曲線を計算+クリッピング）を必要とするワークフローを持っているので、モデラーに移動し、そのワークフローの対応するモデルを作成する必要があります。"
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:18
+msgid ""
+"You can find the model already created in the data folder for this lesson, "
+"but it would be good if you first try to create it yourself. The clipped "
+"layer is not a final result in this case, since we are just interested in "
+"the curves, so this model will not generated any layers, but just a table "
+"with the curve data."
+msgstr "既にこのレッスンのためのデータフォルダ内に作成したモデルを見つけることができますが、最初は自分で作成しようとすると良いでしょう。興味があるのは曲線にだけなので、この場合はクリップされたレイヤーは最終的な結果ではありません。だからこのモデルは、レイヤーは何も作成せず、曲線データを有するテーブルを作成するだけです。"
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:20
+msgid "The model should look like this:"
+msgstr "モデルは次のようになります。"
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:24
+msgid ""
+"Add the model to you models folder, so it is available in the toolbox, and "
+"now execute it."
+msgstr "モデルフォルダにモデルを追加し、それはツールボックスで提供され、そして今それを実行します。"
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:28
+msgid ""
+"Select the DEM and watersheds basins, and do not forget to toggle the button"
+" that indicates that the algorithm has to be run iteratively."
+msgstr "DEMや流域の流域を選択し、アルゴリズムが反復的に実行する必要があることを示すボタンをトグルすることを忘れないでください。"
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:30
+msgid ""
+"The algorithm will be run several times, and the corresponding tables will "
+"be created and open in your QGIS project."
+msgstr "このアルゴリズムは複数回実行され、対応するテーブルが作成されてお手元のQGISプロジェクトで開くでしょう。"
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:34
+msgid ""
+"We can make this example more complex by extending the model and computing "
+"some slope statistics. Add the *Slope, aspect, curvature* algorithm to the "
+"model, and then the *Raster statistics* algorithm, which should use the "
+"slope output as its only input."
+msgstr "この例をより複雑にして、モデルを拡張し、斜面の統計をいくつか計算できます。 *勾配、向き、曲率* アルゴリズムをモデルに追加し、それから *ラスター統計* アルゴリズムを追加します、その唯一の入力として傾斜出力を使用すべき。"
+
+#: ../../source/docs/training_manual/processing/iterative_model.rst:38
+msgid ""
+"If you now run the model, apart from the tables you will get a set of pages "
+"with statistics. These pages will be available in the results dialog."
+msgstr "今モデルを実行すると、テーブルから離れて、統計を持つページのセットを取得します。これらのページは、結果ダイアログで利用できるようになります。"

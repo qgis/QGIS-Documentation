@@ -1,0 +1,865 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# 
+# Translators:
+# Dick Groskamp, 2014-2017,2019-2020
+# Milo van der Linden <milo@dogodigi.net>, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-14 13:14+0100\n"
+"PO-Revision-Date: 2020-02-15 12:39+0000\n"
+"Last-Translator: Dick Groskamp\n"
+"Language-Team: Dutch (http://www.transifex.com/qgis/qgis-documentation/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:10
+msgid "Configuring external applications"
+msgstr "Configureren externe toepassingen "
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:17
+msgid ""
+"The processing framework can be extended using additional applications. "
+"Currently, SAGA, GRASS, R, TauDEM and LAStools are supported (and GDAL is "
+"shipped with QGIS). Algorithms that rely on external applications are "
+"managed by their own algorithm providers. Additional providers can be found "
+"as separate plugins, and installed using the QGIS Plugin Manager."
+msgstr "Het framework Processing kan worden uitgebreid met behulp van aanvullende toepassingen. Momenteel worden SAGA, GRASS, R, TauDEM en LAStools ondersteund (en GDAL wordt meegeleverd met QGIS). Algoritmen die afhankelijk zijn van externe toepassingen worden beheerd door hun eigen provider van algoritmen. Aanvullende providers zijn te vinden als afzonderlijke plug-ins, en worden geïnstalleerd met behulp van Plug-ins beheren en installeren van QGIS."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:25
+msgid ""
+"This section will show you how to configure the Processing framework to "
+"include these additional applications, and it will explain some particular "
+"features of the algorithms based on them. Once you have correctly configured"
+" the system, you will be able to execute external algorithms from any "
+"component like the toolbox or the graphical modeler, just like you do with "
+"any other algorithm."
+msgstr "Dit gedeelte zal u laten zien hoe het framework Processing te configureren zodat het deze aanvullende toepassingen opneemt, en zal het enkele bijzondere mogelijkheden uitleggen van de algoritmen die op hen gebaseerd zijn. Als u het systeem eenmaal juist hebt geconfigureerd, zult u in staat zijn externe algoritmen uit te voeren vanuit elke component, zoals de Toolbox of Grafische modellen bouwen, net zoals u doet met elk ander algoritme."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:32
+msgid ""
+"By default, algorithms that rely on an external application not shipped with"
+" QGIS are not enabled. You can enable them in the Processing settings dialog"
+" if they are installed on your system."
+msgstr "Standaard zijn algoritmen, die afhankelijk zijn van een externe toepassing en niet worden meegeleverd met QGIS, niet ingeschakeld. U kunt ze inschakelen in het dialoogvenster Opties als zij al zijn geïnstalleerd op uw systeem."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:39
+msgid "A note for Windows users"
+msgstr "Een opmerking voor gebruikers van Windows"
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:41
+msgid ""
+"If you are not an advanced user and you are running QGIS on Windows, you "
+"might not be interested in reading the rest of this chapter. Make sure you "
+"install QGIS in your system using the standalone installer. That will "
+"automatically install SAGA and GRASS in your system and configure them so "
+"they can be run from QGIS. All the algorithms from these providers will be "
+"ready to be run without needing any further configuration. If installing "
+"with the OSGeo4W application, make sure that you also select SAGA and GRASS "
+"for installation."
+msgstr "Als u nog geen gevorderde gebruiker bent en u voert QGIS uit op Windows, bent u misschien niet geïnteresseerd in het lezen van de rest van dit hoofdstuk. Zorg er voor dat u QGIS op uw systeem installeert met behulp van het zelfstandige installatieprogramma. Dat zal automatisch SAGA en GRASS op uw systeem installeren en ze configureren, zodat zij vanuit QGIS kunnen worden uitgevoerd. Alle algoritmen van deze providers zullen gereed zijn om te worden uitgevoerd, zonder verdere configuratie. Als wordt geïnstalleerd met de toepassing OSGeo4W, zorg er dan voor dat u ook SAGA en GRASS selecteert om te installeren."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:54
+msgid "A note on file formats"
+msgstr "Een opmerking met betrekking tot bestandsindelingen"
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:56
+msgid ""
+"When using external software, opening a file in QGIS does not mean that it "
+"can be opened and processed in that other software. In most cases, other "
+"software can read what you have opened in QGIS, but in some cases, that "
+"might not be true. When using databases or uncommon file formats, whether "
+"for raster or vector layers, problems might arise. If that happens, try to "
+"use well-known file formats that you are sure are understood by both "
+"programs, and check the console output (in the log panel) to find out what "
+"is going wrong."
+msgstr "Bij het gebruiken van externe software, betekent het openen van een bestand in QGIS niet dat het kan worden geopend en verwerkt kan worden in die andere software. In de meeste gevallen kan andere software lezen wat u hebt geopend in QGIS , maar in sommige gevallen hoeft dat niet zo te zijn. Bij het gebruiken van databases of ongebruikelijke bestandsindelingen, voor raster- of vectorlagen, zouden problemen kunnen optreden. Als dat gebeurt, probeer dan goed bekende bestandsindelingen te gebruiken waarvan u weet dat zij door beide programma's worden begrepen, en controleer de uitvoer in de console (in het paneel Log) om uit te zoeken wat er fout gaat."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:66
+msgid ""
+"You might for instance get trouble and not be able to complete your work if "
+"you call an external algorithm with a GRASS raster layers as input. For this"
+" reason, such layers will not appear as available to algorithms."
+msgstr "U zou problemen kunnen ondervinden en niet in staat zijn uw werk te voltooien als u een extern algoritme aanroept met rasterlagen van GRASS als invoer. Deze lagen zullen, om deze reden, niet verschijnen als beschikbaar voor algoritmen."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:72
+msgid ""
+"You should, however, not have problems with vector layers, since QGIS "
+"automatically converts from the original file format to one accepted by the "
+"external application before passing the layer to it. This adds extra "
+"processing time, which might be significant for large layers, so do not be "
+"surprised if it takes more time to process a layer from a DB connection than"
+" a layer from a Shapefile format dataset of similar size."
+msgstr "U zou echter geen problemen moeten ondervinden met vectorlagen, omdat QGIS automatisch converteert vanuit de originele bestandsindeling naar een die geaccepteerd wordt door de externe toepassing vóórdat de laag daaraan wordt doorgegeven. Dit zorgt voor extra verwerkingstijd, die significant zou kunnen zijn voor zeer grote lagen, wees dus niet verbaasd als het meer tijd vergt om een laag uit een DB-verbinding te verwerken, dan voor een soortgelijke grootte vanuit een gegevensset in de indeling Shapefile."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:80
+msgid ""
+"Providers not using external applications can process any layer that you can"
+" open in QGIS, since they open it for analysis through QGIS."
+msgstr "Providers die geen externe toepassingen gebruiken kunnen elke laag verwerken die u kunt openen in QGIS, omdat zij het voor analyse openen via QGIS."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:83
+msgid ""
+"All raster and vector output formats produced by QGIS can be used as input "
+"layers. Some providers do not support certain formats, but all can export to"
+" common  formats that can later be transformed by QGIS automatically. As for"
+" input layers, if a conversion is needed, that might increase the processing"
+" time."
+msgstr "Alle raster- en vectorindelingen, die worden geproduceerd door QGIS, kunnen als invoerlagen worden gebruikt. Sommige providers ondersteunen bepaalde indelingen niet, maar zij kunnen allemaal worden geëxporteerd naar veelvoorkomende indelingen voor rasterlagen die later automatisch kunnen worden getransformeerd door QGIS. Net als voor invoerlagen, als een conversie nodig is, zou dat de verwerkingstijd kunnen verhogen."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:92
+msgid "A note on vector layer selections"
+msgstr "Een opmerking over selecties van vectorlagen"
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:94
+msgid ""
+"External applications may also be made aware of the selections that exist in"
+" vector layers within QGIS. However, that requires rewriting all input "
+"vector layers, just as if they were originally in a format not supported by "
+"the external application. Only when no selection exists, or the *Use only "
+"selected features* option is not enabled in the processing general "
+"configuration, can a layer be directly passed to an external application."
+msgstr "Externe toepassingen kunnen ook bewust worden gemaakt van de selecties die bestaan in vectorlagen binnen QGIS. Dat vereist echter het opnieuw schrijven van alle vectorlagen voor de invoer, net als wanneer zij origineel in een indeling waren die niet wordt ondersteund door de externe toepassing. Alleen wanneer er geen selectie bestaat, of de optie *Alleen geselecteerde objecten gebruiken* niet is ingeschakeld in de algemene configuratie van Processing, kan een laag direct worden doorgegeven aan een externe toepassing."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:103
+msgid ""
+"In other cases, exporting only selected features is needed, which causes "
+"longer execution times."
+msgstr "In andere gevallen is slechts het exporteren van de geselecteerde objecten nodig, wat er voor zorgt dat de  tijd voor uitvoering langer duurt."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:110
+msgid "SAGA"
+msgstr "SAGA"
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:112
+msgid ""
+"SAGA algorithms can be run from QGIS if you have SAGA installed and you "
+"configure the processing framework to find SAGA executables. In particular, "
+"the SAGA command-line executable is needed to run SAGA algorithms."
+msgstr "Algoritmen voor SAGA kunnen worden uitgevoerd vanuit QGIS als u SAGA hebt geïnstalleerd en u het framework Processing heeft geconfigureerd om uit te voeren bestanden van SAGA te vinden. In het bijzonder is het uit te voeren bestand voor de opdrachtregel in SAGA nodig om algoritmen van SAGA uit te voeren."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:118
+msgid ""
+"If you are running Windows, both the stand-alone installer and the OSGeo4W "
+"installer include SAGA along with QGIS, and the path is automatically "
+"configured, so there is no need to do anything else."
+msgstr "Als u werkt op Windows bevatten zowel het zelfstandige installatieprogramma als het installatieprogramma OSGeo4W SAGA tezamen met QGIS, en het pad wordt automatisch geconfigureerd, dus hoeft er verder niets te worden gedaan."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:122
+msgid ""
+"If you have installed SAGA yourself and your QGIS installer did not include "
+"it, the path to the SAGA executable must be configured. To do this, open the"
+" configuration dialog. In the :guilabel:`SAGA` block, you will find a "
+"setting named :guilabel:`SAGA Folder`. Enter the path to the folder where "
+"SAGA is installed. Close the configuration dialog, and now you are ready to "
+"run SAGA algorithms from QGIS."
+msgstr "Als u SAGA zelf hebt geïnstalleerd en uw installatieprogramma van QGIS bevatte dat niet, moet het pad naar het uit te voeren bestand van SAGA worden geconfigureerd. Open het dialoogvenster Opties om dat te doen. In het blok :guilabel:`SAGA` vindt u een instelling genaamd :guilabel:`SAGA Folder`. Voer het pad in naar de map waar SAGA is geïnstalleerd. Sluit het dialoogvenster Opties en nu bent u gereed om algoritmen van SAGA uit te voeren vanuit QGIS."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:130
+msgid ""
+"If you are running Linux, SAGA binaries are not included with Processing, so"
+" you have to download and install the software yourself. Please check the "
+"SAGA website for more information."
+msgstr "Als u werkt op Linux zijn de binaries van SAGA niet opgenomen in Processing, dus moet u de software zelf downloaden en installeren. Bekijk de website van SAGA voor meer informatie."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:134
+msgid ""
+"In this case, there is no need to configure the path to the SAGA executable,"
+" and you will not see those folder entries. Instead, you must make sure that"
+" SAGA is properly installed and its folder is added to the PATH environment "
+"variable. Just open a console and type ``saga_cmd`` to check that the system"
+" can find where the SAGA binaries are located."
+msgstr "In dit geval is het niet nodig om het pad naar het uit te voeren bestand van SAGA te configureren, en u zult deze items voor de mappen niet zien. In plaats daarvan dient u er voor te zorgen dat SAGA juist is geïnstalleerd en dat de map ervan is toegevoegd aan de omgevingsvariabele PATH. Open eenvoudigweg een console en typ ``saga_cmd`` om te controleren of het systeem kan vinden waar de binaries van SAGA zijn opgeslagen."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:142
+msgid "About SAGA grid system limitations"
+msgstr "Over beperkingen van het SAGA rastersysteem"
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:144
+msgid ""
+"Most SAGA algorithms that require several input raster layers require them "
+"to have the same grid system. That is, they must cover the same geographic "
+"area and have the same cell size, so their corresponding grids match. When "
+"calling SAGA algorithms from QGIS, you can use any layer, regardless of its "
+"cell size and extent. When multiple raster layers are used as input for a "
+"SAGA algorithm, QGIS resamples them to a common grid system and then passes "
+"them to SAGA (unless the SAGA algorithm can operate with layers from "
+"different grid systems)."
+msgstr "De meeste algoritmen van SAGA die meerdere invoerrasterlagen vereisen eisen dat zij hetzelfde rastersysteem hebben. Dat is, zij moeten hetzelfde geografische gebied bedekken en dezelfde celgrootte hebben, zodat hun overeenkomende rasters overeenkomen. Bij het aanroepen van algoritmen van SAGA vanuit QGIS kunt u elke laag gebruiken, ongeacht celgrootte en bereik ervan. Wanneer meerdere rasterlagen worden gebruikt als invoer voor een algoritme van SAGA, resampelt QGIS ze naar een algemeen rastersysteem en geeft ze dan door aan SAGA (tenzij het algoritme van SAGA kan werken met lagen uit verschillende rastersystemen)."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:155
+msgid ""
+"The definition of that common grid system is controlled by the user, and you"
+" will find several parameters in the SAGA group of the settings window to do"
+" so. There are two ways of setting the target grid system:"
+msgstr "De definitie van dat algemene rastersysteem wordt beheerd door de gebruiker en u zult verschillende parameters vinden in de groep SAGA van het venster Opties om dat te doen. Er zijn twee manieren voor het instellen van de doel-rastersystemen:"
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:160
+msgid ""
+"Setting it manually. You define the extent by setting the values of the "
+"following parameters:"
+msgstr "Handmatig instellen. U definieert het bereik door het instellen van de volgende parameters:"
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:163
+msgid ":guilabel:`Resampling min X`"
+msgstr ":guilabel:`Resampling min X`"
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:164
+msgid ":guilabel:`Resampling max X`"
+msgstr ":guilabel:`Resampling max X`"
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:165
+msgid ":guilabel:`Resampling min Y`"
+msgstr ":guilabel:`Resampling min Y`"
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:166
+msgid ":guilabel:`Resampling max Y`"
+msgstr ":guilabel:`Resampling max Y`"
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:167
+msgid ":guilabel:`Resampling cellsize`"
+msgstr ":guilabel:`Resampling cellsize`"
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:169
+msgid ""
+"Notice that QGIS will resample input layers to that extent, even if they do "
+"not overlap with it."
+msgstr "Onthoud dat QGIS invoerlagen zal resamplen tot dat bereik, zelfs als ze er niet mee overlappen."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:171
+msgid ""
+"Setting it automatically from input layers. To select this option, just "
+"check the :guilabel:`Use min covering grid system for resampling` option. "
+"All the other settings will be ignored and the minimum extent that covers "
+"all the input layers will be used. The cell size of the target layer is the "
+"maximum of all cell sizes of the input layers."
+msgstr "Automatisch instellen vanuit invoerlagen. Selecteer eenvoudigweg de optie :guilabel:`Use min covering grid system for resampling` om deze optie te selecteren. Alle andere instellingen zullen worden genegeerd en het minimum bereik dat alle invoerlagen bedekt, zal worden gebruikt. De celgrootte van de doellaag is het maximum van alle celgrootten van de invoerlagen."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:179
+msgid ""
+"For algorithms that do not use multiple raster layers, or for those that do "
+"not need a unique input grid system, no resampling is performed before "
+"calling SAGA, and those parameters are not used."
+msgstr "Voor algoritmen die niet meerdere rasterlagen gebruiken, of voor die welke geen uniek rastersysteem voor invoer nodig hebben, wordt geen resamplen uitgevoerd vóór het aanroepen van SAGA en worden deze parameters niet gebruikt."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:184
+msgid "Limitations for multi-band layers"
+msgstr "Beperkingen voor lagen met meerdere banden"
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:186
+msgid ""
+"Unlike QGIS, SAGA has no support for multi-band layers. If you want to use a"
+" multiband layer (such as an RGB or multispectral image), you first have to "
+"split it into single-banded images. To do so, you can use the 'SAGA/Grid - "
+"Tools/Split RGB image' algorithm (which creates three images from an RGB "
+"image) or the 'SAGA/Grid - Tools/Extract band' algorithm (to extract a "
+"single band)."
+msgstr "Anders dan QGIS heeft SAGA geen ondersteuning voor lagen met meerdere banden. Als u een laag met meerdere banden wilt gebruiken (zoals een RGB of multispectrale afbeelding), dient u die eerst te splitsen in afbeeldingen met één band. U kunt het algoritme 'SAGA/Grid - Tools/Split RGB image' (wat drie afbeeldingen uit een RGB-afbeelding maakt) of het algoritme 'SAGA/Grid - Tools/Extract band' (om één enkele band uit te nemen) gebruiken om dat te doen."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:194
+msgid "Limitations in cell size"
+msgstr "Beperkingen in celgrootte"
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:196
+msgid ""
+"SAGA assumes that raster layers have the same cell size in the X and Y axis."
+" If you are working with a layer with different values for horizontal and "
+"vertical cell size, you might get unexpected results. In this case, a "
+"warning will be added to the processing log, indicating that an input layer "
+"might not be suitable to be processed by SAGA."
+msgstr "SAGA gaat er van uit dat rasterlagen dezelfde celgrootte hebben in de X- en de Y-as. Als u werkt met een laag met verschillende waarden voor horizontale en verticale celgrootte, zou u onverwachte resultaten kunnen krijgen. In dat geval zal een waarschuwing worden toegevoegd aan het log van Processing, die aangeeft dat een invoerlaag niet geschikt zou kunnen zijn om te worden verwerkt door SAGA."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:204
+msgid "Logging"
+msgstr "Loggen"
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:206
+msgid ""
+"When QGIS calls SAGA, it does so using its command-line interface, thus "
+"passing a set of commands to perform all the required operations. SAGA shows"
+" its progress by writing information to the console, which includes the "
+"percentage of processing already done, along with additional content. This "
+"output is filtered and used to update the progress bar while the algorithm "
+"is running."
+msgstr "Als QGIS SAGA aanroept doet het dat door middel van de interface voor de opdrachtregel, en dus door het doorgeven van een set opdrachten om alle vereiste bewerkingen uit te voeren. SAGA geeft zijn voortgang weer door informatie te schrijven naar de console, wat het percentage van reeds verrichte verwerking bevat, naast aanvullende inhoud. Deze uitvoer wordt gefilterd en gebruikt om de voortgangsbalk bij te werken terwijl het algoritme wordt uitgevoerd."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:214
+msgid ""
+"Both the commands sent by QGIS and the additional information printed by "
+"SAGA can be logged along with other processing log messages, and you might "
+"find them useful to track what is going on when QGIS runs a SAGA algorithm. "
+"You will find two settings, namely :guilabel:`Log console output` and "
+":guilabel:`Log execution commands`, to activate that logging mechanism."
+msgstr "Zowel de opdrachten die zijn verstuurd door QGIS als de aanvullende informatie die is afgedrukt door SAGA kunnen worden gelogd naast andere logberichten voor de verwerking, en u zou ze handig kunnen vinden om te kunnen zien wat er gebeurt als QGIS een algoritme van SAGA uitvoert. U zult twee instellingen vinden, namelijk :guilabel:`Log console-uitvoer` en :guilabel:`Log uitvoeringsopdrachten`, om dat mechanisme voor het loggen te activeren."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:222
+msgid ""
+"Most other providers that use external applications and call them through "
+"the command-line have similar options, so you will find them as well in "
+"other places in the processing settings list."
+msgstr "De meeste andere providers die externe toepassingen gebruiken en ze aanroepen via de opdrachtregel hebben soortgelijke opties, u zult ze dus ook op andere plaatsen in de lijst met instellingen voor Processing vinden."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:229
+msgid "R. Creating R scripts"
+msgstr "R. Maken van scripts voor R"
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:231
+msgid ""
+"To enable R in Processing you need to install the **Processing R Provider** "
+"plugin."
+msgstr "U dient de plug-in **Processing R Provider** te installeren om R in te schakelen in Processing."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:234
+msgid ""
+"R integration in QGIS is different from that of SAGA in that there is not a "
+"predefined set of algorithms you can run (except for a few examples). "
+"Instead, you should write your scripts and call R commands, much like you "
+"would do from R, and in a very similar manner to what we saw in the section "
+"dedicated to processing scripts. This section shows you the syntax to use to"
+" use R commands in QGIS and how to use QGIS objects (layers, tables) in "
+"them."
+msgstr "Integratie van R in QGIS is anders dan die van SAGA op die manier dat er geen voorgedefinieerde set van algoritmen is die u kunt uitvoeren (uitgezonderd een aantal voorbeelden). In plaats daarvan zou u uw scripts moeten schrijven en opdrachten in R moeten aanroepen, net zoals u zou doen vanuit R, en op een hele soortgelijke manier als die welke we zagen in het gedeelte over scripts voor Processing. Dit gedeelte toont u de te gebruiken syntaxis om opdrachten in R te gebruiken in QGIS en hoe objecten van QGIS (lagen, tabellen) er in te gebruiken."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:243
+msgid ""
+"The first thing you have to do, as we saw in the case of SAGA, is to tell "
+"QGIS where your R binaries are located. You can do this using the "
+":guilabel:`R folder` entry in the processing configuration dialog. Once you "
+"have set that parameter, you can start creating and executing your own R "
+"scripts."
+msgstr "Het eerste dat u moet doen, zoals we zagen in het geval van SAGA, is om QGIS te vertellen waar uw binaries van R zijn opgeslagen. U kunt dit doen door middel van het item :guilabel:`map R` in het dialoogvenster Opties. Als u die parameter eenmaal hebt ingesteld, kunt u beginnen met het maken en uitvoeren van uw eigen scripts in R."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:249
+msgid ""
+"On **Windows** the R executable file is normally in the :file:`C:\\\\Program"
+" Files\\\\R\\\\R-3.2` folder. Specify the folder and **NOT** the binary!"
+msgstr "Op **Windows** staat het uitvoerbare bestand voor R gewoonlijk in de map :file:`C:\\\\Program Files\\\\R\\\\R-3.2`. Specificeer de map en **NIET** het binaire bestand!"
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:253
+msgid ""
+"Once again, this is different in Linux, and you just have to make sure that "
+"the R folder is included in the PATH environment variable. If you can start "
+"R by typing ``R`` in a terminal window, then you are ready to go."
+msgstr "Nogmaals, dit is anders in Linux en u dient er voor te zorgen dat de map R is opgenomen in de omgevingsvariabele PATH. Als u R kunt starten door slechts ``R`` in een terminalvenster te typen, dan bent u klaar om te beginnen."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:258
+msgid ""
+"To add an algorithm that calls an R function (or a more complex R script "
+"that you have developed and you would like to have available from QGIS), you"
+" have to create a script file that performs the R commands."
+msgstr "U dient een scriptbestand te maken dat  opdrachten van R uitvoert om een algoritme toe te voegen dat een functie in R aanroept (of een meer complex script in R dat u heeft ontwikkeld en dat u beschikbaar zou willen hebben vanuit QGIS)."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:263
+msgid ""
+"R script files have the extension :file:`.rsx`, and creating them is pretty "
+"easy if you just have a basic knowledge of R syntax and R scripting. They "
+"should be stored in the R scripts folder. You can set this folder in the "
+":guilabel:`R` settings group (available from the processing settings "
+"dialog), just like you do with the folder for regular processing scripts."
+msgstr "Scriptbestanden van R hebben de extensie :file:`.rsx`, en het maken ervan is redelijk eenvoudig als u basiskennis bezit van de syntaxis en scripten van R. Zij zouden moeten worden opgeslagen in de map voor scripts van R. U kunt deze map instellen in de groep met instellingen :guilabel:`R` (beschikbaar vanuit het dialoogvenster Opties), net zoals u doet met de map voor normale scripts voor Processing."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:271
+msgid ""
+"Let’s have a look at a very simple script file, which calls the R method "
+"``spsample`` to create a random grid within the boundary of the polygons in "
+"a given polygon layer. This method belongs to the ``maptools`` package. "
+"Since almost all the algorithms that you might like to incorporate into QGIS"
+" will use or generate spatial data, knowledge of spatial packages like "
+"``maptools`` and, especially, ``sp``, is mandatory."
+msgstr "Laten eens kijken naar een heel eenvoudig scriptbestand, dat de methode in R ``spsample`` aanroept om een willekeurig raster te maken binnen de begrenzing van de polygonen in een bepaalde polygoonlaag. Deze methode behoort tot het pakket ``maptools``. Omdat bijna alle algoritmen die u zou willen inbedden in QGIS ruimtelijke gegevens zullen gebruiken of genereren, is kennis van ruimtelijke pakketten zoals ``maptools`` en, speciaal, ``sp``, verplicht."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:288
+msgid ""
+"The first lines, which start with a double Python comment sign (``##``), "
+"tell QGIS about the inputs of the algorithm in the file and the outputs that"
+" it will generate."
+msgstr "De eerste regels, die worden aangeduid met een Python commentaar symbool (``##``), geven QGIS informatie over de invoer van het algoritme en de resultaten die het zal genereren."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:292
+msgid ""
+"Please have a look at the :ref:`R Intro <r-intro>` and the :ref:`R Syntax "
+"<r-syntax>` Training Manual Chapters to find more information about how to "
+"write your own R scripts."
+msgstr "Bekijk eens de hoofdstukken :ref:`R Intro <r-intro>` en :ref:`R Syntax <r-syntax>` in de Trainingshandleiding om meer informatie te zoeken over hoe u uw eigen scripts voor R schrijft."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:296
+msgid ""
+"When you declare an input parameter, QGIS uses that information for two "
+"things: creating the user interface to ask the user for the value of that "
+"parameter, and creating a corresponding R variable that can later be used as"
+" input for R commands."
+msgstr "Wanneer u een parameter voor de invoer declareert, gebruikt QGIS die informatie voor twee dingen: het maken van de interface om de gebruiker te vragen naar de waarde voor die parameter en het maken van een overeenkomstige variabele in R die later kan worden gebruikt als invoer voor opdrachten in R."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:301
+msgid ""
+"In the above example, we have declared an input of type ``vector`` named "
+"``polyg``. When executing the algorithm, QGIS will open the layer selected "
+"by the user and store it in a variable named ``polyg``. So, the name of a "
+"parameter is the name of the variable that we use in R for accessing the "
+"value of that parameter (you should therefore avoid using reserved R words "
+"as parameter names)."
+msgstr "In het bovenstaande voorbeeld hebben we een invoer van het type ``vector``, genaamd ``polyg``, gedeclareerd. Bij het uitvoeren van het algoritme zal QGIS de laag openen die is geselecteerd door de gebruiker en die opslaan in een variabele die is genaamd ``polyg``. Dus de naam van een parameter is de naam van de variabele die we gebruiken voor de toegang tot de waarde van die parameter (u zou daarom moeten vermijden om door R gereserveerde woorden als namen voor parameters te gebruiken)."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:309
+msgid ""
+"Spatial parameters such as vector and raster layers are read using the "
+"``readOGR()`` and ``brick()`` commands (you do not have to worry about "
+"adding those commands to your description file -- QGIS will do it), and they"
+" are stored as ``Spatial*DataFrame`` objects. Table fields are stored as "
+"strings containing the name of the selected field."
+msgstr "Ruimtelijke parameters, zoals vector- en rasterlagen, worden gelezen met behulp van de opdrachten ``readOGR()`` en ``brick()`` (u hoeft zich geen zorgen te maken over het toevoegen van deze opdrachten aan uw bestand voor de beschrijving -- QGIS zal dit voor u doen), en zij worden opgeslagen als objecten ``Spatial*DataFrame``. Tabelvelden worden opgeslagen als tekenreeksen die de naam van het geselecteerde veld bevatten."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:316
+msgid ""
+"Tables are opened using the ``read.csv()`` command. If a table entered by "
+"the user is not in CSV format, it will be converted prior to importing it "
+"into R."
+msgstr "Tabellen worden geopend met behulp van de opdracht ``read.csv()``. Als een door de gebruiker ingevoerde tabel niet in de indeling CSV is, zal die worden geconverteerd, voorafgaande aan het importeren in R."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:320
+msgid ""
+"Raster files can be read using the ``readGDAL()`` command instead of "
+"``brick()`` by specifying ``##usereadgdal``."
+msgstr "Rasterbestanden kunnen worden gelezen met behulp van de opdracht ``readGDAL()`` in plaats van met ``brick()`` door  ``##usereadgdal`` te specificeren."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:323
+msgid ""
+"If you are an advanced user and do not want QGIS to create the object "
+"representing the layer, you can use ``##passfilenames`` to indicate that you"
+" prefer a string with the filename instead. In this case, it is up to you to"
+" open the file before performing any operation on the data it contains."
+msgstr "Als u een gevorderde gebruiker bent en niet wilt dat QGIS het object maakt dat de laag vertegenwoordigt, kunt u  ``##passfilename`` gebruiken om aan te geven dat u in plaats daarvan een tekenreeks met de bestandsnaam prefereert. In dat geval is het aan u om het bestand te openen vóórdat een bewerking wordt uitgevoerd op de gegevens die het bevat."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:329
+msgid ""
+"With the above information, we can now understand the first line of this "
+"script (the first line not starting with a Python comment)."
+msgstr "Met bovenstaande informatie kunnen we nu de eerste regel van dit script begrijpen (de eerste regel die niet begint met een opmerking in Python)."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:337
+msgid ""
+"The variable ``polyg`` already contains a ``SpatialPolygonsDataFrame`` "
+"object, so it can be used when calling the ``spsample`` method, just like "
+"the ``numpoints`` one, which specifies the number of points to add to the "
+"created sample grid."
+msgstr "De variabele ``polyg`` bevat al een object ``SpatialPolygonsDataFrame``, dus kan het worden gebruikt bij het aanroepen van de methode ``spsample``, net als ``numpoints``, dat het aantal punten specificeert die moeten worden toegevoegd aan het gemaakte voorbeeldraster."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:342
+msgid ""
+"Since we have declared a vector output named ``out``, we have to create a "
+"variable named ``out`` and store a ``Spatial*DataFrame`` object in it (in "
+"this case, a ``SpatialPointsDataFrame``). You can use any name for your "
+"intermediate variables. Just make sure that the variable storing your final "
+"result has the same name that you used to declare it, and that it contains a"
+" suitable value."
+msgstr "Omdat we al een vectoruitvoer hebben gedeclareerd, genaamd ``out``, moeten we een variabele genaamd ``out`` maken en er een object ``Spatial*DataFrame`` in opslaan (in dit geval een ``SpatialPointsDataFrame``). U kunt elke naam gebruiken voor uw tussentijdse variabelen. Zorg er alleen voor dat de variabele die uw uiteindelijke resultaat opslaat dezelfde naam heeft als die welke u gebruikt om het te declareren, en dat het een geschikte waarde bevat."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:350
+msgid ""
+"In this case, the result obtained from the ``spsample`` method has to be "
+"converted explicitly into a ``SpatialPointsDataFrame`` object, since it is "
+"itself an object of class ``ppp``, which can not be returned to QGIS."
+msgstr "In dit geval zal het resultaat dat wordt verkregen uit de methode ``spsample`` expliciet moeten worden geconverteerd naar een object ``SpatialPointsDataFrame``, omdat het zelf een object van de klasse ``ppp`` is, dat niet kan worden teruggegeven aan QGIS."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:355
+msgid ""
+"If your algorithm generates raster layers, the way they are saved will "
+"depend on whether or not you have used the ``##dontuserasterpackage`` "
+"option. If you have used it, layers are saved using the ``writeGDAL()`` "
+"method. If not, the ``writeRaster()`` method from the ``raster`` package "
+"will be used."
+msgstr "Als uw algoritme rasterlagen genereert, is de manier waarop zij worden opgeslagen afhankelijk van het feit of u al dan niet de optie ``##dontuserasterpackage`` heeft gebruikt. Wanneer u die heeft gebruikt worden lagen opgeslagen met behulp van de methode ``writeGDAL()``. Indien niet, zal de methode ``writeRaster()`` uit het pakket ``raster`` worden gebruikt."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:363
+msgid ""
+"If you have used the ``##passfilenames`` option, outputs are generated using"
+" the ``raster`` package (with ``writeRaster()``)."
+msgstr "Als u de optie ``##passfilenames`` hebt gebruikt, wordt de uitvoer gemaakt met behulp van het pakket ``raster`` (met ``writeRaster()``)."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:366
+msgid ""
+"If your algorithm does not generate a layer, but a text result in the "
+"console instead, you have to indicate that you want the console to be shown "
+"once the execution is finished. To do so, just start the command lines that "
+"produce the results you want to print with the ``>`` ('greater') sign. The "
+"output of all other lines will not be shown. For instance, here is the "
+"description file of an algorithm that performs a normality test on a given "
+"field (column) of the attributes of a vector layer:"
+msgstr "Als uw algoritme geen laag genereert, maar een tekstresultaat in de console, dient u aan te geven dat u wilt dat de console wordt weergegeven als de uitvoering eenmaal is voltooid.  Start eenvoudigweg de opdrachtregels die de resultaten produceren die u wilt afdrukken met het teken ``>`` ('groter dan') om dat te doen. De uitvoer van alle andere regels zal niet worden weergegeven. Hier is bijvoorbeeld het bestand voor de beschrijving van een algoritme dat een test voor normalen uitvoert op een bepaald veld (kolom) van de attributen van een vectorlaag:"
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:384
+msgid ""
+"The output of the last line is printed, but the output of the first is not "
+"(and neither are the outputs from other command lines added automatically by"
+" QGIS)."
+msgstr "De uitvoer van de laatste regel wordt afgedrukt, maar de uitvoer van de eerste wordt dat niet (en ook de uitvoer van de andere opdrachtregels, die automatisch door QGIS werden toegevoegd, worden dat niet)."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:388
+msgid ""
+"If your algorithm creates any kind of graphics (using the ``plot()`` "
+"method), add the following line:"
+msgstr "Als uw algoritme iets grafisch maakt (met behulp van de methode ``plot()``), voeg dan de volgende regel toe:"
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:395
+msgid ""
+"This will cause QGIS to redirect all R graphical outputs to a temporary "
+"file, which will be opened once R execution has finished."
+msgstr "Dit zal er voor zorgen dat QGIS alle grafische uitvoer voor R zal omleiden naar een tijdelijk bestand, wat zal worden geopend als de uitvoering van R is voltooid."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:398
+msgid ""
+"Both graphics and console results will be shown in the processing results "
+"manager."
+msgstr "Beide grafische en console-resultaten zullen worden weergegeven in het beheer van de resultaten van Processing."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:401
+msgid ""
+"For more information, please check the script files provided with "
+"Processing. Most of them are rather simple and will greatly help you "
+"understand how to create your own scripts."
+msgstr "Bekijk, voor meer informatie, de scriptbestanden die zijn opgenomen in Processing. De meeste daarvan zijn redelijk eenvoudig en zullen u enorm helpen te begrijpen hoe u uw eigen scripts kunt maken."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:407
+msgid ""
+"The ``rgdal`` and ``raster`` libraries are loaded by default, so you do not "
+"have to add the corresponding ``library()`` commands (you just have to make "
+"sure that those two packages are installed in your R distribution). However,"
+" other additional libraries that you might need have to be explicitly loaded"
+" by typing: ``library(ggplot2)`` (to load the ``ggplot2`` library). If the "
+"package is not already installed on your machine, Processing will download "
+"and install it. In this way the package will be also available in R "
+"Standalone. **Be aware** that if the package has to be downloaded, the first"
+" time you run the script it might take a long time."
+msgstr "De bibliotheken ``rgdal`` en ``raster`` worden standaard geladen, dus hoeft u de twee overeenkomende opdrachten ``library()`` niet toe te voegen (u moet er alleen voor zorgen dat deze twee pakketten zijn geïnstalleerd in uw distributie van R). Echter, andere aanvullende bibliotheken die u denkt nodig te hebben moeten expliciet worden geladen door te typen ``library(ggplot2)`` (om de bibliotheek ``ggplot2`` te laden). Als het pakket nog niet is geïnstalleerd op uw machine zal Processing het downloaden en installeren. Op deze manier zal het pakket ook beschikbaar zijn voor R Standalone. **Onthoud** dat als het pakket moet worden gedownload, het erg lang zou kunnen duren als u uw script voor de eerste keer uitvoert."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:424
+msgid "GRASS"
+msgstr "GRASS"
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:426
+msgid ""
+"Configuring GRASS is not much different from configuring SAGA. First, the "
+"path to the GRASS folder has to be defined, but only if you are running "
+"Windows."
+msgstr "Configureren van GRASS is niet veel anders dan het configureren van SAGA. Eerst moet het pad naar de map GRASS worden gedefinieerd, maar alleen als u werkt op Windows."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:430
+msgid ""
+"By default, the Processing framework tries to configure its GRASS connector "
+"to use the GRASS distribution that ships along with QGIS. This should work "
+"without problems for most systems, but if you experience problems, you might"
+" have to configure the GRASS connector manually. Also, if you want to use a "
+"different GRASS installation, you can change the setting to point to the "
+"folder where the other version is installed. GRASS 7 is needed for "
+"algorithms to work correctly."
+msgstr "Standaard probeert het framework Processing zijn verbinding naar GRASS te configureren om de distributie van GRASS te gebruiken die wordt meegeleverd met QGIS. Dit zou voor de meeste systemen zonder problemen moeten werken, maar als u problemen ondervindt, zou u de verbinding naar GRASS handmatig moeten configureren. Ook als u een andere installatie van GRASS wilt gebruiken kunt u de instelling wijzigen zodat die verwijst naar de map waar die andere versie is geïnstalleerd. GRASS 7 is nodig om de algoritmen juist te laten werken."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:440
+msgid ""
+"If you are running Linux, you just have to make sure that GRASS is correctly"
+" installed, and that it can be run without problem from a terminal window."
+msgstr "Als u werkt op Linux hoeft u er slechts voor te zorgen dat GRASS correct is geïnstalleerd, en dat het zonder problemen kan worden uitgevoerd vanaf een terminalvenster."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:444
+msgid ""
+"GRASS algorithms use a region for calculations. This region can be defined "
+"manually using values similar to the ones found in the SAGA configuration, "
+"or automatically, taking the minimum extent that covers all the input layers"
+" used to execute the algorithm each time. If the latter approach is the "
+"behavior you prefer, just check the :guilabel:`Use min covering region` "
+"option in the GRASS configuration parameters."
+msgstr "Algoritmen van GRASS gebruiken een regio voor berekeningen. Deze regio kan handmatig worden gedefinieerd met behulp van waarden die soortgelijk zijn aan die welke werden gebruikt in de configuratie van SAGA, of automatisch, met het minimum bereik dat alle gebruikte invoerlagen bedekt bij het elke keer uitvoeren van het algoritme. Als de laatste benadering het gedrag is dat u prefereert, selecteer dan de optie :guilabel:`Use min covering region` in de configuratie van de parameters in GRASS."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:457
+msgid "LAStools"
+msgstr "LAStools"
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:459
+msgid ""
+"To use `LAStools <https://rapidlasso.com/lastools/>`_ in QGIS, you need to "
+"download and install LAStools on your computer and install the LAStools "
+"plugin (available from the official repository) in QGIS."
+msgstr "Voor het gebruiken van `LAStools <https://rapidlasso.com/lastools/>`_ in QGIS, moet u LAStools downloaden en installeren op uw computer en de plug-in LAStools installeren (beschikbaar in de officiële opslagplaats) in QGIS."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:463
+msgid ""
+"On Linux platforms, you will need `Wine <https://www.winehq.org/>`_ to be "
+"able to run some of the tools."
+msgstr "Op platformen voor Linux zult u `Wine <https://www.winehq.org/>`_ nodig hebben om enkele van de gereedschappen uit te kunnen voeren."
+
+#: ../../source/docs/user_manual/processing/3rdParty.rst:466
+msgid ""
+"LAStools is activated and configured in the Processing options "
+"(:menuselection:`Settings --> Options`, :guilabel:`Processing` tab, "
+":menuselection:`Providers--> LAStools`), where you can specify the location "
+"of LAStools (:guilabel:`LAStools folder`) and Wine (:guilabel:`Wine "
+"folder`). On Ubuntu, the default Wine folder is :file:`/usr/bin`."
+msgstr "LAStools wordt geactiveerd en geconfigureerd in de opties voor Processing (:menuselection:`Extra --> Opties`, tab :guilabel:`Processing`, :menuselection:`Providers--> LAStools`), waar u de locatie van the location of LAStools (:guilabel:`map LAStools`) en Wine (:guilabel:`map Wine`) kunt specificeren. Op Ubuntu is de standaard map voor Wine :file:`/usr/bin`."
+
+#~ msgid "|updatedisclaimer|"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You should, however, find no problems at all with vector layers, since QGIS "
+#~ "automatically converts from the original file format to one accepted by the "
+#~ "external application before passing the layer to it. This adds extra "
+#~ "processing time, which might be significant if the layer has a large size, "
+#~ "so do not be surprised if it takes more time to process a layer from a DB "
+#~ "connection than it does to process one of a similar size stored in a "
+#~ "shapefile."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The processing framework can be extended using additional applications. "
+#~ "Currently, SAGA, GRASS and R are supported. Algorithms relying on an "
+#~ "external applications are managed by their own algorithm provider. "
+#~ "Additional providers can be found as separate plugins, and installed using "
+#~ "the QGIS Plugin Manager."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This section will show you how to configure the Processing framework to "
+#~ "include these additional applications, and it will explain some particular "
+#~ "features of the algorithms based on them. Once you have correctly configured"
+#~ " the system, you will be able to execute external algorithms from any "
+#~ "component like the toolbox or the graphical modeler, just like you do with "
+#~ "any other geoalgorithm."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "By default, all algorithms that rely on an external application not shipped "
+#~ "with QGIS are not enabled. You can enable them in the settings dialog. Make "
+#~ "sure that the corresponding application is already installed in your system."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you are not an advanced user and you are running QGIS on Windows, you "
+#~ "might not be interested in reading the rest of this chapter. Make sure you "
+#~ "install QGIS in your system using the standalone installer. That will "
+#~ "automatically install SAGA and GRASS in your system and configure them so "
+#~ "they can be run from QGIS. All the algorithms from these providers will be "
+#~ "ready to be run without needing any further configuration. If installing "
+#~ "through OSGeo4W application, make sure you select for installation SAGA and "
+#~ "GRASS as well."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When using an external software, opening a file in QGIS does not mean that "
+#~ "it can be opened and processed as well in that other software. In most "
+#~ "cases, other software can read what you have opened in QGIS, but in some "
+#~ "cases, that might not be true. When using databases or uncommon file "
+#~ "formats, whether for raster or vector layers, problems might arise. If that "
+#~ "happens, try to use well-known file formats that you are sure are understood"
+#~ " by both programs, and check the console output (in the history and log "
+#~ "dialog) to know more about what is going wrong."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Using GRASS raster layers is, for instance, one case in which you might have"
+#~ " trouble and not be able to complete your work if you call an external "
+#~ "algorithm using such a layer as input. For this reason, these layers will "
+#~ "not appear as available to algorithms."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You should, however, find no problems at all with vector layers, since QGIS "
+#~ "automatically converts from the original file format to one accepted by the "
+#~ "external application before passing the layer to it. This adds extra "
+#~ "processing time, which might be significant if the layer has a large size, "
+#~ "so do not be surprised if it takes more time to process a layer from a DB "
+#~ "connection than it process a layer from a Shapefile format dataset of "
+#~ "similar size."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Regarding output formats, all formats supported by QGIS as output can be "
+#~ "used, both for raster and vector layers. Some providers do not support "
+#~ "certain formats, but all can export to common  formats that can later be "
+#~ "transformed by QGIS automatically. As in the case of input layers, if this "
+#~ "conversion is needed, that might increase the processing time."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In other cases, exporting only selected features is needed, which causes "
+#~ "execution times to be longer."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "SAGA algorithms can be run from QGIS if you have SAGA installed in your "
+#~ "system and you configure the processing framework properly so it can find "
+#~ "SAGA executables. In particular, the SAGA command-line executable is needed "
+#~ "to run SAGA algorithms."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Both the commands sent by QGIS and the additional information printed by "
+#~ "SAGA can be logged along with other processing log messages, and you might "
+#~ "find them useful to track in detail what is going on when QGIS runs a SAGA "
+#~ "algorithm. You will find two settings, namely :guilabel:`Log console output`"
+#~ " and :guilabel:`Log execution commands`, to activate that logging mechanism."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Most other providers that use an external application and call it through "
+#~ "the command-line have similar options, so you will find them as well in "
+#~ "other places in the processing settings list."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "R integration in QGIS is different from that of SAGA in that there is not a "
+#~ "predefined set of algorithms you can run (except for a few examples). "
+#~ "Instead, you should write your scripts and call R commands, much like you "
+#~ "would do from R, and in a very similar manner to what we saw in the section "
+#~ "dedicated to processing scripts. This section shows you the syntax to use to"
+#~ " call those R commands from QGIS and how to use QGIS objects (layers, "
+#~ "tables) in them."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "for **Windows** user, usually the R executable file is in the "
+#~ ":file:`C:\\\\Program Files\\\\R\\\\R-3.2` folder. Add just the folder and "
+#~ "**NOT** the binary!"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Once again, this is different in Linux, and you just have to make sure that "
+#~ "the R folder is included in the PATH environment variable. If you can start "
+#~ "R just typing ``R`` in a console, then you are ready to go."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To add a new algorithm that calls an R function (or a more complex R script "
+#~ "that you have developed and you would like to have available from QGIS), you"
+#~ " have to create a script file that tells the processing framework how to "
+#~ "perform that operation and the corresponding R commands to do so."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The first lines, which start with a double Python comment sign (``##``), "
+#~ "tell QGIS the inputs of the algorithm described in the file and the outputs "
+#~ "that it will generate. They work with exactly the same syntax as the "
+#~ "Processing scripts that we have already seen, so they will not be described "
+#~ "here again."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Please have a look at the :ref:`R Intro <r-intro>` and the :ref:`R Syntax "
+#~ "<r-syntax>` Training Manual Chapters to have more information on how to "
+#~ "write your own R scripts-"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When you declare an input parameter, QGIS uses that information for two "
+#~ "things: creating the user interface to ask the user for the value of that "
+#~ "parameter and creating a corresponding R variable that can later be used as "
+#~ "input for R commands."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the above example, we are declaring an input of type ``vector`` named "
+#~ "``polyg``. When executing the algorithm, QGIS will open in R the layer "
+#~ "selected by the user and store it in a variable also named ``polyg``. So, "
+#~ "the name of a parameter is also the name of the variable that we can use in "
+#~ "R for accessing the value of that parameter (thus, you should avoid using "
+#~ "reserved R words as parameter names)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Spatial elements such as vector and raster layers are read using the "
+#~ "``readOGR()`` and ``brick()`` commands (you do not have to worry about "
+#~ "adding those commands to your description file -- QGIS will do it), and they"
+#~ " are stored as ``Spatial*DataFrame`` objects. Table fields are stored as "
+#~ "strings containing the name of the selected field."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Additionally, raster files can be read using the ``readGDAL()`` command "
+#~ "instead of ``brick()`` by using the ``##usereadgdal``."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you are an advanced user and do not want QGIS to create the object "
+#~ "representing the layer, you can use the ``##passfilenames`` tag to indicate "
+#~ "that you prefer a string with the filename instead. In this case, it is up "
+#~ "to you to open the file before performing any operation on the data it "
+#~ "contains."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "With the above information, we can now understand the first line of our "
+#~ "first example script (the first line not starting with a Python comment)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The variable ``polygon`` already contains a ``SpatialPolygonsDataFrame`` "
+#~ "object, so it can be used to call the ``spsample`` method, just like the "
+#~ "``numpoints`` one, which indicates the number of points to add to the "
+#~ "created sample grid."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Since we have declared an output of type vector named ``out``, we have to "
+#~ "create a variable named ``out`` and store a ``Spatial*DataFrame`` object in "
+#~ "it (in this case, a ``SpatialPointsDataFrame``). You can use any name for "
+#~ "your intermediate variables. Just make sure that the variable storing your "
+#~ "final result has the same name that you used to declare it, and that it "
+#~ "contains a suitable value."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In this case, the result obtained from the ``spsample`` method has to be "
+#~ "converted explicitly into a ``SpatialPointsDataFrame`` object, since it is "
+#~ "itself an object of class ``ppp``, which is not a suitable class to be "
+#~ "returned to QGIS."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you have used the ``##passfilenames`` option, outputs are generated using"
+#~ " the ``raster`` package (with ``writeRaster()``), even though it is not used"
+#~ " for the inputs."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If your algorithm does not generate any layer, but rather a text result in "
+#~ "the console instead, you have to indicate that you want the console to be "
+#~ "shown once the execution is finished. To do so, just start the command lines"
+#~ " that produce the results you want to print with the ``>`` ('greater') sign."
+#~ " The output of all other lines will not be shown. For instance, here is the "
+#~ "description file of an algorithm that performs a normality test on a given "
+#~ "field (column) of the attributes of a vector layer:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``rgdal`` and ``raster`` libraries are loaded by default, so you do not have"
+#~ " to add the corresponding ``library()`` commands (you just have to make sure"
+#~ " that those two packages are installed in your R distribution). However, "
+#~ "other additional libraries that you might need have to be explicitly loaded "
+#~ "by typing, ``library(ggplot2)``. If the package is not already installed on "
+#~ "your machine, Processing will download and install it. In this way the "
+#~ "package will be also available in R Standalone. **Be aware** that if the "
+#~ "package has to be downloaded, the first time you run the script it might "
+#~ "take a long time."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "By default, the Processing framework tries to configure its GRASS connector "
+#~ "to use the GRASS distribution that ships along with QGIS. This should work "
+#~ "without problems in most systems, but if you experience problems, you might "
+#~ "have to configure the GRASS connector manually. Also, if you want to use a "
+#~ "different GRASS installation, you can change that setting and point to the "
+#~ "folder where the other version is installed. GRASS 7 is needed for "
+#~ "algorithms to work correctly."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you are running Linux, you just have to make sure that GRASS is correctly"
+#~ " installed, and that it can be run without problem from a console."
+#~ msgstr ""

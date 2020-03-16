@@ -1,0 +1,590 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# 
+# Translators:
+# BJ Jang <jangbi882@gmail.com>, 2015
+# Kwon.Yongchan <ruvyn@naver.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-06 11:48+0100\n"
+"PO-Revision-Date: 2019-12-06 11:03+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"Language-Team: Korean (http://www.transifex.com/qgis/qgis-documentation/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:11
+msgid "Network analysis library"
+msgstr "네트워크 분석 라이브러리"
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:13
+msgid "|outofdate|"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:18
+msgid ""
+"Starting from revision `ee19294562 "
+"<https://github.com/qgis/QGIS/commit/ee19294562b00c6ce957945f14c1727210cffdf7>`_"
+" (QGIS >= 1.8) the new network analysis library was added to the QGIS core "
+"analysis library. The library:"
+msgstr "리비전 `ee19294562 <https://github.com/qgis/QGIS/commit/ee19294562b00c6ce957945f14c1727210cffdf7>`_ (QGIS 1.8 버전 이상)부터 네트워크 분석 라이브러리가 QGIS 코어의 분석 라이브러리에 추가되었습니다. 이 라이브러리의 기능은 다음과 같습니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:22
+msgid ""
+"creates mathematical graph from geographical data (polyline vector layers)"
+msgstr "공간 데이터(폴리라인 벡터 레이어)로부터 수학적 그래프(단순화된 연결관계)를 생성합니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:23
+msgid ""
+"implements basic methods from graph theory (currently only Dijkstra's "
+"algorithm)"
+msgstr "그래프 이론(현재로서는 `데이크스트라 알고리즘(Dijkstra's algorithm) <https://ko.wikipedia.org/wiki/%EB%8D%B0%EC%9D%B4%ED%81%AC%EC%8A%A4%ED%8A%B8%EB%9D%BC_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98>`_ 뿐입니다)의 기본 메소드를 구현합니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:26
+msgid ""
+"The network analysis library was created by exporting basic functions from "
+"the RoadGraph core plugin and now you can use it's methods in plugins or "
+"directly from the Python console."
+msgstr "네트워크 분석 라이브러리는 코어 플러그인 *RoadGraph* 에서 기본 함수들을 가져와  생성됐습니다. 이제 플러그인에서나 파이썬 콘솔에서 직접 이 라이브러리의 메소드를 사용할 수 있습니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:31
+msgid "General information"
+msgstr "일반 정보"
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:33
+msgid "Briefly, a typical use case can be described as:"
+msgstr "이 라이브러리의 전형적인 용도를 간단히 설명하면 다음과 같습니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:35
+msgid "create graph from geodata (usually polyline vector layer)"
+msgstr "공간 데이터(일반적으로 폴리라인 벡터 레이어)로부터 그래프 생성"
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:36
+msgid "run graph analysis"
+msgstr "그래프 분석 실행"
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:37
+msgid "use analysis results (for example, visualize them)"
+msgstr "분석 결과 이용(예를 들어 분석 결과의 시각화 등)"
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:40
+msgid "Building a graph"
+msgstr "그래프 만들기"
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:42
+msgid ""
+"The first thing you need to do --- is to prepare input data, that is to "
+"convert a vector layer into a graph. All further actions will use this "
+"graph, not the layer."
+msgstr "가장 먼저 해야 할 일은 입력 데이터를 준비하는 것인데, 벡터 레이어를 그래프(수학적으로 간략화된 연결관계)로 변환하는 것입니다. 이후의 모든 작업은 레이어가 아니라 이 그래프를 사용합니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:46
+msgid ""
+"As a source we can use any polyline vector layer. Nodes of the polylines "
+"become graph vertexes, and segments of the polylines are graph edges. If "
+"several nodes have the same coordinates then they are the same graph vertex."
+" So two lines that have a common node become connected to each other."
+msgstr "어떤 폴리라인 벡터 레이어라도 소스로 사용할 수 있습니다. 폴리라인의 노드(node)는 그래프의 버텍스(vertex)가 되고, 폴리라인의 선분(segment)은 그래프의 엣지(edge)가 됩니다. 노드 몇 개가 동일한 좌표에 있을 경우 그 노드들은 동일한 그래프 버텍스가 됩니다. 따라서 공통 노드를 가진 2개의 선분은 서로 연결됩니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:51
+msgid ""
+"Additionally, during graph creation it is possible to \"fix\" (\"tie\") to "
+"the input vector layer any number of additional points. For each additional "
+"point a match will be found --- the closest graph vertex or closest graph "
+"edge. In the latter case the edge will be split and a new vertex added."
+msgstr "또, 그래프 생성 중에 입력 벡터 레이어에 추가적인 포인트를 몇 개라도 \"고정\"(다른 용어로는 \"결속\") 시킬 수 있습니다. 각 추가 포인트에 대응하는, 가장 가까운 그래프 버텍스 또는 가장 가까운 그래프 엣지를 찾을 것입니다. 후자의 경우 엣지가 나뉘어 새 버텍스가 추가됩니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:56
+msgid ""
+"Vector layer attributes and length of an edge can be used as the properties "
+"of an edge."
+msgstr "벡터 레이어의 속성과 엣지 길이를 그래프 엣지의 속성으로 쓸 수 있습니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:59
+msgid ""
+"Converting from a vector layer to the graph is done using the `Builder "
+"<https://en.wikipedia.org/wiki/Builder_pattern>`_ programming pattern. A "
+"graph is constructed using a so-called Director. There is only one Director "
+"for now: :api:`QgsLineVectorLayerDirector "
+"<classQgsLineVectorLayerDirector.html>`. The director sets the basic "
+"settings that will be used to construct a graph from a line vector layer, "
+"used by the builder to create the graph. Currently, as in the case with the "
+"director, only one builder exists: :class:`QgsGraphBuilder "
+"<qgis.analysis.QgsGraphBuilder>`, that creates :class:`QgsGraph "
+"<qgis.analysis.QgsGraph>` objects. You may want to implement your own "
+"builders that will build a graphs compatible with such libraries as `BGL "
+"<https://www.boost.org/doc/libs/1_48_0/libs/graph/doc/index.html>`_ or "
+"`NetworkX <https://networkx.lanl.gov/>`_."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:71
+msgid ""
+"To calculate edge properties the programming pattern `strategy "
+"<https://en.wikipedia.org/wiki/Strategy_pattern>`_ is used. For now only "
+":api:`QgsDistanceArcProperter <classQgsDistanceArcProperter.html>` strategy "
+"is available, that takes into account the length of the route. You can "
+"implement your own strategy that will use all necessary parameters. For "
+"example, RoadGraph plugin uses a strategy that computes travel time using "
+"edge length and speed value from attributes."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:78
+msgid "It's time to dive into the process."
+msgstr "이제 실제로 해 봅시다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:80
+msgid ""
+"First of all, to use this library we should import the networkanalysis "
+"module"
+msgstr "제일 먼저, 라이브러리를 이용하기 위해 :class:`networkanalysis` 모듈을 임포트해야 합니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:86
+msgid "Then some examples for creating a director"
+msgstr "다음은 director를 생성하는 몇 가지 방법의 예시입니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:101
+msgid ""
+"To construct a director  we should pass a vector layer, that will be used as"
+" the source for the graph structure and information about allowed movement "
+"on each road segment (one-way or bidirectional movement, direct or reverse "
+"direction). The call looks like this"
+msgstr "director를 생성하려면 벡터 레이어를 넘겨줘야 하는데, 이 레이어는 그래프 구조 및 각 도로 엣지에서 허용되는 움직임(단방향 또는 양방향, 순방향 또는 역방향)에 대한 정보를 위한 자료로 쓰이게 됩니다. 다음과 같이 함수를 호출합니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:114
+msgid "And here is full list of what these parameters mean:"
+msgstr "각각의 파라미터가 의미하는 바는 다음과 같습니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:116
+msgid "``vl`` --- vector layer used to build the graph"
+msgstr "``vl`` --- 그래프 생성에 사용되는 벡터 레이어"
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:117
+msgid ""
+"``directionFieldId`` --- index of the attribute table field, where "
+"information about roads direction is stored. If ``-1``, then don't use this "
+"info at all. An integer."
+msgstr "``directionFieldId`` --- 도로 방향에 관한 정보가 저장된 속성 테이블 필드의 인덱스. 값이 ``-1`` 일 경우 방향 정보를 전혀 사용하지 않습니다. 정수형입니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:120
+msgid ""
+"``directDirectionValue`` --- field value for roads with direct direction "
+"(moving from first line point to last one). A string."
+msgstr "``directDirectionValue`` --- 순방향(첫 번째 라인 포인트에서 마지막 라인 포인트로 이동)인 도로의 필드값. 문자열입니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:122
+msgid ""
+"``reverseDirectionValue`` --- field value for roads with reverse direction "
+"(moving from last line point to first one). A string."
+msgstr "``reverseDirectionValue`` --- 역방향(마지막 라인 포인트에서 첫 번째 포인트로 이동)인 도로의 필드값. 문자열입니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:124
+msgid ""
+"``bothDirectionValue`` --- field value for bidirectional roads (for such "
+"roads we can move from first point to last and from last to first). A "
+"string."
+msgstr "``bothDirectionValue`` --- 양방향(첫 번째 포인트에서 마지막으로도 마지막에서 첫 번째로도 이동 가능)인 도로의 필드값. 문자열입니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:126
+msgid ""
+"``defaultDirection`` --- default road direction. This value will be used for"
+" those roads where field ``directionFieldId`` is not set or has some value "
+"different from any of the three values specified above. An integer. ``1`` "
+"indicates direct direction, ``2`` indicates reverse direction, and ``3`` "
+"indicates both directions."
+msgstr "``defaultDirection`` --- 기본 도로 방향. ``directionFieldId`` 항목이 설정되지 않거나, 앞의 항목들에서 설정한 3가지 값이 아닐 경우에 이 값을 쓰게 됩니다. 정수형입니다. ``1`` 은 순방향, ``2`` 는 역방향, ``3`` 은 양방향을 의미합니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:132
+msgid ""
+"It is necessary then to create a strategy for calculating edge properties"
+msgstr "그 다음 edge 속성을 계산하기 위해 strategy를 생성해야 합니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:138
+msgid "And tell the director about this strategy"
+msgstr "그리고 drirector에게 이 strategy에 대해 알려줍니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:144
+msgid ""
+"Now we can use the builder, which will create the graph. The "
+":class:`QgsGraphBuilder <qgis.analysis.QgsGraphBuilder>` class constructor "
+"takes several arguments:"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:147
+msgid "crs --- coordinate reference system to use. Mandatory argument."
+msgstr "crs --- 사용할 좌표계. 필수적인 인자입니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:148
+msgid ""
+"otfEnabled --- use \"on the fly\" reprojection or no. By default "
+"const:`True` (use OTF)."
+msgstr "otfEnabled --- 실시간(on the fly) 재투영 사용 여부 결정. 기본값은 ``True``. "
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:150
+msgid "topologyTolerance --- topological tolerance. Default value is 0."
+msgstr "topologyTolerance --- 위상오차 허용치. 기본값은 ``0``."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:151
+msgid "ellipsoidID --- ellipsoid to use. By default \"WGS84\"."
+msgstr "ellipsoidID --- 사용할 타원체. 기본값은 ``WGS84``."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:158
+msgid ""
+"Also we can define several points, which will be used in the analysis. For "
+"example"
+msgstr "또 분석 작업에 사용할 포인트를 몇 개 다음과 같이 정의합니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:166
+msgid ""
+"Now all is in place so we can build the graph and \"tie\" these points to it"
+msgstr "이제 모든 준비가 끝났으므로 그래프를 만들고 이 포인트들을 그래프에 \"결속(tie)\"시킬 수 있습니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:172
+msgid ""
+"Building the graph can take some time (which depends on the number of "
+"features in a layer and layer size). ``tiedPoints`` is a list with "
+"coordinates of \"tied\" points. When the build operation is finished we can "
+"get the graph and use it for the analysis"
+msgstr "그래프를 만드는 데 시간이 좀 걸릴 수도 있습니다. (레이어에 있는 피처의 개수 및 레이어 크기에 따라 다릅니다.) ``tiedPoints`` 는 \"결속\"된 포인트들의 좌표 목록입니다. builder의 작업이 완료되면 분석에 이용할 수 있는 그래프를 얻게 됩니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:181
+msgid "With the next code we can get the vertex indexes of our points"
+msgstr "다음 코드를 이용하면 포인트들의 vertex 인덱스들을 얻을 수 있습니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:190
+msgid "Graph analysis"
+msgstr "그래프 분석"
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:192
+msgid ""
+"Networks analysis is used to find answers to two questions: which vertexes "
+"are connected and how to find a shortest path. To solve these problems the "
+"network analysis library provides Dijkstra's algorithm."
+msgstr "네트워크 분석은 다음 두 가지 질문에 대한 답을 찾는 데 사용됩니다. 어떤 vertex들이 연결되어 있는가? 그리고 어떻게 최단 경로를 찾을 것인가? 네트워크 분석 라이브러리는 이 문제를 해결하기 위해 데이크스트라 알고리즘(Dijkstra's algorithm)을 제공합니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:196
+msgid ""
+"Dijkstra's algorithm finds the shortest route from one of the vertexes of "
+"the graph to all the others and the values of the optimization parameters. "
+"The results can be represented as a shortest path tree."
+msgstr "데이크스트라 알고리즘은 그래프의 한 vertex에서 다른 모든 vertex로 가는 최단 경로와 최적화 파라미터의 값을 찾습니다. 그 결과는 최단 경로 트리로 나타낼 수 있습니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:200
+msgid ""
+"The shortest path tree is a directed weighted graph (or more precisely --- "
+"tree) with the following properties:"
+msgstr "최단 경로 트리는 다음과 같은 속성을 가진 방향성과 가중치가 적용된 그래프(더 정확히는 트리)입니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:203
+msgid "only one vertex has no incoming edges — the root of the tree"
+msgstr "들어오는 edge가 없는 vertex는 단 하나, 트리의 루트뿐입니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:204
+msgid "all other vertexes have only one incoming edge"
+msgstr "다른 모든 vertex는 들어오는 edge를 딱 하나 가지고 있습니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:205
+msgid ""
+"if vertex B is reachable from vertex A, then the path from A to B is the "
+"single available path and it is optimal (shortest) on this graph"
+msgstr "vertex A에서 vertex B에 도달할 수 있다면, A에서 B로의 경로는 사용할 수 있는 단 하나의 경로이며 이 그래프에서 최적(최단) 경로입니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:208
+msgid ""
+"To get the shortest path tree use the methods :meth:`shortestTree "
+"<qgis.analysis.QgsGraphAnalyzer.shortestTree>` and :meth:`dijkstra "
+"<qgis.analysis.QgsGraphAnalyzer.dijkstra>` of the :class:`QgsGraphAnalyzer "
+"<qgis.analysis.QgsGraphAnalyzer>` class. It is recommended to use the "
+":meth:`dijkstra <qgis.analysis.QgsGraphAnalyzer.dijkstra>` method because it"
+" works faster and uses memory more efficiently."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:215
+msgid ""
+"The :meth:`shortestTree <qgis.analysis.QgsGraphAnalyzer.shortestTree>` "
+"method is useful when you want to walk around the shortest path tree. It "
+"always creates a new graph object (QgsGraph) and accepts three variables:"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:220
+msgid "source --- input graph"
+msgstr "source --- 입력 그래프"
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:221
+msgid ""
+"startVertexIdx --- index of the point on the tree (the root of the tree)"
+msgstr "startVertexIdx --- 트리에 있는 포인트의 인덱스 (트리의 루트)"
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:222
+msgid "criterionNum --- number of edge property to use (started from 0)."
+msgstr "criterionNum --- 사용할 경계선 속성의 개수 (0부터 시작)"
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:228
+msgid ""
+"The :meth:`dijkstra <qgis.analysis.QgsGraphAnalyzer.dijkstra>` method has "
+"the same arguments, but returns two arrays. In the first array element i "
+"contains index of the incoming edge or -1 if there are no incoming edges. In"
+" the second array element i contains distance from the root of the tree to "
+"vertex i or DOUBLE_MAX if vertex i is unreachable from the root."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:239
+msgid ""
+"Here is some very simple code to display the shortest path tree using the "
+"graph created with the :meth:`shortestTree "
+"<qgis.analysis.QgsGraphAnalyzer.shortestTree>` method (select linestring "
+"layer in :guilabel:`Layers` panel and replace coordinates with your own)."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:244
+msgid ""
+"Use this code only as an example, it creates a lot of :class:`QgsRubberBand "
+"<qgis.gui.QgsRubberBand>` objects and may be slow on large datasets."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:281
+msgid ""
+"Same thing but using the :meth:`dijkstra "
+"<qgis.analysis.QgsGraphAnalyzer.dijkstra>` method"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:318
+msgid "Finding shortest paths"
+msgstr "최단 경로 탐색"
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:320
+msgid ""
+"To find the optimal path between two points the following approach is used. "
+"Both points (start A and end B) are \"tied\" to the graph when it is built. "
+"Then using the :meth:`shortestTree "
+"<qgis.analysis.QgsGraphAnalyzer.shortestTree>` or :meth:`dijkstra "
+"<qgis.analysis.QgsGraphAnalyzer.dijkstra>` method we build the shortest path"
+" tree with root in the start point A. In the same tree we also find the end "
+"point B and start to walk through the tree from point B to point A. The "
+"whole algorithm can be written as"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:338
+msgid ""
+"At this point we have the path, in the form of the inverted list of vertexes"
+" (vertexes are listed in reversed order from end point to start point) that "
+"will be visited during traveling by this path."
+msgstr "이 시점에서 이 경로를 지나가는 동안 거치게 될 vertex의 역순 목록의 형태로 경로를 얻게 됩니다. (vertex들이 종료점에서 시작점의 순서로 역순으로 나열됩니다.)"
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:342
+msgid ""
+"Here is the sample code for QGIS Python Console (you will need to select "
+"linestring layer in TOC and replace coordinates in the code with yours) that"
+" uses the :meth:`shortestTree <qgis.analysis.QgsGraphAnalyzer.shortestTree>`"
+" method"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:395
+msgid ""
+"And here is the same sample but using the :meth:`dijkstra "
+"<qgis.analysis.QgsGraphAnalyzer.dijkstra>` method"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:445
+msgid "Areas of availability"
+msgstr "도달 가능 범위"
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:447
+msgid ""
+"The area of availability for vertex A is the subset of graph vertexes that "
+"are accessible from vertex A and the cost of the paths from A to these "
+"vertexes are not greater that some value."
+msgstr "vertex A의 도달 가능 범위(area of availability)란 vertex A에서 접근할 수 있고, vertex A에서 이 vertex들까지의 경로 비용이 지정된 값을 초과하지 않는, 그래프 vertex들의 부분집합을 말합니다. "
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:451
+msgid ""
+"More clearly this can be shown with the following example: \"There is a fire"
+" station. Which parts of city can a fire truck reach in 5 minutes? 10 "
+"minutes? 15 minutes?\". Answers to these questions are fire station's areas "
+"of availability."
+msgstr "다음 질문을 통해 이를 더 명확히 알 수 있습니다. \"소방서가 있다. 소방차가 5분/10분/15분 안에 도착할 수 있는 도시의 구역은 어디인가?\" 이 질문에 대한 답이 바로 소방서의 도달 가능 범위입니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:456
+msgid ""
+"To find the areas of availability we can use the :meth:`dijkstra "
+"<qgis.analysis.QgsGraphAnalyzer.dijkstra>` method of the "
+":class:`QgsGraphAnalyzer <qgis.analysis.QgsGraphAnalyzer>` class. It is "
+"enough to compare the elements of the cost array with a predefined value. If"
+" cost[i] is less than or equal to a predefined value, then vertex i is "
+"inside the area of availability, otherwise it is outside."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:463
+msgid ""
+"A more difficult problem is to get the borders of the area of availability. "
+"The bottom border is the set of vertexes that are still accessible, and the "
+"top border is the set of vertexes that are not accessible. In fact this is "
+"simple: it is the availability border based on the edges of the shortest "
+"path tree for which the source vertex of the edge is accessible and the "
+"target vertex of the edge is not."
+msgstr "도달 가능 범위의 경계를 구하는 일은 좀 더 어려운 문제입니다. 하단 경계는 도달 가능한 vertex들의 집합이고, 상단 경계는 도달 불가능한 vertex들의 집합입니다. 사실 단순합니다.  도달 가능 범위의 경계는 edge의 윈본 vertex가 접근 가능한 vertex이고, edge의 대상 vertex가 접근 불가능한 vertex인 최단경로 트리의 edge들에 기반한 경계선입니다."
+
+#: ../../source/docs/pyqgis_developer_cookbook/network_analysis.rst:470
+msgid "Here is an example"
+msgstr "다음은 그 예시입니다."
+
+#~ msgid ""
+#~ "Converting from a vector layer to the graph is done using the `Builder "
+#~ "<http://en.wikipedia.org/wiki/Builder_pattern>`_ programming pattern. A "
+#~ "graph is constructed using a so-called Director. There is only one Director "
+#~ "for now: `QgsLineVectorLayerDirector "
+#~ "<http://qgis.org/api/classQgsLineVectorLayerDirector.html>`_. The director "
+#~ "sets the basic settings that will be used to construct a graph from a line "
+#~ "vector layer, used by the builder to create the graph. Currently, as in the "
+#~ "case with the director, only one builder exists: `QgsGraphBuilder "
+#~ "<http://qgis.org/api/classQgsGraphBuilder.html>`_, that creates `QgsGraph "
+#~ "<http://qgis.org/api/classQgsGraph.html>`_ objects. You may want to "
+#~ "implement your own builders that will build a graphs compatible with such "
+#~ "libraries as `BGL "
+#~ "<http://www.boost.org/doc/libs/1_48_0/libs/graph/doc/index.html>`_ or "
+#~ "`NetworkX <http://networkx.lanl.gov/>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To calculate edge properties the programming pattern `strategy "
+#~ "<http://en.wikipedia.org/wiki/Strategy_pattern>`_ is used. For now only "
+#~ "`QgsDistanceArcProperter "
+#~ "<http://qgis.org/api/classQgsDistanceArcProperter.html>`_ strategy is "
+#~ "available, that takes into account the length of the route. You can "
+#~ "implement your own strategy that will use all necessary parameters. For "
+#~ "example, RoadGraph plugin uses a strategy that computes travel time using "
+#~ "edge length and speed value from attributes."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To get the shortest path tree use the methods :func:`shortestTree` and "
+#~ ":func:`dijkstra` of `QgsGraphAnalyzer "
+#~ "<http://qgis.org/api/classQgsGraphAnalyzer.html>`_ class. It is recommended "
+#~ "to use method :func:`dijkstra` because it works faster and uses memory more "
+#~ "efficiently."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Here is some very simple code to display the shortest path tree using the "
+#~ "graph created with the :func:`shortestTree` method (select linestring layer "
+#~ "in TOC and replace coordinates with your own). **Warning**: use this code "
+#~ "only as an example, it creates a lots of `QgsRubberBand "
+#~ "<http://qgis.org/api/classQgsRubberBand.html>`_ objects and may be slow on "
+#~ "large data-sets."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Converting from a vector layer to the graph is done using the `Builder "
+#~ "<https://en.wikipedia.org/wiki/Builder_pattern>`_ programming pattern. A "
+#~ "graph is constructed using a so-called Director. There is only one Director "
+#~ "for now: `QgsLineVectorLayerDirector "
+#~ "<https://qgis.org/api/classQgsLineVectorLayerDirector.html>`_. The director "
+#~ "sets the basic settings that will be used to construct a graph from a line "
+#~ "vector layer, used by the builder to create the graph. Currently, as in the "
+#~ "case with the director, only one builder exists: `QgsGraphBuilder "
+#~ "<https://qgis.org/api/classQgsGraphBuilder.html>`_, that creates `QgsGraph "
+#~ "<https://qgis.org/api/classQgsGraph.html>`_ objects. You may want to "
+#~ "implement your own builders that will build a graphs compatible with such "
+#~ "libraries as `BGL "
+#~ "<https://www.boost.org/doc/libs/1_48_0/libs/graph/doc/index.html>`_ or "
+#~ "`NetworkX <https://networkx.lanl.gov/>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Now we can use the builder, which will create the graph. The QgsGraphBuilder"
+#~ " class constructor takes several arguments:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To get the shortest path tree use the methods :func:`shortestTree` and "
+#~ ":func:`dijkstra` of `QgsGraphAnalyzer "
+#~ "<https://qgis.org/api/classQgsGraphAnalyzer.html>`_ class. It is recommended"
+#~ " to use method :func:`dijkstra` because it works faster and uses memory more"
+#~ " efficiently."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The :func:`shortestTree` method is useful when you want to walk around the "
+#~ "shortest path tree. It always creates a new graph object (QgsGraph) and "
+#~ "accepts three variables:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The :func:`dijkstra` method has the same arguments, but returns two arrays. "
+#~ "In the first array element i contains index of the incoming edge or -1 if "
+#~ "there are no incoming edges. In the second array element i contains distance"
+#~ " from the root of the tree to vertex i or DOUBLE_MAX if vertex i is "
+#~ "unreachable from the root."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Here is some very simple code to display the shortest path tree using the "
+#~ "graph created with the :func:`shortestTree` method (select linestring layer "
+#~ "in TOC and replace coordinates with your own). **Warning**: use this code "
+#~ "only as an example, it creates a lots of `QgsRubberBand "
+#~ "<https://qgis.org/api/classQgsRubberBand.html>`_ objects and may be slow on "
+#~ "large data-sets."
+#~ msgstr ""
+
+#~ msgid "Same thing but using :func:`dijkstra` method"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To find the optimal path between two points the following approach is used. "
+#~ "Both points (start A and end B) are \"tied\" to the graph when it is built. "
+#~ "Then using the methods :func:`shortestTree` or :func:`dijkstra` we build the"
+#~ " shortest path tree with root in the start point A. In the same tree we also"
+#~ " find the end point B and start to walk through the tree from point B to "
+#~ "point A. The whole algorithm can be written as"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Here is the sample code for QGIS Python Console (you will need to select "
+#~ "linestring layer in TOC and replace coordinates in the code with yours) that"
+#~ " uses method :func:`shortestTree`"
+#~ msgstr ""
+
+#~ msgid "And here is the same sample but using :func:`dijkstra` method"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To find the areas of availability we can use method :func:`dijkstra` of the "
+#~ ":class:`QgsGraphAnalyzer` class. It is enough to compare the elements of the"
+#~ " cost array with a predefined value. If cost[i] is less than or equal to a "
+#~ "predefined value, then vertex i is inside the area of availability, "
+#~ "otherwise it is outside."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Converting from a vector layer to the graph is done using the `Builder "
+#~ "<https://en.wikipedia.org/wiki/Builder_pattern>`_ programming pattern. A "
+#~ "graph is constructed using a so-called Director. There is only one Director "
+#~ "for now: `QgsLineVectorLayerDirector "
+#~ "<https://qgis.org/api/classQgsLineVectorLayerDirector.html>`_. The director "
+#~ "sets the basic settings that will be used to construct a graph from a line "
+#~ "vector layer, used by the builder to create the graph. Currently, as in the "
+#~ "case with the director, only one builder exists: :class:`QgsGraphBuilder "
+#~ "<qgis.analysis.QgsGraphBuilder>`, that creates :class:`QgsGraph "
+#~ "<qgis.analysis.QgsGraph>` objects. You may want to implement your own "
+#~ "builders that will build a graphs compatible with such libraries as `BGL "
+#~ "<https://www.boost.org/doc/libs/1_48_0/libs/graph/doc/index.html>`_ or "
+#~ "`NetworkX <https://networkx.lanl.gov/>`_."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To calculate edge properties the programming pattern `strategy "
+#~ "<https://en.wikipedia.org/wiki/Strategy_pattern>`_ is used. For now only "
+#~ "`QgsDistanceArcProperter "
+#~ "<https://qgis.org/api/classQgsDistanceArcProperter.html>`_ strategy is "
+#~ "available, that takes into account the length of the route. You can "
+#~ "implement your own strategy that will use all necessary parameters. For "
+#~ "example, RoadGraph plugin uses a strategy that computes travel time using "
+#~ "edge length and speed value from attributes."
+#~ msgstr ""
