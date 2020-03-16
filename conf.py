@@ -132,7 +132,15 @@ sys.path.insert(0, os.path.abspath('../../'))
 with open('docs_conf.yml', 'r') as f:
     cfg = yaml.safe_load(f)
 
-from datetime import datetime
+html_context = {
+    # When a QGIS version reaches end of life, set this to True to show an information
+    # message on the top of the page.
+    'outdated': False,
+    # When a new QGIS version is released, set this to False to remove the disclaimer
+    # information message on the top of the page.
+    'isTesting': True
+}
+
 supported_languages = cfg['supported_languages'].replace(' ','').split(',')
 version_list = cfg['version_list'].replace(' ','').split(',')
 url = cfg['docs_url']
