@@ -4855,7 +4855,7 @@ Parameters
      - ``INPUT``
      - [vector: any]
      - Input vector layer (with non-NULL geometries)
-   * - **Also remove empty geometries**
+   * - **Also remove empty geometries** |314|
      - ``REMOVE_EMPTY``
      - [boolean]
      - 
