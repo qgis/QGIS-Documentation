@@ -1,0 +1,568 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# 
+# Translators:
+# fairtommy <fairtommy@gmail.com>, 2018
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project testing\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-04-07 15:33+0200\n"
+"PO-Revision-Date: 2016-07-18 09:30+0000\n"
+"Last-Translator: fairtommy <fairtommy@gmail.com>, 2018\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:10
+msgid "User Authentication Workflows"
+msgstr "ユーザー認証ワークフロー"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:22
+msgid "Generic user workflow"
+msgstr "一般的なユーザーのワークフロー"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:25
+msgid "HTTP(S) authentication"
+msgstr "HTTP（S）認証"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:27
+msgid ""
+"One of the most common resource connections is via HTTP(S), e.g. web mapping"
+" servers, and authentication method plugins often work for these types of "
+"connections. Method plugins have access to the HTTP request object and can "
+"manipulate both the request as well as its headers. This allows for many "
+"forms of internet-based authentication. When connecting via HTTP(S) using "
+"the standard username/password authentication method will attempt HTTP BASIC"
+" authentication upon connection."
+msgstr ""
+"最も一般的なリソース接続の1つは、HTTP(S)を介して例えばWebマッピングサーバーで、認証方式のプラグインは多くの場合に接続のこれらのタイプのために機能します。方法プラグインは、HTTPリクエスト・オブジェクトにアクセスし、要求、ならびにそのヘッダの両方を操作できます。これにより、インターネットベースの認証の多くの形態が可能になります。標準のユーザー名/パスワードを使用してHTTP(S)経由で接続するときは、認証方法は接続時にHTTP"
+" BASIC認証を試みます。"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:40
+msgid "Configuring a WMS connection for HTTP BASIC"
+msgstr "HTTP BASICのためのWMS接続の設定"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:43
+msgid "Database authentication"
+msgstr "データベース認証"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:45
+msgid ""
+"Connections to database resources are generally stored as ``key=value`` "
+"pairs, which will expose usernames and (optionally) passwords, if *not* "
+"using an authentication configuration. When configuring with the new auth "
+"system, the ``key=value`` will be an abstracted representation of the "
+"credentials, e.g. ``authfg=81t21b9``."
+msgstr ""
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:56
+msgid "Configuring a Postgres SSL-with-PKI connection"
+msgstr "PostgresのPKI付SSLの接続を設定します"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:59
+msgid "PKI authentication"
+msgstr "PKI認証"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:61
+msgid ""
+"When configuring PKI components within the authentication system, you have "
+"the option of importing components into the database or referencing "
+"component files stored on your filesystem. The latter may be useful if such "
+"components change frequently, or where the components will be replaced by a "
+"system administrator. In either instance you will need to store any "
+"passphrase needed to access private keys within the database."
+msgstr ""
+"認証システム内のPKIコンポーネントを設定するときは、データベースにコンポーネントをインポートしたり、ファイルシステムに保存されているコンポーネントファイルを参照するオプションがあります。このような成分が頻繁に変更、又はここでコンポーネントは、システム管理者によって置換される場合、後者は有用であり得ます。いずれの場合では、データベース内の秘密鍵にアクセスするために必要なすべてのパスフレーズを保存する必要があります。"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:73
+msgid "PKI configuration workflow"
+msgstr "PKI設定ワークフロー"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:75
+msgid ""
+"All PKI components can be managed in separate editors within the "
+"**Certificate Manager**, which can be accessed in the "
+":guilabel:`Authentication` tab in QGIS `Options` dialog "
+"(:menuselection:`Settings --> Options`) by clicking the :guilabel:`Manage "
+"Certificates` button."
+msgstr ""
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:85
+msgid "Opening the Certificate Manager"
+msgstr "証明書マネージャを開く"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:87
+msgid ""
+"In the :guilabel:`Certificate Manager`, there are editors for "
+"**Identities**, **Servers** and **Authorities**. Each of these are contained"
+" in their own tabs, and are described below in the order they are "
+"encountered in the workflow chart above. The tab order is relative to "
+"frequently accessed editors once you are accustomed to the workflow."
+msgstr ""
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:95
+msgid ""
+"Because all authentication system edits write immediately to the "
+"authentication database, there is no need to click the :guilabel:`Options` "
+"dialog :guilabel:`OK` button for any changes to be saved. This is unlike "
+"other settings in the Options dialog."
+msgstr ""
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:101
+msgid "Authorities"
+msgstr "当局"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:103
+msgid ""
+"You can manage available Certificate Authorities (CAs) from the "
+"**Authorities** tab in the **Certificate manager** from the "
+"**Authentication** tab of the QGIS **Options** dialog."
+msgstr ""
+"QGISの **オプション** ダイアログの **認証** タブから、 **証明書マネージャ** 中の **当局** "
+"タブから入手できる証明機関（CA）を管理できます。"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:107
+msgid ""
+"As referenced in the workflow chart above, the first step is to import or "
+"reference a file of CAs. This step is optional, and may be unnecessary if "
+"your PKI trust chain originates from root CAs already installed in your "
+"operating system (OS), such as a certificate from a commercial certificate "
+"vendor. If your authenticating root CA is not in the OS's trusted root CAs, "
+"it will need to be imported or have its file system path referenced. "
+"(Contact your system administrator if unsure.)"
+msgstr ""
+"上記ワークフローチャートで参照されるように、最初のステップは、インポートまたはCASのファイルを参照することです。このステップはオプションで、ルート認証局からごPKIの信頼チェーンの発信はすでに商用証明書ベンダーからの証明書として使用しているオペレーティングシステム（OS）にインストールした場合は不要です。あなたの認証ルートCAは、OSの信頼されたルートCAでない場合は、インポートする必要があるか、そのファイルシステムパスが参照されます。（わからない場合は、システム管理者にお問い合わせください。）"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:120
+msgid "Authorities editor"
+msgstr "当局エディタ"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:122
+msgid ""
+"By default, the root CAs from your OS are available; however, their trust "
+"settings are not inherited. You should review the certificate trust policy "
+"settings, especially if your OS root CAs have had their policies adjusted. "
+"Any certificate that is expired will be set to untrusted and will not be "
+"used in secure server connections, unless you specifically override its "
+"trust policy. To see the QGIS-discoverable trust chain for any certificate, "
+"select it and click the |metadata| :sup:`Show information for certificate`."
+msgstr ""
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:135
+msgid "Certificate info dialog"
+msgstr "証明書情報ダイアログ"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:137
+msgid ""
+"You can edit the :guilabel:`trust policy` |selectString| for any selected "
+"certificate within the chain. Any change in trust policy to a selected "
+"certificate will not be saved to the database unless the |fileSave| "
+":sup:`Save certificate trust policy change to database` button is clicked "
+"*per* selected certification. Closing the dialog will **not** apply the "
+"policy changes."
+msgstr ""
+"編集できます |selectString| :guilabel:`信頼ポリシー` "
+"をチェーン内のいずれかの選択した証明書について。選択した証明書の信頼ポリシーの変更がない限り、データベースに保存されることはありません "
+"|FileSave| :sup:`データベース` ボタンに保存した証明書の信頼ポリシーの変更は、選択した認証 *ごと* "
+"クリックします。ダイアログを閉じると、ポリシーの変更を適用 **しません** 。"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:149
+msgid "Saving the trust policy changes"
+msgstr "信頼ポリシーの変更を保存する"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:151
+msgid ""
+"You can review the filtered CAs, both intermediate and root certificates, "
+"that will be trusted for secure connections or change the default trust "
+"policy by clicking the |transformSettings| **Options** button."
+msgstr ""
+"セキュアな接続のために信頼されるフィルタのCA、両方の中間証明書とルート証明書を、確認またはクリックすることで、デフォルトの信頼ポリシーを変更できます "
+"|transformSettings| を **オプション** ボタンを押します。"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:156
+msgid ""
+"Changing the default trust policy may result in problems with secure "
+"connections."
+msgstr "デフォルトの信頼ポリシーを変更すると、安全な接続で問題が発生する可能性があります。"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:164
+msgid "Authorities options menu"
+msgstr "当局のオプションメニュー"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:166
+msgid ""
+"You can import CAs or save a file system path from a file that contains "
+"multiple CAs, or import individual CAs. The standard PEM format for files "
+"that contain multiple CA chain certifications has the root cert at the "
+"bottom of the file and all subsequently signed child certificates above, "
+"towards the beginning of the file."
+msgstr ""
+"CAをインポートしたり、複数のCAが含まれているファイルからファイルシステムパスを保存したり、個々のCAをインポートすることができます。複数のCAチェーンの証明が含まれているファイルの標準PEM形式は、ファイルの一番下にルート証明書を持っており、すべてはその後、ファイルの先頭の方に、上記の子証明書に署名しました。"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:172
+msgid ""
+"The CA certificate import dialog will find all CA certificates within the "
+"file, regardless of order, and also offers the option to import certificates"
+" that are considered invalid (in case you want to override their trust "
+"policy). You can override the trust policy upon import, or do so later "
+"within the **Authorities** editor."
+msgstr ""
+"CA証明書のインポート]ダイアログボックスが順序に関係なく、ファイル内のすべてのCA証明書を見つけ、また、（彼らの信頼ポリシーを上書きしたい場合には）無効とみなされた証明書をインポートするオプションを提供していますでしょう。インポート時に信頼ポリシーを上書きするか、後でそれを"
+"  **当局** エディタ内で行うことができます。"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:183
+msgid "Import certificates dialog"
+msgstr "証明書のインポート]ダイアログ"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:186
+msgid ""
+"If you are pasting certificate information into the :guilabel:`PEM text` "
+"field, note that encrypted certificates are not supported."
+msgstr ""
+":guilabel:`PEMのtext` フィールドに証明書情報を貼り付ける場合、暗号化された証明書がサポートされていないことに注意してください。"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:190
+msgid "Identities"
+msgstr "アイデンティティ"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:192
+msgid ""
+"You can manage available client identity bundles from the "
+":guilabel:`Identities` tab in the :guilabel:`Certificate manager` from the "
+"**Authentication** tab of the QGIS **Options** dialog. An identity is what "
+"authenticates you against a PKI-enabled service and usually consists of a "
+"client certificate and private key, either as separate files or combined "
+"into a single \"bundled\" file. The bundle or private key is often "
+"passphrase-protected."
+msgstr ""
+":guilabel:`証明書マネージャ` **認証** QGIS **オプション** ダイアログのタブ :guilabel:`アイデンティティ` "
+"タブでから入手できるクライアントIDのバンドルを管理できます。アイデンティティは、別々のファイルとして、または単一「バンドル」のファイルに結合のいずれか、PKI対応サービスに対して、あなたを認証し、通常のクライアント証明書と秘密鍵で構成するものです。バンドルまたは秘密鍵は、多くの場合、パスフレーズで保護されています。"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:199
+msgid ""
+"Once you have any Certificate Authorities (CAs) imported you can optionally "
+"import any identity bundles into the authentication database. If you do not "
+"wish to store the identities, you can reference their component file system "
+"paths within an individual authentication configuration."
+msgstr ""
+"一度何らかの証明機関（CA）をインポートされると、必要に応じて認証データベースに任意のアイデンティティバンドルをインポートできます。アイデンティティを保存したくない場合は、個別の認証設定の中でそのコンポーネントファイルシステムパスを参照できます。"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:209
+msgid "Identities editor"
+msgstr "アイデンティティエディタ"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:211
+msgid ""
+"When importing an identity bundle, it can be passphrase-protected or "
+"unprotected, and can contain CA certificates forming a trust chain. Trust "
+"chain certifications will not be imported here; they can be added separately"
+" under the :guilabel:`Authorities` tab."
+msgstr ""
+"アイデンティティ・バンドルをインポートする場合、パスフレーズで保護または非保護することができ、かつ信頼チェーンを形成するCA証明書を含めることができます。トラストチェーンの認定は、ここではインポートされません。"
+" :guilabel:`機関` タブ下でそれらは別途追加できます。"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:216
+msgid ""
+"Upon import the bundle's certificate and private key will be stored in the "
+"database, with the key's storage encrypted using the QGIS master password. "
+"Subsequent usage of the stored bundle from the database will only require "
+"input of the master password."
+msgstr ""
+"インポート時には、バンドルの証明書と秘密鍵は、鍵の保管は、QGISのマスターパスワードを使用して暗号化し、データベースに保存されます。データベースから記憶された束のその後の使用は、マスターパスワードの入力を必要とします。"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:221
+msgid ""
+"Personal identity bundles consisting of PEM/DER (.pem/.der) and PKCS#12 "
+"(.p12/.pfx) components are supported. If a key or bundle is passphrase-"
+"protected, the password will be required to validate the component prior to "
+"import. Likewise, if the client certificate in the bundle is invalid (for "
+"example, its effective date has not yet started or has elapsed) the bundle "
+"can not be imported."
+msgstr ""
+"個人のアイデンティティは、PEM / DER（.PEM / .DER）とPKCS＃12からなるバンドル（.P12 / "
+".PFX）コンポーネントがサポートされています。キーまたはバンドルがパスフレーズで保護されている場合は、パスワードをインポートする前にコンポーネントを検証する必要があります。バンドル内のクライアント証明書が無効である場合同様に、バンドルをインポートすることはできません（例えば、その効果的な日付はまだ開始されていないか、経過しています）。"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:233
+msgid "PEM/DER identity import"
+msgstr "PEM / DERのアイデンティティのインポート"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:240
+msgid "PKCS#12 identity import"
+msgstr "PKCS#12 identity import"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:243
+msgid "Handling bad layers"
+msgstr "悪いレイヤーの取り扱い"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:245
+msgid ""
+"Occasionally, the authentication configuration ID that is saved with a "
+"project file is no longer valid, possibly because the current authentication"
+" database is different than when the project was last saved, or due to a "
+"credentials mismatch. In such cases the :guilabel:`Handle bad layers` dialog"
+" will be presented upon QGIS launch."
+msgstr ""
+"時折、プロジェクトファイルと一緒に保存された認証設定IDが、おそらく現在の認証データベースがプロジェクトが最後に保存されたときと異なったり資格情報の不一致のせいで、もはや有効ではありません。このような場合には"
+" :guilabel:`悪いレイヤーを処理` ダイアログがQGISの起動時に表示されます。"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:256
+msgid "Handle bad layers with authentication"
+msgstr "認証で悪いレイヤーを処理します"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:258
+msgid ""
+"If a data source is found to have an authentication configuration ID "
+"associated with it, you will be able to edit it. Doing so will automatically"
+" edit the data source string, much in the same way as opening the project "
+"file in a text editor and editing the string."
+msgstr ""
+"データソースは、それに関連付けられた認証設定のIDを持つことが判明した場合、それを編集できます。そうすることで、自動的にテキストエディタでプロジェクトファイルを開くと、文字列の編集と同じように多くのデータソース文字列を編集します。"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:268
+msgid "Edit bad layer's authentication config ID"
+msgstr "悪いレイヤーの認証設定IDを編集します"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:271
+msgid "Changing authentication config ID"
+msgstr "認証の設定のIDを変更する"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:273
+msgid ""
+"Occasionally, you will need to change the authentication configuration ID "
+"that is associated with accessing a resource. There are instances where this"
+" is useful:"
+msgstr ""
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:277
+msgid ""
+"**Resource auth config ID is no longer valid**: This can occur when you have"
+" switched auth databases add need to *align* a new configuration to the ID "
+"already associated with a resource."
+msgstr ""
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:280
+msgid ""
+"**Shared project files**: If you intended to share projects between users, "
+"e.g. via a shared file server, you can *predefine* a 7-character (containing"
+" **a-z** and/or **0-9**) that is associated with the resource. Then, "
+"individual users change the ID of an authentication configuration that is "
+"specific to their credentials of the resource. When the project is opened, "
+"the ID is found in the authentication database, but the credentials are "
+"different per user."
+msgstr ""
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:292
+msgid ""
+"Changing a layer's authentication config ID (unlocked yellow text field)"
+msgstr "レイヤーの認証設定ID（ロック解除された黄色のテキストフィールド）を変更します"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:296
+msgid ""
+"Changing the auth config ID is considered an advanced operation and should "
+"only be done with full knowledge as to why it is necessary. This is why "
+"there is a lock button that needs clicked, to unlock the ID's text field "
+"prior to editing the ID."
+msgstr ""
+"認証設定IDを変更することは高度な操作と考えられ、なぜそれが必要であるかの完全な知識を持ってのみ行われるべきです。IDを編集するのに先立ってIDのテキストフィールドのロックを解除するためにクリックされる必要のあるロックボタンがあるのはこのためです。"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:302
+msgid "QGIS Server support"
+msgstr "QGISサーバーのサポート"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:304
+msgid ""
+"When using a project file, with layers that have authentication "
+"configurations, as a basis for a map in QGIS Server, there are a couple of "
+"additional setup steps necessary for QGIS to load the resources:"
+msgstr ""
+"認証設定を持っているレイヤーがあるプロジェクトファイルをQGISサーバー中の地図の基礎として使用する場合は、QGISでそれらのリソースをロードするために必要な追加の設定手順がいくつかあります："
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:308
+msgid "Authentication database needs to be available"
+msgstr "認証データベースが利用できるようにする必要があります"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:309
+msgid "Authentication database's master password needs to be available"
+msgstr "認証データベースのマスターパスワードが利用できるようにする必要があります"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:311
+msgid ""
+"When instantiating the authentication system, Server will create or use "
+":file:`qgis-auth.db` in :file:`~/.qgis2/` or the directory defined by the "
+"``QGIS_AUTH_DB_DIR_PATH`` environment variable. It may be that the Server's "
+"user has no HOME directory, in which case, use the environment variable to "
+"define a directory that the Server's user has read/write permissions and is "
+"not located within the web-accessible directories."
+msgstr ""
+"認証システムをインスタンス化する場合、サーバーによって :file:`QGIS-auth.db` 中 :file:`~/.qgis2/`  や "
+"``QGIS_AUTH_DB_DIR_PATH`` "
+"環境変数で定義されているディレクトリが作成または使用されます。これはサーバーのユーザーがホームディレクトリを持っていないということかもしれません。この場合は環境変数を使用して、サーバーのユーザーが読み取り/書き込み権限を持っていてウェブアクセス可能なディレクトリ内に存在しないディレクトリを定義します。"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:318
+msgid ""
+"To pass the master password to Server, write it to the first line of file at"
+" a path on the file system readable by the Server processes user and defined"
+" using the ``QGIS_AUTH_PASSWORD_FILE`` environment variable. Ensure to limit"
+" the file as only readable by the Server's process user and to not store the"
+" file within web-accessible directories."
+msgstr ""
+"サーバーにマスターパスワードを渡すには、サーバー・プロセスのユーザーが読み込み可能なファイルシステム上のパスにファイルの最初の行にそれを書くと "
+"``QGIS_AUTH_PASSWORD_FILE`` "
+"環境変数を使用して定義されました。サーバーのプロセスのユーザーによってのみ読めるようファイルを制限し、ウェブアクセス可能なディレクトリ内のファイルを保存しないように確認してください。"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:326
+msgid ""
+"``QGIS_AUTH_PASSWORD_FILE`` variable will be removed from the Server "
+"environment immediately after accessing."
+msgstr ""
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:330
+msgid "SSL server exceptions"
+msgstr "SSLサーバーの例外"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:332
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:334
+msgid "\\"
+msgstr "\\"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:341
+msgid "SSL server exception"
+msgstr "SSLサーバーの例外"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:343
+msgid ""
+"You can manage SSL server configurations and exceptions from the **Servers**"
+" tab in the **Authentication** section of the QGIS **Options** dialog."
+msgstr ""
+"QGISの **オプション** ダイアログの **認証** セクション中の **サーバー** タブから、SSLサーバーの設定および例外を管理できます。"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:346
+msgid ""
+"Sometimes, when connecting to an SSL server, there are errors with the SSL "
+"\"handshake\" or the server's certificate. You can ignore those errors or "
+"create an SSL server configuration as an exception. This is similar to how "
+"web browsers allow you to override SSL errors, but with more granular "
+"control."
+msgstr ""
+"SSLサーバーへの接続時に時々、SSL「握手」や、サーバーの証明書でエラーがあります。これらのエラーを無視するか、例外としてSSLサーバー構成を作成できます。これは、Webブラウザを使用してSSLエラーをどのように上書きできるかに似ていますが、より細かく制御しています。"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:352
+msgid ""
+"You should not create an SSL server configuration unless you have complete "
+"knowledge of the entire SSL setup between the server and client. Instead, "
+"report the issue to the server administrator."
+msgstr ""
+"サーバーとクライアントの間で全体のSSLの設定の完全な知識を持っていない限り、SSLのサーバー構成を作成しないでください。代わりに、サーバー管理者に問題を報告してください。"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:357
+msgid ""
+"Some PKI setups use a completely different CA trust chain to validate client"
+" identities than the chain used to validate the SSL server certificate. In "
+"such circumstances, any configuration created for the connecting server will"
+" not necessarily fix an issue with the validation of your client identity, "
+"and only your client identity's issuer or server administrator can fix the "
+"issue."
+msgstr ""
+"一部のPKIのセットアップは、SSLサーバー証明書を検証するために使用するチェーンよりも、クライアントのアイデンティティを検証するために完全に異なるCAの信頼チェーンを使用します。このような状況では、接続するサーバー用に作成された任意の構成は、必ずしもあなたのクライアントのアイデンティティの検証の問題を解決しないだろう、自分のクライアントIDの発行者またはサーバー管理者だけが問題を解決できます。"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:363
+msgid ""
+"You can pre-configure an SSL server configuration by clicking the |signPlus|"
+" button. Alternatively, you can add a configuration when an SSL error occurs"
+" during a connection and you are presented with an **SSL Error** dialog "
+"(where the error can be ignored temporarily or saved to the database and "
+"ignored):"
+msgstr ""
+"|signPlus| ボタンをクリックすることにより、SSLサーバーの設定を事前に設定できます。SSLエラーが接続時に発生しますが **SSLエラー**"
+" ダイアログが表示されたときに代わりに、設定を追加できます（ここではエラーは一時的に無視されるか、またはデータベースに保存されて無視できます）："
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:373
+msgid "Manually adding configuration"
+msgstr "手動で設定を追加"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:380
+msgid "Adding configuration during SSL error"
+msgstr "SSLエラー時の設定を追加"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:382
+msgid ""
+"Once an SSL configuration is saved to the database, it can be edited or "
+"deleted."
+msgstr "SSLの設定がデータベースに保存されれば、編集したり削除できます。"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:389
+msgid "Existing SSL configuration"
+msgstr "既存のSSL設定"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:396
+msgid "Editing an existing SSL configuration"
+msgstr "既存のSSL設定を編集します"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:398
+msgid ""
+"If you want to pre-configure an SSL configuration and the import dialog is "
+"not working for your server's connection, you can manually trigger a "
+"connection via the **Python Console** by running the following code (replace"
+" ``https://bugreports.qt-project.org`` with the URL of your server)::"
+msgstr ""
+"サーバーの接続のために働いていないSSLの設定とインポートダイアログを事前に設定したい場合は、手動で、次のコードを実行して、 "
+"**Pythonコンソール** を介した接続をトリガすることができます：（ ``https://bugreports.qt-project.org`` "
+"をサーバーのURLと置き換えてください）::"
+
+#: ../../source/docs/user_manual/auth_system/auth_workflows.rst:407
+msgid ""
+"This will open an SSL error dialog if any errors occur, where you can choose"
+" to save the configuration to the database."
+msgstr "これにより、何かエラーが発生した場合はSSLエラーダイアログが開き、設定をデータベースに保存することを選択できます。"
+
+#~ msgid "|updatedisclaimer|"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "All PKI components can be managed in separate editors within the "
+#~ "**Certificate Manager**, which can be accessed in the "
+#~ ":guilabel:`Authentication` tab in QGIS `Options` dialog "
+#~ "(:menuselection:`Settings --> Options`) by clicking the **[Manage "
+#~ "certificates]** button."
+#~ msgstr ""
+#~ "すべてのPKIコンポーネントは **証明書マネージャ** 内の別のエディタで管理できます、これは **[証明書の管理]** "
+#~ "ボタンをクリックすることによってQGIS `オプション` ダイアログ( :menuselection:`設定 --> オプション` )中の "
+#~ ":guilabel:`認証` タブでアクセスできます。"
+
+#~ msgid ""
+#~ "Because all authentication system edits write immediately to the "
+#~ "authentication database, there is no need to click the :guilabel:`Options` "
+#~ "dialog **[OK]** button for any changes to be saved. This is unlike other "
+#~ "settings in the Options dialog."
+#~ msgstr ""
+#~ ":guilabel:`オプション` ダイアログがすべての認証システムの編集は認証データベースにすぐに書き込みますので、すべての変更の保存するための "
+#~ "**[OK]** ボタンをクリックする必要はありません。これは、[オプション]ダイアログの他の設定とは異なります。"
+
+#~ msgid ""
+#~ "By default, the root CAs from your OS are available; however, their trust "
+#~ "settings are not inherited. You should review the certificate trust policy "
+#~ "settings, especially if your OS root CAs have had their policies adjusted. "
+#~ "Any certificate that is expired will be set to untrusted and will not be "
+#~ "used in secure server connections, unless you specifically override its "
+#~ "trust policy. To see the QGIS-discoverable trust chain for any certificate, "
+#~ "select it and click the |propertiesWidget| :sup:`Show information for "
+#~ "certificate`."
+#~ msgstr ""
+#~ "デフォルトでは、お使いのOSからのルートCAが用意されています。しかし、それらの信頼設定は継承されません。OSのルートCAが自分のポリシーを調整持っていた場合は特に、証明書信頼ポリシー設定を確認する必要があります。有効期限が切れているすべての証明書は、信頼されていないに設定され、特にその信頼ポリシーを上書きしない限り、セキュアなサーバー接続に使用されることはありません。QGISで発見できる何らかの証明書のための信頼チェーンを参照するには、それを選択し、"
+#~ " |propertiesWidget|   :sup:`証明書のための情報を表示` をクリックします。"
+
+#~ msgid ""
+#~ "Occasionally, you will need to change the authenticationn configuration ID "
+#~ "that is associated with accessing a resource. There are instances where this"
+#~ " is useful:"
+#~ msgstr "時折、リソースへのアクセスに関連している認証n構成IDを変更する必要があります。これが有用である場合があります。"

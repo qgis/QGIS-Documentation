@@ -1,0 +1,173 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# 
+# Translators:
+# Michelle Jones <michelle99cr@hotmail.com>, 2015
+# Minerva Durán Martínez <mine_tod@yahoo.com.mx>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-28 10:31+0100\n"
+"PO-Revision-Date: 2017-09-20 01:16+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"Language-Team: Spanish (http://www.transifex.com/qgis/qgis-documentation/language/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:6
+msgid "|LS| Working with Databases in the QGIS Browser"
+msgstr "Tabajar con Bases de Datos en el Explorador de QGIS"
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:8
+msgid ""
+"In the previous 2 modules we looked at the basic concepts, features and "
+"functions of relational databases as well as extensions that let us store, "
+"manage, query and manipulate spatial data in a relational database. This "
+"section will dive deeper into how to effectively use spatial databases in "
+"QGIS."
+msgstr "En los 2 módulos anteriores, vimos los conceptos básicos, características y funciones de base de datos relacional así como extensiones que nos permitirá almacenar, administrar, consultar y manipular datos espaciales en una base de datos relacional. Esta sección se sumerge más profundamente en cómo utilizar efectivamente las base de datos espacial en QGIS."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:13
+msgid ""
+"**The goal for this lesson:** To learn how to interact with spatial "
+"databases using the QGIS Browser interface."
+msgstr "**El objetivo de esta lección:** Aprender cómo interactuar con base de datos espaciales mediante la interfaz del Explorador de QGIS."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:17
+msgid "|basic| |FA| Adding Database Tables to QGIS using the Browser"
+msgstr "Agregar tablas de base de datos a QGIS utilizando el Explorador |basic| |FA| "
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:19
+msgid ""
+"We have already briefly looked at how to add tables from a database as QGIS "
+"layers, now lets look at this in a bit more detail and look at the different"
+" ways this can be done in QGIS. Lets start by looking at the new Browser "
+"interface."
+msgstr "Ya hemos visto brevemente cómo añadir tablas de una base de datos como capas de QGIS, ahora veamos esto en detalle un poco más y veremos las diferentes maneras de como se puede hacer en QGIS. Vamos a empezar por mirar a la nueva interfaz de Explorador."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:24
+msgid "Start a new empty map in QGIS."
+msgstr "Inicie un nuevo mapa limpio en QGIS."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:25
+msgid ""
+"Open the Browser by clicking the :guilabel:`Browser` tab at the bottom of "
+"the *Layer Panel*"
+msgstr "Abra el Navegador haciendo clic en la pestaña  :guilabel:`Explorador` en el botón del *Panel de Capa*"
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:27
+msgid ""
+"Open the PostGIS portion of the tree and you should find your previously "
+"configured connection available (you may need to click the Refresh button at"
+" the top of the browser window)."
+msgstr "Abra la parte de PostGIS del árbol y deberá encontrar su conexión configurada previamente disponible (es posible que tenga que hacer clic sobre el botón Actualizar en la parte superior de la ventana del Explorador)."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:34
+msgid ""
+"Double clicking on any of the table/layers listed here will add it to the "
+"Map Canvas."
+msgstr "Haga doble clic sobre cualquiera de las tablas/capas enlistadas aquí lo añadirá al lienzo de mapa."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:37
+msgid ""
+"Right Clicking on a table/layer in this view will give you a few options. "
+"Click on the :guilabel:`Properties` item to look at the properties of the "
+"layer."
+msgstr "Haga clic derecho sobre la tabla/capa en esta vista le dará algunas opciones. Haga clic sobre el elemento  :guilabel:`Propiedades` para observar las propiedades de la capa."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:44
+msgid ""
+"Of course you can also use this interface to connect to PostGIS databases "
+"hosted on a server external to your workstation. Right clicking on the "
+"PostGIS entry in the tree will allow you to specify connection paramaters "
+"for a new connection."
+msgstr "Por supuesto que también tiene que utilizar esta interfaz para conectar a la base de datos PostGIS alojadas en un servidor externo a su estación de trabajo. Haga clic derecho sobre la entrada PostGIS en el árbol le permitirá especificar parámetros de conexión para una nueva conexión."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:51
+msgid "|basic| |FA| Adding a filtered set of records as a Layer"
+msgstr "Añadir un conjunto de registros filtrado como una capa |basic| |FA| "
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:53
+msgid ""
+"Now that we have seen how to add an entire table as a QGIS layer it might be"
+" nice to learn how to add a filtered set of records from a table as a layer "
+"by using queries that we learned about in previous sections."
+msgstr "Ahora que hemos visto cómo añadir una tabla completa como una capa QGIS, podría ser bueno aprender cómo añadir un conjunto de registros filtrado desde una tabla como una capa mediante consultas que aprendimos en secciones anteriores."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:57
+msgid "Start a new empty map with no layers"
+msgstr "Inicie un nuevo mapa limpio sin ninguna capa"
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:58
+msgid ""
+"Click the :guilabel:`Add PostGIS Layers` button or select "
+":menuselection:`Layer --> Add PostGIS Layers` from the menu."
+msgstr ""
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:60
+msgid ""
+"In the :guilabel:`Add PostGIS Table(s)` dialog that comes up, connect to the"
+" :kbd:`postgis_demo` connection."
+msgstr "En el diálogo :guilabel:`Añadir tabla(s) PostGIS` que aparece, conecte a la conexión :kbd:`postgis_demo`."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:62
+msgid ""
+"Expand the :kbd:`public schema` and you should find the three tables we were"
+" working with previously."
+msgstr "Expanda el :kbd:`public schema` y debe encontrar las tres tablas que trabajamos con anterioridad."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:64
+msgid ""
+"Click the :kbd:`lines` layer to select it, but instead of adding it, click "
+"the :guilabel:`Set Filter` button to bring up the :guilabel:`Query Builder` "
+"dialog."
+msgstr "Haga clic en la capa :kbd:`lines` para seleccionarlo, pero en lugar de añadirlo, haga clic en el botón :guilabel:`Establecer filtro` para traer el diálogo :guilabel:`Constructor de consultas`."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:67
+msgid ""
+"Construct the following expression using the buttons or by entering it "
+"directly::"
+msgstr "Construye la siguiente expresión utilizando los botones o anotarlo directamente::"
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:75
+msgid ""
+"Click :guilabel:`OK` to complete editing the filter and click "
+":guilabel:`Add` to add the filtered layer to your map."
+msgstr "Haga clic en :guilabel:`Aceptar` para completar la edición del filtrado y haga clic en :guilabel:`Añadir` para añadir la capa filtrada a su mapa."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:77
+msgid "Rename the :kbd:`lines` layer in the tree to :kbd:`roads_primary`."
+msgstr "Renombrar la capa :kbd:`lines` a :kbd:`roads_primary`."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:79
+msgid ""
+"You will notice that only the Primary Roads have been added to your map "
+"rather than the entire layer."
+msgstr "Se dará cuenta que sólo las carreteras primarias se han agregado a su mapa en lugar de toda la capa."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:83
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:85
+msgid ""
+"You have seen how to interact with spatial databases using the QGIS Browser "
+"and how to add layers to your map based on a query filter."
+msgstr "Ha visto cómo interactuar con base de datos espaciales utilizando el Explorador QGIS y cómo añadir capas a su mapa basado en un filtro de consulta."
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:89
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/databases/db_browser.rst:91
+msgid ""
+"Next you'll see how to work with the DB Manager interface in QGIS for a more"
+" complete set of database management tasks."
+msgstr "A continuación veremos cómo trabajar con la interfaz del Administrador de BBDD en QGIS para un conjunto más completo de tareas de gestión de BBDD."

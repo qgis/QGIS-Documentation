@@ -1,0 +1,447 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# 
+# Translators:
+# Razvan Stefanescu <razvan.stefanescu@gmail.com>, 2016
+# Sorin Călinică <scalinica@gmail.com>, 2015-2017
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-04-07 15:33+0200\n"
+"PO-Revision-Date: 2019-04-07 13:43+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"Language-Team: Romanian (http://www.transifex.com/qgis/qgis-documentation/language/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:8
+msgid "|LS| Introduction to Databases"
+msgstr "|LS| Introducere în Baze de date"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:10
+msgid ""
+"Before using PostgreSQL, let's make sure of our ground by covering general "
+"database theory. You will not need to enter any of the example code; it's "
+"only there for illustration purposes."
+msgstr "Înainte de a utiliza PostgreSQL, să ne asigurăm de terenul nostru prin acoperirea teoriei generale a bazelor de date. Nu va fi nevoie să introduceți codul exemplificat; acesta este prezent doar în scopuri ilustrative."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:14
+msgid ""
+"**The goal for this lesson:** To understand fundamental database concepts."
+msgstr "**Scopul acestei lecții:** De a înțelege conceptele fundamentale ale bazelor de date."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:17
+msgid "What is a Database?"
+msgstr "Ce este o bază de date?"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:19
+msgid ""
+"A database consists of an organized collection of data for one or more uses,"
+" typically in digital form. *- Wikipedia*"
+msgstr "O bază de date constă într-o colecție organizată de date, pentru una sau mai multe utilizări, de obicei în formă digitală. *- Wikipedia*"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:24
+msgid ""
+"A database management system (DBMS) consists of software that operates "
+"databases, providing storage, access, security, backup and other facilities."
+" *- Wikipedia*"
+msgstr "Un sistem de management al bazelor de date (DBMS) este format din software care operează bazele de date, oferind depozitare, acces, securitate, backup și alte facilități. *- Wikipedia*"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:29
+msgid "Tables"
+msgstr "Tabele"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:31
+msgid ""
+"In relational databases and flat file databases, a table is a set of data "
+"elements (values) that is organized using a model of vertical columns (which"
+" are identified by their name) and horizontal rows. A table has a specified "
+"number of columns, but can have any number of rows. Each row is identified "
+"by the values appearing in a particular column subset which has been "
+"identified as a candidate key. *- Wikipedia*"
+msgstr "În bazele de date tradiționale și în bazele de date tip fișier, o tabelă este un set de elemente de date (valori) care este organizat utilând un model de coloane verticale (care sunt identificate prin numele lor) și de rânduri orizontale. O tableă are un număr specificat de coloane, dar poate avea oricâte rânduri. Fiecare rând este identificat prin valorile unui anumit subset de coloane care a fost identificat ca o potențială cheie. *- Wikipedia*"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:46
+msgid "In SQL databases a table is also known as a **relation.**"
+msgstr "În bazele de date SQL, o tabelă este, de asemenea, cunoscută ca **relație.**"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:49
+msgid "Columns / Fields"
+msgstr "Coloane / Câmpuri"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:51
+msgid ""
+"A column is a set of data values of a particular simple type, one for each "
+"row of the table. The columns provide the structure according to which the "
+"rows are composed. The term field is often used interchangeably with column,"
+" although many consider it more correct to use field (or field value) to "
+"refer specifically to the single item that exists at the intersection "
+"between one row and one column. *- Wikipedia*"
+msgstr "O coloană este un set de valori de date având un anume tip simplu, câte una pentru fiecare rând din tabel. Coloanele funizează structura pe baza căreia se compune fiecare rând. Termenul de câmp este utilizat interschimbabil cu coloană, deși mulți consideră că este mai corect să se utilizeze câmp (sau valoare a câmpului) când este vorba de elementul care există la intersecția dintre o coloană și un rând. *- Wikipedia*"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:58
+msgid "A column:"
+msgstr "O coloană:"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:67
+msgid "A field:"
+msgstr "Un câmp:"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:74
+msgid "Records"
+msgstr "Înregistrări"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:76
+msgid ""
+"A record is the information stored in a table row. Each record will have a "
+"field for each of the columns in the table."
+msgstr "O înregistrare reprezintă informația stocată într-un rând din tabelă. Fiecare înregistrare va avea câte un câmp pentru fiecare dintre coloanele tabelei."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:84
+msgid "Datatypes"
+msgstr "Tipuri de date"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:86
+msgid ""
+"Datatypes restrict the kind of information that can be stored in a column. "
+"*- Tim and Horst*"
+msgstr "Tipurile de date restrâng tipurile de informații care pot fi stocate într-o coloană. *- Tim and Horst*"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:89
+msgid "There are many kinds of datatypes. Let's focus on the most common:"
+msgstr "Există mai multe feluri de tipuri de date. Să ne concentrăm pe cele mai comune:"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:91
+msgid "``String`` - to store free-form text data"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:92
+msgid "``Integer`` - to store whole numbers"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:93
+msgid "``Real`` - to store decimal numbers"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:94
+msgid "``Date`` - to store Horst's birthday so no one forgets"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:95
+msgid "``Boolean`` - to store simple true/false values"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:97
+msgid ""
+"You can tell the database to allow you to also store nothing in a field. If "
+"there is nothing in a field, then the field content is referred to as a "
+"**'null' value**:"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:107
+msgid "Result:"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:118
+msgid ""
+"There are many more datatypes you can use - `check the PostgreSQL manual! "
+"<https://www.postgresql.org/docs/current/datatype.html>`_"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:122
+msgid "Modelling an Address Database"
+msgstr "Modelarea unei Baze de Date cu Adrese"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:124
+msgid ""
+"Let's use a simple case study to see how a database is constructed. We want "
+"to create an address database."
+msgstr "Să folosim un studiu de caz simplu, pentru a vedea cum este construită o bază de date. Dorim să creăm o bază de date cu adrese."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:128
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:195
+msgid "|TY| |basic|"
+msgstr "|TY| |basic|"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:130
+msgid ""
+"Write down the properties which make up a simple address and which we would "
+"want to store in our database."
+msgstr "Notați proprietățile care alcătuiesc o adresă simplă și pe care am dori să le stocăm în baza noastră de date."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:133
+msgid ":ref:`Check your results <database-concepts-1>`"
+msgstr ":ref:`Check your results <database-concepts-1>`"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:138
+msgid "Address Structure"
+msgstr "Structura Adresei"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:140
+msgid ""
+"The properties that describe an address are the columns. The type of "
+"information stored in each column is its datatype. In the next section we "
+"will analyse our conceptual address table to see how we can make it better!"
+msgstr "Propietățile care descriu o adresă sunt coloanele. Tipul de informație stocat în fiecare coloană este tipul de date al acesteia. În secțiunea următoare vom analiza tabela noastră conceptuală de adrese pentru a vedea cum o putem înbunătăți!"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:145
+msgid "Database Theory"
+msgstr "Teoria Bazelor de Date"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:147
+msgid ""
+"The process of creating a database involves creating a model of the real "
+"world; taking real world concepts and representing them in the database as "
+"entities."
+msgstr "Procesul de creare a unei baze de date presupune crearea unui model al lumii reale; luând concepte din lumea reală și reprezentându-le, ca entități, în baza de date."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:151
+msgid "Normalisation"
+msgstr "Normalizarea"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:153
+msgid ""
+"One of the main ideas in a database is to avoid data duplication / "
+"redundancy. The process of removing redundancy from a database is called "
+"Normalisation."
+msgstr "Un concept de bază al bazelor de date este evitarea duplicării / redundanței datelor. Procesul eliminării redundanței dintr-o bază de date este numit Normalizare."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:156
+msgid ""
+"Normalization is a systematic way of ensuring that a database structure is "
+"suitable for general-purpose querying and free of certain undesirable "
+"characteristics - insertion, update, and deletion anomalies - that could "
+"lead to a loss of data integrity. *- Wikipedia*"
+msgstr "Normalizarea este o metodă sistematică de garantare că structura bazei de date este potrivită pentru interogări de uz general și nu prezintă anumite caracterisitici - anomalii de inserare, modificare sau ștergere - care ar putea duce la pierderea integrității datelor. *- Wikipedia*"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:161
+msgid "There are different kinds of normalisation 'forms'."
+msgstr "Există diferite tipuri de 'forme' de normalizare."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:163
+msgid "Let's take a look at a simple example:"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:190
+msgid ""
+"Imagine you have many friends with the same street name or city. Every time "
+"this data is duplicated, it consumes space. Worse still, if a city name "
+"changes, you have to do a lot of work to update your database."
+msgstr "Imaginați-vă că aveți mulți prieteni cu același nume de stradă sau oraș. Fiecare dintre aceste date sunt duplicate, consumă spațiu. Mai rău, dacă un nume de oraș se schimbă, trebuie să depuneți mult efort pentru a actualiza baza de date."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:196
+msgid ""
+"Redesign the theoretical `people` table above to reduce duplication and to "
+"normalise the data structure."
+msgstr "Reproiectați tabela `people` de mai sus pentru a reduce duplicarea și pentru a normaliza structura de date."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:199
+msgid ""
+"You can read more about database normalisation `here "
+"<https://en.wikipedia.org/wiki/Database_normalization>`_"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:202
+msgid ":ref:`Check your results <database-concepts-2>`"
+msgstr ":ref:`Check your results <database-concepts-2>`"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:207
+msgid "Indexes"
+msgstr "Indecși"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:209
+msgid ""
+"A database index is a data structure that improves the speed of data "
+"retrieval operations on a database table. *- Wikipedia*"
+msgstr "Un index în baza de date este o structură de date care îmbunătățește viteza operațiilor de extragere de date dintr-o tabelă a bazei de date. *- Wikipedia*"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:212
+msgid ""
+"Imagine you are reading a textbook and looking for the explanation of a "
+"concept - and the textbook has no index! You will have to start reading at "
+"one cover and work your way through the entire book until you find the "
+"information you need. The index at the back of a book helps you to jump "
+"quickly to the page with the relevant information:"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:222
+msgid "Now searches on name will be faster:"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:241
+msgid "Sequences"
+msgstr "Secvențe"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:243
+msgid ""
+"A sequence is a unique number generator. It is normally used to create a "
+"unique identifier for a column in a table."
+msgstr "O secvență este un generator de numere unice. Este utilizat în mod normal pentru a creea un identificator unic pentru o coloană a unei tabele."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:246
+msgid ""
+"In this example, id is a sequence - the number is incremented each time a "
+"record is added to the table:"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:257
+msgid "Entity Relationship Diagramming"
+msgstr "Diagrama Relațiilor dintre Entități"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:259
+msgid ""
+"In a normalised database, you typically have many relations (tables). The "
+"entity-relationship diagram (ER Diagram) is used to design the logical "
+"dependencies between the relations. Consider our non-normalised `people` "
+"table from earlier in the lesson:"
+msgstr "Într-o bază de date normalizată, există în mod uzual multe relații (tabele). Diagrama relațiilor între entități (Diagrama ER) este utilizată pentru stabilirea dependențelor logice între relații. Să examinăm tabela noastră nenormalizată `people`, utilizată anterior în cadrul lecției:"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:274
+msgid ""
+"With a little work we can split it into two tables, removing the need to "
+"repeat the street name for individuals who live in the same street:"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:286
+msgid "and:"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:297
+msgid ""
+"We can then link the two tables using the 'keys' :kbd:`streets.id` and "
+":kbd:`people.streets_id`."
+msgstr "Putem apoi lega cele două tabele utilizând 'keys' :kbd:`streets.id` și :kbd:`people.streets_id`."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:300
+msgid ""
+"If we draw an ER Diagram for these two tables it would look something like "
+"this:"
+msgstr "Dacă desenăm o Diagramă ER pentru aceste două tabele ar arăta cam așa:"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:306
+msgid ""
+"The ER Diagram helps us to express 'one to many' relationships. In this case"
+" the arrow symbol show that one street can have many people living on it."
+msgstr "Diagrama ER ne ajută să exprimăm relații 'unul la mulți'. În acest caz simbolul săgeată spune că pe o stradă pot locui mai mulți oameni."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:310
+msgid "|TY| |moderate|"
+msgstr "|TY| |moderate|"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:312
+msgid ""
+"Our `people` model still has some normalisation issues - try to see if you "
+"can normalise it further and show your thoughts by means of an ER Diagram."
+msgstr "Modelul nostru `people` are încă niște probleme de normalizare - încercați să îl normalizați în continuare și ilustrați-vă ideile printr-o Diagramă ER."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:315
+msgid ":ref:`Check your results <database-concepts-3>`"
+msgstr ":ref:`Check your results <database-concepts-3>`"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:320
+msgid "Constraints, Primary Keys and Foreign Keys"
+msgstr "Constrângeri, Chei Primare și Chei Externe"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:322
+msgid ""
+"A database constraint is used to ensure that data in a relation matches the "
+"modeller's view of how that data should be stored. For example a constraint "
+"on your postal code could ensure that the number falls between :kbd:`1000` "
+"and :kbd:`9999`."
+msgstr "O constrîngere într-o bază de date este utilizată pentru a garanta că o relație se potrivește cu viziunea celui care a modelat baza de date despre cum ar trebui stocate datele. De exemplu o constrângere pentru codul poștal ar putea garanta că numărul trebuie să se afle între :kbd:`1000` și :kbd:`9999`."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:327
+msgid ""
+"A Primary key is one or more field values that make a record unique. Usually"
+" the primary key is called id and is a sequence."
+msgstr "O cheie Primară este compusă din unul sau mai multe câmpuri care fac o înregistrare unică. În mod uzual cheia primară se numește id și este o secvență."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:330
+msgid ""
+"A Foreign key is used to refer to a unique record on another table (using "
+"that other table's primary key)."
+msgstr "O cheie Externă este utilizată pentru a face legătura unei înregistrări cu o altă tabelă (folosind cheia primară a acelui tabel)."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:333
+msgid ""
+"In ER Diagramming, the linkage between tables is normally based on Foreign "
+"keys linking to Primary keys."
+msgstr "În Diagramele ER, legăturile dintre tabele sunt în mod normal bazate pe chei Externe legate de chei Primare."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:336
+msgid ""
+"If we look at our people example, the table definition shows that the street"
+" column is a foreign key that references the primary key on the streets "
+"table:"
+msgstr ""
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:357
+msgid "Transactions"
+msgstr "Tranzacții"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:359
+msgid ""
+"When adding, changing, or deleting data in a database, it is always "
+"important that the database is left in a good state if something goes wrong."
+" Most databases provide a feature called transaction support. Transactions "
+"allow you to create a rollback position that you can return to if your "
+"modifications to the database did not run as planned."
+msgstr "La adăugarea, modificarea sau ștergerea datelor într-o bază de date, este important ca de fiecare dată baza de dată să rămână într-o stare bună în cazul în care ceva nu merge bine. Cele mai multe baze de date pun la dispoziție o facilitate numită tranzacție. Tranzacțiile permit crearea unui moment de revenire la care vă puteți întoarce dacă modificările bazei de date nu au funcționat conform planului."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:365
+msgid ""
+"Take a scenario where you have an accounting system. You need to transfer "
+"funds from one account and add them to another. The sequence of steps would "
+"go like this:"
+msgstr "Să considerăm un scenariu în care aveți un sistem contabil. Trebuie să transferați fonduri dintr-un cont și să le adăugați în altul. Secvența de pași ar fi:"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:369
+msgid "remove R20 from Joe"
+msgstr "eliminați R20 din Joe"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:370
+msgid "add R20 to Anne"
+msgstr "adăugați R20 la Anne"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:372
+msgid ""
+"If something goes wrong during the process (e.g. power failure), the "
+"transaction will be rolled back."
+msgstr "Dacă ceva nu merge bine în cadrul procesului (ex. pană de curent), tranzacția va reveni."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:376
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:378
+msgid ""
+"Databases allow you to manage data in a structured way using simple code "
+"structures."
+msgstr "Bazele de date permit administrarea datelor într-un mod structurat utilizând structuri de cod simple."
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:382
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/database_concepts/db_intro.rst:384
+msgid ""
+"Now that we've looked at how databases work in theory, let's create a new "
+"database to implement the theory we've covered."
+msgstr "Acum că am văzut cum funcționează teoretic bazele de date, să creăm o bază de date nouă pentru a implementa partea teoretică prezentată."
+
+#~ msgid ""
+#~ "There are many more datatypes you can use - `check the PostgreSQL manual! "
+#~ "<http://www.postgresql.org/docs/current/static/datatype.html>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can read more about database normalisation `here "
+#~ "<http://en.wikipedia.org/wiki/Database_normalization>`_"
+#~ msgstr ""

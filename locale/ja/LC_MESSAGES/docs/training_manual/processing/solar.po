@@ -1,0 +1,96 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# 
+# Translators:
+# fairtommy <fairtommy@gmail.com>, 2017-2018
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-04-07 15:33+0200\n"
+"PO-Revision-Date: 2019-04-07 13:47+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"Language-Team: Japanese (http://www.transifex.com/qgis/qgis-documentation/language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/processing/solar.rst:8
+msgid "Planning a solar farm"
+msgstr "太陽光発電所を計画する"
+
+#: ../../source/docs/training_manual/processing/solar.rst:10
+msgid ""
+"Module contributed by Paolo Cavallini - `Faunalia "
+"<https://www.faunalia.eu>`_"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/solar.rst:12
+msgid ""
+"This chapter shows how to use several criteria to locate the areas suitable "
+"for installing a photovoltaic power station"
+msgstr "この章では、太陽光発電所を設置するのに適した地域を特定するために、いくつかの基準を使用する方法を示しています"
+
+#: ../../source/docs/training_manual/processing/solar.rst:14
+msgid "First of all, create an aspect map from DTM:"
+msgstr "まず第一に、DTMから傾斜方向図を作成します。"
+
+#: ../../source/docs/training_manual/processing/solar.rst:16
+msgid ":menuselection:`GRASS --> r.aspect` [Data type: int; cell size:100]"
+msgstr ":menuselection:`GRASS --> r.aspect` [データの型：int；セルサイズ：100]"
+
+#: ../../source/docs/training_manual/processing/solar.rst:18
+msgid ""
+"In GRASS, aspect is calculated in degrees, counterclockwise starting from "
+"East. To extract only South facing slopes (270 degrees +- 45), we can "
+"reclassify it:"
+msgstr "GRASSにおいて、向きは、反時計回りに東から出発して、度で計算されます。南向きの斜面だけを抽出するには（270度+ - 45）、それを再分類できます："
+
+#: ../../source/docs/training_manual/processing/solar.rst:20
+msgid ":menuselection:`GRASS --> r.reclass`"
+msgstr ":menuselection:`GRASS --> r.reclass`"
+
+#: ../../source/docs/training_manual/processing/solar.rst:22
+msgid "with the following rules::"
+msgstr "次のルールで::"
+
+#: ../../source/docs/training_manual/processing/solar.rst:27
+msgid ""
+"You can use the text file ``reclass_south.txt`` provided. Note that with "
+"these simple text files we can create also very complex reclassifications."
+msgstr "提供されるテキストファイル ``reclass_south.txt`` を使用できます。これらの単純なテキストファイルで、非常に複雑な再分類も作成できることに注意してください。"
+
+#: ../../source/docs/training_manual/processing/solar.rst:29
+msgid ""
+"We want to build a large farm, so we select only large (> 100 ha) contiguous"
+" areas:"
+msgstr "大きな発電所を構築したいので、連続した大きな(> 100ヘクタール)領域だけを選択します："
+
+#: ../../source/docs/training_manual/processing/solar.rst:31
+msgid ":menuselection:`GRASS --> r.reclass.greater`"
+msgstr ":menuselection:`GRASS --> r.reclass.greater`"
+
+#: ../../source/docs/training_manual/processing/solar.rst:33
+msgid "Finally, we convert to a vector:"
+msgstr "最後に、ベクターに変換します"
+
+#: ../../source/docs/training_manual/processing/solar.rst:35
+msgid ""
+":menuselection:`GRASS --> r.to.vect` [Feature type: area; Smooth corners: "
+"yes]"
+msgstr ":menuselection:`GRASS --> r.to.vect` [地物の種類: エリア; 角を滑らかに: はい]"
+
+#: ../../source/docs/training_manual/processing/solar.rst:37
+msgid ""
+"**Exercise for the reader**: repeat the analysis, replacing GRASS commands "
+"with analogous from other programs."
+msgstr "**読者のための練習** ：GRASSコマンドを他のプログラムからの類似の物に置き換えて、分析を繰り返してください。"
+
+#~ msgid ""
+#~ "Module contributed by Paolo Cavallini - `Faunalia <http://www.faunalia.eu>`_"
+#~ msgstr ""

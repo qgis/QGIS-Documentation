@@ -1,0 +1,540 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# 
+# Translators:
+# Kwon.Yongchan <ruvyn@naver.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-06 11:48+0100\n"
+"PO-Revision-Date: 2019-12-06 11:02+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"Language-Team: Korean (http://www.transifex.com/qgis/qgis-documentation/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:11
+msgid "Use R scripts in Processing"
+msgstr "처리 과정에서 R 스크립트 사용"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:13
+msgid ""
+"Module contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna "
+"<https://www.santannapisa.it/it>`_"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:16
+msgid ""
+"Processing (with the ``Processing R Provider`` plugin) makes it possible to "
+"write and run R scripts inside QGIS."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:20
+msgid ""
+"R has to be installed on your computer and the PATH has to be correctly set "
+"up. Moreover Processing just calls the external R packages, it is not able "
+"to install them. So be sure to install external packages directly in R. See "
+"the related :ref:`chapter <creating_r_scripts>` in the user manual."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:26
+msgid ""
+"If you have *package* problems, it may be related to missing *mandatory* "
+"packages required by Processing, like ``sp``, ``rgdal`` and ``raster``."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:30
+msgid "Adding scripts"
+msgstr "스크립트 추가"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:32
+msgid ""
+"Adding a script is simple. The easiest way is to open the Processing toolbox"
+" and choose :menuselection:`Create new R script...` from the R menu "
+"(labelled with an R icon) at the top of the Processing Toolbox. You can also"
+" create the script in for instance a text editor and save it in your R "
+"scripts folder (:file:`processing/rscripts`). When it has been saved there, "
+"it will be available for editing by right-clicking on the script name in the"
+" processing toolbox and then choose :menuselection:`Edit Script...`)."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:45
+msgid ""
+"If you cannot see R in Processing, you have to activate it in "
+":menuselection:`Processing --> Options --> Providers`"
+msgstr "처리 과정에 R이 안 보일 경우, :menuselection:`Processing --> Options --> Providers` 메뉴에서 활성화시켜야 합니다."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:48
+msgid ""
+"It opens a *script editor window* in which you have to specify some "
+"parameters before you can add the script body."
+msgstr "*스크립트 편집 창* 이 열리는데, 여기에 스크립트 자체를 추가하기 전에 몇몇 파라미터들을 설정해줘야 합니다."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:56
+msgid "Creating plots"
+msgstr "그래프 생성"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:58
+msgid ""
+"In this tutorial we are going to create a **boxplot** of a vector layer "
+"field."
+msgstr "이번 예제에서 벡터 레이어 항목의 **상자 모양 그래프**를 생성할 것입니다."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:60
+msgid ""
+"Open the :file:`r_intro.qgs` QGIS project under the "
+":file:`exercise_data/processing/r_intro/` folder."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:65
+#: ../../source/docs/training_manual/processing/r_intro.rst:187
+msgid "Script parameters"
+msgstr "스크립트 파라미터"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:67
+msgid "Open the editor and start writing at the beginning of it."
+msgstr "편집기를 실행해서 첫 부분부터 입력을 시작하십시오."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:69
+msgid "You **must** specify some parameters **before** the script body:"
+msgstr "스크립트 자체를 입력하기 **전에** 몇몇 파라미터들을 설정 **해야** 합니다."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:71
+msgid ""
+"The name of the group (`plots` in this case) in which you want to put your "
+"script (if the group does not exist, it will be created)::"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:76
+msgid ""
+"You will find your script in the **plots** R group in the Processing "
+"toolbox."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:78
+msgid ""
+"You have to tell Processing that you want to display a plot (in this "
+"example)::"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:82
+msgid ""
+"You will then find a link to the plot in the **Result Viewer** panel (can be"
+" turned on / off in :menuselection:`View --> Panels` and with "
+":menuselection:`Processing --> Results Viewer`)."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:86
+msgid ""
+"You also need to tell Processing about your input data. In this example we "
+"want to create a plot from a field of a vector layer::"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:91
+msgid ""
+"Processing now knows that the input is a vector. The name *Layer* is not "
+"important, what matters is the **vector** parameter."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:94
+msgid ""
+"Finally, you have to specify the input field of the vector layer (using the "
+"name you have provided above - *Layer*)::"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:99
+msgid ""
+"Processing now knows that you need a field of *Layer*, and that you will "
+"call it **X**."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:102
+msgid "It is also possible to define the name of your script using ``name``::"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:106
+msgid "If not defined, the file name will be used as the name of the script."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:109
+#: ../../source/docs/training_manual/processing/r_intro.rst:213
+msgid "Script body"
+msgstr "스크립트 자체"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:111
+msgid ""
+"Now that you have set up the *heading* of the script you can add the "
+"function::"
+msgstr "이제 스크립트의 *표제(heading)*를 설정했으니, 함수를 추가할 수 있습니다."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:115
+msgid ""
+"**boxplot** is the name of the R function, the parameter **Layer** is the "
+"name that you have defined for the input dataset and **X** is the name you "
+"have defined for the field of that dataset."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:120
+msgid ""
+"The parameter **X** has to be within double square brackets (``[[]]``)."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:122
+#: ../../source/docs/training_manual/processing/r_intro.rst:232
+msgid "The final script looks like this::"
+msgstr "최종 스크립트는 다음과 같이 보일 겁니다."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:132
+msgid ""
+"Save the script in the default path suggested by Processing "
+"(processing/rscripts). If you have not defined a ``name`` in the script "
+"heading, the file name you choose will become the name of the script in the "
+"Processing toolbox."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:137
+msgid ""
+"You can save the script wherever you like, but Processing will then not be "
+"able to include it in the processing toolbox automatically, so you have to "
+"upload it manually."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:141
+msgid "Now just run it using the button on the top of the editor window:"
+msgstr "이제 편집 창 최상단에 있는 버튼을 클릭해서 스크립트를 실행해보십시오."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:145
+msgid ""
+"Once the editor window has been closed, use the text box of Processing to "
+"find your script:"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:150
+msgid ""
+"You can now fill the parameters required in the Processing algorithm window:"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:152
+msgid "for **Layer** choose *sample_points*"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:153
+msgid "for the **X** field choose *value*"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:155
+msgid "Click on **Run**."
+msgstr "**Run** 버튼을 클릭하십시오."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:159
+msgid ""
+"The **Result window** should be automatically opened, if not, just click on "
+":menuselection:`Processing --> Result Viewer...`."
+msgstr "**Result window** 가 자동적으로 열릴 텐데, 열리지 않을 경우 :menuselection:`Processing --> Result Viewer...` 메뉴를 클릭하면 됩니다."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:162
+msgid "Click on the link in the viewer and you will see:"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:167
+msgid "You can open, copy and save the image by right clicking on the plot."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:170
+msgid "Create a vector"
+msgstr "벡터 생성"
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:172
+msgid ""
+"You can also create a vector layer and have it automatically loaded into "
+"QGIS."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:175
+msgid ""
+"The following example has been taken from the ``Random sampling grid`` "
+"script that you can download from the online collection :menuselection:`R "
+"--> Tools --> Download R scripts from the on-line collection` (the scripts "
+"in the on-line collection can be found on https://github.com/qgis/QGIS-"
+"Processing/tree/master/rscripts)."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:181
+msgid ""
+"The aim of this exercise is to create a random point vector layer using an "
+"input vector layer to restrict the extent using the ``spsample`` function of"
+" the ``sp`` package."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:189
+msgid "As before we have to set some parameters before the script body:"
+msgstr "이전과 마찬가지로 스크립트 자체를 입력하기 전에 몇몇 파라미터들을 설정해줘야 합니다."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:191
+msgid ""
+"Specify the name of the group in which you want to put your script, in this "
+"case *Point pattern analysis*::"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:195
+msgid ""
+"Define an input parameter (a vector layer) that will contstrain the "
+"placement of the random points::"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:200
+msgid ""
+"Set an input parameter for the number of points that are going to be created"
+" (``Size``, with a default value of ``10``)::"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:205
+msgid ""
+"Since a default value (``10``) is defined, the user can change this number "
+"or can leave the parameter without a number."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:208
+msgid "Specify that there is an output vector layer (called ``Output``)::"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:215
+msgid "Now you can add the body of the function:"
+msgstr "이제 함수 자체를 추가할 수 있습니다."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:217
+msgid "Use the ``spsample`` function::"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:221
+msgid ""
+"The function uses the *Layer* to constrain the placement of the points (if "
+"it is a line layer, a points will have to be on one of the lines in the "
+"layer, if it is a polygon layer, a point will have to be within a polygon). "
+"The number of points is taken from the *Size* parameter. The sampling method"
+" is *random*."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:228
+msgid "Generate the output (the ``Output`` parameter)::"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:243
+msgid "Save it and run it, clicking on the run button."
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:245
+msgid "In the new window type in the right parameters:"
+msgstr "새 창에서 정확한 파라미터들을 입력하십시오."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:249
+msgid "and click on run."
+msgstr "**Run** 버튼을 클릭합니다."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:251
+msgid ""
+"The result layer will be added to the table of contents and its points will "
+"be displayed on the map canvas:"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:258
+msgid "Text and graph output from R - syntax"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:260
+msgid ""
+"Processing (with the ``Processing R Provider plugin``) uses special syntax "
+"to get the results out of R:"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:263
+msgid ""
+"``>`` before your command, as in ``>lillie.test(Layer[[Field]])`` means the "
+"result should be sent to R output (Result viewer)"
+msgstr "명령어 앞에 ``>lillie.test(Layer[[Field]])`` 처럼 ``>`` 를 삽입하는 것은 결과를 R 산출물(Result viewer)로 보내야 한다는 의미입니다."
+
+#: ../../source/docs/training_manual/processing/r_intro.rst:265
+msgid ""
+"``+`` after a plot enables overlay plots. For example ``plot(Layer[[X]], "
+"Layer[[Y]]) + abline(h=mean(Layer[[X]]))``"
+msgstr ""
+
+#~ msgid ""
+#~ "Module contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna "
+#~ "<http://www.santannapisa.it/it/istituto/scienze-della-vita/agricultural-"
+#~ "water-management>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Module contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna "
+#~ "<https://www.santannapisa.it/it/istituto/scienze-della-vita/agricultural-"
+#~ "water-management>`_"
+#~ msgstr ""
+
+#~ msgid "Processing allows to write and run R scripts inside QGIS."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "R has to be installed on your computer and the PATH has to correctly set up."
+#~ " Moreover Processing just calls the external R packages, it is not able to "
+#~ "install them. So be sure to install external packages directly in R. See the"
+#~ " related :ref:`chapter <creating_r_scripts>` in the user manual."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you have some *packages* problem, maybe it is related to missing "
+#~ "*mandatory* packages required by Processing, like ``sp``, ``rgdal`` and "
+#~ "``raster``."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Adding a script is very simple. Open the Processing toolbox and just click "
+#~ "on the :menuselection:`R --> Tools --> Create new R script`."
+#~ msgstr ""
+
+#~ msgid "the name of the group in which you want to put your script::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "so you will find your script in the **plots** group in the Processing "
+#~ "toolbox."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "you have to tell Processing that you want to display a plot (just in this "
+#~ "example)::"
+#~ msgstr ""
+
+#~ msgid "this way in the **Result Viewer** of Processing you'll see the plot."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You need also to tell Processing with which kind of data you are working "
+#~ "with. In this example we want to create a plot from a field of a vector "
+#~ "layer::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Processing knows now that the input is a vector. The name *Layer* is not "
+#~ "important, what matters is the **vector** parameter."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Finally, you have to specify the input field of the vector layer you want to"
+#~ " plot::"
+#~ msgstr ""
+
+#~ msgid "So Processing knows that you have called **X** the **Field Layer**."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Notice that **boxplot** is the name of the R function itself that calls "
+#~ "**Layer** as dataset and **X** as the field of the dataset."
+#~ msgstr ""
+
+#~ msgid "The parameter **X** is within a double square bracket ``[[]]``"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Save the script in the default path suggested by Processing. The name you "
+#~ "choose will be the same as the name of the script you'll find in the "
+#~ "Processing toolbox."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can save the script in other paths, but Processing isn't able to upload "
+#~ "them automatically and you have to upload all the scripts manually"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Otherwise, once the editor window has been closed, use the text box of "
+#~ "Processing to find your script:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You are now able to fill the parameters required in the Processing algorithm"
+#~ " window:"
+#~ msgstr ""
+
+#~ msgid "as **Layer** choose the *sample points* one"
+#~ msgstr ""
+
+#~ msgid "fill the **X** field with the **value** parameter"
+#~ msgstr ""
+
+#~ msgid "This is the final result you'll see:"
+#~ msgstr ""
+
+#~ msgid "You can open, copy and save the image by right clicking on the plot"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "With an R script you can also create a vector and automatically load it in "
+#~ "QGIS."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The following example has been taken from the ``Random sampling grid`` "
+#~ "script that you can download from the online collection :menuselection:`R "
+#~ "--> Tools --> Download R scripts from the on-line collection`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The aim of this exercise is to create a random point vector in a layer "
+#~ "extent using the ``spsample`` function of the ``sp`` package."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "specify the name of the group in which you want to put your script, for "
+#~ "example *Point pattern analysis*::"
+#~ msgstr ""
+
+#~ msgid "set the layer that will contain the random points::"
+#~ msgstr ""
+
+#~ msgid "set the number of points that are going to be created::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "10 is going to be the default value. You can change this number or you can "
+#~ "leave the parameter without a default number"
+#~ msgstr ""
+
+#~ msgid "specify that the output is a vector layer::"
+#~ msgstr ""
+
+#~ msgid "run the ``spsample`` function::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "this way the function takes the extent of the *Layer*, the number of points "
+#~ "is taken from the *Size* parameter and the point generation is *random*"
+#~ msgstr ""
+
+#~ msgid "Write the line that contains the parameters of the output::"
+#~ msgstr ""
+
+#~ msgid "Save it and run it, clicking on the running button."
+#~ msgstr ""
+
+#~ msgid "Resulting points will be displayed in the map canvas"
+#~ msgstr ""
+
+#~ msgid "R - Processing syntax"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Beware that Processing uses some special syntax to get the results out of R:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``+`` after a plot to call overlay plots. For example ``plot(Layer[[X]], "
+#~ "Layer[[Y]]) + abline(h=mean(Layer[[X]]))``"
+#~ msgstr ""

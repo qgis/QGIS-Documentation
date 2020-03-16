@@ -1,0 +1,109 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# 
+# Translators:
+# Dick Groskamp, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project testing\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-04-07 15:33+0200\n"
+"PO-Revision-Date: 2017-08-09 06:49+0000\n"
+"Last-Translator: Dick Groskamp, 2019\n"
+"Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/plugins.rst:9
+msgid "Plugins"
+msgstr "Plug-ins"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/plugins.rst:18
+msgid "Installation"
+msgstr "Installeren"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/plugins.rst:20
+msgid ""
+"To install the HelloWorld example plugin for testing the servers, you "
+"firstly have to create a directory to hold server plugins. This will be "
+"specified in the virtual host configuration and passed on to the server "
+"through an environment variable:"
+msgstr ""
+"U dient eerst een map aan te maken waar de plug-ins voor de server komen te "
+"staan om de voorbeeld plug-in HelloWorld voor het testen van de servers te "
+"installeren. Die zal worden gespecificeerd in de configuratie van de "
+"virtuele host en worden doorgegeven aan de server door middel van een "
+"omgevingsvariabele:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/plugins.rst:37
+msgid "HTTP Server configuration"
+msgstr "Configureren van de HTTP-server"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/plugins.rst:40
+msgid "Apache"
+msgstr "Apache"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/plugins.rst:42
+msgid ""
+"To be able to use server plugins, FastCGI needs to know where to look. So, "
+"we have to modify the Apache configuration file to indicate the "
+"**QGIS_PLUGINPATH** environment variable to FastCGI:"
+msgstr ""
+"FastCGI moet, om in staat te zijn de plug-ins voor de server te kunnen "
+"gebruiken, weten waar die te vinden. We moeten dus het configuratiebestand "
+"van Apache aanpassen om de omgevingsvariabele **QGIS_PLUGINPATH** aan te "
+"geven voor FastCGI:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/plugins.rst:52
+msgid ""
+"Moreover, a basic HTTP authorization is necessary to play with the "
+"HelloWorld plugin previously introduced. So we have to update the Apache "
+"configuration file a last time:"
+msgstr ""
+"Meer nog, een basisautorisatie voor HTTP is noodzakelijk om met de eerder "
+"geïntroduceerde plug-in HelloWorld te kunnen experimenteren. We moeten dus "
+"het configuratiebestand voor Apache nog een laatste keer aanpassen:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/plugins.rst:65
+msgid "Then, restart Apache:"
+msgstr "Start Apache dan opnieuw:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/plugins.rst:74
+msgid ""
+"If you work with a feature that has many nodes then modifying and adding a "
+"new feature will fail. In this case it is possible to insert the following "
+"code into the :file:`001-qgis-server.conf` file:"
+msgstr ""
+"Als u werkt met een object dat vele knopen heeft dan zal het aanpassen en "
+"toevoegen van een nieuw object mislukken. In dit geval is het mogelijk de "
+"volgende code in te voegen in het bestand :file:`001-qgis-server.conf`:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/plugins.rst:86
+msgid "How to use a plugin"
+msgstr "Hoe een plug-in te gebruiken"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/plugins.rst:88
+msgid "Test the server with the HelloWorld plugin:"
+msgstr "De server testen met de plug-in HelloWorld:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/plugins.rst:95
+msgid ""
+"You can have a look at the default GetCapabilities of the QGIS server at: "
+":file:`http://localhost/cgi-"
+"bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities`"
+msgstr ""
+"U kunt de standaard GetCapabilities van de QGIS server bekijken op: "
+":file:`http://localhost/cgi-"
+"bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities`"
+
+#~ msgid "|updatedisclaimer|"
+#~ msgstr "|updatedisclaimer|"

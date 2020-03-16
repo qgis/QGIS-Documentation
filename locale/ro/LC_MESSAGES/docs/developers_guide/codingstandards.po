@@ -1,0 +1,958 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# 
+# Translators:
+# Razvan Stefanescu <razvan.stefanescu@gmail.com>, 2017
+# Sorin Călinică <scalinica@gmail.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project testing\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-06 11:48+0100\n"
+"PO-Revision-Date: 2017-08-09 06:41+0000\n"
+"Last-Translator: Sorin Călinică <scalinica@gmail.com>, 2019\n"
+"Language-Team: Romanian (https://www.transifex.com/qgis/teams/6144/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:8
+msgid "QGIS Coding Standards"
+msgstr "Standardele de codificare QGIS"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:13
+msgid "These standards should be followed by all QGIS developers."
+msgstr ""
+"Aceste standarde ar trebui să fie urmate de către toți dezvoltatorii QGIS."
+
+#: ../../source/docs/developers_guide/codingstandards.rst:16
+msgid "Classes"
+msgstr "Clase"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:20
+#: ../../source/docs/developers_guide/codingstandards.rst:215
+msgid "Names"
+msgstr "Nume"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:22
+msgid "Class in QGIS begin with Qgs and are formed using camel case."
+msgstr ""
+"Clasele din QGIS sunt prefixate cu Qgs, iar fiecare cuvânt începe cu "
+"majusculă."
+
+#: ../../source/docs/developers_guide/codingstandards.rst:24
+#: ../../source/docs/developers_guide/codingstandards.rst:194
+#: ../../source/docs/developers_guide/codingstandards.rst:266
+msgid "Examples:"
+msgstr "Exemple:"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:26
+msgid "``QgsPoint``"
+msgstr "``QgsPoint``"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:27
+msgid "``QgsMapCanvas``"
+msgstr "``QgsMapCanvas``"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:28
+msgid "``QgsRasterLayer``"
+msgstr "``QgsRasterLayer``"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:32
+msgid "Members"
+msgstr "Membri"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:35
+msgid ""
+"Class member names begin with a lower case m and are formed using mixed "
+"case."
+msgstr ""
+"Denumirile membrilor claselor sunt prefixate cu litera m și sunt formate "
+"utilizând majuscule și minuscule."
+
+#: ../../source/docs/developers_guide/codingstandards.rst:38
+msgid "``mMapCanvas``"
+msgstr "``mMapCanvas``"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:39
+msgid "``mCurrentExtent``"
+msgstr "``mCurrentExtent``"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:41
+msgid ""
+"All class members should be private. Public class members are STRONGLY "
+"discouraged. Protected members should be avoided when the member may need to"
+" be accessed from Python subclasses, since protected members cannot be used "
+"from the Python bindings."
+msgstr ""
+"Toți membrii claselor ar trebui să fie privați. Membrii publici sunt TOTAL "
+"nerecomandați. Membrii protejați ar trebui să fie evitați când membrul ar "
+"putea fi accesat din subclase Python, de vreme ce membrii protejați nu pot "
+"fi utilizați din legăturile Python."
+
+#: ../../source/docs/developers_guide/codingstandards.rst:46
+msgid ""
+"Mutable static class member names should begin with a lower case ``s``, but "
+"constant static class member names should be all caps:"
+msgstr ""
+"Numele membrilor statici și mutabili ai claselor ar trebui să înceapă cu un "
+"``s`` mic, în schimb numele membrilor statici constanți ar trebui să aibă "
+"toate literele mari:"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:49
+msgid "``sRefCounter``"
+msgstr "``sRefCounter``"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:50
+msgid "``DEFAULT_QUEUE_SIZE``"
+msgstr "``DEFAULT_QUEUE_SIZE``"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:54
+msgid "Accessor Functions"
+msgstr "Funcțiile Accesor"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:57
+msgid ""
+"Class member values should be obtained through accesssor functions. The "
+"function should be named without a get prefix. Accessor functions for the "
+"two private members above would be:"
+msgstr ""
+"Valorile membrilor unei clase vor fi obținute prin intermediul funcțiilor "
+"accesor. Numele acestora nu ar trebui să înceapă cu prefixul \"get\". "
+"Funcțiile accesor pentru cei doi membri privați de mai sus ar putea fi:"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:61
+msgid "``mapCanvas()``"
+msgstr "``mapCanvas()``"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:62
+msgid "``currentExtent()``"
+msgstr "``currentExtent()``"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:64
+msgid ""
+"Ensure that accessors are correctly marked with ``const``. Where "
+"appropriate, this may require that cached value type member variables are "
+"marked with ``mutable``."
+msgstr ""
+"Asigurați-vă că accesoriile sunt corect marcate cu ``const``. Atunci când "
+"este cazul, este posibil ca variabilele membru, de tip cache de valoare, să "
+"fie marcate cu ``mutable``."
+
+#: ../../source/docs/developers_guide/codingstandards.rst:69
+msgid "Functions"
+msgstr "Funcții"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:72
+msgid ""
+"Function names begin with a lowercase letter and are formed using mixed "
+"case. The function name should convey something about the purpose of the "
+"function."
+msgstr ""
+"Numele funcțiilor încep cu literă mică și conțin majuscule și minuscule. "
+"Numele funcțiilor ar trebui să indice scopul acestora."
+
+#: ../../source/docs/developers_guide/codingstandards.rst:75
+msgid "``updateMapExtent()``"
+msgstr "``updateMapExtent()``"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:76
+msgid "``setUserOptions()``"
+msgstr "``setUserOptions()``"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:78
+msgid ""
+"For consistency with the existing QGIS API and with the Qt API, "
+"abbreviations should be avoided. E.g. ``setDestinationSize`` instead of "
+"``setDestSize``, ``setMaximumValue`` instead of ``setMaxVal``."
+msgstr ""
+"În concordanță cu API-urile QGIS și Qt, ar trebui evitate abrevierile. De "
+"exemplu: ``setDestinationSize`` în loc de ``setDestSize``, "
+"``setMaximumValue`` în loc de ``setMaxVal``."
+
+#: ../../source/docs/developers_guide/codingstandards.rst:82
+msgid ""
+"Acronyms should also be camel cased for consistency. E.g. ``setXml`` instead"
+" of ``setXML``."
+msgstr ""
+"De asemenea, acronimele ar trebui să fie denumite folosind CamelCase. De "
+"exemplu: ``setXml`` în loc de ``setXML``."
+
+#: ../../source/docs/developers_guide/codingstandards.rst:87
+msgid "Function Arguments"
+msgstr "Argumente ale funcțiilor"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:90
+msgid ""
+"Function arguments should use descriptive names. Do not use single letter "
+"arguments (e.g. ``setColor( const QColor& color )`` instead of ``setColor( "
+"const QColor& c )``)."
+msgstr ""
+"Argumentele funcțiilor ar trebui să utilizeze nume descriptive. Nu utilizați"
+" argumente cu nume format dintr-o singură literă (ex. ``setColor( const "
+"QColor& color )`` în loc de ``setColor( const QColor& c )``)."
+
+#: ../../source/docs/developers_guide/codingstandards.rst:94
+msgid ""
+"Pay careful attention to when arguments should be passed by reference. "
+"Unless argument objects are small and trivially copied (such as QPoint "
+"objects), they should be passed by const reference. For consistency with the"
+" Qt API, even implicitly shared objects are passed by const reference (e.g. "
+"``setTitle( const QString& title )`` instead of ``setTitle( QString title "
+")``."
+msgstr ""
+"Acordați o atenție deosebită momentului când argumentele ar trebui să fie "
+"transmise prin referință. Cu excepția cazului în care obiectele argumentului"
+" nu au dimensiuni mari și sunt trivial de copiat (cum ar fi obiectele "
+"QPoint), ele ar trebui să fie transmise prin referințe constante. Pentru "
+"concordanța cu API-ul Qt, chiar și obiectele partajate în mod implicit sunt "
+"transmise prin referințe constante (ex.: ``setTitle( const QString& title "
+")`` în loc de ``setTitle( QString title )``."
+
+#: ../../source/docs/developers_guide/codingstandards.rst:103
+msgid "Function Return Values"
+msgstr "Valorile Returnate de Funcție"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:105
+msgid ""
+"Return small and trivially copied objects as values. Larger objects should "
+"be returned by const reference. The one exception to this is implicitly "
+"shared objects, which are always returned by value. Return ``QObject`` or "
+"subclassed objects as pointers."
+msgstr ""
+"Returnați ca valori obiectele mici și trivial copiate. Obiectele mai mari ar"
+" trebui returnate prin referințe constante. Singura excepție o reprezintă "
+"obiectele partajate în mod implicit, care sunt întotdeauna returnate prin "
+"valoare. Returnați ca pointeri ``QObject`` sau obiectele subclasate."
+
+#: ../../source/docs/developers_guide/codingstandards.rst:110
+msgid "``int maximumValue() const``"
+msgstr "``int maximumValue() const``"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:111
+msgid "``const LayerSet& layers() const``"
+msgstr "``const LayerSet& layers() const``"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:112
+msgid "``QString title() const`` (``QString`` is implicitly shared)"
+msgstr ""
+"``QString title() const`` (``QString`` este, în mod implicit, partajat)"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:113
+msgid ""
+"``QList< QgsMapLayer* > layers() const`` (``QList`` is implicitly shared)"
+msgstr ""
+"``QList< QgsMapLayer* > layers() const`` (``QList`` este, în mod implicit, "
+"partajat)"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:114
+msgid ""
+"``QgsVectorLayer *layer() const;`` (``QgsVectorLayer`` inherits ``QObject``)"
+msgstr ""
+"``QgsVectorLayer *layer() const;`` (``QgsVectorLayer`` inherits ``QObject``)"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:115
+msgid ""
+"``QgsAbstractGeometry *geometry() const;`` (``QgsAbstractGeometry`` is "
+"abstract and will probably need to be casted)"
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:120
+msgid "API Documentation"
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:122
+msgid ""
+"It is required to write API documentation for every class, method, enum and "
+"other code that is available in the public API."
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:125
+msgid ""
+"QGIS uses Doxygen for documentation. Write descriptive and meaningful "
+"comments that give a reader information about what to expect, what happens "
+"in edge cases and give hints about other interfaces he could be looking for,"
+" best best practice and code samples."
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:131
+msgid "Methods"
+msgstr "Metodele"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:133
+msgid ""
+"Method descriptions should be written in a descriptive form, using the 3rd "
+"person. Methods require a ``\\since`` tag that defines when they have been "
+"introduced. You should add additional ``\\since`` tags for important changes"
+" that were introduced later on."
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:154
+msgid "Members Variables"
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:156
+msgid ""
+"Member variables should normally be in the ``private`` section and made "
+"available via getters and setters. One exception to this is for data "
+"containers like for error reporting. In such cases do not prefix the member "
+"with an ``m``."
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:186
+msgid "Qt Designer"
+msgstr "Qt Designer"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:189
+msgid "Generated Classes"
+msgstr "Clasele Generate"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:191
+msgid ""
+"QGIS classes that are generated from Qt Designer (ui) files should have a "
+"Base suffix. This identifies the class as a generated base class."
+msgstr ""
+"Clasele QGIS care sunt generate în fișierele produse de Qt Designer (UI) ar "
+"trebui să aibă sufixul Base. Acest lucru identifică o clasă de bază, "
+"generată."
+
+#: ../../source/docs/developers_guide/codingstandards.rst:196
+msgid "``QgsPluginManagerBase``"
+msgstr "``QgsPluginManagerBase``"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:197
+msgid "``QgsUserOptionsBase``"
+msgstr "``QgsUserOptionsBase``"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:201
+msgid "Dialogs"
+msgstr "Dialoguri"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:203
+msgid ""
+"All dialogs should implement tooltip help for all toolbar icons and other "
+"relevant widgets. Tooltips add greatly to feature discoverability for both "
+"new and experienced users."
+msgstr ""
+"Toate dialogurile ar trebui să implementeze ajutorul pentru toate "
+"pictogramele barei de instrumente și alte controale grafice relevante. "
+"Baloanele cu indicii adaugă foarte mult la descoperirea caracteristicilor, "
+"atât pentru utilizatorii noi, cât și pentru cei experimentați."
+
+#: ../../source/docs/developers_guide/codingstandards.rst:207
+msgid ""
+"Ensure that the tab order for widgets is updated whenever the layout of a "
+"dialog changes."
+msgstr ""
+"Asigurați-vă că ordinea filelor pentru controalele grafice este actualizată "
+"ori de câte ori se modifică aspectul unui dialog."
+
+#: ../../source/docs/developers_guide/codingstandards.rst:212
+msgid "C++ Files"
+msgstr "Fișierele C++"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:217
+msgid ""
+"C++ implementation and header files should have a .cpp and .h extension "
+"respectively. Filename should be all lowercase and, in the case of classes, "
+"match the class name."
+msgstr ""
+"Fișierele antet și de implementare C++ ar trebui să aibă extensiile .h, "
+"respectiv .cpp. Numele de fișier ar trebui să conțină doar litere mici și, "
+"în cazul claselor, să se potrivească numelui clasei."
+
+#: ../../source/docs/developers_guide/codingstandards.rst:221
+msgid ""
+"Example: Class ``QgsFeatureAttribute`` source files are "
+":file:`qgsfeatureattribute.cpp` and :file:`qgsfeatureattribute.h`"
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:225
+msgid ""
+"In case it is not clear from the statement above, for a filename to match a "
+"class name it implicitly means that each class should be declared and "
+"implemented in its own file. This makes it much easier for newcomers to "
+"identify where the code is relating to specific class."
+msgstr ""
+"În cazul în care nu este clară indicația de mai sus, cerința ca numele de "
+"fișier să se potrivească numelui de clasă, arată că, implicit, fiecare clasă"
+" trebuie să fie declarată și implementată în propriul fișier. Acest lucru "
+"facilitează nou-veniților identificarea codului care este specific anumitor "
+"clase."
+
+#: ../../source/docs/developers_guide/codingstandards.rst:232
+msgid "Standard Header and License"
+msgstr "Antetul Standard și Licența"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:234
+msgid ""
+"Each source file should contain a header section patterned after the "
+"following example:"
+msgstr ""
+"Fiecare fișier sursă trebuie să conțină o secțiune antet, în conformitate cu"
+" exemplul următor:"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:254
+msgid ""
+"There is a template for Qt Creator in git. To use it, copy it from "
+":file:`doc/qt_creator_license_template` to a local location, adjust the mail"
+" address and - if required - the name and configure QtCreator to use it: "
+":menuselection:`Tools --> Options --> C++ --> File Naming`."
+msgstr ""
+"Există un șablon pentru Qt Creator în git. Pentru a-l utiliza, copiați-l din"
+" :file:`doc/qt_creator_license_template` într-un dosar local, ajustați "
+"adresa e-mail și numele - dacă este necesar - apoi configurați QtCreator "
+"pentru a-l folosi: :menuselection:`Instrumente --> Opțiuni --> C++ --> "
+"Denumirea Fișierului`."
+
+#: ../../source/docs/developers_guide/codingstandards.rst:261
+msgid "Variable Names"
+msgstr "Numele Variabilei"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:263
+msgid ""
+"Local variable names begin with a lower case letter and are formed using "
+"mixed case. Do not use prefixes like ``my`` or ``the``."
+msgstr ""
+"Numele variabilelor locale încep cu o literă mică, utilizând majuscule și "
+"minuscule. Nu folosiți prefixe precum ``my`` sau ``the``."
+
+#: ../../source/docs/developers_guide/codingstandards.rst:268
+msgid "``mapCanvas``"
+msgstr "``mapCanvas``"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:269
+msgid "``currentExtent``"
+msgstr "``currentExtent``"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:273
+msgid "Enumerated Types"
+msgstr "Tipurile Enumerate"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:275
+msgid ""
+"Enumerated types should be named in CamelCase with a leading capital e.g.:"
+msgstr ""
+"Tipurile enumerate ar trebui să fie denumite folosind CamelCase, începând cu"
+" o majusculă, de ex.:"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:287
+msgid ""
+"Do not use generic type names that will conflict with other types. e.g. use "
+"``UnkownUnit`` rather than ``Unknown``"
+msgstr ""
+"Nu utilizați tipuri de nume generice, care vor intra în conflict cu alte "
+"tipuri. De ex., folosiți mai degrabă ``UnkownUnit`` decât ``Unknown``"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:291
+msgid "Global Constants & Macros"
+msgstr "Constantele locale și Comenzile Macro"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:293
+msgid ""
+"Global constants and macros should be written in upper case underscore "
+"separated e.g.:"
+msgstr ""
+"Constantele locale și comenzile macro ar trebui să fie scrise cu majuscule, "
+"separate cu ajutorul caracterului de subliniere, de ex .:"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:301
+msgid "Comments"
+msgstr "Comentarii"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:303
+msgid ""
+"Comments to class methods should use a third person indicative style instead"
+" of the imperative style:"
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:316
+msgid "Qt Signals and Slots"
+msgstr "Semnale și Sloturi Qt"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:318
+msgid ""
+"All signal/slot connects should be made using the \"new style\" connects "
+"available in Qt5. Futher information on this requirement is available in "
+"`QEP #77 <https://github.com/qgis/QGIS-Enhancement-Proposals/issues/77>`_."
+msgstr ""
+"Toate conexiunile la semnale/sloturi ar trebui să fie făcute folosindu-se "
+"legăturile de \"stil nou\" disponibile în Qt5. Informații suplimentare "
+"privind această cerință sunt disponibile în `QEP #77 "
+"<https://github.com/qgis/QGIS-Enhancement-Proposals/issues/77>`_."
+
+#: ../../source/docs/developers_guide/codingstandards.rst:322
+msgid ""
+"Avoid use of Qt auto connect slots (i.e. those named ``void "
+"on_mSpinBox_valueChanged``). Auto connect slots are fragile and prone to "
+"breakage without warning if dialogs are refactored."
+msgstr ""
+"Evitați folosirea sloturilor cu autoconectare QT (adică pe acelea denumite "
+"``void on_mSpinBox_valueChanged``). Sloturile cu autoconectare sunt fragile "
+"și predispuse la întrerupere, fără avertisment, dacă dialogurile sunt "
+"refactorizate."
+
+#: ../../source/docs/developers_guide/codingstandards.rst:328
+msgid "Editing"
+msgstr "Editarea"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:330
+msgid ""
+"Any text editor/IDE can be used to edit QGIS code, providing the following "
+"requirements are met."
+msgstr ""
+"Orice editor de text/IDE poate fi folosit pentru a edita codul QGIS, oferind"
+" garanția că sunt îndeplinite următoarele cerințe."
+
+#: ../../source/docs/developers_guide/codingstandards.rst:334
+msgid "Tabs"
+msgstr "Caracterele TAB"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:336
+msgid ""
+"Set your editor to emulate tabs with spaces. Tab spacing should be set to 2 "
+"spaces."
+msgstr ""
+"Setați în editorul dvs. emularea TAB-ului cu ajutotul spațiilor albe. Ar "
+"trebui folosite în acest scop 2 spații."
+
+#: ../../source/docs/developers_guide/codingstandards.rst:339
+msgid "In vim this is done with ``set expandtab ts=2``"
+msgstr "În vim, acest lucru se realizează prin comanda ``set expandtab ts=2``"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:342
+msgid "Indentation"
+msgstr "Indentarea"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:344
+msgid ""
+"Source code should be indented to improve readability. There is a "
+":file:`scripts/prepare-commit.sh` that looks up the changed files and "
+"reindents them using astyle. This should be run before committing. You can "
+"also use :file:`scripts/astyle.sh` to indent individual files."
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:349
+msgid ""
+"As newer versions of astyle indent differently than the version used to do a"
+" complete reindentation of the source, the script uses an old astyle "
+"version, that we include in our repository (enable ``WITH_ASTYLE`` in cmake "
+"to include it in the build)."
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:355
+msgid "Braces"
+msgstr "Acoladele"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:357
+msgid "Braces should start on the line following the expression:"
+msgstr "Acoladele ar trebui să fie poziționate pe linia următoare expresiei:"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:373
+msgid "API Compatibility"
+msgstr "Compatibilitatea API-ului"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:375
+msgid "There is :api:`API documentation <>` for C++."
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:377
+msgid ""
+"We try to keep the API stable and backwards compatible. Cleanups to the API "
+"should be done in a manner similar to the Qt sourcecode e.g."
+msgstr ""
+"Încercăm să păstrăm API-ul stabil și compatibil cu versiunile anterioare. "
+"Curățarea API-ului ar trebui să fie făcută într-un mod similar cu al codului"
+" sursă Qt, de ex.:"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:417
+msgid "SIP Bindings"
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:419
+msgid ""
+"Some of the SIP files are automatically generated using a dedicated script."
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:423
+msgid "Header pre-processing"
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:426
+msgid ""
+"All the information to properly build the SIP file must be found in the C++ "
+"header file. Some macros are available for such definition:"
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:429
+msgid ""
+"Use ``#ifdef SIP_RUN`` to generate code only in SIP files or ``#ifndef "
+"SIP_RUN`` for C++ code only. ``#else`` statements are handled in both cases."
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:432
+msgid "Use ``SIP_SKIP`` to discard a line"
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:433
+msgid "The following annotations are handled:"
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:435
+msgid "``SIP_FACTORY``: ``/Factory/``"
+msgstr "``SIP_FACTORY``: ``/Factory/``"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:436
+msgid "``SIP_OUT``: ``/Out/``"
+msgstr "``SIP_OUT``: ``/Out/``"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:437
+msgid "``SIP_INOUT``: ``/In,Out/``"
+msgstr "``SIP_INOUT``: ``/In,Out/``"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:438
+msgid "``SIP_TRANSFER``: ``/Transfer/``"
+msgstr "``SIP_TRANSFER``: ``/Transfer/``"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:439
+msgid "``SIP_PYNAME(name)``: ``/PyName=name/``"
+msgstr "``SIP_PYNAME(name)``: ``/PyName=name/``"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:440
+msgid "``SIP_KEEPREFERENCE``: ``/KeepReference/``"
+msgstr "``SIP_KEEPREFERENCE``: ``/KeepReference/``"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:441
+msgid "``SIP_TRANSFERTHIS``: ``/TransferThis/``"
+msgstr "``SIP_TRANSFERTHIS``: ``/TransferThis/``"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:442
+msgid "``SIP_TRANSFERBACK``: ``/TransferBack/``"
+msgstr "``SIP_TRANSFERBACK``: ``/TransferBack/``"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:444
+msgid ""
+"``private`` sections are not displayed, except if you use a ``#ifdef "
+"SIP_RUN`` statement in this block."
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:446
+msgid ""
+"``SIP_PYDEFAULTVALUE(value)`` can be used to define an alternative default "
+"value of the python method. If the default value contains a comma ``,``, the"
+" value should be surrounded by single quotes ``'``"
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:449
+msgid ""
+"``SIP_PYTYPE(type)`` can be used to define an alternative type for an "
+"argument of the python method. If the type contains a comma ``,``, the type "
+"should be surrounded by single quotes ``'``"
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:453
+msgid "A demo file can be found in :file:`tests/scripts/sipifyheader.h`."
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:456
+msgid "Generating the SIP file"
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:458
+msgid "The SIP file can be generated using a dedicated script. For instance:"
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:465
+msgid ""
+"As soon as a SIP file is added to one of the source file "
+"(:file:`python/core/core.sip`, :file:`python/gui/gui.sip` or "
+":file:`python/analysis/analysis.sip`), it will be considered as generated "
+"automatically. A test on Travis will ensure that this file is up to date "
+"with its corresponding header."
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:471
+msgid ""
+"Older files for which the automatic creation is not enabled yet are listed "
+"in :file:`python/auto_sip.blacklist`."
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:475
+msgid "Improving sipify script"
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:477
+msgid ""
+"If some improvements are required for sipify script, please add the missing "
+"bits to the demo file :file:`tests/scripts/sipifyheader.h` and create the "
+"expected header :file:`tests/scripts/sipifyheader.expected.si`. This will "
+"also be automatically tested on Travis as a unit test of the script itself."
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:484
+msgid "Coding Style"
+msgstr "Stilul de Codificare"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:487
+msgid ""
+"Here are described some programming hints and tips that will hopefully "
+"reduce errors, development time and maintenance."
+msgstr ""
+"Aici sunt descrise câteva sugestii și sfaturi de programare care vor reduce,"
+" sperăm, erorile, timpul de întreținere și dezvoltare."
+
+#: ../../source/docs/developers_guide/codingstandards.rst:492
+msgid "Where-ever Possible Generalize Code"
+msgstr "Generalizați Codul Atunci Când Este Posibil "
+
+#: ../../source/docs/developers_guide/codingstandards.rst:495
+msgid ""
+"If you are cut-n-pasting code, or otherwise writing the same thing more than"
+" once, consider consolidating the code into a single function."
+msgstr ""
+"Decât să duplicați un anumit cod, mai bine luați în considerare consolidarea"
+" acestuia într-o funcție unică."
+
+#: ../../source/docs/developers_guide/codingstandards.rst:498
+msgid "This will:"
+msgstr "Acest lucru vă va permite să:"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:500
+msgid "allow changes to be made in one location instead of in multiple places"
+msgstr "efectuați modificări într-o singură locație în loc de mai multe"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:501
+msgid "help prevent code bloat"
+msgstr "preveniți încurcarea codului"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:502
+msgid ""
+"make it more difficult for multiple copies to evolve differences over time, "
+"thus making it harder to understand and maintain for others"
+msgstr ""
+"împiedica apariția, de-a lungul timpului, a diferențelor între secțiunile "
+"identice de cod, făcându-le, astfel, mai greu de înțeles și de întreținut de"
+" către alții"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:507
+msgid "Prefer Having Constants First in Predicates"
+msgstr "Se preferă poziționarea Constantelor înaintea Predicatelor"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:509
+msgid "Prefer to put constants first in predicates."
+msgstr "Se preferă poziționarea constantelor la începutul predicatelor."
+
+#: ../../source/docs/developers_guide/codingstandards.rst:511
+msgid "``0 == value`` instead of ``value == 0``"
+msgstr "``0 == value`` în loc de ``value == 0``"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:513
+msgid ""
+"This will help prevent programmers from accidentally using ``=`` when they "
+"meant to use ``==``, which can introduce very subtle logic bugs. The "
+"compiler will generate an error if you accidentally use ``=`` instead of "
+"``==`` for comparisons since constants inherently cannot be assigned values."
+msgstr ""
+"Acest lucru va ajuta prevenirea folosirii accidentale de ``=`` în loc de "
+"``==``, care poate introduce erori subtile de logică. Compilatorul va genera"
+" o eroare dacă folosiți accidental ``=`` în loc de ``==`` pentru comparații,"
+" deoarece nu se pot atribui valori constantelor."
+
+#: ../../source/docs/developers_guide/codingstandards.rst:519
+msgid "Whitespace Can Be Your Friend"
+msgstr "Spațiile Albe Vă Pot Fi De Ajutor"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:521
+msgid ""
+"Adding spaces between operators, statements, and functions makes it easier "
+"for humans to parse code."
+msgstr ""
+"Adăugarea de spații între operatori, declarații și funcții, facilitează "
+"utilizatorilor analiza codului."
+
+#: ../../source/docs/developers_guide/codingstandards.rst:524
+msgid "Which is easier to read, this:"
+msgstr "Care cod este mai ușor de citit? Acesta:"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:530
+msgid "or this:"
+msgstr "sau acesta:"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:536
+msgid ":file:`scripts/prepare-commit.sh` will take care of this."
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:540
+msgid "Put commands on separate lines"
+msgstr "Puneți comenzile pe linii separate"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:542
+msgid ""
+"When reading code it's easy to miss commands, if they are not at the "
+"beginning of the line. When quickly reading through code, it's common to "
+"skip lines if they don't look like what you are looking for in the first few"
+" characters. It's also common to expect a command after a conditional like "
+"``if``."
+msgstr ""
+"La citirea codului, este ușor să omiteți comenzile dacă acestea nu se află "
+"la începutul liniei. La parcurgerea rapidă a codului, este normal să omiteți"
+" liniile atunci când acestea nu prezintă ceea ce căutați în primele câteva "
+"caractere. Este, de asemenea, normal să vă așteptați la o comandă după un "
+"condițional ca ``if``."
+
+#: ../../source/docs/developers_guide/codingstandards.rst:547
+msgid "Consider:"
+msgstr "Se ia în considerare următorul cod:"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:555
+msgid "It's very easy to miss part of what the flow of control. Instead use"
+msgstr ""
+"Este foarte ușor să omiteți o parte din fluxul de control. Scrieți, în "
+"schimb"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:567
+msgid "Indent access modifiers"
+msgstr "Indentați modificatorii de acces"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:569
+msgid ""
+"Access modifiers structure a class into sections of public API, protected "
+"API and private API. Access modifiers themselves group the code into this "
+"structure. Indent the access modifier and declarations."
+msgstr ""
+"Modificatorii de acces structurează o clasă în secțiuni de API public, API "
+"protejat și API privat. Rolul lor este de a grupa codul pe această "
+"structură. Indentați modificatorii de acces și declarațiile."
+
+#: ../../source/docs/developers_guide/codingstandards.rst:586
+msgid "Book recommendations"
+msgstr "Cărți recomandate"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:589
+msgid ""
+"`Effective Modern C++ <https://shop.oreilly.com/product/0636920033707.do>`_,"
+" Scott Meyers"
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:590
+msgid ""
+"`More Effective C++ <https://www.informit.com/store/more-effective-c-plus-"
+"plus-35-new-ways-to-improve-your-9780201633719>`_, Scott Meyers"
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:591
+msgid ""
+"`Effective STL <https://www.informit.com/store/effective-stl-50-specific-"
+"ways-to-improve-your-use-9780201749625>`_, Scott Meyers"
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:592
+msgid ""
+"`Design Patterns <https://www.amazon.com/Design-Patterns-Elements-Reusable-"
+"Object-Oriented/dp/0201633612>`_, GoF"
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:594
+msgid ""
+"You should also really read this article from Qt Quarterly on `designing Qt "
+"style (APIs) <https://doc.qt.io/archives/qq/qq13-apis.html>`_"
+msgstr ""
+"Ar trebui, de asemenea, să citiți acest articol de la Qt Quarterly despre "
+"`proiectarea în stilul Qt (API) "
+"<https://doc.qt.io/archives/qq/qq13-apis.html>`_"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:599
+msgid "Credits for contributions"
+msgstr "Recunoașterea contribuțiilor"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:601
+msgid ""
+"Contributors of new functions are encouraged to let people know about their "
+"contribution by:"
+msgstr ""
+"Contribuitorii la noile funcții sunt încurajați să-i informeze pe ceilalți "
+"despre contribuția lor prin:"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:604
+msgid ""
+"adding a note to the changelog for the first version where the code has been"
+" incorporated, of the type::"
+msgstr ""
+"adăugarea unei note la jurnalul schimbărilor, pentru prima versiune în care "
+"a fost încorporat codul, de tipul::"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:610
+msgid ""
+"writing an article about the new feature on a blog, and add it to the QGIS "
+"planet https://plugins.qgis.org/planet/"
+msgstr ""
+
+#: ../../source/docs/developers_guide/codingstandards.rst:612
+msgid "adding their name to:"
+msgstr "adăugarea numelui lor la:"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:614
+msgid ":source:`doc/CONTRIBUTORS`"
+msgstr ":source:`doc/CONTRIBUTORS`"
+
+#: ../../source/docs/developers_guide/codingstandards.rst:615
+msgid ":source:`doc/AUTHORS`"
+msgstr ":source:`doc/AUTHORS`"
+
+#~ msgid "There is `API documentation <http://qgis.org/api/>`_ for C++."
+#~ msgstr "Există `documentație API <http://qgis.org/api/>`_ pentru C++."
+
+#~ msgid ""
+#~ "`Effective Modern C++ <http://shop.oreilly.com/product/0636920033707.do>`_, "
+#~ "Scott Meyers"
+#~ msgstr ""
+#~ "`Effective Modern C++ <http://shop.oreilly.com/product/0636920033707.do>`_, "
+#~ "Scott Meyers"
+
+#~ msgid ""
+#~ "`More Effective C++ <http://www.informit.com/store/more-effective-c-plus-"
+#~ "plus-35-new-ways-to-improve-your-9780201633719>`_, Scott Meyers"
+#~ msgstr ""
+#~ "`More Effective C++ <http://www.informit.com/store/more-effective-c-plus-"
+#~ "plus-35-new-ways-to-improve-your-9780201633719>`_, Scott Meyers"
+
+#~ msgid ""
+#~ "`Effective STL <http://www.informit.com/store/effective-stl-50-specific-"
+#~ "ways-to-improve-your-use-9780201749625>`_, Scott Meyers"
+#~ msgstr ""
+#~ "`Effective STL <http://www.informit.com/store/effective-stl-50-specific-"
+#~ "ways-to-improve-your-use-9780201749625>`_, Scott Meyers"
+
+#~ msgid ""
+#~ "`Design Patterns <http://www.amazon.com/Design-Patterns-Elements-Reusable-"
+#~ "Object-Oriented/dp/0201633612>`_, GoF"
+#~ msgstr ""
+#~ "`Design Patterns <http://www.amazon.com/Design-Patterns-Elements-Reusable-"
+#~ "Object-Oriented/dp/0201633612>`_, GoF"
+
+#~ msgid ""
+#~ "writing an article about the new feature on a blog, and add it to the QGIS "
+#~ "planet http://plugins.qgis.org/planet/"
+#~ msgstr ""
+#~ "scrierea unui articol despre noua facilitate pe un blog, și adăugarea "
+#~ "acestuia la QGIS planet http://plugins.qgis.org/planet/"
+
+#~ msgid "There is `API documentation <https://qgis.org/api/>`_ for C++."
+#~ msgstr ""
+
+#~ msgid "https://github.com/qgis/QGIS/blob/master/doc/CONTRIBUTORS"
+#~ msgstr "https://github.com/qgis/QGIS/blob/master/doc/CONTRIBUTORS"
+
+#~ msgid "https://github.com/qgis/QGIS/blob/master/doc/AUTHORS"
+#~ msgstr "https://github.com/qgis/QGIS/blob/master/doc/AUTHORS"
+
+#~ msgid "https://github.com/qgis/QGIS/blob/master/doc/contributors.json"
+#~ msgstr "https://github.com/qgis/QGIS/blob/master/doc/contributors.json"

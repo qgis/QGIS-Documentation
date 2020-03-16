@@ -1,0 +1,808 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# 
+# Translators:
+# Choro <u.ko.kubot@gmail.com>, 2014-2015
+# fairtommy <fairtommy@gmail.com>, 2019
+# fairtommy <fairtommy@gmail.com>, 2017-2018
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-11 14:48+0200\n"
+"PO-Revision-Date: 2019-08-11 12:58+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"Language-Team: Japanese (http://www.transifex.com/qgis/qgis-documentation/language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:8
+msgid "|LS| Network Analysis"
+msgstr "|LS| ネットワーク分析"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:10
+msgid ""
+"Calculating the shortest distance between two points is a commonly cited use"
+" for GIS. Tools for this can be found in the :guilabel:`Processing` toolbox."
+msgstr "2点間の最短距離の計算は、よく引用されるGISの用途です。このためのツールは :guilabel:`プロセシング` ツールボックスにあります。"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:13
+msgid ""
+"**The goal for this lesson:** learn to use :guilabel:`Network analysis` "
+"algorithms."
+msgstr "**このレッスンの目的** :guilabel:`ネットワーク分析` アルゴリズムを使うことを学びます。"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:17
+msgid "|basic| |FA| The Tools and the Data"
+msgstr "|basic| |FA| ツールとデータ"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:19
+msgid ""
+"You can find all the network analysis algorithms in the "
+":menuselection:`Processing --> Network Analysis` menu. You can see that "
+"there are many tools available:"
+msgstr "すべてのネットワーク解析アルゴリズムは :menuselection:`プロセシング - > ネットワーク分析` メニューにあります。利用可能なツールがたくさんあることがわかります："
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:29
+msgid ""
+"Open the project :file:`exercise_data/network_analysis/network.qgz`, it "
+"contains two layers:"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:32
+msgid ":guilabel:`network_points`"
+msgstr ":guilabel:`network_points`"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:33
+msgid ":guilabel:`network_lines`"
+msgstr ":guilabel:`network_lines`"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:35
+msgid ""
+"As you can see the :guilabel:`network_lines` layer has already a style that "
+"helps to understand the road network."
+msgstr "ご覧のとおり、 :guilabel:`network_lines` レイヤーは道路ネットワークを理解するのに役立つスタイルを既に持っています。"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:45
+msgid ""
+"The shortest path tools provide ways to calculate either the shortest or the"
+" fastest path between two points of a network, given:"
+msgstr "最短経路ツールは、ネットワークの2点間の最短経路または最短経路を計算する方法を提供します。"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:48
+msgid "start point and end point selected on the map"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:49
+msgid ""
+"start point selected on the map and end points taken from a point layer"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:50
+msgid ""
+"start points taken from a point layer and end point selected on the map"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:52
+msgid "Let's start."
+msgstr "では始めましょう。"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:55
+msgid "|basic| Calculate the shortest path (point to point)"
+msgstr "|basic| 最短経路を計算する（点から点へ）"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:56
+msgid ""
+"The :menuselection:`Network analysis --> Shortest path (point to point)` "
+"allows you to calculate the shortest distance between two manually selected "
+"points on the map."
+msgstr ":menuselection:`ネットワーク解析 - >最短経路（2地点間）` を使うと、地図上で手動で選択した2点間の最短距離を計算できます。"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:60
+msgid ""
+"In this example we will calculate the **shortest** (not fastest) path "
+"between two points."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:63
+msgid ""
+"In the following image we choose these two points as starting and ending "
+"point for the analysis:"
+msgstr "次の図では、これら2つの点を分析の開始点と終了点として選択しています："
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:72
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:140
+msgid "Open the :guilabel:`Shortest path (point to point)` algorithm"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:73
+msgid ""
+"Select :guilabel:`network_lines` for :guilabel:`Vector layer representing "
+"network`"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:74
+msgid "Let ``Shortest`` in the :guilabel:`Path type to calculate` parameter"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:75
+msgid ""
+"Click on the :guilabel:`...` button next to the :guilabel:`Start point (x, "
+"y)` and choose the location tagged with ``Starting Point`` in the picture. "
+"The menu is filled with the coordinates of the clicked point."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:78
+msgid ""
+"Do the same thing but choosing the location tagged with ``Ending point`` for"
+" :guilabel:`End point (x, y)`"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:80
+msgid "Click on the :guilabel:`Run` button:"
+msgstr ":guilabel:`実行` ボタンをクリックします："
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:88
+msgid ""
+"A new line layer is created representing the shortest path between the "
+"chosen points. Uncheck the :guilabel:`network_lines` layer to see the result"
+" better:"
+msgstr "選択した点間の最短経路を表す新しい線レイヤが作成されます。 :guilabel:`network_lines` レイヤーのチェックを外して結果を良くしてください："
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:97
+msgid ""
+"Let's open the attribute table of the output layer. It contains three "
+"fields, representing the coordinates of the starting and ending points and "
+"the **cost**."
+msgstr "出力レイヤの属性テーブルを開きましょう。始点と終点の座標と **コスト** を表す3つのフィールドがあります。"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:101
+msgid ""
+"We chose ``Shortest`` as :guilabel:`Path type to calculate`, so the **cost**"
+" represent the **distance**, in layer units, between the two locations."
+msgstr "``最短`` を:guilabel:`計算するパスの種類` として選択したので、 **コスト** は2つの位置間の **距離** をレイヤ単位で表します。"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:104
+msgid ""
+"In our case, the *shortest* distance between the chosen points is around "
+"``1000`` meters:"
+msgstr "この場合、選択された点の間の *最短* の距離は約1000メートルです。"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:113
+msgid ""
+"Now that you know how to use the tool, feel free to change them and test "
+"other locations."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:120
+msgid "|moderate| |TY| Fastest path"
+msgstr "|moderate| |TY| 最速径路"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:122
+msgid ""
+"With the same data of the previous exercise, try to calculate the fastest "
+"path between the two points."
+msgstr "前の演習と同じデータを使用して、2点間の最速経路を計算してみます。"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:125
+msgid "How much time do you need to go from the start to the end point?"
+msgstr "始点から終点までどのくらいの時間が必要ですか？"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:127
+msgid ":ref:`Check your results <network-analysis-1>`"
+msgstr ":ref:`結果を確認 <network-analysis-1>`"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:131
+msgid "|moderate| |FA| Advanced options"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:133
+msgid ""
+"Let's explore some more options of the Network Analysis tools. In the "
+":ref:`previous exercise <backlink-network_analysis_1>` we calculated the "
+"**fastest** route between two points. As you can imagine, the time depends "
+"on the travel **speed**."
+msgstr "ネットワーク分析ツールの他のオプションについて調べてみましょう。  :ref:`前回の練習 <backlink-network_analysis_1>` では、2点間の **最速** 経路を計算しました。想像できるように、時間は旅行 **速度** に依存します。"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:137
+msgid ""
+"We will use the same layers and same starting and ending points of the "
+"previous exercises."
+msgstr "前の練習問題と同じレイヤと同じ開始点と終了点を使用します。"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:141
+msgid ""
+"Fill the :guilabel:`Input layer`, :guilabel:`Start point (x, y)` and "
+":guilabel:`End point (x, y)` as we did before"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:143
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:199
+msgid "Choose ``Fastest`` as the :guilabel:`Path type to calculate`"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:144
+msgid "Open the :guilabel:`Advanced parameter` menu"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:145
+msgid ""
+"Change the :guilabel:`Default speed (km/h)` from the default ``50`` value to"
+" ``4``"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:154
+msgid "Click on :guilabel:`Run`"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:155
+msgid ""
+"Once the algorithm is finished, close the dialog and open the attribute "
+"table of the output layer."
+msgstr "アルゴリズムが終了したら、ダイアログを閉じて、出力レイヤの属性テーブルを開きます。"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:158
+msgid ""
+"The :guilabel:`cost` field contains the value according to the speed "
+"parameter you have chosen. We can convert the :guilabel:`cost` field from "
+"hours with fractions to the more readable *minutes* values."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:162
+msgid ""
+"Open the field calculator by clicking on the |calculateField| icon and add "
+"the new field :guilabel:`minutes` by multiplying the :guilabel:`cost` field "
+"by 60:"
+msgstr "|calculateField| アイコンをクリックしてフィールド計算機を開き、 :guilabel:`コスト` フィールドに60を掛けて新しいフィールド :guilabel:`分` を追加します。"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:171
+msgid ""
+"That's it! Now you know how many minutes it will take to get from one point "
+"to the other one."
+msgstr "おしまい！これで、ある地点から別の地点までの所要時間がわかります。"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:176
+msgid "|hard| Shortest map with speed limit"
+msgstr "|hard| 制限速度付最短経路図"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:177
+msgid ""
+"The Network analysis toolbox has other interesting options. Looking at the "
+"following map:"
+msgstr "ネットワーク解析ツールボックスには他にも興味深いオプションがあります。次の地図を見てください："
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:186
+msgid ""
+"we would like to know the **fastest** route considering the **speed limits**"
+" of each road (the labels represent the speed limits in km/h). The shortest "
+"path without considering speed limits would of course be the purple path. "
+"But in that road the speed limit is 20 km/h, while in the green road you can"
+" go at 100 km/h!"
+msgstr "各道路の制限速度を考慮した **最速** ルートを知りたい（ラベルは **制限速度** をkm / hで表しています）。制限速度を考慮しない最短経路はもちろん紫色の経路になります。しかし、その道路では制限速度20 km / hですが、緑色の道路では100 km / h出せます！"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:191
+msgid ""
+"As we did in the first exercise, we will use the :menuselection:`Network "
+"analysis --> Shortest path (point to point)` and we will manually choose the"
+" start and end points."
+msgstr "最初の練習でやったように、:menuselection:`ネットワーク解析 - >最短経路（ポイント間）` を使用して、手動で始点と終点を選びます。"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:195
+msgid ""
+"Open the :menuselection:`Network analysis --> Shortest path (point to "
+"point)` algorithm"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:197
+msgid ""
+"Select :guilabel:`network_lines` for the :guilabel:`Vector layer "
+"representing network` parameter"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:200
+msgid ""
+"Click on the :guilabel:`...` button next to the :guilabel:`Start point (x, "
+"y)` and choose the location tagged with ``Start Point`` in the picture. The "
+"menu is filled with the coordinates of the clicked point."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:203
+msgid ""
+"Do the same thing but choosing the location tagged with ``End point`` for "
+":guilabel:`End point (x, y)`"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:205
+msgid "Open the :guilabel:`Advanced parameters` menu"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:206
+msgid ""
+"Choose the ``speed`` field as the :guilabel:`Speed Field` parameter. With "
+"this option the algorithm will take into account the speed values for each "
+"road."
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:215
+msgid "Click on the :guilabel:`Run` button"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:216
+msgid "Turn off the :guilabel:`network_lines` layer to better see the result"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:224
+msgid ""
+"As you can see the fastest route does not correspond to the shortest one."
+msgstr "ご覧のとおり、最速ルートは最短ルートに対応していません。"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:228
+msgid "|moderate| Service area (from layer)"
+msgstr "|moderate| サービスエリア（レイヤーから）"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:229
+msgid ""
+"The :menuselection:`Network Analysis --> Service area (from layer)` "
+"algorithm can answer the question: given a point layer, what are all the "
+"reachable areas given a distance or a time value?"
+msgstr ":menuselection:`ネットワーク分析 - > Service area（レイヤから）` アルゴリズムで質問に答えることができます：ポイントレイヤが与えられ、距離または時間の値が与えられると到達可能なすべてのエリアはどうなりますか？"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:233
+msgid ""
+"The :menuselection:`Network Analysis --> Service area (from point)` is the "
+"same algorithm but, it allows you to manually choose the point on the map."
+msgstr ":menuselection:`ネットワーク分析 - > Service area（ポイントから）` も同じアルゴリズムですが、手動で地図上の地点を選択できます。"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:237
+msgid ""
+"Given a distance of ``250`` meters we want to know how far we can go on the "
+"network from each point of the :guilabel:`network_points` layer."
+msgstr "``250``メートルの距離が与えられたとして、 :guilabel:`network_points` レイヤーの各ポイントからどれだけネットワーク上を移動できるか知りたいのです。"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:240
+msgid "Uncheck all the layers except :guilabel:`network_points`"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:241
+msgid ""
+"Open the :menuselection:`Network Analysis --> Service area (from layer)` "
+"algorithm"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:242
+msgid ""
+"Choose :guilabel:`network_lines` for :guilabel:`Vector layer representing "
+"network`"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:243
+msgid ""
+"Choose :guilabel:`network_points` for :guilabel:`Vector layer with start "
+"points`"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:244
+msgid "Choose ``Shortest`` in :guilabel:`Path type to calculate`"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:245
+msgid "Enter ``250`` in the :guilabel:`Travel cost` parameter"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:246
+msgid "Click on :guilabel:`Run` and then close the dialog"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:254
+msgid ""
+"The output layer represents the maximum path you can reach from the point "
+"features given a distance of 250 meters:"
+msgstr "出力レイヤは、250メートルの距離を与えられてポイント地物から到達できる最大径路を表します。"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:263
+msgid "Cool isn't it?"
+msgstr ""
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:266
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:268
+msgid ""
+"Now you know how to use :guilabel:`Network analysis` algorithm to solve "
+"shortest-fastest path problems."
+msgstr "これで、 :guilabel:`ネットワーク分析` アルゴリズムを使用して最短経路問題を解決する方法がわかりました。"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:271
+msgid ""
+"We are now ready to perform some spatial statistic on vector layer data. "
+"Let's go!"
+msgstr "これで、ベクタレイヤデータに対して空間統計を実行する準備が整いました。さあ行きましょう！"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:275
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/vector_analysis/network_analysis.rst:277
+msgid ""
+"Next you'll see how to run spatial statistics algorithms on vector datasets."
+msgstr "次は、ベクターデータセットに空間統計アルゴリズムを実行する方法について説明します。"
+
+#~ msgid ""
+#~ "Calculating the shortest distance between two points is a commonly cited use"
+#~ " for GIS. QGIS ships with this tool, but it's not visible by default. In "
+#~ "this brief lesson, we'll show you what you need to get started."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**The goal for this lesson:** To activate, configure and use the "
+#~ ":guilabel:`Road Graph` plugin."
+#~ msgstr ""
+
+#~ msgid "|basic| |FA| Activate the Tool"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "QGIS has many plugins that add to its basic functions. Many of these plugins"
+#~ " are so useful that they ship along with the program straight out of the "
+#~ "box. They're still hidden by default, though. So in order to use them, you "
+#~ "need to activate them first."
+#~ msgstr ""
+
+#~ msgid "To activate the :guilabel:`Road Graph` plugin:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Start the :guilabel:`Plugin Manager` by clicking on the QGIS main window's "
+#~ "menu item :menuselection:`Plugins --> Manage and Install Plugins...`. A "
+#~ "dialog appears."
+#~ msgstr ""
+
+#~ msgid "Select the plugin like this:"
+#~ msgstr ""
+
+#~ msgid "Click :guilabel:`Close` on the :guilabel:`Plugin Manager` dialog."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you do not see the plugin in your interface, go to :menuselection:`View "
+#~ "--> Panels` and ensure that :guilabel:`Shortest path` has a check mark next "
+#~ "to it."
+#~ msgstr ""
+
+#~ msgid "This panel will appear in your interface:"
+#~ msgstr ""
+
+#~ msgid "|basic| |FA| Configure the Tool"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To have a layer to calculate on, first save your current map. If you haven't"
+#~ " already done so, save your :kbd:`roads_34S` layer to a shapefile by right-"
+#~ "clicking the layer and selecting :guilabel:`Save as...`. Create a new map "
+#~ "and load this layer into it."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Since so many different configurations are possible when analyzing networks,"
+#~ " the plugin doesn't assume anything before you've set it up. This means that"
+#~ " it won't do anything at all if you don't set it up first."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click on the menu item :menuselection:`Vector --> Road graph --> settings`. "
+#~ "A dialog will appear."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Make sure it's set up like this (use defaults unless otherwise specified):"
+#~ msgstr ""
+
+#~ msgid ":guilabel:`Time unit`: :guilabel:`hour`"
+#~ msgstr ""
+
+#~ msgid ":guilabel:`Distance unit`: :guilabel:`kilometer`"
+#~ msgstr ""
+
+#~ msgid ":guilabel:`Layer`: :guilabel:`roads_34S`"
+#~ msgstr ""
+
+#~ msgid ""
+#~ ":guilabel:`Speed field`: :guilabel:`Always use default` / :guilabel:`km/h`"
+#~ msgstr ""
+
+#~ msgid ":guilabel:`Direction`: :guilabel:`Two-way direction`"
+#~ msgstr ""
+
+#~ msgid ":guilabel:`Speed`: :guilabel:`60`"
+#~ msgstr ""
+
+#~ msgid "|basic| |FA| Use the Tool"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Find two points, on roads, on your map. They do not need to have any "
+#~ "significance, but they should be connected by roads and separated by a "
+#~ "reasonable distance:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the plugin panel, click on the :guilabel:`Capture Point` button next to "
+#~ "the :guilabel:`Start` field:"
+#~ msgstr ""
+
+#~ msgid "Click on your chosen start point."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Use the :guilabel:`Capture Point` button next to the :guilabel:`Stop` field "
+#~ "and capture your chosen end point."
+#~ msgstr ""
+
+#~ msgid "Click on the :guilabel:`Calculate` button to see the solution:"
+#~ msgstr ""
+
+#~ msgid "|moderate| |FA| Using Criteria"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Section developed by Linfiniti and S Motala (Cape Peninsula University of "
+#~ "Technology)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Add your :kbd:`restaurants_34S` layer to the map (extract it from your "
+#~ ":kbd:`analyis` map if necessary)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Open the attribute table for the :guilabel:`roads_34S` layer and enter edit "
+#~ "mode."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Add a new column with the name :kbd:`SPEED`, and give it the type "
+#~ ":guilabel:`Whole number (integer)` with a width of :kbd:`3`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the main window, activate the :guilabel:`Select Features by Rectangle` "
+#~ "tool:"
+#~ msgstr ""
+
+#~ msgid "Select any main roads in urban - but not residential - areas:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "(To select more than one road, hold the :kbd:`ctrl` button and drag a box "
+#~ "across any road that you want to include in the selection.)"
+#~ msgstr ""
+
+#~ msgid "In the attribute table, select :guilabel:`Show selected features`."
+#~ msgstr ""
+
+#~ msgid "Set the :kbd:`SPEED` value for all the selected streets to :kbd:`60`:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In context, this means that you're setting the speed limit on those roads to"
+#~ " :kbd:`60 km/h`."
+#~ msgstr ""
+
+#~ msgid "Select any highways or major roads outside urban areas:"
+#~ msgstr ""
+
+#~ msgid "Set the :kbd:`SPEED` value for all the selected streets to :kbd:`120`."
+#~ msgstr ""
+
+#~ msgid "Close the attribute table, save your edits, and exit edit mode."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Check the :menuselection:`Vector --> Road graph --> Road graph settings` to "
+#~ "ensure that it's set up as explained previously in this lesson, but with the"
+#~ " :guilabel:`Speed` value set to the :kbd:`SPEED` field you just created."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the :guilabel:`Shortest path` panel, click the :guilabel:`Start point` "
+#~ "button."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Set the starting point on a minor road on one side of |majorUrbanName| and "
+#~ "the end point on a major road on the other side of town:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the :guilabel:`Criterion` drop-down list in the :guilabel:`Shortest path`"
+#~ " panel, select :guilabel:`Length`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click :guilabel:`Calculate`. The route will be calculated for the shortest "
+#~ "distance:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Notice the values of :guilabel:`Length` and :guilabel:`Time` in the "
+#~ ":guilabel:`Shortest path` panel."
+#~ msgstr ""
+
+#~ msgid "Set the :guilabel:`Criterion` to :guilabel:`Time`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click :guilabel:`Calculate` again. The route will be calculated for the "
+#~ "shortest time:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You can switch back and forth between these criteria, recalculating each "
+#~ "time, and note the changes in the :guilabel:`Length` and :guilabel:`Time` "
+#~ "taken. Remember that the assumption being made to arrive at the time taken "
+#~ "to travel a route does not account for acceleration, and assumes that you "
+#~ "will be traveling at the speed limit at all times. In a real situation, you "
+#~ "may want to split roads into smaller sections and note the average or "
+#~ "expected speed in each section, rather than the speed limit."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If, on clicking :guilabel:`Calculate`, you see an error stating that a path "
+#~ "could not be found, make sure that the roads you digitized actually meet "
+#~ "each other. If they're not quite touching, either fix them by modifying the "
+#~ "features, or set the :guilabel:`Topology tolerance` in the plugin's "
+#~ "settings. If they're passing over each other without intersecting, use the "
+#~ ":guilabel:`Split features` tool to \"split\" roads at their intersections:"
+#~ msgstr ""
+
+#~ msgid "|splitFeatures|"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Remember that the :guilabel:`Split features` tool only works in edit mode on"
+#~ " selected features, though!"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You might also find that the shortest route is also the quickest if this "
+#~ "error is returned."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Now you know how to use the :guilabel:`Road Graph` plugin to solve shortest-"
+#~ "path problems."
+#~ msgstr ""
+
+#~ msgid "start point and end point selected on the map;"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "start point selected on the map and end points taken from a point layer;"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "start points taken from a point layer and end point selected on the map;"
+#~ msgstr ""
+
+#~ msgid "Open the :guilabel:`Shortest path (point to point)` algorithm;"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Select :guilabel:`network_lines` for :guilabel:`Vector layer representing "
+#~ "network`;"
+#~ msgstr ""
+
+#~ msgid "Let ``Shortest`` in the :guilabel:`Path type to calculate` parameter;"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click on the :guilabel:`...` button next to the :guilabel:`Start point (x, "
+#~ "y)` and choose the location tagged with ``Starting Point`` in the picture. "
+#~ "The menu is filled with the coordinates of the clicked point;"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Do the same thing but choosing the location tagged with ``Ending point`` for"
+#~ " :guilabel:`End point(x, y)`;"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Now that you now how to use the tool, feel free to change them and test "
+#~ "other locations."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Fill the :guilabel:`Input layer`, :guilabel:`Start point (x, y)` and "
+#~ ":guilabel:`End point (x, y)` as we did before;"
+#~ msgstr ""
+
+#~ msgid "Choose ``Fastest`` as the :guilabel:`Path type to calculate`;"
+#~ msgstr ""
+
+#~ msgid "Open the :guilabel:`Advanced parameter` menu;"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Change the :guilabel:`Default speed (km/h)` from the default ``50`` value to"
+#~ " ``4``;"
+#~ msgstr ""
+
+#~ msgid "Click on :guilabel:`Run`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The :guilabel:`cost` field contains the value according to the speed "
+#~ "parameter you have chosen."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "We can convert the :guilabel:`cost` field from hours with fractions to the "
+#~ "more readable *minutes* values."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Open the :menuselection:`Network analysis --> Shortest path (point to "
+#~ "point)` algorithm;"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Select :guilabel:`network_lines` for the :guilabel:`Vector layer "
+#~ "representing network` parameter;"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click on the :guilabel:`...` button next to the :guilabel:`Start point (x, "
+#~ "y)` and choose the location tagged with ``Start Point`` in the picture. The "
+#~ "menu is filled with the coordinates of the clicked point;"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Do the same thing but choosing the location tagged with ``End point`` for "
+#~ ":guilabel:`End point(x, y)`;"
+#~ msgstr ""
+
+#~ msgid "Open the :guilabel:`Advanced parameters` menu;"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Choose the ``speed`` field as the :guilabel:`Speed Field` parameter. With "
+#~ "this option the algorithm will take into account the speed values for each "
+#~ "road;"
+#~ msgstr ""
+
+#~ msgid "Turn off the :guilabel:`network_lines` layer to better see the result."
+#~ msgstr ""
+
+#~ msgid "Uncheck all the layers except :guilabel:`network_points`;"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Open the :menuselection:`Network Analysis --> Service area (from layer)` "
+#~ "algorithm;"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Choose :guilabel:`network_lines` for :guilabel:`Vector layer representing "
+#~ "network`;"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Choose :guilabel:`network_points` for :guilabel:`Vector layer with start "
+#~ "points`;"
+#~ msgstr ""
+
+#~ msgid "Choose ``Shortest`` in :guilabel:`Path type to calculate`;"
+#~ msgstr ""
+
+#~ msgid "Enter ``250`` in the :guilabel:`Travel cost` parameter;"
+#~ msgstr ""
+
+#~ msgid "Click on :guilabel:`Run` and then close the dialog."
+#~ msgstr ""

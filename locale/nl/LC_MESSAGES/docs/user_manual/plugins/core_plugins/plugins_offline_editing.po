@@ -1,0 +1,188 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+# 
+# Translators:
+# Dick Groskamp, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-06 11:48+0100\n"
+"PO-Revision-Date: 2019-08-11 13:07+0000\n"
+"Last-Translator: Dick Groskamp, 2019\n"
+"Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:11
+msgid "Offline Editing Plugin"
+msgstr "Plug-in Offline bewerken"
+
+#: ../../source/docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:13
+msgid ""
+"For data collection, it is a common situation to work with a laptop or a "
+"cell phone offline in the field. Upon returning to the network, the changes "
+"need to be synchronized with the master datasource (e.g., a PostGIS "
+"database). If several persons are working simultaneously on the same "
+"datasets, it is difficult to merge the edits by hand, even if people don’t "
+"change the same features."
+msgstr ""
+"Voor het verzamelen van gegevens is het een veel voorkomende situatie om "
+"offline in het veld te werken met een laptop of een mobiele telefoon. Bij "
+"het terugkeren op het netwerk dienen de wijzigingen te worden "
+"gesynchroniseerd met het hoofd-gegevensbron (bijv.,een database van "
+"PostGIS). Als verschillende personen tegelijkertijd op dezelfde gegevensset "
+"werken, is het moeilijk om bewerkingen met de hand samen te voegen, zelfs "
+"als mensen niet dezelfde objecten wijzigen."
+
+#: ../../source/docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:19
+msgid ""
+"The |offlineEditingCopy| :sup:`Offline Editing` Plugin automates the "
+"synchronisation by copying the content of a datasource (usually PostGIS or "
+"WFS-T) to a SpatiaLite or GeoPackage database and storing the offline edits "
+"to dedicated tables. After being connected to the network again, it is "
+"possible to apply the offline edits to the master dataset."
+msgstr ""
+"De plug-in |offlineEditingCopy| :sup:`Offline bewerken` automatiseert de "
+"synchronisatie door de inhoud van een gegevensbron (gewoonlijk PostGIS of "
+"WFS-T) te kopiëren naar een database van SpatiaLite of GeoPackage en de "
+"offline bewerkingen op te slaan als toegewezen tabellen. Na opnieuw te zijn "
+"verbonden met het netwerk is het mogelijk de offline bewerkingen toe te "
+"passen op de hoofd-gegevensset."
+
+#: ../../source/docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:25
+msgid "To use the plugin:"
+msgstr "De plug-in gebruiken:"
+
+#: ../../source/docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:27
+msgid ""
+"Open a project with some vector layers (e.g., from a PostGIS or WFS-T "
+"datasource)."
+msgstr ""
+"Open een project met enkele vectorlagen (bijv., uit een gegevensbron van "
+"PostGIS of WFS-T)."
+
+#: ../../source/docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:28
+msgid ""
+"Assuming you have already enabled the plugin (see "
+":ref:`core_and_external_plugins`) go to :menuselection:`Database --> Offline"
+" Editing -->` |offlineEditingCopy| :guilabel:`Convert to offline project`. "
+"The eponym dialog opens."
+msgstr ""
+"Er van uitgaande dat u de plug-in al ingeschakeld hebt (zie "
+":ref:`core_and_external_plugins`), ga naar :menuselection:`Database --> "
+"Offline bewerken -->` |offlineEditingCopy| :guilabel:`Converteer naar "
+"offline project`. Het dialoogvenster voor eponiemen opent."
+
+#: ../../source/docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:31
+msgid ""
+"Select the :guilabel:`Storage type`. It can be of :guilabel:`GeoPackage` or "
+":guilabel:`SpatiaLite` database type."
+msgstr ""
+"Selecteer het :guilabel:`Type opslag`. Het kan het type voor database "
+":guilabel:`GeoPackage` of :guilabel:`SpatiaLite` zijn."
+
+#: ../../source/docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:33
+msgid ""
+"Use the :guilabel:`Browse` button to indicate the location of the database "
+"in which to store the :guilabel:`Offline data`. It can be an existing file "
+"or one to create."
+msgstr ""
+"Gebruik de knop :guilabel:`Bladeren` om de locatie van de database an te "
+"geven waarin de :guilabel:`Offline gegevens` moeten worden opgeslagen. Het "
+"kan een bestaand bestand zijn of een nieuw te maken."
+
+#: ../../source/docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:36
+msgid ""
+"In the :guilabel:`Select remote layers` section, check the layers you'd like"
+" to save. The content of the layers is saved to database tables."
+msgstr ""
+"Selecteer, in het gedeelte :guilabel:`Externe lagen selecteren`, de lagen "
+"die u wilt opslaan. De inhoud van de lagen wordt opgeslagen naar tabellen "
+"van de database."
+
+#: ../../source/docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:38
+msgid ""
+"You can check |checkbox| :guilabel:`Only synchronize selected features if a "
+"selection is present` allowing to only save and work on a subset. It can be "
+"invaluable in case of large layers."
+msgstr ""
+"U kunt selecteren |checkbox| :guilabel:`Alleen geselecteerde objecten "
+"synchroniseren als er een selectie aanwezig is` wat het mogelijk maakt om "
+"alleen met een subset te werken en op te slaan. Het kan onbetaalbaar zijn in"
+" het geval van hele grote lagen."
+
+#: ../../source/docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:42
+msgid "This is all!"
+msgstr "Dat is alles!"
+
+#: ../../source/docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:43
+msgid "Save your project and bring it on the field."
+msgstr "Sla uw project op en breng het naar het veld."
+
+#: ../../source/docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:44
+msgid "Edit the layers offline."
+msgstr "Bewerk de lagen offline."
+
+#: ../../source/docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:45
+msgid ""
+"After being connected again, upload the changes using "
+":menuselection:`Database --> Offline Editing -->` |offlineEditingSync| "
+":guilabel:`Synchronize`."
+msgstr ""
+"Upload, na opnieuw te zijn verbonden, de wijzigingen via "
+":menuselection:`Database --> Offline bewerken -->` |offlineEditingSync| "
+":guilabel:`Synchroniseren`."
+
+#: ../../source/docs/user_manual/plugins/core_plugins/plugins_offline_editing.rst:53
+msgid "Create an offline project"
+msgstr "Een offline project aanmaken"
+
+#~ msgid ""
+#~ "The |offlineEditingCopy| :sup:`Offline Editing` Plugin automates the "
+#~ "synchronisation by copying the content of a datasource (usually PostGIS or "
+#~ "WFS-T) to a SpatiaLite database and storing the offline edits to dedicated "
+#~ "tables. After being connected to the network again, it is possible to apply "
+#~ "the offline edits to the master dataset."
+#~ msgstr ""
+#~ "De plug-in |offlineEditingCopy| :sup:`Offline bewerken` automatiseert de "
+#~ "synchronisatie door de inhoud van een gegevensbron (gewoonlijk PostGIS of "
+#~ "WFS-T) te kopiëren naar een database van SpatiaLite en de offline "
+#~ "bewerkingen op te slaan als toegewezen tabellen. Na opnieuw te zijn "
+#~ "verbonden met het netwerk is het mogelijk de offline bewerkingen toe te "
+#~ "passen op de hoofd-gegevensset."
+
+#~ msgid "Using the plugin"
+#~ msgstr "De plug-in gebruiken "
+
+#~ msgid ""
+#~ "Go to :menuselection:`Database --> Offline Editing -->` |offlineEditingCopy|"
+#~ " :guilabel:`Convert to offline project` and select the layers to save. The "
+#~ "content of the layers is saved to SpatiaLite tables."
+#~ msgstr ""
+#~ "Ga naar :menuselection:`Database --> Offline bewerken -->` "
+#~ "|offlineEditingCopy| :guilabel:`Converteer naar offline project` en "
+#~ "selecteer de lagen die moeten worden opgeslagen. De inhoud van de lagen "
+#~ "wordt opgeslagen in tabellen van SpatiaLite."
+
+#~ msgid ""
+#~ "You can check |checkbox| :guilabel:`Only synchronize selected features if a "
+#~ "selection is present` allowing the offline editing to only save and work on "
+#~ "a subset. It can be invaluable in case of large layers."
+#~ msgstr ""
+#~ "U kunt selecteren |checkbox| :guilabel:`Alleen geselecteerde objecten "
+#~ "synchroniseren als er een selectie aanwezig is` wat het offline bewerken in "
+#~ "staat stelt om alleen met een subset te werken en op te slaan. Het kan "
+#~ "onbetaalbaar zijn in het geval van hele grote lagen."
+
+#~ msgid "Create an offline project from PostGIS or WFS layers"
+#~ msgstr "Een offline project maken uit lagen van PostGIS of WFS"

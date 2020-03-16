@@ -1,0 +1,2899 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# 
+# Translators:
+# Dick Groskamp, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project testing\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-14 13:14+0100\n"
+"PO-Revision-Date: 2017-08-09 06:52+0000\n"
+"Last-Translator: Dick Groskamp, 2020\n"
+"Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:15
+msgid "Opening Data"
+msgstr "Gegevens openen"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:22
+msgid ""
+"As part of an Open Source Software ecosystem, QGIS is built upon different "
+"libraries that, combined with its own providers, offer capabilities to read "
+"and often write a lot of formats:"
+msgstr ""
+"Als deel van een Open Source Software ecosysteem is QGIS gebouwd met "
+"verschillende bibliotheken die, gecombineerd met zijn eigen providers, "
+"mogelijkheden bieden tot het lezen en vaak ook schrijven in veel indelingen:"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:26
+msgid ""
+"Vector data formats include ESRI formats (Shapefile, Geodatabase...), "
+"MapInfo and MicroStation file formats, AutoCAD DWG/DXF, GeoPackage, GeoJSON,"
+" GRASS, GPX, KML, Comma Separated Values, and many more... Read the complete"
+" list of `OGR vector supported formats "
+"<https://www.gdal.org/ogr_formats.html>`_."
+msgstr ""
+"Vector gegevensindelingen omvatten ESRI-indelingen (Shapefile, "
+"Geodatabase…), MapInfo en MicroStation bestandsindelingen, AutoCAD DWG/DXF, "
+"GeoPackage, GeoJSON, GRASS, GPX, KML, kommagescheiden waarden, en nog veel "
+"meer... Bekijk de volledige lijst met `OGR vector ondersteunde indelingen "
+"<https://www.gdal.org/ogr_formats.html>`_;"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:31
+msgid ""
+"Raster data formats include ArcInfo Binary Grid, ArcInfo ASCII Grid, JPEG, "
+"GeoTIFF, ERDAS IMAGINE, MBTiles, R or Idrisi rasters, ASCII Gridded XYZ, "
+"GDAL Virtual, SRTM, Sentinel Data, and many more... Read the complete list "
+"of `raster supported formats <https://www.gdal.org/formats_list.html>`_."
+msgstr ""
+"Raster gegevensindelingen omvatten ArcInfo Binary Grid, ArcInfo ASCII Grid, "
+"JPEG, GeoTIFF, ERDAS IMAGINE, MBTiles, R of Idrisi-rasters, ASCII Gridded "
+"XYZ, GDAL Virtual, SRTM, Sentinel Data, en nog veel meer… Bekijk de "
+"volledige lijst met `raster ondersteunde indelingen "
+"<https://www.gdal.org/formats_list.html>`_;"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:36
+msgid ""
+"Database formats include PostgreSQL/PostGIS, SQLite/SpatiaLite, Oracle, DB2 "
+"or MSSQL Spatial, MySQL..."
+msgstr ""
+"Database-indelingen omvatten PostgreSQL/PostGIS, SQLite/SpatiaLite, Oracle, "
+"DB2 of MSSQL Spatial, MySQL…;"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:38
+msgid ""
+"Support of web data services (WM(T)S, WFS, WCS, CSW, ArcGIS Servers...) is "
+"also handled by QGIS providers (see :ref:`working_with_ogc`)."
+msgstr ""
+"Ondersteuning voor gegevens van webservices (WM(T)S, WFS, WCS, CSW, ArcGIS "
+"Servers…) wordt ook afgehandeld door providers van QGIS (zie "
+":ref:`working_with_ogc`);"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:40
+msgid ""
+"You can also read supported files from archived folders and use QGIS native "
+"formats such as virtual and memory layers."
+msgstr ""
+"U kunt ook ondersteunde bestanden inlezen vanuit gearchiveerde mappen en "
+"eigen indelingen van QGIS gebruiken, zoals virtuele en geheugenlagen."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:43
+msgid ""
+"As of the date of this document, more than 80 vector and 140 raster formats "
+"are supported by the `GDAL/OGR <https://www.gdal.org/>`_ and QGIS native "
+"providers."
+msgstr ""
+"Vanaf de datum van dit document worden meer dan 80 vector- en 140 "
+"rasterindelingen ondersteund door de `GDAL/OGR <https://www.gdal.org/>`_ en "
+"eigen providers van QGIS."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:48
+msgid ""
+"Not all of the listed formats may work in QGIS for various reasons. For "
+"example, some require external proprietary libraries, or the GDAL/OGR "
+"installation of your OS may not have been built to support the format you "
+"want to use. To have a list of available formats, run the command line "
+"``ogrinfo --formats`` (for vector) or check :menuselection:`settings --> "
+"Options --> GDAL` menu (for raster) in QGIS."
+msgstr ""
+"Niet alle genoemde indelingen zullen zomaar werken in QGIS om verschillende "
+"redenen. Sommige vereisen externe commerciële funktiebibliotheken, of de "
+"GDAL/OGR-installatie op uw besturingssysteem is niet gebouwd om "
+"ondersteuning te bieden voor de indeling die u wilt gebruiken. Voer de "
+"opdracht voor de opdrachtregel ``ogrinfo --formats`` (voor vector) uit of "
+"selecteer het menu :menuselection:`Extra --> Opties --> GDAL` (voor raster) "
+"in QGIS om een lijst te zien met beschikbare indelingen."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:59
+msgid ""
+"In QGIS, depending on the data format, there are different tools to open it,"
+" mainly available in the :menuselection:`Layer --> Add Layer -->` menu or "
+"from the :guilabel:`Manage Layers` toolbar (enabled through "
+":menuselection:`View --> Toolbars` menu). However, all these tools point to "
+"a unique dialog, the :guilabel:`Data Source Manager` dialog that you can "
+"directly open with the |dataSourceManager| :sup:`Open Data Source Manager` "
+"button available on the :guilabel:`Data Source Manager Toolbar` or by "
+"pressing :kbd:`Ctrl+L`. Indeed, the :guilabel:`Data Source Manager` dialog "
+"offers a unified interface to open vector or raster file-based data as well "
+"as databases or web services supported by QGIS. It can be set modal or not "
+"with the |checkbox| :guilabel:`Modeless data source manager dialog` in "
+":menuselection:`Settings --> Options --> General` menu."
+msgstr ""
+"In QGIS zijn er, afhankelijk van de indeling van de gegevens, verschillende "
+"gereedschappen om het te openen, voornamelijk beschikbaar in het menu "
+":menuselection:`Kaartlagen --> Laag toevoegen -->` of vanaf de werkbalk "
+":guilabel:`Kaartlagen beheren` (ingeschakeld via het menu "
+":menuselection:`Beeld --> Werkbalken`). Echter, al deze gereedschappen "
+"verwijzen naar één enkel uniek dialoogvenster, het dialoogvenster "
+":guilabel:`Databronnen beheren` dat u direct kunt openen met de knop "
+"|dataSourceManager| :sup:`Databronnen beheren openen` beschikbaar op de "
+":guilabel:`werkbalk Databronnen beheren` of door te drukken op "
+":kbd:`Ctrl+L`. Inderdaad, het dialoogvenster :guilabel:`Databronnen beheren`"
+" biedt een universele interface om zowel vector- of rasterbestand gebaseerde"
+" gegevens als ook databases of webservices die worden ondersteund door QGIS "
+"te openen. Het kan modaal worden ingesteld of niet met |checkbox| "
+":guilabel:`Modeless dialoogvenster Databronnen beheren` in het menu "
+":menuselection:`Extra --> Opties --> Algemeen`."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:78
+msgid "QGIS Data Source Manager dialog"
+msgstr "QGIS dialoogvenster Databronnen beheren"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:81
+msgid ""
+"Beside this main entry point, you also have the |dbManager| :guilabel:`DB "
+"Manager` plugin that offers advanced capabilities to analyze and manipulate "
+"connected databases. More information on DB Manager capabilities are exposed"
+" in :ref:`dbmanager`."
+msgstr ""
+"Naast dit belangrijk toegangspunt heeft u ook de plug-in |dbManager| "
+":guilabel:`DB Manager` die geavanceerde mogelijkheden biedt om verbonden "
+"databases te analyseren en te bewerken. Meer informatie over mogelijkheden "
+"van DB Manager worden weergegeven in :ref:`dbmanager`."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:85
+msgid ""
+"There are also many other tools, native or third-party plugins, that help "
+"you open dedicated data formats."
+msgstr ""
+"Er zijn ook nog vele andere gereedschappen, eigen plug-ins of van derde "
+"partijen, die u helpen bij het openen van bepaalde gegevensindelingen."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:88
+msgid ""
+"This chapter will describe only the tools provided by default in QGIS to "
+"load data. It will mainly focus on the :guilabel:`Data Source Manager` "
+"dialog but more than describing each tab, it will also explore the tools "
+"based on the data provider or format specificities."
+msgstr ""
+"Dit hoofdstuk zal alleen de standaard door QGIS verschafte gereedschappen om"
+" gegevens te laden beschrijven. Het zal zich voornamelijk focussen op het "
+"dialoogvenster :guilabel:`Databronnen beheren`, maar meer dan alleen het "
+"beschrijven van elke tab zal het ook de gereedschappen verkennen, gebaseerd "
+"op de gegevensprovider of specificaties voor de indeling."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:98
+msgid "The Browser Panel"
+msgstr "Het paneel Browser"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:100
+msgid ""
+"The :guilabel:`Browser` is one of the main ways to quickly and easily add "
+"your data to projects. It's available as:"
+msgstr ""
+"De :guilabel:`Browser` is één van de vele manieren om snel een eenvoudig uw "
+"gegevens aan projecten toe te voegen. Het is beschikbaar als:"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:103
+msgid ""
+"a :guilabel:`Data Source Manager` tab, enabled pressing the "
+"|dataSourceManager| :sup:`Open Data Source Manager` button (:kbd:`Ctrl+L`);"
+msgstr ""
+"een tab :guilabel:`Databronnen beheren`, ingeschakeld door te drukken op de "
+"knop |dataSourceManager| :sup:`Databronnen beheren openen` (:kbd:`Ctrl+L`);"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:105
+msgid ""
+"as a QGIS panel you can open from the menu :menuselection:`View --> Panels` "
+"(or |kde| :menuselection:`Settings --> Panels`) or by pressing "
+":kbd:`Ctrl+2`."
+msgstr ""
+"als een paneel van QGIS dat u kunt openen vanuit het menu "
+":menuselection:`Beeld --> Panelen` (of |kde| :menuselection:`Settings --> "
+"Panels`) of door te drukken op :kbd:`Ctrl+2`."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:108
+msgid ""
+"In both cases, the :guilabel:`Browser` helps you navigate in your file "
+"system and manage geodata, regardless the type of layer (raster, vector, "
+"table), or the datasource format (plain or compressed files, database, web "
+"services)."
+msgstr ""
+"In beide gevallen helpt de :guilabel:`Browser` u navigeren door uw "
+"bestandssysteem en geogegevens beheren, ongeacht het type laag (raster, "
+"vector, tabel), of de indeling van de gegevensbron (platte tekst of "
+"gecomprimeerde bestanden, database, webservices). "
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:112
+msgid ""
+"The context menu for an element in the :guilabel:`Browser` panel is opened "
+"by right-clicking on it."
+msgstr ""
+"Het contextmenu voor een element in het paneel :guilabel:`Browser` wordt "
+"geopend door er met rechts op te klikken."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:115
+msgid ""
+"For file system directory entries, the context menu offers the following:"
+msgstr ""
+"Voor items van de map voor het bestandssysteem biedt het contextmenu het "
+"volgende:"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:117
+msgid ":guilabel:`Add as a Favorite`"
+msgstr ":guilabel:`Als een Favoriet toevoegen`;"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:118
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:135
+msgid ":guilabel:`Properties...`"
+msgstr ":guilabel:`Eigenschappen…`"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:119
+msgid ":guilabel:`Hide from Browser`"
+msgstr ":guilabel:`Verbergen in browser`"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:120
+msgid ":guilabel:`Fast Scan this Directory`"
+msgstr ":guilabel:`Deze map snel scannen`"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:121
+msgid ":guilabel:`New Directory...`"
+msgstr ":guilabel:`Nieuwe map…`"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:122
+msgid ":guilabel:`Open Directory`"
+msgstr ":guilabel:`Map openen`"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:124
+msgid ":guilabel:`Favourites`, can also be removed and renamed:"
+msgstr ":guilabel:`Favorieten`, kunnen ook worden verwijderd en hernoemd:"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:126
+msgid ":guilabel:`Rename favourite...`"
+msgstr ":guilabel:`Favoriet hernoemen…`"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:127
+msgid ":guilabel:`Remove favourite`"
+msgstr ":guilabel:`Favoriet verwijderen`"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:129
+msgid ""
+"For leaf entries that can act as layers in the project, the context menu "
+"will have a selection of entries. For example, for non-database, non-"
+"service-based vector, raster and mesh data sources:"
+msgstr ""
+"Voor bladitems die op kunnen treden als lagen in het project, zal het "
+"contextmenu een selectie van items hebben. Bijvoorbeeld voor niet-database, "
+"niet op service gebaseerde vector-, raster- en gegevensbronnen voor mazen:"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:134
+msgid ":guilabel:`Add Selected Layer(s) to Canvas`"
+msgstr ":guilabel:`Geselecteerde laag(lagen) aan kaartvenster toevoegen`"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:136
+msgid ":guilabel:`Delete File \"<name of file>\"...`"
+msgstr ":guilabel:`Bestand verwijderen \"<name of file>\"…`"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:138
+msgid ""
+"In the :guilabel:`Layer properties` entry, you will find (similar to what "
+"you will find in the :ref:`vector <vector_properties_dialog>` and "
+":ref:`raster <raster_properties_dialog>` layer properties once the layers "
+"have been added to the project):"
+msgstr ""
+"In het item :guilabel:`Laageigenschappen` zult u vinden (soortgelijk aan dat"
+" wat u zult vinden in de :ref:`vector <vector_properties_dialog>` en "
+":ref:`raster <raster_properties_dialog>` laageigenschappen als de lagen "
+"eenmaal zijn toegevoegd aan het project):"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:144
+msgid ""
+":guilabel:`Metadata` for the layer. Metadata groups: :guilabel:`Information "
+"from provider` (if possible, :guilabel:`Path` will be a hyperlink to the "
+"source), :guilabel:`Identification`, :guilabel:`Extent`, :guilabel:`Access`,"
+" :guilabel:`Fields` (for vector layers), :guilabel:`Bands` (for raster "
+"layers), :guilabel:`Contacts`, :guilabel:`Links` (for vector layers), "
+":guilabel:`References` (for raster layers), :guilabel:`History`."
+msgstr ""
+":guilabel:`Metadata` voor de laag. Groepen voor metadata: "
+":guilabel:`Informatie van provider` (indien mogelijk, :guilabel:`Pad` zal "
+"een hyperlink naar de bron zijn), :guilabel:`Identificatie`, "
+":guilabel:`Bereik`, :guilabel:`Toegang`, :guilabel:`Velden` (voor "
+"vectorlagen), :guilabel:`Banden` (voor rasterlagen), :guilabel:`Contact`, "
+":guilabel:`Links` (voor vectorlagen), :guilabel:`Verwijzingen` (voor "
+"rasterlagen), :guilabel:`Geschiedenis`."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:151
+msgid "A :guilabel:`Preview` panel"
+msgstr "Een paneel :guilabel:`Voorbeeld`"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:152
+msgid ""
+"The attribute table for vector sources (in the :guilabel:`Attributes` "
+"panel)."
+msgstr ""
+"De attributentabel voor vectorbronnen (in het paneel "
+":guilabel:`Attributen`)."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:155
+msgid "To add a layer to the project using the :guilabel:`Browser`:"
+msgstr ""
+"De :guilabel:`Browser` gebruiken om een laag aan het project toe te voegen:"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:157
+msgid ""
+"Enable the :guilabel:`Browser` as described above. A browser tree with your "
+"file system, databases and web services is displayed. You may need to "
+"connect databases and web services before they appear (see dedicated "
+"sections)."
+msgstr ""
+"Schakel de :guilabel:`Browser` in zoals hierboven beschreven. Een boom voor "
+"de browser met uw bestandssysteem,, databases en webservices wordt "
+"weergegeven. U zou misschien moeten verbinden met databases en webservices "
+"voordat zij zichtbaar zijn (zie betreffende gedeelten)."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:161
+msgid "Find the layer in the list."
+msgstr "Zoek de laag op in de lijst."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:162
+msgid ""
+"Use the context menu, double-click its name, or drag-and-drop it into the "
+":ref:`map canvas <label_mapview>`. Your layer is now added to the "
+":ref:`Layers panel <label_legend>` and can be viewed on the map canvas."
+msgstr ""
+"Gebruik het contextmenu, dubbelklik op de naam ervan of sleep en zet het "
+"neer in het :ref:`kaartvenster <label_mapview>`. Uw laag wordt nu toegevoegd"
+" aan het :ref:`paneel Lagen <label_legend>` en kan worden bekeken in het "
+"kaartvenster."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:167
+msgid "**Open a QGIS project directly from the browser**"
+msgstr "**Een project van QGIS direct openen vanuit de browser**"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:169
+msgid ""
+"You can also open a QGIS project directly from the Browser panel by double-"
+"clicking its name or by drag-and-drop into the map canvas."
+msgstr ""
+"U kunt ook direct een project van QGIS openen vanuit het paneel Browser door"
+" te dubbelklikken op de naam of door het te slepen en neer te zetten in het "
+"kaartvenster."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:172
+msgid ""
+"Once a file is loaded, you can zoom around it using the map navigation "
+"tools. To change the style of a layer, open the :guilabel:`Layer Properties`"
+" dialog by double clicking on the layer name or by right-clicking on the "
+"name in the legend and choosing :menuselection:`Properties` from the context"
+" menu. See section :ref:`vector_style_menu` for more information on setting "
+"symbology of vector layers."
+msgstr ""
+"Eenmaal geladen kunt u de laag bestuderen met de functies voor "
+"kaartnavigatie. Open, om de stijl van een laag te wijzigen, het scherm "
+":guilabel:`Laageigenschappen` door te dubbelklikken op de naam van de laag "
+"in de legenda, of door met de rechts te klikken op de naam in de legenda en "
+"te kiezen voor :menuselection:`Eigenschappen` in het contextmenu. Zie het "
+"gedeelte :ref:`vector_style_menu` voor meer informatie over het instellen "
+"van symbologie aan vectorlagen."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:180
+msgid "At the top of the Browser panel, you find some icons that help you to:"
+msgstr ""
+"Aan de bovenkant van het paneel Browser vindt u enkele pictogrammen die u "
+"helpen om:"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:182
+msgid ""
+"|addLayer| :sup:`Add Selected Layers`: you can also add data into the map "
+"canvas by selecting **Add selected layer(s)** from the layer's context menu;"
+msgstr ""
+"|addLayer| :sup:`Geselecteerde lagen toevoegen`: u kunt ook gegevens aan het"
+" kaartvenster toevoegen door **Geselecteerde lagen toevoegen** te selecteren"
+" in het contextmenu van de laag;"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:184
+msgid "|draw| :sup:`Refresh` the browser tree;"
+msgstr "|draw| :sup:`Bijwerken` van de boom van de browser;"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:185
+msgid ""
+"|filterMap| :sup:`Filter Browser` to search for specific data. Enter a "
+"search word or wildcard and the browser will filter the tree to only show "
+"paths to matching DB tables, filenames or folders -- other data or folders "
+"won't be displayed. See the Browser Panel(2) example on the "
+"figure_browser_panels_. The comparison can be case-sensitive or not. It can "
+"also be set to:"
+msgstr ""
+"|filterMap| :sup:`Filter browser` om te zoeken naar specifieke gegevens. "
+"Voer een woord in om naar te zoeken of een jokerteken en de browser zal de "
+"boom filteren om alleen paden naar overeenkomende tabellen, bestandsnamen of"
+" mappen van databases weer te geven -- andere gegevens of mappen zullen niet"
+" worden weergegeven. Bekijk het voorbeeld voor Paneel Browser(2) in de "
+"figure_browser_panels_. De vergelijking mag hoofdlettergevoelig zijn of "
+"niet. Hij kan ook worden ingesteld op:"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:191
+msgid "**normal**: return any item containing the search text;"
+msgstr "**normaal**: geeft elk item terug dat de zoektekst bevat;"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:192
+msgid ""
+"using **wildcard(s)**: fine tune the search using ``?`` and/or ``*`` "
+"characters to specify the position of the search text;"
+msgstr ""
+"**Jokerteken(s)** gebruiken: stem de zoekactie fijn af door tekens ``?`` "
+"en/of ``*`` te gebruiken om de positie van de zoektekst te specificeren;"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:194
+msgid "using a **regular expression**."
+msgstr "een **reguliere expressie** gebruiken."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:196
+msgid "|collapseTree| :sup:`Collapse All` the whole tree;"
+msgstr "|collapseTree| :sup:`Alles inklappen` de gehele boom;"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:197
+msgid ""
+"|metadata| :sup:`Enable/disable properties widget`: when toggled on, a new "
+"widget is added at the bottom of the panel showing, if applicable, metadatas"
+" of the selected item."
+msgstr ""
+"|metadata| :sup:`Widget Eigenschappen in- en uitschakelen`: indien "
+"ingeschakeld wordt een nieuw widget toegevoegd aan de onderzijde van het "
+"paneel dat de metadata, indien van toepassing, van het geselecteerde item "
+"weergeeft."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:201
+msgid "Right-click an item in the browser tree helps you to:"
+msgstr "Klikken met rechts op een item in de boom van de browser helpt u om:"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:203
+msgid ""
+"in case of file or table, display its metadata or open it in your project. "
+"Tables can even be renamed, deleted or truncated;"
+msgstr ""
+"in het geval van een bestand of een tabel, de metadata ervan weer te geven "
+"of om het te openen in uw project. Tabellen kunnen zelfs worden hernoemd, "
+"verwijderd of afgekort;"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:205
+msgid ""
+"in case of folder, bookmark it into your favourites, hide it from the "
+"browser tree. Hidden folders can be managed from the "
+":menuselection:`Settings --> Options --> Data Sources` tab;"
+msgstr ""
+"in het geval van een map, als Favoriete plaats op te nemen in uw favorieten,"
+" het te verbergen voor de boom van de browser. Verborgen mappen kunnen "
+"worden beheerd vanaf de tab :menuselection:`Extra --> Opties --> "
+"Databronnen`;"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:208
+msgid "create connection to databases or web servers;"
+msgstr "verbindingen te maken naar databases of webservers;"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:209
+msgid "refresh, rename or delete schema."
+msgstr "schema's vernieuwen, hernoemen of verwijderen."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:211
+msgid ""
+"You can also import files into databases or copy tables from one "
+"schema/database to another one with a simple drag-and-drop. There is a "
+"second browser panel available to avoid long scrolling while dragging. Just "
+"select the file and drag-and-drop from one panel to the other."
+msgstr ""
+"U kunt ook bestanden in databases importeren of tabellen kopiëren van het "
+"ene schema/database naar een ander door eenvoudigweg te slepen en neer te "
+"zetten. Er is een tweede paneel Browser beschikbaar om lang scrollen bij het"
+" slepen te vermijden. Selecteer eenvoudigweg het bestand en verplaats het "
+"naar het andere paneel met slepen en neerzetten."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:221
+msgid "QGIS Browser panels side-by-side"
+msgstr "Panelen QGIS Browser naast elkaar"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:224
+msgid ""
+"**Add layers to QGIS by simple drag-and-drop from your OS file browser**"
+msgstr ""
+"**Lagen aan QGIS toevoegen door ze eenvoudigweg te slepen en neer te zetten "
+"vanuit de bestandsbrowser van uw besturingssysteem**"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:226
+msgid ""
+"You can also add file(s) to the project by drag-and-dropping them from your "
+"operating system file browser to the :guilabel:`Layers Panel` or the map "
+"canvas."
+msgstr ""
+"U kunt ook bestand(en) toevoegen aan het project door ze te slepen en neer "
+"te zetten vanuit de bestandsbrowser van uw besturingssysteem naar het "
+":guilabel:`paneel Lagen` of het kaartvenster."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:233
+msgid "The DB Manager"
+msgstr "De DB Manager"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:235
+msgid ""
+"The :guilabel:`DB Manager` Plugin is another one of the main and native "
+"tools to integrate and manage spatial database formats supported by QGIS "
+"(PostGIS, SpatiaLite, GeoPackage, Oracle Spatial, MSSQL, DB2, Virtual "
+"layers) in one user interface. It can be activated from the "
+":menuselection:`Plugins --> Manage and Install Plugins...` menu."
+msgstr ""
+"De plug-in :guilabel:`DB Manager` is een van de andere belangrijkste en "
+"eigen gereedschappen om indelingen van ruimtelijke databases die worden "
+"ondersteund door QGIS (PostGIS, SpatiaLite, GeoPackage, Oracle Spatial, "
+"MSSQL, DB2, Virtuele lagen) in één gebruikersinterface te integreren en te "
+"beheren. Het kan worden geactiveerd vanuit het menu :menuselection:`Plug-ins"
+" --> Plug-ins beheren en installeren...`."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:241
+msgid "The |dbManager| :sup:`DB Manager` Plugin provides several features:"
+msgstr ""
+"De plug-in |dbManager| :sup:`DB Manager` verschaft verscheidene "
+"mogelijkheden:"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:243
+msgid "connect to databases and display its structure and contents;"
+msgstr "verbinden met databases en de structuur en inhoud ervan weergeven;"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:244
+msgid "preview tables of databases;"
+msgstr "tabellen van databases bekijken;"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:245
+msgid "add layers to map canvas, either by double-click or drag-and-drop;"
+msgstr ""
+"lagen toevoegen aan het kaartvenster, ofwel door te dubbelklikken of door te"
+" slepen en neer te zetten;"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:246
+msgid ""
+"add layers to a database from the QGIS Browser or from another database;"
+msgstr ""
+"lagen toevoegen aan een database vanuit de QGIS Browser of vanuit een andere"
+" database;"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:247
+msgid "create and add output of SQL queries to the map canvas;"
+msgstr ""
+"SQL-query's maken en de uitvoer daarvan toevoegen aan het kaartvenster;"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:248
+msgid "create :ref:`virtual layers <vector_virtual_layers>`."
+msgstr ":ref:`virtuele lagen <vector_virtual_layers>` maken."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:250
+msgid ""
+"More information on DB Manager capabilities are exposed in :ref:`dbmanager`."
+msgstr ""
+"Meer informatie over de mogelijkheden van DB Manager worden uitgelegd in "
+":ref:`dbmanager`."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:257
+msgid "DB Manager dialog"
+msgstr "Dialoogvenster DB Manager"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:261
+msgid "Provider-based loading tools"
+msgstr "Provider-gebaseerde gereedschappen voor laden"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:263
+msgid ""
+"Beside Browser Panel and DB Manager, the main tools provided by QGIS to add "
+"layers regardless the format, you'll also find tools that are specific to "
+"data providers."
+msgstr ""
+"Naast het paneel Browser en DB Manager, de belangrijkste gereedschappen die "
+"door QGIS worden verschaft om lagen toe te voegen ongeacht hun indeling, "
+"vindt u ook gereedschappen die specifiek zijn voor gegevensproviders."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:269
+msgid ""
+"Some :ref:`external plugins <plugins>` also propose tools to open specific "
+"format files in QGIS."
+msgstr ""
+"Enkele :ref:`externe plug-ins <plugins>` verschaffen ook gereedschappen om "
+"bestanden in specifieke indelingen te openen in QGIS."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:277
+msgid "Loading a layer from a file"
+msgstr "Een laag uit een bestand laden"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:279
+msgid "To load a layer from a file, you can:"
+msgstr "U kunt, om een laag uit een bestand te laden:"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:281
+msgid ""
+"for vector data (like Shapefile, Mapinfo or dxf layer), click on "
+"|addOgrLayer| :sup:`Add Vector Layer` toolbar button, select the "
+":menuselection:`Layer --> Add Layer -->` |addOgrLayer|:guilabel:`Add Vector "
+"Layer` menu option or press :kbd:`Ctrl+Shift+V`. This will bring up a new "
+"window (see figure_vector_add_) from which you can check |radioButtonOn| "
+":guilabel:`File` and click on :guilabel:`Browse`. You can also specify the "
+"encoding for the file if desired."
+msgstr ""
+"voor vectorgegevens (zoals Shapefile, Mapinfo of DXF-laag), klik op de knop "
+"van de werkbalk |addOgrLayer| :sup:`Vectorlaag toevoegen`, selecteer de "
+"menuoptie :menuselection:`Kaartlagen --> Laag toevoegen -->` "
+"|addOgrLayer|:guilabel:`Vectorlaag toevoegen` of druk op "
+":kbd:`Ctrl+Shift+V`. Dat zal een nieuw venster openen (zie "
+"figure_vector_add_) van waaruit u |radioButtonOn| :guilabel:`Bestand` kunt "
+"selecteren en klikken op :guilabel:`Bladeren`. U kunt, indien gewenst, ook "
+"de codering voor het bestand specificeren."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:294
+msgid "Add Vector Layer Dialog"
+msgstr "Dialoogvenster Vectorlaag toevoegen"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:296
+msgid ""
+"for raster layers, click on the |addRasterLayer| :sup:`Add Raster Layer` "
+"icon, select the :menuselection:`Layer --> Add Layer -->` |addRasterLayer| "
+":guilabel:`Add Raster Layer` menu option or type :kbd:`Ctrl+Shift+R`."
+msgstr ""
+"voor rasterlagen, klik op het pictogram |addRasterLayer| :sup:`Rasterlaag "
+"toevoegen`, selecteer de menuoptie :menuselection:`Kaartlagen --> Laag "
+"toevoegen -->` |addRasterLayer| :guilabel:`Rasterlaag toevoegen` of typ "
+":kbd:`Ctrl+Shift+R`."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:300
+msgid ""
+"That will bring up a standard open file dialog (see figure_vector_open_), "
+"which allows you to navigate the file system and load a shapefile, a geotiff"
+" or other supported data source. The selection box :guilabel:`Filter` "
+"|selectString| allows you to preselect some supported file formats. Only the"
+" formats that have been well tested appear in the list. Other untested "
+"formats can be loaded by selecting ``All files (*.*)``."
+msgstr ""
+"Dat zal een standaard bestandsdialoogvenster openen (zie "
+"figure_vector_open_), wat u in staat stelt te navigeren door het "
+"bestandssysteem en een shapefile, een GeoTIFF of andere ondersteunde "
+"gegevensbron laden. Het selectievak :guilabel:`Filter` |selectString| stelt "
+"u in staat enkele ondersteunde bestandsindelingen te selecteren. Alleen de "
+"indelingen die naar voldoening zijn getest zullen in de lijst verschijnen. "
+"Andere, niet geteste, indelingen kunnen worden geselecteerd met ``Alle "
+"bestanden (*.*)``."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:313
+msgid "Open an OGR Supported Vector Layer Dialog"
+msgstr "Dialoogvenster Open een OGR ondersteunde vectorlaag"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:315
+msgid ""
+"Selecting a file from the list and clicking :guilabel:`Open` loads it into "
+"QGIS. More than one layer can be loaded at the same time by holding down the"
+" :kbd:`Ctrl` or :kbd:`Shift` key and clicking on multiple items in the "
+"dialog. Figure_vector_loaded_ shows QGIS after loading the "
+":file:`alaska.shp` file."
+msgstr ""
+"Selecteren van een bestand uit de lijst en klikken op :guilabel:`Openen` "
+"laadt het in QGIS. Meer dan één laag kan tegelijkertijd worden geladen door "
+"de :kbd:`Ctrl`- of :kbd:`Shift`-toets ingedrukt te houden en te klikken op "
+"meerdere items in het dialoogvenster. Figure_vector_loaded_ laat QGIS zien "
+"na het laden van het bestand :file:`alaska.shp`."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:325
+msgid "QGIS with Shapefile of Alaska loaded"
+msgstr "QGIS met het geladen shapefile van Alaska"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:330
+msgid ""
+"Because some formats like MapInfo (e.g., :file:`.tab`) or Autocad "
+"(:file:`.dxf`) allow mixing different types of geometry in a single file, "
+"loading such format in QGIS opens a dialog to select geometries to use in "
+"order to have one geometry per layer."
+msgstr ""
+"Omdat sommige indelingen, zoals MapInfo (bijv. :file:`.tab`) of Autocad "
+"(:file:`.dxf`), toestaan dat verschillende typen geometrie worden gemixt in "
+"één bestand, opent het laden van een dergelijke indeling in QGIS een "
+"dialoogvenster om te gebruiken geometrieën te selecteren om één geometrie "
+"per laag te krijgen."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:338
+msgid "Using the |addOgrLayer| :sup:`Add Vector Layer` tool:"
+msgstr "Het gereedschap |addOgrLayer| :sup:`Vectorlaag toevoegen` gebruiken:"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:340
+msgid ""
+"You can also load specific formats like ``ArcInfo Binary Coverage``, ``UK. "
+"National Transfer Format``, as well as the raw TIGER format of the ``US "
+"Census Bureau`` or ``OpenfileGDB``. To do that, you'd need to select "
+"|radioButtonOn| :guilabel:`Directory` as :guilabel:`Source type`. In this "
+"case a directory can be selected in the dialog after pressing "
+":guilabel:`Browse`."
+msgstr ""
+"U kunt ook specifieke indelingen laden, zoals ``ArcInfo Binary Coverage``, "
+"``UK. National Transfer Format``, net als de ruwe TIGER-indeling van het "
+"``US Census Bureau`` of ``OpenfileGDB``. U zou zowel |radioButtonOn| "
+":guilabel:`Map` als :guilabel:`Type bron` moeten selecteren om dat te kunnen"
+" doen. In dit geval kan een map worden geselecteerd in het dialoogvenster na"
+" drukken op :guilabel:`Bladeren`."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:345
+msgid ""
+"With the |radioButtonOn| :guilabel:`Database` source type you can select an "
+"existing database connection or create one to the selected database type. "
+"Available database types are ``ODBC``, ``OGDI Vectors``, ``Esri Personal "
+"Geodatabase``, ``MySQL`` as well as ``PostgreSQL`` or ``MSSQL``."
+msgstr ""
+"Met het type bron |radioButtonOn| :guilabel:`Database` kunt u een bestaande "
+"verbinding voor een database selecteren of er een maken naar het "
+"geselecteerde type database. Beschikbare typen database zijn ``ODBC``, "
+"``OGDI Vectors``, ``Esri Personal Geodatabase``, ``MySQL`` als ook "
+"``PostgreSQL`` of ``MSSQL``."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:350
+msgid ""
+"Pressing the :guilabel:`New` button opens the :guilabel:`Create a New OGR "
+"Database Connection` dialog whose parameters are among the ones you can find"
+" in :ref:`vector_create_stored_connection`. Pressing :guilabel:`Open` you "
+"can select from the available tables for example of the PostGIS enabled "
+"database."
+msgstr ""
+"Drukken op de knop :guilabel:`Nieuw` opent het dialoogvenster "
+":guilabel:`Nieuwe OGR databaseverbinding maken` waarvan de parameters die "
+"zijn welke u kunt vinden in :ref:`vector_create_stored_connection`. Door te "
+"drukken op :guilabel:`Openen` kunt u selecteren uit de beschikbare tabellen "
+"bijvoorbeeld van de voor PostGIS ingeschakelde database."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:355
+msgid ""
+"The last source type, |radioButtonOn| :guilabel:`Protocol`, enables to open "
+"data from the web using for example ``GeoJSON`` or ``CouchDB`` format. After"
+" selecting the type you have to fill URI of the source."
+msgstr ""
+"Het laatste type bron, |radioButtonOn| :guilabel:`Protocol`, maakt het "
+"mogelijk gegevens vanaf het web te openen door bijvoorbeeld de indeling "
+"``GeoJSON`` of ``CouchDB`` te gebruiken. Na het selecteren van het type "
+"dient u de URI van de bron in te voeren."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:362
+msgid "**Load layers and projects from mounted external drives on macOS**"
+msgstr "**Het laden van lagen en projecten vanaf externe drives onder MacOS**"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:364
+msgid ""
+"On macOS, portable drives that are mounted beside the primary hard drive do "
+"not show up as expected under :menuselection:`File --> Open...`. We are "
+"working on a more macOS-native open/save dialog to fix this. As a "
+"workaround, you can type ``/Volumes`` in the :guilabel:`File name` box and "
+"press :kbd:`Enter`. Then you can navigate to external drives and network "
+"mounts."
+msgstr ""
+"Op macOS worden draagbare schijven, die naast de primaire harde schijf zijn "
+"gemount, niet zoals verwacht weergegeven onder :menuselection:`Bestand --> "
+"Openen…`. We werken aan een meer eigen macOS dialoogvenster Openen/Opslaan "
+"om dit op te lossen. Als workaround kunt u ``/Volumes`` typen in het vak "
+":guilabel:`Bestandsnaam` en drukken op :kbd:`Enter`. Dan kunt u navigeren "
+"naar de externe schijven en netwerkmounts."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:377
+msgid "Importing a delimited text file"
+msgstr "Een tekstgescheiden bestand importeren "
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:379
+msgid ""
+"Delimited text file (e.g. :file:`.csv`, :file:`.txt`) can be loaded in QGIS "
+"using the tools described above. However, loaded this way, it'll show up "
+"like a simple table data. Sometimes, delimited text files can contain "
+"geometric data you'd want to visualize; this is what the "
+"|addDelimitedTextLayer|:guilabel:`Add Delimited Text Layer` is designed for."
+msgstr ""
+"Tekengescheiden tekstbestanden (bijv. :file:`.csv`, :file:`.txt`) kunnen in "
+"QGIS worden geladen met de hierboven vermelde gereedschappen. Echter, op "
+"deze manier geladen worden zij weergegeven als een eenvoudige tabel met "
+"gegevens. Soms kunnen tekengescheiden tekstbestanden geometrische gegevens "
+"bevatten die u wilt visualiseren; dat is waarom |delimitedText| "
+":guilabel:`Tekstgescheiden laag toevoegen` is ontworpen."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:385
+msgid ""
+"Click the |dataSourceManager| :sup:`Open Data Source Manager` icon to open "
+"the :guilabel:`Data Source Manager` dialog and enable the "
+"|addDelimitedTextLayer| :guilabel:`Delimited Text` tab, as shown in "
+"figure_delimited_text_."
+msgstr ""
+"Klik op het pictogram |dataSourceManager| :sup:`Databronnen beheren openen` "
+"om het dialoogvenster :guilabel:`Databronnen beheren` te openen en schakel "
+"de tab |addDelimitedTextLayer| :guilabel:`Tekengescheiden tekst` in, zoals "
+"weergegeven in figure_delimited_text_."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:394
+msgid "Delimited Text Dialog"
+msgstr "Dialoogvenster Maak een laag uit een tekstgescheiden bestand"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:396
+msgid ""
+"First, select the file to import (e.g., "
+":file:`qgis_sample_data/csv/elevp.csv`) by clicking on the "
+":guilabel:`Browse` button. In the :guilabel:`Layer name` field, provide the "
+"name to use for the layer in the project (e.g., :file:`Elevation`)."
+msgstr ""
+"Selecteer eerst het te importeren bestand (bijv. "
+":file:`qgis_sample_data/csv/elevp.csv`) door te klikken op de knop "
+":guilabel:`Bladeren`. Geef, in het veld :guilabel:`Laagnaam`, de te "
+"gebruiken naam voor de laag in het project op (bijv. :file:`Elevation`)."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:401
+msgid "File format"
+msgstr "Bestandsindeling"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:403
+msgid ""
+"Once the file is selected, QGIS attempts to parse the file with the most "
+"recently used delimiter, trying to identify fields and rows. To enable QGIS "
+"to properly parse the file, it is important to select the correct delimiter."
+" You can specify a delimiter by activating:"
+msgstr ""
+"Als het bestand eenmaal is geselecteerd, zal QGIS proberen om het bestand te"
+" parsen met het meest recent gebruikte scheidingsteken en proberen velden en"
+" rijen te identificeren. Het is belangrijk, om QGIS in staat te stellen het "
+"bestand te parsen, om het juiste scheidingsteken te selecteren. U kunt een "
+"scheidingsteken specificeren door te activeren:"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:408
+msgid ""
+"|radioButtonOn|:guilabel:`CSV (comma separated values)` to use the comma "
+"character;"
+msgstr ""
+"|radioButtonOn|:guilabel:`CSV (komma gescheiden waarden)` om het teken komma"
+" te gebruiken;"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:409
+msgid ""
+"|radioButtonOff|:guilabel:`Custom delimiters`, choosing among some "
+"predefined delimiters like ``comma``, ``space``, ``tab``, ``semicolon``...;"
+msgstr ""
+"|radioButtonOff|:guilabel:`Zelfgekozen tekstscheiders`, kiezen uit een "
+"aantal vooraf gedefinieerde scheidingstekens, zoals ``komma``, ``spatie``, "
+"``tab``, ``puntkomma``...;"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:411
+msgid ""
+"or |radioButtonOff|:guilabel:`Regular expression delimiter` and entering "
+"text into the :guilabel:`Expression` field. For example, to change the "
+"delimiter to tab, use ``\\t`` (this is a regular expression for the tab "
+"character)."
+msgstr ""
+"of |radioButtonOff|:guilabel:`Reguliere expressie tekstscheider` en tekst in"
+" te voeren in het veld :guilabel:`Expressie`. gebruik bijvoorbeeld,, om het "
+"scheidingsteken te wijzigen naar tab, ``\\t`` (dit is een reguliere "
+"expressie voor het teken tab)."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:416
+msgid "Records and fields"
+msgstr "Records en velden"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:418
+msgid ""
+"Other than settings to identify rows and fields in the data, some convenient"
+" options can be used to tweak the data recognition:"
+msgstr ""
+"Anders dan instellingen om rijen en velden in de gegevens te identificeren "
+"kunnen enkele handige opties worden gebruikt om het herkennen van de "
+"gegevens aan te passen:"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:421
+msgid ""
+":guilabel:`Number of header lines to discard`: convenient when you want to "
+"avoid some lines to show in the import, either because those are blank lines"
+" or with another formatting."
+msgstr ""
+":guilabel:`Aantal kopregels die overgeslagen kunnen worden`: handig als u "
+"wilt vermijden dat sommige regels worden weergegeven in de import, ofwel "
+"omdat het blanco regels zijn, of omdat de opmaak anders is."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:424
+msgid ""
+"|checkbox|:guilabel:`First records has field names`: values in the first row"
+" of data are used as field names, otherwise QGIS adds a fields row of a type"
+" ``field_1``, ``field_2``..."
+msgstr ""
+"|checkbox|:guilabel:`De eerste regel bevat veldnamen`: waarden in de eerste "
+"rij van de gegevens worden gebruikt als veldnamen, anders voegt QGIS een rij"
+" met velden als type ``field_1``, ``field_2`` toe…"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:427
+msgid ""
+"|checkbox|:guilabel:`Detect field types`: automatically recognizes the field"
+" type. If unchecked then all attributes are treated as text fields."
+msgstr ""
+"|checkbox|:guilabel:`Veldtypen detecteren`: automatisch het type veld "
+"herkennen. Indien niet geselecteerd worden alle attributen behandeld als "
+"tekstvelden."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:429
+msgid ""
+"|checkbox|:guilabel:`Decimal separator is comma`: if necessary, you can "
+"force a comma to be the decimal separator."
+msgstr ""
+"|checkbox|:guilabel:`Decimaal scheidingsteken is de komma`: indien nodig, "
+"kunt u forceren dat de komma het decimale scheidingsteken is."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:431
+msgid ""
+"|checkbox|:guilabel:`Trim fields`: allows you to trim leading and trailing "
+"spaces from fields."
+msgstr ""
+"|checkbox|:guilabel:`Spaties voor/na velden verwijderen`: stelt u in staat "
+"spaties voor en achter de tekst van de velden te verwijderen."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:433
+msgid "|checkbox|:guilabel:`Discard empty fields`."
+msgstr "|checkbox|:guilabel:`Sla lege velden over`."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:435
+msgid ""
+"As you set the parser properties, a sample data preview updates at the "
+"bottom of the dialog."
+msgstr ""
+"Als u de eigenschappen voor het parsen instelt, wordt de voorbeeldweergave "
+"van de gegevens aan de onderzijde van het dialoogvenster bijgewerkt."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:439
+msgid "Geometry definition"
+msgstr "Geometrie definitie"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:441
+msgid "Once the file is parsed, set :guilabel:`Geometry definition` to"
+msgstr ""
+"Als het bestand eenmaal is geparst, stel :guilabel:`Geometrie definitie` in "
+"op"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:443
+msgid ""
+"|radioButtonOn|:guilabel:`Point coordinates` and provide the :guilabel:`X "
+"field` and :guilabel:`Y field` if the layer is of point geometry type and "
+"contain such coordinate fields. If the coordinates are defined as "
+"degrees/minutes/seconds, activate the |checkbox|:guilabel:`DMS coordinates` "
+"checkbox;"
+msgstr ""
+"|radioButtonOn|:guilabel:`Punt coördinaten` en geef het :guilabel:`X-veld` "
+"en :guilabel:`Y-veld` op als de laag van het type geometrie punt is en "
+"dergelijke velden voor coördinaten bevat. Als de coördinaten zijn "
+"gedefinieerd als graden/minuten/seconden, activeer dan het keuzevak "
+"|checkbox|:guilabel:`DMS-coördinaten`;"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:448
+msgid ""
+"|radioButtonOn|:guilabel:`Well known text (WKT)` option if the spatial "
+"information is represented by WKT: select the :guilabel:`Geometry field` "
+"containing the WKT definition and choose the approriate :guilabel:`Geometry "
+"field` or let QGIS auto-detect it;"
+msgstr ""
+"|radioButtonOn|:guilabel:`Well known text (WKT)`-optie als de ruimtelijke "
+"informatie wordt weergegeven door WKT (wel bekende tekst): selecteer het "
+":guilabel:`Geometrie-veld` dat de definitie van WKT bevat en kies het "
+"toepasselijke :guilabel:`Geometrie-veld` of laat QGIS het automatisch "
+"detecteren;"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:452
+msgid ""
+"If the file contains non-spatial data, activate |radioButtonOn| "
+":guilabel:`No geometry (attribute only table)` and it will be loaded as an "
+"ordinary table."
+msgstr ""
+"Als het bestand geen ruimtelijke gegevens bevat, activeer dan "
+"|radioButtonOn| :guilabel:`Geen geometrieën (alleen attributentabel)` en het"
+" zal worden geladen als een gewone tabel."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:455
+msgid ""
+"Besides the features geometry information, you can also set the layer's "
+":guilabel:`Geometry CRS` using the |setProjection| :sup:`Select CRS` widget."
+msgstr ""
+"Naast de informatie over de geometrie van de objecten kunt u ook het "
+":guilabel:`Geometrie CRS` van de laag instellen met het widget "
+"|setProjection| :sup:`CRS selecteren`."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:459
+msgid "Layer settings"
+msgstr "Laag-instellingen"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:461
+msgid "Additionally, you can enable:"
+msgstr "Aanvullend kunt u inschakelen:"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:463
+msgid ""
+"|checkbox|:guilabel:`Use spatial index` to improve the performance of "
+"displaying and spatially selecting features;"
+msgstr ""
+"|checkbox|:guilabel:`Ruimtelijke index gebruiken` om de uitvoering van de "
+"weergave te verbeteren en objecten ruimtelijk te selecteren;"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:465
+msgid ""
+"|checkbox|:guilabel:`Use subset index` to improve performance of "
+":ref:`subset filters <vector_query_builder>` (when defined in the layer "
+"properties);"
+msgstr ""
+"|checkbox|:guilabel:`Gebruik een subset index` om de uitvoering van "
+":ref:`filters voor subsets <vector_query_builder>` te verbeteren (indien "
+"gedefinieerd in de eigenschappen van de laag);"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:467
+msgid ""
+"|checkbox|:guilabel:`Watch file` to watch for changes to the file by other "
+"applications while QGIS is running."
+msgstr ""
+"|checkbox|:guilabel:`Bestand in de gaten houden` om de wijzigingen aan het "
+"bestand door andere toepassingen terwijl QGIS wordt uitgevoerd bij te "
+"houden."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:471
+msgid ""
+"At the end, click :guilabel:`OK` to add the layer to the map. In our "
+"example, a point layer named ``Elevation`` is added to the project and "
+"behaves like any other map layer in QGIS. However, this layer is the result "
+"of a query on the :file:`.csv` source layer (hence, linked to it) and would "
+"require :ref:`to be saved <general_saveas>` in order to get a spatial layer "
+"on disk."
+msgstr ""
+"Aan het einde, klik op :guilabel:`OK` om de laag aan de kaart toe te voegen."
+" In ons voorbeeld wordt een puntenlaag, genaamd ``Elevation``, toegevoegd "
+"aan het project en gedraagt zich als elke andere laag in QGIS. Echter, deze "
+"laag is het resultaat van een query op de bronlaag :file:`.csv`  (in feite "
+"een koppeling) en zou moeten :ref:`worden opgeslagen <general_saveas>` om "
+"een ruimtelijke laag op schijf te krijgen."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:481
+msgid "Importing a DXF or DWG file"
+msgstr "Een DXF- of DWG-bestand importeren"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:483
+msgid ""
+":file:`DXF` and :file:`DWG` files can be added to QGIS by simple drag-and-"
+"drop from the common Browser Panel. You'll be prompted to select the "
+"sublayers you'd like to add to the project. Layers are added with random "
+"style properties."
+msgstr ""
+":file:`DXF`- en :file:`DWG`-bestanden kunnen aan QGIS worden toegevoegd door"
+" ze eenvoudigweg te slepen en neer te zetten vanuit het normale paneel "
+"Browser. U zult worden gevraagd de sublagen te selecteren die u wilt "
+"toevoegen aan het project. Lagen worden toegevoegd met willekeurige "
+"eigenschappen voor de stijl. "
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:488
+msgid ""
+"DXF files containing several geometry types (point, line and/or polygon), "
+"the name of the layer will be made from *<filename.dxf> entities <geometry "
+"type>*."
+msgstr ""
+"DXF-bestanden bevatten verscheiden typen geometrie (punt, lijn en/of "
+"polygoon), de naam van de laag zal worden samengesteld uit *<filename.dxf> "
+"entiteiten <geometry type>*."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:492
+msgid ""
+"To keep the dxf/dwg file structure and its symbology in QGIS, you may want "
+"to use the dedicated :menuselection:`Project --> Import/Export --> Import "
+"Layers from DWG/DXF...` tool which allows you to:"
+msgstr ""
+"Wanneer u de bestandsstructuur van DXF/DWG en de symbologie ervan in QGIS "
+"wilt behouden, wilt u waarschijnlijk het toegewezen gereedschap "
+":menuselection:`Project --> Importeren/Exporteren --> Lagen importeren "
+"vanuit DWG/DXF…` gebruiken dat u in staat stelt:"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:496
+msgid "import elements from the drawing file into a GeoPackage database."
+msgstr ""
+"elementen uit het bestand van de tekening in een database van GeoPackage te "
+"importeren."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:497
+msgid "and add to the project any of the imported elements."
+msgstr "en geïmporteerde elementen aan het project toe te voegen."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:499
+msgid ""
+"In the :guilabel:`DWG/DXF Import` dialog, to first import the drawing file "
+"contents:"
+msgstr ""
+"Om, in het dialoogvenster :guilabel:`DWG/DXF importeren`, eerst de inhoud "
+"van het bestand van de tekening te importeren:"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:502
+msgid ""
+"Input the location of the :guilabel:`Target package`, i.e. the new "
+"GeoPackage file that will store the data. If an existing file is provided, "
+"then it will be overwritten."
+msgstr ""
+"Voer de locatie van het :guilabel:`Doelpakket` in, d.i. het nieuwe bestand "
+"van GeoPackage dat de gegevens zal bevatten. Als een bestaand bestand wordt "
+"opgegeven, zal dat worden overschreven."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:505
+msgid ""
+"Specify the coordinate reference system of the data in the drawing file."
+msgstr ""
+"Specificeer het coördinaten referentiesysteem van de gegevens in het bestand"
+" van de tekening."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:506
+msgid ""
+"Check |checkbox| :guilabel:`Expand block references` to import the blocks in"
+" the drawing file as normal elements."
+msgstr ""
+"Selecteer |checkbox| :guilabel:`Verwijzingen naar blokken uitbreiden` om de "
+"blokken in het bestand van de tekening als normale elementen te importeren."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:508
+msgid ""
+"Check |checkbox| :guilabel:`Use curves` to promote the imported layers to a "
+"``curved`` geometry type."
+msgstr ""
+"Selecteer |checkbox| :guilabel:`Bogen gebruiken` om de geïmporteerde lagen "
+"te promoveren naar een type geometrie ``boog``."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:510
+msgid ""
+"Use the :guilabel:`Import` button to select the DWG/DXF file to use (one per"
+" geopackage). The GeoPackage database will be automatically populated with "
+"the drawing file content. Depending on the size of the \\*CAD file, this "
+"could take some time."
+msgstr ""
+"Gebruik de knop :guilabel:`Importeren` om het te gebruiken bestand DWG/DXF "
+"te selecteren (één per GeoPackage). De database van GeoPackage zal "
+"automatisch worden gevuld met de inhoud van het bestand van de tekening. "
+"Afhankelijk van de grootte van het bestand \\*CAD, zou dit enige tijd kunnen"
+" duren."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:515
+msgid ""
+"After the :file:`.dwg` or :file:`.dxf` data is imported into the GeoPackage "
+"database the frame in the lower half of the dialog is populated with the "
+"list of layers from the imported file. There you can select which layers to "
+"add to the QGIS project:"
+msgstr ""
+"Nadat de gegevens the :file:`.dwg` of :file:`.dxf` zijn geïmporteerd in de "
+"database van GeoPackage wordt het frame in de onderste helft van het "
+"dialoogvenster gevuld met de lijst met lagen uit het geïmporteerde bestand. "
+"Daar kunt u selecteren welke lagen moeten worden toegevoegd aan het project "
+"van QGIS:"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:520
+msgid ""
+"At the top, set a :guilabel:`Group name` to group the drawing files in the "
+"project."
+msgstr ""
+"Stel, bovenin, een :guilabel:`Groepsnaam` in om de tekeningbestanden in het "
+"project te groeperen."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:522
+msgid ""
+"Check layers to show: Each selected layer is added to an ad hoc group which "
+"contains vector layers for the point, line, label and area features of the "
+"drawing layer. The style of each layer is setup so that it resembles the "
+"look it originally had in \\*CAD."
+msgstr ""
+"Selecteer de weer te geven lagen: Elke geselecteerde laag wordt toegevoegd "
+"aan een ad hoc groep die vectorlagen voor de objecten punt, lijn en gebied "
+"bevat van de laag van de tekening. De stijl van elke laag wordt ingesteld "
+"zodat het het uiterlijk aanneemt van hoe het er in het originele bestand "
+"\\*CAD uitzag."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:526
+msgid "Check whether layer should be visible at opening."
+msgstr "Selecteer of de laag zichtbaar zou moeten zijn bij openen."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:527
+msgid ""
+"Alternatively using the |checkbox| :guilabel:`Merge layers` option places "
+"all layers in a single group."
+msgstr ""
+"Gebruik als alternatief de optie |checkbox| :guilabel:`Lagen samenvoegen` om"
+" alle lagen in één groep te plaatsen."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:529
+msgid "Press :guilabel:`OK` to open the layers in QGIS."
+msgstr "Druk op :guilabel:`OK` om de lagen in QGIS te openen."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:537
+msgid "Import dialog for DWG/DXF files"
+msgstr "Dialoogvenster voor het importeren van bestanden DWG/DXF"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:544
+msgid "Importing OpenStreetMap Vectors"
+msgstr "OpenStreetMap vectors Importeren "
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:546
+msgid ""
+"In recent years, the OpenStreetMap project has gained popularity because in "
+"many countries no free geodata such as digital road maps are available. The "
+"objective of the OSM project is to create a free editable map of the world "
+"from GPS data, aerial photography or local knowledge. To support this "
+"objective, QGIS provides support for OSM data."
+msgstr ""
+"In recente jaren heeft het project OpenStreetMap enorm aan populariteit "
+"gewonnen omdat in vele landen geen gratis geo-gegevens zoals digitale "
+"wegenkaarten beschikbaar zijn. Het doel van het project OSM is om een gratis"
+" bewerkbare kaart van de wereld te maken vanuit GPS-gegevens, "
+"lucht-/satellietfotografie of lokale kennis. QGIS verschaft ondersteuning "
+"voor gegevens van OSM om dat doel te ondersteunen."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:552
+msgid ""
+"Using the :guilabel:`Browser Panel`, you can load a :file:`.osm` file to the"
+" map canvas, in which case you'll get a dialog to select sublayers based on "
+"the geometry type. The loaded layers will contain all the data of that "
+"geometry type in the file and keep the :file:`osm` file data structure."
+msgstr ""
+"Met behulp van het :guilabel:`paneel Browser` kunt u een "
+":file:`.osm`-bestand laden in het kaartvenster, in welk geval u een "
+"dialoogvenster krijgt om sublagen te selecteren, gebaseerd op het type "
+"geometrie. De geladen lagen zullen alle gegevens voor dat type geometrie in "
+"het bestand bevatten en de gegevensstructuur van het :file:`osm`-bestand "
+"behouden."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:562
+msgid "SpatiaLite Layers"
+msgstr "SpatiaLite-lagen"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:564
+msgid ""
+"|addSpatiaLiteLayer| The first time you load data from a SpatiaLite "
+"database, begin by:"
+msgstr ""
+"|addSpatiaLiteLayer| De eerste keer dat u gegevens laadt vanuit een database"
+" van SpatiaLite begint met:"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:567
+msgid ""
+"clicking on the |addSpatiaLiteLayer| :sup:`Add SpatiaLite Layer` toolbar "
+"button;"
+msgstr ""
+"klikken op de knop op de werkbalk |addSpatiaLiteLayer| :sup:`SpatiaLite-laag"
+" toevoegen`;"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:569
+msgid ""
+"selecting the |addSpatiaLiteLayer| :menuselection:`Add SpatiaLite Layer...` "
+"option from the :menuselection:`Layer --> Add Layer` menu;"
+msgstr ""
+"selecteren van de optie |addSpatiaLiteLayer| :menuselection:`SpatiaLite-laag"
+" toevoegen...` uit het menu :menuselection:`Kaartlagen --> Laag toevoegen`;"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:571
+msgid "or by typing :kbd:`Ctrl+Shift+L`."
+msgstr "of door te typen :kbd:`Ctrl+Shift+L`."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:573
+msgid ""
+"This will bring up a window that will allow you either to connect to a "
+"SpatiaLite database already known to QGIS, which you can choose from the "
+"drop-down menu, or to define a new connection to a new database. To define a"
+" new connection, click on :guilabel:`New` and use the file browser to point "
+"to your SpatiaLite database, which is a file with a :file:`.sqlite` "
+"extension."
+msgstr ""
+"Dit zal een venster openen waarin u ofwel een nieuwe verbinding met een "
+"database van SpatiaLite kunt maken die al bekend is bij QGIS, die u kunt "
+"kiezen uit een keuzelijst of om een nieuwe verbinding naar een nieuwe "
+"database te maken. Klik, om een nieuwe verbinding te maken, op de knop "
+":guilabel:`Nieuw` en gebruik de bestandsverkenner om de database van "
+"SpatiaLite te vinden, dat een bestand is met de bestandsextensie "
+":file:`.sqlite`."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:579
+msgid "QGIS also supports editable views in SpatiaLite."
+msgstr ""
+"QGIS ondersteunt ook het bewerken van gegevens via te bewerken Views in "
+"SpatiaLite."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:583
+msgid "GPS"
+msgstr "GPS"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:585
+msgid ""
+"Loading GPS data in QGIS can be done using the core plugin: ``GPS Tools``. "
+"Instructions are described in Section :ref:`plugin_gps`."
+msgstr ""
+"Laden van GPS-gegevens in QGIS kan worden gedaan met behulp van de bronplug-"
+"in: ``GPS Tools``. Instructies worden beschreven in het gedeelte "
+":ref:`plugin_gps`."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:590
+msgid "GRASS"
+msgstr "GRASS"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:592
+msgid ""
+"Working with GRASS vector data is described in Section :ref:`sec_grass`."
+msgstr ""
+"Het werken met vectorgegevens voor GRASS  is beschreven in :ref:`sec_grass`."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:599
+msgid "Database related tools"
+msgstr "Database gerelateerde gereedschappen"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:605
+msgid "Creating a stored Connection"
+msgstr "Een opgeslagen verbinding maken"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:607
+msgid ""
+"In order to read and write tables from the many database formats QGIS "
+"supports you'll need to create a connection to that database. While "
+":ref:`QGIS Browser Panel <browser_panel>` is the simplest and recommanded "
+"way to connect and use databases, QGIS provides other tools to connect to "
+"each of them and load their tables:"
+msgstr ""
+"Om tabellen te lezen en naar te schrijven in de vele database-indelingen die"
+" QGIS ondersteunt dient u een verbinding te maken naar die database. Waar "
+":ref:`QGIS paneel Browser <browser_panel>` de eenvoudigste en aanbevolen "
+"manier is om met databases te verbinden en te gebruiken, verschaft QGIS "
+"andere gereedschappen om te verbinden met elk daarvan en hun tabellen te "
+"laden:"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:613
+msgid ""
+"|addPostgisLayer| :menuselection:`Add PostGIS Layer...` or by typing "
+":kbd:`Ctrl+Shift+D`;"
+msgstr ""
+"|addPostgisLayer| :menuselection:`PostGIS-laag toevoegen…` of door te typen "
+":kbd:`Ctrl+Shift+D`"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:615
+msgid ""
+"|addMssqlLayer| :menuselection:`Add MSSQL Spatial Layer` or by typing "
+":kbd:`Ctrl+Shift+M`;"
+msgstr ""
+"|addMssqlLayer| :menuselection:`MSSQL Spatial-laag toevoegen…` of door te "
+"typen :kbd:`Ctrl+Shift+M`"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:617
+msgid ""
+"|addOracleLayer| :menuselection:`Add Oracle Spatial Layer...` or by typing "
+":kbd:`Ctrl+Shift+O`;"
+msgstr ""
+"|addOracleLayer| :menuselection:`Oracle Spatial-laag toevoegen…`  of door te"
+" typen :kbd:`Ctrl+Shift+O`"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:619
+msgid ""
+"|addDb2Layer| :menuselection:`Add DB2 Spatial Layer...` or by typing "
+":kbd:`Ctrl+Shift+2`."
+msgstr ""
+"|addDb2Layer| :menuselection:`DB2 Spatial-laag toevoegen…` of door te typen "
+":kbd:`Ctrl+Shift+2`"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:622
+msgid ""
+"These tools are accessible either from the :guilabel:`Manage Layers Toolbar`"
+" or the :menuselection:`Layer --> Add Layer -->` menu. Connecting to "
+"SpatiaLite database is described at :ref:`label_spatialite`."
+msgstr ""
+"Deze gereedschappen zijn toegankelijk ofwel vanuit de :guilabel:`Werkbalk "
+"Lagen beheren` of het menu :menuselection:`Kaartlagen --> Laag toevoegen "
+"-->`. Verbinden met een database van SpatiaLite database wordt beschreven in"
+" :ref:`label_spatialite`."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:626
+msgid "**Create connection to database from the QGIS Browser Panel**"
+msgstr "**Verbinding naar database maken vanuit het QGIS paneel Browser**"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:628
+msgid ""
+"Select the corresponding database format in the Browser tree, right-click "
+"and choose connect will provide you with the database connection dialog."
+msgstr ""
+"Selecteer de overeenkomende indeling voor de database in de boom van de "
+"Browser, klik met rechts en kiezen van Verbinden zal het dialoogvenster voor"
+" de verbinding met de database openen."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:631
+msgid ""
+"Most of the connection dialogs follow a common basis that will be described "
+"below using the PostGreSQL database tool as example. For additional settings"
+" specific to other providers, you can find corresponding description at:"
+msgstr ""
+"De meeste dialoogvensters voor verbindingen volgen een algemene basis die "
+"hieronder zal worden beschreven met behulp van het gereedschap voor een "
+"database van PostgreSQL als voorbeeld. Voor aanvullende instellingen die "
+"specifiek zijn voor andere providers, vindt u de overeenkomende beschrijving"
+" op:"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:635
+msgid ":ref:`create_mssql_connection`;"
+msgstr ":ref:`create_mssql_connection`;"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:636
+msgid ":ref:`create_oracle_connection`;"
+msgstr ":ref:`create_oracle_connection`;"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:637
+msgid ":ref:`create_db2_connection`."
+msgstr ":ref:`create_db2_connection`."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:639
+msgid ""
+"The first time you use a PostGIS data source, you must create a connection "
+"to a database that contains the data. Begin by clicking the appropriate "
+"button as exposed above, opening an :guilabel:`Add PostGIS Table(s)` dialog "
+"(see figure_add_postgis_tables_). To access the connection manager, click on"
+" the :guilabel:`New` button to display the :guilabel:`Create a New PostGIS "
+"Connection` dialog."
+msgstr ""
+"De eerste keer dat u een gegevensbron van PostGIS gebruikt, moet u een "
+"verbinding maken naar een database die de gegevens bevat. Begin door te "
+"klikken op de toepasselijke knop zoals hierboven weergegeven, dat opent een "
+"dialoogvenster :guilabel:`PostGIS-tabel(len) toevoegen` (zie "
+"figure_add_postgis_tables_). Klik op de knop :guilabel:`Nieuw` om het "
+"dialoogvenster :guilabel:`Nieuwe PostGIS-verbinding maken` weer te geven om "
+"toegang te krijgen tot het beheer van de verbinding."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:651
+msgid "Create a New PostGIS Connection Dialog"
+msgstr "Dialoogvenster Nieuwe PostGIS-verbinding maken"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:654
+msgid ""
+"The parameters required for a PostGIS connection are exposed below. For the "
+"other database types, see their differences at :ref:`db_requirements`."
+msgstr ""
+"De voor een PostGIS-verbinding vereiste parameters worden hieronder "
+"weergegeven. Voor de andere typen database, bekijk hun verschillen in "
+":ref:`db_requirements`."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:657
+msgid ""
+"**Name**: A name for this connection. It can be the same as *Database*."
+msgstr ""
+"**Naam**: Een naam voor deze verbinding. Die mag hetzelfde zijn als "
+"*Database*."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:658
+msgid ""
+"**Service**: Service parameter to be used alternatively to hostname/port "
+"(and potentially database). This can be defined in :file:`pg_service.conf`. "
+"Check the :ref:`pg-service-file` section for more details."
+msgstr ""
+"**Service**: Service-parameter die gebruikt kan worden als alternatief voor "
+"Host/Poort (en eventueel ook Database). Dit kan gedefinieerd worden in "
+":file:`pg_service.conf`. Bekijk het gedeelte :ref:`pg-service-file` voor "
+"meer details."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:661
+msgid ""
+"**Host**: Name of the database host. This must be a resolvable host name "
+"such as would be used to open a TCP/IP connection or ping the host. If the "
+"database is on the same computer as QGIS, simply enter *localhost* here."
+msgstr ""
+"**Host**: Naam van de host van de database. Dit moet een terug te vinden "
+"naam zijn zoals die gebruikt wordt voor een TCP/IP-verbinding of hoe de host"
+" kunt pingen. Wanneer de database op dezelfde computer staat als QGIS, "
+"gebruik hier dan *localhost*."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:664
+msgid ""
+"**Port**: Port number the PostgreSQL database server listens on. The default"
+" port for PostGIS is ``5432``."
+msgstr ""
+"**Poort**: Poortnummer waar de server van de database van PostgreSQL naar "
+"luistert. De standaardpoort voor PostGIS is ``5432``."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:666
+msgid "**Database**: Name of the database."
+msgstr "**Database**: Naam van de database."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:667
+msgid ""
+"**SSL mode**: How the SSL connection will be negotiated with the server. "
+"Note that massive speed-ups in PostGIS layer rendering can be achieved by "
+"disabling SSL in the connection editor. The following options are available:"
+msgstr ""
+"**SSL mode**: Hoe de SSL-verbinding zal onderhandelen met de server. Onthoud"
+" dat enorm versnellen van het renderen van een laag van PostGIS kan worden "
+"bereikt door het uitschakelen van SSL in de bewerker van de verbinding. De "
+"volgende opties zijn beschikbaar:"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:671
+msgid "*Disable*: Only try an unencrypted SSL connection;"
+msgstr "*Uitschakelen*: alleen verbinden zonder SSL-versleuteling"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:672
+msgid ""
+"*Allow*: Try a non-SSL connection. If that fails, try an SSL connection;"
+msgstr ""
+"*Toestaan*: Probeer een verbinding zonder SSL-versleuteling, als dat mislukt"
+" probeer dan een verbinding met SSL."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:673
+msgid ""
+"*Prefer* (the default): Try an SSL connection. If that fails, try a non-SSL "
+"connection;"
+msgstr ""
+"*Voorkeur* (de standaard): Probeer een verbinding met SSL-versleuteling. Als"
+" dat mislukt probeer dan een verbinding zonder SSL."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:675
+msgid "*Require*: Only try an SSL connection."
+msgstr "*Vereist*: Alleen verbinden met SSL-versleuteling."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:677
+msgid "**Username**: User name used to log in to the database."
+msgstr ""
+"**Gebruikersnaam**: Gebruikersnaam om toegang te krijgen tot de database."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:678
+msgid ""
+"**Password**: Password used with *Username* to connect to the database."
+msgstr ""
+"**Wachtwoord**: Wachtwoord dat hoort bij *Gebruikersnaam* om toegang te "
+"krijgen tot de database."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:680
+msgid ""
+"You can save any or both of the ``username`` and ``password`` parameters, in"
+" which case they will be used by default each time you need to connect to "
+"this database. If not saved, you'll be prompted to fill the missing "
+"credentials to connect to the database in next QGIS sessions; meanwhile the "
+"connection parameters you entered are stored in a temporary internal cache "
+"and returned whenever a username/password for the same database is "
+"requested, until you close the current QGIS process."
+msgstr ""
+"U kunt een of beide parameters ``gebruikersnaam`` en ``wachtwoord`` opslaan,"
+" in welk geval zij standaard zullen worden gebruikt, elke keer als u wilt "
+"verbinden met deze database. Indien niet opgeslagen zult u iedere keer "
+"worden gevraagd de ontbrekende inloggegevens op te geven om te verbinden met"
+" de database in volgende sessies van QGIS; in de tussentijd worden de door u"
+" opgegeven parameters voor de verbinding opgeslagen in een tijdelijke "
+"interne cache en elke keer teruggegeven als een gebruikersnaam/wachtwoord "
+"voor dezelfde database nodig is, totdat u het huidige proces van QGIS "
+"afsluit."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:688
+msgid "**QGIS User Settings and Security**"
+msgstr "**QGIS Gebruikersinstellingen en beveiliging**"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:690
+msgid ""
+"In the :guilabel:`Authentication` tab, saving **username** and **password** "
+"will keep unprotected credentials in the connection configuration. Those "
+"**credentials will be visible** if, for instance, you shared the project "
+"file with someone. Therefore, it's advisable to save your credentials in a "
+"*Authentication configuration* instead (:guilabel:`Configurations` tab - See"
+" :ref:`authentication_index` for more details) or in a service connection "
+"file (see :ref:`pg-service-file` for example)."
+msgstr ""
+"Op de tab :guilabel:`Authenticatie` zal het opslaan van **gebruikersnaam** "
+"en **wachtwoord** niet beveiligde inloggegevens behouden in de configuratie "
+"van de verbinding. Deze **inloggegevens zullen zichtbaar zijn** als u, "
+"bijvoorbeeld, het projectbestand deelt met iemand. Daarom wordt geadviseerd "
+"om uw inloggegevens in plaats daarvan op te slaan in een *configuratie voor "
+"Authenticatie* (tab  :guilabel:`Configuraties`). Bekijk "
+"ref:`authentication_index` voor meer details) of in een service "
+"verbindingsbestand (zie :ref:`pg-service-file` bijvoorbeeld)."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:698
+msgid ""
+"Optionally, depending on the type of database, you can activate the "
+"following checkboxes:"
+msgstr ""
+"Optioneel, afhankelijk van het type database, kunnen de volgende keuzevakken"
+" worden geactiveerd:"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:701
+msgid "|checkbox| :guilabel:`Only show layers in the layer registries`"
+msgstr "|checkbox| :guilabel:`Toon alleen lagen in de kaartlagen registers`"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:702
+msgid ""
+"|checkbox| :guilabel:`Don't resolve type of unrestricted columns (GEOMETRY)`"
+msgstr ""
+"|checkbox| :guilabel:`Niet het type geometrie bepalen voor onbeperkte "
+"kolommen (GEOMETRY)`"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:703
+msgid "|checkbox| :guilabel:`Only look in the 'public' schema`"
+msgstr "|checkbox| :guilabel:`Alleen in het 'publieke'-schema kijken`"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:704
+msgid "|checkbox| :guilabel:`Also list tables with no geometry`"
+msgstr "|checkbox| :guilabel:`Ook tabellen zonder geometrie tonen`"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:705
+msgid "|checkbox| :guilabel:`Use estimated table metadata`"
+msgstr "|checkbox| :guilabel:`Gebruik ’estimated table statistics'`"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:706
+msgid ""
+"|checkbox| :guilabel:`Allow saving/loading QGIS projects in the database`: "
+"more details :ref:`here <saveprojecttodb>`"
+msgstr ""
+"|checkbox| :guilabel:`Opslaan/laden van projecten van QGIS in de database "
+"toestaan`: meer details :ref:`hier <saveprojecttodb>`"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:709
+msgid "**Use estimated table metadata to speed up operations**"
+msgstr ""
+"**Geschatte metadata voor tabel gebruiken om bewerkingen te versnellen**"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:711
+msgid ""
+"When initializing layers, various queries may be needed to establish the "
+"characteristics of the geometries stored in the database table. When the "
+":guilabel:`Use estimated table metadata` option is checked, these queries "
+"examine only a sample of the rows and use the table statistics, rather than "
+"the entire table. This can drastically speed up operations on large "
+"datasets, but may result in incorrect characterization of layers (eg. the "
+"feature count of filtered layers will not be accurately determined) and may "
+"even cause strange behaviour in case columns that are supposed to be unique "
+"actually are not."
+msgstr ""
+"Bij het initialiseren van lagen zouden verscheidene query's nodig kunnen "
+"zijn om de karakteristieken vast te stellen van de geometrieën die zijn "
+"opgeslagen in de tabel van de database. Wanneer de optie :guilabel:`Gebruik "
+"'estimated table metadata'` is geselecteerd, onderzoeken deze query's "
+"slechts een monster van de rijen en gebruiken de tabelstatistieken, in "
+"plaats van de gehele tabel. Dit kan de verwerking van bewerkingen op grote "
+"gegevenssets enorm versnellen, maar zou kunnen resulteren in onjuiste "
+"karakterisering van lagen (bijv. de telling van het aantal objecten van "
+"gefilterde lagen zou niet nauwkeurig genoeg bepaald kunnen zijn) en zou "
+"zelfs vreemd gedrag kunnen veroorzaken in het geval dat kolommen, die geacht"
+" worden uniek te zijn, dat in feite niet zijn."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:721
+msgid ""
+"Once all parameters and options are set, you can test the connection by "
+"clicking on the :guilabel:`Test Connection` button or apply it hitting "
+":guilabel:`OK`. From the :guilabel:`Add PostGIS Table(s)`, click now on "
+":guilabel:`Connect` and the dialog is filled with tables from the selected "
+"database (as shown in figure_add_postgis_tables_)."
+msgstr ""
+"Als alle parameters en opties eenmaal zijn ingesteld kunt u de verbinding "
+"testen door te drukken op de knop  :guilabel:`Verbinding testen` of "
+"toepassen door op :guilabel:`OK` te drukken. Klik nu, vanuit :guilabel"
+":`PostGIS-tabel(len) toevoegen`, op :guilabel:`Verbinden` en het "
+"dialoogvenster wordt gevuld met tabellen uit de geselecteerde database "
+"(zoals weergegeven in figure_add_postgis_tables_)."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:731
+msgid "Particular Connection requirements"
+msgstr "Bijzondere vereisten voor verbindingen"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:733
+msgid ""
+"Because of database type particularities, provided options are all the same "
+"for all the databases. Below are exposed these connection specificities."
+msgstr ""
+"Vanwege de bijzonderheden van de typen databases zijn alle gegeven opties "
+"hetzelfde voor alle databases. Hieronder worden specifieke eisen voor "
+"verbindingen weergegeven."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:739
+msgid "PostgreSQL Service connection file"
+msgstr "PostgreSQL service verbindingsbestand"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:741
+msgid ""
+"The service connection file allows PostgreSQL connection parameters to be "
+"associated with a single service name. That service name can then be "
+"specified by a client and the associated settings will be used."
+msgstr ""
+"Het service verbindingsbestand maakt het mogelijk dat in PostgreSQL "
+"parameters voor een verbinding worden geassocieerd met één enkele naam van "
+"een service. Die naam van een service kan dan worden gespecificeerd door een"
+" cliënt en de geassocieerde instellingen zullen worden gebruikt."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:745
+msgid ""
+"It's called :file:`.pg_service.conf` under \\*nix systems (GNU/Linux, macOS "
+"etc.) and :file:`pg_service.conf` on Windows."
+msgstr ""
+"Het is genaamd :file:`.pg_service.conf` op systemen van \\*nix (GNU/Linux, "
+"MacOS etc.) en :file:`pg_service.conf` op Windows."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:748
+msgid "The service file looks like::"
+msgstr "Het servicebestand ziet er uit als:"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:762
+msgid ""
+"There are two services in the above example: ``water_service`` and "
+"``wastewater_service``. You can use these to connect from QGIS, pgAdmin etc."
+" by specifying only the name of the service you want to connect to (without "
+"the enclosing brackets). If you want to use the service with ``psql`` you "
+"need to do something like ``export PGSERVICE=water_service`` before doing "
+"your psql commands."
+msgstr ""
+"Er staan twee services in het voorbeeld hierboven: ``water_service`` en "
+"``wastewater_service``. U kunt deze gebruiken om te verbinden vanuit QGIS, "
+"pgAdmin etc. door alleen de naam te specificeren van de service waarmee u "
+"wilt verbinden (zonder de omsluitende haakjes). Indien u de service wilt "
+"gebruiken met ``psql`` dient u iets te doen als ``export "
+"PGSERVICE=water_service`` vóórdat u uw opdrachten voor psql opgeeft."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:769
+msgid ""
+"You can find all the parameters `here "
+"<https://www.postgresql.org/docs/current/static/libpq-connect.html#LIBPQ-"
+"PARAMKEYWORDS>`_"
+msgstr ""
+"U vindt alle parameters `hier "
+"<https://www.postgresql.org/docs/current/static/libpq-connect.html#LIBPQ-"
+"PARAMKEYWORDS>`_"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:772
+msgid ""
+"If you don't want to save the passwords in the service file you can use the "
+"`.pg_pass <https://www.postgresql.org/docs/current/static/libpq-"
+"pgpass.html>`_ option."
+msgstr ""
+"Indien u de wachtwoorden niet wilt opslaan in het servicebestand, kunt u de "
+"optie `.pg_pass <https://www.postgresql.org/docs/current/static/libpq-"
+"pgpass.html>`_ gebruiken."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:777
+msgid ""
+"On \\*nix operating systems (GNU/Linux, macOS etc.) you can save the "
+":file:`.pg_service.conf` file in the user's home directory and the "
+"PostgreSQL clients will automatically be aware of it. For example, if the "
+"logged user is ``web``, :file:`.pg_service.conf` should be saved in the "
+":file:`/home/web/` directory in order to directly work (without specifying "
+"any other environment variables)."
+msgstr ""
+"Op besturingssystemen van \\*nix (GNU/Linux, MacOS etc.) kunt u het bestand "
+":file:`.pg_service.conf` opslaan in de thuismap van de gebruiker en de "
+"cliënten van PostgreSQL zullen zich er automatisch bewust van zijn. Als, "
+"bijvoorbeeld de gebruiker ``web`` is, zou het bestand "
+":file:`.pg_service.conf` moeten zijn opgeslagen in de map :file:`/home/web/`"
+" om direct te kunnen werken (zonder enige andere omgevingsvariabelen te "
+"moeten opgeven)."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:784
+msgid ""
+"You can specify the location of the service file by creating a "
+"``PGSERVICEFILE`` environment variable (e.g. run the ``export "
+"PGSERVICEFILE=/home/web/.pg_service.conf`` command under your \\*nix OS to "
+"temporarily set the ``PGSERVICEFILE`` variable)"
+msgstr ""
+"U kunt de locatie van het servicebestand specificeren door een "
+"omgevingsvariabele ``PGSERVICEFILE`` te maken (bijv. voer de opdracht "
+"``export PGSERVICEFILE=/home/web/.pg_service.conf`` uit onder uw \\*nix "
+"besturingssysteem om de variabele ``PGSERVICEFILE`` tijdelijk in te stellen)"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:788
+msgid ""
+"You can also make the service file available system-wide (all users) either "
+"by placing the :file:`.pg_service.conf` file at ``pg_config --sysconfdir`` "
+"or by adding the ``PGSYSCONFDIR`` environment variable to specify the "
+"directory containing the service file. If service definitions with the same "
+"name exist in the user and the system file, the user file takes precedence."
+msgstr ""
+"U kunt het servicebestand ook systeembreed (alle gebruikers) beschikbaar "
+"maken, ofwel door het bestand :file:`pg_service.conf`` te plaatsen in "
+"``.pg_config --sysconfdir` of door de omgevingsvariabele ``PGSYSCONFDIR`` "
+"toe te voegen om de map te specificeren die het servicebestand bevat. Als "
+"servicedefinities met dezelfde naam bestaan in het gebruikers- en het "
+"systeembestand, heeft het gebruikersbestand voorrang boven het "
+"systeembestand."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:796
+msgid "There are some caveats under Windows:"
+msgstr "Er zijn enkele valkuilen onder Windows:"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:798
+msgid ""
+"The service file should be saved as :file:`pg_service.conf` and not as "
+":file:`.pg_service.conf`."
+msgstr ""
+"Het servicebestand zou moeten worden opgeslagen als :file:`pg_service.conf` "
+"en niet als :file:`.pg_service.conf`."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:800
+msgid ""
+"The service file should be saved in Unix format in order to work. One way to"
+" do it is to open it with `Notepad++ <https://notepad-plus-plus.org/>`_ and "
+":menuselection:`Edit --> EOL Conversion --> UNIX Format --> File save`."
+msgstr ""
+"Het servicebestand zou moeten worden opgeslagen in de indeling voor Unix om "
+"te kunnen werken. Eén manier om dat te doen is door het te openen in "
+"`Notepad++ <https://notepad-plus-plus.org/>`_ en dan `Bewerken -> Formaat ->"
+" UNIX-indeling -> Bestand opslaan`."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:803
+msgid ""
+"You can add environmental variables in various ways; a tested one, known to "
+"work reliably, is :menuselection:`Control Panel --> System and Security --> "
+"System --> Advanced system settings --> Environment Variables` adding "
+"``PGSERVICEFILE`` and the path of the type "
+":file:`C:\\\\Users\\\\John\\\\pg_service.conf`"
+msgstr ""
+"U kunt omgevingsvariabelen op verscheidene manieren toevoegen; een geteste, "
+"die betrouwbaar werkt, is :menuselection:`Configuratiescherm --> Systeem -->"
+" Geavanceerde systeeminstellingen --> Omgevingsvariabelen` toevoegen "
+"``PGSERVICEFILE`` en het pad als type "
+":file:`C:\\\\Users\\\\John\\\\pg_service.conf`"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:807
+msgid ""
+"After adding an environment variable you may also need to restart the "
+"computer."
+msgstr ""
+"Na het toevoegen van een omgevingsvariabele zou u mogelijk uw computer "
+"opnieuw moeten opstarten."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:813
+msgid "Connecting to Oracle Spatial"
+msgstr "Verbinden met Oracle Spatial"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:815
+msgid ""
+"The spatial features in Oracle Spatial aid users in managing geographic and "
+"location data in a native type within an Oracle database. In addition to "
+"some of the options in :ref:`vector_create_stored_connection`, the "
+"connection dialog proposes:"
+msgstr ""
+"De ruimtelijke objecten in Oracle Spatial helpen gebruikers bij het beheren "
+"van geografische en locatie-gegevens in een eigen type binnen een database "
+"van Oracle. In aanvulling op enkele opties in "
+":ref:`vector_create_stored_connection`, stelt het dialoogvenster voor:"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:820
+msgid "**Database**: SID or SERVICE_NAME of the Oracle instance;"
+msgstr "**Database** SID of SERVICE_NAME van de Oracle instantie;"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:821
+msgid ""
+"**Port**: Port number the Oracle database server listens on. The default "
+"port is ``1521``;"
+msgstr ""
+"**Poort**: Poortnummer waar de server van de database van Oracle naar "
+"luistert. De standaard poort is ``1521``;"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:823
+msgid "**Workspace**: Workspace to switch to."
+msgstr "**Werkruimte**: De werkruimte waarnaar moet worden geschakeld."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:825
+msgid "Optionally, you can activate following checkboxes:"
+msgstr "Optioneel kunt u de volgende keuzevakken activeren:"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:827
+msgid ""
+"|checkbox| :guilabel:`Only look in metadata table`: restricts the displayed "
+"tables to those that are in the ``all_sdo_geom_metadata`` view. This can "
+"speed up the initial display of spatial tables."
+msgstr ""
+"|checkbox| :guilabel:`Kijk alleen in de tabel Metadata`: dit beperkt de "
+"weergegeven tabellen tot die welke aanwezig zijn in de weergave "
+"``all_sdo_geom_metadata``. Dit kan de initiële weergave van ruimtelijke "
+"tabellen aanzienlijk versnellen."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:830
+msgid ""
+"|checkbox| :guilabel:`Only look for user's tables`: when searching for "
+"spatial tables, restricts the search to tables that are owned by the user."
+msgstr ""
+"|checkbox| :guilabel:`Alleen zoeken naar tabellen van de gebruiker`: bij het"
+" zoeken naar ruimtelijke tabellen, beperk het zoeken tot alleen die tabellen"
+" waar de gebruiker eigenaar van is."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:832
+msgid ""
+"|checkbox| :guilabel:`Also list tables with no geometry`: indicates that "
+"tables without geometry should also be listed by default."
+msgstr ""
+"|checkbox| :guilabel:`Ook tabellen zonder geometrie tonen`: geeft aan dat "
+"ook tabellen zonder geometrie standaard in de lijst getoond zouden moeten "
+"worden."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:834
+msgid ""
+"|checkbox| :guilabel:`Use estimated table statistics for the layer "
+"metadata`: when the layer is set up, various metadata are required for the "
+"Oracle table. This includes information such as the table row count, "
+"geometry type and spatial extents of the data in the geometry column. If the"
+" table contains a large number of rows, determining this metadata can be "
+"time-consuming. By activating this option, the following fast table metadata"
+" operations are done: Row count is determined from ``all_tables.num_rows``. "
+"Table extents are always determined with the SDO_TUNE.EXTENTS_OF function, "
+"even if a layer filter is applied. Table geometry is determined from the "
+"first 100 non-null geometry rows in the table."
+msgstr ""
+"|checkbox| :guilabel:`Gebruik geschatte tabelstatistieken voor de laag "
+"metadata`: wanneer een laag wordt aangemaakt wordt er ook verschillende "
+"metadata aangemaakt voor de tabel in Oracle. Deze bevat informatie als het "
+"bijhouden van het aantal regels, het type geometrie en het bereik van alle "
+"geometrieën in de tabel. Het bijhouden van deze metadata is tijdrovend als "
+"de tabellen veel records bevatten. Door deze optie te activeren, worden de "
+"volgende snelle bewerkingen voor de metadata uitgevoerd: Het aantal regels "
+"wordt bepaald vanuit ``all_tables.num_rows``. De bereiken van elke tabel "
+"worden altijd bepaald met de functie SDO_TUNE.EXTENTS_OF, zelfs wanneer er "
+"een laagfilter wordt gebruikt. Het bepalen van het type geometrie wordt "
+"bepaald uit de eerste 100 niet null regels in de tabel."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:844
+msgid ""
+"|checkbox| :guilabel:`Only existing geometry types`: only lists the existing"
+" geometry types and don't offer to add others."
+msgstr ""
+"|checkbox| :guilabel:`Alleen aanwezige typen geometrie`: toon alleen "
+"bestaande typen geometrie en biedt niet aan om andere toe te voegen."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:846
+msgid "|checkbox| :guilabel:`Include additional geometry attributes`."
+msgstr "|checkbox| :guilabel:`Aanvullende attributen geometrie opnemen`"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:850
+msgid "**Oracle Spatial Layers**"
+msgstr "**Oracle Spatial-lagen**"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:852
+msgid ""
+"Normally, an Oracle Spatial layer is defined by an entry in the "
+"**USER_SDO_METADATA** table."
+msgstr ""
+"Normaal gesproken wordt een ruimtelijke laag in ORACLE gedefinieerd door een"
+" item in de tabel **USER_SDO_METADATA**."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:855
+msgid ""
+"To ensure that selection tools work correctly, it is recommended that your "
+"tables have a **primary key**."
+msgstr ""
+"Het wordt aanbevolen dat uw tabellen een **primaire sleutel** hebben, om er "
+"voor te zorgen dat de gereedschappen voor selecteren correct werken."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:861
+msgid "Connecting to DB2 Spatial"
+msgstr "Verbinden met DB2 Spatial"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:863
+msgid ""
+"In addition to some of the options described in "
+":ref:`vector_create_stored_connection`, the connection to a DB2 database "
+"(see :ref:`label_db2_spatial` for more information) can be specified using "
+"either a Service/DSN name defined to ODBC or using the driver, host and port"
+" information."
+msgstr ""
+"In aanvulling op enkele van de beschreven opties in "
+":ref:`vector_create_stored_connection`, kan de verbinding naar een database "
+"van DB2 database (zie :ref:`label_db2_spatial` voor meer informatie) worden "
+"gespecificeerd ofwel met behulp van een naar ODBC gedefinieerde Service/DSN-"
+"naam of met behulp van informatie voor stuurprogramma, host en poort."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:868
+msgid ""
+"An ODBC **Service/DSN** connection requires the service name defined to "
+"ODBC."
+msgstr ""
+"Een ODBC **Service/DSN**-verbinding vereist dat de naam van de service wordt"
+" gedefinieerd naar ODBC."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:870
+msgid "A driver/host/port connection requires:"
+msgstr "Een stuurprogramma/host/poort-verbinding vereist:"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:872
+msgid ""
+"**Driver**: Name of the DB2 driver. Typically this would be IBM DB2 ODBC "
+"DRIVER."
+msgstr ""
+"**Stuurbestand (driver)**: Naam van het stuurprogramma voor DB2. Gewoonlijk "
+"zou dit het stuurprogramma IBM DB2 ODBC DRIVER zijn."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:873
+msgid ""
+"**DB2 Host**: Name of the database host. This must be a resolvable host name"
+" such as would be used to open a TCP/IP connection or ping the host. If the "
+"database is on the same computer as QGIS, simply enter *localhost* here."
+msgstr ""
+"**Host**: Naam van de host van de database. Dit moet een terug te vinden "
+"naam zijn zoals die gebruikt wordt voor een TCP/IP-verbinding of hoe de host"
+" kunt pingen. Wanneer de database op dezelfde computer staat als QGIS, "
+"gebruik hier dan *localhost*."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:876
+msgid ""
+"**DB2 Port**: Port number the DB2 database server listens on. The default "
+"DB2 LUW port is ``50000``. The default DB2 z/OS port is ``446``."
+msgstr ""
+"**Poort**: Poortnummer waar de server van de database van DB2 naar luistert."
+" De standaard DB2 LUW-poort is ``50000``. De standaard DB2 z/OS-poort is "
+"``446``."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:881
+msgid "**DB2 Spatial Layers**"
+msgstr "**DB2 Spatial-lagen**"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:883
+msgid ""
+"A DB2 Spatial layer is defined by a row in the "
+"**DB2GSE.ST_GEOMETRY_COLUMNS** view."
+msgstr ""
+"Een DB2 Spatial-laag wordt gedefinieerd door een rij in de weergave "
+"**DB2GSE.ST_GEOMETRY_COLUMNS**."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:888
+msgid ""
+"In order to work effectively with DB2 spatial tables in QGIS, it is "
+"important that tables have an INTEGER or BIGINT column defined as PRIMARY "
+"KEY and if new features are going to be added, this column should also have "
+"the GENERATED characteristic."
+msgstr ""
+"Het is belangrijk, om effectief te kunnen werken met DB2 ruimtelijke "
+"tabellen in QGIS, dat tabellen een kolom INTEGER of BIGINT hebben "
+"gedefinieerd als PRIMARY KEY en indien nieuwe objecten zullen worden "
+"toegevoegd, zou deze kolom ook een karakteristiek GENERATED moeten hebben."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:893
+msgid ""
+"It is also helpful for the spatial column to be registered with a specific "
+"spatial reference identifier (most often ``4326`` for WGS84 coordinates). A "
+"spatial column can be registered by calling the "
+"``ST_Register_Spatial_Column`` stored procedure."
+msgstr ""
+"Het is ook nuttig als de ruimtelijke kolom is geregistreerd met een "
+"specifieke ruimtelijke referentie-ID (meestal ``4326`` voor coördinaten in "
+"WGS84). Een ruimtelijke kolom kan worden geregistreerd door de opgeslagen "
+"procedure ``ST_Register_Spatial_Column`` aan te roepen."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:902
+msgid "Connecting to MSSQL Spatial"
+msgstr "Verbinden met MSSQL Spatial"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:904
+msgid ""
+"In addition to some of the options in "
+":ref:`vector_create_stored_connection`, creating a new MSSQL connection "
+"dialog proposes you to fill a **Provider/DSN** name. You can also display "
+"available databases."
+msgstr ""
+"In aanvulling op enkele opties in :ref:`vector_create_stored_connection`, "
+"stelt het dialoogvenster voor het maken van een nieuwe verbinding voor MSSQL"
+" u voor om een **Provider/DSN**-naam in te vullen. U kunt ook aanwezige "
+"databases weergeven."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:912
+msgid "Loading a Database Layer"
+msgstr "Het laden van laag uit een database"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:914
+msgid ""
+"Once you have one or more connections defined to a database (see section "
+":ref:`vector_create_stored_connection`), you can load layers from it. Of "
+"course, this requires having available data. See e.g. section "
+":ref:`vector_import_data_in_postgis` for a discussion on importing data into"
+" a PostGIS database."
+msgstr ""
+"Wanneer u eenmaal één of meer verbindingen hebt gedefinieerd naar een "
+"database (zie het gedeelte :ref:`vector_create_stored_connection`), kunt u "
+"er lagen uit laden. Natuurlijk vereist dit dat er gegevens beschikbaar zijn."
+" Bekijk bijvoorbeeld het gedeelte :ref:`vector_import_data_in_postgis` voor "
+"een bespreking over het importeren van gegevens in een database van PostGIS."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:920
+msgid "To load a layer from a database, you can perform the following steps:"
+msgstr ""
+"U kunt de volgende stappen uitvoeren om een laag te laden uit een database:"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:922
+msgid ""
+"Open the \"Add <database> table(s)\" dialog (see "
+":ref:`vector_create_stored_connection`)."
+msgstr ""
+"Open het dialoogvenster \"Databasetabel(len) toevoegen <database>\" (zie "
+":ref:`vector_create_stored_connection`)."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:924
+msgid ""
+"Choose the connection from the drop-down list and click :guilabel:`Connect`."
+msgstr ""
+"Kies de verbinding vanuit de keuzelijst en druk op :guilabel:`Verbinden`."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:925
+msgid ""
+"Select or unselect |checkbox| :guilabel:`Also list tables with no geometry`."
+msgstr ""
+"Selecteer of deselecteer het keuzevak |checkbox| :guilabel:`Ook tabellen "
+"zonder geometrie tonen`"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:926
+msgid ""
+"Optionally, use some |checkbox| :guilabel:`Search Options` to reduce the "
+"list of tables to those matching your search. You can also set this option "
+"before you hit the :guilabel:`Connect` button, speeding this way the "
+"database fetching."
+msgstr ""
+"Optioneel, gebruik enkele |checkbox| :guilabel:`Zoek opties` om de lijst met"
+" tabellen die overeenkomen met de zoekactie te beperken. U kunt deze optie "
+"ook instellen voordat u op de knop :guilabel:`Verbinden` drukt, wat het "
+"ophalen vanuit de database versnelt."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:930
+msgid "Find the layer(s) you wish to add in the list of available layers."
+msgstr ""
+"Zoek naar de laag/lagen die u wilt toevoegen in de lijst van beschikbare "
+"lagen."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:931
+msgid ""
+"Select it by clicking on it. You can select multiple layers by holding down "
+"the :kbd:`Shift` key while clicking."
+msgstr ""
+"Selecteer deze door er op te klikken. U kunt meerdere lagen selecteren door "
+"de :kbd:`Shift`-toets in te drukken tijdens het klikken."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:933
+msgid ""
+"If applicable, use the :guilabel:`Set Filter` button (or double-click the "
+"layer) to start the :guilabel:`Query Builder` dialog (See section "
+":ref:`vector_query_builder`) and define which features to load from the "
+"selected layer. The filter expression appears in the ``sql`` column. This "
+"restriction can be removed or edited in the :menuselection:`Layer Properties"
+" --> General --> Provider Feature Filter` frame."
+msgstr ""
+"Gebruik, indien van toepassing, de knop :guilabel:`Filter instellen` (of "
+"dubbelklik op de laag) om het dialoogvenster :guilabel:`Querybouwer` te "
+"starten (Bekijk het gedeelte :ref:`vector_query_builder`) en definieer welke"
+" objecten uit de geselecteerde laag moeten worden geladen. De expressie voor"
+" het filter verschijnt in de kolom ``sql``. Deze beperking kan worden "
+"verwijderd of worden bewerkt in het frame :menuselection:`Laageigenschappen "
+"--> Algemeen --> Provider-specifieke filter expressie`."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:939
+msgid ""
+"The checkbox in the ``Select at id`` column that is activated by default "
+"gets the features ids without the attributes and speeds in most cases the "
+"data loading."
+msgstr ""
+"Het keuzevak in de kolom ``Select at id`` is standaard geactiveerd en haalt "
+"ID's van de objecten op zonder attributen, wat het laden van de gegevens in "
+"de meeste gevallen versnelt."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:942
+msgid "Click on the :guilabel:`Add` button to add the layer to the map."
+msgstr ""
+"Klik op de knop :guilabel:`Toevoegen` om de laag toe te voegen aan het "
+"kaartvenster."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:950
+msgid "Add PostGIS Table(s) Dialog"
+msgstr "Dialoogvenster PostGIS-tabel(len) toevoegen"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:953
+msgid "**Use the Browser Panel to speed up loading of database table(s)**"
+msgstr ""
+"**Het paneel Browser gebruiken om het laden van tabel(len) van databases te "
+"versnellen**"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:955
+msgid ""
+"Adding DB tables from their ad hoc tab of the :guilabel:`Data Source "
+"Manager` dialog to QGIS may sometimes be time consuming as QGIS fetches "
+"statistics and properties (e.g. geometry type and field, CRS, number of "
+"features) of each table beforehand. To avoid this, once :ref:`the connection"
+" is set <vector_create_stored_connection>`, it's better to use the "
+":ref:`Browser Panel <browser_panel>` or the :ref:`DB Manager <dbmanager>` to"
+" drag and drop the database tables in the map canvas."
+msgstr ""
+"Toevoegen van tabellen van databases vanaf hun ad hoc tab van het "
+"dialoogvenster the :guilabel:`Databronnen beheren` aan QGIS kan soms "
+"bijzonder veel tijd vergen omdat QGIS op voorhand statistieken en "
+"eigenschappen (bijv. type geometrie en veld, CRS, aantal objecten) van elke "
+"tabel ophaalt. Het is beter om het :ref:`paneel Browser<browser_panel>` of "
+":ref:`DB Manager<dbmanager>` te gebruiken om de tabellen van de database te "
+"slepen en neer te zetten in het kaartvenster om dit te vermijden als eenmaal"
+" :ref:`the connection is set<vector_create_stored_connection>`."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:965
+msgid "QGIS Custom formats"
+msgstr "QGIS aangepaste indelingen"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:967
+msgid ""
+"QGIS proposes two custom formats you can load in the application using their"
+" own loading tool:"
+msgstr ""
+"QGIS stelt twee aangepaste indelingen voor die u in de toepassing kunt laden"
+" met behulp van hun eigen gereedschap voor het laden:"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:970
+msgid ""
+"Temporary Scratch Layer: a memory layer that is bound to the project it's "
+"opened with (see :ref:`vector_new_scratch_layer` for more information)"
+msgstr ""
+"Tijdelijke tekenlaag: een geheugenlaag die is gebonden aan het project "
+"waarin hij is geopend (zie :ref:`vector_new_scratch_layer` voor meer "
+"informatie)"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:972
+msgid ""
+"Virtual Layers: a layer resulting from a query on other layer(s) (see "
+":ref:`vector_virtual_layers` for more information)"
+msgstr ""
+"Virtuele lagen: een laag die resulteert vanuit een query op andere "
+"laag/lagen (zie :ref:`vector_virtual_layers` voor meer informatie)"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:979
+msgid "QLR - QGIS Layer Definition File"
+msgstr "QLR - QGIS Laag-definitiebestand"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:981
+msgid ""
+"Layer definitions can be saved as a :ref:`Layer Definition File "
+"<qgislayerdefinitionfile>` (QLR - :file:`.qlr`) using :menuselection:`Export"
+" --> Save As Layer Definition File...` in the layer context menu."
+msgstr ""
+"Laagdefinities kunnen worden opgeslagen als een :ref:`Laag-definitiebestand "
+"<qgislayerdefinitionfile>` (QLR - :file:`.qlr`) met behulp van "
+":menuselection:`Exporteren --> Opslaan als Laag-definitiebestand…` in het "
+"contextmenu van de laag."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:987
+msgid ""
+"The QLR format makes it possible to share \"complete\" QGIS layers with "
+"other QGIS users. QLR files contain links to the data sources and all the "
+"QGIS style information necessary to style the layer."
+msgstr ""
+"De indeling QLR maakt het mogelijk om \"complete\" QGIS-lagen te delen met "
+"andere gebruikers van QGIS. QLR-bestanden bevatten koppelingen naar de "
+"gegevensbronnen en alle benodigde QGIS stijlinformatie om de laag op te "
+"kunnen maken."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:992
+msgid ""
+"QLR files are shown in the Browser Panel and can be used to add layers (with"
+" their saved styles) to the Layers Panel. You can also drag and drop QLR "
+"files from the system file manager into the map canvas."
+msgstr ""
+"QLR-bestanden worden in het paneel Browser weergegeven en kunnen worden "
+"gebruikt om lagen toe te voegen (met hun opgeslagen stijlen) aan het paneel "
+"Lagen. U kunt ook QLR-bestanden slepen en neerzetten vanuit de systeem "
+"bestandsbeheerder in het kaartvenster."
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:998
+msgid "Connecting to web services"
+msgstr "Verbinden met webservices"
+
+#: ../../source/docs/user_manual/managing_data_source/opening_data.rst:1000
+msgid ""
+"With QGIS you can have access to different types of OGC web services "
+"(WM(T)S, WFS(-T), CSW ...). Thanks to QGIS Server, you can also publish "
+"these services. Description of these capabilities and how-to are provided in"
+" chapter :ref:`sec_ogc`."
+msgstr ""
+"Met QGIS kunt u toegang krijgen tot verschillende typen webservices van OGC "
+"(WM(T)S, WFS(-T), CSW ...). Dankzij QGIS Server kunt u deze services ook "
+"publiceren. Beschrijving van deze mogelijkheden en how-to worden verschaft "
+"in het hoofdstuk :ref:`sec_ogc`."
+
+#~ msgid "|updatedisclaimer|"
+#~ msgstr "|updatedisclaimer|"
+
+#~ msgid ""
+#~ "Vector data formats include ESRI formats (shapefiles, geodatabases...), "
+#~ "MapInfo and MicroStation file formats, AutoCAD DWG/DXF, GeoPackage, GeoJSON,"
+#~ " GRASS, GPX, KML, Comma Separated Values, and many more... Read the complete"
+#~ " list of `OGR vector supported formats "
+#~ "<http://www.gdal.org/ogr_formats.html>`_;"
+#~ msgstr ""
+#~ "Vectorgegevensindelingen omvatten ESRI-indelingen (shapefiles, "
+#~ "geodatabases...), MapInfo en MicroStation bestandsindelingen, AutoCAD "
+#~ "DWG/DXF, GeoPackage, GeoJSON, GRASS, GPX, KML, Comma Separated Values, en "
+#~ "nog veel meer... Bekijk de volledige lijst met `OGR vector ondersteunde "
+#~ "indelingen <http://www.gdal.org/ogr_formats.html>`_;"
+
+#~ msgid ""
+#~ "Raster data formats include ArcInfo Binary Grid, ArcInfo ASCII Grid, JPEG, "
+#~ "GeoTIFF, ERDAS IMAGINE, MBTiles, R or Idrisi rasters, ASCII Gridded XYZ, "
+#~ "GDAL Virtual, SRTM, Sentinel Data, and many more... Read the complete list "
+#~ "of `raster supported formats <http://www.gdal.org/formats_list.html>`_;"
+#~ msgstr ""
+#~ "Rastergegevensindelingen omvatten ArcInfo Binary Grid, ArcInfo ASCII Grid, "
+#~ "JPEG, GeoTIFF, ERDAS IMAGINE, MBTiles, R of Idrisi-rasters, ASCII Gridded "
+#~ "XYZ, GDAL Virtual, SRTM, Sentinel Data, en nog veel meer... Bekijk de "
+#~ "volledige lijst met `raster ondersteunde indelingen "
+#~ "<http://www.gdal.org/formats_list.html>`_;"
+
+#~ msgid ""
+#~ "Database formats include PostgreSQL/PostGIS, SQLite/SpatiaLite, Oracle, DB2 "
+#~ "or MSSQL Spatial, MySQL...;"
+#~ msgstr ""
+#~ "Database-indelingen omvatten PostgreSQL/PostGIS, SQLite/SpatiaLite, Oracle, "
+#~ "DB2 of MSSQL Spatial, MySQL...;"
+
+#~ msgid ""
+#~ "Support of web data services (WM(T)S, WFS, WCS, CSW, ArcGIS Servers...) is "
+#~ "also handled by QGIS providers (see :ref:`working_with_ogc`);"
+#~ msgstr ""
+#~ "Ondersteuning voor gegevens van webservices (WM(T)S, WFS, WCS, CSW, ArcGIS "
+#~ "Servers...) wordt ook afgehandeld door providers van QGIS (zie "
+#~ ":ref:`working_with_ogc`);"
+
+#~ msgid ""
+#~ "As of the date of this document, more than 80 vector and 140 raster formats "
+#~ "are supported by the `GDAL/OGR <http://www.gdal.org/>`_ and QGIS native "
+#~ "providers."
+#~ msgstr ""
+#~ "Vanaf de datum van dit document worden meer dan 80 vector- en 140 "
+#~ "rasterindelingen ondersteund door de `GDAL/OGR <http://www.gdal.org/>`_ en "
+#~ "eigen providers van QGIS."
+
+#~ msgid ""
+#~ "QGIS Browser is one of the main panels of QGIS that lets you quickly and "
+#~ "easily add your data to projects. It helps you navigate in your filesystem "
+#~ "and manage geodata, regardless the type of layer (raster, vector, table), or"
+#~ " the datasource format (plain or compressed files, database, web services)."
+#~ msgstr ""
+#~ "QGIS Browser is één van de belangrijkste panelen van QGIS dat u snel en "
+#~ "eenvoudig uw gegevens laat toevoegen aan projecten. Het helpt u navigeren "
+#~ "door uw bestandssysteem en geogegevens beheren, ongeacht het type laag "
+#~ "(raster, vector, tabel), of de indeling van de gegevensbron (platte tekst of"
+#~ " gecomprimeerde bestanden, database, webservices)."
+
+#~ msgid "To add a layer into a project:"
+#~ msgstr "Een laag aan een project toevoegen:"
+
+#~ msgid ""
+#~ "right-click on QGIS toolbar and check |checkbox| :guilabel:`Browser Panel` "
+#~ "to activate it or select it from the menu :menuselection:`View --> Panels` "
+#~ "(or |kde| :menuselection:`Settings --> Panels`);"
+#~ msgstr ""
+#~ "klik met de rechter muisknop op de werkbalk van QGIS en selecteer |checkbox|"
+#~ " :guilabel:`paneel Browser` om het te activeren of selecteer het uit het "
+#~ "menu :menuselection:`Beeld --> Panelen` (of |kde| :menuselection:`Extra--> "
+#~ "Panelen`);"
+
+#~ msgid ""
+#~ "a browser tree with your filesystem, databases and web services is "
+#~ "displayed;"
+#~ msgstr ""
+#~ "een boom voor de browser met databases en webservices op uw bestandssysteem "
+#~ "wordt weergegeven;"
+
+#~ msgid "find the layer in the list;"
+#~ msgstr "zoek de laag op in de lijst;"
+
+#~ msgid ""
+#~ "right-click on its name and select **Add selected layer(s)**. Your layer is "
+#~ "now added to the :ref:`Layers Panel <label_legend>` and can be viewed in the"
+#~ " :ref:`map canvas <label_mapview>`."
+#~ msgstr ""
+#~ "klik met rechts op de naam ervan en selecteer **Geselecteerde lagen "
+#~ "toevoegen**. Uw laag wordt nu toegevoegd aan het :ref:`paneel Lagen "
+#~ "<label_legend>` en kan worden bekeken in het :ref:`kaartvenster "
+#~ "<label_mapview>`."
+
+#~ msgid ""
+#~ "You can also add a layer or open a QGIS project directly from the Browser "
+#~ "panel by double-clicking its name or by drag-and-drop into the map canvas."
+#~ msgstr ""
+#~ "U kunt ook een laag toevoegen of een project van QGIS direct openen vanuit "
+#~ "het paneel Browser door te dubbelklikken op de naam of door het te slepen en"
+#~ " neer te zetten in het kaartvenster."
+
+#~ msgid ""
+#~ "|propertiesWidget| :sup:`Enable/disable properties widget`: when toggled on,"
+#~ " a new widget is added at the bottom of the panel showing, if applicable, "
+#~ "metadatas of the selected item."
+#~ msgstr ""
+#~ "|propertiesWidget| :sup:`Widget Eigenschappen in- en uitschakelen`: indien "
+#~ "ingeschakeld wordt een nieuw widget toegevoegd aan de onderzijde van het "
+#~ "paneel dat de metadata, indien van toepassing, van het geselecteerde item "
+#~ "weergeeft."
+
+#~ msgid ""
+#~ "for vector data (like Shapefile, Mapinfo or dxf layer), click on "
+#~ "|addOgrLayer| :sup:`Add Vector Layer` toolbar button, select the "
+#~ ":menuselection:`Layer --> Add Layer -->` |addOgrLayer|:guilabel:`Add Vector "
+#~ "Layer` menu option or press :kbd:`Ctrl+Shift+V`. This will bring up a new "
+#~ "window (see figure_vector_add_) from which you can check |radioButtonOn| "
+#~ ":guilabel:`File` and click on **[Browse]**. You can also specify the "
+#~ "encoding for the file if desired."
+#~ msgstr ""
+#~ "voor vectorgegevens (zoals Shapefile, Mapinfo of DXF-laag), klik op de knop "
+#~ "van de werkbalk |addOgrLayer| :sup:`Vectorlaag toevoegen`, selecteer de "
+#~ "menuoptie :menuselection:`Kaartlagen --> Laag toevoegen -->` "
+#~ "|addOgrLayer|:guilabel:`Vectorlaag toevoegen` of druk op "
+#~ ":kbd:`Ctrl+Shift+V`. Dat zal een nieuw venster openen (zie "
+#~ "figure_vector_add_) van waaruit u |radioButtonOn| :guilabel:`Bestand` kunt "
+#~ "selecteren en klikken op **[Bladeren]**. U kunt, indien gewenst, ook de "
+#~ "codering voor het bestand specificeren."
+
+#~ msgid ""
+#~ "Selecting a file from the list and clicking **[Open]** loads it into QGIS. "
+#~ "More than one layer can be loaded at the same time by holding down the "
+#~ ":kbd:`Ctrl` or :kbd:`Shift` key and clicking on multiple items in the "
+#~ "dialog. Figure_vector_loaded_ shows QGIS after loading the "
+#~ ":file:`alaska.shp` file."
+#~ msgstr ""
+#~ "Selecteren van een bestand uit de lijst en klikken op **[Openen]** laadt het"
+#~ " in QGIS. Meer dan één laag kan tegelijkertijd worden geladen door de "
+#~ ":kbd:`Ctrl`- of :kbd:`Shift`-toets ingedrukt te houden en te klikken op "
+#~ "meerdere items in het dialoogvenster. Figure_vector_loaded_ laat QGIS zien "
+#~ "na het laden van het bestand :file:`alaska.shp`."
+
+#~ msgid ""
+#~ "You can also load specific formats like ``ArcInfo Binary Coverage``, ``UK. "
+#~ "National Transfer Format``, as well as the raw TIGER format of the ``US "
+#~ "Census Bureau`` or ``OpenfileGDB``. To do that, you'd need to select "
+#~ "|radioButtonOn| :guilabel:`Directory` as :guilabel:`Source type`. In this "
+#~ "case a directory can be selected in the dialog after pressing **[Browse]**."
+#~ msgstr ""
+#~ "U kunt ook specifieke indelingen laden, zoals ``ArcInfo Binary Coverage``, "
+#~ "``UK. National Transfer Format``, net als de ruwe TIGER-indeling van het "
+#~ "``US Census Bureau`` of ``OpenfileGDB``. U zou zowel |radioButtonOn| "
+#~ ":guilabel:`Map` als :guilabel:`Type bron` moeten selecteren om dat te kunnen"
+#~ " doen. In dit geval kan een map worden geselecteerd in het dialoogvenster na"
+#~ " drukken op **[Bladeren]**."
+
+#~ msgid ""
+#~ "Pressing the **[New]** button opens the :guilabel:`Create a New OGR Database"
+#~ " Connection` dialog whose parameters are among the ones you can find in "
+#~ ":ref:`vector_create_stored_connection`. Pressing **[Open]** you can select "
+#~ "from the available tables for example of the PostGIS enabled database."
+#~ msgstr ""
+#~ "Drukken op de knop **[Nieuw]** opent het dialoogvenster :guilabel:`Nieuwe "
+#~ "OGR databaseverbinding maken` waarvan de parameters die zijn welke u kunt "
+#~ "vinden in :ref:`vector_create_stored_connection`. Door te drukken op "
+#~ "**[Openen]** kunt u selecteren uit de beschikbare tabellen, bijvoorbeeld van"
+#~ " de voor PostGIS ingeschakelde database."
+
+#~ msgid ""
+#~ "On macOS, portable drives that are mounted beside the primary hard drive do "
+#~ "not show up as expected under :menuselection:`File --> Open Project`. We are"
+#~ " working on a more macOS-native open/save dialog to fix this. As a "
+#~ "workaround, you can type ``/Volumes`` in the :guilabel:`File name` box and "
+#~ "press :kbd:`Enter`. Then you can navigate to external drives and network "
+#~ "mounts."
+#~ msgstr ""
+#~ "Op MacOS worden draagbare schijven, die naast de primaire harde schijf zijn "
+#~ "gemount, niet zoals verwacht weergegeven onder :menuselection:`Bestand --> "
+#~ "Project openen`. We werken aan een meer eigen MacOS dialoogvenster "
+#~ "Openen/Opslaan om dit op te lossen. Als workaround kunt u ``/Volumes`` typen"
+#~ " in het vak :guilabel:`Bestandsnaam` en drukken op :kbd:`Enter`. Dan kunt u "
+#~ "navigeren naar de externe schijven en netwerkmounts."
+
+#~ msgid ""
+#~ "Delimited text file (e.g. :file:`.csv`, :file:`.txt`) can be loaded in QGIS "
+#~ "using the tools described above. However, loaded this way, it'll show up "
+#~ "like a simple table data. Sometimes, delimited text files can contain "
+#~ "geometric data you'd want to visualize; this is what the |delimitedText| "
+#~ ":guilabel:`Add Delimited Text Layer` is designed for."
+#~ msgstr ""
+#~ "Tekengescheiden tekstbestanden (bijv. :file:`.csv`, :file:`.txt`) kunnen in "
+#~ "QGIS worden geladen met behulp van de hierboven vermelde gereedschappen. "
+#~ "Echter, op deze manier geladen worden zij weergegeven als een eenvoudige "
+#~ "tabel met gegevens. Soms kunnen tekengescheiden tekstbestanden geometrische "
+#~ "gegevens bevatten die u wilt visualiseren; dat is waarom |delimitedText| "
+#~ ":guilabel:`Tekstgescheiden tekstbestand toevoegen` is ontworpen."
+
+#~ msgid ""
+#~ "Click the toolbar icon |delimitedText| :sup:`Add Delimited Text Layer` in "
+#~ "the :guilabel:`Manage layers` toolbar to open the :guilabel:`Create a Layer "
+#~ "from a Delimited Text File` dialog, as shown in figure_delimited_text_."
+#~ msgstr ""
+#~ "Klik op het pictogram op de werkbalk |delimitedText| :sup:`Tekstgescheiden "
+#~ "kaartlaag toevoegen` in de werkbalk :guilabel:`Kaartlagen` om het "
+#~ "dialoogvenster :guilabel:`Maak een kaartlaag uit een tekstgescheiden "
+#~ "bestand` te openen zoals getoond in figure_delimited_text_."
+
+#~ msgid ""
+#~ "First, select the file to import (e.g., "
+#~ ":file:`qgis_sample_data/csv/elevp.csv`) by clicking on the **[Browse]** "
+#~ "button. Once the file is selected, QGIS attempts to parse the file with the "
+#~ "most recently used delimiter. To enable QGIS to properly parse the file, it "
+#~ "is important to select the correct delimiter. You can specify a delimiter by"
+#~ " activating:"
+#~ msgstr ""
+#~ "Selecteer eerst het te importeren bestand (bijv. "
+#~ ":file:`qgis_sample_data/csv/elevp.csv`) door te klikken op de knop "
+#~ "**[Bladeren...]**. Als het bestand eenmaal is geselecteerd, zal QGIS "
+#~ "proberen om het bestand te parsen met het laatst gebruikte scheidingsteken. "
+#~ "Het is belangrijk, om QGIS in staat te stellen het bestand te parsen, om het"
+#~ " juiste scheidingsteken te selecteren. U kunt een scheidingsteken "
+#~ "specificeren door te activeren:"
+
+#~ msgid "|radioButtonOn|:guilabel:`CSV (comma separated values)`;"
+#~ msgstr "|radioButtonOn|:guilabel:`CSV (komma gescheiden waarden)`;"
+
+#~ msgid ""
+#~ "Once the file is parsed, set :guilabel:`Geometry definition` to "
+#~ "|radioButtonOn|:guilabel:`Point coordinates` and choose the ``X`` and ``Y`` "
+#~ "fields from the dropdown lists. If the coordinates are defined as "
+#~ "degrees/minutes/seconds, activate the |checkbox| :guilabel:`DMS coordinates`"
+#~ " checkbox."
+#~ msgstr ""
+#~ "Stel, als het bestand is ingelezen, :guilabel:`Geometrie definitie` in op "
+#~ "|radioButtonOn|:guilabel:`Punt coördinaten` en kies de velden ``X`` en ``Y``"
+#~ " via de keuzelijsten. Als de coördinaten zijn gegeven in "
+#~ "graden/minuten/seconden, activeer dan het keuzevak :guilabel:`DMS "
+#~ "coördinaten`."
+
+#~ msgid ""
+#~ "Finally, enter a layer name (e.g., :file:`elevp`), as shown in "
+#~ "figure_delimited_text_. To add the layer to the map, click **[OK]**. The "
+#~ "delimited text file now behaves as any other map layer in QGIS."
+#~ msgstr ""
+#~ "Voer tenslotte een naam in voor de laag (bijv. :file:`elevp`) zoals getoond "
+#~ "in figure_delimited_text_. Klik op **[OK]** om de laag toe te voegen aan de "
+#~ "kaart. Het tekstgescheiden bestand gedraagt zich nu als elke andere laag in "
+#~ "QGIS."
+
+#~ msgid ""
+#~ "There is also a helper option that allows you to trim leading and trailing "
+#~ "spaces from fields --- |checkbox| :guilabel:`Trim fields`. Also, it is "
+#~ "possible to |checkbox| :guilabel:`Discard empty fields`. If necessary, you "
+#~ "can force a comma to be the decimal separator by activating |checkbox| "
+#~ ":guilabel:`Decimal separator is comma`."
+#~ msgstr ""
+#~ "Er is ook een hulpfunctie die de spaties voor en achter een veld kan "
+#~ "verwijderen --- |checkbox| :guilabel:`Verwijder spaties voor/na velden`.  "
+#~ "Het is ook mogelijk |checkbox| :guilabel:`Sla lege velden over` te "
+#~ "gebruiken.  Indien nodig kunt u forceren dat de komma het decimale "
+#~ "scheidingsteken is, door het keuzevak |checkbox| :guilabel:`Decimale "
+#~ "scheidingsteken is de komma` te activeren."
+
+#~ msgid ""
+#~ "If spatial information is represented by WKT, activate the |radioButtonOn| "
+#~ ":guilabel:`Well Known Text` option and select the field with the WKT "
+#~ "definition for point, line or polygon objects. If the file contains non-"
+#~ "spatial data, activate |radioButtonOn| :guilabel:`No geometry (attribute "
+#~ "only table)` and it will be loaded as an ordinal table."
+#~ msgstr ""
+#~ "Indien ruimtelijke informatie wordt weergegeven als WKT, activeer dan de "
+#~ "optie |radioButtonOn| :guilabel:`Well Known Text` en selecteer het veld met "
+#~ "de definitie voor WKT voor objecten punt-, lijn- of polygoon. Als het "
+#~ "bestand geen ruimtelijke gegevens bevat, activeer dan |radioButtonOn| "
+#~ ":guilabel:`Geen geometrieën (alleen attributentabel)` en het zal worden "
+#~ "geladen als een ordinale tabel."
+
+#~ msgid ""
+#~ "|checkbox| :guilabel:`Use spatial index` to improve the performance of "
+#~ "displaying and spatially selecting features;"
+#~ msgstr ""
+#~ "|checkbox| :guilabel:`Ruimtelijke index gebruiken` om de uitvoering van de "
+#~ "weergave te verbeteren en objecten ruimtelijk te selecteren;"
+
+#~ msgid "|checkbox| :guilabel:`Use subset index`;"
+#~ msgstr "|checkbox| :guilabel:`Gebruik een subset index`;"
+
+#~ msgid ""
+#~ "|checkbox| :guilabel:`Watch file` to watch for changes to the file by other "
+#~ "applications while QGIS is running."
+#~ msgstr ""
+#~ "|checkbox| :guilabel:`Bestand in de gaten houden` om de wijzigingen aan het "
+#~ "bestand door andere toepassingen terwijl QGIS wordt uitgevoerd bij te "
+#~ "houden."
+
+#~ msgid ""
+#~ "DXF files can be added to QGIS by simple drag-and-drop from the common "
+#~ "Browser Panel. You'll be prompted to select the sublayers you'd like to add "
+#~ "to the project. Layers are added with random style properties."
+#~ msgstr ""
+#~ "DXF-bestanden kunnen aan QGIS worden toegevoegd door ze eenvoudigweg te "
+#~ "slepen en neer te zetten vanuit het normale paneel Browser. U zult worden "
+#~ "gevraagd de sublagen te selecteren die u wilt toevoegen aan het project. "
+#~ "Lagen worden toegevoegd met willekeurige eigenschappen voor de stijl."
+
+#~ msgid ""
+#~ "To keep the dxf/dwg structure and its symbology in QGIS, you may want to use"
+#~ " the dedicated :menuselection:`DWG/DXF Import...` tool."
+#~ msgstr ""
+#~ "U wilt misschien het toegewezen gereedschap :menuselection:`DWG/DXF "
+#~ "importeren...` gebruiken om de structuur voor DXF/DWG en de symbologie ervan"
+#~ " in QGIS te behouden. "
+
+#~ msgid ""
+#~ "To avoid working with a such complex data structure, and be able to select "
+#~ "only features you need based on their tags, QGIS provides a core and fully "
+#~ "integrated OpenStreetMap import tool:"
+#~ msgstr ""
+#~ "QGIS verschaft een bron- en volledig geïntegreerd gereedschap voor het "
+#~ "importeren van OpenStreetMap om het werken met een dergelijke complexe "
+#~ "gegevensstructuur te vermijden, en in staat te zijn alleen objecten te "
+#~ "selecteren die u nodig hebt, gebaseerd op hun tags:"
+
+#~ msgid ""
+#~ "To connect to the OSM server and download data, open the menu "
+#~ ":menuselection:`Vector --> OpenStreetMap --> Download data...`. You can skip"
+#~ " this step if you already obtained an :file:`.osm` XML file using JOSM, "
+#~ "Overpass API or any other source;"
+#~ msgstr ""
+#~ "Open, om verbinding te maken met de server van OSM en gegevens te "
+#~ "downloaden, het menu :menuselection:`Vector --> OpenStreetMap --> Gegevens "
+#~ "downloaden`. Deze stap kan worden overgeslagen als u al een XML-bestand "
+#~ ":file:`.osm` hebt verkregen via JOSM, de Overpass API of via een andere "
+#~ "bron."
+
+#~ msgid ""
+#~ "The menu :menuselection:`Vector --> OpenStreetMap --> Import Topology from "
+#~ "XML...` will convert your :file:`.osm` file into a SpatiaLite database and "
+#~ "create a corresponding database connection;"
+#~ msgstr ""
+#~ "Het menu :menuselection:`Vector --> OpenStreetMap --> Importeer topologie "
+#~ "van XML` zal uw :file:`.osm`-bestand omzetten naar een database van "
+#~ "SpatiaLite en daarmee een overeenkomende databaseverbinding maken."
+
+#~ msgid ""
+#~ "The menu :menuselection:`Vector --> OpenStreetMap --> Export Topology to "
+#~ "SpatiaLite...` then allows you to open the database connection, select the "
+#~ "type of data you want (points, lines, or polygons) and choose tags to "
+#~ "import. This creates a SpatiaLite geometry layer that you can add to your "
+#~ "project by clicking on the |addSpatiaLiteLayer| :sup:`Add SpatiaLite Layer` "
+#~ "toolbar button or by selecting the |addSpatiaLiteLayer| :menuselection:`Add "
+#~ "SpatiaLite Layer...` option from the :menuselection:`Layer` menu (see "
+#~ "section :ref:`label_spatialite`)."
+#~ msgstr ""
+#~ "Het menu :menuselection:`Vector --> OpenStreetMap --> Topologie naar "
+#~ "SpatiaLite exporteren` geeft de mogelijkheid om de databaseverbinding te "
+#~ "openen, het type gegevens te selecteren dat u wilt (punten, lijnen of "
+#~ "polygonen) en de tags te kiezen om te importeren. Dit zal een SpatiaLite "
+#~ "geometrielaag aanmaken die u kunt toevoegen aan het project door te klikken "
+#~ "op het pictogram op de werkbalk |addSpatiaLiteLayer| :sup:`SpatiaLite-laag "
+#~ "toevoegen` of |addSpatiaLiteLayer| :menuselection:`SpatiaLite-laag "
+#~ "toevoegen...` uit het menu :menuselection:`Kaartlagen --> Laag toevoegen`, "
+#~ "(zie ook :ref:`label_spatialite`)."
+
+#~ msgid ""
+#~ "This will bring up a window that will allow you either to connect to a "
+#~ "SpatiaLite database already known to QGIS, which you can choose from the "
+#~ "drop-down menu, or to define a new connection to a new database. To define a"
+#~ " new connection, click on **[New]** and use the file browser to point to "
+#~ "your SpatiaLite database, which is a file with a :file:`.sqlite` extension."
+#~ msgstr ""
+#~ "Dit zal een menu openen waarin u ofwel een nieuwe verbinding met een "
+#~ "database  van SpatiaLite kunt maken of een bestaande verbinding, die al "
+#~ "bekend is bij QGIS, kunt kiezen in een keuzelijst of om een nieuwe "
+#~ "verbinding naar een nieuwe database te maken. Selecteer de knop **[Nieuw]** "
+#~ "en gebruik een bestandsverkenner om de database van SpatiaLite te vinden, "
+#~ "wat vaak een bestand is dat meestal de bestandsextensie :file:`.sqlite` "
+#~ "heeft om een nieuwe verbinding te definiëren."
+
+#~ msgid ""
+#~ "In order to read and write tables from the many database formats QGIS "
+#~ "supports you'll need to create a connection to that database. While "
+#~ ":ref:`QGIS Browser Panel <browser_panel>` is the simplest and recommanded "
+#~ "way to connect and use databases within, QGIS provides specific tools you "
+#~ "can use to connect to each of them and load their tables:"
+#~ msgstr ""
+#~ "Om tabellen te lezen en naar te schrijven in de vele database-indelingen die"
+#~ " QGIS ondersteunt dient u een verbinding te maken naar die database. Waar "
+#~ ":ref:`QGIS paneel Browser <browser_panel>` de eenvoudigste en aanbevolen "
+#~ "manier is om met databases te verbinden en te gebruiken, verschaft QGIS "
+#~ "specifieke gereedschappen die u kunt gebruiken om te verbinden met elk "
+#~ "daarvan en hun tabellen te laden:"
+
+#~ msgid ""
+#~ "|addPostgisLayer| :menuselection:`Add PostGIS Layer...` or by typing "
+#~ ":kbd:`Ctrl+Shift+D`"
+#~ msgstr ""
+#~ "|addPostgisLayer| :menuselection:`PostGIS-laag toevoegen...` of door te "
+#~ "typen :kbd:`Ctrl+Shift+D`"
+
+#~ msgid ""
+#~ "|addMssqlLayer| :menuselection:`Add MSSQL Spatial Layer` or by typing "
+#~ ":kbd:`Ctrl+Shift+M`"
+#~ msgstr ""
+#~ "|addMssqlLayer| :menuselection:`MSSQL Spatial-laag toevoegen` of door te "
+#~ "typen :kbd:`Ctrl+Shift+M`"
+
+#~ msgid ""
+#~ "|addOracleLayer| :menuselection:`Add Oracle Spatial Layer...`  or typing "
+#~ ":kbd:`Ctrl+Shift+O`"
+#~ msgstr ""
+#~ "|addOracleLayer| :menuselection:`Oracle Spatial-laag toevoegen...`  of door "
+#~ "te typen :kbd:`Ctrl+Shift+O`"
+
+#~ msgid ""
+#~ "|addDb2Layer| :menuselection:`Add DB2 Spatial Layer...` or typing "
+#~ ":kbd:`Ctrl+Shift+2`"
+#~ msgstr ""
+#~ "|addDb2Layer| :menuselection:`DB2 Spatial-laag toevoegen...` of door te "
+#~ "typen :kbd:`Ctrl+Shift+2`"
+
+#~ msgid ""
+#~ "Most of the connection dialogs follow a common basis that will be described "
+#~ "below using the PostGreSQL database tool as example."
+#~ msgstr ""
+#~ "De meeste dialoogvensters voor verbindingen volgen een algemene basis die "
+#~ "hieronder zal worden beschreven met behulp van het gereedschap voor een "
+#~ "database van PostGreSQL als voorbeeld."
+
+#~ msgid ""
+#~ "The first time you use a PostGIS data source, you must create a connection "
+#~ "to a database that contains the data. Begin by clicking the appropriate "
+#~ "button as exposed above, opening an :guilabel:`Add PostGIS Table(s)` dialog "
+#~ "(see figure_add_postgis_tables_). To access the connection manager, click on"
+#~ " the **[New]** button to display the :guilabel:`Create a New PostGIS "
+#~ "Connection` dialog."
+#~ msgstr ""
+#~ "De eerste keer dat u een gegevensbron van PostGIS gebruikt, moet u een "
+#~ "verbinding maken naar een database die de gegevens bevat. Begin door te "
+#~ "klikken op de toepasselijke knop zoals hierboven weergegeven, dat opent een "
+#~ "dialoogvenster :guilabel:`PostGIS-tabel(len) toevoegen` (zie "
+#~ "figure_add_postgis_tables_).  Klik op de knop **[Nieuw]** om het "
+#~ "dialoogvenster :guilabel:`Nieuwe PostGIS-verbinding maken` om toegang te "
+#~ "krijgen tot het beheer van de verbinding."
+
+#~ msgid ""
+#~ "Once all parameters and options are set, you can test the connection by "
+#~ "clicking on the **[Test connection]** button or apply it hitting **[OK]**. "
+#~ "From the :guilabel:`Add PostGIS Table(s)`, click now on **[Connect]** and "
+#~ "the dialog is filled with tables from the selected database (as shown in "
+#~ "figure_add_postgis_tables_)."
+#~ msgstr ""
+#~ "Als alle parameters en opties eenmaal zijn ingesteld kunt u de verbinding "
+#~ "testen door te drukken op de knop **[Verbinding testen]** of toepassen door "
+#~ "op **[OK]** te drukken. Klik nu, vanuit :guilabel:`PostGIS-tabel(len) "
+#~ "toevoegen`, op **[Verbinden]** en het dialoogvenster wordt gevuld met "
+#~ "tabellen uit de geselecteerde database (zoals weergegeven in "
+#~ "figure_add_postgis_tables_)."
+
+#~ msgid ""
+#~ "|checkbox| :guilabel:`Only look in metadata table`: restricts the displayed "
+#~ "tables to those that are in the ``all_sdo_geom_metadata`` view. This can "
+#~ "speed up the initial display of spatial tables;"
+#~ msgstr ""
+#~ "|checkbox| :guilabel:`Kijk alleen in de metadata tabel`: dit beperkt de "
+#~ "weergegeven tabellen tot die welke aanwezig zijn in de weergave "
+#~ "``all_sdo_geom_metadata``. Dit kan de initiële weergave van ruimtelijke "
+#~ "tabellen aanzienlijk versnellen;"
+
+#~ msgid ""
+#~ "|checkbox| :guilabel:`Only look for user's tables`: when searching for "
+#~ "spatial tables, restrict the search to tables that are owned by the user;"
+#~ msgstr ""
+#~ "|checkbox| :guilabel:`Alleen zoeken naar tabellen van de gebruiker`: bij het"
+#~ " zoeken naar ruimtelijke tabellen, beperk het zoeken tot alleen die tabellen"
+#~ " waar de gebruiker eigenaar van is;"
+
+#~ msgid ""
+#~ "|checkbox| :guilabel:`Also list tables with no geometry`: indicates that "
+#~ "tables without geometry should also be listed by default;"
+#~ msgstr ""
+#~ "|checkbox| :guilabel:`Ook tabellen zonder geometrie tonen`: geeft aan dat "
+#~ "ook tabellen zonder geometrie standaard in de lijst getoond zouden moeten "
+#~ "worden;"
+
+#~ msgid ""
+#~ "|checkbox| :guilabel:`Use estimated table statistics for the layer "
+#~ "metadata`: when the layer is set up, various metadata are required for the "
+#~ "Oracle table. This includes information such as the table row count, "
+#~ "geometry type and spatial extents of the data in the geometry column. If the"
+#~ " table contains a large number of rows, determining this metadata can be "
+#~ "time-consuming. By activating this option, the following fast table metadata"
+#~ " operations are done: Row count is determined from ``all_tables.num_rows``. "
+#~ "Table extents are always determined with the SDO_TUNE.EXTENTS_OF function, "
+#~ "even if a layer filter is applied. Table geometry is determined from the "
+#~ "first 100 non-null geometry rows in the table;"
+#~ msgstr ""
+#~ "|checkbox| :guilabel:`Gebruik geschatte tabelstatistieken voor de laag "
+#~ "metadata`: wanneer een laag wordt aangemaakt wordt er ook verschillende "
+#~ "metadata aangemaakt voor de tabel in Oracle. Deze bevat informatie als het "
+#~ "bijhouden van het aantal regels, het type geometrie en het bereik van alle "
+#~ "geometrieën in de tabel. Het bijhouden van deze metadata is tijdrovend als "
+#~ "de tabellen veel records bevatten. Door deze optie te activeren, worden de "
+#~ "volgende snelle bewerkingen voor de metadata uitgevoerd: Het aantal regels "
+#~ "wordt bepaald vanuit ``all_tables.num_rows``. De bereiken van elke tabel "
+#~ "worden altijd bepaald met de functie SDO_TUNE.EXTENTS_OF, zelfs wanneer er "
+#~ "een laagfilter wordt gebruikt. Het bepalen van het type geometrie wordt "
+#~ "bepaald uit de eerste 100 niet null regels in de tabel;"
+
+#~ msgid ""
+#~ "|checkbox| :guilabel:`Only existing geometry types`: only list the existing "
+#~ "geometry types and don't offer to add others;"
+#~ msgstr ""
+#~ "|checkbox| :guilabel:`Alleen aanwezige geometrie-typen`: toon alleen "
+#~ "bestaande typen geometrie en biedt niet aan om andere toe te voegen;"
+
+#~ msgid ""
+#~ "Open the \"Add <database> table(s)\" dialog (see "
+#~ ":ref:`vector_create_stored_connection`),"
+#~ msgstr ""
+#~ "Open het dialoogvenster \"Databasetabel(len) toevoegen <database>\" (zie "
+#~ ":ref:`vector_create_stored_connection`),"
+
+#~ msgid "Choose the connection from the drop-down list and click **[Connect]**."
+#~ msgstr "Kies de verbinding vanuit de keuzelijst en druk op **[Verbinden]**."
+
+#~ msgid ""
+#~ "Optionally, use some |checkbox| :guilabel:`Search Options` to reduce the "
+#~ "list of tables to those matching your search. You can also set this option "
+#~ "before you hit the **[Connect]** button, speeding this way the database "
+#~ "fetching."
+#~ msgstr ""
+#~ "Optioneel, gebruik enkele |checkbox| :guilabel:`Zoek opties` om de lijst met"
+#~ " tabellen die overeenkomen met de zoekactie te beperken. U kunt deze optie "
+#~ "ook instellen voordat u op de knop **[Verbinden]** drukt, wat het ophalen "
+#~ "vanuit de database versnelt."
+
+#~ msgid ""
+#~ "If applicable, use the **[Set Filter]** button (or double-click the layer) "
+#~ "to start the :guilabel:`Query builder` dialog (See section "
+#~ ":ref:`vector_query_builder`) and define which features to load from the "
+#~ "selected layer. The filter expression appears in the ``sql`` column. This "
+#~ "restriction can be removed or edited in the :menuselection:`Layer Properties"
+#~ " --> General --> Provider Feature Filter` frame."
+#~ msgstr ""
+#~ "Gebruik, indien van toepassing, de knop **[Filter instellen]** (of "
+#~ "dubbelklik op de laag) om het dialoogvenster :guilabel:`Querybouwer` te "
+#~ "straten (Bekijk het gedeelte :ref:`vector_query_builder`) en definieer welke"
+#~ " objecten uit de geselecteerde laag moeten worden geladen. De expressie voor"
+#~ " het filter verschijnt in de kolom ``sql``. Deze beperking kan worden "
+#~ "verwijderd of worden bewerkt in het frame :menuselection:`Laageigenschappen "
+#~ "--> Algemeen --> Provider-specifieke filter expressie`."
+
+#~ msgid ""
+#~ "The checkbox in the ``Select at id`` column that is activated by default "
+#~ "gets the features ids without the attributes and speed in most cases the "
+#~ "data loading."
+#~ msgstr ""
+#~ "Het keuzevak **Select at id** in de kolom is standaard geactiveerd en haalt "
+#~ "ID's van de objecten op zonder attributen wat het laden van de gegevens in "
+#~ "de meeste gevallen versnelt."
+
+#~ msgid "Click on the **[Add]** button to add the layer to the map."
+#~ msgstr ""
+#~ "Klik op de knop **[Toevoegen]** om de laag toe te voegen aan het "
+#~ "kaartvenster."
+
+#~ msgid "**Load database table(s) from the Browser Panel**"
+#~ msgstr "**Databasetabel(len) laden vanuit het paneel Browser**"
+
+#~ msgid ""
+#~ "Like simple files, connected database are also listed in the "
+#~ ":guilabel:`Browser Panel`. Hence, you can load tables from databases using "
+#~ "the Browser:"
+#~ msgstr ""
+#~ "Net als gewone bestanden worden verbonden databases ook vermeld in het "
+#~ ":guilabel:`paneel Browser`. Daarom kunt u tabellen uit databases laden met "
+#~ "behulp van de Browser:"
+
+#~ msgid ""
+#~ "Find the layer to use with the |filterMap| :sup:`Filter Browser` tool at the"
+#~ " top the browser panel (see :ref:`browser_panel` for the search options);"
+#~ msgstr ""
+#~ "Zoek naar de te gebruiken laag met het gereedschap |filterMap| :sup:`Filter "
+#~ "browser` bovenaan het paneel Browser (bekijk :ref:`browser_panel` voor de "
+#~ "zoekopties);"
+
+#~ msgid "select and drag-and-drop it in the map canvas."
+#~ msgstr "selecteer en sleep het en zet het neer in het kaartvenster."
+
+#~ msgid ""
+#~ "To add a layer into a project, using the :guilabel:`Browser` interface:"
+#~ msgstr ""
+#~ "Gebruiken van de interface van :guilabel:`Browser` om een laag aan een "
+#~ "project toe te voegen:"
+
+#~ msgid ""
+#~ "Double-click its name or drag-and-drop it into the :ref:`map canvas "
+#~ "<label_mapview>`. Your layer is now added to the :ref:`Layers panel "
+#~ "<label_legend>` and can be viewed in the map canvas."
+#~ msgstr ""
+#~ "Dubbelklik op de naam ervan of sleep en zet het neer in het "
+#~ ":ref:`kaartvenster <label_mapview>`. Uw laag wordt nu toegevoegd aan het "
+#~ ":ref:`paneel Lagen <label_legend>` en kan worden bekeken in het "
+#~ "kaartvenster."

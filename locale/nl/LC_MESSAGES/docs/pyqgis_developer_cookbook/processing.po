@@ -1,0 +1,238 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# 
+# Translators:
+# Dick Groskamp, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project testing\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-06 11:48+0100\n"
+"PO-Revision-Date: 2016-07-18 09:37+0000\n"
+"Last-Translator: Dick Groskamp, 2019\n"
+"Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/pyqgis_developer_cookbook/processing.rst:12
+msgid "Writing a Processing plugin"
+msgstr "Een plug-in voor Processing schrijven"
+
+#: ../../source/docs/pyqgis_developer_cookbook/processing.rst:17
+msgid ""
+"Depending on the kind of plugin that you are going to develop, it might be "
+"better option to add its functionality as a Processing algorithm (or a set "
+"of them). That would provide a better integration within QGIS, additional "
+"functionality (since it can be run in the components of Processing, such as "
+"the modeler or the batch processing interface), and a quicker development "
+"time (since Processing will take of a large part of the work)."
+msgstr ""
+"Afhankelijk van het soort plug-in dat u gaat ontwikkelen, zou het misschien "
+"een betere optie zijn om de functionaliteit ervan toe te voegen als een "
+"algortime voor Processing (of een set daarvan). Dat zou tot een betere "
+"integratie in QGIS leiden, aanvullende functionaliteit (omdat het kan worden"
+" uitgevoerd in de componenten van Processing, zoals  Grafische modellen "
+"bouwen of de Processing interface voor batchverwerking), en een snellere "
+"ontwikkelingstijd (omdat Processing een groot deel van het werk zal "
+"overnemen)."
+
+#: ../../source/docs/pyqgis_developer_cookbook/processing.rst:24
+msgid ""
+"To distribute those algorithms, you should create a new plugin that adds "
+"them to the Processing Toolbox. The plugin should contain an algorithm "
+"provider, which has to be registered when the plugin is instantiated."
+msgstr ""
+"U zou, om deze algoritmen te kunnen distribueren, een nieuwe plug-in moeten "
+"maken die ze toevoegt aan de Toolbox van Processing. De plug-in zou een "
+"provider voor algoritmen moeten bevatten, die moet worden geregistreerd als "
+"de plug-in wordt geïnstantieerd."
+
+#: ../../source/docs/pyqgis_developer_cookbook/processing.rst:28
+msgid ""
+"To create a plugin from scratch which contains an algorithm provider, you "
+"can follow these steps using the Plugin Builder:"
+msgstr ""
+"U kunt de volgende stappen volgen, met behulp van de Plugin Builder, om "
+"vanaf nul een plug-in te maken die een provider voor algoritmen bevat:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/processing.rst:31
+msgid "Install the Plugin Builder plugin"
+msgstr "Installeer de plug-in Plugin Builder"
+
+#: ../../source/docs/pyqgis_developer_cookbook/processing.rst:32
+msgid ""
+"Create a new plugin using the Plugin Builder. When the Plugin Builder asks "
+"you for the template to use, select \"Processing provider\"."
+msgstr ""
+"Maak een nieuwe plug-in met de Plugin Builder. Wanneer de Plugin Builder u "
+"vraagt naar het te gebruiken sjabloon, selecteer dan \"Processing "
+"provider\"."
+
+#: ../../source/docs/pyqgis_developer_cookbook/processing.rst:34
+msgid ""
+"The created plugin contains a provider with a single algorithm. Both the "
+"provider file and the algorithm file are fully commented and contain "
+"information about how to modify the provider and add additional algorithms. "
+"Refer to them for more information."
+msgstr ""
+"De gemaakte plug-in bevat een provider met één enkel algoritme. Zowel het "
+"bestand voor de provider als het bestand voor het algoritme  zijn volledig "
+"voorzien van commentaar en bevatten informatie over hoe de provider aan te "
+"passen en aanvullende algoritmen toe te voegen. Verwijs daarnaar voor meer "
+"meer informatie."
+
+#: ../../source/docs/pyqgis_developer_cookbook/processing.rst:38
+msgid ""
+"If you want to add your existing plugin to Processing, you need to add some "
+"code."
+msgstr ""
+"U dient nog enige code toe te voegen als u uw bestaande plug-in wilt "
+"toevoegen aan Processing."
+
+#: ../../source/docs/pyqgis_developer_cookbook/processing.rst:40
+msgid "In your :file:`metadata.txt`, you need to add a variable:"
+msgstr ""
+"In uw bestand :file:`metadata.txt` dient u een variabele toe te voegen:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/processing.rst:46
+msgid ""
+"In the Python file where your plugin is setup with the ``initGui`` method, "
+"you need to adapt some lines like this:"
+msgstr ""
+"In het bestand van Python waar uw plug-in wordt ingesteld met de methode "
+"``initGui``, dient u enkele regels als volgt aan te passen:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/processing.rst:70
+msgid ""
+"You can create a folder :file:`processing_provider` with three files in it:"
+msgstr ""
+"U kunt een map :file:`processing_provider` maken met daarin drie bestanden:"
+
+#: ../../source/docs/pyqgis_developer_cookbook/processing.rst:72
+msgid ""
+":file:`__init__.py` with nothing in it. This is necessary to make a valid "
+"Python package."
+msgstr ""
+":file:`__init__.py` waar niets in staat. Dit is noodzakelijk om een geldig "
+"pakket voor Python te maken."
+
+#: ../../source/docs/pyqgis_developer_cookbook/processing.rst:74
+msgid ""
+":file:`provider.py` which will create the Processing provider and expose "
+"your algorithms."
+msgstr ""
+":file:`provider.py` dat de provider voor Processing zal maken en uw "
+"algoritmen zal laten zien."
+
+#: ../../source/docs/pyqgis_developer_cookbook/processing.rst:112
+msgid ""
+":file:`example_processing_algorithm.py` which contains the example algorithm"
+" file. Copy/paste the content of the script template: "
+":source:`python/plugins/processing/script/ScriptTemplate.py`"
+msgstr ""
+":file:`example_processing_algorithm.py` dat het voorbeeldbestand voor het "
+"algoritme bevat. Kopieer/plak de inhoud van het sjabloonscript: "
+":source:`python/plugins/processing/script/ScriptTemplate.py`"
+
+#: ../../source/docs/pyqgis_developer_cookbook/processing.rst:116
+msgid ""
+"Now you can reload your plugin in QGIS and you should see your example "
+"script in the Processing toolbox and modeler."
+msgstr ""
+"Nu kunt u uw plug-in opnieuw laden in QGIS en u zou uw voorbeeldscript "
+"moeten zien in de Toolbox en Grafische modellen bouwen van Processing."
+
+#~ msgid ""
+#~ "This document describes how to create a new plugin that adds its "
+#~ "functionality as Processing algorithms."
+#~ msgstr ""
+#~ "Dit document beschrijft hoe een nieuwe plug-in te maken die zijn "
+#~ "functionaliteit als algortimen voor Processing toevoegt."
+
+#~ msgid "There are two main mechanisms for doing that:"
+#~ msgstr "Er zijn twee belangrijke mechanismen om dat te doen:"
+
+#~ msgid ""
+#~ "Creating a plugin that adds an algorithm provider: This options is more "
+#~ "complex, but provides more flexibility"
+#~ msgstr ""
+#~ "Een plug-in maken die een provider voor algoritmen toevoegt: Deze optie is "
+#~ "meer complex, maar verschaft meer flexibiliteit"
+
+#~ msgid ""
+#~ "Creating a plugin that contains a set of processing scripts: The simplest "
+#~ "solution, you just need a set of Processing script files."
+#~ msgstr ""
+#~ "Een plug-in maken die een set van scripts voor Processing bevat: De "
+#~ "eenvoudigste oplossing, u heeft slechts een set van scriptbestanden voor "
+#~ "Processing nodig."
+
+#~ msgid "Creating a plugin that adds an algorithm provider"
+#~ msgstr "Een plug-in maken die een provider voor algoritmen toevoegt"
+
+#~ msgid "To create an algorithm provider, follow these steps:"
+#~ msgstr "Volg deze stappen om een provider voor algoritmen te maken:"
+
+#~ msgid "Creating a plugin that contains a set of processing scripts"
+#~ msgstr "Een plug-in maken die een set van scripts voor Processing bevat"
+
+#~ msgid "To create a set of processing scripts, follow these steps:"
+#~ msgstr "Volg deze stappen om een set scripts voor processing te maken:"
+
+#~ msgid ""
+#~ "Create your scripts as described in the PyQGIS cookbook. All the scripts "
+#~ "that you want to add, you should have them available in the Processing "
+#~ "toolbox."
+#~ msgstr ""
+#~ "Maak uw scripts zoals is beschreven in het PyQGIS cookbook. Alle scripts die"
+#~ " u wilt toevoegen, zou u beschikbaar moeten hebben in de Toolbox van "
+#~ "Processing."
+
+#~ msgid ""
+#~ "In the *Scripts/Tools* group in the Processing toolbox, double-click on the "
+#~ "*Create script collection plugin* item. You will see a window where you "
+#~ "should select the scripts to add to the plugin (from the set of available "
+#~ "ones in the toolbox), and some additional information needed for the plugin "
+#~ "metadata."
+#~ msgstr ""
+#~ "Dubbelklik, in de groep *Scripts/Tools* in de Toolbox van Processing, op het"
+#~ " item *Create script collection plugin*. U zult een venster zien waar u de "
+#~ "scripts kunt selecteren dia aan de plug-in moeten worden toegevoegd (uit de "
+#~ "set van beschikbare in de Toolbox), en enige aanvullende informatie die "
+#~ "nodig is voor de metadata van de plug-in."
+
+#~ msgid "Click on OK and the plugin will be created."
+#~ msgstr "Klik op OK en de plug-in zal worden gemaakt."
+
+#~ msgid ""
+#~ "You can add additional scripts to the plugin by adding scripts python files "
+#~ "to the *scripts* folder in the resulting plugin folder."
+#~ msgstr ""
+#~ "U kunt aanvullende scripts toevoegen aan de plug-in door Python-bestanden "
+#~ "voor scripts toe te voegen aan de map *scripts* in de resulterende map plug-"
+#~ "in."
+
+#~ msgid ""
+#~ "Now you can reload your plugin in QGIS and you should see your example "
+#~ "script in the Processing toolbox and modeller."
+#~ msgstr ""
+#~ "Nu kunt u uw plug-in opnieuw laden in QGIS en u zou uw voorbeeldscript "
+#~ "moeten zien in de Toolbox en Grafische modellen bouwen van Processing."
+
+#~ msgid ""
+#~ ":file:`example_processing_algorithm.py` which contains the example algorithm"
+#~ " file. Copy/paste the content of the script template: "
+#~ "https://github.com/qgis/QGIS/blob/master/python/plugins/processing/script/ScriptTemplate.py"
+#~ msgstr ""
+#~ ":file:`example_processing_algorithm.py` dat het voorbeeldbestand voor het "
+#~ "algoritme bevat. Kopieer/plak de inhoud van het sjabloonscript: "
+#~ "https://github.com/qgis/QGIS/blob/master/python/plugins/processing/script/ScriptTemplate.py"

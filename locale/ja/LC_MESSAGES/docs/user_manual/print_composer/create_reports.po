@@ -1,0 +1,373 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+# 
+# Translators:
+# fairtommy <fairtommy@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-11 14:48+0200\n"
+"PO-Revision-Date: 2019-04-07 13:51+0000\n"
+"Last-Translator: fairtommy <fairtommy@gmail.com>, 2020\n"
+"Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:12
+msgid "Creating a Report"
+msgstr "レポートを作成する"
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:21
+msgid "What is?"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:23
+msgid ""
+"This section will help you set up an automatic report in QGIS. By definition"
+" a GIS report is a document containing information organized in a narrative,"
+" graphic, maps, or tabular form, prepared on ad hoc, periodic, recurring, "
+"regular, or as required basis. Reports may refer to specific periods, "
+"events, occurrences, or subjects, locations, and may be communicated or "
+"presented in oral or written form. The reports in QGIS will allow the users "
+"to output their GIS projects in a simple, quick and structured way."
+msgstr ""
+"このセクションは、QGISで自動レポートを設定するのに役立ちます。定義により、GISレポートとは、アドホック、定期的、反復的、規則的、または必要に応じて作成された、物語、グラフィック、地図、または表形式で編成された情報を含むドキュメントです。レポートは、特定の期間、イベント、発生、または主題、場所を参照する場合があり、口頭または書面で伝達または提示される場合があります。"
+" QGISのレポートにより、ユーザーはGISプロジェクトを簡単、迅速、構造化された方法で出力できます。"
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:32
+msgid "Get started"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:34
+msgid ""
+":guilabel:`Reports` menu is an extension of Print Layout. This functionality"
+" can be found in :menuselection:`Project --> New Report` or inside of "
+":menuselection:`Project --> Layout Manager`."
+msgstr ""
+":guilabel:`レポート` メニューは印刷レイアウトの拡張です。この機能は :menuselection:`プロジェクト-> 新しいレポート` "
+"または :menuselection:`プロジェクト-> レイアウトマネージャ` 内にあります。"
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:38
+msgid ""
+"In the :guilabel:`Layout Manager` dialog the report can be created through "
+":guilabel:`New from template` and select the dropdown option "
+":guilabel:`Empty Report` and hitting :guilabel:`Create...` button."
+msgstr ""
+":guilabel:`レイアウトマネージャー` ダイアログで、レポートは :guilabel:`テンプレートから新規作成` "
+"で作成でき、ドロップダウンオプション :guilabel:`空のレポート` を選択し、 :guilabel:`作成...` ボタンをクリックします。"
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:42
+msgid ""
+"For this example, we use some administrative boundaries, populated places, "
+"ports and airports from dataset of `Natural Earth "
+"<https://www.naturalearthdata.com/downloads/>`_."
+msgstr ""
+"この例では、 `Natural Earth <https://www.naturalearthdata.com/downloads/>`_ "
+"のデータセットからの管理境界、人口密集地、港、空港を使用します。"
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:51
+msgid ""
+"Using the :menuselection:`Project --> New Report` command, we then create a "
+"new blank report. Initially, there’s not much to look at – the dialog which "
+"is displayed looks much like the print layout designer, except for the new "
+":guilabel:`Report Organizer` panel shown on the left:"
+msgstr ""
+":menuselection:`プロジェクト-> 新しいレポート` "
+"コマンドを使用して、新しい空のレポートを作成します。最初はあまり見るものはありません。左側に表示される新しい "
+":guilabel:`レポートOrganizer` パネルを除き、表示されるダイアログは印刷レイアウトデザイナーによく似ています。"
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:60
+msgid "Layout Report Workspace"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:62
+msgid ""
+"QGIS reports can consist of multiple, nested sections. In our new blank "
+"report we initially have only the main report section. The only options "
+"present for this report section is :guilabel:`Include report header` or "
+":guilabel:`Include report footer`. If we enable these options, the header "
+"will be included as the very first page (or pages… --- individual parts of "
+"reports can be multi-page if desired) in the report, and the footer would be"
+" the last page. Let’s go ahead and enable the header, and hit the "
+":guilabel:`Edit` button next to it:"
+msgstr ""
+"QGISレポートは、複数の入れ子にされたセクションで構成できます。新しい空白のレポートには、最初はメインレポートセクションのみがあります。このレポートセクションに存在するオプションは、:guilabel:`レポートヘッダーを含める`"
+" または :guilabel:`レポートフッターを含める` "
+"だけです。これらのオプションを有効にすると、ヘッダーはレポートの最初のページ（必要に応じてレポートの個々の部分を複数ページにできます）として含まれ、フッターが最後のページになります。先に進んでヘッダーを有効にし、その横にある"
+" :guilabel:`編集` ボタンを押してください："
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:75
+msgid ""
+"A few things happen as a result. Firstly, an edit pencil is now shown next "
+"to the :guilabel:`Report` section in the :guilabel:`Report Organizer`, "
+"indicating that the report section is currently being edited in the "
+"designer. We also see a new blank page shown in the designer itself, with "
+"the small :guilabel:`Report Header` title. In QGIS reports, every component "
+"of the report is made up of individual layouts. They can be created and "
+"modified using the exact same tools as are available for standard print "
+"layouts – so you can use any desired combination of labels, pictures, maps, "
+"tables, etc. Let’s add some items to our report header to demonstrate:"
+msgstr ""
+"その結果、いくつかのことが起こります。まず、編集鉛筆が :guilabel:`Report Organizer` の "
+":guilabel:`Report` "
+"セクションの横に表示され、レポートセクションが現在デザイナーで編集されていることを示します。また、デザイナー自体に新しい空白ページが表示され、小さな "
+":guilabel:`レポートヘッダ` タイトルが付いています。 "
+"QGISレポートでは、レポートのすべてのコンポーネントは個々のレイアウトで構成されています。標準の印刷レイアウトで使用できるものとまったく同じツールを使用して作成および変更できます。したがって、ラベル、写真、地図、表などの任意の組み合わせを使用できます。"
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:90
+msgid ""
+"We’ll also create a simple footer for the report, by checking the "
+":guilabel:`Include report footer` option and hitting :guilabel:`Edit`."
+msgstr ""
+"また、レポートのシンプルなフッタも作成します。 :guilabel:`レポートのフッタを含める` オプションをチェックして、 "
+":guilabel:`編集` を押します。"
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:98
+msgid ""
+"Before proceeding further, let’s export this report and see what we get. "
+"Exporting is done from the Report menu – in this case we select "
+":guilabel:`Export Report as PDF` to render the whole report to a PDF file. "
+"Here’s the not-very-impressive result – a two page PDF consisting of our "
+"header and footer:"
+msgstr ""
+"先に進む前に、このレポートをエクスポートして、得られるものを確認しましょう。エクスポートは[レポート]メニューから実行します。この場合、 "
+":guilabel:`レポートをPDFとして書き出す` "
+"を選択して、レポート全体をPDFファイルにレンダリングします。あまり印象的な結果ではありません。ヘッダとフッタで構成される2ページのPDFです。"
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:109
+msgid ""
+"Let’s make things more interesting. By hitting the |signPlus| :sup:`Add "
+"Static Layout Section` button in the :guilabel:`Report Organizer`, we’re "
+"given a choice of new sections to add to our report."
+msgstr ""
+"物事をもっと面白くしましょう。 |signPlus| を押すことにより :guilabel:`レポートオーガナイザ` の "
+":sup:`静的レイアウトセクションの追加` ボタンをクリックすると、レポートに追加する新しいセクションが選択できます。"
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:118
+msgid ""
+"There are two options: :guilabel:`Add Static Layout Section` and a "
+":guilabel:`Field Group Section`. The :guilabel:`Add Static Layout Section` "
+"is a single, static body layout. This can be used to embed static layouts "
+"mid-way through a report. Alternatively, a :guilabel:`Field Group Section` "
+"repeats its body layout for every feature in a layer. The features are "
+"sorted by the selected grouping feature (with an option for "
+"ascending/descending sort). If a field group section has child sections "
+"(e.g. another field group section with a different field, then only features"
+" with unique values for the group feature are iterated over. This allows "
+"nested reports with different information."
+msgstr ""
+"2つのオプションがあります： :guilabel:`静的レイアウトセクションの追加` と :guilabel:`フィールドグループセクション` 。  "
+":guilabel:`静的レイアウトセクションの追加` "
+"は、単一の静的な本体レイアウトです。これは、レポートの途中で静的レイアウトを埋め込むために使用できます。または、 "
+":guilabel:`フィールドグループセクション` "
+"は、レイヤー内のすべてのフィーチャに対してそのボディレイアウトを繰り返します。機能は、選択したグループ化機能によって並べ替えされます（昇順/降順の並べ替えオプションがあります）。フィールドグループセクションに子セクションがある場合（別のフィールドを持つ別のフィールドグループセクションなど）、グループ機能の一意の値を持つ機能のみが反復されます。これにより、異なる情報を持つ入れ子にされたレポートが可能になります。"
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:129
+msgid ""
+"For now we’ll add a Field Group to our report. At its most basic level, you "
+"can think of a :guilabel:`Field Group Section` as the equivalent of a "
+":ref:`print atlas <atlas_generation>`. You select a layer to iterate over, "
+"and the report will insert a section for each feature found. Selecting the "
+"new :guilabel:`Field Group Section` reveals a number of new related "
+"settings:"
+msgstr ""
+"ここでは、レポートにフィールドグループを追加します。最も基本的なレベルでは、you can think of a "
+":guilabel:`フィールドグループセクション` を :ref:`print atlas <atlas_generation>` "
+"と同等のものと考えることができます。反復するレイヤーを選択すると、見つかった各地物のセクションがレポートに挿入されます。新しい "
+":guilabel:`フィールドグループセクション` を選択すると、いくつかの新しい関連設定が表示されます："
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:140
+msgid ""
+"In this case we’ve setup our Field Group so that we iterate over all the "
+"states from the :guilabel:`Admin Level 1` layer, using the values from the "
+":guilabel:`adm1name` field. The same options for header and footer are "
+"present, together with a new option to include a :guilabel:`body` for this "
+"section. We’ll do that, and edit the body:"
+msgstr ""
+"この場合、フィールドグループを設定して、 :guilabel:`adm1name` フィールドの値を使用して、 :guilabel:`Admin "
+"Level 1` レイヤーのすべての状態を反復処理するようにしました。ヘッダとフッタに同じオプションがあり、このセクションに "
+":guilabel:`body` を含める新しいオプションがあります。それを行い、本体を編集します："
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:151
+msgid ""
+"We’ve setup this body with a map (set to follow the current report feature –"
+" just like how a map item in an atlas can follow the current atlas feature),"
+" and a label showing the state’s name. If we went ahead and exported our "
+"report now, we’d get something like this:"
+msgstr ""
+"この本体には、地図（現在のレポート機能に従うように設定されています---"
+"地図帳内の地図アイテムが現在の地図帳機能に従う方法と同様）と州の名前を示すラベルが設定されています。先に進んでレポートをエクスポートすると、次のようになります。"
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:162
+msgid ""
+"First, the report header, then a page for each state, and finally the report"
+" footer. So more or less an atlas, but with a header and footer page. Let’s "
+"make things more interesting by adding a subsection to our state group. We "
+"do this by first selecting the state field group in the organizer, then "
+"hitting the |signPlus| :sup:`Field Group Section` button and adding a new "
+":guilabel:`Field Group Section`:"
+msgstr ""
+"最初にレポートヘッダ、次に各州のページ、最後にレポートフッタ。多かれ少なかれ地図帳ですが、ヘッダとフッタのページがあります。州グループにサブセクションを追加して、物事をより面白くしましょう。これを行うには、まずオーガナイザで州フィールドグループを選択し、次に"
+" |signPlus|  :sup:`フィールドグループセクション` ボタンを押し、新しい :guilabel:`フィールドグループセクション` "
+"を追加します："
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:173
+msgid ""
+"When a :guilabel:`Field Group Section` is iterating over its features, it "
+"will automatically filter these features to match the feature attributes "
+"from its parent groups. In this case, the subsection we added will iterate "
+"over a :guilabel:`Populated Places` layer, including a body section for each"
+" place encountered. The magic here is that the :guilabel:`Populated Places` "
+"layer has an attribute named :guilabel:`adm1name`, tagging each place with "
+"the state it’s contained within (if you’re lucky your data will already be "
+"structured like this – if not, run the Processing :ref:`Join Attributes by "
+"Location <qgisjoinattributesbylocation>` algorithm and create your own "
+"field). When we export this report, QGIS will grab the first state from the "
+":guilabel:`Admin Level 1` layer, and then iterate over all the "
+":guilabel:`Populated Places` with a matching :guilabel:`adm1name` value. "
+"Here’s what we get:"
+msgstr ""
+":guilabel:`フィールドグループセクション` "
+"がその地物を繰り返し処理するとき、これらの機能を自動的にフィルタ処理して、親グループの地物属性に一致させます。この場合、追加したサブセクションは "
+":guilabel:`Populated Places` レイヤで繰り返され、遭遇した各場所の本文セクションを含みます。ここでの魔法は、 "
+":guilabel:`Populated Places` レイヤに :guilabel:`adm1name` "
+"という名前の属性があり、各場所に含まれる状態をタグ付けすることです（運が良ければ、データはすでにこのように構成されています-ではなく、プロセシングの "
+":ref:`位置で属性を結合 <qgisjoinattributesbylocation>` "
+"アルゴリズムを実行し、独自のフィールドを作成します）。このレポートをエクスポートすると、QGISは :guilabel:`Admin Level 1` "
+"レイヤーから最初の状態を取得し、 :guilabel:`adm1name` 値に一致するすべての :guilabel:`Populated "
+"Places` を繰り返し処理します。取得するものは次のとおりです："
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:191
+msgid ""
+"Here we created a basic body for the Populated Places group, including a map"
+" of the place and a table of some place attributes. So our report is now a "
+"report header, a page for each state followed by a page for every populated "
+"place within that state, and finally the report footer. If we were to add a "
+"header for the Populated Places group, it would be included just before "
+"listing the populated places for each state:"
+msgstr ""
+"ここでは、場所の地図といくつかの場所属性のテーブルを含む、Populated "
+"Placesグループの基本ボディを作成しました。したがって、レポートはレポートヘッダー、各状態のページ、その状態内のすべての居住場所のページ、最後にレポートフッタになりました。"
+" Populated Placesグループにヘッダを追加したとすれば、各州の居住地をリストする直前にヘッダが含まれたでしょう："
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:203
+msgid ""
+"Similarly, a footer for the Populated Places group would be inserted after "
+"the final place for each state is included."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:206
+msgid ""
+"In addition to nested subsections, subsections in a report can also be "
+"included consecutively. If we add a second subsection to the `Admin Level 1 "
+"group` for :guilabel:`Airports`, then our report will first list ALL the "
+"populated places for each state, followed by all the airports within that "
+"state, before proceeding to the next state. In this case our report would be"
+" structured like this:"
+msgstr ""
+"入れ子されたサブセクションに加えて、レポート内のサブセクションも連続して含めることができます。 :guilabel:`Airports` の "
+"`Admin Level 1 group` "
+"に2番目のサブセクションを追加すると、レポートはまず各州のすべての居住地をリストし、次にその州内のすべての空港をリストしてから、次の州に進みます。この場合、レポートは次のように構成されます："
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:217
+msgid "Report Output"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:219
+msgid ""
+"The key point here is that our :guilabel:`Airports group` is a subsection of"
+" the :guilabel:`Admin Level 1 group` – not the :guilabel:`Populated Places "
+"group`. Here’s what our report could look like now:"
+msgstr ""
+"ここで重要なのは、 :guilabel:`Airportsグループ` が :guilabel:`管理レベル1グループ` のサブセクションであり、 "
+":guilabel:`Populated Placesグループ` ではないということです。レポートは次のようになります。"
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:228
+msgid ""
+"Combining nested and consecutive sections, together with section headers and"
+" footers allows for tons of flexibility. For instance, in the below report "
+"we add another field group as a child of the main report for the "
+":guilabel`Ports` layer. Now, after listing the states together with their "
+"populated places and airports, we’ll get a summary list of all the ports in "
+"the region:"
+msgstr ""
+"ネストされたセクションと連続したセクションをセクションヘッダーとフッターと組み合わせることで、柔軟性が大幅に向上します。たとえば、次のレポートでは、別のフィールドグループを"
+" :guilabel:`Ports` "
+"レイヤーのメインレポートの子として追加します。次に、州をその人口の多い場所および空港と一緒に一覧表示した後、地域のすべての港の要約リストを取得します。"
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:239
+msgid "This results in the last part of our report exporting as:"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:245
+msgid "Export settings"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:247
+msgid ""
+"Whenever you export a report, there is a selection of export settings QGIS "
+"needs to check in order to return the most appropriate output. As you can "
+"start to imagine, reports in QGIS are extremely powerful and flexible!"
+msgstr ""
+"レポートをエクスポートするときはいつでも、最も適切な出力を返すためにQGIS側がチェックする必要があるエクスポート設定を選択します。ご想像のとおり、QGISのレポートは非​​常に強力で柔軟です！"
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:251
+msgid ""
+"When you are exporting a report to the available formats please choose the "
+"options (Print, SVG, Image, PDF) that have the labels saying "
+":guilabel:`Export Report as...` otherwise you will print the current active "
+"map."
+msgstr ""
+"レポートを利用可能な形式にエクスポートする場合、ラベルが :guilabel:`名前を付けて書出し...` "
+"のラベルが付いたオプション（印刷、SVG、画像、PDF）を選択してください。そうしないと、現在アクティブな地図が印刷されます。"
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:258
+msgid ""
+"The current information was adapted from the blog of North Road, `Exploring "
+"Reports in QGIS 3.0 - the Ultimate Guide! <https://north-road.com/2018/01/23"
+"/exploring-reports-in-qgis-3-0-the-ultimate-guide>`_"
+msgstr ""
+"現在の情報は、North Roadのブログ「Exploring Reports in QGIS 3.0-the Ultimate Guide！」 "
+"<https://north-road.com/2018/01/23/exploring-reports-in-qgis-3-0-the-"
+"ultimate-guide> `_ から採られました。"
+
+#~ msgid ""
+#~ "There are two options: :guilabel:`Add Static Layout Section` and a "
+#~ ":guilabel:`Field Group Section`.  The :guilabel:`Add Static Layout Section` "
+#~ "is a single, static body layout. This can be used to embed static layouts "
+#~ "mid-way through a report. Alternatively, a :guilabel:`Field Group Section` "
+#~ "repeats its body layout for every feature in a layer. The features are "
+#~ "sorted by the selected grouping feature (with an option for "
+#~ "ascending/descending sort). If a field group section has child sections "
+#~ "(e.g. another field group section with a different field, then only features"
+#~ " with unique values for the group feature are iterated over. This allows "
+#~ "nested reports with different information."
+#~ msgstr ""
+#~ "2つのオプションがあります： :guilabel:`静的レイアウトセクションの追加` と :guilabel:`フィールドグループセクション` 。  "
+#~ ":guilabel:`静的レイアウトセクションの追加` "
+#~ "は、単一の静的な本体レイアウトです。これは、レポートの途中で静的レイアウトを埋め込むために使用できます。または、 "
+#~ ":guilabel:`フィールドグループセクション` "
+#~ "は、レイヤー内のすべてのフィーチャに対してそのボディレイアウトを繰り返します。機能は、選択したグループ化機能によって並べ替えされます（昇順/降順の並べ替えオプションがあります）。フィールドグループセクションに子セクションがある場合（別のフィールドを持つ別のフィールドグループセクションなど）、グループ機能の一意の値を持つ機能のみが反復されます。これにより、異なる情報を持つ入れ子にされたレポートが可能になります。"
+
+#~ msgid ""
+#~ "For now we’ll add a Field Group to our report. At its most basic level, you "
+#~ "can think of a :guilabel:`Field Group Section` as the equivalent of a "
+#~ ":ref:`print atlas <atlas_generation>`. You select a layer to iterate over, "
+#~ "and the report will insert a section for each feature found. Selecting the "
+#~ "new ::guilabel:`Field Group Section` section reveals a number of new related"
+#~ " settings:"
+#~ msgstr ""
+#~ "ここでは、レポートにフィールドグループを追加します。最も基本的なレベルでは、you can think of a "
+#~ ":guilabel:`フィールドグループセクション` を :ref:`print atlas <atlas_generation>` "
+#~ "と同等のものと考えることができます。反復するレイヤーを選択すると、見つかった各地物のセクションがレポートに挿入されます。新しい "
+#~ ":guilabel:`フィールドグループセクション` セクションを選択すると、いくつかの新しい関連設定が表示されます："

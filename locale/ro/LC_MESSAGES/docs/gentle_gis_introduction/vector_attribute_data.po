@@ -1,0 +1,858 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# 
+# Translators:
+# Sorin Călinică <scalinica@gmail.com>, 2014-2016,2018-2019
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-04-07 15:33+0200\n"
+"PO-Revision-Date: 2019-12-08 18:20+0000\n"
+"Last-Translator: Sorin Călinică <scalinica@gmail.com>\n"
+"Language-Team: Romanian (http://www.transifex.com/qgis/qgis-documentation/language/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:8
+msgid "Vector Attribute Data"
+msgstr "Atributele datelor vectoriale"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:11
+msgid "|gentleLogo|"
+msgstr "|gentleLogo|"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:11
+msgid "Objectives:"
+msgstr "Obiective:"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:11
+msgid ""
+"In this topic we describe how attribute data are associated with vector "
+"features and can be used to symbolise data."
+msgstr "În acest capitol vom descrie modul în care atributele datelor sunt asociate entităților vectoriale și cum pot fi folosite la simbolizarea datelor."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:13
+msgid "Keywords:"
+msgstr "Cuvinte cheie:"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:13
+msgid "Attribute, database, fields, data, vector, symbology"
+msgstr "Atribut, bază de date, câmpuri, date, vector, simbologie"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:17
+msgid "Overview"
+msgstr "Vedere generală"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:19
+msgid ""
+"If every line on a map was the same colour, width, thickness, and had the "
+"same label, it would be very hard to make out what was going on. The map "
+"would also give us very little information. Take a look at "
+"figure_map_attributes_ for example."
+msgstr "Dacă fiecare linie de pe o hartă ar fi avut aceeași culoare, lățime, grosime, și aceeași etichetă, ar fi foarte greu de identificat despre ce este vorba. Harta însăși ar fi oferit foarte puține informații. Parcurgeți figure_map_attributes_, ca exemplu."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:29
+msgid ""
+"Maps come to life when colour and different symbols are used to help you to "
+"tell one type of feature from the next. Can you tell the difference between "
+"rivers, roads and contours using the map on the left? Using the map on the "
+"right it is much easier to see the different features."
+msgstr "Hărțile prind viață atunci când se folosesc culori și simboluri diferite, ajutându-vă să distingeți un tip de entitate față de altul. Puteți identifica râurile, drumurile și curbele de nivel folosind harta din stânga? În schimb, este mult mai ușor să observați diferențele dintre entități, folosind harta din dreapta. "
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:34
+msgid ""
+"In this topic we will look at how attribute data can help us to make "
+"interesting and informative maps. In the previous topic on vector data, we "
+"briefly explained that **attribute data** are used to **describe vector "
+"features**. Take a look at the house pictures in figure_house_."
+msgstr "În acest capitol vom analiza modul în care atributele datelor  ne pot ajuta să creăm hărți interesante și pline de informații. În capitolul anterior, s-a explicat că **atributele datelor** sunt folosite pentru a descrie **entitățile vectoriale**. Aruncați o privire la imaginile caselor din figure_house_."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:45
+msgid ""
+"Every feature has characteristics that we can describe. These can be visible"
+" things, or things we know about the feature (e.g. year built)."
+msgstr "Fiecare entitate are caracteristici, care pot fi descrise. Caracteristicile pot fi lucruri vizibile, sau informații pe care le cunoaștem despre entitate (de exemplu, anul construirii)."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:48
+msgid ""
+"The geometry of these house features is a polygon (based on the floor plan "
+"of the house), the attributes we have recorded are roof colour, whether "
+"there is a balcony, and the year the house was built. Note that attributes "
+"don't have to be visible things --– they can describe things we know about "
+"the feature such as the year it was built. In a GIS Application, we can "
+"represent this feature type in a houses polygon layer, and the attributes in"
+" an attribute table (see figure_house_gis_)."
+msgstr "Geometria entităților care reprezintă aceste case este de tip poligon (bazat pe planul parterului), atributele înregistrate fiind culoarea acoperișului, prezența balconului și anul ridicării construcției. Rețineți că atributele nu trebuie să fie obligatoriu lucruri vizibile --- se poate utiliza și informații pe care le știm despre entitate, cum ar fi anul în care a fost construită. Într-o aplicație GIS, putem reprezenta acest tip de caracteristică într-un strat poligonal, dedicat caselor, iar atributele vor fi introduse într-un tabel de atribute (a se vedea figure_house_gis_)."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:61
+msgid ""
+"A houses layer. House features have attributes that describe the houses’ "
+"roof colour and other properties. The attribute table (lower image) lists "
+"the attributes for the house areas shown on the map. When a feature is "
+"highlighted in the table, it will appear as a yellow polygon on the map."
+msgstr "Un strat de case. Entitățile casă au atribute care descriu culoarea acoperișului acestora și alte proprietăți. Tabelul de atribute (în partea de jos a imaginii) listează atributele pentru zonele de case prezente pe hartă. Când o entitate este evidențiată în tabel, ea va apărea pe hartă sub forma unui poligon de culoare galbenă."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:66
+msgid ""
+"The fact that features have attributes as well geometry in a GIS Application"
+" opens up many possibilities. For example we can use the attribute values to"
+" tell the GIS what colours and style to use when drawing features (see "
+"figure_style_by_attribute_). The process of setting colours and drawing "
+"styles is often referred to as setting feature **symbology**."
+msgstr "Într-o aplicație GIS se deschid multe posibilități datorită faptul că entitățile dispun de atribute precum și de geometrie. De exemplu, putem folosi valorile atributelor pentru a indica aplicației GIS ce culori și ce stil să utilizeze atunci când desenează entitățile (a se vedea figure_style_by_attribute_). Procesul de setare a culorilor și a stilurilor de desenare mai este cunoscut și ca activitatea de stabilire a **simbologiei** entității."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:78
+msgid ""
+"In a GIS Application, we can draw features differently depending on their "
+"attributes. On the left we have drawn house polygons with the same colour as"
+" the roof attribute. On the right we colour coded houses according to "
+"whether they have a balcony or not."
+msgstr "Într-o aplicație GIS, putem desena entitățile în mod diferit, în funcție de atributele lor. În stânga, culoarea poligoanelor este determinată de valoarea atributului acoperiș. Culoarea caselor din dreapta a fost codificată în funcție de prezența balconului."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:83
+msgid ""
+"Attribute data can also be useful when creating **map labels**. Most GIS "
+"Applications will have a facility to select an attribute that should be used"
+" to label each feature."
+msgstr "Atributele datelor pot fi, de asemenea, utile atunci când creați **etichetele hărții**. Cele mai multe aplicații GIS au posibilitatea de a selecta atributul care ar trebui să fie folosit la etichetarea fiecărei entități."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:87
+msgid ""
+"If you have ever **searched a map** for a place name or a specific feature, "
+"you will know how time consuming it can be. Having attribute data can make "
+"searching for a specific feature quick and easy. In "
+"figure_search_by_attribute_ you can see an example of an attribute search in"
+" a GIS."
+msgstr "Dacă vreodată ați **căutat pe o hartă** un nume de locație sau o entitate anume, atunci cunoașteți cât de mult timp poate dura acest lucru. Căutând însă în atributele datelor veți putea identifica rapid și ușor entitatea dorită. În figure_search_by_attribute_ puteti vedea un exemplu de căutare în atribute, cu ajutorul aplicației GIS."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:98
+msgid ""
+"In a GIS Application, we can also search for features based on their "
+"attributes. Here we see a search for houses with black roofs. Results are "
+"shown in yellow in the map, turquoise on the table."
+msgstr "De asemenea, într-o aplicație GIS putem căuta entitățile în funcție de atributele lor. Aici are loc o căutare a caselor cu acoperișuri negre. Rezultatele sunt prezentate în galben pe hartă, și în turcoaz în tabelă."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:102
+msgid ""
+"Finally, attribute data can be very useful in carrying out **spatial "
+"analysis**. Spatial analysis combines the spatial information stored in the "
+"geometry of features with their attribute information. This allows us to "
+"study features and how they relate to each other. There are many types of "
+"spatial analysis that can be carried out, for example, you could use GIS to "
+"find out how many red roofed houses occur in a particular area. If you have "
+"tree features, you could use GIS to try to find out which species might be "
+"affected if a piece of land is developed. We can use the attributes stored "
+"for water samples along a river course to understand where pollution is "
+"entering into the stream. The possibilities are endless! In a later topic we"
+" will be exploring spatial analysis in more detail."
+msgstr "În cele din urmă, atributele datelor pot fi foarte utile în efectuarea **analizelor spațiale**. Analiza spațială combină informațiile spațiale stocate în geometria entităților cu informațiile atributelor. Acest lucru ne permite să studiem entitățile și modul în care acestea se raportează unele la altele. Există mai multe tipuri de analize spațială care pot fi realizate; de exemplu, ați putea folosi GIS pentru a afla cât de multe case cu acoperiș roșu apar într-o anumită zonă. Dacă aveți entități de tip copaci, ați putea folosi GIS pentru a încerca să aflați care ar putea fi speciile afectate, dacă o bucată de teren va fi defrișată. Putem folosi atributele stocate ale probele de apă luate de-a lungul unui curs de râu pentru a înțelege distribuția poluanților. Posibilitățile sunt nelimitate! Într-un subiect ulterior, vom intra în detaliile analizei spațiale."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:113
+msgid ""
+"Before we move on to attribute data in more detail, let's take a quick "
+"recap."
+msgstr "Înainte de a trece la detalierea datelor atributelor, haideți să efectuăm o recapitulare rapidă."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:115
+msgid ""
+"Features are real world things such as roads, property boundaries, "
+"electrical substation sites and so on. A **feature** has a **geometry** "
+"(which determines if it is a **point**, **polyline** or **polygon**) and "
+"**attributes** (which describe the feature). This is shown in "
+"figure_features_at_glance_."
+msgstr "Entitățile sunt lucruri ale lumii reale, cum ar fi drumuri, limitele de proprietate, clădirile stației electrice și așa mai departe. O **entitate** are o **geometrie** (care determină dacă aceasta este un **punct**, o **polilinie** sau un **poligon**) și **atribute** (care descriu entitatea) . Acest lucru este arătat în figure_features_at_glance_."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:126
+msgid "Vector features at a glance."
+msgstr "O privire asupra entităților vectoriale."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:129
+msgid "Attributes in detail"
+msgstr "Atributele în detaliu"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:131
+msgid ""
+"Attributes for a vector feature are stored in a **table**. A table is like a"
+" spreadsheet. Each column in the table is called a **field**. Each row in "
+"the table is a **record**. Table table_house_attributes_ shows a simple "
+"example of how an attribute table looks in a GIS. The records in the "
+"attribute table in a GIS each correspond to one feature. Usually the "
+"information in the attribute table is stored in some kind of database. The "
+"GIS application links the attribute records with the feature geometry so "
+"that you can find records in the table by selecting features on the map, and"
+" find features on the map by selecting features in the table."
+msgstr "Atributele unei entități vectoriale sunt stocate într-un **tabel**. Un tabel este similar unei foi de calcul electronic. Fiecare coloană din tabel poartă numele de **câmp**. Fiecare rând din tabel reprezintă o **înregistrare**. Tabelul table_house_attributes_ este un exemplu simplu despre cum arată un tabel de atribute în GIS. Fiecare înregistrare din tabelul de atribute corespunde unei entități. De obicei, informațiile din tabelul de atribute sunt stocate într-o bază de date. Aplicația GIS leagă înregistrările atributelor de geometria entității, astfel încât înregistrările din tabel să poată găsite prin selectarea entităților pe hartă, iar elementele de pe hartă să poată fi identificate prin selectarea entităților din tabel."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:144
+msgid "Attribute Table"
+msgstr "Tabela de atribute"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:144
+msgid "Field 1 : YearBuilt"
+msgstr "Câmpul 1 : AnulConstruirii"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:144
+msgid "Field 2: RoofColour"
+msgstr "Câmpul 2: CuloareaAcoperisului"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:144
+msgid "Field 3: Balcony"
+msgstr "Câmpul 3: Balcon"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:146
+msgid "Record 1"
+msgstr "Înregistrarea 1"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:146
+msgid "1998"
+msgstr "1998"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:146
+msgid "Red"
+msgstr "Roșu"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:146
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:150
+msgid "Yes"
+msgstr "Da"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:148
+msgid "Record 2"
+msgstr "Înregistrarea 2"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:148
+msgid "2000"
+msgstr "2000"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:148
+msgid "Black"
+msgstr "Negru"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:148
+msgid "No"
+msgstr "Nu"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:150
+msgid "Record 3"
+msgstr "Înregistrarea 3"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:150
+msgid "2001"
+msgstr "2001"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:150
+msgid "Silver"
+msgstr "Argint"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:153
+msgid ""
+"Table House Attributes: An attribute table has fields (columns) and records "
+"(in rows)."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:156
+msgid ""
+"Each field in the attribute table contains contains a specific type of data "
+"–-- text, numeric or date. Deciding what attributes to use for a feature "
+"requires some thought and planning. In our house example earlier on in this "
+"topic, we chose roof colour, presence of a balcony and month of construction"
+" as attributes of interest. We could just as easily have chosen other "
+"aspects of a house such as:"
+msgstr "Fiecare câmp din tabelul de atribute conține un anumit tip de date --- texte, numere sau date calendaristice. Deciderea atributelor care se vor utiliza pentru o entitate necesită analiză și planificare. În exemplul nostru de mai devreme, al casei, am ales culoarea acoperișului, existența balconului și luna construcției drept atribute de interes. Am putea, la fel de ușor, să luam în considerare și alte aspecte ale unei case, cum ar fi:"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:162
+msgid "number of levels"
+msgstr "numărul de niveluri"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:163
+msgid "number of rooms"
+msgstr "numărul de camere"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:164
+msgid "number of occupants"
+msgstr "numărul de ocupanți"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:165
+msgid "type of dwelling (RDP House, block of flats, shack, brick house, etc)"
+msgstr "tipul locuinței (casă RDP,  bloc cu apartamente, cabană, casă de cărămidă, etc)"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:166
+msgid "year the house was built"
+msgstr "anul construirii casei"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:167
+msgid "area of floor space in the house"
+msgstr "suprafața spațiului de locuit de pe un nivel"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:168
+msgid "and so on...."
+msgstr "și așa mai departe...."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:170
+msgid ""
+"With so many options, how do we make a good choice as to what attributes are"
+" needed for a feature? It usually boils down to what you plan to do with the"
+" data. If you want to produce a colour coded map showing houses by age, it "
+"will make sense to have a 'Year Built' attribute for your feature. If you "
+"know for sure you will never use this type of map, it is better to not store"
+" the information. Collecting and storing unneeded information is a bad idea "
+"because of the cost and time required to research and capture the "
+"information. Very often we obtain vector data from companies, friends or the"
+" government. In these cases it is usually not possible to request specific "
+"attributes and we have to make do with what we get."
+msgstr "Având atât de multe opțiuni, cum putem face o alegere bună în ceea ce privește atributele necesare unei entități? De obicei, totul se reduce la ceea ce aveți de gând să faceți cu datele. Dacă doriți să produceți o hartă cu coduri de culoare care să indice vechimea casei, va avea sens existența atributului 'Anul construcției' pentru entitatea dumneavoastră. Dacă știți sigur că nu veți crea acest tip de hartă, este mai bine să nu stocați acest gen de informații. Colectarea și stocarea informațiilor care nu sunt necesare, nu reprezintă o idee bună, din cauza costurilor și a timpului necesar pentru cercetare și captarea informațiilor. De foarte multe ori obținem date vectoriale din companii, de la prieteni sau de la instituții de stat. În aceste cazuri, de obicei, nu este posibilă solicitarea unor atribute specifice și trebuie să ne descurcăm cu ceea ce primim."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:182
+msgid "Single Symbols"
+msgstr "Simboluri Unice"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:184
+msgid ""
+"If a feature is symbolised without using any attribute table data, it can "
+"only be drawn in a simple way. For example with point features you can set "
+"the colour and **marker** (circle, square, star etc.) but that is all. You "
+"cannot tell the GIS to draw the features based on one of its properties in "
+"the attribute table. In order to do that, you need to use either a "
+"**graduated**, **continuous** or **unique value** symbol. These are "
+"described in detail in the sections that follow."
+msgstr "În cazul în care o entitate este simbolizată fără a se folosi vreo dată a tabelului de atribute, ea poate fi desenată doar într-un mod simplu. De exemplu, pentru entitățile de tip punct se poate seta doar culoarea și **simbolul** (cerc, pătrat, stea etc.). Nu puteți indica GIS-ului să deseneze entitățile  în funcție de una dintre proprietățile din tabelul de atribute. Pentru a face acest lucru, e nevoie să utilizați un simbol **gradual**, **continuu** sau cu **valoare unică**. Acestea sunt descrise, în detaliu, în secțiunile care urmează."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:192
+msgid ""
+"A GIS application will normally allow you to set the symbology of a layer "
+"using a **dialog box** such as the one shown in in figure_single_symbol_. In"
+" this dialog box you can choose colours and symbol styles. Depending on the "
+"geometry type of a layer, different options may be shown. For example with "
+"point layers you can choose a **marker style**. With line and polygon layers"
+" there is no marker style option, but instead you can select a **line "
+"style** and **colour** such as dashed orange for gravel roads, solid orange "
+"for minor roads, and so on (as shown in figure_single_symbol_poly_). With "
+"polygon layers you also have the option of setting a **fill style** and "
+"color."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:208
+msgid ""
+"When using simple symbols, the feature is drawn without using an attribute "
+"to control how it looks. This is the dialog for point features."
+msgstr "Când se utilizează simboluri simple, entitatea este desenată fără a se folosi un atribut pentru a-i controla modul în care arată. Aceasta este fereastra de dialog pentru entitățile de tip punct."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:217
+msgid ""
+"There are different options when defining simple symbols for polyline and "
+"polygon features."
+msgstr "Există diverse opțiuni atunci când se definesc simboluri simple pentru entitățile de tip polilinie și poligon."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:221
+msgid "Graduated Symbols"
+msgstr "Simboluri Graduale"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:223
+msgid ""
+"Sometimes vector features represent things with a changing numerical value. "
+"Contour lines are a good example of this. Each contour usually has an "
+"attribute value called 'height' that contains information about what height "
+"that contour represents. In  earlier in this topic we showed contours all "
+"drawn with the same colour. Adding colour to the contours can help us to "
+"interpret the meanings of contours. For example we can draw low lying areas "
+"with one colour, mid-altitude areas with another and high-altitude areas "
+"with a third."
+msgstr "Uneori, entitățile vectoriale reprezintă lucrurile cu ajutorul unei valori numerice variabile. Curbele de nivel sunt un bun exemplu în acest sens. Fiecare curbă posedă, de obicei, un atribut numit 'înălțime', care conține informații privitoare la înălțimea pe care o reprezintă. Mai devreme, tot în cadrul acestui subiect, curbele de nivel erau desenate toate cu aceeași culoare. Alegerea unor culori diferite pentru curbele de nivel ne poate ajuta să interpretăm semnificațiile nivelurilor. De exemplu, putem reprezenta zonele joase cu o anumită culoare, zone de altitudine medie cu alta, iar zonele de mare altitudine cu o terță culoare."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:237
+msgid ""
+"The height attribute of contours can be used to separate the contours into 3"
+" classes. Contours between 980 m and 1120 m will be drawn in brown, those "
+"between 1120 m and 1240 m in green and those between 1240 m and 1500 m in "
+"purple."
+msgstr "Atributul de înălțime al curbelor poate fi utilizat pentru a le separa în 3 clase. Curbele cu înălțimea între 980 m și 1120 m vor fi reprezentate cu maro, cele între 1120 m și 1240 m cu verde, iar cele cuprinse între 1240 m și 1500 m cu violet."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:248
+msgid "Our map after setting graduated colours for our contours."
+msgstr "Harta noastră, după stabilirea culorilor graduale pentru curbele de nivel."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:250
+msgid ""
+"Setting colours based on discrete groups of attribute values is called "
+"Graduated Symbology in QGIS. The process is shown in Illustrations "
+"figure_graduated_symbol_ and figure_graduated_symbol_map_. **Graduated "
+"symbols** are most useful when you want to show clear differences between "
+"features with attribute values in different value ranges. The GIS "
+"Application will analyse the attribute data (e.g. height) and, based on the "
+"number of classes you request, create groupings for you. This process is "
+"illustrated in table_graduated_."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:261
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:298
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:370
+msgid "Attribute Value"
+msgstr "Valoarea Atributului"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:261
+msgid "Class and Colour"
+msgstr "Clasa și Culoarea"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:263
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:300
+msgid "1"
+msgstr "1"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:263
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:265
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:267
+msgid "Class 1"
+msgstr "Clasa 1"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:265
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:302
+msgid "2"
+msgstr "2"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:267
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:304
+msgid "3"
+msgstr "3"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:269
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:306
+msgid "4"
+msgstr "4"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:269
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:271
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:273
+msgid "Class 2"
+msgstr "Clasa 2"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:271
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:308
+msgid "5"
+msgstr "5"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:273
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:310
+msgid "6"
+msgstr "6"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:275
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:312
+msgid "7"
+msgstr "7"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:275
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:277
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:279
+msgid "Class 3"
+msgstr "Clasa 3"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:277
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:314
+msgid "8"
+msgstr "8"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:279
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:316
+msgid "9"
+msgstr "9"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:282
+msgid ""
+"Table Graduated: Graduated colour breaks up the attribute value ranges into "
+"the number of classes you select. Each class is represented by a different "
+"colour."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:286
+msgid "Continuous Colour Symbols"
+msgstr "Simbolizare prin Culori Progresive"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:288
+msgid ""
+"In the previous section on Graduated Colour symbols we saw that we can draw "
+"features in discrete groups or classes. Sometimes it is useful to draw "
+"features in a **colour range** from one colour to another. The GIS "
+"Application will use a numerical attribute value from a feature (e.g. "
+"contour heights or pollution levels in a stream) to decide which colour to "
+"use. Table table_continuous_ shows how the attribute value is used to define"
+" a continuous range of colours."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:298
+msgid "Colour (no classes or grouping)"
+msgstr "Culoare (fără clase sau grupe)"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:319
+msgid ""
+"Table Continuous: Continuous colour symbology uses a start colour (e.g. "
+"light orange shown here) and an end colour (e.g. dark brown shown here) and "
+"creates a series of shades between those colours."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:323
+msgid ""
+"Using the same contours example we used in the previous section, let's see "
+"how a map with continuous colour symbology is defined and looks. The process"
+" starts by setting the layers properties to continuous colour using a dialog"
+" like the one shown in figure_continuous_symbol_."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:334
+msgid ""
+"Setting up continuous colour symbology. The contour height attribute is used"
+" to determine colour values. Colours are defined for the minimum and maximum"
+" values. The GIS Application will then create a gradient of colours for "
+"drawing the features based on their heights."
+msgstr "Setarea simbologiei culorilor progresive. Atributul înălțime al curbelor de nivel este utilizat pentru a determina valorile culorilor. Culorile sunt definite pentru valorile minime și maxime. Aplicația GIS va utiliza apoi un gradient de culori la reprezentarea entităților în funcție de înălțimile lor."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:339
+msgid ""
+"After defining the minimum and maximum colours in the colour range, the "
+"colour features are drawn in will depend on where the attribute lies in the "
+"range between minimum and maximum. For example if you have contour features "
+"with values starting at 1000 m and ending at 1400 m, the value range is 1000"
+" to 1400. If the colour set for the minimum value is set to orange and the "
+"colour for the maximum value is black, contours with a value of close to "
+"1400 m will be drawn close to black. On the other hand contours with a value"
+" near to 1000 m will be drawn close to orange (see "
+"figure_continuous_symbol_map_)."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:354
+msgid "A contour map drawn using continuous colour symbology"
+msgstr "O hartă a curbelor de nivel reprezentată cu ajutorul simbologiei culorilor progresive"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:357
+msgid "Unique Value Symbols"
+msgstr "Simboluri cu valoare unică"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:359
+msgid ""
+"Sometimes the attributes of features are not numeric, but instead "
+"**strings** are used. 'String' is a computer term meaning a group of "
+"letters, numbers and other writing symbols. Strings attributes are often "
+"used to classify things by name. We can tell the GIS Application to give "
+"each unique string or number its own colour and symbol. Road features may "
+"have different classes (e.g. 'street', 'secondary road', 'main road' etc.), "
+"each drawn in the map view of the GIS with different colours or symbols. "
+"This is illustrated in table_unique_."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:370
+msgid "Colour class and symbol"
+msgstr "Clasa culorii și simbolul"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:372
+msgid "Arterial route"
+msgstr "Autostradă"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:374
+msgid "Main road"
+msgstr "Drum principal"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:376
+msgid "Secondary road"
+msgstr "Drum secundar"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:378
+msgid "Street"
+msgstr "Stradă"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:381
+msgid ""
+"Table Unique: Unique attribute values for a feature type (e.g. roads) can "
+"each have their own symbol."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:384
+msgid ""
+"Within the GIS Application we can open/choose to use Unique Value symbology "
+"for a layer. The GIS will scan through all the different string values in "
+"the attribute field and build a list of unique strings or numbers. Each "
+"unique value can then be assigned a colour and style. This is shown in "
+"figure_unique_symbol_."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:395
+msgid "Defining unique value symbology for roads based on the road type."
+msgstr "Definirea simbologiei cu valoare unică pentru drumurile bazate pe tipul acestora."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:397
+msgid ""
+"When the GIS draws the layer, it will look at the attributes of each feature"
+" before drawing it to the screen. Based on the value in the chosen field in "
+"the attribute table, the road line will be drawn with suitable colour and "
+"line style (and fill style if its a polygon feature). This is shown in "
+"figure_unique_symbol_map_."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:408
+msgid "A roads vector layer symbolised using a unique value per road type."
+msgstr "Un strat vectorial al drumurilor, simbolizat cu o valoare unică pentru fiecare tip de drum."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:411
+msgid "Things to be aware of"
+msgstr "Lucruri pe care trebuie să le cunoașteți"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:413
+msgid ""
+"Deciding which attributes and symbology to use requires some planning. "
+"Before you start collecting any **GeoSpatial** data, you should ensure you "
+"know what attributes are needed and how it will be symbolised. It is very "
+"difficult to go back and re-collect data if you plan poorly the first time "
+"around. Remember also that the goal of collecting attribute data is to allow"
+" you to analyse and interpret spatial information. How you do this depends "
+"on the questions you are trying to answer. Symbology is a visual language "
+"that allows people to see and understand your attribute data based on the "
+"colours and symbols you use. Because of this you should put a lot of thought"
+" into how you symbolise your maps in order to make them easy to understand."
+msgstr "Pentru a decide atributele și simbologia de utilizat, este necesară o anumită analiză. Înainte de a începe colectarea oricăror date **GeoSpațiale**, trebuie să vă asigurați că știți ce atribute vă sunt necesare și cum vor fi ele simbolizate. Este foarte greu să vă întoarceți și să re-colectați datele dacă nu ați făcut-o bine de prima dată. Amintiți-vă, de asemenea, că obiectivul colectării atributelor datelor este de a vă facilita analiza și interpretarea informațiilor spațiale. Cum faceți acest lucru depinde de întrebările la care încercați să răspundeți. Simbologia este un limbaj vizual care permite utilizatorilor să vadă și să înțeleagă atributele datelor, în funcție de culorile și simbolurile utilizate. Din acest motiv, ar trebui să gândiți temeinic modul în care veți simboliza hărțile, pentru a le face inteligibile."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:425
+msgid "What have we learned?"
+msgstr "Ce am învățat?"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:427
+msgid "Let's wrap up what we covered in this worksheet:"
+msgstr "Să recapitulăm subiectele abordate în acest capitol:"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:429
+msgid "Vector features have **attributes**"
+msgstr "Entitățile vectoriale au **atribute**"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:430
+msgid "Attributes **describe** the **properties** of the feature"
+msgstr "Atributele **descriu** **proprietățile** unei entități"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:431
+msgid "The attributes are stored in a **table**"
+msgstr "Attributele sunt stocate într-o **tabelă**"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:432
+msgid "Rows in the table are called **records**"
+msgstr "Rândurile din tabelă sunt denumite **înregistrări**"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:433
+msgid "There is **one record per feature** in the vector layer"
+msgstr "Există doar **o singură înregistrare per entitate** într-un strat vectorial"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:434
+msgid "Columns in the table are called **fields**"
+msgstr "Coloanele tabelei sunt denumite **câmpuri**"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:435
+msgid ""
+"Fields represent **properties** of the feature e.g. height, roof colour etc."
+msgstr "Câmpurile reprezintă **proprietățile** entității, cum ar fi înălțimea, culoarea acoperișului, etc."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:436
+msgid ""
+"Fields can contain **numerical**, **string** (any text) and **date** "
+"information"
+msgstr "Câmpul poate conține informații **numerice**, **șiruri** (orice text) și **date  calendaristice**"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:437
+msgid ""
+"The attribute data for a feature can be used to determine how it is "
+"**symbolised**"
+msgstr "Datele atributelor pentru o entitate pot fi utilizate pentru a determina modul în care aceasta este **simbolizată**"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:438
+msgid "**Graduated colour** symbology groups the data into discrete classes"
+msgstr "Simbologia **culorilor graduale** grupează datele în clase discrete"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:439
+msgid ""
+"**Continuous colour** symbology assigns colours from a colour range to the "
+"features based on their attributes"
+msgstr "Simbologia **culorilor progresive** atribuie culorile entităților dintr-o gamă de culori, în funcție de atributele lor"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:441
+msgid ""
+"**Unique value** symbology associates each different value in the chosen "
+"attribute column with a different symbol (colour and style)"
+msgstr "Simbologia cu **Valoare unică** asociază fiecărei valori unice, din coloana atributului ales, un diferit simbol (culoare și stil)"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:443
+msgid ""
+"If the attribute of a vector layer is not used to determine its symbology, "
+"it is drawn using a **single symbol** only"
+msgstr "În cazul în care atributul unui strat vectorial nu este folosit la determinarea simbologiei sale, acesta este reprezentat doar cu ajutorul unui **simbol unic**"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:447
+msgid "Now you try!"
+msgstr "Încercați acum!"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:449
+msgid "Here are some ideas for you to try with your learners:"
+msgstr "Aici sunt câteva idei care pot fi testate împreună cu elevii dumneavoastră:"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:451
+msgid ""
+"Using the table that you created in the last topic, add a new column for the"
+" symbology type you would use for each feature type and have the learners "
+"identify which symbology type they would use (see table_example_symbols_ for"
+" an example)."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:455
+msgid ""
+"Try to identify which symbology types you would use for the following types "
+"of vector features:"
+msgstr "Încercați să identificați tipurile de simboluri pe care le-ați putea folosi pentru următoarele tipuri de entități vectoriale:"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:458
+msgid "points showing pH level of soil samples taken around your school"
+msgstr "punctele care arată nivelul pH-ului solului din probele luate din jurul școlii"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:459
+msgid "lines showing a road network in a city"
+msgstr "liniile care reprezintă rețeaua de drumuri a orașului"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:460
+msgid ""
+"polygons for houses with an attribute that shows whether it is made of "
+"brick, wood or 'other' material."
+msgstr "poligoanele caselor și atributul care arată dacă sunt din caramidă, lemn sau din 'alt' material."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:466
+msgid "Real world feature"
+msgstr "Entitate din lumea reală"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:466
+msgid "Geometry Type"
+msgstr "Tipul geometriei"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:466
+msgid "Symbology Type"
+msgstr "Tipul simbologiei"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:468
+msgid "The school flagpole"
+msgstr "Catargul pentru steagul școlii"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:468
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:474
+msgid "Point"
+msgstr "Punct"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:468
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:470
+msgid "Single Symbol"
+msgstr "Simbol Unic"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:470
+msgid "The soccer field"
+msgstr "Terenul de fotbal"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:470
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:476
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:480
+msgid "Polygon"
+msgstr "Poligon"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:472
+msgid "The footpaths in and around the school"
+msgstr "Potecile din jurul și din cadrul școlii"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:472
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:478
+msgid "Polyline"
+msgstr "Polilinie"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:472
+msgid ""
+"Have your learners count the number of learners using each footpath in the "
+"hour before school and then use **graduated symbols** to show the popularity"
+" of each footpath"
+msgstr "Puneți-vă elevii să specifice cale pe care au utilizat-o înainte de a veni la școală, apoi, utilizând **simboluri gradate**, să reprezinte popularitatea fiecărei cărări."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:474
+msgid "Places where taps are located"
+msgstr "Locațiile țâșnitorilor de apă"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:474
+msgid "Single symbol"
+msgstr "Simbol unic"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:476
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:480
+msgid "Classrooms"
+msgstr "Sălile de clasă"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:476
+msgid "**Unique value** based on the grade of the learners in the classroom"
+msgstr "**Valoare unică**, în funcție de clasa în care se află cursanții"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:478
+msgid "Fence"
+msgstr "Gardul"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:478
+msgid ""
+"Have your learners rate the condition of the fence around your school by "
+"separating it into sections and grading each section on a scale of 1\\-9 "
+"based on its condition. Use **graduated symbols** to classify the condition "
+"attribute."
+msgstr "Puneți-vă elevii să aprecieze starea gardul din jurul școlii, prin separarea acestuia în secțiuni și clasificând fiecare secțiune pe o scară de 1\\-9, în funcție de starea acestuia. Utilizați **simboluri gradate** pentru a clasifica atributul condiției."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:480
+msgid ""
+"Count the number of learners in each classroom and use a **continuous colour"
+" symbol** to define a range of colours from red to blue."
+msgstr "Aflați numărul de cursanți din fiecare sală de clasă, care folosesc **simbolizarea prin culori progresive** pentru a defini o gamă de culori pornind de la roșu până la albastru."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:483
+msgid ""
+"Table Example Symbols: An example of a table that defines the feature types "
+"and the kind of symbology you would use for each."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:487
+msgid "Something to think about"
+msgstr "De reținut"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:489
+msgid ""
+"If you don't have a computer available, you can use transparency sheets and "
+"a 1:50 000 map sheet to experiment with different symbology types. For "
+"example place a transparency sheet over the map and using different coloured"
+" koki pens, draw in red all contour lines below 900 m (or similar) and in "
+"green all lines above or equal to 900 m. Can you think of how to reproduce "
+"other symbology types using the same technique?"
+msgstr "Dacă nu aveți la dispoziție un calculator, puteți folosi coli transparente și o hartă la scara 1: 50 000 pentru a experimenta diversele tipuri de simboluri. De exemplu, puteți plasa o coală transparentă peste hartă și,  folosind diferite creioane colorate, să trasați cu roșu toate curbele de nivel mai mici de 900 m (sau similar) iar cu verde pe cele mai mari sau egale cu 900 m. Vă puteți gândi la modul de a reproduce alte tipuri de simboluri, folosind aceeași tehnică?"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:497
+msgid "Further reading"
+msgstr "Lecturi suplimentare"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:499
+msgid "**Website:** https://en.wikipedia.org/wiki/Cartography#Map_symbology"
+msgstr "**Website:** https://en.wikipedia.org/wiki/Cartography#Map_symbology"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:501
+msgid ""
+"The QGIS User Guide also has more detailed information on working with "
+"attribute data and symbology in QGIS."
+msgstr "Ghidul Utilizatorului QGIS conține, de asemenea, informații detaliate cu privire la atributele datelor și la simbologia QGIS."
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:505
+msgid "What's next?"
+msgstr "Ce urmează?"
+
+#: ../../source/docs/gentle_gis_introduction/vector_attribute_data.rst:507
+msgid ""
+"In the section that follows we will take a closer look at **data capture.** "
+"We will put the things we have learned about vector data and attributes into"
+" practice by creating new data."
+msgstr "În secțiunea care urmează, vom arunca o privire mai atentă la **captura datelor**. Vom pune în practică ceea ce am învățat despre datele vectoriale și despre atributele lor, prin crearea unor noi date."
+
+#~ msgid "**Website:** http://en.wikipedia.org/wiki/Cartography#Map_symbology"
+#~ msgstr ""

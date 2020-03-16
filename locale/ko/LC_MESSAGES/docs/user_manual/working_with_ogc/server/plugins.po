@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# 
+# Translators:
+# Kwon.Yongchan <ruvyn@naver.com>, 2017
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project testing\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-04-07 15:33+0200\n"
+"PO-Revision-Date: 2017-08-09 06:49+0000\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2017\n"
+"Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/plugins.rst:9
+msgid "Plugins"
+msgstr "플러그인"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/plugins.rst:18
+msgid "Installation"
+msgstr "설치"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/plugins.rst:20
+msgid ""
+"To install the HelloWorld example plugin for testing the servers, you "
+"firstly have to create a directory to hold server plugins. This will be "
+"specified in the virtual host configuration and passed on to the server "
+"through an environment variable:"
+msgstr ""
+"서버 검증 용 HelloWorld 예시 플러그인을 설치하려면, 먼저 서버 플러그인을 담을 디렉터리를 생성해야 합니다. 다음과 같이 가상 "
+"호스트 환경 설정에 이 디렉터리를 지정하고 환경 변수를 통해 서버에 넘겨줄 것입니다:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/plugins.rst:37
+msgid "HTTP Server configuration"
+msgstr "HTTP 서버 환경 설정"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/plugins.rst:40
+msgid "Apache"
+msgstr "Apache"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/plugins.rst:42
+msgid ""
+"To be able to use server plugins, FastCGI needs to know where to look. So, "
+"we have to modify the Apache configuration file to indicate the "
+"**QGIS_PLUGINPATH** environment variable to FastCGI:"
+msgstr ""
+"서버 플러그인을 사용하려면, FastCGI가 어디를 찾아야 하는지 알아야 합니다. 따라서, Apache 환경 설정 파일을 다음과 같이 "
+"수정해서 FastCGI에 **QGIS_PLUGINPATH** 환경 변수를 알려줘야 합니다."
+
+#: ../../source/docs/user_manual/working_with_ogc/server/plugins.rst:52
+msgid ""
+"Moreover, a basic HTTP authorization is necessary to play with the "
+"HelloWorld plugin previously introduced. So we have to update the Apache "
+"configuration file a last time:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_ogc/server/plugins.rst:65
+msgid "Then, restart Apache:"
+msgstr "그리고 Apache를 다음과 같이 재시작하십시오:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/plugins.rst:74
+msgid ""
+"If you work with a feature that has many nodes then modifying and adding a "
+"new feature will fail. In this case it is possible to insert the following "
+"code into the :file:`001-qgis-server.conf` file:"
+msgstr ""
+"수많은 노드를 가지고 있는 피처를 작업하는 경우, 해당 피처를 수정하거나 새 피처를 추가할 때 오류가 발생할 것입니다. 이런 경우 "
+":file:`001-qgis-server.conf` 파일에 다음 코드를 삽입해서 해결할 수 있습니다:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/plugins.rst:86
+msgid "How to use a plugin"
+msgstr "플러그인 사용법"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/plugins.rst:88
+msgid "Test the server with the HelloWorld plugin:"
+msgstr "HelloWorld 플러그인을 통해 서버를 검증해보겠습니다:"
+
+#: ../../source/docs/user_manual/working_with_ogc/server/plugins.rst:95
+msgid ""
+"You can have a look at the default GetCapabilities of the QGIS server at: "
+":file:`http://localhost/cgi-"
+"bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities`"
+msgstr ""
+"다음과 같은 주소에서 QGIS 서버의 기본 ``GetCapabilities`` 응답을 살펴볼 수 있습니다: "
+":file:`http://localhost/cgi-"
+"bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities`"
+
+#~ msgid "|updatedisclaimer|"
+#~ msgstr ""

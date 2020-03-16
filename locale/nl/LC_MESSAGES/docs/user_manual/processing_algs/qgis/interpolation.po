@@ -1,0 +1,1067 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+# 
+# Translators:
+# Dick Groskamp, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-14 13:14+0100\n"
+"PO-Revision-Date: 2019-04-07 13:56+0000\n"
+"Last-Translator: Dick Groskamp, 2020\n"
+"Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:8
+msgid "Interpolation"
+msgstr "Interpolatie"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:19
+msgid "Heatmap (kernel density estimation)"
+msgstr "Heatmap (Schatting dichtheid kernel KDE)"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:20
+msgid ""
+"Creates a density (heatmap) raster of an input point vector layer using "
+"kernel density estimation."
+msgstr ""
+"Maakt een dichtheidsraster (heatmap) op basis van een invoer puntenlaag met "
+"schatting van de dichtheid van de kernel."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:23
+msgid ""
+"The density is calculated based on the number of points in a location, with "
+"larger numbers of clustered points resulting in larger values. Heatmaps "
+"allow easy identification of *hotspots* and clustering of points."
+msgstr ""
+"De dichtheid wordt berekend op basis van het aantal punten op een locatie, "
+"grotere aantallen punten zullen resulteren in grotere waarden. Heatmap helpt"
+" bij het identificeren van \"Hotspots\" en plekken met een grote dichtheid "
+"van punten."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:29
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:257
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:375
+msgid "Parameters"
+msgstr "Parameters"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:36
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:166
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:264
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:350
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:382
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:482
+msgid "Label"
+msgstr "Label"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:37
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:167
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:265
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:351
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:383
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:483
+msgid "Name"
+msgstr "Naam"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:38
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:168
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:266
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:352
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:384
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:484
+msgid "Type"
+msgstr "Type"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:39
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:169
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:267
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:353
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:385
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:485
+msgid "Description"
+msgstr "Beschrijving"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:40
+msgid "**Point layer**"
+msgstr "**Puntenlaag**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:41
+msgid "``INPUT``"
+msgstr "``INPUT``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:42
+msgid "[vector: point]"
+msgstr "[vector: punt]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:43
+msgid "Point vector layer to use for the heatmap"
+msgstr "Punten vectorlaag om te gebruiken voor de heatmap"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:44
+msgid "**Radius**"
+msgstr "**Straal**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:45
+msgid "``RADIUS``"
+msgstr "``RADIUS``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:46
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:56
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:114
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:299
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:313
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:434
+msgid "[number]"
+msgstr "[getal]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:48
+msgid "Default: 100.0"
+msgstr "Standaard: 100.0"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:49
+msgid ""
+"Heatmap search radius (or kernel bandwidth) in map units. The radius "
+"specifies the distance around a point at which the influence of the point "
+"will be felt. Larger values result in greater smoothing, but smaller values "
+"may show finer details and variation in point density."
+msgstr ""
+"De straal om te zoeken (of kernel bandbreedte)  in kaarteenheden. De straal "
+"geeft de afstand rondom een punt weer waar dat punt nog invloed heeft. "
+"Grotere waarden resulteren in grotere afvlakking, kleinere waarden geven "
+"meer details en variatie in dichtheid van punten."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:54
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:311
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:432
+msgid "**Output raster size**"
+msgstr "**Grootte uitvoerraster**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:55
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:312
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:433
+msgid "``PIXEL_SIZE``"
+msgstr "``PIXEL_SIZE``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:58
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:315
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:436
+msgid "Default: 0.1"
+msgstr "Standaard: 0.1"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:59
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:316
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:437
+msgid "Pixel size of the output raster layer in layer units."
+msgstr "Pixelgrootte in uitvoer rasterlaag in laageenheden."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:61
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:318
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:439
+msgid ""
+"In the GUI, the size can be specified by the number of rows (``Number of "
+"rows``) / columns (``Number of columns``) **or** the pixel size( ``Pixel "
+"Size X`` / ``Pixel Size Y``). Increasing the number of rows or columns will "
+"decrease the cell size and increase the file size of the output raster. The "
+"values in ``Rows``, ``Columns``, ``Pixel Size X`` and ``Pixel Size Y`` will "
+"be updated simultaneously - doubling the number of rows will double the "
+"number of columns, and the cell size will be halved. The extent of the "
+"output raster will remain the same (approximately)."
+msgstr ""
+"In de GUI mag de grootte worden gespecificeerd door het aantal rijen "
+"(``Aantal rijen``) / kolommen (``Aantal kolommen``) **of** de pixelgrootte "
+"(``Pixelgrootte X`` / ``Pixelgrootte Y``). Verhogen van het aantal rijen of "
+"kolommen zullen de celgrootte verminderen en de bestandsgrootte van het "
+"uitvoerraster verhogen. De waarden in ``Rijen``, ``Kolommen``, "
+"``Pixelgrootte X`` en ``Pixelgrootte Y`` zullen tegelijk worden bijgewerkt -"
+" verdubbelen van het aantal rijen zal automatisch ook het aantal kolommen "
+"verdubbelen, de celgrootte zal worden gehalveerd. Het bereik van het "
+"uitvoerraster zal hetzelfde blijven (bij benadering)."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:72
+msgid "**Radius from field**"
+msgstr "**Radius uit veld**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:74
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:81
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:112
+msgid "Optional"
+msgstr "Optioneel"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:75
+msgid "``RADIUS_FIELD``"
+msgstr "``RADIUS_FIELD``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:76
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:83
+msgid "[tablefield: numeric]"
+msgstr "[tabelveld: numeriek]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:77
+msgid ""
+"Sets the search radius for each feature from an attribute field in the input"
+" layer."
+msgstr ""
+"Stelt de straal in voor elk object vanuit een attribuutveld in de "
+"invoerlaag."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:79
+msgid "**Weight from field**"
+msgstr "**Gewicht uit veld**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:82
+msgid "``WEIGHT_FIELD``"
+msgstr "``WEIGHT_FIELD``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:84
+msgid ""
+"Allows input features to be weighted by an attribute field. This can be used"
+" to increase the influence certain features have on the resultant heatmap."
+msgstr ""
+"Geeft de mogelijkheid om voor objecten een attribuutveld als gewogen veld te"
+" geven. Dit kan worden gebruikt om bepaalde objecten meer invloed te geven "
+"op de resulterende heatmap."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:87
+msgid "**Kernel shape**"
+msgstr "**Kernel vorm**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:88
+msgid "``KERNEL``"
+msgstr "``KERNEL``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:89
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:136
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:417
+msgid "[enumeration]"
+msgstr "[enumeratie]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:91
+msgid "Default: *0*"
+msgstr "Standaard: *0*"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:92
+msgid ""
+"Controls the rate at which the influence of a point decreases as the "
+"distance from the point increases. Different kernels decay at different "
+"rates, so a triweight kernel gives features greater weight for distances "
+"closer to the point then the Epanechnikov kernel does. Consequently, "
+"triweight results in “sharper” hotspots and Epanechnikov results in "
+"“smoother” hotspots."
+msgstr ""
+"Beheert de mate waarin de invloed van een punt afneemt als de afstand tot "
+"het punt toeneemt. Verschillende kernel vormen vervallen met verschillende "
+"mate, een triweight kernel geeft objecten een groter gewicht voor afstanden "
+"dichter bij het punt dan de Epanechnikov kernel doet. Als gevolg hiervan "
+"resulteert een triweight kernel in “scherpere” hotspots en resulteert "
+"Epanechnikov in meer ”vlakkere” hotspots."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:100
+msgid ""
+"There are many shapes available (please see the `Wikipedia page "
+"<https://en.wikipedia.org/wiki/Kernel_(statistics)#Kernel_functions_in_common_use>`_"
+" for further information):"
+msgstr ""
+"Er zijn vele vormen beschikbaar (bekijk de `pagina van Wikipedia "
+"<https://en.wikipedia.org/wiki/Kernel_(statistics)#Kernel_functions_in_common_use>`_"
+" voor meer informatie):"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:104
+msgid "0 --- Quartic"
+msgstr "0 --- Vierdegraads"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:105
+msgid "1 --- Triangular"
+msgstr "1 --- Driehoekig"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:106
+msgid "2 --- Uniform"
+msgstr "2 --- Uniform"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:107
+msgid "3 --- Triweight"
+msgstr "3 --- Triweight"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:108
+msgid "4 --- Epanechnikov"
+msgstr "4 --- Epanechnikov"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:110
+msgid "**Decay ratio (Triangular kernels only)**"
+msgstr "**Ratio verval (Alleen triangulaire kernels)**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:113
+msgid "``DECAY``"
+msgstr "``DECAY``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:116
+msgid "Default: *0.0*"
+msgstr "Standaard: *0.0*"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:117
+msgid ""
+"Can be used with Triangular kernels to further control how heat from a "
+"feature decreases with distance from the feature."
+msgstr ""
+"Kan worden gebruikt bij driehoekige kernels om meer controle te krijgen over"
+" in welke mate de hitte afneemt met de afstand tot het object."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:121
+msgid ""
+"A value of 0 (=minimum) indicates that the heat will be concentrated in the "
+"center of the given radius and completely extinguished at the edge."
+msgstr ""
+"Waarde 0 (= minimum) geeft aan dat de hitte geconcentreerd zijn in het "
+"centrum van de opgegeven straal en volledig gedoofd zal zijn aan de rand."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:124
+msgid ""
+"A value of 0.5 indicates that pixels at the edge of the radius will be given"
+" half the heat as pixels at the center of the search radius."
+msgstr ""
+"Een waarde van 0,5 geeft aan dat pixels aan de rand van de straal de helft "
+"van de hitte uitstralen van de pixels in het centrum van de straal om te "
+"zoeken."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:127
+msgid ""
+"A value of 1 means the heat is spread evenly over the whole search radius "
+"circle. (This is equivalent to the ‘Uniform’ kernel.)"
+msgstr ""
+"Een waarde van 1 betekent dat de hitte gelijkmatig is verdeeld over de "
+"gehele cirkel van de straal. (Dit is gelijk aan de kernel 'Uniform')"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:130
+msgid ""
+"A value greater than 1 indicates that the heat is higher towards the edge of"
+" the search radius than at the center."
+msgstr ""
+"Een waarde groter dan 1 geeft aan dat de hitte aan de randen van de straal "
+"groter is dan in het centrum."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:134
+msgid "**Output value scaling**"
+msgstr "**Op schaal brengen uitvoerwaarde**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:135
+msgid "``OUTPUT_VALUE``"
+msgstr "``OUTPUT_VALUE``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:138
+msgid "Default: *Raw*"
+msgstr "Default: *Ruw*"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:139
+msgid "Allow to change the values of the output heatmap raster. One of:"
+msgstr ""
+"Maakt het mogelijk de waarden voor het uitvoerraster voor de heatmap te "
+"wijzigen. Één van:"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:142
+msgid "0 --- Raw"
+msgstr "0 --- Ruw"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:143
+msgid "1 --- Scaled"
+msgstr "1 --- Geschaald"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:145
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:170
+msgid "**Heatmap**"
+msgstr "**Heatmap**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:146
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:171
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:330
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:355
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:451
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:487
+msgid "``OUTPUT``"
+msgstr "``OUTPUT``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:147
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:172
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:331
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:356
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:452
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:488
+msgid "[raster]"
+msgstr "[raster]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:149
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:333
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:454
+msgid "Default: ``[Save to temporary file]``"
+msgstr "Standaard: ``[Opslaan naar tijdelijk bestand]``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:150
+msgid "Specify the output raster layer with kernel density values. One of:"
+msgstr ""
+"Specificeer de rasterlaag met waarden voor dichtheid van de kernel. Één van:"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:153
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:337
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:457
+msgid "Save to a Temporary File"
+msgstr "Opslaan naar tijdelijk bestand"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:154
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:338
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:458
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:470
+msgid "Save to File..."
+msgstr "Opslaan naar bestand…"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:156
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:340
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:460
+msgid "The file encoding can also be changed here."
+msgstr "De bestandscodering kan hier ook gewijzigd worden."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:159
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:343
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:475
+msgid "Outputs"
+msgstr "Uitvoer"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:173
+msgid "Raster layer with kernel density values"
+msgstr "Rasterlaag met waarden voor dichtheid van de kernel"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:176
+msgid "Example: Creating a Heatmap"
+msgstr "Voorbeeld: Maken van een Heatmap"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:177
+msgid ""
+"For the following example, we will use the ``airports`` vector point layer "
+"from the QGIS sample dataset (see :ref:`label_sampledata`). Another "
+"excellent QGIS tutorial on making heatmaps can be found at "
+"`http://qgistutorials.com "
+"<http://www.qgistutorials.com/en/docs/creating_heatmaps.html>`_."
+msgstr ""
+"Voor het volgende voorbeeld zullen we de punten vectorlaag ``airports`` van "
+"de voorbeeld gegevensset van QGIS (zie :ref:`label_sampledata`) gebruiken. "
+"Een andere goede handleiding voor QGIS voor het maken van heatmaps kan "
+"gevonden worden op `http://qgistutorials.com "
+"<http://http://www.qgistutorials.com/en/docs/3/creating_heatmaps.html>`_."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:182
+msgid "In Figure_Heatmap_data_processing_, the airports of Alaska are shown."
+msgstr ""
+"In Figure_Heatmap_data_processing_ worden de vliegvelden van Alaska "
+"weergegeven."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:189
+msgid "Airports of Alaska"
+msgstr "Vliegvelden van Alaska"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:192
+msgid "Open the Heatmap algorithm from the Interpolation group"
+msgstr "Open het algoritme Heatmap in de groep Interpolatie"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:193
+msgid ""
+"In the :guilabel:`Point layer` |selectString| field, select ``airports`` "
+"from the list of point layers loaded in the current project."
+msgstr ""
+"Selecteer, voor het veld :guilabel:`Puntenlaag` |selectString|, ``airports``"
+" uit de lijst van geladen puntlagen in het huidige project."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:195
+msgid "Change the :guilabel:`Radius` to ``1000000`` meters."
+msgstr "Wijzig het veld :guilabel:`Straal` naar ``1000000`` meters."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:196
+msgid ""
+"Change the :guilabel:`Pixel size X` to ``1000``. The :guilabel:`Pixel size "
+"Y`, :guilabel:`Rows` and :guilabel:`Columns` will be automatically updated."
+msgstr ""
+"Wijzig de :guilabel:`Grootte pixel X` naar ``1000``. De :guilabel:`Grootte "
+"pixel Y`, :guilabel:`Rijen` en :guilabel:`Kolommen` worden automatisch "
+"bijgewerkt."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:198
+msgid ""
+"Click on :guilabel:`Run` to create and load the airports heatmap (see "
+"Figure_Heatmap_created_processing_)."
+msgstr ""
+"Klik op :guilabel:`Uitvoeren` om de heatmap voor vliegvelden te maken en te "
+"laden (zie Figure_Heatmap_created_processing_)."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:206
+msgid "The Heatmap Dialog"
+msgstr "Het dialoogvenster Heatmap"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:208
+msgid ""
+"QGIS will generate the heatmap and add the results to your map window. By "
+"default, the heatmap is shaded in greyscale, with lighter areas showing "
+"higher concentrations of airports. The heatmap can now be styled in QGIS to "
+"improve its appearance."
+msgstr ""
+"QGIS zal de heatmap maken en het resultaat toevoegen aan het kaartvenster. "
+"Standaard wordt de heatmap weergegeven in grijstinten, waarbij lichtere "
+"vlakken een hogere concentratie van vliegvelden weergeven. De heatmap kan nu"
+" in QGIS een stijl worden gegeven om de weergave te verbeteren."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:217
+msgid "The heatmap after loading looks like a grey surface"
+msgstr "De heatmap ziet er na het laden uit als een grijs vlak"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:220
+msgid ""
+"Open the properties dialog of the ``heatmap_airports`` layer (select the "
+"layer ``heatmap_airports``, open the context menu with the right mouse "
+"button and select :guilabel:`Properties`)."
+msgstr ""
+"Open het dialoogvenster Eigenschappen voor de laag ``heatmap_airports`` "
+"(selecteer de laag ``heatmap_airports``, druk op de rechter muisknop en "
+"selecteer in het menu :menuselection:`Eigenschappen`)."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:223
+msgid "Select the :guilabel:`Symbology` tab."
+msgstr "Selecteer de tab :guilabel:`Symbologie`."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:224
+msgid ""
+"Change the :guilabel:`Render type` |selectString| to 'Singleband "
+"pseudocolor'."
+msgstr ""
+"Wijzig het :guilabel:`Rendertype` |selectString| naar 'Enkelbands "
+"pseudokleur'."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:225
+msgid ""
+"Select a suitable :guilabel:`Color map` |selectString|, for instance "
+"``YlOrRed``."
+msgstr ""
+"Selecteer een passend :guilabel:`Kleurverloop` |selectString| bijvoorbeeld "
+"``YIOrRd``."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:226
+msgid "Click the :guilabel:`Classify` button."
+msgstr "Klik op de knop :guilabel:`Classificeren`."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:227
+msgid "Press :guilabel:`OK` to update the layer."
+msgstr "Druk op :guilabel:`OK` om de laag bij te werken."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:229
+msgid "The final result is shown in Figure_Heatmap_styled_processing_."
+msgstr ""
+"Het uiteindelijke resultaat wordt getoond in "
+"Figure_Heatmap_styled_processing_."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:236
+msgid "Styled heatmap of airports of Alaska"
+msgstr "Opgemaakte Heatmap van vliegvelden van Alaska"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:244
+msgid "IDW Interpolation"
+msgstr "IDW-interpolatie"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:245
+msgid ""
+"Generates an Inverse Distance Weighted (IDW) interpolation of a point vector"
+" layer."
+msgstr ""
+"Maakt een Inverse Distance Weighted (IDW) interpolatie van een punten "
+"vectorlaag."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:247
+msgid ""
+"Sample points are weighted during interpolation such that the influence of "
+"one point relative to another declines with distance from the unknown point "
+"you want to create."
+msgstr ""
+"Monsterpunten worden gewogen gedurende het interpoleren zodat de invloed van"
+" één punt relatief ten opzichte van een ander vermindert met de afstand "
+"vanaf het onbekende punt dat u wilt maken."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:250
+msgid ""
+"The IDW interpolation method also has some disadvantages: the quality of the"
+" interpolation result can decrease, if the distribution of sample data "
+"points is uneven."
+msgstr ""
+"De methode IDW-interpolatie heeft ook enkele nadelen: de kwaliteit van het "
+"resultaat van de interpolatie kan minder worden als de verdeling van de "
+"monsterpunten van gegevens oneven is."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:253
+msgid ""
+"Furthermore, maximum and minimum values in the interpolated surface can only"
+" occur at sample data points."
+msgstr ""
+"Verder zouden maximum en minimum waarden in het geïnterpoleerde oppervlak "
+"alleen voor kunnen komen op monsterpunten van de gegevens."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:269
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:387
+msgid "**Input layers(s)**"
+msgstr "**Invoerlaag(lagen)**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:270
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:388
+msgid "``INTERPOLATION_DATA``"
+msgstr "``INTERPOLATION_DATA``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:271
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:389
+msgid "[string]"
+msgstr "[tekenreeks]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:272
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:390
+msgid ""
+"Vector layer(s) and field(s) to use for the interpolation, coded in a string"
+" (see the ``ParameterInterpolationData`` class in "
+":source:`InterpolationWidgets "
+"<python/plugins/processing/algs/qgis/ui/InterpolationWidgets.py>` for more "
+"details)."
+msgstr ""
+"Vectorlaag(-lagen) en veld(en) om te gebruiken voor de interpolatie, "
+"gecodeerd in een tekenreeks (bekijk de klasse ``ParameterInterpolationData``"
+" in :source:`InterpolationWidgets "
+"<python/plugins/processing/algs/qgis/ui/InterpolationWidgets.py>` voor meer "
+"details)."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:277
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:395
+msgid ""
+"The following GUI elements are provided to compose the interpolation data "
+"string:"
+msgstr ""
+"De volgende elementen van de GUI worden verschaft om de tekenreeks met "
+"gegevens voor de interpolatie samen te stellen:"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:280
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:398
+msgid "**Vector layer** [vector: any]"
+msgstr "**Vectorlaag** [vector: elke]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:281
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:399
+msgid ""
+"**Interpolation attribute** [tablefield: numeric]: Attribute to use in the "
+"interpolation"
+msgstr ""
+"**Interpolatie attribuut** [tabelveld: numeriek]: Attribuut om te gebruiken "
+"in de interpolatie"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:283
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:401
+msgid ""
+"**Use Z-coordinate for interpolation** [boolean]: Uses the layer's stored Z "
+"values (Default: False)"
+msgstr ""
+"**Z-coördinaat gebruiken voor interpolatie** [Booleaanse waarde]: Gebruikt "
+"de in de laag opgeslagen Z-waarden (Standaard: False)"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:286
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:404
+msgid "For each of the added layer-field combinations, a type can be chosen:"
+msgstr ""
+"Voor elk van de toegevoegde combinaties laag-veld kan een type worden "
+"gekozen:"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:289
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:407
+msgid ":guilabel:`Points`"
+msgstr ":guilabel:`Punten`"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:290
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:408
+msgid ":guilabel:`Structured lines`"
+msgstr ":guilabel:`Gestructureerde lijnen`"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:291
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:409
+msgid ":guilabel:`Break lines`"
+msgstr ":guilabel:`Afgebroken lijnen`"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:293
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:411
+msgid ""
+"In the string, the layer-field elements are separated by ``'::|::'``. The "
+"sub-elements of the layer-field elements are separated by ``'::~::'``."
+msgstr ""
+"In de tekenreeks worden de elementen laag-veld gescheiden door ``'::|::'``. "
+"De sub-elementen van de elementen laag-veld worden gescheiden door "
+"``'::~::'``."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:297
+msgid "**Distance coefficient P**"
+msgstr "**Afstandscoëfficiënt P**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:298
+msgid "``DISTANCE_COEFFICIENT``"
+msgstr "``DISTANCE_COEFFICIENT``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:301
+msgid "Default: 2.0"
+msgstr "Standaard: 2.0"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:302
+msgid ""
+"Sets the distance coefficient for the interpolation. Minimum: 0.0, maximum: "
+"100.0."
+msgstr ""
+"Stelt de afstandscoëfficiënt in voor de interpolatie. Minimum: 0.0, maximum:"
+" 100.0."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:304
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:425
+msgid "**Extent (xmin, xmax, ymin, ymax)**"
+msgstr "**Bereik (xmin, xmax, ymin, ymax)**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:305
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:426
+msgid "``EXTENT``"
+msgstr "``EXTENT``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:306
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:427
+msgid "[extent]"
+msgstr "[bereik]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:307
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:428
+msgid ""
+"Extent of the output raster layer. You have to declare the output extent by "
+"either choosing it from the map canvas, selecting it from another layer or "
+"type it manually."
+msgstr ""
+"Bereik van de uitvoer rasterlaag. U dient het bereik voor de uitvoer op te "
+"geven ofwel door het te kiezen vanuit het kaartvenster, het uit een andere "
+"laag te selecteren of het handmatig in te typen."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:329
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:354
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:450
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:486
+msgid "**Interpolated**"
+msgstr "**Geïnterpoleerd**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:334
+msgid "Raster layer of interpolated values. One of:"
+msgstr "Rasterlaag met geïnterpoleerde waarden. Één van:"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:357
+msgid "Raster layer of interpolated values"
+msgstr "Rasterlaag met geïnterpoleerde waarden"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:363
+msgid "TIN Interpolation"
+msgstr "TIN-interpolatie"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:364
+msgid ""
+"Generates a Triangulated Irregular Network (TIN) interpolation of a point "
+"vector layer."
+msgstr ""
+"Maakt een Triangulated Irregular Network (TIN) interpolatie van een punten "
+"vectorlaag."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:366
+msgid ""
+"With the TIN method you can create a surface formed by triangles of nearest "
+"neighbor points. To do this, circumcircles around selected sample points are"
+" created and their intersections are connected to a network of non "
+"overlapping and as compact as possible triangles. The resulting surfaces are"
+" not smooth."
+msgstr ""
+"Met de methode TIN kunt u een oppervlak maken dat wordt gevormd door "
+"driehoeken van dichtstbij gelegen punten. Omgeschreven cirkels worden rondom"
+" geselecteerde monsterpunten gemaakt om dit te doen en hun kruisingen worden"
+" verbonden met een netwerk van niet-overlappende en zo compact mogelijke "
+"driehoeken. De resulterende oppervlakten zijn niet afgevlakt."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:371
+msgid ""
+"The algorithm creates both the raster layer of the interpolated values and "
+"the vector line layer with the triangulation boundaries."
+msgstr ""
+"Het algoritme maakt zowel de rasterlaag met de geïnterpoleerde waarden als "
+"de vector lijnenlaag met de grenzen van de driehoeken."
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:415
+msgid "**Interpolation method**"
+msgstr "**Interpolatie methode**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:416
+msgid "``METHOD``"
+msgstr "``METHOD``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:419
+msgid "Default: 0"
+msgstr "Standaard: 0"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:420
+msgid "Set the interpolation method to be used. One of:"
+msgstr "De te gebruiken methode voor interpolatie instellen. Één van:"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:422
+msgid ":guilabel:`Linear`"
+msgstr ":guilabel:`Lineair`"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:423
+msgid ":guilabel:`Clough-Toucher (cubic)`"
+msgstr ":guilabel:`Clough-Toucher (kubisch)`"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:455
+msgid "The output TIN interpolation as a raster layer. One of:"
+msgstr "De uitvoer TIN-interpolatie als een rasterlaag. Één van:"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:461
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:490
+msgid "**Triangulation**"
+msgstr "**Triangulatie**"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:462
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:491
+msgid "``TRIANGULATION``"
+msgstr "``TRIANGULATION``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:463
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:492
+msgid "[vector: line]"
+msgstr "[vector: lijn]"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:465
+msgid "Default: ``[Skip output]``"
+msgstr "Standaard: ``[Uitvoer overslaan]``"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:466
+msgid "The output TIN as a vector layer. One of:"
+msgstr "De uitvoer TIN als een vectorlaag. Één van:"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:468
+msgid "Skip Output"
+msgstr "Uitvoer overslaan"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:469
+msgid "Create Temporary Layer (``TEMPORARY_OUTPUT``)"
+msgstr "Tijdelijke laag maken (``TEMPORARY_OUTPUT``)"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:471
+msgid "Save to Geopackage..."
+msgstr "Opslaan naar GeoPackage…"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:472
+msgid "Save to PostGIS Table"
+msgstr "Opslaan als tabel voor PostGIS"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:489
+msgid "The output TIN interpolation as a raster layer"
+msgstr "De uitvoer TIN-interpolatie als een rasterlaag"
+
+#: ../../source/docs/user_manual/processing_algs/qgis/interpolation.rst:493
+msgid "The output TIN as a vector layer."
+msgstr "De uitvoer TIN als een vectorlaag"
+
+#~ msgid "Default: *300*"
+#~ msgstr "Standaard: *300*"
+
+#~ msgid "``Point layer`` [vector: point]"
+#~ msgstr "``Puntenlaag`` [vector: punt]"
+
+#~ msgid "Point vector layer to use for the heatmap."
+#~ msgstr "Punten vectorlaag om te gebruiken voor de heatmap."
+
+#~ msgid "``Radius`` [number]"
+#~ msgstr "``Radius`` [getal]"
+
+#~ msgid "Default: *100.0*"
+#~ msgstr "Standaard: *100.0*"
+
+#~ msgid "``Output raster size`` [number]"
+#~ msgstr "``Grootte uitvoerraster`` [getal]"
+
+#~ msgid ""
+#~ "Allows to add the output heatmap raster layer size by specifying the rows "
+#~ "and columns **or** the X and Y pixel size."
+#~ msgstr ""
+#~ "Maakt het mogelijk de grootte van de uitvoer heatmap rasterlaag toe te "
+#~ "voegen door de rijen en kolommen te specificeren **of** de pixelgrootte van "
+#~ "X en Y."
+
+#~ msgid ""
+#~ "Increasing the number of rows or columns will decrease the cell size and "
+#~ "increase the file size of the output file. At the same time, the values in "
+#~ "``Rows`` and ``Columns`` will also be updated, so doubling the number of "
+#~ "rows will automatically double the number of columns and the cell sizes will"
+#~ " also be halved. The extent of the output raster will remain the same."
+#~ msgstr ""
+#~ "Vergroten van het aantal rijen of kolommen zal de celgrootte verkleinen en "
+#~ "de grootte van het uitvoerbestand verhogen. Tegelijkertijd zullen de waarden"
+#~ " van in ``Rijen`` en ``Kolommen`` worden bijgewerkt, dus het verdubbelen van"
+#~ " het aantal rijen zal automatisch het aantal kolommen verdubbelen en de "
+#~ "celgrootten zullen ook worden gehalveerd. Het bereik van het uitvoerraster "
+#~ "zal hetzelfde blijven."
+
+#~ msgid "``Number of rows`` [number]"
+#~ msgstr "``Aantal rijen`` [getal]"
+
+#~ msgid "Total number of rows of the output raster layer."
+#~ msgstr "Totaal aantal rijen voor de uitvoer rasterlaag."
+
+#~ msgid "``Number of columns`` [number]"
+#~ msgstr "``Aantal kolommen`` [getal]"
+
+#~ msgid "Total number of columns of the output raster layer."
+#~ msgstr "Totaal aantal kolommen voor de uitvoer rasterlaag."
+
+#~ msgid "``Pixel Size X`` [number]"
+#~ msgstr "``Pixelgrootte X`` [getal]"
+
+#~ msgid "Horizontal resolution of each pixel in output raster, in layer units."
+#~ msgstr ""
+#~ "Horizontale resolutie van elke pixel in uitvoerraster, in laageenheden."
+
+#~ msgid "``Pixel Size Y`` [number]"
+#~ msgstr "``Pixelgrootte Y`` [getal]"
+
+#~ msgid "Vertical resolution of each pixel in output raster, in layer units."
+#~ msgstr "Verticale resolutie van elke pixel in uitvoerraster, in laageenheden."
+
+#~ msgid "``Radius from field`` [tablefield: numeric]"
+#~ msgstr "``Radius uit veld`` [tabelveld: numeriek]"
+
+#~ msgid "``Weight from field`` [tablefield: numeric]"
+#~ msgstr "``Gewogen veld`` [tabelveld: numeriek]"
+
+#~ msgid "``Kernel shape`` [enumeration]"
+#~ msgstr "``Vorm kernel`` [enumeratie]"
+
+#~ msgid "``Decay ratio (Triangular kernels only)`` [number]"
+#~ msgstr "``Ratio verval (Alleen triangulaire kernels)`` [getal]"
+
+#~ msgid "``Output value scaling`` [enumeration]"
+#~ msgstr "``Waarde schaal uitvoer`` [enumeratie]"
+
+#~ msgid "Allow to change the values of the output heatmap raster."
+#~ msgstr ""
+#~ "Maakt het mogelijk de waarden voor het uitvoerraster voor de heatmap te "
+#~ "wijzigen."
+
+#~ msgid "Options:"
+#~ msgstr "Opties:"
+
+#~ msgid "``Heatmap`` [raster]"
+#~ msgstr "``Heatmap`` [raster]"
+
+#~ msgid "Raster layer with kernel density values."
+#~ msgstr "Rasterlaag met waarden voor dichtheid van de kernel."
+
+#~ msgid "``Vector layer`` [vector: point]"
+#~ msgstr "``Vectorlaag`` [vector: punt]"
+
+#~ msgid "Point vector layer to use for the interpolation."
+#~ msgstr "Punten vectorlaag om te gebruiken voor de interpolatie."
+
+#~ msgid "``Interpolation attribute`` [tablefield: numeric]"
+#~ msgstr "``Interpolatie attribuut`` [tabelveld: numeriek]"
+
+#~ msgid ""
+#~ "Field used for the interpolation. Once you have chosen the layer and the "
+#~ "field click on the |signPlus| button to add the layer and the field to the "
+#~ "list. Click on the |signMinus| button to remove the layer from the list. It "
+#~ "is possible to insert lines or polygons as constraints for the "
+#~ "interpolation, by specifying either ``Points``, ``Structure lines`` or "
+#~ "``Break lines`` in the ``Type`` column of the table."
+#~ msgstr ""
+#~ "Veld gebruikt voor de interpolatie. Als u eenmaal de laag en het veld hebt "
+#~ "gekozen, klik dan op de knop |signPlus| om de laag en het veld toe te voegen"
+#~ " aan de lijst. Klik op de knop |signMinus| om de laag uit de lijst te "
+#~ "verwijderen. Het is mogelijk lijnen of polygonen als beperkingen in te "
+#~ "voegen voor de interpolatie, door ``Punten``, ``Lijnen structureren`` of "
+#~ "``Lijnen opbreken`` te specificeren in de  kolom ``Type`` van de tabel."
+
+#~ msgid "``Use Z-coordinate for interpolation`` [boolean]"
+#~ msgstr "``Z-coördinaat voor interpolatie gebruiken`` [boolean]"
+
+#~ msgid "Uses the layer's stored Z values."
+#~ msgstr "De in de laag opgeslagen Z-waarden gebruiken."
+
+#~ msgid "``Distance coefficient Power`` [number]"
+#~ msgstr "``Afstandscoëfficiënt P`` [getal]"
+
+#~ msgid "Sets the distance coefficient for the interpolation."
+#~ msgstr "Stelt de afstandscoëfficiënt in voor de interpolatie."
+
+#~ msgid "Default: *2.0*"
+#~ msgstr "Standaard: *2.0*"
+
+#~ msgid "``Extent (xmin, xmax, ymin, ymax)`` [extent]"
+#~ msgstr "``Bereik (xmin, xmax, ymin, ymax)`` [bereik]"
+
+#~ msgid ""
+#~ "Allows to set the size of the interpolated output raster layer by specifying"
+#~ " the rows and columns **or** the X and Y pixel size."
+#~ msgstr ""
+#~ "Maakt het mogelijk de grootte van de geïnterpoleerde uitvoer rasterlaag in "
+#~ "te stellen door de rijen en kolommen te specificeren **of** de pixelgrootte "
+#~ "van X en Y."
+
+#~ msgid ""
+#~ "Increasing the number of rows or columns will decrease the cell size. "
+#~ "Similarly, the values in ``Rows`` and ``Columns`` will be updated when one "
+#~ "of them are changed."
+#~ msgstr ""
+#~ "Verhogen van het aantal rijen of kolommen zal de celgrootte verlagen. "
+#~ "Soortgelijk zullen de waarden in ``Rijen`` en ``Kolommen`` worden bijgewerkt"
+#~ " als één ervan wordt gewijzigd."
+
+#~ msgid "``Interpolated`` [raster]"
+#~ msgstr "``Geïnterpoleerd`` [raster]"
+
+#~ msgid "Raster layer of interpolated values."
+#~ msgstr "Rasterlaag met geïnterpoleerde waarden."
+
+#~ msgid ""
+#~ "Field used for the interpolation. Once you have chosen the layer and the "
+#~ "field click on the |signPlus| button to add the layer and the field to the "
+#~ "list. Click on the |signMinus| button to remove the layer from the list. It "
+#~ "is possible to insert lines or polygons as constraints for the "
+#~ "triangulation, by specifying either ``Points``, ``Structure lines`` or "
+#~ "``Break lines`` in the ``Type`` column of the table."
+#~ msgstr ""
+#~ "Veld gebruikt voor de interpolatie. Als u eenmaal de laag en het veld hebt "
+#~ "gekozen, klik dan op de knop |signPlus| om de laag en het veld toe te voegen"
+#~ " aan de lijst. Klik op de knop |signMinus| om de laag uit de lijst te "
+#~ "verwijderen. Het is mogelijk lijnen of polygonen als beperkingen in te "
+#~ "voegen voor de triangulatie, door ``Punten``, ``Lijnen structureren`` of "
+#~ "``Lijnen opbreken`` te specificeren in de  kolom ``Type`` van de tabel."
+
+#~ msgid "``Interpolation method`` [enumeration]"
+#~ msgstr "``Interpolatiemethode`` [enumeratie]"
+
+#~ msgid "There are two different choices:"
+#~ msgstr "er zijn twee verschillende keuzes:"
+
+#~ msgid "0 --- Linear"
+#~ msgstr "0 --- Lineair"
+
+#~ msgid "1 --- Clough-Toucher (cubic)"
+#~ msgstr "1 --- Clough-Toucher (kubisch)"
+
+#~ msgid "Raster layer of triangulated values."
+#~ msgstr "Rasterlaag met getrianguleerde waarden."
+
+#~ msgid "``Triangulation`` [vector: line]"
+#~ msgstr "``Triangulatie`` [vector: lijn]"
+
+#~ msgid "Triangulation lines as vector layer."
+#~ msgstr "Triangulatielijnen als vectorlaag."

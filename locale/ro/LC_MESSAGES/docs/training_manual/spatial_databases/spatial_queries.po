@@ -1,0 +1,261 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# 
+# Translators:
+# Sorin Călinică <scalinica@gmail.com>, 2015-2016
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-28 10:31+0100\n"
+"PO-Revision-Date: 2017-09-23 19:39+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"Language-Team: Romanian (http://www.transifex.com/qgis/qgis-documentation/language/ro/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: ro\n"
+"Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:6
+msgid "|LS| Spatial Queries"
+msgstr "|LS| Interogări Spaţiale"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:8
+msgid ""
+"Spatial queries are no different from other database queries. You can use "
+"the geometry column like any other database column. With the installation of"
+" PostGIS in our database, we have additional functions to query our "
+"database."
+msgstr "Interogările spațiale nu sunt diferite de alte interogări de baze de date. Puteți utiliza coloana de geometrie la fel ca pe orice altă coloană de baze de date. O dată cu instalarea PostGIS în baza noastră de date, avem la dispoziție funcții suplimentare pentru a interoga baza de date."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:12
+msgid ""
+"**The goal for this lesson:** To see how spatial functions are implemented "
+"similarly to \"normal\" non-spatial functions."
+msgstr "**Scopul acestei lecții:** De a afla cum sunt implementate funcțiile spațiale similare cu funcțiile non-spațiale \"normale\"."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:18
+msgid "Spatial Operators"
+msgstr "Operatori Spaţiali"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:20
+msgid ""
+"When you want to know which points are within a distance of 2 degrees to a "
+"point(X,Y) you can do this with:"
+msgstr "Când doriți să știți care puncte se află la o distanță de 2 grade față de un punct (X,Y), puteți proceda astfel cu:"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:29
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:64
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:149
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:189
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:290
+msgid "Result:"
+msgstr "Rezultat:"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:38
+msgid ""
+"the_geom value above was truncated for space on this page. If you want to "
+"see the point in human-readable coordinates, try something similar to what "
+"you did in the section \"View a point as WKT\", above."
+msgstr "Valoarea the_geom de mai sus a fost trunchiată datorită spațierii de pe această pagină. În cazul în care doriți să vedeți punctul în coordonate clare, încercați ceva similar cu ceea ce ați efectuat în secțiunea \"Vizualizează un punct sub forma WKT\", de mai sus."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:42
+msgid ""
+"How do we know that the query above returns all the points within 2 "
+"*degrees*? Why not 2 *meters*? Or any other unit, for that matter?"
+msgstr "De unde știm că interogarea de mai sus returnează toate punctele incluse în cadrul a 2 *grade*? De ce nu 2 *metri*? Sau oricare altă unitate?"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:45
+msgid ":ref:`Check your results <spatial-queries-1>`"
+msgstr ":ref:`Check your results <spatial-queries-1>`"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:50
+msgid "Spatial Indexes"
+msgstr "Indecși Spațiali"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:52
+msgid ""
+"We also can define spatial indexes. A spatial index makes your spatial "
+"queries much faster. To create a spatial index on the geometry column use:"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:90
+msgid "|TY| |moderate|"
+msgstr "|TY| |moderate|"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:91
+msgid "Modify the cities table so its geometry column is spatially indexed."
+msgstr "Modificați tabelul orașelor, astfel încât coloana de geometrie să fie indexată spațial."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:93
+msgid ":ref:`Check your results <spatial-queries-2>`"
+msgstr ":ref:`Check your results <spatial-queries-2>`"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:97
+msgid "PostGIS Spatial Functions Demo"
+msgstr "Demo Funcții Spațiale PostGIS"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:99
+msgid ""
+"In order to demo PostGIS spatial functions, we'll create a new database "
+"containing some (fictional) data."
+msgstr "În scopul demonstrării funcțiilor spațiale PostGIS , vom crea o nouă bază de date care conține câteva date (fictive)."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:102
+msgid "To start, create a new database (exit the psql shell first):"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:108
+msgid "Remember to install the postgis extensions:"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:114
+msgid ""
+"Next, import the data provided in the :kbd:`exercise_data/postgis/` "
+"directory. Refer back to the previous lesson for instructions, but remember "
+"that you'll need to create a new PostGIS connection to the new database. You"
+" can import from the terminal or via DB Manager. Import the files into the "
+"following database tables:"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:120
+msgid ":kbd:`points.shp` into :kbd:`building`"
+msgstr ":kbd:`points.shp` în :kbd:`building`"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:121
+msgid ":kbd:`lines.shp` into :kbd:`road`"
+msgstr ":kbd:`lines.shp` în :kbd:`road`"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:122
+msgid ":kbd:`polygons.shp` into :kbd:`region`"
+msgstr ":kbd:`polygons.shp` în :kbd:`region`"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:124
+msgid ""
+"Load these three database layers into QGIS via the :guilabel:`Add PostGIS "
+"Layers` dialog, as usual. When you open their attribute tables, you'll note "
+"that they have both an :kbd:`id` field and a :kbd:`gid` field created by the"
+" PostGIS import."
+msgstr "Încărcați aceste trei straturi ale bazei de date în QGIS ca de obicei, prin intermediul :guilabel:`Adăugării Straturilor PostGIS`. Atunci când deschideți tabelele lor cu atribute, veți observa că ambele dețin atât un câmp :kbd:`id` cât și unul :kbd:`gid`, create în urma importului PostGIS. "
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:129
+msgid ""
+"Now that the tables are imported, we can use PostGIS to query the data. Go "
+"back to your terminal (command line) and enter the psql prompt by running::"
+msgstr "Acum, că tabelele sunt importate, putem folosi PostGIS pentru a interoga datele. Mergeți înapoi în ferestra terminalului (linia de comandă) și introduceți promptul psql astfel::"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:134
+msgid ""
+"We'll demo some of these select statements by creating views from them, so "
+"that you can open them in QGIS and see the results."
+msgstr "Vom demonstra unele dintre aceste expresii de selectare prin crearea unor vederi, pentru a le deschide apoi în QGIS și pentru a le observa rezultatele."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:138
+msgid "Select by location"
+msgstr "Selectare după locație"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:140
+msgid "Get all the buildings in the KwaZulu region:"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:162
+msgid "Or, if we create a view from it:"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:172
+msgid "Add the view as a layer and view it in QGIS:"
+msgstr "Adăugați vederea sub formă de strat, apoi vizualizați-o în QGIS:"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:178
+msgid "Select neighbors"
+msgstr "Selectați vecinii"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:180
+msgid "Show a list of all the names of regions adjoining the Hokkaido region:"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:200
+msgid "As a view:"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:210
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:255
+msgid "In QGIS:"
+msgstr "În QGIS:"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:215
+msgid ""
+"Note the missing region (Queensland). This may be due to a topology error. "
+"Artifacts such as this can alert us to potential problems in the data. To "
+"solve this enigma without getting caught up in the anomalies the data may "
+"have, we could use a buffer intersect instead:"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:227
+msgid "This creates a buffer of 100 meters around the region Hokkaido."
+msgstr "Aceasta va crea o zonă tampon de 100 de metri în jurul regiunii Hokkaido."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:229
+msgid "The darker area is the buffer:"
+msgstr "Zona mai închisă este tamponul:"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:234
+msgid "Select using the buffer:"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:249
+msgid ""
+"In this query, the original buffer view is used as any other table would be."
+" It is given the alias :kbd:`a`, and its geometry field, :kbd:`a.the_geom`, "
+"is used to select any polygon in the :kbd:`region` table (alias :kbd:`b`) "
+"that intersects it. However, Hokkaido itself is excluded from this select "
+"statement, because we don't want it; we only want the regions adjoining it."
+msgstr "În această interogare, vizualizarea originală a tamponului se face similar oricărui alt tabel. Acesta primește aliasul :kbd:`a` iar câmpul de geometrie :kbd:`a.the_geom`este folosit la selectarea oricărui poligon din tabela :kbd:`region` (alias :kbd:`b`) cu care se intersectează. Totuși, Hokkaido este exclusă din această expresie de selectare, nefiind dorită; vrem să obținem doar regiunile din vecinătate."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:260
+msgid ""
+"It is also possible to select all objects within a given distance, without "
+"the extra step of creating a buffer:"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:272
+msgid ""
+"This achieves the same result, without need for the interim buffer step:"
+msgstr "Prin aceasta se obține același rezultat, fără a fi necesar pasul tamponului intermediar:"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:279
+msgid "Select unique values"
+msgstr "Selectați valorile unice"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:281
+msgid ""
+"Show a list of unique town names for all buildings in the Queensland region:"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:303
+msgid "Further examples ..."
+msgstr "Trimiteri suplimentare"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:364
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:366
+msgid ""
+"You have seen how to query spatial objects using the new database functions "
+"from PostGIS."
+msgstr "Ați văzut cum se pot interoga obiectele spațiale, cu ajutorul noilor funcții de bază de date din PostGIS."
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:370
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:372
+msgid ""
+"Next we're going to investigate the structures of more complex geometries "
+"and how to create them using PostGIS."
+msgstr "Mai departe vom investiga structurile geometriilor complexe și cum să le creați cu ajutorul PostGIS."

@@ -1,0 +1,96 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# 
+# Translators:
+# Kwon.Yongchan <ruvyn@naver.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-04-07 15:33+0200\n"
+"PO-Revision-Date: 2019-04-07 13:47+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"Language-Team: Korean (http://www.transifex.com/qgis/qgis-documentation/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/training_manual/processing/solar.rst:8
+msgid "Planning a solar farm"
+msgstr "태양광 발전소 입지 계획"
+
+#: ../../source/docs/training_manual/processing/solar.rst:10
+msgid ""
+"Module contributed by Paolo Cavallini - `Faunalia "
+"<https://www.faunalia.eu>`_"
+msgstr ""
+
+#: ../../source/docs/training_manual/processing/solar.rst:12
+msgid ""
+"This chapter shows how to use several criteria to locate the areas suitable "
+"for installing a photovoltaic power station"
+msgstr "이 강의에서는 태양광 발전소 설치에 적합한 지역의 위치를 선정하는 몇몇 기준을 어떻게 활용하는지 배울 것입니다."
+
+#: ../../source/docs/training_manual/processing/solar.rst:14
+msgid "First of all, create an aspect map from DTM:"
+msgstr "먼저 DEM으로부터 향 맵을 생성해봅시다."
+
+#: ../../source/docs/training_manual/processing/solar.rst:16
+msgid ":menuselection:`GRASS --> r.aspect` [Data type: int; cell size:100]"
+msgstr "메뉴에서 :menuselection:`GRASS --> r.aspect` 를 선택하십시오. [데이터 유형은 정수, 셀 크기는 100]"
+
+#: ../../source/docs/training_manual/processing/solar.rst:18
+msgid ""
+"In GRASS, aspect is calculated in degrees, counterclockwise starting from "
+"East. To extract only South facing slopes (270 degrees +- 45), we can "
+"reclassify it:"
+msgstr "GRASS는 동쪽에서 시작해서 반시계방향으로, 도 단위로 향을 계산합니다. 남향 경사(270˚ ± 45˚)만을 추출하려면 다음과 같이 재분류하십시오."
+
+#: ../../source/docs/training_manual/processing/solar.rst:20
+msgid ":menuselection:`GRASS --> r.reclass`"
+msgstr "메뉴에서 :menuselection:`GRASS --> r.reclass` 를 선택한 다음,"
+
+#: ../../source/docs/training_manual/processing/solar.rst:22
+msgid "with the following rules::"
+msgstr "다음과 같이 설정합니다."
+
+#: ../../source/docs/training_manual/processing/solar.rst:27
+msgid ""
+"You can use the text file ``reclass_south.txt`` provided. Note that with "
+"these simple text files we can create also very complex reclassifications."
+msgstr "예제에 포함된 ``reclass_south.txt`` 텍스트 파일을 사용할 수 있습니다. 이런 단순한 텍스트 파일을 통해 매우 복잡한 재분류 작업도 수행할 수 있다는 사실을 기억하십시오."
+
+#: ../../source/docs/training_manual/processing/solar.rst:29
+msgid ""
+"We want to build a large farm, so we select only large (> 100 ha) contiguous"
+" areas:"
+msgstr "매우 넓은 발전소를 건설하려 하기 때문에, (100ha를 넘는) 인접 지역만을 선택할 것입니다."
+
+#: ../../source/docs/training_manual/processing/solar.rst:31
+msgid ":menuselection:`GRASS --> r.reclass.greater`"
+msgstr "메뉴에서 :menuselection:`GRASS --> r.reclass.greater` 를 선택합니다."
+
+#: ../../source/docs/training_manual/processing/solar.rst:33
+msgid "Finally, we convert to a vector:"
+msgstr "마지막으로 벡터로 변환해봅시다."
+
+#: ../../source/docs/training_manual/processing/solar.rst:35
+msgid ""
+":menuselection:`GRASS --> r.to.vect` [Feature type: area; Smooth corners: "
+"yes]"
+msgstr "메뉴에서 :menuselection:`GRASS --> r.to.vect` 를 선택하십시오. [피처 유형은 면적, 매끄러운 모서리(Smooth corner)를 선택]"
+
+#: ../../source/docs/training_manual/processing/solar.rst:37
+msgid ""
+"**Exercise for the reader**: repeat the analysis, replacing GRASS commands "
+"with analogous from other programs."
+msgstr "**사용자를 위한 실습 예제:** GRASS 명령어를 다른 프로그램들의 유사한 명령어로 바꿔 다시 분석을 수행하십시오."
+
+#~ msgid ""
+#~ "Module contributed by Paolo Cavallini - `Faunalia <http://www.faunalia.eu>`_"
+#~ msgstr ""

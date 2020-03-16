@@ -1,0 +1,290 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 3.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-11 14:48+0200\n"
+"PO-Revision-Date: 2019-04-07 13:51+0000\n"
+"Language-Team: Hindi (https://www.transifex.com/qgis/teams/6144/hi/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: hi\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:12
+msgid "Creating a Report"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:21
+msgid "What is?"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:23
+msgid ""
+"This section will help you set up an automatic report in QGIS. By definition"
+" a GIS report is a document containing information organized in a narrative,"
+" graphic, maps, or tabular form, prepared on ad hoc, periodic, recurring, "
+"regular, or as required basis. Reports may refer to specific periods, "
+"events, occurrences, or subjects, locations, and may be communicated or "
+"presented in oral or written form. The reports in QGIS will allow the users "
+"to output their GIS projects in a simple, quick and structured way."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:32
+msgid "Get started"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:34
+msgid ""
+":guilabel:`Reports` menu is an extension of Print Layout. This functionality"
+" can be found in :menuselection:`Project --> New Report` or inside of "
+":menuselection:`Project --> Layout Manager`."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:38
+msgid ""
+"In the :guilabel:`Layout Manager` dialog the report can be created through "
+":guilabel:`New from template` and select the dropdown option "
+":guilabel:`Empty Report` and hitting :guilabel:`Create...` button."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:42
+msgid ""
+"For this example, we use some administrative boundaries, populated places, "
+"ports and airports from dataset of `Natural Earth "
+"<https://www.naturalearthdata.com/downloads/>`_."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:51
+msgid ""
+"Using the :menuselection:`Project --> New Report` command, we then create a "
+"new blank report. Initially, there’s not much to look at – the dialog which "
+"is displayed looks much like the print layout designer, except for the new "
+":guilabel:`Report Organizer` panel shown on the left:"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:60
+msgid "Layout Report Workspace"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:62
+msgid ""
+"QGIS reports can consist of multiple, nested sections. In our new blank "
+"report we initially have only the main report section. The only options "
+"present for this report section is :guilabel:`Include report header` or "
+":guilabel:`Include report footer`. If we enable these options, the header "
+"will be included as the very first page (or pages… --- individual parts of "
+"reports can be multi-page if desired) in the report, and the footer would be"
+" the last page. Let’s go ahead and enable the header, and hit the "
+":guilabel:`Edit` button next to it:"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:75
+msgid ""
+"A few things happen as a result. Firstly, an edit pencil is now shown next "
+"to the :guilabel:`Report` section in the :guilabel:`Report Organizer`, "
+"indicating that the report section is currently being edited in the "
+"designer. We also see a new blank page shown in the designer itself, with "
+"the small :guilabel:`Report Header` title. In QGIS reports, every component "
+"of the report is made up of individual layouts. They can be created and "
+"modified using the exact same tools as are available for standard print "
+"layouts – so you can use any desired combination of labels, pictures, maps, "
+"tables, etc. Let’s add some items to our report header to demonstrate:"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:90
+msgid ""
+"We’ll also create a simple footer for the report, by checking the "
+":guilabel:`Include report footer` option and hitting :guilabel:`Edit`."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:98
+msgid ""
+"Before proceeding further, let’s export this report and see what we get. "
+"Exporting is done from the Report menu – in this case we select "
+":guilabel:`Export Report as PDF` to render the whole report to a PDF file. "
+"Here’s the not-very-impressive result – a two page PDF consisting of our "
+"header and footer:"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:109
+msgid ""
+"Let’s make things more interesting. By hitting the |signPlus| :sup:`Add "
+"Static Layout Section` button in the :guilabel:`Report Organizer`, we’re "
+"given a choice of new sections to add to our report."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:118
+msgid ""
+"There are two options: :guilabel:`Add Static Layout Section` and a "
+":guilabel:`Field Group Section`. The :guilabel:`Add Static Layout Section` "
+"is a single, static body layout. This can be used to embed static layouts "
+"mid-way through a report. Alternatively, a :guilabel:`Field Group Section` "
+"repeats its body layout for every feature in a layer. The features are "
+"sorted by the selected grouping feature (with an option for "
+"ascending/descending sort). If a field group section has child sections "
+"(e.g. another field group section with a different field, then only features"
+" with unique values for the group feature are iterated over. This allows "
+"nested reports with different information."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:129
+msgid ""
+"For now we’ll add a Field Group to our report. At its most basic level, you "
+"can think of a :guilabel:`Field Group Section` as the equivalent of a "
+":ref:`print atlas <atlas_generation>`. You select a layer to iterate over, "
+"and the report will insert a section for each feature found. Selecting the "
+"new :guilabel:`Field Group Section` reveals a number of new related "
+"settings:"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:140
+msgid ""
+"In this case we’ve setup our Field Group so that we iterate over all the "
+"states from the :guilabel:`Admin Level 1` layer, using the values from the "
+":guilabel:`adm1name` field. The same options for header and footer are "
+"present, together with a new option to include a :guilabel:`body` for this "
+"section. We’ll do that, and edit the body:"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:151
+msgid ""
+"We’ve setup this body with a map (set to follow the current report feature –"
+" just like how a map item in an atlas can follow the current atlas feature),"
+" and a label showing the state’s name. If we went ahead and exported our "
+"report now, we’d get something like this:"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:162
+msgid ""
+"First, the report header, then a page for each state, and finally the report"
+" footer. So more or less an atlas, but with a header and footer page. Let’s "
+"make things more interesting by adding a subsection to our state group. We "
+"do this by first selecting the state field group in the organizer, then "
+"hitting the |signPlus| :sup:`Field Group Section` button and adding a new "
+":guilabel:`Field Group Section`:"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:173
+msgid ""
+"When a :guilabel:`Field Group Section` is iterating over its features, it "
+"will automatically filter these features to match the feature attributes "
+"from its parent groups. In this case, the subsection we added will iterate "
+"over a :guilabel:`Populated Places` layer, including a body section for each"
+" place encountered. The magic here is that the :guilabel:`Populated Places` "
+"layer has an attribute named :guilabel:`adm1name`, tagging each place with "
+"the state it’s contained within (if you’re lucky your data will already be "
+"structured like this – if not, run the Processing :ref:`Join Attributes by "
+"Location <qgisjoinattributesbylocation>` algorithm and create your own "
+"field). When we export this report, QGIS will grab the first state from the "
+":guilabel:`Admin Level 1` layer, and then iterate over all the "
+":guilabel:`Populated Places` with a matching :guilabel:`adm1name` value. "
+"Here’s what we get:"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:191
+msgid ""
+"Here we created a basic body for the Populated Places group, including a map"
+" of the place and a table of some place attributes. So our report is now a "
+"report header, a page for each state followed by a page for every populated "
+"place within that state, and finally the report footer. If we were to add a "
+"header for the Populated Places group, it would be included just before "
+"listing the populated places for each state:"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:203
+msgid ""
+"Similarly, a footer for the Populated Places group would be inserted after "
+"the final place for each state is included."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:206
+msgid ""
+"In addition to nested subsections, subsections in a report can also be "
+"included consecutively. If we add a second subsection to the `Admin Level 1 "
+"group` for :guilabel:`Airports`, then our report will first list ALL the "
+"populated places for each state, followed by all the airports within that "
+"state, before proceeding to the next state. In this case our report would be"
+" structured like this:"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:217
+msgid "Report Output"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:219
+msgid ""
+"The key point here is that our :guilabel:`Airports group` is a subsection of"
+" the :guilabel:`Admin Level 1 group` – not the :guilabel:`Populated Places "
+"group`. Here’s what our report could look like now:"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:228
+msgid ""
+"Combining nested and consecutive sections, together with section headers and"
+" footers allows for tons of flexibility. For instance, in the below report "
+"we add another field group as a child of the main report for the "
+":guilabel`Ports` layer. Now, after listing the states together with their "
+"populated places and airports, we’ll get a summary list of all the ports in "
+"the region:"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:239
+msgid "This results in the last part of our report exporting as:"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:245
+msgid "Export settings"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:247
+msgid ""
+"Whenever you export a report, there is a selection of export settings QGIS "
+"needs to check in order to return the most appropriate output. As you can "
+"start to imagine, reports in QGIS are extremely powerful and flexible!"
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:251
+msgid ""
+"When you are exporting a report to the available formats please choose the "
+"options (Print, SVG, Image, PDF) that have the labels saying "
+":guilabel:`Export Report as...` otherwise you will print the current active "
+"map."
+msgstr ""
+
+#: ../../source/docs/user_manual/print_composer/create_reports.rst:258
+msgid ""
+"The current information was adapted from the blog of North Road, `Exploring "
+"Reports in QGIS 3.0 - the Ultimate Guide! <https://north-road.com/2018/01/23"
+"/exploring-reports-in-qgis-3-0-the-ultimate-guide>`_"
+msgstr ""
+
+#~ msgid ""
+#~ "There are two options: :guilabel:`Add Static Layout Section` and a "
+#~ ":guilabel:`Field Group Section`.  The :guilabel:`Add Static Layout Section` "
+#~ "is a single, static body layout. This can be used to embed static layouts "
+#~ "mid-way through a report. Alternatively, a :guilabel:`Field Group Section` "
+#~ "repeats its body layout for every feature in a layer. The features are "
+#~ "sorted by the selected grouping feature (with an option for "
+#~ "ascending/descending sort). If a field group section has child sections "
+#~ "(e.g. another field group section with a different field, then only features"
+#~ " with unique values for the group feature are iterated over. This allows "
+#~ "nested reports with different information."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For now we’ll add a Field Group to our report. At its most basic level, you "
+#~ "can think of a :guilabel:`Field Group Section` as the equivalent of a "
+#~ ":ref:`print atlas <atlas_generation>`. You select a layer to iterate over, "
+#~ "and the report will insert a section for each feature found. Selecting the "
+#~ "new ::guilabel:`Field Group Section` section reveals a number of new related"
+#~ " settings:"
+#~ msgstr ""

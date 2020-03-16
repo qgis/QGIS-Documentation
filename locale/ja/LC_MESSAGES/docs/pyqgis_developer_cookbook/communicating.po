@@ -1,0 +1,182 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014, QGIS project
+# This file is distributed under the same license as the QGIS Documentation
+# Project package.
+# 
+# Translators:
+# Choro <u.ko.kubot@gmail.com>, 2014
+# fairtommy <fairtommy@gmail.com>, 2017
+# Shu Higashi <higa432@gmail.com>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-04-07 15:33+0200\n"
+"PO-Revision-Date: 2019-04-07 13:48+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
+"Language-Team: Japanese (http://www.transifex.com/qgis/qgis-documentation/language/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.1\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:11
+msgid "Communicating with the user"
+msgstr "ユーザーとのコミュニケーション"
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:16
+msgid ""
+"This section shows some methods and elements that should be used to "
+"communicate with the user, in order to keep consistency in the User "
+"Interface."
+msgstr "このセクションでは、ユーザーインターフェイスにおいて一貫性を維持するためにユーザーとのコミュニケーション時に使うべき方法と要素をいくつか示します。"
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:20
+msgid "Showing messages. The QgsMessageBar class"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:22
+msgid ""
+"Using message boxes can be a bad idea from a user experience point of view. "
+"For showing a small info line or a warning/error messages, the QGIS message "
+"bar is usually a better option."
+msgstr "メッセージボックスを使用するのはユーザー体験の見地からは良いアイデアではありません。警告/エラー用に小さな情報行を表示するには、たいていQGIS メッセージバーが良い選択肢です。"
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:26
+msgid ""
+"Using the reference to the QGIS interface object, you can show a message in "
+"the message bar with the following code"
+msgstr "QGIS インターフェイスオブジェクトへの参照を利用すると、次のようなコードでメッセージバー内にメッセージを表示できます。"
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:39
+msgid "QGIS Message bar"
+msgstr "QGIS メッセージバー"
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:41
+msgid "You can set a duration to show it for a limited time"
+msgstr "表示期間を設定して時間を限定することができます。"
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:52
+msgid "QGIS Message bar with timer"
+msgstr "タイマー付きQGIS メッセージバー"
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:54
+msgid ""
+"The examples above show an error bar, but the ``level`` parameter can be "
+"used to creating warning messages or info messages, using the "
+":class:`Qgis.MessageLevel <qgis.core.Qgis.MessageLevel>` enumeration. You "
+"can use up to 4 different levels:"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:58
+msgid "Info"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:59
+msgid "Warning"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:60
+msgid "Critical"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:61
+msgid "Success"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:67
+msgid "QGIS Message bar (info)"
+msgstr "QGIS メッセージバー (お知らせ)"
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:69
+msgid ""
+"Widgets can be added to the message bar, like for instance a button to show "
+"more info"
+msgstr "ウィジェットは、例えば詳細情報の表示用ボタンのように、メッセージバーに追加することができます"
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:89
+msgid "QGIS Message bar with a button"
+msgstr "ボタン付きのQGIS メッセージバー"
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:91
+msgid ""
+"You can even use a message bar in your own dialog so you don't have to show "
+"a message box, or if it doesn't make sense to show it in the main QGIS "
+"window"
+msgstr "メッセージバーは自分のダイアログの中でも使えるため、メッセージボックスを表示する必要はありませんし、メインのQGISウィンドウ内に表示する意味がない時にも使えます。"
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:117
+msgid "QGIS Message bar in custom dialog"
+msgstr "カスタムダイアログ内のQGIS メッセージバー"
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:121
+msgid "Showing progress"
+msgstr "プロセスを表示する"
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:123
+msgid ""
+"Progress bars can also be put in the QGIS message bar, since, as we have "
+"seen, it accepts widgets. Here is an example that you can try in the "
+"console."
+msgstr "プログレスバーはご覧のとおりウィジェットを受け入れるので、QGISメッセージバーに置くこともできます。コンソール内で試すことができる例はこちらです。"
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:144
+msgid ""
+"Also, you can use the built-in status bar to report progress, as in the next"
+" example:"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:166
+msgid "Logging"
+msgstr "ログを作成する"
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:168
+msgid ""
+"You can use the QGIS logging system to log all the information that you want"
+" to save about the execution of your code."
+msgstr "QGISログ作成システムを使うとコードの実行に関して保存したい情報のログを全て採ることができます。"
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:180
+msgid ""
+"Use of the Python ``print`` statement is unsafe to do in any code which may "
+"be multithreaded. This includes **expression functions**, **renderers**, "
+"**symbol layers** and **Processing algorithms** (amongst others). In these "
+"cases you should always use thread safe classes (:class:`QgsLogger "
+"<qgis.core.QgsLogger>` or :class:`QgsMessageLog <qgis.core.QgsMessageLog>`) "
+"instead."
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:189
+msgid ""
+"You can see the output of the :class:`QgsMessageLog "
+"<qgis.core.QgsMessageLog>` in the :ref:`log_message_panel`"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:194
+msgid ""
+":class:`QgsLogger <qgis.core.QgsLogger>` is for messages for debugging / "
+"developers (i.e. you suspect they are triggered by some broken code)"
+msgstr ""
+
+#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:196
+msgid ""
+":class:`QgsMessageLog <qgis.core.QgsMessageLog>` is for messages to "
+"investigate issues by sysadmins (e.g. to help a sysadmin to fix "
+"configurations)"
+msgstr ""
+
+#~ msgid "Showing messages. The :class:`QgsMessageBar` class"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The examples above show an error bar, but the ``level`` parameter can be "
+#~ "used to creating warning messages or info messages, using the "
+#~ "``QgsMessageBar.WARNING`` and ``QgsMessageBar.INFO`` constants respectively."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Also, you can use the built-in status bar to report progress, as in the next"
+#~ " example"
+#~ msgstr ""
