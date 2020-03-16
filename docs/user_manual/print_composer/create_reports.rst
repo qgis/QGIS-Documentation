@@ -105,15 +105,11 @@ Let us add some items to our report header to demonstrate:
 .. figure:: img/header.png
    :align: center
 
-|
-
 We will also create a simple footer for the report by checking the
 :guilabel:`Include report footer` option and hitting :guilabel:`Edit`.
 
 .. figure:: img/footer.png
    :align: center
-
-|
 
 Before proceeding further, let us export this report and see what
 we get.
@@ -126,8 +122,6 @@ our header and footer:
 .. figure:: img/headerfooter.png
    :align: center
 
-|
-
 Let us make things more interesting.
 By hitting the |signPlus| :sup:`Add Section` button in the
 :guilabel:`Report Organizer`, we are given a choice of new sections to
@@ -135,8 +129,6 @@ add to our report.
 
 .. figure:: img/add_section.png
    :align: center
-
-|
 
 There are two options: :guilabel:`Static Layout Section` and
 :guilabel:`Field Group Section`.
@@ -237,11 +229,8 @@ followed by a page for every populated place within that state, then
 the rest of the states with their populated places, and finally the
 report footer.
 If we were to add a header for the Populated Places group, it would be
-included just before listing the populated places for each state:
-
-.. figure:: img/report4.png
-   :align: center
-   :width: 100%
+included just before listing the populated places for each state,
+as shown in the illustration below.
 
 Similarly, a footer for the Populated Places group would be inserted
 after the final place for each state is included.
@@ -254,9 +243,11 @@ attribute :guilabel:`adm1name` that can link it to the parent group)
 our report will first list ALL the populated places for each state,
 followed by all the airports within that state, before proceeding to
 the next state.
-In this case our report would be structured like this:
+In this case our report would be structured like this (note that
+state flags have also been included - the procedure for adding
+feature specific pictures in this way is described below):
 
-.. figure:: img/report_consec.png
+.. figure:: img/report_all_img.png
    :align: center
 
 Including pictures in a report
@@ -268,30 +259,37 @@ Pictures are added in the same way as for standard print layouts,
 and for the static report parts (and static pictures in dynamic
 parts) there is not more to it.
 
-If you want different illustrations for the different pages of a
-dynamic report part, your layer must have an attribute that can be
-used to define the picture to include.
+But if you want illustrations that are tailored to the report
+features,, your layer must have an attribute that can be used
+to define the picture to include.
 
 QGIS depends on absolute file names for images in reports.
 
-For dynamic pictures, you first add a picture to the body part,
-as usual.
-In the :guilabel:`Items properties` of the picture, you set the
+For dynamic pictures, you first add a picture to the body part
+of the group, as usual.
+In the :guilabel:`Item properties` of the picture, you set the
 :guilabel:`Image Source` using the
-|dataDefined| :sup:`Data defined override` button, and either select
-an attribute that contains the absolute path of the images or
-:guilabel:`Edit...` (to enter an expression that generates the
-absolute image path):
+|dataDefined| :sup:`Data defined override` button, and either
+select an attribute that contains the absolute path of the
+images or :guilabel:`Edit...` (to enter an expression that
+generates the absolute image path).
+
+Below is an example expression that uses string concatenation to
+specify the absolute path to the pictures, using the directory
+where the project file is located ``@project_path``) and an
+attribute (``adm1name``) from which the file name is generated
+(in this case by transforming the string in the ``adm1name``
+attribute to uppercase, and appending '_flag.png')::
+
+    concat(@project_folder, '/naturalearth/pictures/' ,
+           upper("adm1name"), '_flag.png')
+
+This means that the pictures are located in the
+``naturalearth/pictures`` subdirectory of the project file directory.
+
 
 .. figure:: img/report_dynamic_picture.png
    :align: center
-
-Here is an example expression that specifies the absolute path
-to the images using the project file location
-``@project_path`` and an attribute (``postal``) that is used
-for the file name::
-
-    format('%1/naturalearth/report/pictures/%2.png', file_path( @project_path), "postal" )
 
 
 Highlighting the current report feature in a map
