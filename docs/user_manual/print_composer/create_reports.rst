@@ -16,22 +16,24 @@ This section will help you set up a report in QGIS.
 
 What is it?
 ===========
-By definition, a GIS report is a document containing information organized
-in a narrative way, containing maps, text, graphics, tables, etc.
-A report can be prepared ad hoc, periodic, recurring, regular, or as required.
-Reports may refer to specific periods, events, occurrences, subjects or
-locations.
+By definition, a GIS report is a document containing information
+organized in a narrative way, containing maps, text, graphics,
+tables, etc.
+A report can be prepared ad hoc, periodic, recurring, regular, or
+as required.
+Reports may refer to specific periods, events, occurrences,
+subjects or locations.
 
 In QGIS, a :guilabel:`Report` is an extension of a
 :ref:`Layouts <label_printlayout>`.
 
-Reports allow users to output their GIS projects in a simple, quick and
-structured way.
+Reports allow users to output their GIS projects in a simple, quick
+and structured way.
 
-A report can be created with :menuselection:`Project --> New Report` or
-inside the :menuselection:`Project --> Layout Manager`.
+A report can be created with :menuselection:`Project --> New Report`
+or inside the :menuselection:`Project --> Layout Manager`.
 
-.. note:: The maps in QGIS reports behave in the same way as maps in in
+.. note:: The maps in QGIS reports behave in the same way as maps in
    print layouts and atlases.
    We will concentrate on the specifics of QGIS reports.
    For details on map handling, see the sections on
@@ -40,9 +42,10 @@ inside the :menuselection:`Project --> Layout Manager`.
 
 Get started
 ===========
-In the :guilabel:`Layout Manager` dialog a report can be created through
-:guilabel:`New from template` by selecting the dropdown option
-:guilabel:`Empty Report` and hitting the :guilabel:`Create...` button.
+In the :guilabel:`Layout Manager` dialog a report can be created
+through :guilabel:`New from template` by selecting the dropdown
+option :guilabel:`Empty Report` and hitting the
+:guilabel:`Create...` button.
 
 For this example, we use some administrative boundaries, populated
 places, ports and airports from the
@@ -52,8 +55,9 @@ places, ports and airports from the
    :align: center
 
 Using the :menuselection:`Project --> New Report` command, we create a
-blank report. Initially, there is not much to look at – the dialog which is
-displayed looks much like the print layout designer, except for the
+blank report.
+Initially, there is not much to look at – the dialog which is displayed
+looks much like the print layout designer, except for the
 :guilabel:`Report Organizer` panel to the left:
 
 .. figure:: img/report-2.png
@@ -62,13 +66,15 @@ displayed looks much like the print layout designer, except for the
 Layout Report Workspace
 =======================
 
-QGIS reports can consist of multiple, nested sections. In our new blank report
-we initially only have the main report section.
-The only options for this report section is :guilabel:`Include report header`
-and :guilabel:`Include report footer`.
-If we enable these options, a header will be included as the first page(s)
-(individual parts of reports can be multi-page if desired) in the report,
-and a footer will constitute the last page(s).
+QGIS reports can consist of multiple, nested sections.
+In our new blank report we initially only have the main report
+section.
+The only options for this report section is
+:guilabel:`Include report header` and
+:guilabel:`Include report footer`.
+If we enable these options, a header will be included as the first
+page(s) (individual parts of reports can be multi-page if desired) in
+the report, and a footer will constitute the last page(s).
 Enable the header (:guilabel:`Include report header`), and hit the
 :guilabel:`Edit` button next to it:
 
@@ -109,12 +115,13 @@ We will also create a simple footer for the report by checking the
 
 |
 
-Before proceeding further, let us export this report and see what we get.
-Exporting is done from the :menuselection:`Report` menu – in this case we select
-:menuselection:`Export Report as PDF...` to render the whole report to a PDF
-file.
-Here is the not-very-impressive result – a two page PDF consisting of our header
-and footer:
+Before proceeding further, let us export this report and see what
+we get.
+Exporting is done from the :menuselection:`Report` menu – in this case
+we select :menuselection:`Export Report as PDF...` to render the whole
+report to a PDF file.
+Here is the not-very-impressive result – a two page PDF consisting of
+our header and footer:
 
 .. figure:: img/headerfooter.png
    :align: center
@@ -134,13 +141,14 @@ add to our report.
 There are two options: :guilabel:`Static Layout Section` and
 :guilabel:`Field Group Section`.
 
-The :guilabel:`Add Static Layout Section` is a single, static body layout.
+The :guilabel:`Add Static Layout Section` is a single, static body
+layout.
 This can be used to embed static layouts mid-way through a report.
 
 The :guilabel:`Field Group Section` repeats its body layout for every
 feature of a layer.
-The features are sorted by the selected grouping feature (with an option
-for ascending/descending sort).
+The features are sorted by the selected grouping feature (with an
+option for ascending/descending sort).
 If a field group section has child sections (e.g. another field group
 section with a different field), then only features with unique values
 for the group feature are iterated over.
@@ -178,7 +186,8 @@ an atlas will follow the current atlas feature when
 .. figure:: img/controlledbyreport.png
    :align: center
 
-If we went ahead and exported our report now, we’d get something like this:
+If we went ahead and exported our report now, we’d get something like
+this:
 
 .. figure:: img/report1.png
    :align: center
@@ -221,27 +230,30 @@ Here’s what we get:
    :align: center
    :width: 100%
 
-Here we created a basic body for the Populated Places group, including a map of
-the place and a table of some place attributes. So our report is now a report
-header, a page for the first state, followed by a page for every populated place
-within that state, then the rest of the states with their populated places,
-and finally the report footer.
-If we were to add a header for the Populated Places group, it would be included
-just before listing the populated places for each state:
+Here we created a basic body for the Populated Places group,
+including a map of the place and a table of some place attributes.
+So our report is now a report header, a page for the first state,
+followed by a page for every populated place within that state, then
+the rest of the states with their populated places, and finally the
+report footer.
+If we were to add a header for the Populated Places group, it would be
+included just before listing the populated places for each state:
 
 .. figure:: img/report4.png
    :align: center
    :width: 100%
 
-Similarly, a footer for the Populated Places group would be inserted after the
-final place for each state is included.
+Similarly, a footer for the Populated Places group would be inserted
+after the final place for each state is included.
 
-In addition to nested subsections, subsections in a report can also be included
-consecutively. If we add a second subsection to the `Admin Level 1 group` for
-:guilabel:`Airports`, then (if the :guilabel:`Airports` layer has an attribute
-:guilabel:`adm1name` that can link it to the parent group) our report will
-first list ALL the populated places for each state, followed by all the
-airports within that state, before proceeding to the next state.
+In addition to nested subsections, subsections in a report can also
+be included consecutively.
+If we add a second subsection to the `Admin Level 1 group` for
+:guilabel:`Airports`, then (if the :guilabel:`Airports` layer has an
+attribute :guilabel:`adm1name` that can link it to the parent group)
+our report will first list ALL the populated places for each state,
+followed by all the airports within that state, before proceeding to
+the next state.
 In this case our report would be structured like this:
 
 .. figure:: img/report_consec.png
@@ -252,23 +264,24 @@ Including pictures in a report
 
 Pictures can be quite useful in reports, and QGIS allows
 pictures in both the static and dynamic parts of a report.
-Pictures are added in the same way as for standard print layouts, and for the
-static report parts (and static pictures in dynamic parts) there is not
-more to it.
+Pictures are added in the same way as for standard print layouts,
+and for the static report parts (and static pictures in dynamic
+parts) there is not more to it.
 
-If you want different illustrations for the different pages of a dynamic
-report part, your layer must have an attribute that can be used to
-define the picture to include.
+If you want different illustrations for the different pages of a
+dynamic report part, your layer must have an attribute that can be
+used to define the picture to include.
 
 QGIS depends on absolute file names for images in reports.
 
 For dynamic pictures, you first add a picture to the body part,
 as usual.
 In the :guilabel:`Items properties` of the picture, you set the
-:guilabel:`Image Source` using the |dataDefined| :sup:`Data defined override`
-button, and either select an attribute that contains
-the absolute path of the images or :guilabel:`Edit...`
-(to enter an expression that generates the absolute image path):
+:guilabel:`Image Source` using the
+|dataDefined| :sup:`Data defined override` button, and either select
+an attribute that contains the absolute path of the images or
+:guilabel:`Edit...` (to enter an expression that generates the
+absolute image path):
 
 .. figure:: img/report_dynamic_picture.png
    :align: center
@@ -284,10 +297,10 @@ for the file name::
 Highlighting the current report feature in a map
 ------------------------------------------------
 
-To give emphasis to the report feature in a map (apart from placing it
-at the centre of the map), you must data define the style using a
-comparison between its ``@id`` and the ``@atlas_featureid``, as for
-atlases.
+To give emphasis to the report feature in a map (apart from placing
+it at the centre of the map), you must data define the style using
+a comparison between its ``@id`` and the ``@atlas_featureid``, as
+for atlases.
 
 For instance, if you would like to use a thicker line / border
 for the report feature than the other features you can data define
@@ -312,11 +325,13 @@ picture for state flags and some highlighting):
 
 |
 
-Combining nested and consecutive sections, together with section headers and
-footers allows for tons of flexibility. For instance, in the below report we add
-another field group as a child of the main report for the :guilabel`Ports`
-layer. Now, after listing the states together with their populated places and
-airports, we’ll get a summary list of all the ports in the region:
+Combining nested and consecutive sections, together with section
+headers and footers allows for tons of flexibility.
+For instance, in the below report we add another field group as a
+child of the main report for the :guilabel`Ports` layer.
+Now, after listing the states together with their populated places
+and airports, we’ll get a summary list of all the ports in the
+region:
 
 .. figure:: img/report_flex.png
    :align: center
@@ -333,8 +348,8 @@ Export settings
 
 When you export a report
 (:menuselection:`Report-> Export Report as Images... / SVG... / PDF...`),
-you will be asked for a file name, and then you get the opportunity to
-tune the export settings to get the most appropriate output.
+you will be asked for a file name, and then you get the opportunity
+to tune the export settings to get the most appropriate output.
 
 As you see, reports in QGIS are extremely powerful and flexible!
 
