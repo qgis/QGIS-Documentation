@@ -1,6 +1,6 @@
 
 
-.. image:: https://travis-ci.org/qgis/QGIS-Documentation.svg?branch=qgisdoc2020
+.. image:: https://travis-ci.org/qgis/QGIS-Documentation.svg?branch=release_3.10
     :target: https://travis-ci.org/qgis/QGIS-Documentation
 
 Build on Linux
