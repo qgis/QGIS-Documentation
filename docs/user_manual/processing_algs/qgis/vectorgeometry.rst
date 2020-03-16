@@ -6739,6 +6739,7 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |314| replace:: ``NEW in 3.14``
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |arrowUp| image:: /static/common/mActionArrowUp.png
