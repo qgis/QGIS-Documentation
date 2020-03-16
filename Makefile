@@ -3,6 +3,7 @@
 
 # You can set these variables from the command line.
 LANG            = en
+LANGUAGES       = en bg cs de es fi fr id it ja ko nl pt_BR pt_PT ro ru tr zh_Hant
 SPHINXOPTS      =
 SPHINXINTLOPTS  = $(SPHINXOPTS) -D language=$(LANG)
 SPHINXBUILD     ?= sphinx-build
@@ -39,6 +40,11 @@ html:
 
 site: html
 	rsync -az $(BUILDDIR)/html/$(LANG) $(SITEDIR)/
+
+all:
+	@for LANG in $(LANGUAGES) ; do \
+		make LANG=$$LANG site; \
+	done
 
 doctest:
 	$(SPHINXBUILD) -c "$(CONFDIR)" -b doctest . $(BUILDDIR)/doctest
