@@ -106,7 +106,7 @@ To update the english po files (which are being used as SOURCE files in transife
 To create the .tx/config to push/pull using tx client do::
 
  sphinx-intl create-txconfig
- sphinx-intl update-txconfig-resources --transifex-project-name qgisdoc
+ sphinx-intl update-txconfig-resources --transifex-project-name qgis-documentation
 
 
 To update all po files (which we do not use if we do github-transifex integration!!!)::
