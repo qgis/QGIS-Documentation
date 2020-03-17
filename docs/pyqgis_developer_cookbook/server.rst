@@ -400,7 +400,7 @@ AccessControl.py
 
 .. code:: python
 
-   class AccessControl(QgsAccessControlFilter):
+   class AccessControlFilter(QgsAccessControlFilter):
 
        def __init__(self, server_iface):
            super(QgsAccessControlFilter, self).__init__(server_iface)
@@ -427,6 +427,12 @@ AccessControl.py
 
        def cacheKey(self):
            return super(QgsAccessControlFilter, self).cacheKey()
+
+   class AccessControlServerServer:
+
+      def __init__(self, serverIface):
+         """ Register AccessControlFilter """
+         serverIface.registerAccessControl(AccessControlFilter(self.serverIface), 100)
 
 This example gives a full access for everybody.
 
