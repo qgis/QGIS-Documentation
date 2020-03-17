@@ -159,7 +159,7 @@ new related settings:
    :align: center
 
 In this case we’ve setup our Field Group so that we iterate over all
-the states from the :guilabel:`Admin Level 1` layer, using the values
+the states from the `Admin Level 1` layer, using the values
 from the :guilabel:`adm1name` field.
 The same options to include header and footer are present, together
 with a new option to include a :guilabel:`body` for this section.
@@ -170,6 +170,16 @@ We’ll do that, and edit the body:
 
 Our body now consists of a map and a label showing the name of the
 state.
+To include the name of the state select
+:menuselection:`Add Item-> Add Label` and data define the text under :guilabel:`Main Properties` with the help of
+:guilabel:`Insert an Expression...`.
+
+The result should be the following expression (`name` is the name
+of the attribute in the `Admin Level 1` layer that contains the
+name of the state)::
+
+    [% "name" %]
+
 The map is set to follow the current report feature (enabled by
 checking :guilabel:`Controlled by Report` – just like a map item in
 an atlas will follow the current atlas feature when
