@@ -243,6 +243,18 @@ Icon                     Substitution                 Icon                     S
 |changeLabelProperties|  ``|changeLabelProperties|``   
 =======================  ===========================  =======================  ===========================
 
+Decorations
+...........
+
+=======================  ===========================  =======================  ===========================
+Icon                     Substitution                 Icon                     Substitution
+=======================  ===========================  =======================  ===========================
+|copyrightLabel|         ``|copyrightLabel|``         |addGrid|                ``|addGrid|``
+|titleLabel|             ``|titleLabel|``             |northArrow|             ``|northArrow|``
+|scaleBar|               ``|scaleBar|``               |addMap|                 ``|addMap|``
+|addImage|               ``|addImage|``
+=======================  ===========================  =======================  ===========================
+
 Help
 ....
 
@@ -338,7 +350,8 @@ Icon                     Substitution                 Icon                     S
 |addPolygon|             ``|addPolygon|``             |addPolyline|            ``|addPolyline|``
 |addArrow|               ``|addArrow|``               |northArrow|             ``|northArrow|``
 |addMap|                 ``|addMap|``                 |addLegend|              ``|addLegend|``
-|addHtml|                ``|addHtml|``                |addTable|               ``|addTable|``
+|addHtml|                ``|addHtml|``                \                        \
+|addImage|               ``|addImage|``               |addTable|               ``|addTable|``
 |label|                  ``|label|``                  |scaleBar|               ``|scaleBar|``
 |select|                 ``|select|``                 |moveItemContent|        ``|moveItemContent|``
 |setToCanvasScale|       ``|setToCanvasScale|``       |setToCanvasExtent|      ``|setToCanvasExtent|``
@@ -495,7 +508,11 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |addExpression| image:: /static/common/mActionAddExpression.png
    :width: 1.5em
+.. |addGrid| image:: /static/common/add_grid.png
+   :width: 1.5em
 .. |addHtml| image:: /static/common/mActionAddHtml.png
+   :width: 1.5em
+.. |addImage| image:: /static/common/mActionAddImage.png
    :width: 1.5em
 .. |addLayer| image:: /static/common/mActionAddLayer.png
    :width: 1.5em
@@ -1218,6 +1235,8 @@ Icon                            Substitution                        Icon        
 .. |text| image:: /static/common/text.png
    :width: 1.5em
 .. |textAnnotation| image:: /static/common/mActionTextAnnotation.png
+   :width: 1.5em
+.. |titleLabel| image:: /static/common/title_label.png
    :width: 1.5em
 .. |toLines| image:: /static/common/to_lines.png
    :width: 1.5em

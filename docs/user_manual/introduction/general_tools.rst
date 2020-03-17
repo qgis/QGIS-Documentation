@@ -878,7 +878,7 @@ You can also zoom to bookmarks by typing the bookmark name in the
 Decorations
 -----------
 
-Decorations include Grid, Copyright Label, North Arrow, Scale Bar and Layout
+Decorations include Grid, Title Label, Copyright Label, North Arrow, Scale Bar and Layout
 Extents. They are used to 'decorate' the map by adding cartographic elements.
 
 .. index:: Grid
@@ -887,7 +887,7 @@ Extents. They are used to 'decorate' the map by adding cartographic elements.
 Grid
 ....
 
-|transformed| :sup:`Grid` allows you to add a coordinate grid and coordinate
+|addGrid| :sup:`Grid` allows you to add a coordinate grid and coordinate
 annotations to the map canvas.
 
 #. Select :menuselection:`View --> Decorations --> Grid...` to open the dialog.
@@ -938,19 +938,17 @@ annotations to the map canvas.
 #. Click :guilabel:`Apply` to verify that it looks as expected or :guilabel:`OK`
    if you're satisfied.
 
-.. index:: Copyright, Title
-.. _copyright_decoration:
+.. index:: Title
+.. _title_label_decoration:
 
-Copyright and Title Labels
-..........................
+Title Label
+...........
 
-You can decorate your map with labels that apply as meta information; these are
-texts of your choice you can use as **Title** or as **Copyright** of the map.
-To add these decorations:
+You can decorate your map with a **Title**.
+To add a Title Label decoration:
 
-#. Either select :menuselection:`View --> Decorations -->` |copyrightLabel|
-   :menuselection:`Copyright Label...` or :menuselection:`View --> Decorations
-   -->` |label| :menuselection:`Title Label...` to open the corresponding dialog
+#. Select :menuselection:`View --> Decorations -->` |titleLabel|
+   :menuselection:`Title Label...` to open the corresponding dialog.
 
    .. _figure_decorations_title:
 
@@ -959,6 +957,37 @@ To add these decorations:
 
       The Title Decoration Dialog
 
+#. Make sure |checkbox| :guilabel:`Enable Title Label`) is checked.
+#. Enter the title text you want to place on the map.
+   You can make it dynamic using the :guilabel:`Insert an Expression` button.
+#. Choose the :guilabel:`Font` for the label using the :ref:`font selector
+   widget <font_selector>` with full access to QGIS :ref:`text formatting
+   <text_format>` options. Quickly set the font color and opacity by clicking
+   the black arrow to the right of the font combo box.
+#. Select the :ref:`color <color-selector>` to apply to the title's
+   :guilabel:`Background`.
+#. Choose the :guilabel:`Placement` of the label in the canvas: options are
+   :guilabel:`Top left`, :guilabel:`Top Center` (default for Title Label decoration),
+   :guilabel:`Top Right`, :guilabel:`Bottom left`, :guilabel:`Bottom Center`
+   and :guilabel:`Bottom Right`.
+#. Refine the placement of the item by setting a horizontal and/or vertical
+   :guilabel:`Margin from Edge`. These values can be in **Millimeters** or
+   **Pixels** or set as a **Percentage** of the width or height of the map canvas.
+#. Click :guilabel:`Apply` to verify that it looks as expected or
+   :guilabel:`OK` if you're satisfied.
+
+.. index:: Copyright
+.. _copyright_decoration:
+
+Copyright Label
+...............
+
+You can decorate your map with a **Copyright** label.
+To add this decoration:
+
+#. Select :menuselection:`View --> Decorations -->` |copyrightLabel|
+   :menuselection:`Copyright Label...` to open the corresponding dialog.
+
    .. _figure_decorations_copyright:
 
    .. figure:: img/copyright.png
@@ -966,26 +995,22 @@ To add these decorations:
 
       The Copyright Decoration Dialog
 
-#. Make sure |checkbox| :guilabel:`Enable Copyright Label` (or |checkbox|
-   :guilabel:`Enable Title Label`) is checked.
-#. Enter the text you want to place on the map.
+#. Make sure |checkbox| :guilabel:`Enable Copyright Label` is checked.
+#. Enter the copyright text you want to place on the map.
    You can make it dynamic using the :guilabel:`Insert an Expression` button.
 #. Choose the :guilabel:`Font` for the label using the :ref:`font selector
    widget <font_selector>` with full access to QGIS :ref:`text formatting
    <text_format>` options. Quickly set the font color and opacity by clicking
    the black arrow to the right of the font combo box.
-#. Select the :ref:`color <color-selector>` to apply to the title's
-   :guilabel:`Background`
 #. Choose the :guilabel:`Placement` of the label in the canvas: options are
-   :guilabel:`Top left`, :guilabel:`Top Center` (default for title decoration),
+   :guilabel:`Top left`, :guilabel:`Top Center`,
    :guilabel:`Top Right`, :guilabel:`Bottom left`, :guilabel:`Bottom Center`,
-   and :guilabel:`Bottom Right` (default for copyright decoration)
+   and :guilabel:`Bottom Right` (default for Copyright decoration)
 #. Refine the placement of the item by setting a horizontal and/or vertical
    :guilabel:`Margin from Edge`. These values can be in **Millimeters** or
    **Pixels** or set as a **Percentage** of the width or height of the map canvas.
 #. Click :guilabel:`Apply` to verify that it looks as expected or
    :guilabel:`OK` if you're satisfied.
-
 
 .. index:: North arrow
 .. _northarrow_decoration:
@@ -2306,6 +2331,8 @@ The values presented in the varying size assistant above will set the size
 
 .. |3d| image:: /static/common/3d.png
    :width: 1.5em
+.. |addGrid| image:: /static/common/add_grid.png
+   :width: 1.5em
 .. |addGroup| image:: /static/common/mActionAddGroup.png
    :width: 1.5em
 .. |addMap| image:: /static/common/mActionAddMap.png
@@ -2412,8 +2439,6 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |invertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em
-.. |label| image:: /static/common/mActionLabel.png
-   :width: 1.5em
 .. |labeling| image:: /static/common/labelingSingle.png
    :width: 1.5em
 .. |mapIdentification| image:: /static/common/mActionMapIdentification.png
@@ -2486,9 +2511,9 @@ The values presented in the varying size assistant above will set the size
    :width: 2em
 .. |textAnnotation| image:: /static/common/mActionTextAnnotation.png
    :width: 1.5em
-.. |toggleEditing| image:: /static/common/mActionToggleEditing.png
+.. |titleLabel| image:: /static/common/title_label.png
    :width: 1.5em
-.. |transformed| image:: /static/common/transformed.png
+.. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
 .. |transparency| image:: /static/common/transparency.png
    :width: 1.5em
