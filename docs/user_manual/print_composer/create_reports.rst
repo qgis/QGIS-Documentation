@@ -243,6 +243,11 @@ attribute :guilabel:`adm1name` that can link it to the parent group)
 our report will first list ALL the populated places for each state,
 followed by all the airports within that state, before proceeding to
 the next state.
+
+The key point here is that our :guilabel:`Airports group` is a
+subsection of the :guilabel:`Admin Level 1 group` – not the
+:guilabel:`Populated Places group`.
+
 In this case our report would be structured like this (note that
 state flags have also been included - the procedure for adding
 feature specific pictures in this way is described below):
@@ -295,8 +300,10 @@ This means that the pictures are located in the
 Highlighting the current report feature in a map
 ------------------------------------------------
 
-To give emphasis to the report feature in a map (apart from placing
-it at the centre of the map), you must data define the style using
+In the above report, the report features are emphasized in the
+maps using highlighting (state) and circles (populated places).
+To emphasize the report features in the maps (apart from placing
+them at the centre of the maps), you must data define the style using
 a comparison between its ``@id`` and the ``@atlas_featureid``, as
 for atlases.
 
@@ -306,22 +313,16 @@ the line width::
 
     if($id=@atlas_featureid, 2.0, 0.1)
 
+The report feature will get a 2 units wide polygon outline, while
+all other features will get a 0.1 units wide line.
 It is also possible to data define the colour (non-transparent dark
 magenta for the atlas feature and semi-transparent light gray for
 the other features)::
 
     if($id=@atlas_featureid, '#FF880088', '#88CCCCCC')
 
-The key point here is that our :guilabel:`Airports group` is a
-subsection of the :guilabel:`Admin Level 1 group` – not the
-:guilabel:`Populated Places group`.
-Here is what our report could look like now (including a dynamic
-picture for state flags and some highlighting):
-
-.. figure:: img/report5.png
-   :align: center
-
-|
+More level 1 groups
+-------------------
 
 Combining nested and consecutive sections, together with section
 headers and footers allows for tons of flexibility.
