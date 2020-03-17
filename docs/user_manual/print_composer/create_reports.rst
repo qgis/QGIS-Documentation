@@ -170,11 +170,11 @@ We’ll do that, and edit the body:
 
 Our body now consists of a map and a label showing the name of the
 state.
-To include the name of the state select
-:menuselection:`Add Item-> Add Label` and data define the text under :guilabel:`Main Properties` with the help of
+To include the name of the state, we selected
+:menuselection:`Add Item-> Add Label` and data defined the text under :guilabel:`Main Properties` with the help of
 :guilabel:`Insert an Expression...`.
 
-The result should be the following expression (`name` is the name
+The result was the following expression (`name` is the name
 of the attribute in the `Admin Level 1` layer that contains the
 name of the state)::
 
@@ -253,6 +253,9 @@ attribute :guilabel:`adm1name` that can link it to the parent group)
 our report will first list ALL the populated places for each state,
 followed by all the airports within that state, before proceeding to
 the next state.
+
+.. figure:: img/report_consec.png
+   :align: center
 
 The key point here is that our :guilabel:`Airports group` is a
 subsection of the :guilabel:`Admin Level 1 group` – not the
