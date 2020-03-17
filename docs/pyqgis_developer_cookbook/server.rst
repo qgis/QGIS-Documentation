@@ -391,8 +391,8 @@ This is how the example plugin :file:`__init__.py` looks like:
     # -*- coding: utf-8 -*-
 
     def serverClassFactory(serverIface):
-        from MyAccessControl.AccessControl import AccessControl
-        return AccessControl(serverIface)
+        from MyAccessControl.AccessControl import AccessControlServer
+        return AccessControlServer(serverIface)
 
 
 AccessControl.py
@@ -428,7 +428,7 @@ AccessControl.py
        def cacheKey(self):
            return super(QgsAccessControlFilter, self).cacheKey()
 
-   class AccessControlServerServer:
+   class AccessControlServer:
 
       def __init__(self, serverIface):
          """ Register AccessControlFilter """
