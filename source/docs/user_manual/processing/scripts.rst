@@ -429,14 +429,17 @@ Input types
    * - :class:`QgsProcessingParameterColor <qgis.core.QgsProcessingParameterColor>`
      - ``alg.COLOR``
      - A color
+   * - :class:`QgsProcessingParameterCoordinateOperation<qgis.core.QgsProcessingParameterCoordinateOperation>`
+     - ``alg.COORDINATE_OPERATION``
+     - A color
    * - :class:`QgsProcessingParameterCrs <qgis.core.QgsProcessingParameterCrs>`
      - ``alg.CRS``
      - A Coordinate Reference System
    * - :class:`QgsProcessingParameterDatabaseSchema <qgis.core.QgsProcessingParameterDatabaseSchema`
-     - 
+     - ``alg.DATABASE_SCHEMA``
      - A database schema
    * - :class:`QgsProcessingParameterDatabaseTable <qgis.core.QgsProcessingParameterDatabaseTable`
-     - 
+     - ``alg.DATABASE_TABLE``
      - A database table
    * - :class:`QgsProcessingParameterDateTime <qgis.core.QgsProcessingParameterDateTime`
      - ``alg.DATETIME``
@@ -464,7 +467,7 @@ Input types
      - A filename for a newly created output file
    * - :class:`QgsProcessingParameterFolderDestination <qgis.core.QgsProcessingParameterFolderDestination>`
      - ``alg.FOLDER_DEST``
-     - A folder
+     - A folder (destination folder)
    * - :class:`QgsProcessingParameterNumber <qgis.core.QgsProcessingParameterNumber>`
      - ``alg.INT``
      - An integer
@@ -478,7 +481,7 @@ Input types
      - ``alg.MAPLAYER``
      - A map layer
    * - :class:`QgsProcessingParameterMapTheme <qgis.core.QgsProcessingParameterMapTheme>`
-     - 
+     - ``alg.MAP_THEME``
      - A project map theme
    * - :class:`QgsProcessingParameterMatrix <qgis.core.QgsProcessingParameterMatrix>`
      - ``alg.MATRIX``
@@ -496,7 +499,7 @@ Input types
      - ``alg.POINT``
      - A point
    * - :class:`QgsProcessingParameterProviderConnection <qgis.core.QgsProcessingParameterProviderConnection>`
-     - 
+     - ``alg.PROVIDER_CONNECTION``
      - An available connection for a database provider
    * - :class:`QgsProcessingParameterRange <qgis.core.QgsProcessingParameterRange>`
      - ``alg.RANGE``
