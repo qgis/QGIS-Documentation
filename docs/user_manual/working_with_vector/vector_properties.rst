@@ -1930,7 +1930,7 @@ Line layers
 	
 * Beneath the :guilabel:`Width` and :guilabel:`Height` settings you can
   define the :guilabel:`Extrusion` of the vector lines. If the lines do not have
-  z-values, this makes it possible to define the height of the lines in 3D.
+  z-values, you can define the 3d volumes with this setting.
 * With the :guilabel:`Altitude clamping` you define the position of the 
   3D lines relative to the underlying terrain surface, if you have included
   raster elevation data or other 3D vectors.
