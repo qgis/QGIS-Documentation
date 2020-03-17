@@ -1917,9 +1917,9 @@ Point Layers
   defined by the :guilabel:`Billboard Height`, :guilabel:`Billboard symbol` and
   :guilabel:`Altitude clamping`. The symbol will have a stable size.
 * :guilabel:`Altitude clamping` can be set to :guilabel:`Absolute`, :guilabel:`Relative`
-  or :guilabel:`Terrain`. These settings refer to the terrain surface defined by the 3D data you
-  loaded into the 3D view (raster elevation data or 3D vector data), and 
-  define how z/elevation values are interpreted with respect to the underlying terrain surface.
+  or :guilabel:`Terrain`. The :guilabel:`Absolute` setting can be used when height values
+  of the 3d vectors are provided as absolute measures from 0. :guilabel:`Relative` and
+  :guilabel:`Terrain` add given elevation values to the underlying terrain elevation.
 * :guilabel:`Translation` can be used to move objects in x, y and z axis.
 * You can define a :guilabel:`Scale factor` for the 3D shape as well as a
   :guilabel:`Rotation` around the x-, y- and z-axis.
