@@ -1930,10 +1930,10 @@ Line layers
 	
 * Beneath the :guilabel:`Width`and :guilabel:`Height` settings you can
   define the :guilabel:`Extrusion` of the vector lines. If the lines do not have
-  z-values, this makes it is possible to define the height of the lines in 3D.
+  z-values, this makes it possible to define the height of the lines in 3D.
 * With the :guilabel:`Altitude clamping` you define the position of the 
   3D lines relative to the underlying terrain surface, if you have included
-  raster elevation data or other 3D vectors. We recommend to use :guilabel:`Absolute` here.
+  raster elevation data or other 3D vectors.
 * The :guilabel:`Altitude binding` defines how the feature is clamped to the
   terrain. Either every :guilabel:`Vertex` of the feature will be clamped
   to the terrain or this will be done by the :guilabel:`Centroid`.
@@ -1955,8 +1955,8 @@ Polygon Layers
 Application example
 -------------------
 
-To go through the settings explained above you can have a look at the qgis sample data
-and open the project :file:`helsinki.qgz`.
+To go through the settings explained above you can have a look at
+https://public.cloudmergin.com/projects/saber/luxembourg/tree . 
 
 
 
