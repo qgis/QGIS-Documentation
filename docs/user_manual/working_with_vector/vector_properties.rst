@@ -1911,8 +1911,8 @@ Point Layers
 * The shading of the 3D shapes can be defined by the menus :guilabel:`Diffuse`, 
   :guilabel:`Ambient`, :guilabel:`Specular` and :guilabel:`Shininess`
   (see https://en.wikipedia.org/wiki/Phong_reflection_model#Description)
-* If you choose :guilabel:`3D Model`, their location will be determined
-  by the points in the layer.
+* If you choose :guilabel:`3D Model`, the location will be determined
+  by a simple point coordinate.
 * For visualizing 3D point clouds you can use :guilabel:`Billboard` Shapes
   defined by the :guilabel:`Billboard Height`, :guilabel:`Billboard symbol` and
   :guilabel:`Altitude clamping`. The symbol will have a stable size.
@@ -1928,7 +1928,7 @@ Point Layers
 Line layers
 -----------
 	
-* Beneath the :guilabel:`Width`and :guilabel:`Height` settings you can
+* Beneath the :guilabel:`Width` and :guilabel:`Height` settings you can
   define the :guilabel:`Extrusion` of the vector lines. If the lines do not have
   z-values, this makes it possible to define the height of the lines in 3D.
 * With the :guilabel:`Altitude clamping` you define the position of the 
