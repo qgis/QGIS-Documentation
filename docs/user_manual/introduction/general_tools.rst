@@ -1082,7 +1082,7 @@ To add a scale bar:
 
       The Scale Bar Dialog
 
-#. Make sure |checkbox| :guilabel:`Enable scale bar` is checked.
+#. Make sure |checkbox| :guilabel:`Enable scale bar` is checked
 #. Choose a style from the :guilabel:`Scale bar style` |selectString| combo box
 #. Select the :guilabel:`Color of bar` |selectColor| by choosing
    a fill color (default: black) and an outline color (default: white). The scale
