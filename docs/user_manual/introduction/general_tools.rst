@@ -1091,7 +1091,7 @@ To add a scale bar:
 #. Select the font for the scale bar from the :guilabel:`Font of bar` |selectString| combo box
 #. Set the :guilabel:`Size of bar` |selectNumber|.
 #. Optionally check |checkbox| :guilabel:`Automatically snap to round number
-   on resize` to display easy-to-read values.
+   on resize` to display easy-to-read values
 #. Choose the placement from the :guilabel:`Placement` |selectString| combo box
 #. You can refine the placement of the item by setting a horizontal and/or vertical
    `Margin from (Canvas) Edge`. These values can be in **Millimeters** or
