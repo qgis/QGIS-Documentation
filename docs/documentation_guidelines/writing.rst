@@ -623,6 +623,16 @@ guidelines:
   Matrix                                    ``matrix``
   Layer                                     ``layer``
   Same output type as input type            ``same as input``  
+  Definition                                ``definition``
+  Point                                     ``point``
+  MultipleLayers                            ``multipleLayers``
+  Range                                     ``range``
+  AuthConfig                                ``authconfig``
+  Mesh                                      ``mesh``
+  Layout                                    ``layout``
+  LayoutItem                                ``layoutitem``
+  Color                                     ``color``
+  Scale                                     ``scale``
   ========================================  =========================  ====================
 
   |
