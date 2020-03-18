@@ -140,7 +140,7 @@ def append_subst(file, subst_definition):
 
 if __name__ == '__main__':
     src_path =  path.abspath(path.join(__file__ ,"../../docs"))
-    subst_file_path = path.join(src_path,"substitutions.txt")
+    subst_file_path = path.join(src_path,"../substitutions.txt")
     s_dict = read_subst(subst_file_path)
     for file in find_by_ext(src_path, 'rst'):
         s_list = get_subst_from_file(file)

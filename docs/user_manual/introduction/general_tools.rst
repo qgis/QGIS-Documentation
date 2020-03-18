@@ -878,7 +878,7 @@ You can also zoom to bookmarks by typing the bookmark name in the
 Decorations
 -----------
 
-Decorations include Grid, Title Label, Copyright Label, North Arrow, Scale Bar and Layout
+Decorations include Grid, Title Label, Copyright Label, Image, North Arrow, Scale Bar and Layout
 Extents. They are used to 'decorate' the map by adding cartographic elements.
 
 .. index:: Grid
@@ -887,10 +887,10 @@ Extents. They are used to 'decorate' the map by adding cartographic elements.
 Grid
 ....
 
-|addGrid| :sup:`Grid` allows you to add a coordinate grid and coordinate
+|addGrid| :menuselection:`Grid` allows you to add a coordinate grid and coordinate
 annotations to the map canvas.
 
-#. Select :menuselection:`View --> Decorations --> Grid...` to open the dialog.
+#. Select menu option :menuselection:`View --> Decorations --> Grid...` to open the dialog.
 
    .. _figure_decorations_grid:
 
@@ -944,11 +944,11 @@ annotations to the map canvas.
 Title Label
 ...........
 
-You can decorate your map with a **Title**.
+|titleLabel| :menuselection:`Title Label` allows you to decorate your map with a **Title**.
+
 To add a Title Label decoration:
 
-#. Select :menuselection:`View --> Decorations -->` |titleLabel|
-   :menuselection:`Title Label...` to open the corresponding dialog.
+#. Select menu option :menuselection:`View --> Decorations --> Title Label...` to open the dialog.
 
    .. _figure_decorations_title:
 
@@ -965,7 +965,7 @@ To add a Title Label decoration:
    <text_format>` options. Quickly set the font color and opacity by clicking
    the black arrow to the right of the font combo box.
 #. Select the :ref:`color <color-selector>` to apply to the title's
-   :guilabel:`Background`.
+   :guilabel:`Background bar color`.
 #. Choose the :guilabel:`Placement` of the label in the canvas: options are
    :guilabel:`Top left`, :guilabel:`Top Center` (default for Title Label decoration),
    :guilabel:`Top Right`, :guilabel:`Bottom left`, :guilabel:`Bottom Center`
@@ -982,11 +982,16 @@ To add a Title Label decoration:
 Copyright Label
 ...............
 
-You can decorate your map with a **Copyright** label.
-To add this decoration:
+|copyrightLabel| :menuselection:`Copyright Label` can be used to decorate your map with a **Copyright** label.
 
-#. Select :menuselection:`View --> Decorations -->` |copyrightLabel|
-   :menuselection:`Copyright Label...` to open the corresponding dialog.
+The Copyright Label dialog is almost equal to the dialog of :ref:`title_label_decoration`.
+
+Difference are:
+
+* you can not select a :guilabel:`Background bar color`.
+* the default :guilabel:`Placement` position of the Copyright Label is :guilabel:`Bottom Right`.
+
+Select menu option :menuselection:`View --> Decorations --> Copyright Label...` to open the dialog.
 
    .. _figure_decorations_copyright:
 
@@ -995,22 +1000,34 @@ To add this decoration:
 
       The Copyright Decoration Dialog
 
-#. Make sure |checkbox| :guilabel:`Enable Copyright Label` is checked.
-#. Enter the copyright text you want to place on the map.
-   You can make it dynamic using the :guilabel:`Insert an Expression` button.
-#. Choose the :guilabel:`Font` for the label using the :ref:`font selector
-   widget <font_selector>` with full access to QGIS :ref:`text formatting
-   <text_format>` options. Quickly set the font color and opacity by clicking
-   the black arrow to the right of the font combo box.
-#. Choose the :guilabel:`Placement` of the label in the canvas: options are
-   :guilabel:`Top left`, :guilabel:`Top Center`,
-   :guilabel:`Top Right`, :guilabel:`Bottom left`, :guilabel:`Bottom Center`,
-   and :guilabel:`Bottom Right` (default for Copyright decoration)
-#. Refine the placement of the item by setting a horizontal and/or vertical
-   :guilabel:`Margin from Edge`. These values can be in **Millimeters** or
-   **Pixels** or set as a **Percentage** of the width or height of the map canvas.
-#. Click :guilabel:`Apply` to verify that it looks as expected or
-   :guilabel:`OK` if you're satisfied.
+
+.. index:: Image decoration
+.. _image_decoration:
+
+Image Decoration
+................
+
+|addImage| :menuselection:`Image` allows you to add an image (logo, legend, ..) on the map canvas.
+
+To add an image:
+
+#. Select menu option :menuselection:`View --> Decorations --> Image...` to open the dialog.
+
+   .. _figure_image_decoration:
+
+   .. figure:: img/image_decoration.png
+      :align: center
+
+      The Image Decoration Dialog
+
+#. Make sure |checkbox| :guilabel:`Enable Image` is checked.
+#. Select a bitmap (i.e. png or jpg) or SVG image using the browse button.
+#. If you have choosen a parameter enabled SVG than you can also set a :guilabel:`Fill` or :guilabel:`Stroke` color. With :guilabel:`Stroke` color you can set the outline color of the SVG image.
+   If you have choosen a bitmap image, the color settings are disabled.
+#. Set a :guilabel:`Size` of the image in mm. The width of selected image is used to resize it to given :guilabel:`Size`.
+#. Choose where you want to place the image on the map canvas with the :guilabel:`Placement` combo box, the default position is :guilabel:`Top Left`.
+#. Set the :guilabel:`Horizontal` and :guilabel:`Vertical Margin from (Canvas) Edge`. These values can be set in **Millimeters**, **Pixels** or as a **Percentage** of the width or height of the map canvas.
+#. Click :guilabel:`Apply` to verify that it looks as expected and :guilabel:`OK` if you're satisfied.
 
 .. index:: North arrow
 .. _northarrow_decoration:
@@ -1018,12 +1035,19 @@ To add this decoration:
 North Arrow
 ...........
 
-|northArrow| :sup:`North Arrow` adds a north arrow on the map canvas,
-with options for style and placement.
+|northArrow| :menuselection:`North Arrow` allows you to add a north arrow on the map canvas.
+
+The North Arrow dialog is almost equal to the dialog of :ref:`image_decoration`.
+
+Differences are:
+
+* You can only use SVG images.
+* Additionally you can change the angle or choose **Automatic** to let QGIS determine the direction of the North Arrow.
+* The default :guilabel:`Placement` position of the North Arrow is :guilabel:`Bottom Left`.
 
 To add a north arrow:
 
-#. Select :menuselection:`View --> Decorations --> North Arrow` to open the dialog.
+Select menu option :menuselection:`View --> Decorations --> North Arrow...` to open the dialog.
 
    .. _figure_decorations_north:
 
@@ -1032,16 +1056,6 @@ To add a north arrow:
 
       The North Arrow Dialog
 
-#. Make sure |checkbox| :guilabel:`Enable north arrow` is checked
-#. Optionally change the color and size, or choose a custom SVG.
-#. Optionally change the angle or choose **Automatic** to let QGIS determine the
-   direction
-#. Optionally choose the placement from the Placement combo box
-#. Optionally refine the placement of the arrow by setting a horizontal and/or vertical
-   `Margin from (Canvas) Edge`. These values can be in **Millimeters** or
-   **Pixels** or set as a **Percentage** of the width or height of the map canvas.
-#. Click :guilabel:`Apply` to verify that it looks as expected and :guilabel:`OK` if you're satisfied.
-
 
 .. index:: Scale bar
 .. _scalebar_decoration:
@@ -1049,7 +1063,7 @@ To add a north arrow:
 Scale Bar
 .........
 
-|scaleBar| :sup:`Scale Bar` adds a simple scale bar to the map canvas. You
+|scaleBar| :menuselection:`Scale Bar` adds a simple scale bar to the map canvas. You
 can control the style and placement, as well as the labelling of the bar.
 
 QGIS only supports displaying the scale in the same units as your map frame.
@@ -1059,7 +1073,7 @@ bar to display distance in meters.
 
 To add a scale bar:
 
-#. Select :menuselection:`View --> Decorations --> Scale Bar` to open the dialog
+#. Select menu option :menuselection:`View --> Decorations --> Scale Bar...` to open the dialog
 
    .. _figure_decorations_scale:
 
@@ -1068,16 +1082,16 @@ To add a scale bar:
 
       The Scale Bar Dialog
 
-#. Make sure |checkbox| :guilabel:`Enable scale bar` is checked
+#. Make sure |checkbox| :guilabel:`Enable scale bar` is checked.
 #. Choose a style from the :guilabel:`Scale bar style` |selectString| combo box
-#. Select the :guilabel:`Color of bar` |selectColor| by choosing
+#. Select the :guilabel:`Color of bar` |selectColor| by choosing.
    a fill color (default: black) and an outline color (default: white). The scale
    bar fill and outline can be made opaque by clicking on the down arrow to the right
    of the color input.
-#. Select the font for the scale bar from the :guilabel:`Font of bar` |selectString| combo box
-#. Set the :guilabel:`Size of bar` |selectNumber|
+#. Select the font for the scale bar from the :guilabel:`Font of bar` |selectString| combo box.
+#. Set the :guilabel:`Size of bar` |selectNumber|.
 #. Optionally check |checkbox| :guilabel:`Automatically snap to round number
-   on resize` to display easy-to-read values
+   on resize` to display easy-to-read values.
 #. Choose the placement from the :guilabel:`Placement` |selectString| combo box
 #. You can refine the placement of the item by setting a horizontal and/or vertical
    `Margin from (Canvas) Edge`. These values can be in **Millimeters** or
@@ -1090,7 +1104,7 @@ To add a scale bar:
 Layout Extents
 ..............
 
-|addMap| :sup:`Layout Extents` adds the extents of :ref:`map item(s) <layout_map_item>` in print
+|addMap| :menuselection:`Layout Extents` adds the extents of :ref:`map item(s) <layout_map_item>` in print
 layout(s) to the canvas. When enabled, the extents of all map items within all print layouts are
 shown using a lightly dotted border labeled with the name of the print layout and map item.
 You can control the style and labeling of the displayed layout extents.
@@ -1118,9 +1132,9 @@ To add layout extent(s):
 
       The Layout Extents Dialog
 
-#. Make sure |checkbox| :guilabel:`Show layout extents` is checked
-#. Optionally change the symbol and labeling of the extents
-#. Click :guilabel:`Apply` to verify that it looks as expected and :guilabel:`OK` if you're satisfied
+#. Make sure |checkbox| :guilabel:`Show layout extents` is checked.
+#. Optionally change the symbol and labeling of the extents.
+#. Click :guilabel:`Apply` to verify that it looks as expected and :guilabel:`OK` if you're satisfied.
 
 
 .. tip::
@@ -1650,7 +1664,7 @@ At the top of the window, you have a handful of tools:
 .. _identify_mode:
 
 At the bottom of the window are the :guilabel:`Mode` and :guilabel:`View`
-comboboxes.
+combo boxes.
 :guilabel:`Mode` defines from which layers features should be identified:
 
 * **Current layer**: only features from the selected layer are identified. The
@@ -1723,11 +1737,11 @@ pyramids, histogram ...) for raster.
 .. figure:: img/style_combobox.png
    :align: center
 
-   Vector layer style combobox options
+   Vector layer style combo box options
 
 By default, the style applied to a loaded layer is named ``default``. Once you
 have got the ideal and appropriate rendering for your layer, you can save it by
-clicking the |selectString| :menuselection:`Style` combobox and choosing:
+clicking the |selectString| :menuselection:`Style` combo box and choosing:
 
 * **Rename Current**: The active style is renamed and updated with the current
   options
@@ -1764,7 +1778,7 @@ to duplicate any layer in the map legend.
 Storing Styles in a File or a Database
 --------------------------------------
 
-While styles created from the :guilabel:`Style` combobox are by default saved
+While styles created from the :guilabel:`Style` combo box are by default saved
 inside the project and can be copied and pasted from layer to layer in the project,
 it's also possible to save them outside the project so that they can be loaded
 in another project.
@@ -1843,7 +1857,7 @@ with name and description.
 
    You can also share layer styles within a project without importing a file or
    database style: right-click on the layer in the :guilabel:`Layers Panel` and,
-   from the :guilabel:`Styles` combobox , copy the style of a layer and paste it
+   from the :guilabel:`Styles` combo box , copy the style of a layer and paste it
    to a group or a selection of layers: the style is applied to all the layers
    that are of the same type (vector vs raster) as the original layer and, in
    the case of vector layers, have the same geometry type (point, line or polygon).
@@ -1981,7 +1995,7 @@ All but the :guilabel:`Recent colors` palette can be modified with the
 |signPlus| :sup:`Add current color` and |signMinus| :sup:`Remove selected color`
 buttons at the bottom of the frame.
 
-The :guilabel:`...` button next to the palette combobox also offers several
+The :guilabel:`...` button next to the palette combo box also offers several
 options to:
 
 * copy, paste, import or export colors
@@ -2334,6 +2348,8 @@ The values presented in the varying size assistant above will set the size
 .. |addGrid| image:: /static/common/add_grid.png
    :width: 1.5em
 .. |addGroup| image:: /static/common/mActionAddGroup.png
+   :width: 1.5em
+.. |addImage| image:: /static/common/mActionAddImage.png
    :width: 1.5em
 .. |addMap| image:: /static/common/mActionAddMap.png
    :width: 1.5em
