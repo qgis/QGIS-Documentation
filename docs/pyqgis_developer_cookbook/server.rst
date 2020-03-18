@@ -278,7 +278,8 @@ is still there::
 
 This is an extract of what you see in the log file:
 
-.. code-block:: guess
+
+.. code-block:: bash
    :emphasize-lines: 13
 
     src/core/qgsmessagelog.cpp: 45: (logMessage) [0ms] 2014-12-12T12:39:29 plugin[0] HelloServerServer - loading filter ParamsFilter

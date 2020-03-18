@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'QGISDoc'
+project = 'QGIS Documentation'
 copyright = '2002-now, QGIS project'
 author = 'QGIS Authors'
 
@@ -105,7 +105,7 @@ html_theme_options = {
     # titles_only: When enabled, page subheadings are not included in the navigation. Default: False
     'titles_only': False,
     # 'github_url' Force the Edit on GitHub button to use the configured URL.
-     'github_url': 'https://github.com/rduivenvoorde/qgisdoc',
+     'github_url': 'https://github.com/qgis/QGIS-Documentation',
     # 'gitlab_url' Force the Edit on GitLab button to use the configured URL.
     # 'gitlab_url': 'xxx',
 }
@@ -113,12 +113,12 @@ html_theme_options = {
 # Add any paths that contain custom themes here, relative to this directory.
 html_theme_path = ['./themes']
 
+html_favicon = 'static/common/qgis_logo.ico'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['static']
-
 
 ## for rtd themes, creating a html_context for the version/language part
 
