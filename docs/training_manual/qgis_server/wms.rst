@@ -35,7 +35,7 @@ is prepared see the :ref:`Creatingwmsfromproject` section.
 
 Let's make a WMS GetCapabilities request in the web browser or with curl:
 
-.. code-block:: guess
+.. code-block:: bash
 
  http://qgisplatform.demo/cgi-bin/qgis_mapserv.fcgi
  ?SERVICE=WMS
@@ -115,7 +115,7 @@ client, is using ``GetMap`` requests.
 
 A simple request looks like:
 
-.. code-block:: guess
+.. code-block:: bash
 
  http://qgisplatform.demo/cgi-bin/qgis_mapserv.fcgi
  ?MAP=/home/qgis/projects/world.qgs
@@ -169,7 +169,7 @@ Let's do another request that adds another layer, some of the
 :ref:`extra-getmap-parameters`, **FILTER** and **OPACITIES**, but also
 uses the standard STYLES parameter.
 
-.. code-block:: guess
+.. code-block:: bash
 
  http://qgisplatform.demo/cgi-bin/qgis_mapserv.fcgi
  ?MAP=/home/qgis/projects/world.qgs
@@ -203,7 +203,7 @@ Let's do another GetMap request that makes use of the :ref:`qgisserver-redlining
 feature and of the **SELECTION** parameter detailed in the
 :ref:`extra-getmap-parameters` section:
 
-.. code-block:: guess
+.. code-block:: bash
 
  http://qgisplatform.demo/cgi-bin/qgis_mapserv.fcgi
  ?MAP=/home/qgis/projects/world.qgs
@@ -247,7 +247,7 @@ If you open the :file:`world.qgs` project with QGIS Desktop you will find a
 print layout named ``Population distribution``. A simplified ``GetPrint``
 request that exemplifies this amazing feature is:
 
-.. code-block:: guess
+.. code-block:: bash
 
  http://qgisplatform.demo/cgi-bin/qgis_mapserv.fcgi
  ?map=/home/qgis/projects/world.qgs
