@@ -984,7 +984,7 @@ Copyright Label
 
 |copyrightLabel| :menuselection:`Copyright Label` can be used to decorate your map with a **Copyright** label.
 
-The Copyright Label dialog is almost equal to the dialog of :ref:`title_label_decoration`.
+The Copyright Label dialog is almost identical to the :ref:`title_label_decoration` dialog.
 
 Difference are:
 
