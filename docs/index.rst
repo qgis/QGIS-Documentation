@@ -10,11 +10,10 @@ Please have a look into one of the documents below.
 .. toctree::
    :maxdepth: 2
 
-   A Gentle Introduction to GIS <gentle_gis_introduction/index>
-   Training Manual <training_manual/index>
    User Guide/Manual (QGIS Testing) <user_manual/index>
-   User Guide/Manual PDF's <https://docs.qgis.org/testing/pdf/>
+   Documentation Guidelines <documentation_guidelines/index>
    PyQGIS Cookbook (QGIS Testing) <pyqgis_developer_cookbook/index>
    Developers Guide <developers_guide/index>
-   Documentation Guidelines <documentation_guidelines/index>
+   Training Manual <training_manual/index>
+   A Gentle Introduction to GIS <gentle_gis_introduction/index>
 
