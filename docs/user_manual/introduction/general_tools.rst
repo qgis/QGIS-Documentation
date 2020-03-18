@@ -1088,7 +1088,7 @@ To add a scale bar:
    a fill color (default: black) and an outline color (default: white). The scale
    bar fill and outline can be made opaque by clicking on the down arrow to the right
    of the color input.
-#. Select the font for the scale bar from the :guilabel:`Font of bar` |selectString| combo box.
+#. Select the font for the scale bar from the :guilabel:`Font of bar` |selectString| combo box
 #. Set the :guilabel:`Size of bar` |selectNumber|.
 #. Optionally check |checkbox| :guilabel:`Automatically snap to round number
    on resize` to display easy-to-read values.
