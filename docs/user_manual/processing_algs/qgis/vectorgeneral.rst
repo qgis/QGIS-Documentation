@@ -537,6 +537,102 @@ Outputs
      - [number]
      - Count of unique records
 
+.. _qgisdetectdatasetchanges:
+
+Detect dataset changes
+-----------------------------------
+Compares two vector layers, and determines which features are unchanged, added or
+deleted between the two. It is designed for comparing two different versions of 
+the same dataset.
+
+.. figure:: img/detect_change.png
+  :align: center
+
+  Detect dataset change example
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Original layer**
+     - ``ORIGINAL``
+     - [vector: any]
+     - The vector layer considered as the original version
+   * - **Revised layer**
+     - ``REVISED``
+     - [vector: any]
+     - The revised or modified vector layer
+   * - **Attributes to consider for match**
+   
+       (Optional)
+     - ``COMPARE_ATTRIBUTES``
+     - [tablefield: any] [list]
+     - Attributes to consider for match. By default, all attributes are compared.  
+   * - **Geometry comparison behavior**
+   
+       (Optional)
+     - ``MATCH_TYPE``
+     - [enumeration]
+       
+       Default: 1
+     - Defines the criteria for comparison. Options:
+       
+       * 0 --- Exact Match: includes the order and vertices count of geometries
+       * 1 --- Tolerant Match (Topological Equality): geometries are considered equal
+	   
+Outputs
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Unchanged features**
+     - ``UNCHANGED``
+     - [same as input]
+     - Specify the output vector layer containing the unchanged features. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
+   * - **Added features**
+     - ``ADDED``
+     - [same as input]
+     - Specify the output vector layer containing the added features. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
+   * - **Deleted features**
+     - ``DELETED``
+     - [same as input]
+     - Specify the output vector layer containing the deleted features. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
 
 .. _qgisdropgeometries:
 
