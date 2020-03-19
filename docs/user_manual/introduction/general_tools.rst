@@ -887,7 +887,7 @@ Extents. They are used to 'decorate' the map by adding cartographic elements.
 Grid
 ....
 
-|addGrid| :menuselection:`Grid` allows you to add a coordinate grid and coordinate
+|addGrid| :guilabel:`Grid` allows you to add a coordinate grid and coordinate
 annotations to the map canvas.
 
 #. Select menu option :menuselection:`View --> Decorations --> Grid...` to open the dialog.
@@ -967,7 +967,7 @@ To add a Title Label decoration:
 #. Select the :ref:`color <color-selector>` to apply to the title's
    :guilabel:`Background bar color`.
 #. Choose the :guilabel:`Placement` of the label in the canvas: options are
-   :guilabel:`Top left`, :guilabel:`Top Center` (default for Title Label decoration),
+   :guilabel:`Top left`, :guilabel:`Top Center` (default),
    :guilabel:`Top Right`, :guilabel:`Bottom left`, :guilabel:`Bottom Center`
    and :guilabel:`Bottom Right`.
 #. Refine the placement of the item by setting a horizontal and/or vertical
@@ -986,9 +986,9 @@ Copyright Label
 
 The Copyright Label dialog is almost identical to the :ref:`title_label_decoration` dialog.
 
-Difference are:
+Differences are:
 
-* you can not select a :guilabel:`Background bar color`.
+* you can not set a :guilabel:`Background bar color`.
 * the default :guilabel:`Placement` position of the Copyright Label is :guilabel:`Bottom Right`.
 
 Select menu option :menuselection:`View --> Decorations --> Copyright Label...` to open the dialog.
@@ -1021,11 +1021,13 @@ To add an image:
       The Image Decoration Dialog
 
 #. Make sure |checkbox| :guilabel:`Enable Image` is checked.
-#. Select a bitmap (i.e. png or jpg) or SVG image using the browse button.
-#. If you have choosen a parameter enabled SVG than you can also set a :guilabel:`Fill` or :guilabel:`Stroke` color. With :guilabel:`Stroke` color you can set the outline color of the SVG image.
-   If you have choosen a bitmap image, the color settings are disabled.
+#. Select a bitmap (e.g. png or jpg) or SVG image using the :guilabel:`...` :sup:`Browse` button.
+#. If you have chosen a parameter enabled SVG then you can also set
+   a :guilabel:`Fill` or :guilabel:`Stroke` (outline) color.
+   For bitmap images, the color settings are disabled.
 #. Set a :guilabel:`Size` of the image in mm. The width of selected image is used to resize it to given :guilabel:`Size`.
-#. Choose where you want to place the image on the map canvas with the :guilabel:`Placement` combo box, the default position is :guilabel:`Top Left`.
+#. Choose where you want to place the image on the map canvas with the
+   :guilabel:`Placement` combo box. The default position is :guilabel:`Top Left`.
 #. Set the :guilabel:`Horizontal` and :guilabel:`Vertical Margin from (Canvas) Edge`. These values can be set in **Millimeters**, **Pixels** or as a **Percentage** of the width or height of the map canvas.
 #. Click :guilabel:`Apply` to verify that it looks as expected and :guilabel:`OK` if you're satisfied.
 
