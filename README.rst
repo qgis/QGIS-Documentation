@@ -26,8 +26,8 @@ to activate the venv and then run the build from within that venv::
 
  make html
 
-Alternative
-...........
+Alternative (also for macOS)
+............................
 
 You can also use your own virtual env by creating it using it first::
 
