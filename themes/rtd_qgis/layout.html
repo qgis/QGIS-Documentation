@@ -19,3 +19,32 @@
   {{ super() }}
 
  {% endblock extrabody %}
+
+          {% block menu %}
+            {#
+              The singlehtml builder doesn't handle this toctree call when the
+              toctree is empty. Skip building this for now.
+            #}
+            {% if 'singlehtml' not in builder %}
+              {% set global_toc = toctree(maxdepth=theme_navigation_depth|int,
+                                          collapse=theme_collapse_navigation|tobool,
+                                          includehidden=theme_includehidden|tobool,
+                                          titles_only=theme_titles_only|tobool) %}
+            {% endif %}
+            {% if global_toc %}
+              {{ global_toc }}
+            {% else %}
+              <!-- Local TOC -->
+              <div class="local-toc">{{ toc }}</div>
+            {% endif %}
+
+            {% if pagename == 'docs/index' and last_updated %}
+            <ul>
+              <li>&nbsp;</li>
+              <li class="toctree-l1" style="padding:1.5em; font-size:small;">
+                {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}{% endtrans %}
+              </li>
+            </ul>
+            {% endif %}
+
+          {% endblock %}
