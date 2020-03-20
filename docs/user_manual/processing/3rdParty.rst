@@ -411,7 +411,7 @@ Table fields are stored as strings containing the name of the
 selected field.
 
 Vector files can be read using the ``readOGR()`` command instead
-of ``st_read()`` by specifying ``##load_vector_using_rgdaluser``.
+of ``st_read()`` by specifying ``##load_vector_using_rgdal``.
 This will produce a ``Spatial*DataFrame`` object instead of an
 ``sf`` object.
 

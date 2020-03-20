@@ -1,7 +1,3 @@
-.. only:: html
-
-   |updatedisclaimer|
-
 .. _r-syntax:
 
 
@@ -66,48 +62,48 @@ Syntax Summary for QGIS R scripts
 
 A number of input and output parameter types are offered.
 
-Input parameters types
-......................
+Input parameter types
+.....................
 
-+----------------+----------------------------------+-------------------------------------------------------------------------------+
-| Parameter      | Syntax example                   | Returning objects                                                             |
-+================+==================================+===============================================================================+
-| vector         | Layer = vector                   | SpatialDataFrame object, default object of ``rgdal`` package                  |
-+----------------+----------------------------------+-------------------------------------------------------------------------------+
-| vector point   | Layer = vector point             | SpatialPointDataFrame object, default object of ``rgdal`` package             |
-+----------------+----------------------------------+-------------------------------------------------------------------------------+
-| vector line    | Layer = vector line              | SpatialLineDataFrame object, default object of ``rgdal`` package              |
-+----------------+----------------------------------+-------------------------------------------------------------------------------+
-| vector polygon | Layer = vector polygon           | SpatialPolygonsDataFrame object, default object of ``rgdal`` package          |
-+----------------+----------------------------------+-------------------------------------------------------------------------------+
-| multiple vector| Layer = multiple vector          | SpatialDataFrame objects, default object of ``rgdal`` package                 |
-+----------------+----------------------------------+-------------------------------------------------------------------------------+
-| table          | Layer = table                    | dataframe conversion from csv, default object of ``read.csv`` function        |
-+----------------+----------------------------------+-------------------------------------------------------------------------------+
-| field          | Field = Field Layer              | name of the Field selected, e.g. ``"Area"``                                   |
-+----------------+----------------------------------+-------------------------------------------------------------------------------+
-| raster         | Layer = raster                   | RasterBrick object, default object of ``raster`` package                      |
-+----------------+----------------------------------+-------------------------------------------------------------------------------+
-| multiple raster| Layer = multiple raster          | RasterBrick objects, default object of ``raster`` package                     |
-+----------------+----------------------------------+-------------------------------------------------------------------------------+
-| number         | N = number                       | integer or floating number chosen                                             |
-+----------------+----------------------------------+-------------------------------------------------------------------------------+
-| string         | S = string                       | string added in the box                                                       |
-+----------------+----------------------------------+-------------------------------------------------------------------------------+
-| longstring     | LS = longstring                  | string added in the box, could be longer then the normal string               |
-+----------------+----------------------------------+-------------------------------------------------------------------------------+
-| selection      | S = selection first;second;third | string of the selected item chosen in the dropdown menu                       |
-+----------------+----------------------------------+-------------------------------------------------------------------------------+
-| crs            | C = crs                          | string of the resulting CRS chosen, in the format: ``"EPSG:4326"``            |
-+----------------+----------------------------------+-------------------------------------------------------------------------------+
-| extent         | E = extent                       | Extent object of the ``raster`` package, you can extract values as ``E@xmin`` |
-+----------------+----------------------------------+-------------------------------------------------------------------------------+
-| point          | P = point                        | when clicked on the map, you have the coordinates of the point                |
-+----------------+----------------------------------+-------------------------------------------------------------------------------+
-| file           | F = file                         | path of the file chosen, e.g. "/home/matteo/file.txt"                         |
-+----------------+----------------------------------+-------------------------------------------------------------------------------+
-| folder         | F = folder                       | path of the folder chosen, e.g. "/home/matteo/Downloads"                      |
-+----------------+----------------------------------+-------------------------------------------------------------------------------+
++----------------+----------------------------------+-------------------------------------------------------------------------------------+
+| Parameter      | Syntax example                   | Returning objects                                                                   |
++================+==================================+=====================================================================================+
+| vector         | Layer = vector                   | sf object (or SpatialDataFrame object, if ##load_vector_using_rgdal is specified)   |
++----------------+----------------------------------+-------------------------------------------------------------------------------------+
+| vector point   | Layer = vector point             | sf object (or SpatialDataFrame object, if ##load_vector_using_rgdal is specified)   |
++----------------+----------------------------------+-------------------------------------------------------------------------------------+
+| vector line    | Layer = vector line              | sf object (or SpatialDataFrame object, if ##load_vector_using_rgdal is specified)   |
++----------------+----------------------------------+-------------------------------------------------------------------------------------+
+| vector polygon | Layer = vector polygon           | sf object (or SpatialPolygonsDataFrame object, if ##load_vector_using_rgdal is used)|
++----------------+----------------------------------+-------------------------------------------------------------------------------------+
+| multiple vector| Layer = multiple vector          | sf object (or SpatialDataFrame objects if ##load_vector_using_rgdal is specified)   |
++----------------+----------------------------------+-------------------------------------------------------------------------------------+
+| table          | Layer = table                    | dataframe conversion from csv, default object of ``read.csv`` function              |
++----------------+----------------------------------+-------------------------------------------------------------------------------------+
+| field          | Field = Field Layer              | name of the Field selected, e.g. ``"Area"``                                         |
++----------------+----------------------------------+-------------------------------------------------------------------------------------+
+| raster         | Layer = raster                   | RasterBrick object, default object of ``raster`` package                            |
++----------------+----------------------------------+-------------------------------------------------------------------------------------+
+| multiple raster| Layer = multiple raster          | RasterBrick objects, default object of ``raster`` package                           |
++----------------+----------------------------------+-------------------------------------------------------------------------------------+
+| number         | N = number                       | integer or floating number chosen                                                   |
++----------------+----------------------------------+-------------------------------------------------------------------------------------+
+| string         | S = string                       | string added in the box                                                             |
++----------------+----------------------------------+-------------------------------------------------------------------------------------+
+| longstring     | LS = longstring                  | string added in the box, could be longer then the normal string                     |
++----------------+----------------------------------+-------------------------------------------------------------------------------------+
+| selection      | S = selection first;second;third | string of the selected item chosen in the dropdown menu                             |
++----------------+----------------------------------+-------------------------------------------------------------------------------------+
+| crs            | C = crs                          | string of the resulting CRS chosen, in the format: ``"EPSG:4326"``                  |
++----------------+----------------------------------+-------------------------------------------------------------------------------------+
+| extent         | E = extent                       | Extent object of the ``raster`` package, you can extract values as ``E@xmin``       |
++----------------+----------------------------------+-------------------------------------------------------------------------------------+
+| point          | P = point                        | when clicked on the map, you have the coordinates of the point                      |
++----------------+----------------------------------+-------------------------------------------------------------------------------------+
+| file           | F = file                         | path of the file chosen, e.g. "/home/matteo/file.txt"                               |
++----------------+----------------------------------+-------------------------------------------------------------------------------------+
+| folder         | F = folder                       | path of the folder chosen, e.g. "/home/matteo/Downloads"                            |
++----------------+----------------------------------+-------------------------------------------------------------------------------------+
 
 A parameter can be **OPTIONAL**, meaning that it can be ignored.
 
@@ -158,15 +154,15 @@ Example with vector output
 Let's take an algorithm from the online collection that creates
 random points from the extent of an input layer::
 
-##Point pattern analysis=group
-##Layer=vector polygon
-##Size=number 10
-##Output= output vector
-library(sp)
-spatpoly = as(Layer, "Spatial")
-pts=spsample(spatpoly,Size,type="random")
-spdf=SpatialPointsDataFrame(pts, as.data.frame(pts))
-Output=st_as_sf(spdf)
+  ##Point pattern analysis=group
+  ##Layer=vector polygon
+  ##Size=number 10
+  ##Output=output vector
+  library(sp)
+  spatpoly = as(Layer, "Spatial")
+  pts=spsample(spatpoly,Size,type="random")
+  spdf=SpatialPointsDataFrame(pts, as.data.frame(pts))
+  Output=st_as_sf(spdf)
 
 Explanation (per line in the script):
 
@@ -201,23 +197,23 @@ raster.
 The raster is created with the ``raster`` function of the raster R
 package::
 
-##Basic statistics=group
-##Layer=vector point
-##Field=Field Layer
-##Output=output raster
-##load_vector_using_rgdal
-require("automap")
-require("sp")
-require("raster")
-table=as.data.frame(Layer)
-coordinates(table)= ~coords.x1+coords.x2
-c = Layer[[Field]]
-kriging_result = autoKrige(c~1, table)
-prediction = raster(kriging_result$krige_output)
-Output<-prediction
+  ##Basic statistics=group
+  ##Layer=vector point
+  ##Field=Field Layer
+  ##Output=output raster
+  ##load_vector_using_rgdal
+  require("automap")
+  require("sp")
+  require("raster")
+  table=as.data.frame(Layer)
+  coordinates(table)= ~coords.x1+coords.x2
+  c = Layer[[Field]]
+  kriging_result = autoKrige(c~1, table)
+  prediction = raster(kriging_result$krige_output)
+  Output<-prediction
 
 By using ``##load_vector_using_rgdal``, the input vector layer
-will be made available to the as a SpatialDataFrame objects,
+will be made available as a ``SpatialDataFrame`` objects,
 so we avoid having to translate it from an ``sf`` object.
 
 Example with table output
@@ -285,9 +281,8 @@ The script is exactly the same as the one above except for two edits:
 
 Example with plot
 -----------------
-To create plots, you have to use the ``##output_plots_to_html
-`` parameter as
-in the following script::
+To create plots, you have to use the ``##output_plots_to_html``
+parameter as in the following script::
 
   ##Basic statistics=group
   ##Layer=vector
@@ -309,5 +304,3 @@ The plot is automatically added to the Processing *Result Viewer*.
    If you need to create a new substitution manually,
    please add it also to the substitutions.txt file in the
    source folder.
-
-.. |updatedisclaimer| replace:: :disclaimer:`Docs in progress for 'QGIS testing'. Visit http://docs.qgis.org/2.18 for QGIS 2.18 docs and translations.`
