@@ -84,7 +84,7 @@ set white background and enable anti-aliasing for smooth rendering
 
 Now it is time to add some map layers. We will first open a layer and add it to
 the current project. Then we will set the canvas extent and set the list of
-layers for canvas.
+layers for the canvas.
 
 .. testcode:: canvas
 
