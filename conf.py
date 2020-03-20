@@ -199,6 +199,8 @@ else:
 doctest_global_setup = '''
 import os
 import sys
+import tempfile
+
 from qgis.testing import start_app
 def start_qgis():
     save_stdout = sys.stdout
@@ -209,6 +211,22 @@ def start_qgis():
     finally:
         sys.stdout = save_stdout
     sys.stdout = sys.stderr
+
+
+os.environ['QGIS_AUTH_DB_DIR_PATH'] = tempfile.mkdtemp()
+os.environ['QT_QPA_PLATFORM'] = 'offscreen'
+start_qgis()
+
+# Global imports
+from qgis.core import *
+from qgis.gui import *
+from qgis.analysis import *
+from qgis.server import *
+from qgis.PyQt.QtCore import *
+from qgis.PyQt.QtNetwork import *
+from qgis.PyQt.QtGui import *
+from qgis.PyQt.QtWidgets import *
+
 '''
 doctest_test_doctest_blocks = ''
 
