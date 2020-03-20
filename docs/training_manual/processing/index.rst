@@ -48,6 +48,4 @@ Contents:
    generalize
    solar
    r_intro
-   r_syntax
-   r_syntax-table
    geomorpho
