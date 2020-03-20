@@ -364,84 +364,106 @@ polygons in a given polygon layer.
 This method belongs to the ``maptools`` package.
 Since almost all the algorithms that you might like to incorporate
 into QGIS will use or generate spatial data, knowledge of spatial
-packages like ``maptools`` and ``sp``/``sf``, is necessary.
+packages like ``maptools`` and ``sp``/``sf``, is very useful.
 
 .. code-block:: python
 
-    ##polyg=vector
-    ##numpoints=number 10
-    ##output=output vector
-    ##sp=group
-    pts=spsample(polyg,numpoints,type="random")
-    output=SpatialPointsDataFrame(pts, as.data.frame(pts))
+    ##Random points within layer extent=name
+    ##Point pattern analysis=group
+    ##Vector_layer=vector
+    ##Number_of_points=number 10
+    ##Output=output vector
+    library(sp)
+    spatpoly = as(Vector_layer, "Spatial")
+    pts=spsample(spatpoly,Number_of_points,type="random")
+    spdf=SpatialPointsDataFrame(pts, as.data.frame(pts))
+    Output=st_as_sf(spdf)
 
 The first lines, which start with a double Python comment sign
-(``##``), tell QGIS about the inputs of the algorithm in
-the file and the outputs that it will generate.
+(``##``), define the display name and group of the script, and
+tell QGIS about its inputs and outputs.
 
 .. note::
    To find out more about how to write your own R scripts, have a
-   look at the :ref:`R Intro <r-intro>` and the
-   :ref:`R Syntax <r-syntax>` Training Manual Chapters.
+   look at the :ref:`R Intro <r-intro>` section in the training
+   manual and consult the :ref:`QGIS R Syntax <r-syntax>` section.
 
 When you declare an input parameter, QGIS uses that information for
 two things: creating the user interface to ask the user for the value
 of that parameter, and creating a corresponding R variable that can
-later be used as R function input.
+be used as R function input.
 
 In the above example, we have declared an input of type ``vector``,
-named ``polyg``.
+named ``Vector_layer``.
 When executing the algorithm, QGIS will open the layer selected
-by the user and store it in a variable named ``polyg``.
-So, the name of a parameter is the name of the variable that we
-can use in R for accessing the value of that parameter (you should
+by the user and store it in a variable named ``Vector_layer``.
+So, the name of a parameter is the name of the variable that you
+use in R for accessing the value of that parameter (you should
 therefore avoid using reserved R words as parameter names).
 
 Spatial parameters such as vector and raster layers are read using
-the ``readOGR()`` and ``brick()`` commands (you do not have to worry
-about adding those commands to your description file -- QGIS will
-do it), and they are stored as ``Spatial*DataFrame`` objects.
+the ``st_read()`` (or ``readOGR``) and ``brick()`` (or ``readGDAL``)
+commands (you do not have to worry about adding those commands to
+your description file -- QGIS will do it), and they are stored as
+``sf`` (or ``Spatial*DataFrame``) objects.
+
 Table fields are stored as strings containing the name of the
 selected field.
 
-Tables are opened using the ``read.csv()`` command.
-If a table entered by the user is not in CSV format, it will be
-converted prior to importing it into R.
+Vector files can be read using the ``readOGR()`` command instead
+of ``st_read()`` by specifying ``##load_vector_using_rgdal``.
+This will produce a ``Spatial*DataFrame`` object instead of an
+``sf`` object.
 
 Raster files can be read using the ``readGDAL()`` command instead
-of ``brick()`` by specifying ``##usereadgdal``.
+of ``brick()`` by specifying ``##load_raster_using_rgdal``.
 
 If you are an advanced user and do not want QGIS to create the
-object representing the layer, you can use ``##passfilenames`` to
-indicate that you prefer a string with the filename instead.
+object for the layer, you can use ``##pass_filenames`` to indicate
+that you prefer a string with the filename.
 In this case, it is up to you to open the file before performing
 any operation on the data it contains.
 
-With the above information, we can now understand the first line
-of this script (the first line not starting with a Python
-comment).
+With the above information, it is possible to understand the first
+lines of the R script (the first line not starting with a Python
+comment character).
 
 .. code-block:: python
 
+    library(sp)
+    spatpoly = as(Vector_layer, "Spatial")
     pts=spsample(polyg,numpoints,type="random")
 
-The variable ``polyg`` already contains a
-``SpatialPolygonsDataFrame`` object, so it can be used when calling
-the ``spsample`` method, just like the ``numpoints`` one, which
-specifies the number of points to add to the created sample grid.
+The ``spsample`` function is provided by the *sp* library, so
+the first thing we do is to load that library.
+The variable ``Vector_layer`` contains an ``sf`` object.
+Since we are going to use a function (``spsample``) from the *sp*
+library, we must convert the ``sf`` object to a
+``SpatialPolygonsDataFrame`` object using the ``as`` function.
 
-Since we have declared a vector output named ``out``, we have to
-create a variable named ``out`` and store a ``Spatial*DataFrame``
-object in it (in this case, a ``SpatialPointsDataFrame``).
-You can use any name for your intermediate variables.
+Then we calling the ``spsample`` function, with this object and
+the ``numpoints`` input parameter (which specifies the number of
+points to generate).
+
+Since we have declared a vector output named ``Output``, we have to
+create a variable named ``Output`` containing an ``sf`` object.
+
+We do this in two steps.
+First we create a ``SpatialPolygonsDataFrame`` object from the
+result of the function, using the *SpatialPointsDataFrame* function,
+and then we convert that object to an ``sf`` object using the
+``st_as_sf`` function (of the *sf* library).
+
+You can use whatever names you like for your intermediate
+variables.
 Just make sure that the variable storing your final result has
-the same name that you used to declare it, and that it contains a
-suitable value.
+the defined name (in this case ``Output``), and that it contains
+a suitable value (an ``sf`` object for vector layer output).
 
-In this case, the result obtained from the ``spsample`` method has
-to be converted explicitly into a ``SpatialPointsDataFrame`` object,
-since it is itself an object of class ``ppp``, which can not be
-returned to QGIS.
+In this case, the result obtained from the ``spsample`` method had
+to be converted explicitly into an ``sf`` object via a
+``SpatialPointsDataFrame`` object, since it is itself an object of
+class ``ppp``, which can not be returned to QGIS.
 
 If your algorithm generates raster layers, the way they are saved
 will depend on whether or not you have used the
@@ -451,15 +473,15 @@ method.
 If not, the ``writeRaster()`` method from the ``raster`` package
 will be used.
 
-If you have used the ``##passfilenames`` option, outputs are
+If you have used the ``##pass_filenames`` option, outputs are
 generated using the ``raster`` package (with ``writeRaster()``).
 
 If your algorithm does not generate a layer, but a text result in
 the console instead, you have to indicate that you want the
 console to be shown once the execution is finished.
 To do so, just start the command lines that produce the results
-you want to print with the ``>`` ('greater') sign.
-The output of all other lines will not be shown.
+you want to print with the ``>`` ('greater than') sign.
+Only output from lines prefixed with ``>`` are shown.
 For instance, here is the description file of an algorithm that
 performs a normality test on a given field (column) of the
 attributes of a vector layer:
@@ -477,36 +499,36 @@ is not (and neither are the outputs from other command lines added
 automatically by QGIS).
 
 If your algorithm creates any kind of graphics (using the ``plot()``
-method), add the following line:
+method), add the following line (``output_plots_to_html`` used to be
+``showplots``):
 
 .. code-block:: python
 
-    ##showplots
+    ##output_plots_to_html
 
 This will cause QGIS to redirect all R graphical outputs to a
 temporary file, which will be opened once R execution has finished.
 
-Both graphics and console results will be shown in the processing
-results manager.
+Both graphics and console results will be available through the
+processing results manager.
 
-For more information, please check the script files provided with
-Processing.
+For more information, please check the R scripts in the official
+QGIS collection (you download and install them using the *QGIS
+Resource Sharing* plugin, as explained elsewhere).
 Most of them are rather simple and will greatly help you understand
 how to create your own scripts.
 
 .. note::
-   The ``rgdal`` and ``raster`` libraries are loaded by default, so
-   you do not have to add the corresponding ``library()`` commands
-   (you just have to make sure that those two packages are installed
-   in your R distribution).
+   The ``sf``, ``rgdal`` and ``raster`` libraries are loaded by default,
+   so you do not have to add the corresponding ``library()`` commands.
    However, other additional libraries that you might need have to be
    explicitly loaded by typing:
    ``library(ggplot2)`` (to load the ``ggplot2`` library).
    If the package is not already installed on your machine, Processing
-   will download and install it.
-   In this way the package will be also available in R Standalone.
-   **Be aware** that if the package has to be downloaded, the first
-   time you run the script it might take a long time.
+   will try to download and install it.
+   In this way the package will also become available in R Standalone.
+   **Be aware** that if the package has to be downloaded, the script
+   may take a long time to run the first time.
 
 R libraries
 -----------
@@ -520,13 +542,13 @@ R libraries installed when running sf_test
 
 The R script *sf_test* tries to load ``sf`` and ``raster``.
 If these two packages are not installed, R may try to load and install
-them.
+them (and all the libraries that they depend on).
 
 The following R libraries end up in
 :file:`~/.local/share/QGIS/QGIS3/profiles/default/processing/rscripts`
 after ``sf_test`` has been run from the Processing Toolbox on Ubuntu with
-version 2.0 of the *Processing R Provider* plugin and R 3.4.4 (*apt*
-package ``r-base-core`` only):
+version 2.0 of the *Processing R Provider* plugin and a fresh install of
+*R* 3.4.4 (*apt* package ``r-base-core`` only):
 
 ``abind, askpass, assertthat, backports, base64enc, BH, bit, bit64,
 blob, brew, callr, classInt, cli, colorspace, covr, crayon, crosstalk,
