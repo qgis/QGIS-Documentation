@@ -202,6 +202,8 @@ import sys
 import tempfile
 
 from qgis.testing import start_app
+from qgis.testing.mocked import get_iface
+
 def start_qgis():
     save_stdout = sys.stdout
     try:
@@ -212,10 +214,9 @@ def start_qgis():
         sys.stdout = save_stdout
     sys.stdout = sys.stderr
 
-
+# Prepare environment for QgsApplication
 os.environ['QGIS_AUTH_DB_DIR_PATH'] = tempfile.mkdtemp()
 os.environ['QT_QPA_PLATFORM'] = 'offscreen'
-start_qgis()
 
 # Global imports
 from qgis.core import *
@@ -226,6 +227,16 @@ from qgis.PyQt.QtCore import *
 from qgis.PyQt.QtNetwork import *
 from qgis.PyQt.QtGui import *
 from qgis.PyQt.QtWidgets import *
+
+# Start QgsApplication
+start_qgis()
+
+# Expose the iface for plugins snippets
+iface = get_iface()
+
+# Mock activeLayer()
+iface.activeLayer.return_value = QgsVectorLayer("Point", "temporary_points", "memory")
+
 
 '''
 doctest_test_doctest_blocks = ''
