@@ -30,9 +30,9 @@ establishes a connection to a Postgres database.
 There are also a few widgets in the QGIS gui library that plugin developers can use to
 easily integrate the authentication infrastructure into their code:
 
- + :class:`QgsAuthConfigEditor <qgis.gui.QgsAuthConfigEditor>`
- + :class:`QgsAuthConfigSelect <qgis.gui.QgsAuthConfigSelect>`
- + :class:`QgsAuthSettingsWidget <qgis.gui.QgsAuthSettingsWidget>`
+* :class:`QgsAuthConfigEditor <qgis.gui.QgsAuthConfigEditor>`
+* :class:`QgsAuthConfigSelect <qgis.gui.QgsAuthConfigSelect>`
+* :class:`QgsAuthSettingsWidget <qgis.gui.QgsAuthSettingsWidget>`
 
 A good code reference can be read from the authentication infrastructure
 :source:`tests code <tests/src/python/test_qgsauthsystem.py>`.
