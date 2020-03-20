@@ -27,7 +27,7 @@ The authentication system is widely used in QGIS Desktop by data providers whene
 credentials are required to access a particular resource, for example when a layer
 establishes a connection to a Postgres database.
 
-There are also a few widgets in QGIS gui library that plugin developers can use to
+There are also a few widgets in the QGIS gui library that plugin developers can use to
 easily integrate the authentication infrastructure into their code:
 
  + :class:`QgsAuthConfigEditor <qgis.gui.QgsAuthConfigEditor>`
@@ -104,7 +104,7 @@ understand the snippet.
 
   authMgr = QgsApplication.authManager()
 
-  # check if QgsAuthManager has been already initialized... a side effect
+  # check if QgsAuthManager has already been initialized... a side effect
   # of the QgsAuthManager.init() is that AuthDbPath is set.
   # QgsAuthManager.init() is executed during QGIS application init and hence
   # you do not normally need to call it directly.
@@ -139,9 +139,9 @@ class accessed using a unique string like the following one::
 
   authcfg = 'fm1s770'
 
-that string is generated automatically when creating an entry using QGIS API or
-GUI but it might be useful to manually set it to a known value in case the same
-configuration must be shared (with different credentials) to multiple users within
+that string is generated automatically when creating an entry using the QGIS API or
+GUI, but it might be useful to manually set it to a known value in case the
+configuration must be shared (with different credentials) between multiple users within
 an organization.
 
 :class:`QgsAuthMethodConfig <qgis.core.QgsAuthMethodConfig>` is the base class
@@ -174,8 +174,8 @@ credentials for an hypothetic alice user:
 Available Authentication methods
 ................................
 
-:term:`Authentication Method`\s libraries are loaded dynamically during
-authentication manager init. The list of Authentication method can vary
+:term:`Authentication Method` libraries are loaded dynamically during
+authentication manager init. The list of Authentication methods can vary
 with QGIS evolution, but the original list of available methods is:
 
 #. ``Basic`` User and password authentication
@@ -350,7 +350,7 @@ Many third party plugins are using httplib2 or other Python networking libraries
 connections instead of integrating with :class:`QgsNetworkAccessManager <qgis.core.QgsNetworkAccessManager>`
 and its related Authentication Infrastructure integration.
 
-To facilitate this integration an helper python function has been created
+To facilitate this integration a helper Python function has been created
 called ``NetworkAccessManager``. Its code can be found `here
 <https://github.com/rduivenvoorde/pdokservicesplugin/blob/master/networkaccessmanager.py>`_.
 
