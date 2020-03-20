@@ -24,11 +24,26 @@ in the  User Manual in the :ref:`authentication_overview` paragraph.
 This chapter describes the best practices to use the Authentication system from
 a developer perspective.
 
+<<<<<<< HEAD
 Most of the following snippets are derived from the code of Geoserver Explorer
 plugin and its tests. This is the first plugin that used Authentication
 infrastructure. The plugin code and its tests can be found at this
 `link <https://github.com/boundlessgeo/qgis-geoserver-plugin>`_.
 Other good code reference can be read from the authentication infrastructure
+=======
+The authentication system is widely used in QGIS Desktop by data providers whenever
+credentials are required to access a particular resource, for example when a layer
+establishes a connection to a Postgres database.
+
+There are also a few widgets in the QGIS gui library that plugin developers can use to
+easily integrate the authentication infrastructure into their code:
+
+* :class:`QgsAuthConfigEditor <qgis.gui.QgsAuthConfigEditor>`
+* :class:`QgsAuthConfigSelect <qgis.gui.QgsAuthConfigSelect>`
+* :class:`QgsAuthSettingsWidget <qgis.gui.QgsAuthSettingsWidget>`
+
+A good code reference can be read from the authentication infrastructure
+>>>>>>> 1e4509a13... Fix indentation of GUI auth widgets list (#5071)
 :source:`tests code <tests/src/python/test_qgsauthsystem.py>`.
 
 
