@@ -33,5 +33,5 @@ QGIS User Guide
     plugins/index
     preamble/help_and_support
     preamble/contributors
-    appendices/appendices
+    appendices/index
     literature_web/literature_and_web_references
