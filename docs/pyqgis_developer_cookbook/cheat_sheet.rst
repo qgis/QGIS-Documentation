@@ -36,20 +36,24 @@ User Interface
 Settings
 ========
 
-**Get QSettings list**
+**Get QgsSettings list**
 
 .. testcleanup::
 
-    QSettings().clear()
+    QgsSettings().clear()
 
 .. testcode::
 
-    from qgis.PyQt.QtCore import QSettings
+    from qgis.core import QgsSettings
 
-    qs = QSettings()
+    qs = QgsSettings()
 
     for k in sorted(qs.allKeys()):
         print (k)
+
+.. testoutput::
+
+    qgis/symbolsListGroupsIndex
 
 Toolbars
 ========
