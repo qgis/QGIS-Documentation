@@ -202,7 +202,7 @@ In Figure_Heatmap_data_processing_, the airports of Alaska are shown.
 QGIS will generate the heatmap and add it to your map window.
 By default, the heatmap is shaded in greyscale, with lighter areas
 showing higher concentrations of airports.
-Rhe heatmap can now be styled in QGIS to improve its appearance.
+The heatmap can now be styled in QGIS to improve its appearance.
 
 .. _figure_heatmap_created_processing:
 
