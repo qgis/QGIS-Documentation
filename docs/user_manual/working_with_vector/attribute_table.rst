@@ -141,7 +141,7 @@ It can be 'Remember last view', 'Table view' or 'Form view'.
 .. figure:: img/attribute_table_views.png
    :align: center
 
-   Attribute table in form view (top) vs table view (bottom)
+   Attribute table in table view (top) vs form view (bottom)
 
 
 .. index:: Sort columns, Add actions
