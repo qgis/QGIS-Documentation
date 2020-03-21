@@ -14,7 +14,7 @@ Assign projection
 -----------------
 Applies a coordinate system to a raster dataset.
 
-This algorithm is derived from the the `GDAL edit utility <https://gdal.org/gdal_edit.html>`_ .
+This algorithm is derived from the `GDAL edit utility <https://gdal.org/gdal_edit.html>`_ .
 
 ``Default menu``: :menuselection:`Raster --> Projections`
 
