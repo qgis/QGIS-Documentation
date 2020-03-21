@@ -1573,7 +1573,7 @@ Outputs
    * - 
      - ``INPUT``
      - [same as input]
-     - The input vector layer with the SHX files repaired
+     - The input vector layer with the SHX file repaired
 	 
 	 
 .. _qgisreprojectlayer:
