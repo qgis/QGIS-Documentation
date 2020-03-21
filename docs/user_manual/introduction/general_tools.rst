@@ -944,11 +944,12 @@ annotations to the map canvas.
 Title Label
 ...........
 
-|titleLabel| :menuselection:`Title Label` allows you to decorate your map with a **Title**.
+|titleLabel| :guilabel:`Title Label` allows you to decorate your map with a **Title**.
 
 To add a Title Label decoration:
 
-#. Select menu option :menuselection:`View --> Decorations --> Title Label...` to open the dialog.
+#. Select menu option :menuselection:`View --> Decorations --> Title Label...`
+   to open the dialog.
 
    .. _figure_decorations_title:
 
@@ -957,7 +958,7 @@ To add a Title Label decoration:
 
       The Title Decoration Dialog
 
-#. Make sure |checkbox| :guilabel:`Enable Title Label`) is checked.
+#. Make sure |checkbox| :guilabel:`Enable Title Label`) is checked
 #. Enter the title text you want to place on the map.
    You can make it dynamic using the :guilabel:`Insert an Expression` button.
 #. Choose the :guilabel:`Font` for the label using the :ref:`font selector
@@ -982,16 +983,12 @@ To add a Title Label decoration:
 Copyright Label
 ...............
 
-|copyrightLabel| :menuselection:`Copyright Label` can be used to decorate your map with a **Copyright** label.
+|copyrightLabel| :guilabel:`Copyright Label` can be used to decorate your map with a **Copyright** label.
 
-The Copyright Label dialog is almost identical to the :ref:`title_label_decoration` dialog.
+To add this decoration:
 
-Differences are:
-
-* you can not set a :guilabel:`Background bar color`.
-* the default :guilabel:`Placement` position of the Copyright Label is :guilabel:`Bottom Right`.
-
-Select menu option :menuselection:`View --> Decorations --> Copyright Label...` to open the dialog.
+#. Select menu option :menuselection:`View --> Decorations --> Copyright Label...`
+   to open the dialog.
 
    .. _figure_decorations_copyright:
 
@@ -1000,6 +997,22 @@ Select menu option :menuselection:`View --> Decorations --> Copyright Label...` 
 
       The Copyright Decoration Dialog
 
+#. Make sure |checkbox| :guilabel:`Enable Copyright Label` is checked
+#. Enter the copyright text you want to place on the map.
+   You can make it dynamic using the :guilabel:`Insert an Expression` button.
+#. Choose the :guilabel:`Font` for the label using the :ref:`font selector
+   widget <font_selector>` with full access to QGIS :ref:`text formatting
+   <text_format>` options. Quickly set the font color and opacity by clicking
+   the black arrow to the right of the font combo box.
+#. Choose the :guilabel:`Placement` of the label in the canvas: options are
+   :guilabel:`Top left`, :guilabel:`Top Center`,
+   :guilabel:`Top Right`, :guilabel:`Bottom left`, :guilabel:`Bottom Center`,
+   and :guilabel:`Bottom Right` (default for Copyright decoration)
+#. Refine the placement of the item by setting a horizontal and/or vertical
+   :guilabel:`Margin from Edge`. These values can be in **Millimeters** or
+   **Pixels** or set as a **Percentage** of the width or height of the map canvas.
+#. Click :guilabel:`Apply` to verify that it looks as expected or
+   :guilabel:`OK` if you're satisfied.
 
 .. index:: Image decoration
 .. _image_decoration:
@@ -1007,11 +1020,12 @@ Select menu option :menuselection:`View --> Decorations --> Copyright Label...` 
 Image Decoration
 ................
 
-|addImage| :menuselection:`Image` allows you to add an image (logo, legend, ..) on the map canvas.
+|addImage| :guilabel:`Image` allows you to add an image (logo, legend, ..) on the map canvas.
 
 To add an image:
 
-#. Select menu option :menuselection:`View --> Decorations --> Image...` to open the dialog.
+#. Select menu option :menuselection:`View --> Decorations --> Image...`
+   to open the dialog.
 
    .. _figure_image_decoration:
 
@@ -1020,16 +1034,20 @@ To add an image:
 
       The Image Decoration Dialog
 
-#. Make sure |checkbox| :guilabel:`Enable Image` is checked.
-#. Select a bitmap (e.g. png or jpg) or SVG image using the :guilabel:`...` :sup:`Browse` button.
+#. Make sure |checkbox| :guilabel:`Enable Image` is checked
+#. Select a bitmap (e.g. png or jpg) or SVG image using the :guilabel:`...` :sup:`Browse` button
 #. If you have chosen a parameter enabled SVG then you can also set
    a :guilabel:`Fill` or :guilabel:`Stroke` (outline) color.
    For bitmap images, the color settings are disabled.
-#. Set a :guilabel:`Size` of the image in mm. The width of selected image is used to resize it to given :guilabel:`Size`.
+#. Set a :guilabel:`Size` of the image in mm. The width of selected image is used to
+   resize it to given :guilabel:`Size`.
 #. Choose where you want to place the image on the map canvas with the
    :guilabel:`Placement` combo box. The default position is :guilabel:`Top Left`.
-#. Set the :guilabel:`Horizontal` and :guilabel:`Vertical Margin from (Canvas) Edge`. These values can be set in **Millimeters**, **Pixels** or as a **Percentage** of the width or height of the map canvas.
-#. Click :guilabel:`Apply` to verify that it looks as expected and :guilabel:`OK` if you're satisfied.
+#. Set the :guilabel:`Horizontal` and :guilabel:`Vertical Margin from (Canvas) Edge`.
+   These values can be set in **Millimeters**, **Pixels** or as a **Percentage** of
+   the width or height of the map canvas.
+#. Click :guilabel:`Apply` to verify that it looks as expected and :guilabel:`OK`
+   if you're satisfied.
 
 .. index:: North arrow
 .. _northarrow_decoration:
@@ -1037,19 +1055,11 @@ To add an image:
 North Arrow
 ...........
 
-|northArrow| :menuselection:`North Arrow` allows you to add a north arrow on the map canvas.
-
-The North Arrow dialog is almost equal to the dialog of :ref:`image_decoration`.
-
-Differences are:
-
-* You can only use SVG images.
-* Additionally you can change the angle or choose **Automatic** to let QGIS determine the direction of the North Arrow.
-* The default :guilabel:`Placement` position of the North Arrow is :guilabel:`Bottom Left`.
+|northArrow| :guilabel:`North Arrow` allows you to add a north arrow on the map canvas.
 
 To add a north arrow:
 
-Select menu option :menuselection:`View --> Decorations --> North Arrow...` to open the dialog.
+#. Select menu option :menuselection:`View --> Decorations --> North Arrow...` to open the dialog.
 
    .. _figure_decorations_north:
 
@@ -1058,6 +1068,16 @@ Select menu option :menuselection:`View --> Decorations --> North Arrow...` to o
 
       The North Arrow Dialog
 
+#. Make sure |checkbox| :guilabel:`Enable north arrow` is checked
+#. Optionally change the color and size, or choose a custom SVG
+#. Optionally change the angle or choose **Automatic** to let QGIS determine the
+   direction
+#. Optionally choose the placement from the Placement combo box
+#. Optionally refine the placement of the arrow by setting a horizontal and/or vertical
+   `Margin from (Canvas) Edge`. These values can be in **Millimeters** or
+   **Pixels** or set as a **Percentage** of the width or height of the map canvas.
+#. Click :guilabel:`Apply` to verify that it looks as expected and :guilabel:`OK` if you're satisfied.
+
 
 .. index:: Scale bar
 .. _scalebar_decoration:
@@ -1065,8 +1085,8 @@ Select menu option :menuselection:`View --> Decorations --> North Arrow...` to o
 Scale Bar
 .........
 
-|scaleBar| :menuselection:`Scale Bar` adds a simple scale bar to the map canvas. You
-can control the style and placement, as well as the labelling of the bar.
+|scaleBar| :guilabel:`Scale Bar` adds a simple scale bar to the map canvas.
+You can control the style and placement, as well as the labelling of the bar.
 
 QGIS only supports displaying the scale in the same units as your map frame.
 So, if the units of your project's CRS are meters, you can't create a scale bar in
@@ -1106,7 +1126,7 @@ To add a scale bar:
 Layout Extents
 ..............
 
-|addMap| :menuselection:`Layout Extents` adds the extents of :ref:`map item(s) <layout_map_item>` in print
+|addMap| :guilabel:`Layout Extents` adds the extents of :ref:`map item(s) <layout_map_item>` in print
 layout(s) to the canvas. When enabled, the extents of all map items within all print layouts are
 shown using a lightly dotted border labeled with the name of the print layout and map item.
 You can control the style and labeling of the displayed layout extents.
