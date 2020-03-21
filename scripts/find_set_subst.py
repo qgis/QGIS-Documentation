@@ -139,8 +139,13 @@ def append_subst(file, subst_definition):
             f.write(subst_definition)
 
 if __name__ == '__main__':
+<<<<<<< HEAD
     src_path =  path.abspath(path.join(__file__ ,"../../source"))
     subst_file_path = path.join(src_path,"substitutions.txt")
+=======
+    src_path =  path.abspath(path.join(__file__ ,"../../docs"))
+    subst_file_path = path.join(src_path,"../substitutions.txt")
+>>>>>>> d5fd3faf0... Add image decoration (#5052)
     s_dict = read_subst(subst_file_path)
     for file in find_by_ext(src_path, 'rst'):
         s_list = get_subst_from_file(file)
