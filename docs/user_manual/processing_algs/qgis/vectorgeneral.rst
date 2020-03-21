@@ -1539,7 +1539,7 @@ Outputs
 
 Repair Shapefile
 ----------------
-Repairs a broken Shapefile by recreating missing or broken SHX files.
+Repairs a broken ESRI Shapefile dataset by (re)creating the SHX file.
 
 Parameters
 ..........
