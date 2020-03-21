@@ -1535,7 +1535,47 @@ Outputs
      - [same as input]
      - Output (sorted) vector layer
 
+.. _qgisrepairshapefile:
 
+Repair Shapefile
+----------------
+Repairs a broken Shapefile by recreating missing or broken SHX files.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Shapefile**
+     - ``INPUT``
+     - [vector: shapefile]
+     - Full path to the vector layer with missing or broken SHX files
+
+Outputs
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - 
+     - ``INPUT``
+     - [same as input]
+     - The input vector layer with the SHX files repaired
+	 
+	 
 .. _qgisreprojectlayer:
 
 Reproject layer
