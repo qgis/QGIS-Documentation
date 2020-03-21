@@ -958,7 +958,7 @@ To add a Title Label decoration:
 
       The Title Decoration Dialog
 
-#. Make sure |checkbox| :guilabel:`Enable Title Label`) is checked
+#. Make sure |checkbox| :guilabel:`Enable Title Label` is checked
 #. Enter the title text you want to place on the map.
    You can make it dynamic using the :guilabel:`Insert an Expression` button.
 #. Choose the :guilabel:`Font` for the label using the :ref:`font selector
@@ -983,7 +983,8 @@ To add a Title Label decoration:
 Copyright Label
 ...............
 
-|copyrightLabel| :guilabel:`Copyright Label` can be used to decorate your map with a **Copyright** label.
+|copyrightLabel| :guilabel:`Copyright Label` can be used to decorate your
+map with a **Copyright** label.
 
 To add this decoration:
 
@@ -1035,7 +1036,8 @@ To add an image:
       The Image Decoration Dialog
 
 #. Make sure |checkbox| :guilabel:`Enable Image` is checked
-#. Select a bitmap (e.g. png or jpg) or SVG image using the :guilabel:`...` :sup:`Browse` button
+#. Select a bitmap (e.g. png or jpg) or SVG image using the
+   :guilabel:`...` :sup:`Browse` button
 #. If you have chosen a parameter enabled SVG then you can also set
    a :guilabel:`Fill` or :guilabel:`Stroke` (outline) color.
    For bitmap images, the color settings are disabled.
@@ -1059,7 +1061,8 @@ North Arrow
 
 To add a north arrow:
 
-#. Select menu option :menuselection:`View --> Decorations --> North Arrow...` to open the dialog.
+#. Select menu option :menuselection:`View --> Decorations --> North Arrow...`
+   to open the dialog.
 
    .. _figure_decorations_north:
 
@@ -1095,7 +1098,8 @@ bar to display distance in meters.
 
 To add a scale bar:
 
-#. Select menu option :menuselection:`View --> Decorations --> Scale Bar...` to open the dialog
+#. Select menu option :menuselection:`View --> Decorations --> Scale Bar...`
+   to open the dialog
 
    .. _figure_decorations_scale:
 
@@ -1156,7 +1160,8 @@ To add layout extent(s):
 
 #. Make sure |checkbox| :guilabel:`Show layout extents` is checked.
 #. Optionally change the symbol and labeling of the extents.
-#. Click :guilabel:`Apply` to verify that it looks as expected and :guilabel:`OK` if you're satisfied.
+#. Click :guilabel:`Apply` to verify that it looks as expected and :guilabel:`OK`
+   if you're satisfied.
 
 
 .. tip::
