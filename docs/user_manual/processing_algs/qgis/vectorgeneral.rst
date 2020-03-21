@@ -1570,7 +1570,7 @@ Outputs
      - Name
      - Type
      - Description
-   * - 
+   * - **Repaired layer**
      - ``INPUT``
      - [same as input]
      - The input vector layer with the SHX file repaired
