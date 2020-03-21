@@ -1556,7 +1556,7 @@ Parameters
    * - **Input Shapefile**
      - ``INPUT``
      - [vector: shapefile]
-     - Full path to the vector layer with missing or broken SHX files
+     - Full path to the ESRI Shapefile dataset with a missing or broken SHX file
 
 Outputs
 ..........
