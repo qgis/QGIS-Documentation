@@ -10,7 +10,7 @@ Projections Support
 If you're outside the pyqgis console, the code snippets on this page need the
 following imports:
 
-.. testcode::
+.. testcode:: crs
 
    from qgis.core import (QgsCoordinateReferenceSystem,
                           QgsCoordinateTransform,
@@ -29,7 +29,7 @@ class. Instances of this class can be created in several different ways:
 
 * specify CRS by its ID
 
-  .. testcode::
+  .. testcode:: crs
 
      # PostGIS SRID 4326 is allocated for WGS84
      crs = QgsCoordinateReferenceSystem(4326, QgsCoordinateReferenceSystem.PostgisCrsId)
@@ -45,7 +45,7 @@ class. Instances of this class can be created in several different ways:
 
 * specify CRS by its well-known text (WKT)
 
-  .. testcode::
+  .. testcode:: crs
 
      wkt = 'GEOGCS["WGS84", DATUM["WGS84", SPHEROID["WGS84", 6378137.0, 298.257223563]],' \
            'PRIMEM["Greenwich", 0.0], UNIT["degree",0.017453292519943295],' \
@@ -57,7 +57,7 @@ class. Instances of this class can be created in several different ways:
   initialize it. In the following example we use a Proj string to initialize the
   projection.
 
-  .. testcode::
+  .. testcode:: crs
 
      crs = QgsCoordinateReferenceSystem()
      crs.createFromProj4("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs")
@@ -77,7 +77,7 @@ developing a plugin you do not care: everything is already set up for you.
 
 Accessing spatial reference system information:
 
-.. testcode::
+.. testcode:: crs
 
    crs = QgsCoordinateReferenceSystem(4326)
 
@@ -94,7 +94,7 @@ Accessing spatial reference system information:
 
 Output:
 
-.. testoutput::
+.. testoutput:: crs
 
    QGIS CRS ID: 3452
    PostGIS SRID: 4326
@@ -119,7 +119,7 @@ instance with them and the current project. Then just repeatedly call
 the transformation. By default it does forward transformation, but it is capable
 to do also inverse transformation.
 
-.. testcode::
+.. testcode:: crs
 
    crsSrc = QgsCoordinateReferenceSystem(4326)    # WGS 84
    crsDest = QgsCoordinateReferenceSystem(32633)  # WGS 84 / UTM zone 33N
@@ -135,7 +135,7 @@ to do also inverse transformation.
 
 Output:
 
-.. testoutput::
+.. testoutput:: crs
 
    Transformed point: <QgsPointXY: POINT(832713.79873844375833869 553423.98688333143945783)>
    Transformed back: <QgsPointXY: POINT(18 5)>
