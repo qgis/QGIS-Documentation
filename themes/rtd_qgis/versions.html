@@ -40,7 +40,7 @@
           {# Display the call for translation only for the latest document. #}
           {% if not isTesting %} 
           <dd>
-            <a href="{{transifex_url}}">{{ _('Translate Page') }}</a>
+            <a href="{{ transifex_url }}/#{{ language }}/{{ pagename }}">{{ _('Translate Page') }}</a>
           </dd>
           {% endif %}
       </dl>
