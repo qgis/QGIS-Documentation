@@ -241,6 +241,8 @@ iface = get_iface()
 # Mock activeLayer()
 iface.activeLayer.return_value = QgsVectorLayer("Point", "temporary_points", "memory")
 
+# Mock messageBar
+iface.messageBar.return_value = QgsMessageBar()
 
 '''
 doctest_test_doctest_blocks = ''
