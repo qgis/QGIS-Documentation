@@ -1,5 +1,8 @@
 .. _cheat-sheet:
 
+.. highlight:: python
+   :linenothreshold: 5
+
 **********************
 Cheat sheet for PyQGIS
 **********************
@@ -15,21 +18,23 @@ User Interface
 
 **Change Look & Feel**
 
-.. code-block:: python
+.. testcode:: cheat_sheet
 
     from qgis.PyQt.QtWidgets import QApplication
 
     app = QApplication.instance()
-    qss_file = open(r"/path/to/style/file.qss").read()
-    app.setStyleSheet(qss_file)
+    app.setStyleSheet(".QWidget {color: blue; background-color: yellow;}")
+    # You can even read the stylesheet from a file
+    qss_file_content = open("testdata/file.qss").read()
+    app.setStyleSheet(qss_file_content)
 
 **Change icon and title**
 
-.. code-block:: python
+.. testcode:: cheat_sheet
 
     from qgis.PyQt.QtGui import QIcon
 
-    icon = QIcon(r"/path/to/logo/file.png")
+    icon = QIcon("/path/to/logo/file.png")
     iface.mainWindow().setWindowIcon(icon)
     iface.mainWindow().setWindowTitle("My QGIS")
 
@@ -38,11 +43,11 @@ Settings
 
 **Get QgsSettings list**
 
-.. testcleanup::
+.. testcleanup:: cheat_sheet
 
     QgsSettings().clear()
 
-.. testcode::
+.. testcode:: cheat_sheet
 
     from qgis.core import QgsSettings
 
@@ -51,18 +56,17 @@ Settings
     for k in sorted(qs.allKeys()):
         print (k)
 
-.. testoutput::
+.. testoutput:: cheat_sheet
+  :hide:
 
-    qgis/symbolsListGroupsIndex
+  qgis/symbolsListGroupsIndex
 
 Toolbars
 ========
 
 **Remove toolbar**
 
-.. code-block:: python
-
-    from qgis.utils import iface
+.. testcode:: cheat_sheet
 
     toolbar = iface.helpToolBar()
     parent = toolbar.parentWidget()
@@ -73,7 +77,14 @@ Toolbars
 
 **Remove actions toolbar**
 
-.. code-block:: python
+.. testsetup:: cheat_sheet
+
+    toolbar = QToolBar()
+    for i in range(5):
+      toolbar.addAction('action%s' % i)
+    iface.attributesToolBar.return_value = toolbar
+
+.. testcode:: cheat_sheet
 
     actions = iface.attributesToolBar().actions()
     iface.attributesToolBar().clear()
@@ -85,9 +96,7 @@ Menus
 
 **Remove menu**
 
-.. code-block:: python
-
-    from qgis.utils import iface
+.. testcode:: cheat_sheet
 
     # for example Help Menu
     menu = iface.helpMenu()
@@ -102,15 +111,13 @@ Canvas
 
 **Access canvas**
 
-.. code-block:: python
-
-    from qgis.utils import iface
+.. testcode:: cheat_sheet
 
     canvas = iface.mapCanvas()
 
 **Change canvas color**
 
-.. code-block:: python
+.. testcode:: cheat_sheet
 
     from qgis.PyQt.QtCore import Qt
 
@@ -121,26 +128,24 @@ Canvas
 
 .. testcode::
 
-    from qgis.PyQt.QtCore import QSettings
+    from qgis.core import QgsSettings
     # Set milliseconds (150 milliseconds)
-    QSettings().setValue("/qgis/map_update_interval", 150)
+    QgsSettings().setValue("/qgis/map_update_interval", 150)
 
 Layers
 ======
 
 **Add vector layer**
 
-.. code-block:: python
+.. testcode:: cheat_sheet
 
-    from qgis.utils import iface
-
-    layer = iface.addVectorLayer("/path/to/shapefile/file.shp", "layer name you like", "ogr")
-    if not layer:
+    layer = iface.addVectorLayer("testdata/airports.shp", "layer name you like", "ogr")
+    if not layer or not layer.isValid():
         print("Layer failed to load!")
 
 **Get active layer**
 
-.. code-block:: python
+.. testcode:: cheat_sheet
 
     layer = iface.activeLayer()
 
@@ -154,7 +159,7 @@ Layers
 
 **Obtain layers name**
 
-.. testcode::
+.. testcode:: cheat_sheet
 
     layers_names = []
     for layer in QgsProject.instance().mapLayers().values():
@@ -162,40 +167,37 @@ Layers
 
     print("layers TOC = {}".format(layers_names))
 
-.. testoutput::
-   :hide:
+.. testoutput:: cheat_sheet
 
    layers TOC = ['layer name you like']
 
 Otherwise
 
-.. testcode::
+.. testcode:: cheat_sheet
 
     layers_names = [layer.name() for layer in QgsProject.instance().mapLayers().values()]
     print("layers TOC = {}".format(layers_names))
 
-.. testoutput::
-   :hide:
+.. testoutput:: cheat_sheet
 
    layers TOC = ['layer name you like']
 
 **Find layer by name**
 
-.. testcode::
+.. testcode:: cheat_sheet
 
     from qgis.core import QgsProject
 
     layer = QgsProject.instance().mapLayersByName("layer name you like")[0]
     print(layer.name())
 
-.. testoutput::
-   :hide:
+.. testoutput:: cheat_sheet
 
    layer name you like
 
 **Set active layer**
 
-.. code-block:: python
+.. testcode:: cheat_sheet
 
     from qgis.core import QgsProject
 
@@ -204,7 +206,7 @@ Otherwise
 
 **Refresh layer at interval**
 
-.. testcode::
+.. testcode:: cheat_sheet
 
     from qgis.core import QgsProject
 
@@ -216,13 +218,13 @@ Otherwise
 
 **Show methods**
 
-.. testcode::
+.. testcode:: cheat_sheet
 
     dir(layer)
 
 **Adding new feature with feature form**
 
-.. code-block:: python
+.. testcode:: cheat_sheet
 
     from qgis.core import QgsFeature, QgsGeometry
 
@@ -235,11 +237,11 @@ Otherwise
 
 **Adding new feature without feature form**
 
-.. testsetup::
+.. testsetup:: cheat_sheet
 
     from qgis.core import QgsFeature, QgsGeometry, QgsProject
 
-.. testcode::
+.. testcode:: cheat_sheet
 
     from qgis.core import QgsPointXY
 
@@ -250,33 +252,37 @@ Otherwise
 
 **Get features**
 
-.. code-block:: python
+.. testcode:: cheat_sheet
 
     for f in layer.getFeatures():
         print (f)
 
+.. testoutput:: cheat_sheet
+
+    <qgis._core.QgsFeature object at 0x7f45cc64b678>
+
 **Get selected features**
 
-.. code-block:: python
+.. testcode:: cheat_sheet
 
     for f in layer.selectedFeatures():
         print (f)
 
 **Get selected features Ids**
 
-.. testcode::
+.. testcode:: cheat_sheet
 
     selected_ids = layer.selectedFeatureIds()
     print(selected_ids)
 
-.. testoutput::
+.. testoutput:: cheat_sheet
    :hide:
 
    []
 
 **Create a memory layer from selected features Ids**
 
-.. testcode::
+.. testcode:: cheat_sheet
 
     from qgis.core import QgsFeatureRequest
 
@@ -285,23 +291,31 @@ Otherwise
 
 **Get geometry**
 
-.. code-block:: python
+.. testcode:: cheat_sheet
 
     # Point layer
     for f in layer.getFeatures():
         geom = f.geometry()
         print ('%f, %f' % (geom.asPoint().y(), geom.asPoint().x()))
 
+.. testoutput:: cheat_sheet
+
+    10.000000, 10.000000
+
 **Move geometry**
 
-.. code-block:: python
+.. testsetup:: cheat_sheet
+
+    poly = QgsFeature()
+
+.. testcode:: cheat_sheet
 
     geom.translate(100, 100)
     poly.setGeometry(geom)
 
 **Set the CRS**
 
-.. testcode::
+.. testcode:: cheat_sheet
 
     from qgis.core import QgsProject, QgsCoordinateReferenceSystem
 
@@ -310,7 +324,7 @@ Otherwise
 
 **See the CRS**
 
-.. testcode::
+.. testcode:: cheat_sheet
 
     from qgis.core import QgsProject
 
@@ -320,7 +334,7 @@ Otherwise
 
 **Hide a field column**
 
-.. testcode::
+.. testcode:: cheat_sheet
 
     from qgis.core import QgsEditorWidgetSetup
 
@@ -335,7 +349,7 @@ Otherwise
 
 **Layer from WKT**
 
-.. testcode::
+.. testcode:: cheat_sheet
 
     from qgis.core import QgsVectorLayer, QgsFeature, QgsGeometry, QgsProject
 
@@ -348,15 +362,13 @@ Otherwise
     layer.updateExtents()
     QgsProject.instance().addMapLayers([layer])
 
-**Load all layers from GeoPackage**
+**Load all vector layers from GeoPackage**
 
-.. code-block:: python
+.. testcode:: cheat_sheet
 
-    from qgis.core import QgsVectorLayer, QgsProject
-
-    fileName = "/path/to/gpkg/file.gpkg"
+    fileName = "testdata/sublayers.gpkg"
     layer = QgsVectorLayer(fileName,"test","ogr")
-    subLayers =layer.dataProvider().subLayers()
+    subLayers = layer.dataProvider().subLayers()
 
     for subLayer in subLayers:
         name = subLayer.split('!!::!!')[1]
@@ -368,7 +380,7 @@ Otherwise
 
 **Load tile layer (XYZ-Layer)**
 
-.. testcode::
+.. testcode:: cheat_sheet
 
     from qgis.core import QgsRasterLayer, QgsProject
 
@@ -381,17 +393,17 @@ Otherwise
 
 **Remove all layers**
 
-.. testsetup::
+.. testsetup:: cheat_sheet
 
     from qgis.core import QgsProject
 
-.. testcode::
+.. testcode:: cheat_sheet
 
     QgsProject.instance().removeAllMapLayers()
 
 **Remove all**
 
-.. code-block:: python
+.. testcode:: cheat_sheet
 
     QgsProject.instance().clear()
 
@@ -400,15 +412,13 @@ Table of contents
 
 **Access checked layers**
 
-.. code-block:: python
-
-    from qgis.utils import iface
+.. testcode:: cheat_sheet
 
     iface.mapCanvas().layers()
 
 **Remove contextual menu**
 
-.. code-block:: python
+.. testcode:: cheat_sheet
 
     ltv = iface.layerTreeView()
     mp = ltv.menuProvider()
@@ -419,7 +429,9 @@ Table of contents
 Advanced TOC
 ============
 
-.. testsetup::
+**Root node**
+
+.. testsetup:: cheat_sheet
 
     from qgis.core import QgsVectorLayer, QgsProject, QgsLayerTreeLayer
 
@@ -429,17 +441,15 @@ Advanced TOC
     root = QgsProject.instance().layerTreeRoot()
     node_group = root.addGroup("My Group")
 
-**Root node**
-
-.. testcode::
-
-    from qgis.core import QgsProject
+.. testcode:: cheat_sheet
 
     root = QgsProject.instance().layerTreeRoot()
-    print (root)
-    print (root.children())
+    node_group = root.addGroup("My Group")
 
-.. testoutput::
+    print(root)
+    print(root.children())
+
+.. testoutput:: cheat_sheet
    :hide:
 
    <qgis._core.QgsLayerTree object at 0x7f068bbc0c18>
@@ -447,7 +457,7 @@ Advanced TOC
 
 **Access the first child node**
 
-.. testcode::
+.. testcode:: cheat_sheet
 
     from qgis.core import QgsLayerTreeGroup, QgsLayerTreeLayer, QgsLayerTree
 
@@ -457,7 +467,7 @@ Advanced TOC
     print (isinstance(child0, QgsLayerTreeLayer))
     print (isinstance(child0.parent(), QgsLayerTree))
 
-.. testoutput::
+.. testoutput:: cheat_sheet
    :hide:
 
    My Group
@@ -467,7 +477,7 @@ Advanced TOC
 
 **Find groups and nodes**
 
-.. testcode::
+.. testcode:: cheat_sheet
 
    from qgis.core import QgsLayerTreeGroup, QgsLayerTreeLayer
 
@@ -488,7 +498,7 @@ Advanced TOC
       elif isinstance(child, QgsLayerTreeLayer):
          print ('- layer: ' + child.name())
 
-.. testoutput::
+.. testoutput:: cheat_sheet
    :hide:
 
    - group: My Group
@@ -496,19 +506,28 @@ Advanced TOC
 
 **Find group by name**
 
-.. code-block:: python
+.. testcode:: cheat_sheet
 
     print (root.findGroup("My Group"))
 
+.. testoutput:: cheat_sheet
+
+    <qgis._core.QgsLayerTreeGroup object at 0x7fd75560cee8>
+
 **Find layer by id**
 
-.. code-block:: python
+.. testcode:: cheat_sheet
 
-    print (root.findLayer(layer.layerId()))
+    print(root.findLayer(layer.id()))
+
+.. testoutput:: cheat_sheet
+    :hide:
+
+    None
 
 **Add layer**
 
-.. testcode::
+.. testcode:: cheat_sheet
 
     from qgis.core import QgsVectorLayer, QgsProject
 
@@ -518,78 +537,52 @@ Advanced TOC
 
 **Add group**
 
-.. testcode::
+.. testcode:: cheat_sheet
 
     from qgis.core import QgsLayerTreeGroup
 
     node_group2 = QgsLayerTreeGroup("Group 2")
     root.addChildNode(node_group2)
+    QgsProject.instance().mapLayersByName("layer name you like")[0]
 
-**Remove layer**
-
-.. testcode::
-
-    root.removeLayer(layer1)
-
-**Remove group**
-
-.. testcode::
-
-    root.removeChildNode(node_group2)
-
-**Move node**
-
-.. testcode::
-
-    cloned_group1 = node_group.clone()
-    root.insertChildNode(0, cloned_group1)
-    root.removeChildNode(node_group)
-
-**Rename node**
-
-.. code-block:: python
-
-    cloned_group1.setName("Group X")
-    node_layer1.setName("Layer X")
 
 **Move loaded layer**
 
-.. code-block:: python
+.. testcode:: cheat_sheet
 
     layer = QgsProject.instance().mapLayersByName("layer name you like")[0]
     root = QgsProject.instance().layerTreeRoot()
 
-    mylayer = root.findLayer(layer.id())
-    myClone = mylayer.clone()
-    parent = mylayer.parent()
+    myLayer = root.findLayer(layer.id())
+    myClone = myLayer.clone()
+    parent = myLayer.parent()
 
-    group = root.findGroup("My Group")
+    myGroup = root.findGroup("My Group")
     # Insert in first position
-    group.insertChildNode(0, myClone)
+    myGroup.insertChildNode(0, myClone)
 
-    parent.removeChildNode(mylayer)
+    parent.removeChildNode(myLayer)
 
 **Load layer in a specific group**
 
-.. code-block:: python
+.. testcode:: cheat_sheet
 
     QgsProject.instance().addMapLayer(layer, False)
 
     root = QgsProject.instance().layerTreeRoot()
-    g = root.findGroup("My Group")
-    g.insertChildNode(0, QgsLayerTreeLayer(layer))
+    myGroup = root.findGroup("My Group")
+    myGroup.insertChildNode(0, QgsLayerTreeLayer(layer))
 
 **Changing visibility**
 
-.. code-block:: python
+.. testcode:: cheat_sheet
 
-    print (cloned_group1.isVisible())
-    cloned_group1.setItemVisibilityChecked(False)
-    node_layer1.setItemVisibilityChecked(False)
+    myGroup.setItemVisibilityChecked(False)
+    myLayer.setItemVisibilityChecked(False)
 
 **Is group selected**
 
-.. code-block:: python
+.. testcode:: cheat_sheet
 
     def isMyGroupSelected( groupName ):
         myGroup = QgsProject.instance().layerTreeRoot().findGroup( groupName )
@@ -599,19 +592,19 @@ Advanced TOC
 
 **Expand node**
 
-.. testcode::
+.. testcode:: cheat_sheet
 
     print (cloned_group1.isExpanded())
     cloned_group1.setExpanded(False)
 
-.. testoutput::
+.. testoutput:: cheat_sheet
    :hide:
 
    True
 
 **Hidden node trick**
 
-.. code-block:: python
+.. testcode:: cheat_sheet
 
     from qgis.core import QgsProject
 
@@ -629,7 +622,7 @@ Advanced TOC
 
 **Node signals**
 
-.. code-block:: python
+.. testcode:: cheat_sheet
 
     def onWillAddChildren(node, indexFrom, indexTo):
         print ("WILL ADD", node, indexFrom, indexTo)
@@ -640,9 +633,26 @@ Advanced TOC
     root.willAddChildren.connect(onWillAddChildren)
     root.addedChildren.connect(onAddedChildren)
 
+.. testcleanup:: cheat_sheet
+
+    root.willAddChildren.disconnect(onWillAddChildren)
+    root.addedChildren.disconnect(onAddedChildren)
+
+**Remove layer**
+
+.. testcode:: cheat_sheet
+
+    root.removeLayer(layer1)
+
+**Remove group**
+
+.. testcode:: cheat_sheet
+
+    root.removeChildNode(node_group2)
+
 **Create new table of contents (TOC)**
 
-.. code-block:: python
+.. testcode:: cheat_sheet
 
     from qgis.core import QgsProject, QgsLayerTreeModel
     from qgis.gui import QgsLayerTreeView
@@ -653,12 +663,30 @@ Advanced TOC
     view.setModel(model)
     view.show()
 
+
+**Move node**
+
+.. testcode:: cheat_sheet
+
+    cloned_group1 = node_group.clone()
+    root.insertChildNode(0, cloned_group1)
+    root.removeChildNode(node_group)
+
+
+**Rename node**
+
+.. testcode:: cheat_sheet
+
+    cloned_group1.setName("Group X")
+    node_layer1.setName("Layer X")
+
+
 Processing algorithms
 =====================
 
 **Get algorithms list**
 
-.. testcode::
+.. testcode:: cheat_sheet
 
     from qgis.core import QgsApplication
 
@@ -667,7 +695,7 @@ Processing algorithms
 
 Otherwise
 
-.. testcode::
+.. testcode:: cheat_sheet
 
     def alglist():
         s = ''
@@ -681,7 +709,7 @@ Otherwise
 
 Random selection
 
-.. code-block:: python
+.. testcode:: cheat_sheet
 
     from qgis import processing
 
@@ -692,7 +720,7 @@ Random selection
 For this example, the result is stored in a temporary memory layer
 which is added to the project.
 
-.. code-block:: python
+.. testcode:: cheat_sheet
 
     from qgis import processing
     result = processing.run("native:buffer", {'INPUT': layer, 'OUTPUT': 'memory:'})
@@ -701,7 +729,7 @@ which is added to the project.
 
 **How many algorithms are there?**
 
-.. testcode::
+.. testcode:: cheat_sheet
 
     from qgis.core import QgsApplication
 
@@ -709,7 +737,7 @@ which is added to the project.
 
 **How many providers are there?**
 
-.. testcode::
+.. testcode:: cheat_sheet
 
     from qgis.core import QgsApplication
 
@@ -717,7 +745,7 @@ which is added to the project.
 
 **How many expressions are there?**
 
-.. testcode::
+.. testcode:: cheat_sheet
 
     from qgis.core import QgsExpression
 
@@ -728,7 +756,7 @@ Decorators
 
 **CopyRight**
 
-.. code-block:: python
+.. testcode:: cheat_sheet
 
     from qgis.PyQt.Qt import QTextDocument
     from qgis.PyQt.QtGui import QFont
@@ -810,7 +838,7 @@ Composer
 
 **Get print layout by name**
 
-.. testcode::
+.. testcode:: cheat_sheet
 
     composerTitle = 'MyComposer' # Name of the composer
 
@@ -825,4 +853,3 @@ Sources
 * :api:`QGIS C++ API <>`
 * `StackOverFlow QGIS questions <https://stackoverflow.com/questions/tagged/qgis>`_
 * `Script by Klas Karlsson <https://raw.githubusercontent.com/klakar/QGIS_resources/master/collections/Geosupportsystem/python/qgis_basemaps.py>`_
-* `Boundless lib-qgis-common repository <https://github.com/boundlessgeo/lib-qgis-commons>`_
