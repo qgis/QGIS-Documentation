@@ -143,6 +143,7 @@ Parameters
    :widths: 30 20 20 30
    :stub-columns: 0
 
+<<<<<<< HEAD
    *  - Label
       - Name
       - Type
@@ -226,6 +227,138 @@ Parameters
         * 10 --- CFloat32
         * 11 --- CFloat64
 
+=======
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [raster]
+     - The input raster
+   * - **Mask layer**
+     - ``EXTENT``
+     - [vector: polygon]
+     - Vector mask for clipping the raster
+   * - **Source CRS**
+     - ``SOURCE_CRS``
+     - [crs]
+     -
+   * - **Target CRS**
+     - ``TARGET_CRS``
+     - [crs]
+     -
+   * - **Assign a specified nodata value to output bands**
+
+       Optional
+     - ``NODATA``
+     - [number]
+
+       Default: None
+     - Defines a value that should be inserted for the nodata
+       values in the output raster
+   * - **Create an output alpha band**
+     - ``ALPHA_BAND``
+     - [boolean]
+
+       Default: False
+     - Creates an alpha band for the result.
+       The alpha band then includes the transparency values of
+       the pixels.
+   * - **Match the extent of the clipped raster to the extent of the mask layer**
+     - ``CROP_TO_CUTLINE``
+     - [boolean]
+
+       Default: True
+     - Applies the vector layer extent to the output raster if checked.
+   * - **Keep resolution of input raster**
+     - ``KEEP_RESOLUTION``
+     - [boolean]
+
+       Default: False
+     - The resolution of the output raster will not be changed
+   * - **Set output file resolution**
+     - ``SET_RESOLUTION``
+     - [boolean]
+
+       Default: False
+     - Shall the output resolution (cell size) be specified
+   * - **X Resolution to output bands**
+
+       Optional
+     - ``X_RESOLUTION``
+     - [number]
+
+       Default: None
+     - The width of the cells in the output raster
+   * - **Y Resolution to output band**
+
+       Optional
+     - ``Y_RESOLUTION``
+     - [number]
+
+       Default: None
+     - The height of the cells in the output raster
+   * - **Use multithreaded warping implementation**
+     - ``MULTITHREADING``
+     - [boolean]
+
+       Default: False
+     -
+   * - **Additional creation options**
+
+       Optional
+     - ``OPTIONS``
+     - [string]
+
+       Default: ''
+     - For adding one or more creation options that control the
+       raster to be created (colors, block size, file
+       compression...).
+       For convenience, you can rely on predefined profiles (see
+       :ref:`GDAL driver options section <gdal_createoptions>`).
+   * - **Output data type**
+     - ``DATA_TYPE``
+     - [enumeration]
+
+       Default: 0
+     - Defines the format of the output raster file.
+
+       Options:
+
+       * 0 --- Use Input Layer Data Type
+       * 1 --- Byte
+       * 2 --- Int16
+       * 3 --- UInt16
+       * 4 --- UInt32
+       * 5 --- Int32
+       * 6 --- Float32
+       * 7 --- Float64
+       * 8 --- CInt16
+       * 9 --- CInt32
+       * 10 --- CFloat32
+       * 11 --- CFloat64
+
+   * - **Additional command-line parameters**
+
+       Optional
+     - ``EXTRA``
+     - [string]
+
+       Default: None
+     - Add extra GDAL command line options
+   * - **Clipped (mask)**
+     - ``OUTPUT``
+     - [raster]
+       Default: '[Save to temporary file]'
+     - Specification of the output raster layer.
+       One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here
+>>>>>>> 093bcd3f6... Typo corrected (#5099)
 
 Outputs
 .......
