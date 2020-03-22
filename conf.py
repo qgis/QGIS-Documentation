@@ -150,10 +150,9 @@ version_list = cfg['version_list'].replace(' ','').split(',')
 url = cfg['docs_url']
 if not url.endswith('/'):
   url += '/'
-github_url = cfg['github_url'] + 'tree/master'
-if not github_url.endswith('/'):
-  github_url += '/'
+github_url = cfg['github_url'] + 'edit/master'
 transifex_url = cfg['transifex_url']
+
 
 if version not in version_list:
   raise ValueError('QGIS version is not in version list', version, version_list)
