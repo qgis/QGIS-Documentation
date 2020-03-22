@@ -245,6 +245,9 @@ iface = get_iface()
 # Mock activeLayer()
 iface.activeLayer.return_value = QgsVectorLayer("Point", "temporary_points", "memory")
 
+# Mock messageBar
+iface.messageBar.return_value = QgsMessageBar()
+
 # Mock layerTreeView
 layertree_view = QgsLayerTreeView()
 layertree_model = QgsLayerTreeModel(QgsProject.instance().layerTreeRoot())
