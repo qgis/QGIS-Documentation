@@ -262,6 +262,7 @@ Parameters
      - The value is estimated as a distance (in the network
        layer units) when looking for the *Shortest* path and
        as time (in seconds) for the *Fastest* path.
+<<<<<<< HEAD
    * - **Direction field**
 
        Optional
@@ -361,6 +362,12 @@ Parameters
      - Creates a point layer output with two points for each
        edge at the boundaries of the service area.
        One point is the start of that edge, the other is the end.
+=======
+   * - **Advanced parameters**
+     - GUI only
+     - 
+     - Group of advanced network analysis parameters - see below.
+>>>>>>> 4644aa698... Typo corrected (#5098)
    * - **Service area (lines)**
      - ``OUTPUT_LINES``
      - [vector: line]
