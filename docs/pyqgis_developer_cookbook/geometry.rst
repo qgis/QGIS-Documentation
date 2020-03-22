@@ -12,7 +12,7 @@ Geometry Handling
 
 The code snippets on this page need the following imports if you're outside the pyqgis console:
 
-.. testcode::
+.. testcode:: geometry
 
     from qgis.core import (
       QgsGeometry,
@@ -51,7 +51,7 @@ PyQGIS provides several options for creating a geometry:
 
 * from coordinates
 
-  .. testcode::
+  .. testcode:: geometry
 
     gPnt = QgsGeometry.fromPointXY(QgsPointXY(1,1))
     print(gPnt)
@@ -61,7 +61,7 @@ PyQGIS provides several options for creating a geometry:
 	QgsPointXY(2, 2), QgsPointXY(2, 1)]])
     print(gPolygon)
 
-  .. testoutput::
+  .. testoutput:: geometry
     :hide:
 
     <QgsGeometry: Point (1 1)>
@@ -86,19 +86,19 @@ PyQGIS provides several options for creating a geometry:
 
 * from well-known text (WKT)
 
-  .. testcode::
+  .. testcode:: geometry
 
     geom = QgsGeometry.fromWkt("POINT(3 4)")
     print(geom)
 
-  .. testoutput::
+  .. testoutput:: geometry
     :hide:
 
     <QgsGeometry: Point (3 4)>
 
 * from well-known binary (WKB)
 
-  .. testcode::
+  .. testcode:: geometry
 
     g = QgsGeometry()
     wkb = bytes.fromhex("010100000000000000000045400000000000001440")
@@ -107,7 +107,7 @@ PyQGIS provides several options for creating a geometry:
     # print WKT representation of the geometry
     print(g.asWkt())
 
-  .. testoutput::
+  .. testoutput:: geometry
     :hide:
 
     Point (42 5)
@@ -121,7 +121,7 @@ First, you should find out the geometry type. The :meth:`wkbType() <qgis.core.Qg
 method is the one to use. It returns a value from the :class:`QgsWkbTypes.Type <qgis.core.QgsWkbTypes>`
 enumeration.
 
-.. testcode::
+.. testcode:: geometry
 
   if gPnt.wkbType() == QgsWkbTypes.Point:
     print(gPnt.wkbType())
@@ -132,7 +132,7 @@ enumeration.
     print(gPolygon.wkbType())
     # output: 3 for Polygon
 
-.. testoutput::
+.. testoutput:: geometry
   :hide:
 
   1
@@ -146,7 +146,7 @@ enumeration.
 You can use the :meth:`displayString() <qgis.core.QgsWkbTypes.displayString>`
 function to get a human readable geometry type.
 
-.. testcode::
+.. testcode:: geometry
 
   print(QgsWkbTypes.displayString(gPnt.wkbType()))
   # output: 'Point'
@@ -155,7 +155,7 @@ function to get a human readable geometry type.
   print(QgsWkbTypes.displayString(gPolygon.wkbType()))
   # output: 'Polygon'
 
-.. testoutput::
+.. testoutput:: geometry
 
   Point
   LineString
@@ -167,7 +167,7 @@ There is also a helper function
 To extract information from a geometry there are accessor functions for every
 vector type. Here's an example on how to use these accessors:
 
-.. testcode::
+.. testcode:: geometry
 
   print(gPnt.asPoint())
   # output: <QgsPointXY: POINT(1 1)>
@@ -176,7 +176,7 @@ vector type. Here's an example on how to use these accessors:
   print(gPolygon.asPolygon())
   # output: [[<QgsPointXY: POINT(1 1)>, <QgsPointXY: POINT(2 2)>, <QgsPointXY: POINT(2 1)>, <QgsPointXY: POINT(1 1)>]]
 
-.. testoutput::
+.. testoutput:: geometry
   :hide:
 
   <QgsPointXY: POINT(1 1)>
@@ -210,13 +210,22 @@ each country in the ``countries`` layer within our tutorial QGIS project.
 
 The following code assumes ``layer`` is a :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` object that has Polygon feature type.
 
-.. code-block:: python
+.. testsetup:: geometry
+
+    # Load the countries layer
+    if not QgsProject.instance().mapLayersByName("countries"):
+        vlayer = QgsVectorLayer("/usr/share/qgis/resources/data/world_map.gpkg|layerName=countries", "countries", "ogr")
+        assert vlayer.isValid()
+        QgsProject.instance().addMapLayers([vlayer])
+
+
+.. testcode:: geometry
 
   # let's access the 'countries' layer
   layer = QgsProject.instance().mapLayersByName('countries')[0]
 
   # let's filter for countries that begin with Z, then get their features
-  query = '"name" LIKE \'Z%\''
+  query = '"name" LIKE \'Zu%\''
   features = layer.getFeatures(QgsFeatureRequest().setFilterExpression(query))
 
   # now loop through the features, perform geometry computation and print the results
@@ -226,6 +235,23 @@ The following code assumes ``layer`` is a :class:`QgsVectorLayer <qgis.core.QgsV
     print(name)
     print('Area: ', geom.area())
     print('Perimeter: ', geom.length())
+
+
+.. testoutput:: geometry
+
+    Zubin Potok
+    Area:  0.040717371293465573
+    Perimeter:  0.9406133328077781
+    Zulia
+    Area:  3.708060762610232
+    Perimeter:  17.172123598311487
+    Zuid-Holland
+    Area:  0.4204687950359031
+    Perimeter:  4.098878517120812
+    Zug
+    Area:  0.027573510374275363
+    Perimeter:  0.7756605461489624
+
 
 Now you have calculated and printed the areas and perimeters of the geometries.
 You may however quickly notice that the values are strange.
@@ -239,7 +265,7 @@ class can be used, which can perform ellipsoid based calculations:
 The following code assumes ``layer`` is a :class:`QgsVectorLayer
 <qgis.core.QgsVectorLayer>` object that has Polygon feature type.
 
-.. code-block:: python
+.. testcode:: geometry
 
   d = QgsDistanceArea()
   d.setEllipsoid('WGS84')
@@ -247,7 +273,7 @@ The following code assumes ``layer`` is a :class:`QgsVectorLayer
   layer = QgsProject.instance().mapLayersByName('countries')[0]
 
   # let's filter for countries that begin with Z, then get their features
-  query = '"name" LIKE \'Z%\''
+  query = '"name" LIKE \'Zu%\''
   features = layer.getFeatures(QgsFeatureRequest().setFilterExpression(query))
 
   for f in features:
@@ -261,9 +287,28 @@ The following code assumes ``layer`` is a :class:`QgsVectorLayer
     print("Area (km2):", d.convertAreaMeasurement(d.measureArea(geom), QgsUnitTypes.AreaSquareKilometers))
 
 
+.. testoutput:: geometry
+
+    Zubin Potok
+    Perimeter (m): 87581.40256396442
+    Area (m2): 369302069.18814206
+    Area (km2): 369.30206918814207
+    Zulia
+    Perimeter (m): 1891227.0945423362
+    Area (m2): 44973645460.19726
+    Area (km2): 44973.64546019726
+    Zuid-Holland
+    Perimeter (m): 331941.8000214341
+    Area (m2): 3217213408.4100943
+    Area (km2): 3217.213408410094
+    Zug
+    Perimeter (m): 67440.22483063207
+    Area (m2): 232457391.52097562
+    Area (km2): 232.45739152097562
+
 Alternatively, you may want to know the distance and bearing between two points.
 
-.. testcode::
+.. testcode:: geometry
 
   d = QgsDistanceArea()
   d.setEllipsoid('WGS84')
@@ -276,7 +321,7 @@ Alternatively, you may want to know the distance and bearing between two points.
 
   print("Distance in meters: ", d.measureLine(santa, tenerife))
 
-.. testoutput::
+.. testoutput:: geometry
   :hide:
 
   Distance in meters:  5154172.923937496
