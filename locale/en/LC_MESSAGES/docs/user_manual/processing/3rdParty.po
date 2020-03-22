@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project testing\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"POT-Creation-Date: 2020-03-22 12:44+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -536,104 +536,131 @@ msgid ""
 "in a given polygon layer. This method belongs to the ``maptools`` "
 "package. Since almost all the algorithms that you might like to "
 "incorporate into QGIS will use or generate spatial data, knowledge of "
-"spatial packages like ``maptools`` and ``sp``/``sf``, is necessary."
+"spatial packages like ``maptools`` and ``sp``/``sf``, is very useful."
 msgstr ""
 
-#: ../../docs/user_manual/processing/3rdParty.rst:378
+#: ../../docs/user_manual/processing/3rdParty.rst:382
 msgid ""
 "The first lines, which start with a double Python comment sign (``##``), "
-"tell QGIS about the inputs of the algorithm in the file and the outputs "
-"that it will generate."
-msgstr ""
-
-#: ../../docs/user_manual/processing/3rdParty.rst:383
-msgid ""
-"To find out more about how to write your own R scripts, have a look at "
-"the :ref:`R Intro <r-intro>` and the :ref:`R Syntax <r-syntax>` Training "
-"Manual Chapters."
+"define the display name and group of the script, and tell QGIS about its "
+"inputs and outputs."
 msgstr ""
 
 #: ../../docs/user_manual/processing/3rdParty.rst:387
 msgid ""
+"To find out more about how to write your own R scripts, have a look at "
+"the :ref:`R Intro <r-intro>` section in the training manual and consult "
+"the :ref:`QGIS R Syntax <r-syntax>` section."
+msgstr ""
+
+#: ../../docs/user_manual/processing/3rdParty.rst:391
+msgid ""
 "When you declare an input parameter, QGIS uses that information for two "
 "things: creating the user interface to ask the user for the value of that"
-" parameter, and creating a corresponding R variable that can later be "
-"used as R function input."
+" parameter, and creating a corresponding R variable that can be used as R"
+" function input."
 msgstr ""
 
-#: ../../docs/user_manual/processing/3rdParty.rst:392
+#: ../../docs/user_manual/processing/3rdParty.rst:396
 msgid ""
 "In the above example, we have declared an input of type ``vector``, named"
-" ``polyg``. When executing the algorithm, QGIS will open the layer "
-"selected by the user and store it in a variable named ``polyg``. So, the "
-"name of a parameter is the name of the variable that we can use in R for "
-"accessing the value of that parameter (you should therefore avoid using "
-"reserved R words as parameter names)."
+" ``Vector_layer``. When executing the algorithm, QGIS will open the layer"
+" selected by the user and store it in a variable named ``Vector_layer``. "
+"So, the name of a parameter is the name of the variable that you use in R"
+" for accessing the value of that parameter (you should therefore avoid "
+"using reserved R words as parameter names)."
 msgstr ""
 
-#: ../../docs/user_manual/processing/3rdParty.rst:400
+#: ../../docs/user_manual/processing/3rdParty.rst:404
 msgid ""
 "Spatial parameters such as vector and raster layers are read using the "
-"``readOGR()`` and ``brick()`` commands (you do not have to worry about "
-"adding those commands to your description file -- QGIS will do it), and "
-"they are stored as ``Spatial*DataFrame`` objects. Table fields are stored"
-" as strings containing the name of the selected field."
+"``st_read()`` (or ``readOGR``) and ``brick()`` (or ``readGDAL``) commands"
+" (you do not have to worry about adding those commands to your "
+"description file -- QGIS will do it), and they are stored as ``sf`` (or "
+"``Spatial*DataFrame``) objects."
 msgstr ""
 
-#: ../../docs/user_manual/processing/3rdParty.rst:407
+#: ../../docs/user_manual/processing/3rdParty.rst:410
 msgid ""
-"Tables are opened using the ``read.csv()`` command. If a table entered by"
-" the user is not in CSV format, it will be converted prior to importing "
-"it into R."
+"Table fields are stored as strings containing the name of the selected "
+"field."
 msgstr ""
 
-#: ../../docs/user_manual/processing/3rdParty.rst:411
+#: ../../docs/user_manual/processing/3rdParty.rst:413
+msgid ""
+"Vector files can be read using the ``readOGR()`` command instead of "
+"``st_read()`` by specifying ``##load_vector_using_rgdal``. This will "
+"produce a ``Spatial*DataFrame`` object instead of an ``sf`` object."
+msgstr ""
+
+#: ../../docs/user_manual/processing/3rdParty.rst:418
 msgid ""
 "Raster files can be read using the ``readGDAL()`` command instead of "
-"``brick()`` by specifying ``##usereadgdal``."
+"``brick()`` by specifying ``##load_raster_using_rgdal``."
 msgstr ""
 
-#: ../../docs/user_manual/processing/3rdParty.rst:414
+#: ../../docs/user_manual/processing/3rdParty.rst:421
 msgid ""
-"If you are an advanced user and do not want QGIS to create the object "
-"representing the layer, you can use ``##passfilenames`` to indicate that "
-"you prefer a string with the filename instead. In this case, it is up to "
-"you to open the file before performing any operation on the data it "
-"contains."
+"If you are an advanced user and do not want QGIS to create the object for"
+" the layer, you can use ``##pass_filenames`` to indicate that you prefer "
+"a string with the filename. In this case, it is up to you to open the "
+"file before performing any operation on the data it contains."
 msgstr ""
 
-#: ../../docs/user_manual/processing/3rdParty.rst:420
+#: ../../docs/user_manual/processing/3rdParty.rst:427
 msgid ""
-"With the above information, we can now understand the first line of this "
-"script (the first line not starting with a Python comment)."
+"With the above information, it is possible to understand the first lines "
+"of the R script (the first line not starting with a Python comment "
+"character)."
 msgstr ""
 
-#: ../../docs/user_manual/processing/3rdParty.rst:428
+#: ../../docs/user_manual/processing/3rdParty.rst:437
 msgid ""
-"The variable ``polyg`` already contains a ``SpatialPolygonsDataFrame`` "
-"object, so it can be used when calling the ``spsample`` method, just like"
-" the ``numpoints`` one, which specifies the number of points to add to "
-"the created sample grid."
+"The ``spsample`` function is provided by the *sp* library, so the first "
+"thing we do is to load that library. The variable ``Vector_layer`` "
+"contains an ``sf`` object. Since we are going to use a function "
+"(``spsample``) from the *sp* library, we must convert the ``sf`` object "
+"to a ``SpatialPolygonsDataFrame`` object using the ``as`` function."
 msgstr ""
 
-#: ../../docs/user_manual/processing/3rdParty.rst:433
+#: ../../docs/user_manual/processing/3rdParty.rst:444
 msgid ""
-"Since we have declared a vector output named ``out``, we have to create a"
-" variable named ``out`` and store a ``Spatial*DataFrame`` object in it "
-"(in this case, a ``SpatialPointsDataFrame``). You can use any name for "
-"your intermediate variables. Just make sure that the variable storing "
-"your final result has the same name that you used to declare it, and that"
-" it contains a suitable value."
+"Then we calling the ``spsample`` function, with this object and the "
+"``numpoints`` input parameter (which specifies the number of points to "
+"generate)."
 msgstr ""
 
-#: ../../docs/user_manual/processing/3rdParty.rst:441
+#: ../../docs/user_manual/processing/3rdParty.rst:448
 msgid ""
-"In this case, the result obtained from the ``spsample`` method has to be "
-"converted explicitly into a ``SpatialPointsDataFrame`` object, since it "
-"is itself an object of class ``ppp``, which can not be returned to QGIS."
+"Since we have declared a vector output named ``Output``, we have to "
+"create a variable named ``Output`` containing an ``sf`` object."
 msgstr ""
 
-#: ../../docs/user_manual/processing/3rdParty.rst:446
+#: ../../docs/user_manual/processing/3rdParty.rst:451
+msgid ""
+"We do this in two steps. First we create a ``SpatialPolygonsDataFrame`` "
+"object from the result of the function, using the "
+"*SpatialPointsDataFrame* function, and then we convert that object to an "
+"``sf`` object using the ``st_as_sf`` function (of the *sf* library)."
+msgstr ""
+
+#: ../../docs/user_manual/processing/3rdParty.rst:457
+msgid ""
+"You can use whatever names you like for your intermediate variables. Just"
+" make sure that the variable storing your final result has the defined "
+"name (in this case ``Output``), and that it contains a suitable value (an"
+" ``sf`` object for vector layer output)."
+msgstr ""
+
+#: ../../docs/user_manual/processing/3rdParty.rst:463
+msgid ""
+"In this case, the result obtained from the ``spsample`` method had to be "
+"converted explicitly into an ``sf`` object via a "
+"``SpatialPointsDataFrame`` object, since it is itself an object of class "
+"``ppp``, which can not be returned to QGIS."
+msgstr ""
+
+#: ../../docs/user_manual/processing/3rdParty.rst:468
 msgid ""
 "If your algorithm generates raster layers, the way they are saved will "
 "depend on whether or not you have used the ``##dontuserasterpackage`` "
@@ -642,100 +669,101 @@ msgid ""
 "will be used."
 msgstr ""
 
-#: ../../docs/user_manual/processing/3rdParty.rst:454
+#: ../../docs/user_manual/processing/3rdParty.rst:476
 msgid ""
-"If you have used the ``##passfilenames`` option, outputs are generated "
+"If you have used the ``##pass_filenames`` option, outputs are generated "
 "using the ``raster`` package (with ``writeRaster()``)."
 msgstr ""
 
-#: ../../docs/user_manual/processing/3rdParty.rst:457
+#: ../../docs/user_manual/processing/3rdParty.rst:479
 msgid ""
 "If your algorithm does not generate a layer, but a text result in the "
 "console instead, you have to indicate that you want the console to be "
 "shown once the execution is finished. To do so, just start the command "
-"lines that produce the results you want to print with the ``>`` "
-"('greater') sign. The output of all other lines will not be shown. For "
+"lines that produce the results you want to print with the ``>`` ('greater"
+" than') sign. Only output from lines prefixed with ``>`` are shown. For "
 "instance, here is the description file of an algorithm that performs a "
 "normality test on a given field (column) of the attributes of a vector "
 "layer:"
 msgstr ""
 
-#: ../../docs/user_manual/processing/3rdParty.rst:475
+#: ../../docs/user_manual/processing/3rdParty.rst:497
 msgid ""
 "The output of the last line is printed, but the output of the first is "
 "not (and neither are the outputs from other command lines added "
 "automatically by QGIS)."
 msgstr ""
 
-#: ../../docs/user_manual/processing/3rdParty.rst:479
+#: ../../docs/user_manual/processing/3rdParty.rst:501
 msgid ""
 "If your algorithm creates any kind of graphics (using the ``plot()`` "
-"method), add the following line:"
+"method), add the following line (``output_plots_to_html`` used to be "
+"``showplots``):"
 msgstr ""
 
-#: ../../docs/user_manual/processing/3rdParty.rst:486
+#: ../../docs/user_manual/processing/3rdParty.rst:509
 msgid ""
 "This will cause QGIS to redirect all R graphical outputs to a temporary "
 "file, which will be opened once R execution has finished."
 msgstr ""
 
-#: ../../docs/user_manual/processing/3rdParty.rst:489
-msgid ""
-"Both graphics and console results will be shown in the processing results"
-" manager."
-msgstr ""
-
-#: ../../docs/user_manual/processing/3rdParty.rst:492
-msgid ""
-"For more information, please check the script files provided with "
-"Processing. Most of them are rather simple and will greatly help you "
-"understand how to create your own scripts."
-msgstr ""
-
-#: ../../docs/user_manual/processing/3rdParty.rst:498
-msgid ""
-"The ``rgdal`` and ``raster`` libraries are loaded by default, so you do "
-"not have to add the corresponding ``library()`` commands (you just have "
-"to make sure that those two packages are installed in your R "
-"distribution). However, other additional libraries that you might need "
-"have to be explicitly loaded by typing: ``library(ggplot2)`` (to load the"
-" ``ggplot2`` library). If the package is not already installed on your "
-"machine, Processing will download and install it. In this way the package"
-" will be also available in R Standalone. **Be aware** that if the package"
-" has to be downloaded, the first time you run the script it might take a "
-"long time."
-msgstr ""
-
 #: ../../docs/user_manual/processing/3rdParty.rst:512
+msgid ""
+"Both graphics and console results will be available through the "
+"processing results manager."
+msgstr ""
+
+#: ../../docs/user_manual/processing/3rdParty.rst:515
+msgid ""
+"For more information, please check the R scripts in the official QGIS "
+"collection (you download and install them using the *QGIS Resource "
+"Sharing* plugin, as explained elsewhere). Most of them are rather simple "
+"and will greatly help you understand how to create your own scripts."
+msgstr ""
+
+#: ../../docs/user_manual/processing/3rdParty.rst:522
+msgid ""
+"The ``sf``, ``rgdal`` and ``raster`` libraries are loaded by default, so "
+"you do not have to add the corresponding ``library()`` commands. However,"
+" other additional libraries that you might need have to be explicitly "
+"loaded by typing: ``library(ggplot2)`` (to load the ``ggplot2`` library)."
+" If the package is not already installed on your machine, Processing will"
+" try to download and install it. In this way the package will also become"
+" available in R Standalone. **Be aware** that if the package has to be "
+"downloaded, the script may take a long time to run the first time."
+msgstr ""
+
+#: ../../docs/user_manual/processing/3rdParty.rst:534
 msgid "R libraries"
 msgstr ""
 
-#: ../../docs/user_manual/processing/3rdParty.rst:514
+#: ../../docs/user_manual/processing/3rdParty.rst:536
 msgid ""
 "The R script ``sp_test`` tries to load the R packages ``sp`` and "
 "``raster``."
 msgstr ""
 
-#: ../../docs/user_manual/processing/3rdParty.rst:519
+#: ../../docs/user_manual/processing/3rdParty.rst:541
 msgid "R libraries installed when running sf_test"
 msgstr ""
 
-#: ../../docs/user_manual/processing/3rdParty.rst:521
+#: ../../docs/user_manual/processing/3rdParty.rst:543
 msgid ""
 "The R script *sf_test* tries to load ``sf`` and ``raster``. If these two "
-"packages are not installed, R may try to load and install them."
+"packages are not installed, R may try to load and install them (and all "
+"the libraries that they depend on)."
 msgstr ""
 
-#: ../../docs/user_manual/processing/3rdParty.rst:525
+#: ../../docs/user_manual/processing/3rdParty.rst:547
 msgid ""
 "The following R libraries end up in "
 ":file:`~/.local/share/QGIS/QGIS3/profiles/default/processing/rscripts` "
 "after ``sf_test`` has been run from the Processing Toolbox on Ubuntu with"
-" version 2.0 of the *Processing R Provider* plugin and R 3.4.4 (*apt* "
-"package ``r-base-core`` only):"
+" version 2.0 of the *Processing R Provider* plugin and a fresh install of"
+" *R* 3.4.4 (*apt* package ``r-base-core`` only):"
 msgstr ""
 
-#: ../../docs/user_manual/processing/3rdParty.rst:531
+#: ../../docs/user_manual/processing/3rdParty.rst:553
 msgid ""
 "``abind, askpass, assertthat, backports, base64enc, BH, bit, bit64, blob,"
 " brew, callr, classInt, cli, colorspace, covr, crayon, crosstalk, curl, "
@@ -754,18 +782,18 @@ msgid ""
 "uuid, vctrs, viridis, viridisLite, webshot, withr, xfun, XML, xtable``"
 msgstr ""
 
-#: ../../docs/user_manual/processing/3rdParty.rst:552
+#: ../../docs/user_manual/processing/3rdParty.rst:574
 msgid "GRASS"
 msgstr ""
 
-#: ../../docs/user_manual/processing/3rdParty.rst:554
+#: ../../docs/user_manual/processing/3rdParty.rst:576
 msgid ""
 "Configuring GRASS is not much different from configuring SAGA. First, the"
 " path to the GRASS folder has to be defined, but only if you are running "
 "Windows."
 msgstr ""
 
-#: ../../docs/user_manual/processing/3rdParty.rst:558
+#: ../../docs/user_manual/processing/3rdParty.rst:580
 msgid ""
 "By default, the Processing framework tries to configure its GRASS "
 "connector to use the GRASS distribution that ships along with QGIS. This "
@@ -776,14 +804,14 @@ msgid ""
 "GRASS 7 is needed for algorithms to work correctly."
 msgstr ""
 
-#: ../../docs/user_manual/processing/3rdParty.rst:568
+#: ../../docs/user_manual/processing/3rdParty.rst:590
 msgid ""
 "If you are running Linux, you just have to make sure that GRASS is "
 "correctly installed, and that it can be run without problem from a "
 "terminal window."
 msgstr ""
 
-#: ../../docs/user_manual/processing/3rdParty.rst:572
+#: ../../docs/user_manual/processing/3rdParty.rst:594
 msgid ""
 "GRASS algorithms use a region for calculations. This region can be "
 "defined manually using values similar to the ones found in the SAGA "
@@ -793,24 +821,24 @@ msgid ""
 " min covering region` option in the GRASS configuration parameters."
 msgstr ""
 
-#: ../../docs/user_manual/processing/3rdParty.rst:585
+#: ../../docs/user_manual/processing/3rdParty.rst:607
 msgid "LAStools"
 msgstr ""
 
-#: ../../docs/user_manual/processing/3rdParty.rst:587
+#: ../../docs/user_manual/processing/3rdParty.rst:609
 msgid ""
 "To use `LAStools <https://rapidlasso.com/lastools/>`_ in QGIS, you need "
 "to download and install LAStools on your computer and install the "
 "LAStools plugin (available from the official repository) in QGIS."
 msgstr ""
 
-#: ../../docs/user_manual/processing/3rdParty.rst:591
+#: ../../docs/user_manual/processing/3rdParty.rst:613
 msgid ""
 "On Linux platforms, you will need `Wine <https://www.winehq.org/>`_ to be"
 " able to run some of the tools."
 msgstr ""
 
-#: ../../docs/user_manual/processing/3rdParty.rst:594
+#: ../../docs/user_manual/processing/3rdParty.rst:616
 msgid ""
 "LAStools is activated and configured in the Processing options "
 "(:menuselection:`Settings --> Options`, :guilabel:`Processing` tab, "
@@ -1366,5 +1394,227 @@ msgstr ""
 #~ " of that parameter (you should "
 #~ "therefore avoid using reserved R words"
 #~ " as parameter names)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Let’s have a look at a very "
+#~ "simple script file, which calls the "
+#~ "R method ``spsample`` to create a "
+#~ "random grid within the boundary of "
+#~ "the polygons in a given polygon "
+#~ "layer. This method belongs to the "
+#~ "``maptools`` package. Since almost all "
+#~ "the algorithms that you might like "
+#~ "to incorporate into QGIS will use "
+#~ "or generate spatial data, knowledge of"
+#~ " spatial packages like ``maptools`` and "
+#~ "``sp``/``sf``, is necessary."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The first lines, which start with "
+#~ "a double Python comment sign (``##``),"
+#~ " tell QGIS about the inputs of "
+#~ "the algorithm in the file and the"
+#~ " outputs that it will generate."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To find out more about how to "
+#~ "write your own R scripts, have a"
+#~ " look at the :ref:`R Intro <r-intro>`"
+#~ " and the :ref:`R Syntax <r-syntax>` "
+#~ "Training Manual Chapters."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When you declare an input parameter, "
+#~ "QGIS uses that information for two "
+#~ "things: creating the user interface to"
+#~ " ask the user for the value of"
+#~ " that parameter, and creating a "
+#~ "corresponding R variable that can later"
+#~ " be used as R function input."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In the above example, we have "
+#~ "declared an input of type ``vector``,"
+#~ " named ``polyg``. When executing the "
+#~ "algorithm, QGIS will open the layer "
+#~ "selected by the user and store it"
+#~ " in a variable named ``polyg``. So,"
+#~ " the name of a parameter is the"
+#~ " name of the variable that we "
+#~ "can use in R for accessing the "
+#~ "value of that parameter (you should "
+#~ "therefore avoid using reserved R words"
+#~ " as parameter names)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Spatial parameters such as vector and"
+#~ " raster layers are read using the "
+#~ "``readOGR()`` and ``brick()`` commands (you"
+#~ " do not have to worry about "
+#~ "adding those commands to your "
+#~ "description file -- QGIS will do "
+#~ "it), and they are stored as "
+#~ "``Spatial*DataFrame`` objects. Table fields "
+#~ "are stored as strings containing the "
+#~ "name of the selected field."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Tables are opened using the "
+#~ "``read.csv()`` command. If a table "
+#~ "entered by the user is not in "
+#~ "CSV format, it will be converted "
+#~ "prior to importing it into R."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Raster files can be read using the"
+#~ " ``readGDAL()`` command instead of "
+#~ "``brick()`` by specifying ``##usereadgdal``."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you are an advanced user and"
+#~ " do not want QGIS to create the"
+#~ " object representing the layer, you "
+#~ "can use ``##passfilenames`` to indicate "
+#~ "that you prefer a string with the"
+#~ " filename instead. In this case, it"
+#~ " is up to you to open the "
+#~ "file before performing any operation on"
+#~ " the data it contains."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "With the above information, we can "
+#~ "now understand the first line of "
+#~ "this script (the first line not "
+#~ "starting with a Python comment)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The variable ``polyg`` already contains "
+#~ "a ``SpatialPolygonsDataFrame`` object, so it"
+#~ " can be used when calling the "
+#~ "``spsample`` method, just like the "
+#~ "``numpoints`` one, which specifies the "
+#~ "number of points to add to the "
+#~ "created sample grid."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Since we have declared a vector "
+#~ "output named ``out``, we have to "
+#~ "create a variable named ``out`` and "
+#~ "store a ``Spatial*DataFrame`` object in "
+#~ "it (in this case, a "
+#~ "``SpatialPointsDataFrame``). You can use any"
+#~ " name for your intermediate variables. "
+#~ "Just make sure that the variable "
+#~ "storing your final result has the "
+#~ "same name that you used to declare"
+#~ " it, and that it contains a "
+#~ "suitable value."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In this case, the result obtained "
+#~ "from the ``spsample`` method has to "
+#~ "be converted explicitly into a "
+#~ "``SpatialPointsDataFrame`` object, since it is"
+#~ " itself an object of class ``ppp``,"
+#~ " which can not be returned to "
+#~ "QGIS."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you have used the ``##passfilenames``"
+#~ " option, outputs are generated using "
+#~ "the ``raster`` package (with "
+#~ "``writeRaster()``)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If your algorithm does not generate "
+#~ "a layer, but a text result in "
+#~ "the console instead, you have to "
+#~ "indicate that you want the console "
+#~ "to be shown once the execution is"
+#~ " finished. To do so, just start "
+#~ "the command lines that produce the "
+#~ "results you want to print with the"
+#~ " ``>`` ('greater') sign. The output "
+#~ "of all other lines will not be "
+#~ "shown. For instance, here is the "
+#~ "description file of an algorithm that"
+#~ " performs a normality test on a "
+#~ "given field (column) of the attributes"
+#~ " of a vector layer:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If your algorithm creates any kind "
+#~ "of graphics (using the ``plot()`` "
+#~ "method), add the following line:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Both graphics and console results will"
+#~ " be shown in the processing results"
+#~ " manager."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "For more information, please check the"
+#~ " script files provided with Processing. "
+#~ "Most of them are rather simple and"
+#~ " will greatly help you understand how"
+#~ " to create your own scripts."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The ``rgdal`` and ``raster`` libraries "
+#~ "are loaded by default, so you do"
+#~ " not have to add the corresponding"
+#~ " ``library()`` commands (you just have "
+#~ "to make sure that those two "
+#~ "packages are installed in your R "
+#~ "distribution). However, other additional "
+#~ "libraries that you might need have "
+#~ "to be explicitly loaded by typing: "
+#~ "``library(ggplot2)`` (to load the ``ggplot2``"
+#~ " library). If the package is not "
+#~ "already installed on your machine, "
+#~ "Processing will download and install it."
+#~ " In this way the package will "
+#~ "be also available in R Standalone. "
+#~ "**Be aware** that if the package "
+#~ "has to be downloaded, the first "
+#~ "time you run the script it might"
+#~ " take a long time."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The R script *sf_test* tries to "
+#~ "load ``sf`` and ``raster``. If these "
+#~ "two packages are not installed, R "
+#~ "may try to load and install them."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The following R libraries end up "
+#~ "in "
+#~ ":file:`~/.local/share/QGIS/QGIS3/profiles/default/processing/rscripts`"
+#~ " after ``sf_test`` has been run from"
+#~ " the Processing Toolbox on Ubuntu "
+#~ "with version 2.0 of the *Processing "
+#~ "R Provider* plugin and R 3.4.4 "
+#~ "(*apt* package ``r-base-core`` only):"
 #~ msgstr ""
 
