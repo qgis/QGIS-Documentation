@@ -31,6 +31,9 @@ master_doc = 'docs/index'
 # of the sidebar.
 html_logo = 'static/common/logo.png'
 
+html_last_updated_fmt = '%b %d, %Y %H:%M'
+
+
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
 # built documents.
@@ -146,6 +149,10 @@ version_list = cfg['version_list'].replace(' ','').split(',')
 url = cfg['docs_url']
 if not url.endswith('/'):
   url += '/'
+github_url = cfg['github_url'] + 'tree/master'
+if not github_url.endswith('/'):
+  github_url += '/'
+transifex_url = cfg['transifex_url']
 
 if version not in version_list:
   raise ValueError('QGIS version is not in version list', version, version_list)
@@ -174,6 +181,12 @@ context = {
     'versions': [ [v, url+v] for v in version_list],
     'supported_languages': [ [l, url+version+'/'+l] for l in supported_languages],
     # 'downloads': [ ['PDF', '/builders.pdf'], ['HTML', '/builders.tgz'] ],
+    'display_github': True,
+    'github_url': github_url,
+    'github_user': 'qgis',
+    'github_repo': 'QGIS-Documentation',
+    'github_version': 'master/',
+    'transifex_url': transifex_url,
     'pyqgis_version': pyqgis_version,
     'source_version': source_version,
     'api_version': api_version
