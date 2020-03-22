@@ -200,6 +200,10 @@ else:
 
 
 # Add doctest configuration
+
+doctest_path = ['/usr/share/qgis/python/plugins/']
+
+
 doctest_global_setup = '''
 import os
 import sys
@@ -241,6 +245,15 @@ iface = get_iface()
 # Mock activeLayer()
 iface.activeLayer.return_value = QgsVectorLayer("Point", "temporary_points", "memory")
 
+# Mock layerTreeView
+layertree_view = QgsLayerTreeView()
+layertree_model = QgsLayerTreeModel(QgsProject.instance().layerTreeRoot())
+layertree_view.setModel(layertree_model)
+iface.layerTreeView.return_value = layertree_view
+
+# Init processing plugin
+import processing
+QgsApplication.processingRegistry().addProvider(QgsNativeAlgorithms())
 
 '''
 doctest_test_doctest_blocks = ''
@@ -250,12 +263,13 @@ from qgis.core import QgsProject
 QgsProject.instance().clear()
 '''
 
-# Make Sphinx doctest insensitive to object address differences
+# Make Sphinx doctest insensitive to object address differences,
+# also 'output_....' processing alg ids
 import doctest
 import re
 import sphinx.ext.doctest as ext_doctest
 
-ADDRESS_RE = re.compile(r'\b0x[0-9a-f]{1,16}\b')
+ADDRESS_RE = re.compile(r'\b0x[0-9a-f]{1,16}\b|\'output_[a-z0-9_]+')
 
 class BetterDocTestRunner(ext_doctest.SphinxDocTestRunner):
     def __init__(self, checker=None, verbose=None, optionflags=0):
