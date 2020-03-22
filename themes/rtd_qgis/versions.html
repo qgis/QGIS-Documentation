@@ -10,14 +10,14 @@
       <dl>
         <dt>{{ _('Languages') }}</dt>
         {% for slug, url in supported_languages %}
-          <dd><a href="{{ url }}">{{ slug }}</a></dd>
+          <dd><a href="{{ url }}/{{ pagename }}.html">{{ slug }}</a></dd>
         {% endfor %}
       </dl>
 
       <dl>
         <dt>{{ _('Versions') }}</dt>
         {% for slug, url in versions %}
-          <dd><a href="{{ url }}">{{ slug }}</a></dd>
+          <dd><a href="{{ url }}/{{ language }}/{{ pagename }}.html">{{ slug }}</a></dd>
         {% endfor %}
       </dl>
 
@@ -35,7 +35,7 @@
       <dl>
         <dt>{{ _('Contribute to Docs') }}</dt>
           <dd>
-            <a href="{{github_url}}/{{pagename}}.rst">{{ _('Edit on GitHub') }}</a>
+            <a href="{{ github_url }}/{{ pagename }}.rst">{{ _('Edit on GitHub') }}</a>
           </dd>
           {# Display the call for translation only for the latest document. #}
           {% if not isTesting %} 
@@ -49,7 +49,7 @@
       <dl>
         <dt>{{ _('On QGIS Project') }}</dt>
           <dd>
-            <a href="https://qgis.org/">{{ _('Home') }}</a>
+            <a href="https://qgis.org/{{ language }}">{{ _('Home') }}</a>
           </dd>
           <dd>
             <a href="https://qgis.org/api/{{ api_version }}">{{ _('C++ API') }}</a>
