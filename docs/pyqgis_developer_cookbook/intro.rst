@@ -1,5 +1,10 @@
 .. _introduction:
 
+
+.. highlight:: python
+   :linenothreshold: 5
+
+
 ************
 Introduction
 ************
@@ -60,7 +65,7 @@ For interaction with the QGIS environment, there is an :data:`iface`
 variable, which is an instance of
 :class:`QgisInterface <qgis.gui.QgisInterface>`.
 This interface allows access to the map canvas, menus, toolbars and
-other parts of the QGIS application. 
+other parts of the QGIS application.
 
 For user convenience, the following statements are executed
 when the console is started (in the future it will be possible to set
@@ -192,7 +197,7 @@ Using PyQGIS in standalone scripts
 To start a standalone script, initialize the QGIS resources at the
 beginning of the script:
 
-::
+.. code-block:: python
 
   from qgis.core import *
 
@@ -247,7 +252,7 @@ application is the second argument when instantiating the ``QgsApplication``.
 Pass ``True`` instead of ``False`` to indicate that we plan to
 use a GUI.
 
-::
+.. code-block:: python
 
   from qgis.core import *
 

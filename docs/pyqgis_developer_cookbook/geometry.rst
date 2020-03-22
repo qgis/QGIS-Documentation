@@ -1,5 +1,8 @@
 .. index:: Geometry; Handling
 
+.. highlight:: python
+   :linenothreshold: 5
+
 .. _geometry:
 
 *****************
