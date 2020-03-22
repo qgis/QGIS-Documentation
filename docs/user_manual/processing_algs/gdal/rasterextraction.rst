@@ -202,7 +202,7 @@ Parameters
      - [number]
 
        Default: None
-     - The with of the cells in the output raster
+     - The width of the cells in the output raster
    * - **Y Resolution to output band**
 
        Optional
