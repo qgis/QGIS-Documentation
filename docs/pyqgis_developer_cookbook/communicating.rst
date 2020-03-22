@@ -1,5 +1,8 @@
 .. index:: Plugins; User interaction
 
+.. highlight:: python
+   :linenothreshold: 5
+
 ***************************
 Communicating with the user
 ***************************

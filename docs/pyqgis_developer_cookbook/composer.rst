@@ -1,5 +1,8 @@
 .. index:: Map rendering, Map printing
 
+.. highlight:: python
+   :linenothreshold: 5
+
 .. _layout:
 
 **************************
