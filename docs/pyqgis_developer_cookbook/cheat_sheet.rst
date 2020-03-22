@@ -25,8 +25,8 @@ User Interface
     app = QApplication.instance()
     app.setStyleSheet(".QWidget {color: blue; background-color: yellow;}")
     # You can even read the stylesheet from a file
-    qss_file_content = open("testdata/file.qss").read()
-    app.setStyleSheet(qss_file_content)
+    with  open("testdata/file.qss") as qss_file_content:
+        app.setStyleSheet(qss_file_content.read())
 
 **Change icon and title**
 
@@ -320,7 +320,7 @@ Otherwise
     from qgis.core import QgsProject, QgsCoordinateReferenceSystem
 
     for layer in QgsProject.instance().mapLayers().values():
-        layer.setCrs(QgsCoordinateReferenceSystem(4326, QgsCoordinateReferenceSystem.EpsgCrsId))
+        layer.setCrs(QgsCoordinateReferenceSystem('EPSG:4326'))
 
 **See the CRS**
 
@@ -563,7 +563,9 @@ Advanced TOC
 
     parent.removeChildNode(myLayer)
 
+
 **Load layer in a specific group**
+
 
 .. testcode:: cheat_sheet
 
@@ -571,7 +573,8 @@ Advanced TOC
 
     root = QgsProject.instance().layerTreeRoot()
     myGroup = root.findGroup("My Group")
-    myGroup.insertChildNode(0, QgsLayerTreeLayer(layer))
+    myLayer = QgsLayerTreeLayer(layer)
+    myGroup.insertChildNode(0, myLayer)
 
 **Changing visibility**
 
@@ -590,12 +593,18 @@ Advanced TOC
 
     print (isMyGroupSelected( 'my group name' ))
 
+.. testoutput:: cheat_sheet
+    :hide:
+
+    False
+
+
 **Expand node**
 
 .. testcode:: cheat_sheet
 
-    print (cloned_group1.isExpanded())
-    cloned_group1.setExpanded(False)
+    print (myGroup.isExpanded())
+    myGroup.setExpanded(False)
 
 .. testoutput:: cheat_sheet
    :hide:
@@ -633,7 +642,8 @@ Advanced TOC
     root.willAddChildren.connect(onWillAddChildren)
     root.addedChildren.connect(onAddedChildren)
 
-.. testcleanup:: cheat_sheet
+.. testcode:: cheat_sheet
+    :hide:
 
     root.willAddChildren.disconnect(onWillAddChildren)
     root.addedChildren.disconnect(onAddedChildren)
@@ -654,9 +664,6 @@ Advanced TOC
 
 .. testcode:: cheat_sheet
 
-    from qgis.core import QgsProject, QgsLayerTreeModel
-    from qgis.gui import QgsLayerTreeView
-
     root = QgsProject.instance().layerTreeRoot()
     model = QgsLayerTreeModel(root)
     view = QgsLayerTreeView()
@@ -676,6 +683,11 @@ Advanced TOC
 **Rename node**
 
 .. testcode:: cheat_sheet
+    :hide:
+
+    node_layer1 = cloned_group1.children()[0]
+
+.. testcode:: cheat_sheet
 
     cloned_group1.setName("Group X")
     node_layer1.setName("Layer X")
@@ -691,29 +703,30 @@ Processing algorithms
     from qgis.core import QgsApplication
 
     for alg in QgsApplication.processingRegistry().algorithms():
-        print("{}:{} --> {}".format(alg.provider().name(), alg.name(), alg.displayName()))
+        if 'buffer' == alg.name():
+            print("{}:{} --> {}".format(alg.provider().name(), alg.name(), alg.displayName()))
 
-Otherwise
+.. testoutput:: cheat_sheet
 
-.. testcode:: cheat_sheet
+    QGIS (native c++):buffer --> Buffer
 
-    def alglist():
-        s = ''
-        for i in QgsApplication.processingRegistry().algorithms():
-            l = i.displayName().ljust(50, "-")
-            r = i.id()
-            s += '{}--->{}\n'.format(l, r)
-        print(s)
 
 **Get algorithms help**
 
 Random selection
 
 .. testcode:: cheat_sheet
+    :hide:
+
+    # Note: we assert and code-block the next
+    # because of the long output (that may vary)
+    from qgis import processing
+    assert 'algorithmHelp' in dir(processing)
+
+.. code-block:: python
 
     from qgis import processing
-
-    processing.algorithmHelp("qgis:randomselection")
+    processing.algorithmHelp("native:buffer")
 
 **Run the algorithm**
 
@@ -726,6 +739,9 @@ which is added to the project.
     result = processing.run("native:buffer", {'INPUT': layer, 'OUTPUT': 'memory:'})
     QgsProject.instance().addMapLayer(result['OUTPUT'])
 
+.. testoutput:: cheat_sheet
+
+    Processing(0): Results: {'OUTPUT': 'output_d27a2008_970c_4687_b025_f057abbd7319'}
 
 **How many algorithms are there?**
 
