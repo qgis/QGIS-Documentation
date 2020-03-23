@@ -633,7 +633,19 @@ Outputs
        * Save to PostGIS Table...
 
        The file encoding can also be changed here.
-
+   * - **Unchanged count**
+     - ``UNCHANGED_COUNT``
+     - [number]
+     - Count of unchanged features.
+   * - **Added count**
+     - ``ADDED_COUNT``
+     - [number]
+     - Count of features added in revised layer.
+   * - **Deleted count**
+     - ``DELETED_COUNT``
+     - [number]
+     - Count of features deleted from original layer.    
+       
 .. _qgisdropgeometries:
 
 Drop geometries
