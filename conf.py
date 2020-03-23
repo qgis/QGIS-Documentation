@@ -272,7 +272,8 @@ import doctest
 import re
 import sphinx.ext.doctest as ext_doctest
 
-ADDRESS_RE = re.compile(r'\b0x[0-9a-f]{1,16}\b|\'output_[a-z0-9_]+')
+
+ADDRESS_RE = re.compile(r'\b0x[0-9a-f]{1,16}\b|_[a-z0-9]{8}_[a-z0-9]{4}_[a-z0-9]{4}_[a-z0-9]{4}_[a-z0-9]{12}')
 
 class BetterDocTestRunner(ext_doctest.SphinxDocTestRunner):
     def __init__(self, checker=None, verbose=None, optionflags=0):
