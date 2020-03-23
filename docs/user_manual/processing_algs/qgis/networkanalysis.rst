@@ -181,7 +181,7 @@ Parameters
    * - **Advanced parameters**
      - GUI only
      - 
-     - Group of advanced network analysis parameters - se below.
+     - Group of advanced network analysis parameters - see below.
    * - **Service area (lines)**
      - ``OUTPUT_LINES``
      - [vector: line]
