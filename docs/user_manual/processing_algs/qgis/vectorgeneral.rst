@@ -633,15 +633,15 @@ Outputs
        * Save to PostGIS Table...
 
        The file encoding can also be changed here.
-   * - **Unchanged count**
+   * - **Count of unchanged features**
      - ``UNCHANGED_COUNT``
      - [number]
      - Count of unchanged features.
-   * - **Added count**
+   * - **Count of features added in revised layer**
      - ``ADDED_COUNT``
      - [number]
      - Count of features added in revised layer.
-   * - **Deleted count**
+   * - **Count of features deleted from original layer**
      - ``DELETED_COUNT``
      - [number]
      - Count of features deleted from original layer.    
