@@ -1,12 +1,17 @@
 .. _loadlayerpy:
 
+
+.. highlight:: python
+   :linenothreshold: 5
+
+
 **************
 Loading Layers
 **************
 
 The code snippets on this page needs the following imports:
 
-.. code-block:: python
+.. testcode:: loadlayer
 
  import os # This is is needed in the pyqgis console also
  from qgis.core import (
@@ -29,15 +34,15 @@ Vector Layers
 To create a vector layer instance, specify layer's data source identifier, name for the
 layer and provider's name:
 
-.. code-block:: python
+.. testcode:: loadlayer
 
  # get the path to the shapefile e.g. /home/project/data/ports.shp
- path_to_ports_layer = os.path.join(QgsProject.instance().homePath(), "data", "ports", "ports.shp")
+ path_to_airports_layer = "testdata/airports.shp"
 
  # The format is:
  # vlayer = QgsVectorLayer(data_source, layer_name, provider_name)
 
- vlayer = QgsVectorLayer(path_to_ports_layer, "Ports layer", "ogr")
+ vlayer = QgsVectorLayer(path_to_airports_layer, "Airports layer", "ogr")
  if not vlayer.isValid():
      print("Layer failed to load!")
 
@@ -48,14 +53,14 @@ layer instance is returned.
 
 For a geopackage vector layer:
 
-.. code-block:: python
+.. testcode:: loadlayer
 
- # get the path to a geopackage  e.g. /home/project/data/data.gpkg
- path_to_gpkg = os.path.join(QgsProject.instance().homePath(), "data", "data.gpkg")
+ # get the path to a geopackage  e.g. /usr/share/qgis/resources/data/world_map.gpkg
+ path_to_gpkg = os.path.join(QgsApplication.pkgDataPath(), "resources", "data", "world_map.gpkg")
  # append the layername part
- gpkg_places_layer = path_to_gpkg + "|layername=places"
- # e.g. gpkg_places_layer = "/home/project/data/data.gpkg|layername=places"
- vlayer = QgsVectorLayer(gpkg_places_layer, "Places layer", "ogr")
+ gpkg_countries_layer = path_to_gpkg + "|layername=countries"
+ # e.g. gpkg_places_layer = "/usr/share/qgis/resources/data/world_map.gpkg|layername=countries"
+ vlayer = QgsVectorLayer(gpkg_countries_layer, "Countries layer", "ogr")
  if not vlayer.isValid():
      print("Layer failed to load!")
 
@@ -63,9 +68,9 @@ The quickest way to open and display a vector layer in QGIS is the
 :meth:`addVectorLayer() <qgis.gui.QgisInterface.addVectorLayer>`
 method of the :class:`QgisInterface <qgis.gui.QgisInterface>`:
 
-.. code-block:: python
+.. testcode:: loadlayer
 
-    vlayer = iface.addVectorLayer(path_to_ports_layer, "Ports layer", "ogr")
+    vlayer = iface.addVectorLayer(path_to_airports_layer, "Airports layer", "ogr")
     if not vlayer:
       print("Layer failed to load!")
 
@@ -84,15 +89,15 @@ providers:
 
   * for Shapefile:
 
-    .. code-block:: python
+    .. testcode:: loadlayer
 
-       vlayer = QgsVectorLayer("/path/to/shapefile/file.shp", "layer_name_you_like", "ogr")
+       vlayer = QgsVectorLayer("testdata/airports.shp", "layer_name_you_like", "ogr")
 
   * for dxf (note the internal options in data source uri):
 
-    .. code-block:: python
+    .. testcode:: loadlayer
 
-       uri = "/path/to/dxffile/file.dxf|layername=entities|geometrytype=Point"
+       uri = "testdata/sample.dxf|layername=entities|geometrytype=Polygon"
        vlayer = QgsVectorLayer(uri, "layer_name_you_like", "ogr")
 
 
@@ -108,14 +113,15 @@ providers:
 
   .. code-block:: python
 
-      uri = QgsDataSourceUri()
-      # set host name, port, database name, username and password
-      uri.setConnection("localhost", "5432", "dbname", "johny", "xxx")
-      # set database schema, table name, geometry column and optionally
-      # subset (WHERE clause)
-      uri.setDataSource("public", "roads", "the_geom", "cityid = 2643")
+    uri = QgsDataSourceUri()
+    # set host name, port, database name, username and password
+    uri.setConnection("localhost", "5432", "dbname", "johny", "xxx")
+    # set database schema, table name, geometry column and optionally
+    # subset (WHERE clause)
+    uri.setDataSource("public", "roads", "the_geom", "cityid = 2643")
 
-      vlayer = QgsVectorLayer(uri.uri(False), "layer name you like", "postgres")
+    vlayer = QgsVectorLayer(uri.uri(False), "layer name you like", "postgres")
+
 
   .. note:: The ``False`` argument passed to ``uri.uri(False)`` prevents the
      expansion of the authentication configuration parameters, if you are not using
@@ -128,9 +134,9 @@ providers:
   delimiter, with field "x" for X coordinate and field "y" for Y coordinate
   you would use something like this:
 
-  .. code-block:: python
+  .. testcode:: loadlayer
 
-      uri = "/some/path/file.csv?delimiter={}&xField={}&yField={}".format(";", "x", "y")
+      uri = "file://{}/testdata/delimited_xy.csv?delimiter={}&xField={}&yField={}".format(os.getcwd(), ";", "x", "y")
       vlayer = QgsVectorLayer(uri, "layer name you like", "delimitedtext")
 
   .. note:: The provider string is structured as a URL, so
@@ -138,7 +144,7 @@ providers:
      text) formatted geometries as an alternative to ``x`` and ``y`` fields,
      and allows the coordinate reference system to be specified. For example:
 
-     .. code-block:: python
+     .. testcode:: loadlayer
 
         uri = "file:///some/path/file.csv?delimiter={}&crs=epsg:4723&wktField={}".format(";", "shape")
 
@@ -149,9 +155,9 @@ providers:
   gpx files. To open a file, the type (track/route/waypoint) needs to be
   specified as part of the url:
 
-  .. code-block:: python
+  .. testcode:: loadlayer
 
-      uri = "path/to/gpx/file.gpx?type=track"
+      uri = "testdata/layers.gpx?type=track"
       vlayer = QgsVectorLayer(uri, "layer name you like", "gpx")
 
 .. index::
@@ -161,7 +167,7 @@ providers:
   :class:`QgsDataSourceUri <qgis.core.QgsDataSourceUri>` can be used for generation of data
   source identifier:
 
-  .. code-block:: python
+  .. testcode:: loadlayer
 
       uri = QgsDataSourceUri()
       uri.setDatabase('/home/martin/test-2.3.sqlite')
@@ -189,33 +195,35 @@ providers:
 
 * WFS connection:. the connection is defined with a URI and using the ``WFS`` provider:
 
-  .. code-block:: python
+  .. testcode:: loadlayer
 
-        uri = "http://localhost:8080/geoserver/wfs?srsname=EPSG:23030&typename=union&version=1.0.0&request=GetFeature&service=WFS",
+        uri = "https://demo.geo-solutions.it/geoserver/ows?service=WFS&request=GetFature&typename=topp:tasmania_water_bodies"
         vlayer = QgsVectorLayer(uri, "my wfs layer", "WFS")
 
   The uri can be created using the standard ``urllib`` library:
 
-  .. code-block:: python
+  .. testcode:: loadlayer
+
+      import urllib
 
       params = {
           'service': 'WFS',
           'version': '1.0.0',
           'request': 'GetFeature',
-          'typename': 'union',
-          'srsname': "EPSG:23030"
+          'typename': 'topp:tasmania_water_bodies',
+          'srsname': "EPSG:4326"
       }
-      uri = 'http://localhost:8080/geoserver/wfs?' + urllib.unquote(urllib.urlencode(params))
+      uri2 = 'http://localhost:8080/geoserver/wfs?' + urllib.parse.unquote(urllib.parse.urlencode(params))
 
 
 .. note:: You can change the data source of an existing layer by calling
    :meth:`setDataSource() <qgis.core.QgsVectorLayer.setDataSource>`
    on a :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` instance, as in the following example:
 
-   .. code-block:: python
+   .. testcode:: loadlayer
 
-      # vlayer is a vector layer, uri is a QgsDataSourceUri instance
-      vlayer.setDataSource(uri.uri(), "layer name you like", "postgres")
+      uri = "https://demo.geo-solutions.it/geoserver/ows?service=WFS&request=GetFature&typename=topp:tasmania_water_bodies"
+      vlayer.setDataSource(uri, "layer name you like", "WFS")
 
 
 .. index::
@@ -230,20 +238,20 @@ file formats. In case you have troubles with opening some files, check whether
 your GDAL has support for the particular format (not all formats are available
 by default). To load a raster from a file, specify its filename and display name:
 
-.. code-block:: python
+.. testcode:: loadlayer
 
  # get the path to a tif file  e.g. /home/project/data/srtm.tif
- path_to_tif = os.path.join(QgsProject.instance().homePath(), "data", "srtm.tif")
+ path_to_tif = "qgis-projects/python_cookbook/data/srtm.tif"
  rlayer = QgsRasterLayer(path_to_tif, "SRTM layer name")
  if not rlayer.isValid():
      print("Layer failed to load!")
 
 To load a raster from a geopackage:
 
-.. code-block:: python
+.. testcode:: loadlayer
 
  # get the path to a geopackage  e.g. /home/project/data/data.gpkg
- path_to_gpkg = os.path.join(QgsProject.instance().homePath(), "data", "data.gpkg")
+ path_to_gpkg = os.path.join(os.getcwd(), "testdata", "sublayers.gpkg")
  # gpkg_raster_layer = "GPKG:/home/project/data/data.gpkg:srtm"
  gpkg_raster_layer = "GPKG:" + path_to_gpkg + ":srtm"
 
@@ -255,9 +263,9 @@ To load a raster from a geopackage:
 Similarly to vector layers, raster layers can be loaded using the addRasterLayer
 function of the :class:`QgisInterface <qgis.gui.QgisInterface>` object:
 
-.. code-block:: python
+.. testcode:: loadlayer
 
-    iface.addRasterLayer("/path/to/raster/file.tif", "layer name you like")
+    iface.addRasterLayer(path_to_tif, "layer name you like")
 
 This creates a new layer and adds it to the current project (making it appear
 in the layer list) in one step.
@@ -266,11 +274,9 @@ Raster layers can also be created from a WCS service:
 
 .. code-block:: python
 
- layer_name = 'modis'
- uri = QgsDataSourceUri()
- uri.setParam('url', 'http://demo.mapserver.org/cgi-bin/wcs')
- uri.setParam("identifier", layer_name)
- rlayer = QgsRasterLayer(str(uri.encodedUri()), 'my wcs layer', 'wcs')
+ layer_name = 'nurc:mosaic'
+ uri = "https://demo.geo-solutions.it/geoserver/ows?identifier={}".format(layer_name)
+ rlayer = QgsRasterLayer(uri, 'my wcs layer', 'wcs')
 
 Here is a description of the parameters that the WCS URI can contain:
 
@@ -312,9 +318,9 @@ Alternatively you can load a raster layer from WMS server. However currently
 it's not possible to access GetCapabilities response from API --- you have to
 know what layers you want:
 
-.. code-block:: python
+.. testcode:: loadlayer
 
-      urlWithParams = 'url=http://irs.gis-lab.info/?layers=landsat&styles=&format=image/jpeg&crs=EPSG:4326'
+      urlWithParams = "crs=EPSG:4326&format=image/png&layers=tasmania&styles&url=https://demo.geo-solutions.it/geoserver/ows"
       rlayer = QgsRasterLayer(urlWithParams, 'some layer name', 'wms')
       if not rlayer.isValid():
         print("Layer failed to load!")
@@ -335,13 +341,13 @@ be removed by the user in the QGIS interface, or via Python using the :meth:`rem
 
 Adding a layer to the current project is done using the :meth:`addMapLayer() <qgis.core.QgsProject.addMapLayer>` method:
 
-.. code-block:: python
+.. testcode:: loadlayer
 
     QgsProject.instance().addMapLayer(rlayer)
 
 To add a layer at an absolute position:
 
-.. code-block:: python
+.. testcode:: loadlayer
 
     # first add the layer without showing it
     QgsProject.instance().addMapLayer(rlayer, False)
@@ -352,7 +358,7 @@ To add a layer at an absolute position:
 
 If you want to delete the layer use the :meth:`removeMapLayer() <qgis.core.QgsProject.removeMapLayer>` method:
 
-.. code-block:: python
+.. testcode:: loadlayer
 
     # QgsProject.instance().removeMapLayer(layer_id)
     QgsProject.instance().removeMapLayer(rlayer.id())
@@ -362,6 +368,6 @@ but you can also pass the layer object itself.
 
 For a list of loaded layers and layer ids, use the :meth:`mapLayers() <qgis.core.QgsProject.mapLayers>` method:
 
-.. code-block:: python
+.. testcode:: loadlayer
 
     QgsProject.instance().mapLayers()
