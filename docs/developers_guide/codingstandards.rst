@@ -121,8 +121,8 @@ other code that is available in the public API.
 
 QGIS uses Doxygen for documentation. Write descriptive and meaningful comments
 that give a reader information about what to expect, what happens in edge cases
-and give hints about other interfaces he could be looking for, best best
-practice and code samples.
+and give hints about other interfaces he could be looking for, best
+practices and code samples.
 
 Methods
 -------
@@ -355,7 +355,7 @@ Braces should start on the line following the expression:
 
 .. code-block:: cpp
 
-  if(foo == 1)
+  if( foo == 1 )
   {
     // do stuff
     ...
@@ -382,7 +382,7 @@ should be done in a manner similar to the Qt sourcecode e.g.
       /**
        * This method will be deprecated, you are encouraged to use
        * doSomethingBetter() rather.
-       * \deprecated doSomethingBetter()
+       * \deprecated use doSomethingBetter()
        */
       Q_DECL_DEPRECATED bool doSomething();
 
@@ -394,7 +394,7 @@ should be done in a manner similar to the Qt sourcecode e.g.
 
     signals:
       /**
-       * This signal will is deprecated, you are encouraged to
+       * This signal will be deprecated, you are encouraged to
        * connect to somethingHappenedBetter() rather.
        * \deprecated use somethingHappenedBetter()
        */
