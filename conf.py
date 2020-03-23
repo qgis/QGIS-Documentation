@@ -97,7 +97,7 @@ html_theme_options = {
     # logo_only: Only display the logo image, do not display the project name at the top of the sidebar. Default: False,
     'logo_only': False,
     # prev_next_buttons_location': Location to display Next and Previous buttons. This can be either bottom, top, both , or None. Default: 'bottom',
-    'prev_next_buttons_location': 'bottom',
+    'prev_next_buttons_location': 'both',
     # style_external_links': Add an icon next to external links. Default: False,
     'style_external_links': False,
     # vcs_pageview_mode': Changes how to view files when using display_github, display_gitlab, etc. When using GitHub or GitLab this can be: blob (default), edit, or raw. On Bitbucket, this can be either: view (default) or edit. '',
