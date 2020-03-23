@@ -505,7 +505,7 @@ georeferenced formats.
 Moreover, new layout items such as scale bar, legend or north arrow have by
 default their settings (orientation, displayed layers, scale, ...) bound to
 the map item they are drawn over, and fall back to the reference map if no
-overlaping map.
+overlapping map.
 
 .. _grid_guides:
 
