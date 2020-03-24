@@ -3,18 +3,19 @@
 
 .. _raster:
 
+.. highlight:: python
+   :linenothreshold: 5
+
 *********************
  Using Raster Layers
 *********************
-
-.. warning:: |outofdate|
 
 .. contents::
    :local:
 
 The code snippets on this page needs the following imports if you're outside the pyqgis console:
 
-.. code-block:: python
+.. testcode:: raster
 
     from qgis.core import (
       QgsRasterLayer,
@@ -38,27 +39,68 @@ the colors stored in the palette.
 The following code assumes ``rlayer`` is a
 :class:`QgsRasterLayer <qgis.core.QgsRasterLayer>` object.
 
-.. code-block:: python
+
+.. testsetup:: raster
+
+    rlayer = QgsRasterLayer("GPKG:%s/testdata/sublayers.gpkg:srtm" % os.getcwd(), "srtm")
+    rlayer_multi = QgsRasterLayer("GPKG:%s/testdata/sublayers.gpkg:raster_layer" % os.getcwd(), "multiband")
+    QgsProject.instance().addMapLayers([rlayer, rlayer_multi])
+    assert rlayer.isValid()
+
+.. testcode:: raster
 
     rlayer = QgsProject.instance().mapLayersByName('srtm')[0]
     # get the resolution of the raster in layer unit
-    rlayer.width(), rlayer.height()
-    (919, 619)
+    print(rlayer.width(), rlayer.height())
+
+.. testoutput:: raster
+
+    919 619
+
+.. testcode:: raster
+
     # get the extent of the layer as QgsRectangle
-    rlayer.extent()
+    print(rlayer.extent())
+
+.. testoutput:: raster
+
     <QgsRectangle: 20.06856808199999875 -34.27001076999999896, 20.83945284300000012 -33.75077500700000144>
+
+.. testcode:: raster
+
     # get the extent of the layer as Strings
-    rlayer.extent().toString()
-    '20.0685680819999988,-34.2700107699999990 : 20.8394528430000001,-33.7507750070000014'
+    print(rlayer.extent().toString())
+
+.. testoutput:: raster
+
+    20.0685680819999988,-34.2700107699999990 : 20.8394528430000001,-33.7507750070000014
+
+.. testcode:: raster
+
     # get the raster type: 0 = GrayOrUndefined (single band), 1 = Palette (single band), 2 = Multiband
-    rlayer.rasterType()
+    print(rlayer.rasterType())
+
+.. testoutput:: raster
+
     0
-    # get the total band count of the raster
-    rlayer.bandCount()
+
+.. testcode:: raster
+
+     # get the total band count of the raster
+    print(rlayer.bandCount())
+
+.. testoutput:: raster
+
     1
+
+.. testcode:: raster
+
     # get all the available metadata as a QgsLayerMetadata object
-    rlayer.metadata()
-    '<qgis._core.QgsLayerMetadata object at 0x13711d558>'
+    print(rlayer.metadata())
+
+.. testoutput:: raster
+
+    <qgis._core.QgsLayerMetadata object at 0x13711d558>
 
 .. index:: Raster layers; Renderer
 
@@ -70,12 +112,22 @@ type. It can be altered either in the layer properties or programmatically.
 
 To query the current renderer:
 
-.. code-block:: python
+.. testcode:: raster
 
-    rlayer.renderer()
+    print(rlayer.renderer())
+
+.. testoutput:: raster
+
     <qgis._core.QgsSingleBandGrayRenderer object at 0x7f471c1da8a0>
-    rlayer.renderer().type()
-    'singlebandgray'
+
+
+.. testcode:: raster
+
+    print(rlayer.renderer().type())
+
+.. testoutput:: raster
+
+    singlebandgray
 
 To set a renderer, use the :meth:`setRenderer <qgis.core.QgsRasterLayer.setRenderer>`
 method of :class:`QgsRasterLayer <qgis.core.QgsRasterLayer>`. There are a
@@ -107,7 +159,7 @@ In the first stage we will prepare a
 :class:`QgsRasterShader <qgis.core.QgsRasterShader>` object and configure
 its shader function:
 
-.. code-block:: python
+.. testcode:: raster
 
     fcn = QgsColorRampShader()
     fcn.setColorRampType(QgsColorRampShader.Interpolated)
@@ -130,7 +182,7 @@ There are three modes of interpolation:
 
 In the second step we will associate this shader with the raster layer:
 
-.. code-block:: python
+.. testcode:: raster
 
     renderer = QgsSingleBandPseudoColorRenderer(rlayer.dataProvider(), 1, shader)
     rlayer.setRenderer(renderer)
@@ -142,7 +194,7 @@ Finally we have to use the
 :meth:`triggerRepaint <qgis.core.QgsMapLayer.triggerRepaint>` method
 to see the results:
 
-.. code-block:: python
+.. testcode:: raster
 
     rlayer.triggerRepaint()
 
@@ -157,7 +209,7 @@ create a color image (this is the ``MultiBandColor`` drawing style.
 In some cases you might want to override these setting.
 The following code interchanges red band (1) and green band (2):
 
-.. code-block:: python
+.. testcode:: raster
 
     rlayer_multi = QgsProject.instance().mapLayersByName('multiband')[0]
     rlayer_multi.renderer().setGreenBand(1)
@@ -169,7 +221,7 @@ single band drawing can be chosen, either gray levels or pseudocolor.
 We have to use :meth:`triggerRepaint <qgis.core.QgsMapLayer.triggerRepaint>`
 to update the map and see the result:
 
-.. code-block:: python
+.. testcode:: raster
 
     rlayer_multi.triggerRepaint()
 
@@ -189,7 +241,7 @@ You have to specify a :class:`QgsPointXY <qgis.core.QgsPointXY>`
 and the band number of the raster layer you want to query. The method returns a
 tuple with the value and ``True`` or ``False`` depending on the results:
 
-.. code-block:: python
+.. testcode:: raster
 
     val, res = rlayer.dataProvider().sample(QgsPointXY(20.50, -34), 1)
 
@@ -197,12 +249,16 @@ Another method to query raster values is using the :meth:`identify
 <qgis.core.QgsRasterDataProvider.identify>` method that returns a
 :class:`QgsRasterIdentifyResult <qgis.core.QgsRasterIdentifyResult>` object.
 
-.. code-block:: python
+.. testcode:: raster
 
     ident = rlayer.dataProvider().identify(QgsPointXY(20.5, -34), QgsRaster.IdentifyFormatValue)
 
     if ident.isValid():
       print(ident.results())
+
+.. testoutput:: raster
+
+    {1: 323.0}
 
 In this case, the :meth:`results <qgis.core.QgsRasterIdentifyResult.results>`
 method returns a dictionary, with band indices as keys, and band values as
