@@ -589,7 +589,7 @@ Parameters
        * 1 --- Tolerant Match (Topological Equality): geometries are considered equal
    * - **Unchanged features**
      - ``UNCHANGED``
-     - [vector: any]
+     - [vector: same as Original layer]
      - Specify the output vector layer containing the unchanged features. One of:
 
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
@@ -600,7 +600,7 @@ Parameters
        The file encoding can also be changed here.
    * - **Added features**
      - ``ADDED``
-     - [vector: any]
+     - [vector: same as Original layer]
      - Specify the output vector layer containing the added features. One of:
 
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
@@ -611,7 +611,7 @@ Parameters
        The file encoding can also be changed here.
    * - **Deleted features**
      - ``DELETED``
-     - [vector: any]
+     - [vector: same as Original layer]
      - Specify the output vector layer containing the deleted features. One of:
 
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
