@@ -587,7 +587,40 @@ Parameters
        
        * 0 --- Exact Match: includes the order and vertices count of geometries
        * 1 --- Tolerant Match (Topological Equality): geometries are considered equal
-	   
+   * - **Unchanged features**
+     - ``UNCHANGED``
+     - [vector: any]
+     - Specify the output vector layer containing the unchanged features. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
+   * - **Added features**
+     - ``ADDED``
+     - [vector: any]
+     - Specify the output vector layer containing the added features. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
+   * - **Deleted features**
+     - ``DELETED``
+     - [vector: any]
+     - Specify the output vector layer containing the deleted features. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
+
 Outputs
 ..........
 
@@ -602,37 +635,16 @@ Outputs
      - Description
    * - **Unchanged features**
      - ``UNCHANGED``
-     - [same as input]
-     - Specify the output vector layer containing the unchanged features. One of:
-
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
-
-       The file encoding can also be changed here.
+     - [vector: any]
+     - Vector layer containing the unchanged features. 
    * - **Added features**
      - ``ADDED``
-     - [same as input]
-     - Specify the output vector layer containing the added features. One of:
-
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
-
-       The file encoding can also be changed here.
+     - [vector: any]
+     - Vector layer containing the added features.
    * - **Deleted features**
      - ``DELETED``
-     - [same as input]
-     - Specify the output vector layer containing the deleted features. One of:
-
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
-
-       The file encoding can also be changed here.
+     - [vector: any]
+     - Vector layer containing the deleted features.
    * - **Count of unchanged features**
      - ``UNCHANGED_COUNT``
      - [number]
