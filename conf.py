@@ -201,7 +201,7 @@ else:
 
 # Add doctest configuration
 
-doctest_path = ['/usr/share/qgis/python/plugins/']
+doctest_path = ['/usr/share/qgis/python/plugins/', os.path.join(os.getcwd(), 'testdata', 'processing')]
 
 
 doctest_global_setup = '''
