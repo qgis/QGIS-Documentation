@@ -165,13 +165,18 @@ example:
 
  for i, feature in enumerate(features):
      # do something time-consuming here
-     print('') # printing should give enough time to present the progress
+     print('.') # printing should give enough time to present the progress
 
      percent = i / float(count) * 100
      # iface.mainWindow().statusBar().showMessage("Processed {} %".format(int(percent)))
      iface.statusBarIface().showMessage("Processed {} %".format(int(percent)))
 
  iface.statusBarIface().clearMessage()
+
+.. testoutput:: communicating
+    :hide:
+
+    .
 
 
 Logging
