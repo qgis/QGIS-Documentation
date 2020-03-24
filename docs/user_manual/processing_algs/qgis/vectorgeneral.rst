@@ -635,15 +635,15 @@ Outputs
      - Description
    * - **Unchanged features**
      - ``UNCHANGED``
-     - [vector: any]
+     - [vector: same as Original layer]
      - Vector layer containing the unchanged features. 
    * - **Added features**
      - ``ADDED``
-     - [vector: any]
+     - [vector: same as Original layer]
      - Vector layer containing the added features.
    * - **Deleted features**
      - ``DELETED``
-     - [vector: any]
+     - [vector: same as Original layer]
      - Vector layer containing the deleted features.
    * - **Count of unchanged features**
      - ``UNCHANGED_COUNT``
