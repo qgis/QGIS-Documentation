@@ -683,7 +683,7 @@ Outputs
    * - **Folder**
      - ``FOLDER``
      - [folder]
-     - The folder that contains the output file.
+     - The folder that contains the output files.
 
 
 .. _qgisfeaturefilter:
