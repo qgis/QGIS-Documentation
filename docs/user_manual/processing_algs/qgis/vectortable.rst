@@ -472,7 +472,47 @@ Outputs
    * - **Remaining fields**
      - ``OUTPUT``
      - [vector: any]
+<<<<<<< HEAD
      - Vector layer with the remaining fields
+=======
+     - Input vector layer containing the binary data
+   * - **Binary field**
+     - ``FIELD``
+     - [tablefield: any]
+     - Field containing the binary data
+   * - **File name**
+     - ``FILENAME``
+     - [expression]
+     - Field or expression-based text to name each output file
+   * - **Destination folder**
+     - ``FOLDER``
+     - [folder]
+       
+       Default: ``[Save to a temporary folder]``
+     - Folder in which to store the output files.  One of:
+       
+       * Save to a Temporary Directory
+       * Save to Directory...
+       
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Folder**
+     - ``FOLDER``
+     - [folder]
+     - The folder that contains the output files.
+>>>>>>> bc1a996c2... Typo corrected (#5144)
 
 
 .. _qgisfeaturefilter:
