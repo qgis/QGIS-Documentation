@@ -30,15 +30,21 @@
       </dl>
       {% endif %}
 
+      {# Hide contribute to docs fields for obsolete documents. #}
+      {% if not outdated %} 
       <dl>
         <dt>{{ _('Contribute to Docs') }}</dt>
           <dd>
             <a href="{{github_url}}/{{pagename}}.rst">{{ _('Edit on GitHub') }}</a>
           </dd>
+          {# Display the call for translation only for the latest document. #}
+          {% if not isTesting %} 
           <dd>
             <a href="{{transifex_url}}">{{ _('Translate Page') }}</a>
           </dd>
+          {% endif %}
       </dl>
+      {% endif %}
 
       <dl>
         <dt>{{ _('On QGIS Project') }}</dt>
