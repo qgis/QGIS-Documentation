@@ -128,8 +128,7 @@ Icon                            Substitution                        Icon        
 |editableEdits|                 ``|editableEdits|``
 |circle2Points|                 ``|circle2Points|``                 |circle2TangentsPoint|          ``|circle2TangentsPoint|``
 |circle3Points|                 ``|circle3Points|``                 |circle3Tangents|               ``|circle3Tangents|``
-|circle3Tangents|               ``|circleCenterPoint|``             |circleCenterPoint|             ``|circleCenterPoint|``
-|circleExtent|                  ``|circleExtent|``                  |ellipseCenter2Points|          ``|ellipseCenter2Points|``
+|circleCenterPoint|             ``|circleCenterPoint|``             |ellipseCenter2Points|          ``|ellipseCenter2Points|``
 |ellipseCenterPoint|            ``|ellipseCenterPoint|``            |ellipseExtent|                 ``|ellipseExtent|``
 |ellipseFoci|                   ``|ellipseFoci|``                   |rectangle3PointsDistance|      ``|rectangle3PointsDistance|``
 |rectangle3PointsProjected|     ``|rectangle3PointsProjected|``     |rectangleCenter|               ``|rectangleCenter|``
@@ -613,8 +612,6 @@ Icon                            Substitution                        Icon        
 .. |circle3Tangents| image:: /static/common/mActionCircle3Tangents.png
    :width: 1.5em
 .. |circleCenterPoint| image:: /static/common/mActionCircleCenterPoint.png
-   :width: 1.5em
-.. |circleExtent| image:: /static/common/mActionCircleExtent.png
    :width: 1.5em
 .. |circularStringCurvePoint| image:: /static/common/mActionCircularStringCurvePoint.png
    :width: 1.5em
