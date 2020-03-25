@@ -1,6 +1,12 @@
+.. index:: Settings; Reading, Settings; Storing
+
+.. highlight:: python
+   :linenothreshold: 5
+
+
 The code snippets on this page needs the following imports if you're outside the pyqgis console:
 
-.. code-block:: python
+.. testcode:: settings
 
     from qgis.core import (
       QgsProject,
@@ -8,15 +14,12 @@ The code snippets on this page needs the following imports if you're outside the
       QgsVectorLayer
     )
 
-.. index:: Settings; Reading, Settings; Storing
-
 .. settings:
 
 ****************************
 Reading And Storing Settings
 ****************************
 
-.. warning:: |outofdate|
 
 Many times it is useful for a plugin to save some variables so that the user
 does not have to enter or select them again next time the plugin is run.
@@ -39,7 +42,7 @@ We can differentiate between several types of settings:
 
   Here you can see an example of how these methods are used.
 
-  .. code-block:: python
+  .. testcode:: settings
 
     def store():
       s = QgsSettings()
@@ -62,6 +65,10 @@ We can differentiate between several types of settings:
   method is optional and specifies the default value that is returned
   if there is no previous value set for the passed setting name.
 
+  For a method to pre-configure the default values of the global settings
+  through the  :file:`global_settings.ini` file, see :ref:`deploying_organization`
+  for further details.
+
 .. index:: Settings; Project
 
 * **project settings** --- vary between different projects and therefore they
@@ -72,7 +79,7 @@ We can differentiate between several types of settings:
 
   An example of usage follows.
 
-  .. code-block:: python
+  .. testcode:: settings
 
     proj = QgsProject.instance()
 
@@ -117,7 +124,7 @@ We can differentiate between several types of settings:
   and can be set using the
   :meth:`setCustomProperty() <qgis.core.QgsMapLayer.setCustomProperty>` one.
 
-  .. code-block:: python
+  .. testcode:: settings
 
    vlayer = QgsVectorLayer()
    # save a value
