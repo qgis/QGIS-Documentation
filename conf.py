@@ -243,7 +243,13 @@ start_qgis()
 iface = get_iface()
 
 # Mock activeLayer()
-iface.activeLayer.return_value = QgsVectorLayer("Point", "temporary_points", "memory")
+iface.activeLayer.return_value = QgsVectorLayer("Point?crs=4326&field=fid:integer&field=name:string", "temporary_points", "memory")
+
+# Add a feature
+f = QgsFeature(iface.activeLayer().fields())
+f.setAttributes([1, 'First feature'])
+f.setGeometry(QgsGeometry.fromWkt('point( 7 45)'))
+iface.activeLayer().dataProvider().addFeatures([f])
 
 # Mock messageBar
 iface.messageBar.return_value = QgsMessageBar()
