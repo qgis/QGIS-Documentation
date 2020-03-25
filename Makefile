@@ -34,7 +34,7 @@ html:
 	if [ $(LANG) != "en" ]; then \
 		$(SPHINXBUILD) -c "$(CONFDIR)" -b html "$(SOURCEDIR)" "$(BUILDDIR)/html/$(LANG)" $(SPHINXINTLOPTS) $(0); \
 	else \
-		$(SPHINXBUILD) -c "$(CONFDIR)" -b html -W --keep-going "$(SOURCEDIR)" "$(BUILDDIR)/html/$(LANG)" $(SPHINXOPTS) $(0); \
+		$(SPHINXBUILD) -c "$(CONFDIR)" -b html -nW --keep-going "$(SOURCEDIR)" "$(BUILDDIR)/html/$(LANG)" $(SPHINXOPTS) $(0); \
 	fi
 
 site: html
