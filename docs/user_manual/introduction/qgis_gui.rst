@@ -704,7 +704,7 @@ actions like:
        :guilabel:`Image...`
      -
      -
-     - :ref:`image_decorations`
+     - :ref:`image_decoration`
    * - :menuselection:`-->`
        :guilabel:`North Arrow...`
      -
