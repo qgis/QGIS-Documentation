@@ -1,5 +1,8 @@
 .. index:: Tasks
 
+.. highlight:: python
+   :linenothreshold: 5
+
 .. _tasks:
 
 ******************************************
@@ -29,20 +32,35 @@ There are several ways to create a QGIS task:
 
 * Create your own task by extending :class:`QgsTask <qgis.core.QgsTask>`
 
-  .. code-block:: python
+  .. testcode:: tasks
 
     class SpecialisedTask(QgsTask):
+        pass
 
 * Create a task from a function
 
-  .. code-block:: python
+  .. testcode:: tasks
+
+    def heavyFunction():
+        # Some CPU intensive processing ...
+        pass
+
+    def workdone():
+        # ... do something useful with the results
+        pass
 
     QgsTask.fromFunction('heavy function', heavyFunction,
                          onfinished=workdone)
 
 * Create a task from a processing algorithm
 
-  .. code-block:: python
+  .. testsetup:: tasks
+
+    params = None
+    context = None
+    feedback = None
+
+  .. testcode:: tasks
 
     QgsProcessingAlgRunnerTask('native:buffer', params, context,
                                feedback)
@@ -97,7 +115,7 @@ Several instances of ``RandomIntegerSumTask`` (with subtasks) are generated
 and added to the task manager, demonstrating two types of
 dependencies.
 
-.. code-block:: python
+.. testcode:: tasks
 
   import random
   from time import sleep
@@ -110,12 +128,14 @@ dependencies.
 
   class RandomIntegerSumTask(QgsTask):
       """This shows how to subclass QgsTask"""
+
       def __init__(self, description, duration):
           super().__init__(description, QgsTask.CanCancel)
           self.duration = duration
           self.total = 0
           self.iterations = 0
           self.exception = None
+
       def run(self):
           """Here you implement your heavy lifting.
           Should periodically test for isCanceled() to gracefully
@@ -145,6 +165,7 @@ dependencies.
                   self.exception = Exception('bad value!')
                   return False
           return True
+
       def finished(self, result):
           """
           This function is automatically called when the task has
@@ -179,6 +200,7 @@ dependencies.
                           exception=self.exception),
                       MESSAGE_CATEGORY, Qgis.Critical)
                   raise self.exception
+
       def cancel(self):
           QgsMessageLog.logMessage(
               'Task "{name}" was canceled'.format(
@@ -207,6 +229,20 @@ dependencies.
   QgsApplication.taskManager().addTask(shorttask)
   QgsApplication.taskManager().addTask(minitask)
 
+.. testcode:: tasks
+  :hide:
+
+  # We need the test output here, hence the blocking
+  while QgsApplication.taskManager().countActiveTasks() != 0:
+    pass
+
+.. testoutput:: tasks
+
+    RandomIntegerSumTask(0): Started task "waste cpu subtask long"
+    RandomIntegerSumTask(0): Started task "waste cpu subtask shortest"
+    RandomIntegerSumTask(0): Started task "waste cpu short"
+    RandomIntegerSumTask(0): Started task "waste cpu mini"
+
 Task from function
 ..................
 
@@ -218,7 +254,7 @@ function that will be called when the task has completed.
 The ``doSomething`` function in this example has an additional named
 parameter ``wait_time``.
 
-.. code-block:: python
+.. testcode:: tasks
 
   import random
   from time import sleep
@@ -293,6 +329,17 @@ parameter ``wait_time``.
   QgsApplication.taskManager().addTask(task1)
   QgsApplication.taskManager().addTask(task2)
 
+.. testcode:: tasks
+  :hide:
+
+  # We need the test output here, hence the blocking
+  while QgsApplication.taskManager().countActiveTasks() != 0:
+    pass
+
+.. testoutput:: tasks
+
+    TaskFromFunction(0): Started task Waste cpu 1
+    TaskFromFunction(0): Started task Waste cpu 2
 
 Task from a processing algorithm
 ................................
@@ -301,7 +348,7 @@ Create a task that uses the algorithm :ref:`qgis:randompointsinextent <qgisrando
 generate 50000 random points inside a specified extent.  The result is
 added to the project in a safe way.
 
-.. code-block:: python
+.. code-block:: tasks
 
   from functools import partial
   from qgis.core import (QgsTaskManager, QgsMessageLog,
