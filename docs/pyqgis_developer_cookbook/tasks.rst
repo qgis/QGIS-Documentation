@@ -364,7 +364,7 @@ Create a task that uses the algorithm :ref:`qgis:randompointsinextent <qgisrando
 generate 50000 random points inside a specified extent.  The result is
 added to the project in a safe way.
 
-.. code-block:: tasks
+.. testcode:: tasks
 
   from functools import partial
   from qgis.core import (QgsTaskManager, QgsMessageLog,
