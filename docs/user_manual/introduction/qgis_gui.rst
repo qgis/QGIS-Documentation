@@ -704,7 +704,7 @@ actions like:
        :guilabel:`Image...`
      -
      -
-     - :ref:`decorations`
+     - :ref:`image_decorations`
    * - :menuselection:`-->`
        :guilabel:`North Arrow...`
      -
@@ -2576,8 +2576,6 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |circularStringRadius| image:: /static/common/mActionCircularStringRadius.png
    :width: 1.5em
-.. |coordinateCapture| image:: /static/common/coordinate_capture.png
-   :width: 1.5em
 .. |customProjection| image:: /static/common/mActionCustomProjection.png
    :width: 1.5em
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
@@ -2614,9 +2612,9 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |eventId| image:: /static/common/event_id.png
    :width: 1.5em
-.. |expressionSelect| image:: /static/common/mIconExpressionSelect.png
-   :width: 1.5em
 .. |evisConnect| image:: /static/common/evis_connect.png
+   :width: 1.5em
+.. |expressionSelect| image:: /static/common/mIconExpressionSelect.png
    :width: 1.5em
 .. |extents| image:: /static/common/extents.png
    :width: 1.5em
@@ -2633,11 +2631,7 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |formSelect| image:: /static/common/mIconFormSelect.png
    :width: 1.5em
-.. |geometryChecker| image:: /static/common/geometrychecker.png
-   :width: 1.5em
 .. |georefRun| image:: /static/common/mGeorefRun.png
-   :width: 1.5em
-.. |gpsImporter| image:: /static/common/gps_importer.png
    :width: 1.5em
 .. |helpContents| image:: /static/common/mActionHelpContents.png
    :width: 1.5em
@@ -2812,8 +2806,6 @@ Click the icon to open the Plugin Manager dialog.
 .. |sum| image:: /static/common/mActionSum.png
    :width: 1.2em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
-   :width: 1.5em
-.. |topologyChecker| image:: /static/common/mActionTopologyChecker.png
    :width: 1.5em
 .. |tracking| image:: /static/common/tracking.png
    :width: 1.5em
