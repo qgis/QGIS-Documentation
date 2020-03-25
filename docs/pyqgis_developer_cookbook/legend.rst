@@ -27,7 +27,7 @@ The QgsProject class
 ====================
 
 You can use :class:`QgsProject <qgis.core.QgsProject>` to retrieve information
-about the TOC and all the layer loaded.
+about the TOC and all the layers loaded.
 
 You have to create an ``instance`` of :class:`QgsProject <qgis.core.QgsProject>`
 and use its methods to get the loaded layers.
