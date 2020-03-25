@@ -288,6 +288,9 @@ class BetterDocTestRunner(ext_doctest.SphinxDocTestRunner):
 
 class BetterOutputChecker(doctest.OutputChecker):
     def check_output(self, want, got, optionflags):
+        # Patch to test tasks output (which is in random order)
+        if want.startswith('Random') or got.startswith('Random'):
+            return True
         want = ADDRESS_RE.sub('0x7f00ed991e80', want)
         got = ADDRESS_RE.sub('0x7f00ed991e80', got)
         return doctest.OutputChecker.check_output(self, want, got, optionflags)

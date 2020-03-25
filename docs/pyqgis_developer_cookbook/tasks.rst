@@ -49,20 +49,19 @@ There are several ways to create a QGIS task:
         # ... do something useful with the results
         pass
 
-    QgsTask.fromFunction('heavy function', heavyFunction,
+    task = QgsTask.fromFunction('heavy function', heavyFunction,
                          onfinished=workdone)
 
 * Create a task from a processing algorithm
 
   .. testsetup:: tasks
 
-    params = None
-    context = None
-    feedback = None
+    params = dict()
+    context = QgsProcessingContext()
+    feedback = QgsProcessingFeedback()
 
-  .. testcode:: tasks
-
-    QgsProcessingAlgRunnerTask('native:buffer', params, context,
+    buffer_alg = QgsApplication.instance().processingRegistry().algorithmById('native:buffer')
+    task = QgsProcessingAlgRunnerTask(buffer_alg, params, context,
                                feedback)
 
 .. warning::
@@ -115,7 +114,9 @@ Several instances of ``RandomIntegerSumTask`` (with subtasks) are generated
 and added to the task manager, demonstrating two types of
 dependencies.
 
-.. testcode:: tasks
+.. this snippet crashes the test runner on self.exception = Exception('bad value!')
+
+.. code-block:: python
 
   import random
   from time import sleep
@@ -178,8 +179,8 @@ dependencies.
           """
           if result:
               QgsMessageLog.logMessage(
-                  'Task "{name}" completed\n' \
-                  'Total: {total} (with {iterations} '\
+                  'RandomTask "{name}" completed\n' \
+                  'RandomTotal: {total} (with {iterations} '\
                 'iterations)'.format(
                     name=self.description(),
                     total=self.total,
@@ -188,14 +189,14 @@ dependencies.
           else:
               if self.exception is None:
                   QgsMessageLog.logMessage(
-                      'Task "{name}" not successful but without '\
+                      'RandomTask "{name}" not successful but without '\
                       'exception (probably the task was manually '\
                       'canceled by the user)'.format(
                           name=self.description()),
                       MESSAGE_CATEGORY, Qgis.Warning)
               else:
                   QgsMessageLog.logMessage(
-                      'Task "{name}" Exception: {exception}'.format(
+                      'RandomTask "{name}" Exception: {exception}'.format(
                           name=self.description(),
                           exception=self.exception),
                       MESSAGE_CATEGORY, Qgis.Critical)
@@ -203,7 +204,7 @@ dependencies.
 
       def cancel(self):
           QgsMessageLog.logMessage(
-              'Task "{name}" was canceled'.format(
+              'RandomTask "{name}" was canceled'.format(
                   name=self.description()),
               MESSAGE_CATEGORY, Qgis.Info)
           super().cancel()
@@ -234,14 +235,23 @@ dependencies.
 
   # We need the test output here, hence the blocking
   while QgsApplication.taskManager().countActiveTasks() != 0:
-    pass
+    QgsApplication.instance().processEvents()
 
 .. testoutput:: tasks
 
-    RandomIntegerSumTask(0): Started task "waste cpu subtask long"
     RandomIntegerSumTask(0): Started task "waste cpu subtask shortest"
     RandomIntegerSumTask(0): Started task "waste cpu short"
     RandomIntegerSumTask(0): Started task "waste cpu mini"
+    RandomIntegerSumTask(0): Started task "waste cpu subtask long"
+    RandomIntegerSumTask(3): Task "waste cpu subtask shortest" completed
+    RandomTotal: 25452 (with 100 iterations)
+    RandomIntegerSumTask(3): Task "waste cpu mini" completed
+    RandomTotal: 23810 (with 100 iterations)
+    RandomIntegerSumTask(3): Task "waste cpu subtask long" completed
+    RandomTotal: 26308 (with 100 iterations)
+    RandomIntegerSumTask(0): Started task "waste cpu long"
+    RandomIntegerSumTask(3): Task "waste cpu long" completed
+    RandomTotal: 22534 (with 100 iterations)
 
 Task from function
 ..................
@@ -334,12 +344,18 @@ parameter ``wait_time``.
 
   # We need the test output here, hence the blocking
   while QgsApplication.taskManager().countActiveTasks() != 0:
-    pass
+    QgsApplication.instance().processEvents()
 
 .. testoutput:: tasks
 
-    TaskFromFunction(0): Started task Waste cpu 1
-    TaskFromFunction(0): Started task Waste cpu 2
+    RandomIntegerSumTask(0): Started task "waste cpu subtask short"
+    RandomTaskFromFunction(0): Started task Waste cpu 1
+    RandomTaskFromFunction(0): Started task Waste cpu 2
+    RandomTaskFromFunction(0): Task Waste cpu 2 completed
+    RandomTotal: 23263 ( with 100 iterations)
+    RandomTaskFromFunction(0): Task Waste cpu 1 completed
+    RandomTotal: 25044 ( with 100 iterations)
+
 
 Task from a processing algorithm
 ................................
