@@ -435,13 +435,13 @@ Input types
    * - :class:`QgsProcessingParameterCrs <qgis.core.QgsProcessingParameterCrs>`
      - ``alg.CRS``
      - A Coordinate Reference System
-   * - :class:`QgsProcessingParameterDatabaseSchema <qgis.core.QgsProcessingParameterDatabaseSchema`
+   * - :class:`QgsProcessingParameterDatabaseSchema <qgis.core.QgsProcessingParameterDatabaseSchema>`
      - ``alg.DATABASE_SCHEMA``
      - A database schema
-   * - :class:`QgsProcessingParameterDatabaseTable <qgis.core.QgsProcessingParameterDatabaseTable`
+   * - :class:`QgsProcessingParameterDatabaseTable <qgis.core.QgsProcessingParameterDatabaseTable>`
      - ``alg.DATABASE_TABLE``
      - A database table
-   * - :class:`QgsProcessingParameterDateTime <qgis.core.QgsProcessingParameterDateTime`
+   * - :class:`QgsProcessingParameterDateTime <qgis.core.QgsProcessingParameterDateTime>`
      - ``alg.DATETIME``
      - A datetime (or a pure date or time)
    * - :class:`QgsProcessingParameterDistance <qgis.core.QgsProcessingParameterDistance>`
