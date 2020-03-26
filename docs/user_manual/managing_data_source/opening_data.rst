@@ -660,6 +660,7 @@ other database types, see their differences at :ref:`db_requirements`.
   database is on the same computer as QGIS, simply enter *localhost* here.
 * **Port**: Port number the PostgreSQL database server listens on. The default
   port for PostGIS is ``5432``.
+<<<<<<< HEAD
 * **Database**: Name of the database.
 * **SSL mode**: How the SSL connection will be negotiated with the server. Note
   that massive speed-ups in PostGIS layer rendering can be achieved by disabling
@@ -670,6 +671,26 @@ other database types, see their differences at :ref:`db_requirements`.
   * *Prefer* (the default): Try an SSL connection. If that fails, try a
     non-SSL connection;
   * *Require*: Only try an SSL connection.
+=======
+* :guilabel:`Database`: Name of the database.
+* :guilabel:`SSL mode`: SSL encryption setup
+  The following options are available:
+
+  * :guilabel:`Prefer` (the default): I don't care about encryption, but I wish to pay
+    the overhead of encryption if the server supports it.
+  * :guilabel:`Require`: I want my data to be encrypted, and I accept the overhead. I trust
+    that the network will make sure I always connect to the server I want.
+  * :guilabel:`Verify CA`: I want my data encrypted, and I accept the overhead. I want to
+    be sure that I connect to a server that I trust.
+  * :guilabel:`Verify Full`: I want my data encrypted, and I accept the overhead. I want to
+    be sure that I connect to a server I trust, and that it's the one I specify.
+  * :guilabel:`Allow`: I don't care about security, but I will pay the overhead of
+    encryption if the server insists on it.
+  * :guilabel:`Disable`: I don't care about security, and I don't want to pay the overhead
+    of encryption.
+
+* :guilabel:`Authentication`, basic.
+>>>>>>> 6bac893fb... Do not exaggerate the price for SSL (#3840)
 
 * **Username**: User name used to log in to the database.
 * **Password**: Password used with *Username* to connect to the database.
