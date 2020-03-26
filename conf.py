@@ -198,6 +198,34 @@ else:
     html_context = context
 
 
+# adding this because in pycookbook a lot of text is referencing classes, which cannot be found by sphinx
+# eg: Map canvas is implemented as :class:`QgsMapCanvas` ...
+# I hope somebody will create the real references for these so they can be removed here...
+nitpick_ignore = [
+                  ('py:class', 'QDomElement'),
+                  ('py:class', 'QAction'),
+                  ('py:class', 'QMenu'),
+
+                  ('py:data', 'iface'),
+                  ('py:data', 'qgis.utils.iface'),
+
+                  ('py:func', 'classFactory'),
+                  ('py:func', '__init__'),
+                  ('py:func', 'initGui'),
+                  ('py:func', 'hide'),
+                  ('py:func', 'requestReady'),
+                  ('py:func', 'sendResponse'),
+                  ('py:func', 'serverClassFactory'),
+                  ('py:func', 'show'),
+                  ('py:func', 'showPluginHelp'),
+                  ('py:func', 'unload'),
+
+                  ('py:mod', 'qgis.core'),
+                  ('py:mod', 'qgis.gui'),
+                  ('py:mod', 'qgis.utils'),
+                  ]
+
+
 # Add doctest configuration
 doctest_global_setup = '''
 import os
