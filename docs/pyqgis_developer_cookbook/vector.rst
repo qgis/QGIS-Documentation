@@ -660,9 +660,9 @@ From an instance of :class:`QgsVectorFileWriter <qgis.core.QgsVectorFileWriter>`
   transform_context = QgsProject.instance().transformContext()
   # Write to a GeoPackage (default)
   error = QgsVectorFileWriter.writeAsVectorFormatV2(layer,
-                                                  "testdata/my_new_file.gpkg",
-                                                  transform_context,
-                                                  save_options)
+                                                    "testdata/my_new_file.gpkg",
+                                                    transform_context,
+                                                    save_options)
   if error[0] == QgsVectorFileWriter.NoError:
       print("success!")
   else:
@@ -681,9 +681,9 @@ From an instance of :class:`QgsVectorFileWriter <qgis.core.QgsVectorFileWriter>`
   save_options.fileEncoding = "UTF-8"
   transform_context = QgsProject.instance().transformContext()
   error = QgsVectorFileWriter.writeAsVectorFormatV2(layer,
-                                                  "testdata/my_new_shapefile",
-                                                  transform_context,
-                                                  save_options)
+                                                    "testdata/my_new_shapefile",
+                                                    transform_context,
+                                                    save_options)
   if error[0] == QgsVectorFileWriter.NoError:
       print("success again!")
   else:
@@ -961,17 +961,6 @@ to find out currently available renderers:
 .. testcode:: vectors
 
     print(QgsApplication.rendererRegistry().renderersList())
-    # Print:
-    ['nullSymbol',
-    'singleSymbol',
-    'categorizedSymbol',
-    'graduatedSymbol',
-    'RuleRenderer',
-    'pointDisplacement',
-    'pointCluster',
-    'invertedPolygonRenderer',
-    'heatmapRenderer',
-    '25dRenderer']
 
 .. testoutput:: vectors
 

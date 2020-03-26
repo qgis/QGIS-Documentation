@@ -20,7 +20,6 @@ The code snippets on this page needs the following imports if you're outside the
 Reading And Storing Settings
 ****************************
 
-
 Many times it is useful for a plugin to save some variables so that the user
 does not have to enter or select them again next time the plugin is run.
 

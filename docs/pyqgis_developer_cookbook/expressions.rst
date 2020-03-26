@@ -202,7 +202,6 @@ order to compute new field values:
    print( f['Sum'])
 
 .. testoutput:: expr
-   :hide:
 
    876.5
 

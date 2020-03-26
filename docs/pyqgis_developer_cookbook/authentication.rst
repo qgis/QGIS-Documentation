@@ -266,8 +266,8 @@ to extract cert/key/CAs from the bundle.
 
 .. _Remove_entry_from_authdb:
 
-Remove entry from authdb
-------------------------
+Remove an entry from authdb
+---------------------------
 We can remove an entry from :term:`Authentication Database` using it's
 ``authcfg`` identifier with the following snippet:
 

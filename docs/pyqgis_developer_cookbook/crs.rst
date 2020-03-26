@@ -31,17 +31,19 @@ class. Instances of this class can be created in several different ways:
 
   .. testcode:: crs
 
-     # PostGIS SRID 4326 is allocated for WGS84
+     # EPSG 4326 is allocated for WGS84
      crs = QgsCoordinateReferenceSystem("EPSG:4326")
      assert crs.isValid()
 
-  QGIS uses three different IDs for every reference system:
+  QGIS supports different CRS identifiers with the following formats:
 
-  * :attr:`InternalCrsId <qgis.core.QgsCoordinateReferenceSystem.InternalCrsId>` --- ID used in the internal QGIS database.
-  * :attr:`PostgisCrsId <qgis.core.QgsCoordinateReferenceSystem.PostgisCrsId>` --- ID used in PostGIS databases.
-  * :attr:`EpsgCrsId <qgis.core.QgsCoordinateReferenceSystem.EpsgCrsId>` --- ID assigned by the EPSG organization.
+  * ``EPSG:<code>`` --- ID assigned by the EPSG organization - handled with :meth:`createFromOgcWms() <qgis.core.QgsCoordinateReferenceSystem.createFromOgcWms>`
+  * ``POSTGIS:<srid>``--- ID used in PostGIS databases - handled with :meth:`createFromSrid() <qgis.core.QgsCoordinateReferenceSystem.createFromSrid>`
+  * ``INTERNAL:<srsid`` --- ID used in the internal QGIS database - handled with :meth:`createFromSrsId() <qgis.core.QgsCoordinateReferenceSystem.createFromSrsId>`
+  * ``PROJ:<proj>`` - handled with :meth:`createFromProj() <qgis.core.QgsCoordinateReferenceSystem.createFromProj>`
+  * ``WKT:<wkt>`` - handled with :meth:`createFromWkt() <qgis.core.QgsCoordinateReferenceSystem.createFromWkt>`
 
-  If not specified otherwise with the second parameter, PostGIS SRID is used by default.
+If no prefix is specified, WKT definition is assumed.
 
 * specify CRS by its well-known text (WKT)
 
@@ -123,7 +125,8 @@ to do also inverse transformation.
 
    crsSrc = QgsCoordinateReferenceSystem("EPSG:4326")    # WGS 84
    crsDest = QgsCoordinateReferenceSystem("EPSG:32633")  # WGS 84 / UTM zone 33N
-   xform = QgsCoordinateTransform(crsSrc, crsDest, QgsProject.instance())
+   transformContext = QgsProject.instance().transformContext()
+   xform = QgsCoordinateTransform(crsSrc, crsDest, transformContext)
 
    # forward transformation: src -> dest
    pt1 = xform.transform(QgsPointXY(18,5))
