@@ -239,8 +239,13 @@ only two parameters to define a user CRS:
 To create a new CRS, click the |signPlus| :sup:`Add new CRS` button and
 enter a descriptive name and the CRS parameters.
 
+<<<<<<< HEAD
 Note that the :guilabel:`Parameters` must begin with a ``+proj=`` block,
 to represent the new coordinate reference system.
+=======
+Click **[Validate]** to test whether the CRS definition is an acceptable
+projection definition.
+>>>>>>> 338ea53b6... Typo corrected (#5159)
 
 You can test your CRS parameters to see if they give sane results. To do this,
 enter known WGS 84 latitude and longitude values in :guilabel:`North` and
