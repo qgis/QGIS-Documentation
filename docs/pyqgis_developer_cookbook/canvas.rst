@@ -3,6 +3,35 @@
 .. highlight:: python
    :linenothreshold: 5
 
+
+.. testsetup:: canvas
+
+    iface = start_qgis()
+
+    from qgis.PyQt.QtGui import (
+        QColor,
+    )
+
+    from qgis.PyQt.QtCore import Qt, QRectF
+
+    from qgis.core import (
+        QgsVectorLayer,
+        QgsPoint,
+        QgsPointXY,
+        QgsProject,
+        QgsGeometry,
+        QgsMapRendererJob,
+    )
+
+    from qgis.gui import (
+        QgsMapCanvas,
+        QgsVertexMarker,
+        QgsMapCanvasItem,
+        QgsRubberBand,
+    )
+
+
+
 .. _canvas:
 
 ********************

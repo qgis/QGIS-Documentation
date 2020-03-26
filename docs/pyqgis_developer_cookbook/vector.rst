@@ -3,6 +3,46 @@
 .. highlight:: python
    :linenothreshold: 5
 
+.. testsetup:: vectors
+
+    from qgis.core import (
+      QgsApplication,
+      QgsDataSourceUri,
+      QgsCategorizedSymbolRenderer,
+      QgsClassificationRange,
+      QgsPointXY,
+      QgsProject,
+      QgsExpression,
+      QgsField,
+      QgsFields,
+      QgsFeature,
+      QgsFeatureRequest,
+      QgsFeatureRenderer,
+      QgsGeometry,
+      QgsGraduatedSymbolRenderer,
+      QgsMarkerSymbol,
+      QgsMessageLog,
+      QgsRectangle,
+      QgsRendererCategory,
+      QgsRendererRange,
+      QgsSymbol,
+      QgsVectorDataProvider,
+      QgsVectorLayer,
+      QgsVectorFileWriter,
+      QgsWkbTypes,
+      QgsSpatialIndex,
+    )
+
+    from qgis.core.additions.edit import edit
+
+    from qgis.PyQt.QtGui import (
+        QColor,
+    )
+
+    iface = start_qgis()
+
+    problem_occurred = False
+
 *******************
 Using Vector Layers
 *******************
@@ -461,10 +501,6 @@ have the changes stored immediately, then you will have easier work by
 
 Here is how you can use the undo functionality:
 
-.. testsetup:: vectors
-
-    problem_occurred = False
-
 .. testcode:: vectors
 
   layer.beginEditCommand("Feature triangulation")
@@ -572,7 +608,7 @@ create them easily. This is what you have to do:
 
   .. testcode:: vectors
 
-     index.insertFeature(feat)
+     index.addFeature(feat)
 
 * alternatively, you can load all features of a layer at once using bulk loading
 
@@ -619,44 +655,62 @@ From an instance of :class:`QgsVectorFileWriter <qgis.core.QgsVectorFileWriter>`
 
 .. testcode:: vectors
 
+  # SaveVectorOptions contains many settings for the writer process
+  save_options = QgsVectorFileWriter.SaveVectorOptions()
+  transform_context = QgsProject.instance().transformContext()
   # Write to a GeoPackage (default)
-  error = QgsVectorFileWriter.writeAsVectorFormat(layer,
-                                                  "/path/to/folder/my_data",
-                                                  "")
+  error = QgsVectorFileWriter.writeAsVectorFormatV2(layer,
+                                                  "testdata/my_new_file.gpkg",
+                                                  transform_context,
+                                                  save_options)
   if error[0] == QgsVectorFileWriter.NoError:
       print("success!")
+  else:
+    print(error)
+
+.. testoutput:: vectors
+    :hide:
+
+    success!
 
 .. testcode:: vectors
 
   # Write to an ESRI Shapefile format dataset using UTF-8 text encoding
-  error = QgsVectorFileWriter.writeAsVectorFormat(layer,
-                                                  "/path/to/folder/my_esridata",
-                                                  "UTF-8",
-                                                  driverName="ESRI Shapefile")
+  save_options = QgsVectorFileWriter.SaveVectorOptions()
+  save_options.driverName = "ESRI Shapefile"
+  save_options.fileEncoding = "UTF-8"
+  transform_context = QgsProject.instance().transformContext()
+  error = QgsVectorFileWriter.writeAsVectorFormatV2(layer,
+                                                  "testdata/my_new_shapefile",
+                                                  transform_context,
+                                                  save_options)
   if error[0] == QgsVectorFileWriter.NoError:
       print("success again!")
+  else:
+    print(error)
 
-The third (mandatory) parameter specifies output text encoding.
-Only some drivers need this for correct operation - Shapefile is one of them
-(other drivers will ignore this parameter).
-Specifying the correct encoding is important if you are using international
-(non US-ASCII) characters.
+.. testoutput:: vectors
+    :hide:
+
+    success again!
 
 .. Cannot CI test this snippet because OGR driver for 'FileGDB' not found
 
 .. code-block:: python
 
   # Write to an ESRI GDB file
-  opts = QgsVectorFileWriter.SaveVectorOptions()
-  opts.driverName = "FileGDB"
+  save_options = QgsVectorFileWriter.SaveVectorOptions()
+  save_options.driverName = "FileGDB"
   # if no geometry
-  opts.overrideGeometryType = QgsWkbTypes.Unknown
-  opts.actionOnExistingFile = QgsVectorFileWriter.CreateOrOverwriteLayer
-  opts.layerName = 'my_new_layer_name'
+  save_options.overrideGeometryType = QgsWkbTypes.Unknown
+  save_options.actionOnExistingFile = QgsVectorFileWriter.CreateOrOverwriteLayer
+  save_options.layerName = 'my_new_layer_name'
+  transform_context = QgsProject.instance().transformContext()
   gdb_path = "testdata/my_example.gdb"
-  error = QgsVectorFileWriter.writeAsVectorFormat(layer=vlayer,
-                                                  fileName=gdb_path,
-                                                  options=opts)
+  error = QgsVectorFileWriter.writeAsVectorFormatV2(layer,
+                                                  gdb_path,
+                                                  transform_context,
+                                                  save_options)
   if error[0] == QgsVectorFileWriter.NoError:
     print("success!")
   else:
@@ -666,11 +720,6 @@ You can also convert fields to make them compatible with different formats by
 using the  :class:`FieldValueConverter <qgis.core.QgsVectorFileWriter.FieldValueConverter>`.
 For example, to convert array variable types (e.g. in Postgres) to a text type,
 you can do the following:
-
-
-.. testsetup:: vectors
-
-    opts = QgsVectorFileWriter.SaveVectorOptions()
 
 .. testcode:: vectors
 
@@ -701,7 +750,7 @@ you can do the following:
         return self.layer.fields()[idx]
 
   converter = ESRIValueConverter(vlayer, LIST_FIELD_NAME)
-  #opts is a QgsVectorFileWriter.SaveVectorOptions as above
+  opts = QgsVectorFileWriter.SaveVectorOptions()
   opts.fieldValueConverter = converter
 
 A destination CRS may also be specified --- if a valid instance of
@@ -734,17 +783,31 @@ Directly from features
   """ create an instance of vector file writer, which will create the vector file.
   Arguments:
   1. path to new file (will fail if exists already)
-  2. encoding of the attributes
-  3. field map
-  4. geometry type - from WKBTYPE enum
-  5. layer's spatial reference (instance of
-     QgsCoordinateReferenceSystem) - optional
-  6. driver name for the output file """
+  2. field map
+  3. geometry type - from WKBTYPE enum
+  4. layer's spatial reference (instance of
+     QgsCoordinateReferenceSystem)
+  5. coordinate transform context
+  6. save options (driver name for the output file, encoding etc.)
+  """
 
-  writer = QgsVectorFileWriter("my_shapes.shp", "UTF-8", fields, QgsWkbTypes.Point, driverName="ESRI Shapefile")
+  crs = QgsProject.instance().crs()
+  transform_context = QgsProject.instance().transformContext()
+  save_options = QgsVectorFileWriter.SaveVectorOptions()
+  save_options.driverName = "ESRI Shapefile"
+  save_options.fileEncoding = "UTF-8"
+
+  writer = QgsVectorFileWriter.create(
+    "testdata/my_new_shapefile.shp",
+    fields,
+    QgsWkbTypes.Point,
+    crs,
+    transform_context,
+    save_options
+  )
 
   if writer.hasError() != QgsVectorFileWriter.NoError:
-      print("Error when creating shapefile: ",  w.errorMessage())
+      print("Error when creating shapefile: ",  writer.errorMessage())
 
   # add a feature
   fet = QgsFeature()
@@ -1009,7 +1072,7 @@ When using a categorized renderer, you can query and set the attribute that is u
 
 To get a list of categories
 
-.. testsetup:: vectors
+.. testcode:: vectors
 
     categorized_renderer = QgsCategorizedSymbolRenderer()
     # Add a few categories
@@ -1017,8 +1080,6 @@ To get a list of categories
     cat2 = QgsRendererCategory('2', QgsMarkerSymbol(), 'category 2')
     categorized_renderer.addCategory(cat1)
     categorized_renderer.addCategory(cat2)
-
-.. testcode:: vectors
 
     for cat in categorized_renderer.categories():
         print("{}: {} :: {}".format(cat.value(), cat.label(), cat.symbol()))
@@ -1048,14 +1109,13 @@ values and thus can be used only with numerical attributes.
 
 To find out more about ranges used in the renderer
 
-.. testsetup:: vectors
-
-    graduated_renderer = QgsGraduatedSymbolRenderer()
-    # Add a few categories
-    graduated_renderer.addClassRange(QgsRendererRange(QgsClassificationRange('class 0-100', 0, 100), QgsMarkerSymbol()))
-    graduated_renderer.addClassRange(QgsRendererRange(QgsClassificationRange('class 101-200', 101, 200), QgsMarkerSymbol()))
 
 .. testcode:: vectors
+
+  graduated_renderer = QgsGraduatedSymbolRenderer()
+  # Add a few categories
+  graduated_renderer.addClassRange(QgsRendererRange(QgsClassificationRange('class 0-100', 0, 100), QgsMarkerSymbol()))
+  graduated_renderer.addClassRange(QgsRendererRange(QgsClassificationRange('class 101-200', 101, 200), QgsMarkerSymbol()))
 
   for ran in graduated_renderer.ranges():
       print("{} - {}: {} {}".format(
@@ -1113,7 +1173,8 @@ arrangement)
   myRange2 = QgsRendererRange(myMin, myMax, mySymbol2, myLabel)
   myRangeList.append(myRange2)
   myRenderer = QgsGraduatedSymbolRenderer('', myRangeList)
-  myRenderer.setMode(QgsGraduatedSymbolRenderer.EqualInterval)
+  myClassificationMethod = QgsApplication.classificationMethodRegistry().method("EqualInterval")
+  myRenderer.setClassificationMethod(myClassificationMethod)
   myRenderer.setClassAttribute(myTargetField)
 
   myVectorLayer.setRenderer(myRenderer)
@@ -1141,12 +1202,9 @@ marker, line or fill symbol. There is a :meth:`dump <qgis.core.QgsSymbol.dump>`
 method which returns a brief description of the symbol. To get a list of symbol
 layers:
 
-.. testsetup:: vectors
-
-    marker_symbol = QgsMarkerSymbol()
-
 .. testcode:: vectors
 
+  marker_symbol = QgsMarkerSymbol()
   for i in range(marker_symbol.symbolLayerCount()):
       lyr = marker_symbol.symbolLayer(i)
       print("{}: {}".format(i, lyr.layerType()))

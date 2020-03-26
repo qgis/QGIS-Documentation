@@ -3,6 +3,18 @@
 .. highlight:: python
    :linenothreshold: 5
 
+
+.. testsetup:: network_analysis
+
+    from qgis.core import (
+      QgsVectorLayer,
+      QgsPointXY,
+    )
+
+    iface = start_qgis()
+
+    vectorLayer = QgsVectorLayer('testdata/network.gpkg|layername=network_lines', 'lines')
+
 ************************
 Network analysis library
 ************************
@@ -81,9 +93,6 @@ First of all, to use this library we should import the analysis module
 
 Then some examples for creating a director
 
-.. testsetup:: network_analysis
-
-    vectorLayer = QgsVectorLayer('testdata/network.gpkg|layername=network_lines', 'lines')
 
 .. testcode:: network_analysis
 

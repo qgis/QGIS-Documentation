@@ -32,7 +32,7 @@ class. Instances of this class can be created in several different ways:
   .. testcode:: crs
 
      # PostGIS SRID 4326 is allocated for WGS84
-     crs = QgsCoordinateReferenceSystem(4326, QgsCoordinateReferenceSystem.PostgisCrsId)
+     crs = QgsCoordinateReferenceSystem("EPSG:4326")
      assert crs.isValid()
 
   QGIS uses three different IDs for every reference system:
@@ -60,7 +60,7 @@ class. Instances of this class can be created in several different ways:
   .. testcode:: crs
 
      crs = QgsCoordinateReferenceSystem()
-     crs.createFromProj4("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs")
+     crs.createFromProj("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs")
      assert crs.isValid()
 
 It's wise to check whether creation (i.e. lookup in the database) of the CRS
@@ -79,14 +79,14 @@ Accessing spatial reference system information:
 
 .. testcode:: crs
 
-   crs = QgsCoordinateReferenceSystem(4326)
+   crs = QgsCoordinateReferenceSystem("EPSG:4326")
 
    print("QGIS CRS ID:", crs.srsid())
    print("PostGIS SRID:", crs.postgisSrid())
    print("Description:", crs.description())
    print("Projection Acronym:", crs.projectionAcronym())
    print("Ellipsoid Acronym:", crs.ellipsoidAcronym())
-   print("Proj String:", crs.toProj4())
+   print("Proj String:", crs.toProj())
    # check whether it's geographic or projected coordinate system
    print("Is geographic:", crs.isGeographic())
    # check type of map units in this CRS (values defined in QGis::units enum)
@@ -121,8 +121,8 @@ to do also inverse transformation.
 
 .. testcode:: crs
 
-   crsSrc = QgsCoordinateReferenceSystem(4326)    # WGS 84
-   crsDest = QgsCoordinateReferenceSystem(32633)  # WGS 84 / UTM zone 33N
+   crsSrc = QgsCoordinateReferenceSystem("EPSG:4326")    # WGS 84
+   crsDest = QgsCoordinateReferenceSystem("EPSG:32633")  # WGS 84 / UTM zone 33N
    xform = QgsCoordinateTransform(crsSrc, crsDest, QgsProject.instance())
 
    # forward transformation: src -> dest

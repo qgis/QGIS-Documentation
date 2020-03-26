@@ -5,6 +5,30 @@
 
 .. _geometry:
 
+
+.. testsetup:: geometry
+
+    from qgis.core import (
+      QgsGeometry,
+      QgsPoint,
+      QgsPointXY,
+      QgsWkbTypes,
+      QgsProject,
+      QgsFeatureRequest,
+      QgsVectorLayer,
+      QgsDistanceArea,
+      QgsUnitTypes,
+    )
+
+    iface = start_qgis()
+
+    # Load the countries layer
+    if not QgsProject.instance().mapLayersByName("countries"):
+        vlayer = QgsVectorLayer("/usr/share/qgis/resources/data/world_map.gpkg|layerName=countries", "countries", "ogr")
+        assert vlayer.isValid()
+        QgsProject.instance().addMapLayers([vlayer])
+
+
 *****************
 Geometry Handling
 *****************
@@ -24,7 +48,9 @@ The code snippets on this page need the following imports if you're outside the 
       QgsWkbTypes,
       QgsProject,
       QgsFeatureRequest,
-      QgsDistanceArea
+      QgsVectorLayer,
+      QgsDistanceArea,
+      QgsUnitTypes,
     )
 
 Points, linestrings and polygons that represent a spatial feature are commonly
@@ -212,14 +238,6 @@ geometries. The below code will compute and print the area and perimeter of
 each country in the ``countries`` layer within our tutorial QGIS project.
 
 The following code assumes ``layer`` is a :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` object that has Polygon feature type.
-
-.. testsetup:: geometry
-
-    # Load the countries layer
-    if not QgsProject.instance().mapLayersByName("countries"):
-        vlayer = QgsVectorLayer("/usr/share/qgis/resources/data/world_map.gpkg|layerName=countries", "countries", "ogr")
-        assert vlayer.isValid()
-        QgsProject.instance().addMapLayers([vlayer])
 
 
 .. testcode:: geometry

@@ -5,9 +5,38 @@
 
 .. _Authentication_Infrastructure:
 
+
+.. testsetup:: auth
+
+    from qgis.core import (
+      QgsApplication,
+      QgsRasterLayer,
+      QgsAuthMethodConfig,
+      QgsDataSourceUri,
+      QgsPkiBundle,
+      QgsMessageLog,
+    )
+
+    from qgis.gui import (
+        QgsAuthAuthoritiesEditor,
+        QgsAuthConfigEditor,
+        QgsAuthConfigSelect,
+        QgsAuthSettingsWidget,
+    )
+
+    from qgis.PyQt.QtWidgets import (
+        QWidget,
+    )
+
+    from qgis.PyQt.QtNetwork import QSslCertificate
+
+    iface = start_qgis()
+
+
 *****************************
 Authentication infrastructure
 *****************************
+
 .. contents::
    :local:
 

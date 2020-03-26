@@ -5,6 +5,20 @@
    :linenothreshold: 5
 
 
+.. testsetup:: loadlayer
+
+    from qgis.core import (
+        QgsDataProvider,
+        QgsProject,
+        QgsRasterLayer,
+        QgsVectorLayer,
+        QgsApplication,
+        QgsDataSourceUri,
+        QgsLayerTreeLayer,
+    )
+
+    iface = start_qgis()
+
 **************
 Loading Layers
 **************
@@ -118,7 +132,10 @@ providers:
     uri.setConnection("localhost", "5432", "dbname", "johny", "xxx")
     # set database schema, table name, geometry column and optionally
     # subset (WHERE clause)
-    uri.setDataSource("public", "roads", "the_geom", "cityid = 2643")
+    provider_options = QgsDataProvider.ProviderOptions()
+    # Use project's transform context
+    provider_options.transformContext = QgsProject.instance().transformContext()
+    uri.setDataSource("public", "roads", "the_geom", "cityid = 2643", provider_options)
 
     vlayer = QgsVectorLayer(uri.uri(False), "layer name you like", "postgres")
 
@@ -223,7 +240,10 @@ providers:
    .. testcode:: loadlayer
 
       uri = "https://demo.geo-solutions.it/geoserver/ows?service=WFS&request=GetFature&typename=topp:tasmania_water_bodies"
-      vlayer.setDataSource(uri, "layer name you like", "WFS")
+      provider_options = QgsDataProvider.ProviderOptions()
+      # Use project's transform context
+      provider_options.transformContext = QgsProject.instance().transformContext()
+      vlayer.setDataSource(uri, "layer name you like", "WFS", provider_options)
 
 
 .. index::
