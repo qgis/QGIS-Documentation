@@ -1735,6 +1735,8 @@ without needing to replace the existing ones.
 
 The equivalent environment variable is ``QGIS_OPENCL_PROGRAM_FOLDER``.
 
+.. _deploying_organization:
+
 Deploying QGIS within an organization
 -------------------------------------
 
