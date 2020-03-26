@@ -5,6 +5,23 @@
 .. highlight:: python
    :linenothreshold: 5
 
+.. testsetup:: server
+
+    from qgis.core import (
+        QgsProject,
+        QgsRasterLayer,
+        QgsVectorLayer,
+        QgsApplication,
+        QgsDataSourceUri,
+        QgsLayerTreeLayer,
+    )
+
+    from qgis.server import (
+        QgsServerFilter,
+        QgsAccessControlFilter,
+        QgsServerCacheFilter,
+    )
+
 .. _server_plugins:
 
 ****************************
@@ -14,6 +31,15 @@ QGIS Server and Python
 Introduction
 ============
 
+QGIS Server is three different things:
+
+1. QGIS Server library: a library that provides an API for creating OGC web services
+2. QGIS Server FCGI: a FCGI binary application :file:`qgis_maserv.fcgi` that together with a web server implements a set of OCG services (WMS, WFS, WCS etc.) and OGC APIs (WFS3/OAPIF)
+3. QGIS Development Server: a development server binary application :file:`qgis_mapserver` that implements a set of OCG services (WMS, WFS, WCS etc.) and OGC APIs (WFS3/OAPIF)
+
+This chapter of the cookbook focuses on the first topic and by explaining the usage of QGIS Server API
+it shows how it is possible to use Python to extend, enhance or customize the server behavior or how to
+use the QGIS Server API to embed QGIS server into another application.
 
 There a few different ways you can alter the behavior of QGIS Server or extend its
 capabilities to offer new custom services or APIs, these are the main scenarios you
@@ -26,15 +52,103 @@ may face:
 * OGC APIs |rarr| Add a new *OGC API*
 
 Embeding and standalone applications require using the QGIS Server Python API directly from
-another Python script or application while the remaining options are better suited when
-you want to add custom features to a standard QGIS Server application, in this case you'll
-need to write a Python plugin for the server and register your custom filters, services or APIs.
+another Python script or application while the remaining options are better suited for when
+you want to add custom features to a standard QGIS Server application: in this case you'll
+need to write a Python plugin for the server application and register your custom filters,
+services or APIs.
+
+Server API basics
+=================
+
+The fundamental classes involved in a typical QGIS Server application are:
+
++ :class:`QgsServer <qgis.server.QgsServer>` the server instance (typically a single instance for the whole application life)
++ :class:`QgsServerRequest <qgis.server.QgsServerRequest>` the request object (typically recreated on each request)
++ :class:`QgsServerResponse <qgis.server.QgsServerResponse>` the response object (typically recreated on each request)
++ :meth:`QgsServer.handleRequest(request, response) <qgis.server.QgsServer.handleRequest>` processes the request and populates the response
+
+
+The QGIS Server FCGI or development server workflow can be summarized as follows:
+
+.. code-block:: text
+
+    initialize the QgsApplication
+    create the QgsServer
+    the main server loop waits forever for client requests:
+        for each incoming request:
+            create a QgsServerRequest request
+            create a QgsServerResponse response
+            call QgsServer.handleRequest(request, response)
+                filter plugins may be executed
+            send the output to the client
+
+
+Inside the :meth:`QgsServer.handleRequest(request, response) <qgis.server.QgsServer.handleRequest>` method
+the filter plugins callbacks are called and :class:`QgsServerRequest <qgis.server.QgsServerRequest>` and
+:class:`QgsServerResponse <qgis.server.QgsServerResponse>` are made available to the plugins through
+the :class:`QgsServerInterface <qgis.server.QgsServerInterface>`.
+
+.. warning::
+
+    QGIS server classes are not thread safe, you should always use a multiprocessing
+    model or containers when building scalable applications based on QGIS Server API.
+
+
+Standalone or embedding
+==================================
+
+For standalone server applications or embedding, you will need
+to use the above mentioned server classes directly, wrapping them up
+into a web server implementation that manages all the HTTP protocol interactions
+with the client.
+
+
+A minimal example of the QGIS Server API usage (without the HTTP part) follows:
+
+.. this snippet crashes the test runner in the Qt internal
+.. method QCoreApplicationPrivate::processCommandLineArguments()
+
+.. code-block:: python
+
+    from qgis.core import QgsApplication
+    from qgis.server import *
+    app = QgsApplication([], False)
+
+    # Create the server instance, it may be a single one that
+    # is reused on multiple requests
+    server = QgsServer()
+
+    # Create the request by specifying the full URL and an optional body
+    # (for example for POST requests)
+    request = QgsBufferServerRequest(
+        'http://localhost:8081/?MAP=/qgis-server/projects/helloworld.qgs' +
+        '&SERVICE=WMS&REQUEST=GetCapabilities')
+
+    # Create a response objects
+    response = QgsBufferServerResponse()
+
+    # Handle the request
+    server.handleRequest(request, response)
+
+    print(response.headers())
+    print(response.body().data().decode('utf8'))
+
+    app.exitQgis()
+
+
+Here is a complete standalone application example developed for the continuous integrations
+testing on QGIS source code repository, it showcases a wide set of different plugin filters
+and authentication schemes (not mean for production because they were developed for testing
+purposes only but still interesting for learning):
+
+https://github.com/qgis/QGIS/blob/master/tests/src/python/qgis_wrapped_server.py
+
 
 
 Server plugins
 ==============
 
-Server python plugins are loaded once when the QGIS Server FCGI application starts
+Server python plugins are loaded once when the QGIS Server application starts
 and can be used to register filters, services or APIs.
 
 The structure of a server plugin is very similar to their desktop counterpart,
@@ -648,13 +762,13 @@ Custom APIs
 ---------------------
 
 In QGIS Server, core OGC APIs such OAPIF (aka WFS3) are implemented as collections of
-subclasses of :class:`QgsServerOgcApiHandler <qgis.server.QgsServerOgcApiHandler>`\s that
+:class:`QgsServerOgcApiHandler <qgis.server.QgsServerOgcApiHandler>` subclasses that
 are registered to an instance of :class:`QgsServerOgcApi <qgis.server.QgsServerOgcApi>`
 (or it's parent class :class:`QgsServerApi <qgis.server.QgsServerApi>`).
 
 To implemented a new API that will be executed when the url path matches
-matches the service name, you can implemented your own :class:`QgsServerOgcApiHandler <qgis.server.QgsServerOgcApiHandler>`
-add them to an instance of  :class:`QgsServerOgcApi <qgis.server.QgsServerOgcApi>` and register
+a certain URL, you can implemented your own :class:`QgsServerOgcApiHandler <qgis.server.QgsServerOgcApiHandler>`
+instances, add them to an :class:`QgsServerOgcApi <qgis.server.QgsServerOgcApi>` and register
 the API on the :meth:`serviceRegistry <qgis.server.QgsServerInterface.serviceRegistry>` by
 calling its :meth:`registerApi(api) <qgis.server.QgsServiceRegistry.registerApi>`.
 
