@@ -273,7 +273,7 @@ only two parameters to define a user CRS:
 To create a new CRS, click the |signPlus| :sup:`Add new CRS` button,
 enter a descriptive name, select the format, and the CRS parameters.
 
-Click **[Validade]** to test whether the CRS definition is an acceptable
+Click **[Validate]** to test whether the CRS definition is an acceptable
 projection definition.
 
 You can test your CRS parameters to see if they give sane results. To do this,
