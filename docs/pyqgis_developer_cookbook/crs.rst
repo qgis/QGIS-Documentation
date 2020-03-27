@@ -37,7 +37,7 @@ class. Instances of this class can be created in several different ways:
 
   QGIS supports different CRS identifiers with the following formats:
 
-  * ``EPSG:<code>`` --- ID assigned by the EPSG organization - handled with :meth:`createFromOgcWms() <qgis.core.QgsCoordinateReferenceSystem.createFromOgcWms>`
+  * ``EPSG:<code>`` --- ID assigned by the EPSG organization - handled with :meth:`createFromOgcWms() <qgis.core.QgsCoordinateReferenceSystem.createFromOgcWmsCrs>`
   * ``POSTGIS:<srid>``--- ID used in PostGIS databases - handled with :meth:`createFromSrid() <qgis.core.QgsCoordinateReferenceSystem.createFromSrid>`
   * ``INTERNAL:<srsid`` --- ID used in the internal QGIS database - handled with :meth:`createFromSrsId() <qgis.core.QgsCoordinateReferenceSystem.createFromSrsId>`
   * ``PROJ:<proj>`` - handled with :meth:`createFromProj() <qgis.core.QgsCoordinateReferenceSystem.createFromProj>`
