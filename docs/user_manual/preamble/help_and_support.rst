@@ -94,7 +94,7 @@ BugTracker
 While the qgis-users mailing list is useful for general 'How do I do
 XYZ in QGIS?'-type questions, you may wish to notify us about bugs in
 QGIS. You can submit bug reports using the QGIS bug tracker at
-https://issues.qgis.org/projects/qgis/issues. When creating a new
+https://github.com/qgis/QGIS/issues. When creating a new
 ticket for a bug, please provide an email address where we can contact
 you for additional information.
 
