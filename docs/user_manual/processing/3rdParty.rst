@@ -223,9 +223,9 @@ R scripts
 To enable R in Processing you need to install the
 **Processing R Provider** plugin and configure R for QGIS.
 
-Configuration is done in :menuselection:`Provider-> R` in the
+Configuration is done in :menuselection:`Provider -> R` in the
 :guilabel:`Processing` tab of
-:menuselection:`Settings-> Options`.
+:menuselection:`Settings -> Options`.
 
 Depending on your operating system, you may have to use
 :guilabel:`R folder` to specify where your R binaries are located.
@@ -249,7 +249,7 @@ some example scripts in the :guilabel:`Processing Toolbox`:
   If the package is not installed, R will try to install it (and all
   the packages it depends on) for you, using the
   :guilabel:`Package repository` specified in
-  :menuselection:`Provider-> R` in the Processing options.
+  :menuselection:`Provider -> R` in the Processing options.
   The default is `http://cran.at.r-project.org/`.
   Installing may take some time...
 * :guilabel:`test_sp` can be used to check if the R package ``sp`` is
@@ -305,9 +305,9 @@ Perform the following steps to load and enable them using the
    :guilabel:`Processing Toolbox`, you can try to:
 
    #. Open the Processing settings
-      (:menuselection:`Settings-> Options-> Processing` tab)
+      (:menuselection:`Settings -> Options -> Processing` tab)
 
-   #. Go to :menuselection:`Providers-> R-> R scripts folder`
+   #. Go to :menuselection:`Providers -> R -> R scripts folder`
 
       * On Ubuntu, set the path to (or, better, include in the path):
 
@@ -320,7 +320,7 @@ Perform the following steps to load and enable them using the
 
           C:\Users\<user>\AppData\Roaming\QGIS\QGIS3\profiles\default\resource_sharing\repositories\github.com\qgis\QGIS-Resources\collections\rscripts
 
-      To edit, double-click.  You can then choose to just paste / type
+      To edit, double-click. You can then choose to just paste / type
       the path, or you can navigate to the directory by using the
       :guilabel:`...` button and press the :guilabel:`Add` button in the
       dialog that opens.
