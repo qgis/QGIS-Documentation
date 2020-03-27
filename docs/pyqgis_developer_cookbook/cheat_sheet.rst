@@ -3,6 +3,34 @@
 .. highlight:: python
    :linenothreshold: 5
 
+.. testsetup:: cheat_sheet
+
+    from qgis.PyQt.QtWidgets import (
+        QToolBar,
+    )
+
+    from qgis.PyQt.QtCore import (
+        QRectF,
+    )
+
+    from qgis.core import (
+        QgsProject,
+        QgsLayerTreeModel,
+    )
+
+    from qgis.gui import (
+        QgsLayerTreeView,
+    )
+
+    iface = start_qgis()
+
+    # Mock toolbar
+    toolbar = QToolBar()
+    for i in range(5):
+        toolbar.addAction('action%s' % i)
+    iface.attributesToolBar.return_value = toolbar
+
+
 **********************
 Cheat sheet for PyQGIS
 **********************
@@ -77,12 +105,6 @@ Toolbars
 
 **Remove actions toolbar**
 
-.. testsetup:: cheat_sheet
-
-    toolbar = QToolBar()
-    for i in range(5):
-      toolbar.addAction('action%s' % i)
-    iface.attributesToolBar.return_value = toolbar
 
 .. testcode:: cheat_sheet
 
@@ -161,6 +183,10 @@ Layers
 
 .. testcode:: cheat_sheet
 
+    from qgis.core import QgsVectorLayer
+    layer = layer = QgsVectorLayer("Point?crs=EPSG:4326", "layer name you like", "memory")
+    QgsProject.instance().addMapLayer(layer)
+
     layers_names = []
     for layer in QgsProject.instance().mapLayers().values():
         layers_names.append(layer.name())
@@ -237,13 +263,10 @@ Otherwise
 
 **Adding new feature without feature form**
 
-.. testsetup:: cheat_sheet
-
-    from qgis.core import QgsFeature, QgsGeometry, QgsProject
 
 .. testcode:: cheat_sheet
 
-    from qgis.core import QgsPointXY
+    from qgis.core import QgsGeometry, QgsPointXY, QgsFeature
 
     pr = layer.dataProvider()
     feat = QgsFeature()
@@ -304,14 +327,19 @@ Otherwise
 
 **Move geometry**
 
-.. testsetup:: cheat_sheet
-
-    poly = QgsFeature()
 
 .. testcode:: cheat_sheet
 
-    geom.translate(100, 100)
+    from qgis.core import QgsFeature, QgsGeometry
+    poly = QgsFeature()
+    geom = QgsGeometry.fromWkt("POINT(7 45)")
+    geom.translate(1, 1)
     poly.setGeometry(geom)
+    print(poly.geometry())
+
+.. testoutput:: cheat_sheet
+
+    <QgsGeometry: Point (8 46)>
 
 **Set the CRS**
 
@@ -367,7 +395,7 @@ Otherwise
 .. testcode:: cheat_sheet
 
     fileName = "testdata/sublayers.gpkg"
-    layer = QgsVectorLayer(fileName,"test","ogr")
+    layer = QgsVectorLayer(fileName, "test", "ogr")
     subLayers = layer.dataProvider().subLayers()
 
     for subLayer in subLayers:
@@ -392,10 +420,6 @@ Otherwise
     loadXYZ(urlWithParams, 'OpenStreetMap')
 
 **Remove all layers**
-
-.. testsetup:: cheat_sheet
-
-    from qgis.core import QgsProject
 
 .. testcode:: cheat_sheet
 
@@ -431,20 +455,17 @@ Advanced TOC
 
 **Root node**
 
-.. testsetup:: cheat_sheet
+.. testcode:: cheat_sheet
 
     from qgis.core import QgsVectorLayer, QgsProject, QgsLayerTreeLayer
 
+    root = QgsProject.instance().layerTreeRoot()
+    node_group = root.addGroup("My Group")
+
     layer = QgsVectorLayer("Point?crs=EPSG:4326", "layer name you like", "memory")
-    QgsProject.instance().addMapLayer(layer)
+    QgsProject.instance().addMapLayer(layer, False)
 
-    root = QgsProject.instance().layerTreeRoot()
-    node_group = root.addGroup("My Group")
-
-.. testcode:: cheat_sheet
-
-    root = QgsProject.instance().layerTreeRoot()
-    node_group = root.addGroup("My Group")
+    node_group.addLayer(layer)
 
     print(root)
     print(root.children())
@@ -468,7 +489,6 @@ Advanced TOC
     print (isinstance(child0.parent(), QgsLayerTree))
 
 .. testoutput:: cheat_sheet
-   :hide:
 
    My Group
    <class 'qgis._core.QgsLayerTreeGroup'>
@@ -499,9 +519,9 @@ Advanced TOC
          print ('- layer: ' + child.name())
 
 .. testoutput:: cheat_sheet
-   :hide:
 
-   - group: My Group
+    - group: My Group
+      - layer: layer name you like
 
 
 **Find group by name**
@@ -521,9 +541,8 @@ Advanced TOC
     print(root.findLayer(layer.id()))
 
 .. testoutput:: cheat_sheet
-    :hide:
 
-    None
+    <qgis._core.QgsLayerTreeLayer object at 0x7f56087af288>
 
 **Add layer**
 
@@ -531,9 +550,11 @@ Advanced TOC
 
     from qgis.core import QgsVectorLayer, QgsProject
 
-    layer1 = QgsVectorLayer("Point?crs=EPSG:4326", "layer name you like", "memory")
+    layer1 = QgsVectorLayer("Point?crs=EPSG:4326", "layer name you like 2", "memory")
     QgsProject.instance().addMapLayer(layer1, False)
     node_layer1 = root.addLayer(layer1)
+    # Remove it
+    QgsProject.instance().removeMapLayer(layer1)
 
 **Add group**
 
@@ -564,8 +585,7 @@ Advanced TOC
     parent.removeChildNode(myLayer)
 
 
-**Load layer in a specific group**
-
+**Move loaded layer to a specific group**
 
 .. testcode:: cheat_sheet
 
@@ -573,8 +593,10 @@ Advanced TOC
 
     root = QgsProject.instance().layerTreeRoot()
     myGroup = root.findGroup("My Group")
-    myLayer = QgsLayerTreeLayer(layer)
+    myOriginalLayer = root.findLayer(layer.id())
+    myLayer = myOriginalLayer.clone()
     myGroup.insertChildNode(0, myLayer)
+    parent.removeChildNode(myOriginalLayer)
 
 **Changing visibility**
 
@@ -591,10 +613,9 @@ Advanced TOC
         myGroup = QgsProject.instance().layerTreeRoot().findGroup( groupName )
         return myGroup in iface.layerTreeView().selectedNodes()
 
-    print (isMyGroupSelected( 'my group name' ))
+    print(isMyGroupSelected( 'my group name' ))
 
 .. testoutput:: cheat_sheet
-    :hide:
 
     False
 
@@ -603,7 +624,7 @@ Advanced TOC
 
 .. testcode:: cheat_sheet
 
-    print (myGroup.isExpanded())
+    print(myGroup.isExpanded())
     myGroup.setExpanded(False)
 
 .. testoutput:: cheat_sheet
@@ -622,7 +643,7 @@ Advanced TOC
     root = QgsProject.instance().layerTreeRoot()
 
     layer = QgsProject.instance().mapLayersByName('layer name you like')[0]
-    node=root.findLayer( layer.id())
+    node = root.findLayer( layer.id())
 
     index = model.node2index( node )
     ltv.setRowHidden( index.row(), index.parent(), True )
@@ -652,7 +673,7 @@ Advanced TOC
 
 .. testcode:: cheat_sheet
 
-    root.removeLayer(layer1)
+    root.removeLayer(layer)
 
 **Remove group**
 
@@ -716,17 +737,13 @@ Processing algorithms
 Random selection
 
 .. testcode:: cheat_sheet
-    :hide:
-
-    # Note: we assert and code-block the next
-    # because of the long output (that may vary)
-    from qgis import processing
-    assert 'algorithmHelp' in dir(processing)
-
-.. code-block:: python
 
     from qgis import processing
     processing.algorithmHelp("native:buffer")
+
+.. testoutput:: cheat_sheet
+
+    ...
 
 **Run the algorithm**
 
@@ -746,8 +763,6 @@ which is added to the project.
 **How many algorithms are there?**
 
 .. testcode:: cheat_sheet
-
-    from qgis.core import QgsApplication
 
     len(QgsApplication.processingRegistry().algorithms())
 

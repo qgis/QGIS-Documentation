@@ -167,7 +167,7 @@ Building PDF
 You will need to install **texi2pdf** by doing:
 
 .. code-block:: bash
-   
+
   # On Debian based systems
   sudo apt-get install texinfo
   # On Fedora based systems
@@ -215,7 +215,7 @@ There are two scripts available in the repository:
 .. note:: QGIS-Documentation is based on Python 3. Depending on the flavor
  of your OS, you may need to replace ``python`` with ``python3`` in the
  following code samples.
- 
+
 General use:
 
 #. First, install Paver (see https://pypi.org/project/Paver/#files)
@@ -232,10 +232,10 @@ General use:
      python bootstrap.py
 
    .. I'm commenting this yet. easy_install is deprecated and we should not
-      advise its use. 
-      
+      advise its use.
+
       If the script is complaining about easysetup missing:
-    
+
       #. download: http://setuptools.readthedocs.io/en/latest/easy_install.html
       #. and install that first:
 
@@ -255,11 +255,11 @@ General use:
       # on Windows:
       virtualenv\Scripts\activate
       # on Linux:
-      source virtualenv/bin/activate   
+      source virtualenv/bin/activate
 
 #. Run the actual script to build the documentation
    (Make sure that you are in the QGIS-Documentation root folder):
-      
+
    .. code-block:: bash
 
       # english only
@@ -323,37 +323,37 @@ Prerequisites:
 - Virtualenv (https://virtualenv.pypa.io/en/latest/installation/)
 
 #. Create a local copy of **your** QGIS doc repository.
- 
+
    .. code-block:: bash
 
      $ git clone https://github.com/<YourName>/QGIS-Documentation.git
 
-#. Create a virtual environment, e.g., *venv* in the folder just created 
+#. Create a virtual environment, e.g., *venv* in the folder just created
    (*QGIS-Documentation*).
 
    .. code-block:: bash
 
      $ cd QGIS-Documentation
      $ Virtualenv venv
-  
-#. Activate the virtual environment. 
+
+#. Activate the virtual environment.
    On Windows, virtualenv creates a batch file that can be located at:
-   
-   venv\\Scripts\\activate.bat. 
-   
-   Using the Command Prompt just run this script as follows: 
+
+   venv\\Scripts\\activate.bat.
+
+   Using the Command Prompt just run this script as follows:
 
    .. code-block:: bash
 
      $ activate.bat
 
-   This script will modify your shell prompt to indicate which environment is currently active.  
+   This script will modify your shell prompt to indicate which environment is currently active.
 
 #. Install the required packages for locally building the QGIS documentation executing:
 
    .. code-block:: bash
 
-     $ pip install -r REQUIREMENTS.txt . 
+     $ pip install -r REQUIREMENTS.txt .
 
 #. Now you are ready to build the QGIS documentation locally. To do that you run the following sphinx command:
 
@@ -402,7 +402,7 @@ Or you can run target ``doctest`` inside the official *QGIS* docker image:
 Note that only code blocks with directive ``testcode`` are tested and it is possible to run tests setup code
 which does not appear in documentation with directive ``testsetup``, for example:
 
-.. code-block:: py
+.. code-block:: python
 
  .. testsetup::
 
@@ -410,8 +410,8 @@ which does not appear in documentation with directive ``testsetup``, for example
 
  .. testcode::
 
-     # PostGIS SRID 4326 is allocated for WGS84
-     crs = QgsCoordinateReferenceSystem(4326, QgsCoordinateReferenceSystem.PostgisCrsId)
+     # SRID 4326 is allocated for WGS84
+     crs = QgsCoordinateReferenceSystem("EPSG:4326")
      assert crs.isValid()
 
 For more information see *Sphinx* doctest extension documentation:

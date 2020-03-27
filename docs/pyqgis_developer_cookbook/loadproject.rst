@@ -3,6 +3,20 @@
 .. highlight:: python
    :linenothreshold: 5
 
+.. testsetup:: loadproject
+
+    from qgis.core import (
+        QgsProject,
+    )
+
+    from qgis.gui import (
+        QgsLayerTreeMapCanvasBridge,
+    )
+
+    iface = start_qgis()
+
+    canvas = iface.mapCanvas()
+
 ****************
 Loading Projects
 ****************
@@ -59,10 +73,6 @@ return a boolean value that you can use to check if the operation was successful
 
    If you are writing a QGIS standalone application, in order to synchronise the loaded project with
    the canvas you need to instantiate a :class:`QgsLayerTreeMapCanvasBridge <qgis.gui.QgsLayerTreeMapCanvasBridge>` as in the example below:
-
-   .. testsetup:: loadproject
-
-    canvas = iface.mapCanvas()
 
    .. testcode:: loadproject
 

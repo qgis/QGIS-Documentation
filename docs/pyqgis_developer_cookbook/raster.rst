@@ -6,6 +6,32 @@
 .. highlight:: python
    :linenothreshold: 5
 
+.. testsetup:: raster
+
+    from qgis.core import (
+        QgsRasterLayer,
+        QgsProject,
+        QgsPointXY,
+        QgsRaster,
+        QgsRasterShader,
+        QgsColorRampShader,
+        QgsSingleBandPseudoColorRenderer,
+        QgsSingleBandColorDataRenderer,
+        QgsSingleBandGrayRenderer,
+    )
+
+    from qgis.PyQt.QtGui import (
+        QColor,
+    )
+
+    iface = start_qgis()
+
+    rlayer = QgsRasterLayer("GPKG:%s/testdata/sublayers.gpkg:srtm" % os.getcwd(), "srtm")
+    rlayer_multi = QgsRasterLayer("GPKG:%s/testdata/sublayers.gpkg:raster_layer" % os.getcwd(), "multiband")
+    QgsProject.instance().addMapLayers([rlayer, rlayer_multi])
+    assert rlayer.isValid()
+
+
 *********************
  Using Raster Layers
 *********************
@@ -18,9 +44,19 @@ The code snippets on this page needs the following imports if you're outside the
 .. testcode:: raster
 
     from qgis.core import (
-      QgsRasterLayer,
-      QgsColorRampShader,
-      QgsSingleBandPseudoColorRenderer
+        QgsRasterLayer,
+        QgsProject,
+        QgsPointXY,
+        QgsRaster,
+        QgsRasterShader,
+        QgsColorRampShader,
+        QgsSingleBandPseudoColorRenderer,
+        QgsSingleBandColorDataRenderer,
+        QgsSingleBandGrayRenderer,
+    )
+
+    from qgis.PyQt.QtGui import (
+        QColor,
     )
 
 .. index:: Raster layers; Details
@@ -39,13 +75,6 @@ the colors stored in the palette.
 The following code assumes ``rlayer`` is a
 :class:`QgsRasterLayer <qgis.core.QgsRasterLayer>` object.
 
-
-.. testsetup:: raster
-
-    rlayer = QgsRasterLayer("GPKG:%s/testdata/sublayers.gpkg:srtm" % os.getcwd(), "srtm")
-    rlayer_multi = QgsRasterLayer("GPKG:%s/testdata/sublayers.gpkg:raster_layer" % os.getcwd(), "multiband")
-    QgsProject.instance().addMapLayers([rlayer, rlayer_multi])
-    assert rlayer.isValid()
 
 .. testcode:: raster
 

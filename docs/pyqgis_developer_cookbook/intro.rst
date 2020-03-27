@@ -216,7 +216,6 @@ beginning of the script:
 
   # Finally, exitQgis() is called to remove the
   # provider and layer registries from memory
-
   qgs.exitQgis()
 
 First we import the :mod:`qgis.core` module and configure

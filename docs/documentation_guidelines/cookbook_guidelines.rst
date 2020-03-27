@@ -36,14 +36,14 @@ embed it in a ``.. testcode::``. That is, instead of  this::
 
   .. code-block:: python
 
-     crs = QgsCoordinateReferenceSystem(4326, QgsCoordinateReferenceSystem.PostgisCrsId)
+     crs = QgsCoordinateReferenceSystem("EPSG:4326")
      assert crs.isValid()
 
 You now use this::
 
   .. testcode::
 
-     crs = QgsCoordinateReferenceSystem(4326, QgsCoordinateReferenceSystem.PostgisCrsId)
+     crs = QgsCoordinateReferenceSystem("EPSG:4326")
      assert crs.isValid()
 
 After you wrote the example code, you should add some *assertion* that
@@ -65,7 +65,7 @@ to be placed before the ``.. testcode::``::
 
   .. testcode::
 
-     crs = QgsCoordinateReferenceSystem(4326, QgsCoordinateReferenceSystem.PostgisCrsId)
+     crs = QgsCoordinateReferenceSystem("EPSG:4326")
      assert crs.isValid()
 
 If the code snippet doesn't create objects (and therefore you cannot use
@@ -112,7 +112,7 @@ by commas) in the respective directive::
 
   .. testcode:: crs_crsfromID [, morenames]
 
-     crs = QgsCoordinateReferenceSystem(4326, QgsCoordinateReferenceSystem.PostgisCrsId)
+     crs = QgsCoordinateReferenceSystem("EPSG:4326")
      assert crs.isValid()
 
 The ``doctest`` will pick each group snippets and run them independently.

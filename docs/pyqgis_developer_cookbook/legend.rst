@@ -1,5 +1,27 @@
 .. _projectpy:
 
+
+.. highlight:: python
+   :linenothreshold: 5
+
+
+.. testsetup:: legend
+
+    from qgis.core import (
+        QgsProject,
+        QgsVectorLayer,
+    )
+
+    iface = start_qgis()
+
+    # Load the countries layer
+    if not QgsProject.instance().mapLayersByName("countries"):
+        vlayer = QgsVectorLayer("/usr/share/qgis/resources/data/world_map.gpkg|layerName=countries", "countries", "ogr")
+        assert vlayer.isValid()
+        QgsProject.instance().addMapLayers([vlayer])
+
+
+
 *************************************
 Accessing the Table Of Contents (TOC)
 *************************************
@@ -7,15 +29,6 @@ Accessing the Table Of Contents (TOC)
 .. contents::
    :local:
 
-If you’re outside the pyqgis console, the code snippets on this page need the
-following imports:
-
-.. testcode::
-
-   from qgis.core import (QgsProject,
-                          QgsLayerTreeGroup,
-                          QgsLayerTreeLayer,
-                          )
 
 You can use different classes to access all the loaded layers in the TOC and
 use them to retrieve information:
@@ -35,13 +48,6 @@ and use its methods to get the loaded layers.
 The main method is :meth:`mapLayers() <qgis.core.QgsProject.mapLayers>`. It will
 return a dictionary of the loaded layers:
 
-.. testsetup:: legend
-
-    # Load the countries layer
-    if not QgsProject.instance().mapLayersByName("countries"):
-        vlayer = QgsVectorLayer("/usr/share/qgis/resources/data/world_map.gpkg|layerName=countries", "countries", "ogr")
-        assert vlayer.isValid()
-        QgsProject.instance().addMapLayers([vlayer])
 
 .. testcode:: legend
 

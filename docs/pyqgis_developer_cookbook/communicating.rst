@@ -3,6 +3,28 @@
 .. highlight:: python
    :linenothreshold: 5
 
+.. testsetup:: communicating
+
+    from qgis.core import (
+        QgsMessageLog,
+        QgsGeometry,
+    )
+
+    from qgis.gui import (
+        QgsMessageBar,
+    )
+
+    from qgis.PyQt.QtWidgets import (
+        QSizePolicy,
+        QPushButton,
+        QDialog,
+        QGridLayout,
+        QDialogButtonBox,
+    )
+
+    iface = start_qgis()
+
+
 ***************************
 Communicating with the user
 ***************************

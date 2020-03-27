@@ -3,6 +3,23 @@
 .. highlight:: python
    :linenothreshold: 5
 
+
+.. testsetup:: tasks
+
+    from qgis.core import (
+      QgsProcessingContext,
+      QgsTaskManager,
+      QgsTask,
+      QgsProcessingAlgRunnerTask,
+      Qgis,
+      QgsProcessingFeedback,
+      QgsApplication,
+      QgsMessageLog,
+    )
+
+    iface = start_qgis()
+
+
 .. _tasks:
 
 ******************************************
@@ -54,7 +71,7 @@ There are several ways to create a QGIS task:
 
 * Create a task from a processing algorithm
 
-  .. testsetup:: tasks
+  .. testcode:: tasks
 
     params = dict()
     context = QgsProcessingContext()

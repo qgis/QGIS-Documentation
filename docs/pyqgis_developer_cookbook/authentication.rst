@@ -5,9 +5,38 @@
 
 .. _Authentication_Infrastructure:
 
+
+.. testsetup:: auth
+
+    from qgis.core import (
+      QgsApplication,
+      QgsRasterLayer,
+      QgsAuthMethodConfig,
+      QgsDataSourceUri,
+      QgsPkiBundle,
+      QgsMessageLog,
+    )
+
+    from qgis.gui import (
+        QgsAuthAuthoritiesEditor,
+        QgsAuthConfigEditor,
+        QgsAuthConfigSelect,
+        QgsAuthSettingsWidget,
+    )
+
+    from qgis.PyQt.QtWidgets import (
+        QWidget,
+    )
+
+    from qgis.PyQt.QtNetwork import QSslCertificate
+
+    iface = start_qgis()
+
+
 *****************************
 Authentication infrastructure
 *****************************
+
 .. contents::
    :local:
 
@@ -237,8 +266,8 @@ to extract cert/key/CAs from the bundle.
 
 .. _Remove_entry_from_authdb:
 
-Remove entry from authdb
-------------------------
+Remove an entry from authdb
+---------------------------
 We can remove an entry from :term:`Authentication Database` using it's
 ``authcfg`` identifier with the following snippet:
 

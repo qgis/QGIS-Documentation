@@ -3,6 +3,41 @@
 .. highlight:: python
    :linenothreshold: 5
 
+.. testsetup:: composer
+
+    from qgis.core import (
+        QgsGeometry,
+        QgsMapSettings,
+        QgsPrintLayout,
+        QgsMapSettings,
+        QgsMapRendererParallelJob,
+        QgsLayoutItemLabel,
+        QgsLayoutItemLegend,
+        QgsLayoutItemMap,
+        QgsLayoutItemPolygon,
+        QgsLayoutItemScaleBar,
+        QgsLayoutExporter,
+        QgsLayoutItem,
+        QgsLayoutPoint,
+        QgsLayoutSize,
+        QgsUnitTypes,
+        QgsProject,
+        QgsFillSymbol,
+    )
+
+    from qgis.PyQt.QtGui import (
+        QPolygonF,
+        QColor,
+    )
+
+    from qgis.PyQt.QtCore import (
+        QPointF,
+        QRectF,
+        QSize,
+    )
+
+    iface = start_qgis()
+
 .. _layout:
 
 **************************
@@ -63,12 +98,10 @@ If you have more than one layer and they have a different CRS, the simple
 example above will probably not work: to get the right values from the
 extent calculations you have to explicitly set the destination CRS
 
-.. testsetup:: composer
-
-  layers = [iface.activeLayer()]
 
 .. testcode:: composer
 
+  layers = [iface.activeLayer()]
   settings.setLayers(layers)
   settings.setDestinationCrs(layers[0].crs())
 

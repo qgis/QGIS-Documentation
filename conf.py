@@ -237,60 +237,76 @@ import os
 import sys
 import tempfile
 
-from qgis.testing import start_app
-from qgis.testing.mocked import get_iface
-
-def start_qgis():
-    save_stdout = sys.stdout
-    try:
-        with open(os.devnull, 'w') as f:
-            sys.stdout = f
-            start_app()
-    finally:
-        sys.stdout = save_stdout
-    sys.stdout = sys.stderr
-
 # Prepare environment for QgsApplication
 os.environ['QGIS_AUTH_DB_DIR_PATH'] = tempfile.mkdtemp()
 os.environ['QT_QPA_PLATFORM'] = 'offscreen'
 
-# Global imports
-from qgis.core import *
-from qgis.gui import *
-from qgis.analysis import *
-from qgis.server import *
-from qgis.PyQt.QtCore import *
-from qgis.PyQt.QtNetwork import *
-from qgis.PyQt.QtGui import *
-from qgis.PyQt.QtWidgets import *
+from qgis.testing import start_app
+from qgis.testing.mocked import get_iface
 
-# Start QgsApplication
-start_qgis()
+def start_qgis():
 
-# Expose the iface for plugins snippets
-iface = get_iface()
+    save_stdout = sys.stdout
+    try:
+        with open(os.devnull, 'w') as f:
+            sys.stdout = f
+            globals()['QGISAPP'] = start_app()
+    finally:
+        sys.stdout = save_stdout
+    sys.stdout = sys.stderr
 
-# Mock activeLayer()
-iface.activeLayer.return_value = QgsVectorLayer("Point?crs=4326&field=fid:integer&field=name:string", "temporary_points", "memory")
+    from qgis.core import (
+        QgsProject,
+        QgsVectorLayer,
+        QgsFeature,
+        QgsGeometry,
+        QgsApplication,
+        QgsLayerTreeModel
+    )
 
-# Add a feature
-f = QgsFeature(iface.activeLayer().fields())
-f.setAttributes([1, 'First feature'])
-f.setGeometry(QgsGeometry.fromWkt('point( 7 45)'))
-iface.activeLayer().dataProvider().addFeatures([f])
+    from qgis.gui import (
+        QgsLayerTreeView,
+        QgsMessageBar,
+    )
 
-# Mock messageBar
-iface.messageBar.return_value = QgsMessageBar()
+    from qgis.analysis import QgsNativeAlgorithms
 
-# Mock layerTreeView
-layertree_view = QgsLayerTreeView()
-layertree_model = QgsLayerTreeModel(QgsProject.instance().layerTreeRoot())
-layertree_view.setModel(layertree_model)
-iface.layerTreeView.return_value = layertree_view
+    # Expose the iface for plugins snippets
+    iface = get_iface()
 
-# Init processing plugin
-import processing
-QgsApplication.processingRegistry().addProvider(QgsNativeAlgorithms())
+    # Mock activeLayer()
+    iface.activeLayer.return_value = QgsVectorLayer("Point?crs=4326&field=fid:integer&field=name:string", "temporary_points", "memory")
+
+    # Add a feature
+    f = QgsFeature(iface.activeLayer().fields())
+    f.setAttributes([1, 'First feature'])
+    f.setGeometry(QgsGeometry.fromWkt('point( 7 45)'))
+    iface.activeLayer().dataProvider().addFeatures([f])
+
+    # Mock messageBar
+    iface.messageBar.return_value = QgsMessageBar()
+
+    # Mock layerTreeView
+    layertree_view = QgsLayerTreeView()
+    layertree_model = QgsLayerTreeModel(QgsProject.instance().layerTreeRoot())
+    layertree_view.setModel(layertree_model)
+    iface.layerTreeView.return_value = layertree_view
+    iface.layertree_model = layertree_model
+
+    # Init processing plugin
+    import processing
+    QgsApplication.processingRegistry().addProvider(QgsNativeAlgorithms())
+
+    return iface
+
+def dump_tree(root):
+    """Dump the layer tree for testing"""
+
+    def _print_children(parent, indent):
+        print('-' * indent, parent.name(), parent)
+        for c in parent.children():
+            _print_children(c, indent + 1)
+    _print_children(root, 1)
 
 '''
 doctest_test_doctest_blocks = ''
