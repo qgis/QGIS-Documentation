@@ -651,29 +651,17 @@ To access the connection manager, click on the :guilabel:`New` button to display
 The parameters required for a PostGIS connection are exposed below. For the
 other database types, see their differences at :ref:`db_requirements`.
 
-* **Name**: A name for this connection. It can be the same as *Database*.
-* **Service**: Service parameter to be used alternatively to hostname/port (and
+* :guilabel:`Name`: A name for this connection. It can be the same as *Database*.
+* :guilabel:`Service`: Service parameter to be used alternatively to hostname/port (and
   potentially database). This can be defined in :file:`pg_service.conf`.
   Check the :ref:`pg-service-file` section for more details.
-* **Host**: Name of the database host. This must be a resolvable host name
+* :guilabel:`Host`: Name of the database host. This must be a resolvable host name
   such as would be used to open a TCP/IP connection or ping the host. If the
   database is on the same computer as QGIS, simply enter *localhost* here.
-* **Port**: Port number the PostgreSQL database server listens on. The default
+* :guilabel:`Port`: Port number the PostgreSQL database server listens on. The default
   port for PostGIS is ``5432``.
-<<<<<<< HEAD
-* **Database**: Name of the database.
-* **SSL mode**: How the SSL connection will be negotiated with the server. Note
-  that massive speed-ups in PostGIS layer rendering can be achieved by disabling
-  SSL in the connection editor. The following options are available:
-
-  * *Disable*: Only try an unencrypted SSL connection;
-  * *Allow*: Try a non-SSL connection. If that fails, try an SSL connection;
-  * *Prefer* (the default): Try an SSL connection. If that fails, try a
-    non-SSL connection;
-  * *Require*: Only try an SSL connection.
-=======
 * :guilabel:`Database`: Name of the database.
-* :guilabel:`SSL mode`: SSL encryption setup
+* :guilabel:`SSL mode`: SSL encryption setup.
   The following options are available:
 
   * :guilabel:`Prefer` (the default): I don't care about encryption, but I wish to pay
@@ -690,10 +678,9 @@ other database types, see their differences at :ref:`db_requirements`.
     of encryption.
 
 * :guilabel:`Authentication`, basic.
->>>>>>> 6bac893fb... Do not exaggerate the price for SSL (#3840)
 
-* **Username**: User name used to log in to the database.
-* **Password**: Password used with *Username* to connect to the database.
+* :guilabel:`Username`: User name used to log in to the database.
+* :guilabel:`Password`: Password used with *Username* to connect to the database.
 
   You can save any or both of the ``username`` and ``password`` parameters, in
   which case they will be used by default each time you need to connect to this
