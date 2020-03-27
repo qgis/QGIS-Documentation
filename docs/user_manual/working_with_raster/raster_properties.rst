@@ -74,7 +74,7 @@ the selected raster, including:
   Displays the layer's
   :ref:`Coordinate Reference System (CRS) <layer_crs>`.
   You can change the layer's CRS, by selecting a recently used one in
-  the drop-down list or clicking on |setProjection| the
+  the drop-down list or clicking on the |setProjection|
   :sup:`Select CRS` button (see :ref:`crs_selector`).
   Use this process only if the layer CRS is a wrong or not specified.
   If you wish to reproject your data, use a reprojection algorithm
@@ -156,7 +156,7 @@ and 'Clip to min max'.
    If you want to view a single band of a multiband image (for
    example, Red), you might think you would set the Green and Blue
    bands to :guilabel:`Not Set`.
-   But the preferred way of doint this is to set the image type to
+   But the preferred way of doing this is to set the image type to
    :ref:`Singleband gray <singleband_gray>`, and then select Red as
    the :guilabel:`Gray band` to use.
 
@@ -648,7 +648,7 @@ QGIS Server Properties
 
 From the |overlay| :guilabel:`QGIS Server` tab, information can
 be provided for :guilabel:`Description`, :guilabel:`Attribution`,
-:guilabel:`MetadataUrl` and :guilabel:`Properties`.
+:guilabel:`MetadataUrl` and :guilabel:`LegendUrl`.
 
 .. _figure_raster_server:
 
