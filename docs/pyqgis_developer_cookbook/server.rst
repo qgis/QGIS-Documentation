@@ -41,7 +41,7 @@ This chapter of the cookbook focuses on the first topic and by explaining the us
 it shows how it is possible to use Python to extend, enhance or customize the server behavior or how to
 use the QGIS Server API to embed QGIS server into another application.
 
-There aare a few different ways you can alter the behavior of QGIS Server or extend its
+There are a few different ways you can alter the behavior of QGIS Server or extend its
 capabilities to offer new custom services or APIs, these are the main scenarios you
 may face:
 
