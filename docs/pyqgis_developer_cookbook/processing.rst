@@ -8,6 +8,9 @@
 .. testsetup:: processing
 
     iface = start_qgis()
+    import sys
+    sys.path.insert(0, os.path.join(os.getcwd(), 'testdata', 'processing'))
+    from processing_provider.provider import Provider
 
 
 ****************************
@@ -57,25 +60,23 @@ If you want to add your existing plugin to Processing, you need to add some code
 
    .. testcode:: processing
 
-    from qgis.core import QgsApplication
-    # Import your provider
-    from processing_provider.provider import Provider
+        from qgis.core import QgsApplication
+        from processing_provider.provider import Provider
 
+        class YourPluginName():
 
-    class YourPluginName():
+            def __init__(self):
+                self.provider = None
 
-        def __init__(self):
-            self.provider = None
+            def initProcessing(self):
+                self.provider = Provider()
+                QgsApplication.processingRegistry().addProvider(self.provider)
 
-        def initProcessing(self):
-            self.provider = Provider()
-            QgsApplication.processingRegistry().addProvider(self.provider)
+            def initGui(self):
+                self.initProcessing()
 
-        def initGui(self):
-            self.initProcessing()
-
-        def unload(self):
-            QgsApplication.processingRegistry().removeProvider(self.provider)
+            def unload(self):
+                QgsApplication.processingRegistry().removeProvider(self.provider)
 
 #. You can create a folder :file:`processing_provider` with three files in it:
 
