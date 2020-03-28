@@ -1,12 +1,4 @@
-<<<<<<< HEAD:docs/user_manual/appendices/appendices.rst
-.. only:: html
 
-
-Appendices
-==========
-
-=======
->>>>>>> 63dbae6a5... Update the QGIS R integration documentation (#5066):docs/user_manual/appendices/GNU_FDL.rst
 .. index:: License document
 .. _gfl_appendix:
 
@@ -17,11 +9,7 @@ Version 1.3, 3 November 2008
 
 Copyright  2000, 2001, 2002, 2007, 2008  Free Software Foundation, Inc
 
-<<<<<<< HEAD:docs/user_manual/appendices/appendices.rst
 https://fsf.org/
-=======
-http://fsf.org/
->>>>>>> 63dbae6a5... Update the QGIS R integration documentation (#5066):docs/user_manual/appendices/GNU_FDL.rst
 
 
 Everyone is permitted to copy and distribute verbatim copies of this
