@@ -49,7 +49,7 @@ Parameters
      - [file]
        
        Default: ``[Save to temporary file]``
-     - Output :file:`.XML` file combining the selected style items
+     - Output :file:`.XML` file combining the selected style items.
        One of:
 
        * Save to a Temporary Layer (``TEMPORARY_OUTPUT``)
@@ -262,7 +262,7 @@ Parameters
      - [file]
 
        Default: ``[Save to temporary file]``
-     - Specify the output :file:`.XML` file for the selected style items
+     - Specify the output :file:`.XML` file for the selected style items.
        One of:
 
        * Save to a Temporary Layer (``TEMPORARY_OUTPUT``)
