@@ -2162,7 +2162,7 @@ Exploring the map view
 ----------------------
 
 The map view (also called **Map canvas**) is the "business end" of
-QGIS --- maps are displayed in this area.
+QGIS --- maps are displayed in this area, in 2D.
 The map displayed in this window will reflect the rendering (symbology,
 labeling, visibilities...) you applied to the layers you have loaded.
 It also depends on the layers and the project's Coordinate Reference
@@ -2177,7 +2177,7 @@ If there are already layers in the project, no map canvas resize is
 performed, so only features falling within the current map canvas extent
 will be visible.
 
-While the focus is over the map view:
+Click on the map view and you should be able to interact with it:
 
 * it can be panned, shifting the display to another region of the map:
   this is performed using the |pan| :sup:`Pan Map` tool, the arrow keys,
@@ -2199,12 +2199,13 @@ While the focus is over the map view:
   or using the back/forward mouse buttons.
 
 By default, QGIS opens a single map view (called "main map"), which is
-tightly bound to the :guilabel:`Layers` panel. The main map *automatically*
-reflects the changes you make in the :guilabel:`Layers` panel area.
-But it's possible to have additional map views to preview different
-renderings of your dataset, side by side; while still relying on
-the layers properties as set in the :guilabel:`Layers` panel, each map view
-can display a different set of layers at different scale and extent.
+tightly bound to the :guilabel:`Layers` panel; the main map *automatically*
+reflects the changes you do in the :guilabel:`Layers` panel area.
+But it is also possible to open additional map views whose content could diverge
+from the :guilabel:`Layers` panel current state. They can be of 2D or :ref:`3D
+<label_3dmapview>` type, show different scale or extent, or display a different
+set of the loaded layers thanks to :ref:`map themes <map_themes>`.
+
 
 .. _additional_map_views:
 
@@ -2212,8 +2213,8 @@ Setting additional map views
 ----------------------------
 
 To add a new map view, go to :menuselection:`View -->` |newMap|
-:menuselection:`New Map View`. A new floating widget displaying the layers
-rendering is added to QGIS. You can add as many map views as you need.
+:menuselection:`New Map View`. A new floating widget, mimicking the main map
+view's rendering, is added to QGIS. You can add as many map views as you need.
 They can be kept floating, placed side by side or stacked on top of each
 other.
 
@@ -2684,6 +2685,8 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |circularStringRadius| image:: /static/common/mActionCircularStringRadius.png
    :width: 1.5em
+.. |coordinateCapture| image:: /static/common/coordinate_capture.png
+   :width: 1.5em
 .. |customProjection| image:: /static/common/mActionCustomProjection.png
    :width: 1.5em
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
@@ -2739,7 +2742,11 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |formSelect| image:: /static/common/mIconFormSelect.png
    :width: 1.5em
+.. |geometryChecker| image:: /static/common/geometrychecker.png
+   :width: 1.5em
 .. |georefRun| image:: /static/common/mGeorefRun.png
+   :width: 1.5em
+.. |gpsImporter| image:: /static/common/gps_importer.png
    :width: 1.5em
 .. |helpContents| image:: /static/common/mActionHelpContents.png
    :width: 1.5em
@@ -2920,6 +2927,8 @@ Click the icon to open the Plugin Manager dialog.
 .. |sum| image:: /static/common/mActionSum.png
    :width: 1.2em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
+   :width: 1.5em
+.. |topologyChecker| image:: /static/common/mActionTopologyChecker.png
    :width: 1.5em
 .. |tracking| image:: /static/common/tracking.png
    :width: 1.5em
