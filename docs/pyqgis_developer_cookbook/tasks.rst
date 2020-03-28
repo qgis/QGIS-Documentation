@@ -6,6 +6,12 @@
 
 .. testsetup:: tasks
 
+    iface = start_qgis()
+
+The code snippets on this page need the following imports if you're outside the pyqgis console:
+
+.. testcode:: tasks
+
     from qgis.core import (
       QgsProcessingContext,
       QgsTaskManager,
@@ -16,9 +22,6 @@
       QgsApplication,
       QgsMessageLog,
     )
-
-    iface = start_qgis()
-
 
 .. _tasks:
 

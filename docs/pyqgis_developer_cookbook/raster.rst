@@ -1,8 +1,3 @@
-.. index::
-   pair: Raster; Raster layers
-
-.. _raster:
-
 .. highlight:: python
    :linenothreshold: 5
 
@@ -31,15 +26,7 @@
     QgsProject.instance().addMapLayers([rlayer, rlayer_multi])
     assert rlayer.isValid()
 
-
-*********************
- Using Raster Layers
-*********************
-
-.. contents::
-   :local:
-
-The code snippets on this page needs the following imports if you're outside the pyqgis console:
+The code snippets on this page need the following imports if you're outside the pyqgis console:
 
 .. testcode:: raster
 
@@ -58,6 +45,15 @@ The code snippets on this page needs the following imports if you're outside the
     from qgis.PyQt.QtGui import (
         QColor,
     )
+
+.. _raster:
+
+.. index::
+   pair: Raster; Raster layers
+
+*********************
+ Using Raster Layers
+*********************
 
 .. index:: Raster layers; Details
 

@@ -5,6 +5,14 @@
 
 .. testsetup:: composer
 
+    iface = start_qgis()
+
+The code snippets on this page need the following imports:
+
+.. testcode:: composer
+
+    import os
+
     from qgis.core import (
         QgsGeometry,
         QgsMapSettings,
@@ -36,19 +44,11 @@
         QSize,
     )
 
-    iface = start_qgis()
-
 .. _layout:
 
 **************************
 Map Rendering and Printing
 **************************
-
-The code snippets on this page needs the following imports:
-
-.. testcode:: composer
-
- import os
 
 .. contents::
    :local:

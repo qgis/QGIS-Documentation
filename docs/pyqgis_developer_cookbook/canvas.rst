@@ -8,6 +8,10 @@
 
     iface = start_qgis()
 
+The code snippets on this page need the following imports if you're outside the pyqgis console:
+
+.. testcode:: canvas
+
     from qgis.PyQt.QtGui import (
         QColor,
     )
@@ -29,7 +33,6 @@
         QgsMapCanvasItem,
         QgsRubberBand,
     )
-
 
 
 .. _canvas:

@@ -4,8 +4,6 @@
  Releasing your plugin
 ***********************
 
-.. warning:: |outofdate|
-
 .. contents::
    :local:
 

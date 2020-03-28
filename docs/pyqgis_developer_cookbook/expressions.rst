@@ -1,25 +1,29 @@
-The code snippets on this page needs the following imports if you're outside the pyqgis console:
+.. testsetup:: expr
 
-.. testcode:: expr
-
-   from qgis.core import (
-      edit,
-      QgsExpression,
-      QgsExpressionContext,
-      QgsFeature,
-      QgsFeatureRequest,
-      QgsField,
-      QgsFields,
-      QgsVectorLayer,
-      QgsPointXY,
-      QgsGeometry,
-      QgsProject,
-      QgsExpressionContextUtils
-   )
+    iface = start_qgis()
 
 
 .. highlight:: python
    :linenothreshold: 5
+
+The code snippets on this page need the following imports if you're outside the pyqgis console:
+
+.. testcode:: expr
+
+    from qgis.core import (
+        edit,
+        QgsExpression,
+        QgsExpressionContext,
+        QgsFeature,
+        QgsFeatureRequest,
+        QgsField,
+        QgsFields,
+        QgsVectorLayer,
+        QgsPointXY,
+        QgsGeometry,
+        QgsProject,
+        QgsExpressionContextUtils
+    )
 
 .. index:: Expressions, Filtering, Calculating values
 

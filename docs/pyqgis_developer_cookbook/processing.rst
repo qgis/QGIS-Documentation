@@ -5,6 +5,11 @@
    :linenothreshold: 5
 
 
+.. testsetup:: processing
+
+    iface = start_qgis()
+
+
 ****************************
 Writing a Processing plugin
 ****************************
@@ -79,11 +84,11 @@ If you want to add your existing plugin to Processing, you need to add some code
    * :file:`provider.py` which will create the Processing provider and expose
      your algorithms.
 
-     .. code-block:: python
+     .. testcode:: processing
 
       from qgis.core import QgsProcessingProvider
 
-      from example_processing_algorithm import ExampleProcessingAlgorithm
+      from processing_provider.example_processing_algorithm import ExampleProcessingAlgorithm
 
 
       class Provider(QgsProcessingProvider):

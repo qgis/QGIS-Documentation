@@ -5,6 +5,12 @@
 
 .. testsetup:: communicating
 
+    iface = start_qgis()
+
+The code snippets on this page need the following imports if you're outside the pyqgis console:
+
+.. testcode:: communicating
+
     from qgis.core import (
         QgsMessageLog,
         QgsGeometry,
@@ -22,7 +28,6 @@
         QDialogButtonBox,
     )
 
-    iface = start_qgis()
 
 
 ***************************

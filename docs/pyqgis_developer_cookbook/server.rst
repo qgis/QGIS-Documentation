@@ -41,7 +41,7 @@ This chapter of the cookbook focuses on the first topic and by explaining the us
 it shows how it is possible to use Python to extend, enhance or customize the server behavior or how to
 use the QGIS Server API to embed QGIS server into another application.
 
-There a few different ways you can alter the behavior of QGIS Server or extend its
+There aare a few different ways you can alter the behavior of QGIS Server or extend its
 capabilities to offer new custom services or APIs, these are the main scenarios you
 may face:
 
@@ -53,9 +53,9 @@ may face:
 
 Embeding and standalone applications require using the QGIS Server Python API directly from
 another Python script or application while the remaining options are better suited for when
-you want to add custom features to a standard QGIS Server application: in this case you'll
-need to write a Python plugin for the server application and register your custom filters,
-services or APIs.
+you want to add custom features to a standard QGIS Server binary application (FCGI or
+development server): in this case you'll need to write a Python plugin for the server
+application and register your custom filters, services or APIs.
 
 Server API basics
 =================
@@ -296,13 +296,17 @@ A server plugin is a standard QGIS Python plugin as described in
 :ref:`developing_plugins`, that just provides an additional (or alternative)
 interface: a typical QGIS desktop plugin has access to QGIS application
 through the :class:`QgisInterface <qgis.gui.QgisInterface>` instance, a server
-plugin has also
-access to a :class:`QgsServerInterface <qgis.server.QgsServerInterface>`.
+plugin has only access to a :class:`QgsServerInterface <qgis.server.QgsServerInterface>`
+when it is executed within the QGIS Server application context.
 
-To tell QGIS Server that a plugin has a server interface, a special
+To make QGIS Server aware that a plugin has a server interface, a special
 metadata entry is needed (in `metadata.txt`) ::
 
     server=True
+
+.. important::
+
+    Only plugins that have the ``server=True`` metadata set will be loaded and executed by QGIS Server.
 
 The example plugin discussed here (with many more) is available
 on github at https://github.com/elpaso/qgis3-server-vagrant/tree/master/resources/web/plugins,
@@ -382,6 +386,7 @@ in case the **SERVICE** parameter equals to “HELLO”
             if params.get('SERVICE', '').upper() == 'HELLO':
                 request.clear()
                 request.setResponseHeader('Content-type', 'text/plain')
+                # Note that the content is of type "bytes"
                 request.appendBody(b'HelloServer!')
 
 

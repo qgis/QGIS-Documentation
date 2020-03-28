@@ -5,9 +5,23 @@
 
 .. testsetup:: cheat_sheet
 
+    iface = start_qgis()
+
+    # Mock toolbar
+
     from qgis.PyQt.QtWidgets import (
         QToolBar,
     )
+
+    toolbar = QToolBar()
+    for i in range(5):
+        toolbar.addAction('action%s' % i)
+
+    iface.attributesToolBar.return_value = toolbar
+
+The code snippets on this page need the following imports if you're outside the pyqgis console:
+
+.. testcode:: cheat_sheet
 
     from qgis.PyQt.QtCore import (
         QRectF,
@@ -21,14 +35,6 @@
     from qgis.gui import (
         QgsLayerTreeView,
     )
-
-    iface = start_qgis()
-
-    # Mock toolbar
-    toolbar = QToolBar()
-    for i in range(5):
-        toolbar.addAction('action%s' % i)
-    iface.attributesToolBar.return_value = toolbar
 
 
 **********************

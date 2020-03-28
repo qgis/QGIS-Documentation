@@ -236,6 +236,18 @@ doctest_global_setup = '''
 import os
 import sys
 import tempfile
+import shutil
+
+# Copy all cookbook test data into a
+# testdata directory (which is in .gitignore)
+# This is necessary because some test files
+# are modified during the tests and it's annoying
+# to find them changed in git
+try:
+    shutil.rmtree('testdata')
+except:
+    pass
+shutil.copytree('qgis-projects/python_cookbook', 'testdata')
 
 # Prepare environment for QgsApplication
 os.environ['QGIS_AUTH_DB_DIR_PATH'] = tempfile.mkdtemp()
