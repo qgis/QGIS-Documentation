@@ -1,22 +1,29 @@
+
+.. highlight:: python
+   :linenothreshold: 5
+
+.. testsetup:: crs
+
+    iface = start_qgis()
+
+
+The code snippets on this page need the following imports if you're outside the pyqgis console:
+
+.. testcode:: crs
+
+    from qgis.core import (
+        QgsCoordinateReferenceSystem,
+        QgsCoordinateTransform,
+        QgsProject,
+        QgsPointXY,
+    )
+
 .. _crs:
 
 *******************
 Projections Support
 *******************
 
-.. contents::
-   :local:
-
-If you're outside the pyqgis console, the code snippets on this page need the
-following imports:
-
-.. testcode:: crs
-
-   from qgis.core import (QgsCoordinateReferenceSystem,
-                          QgsCoordinateTransform,
-                          QgsProject,
-                          QgsPointXY,
-                          )
 
 .. index:: Coordinate reference systems
 

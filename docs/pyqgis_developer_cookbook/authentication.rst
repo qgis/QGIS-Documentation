@@ -3,10 +3,13 @@
 .. highlight:: python
    :linenothreshold: 5
 
-.. _Authentication_Infrastructure:
-
-
 .. testsetup:: auth
+
+    iface = start_qgis()
+
+The code snippets on this page need the following imports if you're outside the pyqgis console:
+
+.. testcode:: auth
 
     from qgis.core import (
       QgsApplication,
@@ -30,7 +33,7 @@
 
     from qgis.PyQt.QtNetwork import QSslCertificate
 
-    iface = start_qgis()
+.. _Authentication_Infrastructure:
 
 
 *****************************

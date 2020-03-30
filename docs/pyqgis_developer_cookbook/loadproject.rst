@@ -1,9 +1,16 @@
-.. _loadproject:
 
 .. highlight:: python
    :linenothreshold: 5
 
 .. testsetup:: loadproject
+
+    iface = start_qgis()
+
+    canvas = iface.mapCanvas()
+
+The code snippets on this page need the following imports if you're outside the pyqgis console:
+
+.. testcode:: loadproject
 
     from qgis.core import (
         QgsProject,
@@ -13,9 +20,8 @@
         QgsLayerTreeMapCanvasBridge,
     )
 
-    iface = start_qgis()
 
-    canvas = iface.mapCanvas()
+.. _loadproject:
 
 ****************
 Loading Projects
@@ -45,12 +51,12 @@ You can call its :meth:`read() <qgis.core.QgsProject.read>` method, passing the 
     # print(project.fileName())
 
     # Load another project
-    project.read('qgis-projects/python_cookbook/01_project.qgs')
+    project.read('testdata/01_project.qgs')
     print(project.fileName())
 
 .. testoutput:: loadproject
 
-    qgis-projects/python_cookbook/01_project.qgs
+    testdata/01_project.qgs
 
 
 If you need to make modifications to the project (for example to add or remove some layers)

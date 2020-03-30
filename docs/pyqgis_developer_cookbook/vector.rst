@@ -1,9 +1,16 @@
-.. _vector:
 
 .. highlight:: python
    :linenothreshold: 5
 
 .. testsetup:: vectors
+
+    iface = start_qgis()
+
+    problem_occurred = False
+
+The code snippets on this page need the following imports if you're outside the pyqgis console:
+
+.. testcode:: vectors
 
     from qgis.core import (
       QgsApplication,
@@ -39,9 +46,7 @@
         QColor,
     )
 
-    iface = start_qgis()
-
-    problem_occurred = False
+.. _vector:
 
 *******************
 Using Vector Layers

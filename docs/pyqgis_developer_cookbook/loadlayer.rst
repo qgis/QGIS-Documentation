@@ -1,5 +1,3 @@
-.. _loadlayerpy:
-
 
 .. highlight:: python
    :linenothreshold: 5
@@ -19,11 +17,14 @@
 
     iface = start_qgis()
 
+
+.. _loadlayerpy:
+
 **************
 Loading Layers
 **************
 
-The code snippets on this page needs the following imports:
+The code snippets on this page need the following imports:
 
 .. testcode:: loadlayer
 

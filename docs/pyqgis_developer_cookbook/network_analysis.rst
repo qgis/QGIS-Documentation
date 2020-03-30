@@ -1,4 +1,3 @@
-.. _network-analysis:
 
 .. highlight:: python
    :linenothreshold: 5
@@ -8,12 +7,22 @@
 
     from qgis.core import (
       QgsVectorLayer,
-      QgsPointXY,
     )
 
     iface = start_qgis()
 
     vectorLayer = QgsVectorLayer('testdata/network.gpkg|layername=network_lines', 'lines')
+
+The code snippets on this page need the following imports if you're outside the pyqgis console:
+
+.. testcode:: network_analysis
+
+    from qgis.core import (
+      QgsVectorLayer,
+      QgsPointXY,
+    )
+
+.. _network-analysis:
 
 ************************
 Network analysis library

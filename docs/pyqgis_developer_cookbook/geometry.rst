@@ -3,38 +3,20 @@
 .. highlight:: python
    :linenothreshold: 5
 
-.. _geometry:
-
-
 .. testsetup:: geometry
 
-    from qgis.core import (
-      QgsGeometry,
-      QgsPoint,
-      QgsPointXY,
-      QgsWkbTypes,
-      QgsProject,
-      QgsFeatureRequest,
-      QgsVectorLayer,
-      QgsDistanceArea,
-      QgsUnitTypes,
-    )
-
     iface = start_qgis()
+
+    from qgis.core import (
+      QgsProject,
+      QgsVectorLayer,
+    )
 
     # Load the countries layer
     if not QgsProject.instance().mapLayersByName("countries"):
         vlayer = QgsVectorLayer("/usr/share/qgis/resources/data/world_map.gpkg|layerName=countries", "countries", "ogr")
         assert vlayer.isValid()
         QgsProject.instance().addMapLayers([vlayer])
-
-
-*****************
-Geometry Handling
-*****************
-
-.. contents::
-   :local:
 
 
 The code snippets on this page need the following imports if you're outside the pyqgis console:
@@ -52,6 +34,16 @@ The code snippets on this page need the following imports if you're outside the 
       QgsDistanceArea,
       QgsUnitTypes,
     )
+
+.. _geometry:
+
+
+*****************
+Geometry Handling
+*****************
+
+.. contents::
+   :local:
 
 Points, linestrings and polygons that represent a spatial feature are commonly
 referred to as geometries. In QGIS they are represented with the
