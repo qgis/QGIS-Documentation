@@ -3733,7 +3733,7 @@ Multipart to singleparts
 Splits multipart features in the input layer into singlepart
 features.
 
-The attributes of the output layer are the same of the original ones
+The attributes of the output layer are the same as the original ones
 but divided into single features.
 
 .. figure:: img/multipart.png
