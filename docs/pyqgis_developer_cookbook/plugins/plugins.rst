@@ -120,7 +120,7 @@ author                 True      author name
 email                  True      email of the author, only shown on the website to logged in users,
                                  but visible in the Plugin Manager after the plugin is installed
 changelog              False     string, can be multiline, no HTML allowed
-experimental           False     boolean flag, `True` or `False`
+experimental           False     boolean flag, `True` or `False`, if this version is experimental
 deprecated             False     boolean flag, `True` or `False`, applies to the whole plugin
                                  and not just to the uploaded version
 tags                   False     comma separated list, spaces are allowed inside individual tags
@@ -132,6 +132,8 @@ icon                   False     a file name or a relative path (relative to
                                  package) of a web friendly image (PNG, JPEG)
 category               False     one of `Raster`, `Vector`, `Database` and `Web`
 plugin_dependencies    False     PIP-like comma separated list of other plugins to install
+server                 False     boolean flag, `True` or `False`, determines if the
+                                 the plugin has a server interface
 hasProcessingProvider  False     boolean flag, `True` or `False`, determines if
                                  the plugin provides processing algorithms
 =====================  ========  =======================================
