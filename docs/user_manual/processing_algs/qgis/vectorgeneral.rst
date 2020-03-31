@@ -1078,7 +1078,7 @@ Outputs
      - Name
      - Type
      - Description
-   * - **Number of unjoinable features from input table**
+   * - **Number of joined features from input table**
      - ``JOINED_COUNT``
      - [number]
      - 
@@ -1092,7 +1092,7 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - Output vector layer with added attributes from the join
-   * - **Number of joined features from input table**
+   * - **Number of unjoinable features from input table**
 
        Optional
      - ``UNJOINABLE_COUNT``
@@ -1310,7 +1310,7 @@ Parameters
 
        Default: []
      - Choose which type of summary you want to add to
-       each field and for each feature. One or mor of:
+       each field and for each feature. One or more of:
 
        * 0 --- count
        * 1 --- unique
