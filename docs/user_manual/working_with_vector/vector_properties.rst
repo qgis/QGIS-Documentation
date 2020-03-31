@@ -1898,8 +1898,7 @@ See :ref:`data_defined_labeling` for more information.
 
 |3d| The :guilabel:`3D View` tab provides settings for vector layers that should be
 depicted in the :ref:`3D Map view <label_3dmapview>` tool. There are settings available for point, line
-and polygon layers. We provide information for the |singleSymbol|:guilabel:`Single symbol`
-rendering here.
+and polygon layers.
 
 Point Layers
 ------------
