@@ -124,10 +124,12 @@ description            True      short text which describes the plugin, no HTML 
 about                  True      longer text which describes the plugin in details, no HTML allowed
 version                True      short string with the version dotted notation
 author                 True      author name
-email                  True      email of the author, only shown on the website to logged in users, but visible in the Plugin Manager after the plugin is installed
+email                  True      email of the author, only shown on the website to logged in users,
+                                 but visible in the Plugin Manager after the plugin is installed
 changelog              False     string, can be multiline, no HTML allowed
-experimental           False     boolean flag, `True` or `False`
-deprecated             False     boolean flag, `True` or `False`, applies to the whole plugin and not just to the uploaded version
+experimental           False     boolean flag, `True` or `False` - `True` if this version is experimental
+deprecated             False     boolean flag, `True` or `False`, applies to the whole plugin
+                                 and not just to the uploaded version
 tags                   False     comma separated list, spaces are allowed inside individual tags
 homepage               False     a valid URL pointing to the homepage of your plugin
 repository             True      a valid URL for the source code repository
@@ -136,6 +138,11 @@ icon                   False     a file name or a relative path (relative to
                                  the base folder of the plugin's compressed
                                  package) of a web friendly image (PNG, JPEG)
 category               False     one of `Raster`, `Vector`, `Database` and `Web`
+plugin_dependencies    False     PIP-like comma separated list of other plugins to install
+server                 False     boolean flag, `True` or `False`, determines if the
+                                 the plugin has a server interface
+hasProcessingProvider  False     boolean flag, `True` or `False`, determines if
+                                 the plugin provides processing algorithms
 =====================  ========  =======================================
 
 |
