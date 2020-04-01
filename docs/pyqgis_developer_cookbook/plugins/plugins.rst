@@ -120,7 +120,7 @@ author                 True      author name
 email                  True      email of the author, only shown on the website to logged in users,
                                  but visible in the Plugin Manager after the plugin is installed
 changelog              False     string, can be multiline, no HTML allowed
-experimental           False     boolean flag, `True` or `False`, if this version is experimental
+experimental           False     boolean flag, `True` or `False` - `True` if this version is experimental
 deprecated             False     boolean flag, `True` or `False`, applies to the whole plugin
                                  and not just to the uploaded version
 tags                   False     comma separated list, spaces are allowed inside individual tags
@@ -587,4 +587,3 @@ from your code. All hosted plugins can be found and installed from within QGIS
 with the Plugin Manager.
 
 Information and requirements are here: `plugins.qgis.org <https://plugins.qgis.org/>`_.
-
