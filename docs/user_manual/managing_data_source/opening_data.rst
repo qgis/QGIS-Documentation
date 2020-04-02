@@ -45,9 +45,16 @@ supported by the `GDAL/OGR <https://www.gdal.org/>`_ and QGIS native providers.
    Not all of the listed formats may work in QGIS for various reasons. For
    example, some require external proprietary libraries, or the GDAL/OGR
    installation of your OS may not have been built to support the format you
+<<<<<<< HEAD
    want to use. To have a list of available formats, run the command line
    ``ogrinfo --formats`` (for vector) or check :menuselection:`settings -->
    Options --> GDAL` menu (for raster) in QGIS.
+=======
+   want to use. To see the list of available formats, run the command line
+   ``ogrinfo --formats`` (for vector) and ``gdalinfo --formats`` (for raster),
+   or check :menuselection:`Settings --> Options --> GDAL` menu (for raster)
+   in QGIS.
+>>>>>>> 12020166f... Typo's (#5216)
    
 .. let's use ogrinfo until a list of vector formats is provided in a (GDAL/)OGR tab
 
