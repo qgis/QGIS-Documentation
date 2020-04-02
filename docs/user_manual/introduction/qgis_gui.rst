@@ -2376,21 +2376,20 @@ In the dialog that opens:
 ===========
 
 3D visualization support is offered through the 3D map view.
-
-.. note::
-   3D visualization in QGIS requires a recent version of the QT
-   library (5.8 or later).
-
 You create and open a 3D map view via :menuselection:`View -->`
 |new3DMap| :menuselection:`New 3D Map View`.
 A floating QGIS panel will appear. The panel can be docked.
 
 To begin with, the 3D map view has the same extent and view as the
-2D canvas.
-There is no dedicated toolbar for navigation in the 3D canvas.
-You zoom in/out and pan in the same way as in the main 2D canvas.
-You can also zoom in and out by dragging the mouse down/up with the
-right mouse button pressed.
+2D main map canvas. A set of navigation tools are available to turn
+the view into 3D.
+
+.. _figure_3dmapview:
+
+.. figure:: img/3dmapview.png
+   :align: center
+
+   The 3D Map View dialog
 
 
 .. _`3d_navigation`:
