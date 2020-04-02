@@ -2391,6 +2391,23 @@ the view into 3D.
 
    The 3D Map View dialog
 
+Following tools are provided at the top of the 3D map view panel:
+
+* |pan| :sup:`Camera control`: moves the view, keeping the same angle
+  and direction of the camera
+* |zoomFullExtent| :sup:`Zoom Full`: resizes the view to the whole
+  layers' extent
+* |3dNavigation| :sup:`Toggle on-screen notification`: shows/hides the
+  navigation widget for a better control of the map view
+* |identify| :sup:`Identify`: returns attributes of the clicked feature(s)
+  -- More details at :ref:`identify`
+* |measure| :sup:`Measurement line`: measures horizontal distance between points
+* |play| :sup:`Animations`: shows/hides the :ref:`animation player
+  <create_animation>` widget
+* |saveMapAsImage| :sup:`Save as image...`: exports the current view to
+  an image file format
+* |options| :sup:`Configure` the map view :ref:`settings <scene_configuration>`
+
 
 .. _`3d_navigation`:
 
@@ -2661,6 +2678,8 @@ Click the icon to open the Plugin Manager dialog.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |3dNavigation| image:: /static/common/mAction3DNavigation.png
+   :width: 1.3em
 .. |addAllToOverview| image:: /static/common/mActionAddAllToOverview.png
    :width: 1.5em
 .. |addPart| image:: /static/common/mActionAddPart.png
@@ -2784,6 +2803,8 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |mapTips| image:: /static/common/mActionMapTips.png
    :width: 1.5em
+.. |measure| image:: /static/common/mActionMeasure.png
+   :width: 1.5em
 .. |mergeFeatAttributes| image:: /static/common/mActionMergeFeatureAttributes.png
    :width: 1.5em
 .. |mergeFeatures| image:: /static/common/mActionMergeFeatures.png
@@ -2835,6 +2856,8 @@ Click the icon to open the Plugin Manager dialog.
 .. |pan| image:: /static/common/mActionPan.png
    :width: 1.5em
 .. |panToSelected| image:: /static/common/mActionPanToSelected.png
+   :width: 1.5em
+.. |play| image:: /static/common/mActionPlay.png
    :width: 1.5em
 .. |pluginNew| image:: /static/common/pluginNew.png
    :width: 1.5em
