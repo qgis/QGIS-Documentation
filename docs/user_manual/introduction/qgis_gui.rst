@@ -2463,6 +2463,43 @@ To explore the map view in 3D:
 To reset the camera view, click the |zoomFullExtent| :sup:`Zoom Full`
 button on the top of the 3D canvas panel.
 
+.. _`create_animation`:
+
+Creating an animation
+---------------------
+
+An animation is based on a set of keyframes - camera positions at particular times.
+To create an animation:
+
+#. Toggle on the |play| :sup:`Animations` tool, displaying the animation player
+   widget
+#. Click the |signPlus| :sup:`Add keyframe` button and enter a :guilabel:`Keyframe
+   time` in seconds. The :guilabel:`Keyframe` combo box now displays the time set.
+#. Using the navigation tools, move the camera to a position to associate to
+   the current keyframe time.
+#. Repeat previous steps to add as many keyframes time and position as necessary.
+#. Click |play| button to preview the animation. QGIS will generate a scene using
+   the camera positions/rotations at set times and interpolating them in between
+   these keyframes. Various :guilabel:`Interpolation` modes for animations are
+   available (eg, linear, inQuad, outQuad, inCirc... -- more details at
+   https://doc.qt.io/qt-5/qeasingcurve.html#EasingFunction-typedef).
+
+   The animation can also be previewed by moving the time slider.
+   Keeping the |draw| :sup:`Repeat` button pressed will repeatedly run the
+   animation while clicking |play| stops a running animation.
+
+It's possible to browse the different views of the camera, using the
+:guilabel:`Keyframe` list. Whenever a time is active, changing the map view
+will automatically update the associated position. You can also |symbologyEdit|
+:sup:`Edit keyframe` time or |signMinus| :sup:`Remove keyframe`.
+
+Click |fileSave| :sup:`Export animation frames` to generate a series of image
+representing the scene. Other than the filename :guilabel:`Template` and the
+:guilabel:`Output directory`, you can set the number of :guilabel:`Frames per
+second`, the :guilabel:`Output width` and :guilabel:`Output height`.
+
+.. _`scene_configuration`:
+
 Scene Configuration
 ---------------------
 
@@ -2941,6 +2978,10 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |showSelectedLayers| image:: /static/common/mActionShowSelectedLayers.png
    :width: 1.5em
+.. |signMinus| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
 .. |simplifyFeatures| image:: /static/common/mActionSimplify.png
    :width: 1.5em
 .. |splitFeatures| image:: /static/common/mActionSplitFeatures.png
@@ -2953,6 +2994,8 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1em
 .. |sum| image:: /static/common/mActionSum.png
    :width: 1.2em
+.. |symbologyEdit| image:: /static/common/symbologyEdit.png
+   :width: 1.5em
 .. |tiltDown| image:: /static/common/mActionTiltDown.png
    :width: 1.5em
 .. |tiltUp| image:: /static/common/mActionTiltUp.png
