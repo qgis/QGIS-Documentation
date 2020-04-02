@@ -197,6 +197,8 @@ Icon                            Substitution                        Icon        
 |measure|                       ``|measure|``                       |measureArea|                   ``|measureArea|``
 |measureAngle|                  ``|measureAngle|``                  
 |newMap|                        ``|newMap|``                        |new3DMap|                      ``|new3DMap|``
+|tiltUp|                        ``|tiltUp|``                        |tiltDown|                      ``|tiltDown|``
+|3dNavigation|                  ``|3dNavigation|``                  |play|                          ``|play|``
 ==============================  ==================================  ==============================  ==================================
 
 Selection and Expressions
@@ -400,6 +402,7 @@ Icon                                Substitution                            Icon
 |styleManager|                      ``|styleManager|``                      |iconView|                     ``|iconView|``
 |joinNotEditable|                   ``|joinNotEditable|``                   |joinedLayerNotEditable|       ``|joinedLayerNotEditable|``
 |joinHasNotUpsertOnEdit|            ``|joinHasNotUpsertOnEdit|``            |filterTableFields|            ``|filterTableFields|``
+|symbologyEdit|                     ``|symbologyEdit|``
 ==================================  ======================================  =============================  ================================
 
 
@@ -480,6 +483,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |3d| image:: /static/common/3d.png
    :width: 1.5em
+.. |3dNavigation| image:: /static/common/mAction3DNavigation.png
+   :width: 1.3em
 .. |3dconfigure| image:: /static/common/mIconProperties.png
    :width: 1.3em
 .. |action| image:: /static/common/action.png
@@ -1031,6 +1036,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |pinLabels| image:: /static/common/mActionPinLabels.png
    :width: 1.5em
+.. |play| image:: /static/common/mActionPlay.png
+   :width: 1.5em
 .. |plugin| image:: /static/common/plugin.png
    :width: 1.5em
 .. |pointClusterSymbol| image:: /static/common/rendererPointClusterSymbol.png
@@ -1228,6 +1235,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
+.. |symbologyEdit| image:: /static/common/symbologyEdit.png
+   :width: 1.5em
 .. |system| image:: /static/common/system.png
    :width: 1.5em
 .. |tab| image:: /static/common/tab.png
@@ -1235,6 +1244,10 @@ Icon                            Substitution                        Icon        
 .. |text| image:: /static/common/text.png
    :width: 1.5em
 .. |textAnnotation| image:: /static/common/mActionTextAnnotation.png
+   :width: 1.5em
+.. |tiltDown| image:: /static/common/mActionTiltDown.png
+   :width: 1.5em
+.. |tiltUp| image:: /static/common/mActionTiltUp.png
    :width: 1.5em
 .. |titleLabel| image:: /static/common/title_label.png
    :width: 1.5em
