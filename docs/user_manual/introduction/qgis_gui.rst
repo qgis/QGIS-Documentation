@@ -2326,52 +2326,57 @@ You zoom in/out and pan in the same way as in the main 2D canvas.
 You can also zoom in and out by dragging the mouse down/up with the
 right mouse button pressed.
 
-Navigation options for exploring the map in 3D:
 
-* Tilt and rotate
+.. _`3d_navigation`:
 
-  * To tilt the terrain (rotating it around a horizontal axis that
-    goes through the center of the window):
+Navigation options
+------------------
 
-    * Drag the mouse forward/backward with the middle mouse button
-      pressed
-    * Press :kbd:`Shift` and drag the mouse forward/backward
-      with the left mouse button pressed
-    * Press :kbd:`Shift` and use the up/down keys
+To explore the map view in 3D:
 
-  * To rotate the terrain (around a vertical axis that goes through
-    the center of the window):
+* Tilt the terrain (rotating it around a horizontal axis that
+  goes through the center of the window)
 
-    * Drag the mouse right/left with the middle mouse button
-      pressed
-    * Press :kbd:`Shift` and drag the mouse right/left with the
-      left mouse button pressed
-    * Press :kbd:`Shift` and use the left/right keys
+  * Press the |tiltUp| :sup:`Tilt up` and |tiltDown| :sup:`Tilt down` tools
+  * Press :kbd:`Shift` and use the up/down keys
+  * Drag the mouse forward/backward with the middle mouse button pressed
+  * Press :kbd:`Shift` and drag the mouse forward/backward
+    with the left mouse button pressed
 
-* Change the camera angle
+* Rotate the terrain (around a vertical axis that goes through
+  the center of the window)
 
-  * Pressing :kbd:`Ctrl` and dragging the mouse with the left mouse
-    button pressed changes the camera angle corresponding to
-    directions of dragging
-  * Pressing :kbd:`Ctrl` and using the arrow keys turns
+  * Turn the compass of the navigation widget to the watching direction
+  * Press :kbd:`Shift` and use the left/right keys
+  * Drag the mouse right/left with the middle mouse button pressed
+  * Press :kbd:`Shift` and drag the mouse right/left with the
+    left mouse button pressed
+
+* Change the camera position (and the view center), moving it around
+  in a horizontal plan
+
+  * Drag the mouse with the left mouse button pressed, and the |pan|
+    :sup:`Camera control` button enabled
+  * Press the directional arrows of the navigation widget
+  * Use the up/down/left/right keys to move the
+    camera forward, backward, right and left, respectively
+
+* Change the camera altitude: press the :kbd:`Page Up`/:kbd:`Page Down` keys
+* Change the camera orientation (the camera is kept at its position but the
+  view center point moves)
+
+  * Press :kbd:`Ctrl` and use the arrow keys to turn
     the camera up, down, left and right
-
-* Move the camera up/down
-
-  * Pressing the :kbd:`Page Up`/:kbd:`Page Down` keys moves the
-    terrain up and down, respectively
+  * Press :kbd:`Ctrl` and drag the mouse with the left mouse
+    button pressed
 
 * Zoom in and out
 
-  * Dragging the mouse with the right mouse button pressed will
+  * Press the corresponding |zoomIn| :sup:`Zoom In` and |zoomOut|
+    :sup:`Zoom Out` tools of the navigation widget
+  * Scroll the mouse wheel (keep :kbd:`Ctrl` pressed results in finer zooms)
+  * Drag the mouse with the right mouse button pressed to
     zoom in (drag down) and out (drag up)
-
-* Move the terrain around
-
-  * Dragging the mouse with the left mouse button pressed moves the
-    terrain around
-  * Using the up/down/left/right keys moves the
-    terrain closer, away, right and left, respectively
 
 To reset the camera view, click the |zoomFullExtent| :sup:`Zoom Full`
 button on the top of the 3D canvas panel.
@@ -2854,6 +2859,10 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1em
 .. |sum| image:: /static/common/mActionSum.png
    :width: 1.2em
+.. |tiltDown| image:: /static/common/mActionTiltDown.png
+   :width: 1.5em
+.. |tiltUp| image:: /static/common/mActionTiltUp.png
+   :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
 .. |tracking| image:: /static/common/tracking.png
