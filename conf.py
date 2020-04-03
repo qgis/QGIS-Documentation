@@ -100,18 +100,11 @@ html_theme_options = {
     'prev_next_buttons_location': 'both',
     # style_external_links': Add an icon next to external links. Default: False,
     'style_external_links': False,
-    # vcs_pageview_mode': Changes how to view files when using display_github, display_gitlab, etc. When using GitHub or GitLab this can be: blob (default), edit, or raw. On Bitbucket, this can be either: view (default) or edit. '',
-    # unsupported ??
-    #'vcs_pageview_mode': 'edit',
     # style_nav_header_background': Changes the background of the search area in the navigation bar. The value can be anything valid in a CSS background property. Default: 'white',
     #'style_nav_header_background': 'Gray',
     # Toc options
     # titles_only: When enabled, page subheadings are not included in the navigation. Default: False
     # 'titles_only': False,
-    # 'github_url' Force the Edit on GitHub button to use the configured URL.
-     'github_url': 'https://github.com/qgis/QGIS-Documentation',
-    # 'gitlab_url' Force the Edit on GitLab button to use the configured URL.
-    # 'gitlab_url': 'xxx',
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
