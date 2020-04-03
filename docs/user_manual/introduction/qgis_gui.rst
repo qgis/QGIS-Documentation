@@ -2391,17 +2391,17 @@ the view into 3D.
 
    The 3D Map View dialog
 
-Following tools are provided at the top of the 3D map view panel:
+The following tools are provided at the top of the 3D map view panel:
 
 * |pan| :sup:`Camera control`: moves the view, keeping the same angle
   and direction of the camera
 * |zoomFullExtent| :sup:`Zoom Full`: resizes the view to the whole
   layers' extent
 * |3dNavigation| :sup:`Toggle on-screen notification`: shows/hides the
-  navigation widget for a better control of the map view
+  navigation widget (that is meant to ease controlling of the map view)
 * |identify| :sup:`Identify`: returns attributes of the clicked feature(s)
   -- More details at :ref:`identify`
-* |measure| :sup:`Measurement line`: measures horizontal distance between points
+* |measure| :sup:`Measurement line`: measures the horizontal distance between points
 * |play| :sup:`Animations`: shows/hides the :ref:`animation player
   <create_animation>` widget
 * |saveMapAsImage| :sup:`Save as image...`: exports the current view to
@@ -2475,11 +2475,11 @@ To create an animation:
    widget
 #. Click the |signPlus| :sup:`Add keyframe` button and enter a :guilabel:`Keyframe
    time` in seconds. The :guilabel:`Keyframe` combo box now displays the time set.
-#. Using the navigation tools, move the camera to a position to associate to
+#. Using the navigation tools, move the camera to the position to associate with
    the current keyframe time.
-#. Repeat previous steps to add as many keyframes time and position as necessary.
-#. Click |play| button to preview the animation. QGIS will generate a scene using
-   the camera positions/rotations at set times and interpolating them in between
+#. Repeat the previous steps to add as many keyframes (with time and position) as necessary.
+#. Click the |play| button to preview the animation. QGIS will generate scenes using
+   the camera positions/rotations at set times, and interpolating them in between
    these keyframes. Various :guilabel:`Interpolation` modes for animations are
    available (eg, linear, inQuad, outQuad, inCirc... -- more details at
    https://doc.qt.io/qt-5/qeasingcurve.html#EasingFunction-typedef).
@@ -2488,12 +2488,12 @@ To create an animation:
    Keeping the |draw| :sup:`Repeat` button pressed will repeatedly run the
    animation while clicking |play| stops a running animation.
 
-It's possible to browse the different views of the camera, using the
+It is possible to browse the different views of the camera, using the
 :guilabel:`Keyframe` list. Whenever a time is active, changing the map view
 will automatically update the associated position. You can also |symbologyEdit|
-:sup:`Edit keyframe` time or |signMinus| :sup:`Remove keyframe`.
+:sup:`Edit keyframe` (time only) or |signMinus| :sup:`Remove keyframe`.
 
-Click |fileSave| :sup:`Export animation frames` to generate a series of image
+Click |fileSave| :sup:`Export animation frames` to generate a series of images
 representing the scene. Other than the filename :guilabel:`Template` and the
 :guilabel:`Output directory`, you can set the number of :guilabel:`Frames per
 second`, the :guilabel:`Output width` and :guilabel:`Output height`.
