@@ -2412,7 +2412,7 @@ To explore the map view in 3D:
 * Rotate the terrain (around a vertical axis that goes through
   the center of the window)
 
-  * Turn the compass of the navigation widget to the direction to look at
+  * Turn the compass of the navigation widget to the watching direction
   * Press :kbd:`Shift` and use the left/right keys
   * Drag the mouse right/left with the middle mouse button pressed
   * Press :kbd:`Shift` and drag the mouse right/left with the
