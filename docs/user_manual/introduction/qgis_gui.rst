@@ -2399,8 +2399,8 @@ The following tools are provided at the top of the 3D map view panel:
   layers' extent
 * |3dNavigation| :sup:`Toggle on-screen notification`: shows/hides the
   navigation widget (that is meant to ease controlling of the map view)
-* |identify| :sup:`Identify`: returns attributes of the clicked feature(s)
-  -- More details at :ref:`identify`
+* |identify| :sup:`Identify`: returns information on the clicked point
+  of the terrain or the clicked 3D feature(s) -- More details at :ref:`identify`
 * |measure| :sup:`Measurement line`: measures the horizontal distance between points
 * |play| :sup:`Animations`: shows/hides the :ref:`animation player
   <create_animation>` widget
