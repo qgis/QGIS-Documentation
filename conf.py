@@ -157,10 +157,12 @@ intersphinx_mapping = {'pyqgis_api': ('https://qgis.org/pyqgis/{}/'.format(pyqgi
 api_version = version if version != 'testing' else ''
 source_version = ''.join(['release-', version]).replace('.', '_') if version != 'testing' else 'master'
 
-extlinks = {'api': ('https://qgis.org/api/{}%s'.format(''.join([version, '/']) if version != 'testing' else ''), None),
-            'pyqgis': ('https://qgis.org/pyqgis/{}/%s'.format(version if version != 'testing' else 'master'), None),
-            'source': ('https://github.com/qgis/QGIS/blob/{}/%s'.format(
-                ''.join(['release-', version]).replace('.', '_') if version != 'testing' else 'master'), None)
+extlinks = {# api website: docs master branch points to '/' while x.y points to x.y
+            'api': ('https://qgis.org/api/{}%s'.format(''.join([version, '/']) if version != 'testing' else ''), None),
+            # pyqgis website: docs master branch points to 'master' and x.y points to x.y
+            'pyqgis': ('https://qgis.org/pyqgis/{}/%s'.format(pyqgis_version), None),
+            # code on github: docs master branch points to 'master' while x.y points to release-x_y
+            'source': ('https://github.com/qgis/QGIS/blob/{}/%s'.format(source_version), None)
            }
 
 context = {
