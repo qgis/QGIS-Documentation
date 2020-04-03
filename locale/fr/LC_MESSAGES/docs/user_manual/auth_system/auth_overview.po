@@ -1,44 +1,39 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014, QGIS project
-# This file is distributed under the same license as the QGIS Documentation
-# Project package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGISDoc package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# christophe bocquet <christophe.bocquet@developpement-durable.gouv.fr>, 2017
-# Michel Zevort <michel.zevort@developpement-durable.gouv.fr>, 2017
-# Sant-anna <delazj@gmail.com>, 2017
-# MarieSilvestre, 2019
+# Richard Duivenvoorde <richard@duif.net>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation Project testing\n"
+"Project-Id-Version: QGISDoc 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-11 14:48+0200\n"
-"PO-Revision-Date: 2016-07-18 09:30+0000\n"
-"Last-Translator: MarieSilvestre, 2019\n"
+"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"PO-Revision-Date: 2020-03-16 19:26+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:10
+#: ../../docs/user_manual/auth_system/auth_overview.rst:4
 msgid "Authentication System Overview"
 msgstr "Aperçu du Système d’authentification"
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:22
+#: ../../docs/user_manual/auth_system/auth_overview.rst:16
 msgid "Anatomy of authentication system"
 msgstr "Anatomie du Système d’authentification"
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:25
+#: ../../docs/user_manual/auth_system/auth_overview.rst:19
 msgid "Authentication database"
 msgstr "Base de données d'authentification"
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:27
+#: ../../docs/user_manual/auth_system/auth_overview.rst:21
 msgid ""
 "The new authentication system stores authentication configurations in an "
 "SQLite database file located, by default, at :file:`<user home>/.qgis3/qgis-"
@@ -48,7 +43,7 @@ msgstr ""
 "d'authentification dans un fichier de base de données SQLite situé, par "
 "défaut, sous :file:`<user home>/.qgis3/qgis-auth.db`."
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:30
+#: ../../docs/user_manual/auth_system/auth_overview.rst:24
 msgid ""
 "This authentication database can be moved between QGIS installations without"
 " affecting other current QGIS user preferences, as it is completely separate"
@@ -67,7 +62,7 @@ msgstr ""
 "texte (tels que des projets, des plugins ou des fichiers de paramètres), "
 "sans que les informations d'identification y figurent."
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:40
+#: ../../docs/user_manual/auth_system/auth_overview.rst:34
 msgid ""
 "The parent directory of the `qgis-auth.db` can be set using the following "
 "environment variable, ``QGIS_AUTH_DB_DIR_PATH``, or set on the command line "
@@ -77,11 +72,11 @@ msgstr ""
 "variable d'environnement ``QGIS_AUTH_DB_DIR_PATH``, ou  dans la ligne de "
 "commande utilisée lors du lancement avec l'option ``--authdbdirectory`` ."
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:45
+#: ../../docs/user_manual/auth_system/auth_overview.rst:39
 msgid "Master password"
 msgstr "Mot de passe principal"
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:47
+#: ../../docs/user_manual/auth_system/auth_overview.rst:41
 msgid ""
 "To store or access sensitive information within the database, a user must "
 "define a `master password`. A new master password is requested and verified "
@@ -107,11 +102,11 @@ msgstr ""
 "d'authentification existante, ou lorsque l'on applique une configuration à "
 "un serveur (comme lors de l'ajout d'une couche WMS)."
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:62
+#: ../../docs/user_manual/auth_system/auth_overview.rst:56
 msgid "Input new master password"
 msgstr "Entrer un nouveau mot de passe principal"
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:66
+#: ../../docs/user_manual/auth_system/auth_overview.rst:60
 msgid ""
 "A path to a file containing the master password can be set using the "
 "following environment variable, ``QGIS_AUTH_PASSWORD_FILE``."
@@ -120,11 +115,11 @@ msgstr ""
 "paramétré au moyen de la variable d'environnement suivante, "
 "``QGIS_AUTH_PASSWORD_FILE``."
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:70
+#: ../../docs/user_manual/auth_system/auth_overview.rst:64
 msgid "Managing the master password"
 msgstr "Gestion du mot de passe principal"
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:72
+#: ../../docs/user_manual/auth_system/auth_overview.rst:66
 msgid ""
 "Once set, the master password can be reset; the current master password will"
 " be needed prior to resetting. During this process, there is an option to "
@@ -135,11 +130,11 @@ msgstr ""
 " procédure, une option permet de générer une sauvegarde complète de la base "
 "de données."
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:81
+#: ../../docs/user_manual/auth_system/auth_overview.rst:75
 msgid "Resetting master password"
 msgstr "Réinitialiser le mot de passe principal"
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:83
+#: ../../docs/user_manual/auth_system/auth_overview.rst:77
 msgid ""
 "If the user forgets the master password, there is no way to retrieve or "
 "override it. There is also no means of retrieving encrypted information "
@@ -149,7 +144,7 @@ msgstr ""
 "de le retrouver ou de le contourner. Il n'est pas non plus possible de "
 "retrouver des informations cryptées dans le mot de passe principal."
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:87
+#: ../../docs/user_manual/auth_system/auth_overview.rst:81
 msgid ""
 "If a user inputs their existing password incorrectly three times, the dialog"
 " will offer to erase the database."
@@ -157,15 +152,15 @@ msgstr ""
 "Si un utilisateur saisi sont mot de passe trois fois de manière incorrecte, "
 "l'interface propose d’effacer le contenu de la base."
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:95
+#: ../../docs/user_manual/auth_system/auth_overview.rst:89
 msgid "Password prompt after three invalid attempts"
 msgstr "Demande de mot de passe après trois tentatives invalides"
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:98
+#: ../../docs/user_manual/auth_system/auth_overview.rst:92
 msgid "Authentication Configurations"
 msgstr "Configuration de l'authentification"
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:100
+#: ../../docs/user_manual/auth_system/auth_overview.rst:94
 msgid ""
 "You can manage authentication configurations from :guilabel:`Configurations`"
 " in the :guilabel:`Authentication` tab of the QGIS Options dialog "
@@ -175,11 +170,11 @@ msgstr ""
 ":guilabel:`Configurations` de l'onglet :guilabel:`Authentification` du "
 "dialogue Options de QGIS (:menuselection:`Paramètres --> Options`)."
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:109
+#: ../../docs/user_manual/auth_system/auth_overview.rst:103
 msgid "Configurations editor"
 msgstr "Editeur de configurations"
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:111
+#: ../../docs/user_manual/auth_system/auth_overview.rst:105
 msgid ""
 "Use the |signPlus| button to add a new configuration, the |signMinus| button"
 " to remove configurations, and the |symbologyEdit| button to modify existing"
@@ -189,11 +184,11 @@ msgstr ""
 "bouton |signMinus| pour supprimer des configurations, et le bouton "
 "|symbologyEdit| pour modifier des configurations existantes."
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:119
+#: ../../docs/user_manual/auth_system/auth_overview.rst:113
 msgid "Adding config from within Configuration editor"
 msgstr "Ajouter une configuration avec l'éditeur de configuration"
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:121
+#: ../../docs/user_manual/auth_system/auth_overview.rst:115
 msgid ""
 "The same type of operations for authentication configuration management "
 "(Add, Edit and Remove) can be done when configuring a given service "
@@ -214,7 +209,7 @@ msgstr ""
 ":guilabel:`Authentification` des options de QGIS, sauf si vous avez besoin "
 "de gérer les configurations de manière plus complète."
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:134
+#: ../../docs/user_manual/auth_system/auth_overview.rst:128
 msgid ""
 "WMS connection dialog showing :guilabel:`Add`, :guilabel:`Edit`, and "
 ":guilabel:`Remove` authentication configuration buttons"
@@ -223,7 +218,7 @@ msgstr ""
 "l'authentification :guilabel:`Ajouter`, :guilabel:`Editer`, et "
 ":guilabel:`Supprimer`"
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:137
+#: ../../docs/user_manual/auth_system/auth_overview.rst:131
 msgid ""
 "When creating or editing an authentication configuration, the info required "
 "is a name, an authentication method and any other info that the "
@@ -236,11 +231,11 @@ msgstr ""
 "d'avantage d'information sur les types d'authentification supportés, voir "
 ":ref:`authentication_methods`)."
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:145
+#: ../../docs/user_manual/auth_system/auth_overview.rst:139
 msgid "Authentication Methods"
 msgstr "Méthodes d’authentification"
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:147
+#: ../../docs/user_manual/auth_system/auth_overview.rst:141
 msgid ""
 "Available authentications are provided by C++ plugins much in the same way "
 "data provider plugins are supported by QGIS. The method of authentication "
@@ -266,11 +261,11 @@ msgstr ""
 "dans l'onglet :guilabel:`Authentification`, cliquez sur le bouton  |options|"
 " :guilabel:`Extensions` installées**."
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:163
+#: ../../docs/user_manual/auth_system/auth_overview.rst:157
 msgid "Available method plugins list"
 msgstr "Extensions d’authentification disponibles"
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:165
+#: ../../docs/user_manual/auth_system/auth_overview.rst:159
 msgid ""
 "Plugins can be created for new authentication methods that do not require "
 "QGIS to be recompiled. Since the support for plugins is currently (since "
@@ -286,31 +281,31 @@ msgstr ""
 "Assurez-vous que votre extension est compilée avec la même version cible de "
 "QGIS ."
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:176
+#: ../../docs/user_manual/auth_system/auth_overview.rst:170
 msgid "Basic HTTP authentication configs"
 msgstr "Configuration Authentification basique HTTP"
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:183
+#: ../../docs/user_manual/auth_system/auth_overview.rst:177
 msgid "ESRI Token authentication configs"
 msgstr ""
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:190
+#: ../../docs/user_manual/auth_system/auth_overview.rst:184
 msgid "OAuth2 authentication configs"
 msgstr ""
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:197
+#: ../../docs/user_manual/auth_system/auth_overview.rst:191
 msgid "PKI paths authentication configs"
 msgstr "Configuration Authentification par cheminement dans l'IGC"
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:204
+#: ../../docs/user_manual/auth_system/auth_overview.rst:198
 msgid "PKI PKCS#12 file paths authentication configs"
 msgstr "Configuration Authentification IGC PKCS#12 "
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:211
+#: ../../docs/user_manual/auth_system/auth_overview.rst:205
 msgid "Stored Identity authentication configs"
 msgstr "Configuration Certificat d'identité stocké dans une IGC"
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:215
+#: ../../docs/user_manual/auth_system/auth_overview.rst:209
 msgid ""
 "The Resource URL is currently an *unimplemented* feature that will "
 "eventually allow a particular configuration to be auto-chosen when "
@@ -320,11 +315,11 @@ msgstr ""
 "qui permettra éventuellement de choisir automatiquement une configuration "
 "particulière lors de la connexion aux ressources à une URL donnée."
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:220
+#: ../../docs/user_manual/auth_system/auth_overview.rst:214
 msgid "Master Password and Auth Config Utilities"
 msgstr "Utilitaire et Mot de passe principal "
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:222
+#: ../../docs/user_manual/auth_system/auth_overview.rst:216
 msgid ""
 "Under the Options menu (:menuselection:`Settings --> Options`) in the "
 ":guilabel:`Authentication` tab, there are several utility actions to manage "
@@ -335,39 +330,39 @@ msgstr ""
 "gérer le mot de passe principal, la base de données et les configurations "
 "d'authentification:"
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:231
+#: ../../docs/user_manual/auth_system/auth_overview.rst:225
 msgid "Utilities menu"
 msgstr "Menu du bouton Utilitaires "
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:233
+#: ../../docs/user_manual/auth_system/auth_overview.rst:227
 msgid "**Input master password**:"
 msgstr "**Entrer le mot de passe principal** :"
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:235
+#: ../../docs/user_manual/auth_system/auth_overview.rst:229
 msgid ""
 "Opens the master password input dialog, independent of performing any "
 "authentication database command."
 msgstr ""
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:238
+#: ../../docs/user_manual/auth_system/auth_overview.rst:232
 msgid "**Clear cached master password**:"
 msgstr ""
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:240
+#: ../../docs/user_manual/auth_system/auth_overview.rst:234
 msgid "Unsets the master password if it has been set via input dialog."
 msgstr ""
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:242
+#: ../../docs/user_manual/auth_system/auth_overview.rst:236
 msgid "**Reset master password**:"
 msgstr ""
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:244
+#: ../../docs/user_manual/auth_system/auth_overview.rst:238
 msgid ""
 "Opens a dialog to change the master password (the current password must be "
 "known) and optionally back up the current database."
 msgstr ""
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:247
+#: ../../docs/user_manual/auth_system/auth_overview.rst:241
 msgid ""
 "**Clear cached authentication configurations**: Clears the internal lookup "
 "cache for configurations used to speed up network connections. This does not"
@@ -379,7 +374,7 @@ msgstr ""
 "réseau. Cela n'efface pas le cache du gestionnaire d'accès au réseau "
 "principal de QGIS, qui nécessite de relancer QGIS."
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:251
+#: ../../docs/user_manual/auth_system/auth_overview.rst:245
 msgid ""
 "**Reset master password**: Replaces the current master password for a new "
 "one. The current master password will be needed prior to resetting and a "
@@ -390,7 +385,7 @@ msgstr ""
 "actuel sera nécessaire avant la réinitialisation et une sauvegarde de la "
 "base de données pourra être effectuée."
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:255
+#: ../../docs/user_manual/auth_system/auth_overview.rst:249
 msgid ""
 "**Remove all authentication configurations**: Clears the database of all "
 "configuration records, without removing other stored records."
@@ -399,7 +394,7 @@ msgstr ""
 "base de données tous les enregistrements de configuration, sans supprimer "
 "les autres enregistrements stockés."
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:258
+#: ../../docs/user_manual/auth_system/auth_overview.rst:252
 msgid ""
 "**Erase authentication database**: Schedules a backup of the current "
 "database and complete rebuild of the database table structure. These actions"
@@ -414,15 +409,15 @@ msgstr ""
 "temporaire de la base de données. Dans ces cas, la sauvegarde et la "
 "reconstruction sont différées. "
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:269
+#: ../../docs/user_manual/auth_system/auth_overview.rst:263
 msgid "DB erase verification menu"
 msgstr "Menu d'effacement de la base de données"
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:272
+#: ../../docs/user_manual/auth_system/auth_overview.rst:266
 msgid "Using authentication configurations"
 msgstr "Utiliser les configurations d'authentification"
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:274
+#: ../../docs/user_manual/auth_system/auth_overview.rst:268
 msgid ""
 "Typically, an authentication configuration is selected in a configuration "
 "dialog for a network services (such as WMS). However, the selector widget "
@@ -435,7 +430,7 @@ msgstr ""
 "peut être intégré à chaque fois que l'authentification est nécessaire dans "
 "QGIS ainsi que dans les les plugins PyQGIS ou C ++ tiers."
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:279
+#: ../../docs/user_manual/auth_system/auth_overview.rst:273
 msgid ""
 "When using the selector, :guilabel:`No authentication` is displayed in the "
 "pop-up menu control when nothing is selected, when there are no "
@@ -453,19 +448,19 @@ msgstr ""
 "description de la méthode d'authentification et de l'ID de la configuration "
 "."
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:291
+#: ../../docs/user_manual/auth_system/auth_overview.rst:285
 msgid "Authentication configuration selector with no authentication"
 msgstr ""
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:298
+#: ../../docs/user_manual/auth_system/auth_overview.rst:292
 msgid "Authentication configuration selector with selected config"
 msgstr ""
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:301
+#: ../../docs/user_manual/auth_system/auth_overview.rst:295
 msgid "Python bindings"
 msgstr "Liaisons Python"
 
-#: ../../source/docs/user_manual/auth_system/auth_overview.rst:303
+#: ../../docs/user_manual/auth_system/auth_overview.rst:297
 msgid ""
 "All classes and public functions have sip bindings, except "
 "``QgsAuthCrypto``, since management of the master password hashing and auth "
@@ -477,48 +472,3 @@ msgstr ""
 "du cryptage de la base de données auth doit se faire par l'application "
 "principale, et non via Python. Voir "
 ":ref:`authentication_security_considerations` concernant l'accès Python."
-
-#~ msgid "|updatedisclaimer|"
-#~ msgstr "|updatedisclaimer|"
-
-#~ msgid ""
-#~ "WMS connection dialog showing **[Add]**, **[Edit]**, and **[Remove]** "
-#~ "authentication configuration buttons"
-#~ msgstr ""
-#~ "Boite de dialogue de connexion WMS avec les boutons de configuration de "
-#~ "l'authentification **[Ajouter]**, **[Editer]**, et **[Supprimer]**"
-
-#~ msgid ""
-#~ "Available authentications are provided by C++ plugins much in the same way "
-#~ "data provider plugins are supported by QGIS. The method of authentication "
-#~ "that can be selected is relative to the access needed for the "
-#~ "resource/provider, e.g. HTTP(S) or database, and whether there is support in"
-#~ " both QGIS code and a plugin. As such, some authentication method plugins "
-#~ "may not be applicable everywhere an authentication configuration selector is"
-#~ " shown. A list of available authentication method plugins and their "
-#~ "compatible resource/providers can be accessed going to "
-#~ ":menuselection:`Settings --> Options` and, in the :guilabel:`Authentication`"
-#~ " tab, click the |options| **[Installed plugins]** button."
-#~ msgstr ""
-#~ "Les authentifications disponibles sont fournies par les extensions C ++ de "
-#~ "la même manière que les extensions de fournisseur de données sont prises en "
-#~ "charge par QGIS. Le procédé d'authentification qui peut être sélectionné est"
-#~ " relatif à l'accès à la ressource p. ex. HTTP(S) ou à la base de données par"
-#~ " le provider, et s'il y a un support dans le code QGIS et dans une "
-#~ "extension. En tant que telles, certaines extensions d'authentification "
-#~ "peuvent ne pas être applicables partout où un sélecteur de configuration "
-#~ "d'authentification est utilisé. Vous pouvez accéder à la liste des "
-#~ "extensions d'authentification disponibles et leurs ressources / fournisseurs"
-#~ " compatibles, en allant dans :menuselection:`Préférences-- > Options`  et, "
-#~ "dans l'onglet :guilabel:`Authentification`, cliquez sur le bouton  |options|"
-#~ " **[Extensions installées]**."
-
-#~ msgid ""
-#~ "Opens the master password input dialog, independent of performing any "
-#~ "authentication database command. Clear cached master password"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Unsets the master password if it has been set via input dialog. Reset master"
-#~ " password"
-#~ msgstr ""

@@ -1,144 +1,169 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014, QGIS project
-# This file is distributed under the same license as the QGIS Documentation
-# Project package.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGISDoc package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Can BAYAT <canbayat@gmail.com>, 2017
-# Murat ENEZ <muratenez@gmail.com>, 2017
-# selim <javurna@gmail.com>, 2016
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# HakanEroglu78 <hakaneroglu2018@gmail.com>, 2020
+# 
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation\n"
+"Project-Id-Version: QGISDoc 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-07 15:33+0200\n"
-"PO-Revision-Date: 2019-04-07 13:48+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
-"Language-Team: Turkish (http://www.transifex.com/qgis/qgis-documentation/language/tr/)\n"
+"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"PO-Revision-Date: 2020-03-16 19:23+0000\n"
+"Last-Translator: HakanEroglu78 <hakaneroglu2018@gmail.com>, 2020\n"
+"Language-Team: Turkish (https://www.transifex.com/qgis/teams/6144/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
 "Language: tr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:11
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:5
 msgid "Communicating with the user"
-msgstr "Kullanıcı ile iletişim"
+msgstr "Kullanıcı iletişim arayüzü"
 
-#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:16
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:10
 msgid ""
 "This section shows some methods and elements that should be used to "
 "communicate with the user, in order to keep consistency in the User "
 "Interface."
-msgstr "Bu bölüm Kullanıcı Arayüzdeki sürekliliği sağlamak amacıyla, kullanıcı ile iletişim kurmak için kullanılan metot ve elementleri gösterir."
-
-#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:20
-msgid "Showing messages. The QgsMessageBar class"
 msgstr ""
+"Bu bölüm kullanıcı ile iletişim kurmamızı sağlayan metod ve bileşenlerin "
+"kullanımını içerir."
 
-#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:22
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:14
+msgid "Showing messages. The QgsMessageBar class"
+msgstr "Mesajları gösterme. QgsMessageBar sınıfı"
+
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:16
 msgid ""
 "Using message boxes can be a bad idea from a user experience point of view. "
 "For showing a small info line or a warning/error messages, the QGIS message "
 "bar is usually a better option."
-msgstr "Kullanıcı deneyimi açısından mesaj kutusu kullanmak yanlış olabilir. Küçük bir bilgi veya uyarı/hata mesajı çizgisi göstermek için QGIS mesaj çubuğu kullanmak genellikle en iyi seçenektir."
+msgstr ""
+"Mesaj kutuları kullanarak mesajlarımızı göstermek kullanıcı açısından kötü "
+"bir deneyim oluşturur. Bunun yerine uyarı ve hata mesajlarını bilgi çubuğu, "
+"mesaj satırı bölmesinde göstermek QGIS için daha mantıklı bir yöntemdir. "
+"Toplu işlemlerde yüzlerce hata ve uyarı mesajı oluşabilir."
 
-#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:26
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:20
 msgid ""
 "Using the reference to the QGIS interface object, you can show a message in "
 "the message bar with the following code"
-msgstr "QGIS arayüz nesnesi için referansı kullanarak bir mesajı, mesaj çubuğundaki sonraki codla gösterebilirsiniz"
+msgstr ""
+"QGIS arayüzünde mesaj satırı kısmını kullanarak mesaj göstermek için "
+"kullanılacak kod örneği:"
 
-#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:39
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:33
 msgid "QGIS Message bar"
 msgstr "QGIS Mesaj çubuğu"
 
-#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:41
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:35
 msgid "You can set a duration to show it for a limited time"
-msgstr "Bunu sınırlı bir zamanda göstermek için süre ayarı koyabilirsiniz."
+msgstr ""
+"Mesajların belirli bir süre gösterilip ardından mesaj çubuğunun kaybolmasını"
+" sağlamak için süre sınırı koyabilirsiniz."
 
-#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:52
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:46
 msgid "QGIS Message bar with timer"
-msgstr "Sayaçlı QGIS Mesaj çubuğu"
+msgstr "QGIS Mesaj çubuğu, zaman sınırlaması ile"
 
-#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:54
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:48
 msgid ""
 "The examples above show an error bar, but the ``level`` parameter can be "
 "used to creating warning messages or info messages, using the "
 ":class:`Qgis.MessageLevel <qgis.core.Qgis.MessageLevel>` enumeration. You "
 "can use up to 4 different levels:"
 msgstr ""
+"Yukarıdaki örnekte hata mesajı görülmekte, fakat ``level`` parametresi uyarı"
+" veya bilgi mesajı tipi olabilir. :class:`Qgis.MessageLevel "
+"<qgis.core.Qgis.MessageLevel>` seçenekleri kullanılabilir. 4 farklı seviye "
+"öntanımlıdır:"
 
-#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:58
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:52
 msgid "Info"
-msgstr ""
+msgstr "Bilgi"
 
-#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:59
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:53
 msgid "Warning"
-msgstr ""
+msgstr "Uyarı"
 
-#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:60
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:54
 msgid "Critical"
-msgstr ""
+msgstr "Kritik"
 
-#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:61
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:55
 msgid "Success"
-msgstr ""
+msgstr "Başarılı"
 
-#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:67
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:61
 msgid "QGIS Message bar (info)"
-msgstr "QGIS Mesaj çubuğu(bilgi için)"
+msgstr "QGIS Mesaj çubuğu (bilgi)"
 
-#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:69
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:63
 msgid ""
 "Widgets can be added to the message bar, like for instance a button to show "
 "more info"
-msgstr "Mesaj çubuğuna Widgetlar eklenebilir örneğin daha fazla bilgi göstermek için bir buton"
+msgstr ""
+"Mesaj çubuğuna araçlar eklenebilir, örneğin daha fazla bilgi göstermek için "
+"bir buton"
 
-#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:89
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:83
 msgid "QGIS Message bar with a button"
 msgstr "Butonlu bir QGIS Mesaj çubuğu"
 
-#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:91
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:85
 msgid ""
 "You can even use a message bar in your own dialog so you don't have to show "
 "a message box, or if it doesn't make sense to show it in the main QGIS "
 "window"
-msgstr "Ana QGIS penceresinde bir mesaj kutusu göstermek gereksizse veya pencerenizde mesaj kutusu göstermek istemiyorsanız kendi pencerenizde bir mesaj çubu kullanabilirsiniz."
+msgstr ""
+"Bu şekilde mesaj çubuğunu kendi mesaj kutunuzu göstermek için "
+"kullanabilirsiniz yada mesaj kutusu göstermek zorunlu değilse "
+"kullanılabilir. "
 
-#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:117
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:111
 msgid "QGIS Message bar in custom dialog"
-msgstr "QGIS özel diyalogdaki mesaj çubuğu"
+msgstr "QGIS, özel bileşenli mesaj çubuğu"
 
-#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:121
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:115
 msgid "Showing progress"
-msgstr "İlerleme gösteriliyor"
+msgstr "İlerleme durumu gösterme"
 
-#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:123
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:117
 msgid ""
 "Progress bars can also be put in the QGIS message bar, since, as we have "
 "seen, it accepts widgets. Here is an example that you can try in the "
 "console."
-msgstr "ilerleme çubukları, gördüğümüz gibi, QGIS mesaj çubukları içine de konulabilir olduğundan,   widgetları kabul eder. Konsolda deneyebileceğiniz kodları burada bulabilirsiniz."
+msgstr ""
+"İlerleme durum çubukları QGIS mesaj çubuğu içinde gösterilebilir. İşte "
+"burada konsolda deneyebileceğiniz örnek bir kod."
 
-#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:144
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:138
 msgid ""
 "Also, you can use the built-in status bar to report progress, as in the next"
 " example:"
 msgstr ""
+"Ayrıca entegre ilerleme durum çubuğunu kullanabilirsiniz. İşte sonraki örnek"
+" kod:"
 
-#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:166
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:160
 msgid "Logging"
-msgstr "Kaydoluyor"
+msgstr "Loglama"
 
-#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:168
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:162
 msgid ""
 "You can use the QGIS logging system to log all the information that you want"
 " to save about the execution of your code."
-msgstr "QGIS kayıt sistemini kodunuzun çalışması hakkındaki görmek istediğiniz tüm bilgileri kaydetmek için kullanabilirsiniz."
+msgstr ""
+"QGIS loglama sistemini kullanarak kodunuzun işletilme sürecini "
+"kaydettirebilirsiniz. "
 
-#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:180
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:174
 msgid ""
 "Use of the Python ``print`` statement is unsafe to do in any code which may "
 "be multithreaded. This includes **expression functions**, **renderers**, "
@@ -147,36 +172,36 @@ msgid ""
 "<qgis.core.QgsLogger>` or :class:`QgsMessageLog <qgis.core.QgsMessageLog>`) "
 "instead."
 msgstr ""
+"Python ``print`` komutunu kullanmak çoklu işlemlerin çalışmasında sorun "
+"oluşturur. Aynı şekilde **expression functions**, **renderers**, **symbol "
+"layers** ve **Processing algorithms** (ve diğer) fonksiyonlar içinde "
+"geçerlidir. Bu durumda her zaman güvenli sınıflar olan (:class:`QgsLogger "
+"<qgis.core.QgsLogger>` veya :class:`QgsMessageLog "
+"<qgis.core.QgsMessageLog>`) kullanmalısınız."
 
-#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:189
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:183
 msgid ""
 "You can see the output of the :class:`QgsMessageLog "
 "<qgis.core.QgsMessageLog>` in the :ref:`log_message_panel`"
 msgstr ""
+":class:`QgsMessageLog <qgis.core.QgsMessageLog>` sınıfının çıktılarını  "
+":ref:`log_message_panel` içerisinde görebilirsiniz."
 
-#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:194
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:188
 msgid ""
 ":class:`QgsLogger <qgis.core.QgsLogger>` is for messages for debugging / "
 "developers (i.e. you suspect they are triggered by some broken code)"
 msgstr ""
+":class:`QgsLogger <qgis.core.QgsLogger>` mesajlaşma ve yazılımcılar için "
+"hata arama içindir (hatalı bir kodun tetiklendiğinden şüphelendiğiniz "
+"durumlar gibi)"
 
-#: ../../source/docs/pyqgis_developer_cookbook/communicating.rst:196
+#: ../../docs/pyqgis_developer_cookbook/communicating.rst:190
 msgid ""
 ":class:`QgsMessageLog <qgis.core.QgsMessageLog>` is for messages to "
 "investigate issues by sysadmins (e.g. to help a sysadmin to fix "
 "configurations)"
 msgstr ""
-
-#~ msgid "Showing messages. The :class:`QgsMessageBar` class"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The examples above show an error bar, but the ``level`` parameter can be "
-#~ "used to creating warning messages or info messages, using the "
-#~ "``QgsMessageBar.WARNING`` and ``QgsMessageBar.INFO`` constants respectively."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Also, you can use the built-in status bar to report progress, as in the next"
-#~ " example"
-#~ msgstr ""
+":class:`QgsMessageLog <qgis.core.QgsMessageLog>` sysadmin grubu için "
+"problemleri çözmesi amacıyla mesajlar gösterir (sysadmin' lerin ayarları "
+"düzelmesi gibi)"

@@ -1,45 +1,54 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014, QGIS project
-# This file is distributed under the same license as the QGIS Documentation
-# Project package.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGISDoc package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Sorin Călinică <scalinica@gmail.com>, 2015-2017
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation\n"
+"Project-Id-Version: QGISDoc 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-28 10:31+0100\n"
-"PO-Revision-Date: 2017-09-20 03:11+0000\n"
-"Last-Translator: Sorin Călinică <scalinica@gmail.com>\n"
-"Language-Team: Romanian (http://www.transifex.com/qgis/qgis-documentation/language/ro/)\n"
+"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"PO-Revision-Date: 2020-03-16 19:22+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: Romanian (https://www.transifex.com/qgis/teams/6144/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
 "Language: ro\n"
 "Plural-Forms: nplurals=3; plural=(n==1?0:(((n%100>19)||((n%100==0)&&(n!=0)))?2:1));\n"
 
-#: ../../source/docs/training_manual/processing/no_data.rst:6
+#: ../../docs/training_manual/processing/no_data.rst:2
 msgid "The raster calculator. No-data values"
 msgstr "Calculatorul raster. Valorile fără-date "
 
-#: ../../source/docs/training_manual/processing/no_data.rst:9
+#: ../../docs/training_manual/processing/no_data.rst:5
 msgid ""
 "In this lesson we will see how to use the raster calculator to perform some "
 "operations on raster layers. We will also explain what are no--data values "
 "and how the calculator and other algorithms deal with them"
-msgstr "În această lecție vom vedea cum se utilizează calculatorul raster pentru a efectua unele operații asupra straturilor raster. Vom explica, de asemenea, ce sunt valorile fără-date și modul în care lucrează cu ele calculatorul și alți algoritmi"
+msgstr ""
+"În această lecție vom vedea cum se utilizează calculatorul raster pentru a "
+"efectua unele operații asupra straturilor raster. Vom explica, de asemenea, "
+"ce sunt valorile fără-date și modul în care lucrează cu ele calculatorul și "
+"alți algoritmi"
 
-#: ../../source/docs/training_manual/processing/no_data.rst:12
+#: ../../docs/training_manual/processing/no_data.rst:8
 msgid ""
 "The raster calculator is one of the most powerful algorithms that you will "
 "find. It's a very flexible and versatile algorithm that can be used for many"
 " different calculations, and one that will soon become an important part of "
 "your toolbox."
-msgstr "Calculatorul raster reprezintă unul dintre cei mai puternici algoritmi. Este un algoritm foarte flexibil și versatil, care poate fi folosit în diverse calcule, și care va deveni în curând o parte importantă a setului dvs. cu instrumente."
+msgstr ""
+"Calculatorul raster reprezintă unul dintre cei mai puternici algoritmi. Este"
+" un algoritm foarte flexibil și versatil, care poate fi folosit în diverse "
+"calcule, și care va deveni în curând o parte importantă a setului dvs. cu "
+"instrumente."
 
-#: ../../source/docs/training_manual/processing/no_data.rst:14
+#: ../../docs/training_manual/processing/no_data.rst:10
 msgid ""
 "In this lesson we will be performing some calculation with the raster "
 "calculator, most of them rather simple. This will let us see how it is used "
@@ -47,29 +56,39 @@ msgid ""
 "Understanding that is important to later get the expected results when using"
 " the calculator, and also to understand certain techniques that are commonly"
 " applied with it."
-msgstr "În această lecție vom efectua unele calcule, majoritatea simple, cu ajutorul calculatorului raster. Acest lucru ne va permite să observăm modul de gestionare a unor situații particulare cu care ne-am putea confrunta. Înțelegerea acestor aspecte este importantă pentru obținerea ulterioară a rezultatelor așteptate și, de asemenea, pentru deprinderea tehnicilor comune care se pot aplica."
+msgstr ""
+"În această lecție vom efectua unele calcule, majoritatea simple, cu ajutorul"
+" calculatorului raster. Acest lucru ne va permite să observăm modul de "
+"gestionare a unor situații particulare cu care ne-am putea confrunta. "
+"Înțelegerea acestor aspecte este importantă pentru obținerea ulterioară a "
+"rezultatelor așteptate și, de asemenea, pentru deprinderea tehnicilor comune"
+" care se pot aplica."
 
-#: ../../source/docs/training_manual/processing/no_data.rst:16
+#: ../../docs/training_manual/processing/no_data.rst:12
 msgid ""
 "Open the QGIS project corresponding to this lesson and you will see that it "
 "contains several raster layers."
-msgstr "Deschideti proiectul QGIS corespunzător acestei lecții și veți vedea că ea conține mai multe straturi raster."
+msgstr ""
+"Deschideti proiectul QGIS corespunzător acestei lecții și veți vedea că ea "
+"conține mai multe straturi raster."
 
-#: ../../source/docs/training_manual/processing/no_data.rst:18
+#: ../../docs/training_manual/processing/no_data.rst:14
 msgid ""
 "Now open the toolbox and open the dialog corresponding to the raster "
 "calculator."
-msgstr "Acum deschideți caseta de instrumente și caseta de dialog corespunzătoare calculatorului raster."
+msgstr ""
+"Acum deschideți caseta de instrumente și caseta de dialog corespunzătoare "
+"calculatorului raster."
 
-#: ../../source/docs/training_manual/processing/no_data.rst:22
+#: ../../docs/training_manual/processing/no_data.rst:18
 msgid "The interface is different in recent versions."
 msgstr "Interfața diferă pentru versiunile recente."
 
-#: ../../source/docs/training_manual/processing/no_data.rst:24
+#: ../../docs/training_manual/processing/no_data.rst:20
 msgid "The dialog contains 2 parameters."
 msgstr "Dialogul conține 2 parametri."
 
-#: ../../source/docs/training_manual/processing/no_data.rst:26
+#: ../../docs/training_manual/processing/no_data.rst:22
 msgid ""
 "The layers to use for the analysis. This is a multiple input, that meaning "
 "that you can select as many layers as you want. Click on the button on the "
@@ -77,7 +96,7 @@ msgid ""
 "dialog that will appear."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/no_data.rst:27
+#: ../../docs/training_manual/processing/no_data.rst:23
 msgid ""
 "The formula to apply. The formula uses the layers selected in the above "
 "parameter, which are named using alphabet letters (``a, b, c...``) or ``g1, "
@@ -87,27 +106,33 @@ msgid ""
 "layers is the same ordering that you see in the selection dialog."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/no_data.rst:29
+#: ../../docs/training_manual/processing/no_data.rst:25
 msgid "The calculator is case sensitive."
 msgstr "Calculator ține cont de majuscule/minuscule."
 
-#: ../../source/docs/training_manual/processing/no_data.rst:31
+#: ../../docs/training_manual/processing/no_data.rst:27
 msgid ""
 "To start with, we will change the units of the DEM from meters to feet. The "
 "formula we need is the following one:"
-msgstr "Pentru a începe, vom schimba unitățile DEM-ului din metri în picioare. Formula de care avem nevoie este:"
+msgstr ""
+"Pentru a începe, vom schimba unitățile DEM-ului din metri în picioare. "
+"Formula de care avem nevoie este:"
 
-#: ../../source/docs/training_manual/processing/no_data.rst:37
+#: ../../docs/training_manual/processing/no_data.rst:33
 msgid ""
 "Select the DEM in the layers field and type ``a * 3.28084`` in the formula "
 "field."
-msgstr "Selectați DEM-ul din câmpul straturilor și introduceți ``a * 3.28084`` în câmpul formulei."
+msgstr ""
+"Selectați DEM-ul din câmpul straturilor și introduceți ``a * 3.28084`` în "
+"câmpul formulei."
 
-#: ../../source/docs/training_manual/processing/no_data.rst:39
+#: ../../docs/training_manual/processing/no_data.rst:35
 msgid "For non English users: use always \".\", not \",\"."
-msgstr "Pentru utilizatorii care nu sunt englezi: folosiți întotdeauna \".\", nu \",\"."
+msgstr ""
+"Pentru utilizatorii care nu sunt englezi: folosiți întotdeauna \".\", nu "
+"\",\"."
 
-#: ../../source/docs/training_manual/processing/no_data.rst:41
+#: ../../docs/training_manual/processing/no_data.rst:37
 msgid ""
 "Click *Run* to run the algorithm. You will get a layer that has the same "
 "appearance of the input layer, but with different values. The input layer "
@@ -115,7 +140,7 @@ msgid ""
 " effect at all."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/no_data.rst:43
+#: ../../docs/training_manual/processing/no_data.rst:39
 msgid ""
 "Let's now perform another calculation, this time on the *accflow* layer. "
 "This layer contains values of accumulated flow, a hydrological parameter. It"
@@ -126,24 +151,24 @@ msgid ""
 " can calculate that using the raster calculator."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/no_data.rst:45
+#: ../../docs/training_manual/processing/no_data.rst:41
 msgid ""
 "Open the algorithm dialog again, select the *accflow* layer as the only "
 "input layer, and enter the following formula: ``log(a)``."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/no_data.rst:47
+#: ../../docs/training_manual/processing/no_data.rst:43
 msgid "Here is the layer that you will get."
 msgstr "Acesta este stratul pe care îl veți obține."
 
-#: ../../source/docs/training_manual/processing/no_data.rst:51
+#: ../../docs/training_manual/processing/no_data.rst:47
 msgid ""
 "If you select the *Identify* tool to know the value of a layer at a given "
 "point, select the layer that we have just created, and click on a point "
 "outside of the basin, you will see that it contains a no--data value."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/no_data.rst:55
+#: ../../docs/training_manual/processing/no_data.rst:51
 msgid ""
 "For the next exercise we are going to use two layers instead of one, and we "
 "are going to get a DEM with valid elevation values only within the basin "
@@ -152,7 +177,7 @@ msgid ""
 " in the corresponding field:"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/no_data.rst:61
+#: ../../docs/training_manual/processing/no_data.rst:57
 msgid ""
 "``a`` refers to the accumulated flow layer (since it is the first one to "
 "appear in the list) and ``b`` refers to the DEM. What we are doing in the "
@@ -163,11 +188,11 @@ msgid ""
 "outside (``DEM * no_data = no_data``)"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/no_data.rst:63
+#: ../../docs/training_manual/processing/no_data.rst:59
 msgid "Here is the resulting layer."
 msgstr "Acesta este stratul rezultat."
 
-#: ../../source/docs/training_manual/processing/no_data.rst:68
+#: ../../docs/training_manual/processing/no_data.rst:64
 msgid ""
 "This technique is used frequently to *mask* values in a raster layer, and is"
 " useful whenever you want to perform calculations for a region other that "
@@ -178,7 +203,7 @@ msgid ""
 "gives information about the configuration of the basin."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/no_data.rst:70
+#: ../../docs/training_manual/processing/no_data.rst:66
 msgid ""
 "There are other interesting things about this algorithm that we have just "
 "run, apart from the no--data values and how they are handled. If you have a "
@@ -189,7 +214,7 @@ msgid ""
 "extent of the full DEM."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/no_data.rst:72
+#: ../../docs/training_manual/processing/no_data.rst:68
 msgid ""
 "That means that those layers do not match, and that they cannot be "
 "multiplied directly without homogenizing those sizes and extents by "
@@ -199,7 +224,7 @@ msgid ""
 "layers, and the minimum cell size of their cellsizes."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/no_data.rst:74
+#: ../../docs/training_manual/processing/no_data.rst:70
 msgid ""
 "In this case (and in most cases), this produces the desired results, but you"
 " should always be aware of the additional operations that are taking place, "
@@ -209,39 +234,45 @@ msgid ""
 "multiple raster layers."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/no_data.rst:77
+#: ../../docs/training_manual/processing/no_data.rst:73
 msgid ""
 "Let's finish this lesson with another masking exercise. We are going to "
 "calculate the slope in all areas with an elevation between 1000 and 1500 "
 "meters."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/no_data.rst:79
+#: ../../docs/training_manual/processing/no_data.rst:75
 msgid ""
 "In this case, we do not have a layer to use as a mask, but we can create it "
 "using the calculator."
-msgstr "În acest caz, nu dispunem de un strat pentru a-l utiliza drept mască, dar îl putem crea cu ajutorul calculatorului."
+msgstr ""
+"În acest caz, nu dispunem de un strat pentru a-l utiliza drept mască, dar îl"
+" putem crea cu ajutorul calculatorului."
 
-#: ../../source/docs/training_manual/processing/no_data.rst:81
+#: ../../docs/training_manual/processing/no_data.rst:77
 msgid ""
 "Run the calculator using the DEM as only input layer and the following "
 "formula"
-msgstr "Pornește calculatorul folosind DEM-ul doar ca pe un strat de intrare, și următoarea formulă"
+msgstr ""
+"Pornește calculatorul folosind DEM-ul doar ca pe un strat de intrare, și "
+"următoarea formulă"
 
-#: ../../source/docs/training_manual/processing/no_data.rst:87
+#: ../../docs/training_manual/processing/no_data.rst:83
 msgid ""
 "As you can see, we can use the calculator not only to do simple algebraic "
 "operations, but also to run more complex calculation involving conditional "
 "sentences, like the one above."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/no_data.rst:89
+#: ../../docs/training_manual/processing/no_data.rst:85
 msgid ""
 "The result has a value of 1 inside the range we want to work with, and no-"
 "data in cells outside of it."
-msgstr "Rezultatul are o valoare de 1 în interiorul gamei în care dorim să lucrăm, și valori fără-date în celulele din exterior."
+msgstr ""
+"Rezultatul are o valoare de 1 în interiorul gamei în care dorim să lucrăm, "
+"și valori fără-date în celulele din exterior."
 
-#: ../../source/docs/training_manual/processing/no_data.rst:93
+#: ../../docs/training_manual/processing/no_data.rst:89
 msgid ""
 "The no-data value comes from the 0/0 expression. Since that is an "
 "undetermined value, SAGA will add a NaN (Not a Number) value, which is "
@@ -250,13 +281,13 @@ msgid ""
 "is."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/no_data.rst:95
+#: ../../docs/training_manual/processing/no_data.rst:91
 msgid ""
 "Now you just have to multiply it by the slope layer included in the project,"
 " and you will get the desired result."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/no_data.rst:97
+#: ../../docs/training_manual/processing/no_data.rst:93
 msgid ""
 "All that can be done in a single operation with the calculator. We leave "
 "that as an exercise for the reader."
