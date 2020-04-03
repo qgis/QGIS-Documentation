@@ -42,9 +42,9 @@ site: html
 	rsync -az $(BUILDDIR)/html/$(LANG) $(SITEDIR)/
 
 all:
-_ @for LANG in $(LANGUAGES) ; do \
-_ _ make LANG=$$LANG site; \
-_ done
+	@for LANG in $(LANGUAGES) ; do \
+		make LANG=$$LANG site; \
+	done
 
 doctest:
 	$(SPHINXBUILD) -c "$(CONFDIR)" -b doctest . $(BUILDDIR)/doctest
