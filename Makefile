@@ -10,12 +10,7 @@ SPHINXINTL      ?= sphinx-intl
 SOURCEDIR       = .
 BUILDDIR        = build
 #SITEDIR         = /var/www/html/qgisdocs
-<<<<<<< HEAD
 SITEDIR         = qgis2:/var/www/qgisdata/QGIS-Documentation-3.4/live/html
-CONFDIR         = .
-=======
-SITEDIR         = qgis2:/var/www/qgisdata/QGIS-Documentation/live/html
->>>>>>> 2759453b2... Remove the unnecessary confdir option from Makefile
 
 
 
