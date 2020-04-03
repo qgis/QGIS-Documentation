@@ -147,12 +147,7 @@ html_context = {
 
 supported_languages = cfg['supported_languages'].replace(' ','').split(',')
 version_list = cfg['version_list'].replace(' ','').split(',')
-url = cfg['docs_url']
-if not url.endswith('/'):
-  url += '/'
-github_url = cfg['github_url'] + 'edit/master'
-transifex_url = cfg['transifex_url']
-
+docs_url = 'https://docs.qgis.org/'
 
 if version not in version_list:
   raise ValueError('QGIS version is not in version list', version, version_list)
@@ -178,15 +173,17 @@ extlinks = {'api': ('https://qgis.org/api/{}%s'.format(''.join([version, '/']) i
 context = {
     # 'READTHEDOCS': True,
     'version_downloads': False,
-    'versions': [ [v, url+v] for v in version_list],
-    'supported_languages': [ [l, url+version+'/'+l] for l in supported_languages],
+    'versions': [ [v, docs_url+v] for v in version_list],
+    'supported_languages': [ [l, docs_url+version+'/'+l] for l in supported_languages],
     # 'downloads': [ ['PDF', '/builders.pdf'], ['HTML', '/builders.tgz'] ],
+    
     'display_github': True,
-    'github_url': github_url,
     'github_user': 'qgis',
     'github_repo': 'QGIS-Documentation',
     'github_version': 'master/',
-    'transifex_url': transifex_url,
+    'github_url':'https://github.com/qgis/QGIS-Documentation/edit/master',
+    'transifex_url': 'https://www.transifex.com/qgis/qgis-documentation/translate',
+    
     'pyqgis_version': pyqgis_version,
     'source_version': source_version,
     'api_version': api_version
@@ -197,6 +194,7 @@ if 'html_context' in globals():
 else:
     html_context = context
 
+# -- Settings for Python code samples testing --------------------------------
 
 # adding this because in pycookbook a lot of text is referencing classes, which cannot be found by sphinx
 # eg: Map canvas is implemented as :class:`QgsMapCanvas` ...
