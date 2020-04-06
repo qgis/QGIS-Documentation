@@ -2264,7 +2264,7 @@ To create a join:
    layer
 #. Specify the :guilabel:`Join field` and the :guilabel:`Target field` that are
    common to both the join layer and the target layer
-#. Press :guilabel:`OK` and a summary of selected parametersis added to the
+#. Press :guilabel:`OK` and a summary of selected parameters is added to the
    :guilabel:`Join` panel.
 
 .. _figure_joins:
