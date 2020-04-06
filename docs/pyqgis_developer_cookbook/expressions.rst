@@ -1,21 +1,29 @@
-The code snippets on this page needs the following imports if you're outside the pyqgis console:
+.. testsetup:: expr
+
+    iface = start_qgis()
+
+
+.. highlight:: python
+   :linenothreshold: 5
+
+The code snippets on this page need the following imports if you're outside the pyqgis console:
 
 .. testcode:: expr
 
-   from qgis.core import (
-      edit,
-      QgsExpression,
-      QgsExpressionContext,
-      QgsFeature,
-      QgsFeatureRequest,
-      QgsField,
-      QgsFields,
-      QgsVectorLayer,
-      QgsPointXY, 
-      QgsGeometry, 
-      QgsProject,
-      QgsExpressionContextUtils
-   )
+    from qgis.core import (
+        edit,
+        QgsExpression,
+        QgsExpressionContext,
+        QgsFeature,
+        QgsFeatureRequest,
+        QgsField,
+        QgsFields,
+        QgsVectorLayer,
+        QgsPointXY,
+        QgsGeometry,
+        QgsProject,
+        QgsExpressionContextUtils
+    )
 
 .. index:: Expressions, Filtering, Calculating values
 
@@ -97,13 +105,13 @@ Evaluating Expressions
 Expressions can be used in different contexts, for example to filter features or to compute
 new field values. In any case, the expression has to be evaluated. That means that its
 value is computed by performing the specified computational steps, which can range from
-simple arithmetic to aggregate expressions. 
+simple arithmetic to aggregate expressions.
 
 
 Basic Expressions
 -----------------
 
-This basic expression evaluates to 1, meaning it is true: 
+This basic expression evaluates to 1, meaning it is true:
 
 .. testcode:: expr
 
@@ -129,7 +137,7 @@ feature to the expression context.
    feature = QgsFeature()
    feature.setFields(fields)
    feature.setAttribute(0, 99)
-   
+
    exp = QgsExpression('"Column"')
    context = QgsExpressionContext()
    context.setFeature(feature)
@@ -140,9 +148,9 @@ The following is a more complete example of how to use expressions in the contex
 order to compute new field values:
 
 .. testcode:: expr
-   
+
    from qgis.PyQt.QtCore import QVariant
-   
+
    # create a vector layer
    vl = QgsVectorLayer("Point", "Companies", "memory")
    pr = vl.dataProvider()
@@ -153,40 +161,40 @@ order to compute new field values:
                      QgsField("Sum", QVariant.Double),
                      QgsField("Fun", QVariant.Double)])
    vl.updateFields()
-   
+
    # add data to the first three fields
    my_data = [
        {'x': 0, 'y': 0, 'name': 'ABC', 'emp': 10, 'rev': 100.1},
        {'x': 1, 'y': 1, 'name': 'DEF', 'emp': 2, 'rev': 50.5},
-       {'x': 5, 'y': 5, 'name': 'GHI', 'emp': 100, 'rev': 725.9}] 
-   
+       {'x': 5, 'y': 5, 'name': 'GHI', 'emp': 100, 'rev': 725.9}]
+
    for rec in my_data:
        f = QgsFeature()
        pt = QgsPointXY(rec['x'], rec['y'])
        f.setGeometry(QgsGeometry.fromPointXY(pt))
        f.setAttributes([rec['name'], rec['emp'], rec['rev']])
        pr.addFeature(f)
-   
-   vl.updateExtents() 
+
+   vl.updateExtents()
    QgsProject.instance().addMapLayer(vl)
 
-   # The first expression computes the revenue per employee. 
-   # The second one computes the sum of all revenue values in the layer. 
-   # The final third expression doesn’t really make sense but illustrates 
-   # the fact that we can use a wide range of expression functions, such 
+   # The first expression computes the revenue per employee.
+   # The second one computes the sum of all revenue values in the layer.
+   # The final third expression doesn’t really make sense but illustrates
+   # the fact that we can use a wide range of expression functions, such
    # as area and buffer in our expressions:
    expression1 = QgsExpression('"Revenue"/"Employees"')
    expression2 = QgsExpression('sum("Revenue")')
    expression3 = QgsExpression('area(buffer($geometry,"Employees"))')
-   
-   # QgsExpressionContextUtils.globalProjectLayerScopes() is a convenience 
-   # function that adds the global, project, and layer scopes all at once. 
-   # Alternatively, those scopes can also be added manually. In any case, 
-   # it is important to always go from “most generic” to “most specific” 
+
+   # QgsExpressionContextUtils.globalProjectLayerScopes() is a convenience
+   # function that adds the global, project, and layer scopes all at once.
+   # Alternatively, those scopes can also be added manually. In any case,
+   # it is important to always go from “most generic” to “most specific”
    # scope, i.e. from global to project to layer
    context = QgsExpressionContext()
    context.appendScopes(QgsExpressionContextUtils.globalProjectLayerScopes(vl))
-   
+
    with edit(vl):
        for f in vl.getFeatures():
            context.setFeature(f)
@@ -198,7 +206,6 @@ order to compute new field values:
    print( f['Sum'])
 
 .. testoutput:: expr
-   :hide:
 
    876.5
 
@@ -235,7 +242,7 @@ matches a predicate.
 Handling expression errors
 ==========================
 
-Expression-related errors can occur during expression parsing or evaluation: 
+Expression-related errors can occur during expression parsing or evaluation:
 
 .. testcode:: expr
 

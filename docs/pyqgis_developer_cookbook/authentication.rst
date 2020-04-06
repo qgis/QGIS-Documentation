@@ -3,15 +3,46 @@
 .. highlight:: python
    :linenothreshold: 5
 
+.. testsetup:: auth
+
+    iface = start_qgis()
+
+The code snippets on this page need the following imports if you're outside the pyqgis console:
+
+.. testcode:: auth
+
+    from qgis.core import (
+      QgsApplication,
+      QgsRasterLayer,
+      QgsAuthMethodConfig,
+      QgsDataSourceUri,
+      QgsPkiBundle,
+      QgsMessageLog,
+    )
+
+    from qgis.gui import (
+        QgsAuthAuthoritiesEditor,
+        QgsAuthConfigEditor,
+        QgsAuthConfigSelect,
+        QgsAuthSettingsWidget,
+    )
+
+    from qgis.PyQt.QtWidgets import (
+        QWidget,
+    )
+
+    from qgis.PyQt.QtNetwork import QSslCertificate
+
 .. _Authentication_Infrastructure:
+
 
 *****************************
 Authentication infrastructure
 *****************************
+
 .. contents::
    :local:
 
-.. warning:: |outofdate|
 
 .. _Authentication_Introduction:
 
@@ -24,13 +55,6 @@ in the  User Manual in the :ref:`authentication_overview` paragraph.
 This chapter describes the best practices to use the Authentication system from
 a developer perspective.
 
-<<<<<<< HEAD
-Most of the following snippets are derived from the code of Geoserver Explorer
-plugin and its tests. This is the first plugin that used Authentication
-infrastructure. The plugin code and its tests can be found at this
-`link <https://github.com/boundlessgeo/qgis-geoserver-plugin>`_.
-Other good code reference can be read from the authentication infrastructure
-=======
 The authentication system is widely used in QGIS Desktop by data providers whenever
 credentials are required to access a particular resource, for example when a layer
 establishes a connection to a Postgres database.
@@ -43,8 +67,12 @@ easily integrate the authentication infrastructure into their code:
 * :class:`QgsAuthSettingsWidget <qgis.gui.QgsAuthSettingsWidget>`
 
 A good code reference can be read from the authentication infrastructure
->>>>>>> 1e4509a13... Fix indentation of GUI auth widgets list (#5071)
 :source:`tests code <tests/src/python/test_qgsauthsystem.py>`.
+
+.. warning::
+
+    Due the the security constraints that were taken into account during the authentication
+    infrastructure design, only a selected subset of the internal methods are exposed to Python.
 
 
 .. _Authentication_manager_glossary:
@@ -92,8 +120,8 @@ is the entry point to use the credentials stored in the QGIS encrypted
 :term:`Authentication DB`, i.e. the :file:`qgis-auth.db` file under the
 active :ref:`user profile <user_profiles>` folder.
 
-This class takes care of the user interaction: by asking to set master
-password or by transparently using it to access crypted stored info.
+This class takes care of the user interaction: by asking to set a master
+password or by transparently using it to access encrypted stored information.
 
 .. _Init_manager_and_set_master_password:
 
@@ -104,10 +132,11 @@ The following snippet gives an example to set master password to open the
 access to the authentication settings. Code comments are important to
 understand the snippet.
 
-.. code-block:: python
+.. testcode:: auth
 
   authMgr = QgsApplication.authManager()
-  # check if QgsAuthManager has been already initialized... a side effect
+
+  # check if QgsAuthManager has already been initialized... a side effect
   # of the QgsAuthManager.init() is that AuthDbPath is set.
   # QgsAuthManager.init() is executed during QGIS application init and hence
   # you do not normally need to call it directly.
@@ -115,12 +144,12 @@ understand the snippet.
       # already initilised => we are inside a QGIS app.
       if authMgr.masterPasswordIsSet():
           msg = 'Authentication master password not recognized'
-          assert authMgr.masterPasswordSame( "your master password" ), msg
+          assert authMgr.masterPasswordSame("your master password"), msg
       else:
           msg = 'Master password could not be set'
           # The verify parameter check if the hash of the password was
           # already saved in the authentication db
-          assert authMgr.setMasterPassword( "your master password",
+          assert authMgr.setMasterPassword("your master password",
                                             verify=True), msg
   else:
       # outside qgis, e.g. in a testing environment => setup env var before
@@ -128,7 +157,7 @@ understand the snippet.
       os.environ['QGIS_AUTH_DB_DIR_PATH'] = "/path/where/located/qgis-auth.db"
       msg = 'Master password could not be set'
       assert authMgr.setMasterPassword("your master password", True), msg
-      authMgr.init( "/path/where/located/qgis-auth.db" )
+      authMgr.init("/path/where/located/qgis-auth.db")
 
 
 .. _Populate_authdb_with_a_new_Auth_entry:
@@ -142,8 +171,10 @@ class accessed using a unique string like the following one::
 
   authcfg = 'fm1s770'
 
-that string is generated automatically when creating an entry using QGIS API or
-GUI.
+that string is generated automatically when creating an entry using the QGIS API or
+GUI, but it might be useful to manually set it to a known value in case the
+configuration must be shared (with different credentials) between multiple users within
+an organization.
 
 :class:`QgsAuthMethodConfig <qgis.core.QgsAuthMethodConfig>` is the base class
 for any :term:`Authentication Method`.
@@ -151,33 +182,33 @@ Any Authentication Method sets a configuration hash map where authentication
 informations will be stored. Hereafter an useful snippet to store PKI-path
 credentials for an hypothetic alice user:
 
-.. code-block:: python
+.. testcode:: auth
 
   authMgr = QgsApplication.authManager()
   # set alice PKI data
-  p_config = QgsAuthMethodConfig()
-  p_config.setName("alice")
-  p_config.setMethod("PKI-Paths")
-  p_config.setUri("https://example.com")
-  p_config.setConfig("certpath", "path/to/alice-cert.pem" )
-  p_config.setConfig("keypath", "path/to/alice-key.pem" )
+  config = QgsAuthMethodConfig()
+  config.setName("alice")
+  config.setMethod("PKI-Paths")
+  config.setUri("https://example.com")
+  config.setConfig("certpath", "path/to/alice-cert.pem" )
+  config.setConfig("keypath", "path/to/alice-key.pem" )
   # check if method parameters are correctly set
-  assert p_config.isValid()
+  assert config.isValid()
 
   # register alice data in authdb returning the ``authcfg`` of the stored
   # configuration
-  authMgr.storeAuthenticationConfig(p_config)
-  newAuthCfgId = p_config.id()
-  assert (newAuthCfgId)
+  authMgr.storeAuthenticationConfig(config)
+  newAuthCfgId = config.id()
+  assert newAuthCfgId
 
 .. _Available_Auth_methods:
 
 Available Authentication methods
 ................................
 
-:term:`Authentication Method`\s are loaded dynamically during authentication
-manager init. The list of Authentication method can vary with QGIS evolution,
-but the original list of available methods is:
+:term:`Authentication Method` libraries are loaded dynamically during
+authentication manager init. The list of Authentication methods can vary
+with QGIS evolution, but the original list of available methods is:
 
 #. ``Basic`` User and password authentication
 #. ``Identity-Cert`` Identity certificate authentication
@@ -194,7 +225,7 @@ section is described how to create a new c++ :term:`Authentication Method`\.
 Populate Authorities
 ....................
 
-.. code-block:: python
+.. testcode:: auth
 
     authMgr = QgsApplication.authManager()
     # add authorities
@@ -221,27 +252,29 @@ A convenience class to pack PKI bundles composed on SslCert, SslKey and CA
 chain is the :class:`QgsPkiBundle <qgis.core.QgsPkiBundle>`
 class. Hereafter a snippet to get password protected:
 
-.. code-block:: python
+.. testcode:: auth
 
   # add alice cert in case of key with pwd
-  boundle = QgsPkiBundle.fromPemPaths( "/path/to/alice-cert.pem",
+  caBundlesList = []  # List of CA bundles
+  bundle = QgsPkiBundle.fromPemPaths( "/path/to/alice-cert.pem",
                                        "/path/to/alice-key_w-pass.pem",
                                        "unlock_pwd",
-                                       "list_of_CAs_to_bundle" )
-  assert boundle is not None
-  assert boundle.isValid()
+                                       caBundlesList )
+  assert bundle is not None
+  # You can check bundle validity by calling:
+  # bundle.isValid()
 
 Refer to :class:`QgsPkiBundle <qgis.core.QgsPkiBundle>` class documentation
 to extract cert/key/CAs from the bundle.
 
 .. _Remove_entry_from_authdb:
 
-Remove entry from authdb
-------------------------
+Remove an entry from authdb
+---------------------------
 We can remove an entry from :term:`Authentication Database` using it's
 ``authcfg`` identifier with the following snippet:
 
-.. code-block:: python
+.. testcode:: auth
 
   authMgr = QgsApplication.authManager()
   authMgr.removeAuthenticationConfig( "authCfg_Id_to_remove" )
@@ -269,17 +302,20 @@ enabled service like a WMS or WFS or to a DB connection.
   <qgis.core.QgsAuthManager.certIdentity>` method supports the following list
   of providers:
 
-  .. code-block:: python
+  .. testcode:: auth
 
-    In [19]: authM = QgsApplication.authManager()
-    In [20]: authM.authMethod("Identity-Cert").supportedDataProviders()
-    Out[20]: ['ows', 'wfs', 'wcs', 'wms', 'postgres']
+    authM = QgsApplication.authManager()
+    print(authM.authMethod("Identity-Cert").supportedDataProviders())
+
+  .. testoutput:: auth
+
+    ['ows', 'wfs', 'wcs', 'wms', 'postgres']
 
 For example, to access a WMS service using stored credentials identified with
 ``authcfg = 'fm1s770'``, we just have to use the ``authcfg`` in the data source
 URL like in the following snippet:
 
-.. code-block:: python
+.. testcode:: auth
 
   authCfg = 'fm1s770'
   quri = QgsDataSourceUri()
@@ -294,6 +330,11 @@ URL like in the following snippet:
   quri.setParam("url", 'https://my_auth_enabled_server_ip/wms')
   rlayer = QgsRasterLayer(str(quri.encodedUri(), "utf-8"), 'states', 'wms')
 
+.. testoutput:: auth
+    :hide:
+
+    WMS(1): Download of capabilities failed: network request update failed for authentication config
+
 In the upper case, the ``wms`` provider will take care to expand ``authcfg``
 URI parameter with credential just before setting the HTTP connection.
 
@@ -305,9 +346,17 @@ URI parameter with credential just before setting the HTTP connection.
 Usually an URI string, built using the :class:`QgsDataSourceURI <qgis.core.QgsDataSourceUri>`
 class, is used to set a data source in the following way:
 
-.. code-block:: python
+.. testcode:: auth
 
+  authCfg = 'fm1s770'
+  quri = QgsDataSourceUri("my WMS uri here")
+  quri.setParam("authcfg", authCfg)
   rlayer = QgsRasterLayer( quri.uri(False), 'states', 'wms')
+
+.. testoutput:: auth
+    :hide:
+
+    WMS(1): Download of capabilities failed: network request update failed for authentication config
 
 .. note::
 
@@ -329,12 +378,13 @@ Other example can be read directly in the QGIS tests upstream as in
 Adapt plugins to use Authentication infrastructure
 ==================================================
 
-Many third party plugins are using httplib2 to create HTTP connections instead
-of integrating with :class:`QgsNetworkAccessManager <qgis.core.QgsNetworkAccessManager>`
+Many third party plugins are using httplib2 or other Python networking libraries to manage HTTP
+connections instead of integrating with :class:`QgsNetworkAccessManager <qgis.core.QgsNetworkAccessManager>`
 and its related Authentication Infrastructure integration.
-To facilitate this integration an helper python function has been created
+
+To facilitate this integration a helper Python function has been created
 called ``NetworkAccessManager``. Its code can be found `here
-<https://github.com/boundlessgeo/qgis-geoserver-plugin/blob/master/geoserverexplorer/geoserver/networkaccessmanager.py#L78>`_.
+<https://github.com/rduivenvoorde/pdokservicesplugin/blob/master/networkaccessmanager.py>`_.
 
 This helper class can be used as in the following snippet:
 
@@ -369,7 +419,7 @@ stored in the :term:`Authentication DB` it is available in the GUI class
 
 and can be used as in the following snippet:
 
-.. code-block:: python
+... testcode:: auth
 
   # create the instance of the QgsAuthConfigSelect GUI hierarchically linked to
   # the widget referred with `parent`
@@ -398,12 +448,13 @@ Authentication utilities is managed by the
 
 and can be used as in the following snippet:
 
-.. code-block:: python
+.. testcode:: auth
 
- # create the instance of the QgsAuthEditorWidgets GUI hierarchically linked to
- # the widget referred with `parent`
- gui = QgsAuthConfigSelect( parent )
- gui.show()
+  # create the instance of the QgsAuthEditorWidgets GUI hierarchically linked to
+  # the widget referred with `parent`
+  parent = QWidget()  # Your GUI parent widget
+  gui = QgsAuthConfigSelect( parent )
+  gui.show()
 
 an integrated example can be found in the related :source:`test
 <tests/src/python/test_qgsauthsystem.py#L80>`.
@@ -421,12 +472,13 @@ A GUI used to manage only authorities is managed by the
 
 and can be used as in the following snippet:
 
-.. code-block:: python
+.. testcode:: auth
 
- # create the instance of the QgsAuthAuthoritiesEditor GUI hierarchically
- #  linked to the widget referred with `parent`
- gui = QgsAuthAuthoritiesEditor( parent )
- gui.show()   
+  # create the instance of the QgsAuthAuthoritiesEditor GUI hierarchically
+  #  linked to the widget referred with `parent`
+  parent = QWidget()  # Your GUI parent widget
+  gui = QgsAuthAuthoritiesEditor( parent )
+  gui.show()
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

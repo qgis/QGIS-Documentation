@@ -1,16 +1,54 @@
 .. index:: Map rendering, Map printing
 
+.. highlight:: python
+   :linenothreshold: 5
+
+.. testsetup:: composer
+
+    iface = start_qgis()
+
+The code snippets on this page need the following imports:
+
+.. testcode:: composer
+
+    import os
+
+    from qgis.core import (
+        QgsGeometry,
+        QgsMapSettings,
+        QgsPrintLayout,
+        QgsMapSettings,
+        QgsMapRendererParallelJob,
+        QgsLayoutItemLabel,
+        QgsLayoutItemLegend,
+        QgsLayoutItemMap,
+        QgsLayoutItemPolygon,
+        QgsLayoutItemScaleBar,
+        QgsLayoutExporter,
+        QgsLayoutItem,
+        QgsLayoutPoint,
+        QgsLayoutSize,
+        QgsUnitTypes,
+        QgsProject,
+        QgsFillSymbol,
+    )
+
+    from qgis.PyQt.QtGui import (
+        QPolygonF,
+        QColor,
+    )
+
+    from qgis.PyQt.QtCore import (
+        QPointF,
+        QRectF,
+        QSize,
+    )
+
 .. _layout:
 
 **************************
 Map Rendering and Printing
 **************************
-
-The code snippets on this page needs the following imports:
-
-.. code-block:: python
-
- import os
 
 .. contents::
    :local:
@@ -24,31 +62,29 @@ output by composing the map with the :class:`QgsLayout <qgis.core.QgsLayout>` cl
 Simple Rendering
 ================
 
-The rendering is done creating a :class:`QgsMapSettings <qgis.core.QgsMapSettings>` object to define the rendering options,
-and then constructing a :class:`QgsMapRendererJob <qgis.core.QgsMapRendererJob>` with those options. The latter is then
+The rendering is done creating a :class:`QgsMapSettings <qgis.core.QgsMapSettings>` object to define the rendering settings,
+and then constructing a :class:`QgsMapRendererJob <qgis.core.QgsMapRendererJob>` with those settings. The latter is then
 used to create the resulting image.
 
 Here's an example:
 
-.. code-block:: python
+.. testcode:: composer
 
  image_location = os.path.join(QgsProject.instance().homePath(), "render.png")
 
- # e.g. vlayer = iface.activeLayer()
- vlayer = QgsProject.instance().mapLayersByName("countries")[0]
- options = QgsMapSettings()
- options.setLayers([vlayer])
- options.setBackgroundColor(QColor(255, 255, 255))
- options.setOutputSize(QSize(800, 600))
- options.setExtent(vlayer.extent())
+ vlayer = iface.activeLayer()
+ settings = QgsMapSettings()
+ settings.setLayers([vlayer])
+ settings.setBackgroundColor(QColor(255, 255, 255))
+ settings.setOutputSize(QSize(800, 600))
+ settings.setExtent(vlayer.extent())
 
- render = QgsMapRendererParallelJob(options)
+ render = QgsMapRendererParallelJob(settings)
 
  def finished():
      img = render.renderedImage()
      # save the image; e.g. img.save("/Users/myuser/render.png","png")
      img.save(image_location, "png")
-     print("saved")
 
  render.finished.connect(finished)
 
@@ -62,10 +98,12 @@ If you have more than one layer and they have a different CRS, the simple
 example above will probably not work: to get the right values from the
 extent calculations you have to explicitly set the destination CRS
 
-.. code-block:: python
 
+.. testcode:: composer
+
+  layers = [iface.activeLayer()]
   settings.setLayers(layers)
-  render.setDestinationCrs(layers[0].crs())
+  settings.setDestinationCrs(layers[0].crs())
 
 .. index:: Output; Using print layout
 
@@ -89,10 +127,10 @@ The central class of the layout is the :class:`QgsLayout <qgis.core.QgsLayout>`
 class, which is derived from the Qt `QGraphicsScene <https://doc.qt.io/qt-5/qgraphicsscene.html>`_
 class. Let us create an instance of it:
 
-.. code-block:: python
+.. testcode:: composer
 
-  p = QgsProject()
-  layout = QgsLayout(p)
+  project = QgsProject()
+  layout = QgsPrintLayout(project)
   layout.initializeDefaults()
 
 Now we can add various elements (map, label, ...) to the layout. All these objects
@@ -103,7 +141,7 @@ Here's a description of some of the main layout items that can be added to a lay
 * map --- this item tells the libraries where to put the map itself. Here we
   create a map and stretch it over the whole paper size
 
-  .. code-block:: python
+  .. testcode:: composer
 
     map = QgsLayoutItemMap(layout)
     layout.addItem(map)
@@ -111,7 +149,7 @@ Here's a description of some of the main layout items that can be added to a lay
 * label --- allows displaying labels. It is possible to modify its font, color,
   alignment and margin
 
-  .. code-block:: python
+  .. testcode:: composer
 
     label = QgsLayoutItemLabel(layout)
     label.setText("Hello world")
@@ -120,7 +158,7 @@ Here's a description of some of the main layout items that can be added to a lay
 
 * legend
 
-  .. code-block:: python
+  .. testcode:: composer
 
     legend = QgsLayoutItemLegend(layout)
     legend.setLinkedMap(map) # map is an instance of QgsLayoutItemMap
@@ -128,7 +166,7 @@ Here's a description of some of the main layout items that can be added to a lay
 
 * scale bar
 
-  .. code-block:: python
+  .. testcode:: composer
 
     item = QgsLayoutItemScaleBar(layout)
     item.setStyle('Numeric') # optionally modify the style
@@ -141,7 +179,7 @@ Here's a description of some of the main layout items that can be added to a lay
 * basic shape
 * nodes based shape
 
-  .. code-block:: python
+  .. testcode:: composer
 
     polygon = QPolygonF()
     polygon.append(QPointF(0.0, 0.0))
@@ -174,7 +212,7 @@ Once an item is added to the layout, it can be moved and resized:
 
 A frame is drawn around each item by default. You can remove it as follows:
 
-.. code-block:: python
+.. testcode:: composer
 
   # for a composer label
   label.setFrameEnabled(False)
@@ -193,9 +231,9 @@ Exporting the layout
 
 To export a layout, the :class:`QgsLayoutExporter <qgis.core.QgsLayoutExporter>` class must be used.
 
-.. code-block:: python
+.. testcode:: composer
 
-   base_path = os.path.join(QgsProject.instance().homePath()
+   base_path = os.path.join(QgsProject.instance().homePath())
    pdf_path = os.path.join(base_path, "output.pdf")
 
    exporter = QgsLayoutExporter(layout)
@@ -213,7 +251,7 @@ configured and enabled, you need to use the :meth:`atlas()
 <qgis.core.QgsLayoutExporter>`) with small adjustments. In the following
 example, the pages are exported to PNG images:
 
-.. code-block:: python
+.. testcode:: composer
 
    exporter.exportToImage(layout.atlas(), base_path, 'png', QgsLayoutExporter.ImageExportSettings())
 

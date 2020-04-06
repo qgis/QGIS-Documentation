@@ -524,14 +524,14 @@ This tab offers some options regarding the behavior of the :ref:`Identify tool <
   numbers (e.g., meters to kilometers)
 * :guilabel:`Preferred distance units`: options are 'Meters', 'Kilometers',
   'Feet', 'Yards', 'Miles', 'Nautical Miles', 'Centimeters', 'Millimeters',
-  'Degrees' or 'Map Units' 
+  'Degrees' or 'Map Units'
 * :guilabel:`Preferred area units`: options are 'Square meters', 'Square
   kilometers', 'Square feet', 'Square yards', 'Square miles', 'Hectares',
   'Acres', 'Square nautical miles', 'Square centimeters', 'Square millimeters',
   'Square degrees' or 'Map Units'
 * :guilabel:`Preferred angle units`: options are 'Degrees', 'Radians',
   'Gon/gradians', 'Minutes of arc', 'Seconds of arc', 'Turns/revolutions',
-  milliradians (SI definition) or mil (NATO/military definition) 
+  milliradians (SI definition) or mil (NATO/military definition)
 
 **Panning and zooming**
 
@@ -1727,6 +1727,9 @@ This is useful for developers while testing new versions of the programs
 without needing to replace the existing ones.
 
 The equivalent environment variable is ``QGIS_OPENCL_PROGRAM_FOLDER``.
+
+
+.. _deploying_organization:
 
 Deploying QGIS within an organization
 -------------------------------------

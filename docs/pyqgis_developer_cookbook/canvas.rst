@@ -1,12 +1,46 @@
 .. index:: Map canvas
 
+.. highlight:: python
+   :linenothreshold: 5
+
+
+.. testsetup:: canvas
+
+    iface = start_qgis()
+
+The code snippets on this page need the following imports if you're outside the pyqgis console:
+
+.. testcode:: canvas
+
+    from qgis.PyQt.QtGui import (
+        QColor,
+    )
+
+    from qgis.PyQt.QtCore import Qt, QRectF
+
+    from qgis.core import (
+        QgsVectorLayer,
+        QgsPoint,
+        QgsPointXY,
+        QgsProject,
+        QgsGeometry,
+        QgsMapRendererJob,
+    )
+
+    from qgis.gui import (
+        QgsMapCanvas,
+        QgsVertexMarker,
+        QgsMapCanvasItem,
+        QgsRubberBand,
+    )
+
+
 .. _canvas:
 
 ********************
 Using the Map Canvas
 ********************
 
-.. warning:: |outofdate|
 
 .. contents::
    :local:
@@ -54,9 +88,9 @@ Embedding Map Canvas
 ====================
 
 Map canvas is a widget like any other Qt widget, so using it is as simple as
-creating and showing it
+creating and showing it.
 
-.. code-block:: python
+.. testcode:: canvas
 
   canvas = QgsMapCanvas()
   canvas.show()
@@ -72,7 +106,7 @@ other widgets (as children of a main window or dialog) and create a layout.
 By default, map canvas has black background and does not use anti-aliasing. To
 set white background and enable anti-aliasing for smooth rendering
 
-.. code-block:: python
+.. testcode:: canvas
 
   canvas.setCanvasColor(Qt.white)
   canvas.enableAntiAliasing(True)
@@ -82,25 +116,23 @@ set white background and enable anti-aliasing for smooth rendering
 
 Now it is time to add some map layers. We will first open a layer and add it to
 the current project. Then we will set the canvas extent and set the list of
-layers for canvas
+layers for the canvas.
 
-.. code-block:: python
+.. testcode:: canvas
 
- path_to_ports_layer = os.path.join(QgsProject.instance().homePath(),
-                                    "data", "ports", "ports.shp")
+  vlayer = QgsVectorLayer('testdata/airports.shp', "Airports layer", "ogr")
+  if not vlayer.isValid():
+      print("Layer failed to load!")
 
- vlayer = QgsVectorLayer(path_to_ports_layer, "Ports layer", "ogr")
- if not vlayer.isValid():
-     print("Layer failed to load!")
+  # add layer to the registry
+  QgsProject.instance().addMapLayer(vlayer)
 
- # add layer to the registry
- QgsProject.instance().addMapLayer(vlayer)
+  # set extent to the extent of our layer
+  canvas.setExtent(vlayer.extent())
 
- # set extent to the extent of our layer
- canvas.setExtent(vlayer.extent())
+  # set the map canvas layer set
+  canvas.setLayers([vlayer])
 
- # set the map canvas layer set
- canvas.setLayers([vlayer])
 
 After executing these commands, the canvas should show the layer you have
 loaded.
@@ -118,9 +150,9 @@ there are two useful canvas item classes for convenience:
 coordinates, so the shape is moved/scaled automatically when the canvas is
 being panned or zoomed.
 
-To show a polyline
+To show a polyline:
 
-.. code-block:: python
+.. testcode:: canvas
 
   r = QgsRubberBand(canvas, False)  # False = not a polygon
   points = [QgsPoint(-100, 45), QgsPoint(10, 60), QgsPoint(120, 45)]
@@ -128,7 +160,7 @@ To show a polyline
 
 To show a polygon
 
-.. code-block:: python
+.. testcode:: canvas
 
   r = QgsRubberBand(canvas, True)  # True = a polygon
   points = [[QgsPointXY(-100, 35), QgsPointXY(10, 50), QgsPointXY(120, 35)]]
@@ -141,7 +173,7 @@ further (optional) rings correspond to holes in the polygon.
 Rubber bands allow some customization, namely to change their color and line
 width
 
-.. code-block:: python
+.. testcode:: canvas
 
   r.setColor(QColor(0, 0, 255))
   r.setWidth(3)
@@ -150,7 +182,7 @@ The canvas items are bound to the canvas scene. To temporarily hide them (and
 show them again), use the :func:`hide` and :func:`show` combo. To completely remove
 the item, you have to remove it from the scene of the canvas
 
-.. code-block:: python
+.. testcode:: canvas
 
   canvas.scene().removeItem(r)
 
@@ -164,7 +196,7 @@ Rubber band can be also used for drawing points, but the
 
 You can use the vertex marker like this:
 
-.. code-block:: python
+.. testcode:: canvas
 
   m = QgsVertexMarker(canvas)
   m.setCenter(QgsPointXY(10,40))
@@ -172,7 +204,7 @@ You can use the vertex marker like this:
 This will draw a red cross on position **[10,45]**. It is possible to customize the
 icon type, size, color and pen width
 
-.. code-block:: python
+.. testcode:: canvas
 
   m.setColor(QColor(0, 255, 0))
   m.setIconSize(5)
@@ -196,7 +228,7 @@ state of the actions -- when a map tool gets activated, its action is marked as
 selected and the action of the previous map tool is deselected. The map tools
 are activated using :meth:`setMapTool() <qgis.gui.QgsMapCanvas.setMapTool>` method.
 
-.. code-block:: python
+.. testcode:: canvas
 
   from qgis.gui import *
   from qgis.PyQt.QtWidgets import QAction, QMainWindow
@@ -255,10 +287,10 @@ You can try the above code in the Python console editor. To invoke the canvas wi
 add the following lines to instantiate the ``MyWnd`` class. They will render the currently
 selected layer on the newly created canvas
 
-.. code-block:: python
+.. testcode:: canvas
 
- w = MyWnd(iface.activeLayer())
- w.show()
+  w = MyWnd(iface.activeLayer())
+  w.show()
 
 .. index:: Map canvas; Custom map tools
 
@@ -278,7 +310,7 @@ clicking and dragging on the canvas. When the rectangle is defined, it prints
 its boundary coordinates in the console. It uses the rubber band elements
 described before to show the selected rectangle as it is being defined.
 
-.. code-block:: python
+.. testcode:: canvas
 
   class RectangleMapTool(QgsMapToolEmitPoint):
     def __init__(self, canvas):
@@ -349,31 +381,45 @@ described before to show the selected rectangle as it is being defined.
 Writing Custom Map Canvas Items
 ===============================
 
-**TODO:**
-   how to create a map canvas item
+Here is an example of a custom canvas item that draws a circle:
+
+.. testcode:: canvas
+
+  class CircleCanvasItem(QgsMapCanvasItem):
+    def __init__(self, canvas):
+      super().__init__(canvas)
+      self.center = QgsPoint(0, 0)
+      self.size   = 100
+
+    def setCenter(self, center):
+      self.center = center
+
+    def center(self):
+      return self.center
+
+    def setSize(self, size):
+      self.size = size
+
+    def size(self):
+      return self.size
+
+    def boundingRect(self):
+      return QRectF(self.center.x() - self.size/2,
+        self.center.y() - self.size/2,
+        self.center.x() + self.size/2,
+        self.center.y() + self.size/2)
+
+    def paint(self, painter, option, widget):
+      path = QPainterPath()
+      path.moveTo(self.center.x(), self.center.y());
+      path.arcTo(self.boundingRect(), 0.0, 360.0)
+      painter.fillPath(path, QColor("red"))
 
 
-.. TODO - custom application example?
-
-.. code-block:: python
-
-  import sys
-  from qgis.core import QgsApplication
-  from qgis.gui import QgsMapCanvas
-
-  def init():
-    a = QgsApplication(sys.argv, True)
-    QgsApplication.setPrefixPath('/home/martin/qgis/inst', True)
-    QgsApplication.initQgis()
-    return a
-
-  def show_canvas(app):
-    canvas = QgsMapCanvas()
-    canvas.show()
-    app.exec_()
-  app = init()
-  show_canvas(app)
-
+  # Using the custom item:
+  item = CircleCanvasItem(iface.mapCanvas())
+  item.setCenter(QgsPointXY(200,200))
+  item.setSize(80)
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.

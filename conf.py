@@ -170,14 +170,14 @@ context = {
     'versions': [ [v, docs_url+v] for v in version_list],
     'supported_languages': [ [l, docs_url+version+'/'+l] for l in supported_languages],
     # 'downloads': [ ['PDF', '/builders.pdf'], ['HTML', '/builders.tgz'] ],
-    
+
     'display_github': True,
     'github_user': 'qgis',
     'github_repo': 'QGIS-Documentation',
     'github_version': 'master/',
     'github_url':'https://github.com/qgis/QGIS-Documentation/edit/master',
     'transifex_url': 'https://www.transifex.com/qgis/qgis-documentation/translate',
-    
+
     'pyqgis_version': pyqgis_version,
     'source_version': source_version,
     'api_version': api_version
@@ -219,19 +219,102 @@ nitpick_ignore = [
 
 
 # Add doctest configuration
+
+doctest_path = ['/usr/share/qgis/python/plugins/', os.path.join(os.getcwd(), 'testdata', 'processing')]
+
+
 doctest_global_setup = '''
 import os
 import sys
+import tempfile
+import shutil
+
+# Copy all cookbook test data into a
+# testdata directory (which is in .gitignore)
+# This is necessary because some test files
+# are modified during the tests and it's annoying
+# to find them changed in git
+try:
+    shutil.rmtree('testdata')
+except:
+    pass
+shutil.copytree('qgis-projects/python_cookbook', 'testdata')
+
+# Prepare environment for QgsApplication
+os.environ['QGIS_AUTH_DB_DIR_PATH'] = tempfile.mkdtemp()
+os.environ['QT_QPA_PLATFORM'] = 'offscreen'
+# For docker:
+if not 'QGIS_CUSTOM_CONFIG_PATH' in os.environ:
+    os.environ['QGIS_CUSTOM_CONFIG_PATH'] = os.environ['QGIS_AUTH_DB_DIR_PATH']
+
+
 from qgis.testing import start_app
+from qgis.testing.mocked import get_iface
+
 def start_qgis():
+
     save_stdout = sys.stdout
     try:
         with open(os.devnull, 'w') as f:
             sys.stdout = f
-            start_app()
+            globals()['QGISAPP'] = start_app()
     finally:
         sys.stdout = save_stdout
     sys.stdout = sys.stderr
+
+    from qgis.core import (
+        QgsProject,
+        QgsVectorLayer,
+        QgsFeature,
+        QgsGeometry,
+        QgsApplication,
+        QgsLayerTreeModel
+    )
+
+    from qgis.gui import (
+        QgsLayerTreeView,
+        QgsMessageBar,
+    )
+
+    from qgis.analysis import QgsNativeAlgorithms
+
+    # Expose the iface for plugins snippets
+    iface = get_iface()
+
+    # Mock activeLayer()
+    iface.activeLayer.return_value = QgsVectorLayer("Point?crs=4326&field=fid:integer&field=name:string", "temporary_points", "memory")
+
+    # Add a feature
+    f = QgsFeature(iface.activeLayer().fields())
+    f.setAttributes([1, 'First feature'])
+    f.setGeometry(QgsGeometry.fromWkt('point( 7 45)'))
+    iface.activeLayer().dataProvider().addFeatures([f])
+
+    # Mock messageBar
+    iface.messageBar.return_value = QgsMessageBar()
+
+    # Mock layerTreeView
+    layertree_view = QgsLayerTreeView()
+    layertree_model = QgsLayerTreeModel(QgsProject.instance().layerTreeRoot())
+    layertree_view.setModel(layertree_model)
+    iface.layerTreeView.return_value = layertree_view
+    iface.layertree_model = layertree_model
+
+    # Init processing plugin
+    import processing
+    QgsApplication.processingRegistry().addProvider(QgsNativeAlgorithms())
+
+    return iface
+
+def dump_tree(root):
+    """Dump the layer tree for testing"""
+
+    def _print_children(parent, indent):
+        print('-' * indent, parent.name(), parent)
+        for c in parent.children():
+            _print_children(c, indent + 1)
+    _print_children(root, 1)
+
 '''
 doctest_test_doctest_blocks = ''
 
@@ -240,12 +323,14 @@ from qgis.core import QgsProject
 QgsProject.instance().clear()
 '''
 
-# Make Sphinx doctest insensitive to object address differences
+# Make Sphinx doctest insensitive to object address differences,
+# also 'output_....' processing alg ids
 import doctest
 import re
 import sphinx.ext.doctest as ext_doctest
 
-ADDRESS_RE = re.compile(r'\b0x[0-9a-f]{1,16}\b')
+
+ADDRESS_RE = re.compile(r'\b0x[0-9a-f]{1,16}\b|_[a-z0-9]{8}_[a-z0-9]{4}_[a-z0-9]{4}_[a-z0-9]{4}_[a-z0-9]{12}')
 
 class BetterDocTestRunner(ext_doctest.SphinxDocTestRunner):
     def __init__(self, checker=None, verbose=None, optionflags=0):
@@ -254,6 +339,9 @@ class BetterDocTestRunner(ext_doctest.SphinxDocTestRunner):
 
 class BetterOutputChecker(doctest.OutputChecker):
     def check_output(self, want, got, optionflags):
+        # Patch to test tasks output (which is in random order)
+        if want.startswith('Random') or got.startswith('Random'):
+            return True
         want = ADDRESS_RE.sub('0x7f00ed991e80', want)
         got = ADDRESS_RE.sub('0x7f00ed991e80', got)
         return doctest.OutputChecker.check_output(self, want, got, optionflags)
