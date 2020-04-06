@@ -48,10 +48,6 @@ The vector :guilabel:`Layer Properties` dialog provides the following sections:
      - :ref:`External plugins <plugins>`:sup:`[2]` tabs
      -
 
-.. only:: html
-
-   |
-
 :sup:`[1]` Also available in the :ref:`Layer styling panel <layer_styling_panel>`
 
 :sup:`[2]` :ref:`External plugins <plugins>` you install can optionally add tabs to this
