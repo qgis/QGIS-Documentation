@@ -1,34 +1,191 @@
 .. index:: Server plugins; Developing, Python; Developing server plugins
 
+.. include:: <isonum.txt>
+
+.. highlight:: python
+   :linenothreshold: 5
+
+.. testsetup:: server
+
+    from qgis.core import (
+        QgsProject,
+        QgsRasterLayer,
+        QgsVectorLayer,
+        QgsApplication,
+        QgsDataSourceUri,
+        QgsLayerTreeLayer,
+    )
+
+    from qgis.server import (
+        QgsServerFilter,
+        QgsAccessControlFilter,
+        QgsServerCacheFilter,
+    )
+
 .. _server_plugins:
 
 ****************************
-QGIS Server Python Plugins
+QGIS Server and Python
 ****************************
 
-.. warning:: |outofdate|
+Introduction
+============
 
-.. contents::
-   :local:
+QGIS Server is three different things:
 
-Python plugins can also run on QGIS Server (see :ref:`label_qgisserver`):
+1. QGIS Server library: a library that provides an API for creating OGC web services
+2. QGIS Server FCGI: a FCGI binary application :file:`qgis_maserv.fcgi` that together with a web server implements a set of OCG services (WMS, WFS, WCS etc.) and OGC APIs (WFS3/OAPIF)
+3. QGIS Development Server: a development server binary application :file:`qgis_mapserver` that implements a set of OCG services (WMS, WFS, WCS etc.) and OGC APIs (WFS3/OAPIF)
 
-* By using the *server interface* (:class:`QgsServerInterface <qgis.server.QgsServerInterface>`) a Python plugin running on the
-  server can alter the behavior of existing core services (**WMS**, **WFS** etc.).
-* With the *server filter interface* (:class:`QgsServerFilter <qgis.server.QgsServerFilter>`) you can change the input
-  parameters, change the generated output or even provide new services.
-* With the *access control interface* (:class:`QgsAccessControlFilter <qgis.server.QgsAccessControlFilter>`) you can apply
-  some access restriction per requests.
+This chapter of the cookbook focuses on the first topic and by explaining the usage of QGIS Server API
+it shows how it is possible to use Python to extend, enhance or customize the server behavior or how to
+use the QGIS Server API to embed QGIS server into another application.
+
+There are a few different ways you can alter the behavior of QGIS Server or extend its
+capabilities to offer new custom services or APIs, these are the main scenarios you
+may face:
+
+* EMBEDDING |rarr| Use QGIS Server API from another Python application
+* STANDALONE |rarr| Run QGIS Server as a standlone WSGI/HTTP service
+* FILTERS |rarr| Enhance/Customize QGIS Server with filter plugins
+* SERVICES |rarr| Add a new *SERVICE*
+* OGC APIs |rarr| Add a new *OGC API*
+
+Embeding and standalone applications require using the QGIS Server Python API directly from
+another Python script or application while the remaining options are better suited for when
+you want to add custom features to a standard QGIS Server binary application (FCGI or
+development server): in this case you'll need to write a Python plugin for the server
+application and register your custom filters, services or APIs.
+
+Server API basics
+=================
+
+The fundamental classes involved in a typical QGIS Server application are:
+
++ :class:`QgsServer <qgis.server.QgsServer>` the server instance (typically a single instance for the whole application life)
++ :class:`QgsServerRequest <qgis.server.QgsServerRequest>` the request object (typically recreated on each request)
++ :class:`QgsServerResponse <qgis.server.QgsServerResponse>` the response object (typically recreated on each request)
++ :meth:`QgsServer.handleRequest(request, response) <qgis.server.QgsServer.handleRequest>` processes the request and populates the response
 
 
-Server Filter Plugins architecture
+The QGIS Server FCGI or development server workflow can be summarized as follows:
+
+.. code-block:: text
+
+    initialize the QgsApplication
+    create the QgsServer
+    the main server loop waits forever for client requests:
+        for each incoming request:
+            create a QgsServerRequest request
+            create a QgsServerResponse response
+            call QgsServer.handleRequest(request, response)
+                filter plugins may be executed
+            send the output to the client
+
+
+Inside the :meth:`QgsServer.handleRequest(request, response) <qgis.server.QgsServer.handleRequest>` method
+the filter plugins callbacks are called and :class:`QgsServerRequest <qgis.server.QgsServerRequest>` and
+:class:`QgsServerResponse <qgis.server.QgsServerResponse>` are made available to the plugins through
+the :class:`QgsServerInterface <qgis.server.QgsServerInterface>`.
+
+.. warning::
+
+    QGIS server classes are not thread safe, you should always use a multiprocessing
+    model or containers when building scalable applications based on QGIS Server API.
+
+
+Standalone or embedding
 ==================================
 
-Server python plugins are loaded once when the FCGI application starts. They
-register one or more :class:`QgsServerFilter <qgis.server.QgsServerFilter>`
-(from this point, you might find useful a quick look to the :api:`server plugins
-API docs <group__server.html>`). Each filter should implement at least one of
-three callbacks:
+For standalone server applications or embedding, you will need
+to use the above mentioned server classes directly, wrapping them up
+into a web server implementation that manages all the HTTP protocol interactions
+with the client.
+
+
+A minimal example of the QGIS Server API usage (without the HTTP part) follows:
+
+.. this snippet crashes the test runner in the Qt internal
+.. method QCoreApplicationPrivate::processCommandLineArguments()
+
+.. code-block:: python
+
+    from qgis.core import QgsApplication
+    from qgis.server import *
+    app = QgsApplication([], False)
+
+    # Create the server instance, it may be a single one that
+    # is reused on multiple requests
+    server = QgsServer()
+
+    # Create the request by specifying the full URL and an optional body
+    # (for example for POST requests)
+    request = QgsBufferServerRequest(
+        'http://localhost:8081/?MAP=/qgis-server/projects/helloworld.qgs' +
+        '&SERVICE=WMS&REQUEST=GetCapabilities')
+
+    # Create a response objects
+    response = QgsBufferServerResponse()
+
+    # Handle the request
+    server.handleRequest(request, response)
+
+    print(response.headers())
+    print(response.body().data().decode('utf8'))
+
+    app.exitQgis()
+
+
+Here is a complete standalone application example developed for the continuous integrations
+testing on QGIS source code repository, it showcases a wide set of different plugin filters
+and authentication schemes (not mean for production because they were developed for testing
+purposes only but still interesting for learning):
+
+https://github.com/qgis/QGIS/blob/master/tests/src/python/qgis_wrapped_server.py
+
+
+
+Server plugins
+==============
+
+Server python plugins are loaded once when the QGIS Server application starts
+and can be used to register filters, services or APIs.
+
+The structure of a server plugin is very similar to their desktop counterpart,
+a :class:`QgsServerInterface <qgis.server.QgsServerInterface>` object is made available to
+the plugins and the plugins can register one or more custom filters, services or APIs
+to the corresponding registry by using one of the methods exposed by the server interface.
+
+
+Server filter plugins
+---------------------
+
+Filters come in three different flavors and they can be instanciated by subclassing
+one of the classes below and by calling the corresponding method of
+:class:`QgsServerInterface <qgis.server.QgsServerInterface>`:
+
+=============== ===================================================================== ======================================================================================
+Filter Type     Base Class                                                            QgsServerInterface registration
+--------------- --------------------------------------------------------------------- --------------------------------------------------------------------------------------
+I/O             :class:`QgsServerFilter <qgis.server.QgsServerFilter>`                :meth:`registerFilter <qgis.server.QgsServerInterface.registerFilter>`
+Access Control  :class:`QgsAccessControlFilter <qgis.server.QgsAccessControlFilter>`  :meth:`registerAccessControl <qgis.server.QgsServerInterface.registerAccessControl>`
+Cache           :class:`QgsServerCacheFilter <qgis.server.QgsServerCacheFilter>`      :meth:`registerServerCache <qgis.server.QgsServerInterface.registerServerCache>`
+=============== ===================================================================== ======================================================================================
+
+
+I/O filters
+~~~~~~~~~~~
+
+I/O filters can modify the server input and output (the request and the response)
+of the core services (WMS, WFS etc.) allowing to do any kind of manipulation
+of the services workflow, it is possible for example to restrict the access to
+selected layers, to inject an XSL stylesheet to the XML response, to add a
+watermark to a generated WMS image and so on.
+
+From this point, you might find useful a quick look to the :api:`server plugins
+API docs <group__server.html>`.
+
+Each filter should implement at least one of three callbacks:
 
 * :meth:`requestReady() <qgis.server.QgsServerFilter.requestReady>`
 * :meth:`responseComplete() <qgis.server.QgsServerFilter.responseComplete>`
@@ -38,28 +195,29 @@ All filters have access to the request/response object (:class:`QgsRequestHandle
 and can manipulate all its properties (input/output) and
 raise exceptions (while in a quite particular way as we’ll see below).
 
-Here is a pseudo code showing a typical server session and when the filter’s callbacks are called:
+Here is the pseudo code showing how the server handles a typical request and when the
+filter’s callbacks are called:
 
-* Get the incoming request
-    * create GET/POST/SOAP request handler
-    * pass request to an instance of :class:`QgsServerInterface <qgis.server.QgsServerInterface>`
-    * call plugins :meth:`requestReady <qgis.server.QgsServerFilter.requestReady>` filters
-    * if there is not a response
-        * if SERVICE is WMS/WFS/WCS
-            * create WMS/WFS/WCS server
-                * call server’s :meth:`executeRequest <qgis.server.QgsService.executeRequest>`
-                  and possibly call :meth:`sendResponse <qgis.server.QgsServerFilter.sendResponse>`
-                  plugin filters when streaming output or store the byte stream output
-                  and content type in the request handler
-        * call plugins :meth:`responseComplete <qgis.server.QgsServerFilter.responseComplete>` filters
-    * call plugins :meth:`sendResponse <qgis.server.QgsServerFilter.sendResponse>` filters
-    * request handler output the response
+.. code-block:: text
 
+    for each incoming request:
+        create GET/POST request handler
+        pass request to an instance of QgsServerInterface
+        call requestReady filters
+        if there is not a response:
+            if SERVICE is WMS/WFS/WCS:
+                create WMS/WFS/WCS service
+                call service’s executeRequest
+                    possibly call sendResponse for each chunk of bytes
+                    sent to the client by a streaming services (WFS)
+            call responseComplete
+            call sendResponse
+        request handler sends the response to the client
 
 The following paragraphs describe the available callbacks in details.
 
 requestReady
-------------
+''''''''''''
 
 This is called when the request is ready: incoming URL and data have been parsed
 and before entering the core services (WMS, WFS etc.) switch, this is the point
@@ -76,10 +234,9 @@ much sense though).
 
 
 sendResponse
-------------
+''''''''''''
 
-
-This is called whenever output is sent to **FCGI** ``stdout`` (and from there, to
+This is called whenever any output is sent to **FCGI** ``stdout`` (and from there, to
 the client), this is normally done after core services have finished their process
 and after responseComplete hook was called, but in a few cases XML can become so
 huge that a streaming XML implementation was needed (WFS GetFeature is one of them),
@@ -101,7 +258,7 @@ is typically also an option,
 viable option in case of streaming services.
 
 responseComplete
-----------------
+''''''''''''''''
 
 This is called once when core services (if hit) finish their process and the
 request is ready to be sent to the client. As discussed above, this is normally
@@ -115,8 +272,8 @@ ideal place to provide new services implementation
 (WPS or custom services) and to perform direct manipulation of the output coming
 from core services (for example to add a watermark upon a WMS image).
 
-Raising exception from a plugin
-===============================
+Raising exceptions from a plugin
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Some work has still to be done on this topic: the current implementation can
 distinguish between handled and unhandled exceptions by setting a
@@ -133,27 +290,30 @@ loop for being handled there.
 .. index:: server plugins; metadata.txt, metadata, metadata.txt
 
 Writing a server plugin
-=======================
+~~~~~~~~~~~~~~~~~~~~~~~
 
 A server plugin is a standard QGIS Python plugin as described in
 :ref:`developing_plugins`, that just provides an additional (or alternative)
 interface: a typical QGIS desktop plugin has access to QGIS application
 through the :class:`QgisInterface <qgis.gui.QgisInterface>` instance, a server
-plugin has also
-access to a :class:`QgsServerInterface <qgis.server.QgsServerInterface>`.
+plugin has only access to a :class:`QgsServerInterface <qgis.server.QgsServerInterface>`
+when it is executed within the QGIS Server application context.
 
-To tell QGIS Server that a plugin has a server interface, a special
+To make QGIS Server aware that a plugin has a server interface, a special
 metadata entry is needed (in `metadata.txt`) ::
 
     server=True
 
-The example plugin discussed here (with many more example filters) is available
-on github: `QGIS HelloServer Example Plugin <https://github.com/elpaso/qgis-helloserver>`_.
-You could also find more examples at https://github.com/elpaso/qgis3-server-vagrant/tree/master/resources/web/plugins 
-or browsing the `QGIS plugins repository <https://plugins.qgis.org/plugins/server>`_.
+.. important::
+
+    Only plugins that have the ``server=True`` metadata set will be loaded and executed by QGIS Server.
+
+The example plugin discussed here (with many more) is available
+on github at https://github.com/elpaso/qgis3-server-vagrant/tree/master/resources/web/plugins,
+a few server plugins are also published in the official `QGIS plugins repository <https://plugins.qgis.org/plugins/server>`_.
 
 Plugin files
-------------
+~~~~~~~~~~~~
 
 Here's the directory structure of our example server plugin
 
@@ -168,30 +328,32 @@ Here's the directory structure of our example server plugin
 .. index:: Plugins; metadata.txt, Metadata
 
 __init__.py
------------
+''''''''''''
+
 This file is required by Python's import system. Also, QGIS Server requires that this
 file contains a :func:`serverClassFactory()` function, which is called when the
 plugin gets loaded into QGIS Server when the server starts. It receives reference to instance of
 :class:`QgsServerInterface <qgis.server.QgsServerInterface>` and must return instance
 of your plugin's class.
-This is how the example plugin :file:`__init__.py` looks like::
+This is how the example plugin :file:`__init__.py` looks like
 
-    # -*- coding: utf-8 -*-
+.. testcode:: server
 
     def serverClassFactory(serverIface):
-        from HelloServer import HelloServerServer
+        from .HelloServer import HelloServerServer
         return HelloServerServer(serverIface)
 
 
 
 HelloServer.py
----------------
+''''''''''''''
 
 This is where the magic happens and this is how magic looks like:
 (e.g. :file:`HelloServer.py`)
 
 
-A server plugin typically consists in one or more callbacks packed into objects called QgsServerFilter.
+A server plugin typically consists in one or more callbacks packed into instances
+of a :class:`QgsServerFilter <qgis.server.QgsServerFilter>`.
 
 Each :class:`QgsServerFilter <qgis.server.QgsServerFilter>` implements one or more
 of the following callbacks:
@@ -201,33 +363,40 @@ of the following callbacks:
 * :meth:`sendResponse() <qgis.server.QgsServerFilter.sendResponse>`
 
 The following example implements a minimal filter which prints *HelloServer!*
-in case the **SERVICE** parameter equals to “HELLO”::
+in case the **SERVICE** parameter equals to “HELLO”
 
-    from qgis.server import *
-    from qgis.core import *
+
+.. testcode:: server
 
     class HelloFilter(QgsServerFilter):
 
         def __init__(self, serverIface):
-            super(HelloFilter, self).__init__(serverIface)
+            super().__init__(serverIface)
+
+        def requestReady(self):
+            QgsMessageLog.logMessage("HelloFilter.requestReady")
+
+        def sendResponse(self):
+            QgsMessageLog.logMessage("HelloFilter.sendResponse")
 
         def responseComplete(self):
+            QgsMessageLog.logMessage("HelloFilter.responseComplete")
             request = self.serverInterface().requestHandler()
             params = request.parameterMap()
             if params.get('SERVICE', '').upper() == 'HELLO':
-                request.clearHeaders()
-                request.setHeader('Content-type', 'text/plain')
-                request.clearBody()
-                request.appendBody('HelloServer!')
+                request.clear()
+                request.setResponseHeader('Content-type', 'text/plain')
+                # Note that the content is of type "bytes"
+                request.appendBody(b'HelloServer!')
 
 
-The filters must be registered into the **serverIface** as in the following example::
+The filters must be registered into the **serverIface** as in the following example:
+
+.. testcode:: server
 
     class HelloServerServer:
         def __init__(self, serverIface):
-            # Save reference to the QGIS server interface
-            self.serverIface = serverIface
-            serverIface.registerFilter( HelloFilter, 100 )
+            serverIface.registerFilter(HelloFilter, 100 )
 
 The second parameter of
 :meth:`registerFilter <qgis.server.QgsServerInterface.registerFilter>` sets a priority which
@@ -236,7 +405,7 @@ invoked first).
 
 By using the three callbacks, plugins can manipulate the input and/or the output
 of the server in many different ways. In every moment, the plugin instance has
-access to the :class:`QgsRequestHandler <qgis.server.QgsRequestHandler>` through 
+access to the :class:`QgsRequestHandler <qgis.server.QgsRequestHandler>` through
 the :class:`QgsServerInterface <qgis.server.QgsServerInterface>`.
 The :class:`QgsRequestHandler <qgis.server.QgsRequestHandler>` class has plenty of
 methods that can be used to alter
@@ -247,16 +416,15 @@ the input parameters before entering the core processing of the server (by using
 The following examples cover some common use cases:
 
 Modifying the input
--------------------
+'''''''''''''''''''
 
 The example plugin contains a test example that changes input parameters coming
 from the query string, in this example a new parameter is injected into the
 (already parsed) ``parameterMap``, this parameter is then visible by core services
 (WMS etc.), at the end of core services processing we check that the parameter
-is still there::
+is still there:
 
-    from qgis.server import *
-    from qgis.core import *
+.. testcode:: server
 
     class ParamsFilter(QgsServerFilter):
 
@@ -272,32 +440,22 @@ is still there::
             request = self.serverInterface().requestHandler()
             params = request.parameterMap( )
             if params.get('TEST_NEW_PARAM') == 'ParamsFilter':
-                QgsMessageLog.logMessage("SUCCESS - ParamsFilter.responseComplete", 'plugin', QgsMessageLog.INFO)
+                QgsMessageLog.logMessage("SUCCESS - ParamsFilter.responseComplete")
             else:
-                QgsMessageLog.logMessage("FAIL    - ParamsFilter.responseComplete", 'plugin', QgsMessageLog.CRITICAL)
+                QgsMessageLog.logMessage("FAIL    - ParamsFilter.responseComplete")
 
 This is an extract of what you see in the log file:
 
 
 .. code-block:: bash
-   :emphasize-lines: 13
+   :emphasize-lines: 6
 
     src/core/qgsmessagelog.cpp: 45: (logMessage) [0ms] 2014-12-12T12:39:29 plugin[0] HelloServerServer - loading filter ParamsFilter
     src/core/qgsmessagelog.cpp: 45: (logMessage) [1ms] 2014-12-12T12:39:29 Server[0] Server plugin HelloServer loaded!
     src/core/qgsmessagelog.cpp: 45: (logMessage) [0ms] 2014-12-12T12:39:29 Server[0] Server python plugins loaded
-    src/mapserver/qgsgetrequesthandler.cpp: 35: (parseInput) [0ms] query string is: SERVICE=HELLO&request=GetOutput
     src/mapserver/qgshttprequesthandler.cpp: 547: (requestStringToParameterMap) [1ms] inserting pair SERVICE // HELLO into the parameter map
-    src/mapserver/qgshttprequesthandler.cpp: 547: (requestStringToParameterMap) [0ms] inserting pair REQUEST // GetOutput into the parameter map
     src/mapserver/qgsserverfilter.cpp: 42: (requestReady) [0ms] QgsServerFilter plugin default requestReady called
-    src/core/qgsmessagelog.cpp: 45: (logMessage) [0ms] 2014-12-12T12:39:29 plugin[0] HelloFilter.requestReady
-    src/mapserver/qgis_map_serv.cpp: 235: (configPath) [0ms] Using default configuration file path: /home/xxx/apps/bin/admin.sld
-    src/mapserver/qgshttprequesthandler.cpp: 49: (setHttpResponse) [0ms] Checking byte array is ok to set...
-    src/mapserver/qgshttprequesthandler.cpp: 59: (setHttpResponse) [0ms] Byte array looks good, setting response...
-    src/core/qgsmessagelog.cpp: 45: (logMessage) [0ms] 2014-12-12T12:39:29 plugin[0] HelloFilter.responseComplete
     src/core/qgsmessagelog.cpp: 45: (logMessage) [0ms] 2014-12-12T12:39:29 plugin[0] SUCCESS - ParamsFilter.responseComplete
-    src/core/qgsmessagelog.cpp: 45: (logMessage) [0ms] 2014-12-12T12:39:29 plugin[0] RemoteConsoleFilter.responseComplete
-    src/mapserver/qgshttprequesthandler.cpp: 158: (sendResponse) [0ms] Sending HTTP response
-    src/core/qgsmessagelog.cpp: 45: (logMessage) [0ms] 2014-12-12T12:39:29 plugin[0] HelloFilter.sendResponse
 
 On the highlighted line the “SUCCESS” string indicates that the plugin passed the test.
 
@@ -307,37 +465,39 @@ request just by changing the **SERVICE** parameter to something different and
 the core service will be skipped, then you can inject your custom results into
 the output and send them to the client (this is explained here below).
 
+.. tip::
+
+    If you really want to implement a custom service it is recommended to subclass
+    :class:`QgsService <qgis.server.QgsService>` and register your service on
+    :meth:`registerFilter <qgis.server.QgsServerInterface.serviceRegistry>` by
+    calling its :meth:`registerService(service) <qgis.server.QgsServiceRegistry.registerService>`
 
 Modifying or replacing the output
----------------------------------
+'''''''''''''''''''''''''''''''''
 
 The watermark filter example shows how to replace the WMS output with a new
 image obtained by adding a watermark image on the top of the WMS image generated
 by the WMS core service:
 
-::
-
-    import os
+.. testcode:: server
 
     from qgis.server import *
-    from qgis.core import *
     from qgis.PyQt.QtCore import *
     from qgis.PyQt.QtGui import *
-
 
     class WatermarkFilter(QgsServerFilter):
 
         def __init__(self, serverIface):
-            super(WatermarkFilter, self).__init__(serverIface)
+            super().__init__(serverIface)
 
         def responseComplete(self):
             request = self.serverInterface().requestHandler()
             params = request.parameterMap( )
             # Do some checks
-            if (request.parameter('SERVICE').upper() == 'WMS' \
-                    and request.parameter('REQUEST').upper() == 'GETMAP' \
+            if (params.get('SERVICE').upper() == 'WMS' \
+                    and params.get('REQUEST').upper() == 'GETMAP' \
                     and not request.exceptionRaised() ):
-                QgsMessageLog.logMessage("WatermarkFilter.responseComplete: image ready {}".format(request.infoFormat()), 'plugin', QgsMessageLog.INFO)
+                QgsMessageLog.logMessage("WatermarkFilter.responseComplete: image ready %s" % request.parameter("FORMAT"))
                 # Get the image
                 img = QImage()
                 img.loadFromData(request.body())
@@ -349,10 +509,11 @@ by the WMS core service:
                 ba = QByteArray()
                 buffer = QBuffer(ba)
                 buffer.open(QIODevice.WriteOnly)
-                img.save(buffer, "PNG")
+                img.save(buffer, "PNG" if "png" in request.parameter("FORMAT") else "JPG")
                 # Set the body
                 request.clearBody()
                 request.appendBody(ba)
+
 
 In this example the **SERVICE** parameter value is checked and if the incoming
 request is a **WMS** **GETMAP** and no exceptions have been set by a previously
@@ -360,15 +521,29 @@ executed plugin or by the core service (WMS in this case), the WMS generated
 image is retrieved from the output buffer and the watermark image is added.
 The final step is to clear the output buffer and replace it with the newly
 generated image. Please note that in a real-world situation we should also check
-for the requested image type instead of returning PNG in any case.
+for the requested image type instead of supporting PNG or JPG only.
 
-Access control plugin
-=====================
+Access control filters
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Access control filters gives the developer a fine-grained control over which layers,
+features and attributes can be accessed, the following callbacks can be implemented
+in an access control filter:
+
++ :meth:`layerFilterExpression(layer) <qgis.server.QgsAccessControlFilter.layerFilterExpression>`
++ :meth:`layerFilterSubsetString(layer) <qgis.server.QgsAccessControlFilter.layerFilterSubsetString>`
++ :meth:`layerPermissions(layer) <qgis.server.QgsAccessControlFilter.layerPermissions>`
++ :meth:`authorizedLayerAttributes(layer, attributes) <qgis.server.QgsAccessControlFilter.authorizedLayerAttributes>`
++ :meth:`allowToEdit(layer, feature) <qgis.server.QgsAccessControlFilter.allowToEdit>`
++ :meth:`cacheKey() <qgis.server.QgsAccessControlFilter.cacheKey>`
+
 
 Plugin files
-------------
+''''''''''''
 
-Here's the directory structure of our example server plugin::
+Here's the directory structure of our example plugin:
+
+.. code-block:: text
 
   PYTHON_PLUGINS_PATH/
     MyAccessControl/
@@ -378,7 +553,7 @@ Here's the directory structure of our example server plugin::
 
 
 __init__.py
------------
+'''''''''''
 
 This file is required by Python's import system. As for all QGIS server plugins, this
 file contains a :func:`serverClassFactory()` function, which is called when the
@@ -387,21 +562,21 @@ plugin gets loaded into QGIS Server at startup. It receives a reference to an in
 of your plugin's class.
 This is how the example plugin :file:`__init__.py` looks like:
 
-.. code:: python
 
-    # -*- coding: utf-8 -*-
+.. testcode:: server
 
     def serverClassFactory(serverIface):
-        from MyAccessControl.AccessControl import AccessControl
-        return AccessControl(serverIface)
+        from MyAccessControl.AccessControl import AccessControlServer
+        return AccessControlServer(serverIface)
 
 
 AccessControl.py
-----------------
+''''''''''''''''
 
-.. code:: python
 
-   class AccessControl(QgsAccessControlFilter):
+.. testcode:: server
+
+   class AccessControlFilter(QgsAccessControlFilter):
 
        def __init__(self, server_iface):
            super(QgsAccessControlFilter, self).__init__(server_iface)
@@ -429,6 +604,13 @@ AccessControl.py
        def cacheKey(self):
            return super(QgsAccessControlFilter, self).cacheKey()
 
+   class AccessControlServer:
+
+      def __init__(self, serverIface):
+         """ Register AccessControlFilter """
+         serverIface.registerAccessControl(AccessControlFilter(self.serverIface), 100)
+
+
 This example gives a full access for everybody.
 
 It's the role of the plugin to know who is logged on.
@@ -438,11 +620,11 @@ the restriction per layer.
 
 
 layerFilterExpression
----------------------
+'''''''''''''''''''''
 
 Used to add an Expression to limit the results, e.g.:
 
-.. code:: python
+.. testcode:: server
 
    def layerFilterExpression(self, layer):
        return "$role = 'user'"
@@ -451,11 +633,11 @@ To limit on feature where the attribute role is equals to "user".
 
 
 layerFilterSubsetString
------------------------
+'''''''''''''''''''''''
 
 Same than the previous but use the ``SubsetString`` (executed in the database)
 
-.. code:: python
+.. testcode:: server
 
    def layerFilterSubsetString(self, layer):
        return "role = 'user'"
@@ -464,7 +646,7 @@ To limit on feature where the attribute role is equals to "user".
 
 
 layerPermissions
-----------------
+''''''''''''''''
 
 Limit the access to the layer.
 
@@ -482,7 +664,7 @@ Return an object of type :meth:`LayerPermissions
 
 Example:
 
-.. code:: python
+.. testcode:: server
 
    def layerPermissions(self, layer):
        rights = QgsAccessControlFilter.LayerPermissions()
@@ -494,7 +676,7 @@ To limit everything on read only access.
 
 
 authorizedLayerAttributes
--------------------------
+'''''''''''''''''''''''''
 
 Used to limit the visibility of a specific subset of attribute.
 
@@ -502,7 +684,7 @@ The argument attribute return the current set of visible attributes.
 
 Example:
 
-.. code:: python
+.. testcode:: server
 
    def authorizedLayerAttributes(self, layer, attributes):
        return [a for a in attributes if a != "role"]
@@ -511,7 +693,7 @@ To hide the 'role' attribute.
 
 
 allowToEdit
------------
+'''''''''''
 
 This is used to limit the editing on a subset of features.
 
@@ -519,7 +701,8 @@ It is used in the ``WFS-Transaction`` protocol.
 
 Example:
 
-.. code:: python
+.. testcode:: server
+
 
    def allowToEdit(self, layer, feature):
        return feature.attribute('role') == 'user'
@@ -529,11 +712,155 @@ with the value user.
 
 
 cacheKey
---------
+''''''''
 
 QGIS server maintain a cache of the capabilities then to have a cache
 per role you can return the role in this method. Or return ``None``
 to completely disable the cache.
+
+
+Custom services
+---------------------
+
+In QGIS Server, core services such as WMS, WFS and WCS are implemented as subclasses of
+:class:`QgsService <qgis.server.QgsService>`.
+
+To implemented a new service that will be executed when the query string parameter ``SERVICE``
+matches the service name, you can implemented your own :class:`QgsService <qgis.server.QgsService>`
+and register your service on the :meth:`serviceRegistry <qgis.server.QgsServerInterface.serviceRegistry>` by
+calling its :meth:`registerService(service) <qgis.server.QgsServiceRegistry.registerService>`.
+
+Here is an example of a custom service named CUSTOM:
+
+.. testcode:: server
+
+    from qgis.server import QgsService
+    from qgis.core import QgsMessageLog
+
+    class CustomServiceService(QgsService):
+
+        def __init__(self):
+            QgsService.__init__(self)
+
+        def name(self):
+            return "CUSTOM"
+
+        def version(self):
+            return "1.0.0"
+
+        def allowMethod(method):
+            return True
+
+        def executeRequest(self, request, response, project):
+            response.setStatusCode(200)
+            QgsMessageLog.logMessage('Custom service executeRequest')
+            response.write("Custom service executeRequest")
+
+
+    class CustomService():
+
+        def __init__(self, serverIface):
+            serverIface.serviceRegistry().registerService(CustomServiceService())
+
+
+Custom APIs
+---------------------
+
+In QGIS Server, core OGC APIs such OAPIF (aka WFS3) are implemented as collections of
+:class:`QgsServerOgcApiHandler <qgis.server.QgsServerOgcApiHandler>` subclasses that
+are registered to an instance of :class:`QgsServerOgcApi <qgis.server.QgsServerOgcApi>`
+(or it's parent class :class:`QgsServerApi <qgis.server.QgsServerApi>`).
+
+To implemented a new API that will be executed when the url path matches
+a certain URL, you can implemented your own :class:`QgsServerOgcApiHandler <qgis.server.QgsServerOgcApiHandler>`
+instances, add them to an :class:`QgsServerOgcApi <qgis.server.QgsServerOgcApi>` and register
+the API on the :meth:`serviceRegistry <qgis.server.QgsServerInterface.serviceRegistry>` by
+calling its :meth:`registerApi(api) <qgis.server.QgsServiceRegistry.registerApi>`.
+
+Here is an example of a custom API that will be executed when the URL contains ``/customapi``:
+
+.. testcode:: server
+
+    import json
+    import os
+
+    from qgis.PyQt.QtCore import QBuffer, QIODevice, QTextStream, QRegularExpression
+    from qgis.server import (
+        QgsServiceRegistry,
+        QgsService,
+        QgsServerFilter,
+        QgsServerOgcApi,
+        QgsServerQueryStringParameter,
+        QgsServerOgcApiHandler,
+    )
+
+    from qgis.core import (
+        QgsMessageLog,
+        QgsJsonExporter,
+        QgsCircle,
+        QgsFeature,
+        QgsPoint,
+        QgsGeometry,
+    )
+
+
+    class CustomApiHandler(QgsServerOgcApiHandler):
+
+        def __init__(self):
+            super(CustomApiHandler, self).__init__()
+            self.setContentTypes([QgsServerOgcApi.HTML, QgsServerOgcApi.JSON])
+
+        def path(self):
+            return QRegularExpression("/customapi")
+
+        def operationId(self):
+            return "CustomApiXYCircle"
+
+        def summary(self):
+            return "Creates a circle around a point"
+
+        def description(self):
+            return "Creates a circle around a point"
+
+        def linkTitle(self):
+            return "Custom Api XY Circle"
+
+        def linkType(self):
+            return QgsServerOgcApi.data
+
+        def handleRequest(self, context):
+            """Simple Circle"""
+
+            values = self.values(context)
+            x = values['x']
+            y = values['y']
+            r = values['r']
+            f = QgsFeature()
+            f.setAttributes([x, y, r])
+            f.setGeometry(QgsCircle(QgsPoint(x, y), r).toCircularString())
+            exporter = QgsJsonExporter()
+            self.write(json.loads(exporter.exportFeature(f)), context)
+
+        def templatePath(self, context):
+            # The template path is used to serve HTML content
+            return os.path.join(os.path.dirname(__file__), 'circle.html')
+
+        def parameters(self, context):
+            return [QgsServerQueryStringParameter('x', True, QgsServerQueryStringParameter.Type.Double, 'X coordinate'),
+                    QgsServerQueryStringParameter(
+                        'y', True, QgsServerQueryStringParameter.Type.Double, 'Y coordinate'),
+                    QgsServerQueryStringParameter('r', True, QgsServerQueryStringParameter.Type.Double, 'radius')]
+
+
+    class CustomApi():
+
+        def __init__(self, serverIface):
+            api = QgsServerOgcApi(serverIface, '/customapi',
+                                'custom api', 'a custom api', '1.1')
+            handler = CustomApiHandler()
+            api.registerHandler(handler)
+            serverIface.serviceRegistry().registerApi(api)
+
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

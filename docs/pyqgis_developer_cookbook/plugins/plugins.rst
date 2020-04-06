@@ -229,7 +229,7 @@ plugin gets loaded into QGIS. It receives a reference to the instance of
 the :file:`mainplugin.py` --- in our case it's called ``TestPlugin`` (see below).
 This is how :file:`__init__.py` should look like
 
-.. code-block:: python
+.. testcode:: plugins
 
   def classFactory(iface):
     from .mainPlugin import TestPlugin
@@ -317,7 +317,7 @@ Adding your plugin menu to one of those predefined method is recommended to
 keep consistency in how plugin entries are organized. However, you can add your
 custom menu group directly to the menu bar, as the next example demonstrates:
 
-.. code-block:: python
+.. testcode:: plugins
 
     def initGui(self):
         self.menu = QMenu(self.iface.mainWindow())

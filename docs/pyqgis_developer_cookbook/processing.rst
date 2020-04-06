@@ -1,6 +1,18 @@
 .. index:: Plugins; Processing algorithm
 .. _processing_plugin:
 
+.. highlight:: python
+   :linenothreshold: 5
+
+
+.. Tests are skipped because they fail to import from processing_provider under Travis CI
+.. everything runs fine when testing locally with make -f docker.mk doctest
+
+.. testsetup:: processing
+
+    iface = start_qgis()
+
+
 ****************************
 Writing a Processing plugin
 ****************************
@@ -8,7 +20,7 @@ Writing a Processing plugin
 .. contents::
    :local:
 
-Depending on the kind of plugin that you are going to develop, it might be better
+Depending on the kind of plugin that you are going to develop, it might be a better
 option to add its functionality as a Processing algorithm (or a set of them).
 That would provide a better integration within QGIS, additional functionality (since
 it can be run in the components of Processing, such as the modeler or the batch
@@ -46,26 +58,26 @@ If you want to add your existing plugin to Processing, you need to add some code
 #. In the Python file where your plugin is setup with the ``initGui`` method,
    you need to adapt some lines like this:
 
-   .. code-block:: python
+   .. testcode:: processing
+        :skipif: True
 
-    from qgis.core import QgsApplication
-    from .processing_provider.provider import Provider
+        from qgis.core import QgsApplication
+        from processing_provider.provider import Provider
 
+        class YourPluginName():
 
-    class YourPluginName():
+            def __init__(self):
+                self.provider = None
 
-        def __init__(self):
-            self.provider = None
+            def initProcessing(self):
+                self.provider = Provider()
+                QgsApplication.processingRegistry().addProvider(self.provider)
 
-        def initProcessing(self):
-            self.provider = Provider()
-            QgsApplication.processingRegistry().addProvider(self.provider)
+            def initGui(self):
+                self.initProcessing()
 
-        def initGui(self):
-            self.initProcessing()
-
-        def unload(self):
-            QgsApplication.processingRegistry().removeProvider(self.provider)
+            def unload(self):
+                QgsApplication.processingRegistry().removeProvider(self.provider)
 
 #. You can create a folder :file:`processing_provider` with three files in it:
 
@@ -74,11 +86,12 @@ If you want to add your existing plugin to Processing, you need to add some code
    * :file:`provider.py` which will create the Processing provider and expose
      your algorithms.
 
-     .. code-block:: python
+     .. testcode:: processing
+      :skipif: True
 
       from qgis.core import QgsProcessingProvider
 
-      from .example_processing_algorithm import ExampleProcessingAlgorithm
+      from processing_provider.example_processing_algorithm import ExampleProcessingAlgorithm
 
 
       class Provider(QgsProcessingProvider):

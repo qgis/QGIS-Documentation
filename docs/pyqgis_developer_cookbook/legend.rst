@@ -1,4 +1,34 @@
-.. _projectpy:
+
+.. highlight:: python
+   :linenothreshold: 5
+
+
+.. testsetup:: legend
+
+    from qgis.core import (
+        QgsProject,
+        QgsVectorLayer,
+    )
+
+    iface = start_qgis()
+
+    # Load the countries layer
+    if not QgsProject.instance().mapLayersByName("countries"):
+        vlayer = QgsVectorLayer("/usr/share/qgis/resources/data/world_map.gpkg|layerName=countries", "countries", "ogr")
+        assert vlayer.isValid()
+        QgsProject.instance().addMapLayers([vlayer])
+
+The code snippets on this page need the following imports if you're outside the pyqgis console:
+
+.. testcode:: legend
+
+    from qgis.core import (
+        QgsProject,
+        QgsVectorLayer,
+    )
+
+
+.. _legendpy:
 
 *************************************
 Accessing the Table Of Contents (TOC)
@@ -7,15 +37,6 @@ Accessing the Table Of Contents (TOC)
 .. contents::
    :local:
 
-If you’re outside the pyqgis console, the code snippets on this page need the
-following imports:
-
-.. testcode::
-
-   from qgis.core import (QgsProject,
-                          QgsLayerTreeGroup,
-                          QgsLayerTreeLayer,
-                          )
 
 You can use different classes to access all the loaded layers in the TOC and
 use them to retrieve information:
@@ -35,31 +56,40 @@ and use its methods to get the loaded layers.
 The main method is :meth:`mapLayers() <qgis.core.QgsProject.mapLayers>`. It will
 return a dictionary of the loaded layers:
 
-.. code-block:: python
 
-  d = QgsProject.instance().mapLayers()
-  d
-  {'ne_10m_populated_places_82a2e342_f2a0_4496_b5bc_fdd5a2bea4d8': <qgis._core.QgsVectorLayer object at 0x7f1e98c438b8>, 'countries_d0c46c9f_2bd6_4745_9bbd_5bf265500431': <qgis._core.QgsVectorLayer object at 0x7f1e98c43828>, 'regions_77909407_0815_4c37_96e3_19e9f2aa2657': <qgis._core.QgsVectorLayer object at 0x7f1e98c43678>}
+.. testcode:: legend
+
+  layers = QgsProject.instance().mapLayers()
+  print(layers)
+
+.. testoutput:: legend
+
+  {'countries_89ae1b0f_f41b_4f42_bca4_caf55ddbe4b6': <QgsMapLayer: 'countries' (ogr)>}
 
 The dictionary ``keys`` are the unique layer ids while the ``values`` are the
 related objects.
 
 It is now straightforward to obtain any other information about the layers:
 
-.. code-block:: python
+.. testcode:: legend
 
   # list of layer names using list comprehension
   l = [layer.name() for layer in QgsProject.instance().mapLayers().values()]
   # dictionary with key = layer name and value = layer object
-  d = {}
+  layers_list = {}
   for l in QgsProject.instance().mapLayers().values():
-    d[l.name()] = l
-  d
-  {'ne_10m_populated_places': <qgis._core.QgsVectorLayer object at 0x7f1e98c438b8>, 'regions': <qgis._core.QgsVectorLayer object at 0x7f1e98c43678>, 'countries': <qgis._core.QgsVectorLayer object at 0x7f1e98c43828>}
+    layers_list[l.name()] = l
+
+  print(layers_list)
+
+.. testoutput:: legend
+
+  {'countries': <QgsMapLayer: 'countries' (ogr)>}
+
 
 You can also query the TOC using the name of the layer:
 
-.. code-block:: python
+.. testcode:: legend
 
     country_layer = QgsProject.instance().mapLayersByName("countries")[0]
 
@@ -82,13 +112,13 @@ and layer nodes (:class:`QgsLayerTreeLayer <qgis.core.QgsLayerTreeLayer>`).
 The project layer tree can be accessed easily with the method :meth:`layerTreeRoot() <qgis.core.QgsProject.layerTreeRoot>`
 of the :class:`QgsProject <qgis.core.QgsProject>` class:
 
-.. code-block:: python
+.. testcode:: legend
 
     root = QgsProject.instance().layerTreeRoot()
 
 ``root`` is a group node and has *children*:
 
-.. code-block:: python
+.. testcode:: legend
 
     root.children()
 
@@ -97,15 +127,18 @@ from their own direct parent.
 
 We can retrieve one of the children:
 
-.. code-block:: python
+.. testcode:: legend
 
     child0 = root.children()[0]
-    child0
-    <qgis._core.QgsLayerTreeGroup object at 0x7f1e1ea54168>
+    print(child0)
+
+.. testoutput:: legend
+
+    <qgis._core.QgsLayerTreeLayer object at 0x7f1e1ea54168>
 
 Layers can also be retrieved using their (unique) ``id``:
 
-.. code-block:: python
+.. testcode:: legend
 
     ids = root.findLayerIds()
     # access the first layer of the ids list
@@ -113,7 +146,7 @@ Layers can also be retrieved using their (unique) ``id``:
 
 And groups can also be searched using their names:
 
-.. code-block:: python
+.. testcode:: legend
 
     root.findGroup('Group Name')
 
@@ -121,12 +154,15 @@ And groups can also be searched using their names:
 :class:`QgsLayerTreeGroup <qgis.core.QgsLayerTreeGroup>` has many other useful
 methods that can be used to obtain more information about the TOC:
 
-.. code-block:: python
+.. testcode:: legend
 
     # list of all the checked layers in the TOC
-    cl = root.checkedLayers()
-    cl
-    [<qgis._core.QgsVectorLayer object at 0x7f1e98c43678>]
+    checked_layers = root.checkedLayers()
+    print(checked_layers)
+
+.. testoutput:: legend
+
+    [<QgsMapLayer: 'countries' (ogr)>]
 
 Now let’s add some layers to the project’s layer tree. There are two ways of doing
 that:
@@ -135,7 +171,7 @@ that:
    or :meth:`insertLayer() <qgis.core.QgsLayerTreeGroup.insertLayer>`
    functions:
 
-   .. code-block:: python
+   .. testcode:: legend
 
       # create a temporary layer
       layer1 = QgsVectorLayer("path_to_layer", "Layer 1", "memory")
@@ -147,7 +183,7 @@ that:
 #. **Implicit addition**: since the project's layer tree is connected to the
    layer registry it is enough to add a layer to the map layer registry:
 
-   .. code-block:: python
+   .. testcode:: legend
 
        QgsProject.instance().addMapLayer(layer1)
 
@@ -155,19 +191,24 @@ that:
 You can switch between :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` and
 :class:`QgsLayerTreeLayer <qgis.core.QgsLayerTreeLayer>` easily:
 
-.. code-block:: python
 
-    node_layer = root.findLayer(layer.id())
-    node_layer
-    <qgis._core.QgsLayerTreeLayer object at 0x7fecceb46ca8>
-    node_layer.layer()
-    <qgis._core.QgsVectorLayer object at 0x7fecceb46c18>
+.. testcode:: legend
+
+    node_layer = root.findLayer(country_layer.id())
+    print("Layer node:", node_layer)
+    print("Map layer:", node_layer.layer())
+
+.. testoutput:: legend
+
+    Layer node: <qgis._core.QgsLayerTreeLayer object at 0x7fecceb46ca8>
+    Map layer: <QgsMapLayer: 'countries' (ogr)>
+
 
 Groups can be added with the :meth:`addGroup() <qgis.core.QgsLayerTreeGroup.addGroup>`
 method. In the example below, the former will add a group to the end of the TOC
 while for the latter you can add another group within an existing one:
 
-.. code-block:: python
+.. testcode:: legend
 
     node_group1 = root.addGroup('Simple Group')
     # add a sub-group to Simple Group
@@ -182,7 +223,7 @@ Moving an existing node is done in three steps:
 #. moving the cloned node to the desired position
 #. deleting the original node
 
-.. code-block:: python
+.. testcode:: legend
 
     # clone the group
     cloned_group1 = node_group1.clone()
@@ -193,10 +234,10 @@ Moving an existing node is done in three steps:
 
 It is a little bit more *complicated* to move a layer around in the legend:
 
-.. code-block:: python
+.. testcode:: legend
 
     # get a QgsVectorLayer
-    vl = QgsProject.instance().mapLayersByName("layer_name")[0]
+    vl = QgsProject.instance().mapLayersByName("countries")[0]
     # create a QgsLayerTreeLayer object from vl by its id
     myvl = root.findLayer(vl.id())
     # clone the myvl QgsLayerTreeLayer object
@@ -210,16 +251,16 @@ It is a little bit more *complicated* to move a layer around in the legend:
 
 or moving it to an existing group:
 
-.. code-block:: python
+.. testcode:: legend
 
     # get a QgsVectorLayer
-    vl = QgsProject.instance().mapLayersByName("layer_name")[0]
+    vl = QgsProject.instance().mapLayersByName("countries")[0]
     # create a QgsLayerTreeLayer object from vl by its id
     myvl = root.findLayer(vl.id())
     # clone the myvl QgsLayerTreeLayer object
     myvlclone = myvl.clone()
     # create a new group
-    group1 = root.addGroup('Group1')
+    group1 = root.addGroup("Group1")
     # get the parent. If None (layer is not in group) returns ''
     parent = myvl.parent()
     # move the cloned layer to the top (0)
@@ -230,15 +271,17 @@ or moving it to an existing group:
 
 Some other methods that can be used to modify the groups and layers:
 
-.. code-block:: python
+.. testcode:: legend
 
+    node_group1 = root.findGroup("Group1")
     # change the name of the group
     node_group1.setName("Group X")
+    node_layer2 = root.findLayer(country_layer.id())
     # change the name of the layer
-    node_layer2.setLayerName("Layer X")
+    node_layer2.setName("Layer X")
     # change the visibility of a layer
-    node_group1.setVisible(True)
-    node_layer2.setVisible(False)
+    node_group1.setItemVisibilityChecked(True)
+    node_layer2.setItemVisibilityChecked(False)
     # expand/collapse the group view
     node_group1.setExpanded(True)
     node_group1.setExpanded(False)

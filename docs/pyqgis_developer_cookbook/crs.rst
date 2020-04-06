@@ -1,22 +1,29 @@
+
+.. highlight:: python
+   :linenothreshold: 5
+
+.. testsetup:: crs
+
+    iface = start_qgis()
+
+
+The code snippets on this page need the following imports if you're outside the pyqgis console:
+
+.. testcode:: crs
+
+    from qgis.core import (
+        QgsCoordinateReferenceSystem,
+        QgsCoordinateTransform,
+        QgsProject,
+        QgsPointXY,
+    )
+
 .. _crs:
 
 *******************
 Projections Support
 *******************
 
-.. contents::
-   :local:
-
-If you're outside the pyqgis console, the code snippets on this page need the
-following imports:
-
-.. testcode::
-
-   from qgis.core import (QgsCoordinateReferenceSystem,
-                          QgsCoordinateTransform,
-                          QgsProject,
-                          QgsPointXY,
-                          )
 
 .. index:: Coordinate reference systems
 
@@ -29,23 +36,25 @@ class. Instances of this class can be created in several different ways:
 
 * specify CRS by its ID
 
-  .. testcode::
+  .. testcode:: crs
 
-     # PostGIS SRID 4326 is allocated for WGS84
-     crs = QgsCoordinateReferenceSystem(4326, QgsCoordinateReferenceSystem.PostgisCrsId)
+     # EPSG 4326 is allocated for WGS84
+     crs = QgsCoordinateReferenceSystem("EPSG:4326")
      assert crs.isValid()
 
-  QGIS uses three different IDs for every reference system:
+  QGIS supports different CRS identifiers with the following formats:
 
-  * :attr:`InternalCrsId <qgis.core.QgsCoordinateReferenceSystem.InternalCrsId>` --- ID used in the internal QGIS database.
-  * :attr:`PostgisCrsId <qgis.core.QgsCoordinateReferenceSystem.PostgisCrsId>` --- ID used in PostGIS databases.
-  * :attr:`EpsgCrsId <qgis.core.QgsCoordinateReferenceSystem.EpsgCrsId>` --- ID assigned by the EPSG organization.
+  * ``EPSG:<code>`` --- ID assigned by the EPSG organization - handled with :meth:`createFromOgcWms() <qgis.core.QgsCoordinateReferenceSystem.createFromOgcWmsCrs>`
+  * ``POSTGIS:<srid>``--- ID used in PostGIS databases - handled with :meth:`createFromSrid() <qgis.core.QgsCoordinateReferenceSystem.createFromSrid>`
+  * ``INTERNAL:<srsid`` --- ID used in the internal QGIS database - handled with :meth:`createFromSrsId() <qgis.core.QgsCoordinateReferenceSystem.createFromSrsId>`
+  * ``PROJ:<proj>`` - handled with :meth:`createFromProj() <qgis.core.QgsCoordinateReferenceSystem.createFromProj>`
+  * ``WKT:<wkt>`` - handled with :meth:`createFromWkt() <qgis.core.QgsCoordinateReferenceSystem.createFromWkt>`
 
-  If not specified otherwise with the second parameter, PostGIS SRID is used by default.
+If no prefix is specified, WKT definition is assumed.
 
 * specify CRS by its well-known text (WKT)
 
-  .. testcode::
+  .. testcode:: crs
 
      wkt = 'GEOGCS["WGS84", DATUM["WGS84", SPHEROID["WGS84", 6378137.0, 298.257223563]],' \
            'PRIMEM["Greenwich", 0.0], UNIT["degree",0.017453292519943295],' \
@@ -57,10 +66,10 @@ class. Instances of this class can be created in several different ways:
   initialize it. In the following example we use a Proj string to initialize the
   projection.
 
-  .. testcode::
+  .. testcode:: crs
 
      crs = QgsCoordinateReferenceSystem()
-     crs.createFromProj4("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs")
+     crs.createFromProj("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs")
      assert crs.isValid()
 
 It's wise to check whether creation (i.e. lookup in the database) of the CRS
@@ -77,16 +86,16 @@ developing a plugin you do not care: everything is already set up for you.
 
 Accessing spatial reference system information:
 
-.. testcode::
+.. testcode:: crs
 
-   crs = QgsCoordinateReferenceSystem(4326)
+   crs = QgsCoordinateReferenceSystem("EPSG:4326")
 
    print("QGIS CRS ID:", crs.srsid())
    print("PostGIS SRID:", crs.postgisSrid())
    print("Description:", crs.description())
    print("Projection Acronym:", crs.projectionAcronym())
    print("Ellipsoid Acronym:", crs.ellipsoidAcronym())
-   print("Proj String:", crs.toProj4())
+   print("Proj String:", crs.toProj())
    # check whether it's geographic or projected coordinate system
    print("Is geographic:", crs.isGeographic())
    # check type of map units in this CRS (values defined in QGis::units enum)
@@ -94,7 +103,7 @@ Accessing spatial reference system information:
 
 Output:
 
-.. testoutput::
+.. testoutput:: crs
 
    QGIS CRS ID: 3452
    PostGIS SRID: 4326
@@ -119,11 +128,12 @@ instance with them and the current project. Then just repeatedly call
 the transformation. By default it does forward transformation, but it is capable
 to do also inverse transformation.
 
-.. testcode::
+.. testcode:: crs
 
-   crsSrc = QgsCoordinateReferenceSystem(4326)    # WGS 84
-   crsDest = QgsCoordinateReferenceSystem(32633)  # WGS 84 / UTM zone 33N
-   xform = QgsCoordinateTransform(crsSrc, crsDest, QgsProject.instance())
+   crsSrc = QgsCoordinateReferenceSystem("EPSG:4326")    # WGS 84
+   crsDest = QgsCoordinateReferenceSystem("EPSG:32633")  # WGS 84 / UTM zone 33N
+   transformContext = QgsProject.instance().transformContext()
+   xform = QgsCoordinateTransform(crsSrc, crsDest, transformContext)
 
    # forward transformation: src -> dest
    pt1 = xform.transform(QgsPointXY(18,5))
@@ -135,7 +145,7 @@ to do also inverse transformation.
 
 Output:
 
-.. testoutput::
+.. testoutput:: crs
 
    Transformed point: <QgsPointXY: POINT(832713.79873844375833869 553423.98688333143945783)>
    Transformed back: <QgsPointXY: POINT(18 5)>

@@ -1,5 +1,28 @@
 .. index:: Tasks
 
+.. highlight:: python
+   :linenothreshold: 5
+
+
+.. testsetup:: tasks
+
+    iface = start_qgis()
+
+The code snippets on this page need the following imports if you're outside the pyqgis console:
+
+.. testcode:: tasks
+
+    from qgis.core import (
+      QgsProcessingContext,
+      QgsTaskManager,
+      QgsTask,
+      QgsProcessingAlgRunnerTask,
+      Qgis,
+      QgsProcessingFeedback,
+      QgsApplication,
+      QgsMessageLog,
+    )
+
 .. _tasks:
 
 ******************************************
@@ -29,22 +52,36 @@ There are several ways to create a QGIS task:
 
 * Create your own task by extending :class:`QgsTask <qgis.core.QgsTask>`
 
-  .. code-block:: python
+  .. testcode:: tasks
 
     class SpecialisedTask(QgsTask):
+        pass
 
 * Create a task from a function
 
-  .. code-block:: python
+  .. testcode:: tasks
 
-    QgsTask.fromFunction('heavy function', heavyFunction,
+    def heavyFunction():
+        # Some CPU intensive processing ...
+        pass
+
+    def workdone():
+        # ... do something useful with the results
+        pass
+
+    task = QgsTask.fromFunction('heavy function', heavyFunction,
                          onfinished=workdone)
 
 * Create a task from a processing algorithm
 
-  .. code-block:: python
+  .. testcode:: tasks
 
-    QgsProcessingAlgRunnerTask('native:buffer', params, context,
+    params = dict()
+    context = QgsProcessingContext()
+    feedback = QgsProcessingFeedback()
+
+    buffer_alg = QgsApplication.instance().processingRegistry().algorithmById('native:buffer')
+    task = QgsProcessingAlgRunnerTask(buffer_alg, params, context,
                                feedback)
 
 .. warning::
@@ -97,6 +134,8 @@ Several instances of ``RandomIntegerSumTask`` (with subtasks) are generated
 and added to the task manager, demonstrating two types of
 dependencies.
 
+.. this snippet crashes the test runner on self.exception = Exception('bad value!')
+
 .. code-block:: python
 
   import random
@@ -110,12 +149,14 @@ dependencies.
 
   class RandomIntegerSumTask(QgsTask):
       """This shows how to subclass QgsTask"""
+
       def __init__(self, description, duration):
           super().__init__(description, QgsTask.CanCancel)
           self.duration = duration
           self.total = 0
           self.iterations = 0
           self.exception = None
+
       def run(self):
           """Here you implement your heavy lifting.
           Should periodically test for isCanceled() to gracefully
@@ -145,6 +186,7 @@ dependencies.
                   self.exception = Exception('bad value!')
                   return False
           return True
+
       def finished(self, result):
           """
           This function is automatically called when the task has
@@ -157,8 +199,8 @@ dependencies.
           """
           if result:
               QgsMessageLog.logMessage(
-                  'Task "{name}" completed\n' \
-                  'Total: {total} (with {iterations} '\
+                  'RandomTask "{name}" completed\n' \
+                  'RandomTotal: {total} (with {iterations} '\
                 'iterations)'.format(
                     name=self.description(),
                     total=self.total,
@@ -167,21 +209,22 @@ dependencies.
           else:
               if self.exception is None:
                   QgsMessageLog.logMessage(
-                      'Task "{name}" not successful but without '\
+                      'RandomTask "{name}" not successful but without '\
                       'exception (probably the task was manually '\
                       'canceled by the user)'.format(
                           name=self.description()),
                       MESSAGE_CATEGORY, Qgis.Warning)
               else:
                   QgsMessageLog.logMessage(
-                      'Task "{name}" Exception: {exception}'.format(
+                      'RandomTask "{name}" Exception: {exception}'.format(
                           name=self.description(),
                           exception=self.exception),
                       MESSAGE_CATEGORY, Qgis.Critical)
                   raise self.exception
+
       def cancel(self):
           QgsMessageLog.logMessage(
-              'Task "{name}" was canceled'.format(
+              'RandomTask "{name}" was canceled'.format(
                   name=self.description()),
               MESSAGE_CATEGORY, Qgis.Info)
           super().cancel()
@@ -207,6 +250,29 @@ dependencies.
   QgsApplication.taskManager().addTask(shorttask)
   QgsApplication.taskManager().addTask(minitask)
 
+.. testcode:: tasks
+  :hide:
+
+  # We need the test output here, hence the blocking
+  while QgsApplication.taskManager().countActiveTasks() != 0:
+    QgsApplication.instance().processEvents()
+
+.. testoutput:: tasks
+
+    RandomIntegerSumTask(0): Started task "waste cpu subtask shortest"
+    RandomIntegerSumTask(0): Started task "waste cpu short"
+    RandomIntegerSumTask(0): Started task "waste cpu mini"
+    RandomIntegerSumTask(0): Started task "waste cpu subtask long"
+    RandomIntegerSumTask(3): Task "waste cpu subtask shortest" completed
+    RandomTotal: 25452 (with 100 iterations)
+    RandomIntegerSumTask(3): Task "waste cpu mini" completed
+    RandomTotal: 23810 (with 100 iterations)
+    RandomIntegerSumTask(3): Task "waste cpu subtask long" completed
+    RandomTotal: 26308 (with 100 iterations)
+    RandomIntegerSumTask(0): Started task "waste cpu long"
+    RandomIntegerSumTask(3): Task "waste cpu long" completed
+    RandomTotal: 22534 (with 100 iterations)
+
 Task from function
 ..................
 
@@ -218,7 +284,7 @@ function that will be called when the task has completed.
 The ``doSomething`` function in this example has an additional named
 parameter ``wait_time``.
 
-.. code-block:: python
+.. testcode:: tasks
 
   import random
   from time import sleep
@@ -293,6 +359,23 @@ parameter ``wait_time``.
   QgsApplication.taskManager().addTask(task1)
   QgsApplication.taskManager().addTask(task2)
 
+.. testcode:: tasks
+  :hide:
+
+  # We need the test output here, hence the blocking
+  while QgsApplication.taskManager().countActiveTasks() != 0:
+    QgsApplication.instance().processEvents()
+
+.. testoutput:: tasks
+
+    RandomIntegerSumTask(0): Started task "waste cpu subtask short"
+    RandomTaskFromFunction(0): Started task Waste cpu 1
+    RandomTaskFromFunction(0): Started task Waste cpu 2
+    RandomTaskFromFunction(0): Task Waste cpu 2 completed
+    RandomTotal: 23263 ( with 100 iterations)
+    RandomTaskFromFunction(0): Task Waste cpu 1 completed
+    RandomTotal: 25044 ( with 100 iterations)
+
 
 Task from a processing algorithm
 ................................
@@ -300,6 +383,8 @@ Task from a processing algorithm
 Create a task that uses the algorithm :ref:`qgis:randompointsinextent <qgisrandompointsinextent>` to
 generate 50000 random points inside a specified extent.  The result is
 added to the project in a safe way.
+
+.. this snippet crashes the test runner but only on 3.10, it is enabled in master
 
 .. code-block:: python
 
