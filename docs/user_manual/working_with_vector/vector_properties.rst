@@ -2487,6 +2487,7 @@ with the field type. The available widgets are:
 Joins Properties
 ================
 
+<<<<<<< HEAD
 |join| The :guilabel:`Joins` tab allows you to join a loaded attribute
 table to a loaded vector layer. After clicking |signPlus|, the
 :guilabel:`Add vector join` dialog appears. As key columns, you have to define a
@@ -2528,6 +2529,24 @@ order to speed up lookups.
 QGIS currently has support for joining non-spatial table formats supported by OGR
 (e.g., CSV, DBF and Excel), delimited text and the PostgreSQL provider
 (see figure_joins_).
+=======
+|join| The :guilabel:`Joins` tab allows you to associate features
+of the current layer (called ``Target layer``) to features from another
+loaded vector layer (or table). The join is based on an attribute that is shared by the
+layers. The layers can be geometryless (tables) or not but their join attribute
+should be of the same type.
+
+To create a join:
+
+#. Click the |signPlus| :sup:`Add new join` button. The :guilabel:`Add vector
+   join` dialog appears.
+#. Select the :guilabel:`Join layer` you want to connect with the target vector
+   layer
+#. Specify the :guilabel:`Join field` and the :guilabel:`Target field` that are
+   common to both the join layer and the target layer
+#. Press :guilabel:`OK` and a summary of selected parameters is added to the
+   :guilabel:`Join` panel.
+>>>>>>> d6527184d... Typo corrected (#5234)
 
 .. _figure_joins:
 
