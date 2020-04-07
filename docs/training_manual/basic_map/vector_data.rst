@@ -37,8 +37,6 @@ and represents a property of the river. Cells show *attributes*.
 .. image:: img/attribute_data_preview.png
   :align: center
 
-|
-
 These definitions are commonly used in GIS, so it's essential to remember them!
 
 You may now close the attribute table.
@@ -138,8 +136,6 @@ the :guilabel:`Browser`.
 
    .. image:: img/spatialite_dialog_connected.png
       :align: center
-
-   |
 
 .. tip:: Enable the :guilabel:`Browser` panel in :menuselection:`View --> Panels -->`
   and use it to add your data. It's a handy shortcut for the :menuselection:`Data Source

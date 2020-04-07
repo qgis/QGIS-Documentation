@@ -240,8 +240,6 @@ each polygon.
 
   The labels in the polygons show the point count
 
-|
-
 An optional weight field can be used to assign weights to each point. Alternatively,
 a unique class field can be specified. If both options are used, the weight field
 will take precedence and the unique class field will be ignored.

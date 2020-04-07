@@ -81,8 +81,6 @@ Enable the header (:guilabel:`Include report header`), and hit the
 .. figure:: img/report_header.png
   :align: center
 
-|
-
 A few things happen as a result. Firstly, an edit pencil is shown
 next to :guilabel:`Report` in the :guilabel:`Report Organizer`,
 indicating that the report section is currently being edited in
@@ -207,8 +205,6 @@ and adding a new :guilabel:`Field Group Section`:
 
 .. figure:: img/subsection.png
    :align: center
-
-|
 
 When iterating over the features of a :guilabel:`Field Group Section`,
 the features will be filtered to match the defining field of its parent
@@ -348,8 +344,6 @@ region:
 .. figure:: img/report_flex.png
    :align: center
 
-|
-
 This results in the last part of our report exporting as:
 
 .. figure:: img/ports.png
@@ -369,7 +363,6 @@ As you see, reports in QGIS are extremely powerful and flexible!
    The current information was adapted from a North Road blog,
    `Exploring Reports in QGIS 3.0 - the Ultimate Guide!
    <https://north-road.com/2018/01/23/exploring-reports-in-qgis-3-0-the-ultimate-guide>`_
-
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
