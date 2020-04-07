@@ -30,8 +30,6 @@ Let's get started right away!
       :align: center
       :width: 100 %
 
-   |
-
 #. The :guilabel:`Data Source Manager` dialog allows you to choose the data to
    load depending on the data type. We'll use it to load our dataset:
    click the |dataSourceManager| :sup:`Open Data Source Manager` button.
@@ -42,8 +40,6 @@ Let's get started right away!
    .. image:: img/add_data_dialog.png
       :align: center
       :width: 100 %
-
-   |
 
 #. Load the :file:`protected_areas.shp` vector dataset:
    
@@ -58,8 +54,6 @@ Let's get started right away!
       .. image:: img/add_vector_dialog.png
          :align: center
 
-      |
-
    #. Click :guilabel:`Add` here as well. The data you specified will now load:
       you can see a ``protected_areas`` item in the :guilabel:`Layers` panel
       (bottom left) with its features shown in the main map canvas.
@@ -67,8 +61,6 @@ Let's get started right away!
       .. image:: img/first_loaded_layer.png
          :align: center
          :width: 100%
-
-      |
 
 Congratulations! You now have a basic map. Now would be a good time to save
 your work.

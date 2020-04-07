@@ -28,8 +28,6 @@ symbology:
    :align: center
    :width: 100%
 
-|
-
 #. Load these layers into a new map, or use your original map with only these
    layers visible.
 #. Before starting to add the WMS layer, deactivate "on the fly"
@@ -43,8 +41,6 @@ symbology:
 
    .. image:: img/datasourcemanager_wms.png
       :align: center
-
-   |
 
    Remember how you connected to a SpatiaLite or GeoPackage database at the
    beginning of the course. The :guilabel:`landuse`, :guilabel:`buildings`, and
@@ -64,8 +60,6 @@ symbology:
    .. image:: img/new_wms_connection.png
       :align: center
 
-   |
-
    * The value of the :guilabel:`Name` field should be ``terrestris``.
    * The value of the :guilabel:`URL` field should be
      ``https://ows.terrestris.de/osm/service``.
@@ -74,15 +68,11 @@ symbology:
    .. image:: img/new_connection_listed.png
       :align: center
 
-   |
-
 #. Click :guilabel:`Connect`. In the list below, you should now see these
    new entries loaded:
 
    .. image:: img/new_wms_entries.png
       :align: center
-
-   |
 
    These are all the layers hosted by this WMS server.
 
@@ -91,8 +81,6 @@ symbology:
 
    .. image:: img/osm_wms_selected.png
       :align: center
-
-   |
 
    Since we're not using ``WGS 84`` for our map, let's see all the CRSs we have
    to choose from.
@@ -107,8 +95,6 @@ symbology:
 
          .. image:: img/pseudo_mercator_selected.png
             :align: center
-
-         |
 
       #. Click :guilabel:`OK`. The Coordinate Reference System associated with
          the entry has changed.
@@ -125,8 +111,6 @@ symbology:
       :align: center
       :width: 100%
 
-   |
-
 #. Let's enable the reprojection again, but using the same projection as the
    :guilabel:`OpenStreetMap WMS` layer, which is :guilabel:`WGS 84 / Pseudo Mercator`.
 
@@ -137,8 +121,6 @@ symbology:
       .. image:: img/enable_projection.png
          :align: center
 
-      |
-
    #. Click :guilabel:`OK`.
 #. Now right-click on one of your own layers in the :guilabel:`Layers` panel and
    click :guilabel:`Zoom to layer extent`. You should see the |majorUrbanName|
@@ -147,8 +129,6 @@ symbology:
    .. image:: img/wms_result.png
       :align: center
       :width: 100%
-
-   |
 
 Note how the WMS layer's streets and our own streets overlap. That's a good
 sign!

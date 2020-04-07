@@ -182,8 +182,6 @@ you want:
    .. image:: img/target_road_symbology.png
       :align: center
 
-|
-
 :ref:`Back to text <backlink-symbology-levels-1>`
 
 

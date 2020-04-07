@@ -20,7 +20,6 @@ plugin
    .. image:: img/enable_grass.png
       :align: center
 
-   |
 
    The GRASS toolbar and the GRASS panel will appear:
 
@@ -62,16 +61,12 @@ information visit the `GRASS website <https://grass.osgeo.org/grass77/manuals/gr
    .. image:: img/grass_menu.png
       :align: center
 
-   |
-
    You'll be asked to choose the location of the GRASS database.
 
 #. Set it as the directory that will be used by GRASS to set up its database:
 
    .. image:: img/grass_folder.png
       :align: center
-
-   |
 
 #. Click :guilabel:`Next`.
 
@@ -88,15 +83,11 @@ geographic area you'll be working in, also known as Grass ``Region``.
    .. image:: img/new_location.png
       :align: center
 
-   |
-
 #. Click :guilabel:`Next`.
 #. We'll be working with ``WGS 84``, so search for and select this CRS:
 
    .. image:: img/wgs_84_selected.png
       :align: center
-
-   |
 
 #. Click :guilabel:`Next`.
 #. Now select the region :guilabel:`South Africa` from the dropdown and click
@@ -105,23 +96,17 @@ geographic area you'll be working in, also known as Grass ``Region``.
    .. image:: img/set_south_africa.png
       :align: center
 
-   |
-
 #. Click :guilabel:`Next`.
 #. Create a mapset, which is the map file that you'll be working with.
 
    .. image:: img/grass_mapset.png
       :align: center
 
-   |
-
    Once you're done, you'll see a dialog asking with a summary of all the
    information entered.
 
    .. image:: img/grass_final.png
      :align: center
-
-   |
 
 #. Click :guilabel:`Finish`.
 #. Click :guilabel:`OK` on the success dialog.
@@ -169,8 +154,6 @@ Go to the Browser, and simply drag the :file:`roads` layer  from the
 .. image:: img/grass_browser_import.png
    :align: center
 
-|
-
 That's it! If you expand the Mapset you will see the imported :file:`roads`
 layer. You can now load in QGIS the imported layer like all the other layers.
 
@@ -194,8 +177,6 @@ same Mapset.
 
    .. image:: img/grass_panel_import.png
       :align: center
-
-   |
 
    The ``v`` stands for *vector*, ``in`` means a function to import data into
    the GRASS database, ``ogr`` is the software library used to read vector data,
@@ -246,8 +227,6 @@ We are going to import in the GRASS Mapset the layer |srtmFileName|.
    .. image:: img/g_dem_settings.png
       :align: center
 
-   |
-
 #. Click :guilabel:`Run`.
 #. When the process is done, click :guilabel:`View output`.
 #. :guilabel:`Close` the current tab, and then :guilabel:`Close` the whole
@@ -255,8 +234,6 @@ We are going to import in the GRASS Mapset the layer |srtmFileName|.
 
    .. image:: img/g_dem_result.png
       :align: center
-
-   |
 
 #. You may now remove the original |srtmFileName| layer.
 
@@ -297,8 +274,6 @@ Let's close the Mapset by clicking on the :guilabel:`Close Mapset` button of the
    .. image:: img/grass_open_mapset.png
       :align: center
 
-   |
-
 #. Choose the ``Location`` :guilabel:`SouthAfrica` and the ``Mapset``
    :guilabel:`grass_mapset` that we have created before.
 
@@ -320,8 +295,6 @@ Even faster and easier is opening a ``Mapset`` using the QGIS Browser:
 
    .. image:: img/grass_open_mapset_browser.png
       :align: center
-
-   |
 
 The Mapset is now open and ready to use!
 
