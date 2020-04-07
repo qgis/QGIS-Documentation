@@ -19,8 +19,6 @@ capabilities of GRASS.
    .. image:: img/grass_aspect.png
       :align: center
 
-   |
-
 #. When the process is finished click on :guilabel:`View Output` to load the
    resulting layer in the canvas:
 
@@ -43,8 +41,6 @@ We want to know some basic statistics of the :file:`g_dem` raster layer.
 
    .. image:: img/grass_raster_info.png
       :align: center
-
-   |
 
 #. Within the Output tab you will see some raster information printed, like the
    path of the file, the number of rows and columns and other useful information:
@@ -80,8 +76,6 @@ rules is very simple and the GRASS Manual contains very good description.
 
    .. image:: img/grass_reclass.png
       :align: center
-
-   |
 
 #. Click on :guilabel:`View Output` to load the reclassified raster in the canvas
 
@@ -131,8 +125,6 @@ The aim of the next exercise is to extract the values greater than 1000 from the
    .. image:: img/map_calc_tools.png
       :align: center
 
-   |
-
    In order, they are:
 
    * :guilabel:`Add map`: Add a raster file from your current GRASS mapset.
@@ -156,15 +148,11 @@ The aim of the next exercise is to extract the values greater than 1000 from the
    .. image:: img/grass_mapcalc.png
       :align: center
 
-   |
-
 #. Click on :guilabel:`Run` and then on :guilabel:`View output` to see the output
    displayed in your map:
 
    .. image:: img/grass_mapcalc_result.png
       :align: center
-
-   |
 
 This shows all the areas where the terrain is higher than 1000 meters.
 

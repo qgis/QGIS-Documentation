@@ -196,8 +196,6 @@ your layer that way.
 .. image:: img/multiple_symbol_layers.png
    :align: center
 
-|
-
 It's fun! But it probably has too many colors to use in a real map...
 
 .. _backlink-symbology-layers-1:
@@ -227,8 +225,6 @@ You'll notice that this happens:
 
 .. image:: img/bad_roads_symbology.png
    :align: center
-
-|
 
 Well, roads have now a *street* like symbology, but you see that lines are
 overlapping each others at each cross. That's not what we want at all!
@@ -267,8 +263,6 @@ To change the order of the symbol layers:
 
    .. image:: img/better_roads_symbology.png
       :align: center
-
-|
 
 When you're done, remember to save the symbol itself so as not to lose your
 work if you change the symbol again in the future. You can save your current
@@ -319,8 +313,6 @@ rudimentary pre-classified data.
 
    .. image:: img/correct_advanced_levels.png
       :align: center
-
-|
 
 :ref:`Check your results <symbology-levels-2>`
 
@@ -375,8 +367,6 @@ To see the various options available for line data:
 
    .. image:: img/simple_marker_line_properties.png
       :align: center
-
-   |
 
 #. Select the :guilabel:`Marker line` layer and change the interval to ``1.00``:
 
@@ -435,7 +425,6 @@ and change the outline to look like this:
 .. image:: img/marker_line_preview.png
    :align: center
 
-|
 
 :ref:`Check your results <symbology-marker-line>`
 
