@@ -16,7 +16,7 @@ Given a set of points and a value of a given variable value at each point,
 you can calculate a raster layer from them using the *Kriging* geoalgorithm.
 The parameters dialog for that module is like the following one.
 
-.. image:: img/warning/kriging.png
+.. figure:: img/warning/kriging.png
 
 It looks complex, right?
 

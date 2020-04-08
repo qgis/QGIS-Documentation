@@ -21,7 +21,7 @@ snapping options:
 * Navigate to the menu entry :menuselection:`Project --> Snapping Options...`.
 * Set up your :guilabel:`Snapping options` dialog as shown:
 
-.. image:: img/set_snapping_options.png
+.. figure:: img/set_snapping_options.png
    :align: center
 
 * Ensure that the box in the :guilabel:`Avoid Int.` column is checked (set to
@@ -32,12 +32,12 @@ snapping options:
   :guilabel:`Advanced Digitizing` toolbar is enabled.
 * Zoom to this area (enable layers and labels if necessary):
 
-.. image:: img/zoom_to.png
+.. figure:: img/zoom_to.png
    :align: center
 
 * Digitize this new (fictional) area of the |largeLandUseArea|:
 
-.. image:: img/new_park_area.png
+.. figure:: img/new_park_area.png
    :align: center
 
 * When prompted, give it a :guilabel:`OGC_FID` of :kbd:`999`, but feel free to
@@ -59,7 +59,7 @@ Topology features can sometimes need to be updated. In our example, the
 :guilabel:`landuse` layer has some complex forest areas which have recently been
 joined to form one area:
 
-.. image:: img/forest_area_example.png
+.. figure:: img/forest_area_example.png
    :align: center
 
 Instead of creating new polygons to join the forest areas, we're going to use
@@ -70,24 +70,24 @@ the :guilabel:`*Vertex Tool` to edit the existing polygons and join them.
 * Pick an area of forest, select a corner and move it to an adjoining corner so
   two forest sections meet:
 
-.. image:: img/corner_selected.png
+.. figure:: img/corner_selected.png
    :align: center
 
 * Click and drag the nodes until they snap into place.
 
-.. image:: img/corner_selected_move.png
+.. figure:: img/corner_selected_move.png
    :align: center
 
 The topologically correct border looks like this:
 
-.. image:: img/areas_joined.png
+.. figure:: img/areas_joined.png
    :align: center
 
 Go ahead and join a few more areas using the :guilabel:`Vertex Tool`. You can also
 use the :guilabel:`Add Feature` tool if it is appropriate. If you are using our
 example data, you should have a forest area looking something like this:
 
-.. image:: img/node_example_result.png
+.. figure:: img/node_example_result.png
    :align: center
 
 Don't worry if you have joined more, less or different areas of forest.
@@ -103,12 +103,12 @@ This is the :guilabel:`Simplify Feature` tool:
 * Click on one of the areas which you joined using either the
   :guilabel:`Vertex Tool` or :guilabel:`Add Feature` tool. You'll see this dialog:
 
-.. image:: img/simplify_line_dialog.png
+.. figure:: img/simplify_line_dialog.png
    :align: center
 
 * Move the slider from side to side and watch what happens:
 
-.. image:: img/simplify_line_example.png
+.. figure:: img/simplify_line_example.png
    :align: center
 
 This allows you to reduce the amount of nodes in complex features.
@@ -198,12 +198,12 @@ It can add a bump to an existing feature. With this tool selected:
   original polygon, forming an open-sided rectangle.
 * Right-click to finish marking points:
 
-.. image:: img/reshape_step_one.png
+.. figure:: img/reshape_step_one.png
    :align: center
 
 This will give a result similar to:
 
-.. image:: img/reshape_result.png
+.. figure:: img/reshape_result.png
    :align: center
 
 You can do the opposite, too:
@@ -212,12 +212,12 @@ You can do the opposite, too:
 * Draw a rectangle into the polygon.
 * Right-click outside the polygon again:
 
-.. image:: img/reshape_inverse_example.png
+.. figure:: img/reshape_inverse_example.png
    :align: center
 
 The result of the above:
 
-.. image:: img/reshape_inverse_result.png
+.. figure:: img/reshape_inverse_result.png
    :align: center
 
 
@@ -238,7 +238,7 @@ We will use the tool to split a corner from the |largeLandUseArea|.
   drawing a line. Click the vertex on the opposite side of the corner you wish
   to split and right-click to complete the line:
 
-.. image:: img/split_feature_example.png
+.. figure:: img/split_feature_example.png
    :align: center
 
 * At this point, it may seem as if nothing has happened. But remember that your
@@ -247,7 +247,7 @@ We will use the tool to split a corner from the |largeLandUseArea|.
 * Use the :guilabel:`Select Single Feature` tool to select the corner you just
   split; the new feature will now be highlighted:
 
-.. image:: img/new_corner_selected.png
+.. figure:: img/new_corner_selected.png
    :align: center
 
 .. _backlink-create-vector-topology-4:

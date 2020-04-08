@@ -29,7 +29,7 @@ properly work with LAStools:
 * If you have a folder named :kbd:`lidar`, delete it. This is valid for some
   installations of QGIS 2.2 and 2.4.
 
-.. image:: img/remove_lidar_folder.png
+.. figure:: img/remove_lidar_folder.png
    :align: center
 
 * Go to the :file:`exercise_data\\forestry\\lidar\\` folder, there you can find
@@ -65,7 +65,7 @@ To setup the LAStools in QGIS:
 * For :guilabel:`LAStools folder` set :kbd:`c:\\lastools\\` (or the folder you
   extracted LAStools to).
 
-.. image:: img/processing_options.png
+.. figure:: img/processing_options.png
    :align: center
 
 |basic| |FA| Calculating a DEM with LAStools
@@ -78,7 +78,7 @@ to run some SAGA algorithms. Now you are going to use it to run LAStools program
 * In the dropdown menu at the bottom, select :guilabel:`Advanced interface`.
 * You should see the :guilabel:`Tools for LiDAR data` category.
 
-.. image:: img/processing_toolbox.png
+.. figure:: img/processing_toolbox.png
    :align: center
 
 * Expand it to see the tools available, and expand also the :guilabel:`LAStools`
@@ -87,14 +87,14 @@ to run some SAGA algorithms. Now you are going to use it to run LAStools program
 * At :guilabel:`Input LAS/LAZ file`, browse to :file:`exercise_data\\forestry\\lidar\\`
   and select the :file:`rautjarvi_lidar.laz` file.
 
-.. image:: img/lasview_dialog.png
+.. figure:: img/lasview_dialog.png
    :align: center
 
 * Click :guilabel:`Run`.
 
 Now you can see the LiDAR data in the :guilabel:`just a little LAS and LAZ viewer` dialog window:
 
-.. image:: img/full_lidar.png
+.. figure:: img/full_lidar.png
    :align: center
 
 There are many things you can do within this viewer, but for now you can just
@@ -114,7 +114,7 @@ a DEM using only the :kbd:`ground` points.
 * Note the :guilabel:`Search...` box, write :kbd:`lasground`.
 * Double click to open the :guilabel:`lasground` tool and set it as shown in this image:
 
-.. image:: img/lasground_dialog.png
+.. figure:: img/lasground_dialog.png
    :align: center
 
 * The output file is saved to the same folder where the :file:`rautjarvi_lidar.laz`
@@ -122,7 +122,7 @@ a DEM using only the :kbd:`ground` points.
 
 You can open it with :guilabel:`lasview` if you want to check it.
 
-.. image:: img/lasground_result.png
+.. figure:: img/lasground_result.png
    :align: center
 
 The brown points are the points classified as ground and the gray ones are the rest,
@@ -138,7 +138,7 @@ the viewer.
 * In the :guilabel:`Processing Toolbox`, search for :kbd:`las2dem`.
 * Open the :guilabel:`las2dem` tool and set it as shown in this image:
 
-.. image:: img/las2dem_dialog.png
+.. figure:: img/las2dem_dialog.png
    :align: center
 
 The result DEM is added to your map with the generic name :kbd:`Output raster file`.
@@ -158,7 +158,7 @@ For visualization purposes, a hillshade generated from a DEM gives a better
   and name the file :file:`hillshade.tif`.
 * Leave the rest of parameters with the default settings.
 
-.. image:: img/dem_hillshade.png
+.. figure:: img/dem_hillshade.png
    :align: center
 
 * Select :kbd:`ETRS89 / ETRS-TM35FIN` as the CRS when prompted.
@@ -167,7 +167,7 @@ Despite the diagonal lines remaining in the hillshade raster result, you can
 clearly see an accurate relief of the area. You can even see the different
 soil drains that have been dug in the forests.
 
-.. image:: img/hillshade_result.png
+.. figure:: img/hillshade_result.png
    :align: center
 
 

@@ -14,7 +14,7 @@ and :guilabel:`Plugin Manager`.
    :menuselection:`Plugins --> Manage and Install Plugins`.
 #. In the dialog that opens, find the :guilabel:`Processing` plugin:
 
-   .. image:: img/select_processing_plugin.png
+   .. figure:: img/select_processing_plugin.png
       :align: center
 
 #. Click in the box next to this plugin and uncheck it to deactivate it.
@@ -42,12 +42,12 @@ that you currently have installed. To install new plugins:
    dialog. The plugins available for you to install will be listed here.
    This list will vary depending on your existing system setup.
 
-   .. image:: img/get_more_plugins.png
+   .. figure:: img/get_more_plugins.png
       :align: center
 
 #. Find information about the plugin by selecting it in the list
 
-   .. image:: img/plugin_details.png
+   .. figure:: img/plugin_details.png
       :align: center
 
 #. Install the one(s) you are intereseted in by clicking the :guilabel:`Install
@@ -72,20 +72,20 @@ you want to configure additional repositories. To do this:
 
 #. Open the :guilabel:`Settings` tab in the :guilabel:`Plugin Manager` dialog
 
-   .. image:: img/plugin_manager_settings.png
+   .. figure:: img/plugin_manager_settings.png
       :align: center
 
 #. Click :guilabel:`Add` to find and add a new repository.
 #. Provide a Name and URL for the new repository you want to configure and make
    sure the :guilabel:`Enabled` checkbox is selected.
 
-   .. image:: img/new_plugins_setting.png
+   .. figure:: img/new_plugins_setting.png
       :align: center
 
 #. You will now see the new plugin repo listed in the list of configured
    Plugin Repositories
 
-   .. image:: img/new_plugin_added.png
+   .. figure:: img/new_plugin_added.png
       :align: center
 
 #. You can also select the option to display Experimental Plugins by selecting

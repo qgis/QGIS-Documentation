@@ -22,20 +22,20 @@ WMS.
   and the :guilabel:`URL` as
   ``https://nsidc.org/cgi-bin/atlas_south?version=1.1.0``.
 
-  .. image:: img/new_wfs_connection.png
+  .. figure:: img/new_wfs_connection.png
      :align: center
 
 * Click :guilabel:`OK`, and the new connection will appear in your
   :guilabel:`Server connections`.
 * Click the :guilabel:`Connect`. A list of the available layers will appear:
 
-  .. image:: img/wfs_connection_layers.png
+  .. figure:: img/wfs_connection_layers.png
      :align: center
 
 * Find the layer :guilabel:`south_poles_wfs`.
 * Click on the layer to select it:
 
-  .. image:: img/south_poles_wfs.png
+  .. figure:: img/south_poles_wfs.png
      :align: center
 
 * Click :guilabel:`Add`.
@@ -44,7 +44,7 @@ It may take a while to load the layer. When it has loaded, it will appear in
 the map. Here it is over the outlines of Antarctica (available on the same
 server, and by the name of :guilabel:`antarctica_country_border`):
 
-.. image:: img/antarctica_border.png
+.. figure:: img/antarctica_border.png
    :align: center
 
 How is this different from having a WMS layer? That will become obvious when
@@ -53,13 +53,13 @@ you see the layers' attributes.
 * Open the :guilabel:`south_poles_wfs` layer's attribute table. You should see
   this:
 
-.. image:: img/poles_attribute_table.png
+.. figure:: img/poles_attribute_table.png
    :align: center
 
 Since the points have attributes, we are able to label them,
 as well as change their symbology. Here's an example:
 
-.. image:: img/labelling_example.png
+.. figure:: img/labelling_example.png
    :align: center
 
 * Add labels to your layer to take advantage of the attribute data in this
@@ -103,25 +103,25 @@ from the server.
 * Double-click next to the :guilabel:`countries ...` layer in the
   :guilabel:`Filter` field, or click :guilabel:`Build query`:
 
-  .. image:: img/select_country_filter.png
+  .. figure:: img/select_country_filter.png
      :align: center
 
 * In the dialog that appears, build the query :kbd:`"Countryeng" = 'South
   Africa'`:
 
-  .. image:: img/country_sa_builder.png
+  .. figure:: img/country_sa_builder.png
      :align: center
 
 * It will appear as the :guilabel:`Filter` value:
 
-  .. image:: img/country_filter_enabled.png
+  .. figure:: img/country_filter_enabled.png
      :align: center
 
 * Click :guilabel:`Add` with the :guilabel:`countries` layer selected as
   above. Only the country with the :kbd:`Countryeng` value of :kbd:`South
   Africa` will load from that layer:
 
-  .. image:: img/antarctica_sa.png
+  .. figure:: img/antarctica_sa.png
      :align: center
 
 You don't have to, but if you tried both methods, you'll notice that this is a

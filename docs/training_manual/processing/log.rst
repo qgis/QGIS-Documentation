@@ -13,7 +13,7 @@ Even if the algorithm could be executed, some algorithms might leave warnings in
 
 From the *Processing* menu, under the *History* section, you'll find *Algorithms*. All algorithms that are executed, even if they are executed from the GUI and not from the console (which will be explained later in this manual) are stored in this section as a console call. That means that everytime you run an algorithm, a console command is added to the log, and you have the full history of your working session. Here is how that history looks like:
 
-.. image:: img/log/history.png
+.. figure:: img/log/history.png
 
 This can be very useful when starting working with the console, to learn about the syntax of algorithms. We will use it when we discuss how to run analysis commands from the console.
 

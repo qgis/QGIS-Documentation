@@ -268,7 +268,7 @@ people and streets have a logical relationship. To express this relationship,
 we have to define a foreign key that points to the primary key of the streets
 table.
 
-.. image:: img/er-people-streets.png
+.. figure:: img/er-people-streets.png
    :align: center
 
 There are two ways to do this:

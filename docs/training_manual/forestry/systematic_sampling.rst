@@ -75,7 +75,7 @@ You notice that the tool has used the whole extent of your stands layer to
 generate a rectangular grid of points. But you are only interested on those
 points that are actually inside your forest area (see the images below):
 
-.. image:: img/grid_full_and_clip.png
+.. figure:: img/grid_full_and_clip.png
    :align: center	
 
 * Open :menuselection:`Vector --> Geoprocessing Tools --> Clip`.
@@ -133,7 +133,7 @@ Now you have a new column with plot names that are meaningful to you. For the
 :kbd:`systematic_plots_clip` layer, change the field used for labeling to your
 new :kbd:`Plot_id` field.
 
-.. image:: img/labelled_plots.png
+.. figure:: img/labelled_plots.png
    :align: center
 
 |basic| |FA| Exporting Sample Plots as GPX format
@@ -160,7 +160,7 @@ save your data:
 * In the dialog that opens, select only the :kbd:`waypoints` layer (the rest of
   the layers are empty).
 
-.. image:: img/gpx_creation.png
+.. figure:: img/gpx_creation.png
    :align: center
 
 The inventory sample plots are now in a standard format that can be managed by

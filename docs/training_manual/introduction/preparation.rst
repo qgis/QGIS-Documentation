@@ -26,7 +26,7 @@ Let's get started right away!
 
 #. Open QGIS. You will have a new, blank map.
 
-   .. image:: img/add_blank_qgis.png
+   .. figure:: img/add_blank_qgis.png
       :align: center
       :width: 100 %
 
@@ -37,7 +37,7 @@ Let's get started right away!
    If you can't find the icon, check that the :guilabel:`Data Source Manager`
    toolbar is enabled in the :menuselection:`View --> Toolbars` menu.
 
-   .. image:: img/add_data_dialog.png
+   .. figure:: img/add_data_dialog.png
       :align: center
       :width: 100 %
 
@@ -51,14 +51,14 @@ Let's get started right away!
    #. Click :guilabel:`Open`. You will see the original dialog,
       with the file path filled in.
 
-      .. image:: img/add_vector_dialog.png
+      .. figure:: img/add_vector_dialog.png
          :align: center
 
    #. Click :guilabel:`Add` here as well. The data you specified will now load:
       you can see a ``protected_areas`` item in the :guilabel:`Layers` panel
       (bottom left) with its features shown in the main map canvas.
 
-      .. image:: img/first_loaded_layer.png
+      .. figure:: img/first_loaded_layer.png
          :align: center
          :width: 100%
 

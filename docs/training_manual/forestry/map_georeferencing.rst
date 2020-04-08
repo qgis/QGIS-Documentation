@@ -37,7 +37,7 @@ For this exercise you will use a previously scanned map, you can find it as
 Open QGIS and set the project's CRS to :kbd:`ETRS89 / ETRS-TM35FIN` in
 :menuselection:`Project --> Properties --> CRS`, which is the currently used CRS in Finland.
 
-.. image:: img/f_1.png
+.. figure:: img/f_1.png
    :align: center
 
 Save the QGIS project as :kbd:`map_digitizing.qgs`.
@@ -63,7 +63,7 @@ Next you should define the transformation settings for georeferencing the map:
   as :kbd:`rautjarvi_georef.tif`.
 * Set the rest of parameters as shown below.
 
-.. image:: img/Clipboard10.png
+.. figure:: img/Clipboard10.png
    :align: center
    
 * Click :guilabel:`OK`.
@@ -95,7 +95,7 @@ points as far from each other as possible. Digitize at least three more ground
 control points in the same way you did the first one. You should end up with
 something similar to this:
 
-.. image:: img/Clipboard09.png
+.. figure:: img/Clipboard09.png
    :align: center
    
 With already three digitized ground control points you will be able to see the
@@ -127,7 +127,7 @@ in the :kbd:`exercise_data\\forestry` folder, named :kbd:`rautjarvi_aerial.tif`.
 Your map and this image should match quite well. Set the map transparency to 50%
 and compare it to the aerial image.
 
-.. image:: img/Clipboard14.png
+.. figure:: img/Clipboard14.png
    :align: center
 
 Save the changes to your QGIS project, you will continue from this point for the

@@ -9,7 +9,7 @@ Using the graphical modeler, that workflow can be put into a model, which will r
 
 To start this lesson, we are going to calculate a parameter named Topographic Wetness Index. The algorithm that computes it is called *Topographic wetness index (twi)*
 
-.. image:: img/modeler_twi/twi.png
+.. figure:: img/modeler_twi/twi.png
 
 As you can see, there are two mandatory inputs: *Slope* and *Catchment area*. There is also an optional input, but we will not be using it, so we can ignore it. 
 
@@ -19,23 +19,23 @@ Here are the parameter dialogs that you should use to calculate the 2 intermedia
 
 .. note:: Slope must be calculated in radians, not in degrees.
 
-.. image:: img/modeler_twi/slope.png
+.. figure:: img/modeler_twi/slope.png
 
-.. image:: img/modeler_twi/area.png
+.. figure:: img/modeler_twi/area.png
 
 And this is how you have to set the parameters dialog of the TWI algorithm.
 
-.. image:: img/modeler_twi/twi_filled.png
+.. figure:: img/modeler_twi/twi_filled.png
 
 This is the result that you will obtain (the default singleband pseudocolor inverted palette has been used for rendering). You can use the ``twi.qml`` style provided.
 
-.. image:: img/modeler_twi/twi_layer.png
+.. figure:: img/modeler_twi/twi_layer.png
 
 What we will try to do now is to create an algorithm that calculates the TWI from a DEM in just one single step. That will save us work in case we later have to compute a TWI layer from another DEM, since we will need just one single step to do it instead of the 3 ones above. All the processes that we need are found in the  toolbox, so what we have to do is to define the workflow to wrap them. This is where the graphical modeler comes in.
 
 Open the modeler by selecting its menu entry in the processing menu.
 
-.. image:: img/modeler_twi/modeler.png
+.. figure:: img/modeler_twi/modeler.png
 
 Two things are needed to create a model: setting the inputs that it will need, and defining the algorithm that it contains. Both of them are done by adding elements from the two tabs in the left--hand side of the modeler window: *Inputs* and *Algorithms*
 
@@ -43,21 +43,21 @@ Let's start with the inputs. In this case we do not have much to add. We just ne
 
 Double click on the *Raster layer* input and you will see the following dialog.
 
-.. image:: img/modeler_twi/raster_input.png
+.. figure:: img/modeler_twi/raster_input.png
 
 Here we will have to define the input we want. Since we expect this raster layer to be a DEM, we will call it *DEM*. That's the name that the user of the model will see when running it. Since we need that layer to work, we will define it as a mandatory layer.
 
 Here is how the dialog should be configured.
 
-.. image:: img/modeler_twi/raster_input_filled.png
+.. figure:: img/modeler_twi/raster_input_filled.png
 
 Click on *OK* and the input will appear in the modeler canvas.
 
-.. image:: img/modeler_twi/canvas_1.png
+.. figure:: img/modeler_twi/canvas_1.png
 
 Now let's move to the *Algorithms* tab. The first algorithm we have to run is the *Slope, aspect, curvature* algorithm. Locate it in the algorithm list, double--click on it and you will see the dialog shown below.
 
-.. image:: img/modeler_twi/slope_modeler.png
+.. figure:: img/modeler_twi/slope_modeler.png
 
 This dialog is very similar to the one that you can find when running the algorithm from the toolbox, but the element that you can use as parameter values are not taken from the current QGIS project, but from the model itself. That means that, in this case, we will not have all the raster layers of our project available for the *Elevation* field, but just the ones defined in our model. Since we have added just one single raster input named *DEM*, that will be the only raster layer that we will see in the list corresponding to the *Elevation* parameter. 
 
@@ -67,19 +67,19 @@ When layers are not a final result, you should just leave the corresponding fiel
 
 There is not much to select in this first dialog, since we do not have but just one layer in or model (The DEM input that we created). Actually, the default configuration of the dialog is the correct one in this case, so you just have to press *OK*. This is what you will now have in the modeler canvas.
 
-.. image:: img/modeler_twi/canvas_2.png
+.. figure:: img/modeler_twi/canvas_2.png
 
 The second algorithm we have to add to our model is the catchment area algorithm. We will use the algorithm named *Catchment area (Paralell)*. We will use the DEM layer again as input, and none of the ouputs it produces are final, so here is how you have to fill the corresponding dialog.
 
-.. image:: img/modeler_twi/area_modeler.png
+.. figure:: img/modeler_twi/area_modeler.png
 
 Now your model should look like this.
 
-.. image:: img/modeler_twi/canvas_3.png
+.. figure:: img/modeler_twi/canvas_3.png
 
 The last step is to add the *Topographic wetness index* algorithm, with the following configuration.
 
-.. image:: img/modeler_twi/twi_modeler.png
+.. figure:: img/modeler_twi/twi_modeler.png
 
 In this case, we will not be using the DEM as input, but instead, we will use the slope and catchment area layers that are calculated by the algorithms that we previously added. As you add new algorithms, the outputs they produce become available for other algorithms, and using them you link the algorithms, creating the workflow.
 
@@ -87,21 +87,21 @@ In this case, the output TWI layer is a final layer, so we have to indicate so. 
 
 Now our model is finished and it should look like this.
 
-.. image:: img/modeler_twi/canvas_4.png
+.. figure:: img/modeler_twi/canvas_4.png
 
 Enter a name and a group name in the upper part of the model window, and then save it clicking on the *Save* button. 
 
-.. image:: img/modeler_twi/model_name.png
+.. figure:: img/modeler_twi/model_name.png
 
 You can save it anywhere you want and open it later, but if you save it in the models folder (which is the folder that you will see when the save file dialog appears), you model will also be available in the toolbox as well. So stay on that folder and save the model with the filename that you prefer.
 
 Now close the modeler dialog and go to the toolbox. In the *Models* entry you will find you model.
 
-.. image:: img/modeler_twi/toolbox.png
+.. figure:: img/modeler_twi/toolbox.png
 
 You can run it just like any normal algorithm, double--clicking on it.
 
-.. image:: img/modeler_twi/model_dialog.png
+.. figure:: img/modeler_twi/model_dialog.png
 
 As you can see, the parameters dialog, contain the input that you added to the model, along with the outputs that you set as final when adding the corresponding algorithms.
 

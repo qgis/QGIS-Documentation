@@ -24,7 +24,7 @@ this example, we used a new map and loaded the original :guilabel:`places`,
 :guilabel:`landuse` and :guilabel:`protected_areas` layers and adjusted the
 symbology:
 
-.. image:: img/new_map.png
+.. figure:: img/new_map.png
    :align: center
    :width: 100%
 
@@ -39,7 +39,7 @@ symbology:
    :guilabel:`Data Source Manager` dialog and enable the |wms|
    :guilabel:`WMS/WMTS` tab.
 
-   .. image:: img/datasourcemanager_wms.png
+   .. figure:: img/datasourcemanager_wms.png
       :align: center
 
    Remember how you connected to a SpatiaLite or GeoPackage database at the
@@ -57,7 +57,7 @@ symbology:
 
 #. To make use of this WMS, set it up in your current dialog, like this:
 
-   .. image:: img/new_wms_connection.png
+   .. figure:: img/new_wms_connection.png
       :align: center
 
    * The value of the :guilabel:`Name` field should be ``terrestris``.
@@ -65,13 +65,13 @@ symbology:
      ``https://ows.terrestris.de/osm/service``.
 #. Click :guilabel:`OK`. You should see the new WMS server listed:
 
-   .. image:: img/new_connection_listed.png
+   .. figure:: img/new_connection_listed.png
       :align: center
 
 #. Click :guilabel:`Connect`. In the list below, you should now see these
    new entries loaded:
 
-   .. image:: img/new_wms_entries.png
+   .. figure:: img/new_wms_entries.png
       :align: center
 
    These are all the layers hosted by this WMS server.
@@ -79,7 +79,7 @@ symbology:
 #. Click once on the :guilabel:`OSM-WMS` layer. This will display its
    :guilabel:`Coordinate Reference System`:
 
-   .. image:: img/osm_wms_selected.png
+   .. figure:: img/osm_wms_selected.png
       :align: center
 
    Since we're not using ``WGS 84`` for our map, let's see all the CRSs we have
@@ -93,7 +93,7 @@ symbology:
       #. Enter the value ``pseudo`` in the :guilabel:`Filter` field:
       #. Choose :guilabel:`WGS 84 / Pseudo Mercator` from the list.
 
-         .. image:: img/pseudo_mercator_selected.png
+         .. figure:: img/pseudo_mercator_selected.png
             :align: center
 
       #. Click :guilabel:`OK`. The Coordinate Reference System associated with
@@ -107,7 +107,7 @@ symbology:
    your layers aren't located correctly (near west of Africa).
    This is because "on the fly" projection is disabled.
 
-   .. image:: img/reprojection_off.png
+   .. figure:: img/reprojection_off.png
       :align: center
       :width: 100%
 
@@ -118,7 +118,7 @@ symbology:
    #. Uncheck :guilabel:`No projection (or unknown/non-Earth projection)`
    #. Choose :guilabel:`WGS 84 / Pseudo Mercator` from the list.
 
-      .. image:: img/enable_projection.png
+      .. figure:: img/enable_projection.png
          :align: center
 
    #. Click :guilabel:`OK`.
@@ -126,7 +126,7 @@ symbology:
    click :guilabel:`Zoom to layer extent`. You should see the |majorUrbanName|
    area:
 
-   .. image:: img/wms_result.png
+   .. figure:: img/wms_result.png
       :align: center
       :width: 100%
 
@@ -177,7 +177,7 @@ layer from the :guilabel:`terrestris` WMS server.
    :guilabel:`Tile size` option to ``200`` by ``200``, so that it loads
    faster:
 
-   .. image:: img/bedrock_geology_layer.png
+   .. figure:: img/bedrock_geology_layer.png
       :align: center
 
 :ref:`Check your results <wms-1>`

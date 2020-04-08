@@ -65,7 +65,7 @@ We first need to load the data to work with.
 #. If you want you can add a background map. Open the :guilabel:`Browser` and load
    the :guilabel:`OSM` background map from the :guilabel:`XYZ Tiles` menu.
 
-   .. image:: img/osm_swellendam.png
+   .. figure:: img/osm_swellendam.png
       :align: center
 
 #. In the :file:`training_data.gpkg` Geopackage database load all the files we will
@@ -107,7 +107,7 @@ Moreover, OSM data might not be updated everywhere and we will also exclude
 
 The map with all the data should look like the following one:
 
-.. image:: img/osm_swellendam_2.png
+.. figure:: img/osm_swellendam_2.png
    :align: center
 
 
@@ -139,7 +139,7 @@ But feel free to choose the best workflow for yourself.
 #. Change the :guilabel:`CRS` parameter to :guilabel:`WGS 84 / UTM zone 34S`;
 #. Finally click on :guilabel:`OK`:
 
-   .. image:: img/save_roads_34S.png
+   .. figure:: img/save_roads_34S.png
       :align: center
 
    This will create the new GeoPackage database and fill it with the
@@ -172,18 +172,18 @@ QGIS allows you to calculate distances from any vector object.
    :guilabel:`Buffer` algorithm. You can find it expanding the
    :menuselection:`Vector Geometry` group.
 
-   .. image:: img/processing_buffer_1.png
+   .. figure:: img/processing_buffer_1.png
       :align: center
 
    Or you can type ``buffer`` in the search menu in the upper part of the toolbox:
 
-   .. image:: img/processing_buffer_2.png
+   .. figure:: img/processing_buffer_2.png
       :align: center
 
 #. Double click on it to open the algorithm dialog
 #. Set it up like this
 
-   .. image:: img/vector_buffer_setup.png
+   .. figure:: img/vector_buffer_setup.png
       :align: center
 
 #. The default :guilabel:`Distance` is in meters because our input dataset is in
@@ -203,14 +203,14 @@ QGIS allows you to calculate distances from any vector object.
    #. naming the new layer :guilabel:`roads_buffer_50m`
    #. and saving it in the :file:`vector_analysis.gpkg` file
 
-   .. image:: img/buffer_saving.png
+   .. figure:: img/buffer_saving.png
       :align: center
 
 #. Click on :guilabel:`Run` and then close the :guilabel:`Buffer` dialog.
 
 Now your map will look something like this:
 
-.. image:: img/roads_buffer_result.png
+.. figure:: img/roads_buffer_result.png
    :align: center
 
 If your new layer is at the top of the :guilabel:`Layers` list, it will probably
@@ -223,7 +223,7 @@ correspond to all the individual roads. To get rid of this problem:
 #. Uncheck the :guilabel:`roads_buffer_50m` layer and re-create the buffer using
    the settings shown here:
 
-   .. image:: img/dissolve_buffer_setup.png
+   .. figure:: img/dissolve_buffer_setup.png
       :align: center
 
    Note that we're now checking the :guilabel:`Dissolve result` box
@@ -233,7 +233,7 @@ correspond to all the individual roads. To get rid of this problem:
 Once you've added the layer to the :guilabel:`Layers` panel, it will look like
 this:
 
-.. image:: img/dissolve_buffer_results.png
+.. figure:: img/dissolve_buffer_results.png
    :align: center
 
 Now there are no unnecessary subdivisions.
@@ -265,7 +265,7 @@ group within :menuselection:`Processing --> Toolbox`.
 
 #. Set it up like this:
 
-   .. image:: img/school_roads_intersect.png
+   .. figure:: img/school_roads_intersect.png
       :align: center
 
    * The input layers are the two buffers
@@ -277,13 +277,13 @@ group within :menuselection:`Processing --> Toolbox`.
    In the image below, the blue areas show us where both distance criteria are
    satisfied at once!
 
-   .. image:: img/intersect_result.png
+   .. figure:: img/intersect_result.png
       :align: center
 
 #. You may remove the two buffer layers and only keep the one that shows where
    they overlap, since that's what we really wanted to know in the first place:
 
-   .. image:: img/final_intersect_result.png
+   .. figure:: img/final_intersect_result.png
       :align: center
 
 .. _select-by-location:
@@ -298,7 +298,7 @@ extract the buildings in that area.
    within :menuselection:`Processing --> Toolbox`
 #. Set up the algorithm dialog like in the following picture
 
-   .. image:: img/location_select_dialog.png
+   .. figure:: img/location_select_dialog.png
       :align: center
 
 #. Click :guilabel:`Run` and then close the dialog
@@ -306,7 +306,7 @@ extract the buildings in that area.
    :guilabel:`well_located_houses` layer to the top of the layers list, then
    zoom in.
 
-   .. image:: img/select_zoom_result.png
+   .. figure:: img/select_zoom_result.png
       :align: center
 
    The red buildings are those which match our criteria, while the buildings
@@ -342,7 +342,7 @@ we first need to calculate their size.
    the main toolbar or within the attribute table
 #. Set it up like this
 
-   .. image:: img/buildings_area_calculator.png
+   .. figure:: img/buildings_area_calculator.png
       :align: center
 
    We are creating the new field :guilabel:`AREA` that will contain the area of
@@ -353,7 +353,7 @@ we first need to calculate their size.
    when prompted.
 #. Build a query as earlier in this lesson
 
-   .. image:: img/buildings_area_query.png
+   .. figure:: img/buildings_area_query.png
       :align: center
 
 #. Click :guilabel:`OK`.

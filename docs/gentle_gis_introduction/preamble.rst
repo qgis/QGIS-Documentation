@@ -10,25 +10,25 @@ A Gentle Introduction to GIS
 Brought to you with QGIS, a Free and Open Source Software GIS Application
 for everyone.
 
-.. image:: img/qgis_logo.png
-    :align: center
-    :width: 8em
+.. figure:: img/qgis_logo.png
+   :align: center
+   :width: 8em
 
 T. Sutton, O. Dassau, M. Sutton
 
 Sponsored by: Chief Directorate: Spatial Planning & Information, Department of
 Land Affairs, Eastern Cape, South Africa.
 
-.. image:: img/dla_logo.png
-    :align: center
-    :width: 6em
+.. figure:: img/dla_logo.png
+   :align: center
+   :width: 6em
 
 In partnership with: Spatial Information Management Unit, Office of the Premier,
 Eastern Cape, South Africa.
 
-.. image:: img/eastern_cape_logo.jpg
-    :align: center
-    :width: 25em
+.. figure:: img/eastern_cape_logo.jpg
+   :align: center
+   :width: 25em
 
 Copyright (c) 2009 Chief Directorate: Spatial Planning & Information, Department
 of Land Affairs, Eastern Cape.
@@ -83,6 +83,6 @@ heartfelt thanks to the DLA!
 
 We hope you enjoy using and learning QGIS in the spirit of Ubuntu!
 
-.. image:: img/tims_sign.png
+.. figure:: img/tims_sign.png
 
 Tim Sutton, April 2009

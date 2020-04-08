@@ -25,7 +25,7 @@ exercises.
   Vector)`. The tool dialog will appear.
 * Set it up like this:
 
-  .. image:: img/polygonize_raster.png
+  .. figure:: img/polygonize_raster.png
      :align: center
 
 * Change the field name (describing the values of the raster) to
@@ -62,7 +62,7 @@ opposite conversion from the one performed above. Convert to raster the
 * Click on :menuselection:`Raster --> Conversion --> Rasterize (Vector to
   Raster)` to start this tool, then set it up as in the screenshot below:
 
-.. image:: img/vector_to_raster.png
+.. figure:: img/vector_to_raster.png
    :align: center
 
 * :guilabel:`Input file` is :guilabel:`all_terrain`.
