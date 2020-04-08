@@ -107,13 +107,13 @@ But you can easily export the layer in another CRS.
    In its :guilabel:`Filter` field, search for ``34S``.
 #. Select :guilabel:`WGS 84 / UTM zone 34S` from the list
 
-   .. image:: img/CRSselector.png
+   .. figure:: img/CRSselector.png
       :align: center
 
 #. Leave the other options unchanged.
    The :guilabel:`Save Vector Layer as...` dialog now looks like this:
 
-   .. image:: img/save_vector_dialog.png
+   .. figure:: img/save_vector_dialog.png
       :align: center
 
 #. Click :guilabel:`OK`
@@ -133,7 +133,7 @@ You can also create your own projections.
 #. Go to :menuselection:`Settings --> Custom Projections...` and you'll see
    this dialog.
 
-   .. image:: img/custom_crs.png
+   .. figure:: img/custom_crs.png
       :align: center
 
 #. Click on the |signPlus| button to create a new projection
@@ -147,7 +147,7 @@ You can also create your own projections.
 
     +proj=vandg +lon_0=0 +x_0=0 +y_0=0 +R_A +a=6371000 +b=6371000 +units=m +no_defs
 
-   .. image:: img/new_crs_parameters.png
+   .. figure:: img/new_crs_parameters.png
       :align: center
 
 #. Click :guilabel:`OK`
@@ -156,7 +156,7 @@ You can also create your own projections.
    :guilabel:`Filter` field)
 #. On applying this projection, the map will be reprojected thus:
 
-   .. image:: img/van_grinten_projection.png
+   .. figure:: img/van_grinten_projection.png
       :align: center
 
 |IC|

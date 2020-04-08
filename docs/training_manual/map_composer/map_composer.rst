@@ -29,13 +29,13 @@ reason, it has a tool called the :guilabel:`Layout Manager`.
 (You could also close the dialog and navigate to a layout via the
 :menuselection:`Project --> Layouts -->` menu, as in the image below.)
 
-.. image:: img/print_composer_menu.png
+.. figure:: img/print_composer_menu.png
    :align: center
 
 Whichever route you take to get there, you will now see the :guilabel:`Print
 Layout` window:
 
-.. image:: img/print_composer_dialog.png
+.. figure:: img/print_composer_dialog.png
    :align: center
 
 
@@ -61,19 +61,19 @@ With this tool activated, you'll be able to place a map on the page.
 
 * Click and drag a box on the blank page:
 
-.. image:: img/drag_add_map.png
+.. figure:: img/drag_add_map.png
    :align: center
 
 The map will appear on the page.
 
 * Move the map by clicking and dragging it around:
 
-.. image:: img/move_map.png
+.. figure:: img/move_map.png
    :align: center
 
 * Resize it by clicking and dragging the boxes in the corners:
 
-.. image:: img/resize_map.png
+.. figure:: img/resize_map.png
    :align: center
 
 .. note::  Your map may look a lot different, of course! This depends on how
@@ -98,7 +98,7 @@ be at the wrong resolution and will look ugly or unreadable.
 
 * Force the map to refresh by clicking this button:
 
-.. image:: img/refresh_button.png
+.. figure:: img/refresh_button.png
    :align: center
 
 Remember that the size and position you've given the map doesn't need to be
@@ -139,7 +139,7 @@ However, there is also a tool to help position the title relative to the map
   dropdown arrow next to it to reveal the positioning options and click
   :guilabel:`Align center`:
 
-.. image:: img/align_center_dropdown.png
+.. figure:: img/align_center_dropdown.png
    :align: center
 
 To make sure that you don't accidentally move these elements around now that
@@ -161,7 +161,7 @@ contents of the label:
 
 * Use this interface to set the font and alignment options:
 
-.. image:: img/title_font_alignment.png
+.. figure:: img/title_font_alignment.png
    :align: center
 
 * Choose a large but sensible font (the example will use the default font with
@@ -181,7 +181,7 @@ you wish to add a frame, you can do so:
 
 In this example, we won't enable the frame, so here is our page so far:
 
-.. image:: img/page_so_far.png
+.. figure:: img/page_so_far.png
    :align: center
 
 |basic| |FA| Adding a Legend
@@ -196,7 +196,7 @@ add a new legend.
 
 * Click on the page to place the legend, and move it to where you want it:
 
-.. image:: img/legend_added.png
+.. figure:: img/legend_added.png
    :align: center
 
 |moderate| |FA| Customizing Legend Items
@@ -220,13 +220,13 @@ You can also rename items.
 * Set :kbd:`landuse` to :guilabel:`Hidden`, then click the down arrow and edit
   each category to name them on the legend. You can also reorder the items:
 
-.. image:: img/categories_reordered.png
+.. figure:: img/categories_reordered.png
    :align: center
 
 As the legend will likely be widened by the new layer names, you may wish to
 move and resize the legend and or map. This is the result:
 
-.. image:: img/map_composer_result.png
+.. figure:: img/map_composer_result.png
    :align: center
 
 |basic| |FA| Exporting Your Map

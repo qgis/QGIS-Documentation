@@ -11,7 +11,7 @@ cover an area much larger than that around the city that we want to work with.
 If you open the project corresponding to this lesson, you will see something
 like this.
 
-.. image:: img/cutting_merging/medfordarea.png
+.. figure:: img/cutting_merging/medfordarea.png
 
 These layers have two problems:
 
@@ -29,29 +29,29 @@ covers a bit more that the strictly necessary.
 
 To calculate the bounding box , we can use the *Polygon from layer extent* algorithm
 
-.. image:: img/cutting_merging/bbox.png
+.. figure:: img/cutting_merging/bbox.png
 
 To buffer it, we use the *Fixed distance buffer* algorithm, with the following parameter values.
 
-.. image:: img/cutting_merging/buffer_dialog.png
+.. figure:: img/cutting_merging/buffer_dialog.png
 
 .. warning:: Syntax changed in recent versions; set both Distance and Arc vertex to .25
 
 Here is the resulting bounding box obtained using the parameters shown above
 
-.. image:: img/cutting_merging/buffer.png
+.. figure:: img/cutting_merging/buffer.png
 
 It is a rounded box, but we can easily get the equivalent box with square angles,
 by running the *Polygon from layer extent* algorithm on it. We could have buffered
 the city limits first, and then calculate the extent rectangle, saving one step.
 
-.. image:: img/cutting_merging/buffer_squared.png
+.. figure:: img/cutting_merging/buffer_squared.png
 
 You will notice that the rasters has a different projection from the vector.
 We should therefore reproject them before proceeding further, using the
 *Warp (reproject)* tool.
 
-.. image:: img/cutting_merging/warp.png
+.. figure:: img/cutting_merging/warp.png
 
 .. note:: Recent versions have a more complex interface. Make sure at least
  one compression method is selected.
@@ -60,11 +60,11 @@ With this layer that contains the bounding box of the raster layer that we want
 to obtain, we can crop both of the raster layers, using the *Clip raster with
 polygon* algorithm.
 
-.. image:: img/cutting_merging/clip.png 
+.. figure:: img/cutting_merging/clip.png 
 
 Once the layers have been cropped, they can be merged using the GDAL *Merge* algorithm.
 
-.. image:: img/cutting_merging/merge.png
+.. figure:: img/cutting_merging/merge.png
 
 .. note:: You can save time merging first and then cropping, and you will avoid
  calling the clipping algorithm twice. However, if there are several layers to
@@ -76,7 +76,7 @@ Once the layers have been cropped, they can be merged using the GDAL *Merge* alg
 
 With that, we get the final DEM we want.
 
-.. image:: img/cutting_merging/finaldem.png
+.. figure:: img/cutting_merging/finaldem.png
 
 Now it is time to compute the slope layer.
 
@@ -90,11 +90,11 @@ correctly calculate the slope, with either SAGA or GDAL.
 
 With the new DEM, slope can now be computed.
 
-.. image:: img/cutting_merging/slope.png
+.. figure:: img/cutting_merging/slope.png
 
 And here is the resulting slope layer.
 
-.. image:: img/cutting_merging/slopereproj.png
+.. figure:: img/cutting_merging/slopereproj.png
 
 The slope produced by the *Slope, Aspect, Curvature* algorithm can be expressed
 in degrees or radians; degrees are a more practical and common unit.
@@ -102,7 +102,7 @@ In case you calculated it in radians, the *Metric conversions* algorithm will
 help us to do the conversion (but in case you didn't know that algorithm existed,
 you could use the raster calculator that we have already used).
 
-.. image:: img/cutting_merging/metricconversions.png
+.. figure:: img/cutting_merging/metricconversions.png
 
 Reprojecting the converted slope layer back with the *Reproject raster layer*,
 we get the final layer we wanted.

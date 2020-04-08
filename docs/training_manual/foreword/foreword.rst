@@ -61,7 +61,7 @@ exercises complete with annotated answers throughout the text.
 License
 -------
 
-.. image:: img/license.png
+.. figure:: img/license.png
 
 The Free Quantum GIS Training Manual by Linfiniti Consulting CC. is based on
 an earlier version from Linfiniti and is licensed under a

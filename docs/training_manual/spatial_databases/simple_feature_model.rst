@@ -24,7 +24,7 @@ The Simple Feature for SQL (SFS) Model is a *non-topological* way to store
 geospatial data in a database and defines functions for accessing, operating,
 and constructing these data.
 
-.. image:: img/ogc_sfs.png
+.. figure:: img/ogc_sfs.png
    :align: center
 
 The model defines geospatial data from Point, Linestring, and Polygon types
@@ -150,12 +150,12 @@ Layers` menu option or toolbar button:
 
 This will open the dialog:
 
-.. image:: img/add_postgis_layer_dialog.png
+.. figure:: img/add_postgis_layer_dialog.png
    :align: center
 
 Click on the :guilabel:`New` button to open this dialog:
 
-.. image:: img/new_postgis_connection.png
+.. figure:: img/new_postgis_connection.png
    :align: center
 
 Then define a new connection, e.g.::

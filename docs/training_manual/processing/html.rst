@@ -15,7 +15,7 @@ Let's see one of those algorithms to understand how they work.
 Open the project with the data to be used in this lesson and then open the
 *Basic statistics for numeric fields* algorithm. 
 
-.. image:: img/html/paramdialog.png
+.. figure:: img/html/paramdialog.png
 
 The algorithm is rather simple, and you just have to select the layer to use
 and one of its field (a numeric one). The output is of type HTML, but the
@@ -29,7 +29,7 @@ Run the algorithm selecting the only layer in the project as input, and
 the *POP2000* field, and a new dialog like the one shown next will appear
 once the algorithm is executed and the parameters dialog is closed.
 
-.. image:: img/html/result.png
+.. figure:: img/html/result.png
 
 This is the *Results viewer*. It keeps all the HTML result generated during
 the current session, easily accessible, so you can check them quickly whenever

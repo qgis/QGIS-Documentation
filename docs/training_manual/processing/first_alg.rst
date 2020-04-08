@@ -14,7 +14,7 @@ centroids of set of polygons.
 First, open the QGIS project corresponding to this lesson. It contains just a
 single layer with two polygons
 
-.. image:: img/first_alg/canvas.png
+.. figure:: img/first_alg/canvas.png
 
 Now go to the text box at the top of the toolbox. That is the search box, and if
 you type text in it, it will filter the list of algorithms so just those ones
@@ -24,7 +24,7 @@ not active, an additional label will be shown in the lower part of the toolbox.
 
 Type ``centroids`` and you should see something like this.
 
-.. image:: img/first_alg/toolbox.png
+.. figure:: img/first_alg/toolbox.png
 
 The search box is a very practical way of finding the algorithm you are looking
 for. At the bottom of the dialog, an additional label shows that there are
@@ -34,13 +34,13 @@ include results from those inactive providers, which will be shown in light gray
 A link to activate each inactive provider is also shown. We'll see later how to
 activate other providers.
 
-.. image:: img/first_alg/toolbox_providers.png
+.. figure:: img/first_alg/toolbox_providers.png
 
 To execute an algorithm, you just have to double-click on its name in the
 toolbox. When you double-click on the *Polygon centroids* algorithm, you will
 see the following dialog.
 
-.. image::  img/first_alg/centroids.png
+.. figure:: img/first_alg/centroids.png
 
 All algorithms have a similar interface, which basically contains input
 parameters that you have to fill, and outputs that you have to select where to
@@ -73,7 +73,7 @@ algorithm.
 
 You will get the following output.
 
-.. image:: img/first_alg/canvas2.png
+.. figure:: img/first_alg/canvas2.png
 
 The output has the same CRS as the input. Geoalgorithms assumes all input layers
 share the same CRS and do not perform any reprojection. Except in the case of

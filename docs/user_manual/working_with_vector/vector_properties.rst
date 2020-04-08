@@ -3160,15 +3160,15 @@ in the current edit session.
      - Illustration
    * - The |checkbox| :guilabel:`Gap` check will check for
        gaps between neighbouring polygons.
-     - .. image:: img/gapcheck.png
+     - .. figure:: img/gapcheck.png
    * - The |checkbox| :guilabel:`Overlap` check will check
        for overlaps between neighbouring polygons.
-     - .. image:: img/overlapcheck.png
+     - .. figure:: img/overlapcheck.png
    * - The |checkbox| :guilabel:`Missing vertex` check will
        check for shared boundaries of neighbouring polygons
        where one border misses a vertex which is present on
        the other one.
-     - .. image:: img/missingvertexcheck.png
+     - .. figure:: img/missingvertexcheck.png
 
 Gap check exceptions
 ....................

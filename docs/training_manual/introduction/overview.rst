@@ -13,7 +13,7 @@ interface.
 
 .. _figure_gui_numbered:
 
-.. image:: img/gui_numbered.png
+.. figure:: img/gui_numbered.png
    :align: center
 
 The elements identified in the figure above are:
@@ -143,7 +143,7 @@ Try to find each of these tools on your screen. What is their purpose?
 
 3. |invertSelection|
 
-4. .. image:: img/toggle_render.png
+4. .. figure:: img/toggle_render.png
 
 5. |measure|
 

@@ -68,7 +68,7 @@ of the forest stands.
 * Add the :kbd:`forest_stands_2012.shp` layer, located in the :kbd:`exercise_data\\forestry\\` folder.
 * Set the styling of this layer so that the polygons have no fill and the borders are visible.
 
-.. image:: img/stands_2012_1.png
+.. figure:: img/stands_2012_1.png
    :align: center
 
 You can see that a region to the North of the inventory area is still missing.
@@ -96,7 +96,7 @@ Some ideas about what you could identify from the images:
   A scale between 1:3 000 and 1: 5 000 should be enough for this imagery.
   See the image below (1:4000 scale):
 
-.. image:: img/zoom_to_CIR_1-4000.png
+.. figure:: img/zoom_to_CIR_1-4000.png
    :align: center
 
 |basic| |TY| Digitizing Forest Stands from CIR Imagery
@@ -115,7 +115,7 @@ With this indications in mind, you can now digitize the missing forest stands.
 * Set up the snapping and topology options as in the image.
 * Remember to click :guilabel:`Apply` or :guilabel:`OK`.
 
-.. image:: img/snapping_2012.png
+.. figure:: img/snapping_2012.png
    :align: center
 
 Start digitizing as you did in the previous lesson, with the only difference
@@ -125,7 +125,7 @@ should get around 14 new forest stands. While digitizing, fill in the
 
 When you are finished your layer should look something like:
 
-.. image:: img/new_stands_ready.png
+.. figure:: img/new_stands_ready.png
    :align: center
 
 Now you have a  new set of polygons defining the different forest stands for
@@ -184,7 +184,7 @@ the :guilabel:`Join attributes by location`:
 * Select :guilabel:`Yes` when prompted to add the layer to the TOC.
 * Close the dialogue box.
 
-.. image:: img/join_squirrel_point.png
+.. figure:: img/join_squirrel_point.png
    :align: center
    
 Now you have a new forest stands layer, :kbd:`stands_squirrel` where there are
@@ -195,7 +195,7 @@ Open the table of the new layer and order it so that the forest stands with
 information for the :guilabel:`Protection` attribute are on top. You should
 have now two forest stands where the squirrel has been located:
 
-.. image:: img/joined_squirrel_point.png
+.. figure:: img/joined_squirrel_point.png
    :align: center
 
 Although this information might be enough, look at what areas related to the
@@ -206,7 +206,7 @@ squirrels should be protected. You know that you have to leave a buffer of
 * Make a buffer of 15 meters for the :kbd:`squirrel` layer.
 * Name the result :kbd:`squirrel_15m.shp`.
 
-.. image:: img/squirrel_15m.png
+.. figure:: img/squirrel_15m.png
    :align: center
 
 You will notice that if you zoom in to the location in the Northern part of the
@@ -214,7 +214,7 @@ area, the buffer area extends to the neighbouring stand as well. This means that
 whenever a forest operation would take place in that stand, the protected
 location should also be taken into account.
 
-.. image:: img/north_squirrel_buffer.png
+.. figure:: img/north_squirrel_buffer.png
    :align: center
 
 From your previous analysis, you did not get that stand to register information
@@ -224,7 +224,7 @@ about the protection status. To solve this problem:
 * But this time use the :kbd:`squirrel_15m` layer as join layer.
 * Name the output file as :kbd:`stands_squirrel_15m.shp`.
 
-.. image:: img/joined_squirrel_buffer.png
+.. figure:: img/joined_squirrel_buffer.png
    :align: center
    
 Open the attribute table for the this new layer and note that now you have

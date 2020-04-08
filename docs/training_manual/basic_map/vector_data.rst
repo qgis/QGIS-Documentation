@@ -34,8 +34,8 @@ This is the layer's :guilabel:`Attribute table`. A row is called
 a *record*, and represents a river *feature*. A column is called a *field*,
 and represents a property of the river. Cells show *attributes*.
 
-.. image:: img/attribute_data_preview.png
-  :align: center
+.. figure:: img/attribute_data_preview.png
+   :align: center
 
 These definitions are commonly used in GIS, so it's essential to remember them!
 
@@ -88,7 +88,7 @@ You are now ready to add any layer from this GeoPackage to QGIS.
    contained in the GeoPackage file.
 #. Select the :guilabel:`roads` layer and click on the :guilabel:`Add` button.
 
-   .. image:: img/add_data_dialog_geopackage.png
+   .. figure:: img/add_data_dialog_geopackage.png
       :align: center
 
    A :guilabel:`roads` layer is added to the :guilabel:`Layers` panel with
@@ -134,7 +134,7 @@ the :guilabel:`Browser`.
    drag-and-drop it onto the map canvas. A new layer is added to the
    :guilabel:`Layers` panel and its features are displayed on the map canvas.
 
-   .. image:: img/spatialite_dialog_connected.png
+   .. figure:: img/spatialite_dialog_connected.png
       :align: center
 
 .. tip:: Enable the :guilabel:`Browser` panel in :menuselection:`View --> Panels -->`
@@ -176,7 +176,7 @@ because other layers are on top of it.
 
 For example, this layer order...
 
-.. image:: img/incorrect_layer_order.png
+.. figure:: img/incorrect_layer_order.png
    :align: center
 
 ... would result in roads and places being hidden as they run *underneath*
@@ -187,7 +187,7 @@ To resolve this problem:
 #. Click and drag on a layer in the Layers list.
 #. Reorder them to look like this:
 
-.. image:: img/correct_layer_order.png
+.. figure:: img/correct_layer_order.png
    :align: center
 
 You'll see that the map now makes more sense visually, with roads and buildings

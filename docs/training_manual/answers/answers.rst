@@ -13,7 +13,7 @@ In the main area of the dialog you should see many shapes with different
 colors. Each shape belongs to a layer you can identify by its color in the
 left panel (your colors may be different from the ones below):
 
-.. image:: img/basic_map.png
+.. figure:: img/basic_map.png
    :align: center
 
 :ref:`Back to text <backlink-interface-preparation-1>`
@@ -104,7 +104,7 @@ Your map should have seven layers:
   on the |symbology| :sup:`Open the Layer Styling panel` button. Change the color
   to one that fits the water layer.
 
-.. image:: img/answer_water_blue.png
+.. figure:: img/answer_water_blue.png
    :align: center
 
 .. note::  If you want to work on only one layer at a time and don't want the
@@ -122,7 +122,7 @@ Your map should have seven layers:
 
 Your map should now look like this:
 
-.. image:: img/answer_symbology1.png
+.. figure:: img/answer_symbology1.png
    :align: center
 
 If you are a Beginner-level user, you may stop here.
@@ -134,7 +134,7 @@ If you are a Beginner-level user, you may stop here.
 * Also feel free to experiment with different :guilabel:`Fill style` and
   :guilabel:`Stroke style` settings for the polygons.
 
-.. image:: img/answer_symbology2.png
+.. figure:: img/answer_symbology2.png
    :align: center
 
 :ref:`Back to text <backlink-symbology-structure-1>`
@@ -150,7 +150,7 @@ has to be easy to tell different layers apart on the map.
 
 Here's an example:
 
-.. image:: img/answer_buildings_symbology.png
+.. figure:: img/answer_buildings_symbology.png
    :align: center
 
 :ref:`Back to text <backlink-symbology-layers-1>`
@@ -163,7 +163,7 @@ Here's an example:
 
 To make the required symbol, you need three symbol layers:
 
-.. image:: img/answer_road_symbology.png
+.. figure:: img/answer_road_symbology.png
    :align: center
 
 The lowest symbol layer is a broad, solid gray line. On top of it there is a
@@ -174,12 +174,12 @@ you want:
 
 #. Check that your symbol levels look something like this:
 
-   .. image:: img/answer_road_symbol_levels.png
+   .. figure:: img/answer_road_symbol_levels.png
       :align: center
 
 #. Now your map should look like this:
 
-   .. image:: img/target_road_symbology.png
+   .. figure:: img/target_road_symbology.png
       :align: center
 
 :ref:`Back to text <backlink-symbology-levels-1>`
@@ -192,7 +192,7 @@ you want:
 
 #. Adjust your symbol levels to these values:
 
-   .. image:: img/answer_road_symbol_layers.png
+   .. figure:: img/answer_road_symbol_layers.png
       :align: center
 
 #. Experiment with different values to get different results.
@@ -208,10 +208,10 @@ you want:
 
 Here are examples of the symbol structure:
 
-.. image:: img/answer_marker_line.png
+.. figure:: img/answer_marker_line.png
    :align: center
 
-.. image:: img/answer_marker_line2.png
+.. figure:: img/answer_marker_line2.png
    :align: center
 
 :ref:`Back to text <backlink-symbology-marker-line>`
@@ -259,7 +259,7 @@ Your map should now show the marker points and the labels should be offset by
 :kbd:`2.0 mm`: The style of the markers and labels should allow both to be
 clearly visible on the map:
 
-.. image:: img/customised_labels_one.png
+.. figure:: img/customised_labels_one.png
    :align: center
 
 :ref:`Back to text <backlink-label-tool-1>`
@@ -272,7 +272,7 @@ clearly visible on the map:
 
 One possible solution has this final product:
 
-.. image:: img/possible_outcome_map.png
+.. figure:: img/possible_outcome_map.png
    :align: center
 
 To arrive at this result:
@@ -283,7 +283,7 @@ To arrive at this result:
 * In addition, this example uses the :guilabel:`Wrap label on character`
   option:
 
-  .. image:: img/wrap_character_settings.png
+  .. figure:: img/wrap_character_settings.png
      :align: center
 
 * Enter a :kbd:`space` in this field and click :guilabel:`Apply` to achieve the
@@ -307,12 +307,12 @@ To arrive at this result:
   layer and select :kbd:`FONT_SIZE` in the :guilabel:`Attribute field` of the
   font size data override dropdown:
 
-  .. image:: img/font_size_override.png
+  .. figure:: img/font_size_override.png
      :align: center
 
   Your results, if using the above values, should be this:
 
-  .. image:: img/font_override_results.png
+  .. figure:: img/font_override_results.png
      :align: center
 
 :ref:`Back to text <backlink-label-data-defined-1>`
@@ -329,14 +329,14 @@ To arrive at this result:
 * Use the same method as in the first exercise of the lesson to get rid of the
   borders:
 
-  .. image:: img/gradient_map_no_pen.png
+  .. figure:: img/gradient_map_no_pen.png
      :align: center
 
 The settings you used might not be the same, but with the values
 :guilabel:`Classes` = :kbd:`6` and :guilabel:`Mode` = :guilabel:`Natural Breaks
 (Jenks)` (and using the same colors, of course), the map will look like this:
 
-.. image:: img/gradient_map_new_mode.png
+.. figure:: img/gradient_map_new_mode.png
    :align: center
 
 :ref:`Back to text <backlink-classification-refine-1>`
@@ -353,7 +353,7 @@ The settings you used might not be the same, but with the values
 The symbology doesn't matter, but the results should look more or less like
 this:
 
-.. image:: img/routes_layer_result.png
+.. figure:: img/routes_layer_result.png
    :align: center
 
 :ref:`Back to text <backlink-create-vector-digitize-1>`
@@ -367,7 +367,7 @@ this:
 The exact shape doesn't matter, but you should be getting a hole in the middle
 of your feature, like this one:
 
-.. image:: img/ring_tool_result.png
+.. figure:: img/ring_tool_result.png
    :align: center
 
 * Undo your edit before continuing with the exercise for the next tool.
@@ -382,12 +382,12 @@ of your feature, like this one:
 
 * First select the |largeLandUseArea|:
 
-.. image:: img/park_selected.png
+.. figure:: img/park_selected.png
    :align: center
 
 * Now add your new part:
 
-.. image:: img/new_park_area.png
+.. figure:: img/new_park_area.png
    :align: center
 
 * Undo your edit before continuing with the exercise for the next tool.
@@ -410,7 +410,7 @@ of your feature, like this one:
    original polygon's :guilabel:`OGC_FID` will not be :kbd:`1`. Just choose the
    feature which has an :guilabel:`OGC_FID`.
 
-  .. image:: img/merge_feature_dialog.png
+  .. figure:: img/merge_feature_dialog.png
      :align: center
 
 .. Note:: Using the :guilabel:`Merge Attributes of Selected Features` tool
@@ -434,14 +434,14 @@ that they are predefined.
   :guilabel:`highway` for both the :guilabel:`Value` and :guilabel:`Description`
   options:
 
-  .. image:: img/value_map_settings.png
+  .. figure:: img/value_map_settings.png
      :align: center
 
 * Click :guilabel:`Ok` three times.
 * If you use the :guilabel:`Identify` tool on a street now while edit mode is
   active, the dialog you get should look like this:
 
-  .. image:: img/highway_as_value_map.png
+  .. figure:: img/highway_as_value_map.png
      :align: center
 
 :ref:`Back to text <backlink-create-vector-forms-1>`
@@ -457,7 +457,7 @@ that they are predefined.
 
 * Your buffer dialog should look like this:
 
-  .. image:: img/schools_buffer_setup.png
+  .. figure:: img/schools_buffer_setup.png
      :align: center
 
   The :guilabel:`Buffer distance` is :guilabel:`1` kilometer.
@@ -466,12 +466,12 @@ that they are predefined.
   optional, but it's recommended, because it makes the output buffers look
   smoother. Compare this:
 
-  .. image:: img/schools_buffer_5.png
+  .. figure:: img/schools_buffer_5.png
      :align: center
 
   To this:
 
-  .. image:: img/schools_buffer_6.png
+  .. figure:: img/schools_buffer_6.png
      :align: center
 
 The first image shows the buffer with the :guilabel:`Segments to approximate`
@@ -492,21 +492,21 @@ process:
 * First, create a buffer of 500m around the restaurants and add the layer to
   the map:
 
-  .. image:: img/restaurants_buffer.png
+  .. figure:: img/restaurants_buffer.png
      :align: center
 
-  .. image:: img/restaurants_buffer_result.png
+  .. figure:: img/restaurants_buffer_result.png
      :align: center
 
 * Next, extract buildings within that buffer area:
 
-  .. image:: img/select_within_restaurants.png
+  .. figure:: img/select_within_restaurants.png
      :align: center
 
 Your map should now show only those buildings which are within 50m of a road,
 1km of a school and 500m of a restaurant:
 
-.. image:: img/restaurant_buffer_result.png
+.. figure:: img/restaurant_buffer_result.png
    :align: center
 
 :ref:`Back to text <backlink-vector-analysis-basic-2>`
@@ -522,7 +522,7 @@ Your map should now show only those buildings which are within 50m of a road,
 Open :menuselection:`Network Analysis --> Shortest Path (Point to Point)` and
 fill the dialog as:
 
-.. image:: img/fastest_path_result.png
+.. figure:: img/fastest_path_result.png
    :align: center
 
 Make sure that the :guilabel:`Path type to calculate` is ``Fastest``.
@@ -532,7 +532,7 @@ Click on :guilabel:`Run` and close the dialog.
 Open now the attribute table of the output layer. The :guilabel:`cost` field
 contains the travel time between the two points (as fraction of hours):
 
-.. image:: img/fastest_path_attribute.png
+.. figure:: img/fastest_path_attribute.png
    :align: center
 
 :ref:`Back to text <backlink-network_analysis_1>`
@@ -548,12 +548,12 @@ contains the travel time between the two points (as fraction of hours):
 
 * Set your :guilabel:`Aspect` dialog up like this:
 
-  .. image:: img/answer_dem_aspect.png
+  .. figure:: img/answer_dem_aspect.png
      :align: center
 
 Your result:
 
-.. image:: img/answer_aspect_result.png
+.. figure:: img/answer_aspect_result.png
    :align: center
 
 :ref:`Back to text <backlink-raster-analysis-1>`
@@ -566,7 +566,7 @@ Your result:
 
 * Set your :guilabel:`Raster calculator` dialog up like this:
 
-  .. image:: img/answer_raster_calculator_slope.png
+  .. figure:: img/answer_raster_calculator_slope.png
      :align: center
 
 * For the 5 degree version, replace the ``2`` in the expression and file
@@ -576,12 +576,12 @@ Your results:
 
 * 2 degrees:
 
-  .. image:: img/answer_2degree_result.png
+  .. figure:: img/answer_2degree_result.png
      :align: center
 
 * 5 degrees:
 
-  .. image:: img/answer_5degree_result.png
+  .. figure:: img/answer_5degree_result.png
      :align: center
 
 :ref:`Back to text <backlink-raster-analysis-2>`
@@ -604,7 +604,7 @@ Your results:
 
 When viewed over the original raster, the areas should overlap perfectly:
 
-.. image:: img/polygonize_raster.png
+.. figure:: img/polygonize_raster.png
    :align: center
 
 * You can save this layer by right-clicking on the :guilabel:`all_terrain`
@@ -634,19 +634,19 @@ We can therefore sensibly eliminate those buildings from our dataset
 
 At the moment, your analysis should look something like this:
 
-.. image:: img/new_solution_example.png
+.. figure:: img/new_solution_example.png
    :align: center
 
 Consider a circular area, continuous for 100 meters in all directions.
 
-.. image:: img/circle_100.png
+.. figure:: img/circle_100.png
    :align: center
 
 If it is greater than 100 meters in radius, then subtracting 100 meters from
 its size (from all directions) will result in a part of it being left in the
 middle.
 
-.. image:: img/circle_with_remainder.png
+.. figure:: img/circle_with_remainder.png
    :align: center
 
 Therefore, you can run an *interior buffer* of 100 meters on your existing
@@ -660,7 +660,7 @@ To demonstrate:
   the Buffer(s) dialog.
 * Set it up like this:
 
-  .. image:: img/suitable_terrain_buffer.png
+  .. figure:: img/suitable_terrain_buffer.png
      :align: center
 
 * Use the :guilabel:`suitable_terrain` layer with :kbd:`10` segments and a
@@ -673,14 +673,14 @@ To demonstrate:
 
 Your results will look like something like this:
 
-.. image:: img/suitable_buffer_results.png
+.. figure:: img/suitable_buffer_results.png
    :align: center
 
 * Now use the :guilabel:`Select by Location` tool (:menuselection:`Vector -->
   Research Tools --> Select by location`).
 * Set up like this:
 
-  .. image:: img/select_by_location.png
+  .. figure:: img/select_by_location.png
      :align: center
 
 * Select features in :guilabel:`new_solution` that intersect features in
@@ -688,7 +688,7 @@ Your results will look like something like this:
 
 This is the result:
 
-.. image:: img/buffer_select_result.png
+.. figure:: img/buffer_select_result.png
    :align: center
 
 The yellow buildings are selected. Although some of the buildings fall partly
@@ -712,7 +712,7 @@ requirements.
 
 Your map should look like this (you may need to re-order the layers):
 
-.. image:: img/geology_layer_result.png
+.. figure:: img/geology_layer_result.png
    :align: center
 
 :ref:`Back to text <backlink-wms-1>`
@@ -726,16 +726,16 @@ Your map should look like this (you may need to re-order the layers):
 * Use the same approach as before to add the new server and the appropriate
   layer as hosted on that server:
 
-  .. image:: img/add_ogc_server.png
+  .. figure:: img/add_ogc_server.png
      :align: center
 
-  .. image:: img/add_bluemarble_layer.png
+  .. figure:: img/add_bluemarble_layer.png
      :align: center
 
 * If you zoom into the |majorUrbanName| area, you'll notice that this dataset has a
   low resolution:
 
-.. image:: img/low_resolution_dataset.png
+.. figure:: img/low_resolution_dataset.png
    :align: center
 
 Therefore, it's better not to use this data for the current map. The Blue
@@ -798,7 +798,7 @@ containing the rules you just have saved.
 Click on :guilabel:`Run` and then on :guilabel:`View Output`. You can change the
 colors and the final result should look like the following picture:
 
-.. image:: img/grass_reclass.png
+.. figure:: img/grass_reclass.png
   :align: center
 
 :ref:`Back to text <backlink-grass_reclass>`
@@ -891,7 +891,7 @@ linking them to our `people` table via 'one to many' relationships::
 
 An ER Diagram to represent this would look like this:
 
-.. image:: img/er-people-normalised-example.png
+.. figure:: img/er-people-normalised-example.png
    :align: center
 
 :ref:`Back to text <backlink-database-concepts-3>`

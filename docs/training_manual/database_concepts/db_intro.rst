@@ -294,7 +294,7 @@ We can then link the two tables using the 'keys' :kbd:`streets.id` and
 If we draw an ER Diagram for these two tables it would look something like
 this:
 
-.. image:: img/er-people-streets.png
+.. figure:: img/er-people-streets.png
    :align: center
 
 The ER Diagram helps us to express 'one to many' relationships. In this case

@@ -42,13 +42,13 @@ any tables to this database. Let's go ahead and do that.
 * Add 2 attributes as shown in below
 * Click :guilabel:`OK` to create the table.
 
-.. image:: img/new_layer_setup.png
+.. figure:: img/new_layer_setup.png
    :align: center
 
 * Click the refresh button at the top of the Browser and you should now see
   your :kbd:`places` table listed.
 
-.. image:: img/new_layer_added.png
+.. figure:: img/new_layer_added.png
    :align: center
 
 You can right click on the table and view its properties as we did in the

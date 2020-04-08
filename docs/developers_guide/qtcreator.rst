@@ -48,7 +48,7 @@ Then use the resulting file selection dialog to browse to and open this file:
 
   $HOME/dev/cpp/QGIS/CMakeLists.txt
 
-.. image:: images/image01.jpeg
+.. figure:: images/image01.jpeg
 
 Next you will be prompted for a build location. I create a specific build dir
 for QtCreator to work in under:
@@ -60,7 +60,7 @@ for QtCreator to work in under:
 Its probably a good idea to create separate build directories for different
 branches if you can afford the disk space.
 
-.. image:: images/image02.jpeg
+.. figure:: images/image02.jpeg
 
 
 Next you will be asked if you have any CMake build options to pass to CMake. We
@@ -70,7 +70,7 @@ will tell CMake that we want a debug build by adding this option:
 
   -DCMAKE_BUILD_TYPE=Debug
 
-.. image:: images/image03.jpeg
+.. figure:: images/image03.jpeg
 
 
 That's the basics of it. When you complete the Wizard, QtCreator will start
@@ -84,18 +84,18 @@ Setting up your build environment
 
 Click on the 'Projects' icon on the left of the QtCreator window.
 
-.. image:: images/image04.jpeg
+.. figure:: images/image04.jpeg
 
 Select the build settings tab (normally active by default).
 
-.. image:: images/image05.jpeg
+.. figure:: images/image05.jpeg
 
 We now want to add a custom process step. Why? Because QGIS can currently only
 run from an install directory, not its build directory, so we need to ensure
 that it is installed whenever we build it. Under 'Build Steps', click on the
 'Add BuildStep' combo button and choose 'Custom Process Step'.
 
-.. image:: images/image06.jpeg
+.. figure:: images/image06.jpeg
 
 Now we set the following details:
 
@@ -107,7 +107,7 @@ Now we set the following details:
 
  Command arguments: install
 
-.. image:: images/image07.jpeg
+.. figure:: images/image07.jpeg
 
 You are almost ready to build. Just one note: QtCreator will need write
 permissions on the install prefix. By default (which I am using here) QGIS is
@@ -117,7 +117,7 @@ machine, I just gave myself write permissions to the /usr/local directory.
 To start the build, click that big hammer icon on the bottom left of the
 window.
 
-.. image:: images/image08.jpeg
+.. figure:: images/image08.jpeg
 
 
 Setting your run environment
@@ -128,21 +128,21 @@ we need to create a custom run target to tell QtCreator to run QGIS from the
 install dir (in my case ``/usr/local/``). To do that, return to the projects
 configuration screen.
 
-.. image:: images/image04.jpeg
+.. figure:: images/image04.jpeg
 
 Now select the 'Run Settings' tab
 
-.. image:: images/image09.jpeg
+.. figure:: images/image09.jpeg
 
 We need to update the default run settings from using the 'qgis' run
 configuration to using a custom one.
 
-.. image:: images/image10.jpeg
+.. figure:: images/image10.jpeg
 
 Do do that, click the 'Add v' combo button next to the Run configuration
 combo and choose 'Custom Executable' from the top of the list.
 
-.. image:: images/image11.jpeg
+.. figure:: images/image11.jpeg
 
 Now in the properties area set the following details:
 
@@ -161,7 +161,7 @@ Now in the properties area set the following details:
 Then click the 'Rename' button and give your custom executable a meaningful
 name e.g. 'Installed QGIS'
 
-.. image:: images/image12.jpeg
+.. figure:: images/image12.jpeg
 
 Running and debugging
 ======================
@@ -169,9 +169,9 @@ Running and debugging
 Now you are ready to run and debug QGIS. To set a break point, simply open a
 source file and click in the left column.
 
-.. image:: images/image14.jpeg
+.. figure:: images/image14.jpeg
 
 Now launch QGIS under the debugger by clicking the icon with a bug on it in the
 bottom left of the window.
 
-.. image:: images/image13.jpeg
+.. figure:: images/image13.jpeg

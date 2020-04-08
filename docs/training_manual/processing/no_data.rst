@@ -13,7 +13,7 @@ Open the QGIS project corresponding to this lesson and you will see that it cont
 
 Now open the toolbox and open the dialog corresponding to the raster calculator.
 
-.. image:: img/no_data/calculator_dialog.png
+.. figure:: img/no_data/calculator_dialog.png
 
 .. note:: The interface is different in recent versions.
 
@@ -42,11 +42,11 @@ Open the algorithm dialog again, select the *accflow* layer as the only input la
 
 Here is the layer that you will get.
 
-.. image:: img/no_data/log.png
+.. figure:: img/no_data/log.png
 
 If you select the *Identify* tool to know the value of a layer at a given point, select the layer that we have just created, and click on a point outside of the basin, you will see that it contains a no--data value.
 
-.. image:: img/no_data/identify.png
+.. figure:: img/no_data/identify.png
 
 For the next exercise we are going to use two layers instead of one, and we are going to get a DEM with valid elevation values only within the basin defined in the second layer. Open the calculator dialog and select both layers of the project in the input layers field. Enter the following formula in the corresponding field:
 
@@ -58,7 +58,7 @@ For the next exercise we are going to use two layers instead of one, and we are 
 
 Here is the resulting layer.
 
-.. image:: img/no_data/masked.png
+.. figure:: img/no_data/masked.png
 
 
 This technique is used frequently to *mask* values in a raster layer, and is useful whenever you want to perform calculations for a region other that the arbitrary rectangular region that is used by raster layer. For instance, an elevation histogram of a raster layer doesn't have much meaning. If it is instead computed using only values corresponding to a basin (as in he case above), the result that we obtain is a meaningful one that actually gives information about the configuration of the basin.
@@ -84,7 +84,7 @@ As you can see, we can use the calculator not only to do simple algebraic operat
 
 The result has a value of 1 inside the range we want to work with, and no-data in cells outside of it.
 
-.. image:: img/no_data/elevation_mask.png
+.. figure:: img/no_data/elevation_mask.png
 
 The no-data value comes from the 0/0 expression. Since that is an undetermined value, SAGA will add a NaN (Not a Number) value, which is actually handled as a no-data value. With this little trick you can set a no-data value without needing to know what the no--data value of the cell is.
 

@@ -36,14 +36,14 @@ most suitable one for this purpose.
 
 * Select :guilabel:`name` from the list:
 
-.. image:: img/select_label_with.png
+.. figure:: img/select_label_with.png
    :align: center
 
 * Click :guilabel:`OK`.
 
 The map should now have labels like this:
 
-.. image:: img/first_place_names.png
+.. figure:: img/first_place_names.png
    :align: center
 
 |basic| |FA| Changing Label Options
@@ -58,7 +58,7 @@ are too far away from their point markers.
   update the text formatting options to match those shown here:
 
 
-.. image:: img/label_formatting_options.png
+.. figure:: img/label_formatting_options.png
    :align: center
 
 That's the font problem solved! Now let's look at the problem of the labels
@@ -71,7 +71,7 @@ overlapping the points, but before we do that, let's take a look at the
   to match those shown here:
 
 
-.. image:: img/buffer_options.png
+.. figure:: img/buffer_options.png
    :align: center
 
 * Click :guilabel:`Apply`.
@@ -80,7 +80,7 @@ overlapping the points, but before we do that, let's take a look at the
 You'll see that this adds a colored buffer or border to the place labels, making
 them easier to pick out on the map:
 
-.. image:: img/buffer_results.png
+.. figure:: img/buffer_results.png
    :align: center
 
 Now we can address the positioning of the labels in relation to their point
@@ -91,7 +91,7 @@ markers.
   :guilabel:`Around point` is selected:
 
 
-.. image:: img/offset_placement_settings.png
+.. figure:: img/offset_placement_settings.png
    :align: center
 
 * Click :guilabel:`Apply`.
@@ -129,18 +129,18 @@ This will reveal the :guilabel:`Quadrant` options which you can use to set the
 position of the label in relation to the point marker. In this case, we want the
 label to be centered on the point, so choose the center quadrant:
 
-.. image:: img/quadrant_offset_options.png
+.. figure:: img/quadrant_offset_options.png
    :align: center
 
 * Hide the point symbols by editing the layer style as usual, and setting the
   size of the :guilabel:`Ellipse marker` width and height to :kbd:`0`:
 
-.. image:: img/hide_point_marker.png
+.. figure:: img/hide_point_marker.png
    :align: center
 
 * Click :guilabel:`OK` and you'll see this result:
 
-.. image:: img/hide_point_marker_results.png
+.. figure:: img/hide_point_marker_results.png
    :align: center
 
 If you were to zoom out on the map, you would see that some of the labels
@@ -175,7 +175,7 @@ Now that you know how labeling works, there's an additional problem. Points and
 polygons are easy to label, but what about lines? If you label them the same
 way as the points, your results would look like this:
 
-.. image:: img/bad_street_labels.png
+.. figure:: img/bad_street_labels.png
    :align: center
 
 We will now reformat the :guilabel:`roads` layer labels so that they are easy to
@@ -188,7 +188,7 @@ understand.
 * In the :guilabel:`Label tool` dialog's :guilabel:`Advanced` tab, choose the
   following settings:
 
-.. image:: img/street_label_settings.png
+.. figure:: img/street_label_settings.png
    :align: center
 
 You'll probably find that the text styling has used default values and the
@@ -197,7 +197,7 @@ dark-grey or black :kbd:`Color` and a light-yellow :kbd:`buffer`.
 
 The map will look somewhat like this, depending on scale:
 
-.. image:: img/street_label_formatted.png
+.. figure:: img/street_label_formatted.png
    :align: center
 
 You'll see that some of the road names appear more than once and that's not
@@ -207,7 +207,7 @@ always necessary. To prevent this from happening:
   :guilabel:`Rendering` option and select the
   :guilabel:`Merge connected lines to avoid duplicate labels`:
 
-.. image:: img/merge_lines_option.png
+.. figure:: img/merge_lines_option.png
    :align: center
 
 * Click :guilabel:`OK`
@@ -228,7 +228,7 @@ try the :guilabel:`curved` option instead.
 
 Here's the result:
 
-.. image:: img/final_street_labels.png
+.. figure:: img/final_street_labels.png
    :align: center
 
 As you can see, this hides a lot of the labels that were previously visible,
@@ -252,18 +252,18 @@ styles.
 * In the :guilabel:`Italic` dropdown, select :kbd:`Edit...` to open the
   :guilabel:`Expression string builder`:
 
-.. image:: img/expression_string_builder.png
+.. figure:: img/expression_string_builder.png
    :align: center
 
 In the text input, type: :kbd:`"place"  =  'town'` and click :guilabel:`Ok`
 twice:
 
-.. image:: img/expression_builder_settings.png
+.. figure:: img/expression_builder_settings.png
    :align: center
 
 Notice its effects:
 
-.. image:: img/italic_label_result.png
+.. figure:: img/italic_label_result.png
    :align: center
 
 
@@ -287,7 +287,7 @@ Notice its effects:
 
 * Configure it like this:
 
-.. image:: img/font_size_column.png
+.. figure:: img/font_size_column.png
    :align: center
 
 * Use this to set custom font sizes for each different type of place (i.e.,

@@ -14,15 +14,15 @@ You can test that yourself by selecting a few points in any of the layers that w
 
 To make a selection, you can use any of the available methods and tools in QGIS. However, you can also use a geoalgorithm to do so. Algorithms for creating a selection are found in the toolbox under *Vector/Selection*
 
-.. image:: img/selection/selection_algs.png
+.. figure:: img/selection/selection_algs.png
 
 Open the *Random selection* algorithm.
 
-.. image:: img/selection/random_selection.png
+.. figure:: img/selection/random_selection.png
 
 Leaving the default values, it will select 10 points from the current layer.
 
-.. image:: img/selection/selected.png
+.. figure:: img/selection/selected.png
 
 You will notice that this algorithm does not produce any output, but modifies the input layer (not the layer itself, but its selection). This is an uncommon behaviour, since all the other algorithms will produce new layers and not alter the input layers.
 
