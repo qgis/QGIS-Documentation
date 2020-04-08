@@ -7,9 +7,9 @@ you are interested in learning about some basic forestry applications of GIS, fo
 module will give you the ability to apply what you have learned and will show you
 some new useful tools.
 
-.. image:: img/EUlogo_en.png
-	:align: center
-	:width: 15 em
+.. figure:: img/EUlogo_en.png
+   :align: center
+   :width: 15 em
 
 The development of this module has been sponsored by the European Union.
 	

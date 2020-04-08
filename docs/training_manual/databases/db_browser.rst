@@ -24,7 +24,7 @@ interface.
   configured connection available (you may need to click the Refresh button at
   the top of the browser window).
 
-.. image:: img/browser_panel.png
+.. figure:: img/browser_panel.png
    :align: center
 
 * Double clicking on any of the table/layers listed here will add it to the Map
@@ -34,7 +34,7 @@ interface.
   Click on the :guilabel:`Properties` item to look at the properties of the 
   layer.
 
-.. image:: img/postgis_layer_properties.png
+.. figure:: img/postgis_layer_properties.png
    :align: center
 
 .. note:: Of course you can also use this interface to connect to PostGIS 
@@ -65,7 +65,7 @@ by using queries that we learned about in previous sections.
 
   "roadtype" = 'major'
 
-.. image:: img/pg_table_filter.png
+.. figure:: img/pg_table_filter.png
    :align: center
 
 * Click :guilabel:`OK` to complete editing the filter and click :guilabel:`Add`

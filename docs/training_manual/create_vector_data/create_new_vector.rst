@@ -23,7 +23,7 @@ to define a new layer.
 
 You'll be presented with the following dialog:
 
-.. image:: img/create_vector_layer.png
+.. figure:: img/create_vector_layer.png
    :align: center
 
 It's important to decide which kind of dataset you want at this stage. Each
@@ -35,7 +35,7 @@ areas. For such features, you'll need to create a polygon dataset.
 
 * Click on the :guilabel:`Polygon` radio button:
 
-.. image:: img/polygon_selected.png
+.. figure:: img/polygon_selected.png
    :align: center
 
 This has no impact on the rest of the dialog, but it will cause the correct
@@ -46,7 +46,7 @@ CRS specifies how to describe a point on Earth in terms of coordinates, and
 because there are many different ways to do this, there are many different CRSs.
 The CRS of this project is WGS84, so it's already correct by default:
 
-.. image:: img/default_crs.png
+.. figure:: img/default_crs.png
    :align: center
 
 Next there is a collection of fields grouped under :guilabel:`New attribute`.
@@ -59,12 +59,12 @@ will be enough to add one field called :kbd:`name`.
 * Replicate the setup below, then click the :guilabel:`Add to attributes list`
   button:
 
-.. image:: img/new_attribute.png
+.. figure:: img/new_attribute.png
    :align: center
 
 * Check that your dialog now looks like this:
 
-.. image:: img/new_attribute_added.png
+.. figure:: img/new_attribute_added.png
    :align: center
 
 * Click :guilabel:`OK`. A save dialog will appear.
@@ -102,7 +102,7 @@ are provided, so you'll need to import them as necessary.
   other layers.
 * Find and zoom to this area:
 
-.. image:: img/map_area_zoom.png
+.. figure:: img/map_area_zoom.png
    :align: center
 
 .. note:: If your :guilabel:`buildings` layer symbology is covering part or all of the
@@ -112,7 +112,7 @@ are provided, so you'll need to import them as necessary.
 
 You'll be digitizing these three fields:
 
-.. image:: img/field_outlines.png
+.. figure:: img/field_outlines.png
    :align: center
 
 In order to begin digitizing, you'll need to enter **edit mode**. GIS software
@@ -165,7 +165,7 @@ and dragging around in the map.
 
 The first feature you'll be digitizing is the |schoolAreaType1|:
 
-.. image:: img/school_area_one.png
+.. figure:: img/school_area_one.png
    :align: center
 
 * Start digitizing by clicking on a point somewhere along the edge of the
@@ -176,7 +176,7 @@ The first feature you'll be digitizing is the |schoolAreaType1|:
   This will finalize the feature and show you the :guilabel:`Attributes` dialog.
 * Fill in the values as below:
 
-.. image:: img/school_area_one_attributes.png
+.. figure:: img/school_area_one_attributes.png
    :align: center
 
 * Click :guilabel:`OK` and you've created a new feature!
@@ -187,7 +187,7 @@ digitizing until you're done creating the feature as above. Then:
 
 * Select the feature with the :guilabel:`Select Single Feature` tool:
 
-.. image:: img/single_feature_select.png
+.. figure:: img/single_feature_select.png
    :align: center
 
 You can use:
@@ -205,7 +205,7 @@ You can use:
 
 * Digitize the school itself and the upper field. Use this image to assist you:
 
-.. image:: img/field_outlines.png
+.. figure:: img/field_outlines.png
    :align: center
 
 Remember that each new feature needs to have a unique :kbd:`id` value!
@@ -231,12 +231,12 @@ Remember that each new feature needs to have a unique :kbd:`id` value!
 Our path runs along the southern edge of the suburb of Railton, starting and
 ending at marked roads:
 
-.. image:: img/path_start_end.png
+.. figure:: img/path_start_end.png
    :align: center
 
 Our track is a little further to the south:
 
-.. image:: img/track_start_end.png
+.. figure:: img/track_start_end.png
    :align: center
 
 One at a time, digitize the path and the track on the :guilabel:`routes` layer.

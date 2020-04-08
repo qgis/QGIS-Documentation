@@ -16,21 +16,21 @@ This algorithm, like the one from the previous lesson, just generates a single o
 
 Your dialog should look like this.
 
-.. image:: img/second_alg/points_from_table.png
+.. figure:: img/second_alg/points_from_table.png
 
 Now press the *Run* button to get the following layer (you may need to zoom full to reenter the map around the newly created points):
 
-.. image:: img/second_alg/points.png
+.. figure:: img/second_alg/points.png
 
 The next thing we need is the polygon layer. We are going to create a regular grid of polygons using the *Create grid* algorithm, which has the following parameters dialog.
 
-.. image:: img/second_alg/graticule_dialog.png
+.. figure:: img/second_alg/graticule_dialog.png
 
 .. warning:: The options are simpler in recent versions of QGIS; you just need to enter min and max for X and Y (suggested values: -5.696226,-5.695122,40.24742,40.248171)
 
 The inputs required to create the grid are all numbers. When you have to enter a numerical value, you have two options: typing it directly on the corresponding box or clicking the button on the right--hand side to get to a dialog like the one shown next.
 
-.. image:: img/second_alg/number_dialog.png
+.. figure:: img/second_alg/number_dialog.png
 
 The dialog contains a simple calculator, so you can type expressions such as ``11 * 34.7 + 4.6``, and the result will be computed and put in the corresponding text box in the parameters dialog. Also, it contains constants that you can use, and values from other layers available.
 
@@ -42,28 +42,28 @@ As in the case of the last algorithm, we have to enter the CRS here as well. Sel
 
 In the end, you should have a parameters dialog like this:
 
-.. image:: img/second_alg/graticule_parameters.png
+.. figure:: img/second_alg/graticule_parameters.png
 
 (Better add one spacing on the width and height: Horizontal spacing: 0.0001, Vertical spacing: 0.0001, Width: 0.001004, Height: 0.000651, Center X: -5.695674, Center Y: 40.2477955)
 The case of X center is a bit tricky, see: -5.696126+(( -5.695222+ 5.696126)/2)
 
 Press *Run* and you will get the graticule layer.
 
-.. image:: img/second_alg/graticule.png
+.. figure:: img/second_alg/graticule.png
 
 The last step is to count the points in each one of the rectangles of that graticule. We will use the *Count points in polygons* algorithm.
 
-.. image:: img/second_alg/count_points.png
+.. figure:: img/second_alg/count_points.png
 
 Now we have the result we were looking for.
 
 Before finishing this lesson, here is a quick tip to make your life easier in case you want to persistently save your data. If you want all your output files to be saved in a given folder, you do not have to type the folder name each time. Instead, go to the processing menu and select the *Options and configuration* item. It will open the configuration dialog.
 
-.. image:: img/second_alg/config.png
+.. figure:: img/second_alg/config.png
 
 In the *Output folder* entry that you will find in the *General* group, type the path to your destination folder.
 
-.. image:: img/second_alg/output_folder.png
+.. figure:: img/second_alg/output_folder.png
 
 Now when you run an algorithm, just use the filename instead of the full path. For instance, with the configuration shown above, if you enter ``graticule.shp`` as the output path for the algorithm that we have just used, the result will be saved in ``D:\processing_output\graticule.shp``. You can still enter a full path in case you want a result to be saved in a different folder.
 

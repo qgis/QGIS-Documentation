@@ -186,13 +186,13 @@ To insert an image, use
 
 .. code-block:: rst
 
-   .. image:: /static/common/logo.png
+   .. figure:: /static/common/logo.png
       :width: 10 em
 
 which returns
 
-.. image:: /static/common/logo.png
-    :width: 10 em
+.. figure:: /static/common/logo.png
+   :width: 10 em
 
 Replacement
 ...........

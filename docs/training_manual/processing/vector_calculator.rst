@@ -6,7 +6,7 @@ Vector calculator
 
 We already know how to use the raster calculator to create new raster layers using mathematical expressions. A similar algorithm is available for vector layers, and generates a new layer with the same attributes of the input layer, plus an additional one with the result of the expression entered. The algorithm is called *Field calculator* and has the following parameters dialog.
 
-.. image:: img/vector_calculator/field_calculator.png
+.. figure:: img/vector_calculator/field_calculator.png
 
 .. note:: In newer versions of Processing the interface has changed considerably, it's more powerful and easier to use.
 
@@ -34,7 +34,7 @@ Enter the following formula
 
 This time the parameters window should look like this before pressing the *OK* button. 
 
-.. image:: img/vector_calculator/ratio.png
+.. figure:: img/vector_calculator/ratio.png
 
 
 In earlier version, since both fields are of type integer, the result would be truncated to an integer. In this case the formula should be: ``1.0 *  "MALES"  /  "FEMALES"``, to indicate that we want floating point number a result.
@@ -45,8 +45,8 @@ We can use conditional functions to have a new field with ``male`` or ``female``
 
 The parameters window should look like this.
 
-.. image:: img/vector_calculator/predominance.png
+.. figure:: img/vector_calculator/predominance.png
 
 A python field calculator is available in the *Advanced Python field calculator*, which will not be detailed here
 
-.. image:: img/vector_calculator/advanced.png
+.. figure:: img/vector_calculator/advanced.png

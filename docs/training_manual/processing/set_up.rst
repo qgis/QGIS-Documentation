@@ -13,18 +13,18 @@ already be installed in your system, since it is included with QGIS. In case it
 is active, you should see a menu called :guilabel:`Processing` in your menu bar.
 There you can access all the framework components.
 
-.. image:: img/set_up/menu.png
+.. figure:: img/set_up/menu.png
 
 If you cannot find that menu, you have to enable the plugin by going to the
 plugin manager and activating it.
 
-.. image:: img/set_up/installer.png
+.. figure:: img/set_up/installer.png
 
 The main element that we are going to work with is the toolbox. Click on the
 corresponding menu entry and you will see the toolbox docked at the right side
 of the QGIS window.
 
-.. image:: img/set_up/toolbox.png
+.. figure:: img/set_up/toolbox.png
 
 
 The toolbox contains a list of all the available algorithms, divided in groups

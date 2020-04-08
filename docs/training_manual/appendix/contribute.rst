@@ -271,7 +271,7 @@ Images
 * When adding an image, save it to the folder :kbd:`_static/lesson_name/`.
 * Include it in the document like this::
   
-    .. image:: img/image_file.extension
+    .. figure:: img/image_file.extension
        :align: center
 
 * Remember to leave a line open above and below the image markup.

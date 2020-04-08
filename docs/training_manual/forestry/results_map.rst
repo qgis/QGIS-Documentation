@@ -46,12 +46,12 @@ Now you can use a saved style for this layer:
 * Select the :kbd:`forest_stands_2012_results.qml` from the :kbd:`exercise_data\\forestry\\results\\` folder.
 * Click :guilabel:`OK`.
 
-.. image:: img/styling_forest_results.png
+.. figure:: img/styling_forest_results.png
    :align: center
 
 Your map will look something like this:
 
-.. image:: img/results_styles_applied.png
+.. figure:: img/results_styles_applied.png
    :align: center
 
 
@@ -60,7 +60,7 @@ Your map will look something like this:
 
 The style you loaded:
 
-.. image:: img/styling_forest_results.png
+.. figure:: img/styling_forest_results.png
    :align: center
 
 is using the :kbd:`Hard light` mode for the :guilabel:`Layer blending mode`.
@@ -79,14 +79,14 @@ Use a template prepared in advanced to present the results. The template
 :kbd:`forest_map.qpt` is located in the :kbd:`exercise_data\\forestry\\results\\`
 folder. Load it using the :menuselection:`Project --> Layout Manager...` dialog.
 
-.. image:: img/final_map_template.png
+.. figure:: img/final_map_template.png
    :align: center
 
 Open the print layout and edit the final map to get a result you are happy with.
 
 The map template you are using will give a map similar to this one:
 
-.. image:: img/final_map.png
+.. figure:: img/final_map.png
    :align: center
 
 Save your QGIS project for future references.

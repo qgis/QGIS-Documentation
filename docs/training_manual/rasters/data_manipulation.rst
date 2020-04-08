@@ -31,7 +31,7 @@ However we suggest to use the :guilabel:`Browser` Panel.
 
 You should see the following map:
 
-.. image:: img/raster_step_one.png
+.. figure:: img/raster_step_one.png
    :align: center
 
 There we have it - four aerial photographs covering our whole study area.
@@ -76,7 +76,7 @@ To make a catalog we will use the :menuselection:`Processing --> Toolbox`.
     temporary layers by default. To save the file click on the :guilabel:`...`
     button.
 
-.. image:: img/build_virtual_raster.png
+.. figure:: img/build_virtual_raster.png
    :align: center
 
 You can now remove the original four rasters from the :guilabel:`Layers` Panel
@@ -101,7 +101,7 @@ Open :guilabel:`Warp (reproject)` from
 You can also reproject virtual rasters (catalogs), enable multithreaded
 processing, and more.
 
-.. image:: img/warp_rasters.png
+.. figure:: img/warp_rasters.png
    :align: center
 
 Merging rasters
@@ -125,7 +125,7 @@ merge algorithm.
 #. If you know the GDAL library, you can also add your own options by opening the
    :guilabel:`Advanced parameters` menu.
 
-.. image:: img/merge_rasters.png
+.. figure:: img/merge_rasters.png
    :align: center
 
 |IC|

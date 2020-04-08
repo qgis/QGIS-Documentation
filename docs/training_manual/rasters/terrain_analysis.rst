@@ -31,7 +31,7 @@ menu.
    180 (South) and 270 (West) while the :guilabel:`Vertical angle` sets how high
    the light is. We will leave the default values:
 
-   .. image:: img/hillshade_explanation.png
+   .. figure:: img/hillshade_explanation.png
       :align: center
 
 #. Save the file in a new folder ``raster_analysis`` within the folder ``exercise_data``
@@ -41,7 +41,7 @@ menu.
 You will now have a new layer called :guilabel:`hillshade` that looks like
 this:
 
-.. image:: img/hillshade_raster.png
+.. figure:: img/hillshade_raster.png
    :align: center
 
 That looks nice and 3D, but can we improve on this? On its own, the hillshade
@@ -69,7 +69,7 @@ transparent.
 
    You'll get a result like this:
 
-   .. image:: img/hillshade_pseudocolor.png
+   .. figure:: img/hillshade_pseudocolor.png
       :align: center
 
 #. Switch the :guilabel:`hillshade` layer off and back on in the
@@ -103,7 +103,7 @@ To do this, you need to use the :menuselection:`Slope` algorithm of the
 Now you'll see the slope of the terrain, with black pixels being flat terrain
 and white pixels, steep terrain:
 
-.. image:: img/slope_raster.png
+.. figure:: img/slope_raster.png
    :align: center
 
 .. _backlink-raster-analysis-1:
@@ -177,14 +177,14 @@ We will use :menuselection:`Processing --> Raster Analysis --> Raster calculator
 
    The dialog should look like:
 
-   .. image:: img/raster_calculator.png
+   .. figure:: img/raster_calculator.png
       :align: center
 
 #. Finally click on :guilabel:`Run`.
 
 Your result will be this:
 
-.. image:: img/aspect_result.png
+.. figure:: img/aspect_result.png
    :align: center
 
 The output values are ``0`` or ``1``. What does it mean? The formula we wrote
@@ -249,7 +249,7 @@ To calculate the areas that satisfy these criteria:
 
 Your results:
 
-.. image:: img/development_analysis_results.png
+.. figure:: img/development_analysis_results.png
    :align: center
 
 
@@ -268,12 +268,12 @@ get rid of all these tiny unusable areas.
    :file:`exercise_data/raster_analysis/`).
 #. Set both the :guilabel:`Threshold` to 8 and check :guilabel:`Use 8-connectedness`.
 
-   .. image:: img/raster_seive_dialog.png
+   .. figure:: img/raster_seive_dialog.png
       :align: center
 
    Once processing is done, the new layer will load into the canvas.
 
-   .. image:: img/seive_result_incorrect.png
+   .. figure:: img/seive_result_incorrect.png
       :align: center
 
    What's going on? The answer lies in the new raster file's metadata.
@@ -281,7 +281,7 @@ get rid of all these tiny unusable areas.
 #. View the metadata under the :guilabel:`Information` tab of the :guilabel:`Layer
    Properties` dialog. Look the ``STATISTICS_MINIMUM`` value:
 
-   .. image:: img/seive_metadata.png
+   .. figure:: img/seive_metadata.png
       :align: center
 
    Whereas this raster, like the one it's derived from, should only feature the
@@ -301,7 +301,7 @@ get rid of all these tiny unusable areas.
 
 Your output looks like this:
 
-.. image:: img/raster_seive_correct.png
+.. figure:: img/raster_seive_correct.png
    :align: center
 
 This is what was expected: a simplified version of the earlier results.
@@ -340,7 +340,7 @@ The alternative tool is the :guilabel:`Reclassify by table` tool within
 #. Click on the :guilabel:`Add row` button and add 5 rows. Fill each row as the
    following picture and click :guilabel:`OK`:
 
-   .. image:: img/reclassify_table.png
+   .. figure:: img/reclassify_table.png
       :align: center
 
    The method used by the algorithm to treat the threshold values of each class
@@ -348,7 +348,7 @@ The alternative tool is the :guilabel:`Reclassify by table` tool within
 #. Save the layer as ``reclassified`` in the ``exercise_data/raster_analysis/``
    folder
 
-   .. image:: img/reclassify_setup.png
+   .. figure:: img/reclassify_setup.png
       :align: center
 
 #. Click on :guilabel:`Run`
@@ -364,13 +364,13 @@ Let's give this layer a better style.
 #. Click on the :guilabel:`Classify` button to automatically fetch the values and
    assign them random colors:
 
-   .. image:: img/unique_style.png
+   .. figure:: img/unique_style.png
       :align: center
 
 The output should look like this (you can have different colors given that they
 have been randomly generated):
 
-.. image:: img/reclassify_result.png
+.. figure:: img/reclassify_result.png
    :align: center
 
 With this reclassification and the paletted style applied to the layer you can
@@ -395,14 +395,14 @@ the |identify| button to extract this information.
    The :guilabel:`Identify Results` will appear with the value of the band at
    the clicked location:
 
-   .. image:: img/identify_raster.png
+   .. figure:: img/identify_raster.png
       :align: center
 
 #. You can change the output of the :guilabel:`Identify Results` panel from the
    current ``tree`` mode to a ``table`` one by selecting :guilabel:`Table` in
    the :guilabel:`View` menu at the bottom of the panel:
 
-   .. image:: img/identify_raster_table.png
+   .. figure:: img/identify_raster_table.png
       :align: center
 
 Clicking each pixel to get the value of the raster could become annoying after
@@ -413,7 +413,7 @@ a while. We can use the :guilabel:`Value Tool` plugin to solve this problem.
 #. Select the Value Tool plugin, press :guilabel:`Install Plugin` and then
    :guilabel:`Close` the dialog.
 
-   .. image:: img/value_tool.png
+   .. figure:: img/value_tool.png
       :align: center
 
    The new :guilabel:`Value Tool` panel will appear.
@@ -427,14 +427,14 @@ a while. We can use the :guilabel:`Value Tool` plugin to solve this problem.
    panel.
 #. Move the cursor on the map to immediately know the value of the pixel
 
-   .. image:: img/value_tool_query.png
+   .. figure:: img/value_tool_query.png
       :align: center
 
 #. But there is more. The Value Tool plugin allows to query **all** the active
    raster layers in the :guilabel:`Layers` panel. Set the :guilabel:`aspect` and
    :guilabel:`slope` layers active again and hover the mouse on the map:
 
-   .. image:: img/value_tool_query_multi.png
+   .. figure:: img/value_tool_query_multi.png
       :align: center
 
 

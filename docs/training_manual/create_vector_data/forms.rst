@@ -37,7 +37,7 @@ Table` all the time.
 * Now, click again on any street in the map. Along the previous
   :guilabel:`Identify Results` dialog, you'll see the now-familiar form:
 
-  .. image:: img/roads_form.png
+  .. figure:: img/roads_form.png
      :align: center
 
 * Each time you click on a single feature with the :guilabel:`Identify` tool,
@@ -52,7 +52,7 @@ If you are in edit mode, you can use this form to edit a feature's attributes.
 * Using the :guilabel:`Identify` tool, click on the main street running through
   |majorUrbanName|:
 
-.. image:: img/main_street_selected.png
+.. figure:: img/main_street_selected.png
    :align: center
 
 * Edit its :guilabel:`highway` value to be :kbd:`secondary`.
@@ -74,14 +74,14 @@ allow you to edit data in various different ways.
 * Open the :guilabel:`roads` layer's :guilabel:`Layer Properties`.
 * Switch to the :guilabel:`Fields` tab. You'll see this:
 
-.. image:: img/fields_panel.png
+.. figure:: img/fields_panel.png
    :align: center
 
 * Click on the :guilabel:`Line edit` button in the same row as
   :guilabel:`man_made` and you'll be given a new dialog.
 * Select :guilabel:`Checkbox` in the list of options:
 
-.. image:: img/checkbox_selected.png
+.. figure:: img/checkbox_selected.png
    :align: center
 
 * Click :guilabel:`OK`.
@@ -111,7 +111,7 @@ You can also design your own custom form completely from scratch.
   * Name (text)
   * Age (text)
 
-.. image:: img/new_point_layer.png
+.. figure:: img/new_point_layer.png
    :align: center
 
 * Capture a few points on your new layer using the digitizing tools so
@@ -121,7 +121,7 @@ You can also design your own custom form completely from scratch.
 
 .. note:: You may need to disable Snapping if still enabled from earlier tasks.
 
-.. image:: img/new_point_entry.png
+.. figure:: img/new_point_entry.png
    :align: center
 
 .. _creating-new-form:
@@ -150,7 +150,7 @@ another OS. In Ubuntu, do the following in the terminal:
   approach is appropriate in your OS).
 * In the dialog that appears, create a new dialog:
 
-.. image:: img/qt4_new_dialog.png
+.. figure:: img/qt4_new_dialog.png
    :align: center
 
 * Look for the :guilabel:`Widget Box` along the left of your screen (default).
@@ -160,7 +160,7 @@ another OS. In Ubuntu, do the following in the terminal:
 * With the new line edit element selected, you'll see its *properties* along
   the side of your screen (on the right by default):
 
-.. image:: img/qt4_line_edit.png
+.. figure:: img/qt4_line_edit.png
    :align: center
 
 * Set its name to :kbd:`Name`.
@@ -189,7 +189,7 @@ another OS. In Ubuntu, do the following in the terminal:
 * Click the ellipsis button and choose the :kbd:`add_people.ui` file you just
   created:
 
-.. image:: img/provide_ui_file.png
+.. figure:: img/provide_ui_file.png
   :align: center
 
 * Click :guilabel:`OK` on the :guilabel:`Layer Properties` dialog.

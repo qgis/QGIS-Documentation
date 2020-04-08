@@ -17,7 +17,7 @@ plugin
 #. First, open a new QGIS project.
 #. In the :guilabel:`Plugin Manager`, enable :guilabel:`GRASS` in the list:
 
-   .. image:: img/enable_grass.png
+   .. figure:: img/enable_grass.png
       :align: center
 
 
@@ -58,14 +58,14 @@ information visit the `GRASS website <https://grass.osgeo.org/grass77/manuals/gr
 
 #. Click on the :guilabel:`Plugins --> GRASS --> New Mapset` menu:
 
-   .. image:: img/grass_menu.png
+   .. figure:: img/grass_menu.png
       :align: center
 
    You'll be asked to choose the location of the GRASS database.
 
 #. Set it as the directory that will be used by GRASS to set up its database:
 
-   .. image:: img/grass_folder.png
+   .. figure:: img/grass_folder.png
       :align: center
 
 #. Click :guilabel:`Next`.
@@ -80,32 +80,32 @@ geographic area you'll be working in, also known as Grass ``Region``.
 
 #. Call the new location ``SouthAfrica``:
 
-   .. image:: img/new_location.png
+   .. figure:: img/new_location.png
       :align: center
 
 #. Click :guilabel:`Next`.
 #. We'll be working with ``WGS 84``, so search for and select this CRS:
 
-   .. image:: img/wgs_84_selected.png
+   .. figure:: img/wgs_84_selected.png
       :align: center
 
 #. Click :guilabel:`Next`.
 #. Now select the region :guilabel:`South Africa` from the dropdown and click
    :guilabel:`Set`:
 
-   .. image:: img/set_south_africa.png
+   .. figure:: img/set_south_africa.png
       :align: center
 
 #. Click :guilabel:`Next`.
 #. Create a mapset, which is the map file that you'll be working with.
 
-   .. image:: img/grass_mapset.png
+   .. figure:: img/grass_mapset.png
       :align: center
 
    Once you're done, you'll see a dialog asking with a summary of all the
    information entered.
 
-   .. image:: img/grass_final.png
+   .. figure:: img/grass_final.png
      :align: center
 
 #. Click :guilabel:`Finish`.
@@ -137,7 +137,7 @@ GRASS data are recognized from the QGIS Browser as *real* GRASS data and you can
 notice it because you will see the GRASS icon next to the GRASS Mapset. Moreover
 you will see the |grassMapsetOpen| icon next to the Mapset that is opened.
 
-.. image:: img/grass_browser.png
+.. figure:: img/grass_browser.png
    :align: center
 
 .. note:: You will see a replication of the GRASS Location as normal folder:
@@ -151,7 +151,7 @@ of the ``SouthAfrica`` Location.
 Go to the Browser, and simply drag the :file:`roads` layer  from the
 :file:`training_data.gpkg` GeoPackage file into the ``grass_mapset`` Mapset.
 
-.. image:: img/grass_browser_import.png
+.. figure:: img/grass_browser_import.png
    :align: center
 
 That's it! If you expand the Mapset you will see the imported :file:`roads`
@@ -175,7 +175,7 @@ same Mapset.
    .. warning:: There are 2 similar tools: ``v.in.ogr.qgis`` and
      ``v.in.ogr.qgis.loc``. We are looking for the **first** one.
 
-   .. image:: img/grass_panel_import.png
+   .. figure:: img/grass_panel_import.png
       :align: center
 
    The ``v`` stands for *vector*, ``in`` means a function to import data into
@@ -187,7 +187,7 @@ same Mapset.
    the :guilabel:`rivers` layer in the :guilabel:`Loaded Layer` box and type and
    name it :file:`g_rivers` to prevent confusion:
 
-   .. image:: img/grass_tool_selected.png
+   .. figure:: img/grass_tool_selected.png
       :align: center
 
    .. note:: |hard| Note the extra import options provided under
@@ -224,7 +224,7 @@ We are going to import in the GRASS Mapset the layer |srtmFileName|.
    dialog.
 #. Set it up so that the input layer is |srtmFileName| and the output is :file:`g_dem`.
 
-   .. image:: img/g_dem_settings.png
+   .. figure:: img/g_dem_settings.png
       :align: center
 
 #. Click :guilabel:`Run`.
@@ -232,7 +232,7 @@ We are going to import in the GRASS Mapset the layer |srtmFileName|.
 #. :guilabel:`Close` the current tab, and then :guilabel:`Close` the whole
    dialog.
 
-   .. image:: img/g_dem_result.png
+   .. figure:: img/g_dem_result.png
       :align: center
 
 #. You may now remove the original |srtmFileName| layer.
@@ -271,7 +271,7 @@ Let's close the Mapset by clicking on the :guilabel:`Close Mapset` button of the
    not the GRASS Mapset one. Indeed GRASS will read all the ``Locations`` of the
    database and all the ``Mapsets`` of each ``Location``:
 
-   .. image:: img/grass_open_mapset.png
+   .. figure:: img/grass_open_mapset.png
       :align: center
 
 #. Choose the ``Location`` :guilabel:`SouthAfrica` and the ``Mapset``
@@ -293,7 +293,7 @@ Even faster and easier is opening a ``Mapset`` using the QGIS Browser:
    next to it). You will see some options.
 #. Click on :guilabel:`Open mapset`:
 
-   .. image:: img/grass_open_mapset_browser.png
+   .. figure:: img/grass_open_mapset_browser.png
       :align: center
 
 The Mapset is now open and ready to use!

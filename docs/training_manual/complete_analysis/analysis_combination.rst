@@ -30,7 +30,7 @@ suitable plots.
 You should now have a layer showing certain buildings as your solution, for
 example:
 
-.. image:: img/new_solution_example.png
+.. figure:: img/new_solution_example.png
    :align: center
 
 .. note:: If you find that the :guilabel:`Intersect` tool does not produce any

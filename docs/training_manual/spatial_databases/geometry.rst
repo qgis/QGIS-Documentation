@@ -125,7 +125,7 @@ Looking at Our Schema
 
 By now our schema should be looking like this:
 
-.. image:: img/final_schema.png
+.. figure:: img/final_schema.png
    :align: center
 
 
@@ -177,7 +177,7 @@ To avoid empty geometries, use:
 
   where not st_isempty(st_intersection(a.the_geom, b.the_geom))
 
-.. image:: img/qgis_001.png
+.. figure:: img/qgis_001.png
    :align: center
 
 .. code-block:: sql
@@ -187,7 +187,7 @@ To avoid empty geometries, use:
   where not st_isempty(st_intersection(st_setsrid(a.the_geom,32734),
     b.the_geom));
 
-.. image:: img/qgis_002.png
+.. figure:: img/qgis_002.png
    :align: center
 
 Building Geometries from Other Geometries
@@ -198,7 +198,7 @@ points is defined by their :kbd:`id`. Another ordering method could be a
 timestamp, such as the one you get when you capture waypoints with a GPS
 receiver.
 
-.. image:: img/qgis_006.png
+.. figure:: img/qgis_006.png
    :align: center
 
 To create a linestring from a new point layer called 'points', you can run the
@@ -217,7 +217,7 @@ To see how it works without creating a new layer, you could also run this
 command on the 'people' layer, although of course it would make little
 real-world sense to do this.
 
-.. image:: img/qgis_007.png
+.. figure:: img/qgis_007.png
    :align: center
 
 Geometry Cleaning
