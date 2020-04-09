@@ -249,7 +249,7 @@ That's where rule-based classification comes in handy.
 
 * Click the :guilabel:`Add rule` button: |signPlus|.
 * A new dialog then appears.
-* Click the ellipsis :guilabel:`...` button next to the :guilabel:`Filter` text area.
+* Click the epsilon :guilabel:`Ɛ` button next to the :guilabel:`Filter` text area.
 * Using the query builder that appears, enter the criterion
   :kbd:`"landuse" = 'residential' AND "name" <> 'Swellendam'` (or
   :kbd:`"landuse" = 'residential' AND "name" != 'Swellendam'`),
@@ -262,7 +262,7 @@ That's where rule-based classification comes in handy.
 .. image:: img/rule_style_result.png
    :align: center
 
-* Add a new criterion :kbd:`"landuse" <> 'residential' AND "AREA" >= 0.00005`
+* Add a new criterion :kbd:`"landuse" <> 'residential' AND "AREA" >= 1000000`
   and choose a mid-green color.
 * Add another new criterion :kbd:`"name"  =  'Swellendam'` and assign it
   a darker grey-blue color in order to indicate the town's importance in the
@@ -270,7 +270,7 @@ That's where rule-based classification comes in handy.
 * Click and drag this criterion to the top of the list.
 
 These filters are exclusive, in that they collectively exclude some areas on the
-map (i.e. those which are smaller that 0.00005, are not residential and are not
+map (i.e. those which are smaller that 1000000, are not residential and are not
 '|majorUrbanName|'). This means that the excluded polygons take the style of the
 default :guilabel:`(no filter)` category.
 
