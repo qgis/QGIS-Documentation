@@ -769,15 +769,7 @@ This group contains functions to manipulate print layout items properties.
 
    "item_variables", "Returns a map of variables from a layout item inside this print layout"
 
-<<<<<<< HEAD
-.. only:: html
-
-   |
-
-**Some example:**
-=======
 **An example:**
->>>>>>> 05b1db878... Remove blank line added below tables to increase bottom margin
 
 * Get the scale of the 'Map 0' in the current print layout::
 
