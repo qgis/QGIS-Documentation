@@ -214,10 +214,6 @@ This group contains functions which aggregate values over layers and fields.
    "stdev", "Returns the aggregate standard deviation value from a field or expression"
    "sum", "Returns the aggregate summed value from a field or expression"
 
-.. only:: html
-
-   |
-
 **Examples:**
 
 * Return the maximum of the "passengers" field from features in the layer
@@ -349,10 +345,6 @@ This group contains functions to handle conditional checks in expressions.
    "try", "Tries an expression and returns its value if error-free,
    an alternative value (if provided) or Null if an error occurs"
 
-.. only:: html
-
-   |
-
 **Some example:**
 
 * Send back a value if the first condition is true, else another value::
@@ -411,10 +403,6 @@ This group contains functions for handling date and time data.
    "second", "Extracts the second from a datetime or time, or the number of seconds from an interval"
    "week", "Extracts the week number from a date or datetime, or the number of weeks from an interval"
    "year", "Extracts the year part from a date or datetime,or the number of years from an interval"
-
-.. only:: html
-
-   |
 
 This group also shares several functions with the :ref:`conversion_functions` (
 to_date, to_time, to_datetime, to_interval) and :ref:`string_functions`
@@ -740,10 +728,6 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    Calculations are in the Spatial Reference System of this geometry"
    "z", "Returns the Z coordinate of a point geometry"
 
-.. only:: html
-
-   |
-
 **Some examples:**
 
 * Return the X coordinate of the current feature's centroid::
@@ -774,6 +758,46 @@ This group contains functions that operate on geometry objects (e.g., length, ar
     )
 
 
+<<<<<<< HEAD
+=======
+Hash Functions
+----------------
+
+This group contains hash functions.
+All these functions return the hash (a string hex value) of the string argument.
+
+.. csv-table::
+   :header: "Function", "Description"
+   :widths: auto
+
+   "md4", "Message Digest algorithm. Produces a 128-bit (16-byte) hash value (widely used)."
+   "md5", "Message Digest algorithm. Produces a 128-bit (16-byte) hash value (widely used)."
+   "sha1", "Secure Hash Algorithm (NSA). Produces a 160-bit (20-byte) hash value."
+   "sha224", "Secure Hash Algorithm (NSA). Produces a 224-bit (28-byte) hash value."
+   "sha256", "Secure Hash Algorithm (NSA). Produces a 256-bit (32-byte) hash value."
+   "sha384", "Secure Hash Algorithm (NSA). Produces a 384-bit (48-byte) hash value."
+   "sha512", "Secure Hash Algorithm (NSA). Produces a 512-bit (64-byte) hash value."
+   "sha3_224", "Secure Hash Algorithm 3 (NIST). Produces a 224-bit (28-byte) hash value."
+   "sha3_256", "Secure Hash Algorithm 3 (NIST). Produces a 256-bit (32-byte) hash value."
+   "sha3_384", "Secure Hash Algorithm 3 (NIST). Produces a 384-bit (48-byte) hash value."
+   "sha3_512", "Secure Hash Algorithm 3 (NIST). Produces a 512-bit (64-byte) hash value."
+   "keccak_224", "Keccak cryptographic primitive family. Produces a 224-bit (28-byte) hash value."
+   "keccak_256", "Keccak cryptographic primitive family. Produces a 256-bit (32-byte) hash value."
+   "keccak_384", "Keccak cryptographic primitive family. Produces a 384-bit (48-byte) hash value."
+   "keccak_512", "Keccak cryptographic primitive family. Produces a 512-bit (64-byte) hash value."
+
+One byte (8 bits) is represented with two hex ''digits'', so md4 (16 bytes)
+produces a 16 * 2 = 32 character long hex string and keccak_512 (64 bytes)
+produces a 64 * 2 = 128 character long hex string.
+
+**An example:**
+
+* Return the md4 hash ( 'c0fc71c241cdebb6e888cbac0e2b68eb' ) of the string 'QGIS'::
+
+    md4( 'QGIS')
+
+
+>>>>>>> 05b1db878... Remove blank line added below tables to increase bottom margin
 Layout Functions
 ----------------
 
@@ -785,11 +809,15 @@ This group contains functions to manipulate print layout items properties.
 
    "item_variables", "Returns a map of variables from a layout item inside this print layout"
 
+<<<<<<< HEAD
 .. only:: html
 
    |
 
 **Some example:**
+=======
+**An example:**
+>>>>>>> 05b1db878... Remove blank line added below tables to increase bottom margin
 
 * Get the scale of the 'Map 0' in the current print layout::
 
@@ -936,10 +964,6 @@ if one of the inputs is NULL then the result is NULL.
    "a IN (value[,value])", "a is below the values listed"
    "a NOT IN (value[,value])", "a is not below the values listed"
 
-.. only:: html
-
-   |
-
 **Some examples:**
 
 * Joins a string and a value from a column name::
@@ -1008,10 +1032,6 @@ This group contains functions that operate on record identifiers.
    "sql_fetch_and_increment", "Manage autoincrementing values in sqlite databases"
    "uuid", "Generates a Universally Unique Identifier (UUID) for each row. Each UUID is 38 characters long."
 
-.. only:: html
-
-   |
-
 **Some examples:**
 
 * Return the first feature in layer "LayerA" whose field "id" has the same value
@@ -1062,10 +1082,6 @@ This group contains functions that operate on strings
    "trim", "Removes all leading and trailing white space (spaces, tabs, etc.) from a string"
    "upper", "Converts string a to upper case"
    "wordwrap", "Returns a string wrapped to a maximum/minimum number of characters"
-
-.. only:: html
-
-   |
 
 **About fields concatenation**
 
@@ -1232,10 +1248,6 @@ To use these functions in an expression, they should be preceded by @ character
    "value", "Returns the current value"
    "with_variable", "Allows setting a variable for usage within an expression
    and avoid recalculating the same value repeatedly"
-
-.. only:: html
-
-   |
 
 **Some examples:**
 

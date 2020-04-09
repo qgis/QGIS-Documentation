@@ -834,7 +834,6 @@ Types of error messages and their meanings
      - 
      - 
 
-|
 
 .. list-table:: If the QGIS method is used the following error messages can occur: 
    :widths: 50 50 50

@@ -1177,8 +1177,6 @@ Outputs
      - [table]
      - Table containing the statistics
 
-|
-
 Depending on the type of the field being analyzed,
 the following statistics are returned for each grouped value:
 

@@ -212,9 +212,6 @@ The :menuselection:`Project` menu provides access and exit points for
      -
      -
 
-.. only:: html
-
-   |
 
 Under |osx| macOS, the :guilabel:`Exit QGIS` command corresponds to
 :menuselection:`QGIS --> Quit QGIS` (:kbd:`Cmd+Q`).
@@ -547,9 +544,6 @@ details).
      - :guilabel:`Adv. Dig.`
      - :ref:`trim_extend_feature`
 
-.. only:: html
-
-   |
 
 Tools that depend on the selected layer geometry type i.e. point,
 polyline or polygon, are activated accordingly:
@@ -990,9 +984,6 @@ actions like:
      -
      -
 
-.. only:: html
-
-   |
 
 Under |kde| Linux KDE, :menuselection:`Panels -->`,
 :menuselection:`Toolbars -->` and :guilabel:`Toggle Full Screen Mode`
@@ -1296,10 +1287,6 @@ Settings
      - :ref:`gui_options`
 
 
-.. only :: html
-
-   |
-
 Under |kde| Linux KDE, you'll find more tools in the
 :menuselection:`Settings` menu such as :menuselection:`Panels -->`,
 :menuselection:`Toolbars -->` and :guilabel:`Toggle Full Screen Mode`.
@@ -1325,9 +1312,6 @@ Plugins
      - :guilabel:`Plugins`
      - :ref:`console`
 
-.. only:: html
-
-   |
 
 When starting QGIS for the first time not all core plugins are loaded.
 
@@ -1530,9 +1514,6 @@ are enabled.
      -
      - :ref:`qgisregularpoints`
 
-.. only:: html
-
-   |
 
 By default, QGIS adds :ref:`Processing <sec_processing_intro>`
 algorithms to the :guilabel:`Vector` menu, grouped by sub-menus.
@@ -1740,9 +1721,6 @@ are enabled.
      -
      - :ref:`gdaltranslate`
 
-.. only:: html
-
-   |
 
 By default, QGIS adds :ref:`Processing <sec_processing_intro>`
 algorithms to the :guilabel:`Raster` menu, grouped by sub-menus.
@@ -1812,9 +1790,6 @@ If no database plugins are enabled, there will be no
      - :guilabel:`Database`
      - :ref:`dbmanager`
 
-.. only:: html
-
-   |
 
 When starting QGIS for the first time not all core plugins are loaded.
 
@@ -1849,9 +1824,6 @@ If no web plugins are enabled, there will be no :guilabel:`Web` menu.
      - 
      - :ref:`metasearch`
 
-.. only:: html
-
-   |
 
 When starting QGIS for the first time not all core plugins are loaded.
 
@@ -1875,10 +1847,6 @@ The :menuselection:`Mesh` menu provides tools needed to manipulate
      -
      -
      -
-
-.. only:: html
-
-   |
 
 
 Processing
@@ -1913,10 +1881,6 @@ Processing
      -
      -
      - :ref:`processing_inplace_edit`  
-
-.. only:: html
-
-   |
 
 When starting QGIS for the first time not all core plugins are loaded.
 
@@ -1987,9 +1951,6 @@ related commands.
    ":guilabel:`Hide Others`"
    ":guilabel:`Quit QGIS`", ":kbd:`Cmd+Q`"
 
-.. only:: html
-
-  |
 
 :guilabel:`Preferences` correspond to
 :menuselection:`Settings --> Options`, :guilabel:`About QGIS`

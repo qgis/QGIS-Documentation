@@ -68,8 +68,6 @@ For example, wind direction vector at the given time stamps:
 ...                             ...       ...       ...       ...
 =============================== ========= ========= ========= =====
 
-|
-
 We can visualize the data by assigning colors to values (similarly to how it is
 done with :ref:`Singleband pseudocolor <label_colormaptab>` raster rendering)
 and interpolating data between vertices according to the mesh topology.
