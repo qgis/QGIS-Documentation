@@ -735,8 +735,6 @@ Now also change the ``Run Environment`` and add 3 new variables:
 | LD_LIBRARY_PATH  | [build]/output/lib                                                             |
 +------------------+--------------------------------------------------------------------------------+
 
-|
-
 Replace ``[build]`` with your build directory and ``[source]`` with
 your source directory.
 

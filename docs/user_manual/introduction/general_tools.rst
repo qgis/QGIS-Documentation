@@ -1535,9 +1535,6 @@ control the search behaviour:
  :guilabel:`Ends with`                         |checkbox|
 ============================================= ============ ============  ============
 
-.. only:: html
-
-   |
 
 For string comparisons, it is also possible to use the |checkbox|
 :guilabel:`Case sensitive` option.

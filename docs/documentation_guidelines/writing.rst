@@ -635,7 +635,6 @@ guidelines:
   Scale                                     ``scale``
   ========================================  =========================  ====================
 
-  |
 
 * Study an existing and well documented algorithm, and copy
   all the useful layouts.

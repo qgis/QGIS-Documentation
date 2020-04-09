@@ -138,8 +138,6 @@ hasProcessingProvider  False     boolean flag, `True` or `False`, determines if
                                  the plugin provides processing algorithms
 =====================  ========  =======================================
 
-|
-
 By default, plugins are placed in the :menuselection:`Plugins` menu (we will see
 in the next section how to add a menu entry for your plugin) but they can also
 be placed into :menuselection:`Raster`, :menuselection:`Vector`,

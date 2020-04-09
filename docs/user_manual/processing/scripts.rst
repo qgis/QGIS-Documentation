@@ -514,7 +514,6 @@ Input types
      - ``alg.VECTOR_LAYER_DEST``
      - A vector layer
 
-|
 
 Output types
 ............

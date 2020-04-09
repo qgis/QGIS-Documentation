@@ -48,9 +48,6 @@ Standard requests provided by QGIS Server:
    "GetFeatureInfo", "Retrieves data (geometry and values) for a pixel location"
    "GetLegendGraphics", "Returns legend symbols"
 
-.. only :: html
-
-   |
 
 Vendor requests provided by QGIS Server:
 
@@ -86,9 +83,6 @@ WMS 1.1.0 and 1.3.0 specifications:
    "FORMAT", "No", "Image format"
    "TRANSPARENT", "No", "Transparent background"
 
-.. only:: html
-
-   |
 
 In addition to the standard ones, QGIS Server supports the following
 extra parameters:
@@ -125,9 +119,6 @@ extra parameters:
    "
    "TILED", "No", "Working in *tiled mode*"
 
-.. only:: html
-
-   |
 
 URL example:
 
@@ -568,9 +559,6 @@ the OGC WMS 1.1.0 and 1.3.0 specifications:
    "J", "No", "Pixel row of the point to query"
    "Y", "No", "Same as `J` parameter, but in WMS 1.1.0"
 
-.. only:: html
-
-   |
 
 In addition to the standard ones, QGIS Server supports the following
 extra parameters:
@@ -589,9 +577,6 @@ extra parameters:
    "WITH_MAPTIP", "No", "Add map tips to the output"
    "WITH_GEOMETRY", "No", "Add geometry to the output"
 
-.. only:: html
-
-   |
 
 URL example:
 
@@ -766,9 +751,6 @@ Parameters for the **GetPrint** request:
    "mapX:GRID_INTERVAL_X", "No", "Grid interval on x axis of the map 'X'"
    "mapX:GRID_INTERVAL_Y", "No", "Grid interval on y axis of the map 'X'"
 
-.. only:: html
-
-   |
 
 URL example:
 
@@ -1025,9 +1007,6 @@ OGC WFS 1.0.0 and 1.1.0 specifications:
    "BBOX", "No", "Map Extent"
    "SORTBY", "No", "Sort the results"
 
-.. only:: html
-
-   |
 
 In addition to the standard ones, QGIS Server supports the following
 extra parameters:
@@ -1200,9 +1179,6 @@ the OGC WMTS 1.0.0 specifications:
    "SERVICE", "Yes", "Name of the service (WMTS)"
    "REQUEST", "Yes", "Name of the request (GetCapabilities)"
 
-.. only:: html
-
-   |
 
 In addition to the standard ones, QGIS Server supports the following extra
 parameters:
@@ -1214,9 +1190,6 @@ parameters:
 
    "MAP", "Yes", "Specify the QGIS project file"
 
-.. only:: html
-
-   |
 
 URL example:
 
@@ -1269,9 +1242,6 @@ OGC WMTS 1.0.0 specifications:
    "TILEROW", "Yes", "Row coordinate in the mesh"
    "TILECOL", "Yes", "Column coordinate in the mesh"
 
-.. only:: html
-
-   |
 
 In addition to the standard ones, QGIS Server supports the following
 extra parameters:
@@ -1283,9 +1253,6 @@ extra parameters:
 
    "MAP", "Yes", "Specify the QGIS project file"
 
-.. only:: html
-
-   |
 
 URL example:
 
@@ -1433,9 +1400,6 @@ the OGC WMTS 1.0.0 specifications:
    "TILEROW", "Yes", ":ref:`See GetTile <qgisserver-wmts-gettile>`"
    "TILECOL", "Yes", ":ref:`See GetTile <qgisserver-wmts-gettile>`"
 
-.. only::html
-
-   |
 
 In addition to the standard ones, QGIS Server supports the following
 extra parameters:
@@ -1447,9 +1411,6 @@ extra parameters:
 
    "MAP", "Yes", "Specify the QGIS project file"
 
-.. only:: html
-
-   |
 
 URL example:
 
