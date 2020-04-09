@@ -123,16 +123,9 @@ saved.
 We want to classify the landuse areas by size, but there's a problem: they don't
 have a size field, so we'll have to make one.
 
-* Enter edit mode by clicking this button:
+* Enter edit mode by clicking the |toggleEditing| button
 
-.. image:: /static/common/edit.png
-   :width: 1.5em
-   :align: center
-
-* Add a new column with this button:
-
-.. image:: img/add_column_button.png
-   :align: center
+* Add a new column with the |newAttribute| button
 
 * Set up the dialog that appears, like this:
 
@@ -147,11 +140,7 @@ just has a lot of :kbd:`NULL` values.
 
 To solve this problem, we'll need to calculate the areas.
 
-* Open the field calculator:
-
-.. image:: /static/common/mActionCalculateField.png
-   :width: 1.5em
-   :align: center
+* Open the field calculator with the |calculateField| button
 
 You'll get this dialog:
 
@@ -321,8 +310,14 @@ of the next lesson!
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/global/basic.png
+.. |calculateField| image:: /static/common/mActionCalculateField.png
+   :width: 1.5em
 .. |hard| image:: /static/global/hard.png
 .. |majorUrbanName| replace:: Swellendam
 .. |moderate| image:: /static/global/moderate.png
+.. |newAttribute| image:: /static/common/mActionNewAttribute.png
+   :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
