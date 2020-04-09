@@ -2376,21 +2376,37 @@ In the dialog that opens:
 ===========
 
 3D visualization support is offered through the 3D map view.
-
-.. note::
-   3D visualization in QGIS requires a recent version of the QT
-   library (5.8 or later).
-
 You create and open a 3D map view via :menuselection:`View -->`
 |new3DMap| :menuselection:`New 3D Map View`.
 A floating QGIS panel will appear. The panel can be docked.
 
 To begin with, the 3D map view has the same extent and view as the
-2D canvas.
-There is no dedicated toolbar for navigation in the 3D canvas.
-You zoom in/out and pan in the same way as in the main 2D canvas.
-You can also zoom in and out by dragging the mouse down/up with the
-right mouse button pressed.
+2D main map canvas. A set of navigation tools are available to turn
+the view into 3D.
+
+.. _figure_3dmapview:
+
+.. figure:: img/3dmapview.png
+   :align: center
+
+   The 3D Map View dialog
+
+The following tools are provided at the top of the 3D map view panel:
+
+* |pan| :sup:`Camera control`: moves the view, keeping the same angle
+  and direction of the camera
+* |zoomFullExtent| :sup:`Zoom Full`: resizes the view to the whole
+  layers' extent
+* |3dNavigation| :sup:`Toggle on-screen notification`: shows/hides the
+  navigation widget (that is meant to ease controlling of the map view)
+* |identify| :sup:`Identify`: returns information on the clicked point
+  of the terrain or the clicked 3D feature(s) -- More details at :ref:`identify`
+* |measure| :sup:`Measurement line`: measures the horizontal distance between points
+* |play| :sup:`Animations`: shows/hides the :ref:`animation player
+  <create_animation>` widget
+* |saveMapAsImage| :sup:`Save as image...`: exports the current view to
+  an image file format
+* |options| :sup:`Configure` the map view :ref:`settings <scene_configuration>`
 
 
 .. _`3d_navigation`:
@@ -2446,6 +2462,43 @@ To explore the map view in 3D:
 
 To reset the camera view, click the |zoomFullExtent| :sup:`Zoom Full`
 button on the top of the 3D canvas panel.
+
+.. _`create_animation`:
+
+Creating an animation
+---------------------
+
+An animation is based on a set of keyframes - camera positions at particular times.
+To create an animation:
+
+#. Toggle on the |play| :sup:`Animations` tool, displaying the animation player
+   widget
+#. Click the |signPlus| :sup:`Add keyframe` button and enter a :guilabel:`Keyframe
+   time` in seconds. The :guilabel:`Keyframe` combo box now displays the time set.
+#. Using the navigation tools, move the camera to the position to associate with
+   the current keyframe time.
+#. Repeat the previous steps to add as many keyframes (with time and position) as necessary.
+#. Click the |play| button to preview the animation. QGIS will generate scenes using
+   the camera positions/rotations at set times, and interpolating them in between
+   these keyframes. Various :guilabel:`Interpolation` modes for animations are
+   available (eg, linear, inQuad, outQuad, inCirc... -- more details at
+   https://doc.qt.io/qt-5/qeasingcurve.html#EasingFunction-typedef).
+
+   The animation can also be previewed by moving the time slider.
+   Keeping the |draw| :sup:`Repeat` button pressed will repeatedly run the
+   animation while clicking |play| stops a running animation.
+
+It is possible to browse the different views of the camera, using the
+:guilabel:`Keyframe` list. Whenever a time is active, changing the map view
+will automatically update the associated position. You can also |symbologyEdit|
+:sup:`Edit keyframe` (time only) or |signMinus| :sup:`Remove keyframe`.
+
+Click |fileSave| :sup:`Export animation frames` to generate a series of images
+representing the scene. Other than the filename :guilabel:`Template` and the
+:guilabel:`Output directory`, you can set the number of :guilabel:`Frames per
+second`, the :guilabel:`Output width` and :guilabel:`Output height`.
+
+.. _`scene_configuration`:
 
 Scene Configuration
 ---------------------
@@ -2662,6 +2715,8 @@ Click the icon to open the Plugin Manager dialog.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |3dNavigation| image:: /static/common/mAction3DNavigation.png
+   :width: 1.3em
 .. |addAllToOverview| image:: /static/common/mActionAddAllToOverview.png
    :width: 1.5em
 .. |addPart| image:: /static/common/mActionAddPart.png
@@ -2785,6 +2840,8 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |mapTips| image:: /static/common/mActionMapTips.png
    :width: 1.5em
+.. |measure| image:: /static/common/mActionMeasure.png
+   :width: 1.5em
 .. |mergeFeatAttributes| image:: /static/common/mActionMergeFeatureAttributes.png
    :width: 1.5em
 .. |mergeFeatures| image:: /static/common/mActionMergeFeatures.png
@@ -2836,6 +2893,8 @@ Click the icon to open the Plugin Manager dialog.
 .. |pan| image:: /static/common/mActionPan.png
    :width: 1.5em
 .. |panToSelected| image:: /static/common/mActionPanToSelected.png
+   :width: 1.5em
+.. |play| image:: /static/common/mActionPlay.png
    :width: 1.5em
 .. |pluginNew| image:: /static/common/pluginNew.png
    :width: 1.5em
@@ -2919,6 +2978,10 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |showSelectedLayers| image:: /static/common/mActionShowSelectedLayers.png
    :width: 1.5em
+.. |signMinus| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
 .. |simplifyFeatures| image:: /static/common/mActionSimplify.png
    :width: 1.5em
 .. |splitFeatures| image:: /static/common/mActionSplitFeatures.png
@@ -2931,6 +2994,8 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1em
 .. |sum| image:: /static/common/mActionSum.png
    :width: 1.2em
+.. |symbologyEdit| image:: /static/common/symbologyEdit.png
+   :width: 1.5em
 .. |tiltDown| image:: /static/common/mActionTiltDown.png
    :width: 1.5em
 .. |tiltUp| image:: /static/common/mActionTiltUp.png
