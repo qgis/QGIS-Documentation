@@ -413,7 +413,7 @@ This group contains functions for handling date and time data.
    "now", "Returns current date and time"
    "second", "Extracts the second from a datetime or time, or the number of seconds from an interval"
    "week", "Extracts the week number from a date or datetime, or the number of weeks from an interval"
-   "year", "Extracts the year part from a date or datetime,or the number of years from an interval"
+   "year", "Extracts the year part from a date or datetime, or the number of years from an interval"
 
 This group also shares several functions with the :ref:`conversion_functions` (
 to_date, to_time, to_datetime, to_interval) and :ref:`string_functions`
@@ -1029,7 +1029,7 @@ This group contains functions that operate on record identifiers.
    "num_selected", "Returns the number of selected features on a given layer"
    "represent_value", "Returns the configured representation value for a field value
    (convenient with some :ref:`widget types <edit_widgets>`)"
-   "sql_fetch_and_increment", "Manage autoincrementing values in sqlite databases"
+   "sql_fetch_and_increment", "Manage autoincrementing values in SQLite databases"
    "uuid", "Generates a Universally Unique Identifier (UUID) for each row. Each UUID is 38 characters long."
 
 **Some examples:**
@@ -1169,7 +1169,7 @@ To use these functions in an expression, they should be preceded by @ character
    "fullextent_maxx", "Maximum x value from full canvas extent (including all layers)"
    "fullextent_maxy", "Maximum y value from full canvas extent (including all layers)"
    "fullextent_minx", "Minimum x value from full canvas extent (including all layers)"
-   "fullextent_miny", "Minimum x value from full canvas extent (including all layers)"
+   "fullextent_miny", "Minimum y value from full canvas extent (including all layers)"
    "geometry_part_count", "Returns the number of parts in rendered feature's geometry"
    "geometry_part_num", "Returns the current geometry part number for feature being rendered"
    "geometry_point_count", "Returns the number of points in the rendered geometry's part"
@@ -1256,7 +1256,7 @@ To use these functions in an expression, they should be preceded by @ character
    "scale_value", "Returns current scale bar distance value"
    "symbol_angle", "Returns the angle of the symbol used to render the feature
    (valid for marker symbols only)"
-   "symbol_color", "Returns the color of the symbol used to renderthe feature"
+   "symbol_color", "Returns the color of the symbol used to render the feature"
    "user_account_name", "Returns the current user's operating system account name"
    "user_full_name", "Returns the current user's operating system user name"
    "row_number", "Stores the number of the current row"
