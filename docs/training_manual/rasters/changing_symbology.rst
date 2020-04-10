@@ -185,7 +185,7 @@ analyze it further.
 .. |LS| replace:: Lesson:
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
-.. |basic| image:: /static/global/basic.png
+.. |basic| image:: /static/common/basic.png
 .. |contextHelp| image:: /static/common/mActionContextHelp.png
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png

@@ -34,4 +34,4 @@ You can also modify the algorithm. Just copy it, open the :menuselection:`Plugin
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |hard| image:: /static/global/hard.png
+.. |hard| image:: /static/common/hard.png

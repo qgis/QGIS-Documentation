@@ -355,10 +355,10 @@ rasters? That's what we'll do in the next module!
 .. |LS| replace:: Lesson:
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
-.. |basic| image:: /static/global/basic.png
+.. |basic| image:: /static/common/basic.png
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
-.. |moderate| image:: /static/global/moderate.png
+.. |moderate| image:: /static/common/moderate.png
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
    :width: 1.5em
 .. |sum| image:: /static/common/mActionSum.png

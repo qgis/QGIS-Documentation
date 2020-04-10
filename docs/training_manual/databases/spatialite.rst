@@ -76,6 +76,6 @@ use these tables as layers in QGIS.
 .. |FA| replace:: Follow Along:
 .. |IC| replace:: In Conclusion
 .. |LS| replace:: Lesson:
-.. |basic| image:: /static/global/basic.png
+.. |basic| image:: /static/common/basic.png
 .. |newSpatiaLiteLayer| image:: /static/common/mActionNewSpatiaLiteLayer.png
    :width: 1.5em

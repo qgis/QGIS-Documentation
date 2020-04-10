@@ -255,8 +255,8 @@ Next you'll see how to run spatial statistics algorithms on vector datasets.
 .. |LS| replace:: Lesson:
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
-.. |basic| image:: /static/global/basic.png
+.. |basic| image:: /static/common/basic.png
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
-.. |hard| image:: /static/global/hard.png
-.. |moderate| image:: /static/global/moderate.png
+.. |hard| image:: /static/common/hard.png
+.. |moderate| image:: /static/common/moderate.png

@@ -246,11 +246,11 @@ Feature Service (WFS). That's the topic of the next lesson.
 .. |LS| replace:: Lesson:
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
-.. |basic| image:: /static/global/basic.png
+.. |basic| image:: /static/common/basic.png
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
    :width: 1.5em
-.. |hard| image:: /static/global/hard.png
+.. |hard| image:: /static/common/hard.png
 .. |majorUrbanName| replace:: Swellendam
-.. |moderate| image:: /static/global/moderate.png
+.. |moderate| image:: /static/common/moderate.png
 .. |wms| image:: /static/common/mActionAddWmsLayer.png
    :width: 1.5em

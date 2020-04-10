@@ -318,4 +318,4 @@ Next, you'll see how to use QGIS as a frontend for the famous GRASS GIS.
 .. |LS| replace:: Lesson:
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
-.. |moderate| image:: /static/global/moderate.png
+.. |moderate| image:: /static/common/moderate.png

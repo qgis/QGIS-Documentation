@@ -239,9 +239,9 @@ that you define. This is the subject of the next lesson.
 .. |LS| replace:: Lesson:
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
-.. |basic| image:: /static/global/basic.png
-.. |hard| image:: /static/global/hard.png
+.. |basic| image:: /static/common/basic.png
+.. |hard| image:: /static/common/hard.png
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
 .. |majorUrbanName| replace:: Swellendam
-.. |moderate| image:: /static/global/moderate.png
+.. |moderate| image:: /static/common/moderate.png

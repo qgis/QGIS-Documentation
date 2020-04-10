@@ -327,4 +327,4 @@ The topic of the next lesson is to learn how to access QGIS Server WMS services.
 .. |IC| replace:: In Conclusion
 .. |LS| replace:: Lesson:
 .. |WN| replace:: What's Next?
-.. |moderate| image:: /static/global/moderate.png
+.. |moderate| image:: /static/common/moderate.png
