@@ -111,10 +111,3 @@ only ``renderer_v2`` and its ``symbol`` tag expanded).
 
    The top level tags of a QML file (only the renderer_v2 tag
    with its symbol tag is expanded)
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.

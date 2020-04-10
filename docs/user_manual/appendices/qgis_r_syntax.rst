@@ -1,8 +1,8 @@
 .. _r-syntax:
 
-
+********************************
 Appendix D: QGIS R script syntax
---------------------------------
+********************************
 
 Contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna <http://www.santannapisa.it/it/istituto/scienze-della-vita/agricultural-water-management>`_
 
@@ -22,7 +22,8 @@ In the example below, the name of the group is *My group*:
 
 
 Inputs
-......
+======
+
 All input data and parameters have to be specified.
 There are several types of inputs:
 
@@ -40,7 +41,8 @@ There are several types of inputs:
   ``##type=selection point;lines;point+lines``
 
 Outputs
-.......
+=======
+
 As for the inputs, each output has to be defined at the beginning of
 the script:
 
@@ -55,7 +57,7 @@ the script:
 .. _r-syntax-table:
 
 Syntax Summary for QGIS R scripts
----------------------------------
+=================================
 
 .. :note: Module contributed by Matteo Ghetta - funded by
    `Scuola Superiore Sant'Anna <http://www.santannapisa.it/it/istituto/scienze-della-vita/agricultural-water-management>`_
@@ -63,7 +65,7 @@ Syntax Summary for QGIS R scripts
 A number of input and output parameter types are offered.
 
 Input parameter types
-.....................
+---------------------
 
 +----------------+----------------------------------+-------------------------------------------------------------------------------------+
 | Parameter      | Syntax example                   | Returning objects                                                                   |
@@ -116,7 +118,7 @@ In order to set an input as optional, you add the string ``optional``
 
 
 Output parameter types
-......................
+----------------------
 
 +----------------+----------------------------------+
 | Parameter      | Syntax example                   |
@@ -137,7 +139,7 @@ Output parameter types
 
 
 Script body
-...........
+-----------
 
 The script body follows R syntax and the **Log** panel can
 help you if there is something wrong with your script.
@@ -147,6 +149,8 @@ in the script::
 
   library(sp)
 
+Examples
+========
 
 Example with vector output
 --------------------------
