@@ -240,7 +240,7 @@ Click on :guilabel:`Create pull request`.
 As seen above, anyone can submit modifications to the documentation through pull
 requests. Likewise anyone can review pull requests with questions and `comments
 <https://help.github.com/articles/commenting-on-a-pull-request/>`_. Perhaps the
-writng style doesn't match project guidelines, the change is missing some major
+writing style doesn't match the project guidelines, the change is missing some major
 details or screenshots, or maybe everything looks great and is in order.
 Reviewing helps to improve the quality of the contribution, both in form and
 substance.
@@ -277,11 +277,11 @@ Specific line comments can be published either:
 .. figure:: img/githubAddLineComment.png
     :align: Center
 
-    Commenting a line with a suggestion of rewriting
+    Commenting a line with a change suggestion
 
 
-Line comments can embed suggestions of reformulation that the pull request
-writer can directly insert in his changes. To add a suggestion,
+Line comments can embed suggestions that the pull request
+writer can apply to the pull request. To add a suggestion,
 click the |githubSuggestions| :sup:`Insert a suggestion` button on top of the
 comment text box and modify the text within the suggestion block.
 
@@ -297,10 +297,10 @@ comment text box and modify the text within the suggestion block.
  #. Press :guilabel:`Add suggestion to batch` for each rewording you'd like to
     include. You will see a counter increasing as you go.
  #. Press any of the :guilabel:`Commit suggestions` button when you are ready to
-    apply the suggestions to your pull request and enter a message describing
+    apply the suggestions to your pull request, and enter a message describing
     the changes.
 
- This will add all the modifications to your branch as a single commit, making a
+ This will add all the modifications to your branch as a single commit, resulting in a
  more legible history of changes and less notifications for the repository
  followers. Incidentally, proceeding as this will also save you many clicks.
 
@@ -632,4 +632,3 @@ Further reading
    :width: 4em
 .. |githubSuggestions| image:: /static/common/githubSuggestions.png
    :width: 1.5em
-
