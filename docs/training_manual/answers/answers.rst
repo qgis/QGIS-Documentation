@@ -1191,11 +1191,11 @@ As you can see, our constraint allows nulls to be added into the database.
 .. |RF| replace:: Results For
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
-.. |basic| image:: /static/global/basic.png
-.. |hard| image:: /static/global/hard.png
+.. |basic| image:: /static/common/basic.png
+.. |hard| image:: /static/common/hard.png
 .. |largeLandUseArea| replace:: Bontebok National Park
 .. |majorUrbanName| replace:: Swellendam
-.. |moderate| image:: /static/global/moderate.png
+.. |moderate| image:: /static/common/moderate.png
 .. |openTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png

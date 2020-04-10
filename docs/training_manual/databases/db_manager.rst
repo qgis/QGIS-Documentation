@@ -279,6 +279,6 @@ Next, we will look at how to use many of these same techniques with
 .. |IC| replace:: In Conclusion
 .. |LS| replace:: Lesson:
 .. |WN| replace:: What's Next?
-.. |basic| image:: /static/global/basic.png
+.. |basic| image:: /static/common/basic.png
 .. |dbManager| image:: /static/common/dbmanager.png
    :width: 1.5em

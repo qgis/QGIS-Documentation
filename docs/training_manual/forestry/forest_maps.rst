@@ -475,7 +475,7 @@ then use it to your enhance your data and maps visibility.
    :width: 1.5em
 .. |atlas| image:: /static/common/mIconAtlas.png
    :width: 1.5em
-.. |basic| image:: /static/global/basic.png
+.. |basic| image:: /static/common/basic.png
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
 .. |select| image:: /static/common/mActionSelect.png

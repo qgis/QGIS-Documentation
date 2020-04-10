@@ -193,9 +193,9 @@ vector analysis tools.
 .. |IC| replace:: In Conclusion
 .. |LS| replace:: Lesson:
 .. |WN| replace:: What's Next?
-.. |basic| image:: /static/global/basic.png
-.. |hard| image:: /static/global/hard.png
-.. |moderate| image:: /static/global/moderate.png
+.. |basic| image:: /static/common/basic.png
+.. |hard| image:: /static/common/hard.png
+.. |moderate| image:: /static/common/moderate.png
 .. |projectionEnabled| image:: /static/common/mIconProjectionEnabled.png
    :width: 1.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png

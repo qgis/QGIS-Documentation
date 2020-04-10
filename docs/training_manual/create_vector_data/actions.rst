@@ -327,6 +327,6 @@ analyze this data to solve problems. That's the topic of the next module.
 .. |WN| replace:: What's Next?
 .. |actionRun| image:: /static/common/mAction.png
    :width: 1.5em
-.. |basic| image:: /static/global/basic.png
-.. |hard| image:: /static/global/hard.png
-.. |moderate| image:: /static/global/moderate.png
+.. |basic| image:: /static/common/basic.png
+.. |hard| image:: /static/common/hard.png
+.. |moderate| image:: /static/common/moderate.png

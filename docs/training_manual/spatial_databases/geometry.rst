@@ -275,5 +275,5 @@ that would otherwise seem cryptic.
 .. |IC| replace:: In Conclusion
 .. |LS| replace:: Lesson:
 .. |TY| replace:: Try Yourself
-.. |hard| image:: /static/global/hard.png
-.. |moderate| image:: /static/global/moderate.png
+.. |hard| image:: /static/common/hard.png
+.. |moderate| image:: /static/common/moderate.png

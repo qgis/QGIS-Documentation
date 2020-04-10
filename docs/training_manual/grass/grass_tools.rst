@@ -179,5 +179,5 @@ organizes tools by type.
 .. |IC| replace:: In Conclusion
 .. |LS| replace:: Lesson:
 .. |TY| replace:: Try Yourself
-.. |basic| image:: /static/global/basic.png
-.. |moderate| image:: /static/global/moderate.png
+.. |basic| image:: /static/common/basic.png
+.. |moderate| image:: /static/common/moderate.png

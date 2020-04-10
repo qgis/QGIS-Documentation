@@ -110,4 +110,4 @@ starting point to explore how you could achieve the specific results you need.
 .. |IC| replace:: In Conclusion
 .. |LS| replace:: Lesson:
 .. |TY| replace:: Try Yourself
-.. |basic| image:: /static/global/basic.png
+.. |basic| image:: /static/common/basic.png

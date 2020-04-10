@@ -95,4 +95,4 @@ Next you will present these results as part of your second assignment.
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
 .. |localCRS| replace:: ``WGS 84 / UTM 34S``
-.. |moderate| image:: /static/global/moderate.png
+.. |moderate| image:: /static/common/moderate.png
