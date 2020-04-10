@@ -280,10 +280,3 @@ used other than Qt. If you modify this file, you may extend this
 exception to your version of the file, but you are not obligated to do
 so. If you do not wish to do so, delete this exception statement from
 your version.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.

@@ -301,10 +301,3 @@ input, and creates a *QQ Plot* (to test the normality of the
 distribution).
 
 The plot is automatically added to the Processing *Result Viewer*.
-
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
