@@ -1063,7 +1063,34 @@ Creates a new point layer with points placed on the lines of another layer.
 For each feature line geometry in the input layer, the given number of points
 is added to the result layer.
 
-A minimum distance can be specified, to avoid points being too close to each other.
+A minimum distance can be specified, to avoid points being too close to
+each other in the output point layer.
+The illustrations below shows the effect of having a non-zero minimum distance.
+
+.. figure:: img/randompointsonlines_zerodistance.png
+   :align: center
+
+   Five points per line feature, minimum distance = 0
+
+
+.. figure:: img/randompointsonlines_nonzerodistance.png
+   :align: center
+
+   Five points per line feature, non-zero minimum distance
+
+The maximum number of tries per point can be specified.
+This is only relevant for non-zero minimum distance.
+
+A seed for the random number generator can be provided, making it possible
+to get identical random number sequences for different runs of the algorithm.
+
+The attributes of the line feature on which a point was generated is included
+by default, but it is possible to opt-out (uncheck
+:guilabel:`Include line attributes`).
+
+The *Number of points for each feature*, *Minimum distance between points*
+and *Maximum number of search attempts (for Min. dist. > 0)* parameters can
+be data-defined.
 
 Parameters
 ..........
