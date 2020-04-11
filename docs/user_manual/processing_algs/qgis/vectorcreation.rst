@@ -1058,14 +1058,21 @@ Outputs
 
 Random points on lines
 ----------------------
-Creates a new point layer with points placed on the lines of another layer.
+Creates a point layer with points placed on the lines of another layer.
 
-For each feature line geometry in the input layer, the given number of points
-is added to the result layer.
+For each feature (line / multi-line) geometry in the input layer, the given
+number of points is added to the result layer.
 
-A minimum distance can be specified, to avoid points being too close to
-each other in the output point layer.
-The illustrations below shows the effect of having a non-zero minimum distance.
+A minimum distance can be specified in order to avoid points being too close
+in the output point layer.
+If a minimum distance is specified, it may not be possible to generate the
+specified number of points for each feature.
+The total number of generated points and missed points are available as
+output from the algorithm.
+
+The illustrations below show the effect of having a non-zero minimum distance
+(generated with the same seed, so at least the first point generated will be
+the same).
 
 .. figure:: img/randompointsonlines_zerodistance.png
    :align: center
@@ -1091,6 +1098,9 @@ by default, but it is possible to opt-out (uncheck
 The *Number of points for each feature*, *Minimum distance between points*
 and *Maximum number of search attempts (for Min. dist. > 0)* parameters can
 be data-defined.
+That means that if you, for instance, want approximately the same point
+density for each line feature, you can data-define the number of points using
+the length of the line feature geometry.
 
 Parameters
 ..........
@@ -1176,6 +1186,23 @@ Outputs
      - ``OUTPUT``
      - [vector: point]
      - The output random points layer.
+   * - **Number of features with empty or no geometry**
+     - ``FEATURES_WITH_EMPTY_OR_NO_GEOMETRY``
+     - [number]
+     - 
+   * - **Number of lines with missed points**
+     - ``LINES_WITH_MISSED_POINTS``
+     - [number]
+     - Not including features with empty or no geometry
+   * - **Total number of points generated**
+     - ``OUTPUT_POINTS``
+     - [number]
+     - 
+   * - **Number of missed points**
+     - ``POINTS_MISSED``
+     - [number]
+     - The number of points that could not be generated due to
+       the minimum distance constraint.
 
 
 .. _qgispixelstopoints:
