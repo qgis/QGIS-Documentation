@@ -1054,6 +1054,103 @@ Outputs
      - The output random points layer.
 
 
+.. _qgisrandompointsonlines:
+
+Random points on lines
+----------------------
+Creates a new point layer with points placed on the lines of another layer.
+
+For each feature line geometry in the input layer, the given number of points
+is added to the result layer.
+
+A minimum distance can be specified, to avoid points being too close to each other.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input line layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input line vector layer
+   * - **Number of points for each feature**
+     - ``POINTS_NUMBER``
+     - [number]
+
+       Default: 1
+     - Number of points to create
+   * - **Minimum distance between points**
+
+       Optional
+     - ``MIN_DISTANCE``
+     - [number]
+
+       Default: 0.0
+     - The minimum distance between points
+   * - **Maximum number of search attempts (for Min. dist. > 0)**
+
+       Optional
+     - ``MAX_TRIES_PER_POINT``
+     - [number]
+
+       Default: 10
+     - The maximum number of tries per point.
+       Only relevant if the minimum distance between points is greater than 0.
+   * - **Random seed**
+
+       Optional
+     - ``SEED``
+     - [number]
+
+       Default: Not set
+     - The seed to use for the random number generator.
+   * - **Include line attributes**
+     - ``INCLUDE_LINE_ATTRIBUTES``
+     - [boolean]
+
+       Default: True
+     - If set, a point will get the attributes from the line on
+       which it is placed.
+   * - **Random points on lines**
+     - ``OUTPUT``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - The output random points. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Random points on lines**
+     - ``OUTPUT``
+     - [vector: point]
+     - The output random points layer.
+
+
 .. _qgispixelstopoints:
 
 Raster pixels to points
