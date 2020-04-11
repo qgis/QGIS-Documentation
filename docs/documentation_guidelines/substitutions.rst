@@ -211,6 +211,7 @@ Icon                            Substitution                        Icon        
 |selectFreehand|                ``|selectFreehand|``                |selectRadius|                  ``|selectRadius|``
 |selectAll|                     ``|selectAll|``                     |deselectAll|                   ``|deselectAll|``
 |invertSelection|               ``|invertSelection|``               |expressionSelect|              ``|expressionSelect|``
+|deselectActiveLayer|           ``|deselectActiveLayer|``
 |selectAllTree|                 ``|selectAllTree|``                 |select|                        ``|select|``
 |formSelect|                    ``|formSelect|``                    |dataDefined|                   ``|dataDefined|``
 |expression|                    ``|expression|``                    |dataDefineOn|                  ``|dataDefineOn|``
@@ -691,6 +692,8 @@ Icon                            Substitution                        Icon        
 .. |deleteSelectedFeatures| image:: /static/common/mActionDeleteSelectedFeatures.png
    :width: 1.5em
 .. |dependencies| image:: /static/common/dependencies.png
+   :width: 1.5em
+.. |deselectActiveLayer| image:: /static/common/mActionDeselectActiveLayer.png
    :width: 1.5em
 .. |deselectAll| image:: /static/common/mActionDeselectAll.png
    :width: 1.5em
