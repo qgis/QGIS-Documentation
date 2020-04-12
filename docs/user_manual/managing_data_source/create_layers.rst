@@ -56,6 +56,7 @@ be displayed as shown in figure_create_geopackage_.
 
    Creating a New GeoPackage layer dialog
 
+<<<<<<< HEAD
 The first step is to select an existing GeoPackage or create a new one. This
 can be done by pressing the ellipses :guilabel:`...` button at the right of the
 Database field. Then, give a name for the new layer, define the layer type and
@@ -67,6 +68,45 @@ and click on the :guilabel:`Add to Fields List` button. Once you are happy with 
 attributes, click :guilabel:`OK`. QGIS will automatically add the new layer to the
 legend, and you can edit it in the same way as described in section
 :ref:`sec_edit_existing_layer`.
+=======
+#. The first step is to indicate the database file location. This can be done
+   by pressing the :guilabel:`...` button to the right of the
+   :guilabel:`Database` field and select an existing GeoPackage file
+   or create a new one. QGIS will automatically add the right extension to
+   the name you provide.
+#. Give the new layer / table a name (:guilabel:`Table name`)
+#. Define the :guilabel:`Geometry type`. If not a geometryless layer, you
+   can specify whether it should :guilabel:`Include Z dimension` and/or
+   :guilabel:`Include M values`.
+#. Specify the coordinate reference system using the |setProjection| button
+
+To add fields to the layer you are creating:
+
+#. Enter the :guilabel:`Name` of the field
+#. Select the data :guilabel:`Type`. Supported types are :guilabel:`Text data`,
+   :guilabel:`Whole number` (both integer and integer64), :guilabel:`Decimal
+   number`, :guilabel:`Date` and :guilabel:`Date and time`,
+   :guilabel:`Binary (BLOB)` and :guilabel:`Boolean`.
+#. Depending on the selected data format, enter the :guilabel:`Maximum length`
+   of values.
+#. Click on the |newAttribute| :guilabel:`Add to Fields List` button
+#. Reproduce the steps above for each field you need to add
+#. Once you are happy with the attributes, click :guilabel:`OK`.
+   QGIS will add the new layer to the legend, and you can edit it
+   as described in section :ref:`sec_edit_existing_layer`.
+
+By default, when creating a GeoPackage layer, QGIS generates a 
+:guilabel:`Feature id column` called ``fid`` which acts as the
+primary key of the layer. The name can be changed.
+The geometry field, if availabe, is named ``geometry``, and you can
+choose to :guilabel:`Create a spatial index` on it.
+These options can be found under the :guilabel:`Advanced Options`
+together with the :guilabel:`Layer identifier` (short human readable
+name of the layer) and the :guilabel:`Layer description`.
+
+Further management of GeoPackage layers can be done with the
+:ref:`DB Manager <dbmanager>`.
+>>>>>>> 64713042f... Typo's corrected (#5269)
 
 
 .. _vector_create_shapefile:
@@ -91,6 +131,7 @@ dimensions, as well as the CRS (coordinate reference system).
 
    Creating a new Shapefile layer dialog
 
+<<<<<<< HEAD
 To complete the creation of the new Shapefile layer, add the desired attributes
 by specifying a name and type for each attribute and clicking on the 
 :guilabel:`Add to Fields List` button. 
@@ -103,6 +144,23 @@ the length and precision of the new attribute column. Once you are happy with th
 attributes, click :guilabel:`OK`. 
 Once the Shapefile has been created, it will be added to the map as a new layer,
 and you can edit it in the same way as described in section :ref:`sec_edit_existing_layer`.
+=======
+To add fields to the layer you are creating:
+
+#. Enter the :guilabel:`Name` of the field
+#. Select the data :guilabel:`Type`. Only :guilabel:`Decimal number`,
+   :guilabel:`Whole number`, :guilabel:`Text data` and :guilabel:`Date`
+   attributes are supported.
+#. Depending on the selected data format, enter the :guilabel:`Length` and
+   :guilabel:`Precision`.
+#. Click on the |newAttribute| :guilabel:`Add to Fields List` button
+#. Reproduce the steps above for each field you need to add
+#. Once you are happy with the attributes, click :guilabel:`OK`.
+   QGIS will add the new layer to the legend, and you can edit it
+   as described in section :ref:`sec_edit_existing_layer`.
+
+By default, a first integer ``id`` column is added but can be removed.
+>>>>>>> 64713042f... Typo's corrected (#5269)
 
 
 .. index:: New SpatiaLite layer
