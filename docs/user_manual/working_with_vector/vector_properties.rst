@@ -423,6 +423,8 @@ Right-clicking over selected item(s) shows a contextual menu to:
 * :guilabel:`Change Opacity...` of the selected symbol(s)
 * :guilabel:`Change Output Unit...` of the selected symbol(s)
 * :guilabel:`Change Width...` of the selected line symbol(s)
+* :guilabel:`Change Size...` of the selected point symbol(s)
+* :guilabel:`Change Angle...` of the selected point symbol(s)
 * :guilabel:`Merge Categories`: Groups multiple selected categories into a single
   one. This allows simpler styling of layers with a large number of categories,
   where it may be possible to group numerous distinct categories into a smaller
@@ -510,6 +512,12 @@ on the item you want to change.
 Right-clicking over selected item(s) shows a contextual menu to
 **Copy/Paste Symbol**, **Change Color**, **Change Opacity**,
 **Change Output Unit**, **Change Width / Size**, **Change Angle**.
+
+  Provided options of right-click menu depend on type of geometry:
+
+  * Line layers have **Change Width**  
+  * Point layers have **Change Size** and **Change Angle**
+  * Polygon layers do not have **Change Width / Size**
 
 The example in figure_graduated_symbology_ shows the graduated rendering dialog for
 the major_rivers layer of the QGIS sample dataset.
@@ -666,6 +674,12 @@ can also be achieved by writing ``Else`` in the *Rule* column of the
 Right-clicking over selected rule(s) shows a contextual menu to **Copy/Paste**,
 **Copy/Paste Symbol**, **Change Color**, **Change Opacity**,
 **Change Output Unit**, **Change Width/Size**, **Change Angle** and **Refine Current Rule**.
+
+  Provided options of right-click menu depend on type of geometry:
+   
+  * Line layers have **Change Width**  
+  * Point layers have **Change Size** and **Change Angle**
+  * Polygon layers do not have **Change Width / Size**
 
 The created rules also appear in a tree hierarchy in the map legend.
 Double-click the rules in the map legend and the Symbology tab of the layer
