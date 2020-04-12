@@ -421,7 +421,7 @@ Right-clicking over selected item(s) shows a contextual menu to:
   to apply a category's representation to others
 * :guilabel:`Change Color...` of the selected symbol(s)
 * :guilabel:`Change Opacity...` of the selected symbol(s)
-* :guilabel:`Change output Unit...` of the selected symbol(s)
+* :guilabel:`Change Output Unit...` of the selected symbol(s)
 * :guilabel:`Change Width...` of the selected line symbol(s)
 * :guilabel:`Merge Categories`: Groups multiple selected categories into a single
   one. This allows simpler styling of layers with a large number of categories,
@@ -507,8 +507,9 @@ classes can be disabled unchecking the checkbox at the left of the class name.
 To change symbol, value and/or label of the class, just double click
 on the item you want to change.
 
-Right-click shows a contextual menu to **Copy/Paste**, **Change color**, **Change
-transparency**, **Change output unit**, **Change symbol width**.
+Right-clicking over selected item(s) shows a contextual menu to
+**Copy/Paste Symbol**, **Change Color**, **Change Opacity**,
+**Change Output Unit**, **Change Width / Size**, **Change Angle**.
 
 The example in figure_graduated_symbology_ shows the graduated rendering dialog for
 the major_rivers layer of the QGIS sample dataset.
@@ -661,6 +662,10 @@ make use of the |radioButtonOff| :guilabel:`Else` option to catch all the
 features that do not match any of the other rules, at the same level. This
 can also be achieved by writing ``Else`` in the *Rule* column of the
 :menuselection:`Layer Properties --> Symbology --> Rule-based` dialog.
+
+Right-clicking over selected rule(s) shows a contextual menu to **Copy/Paste**,
+**Copy/Paste Symbol**, **Change Color**, **Change Opacity**,
+**Change Output Unit**, **Change Width/Size**, **Change Angle** and **Refine Current Rule**.
 
 The created rules also appear in a tree hierarchy in the map legend.
 Double-click the rules in the map legend and the Symbology tab of the layer
