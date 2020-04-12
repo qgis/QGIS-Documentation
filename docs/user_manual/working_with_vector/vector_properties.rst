@@ -389,11 +389,74 @@ for the rivers layer of the QGIS sample dataset.
 
 .. tip:: **Match categories to symbol name**
 
+<<<<<<< HEAD
    In the [Advanced] menu, under the classes, you can choose one of the two
    first actions to match symbol name to a category name in your classification.
    *Matched to saved symbols* match category name with a symbol name from your
    *Style Manager*. *Match to symbols from file* match category name to a
    symbol name from an external file.
+=======
+#. Configure the :ref:`Symbol <symbol-selector>`, which will be used as
+   base symbol for all the classes;
+#. Indicate the :ref:`Color ramp <color-ramp>`, ie the range of colors from which
+   the color applied to each symbol is selected.
+
+   Besides the common options of the :ref:`color ramp widget <color_ramp_widget>`,
+   you can apply a |unchecked| :guilabel:`Random Color Ramp` to the categories.
+   You can click the :guilabel:`Shuffle Random Colors` entry to regenerate a new set
+   of random colors if you are not satisfied.
+#. Then click on the :guilabel:`Classify` button to create classes from the
+   distinct values of the provided field or expression.
+#. :guilabel:`Apply` the changes if the :ref:`live update <layer_styling_panel>`
+   is not in use and each feature on the map canvas will be rendered with the
+   symbol of its class.
+
+   By default, QGIS appends an :guilabel:`all other values` class to the list.
+   While empty at the beginning, this class is used as a default class for any
+   feature not falling into the other classes (eg, when you create features
+   with new values for the classification field / expression).
+
+Further tweaks can be done to the default classification:
+
+* You can |signPlus| :sup:`Add` new categories, |signMinus| :sup:`Remove`
+  selected categories or :guilabel:`Delete All` of them.
+* A class can be disabled by unchecking the checkbox to the left of the
+  class name; the corresponding features are hidden on the map.
+* Drag-and-drop the rows to reorder the classes
+* To change the symbol, the value or the legend of a class, double click the item.
+
+Right-clicking over selected item(s) shows a contextual menu to:
+
+* :guilabel:`Copy Symbol` and :guilabel:`Paste Symbol`, a convenient way
+  to apply a category's representation to others
+* :guilabel:`Change Color...` of the selected symbol(s)
+* :guilabel:`Change Opacity...` of the selected symbol(s)
+* :guilabel:`Change Output Unit...` of the selected symbol(s)
+* :guilabel:`Change Width...` of the selected line symbol(s)
+* :guilabel:`Merge Categories`: Groups multiple selected categories into a single
+  one. This allows simpler styling of layers with a large number of categories,
+  where it may be possible to group numerous distinct categories into a smaller
+  and more manageable set of categories which apply to multiple values.
+
+  .. tip:: Since the symbol kept for the merged categories is the one of the
+   topmost selected category in the list, you may want to move the category
+   whose symbol you wish to reuse to the top before merging.
+
+* :guilabel:`Unmerge Categories` that were previously merged
+
+.. _categorized_advanced_menu:
+
+The :guilabel:`Advanced` menu gives access to options to speed classification
+or fine-tune the symbols rendering:
+
+* :guilabel:`Match to saved symbols`: Using the :ref:`symbols library
+  <vector_style_manager>`, assigns to each category a symbol whose name
+  represents the classification value of the category
+* :guilabel:`Match to symbols from file...`: Provided a file with symbols,
+  assigns to each category a symbol whose name represents the classification
+  value of the category
+* :ref:`Symbol levels... <Symbols_levels>` to define the order of symbols rendering.
+>>>>>>> abf1a096e... Fix#4056 (#5261)
 
 
 .. index:: Natural Breaks (Jenks), Pretty Breaks, Equal Interval, Quantile, Histogram
@@ -455,8 +518,9 @@ classes can be disabled unchecking the checkbox at the left of the class name.
 To change symbol, value and/or label of the class, just double click
 on the item you want to change.
 
-Right-click shows a contextual menu to **Copy/Paste**, **Change color**, **Change
-transparency**, **Change output unit**, **Change symbol width**.
+Right-clicking over selected item(s) shows a contextual menu to
+**Copy/Paste Symbol**, **Change Color**, **Change Opacity**,
+**Change Output Unit**, **Change Width / Size**, **Change Angle**.
 
 The example in figure_graduated_symbology_ shows the graduated rendering dialog for
 the rivers layer of the QGIS sample dataset.
@@ -609,6 +673,10 @@ make use of the |radioButtonOff| :guilabel:`Else` option to catch all the
 features that do not match any of the other rules, at the same level. This
 can also be achieved by writing ``Else`` in the *Rule* column of the
 :menuselection:`Layer Properties --> Symbology --> Rule-based` dialog.
+
+Right-clicking over selected rule(s) shows a contextual menu to **Copy/Paste**,
+**Copy/Paste Symbol**, **Change Color**, **Change Opacity**,
+**Change Output Unit**, **Change Width/Size**, **Change Angle** and **Refine Current Rule**.
 
 The created rules also appear in a tree hierarchy in the map legend.
 Double-click the rules in the map legend and the Symbology tab of the layer
