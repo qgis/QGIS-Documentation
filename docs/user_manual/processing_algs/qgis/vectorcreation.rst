@@ -751,12 +751,33 @@ Outputs
 
 Random points along line
 ------------------------
-Creates a new point layer, with points placed in the lines of another layer.
-
-For each line in the input layer, a given number of points is added to the resulting
+Creates a new point layer, with points placed on the lines of another
 layer.
 
-A minimum distance can be specified, to avoid points being too close to each other.
+For each line in the input layer, a given number of points is added
+to the resulting layer.
+The procedure for adding a point is to:
+
+1. randomly select a line feature from the input layer
+2. if the feature is multi-part, randomly select a part of it
+3. randomly select a segment of that line
+4. randomly select a position on that segment.
+
+The procedure means that curved parts of the lines (with relatively
+short segments) will get more points than straight parts (with
+relatively long segments), as demonstrated in the illustration below,
+where the output of the *Random points along lines* algorithm can be
+compared with the output of the *Random points on lines* algorithm
+(that produces points with an, on average, even distribution along
+the lines).
+
+.. figure:: img/randompointsalonglines_illustration.png
+   :align: center
+
+   Left: Random points along line, right: Random points on lines
+
+A minimum distance can be specified, to avoid points being too close to
+each other.
 
 Parameters
 ..........
