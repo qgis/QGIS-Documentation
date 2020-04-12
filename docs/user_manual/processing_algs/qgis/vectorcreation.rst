@@ -751,12 +751,34 @@ Outputs
 
 Random points along line
 ------------------------
-Creates a new point layer, with points placed in the lines of another layer.
-
-For each line in the input layer, a given number of points is added to the resulting
+Creates a new point layer, with points placed on the lines of another
 layer.
 
-A minimum distance can be specified, to avoid points being too close to each other.
+For each line in the input layer, a given number of points is added
+to the resulting layer.
+The procedure for adding a point is to:
+
+1. randomly select a line feature from the input layer
+2. if the feature is multi-part, randomly select a part of it
+3. randomly select a segment of that line
+4. randomly select a position on that segment.
+
+The procedure means that curved parts of the lines (with relatively
+short segments) will get more points than straight parts (with
+relatively long segments), as demonstrated in the illustration below,
+where the output of the *Random points along lines* algorithm can be
+compared with the output of the *Random points on lines* algorithm
+(that produces points with an, on average, even distribution along
+the lines).
+
+.. figure:: img/randompointsalonglines_illustration.png
+   :align: center
+
+   Example algorithm output. Left: *Random points along line*, right:
+   *Random points on lines*
+
+A minimum distance can be specified, to avoid points being too close to
+each other.
 
 Parameters
 ..........
@@ -1052,6 +1074,157 @@ Outputs
      - ``OUTPUT``
      - [vector: point]
      - The output random points layer.
+
+
+.. _qgisrandompointsonlines:
+
+Random points on lines
+----------------------
+Creates a point layer with points placed on the lines of another layer.
+
+For each feature (line / multi-line) geometry in the input layer, the given
+number of points is added to the result layer.
+
+A minimum distance can be specified in order to avoid points being too close
+in the output point layer.
+If a minimum distance is specified, it may not be possible to generate the
+specified number of points for each feature.
+The total number of generated points and missed points are available as
+output from the algorithm.
+
+The illustrations below show the effect of having a non-zero minimum distance
+(generated with the same seed, so at least the first point generated will be
+the same).
+
+.. figure:: img/randompointsonlines_zerodistance.png
+   :align: center
+
+   Five points per line feature, minimum distance = 0
+
+
+.. figure:: img/randompointsonlines_nonzerodistance.png
+   :align: center
+
+   Five points per line feature, non-zero minimum distance
+
+The maximum number of tries per point can be specified.
+This is only relevant for non-zero minimum distance.
+
+A seed for the random number generator can be provided, making it possible
+to get identical random number sequences for different runs of the algorithm.
+
+The attributes of the line feature on which a point was generated is included
+by default, but it is possible to opt-out (uncheck
+:guilabel:`Include line attributes`).
+
+The *Number of points for each feature*, *Minimum distance between points*
+and *Maximum number of search attempts (for Min. dist. > 0)* parameters can
+be data-defined.
+That means that if you, for instance, want approximately the same point
+density for each line feature, you can data-define the number of points using
+the length of the line feature geometry.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input line layer**
+     - ``INPUT``
+     - [vector: line]
+     - Input line vector layer
+   * - **Number of points for each feature**
+     - ``POINTS_NUMBER``
+     - [number]
+
+       Default: 1
+     - Number of points to create
+   * - **Minimum distance between points**
+
+       Optional
+     - ``MIN_DISTANCE``
+     - [number]
+
+       Default: 0.0
+     - The minimum distance between points
+   * - **Maximum number of search attempts (for Min. dist. > 0)**
+
+       Optional
+     - ``MAX_TRIES_PER_POINT``
+     - [number]
+
+       Default: 10
+     - The maximum number of tries per point.
+       Only relevant if the minimum distance between points is greater than 0.
+   * - **Random seed**
+
+       Optional
+     - ``SEED``
+     - [number]
+
+       Default: Not set
+     - The seed to use for the random number generator.
+   * - **Include line attributes**
+     - ``INCLUDE_LINE_ATTRIBUTES``
+     - [boolean]
+
+       Default: True
+     - If set, a point will get the attributes from the line on
+       which it is placed.
+   * - **Random points on lines**
+     - ``OUTPUT``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - The output random points. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Random points on lines**
+     - ``OUTPUT``
+     - [vector: point]
+     - The output random points layer.
+   * - **Number of features with empty or no geometry**
+     - ``FEATURES_WITH_EMPTY_OR_NO_GEOMETRY``
+     - [number]
+     - 
+   * - **Number of lines with missed points**
+     - ``LINES_WITH_MISSED_POINTS``
+     - [number]
+     - Not including features with empty or no geometry
+   * - **Total number of points generated**
+     - ``OUTPUT_POINTS``
+     - [number]
+     - 
+   * - **Number of missed points**
+     - ``POINTS_MISSED``
+     - [number]
+     - The number of points that could not be generated due to
+       the minimum distance constraint.
 
 
 .. _qgispixelstopoints:
