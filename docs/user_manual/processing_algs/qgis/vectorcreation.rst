@@ -1078,8 +1078,8 @@ Outputs
 
 .. _qgisrandompointsonlines:
 
-Random points on lines
-----------------------
+Random points on lines |314|
+----------------------------
 Creates a point layer with points placed on the lines of another layer.
 
 For each feature (line / multi-line) geometry in the input layer, the given
@@ -1469,6 +1469,7 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |314| replace:: ``NEW in 3.14``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
