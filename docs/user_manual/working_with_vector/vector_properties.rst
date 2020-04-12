@@ -509,7 +509,7 @@ on the item you want to change.
 
 Right-clicking over selected item(s) shows a contextual menu to
 **Copy/Paste Symbol**, **Change Color**, **Change Opacity**,
-**Change Output Unit**, **Change Width**.
+**Change Output Unit**, **Change Width / Size**, **Change Angle**.
 
 The example in figure_graduated_symbology_ shows the graduated rendering dialog for
 the major_rivers layer of the QGIS sample dataset.
@@ -665,7 +665,7 @@ can also be achieved by writing ``Else`` in the *Rule* column of the
 
 Right-clicking over selected rule(s) shows a contextual menu to **Copy/Paste**,
 **Copy/Paste Symbol**, **Change Color**, **Change Opacity**,
-**Change Output Unit**, **Change Width** and **Refine Current Rule**.
+**Change Output Unit**, **Change Width/Size**, **Change Angle** and **Refine Current Rule**.
 
 The created rules also appear in a tree hierarchy in the map legend.
 Double-click the rules in the map legend and the Symbology tab of the layer
