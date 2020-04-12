@@ -774,7 +774,8 @@ the lines).
 .. figure:: img/randompointsalonglines_illustration.png
    :align: center
 
-   Left: Random points along line, right: Random points on lines
+   Example algorithm output. Left: *Random points along line*, right:
+   *Random points on lines*
 
 A minimum distance can be specified, to avoid points being too close to
 each other.
