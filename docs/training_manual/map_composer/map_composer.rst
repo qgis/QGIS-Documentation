@@ -21,10 +21,9 @@ reason, it has a tool called the :guilabel:`Layout Manager`.
 
 * Click on the :menuselection:`Project --> Layout Manager` menu entry to open
   this tool.  You'll see a blank :guilabel:`Layout manager` dialog appear.
-* Click the :guilabel:`Add` button and give the new layout the name of
+* Click the :guilabel:`Create...` button and give the new layout the name of
   |majorUrbanName|.
 * Click :guilabel:`OK`.
-* Click the :guilabel:`Show` button.
 
 (You could also close the dialog and navigate to a layout via the
 :menuselection:`Project --> Layouts -->` menu, as in the image below.)
