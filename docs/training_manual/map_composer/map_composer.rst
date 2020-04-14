@@ -126,7 +126,7 @@ for them by adding map elements. First, let's add a title.
 As you move the title, you'll notice that guidelines appear to help you
 position the title in the center of the page.
 
-However, there is also a tool to help position the title relative to the map
+However, there is also a tool in the Actions Toolbar to help position the title relative to the map
 (not the page):
 
 |alignLeft|
@@ -142,13 +142,11 @@ However, there is also a tool to help position the title relative to the map
    :align: center
 
 To make sure that you don't accidentally move these elements around now that
-you've aligned them:
+you've aligned them you can lock items into place:
 
-* Right-click on both the map and the label.
+* With both the label and map selected, click the closed padlock over a rectangle/:guilabel:`Lock Selected Items` button in the Actions Toolbar.
 
-A small lock icon will appear in the corner to tell you that an element can't
-be dragged right now. You can always right-click on an element again to unlock
-it, though.
+Note: Click the open padlock/:guilabel:`Unlock All Items` button in the Actions Toolbar to edit the items again.
 
 Now the label is centered to the map, but not the contents. To center the
 contents of the label:
