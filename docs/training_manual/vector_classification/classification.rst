@@ -206,7 +206,11 @@ In the example, the result looks like this:
    :align: center
 
 * Click :guilabel:`OK`.
-* You can save the colour ramp in by selecting :guilabel:`Save Color Ramp...` under the :guilabel:`Color ramp` tab. Choose an appropriate name for the colour ramp. You will now be able to select the same colour ramp easily under :guilabel:`All Color Ramps`.
+* You can save the colour ramp by selecting :guilabel:`Save Color Ramp...` under the
+  :guilabel:`Color ramp` tab.
+  Choose an appropriate name for the colour ramp.
+  You will now be able to select the same colour ramp easily under
+  :guilabel:`All Color Ramps`.
 * Click :guilabel:`OK` after filling in the name.
 
 Now you'll have something like this:
