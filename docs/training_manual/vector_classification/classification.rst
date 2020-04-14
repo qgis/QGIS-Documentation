@@ -274,7 +274,7 @@ That's where rule-based classification comes in handy.
 * Click and drag this criterion to the top of the list.
 
 These filters are exclusive, in that they collectively exclude some areas on the
-map (i.e. those which are smaller that 1000000, are not residential and are not
+map (i.e. those which are smaller than 0.00005 (square degrees!), are not residential and are not
 '|majorUrbanName|'). This means that the excluded polygons take the style of the
 default :guilabel:`(no filter)` category.
 
