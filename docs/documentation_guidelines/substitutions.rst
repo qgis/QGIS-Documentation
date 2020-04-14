@@ -365,6 +365,7 @@ Icon                     Substitution                 Icon                     S
 |resizeShortest|         ``|resizeShortest|``         |resizeTallest|          ``|resizeTallest|``
 |resizeNarrowest|        ``|resizeNarrowest|``        |resizeWidest|           ``|resizeWidest|``
 |resizeSquare|           ``|resizeSquare|``           \                        \
+|lockItems|              ``|lockItems|``              |unlockAll|              ``|unlockAll|``
 |locked|                 ``|locked|``                 |unlocked|               ``|unlocked|``
 |lockedRepeat|           ``|lockedRepeat|``           |lockedGray|             ``|lockedGray|``
 |groupItems|             ``|groupItems|``             \                        \
@@ -925,6 +926,8 @@ Icon                            Substitution                        Icon        
    :width: 2.5em
 .. |linkQGisToGeoref| image:: /static/common/mActionLinkQGisToGeoref.png
    :width: 2.5em
+.. |lockItems| image:: /static/common/mActionLockItems.png
+   :width: 1.5em
 .. |locked| image:: /static/common/locked.png
    :width: 1.5em
 .. |lockedGray| image:: /static/common/lockedGray.png
@@ -1265,6 +1268,8 @@ Icon                            Substitution                        Icon        
 .. |undo| image:: /static/common/mActionUndo.png
    :width: 1.5em
 .. |union| image:: /static/common/union.png
+   :width: 1.5em
+.. |unlockAll| image:: /static/common/mActionUnlockAll.png
    :width: 1.5em
 .. |unlocked| image:: /static/common/unlocked.png
    :width: 1.5em
