@@ -147,8 +147,8 @@ you've aligned them, you can lock items into place:
 * With both the label and map selected, click the |lockItems| :sup:`Lock Selected Items`
   button in the Actions Toolbar.
 
-Note: Click the open padlock/:guilabel:`Unlock All Items` button in the
-Actions Toolbar to edit the items again.
+.. note:: Click the |unlockAll| :sup:`Unlock All Items` button in the Actions
+   Toolbar to edit the items again.
 
 Now the label is centered to the map, but not the contents. To center the
 contents of the label:
@@ -321,6 +321,8 @@ Congratulations on your first completed QGIS map project!
 .. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
    :width: 1.5em
 .. |signMinus| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |unlockAll| image:: /static/common/mActionUnlockAll.png
    :width: 1.5em
 .. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
    :width: 1.5em
