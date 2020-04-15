@@ -21,10 +21,9 @@ reason, it has a tool called the :guilabel:`Layout Manager`.
 
 * Click on the :menuselection:`Project --> Layout Manager` menu entry to open
   this tool.  You'll see a blank :guilabel:`Layout manager` dialog appear.
-* Click the :guilabel:`Add` button and give the new layout the name of
+* Click the :guilabel:`Create...` button and give the new layout the name of
   |majorUrbanName|.
 * Click :guilabel:`OK`.
-* Click the :guilabel:`Show` button.
 
 (You could also close the dialog and navigate to a layout via the
 :menuselection:`Project --> Layouts -->` menu, as in the image below.)
@@ -127,7 +126,7 @@ for them by adding map elements. First, let's add a title.
 As you move the title, you'll notice that guidelines appear to help you
 position the title in the center of the page.
 
-However, there is also a tool to help position the title relative to the map
+However, there is also a tool in the Actions Toolbar to help position the title relative to the map
 (not the page):
 
 |alignLeft|
@@ -143,13 +142,13 @@ However, there is also a tool to help position the title relative to the map
    :align: center
 
 To make sure that you don't accidentally move these elements around now that
-you've aligned them:
+you've aligned them, you can lock items into place:
 
-* Right-click on both the map and the label.
+* With both the label and map selected, click the |lockItems| :sup:`Lock Selected Items`
+  button in the Actions Toolbar.
 
-A small lock icon will appear in the corner to tell you that an element can't
-be dragged right now. You can always right-click on an element again to unlock
-it, though.
+.. note:: Click the |unlockAll| :sup:`Unlock All Items` button in the Actions
+   Toolbar to edit the items again.
 
 Now the label is centered to the map, but not the contents. To center the
 contents of the label:
@@ -309,6 +308,8 @@ Congratulations on your first completed QGIS map project!
    :width: 1.5em
 .. |label| image:: /static/common/mActionLabel.png
    :width: 1.5em
+.. |lockItems| image:: /static/common/mActionLockItems.png
+   :width: 1.5em
 .. |majorUrbanName| replace:: Swellendam
 .. |moderate| image:: /static/global/moderate.png
 .. |moveItemContent| image:: /static/common/mActionMoveItemContent.png
@@ -320,6 +321,8 @@ Congratulations on your first completed QGIS map project!
 .. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
    :width: 1.5em
 .. |signMinus| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |unlockAll| image:: /static/common/mActionUnlockAll.png
    :width: 1.5em
 .. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
    :width: 1.5em
