@@ -144,7 +144,7 @@ However, there is also a tool in the Actions Toolbar to help position the title 
 To make sure that you don't accidentally move these elements around now that
 you've aligned them, you can lock items into place:
 
-* With both the label and map selected, click the |lockitems| :sup:`Lock Selected Items`
+* With both the label and map selected, click the |lockItems| :sup:`Lock Selected Items`
   button in the Actions Toolbar.
 
 Note: Click the open padlock/:guilabel:`Unlock All Items` button in the
@@ -307,6 +307,8 @@ Congratulations on your first completed QGIS map project!
 .. |filePrint| image:: /static/common/mActionFilePrint.png
    :width: 1.5em
 .. |label| image:: /static/common/mActionLabel.png
+   :width: 1.5em
+.. |lockItems| image:: /static/common/mActionLockItems.png
    :width: 1.5em
 .. |majorUrbanName| replace:: Swellendam
 .. |moderate| image:: /static/global/moderate.png
