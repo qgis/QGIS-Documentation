@@ -147,7 +147,8 @@ you've aligned them, you can lock items into place:
 * With both the label and map selected, click the |lockitems| :sup:`Lock Selected Items`
   button in the Actions Toolbar.
 
-Note: Click the open padlock/:guilabel:`Unlock All Items` button in the Actions Toolbar to edit the items again.
+Note: Click the open padlock/:guilabel:`Unlock All Items` button in the
+Actions Toolbar to edit the items again.
 
 Now the label is centered to the map, but not the contents. To center the
 contents of the label:
