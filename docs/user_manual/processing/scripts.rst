@@ -1,3 +1,7 @@
+
+.. highlight:: python
+   :linenothreshold: 5
+
 Writing new Processing algorithms as Python scripts
 ===================================================
 
@@ -8,8 +12,9 @@ Writing new Processing algorithms as Python scripts
 
 There are two options for writing Processing algorithms using Python.
 
-* :ref:`Extending<scripts_extend>` :class:`QgsProcessingAlgorithm <qgis.core.QgsProcessingAlgorithm>`
-* :ref:`Using the @alg decorator<scripts_alg>`
+* :ref:`Extending <scripts_extend>` :class:`QgsProcessingAlgorithm
+  <qgis.core.QgsProcessingAlgorithm>`
+* :ref:`Using the @alg decorator <scripts_alg>`
 
 Within QGIS, you can use :guilabel:`Create new script` in the
 :guilabel:`Scripts` menu at the top of the :guilabel:`Processing Toolbox`
@@ -409,7 +414,7 @@ Input types
 ...........
 
 .. list-table::
-   :widths: 54 31 15
+   :widths: 45 31 24
    :header-rows: 1
    :stub-columns: 0
 
@@ -429,7 +434,7 @@ Input types
    * - :class:`QgsProcessingParameterColor <qgis.core.QgsProcessingParameterColor>`
      - ``alg.COLOR``
      - A color
-   * - :class:`QgsProcessingParameterCoordinateOperation<qgis.core.QgsProcessingParameterCoordinateOperation>`
+   * - :class:`QgsProcessingParameterCoordinateOperation <qgis.core.QgsProcessingParameterCoordinateOperation>`
      - ``alg.COORDINATE_OPERATION``
      - A coordinate operation (for CRS transformations)
    * - :class:`QgsProcessingParameterCrs <qgis.core.QgsProcessingParameterCrs>`
