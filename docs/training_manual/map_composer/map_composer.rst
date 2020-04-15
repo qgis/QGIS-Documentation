@@ -142,7 +142,7 @@ However, there is also a tool in the Actions Toolbar to help position the title 
    :align: center
 
 To make sure that you don't accidentally move these elements around now that
-you've aligned them you can lock items into place:
+you've aligned them, you can lock items into place:
 
 * With both the label and map selected, click the |lockitems| :sup:`Lock Selected Items`
   button in the Actions Toolbar.
