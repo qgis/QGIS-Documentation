@@ -195,7 +195,11 @@ In the example, the result looks like this:
    :align: center
 
 * Click :guilabel:`OK`.
-* Choose a suitable name for the new color ramp.
+* You can save the colour ramp by selecting :guilabel:`Save Color Ramp...` under the
+  :guilabel:`Color ramp` tab.
+  Choose an appropriate name for the colour ramp.
+  You will now be able to select the same colour ramp easily under
+  :guilabel:`All Color Ramps`.
 * Click :guilabel:`OK` after filling in the name.
 
 Now you'll have something like this:
@@ -238,7 +242,7 @@ That's where rule-based classification comes in handy.
 
 * Click the :guilabel:`Add rule` button: |signPlus|.
 * A new dialog then appears.
-* Click the ellipsis :guilabel:`...` button next to the :guilabel:`Filter` text area.
+* Click the |expression| button next to the :guilabel:`Filter` text area.
 * Using the query builder that appears, enter the criterion
   :kbd:`"landuse" = 'residential' AND "name" <> 'Swellendam'` (or
   :kbd:`"landuse" = 'residential' AND "name" != 'Swellendam'`),
@@ -259,7 +263,7 @@ That's where rule-based classification comes in handy.
 * Click and drag this criterion to the top of the list.
 
 These filters are exclusive, in that they collectively exclude some areas on the
-map (i.e. those which are smaller that 0.00005, are not residential and are not
+map (i.e. those which are smaller than 0.00005 (square degrees!), are not residential and are not
 '|majorUrbanName|'). This means that the excluded polygons take the style of the
 default :guilabel:`(no filter)` category.
 
@@ -310,8 +314,9 @@ of the next lesson!
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/global/basic.png
-.. |calculateField| image:: /static/common/mActionCalculateField.png
+.. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
+.. |calculateField| image:: /static/common/mActionCalculateField.png
 .. |hard| image:: /static/global/hard.png
 .. |majorUrbanName| replace:: Swellendam
 .. |moderate| image:: /static/global/moderate.png
