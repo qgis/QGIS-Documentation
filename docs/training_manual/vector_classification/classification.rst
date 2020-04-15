@@ -253,7 +253,7 @@ That's where rule-based classification comes in handy.
 
 * Click the :guilabel:`Add rule` button: |signPlus|.
 * A new dialog then appears.
-* Click the epsilon :guilabel:`Ɛ` button next to the :guilabel:`Filter` text area.
+* Click the |expression| button next to the :guilabel:`Filter` text area.
 * Using the query builder that appears, enter the criterion
   :kbd:`"landuse" = 'residential' AND "name" <> 'Swellendam'` (or
   :kbd:`"landuse" = 'residential' AND "name" != 'Swellendam'`),
