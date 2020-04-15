@@ -325,6 +325,8 @@ of the next lesson!
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/global/basic.png
+.. |expression| image:: /static/common/mIconExpression.png
+   :width: 1.5em
 .. |hard| image:: /static/global/hard.png
 .. |majorUrbanName| replace:: Swellendam
 .. |moderate| image:: /static/global/moderate.png
