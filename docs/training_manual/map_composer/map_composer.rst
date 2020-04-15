@@ -144,7 +144,8 @@ However, there is also a tool in the Actions Toolbar to help position the title 
 To make sure that you don't accidentally move these elements around now that
 you've aligned them you can lock items into place:
 
-* With both the label and map selected, click the closed padlock over a rectangle/:guilabel:`Lock Selected Items` button in the Actions Toolbar.
+* With both the label and map selected, click the |lockitems| :sup:`Lock Selected Items`
+  button in the Actions Toolbar.
 
 Note: Click the open padlock/:guilabel:`Unlock All Items` button in the Actions Toolbar to edit the items again.
 
