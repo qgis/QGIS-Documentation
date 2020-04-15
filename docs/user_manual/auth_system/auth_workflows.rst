@@ -36,8 +36,8 @@ upon connection.
 Database authentication
 -----------------------
 
-Connections to database resources are generally stored as ``key=value`` pairs, which
-will expose usernames and (optionally) passwords, if *not* using an
+Connections to database resources are generally stored as ``key=value`` pairs,
+which will expose usernames and (optionally) passwords, if *not* using an
 authentication configuration. When configuring with the new auth system, the
 ``key=value`` will be an abstracted representation of the credentials, e.g.
 ``authfg=81t21b9``.
@@ -128,7 +128,7 @@ the |metadata| :sup:`Show information for certificate`.
 
    Certificate info dialog
 
-You can edit the :guilabel:`trust policy` |selectString| for any selected
+You can edit the :guilabel:`Trust policy` |selectString| for any selected
 certificate within the chain. Any change in trust policy to a selected
 certificate will not be saved to the database unless the |fileSave|
 :sup:`Save certificate trust policy change to database` button is clicked
@@ -323,10 +323,6 @@ web-accessible directories.
 SSL server exceptions
 ---------------------
 
-\
-
-\
-
 .. _figure_auth_server:
 
 .. figure:: img/auth-ssl-config.png
@@ -392,9 +388,14 @@ Once an SSL configuration is saved to the database, it can be edited or deleted.
 If you want to pre-configure an SSL configuration and the import dialog is not
 working for your server's connection, you can manually trigger a connection via
 the **Python Console** by running the following code (replace
-``https://bugreports.qt-project.org`` with the URL of your server)::
+``https://bugreports.qt-project.org`` with the URL of your server):
 
-   from PyQt4.QtNetwork import *
+.. testcode::
+
+   from qgis.PyQt.QtNetwork import QNetworkRequest
+   from qgis.PyQt.QtCore import QUrl
+   from qgis.core import QgsNetworkAccessManager
+
    req = QNetworkRequest(QUrl('https://bugreports.qt-project.org'))
    reply = QgsNetworkAccessManager.instance().get(req)
 

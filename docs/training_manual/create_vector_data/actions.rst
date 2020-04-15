@@ -249,13 +249,13 @@ for the same kind of action, if you don't know which OS they'll be using. With
 some OS versions, the above commands to open the browser might not work at all.
 This could be an insurmountable problem.
 
-However, QGIS sits on top of the incredibly powerful and versatile Qt4 library.
+However, QGIS sits on top of the incredibly powerful and versatile Qt library.
 Also, QGIS actions can be arbitrary, tokenized (i.e. using variable information
 based on the contents of a field attribute) Python commands!
 
 Now you'll see how to use a python action to show a web page. It's the same
 general idea as opening a site in an external browser, but it requires no
-browser on the user’s system since it uses the Qt4 QWebView class (which is a
+browser on the user’s system since it uses the Qt QWebView class (which is a
 webkit based html widget) to display the content in a pop up window.
 
 Instead of Google, let's use Wikipedia this time. So the URL you request will
@@ -273,7 +273,7 @@ To create the layer action:
   * :guilabel:`Name`: :kbd:`Wikipedia`
   * :guilabel:`Action` (all on one line)::
 
-     from PyQt4.QtCore import QUrl; from PyQt4.QtWebKit import QWebView;  myWV = QWebView(None); myWV.load(QUrl('https://wikipedia.org/wiki/[% "name" %]')); myWV.show()
+     from qgis.PyQt.QtCore import QUrl; from qgis.PyQt.QtWebKit import QWebView;  myWV = QWebView(None); myWV.load(QUrl('https://wikipedia.org/wiki/[% "name" %]')); myWV.show()
 
 .. figure:: img/python_action_example.png
    :align: center

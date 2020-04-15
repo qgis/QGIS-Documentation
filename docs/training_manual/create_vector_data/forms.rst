@@ -130,18 +130,14 @@ You can also design your own custom form completely from scratch.
 -------------------------------------------------------------------------------
 
 Now we want to create our own custom form for the attribute data capture phase.
-To do this, you need to have *Qt4 Designer* installed (only needed for the
+To do this, you need to have *Qt Designer* installed (only needed for the
 person who creates the forms). It should be provided as part of your course
 materials, if you're using Windows. You may need to look for it if you're using
 another OS. In Ubuntu, do the following in the terminal:
 
-.. note:: At the time of writing, Qt5 is the latest version available. However,
-  this process specifically requires Qt4 and is not necessarily compatible with
-  Qt5.
-  
-  ::
+::
 
-   sudo apt install qt4-designer
+   sudo apt install qttools5-dev-tools
 
 ... and it should install automatically. Otherwise, look for it in the
 *Software Center*.
@@ -150,7 +146,7 @@ another OS. In Ubuntu, do the following in the terminal:
   approach is appropriate in your OS).
 * In the dialog that appears, create a new dialog:
 
-.. figure:: img/qt4_new_dialog.png
+.. figure:: img/qt_new_dialog.png
    :align: center
 
 * Look for the :guilabel:`Widget Box` along the left of your screen (default).
@@ -160,7 +156,7 @@ another OS. In Ubuntu, do the following in the terminal:
 * With the new line edit element selected, you'll see its *properties* along
   the side of your screen (on the right by default):
 
-.. figure:: img/qt4_line_edit.png
+.. figure:: img/qt_line_edit.png
    :align: center
 
 * Set its name to :kbd:`Name`.
@@ -175,7 +171,7 @@ another OS. In Ubuntu, do the following in the terminal:
 * Set the dialog's maximum size (in its properties) to :kbd:`200` (width) by
   :kbd:`100` (height).
 * Save your new form as :kbd:`exercise_data/forms/add_people.ui`.
-* When it's done saving, you can close the *Qt4 Designer* program.
+* When it's done saving, you can close the *Qt Designer* program.
 
 |hard| |FA| Associating the Form with Your Layer
 -------------------------------------------------------------------------------

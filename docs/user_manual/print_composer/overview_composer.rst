@@ -14,8 +14,7 @@ you to add elements such as the QGIS map canvas, text labels, images, legends,
 scale bars, basic shapes, arrows, attribute tables and HTML frames. You can size,
 group, align, position and rotate each element and adjust their properties to
 create your layout. The layout can be printed or exported to image formats,
-PostScript, PDF or to SVG (export to SVG is not working properly with some
-recent Qt4 versions; you should try and check individually on your system).
+PostScript, PDF or to SVG.
 You can save the layout as a template and load it again in another session.
 Finally, generating several maps based on a template can be done through the
 atlas generator.
