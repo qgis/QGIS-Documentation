@@ -61,7 +61,7 @@ templates_path = ['_templates']
 exclude_patterns = [
     'venv',
     'README.rst',
-    'readme.rst',
+    'readme_old.rst',
 ]
 
 # -- Internationalisation ----------------------------------------------------

@@ -225,10 +225,6 @@ This group contains functions which aggregate values over layers and fields.
    "stdev", "Returns the aggregate standard deviation value from a field or expression"
    "sum", "Returns the aggregate summed value from a field or expression"
 
-.. only:: html
-
-   |
-
 **Examples:**
 
 * Return the maximum of the "passengers" field from features in the layer
@@ -360,10 +356,6 @@ This group contains functions to handle conditional checks in expressions.
    "try", "Tries an expression and returns its value if error-free,
    an alternative value (if provided) or Null if an error occurs"
 
-.. only:: html
-
-   |
-
 **Some example:**
 
 * Send back a value if the first condition is true, else another value::
@@ -421,11 +413,7 @@ This group contains functions for handling date and time data.
    "now", "Returns current date and time"
    "second", "Extracts the second from a datetime or time, or the number of seconds from an interval"
    "week", "Extracts the week number from a date or datetime, or the number of weeks from an interval"
-   "year", "Extracts the year part from a date or datetime,or the number of years from an interval"
-
-.. only:: html
-
-   |
+   "year", "Extracts the year part from a date or datetime, or the number of years from an interval"
 
 This group also shares several functions with the :ref:`conversion_functions` (
 to_date, to_time, to_datetime, to_interval) and :ref:`string_functions`
@@ -751,10 +739,6 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    Calculations are in the Spatial Reference System of this geometry"
    "z", "Returns the Z coordinate of a point geometry"
 
-.. only:: html
-
-   |
-
 **Some examples:**
 
 * Return the X coordinate of the current feature's centroid::
@@ -811,10 +795,6 @@ All these functions return the hash (a string hex value) of the string argument.
    "keccak_384", "Keccak cryptographic primitive family. Produces a 384-bit (48-byte) hash value."
    "keccak_512", "Keccak cryptographic primitive family. Produces a 512-bit (64-byte) hash value."
 
-.. only:: html
-
-   |
-
 One byte (8 bits) is represented with two hex ''digits'', so md4 (16 bytes)
 produces a 16 * 2 = 32 character long hex string and keccak_512 (64 bytes)
 produces a 64 * 2 = 128 character long hex string.
@@ -836,10 +816,6 @@ This group contains functions to manipulate print layout items properties.
    :widths: auto
 
    "item_variables", "Returns a map of variables from a layout item inside this print layout"
-
-.. only:: html
-
-   |
 
 **An example:**
 
@@ -988,10 +964,6 @@ if one of the inputs is NULL then the result is NULL.
    "a IN (value[,value])", "a is below the values listed"
    "a NOT IN (value[,value])", "a is not below the values listed"
 
-.. only:: html
-
-   |
-
 **Some examples:**
 
 * Joins a string and a value from a column name::
@@ -1057,12 +1029,8 @@ This group contains functions that operate on record identifiers.
    "num_selected", "Returns the number of selected features on a given layer"
    "represent_value", "Returns the configured representation value for a field value
    (convenient with some :ref:`widget types <edit_widgets>`)"
-   "sql_fetch_and_increment", "Manage autoincrementing values in sqlite databases"
+   "sql_fetch_and_increment", "Manage autoincrementing values in SQLite databases"
    "uuid", "Generates a Universally Unique Identifier (UUID) for each row. Each UUID is 38 characters long."
-
-.. only:: html
-
-   |
 
 **Some examples:**
 
@@ -1114,10 +1082,6 @@ This group contains functions that operate on strings
    "trim", "Removes all leading and trailing white space (spaces, tabs, etc.) from a string"
    "upper", "Converts string a to upper case"
    "wordwrap", "Returns a string wrapped to a maximum/minimum number of characters"
-
-.. only:: html
-
-   |
 
 **About fields concatenation**
 
@@ -1205,7 +1169,7 @@ To use these functions in an expression, they should be preceded by @ character
    "fullextent_maxx", "Maximum x value from full canvas extent (including all layers)"
    "fullextent_maxy", "Maximum y value from full canvas extent (including all layers)"
    "fullextent_minx", "Minimum x value from full canvas extent (including all layers)"
-   "fullextent_miny", "Minimum x value from full canvas extent (including all layers)"
+   "fullextent_miny", "Minimum y value from full canvas extent (including all layers)"
    "geometry_part_count", "Returns the number of parts in rendered feature's geometry"
    "geometry_part_num", "Returns the current geometry part number for feature being rendered"
    "geometry_point_count", "Returns the number of points in the rendered geometry's part"
@@ -1292,17 +1256,13 @@ To use these functions in an expression, they should be preceded by @ character
    "scale_value", "Returns current scale bar distance value"
    "symbol_angle", "Returns the angle of the symbol used to render the feature
    (valid for marker symbols only)"
-   "symbol_color", "Returns the color of the symbol used to renderthe feature"
+   "symbol_color", "Returns the color of the symbol used to render the feature"
    "user_account_name", "Returns the current user's operating system account name"
    "user_full_name", "Returns the current user's operating system user name"
    "row_number", "Stores the number of the current row"
    "value", "Returns the current value"
    "with_variable", "Allows setting a variable for usage within an expression
    and avoid recalculating the same value repeatedly"
-
-.. only:: html
-
-   |
 
 **Some examples:**
 

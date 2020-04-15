@@ -81,7 +81,7 @@ To add fields to the layer you are creating:
    QGIS will add the new layer to the legend, and you can edit it
    as described in section :ref:`sec_edit_existing_layer`.
 
-By default, When creating a GeoPackage layer, QGIS generates a 
+By default, when creating a GeoPackage layer, QGIS generates a 
 :guilabel:`Feature id column` called ``fid`` which acts as the
 primary key of the layer. The name can be changed.
 The geometry field, if availabe, is named ``geometry``, and you can
@@ -137,7 +137,7 @@ To add fields to the layer you are creating:
    QGIS will add the new layer to the legend, and you can edit it
    as described in section :ref:`sec_edit_existing_layer`.
 
-By default, A first integer ``id`` column is added but can be removed.
+By default, a first integer ``id`` column is added but can be removed.
 
 
 .. index:: New SpatiaLite layer

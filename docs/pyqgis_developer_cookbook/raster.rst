@@ -289,11 +289,3 @@ In this case, the :meth:`results <qgis.core.QgsRasterIdentifyResult.results>`
 method returns a dictionary, with band indices as keys, and band values as
 values.
 For instance, something like ``{1: 323.0}``
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |outofdate| replace:: `Despite our constant efforts, information beyond this line may not be updated for QGIS 3. Refer to https://qgis.org/pyqgis/master for the python API documentation or, give a hand to update the chapters you know about. Thanks.`

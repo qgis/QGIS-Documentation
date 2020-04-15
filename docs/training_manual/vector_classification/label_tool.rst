@@ -279,12 +279,7 @@ Notice its effects:
 
 * Open the Attribute Table for :guilabel:`places`.
 * Enter edit mode by clicking this button: |toggleEditing|
-
-* Add a new column:
-
-.. image:: img/add_column_button.png
-   :align: center
-
+* Add a new column with the |newAttribute| button
 * Configure it like this:
 
 .. image:: img/font_size_column.png
@@ -350,6 +345,8 @@ topic for the next lesson!
 .. |majorUrbanName| replace:: Swellendam
 .. |moderate| image:: /static/global/moderate.png
 .. |moveLabel| image:: /static/common/mActionMoveLabel.png
+   :width: 1.5em
+.. |newAttribute| image:: /static/common/mActionNewAttribute.png
    :width: 1.5em
 .. |openTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em

@@ -378,7 +378,7 @@ As you see, reports in QGIS are extremely powerful and flexible!
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |signPlus| image:: /static/common/symbologyAdd.png
-   :width: 1.5em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
+   :width: 1.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
