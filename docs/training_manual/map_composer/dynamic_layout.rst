@@ -323,7 +323,7 @@ you to practice the techniques you have learned so far.
    :width: 1.5em
 .. |draw| image:: /static/common/mActionDraw.png
    :width: 1.5em
-.. |moderate| image:: /static/global/moderate.png
+.. |moderate| image:: /static/common/moderate.png
 .. |newLayout| image:: /static/common/mActionNewLayout.png
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png

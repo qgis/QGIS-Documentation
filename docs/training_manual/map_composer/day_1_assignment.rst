@@ -41,5 +41,5 @@ start to finish, using both raster and vector data sources.
    source folder.
 
 .. |IC| replace:: In Conclusion
-.. |basic| image:: /static/global/basic.png
-.. |moderate| image:: /static/global/moderate.png
+.. |basic| image:: /static/common/basic.png
+.. |moderate| image:: /static/common/moderate.png

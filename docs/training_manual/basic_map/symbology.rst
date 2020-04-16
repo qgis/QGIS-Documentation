@@ -610,12 +610,12 @@ map.
 .. |LS| replace:: Lesson:
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
-.. |basic| image:: /static/global/basic.png
+.. |basic| image:: /static/common/basic.png
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |hard| image:: /static/global/hard.png
+.. |hard| image:: /static/common/hard.png
 .. |majorUrbanName| replace:: Swellendam
-.. |moderate| image:: /static/global/moderate.png
+.. |moderate| image:: /static/common/moderate.png
 .. |rendering| image:: /static/common/rendering.png
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png

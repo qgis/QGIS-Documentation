@@ -297,9 +297,9 @@ so that attribute editing is simpler and more effective.
    :width: 2em
 .. |deleteRing| image:: /static/common/mActionDeleteRing.png
    :width: 2em
-.. |hard| image:: /static/global/hard.png
+.. |hard| image:: /static/common/hard.png
 .. |largeLandUseArea| replace:: Bontebok National Park
-.. |moderate| image:: /static/global/moderate.png
+.. |moderate| image:: /static/common/moderate.png
 .. |redo| image:: /static/common/mActionRedo.png
    :width: 1.5em
 .. |reshape| image:: /static/common/mActionReshape.png

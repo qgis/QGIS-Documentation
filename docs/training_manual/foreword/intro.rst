@@ -95,6 +95,6 @@ folder.
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |basic| image:: /static/global/basic.png
-.. |hard| image:: /static/global/hard.png
-.. |moderate| image:: /static/global/moderate.png
+.. |basic| image:: /static/common/basic.png
+.. |hard| image:: /static/common/hard.png
+.. |moderate| image:: /static/common/moderate.png

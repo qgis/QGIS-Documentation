@@ -288,7 +288,7 @@ be useful.
 .. |WN| replace:: What's Next?
 .. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
    :width: 1.5em
-.. |basic| image:: /static/global/basic.png
+.. |basic| image:: /static/common/basic.png
 .. |capturePolygon| image:: /static/common/mActionCapturePolygon.png
    :width: 1.5em
 .. |deleteSelectedFeatures| image:: /static/common/mActionDeleteSelectedFeatures.png

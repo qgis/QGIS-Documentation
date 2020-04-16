@@ -240,10 +240,10 @@ The tokens you need to replace are as follows:
    source folder.
 
 .. |TY| replace:: Try Yourself
-.. |basic| image:: /static/global/basic.png
+.. |basic| image:: /static/common/basic.png
 .. |extents| image:: /static/common/extents.png
    :width: 1.5em
-.. |hard| image:: /static/global/hard.png
+.. |hard| image:: /static/common/hard.png
 .. |indicatorMemory| image:: /static/common/mIndicatorMemory.png
    :width: 1.5em
 .. |majorUrbanName| replace:: Swellendam
