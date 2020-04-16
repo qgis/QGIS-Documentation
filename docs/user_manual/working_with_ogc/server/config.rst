@@ -180,10 +180,10 @@ QGIS_SERVER_IGNORE_BAD_LAYERS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 "Bad" layers are layers that cannot be loaded. The default behavior of QGIS Server
-is to consider a whole project not available if it contains any bad layer.
+is to consider the project as not available if it contains a bad layer.
 
-The default behavior can be overridden by setting this variable to ``1`` or ``true``,
-in this case the "bad" layers will be ignored but the project will still be considered
+The default behavior can be overridden by setting this variable to ``1`` or ``true``.
+In this case, "bad" layers will just be ignored, and the project will be considered
 valid and available.
 
 
