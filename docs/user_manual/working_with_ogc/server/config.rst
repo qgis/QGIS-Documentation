@@ -176,6 +176,17 @@ numeric values (e.g. in GetFeatureInfo responses). The default value is ``0``.
 * ``1`` or ``true`` (case insensitive)
 
 
+QGIS_SERVER_IGNORE_BAD_LAYERS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+"Bad" layers are layers that cannot be loaded. The default behavior of QGIS Server
+is to consider the project as not available if it contains a bad layer.
+
+The default behavior can be overridden by setting this variable to ``1`` or ``true``.
+In this case, "bad" layers will just be ignored, and the project will be considered
+valid and available.
+
+
 Settings summary
 ================
 
