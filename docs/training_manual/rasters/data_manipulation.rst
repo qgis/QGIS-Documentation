@@ -150,5 +150,5 @@ symbolization is useful in the case of rasters as well.
 .. |IC| replace:: In Conclusion
 .. |LS| replace:: Lesson:
 .. |WN| replace:: What's Next?
-.. |basic| image:: /static/global/basic.png
-.. |hard| image:: /static/global/hard.png
+.. |basic| image:: /static/common/basic.png
+.. |hard| image:: /static/common/hard.png

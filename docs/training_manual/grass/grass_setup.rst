@@ -327,10 +327,10 @@ operations that GRASS offers.
 .. |LS| replace:: Lesson:
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
-.. |basic| image:: /static/global/basic.png
+.. |basic| image:: /static/common/basic.png
 .. |grass| image:: /static/common/grasslogo.png
    :width: 1.5em
 .. |grassMapsetOpen| image:: /static/common/grass_mapset_open.png
    :width: 1.5em
-.. |hard| image:: /static/global/hard.png
+.. |hard| image:: /static/common/hard.png
 .. |srtmFileName| replace:: :file:`srtm_41_19_4326.tif`

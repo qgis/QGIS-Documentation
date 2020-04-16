@@ -466,7 +466,7 @@ problem? That's the topic for the next lesson, starting in the next module.
 .. |LS| replace:: Lesson:
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
-.. |basic| image:: /static/global/basic.png
+.. |basic| image:: /static/common/basic.png
 .. |identify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
-.. |moderate| image:: /static/global/moderate.png
+.. |moderate| image:: /static/common/moderate.png

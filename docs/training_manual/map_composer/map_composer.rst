@@ -301,7 +301,7 @@ Congratulations on your first completed QGIS map project!
    :width: 1.5em
 .. |alignLeft| image:: /static/common/mActionAlignLeft.png
    :width: 1.5em
-.. |basic| image:: /static/global/basic.png
+.. |basic| image:: /static/common/basic.png
 .. |edit| image:: /static/common/edit.png
    :width: 1.5em
 .. |filePrint| image:: /static/common/mActionFilePrint.png
@@ -311,7 +311,7 @@ Congratulations on your first completed QGIS map project!
 .. |lockItems| image:: /static/common/mActionLockItems.png
    :width: 1.5em
 .. |majorUrbanName| replace:: Swellendam
-.. |moderate| image:: /static/global/moderate.png
+.. |moderate| image:: /static/common/moderate.png
 .. |moveItemContent| image:: /static/common/mActionMoveItemContent.png
    :width: 1.5em
 .. |saveAsPDF| image:: /static/common/mActionSaveAsPDF.png

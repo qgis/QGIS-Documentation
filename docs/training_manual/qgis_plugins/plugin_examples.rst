@@ -262,8 +262,8 @@ time.
 .. |WN| replace:: What's Next?
 .. |addHtml| image:: /static/common/mActionAddHtml.png
    :width: 1.5em
-.. |basic| image:: /static/global/basic.png
-.. |hard| image:: /static/global/hard.png
+.. |basic| image:: /static/common/basic.png
+.. |hard| image:: /static/common/hard.png
 .. |helpContents| image:: /static/common/mActionHelpContents.png
    :width: 1.5em
 .. |indicatorMemory| image:: /static/common/mIndicatorMemory.png

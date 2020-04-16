@@ -336,14 +336,14 @@ topic for the next lesson!
 .. |LS| replace:: Lesson:
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
-.. |basic| image:: /static/global/basic.png
+.. |basic| image:: /static/common/basic.png
 .. |changeLabelProperties| image:: /static/common/mActionChangeLabelProperties.png
    :width: 1.5em
-.. |hard| image:: /static/global/hard.png
+.. |hard| image:: /static/common/hard.png
 .. |labeling| image:: /static/common/labelingSingle.png
    :width: 1.5em
 .. |majorUrbanName| replace:: Swellendam
-.. |moderate| image:: /static/global/moderate.png
+.. |moderate| image:: /static/common/moderate.png
 .. |moveLabel| image:: /static/common/mActionMoveLabel.png
    :width: 1.5em
 .. |newAttribute| image:: /static/common/mActionNewAttribute.png

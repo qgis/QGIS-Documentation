@@ -162,6 +162,6 @@ Final Map
    source folder.
 
 .. |MOD| replace:: Module:
-.. |basic| image:: /static/global/basic.png
-.. |hard| image:: /static/global/hard.png
-.. |moderate| image:: /static/global/moderate.png
+.. |basic| image:: /static/common/basic.png
+.. |hard| image:: /static/common/hard.png
+.. |moderate| image:: /static/common/moderate.png

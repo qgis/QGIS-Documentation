@@ -208,6 +208,6 @@ Next you'll see how to import data into, and export data from, your database.
 .. |WN| replace:: What's Next?
 .. |addPostgisLayer| image:: /static/common/mActionAddPostgisLayer.png
    :width: 1.5em
-.. |basic| image:: /static/global/basic.png
-.. |hard| image:: /static/global/hard.png
-.. |moderate| image:: /static/global/moderate.png
+.. |basic| image:: /static/common/basic.png
+.. |hard| image:: /static/common/hard.png
+.. |moderate| image:: /static/common/moderate.png
