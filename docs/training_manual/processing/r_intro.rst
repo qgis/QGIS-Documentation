@@ -33,7 +33,7 @@ When it has been saved there, it will be available for editing by
 right-clicking on the script name in the processing toolbox and then choose
 :menuselection:`Edit Script...`).
 
-.. image:: img/r_intro/r_intro_1.png
+.. figure:: img/r_intro/r_intro_1.png
 
 .. note::
    If you cannot see R in Processing, you have to activate it in
@@ -42,9 +42,9 @@ right-clicking on the script name in the processing toolbox and then choose
 It opens a *script editor window* in which you have to specify some parameters
 before you can add the script body.
 
-.. image:: img/r_intro/r_intro_2.png
-    :scale: 70%
-    :align: center
+.. figure:: img/r_intro/r_intro_2.png
+   :scale: 70%
+   :align: center
 
 Creating plots
 ==============
@@ -121,7 +121,7 @@ The final script looks like this::
     ##X=Field Layer
     boxplot(Layer[[X]])
 
-.. image:: img/r_intro/r_intro_3.png
+.. figure:: img/r_intro/r_intro_3.png
 
 Save the script in the default path suggested by Processing (processing/rscripts).
 If you have not defined a ``name`` in the script heading, the file name you
@@ -134,12 +134,12 @@ choose will become the name of the script in the Processing toolbox.
 
 Now just run it using the button on the top of the editor window:
 
-.. image:: img/r_intro/r_intro_4.png
+.. figure:: img/r_intro/r_intro_4.png
 
 Once the editor window has been closed, use the text box of Processing to find your
 script:
 
-.. image:: img/r_intro/r_intro_5.png
+.. figure:: img/r_intro/r_intro_5.png
 
 You can now fill the parameters required in the Processing algorithm window:
 
@@ -148,14 +148,14 @@ You can now fill the parameters required in the Processing algorithm window:
 
 Click on **Run**.
 
-.. image:: img/r_intro/r_intro_6.png
+.. figure:: img/r_intro/r_intro_6.png
 
 The **Result window** should be automatically opened, if not, just click on
 :menuselection:`Processing --> Result Viewer...`.
 
 Click on the link in the viewer and you will see:
 
-.. image:: img/r_intro/r_intro_7.png
+.. figure:: img/r_intro/r_intro_7.png
 
 .. note::
    You can open, copy and save the image by right clicking on the plot.
@@ -231,20 +231,20 @@ The final script looks like this::
     pts=spsample(Layer, Size, type="random")
     Output=SpatialPointsDataFrame(pts, as.data.frame(pts))
 
-.. image:: img/r_intro/r_intro_8.png
+.. figure:: img/r_intro/r_intro_8.png
 
 Save it and run it, clicking on the run button.
 
 In the new window type in the right parameters:
 
-.. image:: img/r_intro/r_intro_9.png
+.. figure:: img/r_intro/r_intro_9.png
 
 and click on run.
 
 The result layer will be added to the table of contents and its
 points will be displayed on the map canvas:
 
-.. image:: img/r_intro/r_intro_10.png
+.. figure:: img/r_intro/r_intro_10.png
 
 
 Text and graph output from R - syntax

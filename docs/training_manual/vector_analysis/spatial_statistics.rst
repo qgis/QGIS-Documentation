@@ -36,7 +36,7 @@ We'll use the area covered by streets.
    generate an area enclosing all the roads by selecting ``Convex Hull`` as the
    :guilabel:`Geometry Type` parameter:
 
-   .. image:: img/roads_hull_setup.png
+   .. figure:: img/roads_hull_setup.png
       :align: center
 
    As you know, if you don't specify the output, :guilabel:`Processing` creates
@@ -49,7 +49,7 @@ Creating random points
 * Create random points in this area using the tool at :menuselection:`Vector
   Creation --> Random points in layer bounds`:
 
-  .. image:: img/random_points_setup.png
+  .. figure:: img/random_points_setup.png
      :align: center
 
   .. note:: The yellow warning sign is telling you that that parameter concerns
@@ -60,7 +60,7 @@ Creating random points
 If needed, move the generated random point at the top of the legend to see them
 better:
 
-.. image:: img/random_points_result.png
+.. figure:: img/random_points_result.png
    :align: center
 
 Sampling the data
@@ -78,7 +78,7 @@ bands the raster is made of.
    field is ``rvalue_N``, where ``N`` is the number of the raster band. You can
    change the name of the prefix if you want:
 
-   .. image:: img/sample_raster_dialog.png
+   .. figure:: img/sample_raster_dialog.png
       :align: center
 
 #. Press :guilabel:`Run`
@@ -89,7 +89,7 @@ the name you have chosen.
 
 A possible sample layer is shown here:
 
-.. image:: img/random_samples_result.png
+.. figure:: img/random_samples_result.png
    :align: center
 
 The sample points are classified by their ``rvalue_1`` field such that red
@@ -111,7 +111,7 @@ Now get the basic statistics for this layer.
 #. The :guilabel:`Statistics` Panel will be automatically updated with the
    calculated statistics:
 
-   .. image:: img/basic_statistics_results.png
+   .. figure:: img/basic_statistics_results.png
       :align: center
 
    .. note:: You can copy the values by clicking on the |editCopy|:sup:`Copy Statistics To Clipboard`
@@ -177,7 +177,7 @@ To generate statistics on the distances between points in the two layers:
    :guilabel:`Sampled Points` layer as the target layer.
 #. Set it up like this:
 
-   .. image:: img/distance_matrix_setup.png
+   .. figure:: img/distance_matrix_setup.png
       :align: center
 
 #. If you want you can save the output layer as a file or just run the algorithm
@@ -187,7 +187,7 @@ To generate statistics on the distances between points in the two layers:
    between the :guilabel:`distance_points` features and their two nearest points
    in the :guilabel:`Sampled Points` layer:
 
-   .. image:: img/distance_matrix_example.png
+   .. figure:: img/distance_matrix_example.png
       :align: center
 
 
@@ -209,12 +209,12 @@ To do a nearest neighbor analysis of a point layer:
    click :guilabel:`Run`.
 #. The results will appear in the Processing :guilabel:`Result Viewer` Panel.
 
-   .. image:: img/result_viewer.png
+   .. figure:: img/result_viewer.png
       :align: center
 
 #. Click on the blue link to open the ``html`` page with the results:
 
-   .. image:: img/nearest_neighbour_example.png
+   .. figure:: img/nearest_neighbour_example.png
      :align: center
 
 |basic| |FA| Mean Coordinates
@@ -241,7 +241,7 @@ The centroid is the barycenter of the layer (the barycenter of a square is the
 center of the square) while the mean coordinates represent the average of all
 node coordinates.
 
-.. image:: img/polygon_centroid_mean.png
+.. figure:: img/polygon_centroid_mean.png
    :align: center
 
 |basic| |FA| Image Histograms
@@ -259,7 +259,7 @@ way to demonstrate this in QGIS is via the image histogram, available in the
    graph describing the frequency of values in the image.
 #. You can export it as an image:
 
-   .. image:: img/histogram_export.png
+   .. figure:: img/histogram_export.png
       :align: center
 
 #. Select the :guilabel:`Information` tab, you can see more detailed information
@@ -300,7 +300,7 @@ Here's a comparison of the original dataset (left) to the one constructed from
 our sample points (right). Yours may look different due to the random nature of
 the location of the sample points.
 
-.. image:: img/interpolation_comparison.png
+.. figure:: img/interpolation_comparison.png
    :align: center
 
 As you can see, 100 sample points aren't really enough to get a detailed
@@ -324,7 +324,7 @@ misleading as well.
 The results (depending on the positioning of your random points) will look more
 or less like this:
 
-.. image:: img/interpolation_comparison_10000.png
+.. figure:: img/interpolation_comparison_10000.png
    :align: center
 
 This is a much better representation of the terrain, due to the much greater

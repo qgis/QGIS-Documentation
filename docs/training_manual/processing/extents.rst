@@ -15,7 +15,7 @@ them in this lesson.
 First, let's open an algorithm that requires an extent to be defined.
 Open the *Rasterize* algorithm, which creates a raster layer from a vector layer.
 
-.. image:: img/extents/rasterize.png
+.. figure:: img/extents/rasterize.png
 
 All the parameters, except for the last two ones, are used to define which layer
 is to be rasterized, and configure how the rasterization process should work.
@@ -28,21 +28,21 @@ since vector layers do not have a cellsize).
 The first thing you can do is to type the 4 defining values explained before,
 separated by commas.
 
-.. image:: img/extents/type.png
+.. figure:: img/extents/type.png
 
 That doesn't need any extra explanation. While this is the most flexible option,
 it is also the less practical in some cases, and that's why other options are
 implemented. To access them, you have to click on the button on the right--hand
 side of the extent text box.
 
-.. image:: img/extents/menu.png
+.. figure:: img/extents/menu.png
 
 Let's see what each one of them does.
 
 The first option is *Use layer/canvas extent*, which will show the selection
 dialog shown below.
 
-.. image:: img/extents/layer.png
+.. figure:: img/extents/layer.png
 
 Here you can select the extent of the canvas (the extent covered by the current zoom),
 or the extension any of the available layers. Select it and click on *OK*,
@@ -52,7 +52,7 @@ The second option is *Select extent on canvas*. In this case, the algorithm
 dialog disappears and you can click and drag on the QGIS canvas to define
 the desired extent. 
 
-.. image:: img/extents/extent_drag.png
+.. figure:: img/extents/extent_drag.png
 
 Once you release the mouse button, the dialog will reappear and the text box
 will already have the values corresponding to the defined extent.
@@ -70,7 +70,7 @@ We will use this last method to execute our rasterization algorithm.
 
 Fill the parameters dialog as shown next, and press *OK*.
 
-.. image:: img/extents/parameters.png
+.. figure:: img/extents/parameters.png
 
 .. note:: In this case, better use an *Integer (1 byte)* instead of a
  *Floating point (4 byte)*, since the *NAME* is an integer with maximum
@@ -79,7 +79,7 @@ Fill the parameters dialog as shown next, and press *OK*.
 You will get a rasterized layer that covers exactly the area covered by the
 original vector layer.
 
-.. image:: img/extents/result.png
+.. figure:: img/extents/result.png
 
 In some cases, the last option, *Use min covering extent from input layers*,
 might not be available. This will happen in those algorithm that do not have

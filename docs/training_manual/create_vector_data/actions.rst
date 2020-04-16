@@ -29,24 +29,24 @@ property yet. First we'll create a field for this purpose.
 * Click on the :guilabel:`Fields` tab.
 * Toggle editing mode:
 
-.. image:: img/toggle_editing_mode.png
+.. figure:: img/toggle_editing_mode.png
    :align: center
 
 * Add a new column:
 
-.. image:: img/add_new_column.png
+.. figure:: img/add_new_column.png
    :align: center
 
 * Enter the values below:
 
-.. image:: img/column_settings.png
+.. figure:: img/column_settings.png
    :align: center
 
 * After the field has been created, click on the :guilabel:`Line edit` button
   next to the new field.
 * Set it up for a :guilabel:`File name`:
 
-.. image:: img/select_file_name.png
+.. figure:: img/select_file_name.png
    :align: center
 
 * Click :guilabel:`OK` on the :guilabel:`Layer Properties` dialog.
@@ -56,7 +56,7 @@ property yet. First we'll create a field for this purpose.
 Since you're still in edit mode, the dialog should be active and look like
 this:
 
-.. image:: img/school_property_no_image.png
+.. figure:: img/school_property_no_image.png
    :align: center
 
 * Click on the browse button (the :guilabel:`...` next to the :guilabel:`image`
@@ -76,7 +76,7 @@ this:
 * In the :kbd:`Action properties` panel, enter the words :kbd:`Show Image` into
   the :guilabel:`Name` field:
 
-.. image:: img/show_image_action.png
+.. figure:: img/show_image_action.png
    :align: center
 
 What to do next varies according to your operating system, so choose the
@@ -114,7 +114,7 @@ is.
 
 * Select :guilabel:`image` from the list:
 
-.. image:: img/select_image.png
+.. figure:: img/select_image.png
    :align: center
 
 * Click the :guilabel:`Insert field` button. QGIS will add the phrase :kbd:`[%
@@ -203,12 +203,12 @@ Now you want QGIS to tell the browser to tell Google to search for the value of
 * Select the :guilabel:`name` field.
 * Click :guilabel:`Insert field`:
 
-.. image:: img/google_search_action.png
+.. figure:: img/google_search_action.png
    :align: center
 
 This will tell QGIS to add the phrase next:
 
-.. image:: img/google_search_entry.png
+.. figure:: img/google_search_entry.png
    :align: center
 
 What this means is that QGIS is going to open the browser and send it to the
@@ -275,7 +275,7 @@ To create the layer action:
 
      from PyQt4.QtCore import QUrl; from PyQt4.QtWebKit import QWebView;  myWV = QWebView(None); myWV.load(QUrl('https://wikipedia.org/wiki/[% "name" %]')); myWV.show()
 
-.. image:: img/python_action_example.png
+.. figure:: img/python_action_example.png
    :align: center
 
 There are a couple of things going on here:

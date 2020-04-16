@@ -27,7 +27,7 @@ install QGIS using the standalone installer. It will take care of installing
 all the needed dependencies, including SAGA, so if you have used it, there is
 nothing else to do. You can open the settings dialog and go to the *Providers/SAGA* group.
 
-.. image:: img/first_saga_alg/saga_config.png
+.. figure:: img/first_saga_alg/saga_config.png
 
 The SAGA path should already be configured and pointing to the folder where SAGA is installed.
 
@@ -45,7 +45,7 @@ but they are not commonly installed and might have some issues, so if you prefer
 to use the more common and stable 2.0.8, you can do it by enabling 2.0.8
 compatibility in the configuration dialog, under the *SAGA* group.
 
-.. image:: img/first_saga_alg/enable208.png
+.. figure:: img/first_saga_alg/enable208.png
 
 Once SAGA is installed, you can launch a SAGA algorithm double clicking on its name,
 as with any other algorithm. Since we are using the simplified interface,
@@ -53,20 +53,20 @@ you do not know which algorithms are based on SAGA or in another external
 application, but if you happen to double--click on one of them and the
 corresponding application is not installed, you will see something like this.
 
-.. image:: img/first_saga_alg/missing_saga.png
+.. figure:: img/first_saga_alg/missing_saga.png
 
 In our case, and assuming that SAGA is correctly installed and configured,
 you should not see this window, and you will get to the parameters dialog instead.
 
 Let's try with a SAGA--based algorithm, the one called *Split shapes layer randomly*.
 
-.. image:: img/first_saga_alg/split.png
+.. figure:: img/first_saga_alg/split.png
 
 Use the points layer in the project corresponding to this lesson as input,
 and the default parameter values, and you will get something like this
 (the split is random, so your result might be different).
 
-.. image:: img/first_saga_alg/split_layer.png
+.. figure:: img/first_saga_alg/split_layer.png
 
 The input layer has been split in two layers, each one with the same number of
 points. This result has been computed by SAGA, and later taken by QGIS and
@@ -78,7 +78,7 @@ for some reason, not be able to produce a result and not generate the file that
 QGIS is expecting. In that case, there will be problems adding the result to the
 QGIS project, and an error message like this will be shown.
 
-.. image:: img/first_saga_alg/missing_result.png
+.. figure:: img/first_saga_alg/missing_result.png
 
 This kind of problems might happen, even if SAGA (or any other application that
 we are calling from the processing framework) is correctly installed, and it is
@@ -86,7 +86,7 @@ important to know how to deal with them. Let's produce one of those error messag
 
 Open the *Create graticule* algorithm and use the following values.
 
-.. image:: img/first_saga_alg/create_graticule.png
+.. figure:: img/first_saga_alg/create_graticule.png
 
 
 We are using  width and height values that is larger than the specified extent,

@@ -36,7 +36,7 @@ water, such as streams and rivers.
 #. In the :guilabel:`Browser` tab, expand the :guilabel:`XYZ Tiles` drop-down menu
    and double-click the :guilabel:`OpenStreetMap` item.
 
-   .. image:: img/browser_xyztiles.png
+   .. figure:: img/browser_xyztiles.png
       :align: center
       :scale: 60
 
@@ -44,7 +44,7 @@ water, such as streams and rivers.
 #. Close the :guilabel:`Data Source Manager` dialog
 #. Move to the area you'd like to use as study area
 
-   .. image:: img/swellendam_neighborhood.png
+   .. figure:: img/swellendam_neighborhood.png
       :align: center
       :scale: 60
 
@@ -56,7 +56,7 @@ tools.
 #. Select the QuickOSM plugin, press :guilabel:`Install Plugin` and then :guilabel:`Close`
    the dialog.
 
-   .. image:: img/quickosm_plugin_download.png
+   .. figure:: img/quickosm_plugin_download.png
       :align: center
 
 #. Execute the new plugin from :menuselection:`Vector --> QuickOSM -->
@@ -70,7 +70,7 @@ tools.
    geometry types on the right except :guilabel:`Multipolygons`.
 #. Press :guilabel:`Run query`
 
-   .. image:: img/building_query_builder.png
+   .. figure:: img/building_query_builder.png
       :align: center
 
    A new ``building`` layer is added to the :guilabel:`Layers` panel, showing
@@ -89,8 +89,8 @@ tools.
 This process adds the layers as temporary files (indicated by the
 |indicatorMemory| icon next to their name).
 
-.. image:: img/osm_data_loaded.png
-  :align: center
+.. figure:: img/osm_data_loaded.png
+   :align: center
 
 You can sample the data your region contains in order to see what kind of
 results your region will yield.
@@ -113,7 +113,7 @@ To convert the :guilabel:`place` temporary layer to another format:
 #. Use the :guilabel:`...` button to browse to the :file:`exercise_data/shapefile/`
    folder and save the file as :file:`places.shp`.
 
-   .. image:: img/save_osm_place.png
+   .. figure:: img/save_osm_place.png
       :align: center
 
 #. Press :guilabel:`OK`
@@ -144,7 +144,7 @@ to use during the course:
 #. By default, the :guilabel:`Layer name` is filled as the file name.
    Replace it with ``buildings``.
 
-   .. image:: img/save_osm_building.png
+   .. figure:: img/save_osm_building.png
       :align: center
 
 #. Press :guilabel:`OK`
@@ -160,7 +160,7 @@ The last step is to save the remaining temporary file as a SpatiaLite file.
    folder. By default, the :guilabel:`Layer name` is filled as the file name.
    Do not change it.
 
-   .. image:: img/save_osm_landuse.png
+   .. figure:: img/save_osm_landuse.png
       :align: center
 
 #. Press :guilabel:`OK`
@@ -169,8 +169,8 @@ You should now have a map which looks something like this (the symbology will
 certainly be very different, because QGIS randomly assigns colors when layers
 are added to the map):
 
-.. image:: img/post_osm_import.png
-  :align: center
+.. figure:: img/post_osm_import.png
+   :align: center
 
 The important thing is that you have 7 vector layers matching those
 shown above and that all those layers have some data.
@@ -208,7 +208,7 @@ school buildings, playgrounds or car parks).
 
 For reference, the image in the example data is:
 
-.. image:: img/field_outlines.png
+.. figure:: img/field_outlines.png
    :align: center
 
 

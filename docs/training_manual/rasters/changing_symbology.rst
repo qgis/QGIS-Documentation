@@ -27,7 +27,7 @@ in a *DEM* file, each pixel contains elevation values.
 Once it's loaded, you'll notice that it's a basic stretched grayscale
 representation of the DEM:
 
-.. image:: img/greyscale_dem.png
+.. figure:: img/greyscale_dem.png
    :align: center
 
 QGIS has automatically applied a stretch to the image for visualization
@@ -55,7 +55,7 @@ section, the default style is set to a grayscale gradient.
 
 Let's explore some of the features of this renderer.
 
-.. image:: img/dem_layer_properties.png
+.. figure:: img/dem_layer_properties.png
    :align: center
 
 The default :guilabel:`Color gradient` is set to ``Black to white``, meaning
@@ -68,7 +68,7 @@ minimum and maximum values.
 
 Look at the difference with the enhancement (left) and without (right):
 
-.. image:: img/enhancement.png
+.. figure:: img/enhancement.png
    :align: center
 
 But what are the minimum and maximum values that should be used for the
@@ -97,12 +97,12 @@ Grayscales are not always great styles for raster layers. Let's try to make the
 * If it is not generated automatically click on the :guilabel:`OK` button to
   apply this classification to the DEM.
 
-.. image:: img/dem_pseudocolor_properties.png
+.. figure:: img/dem_pseudocolor_properties.png
    :align: center
 
 You'll see the raster looking like this:
 
-.. image:: img/pseudocolor_raster.png
+.. figure:: img/pseudocolor_raster.png
    :align: center
 
 This is an interesting way of looking at the DEM. You'll now see that the values
@@ -120,13 +120,13 @@ area.
 To change the transparency of the whole raster switch to the :guilabel:`Transparency`
 tab and use the slider of the :guilabel:`Global Opacity` to lower the opacity:
 
-.. image:: img/global_transparency.png
+.. figure:: img/global_transparency.png
    :align: center
 
 More interesting is changing the transparency of single pixels. For example in
 the raster we used you can see an homogeneous color at the corners:
 
-.. image:: img/corner_values.png
+.. figure:: img/corner_values.png
    :align: center
 
 To set this values as transparent, the :guilabel:`Custom Transparency Options`
@@ -141,12 +141,12 @@ menu in :guilabel:`Transparency` has some useful methods:
 * You will see that the transparency table will be automatically filled with the
   clicked values:
 
-  .. image:: img/click_transparency.png
+  .. figure:: img/click_transparency.png
      :align: center
 
 * Click on :guilabel:`OK` to close the dialog and see the changes.
 
-  .. image:: img/good_raster.png
+  .. figure:: img/good_raster.png
      :align: center
 
   See? The corners are now 100% transparent.

@@ -38,7 +38,7 @@ original scanned map:
   represented as green lines (with the number of the stand also in green inside
   each polygon). 
 
-.. image:: img/gimp_map.png
+.. figure:: img/gimp_map.png
    :align: center
 
 Now you can select the pixels in the image that are making up the forest stands'
@@ -56,7 +56,7 @@ borders (the greenish pixels):
 * If you are not happy with the result, repeat the click and drag operation.
 * Your pixel selection should look something like the right image below.
 
-.. image:: img/green_px_selected.png
+.. figure:: img/green_px_selected.png
    :align: center
 
 Once you are done with the selection you need to copy this selection as a new
@@ -70,7 +70,7 @@ layer and then save it as separate image file:
 * Click the "eye" icon next to the original image layer to switch it off, so that
   only the :guilabel:`Pasted Layer` is visible:
 
-.. image:: img/saving_green_px.png
+.. figure:: img/saving_green_px.png
    :align: center
    
 * Finally, select :menuselection:`File --> Export...`, set :guilabel:`Select
@@ -116,7 +116,7 @@ using the snapping tools available in QGIS.
 
 Zoom in and see what the polygons look like. You will get something like this:
 
-.. image:: img/green_polygons.png
+.. figure:: img/green_polygons.png
    :align: center
 
 Next one option to get points out of those polygons is to get their centroids:
@@ -127,7 +127,7 @@ Next one option to get points out of those polygons is to get their centroids:
 * Check :menuselection:`Add result to canvas`.
 * Run the tool to calculate the centroids for the polygons.
 
-.. image:: img/green_points.png
+.. figure:: img/green_points.png
    :align: center
 
 Now you can remove the :guilabel:`rautjarvi_green_polygon` layer from the TOC.
@@ -152,7 +152,7 @@ there is a shapefile with part of the area of interest already digitized. You
 will just finish digitizing the half of the forest stands that are left between
 the main roads (wide pink lines) and the lake:
 
-.. image:: img/forest_stands_to_digitize.png
+.. figure:: img/forest_stands_to_digitize.png
    :align: center
 
 * Go to the :kbd:`digitizing` folder using your file manager browser.
@@ -174,7 +174,7 @@ Now, if you remember past modules, we have to set up and activate the snapping o
 * Check :guilabel:`Enable topological editing`.
 * Click :guilabel:`Apply`.
 
-.. image:: img/snapping_settings_forest.png
+.. figure:: img/snapping_settings_forest.png
    :align: center
 
 With these snapping settings, whenever you are digitizing and get close enough
@@ -204,7 +204,7 @@ Now you can start digitizing:
 * Start digitizing the stand :kbd:`357` by connecting some of the dots.
 * Note the pink crosses indicating the snapping.
 
-.. image:: img/dgitizing_357_1.png
+.. figure:: img/dgitizing_357_1.png
    :align: center
 
 * When you are done, right click to end digitizing that polygon.
@@ -217,7 +217,7 @@ go to :menuselection:`Settings --> Options --> Digitizing` and make sure that th
 
 Your digitized polygon will look like this:
 
-.. image:: img/dgitizing_357_3.png
+.. figure:: img/dgitizing_357_3.png
    :align: center
 
 Now for the second polygon, pick up the stand number 358. Make sure that the
@@ -236,7 +236,7 @@ to automatically obtain a common border.
 * Click :guilabel:`OK`, your new polygon should show a common border with the
   stand 357 as you can see in the image on the right.
 
-.. image:: img/dgitizing_358_5.png
+.. figure:: img/dgitizing_358_5.png
    :align: center
 
 The part of the polygon that was overlapping the existing polygon has been
@@ -264,7 +264,7 @@ edited at the same time for both polygons.
 
 Your result will look like this:
 
-.. image:: img/stands_fully_digitized.png
+.. figure:: img/stands_fully_digitized.png
    :align: center
 
 |basic| |FA| Joining the Forest Stand Data
@@ -286,7 +286,7 @@ in the same folder.
 * Open the :kbd:`.csv` in QGIS with the :menuselection:`Layer --> Add Delimited
   Text Layer...` tool. In the dialog, set it as follows:
 
-.. image:: img/inventory_csv_import.png
+.. figure:: img/inventory_csv_import.png
    :align: center
 
 To add the data from the :kbd:`.csv` file:
@@ -323,7 +323,7 @@ just added are no very useful. To solve this:
 * Then, go to :menuselection:`Vector --> Table Manager --> Table manager`.
 * Use the dialogue box to edit the names of the columns to match the ones in the :kbd:`.csv` file.
 
-.. image:: img/forestry_table_manager.png
+.. figure:: img/forestry_table_manager.png
    :align: center
 
 * Click on :guilabel:`Save`.

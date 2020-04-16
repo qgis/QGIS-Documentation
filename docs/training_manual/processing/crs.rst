@@ -14,7 +14,7 @@ some general rules about how they are handled by geoalgorithms when creating a n
   If you use layers with unmatching CRS's, QGIS will warn you about it. Notice that
   the CRS of input layers is shown along with its name in the parameters dialog.
 
-.. image:: img/crs/crs_layer.png
+.. figure:: img/crs/crs_layer.png
 
 * If there are no input layer, it will use the project CRS, unless the algorithm
   contains a specific CRS field (as it happened in the last lesson with the
@@ -28,7 +28,7 @@ actually the same layer.
 
 Open the *Export/Add geometry columns* algorithm.
 
-.. image:: img/crs/add_geom.png
+.. figure:: img/crs/add_geom.png
 
 This algorithm add new columns to the attributes table of a vector layer.
 The content of the columns depend on the type of geometry of the layer.
@@ -55,7 +55,7 @@ of the layer, since QGIS already knows about it.
 If you open the attributes table of the new layer you will see that it
 contains two new fields with the X and Y coordinates of each point.
 
-.. image:: img/crs/attribs2.png
+.. figure:: img/crs/attribs2.png
 
 Those coordinate values are given in the layer CRS, since we chose that option.
 However, even if you choose another option, the output CRS of the layer would
@@ -72,7 +72,7 @@ EPSG:23030 CRS, since that was the one of the input layer.
 If you go to its attribute table, you will see values that are different to
 the ones in the first layer that we created.
 
-.. image:: img/crs/attribs.png
+.. figure:: img/crs/attribs.png
 
 This is because the original data is different (it uses a different CRS),
 and those coordinates are taken from it.
@@ -96,7 +96,7 @@ but it will not use its CRS for the output one.
 
 Open the *Reproject layer* algorithm.
 
-.. image:: img/crs/reprojection.png
+.. figure:: img/crs/reprojection.png
 
 Select any of the layers as input, and select EPSG:23029 as the destination CRS.
 Run the algorithm and you will get a new layer, identical to the input one,

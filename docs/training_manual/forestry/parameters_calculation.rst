@@ -67,7 +67,7 @@ The average volume in the forest is ``135.2 m3/ha``.
 
 You can calculate the average for the number of stems in the same way, ``2745 stems/ha``.
 
-.. image:: img/statistics_pvol-pstem.png
+.. figure:: img/statistics_pvol-pstem.png
    :align: center
 
 |basic| |FA| Estimating Stand Parameters
@@ -108,7 +108,7 @@ and review the results you got. Note that a number of forest stands have
 sample plots. Select them all and view them in the map, they are some of the
 smaller stands:
 
-.. image:: img/stands_no_info.png
+.. figure:: img/stands_no_info.png
    :align: center
 
 Lets calculate now the same averages for the whole forest as you did before,
@@ -153,7 +153,7 @@ the sum of the areas of the stands containing information.
 #. Check the :guilabel:`Selected features only`
 #. Click :guilabel:`OK`.
 
-.. image:: img/stands_area_stats.png
+.. figure:: img/stands_area_stats.png
    :align: center
 
 As you can see, the total sum of the stands' areas is ``66.04 ha``.

@@ -76,7 +76,7 @@ you can review how it looks as you will be making changes in the layers symbolog
 * Click on the :guilabel:`Add New Map` button: |addMap|.
 * Click and drag a box on the canvas so that the map occupies most of it.
 
-.. image:: img/composer_1.png
+.. figure:: img/composer_1.png
    :align: center
 
 Notice how the mouse cursor snaps to the canvas grid. Use this function when
@@ -108,7 +108,7 @@ several vector layers and worrying about getting a good result.
 The current styling of the sample plots is not the best, but how does it look
 in the print layout?:
 
-.. image:: img/plots_zoom1-2.png
+.. figure:: img/plots_zoom1-2.png
    :align: center
 
 While during the last exercises, the white buffer was OK on top of the aerial
@@ -135,7 +135,7 @@ is to get the plots locations and their name to be as clearly visible as
 possible but always allowing to see the background map elements. You can take
 some guidance from this image:
 
-.. image:: img/plots_zoom2_symbology.png
+.. figure:: img/plots_zoom2_symbology.png
    :align: center
 
 You will use later the the green styling of the :kbd:`forest_stands_2012` layer.
@@ -155,7 +155,7 @@ below) but at a closer scale (right image below). Remember to use
 :guilabel:`Update preview` and :guilabel:`Set to map canvas extent` whenever
 you change the zoom in your map or the layout.
 
-.. image:: img/composer_2-3.png
+.. figure:: img/composer_2-3.png
    :align: center
 
 |basic| |TY| Create a Basic Map Template
@@ -172,7 +172,7 @@ to your printed map. Add at least the following elements:
 You have created a similar composition already in :doc:`../map_composer/index`.
 Go back to that module as you need. You can look at this example image for reference:
 
-.. image:: img/map_template1.png
+.. figure:: img/map_template1.png
    :align: center
 
 Export your map as an image and look at it.
@@ -201,7 +201,7 @@ general forest area:
 * Check also the :guilabel:`Frame` option with a black color and a
   :guilabel:`Thickness` of :kbd:`0.30`.
 
-.. image:: img/more_elements1.png
+.. figure:: img/more_elements1.png
    :align: center
 
 Notice that your overview map is not really giving an overview of the forest
@@ -238,7 +238,7 @@ small overview map is keeping the same view you had when you locked it.
 
 Note also that the overview is showing a shaded frame for the extent shown in the detail map.
 
-.. image:: img/more_elements2.png
+.. figure:: img/more_elements2.png
    :align: center
 
 Your template map is almost ready. Add now two text boxes below the map, one
@@ -267,7 +267,7 @@ The Atlas coverage is just a vector layer that will be used to generate the
 detail maps, one map for every feature in the coverage. To get an idea of what
 you will do next, here is a full set of detail maps for the forest area:
 
-.. image:: img/preview_atlas_results.png
+.. figure:: img/preview_atlas_results.png
    :align: center
 
 The coverage could be any existing layer, but usually it makes more sense to
@@ -277,7 +277,7 @@ the forest area:
 * In the QGIS map view, open :menuselection:`Vector --> Research Tools --> Vector grid`.
 * Set the tool as shown in this image:
 
-.. image:: img/coverage_polygons.png
+.. figure:: img/coverage_polygons.png
    :align: center
 
 * Save the output as :kbd:`atlas_coverage.shp`.
@@ -286,7 +286,7 @@ the forest area:
 The new polygons are covering the whole forest area and they give you an idea
 of what each map (created from each polygon) will contain.
 
-.. image:: img/atlas_coverage.png
+.. figure:: img/atlas_coverage.png
    :align: center
 
 |basic| |FA| Setting Up the Atlas Tool
@@ -298,7 +298,7 @@ The last step is to set up the Atlas tool:
 * In the panel on the right, go to the :guilabel:`Atlas generation` tab.
 * Set the options as follows:
 
-.. image:: img/atlas_settings.png
+.. figure:: img/atlas_settings.png
    :align: center
 
 That tells the Atlas tool to use the features (polygons) inside
@@ -319,7 +319,7 @@ your canvas:
   will be 10% bigger than the polygons, which means that your detail maps will
   have a 10% overlap.
 
-.. image:: img/controlled_by_atlas.png
+.. figure:: img/controlled_by_atlas.png
    :align: center
 
 Now you can use the preview tool for Atlas maps to review what your maps will look like:
@@ -345,7 +345,7 @@ also customize the text labels in your map to be generated with content from the
 * Remove the selected polygons.
 * Disable editing and save the edits.
 
-.. image:: img/remove_polygons.png
+.. figure:: img/remove_polygons.png
    :align: center
 
 You can go back to the :guilabel:`Print Layout` and check that the previews of
@@ -401,7 +401,7 @@ Do the same for the labels with the text :kbd:`Remarks:` using the field with
 the zone information. You can leave a break line before you enter the expression.
 You can see the result for the preview of zone 2 in the image below:
 
-.. image:: img/preview_zone2.png
+.. figure:: img/preview_zone2.png
    :align: center
 
 Use the Atlas preview to browse through all the maps you will be creating soon
@@ -431,7 +431,7 @@ You could just as easily create separate images for every map (remember to
 uncheck the single file creation), here you can see the thumbnails of the
 images that would be created:
 
-.. image:: img/maps_as_images.png
+.. figure:: img/maps_as_images.png
    :align: center
 
 In the :guilabel:`Print Layout`, save your map as a layout template as
