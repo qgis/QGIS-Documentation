@@ -429,6 +429,8 @@ retrieve the project:
  unzip qgis-server-tutorial.zip
  mv QGIS-Training-Data-QGIS-Training-Data-v2.0/training_manual_data/qgis-server-tutorial-data ~
 
+.. note:: link broken
+
 The project file is ``qgis-server-tutorial-data-master/world.qgs``. Of course,
 you can use your favorite GIS software to open this file and take a look on the
 configuration and available layers.
