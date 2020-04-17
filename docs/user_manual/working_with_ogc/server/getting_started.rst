@@ -86,7 +86,7 @@ If you get something like::
 the server is correctly installed and responds trhough Apache.
 
 An Apache ``VirtualHost`` is already set up after installation (available in
-   ``/etc/apache2/sites-available/000-default.conf``). For example this is what a basic
+``/etc/apache2/sites-available/000-default.conf``). For example this is what a basic
 ``VirtualHost`` configuration may look like:
 
 .. code-block:: apache
@@ -163,11 +163,11 @@ and the default project (``world.qgs``, with its data; downloadable from https:/
 
  mkdir /home/qgis/projects/
 
-.. note:: 
+.. note::
 
-See the ``mod_fcgid`` documentation for more information on the ``Fcgid`` parameters
-used. And see below (``xvfb``) to understand when and why the ``DISPLAY`` environment variable
-needs to be set.
+  See the ``mod_fcgid`` documentation for more information on the ``Fcgid`` parameters
+  used. And see below (``xvfb``) to understand when and why the ``DISPLAY`` environment variable
+  needs to be set.
 
 Now restart Apache for the new configuration to be taken into account:
 
