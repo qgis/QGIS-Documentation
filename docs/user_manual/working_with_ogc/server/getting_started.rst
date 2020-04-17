@@ -17,31 +17,76 @@ At this point, we will give a short and simple installation how-to for
 a minimal working configuration on Debian based systems. However, many other
 distributions and OSs provide packages for QGIS Server.
 
-Requirements and steps to install QGIS Server on a Debian based system are
+Requirements and steps to add official QGIS repositories to install current QGIS Server on a Debian based system are
 provided in `QGIS installers page <https://qgis.org/en/site/forusers/alldownloads.html>`_.
-Please refer to that section.
 
+.. note:: In Ubuntu you can use your regular user, prepending ``sudo`` to
+  commands requiring admin permissions. In Debian you can work as admin (``root``),
+  without using ``sudo``.
+
+We strongly suggest installing the LTR version.
+
+Once the chosen repository is configured, installation is simply:
+
+  .. code-block:: bash
+
+ apt install qgis-server
+ # if you want to install server plugins, also:
+ apt install python-qgis
+
+You can test the installation by running:
+
+ /usr/lib/cgi-bin/qgis_mapserv.fcgi``
+ 
+If you get the following output, the server is correctly installed::
+
+ QFSFileEngine::open: No file name specified
+ Warning 1: Unable to find driver ECW to unload from GDAL_SKIP environment variable.
+ Warning 1: Unable to find driver ECW to unload from GDAL_SKIP environment variable.
+ Warning 1: Unable to find driver JP2ECW to unload from GDAL_SKIP environment variable.
+ Warning 1: Unable to find driver ECW to unload from GDAL_SKIP environment variable.
+ Warning 1: Unable to find driver JP2ECW to unload from GDAL_SKIP environment variable.
+ Content-Length: 206
+ Content-Type: text/xml; charset=utf-8
+
+ <ServiceExceptionReport version="1.3.0" xmlns="https://www.opengis.net/ogc">
+  <ServiceException code="Service configuration error">Service unknown or unsupported</ServiceException>
+ </ServiceExceptionReport>
 
 .. _`httpserver`:
 
 HTTP Server configuration
 -------------------------
 
+To run QGIS server you need a web server. Recommended choices are **Apache** or **Nginx**.
+
 .. index:: Apache, mod_fcgid
 
 Apache
 ......
 
-Apache and its `mod_fcgid <https://httpd.apache.org/mod_fcgid/mod/mod_fcgid.html>`_ module
-may be used for executing QGIS Server.
-
-Install Apache and ``mod_fcgid``:
+Install Apache and  `mod_fcgid <https://httpd.apache.org/mod_fcgid/mod/mod_fcgid.html>`_:
 
 .. code-block:: bash
 
- sudo apt install apache2 libapache2-mod-fcgid
+ apt install apache2 libapache2-mod-fcgid
+ a2enmod cgi
 
-Here we assume that an Apache ``VirtualHost`` is already set up. For example this is what a basic
+QGIS Server is now available at http://localhost/. To check, type in a browser:
+
+http://localhost/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+
+If you get something like::
+
+.. code-block:: xml
+
+ <WMS_Capabilities version="1.3.0" xsi:schemaLocation="http://www.opengis.net/wms http://schemas.opengis.net/wms/1.3.0/capabilities_1_3_0.xsd http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/sld_capabilities.xsd http://www.qgis.org/wms http://localhost/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&REQUEST=GetSchemaExtension">
+ ...
+
+the server is correctly installed and responds trhough Apache.
+
+An Apache ``VirtualHost`` is already set up after installation (available in
+   ``/etc/apache2/sites-available/000-default.conf``). For example this is what a basic
 ``VirtualHost`` configuration may look like:
 
 .. code-block:: apache
@@ -56,11 +101,6 @@ Here we assume that an Apache ``VirtualHost`` is already set up. For example thi
 
    </VirtualHost>
 
-.. note::
-
-   On Debian systems, a default ``VirtualHost`` is available in
-   ``/etc/apache2/sites-available/000-default.conf``.
-
 Let's now add ``mod_fcgid`` configuration directives for QGIS Server:
 
 .. code-block:: apache
@@ -72,10 +112,22 @@ Let's now add ``mod_fcgid`` configuration directives for QGIS Server:
 
     ErrorLog ${APACHE_LOG_DIR}/error.log
     CustomLog ${APACHE_LOG_DIR}/access.log combined
-
+    
+    # Longer timeout for WPS... default = 40
+    FcgidIOTimeout 120
+    # Tell QGIS Server instances to use a specific display number for xvfb
     FcgidInitialEnv DISPLAY ":99"
+    # QGIS log (different from apache logs)
+    FcgidInitialEnv QGIS_SERVER_LOG_FILE /var/log/qgis/qgisserver.log
     FcgidInitialEnv QGIS_SERVER_LOG_LEVEL "0"
     FcgidInitialEnv QGIS_SERVER_LOG_STDERR "1"
+    FcgidInitialEnv QGIS_DEBUG 1
+      # default QGIS project
+   SetEnv QGIS_PROJECT_FILE /home/qgis/projects/world.qgs
+
+   # QGIS_AUTH_DB_DIR_PATH must lead to a directory writeable by www-data
+   FcgidInitialEnv QGIS_AUTH_DB_DIR_PATH "/opt/qgis-server/qgisserverdb/"
+   FcgidInitialEnv QGIS_AUTH_PASSWORD_FILE "/opt/qgis-server/qgisserverdb/qgis-auth.db"
 
     <Location /qgisserver>
      SetHandler fcgid-script
@@ -84,19 +136,48 @@ Let's now add ``mod_fcgid`` configuration directives for QGIS Server:
      Require all granted
     </Location>
 
+    <IfModule mod_fcgid.c>
+    FcgidMaxRequestLen 26214400
+    FcgidConnectTimeout 60
+    </IfModule>
+  
    </VirtualHost>
 
+    ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
+    <Directory "/usr/lib/cgi-bin">
+         AllowOverride None
+         Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+        Require all granted
+    </Directory>
+
+Then create all the needed directories::
+
+.. code-block:: bash
+
+ mkdir /var/log/qgis/
+ chown www-data:www-data /var/log/qgis
+ mkdir /opt/qgis-server/qgisserverdb/
+ chown www-data:www-data /opt/qgis-server/qgisserverdb/
+
+and the default project (``world.qgs``, with its data; downloadable from https://github.com/qgis/QGIS-Training-Data/tree/master/exercise_data/qgis-server-tutorial-data):
+
+ mkdir /home/qgis/projects/
+
+.. note:: 
+
 See the ``mod_fcgid`` documentation for more information on the ``Fcgid`` parameters
-used. And see below to understand when and why the ``DISPLAY`` environment variable
+used. And see below (``xvfb``) to understand when and why the ``DISPLAY`` environment variable
 needs to be set.
 
 Now restart Apache for the new configuration to be taken into account:
 
 .. code-block:: bash
 
- sudo service apache2 restart
+ systemctl restart apache2 
 
-QGIS Server is now available at http://localhost/qgisserver.
+QGIS Server is now available at http://localhost/qgisserver. To check, type in a browser, as in the simple case:
+
+http://localhost/qgisserver/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
 
 .. index:: nginx, spawn-fcgi, fcgiwrap
 

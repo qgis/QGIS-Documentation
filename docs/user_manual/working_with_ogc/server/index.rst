@@ -11,10 +11,8 @@ QGIS Server is an open source WMS 1.3, WFS 1.0.0, WFS 1.1.0 and WCS 1.1.1
 implementation that, in addition, implements advanced cartographic features for
 thematic mapping. QGIS Server is a FastCGI/CGI (Common Gateway Interface)
 application written in C++ that works together with a web server (e.g., Apache,
-Lighttpd). It has Python plugin support allowing for fast and efficient
+Nginx). It has Python plugin support allowing for fast and efficient
 development and deployment of new features.
-The original development of QGIS Server was funded by the EU projects Orchestra,
-Sany and the city of Uster in Switzerland.
 
 .. index:: SLD, SLD/SE
 .. index:: FastCGI, CGI (Common Gateway Interface)
@@ -29,10 +27,8 @@ As QGIS desktop and QGIS Server use the same visualization libraries, the maps
 that are published on the web look the same as in desktop GIS.
 
 In the following sections, we will provide a sample configuration to set up
-a QGIS Server on Debian/Ubuntu Linux. For more detailed installation
-instructions on other platforms or distributions and more information on
-working with QGIS Server, we recommend reading the :ref:`QGIS Server Training
-Manual <training_qgis_server>` or :ref:`server_plugins`.
+a QGIS Server on Linux (Debian, Ubuntu and derivatives) and on Windows.
+For more information about server plugin development, please read :ref:`server_plugins`.
 
 .. toctree::
   :maxdepth: 2
