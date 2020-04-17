@@ -286,7 +286,7 @@ For example with NGINX and spawn-fcgi using xvfb-run:
 
 .. code-block:: bash
 
- xvfb-run /usr/bin/spawn-fcgi -f /usr/lib/bin/cgi-bin/qgis_mapserv.fcgi \
+ xvfb-run /usr/bin/spawn-fcgi -f /usr/lib/cgi-bin/qgis_mapserv.fcgi \
                               -s /tmp/qgisserver.socket \
                               -G www-data -U www-data -n
 
