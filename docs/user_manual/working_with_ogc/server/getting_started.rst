@@ -161,7 +161,7 @@ have to manually start QGIS Server in your terminal:
 
  sudo spawn-fcgi -s /var/run/qgisserver.socket \
                  -U www-data -G www-data -n \
-                 /usr/lib/bin/cgi-bin/qgis_mapserv.fcgi
+                 /usr/lib/cgi-bin/qgis_mapserv.fcgi
 
 QGIS Server is now available at http://localhost/qgisserver.
 
