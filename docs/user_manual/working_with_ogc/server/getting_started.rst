@@ -13,8 +13,8 @@ Installation on Debian-based systems
 
 .. index:: Debian, Ubuntu
 
-At this point, we will give a short and simple installation how-to for
-a minimal working configuration on Debian based systems. However, many other
+We will give a short and simple installation how-to for
+a minimal working configuration on Debian based systems (including Ubuntu and derivatives). However, many other
 distributions and OSs provide packages for QGIS Server.
 
 Requirements and steps to add official QGIS repositories to install current QGIS Server on a Debian based system are
@@ -26,7 +26,7 @@ provided in `QGIS installers page <https://qgis.org/en/site/forusers/alldownload
 
 We strongly suggest installing the LTR version.
 
-Once the chosen repository is configured, installation is simply:
+Once the chosen repository is configured, installation is simply done with:
 
   .. code-block:: bash
 
@@ -36,7 +36,7 @@ Once the chosen repository is configured, installation is simply:
 
 You can test the installation by running:
 
- /usr/lib/cgi-bin/qgis_mapserv.fcgi``
+ /usr/lib/cgi-bin/qgis_mapserv.fcgi
  
 If you get the following output, the server is correctly installed::
 
@@ -53,12 +53,26 @@ If you get the following output, the server is correctly installed::
   <ServiceException code="Service configuration error">Service unknown or unsupported</ServiceException>
  </ServiceExceptionReport>
 
+Let's add a sample project. You can use your own, or one from `Training demo data <https://github.com/qgis/QGIS-Training-Data/>`_:
+
+ mkdir /home/qgis/projects/
+ cd /home/qgis/projects/
+ wget https://github.com/qgis/QGIS-Training-Data/archive/v2.0.zip
+ unzip v2.0.zip
+ mv QGIS-Training-Data-2.0/exercise_data/qgis-server-tutorial-data/world.qgs .
+ mv QGIS-Training-Data-2.0/exercise_data/qgis-server-tutorial-data/naturalearth.sqlite .
+
+Of course, you can use your favorite GIS software to open this file and take a look on the
+configuration and available layers.
+
 .. _`httpserver`:
 
 HTTP Server configuration
 -------------------------
 
 To run QGIS server you need a web server. Recommended choices are **Apache** or **Nginx**.
+
+.. note:: In the following, please replace ``localhost`` with the name or IP address of your server.
 
 .. index:: Apache, mod_fcgid
 
@@ -85,49 +99,41 @@ If you get something like::
 
 the server is correctly installed and responds trhough Apache.
 
-An Apache ``VirtualHost`` is already set up after installation (available in
-``/etc/apache2/sites-available/000-default.conf``). For example this is what a basic
-``VirtualHost`` configuration may look like:
-
-.. code-block:: apache
-
-   <VirtualHost *:80>
-
-    ServerAdmin webmaster@localhost
-    DocumentRoot /var/www/html
-
-    ErrorLog ${APACHE_LOG_DIR}/error.log
-    CustomLog ${APACHE_LOG_DIR}/access.log combined
-
-   </VirtualHost>
-
 Let's now add ``mod_fcgid`` configuration directives for QGIS Server:
 
-.. code-block:: apache
+.. code-block:: apacheconf
 
-   <VirtualHost *:80>
-
-    ServerAdmin webmaster@localhost
-    DocumentRoot /var/www/html
-
-    ErrorLog ${APACHE_LOG_DIR}/error.log
-    CustomLog ${APACHE_LOG_DIR}/access.log combined
-    
-    # Longer timeout for WPS... default = 40
-    FcgidIOTimeout 120
     # Tell QGIS Server instances to use a specific display number for xvfb
+    # necessary for printing, see below
     FcgidInitialEnv DISPLAY ":99"
-    # QGIS log (different from apache logs)
+    # Activate QGIS log (different from apache logs)
     FcgidInitialEnv QGIS_SERVER_LOG_FILE /var/log/qgis/qgisserver.log
     FcgidInitialEnv QGIS_SERVER_LOG_LEVEL "0"
     FcgidInitialEnv QGIS_SERVER_LOG_STDERR "1"
     FcgidInitialEnv QGIS_DEBUG 1
-      # default QGIS project
-   SetEnv QGIS_PROJECT_FILE /home/qgis/projects/world.qgs
+    # Add a default QGIS project
+    SetEnv QGIS_PROJECT_FILE /home/qgis/projects/world.qgs
+    # QGIS_AUTH_DB_DIR_PATH must lead to a directory writeable by www-data
+    FcgidInitialEnv QGIS_AUTH_DB_DIR_PATH "/var/www/qgis-server/qgisserverdb/"
+    FcgidInitialEnv QGIS_AUTH_PASSWORD_FILE "/var/www/qgis-server/qgisserverdb/qgis-auth.db"
+    
+    <IfModule mod_fcgid.c>
+    # Longer timeout for WPS... default = 40
+    FcgidIOTimeout 120
+    FcgidMaxRequestLen 26214400
+    FcgidConnectTimeout 60
+    </IfModule>
 
-   # QGIS_AUTH_DB_DIR_PATH must lead to a directory writeable by www-data
-   FcgidInitialEnv QGIS_AUTH_DB_DIR_PATH "/opt/qgis-server/qgisserverdb/"
-   FcgidInitialEnv QGIS_AUTH_PASSWORD_FILE "/opt/qgis-server/qgisserverdb/qgis-auth.db"
+.. note::
+
+  See the ``mod_fcgid`` documentation for more information on the ``Fcgid`` parameters
+  used. And see below (``xvfb``) to understand when and why the ``DISPLAY`` environment variable
+  needs to be set.
+
+These directives can be added either to ``/etc/apache2/mods-enabled/fcgid.conf`` for a system-wide configuration, or to a specific Apache ``VirtualHost``, if you want QGIS server to be available only for that address; the default one is available at
+``/etc/apache2/sites-available/000-default.conf``.
+
+.. code-block:: apache
 
     <Location /qgisserver>
      SetHandler fcgid-script
@@ -136,38 +142,14 @@ Let's now add ``mod_fcgid`` configuration directives for QGIS Server:
      Require all granted
     </Location>
 
-    <IfModule mod_fcgid.c>
-    FcgidMaxRequestLen 26214400
-    FcgidConnectTimeout 60
-    </IfModule>
-  
-   </VirtualHost>
-
-    ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
-    <Directory "/usr/lib/cgi-bin">
-         AllowOverride None
-         Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
-        Require all granted
-    </Directory>
-
-Then create all the needed directories::
+Then create all the needed directories with appropriate permissions:
 
 .. code-block:: bash
 
- mkdir /var/log/qgis/
+ mkdir -p /var/log/qgis/
  chown www-data:www-data /var/log/qgis
- mkdir /opt/qgis-server/qgisserverdb/
- chown www-data:www-data /opt/qgis-server/qgisserverdb/
-
-and the default project (``world.qgs``, with its data; downloadable from https://github.com/qgis/QGIS-Training-Data/tree/master/exercise_data/qgis-server-tutorial-data):
-
- mkdir /home/qgis/projects/
-
-.. note::
-
-  See the ``mod_fcgid`` documentation for more information on the ``Fcgid`` parameters
-  used. And see below (``xvfb``) to understand when and why the ``DISPLAY`` environment variable
-  needs to be set.
+ mkdir -p /var/www/qgis-server/qgisserverdb/
+ chown www-data:www-data /var/www/qgis-server/qgisserverdb/
 
 Now restart Apache for the new configuration to be taken into account:
 
@@ -206,7 +188,7 @@ Install NGINX:
 
 .. code-block:: bash
 
- sudo apt install nginx
+ apt install nginx
 
 spawn-fcgi
 ^^^^^^^^^^
@@ -216,7 +198,7 @@ the first step is to install the package:
 
 .. code-block:: bash
 
-  sudo apt install spawn-fcgi
+  apt install spawn-fcgi
 
 
 Then, introduce the following block in your NGINX server configuration:
@@ -233,16 +215,18 @@ And restart NGINX to take into account the new configuration:
 
 .. code-block:: bash
 
- sudo service nginx restart
+ service nginx restart
 
 Finally, considering that there is no default service file for spawn-fcgi, you
 have to manually start QGIS Server in your terminal:
 
 .. code-block:: bash
 
- sudo spawn-fcgi -s /var/run/qgisserver.socket \
+ spawn-fcgi -s /var/run/qgisserver.socket \
                  -U www-data -G www-data -n \
                  /usr/lib/cgi-bin/qgis_mapserv.fcgi
+
+**todo**: Add instructions to add a ``spawn-fcgi.service``
 
 QGIS Server is now available at http://localhost/qgisserver.
 
@@ -256,6 +240,8 @@ QGIS Server is now available at http://localhost/qgisserver.
 Of course, you can add an init script (like a ``qgis-server.service`` file
 with systemd) to start QGIS Server at boot time or whenever you want.
 
+**todo**: Add instructions to add a ``qgis-server.service``
+
 fcgiwrap
 ^^^^^^^^
 
@@ -265,7 +251,7 @@ You first have to install the corresponding package:
 
 .. code-block:: bash
 
- sudo apt install fcgiwrap
+ apt install fcgiwrap
 
 Then, introduce the following block in your NGINX server configuration:
 
@@ -283,8 +269,8 @@ Finally, restart NGINX and **fcgiwrap** to take into account the new configurati
 
 .. code-block:: bash
 
- sudo service nginx restart
- sudo service fcgiwrap restart
+ service nginx restart
+ service fcgiwrap restart
 
 QGIS Server is now available at http://localhost/qgisserver.
 
@@ -321,7 +307,6 @@ as it adds the parameters from ``/etc/nginx/fastcgi_params``:
  # PHP only, required if PHP was built with --enable-force-cgi-redirect
  fastcgi_param  REDIRECT_STATUS    200;
 
-
 Of course, you may override these variables in your own configuration. For
 example:
 
@@ -330,7 +315,6 @@ example:
     include fastcgi_params;
     fastcgi_param SERVER_NAME domain.name.eu;
 
-
 Moreover, you can use some :ref:`qgis-server-envvar` to configure QGIS Server.
 With NGINX as HTTP Server, you have to use ``fastcgi_param`` to define these
 variables as shown below:
@@ -338,32 +322,68 @@ variables as shown below:
 .. code-block:: nginx
 
     fastcgi_param  QGIS_DEBUG              1;
-    fastcgi_param  QGIS_SERVER_LOG_FILE    /tmp/qgis-000.log;
+    fastcgi_param  QGIS_SERVER_LOG_FILE    /var/log/qgis/qgisserver.log;
     fastcgi_param  QGIS_SERVER_LOG_LEVEL   0;
 
 .. note::
 
     When using spawn-fcgi, you may directly define environment variables
     before running the server. For example:
-    ``export QGIS_SERVER_LOG_FILE=/home/user/qgis.log``
-
+    ``export QGIS_SERVER_LOG_FILE=/var/log/qgis/qgisserver.log``
 
 Xvfb
 ----
 
-QGIS Server needs a running X Server to be fully usable. But if you don't have
-one, you may use xvfb to have a virtual X environment.
+QGIS Server needs a running X Server to be fully usable, in particular for printing. 
+On servers it is usually recommentded not to install it, so you may use ``xvfb`` to have a virtual X environment.
 
 To install the package:
 
 .. code-block:: bash
 
- sudo apt install xvfb
+ apt install xvfb
 
 Then, according to your HTTP server, you should configure the **DISPLAY**
 parameter or directly use **xvfb-run**.
 
-For example with NGINX and spawn-fcgi using xvfb-run:
+With Apache you just add to your ``Fcgi`` configuration (see above):
+
+.. code-block:: apache
+
+ FcgidInitialEnv DISPLAY       ":99"
+
+Create the service file:
+
+.. code-block:: bash
+
+  sh -c \
+  "echo \
+  '[Unit]
+  Description=X Virtual Frame Buffer Service
+  After=network.target
+
+  [Service]
+  ExecStart=/usr/bin/Xvfb :99 -screen 0 1024x768x24 -ac +extension GLX +render -noreset
+
+  [Install]
+  WantedBy=multi-user.target' \
+  > /etc/systemd/system/xvfb.service"
+
+Enable, start and check the status of the ``xvfb.service``:
+
+.. code-block:: bash
+
+   systemctl enable xvfb.service
+   systemctl start xvfb.service
+   systemctl status xvfb.service
+
+Now restart Apache for the new configuration to be taken into account:
+
+.. code-block:: bash
+
+ systemctl restart apache2
+
+With NGINX and spawn-fcgi using ``xvfb-run``:
 
 .. code-block:: bash
 
@@ -384,13 +404,6 @@ configuration. For example with NGINX:
 .. code-block:: nginx
 
  fastcgi_param  DISPLAY       ":99";
-
-Or with Apache:
-
-.. code-block:: apache
-
- FcgidInitialEnv DISPLAY       ":99"
-
 
 Installation on Windows
 =======================
@@ -500,19 +513,7 @@ customize your project by defining contact information, precise some
 restrictions on CRS or even exclude some layers. Everything you need to know
 about that is described later in :ref:`Creatingwmsfromproject`.
 
-But for now, we are going to use a simple project already configured. To
-retrieve the project:
-
-.. code-block:: bash
-
- cd /home/user/
- wget https://github.com/qgis/QGIS-Training-Data/archive/master.zip -O qgis-server-tutorial.zip
- unzip qgis-server-tutorial.zip
- mv QGIS-Training-Data-QGIS-Training-Data-v2.0/training_manual_data/qgis-server-tutorial-data ~
-
-The project file is ``qgis-server-tutorial-data-master/world.qgs``. Of course,
-you can use your favorite GIS software to open this file and take a look on the
-configuration and available layers.
+But for now, we are going to use a simple project already configured and previously downloaded in ``/home/qgis/projects/world.qgs``, as described above.
 
 By opening the project and taking a quick look on layers, we know that 4
 layers are currently available:
@@ -529,7 +530,7 @@ like this in your web browser to retrieve the *countries* layer:
 .. code-block:: bash
 
   http://localhost/qgisserver?
-    MAP=/home/user/qgis-server-tutorial-data-master/world.qgs&
+    MAP=/home/qgis/projects/world.qgs&
     LAYERS=countries&
     SERVICE=WMS&
     REQUEST=GetMap&
@@ -551,12 +552,10 @@ For example with spawn-fcgi:
 
 .. code-block:: bash
 
- export PROJECT_FILE=/home/user/qgis-server-tutorial-data-master/world.qgs
+ export PROJECT_FILE=/home/qgis/projects/world.qgs
  spawn-fcgi -f /usr/lib/bin/cgi-bin/qgis_mapserv.fcgi \
             -s /var/run/qgisserver.socket \
             -U www-data -G www-data -n
-
-
 
 .. _`Creatingwmsfromproject`:
 
