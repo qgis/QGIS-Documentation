@@ -18,13 +18,11 @@ environment variable:
 
 .. code-block:: bash
 
- sudo mkdir -p /opt/qgis-server/plugins
- cd /opt/qgis-server/plugins
- sudo wget https://github.com/elpaso/qgis-helloserver/archive/master.zip
- In case unzip was not installed before:
- sudo apt install unzip
- sudo unzip master.zip
- sudo mv qgis-helloserver-master HelloServer
+ mkdir -p /var/www/qgis-server/plugins
+ cd /var/www/qgis-server/plugins
+ wget https://github.com/elpaso/qgis-helloserver/archive/master.zip
+ unzip master.zip
+ mv qgis-helloserver-master HelloServer
 
 
 HTTP Server configuration
@@ -39,9 +37,7 @@ have to modify the Apache configuration file to indicate the
 
 .. code-block:: apache
 
-    FcgidInitialEnv QGIS_SERVER_LOG_FILE /tmp/qgis-000.log
-    FcgidInitialEnv QGIS_SERVER_LOG_LEVEL 0
-    FcgidInitialEnv QGIS_PLUGINPATH "/opt/qgis-server/plugins"
+    FcgidInitialEnv QGIS_PLUGINPATH "/var/www/qgis-server/plugins"
 
 Moreover, a basic HTTP authorization is necessary to play with the HelloWorld
 plugin previously introduced. So we have to update the Apache configuration file
@@ -60,21 +56,7 @@ Then, restart Apache:
 
 .. code-block:: bash
 
- sudo a2ensite 001-qgis-server
- sudo service apache2 restart
-
-.. tip::
-
-   If you work with a feature that has many nodes then modifying and adding a
-   new feature will fail. In this case it is possible to insert the following
-   code into the :file:`001-qgis-server.conf` file:
-
-   .. code-block:: apache
-
-     <IfModule mod_fcgid.c>
-     FcgidMaxRequestLen 26214400
-     FcgidConnectTimeout 60
-     </IfModule>
+ systemctl restart apache2 
 
 How to use a plugin
 ===================
