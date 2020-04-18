@@ -434,12 +434,6 @@ Input types
    * - :class:`QgsProcessingParameterColor <qgis.core.QgsProcessingParameterColor>`
      - ``alg.COLOR``
      - A color
-<<<<<<< HEAD
-=======
-   * - :class:`QgsProcessingParameterCoordinateOperation <qgis.core.QgsProcessingParameterCoordinateOperation>`
-     - ``alg.COORDINATE_OPERATION``
-     - A coordinate operation (for CRS transformations)
->>>>>>> d2dfa1b0b... Small text and renderer fixes
    * - :class:`QgsProcessingParameterCrs <qgis.core.QgsProcessingParameterCrs>`
      - ``alg.CRS``
      - A Coordinate Reference System
