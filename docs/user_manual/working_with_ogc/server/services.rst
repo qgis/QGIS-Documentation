@@ -105,13 +105,13 @@ extra parameters:
    "FORMAT_OPTIONS", "No", "Only for ``FORMAT=application/dxf``
    key:value pairs separated by semicolon.
 
-   * SCALE:  to be used for symbology rules, filters and styles (not
+   * SCALE: to be used for symbology rules, filters and styles (not
      actual scaling of the data - data remains in the original scale).
-   * MODE:NOSYMBOLOGY|FEATURESYMBOLOGY|SYMBOLLAYERSYMBOLOGY:
-     corresponds to the three export options offered in the QGIS
-     Desktop DXF export dialog.
-   * LAYERSATTRIBUTES:field_with_values_to_use_for_dxf_layernames if
-     not specified, the original QGIS layer names are used.
+   * MODE: corresponds to the export options offered in the QGIS
+     Desktop DXF export dialog. Possible values are ``NOSYMBOLOGY``,
+     ``FEATURESYMBOLOGY`` and ``SYMBOLLAYERSYMBOLOGY``.
+   * LAYERSATTRIBUTES: specify the field with values to use for dxf
+     layer names, or the original QGIS layer names are used.
    * USE_TITLE_AS_LAYERNAME: if enabled, the title of the layer will
      be used as layer name.
    * CODEC: specify a codec to be used for encoding. Default is ``ISO-8859-1``
