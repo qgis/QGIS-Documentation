@@ -418,7 +418,7 @@ Further tweaks can be done to the default classification:
 Right-clicking over selected item(s) shows a contextual menu to:
 
 * :guilabel:`Copy Symbol` and :guilabel:`Paste Symbol`, a convenient way
-  to apply a category's representation to others
+  to apply the item's representation to others
 * :guilabel:`Change Color...` of the selected symbol(s)
 * :guilabel:`Change Opacity...` of the selected symbol(s)
 * :guilabel:`Change Output Unit...` of the selected symbol(s)
@@ -509,15 +509,16 @@ classes can be disabled unchecking the checkbox at the left of the class name.
 To change symbol, value and/or label of the class, just double click
 on the item you want to change.
 
-Right-clicking over selected item(s) shows a contextual menu to
-**Copy/Paste Symbol**, **Change Color**, **Change Opacity**,
-**Change Output Unit**, **Change Width / Size**, **Change Angle**.
+Right-clicking over selected item(s) shows a contextual menu to:
 
-  Provided options of right-click menu depend on type of geometry:
-
-  * Line layers have **Change Width**  
-  * Point layers have **Change Size** and **Change Angle**
-  * Polygon layers do not have **Change Width / Size**
+* :guilabel:`Copy Symbol` and :guilabel:`Paste Symbol`, a convenient way
+  to apply the item's representation to others
+* :guilabel:`Change Color...` of the selected symbol(s)
+* :guilabel:`Change Opacity...` of the selected symbol(s)
+* :guilabel:`Change Output Unit...` of the selected symbol(s)
+* :guilabel:`Change Width...` of the selected line symbol(s)
+* :guilabel:`Change Size...` of the selected point symbol(s)
+* :guilabel:`Change Angle...` of the selected point symbol(s)
 
 The example in figure_graduated_symbology_ shows the graduated rendering dialog for
 the major_rivers layer of the QGIS sample dataset.
@@ -671,15 +672,19 @@ features that do not match any of the other rules, at the same level. This
 can also be achieved by writing ``Else`` in the *Rule* column of the
 :menuselection:`Layer Properties --> Symbology --> Rule-based` dialog.
 
-Right-clicking over selected rule(s) shows a contextual menu to **Copy/Paste**,
-**Copy/Paste Symbol**, **Change Color**, **Change Opacity**,
-**Change Output Unit**, **Change Width/Size**, **Change Angle** and **Refine Current Rule**.
+Right-clicking over selected item(s) shows a contextual menu to:
 
-  Provided options of right-click menu depend on type of geometry:
-   
-  * Line layers have **Change Width**  
-  * Point layers have **Change Size** and **Change Angle**
-  * Polygon layers do not have **Change Width / Size**
+* :guilabel:`Copy Symbol` and :guilabel:`Paste Symbol`, a convenient way
+  to apply a category's representation to others
+* :guilabel:`Change Color...` of the selected symbol(s)
+* :guilabel:`Change Opacity...` of the selected symbol(s)
+* :guilabel:`Change Output Unit...` of the selected symbol(s)
+* :guilabel:`Change Width...` of the selected line symbol(s)
+* :guilabel:`Change Size...` of the selected point symbol(s)
+* :guilabel:`Change Angle...` of the selected point symbol(s)
+* :guilabel:`Refine Current Rule`: open a submenu that allows to
+  refine the current rule with **scales**, **categories** (categorized renderer)
+  or **Ranges** (graduated renderer).
 
 The created rules also appear in a tree hierarchy in the map legend.
 Double-click the rules in the map legend and the Symbology tab of the layer
