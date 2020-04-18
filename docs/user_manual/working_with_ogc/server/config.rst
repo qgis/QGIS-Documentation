@@ -64,7 +64,7 @@ pg_service.conf file:
 
 .. code-block:: bash
 
- PGSERVICEFILE=/etc/pg_service.conf QUERY_STRING="MAP=/path/to/test.qgs&SERVICE=WMS&REQUEST=GetCapabilities" /path/to/qgis_mapserv.fcgi
+ PGSERVICEFILE=/etc/pg_service.conf QUERY_STRING="MAP=/home/qgis/projects/world.qgs&SERVICE=WMS&REQUEST=GetCapabilities" /usr/lib/cgi-bin/qgis_mapserv.fcgi
 
 The result should be either the content of the GetCapabilities response or,
 if something is wrong, an error message.
