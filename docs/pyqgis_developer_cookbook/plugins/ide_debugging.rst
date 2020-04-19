@@ -227,14 +227,14 @@ libraries.
    under the :ref:`user profile <user_profiles>` folder).
 #. Next jump to the *Forced Builtins* tab, click on *New...* and enter ``qgis``.
    This will make Eclipse parse the QGIS API. You probably also want Eclipse to
-   know about the PyQt4 API. Therefore also add PyQt4 as forced builtin. That
+   know about the PyQt API. Therefore also add PyQt as forced builtin. That
    should probably already be present in your libraries tab.
-#. Click *OK* and you're done.
+#. Click :guilabel:`OK` and you're done.
 
 .. note::
    Every time the QGIS API changes (e.g. if you're compiling QGIS master and
    the SIP file changed), you should go back to this page and simply click
-   *Apply*. This will let Eclipse parse all the libraries again.
+   :guilabel:`Apply`. This will let Eclipse parse all the libraries again.
 
 
 Debugging with PyCharm on Ubuntu with a compiled QGIS
