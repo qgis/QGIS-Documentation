@@ -7,16 +7,6 @@
 Development Server
 **********************
 
-.. only:: html
-
-   .. contents::
-      :local:
-      :depth: 1
-
-.. index::
-    pair: Development; QGIS Server
-
-.. _qgis-server-logging:
 
 A production installation and deployment of QGIS Server usually involves setting
 up a web server component (e.g. Apache or Nginx) that can forward the HTTP requests
@@ -29,9 +19,18 @@ server.
 This is an independent application that provides a very simple web server ready
 to serve your project files.
 
+.. warning::
+
+    The Standalone Development Server has not been developed with the purpose
+    of being used in production, it was not checked for security vulnerabilities
+    or for other stress conditions that usually happen on a publicly exposed
+    server.
+
+
 To launch the server:
 
 .. code-block:: bash
+
     $ qgis_mapserver
 
 The default port the Development Server listens to is ``8000``, example output:
@@ -46,7 +45,7 @@ The default port the Development Server listens to is ``8000``, example output:
     127.0.0.1 [lun gen 20 15:16:41 2020] 1310 5ms "GET /wfs3/static/style.css HTTP/1.1" 200
     127.0.0.1 [lun gen 20 15:16:43 2020] 4285 13ms "GET /wfs3/collections?MAP=/tests/testdata/qgis_server/test_project.qgs HTTP/1.1" 200
 
-The server has a few options that can be passed as command line argument, you can see them all
+The server has a few options that can be passed as command line arguments, you can see them all
 by invoking the server with ``-h``.
 
 .. code-block:: bash
@@ -69,11 +68,4 @@ by invoking the server with ``-h``.
     addressAndPort    Listen to address and port (default: "localhost:8000")
                         address and port can also be specified with the environment
                         variables QGIS_SERVER_ADDRESS and QGIS_SERVER_PORT
-
-
-.. warning:
-
-    The Standalone Development Server was not developed with the aim of being
-    used in production, it was not checked for security or for other potential
-    vulnerabilities.
 
