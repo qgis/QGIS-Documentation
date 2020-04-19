@@ -674,6 +674,8 @@ can also be achieved by writing ``Else`` in the *Rule* column of the
 
 Right-clicking over selected item(s) shows a contextual menu to:
 
+* :guilabel:`Copy` and :guilabel:`Paste`, a convenient way to create new
+  item(s) based on existing item(s)
 * :guilabel:`Copy Symbol` and :guilabel:`Paste Symbol`, a convenient way
   to apply the item's representation to others
 * :guilabel:`Change Color...` of the selected symbol(s)
