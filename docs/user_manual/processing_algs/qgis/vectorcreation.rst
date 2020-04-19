@@ -1098,7 +1098,7 @@ The illustration below shows the effect of per feature and global minimum
 distances and zero/non-zero minimum distances (generated with the same seed,
 so at least the first point generated will be the same).
 
-.. figure:: img/randompointsonlines.png
+.. figure:: img/randompointsonlines_mindistance.png
    :align: center
 
    Five points per line feature, *left*: min. distances = 0,
