@@ -69,4 +69,7 @@ Test the server with the HelloWorld plugin:
   HelloServer!
 
 You can have a look at the default GetCapabilities of the QGIS server at:
-:file:`http://localhost/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities`
+
+::
+
+ http://localhost/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
