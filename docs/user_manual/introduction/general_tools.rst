@@ -676,10 +676,6 @@ To stop the map drawing, press the :kbd:`Esc` key. This will halt the refresh of
 the map canvas and leave the map partially drawn. It may take a bit of time
 between pressing :kbd:`Esc` for the map drawing to halt.
 
-.. note::
-   It is currently not possible to stop rendering --- this was disabled in the Qt4
-   port because of User Interface (UI) problems and crashes.
-
 
 .. index::
    single: Rendering; Quality
