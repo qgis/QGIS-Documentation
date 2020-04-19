@@ -780,6 +780,8 @@ the lines).
 A minimum distance can be specified, to avoid points being too close to
 each other.
 
+.. seealso:: :ref:`qgisrandompointsonlines`
+
 Parameters
 ..........
 
@@ -1079,33 +1081,29 @@ Outputs
 .. _qgisrandompointsonlines:
 
 Random points on lines |314|
-----------------------------
+----------------------------------
 Creates a point layer with points placed on the lines of another layer.
 
 For each feature (line / multi-line) geometry in the input layer, the given
 number of points is added to the result layer.
 
-A minimum distance can be specified in order to avoid points being too close
-in the output point layer.
+Per feature and global minimum distances can be specified in order to avoid
+points being too close in the output point layer.
 If a minimum distance is specified, it may not be possible to generate the
 specified number of points for each feature.
 The total number of generated points and missed points are available as
 output from the algorithm.
 
-The illustrations below show the effect of having a non-zero minimum distance
-(generated with the same seed, so at least the first point generated will be
-the same).
+The illustration below shows the effect of per feature and global minimum
+distances and zero/non-zero minimum distances (generated with the same seed,
+so at least the first point generated will be the same).
 
-.. figure:: img/randompointsonlines_zerodistance.png
+.. figure:: img/randompointsonlines_mindistance.png
    :align: center
 
-   Five points per line feature, minimum distance = 0
-
-
-.. figure:: img/randompointsonlines_nonzerodistance.png
-   :align: center
-
-   Five points per line feature, non-zero minimum distance
+   Five points per line feature, *left*: min. distances = 0,
+   *middle*: min.distances != 0, *right*: min. distance != 0,
+   global min. distance = 0
 
 The maximum number of tries per point can be specified.
 This is only relevant for non-zero minimum distance.
@@ -1113,16 +1111,14 @@ This is only relevant for non-zero minimum distance.
 A seed for the random number generator can be provided, making it possible
 to get identical random number sequences for different runs of the algorithm.
 
-The attributes of the line feature on which a point was generated is included
-by default, but it is possible to opt-out (uncheck
-:guilabel:`Include line attributes`).
+The attributes of the line feature on which a point was generated can be
+included (:guilabel:`Include line attributes`).
 
-The *Number of points for each feature*, *Minimum distance between points*
-and *Maximum number of search attempts (for Min. dist. > 0)* parameters can
-be data-defined.
-That means that if you, for instance, want approximately the same point
-density for each line feature, you can data-define the number of points using
-the length of the line feature geometry.
+If you want approximately the same point density for all the line features,
+you can data-define the number of points using the length of the line
+feature geometry.
+
+.. seealso:: :ref:`qgisrandompointsalongline`
 
 Parameters
 ..........
@@ -1130,7 +1126,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1142,27 +1137,38 @@ Parameters
      - Input line vector layer
    * - **Number of points for each feature**
      - ``POINTS_NUMBER``
-     - [number]
+     - [number |dataDefined|]
 
        Default: 1
      - Number of points to create
-   * - **Minimum distance between points**
+   * - **Minimum distance between points (per feature)**
 
        Optional
      - ``MIN_DISTANCE``
-     - [number]
+     - [number |dataDefined|]
 
        Default: 0.0
-     - The minimum distance between points
+     - The minimum distance between points within one line feature
+   * - **Global minimum distance between points**
+
+       Optional
+     - ``MIN_DISTANCE_GLOBAL``
+     - [number |dataDefined|]
+
+       Default: 0.0
+     - The global minimum distance between points.
+       Should be smaller than the *Minimum distance between
+       points (per feature)* for that parameter to have an effect.
    * - **Maximum number of search attempts (for Min. dist. > 0)**
 
        Optional
      - ``MAX_TRIES_PER_POINT``
-     - [number]
+     - [number |dataDefined|]
 
        Default: 10
      - The maximum number of tries per point.
-       Only relevant if the minimum distance between points is greater than 0.
+       Only relevant if the minimum distance between points is set
+       (and greater than 0).
    * - **Random seed**
 
        Optional
@@ -1212,7 +1218,7 @@ Outputs
      - ``FEATURES_WITH_EMPTY_OR_NO_GEOMETRY``
      - [number]
      - 
-   * - **Number of lines with missed points**
+   * - **Number of features with missed points**
      - ``LINES_WITH_MISSED_POINTS``
      - [number]
      - Not including features with empty or no geometry
