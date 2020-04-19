@@ -675,7 +675,7 @@ can also be achieved by writing ``Else`` in the *Rule* column of the
 Right-clicking over selected item(s) shows a contextual menu to:
 
 * :guilabel:`Copy Symbol` and :guilabel:`Paste Symbol`, a convenient way
-  to apply a category's representation to others
+  to apply the item's representation to others
 * :guilabel:`Change Color...` of the selected symbol(s)
 * :guilabel:`Change Opacity...` of the selected symbol(s)
 * :guilabel:`Change Output Unit...` of the selected symbol(s)
