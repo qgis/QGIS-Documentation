@@ -13,7 +13,7 @@ up a web server component (e.g. Apache or Nginx) that can forward the HTTP reque
 coming from the clients to the QGIS Server FastCGI binary application.
 
 If you want to quickly test QGIS Server on your local machine without configuring
-and installing a full web server stack you can use the new QGIS Development Standalone
+and installing a full web server stack you can use the QGIS Development Standalone
 server.
 
 This is an independent application that provides a very simple web server ready
@@ -68,4 +68,3 @@ by invoking the server with ``-h``.
     addressAndPort    Listen to address and port (default: "localhost:8000")
                         address and port can also be specified with the environment
                         variables QGIS_SERVER_ADDRESS and QGIS_SERVER_PORT
-
