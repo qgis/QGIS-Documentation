@@ -28,13 +28,15 @@ We strongly suggest installing the LTR version.
 
 Once the chosen repository is configured, installation is simply done with:
 
-  .. code-block:: bash
+.. code-block:: bash
 
  apt install qgis-server
  # if you want to install server plugins, also:
  apt install python-qgis
 
 You can test the installation by running:
+
+::
 
  /usr/lib/cgi-bin/qgis_mapserv.fcgi
  
@@ -53,7 +55,10 @@ If you get the following output, the server is correctly installed::
   <ServiceException code="Service configuration error">Service unknown or unsupported</ServiceException>
  </ServiceExceptionReport>
 
-Let's add a sample project. You can use your own, or one from `Training demo data <https://github.com/qgis/QGIS-Training-Data/>`_:
+Let's add a sample project. You can use your own, or one from
+`Training demo data <https://github.com/qgis/QGIS-Training-Data/>`_:
+
+.. code-block:: bash
 
  mkdir /home/qgis/projects/
  cd /home/qgis/projects/
@@ -62,8 +67,8 @@ Let's add a sample project. You can use your own, or one from `Training demo dat
  mv QGIS-Training-Data-2.0/exercise_data/qgis-server-tutorial-data/world.qgs .
  mv QGIS-Training-Data-2.0/exercise_data/qgis-server-tutorial-data/naturalearth.sqlite .
 
-Of course, you can use your favorite GIS software to open this file and take a look on the
-configuration and available layers.
+Of course, you can use your favorite GIS software to open this file and
+take a look on the configuration and available layers.
 
 .. _`httpserver`:
 
@@ -88,16 +93,18 @@ Install Apache and  `mod_fcgid <https://httpd.apache.org/mod_fcgid/mod/mod_fcgid
 
 QGIS Server is now available at http://localhost/. To check, type in a browser:
 
-http://localhost/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+::
 
-If you get something like::
+ http://localhost/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+
+If you get something like:
 
 .. code-block:: xml
 
  <WMS_Capabilities version="1.3.0" xsi:schemaLocation="http://www.opengis.net/wms http://schemas.opengis.net/wms/1.3.0/capabilities_1_3_0.xsd http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/sld_capabilities.xsd http://www.qgis.org/wms http://localhost/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&REQUEST=GetSchemaExtension">
  ...
 
-the server is correctly installed and responds trhough Apache.
+the server is correctly installed and responds through Apache.
 
 Let's now add ``mod_fcgid`` configuration directives for QGIS Server:
 
@@ -159,7 +166,9 @@ Now restart Apache for the new configuration to be taken into account:
 
 QGIS Server is now available at http://localhost/qgisserver. To check, type in a browser, as in the simple case:
 
-http://localhost/qgisserver/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+::
+
+ http://localhost/qgisserver/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
 
 .. index:: nginx, spawn-fcgi, fcgiwrap
 
@@ -500,7 +509,9 @@ Then at the bottom of httpd.conf add:
 Restart the Apache web server from the XAMPP Control Panel and open browser window to testing
 a GetCapabilities request to QGIS Server
 
-http://localhost/cgi-bin/qgis_mapserv.fcgi.exe?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+::
+
+ http://localhost/cgi-bin/qgis_mapserv.fcgi.exe?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
 
 
 Serve a project
