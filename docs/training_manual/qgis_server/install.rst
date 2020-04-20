@@ -167,7 +167,7 @@ enable the ``fcgid`` mod if it's not already enabled and restart the ``apache2``
 
  a2enmod fcgid
  a2ensite qgis.demo
- service apache2 restart
+ systemctl restart apache2
 
 .. note::
 

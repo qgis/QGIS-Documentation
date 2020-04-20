@@ -128,7 +128,7 @@ URL example:
   SERVICE=WMS
   &VERSION=1.3.0
   &REQUEST=GetMap
-  &MAP=/home/user/project.qgs
+  &MAP=/home/qgis/projects/world.qgs
   &LAYERS=mylayer1,mylayer2,mylayer3
   &STYLES=style1,default,style3
   &OPACITIES=125,200,125
@@ -190,7 +190,7 @@ layer's name:
 
 .. code-block:: none
 
-  http://localhost/qgis_server?
+  http://localhost/qgisserver?
   SERVICE=WMS
   &REQUEST=GetMap
   &LAYERS=mynickname1,mynickname2
@@ -204,7 +204,7 @@ To activate this option, the checkbox
 
 .. code-block:: none
 
-  http://localhost/qgis_server?
+  http://localhost/qgisserver?
   SERVICE=WMS
   &REQUEST=GetMap
   &LAYERS=mylayerid1,mylayerid2
@@ -238,7 +238,7 @@ In the next case, the ``SRS`` parameter is kept whatever the
 
 .. code-block:: none
 
-  http://localhost/qgis_server?
+  http://localhost/qgisserver?
   SERVICE=WMS
   &REQUEST=GetMap
   &VERSION=1.3.0
@@ -250,7 +250,7 @@ because of the ``VERSION`` parameter:
 
 .. code-block:: none
 
-  http://localhost/qgis_server?
+  http://localhost/qgisserver?
   SERVICE=WMS
   &REQUEST=GetMap
   &VERSION=1.1.0
@@ -263,7 +263,7 @@ because of the ``VERSION`` parameter:
 
 .. code-block:: none
 
-  http://localhost/qgis_server?
+  http://localhost/qgisserver?
   SERVICE=WMS
   &REQUEST=GetMap
   &VERSION=1.3.0
@@ -287,7 +287,7 @@ For example:
 
 .. code-block:: none
 
-  http://localhost/qgis_server?
+  http://localhost/qgisserver?
   SERVICE=WMS
   &REQUEST=GetMap
   &VERSION=1.1.0
@@ -302,7 +302,7 @@ For example:
 
 .. code-block:: none
 
-  http://localhost/qgis_server?
+  http://localhost/qgisserver?
   SERVICE=WMS
   &REQUEST=GetMap
   &VERSION=1.3.0
@@ -346,7 +346,7 @@ Available values are:
 
   .. code-block:: none
 
-   http://localhost/qgis_server?
+   http://localhost/qgisserver?
    SERVICE=WMS&VERSION=1.3.0
    &REQUEST=GetMap
    &FORMAT=application/dxf
@@ -397,7 +397,7 @@ URL example with the literal notation:
 
 .. code-block:: none
 
-  http://localhost/qgis_server?
+  http://localhost/qgisserver?
   SERVICE=WMS
   &REQUEST=GetMap
   &VERSION=1.3.0
@@ -408,7 +408,7 @@ URL example with the hexadecimal notation:
 
 .. code-block:: none
 
-  http://localhost/qgis_server?
+  http://localhost/qgisserver?
   SERVICE=WMS
   &REQUEST=GetMap
   &VERSION=1.3.0
@@ -465,7 +465,7 @@ URL example:
 
 .. code-block:: none
 
-  http://localhost/qgis_server?
+  http://localhost/qgisserver?
   SERVICE=WMS
   &REQUEST=GetMap
   &LAYERS=mylayer1,mylayer2,mylayer3
@@ -494,7 +494,7 @@ feature ids.
 
 .. code-block:: none
 
-  http://localhost/qgis_server?
+  http://localhost/qgisserver?
   SERVICE=WMS
   &REQUEST=GetMap
   &LAYERS=mylayer1,mylayer2
@@ -582,11 +582,11 @@ URL example:
 
 .. code-block:: none
 
-  http://localhost/qgis_server?
+  http://localhost/qgisserver?
   SERVICE=WMS
   &VERSION=1.3.0
   &REQUEST=GetMap
-  &MAP=/home/user/project.qgs
+  &MAP=/home/qgis/projects/world.qgs
   &LAYERS=mylayer1,mylayer2,mylayer3
   &CRS=EPSG:4326
   &WIDTH=400
@@ -756,11 +756,11 @@ URL example:
 
 .. code-block:: none
 
-  http://localhost/qgis_server?
+  http://localhost/qgisserver?
   SERVICE=WMS
   &VERSION=1.3.0
   &REQUEST=GetPrint
-  &MAP=/home/user/project.qgs
+  &MAP=/home/qgis/projects/world.qgs
   &CRS=EPSG:4326
   &FORMAT=png
   &map0:EXTENT=-180,-90,180,90
@@ -1032,7 +1032,7 @@ For example:
 
 .. code-block:: none
 
-  http://localhost/qgis_server?
+  http://localhost/qgisserver?
   SERVICE=WFS
   &...
 
@@ -1053,7 +1053,7 @@ URL example:
 
 .. code-block:: none
 
-  http://localhost/qgis_server?
+  http://localhost/qgisserver?
   SERVICE=WFS
   &VERSION=1.1.0
   &...
@@ -1069,7 +1069,7 @@ URL example:
 
 .. code-block:: none
 
-  http://localhost/qgis_server?
+  http://localhost/qgisserver?
   SERVICE=WFS
   &VERSION=1.1.0
   &REQUEST=GetFeature
@@ -1089,7 +1089,7 @@ URL example:
 
 .. code-block:: none
 
-  http://localhost/qgis_server?
+  http://localhost/qgisserver?
   SERVICE=WFS
   &VERSION=1.1.0
   &REQUEST=GetFeature
@@ -1111,7 +1111,7 @@ URL example:
 
 .. code-block:: none
 
-  http://localhost/qgis_server?
+  http://localhost/qgisserver?
   SERVICE=WFS
   &VERSION=1.1.0
   &REQUEST=GetFeature
@@ -1133,7 +1133,7 @@ URL example:
 
 .. code-block:: none
 
-  http://localhost/qgis_server?
+  http://localhost/qgisserver?
   SERVICE=WFS
   &VERSION=1.1.0
   &REQUEST=GetFeature
@@ -1195,10 +1195,10 @@ URL example:
 
 .. code-block:: none
 
-  http://localhost/qgis_server?
+  http://localhost/qgisserver?
   SERVICE=WMTS
   &REQUEST=GetCapabilities
-  &MAP=/home/user/project.qgs
+  &MAP=/home/qgis/projects/world.qgs
 
 
 SERVICE
@@ -1258,10 +1258,10 @@ URL example:
 
 .. code-block:: none
 
-  http://localhost/qgis_server?
+  http://localhost/qgisserver?
   SERVICE=WMTS
   &REQUEST=GetTile
-  &MAP=/home/user/project.qgs
+  &MAP=/home/qgis/projects/world.qgs
   &LAYER=mylayer
   &FORMAT=image/png
   &TILEMATRIXSET=EPSG:4326
@@ -1298,7 +1298,7 @@ name is defined, then it's used by default instead of the layer's name:
 
 .. code-block:: none
 
-  http://localhost/qgis_server?
+  http://localhost/qgisserver?
   SERVICE=WMTS
   &REQUEST=GetTile
   &LAYER=mynickname
@@ -1312,7 +1312,7 @@ selected.
 
 .. code-block:: none
 
-  http://localhost/qgis_server?
+  http://localhost/qgisserver?
   SERVICE=WMTS
   &REQUEST=GetTile
   &LAYER=mylayerid1
@@ -1416,10 +1416,10 @@ URL example:
 
 .. code-block:: none
 
-  http://localhost/qgis_server?
+  http://localhost/qgisserver?
   SERVICE=WMTS
   &REQUEST=GetFeatureInfo
-  &MAP=/home/user/project.qgs
+  &MAP=/home/qgis/projects/world.qgs
   &LAYER=mylayer
   &INFOFORMAT=image/html
   &I=10
@@ -1471,7 +1471,7 @@ name:
 
 .. code-block:: none
 
-  http://localhost/qgis_server?
+  http://localhost/qgisserver?
   SERVICE=WMTS
   &REQUEST=GetFeatureInfo
   &LAYER=mynickname
@@ -1485,7 +1485,7 @@ selected.
 
 .. code-block:: none
 
-  http://localhost/qgis_server?
+  http://localhost/qgisserver?
   SERVICE=WMTS
   &REQUEST=GetFeatureInfo
   &LAYER=mylayerid1
@@ -1759,7 +1759,7 @@ URL example:
 
 .. code-block:: none
 
-    http://localhost/qgis_server/wfs3/collection_one/items.json?offset=10&limit=10
+    http://localhost/qgisserver/wfs3/collection_one/items.json?offset=10&limit=10
 
 .. note::
 
@@ -1795,21 +1795,21 @@ Returns only the features with date dimension matching ``2019-01-01``
 
 .. code-block:: none
 
-    http://localhost/qgis_server/wfs3/collection_one/items.json?datetime=2019-01-01
+    http://localhost/qgisserver/wfs3/collection_one/items.json?datetime=2019-01-01
 
 Returns only the features with datetime dimension matching
 ``2019-01-01T01:01:01``
 
 .. code-block:: none
 
-    http://localhost/qgis_server/wfs3/collection_one/items.json?datetime=2019-01-01T01:01:01
+    http://localhost/qgisserver/wfs3/collection_one/items.json?datetime=2019-01-01T01:01:01
 
 Returns only the features with datetime dimension in the range
 ``2019-01-01T01:01:01`` - ``2019-01-01T12:00:00``
 
 .. code-block:: none
 
-    http://localhost/qgis_server/wfs3/collection_one/items.json?datetime=2019-01-01T01:01:01/2019-01-01T12:00:00
+    http://localhost/qgisserver/wfs3/collection_one/items.json?datetime=2019-01-01T01:01:01/2019-01-01T12:00:00
 
 
 Bounding box filter
@@ -1834,7 +1834,7 @@ URL example:
 
 .. code-block:: none
 
-    http://localhost/qgis_server/wfs3/collection_one/items.json?bbox=-180,-90,180,90
+    http://localhost/qgisserver/wfs3/collection_one/items.json?bbox=-180,-90,180,90
 
 If the *CRS* of the bounding box is not WGS84
 (*http://www.opengis.net/def/crs/OGC/1.3/CRS84*), a different CRS can
@@ -1846,7 +1846,7 @@ URL example:
 
 .. code-block:: none
 
-    http://localhost/qgis_server/wfs3/collection_one/items.json?bbox=913191,5606014,913234,5606029&bbox-crs=http://www.opengis.net/def/crs/EPSG/9.6.2/3857
+    http://localhost/qgisserver/wfs3/collection_one/items.json?bbox=913191,5606014,913234,5606029&bbox-crs=http://www.opengis.net/def/crs/EPSG/9.6.2/3857
 
 
 Attribute filters
@@ -1862,7 +1862,7 @@ filters all features where attribute ``name`` equals "my value"
 
 .. code-block:: none
 
-    http://localhost/qgis_server/wfs3/collection_one/items.json?attribute_one=my%20value
+    http://localhost/qgisserver/wfs3/collection_one/items.json?attribute_one=my%20value
 
 
 Partial matches are also supported by using a ``*`` ("star") operator:
@@ -1873,7 +1873,7 @@ filters all features where attribute ``name`` ends with "value"
 
 .. code-block:: none
 
-    http://localhost/qgis_server/wfs3/collection_one/items.json?attribute_one=*value
+    http://localhost/qgisserver/wfs3/collection_one/items.json?attribute_one=*value
 
 
 Attribute selection
@@ -1889,7 +1889,7 @@ returns only the ``name`` attribute
 
 .. code-block:: none
 
-    http://localhost/qgis_server/wfs3/collection_one/items.json?properties=name
+    http://localhost/qgisserver/wfs3/collection_one/items.json?properties=name
 
 
 .. _`server_wfs3_settings`:
@@ -1933,8 +1933,8 @@ Custom template functions
 - ``json_dump( )``: prints the JSON data passed to the template
 - ``static( path )``: returns the full URL to the specified static path.
   For example: "static( "/style/black.css" )" with a root path
-  "http://localhost/qgis_server/wfs3" will return
-  "http://localhost/qgis_server/wfs3/static/style/black.css".
+  "http://localhost/qgisserver/wfs3" will return
+  "http://localhost/qgisserver/wfs3/static/style/black.css".
 - ``links_filter( links, key, value )``: Returns filtered links from a
   link list
 - ``content_type_name( content_type )``: Returns a short name from a
@@ -2005,7 +2005,7 @@ The following extra parameters are supported by all protocols.
   Example::
 
     http://localhost/cgi-bin/qgis_mapserv.fcgi?\
-      REQUEST=GetMap&MAP=/home/qgis/mymap.qgs&...
+      REQUEST=GetMap&MAP=/home/qgis/projects/world.qgs&...
 
 ..  note::
 
@@ -2097,7 +2097,7 @@ In a GetMap request, this might look like this:
 
 .. code-block:: none
 
-   http://localhost/qgis_server?
+   http://localhost/qgisserver?
    SERVICE=WMS&REQUEST=GetMap
    ...
    &LAYERS=EXTERNAL_WMS:basemap,layer1,layer2
@@ -2113,7 +2113,7 @@ Similarly, external layers can be used in GetPrint requests:
 
 .. code-block:: none
 
-   http://localhost/qgis_server?
+   http://localhost/qgisserver?
    SERVICE=WMS
    ...
    &REQUEST=GetPrint&TEMPLATE=A4
