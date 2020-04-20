@@ -45,7 +45,8 @@ The default port the Development Server listens to is ``8000``. Example output:
     127.0.0.1 [lun gen 20 15:16:41 2020] 1310 5ms "GET /wfs3/static/style.css HTTP/1.1" 200
     127.0.0.1 [lun gen 20 15:16:43 2020] 4285 13ms "GET /wfs3/collections?MAP=/tests/testdata/qgis_server/test_project.qgs HTTP/1.1" 200
 
-The server has a few options that can be passed as command line arguments, you can see them all
+The server has a few options that can be passed as command line arguments.
+You can see them all by invoking the server with ``-h``.
 by invoking the server with ``-h``.
 
 .. code-block:: bash
