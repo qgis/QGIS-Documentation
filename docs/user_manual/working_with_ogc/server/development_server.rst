@@ -33,7 +33,7 @@ To launch the server:
 
     $ qgis_mapserver
 
-The default port the Development Server listens to is ``8000``, example output:
+The default port the Development Server listens to is ``8000``. Example output:
 
 .. code-block:: bash
 
