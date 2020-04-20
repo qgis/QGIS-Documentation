@@ -23,7 +23,7 @@ to serve your project files.
 
     The Standalone Development Server has not been developed with the purpose
     of being used in production, it was not checked for security vulnerabilities
-    or for other stress conditions that usually happen on a publicly exposed
+    or for other stress conditions that normally will occur on a publicly exposed
     server.
 
 
