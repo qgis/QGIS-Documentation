@@ -47,7 +47,6 @@ The default port the Development Server listens to is ``8000``. Example output:
 
 The server has a few options that can be passed as command line arguments.
 You can see them all by invoking the server with ``-h``.
-by invoking the server with ``-h``.
 
 .. code-block:: bash
 
