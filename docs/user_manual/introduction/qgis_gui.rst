@@ -2504,9 +2504,11 @@ fine-tune the 3D scene:
     * an :guilabel:`Online` service, loading `elevation tiles
       <http://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png>`_
       produced by Mapzen tools -- more details at https://registry.opendata.aws/terrain-tiles/
-  * :guilabel:`Elevation`: Raster layer to be used for generation of
+    * a loaded :guilabel:`Mesh` dataset
+  * :guilabel:`Elevation`: Raster or mesh layer to be used for generation of
     the terrain.
-    This layer must contain a band that represents elevation.
+    The raster layer must contain a band that represents elevation.
+    The mesh layer will use the Z values of its vertices.
   * :guilabel:`Vertical scale`: Scale factor for vertical axis.
     Increasing the scale will exaggerate the height of the landforms.
   * :guilabel:`Tile resolution`: How many samples from the terrain
@@ -2519,6 +2521,14 @@ fine-tune the 3D scene:
     cracks between tiles of the terrain.
     Raising this value will add vertical walls ("skirts") around terrain
     tiles to hide the cracks.
+
+* :guilabel:`Mesh Terrain Settings`: Configures the rendering of the terrain
+  when a mesh layer is used. You can set the triangles, colors or arrows
+  properties of the Mesh dataset vertices.
+  More details in the :ref:`Mesh layer properties <label_meshproperties>` section.
+
+  .. TODO: replace the mesh properties link with a direct one to the 3D section
+     when available
 
 * |unchecked| :guilabel:`Terrain shading`: Allows you to choose how the
   terrain should be rendered:
