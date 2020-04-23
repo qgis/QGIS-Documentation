@@ -1280,7 +1280,7 @@ data. The first three measuring tools behave equally to global project settings:
   when geographic and projected coordinate systems are defined for the project.
 * If you want to calculate the projected/planimetric area or distance using cartesian
   maths, the measurement ellipsoid has to be set to "None/Planimetric"
-  (:menuselection:`Project --> Properties... --> CRS`). However,
+  (:menuselection:`Project --> Properties... --> General`). However,
   with a geographic (ie unprojected) CRS defined for the data and project, area and
   distance measurement will be ellipsoidal.
 
