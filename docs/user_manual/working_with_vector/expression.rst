@@ -846,7 +846,7 @@ This group contains math functions (e.g., square root, sin and cos).
    measured clockwise from the vertical on point a to point b"
    "ceil", "Rounds a number upwards"
    "clamp", "Restricts an input value to a specified range"
-   "cos", "Returns the cosine of a value in radians"
+   "cos", "Returns the cosine of an angle in radians"
    "degrees", "Converts from radians to degrees"
    "exp", "Returns exponential of a value"
    "floor", "Rounds a number downwards"
@@ -868,9 +868,9 @@ This group contains math functions (e.g., square root, sin and cos).
    range using an exponential curve"
    "scale_linear", "Transforms a given value from an input domain to an output
    range using linear interpolation"
-   "sin", "Returns the sine of an angle"
+   "sin", "Returns the sine of an angle in radians"
    "sqrt", "Returns the square root of a value"
-   "tan", "Returns the tangent of an angle"
+   "tan", "Returns the tangent of an angle in radians"
 
 
 Operators
