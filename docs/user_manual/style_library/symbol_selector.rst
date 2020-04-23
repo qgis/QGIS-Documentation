@@ -358,6 +358,19 @@ symbol layer types:
   :ref:`marker symbol layer <vector_marker_symbols>`. You can set the distance
   and a displacement between rows of markers, and an offset from the
   feature boundary; 
+* **Random marker fill**: fills the polygon with a :ref:`marker symbol 
+  <vector_marker_symbols>` placed at random locations within the polygon
+  boundary. You can set:
+
+  * the number of marker symbols to render, either as an absolute count
+    or as density-based (the fill density will remain the same on different
+    scale / zoom levels)
+  * an optional random number seed, to give consistent placement
+    of markers whenever maps are refreshed (also allows random placement
+    to play nice with QGIS server and tile-based rendering)
+  * whether markers rendered near the edges of polygons should be clipped
+    to the polygon boundary or not
+
 * **Raster image fill**: fills the polygon with tiles from a raster image (:file:`PNG`
   :file:`JPG`, :file:`BMP` ...). The image can be a file on the disk, a remote URL
   or an embedded file encoded as a string (:ref:`more details <svg_paths>`).
