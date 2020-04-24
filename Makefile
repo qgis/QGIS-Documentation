@@ -37,6 +37,9 @@ html:
 		$(SPHINXBUILD) -b html -nW --keep-going "$(SOURCEDIR)" "$(BUILDDIR)/html/$(LANG)" $(SPHINXOPTS) $(0); \
 	fi
 
+latex:
+	$(SPHINXBUILD) -b latex "$(SOURCEDIR)" "$(BUILDDIR)/latex/$(LANG)" $(SPHINXINTLOPTS) $(0); \
+
 site: html
 	rsync -az $(BUILDDIR)/html/$(LANG) $(SITEDIR)/
 
