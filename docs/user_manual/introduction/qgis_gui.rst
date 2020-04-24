@@ -115,11 +115,11 @@ The :menuselection:`Project` menu provides access and exit points for
      -
      -
      -
-   * - :menuselection:`-->` :guilabel:`GeoPackage...`
+   * - :menuselection:`--> GeoPackage...`
      -
      -
      - :ref:`sec_projects`
-   * - :menuselection:`-->` :guilabel:`PostgreSQL...`
+   * - :menuselection:`--> PostgreSQL...`
      -
      -
      - :ref:`sec_projects`
@@ -143,15 +143,15 @@ The :menuselection:`Project` menu provides access and exit points for
      -
      -
      -
-   * - :menuselection:`-->` :guilabel:`Templates...`
+   * - :menuselection:`--> Templates...`
      -
      -
      - :ref:`sec_projects`
-   * - :menuselection:`-->` :guilabel:`GeoPackage...`
+   * - :menuselection:`--> GeoPackage...`
      -
      -
      - :ref:`sec_projects`
-   * - :menuselection:`-->` :guilabel:`PostgreSQL...`
+   * - :menuselection:`--> PostgreSQL...`
      -
      -
      - :ref:`sec_projects`
@@ -181,13 +181,11 @@ The :menuselection:`Project` menu provides access and exit points for
      -
      -
      - :ref:`exportingmapcanvas`
-   * - :menuselection:`-->`
-       :guilabel:`Export Project to DXF...`
+   * - :menuselection:`--> Export Project to DXF...`
      -
      -
      - :ref:`create_dxf_files`
-   * - :menuselection:`-->`
-       :guilabel:`Import Layers from DWG/DXF...`
+   * - :menuselection:`--> Import Layers from DWG/DXF...`
      -
      -
      - :ref:`import_dxfdwg`
@@ -256,11 +254,11 @@ details).
      - :kbd:`Ctrl+Alt+V`
      -
      - :ref:`sec_attribute_table`
-   * - :menuselection:`-->` :guilabel:`New Vector Layer...`
+   * - :menuselection:`--> New Vector Layer...`
      -
      -
      - :ref:`sec_attribute_table`
-   * - :menuselection:`-->` :guilabel:`Temporary Scratch Layer...`
+   * - :menuselection:`--> Temporary Scratch Layer...`
      -
      -
      - :ref:`sec_attribute_table`
@@ -308,8 +306,7 @@ details).
      - :kbd:`Ctrl+Shift+A`
      - :guilabel:`Attributes`
      - :ref:`sec_selection`
-   * - :menuselection:`-->`
-       :guilabel:`Reselect Features`
+   * - :menuselection:`--> Reselect Features`
      - 
      - :guilabel:`Attributes`
      - :ref:`sec_selection`
@@ -642,17 +639,17 @@ actions like:
      -
      - :guilabel:`Attributes`
      - :ref:`sec_measure`
-   * - :menuselection:`-->`
+   * - :menuselection:`-->` |measure|
        :guilabel:`Measure Line`
      - :kbd:`Ctrl+Shift+M`
      - :guilabel:`Attributes`
      - :ref:`sec_measure`
-   * - :menuselection:`-->`
+   * - :menuselection:`-->` |measureArea|
        :guilabel:`Measure Area`
      - :kbd:`Ctrl+Shift+J`
      - :guilabel:`Attributes`
      - :ref:`sec_measure`
-   * - :menuselection:`-->`
+   * - :menuselection:`-->` |measureAngle|
        :guilabel:`Measure Angle`
      -
      - :guilabel:`Attributes`
@@ -689,37 +686,37 @@ actions like:
      - :kbd:`Alt+V` + :kbd:`D`
      -
      - :ref:`decorations`
-   * - :menuselection:`-->`
+   * - :menuselection:`-->` |addGrid|
        :guilabel:`Grid...`
      -
      -
      - :ref:`grid_decoration`
-   * - :menuselection:`-->`
+   * - :menuselection:`-->` |scaleBar|
        :guilabel:`Scale Bar...`
      -
      -
      - :ref:`scalebar_decoration`
-   * - :menuselection:`-->`
+   * - :menuselection:`-->` |addImage|
        :guilabel:`Image...`
      -
      -
      - :ref:`image_decoration`
-   * - :menuselection:`-->`
+   * - :menuselection:`-->` |northArrow|
        :guilabel:`North Arrow...`
      -
      -
      - :ref:`northarrow_decoration`
-   * - :menuselection:`-->`
+   * - :menuselection:`-->` |titleLabel|
        :guilabel:`Title Label...`
      -
      -
      - :ref:`title_label_decoration`
-   * - :menuselection:`-->`
+   * - :menuselection:`-->` |copyrightLabel|
        :guilabel:`Copyright Label...`
      -
      -
      - :ref:`copyright_decoration`
-   * - :menuselection:`-->`
+   * - :menuselection:`-->` |addMap|
        :guilabel:`Layout Extents...`
      -
      -
@@ -728,28 +725,23 @@ actions like:
      -
      -
      -
-   * - :menuselection:`-->`
-       :guilabel:`Normal`
+   * - :menuselection:`--> Normal`
      -
      -
      -
-   * - :menuselection:`-->`
-       :guilabel:`Simulate Photocopy (Grayscale)`
+   * - :menuselection:`--> Simulate Photocopy (Grayscale)`
      -
      -
      -
-   * - :menuselection:`-->`
-       :guilabel:`Simulate Fax (Mono)`
+   * - :menuselection:`--> Simulate Fax (Mono)`
      -
      -
      -
-   * - :menuselection:`-->`
-       :guilabel:`Simulate Color Blindness (Protanope)`
+   * - :menuselection:`--> Simulate Color Blindness (Protanope)`
      -
      -
      -
-   * - :menuselection:`-->`
-       :guilabel:`Simulate Color Blindness (Deuteronope)`
+   * - :menuselection:`--> Simulate Color Blindness (Deuteronope)`
      -
      -
      -
@@ -797,88 +789,71 @@ actions like:
      -
      -
      - :ref:`sec_panels_and_toolbars`
-   * - :menuselection:`-->`
-       :guilabel:`Advanced Digitizing`
+   * - :menuselection:`--> Advanced Digitizing`
      -
      -
      - :ref:`advanced_digitizing_panel`
-   * - :menuselection:`-->`
-       :guilabel:`Browser`
+   * - :menuselection:`--> Browser`
      -
      -
      - :ref:`browser_panel`
-   * - :menuselection:`-->`
-       :guilabel:`Browser (2)`
+   * - :menuselection:`--> Browser (2)`
      -
      -
      - :ref:`browser_panel`
-   * - :menuselection:`-->`
-       :guilabel:`GPS Information`
+   * - :menuselection:`--> GPS Information`
      -
      -
      - :ref:`sec_gpstracking`
-   * - :menuselection:`-->`
-       :guilabel:`GRASS Tools`
+   * - :menuselection:`--> GRASS Tools`
      -
      -
      - :ref:`sec_panels_and_toolbars`
-   * - :menuselection:`-->`
-       :guilabel:`Layer Order`
+   * - :menuselection:`--> Layer Order`
      -
      -
      - :ref:`layer_order`
-   * - :menuselection:`-->`
-       :guilabel:`Layer Styling`
+   * - :menuselection:`--> Layer Styling`
      -
      -
      - :ref:`layer_styling_panel`
-   * - :menuselection:`-->`
-       :guilabel:`Layers`
+   * - :menuselection:`--> Layers`
      -
      -
      - :ref:`label_legend`
-   * - :menuselection:`-->`
-       :guilabel:`Log Messages`
+   * - :menuselection:`--> Log Messages`
      -
      -
      - :ref:`log_message_panel`
-   * - :menuselection:`-->`
-       :guilabel:`Overview`
+   * - :menuselection:`--> Overview`
      -
      -
      - :ref:`overview_panels`
-   * - :menuselection:`-->`
-       :guilabel:`Processing Toolbox`
+   * - :menuselection:`--> Processing Toolbox`
      -
      -
      - :ref:`processing.toolbox`
-   * - :menuselection:`-->`
-       :guilabel:`Results Viewer`
+   * - :menuselection:`--> Results Viewer`
      -
      -
      - :ref:`processing.toolbox`
-   * - :menuselection:`-->`
-       :guilabel:`Snapping and Digitizing Options`
+   * - :menuselection:`--> Snapping and Digitizing Options`
      -
      -
      - :ref:`snapping_tolerance`
-   * - :menuselection:`-->`
-       :guilabel:`Spatial Bookmark Manager`
+   * - :menuselection:`--> Spatial Bookmark Manager`
      -
      -
      - :ref:`sec_bookmarks`
-   * - :menuselection:`-->`
-       :guilabel:`Statistics`
+   * - :menuselection:`--> Statistics`
      -
      -
      - :ref:`statistical_summary`
-   * - :menuselection:`-->`
-       :guilabel:`Tile Scale`
+   * - :menuselection:`--> Tile Scale`
      -
      -
      - :ref:`tilesets`
-   * - :menuselection:`-->`
-       :guilabel:`Undo/Redo`
+   * - :menuselection:`--> Undo/Redo`
      -
      -
      - :ref:`undo_redo_panel`
@@ -886,93 +861,71 @@ actions like:
      -
      -
      - :ref:`sec_panels_and_toolbars`
-   * - :menuselection:`-->`
-       :guilabel:`Advanced Digitizing Toolbar`
+   * - :menuselection:`--> Advanced Digitizing Toolbar`
      -
      -
      - :ref:`sec_advanced_edit`
-   * - :menuselection:`-->`
-       :guilabel:`Attributes Toolbar`
+   * - :menuselection:`--> Attributes Toolbar`
      -
      -
      -
-   * - :menuselection:`-->`
-       :guilabel:`Data Source Manager Toolbar`
+   * - :menuselection:`--> Data Source Manager Toolbar`
      -
      -
      - :ref:`manage_data_source`
-   * - :menuselection:`-->`
-       :guilabel:`Database Toolbar`
+   * - :menuselection:`--> Database Toolbar`
      -
      -
      -
-   * - :menuselection:`-->`
-       :guilabel:`Digitizing Toolbar`
+   * - :menuselection:`--> Digitizing Toolbar`
      -
      -
      - :ref:`sec_edit_existing_layer`
-   * - :menuselection:`-->`
-       :guilabel:`Help Toolbar`
+   * - :menuselection:`--> Help Toolbar`
      -
      -
      -
-   * - :menuselection:`-->`
-       :guilabel:`Label Toolbar`
+   * - :menuselection:`--> Label Toolbar`
      -
      -
      - :ref:`label_toolbar`
-   * - :menuselection:`-->`
-       :guilabel:`Manage Layers Toolbar`
+   * - :menuselection:`--> Manage Layers Toolbar`
      -
      -
      - :ref:`manage_data_source`
-   * - :menuselection:`-->`
-       :guilabel:`Map Navigation Toolbar`
+   * - :menuselection:`--> Map Navigation Toolbar`
      -
      -
      -
-   * - :menuselection:`-->`
-       :guilabel:`Plugins Toolbar`
+   * - :menuselection:`--> Plugins Toolbar`
      -
      -
      - :ref:`plugins.index`
-   * - :menuselection:`-->`
-       :guilabel:`Project Toolbar`
+   * - :menuselection:`--> Project Toolbar`
      -
      -
      -
-   * - :menuselection:`-->`
-       :guilabel:`Raster Toolbar`
+   * - :menuselection:`--> Raster Toolbar`
      -
      -
      -
-   * - :menuselection:`-->`
-       :guilabel:`Shape Digitizing Toolbar`
+   * - :menuselection:`--> Shape Digitizing Toolbar`
      -
      -
      -
-   * - :menuselection:`-->`
-       :guilabel:`Snapping Toolbar`
+   * - :menuselection:`--> Snapping Toolbar`
      -
      -
      - :ref:`snapping_tolerance`
-   * - :menuselection:`-->`
-       :guilabel:`Vector Toolbar`
+   * - :menuselection:`--> Vector Toolbar`
      -
      -
      -
-   * - :menuselection:`-->`
-       :guilabel:`Web Toolbar`
+   * - :menuselection:`--> Web Toolbar`
      -
      -
      -
-   * - :menuselection:`-->`
-       :guilabel:`GRASS`
-     - 
-     - 
-     - :ref:`sec_panels_and_toolbars`
-   * - :menuselection:`-->`
-       :guilabel:`QgsResourceSharing`
+   * - :menuselection:`--> GRASS`
      - 
      - 
      - :ref:`sec_panels_and_toolbars`
@@ -1033,27 +986,27 @@ copy or paste layer properties (style, scale, CRS...).
      - 
      - :guilabel:`Data Source Manager`
      - :ref:`sec_create_vector`
-   * - :menuselection:`-->`
+   * - :menuselection:`-->` |newGeoPackageLayer|
        :guilabel:`New GeoPackage Layer...`
      - :kbd:`Ctrl+Shift+N`
      - :guilabel:`Data Source Manager`
      - :ref:`sec_create_vector`
-   * - :menuselection:`-->`
+   * - :menuselection:`-->` |newVectorLayer|
        :guilabel:`New Shapefile Layer...`
      - 
      - :guilabel:`Data Source Manager`
      - :ref:`sec_create_vector`
-   * - :menuselection:`-->`
+   * - :menuselection:`-->` |newSpatiaLiteLayer|
        :guilabel:`New SpatiaLite Layer...`
      - 
      - :guilabel:`Data Source Manager`
      - :ref:`sec_create_vector`
-   * - :menuselection:`-->`
+   * - :menuselection:`-->` |createMemory|
        :guilabel:`New Temporary Scratch Layer...`
      - 
      - :guilabel:`Data Source Manager`
      - :ref:`sec_create_vector`
-   * - :menuselection:`-->`
+   * - :menuselection:`-->` |virtualLayer|
        :guilabel:`New Virtual Layer...`
      - 
      - :guilabel:`Data Source Manager`
@@ -1062,72 +1015,72 @@ copy or paste layer properties (style, scale, CRS...).
      - 
      - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
-   * - :menuselection:`-->`
+   * - :menuselection:`-->` |addOgrLayer|
        :guilabel:`Add Vector Layer......`
      - :kbd:`Ctrl+Shift+V`
      - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
-   * - :menuselection:`-->`
+   * - :menuselection:`-->` |addRasterLayer|
        :guilabel:`Add Raster Layer...`
      - :kbd:`Ctrl+Shift+R`
      - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
-   * - :menuselection:`-->`
+   * - :menuselection:`-->` |addMeshLayer|
        :guilabel:`Add Mesh Layer...`
      - 
      - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
-   * - :menuselection:`-->`
+   * - :menuselection:`-->` |addDelimitedTextLayer|
        :guilabel:`Add Delimited Text Layer...`
      - :kbd:`Ctrl+Shift+T`
      - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
-   * - :menuselection:`-->`
+   * - :menuselection:`-->` |addPostgisLayer|
        :guilabel:`Add PostGIS Layer...`
      - :kbd:`Ctrl+Shift+D`
      - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
-   * - :menuselection:`-->`
+   * - :menuselection:`-->` |addSpatiaLiteLayer|
        :guilabel:`Add SpatiaLite Layer...`
      - :kbd:`Ctrl+Shift+L`
      - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
-   * - :menuselection:`-->`
+   * - :menuselection:`-->` |addMssqlLayer|
        :guilabel:`Add MSSQL Spatial Layer...`
      - 
      - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
-   * - :menuselection:`-->`
+   * - :menuselection:`-->` |addDb2Layer|
        :guilabel:`Add DB2 Spatial Layer...`
      - :kbd:`Ctrl+Shift+2`
      - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
-   * - :menuselection:`-->`
+   * - :menuselection:`-->` |virtualLayer|
        :guilabel:`Add/Edit Virtual Layer...`
      - 
      - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
-   * - :menuselection:`-->`
+   * - :menuselection:`-->` |wms|
        :guilabel:`Add WMS/WMTS Layer...`
      - :kbd:`Ctrl+Shift+W`
      - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
-   * - :menuselection:`-->`
+   * - :menuselection:`-->` |addAmsLayer|
        :guilabel:`Add ArcGIS MapServer Layer...`
      - 
      - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
-   * - :menuselection:`-->`
+   * - :menuselection:`-->` |wcs|
        :guilabel:`Add WCS Layer...`
      - 
      - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
-   * - :menuselection:`-->`
+   * - :menuselection:`-->` |wfs|
        :guilabel:`Add WFS Layer...`
      - 
      - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
-   * - :menuselection:`-->`
+   * - :menuselection:`-->` |addAfsLayer|
        :guilabel:`Add ArcGIS FeatureServer Layer...`
      - 
      - :guilabel:`Data Source Manager`
@@ -1172,13 +1125,11 @@ copy or paste layer properties (style, scale, CRS...).
      - 
      - :guilabel:`Digitizing`
      - :ref:`save_feature_edits`
-   * - :menuselection:`-->`
-       :guilabel:`Save for Selected Layer(s)`
+   * - :menuselection:`--> Save for Selected Layer(s)`
      - 
      - :guilabel:`Digitizing`
      - :ref:`save_feature_edits`
-   * - :menuselection:`-->`
-       :guilabel:`Rollback for Selected Layer(s)`
+   * - :menuselection:`--> Rollback for Selected Layer(s)`
      - 
      - :guilabel:`Digitizing`
      - :ref:`save_feature_edits`
@@ -1197,8 +1148,7 @@ copy or paste layer properties (style, scale, CRS...).
      - 
      - :guilabel:`Digitizing`
      - :ref:`save_feature_edits`
-   * - :menuselection:`-->`
-       :guilabel:`Cancel for all Layers`
+   * - :menuselection:`--> Cancel for all Layers`
      - 
      - :guilabel:`Digitizing`
      - :ref:`save_feature_edits`
@@ -1605,8 +1555,7 @@ are enabled.
 
 .. list-table::
    :header-rows: 1
-   :widths: 40 13 9 38
-   :stub-columns: 0
+   :widths: 40 15 8 38
 
    * - Menu Option
      - Shortcut
@@ -2689,6 +2638,7 @@ Click the icon to open the Plugin Manager dialog.
    :menuselection:`Settings --> Options --> CRS`.
 
 
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -2697,12 +2647,38 @@ Click the icon to open the Plugin Manager dialog.
 
 .. |3dNavigation| image:: /static/common/mAction3DNavigation.png
    :width: 1.3em
+.. |addAfsLayer| image:: /static/common/mActionAddAfsLayer.png
+   :width: 1.5em
 .. |addAllToOverview| image:: /static/common/mActionAddAllToOverview.png
+   :width: 1.5em
+.. |addAmsLayer| image:: /static/common/mActionAddAmsLayer.png
+   :width: 1.5em
+.. |addDb2Layer| image:: /static/common/mActionAddDb2Layer.png
+   :width: 1.5em
+.. |addDelimitedTextLayer| image:: /static/common/mActionAddDelimitedTextLayer.png
+   :width: 1.5em
+.. |addGrid| image:: /static/common/add_grid.png
+   :width: 1.5em
+.. |addImage| image:: /static/common/mActionAddImage.png
+   :width: 1.5em
+.. |addMap| image:: /static/common/mActionAddMap.png
+   :width: 1.5em
+.. |addMeshLayer| image:: /static/common/mActionAddMeshLayer.png
+   :width: 1.5em
+.. |addMssqlLayer| image:: /static/common/mActionAddMssqlLayer.png
+   :width: 1.5em
+.. |addOgrLayer| image:: /static/common/mActionAddOgrLayer.png
    :width: 1.5em
 .. |addPart| image:: /static/common/mActionAddPart.png
    :width: 1.5em
+.. |addPostgisLayer| image:: /static/common/mActionAddPostgisLayer.png
+   :width: 1.5em
+.. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
+   :width: 1.5em
 .. |addRing| image:: /static/common/mActionAddRing.png
    :width: 2em
+.. |addSpatiaLiteLayer| image:: /static/common/mActionAddSpatiaLiteLayer.png
+   :width: 1.5em
 .. |allEdits| image:: /static/common/mActionAllEdits.png
    :width: 1.5em
 .. |capturePoint| image:: /static/common/mActionCapturePoint.png
@@ -2726,6 +2702,10 @@ Click the icon to open the Plugin Manager dialog.
 .. |circularStringRadius| image:: /static/common/mActionCircularStringRadius.png
    :width: 1.5em
 .. |coordinateCapture| image:: /static/common/coordinate_capture.png
+   :width: 1.5em
+.. |copyrightLabel| image:: /static/common/copyright_label.png
+   :width: 1.5em
+.. |createMemory| image:: /static/common/mActionCreateMemory.png
    :width: 1.5em
 .. |customProjection| image:: /static/common/mActionCustomProjection.png
    :width: 1.5em
@@ -2824,6 +2804,10 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |measure| image:: /static/common/mActionMeasure.png
    :width: 1.5em
+.. |measureAngle| image:: /static/common/mActionMeasureAngle.png
+   :width: 1.5em
+.. |measureArea| image:: /static/common/mActionMeasureArea.png
+   :width: 1.5em
 .. |mergeFeatAttributes| image:: /static/common/mActionMergeFeatureAttributes.png
    :width: 1.5em
 .. |mergeFeatures| image:: /static/common/mActionMergeFeatures.png
@@ -2850,13 +2834,21 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |newBookmark| image:: /static/common/mActionNewBookmark.png
    :width: 1.5em
+.. |newGeoPackageLayer| image:: /static/common/mActionNewGeoPackageLayer.png
+   :width: 1.5em
 .. |newLayout| image:: /static/common/mActionNewLayout.png
    :width: 1.5em
 .. |newMap| image:: /static/common/mActionNewMap.png
    :width: 1.5em
 .. |newReport| image:: /static/common/mActionNewReport.png
    :width: 1.5em
+.. |newSpatiaLiteLayer| image:: /static/common/mActionNewSpatiaLiteLayer.png
+   :width: 1.5em
 .. |newTableRow| image:: /static/common/mActionNewTableRow.png
+   :width: 1.5em
+.. |newVectorLayer| image:: /static/common/mActionNewVectorLayer.png
+   :width: 1.5em
+.. |northArrow| image:: /static/common/north_arrow.png
    :width: 1.5em
 .. |offlineEditingCopy| image:: /static/common/offline_editing_copy.png
    :width: 1.5em
@@ -2934,6 +2926,8 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |saveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
    :width: 1.5em
+.. |scaleBar| image:: /static/common/mActionScaleBar.png
+   :width: 1.5em
 .. |search| image:: /static/common/search.png
    :width: 1.5em
 .. |selectAll| image:: /static/common/mActionSelectAll.png
@@ -2982,6 +2976,8 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |tiltUp| image:: /static/common/mActionTiltUp.png
    :width: 1.5em
+.. |titleLabel| image:: /static/common/title_label.png
+   :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
 .. |topologyChecker| image:: /static/common/mActionTopologyChecker.png
@@ -2997,6 +2993,14 @@ Click the icon to open the Plugin Manager dialog.
 .. |vertexTool| image:: /static/common/mActionVertexTool.png
    :width: 1.5em
 .. |vertexToolActiveLayer| image:: /static/common/mActionVertexToolActiveLayer.png
+   :width: 1.5em
+.. |virtualLayer| image:: /static/common/mActionAddVirtualLayer.png
+   :width: 1.5em
+.. |wcs| image:: /static/common/mActionAddWcsLayer.png
+   :width: 1.5em
+.. |wfs| image:: /static/common/mActionAddWfsLayer.png
+   :width: 1.5em
+.. |wms| image:: /static/common/mActionAddWmsLayer.png
    :width: 1.5em
 .. |zoomActual| image:: /static/common/mActionZoomActual.png
    :width: 1.5em
