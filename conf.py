@@ -206,7 +206,9 @@ latex_elements = {
     \\newunicodechar{≠}{$\\neq$}
     \\newunicodechar{≥}{$\geq$}
     \\newunicodechar{≤}{$\leq$}
-    \\newunicodechar{​}{ }'''
+    \\newunicodechar{​}{ }
+    \\newunicodechar{Т}{T}
+    \\newunicodechar{А}{A}'''
 }
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -242,12 +244,6 @@ latex_use_parts = False
 
 # If false, no module index is generated.
 #latex_use_modindex = True
-
-
-
-
-
-
 
 # -- Settings for Python code samples testing --------------------------------
 
