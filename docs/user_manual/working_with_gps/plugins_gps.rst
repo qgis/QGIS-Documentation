@@ -207,7 +207,7 @@ Garmin GPSMAP 60cs
 
 **MS Windows**
 
-Install the Garmin USB drivers ​from
+Install the Garmin USB drivers from
 https://www8.garmin.com/support/download_details.jsp?id=591
 
 Connect the unit. Open GPS Tools and use ``type=garmin serial`` and ``port=usb:``
