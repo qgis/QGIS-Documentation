@@ -188,6 +188,67 @@ if 'html_context' in globals():
 else:
     html_context = context
 
+
+latex_elements = {
+# The paper size ('letterpaper' or 'a4paper').
+ 'papersize': 'a4paper',
+
+  # The font size ('10pt', '11pt' or '12pt').
+  #'pointsize': '10pt',
+
+  # Additional stuff for the LaTeX preamble.
+  'preamble': u'''\\usepackage{combelow}
+    \\usepackage{newunicodechar}
+    \\newunicodechar{Ș}{\\cb{S}}
+    \\newunicodechar{ș}{\\cb{s}}
+    \\newunicodechar{Ț}{\\cb{T}}
+    \\newunicodechar{ț}{\\cb{t}}
+    \\newunicodechar{≠}{$\\neq$}
+    \\newunicodechar{≥}{$\geq$}
+    \\newunicodechar{≤}{$\leq$}
+    \\newunicodechar{​}{ }'''
+}
+
+# -- Options for LaTeX output --------------------------------------------------
+
+# The paper size ('letter' or 'a4').
+latex_paper_size = 'a4'
+
+# The font size ('10pt', '11pt' or '12pt').
+#latex_font_size = '10pt'
+
+# Grouping the document tree into LaTeX files. List of tuples
+# (source start file, target name, title, author, documentclass [howto/manual]).
+latex_documents = [
+  ('docs/user_manual/index', 'QGISUserGuide.tex', u'QGIS User Guide', u'QGIS Project', 'manual'),
+  ('docs/pyqgis_developer_cookbook/index', 'PyQGISDeveloperCookbook.tex', u'PyQGIS developer cookbook', u'QGIS Project', 'manual'),
+  ('docs/training_manual/index', 'QGISTrainingManual.tex', u'QGIS Training Manual', u'QGIS Project', 'manual'),
+  ('docs/developers_guide/index', 'QGISDevelopersGuide.tex', u'QGIS Developers Guide', u'QGIS Project', 'manual'),
+]
+
+# The name of an image file (relative to this directory) to place at the top of
+# the title page.
+#latex_logo = None
+
+# For "manual" documents, if this is true, then toplevel headings are parts,
+# not chapters.
+latex_use_parts = False
+
+# Additional stuff for the LaTeX preamble.
+#latex_preamble = ''
+
+# Documents to append as an appendix to all manuals.
+#latex_appendices = []
+
+# If false, no module index is generated.
+#latex_use_modindex = True
+
+
+
+
+
+
+
 # -- Settings for Python code samples testing --------------------------------
 
 # adding this because in pycookbook a lot of text is referencing classes, which cannot be found by sphinx
