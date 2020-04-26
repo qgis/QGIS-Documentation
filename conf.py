@@ -169,7 +169,7 @@ context = {
     'supported_languages': [ [l, docs_url+version+'/'+l] for l in supported_languages],
     # 'downloads': [ ['PDF', '/builders.pdf'], ['HTML', '/builders.tgz'] ],
     
-    'display_github': True,
+    'display_github': not html_context['outdated'], # Do not display for outdated releases
     'github_user': 'qgis',
     'github_repo': 'QGIS-Documentation',
     'github_version': 'master/',
