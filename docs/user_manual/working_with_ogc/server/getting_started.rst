@@ -193,7 +193,7 @@ and manage the QGIS Server processes. Official Debian packages exist for both.
     resulting in much better performance. For that reason, spawn-fcgi
     is recommended for production use.
 
-Another option is to rely on Systemd, the init system for GNU/Linux that most Linux distributions use today. One of the advantages of this method is that it requires no other components or processes than Systemd. It’s meant to be simple, yet robust and efficient for production deployments.
+Another option is to rely on **Systemd**, the init system for GNU/Linux that most Linux distributions use today. One of the advantages of this method is that it requires no other components or processes. It’s meant to be simple, yet robust and efficient for production deployments.
 
 Install NGINX:
 
