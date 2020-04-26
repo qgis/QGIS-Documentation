@@ -170,8 +170,13 @@ context = {
     'versions': [ [v, docs_url+v] for v in version_list],
     'supported_languages': [ [l, docs_url+version+'/'+l] for l in supported_languages],
     # 'downloads': [ ['PDF', '/builders.pdf'], ['HTML', '/builders.tgz'] ],
+<<<<<<< HEAD
 
     'display_github': True,
+=======
+    
+    'display_github': not html_context['outdated'], # Do not display for outdated releases
+>>>>>>> 360357453... Do not display "Edit on Github" top message for outdated releases
     'github_user': 'qgis',
     'github_repo': 'QGIS-Documentation',
     'github_version': 'master/',
