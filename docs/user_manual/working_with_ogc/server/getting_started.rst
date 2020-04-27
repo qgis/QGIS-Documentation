@@ -383,12 +383,12 @@ Now enable and start sockets:
 
  sudo systemctl enable qgis-server@1.socket
  sudo systemctl start qgis-server@1.socket
- sudo systemctl enable qgis-server@1.socket
- sudo systemctl start qgis-server@1.socket
- sudo systemctl enable qgis-server@1.socket
- sudo systemctl start qgis-server@1.socket
- sudo systemctl enable qgis-server@1.socket
- sudo systemctl start qgis-server@1.socket
+ sudo systemctl enable qgis-server@2.socket
+ sudo systemctl start qgis-server@2.socket
+ sudo systemctl enable qgis-server@3.socket
+ sudo systemctl start qgis-server@3.socket
+ sudo systemctl enable qgis-server@4.socket
+ sudo systemctl start qgis-server@4.socket
 
 The **QGIS Server Service unit** defines and starts the QGIS Server process.
 The important part is that the Service process’ standard input is connected to
