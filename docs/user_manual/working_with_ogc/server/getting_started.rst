@@ -400,7 +400,8 @@ configuration located in ``/etc/systemd/system/qgis-server@.service``:
  [Install]
  WantedBy=multi-user.target
 
-Note that the QGIS Server `environment variables <https://docs.qgis.org/3.10/en/docs/user_manual/working_with_ogc/server/config.html#qgis-server-envvar>`_ are defined in a separate file, ``/etc/qgis-server/env``. It could look like that:
+Note that the QGIS Server :ref:`environment variables <qgis-server-envvar>`
+are defined in a separate file, ``/etc/qgis-server/env``. It could look like this:
 
 .. code-block:: qgis
 
