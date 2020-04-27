@@ -137,8 +137,10 @@ Let's now add ``mod_fcgid`` configuration directives for QGIS Server:
   used. And see below (``xvfb``) to understand when and why the ``DISPLAY`` environment variable
   needs to be set.
 
-These directives can be added either to ``/etc/apache2/mods-enabled/fcgid.conf`` for a system-wide configuration, or to a specific Apache ``VirtualHost``, if you want QGIS server to be available only for that address; the default one is available at
-``/etc/apache2/sites-available/000-default.conf``.
+These directives can be added either to :file:`/etc/apache2/mods-enabled/fcgid.conf`
+for a system-wide configuration, or to a specific Apache ``VirtualHost``,
+if you want QGIS server to be available only for that address; the default one
+is available at :file:`/etc/apache2/sites-available/000-default.conf`.
 
 .. code-block:: apache
 
@@ -293,7 +295,7 @@ Configuration
 ^^^^^^^^^^^^^
 
 The **include fastcgi_params;** used in previous configuration is important
-as it adds the parameters from ``/etc/nginx/fastcgi_params``:
+as it adds the parameters from :file:`/etc/nginx/fastcgi_params`:
 
 .. code-block:: nginx
 
@@ -349,17 +351,17 @@ variables as shown below:
 Systemd
 ^^^^^^^
 
-This method to deploy QGIS Server relies on two Systemd units, a 
-`Socket unit <https://www.freedesktop.org/software/systemd/man/systemd.socket.html>`_
-and a 
-`Service unit <https://www.freedesktop.org/software/systemd/man/systemd.service.html>`_.
+This method to deploy QGIS Server relies on two Systemd units:
+
+* a `Socket unit <https://www.freedesktop.org/software/systemd/man/systemd.socket.html>`_
+* and a `Service unit <https://www.freedesktop.org/software/systemd/man/systemd.service.html>`_.
 
 The **QGIS Server Socket unit** defines and creates a file system socket,
 used by NGINX to start and communicate with QGIS Server.
 The Socket unit has to be configured with ``Accept=false``, meaning that the
 calls to the ``accept()`` system call are delegated to the process created by
 the Service unit.
-It is located in ``/etc/systemd/system/qgis-server@.socket``, which is actually
+It is located in :file:`/etc/systemd/system/qgis-server@.socket`, which is actually
 a template:
 
 .. code-block:: ini
@@ -381,20 +383,20 @@ Now enable and start sockets:
 
 .. code-block:: bash
 
- sudo systemctl enable qgis-server@1.socket
- sudo systemctl start qgis-server@1.socket
- sudo systemctl enable qgis-server@2.socket
- sudo systemctl start qgis-server@2.socket
- sudo systemctl enable qgis-server@3.socket
- sudo systemctl start qgis-server@3.socket
- sudo systemctl enable qgis-server@4.socket
- sudo systemctl start qgis-server@4.socket
+ systemctl enable qgis-server@1.socket
+ systemctl start qgis-server@1.socket
+ systemctl enable qgis-server@2.socket
+ systemctl start qgis-server@2.socket
+ systemctl enable qgis-server@3.socket
+ systemctl start qgis-server@3.socket
+ systemctl enable qgis-server@4.socket
+ systemctl start qgis-server@4.socket
 
 The **QGIS Server Service unit** defines and starts the QGIS Server process.
 The important part is that the Service process’ standard input is connected to
 the socket defined by the Socket unit.
 This has to be configured using ``StandardInput=socket`` in the Service unit
-configuration located in ``/etc/systemd/system/qgis-server@.service``:
+configuration located in :file:`/etc/systemd/system/qgis-server@.service`:
 
 .. code-block:: ini
 
@@ -420,7 +422,8 @@ Now start socket service:
  sudo systemctl start qgis-server@sockets.service
 
 Note that the QGIS Server :ref:`environment variables <qgis-server-envvar>`
-are defined in a separate file, ``/etc/qgis-server/env``. It could look like this:
+are defined in a separate file, :file:`/etc/qgis-server/env`.
+It could look like this:
 
 .. code-block:: make
 
@@ -453,7 +456,7 @@ Now restart NGINX for the new configuration to be taken into account:
 
 .. code-block:: bash
 
- sudo serivce nginx restart
+ service nginx restart
 
 Thanks to Oslandia for sharing `their tutorial <https://oslandia.com/en/2018/11/23/deploying-qgis-server-with-systemd/>`_. 
 
@@ -461,7 +464,8 @@ Xvfb
 ----
 
 QGIS Server needs a running X Server to be fully usable, in particular for printing. 
-On servers it is usually recommentded not to install it, so you may use ``xvfb`` to have a virtual X environment.
+On servers it is usually recommended not to install it, so you may use ``xvfb``
+to have a virtual X environment.
 
 To install the package:
 
@@ -641,7 +645,8 @@ customize your project by defining contact information, precise some
 restrictions on CRS or even exclude some layers. Everything you need to know
 about that is described later in :ref:`Creatingwmsfromproject`.
 
-But for now, we are going to use a simple project already configured and previously downloaded in ``/home/qgis/projects/world.qgs``, as described above.
+But for now, we are going to use a simple project already configured and
+previously downloaded in :file:`/home/qgis/projects/world.qgs`, as described above.
 
 By opening the project and taking a quick look on layers, we know that 4
 layers are currently available:
