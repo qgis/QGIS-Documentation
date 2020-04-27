@@ -31,7 +31,7 @@ The vector :guilabel:`Layer Properties` dialog provides the following sections:
      - |symbology| :ref:`Symbology <vector_style_menu>`:sup:`[1]`
    * - |labeling| :ref:`Labels <vector_labels_tab>`:sup:`[1]`
      - |diagram| :ref:`Diagrams <sec_diagram>`
-     - |3d| :guilabel:`3D View`:sup:`[1]`
+     - |3d| :ref:`3D View <sec_3_d_view>`:sup:`[1]`
    * - |sourceFields| :ref:`Fields <vector_fields_menu>`
      - |formView| :ref:`Attributes Form <vector_attributes_menu>`
      - |join| :ref:`Joins <sec_joins>`
@@ -1896,9 +1896,9 @@ See :ref:`data_defined_labeling` for more information.
 3D View Properties
 =======================
 
-|3d| The :guilabel:`3D View` tab provides settings for vector layers that should be
-depicted in the :ref:`3D Map view <label_3dmapview>` tool. There are settings available for point, line
-and polygon layers.
+|3d| The :guilabel:`3D View` tab provides settings for vector layers that should
+be depicted in the :ref:`3D Map view <label_3dmapview>` tool. There are settings
+available for point, line and polygon layers.
 
 Point Layers
 ------------
@@ -1951,14 +1951,18 @@ Polygon Layers
   and |checkbox|:guilabel:`Invert normals`.
 * You can define |checkbox|:guilabel:`Edges` by :guilabel:`Width` and :guilabel:`Color`.
 
+.. _figure_3dview_properties:
+
+.. figure:: img/3d_view_properties.png
+   :align: center
+
+   3D properties of a polygon layer
+
 Application example
 -------------------
 
 To go through the settings explained above you can have a look at
 https://public.cloudmergin.com/projects/saber/luxembourg/tree . 
-
-
-
 
 
 .. index:: Fields, Forms
