@@ -193,7 +193,11 @@ and manage the QGIS Server processes. Official Debian packages exist for both.
     resulting in much better performance. For that reason, spawn-fcgi
     is recommended for production use.
 
-Another option is to rely on **Systemd**, the init system for GNU/Linux that most Linux distributions use today. One of the advantages of this method is that it requires no other components or processes. It’s meant to be simple, yet robust and efficient for production deployments.
+Another option is to rely on **Systemd**, the init system for GNU/Linux that most
+Linux distributions use today.
+One of the advantages of this method is that it requires no other components or
+processes.
+It’s meant to be simple, yet robust and efficient for production deployments.
 
 Install NGINX:
 
@@ -345,11 +349,20 @@ variables as shown below:
 Systemd
 ^^^^^^^
 
-This method to deploy QGIS Server relies on two Systemd units, a `Socket unit <https://www.freedesktop.org/software/systemd/man/systemd.socket.html>`_ and a `Service unit <https://www.freedesktop.org/software/systemd/man/systemd.service.html>`_.
+This method to deploy QGIS Server relies on two Systemd units, a 
+`Socket unit <https://www.freedesktop.org/software/systemd/man/systemd.socket.html>`_
+and a 
+`Service unit <https://www.freedesktop.org/software/systemd/man/systemd.service.html>`_.
 
-The **QGIS Server Socket unit** defines and creates a file system socket, used by NGINX to start and communicate with QGIS Server. The Socket unit has to be configured with ``Accept=false``, meaning that the calls to the ``accept()`` system call are delegated to the process created by the Service unit. It is located in ``/etc/systemd/system/qgis-server@.socket``, which is actually a template:
+The **QGIS Server Socket unit** defines and creates a file system socket,
+used by NGINX to start and communicate with QGIS Server.
+The Socket unit has to be configured with ``Accept=false``, meaning that the
+calls to the ``accept()`` system call are delegated to the process created by
+the Service unit.
+It is located in ``/etc/systemd/system/qgis-server@.socket``, which is actually
+a template:
 
-.. code-block:: systemd
+.. code-block:: ini
 
  [Unit]
  Description=QGIS Server Listen Socket (instance %i)
@@ -364,9 +377,13 @@ The **QGIS Server Socket unit** defines and creates a file system socket, used b
  [Install]
  WantedBy=sockets.target
 
-The **QGIS Server Service unit** defines and starts the QGIS Server process. The important part is that the Service process’ standard input is connected to the socket defined by the Socket unit. This has to be configured using ``StandardInput=socket`` in the Service unit configuration located in ``/etc/systemd/system/qgis-server@.service``:
+The **QGIS Server Service unit** defines and starts the QGIS Server process.
+The important part is that the Service process’ standard input is connected to
+the socket defined by the Socket unit.
+This has to be configured using ``StandardInput=socket`` in the Service unit
+configuration located in ``/etc/systemd/system/qgis-server@.service``:
 
-.. code-block:: systemd
+.. code-block:: ini
 
  [Unit]
  Description=QGIS Server Service (instance %i)
@@ -383,9 +400,10 @@ The **QGIS Server Service unit** defines and starts the QGIS Server process. The
  [Install]
  WantedBy=multi-user.target
 
-Note that the QGIS Server `environment variables <https://docs.qgis.org/3.10/en/docs/user_manual/working_with_ogc/server/config.html#qgis-server-envvar>`_ are defined in a separate file, ``/etc/qgis-server/env``. It could look like that:
+Note that the QGIS Server :ref:`environment variables <qgis-server-envvar>`
+are defined in a separate file, ``/etc/qgis-server/env``. It could look like this:
 
-.. code-block:: qgis
+.. code-block:: make
 
  QGIS_PROJECT_FILE=/etc/qgis/myproject.qgs
  QGIS_SERVER_LOG_STDERR=1
@@ -412,7 +430,7 @@ Finally, introduce the NGINX configuration for this setup:
     }
  }
 
-Thanks to Oslandia for granting the content of `their tutorial <https://oslandia.com/en/2018/11/23/deploying-qgis-server-with-systemd/>`_. 
+Thanks to Oslandia for sharing `their tutorial <https://oslandia.com/en/2018/11/23/deploying-qgis-server-with-systemd/>`_. 
 
 Xvfb
 ----
