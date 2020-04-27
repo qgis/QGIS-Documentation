@@ -349,7 +349,10 @@ variables as shown below:
 Systemd
 ^^^^^^^
 
-This method to deploy QGIS Server relies on two Systemd units, a `Socket unit <https://www.freedesktop.org/software/systemd/man/systemd.socket.html>`_ and a `Service unit <https://www.freedesktop.org/software/systemd/man/systemd.service.html>`_.
+This method to deploy QGIS Server relies on two Systemd units, a 
+`Socket unit <https://www.freedesktop.org/software/systemd/man/systemd.socket.html>`_
+and a 
+`Service unit <https://www.freedesktop.org/software/systemd/man/systemd.service.html>`_.
 
 The **QGIS Server Socket unit** defines and creates a file system socket, used by NGINX to start and communicate with QGIS Server. The Socket unit has to be configured with ``Accept=false``, meaning that the calls to the ``accept()`` system call are delegated to the process created by the Service unit. It is located in ``/etc/systemd/system/qgis-server@.socket``, which is actually a template:
 
