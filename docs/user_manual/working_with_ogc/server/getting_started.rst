@@ -403,7 +403,7 @@ configuration located in ``/etc/systemd/system/qgis-server@.service``:
 Note that the QGIS Server :ref:`environment variables <qgis-server-envvar>`
 are defined in a separate file, ``/etc/qgis-server/env``. It could look like this:
 
-.. code-block:: qgis
+.. code-block:: make
 
  QGIS_PROJECT_FILE=/etc/qgis/myproject.qgs
  QGIS_SERVER_LOG_STDERR=1
