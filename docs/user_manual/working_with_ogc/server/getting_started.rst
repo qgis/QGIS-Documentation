@@ -377,7 +377,11 @@ a template:
  [Install]
  WantedBy=sockets.target
 
-The **QGIS Server Service unit** defines and starts the QGIS Server process. The important part is that the Service process’ standard input is connected to the socket defined by the Socket unit. This has to be configured using ``StandardInput=socket`` in the Service unit configuration located in ``/etc/systemd/system/qgis-server@.service``:
+The **QGIS Server Service unit** defines and starts the QGIS Server process.
+The important part is that the Service process’ standard input is connected to
+the socket defined by the Socket unit.
+This has to be configured using ``StandardInput=socket`` in the Service unit
+configuration located in ``/etc/systemd/system/qgis-server@.service``:
 
 .. code-block:: systemd
 
