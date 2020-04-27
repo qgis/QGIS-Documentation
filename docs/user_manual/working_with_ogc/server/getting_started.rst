@@ -362,7 +362,7 @@ the Service unit.
 It is located in ``/etc/systemd/system/qgis-server@.socket``, which is actually
 a template:
 
-.. code-block:: systemd
+.. code-block:: ini
 
  [Unit]
  Description=QGIS Server Listen Socket (instance %i)
