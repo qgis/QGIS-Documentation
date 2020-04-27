@@ -383,7 +383,7 @@ the socket defined by the Socket unit.
 This has to be configured using ``StandardInput=socket`` in the Service unit
 configuration located in ``/etc/systemd/system/qgis-server@.service``:
 
-.. code-block:: systemd
+.. code-block:: ini
 
  [Unit]
  Description=QGIS Server Service (instance %i)
