@@ -19,7 +19,7 @@ on a computer. GIS stands for **'Geographical Information System'**.
 A GIS consists of:
 
 * **Digital Data** –-- the geographical information that you will view and
-   analyse using computer hardware and software.
+  analyse using computer hardware and software.
 * **Computer Hardware** –-- computers used for storing data, displaying graphics
   and processing data.
 * **Computer Software** –-- computer programs that run on the computer hardware
