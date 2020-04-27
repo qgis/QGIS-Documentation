@@ -193,6 +193,12 @@ and manage the QGIS Server processes. Official Debian packages exist for both.
     resulting in much better performance. For that reason, spawn-fcgi
     is recommended for production use.
 
+Another option is to rely on **Systemd**, the init system for GNU/Linux that most
+Linux distributions use today.
+One of the advantages of this method is that it requires no other components or
+processes.
+It’s meant to be simple, yet robust and efficient for production deployments.
+
 Install NGINX:
 
 .. code-block:: bash
@@ -339,6 +345,117 @@ variables as shown below:
     When using spawn-fcgi, you may directly define environment variables
     before running the server. For example:
     ``export QGIS_SERVER_LOG_FILE=/var/log/qgis/qgisserver.log``
+
+Systemd
+^^^^^^^
+
+This method to deploy QGIS Server relies on two Systemd units, a 
+`Socket unit <https://www.freedesktop.org/software/systemd/man/systemd.socket.html>`_
+and a 
+`Service unit <https://www.freedesktop.org/software/systemd/man/systemd.service.html>`_.
+
+The **QGIS Server Socket unit** defines and creates a file system socket,
+used by NGINX to start and communicate with QGIS Server.
+The Socket unit has to be configured with ``Accept=false``, meaning that the
+calls to the ``accept()`` system call are delegated to the process created by
+the Service unit.
+It is located in ``/etc/systemd/system/qgis-server@.socket``, which is actually
+a template:
+
+.. code-block:: ini
+
+ [Unit]
+ Description=QGIS Server Listen Socket (instance %i)
+ 
+ [Socket]
+ Accept=false
+ ListenStream=/var/run/qgis-server-%i.sock
+ SocketUser=www-data
+ SocketGroup=www-data
+ SocketMode=0600
+ 
+ [Install]
+ WantedBy=sockets.target
+
+Now enable and start sockets:
+
+.. code-block:: bash
+
+ sudo systemctl enable qgis-server@1.socket
+ sudo systemctl start qgis-server@1.socket
+ sudo systemctl enable qgis-server@2.socket
+ sudo systemctl start qgis-server@2.socket
+ sudo systemctl enable qgis-server@3.socket
+ sudo systemctl start qgis-server@3.socket
+ sudo systemctl enable qgis-server@4.socket
+ sudo systemctl start qgis-server@4.socket
+
+The **QGIS Server Service unit** defines and starts the QGIS Server process.
+The important part is that the Service process’ standard input is connected to
+the socket defined by the Socket unit.
+This has to be configured using ``StandardInput=socket`` in the Service unit
+configuration located in ``/etc/systemd/system/qgis-server@.service``:
+
+.. code-block:: ini
+
+ [Unit]
+ Description=QGIS Server Service (instance %i)
+ 
+ [Service]
+ User=www-data
+ Group=www-data
+ StandardOutput=null
+ StandardError=journal
+ StandardInput=socket
+ ExecStart=/usr/lib/cgi-bin/qgis_mapserv.fcgi
+ EnvironmentFile=/etc/qgis-server/env
+ 
+ [Install]
+ WantedBy=multi-user.target
+
+Now start socket service:
+
+.. code-block:: bash
+
+ sudo systemctl start qgis-server@sockets.service
+
+Note that the QGIS Server :ref:`environment variables <qgis-server-envvar>`
+are defined in a separate file, ``/etc/qgis-server/env``. It could look like this:
+
+.. code-block:: make
+
+ QGIS_PROJECT_FILE=/etc/qgis/myproject.qgs
+ QGIS_SERVER_LOG_STDERR=1
+ QGIS_SERVER_LOG_LEVEL=3
+
+Finally, introduce the NGINX configuration for this setup:
+
+.. code-block:: nginx
+
+ upstream qgis-server_backend {
+    server unix:/var/run/qgis-server-1.sock;
+    server unix:/var/run/qgis-server-2.sock;
+    server unix:/var/run/qgis-server-3.sock;
+    server unix:/var/run/qgis-server-4.sock;
+ }
+ 
+ server {
+    …
+ 
+    location /qgis {
+        gzip off;
+        include fastcgi_params;
+        fastcgi_pass qgis-server_backend;
+    }
+ }
+
+Now restart NGINX for the new configuration to be taken into account:
+
+.. code-block:: bash
+
+ sudo serivce nginx restart
+
+Thanks to Oslandia for sharing `their tutorial <https://oslandia.com/en/2018/11/23/deploying-qgis-server-with-systemd/>`_. 
 
 Xvfb
 ----
