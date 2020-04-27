@@ -377,6 +377,19 @@ a template:
  [Install]
  WantedBy=sockets.target
 
+Now enable and start sockets:
+
+.. code-block:: bash
+
+ sudo systemctl enable qgis-server@1.socket
+ sudo systemctl start qgis-server@1.socket
+ sudo systemctl enable qgis-server@1.socket
+ sudo systemctl start qgis-server@1.socket
+ sudo systemctl enable qgis-server@1.socket
+ sudo systemctl start qgis-server@1.socket
+ sudo systemctl enable qgis-server@1.socket
+ sudo systemctl start qgis-server@1.socket
+
 The **QGIS Server Service unit** defines and starts the QGIS Server process.
 The important part is that the Service process’ standard input is connected to
 the socket defined by the Socket unit.
@@ -399,6 +412,12 @@ configuration located in ``/etc/systemd/system/qgis-server@.service``:
  
  [Install]
  WantedBy=multi-user.target
+
+Now start socket service:
+
+.. code-block:: bash
+
+ sudo systemctl start qgis-server@sockets.service
 
 Note that the QGIS Server :ref:`environment variables <qgis-server-envvar>`
 are defined in a separate file, ``/etc/qgis-server/env``. It could look like this:
@@ -429,6 +448,12 @@ Finally, introduce the NGINX configuration for this setup:
         fastcgi_pass qgis-server_backend;
     }
  }
+
+Now restart NGINX for the new configuration to be taken into account:
+
+.. code-block:: bash
+
+ sudo serivce nginx restart
 
 Thanks to Oslandia for sharing `their tutorial <https://oslandia.com/en/2018/11/23/deploying-qgis-server-with-systemd/>`_. 
 
