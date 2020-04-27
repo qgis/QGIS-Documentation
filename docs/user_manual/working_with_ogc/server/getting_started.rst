@@ -430,7 +430,7 @@ Finally, introduce the NGINX configuration for this setup:
     }
  }
 
-Thanks to Oslandia for granting the content of `their tutorial <https://oslandia.com/en/2018/11/23/deploying-qgis-server-with-systemd/>`_. 
+Thanks to Oslandia for sharing `their tutorial <https://oslandia.com/en/2018/11/23/deploying-qgis-server-with-systemd/>`_. 
 
 Xvfb
 ----
