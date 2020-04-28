@@ -46,8 +46,8 @@ them here.
 Vector Layers
 =============
 
-To create and add a vector layer instance to the project, specify layer's data source identifier, name for the
-layer and provider's name:
+To create and add a vector layer instance to the project, specify the layer's data source
+identifier, name for the layer and provider's name:
 
 .. testcode:: loadlayer
 
