@@ -29,8 +29,8 @@ them here.
 Vector Layers
 =============
 
-To create a vector layer instance, specify layer's data source identifier, name for the
-layer and provider's name:
+To create and add a vector layer instance to the project, specify the layer's data source
+identifier, name for the layer and provider's name:
 
 .. code-block:: python
 
@@ -43,6 +43,8 @@ layer and provider's name:
  vlayer = QgsVectorLayer(path_to_ports_layer, "Ports layer", "ogr")
  if not vlayer.isValid():
      print("Layer failed to load!")
+ else:
+     QgsProject.instance().addMapLayer(vlayer)
 
 The data source identifier is a string and it is specific to each vector data
 provider. Layer's name is used in the layer list widget. It is important to
@@ -61,6 +63,8 @@ For a geopackage vector layer:
  vlayer = QgsVectorLayer(gpkg_places_layer, "Places layer", "ogr")
  if not vlayer.isValid():
      print("Layer failed to load!")
+ else:
+     QgsProject.instance().addMapLayer(vlayer)
 
 The quickest way to open and display a vector layer in QGIS is the
 :meth:`addVectorLayer() <qgis.gui.QgisInterface.addVectorLayer>`
@@ -89,7 +93,12 @@ providers:
 
     .. code-block:: python
 
+<<<<<<< HEAD
        vlayer = QgsVectorLayer("/path/to/shapefile/file.shp", "layer_name_you_like", "ogr")
+=======
+       vlayer = QgsVectorLayer("testdata/airports.shp", "layer_name_you_like", "ogr")
+       QgsProject.instance().addMapLayer(vlayer)
+>>>>>>> b4e0d4e81... vector layer is made but not added to project (#5362)
 
   * for dxf (note the internal options in data source uri):
 
@@ -97,7 +106,7 @@ providers:
 
        uri = "/path/to/dxffile/file.dxf|layername=entities|geometrytype=Point"
        vlayer = QgsVectorLayer(uri, "layer_name_you_like", "ogr")
-
+       QgsProject.instance().addMapLayer(vlayer)
 
 .. index::
    pair: Loading; PostGIS layers
@@ -118,8 +127,11 @@ providers:
       # subset (WHERE clause)
       uri.setDataSource("public", "roads", "the_geom", "cityid = 2643")
 
+<<<<<<< HEAD
       vlayer = QgsVectorLayer(uri.uri(False), "layer name you like", "postgres")
 
+=======
+>>>>>>> b4e0d4e81... vector layer is made but not added to project (#5362)
   .. note:: The ``False`` argument passed to ``uri.uri(False)`` prevents the
      expansion of the authentication configuration parameters, if you are not using
      any authentication configuration this argument does not make any difference.
@@ -135,6 +147,7 @@ providers:
 
       uri = "/some/path/file.csv?delimiter={}&xField={}&yField={}".format(";", "x", "y")
       vlayer = QgsVectorLayer(uri, "layer name you like", "delimitedtext")
+      QgsProject.instance().addMapLayer(vlayer)
 
   .. note:: The provider string is structured as a URL, so
      the path must be prefixed with ``file://``. Also it allows WKT (well known
@@ -156,6 +169,7 @@ providers:
 
       uri = "path/to/gpx/file.gpx?type=track"
       vlayer = QgsVectorLayer(uri, "layer name you like", "gpx")
+      QgsProject.instance().addMapLayer(vlayer)
 
 .. index::
   pair: Loading; SpatiaLite layers
@@ -175,6 +189,7 @@ providers:
 
       display_name = 'Towns'
       vlayer = QgsVectorLayer(uri.uri(), display_name, 'spatialite')
+      QgsProject.instance().addMapLayer(vlayer)
 
 .. index::
   pair: Loading; MySQL geometries
@@ -186,6 +201,7 @@ providers:
 
       uri = "MySQL:dbname,host=localhost,port=3306,user=root,password=xxx|layername=my_table"
       vlayer = QgsVectorLayer( uri, "my table", "ogr" )
+      QgsProject.instance().addMapLayer(vlayer)
 
 .. index::
   pair: WFS vector; Loading
@@ -196,6 +212,7 @@ providers:
 
         uri = "http://localhost:8080/geoserver/wfs?srsname=EPSG:23030&typename=union&version=1.0.0&request=GetFeature&service=WFS",
         vlayer = QgsVectorLayer(uri, "my wfs layer", "WFS")
+        QgsProject.instance().addMapLayer(vlayer)
 
   The uri can be created using the standard ``urllib`` library:
 
@@ -217,8 +234,17 @@ providers:
 
    .. code-block:: python
 
+<<<<<<< HEAD
       # vlayer is a vector layer, uri is a QgsDataSourceUri instance
       vlayer.setDataSource(uri.uri(), "layer name you like", "postgres")
+=======
+      uri = "https://demo.geo-solutions.it/geoserver/ows?service=WFS&request=GetFature&typename=topp:tasmania_water_bodies"
+      provider_options = QgsDataProvider.ProviderOptions()
+      # Use project's transform context
+      provider_options.transformContext = QgsProject.instance().transformContext()
+      vlayer.setDataSource(uri, "layer name you like", "WFS", provider_options)
+      QgsProject.instance().addMapLayer(vlayer)
+>>>>>>> b4e0d4e81... vector layer is made but not added to project (#5362)
 
 
 .. index::
