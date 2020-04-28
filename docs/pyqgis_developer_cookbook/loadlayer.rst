@@ -144,7 +144,6 @@ providers:
     uri.setDataSource("public", "roads", "the_geom", "cityid = 2643", provider_options)
 
     vlayer = QgsVectorLayer(uri.uri(False), "layer name you like", "postgres")
-    QgsProject.instance().addMapLayer(vlayer)
 
   .. note:: The ``False`` argument passed to ``uri.uri(False)`` prevents the
      expansion of the authentication configuration parameters, if you are not using
