@@ -31,7 +31,7 @@ The vector :guilabel:`Layer Properties` dialog provides the following sections:
      - |symbology| :ref:`Symbology <vector_style_menu>`:sup:`[1]`
    * - |labeling| :ref:`Labels <vector_labels_tab>`:sup:`[1]`
      - |diagram| :ref:`Diagrams <sec_diagram>`
-     - |3d| :guilabel:`3D View`:sup:`[1]`
+     - |3d| :ref:`3D View <sec_3_d_view>`:sup:`[1]`
    * - |sourceFields| :ref:`Fields <vector_fields_menu>`
      - |formView| :ref:`Attributes Form <vector_attributes_menu>`
      - |join| :ref:`Joins <sec_joins>`
@@ -1866,6 +1866,80 @@ rendering:
 * visibility in :guilabel:`Appearance` tab by filling the ``Visibility`` field
 
 See :ref:`data_defined_labeling` for more information.
+
+.. index:: 3d view properties
+.. _`sec_3_d_view`:
+
+3D View Properties
+=======================
+
+|3d| The :guilabel:`3D View` tab provides settings for vector layers that should
+be depicted in the :ref:`3D Map view <label_3dmapview>` tool. There are settings
+available for point, line and polygon layers.
+
+Point Layers
+------------
+	
+* You can define different simple 3D shapes like :guilabel:`Sphere`, :guilabel:`Cylinder`,
+  :guilabel:`Cube`, :guilabel:`Cone`, :guilabel:`Plane` and :guilabel:`Torus`
+  defined by their :guilabel:`Radius`, :guilabel:`Size` or :guilabel:`Length`.
+  The unit of size of the 3D shapes refers to the CRS of the project.
+* The shading of the 3D shapes can be defined by the menus :guilabel:`Diffuse`, 
+  :guilabel:`Ambient`, :guilabel:`Specular` and :guilabel:`Shininess`
+  (see https://en.wikipedia.org/wiki/Phong_reflection_model#Description)
+* If you choose :guilabel:`3D Model`, the location will be determined
+  by a simple point coordinate.
+* For visualizing 3D point clouds you can use :guilabel:`Billboard` Shapes
+  defined by the :guilabel:`Billboard Height`, :guilabel:`Billboard symbol` and
+  :guilabel:`Altitude clamping`. The symbol will have a stable size.
+* :guilabel:`Altitude clamping` can be set to :guilabel:`Absolute`, :guilabel:`Relative`
+  or :guilabel:`Terrain`. The :guilabel:`Absolute` setting can be used when height values
+  of the 3d vectors are provided as absolute measures from 0. :guilabel:`Relative` and
+  :guilabel:`Terrain` add given elevation values to the underlying terrain elevation.
+* :guilabel:`Translation` can be used to move objects in x, y and z axis.
+* You can define a :guilabel:`Scale factor` for the 3D shape as well as a
+  :guilabel:`Rotation` around the x-, y- and z-axis.
+
+
+Line layers
+-----------
+	
+* Beneath the :guilabel:`Width` and :guilabel:`Height` settings you can
+  define the :guilabel:`Extrusion` of the vector lines. If the lines do not have
+  z-values, you can define the 3d volumes with this setting.
+* With the :guilabel:`Altitude clamping` you define the position of the 
+  3D lines relative to the underlying terrain surface, if you have included
+  raster elevation data or other 3D vectors.
+* The :guilabel:`Altitude binding` defines how the feature is clamped to the
+  terrain. Either every :guilabel:`Vertex` of the feature will be clamped
+  to the terrain or this will be done by the :guilabel:`Centroid`.
+* It is possible to |checkbox|:guilabel:`Render as simple 3D lines`.
+* The shading can be defined in the menus :guilabel:`Diffuse`, :guilabel:`Ambient`,
+  :guilabel:`Specular` and :guilabel:`Shininess`.
+
+Polygon Layers
+--------------
+	
+* As for the other ones, :guilabel:`Height` can be defined in CRS units.
+* Again, :guilabel:`Extrusion` is possible for missing z-values.
+* The :guilabel:`Altitude clamping`, :guilabel:`Altitude binding` can be defined
+  as explained above.
+* There is an additional option to |checkbox|:guilabel:`Add back faces`
+  and |checkbox|:guilabel:`Invert normals`.
+* You can define |checkbox|:guilabel:`Edges` by :guilabel:`Width` and :guilabel:`Color`.
+
+.. _figure_3dview_properties:
+
+.. figure:: img/3d_view_properties.png
+   :align: center
+
+   3D properties of a polygon layer
+
+Application example
+-------------------
+
+To go through the settings explained above you can have a look at
+https://public.cloudmergin.com/projects/saber/luxembourg/tree . 
 
 
 .. index:: Fields, Forms
