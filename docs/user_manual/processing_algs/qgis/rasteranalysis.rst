@@ -7,6 +7,106 @@ Raster analysis
       :local:
       :depth: 1
 
+.. _qgisfuzzifyrastergaussianmembership:
+
+Fuzzify raster (gaussian membership)
+------------------------------------
+
+Transforms an input raster to a fuzzified raster by assigning to each pixel
+membership values, following a gaussian membership function.
+Membership values ranges from 0 to 1. In the fuzzified raster, a value of 0 implies
+no membership with the defined fuzzy set whereas a value of 1 means full membership.
+The gaussian membership function is defined as |gaussian_formula|, where f1 is the
+spread and f2 the midpoint.
+
+.. figure:: img/gaussianimage.png
+  :align: center
+  
+  Fuzzify raster example. Input raster source: Land Tirol - data.tirol.gv.at.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Raster**
+     - ``INPUT``
+     - [raster]
+     - Input raster layer
+   * - **Band Number**
+     - ``BAND`` 
+     - [raster band]
+       
+       Default: The first band of the raster layer
+     - If the raster is multiband, choose the band that
+       you want to fuzzify.
+   * - **Function midpoint**
+     - ``FUZZYMIDPOINT``
+     - [number]
+
+       Default: 10
+     - Midpoint of the gaussian function
+   * - **Function spread**
+     - ``FUZZYSPREAD``
+     - [number]
+
+       Default: 0.01
+     - Value to use for nodata in the output layer
+   * - **Fuzzified raster**
+     - ``OUTPUT``
+     - [same as input]
+     - Output raster layer containing the result
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Fuzzified raster**
+     - ``OUTPUT``
+     - [same as input]
+     - Output raster layer containing the result
+
+   * - **CRS authority identifier**
+     - ``CRS_AUTHID``
+     - [crs]
+     - The coordinate reference system of the output raster layer
+   * - **CRS authority identifier**
+     - ``EXTENT``
+     - [extent]
+     - The spatial extent of the output raster layer
+   * - **Width in pixels**
+     - ``WIDTH_IN_PIXELS``
+     - [integer]
+     - The width in pixels of the output raster layer
+   * - **Height in pixels**
+     - ``HEIGHT_IN_PIXELS``
+     - [integer]
+     - The height in pixels of the output raster layer
+   * - **Total pixel count**
+     - ``TOTAL_PIXEL_COUNT``
+     - [integer]
+     - The count of pixels in the output raster layer
+   * - **Output**
+     - ``OUTPUT``
+     - [raster]
+     - Output raster layer containing the result
+
+
 .. _qgisrasterbooleanand:
 
 Raster boolean AND
@@ -1152,3 +1252,15 @@ Parameters
   * Variety
   * Variance
   * All
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |gaussian_formula| image:: img/gaussianformula.png
+   :width: 8.3em
+   :height: 1.5em
+   
