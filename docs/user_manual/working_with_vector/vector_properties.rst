@@ -1904,7 +1904,7 @@ To display a layer in 3D, select from the combobox at the top of the tab, either
 * :guilabel:`Single symbol`: features are rendered using a common symbol whose
   properties can be :ref:`data-defined <data_defined>` or not
 * :guilabel:`Rule-based`: multiple symbol configurations can be defined and applied
-  selectively on the base of expression filters and scale range.
+  selectively based on expression filters and scale range.
   More details on how-to at :ref:`Rule-based rendering <rule_based_rendering>`.
 
 Depending on the layer geometry type, various properties are available for 3D
