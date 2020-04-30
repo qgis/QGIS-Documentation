@@ -1897,8 +1897,25 @@ See :ref:`data_defined_labeling` for more information.
 =======================
 
 |3d| The :guilabel:`3D View` tab provides settings for vector layers that should
-be depicted in the :ref:`3D Map view <label_3dmapview>` tool. There are settings
-available for point, line and polygon layers.
+be depicted in the :ref:`3D Map view <label_3dmapview>` tool.
+
+To display a layer in 3D, select from the combobox at the top of the tab, either:
+
+* :guilabel:`Single symbol`: features are rendered using a common symbol whose
+  properties can be :ref:`data-defined <data_defined>` or not
+* :guilabel:`Rule-based`: multiple symbol configurations can be defined and applied
+  selectively based on expression filters and scale range.
+  More details on how-to at :ref:`Rule-based rendering <rule_based_rendering>`.
+
+Depending on the layer geometry type, various properties are available for 3D
+rendering.
+
+.. _figure_3dview_properties:
+
+.. figure:: img/3d_view_properties.png
+   :align: center
+
+   3D properties of a polygon layer
 
 Point Layers
 ------------
@@ -1951,12 +1968,6 @@ Polygon Layers
   and |checkbox|:guilabel:`Invert normals`.
 * You can define |checkbox|:guilabel:`Edges` by :guilabel:`Width` and :guilabel:`Color`.
 
-.. _figure_3dview_properties:
-
-.. figure:: img/3d_view_properties.png
-   :align: center
-
-   3D properties of a polygon layer
 
 Application example
 -------------------
