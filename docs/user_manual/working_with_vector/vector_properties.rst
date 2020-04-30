@@ -1874,8 +1874,25 @@ See :ref:`data_defined_labeling` for more information.
 =======================
 
 |3d| The :guilabel:`3D View` tab provides settings for vector layers that should
-be depicted in the :ref:`3D Map view <label_3dmapview>` tool. There are settings
-available for point, line and polygon layers.
+be depicted in the :ref:`3D Map view <label_3dmapview>` tool.
+
+To display a layer in 3D, select from the combobox at the top of the tab, either:
+
+* :guilabel:`Single symbol`: features are rendered using a common symbol whose
+  properties can be :ref:`data-defined <data_defined>` or not
+* :guilabel:`Rule-based`: multiple symbol configurations can be defined and applied
+  selectively based on expression filters and scale range.
+  More details on how-to at :ref:`Rule-based rendering <rule_based_rendering>`.
+
+Depending on the layer geometry type, various properties are available for 3D
+rendering.
+
+.. _figure_3dview_properties:
+
+.. figure:: img/3d_view_properties.png
+   :align: center
+
+   3D properties of a polygon layer
 
 Point Layers
 ------------
@@ -1884,7 +1901,7 @@ Point Layers
   :guilabel:`Cube`, :guilabel:`Cone`, :guilabel:`Plane` and :guilabel:`Torus`
   defined by their :guilabel:`Radius`, :guilabel:`Size` or :guilabel:`Length`.
   The unit of size of the 3D shapes refers to the CRS of the project.
-* The shading of the 3D shapes can be defined by the menus :guilabel:`Diffuse`, 
+* The shading of the 3D shapes can be defined by the menus :guilabel:`Diffuse`,
   :guilabel:`Ambient`, :guilabel:`Specular` and :guilabel:`Shininess`
   (see https://en.wikipedia.org/wiki/Phong_reflection_model#Description)
 * If you choose :guilabel:`3D Model`, the location will be determined
@@ -1907,7 +1924,7 @@ Line layers
 * Beneath the :guilabel:`Width` and :guilabel:`Height` settings you can
   define the :guilabel:`Extrusion` of the vector lines. If the lines do not have
   z-values, you can define the 3d volumes with this setting.
-* With the :guilabel:`Altitude clamping` you define the position of the 
+* With the :guilabel:`Altitude clamping` you define the position of the
   3D lines relative to the underlying terrain surface, if you have included
   raster elevation data or other 3D vectors.
 * The :guilabel:`Altitude binding` defines how the feature is clamped to the
@@ -1928,18 +1945,12 @@ Polygon Layers
   and |checkbox|:guilabel:`Invert normals`.
 * You can define |checkbox|:guilabel:`Edges` by :guilabel:`Width` and :guilabel:`Color`.
 
-.. _figure_3dview_properties:
-
-.. figure:: img/3d_view_properties.png
-   :align: center
-
-   3D properties of a polygon layer
 
 Application example
 -------------------
 
 To go through the settings explained above you can have a look at
-https://public.cloudmergin.com/projects/saber/luxembourg/tree . 
+https://public.cloudmergin.com/projects/saber/luxembourg/tree.
 
 
 .. index:: Fields, Forms
@@ -2077,7 +2088,7 @@ in figure_fields_form_.
    #. The first step is to use the |signPlus| icon to create a tab in which
       fields and groups will be displayed
    #. Then set the properties of the container, ie:
-   
+
       * the name
       * the type, ie a :guilabel:`tab` or a :guilabel:`group in container`
         (a group inside a tab or another group)
@@ -2097,7 +2108,7 @@ in figure_fields_form_.
       * hide or show the container's label
       * display the container as a group box (only available for tabs).
       * rename the container
-      * set the number of columns 
+      * set the number of columns
       * enter an expression to control the container's visibility.
         The expression will be re-evaluated every time values in the form change,
         and the tab or group box shown/hidden accordingly
