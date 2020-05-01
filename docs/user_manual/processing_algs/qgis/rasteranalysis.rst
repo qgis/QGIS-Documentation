@@ -12,11 +12,15 @@ Raster analysis
 Fuzzify raster (gaussian membership)
 ------------------------------------
 
-Transforms an input raster to a fuzzified raster by assigning to each pixel
-membership values, following a gaussian membership function.
-Membership values ranges from 0 to 1. In the fuzzified raster, a value of 0 implies
-no membership with the defined fuzzy set whereas a value of 1 means full membership.
-The gaussian membership function is defined as |gaussian_formula|, where f1 is the
+Transforms an input raster to a fuzzified raster by assigning a membership
+value to each pixel, using a Gaussian membership function.
+Membership values range from 0 to 1. In the fuzzified raster, a value of 0 implies
+no membership of the defined fuzzy set, whereas a value of 1 means full membership.
+The gaussian membership function is defined as
+
+|gaussian_formula|
+
+where *f1* is the spread and *f2* the midpoint.
 spread and f2 the midpoint.
 
 .. figure:: img/gaussianimage.png
@@ -101,10 +105,6 @@ Outputs
      - ``TOTAL_PIXEL_COUNT``
      - [integer]
      - The count of pixels in the output raster layer
-   * - **Output**
-     - ``OUTPUT``
-     - [raster]
-     - Output raster layer containing the result
 
 
 .. _qgisrasterbooleanand:
