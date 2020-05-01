@@ -138,8 +138,10 @@ Outputs
 
 Raster layer statistics
 -----------------------
-Calculates basic statistics from the values in a given band of the raster layer.
-The output is loaded in the :menuselection:`Processing --> Results viewer` menu.
+Calculates basic statistics from the values in a given band of the
+raster layer.
+The output is loaded in the
+:menuselection:`Processing --> Results viewer` menu.
 
 Parameters
 ..........
@@ -238,7 +240,8 @@ Outputs
 
 Raster layer unique values report
 ---------------------------------
-Returns the count and area of each unique value in a given raster layer.
+Returns the count and area of each unique value in a given raster
+layer.
 
 Parameters
 ..........
@@ -350,7 +353,16 @@ Outputs
      - 
 
 
+<<<<<<< HEAD
 .. _qgisreclassifybylayer:
+=======
+.. _qgisrasterlayerzonalstats:
+
+Raster layer zonal statistics
+----------------------------------
+Calculates statistics for a raster layer's values, categorized by
+zones defined in another raster layer.
+>>>>>>> 80c67adea... Update the QGIS raster analysis algorithms - table for parameters (#5379)
 
 Reclassify by layer
 -------------------
@@ -467,8 +479,70 @@ Outputs
      - Name
      - Type
      - Description
+<<<<<<< HEAD
    * - **Reclassified raster**
      - ``OUTPUT``
+=======
+   * - **CRS authority identifier**
+     - ``CRS_AUTHID``
+     - [crs]
+     - 
+   * - **Extent**
+     - ``EXTENT``
+     - [extent]
+     - 
+   * - **Height in pixels**
+     - ``HEIGHT_IN_PIXELS``
+     - [number]
+     - 
+   * - **NODATA pixel count**
+     - ``NODATA_PIXEL_COUNT``
+     - [number]
+     - 
+   * - **Statistics**
+     - ``OUTPUT_TABLE``
+     - [table]
+     - The output layer contains the following information
+       **for each zone**:
+       
+       * Area: the area in square raster units in the zone;
+       * Sum: the total sum of the pixel values in the zone;
+       * Count: the number of pixels in the zone;
+       * Min: the minimum pixel value in the zone;
+       * Max: the maximum pixel value in the zone;
+       * Mean: the mean of the pixel values in the zone;
+   * - **Total pixel count**
+     - ``TOTAL_PIXEL_COUNT``
+     - [number]
+     - 
+   * - **Width in pixels**
+     - ``WIDTH_IN_PIXELS``
+     - [number]
+     - 
+
+
+.. _qgisrastersurfacevolume:
+
+Raster surface volume
+--------------------------
+Calculates the volume under a raster surface relative to a given base
+level. This is mainly useful for Digital Elevation Models (DEM).
+
+Parameters
+..........
+  
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **INPUT layer**
+     - ``INPUT``
+>>>>>>> 80c67adea... Update the QGIS raster analysis algorithms - table for parameters (#5379)
      - [raster]
      - Output raster layer with reclassified band values
 
@@ -585,21 +659,138 @@ Outputs
      - Output raster layer with reclassified band values
 
 
-.. _qgisrastersampling:
+<<<<<<< HEAD
+=======
+.. _qgisreclassifybytable:
 
-Sample raster values
---------------------
-Extracts raster values at the point locations. If the raster layer is multiband,
-each band is sampled.
-
-The attribute table of the resulting layer will have as many new columns
-as there are bands in the raster layer.
+Reclassify by table
+-------------------
+Reclassifies a raster band by assigning new class values based on
+the ranges specified in a fixed table.
 
 Parameters
 ..........
 
 .. list-table::
    :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Raster layer**
+     - ``INPUT_RASTER``
+     - [raster]
+     - Raster layer to reclassify
+   * - **Band number**
+     - ``RASTER_BAND``
+     - [raster band]
+
+       Default: 1
+     - Raster band for which you want to recalculate values.
+   * - **Reclassification table**
+     - ``TABLE``
+     - [table]
+     - A 3-columns table to fill with the values to set the
+       boundaries of each class (``Minimum`` and ``Maximum``) and
+       the new ``Value`` to assign to the band values that fall in
+       the class.
+   * - **Output no data value**
+     - ``NO_DATA``
+     - [number]
+
+       Default: -9999.0
+     - Value to apply to no data values.
+   * - **Range boundaries**
+     - ``RANGE_BOUNDARIES``
+     - [enumeration]
+
+       Default: 0
+     - Defines comparison rules for the classification.
+       Options:
+
+       * 0 --- min < value <= max
+       * 1 --- min <= value < max
+       * 2 --- min <= value <= max
+       * 3 --- min < value < max
+
+   * - **Use no data when no range matches value**
+     - ``NODATA_FOR_MISSING``
+     - [boolean]
+
+       Default: False
+     - Applies the no data value to band values that do
+       not fall in any class.
+       If False, the original value is kept.
+   * - **Output data type**
+     - ``DATA_TYPE``
+     - [enumeration]
+
+       Default: 5
+     - Defines the format of the output raster file.
+
+       Options:
+
+       * 0 --- Byte
+       * 1 --- Int16
+       * 2 --- UInt16
+       * 3 --- UInt32
+       * 4 --- Int32
+       * 5 --- Float32
+       * 6 --- Float64
+       * 7 --- CInt16
+       * 8 --- CInt32
+       * 9 --- CFloat32
+       * 10 --- CFloat64
+
+   * - **Reclassified raster**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: '[Save to temporary file]'
+     - Specification of the output raster layer.
+       One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here
+
+Outputs
+.......
+
+   * - **Reclassified raster**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: '[Save to temporary file]'
+     - The output raster layer.
+
+
+>>>>>>> 80c67adea... Update the QGIS raster analysis algorithms - table for parameters (#5379)
+.. _qgisrastersampling:
+
+Sample raster values
+--------------------
+Extracts raster values at the point locations. If the raster layer
+is multiband, each band is sampled.
+
+<<<<<<< HEAD
+The attribute table of the resulting layer will have as many new columns
+as there are bands in the raster layer.
+=======
+The attribute table of the resulting layer will have as many new
+columns as the raster layer band count.
+>>>>>>> 80c67adea... Update the QGIS raster analysis algorithms - table for parameters (#5379)
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+<<<<<<< HEAD
    :widths: 20 20 20 40
    :stub-columns: 0
 
@@ -635,11 +826,50 @@ Parameters
        * Save to Geopackage...
        * Save to PostGIS Table
        
+=======
+   :widths: 30 20 20 30
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Point Layer**
+     - ``INPUT``
+     - [vector: point]
+     - Point vector layer to use for  sampling
+   * - **Raster Layer to sample**
+     - ``RASTERCOPY``
+     - [raster]
+     - Raster layer to sample at the given point locations.
+   * - **Output column prefix**
+     - ``COLUMN_PREFIX``
+     - [string]
+
+       Default: 'rvalue'
+     - Prefix for the names of the added columns.
+   * - **Sampled Points**
+
+       (Optional)
+     - ``OUTPUT``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output layer containing the sampled values.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to GeoPackage...
+       * Save to PostGIS Table...
+
+>>>>>>> 80c67adea... Update the QGIS raster analysis algorithms - table for parameters (#5379)
        The file encoding can also be changed here.
 
 Outputs
 .......
 
+<<<<<<< HEAD
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -654,6 +884,14 @@ Outputs
      - [vector: point]
      - Output point vector layer with additional column(s) containing
        the sampled raster values.
+=======
+   * - **Sampled Points**
+
+       (Optional)
+     - ``OUTPUT``
+     - [vector: point]
+     - The output layer containing the sampled values.
+>>>>>>> 80c67adea... Update the QGIS raster analysis algorithms - table for parameters (#5379)
 
 
 .. _qgiszonalhistogram:
@@ -679,6 +917,7 @@ Parameters
    :header-rows: 1
    :widths: 20 20 20 40
    :stub-columns: 0
+<<<<<<< HEAD
 
    * - Label
      - Name
@@ -721,6 +960,48 @@ Parameters
        * Save to Geopackage...
        * Save to PostGIS Table
        
+=======
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Raster layer**
+     - ``INPUT_RASTER``
+     - [raster]
+     - Input raster layer.
+   * - **Band number**
+     - ``RASTER_BAND``
+     - [raster band]
+       
+       Default: The first band of the input layer
+     - If the raster is multiband, choose a band.
+   * - **Vector layer containing zones**
+     - ``INPUT_VECTOR``
+     - [vector: polygon]
+     - Vector polygon layer that defines the zones.
+   * - **Output column prefix**
+     - ``COLUMN_PREFIX``
+
+       Optional
+     - [string]
+
+       Default: 'HISTO\_'
+     - Prefix for the output columns names.
+   * - **Output zones**
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output vector polygon layer.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to GeoPackage...
+       * Save to PostGIS Table...
+
+>>>>>>> 80c67adea... Update the QGIS raster analysis algorithms - table for parameters (#5379)
        The file encoding can also be changed here.
 
 Outputs
@@ -736,20 +1017,40 @@ Outputs
      - Type
      - Description
    * - **Output zones**
+<<<<<<< HEAD
      - ``OUTPUT``
      - [vector: polygon]
      - Output polygon vector layer with count of raster values.
   
+=======
+
+       (Optional)
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
+     - The output vector polygon layer.
+
+>>>>>>> 80c67adea... Update the QGIS raster analysis algorithms - table for parameters (#5379)
 
 .. _qgiszonalstatistics:
 
 Zonal statistics
 ----------------
+<<<<<<< HEAD
 Calculates statistics of a raster layer for each feature of an overlapping
 polygon vector layer.
 
 .. warning:: No new output file will be created. The algorithm adds new
   columns to the input vector layer.
+=======
+Calculates statistics of a raster layer for each feature
+of an overlapping polygon vector layer.
+
+.. warning:: No new output file will be created.
+   The algorithm adds new columns to the source vector
+   layer.
+>>>>>>> 80c67adea... Update the QGIS raster analysis algorithms - table for parameters (#5379)
 
 Parameters
 ..........
@@ -758,6 +1059,7 @@ Parameters
    :header-rows: 1
    :widths: 20 20 20 40
    :stub-columns: 0
+<<<<<<< HEAD
 
    * - Label
      - Name
@@ -826,3 +1128,68 @@ Outputs
      - [vector: polygon]
      - The input polygon vector layer with new fields added for the
        zone statistics.
+=======
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Raster layer**
+     - ``INPUT_RASTER``
+     - [raster]
+     - Input raster layer.
+   * - **Raster band**
+     - ``RASTER_BAND``
+     - [raster band]
+       
+       Default: The first band of the input layer
+     - If the raster is multiband, choose a band for the statistics.
+   * - **Vector layer containing zones**
+     - ``INPUT_VECTOR``
+     - [vector: polygon]
+     - Vector polygon layer that defines the zones.
+   * - **Output column prefix**
+     - ``COLUMN_PREFIX``
+     - [string]
+
+       Default: '_'
+     - Prefix for the output columns names.
+   * - **Statistics to calculate**
+     - ``STATISTICS``
+     - [enumeration] [list]
+
+       Default: [0,1,2]
+     - List of statistical operator for the output.
+       Options:
+
+       * 0 --- Count
+       * 1 --- Sum
+       * 2 --- Mean
+       * 3 --- Median
+       * 4 --- St. dev.
+       * 5 --- Minimum
+       * 6 --- Maximum
+       * 7 --- Range
+       * 8 --- Minority
+       * 9 --- Majority
+       * 10 --- Variety
+       * 11 --- Variance
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Vector layer containing zones**
+     - ``INPUT_VECTOR``
+     - [vector: polygon]
+     - The input zone vector layer with added statistics.
+
+>>>>>>> 80c67adea... Update the QGIS raster analysis algorithms - table for parameters (#5379)
