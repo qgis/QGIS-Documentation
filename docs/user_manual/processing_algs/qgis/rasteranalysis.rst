@@ -1169,7 +1169,7 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Raster Layer**
+   * - **Raster layer**
      - ``INPUT_RASTER``
      - [raster]
      - Input raster layer.
@@ -1185,13 +1185,13 @@ Parameters
      - Vector polygon layer that defines the zones.
    * - **Output column prefix**
      - ``COLUMN_PREFIX``
+
+       Optional
      - [string]
 
        Default: ``'HISTO_'``
      - Prefix for the output columns names.
    * - **Output zones**
-
-       (Optional)
      - ``OUTPUT``
      - [vector: polygon]
 
@@ -1251,11 +1251,11 @@ Parameters
      - Name
      - Type
      - Description
-   * - **Raster Layer**
+   * - **Raster layer**
      - ``INPUT_RASTER``
      - [raster]
      - Input raster layer.
-   * - **Band number**
+   * - **Raster band**
      - ``RASTER_BAND``
      - [raster band]
        
@@ -1291,23 +1291,6 @@ Parameters
        * 9 --- Majority
        * 10 --- Variety
        * 11 --- Variance
-
-   * - **Sampled Points**
-
-       (Optional)
-     - ``OUTPUT``
-     - [vector: point]
-
-       Default: ``[Create temporary layer]``
-     - Specify the output layer containing the sampled values.
-       One of:
-
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to GeoPackage...
-       * Save to PostGIS Table...
-
-       The file encoding can also be changed here.
 
 Outputs
 .......
