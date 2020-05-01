@@ -16,7 +16,7 @@ Transforms an input raster to a fuzzified raster by assigning a membership
 value to each pixel, using a Gaussian membership function.
 Membership values range from 0 to 1. In the fuzzified raster, a value of 0 implies
 no membership of the defined fuzzy set, whereas a value of 1 means full membership.
-The gaussian membership function is defined as |gaussian_formula|, where *f1* is 
+The gaussian membership function is defined as :math:\mu(x)= e^{f_1*(x-f_2)^2}, where *f1* is 
 the spread and *f2* the midpoint.
 
 .. figure:: img/gaussianimage.png
@@ -1254,13 +1254,3 @@ Parameters
   * Variance
   * All
 
-
-.. Substitutions definitions - AVOID EDITING PAST THIS LINE
-   This will be automatically updated by the find_set_subst.py script.
-   If you need to create a new substitution manually,
-   please add it also to the substitutions.txt file in the
-   source folder.
-
-.. |gaussian_formula| image:: img/gaussianformula.png
-   :height: 1.4em
-   
