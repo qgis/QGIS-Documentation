@@ -66,7 +66,12 @@ Parameters
    * - **Fuzzified raster**
      - ``OUTPUT``
      - [same as input]
-     - Output raster layer containing the result
+     - Specification of the output raster. One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
