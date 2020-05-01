@@ -16,12 +16,8 @@ Transforms an input raster to a fuzzified raster by assigning a membership
 value to each pixel, using a Gaussian membership function.
 Membership values range from 0 to 1. In the fuzzified raster, a value of 0 implies
 no membership of the defined fuzzy set, whereas a value of 1 means full membership.
-The gaussian membership function is defined as
-
-|gaussian_formula|
-
-where *f1* is the spread and *f2* the midpoint.
-spread and f2 the midpoint.
+The gaussian membership function is defined as |gaussian_formula|, where *f1* is 
+the spread and *f2* the midpoint.
 
 .. figure:: img/gaussianimage.png
   :align: center
@@ -1266,6 +1262,5 @@ Parameters
    source folder.
 
 .. |gaussian_formula| image:: img/gaussianformula.png
-   :width: 8.3em
-   :height: 1.5em
+   :height: 1.4em
    
