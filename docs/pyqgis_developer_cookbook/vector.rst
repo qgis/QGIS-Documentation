@@ -568,7 +568,7 @@ For deletion of fields just provide a list of field indexes.
  layer.dataProvider().deleteAttributes([0])
 
  #remove multiple attributes with a list
- lis= (1,2,3,4)
+ lis = (1, 2)
  list= list(lis)
  layer.dataProvider().deleteAttributes(list)
 
