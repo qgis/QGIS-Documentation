@@ -1189,7 +1189,7 @@ Parameters
        Optional
      - [string]
 
-       Default: ``'HISTO_'``
+       Default: 'HISTO\_'
      - Prefix for the output columns names.
    * - **Output zones**
      - ``OUTPUT``
