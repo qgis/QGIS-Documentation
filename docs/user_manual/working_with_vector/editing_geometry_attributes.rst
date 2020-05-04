@@ -220,7 +220,7 @@ With the automatic tracing mode, you can speed up the digitization
 process as you no longer need to manually place all the vertices during
 digitization:
 
-#. Enable the |tracing| :sup:`Tracing` tool by pushing the icon or
+#. Enable the |tracing| :sup:`Tracing` tool (inside the Snapping toolbar) by pushing the icon or
    pressing :kbd:`T` key.
 #. :ref:`Snap to <snapping_tolerance>` a vertex or segment of a feature
    you want to trace along.
