@@ -156,8 +156,8 @@ using functions, layer's fields and values. It contains following widgets:
   * a set of basic operators to help you build the expression
   * an indication of the expected format of output when you are data-defining
     feature properties
-  * a live :guilabel:`Output preview` of the expression evaluated by default
-    on the first feature of the Layer.
+  * a live :guilabel:`Output preview` of the expression, evaluated
+    on the first feature of the Layer by default.
     You can browse and evaluate other features of the layer using the
     :guilabel:`Feature` combobox (the values are taken from the
     :ref:`display name <maptips>` property of the layer).
