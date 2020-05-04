@@ -166,8 +166,19 @@ using functions, layer's fields and values. It contains following widgets:
    automatically display its help in the dialog.
 
   A field's values widget shown when a field is selected in the function selector
-  helps to fetch features attributes. Double-clicking a value adds it to the
-  expression editor.
+  helps to fetch features attributes:
+
+  * Look for a particular field value
+  * Display the list of :guilabel:`All Unique` or :guilabel:`10 Samples` values.
+    Also available from right-click.
+
+    When the field is mapped with another layer or a set of values, i.e. if the
+    :ref:`field widget <edit_widgets>` is of *RelationReference*, *ValueRelation*
+    or *ValueMap* type, it's possible to list all the values of the mapped field
+    (from the referenced layer, table or list). Moreover, you can filter this
+    list to |checkbox| :guilabel:`Only show values in use` in the current field.
+
+  Double-clicking a field value in the widget adds it to the expression editor.
 
   .. tip::
 
@@ -1404,6 +1415,8 @@ Further information about creating Python code can be found in the
 .. |312| replace:: ``NEW in 3.12``
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
