@@ -136,12 +136,9 @@ providers:
     uri = QgsDataSourceUri()
     # set host name, port, database name, username and password
     uri.setConnection("localhost", "5432", "dbname", "johny", "xxx")
-    provider_options = QgsDataProvider.ProviderOptions()
-    # Use project's transform context
-    provider_options.transformContext = QgsProject.instance().transformContext()
     # set database schema, table name, geometry column and optionally
     # subset (WHERE clause)
-    uri.setDataSource("public", "roads", "the_geom", "cityid = 2643", provider_options)
+    uri.setDataSource("public", "roads", "the_geom", "cityid = 2643", "primary_key_field")
 
     vlayer = QgsVectorLayer(uri.uri(False), "layer name you like", "postgres")
 
