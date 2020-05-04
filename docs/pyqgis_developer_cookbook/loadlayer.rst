@@ -304,7 +304,10 @@ in the layer list) in one step.
 
 To load a PostGIS raster:
 
-PostGIS rasters, similar to PostGIS vectors, can be added to a project using a URI string. It is efficient to create a dictionary of strings for the database connection parameters. The dictionary is then loaded into an empty URI, before adding the raster. Note that None should be used when it is desired to leave the parameter blank: 
+PostGIS rasters, similar to PostGIS vectors, can be added to a project using a URI string.
+It is efficient to create a dictionary of strings for the database connection parameters.
+The dictionary is then loaded into an empty URI, before adding the raster.
+Note that None should be used when it is desired to leave the parameter blank: 
 
 .. code-block:: python
 
