@@ -151,9 +151,20 @@ using functions, layer's fields and values. It contains following widgets:
     A label and a help text can be added for easy identification.
   * |deleteSelected| :sup:`Remove selected expression from user expressions`
 
-* Under the expression editor, an :guilabel:`Output preview` displays the result
-  of the expression evaluated on the first feature of the layer. In case of
-  error, it indicates it and you can access details with the provided hyperlink.
+* Under the expression editor, you find:
+
+  * a set of basic operators to help you build the expression
+  * an indication of the expected format of output when you are data-defining
+    feature properties
+  * a live :guilabel:`Output preview` of the expression evaluated by default
+    on the first feature of the Layer.
+    You can browse and evaluate other features of the layer using the
+    :guilabel:`Feature` combobox (the values are taken from the
+    :ref:`display name <maptips>` property of the layer).
+
+    In case of error, it indicates it and you can access the details with the
+    provided hyperlink.
+
 * A function selector displays the list of functions, variables, fields...
   organized in groups. A search box is available to filter the list and quickly
   find a particular function or field.
