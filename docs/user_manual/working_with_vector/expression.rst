@@ -141,15 +141,10 @@ using functions, layer's fields and values. It contains following widgets:
           -- using || allows regions without airports to be skipped
       )
 
-* Above the expression editor, you have on the left a set of basic operators
-  to help you build the expression. On the right, you can:
+* Above the expression editor, a set of tools helps you:
 
   * |fileNew|:sup:`Clear the expression editor`
-  * |fileSave|:sup:`Add the current expression to user expressions`: store the
-    expression in the user profile (:file:`<userprofile>/QGIS/QGIS3.ini` file)
-    and display it under the :ref:`User expressions group <user_expressions_functions>`.
-    A label and a help text can be added for easy identification.
-  * |deleteSelected| :sup:`Remove selected expression from user expressions`
+  * create and manage :ref:`user expressions <user_expressions_functions>`
 
 * Under the expression editor, an :guilabel:`Output preview` displays the result
   of the expression evaluated on the first feature of the layer. In case of
@@ -1128,14 +1123,27 @@ User Expressions |312|
 ----------------------
 
 This group contains the expressions saved as **user expressions** using
-the |fileSave| :sup:`Add the current expression to the user expressions` button.
-It is meant for important expressions you want to have
-quick access to. They are saved under the user profile and available in all
-expression dialogs inside all projects of the current user profile.
+the |fileSave| :sup:`Add current expression to user expressions` button
+above the expression editor frame.
+It is meant for important expressions you want to have quick access to.
+They are saved under the user profile (:file:`<userprofile>/QGIS/QGIS3.ini`
+file) and available in all expression dialogs inside all projects of the
+current user profile.
 
-They can be deleted using the |deleteSelected| :sup:`Remove selected expression
-from user expressions` button.
+A set of tools available above the expression editor frame helps you manage
+the user expressions:
 
+* |fileSave|:sup:`Add the current expression to user expressions`: store the
+  expression in the user profile. A label and a help text can be added for
+  easy identification.
+* |symbologyEdit| :sup:`Edit selected expression from user expressions`,
+  as well as their help and label
+* |deleteSelected| :sup:`Remove selected expression from user expressions`
+* |sharingImport| :sup:`Import user expressions` from a ``.json`` file
+  into the active user profile folder
+* |sharingExport| :sup:`Export user expressions` as a ``.json`` file;
+  all the user expressions in the user profile :file:`QGIS3.ini` file are
+  shared
 
 .. _variables_functions:
 
@@ -1429,9 +1437,15 @@ Further information about creating Python code can be found in the
    :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png
    :width: 1.5em
+.. |sharingExport| image:: /static/common/mActionSharingExport.png
+   :width: 1.5em
+.. |sharingImport| image:: /static/common/mActionSharingImport.png
+   :width: 1.5em
 .. |signMinus| image:: /static/common/symbologyRemove.png
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |start| image:: /static/common/mActionStart.png
+   :width: 1.5em
+.. |symbologyEdit| image:: /static/common/symbologyEdit.png
    :width: 1.5em

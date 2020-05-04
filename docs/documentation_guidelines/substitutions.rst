@@ -405,6 +405,7 @@ Icon                                Substitution                            Icon
 |joinNotEditable|                   ``|joinNotEditable|``                   |joinedLayerNotEditable|       ``|joinedLayerNotEditable|``
 |joinHasNotUpsertOnEdit|            ``|joinHasNotUpsertOnEdit|``            |filterTableFields|            ``|filterTableFields|``
 |symbologyEdit|                     ``|symbologyEdit|``
+|sharingImport|                     ``|sharingImport|``                     |sharingExport|                ``|sharingExport|``
 ==================================  ======================================  =============================  ================================
 
 
@@ -1175,6 +1176,10 @@ Icon                            Substitution                        Icon        
 .. |setToCanvasScale| image:: /static/common/mActionSetToCanvasScale.png
    :width: 1.5em
 .. |settings| image:: /static/common/settings.png
+   :width: 1.5em
+.. |sharingExport| image:: /static/common/mActionSharingExport.png
+   :width: 1.5em
+.. |sharingImport| image:: /static/common/mActionSharingImport.png
    :width: 1.5em
 .. |showAllLayers| image:: /static/common/mActionShowAllLayers.png
    :width: 1.5em
