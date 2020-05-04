@@ -304,34 +304,41 @@ in the layer list) in one step.
 
 To load a PostGIS raster:
 
-PostGIS rasters, similar to PostGIS vectors, can be loaded using a URI string. The string should be constructed manually. Options include:
-
-* **dbname** : The PostgreSQL database to connect to.
-* **host** : The host IP address or localhost.
-* **port** : The port to connect on.
-* **user** : The PostgreSQL user name, also accepts the new WFS provider naming.
-* **password** : The PostgreSQL password for the user.
-
-* **service** : The PostgreSQL service to be used for connection to the database.
-* **authcfg** : The QGIS athentication database ID holding connection details.
-
-* **schema** : The database schema that the table is located in.
-* **table** : The database table to be loaded.
-* **sql** : An SQL WHERE clause. It should be placed at the end of the string.
-* **key** : A key column from the table.
-* **srid** : A string designating the SRID of the coordinate reference system.
-* **estimatedmetadata** : A boolean value telling if the metadata is estimated.
-* **type** : A WKT string designating the WKB Type.
-* **selectatid** : Set to True to disable selection by feature ID.
-
-* **connect_timeout** : The connection timeout time.
-* **options** : PostgreSQL connection options.
-* **sslmode** : disable, prefer, require, verifyca, verifyfull
-* **hostaddr**, **driver**, **tty**, **requiressl**, **krbsrvname**, **gsslib**
+PostGIS rasters, similar to PostGIS vectors, can be added to a project using a URI string. It is efficient to create a dictionary of strings of the database connection parameters and load them into an empty URI, before adding the raster. Note that None should be used when it is desired to leave the parameter blank: 
 
 .. code-block:: python
 
- uri = QgsDataSourceUri("PG:  dbname='database_name' host=host.address port=5432 sslmode=disable authcfg=idnumber mode=2 schema='schema_name' column='rast' table='raster_table_name'")
+ uri = QgsDataSourceUri()
+ uri_config = {'dbname':'gis_db', # The PostgreSQL database to connect to.
+'host':'localhost',    # The host IP address or localhost.
+'port':'5432',         # The port to connect on.
+'user':None,           # The PostgreSQL user name, also accepts the new WFS provider naming.
+'password':None,       # The PostgreSQL password for the user.
+'service':None,        # The PostgreSQL service to be used for connection to the database.
+'authcfg':'QconfigId', # The QGIS athentication database ID holding connection details.
+'schema':'public',     # The database schema that the table is located in.
+'table':'my_rasters',  # The database table to be loaded.
+'sql':None,            # An SQL WHERE clause. It should be placed at the end of the string.
+'key':None,            # A key column from the table.
+'srid':None,           # A string designating the SRID of the coordinate reference system.
+'estimatedmetadata':'false', # A boolean value telling if the metadata is estimated.
+'type':None,           # A WKT string designating the WKB Type.
+'selectatid':None,     # Set to True to disable selection by feature ID.
+'connect_timeout':None, # The connection timeout time.
+'options':None,        # PostgreSQL connection options.
+'sslmode':None,        # disable, prefer, require, verify-ca, verify-full
+'hostaddr':None,
+'driver':None,
+'tty':None,
+'requiressl':None,
+'krbsrvname':None,
+'gsslib':None
+}
+ for param in uri_config:
+     if (uri_config[param] != None):
+         uri.setParam(param, uri_config[param])
+ 
+ # the raster can then be loaded
  rlayer = iface.addRasterLayer(uri.uri(False), "raster layer name", "postgresraster") 
 
 
