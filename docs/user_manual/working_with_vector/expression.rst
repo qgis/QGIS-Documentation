@@ -1345,6 +1345,16 @@ folder and not in the project file.
 If you share a project that uses one of your custom functions you will need to also
 share the :file:`.py` file in the :file:`/python/expressions` folder.
 
+To delete a custom function:
+
+#. Enable the :guilabel:`Function Editor` tab
+#. Select the function in the list
+#. Press the |signMinus| :sup:`Remove selected function`. The function is
+   removed from the list and the corresponding ``.py`` file deleted from
+   the user profile folder.
+
+**Example**
+
 Here's a short example on how to create your own functions:
 
 .. code-block:: python
@@ -1405,6 +1415,8 @@ Further information about creating Python code can be found in the
 .. |fileNew| image:: /static/common/mActionFileNew.png
    :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png
+   :width: 1.5em
+.. |signMinus| image:: /static/common/symbologyRemove.png
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
