@@ -311,35 +311,55 @@ Note that None should be used when it is desired to leave the parameter blank:
 
 .. code-block:: python
 
- uri = QgsDataSourceUri()
- uri_config = {'dbname':'gis_db', # The PostgreSQL database to connect to.
- 'host':'localhost',    # The host IP address or localhost.
- 'port':'5432',         # The port to connect on.
- 'user':None,           # The PostgreSQL user name, also accepts the new WFS provider naming.
- 'password':None,       # The PostgreSQL password for the user.
- 'service':None,        # The PostgreSQL service to be used for connection to the database.
- 'authcfg':'QconfigId', # The QGIS athentication database ID holding connection details.
- 'schema':'public',     # The database schema that the table is located in.
- 'table':'my_rasters',  # The database table to be loaded.
- 'sql':None,            # An SQL WHERE clause. It should be placed at the end of the string.
- 'key':None,            # A key column from the table.
- 'srid':None,           # A string designating the SRID of the coordinate reference system.
- 'estimatedmetadata':'false', # A boolean value telling if the metadata is estimated.
- 'type':None,           # A WKT string designating the WKB Type.
- 'selectatid':None,     # Set to True to disable selection by feature ID.
+ uri_config = {#
+ # database parameters
+ 'dbname':'gis_db', # The PostgreSQL database to connect to.
+ 'host':'localhost',     # The host IP address or localhost.
+ 'port':'5432',          # The port to connect on.
+ # user and password are not needed if stored in the authcfg or service
+ 'user':None,            # pyQgis 3.12 The PostgreSQL user name, also accepts the new WFS provider naming.
+ 'username':None,        # pyQgis 3.13+ user name
+ 'password':None,        # The PostgreSQL password for the user.
+ 'service':None,         # The PostgreSQL service to be used for connection to the database.
+ 'authcfg':'QconfigId',  # The QGIS athentication database ID holding connection details.
+ # table and raster column details
+ 'schema':'public',      # The database schema that the table is located in.
+ 'table':'my_rasters',   # The database table to be loaded.
+ 'geometrycolumn':'rast',# pyQgis 3.13+ raster column in PostGIS table
+ 'column':'rast',        # pyQgis 3.12  raster column in PostGIS table
+ 'sql':None,             # An SQL WHERE clause. It should be placed at the end of the string.
+ 'key':None,             # A key column from the table.
+ 'srid':None,            # A string designating the SRID of the coordinate reference system.
+ 'estimatedmetadata':'False', # A boolean value telling if the metadata is estimated.
+ 'type':None,            # A WKT string designating the WKB Type.
+ 'selectatid':None,      # Set to True to disable selection by feature ID.
+ 'options':None,         # other PostgreSQL connection options not in this list.
+ # SSL/TLS mode, comment/uncomment for your pyQgis version
+ 'sslmode':QgsDataSourceUri.SslDisable, # pyQgis 3.13+ SslAllow, SslDisable, SslPrefer, SslRequire, SslVerifyCa, SslVerifyFull
+ #'sslmode':'disable',    # pyQgis 3.12 allow, disable, prefer, require, verify-ca, verify-full
+ # pyQgis 3.12 parameters
+ #   These must must be manually added in 3.13: uri.setParam(key, value)
  'connect_timeout':None, # The connection timeout time.
- 'options':None,        # PostgreSQL connection options.
- 'sslmode':None,        # disable, prefer, require, verify-ca, verify-full
  'hostaddr':None,
  'driver':None,
  'tty':None,
  'requiressl':None,
  'krbsrvname':None,
- 'gsslib':None
+ 'gsslib':None,
+ # Added in pyQgis 3.13+
+ 'enableTime': None,
+ 'temporalDefaultTime': None,
+ 'temporalFieldIndex': None,
  }
+ ### For pyQgis 3.13+ use this syntax:
+ md = QgsProviderRegistry.instance().providerMetadata('postgresraster')
+ uri = QgsDataSourceUri(md.encodeUri(uri_config))
+ 
+ ### For pyQgis 3.12 use this syntax: 
+ uri = QgsDataSourceUri()
  for param in uri_config:
      if (uri_config[param] != None):
-         uri.setParam(param, uri_config[param])
+         uri.setParam(param, uri_config[param]) # this command can be used to manually add parameters to the URI
  
  # the raster can then be loaded into the project
  rlayer = iface.addRasterLayer(uri.uri(False), "raster layer name", "postgresraster")
