@@ -687,6 +687,7 @@ To create a guide, two ways:
    The Guides panel
 
 The :guilabel:`Guides` panel allows creation of snap lines at specific
+<<<<<<< HEAD
 locations: click the |signPlus| :sup:`Add new guide` button and enter
 coordinates of the  horizontal or vertical line. Different units are available
 for setting.
@@ -705,6 +706,24 @@ on a single page and easily transfer it to all other pages in the layout.
 .. actually, I'm not sure what does mean current page for the guides panel as
   when multiple pages are visible, the behavior is not predictable (see bug
   report https://issues.qgis.org/issues/17804)
+=======
+locations:
+
+#. Select the :guilabel:`Page` you'd like to add the guides to
+#. Click the |signPlus| :sup:`Add new guide` button and enter the coordinates
+   of the horizontal or vertical line. The origin is at the top left corner.
+   Different units are available for this.
+
+   The panel also allows adjusting the position of existing guides to exact
+   coordinates: double-click and replace the value.
+#. The :guilabel:`Guides` panel lists only the items for the current page.
+   It allows creation or removal of guides only in the current page.
+   However, you can use the :guilabel:`Apply to All Pages` button to replicate
+   the guide configuration of the current page to the other pages in the layout.
+#. To delete a guide, select it and press the |signMinus| :sup:`Remove selected
+   guide` button. Use :guilabel:`Clear All Guides` to remove all the guides
+   in the current page.
+>>>>>>> da08b85e5... Update overview_composer.rst (#5403)
 
 .. tip:: **Snapping to existing layout items**
 
