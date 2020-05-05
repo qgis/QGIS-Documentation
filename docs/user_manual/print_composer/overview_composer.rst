@@ -699,7 +699,7 @@ locations:
 
 #. Select the :guilabel:`Page` you'd like to add the guides to
 #. Click the |signPlus| :sup:`Add new guide` button and enter the coordinates
-   of the horizontal or vertical line. The origin is at the top right corner.
+   of the horizontal or vertical line. The origin is at the top left corner.
    Different units are available for this.
 
    The panel also allows adjusting the position of existing guides to exact
