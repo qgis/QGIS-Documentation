@@ -145,7 +145,8 @@ in the map legend (visible layers, their active style, the map legend nodes)
 does not match any existing map theme contents as defined above, click on
 :guilabel:`Add Theme...` to create a new map theme, or use
 :menuselection:`Replace Theme -->` to update a map theme.
-Use the :menuselection:`Remove Current Theme` button to delete the active theme.
+You can rename the active map theme with :guilabel:`Rename Current Theme...` or
+use the :guilabel:`Remove Current Theme` button to delete it.
 
 Map themes are helpful to switch quickly between different preconfigured
 combinations: select a map theme in the list to restore its combination.
@@ -1280,7 +1281,7 @@ data. The first three measuring tools behave equally to global project settings:
   when geographic and projected coordinate systems are defined for the project.
 * If you want to calculate the projected/planimetric area or distance using cartesian
   maths, the measurement ellipsoid has to be set to "None/Planimetric"
-  (:menuselection:`Project --> Properties... --> CRS`). However,
+  (:menuselection:`Project --> Properties... --> General`). However,
   with a geographic (ie unprojected) CRS defined for the data and project, area and
   distance measurement will be ellipsoidal.
 

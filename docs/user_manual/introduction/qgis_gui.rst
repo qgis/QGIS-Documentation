@@ -2367,6 +2367,8 @@ The following tools are provided at the top of the 3D map view panel:
   <create_animation>` widget
 * |saveMapAsImage| :sup:`Save as image...`: exports the current view to
   an image file format
+* |showMapTheme| :sup:`Set View Theme`: Allows you to select the set of layers to
+  display in the map view from predefined :ref:`map themes <map_themes>`.
 * |options| :sup:`Configure` the map view :ref:`settings <scene_configuration>`
 
 
@@ -2507,9 +2509,6 @@ fine-tune the 3D scene:
     cracks between tiles of the terrain.
     Raising this value will add vertical walls ("skirts") around terrain
     tiles to hide the cracks.
-  * :guilabel:`Map theme`: Allows you to select the set of layers to
-    display in the map view from predefined
-    :ref:`map themes <map_themes>`.
 
 * |unchecked| :guilabel:`Terrain shading`: Allows you to choose how the
   terrain should be rendered:

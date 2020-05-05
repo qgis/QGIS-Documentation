@@ -917,7 +917,7 @@ https://qgis.org/en/site/getinvolved/development/addinggrasstools.html.
    :width: 1.5em
 .. |grassTools| image:: /static/common/grass_tools.png
    :width: 1.5em
-.. |import| image:: /static/common/mIconImport.gif
+.. |import| image:: /static/common/mIconImport.png
    :width: 1.5em
 .. |nix| image:: /static/common/nix.png
    :width: 1em

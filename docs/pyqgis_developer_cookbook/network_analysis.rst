@@ -355,13 +355,13 @@ A. The whole algorithm can be written as:
 
 .. code-block:: python
 
-    assign Т = B
-    while Т != A
-        add point Т to path
-        get incoming edge for point Т
-        look for point ТТ, that is start point of this edge
-        assign Т = ТТ
-    add point А to path
+    assign T = B
+    while T != B
+        add point T to path
+        get incoming edge for point T
+        look for point TT, that is start point of this edge
+        assign T = TT
+    add point A to path
 
 At this point we have the path, in the form of the inverted list of vertexes
 (vertexes are listed in reversed order from end point to start point) that will
