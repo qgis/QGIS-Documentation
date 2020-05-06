@@ -1,5 +1,5 @@
-Graphics
-========
+Plots
+=====
 
 .. only:: html
 
