@@ -496,8 +496,10 @@ Outputs
 
 Raster layer statistics
 -----------------------
-Calculates basic statistics from the values in a given band of the raster layer.
-The output is loaded in the :menuselection:`Processing --> Results viewer` menu.
+Calculates basic statistics from the values in a given band of the
+raster layer.
+The output is loaded in the
+:menuselection:`Processing --> Results viewer` menu.
 
 Parameters
 ..........
@@ -596,7 +598,8 @@ Outputs
 
 Raster layer unique values report
 ---------------------------------
-Returns the count and area of each unique value in a given raster layer.
+Returns the count and area of each unique value in a given raster
+layer.
 
 Parameters
 ..........
@@ -712,8 +715,8 @@ Outputs
 
 Raster layer zonal statistics
 ----------------------------------
-Calculates statistics for a raster layer's values, categorized by zones defined in 
-another raster layer.
+Calculates statistics for a raster layer's values, categorized by
+zones defined in another raster layer.
 
 .. seealso:: :ref:`qgiszonalstatistics`
 
@@ -803,7 +806,8 @@ Outputs
    * - **Statistics**
      - ``OUTPUT_TABLE``
      - [table]
-     - The output layer contains the following information **for each zone**:
+     - The output layer contains the following information
+       **for each zone**:
        
        * Area: the area in square raster units in the zone;
        * Sum: the total sum of the pixel values in the zone;
@@ -1070,103 +1074,172 @@ Outputs
 
 Reclassify by table
 -------------------
-Reclassifies a raster band by assigning new class values based on the ranges
-specified in a fixed table.
+Reclassifies a raster band by assigning new class values based on
+the ranges specified in a fixed table.
 
 Parameters
 ..........
 
-``Raster Layer`` [raster]
-  Raster layer to reclassify.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Band number`` [raster band]
-  Band of the raster you want to recalculate values.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Raster layer**
+     - ``INPUT_RASTER``
+     - [raster]
+     - Raster layer to reclassify
+   * - **Band number**
+     - ``RASTER_BAND``
+     - [raster band]
 
-  Default: *1*
+       Default: 1
+     - Raster band for which you want to recalculate values.
+   * - **Reclassification table**
+     - ``TABLE``
+     - [table]
+     - A 3-columns table to fill with the values to set the
+       boundaries of each class (``Minimum`` and ``Maximum``) and
+       the new ``Value`` to assign to the band values that fall in
+       the class.
+   * - **Output no data value**
+     - ``NO_DATA``
+     - [number]
 
-``Reclassification table`` [table]
-  A 3-columns table to fill with the values to set the boundaries of each class
-  (``Minimum`` and ``Maximum``) and the new ``Value`` to assign to the band
-  values that fall in the class.
+       Default: -9999.0
+     - Value to apply to no data values.
+   * - **Range boundaries**
+     - ``RANGE_BOUNDARIES``
+     - [enumeration]
 
-``Output no data value`` [number]
-  Value to apply to no data values.
+       Default: 0
+     - Defines comparison rules for the classification.
+       Options:
 
-  Default: *-9999.0*
+       * 0 --- min < value <= max
+       * 1 --- min <= value < max
+       * 2 --- min <= value <= max
+       * 3 --- min < value < max
 
-``Range boundaries`` [enumeration]
-  Defines comparison rules to apply to values classification.
+   * - **Use no data when no range matches value**
+     - ``NODATA_FOR_MISSING``
+     - [boolean]
 
-  Options:
+       Default: False
+     - Applies the no data value to band values that do
+       not fall in any class.
+       If False, the original value is kept.
+   * - **Output data type**
+     - ``DATA_TYPE``
+     - [enumeration]
 
-  * 0 --- min < value <= max
-  * 1 --- min <= value < max
-  * 2 --- min <= value <= max
-  * 3 --- min < value < max
+       Default: 5
+     - Defines the format of the output raster file.
 
-  Default: *0*
+       Options:
 
-``Use no data when no range matches`` [boolean]
-  Applies the no data value to band values that do not fall in any class.
-  If False, the original value is kept.
+       * 0 --- Byte
+       * 1 --- Int16
+       * 2 --- UInt16
+       * 3 --- UInt32
+       * 4 --- Int32
+       * 5 --- Float32
+       * 6 --- Float64
+       * 7 --- CInt16
+       * 8 --- CInt32
+       * 9 --- CFloat32
+       * 10 --- CFloat64
 
-  Default: *False*
+   * - **Reclassified raster**
+     - ``OUTPUT``
+     - [raster]
 
-``Output data type`` [enumeration]
-  Defines the format of the output raster file.
+       Default: '[Save to temporary file]'
+     - Specification of the output raster layer.
+       One of:
 
-  Options:
+       * Save to a Temporary File
+       * Save to File...
 
-  * 0 --- Byte
-  * 1 --- Int16
-  * 2 --- UInt16
-  * 3 --- UInt32
-  * 4 --- Int32
-  * 5 --- Float32
-  * 6 --- Float64
-  * 7 --- CInt16
-  * 8 --- CInt32
-  * 9 --- CFloat32
-  * 10 --- CFloat64
-
-  Default: *5*
+       The file encoding can also be changed here
 
 Outputs
 .......
 
-``Reclassified raster`` [raster]
-  Raster layer in output with reclassified band values.
+   * - **Reclassified raster**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: '[Save to temporary file]'
+     - The output raster layer.
 
 
 .. _qgisrastersampling:
 
 Sample raster values
 --------------------
-Extracts raster values at the point locations. If the raster layer is multiband,
-each band is sampled.
+Extracts raster values at the point locations. If the raster layer
+is multiband, each band is sampled.
 
-The attribute table of the resulting layer will have as many new columns as the
-raster layer band count.
+The attribute table of the resulting layer will have as many new
+columns as the raster layer band count.
 
 Parameters
 ..........
 
-``Input Point Layer`` [vector: point]
-  Point vector layer in input to use for the sampling.
+.. list-table::
+   :header-rows: 1
+   :widths: 30 20 20 30
+   :stub-columns: 0
 
-``Raster Layer to sample`` [raster]
-  Raster layer with corresponding band(s) to sample at given point locations.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Point Layer**
+     - ``INPUT``
+     - [vector: point]
+     - Point vector layer to use for  sampling
+   * - **Raster Layer to sample**
+     - ``RASTERCOPY``
+     - [raster]
+     - Raster layer to sample at the given point locations.
+   * - **Output column prefix**
+     - ``COLUMN_PREFIX``
+     - [string]
 
-``Output column prefix`` [string]
-  Prefix for the column(s) name.
+       Default: 'rvalue'
+     - Prefix for the names of the added columns.
+   * - **Sampled Points**
 
-  Default: ``rvalue``
+       (Optional)
+     - ``OUTPUT``
+     - [vector: point]
+
+       Default: ``[Create temporary layer]``
+     - Specify the output layer containing the sampled values.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to GeoPackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Sampled Points`` [vector: point]
-  Layer in output with additional column(s) of sampled raster values.
+   * - **Sampled Points**
+
+       (Optional)
+     - ``OUTPUT``
+     - [vector: point]
+     - The output layer containing the sampled values.
 
 
 .. _qgiszonalhistogram:
@@ -1188,71 +1261,154 @@ of the raster layer that intersects the polygon(s).
 Parameters
 ..........
 
-``Raster layer`` [raster]
-  Raster layer in input.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Band number`` [raster band]
-  If the raster is multiband, choose the band you want to calculate the statistics.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Raster layer**
+     - ``INPUT_RASTER``
+     - [raster]
+     - Input raster layer.
+   * - **Band number**
+     - ``RASTER_BAND``
+     - [raster band]
+       
+       Default: The first band of the input layer
+     - If the raster is multiband, choose a band.
+   * - **Vector layer containing zones**
+     - ``INPUT_VECTOR``
+     - [vector: polygon]
+     - Vector polygon layer that defines the zones.
+   * - **Output column prefix**
+     - ``COLUMN_PREFIX``
 
-``Vector layer containing the zones`` [vector: polygon]
-  Overlaying vector layer where unique raster values will be appended.
+       Optional
+     - [string]
 
-``Output column prefix`` [string]
-  Optional
+       Default: 'HISTO\_'
+     - Prefix for the output columns names.
+   * - **Output zones**
+     - ``OUTPUT``
+     - [vector: polygon]
 
-  Prefix string for output columns.
+       Default: ``[Create temporary layer]``
+     - Specify the output vector polygon layer.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to GeoPackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
 
 Outputs
 .......
 
-``Output zones`` [vector: polygon]
-  Output polygon vector layer with unique count of raster values.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Output zones**
+
+       (Optional)
+     - ``OUTPUT``
+     - [vector: polygon]
+
+       Default: ``[Create temporary layer]``
+     - The output vector polygon layer.
+
 
 .. _qgiszonalstatistics:
 
 Zonal statistics
 ----------------
-Calculates statistics of a raster layer for each feature of an overlapping polygon
-vector layer.
+Calculates statistics of a raster layer for each feature
+of an overlapping polygon vector layer.
 
-.. warning:: No new output file will be created. The algorithm adds new columns
-  to the source vector layer.
+.. warning:: No new output file will be created.
+   The algorithm adds new columns to the source vector
+   layer.
 
 Parameters
 ..........
 
-``Raster layer`` [raster]
-  Raster layer in input.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-``Band number`` [raster band]
-  If the raster is multiband choose the band you want to calculate the statistics.
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Raster layer**
+     - ``INPUT_RASTER``
+     - [raster]
+     - Input raster layer.
+   * - **Raster band**
+     - ``RASTER_BAND``
+     - [raster band]
+       
+       Default: The first band of the input layer
+     - If the raster is multiband, choose a band for the statistics.
+   * - **Vector layer containing zones**
+     - ``INPUT_VECTOR``
+     - [vector: polygon]
+     - Vector polygon layer that defines the zones.
+   * - **Output column prefix**
+     - ``COLUMN_PREFIX``
+     - [string]
 
-  Default: *1*
+       Default: '_'
+     - Prefix for the output columns names.
+   * - **Statistics to calculate**
+     - ``STATISTICS``
+     - [enumeration] [list]
 
-``Vector layer containing zones`` [vector: polygon]
-  Polygon vector layer.
+       Default: [0,1,2]
+     - List of statistical operator for the output.
+       Options:
 
-``Output column prefix`` [string]
-  Prefix string for output columns.
+       * 0 --- Count
+       * 1 --- Sum
+       * 2 --- Mean
+       * 3 --- Median
+       * 4 --- St. dev.
+       * 5 --- Minimum
+       * 6 --- Maximum
+       * 7 --- Range
+       * 8 --- Minority
+       * 9 --- Majority
+       * 10 --- Variety
+       * 11 --- Variance
 
-  Default: ``_``
+Outputs
+.......
 
-``Statistics to calculate`` [enumeration] [list]
-  List of statistical operator for the output. The available operators are:
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
 
-  * Count
-  * Sum
-  * Mean
-  * Median
-  * St. dev.
-  * Min
-  * Max
-  * Range
-  * Minority
-  * Majority (mode)
-  * Variety
-  * Variance
-  * All
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Vector layer containing zones**
+     - ``INPUT_VECTOR``
+     - [vector: polygon]
+     - The input zone vector layer with added statistics.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.

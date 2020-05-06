@@ -211,6 +211,7 @@ Icon                            Substitution                        Icon        
 |selectFreehand|                ``|selectFreehand|``                |selectRadius|                  ``|selectRadius|``
 |selectAll|                     ``|selectAll|``                     |deselectAll|                   ``|deselectAll|``
 |invertSelection|               ``|invertSelection|``               |expressionSelect|              ``|expressionSelect|``
+|deselectActiveLayer|           ``|deselectActiveLayer|``
 |selectAllTree|                 ``|selectAllTree|``                 |select|                        ``|select|``
 |formSelect|                    ``|formSelect|``                    |dataDefined|                   ``|dataDefined|``
 |expression|                    ``|expression|``                    |dataDefineOn|                  ``|dataDefineOn|``
@@ -404,6 +405,7 @@ Icon                                Substitution                            Icon
 |joinNotEditable|                   ``|joinNotEditable|``                   |joinedLayerNotEditable|       ``|joinedLayerNotEditable|``
 |joinHasNotUpsertOnEdit|            ``|joinHasNotUpsertOnEdit|``            |filterTableFields|            ``|filterTableFields|``
 |symbologyEdit|                     ``|symbologyEdit|``
+|sharingImport|                     ``|sharingImport|``                     |sharingExport|                ``|sharingExport|``
 ==================================  ======================================  =============================  ================================
 
 
@@ -691,6 +693,8 @@ Icon                            Substitution                        Icon        
 .. |deleteSelectedFeatures| image:: /static/common/mActionDeleteSelectedFeatures.png
    :width: 1.5em
 .. |dependencies| image:: /static/common/dependencies.png
+   :width: 1.5em
+.. |deselectActiveLayer| image:: /static/common/mActionDeselectActiveLayer.png
    :width: 1.5em
 .. |deselectAll| image:: /static/common/mActionDeselectAll.png
    :width: 1.5em
@@ -1172,6 +1176,10 @@ Icon                            Substitution                        Icon        
 .. |setToCanvasScale| image:: /static/common/mActionSetToCanvasScale.png
    :width: 1.5em
 .. |settings| image:: /static/common/settings.png
+   :width: 1.5em
+.. |sharingExport| image:: /static/common/mActionSharingExport.png
+   :width: 1.5em
+.. |sharingImport| image:: /static/common/mActionSharingImport.png
    :width: 1.5em
 .. |showAllLayers| image:: /static/common/mActionShowAllLayers.png
    :width: 1.5em

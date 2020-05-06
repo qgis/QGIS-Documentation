@@ -162,7 +162,7 @@ Common problems / things to be aware of
 =======================================
 
 Mainly designed for simplicity and for fast rendering but not for data analysis
-that require topology (such as finding routes across a network). Many GIS
+that requires topology (such as finding routes across a network), many GIS
 applications are able to show topological and simple feature data together and
 some can also create, edit and analyse both.
 

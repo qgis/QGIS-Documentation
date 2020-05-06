@@ -141,19 +141,25 @@ using functions, layer's fields and values. It contains following widgets:
           -- using || allows regions without airports to be skipped
       )
 
-* Above the expression editor, you have on the left a set of basic operators
-  to help you build the expression. On the right, you can:
+* Above the expression editor, a set of tools helps you:
 
   * |fileNew|:sup:`Clear the expression editor`
-  * |fileSave|:sup:`Add the current expression to user expressions`: store the
-    expression in the user profile (:file:`<userprofile>/QGIS/QGIS3.ini` file)
-    and display it under the :ref:`User expressions group <user_expressions_functions>`.
-    A label and a help text can be added for easy identification.
-  * |deleteSelected| :sup:`Remove selected expression from user expressions`
+  * create and manage :ref:`user expressions <user_expressions_functions>`
 
-* Under the expression editor, an :guilabel:`Output preview` displays the result
-  of the expression evaluated on the first feature of the layer. In case of
-  error, it indicates it and you can access details with the provided hyperlink.
+* Under the expression editor, you find:
+
+  * a set of basic operators to help you build the expression
+  * an indication of the expected format of output when you are data-defining
+    feature properties
+  * a live :guilabel:`Output preview` of the expression, evaluated
+    on the first feature of the Layer by default.
+    You can browse and evaluate other features of the layer using the
+    :guilabel:`Feature` combobox (the values are taken from the
+    :ref:`display name <maptips>` property of the layer).
+
+    In case of error, it indicates it and you can access the details with the
+    provided hyperlink.
+
 * A function selector displays the list of functions, variables, fields...
   organized in groups. A search box is available to filter the list and quickly
   find a particular function or field.
@@ -166,8 +172,19 @@ using functions, layer's fields and values. It contains following widgets:
    automatically display its help in the dialog.
 
   A field's values widget shown when a field is selected in the function selector
-  helps to fetch features attributes. Double-clicking a value adds it to the
-  expression editor.
+  helps to fetch features attributes:
+
+  * Look for a particular field value
+  * Display the list of :guilabel:`All Unique` or :guilabel:`10 Samples` values.
+    Also available from right-click.
+
+    When the field is mapped with another layer or a set of values, i.e. if the
+    :ref:`field widget <edit_widgets>` is of *RelationReference*, *ValueRelation*
+    or *ValueMap* type, it's possible to list all the values of the mapped field
+    (from the referenced layer, table or list). Moreover, you can filter this
+    list to |checkbox| :guilabel:`Only show values in use` in the current field.
+
+  Double-clicking a field value in the widget adds it to the expression editor.
 
   .. tip::
 
@@ -1117,14 +1134,27 @@ User Expressions |312|
 ----------------------
 
 This group contains the expressions saved as **user expressions** using
-the |fileSave| :sup:`Add the current expression to the user expressions` button.
-It is meant for important expressions you want to have
-quick access to. They are saved under the user profile and available in all
-expression dialogs inside all projects of the current user profile.
+the |fileSave| :sup:`Add current expression to user expressions` button
+above the expression editor frame.
+It is meant for important expressions you want to have quick access to.
+They are saved under the user profile (:file:`<userprofile>/QGIS/QGIS3.ini`
+file) and available in all expression dialogs inside all projects of the
+current user profile.
 
-They can be deleted using the |deleteSelected| :sup:`Remove selected expression
-from user expressions` button.
+A set of tools available above the expression editor frame helps you manage
+the user expressions:
 
+* |fileSave|:sup:`Add the current expression to user expressions`: store the
+  expression in the user profile. A label and a help text can be added for
+  easy identification.
+* |symbologyEdit| :sup:`Edit selected expression from user expressions`,
+  as well as their help and label
+* |deleteSelected| :sup:`Remove selected expression from user expressions`
+* |sharingImport| :sup:`Import user expressions` from a ``.json`` file
+  into the active user profile folder
+* |sharingExport| :sup:`Export user expressions` as a ``.json`` file;
+  all the user expressions in the user profile :file:`QGIS3.ini` file are
+  shared
 
 .. _variables_functions:
 
@@ -1345,6 +1375,16 @@ folder and not in the project file.
 If you share a project that uses one of your custom functions you will need to also
 share the :file:`.py` file in the :file:`/python/expressions` folder.
 
+To delete a custom function:
+
+#. Enable the :guilabel:`Function Editor` tab
+#. Select the function in the list
+#. Press the |signMinus| :sup:`Remove selected function`. The function is
+   removed from the list and the corresponding ``.py`` file deleted from
+   the user profile folder.
+
+**Example**
+
 Here's a short example on how to create your own functions:
 
 .. code-block:: python
@@ -1394,6 +1434,8 @@ Further information about creating Python code can be found in the
 .. |312| replace:: ``NEW in 3.12``
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
@@ -1406,7 +1448,15 @@ Further information about creating Python code can be found in the
    :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png
    :width: 1.5em
+.. |sharingExport| image:: /static/common/mActionSharingExport.png
+   :width: 1.5em
+.. |sharingImport| image:: /static/common/mActionSharingImport.png
+   :width: 1.5em
+.. |signMinus| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
 .. |start| image:: /static/common/mActionStart.png
+   :width: 1.5em
+.. |symbologyEdit| image:: /static/common/symbologyEdit.png
    :width: 1.5em
