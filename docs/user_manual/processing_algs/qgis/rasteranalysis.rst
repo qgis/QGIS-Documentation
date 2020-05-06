@@ -9,8 +9,8 @@ Raster analysis
 
 .. _qgisfuzzifyrastergaussianmembership:
 
-Fuzzify raster (gaussian membership)
-------------------------------------
+Fuzzify raster (gaussian membership) |312|
+------------------------------------------
 
 Transforms an input raster to a fuzzified raster by assigning a membership
 value to each pixel, using a Gaussian membership function.
@@ -1416,5 +1416,6 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |312| replace:: ``NEW in 3.12``
 .. |gaussian_formula| image:: img/gaussianformula.png
    :height: 1.4em
