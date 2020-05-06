@@ -1,5 +1,5 @@
-Graphics
-========
+Plots
+=====
 
 .. only:: html
 
@@ -103,11 +103,11 @@ Parameters
    * - **Additional statistic lines**
      - ``MSD``
      - [enumeration]
-       
+
        Default: 0
      - Additional statistics information to add to the plot.
        One of:
-       
+
        * 0 --- Show Mean
        * 1 --- Show Standard Deviation
        * 2 --- Don't show mean and standard deviation
