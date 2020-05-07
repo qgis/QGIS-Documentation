@@ -211,6 +211,13 @@ the following functionalities  (see figure_layout_table_appearance_):
 
    Attribute table Advanced Background Dialog
 
+* |checkbox| :guilabel:`Apply layer conditional styling colors`:
+  the :ref:`conditional table formatting <conditional_formatting>` present
+  in the layer is applied inside the layout attribute table (*only background
+  and foreground colors are currently supported*). Conditional formatting rules
+  take precedence over all other corresponding layout table formatting settings,
+  e.g. they will override other cell background color settings such as the
+  alternating row colors.
 * With the :guilabel:`Wrap text on` option, you can define a character on which
   the cell content will be wraped each time it is met
 * With :guilabel:`Oversized text` you define the behavior when the width set for
