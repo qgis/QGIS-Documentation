@@ -20,18 +20,20 @@ The model should look like this:
 
 .. image:: img/iterative_model/model.png
 
-Add the model to you models folder, so it is available in the toolbox, and now execute it.
+Add the model to you models folder, so it is available in the toolbox, and execute it.
 
-.. image:: img/iterative_model/model.png
+Select the DEM and watersheds basins.
 
-Select the DEM and watersheds basins, and do not forget to toggle the button that indicates that the algorithm has to be run iteratively.
+The algorithm will generate tables for all the basins and place them in the output
+directory.
 
-The algorithm will be run several times, and the corresponding tables will be created and open in your QGIS project.
-
-.. image:: img/iterative_model/tables.png
-
-We can make this example more complex by extending the model and computing some slope statistics. Add the *Slope, aspect, curvature* algorithm to the model, and then the *Raster statistics* algorithm, which should use the slope output as its only input.
+We can make this example more complex by extending the model and computing some slope
+statistics.
+Add the *Slope* algorithm to the model, and then the *Raster statistics* algorithm,
+which should use the slope output as its only input.
 
 .. image:: img/iterative_model/model2.png
 
-If you now run the model, apart from the tables you will get a set of pages with statistics. These pages will be available in the results dialog.
+If you now run the model, apart from the tables you will get a set of pages with
+statistics.
+These pages will be available in the results dialog.
