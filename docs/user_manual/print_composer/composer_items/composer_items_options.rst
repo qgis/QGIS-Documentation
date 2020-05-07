@@ -145,7 +145,7 @@ Locking items
 .............
 
 Once you have found the correct position for an item, you can lock it by using
-the |locked| :guilabel:`Lock selected items` button in the :menuselection:`View`
+the |locked| :guilabel:`Lock selected items` button in the :menuselection:`Items`
 menu or the :guilabel:`Actions` toolbar or ticking the box next
 to the item in the :menuselection:`Items` panel. Locked items are **not**
 selectable on the canvas.
@@ -219,7 +219,7 @@ Background, Item ID, Variables and Rendering (See figure_layout_common_).
   information).
 * The :guilabel:`Rotation` sets the rotation of the element (in degrees).
 * The |checkbox| :guilabel:`Frame` shows or hides the frame around the item.
-  Click on the :guilabel:`Color` and :guilabel:`Thickness` and :guilabel:`Join
+  Use the :guilabel:`Color`, :guilabel:`Thickness` and :guilabel:`Join
   style` widgets to adjust those properties.
 * Use the :guilabel:`Background color` menu for setting a background color.
   Click on the [Color...] button to display a dialog where you can pick a color
