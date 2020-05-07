@@ -1340,26 +1340,27 @@ geometries.
 Draw Circles
 ------------
 
-There are a set of tools that allow drawing circles. Each tool is described
+There is a set of tools for drawing circles. The tools are described
 below.
 
-Circles are converted into a circular string, therefore, as explained in
-ref:`add_circular_string`, if the data provider allows, it will be saved as a
+Circles are converted into circular strings, therefore, as explained in
+ref:`add_circular_string`, if allowed by the data provider, it will be saved as a
 curved geometry, if not, QGIS will segmentize the circular arcs.
 
-- |circle2Points| :sup:`Add circle from 2 points`: Points define the diameter
+- |circle2Points| :sup:`Add circle from 2 points`: The two points define the diameter
   and the orientation of  the circle. (Left-click, right-click)
 - |circle3Points| :sup:`Add circle from 3 points`: Draws a circle from three
   known points on the circle. (Left-click, left-click, right-click)
 - |circleCenterPoint| :sup:`Add circle from center and a point`: Draws a circle
-  with a given center and a point on the circle. (Left-click, right-click) Used
-  together with the :ref:`advanced_digitizing_panel` this tool can become a
+  with a given center and a point on the circle. (Left-click, right-click)
+  When used
+  with the :ref:`advanced_digitizing_panel` this tool can become a
   "Add circle from center and radius" tool by setting and locking the distance
   value after first click.
 - |circle3Tangents| :sup`Add circle from 3 tangents`: Draws a circle that is
-  tangential to three segments. **Notice that You must activate snapping to
+  tangential to three segments. **Note that you must activate snapping to
   segments** (See :ref:`snapping_tolerance`). Click on a segment to add a
-  tangent. If two tangents are parallels a error message appears and the input
+  tangent. If two tangents are parallel, an error message appears and the input
   is cleared. (Left-click, left-click, right-click)
 - |circle2TangentsPoint| :sup:`Add circle from 2 tangents and a point`: Similar
   to circle from 3 tangents, except that you have to select two tangents, enter
