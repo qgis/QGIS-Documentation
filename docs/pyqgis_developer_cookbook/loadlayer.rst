@@ -316,6 +316,9 @@ Note that None should be used when it is desired to leave the parameter blank:
  'dbname':'gis_db', # The PostgreSQL database to connect to.
  'host':'localhost',     # The host IP address or localhost.
  'port':'5432',          # The port to connect on.
+ # SSL/TLS mode, comment/uncomment for your pyQgis version
+ 'sslmode':QgsDataSourceUri.SslDisable, # pyQgis 3.13+ SslAllow, SslDisable, SslPrefer, SslRequire, SslVerifyCa, SslVerifyFull
+ #'sslmode':'disable',    # pyQgis 3.12 allow, disable, prefer, require, verify-ca, verify-full
  # user and password are not needed if stored in the authcfg or service
  'user':None,            # pyQgis 3.12 The PostgreSQL user name, also accepts the new WFS provider naming.
  'username':None,        # pyQgis 3.13+ user name
@@ -327,6 +330,7 @@ Note that None should be used when it is desired to leave the parameter blank:
  'table':'my_rasters',   # The database table to be loaded.
  'geometrycolumn':'rast',# pyQgis 3.13+ raster column in PostGIS table
  'column':'rast',        # pyQgis 3.12  raster column in PostGIS table
+ 'mode':'2',             # GDAL 'mode' parameter, 2 unions raster tiles, 1 adds tiles separately (may require user input)
  'sql':None,             # An SQL WHERE clause. It should be placed at the end of the string.
  'key':None,             # A key column from the table.
  'srid':None,            # A string designating the SRID of the coordinate reference system.
@@ -334,9 +338,6 @@ Note that None should be used when it is desired to leave the parameter blank:
  'type':None,            # A WKT string designating the WKB Type.
  'selectatid':None,      # Set to True to disable selection by feature ID.
  'options':None,         # other PostgreSQL connection options not in this list.
- # SSL/TLS mode, comment/uncomment for your pyQgis version
- 'sslmode':QgsDataSourceUri.SslDisable, # pyQgis 3.13+ SslAllow, SslDisable, SslPrefer, SslRequire, SslVerifyCa, SslVerifyFull
- #'sslmode':'disable',    # pyQgis 3.12 allow, disable, prefer, require, verify-ca, verify-full
  # pyQgis 3.12 parameters
  #   These must must be manually added in 3.13: uri.setParam(key, value)
  'connect_timeout':None, # The connection timeout time.
