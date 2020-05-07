@@ -295,7 +295,7 @@ Perform the following steps to load and enable them using the
 
       * On Windows, set the path to (or, better, include in the path):
 
-          C:\Users\<user>\AppData\Roaming\QGIS\QGIS3\profiles\default\resource_sharing\repositories\github.com\qgis\QGIS-Resources\collections\rscripts
+          C:\\Users\\<user>\\AppData\\Roaming\\QGIS\\QGIS3\\profiles\\default\\resource_sharing\\repositories\\github.com\\qgis\\QGIS-Resources\\collections\\rscripts
 
       To edit, double-click. You can then choose to just paste / type
       the path, or you can navigate to the directory by using the
