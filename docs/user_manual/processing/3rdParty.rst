@@ -11,13 +11,7 @@ Configuring external applications
    .. contents::
       :local:
 
-<<<<<<< HEAD
 The processing framework can be extended using additional applications.
-Currently, SAGA, GRASS, R, TauDEM and LAStools are supported (and GDAL
-is shipped with QGIS).
-=======
-The processing framework can be extended using additional applications.f
->>>>>>> 3ddc6e814... SAGA can only be run if it is shipped with QGIS (#1917) (#5435)
 Algorithms that rely on external applications are managed by their own
 algorithm providers.
 Additional providers can be found as separate plugins, and installed
