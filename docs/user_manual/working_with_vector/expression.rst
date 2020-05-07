@@ -428,6 +428,9 @@ This group contains functions for handling date and time data.
    "day_of_week", "Returns a number corresponding to the day of the week for a specified date or datetime"
    "epoch", "Returns the interval in milliseconds between the unix epoch and a given date value"
    "hour", "Extracts the hour from a datetime or time, or the number of hours from an interval"
+   "make_date |314|", "Creates a date value from year, month and day numbers"
+   "make_datetime |314|", "Creates a datetime value from year, month, day, hour, minute and second numbers"
+   "make_time |314|", "Creates a time value from hour, minute and second numbers"
    "minute", "Extracts the minute from a datetime or time, or the number of minutes from an interval"
    "month", "Extracts the month part from a date or datetime, or the number of months from an interval"
    "now", "Returns current date and time"
@@ -615,6 +618,9 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    "buffer_by_m", "Creates a buffer along a line geometry where the buffer diameter
    varies according to the M values at the line vertices (see also :ref:`qgisbufferbym`)"
    "centroid", "Returns the geometric center of a geometry (see also :ref:`qgiscentroids`)"
+   "close_line |314|",  "Returns a closed line string of the input line string by appending the
+   first point to the end of the line, if it is not already closed. If the geometry is not
+   a line string or multi line string then the result will be null."
    "closest_point", "Returns the point on a geometry that is closest to a second geometry"
    "collect_geometries", "Collects a set of geometries into a multi-part geometry
    object (see also :ref:`qgiscollect`)"
@@ -685,6 +691,8 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    specified start and end distances (measured from the beginning of the line)
    (see also :ref:`qgislinesubstring`)"
    "m", "Returns the M value of a point geometry"
+   "m_max |314|", "Returns the maximum M (measure) value of a geometry"
+   "m_min |314|", "Returns the minimum M (measure) value of a geometry"
    "make_circle", "Creates a circular geometry based on center point and radius"
    "make_ellipse", "Creates an elliptical geometry based on center point, axes and azimuth"
    "make_line", "Creates a line geometry from a series or an array of point geometries"
@@ -772,6 +780,8 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    "y_min", "Returns the minimum Y coordinate of a geometry.
    Calculations are in the Spatial Reference System of this geometry"
    "z", "Returns the Z coordinate of a point geometry"
+   "z_max |314|", "Returns the maximum Z coordinate of a geometry"
+   "z_min |314|", "Returns the minimum Z coordinate of a geometry"
 
 **Some examples:**
 
