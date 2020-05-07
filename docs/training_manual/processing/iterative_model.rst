@@ -22,20 +22,10 @@ The model should look like this:
 
 Add the model to you models folder, so it is available in the toolbox, and execute it.
 
-<<<<<<< HEAD
-.. image:: img/iterative_model/model.png
-
-Select the DEM and watersheds basins, and do not forget to toggle the button that indicates that the algorithm has to be run iteratively.
-
-The algorithm will be run several times, and the corresponding tables will be created and open in your QGIS project.
-
-.. image:: img/iterative_model/tables.png
-=======
 Select the DEM and watersheds basins.
 
 The algorithm will generate tables for all the basins and place them in the output
 directory.
->>>>>>> 7be8dd6b0... Upgrade training manual iterative execution to QGIS 3 models (#5432)
 
 We can make this example more complex by extending the model and computing some slope
 statistics.
