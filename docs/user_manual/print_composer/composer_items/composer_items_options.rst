@@ -219,7 +219,7 @@ Background, Item ID, Variables and Rendering (See figure_layout_common_).
   information).
 * The :guilabel:`Rotation` sets the rotation of the element (in degrees).
 * The |checkbox| :guilabel:`Frame` shows or hides the frame around the item.
-  Click on the :guilabel:`Color`, :guilabel:`Thickness` and :guilabel:`Join
+  Use the :guilabel:`Color`, :guilabel:`Thickness` and :guilabel:`Join
   style` widgets to adjust those properties.
 * Use the :guilabel:`Background color` menu for setting a background color.
   Click on the [Color...] button to display a dialog where you can pick a color
