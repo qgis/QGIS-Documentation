@@ -396,23 +396,29 @@ Add Item menu
 These are tools to create layout items. Each of them is deeply described
 in :ref:`layout_items` chapter.
 
-=================================================== ======================== =====================================
- Tool                                                Toolbar                    Reference
-=================================================== ======================== =====================================
- |addMap| :guilabel:`Add Map`                        :guilabel:`Toolbox`        :ref:`layout_map_item`
- |addImage| :guilabel:`Add Picture`                  :guilabel:`Toolbox`        :ref:`layout_picture_item`
- |label| :guilabel:`Add Label`                       :guilabel:`Toolbox`        :ref:`layout_label_item`
- |addLegend| :guilabel:`Add Legend`                  :guilabel:`Toolbox`        :ref:`layout_legend_item`
- |scaleBar| :guilabel:`Add Scale Bar`                :guilabel:`Toolbox`        :ref:`layout_scalebar_item`
- |northArrow| :guilabel:`Add North Arrow`            :guilabel:`Toolbox`        :ref:`layout_northarrow_item`
- |addBasicShape| :menuselection:`Add Shape -->`      :guilabel:`Toolbox`        :ref:`layout_basic_shape_item`
- |addArrow| :guilabel:`Add Arrow`                    :guilabel:`Toolbox`        :ref:`layout_arrow_item`
- |addNodesShape| :menuselection:`Add Node Item -->`  :guilabel:`Toolbox`        :ref:`layout_node_based_shape_item`
- |addHtml| :guilabel:`Add HTML`                      :guilabel:`Toolbox`        :ref:`layout_html_item`
- |addTable| :guilabel:`Add Attribute Table`          :guilabel:`Toolbox`        :ref:`layout_attribute_table_item`
- |addManualTable| :guilabel:`Add Fixed Table`        :guilabel:`Toolbox`        :ref:`layout_fixed_table_item`
- |add3DMap| :guilabel:`Add 3D Map`                   :guilabel:`Toolbox`        :ref:`layout_map3d_item`
-=================================================== ======================== =====================================
+========================================================= ======================== =====================================
+ Tool                                                      Toolbar                    Reference
+========================================================= ======================== =====================================
+ |addMap| :guilabel:`Add Map`                              :guilabel:`Toolbox`        :ref:`layout_map_item`
+ |addImage| :guilabel:`Add Picture`                        :guilabel:`Toolbox`        :ref:`layout_picture_item`
+ |label| :guilabel:`Add Label`                             :guilabel:`Toolbox`        :ref:`layout_label_item`
+ |addLegend| :guilabel:`Add Legend`                        :guilabel:`Toolbox`        :ref:`layout_legend_item`
+ |scaleBar| :guilabel:`Add Scale Bar`                      :guilabel:`Toolbox`        :ref:`layout_scalebar_item`
+ |northArrow| :guilabel:`Add North Arrow`                  :guilabel:`Toolbox`        :ref:`layout_northarrow_item`
+ |addBasicShape| :menuselection:`Add Shape -->`            :guilabel:`Toolbox`        :ref:`layout_basic_shape_item`
+ |addBasicRectangle| :menuselection:`--> Add Rectangle`    :guilabel:`Toolbox`        :ref:`layout_basic_shape_item`
+ |addBasicCircle| :menuselection:`--> Add Ellipse`         :guilabel:`Toolbox`        :ref:`layout_basic_shape_item`
+ |addBasicTriangle| :menuselection:`--> Add Triangle`      :guilabel:`Toolbox`        :ref:`layout_basic_shape_item`
+ |addMarker| :guilabel:`Add Marker`                        :guilabel:`Toolbox`
+ |addArrow| :guilabel:`Add Arrow`                          :guilabel:`Toolbox`        :ref:`layout_arrow_item`
+ |addNodesShape| :menuselection:`Add Node Item -->`        :guilabel:`Toolbox`        :ref:`layout_node_based_shape_item`
+ |addPolygon| :menuselection:`--> Add Polygon`             :guilabel:`Toolbox`        :ref:`layout_node_based_shape_item`
+ |addPolyline| :menuselection:`--> Add Polyline`           :guilabel:`Toolbox`        :ref:`layout_node_based_shape_item`
+ |addHtml| :guilabel:`Add HTML`                            :guilabel:`Toolbox`        :ref:`layout_html_item`
+ |addTable| :guilabel:`Add Attribute Table`                :guilabel:`Toolbox`        :ref:`layout_attribute_table_item`
+ |addManualTable| :guilabel:`Add Fixed Table`              :guilabel:`Toolbox`        :ref:`layout_fixed_table_item`
+ |add3DMap| :guilabel:`Add 3D Map`                         :guilabel:`Toolbox`        :ref:`layout_map3d_item`
+========================================================= ======================== =====================================
 
 
 Atlas menu
@@ -794,7 +800,13 @@ the actions done after the selected one will be removed.
    :width: 1.5em
 .. |addArrow| image:: /static/common/mActionAddArrow.png
    :width: 1.5em
+.. |addBasicCircle| image:: /static/common/mActionAddBasicCircle.png
+   :width: 1.5em
+.. |addBasicRectangle| image:: /static/common/mActionAddBasicRectangle.png
+   :width: 1.5em
 .. |addBasicShape| image:: /static/common/mActionAddBasicShape.png
+   :width: 1.5em
+.. |addBasicTriangle| image:: /static/common/mActionAddBasicTriangle.png
    :width: 1.5em
 .. |addHtml| image:: /static/common/mActionAddHtml.png
    :width: 1.5em
@@ -806,7 +818,13 @@ the actions done after the selected one will be removed.
    :width: 1.5em
 .. |addMap| image:: /static/common/mActionAddMap.png
    :width: 1.5em
+.. |addMarker| image:: /static/common/mActionAddMarker.png
+   :width: 1.5em
 .. |addNodesShape| image:: /static/common/mActionAddNodesShape.png
+   :width: 1.5em
+.. |addPolygon| image:: /static/common/mActionAddPolygon.png
+   :width: 1.5em
+.. |addPolyline| image:: /static/common/mActionAddPolyline.png
    :width: 1.5em
 .. |addTable| image:: /static/common/mActionAddTable.png
    :width: 1.5em
