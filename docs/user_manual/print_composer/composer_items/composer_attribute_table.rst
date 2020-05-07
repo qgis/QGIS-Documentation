@@ -215,8 +215,8 @@ the following functionalities  (see figure_layout_table_appearance_):
   the :ref:`conditional table formatting <conditional_formatting>` present
   in the layer is applied inside the layout attribute table (*only background
   and foreground colors are currently supported*). Conditional formatting rules
-  take precedence over all other corresponding layout table formatting settings,
-  e.g. they will override other cell background color settings such as the
+  take precedence over other layout table formatting settings,
+  e.g. they will override other cell background color settings such as
   alternating row colors.
 * With the :guilabel:`Wrap text on` option, you can define a character on which
   the cell content will be wraped each time it is met
