@@ -8,7 +8,7 @@ Configuring external applications
    .. contents::
       :local:
 
-The processing framework can be extended using additional applications.f
+The processing framework can be extended using additional applications.
 Algorithms that rely on external applications are managed by their own
 algorithm providers.
 Additional providers can be found as separate plugins, and installed
