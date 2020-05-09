@@ -150,13 +150,13 @@ Parameters
      - ``FUZZYMIDPOINT``
      - [number]
 
-       Default: 10
+       Default: 50
      - Midpoint of the large function
    * - **Function spread**
      - ``FUZZYSPREAD``
      - [number]
 
-       Default: 0.01
+       Default: 5
      - Spread of the large function
    * - **Fuzzified raster**
      - ``OUTPUT``
@@ -252,13 +252,13 @@ Parameters
      - ``FUZZYLOWBOUND``
      - [number]
 
-       Default: 10
+       Default: 0
      - Low bound of the linear function
    * - **High fuzzy membership bound**
      - ``FUZZYHIGHBOUND``
      - [number]
 
-       Default: 0.01
+       Default: 1
      - High bound of the linear function
    * - **Fuzzified raster**
      - ``OUTPUT``
