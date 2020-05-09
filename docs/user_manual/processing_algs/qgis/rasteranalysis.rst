@@ -1463,7 +1463,7 @@ Parameters
    please add it also to the substitutions.txt file in the
    source folder.
 .. |312| replace:: ``NEW in 3.12``
-.. |gaussian_formula| image:: img/gaussianformula.png
+.. |gaussian_formula| image:: img/fuzzy_gaussian_formula.png
    :height: 1.5em
 .. |fuzzy_large_formula| image:: img/fuzzy_large_formula.png
    :height: 3.2em
