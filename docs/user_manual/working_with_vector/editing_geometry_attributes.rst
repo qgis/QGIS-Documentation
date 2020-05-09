@@ -220,7 +220,8 @@ With the automatic tracing mode, you can speed up the digitization
 process as you no longer need to manually place all the vertices during
 digitization:
 
-#. Enable the |tracing| :sup:`Tracing` tool by pushing the icon or
+#. Enable the |tracing| :sup:`Tracing` tool (in the :guilabel:`Snapping` toolbar)
+   by pushing the icon or
    pressing :kbd:`T` key.
 #. :ref:`Snap to <snapping_tolerance>` a vertex or segment of a feature
    you want to trace along.
@@ -1333,6 +1334,37 @@ geometries.
    layer, GML or WFS) that supports curves to have features stored as
    curved, otherwise QGIS segmentizes the circular arcs.
 
+.. index:: Draw circle
+.. _draw_circles:
+
+Draw Circles
+------------
+
+There is a set of tools for drawing circles. The tools are described
+below.
+
+Circles are converted into circular strings, therefore, as explained in
+ref:`add_circular_string`, if allowed by the data provider, it will be saved as a
+curved geometry, if not, QGIS will segmentize the circular arcs.
+
+- |circle2Points| :sup:`Add circle from 2 points`: The two points define the diameter
+  and the orientation of  the circle. (Left-click, right-click)
+- |circle3Points| :sup:`Add circle from 3 points`: Draws a circle from three
+  known points on the circle. (Left-click, left-click, right-click)
+- |circleCenterPoint| :sup:`Add circle from center and a point`: Draws a circle
+  with a given center and a point on the circle. (Left-click, right-click)
+  When used
+  with the :ref:`advanced_digitizing_panel` this tool can become a
+  "Add circle from center and radius" tool by setting and locking the distance
+  value after first click.
+- |circle3Tangents| :sup`Add circle from 3 tangents`: Draws a circle that is
+  tangential to three segments. **Note that you must activate snapping to
+  segments** (See :ref:`snapping_tolerance`). Click on a segment to add a
+  tangent. If two tangents are parallel, an error message appears and the input
+  is cleared. (Left-click, left-click, right-click)
+- |circle2TangentsPoint| :sup:`Add circle from 2 tangents and a point`: Similar
+  to circle from 3 tangents, except that you have to select two tangents, enter
+  a radius and select the desired center.
 
 .. index::
    single: Digitizing tools; Advanced panel
@@ -1655,6 +1687,16 @@ To edit features in-place:
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
+.. |circle2Points| image:: /static/common/mActionCircle2Points.png
+   :width: 1.5em
+.. |circle2TangentsPoint| image:: /static/common/mActionCircle2TangentsPoint.png
+   :width: 1.5em
+.. |circle3Points| image:: /static/common/mActionCircle3Points.png
+   :width: 1.5em
+.. |circle3Tangents| image:: /static/common/mActionCircle3Tangents.png
+   :width: 1.5em
+.. |circleCenterPoint| image:: /static/common/mActionCircleCenterPoint.png
+   :width: 1.5em
 .. |circularStringCurvePoint| image:: /static/common/mActionCircularStringCurvePoint.png
    :width: 1.5em
 .. |circularStringRadius| image:: /static/common/mActionCircularStringRadius.png

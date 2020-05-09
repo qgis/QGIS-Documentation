@@ -1395,7 +1395,7 @@ Selecting features
 ------------------
 
 QGIS provides several tools to select features on the map canvas. Selection
-tools are available in the :menuselection:`View --> Select` menu or in the
+tools are available in the :menuselection:`Edit --> Select` menu or in the
 :guilabel:`Attributes toolbar`.
 
 .. note::
@@ -1423,7 +1423,8 @@ tools:
    list of all the polygons that contain the clicked point.
    All the overlapping features from the active layer are selected.
 
-.. tip:: Use the `Reselect Features` tool to reselect your previous selection.
+.. tip:: Use the :menuselection:`Edit --> Select --> Reselect Features`
+   tool to redo your latest selection.
    Very useful when you have painstakingly made a selection, and then click
    somewhere else accidentally and clear your selection.
 
@@ -1446,7 +1447,7 @@ For the other tools, different behaviors can be performed by holding down:
 Automatic selection
 ...................
 
-The other selection tools, also available from the :ref:`Attribute table
+The other selection tools, most of them available from the :ref:`Attribute table
 <sec_attribute_table>`, perform a selection based on a feature's attribute
 or its selection state (note that attribute table and map canvas show the
 same information, so if you select one feature in the attribute table, it will
@@ -1456,7 +1457,9 @@ be selected on the map canvas too):
   features using expression dialog
 * |formSelect| :sup:`Select Features By Value...` or press :kbd:`F3`
 * |deselectAll| :sup:`Deselect Features from All Layers` or press
-  :kbd:`Ctrl+Shift+A` to deselect all selected features in all layers
+  :kbd:`Ctrl+Alt+A` to deselect all selected features in all layers
+* |deselectActiveLayer| :sup:`Deselect Features from the Current Active Layer`
+  or press :kbd:`Ctrl+Shift+A`
 * |selectAll| :sup:`Select All Features` or press :kbd:`Ctrl+A` to select all
   features in the current layer
 * |invertSelection| :sup:`Invert Feature Selection` to invert the selection in
@@ -1464,16 +1467,20 @@ be selected on the map canvas too):
 
 
 For example, if you want to find regions that are boroughs from
-:file:`regions.shp` of the QGIS sample data, you can use the |expressionSelect|
-:sup:`Select features using an Expression` icon. Then, expand the
-:guilabel:`Fields and Values` group and choose the field that you want to query.
-Double-click the field 'TYPE_2' and also click :guilabel:`All Unique` in the
-panel that shows up. From the list, choose and double-click 'Borough'. In the
-:guilabel:`Expression` field, write the following query:
+:file:`regions.shp` of the QGIS sample data, you can:
 
-::
+#. Use the |expressionSelect| :sup:`Select features using an Expression` icon
+#. Expand the :guilabel:`Fields and Values` group
+#. Double-click the field that you want to query ("TYPE_2")
+#. Click :guilabel:`All Unique` in the panel that shows up on the right
+#. From the list, double-click 'Borough'. In the
+   :guilabel:`Expression` editor field, write the following query:
 
- "TYPE_2"  =  'Borough'
+   ::
+
+    "TYPE_2"  =  'Borough'
+
+#. Click :guilabel:`Select Features`
 
 From the expression builder dialog, you can also use :menuselection:`Function
 list --> Recent (Selection)` to make a selection that you have used before. The
@@ -2409,6 +2416,8 @@ The values presented in the varying size assistant above will set the size
 .. |dbManager| image:: /static/common/dbmanager.png
    :width: 1.5em
 .. |deleteSelected| image:: /static/common/mActionDeleteSelected.png
+   :width: 1.5em
+.. |deselectActiveLayer| image:: /static/common/mActionDeselectActiveLayer.png
    :width: 1.5em
 .. |deselectAll| image:: /static/common/mActionDeselectAll.png
    :width: 1.5em

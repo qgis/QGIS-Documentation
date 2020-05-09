@@ -87,7 +87,7 @@ following functionality:
    "|expressionSelect|", "Select features using an Expression"
    "|selectAll|", "Select All", "Select all features in the layer", ":kbd:`Ctrl+A`"
    "|invertSelection|", "Invert selection", "Invert the current selection in the layer", ":kbd:`Ctrl+R`"
-   "|deselectAll|", "Deselect all", "Deselect all features in the current layer", ":kbd:`Ctrl+Shift+A`"
+   "|deselectActiveLayer|", "Deselect all", "Deselect all features in the current layer", ":kbd:`Ctrl+Shift+A`"
    "|filterMap|", "Filter/Select features using form", "", ":kbd:`Ctrl+F`"
    "|selectedToTop|", "Move selected to top", "Move selected rows to the top of the table"
    "|panToSelected|", "Pan map to the selected rows", "", ":kbd:`Ctrl+P`"
@@ -296,7 +296,7 @@ more information and use case):
 
 * |expressionSelect| :guilabel:`Select By Expression...`
 * |formSelect| :guilabel:`Select Features By Value...`
-* |deselectAll| :guilabel:`Deselect Features from All Layers`
+* |deselectActiveLayer| :guilabel:`Deselect All Features from the Layer`
 * |selectAll| :guilabel:`Select All Features`
 * |invertSelection| :guilabel:`Invert Feature Selection`.
 
@@ -986,7 +986,7 @@ table.
    :width: 1.5em
 .. |deleteSelectedFeatures| image:: /static/common/mActionDeleteSelectedFeatures.png
    :width: 1.5em
-.. |deselectAll| image:: /static/common/mActionDeselectAll.png
+.. |deselectActiveLayer| image:: /static/common/mActionDeselectActiveLayer.png
    :width: 1.5em
 .. |dock| image:: /static/common/dock.png
    :width: 1.5em
