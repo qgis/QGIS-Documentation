@@ -300,6 +300,11 @@ details).
      - :ref:`sec_selection`
    * - :menuselection:`-->`
        |deselectAll| :guilabel:`Deselect Features from All Layers`
+     - :kbd:`Ctrl+Alt+A`
+     - :guilabel:`Attributes`
+     - :ref:`sec_selection`
+   * - :menuselection:`-->`
+       |deselectActiveLayer| :guilabel:`Deselect Features from the Current Active Layer`
      - :kbd:`Ctrl+Shift+A`
      - :guilabel:`Attributes`
      - :ref:`sec_selection`
@@ -2718,6 +2723,8 @@ Click the icon to open the Plugin Manager dialog.
 .. |deleteRing| image:: /static/common/mActionDeleteRing.png
    :width: 2em
 .. |deleteSelectedFeatures| image:: /static/common/mActionDeleteSelectedFeatures.png
+   :width: 1.5em
+.. |deselectActiveLayer| image:: /static/common/mActionDeselectActiveLayer.png
    :width: 1.5em
 .. |deselectAll| image:: /static/common/mActionDeselectAll.png
    :width: 1.5em
