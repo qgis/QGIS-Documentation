@@ -2231,16 +2231,20 @@ a variety of different formatting techniques (e.g. as scientific notation,
 currency values, percentage values, etc). This can be used for example when
 setting text in a layout scale bar or fixed table...
  
-Formats are grouped in different categories:
+Different categories of formats are supported.
+For most of them, you can set part or all of the following numeric options:
 
-* :guilabel:`General`, the default setting, displays values as set in
-  the parent widget properties or in the global settings
+* |checkbox| :guilabel:`Show thousands separator`
+* |unchecked| :guilabel:`Show plus sign`
+* |unchecked| :guilabel:`Show trailing zeros`
+
+But they can also have their custom settings. Provided categories are:
+
+* :guilabel:`General`, the default category, has no setting and displays values
+  as set in the parent widget properties or using the global settings
 * :guilabel:`Number`
 
   * The value can be :guilabel:`Round to` a self defined number of
-  * |checkbox| :guilabel:`Show thousands separator`
-  * |unchecked| :guilabel:`Show plus sign`
-  * |unchecked| :guilabel:`Show trailing zeros`
     :guilabel:`Decimal places` or their :guilabel:`Significant figures`
   * customize the :guilabel:`Thousands separator` and :guilabel:`Decimal separator`
 * :guilabel:`Bearing` for a text representation of a direction/bearing using:
@@ -2248,37 +2252,25 @@ Formats are grouped in different categories:
   * :guilabel:`Format`: possible ranges of values are ``0 to 180°, with E/W suffix``,
     ``-180 to +180°`` and ``0 to 360°``
   * number of :guilabel:`Decimal places`
-  * |unchecked| :guilabel:`Show trailing zeros`
 * :guilabel:`Currency` for a text representation of a currency value.
 
   * :guilabel:`Prefix`
   * :guilabel:`Suffix`
   * number of :guilabel:`Decimal places`
-  * |checkbox| :guilabel:`Show thousands separator`
-  * |unchecked| :guilabel:`Show plus sign`
-  * |unchecked| :guilabel:`Show trailing zeros`
 * :guilabel:`Fraction` for a vulgar fractional representation of a decimal
   value (e.g. *1/2* instead of *0.5*)
 
   * |unchecked| :guilabel:`Use unicode super/subscript` to show eg :sup:`1/2`
     instead of 1/2
   * |unchecked| :guilabel:`Use dedicated Unicode characters`
-  * |checkbox| :guilabel:`Show thousands separator`
-  * |unchecked| :guilabel:`Show plus sign`
   * customize the :guilabel:`Thousands separator`
 * :guilabel:`Percentage` appending ``%`` to the values
 
   * number of :guilabel:`Decimal places`
-  * |checkbox| :guilabel:`Show thousands separator`
-  * |unchecked| :guilabel:`Show plus sign`
-  * |unchecked| :guilabel:`Show trailing zeros`
   * :guilabel:`Scaling` to indicate whether the actual values already represent
     percentages (and they will be kept as is) or fractions (and they are converted)    
-* :guilabel:`Scientific` notation in the form ``2.56e+03``
-
-  * number of :guilabel:`Decimal places`
-  * |unchecked| :guilabel:`Show plus sign`
-  * |unchecked| :guilabel:`Show trailing zeros`
+* :guilabel:`Scientific` notation in the form ``2.56e+03``. A number of
+  :guilabel:`Decimal places` can be set.
 
 A live preview of the settings is displayed under the :guilabel:`Sample` section.
 
