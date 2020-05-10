@@ -5,13 +5,13 @@
   <nav class="release_status_topbar">
    {%- if isTesting %}
     <div class="row isTesting">
-     This documentation is a work in progress. For the Long Term Release and translations, please visit the <a href="https://docs.qgis.org/latest/{{ language }}/{{ pagename }}.html">latest version</a>.
+     {{ _('This documentation is a work in progress. For the Long Term Release and translations, please visit the ') }}<a href="https://docs.qgis.org/latest/{{ language }}/{{ pagename }}.html">{{ _('latest version') }}</a>.
     </div>
    {%- endif %}
 
    {%- if outdated %}
     <div class="row outdated">
-     This documentation is for a QGIS version which has reached end of life. Visit the <a href="https://docs.qgis.org/latest/{{ language }}/{{ pagename }}.html">latest version</a> instead.
+     {{ _('This documentation is for a QGIS version which has reached end of life. Instead visit the ') }}<a href="https://docs.qgis.org/latest/{{ language }}/{{ pagename }}.html">{{ _('latest version') }}</a>.
     </div>
    {%- endif %}
   </nav>
@@ -19,3 +19,4 @@
   {{ super() }}
 
  {% endblock extrabody %}
+
