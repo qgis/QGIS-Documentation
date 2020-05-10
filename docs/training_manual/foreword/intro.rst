@@ -86,7 +86,7 @@ Download the prepared dataset from the `Training data repository <training_data_
 and unzip the file. All the necessary data are provided in the :file:`exercise_data`
 folder.
 
-.. _training_data: https://github.com/qgis/QGIS-Training-Data/archive/v2.0.zip
+.. _training_data: https://github.com/qgis/QGIS-Training-Data/archive/release_3.10.zip
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
