@@ -40,7 +40,7 @@ remember the names and functions of the screen elements.
 
 #. :guilabel:`Save as`
 #. :guilabel:`Zoom to layer`
-#. :guilabel:`Help`
+#. :guilabel:`Invert selection`
 #. :guilabel:`Rendering on/off`
 #. :guilabel:`Measure line`
 
@@ -63,7 +63,7 @@ remember the names and functions of the screen elements.
   #. Count the number of columns.
 
   .. tip:: A quicker approach could be to double-click the
-   :guilabel:`rivers` layer, open the :menuselection:`Layer properties --> Source
+   :guilabel:`rivers` layer, open the :menuselection:`Layer properties -->
    Fields` tab, where you will find a numbered list of the table's fields.
 
 * Information about towns is available in the :guilabel:`places` layer. Open its
