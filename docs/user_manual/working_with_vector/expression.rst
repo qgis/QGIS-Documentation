@@ -651,8 +651,8 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    "geom_from_gml", "Returns a geometry created from a GML representation of geometry"
    "geom_from_wkb |312|", "Returns a geometry created from a Well-Known Binary (WKB) representation"
    "geom_from_wkt", "Returns a geometry created from a well-known text (WKT) representation"
-   "geom_to_wkb |312|", "Returns the Well-Known Binary (WKB) representation of
-   a geometry as a binary blob"
+   "geom_to_wkb |312|", "Returns the Well-Known Binary (WKB) representation (a BLOB) of
+   a geometry"
    "geom_to_wkt", "Returns the well-known text (WKT) representation of the geometry without SRID metadata"
    "geometry", "Returns a feature's geometry"
    "geometry_n", "Returns the nth geometry from a geometry collection,
@@ -1242,9 +1242,9 @@ To use these functions in an expression, they should be preceded by @ character
    "item_uuid", "Returns the layout item unique ID"
    "layer", "Returns the current layer"
    "layer_id", "Returns the ID of current layer"
-   "layer_ids |314|", "Returns the list of all map layer IDs from the current project"
+   "layer_ids |314|", "Returns the IDs of all the map layers in the current project as a list"
    "layer_name", "Returns the name of current layer"
-   "layers |314|", "Returns the list of all map layers from the current project"
+   "layers |314|", "Returns all the map layers in the current project as a list"
    "layout_dpi", "Returns the composition resolution (DPI)"
    "layout_name", "Returns the layout name"
    "layout_numpages", "Returns the number of pages in the layout"
