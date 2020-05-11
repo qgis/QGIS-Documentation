@@ -28,13 +28,10 @@ where you should go to look.
 Solution Outline
 -------------------------------------------------------------------------------
 
-In order to solve this problem, you will have to download data from
-https://www.dropbox.com/s/q5evvkizuunrcs0/more_analysis.zip?dl=0 and place it
-under :file:`exercise_data/more_analysis` folder.
-You will use it to find the candidate area
-that is closest to your house. If you don't live in Cape Town (where this
-problem is based) you can choose any house in the Cape Town region. The
-solution will involve:
+The data for this exercise can be found in the
+:file:`exercise_data/more_analysis` folder.
+You are going to find the candidate area that is closest to a house of your choice.
+The solution will involve:
 
 #. analysing the DEM to find the east facing slopes and the slopes with the
    correct gradients;
@@ -112,7 +109,7 @@ For rasters...
 #. Ensure that the :guilabel:`File` radio button is selected.
 #. Navigate to the appropriate file, select it, and click :guilabel:`Open`.
 #. Do this for each of the two raster files. The files you want are
-   :file:`DEM/reproject/DEM` and
+   :file:`DEM/reproject/DEM.tif` and
    :file:`Rainfall/reprojected/rainfall.tif`.
 #. Rename the rainfall raster to ``Rainfall`` (with an initial capital).
    Initially when you load them, the images will be gray rectangles. Don't
