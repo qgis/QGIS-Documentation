@@ -2424,8 +2424,13 @@ fine-tune the 3D scene:
   Each tile has mesh geometry derived from the elevation raster layer
   and texture from 2D map layers.
 
-  * :guilabel:`Type`: It can be :guilabel:`Flat terrain`,
-    :guilabel:`DEM (Raster Layer)` or :guilabel:`Online`.
+  * The elevation terrain :guilabel:`Type` can be:
+
+    * a :guilabel:`Flat terrain`
+    * a loaded :guilabel:`DEM (Raster Layer)`
+    * an :guilabel:`Online` service, loading `elevation tiles
+      <http://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png>`_
+      produced by Mapzen tools -- more details at https://registry.opendata.aws/terrain-tiles/
   * :guilabel:`Elevation`: Raster layer to be used for generation of
     the terrain.
     This layer must contain a band that represents elevation.
