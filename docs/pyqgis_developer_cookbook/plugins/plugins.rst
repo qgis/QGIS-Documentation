@@ -140,7 +140,7 @@ icon                   False     a file name or a relative path (relative to
 category               False     one of `Raster`, `Vector`, `Database` and `Web`
 plugin_dependencies    False     PIP-like comma separated list of other plugins to install
 server                 False     boolean flag, `True` or `False`, determines if the
-                                 the plugin has a server interface
+                                 plugin has a server interface
 hasProcessingProvider  False     boolean flag, `True` or `False`, determines if
                                  the plugin provides processing algorithms
 =====================  ========  =======================================
