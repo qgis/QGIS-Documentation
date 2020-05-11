@@ -78,14 +78,14 @@ provides the functionalities to set the units of display and some text formattin
 * The :guilabel:`Label for units` field defines the text used to describe the
   units of the scale bar, eg ``m`` or ``km``. This should be matched to reflect
   the multiplier above.
-* Press :guilabel:`Customize`next to :guilabel:`Number format` to have control
+* Press :guilabel:`Customize` next to :guilabel:`Number format` to have control
   over all the formatting properties for the numbers in the scale bar, including
   thousand separators, decimal places, scientific notation, etc.
   (see :ref:`number_formatting` for more details).
   Very useful in the case of making maps for audiences outside of the current
-  QGIS locale, or when you'd just prefer to vary the style from the locale
+  QGIS locale, or when you would like to vary the style from the locale
   defaults (e.g. adding thousands separators when the locale default is to hide
-  them)
+  them).
 
 Segments
 --------
@@ -159,7 +159,7 @@ Since most of the display properties of the scale bar rely on symbols whose
 properties can be data-defined, it's possible to render data-defined scale bars.
 
 **Example**: The following code applied to the bold property of the scale labels
-will display texts in bold when they are a multiple of 500:
+will display numbers in bold when they are a multiple of 500:
 
 ::
 
