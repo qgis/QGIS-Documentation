@@ -2226,10 +2226,10 @@ screen resolution, paper size, or the terrain). Available units are:
 Number Formatting
 -----------------
 
-A numeric formatter allows for formatting a numeric value for display, using
-a variety of different formatting techniques (e.g. as scientific notation,
-currency values, percentage values, etc). This can be used for example when
-setting text in a layout scale bar or fixed table...
+Numeric formatters allow formatting of numeric values for display, using
+a variety of different formatting techniques (for instance scientific notation,
+currency values, percentage values, etc). One use of this is to set
+text in a layout scale bar or fixed table.
  
 Different categories of formats are supported.
 For most of them, you can set part or all of the following numeric options:
@@ -2241,7 +2241,7 @@ For most of them, you can set part or all of the following numeric options:
 But they can also have their custom settings. Provided categories are:
 
 * :guilabel:`General`, the default category, has no setting and displays values
-  as set in the parent widget properties or using the global settings
+  as set in the parent widget properties or using the global settings.
 * :guilabel:`Number`
 
   * The value can be :guilabel:`Round to` a self defined number of
@@ -2260,7 +2260,7 @@ But they can also have their custom settings. Provided categories are:
 * :guilabel:`Fraction` for a vulgar fractional representation of a decimal
   value (e.g. *1/2* instead of *0.5*)
 
-  * |unchecked| :guilabel:`Use unicode super/subscript` to show eg :sup:`1/2`
+  * |unchecked| :guilabel:`Use unicode super/subscript` to show. For example :sup:`1/2`
     instead of 1/2
   * |unchecked| :guilabel:`Use dedicated Unicode characters`
   * customize the :guilabel:`Thousands separator`
@@ -2268,8 +2268,8 @@ But they can also have their custom settings. Provided categories are:
 
   * number of :guilabel:`Decimal places`
   * :guilabel:`Scaling` to indicate whether the actual values already represent
-    percentages (and they will be kept as is) or fractions (and they are converted)    
-* :guilabel:`Scientific` notation in the form ``2.56e+03``. A number of
+    percentages (then they will be kept as is) or fractions (then they are converted)    
+* :guilabel:`Scientific` notation in the form ``2.56e+03``. The number of
   :guilabel:`Decimal places` can be set.
 
 A live preview of the settings is displayed under the :guilabel:`Sample` section.
