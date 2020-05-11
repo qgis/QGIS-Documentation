@@ -306,7 +306,7 @@ It is efficient to create a dictionary of strings for the database connection pa
 The dictionary is then loaded into an empty URI, before adding the raster.
 Note that None should be used when it is desired to leave the parameter blank: 
 
-.. code-block:: python
+.. testcode:: loadlayer
 
  uri_config = {#
  # a dictionary of database parameters
