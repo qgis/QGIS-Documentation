@@ -326,17 +326,25 @@ tab and activate the |checkbox| :guilabel:`Draw callouts`. Then you can:
    from the feature (or its anchor point if a polygon) where callout lines end.
    Eg, this avoids drawing lines right up against the edges of the features.
 #. Set the :guilabel:`Offset from label area` option: controls the distance
-   from the label closest corner where callout lines end.
+   from the label anchor point (where the callout line ends).
    This avoids drawing lines right up against the text.
-#. |checkbox| :guilabel:`Draw lines to all features parts` from the feature's
+#. |checkbox| :guilabel:`Draw lines to all feature parts` from the feature's
    label
-#. Set an :guilabel:`Anchor point` on the (polygon) feature to use as end
-   point of the connector line : available options are:
+#. Set the :guilabel:`Anchor point` for the (polygon) feature (the end
+   point of the connector line). Available options:
 
    * :guilabel:`Pole of inaccessibility`
    * :guilabel:`Point on exterior`
    * :guilabel:`Point on surface`
    * :guilabel:`Centroid`
+#. Set the :guilabel:`Label anchor point`: controls where the connector
+   line should join to the label text. Available options:
+
+   * :guilabel:`Closest point`
+   * :guilabel:`Label centroid`
+   * Fixed position at the edge (:guilabel:`Top left`, :guilabel:`Top center`,
+     :guilabel:`Top right`, :guilabel:`Left middle`, :guilabel:`Right middle`,
+     :guilabel:`Bottom left`, :guilabel:`Bottom center` and :guilabel:`Bottom right`).
 
 
 .. _labels_placement:
