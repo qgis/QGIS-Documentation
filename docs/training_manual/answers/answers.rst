@@ -247,7 +247,7 @@ of your places have names.
 :ref:`Back to text <backlink-labels-attribute-data-1>`
 
 
-|RF| *The Label Tool*
+|RF| *Labels*
 -------------------------------------------------------------------------------
 
 .. _label-tool-1:
@@ -256,7 +256,7 @@ of your places have names.
 ...............................................................................
 
 Your map should now show the marker points and the labels should be offset by
-:kbd:`2.0 mm`: The style of the markers and labels should allow both to be
+:kbd:`2.0 mm`. The style of the markers and labels should allow both to be
 clearly visible on the map:
 
 .. figure:: img/customised_labels_one.png
@@ -277,9 +277,8 @@ One possible solution has this final product:
 
 To arrive at this result:
 
-* Use a font size of :kbd:`10`, a :guilabel:`Label
-  distance` of :kbd:`1,5 mm`, :guilabel:`Symbol width` and
-  :guilabel:`Symbol size` of :kbd:`3.0 mm`.
+* Use a font size of :kbd:`10`, an around point placement distance of
+  :kbd:`1.5 mm`,  and a marker size of :kbd:`3.0 mm`.
 * In addition, this example uses the :guilabel:`Wrap label on character`
   option:
 
@@ -301,11 +300,11 @@ To arrive at this result:
 
 * Still in edit mode, set the :kbd:`FONT_SIZE` values to whatever you prefer.
   The example uses :kbd:`16` for towns, :kbd:`14` for suburbs, :kbd:`12` for
-  localities and :kbd:`10` for hamlets.
+  localities, and :kbd:`10` for hamlets.
 * Remember to save changes and exit edit mode.
 * Return to the :guilabel:`Text` formatting options for the :guilabel:`places`
   layer and select :kbd:`FONT_SIZE` in the :guilabel:`Attribute field` of the
-  font size data override dropdown:
+  font size |dataDefined| data defined override dropdown:
 
   .. figure:: img/font_size_override.png
      :align: center
@@ -1192,6 +1191,8 @@ As you can see, our constraint allows nulls to be added into the database.
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |basic| image:: /static/common/basic.png
+.. |dataDefined| image:: /static/common/mIconDataDefine.png
+   :width: 1.5em
 .. |hard| image:: /static/common/hard.png
 .. |largeLandUseArea| replace:: Bontebok National Park
 .. |majorUrbanName| replace:: Swellendam
