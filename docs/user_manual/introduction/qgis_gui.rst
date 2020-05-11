@@ -2508,7 +2508,7 @@ fine-tune the 3D scene:
   * :guilabel:`Elevation`: Raster or mesh layer to be used for generation of
     the terrain.
     The raster layer must contain a band that represents elevation.
-    The mesh layer will use the Z values of its vertices.
+    For a mesh layer, the Z values of the vertices are used.
   * :guilabel:`Vertical scale`: Scale factor for vertical axis.
     Increasing the scale will exaggerate the height of the landforms.
   * :guilabel:`Tile resolution`: How many samples from the terrain
