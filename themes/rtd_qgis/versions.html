@@ -35,12 +35,16 @@
       <dl>
         <dt>{{ _('Contribute to Docs') }}</dt>
           <dd>
-            <a href="{{ github_url }}/{{ pagename }}.rst">{{ _('Edit on GitHub') }}</a>
+            <a href="{{ github_url }}/{{ pagename }}.rst" target="_blank" rel="noopener noreferrer">{{ _('Edit on GitHub') }}</a>
           </dd>
           {# Display the call for translation only for the latest document. #}
           {% if not isTesting %} 
           <dd>
+<<<<<<< HEAD
             <a href="{{ transifex_url }}/#{{ language }}/{{ pagename }}">{{ _('Translate Page') }}</a>
+=======
+            <a href="{{ transifex_url }}/#{{ language }}/{{ pagename | replace("/","--") }}" target="_blank" rel="noopener noreferrer">{{ _('Translate Page') }}</a>
+>>>>>>> 25bb09e39... Open third-party urls of the bottom bar in a new tab
           </dd>
           {% endif %}
       </dl>
@@ -49,16 +53,16 @@
       <dl>
         <dt>{{ _('On QGIS Project') }}</dt>
           <dd>
-            <a href="https://qgis.org/{{ language }}">{{ _('Home') }}</a>
+            <a href="https://qgis.org/{{ language }}" target="_blank" rel="noopener noreferrer">{{ _('Home') }}</a>
           </dd>
           <dd>
-            <a href="https://qgis.org/api/{{ api_version }}">{{ _('C++ API') }}</a>
+            <a href="https://qgis.org/api/{{ api_version }}" target="_blank" rel="noopener noreferrer">{{ _('C++ API') }}</a>
           </dd>
           <dd>
-            <a href="https://qgis.org/pyqgis/{{ pyqgis_version }}">{{ _('PyQGIS API') }}</a>
+            <a href="https://qgis.org/pyqgis/{{ pyqgis_version }}" target="_blank" rel="noopener noreferrer">{{ _('PyQGIS API') }}</a>
           </dd>
           <dd>
-            <a href="https://github.com/qgis/QGIS/tree/{{ source_version }}">{{ _('Source') }}</a>
+            <a href="https://github.com/qgis/QGIS/tree/{{ source_version }}" target="_blank" rel="noopener noreferrer">{{ _('Source') }}</a>
           </dd>
       </dl>
 
