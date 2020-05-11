@@ -123,11 +123,19 @@ different field, then only features with unique values for the group feature are
 iterated over. This allows nested reports with different information.
 
 
+<<<<<<< HEAD
 For now we’ll add a Field Group to our report. At its
 most basic level, you can think of a :guilabel:`Field Group Section` as the equivalent
 of a :ref:`print atlas <atlas_generation>`. You select a layer to iterate over,
 and the report will insert a section for each feature found. Selecting the new
 :guilabel:`Field Group Section` reveals a number of new related settings:
+=======
+Our body now consists of a map and a label showing the name of the
+state.
+To include the name of the state, we selected
+:menuselection:`Add Item --> Add Label` and data defined the text under :guilabel:`Main Properties` with the help of
+:guilabel:`Insert an Expression...`.
+>>>>>>> c7b6ff4c4... Corrected typo's (#5476)
 
 .. figure:: img/field_group.png
    :align: center
@@ -195,7 +203,22 @@ populated places for each state:
 .. figure:: img/report4.png
    :align: center
 
+<<<<<<< HEAD
 |
+=======
+Including pictures in a report
+------------------------------
+
+Pictures can be quite useful in reports, and QGIS allows
+pictures in both the static and dynamic parts of a report.
+Pictures are added in the same way as for standard print layouts,
+and for the static report parts (and static pictures in dynamic
+parts) there is not more to it.
+
+But if you want illustrations that are tailored to the report
+features, your layer must have an attribute that can be used
+to define the picture to include.
+>>>>>>> c7b6ff4c4... Corrected typo's (#5476)
 
 Similarly, a footer for the Populated Places group would be inserted after the
 final place for each state is included.
@@ -213,9 +236,33 @@ this:
 Report Output
 =============
 
+<<<<<<< HEAD
 The key point here is that our :guilabel:`Airports group` is a subsection of the
 :guilabel:`Admin Level 1 group` – not the :guilabel:`Populated Places group`.
 Here’s what our report could look like now:
+=======
+Highlighting the current report feature in a map
+------------------------------------------------
+
+In the above report, the report features are emphasized in the
+maps using highlighting (state) and circles (populated places).
+To emphasize the report features in the maps (apart from placing
+them at the centre of the maps), you must data define the style using
+a comparison between its ``@id`` and the ``@atlas_featureid``, as
+for atlases.
+
+For instance, if you would like to use a thicker line / border
+for the report feature than the other features you can data define
+the line width::
+
+    if($id=@atlas_featureid, 2.0, 0.1)
+
+The report feature will get a 2 units wide polygon outline, while
+all other features will get a 0.1 units wide line.
+It is also possible to data define the colour (non-transparent dark
+magenta for the report feature and semi-transparent light gray for
+the other features)::
+>>>>>>> c7b6ff4c4... Corrected typo's (#5476)
 
 .. figure:: img/report5.png
    :align: center
@@ -241,9 +288,16 @@ This results in the last part of our report exporting as:
 Export settings
 ===============
 
+<<<<<<< HEAD
 Whenever you export a report, there is a selection of export settings QGIS needs
 to check in order to return the most appropriate output. As you can start to
 imagine, reports in QGIS are extremely powerful and flexible!
+=======
+When you export a report
+(:menuselection:`Report --> Export Report as Images... / SVG... / PDF...`),
+you will be asked for a file name, and then you get the opportunity
+to tune the export settings to get the most appropriate output.
+>>>>>>> c7b6ff4c4... Corrected typo's (#5476)
 
 .. note:: When you are exporting a report to the available formats please choose the options (Print, SVG, Image, PDF) that have the labels saying :guilabel:`Export Report as...` otherwise you will print the current active map.
 
