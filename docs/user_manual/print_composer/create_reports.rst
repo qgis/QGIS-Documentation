@@ -169,7 +169,7 @@ We’ll do that, and edit the body:
 Our body now consists of a map and a label showing the name of the
 state.
 To include the name of the state, we selected
-:menuselection:`Add Item-> Add Label` and data defined the text under :guilabel:`Main Properties` with the help of
+:menuselection:`Add Item --> Add Label` and data defined the text under :guilabel:`Main Properties` with the help of
 :guilabel:`Insert an Expression...`.
 
 The result was the following expression (`name` is the name
@@ -274,7 +274,7 @@ and for the static report parts (and static pictures in dynamic
 parts) there is not more to it.
 
 But if you want illustrations that are tailored to the report
-features,, your layer must have an attribute that can be used
+features, your layer must have an attribute that can be used
 to define the picture to include.
 
 QGIS depends on absolute file names for images in reports.
@@ -325,7 +325,7 @@ the line width::
 The report feature will get a 2 units wide polygon outline, while
 all other features will get a 0.1 units wide line.
 It is also possible to data define the colour (non-transparent dark
-magenta for the atlas feature and semi-transparent light gray for
+magenta for the report feature and semi-transparent light gray for
 the other features)::
 
     if($id=@atlas_featureid, '#FF880088', '#88CCCCCC')
@@ -353,7 +353,7 @@ Export settings
 ===============
 
 When you export a report
-(:menuselection:`Report-> Export Report as Images... / SVG... / PDF...`),
+(:menuselection:`Report --> Export Report as Images... / SVG... / PDF...`),
 you will be asked for a file name, and then you get the opportunity
 to tune the export settings to get the most appropriate output.
 
