@@ -1899,6 +1899,17 @@ See :ref:`data_defined_labeling` for more information.
 |3d| The :guilabel:`3D View` tab provides settings for vector layers that should
 be depicted in the :ref:`3D Map view <label_3dmapview>` tool.
 
+For better performance, data from vector layers are loaded in the background,
+using multithreading, and rendered in tiles whose size can be controlled from
+the :guilabel:`Layer rendering` section of the tab:
+
+* :guilabel:`Zoom levels count`: determines how deep the quadtree will be.
+  For example, one zoom level means there will be a single tile for the whole layer.
+  Three zoom levels means there will be 16 tiles at the leaf level (every extra
+  zoom level multiplies that by 4). The default is ``3`` and the maximum is ``8``.
+* |checkbox| :guilabel:`Show bounding boxes of tiles`: especially useful if
+  there are issues with tiles not showing up when they should
+
 To display a layer in 3D, select from the combobox at the top of the tab, either:
 
 * :guilabel:`Single symbol`: features are rendered using a common symbol whose
@@ -1915,7 +1926,7 @@ rendering.
 .. figure:: img/3d_view_properties.png
    :align: center
 
-   3D properties of a polygon layer
+   3D properties of a point layer
 
 Point Layers
 ------------
@@ -1939,7 +1950,6 @@ Point Layers
 * :guilabel:`Translation` can be used to move objects in x, y and z axis.
 * You can define a :guilabel:`Scale factor` for the 3D shape as well as a
   :guilabel:`Rotation` around the x-, y- and z-axis.
-
 
 Line layers
 -----------
