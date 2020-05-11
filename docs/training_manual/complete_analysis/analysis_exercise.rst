@@ -30,9 +30,7 @@ Solution Outline
 
 The data for this exercise can be found in the
 :file:`exercise_data/more_analysis` folder.
-You are going to find the candidate area that is closest to your house.
-If you don't live in Cape Town (where this problem is based) you can choose
-any house in the Cape Town region.
+You are going to find the candidate area that is closest to a house of your choice.
 The solution will involve:
 
 #. analysing the DEM to find the east facing slopes and the slopes with the
