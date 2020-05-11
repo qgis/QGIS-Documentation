@@ -40,11 +40,7 @@
           {# Display the call for translation only for the latest document. #}
           {% if not isTesting %} 
           <dd>
-<<<<<<< HEAD
-            <a href="{{ transifex_url }}/#{{ language }}/{{ pagename }}">{{ _('Translate Page') }}</a>
-=======
             <a href="{{ transifex_url }}/#{{ language }}/{{ pagename | replace("/","--") }}" target="_blank" rel="noopener noreferrer">{{ _('Translate Page') }}</a>
->>>>>>> 25bb09e39... Open third-party urls of the bottom bar in a new tab
           </dd>
           {% endif %}
       </dl>
