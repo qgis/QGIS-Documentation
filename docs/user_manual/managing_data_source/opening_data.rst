@@ -818,6 +818,10 @@ For the other database types, see their differences at
   * PKI paths authentication
   * PKI stored identity certificate
 
+For MSSQL, Oracle and DB2 connections, there is an :guilabel:`Options` parameter,
+where *QSqlDatabase* connection options can be specified
+(`setConnectionOptions<https://doc.qt.io/qt-5/qsqldatabase.html#setConnectOptions>`_).
+
 Optionally, depending on the type of database, you can activate the following
 checkboxes:
 
