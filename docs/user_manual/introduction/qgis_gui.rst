@@ -1220,14 +1220,11 @@ Settings
      - Reference
    * - :menuselection:`User Profiles -->`
      - :ref:`user_profiles`
-   * - :menuselection:`-->`
-       :guilabel:`default`
+   * - :menuselection:`--> default`
      - :ref:`user_profiles`
-   * - :menuselection:`-->`
-       :guilabel:`Open Active Profile Folder`
+   * - :menuselection:`--> Open Active Profile Folder`
      - :ref:`user_profiles`
-   * - :menuselection:`-->`
-       :guilabel:`New Profile...`
+   * - :menuselection:`--> New Profile...`
      - :ref:`user_profiles`
    * - |styleManager| :guilabel:`Style Manager...`
      - :ref:`vector_style_manager`
@@ -1306,48 +1303,39 @@ are enabled.
      - :kbd:`Alt+O` + :kbd:`G`
      -
      -
-   * - :menuselection:`-->`
-       :guilabel:`Buffer...`
+   * - :menuselection:`--> Buffer...`
      -
      -
      - :ref:`qgisbuffer`
-   * - :menuselection:`-->`
-       :guilabel:`Clip...`
+   * - :menuselection:`--> Clip...`
      -
      -
      - :ref:`qgisclip`
-   * - :menuselection:`-->`
-       :guilabel:`Convex Hull...`
+   * - :menuselection:`--> Convex Hull...`
      -
      -
      - :ref:`qgisconvexhull`
-   * - :menuselection:`-->`
-       :guilabel:`Difference...`
+   * - :menuselection:`--> Difference...`
      -
      -
      - :ref:`qgisdifference`
-   * - :menuselection:`-->`
-       :guilabel:`Dissolve...`
+   * - :menuselection:`--> Dissolve...`
      -
      -
      - :ref:`qgisdissolve`
-   * - :menuselection:`-->`
-       :guilabel:`Intersection...`
+   * - :menuselection:`--> Intersection...`
      -
      -
      - :ref:`qgisintersection`
-   * - :menuselection:`-->`
-       :guilabel:`Symmetrical Difference...`
+   * - :menuselection:`--> Symmetrical Difference...`
      -
      - 
      - :ref:`qgissymmetricaldifference`
-   * - :menuselection:`-->`
-       :guilabel:`Union...`
+   * - :menuselection:`--> Union...`
      -
      -
      - :ref:`qgisunion`
-   * - :menuselection:`-->`
-       :guilabel:`Eliminate Selected Polygons...`
+   * - :menuselection:`--> Eliminate Selected Polygons...`
      -
      -
      - :ref:`qgiseliminateselectedpolygons`
@@ -1355,63 +1343,51 @@ are enabled.
      - :kbd:`Alt+O` + :kbd:`E`
      -
      -
-   * - :menuselection:`-->`
-       :guilabel:`Centroids...`
+   * - :menuselection:`--> Centroids...`
      -
      -
      - :ref:`qgiscentroids`
-   * - :menuselection:`-->`
-       :guilabel:`Collect Geometries...`
+   * - :menuselection:`--> Collect Geometries...`
      -
      -
      - :ref:`qgiscollect`
-   * - :menuselection:`-->`
-       :guilabel:`Extract Vertices...`
+   * - :menuselection:`--> Extract Vertices...`
      -
      -
      - :ref:`qgisextractvertices`
-   * - :menuselection:`-->`
-       :guilabel:`Multipart to Singleparts...`
+   * - :menuselection:`--> Multipart to Singleparts...`
      -
      -
      - :ref:`qgismultiparttosingleparts`
-   * - :menuselection:`-->`
-       :guilabel:`Polygons to Lines...`
+   * - :menuselection:`--> Polygons to Lines...`
      -
      -
      - :ref:`qgispolygonstolines`
-   * - :menuselection:`-->`
-       :guilabel:`Simplify...`
+   * - :menuselection:`--> Simplify...`
      -
      -
      - :ref:`qgissimplifygeometries`
-   * - :menuselection:`-->`
-       :guilabel:`Check Validity...`
+   * - :menuselection:`--> Check Validity...`
      -
      -
      - :ref:`qgischeckvalidity`
-   * - :menuselection:`-->`
-       :guilabel:`Delaunay Triangulation...`
+   * - :menuselection:`--> Delaunay Triangulation...`
      -
      -
      - :ref:`qgisdelaunaytriangulation`
-   * - :menuselection:`-->`
-       :guilabel:`Densify by Count...`
+   * - :menuselection:`--> Densify by Count...`
      -
      -
      - :ref:`qgisdensifygeometries`
-   * - :menuselection:`-->`
-       :guilabel:`Add Geometry Attributes...`
+   * - :menuselection:`--> Add Geometry Attributes...`
      -
      -
      - :ref:`qgisexportaddgeometrycolumns`
-   * - :menuselection:`-->`
-       :guilabel:`Lines to Polygons...`
+   * - :menuselection:`--> Lines to Polygons...`
      -
      -
      - :ref:`qgislinestopolygons`
-   * - :menuselection:`-->`
-       :guilabel:`Voronoi Polygons...`
+   * - :menuselection:`--> Voronoi Polygons...`
      -
      -
      - :ref:`qgisvoronoipolygons`
@@ -1419,43 +1395,35 @@ are enabled.
      - :kbd:`Alt+O` + :kbd:`A`
      -
      -
-   * - :menuselection:`-->`
-       :guilabel:`Line Intersection...`
+   * - :menuselection:`--> Line Intersection...`
      -
      -
      - :ref:`qgislineintersections`
-   * - :menuselection:`-->`
-       :guilabel:`Mean Coordinate(s)...`
+   * - :menuselection:`--> Mean Coordinate(s)...`
      -
      -
      - :ref:`qgismeancoordinates`
-   * - :menuselection:`-->`
-       :guilabel:`Basic Statistics for Fields...`
+   * - :menuselection:`--> Basic Statistics for Fields...`
      -
      -
      - :ref:`qgisbasicstatisticsforfields`
-   * - :menuselection:`-->`
-       :guilabel:`Count Points in Polygon...`
+   * - :menuselection:`--> Count Points in Polygon...`
      -
      -
      - :ref:`qgiscountpointsinpolygon`
-   * - :menuselection:`-->`
-       :guilabel:`Distance Matrix...`
+   * - :menuselection:`--> Distance Matrix...`
      -
      -
      - :ref:`qgisdistancematrix`
-   * - :menuselection:`-->`
-       :guilabel:`List Unique Values...`
+   * - :menuselection:`--> List Unique Values...`
      -
      -
      - :ref:`qgislistuniquevalues`
-   * - :menuselection:`-->`
-       :guilabel:`Nearest Neighbour Analysis...`
+   * - :menuselection:`--> Nearest Neighbour Analysis...`
      -
      -
      - :ref:`qgisnearestneighbouranalysis`
-   * - :menuselection:`-->`
-       :guilabel:`Sum Line Lengths...`
+   * - :menuselection:`--> Sum Line Lengths...`
      -
      -
      - :ref:`qgissumlinelengths`
@@ -1463,28 +1431,23 @@ are enabled.
      - :kbd:`Alt+O` + :kbd:`D`
      -
      -
-   * - :menuselection:`-->`
-       :guilabel:`Merge Vector Layers...`
+   * - :menuselection:`--> Merge Vector Layers...`
      -
      -
      - :ref:`qgismergevectorlayers`
-   * - :menuselection:`-->`
-       :guilabel:`Reproject Layer...`
+   * - :menuselection:`--> Reproject Layer...`
      -
      -
      - :ref:`qgisreprojectlayer`
-   * - :menuselection:`-->`
-       :guilabel:`Create Spatial Index...`
+   * - :menuselection:`--> Create Spatial Index...`
      -
      -
      - :ref:`qgiscreatespatialindex`
-   * - :menuselection:`-->`
-       :guilabel:`Join Attributes by Location...`
+   * - :menuselection:`--> Join Attributes by Location...`
      -
      -
      - :ref:`qgisjoinattributesbylocation`
-   * - :menuselection:`-->`
-       :guilabel:`Split Vector Layer...`
+   * - :menuselection:`--> Split Vector Layer...`
      -
      -
      - :ref:`qgissplitvectorlayer`
@@ -1492,43 +1455,35 @@ are enabled.
      - :kbd:`Alt+O` + :kbd:`R`
      -
      -
-   * - :menuselection:`-->`
-       :guilabel:`Select by Location...`
+   * - :menuselection:`--> Select by Location...`
      -
      -
      - :ref:`qgisselectbylocation`
-   * - :menuselection:`-->`
-       :guilabel:`Extract Layer Extent...`
+   * - :menuselection:`--> Extract Layer Extent...`
      -
      -
      - :ref:`qgispolygonfromlayerextent`
-   * - :menuselection:`-->`
-       :guilabel:`Random Points in Extent...`
+   * - :menuselection:`--> Random Points in Extent...`
      -
      -
      - :ref:`qgisrandompointsinextent`
-   * - :menuselection:`-->`
-       :guilabel:`Random Points in Layer Bounds...`
+   * - :menuselection:`--> Random Points in Layer Bounds...`
      -
      -
      - :ref:`qgisrandompointsinlayerbounds`
-   * - :menuselection:`-->`
-       :guilabel:`Random Points Inside Polygons...`
+   * - :menuselection:`--> Random Points Inside Polygons...`
      -
      -
      - :ref:`qgisrandompointsinsidepolygons`
-   * - :menuselection:`-->`
-       :guilabel:`Random Selection...`
+   * - :menuselection:`--> Random Selection...`
      -
      -
      - :ref:`qgisrandomselection`
-   * - :menuselection:`-->`
-       :guilabel:`Random Selection Within Subsets...`
+   * - :menuselection:`--> Random Selection Within Subsets...`
      -
      -
      - :ref:`qgisrandomselectionwithinsubsets`
-   * - :menuselection:`-->`
-       :guilabel:`Regular Points...`
+   * - :menuselection:`--> Regular Points...`
      -
      -
      - :ref:`qgisregularpoints`
@@ -1577,68 +1532,55 @@ are enabled.
      -
      -
      -
-   * - :menuselection:`-->`
-       :guilabel:`Aspect...`
+   * - :menuselection:`--> Aspect...`
      -
      -
      - :ref:`gdalaspect`
-   * - :menuselection:`-->`
-       :guilabel:`Fill nodata...`
+   * - :menuselection:`--> Fill nodata...`
      -
      -
      - :ref:`gdalfillnodata`
-   * - :menuselection:`-->`
-       :guilabel:`Grid (Moving Average)...`
+   * - :menuselection:`--> Grid (Moving Average)...`
      -
      -
      - :ref:`gdalgridaverage`
-   * - :menuselection:`-->`
-       :guilabel:`Grid (Data Metrics)...`
+   * - :menuselection:`--> Grid (Data Metrics)...`
      -
      -
      - :ref:`gdalgriddatametrics`
-   * - :menuselection:`-->`
-       :guilabel:`Grid (Inverse Distance to a Power)...`
+   * - :menuselection:`--> Grid (Inverse Distance to a Power)...`
      -
      -
      - :ref:`gdalgridinversedistance`
-   * - :menuselection:`-->`
-       :guilabel:`Grid (Nearest Neighbor)...`
+   * - :menuselection:`--> Grid (Nearest Neighbor)...`
      -
      -
      - :ref:`gdalgridinversedistancenearestneighbor`
-   * - :menuselection:`-->`
-       :guilabel:`Hillshade...`
+   * - :menuselection:`--> Hillshade...`
      -
      -
      - :ref:`gdalhillshade`
-   * - :menuselection:`-->`
-       :guilabel:`Proximity (Raster Distance)...`
+   * - :menuselection:`--> Proximity (Raster Distance)...`
      -
      -
      - :ref:`gdalproximity`
-   * - :menuselection:`-->`
-       :guilabel:`Roughness...`
+   * - :menuselection:`--> Roughness...`
      -
      -
      - :ref:`gdalroughness`
-   * - :menuselection:`-->`
-       :guilabel:`Sieve...`
+   * - :menuselection:`--> Sieve...`
      -
      -
      - :ref:`gdalsieve`
-   * - :menuselection:`-->`
-       :guilabel:`Slope...`
+   * - :menuselection:`--> Slope...`
      -
      -
      - :ref:`gdalslope`
-   * - :menuselection:`-->`
-       :guilabel:`Topographic Position Index (TPI)...`
+   * - :menuselection:`--> Topographic Position Index (TPI)...`
      -
      -
      - :ref:`gdaltpitopographicpositionindex`
-   * - :menuselection:`-->`
-       :guilabel:`Terrain Ruggedness Index (TRI)...`
+   * - :menuselection:`--> Terrain Ruggedness Index (TRI)...`
      -
      -
      - :ref:`gdaltriterrainruggednessindex`
@@ -1646,18 +1588,15 @@ are enabled.
      -
      -
      -
-   * - :menuselection:`-->`
-       :guilabel:`Assign Projection...`
+   * - :menuselection:`--> Assign Projection...`
      -
      -
      - :ref:`gdalassignprojection`
-   * - :menuselection:`-->`
-       :guilabel:`Extract Projection...`
+   * - :menuselection:`--> Extract Projection...`
      -
      -
      - :ref:`gdalextractprojection`
-   * - :menuselection:`-->`
-       :guilabel:`Warp (Reproject)...`
+   * - :menuselection:`--> Warp (Reproject)...`
      -
      -
      - :ref:`gdalwarpreproject`
@@ -1665,28 +1604,23 @@ are enabled.
      -
      -
      -
-   * - :menuselection:`-->`
-       :guilabel:`Build Virtual Raster...`
+   * - :menuselection:`--> Build Virtual Raster...`
      -
      -
      - :ref:`gdalbuildvirtualraster`
-   * - :menuselection:`-->`
-       :guilabel:`Raster Information...`
+   * - :menuselection:`--> Raster Information...`
      -
      -
      - :ref:`gdalgdalinfo`
-   * - :menuselection:`-->`
-       :guilabel:`Merge...`
+   * - :menuselection:`--> Merge...`
      -
      -
      - :ref:`gdalmerge`
-   * - :menuselection:`-->`
-       :guilabel:`Build Overviews (Pyramids)...`
+   * - :menuselection:`--> Build Overviews (Pyramids)...`
      -
      -
      - :ref:`gdaloverviews`
-   * - :menuselection:`-->`
-       :guilabel:`Tile Index...`
+   * - :menuselection:`--> Tile Index...`
      -
      -
      - :ref:`gdaltileindex`
@@ -1694,18 +1628,15 @@ are enabled.
      -
      -
      -
-   * - :menuselection:`-->`
-       :guilabel:`Clip Raster by Extent...`
+   * - :menuselection:`--> Clip Raster by Extent...`
      -
      -
      - :ref:`gdalcliprasterbyextent`
-   * - :menuselection:`-->`
-       :guilabel:`Clip Raster by Mask Layer...`
+   * - :menuselection:`--> Clip Raster by Mask Layer...`
      -
      -
      - :ref:`gdalcliprasterbymasklayer`
-   * - :menuselection:`-->`
-       :guilabel:`Contour...`
+   * - :menuselection:`--> Contour...`
      -
      -
      - :ref:`gdalcontour`
@@ -1713,28 +1644,23 @@ are enabled.
      -
      -
      -
-   * - :menuselection:`-->`
-       :guilabel:`PCT to RGB...`
+   * - :menuselection:`--> PCT to RGB...`
      -
      -
      - :ref:`gdalpcttorgb`
-   * - :menuselection:`-->`
-       :guilabel:`Polygonize (Raster to Vector)...`
+   * - :menuselection:`--> Polygonize (Raster to Vector)...`
      -
      -
      - :ref:`gdalpolygonize`
-   * - :menuselection:`-->`
-       :guilabel:`Rasterize (Vector to Raster)...`
+   * - :menuselection:`--> Rasterize (Vector to Raster)...`
      -
      -
      - :ref:`gdalrasterize`
-   * - :menuselection:`-->`
-       :guilabel:`RGB to PCT...`
+   * - :menuselection:`--> RGB to PCT...`
      -
      -
      - :ref:`gdalrgbtopct`
-   * - :menuselection:`-->`
-       :guilabel:`Translate (Convert Format)...`
+   * - :menuselection:`--> Translate (Convert Format)...`
      -
      -
      - :ref:`gdaltranslate`
@@ -1836,8 +1762,7 @@ If no web plugins are enabled, there will be no :guilabel:`Web` menu.
      - 
      - :guilabel:`Web`
      - :ref:`metasearch`
-   * - :menuselection:`-->`
-       :guilabel:`Help`
+   * - :menuselection:`--> Help`
      - 
      - 
      - :ref:`metasearch`
