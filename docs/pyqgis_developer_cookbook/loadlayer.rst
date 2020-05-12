@@ -339,6 +339,8 @@ After that the raster can be added to the project.
      'temporalFieldIndex': NULL,     
      'mode':'2',             # GDAL 'mode' parameter, 2 unions raster tiles, 1 adds tiles separately (may require user input) 
  }
+ # remove any NULL parameters
+ uri_config = {key:val for key, val in uri_config.items() if val != NULL}
  # get the metadata for the raster provider and configure the URI
  md = QgsProviderRegistry.instance().providerMetadata('postgresraster')
  uri = QgsDataSourceUri(md.encodeUri(uri_config))
