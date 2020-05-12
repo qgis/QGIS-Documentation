@@ -94,7 +94,7 @@ Outputs
      - ``CRS_AUTHID``
      - [crs]
      - The coordinate reference system of the output raster layer
-   * - **CRS authority identifier**
+   * - **Extent**
      - ``EXTENT``
      - [extent]
      - The spatial extent of the output raster layer
@@ -193,7 +193,7 @@ Outputs
      - ``CRS_AUTHID``
      - [crs]
      - The coordinate reference system of the output raster layer
-   * - **CRS authority identifier**
+   * - **Extent**
      - ``EXTENT``
      - [extent]
      - The spatial extent of the output raster layer
@@ -296,7 +296,7 @@ Outputs
      - ``CRS_AUTHID``
      - [crs]
      - The coordinate reference system of the output raster layer
-   * - **CRS authority identifier**
+   * - **Extent**
      - ``EXTENT``
      - [extent]
      - The spatial extent of the output raster layer
@@ -395,7 +395,7 @@ Outputs
      - ``CRS_AUTHID``
      - [crs]
      - The coordinate reference system of the output raster layer
-   * - **CRS authority identifier**
+   * - **Extent**
      - ``EXTENT``
      - [extent]
      - The spatial extent of the output raster layer
@@ -504,7 +504,7 @@ Outputs
      - ``CRS_AUTHID``
      - [crs]
      - The coordinate reference system of the output raster layer
-   * - **CRS authority identifier**
+   * - **Extent**
      - ``EXTENT``
      - [extent]
      - The spatial extent of the output raster layer
@@ -603,7 +603,7 @@ Outputs
      - ``CRS_AUTHID``
      - [crs]
      - The coordinate reference system of the output raster layer
-   * - **CRS authority identifier**
+   * - **Extent**
      - ``EXTENT``
      - [extent]
      - The spatial extent of the output raster layer
