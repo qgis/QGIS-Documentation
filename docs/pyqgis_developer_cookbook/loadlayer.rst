@@ -306,8 +306,9 @@ To load a PostGIS raster:
 
 PostGIS rasters, similar to PostGIS vectors, can be added to a project using a URI string.
 It is efficient to keep a reusable dictionary of strings for the database connection parameters. 
-Editing those strings for the applicable connection.
-The dictionary is then loaded into an empty URI, before adding the raster.
+This makes it easy to edit the dictionary for the applicable connection.
+The dictionary is then encoded into a URI using the 'postgresraster' provider metadata object.
+After that the raster can be added to the project.
 
 .. testcode:: loadlayer
 
