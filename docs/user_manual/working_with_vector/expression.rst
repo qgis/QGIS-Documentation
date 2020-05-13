@@ -421,10 +421,16 @@ This group contains functions for handling date and time data.
    :widths: auto
 
    "age", "Returns as an interval the difference between two dates or datetimes"
+   "datetime_from_epoch |312|", "Returns a datetime whose date and time are the number of milliseconds,
+   msecs, that have passed since 1970-01-01T00:00:00.000, Coordinated Universal Time (Qt.UTC),
+   and converted to Qt.LocalTime."
    "day", "Extracts the day from a date or datetime, or the number of days from an interval"
    "day_of_week", "Returns a number corresponding to the day of the week for a specified date or datetime"
    "epoch", "Returns the interval in milliseconds between the unix epoch and a given date value"
    "hour", "Extracts the hour from a datetime or time, or the number of hours from an interval"
+   "make_date |314|", "Creates a date value from year, month and day numbers"
+   "make_datetime |314|", "Creates a datetime value from year, month, day, hour, minute and second numbers"
+   "make_time |314|", "Creates a time value from hour, minute and second numbers"
    "minute", "Extracts the minute from a datetime or time, or the number of minutes from an interval"
    "month", "Extracts the month part from a date or datetime, or the number of months from an interval"
    "now", "Returns current date and time"
@@ -558,6 +564,8 @@ This group contains general assorted functions.
    If the variable is not found, ``NULL`` will be returned."
    "eval", "Evaluates an expression which is passed in a string.
    Useful to expand dynamic parameters passed as context variables or fields."
+   eval_template |314|", "Evaluates a template which is passed in a string.
+   Useful to expand dynamic parameters passed as context variables or fields."
    "is_layer_visible", "Returns true if a specified layer is visible"
    "layer_property", "Returns a property of a layer or a value of its metadata.
    It can be layer name, crs, geometry type, feature count..."
@@ -610,6 +618,9 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    "buffer_by_m", "Creates a buffer along a line geometry where the buffer diameter
    varies according to the M values at the line vertices (see also :ref:`qgisbufferbym`)"
    "centroid", "Returns the geometric center of a geometry (see also :ref:`qgiscentroids`)"
+   "close_line |314|",  "Returns a closed line string of the input line string by appending the
+   first point to the end of the line, if it is not already closed. If the geometry is not
+   a line string or multi line string then the result will be null."
    "closest_point", "Returns the point on a geometry that is closest to a second geometry"
    "collect_geometries", "Collects a set of geometries into a multi-part geometry
    object (see also :ref:`qgiscollect`)"
@@ -638,7 +649,10 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    "force_rhr", "Forces a geometry to respect the Right-Hand-Rule (see also
    :ref:`qgisforcerhr`)"
    "geom_from_gml", "Returns a geometry created from a GML representation of geometry"
+   "geom_from_wkb |312|", "Returns a geometry created from a Well-Known Binary (WKB) representation"
    "geom_from_wkt", "Returns a geometry created from a well-known text (WKT) representation"
+   "geom_to_wkb |312|", "Returns the Well-Known Binary (WKB) representation (a BLOB) of
+   a geometry"
    "geom_to_wkt", "Returns the well-known text (WKT) representation of the geometry without SRID metadata"
    "geometry", "Returns a feature's geometry"
    "geometry_n", "Returns the nth geometry from a geometry collection,
@@ -657,6 +671,13 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    (share any portion of space) their bounding box, or 0 if they don't"
    "is_closed", "Returns true if a line string is closed (start and end points are coincident),
    false if a line string is not closed, or null if the geometry is not a line string"
+   "is_empty |312|", "Returns true if a geometry is empty (without coordinates),
+   false if the geometry is not empty and NULL if there is no geometry"
+   "is_empty_or_null |312|", "Returns true if a geometry is NULL or empty
+   (without coordinates)  or false otherwise"
+   "is_valid |312|", "Returns true if a geometry is well-formed in 2D according to
+   the OGC rules (see `examples of OGC geometry validity
+   <https://postgis.net/docs/using_postgis_dbmanagement.html#OGC_Validity>`_)"
    "length", "Returns length of a line geometry feature (or length of a string)"
    "line_interpolate_angle", "Returns the angle parallel to the geometry at a specified
    distance along a linestring geometry. Angles are in degrees clockwise from north."
@@ -670,6 +691,8 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    specified start and end distances (measured from the beginning of the line)
    (see also :ref:`qgislinesubstring`)"
    "m", "Returns the M value of a point geometry"
+   "m_max |314|", "Returns the maximum M (measure) value of a geometry"
+   "m_min |314|", "Returns the minimum M (measure) value of a geometry"
    "make_circle", "Creates a circular geometry based on center point and radius"
    "make_ellipse", "Creates an elliptical geometry based on center point, axes and azimuth"
    "make_line", "Creates a line geometry from a series or an array of point geometries"
@@ -713,6 +736,8 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    representation of the relationship between two geometries"
    "reverse", "Reverses the direction of a line string by reversing the order of its
    vertices (see also :ref:`qgisreverselinedirection`)"
+   "rotate |312|", "Returns a rotated version of a geometry. Calculations are in
+   the Spatial Reference System of this geometry (see also :ref:`qgisrotatefeatures`)"
    "segments_to_lines", "Returns a multi line geometry consisting of a line for
    every segment in the input geometry (see also :ref:`qgisexplodelines`)"
    "shortest_line", "Returns the shortest line joining two geometries.
@@ -755,6 +780,8 @@ This group contains functions that operate on geometry objects (e.g., length, ar
    "y_min", "Returns the minimum Y coordinate of a geometry.
    Calculations are in the Spatial Reference System of this geometry"
    "z", "Returns the Z coordinate of a point geometry"
+   "z_max |314|", "Returns the maximum Z coordinate of a geometry"
+   "z_min |314|", "Returns the minimum Z coordinate of a geometry"
 
 **Some examples:**
 
@@ -924,10 +951,10 @@ This group contains math functions (e.g., square root, sin and cos).
    "min", "Returns the smallest not null value in a set of values"
    "pi", "Returns the value of pi for calculations"
    "radians", "Converts from degrees to radians"
-   "rand", "Returns the random integer within the range specified by the minimum
-   and maximum argument (inclusive)"
-   "randf", "Returns the random float within the range specified by the minimum
-   and maximum argument (inclusive)"
+   "rand", "Returns a random integer within the range specified by the minimum
+   and maximum argument (inclusive). A seed can be used for deterministic results"
+   "randf", "Returns a random float within the range specified by the minimum
+   and maximum argument (inclusive). A seed can be used for deterministic results"
    "round", "Rounds to number of decimal places"
    "scale_exp", "Transforms a given value from an input domain to an output
    range using an exponential curve"
@@ -1040,9 +1067,13 @@ This group contains functions that operate on record identifiers.
    "attribute", "Returns the value of a specified attribute from a feature"
    "attributes", "Returns a :ref:`map <maps_functions>` of all attributes from
    a feature, with field names as map keys"
+   "display_expression |314|", "Returns the :ref:`display expression <maptips>` for a given
+   feature in a layer. If called with no parameters, it evaluates the current feature"
    "get_feature", "Returns the first feature of a layer matching a given attribute value"
    "get_feature_by_id", "Returns the feature of a layer matching the given feature ID"
    "is_selected", "Returns if a feature is selected"
+   "maptip |314|", "Returns the :ref:`maptip <maptips>` for a given feature in a layer.
+   If called with no parameters, it evaluates the current feature"
    "num_selected", "Returns the number of selected features on a given layer"
    "represent_value", "Returns the configured representation value for a field value
    (convenient with some :ref:`widget types <edit_widgets>`)"
@@ -1074,6 +1105,7 @@ This group contains functions that operate on strings
    :widths: 20, 75
    :class: longtable
 
+   "ascii |314|", "Returns the unicode code associated with the first character of a string"
    "char", "Returns the character associated with a unicode code"
    "concat", "Concatenates several strings to one"
    "format", "Formats a string using supplied arguments"
@@ -1210,7 +1242,9 @@ To use these functions in an expression, they should be preceded by @ character
    "item_uuid", "Returns the layout item unique ID"
    "layer", "Returns the current layer"
    "layer_id", "Returns the ID of current layer"
+   "layer_ids |314|", "Returns the IDs of all the map layers in the current project as a list"
    "layer_name", "Returns the name of current layer"
+   "layers |314|", "Returns all the map layers in the current project as a list"
    "layout_dpi", "Returns the composition resolution (DPI)"
    "layout_name", "Returns the layout name"
    "layout_numpages", "Returns the number of pages in the layout"
@@ -1247,6 +1281,12 @@ To use these functions in an expression, they should be preceded by @ character
    "map_layers", "Returns the list of map layers visible in the map"
    "map_rotation", "Returns the current rotation of the map"
    "map_scale", "Returns the current scale of the map"
+   "map_start_time |314|", "Returns the start of the map's temporal time range
+   (as a datetime value)"
+   "map_end_time |314|", "Returns the end of the map's temporal time range
+   (as a datetime value)"
+   "map_interval |314|", "Returns the duration of the map's temporal time range
+   (as an interval value)"
    "map_units", "Returns the units of map measurements"
    "notification_message", "Content of the notification message sent by the provider
    (available only for actions triggered by provider notifications)."
@@ -1436,6 +1476,7 @@ Further information about creating Python code can be found in the
    source folder.
 
 .. |312| replace:: ``NEW in 3.12``
+.. |314| replace:: ``NEW in 3.14``
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
