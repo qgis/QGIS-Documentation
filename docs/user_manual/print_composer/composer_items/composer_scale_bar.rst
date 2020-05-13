@@ -101,8 +101,8 @@ subdivisions (see figure_layout_scalebar_segments_):
 
    Scale Bar Segments group
 
-* You can define how many :guilabel:`Segments` will be drawn on the left and on
-  the right side of the ``0`` of the scale bar:
+* You can define the number of :guilabel:`Segments` that will be drawn at the left
+  and right sides of the ``0`` of the scale bar:
 
   * number of subdivisions of a unique segment on the :guilabel:`Left` side
   * number of segments on the :guilabel:`Right` side
