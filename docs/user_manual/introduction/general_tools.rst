@@ -2218,6 +2218,12 @@ screen resolution, paper size, or the terrain). Available units are:
      Adjust scaling range dialog
 
 
+.. index:: Number format; Map scale bar
+.. _number_formatting:
+
+Number Formatting
+-----------------
+
 .. index::
    single: Rendering effects; Blending modes
 .. _blend-modes:
