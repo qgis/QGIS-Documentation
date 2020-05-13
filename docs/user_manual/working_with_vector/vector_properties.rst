@@ -1513,8 +1513,7 @@ The Label Toolbar
 
 The :guilabel:`Label Toolbar` provides some tools to manipulate |labeling|
 :ref:`label <vector_labels_tab>` or |diagram| :ref:`diagram <sec_diagram>`
-properties, but only if the corresponding data-defined option is indicated
-(otherwise, buttons are disabled).
+properties but only if the corresponding data-defined option is indicated.
 
 .. _figure_labels_tools:
 
@@ -1529,7 +1528,7 @@ same way with diagrams:
 
 * |pinLabels| :sup:`Pin/Unpin Labels And Diagrams` that has data-defined
   position. By clicking or draging an area, you pin label(s). If you click or
-  drag an area holding :kbd:`Shift`, label(s) are unpinned. Finally, you can
+  drag an area holding :kbd:`Shift` label(s) are unpinned. Finally, you can
   also click or drag an area holding :kbd:`Ctrl` to toggle the pin status of
   label(s).
 * |showPinnedLabels| :sup:`Highlight Pinned Labels And Diagrams`. If the
@@ -1539,12 +1538,14 @@ same way with diagrams:
   determine whether any important labels are missing from the maps (e.g. due
   to overlaps or other constraints). They are displayed with a customizable
   color (see :ref:`automated_placement`).
-* |showHideLabels| :sup:`Show/Hide Labels And Diagrams` that has
-  data-defined visbility. If you click or drag an area holding :kbd:`Shift`,
-  then label(s) are hidden. When a label is hidden, you just have to click
-  or drag an area around the feature's point to restore its visibility.
+* |showHideLabels| :sup:`Show/Hide Labels And Diagrams`. If you click on the labels,
+  then they are hidden. When a label is hidden, you just have to click
+  on the feature to restore its visibility. This tool also works without setting
+  data-defined options.
 * |moveLabel| :sup:`Move Label And Diagram` that has data-defined
-  position. You just have to drag the label to the desired place.
+  position. You just have to drag the label to the desired place. This only
+  works when you set the data-defined override for the :guilabel:`Data defined`
+  entries.
 * |rotateLabel| :sup:`Rotate Label`. Click the label and move around and
   you get the text rotated.
 * |changeLabelProperties| :sup:`Change Label`. It opens a dialog to change the
