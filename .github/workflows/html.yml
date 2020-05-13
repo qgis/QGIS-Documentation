@@ -1,6 +1,6 @@
 name: HTML build
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   build:
@@ -21,10 +21,10 @@ jobs:
           pip install -r REQUIREMENTS.txt
     - name: Build sphinx documentation
       run: |
-          make fasthtml
+          make html
     - name: Upload build artifact
       uses: actions/upload-artifact@v1
       with:
         name: HTML build
-        path: output
+        path: build
 

@@ -1,0 +1,66 @@
+{# Add rst-badge after rst-versions for small badge style. #}
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-info-circle"> {{ project }} </span>
+      v: {{ version }}
+      <span class="fa fa-caret-down"></span>
+    </span>
+
+    <div class="rst-other-versions">
+      <dl>
+        <dt>{{ _('Languages') }}</dt>
+        {% for slug, url in supported_languages %}
+          <dd><a href="{{ url }}/{{ pagename }}.html">{{ slug }}</a></dd>
+        {% endfor %}
+      </dl>
+
+      <dl>
+        <dt>{{ _('Versions') }}</dt>
+        {% for slug, url in versions %}
+          <dd><a href="{{ url }}/{{ language }}/{{ pagename }}.html">{{ slug }}</a></dd>
+        {% endfor %}
+      </dl>
+
+      {% if version_downloads %} 
+       <dl>
+        <dt>{{ _('Downloads') }}</dt>
+        {% for type, url in downloads %}
+          <dd><a href="{{ url }}">{{ type }}</a></dd>
+        {% endfor %}
+      </dl>
+      {% endif %}
+
+      {# Hide contribute to docs fields for obsolete documents. #}
+      {% if not outdated %} 
+      <dl>
+        <dt>{{ _('Contribute to Docs') }}</dt>
+          <dd>
+            <a href="{{ github_url }}/{{ pagename }}.rst" target="_blank" rel="noopener noreferrer">{{ _('Edit on GitHub') }}</a>
+          </dd>
+          {# Display the call for translation only for the latest document. #}
+          {% if not isTesting %} 
+          <dd>
+            <a href="{{ transifex_url }}/#{{ language }}/{{ pagename | replace("/","--") }}" target="_blank" rel="noopener noreferrer">{{ _('Translate Page') }}</a>
+          </dd>
+          {% endif %}
+      </dl>
+      {% endif %}
+
+      <dl>
+        <dt>{{ _('On QGIS Project') }}</dt>
+          <dd>
+            <a href="https://qgis.org/{{ language }}" target="_blank" rel="noopener noreferrer">{{ _('Home') }}</a>
+          </dd>
+          <dd>
+            <a href="https://qgis.org/api/{{ api_version }}" target="_blank" rel="noopener noreferrer">{{ _('C++ API') }}</a>
+          </dd>
+          <dd>
+            <a href="https://qgis.org/pyqgis/{{ pyqgis_version }}" target="_blank" rel="noopener noreferrer">{{ _('PyQGIS API') }}</a>
+          </dd>
+          <dd>
+            <a href="https://github.com/qgis/QGIS/tree/{{ source_version }}" target="_blank" rel="noopener noreferrer">{{ _('Source') }}</a>
+          </dd>
+      </dl>
+
+    </div>
+  </div>
