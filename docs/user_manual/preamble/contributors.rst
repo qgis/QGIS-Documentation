@@ -49,7 +49,7 @@ and update the whole QGIS documentation.
    "Astrid Emde", "Luigi Pirelli", "Thomas Gratier", "Giovanni Allegri", "GiordanoPezzola"
    "Paolo Corti", "Tudor Bărăscu", "Maning Sambale",  "Claudia A. Engel", "Yoichi Kayama"
    "Otto Dassau", "Denis Rouzaud", "Nick Bearman", "embelding", "ajazepk"
-   "Ramon", "Andrei", "zstadler",  "icephale"
+   "Ramon", "Andrei", "zstadler",  "icephale", "Rosa Aguilar"
 
 
 
