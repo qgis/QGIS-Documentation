@@ -1935,6 +1935,12 @@ wider set of color ramps and options:
    Quick color ramp selection widget
 
 
+.. index:: Number format; Map scale bar
+.. _number_formatting:
+
+Number Formatting
+-----------------
+
 .. index::
    single: Rendering effects; Blending modes
 .. _blend-modes:
