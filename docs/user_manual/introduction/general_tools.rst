@@ -247,7 +247,10 @@ in a group, the layer is moved to the top in its current group.
 The checkbox for a group will show or hide the checked layers in the group
 with one click.
 With :kbd:`Ctrl` pressed, the checkbox will also turn on or off all
-the layers in the group.
+the layers in the group and its sub-groups.
+
+:kbd:`Ctrl`-clic on a checked / unchecked layer will uncheck / check the layer and all
+its parents.
 
 Enabling the **Mutually Exclusive Group** option means you can make a group have
 only one layer visible at the same time.
