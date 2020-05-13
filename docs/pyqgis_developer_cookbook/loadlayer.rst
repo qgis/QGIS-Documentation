@@ -327,7 +327,7 @@ After that the raster can be added to the project.
      'schema':'public',      # The database schema that the table is located in.
      'table':'my_rasters',   # The database table to be loaded.
      'geometrycolumn':'rast',# raster column in PostGIS table
-     'where':'rid > 5',      # An SQL WHERE clause. It should be placed at the end of the string.
+     'sql':NULL,      # An SQL WHERE clause. It should be placed at the end of the string.
      'key':NULL,             # A key column from the table.
      'srid':NULL,            # A string designating the SRID of the coordinate reference system.
      'estimatedmetadata':'False', # A boolean value telling if the metadata is estimated.
