@@ -244,7 +244,7 @@ To move a group or layer to the top of the layer panel, either drag it to
 the top, or choose :guilabel:`Move to Top`. If you use this option on a layer nested
 in a group, the layer is moved to the top in its current group.
 
-The checkbox for a group will show or hide all the layers in the group
+The checkbox for a group will show or hide the checked layers in the group
 with one click.
 With :kbd:`Ctrl` pressed, the checkbox will also turn on or off all
 the layers in the group.
