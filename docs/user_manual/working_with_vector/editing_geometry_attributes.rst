@@ -151,7 +151,7 @@ what you want to move.
 Topological editing
 ===================
 
-In addition to these snapping options, the :guilabel:`Snapping options...``
+In addition to these snapping options, the :guilabel:`Snapping options...`
 dialog (:menuselection:`Project --> Snapping options`) and the
 :guilabel:`Snapping` toolbar allow you to enable / disable some other
 topological functionalities.
