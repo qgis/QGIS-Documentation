@@ -138,6 +138,10 @@ html_context = {
     'isTesting': True
 }
 
+# Add custom CSS when a top bar is needed to be shown (for testing or outdated versions)
+if html_context['isTesting'] or html_context['outdated']:
+  html_css_files = ['css/qgis_topbar.css']
+
 supported_languages = cfg['supported_languages'].replace(' ','').split(',')
 version_list = cfg['version_list'].replace(' ','').split(',')
 docs_url = 'https://docs.qgis.org/'
