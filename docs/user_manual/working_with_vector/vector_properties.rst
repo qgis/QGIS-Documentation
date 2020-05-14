@@ -1539,7 +1539,8 @@ same way with diagrams:
   to overlaps or other constraints). They are displayed with a customizable
   color (see :ref:`automated_placement`).
 * |showHideLabels| :sup:`Show/Hide Labels And Diagrams`. If you click on the labels,
-  then they are hidden. When a label is hidden, you just have to click
+  or click and drag an area holding :kbd:`Shift`, they are hidden.
+  When a label is hidden, you just have to click
   on the feature to restore its visibility. This tool also works without setting
   data-defined options.
 * |moveLabel| :sup:`Move Label And Diagram` that has data-defined
