@@ -320,7 +320,7 @@ After that the raster can be added to the project.
      'sslmode':QgsDataSourceUri.SslDisable, # SslAllow, SslPrefer, SslRequire, SslVerifyCa, SslVerifyFull
      # user and password are not needed if stored in the authcfg or service
      'authcfg':'QconfigId',  # The QGIS athentication database ID holding connection details.
-     'service':NULL,         # The PostgreSQL service to be used for connection to the database.
+     'service': None,         # The PostgreSQL service to be used for connection to the database.
      'username':NULL,        # The PostgreSQL user name.
      'password':NULL,        # The PostgreSQL password for the user.
      # table and raster column details
