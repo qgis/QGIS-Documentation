@@ -1541,7 +1541,9 @@ same way with diagrams:
 * |showHideLabels| :sup:`Show/Hide Labels And Diagrams`. If you click on the labels,
   or click and drag an area holding :kbd:`Shift`, they are hidden.
   When a label is hidden, you just have to click
-  on the feature to restore its visibility. This tool also works without setting
+  on the feature to restore its visibility.
+  If you drag an area, all the labels in the area will be restored.
+  This tool also works without setting
   data-defined options.
 * |moveLabel| :sup:`Move Label And Diagram` that has data-defined
   position. You just have to drag the label to the desired place. This only
