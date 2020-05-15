@@ -1528,7 +1528,7 @@ same way with diagrams:
 
 * |pinLabels| :sup:`Pin/Unpin Labels And Diagrams` that has data-defined
   position. By clicking or draging an area, you pin label(s). If you click or
-  drag an area holding :kbd:`Shift` label(s) are unpinned. Finally, you can
+  drag an area holding :kbd:`Shift`, label(s) are unpinned. Finally, you can
   also click or drag an area holding :kbd:`Ctrl` to toggle the pin status of
   label(s).
 * |showPinnedLabels| :sup:`Highlight Pinned Labels And Diagrams`. If the
