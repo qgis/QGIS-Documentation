@@ -263,27 +263,27 @@ details).
      -
      - :ref:`sec_attribute_table`
    * - :menuselection:`Select -->`
-     - 
+     -
      - :guilabel:`Attributes`
      - :ref:`sec_selection`
    * - :menuselection:`-->`
        |selectRectangle| :guilabel:`Select Feature(s)`
-     - 
+     -
      - :guilabel:`Attributes`
      - :ref:`sec_selection`
    * - :menuselection:`-->`
        |selectPolygon| :guilabel:`Select Features by Polygon`
-     - 
+     -
      - :guilabel:`Attributes`
      - :ref:`sec_selection`
    * - :menuselection:`-->`
        |selectFreehand| :guilabel:`Select Features by Freehand`
-     - 
+     -
      - :guilabel:`Attributes`
      - :ref:`sec_selection`
    * - :menuselection:`-->`
        |selectRadius| :guilabel:`Select Features by Radius`
-     - 
+     -
      - :guilabel:`Attributes`
      - :ref:`sec_selection`
    * - :menuselection:`-->`
@@ -307,7 +307,7 @@ details).
      - :guilabel:`Attributes`
      - :ref:`sec_selection`
    * - :menuselection:`--> Reselect Features`
-     - 
+     -
      - :guilabel:`Attributes`
      - :ref:`sec_selection`
    * - :menuselection:`-->`
@@ -323,7 +323,7 @@ details).
    * - |newTableRow| :guilabel:`Add Record`
      - :kbd:`Ctrl+.`
      - :guilabel:`Digitizing`
-     - 
+     -
    * - |capturePoint| :guilabel:`Add Point Feature`
      - :kbd:`Ctrl+.`
      - :guilabel:`Digitizing`
@@ -337,212 +337,212 @@ details).
      - :guilabel:`Digitizing`
      - :ref:`add_feature`
    * - |circularStringCurvePoint| :guilabel:`Add Circular String`
-     - 
+     -
      - :guilabel:`Shape Digitizing`
      - :ref:`add_circular_string`
    * - |circularStringRadius| :guilabel:`Add Circular String by Radius`
-     - 
+     -
      - :guilabel:`Shape Digitizing`
      - :ref:`add_circular_string`
    * - :menuselection:`Add Circle -->`
-     - 
+     -
      - :guilabel:`Shape Digitizing`
-     - 
+     - :ref:`draw_circles`
    * - :menuselection:`-->`
        |circle2Points| :guilabel:`Add Circle from 2 Points`
-     - 
+     -
      - :guilabel:`Shape Digitizing`
-     - 
+     - :ref:`draw_circles`
    * - :menuselection:`-->`
        |circle3Points| :guilabel:`Add Circle from 3 Points`
-     - 
+     -
      - :guilabel:`Shape Digitizing`
-     - 
+     - :ref:`draw_circles`
    * - :menuselection:`-->`
        |circle3Tangents| :guilabel:`Add Circle from 3 Tangents`
-     - 
+     -
      - :guilabel:`Shape Digitizing`
-     - 
+     - :ref:`draw_circles`
    * - :menuselection:`-->`
        |circle2TangentsPoint|
        :guilabel:`Add Circle from 2 Tangents and a Point`
-     - 
+     -
      - :guilabel:`Shape Digitizing`
-     - 
+     - :ref:`draw_circles`
    * - :menuselection:`-->`
        |circleCenterPoint|
        :guilabel:`Add Circle by a Center Point and Another Point`
-     - 
+     -
      - :guilabel:`Shape Digitizing`
-     - 
+     - :ref:`draw_circles`
    * - :menuselection:`Add Rectangle -->`
-     - 
+     -
      - :guilabel:`Shape Digitizing`
-     - 
+     -
    * - :menuselection:`-->`
        |rectangleExtent| :guilabel:`Add Rectangle from Extent`
-     - 
+     -
      - :guilabel:`Shape Digitizing`
-     - 
+     -
    * - :menuselection:`-->`
        |rectangleCenter|
        :guilabel:`Add Rectangle from Center and a Point`
-     - 
+     -
      - :guilabel:`Shape Digitizing`
-     - 
+     -
    * - :menuselection:`-->`
        |rectangle3PointsProjected|
        :guilabel:`Add Rectangle from 3 Points (Distance from 2nd
        and 3rd point)`
-     - 
+     -
      - :guilabel:`Shape Digitizing`
-     - 
+     -
    * - :menuselection:`-->`
        |rectangle3PointsDistance|
        :guilabel:`Add Rectangle from 3 Points (Distance from
        projected point on segment p1 and p2)`
-     - 
+     -
      - :guilabel:`Shape Digitizing`
-     - 
+     -
    * - :menuselection:`Add Regular Polygon -->`
-     - 
+     -
      - :guilabel:`Shape Digitizing`
-     - 
+     -
    * - :menuselection:`-->`
        |regularPolygonCenterPoint|
        :guilabel:`Add Regular Polygon from Center and a Point`
-     - 
+     -
      - :guilabel:`Shape Digitizing`
-     - 
+     -
    * - :menuselection:`-->`
        |regularPolygonCenterCorner|
        :guilabel:`Add Regular Polygon from Center and a Corner`
-     - 
+     -
      - :guilabel:`Shape Digitizing`
-     - 
+     -
    * - :menuselection:`-->`
        |regularPolygon2Points|
        :guilabel:`Add Regular Polygon from 2 Points`
-     - 
+     -
      - :guilabel:`Shape Digitizing`
-     - 
+     -
    * - :menuselection:`Add Ellipse -->`
-     - 
+     -
      - :guilabel:`Shape Digitizing`
-     - 
+     -
    * - :menuselection:`-->`
        |ellipseCenter2Points|
        :guilabel:`Add Ellipse from Center and 2 Points`
-     - 
+     -
      - :guilabel:`Shape Digitizing`
-     - 
+     -
    * - :menuselection:`-->`
        |ellipseCenterPoint|
        :guilabel:`Add Ellipse from Center and a Point`
-     - 
+     -
      - :guilabel:`Shape Digitizing`
-     - 
+     -
    * - :menuselection:`-->`
        |ellipseExtent| :guilabel:`Add Ellipse from Extent`
-     - 
+     -
      - :guilabel:`Shape Digitizing`
-     - 
+     -
    * - :menuselection:`-->`
        |ellipseFoci| :guilabel:`Add Ellipse from Foci`
-     - 
+     -
      - :guilabel:`Shape Digitizing`
-     - 
+     -
    * - |moveFeature| :guilabel:`Move Feature(s)`
-     - 
+     -
      - :guilabel:`Advanced Digitizing`
      - :ref:`move_feature`
    * - |moveFeatureCopy| :guilabel:`Copy and Move Feature(s)`
-     - 
+     -
      - :guilabel:`Advanced Digitizing`
      - :ref:`move_feature`
    * - |deleteSelectedFeatures| :guilabel:`Delete Selected`
-     - 
+     -
      - :guilabel:`Digitizing`
      - :ref:`delete_feature`
    * - |multiEdit| :guilabel:`Modify Attributes of Selected Features`
-     - 
+     -
      - :guilabel:`Digitizing`
      - :ref:`calculate_fields_values`
    * - |rotateFeature| :guilabel:`Rotate Feature(s)`
-     - 
+     -
      - :guilabel:`Advanced Digitizing`
      - :ref:`rotate_feature`
    * - |simplifyFeatures| :guilabel:`Simplify Feature`
-     - 
+     -
      - :guilabel:`Advanced Digitizing`
      - :ref:`simplify_feature`
    * - |addRing| :guilabel:`Add Ring`
-     - 
+     -
      - :guilabel:`Advanced Digitizing`
      - :ref:`add_ring`
    * - |addPart| :guilabel:`Add Part`
-     - 
+     -
      - :guilabel:`Advanced Digitizing`
      - :ref:`add_part`
    * - |fillRing| :guilabel:`Fill Ring`
-     - 
+     -
      - :guilabel:`Advanced Digitizing`
      - :ref:`fill_ring`
    * - |deleteRing| :guilabel:`Delete Ring`
-     - 
+     -
      - :guilabel:`Advanced Digitizing`
      - :ref:`delete_ring`
    * - |deletePart| :guilabel:`Delete Part`
-     - 
+     -
      - :guilabel:`Advanced Digitizing`
      - :ref:`delete_part`
    * - |reshape| :guilabel:`Reshape Features`
-     - 
+     -
      - :guilabel:`Advanced Digitizing`
      - :ref:`reshape_feature`
    * - |offsetCurve| :guilabel:`Offset Curve`
-     - 
+     -
      - :guilabel:`Advanced Digitizing`
      - :ref:`offset_curve`
    * - |splitFeatures| :guilabel:`Split Features`
-     - 
+     -
      - :guilabel:`Advanced Digitizing`
      - :ref:`split_feature`
    * - |splitParts| :guilabel:`Split Parts`
-     - 
+     -
      - :guilabel:`Advanced Digitizing`
      - :ref:`split_part`
    * - |mergeFeatures| :guilabel:`Merge Selected Features`
-     - 
+     -
      - :guilabel:`Advanced Digitizing`
      - :ref:`mergeselectedfeatures`
    * - |mergeFeatAttributes|
        :guilabel:`Merge Attributes of Selected Features`
-     - 
+     -
      - :guilabel:`Advanced Digitizing`
      - :ref:`mergeattributesfeatures`
    * - |vertexTool| :guilabel:`Vertex Tool (All Layers)`
-     - 
+     -
      - :guilabel:`Digitizing`
      - :ref:`vertex_tool`
    * - |vertexToolActiveLayer| :guilabel:`Vertex Tool (Current Layer)`
-     - 
+     -
      - :guilabel:`Digitizing`
      - :ref:`vertex_tool`
    * - |rotatePointSymbols| :guilabel:`Rotate Point Symbols`
-     - 
+     -
      - :guilabel:`Advanced Digitizing`
      - :ref:`rotate_symbol`
    * - |offsetPointSymbols| :guilabel:`Offset Point Symbols`
-     - 
+     -
      - :guilabel:`Advanced Digitizing`
      - :ref:`offset_symbol`
    * - |reverseLine| :guilabel:`Reverse Line`
-     - 
+     -
      - :guilabel:`Advanced Digitizing`
      - :ref:`reverse_line`
    * - |trimExtend| :guilabel:`Trim/extend Feature`
-     - 
+     -
      - :guilabel:`Advanced Digitizing`
      - :ref:`trim_extend_feature`
 
@@ -808,7 +808,7 @@ actions like:
    * - :menuselection:`--> GRASS Tools`
      -
      -
-     - :ref:`sec_panels_and_toolbars`
+     - :ref:`sec_grass`
    * - :menuselection:`--> Layer Order`
      -
      -
@@ -912,7 +912,7 @@ actions like:
    * - :menuselection:`--> Shape Digitizing Toolbar`
      -
      -
-     -
+     - :ref:`shape_edit`
    * - :menuselection:`--> Snapping Toolbar`
      -
      -
@@ -926,9 +926,9 @@ actions like:
      -
      -
    * - :menuselection:`--> GRASS`
-     - 
-     - 
-     - :ref:`sec_panels_and_toolbars`
+     -
+     -
+     - :ref:`sec_grass`
    * - :guilabel:`Toggle Full Screen Mode`
      - :kbd:`F11`
      -
@@ -964,7 +964,7 @@ Using the same data sources, you can also:
 * or :guilabel:`Embed Layers and Groups...` from another project, as
   read-only copies which you cannot modify (see
   :ref:`nesting_projects`)
-  
+
 The :menuselection:`Layer` menu also contains tools to configure,
 copy or paste layer properties (style, scale, CRS...).
 
@@ -983,7 +983,7 @@ copy or paste layer properties (style, scale, CRS...).
      - :guilabel:`Data Source Manager`
      - :ref:`Opening Data <datasourcemanager>`
    * - :menuselection:`Create Layer -->`
-     - 
+     -
      - :guilabel:`Data Source Manager`
      - :ref:`sec_create_vector`
    * - :menuselection:`-->` |newGeoPackageLayer|
@@ -993,26 +993,26 @@ copy or paste layer properties (style, scale, CRS...).
      - :ref:`sec_create_vector`
    * - :menuselection:`-->` |newVectorLayer|
        :guilabel:`New Shapefile Layer...`
-     - 
+     -
      - :guilabel:`Data Source Manager`
      - :ref:`sec_create_vector`
    * - :menuselection:`-->` |newSpatiaLiteLayer|
        :guilabel:`New SpatiaLite Layer...`
-     - 
+     -
      - :guilabel:`Data Source Manager`
      - :ref:`sec_create_vector`
    * - :menuselection:`-->` |createMemory|
        :guilabel:`New Temporary Scratch Layer...`
-     - 
+     -
      - :guilabel:`Data Source Manager`
      - :ref:`sec_create_vector`
    * - :menuselection:`-->` |virtualLayer|
        :guilabel:`New Virtual Layer...`
-     - 
+     -
      - :guilabel:`Data Source Manager`
      - :ref:`sec_create_vector`
    * - :menuselection:`Add Layer -->`
-     - 
+     -
      - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
    * - :menuselection:`-->` |addOgrLayer|
@@ -1027,7 +1027,7 @@ copy or paste layer properties (style, scale, CRS...).
      - :ref:`opening_data`
    * - :menuselection:`-->` |addMeshLayer|
        :guilabel:`Add Mesh Layer...`
-     - 
+     -
      - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
    * - :menuselection:`-->` |addDelimitedTextLayer|
@@ -1047,7 +1047,7 @@ copy or paste layer properties (style, scale, CRS...).
      - :ref:`opening_data`
    * - :menuselection:`-->` |addMssqlLayer|
        :guilabel:`Add MSSQL Spatial Layer...`
-     - 
+     -
      - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
    * - :menuselection:`-->` |addDb2Layer|
@@ -1057,7 +1057,7 @@ copy or paste layer properties (style, scale, CRS...).
      - :ref:`opening_data`
    * - :menuselection:`-->` |virtualLayer|
        :guilabel:`Add/Edit Virtual Layer...`
-     - 
+     -
      - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
    * - :menuselection:`-->` |wms|
@@ -1067,144 +1067,141 @@ copy or paste layer properties (style, scale, CRS...).
      - :ref:`opening_data`
    * - :menuselection:`-->` |addAmsLayer|
        :guilabel:`Add ArcGIS MapServer Layer...`
-     - 
+     -
      - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
    * - :menuselection:`-->` |wcs|
        :guilabel:`Add WCS Layer...`
-     - 
+     -
      - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
    * - :menuselection:`-->` |wfs|
        :guilabel:`Add WFS Layer...`
-     - 
+     -
      - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
    * - :menuselection:`-->` |addAfsLayer|
        :guilabel:`Add ArcGIS FeatureServer Layer...`
-     - 
+     -
      - :guilabel:`Data Source Manager`
      - :ref:`opening_data`
    * - :guilabel:`Embed Layers and Groups...`
-     - 
-     - 
+     -
+     -
      - :ref:`nesting_projects`
    * - :guilabel:`Add from Layer Definition File...`
-     - 
-     - 
+     -
+     -
      - :ref:`layer_definition_file`
    * - |editCopy| :guilabel:`Copy Style`
-     - 
-     - 
+     -
+     -
      - :ref:`save_layer_property`
    * - |editPaste| :guilabel:`Paste Style`
-     - 
-     - 
+     -
+     -
      - :ref:`save_layer_property`
    * - |editCopy| :guilabel:`Copy Layer`
-     - 
-     - 
-     - 
+     -
+     -
+     -
    * - |editPaste| :guilabel:`Paste Layer/Group`
-     - 
-     - 
-     - 
+     -
+     -
+     -
    * - |openTable| :guilabel:`Open Attribute Table`
      - :kbd:`F6`
      - :guilabel:`Attributes`
      - :ref:`sec_attribute_table`
    * - |toggleEditing| :guilabel:`Toggle Editing`
-     - 
+     -
      - :guilabel:`Digitizing`
      - :ref:`sec_edit_existing_layer`
    * - |fileSave| :guilabel:`Save Layer Edits`
-     - 
+     -
      - :guilabel:`Digitizing`
      - :ref:`save_feature_edits`
    * - |allEdits| :menuselection:`Current Edits -->`
-     - 
+     -
      - :guilabel:`Digitizing`
      - :ref:`save_feature_edits`
    * - :menuselection:`--> Save for Selected Layer(s)`
-     - 
+     -
      - :guilabel:`Digitizing`
      - :ref:`save_feature_edits`
    * - :menuselection:`--> Rollback for Selected Layer(s)`
-     - 
+     -
      - :guilabel:`Digitizing`
      - :ref:`save_feature_edits`
-   * - :menuselection:`-->`
-       :guilabel:`Cancel for Selected Layer(s)`
-     - 
+   * - :menuselection:`--> Cancel for Selected Layer(s)`
+     -
      - :guilabel:`Digitizing`
      - :ref:`save_feature_edits`
-   * - :menuselection:`-->`
-       :guilabel:`Save for all Layers`
-     - 
+   * - :menuselection:`--> Save for all Layers`
+     -
      - :guilabel:`Digitizing`
      - :ref:`save_feature_edits`
-   * - :menuselection:`-->`
-       :guilabel:`Rollback for all Layers`
-     - 
+   * - :menuselection:`--> Rollback for all Layers`
+     -
      - :guilabel:`Digitizing`
      - :ref:`save_feature_edits`
    * - :menuselection:`--> Cancel for all Layers`
-     - 
+     -
      - :guilabel:`Digitizing`
      - :ref:`save_feature_edits`
    * - :guilabel:`Save As...`
-     - 
-     - 
+     -
+     -
      - :ref:`general_saveas`
    * - :guilabel:`Save As Layer Definition File...`
-     - 
-     - 
+     -
+     -
      - :ref:`layer_definition_file`
    * - |removeLayer| :guilabel:`Remove Layer/Group`
      - :kbd:`Ctrl+D`
-     - 
-     - 
+     -
+     -
    * - |duplicateLayer| :guilabel:`Duplicate Layer(s)`
-     - 
-     - 
-     - 
+     -
+     -
+     -
    * - :guilabel:`Set Scale Visibility of Layer(s)`
-     - 
-     - 
-     - 
+     -
+     -
+     -
    * - :guilabel:`Set CRS of Layer(s)`
      - :kbd:`Ctrl+Shift+C`
-     - 
+     -
      - :ref:`layer_crs`
    * - :guilabel:`Set Project CRS from Layer`
-     - 
-     - 
+     -
+     -
      - :ref:`project_crs`
    * - :guilabel:`Layer Properties...`
-     - 
-     - 
+     -
+     -
      - :ref:`vector_properties_dialog`,
        :ref:`raster_properties_dialog`,
        :ref:`label_meshproperties`
    * - :guilabel:`Filter...`
      - :kbd:`Ctrl+F`
-     - 
+     -
      - :ref:`vector_query_builder`
    * - |labeling| :guilabel:`Labeling`
-     - 
-     - 
+     -
+     -
      - :ref:`vector_labels_tab`
    * - |inOverview| :guilabel:`Show in Overview`
-     - 
-     - 
+     -
+     -
      - :ref:`overview_panels`
    * - |addAllToOverview| :guilabel:`Show All in Overview`
-     - 
-     - 
+     -
+     -
      - :ref:`overview_panels`
    * - |removeAllOVerview| :guilabel:`Hide All from Overview`
-     - 
-     - 
+     -
+     -
      - :ref:`overview_panels`
 
 
@@ -1329,7 +1326,7 @@ are enabled.
      - :ref:`qgisintersection`
    * - :menuselection:`--> Symmetrical Difference...`
      -
-     - 
+     -
      - :ref:`qgissymmetricaldifference`
    * - :menuselection:`--> Union...`
      -
@@ -1684,7 +1681,7 @@ Database
 
 This is what the :guilabel:`Database` menu looks like if all the core
 plugins are enabled.
-If no database plugins are enabled, there will be no 
+If no database plugins are enabled, there will be no
 :guilabel:`Database` menu.
 
 .. list-table::
@@ -1698,35 +1695,35 @@ If no database plugins are enabled, there will be no
      - Reference
    * - :menuselection:`eVis -->`
      - :kbd:`Alt+D` + :kbd:`E`
-     - 
+     -
      - :ref:`evis`
    * - :menuselection:`-->`
        |evisConnect| :guilabel:`eVis Database Connection`
-     - 
+     -
      - :guilabel:`Database`
      - :ref:`evis`
    * - :menuselection:`-->`
        |eventId| :guilabel:`eVis Event Id Tool`
-     - 
+     -
      - :guilabel:`Database`
      - :ref:`evis`
    * - :menuselection:`-->`
        |eventBrowser| :guilabel:`eVis Event Browser`
-     - 
+     -
      - :guilabel:`Database`
      - :ref:`evis`
    * - :guilabel:`Offline editing...`
      - :kbd:`Alt+D` + :kbd:`O`
-     - 
+     -
      - :ref:`offlinedit`
    * - :menuselection:`-->`
        |offlineEditingCopy| :guilabel:`Convert to Offline Project...`
-     - 
+     -
      - :guilabel:`Database`
      - :ref:`offlinedit`
    * - :menuselection:`-->`
        |offlineEditingSync| :guilabel:`Synchronize`
-     - 
+     -
      - :guilabel:`Database`
      - :ref:`offlinedit`
    * - |dbManager| :guilabel:`DB Manager...`
@@ -1755,16 +1752,16 @@ If no web plugins are enabled, there will be no :guilabel:`Web` menu.
      - Reference
    * - :menuselection:`MetaSearch -->`
      - :kbd:`Alt+W` + :kbd:`M`
-     - 
+     -
      - :ref:`metasearch`
    * - :menuselection:`-->`
        |metasearch| :guilabel:`Metasearch`
-     - 
+     -
      - :guilabel:`Web`
      - :ref:`metasearch`
    * - :menuselection:`--> Help`
-     - 
-     - 
+     -
+     -
      - :ref:`metasearch`
 
 
@@ -1823,7 +1820,7 @@ Processing
    * - |processSelected| :guilabel:`Edit Features In-Place`
      -
      -
-     - :ref:`processing_inplace_edit`  
+     - :ref:`processing_inplace_edit`
 
 When starting QGIS for the first time not all core plugins are loaded.
 
@@ -2355,7 +2352,7 @@ the 3D canvas panel to open the :guilabel:`3D configuration` window.
    :align: center
 
    The 3D Map Configuration dialog
-   
+
 
 In the 3D Configuration window there are various options to
 fine-tune the 3D scene:
@@ -2440,7 +2437,7 @@ fine-tune the 3D scene:
 * :guilabel:`Max. ground error`: The resolution of the terrain tiles at
   which dividing tiles into more detailed ones will stop (splitting
   them would not introduce any extra detail anyway).
-  This value limits the depth of the hierarchy of tiles: lower values 
+  This value limits the depth of the hierarchy of tiles: lower values
   make the hierarchy deep, increasing rendering complexity.
 * :guilabel:`Zoom labels`: Shows the number of zoom levels (depends on
   the map tile resolution and max. ground error).
