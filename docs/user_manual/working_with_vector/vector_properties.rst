@@ -1513,8 +1513,7 @@ The Label Toolbar
 
 The :guilabel:`Label Toolbar` provides some tools to manipulate |labeling|
 :ref:`label <vector_labels_tab>` or |diagram| :ref:`diagram <sec_diagram>`
-properties, but only if the corresponding data-defined option is indicated
-(otherwise, buttons are disabled).
+properties.
 
 .. _figure_labels_tools:
 
@@ -1527,11 +1526,10 @@ While for readability, ``label`` has been used below to describe the Label
 toolbar, note that when mentioned in their name, the tools work almost the
 same way with diagrams:
 
-* |pinLabels| :sup:`Pin/Unpin Labels And Diagrams` that has data-defined
-  position. By clicking or draging an area, you pin label(s). If you click or
-  drag an area holding :kbd:`Shift`, label(s) are unpinned. Finally, you can
-  also click or drag an area holding :kbd:`Ctrl` to toggle the pin status of
-  label(s).
+* |pinLabels| :sup:`Pin/Unpin Labels And Diagrams`. By clicking or draging an
+  area, you pin label(s). If you click or drag an area holding :kbd:`Shift`,
+  label(s) are unpinned. Finally, you can also click or drag an area holding
+  :kbd:`Ctrl` to toggle the pin status of label(s).
 * |showPinnedLabels| :sup:`Highlight Pinned Labels And Diagrams`. If the
   vector layer of the label is editable, then the highlighting is green,
   otherwise it's blue.
@@ -1539,12 +1537,12 @@ same way with diagrams:
   determine whether any important labels are missing from the maps (e.g. due
   to overlaps or other constraints). They are displayed with a customizable
   color (see :ref:`automated_placement`).
-* |showHideLabels| :sup:`Show/Hide Labels And Diagrams` that has
-  data-defined visbility. If you click or drag an area holding :kbd:`Shift`,
-  then label(s) are hidden. When a label is hidden, you just have to click
-  or drag an area around the feature's point to restore its visibility.
-* |moveLabel| :sup:`Move Label And Diagram` that has data-defined
-  position. You just have to drag the label to the desired place.
+* |showHideLabels| :sup:`Show/Hide Labels And Diagrams`. If you click on the labels,
+  or click and drag an area holding :kbd:`Shift`, they are hidden.
+  When a label is hidden, you just have to click on the feature to restore its
+  visibility. If you drag an area, all the labels in the area will be restored.
+* |moveLabel| :sup:`Move Label And Diagram`. You just have to drag the label to
+  the desired place.
 * |rotateLabel| :sup:`Rotate Label`. Click the label and move around and
   you get the text rotated.
 * |changeLabelProperties| :sup:`Change Label`. It opens a dialog to change the
