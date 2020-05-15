@@ -321,22 +321,22 @@ After that the raster can be added to the project.
      # user and password are not needed if stored in the authcfg or service
      'authcfg':'QconfigId',  # The QGIS athentication database ID holding connection details.
      'service': None,         # The PostgreSQL service to be used for connection to the database.
-     'username':NULL,        # The PostgreSQL user name.
-     'password':NULL,        # The PostgreSQL password for the user.
+     'username':None,        # The PostgreSQL user name.
+     'password':None,        # The PostgreSQL password for the user.
      # table and raster column details
      'schema':'public',      # The database schema that the table is located in.
      'table':'my_rasters',   # The database table to be loaded.
      'geometrycolumn':'rast',# raster column in PostGIS table
-     'sql':NULL,             # An SQL WHERE clause. It should be placed at the end of the string.
-     'key':NULL,             # A key column from the table.
-     'srid':NULL,            # A string designating the SRID of the coordinate reference system.
+     'sql':None,             # An SQL WHERE clause. It should be placed at the end of the string.
+     'key':None,             # A key column from the table.
+     'srid':None,            # A string designating the SRID of the coordinate reference system.
      'estimatedmetadata':'False', # A boolean value telling if the metadata is estimated.
-     'type':NULL,            # A WKT string designating the WKB Type.
-     'selectatid':NULL,      # Set to True to disable selection by feature ID.
-     'options':NULL,         # other PostgreSQL connection options not in this list.
-     'enableTime': NULL,
-     'temporalDefaultTime': NULL,
-     'temporalFieldIndex': NULL,     
+     'type':None,            # A WKT string designating the WKB Type.
+     'selectatid':None,      # Set to True to disable selection by feature ID.
+     'options':None,         # other PostgreSQL connection options not in this list.
+     'enableTime': None,
+     'temporalDefaultTime': None,
+     'temporalFieldIndex': None,     
      'mode':'2',             # GDAL 'mode' parameter, 2 unions raster tiles, 1 adds tiles separately (may require user input) 
  }
  # remove any NULL parameters
