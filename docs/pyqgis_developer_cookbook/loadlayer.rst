@@ -13,6 +13,7 @@
         QgsApplication,
         QgsDataSourceUri,
         QgsLayerTreeLayer,
+        QgsProviderRegistry
     )
 
     iface = start_qgis()
@@ -297,6 +298,55 @@ function of the :class:`QgisInterface <qgis.gui.QgisInterface>` object:
 
 This creates a new layer and adds it to the current project (making it appear
 in the layer list) in one step.
+
+
+To load a PostGIS raster:
+
+PostGIS rasters, similar to PostGIS vectors, can be added to a project using a URI string.
+It is efficient to keep a reusable dictionary of strings for the database connection parameters. 
+This makes it easy to edit the dictionary for the applicable connection.
+The dictionary is then encoded into a URI using the 'postgresraster' provider metadata object.
+After that the raster can be added to the project.
+
+.. testcode:: loadlayer
+
+ uri_config = {
+     # database parameters
+     'dbname':'gis_db',      # The PostgreSQL database to connect to.
+     'host':'localhost',     # The host IP address or localhost.
+     'port':'5432',          # The port to connect on.
+     'sslmode':QgsDataSourceUri.SslDisable, # SslAllow, SslPrefer, SslRequire, SslVerifyCa, SslVerifyFull
+     # user and password are not needed if stored in the authcfg or service
+     'authcfg':'QconfigId',  # The QGIS athentication database ID holding connection details.
+     'service': None,         # The PostgreSQL service to be used for connection to the database.
+     'username':None,        # The PostgreSQL user name.
+     'password':None,        # The PostgreSQL password for the user.
+     # table and raster column details
+     'schema':'public',      # The database schema that the table is located in.
+     'table':'my_rasters',   # The database table to be loaded.
+     'geometrycolumn':'rast',# raster column in PostGIS table
+     'sql':None,             # An SQL WHERE clause. It should be placed at the end of the string.
+     'key':None,             # A key column from the table.
+     'srid':None,            # A string designating the SRID of the coordinate reference system.
+     'estimatedmetadata':'False', # A boolean value telling if the metadata is estimated.
+     'type':None,            # A WKT string designating the WKB Type.
+     'selectatid':None,      # Set to True to disable selection by feature ID.
+     'options':None,         # other PostgreSQL connection options not in this list.
+     'enableTime': None,
+     'temporalDefaultTime': None,
+     'temporalFieldIndex': None,     
+     'mode':'2',             # GDAL 'mode' parameter, 2 unions raster tiles, 1 adds tiles separately (may require user input) 
+ }
+ # remove any NULL parameters
+ uri_config = {key:val for key, val in uri_config.items() if val is not None}
+ # get the metadata for the raster provider and configure the URI
+ md = QgsProviderRegistry.instance().providerMetadata('postgresraster')
+ uri = QgsDataSourceUri(md.encodeUri(uri_config))
+ 
+ # the raster can then be loaded into the project
+ rlayer = iface.addRasterLayer(uri.uri(False), "raster layer name", "postgresraster")
+ 
+
 
 Raster layers can also be created from a WCS service:
 
