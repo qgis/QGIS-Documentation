@@ -293,7 +293,7 @@ field matches :kbd:`town` are displayed in italics.
    back later when you've covered the requisite materials.
 
 #. Open the Attribute Table for :guilabel:`places`
-#. Enter edit mode by clicking this button: |toggleEditing|
+#. Enter edit mode by clicking the |toggleEditing| button
 #. Add a new column with the |newAttribute| button
 #. Configure it like this:
 
