@@ -13,6 +13,7 @@
         QgsApplication,
         QgsDataSourceUri,
         QgsLayerTreeLayer,
+        QgsProviderRegistry
     )
 
     iface = start_qgis()
