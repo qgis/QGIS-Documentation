@@ -298,21 +298,21 @@ To arrive at this result:
 |hard| *Using Data Defined Settings*
 ...............................................................................
 
-* Still in edit mode, set the ``FONT_SIZE`` values to whatever you prefer.
-  The example uses ``16`` for towns, ``14`` for suburbs, ``12`` for
-  localities, and ``10`` for hamlets.
-* Remember to save changes and exit edit mode
-* Return to the :guilabel:`Text` formatting options for the :guilabel:`places`
-  layer and select ``FONT_SIZE`` in the :guilabel:`Attribute field` of the
-  font size |dataDefined| data defined override dropdown:
+#. Still in edit mode, set the ``FONT_SIZE`` values to whatever you prefer.
+   The example uses ``16`` for towns, ``14`` for suburbs, ``12`` for
+   localities, and ``10`` for hamlets.
+#. Remember to save changes and exit edit mode
+#. Return to the :guilabel:`Text` formatting options for the :guilabel:`places`
+   layer and select ``FONT_SIZE`` in the :guilabel:`Attribute field` of the
+   font size |dataDefined| data defined override dropdown:
 
-  .. figure:: img/font_size_override.png
-     :align: center
+   .. figure:: img/font_size_override.png
+      :align: center
 
-  Your results, if using the above values, should be this:
+   Your results, if using the above values, should be this:
 
-  .. figure:: img/font_override_results.png
-     :align: center
+   .. figure:: img/font_override_results.png
+      :align: center
 
 :ref:`Back to text <backlink-label-data-defined-1>`
 
