@@ -277,8 +277,9 @@ One possible solution has this final product:
 
 To arrive at this result:
 
-* Use a font size of ``10``, an around point placement distance of
-  ``1.5 mm``,  and a marker size of ``3.0 mm``.
+* Use a font size of ``10``
+* Use an around point placement distance of ``1.5 mm``
+* Use a marker size of ``3.0 mm``
 * In addition, this example uses the :guilabel:`Wrap on character` option:
 
   .. figure:: img/wrap_character_settings.png
