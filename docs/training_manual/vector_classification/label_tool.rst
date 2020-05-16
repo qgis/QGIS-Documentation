@@ -194,8 +194,9 @@ understand.
       :align: center
 
    You'll probably find that the text styling has used default values and the
-   labels are consequently very hard to read. Set the label text format to have
-   a dark-grey or black color and a light-yellow buffer.
+   labels are consequently very hard to read. Update the :guilabel:`Text`
+   to use a dark-grey or black :guilabel:`Color` and the :guilabel:`Buffer`
+   to use a light-yellow :guilabel:`Color`.
 
    The map will look somewhat like this, depending on scale:
 
