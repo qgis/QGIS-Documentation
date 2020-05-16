@@ -156,9 +156,8 @@ and see what happens.
 |moderate| |TY| Customize the Labels
 -------------------------------------------------------------------------------
 
-* Return the label and symbol settings to have a point marker and a label offset
-  of ``2.0`` Millimeters. You may like to adjust the styling of the point marker
-  or labels at this stage.
+* Reset the label and symbol settings to have a point marker and a label offset
+  of ``2.0`` Millimeters.
 
 :ref:`Check your results <label-tool-1>`
 
