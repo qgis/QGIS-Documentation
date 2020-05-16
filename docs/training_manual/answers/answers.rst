@@ -256,7 +256,7 @@ of your places have names.
 ...............................................................................
 
 Your map should now show the marker points and the labels should be offset by
-:kbd:`2.0 mm`. The style of the markers and labels should allow both to be
+2mm. The style of the markers and labels should allow both to be
 clearly visible on the map:
 
 .. figure:: img/customised_labels_one.png
@@ -277,15 +277,14 @@ One possible solution has this final product:
 
 To arrive at this result:
 
-* Use a font size of :kbd:`10`, an around point placement distance of
-  :kbd:`1.5 mm`,  and a marker size of :kbd:`3.0 mm`.
-* In addition, this example uses the :guilabel:`Wrap label on character`
-  option:
+* Use a font size of ``10``, an around point placement distance of
+  ``1.5 mm``,  and a marker size of ``3.0 mm``.
+* In addition, this example uses the :guilabel:`Wrap on character` option:
 
   .. figure:: img/wrap_character_settings.png
      :align: center
 
-* Enter a :kbd:`space` in this field and click :guilabel:`Apply` to achieve the
+* Enter a ``space`` in this field and click :guilabel:`Apply` to achieve the
   same effect. In our case, some of the place names are very long, resulting in
   names with multiple lines which is not very user friendly. You might find this
   setting to be more appropriate for your map.
@@ -298,12 +297,12 @@ To arrive at this result:
 |hard| *Using Data Defined Settings*
 ...............................................................................
 
-* Still in edit mode, set the :kbd:`FONT_SIZE` values to whatever you prefer.
-  The example uses :kbd:`16` for towns, :kbd:`14` for suburbs, :kbd:`12` for
-  localities, and :kbd:`10` for hamlets.
-* Remember to save changes and exit edit mode.
+* Still in edit mode, set the ``FONT_SIZE`` values to whatever you prefer.
+  The example uses ``16`` for towns, ``14`` for suburbs, ``12`` for
+  localities, and ``10`` for hamlets.
+* Remember to save changes and exit edit mode
 * Return to the :guilabel:`Text` formatting options for the :guilabel:`places`
-  layer and select :kbd:`FONT_SIZE` in the :guilabel:`Attribute field` of the
+  layer and select ``FONT_SIZE`` in the :guilabel:`Attribute field` of the
   font size |dataDefined| data defined override dropdown:
 
   .. figure:: img/font_size_override.png

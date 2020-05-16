@@ -25,10 +25,10 @@ First, ensure that the |labeling| button is visible in the GUI:
 #. Switch from :guilabel:`No Labels` to |labeling| :guilabel:`Single Labels`
 
    You'll need to choose which field in the attributes will be used for the
-   labels. In the previous lesson, you decided that the :kbd:`name` field was the
+   labels. In the previous lesson, you decided that the ``name`` field was the
    most suitable one for this purpose.
 
-#. Select :kbd:`name` from the Value list:
+#. Select ``name`` from the Value list:
 
    .. figure:: img/select_label_with.png
       :align: center
@@ -89,7 +89,7 @@ are too far away from their point markers.
 
 #. Select :guilabel:`Placement` from the left-hand options list
 #. Select :guilabel:`Around point` and change the value of
-   :guilabel:`Distance` to :kbd:`2mm`:
+   :guilabel:`Distance` to ``2.0`` Millimeters:
 
    .. figure:: img/offset_placement_settings.png
       :align: center
@@ -132,7 +132,7 @@ directly over the points they refer to.
       :align: center
 
 #. Hide the point symbols by editing the layer :guilabel:`Symbology` as usual,
-   and setting the size of the :guilabel:`Marker` size to :kbd:`0`:
+   and setting the size of the :guilabel:`Marker` size to ``0.0``:
 
    .. figure:: img/hide_point_marker.png
       :align: center
@@ -157,12 +157,12 @@ and see what happens.
 -------------------------------------------------------------------------------
 
 * Return the label and symbol settings to have a point marker and a label offset
-  of :kbd:`2.00mm`. You may like to adjust the styling of the point marker or
-  labels at this stage.
+  of ``2.0`` Millimeters. You may like to adjust the styling of the point marker
+  or labels at this stage.
 
 :ref:`Check your results <label-tool-1>`
 
-* Set the map to the scale :kbd:`1:100000`. You can do this by typing it into
+* Set the map to the scale ``1:100000``. You can do this by typing it into
   the :guilabel:`Scale` box in the :guilabel:`Status Bar`. Modify your labels
   to be suitable for viewing at this scale.
 
@@ -185,7 +185,7 @@ understand.
 #. Hide the :guilabel:`places` layer so that it doesn't distract you
 #. Activate |labeling| :guilabel:`Single Labels` for the :guilabel:`roads`
    layer as you did above for :guilabel:`places`
-#. Set the font :guilabel:`Size` to :kbd:`10` so that you can see more labels
+#. Set the font :guilabel:`Size` to ``10`` so that you can see more labels
 #. Zoom in on the |majorUrbanName| town area
 #. In the :guilabel:`Labels` tab's :guilabel:`Placement` tab, choose the
    following settings:
@@ -194,8 +194,8 @@ understand.
       :align: center
 
    You'll probably find that the text styling has used default values and the
-   labels are consequently very hard to read. Set the label text format to have a
-   dark-grey or black :kbd:`Color` and a light-yellow :kbd:`buffer`.
+   labels are consequently very hard to read. Set the label text format to have
+   a dark-grey or black color and a light-yellow buffer.
 
    The map will look somewhat like this, depending on scale:
 
@@ -218,7 +218,7 @@ understand.
    to be of notice.
 
 #. In the same :guilabel:`Rendering` panel, set the value of
-   :guilabel:`Suppress labeling of features smaller than ...` to :kbd:`5mm`
+   :guilabel:`Suppress labeling of features smaller than ...` to ``5.00 mm``
    and note the results when you click :guilabel:`Apply`
 
    Try out different :guilabel:`Placement` settings as well. As we've seen before,
@@ -248,7 +248,7 @@ looks better.
 #. Reactivate labeling for the :guilabel:`places` layer
 #. Open the attribute table for :guilabel:`places` via the |openTable| button
 
-   It has one *field* which is of interest to us now: :kbd:`place` which defines
+   It has one *field* which is of interest to us now: ``place`` which defines
    the type of urban area for each *record*. We can use this data to influence
    the label styles.
 
@@ -261,12 +261,12 @@ looks better.
    .. figure:: img/expression_string_builder.png
       :align: center
 
-#. Under :menuselection:`Fields and Values`, double click on :kbd:`place`
+#. Under :menuselection:`Fields and Values`, double click on ``place``
    and then click :guilabel:`All Unique`. This will list all unique values
-   of the :kbd:`place` field of this layer. Add a :kbd:`=` in the text
-   editor and then double click on :kbd:`town`.
+   of the ``place`` field of this layer. Add a ``=`` in the text
+   editor and then double click on ``town``.
 
-   Alternatively, you can type: :kbd:`"place" = 'town'` directly in the
+   Alternatively, you can type: ``"place" = 'town'`` directly in the
    text editor.
 
 #. Click :guilabel:`Ok` twice:
@@ -274,8 +274,8 @@ looks better.
    .. figure:: img/expression_builder_settings.png
       :align: center
 
-Notice that the labels for all :guilabel:`places` whose :kbd:`place`
-field matches :kbd:`town` are displayed in italics.
+Notice that the labels for all :guilabel:`places` whose ``place``
+field matches ``town`` are displayed in italics.
 
 .. figure:: img/italic_label_result.png
    :align: center
@@ -300,8 +300,8 @@ field matches :kbd:`town` are displayed in italics.
    .. figure:: img/font_size_column.png
       :align: center
 
-#. Use this to set custom font sizes for each different type of place (i.e.,
-   each key in the :kbd:`PLACE` field)
+#. Use this to set custom font sizes for each different type of place
+   (each key in the ``place`` field)
 
 :ref:`Check your results <label-data-defined-1>`
 
