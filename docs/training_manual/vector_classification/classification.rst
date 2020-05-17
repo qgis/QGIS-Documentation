@@ -161,7 +161,7 @@ You'll get this dialog:
 * Click :guilabel:`OK`.
 
 Now your :kbd:`AREA` field is populated with values (you may need to click the
-column header to refresh the data). Save the edits and click :guilabel:`Ok`.
+column header to refresh the data). Save the edits and click :guilabel:`OK`.
 
 .. note::  These areas are in degrees. Later, we will compute them in
    square meters.
@@ -209,7 +209,7 @@ Now you'll have something like this:
 
 Leave everything else as-is.
 
-* Click :guilabel:`Ok`:
+* Click :guilabel:`OK`:
 
 .. figure:: img/gradient_result_map.png
    :align: center
@@ -246,7 +246,7 @@ That's where rule-based classification comes in handy.
 * Using the query builder that appears, enter the criterion
   :kbd:`"landuse" = 'residential' AND "name" <> 'Swellendam'` (or
   :kbd:`"landuse" = 'residential' AND "name" != 'Swellendam'`),
-  click :guilabel:`Ok` and choose a pale blue-grey for it and
+  click :guilabel:`OK` and choose a pale blue-grey for it and
   remove the border:
 
 .. figure:: img/query_builder_example.png
