@@ -2219,12 +2219,59 @@ screen resolution, paper size, or the terrain). Available units are:
 
      Adjust scaling range dialog
 
-
 .. index:: Number format; Map scale bar
 .. _number_formatting:
 
 Number Formatting
 -----------------
+
+Numeric formatters allow formatting of numeric values for display, using
+a variety of different formatting techniques (for instance scientific notation,
+currency values, percentage values, etc). One use of this is to set
+text in a layout scale bar or fixed table.
+ 
+Different categories of formats are supported.
+For most of them, you can set part or all of the following numeric options:
+
+* |checkbox| :guilabel:`Show thousands separator`
+* |unchecked| :guilabel:`Show plus sign`
+* |unchecked| :guilabel:`Show trailing zeros`
+
+But they can also have their custom settings. Provided categories are:
+
+* :guilabel:`General`, the default category: has no setting and displays values
+  as set in the parent widget properties or using the global settings.
+* :guilabel:`Number`
+
+  * The value can be :guilabel:`Round to` a self defined number of
+    :guilabel:`Decimal places` or their :guilabel:`Significant figures`
+  * customize the :guilabel:`Thousands separator` and :guilabel:`Decimal separator`
+* :guilabel:`Bearing` for a text representation of a direction/bearing using:
+
+  * :guilabel:`Format`: possible ranges of values are ``0 to 180°, with E/W suffix``,
+    ``-180 to +180°`` and ``0 to 360°``
+  * number of :guilabel:`Decimal places`
+* :guilabel:`Currency` for a text representation of a currency value.
+
+  * :guilabel:`Prefix`
+  * :guilabel:`Suffix`
+  * number of :guilabel:`Decimal places`
+* :guilabel:`Fraction` for a vulgar fractional representation of a decimal
+  value (e.g. *1/2* instead of *0.5*)
+
+  * |unchecked| :guilabel:`Use unicode super/subscript` to show. For example :sup:`1/2`
+    instead of 1/2
+  * |unchecked| :guilabel:`Use dedicated Unicode characters`
+  * customize the :guilabel:`Thousands separator`
+* :guilabel:`Percentage` - appends ``%`` to the values, with setting of:
+
+  * number of :guilabel:`Decimal places`
+  * :guilabel:`Scaling` to indicate whether the actual values already represent
+    percentages (then they will be kept as is) or fractions (then they are converted)    
+* :guilabel:`Scientific` notation in the form ``2.56e+03``. The number of
+  :guilabel:`Decimal places` can be set.
+
+A live preview of the settings is displayed under the :guilabel:`Sample` section.
 
 .. index::
    single: Rendering effects; Blending modes
