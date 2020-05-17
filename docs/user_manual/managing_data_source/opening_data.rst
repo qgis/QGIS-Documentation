@@ -119,7 +119,7 @@ At the top of the Browser panel, you find some buttons that help you to:
 
 * |addLayer| :sup:`Add Selected Layers`: you can also add data to the map
   canvas by selecting **Add selected layer(s)** from the layer's context menu;
-* |draw| :sup:`Refresh` the browser tree;
+* |refresh| :sup:`Refresh` the browser tree;
 * |filterMap| :sup:`Filter Browser` to search for specific data. Enter a search
   word or wildcard and the browser will filter the tree to only show paths to
   matching DB tables, filenames or folders -- other data or folders won't be
@@ -1235,8 +1235,6 @@ Examples of XYZ Tile services:
    :width: 1.5em
 .. |dbManager| image:: /static/common/dbmanager.png
    :width: 1.5em
-.. |draw| image:: /static/common/mActionDraw.png
-   :width: 1.5em
 .. |filterMap| image:: /static/common/mActionFilterMap.png
    :width: 1.5em
 .. |kde| image:: /static/common/kde.png
@@ -1246,6 +1244,8 @@ Examples of XYZ Tile services:
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
    :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
+   :width: 1.5em
+.. |refresh| image:: /static/common/mActionRefresh.png
    :width: 1.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em

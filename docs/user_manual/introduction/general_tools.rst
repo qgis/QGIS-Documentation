@@ -505,7 +505,7 @@ Table: Statistics available for each field type
 The statistical summary can be:
 
 * returned for the whole layer or |checkbox| :guilabel:`selected features only`
-* recalculated using the |draw| button when the underlying data source changes
+* recalculated using the |refresh| button when the underlying data source changes
   (eg, new or removed features/fields, attribute modification)
 * |editCopy| copied to the clipboard and pasted as a table in another application
 
@@ -2381,7 +2381,7 @@ feature. The assistant allows you to:
   * the attribute to represent, using the Field listbox or the |expression|
     :sup:`Set column expression` function (see :ref:`vector_expressions`)
   * the range of values to represent: you can manually enter the values or use
-    the |draw| :sup:`Fetch value range from layer` button to fill
+    the |refresh| :sup:`Fetch value range from layer` button to fill
     these fields automatically with the minimum and maximum values returned by the chosen
     attribute or the expression applied to your data
 * |unchecked| :guilabel:`Apply transform curve`: by default, output values (see
@@ -2474,8 +2474,6 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |deselectAll| image:: /static/common/mActionDeselectAll.png
    :width: 1.5em
-.. |draw| image:: /static/common/mActionDraw.png
-   :width: 1.5em
 .. |duplicateLayer| image:: /static/common/mActionDuplicateLayer.png
    :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
@@ -2563,6 +2561,8 @@ The values presented in the varying size assistant above will set the size
 .. |pan| image:: /static/common/mActionPan.png
    :width: 1.5em
 .. |rasterHistogram| image:: /static/common/rasterHistogram.png
+   :width: 1.5em
+.. |refresh| image:: /static/common/mActionRefresh.png
    :width: 1.5em
 .. |removeLayer| image:: /static/common/mActionRemoveLayer.png
    :width: 1.5em

@@ -174,7 +174,8 @@ The tab |general| presents the following items:
 * :ref:`blending mode <blend-modes>` available for the selected dataset.
 
 
-The slider |slider|, combo box |selectString| and |groupsexploring| buttons
+The slider |slider|, the combo box |selectString| and the :guilabel:`|<`,
+:guilabel:`<`, :guilabel:`>`, :guilabel:`>|` buttons
 allow to explore another dimension of the data, if available.
 As the slider moves, the metadata is presented accordingly.
 See the figure :ref:`Mesh groups <figure_mesh_groups>` below as an example.
@@ -197,11 +198,12 @@ You can apply symbology to each group using the tabs.
 Contours Symbology
 ..................
 
-Under :guilabel:`Groups`, click on |contour_inactive| to show contours with
+Under :guilabel:`Groups`, click on |meshcontoursoff| to show contours with
 default visualization parameters.
 
-In the tab |contour_active| you can see and change the current visualization options of contours
-for the selected group, as shown in the image :ref:`Styling contours in a mesh <figure_mesh_symbology_contours>` below:
+In the tab |meshcontours| you can see and change the current visualization
+options of contours for the selected group, as shown in the image
+:ref:`Styling contours in a mesh <figure_mesh_symbology_contours>` below:
 
 .. _figure_mesh_symbology_contours:
 
@@ -214,17 +216,17 @@ Use the slide bar or combo box to set the opacity of the current group.
 
 Use :guilabel:`Load` to adjust the min and max values of the current group.
 
-The :guilabel:`Interpolation` list contains three options to render contours: :guilabel:`Linear`,
-:guilabel:`Discrete` and :guilabel:`Exact`.
+The :guilabel:`Interpolation` list contains three options to render contours:
+:guilabel:`Linear`, :guilabel:`Discrete` and :guilabel:`Exact`.
 
 The :guilabel:`Color ramp` widget opens the :ref:`color ramp drop-down shortcut <color_ramp_widget>`.
 
 The :guilabel:`Label unit suffix` is a label added after the value in the legend.
 
 By selecting :guilabel:`Continuous` in the classification :guilabel:`Mode`,
-QGIS creates classes automatically considering
-the :guilabel:`Min` and :guilabel:`Max` values. With ‘Equal interval’, you only need to select the number of classes
-using the combo box  :guilabel:`Classes`  and press the button :guilabel:`Classify`.
+QGIS creates classes automatically considering the :guilabel:`Min` and
+:guilabel:`Max` values. With ‘Equal interval’, you only need to select the number of classes
+using the combo box :guilabel:`Classes` and press the button :guilabel:`Classify`.
 
 The button |signPlus| :sup:`Add values manually` adds a value
 to the individual color table. The button |signMinus| :sup:`Remove selected row`
@@ -238,9 +240,10 @@ lets you insert a specific value. Double clicking on the color column opens the 
 Vectors Symbology
 .................
 
-In the tab |general|, click on |vector_inactive| to display vectors if available.
+In the tab |general|, click on |meshcontoursoff| to display vectors if available.
 The map canvas will display the vectors in the selected group with default parameters.
-Click on the tab |vector_active| to change the visualization parameters for vectors as shown in the image below:
+Click on the tab |meshvectors| to change the visualization parameters for vectors
+as shown in the image below:
 
 .. _figure_mesh_symbology_vector:
 
@@ -274,7 +277,7 @@ Vector's :guilabel:`Arrow length` can be rendered in QGIS in three different way
 Rendering
 .........
 
-In the tab |rendering_mesh|,  QGIS offers two possibilities to display the grid,
+In the tab |meshframe|,  QGIS offers two possibilities to display the grid,
 as shown in the image :ref:`Mesh rendering <figure_mesh_symbology_grid>`:
 
 *	``Native Mesh Rendering`` that shows quadrants
@@ -292,6 +295,8 @@ as shown in the image :ref:`Mesh rendering <figure_mesh_symbology_grid>`:
 The line width and color can be changed in this dialog, and both the grid renderings can be turned off.
 
 
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -302,15 +307,15 @@ The line width and color can be changed in this dialog, and both the grid render
    :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
-.. |contour_active| image:: /static/common/contours_active.png
-   :width: 1.5em
-.. |contour_inactive| image:: /static/common/contours_inactive.png
-   :width: 2em
 .. |general| image:: /static/common/general.png
    :width: 1.5em
-.. |groupsexploring| image:: /static/common/mesh_groups_explore.png
+.. |meshcontours| image:: /static/common/meshcontours.png
    :width: 1.5em
-.. |rendering_mesh| image:: /static/common/mesh_rendering.png
+.. |meshcontoursoff| image:: /static/common/meshcontoursoff.png
+   :width: 1.5em
+.. |meshframe| image:: /static/common/meshframe.png
+   :width: 1.5em
+.. |meshvectors| image:: /static/common/meshvectors.png
    :width: 1.5em
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
@@ -323,7 +328,3 @@ The line width and color can be changed in this dialog, and both the grid render
 .. |slider| image:: /static/common/slider.png
 .. |symbology| image:: /static/common/symbology.png
    :width: 2em
-.. |vector_active| image:: /static/common/vector_active.png
-   :width: 2em
-.. |vector_inactive| image:: /static/common/vector_inactive.png
-   :width: 1.5em

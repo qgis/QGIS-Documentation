@@ -191,7 +191,7 @@ Icon                            Substitution                        Icon        
 |zoomActual|                    ``|zoomActual|``                    |zoomFullExtent|                ``|zoomFullExtent|``
 |zoomToLayer|                   ``|zoomToLayer|``                   |zoomToSelected|                ``|zoomToSelected|``
 |zoomLast|                      ``|zoomLast|``                      |zoomNext|                      ``|zoomNext|``
-|draw|                          ``|draw|``
+|refresh|                       ``|refresh|``
 |identify|                      ``|identify|``                      |mapTips|                       ``|mapTips|``
 |showBookmarks|                 ``|showBookmarks|``                 |newBookmark|                   ``|newBookmark|``
 |measure|                       ``|measure|``                       |measureArea|                   ``|measureArea|``
@@ -312,7 +312,7 @@ Icon                         Substitution                     Icon              
 |expressionSelect|           ``|expressionSelect|``           |deleteSelectedFeatures|   ``|deleteSelectedFeatures|``
 |newAttribute|               ``|newAttribute|``               |deleteAttribute|          ``|deleteAttribute|``
 |newTableRow|                ``|newTableRow|``                |calculateField|           ``|calculateField|``
-|draw|                       ``|draw|``                       |formView|                 ``|formView|``
+|refresh|                    ``|refresh|``                    |formView|                 ``|formView|``
 |conditionalFormatting|      ``|conditionalFormatting|``      |multiEdit|                ``|multiEdit|``
 |dock|                       ``|dock|``                       |actionRun|                ``|actionRun|``
 |duplicateFeature|           ``|duplicateFeature|``
@@ -396,9 +396,9 @@ Icon                                Substitution                            Icon
 |25dSymbol|                         ``|25dSymbol|``                         |ruleBasedSymbol|              ``|ruleBasedSymbol|``
 |invertedSymbol|                    ``|invertedSymbol|``                    |heatmapSymbol|                ``|heatmapSymbol|``
 |pointDisplacementSymbol|           ``|pointDisplacementSymbol|``           |pointClusterSymbol|           ``|pointClusterSymbol|``
-|contour_active|                    ``|contour_active|``                    |contour_inactive|             ``|contour_inactive|``
-|vector_active|                     ``|vector_active|``                     |vector_inactive|              ``|vector_inactive|``
-|rendering_mesh|                    ``|rendering_mesh|``                    |groupsexploring|              ``|groupsexploring|``
+|meshcontours|                      ``|meshcontours|``                      |meshcontoursoff|              ``|meshcontoursoff|``
+|meshvectors|                       ``|meshvectors|``                       |meshvectorsoff|               ``|meshvectorsoff|``
+|meshframe|                         ``|meshframe|``
 |sum|                               ``|sum|``                               |sort|                         ``|sort|``
 |paintEffects|                      ``|paintEffects|``                      |mapIdentification|            ``|mapIdentification|``
 |styleManager|                      ``|styleManager|``                      |iconView|                     ``|iconView|``
@@ -472,8 +472,10 @@ eVis plugin
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
 |eventBrowser|                  ``|eventBrowser|``                  |eventId|                       ``|eventId|``
-|evisConnect|                   ``|evisConnect|``                   |evisFile|                      ``|evisFile|``
+|evisConnect|                   ``|evisConnect|``
 ==============================  ==================================  ==============================  ==================================
+
+
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -644,10 +646,6 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |contextHelp| image:: /static/common/mActionContextHelp.png
    :width: 1.5em
-.. |contour_active| image:: /static/common/contours_active.png
-   :width: 1.5em
-.. |contour_inactive| image:: /static/common/contours_inactive.png
-   :width: 2em
 .. |convexHull| image:: /static/common/convex_hull.png
    :width: 1.5em
 .. |coordinateCapture| image:: /static/common/coordinate_capture.png
@@ -712,8 +710,6 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |dock| image:: /static/common/dock.png
    :width: 1.5em
-.. |draw| image:: /static/common/mActionDraw.png
-   :width: 1.5em
 .. |duplicateFeature| image:: /static/common/mActionDuplicateFeature.png
    :width: 1.5em
 .. |duplicateLayout| image:: /static/common/mActionDuplicateLayout.png
@@ -738,13 +734,11 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |ellipseFoci| image:: /static/common/mActionEllipseFoci.png
    :width: 1.5em
-.. |eventBrowser| image:: /static/common/event_browser.png
+.. |eventBrowser| image:: /static/common/eVisEventBrowser.png
    :width: 1.5em
-.. |eventId| image:: /static/common/event_id.png
+.. |eventId| image:: /static/common/eVisEventIdTool.png
    :width: 1.5em
-.. |evisConnect| image:: /static/common/evis_connect.png
-   :width: 1.5em
-.. |evisFile| image:: /static/common/evis_file.png
+.. |evisConnect| image:: /static/common/eVisDatabaseConnection.png
    :width: 1.5em
 .. |expandNewTree| image:: /static/common/mActionExpandNewTree.png
    :width: 1.5em
@@ -825,8 +819,6 @@ Icon                            Substitution                        Icon        
 .. |grassTools| image:: /static/common/grass_tools.png
    :width: 1.5em
 .. |groupItems| image:: /static/common/mActionGroupItems.png
-   :width: 1.5em
-.. |groupsexploring| image:: /static/common/mesh_groups_explore.png
    :width: 1.5em
 .. |heatmap| image:: /static/common/heatmap.png
    :width: 1.5em
@@ -958,6 +950,16 @@ Icon                            Substitution                        Icon        
 .. |mergeFeatAttributes| image:: /static/common/mActionMergeFeatureAttributes.png
    :width: 1.5em
 .. |mergeFeatures| image:: /static/common/mActionMergeFeatures.png
+   :width: 1.5em
+.. |meshcontours| image:: /static/common/meshcontours.png
+   :width: 1.5em
+.. |meshcontoursoff| image:: /static/common/meshcontoursoff.png
+   :width: 1.5em
+.. |meshframe| image:: /static/common/meshframe.png
+   :width: 1.5em
+.. |meshvectors| image:: /static/common/meshvectors.png
+   :width: 1.5em
+.. |meshvectorsoff| image:: /static/common/meshvectorsoff.png
    :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
    :width: 1.5em
@@ -1095,6 +1097,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |redo| image:: /static/common/mActionRedo.png
    :width: 1.5em
+.. |refresh| image:: /static/common/mActionRefresh.png
+   :width: 1.5em
 .. |regularPolygon2Points| image:: /static/common/mActionRegularPolygon2Points.png
    :width: 1.5em
 .. |regularPolygonCenterCorner| image:: /static/common/mActionRegularPolygonCenterCorner.png
@@ -1108,8 +1112,6 @@ Icon                            Substitution                        Icon        
 .. |render| image:: /static/common/render.png
    :width: 1.5em
 .. |rendering| image:: /static/common/rendering.png
-   :width: 1.5em
-.. |rendering_mesh| image:: /static/common/mesh_rendering.png
    :width: 1.5em
 .. |reshape| image:: /static/common/mActionReshape.png
    :width: 1.5em
@@ -1285,10 +1287,6 @@ Icon                            Substitution                        Icon        
 .. |unlocked| image:: /static/common/unlocked.png
    :width: 1.5em
 .. |vectorGrid| image:: /static/common/vector_grid.png
-   :width: 1.5em
-.. |vector_active| image:: /static/common/vector_active.png
-   :width: 2em
-.. |vector_inactive| image:: /static/common/vector_inactive.png
    :width: 1.5em
 .. |vertexTool| image:: /static/common/mActionVertexTool.png
    :width: 1.5em

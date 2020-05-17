@@ -761,7 +761,7 @@ actions like:
      -
      -
      - :ref:`sec_bookmarks`
-   * - |draw| :guilabel:`Refresh`
+   * - |refresh| :guilabel:`Refresh`
      - :kbd:`F5`
      - :guilabel:`Map Navigation`
      -
@@ -2324,7 +2324,7 @@ To create an animation:
    https://doc.qt.io/qt-5/qeasingcurve.html#EasingFunction-typedef).
 
    The animation can also be previewed by moving the time slider.
-   Keeping the |draw| :sup:`Repeat` button pressed will repeatedly run the
+   Keeping the |refresh| :sup:`Repeat` button pressed will repeatedly run the
    animation while clicking |play| stops a running animation.
 
 It is possible to browse the different views of the camera, using the
@@ -2645,8 +2645,6 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |deselectAll| image:: /static/common/mActionDeselectAll.png
    :width: 1.5em
-.. |draw| image:: /static/common/mActionDraw.png
-   :width: 1.5em
 .. |duplicateLayer| image:: /static/common/mActionDuplicateLayer.png
    :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
@@ -2663,11 +2661,11 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |ellipseFoci| image:: /static/common/mActionEllipseFoci.png
    :width: 1.5em
-.. |eventBrowser| image:: /static/common/event_browser.png
+.. |eventBrowser| image:: /static/common/eVisEventBrowser.png
    :width: 1.5em
-.. |eventId| image:: /static/common/event_id.png
+.. |eventId| image:: /static/common/eVisEventIdTool.png
    :width: 1.5em
-.. |evisConnect| image:: /static/common/evis_connect.png
+.. |evisConnect| image:: /static/common/eVisDatabaseConnection.png
    :width: 1.5em
 .. |expressionSelect| image:: /static/common/mIconExpressionSelect.png
    :width: 1.5em
@@ -2825,6 +2823,8 @@ Click the icon to open the Plugin Manager dialog.
 .. |rectangleExtent| image:: /static/common/mActionRectangleExtent.png
    :width: 1.5em
 .. |redo| image:: /static/common/mActionRedo.png
+   :width: 1.5em
+.. |refresh| image:: /static/common/mActionRefresh.png
    :width: 1.5em
 .. |regularPolygon2Points| image:: /static/common/mActionRegularPolygon2Points.png
    :width: 1.5em
