@@ -398,7 +398,7 @@ Icon                                Substitution                            Icon
 |pointDisplacementSymbol|           ``|pointDisplacementSymbol|``           |pointClusterSymbol|           ``|pointClusterSymbol|``
 |meshcontours|                      ``|meshcontours|``                      |meshcontoursoff|              ``|meshcontoursoff|``
 |meshvectors|                       ``|meshvectors|``                       |meshvectorsoff|               ``|meshvectorsoff|``
-|meshframe|                         ``|meshframe|``                         |groupsexploring|              ``|groupsexploring|``
+|meshframe|                         ``|meshframe|``
 |sum|                               ``|sum|``                               |sort|                         ``|sort|``
 |paintEffects|                      ``|paintEffects|``                      |mapIdentification|            ``|mapIdentification|``
 |styleManager|                      ``|styleManager|``                      |iconView|                     ``|iconView|``
@@ -474,6 +474,8 @@ Icon                            Substitution                        Icon        
 |eventBrowser|                  ``|eventBrowser|``                  |eventId|                       ``|eventId|``
 |evisConnect|                   ``|evisConnect|``
 ==============================  ==================================  ==============================  ==================================
+
+
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -817,8 +819,6 @@ Icon                            Substitution                        Icon        
 .. |grassTools| image:: /static/common/grass_tools.png
    :width: 1.5em
 .. |groupItems| image:: /static/common/mActionGroupItems.png
-   :width: 1.5em
-.. |groupsexploring| image:: /static/common/mesh_groups_explore.png
    :width: 1.5em
 .. |heatmap| image:: /static/common/heatmap.png
    :width: 1.5em

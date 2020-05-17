@@ -174,7 +174,8 @@ The tab |general| presents the following items:
 * :ref:`blending mode <blend-modes>` available for the selected dataset.
 
 
-The slider |slider|, combo box |selectString| and |groupsexploring| buttons
+The slider |slider|, the combo box |selectString| and the :guilabel:`|<`,
+:guilabel:`<`, :guilabel:`>`, :guilabel:`>|` buttons
 allow to explore another dimension of the data, if available.
 As the slider moves, the metadata is presented accordingly.
 See the figure :ref:`Mesh groups <figure_mesh_groups>` below as an example.
@@ -294,6 +295,8 @@ as shown in the image :ref:`Mesh rendering <figure_mesh_symbology_grid>`:
 The line width and color can be changed in this dialog, and both the grid renderings can be turned off.
 
 
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -305,8 +308,6 @@ The line width and color can be changed in this dialog, and both the grid render
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |general| image:: /static/common/general.png
-   :width: 1.5em
-.. |groupsexploring| image:: /static/common/mesh_groups_explore.png
    :width: 1.5em
 .. |meshcontours| image:: /static/common/meshcontours.png
    :width: 1.5em
