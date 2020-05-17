@@ -358,6 +358,8 @@ topic for the next lesson!
 .. |basic| image:: /static/global/basic.png
 .. |changeLabelProperties| image:: /static/common/mActionChangeLabelProperties.png
    :width: 1.5em
+.. |newAttribute| image:: /static/common/mActionNewAttribute.png
+   :width: 1.5em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |hard| image:: /static/global/hard.png
