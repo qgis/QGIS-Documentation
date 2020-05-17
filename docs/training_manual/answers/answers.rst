@@ -436,7 +436,7 @@ that they are predefined.
   .. figure:: img/value_map_settings.png
      :align: center
 
-* Click :guilabel:`Ok` three times.
+* Click :guilabel:`OK` three times.
 * If you use the :guilabel:`Identify` tool on a street now while edit mode is
   active, the dialog you get should look like this:
 
