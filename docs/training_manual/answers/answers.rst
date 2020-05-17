@@ -302,7 +302,7 @@ To arrive at this result:
    The example uses ``16`` for towns, ``14`` for suburbs, ``12`` for
    localities, and ``10`` for hamlets.
 #. Remember to save changes and exit edit mode
-#. Return to the :guilabel:`Text` formatting options for the :guilabel:`places`
+#. Return to the :guilabel:`Text` formatting options for the ``places``
    layer and select ``FONT_SIZE`` in the :guilabel:`Attribute field` of the
    font size |dataDefined| data defined override dropdown:
 
