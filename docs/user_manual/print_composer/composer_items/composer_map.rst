@@ -36,7 +36,7 @@ The Toolbar
 The Map :guilabel:`Item Properties` panel embeds a toolbar with the following
 functionalities:
 
-* |draw| :sup:`Update map preview`
+* |refresh| :sup:`Update map preview`
 * |setToCanvasExtent| :sup:`Set map canvas to match main canvas extent`
 * |viewExtentInCanvas| :sup:`View current map extent in main canvas`
 * |setToCanvasScale| :sup:`Set map scale to match main canvas scale`
@@ -134,7 +134,7 @@ map item to those of an existing map theme: select a map theme from the
 |checkbox| :guilabel:`Lock layers` is activated. The set of visible layers in
 the map theme is from now on used for the map item until you select another map
 theme or uncheck the |checkbox| :guilabel:`Lock layers` option. You then may
-need to refresh the view using the |draw| :sup:`Refresh view` button of the
+need to refresh the view using the |refresh| :sup:`Refresh view` button of the
 :guilabel:`Navigation` toolbar or the :guilabel:`Update Preview` button seen above.
 
 Note that, unlike the :guilabel:`Follow map theme` option, if the
@@ -407,8 +407,6 @@ of the overview on the selected map frame. You can customize it with:
    :width: 1.3em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
-.. |draw| image:: /static/common/mActionDraw.png
-   :width: 1.5em
 .. |labeling| image:: /static/common/labelingSingle.png
    :width: 1.5em
 .. |moveItemContent| image:: /static/common/mActionMoveItemContent.png
@@ -416,6 +414,8 @@ of the overview on the selected map frame. You can customize it with:
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
    :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
+   :width: 1.5em
+.. |refresh| image:: /static/common/mActionRefresh.png
    :width: 1.5em
 .. |setToCanvasExtent| image:: /static/common/mActionSetToCanvasExtent.png
    :width: 1.5em

@@ -191,7 +191,7 @@ Icon                            Substitution                        Icon        
 |zoomActual|                    ``|zoomActual|``                    |zoomFullExtent|                ``|zoomFullExtent|``
 |zoomToLayer|                   ``|zoomToLayer|``                   |zoomToSelected|                ``|zoomToSelected|``
 |zoomLast|                      ``|zoomLast|``                      |zoomNext|                      ``|zoomNext|``
-|draw|                          ``|draw|``
+|refresh|                       ``|refresh|``
 |identify|                      ``|identify|``                      |mapTips|                       ``|mapTips|``
 |showBookmarks|                 ``|showBookmarks|``                 |newBookmark|                   ``|newBookmark|``
 |measure|                       ``|measure|``                       |measureArea|                   ``|measureArea|``
@@ -312,7 +312,7 @@ Icon                         Substitution                     Icon              
 |expressionSelect|           ``|expressionSelect|``           |deleteSelectedFeatures|   ``|deleteSelectedFeatures|``
 |newAttribute|               ``|newAttribute|``               |deleteAttribute|          ``|deleteAttribute|``
 |newTableRow|                ``|newTableRow|``                |calculateField|           ``|calculateField|``
-|draw|                       ``|draw|``                       |formView|                 ``|formView|``
+|refresh|                    ``|refresh|``                    |formView|                 ``|formView|``
 |conditionalFormatting|      ``|conditionalFormatting|``      |multiEdit|                ``|multiEdit|``
 |dock|                       ``|dock|``                       |actionRun|                ``|actionRun|``
 |duplicateFeature|           ``|duplicateFeature|``
@@ -708,8 +708,6 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |dock| image:: /static/common/dock.png
    :width: 1.5em
-.. |draw| image:: /static/common/mActionDraw.png
-   :width: 1.5em
 .. |duplicateFeature| image:: /static/common/mActionDuplicateFeature.png
    :width: 1.5em
 .. |duplicateLayout| image:: /static/common/mActionDuplicateLayout.png
@@ -1098,6 +1096,8 @@ Icon                            Substitution                        Icon        
 .. |rectangleExtent| image:: /static/common/mActionRectangleExtent.png
    :width: 1.5em
 .. |redo| image:: /static/common/mActionRedo.png
+   :width: 1.5em
+.. |refresh| image:: /static/common/mActionRefresh.png
    :width: 1.5em
 .. |regularPolygon2Points| image:: /static/common/mActionRegularPolygon2Points.png
    :width: 1.5em

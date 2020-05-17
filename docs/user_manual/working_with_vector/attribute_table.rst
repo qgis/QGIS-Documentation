@@ -78,7 +78,7 @@ following functionality:
    "|toggleEditing|", "Toggle editing mode", "Enable editing functionalities", ":kbd:`Ctrl+E`"
    "|multiEdit|", "Toggle multi edit mode", "Update multiple fields of many features"
    "|saveEdits|", "Save Edits", "Save current modifications"
-   "|draw|", "Reload the table"
+   "|refresh|", "Reload the table"
    "|newTableRow|", "Add feature", "Add new geometryless feature"
    "|deleteSelectedFeatures|", "Delete selected features", "Remove selected features from the layer"
    "|editCut|", "Cut selected features to clipboard", "", ":kbd:`Ctrl+X`"
@@ -990,8 +990,6 @@ table.
    :width: 1.5em
 .. |dock| image:: /static/common/dock.png
    :width: 1.5em
-.. |draw| image:: /static/common/mActionDraw.png
-   :width: 1.5em
 .. |duplicateFeature| image:: /static/common/mActionDuplicateFeature.png
    :width: 1.5em
 .. |editCut| image:: /static/common/mActionEditCut.png
@@ -1031,6 +1029,8 @@ table.
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
    :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
+   :width: 1.5em
+.. |refresh| image:: /static/common/mActionRefresh.png
    :width: 1.5em
 .. |saveEdits| image:: /static/common/mActionSaveEdits.png
    :width: 1.5em

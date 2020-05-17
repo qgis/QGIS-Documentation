@@ -761,7 +761,7 @@ actions like:
      -
      -
      - :ref:`sec_bookmarks`
-   * - |draw| :guilabel:`Refresh`
+   * - |refresh| :guilabel:`Refresh`
      - :kbd:`F5`
      - :guilabel:`Map Navigation`
      -
@@ -2324,7 +2324,7 @@ To create an animation:
    https://doc.qt.io/qt-5/qeasingcurve.html#EasingFunction-typedef).
 
    The animation can also be previewed by moving the time slider.
-   Keeping the |draw| :sup:`Repeat` button pressed will repeatedly run the
+   Keeping the |refresh| :sup:`Repeat` button pressed will repeatedly run the
    animation while clicking |play| stops a running animation.
 
 It is possible to browse the different views of the camera, using the
@@ -2645,8 +2645,6 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |deselectAll| image:: /static/common/mActionDeselectAll.png
    :width: 1.5em
-.. |draw| image:: /static/common/mActionDraw.png
-   :width: 1.5em
 .. |duplicateLayer| image:: /static/common/mActionDuplicateLayer.png
    :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
@@ -2825,6 +2823,8 @@ Click the icon to open the Plugin Manager dialog.
 .. |rectangleExtent| image:: /static/common/mActionRectangleExtent.png
    :width: 1.5em
 .. |redo| image:: /static/common/mActionRedo.png
+   :width: 1.5em
+.. |refresh| image:: /static/common/mActionRefresh.png
    :width: 1.5em
 .. |regularPolygon2Points| image:: /static/common/mActionRegularPolygon2Points.png
    :width: 1.5em
