@@ -565,7 +565,9 @@ For deletion of fields just provide a list of field indexes.
 .. testcode:: vectors
 
  # Alternate methods for removing fields 
+ # first create temporary fields to be removed (f1-3)
  layer.dataProvider().addAttributes([QgsField("f1",QVariant.Int),QgsField("f2",QVariant.Int),QgsField("f3",QVariant.Int)])
+ layer.updateFields()
  count=layer.fields().count() # count of layer fields
  ind_list=list((count-3, count-2)) # create list
  
