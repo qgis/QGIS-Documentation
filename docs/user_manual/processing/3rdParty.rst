@@ -101,34 +101,11 @@ causes longer execution times.
 SAGA
 ----
 
-SAGA algorithms can be run from QGIS if you have SAGA installed
-and you configure the processing framework to find SAGA
-executables.
-In particular, the SAGA command-line executable is needed to run
-SAGA algorithms.
+SAGA algorithms can be run from QGIS if SAGA included in the
+QGIS installation.
 
 If you are running Windows, both the stand-alone installer and the
-OSGeo4W installer include SAGA along with QGIS, and the path is
-automatically configured, so there is no need to do anything else.
-
-If you have installed SAGA yourself and your QGIS installer did not
-include it, the path to the SAGA executable must be configured.
-To do this, open the configuration dialog. In the :guilabel:`SAGA`
-block, you will find a setting named :guilabel:`SAGA Folder`.
-Enter the path to the folder where SAGA is installed. Close the
-configuration dialog, and now you are ready to run SAGA algorithms
-from QGIS.
-
-If you are running Linux, SAGA binaries are not included with
-Processing, so you have to download and install the software yourself.
-Please check the SAGA website for more information.
-
-In this case, there is no need to configure the path to the SAGA
-executable, and you will not see those folder entries.
-Instead, you must make sure that SAGA is properly installed and its
-folder is added to the PATH environment variable.
-Just open a console and type ``saga_cmd`` to check that the system can
-find where the SAGA binaries are located.
+OSGeo4W installer include SAGA.
 
 About SAGA grid system limitations
 ..................................
@@ -318,7 +295,7 @@ Perform the following steps to load and enable them using the
 
       * On Windows, set the path to (or, better, include in the path):
 
-          C:\Users\<user>\AppData\Roaming\QGIS\QGIS3\profiles\default\resource_sharing\repositories\github.com\qgis\QGIS-Resources\collections\rscripts
+          C:\\Users\\<user>\\AppData\\Roaming\\QGIS\\QGIS3\\profiles\\default\\resource_sharing\\repositories\\github.com\\qgis\\QGIS-Resources\\collections\\rscripts
 
       To edit, double-click. You can then choose to just paste / type
       the path, or you can navigate to the directory by using the

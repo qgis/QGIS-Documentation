@@ -74,7 +74,7 @@ figure_point_buffer_, figure_line_buffer_, ).
    :align: center
    :width: 30em
 
-   A buffer zone around vector polylines.
+   A buffer zone around vector polygons.
 
 Variations in buffering
 =======================

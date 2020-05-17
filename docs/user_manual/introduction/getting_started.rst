@@ -78,7 +78,7 @@ you may do one of the following:
 
 * Use GIS data that you already have
 * Download sample data from
-  https://qgis.org/downloads/data/qgis_sample_data.zip
+  https://github.com/qgis/QGIS-Sample-Data/archive/release_3.10.zip
 * Uninstall QGIS and reinstall with the data download option checked (only
   recommended if the above solutions are unsuccessful)
 

@@ -154,11 +154,15 @@ To create the .tx/config to push/pull using tx client do:
 
 .. code-block:: bash
 
- sphinx-intl create-txconfig
+ # Creating the txconfig is only to be once the first time (we have one now...)
+ #sphinx-intl create-txconfig
  sphinx-intl update-txconfig-resources --transifex-project-name qgis-documentation
 
+ # Then (only Transifex admin) can push the po source files to Transifex
+ tx push -fs --no-interactive (push the source (-f) files forcing (-f) overwriting the ones their without asking (--no-interactive)
 
-To update all po files (which we do not use if we do github-transifex integration!!!):
+
+To update all po files of all languages (Which we do not use here! This is done by Transifex):
 
 .. code-block:: bash
 
@@ -166,7 +170,9 @@ To update all po files (which we do not use if we do github-transifex integratio
  # is the same same as
  sphinx-intl <command> --language=de --language=nl ...
 
-We created a script to create the transifex yaml files for github-transifex integrations:
+We created a script to create the transifex yaml files for github-transifex integrations.
+
+BUT we do not do this yet as there were some technical issues...
 
 .. code-block:: bash
 
