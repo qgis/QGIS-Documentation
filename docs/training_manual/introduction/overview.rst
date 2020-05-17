@@ -37,9 +37,9 @@ available to you.
 Expanding collapsed items (by clicking the arrow or plus symbol beside them)
 will provide you with more information on the layer's current appearance.
 
-Hovering the layer will give you some basic information: layer name, type of
-geometry, coordinate reference system and the complete path of the location on
-your device.
+Hovering over the layer will give you some basic information: layer name, type
+of geometry, coordinate reference system and the complete path of the location
+on your device.
 
 Right-clicking on a layer will give you a menu with lots of extra options. You
 will be using some of them before long, so take a look around!
