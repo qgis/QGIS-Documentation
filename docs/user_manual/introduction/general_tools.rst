@@ -2219,7 +2219,6 @@ screen resolution, paper size, or the terrain). Available units are:
 
      Adjust scaling range dialog
 
-
 .. index:: Number format; Map scale bar
 .. _number_formatting:
 
@@ -2240,7 +2239,7 @@ For most of them, you can set part or all of the following numeric options:
 
 But they can also have their custom settings. Provided categories are:
 
-* :guilabel:`General`, the default category, has no setting and displays values
+* :guilabel:`General`, the default category: has no setting and displays values
   as set in the parent widget properties or using the global settings.
 * :guilabel:`Number`
 
@@ -2264,7 +2263,7 @@ But they can also have their custom settings. Provided categories are:
     instead of 1/2
   * |unchecked| :guilabel:`Use dedicated Unicode characters`
   * customize the :guilabel:`Thousands separator`
-* :guilabel:`Percentage` appending ``%`` to the values
+* :guilabel:`Percentage` - appends ``%`` to the values, with setting of:
 
   * number of :guilabel:`Decimal places`
   * :guilabel:`Scaling` to indicate whether the actual values already represent
