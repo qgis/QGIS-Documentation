@@ -396,9 +396,9 @@ Icon                                Substitution                            Icon
 |25dSymbol|                         ``|25dSymbol|``                         |ruleBasedSymbol|              ``|ruleBasedSymbol|``
 |invertedSymbol|                    ``|invertedSymbol|``                    |heatmapSymbol|                ``|heatmapSymbol|``
 |pointDisplacementSymbol|           ``|pointDisplacementSymbol|``           |pointClusterSymbol|           ``|pointClusterSymbol|``
-|contour_active|                    ``|contour_active|``                    |contour_inactive|             ``|contour_inactive|``
-|vector_active|                     ``|vector_active|``                     |vector_inactive|              ``|vector_inactive|``
-|rendering_mesh|                    ``|rendering_mesh|``                    |groupsexploring|              ``|groupsexploring|``
+|meshcontours|                      ``|meshcontours|``                      |meshcontoursoff|              ``|meshcontoursoff|``
+|meshvectors|                       ``|meshvectors|``                       |meshvectorsoff|               ``|meshvectorsoff|``
+|meshframe|                         ``|meshframe|``                         |groupsexploring|              ``|groupsexploring|``
 |sum|                               ``|sum|``                               |sort|                         ``|sort|``
 |paintEffects|                      ``|paintEffects|``                      |mapIdentification|            ``|mapIdentification|``
 |styleManager|                      ``|styleManager|``                      |iconView|                     ``|iconView|``
@@ -644,10 +644,6 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |contextHelp| image:: /static/common/mActionContextHelp.png
    :width: 1.5em
-.. |contour_active| image:: /static/common/contours_active.png
-   :width: 1.5em
-.. |contour_inactive| image:: /static/common/contours_inactive.png
-   :width: 2em
 .. |convexHull| image:: /static/common/convex_hull.png
    :width: 1.5em
 .. |coordinateCapture| image:: /static/common/coordinate_capture.png
@@ -957,6 +953,16 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |mergeFeatures| image:: /static/common/mActionMergeFeatures.png
    :width: 1.5em
+.. |meshcontours| image:: /static/common/meshcontours.png
+   :width: 1.5em
+.. |meshcontoursoff| image:: /static/common/meshcontoursoff.png
+   :width: 1.5em
+.. |meshframe| image:: /static/common/meshframe.png
+   :width: 1.5em
+.. |meshvectors| image:: /static/common/meshvectors.png
+   :width: 1.5em
+.. |meshvectorsoff| image:: /static/common/meshvectorsoff.png
+   :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
    :width: 1.5em
 .. |metasearch| image:: /static/common/MetaSearch.png
@@ -1106,8 +1112,6 @@ Icon                            Substitution                        Icon        
 .. |render| image:: /static/common/render.png
    :width: 1.5em
 .. |rendering| image:: /static/common/rendering.png
-   :width: 1.5em
-.. |rendering_mesh| image:: /static/common/mesh_rendering.png
    :width: 1.5em
 .. |reshape| image:: /static/common/mActionReshape.png
    :width: 1.5em
@@ -1283,10 +1287,6 @@ Icon                            Substitution                        Icon        
 .. |unlocked| image:: /static/common/unlocked.png
    :width: 1.5em
 .. |vectorGrid| image:: /static/common/vector_grid.png
-   :width: 1.5em
-.. |vector_active| image:: /static/common/vector_active.png
-   :width: 2em
-.. |vector_inactive| image:: /static/common/vector_inactive.png
    :width: 1.5em
 .. |vertexTool| image:: /static/common/mActionVertexTool.png
    :width: 1.5em
