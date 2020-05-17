@@ -23,6 +23,8 @@ There are several ways to use Python in QGIS Desktop
 * Issue commands in the Python console within QGIS
 * Create and use plugins
 * Automatically run Python code when QGIS starts
+* Create processing algorithms
+* Create functions for expressions in QGIS
 * Create custom applications based on the QGIS API
 
 Python bindings are also available for QGIS Server, including
