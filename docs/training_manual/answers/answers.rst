@@ -311,23 +311,13 @@ To arrive at this result:
    layer and select ``FONT_SIZE`` in the :guilabel:`Attribute field` of the
    font size |dataDefined| data defined override dropdown:
 
-<<<<<<< HEAD
-  .. image:: img/font_size_override.png
-     :align: center
-=======
    .. figure:: img/font_size_override.png
       :align: center
->>>>>>> f9897316f... Update text and images in Lesson 4.2 "Labels" (#5463)
 
    Your results, if using the above values, should be this:
 
-<<<<<<< HEAD
-  .. image:: img/font_override_results.png
-     :align: center
-=======
    .. figure:: img/font_override_results.png
       :align: center
->>>>>>> f9897316f... Update text and images in Lesson 4.2 "Labels" (#5463)
 
 :ref:`Back to text <backlink-label-data-defined-1>`
 
@@ -1205,15 +1195,10 @@ As you can see, our constraint allows nulls to be added into the database.
 .. |RF| replace:: Results For
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
-<<<<<<< HEAD
-.. |basic| image:: /static/global/basic.png
-.. |hard| image:: /static/global/hard.png
-=======
 .. |basic| image:: /static/common/basic.png
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |hard| image:: /static/common/hard.png
->>>>>>> f9897316f... Update text and images in Lesson 4.2 "Labels" (#5463)
 .. |largeLandUseArea| replace:: Bontebok National Park
 .. |majorUrbanName| replace:: Swellendam
 .. |moderate| image:: /static/global/moderate.png
