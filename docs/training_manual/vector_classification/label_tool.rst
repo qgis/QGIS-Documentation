@@ -17,7 +17,7 @@ First, ensure that the |labeling| button is visible in the GUI:
 #. Go to the menu item :menuselection:`View --> Toolbars`
 #. Ensure that the :guilabel:`Label Toolbar` item has a check mark next to it.
    If it doesn't, click on the :guilabel:`Label Toolbar` item to activate it.
-#. Click on the :guilabel:`places` layer in the :guilabel:`Layers` panel so that
+#. Click on the ``places`` layer in the :guilabel:`Layers` panel so that
    it is highlighted
 #. Click on the |labeling| toolbar button to open the
    :guilabel:`Labels` tab of the :guilabel:`Layer Styling` panel
