@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 .. only:: html
 
-
-|LS| The Label Tool
-=======
 |LS| Labels
->>>>>>> f9897316f... Update text and images in Lesson 4.2 "Labels" (#5463)
 ===============================================================================
 
 Labels can be added to a map to show any information about an object. Any
@@ -37,15 +32,8 @@ First, ensure that the |labeling| button is visible in the GUI:
 
 #. Select ``name`` from the Value list:
 
-<<<<<<< HEAD
-* Select :guilabel:`name` from the list:
-
-.. image:: img/select_label_with.png
-   :align: center
-=======
    .. figure:: img/select_label_with.png
       :align: center
->>>>>>> f9897316f... Update text and images in Lesson 4.2 "Labels" (#5463)
 
 #. Click :guilabel:`Apply`
 
@@ -62,21 +50,11 @@ Depending on the styles you chose for your map in earlier lessons, you might
 find that the labels are not appropriately formatted and either overlap or
 are too far away from their point markers.
 
-<<<<<<< HEAD
-* Open the :guilabel:`Label tool` again by clicking on its button as before.
-* Make sure :guilabel:`Text` is selected in the left-hand options list, then
-  update the text formatting options to match those shown here:
-
-
-.. image:: img/label_formatting_options.png
-   :align: center
-=======
 .. note::  Above, you used the |labeling| button in the
    :guilabel:`Label Toolbar` to open the :guilabel:`Layer Styling` panel. As
    with :guilabel:`Symbology`, the same label options are available via both
    the :guilabel:`Layer Styling` panel and the :guilabel:`Layer Properties`
    dialog. Here, you'll use the :guilabel:`Layer Properties` dialog.
->>>>>>> f9897316f... Update text and images in Lesson 4.2 "Labels" (#5463)
 
 #. Open the :guilabel:`Layer Properties` dialog by double-clicking on the
    ``places`` layer
@@ -89,14 +67,9 @@ are too far away from their point markers.
 
 #. Click :guilabel:`Apply`
 
-<<<<<<< HEAD
-.. image:: img/buffer_options.png
-   :align: center
-=======
    That font may be larger and more familiar to users, but its readability is
    still dependent on what layers are rendered beneath it. To solve this,
    let's take a look at the :guilabel:`Buffer` option.
->>>>>>> f9897316f... Update text and images in Lesson 4.2 "Labels" (#5463)
 
 #. Select :guilabel:`Buffer` from the left-hand options list
 #. Select the checkbox next to :guilabel:`Draw text buffer`, then choose
@@ -107,13 +80,8 @@ are too far away from their point markers.
 
 #. Click :guilabel:`Apply`
 
-<<<<<<< HEAD
-.. image:: img/buffer_results.png
-   :align: center
-=======
    You'll see that this adds a colored buffer or border to the place labels,
    making them easier to pick out on the map:
->>>>>>> f9897316f... Update text and images in Lesson 4.2 "Labels" (#5463)
 
    .. figure:: img/buffer_results.png
       :align: center
@@ -125,13 +93,8 @@ are too far away from their point markers.
 #. Select :guilabel:`Around point` and change the value of
    :guilabel:`Distance` to ``2.0`` Millimeters:
 
-<<<<<<< HEAD
-.. image:: img/offset_placement_settings.png
-   :align: center
-=======
    .. figure:: img/offset_placement_settings.png
       :align: center
->>>>>>> f9897316f... Update text and images in Lesson 4.2 "Labels" (#5463)
 
 #. Click :guilabel:`Apply`
 
@@ -167,34 +130,19 @@ directly over the points they refer to.
    position of the label in relation to the point marker. In this case, we want the
    label to be centered on the point, so choose the center quadrant:
 
-<<<<<<< HEAD
-.. image:: img/quadrant_offset_options.png
-   :align: center
-=======
    .. figure:: img/quadrant_offset_options.png
       :align: center
->>>>>>> f9897316f... Update text and images in Lesson 4.2 "Labels" (#5463)
 
 #. Hide the point symbols by editing the layer :guilabel:`Symbology` as usual,
    and setting the size of the :guilabel:`Marker` size to ``0.0``:
 
-<<<<<<< HEAD
-.. image:: img/hide_point_marker.png
-   :align: center
-=======
    .. figure:: img/hide_point_marker.png
       :align: center
->>>>>>> f9897316f... Update text and images in Lesson 4.2 "Labels" (#5463)
 
 #. Click :guilabel:`Apply` and you'll see this result:
 
-<<<<<<< HEAD
-.. image:: img/hide_point_marker_results.png
-   :align: center
-=======
    .. figure:: img/hide_point_marker_results.png
       :align: center
->>>>>>> f9897316f... Update text and images in Lesson 4.2 "Labels" (#5463)
 
 If you were to zoom out on the map, you would see that some of the labels
 disappear at larger scales to avoid overlapping. Sometimes this is what you
@@ -243,13 +191,8 @@ understand.
 #. In the :guilabel:`Labels` tab's :guilabel:`Placement` tab, choose the
    following settings:
 
-<<<<<<< HEAD
-.. image:: img/street_label_settings.png
-   :align: center
-=======
    .. figure:: img/street_label_settings.png
       :align: center
->>>>>>> f9897316f... Update text and images in Lesson 4.2 "Labels" (#5463)
 
    You'll probably find that the text styling has used default values and the
    labels are consequently very hard to read. Update the :guilabel:`Text`
@@ -258,13 +201,8 @@ understand.
 
    The map will look somewhat like this, depending on scale:
 
-<<<<<<< HEAD
-.. image:: img/street_label_formatted.png
-   :align: center
-=======
    .. figure:: img/street_label_formatted.png
       :align: center
->>>>>>> f9897316f... Update text and images in Lesson 4.2 "Labels" (#5463)
 
    You'll see that some of the road names appear more than once and that's not
    always necessary. To prevent this from happening:
@@ -273,13 +211,8 @@ understand.
    choose the :guilabel:`Rendering` option and select
    :guilabel:`Merge connected lines to avoid duplicate labels` as shown:
 
-<<<<<<< HEAD
-.. image:: img/merge_lines_option.png
-   :align: center
-=======
    .. figure:: img/merge_lines_option.png
       :align: center
->>>>>>> f9897316f... Update text and images in Lesson 4.2 "Labels" (#5463)
 
 #. Click :guilabel:`OK`
 
@@ -327,26 +260,16 @@ looks better.
    :guilabel:`Style` and select :menuselection:`Edit...` to open the
    :guilabel:`Expression String Builder`:
 
-<<<<<<< HEAD
-.. image:: img/expression_string_builder.png
-   :align: center
-=======
    .. figure:: img/expression_string_builder.png
       :align: center
->>>>>>> f9897316f... Update text and images in Lesson 4.2 "Labels" (#5463)
 
 #. Under :menuselection:`Fields and Values`, double click on ``place``
    and then click :guilabel:`All Unique`. This will list all unique values
    of the ``place`` field of this layer. Add a ``=`` in the text
    editor and then double click on ``town``.
 
-<<<<<<< HEAD
-.. image:: img/expression_builder_settings.png
-   :align: center
-=======
    Alternatively, you can type: ``"place" = 'town'`` directly in the
    text editor.
->>>>>>> f9897316f... Update text and images in Lesson 4.2 "Labels" (#5463)
 
 #. Click :guilabel:`OK` twice:
 
@@ -371,20 +294,6 @@ field matches ``town`` are displayed in italics.
    following means. If you don't, feel free to leave out this section and come
    back later when you've covered the requisite materials.
 
-<<<<<<< HEAD
-* Open the Attribute Table for :guilabel:`places`.
-* Enter edit mode by clicking this button: |toggleEditing|
-
-* Add a new column:
-
-.. image:: img/add_column_button.png
-   :align: center
-
-* Configure it like this:
-
-.. image:: img/font_size_column.png
-   :align: center
-=======
 #. Open the Attribute Table for ``places``
 #. Enter edit mode by clicking the |toggleEditing| button
 #. Add a new column with the |newAttribute| button
@@ -392,7 +301,6 @@ field matches ``town`` are displayed in italics.
 
    .. figure:: img/font_size_column.png
       :align: center
->>>>>>> f9897316f... Update text and images in Lesson 4.2 "Labels" (#5463)
 
 #. Use this to set custom font sizes for each different type of place
    (each key in the ``place`` field)
@@ -450,13 +358,9 @@ topic for the next lesson!
 .. |basic| image:: /static/global/basic.png
 .. |changeLabelProperties| image:: /static/common/mActionChangeLabelProperties.png
    :width: 1.5em
-<<<<<<< HEAD
-.. |hard| image:: /static/global/hard.png
-=======
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |hard| image:: /static/common/hard.png
->>>>>>> f9897316f... Update text and images in Lesson 4.2 "Labels" (#5463)
 .. |labeling| image:: /static/common/labelingSingle.png
    :width: 1.5em
 .. |majorUrbanName| replace:: Swellendam
