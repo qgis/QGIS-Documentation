@@ -417,11 +417,11 @@ format in a file. This is particularly helpful if you are not familiar with SQL
 commands. Click on the :guilabel:`Predefined Queries` tab to display the
 predefined query interface.
 
-To load a set of predefined queries, click on the |evisFile| :sup:`Open File`
+To load a set of predefined queries, click on the |folder| :sup:`Open File`
 icon. This opens the :guilabel:`Open File` window, which is used to locate the file
 containing the SQL queries. When the queries are loaded, their titles as
 defined in the XML file will appear in the drop-down menu located just below
-the |evisFile| :sup:`Open File` icon. The full description of the query is
+the |folder| :sup:`Open File` icon. The full description of the query is
 displayed in the text window under the drop-down menu.
 
 Select the query you want to run from the drop-down menu and then click on the
@@ -536,13 +536,13 @@ A complete sample XML file with three queries is displayed below:
    please add it also to the substitutions.txt file in the
    source folder.
 
-.. |eventBrowser| image:: /static/common/event_browser.png
+.. |eventBrowser| image:: /static/common/eVisEventBrowser.png
    :width: 1.5em
-.. |eventId| image:: /static/common/event_id.png
+.. |eventId| image:: /static/common/eVisEventIdTool.png
    :width: 1.5em
-.. |evisConnect| image:: /static/common/evis_connect.png
+.. |evisConnect| image:: /static/common/eVisDatabaseConnection.png
    :width: 1.5em
-.. |evisFile| image:: /static/common/evis_file.png
+.. |folder| image:: /static/common/mActionFolder.png
    :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
    :width: 1.5em
