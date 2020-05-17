@@ -136,7 +136,7 @@ have a size field, so we'll have to make one.
 
 The new field will be added (at the far right of the table; you may need to
 scroll horizontally to see it). However, at the moment it is not populated, it
-just has a lot of :kbd:`NULL` values.
+just has a lot of *NULL* values.
 
 To solve this problem, we'll need to calculate the areas.
 
