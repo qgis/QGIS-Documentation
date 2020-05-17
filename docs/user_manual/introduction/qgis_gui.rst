@@ -2663,11 +2663,11 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |ellipseFoci| image:: /static/common/mActionEllipseFoci.png
    :width: 1.5em
-.. |eventBrowser| image:: /static/common/event_browser.png
+.. |eventBrowser| image:: /static/common/eVisEventBrowser.png
    :width: 1.5em
-.. |eventId| image:: /static/common/event_id.png
+.. |eventId| image:: /static/common/eVisEventIdTool.png
    :width: 1.5em
-.. |evisConnect| image:: /static/common/evis_connect.png
+.. |evisConnect| image:: /static/common/eVisDatabaseConnection.png
    :width: 1.5em
 .. |expressionSelect| image:: /static/common/mIconExpressionSelect.png
    :width: 1.5em

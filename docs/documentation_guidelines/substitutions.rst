@@ -472,7 +472,7 @@ eVis plugin
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
 |eventBrowser|                  ``|eventBrowser|``                  |eventId|                       ``|eventId|``
-|evisConnect|                   ``|evisConnect|``                   |evisFile|                      ``|evisFile|``
+|evisConnect|                   ``|evisConnect|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -738,13 +738,11 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |ellipseFoci| image:: /static/common/mActionEllipseFoci.png
    :width: 1.5em
-.. |eventBrowser| image:: /static/common/event_browser.png
+.. |eventBrowser| image:: /static/common/eVisEventBrowser.png
    :width: 1.5em
-.. |eventId| image:: /static/common/event_id.png
+.. |eventId| image:: /static/common/eVisEventIdTool.png
    :width: 1.5em
-.. |evisConnect| image:: /static/common/evis_connect.png
-   :width: 1.5em
-.. |evisFile| image:: /static/common/evis_file.png
+.. |evisConnect| image:: /static/common/eVisDatabaseConnection.png
    :width: 1.5em
 .. |expandNewTree| image:: /static/common/mActionExpandNewTree.png
    :width: 1.5em
