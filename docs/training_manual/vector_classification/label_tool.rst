@@ -360,7 +360,7 @@ topic for the next lesson!
    :width: 1.5em
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
-.. |hard| image:: /static/common/hard.png
+.. |hard| image:: /static/global/hard.png
 .. |labeling| image:: /static/common/labelingSingle.png
    :width: 1.5em
 .. |majorUrbanName| replace:: Swellendam
