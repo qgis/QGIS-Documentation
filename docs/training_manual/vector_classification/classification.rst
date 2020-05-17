@@ -3,7 +3,7 @@
 
 Labels are a good way to communicate information such as the names of
 individual places, but they can't be used for everything. For example, let's
-say that someone wants to know what each :guilabel:`landuse` area is used for.
+say that someone wants to know what each ``landuse`` area is used for.
 Using labels, you'd get this:
 
 .. figure:: img/bad_landuse_labels.png
@@ -17,7 +17,7 @@ are numerous different landuse areas on the map.
 |basic| |FA| Classifying Nominal Data
 -------------------------------------------------------------------------------
 
-* Open the :guilabel:`Layer Properties` dialog for the :guilabel:`landuse` layer.
+* Open the :guilabel:`Layer Properties` dialog for the ``landuse`` layer.
 * Go to the :guilabel:`Symbology` tab.
 * Click on the dropdown that says :guilabel:`Single Symbol` and change it to
   :guilabel:`Categorized`:
@@ -25,7 +25,7 @@ are numerous different landuse areas on the map.
 .. figure:: img/categorised_styles.png
    :align: center
 
-* In the new panel, change the :guilabel:`Column` to :guilabel:`landuse`
+* In the new panel, change the :guilabel:`Column` to ``landuse``
   and the :guilabel:`Color ramp` to :guilabel:`Greens`.
 * Click the button labeled :guilabel:`Classify`:
 
@@ -39,7 +39,7 @@ You'll see something like this:
 .. figure:: img/categorisation_result.png
    :align: center
 
-* Click the arrow (or plus sign) next to :guilabel:`landuse` in the
+* Click the arrow (or plus sign) next to ``landuse`` in the
   :guilabel:`Layer list`, you'll see the categories explained:
 
 .. figure:: img/categories_explained.png
@@ -47,7 +47,7 @@ You'll see something like this:
 
 Now our landuse polygons are appropriately colored and are classified so that
 areas with the same land use are the same color. You may wish to remove the
-black border from the :guilabel:`landuse` layer:
+black border from the ``landuse`` layer:
 
 * Open :guilabel:`Layer Properties`, go to the :guilabel:`Symbology` tab and select
   :guilabel:`Symbol`.
@@ -80,8 +80,8 @@ changes!
 -------------------------------------------------------------------------------
 
 If you're only following the basic-level content, use the knowledge you gained
-above to classify the :guilabel:`buildings` layer. Set the categorisation against
-the :guilabel:`building` column and use the :guilabel:`Spectral` color ramp.
+above to classify the ``buildings`` layer. Set the categorisation against
+the ``building`` column and use the :guilabel:`Spectral` color ramp.
 
 .. note:: Remember to zoom into an urban area to see the results.
 
@@ -118,7 +118,7 @@ We're going to reclassify the layer, so existing classes will be lost if not
 saved.
 
 * Close the :guilabel:`Layer Properties` dialog.
-* Open the Attributes Table for the :guilabel:`landuse` layer.
+* Open the Attributes Table for the ``landuse`` layer.
 
 We want to classify the landuse areas by size, but there's a problem: they don't
 have a size field, so we'll have to make one.
@@ -233,7 +233,7 @@ It's often useful to combine multiple criteria for a classification, but
 unfortunately normal classification only takes one attribute into account.
 That's where rule-based classification comes in handy.
 
-* Open the :guilabel:`Layer Properties` dialog for the :guilabel:`landuse` layer.
+* Open the :guilabel:`Layer Properties` dialog for the ``landuse`` layer.
 * Switch to the :guilabel:`Symbology` tab.
 * Switch the classification style to :guilabel:`Rule-based`. You'll get this:
 
