@@ -1195,10 +1195,10 @@ As you can see, our constraint allows nulls to be added into the database.
 .. |RF| replace:: Results For
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
-.. |basic| image:: /static/common/basic.png
+.. |basic| image:: /static/global/basic.png
 .. |dataDefined| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
-.. |hard| image:: /static/common/hard.png
+.. |hard| image:: /static/global/hard.png
 .. |largeLandUseArea| replace:: Bontebok National Park
 .. |majorUrbanName| replace:: Swellendam
 .. |moderate| image:: /static/global/moderate.png
