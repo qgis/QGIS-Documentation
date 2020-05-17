@@ -17,7 +17,7 @@ First, ensure that the |labeling| button is visible in the GUI:
 #. Go to the menu item :menuselection:`View --> Toolbars`
 #. Ensure that the :guilabel:`Label Toolbar` item has a check mark next to it.
    If it doesn't, click on the :guilabel:`Label Toolbar` item to activate it.
-#. Click on the :guilabel:`places` layer in the :guilabel:`Layers` panel so that
+#. Click on the ``places`` layer in the :guilabel:`Layers` panel so that
    it is highlighted
 #. Click on the |labeling| toolbar button to open the
    :guilabel:`Labels` tab of the :guilabel:`Layer Styling` panel
@@ -103,7 +103,7 @@ are too far away from their point markers.
 -------------------------------------------------------------------------------
 
 In many cases, the location of a point doesn't need to be very specific. For
-example, most of the points in the :guilabel:`places` layer refer to entire
+example, most of the points in the ``places`` layer refer to entire
 towns or suburbs, and the specific point associated with such features is not
 that specific on a large scale. In fact, giving a point that is too specific is
 often confusing for someone reading a map.
@@ -178,10 +178,10 @@ way as the points, your results would look like this:
 .. figure:: img/bad_street_labels.png
    :align: center
 
-We will now reformat the :guilabel:`roads` layer labels so that they are easy to
+We will now reformat the ``roads`` layer labels so that they are easy to
 understand.
 
-#. Hide the :guilabel:`places` layer so that it doesn't distract you
+#. Hide the ``places`` layer so that it doesn't distract you
 #. Activate |labeling| :guilabel:`Single Labels` for the ``roads``
    layer as you did above for ``places``
 #. Set the font :guilabel:`Size` to ``10`` so that you can see more labels
