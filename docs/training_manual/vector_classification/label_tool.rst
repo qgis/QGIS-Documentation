@@ -49,13 +49,13 @@ find that the labels are not appropriately formatted and either overlap or
 are too far away from their point markers.
 
 .. note::  Above, you used the |labeling| button in the
-   :guilabel:`Label Toolbar` open the :guilabel:`Layer Styling` panel. As
+   :guilabel:`Label Toolbar` to open the :guilabel:`Layer Styling` panel. As
    with :guilabel:`Symbology`, the same label options are available via both
    the :guilabel:`Layer Styling` panel and the :guilabel:`Layer Properties`
    dialog. Here, you'll use the :guilabel:`Layer Properties` dialog.
 
 #. Open the :guilabel:`Layer Properties` dialog by double-clicking on the
-   :guilabel:`places` layer
+   ``places`` layer
 #. Select the |labeling| :guilabel:`Labels` tab
 #. Make sure :guilabel:`Text` is selected in the left-hand options list, then
    update the text formatting options to match those shown here:
@@ -120,7 +120,7 @@ In QGIS, you can do this by changing the position of the labels to be rendered
 directly over the points they refer to.
 
 #. Open the |labeling| :guilabel:`Labels` tab of the
-   :guilabel:`Layer Properties` dialog for the :guilabel:`places` layer
+   :guilabel:`Layer Properties` dialog for the ``places`` layer
 #. Select the :guilabel:`Placement` option from the options list
 #. Click on the :guilabel:`Offset from point` button
 
@@ -182,8 +182,8 @@ We will now reformat the :guilabel:`roads` layer labels so that they are easy to
 understand.
 
 #. Hide the :guilabel:`places` layer so that it doesn't distract you
-#. Activate |labeling| :guilabel:`Single Labels` for the :guilabel:`roads`
-   layer as you did above for :guilabel:`places`
+#. Activate |labeling| :guilabel:`Single Labels` for the ``roads``
+   layer as you did above for ``places``
 #. Set the font :guilabel:`Size` to ``10`` so that you can see more labels
 #. Zoom in on the |majorUrbanName| town area
 #. In the :guilabel:`Labels` tab's :guilabel:`Placement` tab, choose the
@@ -244,15 +244,15 @@ looks better.
 |hard| |FA| Data Defined Settings
 -------------------------------------------------------------------------------
 
-#. Deactivate labeling for the :guilabel:`roads` layer
-#. Reactivate labeling for the :guilabel:`places` layer
-#. Open the attribute table for :guilabel:`places` via the |openTable| button
+#. Deactivate labeling for the ``roads`` layer
+#. Reactivate labeling for the ``places`` layer
+#. Open the attribute table for ``places`` via the |openTable| button
 
    It has one *field* which is of interest to us now: ``place`` which defines
    the type of urban area for each *record*. We can use this data to influence
    the label styles.
 
-#. Navigate to the :guilabel:`Text` panel in the :guilabel:`places`
+#. Navigate to the :guilabel:`Text` panel in the ``places``
    :guilabel:`Labels` panel
 #. Click the |dataDefined| button next to the Italic text button beneath
    :guilabel:`Style` and select :menuselection:`Edit...` to open the
@@ -269,12 +269,12 @@ looks better.
    Alternatively, you can type: ``"place" = 'town'`` directly in the
    text editor.
 
-#. Click :guilabel:`Ok` twice:
+#. Click :guilabel:`OK` twice:
 
    .. figure:: img/expression_builder_settings.png
       :align: center
 
-Notice that the labels for all :guilabel:`places` whose ``place``
+Notice that the labels for all places whose ``place``
 field matches ``town`` are displayed in italics.
 
 .. figure:: img/italic_label_result.png
@@ -292,7 +292,7 @@ field matches ``town`` are displayed in italics.
    following means. If you don't, feel free to leave out this section and come
    back later when you've covered the requisite materials.
 
-#. Open the Attribute Table for :guilabel:`places`
+#. Open the Attribute Table for ``places``
 #. Enter edit mode by clicking the |toggleEditing| button
 #. Add a new column with the |newAttribute| button
 #. Configure it like this:
