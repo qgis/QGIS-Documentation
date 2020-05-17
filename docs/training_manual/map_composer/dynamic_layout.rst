@@ -287,8 +287,8 @@ will adapt dynamically.
 Congratulations! You created your first dynamic map layout.
 Take a look at the layout and check if everything looks the way you want it!
 The dynamic map layout reacts automatically when you change the :guilabel:`page properties`.
-For example, if you change the page size from DIN A4 to DIN A3, just click the |draw| :sup:`Refresh view` button and
-the page design is adapted.
+For example, if you change the page size from DIN A4 to DIN A3, click the
+|refresh| :sup:`Refresh view` button and the page design is adapted.
 
 .. figure:: img/dynamic_layout.png
    :align: center
@@ -321,10 +321,10 @@ you to practice the techniques you have learned so far.
    :width: 1.5em
 .. |dataDefineExpressionOn| image:: /static/common/mIconDataDefineExpressionOn.png
    :width: 1.5em
-.. |draw| image:: /static/common/mActionDraw.png
-   :width: 1.5em
 .. |moderate| image:: /static/common/moderate.png
 .. |newLayout| image:: /static/common/mActionNewLayout.png
+   :width: 1.5em
+.. |refresh| image:: /static/common/mActionRefresh.png
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em

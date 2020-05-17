@@ -51,7 +51,7 @@ Icon                    Plugin                        Description               
    :width: 1.5em
 .. |dbManager| image:: /static/common/dbmanager.png
    :width: 1.5em
-.. |eventId| image:: /static/common/event_id.png
+.. |eventId| image:: /static/common/eVisEventIdTool.png
    :width: 1.5em
 .. |geometryChecker| image:: /static/common/geometrychecker.png
    :width: 1.5em
