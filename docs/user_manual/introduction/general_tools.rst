@@ -1396,7 +1396,7 @@ Selecting features
 
 QGIS provides several tools to select features on the map canvas. Selection
 tools are available in the :menuselection:`Edit --> Select` menu or in the
-:guilabel:`Attributes toolbar`.
+:guilabel:`Selection Toolbar`.
 
 .. note::
 
@@ -1418,7 +1418,8 @@ tools:
    single click.
 
 .. note:: Use the |selectPolygon| :sup:`Select Features by Polygon` tool
-   to use an existing polygon to select overlapping features.
+   to use an existing polygon feature (from any layer) to select overlapping features
+   in the active layer.
    Right-click in the polygon and choose it from the context menu that shows a
    list of all the polygons that contain the clicked point.
    All the overlapping features from the active layer are selected.

@@ -264,61 +264,61 @@ details).
      - :ref:`sec_attribute_table`
    * - :menuselection:`Select -->`
      -
-     - :guilabel:`Attributes`
+     -
      - :ref:`sec_selection`
    * - :menuselection:`-->`
        |selectRectangle| :guilabel:`Select Feature(s)`
      -
-     - :guilabel:`Attributes`
+     - :guilabel:`Selection`
      - :ref:`sec_selection`
    * - :menuselection:`-->`
        |selectPolygon| :guilabel:`Select Features by Polygon`
      -
-     - :guilabel:`Attributes`
+     - :guilabel:`Selection`
      - :ref:`sec_selection`
    * - :menuselection:`-->`
        |selectFreehand| :guilabel:`Select Features by Freehand`
      -
-     - :guilabel:`Attributes`
+     - :guilabel:`Selection`
      - :ref:`sec_selection`
    * - :menuselection:`-->`
        |selectRadius| :guilabel:`Select Features by Radius`
      -
-     - :guilabel:`Attributes`
+     - :guilabel:`Selection`
      - :ref:`sec_selection`
    * - :menuselection:`-->`
        |formSelect| :guilabel:`Select Features by Value...`
      - :kbd:`F3`
-     - :guilabel:`Attributes`
+     - :guilabel:`Selection`
      - :ref:`sec_selection`
    * - :menuselection:`-->` |expressionSelect|
        :guilabel:`Select Features by Expression...`
      - :kbd:`Ctrl+F3`
-     - :guilabel:`Attributes`
+     - :guilabel:`Selection`
      - :ref:`sec_selection`
    * - :menuselection:`-->`
        |deselectAll| :guilabel:`Deselect Features from All Layers`
      - :kbd:`Ctrl+Alt+A`
-     - :guilabel:`Attributes`
+     - :guilabel:`Selection`
      - :ref:`sec_selection`
    * - :menuselection:`-->`
        |deselectActiveLayer| :guilabel:`Deselect Features from the Current Active Layer`
      - :kbd:`Ctrl+Shift+A`
-     - :guilabel:`Attributes`
+     - :guilabel:`Selection`
      - :ref:`sec_selection`
    * - :menuselection:`--> Reselect Features`
      -
-     - :guilabel:`Attributes`
+     -
      - :ref:`sec_selection`
    * - :menuselection:`-->`
        |selectAll| :guilabel:`Select All Features`
      - :kbd:`Ctrl+A`
-     - :guilabel:`Attributes`
+     - :guilabel:`Selection`
      - :ref:`sec_selection`
    * - :menuselection:`-->`
        |invertSelection| :guilabel:`Invert Feature Selection`
      -
-     - :guilabel:`Attributes`
+     - :guilabel:`Selection`
      - :ref:`sec_selection`
    * - |newTableRow| :guilabel:`Add Record`
      - :kbd:`Ctrl+.`
@@ -913,7 +913,12 @@ actions like:
      -
      -
      - :ref:`shape_edit`
-   * - :menuselection:`--> Snapping Toolbar`
+   * - :menuselection:`--> Selection Toolbar`
+     -
+     -
+     - :ref:`sec_selection`
+   * - :menuselection:`-->`
+       :guilabel:`Snapping Toolbar`
      -
      -
      - :ref:`snapping_tolerance`
