@@ -449,6 +449,7 @@ Parameters
 
        .. figure:: img/buffer_cap_style.png
           :align: center
+          :width: 100%
 
           Round, flat and square cap styles
    * - **Join style**
@@ -483,6 +484,7 @@ Parameters
 
        .. figure:: img/buffer_dissolve.png
           :align: center
+          :width: 100%
 
           Standard and dissolved buffer
    * - **Buffered**
