@@ -277,7 +277,7 @@ That's where rule-based classification comes in handy.
    .. figure:: img/criterion_refined_list.png
       :align: center
 
-#. Apply this symbology.
+#. Apply this symbology
 
 Your map will look something like this:
 
