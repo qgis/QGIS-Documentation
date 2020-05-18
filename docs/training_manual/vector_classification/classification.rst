@@ -6,7 +6,7 @@
 
 Labels are a good way to communicate information such as the names of
 individual places, but they can't be used for everything. For example, let's
-say that someone wants to know what each :guilabel:`landuse` area is used for.
+say that someone wants to know what each ``landuse`` area is used for.
 Using labels, you'd get this:
 
 .. image:: img/bad_landuse_labels.png
@@ -20,11 +20,12 @@ are numerous different landuse areas on the map.
 |basic| |FA| Classifying Nominal Data
 -------------------------------------------------------------------------------
 
-* Open the :guilabel:`Layer Properties` dialog for the :guilabel:`landuse` layer.
-* Go to the :guilabel:`Symbology` tab.
-* Click on the dropdown that says :guilabel:`Single Symbol` and change it to
-  :guilabel:`Categorized`:
+#. Open the :guilabel:`Layer Properties` dialog for the ``landuse`` layer
+#. Go to the :guilabel:`Symbology` tab
+#. Click on the dropdown that says :guilabel:`Single Symbol` and change it to
+   :guilabel:`Categorized`:
 
+<<<<<<< HEAD
 .. image:: img/categorised_styles.png
    :align: center
 
@@ -34,37 +35,55 @@ are numerous different landuse areas on the map.
 
 .. image:: img/categorised_style_settings.png
    :align: center
+=======
+   .. figure:: img/categorised_styles.png
+      :align: center
+>>>>>>> 1ae34fb30... Update text and images in Lesson 4.3 "Classification" (#5524)
 
-* Click :guilabel:`OK`.
+#. In the new panel, change the :guilabel:`Value` to ``landuse``
+   and the :guilabel:`Color ramp` to :guilabel:`Greens`
+#. Click the button labeled :guilabel:`Classify`:
 
-You'll see something like this:
+   .. figure:: img/categorised_style_settings.png
+      :align: center
 
+<<<<<<< HEAD
 .. image:: img/categorisation_result.png
    :align: center
+=======
+#. Click :guilabel:`OK`
+>>>>>>> 1ae34fb30... Update text and images in Lesson 4.3 "Classification" (#5524)
 
-* Click the arrow (or plus sign) next to :guilabel:`landuse` in the
-  :guilabel:`Layer list`, you'll see the categories explained:
+   You'll see something like this:
 
+<<<<<<< HEAD
 .. image:: img/categories_explained.png
    :align: center
+=======
+   .. figure:: img/categorisation_result.png
+      :align: center
+>>>>>>> 1ae34fb30... Update text and images in Lesson 4.3 "Classification" (#5524)
 
-Now our landuse polygons are appropriately colored and are classified so that
-areas with the same land use are the same color. You may wish to remove the
-black border from the :guilabel:`landuse` layer:
+#. Click the arrow (or plus sign) next to ``landuse`` in the
+   :guilabel:`Layer list`, you'll see the categories explained:
 
-* Open :guilabel:`Layer Properties`, go to the :guilabel:`Symbology` tab and select
-  :guilabel:`Symbol`.
-* Change the symbol by removing the border from the :guilabel:`Simple Fill`
-  layer and click :guilabel:`OK`.
+   .. figure:: img/categories_explained.png
+      :align: center
 
-You'll see that the landuse polygon outlines have been removed, leaving just our new
-fill colours for each categorisation.
+   Now our landuse polygons are appropriately colored and are classified so that
+   areas with the same land use are the same color.
 
-* If you wish to, you can change the fill color for each landuse area by
-  double-clicking the relevant color block:
+#. If you wish to, you can change the fill color for each landuse area by
+   double-clicking the relevant color block in the :guilabel:`Layers` panel
+   or in the :guilabel:`Layer Properties` dialog:
 
+<<<<<<< HEAD
 .. image:: img/change_layer_color.png
    :align: center
+=======
+   .. figure:: img/change_layer_color.png
+      :align: center
+>>>>>>> 1ae34fb30... Update text and images in Lesson 4.3 "Classification" (#5524)
 
 Notice that there is one category that's empty:
 
@@ -83,8 +102,8 @@ changes!
 -------------------------------------------------------------------------------
 
 If you're only following the basic-level content, use the knowledge you gained
-above to classify the :guilabel:`buildings` layer. Set the categorisation against
-the :guilabel:`building` column and use the :guilabel:`Spectral` color ramp.
+above to classify the ``buildings`` layer. Set the categorisation against
+the ``building`` field and use the :guilabel:`Spectral` color ramp.
 
 .. note:: Remember to zoom into an urban area to see the results.
 
@@ -110,22 +129,20 @@ values. For example: temperature above absolute zero (0 degrees Kelvin),
 distance from a point, the average amount of traffic on a given street per
 month, etc.
 
-In the example above, we used nominal classification to assign each farm to the
-town that it is administered by. Now we will use ratio classification to
-classify the farms by area.
-
-* Save your landuse symbology (if you want to keep it) by clicking on the
-  :guilabel:`Save Style ...` button in the :guilabel:`Style` drop-down menu.
+In the example above, we used nominal classification to color each record
+in the ``landuse`` layer based on its ``landuse`` attribute. Now we will use
+ratio classification to classify the records by area.
 
 We're going to reclassify the layer, so existing classes will be lost if not
 saved.
 
-* Close the :guilabel:`Layer Properties` dialog.
-* Open the Attributes Table for the :guilabel:`landuse` layer.
+#. Save your landuse symbology (if you want to keep it) by clicking on the
+   :guilabel:`Save Style ...` button in the :guilabel:`Style` drop-down menu
 
-We want to classify the landuse areas by size, but there's a problem: they don't
-have a size field, so we'll have to make one.
+#. Close the :guilabel:`Layer Properties` dialog
+#. Open the Attributes Table for the ``landuse`` layer
 
+<<<<<<< HEAD
 * Enter edit mode by clicking this button:
 
 .. image:: /static/common/edit.png
@@ -136,90 +153,151 @@ have a size field, so we'll have to make one.
 
 .. image:: img/add_column_button.png
    :align: center
+=======
+   We want to classify the landuse areas by size, but there's a problem: they
+   don't have a size field, so we'll have to make one.
 
-* Set up the dialog that appears, like this:
+#. Enter edit mode by clicking the |toggleEditing| button
+>>>>>>> 1ae34fb30... Update text and images in Lesson 4.3 "Classification" (#5524)
 
+#. Add a new column with the |newAttribute| button
+
+<<<<<<< HEAD
 .. image:: img/add_area_column.png
    :align: center
+=======
+#. Set up the dialog that appears like this:
+>>>>>>> 1ae34fb30... Update text and images in Lesson 4.3 "Classification" (#5524)
 
-* Click :guilabel:`OK`.
+   .. figure:: img/add_area_column.png
+      :align: center
 
-The new field will be added (at the far right of the table; you may need to
-scroll horizontally to see it). However, at the moment it is not populated, it
-just has a lot of :kbd:`NULL` values.
+#. Click :guilabel:`OK`
 
-To solve this problem, we'll need to calculate the areas.
+   The new field will be added (at the far right of the table; you may need to
+   scroll horizontally to see it). However, at the moment it is not populated,
+   it just has a lot of *NULL* values.
 
+<<<<<<< HEAD
 * Open the field calculator:
 
 .. image:: /static/common/mActionCalculateField.png
    :width: 1.5em
    :align: center
+=======
+   To solve this problem, we'll need to calculate the areas.
+>>>>>>> 1ae34fb30... Update text and images in Lesson 4.3 "Classification" (#5524)
 
-You'll get this dialog:
+#. Open the field calculator with the |calculateField| button
 
+<<<<<<< HEAD
 .. image:: img/calculate_field_dialog.png
    :align: center
+=======
+   You'll get this dialog:
+>>>>>>> 1ae34fb30... Update text and images in Lesson 4.3 "Classification" (#5524)
 
-* Change the values at the top of the dialog to look like this:
+   .. figure:: img/calculate_field_dialog.png
+      :align: center
 
+<<<<<<< HEAD
 .. image:: img/field_calculator_top.png
    :align: center
+=======
+#. Change the values at the top of the dialog to look like this:
+>>>>>>> 1ae34fb30... Update text and images in Lesson 4.3 "Classification" (#5524)
 
-* In the :guilabel:`Function List`, select :menuselection:`Geometry --> $area`:
+   .. figure:: img/field_calculator_top.png
+      :align: center
 
+<<<<<<< HEAD
 .. image:: img/geometry_area_select.png
    :align: center
+=======
+#. In the :guilabel:`Function List` select :menuselection:`Geometry --> $area`:
+>>>>>>> 1ae34fb30... Update text and images in Lesson 4.3 "Classification" (#5524)
 
-* Double-click on it so that it appears in the :guilabel:`Expression` field.
-* Click :guilabel:`OK`.
+   .. figure:: img/geometry_area_select.png
+      :align: center
 
-Now your :kbd:`AREA` field is populated with values (you may need to click the
-column header to refresh the data). Save the edits and click :guilabel:`Ok`.
+#. Double-click on it so that it appears in the :guilabel:`Expression` field
+#. Click :guilabel:`OK`
 
-.. note::  These areas are in degrees. Later, we will compute them in
-   square meters.
+   Now your ``AREA`` field is populated with values (you may need to click the
+   column header to refresh the data). Save the edits and close the
+   Attribute Table.
 
-* Open the :guilabel:`Layer properties` dialog's :guilabel:`Symbology` tab.
-* Change the classification style from :guilabel:`Categorized` to
-  :guilabel:`Graduated`.
+   .. note::  These areas respect the project's area unit settings, so they
+      may be in square meters or square degrees.
 
-* Change the :guilabel:`Column` to :guilabel:`AREA`:
+#. Open the :guilabel:`Layer properties` dialog's :guilabel:`Symbology` tab
+   for the ``landuse`` layer
+#. Change the classification style from :guilabel:`Categorized` to
+   :guilabel:`Graduated`
 
-* Under :guilabel:`Color ramp`, choose the option :guilabel:`New color ramp...`
-  to get this dialog:
+#. Change the :guilabel:`Value` to ``AREA``
 
+<<<<<<< HEAD
 .. image:: img/area_gradient_select.png
    :align: center
+=======
+#. Under :guilabel:`Color ramp`, choose the option
+   :guilabel:`Create New Color Ramp...`:
+>>>>>>> 1ae34fb30... Update text and images in Lesson 4.3 "Classification" (#5524)
 
-* Choose :guilabel:`Gradient` (if it's not selected already) and click
-  :guilabel:`OK`. You'll see this:
+   .. figure:: img/area_gradient_select.png
+      :align: center
 
+<<<<<<< HEAD
 .. image:: img/gradient_color_select.png
    :align: center
+=======
+#. Choose :guilabel:`Gradient` (if it's not selected already) and click
+   :guilabel:`OK`. You'll see this:
+>>>>>>> 1ae34fb30... Update text and images in Lesson 4.3 "Classification" (#5524)
 
-You'll be using this to denote area, with small areas as :guilabel:`Color 1`
-and large areas as :guilabel:`Color 2`.
+   .. figure:: img/gradient_color_select.png
+      :align: center
 
-* Choose appropriate colors.
+   You'll be using this to denote area, with small areas as
+   :guilabel:`Color 1` and large areas as :guilabel:`Color 2`.
 
-In the example, the result looks like this:
+#. Choose appropriate colors
 
+<<<<<<< HEAD
 .. image:: img/gradient_color_example.png
    :align: center
 
 * Click :guilabel:`OK`.
 * Choose a suitable name for the new color ramp.
 * Click :guilabel:`OK` after filling in the name.
+=======
+   In the example, the result looks like this:
 
-Now you'll have something like this:
+   .. figure:: img/gradient_color_example.png
+      :align: center
+>>>>>>> 1ae34fb30... Update text and images in Lesson 4.3 "Classification" (#5524)
 
+#. Click :guilabel:`OK`
+#. You can save the colour ramp by selecting :guilabel:`Save Color Ramp...`
+   under the :guilabel:`Color ramp` tab. Choose an appropriate name for the
+   colour ramp and click :guilabel:`Save`. You will now be able to select
+   the same colour ramp easily under :guilabel:`All Color Ramps`.
+#. Click :guilabel:`Classify`
+
+<<<<<<< HEAD
 .. image:: img/landuse_gradient_selected.png
    :align: center
+=======
+   Now you'll have something like this:
 
-Leave everything else as-is.
+   .. figure:: img/landuse_gradient_selected.png
+      :align: center
+>>>>>>> 1ae34fb30... Update text and images in Lesson 4.3 "Classification" (#5524)
 
-* Click :guilabel:`Ok`:
+   Leave everything else as-is.
+
+#. Click :guilabel:`OK`:
 
 .. image:: img/gradient_result_map.png
    :align: center
@@ -230,7 +308,6 @@ Leave everything else as-is.
 |moderate| |TY| Refine the Classification
 -------------------------------------------------------------------------------
 
-* Get rid of the lines between the classes.
 * Change the values of :guilabel:`Mode` and :guilabel:`Classes` until you get a
   classification that makes sense.
 
@@ -243,10 +320,11 @@ It's often useful to combine multiple criteria for a classification, but
 unfortunately normal classification only takes one attribute into account.
 That's where rule-based classification comes in handy.
 
-* Open the :guilabel:`Layer Properties` dialog for the :guilabel:`landuse` layer.
-* Switch to the :guilabel:`Symbology` tab.
-* Switch the classification style to :guilabel:`Rule-based`. You'll get this:
+#. Open the :guilabel:`Layer Properties` dialog for the ``landuse`` layer
+#. Switch to the :guilabel:`Symbology` tab
+#. Switch the classification style to :guilabel:`Rule-based`
 
+<<<<<<< HEAD
 .. image:: img/rule_based_classification.png
    :align: center
 
@@ -264,36 +342,77 @@ That's where rule-based classification comes in handy.
 
 .. image:: img/rule_style_result.png
    :align: center
+=======
+   QGIS will automatically show the rules that represent the current
+   classification implemented for this layer. For example, after completing
+   the exercise above, you may see something like this:
 
-* Add a new criterion :kbd:`"landuse" <> 'residential' AND "AREA" >= 0.00005`
-  and choose a mid-green color.
-* Add another new criterion :kbd:`"name"  =  'Swellendam'` and assign it
-  a darker grey-blue color in order to indicate the town's importance in the
-  region.
-* Click and drag this criterion to the top of the list.
+   .. figure:: img/rule_based_classification.png
+      :align: center
 
+#. Use the |signMinus| :sup:`Remove selected rules` button to
+   remove all of the existing rules
+#. Click the |signPlus| :sup:`Add rule` button
+#. A new dialog then appears
+#. Click the |expression| button next to the :guilabel:`Filter` text area
+   to open the :guilabel:`Expression String Builder`
+#. Enter the criterion
+   ``"landuse" = 'residential' AND "name" <> 'Swellendam'`` (or
+   ``"landuse" = 'residential' AND "name" != 'Swellendam'``):
+
+   .. figure:: img/query_builder_example.png
+      :align: center
+>>>>>>> 1ae34fb30... Update text and images in Lesson 4.3 "Classification" (#5524)
+
+#. Click :guilabel:`OK`
+#. Choose a pale blue-grey :guilabel:`Fill color` and remove the border:
+
+<<<<<<< HEAD
 These filters are exclusive, in that they collectively exclude some areas on the
 map (i.e. those which are smaller that 0.00005, are not residential and are not
 '|majorUrbanName|'). This means that the excluded polygons take the style of the
 default :guilabel:`(no filter)` category.
+=======
+   .. figure:: img/rule_style_result.png
+      :align: center
+>>>>>>> 1ae34fb30... Update text and images in Lesson 4.3 "Classification" (#5524)
 
-We know that the excluded polygons on our map cannot be residential areas, so
-give the default category a suitable pale green color.
+#. Click :guilabel:`OK`
+#. Add a new rule ``"landuse" <> 'residential' AND "AREA" >= 605000``
+   and choose a mid-green color
+#. Add another new rule ``"name" = 'Swellendam'`` and assign it
+   a darker grey-blue color in order to indicate the town's importance in the
+   region
+#. Click and drag this criterion to the top of the list
 
-Your dialog should now look like this:
+   These filters are exclusive, in that they collectively exclude some areas
+   on the map (i.e. those which are smaller than 605000 (square meters),
+   are not residential, and are not '|majorUrbanName|'). This means that the
+   excluded polygons take the style of the default :guilabel:`(no filter)`
+   category.
 
+<<<<<<< HEAD
 .. image:: img/criterion_refined_list.png
    :align: center
+=======
+   We know that the excluded polygons on our map cannot be residential areas,
+   so give the default category a suitable pale green color.
+>>>>>>> 1ae34fb30... Update text and images in Lesson 4.3 "Classification" (#5524)
 
-* Apply this symbology.
+   Your dialog should now look like this:
+
+   .. figure:: img/criterion_refined_list.png
+      :align: center
+
+#. Apply this symbology
 
 Your map will look something like this:
 
 .. image:: img/rule_based_map_result.png
    :align: center
 
-Now you have a map with |majorUrbanName| the most prominent residential area and other
-non-residential areas colored according to their size.
+Now you have a map with |majorUrbanName| the most prominent residential area
+and other non-residential areas colored according to their size.
 
 |IC|
 -------------------------------------------------------------------------------
@@ -326,6 +445,14 @@ of the next lesson!
 .. |basic| image:: /static/global/basic.png
 .. |hard| image:: /static/global/hard.png
 .. |majorUrbanName| replace:: Swellendam
+<<<<<<< HEAD
 .. |moderate| image:: /static/global/moderate.png
+=======
+.. |moderate| image:: /static/common/moderate.png
+.. |newAttribute| image:: /static/common/mActionNewAttribute.png
+   :width: 1.5em
+.. |signMinus| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+>>>>>>> 1ae34fb30... Update text and images in Lesson 4.3 "Classification" (#5524)
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em

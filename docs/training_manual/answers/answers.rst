@@ -330,14 +330,17 @@ To arrive at this result:
 |moderate| *Refine the Classification*
 ...............................................................................
 
+<<<<<<< HEAD
 * Use the same method as in the first exercise of the lesson to get rid of the
   borders:
 
   .. image:: img/gradient_map_no_pen.png
      :align: center
 
+=======
+>>>>>>> 1ae34fb30... Update text and images in Lesson 4.3 "Classification" (#5524)
 The settings you used might not be the same, but with the values
-:guilabel:`Classes` = :kbd:`6` and :guilabel:`Mode` = :guilabel:`Natural Breaks
+:guilabel:`Classes` = ``6`` and :guilabel:`Mode` = :guilabel:`Natural Breaks
 (Jenks)` (and using the same colors, of course), the map will look like this:
 
 .. image:: img/gradient_map_new_mode.png
