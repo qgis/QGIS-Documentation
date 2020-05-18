@@ -233,7 +233,24 @@ figure_create_temporary_. Then:
    * ``Point`` or ``MultiPoint`` layer,
    * ``LineString/CompoundCurve`` or ``MultiLineString/MultiCurve`` layer,
    * ``Polygon/CurvePolygon`` or ``MultiPolygon/MultiSurface`` layer.
+#. If of a geometric type, specify the dimensions of the dataset: check whether
+   it should :guilabel:`Include Z dimension` and/or :guilabel:`Include M values`
 #. Specify the coordinate reference system using the |setProjection| button.
+#. Add fields to the layer. Note that unlike many formats, temporary
+   layers can be created without any fields. This step is thus optional.
+
+   #. Enter the :guilabel:`Name` of the field
+   #. Select the data :guilabel:`Type`: :guilabel:`Text`, :guilabel:`Whole number`,
+      :guilabel:`Decimal number`, :guilabel:`Boolean`, :guilabel:`Date`,
+      :guilabel:`Time` and :guilabel:`Date & Time` are supported.
+   #. Depending on the selected data format, enter the :guilabel:`Length` and
+      :guilabel:`Precision`
+   #. Click on the |newAttribute| :guilabel:`Add to Fields List` button
+   #. Reproduce the steps above for each field you need to add
+#. Once you are happy with the settings, click :guilabel:`OK`.
+   QGIS will add the new layer to the :guilabel:`Layers` panel, and you can edit
+   it as described in section :ref:`sec_edit_existing_layer`.
+
 
 .. _figure_create_temporary:
 
@@ -242,17 +259,14 @@ figure_create_temporary_. Then:
 
    Creating a new Temporary Scratch layer dialog
 
-By default, a new temporary scratch layer is created without any attributes. You
-can later add them using the |newAttribute| :sup:`New Field` button in the
-layer's attribute table dialog or the :guilabel:`Fields` tab of its
-properties dialog.
+
 You can also create prepopulated temporary scratch layers using e.g. the
 clipboard (see :ref:`paste_into_layer`) or as a result of a :ref:`Processing
 algorithm <processing_algs>`.
 
 .. tip:: **Permanently store a memory layer on disk**
 
-  To avoid data loss when closing  a project with temporary scratch layers,
+  To avoid data loss when closing a project with temporary scratch layers,
   you can save these layers to any vector format supported by QGIS:
 
   * clicking the |indicatorMemory| indicator icon next to the layer;
