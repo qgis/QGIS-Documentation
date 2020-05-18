@@ -13,10 +13,7 @@ WMS.
 
 * Start a new map. This is for demo purposes and won't be saved.
 * Ensure that "on the fly" re-projection is switched off.
-* Click the :guilabel:`Add WFS Layer` button:
-
-  |wfs|
-
+* Click the |addWfsLayer| :guilabel:`Add WFS Layer` button:
 * Click the :guilabel:`New` button.
 * In the dialog that appears, enter the :guilabel:`Name` as ``nsidc.org``
   and the :guilabel:`URL` as
@@ -164,7 +161,7 @@ Next, you'll see how to use QGIS Server to provide OGC services.
 .. |IC| replace:: In Conclusion
 .. |LS| replace:: Lesson:
 .. |WN| replace:: What's Next?
+.. |addWfsLayer| image:: /static/common/mActionAddWfsLayer.png
+   :width: 1.5em
 .. |basic| image:: /static/common/basic.png
 .. |moderate| image:: /static/common/moderate.png
-.. |wfs| image:: /static/common/mActionAddWfsLayer.png
-   :width: 1.5em

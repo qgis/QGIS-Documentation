@@ -488,9 +488,9 @@ data by themselves and can be seen as views.
 
 To create a virtual layer, open the virtual layer creation dialog by:
 
-* choosing the |virtualLayer| :guilabel:`Add/Edit Virtual Layer` entry
+* choosing the |addVirtualLayer| :guilabel:`Add/Edit Virtual Layer` entry
   in the :menuselection:`Layer --> Add Layer -->` menu;
-* enabling the |virtualLayer| :guilabel:`Add Virtual Layer` tab in the
+* enabling the |addVirtualLayer| :guilabel:`Add Virtual Layer` tab in the
   :guilabel:`Data Source Manager` dialog;
 * or using the :guilabel:`DB Manager` dialog tree.
 
@@ -667,6 +667,8 @@ when used in conjunction with this spatial index syntax.
 
 .. |addPart| image:: /static/common/mActionAddPart.png
    :width: 1.5em
+.. |addVirtualLayer| image:: /static/common/mActionAddVirtualLayer.png
+   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |createGPX| image:: /static/common/create_gpx.png
@@ -689,5 +691,3 @@ when used in conjunction with this spatial index syntax.
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
-.. |virtualLayer| image:: /static/common/mActionAddVirtualLayer.png
-   :width: 1.5em

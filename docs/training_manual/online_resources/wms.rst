@@ -36,7 +36,7 @@ symbology:
    This may cause the layers to no longer overlap properly, but
    don't worry: we'll fix that later.
 #. To add WMS layers, click on the |dataSourceManager| button to open the
-   :guilabel:`Data Source Manager` dialog and enable the |wms|
+   :guilabel:`Data Source Manager` dialog and enable the |addWmsLayer|
    :guilabel:`WMS/WMTS` tab.
 
    .. figure:: img/datasourcemanager_wms.png
@@ -169,7 +169,7 @@ layer from the :guilabel:`terrestris` WMS server.
 #. Add the "ZAF CGS 1M Bedrock Lithostratigraphy" WMS server at this URL:
    ``http://196.33.85.22/cgi-bin/ZAF_CGS_Bedrock_Geology/wms``
 #. Load the :guilabel:`BEDROCKGEOLOGY` layer into the map (you can also use the
-   :menuselection:`Layer --> Add Layer -->` |wms| :menuselection:`Add Layer
+   :menuselection:`Layer --> Add Layer -->` |addWmsLayer| :menuselection:`Add
    WMS/WMTS Layer...` button to open the Data Source Manager dialog).
    Remember to check that it's in the same
    :guilabel:`WGS 84 / World Mercator` projection as the rest of your map!
@@ -246,11 +246,11 @@ Feature Service (WFS). That's the topic of the next lesson.
 .. |LS| replace:: Lesson:
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
+.. |addWmsLayer| image:: /static/common/mActionAddWmsLayer.png
+   :width: 1.5em
 .. |basic| image:: /static/common/basic.png
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
    :width: 1.5em
 .. |hard| image:: /static/common/hard.png
 .. |majorUrbanName| replace:: Swellendam
 .. |moderate| image:: /static/common/moderate.png
-.. |wms| image:: /static/common/mActionAddWmsLayer.png
-   :width: 1.5em

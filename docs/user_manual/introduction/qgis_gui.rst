@@ -1001,7 +1001,7 @@ copy or paste layer properties (style, scale, CRS...).
      -
      - :guilabel:`Data Source Manager`
      - :ref:`sec_create_vector`
-   * - :menuselection:`-->` |virtualLayer|
+   * - :menuselection:`-->` |newVirtualLayer|
        :guilabel:`New Virtual Layer...`
      -
      - :guilabel:`Data Source Manager`
@@ -1050,12 +1050,12 @@ copy or paste layer properties (style, scale, CRS...).
      - :kbd:`Ctrl+Shift+2`
      - :guilabel:`Manage Layers`
      - :ref:`opening_data`
-   * - :menuselection:`-->` |virtualLayer|
+   * - :menuselection:`-->` |addVirtualLayer|
        :guilabel:`Add/Edit Virtual Layer...`
      -
      - :guilabel:`Manage Layers`
      - :ref:`opening_data`
-   * - :menuselection:`-->` |wms|
+   * - :menuselection:`-->` |addWmsLayer|
        :guilabel:`Add WMS/WMTS Layer...`
      - :kbd:`Ctrl+Shift+W`
      - :guilabel:`Manage Layers`
@@ -1065,12 +1065,12 @@ copy or paste layer properties (style, scale, CRS...).
      -
      - :guilabel:`Manage Layers`
      - :ref:`opening_data`
-   * - :menuselection:`-->` |wcs|
+   * - :menuselection:`-->` |addWcsLayer|
        :guilabel:`Add WCS Layer...`
      -
      - :guilabel:`Manage Layers`
      - :ref:`opening_data`
-   * - :menuselection:`-->` |wfs|
+   * - :menuselection:`-->` |addWfsLayer|
        :guilabel:`Add WFS Layer...`
      -
      - :guilabel:`Manage Layers`
@@ -2626,6 +2626,14 @@ Click the icon to open the Plugin Manager dialog.
    :width: 2em
 .. |addSpatiaLiteLayer| image:: /static/common/mActionAddSpatiaLiteLayer.png
    :width: 1.5em
+.. |addVirtualLayer| image:: /static/common/mActionAddVirtualLayer.png
+   :width: 1.5em
+.. |addWcsLayer| image:: /static/common/mActionAddWcsLayer.png
+   :width: 1.5em
+.. |addWfsLayer| image:: /static/common/mActionAddWfsLayer.png
+   :width: 1.5em
+.. |addWmsLayer| image:: /static/common/mActionAddWmsLayer.png
+   :width: 1.5em
 .. |allEdits| image:: /static/common/mActionAllEdits.png
    :width: 1.5em
 .. |capturePoint| image:: /static/common/mActionCapturePoint.png
@@ -2791,6 +2799,8 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |newVectorLayer| image:: /static/common/mActionNewVectorLayer.png
    :width: 1.5em
+.. |newVirtualLayer| image:: /static/common/mActionNewVirtualLayer.png
+   :width: 1.5em
 .. |northArrow| image:: /static/common/north_arrow.png
    :width: 1.5em
 .. |offlineEditingCopy| image:: /static/common/offline_editing_copy.png
@@ -2938,14 +2948,6 @@ Click the icon to open the Plugin Manager dialog.
 .. |vertexTool| image:: /static/common/mActionVertexTool.png
    :width: 1.5em
 .. |vertexToolActiveLayer| image:: /static/common/mActionVertexToolActiveLayer.png
-   :width: 1.5em
-.. |virtualLayer| image:: /static/common/mActionAddVirtualLayer.png
-   :width: 1.5em
-.. |wcs| image:: /static/common/mActionAddWcsLayer.png
-   :width: 1.5em
-.. |wfs| image:: /static/common/mActionAddWfsLayer.png
-   :width: 1.5em
-.. |wms| image:: /static/common/mActionAddWmsLayer.png
    :width: 1.5em
 .. |zoomActual| image:: /static/common/mActionZoomActual.png
    :width: 1.5em
