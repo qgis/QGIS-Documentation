@@ -251,7 +251,7 @@ details).
      - :guilabel:`Digitizing`
      - :ref:`clipboard_feature`
    * - :menuselection:`Paste Features as -->`
-     - :kbd:`Ctrl+Alt+V`
+     -
      -
      - :ref:`sec_attribute_table`
    * - :menuselection:`--> New Vector Layer...`
@@ -259,7 +259,7 @@ details).
      -
      - :ref:`sec_attribute_table`
    * - :menuselection:`--> Temporary Scratch Layer...`
-     -
+     - :kbd:`Ctrl+Alt+V`
      -
      - :ref:`sec_attribute_table`
    * - :menuselection:`Select -->`
