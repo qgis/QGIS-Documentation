@@ -979,7 +979,7 @@ copy or paste layer properties (style, scale, CRS...).
      - :ref:`Opening Data <datasourcemanager>`
    * - :menuselection:`Create Layer -->`
      -
-     - :guilabel:`Data Source Manager`
+     -
      - :ref:`sec_create_vector`
    * - :menuselection:`-->` |newGeoPackageLayer|
        :guilabel:`New GeoPackage Layer...`
@@ -1008,77 +1008,77 @@ copy or paste layer properties (style, scale, CRS...).
      - :ref:`sec_create_vector`
    * - :menuselection:`Add Layer -->`
      -
-     - :guilabel:`Data Source Manager`
+     -
      - :ref:`opening_data`
    * - :menuselection:`-->` |addOgrLayer|
        :guilabel:`Add Vector Layer......`
      - :kbd:`Ctrl+Shift+V`
-     - :guilabel:`Data Source Manager`
+     - :guilabel:`Manage Layers`
      - :ref:`opening_data`
    * - :menuselection:`-->` |addRasterLayer|
        :guilabel:`Add Raster Layer...`
      - :kbd:`Ctrl+Shift+R`
-     - :guilabel:`Data Source Manager`
+     - :guilabel:`Manage Layers`
      - :ref:`opening_data`
    * - :menuselection:`-->` |addMeshLayer|
        :guilabel:`Add Mesh Layer...`
      -
-     - :guilabel:`Data Source Manager`
+     - :guilabel:`Manage Layers`
      - :ref:`opening_data`
    * - :menuselection:`-->` |addDelimitedTextLayer|
        :guilabel:`Add Delimited Text Layer...`
      - :kbd:`Ctrl+Shift+T`
-     - :guilabel:`Data Source Manager`
+     - :guilabel:`Manage Layers`
      - :ref:`opening_data`
    * - :menuselection:`-->` |addPostgisLayer|
        :guilabel:`Add PostGIS Layer...`
      - :kbd:`Ctrl+Shift+D`
-     - :guilabel:`Data Source Manager`
+     - :guilabel:`Manage Layers`
      - :ref:`opening_data`
    * - :menuselection:`-->` |addSpatiaLiteLayer|
        :guilabel:`Add SpatiaLite Layer...`
      - :kbd:`Ctrl+Shift+L`
-     - :guilabel:`Data Source Manager`
+     - :guilabel:`Manage Layers`
      - :ref:`opening_data`
    * - :menuselection:`-->` |addMssqlLayer|
        :guilabel:`Add MSSQL Spatial Layer...`
      -
-     - :guilabel:`Data Source Manager`
+     - :guilabel:`Manage Layers`
      - :ref:`opening_data`
    * - :menuselection:`-->` |addDb2Layer|
        :guilabel:`Add DB2 Spatial Layer...`
      - :kbd:`Ctrl+Shift+2`
-     - :guilabel:`Data Source Manager`
+     - :guilabel:`Manage Layers`
      - :ref:`opening_data`
    * - :menuselection:`-->` |virtualLayer|
        :guilabel:`Add/Edit Virtual Layer...`
      -
-     - :guilabel:`Data Source Manager`
+     - :guilabel:`Manage Layers`
      - :ref:`opening_data`
    * - :menuselection:`-->` |wms|
        :guilabel:`Add WMS/WMTS Layer...`
      - :kbd:`Ctrl+Shift+W`
-     - :guilabel:`Data Source Manager`
+     - :guilabel:`Manage Layers`
      - :ref:`opening_data`
    * - :menuselection:`-->` |addAmsLayer|
        :guilabel:`Add ArcGIS MapServer Layer...`
      -
-     - :guilabel:`Data Source Manager`
+     - :guilabel:`Manage Layers`
      - :ref:`opening_data`
    * - :menuselection:`-->` |wcs|
        :guilabel:`Add WCS Layer...`
      -
-     - :guilabel:`Data Source Manager`
+     - :guilabel:`Manage Layers`
      - :ref:`opening_data`
    * - :menuselection:`-->` |wfs|
        :guilabel:`Add WFS Layer...`
      -
-     - :guilabel:`Data Source Manager`
+     - :guilabel:`Manage Layers`
      - :ref:`opening_data`
    * - :menuselection:`-->` |addAfsLayer|
        :guilabel:`Add ArcGIS FeatureServer Layer...`
      -
-     - :guilabel:`Data Source Manager`
+     - :guilabel:`Manage Layers`
      - :ref:`opening_data`
    * - :guilabel:`Embed Layers and Groups...`
      -
