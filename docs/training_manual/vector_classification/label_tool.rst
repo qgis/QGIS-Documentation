@@ -378,6 +378,6 @@ topic for the next lesson!
 .. |showPinnedLabels| image:: /static/common/mActionShowPinnedLabels.png
    :width: 1.5em
 .. |showUnplacedLabel| image:: /static/common/mActionShowUnplacedLabel.png
-   :width: 1.5em   
+   :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
