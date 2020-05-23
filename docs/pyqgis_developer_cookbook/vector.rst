@@ -561,6 +561,22 @@ For deletion of fields just provide a list of field indexes.
 
  if caps & QgsVectorDataProvider.DeleteAttributes:
      res = layer.dataProvider().deleteAttributes([0])
+     
+.. testcode:: vectors
+
+ # Alternate methods for removing fields 
+ # first create temporary fields to be removed (f1-3)
+ layer.dataProvider().addAttributes([QgsField("f1",QVariant.Int),QgsField("f2",QVariant.Int),QgsField("f3",QVariant.Int)])
+ layer.updateFields()
+ count=layer.fields().count() # count of layer fields
+ ind_list=list((count-3, count-2)) # create list
+ 
+ # remove a single field with an index
+ layer.dataProvider().deleteAttributes([count-1])
+
+ # remove multiple fields with a list of indices
+ layer.dataProvider().deleteAttributes(ind_list)
+
 
 After adding or removing fields in the data provider the layer's fields need
 to be updated because the changes are not automatically propagated.
