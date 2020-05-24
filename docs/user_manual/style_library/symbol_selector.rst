@@ -202,7 +202,9 @@ Appropriate for point geometry features, marker symbols have several
   as marker symbol. The image can be a file on the disk, a remote URL
   or embedded in the style database (:ref:`more details <svg_paths>`).
   Width and height of the image can be set independently or using the
-  |lockedGray| :sup:`Lock aspect ratio`.
+  |lockedGray| :sup:`Lock aspect ratio`. The size can be set using any of the
+  :ref:`common units <unit_selector>` or as a percentage of the image's original
+  size (scaled by the width).
 * **Vector Field marker** (see :ref:`vector_field_marker`)
 
 .. _svg_marker:
@@ -375,7 +377,8 @@ symbol layer types:
   :file:`JPG`, :file:`BMP` ...). The image can be a file on the disk, a remote URL
   or an embedded file encoded as a string (:ref:`more details <svg_paths>`).
   Options include (data defined) opacity, image width, coordinate mode (object
-  or viewport), rotation and offset.
+  or viewport), rotation and offset. The image width can be set using any of the
+  :ref:`common units <unit_selector>` or as a percentage of the original size.
 * **SVG fill**: fills the polygon using :ref:`SVG markers <svg_marker>`;
 * **Shapeburst fill**: buffers a gradient fill, where a gradient
   is drawn from the boundary of a polygon towards the polygon's centre.
