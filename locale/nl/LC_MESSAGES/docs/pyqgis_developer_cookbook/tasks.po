@@ -1,20 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGISDoc package.
+# This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Richard Duivenvoorde <richard@duif.net>, 2020
 # Dick Groskamp, 2020
+# Richard Duivenvoorde <richard@duif.net>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGISDoc 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:24+0000\n"
-"Last-Translator: Dick Groskamp, 2020\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
 "Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,15 +22,23 @@ msgstr ""
 "Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../docs/pyqgis_developer_cookbook/tasks.rst:7
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:11
+msgid ""
+"The code snippets on this page need the following imports if you're outside "
+"the pyqgis console:"
+msgstr ""
+"De codesnippers op deze pagina hebben de volgende import nodig als u buiten "
+"de console van PyQGIS bent:"
+
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:30
 msgid "Tasks - doing heavy work in the background"
 msgstr "Taken - veel werk op de achtergrond doen"
 
-#: ../../docs/pyqgis_developer_cookbook/tasks.rst:10
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:33
 msgid "Introduction"
 msgstr "Introductie"
 
-#: ../../docs/pyqgis_developer_cookbook/tasks.rst:12
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:35
 msgid ""
 "Background processing using threads is a way to maintain a responsive user "
 "interface when heavy processing is going on. Tasks can be used to achieve "
@@ -40,7 +48,7 @@ msgstr ""
 "reagerende gebruikersinterface te behouden wanneer veel verwerking wordt "
 "uitgevoerd. Taken kunnen worden gebruikt om threading te gebruiken in QGIS."
 
-#: ../../docs/pyqgis_developer_cookbook/tasks.rst:16
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:39
 msgid ""
 "A task (:class:`QgsTask <qgis.core.QgsTask>`) is a container for the code to"
 " be performed in the background, and the task manager "
@@ -57,7 +65,7 @@ msgstr ""
 "voortgang rapporteren en toegang tot de status voor processen op de "
 "achtergrond. Taken kunnen worden gegroepeerd met behulp van subtaken."
 
-#: ../../docs/pyqgis_developer_cookbook/tasks.rst:24
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:47
 msgid ""
 "The global task manager (found with :meth:`QgsApplication.taskManager() "
 "<qgis.core.QgsApplication.taskManager>`) is normally used. This means that "
@@ -69,24 +77,24 @@ msgstr ""
 "<qgis.core.QgsApplication.taskManager>`). Dit betekent dat uw taken niet de "
 "enige taken zijn die worden beheerd door de taakbeheerder."
 
-#: ../../docs/pyqgis_developer_cookbook/tasks.rst:28
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:51
 msgid "There are several ways to create a QGIS task:"
 msgstr "Er zijn verschillende manieren om een taak voor QGIS te maken:"
 
-#: ../../docs/pyqgis_developer_cookbook/tasks.rst:30
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:53
 msgid "Create your own task by extending :class:`QgsTask <qgis.core.QgsTask>`"
 msgstr ""
 "Maak uw eigen taak door :class:`QgsTask <qgis.core.QgsTask>` uit te breiden"
 
-#: ../../docs/pyqgis_developer_cookbook/tasks.rst:36
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:60
 msgid "Create a task from a function"
 msgstr "Maak een taak uit een functie."
 
-#: ../../docs/pyqgis_developer_cookbook/tasks.rst:43
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:75
 msgid "Create a task from a processing algorithm"
 msgstr "Maak een taak uit een algoritme van Processing."
 
-#: ../../docs/pyqgis_developer_cookbook/tasks.rst:51
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:88
 msgid ""
 "Any background task (regardless of how it is created) must NEVER perform any"
 " GUI based operations, such as creating new widgets or interacting with "
@@ -100,7 +108,7 @@ msgstr ""
 " voor Qt moet alleen gebeuren vanuit de hoofdthread. Pogingen om ze te "
 "gebruiken vanuit threads voor de achtergrond zal leiden tot crashes."
 
-#: ../../docs/pyqgis_developer_cookbook/tasks.rst:57
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:94
 msgid ""
 "Dependencies between tasks can be described using the :meth:`addSubTask "
 "<qgis.core.QgsTask.addSubTask>` function of :class:`QgsTask "
@@ -121,7 +129,7 @@ msgstr ""
 "geannuleerd. Circulaire afhankelijkheden kunnen vastlopers mogelijk maken, "
 "wees dus voorzichtig."
 
-#: ../../docs/pyqgis_developer_cookbook/tasks.rst:67
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:104
 msgid ""
 "If a task depends on a layer being available, this can be stated using the "
 ":meth:`setDependentLayers <qgis.core.QgsTask.setDependentLayers>` function "
@@ -134,7 +142,7 @@ msgstr ""
 "<qgis.core.QgsTask>`. Indien een laag, waarvan de taak afhankelijk is, niet "
 "beschikbaar is, wordt de taak geannuleerd."
 
-#: ../../docs/pyqgis_developer_cookbook/tasks.rst:73
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:110
 msgid ""
 "Once the task has been created it can be scheduled for running using the "
 ":meth:`addTask <qgis.core.QgsTaskManager.addTask>` function of the task "
@@ -153,7 +161,7 @@ msgstr ""
 "prioriteit van de taak, die wordt ingesteld in :meth:`addTask "
 "<qgis.core.QgsTaskManager.addTask>`."
 
-#: ../../docs/pyqgis_developer_cookbook/tasks.rst:81
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:118
 msgid ""
 "The status of tasks can be monitored using :class:`QgsTask "
 "<qgis.core.QgsTask>` and :class:`QgsTaskManager <qgis.core.QgsTaskManager>` "
@@ -163,15 +171,15 @@ msgstr ""
 "functies van :class:`QgsTask <qgis.core.QgsTask>` en :class:`QgsTaskManager "
 "<qgis.core.QgsTaskManager>`."
 
-#: ../../docs/pyqgis_developer_cookbook/tasks.rst:86
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:123
 msgid "Examples"
 msgstr "Voorbeelden"
 
-#: ../../docs/pyqgis_developer_cookbook/tasks.rst:89
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:126
 msgid "Extending QgsTask"
 msgstr "QgsTask uitbreiden"
 
-#: ../../docs/pyqgis_developer_cookbook/tasks.rst:91
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:128
 msgid ""
 "In this example ``RandomIntegerSumTask`` extends :class:`QgsTask "
 "<qgis.core.QgsTask>` and will generate 100 random integers between 0 and 500"
@@ -188,11 +196,11 @@ msgstr ""
 "gemaakt en toegevoegd aan de taakbeheerder, wat twee typen afhankelijkheden "
 "demonstreert."
 
-#: ../../docs/pyqgis_developer_cookbook/tasks.rst:211
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:277
 msgid "Task from function"
 msgstr "Taak uit functie"
 
-#: ../../docs/pyqgis_developer_cookbook/tasks.rst:213
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:279
 msgid ""
 "Create a task from a function (``doSomething`` in this example). The first "
 "parameter of the function will hold the :class:`QgsTask <qgis.core.QgsTask>`"
@@ -208,11 +216,11 @@ msgstr ""
 " de taak is voltooid. De functie ``doSomething`` in dit voorbeeld heeft een "
 "aanvullende benoemde parameter ``wait_time``."
 
-#: ../../docs/pyqgis_developer_cookbook/tasks.rst:298
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:381
 msgid "Task from a processing algorithm"
 msgstr "Taak uit een algoritme voor Processing"
 
-#: ../../docs/pyqgis_developer_cookbook/tasks.rst:300
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:383
 msgid ""
 "Create a task that uses the algorithm :ref:`qgis:randompointsinextent "
 "<qgisrandompointsinextent>` to generate 50000 random points inside a "
@@ -223,6 +231,6 @@ msgstr ""
 "in een gespecificeerd bereik. Het resultaat wordt op een veilige manier aan "
 "het project toegevoegd."
 
-#: ../../docs/pyqgis_developer_cookbook/tasks.rst:343
+#: ../../docs/pyqgis_developer_cookbook/tasks.rst:428
 msgid "See also: https://opengis.ch/2018/06/22/threads-in-pyqgis3/."
 msgstr "Bekijk ook: https://opengis.ch/2018/06/22/threads-in-pyqgis3/."

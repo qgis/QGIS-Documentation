@@ -1,61 +1,70 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014, QGIS project
-# This file is distributed under the same license as the QGIS Documentation
-# Project package.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Mathias Gröbe <mathias.groebe@gmail.com>, 2018
-# Matthias Wachholz <matthias.wachholz@lageso.berlin.de>, 2020
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-06 11:48+0100\n"
-"PO-Revision-Date: 2020-02-27 13:17+0000\n"
-"Last-Translator: Matthias Wachholz <matthias.wachholz@lageso.berlin.de>\n"
-"Language-Team: German (http://www.transifex.com/qgis/qgis-documentation/language/de/)\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
+"PO-Revision-Date: 2020-03-16 19:22+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: German (https://www.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:11
+#: ../../docs/training_manual/processing/r_intro.rst:5
 msgid "Use R scripts in Processing"
 msgstr "Nutzung von R-Skripten in der Prozessierung"
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:13
+#: ../../docs/training_manual/processing/r_intro.rst:7
 msgid ""
 "Module contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna "
 "<https://www.santannapisa.it/it>`_"
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:16
+#: ../../docs/training_manual/processing/r_intro.rst:10
 msgid ""
 "Processing (with the ``Processing R Provider`` plugin) makes it possible to "
 "write and run R scripts inside QGIS."
-msgstr "Die Verarbeitungsumgebung (mit der Erweiterung ``Processing R Provider``) macht das Schreiben und Ausführen von R Skripten innerhalb von QGIS möglich."
+msgstr ""
+"Die Verarbeitungsumgebung (mit der Erweiterung ``Processing R Provider``) "
+"macht das Schreiben und Ausführen von R Skripten innerhalb von QGIS möglich."
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:20
+#: ../../docs/training_manual/processing/r_intro.rst:14
 msgid ""
 "R has to be installed on your computer and the PATH has to be correctly set "
 "up. Moreover Processing just calls the external R packages, it is not able "
 "to install them. So be sure to install external packages directly in R. See "
 "the related :ref:`chapter <creating_r_scripts>` in the user manual."
-msgstr "R muss auf Ihrem Rechner installiert und die PATH-Variable korrekt gesetzt sein. Die Verarbeitungsumgebung ruft die externen R Packete nur auf. Sie kann sie nicht selbst installieren. Stellen Sie daher sicher, dass die externen Pakete direkt in R installiert werden. Im Benutzerhandbuch :ref:`Kapitel <creating_r_scripts>`  findet man dazu weitere Informationen."
+msgstr ""
+"R muss auf Ihrem Rechner installiert und die PATH-Variable korrekt gesetzt "
+"sein. Die Verarbeitungsumgebung ruft die externen R Packete nur auf. Sie "
+"kann sie nicht selbst installieren. Stellen Sie daher sicher, dass die "
+"externen Pakete direkt in R installiert werden. Im Benutzerhandbuch "
+":ref:`Kapitel <creating_r_scripts>`  findet man dazu weitere Informationen."
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:26
+#: ../../docs/training_manual/processing/r_intro.rst:20
 msgid ""
 "If you have *package* problems, it may be related to missing *mandatory* "
 "packages required by Processing, like ``sp``, ``rgdal`` and ``raster``."
-msgstr "Wenn es Probleme mit *Paketen* gibt, fehlen unter Umständen für die Verarbeitung *erforderliche* Pakete wie ``sp``, ``rgdal`` und ``raster``."
+msgstr ""
+"Wenn es Probleme mit *Paketen* gibt, fehlen unter Umständen für die "
+"Verarbeitung *erforderliche* Pakete wie ``sp``, ``rgdal`` und ``raster``."
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:30
+#: ../../docs/training_manual/processing/r_intro.rst:24
 msgid "Adding scripts"
 msgstr "Hinzufügen von Skripten"
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:32
+#: ../../docs/training_manual/processing/r_intro.rst:26
 msgid ""
 "Adding a script is simple. The easiest way is to open the Processing toolbox"
 " and choose :menuselection:`Create new R script...` from the R menu "
@@ -64,478 +73,396 @@ msgid ""
 "scripts folder (:file:`processing/rscripts`). When it has been saved there, "
 "it will be available for editing by right-clicking on the script name in the"
 " processing toolbox and then choose :menuselection:`Edit Script...`)."
-msgstr "Das Hinzufügen eines Skriptes ist einfach. Der einfachste Weg ist das Öffnen der Werkzeugkiste. In der Werkzeugleiste der Werkzeugkiste wählt man dann :menuselection:`Create new R script...` aus dem R Menü (durch das R Symbol gekennzeichnet). Man kann auch ein Skript im Texteditor erstellen und es anschließend im R Skript Ordner (:file:`processing/rscripts`) ablegen. Sobald es dort abgelegt wurde, wird es zur Bearbeitung in der Werkzeugkiste verfügbar. Man klickt dazu mit der rechten Maustaste auf den Skriptnamen und wählt :menuselection:`Edit Script...`)."
+msgstr ""
+"Das Hinzufügen eines Skriptes ist einfach. Der einfachste Weg ist das Öffnen"
+" der Werkzeugkiste. In der Werkzeugleiste der Werkzeugkiste wählt man dann "
+":menuselection:`Create new R script...` aus dem R Menü (durch das R Symbol "
+"gekennzeichnet). Man kann auch ein Skript im Texteditor erstellen und es "
+"anschließend im R Skript Ordner (:file:`processing/rscripts`) ablegen. "
+"Sobald es dort abgelegt wurde, wird es zur Bearbeitung in der Werkzeugkiste "
+"verfügbar. Man klickt dazu mit der rechten Maustaste auf den Skriptnamen und"
+" wählt :menuselection:`Edit Script...`)."
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:45
+#: ../../docs/training_manual/processing/r_intro.rst:39
 msgid ""
 "If you cannot see R in Processing, you have to activate it in "
 ":menuselection:`Processing --> Options --> Providers`"
-msgstr "Wenn Sie R nicht in der Verarbeitungsumgebung finden, müssen Sie es unter :menuselection:`Optionen --> Verarbeitung --> Datenanbieter` aktivieren."
+msgstr ""
+"Wenn Sie R nicht in der Verarbeitungsumgebung finden, müssen Sie es unter "
+":menuselection:`Optionen --> Verarbeitung --> Datenanbieter` aktivieren."
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:48
+#: ../../docs/training_manual/processing/r_intro.rst:42
 msgid ""
 "It opens a *script editor window* in which you have to specify some "
 "parameters before you can add the script body."
-msgstr "Es öffnet sich ein Fenster *R Script Editor*. Hier müssen einige Parameter definiert werden, bevor das Skript an sich erstellt werden kann."
+msgstr ""
+"Es öffnet sich ein Fenster *R Script Editor*. Hier müssen einige Parameter "
+"definiert werden, bevor das Skript an sich erstellt werden kann."
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:56
+#: ../../docs/training_manual/processing/r_intro.rst:50
 msgid "Creating plots"
 msgstr "Erstellung von Plots"
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:58
+#: ../../docs/training_manual/processing/r_intro.rst:52
 msgid ""
 "In this tutorial we are going to create a **boxplot** of a vector layer "
 "field."
-msgstr "In dieser Anleitung erstellen wir einen **Box-Plot** für ein Feld eines Vektorlayers."
+msgstr ""
+"In dieser Anleitung erstellen wir einen **Box-Plot** für ein Feld eines "
+"Vektorlayers."
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:60
+#: ../../docs/training_manual/processing/r_intro.rst:54
 msgid ""
 "Open the :file:`r_intro.qgs` QGIS project under the "
 ":file:`exercise_data/processing/r_intro/` folder."
-msgstr "Öffnen das QGIS Projekt :file:`r_intro.qgs` im Ordner :file:`exercise_data/processing/r_intro/`."
+msgstr ""
+"Öffnen das QGIS Projekt :file:`r_intro.qgs` im Ordner "
+":file:`exercise_data/processing/r_intro/`."
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:65
-#: ../../source/docs/training_manual/processing/r_intro.rst:187
+#: ../../docs/training_manual/processing/r_intro.rst:59
+#: ../../docs/training_manual/processing/r_intro.rst:180
 msgid "Script parameters"
 msgstr "Skript Parameter"
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:67
+#: ../../docs/training_manual/processing/r_intro.rst:61
 msgid "Open the editor and start writing at the beginning of it."
 msgstr "Öffnen Sie den Editor und beginnen mit dem Schreiben am Anfang."
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:69
+#: ../../docs/training_manual/processing/r_intro.rst:63
 msgid "You **must** specify some parameters **before** the script body:"
-msgstr "Sie **müssen** einige Parameter **vor** dem Hauptteil des Skripts festlegen:"
+msgstr ""
+"Sie **müssen** einige Parameter **vor** dem Hauptteil des Skripts festlegen:"
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:71
+#: ../../docs/training_manual/processing/r_intro.rst:65
 msgid ""
 "The name of the group (`plots` in this case) in which you want to put your "
 "script (if the group does not exist, it will be created)::"
-msgstr "Der Name der Gruppe (`plots` in diesem Fall) in der Sie Ihr Skript stellen wollen (wenn die Gruppe nicht existiert, wird sie erstellt)::"
+msgstr ""
+"Der Name der Gruppe (`plots` in diesem Fall) in der Sie Ihr Skript stellen "
+"wollen (wenn die Gruppe nicht existiert, wird sie erstellt)::"
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:76
+#: ../../docs/training_manual/processing/r_intro.rst:70
 msgid ""
 "You will find your script in the **plots** R group in the Processing "
 "toolbox."
-msgstr "Sie finden Ihr Skript in der **plots** R Gruppe in den Verarbeitungswerkzeugen."
+msgstr ""
+"Sie finden Ihr Skript in der **plots** R Gruppe in den "
+"Verarbeitungswerkzeugen."
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:78
+#: ../../docs/training_manual/processing/r_intro.rst:72
 msgid ""
 "You have to tell Processing that you want to display a plot (in this "
 "example)::"
-msgstr "Sie müssen der Verarbeitung mitteilen, dass Sie ein Plot (in diesem Beispiel) darstellen möchten::"
+msgstr ""
+"Sie müssen der Verarbeitung mitteilen, dass Sie ein Plot (in diesem "
+"Beispiel) darstellen möchten::"
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:82
+#: ../../docs/training_manual/processing/r_intro.rst:76
 msgid ""
 "You will then find a link to the plot in the **Result Viewer** panel (can be"
 " turned on / off in :menuselection:`View --> Panels` and with "
 ":menuselection:`Processing --> Results Viewer`)."
-msgstr "Sie erhalten dann in der **Ergebnisanzeige** einen Link zum Plot (das kann unter :menuselection:`Ansicht --> Bedienfelder` und mit :menuselection:`Verarbeitung --> Ergebnisanzeige` ein- oder ausgeschaltet werden)."
+msgstr ""
+"Sie erhalten dann in der **Ergebnisanzeige** einen Link zum Plot (das kann "
+"unter :menuselection:`Ansicht --> Bedienfelder` und mit "
+":menuselection:`Verarbeitung --> Ergebnisanzeige` ein- oder ausgeschaltet "
+"werden)."
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:86
+#: ../../docs/training_manual/processing/r_intro.rst:80
 msgid ""
 "You also need to tell Processing about your input data. In this example we "
 "want to create a plot from a field of a vector layer::"
-msgstr "Sie müssen der Verarbeitung auch die Eingabedaten vorgeben. In diesem Beispiel wollen wir ein Plot für ein Feld eines Vektorlayers erstellen::"
+msgstr ""
+"Sie müssen der Verarbeitung auch die Eingabedaten vorgeben. In diesem "
+"Beispiel wollen wir ein Plot für ein Feld eines Vektorlayers erstellen::"
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:91
+#: ../../docs/training_manual/processing/r_intro.rst:85
 msgid ""
 "Processing now knows that the input is a vector. The name *Layer* is not "
 "important, what matters is the **vector** parameter."
-msgstr "Die Verarbeitung weiß nun, dass die Eingabe eine Vektordatei ist. Der Name *Layer* ist nicht wichtig, entscheidend ist der Parameter **vector**. "
+msgstr ""
+"Die Verarbeitung weiß nun, dass die Eingabe eine Vektordatei ist. Der Name "
+"*Layer* ist nicht wichtig, entscheidend ist der Parameter **vector**. "
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:94
+#: ../../docs/training_manual/processing/r_intro.rst:88
 msgid ""
 "Finally, you have to specify the input field of the vector layer (using the "
 "name you have provided above - *Layer*)::"
-msgstr "Als Letztes müssen Sie das Eingabefeld des Vektorlayers vorgeben (unter Nutzung des Namens, den Sie oben vergeben haben - *Layer*)::"
+msgstr ""
+"Als Letztes müssen Sie das Eingabefeld des Vektorlayers vorgeben (unter "
+"Nutzung des Namens, den Sie oben vergeben haben - *Layer*)::"
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:99
+#: ../../docs/training_manual/processing/r_intro.rst:93
 msgid ""
 "Processing now knows that you need a field of *Layer*, and that you will "
 "call it **X**."
-msgstr "Die Verarbeitung weiß nun, dass Sie ein Feld *Layer* benötigen und es **X** nennen. "
+msgstr ""
+"Die Verarbeitung weiß nun, dass Sie ein Feld *Layer* benötigen und es **X** "
+"nennen. "
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:102
+#: ../../docs/training_manual/processing/r_intro.rst:96
 msgid "It is also possible to define the name of your script using ``name``::"
-msgstr "Man kann den Namen des Skriptes auch mit Hilfe von ``name`` definieren::"
+msgstr ""
+"Man kann den Namen des Skriptes auch mit Hilfe von ``name`` definieren::"
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:106
+#: ../../docs/training_manual/processing/r_intro.rst:100
 msgid "If not defined, the file name will be used as the name of the script."
-msgstr "Wenn nichts vorgegeben ist, wird der Dateiname als Name des Skriptes verwendet."
+msgstr ""
+"Wenn nichts vorgegeben ist, wird der Dateiname als Name des Skriptes "
+"verwendet."
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:109
-#: ../../source/docs/training_manual/processing/r_intro.rst:213
+#: ../../docs/training_manual/processing/r_intro.rst:103
+#: ../../docs/training_manual/processing/r_intro.rst:206
 msgid "Script body"
 msgstr "Skript Hauptteil"
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:111
+#: ../../docs/training_manual/processing/r_intro.rst:105
 msgid ""
 "Now that you have set up the *heading* of the script you can add the "
 "function::"
-msgstr "Nachdem wir den Kopf des Skriptes festgelegt haben, können wir die Funktionalität hinzufügen::"
+msgstr ""
+"Nachdem wir den Kopf des Skriptes festgelegt haben, können wir die "
+"Funktionalität hinzufügen::"
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:115
+#: ../../docs/training_manual/processing/r_intro.rst:109
 msgid ""
 "**boxplot** is the name of the R function, the parameter **Layer** is the "
 "name that you have defined for the input dataset and **X** is the name you "
 "have defined for the field of that dataset."
-msgstr "**boxplot** ist der Name der R Funktion. Der Parameter **Layer** ist der Name, den wir für den Eingabedatensatz vorgegeben haben. **X** ist der vorgegebene Name des Feldes im Datensatz."
+msgstr ""
+"**boxplot** ist der Name der R Funktion. Der Parameter **Layer** ist der "
+"Name, den wir für den Eingabedatensatz vorgegeben haben. **X** ist der "
+"vorgegebene Name des Feldes im Datensatz."
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:120
+#: ../../docs/training_manual/processing/r_intro.rst:114
 msgid ""
 "The parameter **X** has to be within double square brackets (``[[]]``)."
-msgstr "Der Parameter **X** muss innerhalb doppelter eckiger Klammern stehen (``[[]]``)."
+msgstr ""
+"Der Parameter **X** muss innerhalb doppelter eckiger Klammern stehen "
+"(``[[]]``)."
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:122
-#: ../../source/docs/training_manual/processing/r_intro.rst:232
+#: ../../docs/training_manual/processing/r_intro.rst:116
+#: ../../docs/training_manual/processing/r_intro.rst:225
 msgid "The final script looks like this::"
 msgstr "Das fertige Skript sollte wie folgt aussehen::"
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:132
+#: ../../docs/training_manual/processing/r_intro.rst:126
 msgid ""
 "Save the script in the default path suggested by Processing "
 "(processing/rscripts). If you have not defined a ``name`` in the script "
 "heading, the file name you choose will become the name of the script in the "
 "Processing toolbox."
-msgstr "Speichern Sie das Skript im voreingestellten Pfad entsprechend des Vorschlags der Verarbeitung (processing/rscripts). Wenn Sie ``name`` im Kopf des Skriptes nicht definiert haben, wird das Skript in der Verarbeitungsumgebung mit dem Dateinamen bezeichnet."
+msgstr ""
+"Speichern Sie das Skript im voreingestellten Pfad entsprechend des "
+"Vorschlags der Verarbeitung (processing/rscripts). Wenn Sie ``name`` im Kopf"
+" des Skriptes nicht definiert haben, wird das Skript in der "
+"Verarbeitungsumgebung mit dem Dateinamen bezeichnet."
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:137
+#: ../../docs/training_manual/processing/r_intro.rst:131
 msgid ""
 "You can save the script wherever you like, but Processing will then not be "
 "able to include it in the processing toolbox automatically, so you have to "
 "upload it manually."
-msgstr "Sie können das Skript an einem beliebigen Ort speichern. Die Verarbeitung übernimmt das Skript dann nicht automatisch in die Verarbeitungsumgebung und es muss manuell hinzugefügt werden."
+msgstr ""
+"Sie können das Skript an einem beliebigen Ort speichern. Die Verarbeitung "
+"übernimmt das Skript dann nicht automatisch in die Verarbeitungsumgebung und"
+" es muss manuell hinzugefügt werden."
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:141
+#: ../../docs/training_manual/processing/r_intro.rst:135
 msgid "Now just run it using the button on the top of the editor window:"
-msgstr "Starten Sie jetzt das Skript durch Drücken auf die ausführen Schaltfläche im Editorfenster:"
+msgstr ""
+"Starten Sie jetzt das Skript durch Drücken auf die ausführen Schaltfläche im"
+" Editorfenster:"
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:145
+#: ../../docs/training_manual/processing/r_intro.rst:139
 msgid ""
 "Once the editor window has been closed, use the text box of Processing to "
 "find your script:"
-msgstr "Nutzen Sie nach dem Schließen des Editorfensters die Textbox der Verarbeitung, um Ihr Skript zu finden:"
+msgstr ""
+"Nutzen Sie nach dem Schließen des Editorfensters die Textbox der "
+"Verarbeitung, um Ihr Skript zu finden:"
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:150
+#: ../../docs/training_manual/processing/r_intro.rst:144
 msgid ""
 "You can now fill the parameters required in the Processing algorithm window:"
-msgstr "Sie können nun die erforderlichen Parameter im Fenster des Verarbeitungsalgorithmus eintragen:"
+msgstr ""
+"Sie können nun die erforderlichen Parameter im Fenster des "
+"Verarbeitungsalgorithmus eintragen:"
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:152
+#: ../../docs/training_manual/processing/r_intro.rst:146
 msgid "for **Layer** choose *sample_points*"
 msgstr "wählen Sie *sample_points* als **Layer**"
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:153
+#: ../../docs/training_manual/processing/r_intro.rst:147
 msgid "for the **X** field choose *value*"
 msgstr "wählen Sie *value* als **X** Feld"
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:155
+#: ../../docs/training_manual/processing/r_intro.rst:149
 msgid "Click on **Run**."
 msgstr "Klicken Sie auf **Starte**."
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:159
+#: ../../docs/training_manual/processing/r_intro.rst:153
 msgid ""
 "The **Result window** should be automatically opened, if not, just click on "
 ":menuselection:`Processing --> Result Viewer...`."
-msgstr "Die **Ergebnisanzeige** sollte sich automatisch öffnen. Falls das nicht geschieht, klicken Sie auf :menuselection:`Verabeitung --> Ergebnisanzeige`."
+msgstr ""
+"Die **Ergebnisanzeige** sollte sich automatisch öffnen. Falls das nicht "
+"geschieht, klicken Sie auf :menuselection:`Verabeitung --> Ergebnisanzeige`."
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:162
+#: ../../docs/training_manual/processing/r_intro.rst:156
 msgid "Click on the link in the viewer and you will see:"
-msgstr "Wenn Sie auf den Link in der Ergebnisanzeige klicken, sehen Sie das Folgende: "
+msgstr ""
+"Wenn Sie auf den Link in der Ergebnisanzeige klicken, sehen Sie das "
+"Folgende: "
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:167
+#: ../../docs/training_manual/processing/r_intro.rst:161
 msgid "You can open, copy and save the image by right clicking on the plot."
-msgstr "Sie können das Bild nun durch Rechtsklick auf den Plot kopieren und speichern."
+msgstr ""
+"Sie können das Bild nun durch Rechtsklick auf den Plot kopieren und "
+"speichern."
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:170
+#: ../../docs/training_manual/processing/r_intro.rst:164
 msgid "Create a vector"
 msgstr "Erstellen eines Vektorlayers"
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:172
+#: ../../docs/training_manual/processing/r_intro.rst:166
 msgid ""
 "You can also create a vector layer and have it automatically loaded into "
 "QGIS."
-msgstr "Sie können außerdem einen Vektorlayer erstellen und ihn automatisch in QGIS laden."
+msgstr ""
+"Sie können außerdem einen Vektorlayer erstellen und ihn automatisch in QGIS "
+"laden."
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:175
+#: ../../docs/training_manual/processing/r_intro.rst:169
 msgid ""
 "The following example has been taken from the ``Random sampling grid`` "
-"script that you can download from the online collection :menuselection:`R "
-"--> Tools --> Download R scripts from the on-line collection` (the scripts "
-"in the on-line collection can be found on https://github.com/qgis/QGIS-"
+"script that can be found in the online collection of R scripts (the scripts "
+"in this online collection can be found in https://github.com/qgis/QGIS-"
 "Processing/tree/master/rscripts)."
 msgstr ""
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:181
+#: ../../docs/training_manual/processing/r_intro.rst:174
 msgid ""
 "The aim of this exercise is to create a random point vector layer using an "
 "input vector layer to restrict the extent using the ``spsample`` function of"
 " the ``sp`` package."
-msgstr "Das Ziel dieser Übung ist die Erstellung eines zufälligen Punktlayers mit Hilfe der ``spsample`` Funktion aus dem ``sp`` Paket. Dabei soll die Ausdehnung über einen Eingabevektorlayer begrenzt werden. "
+msgstr ""
+"Das Ziel dieser Übung ist die Erstellung eines zufälligen Punktlayers mit "
+"Hilfe der ``spsample`` Funktion aus dem ``sp`` Paket. Dabei soll die "
+"Ausdehnung über einen Eingabevektorlayer begrenzt werden. "
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:189
+#: ../../docs/training_manual/processing/r_intro.rst:182
 msgid "As before we have to set some parameters before the script body:"
-msgstr "Wie vorhin müssen wir zuerst einige Parameter oberhalb des Hauptteiles des Skriptes vorgeben:"
+msgstr ""
+"Wie vorhin müssen wir zuerst einige Parameter oberhalb des Hauptteiles des "
+"Skriptes vorgeben:"
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:191
+#: ../../docs/training_manual/processing/r_intro.rst:184
 msgid ""
 "Specify the name of the group in which you want to put your script, in this "
 "case *Point pattern analysis*::"
-msgstr "Geben Sie den Namen der Gruppe vor, in die das Skript soll. In diesem Fall ist das *Point pattern analysis*::"
+msgstr ""
+"Geben Sie den Namen der Gruppe vor, in die das Skript soll. In diesem Fall "
+"ist das *Point pattern analysis*::"
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:195
+#: ../../docs/training_manual/processing/r_intro.rst:188
 msgid ""
-"Define an input parameter (a vector layer) that will contstrain the "
-"placement of the random points::"
-msgstr "Geben Sie einen Eingabeparameter vor (ein Vektorlayer), der die Platzierung der zufälligen Punkte einschränkt::"
+"Define an input parameter (a vector layer) that will constrain the placement"
+" of the random points::"
+msgstr ""
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:200
+#: ../../docs/training_manual/processing/r_intro.rst:193
 msgid ""
 "Set an input parameter for the number of points that are going to be created"
 " (``Size``, with a default value of ``10``)::"
-msgstr "Geben Sie einen Eingabeparameter für die Anzahl der zu erzeugenden Punkte vor (``Size``, der Vorgabewert ist ``10``)::"
+msgstr ""
+"Geben Sie einen Eingabeparameter für die Anzahl der zu erzeugenden Punkte "
+"vor (``Size``, der Vorgabewert ist ``10``)::"
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:205
+#: ../../docs/training_manual/processing/r_intro.rst:198
 msgid ""
 "Since a default value (``10``) is defined, the user can change this number "
 "or can leave the parameter without a number."
-msgstr "Da ein Vorgabewert (``10``) vorhanden ist, kann der Nutzer den Parameter so belassen oder einen eigenen Wert eingeben."
+msgstr ""
+"Da ein Vorgabewert (``10``) vorhanden ist, kann der Nutzer den Parameter so "
+"belassen oder einen eigenen Wert eingeben."
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:208
+#: ../../docs/training_manual/processing/r_intro.rst:201
 msgid "Specify that there is an output vector layer (called ``Output``)::"
-msgstr "Geben Sie vor, dass ein Ausgabevektorlayer erzeugt wird (bezeichnet mit ``Output``)::"
+msgstr ""
+"Geben Sie vor, dass ein Ausgabevektorlayer erzeugt wird (bezeichnet mit "
+"``Output``)::"
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:215
+#: ../../docs/training_manual/processing/r_intro.rst:208
 msgid "Now you can add the body of the function:"
 msgstr "Sie können jetzt den Hauptteil der Funktion hinzufügen:"
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:217
+#: ../../docs/training_manual/processing/r_intro.rst:210
 msgid "Use the ``spsample`` function::"
 msgstr "Verwenden Sie die Funktion ``spsample``::"
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:221
+#: ../../docs/training_manual/processing/r_intro.rst:214
 msgid ""
 "The function uses the *Layer* to constrain the placement of the points (if "
 "it is a line layer, a points will have to be on one of the lines in the "
 "layer, if it is a polygon layer, a point will have to be within a polygon). "
 "The number of points is taken from the *Size* parameter. The sampling method"
 " is *random*."
-msgstr "Die Funktion verwendet den *Layer*, um die Platzierung der Punkte zu beschränken (wenn der Layer eine Linie ist, müssen die Punkte auf der Linie liegen; wenn es ein Polygon ist, müssen die Punkte innerhalb des Polygons liegen). Die Anzahl der Punkt entspricht der Vorgabe im Parameter *Size*. Das Stichprobenverfahren ist *random*."
+msgstr ""
+"Die Funktion verwendet den *Layer*, um die Platzierung der Punkte zu "
+"beschränken (wenn der Layer eine Linie ist, müssen die Punkte auf der Linie "
+"liegen; wenn es ein Polygon ist, müssen die Punkte innerhalb des Polygons "
+"liegen). Die Anzahl der Punkt entspricht der Vorgabe im Parameter *Size*. "
+"Das Stichprobenverfahren ist *random*."
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:228
+#: ../../docs/training_manual/processing/r_intro.rst:221
 msgid "Generate the output (the ``Output`` parameter)::"
 msgstr "Erstellen Sie die Ausgabe (der Parameter ``Output``)::"
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:243
+#: ../../docs/training_manual/processing/r_intro.rst:236
 msgid "Save it and run it, clicking on the run button."
 msgstr "Speichern Sie es und klicken Sie auf die Schaltfläche zum Starten."
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:245
+#: ../../docs/training_manual/processing/r_intro.rst:238
 msgid "In the new window type in the right parameters:"
 msgstr "Geben Sie in dem neu geöffneten Fenster die richtigen Parameter ein:"
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:249
+#: ../../docs/training_manual/processing/r_intro.rst:242
 msgid "and click on run."
 msgstr "und klicken Sie auf Starte."
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:251
+#: ../../docs/training_manual/processing/r_intro.rst:244
 msgid ""
 "The result layer will be added to the table of contents and its points will "
 "be displayed on the map canvas:"
-msgstr "Der Ergebnislayer wird im Inhaltsverzeichnis eingefügt und die Punkte werden im Kartenfenster angezeigt:"
+msgstr ""
+"Der Ergebnislayer wird im Inhaltsverzeichnis eingefügt und die Punkte werden"
+" im Kartenfenster angezeigt:"
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:258
+#: ../../docs/training_manual/processing/r_intro.rst:251
 msgid "Text and graph output from R - syntax"
 msgstr "Textausgabe und grafische Ausgabe mit der R - Syntax"
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:260
+#: ../../docs/training_manual/processing/r_intro.rst:253
 msgid ""
 "Processing (with the ``Processing R Provider plugin``) uses special syntax "
 "to get the results out of R:"
-msgstr "Die Verarbeitung (mit dem ``Processing R Provider plugin``) nutzt eine spezielle Syntax, um die Ergebnisse aus R zu erhalten:"
+msgstr ""
+"Die Verarbeitung (mit dem ``Processing R Provider plugin``) nutzt eine "
+"spezielle Syntax, um die Ergebnisse aus R zu erhalten:"
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:263
+#: ../../docs/training_manual/processing/r_intro.rst:256
 msgid ""
 "``>`` before your command, as in ``>lillie.test(Layer[[Field]])`` means the "
 "result should be sent to R output (Result viewer)"
-msgstr "``>`` vor einem Kommando, wie in ``>lillie.test(Layer[[Field]])`` bedeutet, dass das Ergebnis an die R Ausgaeb gesendet wird (Ergebnisanzeige)"
+msgstr ""
+"``>`` vor einem Kommando, wie in ``>lillie.test(Layer[[Field]])`` bedeutet, "
+"dass das Ergebnis an die R Ausgaeb gesendet wird (Ergebnisanzeige)"
 
-#: ../../source/docs/training_manual/processing/r_intro.rst:265
+#: ../../docs/training_manual/processing/r_intro.rst:258
 msgid ""
 "``+`` after a plot enables overlay plots. For example ``plot(Layer[[X]], "
 "Layer[[Y]]) + abline(h=mean(Layer[[X]]))``"
-msgstr "``+`` nach einem Plot erlaubt sich überlagernde Plots. Zum Beispiel ``plot(Layer[[X]], Layer[[Y]]) + abline(h=mean(Layer[[X]]))``"
-
-#~ msgid ""
-#~ "Module contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna "
-#~ "<http://www.santannapisa.it/it/istituto/scienze-della-vita/agricultural-"
-#~ "water-management>`_"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Module contributed by Matteo Ghetta - funded by `Scuola Superiore Sant'Anna "
-#~ "<https://www.santannapisa.it/it/istituto/scienze-della-vita/agricultural-"
-#~ "water-management>`_"
-#~ msgstr ""
-
-#~ msgid "Processing allows to write and run R scripts inside QGIS."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "R has to be installed on your computer and the PATH has to correctly set up."
-#~ " Moreover Processing just calls the external R packages, it is not able to "
-#~ "install them. So be sure to install external packages directly in R. See the"
-#~ " related :ref:`chapter <creating_r_scripts>` in the user manual."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If you have some *packages* problem, maybe it is related to missing "
-#~ "*mandatory* packages required by Processing, like ``sp``, ``rgdal`` and "
-#~ "``raster``."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Adding a script is very simple. Open the Processing toolbox and just click "
-#~ "on the :menuselection:`R --> Tools --> Create new R script`."
-#~ msgstr ""
-
-#~ msgid "the name of the group in which you want to put your script::"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "so you will find your script in the **plots** group in the Processing "
-#~ "toolbox."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "you have to tell Processing that you want to display a plot (just in this "
-#~ "example)::"
-#~ msgstr ""
-
-#~ msgid "this way in the **Result Viewer** of Processing you'll see the plot."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "You need also to tell Processing with which kind of data you are working "
-#~ "with. In this example we want to create a plot from a field of a vector "
-#~ "layer::"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Processing knows now that the input is a vector. The name *Layer* is not "
-#~ "important, what matters is the **vector** parameter."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Finally, you have to specify the input field of the vector layer you want to"
-#~ " plot::"
-#~ msgstr ""
-
-#~ msgid "So Processing knows that you have called **X** the **Field Layer**."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Notice that **boxplot** is the name of the R function itself that calls "
-#~ "**Layer** as dataset and **X** as the field of the dataset."
-#~ msgstr ""
-
-#~ msgid "The parameter **X** is within a double square bracket ``[[]]``"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Save the script in the default path suggested by Processing. The name you "
-#~ "choose will be the same as the name of the script you'll find in the "
-#~ "Processing toolbox."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "You can save the script in other paths, but Processing isn't able to upload "
-#~ "them automatically and you have to upload all the scripts manually"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Otherwise, once the editor window has been closed, use the text box of "
-#~ "Processing to find your script:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "You are now able to fill the parameters required in the Processing algorithm"
-#~ " window:"
-#~ msgstr ""
-
-#~ msgid "as **Layer** choose the *sample points* one"
-#~ msgstr ""
-
-#~ msgid "fill the **X** field with the **value** parameter"
-#~ msgstr ""
-
-#~ msgid "This is the final result you'll see:"
-#~ msgstr ""
-
-#~ msgid "You can open, copy and save the image by right clicking on the plot"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "With an R script you can also create a vector and automatically load it in "
-#~ "QGIS."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The following example has been taken from the ``Random sampling grid`` "
-#~ "script that you can download from the online collection :menuselection:`R "
-#~ "--> Tools --> Download R scripts from the on-line collection`."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The aim of this exercise is to create a random point vector in a layer "
-#~ "extent using the ``spsample`` function of the ``sp`` package."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "specify the name of the group in which you want to put your script, for "
-#~ "example *Point pattern analysis*::"
-#~ msgstr ""
-
-#~ msgid "set the layer that will contain the random points::"
-#~ msgstr ""
-
-#~ msgid "set the number of points that are going to be created::"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "10 is going to be the default value. You can change this number or you can "
-#~ "leave the parameter without a default number"
-#~ msgstr ""
-
-#~ msgid "specify that the output is a vector layer::"
-#~ msgstr ""
-
-#~ msgid "run the ``spsample`` function::"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "this way the function takes the extent of the *Layer*, the number of points "
-#~ "is taken from the *Size* parameter and the point generation is *random*"
-#~ msgstr ""
-
-#~ msgid "Write the line that contains the parameters of the output::"
-#~ msgstr ""
-
-#~ msgid "Save it and run it, clicking on the running button."
-#~ msgstr ""
-
-#~ msgid "Resulting points will be displayed in the map canvas"
-#~ msgstr ""
-
-#~ msgid "R - Processing syntax"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Beware that Processing uses some special syntax to get the results out of R:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "``+`` after a plot to call overlay plots. For example ``plot(Layer[[X]], "
-#~ "Layer[[Y]]) + abline(h=mean(Layer[[X]]))``"
-#~ msgstr ""
+msgstr ""
+"``+`` nach einem Plot erlaubt sich überlagernde Plots. Zum Beispiel "
+"``plot(Layer[[X]], Layer[[Y]]) + abline(h=mean(Layer[[X]]))``"

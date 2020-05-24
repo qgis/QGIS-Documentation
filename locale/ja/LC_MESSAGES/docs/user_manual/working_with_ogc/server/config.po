@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGISDoc package.
+# This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGISDoc 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:26+0000\n"
 "Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
@@ -272,21 +272,39 @@ msgid ""
 msgstr ""
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:180
-msgid "Settings summary"
+msgid "QGIS_SERVER_IGNORE_BAD_LAYERS"
 msgstr ""
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:182
+msgid ""
+"\"Bad\" layers are layers that cannot be loaded. The default behavior of "
+"QGIS Server is to consider the project as not available if it contains a bad"
+" layer."
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:185
+msgid ""
+"The default behavior can be overridden by setting this variable to ``1`` or "
+"``true``. In this case, \"bad\" layers will just be ignored, and the project"
+" will be considered valid and available."
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:191
+msgid "Settings summary"
+msgstr ""
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:193
 msgid ""
 "When QGIS Server is starting, you have a summary of all configurable "
 "parameters thanks to environment variables. Moreover, the value currently "
 "used and the origin is also displayed."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:186
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:197
 msgid "For example with spawn-fcgi:"
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:217
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:228
 msgid ""
 "In this particular case, we know that **QGIS_SERVER_MAX_THREADS** and "
 "**QGIS_SERVER_PARALLEL_RENDERING** values are read from the ini file found "
@@ -296,11 +314,11 @@ msgid ""
 "**true** and **4** threads."
 msgstr ""
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:225
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:236
 msgid "Short name for layers, groups and project"
 msgstr "レイヤー、グループ、およびプロジェクトの短い名前"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:227
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:238
 msgid ""
 "A number of elements have both a ``<Name>`` and a ``<Title>``. The **Name** "
 "is a text string used for machine-to-machine communication while the "
@@ -309,7 +327,7 @@ msgstr ""
 "要素の数は、 ``<Name>`` と ``<Title>`` の両方を有します。 **名** "
 "は、マシン・ツー・マシンの通信に使用するテキスト文字列で、 **タイトル** は人間の利益のものです。"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:231
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:242
 msgid ""
 "For example, a dataset might have the descriptive Title “Maximum Atmospheric"
 " Temperature” and be requested using the abbreviated Name “ATMAX”. User can "
@@ -317,17 +335,17 @@ msgid ""
 msgstr ""
 "例えば、データセットは、説明のタイトル「最高気温」を持っているかもしれないと略称「ATMAX」を使用して要求します。ユーザーはすでにレイヤー、グループやプロジェクトのタイトルを設定できます。"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:235
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:246
 msgid ""
 "OWS name is based on the name used in layer tree. This name is more a label "
 "for humans than a name for machine-to-machine communication."
 msgstr "OWS名はレイヤーツリーに使用される名前に基づいています。この名前は、マシン間通信のための名前よりもより人間のためのラベルです。"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:238
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:249
 msgid "QGIS Server supports:"
 msgstr "QGISサーバーがサポートするのは："
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:240
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:251
 msgid ""
 "short name line edits to layers properties You can change this by right "
 "clicking on a layer, choose :menuselection:`Properties --> Metadata tab --> "
@@ -336,21 +354,21 @@ msgstr ""
 "レイヤープロパティへの短い名前の行編集　これを変更するには、レイヤーを右クリックして、 :menuselection:`プロパティ --> "
 "[メタデータ]タブ --> 説明 --> 短い名前` を選択します。"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:244
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:255
 msgid "WMS data dialog to layer tree group (short name, title, abstract)"
 msgstr "レイヤーツリーグループへのWMSデータダイアログ（短い名前、タイトル、要約）"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:246
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:257
 msgid ""
 "By right clicking on a layer group and selecting the :guilabel:`Set Group "
 "WMS data` option you will get:"
 msgstr "レイヤーグループを右クリックし、 :guilabel:`グループWMS データを設定` オプションを選択すると、次のようになります："
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:253
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:264
 msgid "Set group WMS data dialog"
 msgstr "グループWMSデータダイアログを設定する"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:255
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:266
 msgid ""
 "short name line edits to project properties - add a regexp validator "
 "``\"^[A-Za-z][A-Za-z0-9\\._-]*\"`` to short name line edit accessible "
@@ -359,7 +377,7 @@ msgstr ""
 "プロジェクトプロパティへの短い名前の行編集 - 静的メソッドを介して短い名前の行編集にアクセス可能な正規表現バリデータ "
 "``「^[A-Za-z][A-Za-z0-9\\._-]*」`` を追加します"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:258
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:269
 msgid ""
 "add a regexp validator ``\"^[A-Za-z][A-Za-z0-9\\._-]*\"`` to short name line"
 " edit accessible through a static method"
@@ -367,7 +385,7 @@ msgstr ""
 "静的メソッドを介して短い名前のラインエディットにアクセス可能な正規表現のバリデータ ``「^[A-ZA-z][A-ZA-Z0-9\\._-]*」`` "
 "を追加します"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:261
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:272
 msgid ""
 "You can choose a short name for the project root by going to "
 ":menuselection:`Project properties --> OWS Server --> Service capabilities "
@@ -376,21 +394,21 @@ msgstr ""
 ":menuselection:`プロジェクトのプロパティ --> OWSサーバー --> サービスの機能 --> 短い名前` "
 "の順に選択すると、プロジェクトルートの短い名前を選択できます。"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:264
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:275
 msgid "add a ``TreeName`` element in the ``fullProjectSettings``"
 msgstr "``fullProjectSettings`` に ``TreeName`` 要素を追加"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:266
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:277
 msgid ""
 "If a short name has been set for layers, groups or project it is used by "
 "QGIS Sever as the layer name."
 msgstr "短い名前がレイヤー、グループやプロジェクトのために設定されている場合には、レイヤー名としてQGISサーバーによって使用されます。"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:270
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:281
 msgid "Connection to service file"
 msgstr "サービスファイルへの接続"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:272
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:283
 msgid ""
 "In order to make apache aware of the PostgreSQL service file (see the :ref"
 ":`pg-service-file` section) you need to make your :file:`*.conf` file look "
@@ -399,11 +417,11 @@ msgstr ""
 "PostgreSQLのサービス・ファイルのApacheが認識できるようにするために（ :ref:`PGサービスファイル` セクションを参照） "
 ":file:`*.conf` ファイルのようなを見て、確認する必要があり:"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:288
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:299
 msgid "Add fonts to your linux server"
 msgstr "お使いのLinuxサーバーにフォントを追加"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:290
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:301
 msgid ""
 "Keep in mind that you may use QGIS projects that point to fonts that may not"
 " exist by default on other machines. This means that if you share the "
@@ -412,7 +430,7 @@ msgid ""
 msgstr ""
 "他のマシン上のデフォルトでは存在しないかもしれないフォントを指すQGISプロジェクトを使用するかもしれないことに注意してください。これは、プロジェクトを共有する場合（フォントがターゲットマシン上に存在しない場合）、それは他のマシン上で異なって見える可能性があることを意味します。"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:294
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:305
 msgid ""
 "In order to ensure this does not happen you just need to install the missing"
 " fonts on the target machine. Doing this on desktop systems is usually "
@@ -420,16 +438,16 @@ msgid ""
 msgstr ""
 "これが起こらないようにするために、単にターゲットマシン上で不足しているフォントをインストールする必要があります。デスクトップシステム上でこれを行うのは通常は自明です（フォントをダブルクリック）。"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:297
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:308
 msgid ""
 "For linux, if you don't have a desktop environment installed (or you prefer "
 "the command line) you need to:"
 msgstr "Linuxに対しては、デスクトップ環境をインストールしていない（または、コマンドラインを好む）場合、する必要があります："
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:299
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:310
 msgid "On Debian based systems:"
 msgstr "Debianのベースのシステム:"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:312
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:323
 msgid "On Fedora based systems:"
 msgstr "Fedoraのベースのシステム:"

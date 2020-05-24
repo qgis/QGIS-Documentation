@@ -1,19 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGISDoc package.
+# This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# MarieSilvestre, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGISDoc 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:28+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: MarieSilvestre, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -77,12 +78,21 @@ msgid ""
 ":file:`qgis\\_sample\\_data.zip` from https://qgis.org/downloads/data/ and "
 "unzip the file into :file:`grassdata`."
 msgstr ""
+"A titre d'exemple, nous utiliserons le jeu de données QGIS Alaska (voir la "
+"section :ref:`label_sampledata`). Il inclut un petit :file:`SECTEUR` GRASS "
+"contenant trois couches vecteurs et un raster d'élévation. Créer un nouveau "
+"répertoire nommé :file:`grassdata`, téléchargez le jeu de données QGIS "
+"'Alaska' :file:`qgis\\_sample\\_data.zip` depuis "
+"https://qgis.org/downloads/data/ et décompressez le fichier dans "
+":file:`grassdata`. "
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:36
 msgid ""
 "More sample GRASS :file:`LOCATIONs` are available at the GRASS website at "
 "https://grass.osgeo.org/download/sample-data/."
 msgstr ""
+"Davantage de :file:`SECTEURs` GRASS sont disponibles sur le site web de "
+"GRASS à https://grass.osgeo.org/download/sample-data/. "
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:42
 msgid "Loading GRASS raster and vector layers"
@@ -95,6 +105,10 @@ msgid ""
 "location. Go to the folder :file:`grassdata` and expand location "
 ":file:`alaska` and mapset :file:`demo`."
 msgstr ""
+"Si le fournisseur est chargé dans QGIS, l'objet secteur avec l'icône GRASS "
+"|grass| est ajouté dans le navigateur sous chaque répertoire contenant un "
+"secteur GRASS. Déplacez-vous dans le répertoire :file:`grassdata` et étendez"
+" le secteur :file:`alaska` et le jeu de données."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:49
 msgid ""
@@ -243,6 +257,11 @@ msgid ""
 "Install Plugins...`, select |checkbox| :guilabel:`GRASS` and click "
 ":guilabel:`OK`."
 msgstr ""
+"Pour pouvoir utiliser les fonctionnalités de GRASS, vous devez sélectionner "
+"et charger l'extension GRASS à l'aide du gestionnaire d'extensions. Cliquez "
+"sur le menu :menuselection:`Extensions -->` |showPluginManager| "
+":menuselection:`Installer/gérer les extensions`, sélectionnez |checkbox| "
+":guilabel:`GRASS` et cliquez sur :guilabel:`OK`."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:110
 msgid ""
@@ -389,6 +408,9 @@ msgid ""
 "dataset, as :file:`LOCATION` 'alaska', as :file:`MAPSET` 'demo' and click "
 ":guilabel:`OK`."
 msgstr ""
+"Sélectionnez comme base de données GRASS, le répertoire :file:`grassdata` "
+"dans le jeu de données QGIS Alaska, puis le :file:`SECTEUR` 'alaska', le "
+":file:`Jeu de donnée` 'demo' et cliquez sur :guilabel:`OK`."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:174
 msgid ""
@@ -426,6 +448,10 @@ msgid ""
 "running GRASS command ``r.in.gdal -o input=/path/to/landcover.img "
 "output=landcover_grass``."
 msgstr ""
+"Définissez :file:`landcover_grass` comme nom de sortie pour le raster et "
+"cliquez sur :guilabel:`Lancer`. Dans l'onglet :guilabel:`Rendu`, vous voyez "
+"la commande GRASS en cours ``r.in.gdal -o input=/path/to/landcover.img "
+"output=landcover_grass``."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:186
 msgid ""
@@ -433,6 +459,9 @@ msgid ""
 ":file:`landcover_grass` raster layer is now imported into GRASS and will be "
 "visualized in the QGIS canvas."
 msgstr ""
+"Lorsque **Terminé avec succès** s'affiche, cliquez sur :guilabel:`Vue`. La "
+"couche raster :file:`landcover_grass` est maintenant importée dans GRASS et "
+"pourra être affichée dans QGIS."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:189
 msgid ""
@@ -461,6 +490,10 @@ msgid ""
 ":guilabel:`Output` tab you see the currently running GRASS command "
 "``v.in.ogr -o dsn=/path/to/lakes.gml output=lakes\\_grass``."
 msgstr ""
+"Définissez :file:`lakes_grass` comme nom de sortie et cliquez sur "
+":guilabel:`Lancer`. Vous n'avez pas besoin des autres options dans cet "
+"exemple. Dans l'onglet :guilabel:`Rendu`, vous voyez la commande GRASS en "
+"cours ``v.in.ogr -o dsn=/path/to/lakes.gml output=lakes\\_grass``."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:199
 msgid ""
@@ -468,6 +501,9 @@ msgid ""
 ":file:`lakes_grass` vector layer is now imported into GRASS and will be "
 "visualized in the QGIS canvas."
 msgstr ""
+"Lorsque **Terminé avec succès** s'affiche, cliquez sur :guilabel:`Vue`. La "
+"couche raster :file:`lakes_grass` est maintenant importée dans GRASS et "
+"pourra être affichée dans QGIS."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:206
 msgid "Creating a new GRASS LOCATION"
@@ -511,6 +547,10 @@ msgid ""
 "create one for the new :file:`LOCATION` using a file manager on your "
 "computer. Then click :guilabel:`Next`."
 msgstr ""
+"Sélectionnez un répertoire existant de base de données GRASS (GISDBASE) "
+":file:`grassdata` ou créez en un pour le nouveau :file:`SECTEUR` avec le "
+"gestionnaire de fichiers de votre ordinateur. Cliquez sur le bouton "
+":guilabel:`Suivant`."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:222
 msgid ""
@@ -530,6 +570,8 @@ msgid ""
 "Enter a name for the :file:`LOCATION` -- we used 'alaska' -- and click "
 ":guilabel:`Next`."
 msgstr ""
+"Entrez un nom pour le :file:`SECTEUR` -- nous avons utilisé 'alaska' -- et "
+"cliquez sur le bouton :guilabel:`Suivant`."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:227
 msgid ""
@@ -574,6 +616,10 @@ msgid ""
 " button :guilabel:`Set Current QGIS Extent`, to apply the extent of the "
 "loaded layer :file:`alaska.shp` as the GRASS default region extent."
 msgstr ""
+"Pour définir la région par défaut, nous devons saisir les limites Nord, Sud "
+", Est et Ouest du :file:`SECTEUR`. Ici il suffit de cliquer sur le bouton "
+":guilabel:`Fixer l'emprise courante de QGIS`, pour appliquer l'emprise de la"
+" couche :file:`alaska.shp` déjà chargé comme emprise par défaut."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:242
 msgid ""
@@ -598,6 +644,8 @@ msgid ""
 "Check out the summary to make sure it's correct and click "
 ":guilabel:`Finish`."
 msgstr ""
+"Vérifiez le résumé pour vous assurez que tout est correct et cliquez sur "
+"guilabel:Terminer`."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:249
 msgid ""
@@ -683,6 +731,11 @@ msgid ""
 "the radio button |radioButtonOn| :guilabel:`Select location` (see "
 "figure_grass_new_location_) and click :guilabel:`Next`."
 msgstr ""
+"Nous pouvons utiliser cet assistant à la fois pour créer un nouveau "
+":file:`Jeu de données` dans le :file:`SECTEUR` existant et pour créer un "
+"nouveau :file:`SECTEUR`. Cliquez sur le bouton radio "
+"|radioButtonOn|:guilabel:`Sélectionnez le Secteur` (voir "
+"figure_grass_new_location_) et cliquez sur :guilabel:`Suivant`."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:294
 msgid ""
@@ -698,6 +751,8 @@ msgid ""
 "Click :guilabel:`Next`, check out the summary to make sure it's all correct "
 "and click :guilabel:`Finish`."
 msgstr ""
+"Cliquez sur :guilabel:`Suivant`, vérifiez le résumé pour vous assurer qu'il "
+"est correct et cliquez sur :guilabel:`Terminer`."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:303
 msgid "The GRASS vector data model"
@@ -812,6 +867,11 @@ msgid ""
 " more deeply. See https://grass.osgeo.org/documentation/manuals/ for more "
 "information, books and tutorials in several languages."
 msgstr ""
+"Le meilleur moyen d’apprendre le modèle vecteur de GRASS et ses possibilités"
+" est de télécharger un des nombreux tutoriels GRASS où le modèle vecteur est"
+" décrit plus précisément. Voir "
+"https://grass.osgeo.org/documentation/manuals/ pour plus d'informations, "
+"livres et tutoriels dans différentes langues."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:360
 msgid "Creating a new GRASS vector layer"
@@ -1327,6 +1387,12 @@ msgid ""
 "select a new region interactively with your mouse on the QGIS canvas "
 "dragging a rectangle."
 msgstr ""
+"La région peut être modifiée dans l'onglet 'Region' du panneau 'Outils "
+"GRASS'. Saisissez l'emprise de la nouvelle région et la résolution et "
+"cliquez sur :guilabel:`Appliquer`. Si vous cliquez sur "
+":guilabel:`Sélectionnez l'emprise sur le canevas`, vous pouvez sélectionner "
+"de manière interactive une nouvelle région avec votre souris dans le canevas"
+" de carte, en dessinant un rectangle."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:562
 msgid ""
@@ -1391,6 +1457,9 @@ msgid ""
 "version |CURRENT| is available in the GRASS wiki at "
 "https://grasswiki.osgeo.org/wiki/GRASS-QGIS_relevant_module_list."
 msgstr ""
+"La liste des modules GRASS disponibles via la Boîte à outils de QGIS "
+"|CURRENT| est détaillée sur le wiki de GRASS : "
+"https://grasswiki.osgeo.org/wiki/GRASS-QGIS_relevant_module_list."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:601
 msgid ""
@@ -1484,6 +1553,11 @@ msgid ""
 "process. If all works well, you will finally see a ``Successfully finished``"
 " message."
 msgstr ""
+"L'onglet :guilabel:`Rendu` fournit des informations sur l'état de sortie du "
+"module. Quand vous cliquez sur le bouton :guilabel:`Lancer`, le module passe"
+" sur l'onglet :guilabel:`Rendu` et vous voyez les informations sur le "
+"processus en cours. Si tout se passe bien, vous verrez finalement le message"
+" ``Terminé avec succès``."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:650
 msgid "**Manual**"
@@ -1608,6 +1682,9 @@ msgid ""
 "the message ``Successfully finished`` appears in the output window. Then "
 "click :guilabel:`View Output` and :guilabel:`Close`."
 msgstr ""
+"Cliquer sur :guilabel:`Lancer` pour lancer le traitement. Attendez quelques "
+"instants que le message ``Terminé avec succès`` apparaisse à l'écran. "
+"Cliquez enfin sur :guilabel:`Vue` puis :guilabel:`Fermer`."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:701
 msgid ""
@@ -1700,6 +1777,10 @@ msgid ""
 ":guilabel:`Name for output vector map` 'ctour_100_smooth', and click "
 ":guilabel:`Run`."
 msgstr ""
+"Dans la liste des algorithmes choisissez Chaiken. Laisser les autres options"
+" par défaut et descendez à la dernière ligne pour donner le nom de la couche"
+" d'information à créer : :guilabel:`Nom de la couche vectorielle en sortie` "
+"'ctour_100_smooth', et cliquez sur :guilabel:`Lancer`."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:733
 msgid ""
@@ -1707,6 +1788,9 @@ msgid ""
 " the output windows, click :guilabel:`View Output` and then "
 ":guilabel:`Close`."
 msgstr ""
+"Cela peut prendre plusieurs minutes. Lorsque le texte ``Terminé avec "
+"succès`` apparait, cliquez sur le bouton :guilabel:`Vue` puis sur "
+":guilabel:`Fermer`."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:735
 msgid ""
@@ -1793,6 +1877,8 @@ msgid ""
 "Enter ``gtopo30_shade`` for the new hillshade raster, and click "
 ":guilabel:`Run`."
 msgstr ""
+"Saisissez ``gtopo30_shade`` comme nom pour la nouvelle couche d'ombrage et "
+"cliquez sur le bouton :guilabel:`Lancer`."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:771
 msgid ""
@@ -1874,6 +1960,10 @@ msgid ""
 "``r.shaded.relief map=gtopo30 shade=gtopo30_shade2 azimuth=315 zmult=3`` and"
 " press :kbd:`Enter`."
 msgstr ""
+"Ouvrez le raster ``gtopo30`` comme ci-dessus, lancez la Boîte à outils GRASS"
+" et ouvrez la console GRASS. Dans la console, entrez la ligne suivante "
+"``r.shaded.relief map=gtopo30 shade=gtopo30_shade2 azimuth=315 zmult=3`` et "
+"pressez :kbd:`Enter`."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:809
 msgid ""
@@ -1918,6 +2008,9 @@ msgid ""
 "Again using the Alaska data, refer to :ref:`sec_import_loc_data` to import "
 "the :file:`shapefiles/trees.shp` file into GRASS."
 msgstr ""
+"Encore une fois, nous allons utiliser le jeu de données Alaska. Référez vous"
+" à :ref:`sec_import_loc_data` pour importer dans GRASS le fichier contenu "
+"dans le répertoire :file:`shapefiles/trees.shp`."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:833
 msgid ""
@@ -1984,6 +2077,9 @@ msgid ""
 "``elev``, and click :guilabel:`Run`. This is a computationally heavy "
 "operation, which will run for a long time (probably up to two hours)."
 msgstr ""
+"Un seul paramètre additionnel est requis : Entrez ``elev`` pour le "
+":guilabel:`column prefix`, et cliquez sur le bouton :guilabel:`Lancer`. "
+"C'est un opération lourde qui peut durer longtemps (jusqu'à deux heures)."
 
 #: ../../docs/user_manual/grass_integration/grass_integration.rst:851
 msgid ""
@@ -2025,3 +2121,8 @@ msgid ""
 "modules, changing a module's group, etc., can be found at "
 "https://qgis.org/en/site/getinvolved/development/addinggrasstools.html."
 msgstr ""
+"L'analyseur lit cette définition et crée un nouvel onglet à l'intérieur de "
+"la Boîte à outils lorsque vous sélectionnez le module. Une description plus "
+"détaillée pour ajouter des modules, changer les groupes de modules, etc. est"
+" disponible sur "
+"https://qgis.org/fr/site/getinvolved/development/addinggrasstools.html."

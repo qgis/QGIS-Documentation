@@ -1,19 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGISDoc package.
+# This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# mnamihdk, 2020
+# Kayama Yoichi <yoichi.kayama@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGISDoc 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:32+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Kayama Yoichi <yoichi.kayama@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -102,7 +104,7 @@ msgstr "属性テーブルウィンドウの上部にあるボタンは、次の
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:73
 msgid "Available Tools"
-msgstr ""
+msgstr "利用可能なツール"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Icon"
@@ -482,8 +484,8 @@ msgstr ""
 "「最後のビューを保存する」、「テーブルビュー」または「フォームビュー」にすることができます。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:144
-msgid "Attribute table in form view (top) vs table view (bottom)"
-msgstr "テーブルビューVSフォームビュー（上面）に属性テーブル（下）"
+msgid "Attribute table in table view (top) vs form view (bottom)"
+msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:152
 msgid "Configuring the columns"
@@ -1006,7 +1008,7 @@ msgstr "属性値を編集する"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:439
 msgid "Editing attribute values can be done by:"
-msgstr "属性値を編集することによって行うことができます。"
+msgstr "属性値の編集は以下の方法で行うことができます。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:441
 msgid ""
@@ -1014,7 +1016,7 @@ msgid ""
 " table or form view. Changes are hence done cell by cell, feature by "
 "feature;"
 msgstr ""
-"セルに直接新しい値を入力するかどうか、属性テーブルがテーブルビューであるかフォームビューであるかによって異なります。したがって、変更はセルごとに、地物ごとに行われます。"
+"属性テーブルがテーブルビューであるか、フォームビューであるかにかかわらず、セルに直接新しい値を入力します。したがって変更は、個々のセルや地物ごとに行われます。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:443
 msgid ""
@@ -1022,22 +1024,27 @@ msgid ""
 " a field that may already exist or to be created but for multiple features. "
 "It can be used to create virtual fields;"
 msgstr ""
+":ref:`フィールド計算機 <vector_field_calculator>` "
+"を使用して、あるフィールド列全体に対して連続して更新を行います。フィールドは既存のものでも、新しく作られたものでもよいですが、更新は複数の地物に対して行われます。これは仮想フィールドを作るためにも使用することができます。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:446
 msgid ""
 "using the quick field :ref:`calculation bar <quick_field_calculation_bar>`: "
 "same as above but for only existing field;"
 msgstr ""
+"クイックフィールド :ref:`計算バー <quick_field_calculation_bar>` "
+"を使用します。上と同じですが既存のフィールドに対してのみ使用できます。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:448
 msgid ""
 "or using the :ref:`multi edit <multi_edit_fields>` mode: update in a row "
 "multiple fields for multiple features."
-msgstr "または :ref:`複数編集 <multi_edit_fields>` モードを使用：複数の地物の複数のフィールドを連続して更新します。"
+msgstr ""
+"または :ref:`複数編集 <multi_edit_fields>` モードを使用します。複数の地物の複数のフィールドを連続して更新します。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:454
 msgid "Using the Field Calculator"
-msgstr ""
+msgstr "フィールド計算機を使用する"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:456
 msgid ""
@@ -1047,6 +1054,9 @@ msgid ""
 " features. The results can be used to update an existing field, or written "
 "to a new field (that can be a :ref:`virtual <virtual_field>` one)."
 msgstr ""
+"属性テーブルの |calculateField| :sup:`フィールド計算機` "
+"ボタンは、例えばジオメトリ地物の長さや面積を計算するために、既存の属性値もしくは定義された関数に基づいて計算を行うことを可能にします。計算の結果は既存のフィールドを更新するために、あるいは新しいフィールド（これは"
+" :ref:`virtual <virtual_field>` なフィールドでもいいです）に書き込むために使うことができます。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:462
 msgid ""
@@ -1067,18 +1077,20 @@ msgid ""
 "apply it to an existing or a newly created field. To use the field "
 "calculator dialog, you must select whether you want to:"
 msgstr ""
+":ref:`式ビルダー <functions_list>` "
+"ダイアログを基に構築されたフィールド計算機ダイアログは、式を定義し、それを既存のもしくは新しく作られたフィールドに適用するための、完璧なインターフェイスを提供します。フィールド計算機ダイアログを使うには、計算によって以下のどちらをしたいのかを選ぶ必要があります。"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:473
 msgid "apply calculation on the whole layer or on selected features only"
-msgstr ""
+msgstr "レイヤの全体に計算を適用したいのか、それとも選択した地物のみに適用したいのか"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:474
 msgid "create a new field for the calculation or update an existing one."
-msgstr ""
+msgstr "計算によって新しいフィールドを作りたいのか、それとも既存のフィールドを更新したいのか"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:481
 msgid "Field Calculator"
-msgstr "フィールド演算"
+msgstr "フィールド計算機"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:483
 msgid ""
