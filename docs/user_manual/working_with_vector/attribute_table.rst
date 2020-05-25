@@ -122,7 +122,7 @@ QGIS provides two view modes to easily manipulate data in the attribute table:
   <maptips>` in a first panel and displays only the attributes of the clicked
   identifier in the second one.
   There is a pull-down menu at the top of the first panel where the "identifier"
-  can be specified using a feature attribute (:guilabel:`Column preview`) or an
+  can be specified using an attribute (:guilabel:`Column preview`) or an
   :guilabel:`Expression`.
   The pull-down also includes the last 10 expressions for re-use.
   Form view uses the layer fields configuration
