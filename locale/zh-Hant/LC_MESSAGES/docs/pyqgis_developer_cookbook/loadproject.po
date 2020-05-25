@@ -1,36 +1,40 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014, QGIS project
-# This file is distributed under the same license as the QGIS Documentation
-# Project package.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
-# Translators:
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-11 14:48+0200\n"
-"PO-Revision-Date: 2019-08-11 13:02+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>\n"
-"Language-Team: Chinese Traditional (http://www.transifex.com/qgis/qgis-documentation/language/zh-Hant/)\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
+"PO-Revision-Date: 2020-03-16 19:23+0000\n"
+"Language-Team: Chinese Traditional (https://www.transifex.com/qgis/teams/6144/zh-Hant/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
 "Language: zh-Hant\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:11
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:6
+msgid ""
+"The code snippets on this page need the following imports if you're outside "
+"the pyqgis console:"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:34
 msgid "Loading Projects"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:13
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:36
 msgid ""
 "Sometimes you need to load an existing project from a plugin or (more often)"
 " when developing a standalone QGIS Python application (see: "
 ":ref:`pythonapplications`)."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:20
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:43
 msgid ""
 "To load a project into the current QGIS application you need to create an "
 "instance of the :class:`QgsProject <qgis.core.QgsProject>` class. This is a "
@@ -40,7 +44,7 @@ msgid ""
 "project to be loaded:"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:41
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:74
 msgid ""
 "If you need to make modifications to the project (for example to add or "
 "remove some layers) and save your changes, call the :meth:`write() "
@@ -49,57 +53,17 @@ msgid ""
 " path for saving the project to a new location:"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:53
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:86
 msgid ""
 "Both :meth:`read() <qgis.core.QgsProject.read>` and :meth:`write() "
 "<qgis.core.QgsProject.write>` functions return a boolean value that you can "
 "use to check if the operation was successful."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadproject.rst:59
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:92
 msgid ""
 "If you are writing a QGIS standalone application, in order to synchronise "
 "the loaded project with the canvas you need to instantiate a "
 ":class:`QgsLayerTreeMapCanvasBridge <qgis.gui.QgsLayerTreeMapCanvasBridge>` "
 "as in the example below:"
 msgstr ""
-
-#~ msgid ""
-#~ "Sometimes you need to load an existing project from a plugin or (more often)"
-#~ " when developing a stand-alone QGIS Python application (see: "
-#~ ":ref:`pythonapplications`)."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "To load a project into the current QGIS application you need a "
-#~ ":class:`QgsProject` :func:`instance()` object and call its :func:`read()` "
-#~ "method passing to it a :class:`QFileInfo` object that contains the path from"
-#~ " where the project will be loaded::"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "In case you need to make some modifications to the project (for example add "
-#~ "or remove some layers) and save your changes, you can call the "
-#~ ":func:`write()` method of your project instance. The :func:`write()` method "
-#~ "also accepts an optional :class:`QFileInfo` that allows you to specify a "
-#~ "path where the project will be saved::"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Both :func:`read()` and :func:`write()` funtions return a boolean value that"
-#~ " you can use to check if the operation was successful."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If you are writing a QGIS standalone application, in order to synchronise "
-#~ "the loaded project with the canvas you need to instanciate a "
-#~ ":class:`QgsLayerTreeMapCanvasBridge` as in the example below::"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If you need to make modifications to the project (for example to add or "
-#~ "remove some layers) and save your changes, call the :meth:`write() "
-#~ "<qgis.core.QgsProject.write>` method of your project instance. The "
-#~ ":func:`write()` method also accepts an optional path for saving the project "
-#~ "to a new location:"
-#~ msgstr ""
