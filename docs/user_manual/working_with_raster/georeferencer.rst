@@ -2,15 +2,15 @@
    single: Raster; Georeference
 .. _`georef`:
 
-Georeferencer Plugin
-====================
+Georeferencer
+=============
 
 .. only:: html
 
    .. contents::
       :local:
 
-The |georefRun| Georeferencer Plugin is a tool for generating world files for rasters.
+The |georefRun| Georeferencer is a tool for generating world files for rasters.
 It allows you to reference rasters to geographic or projected coordinate systems by
 creating a new GeoTiff or by adding a world file to the existing image. The basic
 approach to georeferencing a raster is to locate points on the raster for which
@@ -66,14 +66,13 @@ alternative procedures can be used:
 
 The usual procedure for georeferencing an image involves selecting multiple
 points on the raster, specifying their coordinates, and choosing a relevant
-transformation type. Based on the input parameters and data, the plugin will
+transformation type. Based on the input parameters and data, the Georeferencer will
 compute the world file parameters. The more coordinates you provide, the better
 the result will be.
 
-The first step is to start QGIS, load the Georeferencer Plugin (see
-:ref:`managing_plugins`) and click on :menuselection:`Raster -->` |georefRun|
+The first step is to start QGIS and click on :menuselection:`Raster -->` |georefRun|
 :menuselection:`Georeferencer`, which appears in the QGIS menu bar. The Georeferencer
-Plugin dialog appears as shown in figure_georeferencer_dialog_.
+dialog appears as shown in figure_georeferencer_dialog_.
 
 For this example, we are using a topo sheet of South Dakota from SDGS. It can
 later be visualized together with the data from the GRASS :file:`spearfish60`
@@ -82,10 +81,10 @@ https://grass.osgeo.org/sampledata/spearfish_toposheet.tar.gz.
 
 .. _figure_georeferencer_dialog:
 
-.. figure:: img/georefplugin.png
+.. figure:: img/georef.png
    :align: center
 
-   Georeferencer Plugin Dialog
+   Georeferencer Dialog
 
 
 .. _`georeferencer_entering`:
@@ -111,7 +110,7 @@ Entering ground control points (GCPs)
 
 #. Continue entering points. You should have at least four points, and the more
    coordinates you can provide, the better the result will be. There are
-   additional tools on the plugin dialog to zoom and pan the working area in
+   additional tools for zooming and panning the working area in
    order to locate a relevant set of GCP points.
 
 .. _figure_georeferencer_add_points:
@@ -124,7 +123,7 @@ Entering ground control points (GCPs)
 
 The points that are added to the map will be stored in a separate text file
 (:file:`[filename].points`) usually together with the raster image. This allows
-us to reopen the Georeferencer plugin at a later date and add new points or delete
+us to reopen the Georeferencer at a later date and add new points or delete
 existing ones to optimize the result. The points file contains values of the
 form: ``mapX, mapY, pixelX, pixelY``. You can use the |loadGCPpoints|
 :sup:`Load GCP points` and |saveGCPPointsAs| :sup:`Save GCP points as` buttons to
