@@ -13,7 +13,6 @@ Using QGIS Core Plugins
 
    plugins_coordinate_capture
    plugins_db_manager
-   plugins_evis
    plugins_geometry_checker
    plugins_georeferencer
    plugins_metasearch
@@ -29,7 +28,6 @@ Icon                    Plugin                        Description               
 ======================  ============================  ======================================================  ===============================
 |coordinateCapture|     Coordinate Capture            Capture mouse coordinate in different CRS               :ref:`coordcapt`
 |dbManager|             DB Manager                    Manage your databases within QGIS                       :ref:`dbmanager`
-|eventId|               eVis                          Event Visualization Tool                                :ref:`evis`
 |geometryChecker|       Geometry Checker              Check and repair errors in vector geometries            :ref:`geometry_checker`
 |georefRun|             Georeferencer GDAL            Georeference rasters with GDAL                          :ref:`georef`
 |gpsImporter|           GPS Tools                     Tools for loading and importing GPS data                :ref:`plugin_gps`
@@ -50,8 +48,6 @@ Icon                    Plugin                        Description               
 .. |coordinateCapture| image:: /static/common/coordinate_capture.png
    :width: 1.5em
 .. |dbManager| image:: /static/common/dbmanager.png
-   :width: 1.5em
-.. |eventId| image:: /static/common/eVisEventIdTool.png
    :width: 1.5em
 .. |geometryChecker| image:: /static/common/geometrychecker.png
    :width: 1.5em

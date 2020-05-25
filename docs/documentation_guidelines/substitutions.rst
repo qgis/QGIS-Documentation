@@ -465,17 +465,6 @@ Icon                            Substitution                        Icon        
 |grassOpenMapset|               ``|grassOpenMapset|``               |grassCloseMapset|              ``|grassCloseMapset|``
 ==============================  ==================================  ==============================  ==================================
 
-eVis plugin
-...........
-
-==============================  ==================================  ==============================  ==================================
-Icon                            Substitution                        Icon                            Substitution
-==============================  ==================================  ==============================  ==================================
-|eventBrowser|                  ``|eventBrowser|``                  |eventId|                       ``|eventId|``
-|evisConnect|                   ``|evisConnect|``
-==============================  ==================================  ==============================  ==================================
-
-
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -733,12 +722,6 @@ Icon                            Substitution                        Icon        
 .. |ellipseExtent| image:: /static/common/mActionEllipseExtent.png
    :width: 1.5em
 .. |ellipseFoci| image:: /static/common/mActionEllipseFoci.png
-   :width: 1.5em
-.. |eventBrowser| image:: /static/common/eVisEventBrowser.png
-   :width: 1.5em
-.. |eventId| image:: /static/common/eVisEventIdTool.png
-   :width: 1.5em
-.. |evisConnect| image:: /static/common/eVisDatabaseConnection.png
    :width: 1.5em
 .. |expandNewTree| image:: /static/common/mActionExpandNewTree.png
    :width: 1.5em

@@ -1698,25 +1698,6 @@ If no database plugins are enabled, there will be no
      - Shortcut
      - Toolbar
      - Reference
-   * - :menuselection:`eVis -->`
-     - :kbd:`Alt+D` + :kbd:`E`
-     -
-     - :ref:`evis`
-   * - :menuselection:`-->`
-       |evisConnect| :guilabel:`eVis Database Connection`
-     -
-     - :guilabel:`Database`
-     - :ref:`evis`
-   * - :menuselection:`-->`
-       |eventId| :guilabel:`eVis Event Id Tool`
-     -
-     - :guilabel:`Database`
-     - :ref:`evis`
-   * - :menuselection:`-->`
-       |eventBrowser| :guilabel:`eVis Event Browser`
-     -
-     - :guilabel:`Database`
-     - :ref:`evis`
    * - :guilabel:`Offline editing...`
      - :kbd:`Alt+D` + :kbd:`O`
      -
@@ -2665,12 +2646,6 @@ Click the icon to open the Plugin Manager dialog.
 .. |ellipseExtent| image:: /static/common/mActionEllipseExtent.png
    :width: 1.5em
 .. |ellipseFoci| image:: /static/common/mActionEllipseFoci.png
-   :width: 1.5em
-.. |eventBrowser| image:: /static/common/eVisEventBrowser.png
-   :width: 1.5em
-.. |eventId| image:: /static/common/eVisEventIdTool.png
-   :width: 1.5em
-.. |evisConnect| image:: /static/common/eVisDatabaseConnection.png
    :width: 1.5em
 .. |expressionSelect| image:: /static/common/mIconExpressionSelect.png
    :width: 1.5em
