@@ -233,7 +233,7 @@ figure_create_temporary_. Then:
    * ``Point`` or ``MultiPoint`` layer,
    * ``LineString/CompoundCurve`` or ``MultiLineString/MultiCurve`` layer,
    * ``Polygon/CurvePolygon`` or ``MultiPolygon/MultiSurface`` layer.
-#. If of a geometric type, specify the dimensions of the dataset: check whether
+#. For geometric types, specify the dimensions of the dataset: check whether
    it should :guilabel:`Include Z dimension` and/or :guilabel:`Include M values`
 #. Specify the coordinate reference system using the |setProjection| button.
 #. Add fields to the layer. Note that unlike many formats, temporary
@@ -246,7 +246,7 @@ figure_create_temporary_. Then:
    #. Depending on the selected data format, enter the :guilabel:`Length` and
       :guilabel:`Precision`
    #. Click on the |newAttribute| :guilabel:`Add to Fields List` button
-   #. Reproduce the steps above for each field you need to add
+   #. Repeat the steps above for each field you need to add
 #. Once you are happy with the settings, click :guilabel:`OK`.
    QGIS will add the new layer to the :guilabel:`Layers` panel, and you can edit
    it as described in section :ref:`sec_edit_existing_layer`.
