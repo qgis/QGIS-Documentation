@@ -449,12 +449,8 @@ Parameters
 
        .. figure:: img/buffer_cap_style.png
           :align: center
-<<<<<<< HEAD
-       
-=======
           :width: 100%
 
->>>>>>> 61013eac8... Make buffer algorithm images clickable and background transparent
           Round, flat and square cap styles
    * - **Join style**
      - ``JOIN_STYLE``
@@ -488,12 +484,8 @@ Parameters
          
        .. figure:: img/buffer_dissolve.png
           :align: center
-<<<<<<< HEAD
-     
-=======
           :width: 100%
 
->>>>>>> 61013eac8... Make buffer algorithm images clickable and background transparent
           Standard and dissolved buffer
    * - **Buffered**
      - ``OUTPUT``
