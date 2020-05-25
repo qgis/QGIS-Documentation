@@ -111,7 +111,6 @@ Core plugins include:
 
 #.  Coordinate Capture (capture mouse coordinates in different CRSs)
 #.  DB Manager (exchange, edit and view layers and tables from/to databases; execute SQL queries)
-#.  eVIS (visualize events)
 #.  Geometry Checker (check geometries for errors)
 #.  Georeferencer GDAL (add projection information to rasters using GDAL)
 #.  GPS Tools (load and import GPS data)
