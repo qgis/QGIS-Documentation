@@ -524,6 +524,7 @@ the map canvas. If there are labels from different layers in the same
 location, the label with the higher priority will be displayed and the
 others will be left out.
 
+
 .. _`label_obstacles`:
 
 Obstacles
@@ -545,22 +546,22 @@ Use the :guilabel:`Settings` button to tweak the obstacle's weighing.
 * The |slider| priority control slider for obstacles allows you to make labels
   prefer to overlap features from certain layers rather than others.
   A **Low weight** obstacle priority means that features of the layer are less
-  considered as obstacles and thus more likely to be covered by labels.
+  important obstacles and thus more likely to be covered by labels.
   This priority can also be data-defined, so that within the same layer,
   certain features are more likely to be covered than others.
 
-* For polygon layers, you can choose the type of obstacle the features could be,
-  by minimising the labels placement:
+* For polygon layers, you can choose the kind of obstacle the feature is:
 
   * **over the feature's interior**: avoids placing labels over the interior of
     the polygon (prefers placing labels totally outside or just slightly inside
     the polygon)
-  * or **over the feature's boundary**: avoids placing labels over boundary of
+  * or **over the feature's boundary**: avoids placing labels over the boundary of
     the polygon (prefers placing labels outside or completely inside the
-    polygon). E.g., it can be useful for regional boundary layers, where the
-    features cover an entire area. In this case, it's impossible to avoid
-    placing labels within these features, and it looks much better to avoid
-    placing them over the boundaries between features.
+    polygon). This can be useful for layers where the
+    features cover the whole area (administrative units, categorical coverages, ...).
+    In this case, it is impossible to avoid
+    placing labels within these features, and it looks much better when
+    placing them over the boundaries between features is avoided.
 
 
 .. _labels_rendering:
