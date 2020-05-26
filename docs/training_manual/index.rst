@@ -31,10 +31,3 @@ QGIS Training Manual
    appendix/contribute
 
    answers/answers
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
