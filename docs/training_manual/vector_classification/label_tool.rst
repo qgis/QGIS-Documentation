@@ -1,110 +1,109 @@
-|LS| The Label Tool
+|LS| Labels
 ===============================================================================
 
 Labels can be added to a map to show any information about an object. Any
 vector layer can have labels associated with it. These labels rely on the
 attribute data of a layer for their content.
 
-.. note::  The :guilabel:`Layer Properties` dialog does have a
-   :guilabel:`Labels` tab, which now offers the same functionality,
-   but for this example we'll use the :guilabel:`Label tool`, accessed via a
-   toolbar button.
-
 **The goal for this lesson:** To apply useful and good-looking labels to a
 layer.
+
 
 |basic| |FA| Using Labels
 -------------------------------------------------------------------------------
 
-Before being able to access the Label tool, you will need to ensure that it has
-been activated.
+First, ensure that the |labeling| button is visible in the GUI:
 
-* Go to the menu item :menuselection:`View --> Toolbars`.
-* Ensure that the :guilabel:`Label` item has a check mark next to it. If it
-  doesn't, click on the :guilabel:`Label` item, and it will be activated.
-* Click on the :guilabel:`places` layer in the :guilabel:`Layers` panel, so that
-  it is highlighted.
-* Click on the following toolbar button: |labeling|
+#. Go to the menu item :menuselection:`View --> Toolbars`
+#. Ensure that the :guilabel:`Label Toolbar` item has a check mark next to it.
+   If it doesn't, click on the :guilabel:`Label Toolbar` item to activate it.
+#. Click on the ``places`` layer in the :guilabel:`Layers` panel so that
+   it is highlighted
+#. Click on the |labeling| toolbar button to open the
+   :guilabel:`Labels` tab of the :guilabel:`Layer Styling` panel
 
-This gives you the :guilabel:`Layer labeling settings` dialog.
+#. Switch from :guilabel:`No Labels` to |labeling| :guilabel:`Single Labels`
 
-* Check the box next to :guilabel:`Label this layer with...`.
+   You'll need to choose which field in the attributes will be used for the
+   labels. In the previous lesson, you decided that the ``name`` field was the
+   most suitable one for this purpose.
 
-You'll need to choose which field in the attributes will be used for the
-labels. In the previous lesson, you decided that the :kbd:`NAME` field was the
-most suitable one for this purpose.
+#. Select ``name`` from the Value list:
 
-* Select :guilabel:`name` from the list:
+   .. figure:: img/select_label_with.png
+      :align: center
 
-.. figure:: img/select_label_with.png
-   :align: center
-
-* Click :guilabel:`OK`.
+#. Click :guilabel:`Apply`
 
 The map should now have labels like this:
 
 .. figure:: img/first_place_names.png
    :align: center
 
+
 |basic| |FA| Changing Label Options
 -------------------------------------------------------------------------------
 
-Depending on the styles you chose for your map in earlier lessons, you'll
-might find that the labels are not appropriately formatted and either overlap or
+Depending on the styles you chose for your map in earlier lessons, you might
+find that the labels are not appropriately formatted and either overlap or
 are too far away from their point markers.
 
-* Open the :guilabel:`Label tool` again by clicking on its button as before.
-* Make sure :guilabel:`Text` is selected in the left-hand options list, then
-  update the text formatting options to match those shown here:
+.. note::  Above, you used the |labeling| button in the
+   :guilabel:`Label Toolbar` to open the :guilabel:`Layer Styling` panel. As
+   with :guilabel:`Symbology`, the same label options are available via both
+   the :guilabel:`Layer Styling` panel and the :guilabel:`Layer Properties`
+   dialog. Here, you'll use the :guilabel:`Layer Properties` dialog.
 
+#. Open the :guilabel:`Layer Properties` dialog by double-clicking on the
+   ``places`` layer
+#. Select the |labeling| :guilabel:`Labels` tab
+#. Make sure :guilabel:`Text` is selected in the left-hand options list, then
+   update the text formatting options to match those shown here:
 
-.. figure:: img/label_formatting_options.png
-   :align: center
+   .. figure:: img/label_formatting_options.png
+      :align: center
 
-That's the font problem solved! Now let's look at the problem of the labels
-overlapping the points, but before we do that, let's take a look at the
-:guilabel:`Buffer` option.
+#. Click :guilabel:`Apply`
 
-* Open the :guilabel:`Label tool` dialog.
-* Select :guilabel:`Buffer` from the left-hand options list.
-* Select the checkbox next to :guilabel:`Draw text buffer`, then choose options
-  to match those shown here:
+   That font may be larger and more familiar to users, but its readability is
+   still dependent on what layers are rendered beneath it. To solve this,
+   let's take a look at the :guilabel:`Buffer` option.
 
+#. Select :guilabel:`Buffer` from the left-hand options list
+#. Select the checkbox next to :guilabel:`Draw text buffer`, then choose
+   options to match those shown here:
 
-.. figure:: img/buffer_options.png
-   :align: center
+   .. figure:: img/buffer_options.png
+      :align: center
 
-* Click :guilabel:`Apply`.
+#. Click :guilabel:`Apply`
 
+   You'll see that this adds a colored buffer or border to the place labels,
+   making them easier to pick out on the map:
 
-You'll see that this adds a colored buffer or border to the place labels, making
-them easier to pick out on the map:
+   .. figure:: img/buffer_results.png
+      :align: center
 
-.. figure:: img/buffer_results.png
-   :align: center
+   Now we can address the positioning of the labels in relation to their point
+   markers.
 
-Now we can address the positioning of the labels in relation to their point
-markers.
+#. Select :guilabel:`Placement` from the left-hand options list
+#. Select :guilabel:`Around point` and change the value of
+   :guilabel:`Distance` to ``2.0`` Millimeters:
 
-* In the :guilabel:`Label tool` dialog, go to the :guilabel:`Placement` tab.
-* Change the value of :guilabel:`Distance` to :kbd:`2mm` and make sure that
-  :guilabel:`Around point` is selected:
+   .. figure:: img/offset_placement_settings.png
+      :align: center
 
+#. Click :guilabel:`Apply`
 
-.. figure:: img/offset_placement_settings.png
-   :align: center
-
-* Click :guilabel:`Apply`.
-
-
-You'll see that the labels are no longer overlapping their point markers.
+   You'll see that the labels are no longer overlapping their point markers.
 
 
 |moderate| |FA| Using Labels Instead of Layer Symbology
 -------------------------------------------------------------------------------
 
 In many cases, the location of a point doesn't need to be very specific. For
-example, most of the points in the :guilabel:`places` layer refer to entire
+example, most of the points in the ``places`` layer refer to entire
 towns or suburbs, and the specific point associated with such features is not
 that specific on a large scale. In fact, giving a point that is too specific is
 often confusing for someone reading a map.
@@ -120,34 +119,36 @@ the point symbols and replace them completely with labels.
 In QGIS, you can do this by changing the position of the labels to be rendered
 directly over the points they refer to.
 
-* Open the :guilabel:`Layer labeling settings` dialog for the
-  :guilabel:`places` layer.
-* Select the :guilabel:`Placement` option from the options list.
-* Click on the :guilabel:`Offset from point` button.
+#. Open the |labeling| :guilabel:`Labels` tab of the
+   :guilabel:`Layer Properties` dialog for the ``places`` layer
+#. Select the :guilabel:`Placement` option from the options list
+#. Click on the :guilabel:`Offset from point` button
 
-This will reveal the :guilabel:`Quadrant` options which you can use to set the
-position of the label in relation to the point marker. In this case, we want the
-label to be centered on the point, so choose the center quadrant:
+   This will reveal the :guilabel:`Quadrant` options which you can use to set the
+   position of the label in relation to the point marker. In this case, we want the
+   label to be centered on the point, so choose the center quadrant:
 
-.. figure:: img/quadrant_offset_options.png
-   :align: center
+   .. figure:: img/quadrant_offset_options.png
+      :align: center
 
-* Hide the point symbols by editing the layer style as usual, and setting the
-  size of the :guilabel:`Ellipse marker` width and height to :kbd:`0`:
+#. Hide the point symbols by editing the layer :guilabel:`Symbology` as usual,
+   and setting the size of the :guilabel:`Marker` size to ``0.0``:
 
-.. figure:: img/hide_point_marker.png
-   :align: center
+   .. figure:: img/hide_point_marker.png
+      :align: center
 
-* Click :guilabel:`OK` and you'll see this result:
+#. Click :guilabel:`Apply` and you'll see this result:
 
-.. figure:: img/hide_point_marker_results.png
-   :align: center
+   .. figure:: img/hide_point_marker_results.png
+      :align: center
 
 If you were to zoom out on the map, you would see that some of the labels
 disappear at larger scales to avoid overlapping. Sometimes this is what you
 want when dealing with datasets that have many points, but at other times
 you will lose useful information this way. There is another possibility for
 handling cases like this, which we'll cover in a later exercise in this lesson.
+For now, zoom out and click on the |showUnplacedLabel| button in the toolbar
+and see what happens.
 
 
 .. _backlink-label-tool-1:
@@ -155,15 +156,14 @@ handling cases like this, which we'll cover in a later exercise in this lesson.
 |moderate| |TY| Customize the Labels
 -------------------------------------------------------------------------------
 
-* Return the label and symbol settings to have a point marker and a label offset
-  of :kbd:`2.00mm`. You may like to adjust the styling of the point marker or
-  labels at this stage.
+* Reset the label and symbol settings to have a point marker and a label offset
+  of ``2.0`` Millimeters.
 
 :ref:`Check your results <label-tool-1>`
 
-* Set the map to the scale :kbd:`1:100000`. You can do this by typing it into
-  the :guilabel:`Scale` box in the :guilabel:`Status Bar`.
-* Modify your labels to be suitable for viewing at this scale.
+* Set the map to the scale ``1:100000``. You can do this by typing it into
+  the :guilabel:`Scale` box in the :guilabel:`Status Bar`. Modify your labels
+  to be suitable for viewing at this scale.
 
 :ref:`Check your results <label-tool-2>`
 
@@ -178,96 +178,111 @@ way as the points, your results would look like this:
 .. figure:: img/bad_street_labels.png
    :align: center
 
-We will now reformat the :guilabel:`roads` layer labels so that they are easy to
+We will now reformat the ``roads`` layer labels so that they are easy to
 understand.
 
-* Hide the :guilabel:`Places` layer so that it doesn't distract you.
-* Activate labels for the :guilabel:`streets` layer as before.
-* Set the font :guilabel:`Size` to :kbd:`10` so that you can see more labels.
-* Zoom in on the |majorUrbanName| town area.
-* In the :guilabel:`Label tool` dialog's :guilabel:`Advanced` tab, choose the
-  following settings:
+#. Hide the ``places`` layer so that it doesn't distract you
+#. Activate |labeling| :guilabel:`Single Labels` for the ``roads``
+   layer as you did above for ``places``
+#. Set the font :guilabel:`Size` to ``10`` so that you can see more labels
+#. Zoom in on the |majorUrbanName| town area
+#. In the :guilabel:`Labels` tab's :guilabel:`Placement` tab, choose the
+   following settings:
 
-.. figure:: img/street_label_settings.png
-   :align: center
+   .. figure:: img/street_label_settings.png
+      :align: center
 
-You'll probably find that the text styling has used default values and the
-labels are consequently very hard to read. Set the label text format to have a
-dark-grey or black :kbd:`Color` and a light-yellow :kbd:`buffer`.
+   You'll probably find that the text styling has used default values and the
+   labels are consequently very hard to read. Update the :guilabel:`Text`
+   to use a dark-grey or black :guilabel:`Color` and the :guilabel:`Buffer`
+   to use a light-yellow :guilabel:`Color`.
 
-The map will look somewhat like this, depending on scale:
+   The map will look somewhat like this, depending on scale:
 
-.. figure:: img/street_label_formatted.png
-   :align: center
+   .. figure:: img/street_label_formatted.png
+      :align: center
 
-You'll see that some of the road names appear more than once and that's not
-always necessary. To prevent this from happening:
+   You'll see that some of the road names appear more than once and that's not
+   always necessary. To prevent this from happening:
 
-* In the :guilabel:`Label labelling settings` dialog, choose the
-  :guilabel:`Rendering` option and select the
-  :guilabel:`Merge connected lines to avoid duplicate labels`:
+#. In the :guilabel:`Labels` tab of the :guilabel:`Layer Properties` dialog,
+   choose the :guilabel:`Rendering` option and select
+   :guilabel:`Merge connected lines to avoid duplicate labels` as shown:
 
-.. figure:: img/merge_lines_option.png
-   :align: center
+   .. figure:: img/merge_lines_option.png
+      :align: center
 
-* Click :guilabel:`OK`
+#. Click :guilabel:`OK`
 
-Another useful function is to prevent labels being drawn for features too short
-to be of notice.
+   Another useful function is to prevent labels being drawn for features too short
+   to be of notice.
 
-* In the same :guilabel:`Rendering` panel, set the value of
-  :guilabel:`Suppress labeling of features smaller than ...` to :kbd:`5mm`
-  and note the results when you click :guilabel:`Apply`.
+#. In the same :guilabel:`Rendering` panel, set the value of
+   :guilabel:`Suppress labeling of features smaller than ...` to ``5.00 mm``
+   and note the results when you click :guilabel:`Apply`
 
-Try out different :guilabel:`Placement` settings as well. As we've seen before,
-the :guilabel:`horizontal` option is not a good idea in this case, so let's
-try the :guilabel:`curved` option instead.
+   Try out different :guilabel:`Placement` settings as well. As we've seen before,
+   the :guilabel:`Horizontal` option is not a good idea in this case, so let's
+   try the :guilabel:`Curved` option instead.
 
-* Select the :guilabel:`Curved` option in the :guilabel:`Placement` panel of
-  the :guilabel:`Layer labeling settings` dialog.
+#. Select the :guilabel:`Curved` option in the :guilabel:`Placement` panel of
+   the :guilabel:`Layers` tab
 
 Here's the result:
 
 .. figure:: img/final_street_labels.png
    :align: center
 
-As you can see, this hides a lot of the labels that were previously visible,
-because of the difficulty of making some of them follow twisting street lines
-and still be legible. You can decide which of these options to use, depending
-on what you think seems more useful or what looks better.
+As you can see, this hides some labels that were previously visible, because
+of the difficulty of making some of them follow twisting street lines while
+still being legible. It makes other labels much more useful since they track
+the roads rather than float in space between them. You can decide which of
+these options to use, depending on what you think seems more useful or what
+looks better.
+
 
 |hard| |FA| Data Defined Settings
 -------------------------------------------------------------------------------
 
-* Deactivate labeling for the :guilabel:`Streets` layer.
-* Reactivate labeling for the :guilabel:`Places` layer.
-* Open the attribute table for :guilabel:`Places` via the |openTable| button.
+#. Deactivate labeling for the ``roads`` layer
+#. Reactivate labeling for the ``places`` layer
+#. Open the attribute table for ``places`` via the |openTable| button
 
-It has one fields which is of interest to us now: :kbd:`place` which defines the
-type of urban area for each object. We can use this data to influence the label
-styles.
+   It has one *field* which is of interest to us now: ``place`` which defines
+   the type of urban area for each *record*. We can use this data to influence
+   the label styles.
 
-* Navigate to the :guilabel:`Text` panel in the :guilabel:`places`
-  :guilabel:`Labels` panel.
-* In the :guilabel:`Italic` dropdown, select :kbd:`Edit...` to open the
-  :guilabel:`Expression string builder`:
+#. Navigate to the :guilabel:`Text` panel in the ``places``
+   :guilabel:`Labels` panel
+#. Click the |dataDefined| button next to the Italic text button beneath
+   :guilabel:`Style` and select :menuselection:`Edit...` to open the
+   :guilabel:`Expression String Builder`:
 
-.. figure:: img/expression_string_builder.png
-   :align: center
+   .. figure:: img/expression_string_builder.png
+      :align: center
 
-In the text input, type: :kbd:`"place"  =  'town'` and click :guilabel:`Ok`
-twice:
+#. Under :menuselection:`Fields and Values`, double click on ``place``
+   and then click :guilabel:`All Unique`. This will list all unique values
+   of the ``place`` field of this layer. Add a ``=`` in the text
+   editor and then double click on ``town``.
 
-.. figure:: img/expression_builder_settings.png
-   :align: center
+   Alternatively, you can type: ``"place" = 'town'`` directly in the
+   text editor.
 
-Notice its effects:
+#. Click :guilabel:`OK` twice:
+
+   .. figure:: img/expression_builder_settings.png
+      :align: center
+
+Notice that the labels for all places whose ``place``
+field matches ``town`` are displayed in italics.
 
 .. figure:: img/italic_label_result.png
    :align: center
 
 
 .. _backlink-label-data-defined-1:
+
 
 |hard| |TY| Using Data Defined Settings
 -------------------------------------------------------------------------------
@@ -277,16 +292,16 @@ Notice its effects:
    following means. If you don't, feel free to leave out this section and come
    back later when you've covered the requisite materials.
 
-* Open the Attribute Table for :guilabel:`places`.
-* Enter edit mode by clicking this button: |toggleEditing|
-* Add a new column with the |newAttribute| button
-* Configure it like this:
+#. Open the Attribute Table for ``places``
+#. Enter edit mode by clicking the |toggleEditing| button
+#. Add a new column with the |newAttribute| button
+#. Configure it like this:
 
-.. figure:: img/font_size_column.png
-   :align: center
+   .. figure:: img/font_size_column.png
+      :align: center
 
-* Use this to set custom font sizes for each different type of place (i.e.,
-  each key in the :kbd:`PLACE` field).
+#. Use this to set custom font sizes for each different type of place
+   (each key in the ``place`` field)
 
 :ref:`Check your results <label-data-defined-1>`
 
@@ -295,12 +310,12 @@ Notice its effects:
 -------------------------------------------------------------------------------
 
 We can't cover every option in this course, but be aware that the
-:guilabel:`Label tool` has many other useful functions. You can set scale-based
+:guilabel:`Label` tab has many other useful functions. You can set scale-based
 rendering, alter the rendering priority for labels in a layer, and set every
 label option using layer attributes. You can even set the rotation, XY
 position, and other properties of a label (if you have attribute fields
 allocated for the purpose), then edit these properties using the tools adjacent
-to the main :guilabel:`Label tool`:
+to the main :guilabel:`Layer Labeling Options` button:
 
 |labeling| |showPinnedLabels| |pinLabels|
 |showHideLabels| |moveLabel| |rotateLabel|
@@ -311,11 +326,13 @@ in edit mode.)
 
 Feel free to explore more possibilities of the labeling system.
 
+
 |IC|
 -------------------------------------------------------------------------------
 
 You've learned how to use layer attributes to create dynamic labels. This can
 make your map a lot more informative and stylish!
+
 
 |WN|
 -------------------------------------------------------------------------------
@@ -339,6 +356,8 @@ topic for the next lesson!
 .. |basic| image:: /static/common/basic.png
 .. |changeLabelProperties| image:: /static/common/mActionChangeLabelProperties.png
    :width: 1.5em
+.. |dataDefined| image:: /static/common/mIconDataDefine.png
+   :width: 1.5em
 .. |hard| image:: /static/common/hard.png
 .. |labeling| image:: /static/common/labelingSingle.png
    :width: 1.5em
@@ -357,6 +376,8 @@ topic for the next lesson!
 .. |showHideLabels| image:: /static/common/mActionShowHideLabels.png
    :width: 1.5em
 .. |showPinnedLabels| image:: /static/common/mActionShowPinnedLabels.png
+   :width: 1.5em
+.. |showUnplacedLabel| image:: /static/common/mActionShowUnplacedLabel.png
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em

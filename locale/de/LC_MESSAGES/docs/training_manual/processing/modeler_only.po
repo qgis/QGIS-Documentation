@@ -1,33 +1,31 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014, QGIS project
-# This file is distributed under the same license as the QGIS Documentation
-# Project package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Matthias Wachholz <matthias.wachholz@lageso.berlin.de>, 2020
+# Richard Duivenvoorde <richard@duif.net>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation Project testing\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-28 10:31+0100\n"
-"PO-Revision-Date: 2017-08-09 06:44+0000\n"
-"Last-Translator: Matthias Wachholz <matthias.wachholz@lageso.berlin.de>, 2020\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
+"PO-Revision-Date: 2020-03-16 19:22+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
 "Language-Team: German (https://www.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../source/docs/training_manual/processing/modeler_only.rst:6
+#: ../../docs/training_manual/processing/modeler_only.rst:2
 msgid "Using modeler-only tools for creating a model"
 msgstr "Erstellung eines Modells mit modellinternen Werkzeugen"
 
-#: ../../source/docs/training_manual/processing/modeler_only.rst:8
+#: ../../docs/training_manual/processing/modeler_only.rst:4
 msgid ""
 "This lesson shows how to use some algorithms that are only available in the "
 "modeler, to provide additional functionality to models."
@@ -36,7 +34,7 @@ msgstr ""
 "Verarbeitungsmodellierung verfügbar sind. Sie stellen zusätzliche "
 "Funktionalitäten für Modelle bereit."
 
-#: ../../source/docs/training_manual/processing/modeler_only.rst:10
+#: ../../docs/training_manual/processing/modeler_only.rst:6
 msgid ""
 "The goal of this lesson is to use the modeler to create an interpolation "
 "algorithm that takes into account the current selection, not just to use "
@@ -49,7 +47,7 @@ msgstr ""
 "auch deren räumliche Ausdehnung. Auf Grundlage der Ausdehnung soll ein "
 "interpolierter Rasterlayer erstellt werden."
 
-#: ../../source/docs/training_manual/processing/modeler_only.rst:12
+#: ../../docs/training_manual/processing/modeler_only.rst:8
 msgid ""
 "The interpolation process involves two steps, as it has been already "
 "explained in previous lessons: rasterizing the points layer and fill the no-"
@@ -69,7 +67,7 @@ msgstr ""
 " aus der Selektion ergibt. Wir werden versuchen, das mit Hilfe weiterer "
 "Werkzeuge zu beheben."
 
-#: ../../source/docs/training_manual/processing/modeler_only.rst:14
+#: ../../docs/training_manual/processing/modeler_only.rst:10
 msgid ""
 "Open the modeler and start the model by adding the required inputs. In this "
 "case we need a vector layer (restricted to points) and an attribute from it,"
@@ -79,7 +77,7 @@ msgstr ""
 "Eingabedaten hinzu. Wir benötigen einen Vektorlayer (nur Punkte) und ein "
 "Attribut des Layers, das wir für die Rasterung verwenden werden."
 
-#: ../../source/docs/training_manual/processing/modeler_only.rst:18
+#: ../../docs/training_manual/processing/modeler_only.rst:14
 msgid ""
 "The next step is to compute the extent of the selected features. That's "
 "where we can use the model-only tool called *Vector layer bounds*. First, we"
@@ -92,7 +90,7 @@ msgstr ""
 "Ausdehnung der gewählten Objekte hat. Danach können wir das Werkzeug mit "
 "diesem Layer verwenden."
 
-#: ../../source/docs/training_manual/processing/modeler_only.rst:20
+#: ../../docs/training_manual/processing/modeler_only.rst:16
 msgid ""
 "An easy way of creating a layer with the extent of the selected features is "
 "to compute a convex hull of the input points layer. It will use only the "
@@ -108,7 +106,7 @@ msgstr ""
 "konvexen Hülle als Eingabe. Unser Arbeitsbereich sollte nun in etwa wie "
 "folgt aussehen:"
 
-#: ../../source/docs/training_manual/processing/modeler_only.rst:24
+#: ../../docs/training_manual/processing/modeler_only.rst:20
 msgid ""
 "The result from the *Vector layer bounds* is a set of four numeric values "
 "and a extent object. We will use both the numeric outputs and the extent for"
@@ -118,7 +116,7 @@ msgstr ""
 "Zahlen und ein Ausdehnungsobjekt. Wir werden beides in dieser Übung "
 "verwenden."
 
-#: ../../source/docs/training_manual/processing/modeler_only.rst:28
+#: ../../docs/training_manual/processing/modeler_only.rst:24
 msgid ""
 "We can now add the algorithm that rasterizes the vector layer, using the "
 "extent from the *Vector layer bounds* algorithm as input."
@@ -126,15 +124,15 @@ msgstr ""
 "Wir können nun den Algorithmus zur Rasterung unter Nutzung der Ausdehung aus"
 " dem Algorithmus *Layerausdehnung extrahieren* einfügen."
 
-#: ../../source/docs/training_manual/processing/modeler_only.rst:30
+#: ../../docs/training_manual/processing/modeler_only.rst:26
 msgid "Fill the parameters of the algorithm as shown next:"
 msgstr "Füllen Sie die Paramter des Algorithmus wie folgt:"
 
-#: ../../source/docs/training_manual/processing/modeler_only.rst:34
+#: ../../docs/training_manual/processing/modeler_only.rst:30
 msgid "The canvas should now look like."
 msgstr "Der Arbeitsbereich sollte jetzt so aussehen:"
 
-#: ../../source/docs/training_manual/processing/modeler_only.rst:38
+#: ../../docs/training_manual/processing/modeler_only.rst:34
 msgid ""
 "Finally, fill the no-data values of the raster layer using the *Close gaps* "
 "algorithm."
@@ -142,7 +140,7 @@ msgstr ""
 "Füllen Sie zum Schluss die Leerwerte des Rasterlayers mit Hilfe des "
 "Algorithmus *Close gaps*."
 
-#: ../../source/docs/training_manual/processing/modeler_only.rst:42
+#: ../../docs/training_manual/processing/modeler_only.rst:38
 msgid ""
 "The algorithm is now ready to be saved and added to the toolbox. You can run"
 " it and it will generate a raster layer from interpolating the selected "
@@ -155,7 +153,7 @@ msgstr ""
 "erstellen. Das Rasterlayer wird dieselbe Ausdehung wie die selektierten "
 "Punkte im Eingabelayer haben."
 
-#: ../../source/docs/training_manual/processing/modeler_only.rst:44
+#: ../../docs/training_manual/processing/modeler_only.rst:40
 msgid ""
 "Here's an improvement to the algorithm. We have used a harcoded value for "
 "the cellsize when rasterizing. This value is fine for our test input layer, "
@@ -170,7 +168,7 @@ msgstr ""
 "Wert eingeben kann. Ein besserer Ansatz ist es, den Wert automatisch "
 "berechnen zu lassen."
 
-#: ../../source/docs/training_manual/processing/modeler_only.rst:46
+#: ../../docs/training_manual/processing/modeler_only.rst:42
 msgid ""
 "We can use the modeler-only calculator, and compute that value from the "
 "extent coordinates. For instance, to create a layer with a fixed width of "
@@ -181,7 +179,7 @@ msgstr ""
 "Breite von 100 Pixeln zu erstellen können wir die folgenden Formel im "
 "Rechner verwenden."
 
-#: ../../source/docs/training_manual/processing/modeler_only.rst:50
+#: ../../docs/training_manual/processing/modeler_only.rst:46
 msgid ""
 "Now we have to edit the rasterize algorithm, so it uses the output of the "
 "calculator instead of the hardcoded value."
@@ -189,6 +187,6 @@ msgstr ""
 "Wir müssen nun noch den Rasterungsalgorithmus anpassen, so dass er die "
 "Ausgabe des Rechners anstelle eines festen Wertes als Eingabe verwendet."
 
-#: ../../source/docs/training_manual/processing/modeler_only.rst:52
+#: ../../docs/training_manual/processing/modeler_only.rst:48
 msgid "The final algorithm should look like this:"
 msgstr "Der fertige Algorithmus sollte wie folgt aussehen:"

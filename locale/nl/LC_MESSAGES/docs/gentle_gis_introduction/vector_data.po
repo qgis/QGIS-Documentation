@@ -1,19 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGISDoc package.
+# This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Dick Groskamp, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGISDoc 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:16+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Dick Groskamp, 2020\n"
 "Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -64,14 +65,14 @@ msgid ""
 "Application. Vector features have **attributes**, which consist of text or "
 "numerical information that **describe** the features."
 msgstr ""
-"**Vector** gegevens zijn een manier om **objecten** uit de echte wereld te "
+"**Vector**gegevens zijn een manier om **objecten** uit de echte wereld te "
 "tonen in een GIS-omgeving. Een feature kan alles zijn wat zichtbaar is in "
 "het landschap. Stel u voor dat u op de top van een heuvel staat. Wanneer u "
-"naar beneden kijkt kunt u bijvoorbeeld huizen, wegen, bomen en rivieren zien"
-" (zie figure_vector_landscape_). Elk van deze objecten zouden een "
-"**feature** zijn als zij getoond zouden worden in een GIS-toepassing. "
-"Vectorgegevens hebben **attributes** die bestaan uit tekst of numerieke "
-"informatie waarmee de features **describe** worden. "
+"naar beneden kijkt, kunt u bijvoorbeeld huizen, wegen, bomen en rivieren "
+"zien (zie figure_vector_landscape_). Elk van deze objecten zouden een "
+"**object** zijn als zij getoond zouden worden in een GIS-toepassing. "
+"Vectorgegevens hebben **attributen** die bestaan uit tekst of numerieke "
+"informatie waarmee de features **beschreven** worden. "
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:30
 msgid ""
@@ -91,7 +92,7 @@ msgid ""
 msgstr ""
 "De vorm van een vectorobject wordt gerepresenteerd door middel van een "
 "**geometrie**. Een geometrie wordt gevormd door één of meer onderling "
-"verbonden **vertices**. Een vertex beschrijft de plaats in de ruimte door "
+"verbonden **punten**. Een vertex beschrijft de plaats in de ruimte door "
 "middel van een **X**, **Y** en eventueel ook een **Z**-as. Een geometrie met"
 " een ``Z``-as wordt meestal aangeduid als **2,5D**, omdat deze de hoogte of "
 "diepte van elke vertex beschrijft, maar niet allebei."
@@ -109,19 +110,18 @@ msgstr ""
 "Wanneer de geometrie van een object uitsluitend bestaat uit één enkele "
 "vertex duiden wij die aan als **punt** (zie tekening "
 "figure_geometry_point_). Wanneer de geometrie bestaat uit twee of meer "
-"vertices en de eerde en laatste vertices zijn niet gelijk dan word een "
-"**lijn** uitgebeeld (zie tekening figure_geometry_polyline_). Wanneer drie "
-"of meer vertices aanwezig zijn en de laatste vertex is gelijk aan de eerste "
-"dan wordt een omsloten **vlak** getoond (zie tekening "
-"figure_geometry_polygon_)."
+"punten en het eerste en laatste punt zijn niet gelijk dan wordt een **lijn**"
+" uitgebeeld (zie tekening figure_geometry_polyline_). Wanneer drie of meer "
+"punten aanwezig zijn en het laatste punt is gelijk aan het eerste dan wordt "
+"een omsloten **vlak** getoond (zie tekening figure_geometry_polygon_)."
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:52
 msgid ""
 "A point feature is described by its X, Y and optionally Z coordinate. The "
 "point attributes describe the point e.g. if it is a tree or a lamp post."
 msgstr ""
-"Een punt wordt vastgelegd door middels van zijn X, Y en eventueel de "
-"Z-coördinaat. De attributen van een punt beschrijven wat deze voorstelt, "
+"Een punt wordt vastgelegd door middel van zijn X-, Y- en eventueel de "
+"Z-coördinaat. De attributen van een punt beschrijven wat dit voorstelt, "
 "bijvoorbeeld een boom of een lantarenpaal."
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:61
@@ -129,8 +129,8 @@ msgid ""
 "A polyline is a sequence of joined vertices. Each vertex has an X, Y (and "
 "optionally Z) coordinate. Attributes describe the polyline."
 msgstr ""
-"Een lijn bestaat uit een reeks van onderling verbonden vertices. Elke vertex"
-" heeft een X-, Y- (en eventueel een Z) coördinaat. De attributen beschrijven"
+"Een lijn bestaat uit een reeks van onderling verbonden punten. Elk punt "
+"heeft een X-, Y- (en eventueel een Z-) coördinaat. De attributen beschrijven"
 " de polylijn."
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:70
@@ -138,9 +138,8 @@ msgid ""
 "A polygon, like a polyline, is a sequence of vertices. However in a polygon,"
 " the first and last vertices are always at the same position."
 msgstr ""
-"Een vlak is, evenals een lijn, een reeks van vertices. Bij een polygon "
-"bevinden zich de eerste en de laatste vertex echter altijd op dezelfde "
-"positie."
+"Een vlak is, evenals een lijn, een reeks van punten. Bij een polygoon "
+"bevinden het eerste en laatste punt zich echter altijd op dezelfde positie."
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:73
 msgid ""
@@ -149,8 +148,8 @@ msgid ""
 "represents them now (see illustration figure_geometry_landscape_)."
 msgstr ""
 "Wanneer u terugkijkt naar het plaatje van het landschap dat eerder getoond "
-"werd zou u in staat moeten zijn de verschillende typen objecten te herkennen"
-" zoals zij door GIS worden uitgebeeld (zie de afbeelding "
+"werd, zou u in staat moeten zijn de verschillende typen objecten te "
+"herkennen zoals zij door GIS worden uitgebeeld (zie de afbeelding "
 "figure_geometry_landscape_)."
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:83
@@ -160,8 +159,8 @@ msgid ""
 "as polygons (white)."
 msgstr ""
 "Onderdelen van een landschap zoals wij dat zouden uitbeelden in GIS. "
-"Rivieren (blauw) en wegen (groen) kunnen worden afgebeeld door middel van "
-"lijnen, bomen als punten (rood) en huizen als vlakken (wit)."
+"Rivieren (blauw) en wegen (groen) kunnen worden afgebeeld met lijnen, bomen "
+"als punten (rood) en huizen als vlakken (wit)."
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:88
 msgid "Point features in detail"

@@ -1,17 +1,18 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGISDoc package.
+# This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
 # Dick Groskamp, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGISDoc 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:23+0000\n"
 "Last-Translator: Dick Groskamp, 2020\n"
 "Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
@@ -21,19 +22,19 @@ msgstr ""
 "Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:5
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:21
+msgid ""
+"The code snippets on this page need the following imports if you're outside "
+"the pyqgis console:"
+msgstr ""
+"De codesnippers op deze pagina hebben de volgende import nodig als u buiten "
+"de console van PyQGIS bent:"
+
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:35
 msgid "Accessing the Table Of Contents (TOC)"
 msgstr "Toegang tot de inhoudsopgave (TOC)"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:10
-msgid ""
-"If you’re outside the pyqgis console, the code snippets on this page need "
-"the following imports:"
-msgstr ""
-"Als u buiten de console van PyQGIS bent, hebben de codesnippers op deze "
-"pagina de volgende import nodig:"
-
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:20
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:41
 msgid ""
 "You can use different classes to access all the loaded layers in the TOC and"
 " use them to retrieve information:"
@@ -41,27 +42,27 @@ msgstr ""
 "U kunt verschillende klassen gebruiken om toegang te verkrijgen tot alle "
 "geladen lagen in de inhoudsopgave en ze gebruiken om informatie op te halen:"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:23
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:44
 msgid ":class:`QgsProject <qgis.core.QgsProject>`"
 msgstr ":class:`QgsProject <qgis.core.QgsProject>`"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:24
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:45
 msgid ":class:`QgsLayerTreeGroup <qgis.core.QgsLayerTreeGroup>`"
 msgstr ":class:`QgsLayerTreeGroup <qgis.core.QgsLayerTreeGroup>`"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:27
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:48
 msgid "The QgsProject class"
 msgstr "De klasse QgsProject"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:29
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:50
 msgid ""
 "You can use :class:`QgsProject <qgis.core.QgsProject>` to retrieve "
-"information about the TOC and all the layer loaded."
+"information about the TOC and all the layers loaded."
 msgstr ""
 "U kunt :class:`QgsProject <qgis.core.QgsProject>` gebruiken om informatie op"
 " te halen over de inhoudsopgave en alle geladen lagen."
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:32
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:53
 msgid ""
 "You have to create an ``instance`` of :class:`QgsProject "
 "<qgis.core.QgsProject>` and use its methods to get the loaded layers."
@@ -69,7 +70,7 @@ msgstr ""
 "U moet een ``instance`` van :class:`QgsProject <qgis.core.QgsProject>` maken"
 " en de methoden daarvan gebruiken om de geladen lagen op te halen."
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:35
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:56
 msgid ""
 "The main method is :meth:`mapLayers() <qgis.core.QgsProject.mapLayers>`. It "
 "will return a dictionary of the loaded layers:"
@@ -78,7 +79,7 @@ msgstr ""
 "<qgis.core.QgsProject.mapLayers>`. Het zal een woordenboek teruggeven van de"
 " geladen lagen:"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:44
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:69
 msgid ""
 "The dictionary ``keys`` are the unique layer ids while the ``values`` are "
 "the related objects."
@@ -86,17 +87,17 @@ msgstr ""
 "De ``keys`` in het woordenboek zijn de unieke laag-ID's, terwijl de "
 "``values`` de gerelateerde objecten zijn."
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:47
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:72
 msgid ""
 "It is now straightforward to obtain any other information about the layers:"
 msgstr ""
 "Het is nu rechtdoorzee om alle andere informatie over de lagen op te halen:"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:60
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:90
 msgid "You can also query the TOC using the name of the layer:"
 msgstr "U kunt ook de inhoudsopgave bevragen met de naam van de laag:"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:66
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:96
 msgid ""
 "A list with all the matching layers is returned, so we index with ``[0]`` to"
 " get the first layer with this name."
@@ -104,11 +105,11 @@ msgstr ""
 "Een lijst met alle overeenkomende lagen wordt teruggegeven, dus maken we een"
 " index met ``[0]`` om de eerste laag met zijn naam op te halen."
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:71
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:101
 msgid "QgsLayerTreeGroup class"
 msgstr "klasse QgsLayerTreeGroup "
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:73
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:103
 msgid ""
 "The layer tree is a classical tree structure built of nodes. There are "
 "currently two types of nodes: group nodes (:class:`QgsLayerTreeGroup "
@@ -120,7 +121,7 @@ msgstr ""
 "<qgis.core.QgsLayerTreeGroup>`) en laagknopen (:class:`QgsLayerTreeLayer "
 "<qgis.core.QgsLayerTreeLayer>`)."
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:77
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:107
 msgid ""
 "for more information you can read these blog posts of Martin Dobias: `Part 1"
 " <https://www.lutraconsulting.co.uk/blog/2014/07/06/qgis-layer-tree-api-"
@@ -136,7 +137,7 @@ msgstr ""
 "<https://www.lutraconsulting.co.uk/blog/2015/01/30/qgis-layer-tree-api-"
 "part-3/>`_"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:82
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:112
 msgid ""
 "The project layer tree can be accessed easily with the method "
 ":meth:`layerTreeRoot() <qgis.core.QgsProject.layerTreeRoot>` of the "
@@ -147,11 +148,11 @@ msgstr ""
 "<qgis.core.QgsProject.layerTreeRoot>` van de klasse :class:`QgsProject "
 "<qgis.core.QgsProject>`:"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:89
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:119
 msgid "``root`` is a group node and has *children*:"
 msgstr "``root`` is een groepsknoop en heeft *children*:"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:95
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:125
 msgid ""
 "A list of direct children is returned. Sub group children should be accessed"
 " from their own direct parent."
@@ -159,19 +160,19 @@ msgstr ""
 "Een lijst met directe kinderen wordt teruggegeven. Toegang tot kinderen van "
 "een subgroep zou moeten worden verkregen via hun eigen directe ouder."
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:98
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:128
 msgid "We can retrieve one of the children:"
 msgstr "We kunnen een van de kinderen ophalen:"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:106
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:139
 msgid "Layers can also be retrieved using their (unique) ``id``:"
 msgstr "Lagen kunnen ook worden opgehaald met hun (unieke) ``id``:"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:114
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:147
 msgid "And groups can also be searched using their names:"
 msgstr "En naar groepen kan ook worden gezocht met hun namen:"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:121
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:154
 msgid ""
 ":class:`QgsLayerTreeGroup <qgis.core.QgsLayerTreeGroup>` has many other "
 "useful methods that can be used to obtain more information about the TOC:"
@@ -180,7 +181,7 @@ msgstr ""
 " nuttige methoden die kunnen worden gebruikt om meer informatie op te halen "
 "over de inhoudsopgave:"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:131
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:167
 msgid ""
 "Now let’s add some layers to the project’s layer tree. There are two ways of"
 " doing that:"
@@ -188,7 +189,7 @@ msgstr ""
 "Laten we nu enkele lagen toevoegen aan de boom met lagen van het project. Er"
 " zijn twee manieren om dat te doen:"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:134
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:170
 msgid ""
 "**Explicit addition** using the :meth:`addLayer() "
 "<qgis.core.QgsLayerTreeGroup.addLayer>` or :meth:`insertLayer() "
@@ -198,7 +199,7 @@ msgstr ""
 "<qgis.core.QgsLayerTreeGroup.addLayer>` of :meth:`insertLayer() "
 "<qgis.core.QgsLayerTreeGroup.insertLayer>`:"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:147
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:183
 msgid ""
 "**Implicit addition**: since the project's layer tree is connected to the "
 "layer registry it is enough to add a layer to the map layer registry:"
@@ -207,7 +208,7 @@ msgstr ""
 "verbonden met het register van de lagen is het voldoende om een laag toe te "
 "voegen aan het register met kaartlagen:"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:155
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:191
 msgid ""
 "You can switch between :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` "
 "and :class:`QgsLayerTreeLayer <qgis.core.QgsLayerTreeLayer>` easily:"
@@ -216,7 +217,7 @@ msgstr ""
 "<qgis.core.QgsVectorLayer>` en :class:`QgsLayerTreeLayer "
 "<qgis.core.QgsLayerTreeLayer>`:"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:166
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:207
 msgid ""
 "Groups can be added with the :meth:`addGroup() "
 "<qgis.core.QgsLayerTreeGroup.addGroup>` method. In the example below, the "
@@ -228,37 +229,37 @@ msgstr ""
 "eerste een groep toevoegen aan het einde van de inhoudsopgave, terwijl u met"
 " de laatste een andere groep kan toevoegen binnen een bestaande:"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:177
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:218
 msgid "To moving nodes and groups there are many useful methods."
 msgstr "Er zijn vele nuttige methoden om knopen en groepen te verplaatsen."
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:179
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:220
 msgid "Moving an existing node is done in three steps:"
 msgstr "Verplaatsen van een bestaande knoop wordt gedaan in drie stappen:"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:181
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:222
 msgid "cloning the existing node"
 msgstr "klonen van de bestaande knoop"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:182
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:223
 msgid "moving the cloned node to the desired position"
 msgstr "verplaatsen van de gekloonde knoop naar de gewenste positie"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:183
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:224
 msgid "deleting the original node"
 msgstr "verwijderen van de originele knoop"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:194
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:235
 msgid ""
 "It is a little bit more *complicated* to move a layer around in the legend:"
 msgstr ""
 "Het is iets meer *gecompliceerder* om een laag in de legenda te verplaatsen:"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:211
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:252
 msgid "or moving it to an existing group:"
 msgstr "of om hem naar een bestaande groep te verplaatsen:"
 
-#: ../../docs/pyqgis_developer_cookbook/legend.rst:231
+#: ../../docs/pyqgis_developer_cookbook/legend.rst:272
 msgid "Some other methods that can be used to modify the groups and layers:"
 msgstr ""
 "Enkele andere methoden die kunnen worden gebruikt om groepen en lagen aan te"

@@ -157,8 +157,8 @@ button.
    Available method plugins list
 
 Plugins can be created for new authentication methods that do not require QGIS
-to be recompiled. Since the support for plugins is currently (since QGIS 2.12)
-C++-only, QGIS will need to be restarted for the new dropped-in plugin to become
+to be recompiled. Since the support for plugins is currently C++-only,
+QGIS will need to be restarted for the new dropped-in plugin to become
 available to the user. Ensure your plugin is compiled against the same target
 version of QGIS if you intend to add it to an existing target install.
 

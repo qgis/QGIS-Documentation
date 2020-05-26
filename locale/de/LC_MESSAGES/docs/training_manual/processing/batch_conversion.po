@@ -1,44 +1,52 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014, QGIS project
-# This file is distributed under the same license as the QGIS Documentation
-# Project package.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Matthias Wachholz <matthias.wachholz@lageso.berlin.de>, 2020
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-28 10:31+0100\n"
-"PO-Revision-Date: 2020-02-21 16:40+0000\n"
-"Last-Translator: Matthias Wachholz <matthias.wachholz@lageso.berlin.de>\n"
-"Language-Team: German (http://www.transifex.com/qgis/qgis-documentation/language/de/)\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
+"PO-Revision-Date: 2020-03-16 19:22+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: German (https://www.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../source/docs/training_manual/processing/batch_conversion.rst:6
+#: ../../docs/training_manual/processing/batch_conversion.rst:2
 msgid "The batch processing interface"
 msgstr "Die Schnittstelle zur Stapelverarbeitung"
 
-#: ../../source/docs/training_manual/processing/batch_conversion.rst:8
+#: ../../docs/training_manual/processing/batch_conversion.rst:4
 msgid ""
 "This lesson introduces the batch processing interface, which allows to "
 "execute a single algorithm with a set of different input values."
-msgstr "In dieser Lektion lernen wir die Schnittstelle zur Stapelverarbeitung kennen. Mit ihrer Hilfe können wir einen einzelnen Algorithmus mit mehreren Eingabewerten starten."
+msgstr ""
+"In dieser Lektion lernen wir die Schnittstelle zur Stapelverarbeitung "
+"kennen. Mit ihrer Hilfe können wir einen einzelnen Algorithmus mit mehreren "
+"Eingabewerten starten."
 
-#: ../../source/docs/training_manual/processing/batch_conversion.rst:10
+#: ../../docs/training_manual/processing/batch_conversion.rst:7
 msgid ""
 "Sometimes a given algorithm has to be executed repeteadly with different "
 "inputs. This is, for instance, the case when a set of input files have to be"
 " converted from one format to another, or when several layers in a given "
 "projection must be converted into another projection."
-msgstr "Manchmal ist es erforderlich, einen Algorithmus mehrmals mit verschiedenen Eingaben auszuführen. Das ist z.B. der Fall, wenn mehrere Eingabedateien von einem Format in ein anderes konvertiert werden sollen oder wenn Dateien von einer Projektion in eine andere umgewandelt werden müssen."
+msgstr ""
+"Manchmal ist es erforderlich, einen Algorithmus mehrmals mit verschiedenen "
+"Eingaben auszuführen. Das ist z.B. der Fall, wenn mehrere Eingabedateien von"
+" einem Format in ein anderes konvertiert werden sollen oder wenn Dateien von"
+" einer Projektion in eine andere umgewandelt werden müssen."
 
-#: ../../source/docs/training_manual/processing/batch_conversion.rst:12
+#: ../../docs/training_manual/processing/batch_conversion.rst:12
 msgid ""
 "In that case, calling the algorithm repeatedly on the toolbox is not the "
 "best option. Instead, the batch processing interface should be used, which "
@@ -46,15 +54,25 @@ msgid ""
 "run an algorithm as a batch process, find it in the toolbox, and instead of "
 "double--clicking on it, right--click on it and select *Run as batch "
 "process*."
-msgstr "In diesem Fall ist der wiederholte Aufruf des Algorithmus aus der Werkzeugkiste nicht der optimale Weg. Stattdessen kann man die Stapelverarbeitung verwenden, die die wiederholte Ausführung eines Algorithmus stark vereinfacht. Um einen Algortihmus aus der Werkzeugkiste im Rahmen der Stapelverarbeitung zu starten, klickt man nicht wie sonst doppelt auf den Algorithmus sonder mit der rechten Maustaste und wählt dann *Als Stapelprozess ausführen...*."
+msgstr ""
+"In diesem Fall ist der wiederholte Aufruf des Algorithmus aus der "
+"Werkzeugkiste nicht der optimale Weg. Stattdessen kann man die "
+"Stapelverarbeitung verwenden, die die wiederholte Ausführung eines "
+"Algorithmus stark vereinfacht. Um einen Algortihmus aus der Werkzeugkiste im"
+" Rahmen der Stapelverarbeitung zu starten, klickt man nicht wie sonst "
+"doppelt auf den Algorithmus sonder mit der rechten Maustaste und wählt dann "
+"*Als Stapelprozess ausführen...*."
 
-#: ../../source/docs/training_manual/processing/batch_conversion.rst:16
+#: ../../docs/training_manual/processing/batch_conversion.rst:20
 msgid ""
 "For this example, we will use the *Reproject algorithm*, so find it and do "
 "as described above. You will get to the following dialog."
-msgstr "In diesem Beispiel verwenden wir den Algorithmus *Reprojizieren*. Finden Sie ihn und gehen Sie dann wie beschrieben vor. Wir sehen nun den folgenden Dialog."
+msgstr ""
+"In diesem Beispiel verwenden wir den Algorithmus *Reprojizieren*. Finden Sie"
+" ihn und gehen Sie dann wie beschrieben vor. Wir sehen nun den folgenden "
+"Dialog."
 
-#: ../../source/docs/training_manual/processing/batch_conversion.rst:20
+#: ../../docs/training_manual/processing/batch_conversion.rst:25
 msgid ""
 "If you have a look at the data for this lesson, you will see that it "
 "contains a set of three shapefiles, but no QGIS project file. This is "
@@ -62,24 +80,35 @@ msgid ""
 "selected either from the current QGIS project or from files. That makes it "
 "easier to process large amounts of layers, such as, for instance, all the "
 "layers in a given folder."
-msgstr "Wenn wir uns die Daten dieser Lektion ansehen, bemerken wir drei shape-Dateien aber keine QGIS Projektdatei. Wenn ein Algorithmus als Stapelprozess aufgerufen wird, können die Layer sowohl aus dem QGIS Projekt als auch aus einer Datei gewählt werden. Das macht es einfacher, eine große Anzahl an Layern zu verarbeiten, z.B. alle Layer unter einem bestimmten Dateipfad."
+msgstr ""
+"Wenn wir uns die Daten dieser Lektion ansehen, bemerken wir drei shape-"
+"Dateien aber keine QGIS Projektdatei. Wenn ein Algorithmus als Stapelprozess"
+" aufgerufen wird, können die Layer sowohl aus dem QGIS Projekt als auch aus "
+"einer Datei gewählt werden. Das macht es einfacher, eine große Anzahl an "
+"Layern zu verarbeiten, z.B. alle Layer unter einem bestimmten Dateipfad."
 
-#: ../../source/docs/training_manual/processing/batch_conversion.rst:22
+#: ../../docs/training_manual/processing/batch_conversion.rst:31
 msgid ""
 "Each row in the table of the batch processing dialog represents a single "
 "execution of the algorithm. Cells in a row correspond to the parameter "
 "needed by the algorithm, which are not arranged one above the other, as in "
 "the normal single--execution dialog, but horizontally in that row."
-msgstr "Jede Zeile in der Tabelle der Stapelverarbeitung steht für die einmalige Ausführung des Algorithmus. Die Zellen in einer Zeile stehen für die vom Algorithmus verwendeten Parameter. Sie sind nicht einer über dem anderen, wie sonst üblich, sondern nebeneinander angeordnet."
+msgstr ""
+"Jede Zeile in der Tabelle der Stapelverarbeitung steht für die einmalige "
+"Ausführung des Algorithmus. Die Zellen in einer Zeile stehen für die vom "
+"Algorithmus verwendeten Parameter. Sie sind nicht einer über dem anderen, "
+"wie sonst üblich, sondern nebeneinander angeordnet."
 
-#: ../../source/docs/training_manual/processing/batch_conversion.rst:24
+#: ../../docs/training_manual/processing/batch_conversion.rst:36
 msgid ""
 "Defining the batch process to run is one by filling the table with the "
 "corresponding values, and the dialog itself contains several tools to make "
 "this task easier."
-msgstr "Die Definition des Stapelverarbeitungsprozesses besteht darin, die Tabelle auszufüllen. Der Dialog enthält dazu einige Hilfsmittel."
+msgstr ""
+"Die Definition des Stapelverarbeitungsprozesses besteht darin, die Tabelle "
+"auszufüllen. Der Dialog enthält dazu einige Hilfsmittel."
 
-#: ../../source/docs/training_manual/processing/batch_conversion.rst:26
+#: ../../docs/training_manual/processing/batch_conversion.rst:40
 msgid ""
 "Let's start filling the fields one by one. The first column to fill is the "
 "*Input layer* one. Instead of entering the names of each one of the layers "
@@ -88,17 +117,28 @@ msgid ""
 "selection dialog that will popup, select the three files to reproject. Since"
 " only one of them is needed for each row, the remaining ones will be used to"
 " fill the rows underneath."
-msgstr "Lassen Sie uns die Felder eines nach dem anderen füllen. Die erste zu füllende Spalte ist *Eingabelayer*. Anstelle jeden Layer einzeln einzugeben, können wir alle Layer gleichzeitig wählen. Die Stapelverarbeitung fügt sie in jeweils neue Zeilen ein. Klicken Sie auf die Schaltfläche in der Zelle oben links. Wählen Sie in der nun geöffneten Dateiauswahl  die drei zu reprojizierenden Dateien aus. Da nur eine Datei je Zeile benötigt wird, werden die anderen Dateien zum Füllen der Zeilen darunter verwendet."
+msgstr ""
+"Lassen Sie uns die Felder eines nach dem anderen füllen. Die erste zu "
+"füllende Spalte ist *Eingabelayer*. Anstelle jeden Layer einzeln einzugeben,"
+" können wir alle Layer gleichzeitig wählen. Die Stapelverarbeitung fügt sie "
+"in jeweils neue Zeilen ein. Klicken Sie auf die Schaltfläche in der Zelle "
+"oben links. Wählen Sie in der nun geöffneten Dateiauswahl  die drei zu "
+"reprojizierenden Dateien aus. Da nur eine Datei je Zeile benötigt wird, "
+"werden die anderen Dateien zum Füllen der Zeilen darunter verwendet."
 
-#: ../../source/docs/training_manual/processing/batch_conversion.rst:30
+#: ../../docs/training_manual/processing/batch_conversion.rst:50
 msgid ""
 "The default number of rows is 3, which is exactly the number of layers we "
 "have to convert, but if you select more layers, new rows will be added "
 "automatically. If you want to fill the entries manually, you can add more "
 "rows using the *Add row* button."
-msgstr "Als Voreinstellung werden 3 Zeilen angezeigt, genau so viele wie wir benötigen. Wenn Sie mehr Layer auswählen werden zusätzliche Zeilen angelegt. Wenn Sie die Einträge manuell füllen möchten, können Sie neue Zeilen mit Hilfe der Schaltfläche *Zeile hinzufügen* einfügen."
+msgstr ""
+"Als Voreinstellung werden 3 Zeilen angezeigt, genau so viele wie wir "
+"benötigen. Wenn Sie mehr Layer auswählen werden zusätzliche Zeilen angelegt."
+" Wenn Sie die Einträge manuell füllen möchten, können Sie neue Zeilen mit "
+"Hilfe der Schaltfläche *Zeile hinzufügen* einfügen."
 
-#: ../../source/docs/training_manual/processing/batch_conversion.rst:32
+#: ../../docs/training_manual/processing/batch_conversion.rst:54
 msgid ""
 "We are going to convert all those layers to the EPSG:23029 CRS, so we have "
 "to select that CRS in the second field. We want the same on for all rows, "
@@ -106,25 +146,36 @@ msgid ""
 "the first row (the one at the top) using the button in the corresponding "
 "cell, and then double click on the column header. That causes all the cells "
 "in the column to be filled using the value of the top cell."
-msgstr "Wir werden alle Layer in das KBS EPSG:23029 konvertieren. Wir müssen daher dieses KBS im zweiten Feld eintragen. Wir wollen dasselbe KBS für alle Zeilen verwenden. Es reicht, das KBS in der ersten Zeile (ganz oben) einzutragen und den Eintrag anschließend durch Doppelklick auf den Tabellenkopf in die  anderen Zellen zu übernehmen."
+msgstr ""
+"Wir werden alle Layer in das KBS EPSG:23029 konvertieren. Wir müssen daher "
+"dieses KBS im zweiten Feld eintragen. Wir wollen dasselbe KBS für alle "
+"Zeilen verwenden. Es reicht, das KBS in der ersten Zeile (ganz oben) "
+"einzutragen und den Eintrag anschließend durch Doppelklick auf den "
+"Tabellenkopf in die  anderen Zellen zu übernehmen."
 
-#: ../../source/docs/training_manual/processing/batch_conversion.rst:36
+#: ../../docs/training_manual/processing/batch_conversion.rst:63
 msgid ""
 "Finally, we have to select an output file for each execution, which will "
 "contain the corresponding reprojected layer. Once again, let's do it just "
 "for the first row. Click on the button in the upper cell and, in a folder "
 "where you want to put your output files, enter a filename (for instance, "
 "``reprojected.shp``)."
-msgstr "Als Letztes müssen wir eine Ausgabedatei für jede Ausführung wählen. Wir beginnen mit der ersten Zeile. Klicken Sie auf die Schaltfläche in der obersten Zelle und vergeben Sie einen Dateinamen im gewünschten Ordner (z.B. ``reprojiziert.shp``)."
+msgstr ""
+"Als Letztes müssen wir eine Ausgabedatei für jede Ausführung wählen. Wir "
+"beginnen mit der ersten Zeile. Klicken Sie auf die Schaltfläche in der "
+"obersten Zelle und vergeben Sie einen Dateinamen im gewünschten Ordner (z.B."
+" ``reprojiziert.shp``)."
 
-#: ../../source/docs/training_manual/processing/batch_conversion.rst:38
+#: ../../docs/training_manual/processing/batch_conversion.rst:68
 msgid ""
 "Now, when you click *OK* on the file selection dialog, the file does not "
 "automatically gets written to the cell, but an input box like the following "
 "one is shown instead."
-msgstr "Nachdem Sie auf die *OK* Schaltfläche gedrückt haben, erscheint ein neues Fenster wie dieses."
+msgstr ""
+"Nachdem Sie auf die *OK* Schaltfläche gedrückt haben, erscheint ein neues "
+"Fenster wie dieses."
 
-#: ../../source/docs/training_manual/processing/batch_conversion.rst:42
+#: ../../docs/training_manual/processing/batch_conversion.rst:74
 msgid ""
 "If you select the first option, only the current cell will be filled. If you"
 " select any of the other ones, all the rows below will be filled with a "
@@ -133,18 +184,30 @@ msgid ""
 "below. That will cause the value in the *Input Layer* (that is, the layer "
 "name) to be added to the filename we have added, making each output filename"
 " different. The batch processing table should now look like this."
-msgstr "Wenn Sie die erste Option wählen, wird nur die aktuelle Zelle gefüllt. Wenn Sie etwas anderes wählen, werden alle folgenden Zeilen nach einem bestimmten Muster gefüllt. Wir wählen *Mit Parameterwerten füllen* und in der Auswahl darunter *Eingabelayer*. Das führt dazu, dass an den von uns gewählten Dateinamen der Wert *Eingabelayer* (das ist der Layername) angehängt wird. Damit erhält jede Ausgabe einen anderen Dateinamen. Die Stapelverarbeitung sollte nun wie folgt aussehen."
+msgstr ""
+"Wenn Sie die erste Option wählen, wird nur die aktuelle Zelle gefüllt. Wenn "
+"Sie etwas anderes wählen, werden alle folgenden Zeilen nach einem bestimmten"
+" Muster gefüllt. Wir wählen *Mit Parameterwerten füllen* und in der Auswahl "
+"darunter *Eingabelayer*. Das führt dazu, dass an den von uns gewählten "
+"Dateinamen der Wert *Eingabelayer* (das ist der Layername) angehängt wird. "
+"Damit erhält jede Ausgabe einen anderen Dateinamen. Die Stapelverarbeitung "
+"sollte nun wie folgt aussehen."
 
-#: ../../source/docs/training_manual/processing/batch_conversion.rst:46
+#: ../../docs/training_manual/processing/batch_conversion.rst:84
 msgid ""
 "The last column sets whether or not to add the resulting layers to the "
 "current QGIS project. Leave the default *Yes* option, so you can see your "
 "results in this case."
-msgstr "In der letzten Spalte wird eingstellt, ob der Ergebnislayer im aktuellen QGIS Projekt geladen werden soll. Belassen Sie die Einstellung bei *Ja*, um die Ergebnisse anzuzeigen."
+msgstr ""
+"In der letzten Spalte wird eingstellt, ob der Ergebnislayer im aktuellen "
+"QGIS Projekt geladen werden soll. Belassen Sie die Einstellung bei *Ja*, um "
+"die Ergebnisse anzuzeigen."
 
-#: ../../source/docs/training_manual/processing/batch_conversion.rst:48
+#: ../../docs/training_manual/processing/batch_conversion.rst:88
 msgid ""
 "Click on *OK* and the batch process will be run. If everything went fine, "
 "all your layers will have been processed, and 3 new layers would have been "
 "created."
-msgstr "Klicken Sie auf *Starte*, um die Stapelverarbeitung zu beginnen. Wenn alles klappt, werden alle Ihrer Layer verarbeitet und 3 neue Layer erstellt."
+msgstr ""
+"Klicken Sie auf *Starte*, um die Stapelverarbeitung zu beginnen. Wenn alles "
+"klappt, werden alle Ihrer Layer verarbeitet und 3 neue Layer erstellt."

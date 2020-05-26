@@ -1,34 +1,31 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014, QGIS project
-# This file is distributed under the same license as the QGIS Documentation
-# Project package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Kevin M, 2016
-# Klaus Affeldt <ka@ansperger.de>, 2019
+# Richard Duivenvoorde <richard@duif.net>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation Project testing\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-07 15:33+0200\n"
-"PO-Revision-Date: 2016-07-18 09:30+0000\n"
-"Last-Translator: Klaus Affeldt <ka@ansperger.de>, 2019\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
+"PO-Revision-Date: 2020-03-16 19:26+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
 "Language-Team: German (https://www.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:10
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:4
 msgid "Security Considerations"
 msgstr "Sicherheitsüberprüfung"
 
-#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:17
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:11
 msgid ""
 "Once the master password is entered, the API is open to access "
 "authentication configs in the authentication database, similar to how "
@@ -45,7 +42,7 @@ msgstr ""
 "Standalone-Anwendung installiert, die den Zugriff auf die "
 "Anmeldeinformationen zur Authentifizierung  erhält."
 
-#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:23
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:17
 msgid ""
 "The quick solution for initial release of feature is to just not include "
 "most PyQGIS bindings for the authentication system."
@@ -54,7 +51,7 @@ msgstr ""
 "nur die meisten PyQGIS Bindungen für das Authentifizierungssystem zu "
 "umfassen."
 
-#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:26
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:20
 msgid ""
 "Another simple, though not robust, fix is to add a combobox in "
 ":menuselection:`Settings --> Options --> Authentication` (defaults to "
@@ -64,7 +61,7 @@ msgstr ""
 "hinzuzufügen in :menuselection:`Einstellungen --> Optionen --> "
 "Authentifizierung` (Vorgabe ist \"niemals\"):"
 
-#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:34
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:28
 msgid ""
 "Such an option's setting would need to be saved in a location non-accessible"
 " to Python, e.g. the authentication database, and encrypted with the master "
@@ -74,13 +71,13 @@ msgstr ""
 "werden, der für Python nicht zugänglich Python ist, z. B. die "
 "Authentifizierungsdatenbank und verschlüsselt mit dem Master-Passwort."
 
-#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:38
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:32
 msgid "Another option may be to track which plugins the user has specifically"
 msgstr ""
 "Eine weitere Option kann es sein zu verflogen, welche Plugins der Benutzer "
 "speziell hat"
 
-#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:39
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:33
 msgid ""
 "allowed to access the authentication system, though it may be tricky to "
 "deduce which plugin is actually making the call."
@@ -88,7 +85,7 @@ msgstr ""
 "erlaubt auf Authentifizierungssystem zuzugreifen, obwohl es schwierig sein "
 "kann, abzuleiten welches Plugin tatsächlich abruft."
 
-#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:43
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:37
 msgid ""
 "Sandboxing plugins, possibly in their own virtual environments, would reduce"
 " 'cross-plugin' hacking of authentication configs from another plugin that "
@@ -101,7 +98,7 @@ msgstr ""
 "Plugin Kommunikation ist gut, aber vielleicht nur zwischen Plugins von "
 "Drittanbietern."
 
-#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:48
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:42
 msgid ""
 "Another good solution is to issue code-signing certificates to vetted plugin"
 " authors. Then validate the plugin's certificate upon loading. If need be "
@@ -113,13 +110,13 @@ msgstr ""
 "Nutzer auch nicht vertrauenswürdige Politiken für Zertifikate einstellen, "
 "mit dem Plugin im Zusammenhang mit bestehenden Zertifikatsverwaltungen."
 
-#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:53
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:47
 msgid ""
 "Alternatively, access to sensitive authentication system data from Python"
 msgstr ""
 "Alternativ, Zugriff auf sensible Authentifizierungssystem Daten von Python"
 
-#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:54
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:48
 msgid ""
 "could never be allowed, and only the use of QGIS core widgets, or "
 "duplicating authentication system integrations, would allow the plugin to "
@@ -134,7 +131,7 @@ msgstr ""
 "Authentifizierungs Config im Bereich der wichtigen Bereiche der Hauptapp "
 "laden."
 
-#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:60
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:54
 msgid ""
 "The same security concerns apply to C++ plugins, though it will be harder to"
 " restrict access, since there is no function binding to simply be removed as"
@@ -144,11 +141,11 @@ msgstr ""
 "schwieriger sein wird, den Zugang zu beschränken, da es keine verbindliche "
 "Funktion  gibt, einfach wie mit Python zu entfernen."
 
-#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:65
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:59
 msgid "Restrictions"
 msgstr "Einschränkungen"
 
-#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:67
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:61
 msgid ""
 "The confusing `licensing and exporting`_ issues associated with OpenSSL "
 "apply. In order for Qt to work with SSL certificates, it needs access to the"
@@ -162,7 +159,7 @@ msgstr ""
 " Standard-dynamische Laufzeit auf OpenSSL-Libs verbunden "
 "(Exportbeschränkungen vermeiden)."
 
-#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:72
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:66
 msgid ""
 "QCA follows a similar tactic, whereby linking to QCA incurs no restrictions,"
 " because the qca-ossl (OpenSSL) plugin is loaded at run-time. The qca-ossl "
@@ -177,13 +174,10 @@ msgstr ""
 "sicherzustellen, dass erfüllt sind, wenn sie das Plugin versenden. Könnte "
 "sein. Ich weiß es nicht wirklich. Ich bin kein Anwalt."
 
-#: ../../source/docs/user_manual/auth_system/auth_considerations.rst:78
+#: ../../docs/user_manual/auth_system/auth_considerations.rst:72
 msgid ""
 "The authentication system safely disables itself when ``qca-ossl`` is not "
 "found at run-time."
 msgstr ""
 "Das Authentifizierungssystem deaktiviert sicher selbst, wenn ``qca-ossl`` "
 "zur Laufzeit nicht gefunden wird."
-
-#~ msgid "|updatedisclaimer|"
-#~ msgstr "|updatedisclaimer|"

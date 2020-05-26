@@ -1,19 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGISDoc package.
+# This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Dick Groskamp, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGISDoc 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:24+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Dick Groskamp, 2020\n"
 "Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,15 +22,19 @@ msgstr ""
 "Language: nl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:7
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:11
+msgid ""
+"The code snippets on this page need the following imports if you're outside "
+"the pyqgis console:"
+msgstr ""
+"De codesnippers op deze pagina hebben de volgende import nodig als u buiten "
+"de console van PyQGIS bent:"
+
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:42
 msgid "Using the Map Canvas"
 msgstr "Het kaartvenster gebruiken"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:9
-msgid "|outofdate|"
-msgstr "|outofdate|"
-
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:14
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:48
 msgid ""
 "The Map canvas widget is probably the most important widget within QGIS "
 "because it shows the map composed from overlaid map layers and allows "
@@ -51,7 +56,7 @@ msgstr ""
 "één gereedschap actief en de gebruiker kan tussen de verschillende "
 "gereedschappen schakelen."
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:22
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:56
 msgid ""
 "The map canvas is implemented with the :class:`QgsMapCanvas "
 "<qgis.gui.QgsMapCanvas>` class in the :mod:`qgis.gui` module. The "
@@ -72,7 +77,7 @@ msgstr ""
 "the framework <https://doc.qt.io/qt-5/graphicsview.html>`_ te hebben "
 "gelezen."
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:30
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:64
 msgid ""
 "Whenever the map has been panned, zoomed in/out (or some other action that "
 "triggers a refresh), the map is rendered again within the current extent. "
@@ -92,7 +97,7 @@ msgstr ""
 "optreedt als een achtergrond, kunnen er meer **items voor het kaartvenster**"
 " zijn."
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:36
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:70
 msgid ""
 "Typical map canvas items are rubber bands (used for measuring, vector "
 "editing etc.) or vertex markers. The canvas items are usually used to give "
@@ -112,17 +117,17 @@ msgstr ""
 "<qgis.gui.QgsMapCanvasItem>` die iets meer functionaliteit toevoegt aan de "
 "basisobjecten ``QGraphicsItem``."
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:45
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:79
 msgid "To summarize, the map canvas architecture consists of three concepts:"
 msgstr ""
 "Samenvattend, de architectuur van het kaartvenster bestaat uit drie "
 "concepten:"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:47
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:81
 msgid "map canvas --- for viewing of the map"
 msgstr "kaartvenster --- voor het bekijken van de kaart"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:48
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:82
 msgid ""
 "map canvas items --- additional items that can be displayed on the map "
 "canvas"
@@ -130,23 +135,23 @@ msgstr ""
 "items voor het kaartvenster --- aanvullende items die kunnen worden "
 "weergegeven in het kaartvenster"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:49
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:83
 msgid "map tools --- for interaction with the map canvas"
 msgstr "gereedschappen voor de kaart --- voor interactie met het kaartvenster"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:54
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:88
 msgid "Embedding Map Canvas"
 msgstr "Kaartvenster inbedden"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:56
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:90
 msgid ""
 "Map canvas is a widget like any other Qt widget, so using it is as simple as"
-" creating and showing it"
+" creating and showing it."
 msgstr ""
 "Kaartvenster is een widget net als elk ander widget van Qt, dus het "
-"gebruiken ervan is zo eenvoudig als het maken en weergeven ervan"
+"gebruiken ervan is zo eenvoudig als het maken en weergeven ervan."
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:64
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:98
 msgid ""
 "This produces a standalone window with map canvas. It can be also embedded "
 "into an existing widget or window. When using :file:`.ui` files and Qt "
@@ -167,7 +172,7 @@ msgstr ""
 "kinderen van een hoofdvenster of dialoogvenster) te construeren en een lay-"
 "out te maken."
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:72
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:106
 msgid ""
 "By default, map canvas has black background and does not use anti-aliasing. "
 "To set white background and enable anti-aliasing for smooth rendering"
@@ -176,7 +181,7 @@ msgstr ""
 "aliasing. Een witte achtergrond instellen en anti-aliasing inschakelen voor "
 "glad renderen"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:80
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:114
 msgid ""
 "(In case you are wondering, ``Qt`` comes from ``PyQt.QtCore`` module and "
 "``Qt.white`` is one of the predefined ``QColor`` instances.)"
@@ -185,18 +190,17 @@ msgstr ""
 "``PyQt.QtCore`` en ``Qt.white`` is één van de voorgedefinieerde instanties "
 "van ``QColor``.)"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:83
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:117
 msgid ""
 "Now it is time to add some map layers. We will first open a layer and add it"
 " to the current project. Then we will set the canvas extent and set the list"
-" of layers for canvas"
+" of layers for the canvas."
 msgstr ""
 "Nu is het tijd om enkele kaartlagen toe te voegen. We zullen eerst een laag "
 "openen en die toevoegen aan het huidige project. Daarna zullen we het bereik"
-" van het kaartvenster instellen alsmede de lijst met lagen voor het "
-"kaartvenster"
+" van het kaartvenster instellen en de lijst met lagen voor het kaartvenster."
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:105
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:137
 msgid ""
 "After executing these commands, the canvas should show the layer you have "
 "loaded."
@@ -204,11 +208,11 @@ msgstr ""
 "Nadat deze opdrachten zijn uitgevoerd, zou het kaartvenster de laag moeten "
 "weergeven die u heeft geladen."
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:111
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:143
 msgid "Rubber Bands and Vertex Markers"
 msgstr "Elastieken banden en markeringen voor punten"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:113
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:145
 msgid ""
 "To show some additional data on top of the map in canvas, use map canvas "
 "items. It is possible to create custom canvas item classes (covered below), "
@@ -229,15 +233,15 @@ msgstr ""
 "verplaatst/geschaald als het kaartvenster wordt verschoven of als er wordt "
 "gezoomd."
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:121
-msgid "To show a polyline"
-msgstr "Een polylijn weergeven"
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:153
+msgid "To show a polyline:"
+msgstr "Een polylijn weergeven:"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:129
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:161
 msgid "To show a polygon"
 msgstr "Een polygoon weregeven"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:137
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:169
 msgid ""
 "Note that points for polygon is not a plain list: in fact, it is a list of "
 "rings containing linear rings of the polygon: first ring is the outer "
@@ -248,7 +252,7 @@ msgstr ""
 "ring is de buitenste grens, verdere (optionele) ringen corresponderen met "
 "gaten in de polygoon."
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:141
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:173
 msgid ""
 "Rubber bands allow some customization, namely to change their color and line"
 " width"
@@ -256,7 +260,7 @@ msgstr ""
 "Elastieken banden maken enige aanpassingen mogelijk, namelijk om hun kleur "
 "en lijndikte te wijzigen"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:149
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:181
 msgid ""
 "The canvas items are bound to the canvas scene. To temporarily hide them "
 "(and show them again), use the :func:`hide` and :func:`show` combo. To "
@@ -268,7 +272,7 @@ msgstr ""
 "tijdelijk te verbergen (en weer opnieuw weer te geven). U moet het uit de "
 "scene van het kaartvenster verwijderen om het item volledig te verwijderen"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:157
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:189
 msgid ""
 "(in C++ it's possible to just delete the item, however in Python ``del r`` "
 "would just delete the reference and the object will still exist as it is "
@@ -278,7 +282,7 @@ msgstr ""
 "echter zou ``del r`` slechts de verwijzing verwijderen en zou het object nog"
 " steeds bestaan omdat het eigendom is van het kaartvenster)"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:161
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:193
 msgid ""
 "Rubber band can be also used for drawing points, but the "
 ":class:`QgsVertexMarker <qgis.gui.QgsVertexMarker>` class is better suited "
@@ -290,11 +294,11 @@ msgstr ""
 " hiervoor (:class:`QgsRubberBand <qgis.gui.QgsRubberBand>` zou alleen een "
 "rechthoek rondom het gewenste punt tekenen)."
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:165
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:197
 msgid "You can use the vertex marker like this:"
 msgstr "U kunt de markering voor punten als volgt gebruiken:"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:172
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:204
 msgid ""
 "This will draw a red cross on position **[10,45]**. It is possible to "
 "customize the icon type, size, color and pen width"
@@ -303,7 +307,7 @@ msgstr ""
 " het type pictogram, de grootte, de kleur en de dikte van de pen aan te "
 "passen"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:182
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:214
 msgid ""
 "For temporary hiding of vertex markers and removing them from canvas, use "
 "the same methods as for rubber bands."
@@ -311,11 +315,11 @@ msgstr ""
 "Gebruik dezelfde methode als voor elastieken banden om markeringen voor "
 "punten tijdelijk te verbergen en ze uit het kaartvenster te verwijderen."
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:188
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:220
 msgid "Using Map Tools with Canvas"
 msgstr "Gereedschappen voor de kaart gebruiken in het kaartvenster"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:190
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:222
 msgid ""
 "The following example constructs a window that contains a map canvas and "
 "basic map tools for map panning and zooming. Actions are created for "
@@ -342,7 +346,7 @@ msgstr ""
 "geactiveerd met behulp van de methode :meth:`setMapTool() "
 "<qgis.gui.QgsMapCanvas.setMapTool>`."
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:254
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:286
 msgid ""
 "You can try the above code in the Python console editor. To invoke the "
 "canvas window, add the following lines to instantiate the ``MyWnd`` class. "
@@ -353,11 +357,11 @@ msgstr ""
 "kaartvenster te activeren. Dat zal de huidige geselecteerde laagr in het "
 "nieuw gemaakte kaartvenster renderen"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:266
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:298
 msgid "Writing Custom Map Tools"
 msgstr "Aangepaste gereedschappen voor de kaart schrijven"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:268
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:300
 msgid ""
 "You can write your custom tools, to implement a custom behavior to actions "
 "performed by users on the canvas."
@@ -366,7 +370,7 @@ msgstr ""
 "implementeren voor acties die door gebruikers op het kaartvenster worden "
 "uitgevoerd."
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:271
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:303
 msgid ""
 "Map tools should inherit from the :class:`QgsMapTool <qgis.gui.QgsMapTool>`,"
 " class or any derived class, and selected as active tools in the canvas "
@@ -379,7 +383,7 @@ msgstr ""
 " behulp van de methode :meth:`setMapTool() "
 "<qgis.gui.QgsMapCanvas.setMapTool>`  zoals we al eerder hebben gezien."
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:276
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:308
 msgid ""
 "Here is an example of a map tool that allows to define a rectangular extent "
 "by clicking and dragging on the canvas. When the rectangle is defined, it "
@@ -394,14 +398,12 @@ msgstr ""
 "elementen voor elastieken banden zoals eerder beschreven om de geselecteerde"
 " rechthoek weer te geven als die wordt gedefinieerd."
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:350
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:382
 msgid "Writing Custom Map Canvas Items"
 msgstr "Aangepaste items voor het kaartvenster schrijven"
 
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:354
-msgid "**TODO:**"
-msgstr "**TODO:**"
-
-#: ../../docs/pyqgis_developer_cookbook/canvas.rst:353
-msgid "how to create a map canvas item"
-msgstr "hoe een item voor het kaartvenster te maken"
+#: ../../docs/pyqgis_developer_cookbook/canvas.rst:384
+msgid "Here is an example of a custom canvas item that draws a circle:"
+msgstr ""
+"Hier is een voorbeeld van een aangepast item voor het kaartvenster dat een "
+"cirkel tekent:"
