@@ -93,7 +93,8 @@ BugTracker
 
 While the qgis-users mailing list is useful for general 'How do I do
 XYZ in QGIS?'-type questions, you may wish to notify us about bugs in
-QGIS. You can submit bug reports using the `QGIS bug tracker <https://github.com/qgis/QGIS/issues>`_.
+QGIS. You can submit bug reports using the
+`QGIS bug tracker <https://github.com/qgis/QGIS/issues>`_.
 
 Please bear in mind that your bug may not always enjoy the priority
 you might hope for (depending on its severity). Some bugs may require
@@ -104,9 +105,11 @@ Feature requests can be submitted as well using the same ticket system
 as for bugs. Please make sure to select the type ``Feature request``.
 
 If you have found a bug and fixed it yourself, you can submit a
-Pull Request on the `Github QGIS Project <https://github.com/qgis/QGIS>`_.
+Pull Request on the `Github QGIS Project <https://github.com/qgis/QGIS/pulls>`_.
 
-Read `Bugs, Features and Issues <https://qgis.org/en/site/getinvolved/development/bugreporting.html#bugs-features-and-issues>`_ and :ref:`submit_patch` for more details.
+Read
+`Bugs, Features and Issues <https://qgis.org/en/site/getinvolved/development/bugreporting.html#bugs-features-and-issues>`_
+and :ref:`submit_patch` for more details.
 
 Blog
 ====
