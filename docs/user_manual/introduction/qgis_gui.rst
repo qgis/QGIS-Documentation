@@ -2381,8 +2381,8 @@ fine-tune the 3D scene:
     tiles to hide the cracks.
 
 * :guilabel:`Mesh Terrain Settings`: Configures the rendering of the terrain
-  when a mesh layer is used. You can set the triangles, colors or arrows
-  properties of the Mesh dataset vertices.
+  when a mesh layer is used. You can set the triangles rendering (wireframe,
+  smooth triangle) and colors (uniform or depending on terrain level).
   More details in the :ref:`Mesh layer properties <label_meshproperties>` section.
 
   .. TODO: replace the mesh properties link with a direct one to the 3D section
