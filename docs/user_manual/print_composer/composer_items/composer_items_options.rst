@@ -252,7 +252,7 @@ accurately.
 .. figure:: img/position_size.png
    :align: center
 
-   New Item properties dialog
+   Position and size
 
 * the actual number of the page to place the item on;
 * the reference point of the item;
