@@ -480,6 +480,7 @@ In the |rendering| :guilabel:`Rendering` tab, it's possible to:
   deferred in order to avoid refreshing multiple times if more than one layer
   has an auto update interval set.
 
+<<<<<<< HEAD
 You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum
 (exclusive)` scale, defining a range of scale in which the layer will be
 visible. Out of this range, it's hidden. The |mapIdentification|
@@ -487,6 +488,8 @@ visible. Out of this range, it's hidden. The |mapIdentification|
 canvas scale as boundary of the range visibility.
 See :ref:`label_scaledepend` for more information.
 
+=======
+>>>>>>> 1d5dddbc3... Double paragraph (#5565)
 .. _figure_raster_rendering:
 
 .. figure:: img/rasterRendering.png
