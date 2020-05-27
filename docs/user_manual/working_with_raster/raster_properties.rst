@@ -527,14 +527,6 @@ In the |rendering| :guilabel:`Rendering` tab, it's possible to:
   Canvas updates are deferred in order to avoid refreshing multiple
   times if more than one layer has an auto update interval set.
 
-You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum
-(exclusive)` scale, defining a range of scales in which the layer will
-be visible.
-It will be hidden outside this range.
-The |mapIdentification| :sup:`Set to current canvas scale` button helps
-you use the current map canvas scale as a boundary for the range visibility.
-See :ref:`label_scaledepend` for more information.
-
 .. _figure_raster_rendering:
 
 .. figure:: img/rasterRendering.png
