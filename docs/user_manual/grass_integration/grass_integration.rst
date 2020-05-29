@@ -86,7 +86,7 @@ Managing GRASS data in QGIS Browser
 ===================================
 
 * Copying maps: GRASS maps may be copied between mapsets within the same location using drag and drop.
-* Deleting maps: Right click on a GRASS map and select :guilabel:`Delete` from context menu.
+* Deleting maps: Right click on a GRASS map and select :guilabel:`Delete` from contextmenu.
 * Renaming maps: Right click on a GRASS map and select :guilabel:`Rename` from context menu.
 
 .. _grass_options:
@@ -291,7 +291,7 @@ coordinate values and the currently selected raster resolution (see Neteler & Mi
    :file:`LOCATION` or to create a new :file:`LOCATION` altogether. Click on the
    radio button |radioButtonOn| :guilabel:`Select location`
    (see figure_grass_new_location_) and click :guilabel:`Next`.
-#. Enter the name :file:`text` for the new :file:`MAPSET`. Below in the wizard, you
+#. Enter the name :file:`test` for the new :file:`MAPSET`. Below in the wizard, you
    see a list of existing :file:`MAPSETs` and corresponding owners.
 #. Click :guilabel:`Next`, check out the summary to make sure it's all correct and
    click :guilabel:`Finish`.
