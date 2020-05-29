@@ -513,55 +513,59 @@ or an expression to set:
    The widget will be reset to the corresponding :ref:`auxiliary storage field
    <vector_auxiliary_storage>`.
 
+.. _`labels_priority`:
 
 Priority
 ........
 
-In the :guilabel:`Priority` section you can define the priority with which
-labels are rendered for all three vector layer types (point, line, polygon).
-This placement option interacts with the labels from other vector layers in
-the map canvas. If there are labels from different layers in the same
+In the :guilabel:`Priority` section you can define the placement priority rank
+of each label, ie if there are different labels candidates for the same
 location, the label with the higher priority will be displayed and the
-others will be left out.
+others could be left out.
+The priority rank is also used to evaluate whether a label could be omitted
+due to a greater weighted :ref:`obstacle feature <labels_obstacles>`.
 
-
-.. _`label_obstacles`:
+.. _`labels_obstacles`:
 
 Obstacles
 .........
 
-An obstacle is a feature QGIS tries as far as possible to not place labels over.
-From the :guilabel:`Obstacles` frame, you can manage the covering relation
-between labels and features.
+In some contexts (eg, high density labels, overlapping features...), the
+labels placement can result in labels being placed over unrelated features.
 
-Activate the |checkbox| :guilabel:`Discourage labels from covering features`
-option to decide whether features of the layer should act as obstacles for
-any label (including labels from other features in the same layer).
+An obstacle is a feature over which QGIS avoids placing other features' labels
+or diagrams. This can be controlled from the :guilabel:`Obstacles` section:
 
-Instead of the whole layer, you can define a subset of features to use as obstacles,
-using the |dataDefined| :sup:`data-defined override` control next to the option.
+#. Activate the |checkbox| :guilabel:`Discourage labels from covering features`
+   option to decide whether features of the layer should act as obstacles for
+   any label (including labels from other features in the same layer).
 
-Use the :guilabel:`Settings` button to tweak the obstacle's weighing.
+   Instead of the whole layer, you can select a subset of features to use as
+   obstacles, using the |dataDefined| :sup:`data-defined override` control next
+   to the option.
 
-* The |slider| priority control slider for obstacles allows you to make labels
-  prefer to overlap features from certain layers rather than others.
-  A **Low weight** obstacle priority means that features of the layer are less
-  important obstacles and thus more likely to be covered by labels.
-  This priority can also be data-defined, so that within the same layer,
-  certain features are more likely to be covered than others.
+#. Use the :guilabel:`Settings` button to tweak the obstacles weighing.
 
-* For polygon layers, you can choose the kind of obstacle the feature is:
+   * You can assign to every potential obstacle feature an :guilabel:`Obstacle
+     weight`: any :ref:`label <labels_priority>` or :ref:`diagram <diagram_placement>`
+     whose placement priority rank is greater than this value can be placed
+     over. Labels or diagrams with lower rank will be removed if no other
+     placement is possible.
 
-  * **over the feature's interior**: avoids placing labels over the interior of
-    the polygon (prefers placing labels totally outside or just slightly inside
-    the polygon)
-  * or **over the feature's boundary**: avoids placing labels over the boundary of
-    the polygon (prefers placing labels outside or completely inside the
-    polygon). This can be useful for layers where the
-    features cover the whole area (administrative units, categorical coverages, ...).
-    In this case, it is impossible to avoid
-    placing labels within these features, and it looks much better when
-    placing them over the boundaries between features is avoided.
+     This weighing can also be data-defined, so that within the same layer,
+     certain features are more likely to be covered than others.
+   * For polygon layers, you can choose the kind of obstacle the feature is:
+
+     * **over the feature's interior**: avoids placing labels over the interior
+       of the polygon (prefers placing labels totally outside or just slightly
+       inside the polygon)
+     * or **over the feature's boundary**: avoids placing labels over the
+       boundary of the polygon (prefers placing labels outside or completely
+       inside the polygon). This can be useful for layers where the features
+       cover the whole area (administrative units, categorical coverages, ...).
+       In this case, it is impossible to avoid
+       placing labels within these features, and it looks much better when
+       placing them over the boundaries between features is avoided.
 
 
 .. _labels_rendering:
