@@ -258,7 +258,7 @@ Defining a custom CRS in QGIS requires a good understanding of the PROJ
 projection library. To begin, refer to "Cartographic Projection Procedures
 for the UNIX Environment - A User's Manual" by Gerald I. Evenden, U.S.
 Geological Survey Open-File Report 90-284, 1990 (available at
-ftp://ftp.remotesensing.org/proj/OF90-284.pdf).
+https://pubs.usgs.gov/of/1990/of90-284/ofr90-284.pdf).
 
 This manual describes the use of ``proj`` and related command line
 utilities. The cartographic parameters used with ``proj`` are described in
