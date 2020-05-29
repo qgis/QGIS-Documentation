@@ -390,7 +390,7 @@ working for your server's connection, you can manually trigger a connection via
 the **Python Console** by running the following code (replace
 ``https://bugreports.qt-project.org`` with the URL of your server):
 
-.. testcode:: auth_workflows
+.. code-block:: python
 
    from qgis.PyQt.QtNetwork import QNetworkRequest
    from qgis.PyQt.QtCore import QUrl
