@@ -58,7 +58,8 @@ By default, a new layer has only one attribute, the :kbd:`id` field (which you
 should see in the :guilabel:`Fields list`) below. However, in order for the
 data you create to be useful, you actually need to say something about the
 features you'll be creating in this new layer. For our current purposes, it
-will be enough to add one field called :kbd:`name` that will hold :kbd:`Text data` and will be limited to text length of :kbd:`80` characters.
+will be enough to add one field called :kbd:`name` that will hold :kbd:`Text data`
+and will be limited to text length of ``80`` characters.
 
 * Replicate the setup below, then click the :guilabel:`Add to Fields List`
   button:
@@ -109,7 +110,8 @@ are provided, so you'll need to import them as necessary.
 .. figure:: img/raster_added.png
 	:align: center
 
-* If you don't see an aerial image appear, select the new layer image, right click, and click on :guilabel:`Zoom to Layer`.
+* If you don't see an aerial image appear, select the new layer image,
+  right click, and click on :guilabel:`Zoom to Layer`.
 
 .. figure:: img/zoom_to_raster.png
 	:align: center
@@ -145,7 +147,7 @@ If you can't find this button, check that the :guilabel:`Digitizing` toolbar is
 enabled. There should be a check mark next to the :menuselection:`View -->
 Toolbars --> Digitizing` menu entry.
 
-As soon as you are in edit mode, you'll see some digitizing tools are now
+As soon as you are in edit mode, you'll see that some digitizing tools have become
 active:
 
   - |capturePolygon|: Add a new feature.
@@ -154,7 +156,8 @@ active:
 Other relevant buttons are still inactive, but will become active when we
 start interacting with our new data.
 
-You will also notice in the :guilabel:`Layers` pane the layer :kbd:`school_layer` symbol now has the pencil icon, indicating the layer is in edit mode.
+Notice that the layer ``school_layer`` in the :guilabel:`Layers` panel
+now has the pencil icon, indicating that it is in edit mode.
 
 * Click on the |capturePolygon| button to begin digitizing our school
   fields.
@@ -190,12 +193,15 @@ The first feature you'll be digitizing is the |schoolAreaType1|:
 .. figure:: img/new_feature.png
 	:align: center
 	
-* In the :guilabel:`Layers` pane select the :kbd:`school_property` layer, right click, and click on :guilabel:`Open Attribute Table`.
+* In the :guilabel:`Layers` panel select the :kbd:`school_property` layer, right click,
+  and click on :guilabel:`Open Attribute Table`.
 
 .. figure:: img/open_attribute_table.png
 	:align: center
 	
-In the table you will see the feature you just added.  While in edit mode you can update the attributes data by double click on the cell you want to update.
+In the table you will see the feature you just added.
+While in edit mode you can update the attributes data by double click on the cell
+you want to update.
 
 ..	figure:: img/feature_table.png
 	:align: center
@@ -209,14 +215,16 @@ digitizing until you're done creating the feature as above. Then:
 
 * Click on |vertexToolActiveLayer| Vertex Editor tool.
 * Hover the mouse over a vertex you want to move and *left-click* on the vertex.
-* Move the mouse to the correct location of the vertex, and *left-click*.  This will move the vertext to the new location.
+* Move the mouse to the correct location of the vertex, and *left-click*.
+  This will move the vertext to the new location.
 
 .. figure:: img/select_vertex.png
 	:align: center
 .. figure:: img/moved_vertext.png
 	:align: center
 
-The same procedure can be used to move a line segment, but you will need to hover over the midpoint of the line segment.
+The same procedure can be used to move a line segment, but you will need to
+hover over the midpoint of the line segment.
 
 Another way to edited the feature is by manually entering the coordinates for each vertex.  
 
@@ -227,8 +235,9 @@ Another way to edited the feature is by manually entering the coordinates for ea
 .. figure:: img/vertex_editor_table.png
 	:align: center
 	
-* Click on a row, then look at the feature the corresponding vertex circle color will change to blue.
-* Double *left-click* in the table on the x or y coordinate you want to edit and enter the updated value. 
+* Click on a row, and notice that for this feature the vertex circle color will change to blue.
+* Double *left-click* in the table on the x or y coordinate you want to edit and enter the
+  updated value. 
 	
 .. figure:: img/edit_vertext_in_vertex_editor.png
 	:align: center
@@ -245,14 +254,15 @@ To enable the remaining feature editing tools, one needs to select the feature.
 .. figure:: img/all_active_buttons.png
 	:align: center
 
-Here is a summary of what editing action of these buttons:
+Here is a summary of the editing actions of these buttons:
 
 - |deleteSelectedFeatures|: delete the selected feature.
 - |editCut| : cut the selected feature.
 - |editCopy|: copy the selected feature.
 - |editPaste|: paste a cut or copied feature back into the map.
 
-* When done editing, click the Toggle Editing button |toggleEditing| to get out of edit mode.
+* When done editing, click the Toggle Editing button |toggleEditing| to get
+  out of edit mode, and save your edits.
 
 	
 |basic| |TY|
@@ -281,9 +291,12 @@ Remember that each new feature needs to have a unique :kbd:`id` value!
 * Create a new line feature called :kbd:`routes.shp` with attributes :kbd:`id`
   and :kbd:`type`. (Use the approach above to guide you.)
 
-We're going to digitize two routes which are not already marked on the roads layer; one is a path, the other is a track. 
+We are going to digitize two routes which are not already marked on the roads layer;
+one is a path, the other is a track. 
 
-* If the roads layer is not in your map, then add it from the GeoPackage file :file:`training-data.gpk` included in the :file:`exercise_data` folder of the training data you downloaded.
+* If the roads layer is not in your map, then add it from the GeoPackage file
+  :file:`training-data.gpk` included in the :file:`exercise_data` folder of the
+  training data you downloaded.
 
 Our path runs along the southern edge of the suburb of Railton, starting and
 ending at marked roads:
