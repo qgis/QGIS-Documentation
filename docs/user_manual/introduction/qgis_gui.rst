@@ -995,27 +995,27 @@ copy or paste layer properties (style, scale, CRS...).
        :guilabel:`New GeoPackage Layer...`
      - :kbd:`Ctrl+Shift+N`
      - :guilabel:`Data Source Manager`
-     - :ref:`sec_create_vector`
+     - :ref:`vector_create_geopackage`
    * - :menuselection:`-->` |newVectorLayer|
        :guilabel:`New Shapefile Layer...`
      -
      - :guilabel:`Data Source Manager`
-     - :ref:`sec_create_vector`
+     - :ref:`vector_create_shapefile`
    * - :menuselection:`-->` |newSpatiaLiteLayer|
        :guilabel:`New SpatiaLite Layer...`
      -
      - :guilabel:`Data Source Manager`
-     - :ref:`sec_create_vector`
+     - :ref:`vector_create_spatialite`
    * - :menuselection:`-->` |createMemory|
        :guilabel:`New Temporary Scratch Layer...`
      -
      - :guilabel:`Data Source Manager`
-     - :ref:`sec_create_vector`
+     - :ref:`vector_new_scratch_layer`
    * - :menuselection:`-->` |newVirtualLayer|
        :guilabel:`New Virtual Layer...`
      -
      - :guilabel:`Data Source Manager`
-     - :ref:`sec_create_vector`
+     - :ref:`vector_virtual_layers`
    * - :menuselection:`Add Layer -->`
      -
      -
@@ -1024,72 +1024,77 @@ copy or paste layer properties (style, scale, CRS...).
        :guilabel:`Add Vector Layer......`
      - :kbd:`Ctrl+Shift+V`
      - :guilabel:`Manage Layers`
-     - :ref:`opening_data`
+     - :ref:`loading_file`
    * - :menuselection:`-->` |addRasterLayer|
        :guilabel:`Add Raster Layer...`
      - :kbd:`Ctrl+Shift+R`
      - :guilabel:`Manage Layers`
-     - :ref:`opening_data`
+     - :ref:`loading_file`
    * - :menuselection:`-->` |addMeshLayer|
        :guilabel:`Add Mesh Layer...`
      -
      - :guilabel:`Manage Layers`
-     - :ref:`opening_data`
+     - :ref:`mesh_loading`
    * - :menuselection:`-->` |addDelimitedTextLayer|
        :guilabel:`Add Delimited Text Layer...`
      - :kbd:`Ctrl+Shift+T`
      - :guilabel:`Manage Layers`
-     - :ref:`opening_data`
+     - :ref:`vector_loading_csv`
    * - :menuselection:`-->` |addPostgisLayer|
        :guilabel:`Add PostGIS Layer...`
      - :kbd:`Ctrl+Shift+D`
      - :guilabel:`Manage Layers`
-     - :ref:`opening_data`
+     - :ref:`db_tools`
    * - :menuselection:`-->` |addSpatiaLiteLayer|
        :guilabel:`Add SpatiaLite Layer...`
      - :kbd:`Ctrl+Shift+L`
      - :guilabel:`Manage Layers`
-     - :ref:`opening_data`
+     - :ref:`label_spatialite`
    * - :menuselection:`-->` |addMssqlLayer|
        :guilabel:`Add MSSQL Spatial Layer...`
      -
      - :guilabel:`Manage Layers`
-     - :ref:`opening_data`
+     - :ref:`db_tools`
+   * - :menuselection:`-->` |addOracleLayer|
+       :guilabel:`Add Oracle Spatial Layer...`
+     -
+     - :guilabel:`Manage Layers`
+     - :ref:`db_tools`
    * - :menuselection:`-->` |addDb2Layer|
        :guilabel:`Add DB2 Spatial Layer...`
      - :kbd:`Ctrl+Shift+2`
      - :guilabel:`Manage Layers`
-     - :ref:`opening_data`
+     - :ref:`db_tools`
    * - :menuselection:`-->` |addVirtualLayer|
        :guilabel:`Add/Edit Virtual Layer...`
      -
      - :guilabel:`Manage Layers`
-     - :ref:`opening_data`
+     - :ref:`vector_virtual_layers`
    * - :menuselection:`-->` |addWmsLayer|
        :guilabel:`Add WMS/WMTS Layer...`
      - :kbd:`Ctrl+Shift+W`
      - :guilabel:`Manage Layers`
-     - :ref:`opening_data`
+     - :ref:`ogc-wms-layers`
    * - :menuselection:`-->` |addAmsLayer|
        :guilabel:`Add ArcGIS MapServer Layer...`
      -
      - :guilabel:`Manage Layers`
-     - :ref:`opening_data`
+     -
    * - :menuselection:`-->` |addWcsLayer|
        :guilabel:`Add WCS Layer...`
      -
      - :guilabel:`Manage Layers`
-     - :ref:`opening_data`
+     - :ref:`ogc-wcs`
    * - :menuselection:`-->` |addWfsLayer|
        :guilabel:`Add WFS Layer...`
      -
      - :guilabel:`Manage Layers`
-     - :ref:`opening_data`
+     - :ref:`ogc-wfs`
    * - :menuselection:`-->` |addAfsLayer|
        :guilabel:`Add ArcGIS FeatureServer Layer...`
      -
      - :guilabel:`Manage Layers`
-     - :ref:`opening_data`
+     -
    * - :guilabel:`Embed Layers and Groups...`
      -
      -
@@ -2576,6 +2581,8 @@ Click the icon to open the Plugin Manager dialog.
 .. |addMssqlLayer| image:: /static/common/mActionAddMssqlLayer.png
    :width: 1.5em
 .. |addOgrLayer| image:: /static/common/mActionAddOgrLayer.png
+   :width: 1.5em
+.. |addOracleLayer| image:: /static/common/mActionAddOracleLayer.png
    :width: 1.5em
 .. |addPart| image:: /static/common/mActionAddPart.png
    :width: 1.5em
