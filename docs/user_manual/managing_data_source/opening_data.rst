@@ -157,9 +157,10 @@ hierarchically, and there are several top level entries:
    * |oracle| :guilabel:`Oracle`
    * |db2| :guilabel:`DB2`
    * |wms| :guilabel:`WMS/WMTS`
-   * |wms| :guilabel:`XYZ Tiles`
+   * |vectorTileLayer| :guilabel:`Vector Tiles`
+   * |xyz| :guilabel:`XYZ Tiles`
    * |wcs| :guilabel:`WCS`
-   * |wfs| :guilabel:`WFS`
+   * |wfs| :guilabel:`WFS/OGC API-Features`
    * |ows| :guilabel:`OWS`
    * |ams| :guilabel:`ArcGISMapServer`
    * |afs| :guilabel:`ArcGISFeatureServer`
@@ -1271,9 +1272,13 @@ Examples of XYZ Tile services:
    :width: 1.5em
 .. |spatialite| image:: /static/common/mIconSpatialite.png
    :width: 1.5em
+.. |vectorTileLayer| image:: /static/common/mIconVectorTileLayer.png
+   :width: 1.5em
 .. |wcs| image:: /static/common/mIconWcs.png
    :width: 1.5em
 .. |wfs| image:: /static/common/mIconWfs.png
    :width: 1.5em
 .. |wms| image:: /static/common/mIconWms.png
+   :width: 1.5em
+.. |xyz| image:: /static/common/mIconXyz.png
    :width: 1.5em

@@ -87,6 +87,7 @@ Icon                            Substitution                        Icon        
 |addPostgisLayer|               ``|addPostgisLayer|``               |addOracleLayer|                ``|addOracleLayer|``
 |addAfsLayer|                   ``|addAfsLayer|``                   |addAmsLayer|                   ``|addAmsLayer|``
 |addMeshLayer|                  ``|addMeshLayer|``
+|addVectorTileLayer|            ``|addVectorTileLayer|``            |addXyzLayer|                   ``|addXyzLayer|``
 |addVirtualLayer|               ``|addVirtualLayer|``               |addWmsLayer|                   ``|addWmsLayer|``
 |addWcsLayer|                   ``|addWcsLayer|``                   |addWfsLayer|                   ``|addWfsLayer|``
 |newVectorLayer|                ``|newVectorLayer|``                |newSpatiaLiteLayer|            ``|newSpatiaLiteLayer|``
@@ -549,6 +550,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |addToProject| image:: /static/common/mAddToProject.png
    :width: 1.5em
+.. |addVectorTileLayer| image:: /static/common/mActionAddVectorTileLayer.png
+   :width: 1.5em
 .. |addVirtualLayer| image:: /static/common/mActionAddVirtualLayer.png
    :width: 1.5em
 .. |addWcsLayer| image:: /static/common/mActionAddWcsLayer.png
@@ -556,6 +559,8 @@ Icon                            Substitution                        Icon        
 .. |addWfsLayer| image:: /static/common/mActionAddWfsLayer.png
    :width: 1.5em
 .. |addWmsLayer| image:: /static/common/mActionAddWmsLayer.png
+   :width: 1.5em
+.. |addXyzLayer| image:: /static/common/mActionAddXyzLayer.png
    :width: 1.5em
 .. |alignBottom| image:: /static/common/mActionAlignBottom.png
    :width: 1.5em

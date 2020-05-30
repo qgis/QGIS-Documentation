@@ -1075,6 +1075,11 @@ copy or paste layer properties (style, scale, CRS...).
      - :kbd:`Ctrl+Shift+W`
      - :guilabel:`Manage Layers`
      - :ref:`ogc-wms-layers`
+   * - :menuselection:`-->` |addXyzLayer|
+       :guilabel:`Add XYZ Layer...`
+     -
+     -
+     - :ref:`xyz_tile`
    * - :menuselection:`-->` |addAmsLayer|
        :guilabel:`Add ArcGIS MapServer Layer...`
      -
@@ -1094,6 +1099,11 @@ copy or paste layer properties (style, scale, CRS...).
        :guilabel:`Add ArcGIS FeatureServer Layer...`
      -
      - :guilabel:`Manage Layers`
+     -
+   * - :menuselection:`-->` |addVectorTileLayer|
+       :guilabel:`Add Vector Tile Layer...`
+     -
+     -
      -
    * - :guilabel:`Embed Layers and Groups...`
      -
@@ -2594,6 +2604,8 @@ Click the icon to open the Plugin Manager dialog.
    :width: 2em
 .. |addSpatiaLiteLayer| image:: /static/common/mActionAddSpatiaLiteLayer.png
    :width: 1.5em
+.. |addVectorTileLayer| image:: /static/common/mActionAddVectorTileLayer.png
+   :width: 1.5em
 .. |addVirtualLayer| image:: /static/common/mActionAddVirtualLayer.png
    :width: 1.5em
 .. |addWcsLayer| image:: /static/common/mActionAddWcsLayer.png
@@ -2601,6 +2613,8 @@ Click the icon to open the Plugin Manager dialog.
 .. |addWfsLayer| image:: /static/common/mActionAddWfsLayer.png
    :width: 1.5em
 .. |addWmsLayer| image:: /static/common/mActionAddWmsLayer.png
+   :width: 1.5em
+.. |addXyzLayer| image:: /static/common/mActionAddXyzLayer.png
    :width: 1.5em
 .. |allEdits| image:: /static/common/mActionAllEdits.png
    :width: 1.5em
