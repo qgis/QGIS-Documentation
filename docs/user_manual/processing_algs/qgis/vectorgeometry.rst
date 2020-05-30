@@ -519,6 +519,10 @@ Outputs
      - [vector: polygon]
      - Output (buffer) polygon layer
 
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgiscentroids:
 
