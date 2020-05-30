@@ -546,10 +546,10 @@ or diagrams. This can be controlled from the :guilabel:`Obstacles` section:
 
 #. Use the :guilabel:`Settings` button to tweak the obstacles weighing.
 
-   * You can assign to every potential obstacle feature an :guilabel:`Obstacle
+   * For every potential obstacle feature you can assign an :guilabel:`Obstacle
      weight`: any :ref:`label <labels_priority>` or :ref:`diagram <diagram_placement>`
      whose placement priority rank is greater than this value can be placed
-     over. Labels or diagrams with lower rank will be removed if no other
+     over. Labels or diagrams with lower rank will be omitted if no other
      placement is possible.
 
      This weighing can also be data-defined, so that within the same layer,
