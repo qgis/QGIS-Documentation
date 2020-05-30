@@ -426,7 +426,9 @@ Python code
     import processing
     processing.run("algorithm_id", {parameter_dictionary})
 
-The parameter dictionary provides the parameter NAMEs and values.
+The *algorithm id* is displayed when you hover over the algorithm in
+the Processing Toolbox.
+The *parameter dictionary* provides the parameter NAMEs and values.
 See :ref:`processing_console` for details on how to run processing algorithms
 from the Python console.
 
