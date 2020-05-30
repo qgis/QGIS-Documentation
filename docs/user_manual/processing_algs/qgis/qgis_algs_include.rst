@@ -416,3 +416,17 @@ Available geometric predicates are:
     UPDATE your_table SET area=ST_AREA(geom);
 
 **end_postgisexecutesqlexample**
+
+**algorithm_code_section**
+Python code
+...........
+
+.. code-block:: python
+
+    import processing
+    processing.run("algorithm_id", {parameter_dictionary})
+
+The parameter dictionary provides the parameter ``NAME``s and values.
+See :ref:`processing_console` for details on how to run processing algorithms
+from the Python console.
+**end_algorithm_code_section**
