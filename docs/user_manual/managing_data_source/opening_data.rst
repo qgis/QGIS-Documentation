@@ -1293,12 +1293,21 @@ connect to ArcGIS Vector Tile Services.
 Using XYZ Tile services
 -----------------------
 
-XYZ Tile services can be found in the :guilabel:`XYZ Tiles` top level
-entry in the :guilabel:`Browser`.
-By default, the OpenStreetMap XYZ Tile service is configured. You can
-add other services that use the XYZ Tile protocol by choosing
-:guilabel:`New Connection` in the XYZ Tiles context menu (right-click
-to open).
+XYZ Tile services can be added via the |addXyzLayer| :guilabel:`XYZ` tab
+of the :guilabel:`Data Source Manager` dialog or the contextual menu of the
+:guilabel:`XYZ Tiles` entry in the :guilabel:`Browser` panel.
+Press :guilabel:`New` (respectively :guilabel:`New Connection`) and provide:
+
+* a :guilabel:`Name`
+* the :guilabel:`URL`
+* the :guilabel:`Authentication` configuration if necessary
+* the :guilabel:`Min. Zoom level` and :guilabel:`Max. Zoom level`
+* a :guilabel:`Referer`
+* the :guilabel:`Tile Resolution`: possible values are
+  :guilabel:`Unknown (not scaled)`, :guilabel:`Standard (256x256 / 96DPI)`
+  and :guilabel:`High (512x512 / 192DPI)`
+
+By default, the OpenStreetMap XYZ Tile service is configured.
 :numref:`figure_xyz_tiles_openstreetmap` shows the dialog with the OpenStreetMap
 XYZ Tile service configuration.
 
@@ -1309,9 +1318,8 @@ XYZ Tile service configuration.
 
    XYZ Tiles - OpenStreetMap configuration
 
-Configurations can be saved (:guilabel:`Save Connections`) to XML
-and loaded (:guilabel:`Load Connections`) through the context menu.
-Authentication configuration is supported.
+Part or all the configured tile services can be saved (:guilabel:`Save`)
+to XML and loaded (:guilabel:`Load`) through the context menu.
 The XML file for OpenStreetMap looks like this:
 
 .. code-block:: xml
@@ -1323,16 +1331,19 @@ The XML file for OpenStreetMap looks like this:
      authcfg="" referer=""/>
   </qgsXYZTilesConnections>
 
-Once a connection to a XYZ tile service is set, right-click over the entry to:
+Once a connection to a XYZ tile service is set, it's possible to:
 
-* :guilabel:`Edit...` the XYZ connection settings
-* :guilabel:`Delete` the connection
-* :menuselection:`Export layer... --> To File`, :ref:`saving it as a raster
-  <general_saveas>`
-* :guilabel:`Add layer to project`: a double-click also adds the layer
-* View the :guilabel:`Layer Properties...` and get access to metadata and
-  a preview of the data provided by the service.
-  More settings are available when the layer has been loaded into the project.
+* :guilabel:`Edit` the XYZ connection settings
+* :guilabel:`Remove` the connection
+* From the :guilabel:`Browser` panel, right-click over the entry
+  and you can also:
+
+  * :menuselection:`Export layer... --> To File`, :ref:`saving it as a raster
+    <general_saveas>`
+  * :guilabel:`Add layer to project`: a double-click also adds the layer
+  * View the :guilabel:`Layer Properties...` and get access to metadata and
+    a preview of the data provided by the service.
+    More settings are available when the layer has been loaded into the project.
 
 
 Examples of XYZ Tile services:
@@ -1375,6 +1386,8 @@ Examples of XYZ Tile services:
 .. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
    :width: 1.5em
 .. |addSpatiaLiteLayer| image:: /static/common/mActionAddSpatiaLiteLayer.png
+   :width: 1.5em
+.. |addXyzLayer| image:: /static/common/mActionAddXyzLayer.png
    :width: 1.5em
 .. |afs| image:: /static/common/mIconAfs.png
    :width: 1.5em
