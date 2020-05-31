@@ -544,7 +544,7 @@ or diagrams. This can be controlled from the :guilabel:`Obstacles` section:
    obstacles, using the |dataDefined| :sup:`data-defined override` control next
    to the option.
 
-#. Use the :guilabel:`Settings` button to tweak the obstacles weighing.
+#. Use the :guilabel:`Settings` button to tweak the obstacles weighting.
 
    * For every potential obstacle feature you can assign an :guilabel:`Obstacle
      weight`: any :ref:`label <labels_priority>` or :ref:`diagram <diagram_placement>`
@@ -552,7 +552,7 @@ or diagrams. This can be controlled from the :guilabel:`Obstacles` section:
      over. Labels or diagrams with lower rank will be omitted if no other
      placement is possible.
 
-     This weighing can also be data-defined, so that within the same layer,
+     This weighting can also be data-defined, so that within the same layer,
      certain features are more likely to be covered than others.
    * For polygon layers, you can choose the kind of obstacle the feature is:
 
