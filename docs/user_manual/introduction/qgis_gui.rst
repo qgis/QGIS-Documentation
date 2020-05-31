@@ -781,6 +781,14 @@ actions like:
      -
      -
      - :ref:`label_legend`
+   * - |toggleSelectedLayers| :guilabel:`Toggle Selected Layers`
+     -
+     -
+     - :ref:`label_legend`
+   * - :guilabel:`Toogle Selected Layers Independently`
+     -
+     -
+     - :ref:`label_legend`
    * - |hideDeselectedLayers| :guilabel:`Hide Deselected Layers`
      -
      -
@@ -2912,6 +2920,8 @@ Click the icon to open the Plugin Manager dialog.
 .. |titleLabel| image:: /static/common/title_label.png
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
+   :width: 1.5em
+.. |toggleSelectedLayers| image:: /static/common/mActionToggleSelectedLayers.png
    :width: 1.5em
 .. |topologyChecker| image:: /static/common/mActionTopologyChecker.png
    :width: 1.5em

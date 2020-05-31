@@ -103,7 +103,7 @@ Icon                            Substitution                        Icon        
 |showAllLayers|                 ``|showAllLayers|``                 |hideAllLayers|                 ``|hideAllLayers|``
 |showMapTheme|                  ``|showMapTheme|``                  |showSelectedLayers|            ``|showSelectedLayers|``
 |hideSelectedLayers|            ``|hideSelectedLayers|``            |hideDeselectedLayers|          ``|hideDeselectedLayers|``
-|toggleAllLayers|               ``|toggleAllLayers|``
+|toggleAllLayers|               ``|toggleAllLayers|``               |toggleSelectedLayers|          ``|toggleSelectedLayers|``
 |addLayer|                      ``|addLayer|``
 |indicatorEmbedded|             ``|indicatorEmbedded|``             |indicatorFilter|               ``|indicatorFilter|``
 |indicatorMemory|               ``|indicatorMemory|``               |indicatorNoCRS|                ``|indicatorNoCRS|``
@@ -1270,6 +1270,8 @@ Icon                            Substitution                        Icon        
 .. |toggleAllLayers| image:: /static/common/mActionToggleAllLayers.png
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
+   :width: 1.5em
+.. |toggleSelectedLayers| image:: /static/common/mActionToggleSelectedLayers.png
    :width: 1.5em
 .. |topologyChecker| image:: /static/common/mActionTopologyChecker.png
    :width: 1.5em
