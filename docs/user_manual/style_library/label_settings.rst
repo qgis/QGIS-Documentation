@@ -500,7 +500,7 @@ or an expression to set:
     **Cap** or **Top**
 * the text :guilabel:`Rotation`. Check the :guilabel:`Preserve data rotation
   values` entry if you want to keep the rotation value in the associated field
-  and apply it to the label, regardless the label is pinned or not. If unchecked,
+  and apply it to the label, whether the label is pinned or not. If unchecked,
   unpinning the label rotation is reset and its value cleared from the attribute
   table.
   
