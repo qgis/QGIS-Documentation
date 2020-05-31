@@ -1252,7 +1252,7 @@ options:
 * :guilabel:`Number of candidates`: calculates and assigns to line and
   polygon features the number of possible labels placement based on their size.
   The longer or wider a feature is, the more candidates it has, and its labels
-  can be better placed, with less risk of collision.
+  can be better placed with less risk of collision.
 * :guilabel:`Text rendering`: sets the default value for label rendering
   widgets when :ref:`exporting a map canvas <exportingmapcanvas>` or
   :ref:`a layout <create-output>` to PDF or SVG.
@@ -1279,14 +1279,22 @@ options:
   Like the label says, it's useful only for debugging and testing the effect different
   labeling settings have. This could be handy for a better manual placement with
   tools from the :ref:`label toolbar <label_toolbar>`.
-* :guilabel:`Project labeling version`: QGIS supports two different systems of
+* :guilabel:`Project labeling version`: QGIS supports two different versions of
   label automatic placement:
 
-  * :guilabel:`Version 1`: the old system (in QGIS <= 3.10 projects)
+  * :guilabel:`Version 1`: the old system (used by QGIS versions 3.10 and earlier,
+    and when opening projects created in these versions in QGIS 3.12 or later).
+    Version 1 treats label and obstacle priorities as "rough guides" only,
+    and it's possible that a low-priority label will be placed over a high-priority
+    obstacle in this version. Accordingly, it can be difficult to obtain the
+    desired labeling results when using this version and it is thus
+    recommended only for compatibility with older projects.
   * :guilabel:`Version 2 (recommended)`: this is the default system in new
-    projects and existing projects are recommended to upgrade to this labeling
-    engine version. It is faster, provides more optimised placement calculations,
-    with a better handling of :ref:`obstacles <labels_obstacles>`.
+    projects created in QGIS 3.12 or later. In version 2, the logic dictating when labels are
+    allowed to overlap :ref:`obstacles <labels_obstacles>` has been reworked. The newer logic forbids any labels
+    from overlapping any obstacles with a greater obstacle weight compared to the label's
+    priority. As a result, this version results in much more predictable and easier to understand
+    labeling results.
 
 .. _rule_based_labeling:
 
