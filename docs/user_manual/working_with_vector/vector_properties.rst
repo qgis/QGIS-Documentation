@@ -1290,11 +1290,12 @@ options:
     desired labeling results when using this version and it is thus
     recommended only for compatibility with older projects.
   * :guilabel:`Version 2 (recommended)`: this is the default system in new
-    projects created in QGIS 3.12 or later. In version 2, the logic dictating when labels are
-    allowed to overlap :ref:`obstacles <labels_obstacles>` has been reworked. The newer logic forbids any labels
-    from overlapping any obstacles with a greater obstacle weight compared to the label's
-    priority. As a result, this version results in much more predictable and easier to understand
-    labeling results.
+    projects created in QGIS 3.12 or later. In version 2, the logic dictating
+    when labels are allowed to overlap :ref:`obstacles <labels_obstacles>`
+    has been reworked. The newer logic forbids any labels from overlapping
+    any obstacles with a greater obstacle weight compared to the label's
+    priority. As a result, this version results in much more predictable
+    and easier to understand labeling results.
 
 .. _rule_based_labeling:
 
