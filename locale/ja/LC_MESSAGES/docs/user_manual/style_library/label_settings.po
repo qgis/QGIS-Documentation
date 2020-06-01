@@ -29,7 +29,7 @@ msgstr "ラベルの設定"
 msgid ""
 "Labels are textual information you can display on vector features. They add "
 "details you could not necessarily represent using symbols."
-msgstr ""
+msgstr "ラベルは、ベクタの地物に表示できるテキスト情報です。 それらは、シンボルのみでは表すことができない詳細を追加します。"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:15
 msgid ""
@@ -41,6 +41,11 @@ msgid ""
 "|labeling| :sup:`Layer Labeling Options` button of the **Labels toolbar**. "
 "You can also directly configure them in the abovementioned dialogs."
 msgstr ""
+"The :guilabel:`スタイルマネージャ` "
+"ダイアログでは、ラベルまたはテキスト形式のセット（つまり、フォント、サイズ、色、影、背景などを含むテキストの外観）を作成できます。 "
+"これらの各アイテムは、:guilabel:`レイヤプロパティ` ダイアログの| :guilabel:`ラベル` タブ または、 "
+":guilabel:`レイヤスタイル` パネル 、**ラベルツールバー**の |labeling| :sup:`レイヤラベリングオプション` "
+"ボタンを使用して後でレイヤに適用できます。上記のダイアログで直接設定することもできます。"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:26
 msgid ""
@@ -50,26 +55,29 @@ msgid ""
 "labels (through :ref:`placement <labels_placement>`, :ref:`rendering "
 "<labels_rendering>` and :ref:`callout <labels_callouts>`)."
 msgstr ""
+"The :guilabel:`ラベルセッティング` ダイアログでは、ベクタレイヤのスマートラベルを設定できます。 ラベルの設定には、:ref:`text"
+" format 1`、およびラベルが地物または他のラベルとどのように関係するか（:ref:`placement 2`、:ref:`rendering "
+"3`、:ref:`callout 4`を介して）が含まれます。"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:35
 msgid "Formatting the label text"
-msgstr ""
+msgstr "ラベルテキストの整形"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:37
 msgid "To create text formats, you can:"
-msgstr ""
+msgstr "テキスト形式を作成するには、次の方法があります。"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:39
 msgid "Open the |styleManager| :guilabel:`Style Manager` dialog"
-msgstr ""
+msgstr " |styleManager| :guilabel:`スタイルマネージャ`ダイアログを開きます。"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:40
 msgid "Activate the :guilabel:`Text format` tab"
-msgstr ""
+msgstr " :guilabel:`テキスト形式` タブをアクティブにします。"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:47
 msgid "Text formats in Style Manager dialog"
-msgstr ""
+msgstr "スタイルマネージャダイアログのテキスト形式"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:49
 msgid ""
@@ -77,6 +85,9 @@ msgid ""
 "dialog opens with the following properties. As usual, these properties are "
 ":ref:`data-definable <data_defined>`."
 msgstr ""
+" |signPlus| :sup:`アイテム追加`ボタンを押します。 "
+":guilabel:`テキスト設定`ダイアログが開き、次のプロパティが表示されます。通常、これらのプロパティは :ref:`data-definable"
+" <data_defined>`です。"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:57
 msgid "Text tab"
@@ -84,7 +95,7 @@ msgstr "テキスト"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:64
 msgid "Text settings - Text tab"
-msgstr ""
+msgstr "テキスト設定 - テキストタブ"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:66
 msgid "In the |text| :guilabel:`Text` tab, you can set:"
@@ -92,25 +103,25 @@ msgstr " |text| :guilabel:`テキスト` タブでは、次の設定を行うこ
 
 #: ../../docs/user_manual/style_library/label_settings.rst:68
 msgid "the :guilabel:`Font`, from the ones available on your machine"
-msgstr "the :guilabel:`フォント`, マシンで使用可能なフォントに設定できます"
+msgstr ":guilabel:`フォント`, マシンで使用可能なフォントに設定できます"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:69
 msgid ""
 "the :guilabel:`Style`: along with the common styles of the font, you can set"
 " whether the text should be underlined or striked through"
-msgstr "the :guilabel:`スタイル`:フォントの一般的なスタイルおよび、テキストの下線または取り消し線の設定ができます"
+msgstr ":guilabel:`スタイル`:フォントの一般的なスタイルおよび、テキストの下線または取り消し線の設定ができます"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:71
 msgid "the :guilabel:`Size` in any :ref:`supported unit <unit_selector>`"
-msgstr " :guilabel:`サイズ`はいずれかの:ref:`supported unit <unit_selector>`"
+msgstr " :guilabel:`サイズ`はいずれかの:ref:`supported unit <unit_selector>`で設定します"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:72
 msgid "the :guilabel:`Color`"
-msgstr "the :guilabel:`色`"
+msgstr ":guilabel:`色`"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:73
 msgid "and the :guilabel:`Opacity`."
-msgstr "and the :guilabel:`不透明度`."
+msgstr ":guilabel:`不透明度`."
 
 #: ../../docs/user_manual/style_library/label_settings.rst:75
 msgid ""
@@ -122,6 +133,9 @@ msgid ""
 ":guilabel:`Save format...` button to store the current text format in the "
 ":guilabel:`Style Manager`, providing a name and tag(s)."
 msgstr ""
+"下部にあるテキスト形式リストウィジェットには、:ref:`style manager database "
+"<vector_style_manager>`内に保存されているフィルター可能なテキスト形式のリストが表示されます。これにより、ローカルのスタイルデータベースに保存されているスタイルと一致するようにテキスト形式を簡単に設定したり、現在の設定に基づいてスタイルデータベースに新しいテキスト形式を追加したりできます。:guilabel:`Save"
+" format...` ボタンを押して、現在のテキスト形式を:guilabel:`Style Manager`に保存し、名前とタグを指定します。"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:82
 msgid ""
@@ -129,6 +143,8 @@ msgid ""
 "allowing you to pick from the |styleManager| :sup:`Style Manager` widget or "
 "to add new styles to it."
 msgstr ""
+"同様に、ラベルを構成時にラベル設定リストウィジェットが表示され、|styleManager| "
+":sup:`スタイルマネージャ`ウィジェットから選択したり、新しいスタイルをウィジェットに追加したりできます。"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:90
 msgid "Formatting tab"
@@ -136,7 +152,7 @@ msgstr "整形"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:97
 msgid "Text settings - Formatting tab"
-msgstr ""
+msgstr "テキスト設定 - 整形タブ"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:99
 msgid "In the |labelformatting| :guilabel:`Formatting` tab, you can:"
@@ -260,7 +276,7 @@ msgstr "バッファ"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:158
 msgid "Text settings - Buffer tab"
-msgstr ""
+msgstr "テキスト設定 - バッファタブ"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:160
 msgid ""
@@ -268,16 +284,19 @@ msgid ""
 " text buffer` checkbox in the |labelbuffer| :guilabel:`Buffer` tab. Then you"
 " can:"
 msgstr ""
+" ラベルの周りにバッファを作成するには、 |labelbuffer| :guilabel:`バッファ`タブの|checkbox| "
+":guilabel:`テキストバッファを描画`のチェックボックスをオンにします。その後、次の設定ができます。"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:163
 msgid ""
 "Set the buffer's :guilabel:`Size` in any :ref:`supported unit "
 "<unit_selector>`"
 msgstr ""
+"バッファの:guilabel:`サイズ`はいずれかの :ref:`supported unit <unit_selector>`で設定します。"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:164
 msgid "Select the buffer's :guilabel:`Color`"
-msgstr ""
+msgstr "バッファの:guilabel:`色`を選択します。"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:165
 msgid ""
@@ -288,16 +307,20 @@ msgid ""
 " Unchecking the option (while using totally transparent labels) will allow "
 "you to create outlined text labels."
 msgstr ""
+"|checkbox| :guilabel:`カラーバッファの塗りつぶし`： "
+"バッファーはラベルのアウトラインから拡張されるため、オプションがアクティブになっている場合、ラベルの内部が塗りつぶされます。これは、部分的に透明なラベルを使用する場合、またはラベルのテキストの後ろを見ることができるような通常以外の描画モードで関連する場合があります。オプションをオフにすると（完全に透明なラベルを使用している間）、アウトライン化されたテキストラベルを作成できます。"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:171
 msgid "Define the buffer's :guilabel:`Opacity`"
-msgstr ""
+msgstr "バッファの:guilabel:`不透明度`を定義する"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:172
 msgid ""
 "Apply a :guilabel:`Pen join style`: it can be :guilabel:`Round`, "
 ":guilabel:`Miter` or :guilabel:`Bevel`"
 msgstr ""
+":guilabel:`継ぎ目スタイル`：:guilabel:`丸み(Round)`、:guilabel:`留め継ぎ(Miter)` または "
+":guilabel:`角型(Bevel)`から適用できます"
 
 #: ../../docs/user_manual/style_library/label_settings.rst:174
 msgid ""
