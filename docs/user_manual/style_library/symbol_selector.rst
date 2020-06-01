@@ -194,7 +194,7 @@ Appropriate for point geometry features, marker symbols have several
   This allows use of all the existing QGIS fill (and stroke) styles for
   rendering markers, e.g. gradient or shapeburst fills.
 * **Font marker**: similar to the simple marker symbol layer, except that it
-  uses installed fonts to render the marker. Its additional specific properties
+  uses installed fonts to render the marker. Its additional properties
   are:
 
   * :guilabel:`Font family`
@@ -256,7 +256,7 @@ Appropriate for point geometry features, marker symbols have several
 Line Symbols
 ............
 
-Appropriate for line geometry features, line symbols have following symbol
+Appropriate for line geometry features, line symbols have the following symbol
 layer types:
 
 .. _simple_line_symbol:
