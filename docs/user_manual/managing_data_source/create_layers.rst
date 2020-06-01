@@ -111,7 +111,7 @@ figure_create_shapefile_.
    automatically add the right extension to the name you provide.
 #. Next, indicate the :guilabel:`File encoding` of the data
 #. Choose the :guilabel:`Geometry type` of the layer: No Geometry (resulting
-   in a :file:`.DBF` format file), point, multipoint, line  or polygon
+   in a :file:`.DBF` format file), point, multipoint, line or polygon
 #. Specify whether the geometry should have additional dimensions:
    :guilabel:`None`, :guilabel:`Z (+ M values)` or :guilabel:`M values`
 #. Specify the coordinate reference system using the |setProjection| button
