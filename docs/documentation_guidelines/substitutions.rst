@@ -87,12 +87,15 @@ Icon                            Substitution                        Icon        
 |addPostgisLayer|               ``|addPostgisLayer|``               |addOracleLayer|                ``|addOracleLayer|``
 |addAfsLayer|                   ``|addAfsLayer|``                   |addAmsLayer|                   ``|addAmsLayer|``
 |addMeshLayer|                  ``|addMeshLayer|``
-|virtualLayer|                  ``|virtualLayer|``                  |wms|                           ``|wms|``
-|wcs|                           ``|wcs|``                           |wfs|                           ``|wfs|``
+|addVirtualLayer|               ``|addVirtualLayer|``               |addWmsLayer|                   ``|addWmsLayer|``
+|addWcsLayer|                   ``|addWcsLayer|``                   |addWfsLayer|                   ``|addWfsLayer|``
 |newVectorLayer|                ``|newVectorLayer|``                |newSpatiaLiteLayer|            ``|newSpatiaLiteLayer|``
 |newGeoPackageLayer|            ``|newGeoPackageLayer|``            |createMemory|                  ``|createMemory|``
+|newVirtualLayer|               ``|newVirtualLayer|``
 |dbManager|                     ``|dbManager|``                     |gdal|                          ``|gdal|``
 |geoPackage|                    ``|geoPackage|``                    |spatialite|                    ``|spatialite|``
+|virtualLayer|                  ``|virtualLayer|``                  |wms|                           ``|wms|``
+|wcs|                           ``|wcs|``                           |wfs|                           ``|wfs|``
 |dbSchema|                      ``|dbSchema|``
 |inOverview|                    ``|inOverview|``                    |addAllToOverview|              ``|addAllToOverview|``
 |removeAllOVerview|             ``|removeAllOVerview|``             |removeLayer|                   ``|removeLayer|``
@@ -555,6 +558,14 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |addToProject| image:: /static/common/mAddToProject.png
    :width: 1.5em
+.. |addVirtualLayer| image:: /static/common/mActionAddVirtualLayer.png
+   :width: 1.5em
+.. |addWcsLayer| image:: /static/common/mActionAddWcsLayer.png
+   :width: 1.5em
+.. |addWfsLayer| image:: /static/common/mActionAddWfsLayer.png
+   :width: 1.5em
+.. |addWmsLayer| image:: /static/common/mActionAddWmsLayer.png
+   :width: 1.5em
 .. |alignBottom| image:: /static/common/mActionAlignBottom.png
    :width: 1.5em
 .. |alignHCenter| image:: /static/common/mActionAlignHCenter.png
@@ -1004,6 +1015,8 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |newVectorLayer| image:: /static/common/mActionNewVectorLayer.png
    :width: 1.5em
+.. |newVirtualLayer| image:: /static/common/mActionNewVirtualLayer.png
+   :width: 1.5em
 .. |nix| image:: /static/common/nix.png
    :width: 1em
 .. |northArrow| image:: /static/common/north_arrow.png
@@ -1285,15 +1298,15 @@ Icon                            Substitution                        Icon        
    :width: 1.5em
 .. |viewScaleInCanvas| image:: /static/common/mActionViewScaleInCanvas.png
    :width: 1.5em
-.. |virtualLayer| image:: /static/common/mActionAddVirtualLayer.png
+.. |virtualLayer| image:: /static/common/mIconVirtualLayer.png
    :width: 1.5em
-.. |wcs| image:: /static/common/mActionAddWcsLayer.png
+.. |wcs| image:: /static/common/mIconWcs.png
    :width: 1.5em
-.. |wfs| image:: /static/common/mActionAddWfsLayer.png
+.. |wfs| image:: /static/common/mIconWfs.png
    :width: 1.5em
 .. |win| image:: /static/common/win.png
    :width: 1em
-.. |wms| image:: /static/common/mActionAddWmsLayer.png
+.. |wms| image:: /static/common/mIconWms.png
    :width: 1.5em
 .. |zoomActual| image:: /static/common/mActionZoomActual.png
    :width: 1.5em
