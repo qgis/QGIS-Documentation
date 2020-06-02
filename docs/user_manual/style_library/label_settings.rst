@@ -480,6 +480,43 @@ or outside.
 
    Label placement examples in polygons
 
+Common placement settings
+-------------------------
+
+Some label placement settings are available for all layer geometry types:
+
+Data Defined
+............
+
+The :guilabel:`Data Defined` group provides direct control on labels
+placement, on a feature-by-feature basis. It relies on their attributes
+or an expression to set:
+
+* the :guilabel:`X` and :guilabel:`Y` coordinate
+* the text alignment over the custom position set above:
+
+  * :guilabel:`Horizontal`: it can be **Left**, **Center** or **Right**
+  * the text :guilabel:`Vertical`: it can be **Bottom**, **Base**, **Half**,
+    **Cap** or **Top**
+* the text :guilabel:`Rotation`. Check the :guilabel:`Preserve data rotation
+  values` entry if you want to keep the rotation value in the associated field
+  and apply it to the label, whether the label is pinned or not. If unchecked,
+  unpinning the label rotation is reset and its value cleared from the attribute
+  table.
+  
+  .. note:: Data-defined rotation with polygon features is currently supported
+   only with the :guilabel:`Around centroid` placement mode.
+
+.. note:: Expressions can not be used in combination with the labels map tools
+   (ie the :guilabel:`Rotate label` and :guilabel:`Move label` tools)
+   to :ref:`data-define <data_defined>` labels placement.
+   The widget will be reset to the corresponding :ref:`auxiliary storage field
+   <vector_auxiliary_storage>`.
+
+
+Priority
+........
+
 In the :guilabel:`priority` section you can define the priority with which
 labels are rendered for all three vector layer types (point, line, polygon).
 This placement option interacts with the labels from other vector layers in
