@@ -354,8 +354,8 @@ Outputs
 
 .. _qgislinedensity:
 
-Line Density
------------------
+Line Density |312|
+-----------------------
 Calculates for each raster cell, the density measure of linear features 
 within a circular neighbourhood. This measure is obtained by summing all
 the line segments intersecting the circular neighbourhood and dividing 
@@ -574,5 +574,6 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |312| replace:: ``NEW in 3.12``
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em
