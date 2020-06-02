@@ -1791,6 +1791,15 @@ Parameters
 Outputs
 .......
 
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Reclassified raster**
      - ``OUTPUT``
      - [raster]
@@ -1861,6 +1870,15 @@ Parameters
 Outputs
 .......
 
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
    * - **Sampled Points**
 
        (Optional)
