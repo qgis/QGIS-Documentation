@@ -154,7 +154,7 @@ Selecting WMS/WMTS Servers
 
 The first time you use the WMS feature in QGIS, there are no servers defined.
 
-Begin by clicking the |wms| :sup:`Add WMS layer` button on the
+Begin by clicking the |addWmsLayer| :sup:`Add WMS layer` button on the
 toolbar, or selecting :menuselection:`Layer --> Add WMS Layer...`.
 
 The dialog :guilabel:`Add Layer(s) from a Server` for adding layers from
@@ -539,7 +539,7 @@ of QGIS. Some of the more noteworthy exceptions follow.
 
 **Editing WMS Layer Settings**
 
-Once you've completed the |wms| :sup:`Add WMS layer` procedure,
+Once you've completed the |addWmsLayer| :sup:`Add WMS layer` procedure,
 there is no way to change the settings. A work-around is to delete the layer
 completely and start again.
 
@@ -620,7 +620,7 @@ To be able to load a WFS Layer we create a connection to the WFS server first.
 
 #. Open the :guilabel:`Data Source Manager` dialog by pressing the
    |dataSourceManager| :sup:`Open Data Source Manager` button
-#. Enable the |wfs| :guilabel:`WFS` tab
+#. Enable the |addWfsLayer| :guilabel:`WFS/OGC API-Features` tab
 #. Click on :guilabel:`New...` to open the :guilabel:`Create a New WFS
    Connection` dialog
 #. Enter ``Gateway Geomatics`` as name
@@ -711,6 +711,10 @@ features and view the attribute table.
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |addWfsLayer| image:: /static/common/mActionAddWfsLayer.png
+   :width: 1.5em
+.. |addWmsLayer| image:: /static/common/mActionAddWmsLayer.png
+   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
@@ -723,9 +727,5 @@ features and view the attribute table.
    :width: 2.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
-.. |wcs| image:: /static/common/mActionAddWcsLayer.png
-   :width: 1.5em
-.. |wfs| image:: /static/common/mActionAddWfsLayer.png
-   :width: 1.5em
-.. |wms| image:: /static/common/mActionAddWmsLayer.png
+.. |wcs| image:: /static/common/mIconWcs.png
    :width: 1.5em
