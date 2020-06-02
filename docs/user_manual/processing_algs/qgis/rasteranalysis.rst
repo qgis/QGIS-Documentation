@@ -29,7 +29,6 @@ then nodata inputs will be treated the same as a ``0`` input value.
 
 .. seealso:: :ref:`qgisrasterbooleanor`
 
-
 Parameters
 ..........
 
@@ -131,11 +130,18 @@ Outputs
    * - **False pixel count**
      - ``FALSE_PIXEL_COUNT``
      - [integer]
-     - The count of False pixels (value = 0) in the output raster layer
+     - The count of False pixels (value = 0) in the output raster
+       layer
    * - **Output layer**
      - ``OUTPUT``
      - [raster]
      - Output raster layer containing the result
+
+**Algorithm ID**: ``qgis:rasterbooleanand``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisrasterbooleanor:
@@ -160,7 +166,6 @@ then nodata inputs will be treated the same as a ``0`` input value.
 
 .. seealso:: :ref:`qgisrasterbooleanand`
 
-
 Parameters
 ..........
 
@@ -268,6 +273,12 @@ Outputs
      - [raster]
      - Output raster layer containing the result
 
+**Algorithm ID**: ``qgis:rasterbooleanor``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisrastercalculator:
 
@@ -275,15 +286,18 @@ Raster calculator
 -----------------
 Performs algebraic operations using raster layers.
 
-The resulting layer will have its values computed according to an expression.
-The expression can contain numerical values, operators and references to any of
-the layers in the current project.
+The resulting layer will have its values computed according to an
+expression.
+The expression can contain numerical values, operators and references
+to any of the layers in the current project.
 
-.. note:: When using the calculator in :ref:`processing_batch` or from the
-  :ref:`console` the files to use have to be specified. The corresponding layers
-  are referred using the base name of the file (without the full path). For instance,
-  if using a layer at ``path/to/my/rasterfile.tif``, the first band of that layer
-  will be referred as ``rasterfile.tif@1``.
+.. note:: When using the calculator in :ref:`processing_batch` or from
+  the :ref:`console` the files to use have to be specified.
+  The corresponding layers are referred using the base name of the
+  file (without the full path).
+  For instance, if using a layer at ``path/to/my/rasterfile.tif``,
+  the first band of that layer will be referred as
+  ``rasterfile.tif@1``.
 
 Parameters
 ..........
@@ -315,17 +329,19 @@ Parameters
    * - **Expression**
      -  ``EXPRESSION``
      - [string]
-     - Expression that will be used to calculate the output raster layer.
+     - Expression that will be used to calculate the output raster
+       layer.
        You can use the operator buttons provided to type directly the
        expression in this box.
    * - **Predefined expressions**
      - GUI only
      - 
-     - You can use the predefined ``NDVI`` expression or you can define
-       new expressions for calculations.
-       The :guilabel:`Add...` button loads a defined expression (and lets
-       you set the parameters).
-       The :guilabel:`Save...` button lets you define a new expression.
+     - You can use the predefined ``NDVI`` expression or you can
+       define new expressions for calculations.
+       The :guilabel:`Add...` button loads a defined expression (and
+       lets you set the parameters).
+       The :guilabel:`Save...` button lets you define a new
+       expression.
    * - **Reference layer(s) (used for automated extent, cellsize, and CRS)**
        
        Optional
@@ -389,6 +405,12 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output raster file with the calculated values.
+
+**Algorithm ID**: ``qgis:rastercalculator``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisrasterlayerstatistics:
@@ -491,6 +513,12 @@ Outputs
      - ``SUM_OF_SQUARES``
      - [number]
      - 
+
+**Algorithm ID**: ``qgis:rasterlayerstatistics``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisrasterlayeruniquevaluesreport:
@@ -609,6 +637,12 @@ Outputs
      - [number]
      - 
 
+**Algorithm ID**: ``qgis:rasterlayeruniquevaluesreport``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisrasterlayerzonalstats:
 
@@ -640,8 +674,8 @@ Parameters
      - [raster band]
        
        Default: The first band of the raster layer
-     - If the raster is multiband choose the band for
-       which you want to calculate the statistics.
+     - If the raster is multiband choose the band for which you want
+       to calculate the statistics.
    * - **Zones layer**
      - ``ZONES``
      - [raster]
@@ -723,6 +757,12 @@ Outputs
      - [number]
      - 
 
+**Algorithm ID**: ``qgis:rasterlayerzonalstats``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisrastersurfacevolume:
 
@@ -752,35 +792,36 @@ Parameters
      - [raster band]
        
        Default: The first band of the raster layer
-     - If the raster is multiband, choose the band that
-       shall define the surface.
+     - If the raster is multiband, choose the band that shall define
+       the surface.
    * - **Base level**
      - ``LEVEL``
      - [number]
        
        Default: 0.0
      - Define a base or reference value.
-       This base is used in the volume calculation according
-       to the ``Method`` parameter (see below).
+       This base is used in the volume calculation according to the
+       ``Method`` parameter (see below).
    * - **Method**
      - ``METHOD``
      - [enumeration]
        
        Default: 0
-     - Define the method for the volume calculation given by
-       the difference between the raster pixel value and the
-       ``Base level``.  Options:
+     - Define the method for the volume calculation given by the
+       difference between the raster pixel value and the
+       ``Base level``.
+       Options:
        
-       * 0 --- Count Only Above Base Level: only pixels above
-         the base level will add to the volume.
-       * 1 --- Count Only Below Base Level: only pixels below
-         the base level will add to the volume.
-       * 2 --- Subtract Volumes Below Base level: pixels above
-         the base level will add to the volume, pixels below
-         the base level will subtract from the volume.
+       * 0 --- Count Only Above Base Level: only pixels above the base
+	 level will add to the volume.
+       * 1 --- Count Only Below Base Level: only pixels below the base
+	 level will add to the volume.
+       * 2 --- Subtract Volumes Below Base level: pixels above the
+	 base level will add to the volume, pixels below the base
+	 level will subtract from the volume.
        * 3 --- Add Volumes Below Base level: Add the volume
-         regardless whether the pixel is above or below the
-         base level.
+         regardless whether the pixel is above or below the base
+	 level.
          This is equivalent to sum the absolute values of the
          difference between the pixel value and the base level.
    * - **Surface volume report**
@@ -844,6 +885,12 @@ Outputs
      - [table]
      - The output table (containing volume, area and
        pixel count)
+
+**Algorithm ID**: ``qgis:rastersurfacevolume``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisreclassifybylayer:
@@ -918,8 +965,8 @@ Parameters
      - [boolean]
 
        Default: False
-     - Values that do not belong to a class will result in the
-       no data value.
+     - Values that do not belong to a class will result in the no data
+       value.
        If False, the original value is kept.
    * - **Output data type**
      - ``DATA_TYPE``
@@ -968,13 +1015,19 @@ Outputs
      - [raster]
      - Output raster layer with reclassified band values
 
+**Algorithm ID**: ``qgis:reclassifybylayer``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisreclassifybytable:
 
 Reclassify by table
 -------------------
-Reclassifies a raster band by assigning new class values based on
-the ranges specified in a fixed table.
+Reclassifies a raster band by assigning new class values based on the
+ranges specified in a fixed table.
 
 Parameters
 ..........
@@ -1001,10 +1054,9 @@ Parameters
    * - **Reclassification table**
      - ``TABLE``
      - [table]
-     - A 3-columns table to fill with the values to set the
-       boundaries of each class (``Minimum`` and ``Maximum``) and
-       the new ``Value`` to assign to the band values that fall in
-       the class.
+     - A 3-columns table to fill with the values to set the boundaries
+       of each class (``Minimum`` and ``Maximum``) and the new
+       ``Value`` to assign to the band values that fall in the class.
    * - **Output no data value**
      - ``NO_DATA``
      - [number]
@@ -1029,8 +1081,8 @@ Parameters
      - [boolean]
 
        Default: False
-     - Applies the no data value to band values that do
-       not fall in any class.
+     - Applies the no data value to band values that do not fall in
+       any class.
        If False, the original value is kept.
    * - **Output data type**
      - ``DATA_TYPE``
@@ -1085,13 +1137,19 @@ Outputs
        Default: '[Save to temporary file]'
      - The output raster layer.
 
+**Algorithm ID**: ``qgis:reclassifybytable``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisrastersampling:
 
 Sample raster values
 --------------------
-Extracts raster values at the point locations. If the raster layer
-is multiband, each band is sampled.
+Extracts raster values at the point locations.
+If the raster layer is multiband, each band is sampled.
 
 The attribute table of the resulting layer will have as many new
 columns as the raster layer band count.
@@ -1158,22 +1216,27 @@ Outputs
      - [vector: point]
      - The output layer containing the sampled values.
 
+**Algorithm ID**: ``qgis:rastersampling``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgiszonalhistogram:
 
 Zonal histogram
 ---------------
-Appends fields representing counts of each unique value from a raster layer contained
-within polygon features.
+Appends fields representing counts of each unique value from a raster
+layer contained within polygon features.
 
-The output layer attribute table will have as many fields as the unique values
-of the raster layer that intersects the polygon(s).
+The output layer attribute table will have as many fields as the
+unique values of the raster layer that intersects the polygon(s).
 
 .. figure:: img/raster_histogram.png
   :align: center
 
   Raster layer histogram example
-
 
 Parameters
 ..........
@@ -1245,17 +1308,22 @@ Outputs
        Default: ``[Create temporary layer]``
      - The output vector polygon layer.
 
+**Algorithm ID**: ``qgis:zonalhistogram``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgiszonalstatistics:
 
 Zonal statistics
 ----------------
-Calculates statistics of a raster layer for each feature
-of an overlapping polygon vector layer.
+Calculates statistics of a raster layer for each feature of an
+overlapping polygon vector layer.
 
 .. warning:: No new output file will be created.
-   The algorithm adds new columns to the source vector
-   layer.
+   The algorithm adds new columns to the source vector layer.
 
 Parameters
 ..........
@@ -1327,3 +1395,8 @@ Outputs
      - [vector: polygon]
      - The input zone vector layer with added statistics.
 
+**Algorithm ID**: ``qgis:zonalstatistics``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
