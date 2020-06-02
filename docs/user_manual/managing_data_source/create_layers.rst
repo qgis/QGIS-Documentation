@@ -110,10 +110,10 @@ figure_create_shapefile_.
    :guilabel:`...` button next to :guilabel:`File name`. QGIS will
    automatically add the right extension to the name you provide.
 #. Next, indicate the :guilabel:`File encoding` of the data
-#. Choose the :guilabel:`Geometry type` of the layer (point, multipoint, line
-   or polygon)
-#. Specify whether the geometry should have :guilabel:`Z (+ M
-   values)` or :guilabel:`M values`
+#. Choose the :guilabel:`Geometry type` of the layer: No Geometry (resulting
+   in a :file:`.DBF` format file), point, multipoint, line or polygon
+#. Specify whether the geometry should have additional dimensions:
+   :guilabel:`None`, :guilabel:`Z (+ M values)` or :guilabel:`M values`
 #. Specify the coordinate reference system using the |setProjection| button
 
 .. _figure_create_shapefile:
@@ -242,7 +242,8 @@ figure_create_temporary_. Then:
    #. Enter the :guilabel:`Name` of the field
    #. Select the data :guilabel:`Type`: :guilabel:`Text`, :guilabel:`Whole number`,
       :guilabel:`Decimal number`, :guilabel:`Boolean`, :guilabel:`Date`,
-      :guilabel:`Time` and :guilabel:`Date & Time` are supported.
+      :guilabel:`Time`, :guilabel:`Date & Time` and :guilabel:`Binary (BLOB)`
+      are supported.
    #. Depending on the selected data format, enter the :guilabel:`Length` and
       :guilabel:`Precision`
    #. Click on the |newAttribute| :guilabel:`Add to Fields List` button
