@@ -418,6 +418,7 @@ Available geometric predicates are:
 **end_postgisexecutesqlexample**
 
 **algorithm_code_section**
+
 Python code
 ...........
 
