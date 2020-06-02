@@ -31,8 +31,6 @@ dimension of the input layer:
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
-``Algorithm ID``: `qgis:exportaddgeometrycolumns`
-
 Parameters
 ..........
 
@@ -93,6 +91,8 @@ Outputs
      - [same as input]
      - Copy of the input vector layer with the addition of the geometry fields
 
+**Algorithm ID**: ``qgis:exportaddgeometrycolumns``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -123,8 +123,6 @@ This algorithm allows to use the default
 :ref:`aggregates functions <aggregates_function>` of the QGIS Expression engine.
 
 .. seealso:: :ref:`qgiscollect`, :ref:`qgisdissolve`
-
-``Algorithm ID``: `qgis:aggregate`
 
 Parameters
 ..........
@@ -245,6 +243,8 @@ Outputs
      - [same as input]
      - Multigeometry vector layer with the aggregated values
 
+**Algorithm ID**: ``qgis:aggregate``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -273,8 +273,6 @@ For **lines geometries**, the boundaries are their end points.
    :align: center
 
    Boundary layer (red points) for lines. In yellow a selected feature.
-
-``Algorithm ID``: `qgis:boundary`
 
 Parameters
 ..........
@@ -325,6 +323,8 @@ Outputs
      - Boundaries from the input layer (point for line, and line
        for polygon)
 
+**Algorithm ID**: ``qgis:boundary``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -346,8 +346,6 @@ Polygon and line geometries are supported.
 :ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgisminimumboundinggeometry`
-
-``Algorithm ID``: `qgis:boundingboxes`
 
 Parameters
 ..........
@@ -397,6 +395,8 @@ Outputs
      - [vector: polygon]
      - Bounding boxes of input layer
 
+**Algorithm ID**: ``qgis:boundingboxes``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -424,8 +424,6 @@ In this case the buffer will result in a smaller polygon (setback).
 
 .. seealso:: :ref:`qgisvariabledistancebuffer`,
    :ref:`qgismultiringconstantbuffer`, :ref:`qgisbufferbym`
-
-``Algorithm ID``: `qgis:buffer`
 
 Parameters
 ..........
@@ -544,6 +542,8 @@ Outputs
      - [vector: polygon]
      - Output (buffer) polygon layer
 
+**Algorithm ID**: ``qgis:buffer``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -575,8 +575,6 @@ as for the original features.
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
 .. seealso:: :ref:`qgispointonsurface`
-
-``Algorithm ID``: `qgis:centroids`
 
 Parameters
 ..........
@@ -633,6 +631,8 @@ Outputs
      - [vector: point]
      - Output point vector layer (centroids)
 
+**Algorithm ID**: ``qgis:centroids``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -673,8 +673,6 @@ additional information (number of errors found and types of error):
 
 .. seealso:: :ref:`qgisfixgeometries` and the core plugin
    :ref:`geometry_checker`
-
-``Algorithm ID``: `qgis:checkvalidity`
 
 Parameters
 ..........
@@ -798,6 +796,8 @@ Outputs
      - [same as input]
      - Vector layer containing a copy of the valid features of
        the source layer.
+
+**Algorithm ID**: ``qgis:checkvalidity``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -957,8 +957,6 @@ alternative options.
 .. seealso:: :ref:`qgisaggregate`, :ref:`qgispromotetomulti`,
    :ref:`qgisdissolve`
 
-``Algorithm ID``: `qgis:collect`
-
 Parameters
 ..........
 
@@ -1011,6 +1009,8 @@ Outputs
 
        The file encoding can also be changed here.
 
+**Algorithm ID**: ``qgis:collect``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -1029,8 +1029,6 @@ Computes the concave hull of the features in an input point layer.
 
 
 .. seealso:: :ref:`qgisconvexhull`, :ref:`qgisknearestconcavehull`
-
-``Algorithm ID``: `qgis:concavehull`
 
 Parameters
 ..........
@@ -1098,6 +1096,8 @@ Outputs
      - [vector: polygon]
      - The output vector layer
 
+**Algorithm ID**: ``qgis:concavehull``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -1124,8 +1124,6 @@ input layer using unique values in that field and generate individual
 polygons in the output layer for each group.
 
 .. seealso:: :ref:`qgisconcavehull`
-
-``Algorithm ID``: `qgis:knearestconcavehull`
 
 Parameters
 ..........
@@ -1196,6 +1194,8 @@ Outputs
      - [vector: polygon]
      - The output vector layer
 
+**Algorithm ID**: ``qgis:knearestconcavehull``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -1213,8 +1213,6 @@ converted to a point, but a point cannot be converted to a
 line. A line can also be converted to a polygon.
 
 .. seealso:: :ref:`qgispolygonize`, :ref:`qgislinestopolygons`
-
-``Algorithm ID``: `qgis:convertgeometrytype`
 
 Parameters
 ..........
@@ -1278,6 +1276,8 @@ Outputs
      - [vector: any]
      - Output vector layer - the type depends on the parameters
 
+**Algorithm ID**: ``qgis:convertgeometrytype``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -1305,8 +1305,6 @@ features.
 
 .. seealso:: :ref:`qgisminimumboundinggeometry`,
    :ref:`qgisconcavehull`
-
-``Algorithm ID``: `qgis:convexhull`
 
 Parameters
 ..........
@@ -1355,6 +1353,8 @@ Outputs
      - [vector: polygon]
      - The output (convex hull) vector layer
 
+**Algorithm ID**: ``qgis:convexhull``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -1372,8 +1372,6 @@ It can be used in models to convert a literal extent (``xmin``,
 for other algorithms which require a layer based input.
 
 .. seealso:: :ref:`qgispointtolayer`
-
-``Algorithm ID``: `qgis:extenttolayer`
 
 Parameters
 ..........
@@ -1422,6 +1420,8 @@ Outputs
      - [vector: polygon]
      - The output (extent) vector layer
 
+**Algorithm ID**: ``qgis:extenttolayer``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -1438,8 +1438,6 @@ It can be used in models to convert a point into a point layer for
 algorithms which require a layer based input.
 
 .. seealso:: :ref:`qgisextenttolayer`
-
-``Algorithm ID``: `qgis:pointtolayer`
 
 Parameters
 ..........
@@ -1494,6 +1492,8 @@ Outputs
      - [vector: point]
      - The output point vector layer containing the input point.
 
+**Algorithm ID**: ``qgis:pointtolayer``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -1516,8 +1516,6 @@ on the output format.
 
 .. seealso:: :ref:`qgisbuffer`, :ref:`qgisbufferbym`,
    :ref:`qgistaperedbuffer`
-
-``Algorithm ID``: `qgis:wedgebuffers`
 
 Parameters
 ..........
@@ -1603,6 +1601,8 @@ Outputs
      - [vector: polygon]
      - The output (wedge buffer) vector layer
 
+**Algorithm ID**: ``qgis:wedgebuffers``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -1621,8 +1621,6 @@ to the input point layer.
    Delaunay triangulation on points
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
-
-``Algorithm ID``: `qgis:delaunaytriangulation`
 
 Parameters
 ..........
@@ -1671,6 +1669,8 @@ Outputs
      - [vector: polygon]
      - The output (Delaunay triangulation) vector layer
 
+**Algorithm ID**: ``qgis:delaunaytriangulation``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -1696,8 +1696,6 @@ are smaller than a specified area threshold. Leaving this parameter at
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
-
-``Algorithm ID``: `qgis:deleteholes`
 
 Parameters
 ..........
@@ -1756,6 +1754,8 @@ Outputs
      - [same as input]
      - The output (cleaned) vector layer
 
+**Algorithm ID**: ``qgis:deleteholes``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -1785,8 +1785,6 @@ input parameter.
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
 .. seealso:: :ref:`qgisdensifygeometriesgivenaninterval`
-
-``Algorithm ID``: `qgis:densifygeometries`
 
 Parameters
 ..........
@@ -1841,6 +1839,8 @@ Outputs
      - [same as input]
      - The output (densified) vector layer
 
+**Algorithm ID**: ``qgis:densifygeometries``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -1877,8 +1877,6 @@ at 2.5 increments allows them to be evenly spaced over the segment.
 :ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgisdensifygeometries`
-
-``Algorithm ID``: `qgis:densifygeometriesgivenaninterval`
 
 Parameters
 ..........
@@ -1933,6 +1931,8 @@ Outputs
      - [same as input]
      - The output (densified) vector layer
 
+**Algorithm ID**: ``qgis:densifygeometriesgivenaninterval``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -1966,8 +1966,6 @@ input feature that happens to be processed.
 
 .. seealso:: :ref:`qgisaggregate`, :ref:`qgiscollect`
 
-``Algorithm ID``: `qgis:dissolve`
-
 Parameters
 ..........
 
@@ -1998,7 +1996,7 @@ Parameters
        If no field is provided then all the
        features are dissolved, resulting in a
        single (multipart) feature.
-   * - ***Dissolved**
+   * - **Dissolved**
      - ``OUTPUT``
      - [same as input]
 
@@ -2029,6 +2027,8 @@ Outputs
      - [same as input]
      - The output vector layer with dissolved geometries
 
+**Algorithm ID**: ``qgis:dissolve``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -2048,8 +2048,6 @@ If no Z values exist, the geometry will be upgraded to include the Z
 dimension.
 
 .. seealso:: :ref:`qgissetmfromraster`, :ref:`qgissetzvalue`
-
-``Algorithm ID``: `qgis:setzfromraster`
 
 Parameters
 ..........
@@ -2124,6 +2122,8 @@ Outputs
      - The output vector layer with Z values from the
        raster layer
 
+**Algorithm ID**: ``qgis:setzfromraster``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -2136,8 +2136,6 @@ Drop M/Z values
 Removes M (measure) or Z (altitude) values from input geometries.
 
 .. seealso:: :ref:`qgissetmvalue`, :ref:`qgissetzvalue`
-
-``Algorithm ID``: `qgis:dropmzvalues`
 
 Parameters
 ..........
@@ -2200,6 +2198,8 @@ Outputs
        except that the M and/or Z dimensions have been removed
        from the geometries).
 
+**Algorithm ID**: ``qgis:dropmzvalues``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -2222,8 +2222,6 @@ boundaries of the inputs are similar but not identical.
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
 .. seealso:: :ref:`qgisfixgeometries`
-
-``Algorithm ID``: `qgis:eliminateselectedpolygons`
 
 Parameters
 ..........
@@ -2284,6 +2282,8 @@ Outputs
      - [vector: polygon]
      - The output polygon vector layer.
 
+**Algorithm ID**: ``qgis:eliminateselectedpolygons``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -2310,8 +2310,6 @@ point, with no intermediate vertices between them.
 :ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgissubdivide`, :ref:`qgislinesubstring`
-
-``Algorithm ID``: `qgis:explodelines`
 
 Parameters
 ..........
@@ -2361,6 +2359,8 @@ Outputs
      - The output line vector layer with features representing
        each segment of the input layer.
 
+**Algorithm ID**: ``qgis:explodelines``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -2386,8 +2386,6 @@ the line.
 :ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgislinesubstring`
-
-``Algorithm ID``: `qgis:extendlines`
 
 Parameters
 ..........
@@ -2446,6 +2444,8 @@ Outputs
      - [vector: line]
      - The output (extended) line vector layer.
 
+**Algorithm ID**: ``qgis:extendlines``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -2464,8 +2464,6 @@ on all of the geometry's M values, including sum, mean, minimum and
 maximum.
 
 .. seealso:: :ref:`qgisextractzvalues`, :ref:`qgissetmvalue`, :ref:`qgisdropmzvalues`
-
-``Algorithm ID``: `qgis:extractmvalues`
 
 Parameters
 ..........
@@ -2546,6 +2544,8 @@ Outputs
      - [same as input]
      - The output vector layer (with M values)
 
+**Algorithm ID**: ``qgis:extractmvalues``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -2578,8 +2578,6 @@ vertex for the original geometry.
 
 .. seealso:: :ref:`qgisextractvertices`, :ref:`qgisfilterverticesbym`,
    :ref:`qgisfilterverticesbyz`
-
-``Algorithm ID``: `qgis:extractspecificvertices`
 
 Parameters
 ..........
@@ -2636,6 +2634,8 @@ Outputs
      - The output (point) vector layer containing the specified
        vertices from the input layer geometries.
 
+**Algorithm ID**: ``qgis:extractspecificvertices``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -2665,8 +2665,6 @@ geometry and bisector angle of vertex for original geometry.
 
 .. seealso:: :ref:`qgisextractspecificvertices`,
    :ref:`qgisfilterverticesbym`, :ref:`qgisfilterverticesbyz`
-
-``Algorithm ID``: `qgis:extractvertices`
 
 Parameters
 ..........
@@ -2716,6 +2714,8 @@ Outputs
      - The output (point) vector layer containing the vertices from
        the input layer geometries.
 
+**Algorithm ID**: ``qgis:extractvertices``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -2735,8 +2735,6 @@ maximum.
 
 .. seealso:: :ref:`qgisextractmvalues`, :ref:`qgissetzvalue`,
    :ref:`qgisdropmzvalues`
-
-``Algorithm ID``: `qgis:extractzvalues`
 
 Parameters
 ..........
@@ -2817,6 +2815,8 @@ Outputs
      - [same as input]
      - The output vector layer (with Z values)
 
+**Algorithm ID**: ``qgis:extractzvalues``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -2847,8 +2847,6 @@ the minimum value is tested.
 
 .. seealso:: :ref:`qgisfilterverticesbyz`, :ref:`qgisextractvertices`,
  :ref:`qgisextractspecificvertices`
-
-``Algorithm ID``: `qgis:filterverticesbym`
 
 Parameters
 ..........
@@ -2915,6 +2913,8 @@ Outputs
      - The output vector layer of features
        with only the filtered vertices.
 
+**Algorithm ID**: ``qgis:filterverticesbym``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -2947,8 +2947,6 @@ the minimum value is tested.
 
 .. seealso:: :ref:`qgisfilterverticesbym`, :ref:`qgisextractvertices`,
  :ref:`qgisextractspecificvertices`
-
-``Algorithm ID``: `qgis:filterverticesbyz`
 
 Parameters
 ..........
@@ -3015,6 +3013,8 @@ Outputs
      - The output vector layer of features
        with only the filtered vertices.
 
+**Algorithm ID**: ``qgis:filterverticesbyz``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -3035,8 +3035,6 @@ Always outputs multi-geometry layer.
 :ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgischeckvalidity`
-
-``Algorithm ID``: `qgis:fixgeometries`
 
 Parameters
 ..........
@@ -3085,6 +3083,8 @@ Outputs
      - [same as input]
      - The output vector layer with fixed geometries.
 
+**Algorithm ID**: ``qgis:fixgeometries``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -3099,8 +3099,6 @@ Forces polygon geometries to respect the Right-Hand-Rule, in which
 the area that is bounded by a polygon is to the right of the boundary.
 In particular, the exterior ring is oriented in a clockwise
 direction and any interior rings in a counter-clockwise direction.
-
-``Algorithm ID``: `qgis:forcerhr`
 
 Parameters
 ..........
@@ -3149,6 +3147,8 @@ Outputs
      - [vector: polygon]
      - The output vector layer with reoriented geometries.
 
+**Algorithm ID**: ``qgis:forcerhr``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -3175,8 +3175,6 @@ this breakpoint.
 
 If the input geometry contains M or Z values, these will be linearly
 interpolated for the new vertices created at the antimeridian.
-
-``Algorithm ID``: `qgis:antimeridiansplit`
 
 Parameters
 ..........
@@ -3225,6 +3223,8 @@ Outputs
      - [vector: line]
      - The output line vector layer split at the antimeridian.
 
+**Algorithm ID**: ``qgis:antimeridiansplit``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -3243,8 +3243,6 @@ geometries for output features.
 
 For help with QGIS expression functions, see the inbuilt help available
 in the :ref:`expression builder <vector_expressions>`.
-
-``Algorithm ID``: `qgis:geometrybyexpression`
 
 Parameters
 ..........
@@ -3328,6 +3326,8 @@ Outputs
      - [vector: any]
      - The output vector layer
 
+**Algorithm ID**: ``qgis:geometrybyexpression``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -3354,8 +3354,6 @@ the resultant feature will have a null geometry.
    Interpolated point at 500m of the beginning of the line
 
 .. seealso:: :ref:`qgispointsalonglines`
-
-``Algorithm ID``: `qgis:interpolatepoint`
 
 Parameters
 ..........
@@ -3411,6 +3409,8 @@ Outputs
      - The output point vector layer with features
        at a set distance along the line or polygon boundary
 
+**Algorithm ID**: ``qgis:interpolatepoint``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -3430,8 +3430,6 @@ If a feature has *n* or fewer parts, the feature will just be copied.
 
    Clockwise from top left: original multipart feature, one, two and
    three biggest parts kept
-
-``Algorithm ID``: `qgis:keepnbiggestparts`
 
 Parameters
 ..........
@@ -3488,6 +3486,8 @@ Outputs
      - The output polygon vector layer with the N biggest parts of
        each feature
 
+**Algorithm ID**: ``qgis:keepnbiggestparts``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -3515,8 +3515,6 @@ considered when calculating the substring.
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgisextendlines`
-
-``Algorithm ID``: `qgis:linesubstring`
 
 Parameters
 ..........
@@ -3575,6 +3573,8 @@ Outputs
      - [vector: line]
      - The output line vector layer.
 
+**Algorithm ID**: ``qgis:linesubstring``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -3593,8 +3593,6 @@ the input line layer.
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
 .. seealso:: :ref:`qgispolygonstolines`, :ref:`qgispolygonize`
-
-``Algorithm ID``: `qgis:linestopolygons`
 
 Parameters
 ..........
@@ -3643,6 +3641,8 @@ Outputs
      - [vector: polygon]
      - The output polygon vector layer.
 
+**Algorithm ID**: ``qgis:linestopolygons``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -3661,8 +3661,6 @@ any lines which could be merged and any non-connected line parts.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
-
-``Algorithm ID``: `qgis:mergelines`
 
 Parameters
 ..........
@@ -3711,6 +3709,8 @@ Outputs
      - [vector: line]
      - The output (merged) line vector layer.
 
+**Algorithm ID**: ``qgis:mergelines``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -3740,8 +3740,6 @@ The following enclosing geometry types are supported:
     circle, convex hull
 
 .. seealso:: :ref:`qgisminimumenclosingcircle`
-
-``Algorithm ID``: `qgis:minimumboundinggeometry`
 
 Parameters
 ..........
@@ -3811,6 +3809,8 @@ Outputs
      - [vector: polygon]
      - The output (bounding) polygon vector layer.
 
+**Algorithm ID**: ``qgis:minimumboundinggeometry``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -3832,8 +3832,6 @@ layer.
 :ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgisminimumboundinggeometry`
-
-``Algorithm ID``: `qgis:minimumenclosingcircle`
 
 Parameters
 ..........
@@ -3889,6 +3887,8 @@ Outputs
      - [vector: polygon]
      - The output polygon vector layer.
 
+**Algorithm ID**: ``qgis:minimumenclosingcircle``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -3913,8 +3913,6 @@ input layer, using a fixed or dynamic distance and number of rings.
    :ref:`qgisvariabledistancebuffer`,
    :ref:`qgisrectanglesovalsdiamonds`,
    :ref:`qgissinglesidedbuffer`
-
-``Algorithm ID``: `qgis:multiringconstantbuffer`
 
 Parameters
 ..........
@@ -3981,6 +3979,8 @@ Outputs
      - [vector: polygon]
      - The output polygon vector layer.
 
+**Algorithm ID**: ``qgis:multiringconstantbuffer``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -4008,8 +4008,6 @@ but divided into single features.
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
 .. seealso:: :ref:`qgiscollect`, :ref:`qgispromotetomulti`
-
-``Algorithm ID``: `qgis:multiparttosingleparts`
 
 Parameters
 ..........
@@ -4058,6 +4056,8 @@ Outputs
      - [same as input]
      - The output vector layer.
 
+**Algorithm ID**: ``qgis:multiparttosingleparts``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -4080,8 +4080,6 @@ distances will offset them to the right.
 :ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgisarrayoffsetlines`, :ref:`qgistranslategeometry`
-
-``Algorithm ID``: `qgis:offsetline`
 
 Parameters
 ..........
@@ -4171,6 +4169,8 @@ Outputs
      - [vector: line]
      - Output (offset) line layer
 
+**Algorithm ID**: ``qgis:offsetline``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -4192,8 +4192,6 @@ input layer.
 :ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgisminimumboundinggeometry`
-
-``Algorithm ID``: `qgis:orientedminimumboundingbox`
 
 Parameters
 ..........
@@ -4242,6 +4240,8 @@ Outputs
      - [vector: polygon]
      - The output polygon vector layer.
 
+**Algorithm ID**: ``qgis:orientedminimumboundingbox``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -4264,8 +4264,6 @@ every angle in the geometry either a right angle or a straight line.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
-
-``Algorithm ID``: `qgis:orthogonalize`
 
 Parameters
 ..........
@@ -4333,6 +4331,8 @@ Outputs
      - [same as input]
      - The output polygon vector layer with adjusted angles.
 
+**Algorithm ID**: ``qgis:orthogonalize``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -4349,8 +4349,6 @@ guaranteed to lie on the surface of the feature geometry.
 :ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgiscentroids`
-
-``Algorithm ID``: `qgis:pointonsurface`
 
 Parameters
 ..........
@@ -4404,6 +4402,8 @@ Outputs
      - [vector: point]
      - The output point vector layer.
 
+**Algorithm ID**: ``qgis:pointonsurface``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -4427,8 +4427,6 @@ created.
    Points created along the source line layer
 
 .. seealso:: :ref:`qgisinterpolatepoint`
-
-``Algorithm ID``: `qgis:pointsalonglines`
 
 Parameters
 ..........
@@ -4498,6 +4496,8 @@ Outputs
      - Point vector layer with features placed along lines or polygon
        boundaries of the input layer.
 
+**Algorithm ID**: ``qgis:pointsalonglines``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -4511,8 +4511,6 @@ Given a distance of proximity, identifies nearby point features and
 radially distributes them over a circle whose center represents their
 barycenter.
 A convenient tool to scatter overlaid features.
-
-``Algorithm ID``: `qgis:pointsdisplacement`
 
 Parameters
 ..........
@@ -4583,6 +4581,8 @@ Outputs
      - [vector: point]
      - Output point vector layer
 
+**Algorithm ID**: ``qgis:pointsdisplacement``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -4608,8 +4608,6 @@ stored as a new attribute in the output layer.
    :align: center
 
    Pole of inaccessibility
-
-``Algorithm ID``: `qgis:poleofinaccessibility`
 
 Parameters
 ..........
@@ -4664,6 +4662,8 @@ Outputs
      - [vector: point]
      - The output point vector layer
 
+**Algorithm ID**: ``qgis:poleofinaccessibility``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -4685,8 +4685,6 @@ line layer of **closed** features.
    transformed into a polygon.
 
 .. seealso:: :ref:`qgispolygonstolines`
-
-``Algorithm ID``: `qgis:polygonize`
 
 Parameters
 ..........
@@ -4743,6 +4741,8 @@ Outputs
      - [vector: polygon]
      - The output polygon vector layer from lines
 
+**Algorithm ID**: ``qgis:polygonize``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -4763,8 +4763,6 @@ representing the boundaries of the polygons in the input layer.
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
 .. seealso:: :ref:`qgispolygonize`
-
-``Algorithm ID``: `qgis:polygonstolines`
 
 Parameters
 ..........
@@ -4813,6 +4811,8 @@ Outputs
      - [vector: line]
      - The output line vector layer from polygons
 
+**Algorithm ID**: ``qgis:polygonstolines``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -4826,8 +4826,6 @@ Projects point geometries by a specified distance and bearing (azimuth).
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
-
-``Algorithm ID``: `qgis:projectpointcartesian`
 
 Parameters
 ..........
@@ -4888,6 +4886,8 @@ Outputs
      - [vector: point]
      - The output (projected) point vector layer
 
+**Algorithm ID**: ``qgis:projectpointcartesian``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -4911,8 +4911,6 @@ features.
 :ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgisaggregate`, :ref:`qgiscollect`
-
-``Algorithm ID``: `qgis:promotetomulti`
 
 Parameters
 ..........
@@ -4961,6 +4959,8 @@ Outputs
      - [same as input]
      - The output multipart vector layer
 
+**Algorithm ID**: ``qgis:promotetomulti``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -4980,8 +4980,6 @@ an expression.
    :align: center
 
    Different buffer shapes with dynamic parameters
-
-``Algorithm ID``: `qgis:rectanglesovalsdiamonds`
 
 Parameters
 ..........
@@ -5065,6 +5063,8 @@ Outputs
      - [vector: polygon]
      - The output vector layer (with the buffer shapes)
 
+**Algorithm ID**: ``qgis:rectanglesovalsdiamonds``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -5097,8 +5097,6 @@ will be maintained.
 .. seealso:: :ref:`qgisextractvertices`,
    :ref:`qgisextractspecificvertices`,
    :ref:`qgisdeleteduplicategeometries`
-
-``Algorithm ID``: `qgis:removeduplicatevertices`
 
 Parameters
 ..........
@@ -5162,6 +5160,8 @@ Outputs
      - [same as input]
      - The output vector layer (without duplicate vertices)
 
+**Algorithm ID**: ``qgis:removeduplicatevertices``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -5183,8 +5183,6 @@ In that case, also the null output will reflect this option, containing
 both null and empty geometries.
 
 .. seealso:: :ref:`qgisdeleteduplicategeometries`
-
-``Algorithm ID``: `qgis:removenullgeometries`
 
 Parameters
 ..........
@@ -5258,6 +5256,8 @@ Outputs
      - [same as input]
      - The output vector layer (without NULL and, if chosen, empty geometries)
 
+**Algorithm ID**: ``qgis:removenullgeometries``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -5275,8 +5275,6 @@ Inverts the direction of a line layer.
    Before and after the direction inversion
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
-
-``Algorithm ID``: `qgis:reverselinedirection`
 
 Parameters
 ..........
@@ -5326,6 +5324,8 @@ Outputs
      - [vector: line]
      - The output line vector layer (with reversed lines)
 
+**Algorithm ID**: ``qgis:reverselinedirection``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -5343,8 +5343,6 @@ around a unique preset point.
 :ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgistranslategeometry`, :ref:`qgisswapxy`
-
-``Algorithm ID``: `qgis:rotatefeatures`
 
 Parameters
 ..........
@@ -5411,6 +5409,8 @@ Outputs
      - [same as input]
      - The output vector layer with rotated geometries
 
+**Algorithm ID**: ``qgis:rotatefeatures``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -5431,8 +5431,6 @@ Non-curved geometries will be retained without change.
 
 .. seealso:: :ref:`qgissegmentizebymaxdistance`,
    :ref:`qgissimplifygeometries`, :ref:`qgissmoothgeometry`
-
-``Algorithm ID``: `qgis:segmentizebymaxangle`
 
 Parameters
 ..........
@@ -5489,6 +5487,8 @@ Outputs
      - [same as input]
      - The output vector layer with segmentized geometries
 
+**Algorithm ID**: ``qgis:segmentizebymaxangle``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -5508,8 +5508,6 @@ Non-curved geometries will be retained without change.
 
 .. seealso:: :ref:`qgissegmentizebymaxangle`,
    :ref:`qgissimplifygeometries`, :ref:`qgissmoothgeometry`
-
-``Algorithm ID``: `qgis:segmentizebymaxdistance`
 
 Parameters
 ..........
@@ -5567,6 +5565,8 @@ Outputs
      - [same as input]
      - The output vector layer with segmentized geometries
 
+**Algorithm ID**: ``qgis:segmentizebymaxdistance``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -5590,8 +5590,6 @@ geometries.
 
 .. seealso:: :ref:`qgissetmfromraster`, :ref:`qgissetzvalue`,
    :ref:`qgisdropmzvalues`
-
-``Algorithm ID``: `qgis:setmvalue`
 
 Parameters
 ..........
@@ -5648,6 +5646,8 @@ Outputs
      - The output vector layer (with M values assigned to the
        geometries)
 
+**Algorithm ID**: ``qgis:setmvalue``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -5668,8 +5668,6 @@ If no M values exist, the geometry will be upgraded to include M
 values.
 
 .. seealso:: :ref:`qgissetzfromraster`, :ref:`qgissetmvalue`
-
-``Algorithm ID``: `qgis:setmfromraster`
 
 Parameters
 ..........
@@ -5742,6 +5740,8 @@ Outputs
      - [same as input]
      - The output vector layer (with updated M values)
 
+**Algorithm ID**: ``qgis:setmfromraster``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -5765,8 +5765,6 @@ geometries.
 
 .. seealso:: :ref:`qgissetzfromraster`, :ref:`qgissetmvalue`,
    :ref:`qgisdropmzvalues`
-
-``Algorithm ID``: `qgis:setzvalue`
 
 Parameters
 ..........
@@ -5822,6 +5820,11 @@ Outputs
      - [same as input]
      - The output vector layer (with Z values assigned)
 
+**Algorithm ID**: ``qgis:setzvalue``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 .. _qgissimplifygeometries:
 
@@ -5847,8 +5850,6 @@ distance based (the "Douglas-Peucker" algorithm), area based
 
 .. seealso:: :ref:`qgissmoothgeometry`, :ref:`qgisdensifygeometries`,
  :ref:`qgisdensifygeometriesgivenaninterval`
-
-``Algorithm ID``: `qgis:simplifygeometries`
 
 Parameters
 ..........
@@ -5918,6 +5919,8 @@ Outputs
      - [same as input]
      - The output (simplified) vector layer
 
+**Algorithm ID**: ``qgis:simplifygeometries``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -5938,8 +5941,6 @@ Buffer always results in a polygon layer.
    Left versus right side buffer on the same vector line layer
 
 .. seealso:: :ref:`qgisbuffer`
-
-``Algorithm ID``: `qgis:singlesidedbuffer`
 
 Parameters
 ..........
@@ -6031,6 +6032,8 @@ Outputs
      - [vector: polygon]
      - Output (buffer) polygon layer
 
+**Algorithm ID**: ``qgis:singlesidedbuffer``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -6075,8 +6078,6 @@ this will not be smoothed. For example, setting the maximum angle to
 .. seealso:: :ref:`qgissimplifygeometries`,
    :ref:`qgisdensifygeometries`,
    :ref:`qgisdensifygeometriesgivenaninterval`
-
-``Algorithm ID``: `qgis:smoothgeometry`
 
 Parameters
 ..........
@@ -6146,6 +6147,8 @@ Outputs
      - [same as input]
      - Output (smoothed) vector layer
 
+**Algorithm ID**: ``qgis:smoothgeometry``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -6163,8 +6166,6 @@ inserted or removed as required to make the geometries match the
 reference geometries.
 
 .. seealso:: :ref:`qgissnappointstogrid`
-
-``Algorithm ID``: `qgis:snapgeometries`
 
 Parameters
 ..........
@@ -6245,6 +6246,8 @@ Outputs
      - [same as input]
      - Output (snapped) vector layer
 
+**Algorithm ID**: ``qgis:snapgeometries``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -6270,8 +6273,6 @@ Snapping can be performed on the X, Y, Z or M axis. A grid spacing of
 :ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgissnapgeometries`
-
-``Algorithm ID``: `qgis:snappointstogrid`
 
 Parameters
 ..........
@@ -6345,6 +6346,8 @@ Outputs
      - [same as input]
      - Output (snapped) vector layer
 
+**Algorithm ID**: ``qgis:snappointstogrid``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -6358,8 +6361,6 @@ Takes a line (or curve) layer and splits each feature into
 multiple parts, where each part is of a specified maximum length.
 Z and M values at the start and end of the new line substrings are
 linearly interpolated from existing values.
-
-``Algorithm ID``: `qgis:splitlinesbylength`
 
 Parameters
 ..........
@@ -6418,6 +6419,8 @@ Outputs
        is less than or equal to the length specified in
        the LENGTH parameter.
 
+**Algorithm ID**: ``qgis:splitlinesbylength``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -6449,8 +6452,6 @@ Curved geometries will be segmentized before subdivision.
 :ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgisexplodelines`, :ref:`qgislinesubstring`
-
-``Algorithm ID``: `qgis:subdivide`
 
 Parameters
 ..........
@@ -6510,6 +6511,8 @@ Outputs
      - [same as input]
      - Output vector layer
 
+**Algorithm ID**: ``qgis:subdivide``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -6528,8 +6531,6 @@ latitude and longitude values reversed.
 :ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgistranslategeometry`, :ref:`qgisrotatefeatures`
-
-``Algorithm ID``: `qgis:swapxy`
 
 Parameters
 ..........
@@ -6581,6 +6582,8 @@ Outputs
      - [same as input]
      - Output (swapped) vector layer
 
+**Algorithm ID**: ``qgis:swapxy``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -6600,8 +6603,6 @@ and end buffer diameter.
 
 .. seealso:: :ref:`qgisbufferbym`, :ref:`qgisbuffer`,
    :ref:`qgiswedgebuffers`
-
-``Algorithm ID``: `qgis:taperedbuffer`
 
 Parameters
 ..........
@@ -6672,6 +6673,8 @@ Outputs
      - [vector: polygon]
      - Output (buffer) polygon layer
 
+**Algorithm ID**: ``qgis:taperedbuffer``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -6695,8 +6698,6 @@ component polygons.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
-
-``Algorithm ID``: `qgis:tessellate`
 
 Parameters
 ..........
@@ -6746,6 +6747,8 @@ Outputs
      - [vector: polygon]
      - Output multipolygonZ layer
 
+**Algorithm ID**: ``qgis:tessellate``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -6775,8 +6778,6 @@ new fields:
    :align: center
 
    Dashed red lines represent the transect of the input line layer
-
-``Algorithm ID``: `qgis:transect`
 
 Parameters
 ..........
@@ -6847,6 +6848,8 @@ Outputs
      - [vector: line]
      - Output line layer
 
+**Algorithm ID**: ``qgis:transect``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -6871,8 +6874,6 @@ Z and M values present in the geometry can also be translated.
 
 .. seealso:: :ref:`qgisarraytranslatedfeatures`,
    :ref:`qgisoffsetline`, :ref:`qgisrotatefeatures`, :ref:`qgisswapxy`
-
-``Algorithm ID``: `qgis:translategeometry`
 
 Parameters
 ..........
@@ -6946,6 +6947,8 @@ Outputs
      - [same as input]
      - Output vector layer
 
+**Algorithm ID**: ``qgis:translategeometry``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -6965,8 +6968,6 @@ sizes.
   :ref:`Graphical modeler <processing.modeler>`.
 
 .. seealso:: :ref:`qgisbuffer`
-
-``Algorithm ID``: `qgis:variabledistancebuffer`
 
 Parameters
 ..........
@@ -7047,6 +7048,8 @@ Outputs
      - [vector: polygon]
      - Buffer polygon vector layer.
 
+**Algorithm ID**: ``qgis:variabledistancebuffer``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -7066,8 +7069,6 @@ line geometries as the diameter of the buffer at each vertex.
 
 .. seealso:: :ref:`qgistaperedbuffer`, :ref:`qgisbuffer`,
    :ref:`qgissetmvalue`
-
-``Algorithm ID``: `qgis:bufferbym`
 
 Parameters
 ..........
@@ -7126,6 +7127,8 @@ Outputs
      - [vector: polygon]
      - Variable buffer polygon layer
 
+**Algorithm ID**: ``qgis:bufferbym``
+
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
@@ -7148,8 +7151,6 @@ point than to any other point.
    Voronoi polygons
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
-
-``Algorithm ID``: `qgis:voronoipolygons`
 
 Parameters
 ..........
@@ -7206,6 +7207,8 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - Voronoi polygons of the input point vector layer
+
+**Algorithm ID**: ``qgis:voronoipolygons```
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
