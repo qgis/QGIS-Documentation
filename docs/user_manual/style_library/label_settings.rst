@@ -584,6 +584,8 @@ Under :guilabel:`Feature options`:
   the :guilabel:`Distance` or :guilabel:`Repeat` options in the :ref:`Placement
   <labels_line_placement>` tab.
 
+.. _labels_obstacles:
+
 Obstacles
 ---------
 

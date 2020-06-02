@@ -1236,7 +1236,7 @@ Description of how to set each property is exposed at :ref:`showlabels`.
 Setting the automated placement engine
 --------------------------------------
 
-You can use the automated placement settings to configure a global and
+You can use the automated placement settings to configure a project-level
 automated behavior of the labels. In the top right corner of the
 :guilabel:`Labels` tab, click the |autoPlacement| :sup:`Automated placement
 settings (applies to all layers)` button, opening a dialog with the following
@@ -1249,11 +1249,10 @@ options:
 
    The labels automated placement engine
 
-* The :guilabel:`Number of candidates` controls how many label placement
-  candidates should be generated for each feature type. The more candidates
-  generated, the better the labeling will be - but at a cost of rendering
-  speed. Smaller number of candidates results in less labels placed but faster
-  redraws.
+* :guilabel:`Number of candidates`: calculates and assigns to line and
+  polygon features the number of possible labels placement based on their size.
+  The longer or wider a feature is, the more candidates it has, and its labels
+  can be better placed with less risk of collision.
 * :guilabel:`Text rendering`: sets the default value for label rendering
   widgets when :ref:`exporting a map canvas <exportingmapcanvas>` or
   :ref:`a layout <create-output>` to PDF or SVG.
@@ -1280,7 +1279,23 @@ options:
   Like the label says, it's useful only for debugging and testing the effect different
   labeling settings have. This could be handy for a better manual placement with
   tools from the :ref:`label toolbar <label_toolbar>`.
+* :guilabel:`Project labeling version`: QGIS supports two different versions of
+  label automatic placement:
 
+  * :guilabel:`Version 1`: the old system (used by QGIS versions 3.10 and earlier,
+    and when opening projects created in these versions in QGIS 3.12 or later).
+    Version 1 treats label and obstacle priorities as "rough guides" only,
+    and it's possible that a low-priority label will be placed over a high-priority
+    obstacle in this version. Accordingly, it can be difficult to obtain the
+    desired labeling results when using this version and it is thus
+    recommended only for compatibility with older projects.
+  * :guilabel:`Version 2 (recommended)`: this is the default system in new
+    projects created in QGIS 3.12 or later. In version 2, the logic dictating
+    when labels are allowed to overlap :ref:`obstacles <labels_obstacles>`
+    has been reworked. The newer logic forbids any labels from overlapping
+    any obstacles with a greater obstacle weight compared to the label's
+    priority. As a result, this version results in much more predictable
+    and easier to understand labeling results.
 
 .. _rule_based_labeling:
 
