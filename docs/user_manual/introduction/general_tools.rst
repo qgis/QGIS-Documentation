@@ -101,10 +101,10 @@ panel:
 * |hideAllLayers| :guilabel:`Hide All Layers`
 * |showSelectedLayers| :guilabel:`Show Selected Layers`
 * |hideSelectedLayers| :guilabel:`Hide Selected Layers`
-* |toggleSelectedLayers| :guilabel:`Toggle Selected Layers`: change the visibility of
+* |toggleSelectedLayers| :guilabel:`Toggle Selected Layers`: changes the visibility of
   the first selected layer in the panel, and applies that state to the other selected
   layers. Also accesible through :kbd:`Space` shortcut.
-* :guilabel:`Toggle Selected Layers Independently`: change the visibility status
+* :guilabel:`Toggle Selected Layers Independently`: changes the visibility status
   of each selected layer
 * |hideDeselectedLayers| :guilabel:`Hide Deselected Layers`
 
@@ -256,8 +256,8 @@ out of all nested groups.
 To move a group or layer to the top of the layer panel, either drag it to
 the top, or choose :guilabel:`Move to Top`. If you use this option on a layer nested
 in a group, the layer is moved to the top in its current group.
-The :guilabel:`Move to Bottom` option follows the same logic to move down layers
-and groups.
+The :guilabel:`Move to Bottom` option follows the same logic to move layers
+and groups down.
 
 The checkbox for a group will show or hide all the layers in the group
 with one click.
