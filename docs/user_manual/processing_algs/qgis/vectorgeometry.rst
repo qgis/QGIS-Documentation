@@ -29,7 +29,7 @@ dimension of the input layer:
   distance (``straightdis``)
 * for **polygon** layers: ``perimeter`` and ``area``
 
-``Default menu``: :menuselection:`Vector --> Geometry Tools`
+**Default menu**: :menuselection:`Vector --> Geometry Tools`
 
 Parameters
 ..........
@@ -420,7 +420,7 @@ In this case the buffer will result in a smaller polygon (setback).
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
 
-``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
+**Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
 
 .. seealso:: :ref:`qgisvariabledistancebuffer`,
    :ref:`qgismultiringconstantbuffer`, :ref:`qgisbufferbym`
@@ -572,7 +572,7 @@ as for the original features.
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
 
-``Default menu``: :menuselection:`Vector --> Geometry Tools`
+**Default menu**: :menuselection:`Vector --> Geometry Tools`
 
 .. seealso:: :ref:`qgispointonsurface`
 
@@ -669,7 +669,7 @@ additional information (number of errors found and types of error):
    Left: the input layer. Right: the valid layer (green), the invalid
    layer (orange)
 
-``Default menu``: :menuselection:`Vector --> Geometry Tools`
+**Default menu**: :menuselection:`Vector --> Geometry Tools`
 
 .. seealso:: :ref:`qgisfixgeometries` and the core plugin
    :ref:`geometry_checker`
@@ -952,7 +952,7 @@ part.
 See the 'Promote to multipart' or 'Aggregate' algorithms for
 alternative options.
 
-``Default menu``: :menuselection:`Vector --> Geometry Tools`
+**Default menu**: :menuselection:`Vector --> Geometry Tools`
 
 .. seealso:: :ref:`qgisaggregate`, :ref:`qgispromotetomulti`,
    :ref:`qgisdissolve`
@@ -1301,7 +1301,7 @@ features.
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
 
-``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
+**Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
 
 .. seealso:: :ref:`qgisminimumboundinggeometry`,
    :ref:`qgisconcavehull`
@@ -1620,7 +1620,7 @@ to the input point layer.
 
    Delaunay triangulation on points
 
-``Default menu``: :menuselection:`Vector --> Geometry Tools`
+**Default menu**: :menuselection:`Vector --> Geometry Tools`
 
 Parameters
 ..........
@@ -1782,7 +1782,7 @@ input parameter.
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
 
-``Default menu``: :menuselection:`Vector --> Geometry Tools`
+**Default menu**: :menuselection:`Vector --> Geometry Tools`
 
 .. seealso:: :ref:`qgisdensifygeometriesgivenaninterval`
 
@@ -1962,7 +1962,7 @@ input feature that happens to be processed.
 
    Dissolve the polygon layer on a common attribute
 
-``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
+**Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
 
 .. seealso:: :ref:`qgisaggregate`, :ref:`qgiscollect`
 
@@ -2219,7 +2219,7 @@ Eliminate is normally used to get rid of sliver polygons, i.e. tiny
 polygons that are a result of polygon intersection processes where
 boundaries of the inputs are similar but not identical.
 
-``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
+**Default menu**: :menuselection:`Vector --> Geoprocessing Tools`
 
 .. seealso:: :ref:`qgisfixgeometries`
 
@@ -2661,7 +2661,7 @@ geometry and bisector angle of vertex for original geometry.
 
    Vertices extracted for line and polygon layer
 
-``Default menu``: :menuselection:`Vector --> Geometry Tools`
+**Default menu**: :menuselection:`Vector --> Geometry Tools`
 
 .. seealso:: :ref:`qgisextractspecificvertices`,
    :ref:`qgisfilterverticesbym`, :ref:`qgisfilterverticesbyz`
@@ -3590,7 +3590,7 @@ input line layer.
 The attribute table of the output layer is the same as the one from of
 the input line layer.
 
-``Default menu``: :menuselection:`Vector --> Geometry Tools`
+**Default menu**: :menuselection:`Vector --> Geometry Tools`
 
 .. seealso:: :ref:`qgispolygonstolines`, :ref:`qgispolygonize`
 
@@ -4005,7 +4005,7 @@ but divided into single features.
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
 
-``Default menu``: :menuselection:`Vector --> Geometry Tools`
+**Default menu**: :menuselection:`Vector --> Geometry Tools`
 
 .. seealso:: :ref:`qgiscollect`, :ref:`qgispromotetomulti`
 
@@ -4760,7 +4760,7 @@ representing the boundaries of the polygons in the input layer.
 
    Black lines as the result of the algorithm
 
-``Default menu``: :menuselection:`Vector --> Geometry Tools`
+**Default menu**: :menuselection:`Vector --> Geometry Tools`
 
 .. seealso:: :ref:`qgispolygonize`
 
@@ -5846,7 +5846,7 @@ distance based (the "Douglas-Peucker" algorithm), area based
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
-``Default menu``: :menuselection:`Vector --> Geometry Tools`
+**Default menu**: :menuselection:`Vector --> Geometry Tools`
 
 .. seealso:: :ref:`qgissmoothgeometry`, :ref:`qgisdensifygeometries`,
  :ref:`qgisdensifygeometriesgivenaninterval`
@@ -7150,7 +7150,7 @@ point than to any other point.
 
    Voronoi polygons
 
-``Default menu``: :menuselection:`Vector --> Geometry Tools`
+**Default menu**: :menuselection:`Vector --> Geometry Tools`
 
 Parameters
 ..........
