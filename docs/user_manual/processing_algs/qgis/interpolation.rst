@@ -380,31 +380,27 @@ Parameters
      - Name
      - Type
      - Description
-
    * - **Input line layer**
      - ``INPUT``
      - [vector: any]
      - Input vector layer containing line features
-
    * - **Weight field**
      - ``WEIGHT``
      - [number]
      - Field of the layer containing the weight factor to use during the calculation
-
    * - **Search Radius**
      - ``RADIUS``
      - [number]
-     - Radius of the circular neighbourhood. Units can be specified here.
 
        Default: 10
-
+     - Radius of the circular neighbourhood. Units can be specified here.
    * - **Pixel size**
      - ``PIXEL_SIZE``
      - [number]
+
+       Default: 10
      - Pixel size of the output raster layer in layer units.
        The raster has square pixels.
-       Default: 10
-
    * - **Line density raster**
      - ``OUTPUT``
      - [raster]
@@ -433,14 +429,7 @@ Outputs
    * - **Line density raster**
      - ``OUTPUT``
      - [raster]
-
-       Default: ``[Save to temporary file]``
-     - The output as a raster layer. One of:
-
-       * Save to a Temporary File
-       * Save to File...
-
-       The file encoding can also be changed here.
+     - The output line density raster layer.
 
 
 .. _qgistininterpolation:
