@@ -31,6 +31,7 @@ dimension of the input layer:
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
+``Algorithm ID``: `qgis:exportaddgeometrycolumns`
 
 Parameters
 ..........
@@ -122,6 +123,8 @@ This algorithm allows to use the default
 :ref:`aggregates functions <aggregates_function>` of the QGIS Expression engine.
 
 .. seealso:: :ref:`qgiscollect`, :ref:`qgisdissolve`
+
+``Algorithm ID``: `qgis:aggregate`
 
 Parameters
 ..........
@@ -271,6 +274,8 @@ For **lines geometries**, the boundaries are their end points.
 
    Boundary layer (red points) for lines. In yellow a selected feature.
 
+``Algorithm ID``: `qgis:boundary`
+
 Parameters
 ..........
 
@@ -341,6 +346,8 @@ Polygon and line geometries are supported.
 :ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgisminimumboundinggeometry`
+
+``Algorithm ID``: `qgis:boundingboxes`
 
 Parameters
 ..........
@@ -417,6 +424,8 @@ In this case the buffer will result in a smaller polygon (setback).
 
 .. seealso:: :ref:`qgisvariabledistancebuffer`,
    :ref:`qgismultiringconstantbuffer`, :ref:`qgisbufferbym`
+
+``Algorithm ID``: `qgis:buffer`
 
 Parameters
 ..........
@@ -567,6 +576,8 @@ as for the original features.
 
 .. seealso:: :ref:`qgispointonsurface`
 
+``Algorithm ID``: `qgis:centroids`
+
 Parameters
 ..........
 
@@ -662,6 +673,8 @@ additional information (number of errors found and types of error):
 
 .. seealso:: :ref:`qgisfixgeometries` and the core plugin
    :ref:`geometry_checker`
+
+``Algorithm ID``: `qgis:checkvalidity`
 
 Parameters
 ..........
@@ -944,6 +957,8 @@ alternative options.
 .. seealso:: :ref:`qgisaggregate`, :ref:`qgispromotetomulti`,
    :ref:`qgisdissolve`
 
+``Algorithm ID``: `qgis:collect`
+
 Parameters
 ..........
 
@@ -1014,6 +1029,8 @@ Computes the concave hull of the features in an input point layer.
 
 
 .. seealso:: :ref:`qgisconvexhull`, :ref:`qgisknearestconcavehull`
+
+``Algorithm ID``: `qgis:concavehull`
 
 Parameters
 ..........
@@ -1108,6 +1125,8 @@ polygons in the output layer for each group.
 
 .. seealso:: :ref:`qgisconcavehull`
 
+``Algorithm ID``: `qgis:knearestconcavehull`
+
 Parameters
 ..........
 
@@ -1194,6 +1213,8 @@ converted to a point, but a point cannot be converted to a
 line. A line can also be converted to a polygon.
 
 .. seealso:: :ref:`qgispolygonize`, :ref:`qgislinestopolygons`
+
+``Algorithm ID``: `qgis:convertgeometrytype`
 
 Parameters
 ..........
@@ -1285,6 +1306,8 @@ features.
 .. seealso:: :ref:`qgisminimumboundinggeometry`,
    :ref:`qgisconcavehull`
 
+``Algorithm ID``: `qgis:convexhull`
+
 Parameters
 ..........
 
@@ -1350,6 +1373,8 @@ for other algorithms which require a layer based input.
 
 .. seealso:: :ref:`qgispointtolayer`
 
+``Algorithm ID``: `qgis:extenttolayer`
+
 Parameters
 ..........
 
@@ -1413,6 +1438,8 @@ It can be used in models to convert a point into a point layer for
 algorithms which require a layer based input.
 
 .. seealso:: :ref:`qgisextenttolayer`
+
+``Algorithm ID``: `qgis:pointtolayer`
 
 Parameters
 ..........
@@ -1489,6 +1516,8 @@ on the output format.
 
 .. seealso:: :ref:`qgisbuffer`, :ref:`qgisbufferbym`,
    :ref:`qgistaperedbuffer`
+
+``Algorithm ID``: `qgis:wedgebuffers`
 
 Parameters
 ..........
@@ -1593,6 +1622,8 @@ to the input point layer.
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
+``Algorithm ID``: `qgis:delaunaytriangulation`
+
 Parameters
 ..........
 
@@ -1665,6 +1696,8 @@ are smaller than a specified area threshold. Leaving this parameter at
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+
+``Algorithm ID``: `qgis:deleteholes`
 
 Parameters
 ..........
@@ -1752,6 +1785,8 @@ input parameter.
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
 
 .. seealso:: :ref:`qgisdensifygeometriesgivenaninterval`
+
+``Algorithm ID``: `qgis:densifygeometries`
 
 Parameters
 ..........
@@ -1843,6 +1878,8 @@ at 2.5 increments allows them to be evenly spaced over the segment.
 
 .. seealso:: :ref:`qgisdensifygeometries`
 
+``Algorithm ID``: `qgis:densifygeometriesgivenaninterval`
+
 Parameters
 ..........
 
@@ -1929,6 +1966,8 @@ input feature that happens to be processed.
 
 .. seealso:: :ref:`qgisaggregate`, :ref:`qgiscollect`
 
+``Algorithm ID``: `qgis:dissolve`
+
 Parameters
 ..........
 
@@ -2009,6 +2048,8 @@ If no Z values exist, the geometry will be upgraded to include the Z
 dimension.
 
 .. seealso:: :ref:`qgissetmfromraster`, :ref:`qgissetzvalue`
+
+``Algorithm ID``: `qgis:setzfromraster`
 
 Parameters
 ..........
@@ -2096,6 +2137,8 @@ Removes M (measure) or Z (altitude) values from input geometries.
 
 .. seealso:: :ref:`qgissetmvalue`, :ref:`qgissetzvalue`
 
+``Algorithm ID``: `qgis:dropmzvalues`
+
 Parameters
 ..........
 
@@ -2179,6 +2222,8 @@ boundaries of the inputs are similar but not identical.
 ``Default menu``: :menuselection:`Vector --> Geoprocessing Tools`
 
 .. seealso:: :ref:`qgisfixgeometries`
+
+``Algorithm ID``: `qgis:eliminateselectedpolygons`
 
 Parameters
 ..........
@@ -2266,6 +2311,8 @@ point, with no intermediate vertices between them.
 
 .. seealso:: :ref:`qgissubdivide`, :ref:`qgislinesubstring`
 
+``Algorithm ID``: `qgis:explodelines`
+
 Parameters
 ..........
 
@@ -2339,6 +2386,8 @@ the line.
 :ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgislinesubstring`
+
+``Algorithm ID``: `qgis:extendlines`
 
 Parameters
 ..........
@@ -2415,6 +2464,8 @@ on all of the geometry's M values, including sum, mean, minimum and
 maximum.
 
 .. seealso:: :ref:`qgisextractzvalues`, :ref:`qgissetmvalue`, :ref:`qgisdropmzvalues`
+
+``Algorithm ID``: `qgis:extractmvalues`
 
 Parameters
 ..........
@@ -2528,6 +2579,8 @@ vertex for the original geometry.
 .. seealso:: :ref:`qgisextractvertices`, :ref:`qgisfilterverticesbym`,
    :ref:`qgisfilterverticesbyz`
 
+``Algorithm ID``: `qgis:extractspecificvertices`
+
 Parameters
 ..........
 
@@ -2613,6 +2666,8 @@ geometry and bisector angle of vertex for original geometry.
 .. seealso:: :ref:`qgisextractspecificvertices`,
    :ref:`qgisfilterverticesbym`, :ref:`qgisfilterverticesbyz`
 
+``Algorithm ID``: `qgis:extractvertices`
+
 Parameters
 ..........
 
@@ -2680,6 +2735,8 @@ maximum.
 
 .. seealso:: :ref:`qgisextractmvalues`, :ref:`qgissetzvalue`,
    :ref:`qgisdropmzvalues`
+
+``Algorithm ID``: `qgis:extractzvalues`
 
 Parameters
 ..........
@@ -2791,6 +2848,8 @@ the minimum value is tested.
 .. seealso:: :ref:`qgisfilterverticesbyz`, :ref:`qgisextractvertices`,
  :ref:`qgisextractspecificvertices`
 
+``Algorithm ID``: `qgis:filterverticesbym`
+
 Parameters
 ..........
 
@@ -2889,6 +2948,8 @@ the minimum value is tested.
 .. seealso:: :ref:`qgisfilterverticesbym`, :ref:`qgisextractvertices`,
  :ref:`qgisextractspecificvertices`
 
+``Algorithm ID``: `qgis:filterverticesbyz`
+
 Parameters
 ..........
 
@@ -2975,6 +3036,8 @@ Always outputs multi-geometry layer.
 
 .. seealso:: :ref:`qgischeckvalidity`
 
+``Algorithm ID``: `qgis:fixgeometries`
+
 Parameters
 ..........
 
@@ -3036,6 +3099,8 @@ Forces polygon geometries to respect the Right-Hand-Rule, in which
 the area that is bounded by a polygon is to the right of the boundary.
 In particular, the exterior ring is oriented in a clockwise
 direction and any interior rings in a counter-clockwise direction.
+
+``Algorithm ID``: `qgis:forcerhr`
 
 Parameters
 ..........
@@ -3111,6 +3176,8 @@ this breakpoint.
 If the input geometry contains M or Z values, these will be linearly
 interpolated for the new vertices created at the antimeridian.
 
+``Algorithm ID``: `qgis:antimeridiansplit`
+
 Parameters
 ..........
 
@@ -3176,6 +3243,8 @@ geometries for output features.
 
 For help with QGIS expression functions, see the inbuilt help available
 in the :ref:`expression builder <vector_expressions>`.
+
+``Algorithm ID``: `qgis:geometrybyexpression`
 
 Parameters
 ..........
@@ -3286,6 +3355,8 @@ the resultant feature will have a null geometry.
 
 .. seealso:: :ref:`qgispointsalonglines`
 
+``Algorithm ID``: `qgis:interpolatepoint`
+
 Parameters
 ..........
 
@@ -3359,6 +3430,8 @@ If a feature has *n* or fewer parts, the feature will just be copied.
 
    Clockwise from top left: original multipart feature, one, two and
    three biggest parts kept
+
+``Algorithm ID``: `qgis:keepnbiggestparts`
 
 Parameters
 ..........
@@ -3443,6 +3516,8 @@ considered when calculating the substring.
 
 .. seealso:: :ref:`qgisextendlines`
 
+``Algorithm ID``: `qgis:linesubstring`
+
 Parameters
 ..........
 
@@ -3519,6 +3594,8 @@ the input line layer.
 
 .. seealso:: :ref:`qgispolygonstolines`, :ref:`qgispolygonize`
 
+``Algorithm ID``: `qgis:linestopolygons`
+
 Parameters
 ..........
 
@@ -3584,6 +3661,8 @@ any lines which could be merged and any non-connected line parts.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+
+``Algorithm ID``: `qgis:mergelines`
 
 Parameters
 ..........
@@ -3661,6 +3740,8 @@ The following enclosing geometry types are supported:
     circle, convex hull
 
 .. seealso:: :ref:`qgisminimumenclosingcircle`
+
+``Algorithm ID``: `qgis:minimumboundinggeometry`
 
 Parameters
 ..........
@@ -3752,6 +3833,8 @@ layer.
 
 .. seealso:: :ref:`qgisminimumboundinggeometry`
 
+``Algorithm ID``: `qgis:minimumenclosingcircle`
+
 Parameters
 ..........
 
@@ -3830,6 +3913,8 @@ input layer, using a fixed or dynamic distance and number of rings.
    :ref:`qgisvariabledistancebuffer`,
    :ref:`qgisrectanglesovalsdiamonds`,
    :ref:`qgissinglesidedbuffer`
+
+``Algorithm ID``: `qgis:multiringconstantbuffer`
 
 Parameters
 ..........
@@ -3924,6 +4009,8 @@ but divided into single features.
 
 .. seealso:: :ref:`qgiscollect`, :ref:`qgispromotetomulti`
 
+``Algorithm ID``: `qgis:multiparttosingleparts`
+
 Parameters
 ..........
 
@@ -3993,6 +4080,8 @@ distances will offset them to the right.
 :ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgisarrayoffsetlines`, :ref:`qgistranslategeometry`
+
+``Algorithm ID``: `qgis:offsetline`
 
 Parameters
 ..........
@@ -4104,6 +4193,8 @@ input layer.
 
 .. seealso:: :ref:`qgisminimumboundinggeometry`
 
+``Algorithm ID``: `qgis:orientedminimumboundingbox`
+
 Parameters
 ..........
 
@@ -4173,6 +4264,8 @@ every angle in the geometry either a right angle or a straight line.
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+
+``Algorithm ID``: `qgis:orthogonalize`
 
 Parameters
 ..........
@@ -4257,6 +4350,8 @@ guaranteed to lie on the surface of the feature geometry.
 
 .. seealso:: :ref:`qgiscentroids`
 
+``Algorithm ID``: `qgis:pointonsurface`
+
 Parameters
 ..........
 
@@ -4332,6 +4427,8 @@ created.
    Points created along the source line layer
 
 .. seealso:: :ref:`qgisinterpolatepoint`
+
+``Algorithm ID``: `qgis:pointsalonglines`
 
 Parameters
 ..........
@@ -4414,6 +4511,8 @@ Given a distance of proximity, identifies nearby point features and
 radially distributes them over a circle whose center represents their
 barycenter.
 A convenient tool to scatter overlaid features.
+
+``Algorithm ID``: `qgis:pointsdisplacement`
 
 Parameters
 ..........
@@ -4510,6 +4609,8 @@ stored as a new attribute in the output layer.
 
    Pole of inaccessibility
 
+``Algorithm ID``: `qgis:poleofinaccessibility`
+
 Parameters
 ..........
 
@@ -4584,6 +4685,8 @@ line layer of **closed** features.
    transformed into a polygon.
 
 .. seealso:: :ref:`qgispolygonstolines`
+
+``Algorithm ID``: `qgis:polygonize`
 
 Parameters
 ..........
@@ -4661,6 +4764,8 @@ representing the boundaries of the polygons in the input layer.
 
 .. seealso:: :ref:`qgispolygonize`
 
+``Algorithm ID``: `qgis:polygonstolines`
+
 Parameters
 ..........
 
@@ -4721,6 +4826,8 @@ Projects point geometries by a specified distance and bearing (azimuth).
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
+
+``Algorithm ID``: `qgis:projectpointcartesian`
 
 Parameters
 ..........
@@ -4805,6 +4912,8 @@ features.
 
 .. seealso:: :ref:`qgisaggregate`, :ref:`qgiscollect`
 
+``Algorithm ID``: `qgis:promotetomulti`
+
 Parameters
 ..........
 
@@ -4871,6 +4980,8 @@ an expression.
    :align: center
 
    Different buffer shapes with dynamic parameters
+
+``Algorithm ID``: `qgis:rectanglesovalsdiamonds`
 
 Parameters
 ..........
@@ -4987,6 +5098,8 @@ will be maintained.
    :ref:`qgisextractspecificvertices`,
    :ref:`qgisdeleteduplicategeometries`
 
+``Algorithm ID``: `qgis:removeduplicatevertices`
+
 Parameters
 ..........
 
@@ -5070,6 +5183,8 @@ In that case, also the null output will reflect this option, containing
 both null and empty geometries.
 
 .. seealso:: :ref:`qgisdeleteduplicategeometries`
+
+``Algorithm ID``: `qgis:removenullgeometries`
 
 Parameters
 ..........
@@ -5161,6 +5276,8 @@ Inverts the direction of a line layer.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
+``Algorithm ID``: `qgis:reverselinedirection`
+
 Parameters
 ..........
 
@@ -5226,6 +5343,8 @@ around a unique preset point.
 :ref:`features in-place modification <processing_inplace_edit>`
 
 .. seealso:: :ref:`qgistranslategeometry`, :ref:`qgisswapxy`
+
+``Algorithm ID``: `qgis:rotatefeatures`
 
 Parameters
 ..........
@@ -5313,6 +5432,8 @@ Non-curved geometries will be retained without change.
 .. seealso:: :ref:`qgissegmentizebymaxdistance`,
    :ref:`qgissimplifygeometries`, :ref:`qgissmoothgeometry`
 
+``Algorithm ID``: `qgis:segmentizebymaxangle`
+
 Parameters
 ..........
 
@@ -5387,6 +5508,8 @@ Non-curved geometries will be retained without change.
 
 .. seealso:: :ref:`qgissegmentizebymaxangle`,
    :ref:`qgissimplifygeometries`, :ref:`qgissmoothgeometry`
+
+``Algorithm ID``: `qgis:segmentizebymaxdistance`
 
 Parameters
 ..........
@@ -5468,6 +5591,8 @@ geometries.
 .. seealso:: :ref:`qgissetmfromraster`, :ref:`qgissetzvalue`,
    :ref:`qgisdropmzvalues`
 
+``Algorithm ID``: `qgis:setmvalue`
+
 Parameters
 ..........
 
@@ -5543,6 +5668,8 @@ If no M values exist, the geometry will be upgraded to include M
 values.
 
 .. seealso:: :ref:`qgissetzfromraster`, :ref:`qgissetmvalue`
+
+``Algorithm ID``: `qgis:setmfromraster`
 
 Parameters
 ..........
@@ -5639,6 +5766,8 @@ geometries.
 .. seealso:: :ref:`qgissetzfromraster`, :ref:`qgissetmvalue`,
    :ref:`qgisdropmzvalues`
 
+``Algorithm ID``: `qgis:setzvalue`
+
 Parameters
 ..........
 
@@ -5718,6 +5847,8 @@ distance based (the "Douglas-Peucker" algorithm), area based
 
 .. seealso:: :ref:`qgissmoothgeometry`, :ref:`qgisdensifygeometries`,
  :ref:`qgisdensifygeometriesgivenaninterval`
+
+``Algorithm ID``: `qgis:simplifygeometries`
 
 Parameters
 ..........
@@ -5807,6 +5938,8 @@ Buffer always results in a polygon layer.
    Left versus right side buffer on the same vector line layer
 
 .. seealso:: :ref:`qgisbuffer`
+
+``Algorithm ID``: `qgis:singlesidedbuffer`
 
 Parameters
 ..........
@@ -5943,6 +6076,8 @@ this will not be smoothed. For example, setting the maximum angle to
    :ref:`qgisdensifygeometries`,
    :ref:`qgisdensifygeometriesgivenaninterval`
 
+``Algorithm ID``: `qgis:smoothgeometry`
+
 Parameters
 ..........
 
@@ -6028,6 +6163,8 @@ inserted or removed as required to make the geometries match the
 reference geometries.
 
 .. seealso:: :ref:`qgissnappointstogrid`
+
+``Algorithm ID``: `qgis:snapgeometries`
 
 Parameters
 ..........
@@ -6134,6 +6271,8 @@ Snapping can be performed on the X, Y, Z or M axis. A grid spacing of
 
 .. seealso:: :ref:`qgissnapgeometries`
 
+``Algorithm ID``: `qgis:snappointstogrid`
+
 Parameters
 ..........
 
@@ -6219,6 +6358,8 @@ Takes a line (or curve) layer and splits each feature into
 multiple parts, where each part is of a specified maximum length.
 Z and M values at the start and end of the new line substrings are
 linearly interpolated from existing values.
+
+``Algorithm ID``: `qgis:splitlinesbylength`
 
 Parameters
 ..........
@@ -6309,6 +6450,8 @@ Curved geometries will be segmentized before subdivision.
 
 .. seealso:: :ref:`qgisexplodelines`, :ref:`qgislinesubstring`
 
+``Algorithm ID``: `qgis:subdivide`
+
 Parameters
 ..........
 
@@ -6386,6 +6529,8 @@ latitude and longitude values reversed.
 
 .. seealso:: :ref:`qgistranslategeometry`, :ref:`qgisrotatefeatures`
 
+``Algorithm ID``: `qgis:swapxy`
+
 Parameters
 ..........
 
@@ -6455,6 +6600,8 @@ and end buffer diameter.
 
 .. seealso:: :ref:`qgisbufferbym`, :ref:`qgisbuffer`,
    :ref:`qgiswedgebuffers`
+
+``Algorithm ID``: `qgis:taperedbuffer`
 
 Parameters
 ..........
@@ -6549,6 +6696,8 @@ component polygons.
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
 
+``Algorithm ID``: `qgis:tessellate`
+
 Parameters
 ..........
 
@@ -6626,6 +6775,8 @@ new fields:
    :align: center
 
    Dashed red lines represent the transect of the input line layer
+
+``Algorithm ID``: `qgis:transect`
 
 Parameters
 ..........
@@ -6721,6 +6872,8 @@ Z and M values present in the geometry can also be translated.
 .. seealso:: :ref:`qgisarraytranslatedfeatures`,
    :ref:`qgisoffsetline`, :ref:`qgisrotatefeatures`, :ref:`qgisswapxy`
 
+``Algorithm ID``: `qgis:translategeometry`
+
 Parameters
 ..........
 
@@ -6812,6 +6965,8 @@ sizes.
   :ref:`Graphical modeler <processing.modeler>`.
 
 .. seealso:: :ref:`qgisbuffer`
+
+``Algorithm ID``: `qgis:variabledistancebuffer`
 
 Parameters
 ..........
@@ -6912,6 +7067,8 @@ line geometries as the diameter of the buffer at each vertex.
 .. seealso:: :ref:`qgistaperedbuffer`, :ref:`qgisbuffer`,
    :ref:`qgissetmvalue`
 
+``Algorithm ID``: `qgis:bufferbym`
+
 Parameters
 ..........
 
@@ -6991,6 +7148,8 @@ point than to any other point.
    Voronoi polygons
 
 ``Default menu``: :menuselection:`Vector --> Geometry Tools`
+
+``Algorithm ID``: `qgis:voronoipolygons`
 
 Parameters
 ..........
