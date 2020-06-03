@@ -86,7 +86,7 @@ There are several ways to create a QGIS task:
 
 .. warning::
    Any background task (regardless of how it is created) must NEVER
-   use any QObject that live on the main thread, such as accessing
+   use any QObject that lives on the main thread, such as accessing
    QgsVectorLayer, QgsProject or perform any GUI based operations
    like creating new widgets or interacting with existing widgets.
    Qt widgets must only be accessed or modified from the main thread.
