@@ -101,6 +101,11 @@ panel:
 * |hideAllLayers| :guilabel:`Hide All Layers`
 * |showSelectedLayers| :guilabel:`Show Selected Layers`
 * |hideSelectedLayers| :guilabel:`Hide Selected Layers`
+* |toggleSelectedLayers| :guilabel:`Toggle Selected Layers`: changes the visibility of
+  the first selected layer in the panel, and applies that state to the other selected
+  layers. Also accesible through :kbd:`Space` shortcut.
+* :guilabel:`Toggle Selected Layers Independently`: changes the visibility status
+  of each selected layer
 * |hideDeselectedLayers| :guilabel:`Hide Deselected Layers`
 
 Beyond the simple control of layer visibility,
@@ -182,12 +187,17 @@ Option                                                             Vector Layer 
 |removeLayer| :guilabel:`Remove Layer/Group...`                    |checkbox|          |checkbox|         |checkbox|
 :guilabel:`Move Out of Group`                                      |checkbox|          |checkbox|         \
 :guilabel:`Move to Top`                                            |checkbox|          |checkbox|         |checkbox|
+:guilabel:`Move to Bottom`                                         |checkbox|          |checkbox|         |checkbox|
 :guilabel:`Check and all its Parents`                              |checkbox|          |checkbox|         \
 :guilabel:`Group Selected`                                         |checkbox|          |checkbox|         \
 |openTable| :guilabel:`Open Attribute Table`                       |checkbox|          \                  \
 |toggleEditing| :guilabel:`Toggle Editing`                         |checkbox|          \                  \
 |allEdits| :menuselection:`Current Edits -->`                      |checkbox|          \                  \
 :guilabel:`Filter...`                                              |checkbox|          \                  \
+:guilabel:`Change Data Source...`                                  |checkbox|          \                  \
+:menuselection:`Actions on selections -->` (in edit mode)          |checkbox|          \                  \
+:menuselection:`--> Duplicate Feature`                             |checkbox|          \                  \
+:menuselection:`--> Duplicate Feature and Digitize`                |checkbox|          \                  \
 :guilabel:`Set Layer Scale Visibility...`                          |checkbox|          |checkbox|         \
 :guilabel:`Zoom to Visible Scale`                                  |checkbox|          |checkbox|         \
 :menuselection:`Set CRS -->`                                       |checkbox|          |checkbox|         \
@@ -246,6 +256,8 @@ out of all nested groups.
 To move a group or layer to the top of the layer panel, either drag it to
 the top, or choose :guilabel:`Move to Top`. If you use this option on a layer nested
 in a group, the layer is moved to the top in its current group.
+The :guilabel:`Move to Bottom` option follows the same logic to move layers
+and groups down.
 
 The checkbox for a group will show or hide all the layers in the group
 with one click.
@@ -2626,6 +2638,8 @@ The values presented in the varying size assistant above will set the size
 .. |toggleAllLayers| image:: /static/common/mActionToggleAllLayers.png
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
+   :width: 1.5em
+.. |toggleSelectedLayers| image:: /static/common/mActionToggleSelectedLayers.png
    :width: 1.5em
 .. |transparency| image:: /static/common/transparency.png
    :width: 1.5em
