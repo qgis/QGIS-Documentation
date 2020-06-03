@@ -134,10 +134,11 @@ displayed at the bottom of the frame.
   'Always (not recommended)'.
 * :guilabel:`Default project file format`
 
-  * |radioButtonOn| :guilabel:`QGZ Archive file format, supports auxiliary data`
+  * |radioButtonOn| :guilabel:`QGZ Archive file format, embeds auxiliary data`
     (see :ref:`auxiliary data <vector_auxiliary_storage>`)
   * |radioButtonOff| :guilabel:`QGS Project saved in a clear text, does not
-    support auxiliary data`
+    embed auxiliary data`: the auxiliary data is stored in a separate :file:`.qgd`
+    file along with the project file.
 
 
 .. index:: Environment variables
