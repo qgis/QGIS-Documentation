@@ -2014,21 +2014,21 @@ tasks.
 
 Below is a list of the default panels provided by QGIS:
 
-* the :ref:`label_legend`
-* the :ref:`Browser Panel <browser_panel>`
 * the :ref:`Advanced Digitizing Panel <advanced_digitizing_panel>`
-* the :ref:`Spatial Bookmarks Panel <sec_bookmarks>`
+* the :ref:`Browser Panel <browser_panel>`
 * the :ref:`GPS Information Panel <sec_gpstracking>`
-* the :ref:`Tile Scale Panel <tilesets>`
 * the :ref:`Identify Panel <identify>`
-* the :ref:`User Input Panel <rotate_feature>`
 * the :ref:`Layer Order Panel <layer_order>`
-* the :ref:`layer_styling_panel`
-* the :ref:`statistical_summary`
-* the :ref:`overview_panels`
-* the :ref:`log_message_panel`
-* the :ref:`undo_redo_panel`
+* the :ref:`Layer Styling Panel <layer_styling_panel>`
+* the :ref:`Layers Panel <label_legend>`
+* the :ref:`Log Messages Panel <log_message_panel>`
+* the :ref:`Overview Panel <overview_panels>`
 * the :ref:`Processing Toolbox <label_processing>`
+* the :guilabel:`Result Viewer Panel`
+* the :ref:`Spatial Bookmark Manager Panel <sec_bookmarks>`
+* the :ref:`Statistics Panel <statistical_summary>`
+* the :ref:`Tile Scale Panel <tilesets>`
+* the :ref:`Undo/Redo Panel <undo_redo_panel>`
 
 
 .. index:: Map view
