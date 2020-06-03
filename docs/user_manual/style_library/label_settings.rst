@@ -544,7 +544,7 @@ or diagrams. This can be controlled from the :guilabel:`Obstacles` section:
    obstacles, using the |dataDefined| :sup:`data-defined override` control next
    to the option.
 
-#. Use the :guilabel:`Settings` button to tweak the obstacles weighting.
+#. Use the :guilabel:`Settings` button to tweak the obstacle's weighting.
 
    * For every potential obstacle feature you can assign an :guilabel:`Obstacle
      weight`: any :ref:`label <labels_priority>` or :ref:`diagram <diagram_placement>`
