@@ -607,7 +607,7 @@ WFS and WFS-T Client
 In QGIS, a WFS layer behaves pretty much like any other vector layer.
 You can identify and select features, and view the attribute table.
 QGIS supports WFS 1.0.0, 1.1.0, 2.0 and WFS3 (OGC API - Features),
-and editing WFS-T is also supported.
+including editing (through WFS-T).
 
 In general, adding a WFS layer is very similar to the procedure used with WMS.
 There are no default servers defined, so you have to add your own.
@@ -621,7 +621,7 @@ and some not.
 As an example, we use the Gateway Geomatics WFS server and display a layer.
 https://demo.gatewaygeomatics.com/cgi-bin/wfs_gateway?REQUEST=GetCapabilities&VERSION=1.0.0&SERVICE=WFS
 
-To be able to load a WFS Layer, create a connection to the WFS server first:
+To be able to load a WFS Layer, first create a connection to the WFS server:
 
 #. Open the :guilabel:`Data Source Manager` dialog by pressing the
    |dataSourceManager| :sup:`Open Data Source Manager` button
@@ -638,7 +638,7 @@ To be able to load a WFS Layer, create a connection to the WFS server first:
    
       Creating a connection to a WFS server
 
-   .. note:: In case of an OGC API-Features (WFS3), the url to provide should
+   .. note:: In case of an OGC API - Features (WFS3), the URL to provide should
      be the :ref:`landing page <wfs3_endpoints>`, ie the main page from which
      it is possible to navigate to all the available service endpoints.
 
