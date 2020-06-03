@@ -103,6 +103,7 @@ Icon                            Substitution                        Icon        
 |showAllLayers|                 ``|showAllLayers|``                 |hideAllLayers|                 ``|hideAllLayers|``
 |showMapTheme|                  ``|showMapTheme|``                  |showSelectedLayers|            ``|showSelectedLayers|``
 |hideSelectedLayers|            ``|hideSelectedLayers|``            |hideDeselectedLayers|          ``|hideDeselectedLayers|``
+|toggleAllLayers|               ``|toggleAllLayers|``
 |addLayer|                      ``|addLayer|``
 |indicatorEmbedded|             ``|indicatorEmbedded|``             |indicatorFilter|               ``|indicatorFilter|``
 |indicatorMemory|               ``|indicatorMemory|``               |indicatorNoCRS|                ``|indicatorNoCRS|``
@@ -1265,6 +1266,8 @@ Icon                            Substitution                        Icon        
 .. |titleLabel| image:: /static/common/title_label.png
    :width: 1.5em
 .. |toLines| image:: /static/common/to_lines.png
+   :width: 1.5em
+.. |toggleAllLayers| image:: /static/common/mActionToggleAllLayers.png
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em

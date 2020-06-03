@@ -209,6 +209,9 @@ Option                                                             Vector Layer 
 :menuselection:`--> Paste Style`                                   |checkbox|          |checkbox|         |checkbox|
 :menuselection:`--> Add...`                                        |checkbox|          |checkbox|         \
 :menuselection:`--> Rename Current...`                             |checkbox|          |checkbox|         \
+:menuselection:`--> Edit symbol...`                                |checkbox|          \                  \
+:menuselection:`--> Copy Symbol`                                   |checkbox|          \                  \
+:menuselection:`--> Paste Symbol`                                  |checkbox|          \                  \
 :guilabel:`Properties...`                                          |checkbox|          |checkbox|         \
 =================================================================  ==================  =================  =============
 
@@ -296,32 +299,39 @@ in the list in order to:
 * see the :ref:`styles <manage_custom_style>` currently applied to the layer. If
   you defined many styles for the layer, you can switch from one to another
   and your layer rendering will automatically be updated on the map canvas.
-* copy the current style, and when applicable, paste a copied style from another layer
-* rename the current style, add a new style (which is actually a copy of the current
-  one) or delete the current style (when multiple styles are available).
+* copy part or all of the current style, and when applicable, paste a copied
+  style from another layer
 
-.. note:: The previous options are also available for raster layers.
-
-Whether the features in the vector layer all have the same unique symbol or they are
-classified (in which case the layer is displayed in a tree structure with each class
-as a sub-item), the following options are available at layer level or class level:
-
-* :guilabel:`Edit Symbol...` to open the :ref:`symbol-selector` dialog to
-  change any properties of the layer or feature symbol (symbol, size, color...).
-  Double-clicking on a feature also opens the :guilabel:`Symbol Selector` dialog.
-* :ref:`color-selector` with a **Color Wheel** from which you can click a
-  color to update the symbol fill color automatically. For convenience,
-  **Recent colors** are available at the bottom of the color wheel.
-* |showAllLayers| :guilabel:`Show All Items` and |hideAllLayers| :guilabel:`Hide All
-  Items` to toggle on or off the visibility of all the classes of features. This avoids
-  (un)checking items one by one.
-
-.. tip:: **Quickly share a layer style**
+  .. tip:: **Quickly share a layer style**
 
     From the context menu, copy the style of a layer and paste it to a group
     or a selection of layers: the style is applied to all the layers that
     are of the same type (vector/raster) as the original layer and,
     for vector layers, have the same geometry type (point, line or polygon).
+
+* rename the current style, add a new style (which is actually a copy of
+  the current one) or delete the current style (when multiple styles are
+  available).
+
+.. note:: The previous options are also available for raster or mesh layers.
+
+* update the :ref:`symbol color <color-selector>` using a **Color Wheel**.
+  For convenience, the recently used colors are also available at the bottom
+  of the color wheel.
+* :guilabel:`Edit Symbol...`: open the :ref:`Symbol Selector <symbol-selector>`
+  dialog and change feature symbol (symbol, size, color...).
+
+When using a classification symbology type (based on :ref:`categorized
+<categorized_renderer>`, :ref:`graduated <graduated_renderer>` or
+:ref:`rule-based <rule_based_rendering>`), the aforementioned symbol-level
+options are available from the class entry context menu. Also provided are the
+|toggleAllLayers| :guilabel:`Toggle Items`, |showAllLayers| :guilabel:`Show All
+Items` and |hideAllLayers| :guilabel:`Hide All Items` entries to switch the
+visibility of all the classes of features. These avoid (un)checking items
+one by one.
+
+.. tip:: Double-clicking a class leaf entry also opens the
+ :guilabel:`Symbol Selector` dialog.
 
 
 .. index::
@@ -2612,6 +2622,8 @@ The values presented in the varying size assistant above will set the size
 .. |textAnnotation| image:: /static/common/mActionTextAnnotation.png
    :width: 1.5em
 .. |titleLabel| image:: /static/common/title_label.png
+   :width: 1.5em
+.. |toggleAllLayers| image:: /static/common/mActionToggleAllLayers.png
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em

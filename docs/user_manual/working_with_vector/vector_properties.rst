@@ -283,15 +283,6 @@ See :ref:`symbol-selector` for further information about symbol representation.
 
    Single symbol line properties
 
-.. tip:: **Edit symbol directly from layer panel**
-
-   If in your **Layers Panel** you have layers with categories defined through
-   categorized, graduated or rule-based symbology mode, you can quickly change the
-   fill color of the symbol of the categories by right-clicking on a category
-   and choose the color you prefer from a |colorWheel| :sup:`color wheel` menu.
-   Right-clicking on a category will also give you access to the options **Hide
-   all items**, **Show all items** and **Edit symbol**.
-
 
 .. index::
    single: Symbology; No symbols renderer
@@ -448,6 +439,23 @@ or fine-tune the symbols rendering:
   assigns to each category a symbol whose name represents the classification
   value of the category
 * :ref:`Symbol levels... <Symbols_levels>` to define the order of symbols rendering.
+
+.. tip:: **Edit categories directly from the** :guilabel:`Layers` **panel**
+
+   When a layer symbology is based on a :ref:`categorized <categorized_renderer>`,
+   :ref:`graduated <graduated_renderer>` or :ref:`rule-based <rule_based_rendering>`
+   symbology mode, you can edit each of the categories from the :guilabel:`Layers`
+   Panel. Right-click on a sub-item of the layer and you will:
+
+   * |toggleAllLayers| :guilabel:`Toggle items` visibility
+   * |showAllLayers| :guilabel:`Show all items`
+   * |hideAllLayers| :guilabel:`Hide all items`
+   * Modify the symbol color thanks to the :ref:`color selector
+     <color-selector>` wheel
+   * :guilabel:`Edit symbol...` from the :ref:`symbol selector
+     <symbol-selector>` dialog
+   * :guilabel:`Copy symbol`
+   * :guilabel:`Paste symbol`
 
 
 .. index:: Natural Breaks (Jenks), Pretty Breaks, Equal Interval, Quantile, Histogram
@@ -3389,6 +3397,8 @@ This makes it possible to quickly flag gaps as allowed.
    :width: 1.5em
 .. |heatmapSymbol| image:: /static/common/rendererHeatmapSymbol.png
    :width: 1.5em
+.. |hideAllLayers| image:: /static/common/mActionHideAllLayers.png
+   :width: 1.5em
 .. |histogram| image:: /static/common/histogram.png
    :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
@@ -3473,6 +3483,8 @@ This makes it possible to quickly flag gaps as allowed.
    :width: 2.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
+.. |showAllLayers| image:: /static/common/mActionShowAllLayers.png
+   :width: 1.5em
 .. |showHideLabels| image:: /static/common/mActionShowHideLabels.png
    :width: 1.5em
 .. |showPinnedLabels| image:: /static/common/mActionShowPinnedLabels.png
@@ -3497,6 +3509,8 @@ This makes it possible to quickly flag gaps as allowed.
 .. |system| image:: /static/common/system.png
    :width: 1.5em
 .. |text| image:: /static/common/text.png
+   :width: 1.5em
+.. |toggleAllLayers| image:: /static/common/mActionToggleAllLayers.png
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
