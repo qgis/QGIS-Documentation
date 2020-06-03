@@ -22,7 +22,7 @@ where *f1* is the spread and *f2* the midpoint.
 
 .. figure:: img/gaussianimage.png
   :align: center
-  
+
   Fuzzify raster example. Input raster source: Land Tirol -
   data.tirol.gv.at.
 
@@ -30,7 +30,7 @@ where *f1* is the spread and *f2* the midpoint.
   :ref:`qgisfuzzifyrasterlinearmembership`,
   :ref:`qgisfuzzifyrasternearmembership`,
   :ref:`qgisfuzzifyrasterpowermembership`,
-  :ref:`qgisfuzzifyrastersmallmembership` 
+  :ref:`qgisfuzzifyrastersmallmembership`
 
 Parameters
 ..........
@@ -49,9 +49,9 @@ Parameters
      - [raster]
      - Input raster layer
    * - **Band Number**
-     - ``BAND`` 
+     - ``BAND``
      - [raster band]
-       
+
        Default: The first band of the raster layer
      - If the raster is multiband, choose the band that
        you want to fuzzify.
@@ -139,8 +139,8 @@ where *f1* is the spread and *f2* the midpoint.
   :ref:`qgisfuzzifyrasterlinearmembership`,
   :ref:`qgisfuzzifyrasternearmembership`,
   :ref:`qgisfuzzifyrasterpowermembership`,
-  :ref:`qgisfuzzifyrastersmallmembership` 
-  
+  :ref:`qgisfuzzifyrastersmallmembership`
+
 Parameters
 ..........
 
@@ -158,9 +158,9 @@ Parameters
      - [raster]
      - Input raster layer
    * - **Band Number**
-     - ``BAND`` 
+     - ``BAND``
      - [raster band]
-       
+
        Default: The first band of the raster layer
      - If the raster is multiband, choose the band that you want to
        fuzzify.
@@ -253,8 +253,8 @@ membership.
   :ref:`qgisfuzzifyrasterlargemembership`,
   :ref:`qgisfuzzifyrasternearmembership`,
   :ref:`qgisfuzzifyrasterpowermembership`,
-  :ref:`qgisfuzzifyrastersmallmembership` 
-  
+  :ref:`qgisfuzzifyrastersmallmembership`
+
 Parameters
 ..........
 
@@ -272,9 +272,9 @@ Parameters
      - [raster]
      - Input raster layer
    * - **Band Number**
-     - ``BAND`` 
+     - ``BAND``
      - [raster band]
-       
+
        Default: The first band of the raster layer
      - If the raster is multiband, choose the band that you want to
        fuzzify.
@@ -361,7 +361,7 @@ The near membership function is defined as |near_formula|, where
   :ref:`qgisfuzzifyrasterlargemembership`,
   :ref:`qgisfuzzifyrasterlinearmembership`,
   :ref:`qgisfuzzifyrasterpowermembership`,
-  :ref:`qgisfuzzifyrastersmallmembership` 
+  :ref:`qgisfuzzifyrastersmallmembership`
 
 Parameters
 ..........
@@ -380,9 +380,9 @@ Parameters
      - [raster]
      - Input raster layer
    * - **Band Number**
-     - ``BAND`` 
+     - ``BAND``
      - [raster band]
-       
+
        Default: The first band of the raster layer
      - If the raster is multiband, choose the band that you want to
        fuzzify.
@@ -472,8 +472,8 @@ membership.
 
 .. seealso:: :ref:`qgisfuzzifyrastergaussianmembership`, :ref:`qgisfuzzifyrasterlargemembership`,
   :ref:`qgisfuzzifyrasterlinearmembership`, :ref:`qgisfuzzifyrasternearmembership`,
-  :ref:`qgisfuzzifyrastersmallmembership` 
-  
+  :ref:`qgisfuzzifyrastersmallmembership`
+
 Parameters
 ..........
 
@@ -491,9 +491,9 @@ Parameters
      - [raster]
      - Input raster layer
    * - **Band Number**
-     - ``BAND`` 
+     - ``BAND``
      - [raster band]
-       
+
        Default: The first band of the raster layer
      - If the raster is multiband, choose the band that you want to
        fuzzify.
@@ -508,7 +508,7 @@ Parameters
      - [number]
 
        Default: 1
-     - High bound of the power function 
+     - High bound of the power function
    * - **High fuzzy membership bound**
      - ``FUZZYEXPONENT``
      - [number]
@@ -586,7 +586,7 @@ The small membership function is defined as |small_formula|, where
   :ref:`qgisfuzzifyrasterlargemembership`
   :ref:`qgisfuzzifyrasterlinearmembership`,
   :ref:`qgisfuzzifyrasternearmembership`,
-  :ref:`qgisfuzzifyrasterpowermembership` 
+  :ref:`qgisfuzzifyrasterpowermembership`
 
 Parameters
 ..........
@@ -605,9 +605,9 @@ Parameters
      - [raster]
      - Input raster layer
    * - **Band Number**
-     - ``BAND`` 
+     - ``BAND``
      - [raster band]
-       
+
        Default: The first band of the raster layer
      - If the raster is multiband, choose the band that you want to
        fuzzify.
@@ -983,7 +983,7 @@ Parameters
      - Description
    * - **Layers**
      -  GUI only
-     - 
+     -
      - Shows the list of all raster layers loaded in the legend.
        These can be used to fill the expression box (double click to
        add).
@@ -993,7 +993,7 @@ Parameters
        be referred as ``DEM@1``.
    * - **Operators**
      -  GUI only
-     - 
+     -
      - Contains some calculator like buttons that can be used to fill
        the expression box.
    * - **Expression**
@@ -1005,7 +1005,7 @@ Parameters
        expression in this box.
    * - **Predefined expressions**
      - GUI only
-     - 
+     -
      - You can use the predefined ``NDVI`` expression or you can
        define new expressions for calculations.
        The :guilabel:`Add...` button loads a defined expression (and
@@ -1013,7 +1013,7 @@ Parameters
        The :guilabel:`Save...` button lets you define a new
        expression.
    * - **Reference layer(s) (used for automated extent, cellsize, and CRS)**
-       
+
        Optional
      - ``LAYERS``
      - [raster] [list]
@@ -1025,7 +1025,7 @@ Parameters
        For instance, the first band from a layer named ``DEM`` will be
        referred as ``DEM@1``.
    * - **Cell size (use 0 or empty to set it automatically)**
-       
+
        Optional
      - ``CELLSIZE``
      - [number]
@@ -1040,7 +1040,7 @@ Parameters
        If the extent is not specified, the minimum extent that covers
        all the selected reference layers will be used.
    * - **Output CRS**
-       
+
        Optional
      - ``CRS``
      - [crs]
@@ -1050,13 +1050,13 @@ Parameters
    * - **Output**
      - ``OUTPUT``
      - [raster]
-       
+
        Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
-       
+
        * Save to a Temporary File
        * Save to File...
-       
+
        The file encoding can also be changed here.
 
 Outputs
@@ -1111,21 +1111,21 @@ Parameters
    * - **Band number**
      - ``BAND``
      - [raster band]
-       
+
        Default: The first band of the input layer
      - If the raster is multiband, choose the band you want to get
        statistics for.
    * - **Output**
      - ``OUTPUT_HTML_FILE``
      - [html]
-       
+
        Default: ``[Save to temporary file]``
      - Specification of the output file:
-       
+
        * Skip Output
        * Save to a Temporary File
        * Save to File...
-       
+
        The file encoding can also be changed here.
 
 Outputs
@@ -1143,20 +1143,20 @@ Outputs
    * - **Maximum value**
      - ``MAX``
      - [number]
-     - 
+     -
    * - **Mean value**
      - ``MEAN``
      - [number]
-     - 
+     -
    * - **Minimum value**
      - ``MIN``
      - [number]
-     - 
+     -
    * - **Output**
      - ``OUTPUT_HTML_FILE``
      - [html]
      - The output file contains the following information:
-       
+
        * Analyzed file: path of the raster layer
        * Minimum value: minimum value of the raster
        * Maximum value: maximum value of the raster
@@ -1166,23 +1166,23 @@ Outputs
        * Standard deviation: standard deviation of the values
        * Sum of the squares: sum of the squared differences of
          each observation from the overall mean
-       
+
    * - **Range**
      - ``RANGE``
      - [number]
-     - 
+     -
    * - **Standard deviation**
      - ``STD_DEV``
      - [number]
-     - 
+     -
    * - **Sum**
      - ``SUM``
      - [number]
-     - 
+     -
    * - **Sum of the squares**
      - ``SUM_OF_SQUARES``
      - [number]
-     - 
+     -
 
 **Algorithm ID**: ``qgis:rasterlayerstatistics``
 
@@ -1217,35 +1217,35 @@ Parameters
    * - **Band number**
      - ``BAND``
      - [raster band]
-       
+
        Default: The first band of the input layer
      - If the raster is multiband, choose the band you want to get
        statistics for.
    * - **Unique values report**
      - ``OUTPUT_HTML_FILE``
      - [file]
-       
+
        Default: ``[Save to temporary file]``
      - Specification of the output file:
-       
+
        * Skip Output
        * Save to a Temporary File
        * Save to File...
-       
+
        The file encoding can also be changed here.
    * - **Unique values table**
      - ``OUTPUT_TABLE``
      - [table]
-       
+
        Default: ``[Skip output]``
      - Specification of the table for unique values:
-       
+
        * Skip Output
        * Create Temporary Layer
        * Save to File...
        * Save to GeoPackage...
        * Save to PostGIS Table......
-       
+
        The file encoding can also be changed here.
 
 Outputs
@@ -1263,28 +1263,28 @@ Outputs
    * - **CRS authority identifier**
      - ``CRS_AUTHID``
      - [crs]
-     - 
+     -
    * - **Extent**
      - ``EXTENT``
      - [extent]
-     - 
+     -
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
      - [number]
-     - 
+     -
    * - **NODATA pixel count**
      - ``NODATA_PIXEL_COUNT``
      - [number]
-     - 
+     -
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
      - [number]
-     - 
+     -
    * - **Unique values report**
      - ``OUTPUT_HTML_FILE``
      - [html]
      - The output HTML file contains the following information:
-       
+
        * Analyzed file: the path of the raster layer
        * Extent: xmin, ymin, xmax, ymax coordinates of the extent
        * Projection: projection of the layer
@@ -1296,16 +1296,16 @@ Outputs
      - ``OUTPUT_TABLE``
      - [table]
      - A table with three columns:
-         
+
        * *value*: pixel value
        * *count*: count of pixels with this value
        * *m*\ :sup:`2`: total area in square meters of pixels with
          this value.
-       
+
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
      - [number]
-     - 
+     -
 
 **Algorithm ID**: ``qgis:rasterlayeruniquevaluesreport``
 
@@ -1342,7 +1342,7 @@ Parameters
    * - **Band number**
      - ``BAND``
      - [raster band]
-       
+
        Default: The first band of the raster layer
      - If the raster is multiband choose the band for which you want
        to calculate the statistics.
@@ -1355,24 +1355,24 @@ Parameters
    * - **Zones band number**
      - ``ZONES_BAND``
      - [raster band]
-       
+
        Default: The first band of the raster layer
      - If the raster is multiband, choose the band that defines
        the zones
    * - **Reference layer**
-       
+
        Optional
      - ``REF_LAYER``
      - [enumeration]
-       
+
        Default: 0
      - Raster layer used to calculate the centroids that will be
        used as reference when determining the zones in the output
        layer. One of:
-       
+
        * 0 --- Input layer
        * 1 --- Zones layer
-       
+
    * - **Statistics**
      - ``OUTPUT_TABLE``
      - [table]
@@ -1393,25 +1393,25 @@ Outputs
    * - **CRS authority identifier**
      - ``CRS_AUTHID``
      - [crs]
-     - 
+     -
    * - **Extent**
      - ``EXTENT``
      - [extent]
-     - 
+     -
    * - **Height in pixels**
      - ``HEIGHT_IN_PIXELS``
      - [number]
-     - 
+     -
    * - **NODATA pixel count**
      - ``NODATA_PIXEL_COUNT``
      - [number]
-     - 
+     -
    * - **Statistics**
      - ``OUTPUT_TABLE``
      - [table]
      - The output layer contains the following information
        **for each zone**:
-       
+
        * Area: the area in square raster units in the zone;
        * Sum: the total sum of the pixel values in the zone;
        * Count: the number of pixels in the zone;
@@ -1421,11 +1421,11 @@ Outputs
    * - **Total pixel count**
      - ``TOTAL_PIXEL_COUNT``
      - [number]
-     - 
+     -
    * - **Width in pixels**
      - ``WIDTH_IN_PIXELS``
      - [number]
-     - 
+     -
 
 **Algorithm ID**: ``qgis:rasterlayerzonalstats``
 
@@ -1443,7 +1443,7 @@ level. This is mainly useful for Digital Elevation Models (DEM).
 
 Parameters
 ..........
-  
+
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
@@ -1460,14 +1460,14 @@ Parameters
    * - **Band number**
      - ``BAND``
      - [raster band]
-       
+
        Default: The first band of the raster layer
      - If the raster is multiband, choose the band that shall define
        the surface.
    * - **Base level**
      - ``LEVEL``
      - [number]
-       
+
        Default: 0.0
      - Define a base or reference value.
        This base is used in the volume calculation according to the
@@ -1475,13 +1475,13 @@ Parameters
    * - **Method**
      - ``METHOD``
      - [enumeration]
-       
+
        Default: 0
      - Define the method for the volume calculation given by the
        difference between the raster pixel value and the
        ``Base level``.
        Options:
-       
+
        * 0 --- Count Only Above Base Level: only pixels above the base
 	 level will add to the volume.
        * 1 --- Count Only Below Base Level: only pixels below the base
@@ -1497,28 +1497,28 @@ Parameters
    * - **Surface volume report**
      - ``OUTPUT_HTML_FILE``
      - [html]
-       
+
        Default: ``[Save to temporary file]``
      - Specification of the output HTML report. One of:
-       
+
        * Skip output
        * Save to Temporary File
        * Save to File...
-      
+
        The file encoding can also be changed here.
    * - **Surface volume table**
      - ``OUTPUT_TABLE``
      - [table]
-       
+
        Default: ``[Skip output]``
      - Specification of the output table. One of:
-       
+
        * Skip output
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
        * Save to Geopackage...
        * Save to PostGIS Table...
-      
+
        The file encoding can also be changed here.
 
 Outputs
@@ -1645,7 +1645,7 @@ Parameters
        Default: 5
      - Defines the data type of the output raster file.
        Options:
-       
+
        * 0 --- Byte
        * 1 --- Int16
        * 2 --- UInt16
@@ -1657,7 +1657,7 @@ Parameters
        * 8 --- CInt32
        * 9 --- CFloat32
        * 10 --- CFloat64
-       
+
    * - **Reclassified raster**
      - ``OUTPUT``
      - [raster]
@@ -1927,7 +1927,7 @@ Parameters
    * - **Band number**
      - ``RASTER_BAND``
      - [raster band]
-       
+
        Default: The first band of the input layer
      - If the raster is multiband, choose a band.
    * - **Vector layer containing zones**
@@ -2014,7 +2014,7 @@ Parameters
    * - **Raster band**
      - ``RASTER_BAND``
      - [raster band]
-       
+
        Default: The first band of the input layer
      - If the raster is multiband, choose a band for the statistics.
    * - **Vector layer containing zones**
@@ -2079,12 +2079,11 @@ Outputs
 .. |fuzzy_linear_formula| image:: img/fuzzy_linear_formula.png
    :height: 3.8em
 .. |near_formula| image:: img/fuzzy_near_formula.png
-   :height: 2.5em   
+   :height: 2.5em
 .. |power_formula| image:: img/fuzzy_power_formula.png
-   :height: 4.4em   
+   :height: 4.4em
 .. |small_formula| image:: img/fuzzy_small_formula.png
-   :height: 3.2em   
-
+   :height: 3.2em
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
