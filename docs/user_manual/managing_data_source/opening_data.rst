@@ -1209,7 +1209,7 @@ Localized paths are defined in the application settings under the
 :menuselection:`Settings --> Options --> Data Sources` tab.
 They are a list of paths which are used to abstract the data source location.
 For instance, if :file:`C:\my_maps` is listed in the localized paths,
-a layer having `C:\my_maps\my_country\ortho.tif` as data source
+a layer having :file:`C:\my_maps\my_country\ortho.tif` as data source
 will be saved in the project using `localized:my_country\ortho.tif`.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
