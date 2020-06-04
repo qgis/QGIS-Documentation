@@ -93,7 +93,7 @@ or aerial photography.
 For our example, you'll be using the digitizing approach. Sample raster datasets
 are provided, so you'll need to import them as necessary.
 
-#. Click on Data Source Manager button |dataSourceManager| .
+#. Click on Data Source Manager button |dataSourceManager| :sup:`Data Source Manager` button.
 #. Select :guilabel:`Raster` on the left side.
 #. In the :guilabel:`Source` panel, click on the :guilabel:`...` button: 
 #. Navigate to ``exercise_data/raster/``.
@@ -113,7 +113,7 @@ are provided, so you'll need to import them as necessary.
    .. figure:: img/zoom_to_raster.png
      :align: center
 
-#. Click on the |zoomIn| button, and zoom to the area highlighted in blue below:
+#. Click on the |zoomIn| :sup:`Zoom In` button, and zoom to the area highlighted in blue below:
 
    .. figure:: img/map_area_zoom.png
      :align: center
@@ -138,7 +138,7 @@ important data. Edit mode is switched on or off individually for each layer.
 To enter edit mode for the ``school_property`` layer:
 
 #. Click on the ``school_property`` layer in the :guilabel:`Layer list` to select it.
-#. Click on the :guilabel:`Toggle Editing` button: |toggleEditing|
+#. Click on the |toggleEditing| :sup:`Toggle Editing` button.
 
    If you can't find this button, check that the :guilabel:`Digitizing` toolbar is
    enabled. There should be a check mark next to the :menuselection:`View -->
@@ -147,14 +147,14 @@ To enter edit mode for the ``school_property`` layer:
    As soon as you are in edit mode, you'll see that some digitizing tools have become
    active:
 
-     - |capturePolygon|: Add a new feature.
-     - |vertexToolActiveLayer|: move only one part of a feature.
+     - |capturePolygon| :sup:`Capture Polygon`
+     - |vertexToolActiveLayer| :sup:`Vertex Tool Active Layer`
 
    Other relevant buttons are still inactive, but will become active when we start interacting with our new data.
 
    Notice that the layer ``school_property`` in the :guilabel:`Layers` panel now has the pencil icon, indicating that it is in edit mode.
 
-#. Click on the |capturePolygon| button to begin digitizing our school fields.
+#. Click on the |capturePolygon| :sup:`Capture Polygon` button to begin digitizing our school fields.
 
    You'll notice that your mouse cursor has become a crosshair. This allows you to
    more accurately place the points you'll be digitizing. Remember that even as
@@ -197,19 +197,19 @@ To enter edit mode for the ``school_property`` layer:
      :align: center
 
 #. Close the attribute table.
-#. To save the new feature we just created click on the Save Edits button: |saveEdits|
+#. To save the new feature we just created click on |saveEdits| :sup:`Save Edits` button.
 
 Remember, if you've made a mistake while digitizing a feature, you can always
 edit it after you're done creating it. If you've made a mistake, continue
 digitizing until you're done creating the feature as above. Then:
 
-#. Click on |vertexToolActiveLayer| Vertex Editor tool.
+#. Click on |vertexToolActiveLayer| :sup:`Vertex Tool Active Layer` button.
 #. Hover the mouse over a vertex you want to move and left click on the vertex.
 #. Move the mouse to the correct location of the vertex, and left click. This will move the vertex to the new location.
 
    .. figure:: img/select_vertex.png
      :align: center
-   .. figure:: img/moved_vertext.png
+   .. figure:: img/moved_vertex.png
      :align: center
 
    The same procedure can be used to move a line segment, but you will need to
@@ -217,7 +217,7 @@ digitizing until you're done creating the feature as above. Then:
 
 Another way to edited the feature is by manually entering the coordinates for each vertex.  
 
-#. Make sure the Vertex Editor tool |vertexToolActiveLayer| is still active.
+#. Make sure the |vertexToolActiveLayer| :sup:`Vertex Tool Active Layer` button is still active.
 #. Move the mouse over the feature and right click on it.
 #. A :guilabel:`Vertex Editor` pane will appear.  
 
@@ -227,16 +227,16 @@ Another way to edited the feature is by manually entering the coordinates for ea
 #. Click on a row, and notice that for this feature the vertex circle color will change to blue.
 #. Double left click in the table on the x or y coordinate you want to edit and enter the updated value. 
 
-   .. figure:: img/edit_vertext_in_vertex_editor.png
+   .. figure:: img/edit_vertex_in_vertex_editor.png
      :align: center
 
-If you want to undo a change, you can undo changes by pressing the Undo button |undo|.
+If you want to undo a change, you can undo changes by pressing the |undo| :sup:`Undo` button.
 
-Remember to save your changes by clicking the Save Edits button |saveEdits|.
+Remember to save your changes by clicking |saveEdits| :sup:`Save Edits` button.
 
 To enable the remaining feature editing tools, one needs to select the feature.
 
-#. Click on the Select Rectange button |selectRectangle| in the Attributes Toolbar.
+#. Click on the |selectRectangle| :sup:`Select Rectangle` button in the Attributes Toolbar.
 #. Click on the feature that was just created and this will enable the remaining buttons.
 
    .. figure:: img/all_active_buttons.png
@@ -244,12 +244,12 @@ To enable the remaining feature editing tools, one needs to select the feature.
 
    Here is a summary of the editing actions of these buttons:
 
-   - |deleteSelectedFeatures|: delete the selected feature.
-   - |editCut| : cut the selected feature.
-   - |editCopy|: copy the selected feature.
-   - |editPaste|: paste a cut or copied feature back into the map.
+   - |deleteSelectedFeatures| :sup:`Delete Selected Features`
+   - |editCut| :sup:`Edit Cut`
+   - |editCopy| :sup:`Edit Copy`
+   - |editPaste| :sup:`Edit Paste`
 
-#. When done editing, click the Toggle Editing button |toggleEditing| to get out of edit mode, and save your edits.
+#. When done editing, click the |toggleEditing| :sup:`Toggle Editing` button to get out of edit mode, and save your edits.
 
 
 |basic| |TY|
