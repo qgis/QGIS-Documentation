@@ -64,7 +64,7 @@ Managing Catalog Services
 The :guilabel:`Services` tab allows the user to manage all available
 catalog services.
 MetaSearch provides a default list of Catalog Services, which can be
-added by pressing :guilabel:`Add Default Services` button.
+added by pressing the :guilabel:`Add Default Services` button.
 
 To find all listed Catalog Service entries, click the dropdown select box.
 
@@ -89,7 +89,7 @@ To delete a Catalog Service entry, select the entry you would like to
 delete and click the :guilabel:`Delete` button.
 You will be asked to confirm deleting the entry.
 
-MetaSearch allows for loading and saving connections to an XML file.
+MetaSearch allows loading and saving connections to an XML file.
 This is useful when you need to share settings between applications.
 Below is an example of the XML file format.
 
@@ -122,7 +122,7 @@ the selected Catalog Service such as service identification, service
 provider and contact information.
 If you would like to view the raw XML response, click the
 :guilabel:`GetCapabilities Response` button.
-A separate window will open displaying Capabilities XML.
+A separate window will open displaying the Capabilities XML.
 
 Searching Catalog Services
 ..........................
@@ -141,36 +141,35 @@ The following search parameters are available:
 
 * :guilabel:`Keywords`: free text search keywords;
 * :guilabel:`From`: the Catalog Service to perform the query against;
-* **Bounding box**: the spatial area of interest to filter on defined
+* **Bounding box**: the spatial area of interest to filter, defined
   by :guilabel:`Xmax`, :guilabel:`Xmin`, :guilabel:`Ymax`, and
   :guilabel:`Ymin`.
   Click :guilabel:`Set  Global` to do a  global search, click
-  :guilabel:`Map Extent` to do a search on the visible area only or
-  manually enter custom values as desired.
+  :guilabel:`Map Extent` to do a search in the visible area, or
+  enter values manually.
 
 Clicking the :guilabel:`Search` button will search the selected Metadata Catalog.
-Search results are displayed in a list and are sortable by clicking on
+Search results are displayed in a list, and can be sorted by clicking on
 the column header.
 You can navigate through search results with the directional buttons
 below the search results.
 
 Select a result and:
 
-#. click the :guilabel:`View Search Results as XML` button to open a
-   window with the service response in raw XML format.
-#. if the metadata record has an associated bounding box, a footprint
-   of the bounding box will be displayed on the map.
-#. double-clicking the record displays the record metadata with any
-   associated access links.
-   Clicking the links opens the link in the user's web browser.
-#. if the record is a supported web service (WMS/WMTS, WFS, WCS,
-   ArcGIS Map Service, ArcGIS Feature Service, etc.), the
-   :guilabel:`Add Data` button will be enabled for the user to add to
-   QGIS.
-   When clicking this button, MetaSearch will verify if this is a
-   valid OWS.
-   The service will then be added to the appropriate QGIS connection
-   list, and the appropriate connection dialog will then appear.
+* Click the :guilabel:`View Search Results as XML` button to open a
+  window with the service response in raw XML format.
+* If the metadata record has an associated bounding box, a footprint
+  of the bounding box will be displayed on the map.
+* Double-click the record to display the record metadata with any
+  associated access links.
+  Clicking a link opens the link in the user's web browser.
+* If the record is a supported web service (WMS/WMTS, WFS, WCS,
+  ArcGIS Map Service, ArcGIS Feature Service, etc.), the
+  :guilabel:`Add Data` button will be enabled.
+  When clicking this button, MetaSearch will verify if this is a
+  valid OWS.
+  The service will then be added to the appropriate QGIS connection
+  list, and the appropriate connection dialog will appear.
 
 .. _figure_metasearch_metadata:
 
