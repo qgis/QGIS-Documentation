@@ -225,15 +225,13 @@ To enable the remaining feature editing tools, one needs to select the feature.
 #. Click on the |selectRectangle| :sup:`Select Features` button in the Attributes Toolbar.
 #. Click on the feature that was just created and this will enable the remaining buttons.
 
+
+
    .. figure:: img/all_active_buttons.png
      :align: center
 
-   Here is a summary of the editing actions of these buttons:
+   See :ref:`User Manual<sec_edit_existing_layer>` for description of the other buttons in this toolbar.
 
-   - |deleteSelectedFeatures| :sup:`Delete Selected Features`
-   - |editCut| :sup:`Edit Cut`
-   - |editCopy| :sup:`Edit Copy`
-   - |editPaste| :sup:`Edit Paste`
 
 #. When done editing, click the |toggleEditing| :sup:`Toggle Editing` button to get out of edit mode, and save your edits.
 
