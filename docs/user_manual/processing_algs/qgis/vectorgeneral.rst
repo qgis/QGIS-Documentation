@@ -1972,8 +1972,6 @@ Truncates a layer, by deleting all features from within the layer.
 
 Parameters
 ..........
-``Input layer`` [vector: any]
-  Vector layer in input.
 
 .. list-table::
    :header-rows: 1
