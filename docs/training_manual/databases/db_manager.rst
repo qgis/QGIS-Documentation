@@ -225,7 +225,7 @@ do imports.
    the form values.
 #. Make sure that the :guilabel:`Create new table` option is selected
 #. Specify the :guilabel:`Source SRID` as ``32722`` and the
-  :guilabel:`Target SRID` as ``4326``
+   :guilabel:`Target SRID` as ``4326``
 #. Enable the checkbox to :guilabel:`Create Spatial Index`
 #. Click :guilabel:`OK` to perform the import
 
