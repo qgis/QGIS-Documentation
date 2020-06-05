@@ -203,7 +203,7 @@ command line tools, so now let's learn how to use DB Manager to do imports.
 .. figure:: img/import_layer_btn.png
    :align: center
 
-* Select the file:`urban_33S.shp` file from
+* Select the :file:`urban_33S.shp` file from
   :file:`exercise_data/projected_data` as the input dataset.
 * Click the :guilabel:`Update Options` button to pre-fill some of the form
   values.
