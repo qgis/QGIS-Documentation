@@ -33,7 +33,7 @@ to define a new layer.
    different vector layer type is "built differently" in the background, so once
    you've created the layer, you can't change its type.
 
-   For the next exercise, we're going to be creating new features which describe
+   For the next exercise, we're going to create new features which describe
    areas. For such features, you'll need to create a polygon dataset.
 
 #. For Geometry Type, select :guilabel:`Polygon` from the drop down menu:
@@ -121,7 +121,7 @@ are provided, so you'll need to import them as necessary.
 
 Now you are ready to digitize these three fields:
 
-   figure:: img/field_outlines.png
+   .. figure:: img/field_outlines.png
      :align: center
 
 Before starting to digitize, let's move the ``school_property`` layer above the aerial image.
@@ -148,7 +148,7 @@ To enter edit mode for the ``school_property`` layer:
    active:
 
      - |capturePolygon| :sup:`Capture Polygon`
-     - |vertexToolActiveLayer| :sup:`Vertex Tool Active Layer`
+     - |vertexToolActiveLayer| :sup:`Vertex Tool`
 
    Other relevant buttons are still inactive, but will become active when we start interacting with our new data.
 
@@ -184,7 +184,8 @@ To enter edit mode for the ``school_property`` layer:
    .. figure:: img/new_feature.png
      :align: center
 
-#. In the :guilabel:`Layers` panel select the ``school_property`` layer, right click, and click on :guilabel:`Open Attribute Table`.
+#. In the :guilabel:`Layers` panel select the ``school_property`` layer.
+#. Right click and press :guilabel:`Open Attribute Table`.
 
    .. figure:: img/open_attribute_table.png
      :align: center
@@ -197,13 +198,13 @@ To enter edit mode for the ``school_property`` layer:
      :align: center
 
 #. Close the attribute table.
-#. To save the new feature we just created click on |saveEdits| :sup:`Save Edits` button.
+#. To save the new feature we just created, click on |saveEdits| :sup:`Save Edits` button.
 
 Remember, if you've made a mistake while digitizing a feature, you can always
 edit it after you're done creating it. If you've made a mistake, continue
 digitizing until you're done creating the feature as above. Then:
 
-#. Click on |vertexToolActiveLayer| :sup:`Vertex Tool Active Layer` button.
+#. Click on |vertexToolActiveLayer| :sup:`Vertex Tool` button.
 #. Hover the mouse over a vertex you want to move and left click on the vertex.
 #. Move the mouse to the correct location of the vertex, and left click. This will move the vertex to the new location.
 
@@ -215,13 +216,13 @@ digitizing until you're done creating the feature as above. Then:
    The same procedure can be used to move a line segment, but you will need to
    hover over the midpoint of the line segment.
 
-If you want to undo a change, you can undo changes by pressing the |undo| :sup:`Undo` button.
+If you want to undo a change, you can undo changes by pressing the |undo| :sup:`Undo` button or pressing :kbd:`Ctrl+Z`.
 
 Remember to save your changes by clicking |saveEdits| :sup:`Save Edits` button.
 
 To enable the remaining feature editing tools, one needs to select the feature.
 
-#. Click on the |selectRectangle| :sup:`Select Rectangle` button in the Attributes Toolbar.
+#. Click on the |selectRectangle| :sup:`Select Features` button in the Attributes Toolbar.
 #. Click on the feature that was just created and this will enable the remaining buttons.
 
    .. figure:: img/all_active_buttons.png
@@ -254,8 +255,7 @@ Remember that each new feature needs to have a unique ``id`` value!
 
 .. note:: You can style the fill, outline and label placement and formatting
    of the ``school_property`` using techniques learnt in earlier
-   lessons. In our example, we will use a dashed outline of light green color
-   with no fill.
+   lessons.
 
 .. _backlink-create-vector-digitize-1:
 
@@ -265,7 +265,7 @@ Remember that each new feature needs to have a unique ``id`` value!
 Another way to edit a feature is to manually enter the actual coordinate values for each vertex using the :guilabel:`Vertex Editor` table.
 
 #. Make sure you are in edit mode on layer ``school_property``.
-#. If not already activated, click on |vertexToolActiveLayer| :sup:`Vertex Tool Active Layer` button.
+#. If not already activated, click on |vertexToolActiveLayer| :sup:`Vertex Tool` button.
 #. Move the mouse over one of the polygon features you created in the ``school_property`` layer and right click on it.  This will select the feature and a :guilabel:`Vertex Editor` pane will appear.  
 
    .. figure:: img/vertex_editor_table.png
@@ -309,9 +309,9 @@ Our track is a little further to the south:
 .. figure:: img/track_start_end.png
      :align: center
 
-#. Create a new line feature called ``routes.shp`` with attributes ``id`` and ``type``. (Use the approach above to guide you.)
+#. Create a new ESRI Shapefile line dataset called ``routes.shp``, with attributes ``id`` and ``type`` (Use the approach above to guide you.)
 
-#. If the roads layer is not in your map, then add it from the GeoPackage file :file:`training-data.gpk` included in the :file:`exercise_data` folder of the training data you downloaded.
+#. If the roads layer is not in your map, then add it from the GeoPackage file :file:`training-data.gpkg` included in the :file:`exercise_data` folder of the training data you downloaded.
 
 #. One at a time, digitize the path and the track on the :guilabel:`routes` layer. Try to follow the routes as accurately as possible, adding additional points along corners or turns.
 #. Give them the :guilabel:`type` attribute value of ``path`` or ``track``.\
