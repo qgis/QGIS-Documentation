@@ -215,21 +215,6 @@ digitizing until you're done creating the feature as above. Then:
    The same procedure can be used to move a line segment, but you will need to
    hover over the midpoint of the line segment.
 
-Another way to edited the feature is by manually entering the coordinates for each vertex.  
-
-#. Make sure the |vertexToolActiveLayer| :sup:`Vertex Tool Active Layer` button is still active.
-#. Move the mouse over the feature and right click on it.
-#. A :guilabel:`Vertex Editor` pane will appear.  
-
-   .. figure:: img/vertex_editor_table.png
-     :align: center
-
-#. Click on a row, and notice that for this feature the vertex circle color will change to blue.
-#. Double left click in the table on the x or y coordinate you want to edit and enter the updated value. 
-
-   .. figure:: img/edit_vertex_in_vertex_editor.png
-     :align: center
-
 If you want to undo a change, you can undo changes by pressing the |undo| :sup:`Undo` button.
 
 Remember to save your changes by clicking |saveEdits| :sup:`Save Edits` button.
@@ -252,7 +237,9 @@ To enable the remaining feature editing tools, one needs to select the feature.
 #. When done editing, click the |toggleEditing| :sup:`Toggle Editing` button to get out of edit mode, and save your edits.
 
 
-|basic| |TY|
+
+
+|basic| |TY| Digitizing Polygons 
 -------------------------------------------------------------------------------
 
 Digitize the school itself and the upper field. Use this image to assist you:
@@ -272,7 +259,43 @@ Remember that each new feature needs to have a unique ``id`` value!
 
 .. _backlink-create-vector-digitize-1:
 
-|basic| |TY|
+|moderate| |FA| Using Vertex Editor Table
+-------------------------------------------------------------------------------
+
+Another way to edit a feature is to manually enter the actual coordinate values for each vertex using the :guilabel:`Vertex Editor` table.
+
+#. Make sure you are in edit mode on layer ``school_property``.
+#. If not already activated, click on |vertexToolActiveLayer| :sup:`Vertex Tool Active Layer` button.
+#. Move the mouse over one of the polygon features you created in the ``school_property`` layer and right click on it.  This will select the feature and a :guilabel:`Vertex Editor` pane will appear.  
+
+   .. figure:: img/vertex_editor_table.png
+     :align: center
+
+   .. note:: This table contains the coordinates for the vertices of the feature.  
+      Notice there are 7 total vertices for these feature, even though only 6 are 
+      visually identified in the map area.  Upon closer inspection, one will notice row 
+      0 and 6 have identical coordinates. This is the start and end vertices of the 
+      feature, and are required in order to create a closed polygon feature.
+
+#. Click and drag a box over a vertex, or multiple vertices, of the selected feature.
+
+   .. figure:: img/vertex_select.png
+     :align: center
+
+   The selected vertices will change to a color blue and the :guilabel:`Vertex Editor` table will have the corresponding rows highlighted, which contain the coordinates of the verticies.
+   
+   .. figure:: img/vertex_selected.png
+     :align: center
+
+#. To update the a coordinate, double left click on a cell in the table that you want to edit and enter the updated value. In this example, the x coordinate of row ``4`` is updated from ``20.4450`` to ``20.4444``.
+
+   .. figure:: img/edit_vertex_in_vertex_editor.png
+     :align: center
+	 
+#. After entering the updated value, hit the enter key on your keyboard to apply the change.  You will see the vertex move to the new location in the map window.
+#. When done editing, click the |toggleEditing| :sup:`Toggle Editing` button to get out of edit mode, and save your edits.
+
+|basic| |TY| Digitizing Lines
 -------------------------------------------------------------------------------
 We are going to digitize two routes which are not already marked on the roads layer;
 one is a path, the other is a track. Our path runs along the southern edge of the suburb of Railton, starting and
@@ -293,7 +316,7 @@ Our track is a little further to the south:
 #. One at a time, digitize the path and the track on the :guilabel:`routes` layer. Try to follow the routes as accurately as possible, adding additional points along corners or turns.
 #. Give them the :guilabel:`type` attribute value of ``path`` or ``track``.\
 #. Use the :guilabel:`Layer Properties` dialog to add styling to your routes. Feel free to give different styles to the path and track.
-#. Save your edits and toggle |toggleEditing| mode.
+#. Save your edits and toggle off editing mode by pressing the |toggleEditing| :sup:`Toggle Editing` button.
 
 :ref:`Check your results <create-vector-digitize-1>`
 
@@ -327,11 +350,12 @@ be useful.
 .. |FA| replace:: Follow Along:
 .. |IC| replace:: In Conclusion
 .. |LS| replace:: Lesson:
-.. |TY| replace:: Try Yourself
+.. |TY| replace:: Try Yourself:
 .. |WN| replace:: What's Next?
 .. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
    :width: 1.5em
 .. |basic| image:: /static/common/basic.png
+.. |moderate| image:: /static/common/moderate.png
 .. |capturePolygon| image:: /static/common/mActionCapturePolygon.png
    :width: 1.5em
 .. |deleteSelectedFeatures| image:: /static/common/mActionDeleteSelectedFeatures.png
