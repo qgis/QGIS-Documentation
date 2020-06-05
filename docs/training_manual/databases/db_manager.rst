@@ -19,7 +19,7 @@ the DB Manager icon on the toolbar.
     |dbManager|
 
 You should already see the previous connections we have configured and be able
-to expand the :kbd:`myPG` section and its :kbd:`public` schema to see the
+to expand the ``myPG`` section and its ``public`` schema to see the
 tables we have worked with in previous sections.
 
 The first thing you may notice is that you can now see some metadata about the
@@ -100,28 +100,28 @@ indexes.
 |basic| |FA| Creating a New Table
 -------------------------------------------------------------------------------
 
-Now that we have gone through the process of working with existing tables in 
-our database, let's use DB Manager to create a new table.
+Now that we have gone through the process of working with existing
+tables in our database, let's use DB Manager to create a new table.
 
-* If it is not already open, open the DB Manager window, and expand the tree
-  until you see the list of tables already in your databse.
-* From the menu select :guilabel:`Table --> Create Table` to bring up the 
-  Create Table dialog.
-* Use the default :kbd:`Public` schema and name the table :kbd:`places`.
-* Add the :kbd:`id`, :kbd:`place_name`, and :kbd:`elevation` fields as shown
+* If it is not already open, open the DB Manager window, and expand
+  the tree until you see the list of tables already in your database.
+* From the menu select :guilabel:`Table --> Create Table` to bring up
+  the Create Table dialog.
+* Use the default ``Public`` schema and name the table ``places``.
+* Add the ``id``, ``place_name``, and ``elevation`` fields as shown
   below
-* Make sure the :kbd:`id` field is set as the primary key.
+* Make sure the ``id`` field is set as the primary key.
 * Click the checkbox to :guilabel:`Create geometry column` and make sure it is
-  set to a :kbd:`POINT` type and leave it named :kbd:`geom` and specify
-  :kbd:`4326` as the :guilabel:`SRID`.
+  set to a ``POINT`` type and leave it named ``geom`` and specify
+ ``4326`` as the :guilabel:`SRID`.
 * Click the checkbox to :guilabel:`Create spatial index` and click
   :guilabel:`Create` to create the table.
 
 .. figure:: img/create_table.png
    :align: center
  
-* Dismiss the dialog letting you know that the table was created and click
-  :guilabel:`Close` to close the Create Table Dialog.
+* Dismiss the dialog letting you know that the table was created and
+  click :guilabel:`Close` to close the Create Table Dialog.
 
 You can now inspect your table in the DB Manager and you will of course find
 that there is no data in it. From here you can :guilabel:`Toggle Editing` on
@@ -162,7 +162,7 @@ tables and to view the results. We have already seen this type of functionality
 in the :guilabel:`Browser` panel, but lets look at it again here with DB
 Manager.
 
-* Select the :kbd:`lines` table in the tree.
+* Select the ``lines`` table in the tree.
 * Select the :guilabel:`SQL window` button in the DB Manager toolbar.
 
 .. figure:: img/sql_window_btn.png
@@ -179,9 +179,9 @@ Manager.
    :align: center
 
 * Click the checkbox for :guilabel:`Load as new layer` to add the results to your map.
-* Select the :kbd:`id` column as the :guilabel:`Column with unique integer values`
-  and the :kbd:`geom` column as the :guilabel:`Geometry column`.
-* Enter :kbd:`roads_primary` as the :guilabel:`Layer name (prefix)`.
+* Select the ``id`` column as the :guilabel:`Column with unique integer values`
+  and the ``geom`` column as the :guilabel:`Geometry column`.
+* Enter ``roads_primary`` as the :guilabel:`Layer name (prefix)`.
 * Click :guilabel:`Load now!` to load the results as a new layer into your map.
  
 .. figure:: img/sql_add_to_map.png
@@ -203,13 +203,13 @@ command line tools, so now let's learn how to use DB Manager to do imports.
 .. figure:: img/import_layer_btn.png
    :align: center
 
-* Select the :kbd:`urban_33S.shp` file from :kbd:`exercise_data/projected_data`
-  as the input dataset.
+* Select the file:`urban_33S.shp` file from
+  :file:`exercise_data/projected_data` as the input dataset.
 * Click the :guilabel:`Update Options` button to pre-fill some of the form
   values.
 * Make sure that the :guilabel:`Create new table` option is selected
-* Specify the :guilabel:`Source SRID` as :kbd:`32722` and the
-  :guilabel:`Target SRID` as :kbd:`4326`.
+* Specify the :guilabel:`Source SRID` as ``32722`` and the
+  :guilabel:`Target SRID` as ``4326``.
 * Enable the checkbox to :guilabel:`Create Spatial Index`
 * Click :guilabel:`OK` to perform the import.
 
@@ -221,7 +221,7 @@ command line tools, so now let's learn how to use DB Manager to do imports.
 
 You can now inspect the table in your database by clicking on it in the Tree.
 Verify that the data has been reprojected by checking that the
-:guilabel:`Spatial ref:` is listed as :kbd:`WGS 84 (4326)`
+:guilabel:`Spatial ref:` is listed as ``WGS 84 (4326)``
 
 .. figure:: img/urban_info.png
    :align: center
@@ -236,12 +236,13 @@ Exporting Data from a Database with DB Manager
 Of course DB Manager can also be used to export data from your spatial
 databases, so lets take a look at how that is done.
 
-* Select the :kbd:`lines` layer in the Tree and click the
+* Select the ``lines`` layer in the Tree and click the
   :guilabel:`Export to File` button on the toolbar to open the
   :guilabel:`Export to vector file` dialog.
-* Click the :guilabel:`...` button to select the :guilabel:`Output file` and
-  save the data to your :kbd:`exercise_data` directory as :kbd:`urban_4326`.
-* Set the :guilabel:`Target SRID` as :kbd:`4326`.
+* Click the :guilabel:`...` button to select the
+  :guilabel:`Output file` and save the data to your
+  :file:`exercise_data` directory as :file:`urban_4326`.
+* Set the :guilabel:`Target SRID` as ``4326``.
 * Click :guilabel:`OK` to initialize the export.
 
 .. figure:: img/export_to_vector.png
