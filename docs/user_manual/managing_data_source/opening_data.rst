@@ -137,23 +137,33 @@ At the top of the Browser panel, you find some buttons that help you to:
   metadata for the selected item.
 
 The entries in the :guilabel:`Browser` panel are organised
-hierarchically, and there are several top level entries.
-First comes :guilabel:`Favorites` (where you can place shortcuts to
-often used locations).
-Then comes :guilabel:`Spatial Bookmarks`,
-followed by your :guilabel:`Project Home` (the default is the directory
-where your project file resides),
-your :guilabel:`Home` directory in the file system and the filesystem
-root directory (:guilabel:`/`).
-Then comes a number of container / database types and service protocols
-(that may or may not be relevant to you):
-:guilabel:`GeoPackage`, :guilabel:`SpatiaLite`,
-:guilabel:`PostGIS`, :guilabel:`MSSQL`,
-:guilabel:`DB2`, :guilabel:`WMS/WMTS`,
-:guilabel:`XYZ Tiles`, :guilabel:`WCS`,
-:guilabel:`WFS`, :guilabel:`OWS`,
-:guilabel:`ArcGISMapServer`, :guilabel:`ArcGISFeatureServer` and
-:guilabel:`GeoNode`.
+hierarchically, and there are several top level entries:
+
+#. :guilabel:`Favorites` where you can place shortcuts to often used locations
+#. :guilabel:`Spatial Bookmarks` where you can store often used map extents
+   (see :ref:`sec_bookmarks`)
+#. :guilabel:`Project Home`: for a quick access to the folder in which (most of)
+   the data related to your project are stored. The default value is the directory
+   where your project file resides.
+#. :guilabel:`Home` directory in the file system and the filesystem root directory.
+#. Connected local or network drives
+#. Then comes a number of container / database types and service protocols,
+   depending on your platform and underlying libraries:
+
+   * |geoPackage| :guilabel:`GeoPackage`
+   * |spatialite| :guilabel:`SpatiaLite`
+   * |postgis| :guilabel:`PostGIS`
+   * |mssql| :guilabel:`MSSQL`
+   * |oracle| :guilabel:`Oracle`
+   * |db2| :guilabel:`DB2`
+   * |wms| :guilabel:`WMS/WMTS`
+   * |wms| :guilabel:`XYZ Tiles`
+   * |wcs| :guilabel:`WCS`
+   * |wfs| :guilabel:`WFS`
+   * |ows| :guilabel:`OWS`
+   * |ams| :guilabel:`ArcGISMapServer`
+   * |afs| :guilabel:`ArcGISFeatureServer`
+   * |geonode| :guilabel:`GeoNode`
 
 Interacting with the Browser items
 ----------------------------------
@@ -1219,19 +1229,37 @@ Examples of XYZ Tile services:
    :width: 1.5em
 .. |addSpatiaLiteLayer| image:: /static/common/mActionAddSpatiaLiteLayer.png
    :width: 1.5em
+.. |afs| image:: /static/common/mIconAfs.png
+   :width: 1.5em
+.. |ams| image:: /static/common/mIconAms.png
+   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |collapseTree| image:: /static/common/mActionCollapseTree.png
    :width: 1.5em
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
    :width: 1.5em
+.. |db2| image:: /static/common/mIconDb2.png
+   :width: 1.5em
 .. |dbManager| image:: /static/common/dbmanager.png
    :width: 1.5em
 .. |filterMap| image:: /static/common/mActionFilterMap.png
    :width: 1.5em
+.. |geoPackage| image:: /static/common/mGeoPackage.png
+   :width: 1.5em
+.. |geonode| image:: /static/common/mIconGeonode.png
+   :width: 1.5em
 .. |kde| image:: /static/common/kde.png
    :width: 1.5em
 .. |metadata| image:: /static/common/metadata.png
+   :width: 1.5em
+.. |mssql| image:: /static/common/mIconMssql.png
+   :width: 1.5em
+.. |oracle| image:: /static/common/mIconOracle.png
+   :width: 1.5em
+.. |ows| image:: /static/common/mIconOws.png
+   :width: 1.5em
+.. |postgis| image:: /static/common/mIconPostgis.png
    :width: 1.5em
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
    :width: 1.5em
@@ -1242,4 +1270,12 @@ Examples of XYZ Tile services:
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+.. |spatialite| image:: /static/common/mIconSpatialite.png
+   :width: 1.5em
+.. |wcs| image:: /static/common/mIconWcs.png
+   :width: 1.5em
+.. |wfs| image:: /static/common/mIconWfs.png
+   :width: 1.5em
+.. |wms| image:: /static/common/mIconWms.png
    :width: 1.5em
