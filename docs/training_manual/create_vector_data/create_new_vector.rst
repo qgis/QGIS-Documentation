@@ -11,16 +11,19 @@ you'll need to create your own new data.
 |basic| |FA| The Layer Creation Dialog
 -------------------------------------------------------------------------------
 
+
+
 Before you can add new vector data, you need a vector dataset to add it to. In
 our case, you'll begin by creating new data entirely, rather than editing an
 existing dataset. Therefore, you'll need to define your own new dataset first.
 
-You'll need to open a :guilabel:`Create Layer` dialog that will allow you
-to define a new layer.
+#. Open QGIS and create a new blank project.
+
+
 
 #. Navigate to and click on the menu entry
    :menuselection:`Layer --> Create Layer --> New Shapefile Layer`. 
-   You'll be presented with the following dialog.
+   You'll be presented with :guilabel:`Create Layer` dialog, which will allow you to define a new layer.
 
    .. figure:: img/create_vector_layer.png
      :align: center
