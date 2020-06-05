@@ -266,7 +266,7 @@ and export data.
 -------------------------------------------------------------------------------
 
 Next, we will look at how to use many of these same techniques with
-*spatialite* databases.
+*SpatiaLite* databases.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
