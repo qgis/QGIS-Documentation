@@ -1089,7 +1089,7 @@ copy or paste layer properties (style, scale, CRS...).
      -
      - :ref:`xyz_tile`
    * - :menuselection:`-->` |addAmsLayer|
-       :guilabel:`Add ArcGIS MapServer Layer...`
+       :guilabel:`Add ArcGIS Map Service Layer...`
      -
      - :guilabel:`Manage Layers`
      -
@@ -1104,7 +1104,7 @@ copy or paste layer properties (style, scale, CRS...).
      - :guilabel:`Manage Layers`
      - :ref:`ogc-wfs`
    * - :menuselection:`-->` |addAfsLayer|
-       :guilabel:`Add ArcGIS FeatureServer Layer...`
+       :guilabel:`Add ArcGIS Feature Service Layer...`
      -
      - :guilabel:`Manage Layers`
      -
