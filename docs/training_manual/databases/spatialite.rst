@@ -23,7 +23,7 @@ get it setup for use in QGIS.
 #. Right click on the :guilabel:`SpatiaLite` entry in the Browser tree
    and select :guilabel:`Create Database`.
 #. Specify where on your filesystem you want to store the file and
-   name it :kbd:`qgis-sl.db`.
+   name it ``qgis-sl.db``.
 #. Again right click on the :guilabel:`SpatiaLite` entry in the Browser
    tree and now select the :guilabel:`New Connection` item.
    Find the file you created in the last step and open it.
@@ -35,24 +35,22 @@ This is of course because we haven't added any tables to this database.
 Let's go ahead and do that.
 
 #. Find the button to create a new layer and use the dropdown to
-   create a new new SpatiaLite layer, or select
-   :menuselection:`Layer --> New --> New SpatiaLite Layer`.
-
-   |newSpatiaLiteLayer|
-
+   create a new SpatiaLite layer, or select
+   :menuselection:`Layer --> New -->` |newSpatiaLiteLayer|
+   :menuselection:`New SpatiaLite Layer`.
 #. Select the database we created in the previous steps in the drop
    down.
-#. Give the layer the name :kbd:`places`.
+#. Give the layer the name ``places``.
 #. Tick the checkbox next to
    :guilabel:`Create an auto-incrementing primary key`.
-#. Add 2 attributes as shown in below
+#. Add two attributes as shown in below
 #. Click :guilabel:`OK` to create the table.
 
    .. figure:: img/new_layer_setup.png
       :align: center
 
 #. Click the refresh button at the top of the Browser and you should
-   now see your :kbd:`places` table listed.
+   now see your ``places`` table listed.
 
    .. figure:: img/new_layer_added.png
       :align: center
@@ -70,8 +68,8 @@ your new SpatiaLite DB.
 |IC|
 ----------------------------------------------------------------------
 
-You have seen how to create SpatiaLite databases and add tables to
-them and to use these tables as layers in QGIS.
+You have seen how to create SpatiaLite databases, add tables to
+them and use these tables as layers in QGIS.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
