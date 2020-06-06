@@ -169,7 +169,8 @@ Creates vector polygons for all connected regions of pixels in the
 raster sharing a common pixel value. Each polygon is created with an
 attribute indicating the pixel value of that polygon.
 
-This algorithm is derived from the `GDAL polygonize utility <https://gdal.org/gdal_polygonize.html>`_ .
+This algorithm is derived from the
+`GDAL polygonize utility <https://gdal.org/gdal_polygonize.html>`_ .
 
 **Default menu**: :menuselection:`Raster --> Conversion`
 
@@ -207,8 +208,8 @@ Parameters
      - [boolean]
 
        Default: False
-     - If not set, raster cells must have a common border to be considered
-       connected (*4-connected*).
+     - If not set, raster cells must have a common border to be
+       considered connected (*4-connected*).
        If set, touching raster cells are also considered connected
        (*8-connected*).
    * - **Additional command-line parameters**
@@ -362,16 +363,19 @@ Outputs
 
 RGB to PCT
 ----------
-Converts a 24 bit RGB image into a 8 bit paletted. Computes an optimal pseudo-color
-table for the given RGB-image using a median cut algorithm on a downsampled RGB
-histogram. Then it converts the image into a pseudo-colored image using the color
-table. This conversion utilizes Floyd-Steinberg dithering (error diffusion) to
-maximize output image visual quality.
+Converts a 24 bit RGB image into a 8 bit paletted.
+Computes an optimal pseudo-color table for the given RGB-image using a
+median cut algorithm on a downsampled RGB histogram.
+Then it converts the image into a pseudo-colored image using the color
+table. This conversion utilizes Floyd-Steinberg dithering (error
+diffusion) to maximize output image visual quality.
 
-If you want to classify a raster map and want to reduce the number of classes it
-can be helpful to downsample your image with this algorithm before.
+If you want to classify a raster map and want to reduce the number of
+classes it can be helpful to downsample your image with this algorithm
+before.
 
-This algorithm is derived from the `GDAL rgb2pct utility <https://gdal.org/rgb2pct.html>`_ .
+This algorithm is derived from the
+`GDAL rgb2pct utility <https://gdal.org/rgb2pct.html>`_ .
 
 **Default menu**: :menuselection:`Raster --> Conversion`
 
