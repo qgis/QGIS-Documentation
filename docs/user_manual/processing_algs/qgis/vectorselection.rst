@@ -12,11 +12,12 @@ Vector selection
 
 Extract by attribute
 --------------------
-Creates two vector layers from an input layer: one will contain only matching
-features while the second will contain all the non-matching features.
+Creates two vector layers from an input layer: one will contain only
+matching features while the second will contain all the non-matching
+features.
 
-The criteria for adding features to the resulting layer is based on the
-values of an attribute from the input layer.
+The criteria for adding features to the resulting layer is based on
+the values of an attribute from the input layer.
 
 .. seealso:: :ref:`qgisselectbyattribute`
 
@@ -117,16 +118,25 @@ Outputs
      - Vector layer with non-matching features from the
        input layer
 
+**Algorithm ID**: ``qgis:extractbyattribute``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisextractbyexpression:
 
 Extract by expression
 ---------------------
-Creates two vector layers from an input layer: one will contain only matching
-features while the second will contain all the non-matching features.
+Creates two vector layers from an input layer: one will contain only
+matching features while the second will contain all the non-matching
+features.
 
-The criteria for adding features to the resulting layer is based on a QGIS expression.
-For more information about expressions see the :ref:`vector_expressions`.
+The criteria for adding features to the resulting layer is based on a
+QGIS expression.
+For more information about expressions see the
+:ref:`vector_expressions`.
 
 .. seealso:: :ref:`qgisselectbyexpression`
 
@@ -202,15 +212,23 @@ Outputs
      - Vector layer with non-matching features from the
        input layer
 
+**Algorithm ID**: ``qgis:extractbyexpression``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisextractbylocation:
 
 Extract by location
 -------------------
-Creates a new vector layer that only contains matching features from an input layer.
+Creates a new vector layer that only contains matching features from
+an input layer.
 
-The criteria for adding features to the resulting layer is based on the
-spatial relationship between each feature and the features in an additional layer.
+The criteria for adding features to the resulting layer is based on
+the spatial relationship between each feature and the features in an
+additional layer.
 
 .. include:: qgis_algs_include.rst
    :start-after: **geometric_predicates**
@@ -292,16 +310,23 @@ Outputs
        have the chosen spatial relationship(s) with one or
        more features in the comparison layer.
 
+**Algorithm ID**: ``qgis:extractbylocation``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisrandomextract:
 
 Random extract
 --------------
-Takes a vector layer and generates a new one that contains only a subset of the
-features in the input layer.
+Takes a vector layer and generates a new one that contains only a
+subset of the features in the input layer.
 
-The subset is defined randomly, based on feature IDs, using a percentage or count
-value to define the total number of features in the subset.
+The subset is defined randomly, based on feature IDs, using a
+percentage or count value to define the total number of features in
+the subset.
 
 .. seealso:: :ref:`qgisrandomselection`
 
@@ -371,18 +396,26 @@ Outputs
      - Vector layer containing randomly selected features from
        the input layer
 
+**Algorithm ID**: ``qgis:randomextract``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisrandomextractwithinsubsets:
 
 Random extract within subsets
 -----------------------------
-Takes a vector layer and generates a new one that contains only a subset of the
-features in the input layer.
+Takes a vector layer and generates a new one that contains only a
+subset of the features in the input layer.
 
-The subset is defined randomly, based on feature IDs, using a percentage or count
-value to define the total number of features in the subset.
-The percentage/count value is not applied to the whole layer, but instead to each
-category. Categories are defined according to a given attribute.
+The subset is defined randomly, based on feature IDs, using a
+percentage or count value to define the total number of features in
+the subset.
+The percentage/count value is not applied to the whole layer, but
+instead to each category.
+Categories are defined according to a given attribute.
 
 .. seealso:: :ref:`qgisrandomselectionwithinsubsets`
 
@@ -456,18 +489,25 @@ Outputs
      - Vector layer containing randomly selected features from
        the input layer
 
+**Algorithm ID**: ``qgis:randomextractwithinsubsets``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisrandomselection:
 
 Random selection
 ----------------
-Takes a vector layer and selects a subset of its features. No new layer is generated
-by this algorithm.
+Takes a vector layer and selects a subset of its features.
+No new layer is generated by this algorithm.
 
-The subset is defined randomly, based on feature IDs, using a percentage or count
-value to define the total number of features in the subset.
+The subset is defined randomly, based on feature IDs, using a
+percentage or count value to define the total number of features in
+the subset.
 
-``Default menu``: :menuselection:`Vector --> Research Tools`
+**Default menu**: :menuselection:`Vector --> Research Tools`
 
 .. seealso:: :ref:`qgisrandomextract`
 
@@ -521,26 +561,33 @@ Outputs
      - [same as input]
      - The input layer with features selected
 
+**Algorithm ID**: ``qgis:randomselection``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisrandomselectionwithinsubsets:
 
 Random selection within subsets
 -------------------------------
-Takes a vector layer and selects a subset of its features. No new layer is generated
-by this algorithm.
+Takes a vector layer and selects a subset of its features.
+No new layer is generated by this algorithm.
 
-The subset is defined randomly, based on feature IDs, using a percentage or count
-value to define the total number of features in the subset.
+The subset is defined randomly, based on feature IDs, using a
+percentage or count value to define the total number of features in
+the subset.
 
-The percentage/count value is not applied to the whole layer, but instead to each
-category.
+The percentage/count value is not applied to the whole layer, but
+instead to each category.
 
-Categories are defined according to a given attribute, which is also specified as
-an input parameter for the algorithm.
+Categories are defined according to a given attribute, which is also
+specified as an input parameter for the algorithm.
 
 No new outputs are created.
 
-``Default menu``: :menuselection:`Vector --> Research Tools`
+**Default menu**: :menuselection:`Vector --> Research Tools`
 
 .. seealso:: :ref:`qgisrandomextractwithinsubsets`
 
@@ -598,6 +645,12 @@ Outputs
      - [same as input]
      - The input layer with features selected
 
+**Algorithm ID**: ``qgis:randomselectionwithinsubsets``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisselectbyattribute:
 
@@ -605,8 +658,8 @@ Select by attribute
 -------------------
 Creates a selection in a vector layer.
 
-The criteria for selecting features is based on the values of an attribute
-from the input layer.
+The criteria for selecting features is based on the values of an
+attribute from the input layer.
 
 .. seealso:: :ref:`qgisextractbyattribute`
 
@@ -685,6 +738,12 @@ Outputs
      - [same as input]
      - The input layer with features selected
 
+**Algorithm ID**: ``qgis:selectbyattribute``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisselectbyexpression:
 
@@ -693,7 +752,8 @@ Select by expression
 Creates a selection in a vector layer.
 
 The criteria for selecting features is based on a QGIS expression.
-For more information about expressions see the :ref:`vector_expressions`.
+For more information about expressions see the
+:ref:`vector_expressions`.
 
 .. seealso:: :ref:`qgisextractbyexpression`
 
@@ -747,6 +807,12 @@ Outputs
      - [same as input]
      - The input layer with features selected
 
+**Algorithm ID**: ``qgis:selectbyexpression``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisselectbylocation:
 
@@ -755,13 +821,14 @@ Select by location
 Creates a selection in a vector layer.
 
 The criteria for selecting features is based on the spatial
-relationship between each feature and the features in an additional layer.
+relationship between each feature and the features in an additional
+layer.
 
 .. include:: qgis_algs_include.rst
    :start-after: **geometric_predicates**
    :end-before: **end_geometric_predicates**
 
-``Default menu``: :menuselection:`Vector --> Research Tools`
+**Default menu**: :menuselection:`Vector --> Research Tools`
 
 .. seealso:: :ref:`qgisextractbylocation`
 
@@ -834,3 +901,9 @@ Outputs
      - ``INPUT``
      - [same as input]
      - The input layer with features selected
+
+**Algorithm ID**: ``qgis:selectbylocation``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
