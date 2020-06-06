@@ -1041,6 +1041,7 @@ Outputs
      - ``OUTPUT``
      - [vector: point]
      - Resulting point(s) layer
+
 **Algorithm ID**: ``qgis:meancoordinates``
 
 .. include:: qgis_algs_include.rst
