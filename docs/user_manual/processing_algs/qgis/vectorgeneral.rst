@@ -644,11 +644,12 @@ Parameters
        
        Default: 1
      - Defines the criteria for comparison. Options:
-       
+
        * 0 --- Exact Match: includes the order and vertices count of
-	       geometries
+         geometries
        * 1 --- Tolerant Match (Topological Equality): geometries are
-	       considered equal
+         considered equal
+
    * - **Unchanged features**
      - ``UNCHANGED``
      - [vector: same as Original layer]
@@ -1125,9 +1126,9 @@ Parameters
      - The type of the final joined layer. One of:
 
        * 0 --- Create separate feature for each matching feature
-	       (one-to-many)
+	 (one-to-many)
        * 1 --- Take attributes of the first matching feature only
-	       (one-to-one)
+	 (one-to-one)
 
    * - **Discard records which could not be joined**
      - ``DISCARD_NONMATCHING``
@@ -1283,11 +1284,11 @@ Parameters
      - The type of the final joined layer. One of:
 
        * 0 --- Create separate feature for each matching feature
-	       (one-to-many)
+	 (one-to-many)
        * 1 --- Take attributes of the first matching feature only
-	       (one-to-one)
+	   (one-to-one)
        * 2 --- Take attributes of the feature with largest overlap
-	       only (one-to-one)
+	   only (one-to-one)
 
    * - **Discard records which could not be joined**
      - ``DISCARD_NONMATCHING``
