@@ -55,6 +55,12 @@ Outputs
      - [same as input]
      - The (renamed) loaded layer
 
+**Algorithm ID**: ``qgis:loadlayer``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisrenamelayer:
 
@@ -100,12 +106,18 @@ Outputs
      - [same as input]
      - The (renamed) output layer
 
+**Algorithm ID**: ``qgis:renamelayer``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisstringconcatenation:
 
 String concatenation
 --------------------
-Concatenates two strings into a single one in the Processing Modeler
+Concatenates two strings into a single one in the Processing Modeler.
 
 Parameters
 ..........
@@ -144,3 +156,9 @@ Outputs
      - ``CONCATENATION``
      - [string]
      - The concatenated string
+
+**Algorithm ID**: ``qgis:stringconcatenation``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
