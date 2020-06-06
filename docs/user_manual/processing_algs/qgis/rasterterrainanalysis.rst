@@ -12,18 +12,19 @@ Raster terrain analysis
 
 Aspect
 ------
-Calculates the aspect of the Digital Terrain Model in input. The final aspect
-raster layer contains values from 0 to 360 that express the slope direction:
-starting from North (0°) and continuing clockwise.
+Calculates the aspect of the Digital Terrain Model in input.
+The final aspect raster layer contains values from 0 to 360 that
+express the slope direction, starting from north (0°) and continuing
+clockwise.
 
 .. figure:: img/aspect.png
    :align: center
    :scale: 50%
 
-
    Aspect values
 
-The following picture shows the aspect layer reclassified with a color ramp:
+The following picture shows the aspect layer reclassified with a color
+ramp:
 
 .. figure:: img/aspect_2.png
    :align: center
@@ -83,16 +84,23 @@ Outputs
      - [raster]
      - The output aspect raster layer
 
+**Algorithm ID**: ``qgis:aspect``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgishillshade:
 
 Hillshade
 ---------
-Calculates the hillshade raster layer given a Digital Terrain Model in input.
+Calculates the hillshade raster layer given an input Digital Terrain
+Model.
 
-The shading of the layer is calculated according to the sun position: you have
-the options to change both the horizontal angle (azimuth) and the vertical angle
-(sun elevation) of the sun.
+The shading of the layer is calculated according to the sun position:
+you have the options to change both the horizontal angle (azimuth) and
+the vertical angle (sun elevation) of the sun.
 
 .. figure:: img/azimuth.png
    :align: center
@@ -100,7 +108,8 @@ the options to change both the horizontal angle (azimuth) and the vertical angle
 
    Azimuth and vertical angle
 
-The hillshade layer contains values from 0 (complete shadow) to 255 (complete sun).
+The hillshade layer contains values from 0 (complete shadow) to 255
+(complete sun).
 Hillshade is used usually to better understand the relief of the area.
 
 .. figure:: img/hillshade.png
@@ -108,8 +117,8 @@ Hillshade is used usually to better understand the relief of the area.
 
    Hillshade layer with azimuth 300 and vertical angle 45
 
-Particularly interesting is to give the hillshade layer a transparency value and
-overlap it with the elevation raster:
+Particularly interesting is to give the hillshade layer a transparency
+value and overlap it with the elevation raster:
 
 .. figure:: img/hillshade_2.png
    :align: center
@@ -187,19 +196,26 @@ Outputs
      - [raster]
      - The output hillshade raster layer
 
+**Algorithm ID**: ``qgis:hillshade``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgishypsometriccurves:
 
 Hypsometric curves
 ------------------
 Calculates hypsometric curves for an input Digital Elevation Model.
-Curves are produced as CSV files in an output folder specified by the user.
+Curves are produced as CSV files in an output folder specified by the
+user.
 
 A hypsometric curve is a cumulative histogram of elevation values in
 a geographical area.
 
-You can use hypsometric curves to detect differences in the landscape due
-to the geomorphology of the territory.
+You can use hypsometric curves to detect differences in the landscape
+due to the geomorphology of the territory.
 
 Parameters
 ..........
@@ -273,6 +289,12 @@ Outputs
 .. figure:: img/hypsometric.png
    :align: center
    :scale: 50%
+
+**Algorithm ID**: ``qgis:hypsometriccurves``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisrelief:
@@ -391,17 +413,24 @@ Outputs
      - [table]
      - The output frequency distribution
 
+**Algorithm ID**: ``qgis:relief``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisruggednessindex:
 
 Ruggedness index
 ----------------
-Calculates the quantitative measurement of terrain heterogeneity described by Riley
-et al. (1999). It is calculated for every location, by summarizing the change in
+Calculates the quantitative measurement of terrain heterogeneity
+described by Riley et al. (1999).
+It is calculated for every location, by summarizing the change in
 elevation within the 3x3 pixel grid.
 
-Each pixel contains the difference in elevation from a center cell and the 8 cells
-surrounding it.
+Each pixel contains the difference in elevation from a center cell and
+the 8 cells surrounding it.
 
 .. figure:: img/ruggedness.png
    :align: center
@@ -465,16 +494,22 @@ Outputs
      - [raster]
      - The output ruggedness raster layer
 
+**Algorithm ID**: ``qgis:ruggednessindex``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisslope:
 
 Slope
 -----
-Calculates the slope from an input raster layer. The slope is the angle of inclination
-of the terrain and is expressed in **degrees**.
+Calculates the slope from an input raster layer. The slope is the
+angle of inclination of the terrain and is expressed in **degrees**.
 
-In the following picture you can see to the left the DTM layer with the elevation
-of the terrain while to the right the calculated slope:
+In the following picture you can see to the left the DTM layer with
+the elevation of the terrain while to the right the calculated slope:
 
 .. figure:: img/slope.png
    :align: center
@@ -537,3 +572,9 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - The output slope raster layer
+
+**Algorithm ID**: ``qgis:slope``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
