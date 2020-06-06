@@ -90,6 +90,12 @@ Outputs
      - [number]
      - 
 
+**Algorithm ID**: ``qgis:combinestyles``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgiscategorizeusingstyle:
 
@@ -214,6 +220,12 @@ Outputs
      - The input vector layer with the categorized style applied.
        No new layer is output.
 
+**Algorithm ID**: ``qgis:categorizeusingstyle``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisstylefromproject:
 
@@ -302,6 +314,12 @@ Outputs
      - ``TEXTFORMATS``
      - [number]
      - Number of text formats
+
+**Algorithm ID**: ``qgis:stylefromproject``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisprintlayoutmapextenttolayer:
@@ -400,6 +418,12 @@ Outputs
      - ``WIDTH``
      - [number]
      - 
+
+**Algorithm ID**: ``qgis:printlayoutmapextenttolayer``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgistopologicalcoloring:
@@ -511,3 +535,9 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - Polygon vector layer with an added ``color_id`` column
+
+**Algorithm ID**: ``qgis:topologicalcoloring``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
