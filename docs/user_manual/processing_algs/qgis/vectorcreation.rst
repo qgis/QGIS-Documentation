@@ -12,11 +12,12 @@ Vector creation
 
 Array of offset (parallel) lines
 --------------------------------
-Creates copies of line features in a layer, by creating multiple offset versions
-of each feature. Each new version is incrementally offset by a specified distance.
+Creates copies of line features in a layer, by creating multiple
+offset versions of each feature.
+Each new version is incrementally offset by a specified distance.
 
-Positive distance will offset lines to the left, and negative distances will offset
-them to the right.
+Positive distance will offset lines to the left, and negative
+distances will offset them to the right.
 
 .. figure:: img/offset_lines_array.png
    :align: center
@@ -114,6 +115,12 @@ Outputs
      - Output line layer with offset features.
        The original features are also copied.
 
+**Algorithm ID**: ``qgis:arrayoffsetlines``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisarraytranslatedfeatures:
 
@@ -121,16 +128,16 @@ Array of translated features
 ----------------------------
 Creates copies of features in a layer by creating multiple translated
 versions of each.
-Each copy is incrementally displaced by a preset amount in the X, Y and/or
-Z axis.
+Each copy is incrementally displaced by a preset amount in the X, Y
+and/or Z axis.
 
 M values present in the geometry can also be translated.
 
 .. figure:: img/translate_array.png
    :align: center
 
-   Input layers in blue tones, output layers with translated features in
-   red tones
+   Input layers in blue tones, output layers with translated features
+   in red tones
 
 |checkbox| Allows
 :ref:`features in-place modification <processing_inplace_edit>`
@@ -218,28 +225,34 @@ Outputs
        copies of the features.
        The original features are also copied.
 
+**Algorithm ID**: ``qgis:arraytranslatedfeatures``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgiscreategrid:
 
 Create grid
 -----------
-Creates a vector layer with a grid covering a given extent. Grid cells can have
-different shapes:
+Creates a vector layer with a grid covering a given extent.
+Grid cells can have different shapes:
 
 .. figure:: img/create_grid.png
   :align: center
 
   Different grid cell shapes
 
-The size of each element in the grid is defined using a horizontal and vertical
-spacing.
+The size of each element in the grid is defined using a horizontal and
+vertical spacing.
 
 The CRS of the output layer must be defined.
 
-The grid extent and the spacing values must be expressed in the coordinates and
-units of this CRS.
+The grid extent and the spacing values must be expressed in the
+coordinates and units of this CRS.
 
-``Default menu``: :menuselection:`Vector --> Research Tools`
+**Default menu**: :menuselection:`Vector --> Research Tools`
 
 Parameters
 ..........
@@ -287,13 +300,15 @@ Parameters
      - [number]
 
        Default: 0.0
-     - Overlay distance between two consecutive grid cells on the X-axis
+     - Overlay distance between two consecutive grid cells on the
+       X-axis
    * - **Vertical overlay**
      - ``VOVERLAY``
      - [number]
 
        Default: 0.0
-     - Overlay distance between two consecutive grid cells on the Y-axis
+     - Overlay distance between two consecutive grid cells on the
+       Y-axis
    * - **Grid CRS**
      - ``CRS``
      - [crs]
@@ -329,16 +344,22 @@ Outputs
    * - **Grid**
      - ``OUTPUT``
      - [vector: any]
-     - Resulting vector grid layer. The output geometry type (point, line or polygon) depends
-       on the :guilabel:`Grid type`.
+     - Resulting vector grid layer. The output geometry type (point,
+       line or polygon) depends on the :guilabel:`Grid type`.
+
+**Algorithm ID**: ``qgis:creategrid``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgiscreatepointslayerfromtable:
 
 Create points layer from table
 ------------------------------
-Creates points layer from a table with columns that contain coordinates
-fields.
+Creates points layer from a table with columns that contain
+coordinates fields.
 
 Besides X and Y coordinates you can also specify Z and M fields.
 
@@ -417,6 +438,12 @@ Outputs
      - [vector: point]
      - The resulting point layer
 
+**Algorithm ID**: ``qgis:createpointslayerfromtable``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisgeneratepointspixelcentroidsalongline:
 
@@ -424,7 +451,8 @@ Generate points (pixel centroids) along line
 --------------------------------------------
 Generates a point vector layer from an input raster and line layer.
 
-The points correspond to the pixel centroids that intersect the line layer.
+The points correspond to the pixel centroids that intersect the line
+layer.
 
 
 .. figure:: img/points_centroids.png
@@ -483,6 +511,12 @@ Outputs
      - [vector: point]
      - Resulting point layer with pixel centroids
 
+**Algorithm ID**: ``qgis:generatepointspixelcentroidsalongline``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisgeneratepointspixelcentroidsinsidepolygons:
 
@@ -490,7 +524,8 @@ Generate points (pixel centroids) inside polygon
 ------------------------------------------------
 Generates a point vector layer from an input raster and polygon layer.
 
-The points correspond to the pixel centroids that intersect the polygon layer.
+The points correspond to the pixel centroids that intersect the
+polygon layer.
 
 
 .. figure:: img/points_centroids_polygon.png
@@ -549,20 +584,28 @@ Outputs
      - [vector: point]
      - Resulting point layer of pixel centroids
 
+**Algorithm ID**: ``qgis:generatepointspixelcentroidsinsidepolygons``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisimportphotos:
 
 Import geotagged photos
 -----------------------
-Creates a point layer corresponding to the geotagged locations from JPEG images
-from a source folder.
+Creates a point layer corresponding to the geotagged locations from
+JPEG images from a source folder.
 
-The point layer will contain a single PointZ feature per input file from which
-the geotags could be read. Any altitude information from the geotags will be used
-to set the point's Z value.
+The point layer will contain a single PointZ feature per input file
+from which the geotags could be read.
+Any altitude information from the geotags will be used to set the
+point's Z value.
 
-Besides longitude and latitude also altitude, direction and timestamp information,
-if present in the photo, will be added to the point as attributes.
+Besides longitude and latitude also altitude, direction and timestamp
+information, if present in the photo, will be added to the point as
+attributes.
 
 Parameters
 ..........
@@ -643,6 +686,12 @@ Outputs
      - [table]
      - Table of unreadable or non-geotagged photos can
        also be created.
+
+**Algorithm ID**: ``qgis:importphotos``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgispointstopath:
@@ -746,6 +795,12 @@ Outputs
      - [folder]
      - Directory containing description files of points and paths
 
+**Algorithm ID**: ``qgis:pointstopath``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisrandompointsalongline:
 
@@ -777,8 +832,8 @@ the lines).
    Example algorithm output. Left: *Random points along line*, right:
    *Random points on lines*
 
-A minimum distance can be specified, to avoid points being too close to
-each other.
+A minimum distance can be specified, to avoid points being too close
+to each other.
 
 .. seealso:: :ref:`qgisrandompointsonlines`
 
@@ -841,17 +896,24 @@ Outputs
      - [vector: point]
      - The output random points layer.
 
+**Algorithm ID**: ``qgis:qgisrandompointsalongline``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisrandompointsinextent:
 
 Random points in extent
 -----------------------
-Creates a new point layer with a given number of random points, all of them within
-a given extent.
+Creates a new point layer with a given number of random points, all
+of them within a given extent.
 
-A minimum distance can be specified, to avoid points being too close to each other.
+A minimum distance can be specified, to avoid points being too close
+to each other.
 
-``Default menu``: :menuselection:`Vector --> Research Tools`
+**Default menu**: :menuselection:`Vector --> Research Tools`
 
 Parameters
 ..........
@@ -918,6 +980,12 @@ Outputs
      - [vector: point]
      - The output random points layer.
 
+**Algorithm ID**: ``qgis:randompointsinextent``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisrandompointsinlayerbounds:
 
@@ -929,7 +997,7 @@ all of them within the extent of a given layer.
 A minimum distance can be specified, to avoid points being too
 close to each other.
 
-``Default menu``: :menuselection:`Vector --> Research Tools`
+**Default menu**: :menuselection:`Vector --> Research Tools`
 
 Parameters
 ..........
@@ -990,6 +1058,12 @@ Outputs
      - [vector: point]
      - The output random points layer.
 
+**Algorithm ID**: ``qgis:randompointsinlayerbounds``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisrandompointsinsidepolygons:
 
@@ -1003,9 +1077,10 @@ Two sampling strategies are available:
 * Points count: number of points for each feature
 * Points density: density of points for each feature
 
-A minimum distance can be specified, to avoid points being too close to each other.
+A minimum distance can be specified, to avoid points being too close
+to each other.
 
-``Default menu``: :menuselection:`Vector --> Research Tools`
+**Default menu**: :menuselection:`Vector --> Research Tools`
 
 Parameters
 ..........
@@ -1077,26 +1152,34 @@ Outputs
      - [vector: point]
      - The output random points layer.
 
+**Algorithm ID**: ``qgis:randompointsinsidepolygons``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisrandompointsonlines:
 
 Random points on lines |314|
 ----------------------------------
-Creates a point layer with points placed on the lines of another layer.
+Creates a point layer with points placed on the lines of another
+layer.
 
-For each feature (line / multi-line) geometry in the input layer, the given
-number of points is added to the result layer.
+For each feature (line / multi-line) geometry in the input layer, the
+given number of points is added to the result layer.
 
-Per feature and global minimum distances can be specified in order to avoid
-points being too close in the output point layer.
-If a minimum distance is specified, it may not be possible to generate the
-specified number of points for each feature.
-The total number of generated points and missed points are available as
-output from the algorithm.
+Per feature and global minimum distances can be specified in order to
+avoid points being too close in the output point layer.
+If a minimum distance is specified, it may not be possible to generate
+the specified number of points for each feature.
+The total number of generated points and missed points are available
+as output from the algorithm.
 
-The illustration below shows the effect of per feature and global minimum
-distances and zero/non-zero minimum distances (generated with the same seed,
-so at least the first point generated will be the same).
+The illustration below shows the effect of per feature and global
+minimum distances and zero/non-zero minimum distances (generated with
+the same seed, so at least the first point generated will be the
+same).
 
 .. figure:: img/randompointsonlines_mindistance.png
    :align: center
@@ -1108,15 +1191,16 @@ so at least the first point generated will be the same).
 The maximum number of tries per point can be specified.
 This is only relevant for non-zero minimum distance.
 
-A seed for the random number generator can be provided, making it possible
-to get identical random number sequences for different runs of the algorithm.
+A seed for the random number generator can be provided, making it
+possible to get identical random number sequences for different runs
+of the algorithm.
 
-The attributes of the line feature on which a point was generated can be
-included (:guilabel:`Include line attributes`).
+The attributes of the line feature on which a point was generated can
+be included (:guilabel:`Include line attributes`).
 
-If you want approximately the same point density for all the line features,
-you can data-define the number of points using the length of the line
-feature geometry.
+If you want approximately the same point density for all the line
+features, you can data-define the number of points using the length of
+the line feature geometry.
 
 .. seealso:: :ref:`qgisrandompointsalongline`
 
@@ -1232,12 +1316,19 @@ Outputs
      - The number of points that could not be generated due to
        the minimum distance constraint.
 
+**Algorithm ID**: ``qgis:randompointsonlines``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgispixelstopoints:
 
 Raster pixels to points
 -----------------------
-Creates a vector layer of points corresponding to each pixel in a raster layer.
+Creates a vector layer of points corresponding to each pixel in a
+raster layer.
 
 Converts a raster layer to a vector layer, by creating point features
 for each individual pixel's center in the raster layer.
@@ -1301,15 +1392,22 @@ Outputs
      - [vector: point]
      - Resulting point layer with pixels centroids
 
+**Algorithm ID**: ``qgis:pixelstopoints``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgispixelstopolygons:
 
 Raster pixels to polygons
 -------------------------
-Creates a vector layer of polygons corresponding to each pixel in a raster layer.
+Creates a vector layer of polygons corresponding to each pixel in a
+raster layer.
 
-Converts a raster layer to a vector layer, by creating polygon features
-for each individual pixel's extent in the raster layer.
+Converts a raster layer to a vector layer, by creating polygon
+features for each individual pixel's extent in the raster layer.
 Any nodata pixels are skipped in the output.
 
 Parameters
@@ -1370,6 +1468,12 @@ Outputs
      - [vector: polygon]
      - Resulting polygon layer of pixel extents
 
+**Algorithm ID**: ``qgis:pixelstopolygons``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisregularpoints:
 
@@ -1387,7 +1491,7 @@ points specified by the user is generated for the latter case.
 Random offsets to the point spacing can be applied, resulting in a
 non-regular point pattern.
 
-``Default menu``: :menuselection:`Vector --> Research Tools`
+**Default menu**: :menuselection:`Vector --> Research Tools`
 
 Parameters
 ..........
@@ -1467,6 +1571,12 @@ Outputs
      - ``OUTPUT``
      - [vector: point]
      - The output regular point layer.
+
+**Algorithm ID**: ``qgis:regularpoints``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
