@@ -12,14 +12,17 @@ Vector table
 
 Add autoincremental field
 -------------------------
-Adds a new integer field to a vector layer, with a sequential value for each feature.
+Adds a new integer field to a vector layer, with a sequential value
+for each feature.
 
-This field can be used as a unique ID for features in the layer. The new attribute
-is not added to the input layer but a new layer is generated instead.
+This field can be used as a unique ID for features in the layer.
+The new attribute is not added to the input layer but a new layer is
+generated instead.
 
-The initial starting value for the incremental series can be specified.
-Optionally, the incremental series can be based on grouping fields and a sort order
-for features can also be specified.
+The initial starting value for the incremental series can be
+specified.
+Optionally, the incremental series can be based on grouping fields and
+a sort order for features can also be specified.
 
 Parameters
 ..........
@@ -116,6 +119,12 @@ Outputs
      - [same as input]
      - Vector layer with auto incremental field
 
+**Algorithm ID**: ``qgis:addautoincrementalfield``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisaddfieldtoattributestable:
 
@@ -123,10 +132,11 @@ Add field to attributes table
 -----------------------------
 Adds a new field to a vector layer.
 
-The name and characteristics of the attribute are defined as parameters.
+The name and characteristics of the attribute are defined as
+parameters.
 
-The new attribute is not added to the input layer but a new layer is generated
-instead.
+The new attribute is not added to the input layer but a new layer is
+generated instead.
 
 Parameters
 ..........
@@ -204,6 +214,12 @@ Outputs
      - [same as input]
      - Vector layer with new field added
 
+**Algorithm ID**: ``qgis:addfieldtoattributestable``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisadduniquevalueindexfield:
 
@@ -211,15 +227,15 @@ Add unique value index field
 ----------------------------
 Takes a vector layer and an attribute and adds a new numeric field.
 
-Values in this field correspond to values in the specified attribute, so features
-with the same value for the attribute will have the same value in the new numeric
-field.
+Values in this field correspond to values in the specified attribute,
+so features with the same value for the attribute will have the same
+value in the new numeric field.
 
-This creates a numeric equivalent of the specified attribute, which defines the
-same classes.
+This creates a numeric equivalent of the specified attribute, which
+defines the same classes.
 
-The new attribute is not added to the input layer but a new layer is generated
-instead.
+The new attribute is not added to the input layer but a new layer is
+generated instead.
 
 Parameters
 ..........
@@ -301,8 +317,14 @@ Outputs
      - [table]
        
        Default: ``[Skip Output]``
-     - Table with summary of the class field mapped to the corresponding
-       unique value.  
+     - Table with summary of the class field mapped to the
+       corresponding unique value.  
+
+**Algorithm ID**: ``qgis:adduniquevalueindexfield``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisaddxyfieldstolayer:
@@ -311,7 +333,8 @@ Add X/Y fields to layer
 ----------------------------
 Adds X and Y (or latitude/longitude) fields to a point layer.
 The X/Y fields can be calculated in a different CRS to the layer
-(e.g. creating latitude/longitude fields for a layer in a projected CRS).
+(e.g. creating latitude/longitude fields for a layer in a projected
+CRS).
 
 Parameters
 ..........
@@ -376,13 +399,19 @@ Outputs
      - The output layer - identical to the input layer but with two
        new double fields, ``x`` and ``y``.
 
+**Algorithm ID**: ``qgis:addxyfieldstolayer``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisadvancedpythonfieldcalculator:
 
 Advanced Python field calculator
 --------------------------------
-Adds a new attribute to a vector layer, with values resulting from applying an
-expression to each feature.
+Adds a new attribute to a vector layer, with values resulting from
+applying an expression to each feature.
 
 The expression is defined as a Python function.
 
@@ -483,13 +512,19 @@ Outputs
      - [same as input]
      - Vector layer with the new calculated field
 
+**Algorithm ID**: ``qgis:advancedpythonfieldcalculator``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisdeletecolumn:
 
 Drop field(s)
 -------------
-Takes a vector layer and generates a new one that has the same features but
-without the selected columns.
+Takes a vector layer and generates a new one that has the same
+features but without the selected columns.
 
 Parameters
 ..........
@@ -543,6 +578,12 @@ Outputs
      - [same as input]
      - Vector layer with the remaining fields
 
+**Algorithm ID**: ``qgis:deletecolumn``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisexplodehstorefield:
 
@@ -558,7 +599,8 @@ and the HStore field is updated.
 By default, all unique keys are added.
 
 The PostgreSQL `HStore <https://www.postgresql.org/docs/10/hstore.html>`_
-is a simple key-value store used in PostgreSQL and OGR (when reading an
+is a simple key-value store used in PostgreSQL and OGR (when reading
+an
 `OSM file <https://gdal.org/drivers/vector/osm.html#other-tags-field>`_
 with the ``other_tags`` field.
 
@@ -623,12 +665,19 @@ Outputs
      - [same as input]
      - Output vector layer
 
+**Algorithm ID**: ``qgis:explodehstorefield``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisextractbinary:
 
 Extract binary field
 -------------------------
-Extracts contents from a binary field, saving them to individual files.
+Extracts contents from a binary field, saving them to individual
+files.
 Filenames can be generated using values taken from an attribute in the
 source table or based on a more complex expression.
 
@@ -685,6 +734,12 @@ Outputs
      - [folder]
      - The folder that contains the output files.
 
+**Algorithm ID**: ``qgis:extractbinary``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisfeaturefilter:
 
@@ -694,7 +749,7 @@ Filters features from the input layer and redirects
 them to one or several outputs.
 If you do not know about any attribute names that are common to all
 possible input layers, filtering is only possible on the feature
-geometry and general record mechanisms, such as ``$id`` and ``uuid``.  
+geometry and general record mechanisms, such as ``$id`` and ``uuid``.
 
 .. note:: This algorithm is only available from the
   :ref:`Graphical modeler <processing.modeler>`.
@@ -742,18 +797,24 @@ Outputs
      - The output layers with filtered features (as many as there are
        filters).
 
+**Algorithm ID**: ``qgis:featurefilter``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisfieldcalculator:
 
 Field calculator
 ----------------
-Opens the field calculator (see :ref:`vector_expressions`). You can use all the
-supported expressions and functions.
+Opens the field calculator (see :ref:`vector_expressions`).
+You can use all the supported expressions and functions.
 
 A new layer is created with the result of the expression.
 
-The field calculator is very useful when used in :ref:`processing.modeler`.
+The field calculator is very useful when used in
+:ref:`processing.modeler`.
 
 Parameters
 ..........
@@ -833,6 +894,13 @@ Outputs
      - [vector: any]
      - Output layer with the calculated field values
 
+**Algorithm ID**: ``qgis:fieldcalculator``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgisrefactorfields:
 
 Refactor fields
@@ -841,8 +909,9 @@ Allows editing the structure of the attribute table of a vector layer.
 
 Fields can be modified in their type and name, using a fields mapping.
 
-The original layer is not modified. A new layer is generated, which contains a
-modified attribute table, according to the provided fields mapping.
+The original layer is not modified. A new layer is generated, which
+contains a modified attribute table, according to the provided fields
+mapping.
 
 Refactor layer fields allows to:
 
@@ -882,7 +951,8 @@ Parameters
 
        * Click |newAttribute| to create a new field.
        * Click |deleteAttribute| to remove a field.
-       * Use |arrowUp| and |arrowDown| to change the selected field order.
+       * Use |arrowUp| and |arrowDown| to change the selected field
+	 order.
        * Click |clearText| to reset to the default view.
 
        For each of the fields you'd like to reuse, you need to
@@ -947,17 +1017,26 @@ Outputs
      - [vector: any]
      - Output layer with refactored fields
 
+**Algorithm ID**: ``qgis:refactorfields``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgistexttofloat:
 
 Text to float
 -------------
-Modifies the type of a given attribute in a vector layer, converting a text attribute
-containing numeric strings into a numeric attribute (e.g. '1' to ``1.0``).
+Modifies the type of a given attribute in a vector layer, converting a
+text attribute containing numeric strings into a numeric attribute
+(e.g. '1' to ``1.0``).
 
-The algorithm creates a new vector layer so the source one is not modified.
+The algorithm creates a new vector layer so the source one is not
+modified.
 
-If the conversion is not possible the selected column will have ``NULL`` values.
+If the conversion is not possible the selected column will have
+``NULL`` values.
 
 Parameters
 ..........
@@ -978,8 +1057,8 @@ Parameters
    * - **Text attribute to convert to float**
      - ``FIELD``
      - [tablefield: string]
-     - The string field for the input layer that is to be converted to a
-       float field.
+     - The string field for the input layer that is to be converted
+       to a float field.
    * - **Float from text**
      - ``OUTPUT``
      - [same as input]
@@ -1011,6 +1090,12 @@ Outputs
      - [same as input]
      - Output vector layer with the string field converted into
        a float field
+
+**Algorithm ID**: ``qgis:texttofloat``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
