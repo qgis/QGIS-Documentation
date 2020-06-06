@@ -13,10 +13,12 @@ Vector miscellaneous
 Build virtual vector
 --------------------
 Creates a virtual vector layer that contains a set of vector layers.
-The output virtual vector layer will not be opened in the current project.
+The output virtual vector layer will not be opened in the current
+project.
 
-This algorithm is especially useful in case another algorithm needs multiple
-layers but accept only one ``vrt`` in which the layers are specified.
+This algorithm is especially useful in case another algorithm needs
+multiple layers but accept only one ``vrt`` in which the layers are
+specified.
 
 Parameters
 ..........
@@ -71,6 +73,12 @@ Outputs
      - ``OUTPUT``
      - [vector: any]
      - The output virtual vector made from the chosen sources
+
+**Algorithm ID**: ``gdal:buildvirtualvector``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _gdalexecutesql:
@@ -136,8 +144,8 @@ Parameters
 
        For ``Save to File``, the output format has to be specified.
        All GDAL vector formats are supported.
-       For ``Save to a Temporary File`` the default output vector layer
-       format will be used.
+       For ``Save to a Temporary File`` the default output vector
+       layer format will be used.
 
 Outputs
 .......
@@ -156,17 +164,28 @@ Outputs
      - [vector: any]
      - Vector layer created by the query
 
+**Algorithm ID**: ``gdal:executesql``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdalimportvectorintopostgisdatabaseavailableconnections:
 
 Export to PostgreSQL (available connections)
 --------------------------------------------
 Imports vector layers inside a PostgreSqL database on the basis of
-an available connection. The connection has to :ref:`be defined properly
-<vector_create_stored_connection>` beforehand. Be aware that the checkboxes 'Save Username'
-and 'Save Password' are activated. Then you can use the algorithm.
+an available connection.
+The connection has to
+:ref:`be defined properly <vector_create_stored_connection>`
+beforehand.
+Be aware that the checkboxes 'Save Username' and 'Save Password' are
+activated.
+Then you can use the algorithm.
 
-This algorithm is derived from the `GDAL ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_ .
+This algorithm is derived from the
+`GDAL ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_ .
 
 Parameters
 ..........
@@ -405,7 +424,8 @@ Parameters
      - [boolean]
 
        Default: False
-     - Prevents a spatial index for the output table from being created.
+     - Prevents a spatial index for the output table from being
+       created.
        By default, a spatial index is added.
    * - **Continue after a failure, skipping the failed feature**
 
@@ -445,6 +465,12 @@ Outputs
 
 This algorithm has no output.
 
+**Algorithm ID**: ``gdal:importvectorintopostgisdatabaseavailableconnections``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdalimportvectorintopostgisdatabasenewconnection:
 
@@ -453,7 +479,8 @@ Export to PostgreSQL (new connection)
 Imports vector layers inside a PostGreSQL database. A new connection
 to the PostGIS database must be created.
 
-This algorithm is derived from the `GDAL ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_ .
+This algorithm is derived from the
+`GDAL ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_ .
 
 Parameters
 ..........
@@ -694,7 +721,8 @@ Parameters
 
        Default: True
      - If there is a table with the same name in the database,
-       and if this option is set to True, the table will be overwritten.
+       and if this option is set to True, the table will be
+       overwritten.
    * - **Append to existing table**
 
        Optional
@@ -735,7 +763,8 @@ Parameters
      - [boolean]
 
        Default: False
-     - Prevents a spatial index for the output table from being created.
+     - Prevents a spatial index for the output table from being
+       created.
        By default, a spatial index is added.
    * - **Continue after a failure, skipping the failed feature**
 
@@ -775,18 +804,26 @@ Outputs
 
 This algorithm has no output.
 
+**Algorithm ID**: ``gdal:importvectorintopostgisdatabasenewconnection``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdalogrinfo:
 
 Vector Information
 ------------------
-Creates an information file that lists information about an OGR-supported
-data source. The output will be shown in a 'Result' window and can be written
+Creates an information file that lists information about an
+OGR-supported data source.
+The output will be shown in a 'Result' window and can be written
 into a HTML-file.
-The information includes the geometry type, feature count, the spatial extent,
-the projection information and many more.
+The information includes the geometry type, feature count, the spatial
+extent, the projection information and many more.
 
-This algorithm is derived from the `GDAL ogrinfo utility <https://gdal.org/ogrinfo.html>`_ .
+This algorithm is derived from the
+`GDAL ogrinfo utility <https://gdal.org/ogrinfo.html>`_ .
 
 Parameters
 ..........
@@ -852,3 +889,9 @@ Outputs
      - ``OUTPUT``
      - [html]
      - The output HTML-file that includes the file information.
+
+**Algorithm ID**: ``gdal:ogrinfo``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
