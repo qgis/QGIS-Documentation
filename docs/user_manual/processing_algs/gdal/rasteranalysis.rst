@@ -125,7 +125,7 @@ Outputs
 
 **Algorithm ID**: ``gdal:aspect``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../qgis/qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -238,7 +238,7 @@ Outputs
 
 **Algorithm ID**: ``gdal:colorrelief``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../qgis/qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -362,7 +362,7 @@ Outputs
 
 **Algorithm ID**: ``gdal:fillnodata``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../qgis/qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -535,7 +535,7 @@ Outputs
 
 **Algorithm ID**: ``gdal:griddatametrics``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../qgis/qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -687,7 +687,7 @@ Outputs
 
 **Algorithm ID**: ``gdal:gridinversedistancenearestneighbor``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../qgis/qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -859,7 +859,7 @@ Outputs
 
 **Algorithm ID**: ``gdal:gridinversedistance``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../qgis/qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -989,7 +989,7 @@ Outputs
 
 **Algorithm ID**: ``gdal:gridlinear``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../qgis/qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1143,7 +1143,7 @@ Outputs
 
 **Algorithm ID**: ``gdal:gridaverage``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../qgis/qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1286,7 +1286,7 @@ Outputs
 
 **Algorithm ID**: ``gdal:gridnearestneighbor``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../qgis/qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1434,7 +1434,7 @@ Outputs
 
 **Algorithm ID**: ``gdal:hillshade``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../qgis/qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1538,7 +1538,7 @@ Outputs
 
 **Algorithm ID**: ``gdal:nearblack``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../qgis/qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1708,7 +1708,7 @@ Outputs
 
 **Algorithm ID**: ``gdal:proximity``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../qgis/qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1802,7 +1802,7 @@ Outputs
 
 **Algorithm ID**: ``gdal:roughness``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../qgis/qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -1902,7 +1902,7 @@ Outputs
 
 **Algorithm ID**: ``gdal:sieve``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../qgis/qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -2018,7 +2018,7 @@ Outputs
 
 **Algorithm ID**: ``gdal:slope``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../qgis/qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -2110,7 +2110,7 @@ Outputs
 
 **Algorithm ID**: ``gdal:triterrainruggednessindex``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../qgis/qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
@@ -2200,6 +2200,6 @@ Outputs
 
 **Algorithm ID**: ``gdal:tpitopographicpositionindex``
 
-.. include:: qgis_algs_include.rst
+.. include:: ../qgis/qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
