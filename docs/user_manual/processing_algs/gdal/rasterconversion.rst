@@ -75,6 +75,12 @@ Outputs
      - [table]
      - Table file containing the values exported from the raster band.
 
+**Algorithm ID**: ``gdal:gdal2xyz``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdalpcttorgb:
 
@@ -87,7 +93,7 @@ an RGB file of the desired format.
 This algorithm is derived from the
 `GDAL pct2rgb utility <https://gdal.org/pct2rgb.html>`_ .
 
-``Default menu``: :menuselection:`Raster --> Conversion`
+**Default menu**: :menuselection:`Raster --> Conversion`
 
 Parameters
 ..........
@@ -148,6 +154,12 @@ Outputs
      - [raster]
      - 24 bit RGB raster image
 
+**Algorithm ID**: ``gdal:pcttorgb``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdalpolygonize:
 
@@ -159,7 +171,7 @@ attribute indicating the pixel value of that polygon.
 
 This algorithm is derived from the `GDAL polygonize utility <https://gdal.org/gdal_polygonize.html>`_ .
 
-``Default menu``: :menuselection:`Raster --> Conversion`
+**Default menu**: :menuselection:`Raster --> Conversion`
 
 Parameters
 ..........
@@ -236,6 +248,12 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - Output vector layer
+
+**Algorithm ID**: ``gdal:polygonize``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _gdalrearrange_bands:
@@ -333,6 +351,12 @@ Outputs
      - [raster]
      - Output raster layer with rearranged bands.
 
+**Algorithm ID**: ``gdal:rearrange_bands``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdalrgbtopct:
 
@@ -349,7 +373,7 @@ can be helpful to downsample your image with this algorithm before.
 
 This algorithm is derived from the `GDAL rgb2pct utility <https://gdal.org/rgb2pct.html>`_ .
 
-``Default menu``: :menuselection:`Raster --> Conversion`
+**Default menu**: :menuselection:`Raster --> Conversion`
 
 Parameters
 ..........
@@ -403,6 +427,12 @@ Outputs
      - [raster]
      - Output raster layer.
 
+**Algorithm ID**: ``gdal:rgbtopct``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdaltranslate:
 
@@ -414,7 +444,7 @@ Converts raster data between different formats.
 This algorithm is derived from the
 `GDAL translate utility <https://gdal.org/gdal_translate.html>`_ .
 
-``Default menu``: :menuselection:`Raster --> Conversion`
+**Default menu**: :menuselection:`Raster --> Conversion`
 
 Parameters
 ..........
@@ -522,3 +552,9 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output (translated) raster layer.
+
+**Algorithm ID**: ``gdal:translate``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
