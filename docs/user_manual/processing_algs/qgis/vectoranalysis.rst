@@ -12,7 +12,8 @@ Vector analysis
 
 Basic statistics for fields
 ---------------------------
-Generates basic statistics for a field of the attribute table of a vector layer.
+Generates basic statistics for a field of the attribute table of a
+vector layer.
 
 Numeric, date, time and string fields are supported.
 
@@ -21,7 +22,7 @@ The statistics returned will depend on the field type.
 Statistics are generated as an HTML file and are available in the
 :menuselection:`Processing --> Results viewer`.
 
-``Default menu``: :menuselection:`Vector --> Analysis Tools`
+**Default menu**: :menuselection:`Vector --> Analysis Tools`
 
 Parameters
 ..........
@@ -145,6 +146,12 @@ Outputs
      - [number]
      -
 
+**Algorithm ID**: ``qgis:basicstatisticsforfields``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisclimbalongline:
 
@@ -152,17 +159,17 @@ Climb along line
 ----------------------
 
 Calculates the total climb and descent along line geometries.
-The input layer must have Z values present. If Z values are not available,
-the  :ref:`qgissetzfromraster` algorithm may be used to add Z values
-from a DEM layer.
+The input layer must have Z values present. If Z values are not
+available, the  :ref:`qgissetzfromraster` algorithm may be used to add
+Z values from a DEM layer.
 
-The output layer is a copy of the input layer with additional fields that
-contain the total climb (``climb``), total descent (``descent``), the
-minimum elevation (``minelev``) and the maximum elevation (``maxelev``) for
-each line geometry.
-If the input layer contains fields with the same names as these added fields,
-they will be renamed (field names will be altered to "name_2", "name_3", etc,
-finding the first non-duplicate name).
+The output layer is a copy of the input layer with additional fields
+that contain the total climb (``climb``), total descent (``descent``),
+the minimum elevation (``minelev``) and the maximum elevation
+(``maxelev``) for each line geometry.
+If the input layer contains fields with the same names as these added
+fields, they will be renamed (field names will be altered to "name_2",
+"name_3", etc, finding the first non-duplicate name).
 
 Parameters
 ..........
@@ -223,26 +230,33 @@ Outputs
      - The maximum elevation for the geometries in the
        layer
 
+**Algorithm ID**: ``qgis:climbalongline``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgiscountpointsinpolygon:
 
 Count points in polygon
 -----------------------
-Takes a point and a polygon layer and counts the number of points from the
-point layer in each of the polygons of the polygon layer.
+Takes a point and a polygon layer and counts the number of points from
+the point layer in each of the polygons of the polygon layer.
 
-A new polygon layer is generated, with the exact same content as the input polygon
-layer, but containing an additional field with the points count corresponding to
-each polygon.
+A new polygon layer is generated, with the exact same content as the
+input polygon layer, but containing an additional field with the
+points count corresponding to each polygon.
 
 .. figure:: img/count_points_polygon.png
   :align: center
 
   The labels in the polygons show the point count
 
-An optional weight field can be used to assign weights to each point. Alternatively,
-a unique class field can be specified. If both options are used, the weight field
-will take precedence and the unique class field will be ignored.
+An optional weight field can be used to assign weights to each point.
+Alternatively, a unique class field can be specified.
+If both options are used, the weight field will take precedence and
+the unique class field will be ignored.
 
 ``Default menu``: :menuselection:`Vector --> Analysis Tools`
 
@@ -320,8 +334,8 @@ Outputs
 
 DBSCAN clustering
 -----------------
-Clusters point features based on a 2D implementation of Density-based spatial
-clustering of applications with noise (DBSCAN) algorithm.
+Clusters point features based on a 2D implementation of Density-based
+spatial clustering of applications with noise (DBSCAN) algorithm.
 
 The algorithm requires two parameters, a minimum cluster size,
 and the maximum distance allowed between clustered points.
@@ -380,7 +394,6 @@ Parameters
      - [vector: point]
      - Vector layer for the result of the clustering
 
-
 Outputs
 .......
 
@@ -403,15 +416,21 @@ Outputs
      - [number]
      - The number of clusters discovered
 
+**Algorithm ID**: ``qgis:dbscanclustering``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisdistancematrix:
 
 Distance matrix
 ---------------
-Calculates for point features distances to their nearest features in the same layer
-or in another layer.
+Calculates for point features distances to their nearest features in
+the same layer or in another layer.
 
-``Default menu``: :menuselection:`Vector --> Analysis Tools`
+**Default menu**: :menuselection:`Vector --> Analysis Tools`
 
 .. seealso:: :ref:`qgisjoinattributesbynearest`
 
@@ -500,14 +519,21 @@ Outputs
        Its features and attribute table depend on the selected
        output matrix type.
 
+**Algorithm ID**: ``qgis:distancematrix``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisdistancetonearesthublinetohub:
 
 Distance to nearest hub (line to hub)
 -------------------------------------
-Creates lines that join each feature of an input vector to the nearest feature
-in a destination layer. Distances are calculated based on the :ref:`center
-<qgispointonsurface>` of each feature.
+Creates lines that join each feature of an input vector to the nearest
+feature in a destination layer.
+Distances are calculated based on the
+:ref:`center <qgispointonsurface>` of each feature.
 
 
 .. figure:: img/distance_hub.png
@@ -515,7 +541,8 @@ in a destination layer. Distances are calculated based on the :ref:`center
 
   Display the nearest hub for the red input features
 
-.. seealso:: :ref:`qgisdistancetonearesthubpoints`, :ref:`qgisjoinattributesbynearest`
+.. seealso:: :ref:`qgisdistancetonearesthubpoints`,
+   :ref:`qgisjoinattributesbynearest`
 
 Parameters
 ..........
@@ -580,16 +607,25 @@ Outputs
        features, the identifier of their closest feature
        and the calculated distance.
 
+**Algorithm ID**: ``qgis:distancetonearesthublinetohub``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisdistancetonearesthubpoints:
 
 Distance to nearest hub (points)
 --------------------------------
-Creates a point layer representing the :ref:`center <qgispointonsurface>` of the
-input features with the addition of two fields containing the identifier of the
-nearest feature (based on its center point) and the distance between the points.
+Creates a point layer representing the
+:ref:`center <qgispointonsurface>` of the input features with the
+addition of two fields containing the identifier of the nearest
+feature (based on its center point) and the distance between the
+points.
 
-.. seealso:: :ref:`qgisdistancetonearesthublinetohub`, :ref:`qgisjoinattributesbynearest`
+.. seealso:: :ref:`qgisdistancetonearesthublinetohub`,
+   :ref:`qgisjoinattributesbynearest`
 
 Parameters
 ..........
@@ -653,6 +689,12 @@ Outputs
      - Point vector layer with the attributes of the
        input features, the identifier of their closest
        feature and the calculated distance.
+
+**Algorithm ID**: ``qgis:distancetonearesthubpoints``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgishublines:
@@ -768,19 +810,27 @@ Outputs
      - [vector: line]
      - The resulting line layer
 
+**Algorithm ID**: ``qgis:hublines``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgiskmeansclustering:
 
 K-means clustering
 ------------------
-Calculates the 2D distance based k-means cluster number for each input feature.
+Calculates the 2D distance based k-means cluster number for each input
+feature.
 
-K-means clustering aims to partition the features into k clusters in which
-each feature belongs to the cluster with the nearest mean.
-The mean point is represented by the barycenter of the clustered features.
+K-means clustering aims to partition the features into k clusters in
+which each feature belongs to the cluster with the nearest mean.
+The mean point is represented by the barycenter of the clustered
+features.
 
-If input geometries are lines or polygons, the clustering
-is based on the centroid of the feature.
+If input geometries are lines or polygons, the clustering is based on
+the centroid of the feature.
 
 .. figure:: img/kmeans.png
   :align: center
@@ -841,14 +891,21 @@ Outputs
      - Vector layer containing the original features with
        a field specifying the cluster they belong to
 
+**Algorithm ID**: ``qgis:kmeansclustering``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgislistuniquevalues:
 
 List unique values
 ------------------
-Lists unique values of an attribute table field and counts their number.
+Lists unique values of an attribute table field and counts their
+number.
 
-``Default menu``: :menuselection:`Vector --> Analysis Tools`
+**Default menu**: :menuselection:`Vector --> Analysis Tools`
 
 Parameters
 ..........
@@ -911,22 +968,30 @@ Outputs
      - A string with the comma separated list of unique values found
        in the input field
 
+**Algorithm ID**: ``qgis:listuniquevalues``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgismeancoordinates:
 
 Mean coordinate(s)
 ------------------
-Computes a point layer with the center of mass of geometries in an input layer.
+Computes a point layer with the center of mass of geometries in an
+input layer.
 
-An attribute can be specified as containing weights to be applied to each feature
-when computing the center of mass.
+An attribute can be specified as containing weights to be applied to
+each feature when computing the center of mass.
 
-If an attribute is selected in the parameter, features will be grouped according
-to values in this field. Instead of a single point with the center of mass of the
-whole layer, the output layer will contain a center of mass for the features in
+If an attribute is selected in the parameter, features will be grouped
+according to values in this field.
+Instead of a single point with the center of mass of the whole layer,
+the output layer will contain a center of mass for the features in
 each category.
 
-``Default menu``: :menuselection:`Vector --> Analysis Tools`
+**Default menu**: :menuselection:`Vector --> Analysis Tools`
 
 Parameters
 ..........
@@ -977,13 +1042,21 @@ Outputs
      - [vector: point]
      - Resulting point(s) layer
 
+**Algorithm ID**: ``qgis:meancoordinates``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgisnearestneighbouranalysis:
 
 Nearest neighbour analysis
 --------------------------
 Performs nearest neighbor analysis for a point layer.
 
-Output is generated as an HTML file with the computed statistical values:
+Output is generated as an HTML file with the computed statistical
+values:
 
 * Observed mean distance
 * Expected mean distance
@@ -991,7 +1064,7 @@ Output is generated as an HTML file with the computed statistical values:
 * Number of points
 * Z-Score
 
-``Default menu``: :menuselection:`Vector --> Analysis Tools`
+**Default menu**: :menuselection:`Vector --> Analysis Tools`
 
 .. seealso:: :ref:`qgisjoinattributesbynearest`
 
@@ -1054,13 +1127,20 @@ Outputs
      - [number]
      - Z-Score
 
+**Algorithm ID**: ``qgis:nearestneighbouranalysis``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisoverlapanalysis:
 
 Overlap analysis
 ---------------------
-Calculates the area and percentage cover by which features from an input layer
-are overlapped by features from a selection of overlay layers.
+Calculates the area and percentage cover by which features from an
+input layer are overlapped by features from a selection of overlay
+layers.
 
 New attributes are added to the output layer reporting the
 total area of overlap and percentage of the input feature
@@ -1118,6 +1198,12 @@ Outputs
      - The output layer with additional fields reporting the
        overlap (in map units and percentage) of the input feature
        overlapped by each of the selected layers.
+
+**Algorithm ID**: ``qgis:overlapanalysis``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisstatisticsbycategories:
@@ -1267,19 +1353,25 @@ the following statistics are returned for each grouped value:
      -
      -
 
+**Algorithm ID**: ``qgis:statisticsbycategories``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgissumlinelengths:
 
 Sum line lengths
 ----------------
-Takes a polygon layer and a line layer and measures the total length of lines and
-the total number of them that cross each polygon.
+Takes a polygon layer and a line layer and measures the total length
+of lines and the total number of them that cross each polygon.
 
-The resulting layer has the same features as the input polygon layer, but with two
-additional attributes containing the length and count of the lines across each
-polygon.
+The resulting layer has the same features as the input polygon layer,
+but with two additional attributes containing the length and count of
+the lines across each polygon.
 
-``Default menu``: :menuselection:`Vector --> Analysis Tools`
+**Default menu**: :menuselection:`Vector --> Analysis Tools`
 
 Parameters
 ..........
@@ -1335,6 +1427,12 @@ Outputs
      - [vector: polygon]
      - Polygon output layer with fields of lines length and
        line count
+
+**Algorithm ID**: ``qgis:sumlinelengths``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
