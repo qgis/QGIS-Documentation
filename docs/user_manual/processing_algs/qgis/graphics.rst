@@ -69,6 +69,12 @@ Outputs
      - HTML file with the plot.
        Available in the :menuselection:`Processing --> Result Viewer`.
 
+**Algorithm ID**: ``qgis:barplot``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisboxplot:
 
@@ -142,6 +148,12 @@ Outputs
      - HTML file with the plot.
        Available in the :menuselection:`Processing --> Result Viewer`.
 
+**Algorithm ID**: ``qgis:boxplot``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgismeanandstandarddeviationplot:
 
@@ -203,6 +215,12 @@ Outputs
      - [html]
      - HTML file with the plot.
        Available in the :menuselection:`Processing --> Result Viewer`.
+
+**Algorithm ID**: ``qgis:meanandstandarddeviationplot``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgispolarplot:
@@ -269,6 +287,12 @@ Outputs
      - HTML file with the plot.
        Available in the :menuselection:`Processing --> Result Viewer`.
 
+**Algorithm ID**: ``qgis:polarplot``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisrasterlayerhistogram:
 
@@ -332,6 +356,12 @@ Outputs
      - [html]
      - HTML file with the plot.
        Available in the :menuselection:`Processing --> Result Viewer`.
+
+**Algorithm ID**: ``qgis:rasterlayerhistogram``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisvectorlayerhistogram:
@@ -399,6 +429,12 @@ Outputs
      - HTML file with the plot.
        Available in the :menuselection:`Processing --> Result Viewer`.
 
+**Algorithm ID**: ``qgis:vectorlayerhistogram``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisvectorlayerscatterplot:
 
@@ -460,6 +496,12 @@ Outputs
      - [html]
      - HTML file with the plot.
        Available in the :menuselection:`Processing --> Result Viewer`.
+
+**Algorithm ID**: ``qgis:vectorlayerscatterplot``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisscatter3dplot:
@@ -526,3 +568,9 @@ Outputs
      - [html]
      - HTML file with the plot.
        Available in the :menuselection:`Processing --> Result Viewer`.
+
+**Algorithm ID**: ``qgis:scatter3dplot``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
