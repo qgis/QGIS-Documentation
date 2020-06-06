@@ -258,6 +258,178 @@ Alternatively, a unique class field can be specified.
 If both options are used, the weight field will take precedence and
 the unique class field will be ignored.
 
+``Default menu``: :menuselection:`Vector --> Analysis Tools`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Polygons**
+     - ``POLYGONS``
+     - [vector: polygon]
+     - Polygon layer whose features are associated with the count of
+       points they contain
+   * - **Points**
+     - ``POINTS``
+     - [vector: point]
+     - Point layer with features to count
+   * - **Weight field**
+
+       Optional
+     - ``WEIGHT``
+     - [tablefield: any]
+     - A field from the point layer.
+       The count generated will be the sum of the weight field of the
+       points contained by the polygon.
+       If the weight field is not numeric, the count will be ``0``.
+   * - **Class field**
+
+       Optional
+     - ``CLASSFIELD``
+     - [tablefield: any]
+     - Points are classified based on the selected attribute and if
+       several points with the same attribute value are within the
+       polygon, only one of them is counted.
+       The final count of the points in a polygon is, therefore, the
+       count of different classes that are found in it.
+   * - **Count field name**
+     - ``FIELD``
+     - [string]
+
+       Default: 'NUMPOINTS'
+     - The name of the field to store the count of points
+   * - **Count**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Specification of the output layer
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Count**
+     - ``OUTPUT``
+     - [vector: polygon]
+     - Resulting layer with the attribute table containing the
+       new column with the points count
+
+
+.. _qgisdbscanclustering:
+
+DBSCAN clustering
+-----------------
+Clusters point features based on a 2D implementation of Density-based spatial
+clustering of applications with noise (DBSCAN) algorithm.
+
+The algorithm requires two parameters, a minimum cluster size,
+and the maximum distance allowed between clustered points.
+
+.. seealso:: :ref:`qgiskmeansclustering`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: point]
+     - Layer to analyze
+   * - **Minimum cluster size**
+     - ``MIN_SIZE``
+     - [number]
+
+       Default: 5
+     - Minimum number of features to generate a cluster
+   * - **Maximum distance between clustered points**
+     - ``EPS``
+     - [number]
+
+       Default: 1.0
+     - Distance beyond which two features can not belong
+       to the same cluster (eps)
+   * - **Cluster field name**
+     - ``FIELD_NAME``
+     - [string]
+
+       Default: 'CLUSTER_ID'
+     - Name of the field where the associated cluster number
+       shall be stored
+   * - **Treat border points as noise (DBSCAN\*)**
+
+       Optional
+     - ``DBSCAN*``
+     - [boolean]
+
+       Default: False
+     - If checked, points on the border of a cluster are
+       themselves treated as unclustered points, and only
+       points in the interior of a cluster are tagged as
+       clustered.
+   * - **Clusters**
+     - ``OUTPUT``
+     - [vector: point]
+     - Vector layer for the result of the clustering
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Clusters**
+     - ``OUTPUT``
+     - [vector: point]
+     - Vector layer containing the original features with a
+       field setting the cluster they belong to
+   * - **Number of clusters**
+     - ``NUM_CLUSTERS``
+     - [number]
+     - The number of clusters discovered
+
+**Algorithm ID**: ``qgis:dbscanclustering``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgisdistancematrix:
+
+Distance matrix
+---------------
+Calculates for point features distances to their nearest features in
+the same layer or in another layer.
+
 **Default menu**: :menuselection:`Vector --> Analysis Tools`
 
 .. seealso:: :ref:`qgisjoinattributesbynearest`
