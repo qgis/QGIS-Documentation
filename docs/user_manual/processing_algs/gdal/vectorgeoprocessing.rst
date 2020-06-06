@@ -55,8 +55,9 @@ Parameters
       - [boolean]
 
         Default: False
-      - If set, the result is dissolved. If no field is set for dissolving,
-        all the buffers are dissolved into one feature.
+      - If set, the result is dissolved.
+	If no field is set for dissolving, all the buffers are
+	dissolved into one feature.
    *  - **Produce one feature for each geometry in any kind of
         geometry collection in the source file**
       - ``EXPLODE_COLLECTIONS``
@@ -101,6 +102,12 @@ Outputs
       - [vector: polygon]
       - The output buffer layer
 
+**Algorithm ID**: ``gdal:buffervectors``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdalclipvectorbyextent:
 
@@ -108,7 +115,8 @@ Clip vector by extent
 ----------------------
 Clips any OGR-supported vector file to a given extent.
 
-This algorithm is derived from the `ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_ .
+This algorithm is derived from the
+`ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_ .
 
 Parameters
 ..........
@@ -170,6 +178,12 @@ Outputs
       - The output (clipped) layer.
         The default format is "ESRI Shapefile".
 
+**Algorithm ID**: ``gdal:clipvectorbyextent``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdalclipvectorbymasklayer:
 
@@ -199,7 +213,8 @@ Parameters
    *  - **Mask layer**
       - ``MASK``
       - [vector: polygon]
-      - Layer to be used as clipping extent for the input vector layer.
+      - Layer to be used as clipping extent for the input vector
+	layer.
    *  - **Additional creation options**
 
         (optional)
@@ -237,6 +252,12 @@ Outputs
       - [same as input]
       - The output (masked) layer.
         The default format is "ESRI Shapefile".
+
+**Algorithm ID**: ``gdal:clipvectorbymasklayer``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _gdaldissolve:
@@ -303,8 +324,8 @@ Parameters
       - [boolean]
 
         Default: False
-      - Compute the area and perimeter of dissolved features and include
-        them in the output layer
+      - Compute the area and perimeter of dissolved features and
+	include them in the output layer
    *  - **Compute min/max/sum/mean for attribute**
       - ``COMPUTE_STATISTICS``
       - [boolean]
@@ -353,7 +374,14 @@ Outputs
    *  - **Dissolved**
       - ``OUTPUT``
       - [same as input]
-      - The output multipart geometry layer (with dissolved geometries)
+      - The output multipart geometry layer (with dissolved
+	geometries)
+
+**Algorithm ID**: ``gdal:dissolve``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _gdaloffsetcurve:
@@ -361,8 +389,8 @@ Outputs
 Offset curve
 ------------
 Offsets lines by a specified distance.
-Positive distances will offset lines to the left, and negative distances will
-offset them to the right.
+Positive distances will offset lines to the left, and negative
+distances will offset them to the right.
 
 Parameters
 ..........
@@ -429,6 +457,12 @@ Outputs
       - [vector: line]
       - The output offset curve layer
 
+**Algorithm ID**: ``gdal:offsetcurve``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdalonesidebuffer:
 
@@ -488,8 +522,9 @@ Parameters
       - [boolean]
 
         Default: False
-      - If set, the result is dissolved. If no field is set for dissolving,
-        all the buffers are dissolved into one feature.
+      - If set, the result is dissolved.
+	If no field is set for dissolving, all the buffers are
+	dissolved into one feature.
    *  - **Produce one feature for each geometry in any kind of
         geometry collection in the source file**
       - ``EXPLODE_COLLECTIONS``
@@ -534,12 +569,19 @@ Outputs
       - [vector: polygon]
       - The output buffer layer
 
+**Algorithm ID**: ``gdal:onesidebuffer``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdalpointsalonglines:
 
 Points along lines
 ------------------
-Generates a point on each line of a line vector layer at a distance from start.
+Generates a point on each line of a line vector layer at a distance
+from start.
 The distance is provided as a fraction of the line length.
 
 Parameters
@@ -608,3 +650,9 @@ Outputs
       - ``OUTPUT``
       - [vector: point]
       - The output point layer
+
+**Algorithm ID**: ``gdal:pointsalonglines``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
