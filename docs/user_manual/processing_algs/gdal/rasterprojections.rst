@@ -14,9 +14,10 @@ Assign projection
 -----------------
 Applies a coordinate system to a raster dataset.
 
-This algorithm is derived from the `GDAL edit utility <https://gdal.org/gdal_edit.html>`_ .
+This algorithm is derived from the
+`GDAL edit utility <https://gdal.org/gdal_edit.html>`_ .
 
-``Default menu``: :menuselection:`Raster --> Projections`
+**Default menu**: :menuselection:`Raster --> Projections`
 
 Parameters
 ..........
@@ -56,6 +57,12 @@ Outputs
      - [raster]
      - The output raster layer (with the new projection information)
 
+**Algorithm ID**: ``gdal:assignprojection``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdalextractprojection:
 
@@ -64,9 +71,10 @@ Extract projection
 Extracts the projection of a raster file and writes it into a *world*
 file with extension :file:`.wld`.
 
-This algorithm is derived from the `GDAL srsinfo utility <https://gdal.org/gdalsrsinfo.html>`_ .
+This algorithm is derived from the
+`GDAL srsinfo utility <https://gdal.org/gdalsrsinfo.html>`_ .
 
-``Default menu``: :menuselection:`Raster --> Projections`
+**Default menu**: :menuselection:`Raster --> Projections`
 
 Parameters
 ..........
@@ -111,26 +119,34 @@ Outputs
    *  - **World file**
       - ``WORLD_FILE``
       - [file]
-      - Text file with extension :file:`.wld` containing transformation
-        parameters for the raster file.
+      - Text file with extension :file:`.wld` containing
+	transformation parameters for the raster file.
    *  - **ESRI Shapefile prj file**
       - ``PRJ_FILE``
       - [file]
       - Text file with :file:`.prj` extension that describes the CRS.
-        Will be ``None`` if :guilabel:`Create also .prj file` is False.
+        Will be ``None`` if :guilabel:`Create also .prj file` is
+	False.
+
+**Algorithm ID**: ``gdal:extractprojection``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _gdalwarpreproject:
 
 Warp (reproject)
 ----------------
-Reprojects a raster layer into another Coordinate Reference System (CRS).
+Reprojects a raster layer into another Coordinate Reference System
+(CRS).
 The output file resolution and the resampling method can be chosen.
 
 This algorithm is derived from the
 `GDAL warp utility <https://gdal.org/gdalwarp.html>`_ .
 
-``Default menu``: :menuselection:`Raster --> Projections`
+**Default menu**: :menuselection:`Raster --> Projections`
 
 Parameters
 ..........
@@ -242,7 +258,8 @@ Parameters
      - [extent]
      - Sets the georeferenced extent of the output file to be
        created (in the :guilabel:`Target CRS` by default.
-       In the :guilabel:`CRS of the target raster extent`, if specified).
+       In the :guilabel:`CRS of the target raster extent`, if
+       specified).
    * - **CRS of the target raster extent**
 
        Optional
@@ -302,3 +319,9 @@ Outputs
 
        Default: ``[Save to temporary file]``
      - Reprojected output raster layer
+
+**Algorithm ID**: ``gdal:warpreproject``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**

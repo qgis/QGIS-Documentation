@@ -14,9 +14,10 @@ Clip raster by extent
 ---------------------
 Clips any GDAL-supported raster file to a given extent.
 
-This algorithm is derived from the `GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
+This algorithm is derived from the
+`GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
 
-``Default menu``: :menuselection:`Raster --> Extraction`
+**Default menu**: :menuselection:`Raster --> Extraction`
 
 Parameters
 ..........
@@ -121,6 +122,12 @@ Outputs
      - [raster]
      - Output raster layer clipped by the given extent
 
+**Algorithm ID**: ``gdal:cliprasterbyextent``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdalcliprasterbymasklayer:
 
@@ -128,9 +135,10 @@ Clip raster by mask layer
 -------------------------
 Clips any GDAL-supported raster by a vector mask layer.
 
-This algorithm is derived from the `GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
+This algorithm is derived from the
+`GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
 
-``Default menu``: :menuselection:`Raster --> Extraction`
+**Default menu**: :menuselection:`Raster --> Extraction`
 
 Parameters
 ..........
@@ -182,7 +190,8 @@ Parameters
      - [boolean]
 
        Default: True
-     - Applies the vector layer extent to the output raster if checked.
+     - Applies the vector layer extent to the output raster if
+       checked.
    * - **Keep resolution of input raster**
      - ``KEEP_RESOLUTION``
      - [boolean]
@@ -288,6 +297,12 @@ Outputs
      - [raster]
      - Output raster layer clipped by the vector layer
 
+**Algorithm ID**: ``gdal:cliprasterbymasklayer``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdalcontour:
 
@@ -295,9 +310,10 @@ Contour
 -------
 Extracts contour lines from any GDAL-supported elevation raster.
 
-This algorithm is derived from the `GDAL contour utility <https://gdal.org/gdal_contour.html>`_ .
+This algorithm is derived from the
+`GDAL contour utility <https://gdal.org/gdal_contour.html>`_ .
 
-``Default menu``: :menuselection:`Raster --> Extraction`
+**Default menu**: :menuselection:`Raster --> Extraction`
 
 Parameters
 ..........
@@ -414,3 +430,9 @@ Outputs
      - ``OUTPUT``
      - [vector: line]
      - Output vector layer with contour lines
+
+**Algorithm ID**: ``gdal:contour``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
