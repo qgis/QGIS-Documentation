@@ -985,9 +985,9 @@ Parameters
      - The type of the final joined layer. One of:
 
        * 0 --- Create separate feature for each matching feature
-	       (one-to-many)
+	 (one-to-many)
        * 1 --- Take attributes of the first matching feature only
-	       (one-to-one)
+	 (one-to-one)
 
    * - **Discard records which could not be joined**
      - ``DISCARD_NONMATCHING``
@@ -1143,9 +1143,9 @@ Parameters
      - The type of the final joined layer. One of:
 
        * 0 --- Create separate feature for each matching feature
-	       (one-to-many)
+	 (one-to-many)
        * 1 --- Take attributes of the first matching feature only
-	       (one-to-one)
+	 (one-to-one)
 
    * - **Discard records which could not be joined**
      - ``DISCARD_NONMATCHING``
