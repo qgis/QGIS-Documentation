@@ -484,8 +484,7 @@ Attributes are not checked, so in case two features have identical
 geometries but different attributes, only one of them will be added to
 the result layer.
 
-.. seealso:: :ref:`qgisdropgeometries`,
-   :ref:`qgisremovenullgeometries`,
+.. seealso:: :ref:`qgisremovenullgeometries`,
    :ref:`qgisdeleteduplicatesbyattribute`
 
 Parameters
