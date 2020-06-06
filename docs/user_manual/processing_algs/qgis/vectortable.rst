@@ -797,7 +797,6 @@ Outputs
      - The output layers with filtered features (as many as there are
        filters).
 
-
 **Algorithm ID**: ``qgis:featurefilter``
 
 .. include:: qgis_algs_include.rst
@@ -894,6 +893,7 @@ Outputs
      - ``OUTPUT``
      - [vector: any]
      - Output layer with the calculated field values
+
 **Algorithm ID**: ``qgis:fieldcalculator``
 
 .. include:: qgis_algs_include.rst
