@@ -159,17 +159,17 @@ Climb along line
 ----------------------
 
 Calculates the total climb and descent along line geometries.
-The input layer must have Z values present. If Z values are not available,
-the  :ref:`qgissetzfromraster` algorithm may be used to add Z values
-from a DEM layer.
+The input layer must have Z values present. If Z values are not
+available, the  :ref:`qgissetzfromraster` algorithm may be used to add
+Z values from a DEM layer.
 
-The output layer is a copy of the input layer with additional fields that
-contain the total climb (``climb``), total descent (``descent``), the
-minimum elevation (``minelev``) and the maximum elevation (``maxelev``) for
-each line geometry.
-If the input layer contains fields with the same names as these added fields,
-they will be renamed (field names will be altered to "name_2", "name_3", etc,
-finding the first non-duplicate name).
+The output layer is a copy of the input layer with additional fields
+that contain the total climb (``climb``), total descent (``descent``),
+the minimum elevation (``minelev``) and the maximum elevation
+(``maxelev``) for each line geometry.
+If the input layer contains fields with the same names as these added
+fields, they will be renamed (field names will be altered to "name_2",
+"name_3", etc, finding the first non-duplicate name).
 
 Parameters
 ..........
@@ -334,8 +334,8 @@ Outputs
 
 DBSCAN clustering
 -----------------
-Clusters point features based on a 2D implementation of Density-based spatial
-clustering of applications with noise (DBSCAN) algorithm.
+Clusters point features based on a 2D implementation of Density-based
+spatial clustering of applications with noise (DBSCAN) algorithm.
 
 The algorithm requires two parameters, a minimum cluster size,
 and the maximum distance allowed between clustered points.
