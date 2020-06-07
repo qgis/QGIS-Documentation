@@ -90,7 +90,7 @@ html_theme_options = {
     # includehidden:Specifies if the navigation includes hidden table(s) of contents – that is, any toctree directive that is marked with the :hidden: option. Default: True,
     # 'includehidden': True,
     # canonical_url: This will specify a canonical URL meta link element to tell search engines which URL should be ranked as the primary URL for your documentation. This is important if you have multiple URLs that your documentation is available through. The URL points to the root path of the documentation and requires a trailing slash.
-    'canonical_url': 'https://docs.qgis.org/latest/',
+    'canonical_url': 'https://docs.qgis.org/latest/en/',
     # display_version: If True, the version number is shown at the top of the sidebar. Default: True,
     'display_version': True,
     # logo_only: Only display the logo image, do not display the project name at the top of the sidebar. Default: False,
