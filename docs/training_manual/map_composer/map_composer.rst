@@ -47,7 +47,7 @@ yours is as well.
 
 #. Right-click on the sheet in the central part of the layout window
    and choose :guilabel:`Page properties...` in the context menu.
-   Check that the values in the :guilable:`Item Properties` tab are set
+   Check that the values in the :guilabel:`Item Properties` tab are set
    to the following:
 
    * :guilabel:`Size`: ``A4``
