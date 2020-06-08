@@ -47,9 +47,14 @@ existing dataset. Therefore, you'll need to define your own new dataset first.
    This has no impact on the rest of the dialog, but it will cause the correct
    type of geometry to be used when the vector dataset is created.
 
-   The next field allows you to specify the Coordinate Reference System, or CRS. CRS is a method of associating numerical coordinates with a position on the surface of the Earth.  See the User Manual on :ref:`Working with Projections<label_projections>` to learn more.
+   The next field allows you to specify the Coordinate Reference System,
+   or CRS. CRS is a method of associating numerical coordinates with a
+   position on the surface of the Earth.
+   See the User Manual on :ref:`Working with Projections <label_projections>`
+   to learn more.
    
-   For this example we will use the default CRS associated with this project, which  is WGS84.
+   For this example we will use the default CRS associated with this
+   project, which is WGS84.
 
    .. figure:: img/default_crs.png
      :align: center
@@ -336,7 +341,9 @@ Our track is a little further to the south:
    GeoPackage file :file:`training-data.gpkg` included in the
    :file:`exercise_data` folder of the training data you downloaded.
 #. Activate edit mode.
-#. Since you are working with a line feature, click on the |addLineFeature| :sup:`Add Line` button to initiate line digitizing mode.
+#. Since you are working with a line feature, click on the
+   |addLineFeature| :sup:`Add Line` button to initiate line
+   digitizing mode.
 #. One at a time, digitize the path and the track on the ``routes`` layer.
    Try to follow the routes as accurately as possible, adding additional points along
    corners or turns.
