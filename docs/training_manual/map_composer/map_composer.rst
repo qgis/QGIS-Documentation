@@ -11,16 +11,16 @@ So for someone who doesn't have the data or the same GIS program
 Luckily, QGIS can export its map file to a format that anyone's
 computer can read, as well as printing out the map if you have a
 printer connected.
-Both exporting and printing is handled via the print layout.
+Both exporting and printing is handled via the *Print Layout*.
 
-**The goal for this lesson:** To use the QGIS print layout to create a basic
-map with all the required settings.
+**The goal for this lesson:** To use the QGIS *Print Layout* to create
+a basic map with all the required settings.
 
 |basic| |FA| The Layout Manager
 -------------------------------------------------------------------------------
 
 QGIS allows you to create multiple maps using the same map file.
-For this reason, it has a tool called the :guilabel:`Layout Manager`.
+For this reason, it has a tool called the *Layout Manager*.
 
 #. Click on the :menuselection:`Project --> Layout Manager` menu
    entry to open this tool.
@@ -36,8 +36,8 @@ For this reason, it has a tool called the :guilabel:`Layout Manager`.
 .. figure:: img/print_composer_menu.png
    :align: center
 
-Whichever route you take to get there, you will now see the :guilabel:`Print
-Layout` window:
+Whichever route you take to get there, you will now see
+the *Print Layout* window:
 
 .. figure:: img/print_composer_dialog.png
    :align: center
@@ -110,8 +110,8 @@ yours is as well.
 Remember that the size and position you've given the map doesn't need
 to be final.
 You can always come back and change it later if you're not satisfied.
-For now, you need to ensure that you've saved your work on this map. Because a :guilabel:`Layout` in QGIS is part of the main map file,
-you will need to save your main project.
+For now, you need to ensure that you've saved your work on this map. Because a *Print Layout* in QGIS is part of the main map file, you
+will need to save your main project.
 Go to the main QGIS window (the one with the :guilabel:`Layers` panel
 and all the other familiar elements you were working with before),
 and save your project from there as usual.
@@ -166,7 +166,7 @@ First, let us add a title.
 
    #. Select the label by clicking on it.
    #. Click on the :guilabel:`Item Properties` tab in the side panel
-      of the :guilabel:`Layout` window.
+      of the layout window.
    #. Change the text of the label to "|majorUrbanName|":
 
    #. Use this interface to set the font and alignment options:
@@ -220,7 +220,7 @@ Not everything on the legend is necessary, so let's remove some unwanted items.
 
 #. In the :guilabel:`Item Properties` tab, you'll find the
    :guilabel:`Legend items` panel.
-#. Select the :guilabel:`buildings` entry.
+#. Select the :guilabel:`training_data_buildings` entry.
 #. Delete it from the legend by clicking the
    |signMinus| button:  
 
@@ -228,10 +228,10 @@ You can also rename items.
 
 #. Select a layer from the same list.
 #. Click the |edit| button.
-
 #. Rename the layers to ``Places``, ``Roads and Streets``,
    ``Surface Water``, and ``Rivers``.
-#. Set ``landuse`` to :guilabel:`Hidden`.
+#. Set ``landuse`` to :guilabel:`Hidden` (right-click to bring up the
+   context menu).
 
 You can also reorder the items:
 
@@ -251,7 +251,7 @@ This is the result:
 .. note::  Did you remember to save your work often?
 
 Finally the map is ready for export! You'll see the export buttons
-near the top left corner of the :guilabel:`Layout` window:
+near the top left corner of the layout window:
 
   |filePrint| |saveMapAsImage| |saveAsSVG|
   |saveAsPDF|
