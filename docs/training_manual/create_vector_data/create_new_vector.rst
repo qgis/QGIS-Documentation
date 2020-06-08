@@ -29,7 +29,7 @@ existing dataset. Therefore, you'll need to define your own new dataset first.
 
 #. Click :guilabel:`...` for the :guilabel:`File name` field.
    A save dialog will appear.
-#. Navigate to the ``exercise_data`` directory.
+#. Navigate to the :file:`exercise_data` directory.
 #. Save your new layer as :file:`school_property.shp`.
 
    It's important to decide which kind of dataset you want at this stage. Each
@@ -47,10 +47,9 @@ existing dataset. Therefore, you'll need to define your own new dataset first.
    This has no impact on the rest of the dialog, but it will cause the correct
    type of geometry to be used when the vector dataset is created.
 
-   The next field allows you to specify the Coordinate Reference System, or CRS. A
-   CRS specifies how to describe a point on Earth in terms of coordinates, and
-   because there are many different ways to do this, there are many different CRSs.
-   The CRS of this project is WGS84, so it's already correct by default:
+   The next field allows you to specify the Coordinate Reference System, or CRS. CRS is a method of associating numerical coordinates with a position on the surface of the Earth.  See the User Manual on :ref:`Working with Projections<label_projections>` to learn more.
+   
+   For this example we will use the default CRS associated with this project, which  is WGS84.
 
    .. figure:: img/default_crs.png
      :align: center
@@ -96,8 +95,8 @@ or aerial photography.
 For our example, you'll be using the digitizing approach. Sample raster datasets
 are provided, so you'll need to import them as necessary.
 
-#. Click on Data Source Manager button |dataSourceManager| :sup:`Data Source Manager` button.
-#. Select :guilabel:`Raster` on the left side.
+#. Click on |dataSourceManager| :sup:`Data Source Manager` button.
+#. Select |raster| :guilabel:`Raster` on the left side.
 #. In the :guilabel:`Source` panel, click on the :guilabel:`...` button: 
 #. Navigate to :file:`exercise_data/raster/`.
 #. Select the file :file:`3420C_2010_327_RGB_LATLNG.tif`.
@@ -141,7 +140,7 @@ important data. Edit mode is switched on or off individually for each layer.
 
 To enter edit mode for the ``school_property`` layer:
 
-#. Click on the ``school_property`` layer in the :guilabel:`Layer list` to select it.
+#. Click on the ``school_property`` layer in the :guilabel:`Layers` panel to select it.
 #. Click on the |toggleEditing| :sup:`Toggle Editing` button.
 
    If you can't find this button, check that the :guilabel:`Digitizing` toolbar is
@@ -302,7 +301,7 @@ table.
    .. figure:: img/vertex_selected.png
      :align: center
 
-#. To update the a coordinate, double left click on a cell in the table
+#. To update a coordinate, double left click on the cell in the table
    that you want to edit and enter the updated value.
    In this example, the x coordinate of row ``4`` is updated from
    ``20.4450`` to ``20.4444``.
@@ -336,11 +335,12 @@ Our track is a little further to the south:
 #. If the roads layer is not in your map, then add it from the
    GeoPackage file :file:`training-data.gpkg` included in the
    :file:`exercise_data` folder of the training data you downloaded.
-
+#. Activate edit mode.
+#. Since you are working with a line feature, click on the |addLineFeature| :sup:`Add Line` button to initiate line digitizing mode.
 #. One at a time, digitize the path and the track on the ``routes`` layer.
    Try to follow the routes as accurately as possible, adding additional points along
    corners or turns.
-#. Set the ``type`` attribute value to ``path`` or ``track``.\
+#. Set the ``type`` attribute value to ``path`` or ``track``.
 #. Use the :guilabel:`Layer Properties` dialog to add styling to your routes.
    Feel free to use different styles for paths and tracks.
 #. Save your edits and toggle off editing mode by pressing the
@@ -412,4 +412,8 @@ be useful.
 .. |undo| image:: /static/common/mActionUndo.png
    :width: 1.5em
 .. |selectRectangle| image:: /static/common/mActionSelectRectangle.png
+   :width: 1.5em
+.. |raster| image:: /static/common/mActionAddRasterLayer.png
+   :width: 1.5em
+.. |addLineFeature| image:: /static/common/mActionCaptureLine.png
    :width: 1.5em
