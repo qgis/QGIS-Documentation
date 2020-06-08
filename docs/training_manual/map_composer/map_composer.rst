@@ -98,7 +98,7 @@ yours is as well.
 
 #. Zoom and pan the map in the main QGIS window.
    You can also pan the map using the |moveItemContent|
-   :guilabel:`Move item content` tool.
+   :sup:`Move item content` tool.
 
    The map view updates as you zoom in or zoom out.
 #. If, for any reason, the map view does not refresh correctly,
@@ -124,7 +124,7 @@ They need some context, which is what you'll provide for them by
 adding map elements.
 First, let us add a title.
 
-#. Click on this button: |label|
+#. Click on the |label| :sup:`Add Label` button
 
 #. Click on the page, above the map, and a label will appear at the
    top of the map.
@@ -144,9 +144,9 @@ First, let us add a title.
 #. Click the map to select it
 #. Hold in :kbd:`Shift` on your keyboard and click on the label so
    that both the map and the label are selected.
-#. Look for the :guilabel:`Align` button |alignLeft| and click on the
-   dropdown arrow next to it to reveal the positioning options and
-   click :guilabel:`Align center`:
+#. Look for the |alignLeft| :sup:`Align selected items left` button
+   and click on the dropdown arrow next to it to reveal the
+   positioning options and click :guilabel:`Align center`:
 
    .. figure:: img/align_center_dropdown.png
       :align: center
@@ -205,7 +205,7 @@ In other cases, it's more difficult to guess, like the colors of the
 forests.
 Let's add a new legend.
 
-#. Click on this button: |addLegend|
+#. Click on this |addLegend| :sup:`Add Legend` button
 
 #. Click on the page to place the legend, and move it to where you
    want it:
@@ -227,7 +227,7 @@ Not everything on the legend is necessary, so let's remove some unwanted items.
 You can also rename items.
 
 #. Select a layer from the same list.
-#. Click the :guilabel:`Edit` button: |edit|
+#. Click the |edit| button.
 
 #. Rename the layers to ``Places``, ``Roads and Streets``,
    ``Surface Water``, and ``Rivers``.
@@ -256,7 +256,7 @@ near the top left corner of the :guilabel:`Layout` window:
   |filePrint| |saveMapAsImage| |saveAsSVG|
   |saveAsPDF|
 
-The button on the left is the :guilabel:`Print` button, which
+The button on the left is the *Print Layout* button, which
 interfaces with a printer.
 Since the printer options will differ depending on the model of
 printer that you're working with, it's probably better to consult the
@@ -265,9 +265,9 @@ this topic.
 
 The other three buttons allow you to export the map page to a file. There are three export formats to choose from:
 
-- :guilabel:`Export as Image`
-- :guilabel:`Export as SVG`
-- :guilabel:`Export as PDF`
+- *Export as Image*
+- *Export as SVG*
+- *Export as PDF*
 
 Exporting as an image will give you a selection of various common
 image formats to choose from.
@@ -289,14 +289,14 @@ that allows them to import and edit this format.
 
 For our purposes, we're going to use PDF.
 
-#. Click the :guilabel:`Export as PDF` button: |saveAsPDF|
+#. Click the |saveAsPDF| :sup:`Export as PDF` button
 #. Choose a save location and a file name as usual.
 #. Click :guilabel:`Save`.
 
 |IC|
 -------------------------------------------------------------------------------
 
-#. Close the :guilabel:`Layout` window
+#. Close the layout window
 #. Save your map
 #. Find your exported PDF using your operating system's file manager
 #. Open it
