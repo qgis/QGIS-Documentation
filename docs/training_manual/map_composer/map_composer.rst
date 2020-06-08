@@ -21,7 +21,8 @@ reason, it has a tool called the :guilabel:`Layout Manager`.
 
 * Click on the :menuselection:`Project --> Layout Manager` menu entry to open
   this tool.  You'll see a blank :guilabel:`Layout manager` dialog appear.
-* Click the :guilabel:`Create...` button and give the new layout the name of
+* Under :guilabel:`New from Template`, select :guilabel:`Empty layout`,
+  click the :guilabel:`Create...` button, and give the new layout the name of
   |majorUrbanName|.
 * Click :guilabel:`OK`.
 
@@ -44,61 +45,65 @@ Layout` window:
 In this example, the composition was already the way we wanted it. Ensure that
 yours is as well.
 
-* In the :guilabel:`Print Layout` window, check that the values under
-  :menuselection:`Composition --> Paper and Quality` are set to the following:
+#. Right-click on the sheet in the central part of the layout window
+   and choose :guilabel:`Page properties...` in the context menu.
+   Check that the values in the :guilable:`Item Properties` tab are set
+   to the following:
 
-- :guilabel:`Size`: :kbd:`A4 (210x297mm)`
-- :guilabel:`Orientation`: :kbd:`Landscape`
-- :guilabel:`Quality`: :kbd:`300dpi`
+   * :guilabel:`Size`: ``A4``
+   * :guilabel:`Orientation`: ``Landscape``
 
-Now you've got the page layout the way you wanted it, but this page is still
-blank. It clearly lacks a map. Let's fix that!
+   Now you've got the page layout the way you wanted it, but this page is still
+   blank. It clearly lacks a map. Let's fix that!
 
-* Click on the :guilabel:`Add New Map` button: |addMap|
+#. Click on the :guilabel:`Add New Map` button: |addMap|
 
-With this tool activated, you'll be able to place a map on the page.
+   With this tool activated, you'll be able to place a map on the page.
 
-* Click and drag a box on the blank page:
+#. Click and drag a box on the blank page:
 
-.. figure:: img/drag_add_map.png
-   :align: center
+   .. figure:: img/drag_add_map.png
+      :align: center
 
-The map will appear on the page.
+   The map will appear on the page.
 
-* Move the map by clicking and dragging it around:
+#. Move the map by clicking and dragging it around:
 
-.. figure:: img/move_map.png
-   :align: center
+   .. figure:: img/move_map.png
+      :align: center
 
-* Resize it by clicking and dragging the boxes in the corners:
+#. Resize it by clicking and dragging the boxes in the corners:
 
-.. figure:: img/resize_map.png
-   :align: center
+   .. figure:: img/resize_map.png
+      :align: center
 
-.. note::  Your map may look a lot different, of course! This depends on how
-   your own project is set up. But not to worry! These instructions are
-   general, so they will work the same regardless of what the map itself looks
-   like.
+   .. note::  Your map may look a lot different, of course!
+      This depends on how your own project is set up.
+      But not to worry! These instructions are general, so they will
+      work the same regardless of what the map itself looks like.
 
-* Be sure to leave margins along the edges, and a space along the top for the
-  title.
+#. Be sure to leave margins along the edges, and a space along the
+   top for the title.
 
-* Zoom in and out on the page (but not the map!) by using these buttons:
+#. Zoom in and out on the page (but not the map!) by using these
+   buttons:
 
-  |zoomFullExtent| |zoomIn| |zoomOut|
+   |zoomFullExtent| |zoomIn| |zoomOut|
 
-* Zoom and pan the map in the main QGIS window. You can also pan the map using
-  the :guilabel:`Move item content` tool: |moveItemContent|
+#. Zoom and pan the map in the main QGIS window.
+   You can also pan the map using the :guilabel:`Move item content`
+   tool: |moveItemContent|
 
-When zooming in, the map view will not refresh by itself. This is so that it
-doesn't waste your time redrawing the map while you're zooming the page to
-where you want it, but it also means that if you zoom in or out, the map will
-be at the wrong resolution and will look ugly or unreadable.
+   When zooming in, the map view will not refresh by itself.
+   This is so that it doesn't waste your time redrawing the map while
+   you're zooming the page to where you want it, but it also means
+   that if you zoom in or out, the map will be at the wrong
+   resolution and will look ugly or unreadable.
 
-* Force the map to refresh by clicking this button:
+#. Force the map to refresh by clicking this button:
 
-.. figure:: img/refresh_button.png
-   :align: center
+   .. figure:: img/refresh_button.png
+      :align: center
 
 Remember that the size and position you've given the map doesn't need to be
 final. You can always come back and change it later if you're not satisfied.
