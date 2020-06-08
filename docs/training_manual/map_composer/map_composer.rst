@@ -56,7 +56,7 @@ yours is as well.
    Now you've got the page layout the way you wanted it, but this page is still
    blank. It clearly lacks a map. Let's fix that!
 
-#. Click on the :guilabel:`Add New Map` button: |addMap|
+#. Click on the |addMap| :sup:`Add New Map` button: 
 
    With this tool activated, you'll be able to place a map on the page.
 
@@ -72,7 +72,7 @@ yours is as well.
    .. figure:: img/move_map.png
       :align: center
 
-#. Resize it by clicking and dragging the boxes in the corners:
+#. Resize it by clicking and dragging the boxes on the edges:
 
    .. figure:: img/resize_map.png
       :align: center
@@ -91,16 +91,12 @@ yours is as well.
    |zoomFullExtent| |zoomIn| |zoomOut|
 
 #. Zoom and pan the map in the main QGIS window.
-   You can also pan the map using the :guilabel:`Move item content`
-   tool: |moveItemContent|
+   You can also pan the map using the |moveItemContent|
+   :guilabel:`Move item content` tool.
 
-   When zooming in, the map view will not refresh by itself.
-   This is so that it doesn't waste your time redrawing the map while
-   you're zooming the page to where you want it, but it also means
-   that if you zoom in or out, the map will be at the wrong
-   resolution and will look ugly or unreadable.
-
-#. Force the map to refresh by clicking this button:
+   The map view updates as you zoom in or zoom out.
+#. If, for any reason, the map view does not refresh correctly,
+   you can force the map to refresh by clicking this button:
 
    .. figure:: img/refresh_button.png
       :align: center
