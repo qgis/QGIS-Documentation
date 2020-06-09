@@ -107,15 +107,18 @@ Ensure that yours is as well.
    .. figure:: img/refresh_button.png
       :align: center
 
-Remember that the size and position you've given the map doesn't need
-to be final.
-You can always come back and change it later if you're not satisfied.
-For now, you need to ensure that you've saved your work on this map.
-Because a *Print Layout* in QGIS is part of the main map file, you
-will need to save your main project.
-Go to the main QGIS window (the one with the :guilabel:`Layers` panel
-and all the other familiar elements you were working with before),
-and save your project from there as usual.
+   Remember that the size and position you've given the map doesn't
+   need to be final.
+   You can always come back and change it later if you're not
+   satisfied.
+   For now, you need to ensure that you've saved your work on this
+   map.
+   Because a *Print Layout* in QGIS is part of the main map file,
+   you must save your project.
+
+#. Go to the :menuselection:`Layout -->` |fileSave|
+   :menuselection:`Save Project`.
+   This is a convenient shortcut to the one in the main dialog.
 
 |basic| |FA| Adding a Title
 ----------------------------------------------------------------------
@@ -128,8 +131,9 @@ First, let us add a title.
 
 #. Click on the |label| :sup:`Add Label` button
 
-#. Click on the page, above the map, and a label will appear at the
-   top of the map.
+#. Click on the page, above the map, accept the suggested values in
+   the :guilabel:`New Item Properties` dialog, and a label will
+   appear at the top of the map.
 
 #. Resize it and place it in the top center of the page.
    It can be resized and moved in the same way that you resized and
@@ -148,7 +152,8 @@ First, let us add a title.
    that both the map and the label are selected.
 #. Look for the |alignLeft| :sup:`Align selected items left` button
    and click on the dropdown arrow next to it to reveal the
-   positioning options and click :guilabel:`Align center`:
+   positioning options and click |alignHCenter|
+   :guilabel:`Align center`:
 
    .. figure:: img/align_center_dropdown.png
       :align: center
@@ -156,16 +161,19 @@ First, let us add a title.
    To make sure that you don't accidentally move these elements
    around now that you've aligned them, you can lock items into place:
 
-#. With both the label and map selected, click the
-   |lockItems| :sup:`Lock Selected Items` button in the *Actions*
-   Toolbar.
+   #. With both the label and map selected, click the
+      |lockItems| :sup:`Lock Selected Items` button in the *Actions*
+      Toolbar.
 
    .. note:: Click the |unlockAll| :sup:`Unlock All Items` button in
       the *Actions* Toolbar to edit the items again.
 
-   Now the label is centered to the map, but not the contents.
+   Now the label frame is centered on the map, but not the contents.
    To center the contents of the label:
 
+   #. Click the |unlockAll| :sup:`Unlock All Items` button in the
+      *Actions* Toolbar (to be able to select and edit the label
+      frame).
    #. Select the label by clicking on it.
    #. Click on the :guilabel:`Item Properties` tab in the side panel
       of the layout window.
@@ -177,7 +185,7 @@ First, let us add a title.
          :align: center
 
    #. Choose a large but sensible font (the example will use the
-      default font with a size of :kbd:`36`) and set the
+      default font with a size of ``36``) and set the
       :guilabel:`Horizontal Alignment` to :guilabel:`Center`.
 
       You can also change the font color, but it's probably best to
@@ -209,8 +217,9 @@ Let's add a new legend.
 
 #. Click on this |addLegend| :sup:`Add Legend` button
 
-#. Click on the page to place the legend, and move it to where you
-   want it:
+#. Click on the page to place the legend, accept the suggested values
+   in the :guilabel:`New Item Properties` dialog, and then move it to
+   where you want it:
 
    .. figure:: img/legend_added.png
       :align: center
@@ -278,8 +287,6 @@ image formats to choose from.
 This is probably the simplest option, but the image it creates is
 "dead" and difficult to edit.
 
-The other two options are more common.
-
 If you're sending the map to a cartographer (who may want to edit the
 map for publication), it's best to export as an SVG. SVG stands for
 "Scalable Vector Graphic", and can be imported to programs like
@@ -295,7 +302,13 @@ For our purposes, we're going to use PDF.
 
 #. Click the |saveAsPDF| :sup:`Export as PDF` button
 #. Choose a save location and a file name as usual.
-#. Click :guilabel:`Save`.
+   The following dialog will show up.
+
+.. figure:: img/layout_export_pdf.png
+   :align: center
+   
+#. You can safely use the default values now and click
+   :guilabel:`Save`.
 
 |IC|
 ----------------------------------------------------------------------
@@ -321,10 +334,14 @@ Congratulations on your first completed QGIS map project!
    :width: 1.5em
 .. |addMap| image:: /static/common/mActionAddMap.png
    :width: 1.5em
+.. |alignHCenter| image:: /static/common/mActionAlignHCenter.png
+   :width: 1.5em
 .. |alignLeft| image:: /static/common/mActionAlignLeft.png
    :width: 1.5em
 .. |basic| image:: /static/common/basic.png
 .. |edit| image:: /static/common/edit.png
+   :width: 1.5em
+.. |fileSave| image:: /static/common/mActionFileSave.png
    :width: 1.5em
 .. |filePrint| image:: /static/common/mActionFilePrint.png
    :width: 1.5em
