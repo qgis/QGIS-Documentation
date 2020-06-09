@@ -304,8 +304,8 @@ For our purposes, we're going to use PDF.
 #. Choose a save location and a file name as usual.
    The following dialog will show up.
 
-.. figure:: img/layout_export_pdf.png
-   :align: center
+   .. figure:: img/layout_export_pdf.png
+      :align: center
    
 #. You can safely use the default values now and click
    :guilabel:`Save`.
