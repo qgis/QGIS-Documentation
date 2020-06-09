@@ -1,5 +1,5 @@
 |LS| Using Print Layout
-===============================================================================
+======================================================================
 
 Now that you've got a map, you need to be able to print it or to
 export it to a document.
@@ -17,7 +17,7 @@ Both exporting and printing is handled via the *Print Layout*.
 a basic map with all the required settings.
 
 |basic| |FA| The Layout Manager
--------------------------------------------------------------------------------
+----------------------------------------------------------------------
 
 QGIS allows you to create multiple maps using the same map file.
 For this reason, it has a tool called the *Layout Manager*.
@@ -44,10 +44,10 @@ the *Print Layout* window:
 
 
 |basic| |FA| Basic Map Composition
--------------------------------------------------------------------------------
+----------------------------------------------------------------------
 
-In this example, the composition was already the way we wanted it. Ensure that
-yours is as well.
+In this example, the composition was already the way we wanted it.
+Ensure that yours is as well.
 
 #. Right-click on the sheet in the central part of the layout window
    and choose :guilabel:`Page properties...` in the context menu.
@@ -110,16 +110,18 @@ yours is as well.
 Remember that the size and position you've given the map doesn't need
 to be final.
 You can always come back and change it later if you're not satisfied.
-For now, you need to ensure that you've saved your work on this map. Because a *Print Layout* in QGIS is part of the main map file, you
+For now, you need to ensure that you've saved your work on this map.
+Because a *Print Layout* in QGIS is part of the main map file, you
 will need to save your main project.
 Go to the main QGIS window (the one with the :guilabel:`Layers` panel
 and all the other familiar elements you were working with before),
 and save your project from there as usual.
 
 |basic| |FA| Adding a Title
--------------------------------------------------------------------------------
+----------------------------------------------------------------------
 
-Now your map is looking good on the page, but your readers/users are not being told what's going on yet.
+Now your map is looking good on the page, but your readers/users are
+not being told what's going on yet.
 They need some context, which is what you'll provide for them by
 adding map elements.
 First, let us add a title.
@@ -196,7 +198,7 @@ First, let us add a title.
       :align: center
 
 |basic| |FA| Adding a Legend
--------------------------------------------------------------------------------
+----------------------------------------------------------------------
 
 The map reader also needs to be able to see what various things on
 the map actually mean.
@@ -214,9 +216,10 @@ Let's add a new legend.
       :align: center
 
 |moderate| |FA| Customizing Legend Items
--------------------------------------------------------------------------------
+----------------------------------------------------------------------
 
-Not everything on the legend is necessary, so let's remove some unwanted items.
+Not everything on the legend is necessary, so let's remove some
+unwanted items.
 
 #. In the :guilabel:`Item Properties` tab, you'll find the
    :guilabel:`Legend items` panel.
@@ -246,7 +249,7 @@ This is the result:
    :align: center
 
 |basic| |FA| Exporting Your Map
--------------------------------------------------------------------------------
+----------------------------------------------------------------------
 
 .. note::  Did you remember to save your work often?
 
@@ -263,7 +266,8 @@ printer that you're working with, it's probably better to consult the
 printer manual or a general guide to printing for more information on
 this topic.
 
-The other three buttons allow you to export the map page to a file. There are three export formats to choose from:
+The other three buttons allow you to export the map page to a file.
+There are three export formats to choose from:
 
 - *Export as Image*
 - *Export as SVG*
@@ -294,7 +298,7 @@ For our purposes, we're going to use PDF.
 #. Click :guilabel:`Save`.
 
 |IC|
--------------------------------------------------------------------------------
+----------------------------------------------------------------------
 
 #. Close the layout window
 #. Save your map
