@@ -161,9 +161,6 @@ First, let us add a title.
    Now the label frame is centered on the map, but not the contents.
    To center the contents of the label:
 
-   #. Click the |unlockAll| :sup:`Unlock All Items` button in the
-      *Actions* Toolbar (to be able to select and edit the label
-      frame).
    #. Select the label by clicking on it.
    #. Click on the :guilabel:`Item Properties` tab in the side panel
       of the layout window.
@@ -198,9 +195,9 @@ First, let us add a title.
    To make sure that you don't accidentally move these elements
    around now that you've aligned them, you can lock items into place:
 
-   #. With both the label and map selected, click the
-      |lockItems| :sup:`Lock Selected Items` button in the *Actions*
-      Toolbar.
+   * With both the label and map selected, click the
+     |lockItems| :sup:`Lock Selected Items` button in the *Actions*
+     Toolbar.
 
    .. note:: Click the |unlockAll| :sup:`Unlock All Items` button in
       the *Actions* Toolbar to edit the items again.
