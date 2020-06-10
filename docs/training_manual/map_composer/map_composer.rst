@@ -158,16 +158,6 @@ First, let us add a title.
    .. figure:: img/align_center_dropdown.png
       :align: center
 
-   To make sure that you don't accidentally move these elements
-   around now that you've aligned them, you can lock items into place:
-
-   #. With both the label and map selected, click the
-      |lockItems| :sup:`Lock Selected Items` button in the *Actions*
-      Toolbar.
-
-   .. note:: Click the |unlockAll| :sup:`Unlock All Items` button in
-      the *Actions* Toolbar to edit the items again.
-
    Now the label frame is centered on the map, but not the contents.
    To center the contents of the label:
 
@@ -204,6 +194,17 @@ First, let us add a title.
 
    .. figure:: img/page_so_far.png
       :align: center
+
+   To make sure that you don't accidentally move these elements
+   around now that you've aligned them, you can lock items into place:
+
+   #. With both the label and map selected, click the
+      |lockItems| :sup:`Lock Selected Items` button in the *Actions*
+      Toolbar.
+
+   .. note:: Click the |unlockAll| :sup:`Unlock All Items` button in
+      the *Actions* Toolbar to edit the items again.
+
 
 |basic| |FA| Adding a Legend
 ----------------------------------------------------------------------
