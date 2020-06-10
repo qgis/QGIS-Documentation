@@ -200,7 +200,7 @@ First, let us add a title.
      Toolbar.
 
    .. note:: Click the |unlockAll| :sup:`Unlock All Items` button in
-      the *Actions* Toolbar to edit the items again.
+      the *Actions* Toolbar to be able to edit the items again.
 
 
 |basic| |FA| Adding a Legend
