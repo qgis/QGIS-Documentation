@@ -124,6 +124,28 @@ snapping enabled layers, even if there are no vertices at the intersections.
 
 .. index:: Search radius
 
+Snapping icons
+--------------
+
+QGIS will show different 'snap' icons depending on which kind of 'snap' occured.
+
+.. figure:: img/snap_vertex_icon.png
+
+   Snapping on a vertex: box icon
+
+.. figure:: img/snap_segment_icon.png
+
+   Snapping on a segment: hourglass icon
+
+
+.. figure:: img/snap_intersection_icon.png
+
+   Snapping on an intersection: cross icon
+
+
+Note that it is possible to change the change the color of these icons in the 
+'Digitizing' part of your settings.
+
 Search radius
 --------------
 
