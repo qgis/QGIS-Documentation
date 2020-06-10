@@ -8,11 +8,12 @@ main elements of the screen in QGIS and know what each of them does.
 You will also be able to load a layer into QGIS.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
 
    preparation
    overview
+   mapviewnavigation
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
