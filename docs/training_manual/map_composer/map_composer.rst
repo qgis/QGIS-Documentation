@@ -230,7 +230,7 @@ unwanted items.
 
 #. In the :guilabel:`Item Properties` tab, you'll find the
    :guilabel:`Legend items` panel.
-#. Select the :guilabel:`training_data_buildings` entry.
+#. Select the entry with buildings (from :file:`training_data.gpkg`).
 #. Delete it from the legend by clicking the
    |signMinus| button:  
 
