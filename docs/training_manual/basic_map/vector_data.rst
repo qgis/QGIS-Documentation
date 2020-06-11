@@ -22,24 +22,70 @@ It's important to know that the data you will be working with does not only
 represent **where** objects are in space, but also tells you **what** those
 objects are.
 
-From the previous exercise, you should have the :guilabel:`rivers` layer
-loaded in your map. The lines that you can see right now are merely the
-position of the rivers: this is the *spatial data*.
+From the previous exercise, you should have the :guilabel:`protected_areas` layer
+loaded in your map. If its not loaded, then you can find the :file:`protected_areas.shp` ESRI Shapefile in directory :file:`exercise_data/shapefile`.
 
-To see all the available data in the :guilabel:`rivers` layer,
-select it in the Layers panel and click the |openTable| button.
+The polygons representing the protected areas is the **spatial data**, but we can learn more about the protected areas by exploring the **attribute table**.
 
-It will show you a table with more data about the :guilabel:`rivers` layer.
-This is the layer's :guilabel:`Attribute table`. A row is called
-a *record*, and represents a river *feature*. A column is called a *field*,
-and represents a property of the river. Cells show *attributes*.
+#. In the :guilabel:`Layers` panel, click on the :guilabel:`protected_areas` layer to select it.
+#. In the :guilabel:`Attributes Toolbar` click the |openTable| :sup:`Open Attribute Table` button.  This will open a new window showing the attribute table of the
+   :guilabel:`protected_areas` layer.  
 
-.. figure:: img/attribute_data_preview.png
-   :align: center
+   .. figure:: img/attribute_data_preview.png
+     :align: center
 
-These definitions are commonly used in GIS, so it's essential to remember them!
+    
+
+   .. Note:: A row is called a **record**, and represents a protected area **feature**. A column is called a **field**, and represents a property of the river. Cells show **attributes**.  These definitions are commonly used in GIS, so it is good to become familiar with them.
+
+
+   For :guilabel:`protected_areas` layer, there are two **features**, which matches the two polygons we see in the Map Canvas. 
+
+   .. Note:: In order to understand what the **fields** and **attributes** represent, one may need to find documentation describing meaning of these values.  This documentation is usually located in the same place where the data was downloaded from, or you may need to contact the author of the data to provide that information to you.
+
+Next, let's see how the record in the Attribute Table is linked to a polygon feature that we see in the Map Canvas.
+
+#. In the :guilabel:`Attribute Table` window, on the far left click on the row number :guilabel:`1` to select the entire record.
+
+   .. figure:: img/select_record.png
+     :align: center
+
+#. Now click on the main QGIS window and look at the Map Canvas. You should see the smaller of the two polygons colored yellow.  This is the polygon associated with the *record* :guilabel:`1` in the Attributes Table.
+
+   .. figure:: img/select_record_map_canvas.png
+     :align: center
+
+#. Go back to the :guilabel:`Attribute Table` window and click row number :guilabel:`2`, and now the larger polygon should turn yellow.
+#. To deselect the feature, go to the :guilabel:`Attribute Table` window and click on |deselectActiveLayer| :sup:`Deselect All` button.
+
+Another way to identify the location of a *feature* is to use :guilabel:`Flash Feature` tool.
+
+#. In the :guilabel:`Attribute Table`, right-click on *attribute* `r2855697`.
+#. In the context menu, click on :guilabel:`Flash Feature` and look at the Map Canvas.  
+
+   .. figure:: img/flash_feature.png
+     :align: center
+   
+   You should see the polygon flash red a few times.  If you missed it, try it again.
+
+In the context menu, there is also another handy tool called `Zoom to Feature`.
+
+#. In the :guilabel:`Attribute Table`, right-click on *attribute* `r2855697`.
+#. In the context menu, click on :guilabel:`Zoom to Feature`
+
+   .. figure:: img/zoom_to_feature.png
+     :align: center
+
+   Look at the Map Canvas.  You now should see the polygon occupy the extent of the Map Canvas area.  
+   
+   
+
+
 
 You may now close the attribute table.
+
+
+
 
 .. _backlink-vector-explore-attribute-data:
 
@@ -235,4 +281,6 @@ lesson.
 .. |polygonLayer| image:: /static/common/mIconPolygonLayer.png
    :width: 1.5em
 .. |spatialite| image:: /static/common/mIconSpatialite.png
+   :width: 1.5em
+.. |deselectActiveLayer| image:: /static/common/mActionDeselectActiveLayer.png
    :width: 1.5em
