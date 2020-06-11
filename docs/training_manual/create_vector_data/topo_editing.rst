@@ -24,10 +24,9 @@ snapping options:
 .. figure:: img/set_snapping_options.png
    :align: center
 
-* Ensure that the box in the :guilabel:`Avoid Int.` column is checked (set to
-  true).
-* Click :guilabel:`OK` to save your changes and leave the dialog.
-* Enter edit mode with the :guilabel:`landuse` layer selected.
+* Ensure that the box in the :guilabel:`Avoid overlap` column is checked.
+* Leave the dialog.
+* Select the :guilabel:`landuse` layer and enter edit mode (|toggleEditing|)
 * Check under :menuselection:`View --> Toolbars` to make sure that your
   :guilabel:`Advanced Digitizing` toolbar is enabled.
 * Zoom to this area (enable layers and labels if necessary):
@@ -309,6 +308,8 @@ so that attribute editing is simpler and more effective.
 .. |simplifyFeatures| image:: /static/common/mActionSimplify.png
    :width: 1.5em
 .. |splitFeatures| image:: /static/common/mActionSplitFeatures.png
+   :width: 1.5em
+.. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
 .. |undo| image:: /static/common/mActionUndo.png
    :width: 1.5em
