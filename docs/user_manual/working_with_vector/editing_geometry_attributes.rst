@@ -122,29 +122,30 @@ Another available option is to use |snappingIntersection| :guilabel:`snapping on
 intersection`, which allows you to snap to geometry intersections of
 snapping enabled layers, even if there are no vertices at the intersections.
 
-.. index:: Search radius
+.. index:: Snapping icons
 
 Snapping icons
 --------------
 
-QGIS will show different 'snap' icons depending on which kind of 'snap' occured.
+QGIS will show different *snap* icons depending on the kind of *snap*:
 
 .. figure:: img/snap_vertex_icon.png
 
-   Snapping on a vertex: box icon
+   Snapping to a vertex: box icon
 
 .. figure:: img/snap_segment_icon.png
 
-   Snapping on a segment: hourglass icon
-
+   Snapping to a segment: hourglass icon
 
 .. figure:: img/snap_intersection_icon.png
 
-   Snapping on an intersection: cross icon
+   Snapping to an intersection: cross icon
 
+Note that it is possible to change the color of these icons in the 
+:guilabel:`Digitizing` part of your settings.
 
-Note that it is possible to change the change the color of these icons in the 
-'Digitizing' part of your settings.
+.. index:: Search radius
+
 
 Search radius
 --------------
