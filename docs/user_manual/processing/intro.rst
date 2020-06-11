@@ -7,6 +7,17 @@ This chapter introduces the QGIS processing framework, a geoprocessing environme
 that can be used to call native and third-party algorithms from QGIS, making your
 spatial analysis tasks more productive and easy to accomplish.
 
+As a :ref:`Core plugin <core_plugins>`, Processing is installed by default but
+you need to activate it:
+
+#. Go to :menuselection:`Plugins --> Manage and install plugins...`
+#. Click on the :guilabel:`Installed` tab at the left
+#. Check the box next to the |processing| :guilabel:`Processing` entry
+#. Close the dialog.
+
+   A :menuselection:`Processing` menu is now available in the top menu bar.
+   From there you can reach the main components of this framework.
+   
 In the following sections, we will review how to use the graphical elements of
 this framework and make the most out of each one of them.
 
@@ -65,3 +76,13 @@ and will be explained later in this chapter).
    Batch Processing interface
 
 In the following sections, we will review each one of these elements in detail.
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |processing| image:: /static/common/processingAlgorithm.png
+   :width: 1.5em
