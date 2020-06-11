@@ -118,9 +118,14 @@ QGIS provides two view modes to easily manipulate data in the attribute table:
 
 * The |openTable| :sup:`Table view`, displays values of multiple features in a
   tabular mode, each row representing a feature and each column a field.
-* And the |formView| :sup:`Form view` shows :ref:`feature identifiers
+* The |formView| :sup:`Form view` shows :ref:`feature identifiers
   <maptips>` in a first panel and displays only the attributes of the clicked
-  identifier in the second one. Form view uses the layer fields configuration
+  identifier in the second one.
+  There is a pull-down menu at the top of the first panel where the "identifier"
+  can be specified using an attribute (:guilabel:`Column preview`) or an
+  :guilabel:`Expression`.
+  The pull-down also includes the last 10 expressions for re-use.
+  Form view uses the layer fields configuration
   (see :ref:`vector_attributes_menu`).
   You can browse through the feature identifiers with the arrows on the bottom
   of the first panel. Once you markered the feature in yellow in the list it
