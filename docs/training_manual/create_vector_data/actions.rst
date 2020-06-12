@@ -22,7 +22,7 @@ when clicking on the property.
 |basic| |FA| Add a Field for Images
 ----------------------------------------------------------------------
 
-The :guilabel:`school_property` layer has no way to associate an image with a
+The ``school_property`` layer has no way to associate an image with a
 property yet. First we will create a field for this purpose.
 
 #. Open the :guilabel:`Layer Properties` dialog.
@@ -42,18 +42,18 @@ property yet. First we will create a field for this purpose.
    .. figure:: img/column_settings.png
       :align: center
 
-#. After the field has been created, click on the
-   :guilabel:`Line edit` button next to the new field.
-#. Set it up for a :guilabel:`File name`:
+#. After the field has been created, move to the
+   :guilabel:`Attributes Form` tab and select the ``image`` field.
+#. Set :guilabel:`Widget Type` to :guilabel:`Attachment`:
 
    .. figure:: img/select_file_name.png
       :align: center
 
-#. Click :guilabel:`OK` on the :guilabel:`Layer Properties` dialog.
+#. Click :guilabel:`OK` in the :guilabel:`Layer Properties` dialog.
 #. Use the :guilabel:`Identify` tool to click on one of the three
    features in the :guilabel:`school_property` layer.
 
-   Since you're still in edit mode, the dialog should be active and
+   Since you are still in edit mode, the dialog should be active and
    look like this:
 
    .. figure:: img/school_property_no_image.png
@@ -62,7 +62,7 @@ property yet. First we will create a field for this purpose.
 #. Click on the browse button (the :guilabel:`...` next to the
    :guilabel:`image` field).
 #. Select the path for your image. The images are in
-   ``exercise_data/school_property_photos/`` and are named the
+   :file:`exercise_data/school_property_photos/` and are named the
    same as the features they should be associated with.
 #. Click :guilabel:`OK`.
 #. Associate all of the images with the correct features using this
