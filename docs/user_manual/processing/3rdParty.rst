@@ -320,7 +320,7 @@ data input or output will not work.
 
 
 .. index::
-   pair: R scripts, Create
+   pair: R scripts; Create
 .. _creating_r_scripts:
 
 Creating R scripts
@@ -515,6 +515,7 @@ how to create your own scripts.
    may take a long time to run the first time.
 
 .. index:: R libraries
+
 R libraries
 -----------
 
@@ -554,7 +555,7 @@ xfun, XML, xtable``
 
 
 .. index::
-   pair: GRASS, Configure
+   pair: GRASS; Configure
 .. _grass_configure:
 
 GRASS

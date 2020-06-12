@@ -1,5 +1,5 @@
 .. index::
-   pair: R, Syntax
+   pair: R; Syntax
 .. _r-syntax:
 
 ********************************
@@ -57,7 +57,7 @@ the script:
 
 
 .. index::
-   pair: R, Syntax summary
+   pair: R; Syntax summary
 .. _r-syntax-table:
 
 Syntax Summary for QGIS R scripts
@@ -154,7 +154,7 @@ in the script::
   library(sp)
 
 .. index::
-   pair: R scripts, Examples
+   pair: R scripts; Examples
 
 Examples
 ========
