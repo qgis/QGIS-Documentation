@@ -74,7 +74,7 @@ everything by hand.
 Fortunately, forms have different kinds of so-called *widgets* that
 allow you to edit data in various different ways.
 
-#. Open the :guilabel:`roads` layer's :guilabel:`Layer Properties`
+#. Open the :guilabel:`roads` layer's :guilabel:`Properties...`
 #. Switch to the :guilabel:`Fields` tab. You'll see this:
 
    .. figure:: img/fields_panel.png
@@ -256,4 +256,3 @@ This is the subject of the next lesson.
 .. |moderate| image:: /static/common/moderate.png
 .. |options| image:: /static/common/mActionOptions.png
    :width: 1em
-
