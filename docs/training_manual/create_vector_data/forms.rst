@@ -19,9 +19,9 @@ This lesson shows you how.
 
 #. Select the ``roads`` layer in the :guilabel:`Layers` panel
 #. Enter *Edit Mode* as before
-#. Open ``road`` layer's the attribute table
+#. Open the ``roads`` layer's attribute table
 #. Right-click on any cell in the table. A short menu will appear,
-   that includes with the :guilabel:`Open form` entry.
+   that includes the :guilabel:`Open form` entry.
 #. Click on it to see the form that QGIS generates for this layer
 
 Obviously it would be nice to be able to do this while looking at the
@@ -34,7 +34,7 @@ map, rather than needing to search for a specific street in the
 #. The :guilabel:`Identify Results` panel opens and shows a tree view
    of the fields values and other general information about the
    clicked feature.
-#. At the top of the panel, check the :guilabel:`Auto open form`
+#. At the top of the panel, check the :guilabel:`Auto open form for single feature results`
    checkbox in the |options| sup:`Identify Settings` menu.
 #. Now, click again on any street in the map. Along the previous
    :guilabel:`Identify Results` dialog, you'll see the now-familiar
@@ -60,7 +60,7 @@ attributes.
    .. figure:: img/main_street_selected.png
       :align: center
 
-#. Edit its :guilabel:`highway` value to be :kbd:`secondary`
+#. Edit its :guilabel:`highway` value to be ``secondary``
 #. Exit edit mode and save your edits
 #. Open the :guilabel:`Attribute Table` and note that the value has
    been updated in the attributes table and therefore in the source
@@ -92,11 +92,11 @@ allow you to edit data in various different ways.
       :align: center
 
 #. Click :guilabel:`OK`
-#. Enter edit mode (if the ``roads`` layer is not already in edit mode
+#. Enter edit mode (if the ``roads`` layer is not already in edit mode)
 #. Click on the |identify| :sup:`Identify Features` tool
 #. Click on the same main road you chose earlier
 
-You will now see that the :guilabel:`man_made` attribute has a
+You will now see that the :guilabel:`oneway` attribute has a
 checkbox next to it denoting ``True`` (checked) or ``False``
 (unchecked).
 
@@ -114,11 +114,11 @@ Set a more appropriate form widget for the :guilabel:`highway` field.
 
 You can also design your own custom form completely from scratch.
 
-#. Create a simple point layer named :kbd:`test-data` with two
+#. Create a simple point layer named ``test-data`` with two
    attributes:
 
-   * Name (text)
-   * Age (text)
+   * name (text)
+   * age (text)
 
    .. figure:: img/new_point_layer.png
       :align: center
@@ -162,7 +162,7 @@ the person who creates the forms).
    .. figure:: img/qt_line_edit.png
       :align: center
 
-#. Set its name to :kbd:`Name`.
+#. Set its name to ``Name``.
 #. Using the same approach, create a new spinbox and set its name to
    ``Age``.
 #. Add a :guilabel:`Label` with the text ``Add a New Person`` in a
@@ -222,7 +222,7 @@ errors.
 
 If you completed the advanced section above and have knowledge of
 Python, you may want to check out
-`this blog entry <https://nathanw.net/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/>`_
+`this blog entry <https://woostuff.wordpress.com/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/>`_
 about creating custom feature forms with Python logic, which allows
 advanced functions including data validation, autocompletion, etc.
 
