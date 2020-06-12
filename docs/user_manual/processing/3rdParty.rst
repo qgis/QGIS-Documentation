@@ -1,3 +1,4 @@
+.. index:: External applications
 .. _`processing.results`:
 
 Configuring external applications
@@ -96,6 +97,7 @@ In other cases, exporting only selected features is needed, which
 causes longer execution times.
 
 
+.. index:: SAGA
 .. _saga_configure:
 
 SAGA
@@ -192,6 +194,7 @@ Most other providers that use external applications and call them
 through the command-line have similar options, so you will find them
 as well in other places in the processing settings list.
 
+.. index:: R scripts
 .. _r_scripts:
 
 R scripts
@@ -240,6 +243,8 @@ If you have R configured correctly for QGIS, you should be able to
 run these scripts.
 
 
+.. index::
+   pair: R scripts; Resource Sharing
 .. _adding_r_scripts:
 
 Adding R scripts from the QGIS collection
@@ -310,10 +315,12 @@ Perform the following steps to load and enable them using the
 If you would like to get all the R scrips from the QGIS 2 on-line
 collection, you can select *QGIS R script collection (from QGIS 2)*
 instead of *QGIS R script collection*.
-You will find probably find that scripts that depend on vector
+You will probably find that scripts that depend on vector
 data input or output will not work.
 
 
+.. index::
+   pair: R scripts, Create
 .. _creating_r_scripts:
 
 Creating R scripts
@@ -418,7 +425,7 @@ Since we are going to use a function (``spsample``) from the *sp*
 library, we must convert the ``sf`` object to a
 ``SpatialPolygonsDataFrame`` object using the ``as`` function.
 
-Then we calling the ``spsample`` function, with this object and
+Then we call the ``spsample`` function with this object and
 the ``numpoints`` input parameter (which specifies the number of
 points to generate).
 
@@ -498,7 +505,7 @@ how to create your own scripts.
 .. note::
    The ``sf``, ``rgdal`` and ``raster`` libraries are loaded by default,
    so you do not have to add the corresponding ``library()`` commands.
-   However, other additional libraries that you might need have to be
+   However, other libraries that you might need have to be
    explicitly loaded by typing:
    ``library(ggplot2)`` (to load the ``ggplot2`` library).
    If the package is not already installed on your machine, Processing
@@ -507,6 +514,7 @@ how to create your own scripts.
    **Be aware** that if the package has to be downloaded, the script
    may take a long time to run the first time.
 
+.. index:: R libraries
 R libraries
 -----------
 
@@ -545,6 +553,8 @@ tinytex, units, utf8, uuid, vctrs, viridis, viridisLite, webshot, withr,
 xfun, XML, xtable``
 
 
+.. index::
+   pair: GRASS, Configure
 .. _grass_configure:
 
 GRASS
@@ -578,6 +588,7 @@ If the latter approach is the behavior you prefer, just check the
 parameters.
 
 
+.. index:: LAStools
 .. _lastools_configure:
 
 LAStools
