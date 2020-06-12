@@ -313,7 +313,7 @@ Perform the following steps to load and enable them using the
 If you would like to get all the R scrips from the QGIS 2 on-line
 collection, you can select *QGIS R script collection (from QGIS 2)*
 instead of *QGIS R script collection*.
-You will find probably find that scripts that depend on vector
+You will probably find that scripts that depend on vector
 data input or output will not work.
 
 
@@ -421,7 +421,7 @@ Since we are going to use a function (``spsample``) from the *sp*
 library, we must convert the ``sf`` object to a
 ``SpatialPolygonsDataFrame`` object using the ``as`` function.
 
-Then we calling the ``spsample`` function, with this object and
+Then we call the ``spsample`` function, with this object and
 the ``numpoints`` input parameter (which specifies the number of
 points to generate).
 
