@@ -1,8 +1,8 @@
 |LS| Actions
 ======================================================================
 
-Now that you've seen a default action in the previous lesson, it is time to
-define your own actions.
+Now that you have seen a default action in the previous lesson, it is
+time to define your own actions.
 
 An action is something that happens when you click on a feature.
 It can add a lot of extra functionality to your map, allowing you to
@@ -76,7 +76,7 @@ property yet. First we will create a field for this purpose.
 #. Open the :guilabel:`Actions` form for the
    :guilabel:`school_property` layer.
 #. In the :guilabel:`Action properties` panel, enter the words
-   ``Show Image` into the :guilabel:`Name` field:
+   ``Show Image`` into the :guilabel:`Name` field:
 
    .. figure:: img/show_image_action.png
       :align: center
@@ -100,7 +100,7 @@ property yet. First we will create a field for this purpose.
 
      #. Click on the :guilabel:`Type` dropdown and choose
         :guilabel:`Mac`.
-     #. Under :guilabel:`Action`, write ``open`.
+     #. Under :guilabel:`Action`, write ``open``.
         Remember to put a space after the command!
 
 
@@ -150,7 +150,7 @@ let's tell QGIS to do that automatically for us!
 #. Close the attribute table.
 #. Go back to :guilabel:`Actions` in :guilabel:`Layer Properties`.
 #. In the field :menuselection:`Action Properties --> Name`, write
-   ``Google Search`.
+   ``Google Search``.
 
    What to do next varies according to your operating system, so
    choose the appropriate course to follow:
@@ -163,13 +163,13 @@ let's tell QGIS to do that automatically for us!
 
    * Ubuntu Linux
 
-     Under :guilabel:`Action`, write ``xdg-open`.
+     Under :guilabel:`Action`, write ``xdg-open``.
      This will tell Ubuntu to open an Internet address in your
      default browser, such as Chrome or Firefox.
 
    * MacOS
 
-     Under :guilabel:`Action`, write ``open`.
+     Under :guilabel:`Action`, write ``open``.
      This will tell MacOS to open an Internet address in your default
      browser, such as Safari.
 
@@ -231,8 +231,8 @@ let's tell QGIS to do that automatically for us!
 Now to test the new action.
 
 #. With the :guilabel:`landuse` layer active in the
-  :guilabel:`Layers` panel, click on the
-  :guilabel:`Run feature action` button.
+   :guilabel:`Layers` panel, click on the
+   :guilabel:`Run feature action` button.
 #. Click on any landuse area you can see on the map.
    Your browser will now open, and will automatically start a Google
    search for the town that is recorded as that area's ``name`` value.
@@ -271,8 +271,8 @@ To create the layer action:
    :guilabel:`Actions` tab.
 #. Set up a new action using the following properties for the action:
 
-   * :guilabel:`Type`: ``Python`
-   * :guilabel:`Name`: ``Wikipedia`
+   * :guilabel:`Type`: ``Python``
+   * :guilabel:`Name`: ``Wikipedia``
    * :guilabel:`Action` (all on one line)::
 
          from qgis.PyQt.QtCore import QUrl; from qgis.PyQt.QtWebKit import QWebView;  myWV = QWebView(None); myWV.load(QUrl('https://wikipedia.org/wiki/[% "name" %]')); myWV.show()
@@ -285,10 +285,10 @@ To create the layer action:
    * All the python code is in a single line with semi-colons
      separating commands (instead of newlines, the usual way of
      separating Python commands).
-   * ``[% "name" %]` will be replaced by the actual attribute value
+   * ``[% "name" %]`` will be replaced by the actual attribute value
      when the action is invoked (as before).
-   * The code simply creates a new ``QWebView` instance, sets its
-     URL, and then calls ``show()` on it to make it visible as a
+   * The code simply creates a new ``QWebView`` instance, sets its
+     URL, and then calls ``show()`` on it to make it visible as a
      window on the user’s desktop.
 
    Note that this is a somewhat contrived example.
