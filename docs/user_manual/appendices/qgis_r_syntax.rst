@@ -1,3 +1,5 @@
+.. index::
+   pair: R, Syntax
 .. _r-syntax:
 
 ********************************
@@ -54,6 +56,8 @@ the script:
   front of the command whose output you would like to show.
 
 
+.. index::
+   pair: R, Syntax summary
 .. _r-syntax-table:
 
 Syntax Summary for QGIS R scripts
@@ -148,6 +152,9 @@ help you if there is something wrong with your script.
 in the script::
 
   library(sp)
+
+.. index::
+   pair: R scripts, Examples
 
 Examples
 ========
