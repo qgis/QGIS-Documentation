@@ -82,7 +82,7 @@ will adapt dynamically.
    |addBasicShape| :sup:`Add Shape` button.
    In the :guilabel:`Items` panel enter the name ``header``.
 #. Again, go to the :guilabel:`Item Properties` and open the
-  :guilabel:`Position and Size` section.
+   :guilabel:`Position and Size` section.
    Using |dataDefineExpressionOn| :sup:`Data defined override`,
    choose the ``sw_layout_margin`` variable for :guilabel:`X` as
    well as for :guilabel:`Y`.
@@ -91,7 +91,6 @@ will adapt dynamically.
      @layout_pagewidth - @sw_layout_margin * 2
 
    and :guilabel:`Height` by the ``sw_layout_height_header`` variable.
-
 #. We will insert a horizontal line and two vertical lines to divide
    the header into different sections using the
    |addNodesShape| :sup:`Add Node Item`.
