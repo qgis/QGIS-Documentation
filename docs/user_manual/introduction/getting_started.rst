@@ -78,7 +78,12 @@ you may do one of the following:
 
 * Use GIS data that you already have
 * Download sample data from
+<<<<<<< HEAD
   https://github.com/qgis/QGIS-Sample-Data/archive/release_3.10.zip
+=======
+  https://github.com/qgis/QGIS-Sample-Data/archive/master.zip and unzip the archive
+  on any convenient location on your system.
+>>>>>>> de96d8055... Make links to Sample Dataset consistent
 * Uninstall QGIS and reinstall with the data download option checked (only
   recommended if the above solutions are unsuccessful)
 
