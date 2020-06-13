@@ -73,10 +73,15 @@ property yet. First we will create a field for this purpose.
 |basic| |FA| Creating an Action
 ----------------------------------------------------------------------
 
-#. Open the :guilabel:`Actions` form for the
-   :guilabel:`school_property` layer.
-#. In the :guilabel:`Action properties` panel, enter the words
-   ``Show Image`` into the :guilabel:`Name` field:
+#. Open the :guilabel:`Actions` tab for the
+   :guilabel:`school_property` layer, and click on the
+   |signPlus| :sup:`Add a new action` button.
+
+   .. figure:: img/layer_actions.png
+      :align: center
+
+#. In the :guilabel:`Add New Action` dialog, enter the words
+   ``Show Image`` into the :guilabel:`Description` field:
 
    .. figure:: img/show_image_action.png
       :align: center
@@ -115,23 +120,31 @@ property yet. First we will create a field for this purpose.
    .. figure:: img/select_image.png
       :align: center
 
-#. Click the :guilabel:`Insert field` button. QGIS will add the
-   phrase ``[% "image" %]`` in the :guilabel:`Action` field.
-#. Click the :guilabel:`Add to action list` button.
-#. Click :guilabel:`OK` on the :guilabel:`Layer Properties` dialog.
+#. Click the :guilabel:`Insert field` button.
+   QGIS will add the phrase ``[% "image" %]`` in the
+   :guilabel:`Action Text` field.
+#. Click the :guilabel:`OK` button to close the
+   :guilabel:`Add New Action` dialog
+#. Click :guilabel:`OK` to close the :guilabel:`Layer Properties`
+   dialog
 
-Now we will test the new Action:
+Now it is time to test the new action:
 
 #. Click on the :guilabel:`school_property` layer in the
    :guilabel:`Layers` panel so that it is highlighted.
-#. Find the :guilabel:`Run feature action` button (on the same
-   toolbar as the |actionRun| :sup:`Open Attribute Table` button).
+#. Find the |actionRun| :sup:`Run feature action` button (in the
+   :guilabel:`Attributes Toolbar`).
 #. Click on the down arrow to the right of this button.
    There is only one action defined for this layer so far, which is
    the one you just created.
+
+   .. figure:: img/run_feature_action_select.png
+      :align: center
+
 #. Click the button itself to activate the tool.
 #. Using this tool, click on any of the three school properties.
-#. The image for that property will now open.
+
+   The image for that property should open.
 
 |moderate| |FA| Searching the Internet
 ----------------------------------------------------------------------
@@ -146,11 +159,18 @@ let's tell QGIS to do that automatically for us!
 
    We will be using the ``name`` field for each of our landuse
    areas to search Google.
-
 #. Close the attribute table.
 #. Go back to :guilabel:`Actions` in :guilabel:`Layer Properties`.
-#. In the field :menuselection:`Action Properties --> Name`, write
-   ``Google Search``.
+#. Click on the :guilabel:`Create Default Actions` button to add a
+   number of pre-defined actions.
+#. Remove all the actions but the :guilabel:`Open URL` action with
+   the short name :guilabel:`Search Web` using the |signMinus|
+   :sup:`Remove the selected action` button below.
+#. Double-click on the remaining action to edit it
+#. Change the :guilabel:`Description` to ``Google Search``, and
+   remove the content of the :guilabel:`Short Name` field.
+#. Make sure that :guilabel:`Canvas` is among the
+   checked :guilabel:`Action scopes`.
 
    What to do next varies according to your operating system, so
    choose the appropriate course to follow:
@@ -200,42 +220,39 @@ let's tell QGIS to do that automatically for us!
    the value of ``name`` for any feature that you could click on.
 
 #. Select the :guilabel:`name` field.
-#. Click :guilabel:`Insert field`:
+#. Click :guilabel:`Insert` button:
 
    .. figure:: img/google_search_action.png
-      :align: center
-
-   This will tell QGIS to add the phrase next:
-
-   .. figure:: img/google_search_entry.png
       :align: center
 
    What this means is that QGIS is going to open the browser and send
    it to the address
    ``https://www.google.com/search?q=[% "name" %]``.
-   But ``[% "name" %]`` tells QGIS to use the contents of the ``name``
+   ``[% "name" %]`` tells QGIS to use the contents of the ``name``
    field as the phrase to search for.
 
    So if, for example, the landuse area you click on is named
-   ``Marloth Nature Reserve``, then QGIS is going to send the browser
+   ``Marloth Nature Reserve``, QGIS is going to send the browser
    to ``https://www.google.com/search?q=Marloth%20Nature%20Reserve``,
    which will cause your browser to visit Google, which will in turn
    search for "Marloth Nature Reserve".
 
 #. If you have not done so already, set everything up as explained
    above.
-#. Click the :guilabel:`Add to action list` button.
-   The new action will appear in the list above.
-#. Click :guilabel:`OK` on the :guilabel:`Layer Properties` dialog.
+#. Click the :guilabel:`OK` button to close the
+   :guilabel:`Add New Action` dialog
+#. Click :guilabel:`OK` to close the :guilabel:`Layer Properties`
+   dialog
 
 Now to test the new action.
 
 #. With the :guilabel:`landuse` layer active in the
-   :guilabel:`Layers` panel, click on the
-   :guilabel:`Run feature action` button.
+   :guilabel:`Layers` panel, click on the down arrow to the right of
+   the |actionRun| :sup:`Run feature action` button, and select the
+   only action (``Google Search``) defined for this layer.
 #. Click on any landuse area you can see on the map.
-   Your browser will now open, and will automatically start a Google
-   search for the town that is recorded as that area's ``name`` value.
+   Your browser will now open, and will start a Google search for the
+   place that is recorded as that area's ``name`` value.
 
 .. note:: If your action doesn't work, check that everything was
    entered correctly; typos are common with this kind of work!
@@ -247,7 +264,7 @@ Above, you've seen how to open a webpage in an external browser. There are some
 shortcomings with this approach in that it adds an unknowable dependency – will
 the end-user have the software required to execute the action on their system?
 As you've seen, they don't necessarily even have the same kind of base command
-for the same kind of action, if you don't know which OS they'll be using. With
+for the same kind of action, if you don't know which OS they will be using. With
 some OS versions, the above commands to open the browser might not work at all.
 This could be an insurmountable problem.
 
@@ -255,13 +272,14 @@ However, QGIS sits on top of the incredibly powerful and versatile Qt library.
 Also, QGIS actions can be arbitrary, tokenized (i.e. using variable information
 based on the contents of a field attribute) Python commands!
 
-Now you'll see how to use a python action to show a web page. It's the same
-general idea as opening a site in an external browser, but it requires no
-browser on the user’s system since it uses the Qt QWebView class (which is a
-webkit based html widget) to display the content in a pop up window.
+Now you will see how to use a python action to show a web page.
+It is the same general idea as opening a site in an external browser,
+but it requires no browser on the user’s system since it uses the Qt
+QWebView class (which is a webkit based html widget) to display the
+content in a pop-up window.
 
-Instead of Google, let's use Wikipedia this time. So the URL you request will
-look like this:
+Let us use Wikipedia this time.
+So the URL you request will look like this:
 
 ``https://wikipedia.org/wiki/SEARCH_PHRASE``
 
@@ -272,10 +290,10 @@ To create the layer action:
 #. Set up a new action using the following properties for the action:
 
    * :guilabel:`Type`: ``Python``
-   * :guilabel:`Name`: ``Wikipedia``
-   * :guilabel:`Action` (all on one line)::
+   * :guilabel:`Description`: ``Wikipedia``
+   * :guilabel:`Action Text` (all on one line)::
 
-         from qgis.PyQt.QtCore import QUrl; from qgis.PyQt.QtWebKit import QWebView;  myWV = QWebView(None); myWV.load(QUrl('https://wikipedia.org/wiki/[% "name" %]')); myWV.show()
+         from qgis.PyQt.QtCore import QUrl; from qgis.PyQt.QtWebKitWidgets import QWebView; myWV = QWebView(None); myWV.load(QUrl('https://wikipedia.org/wiki/[%name%]')); myWV.show()
 
    .. figure:: img/python_action_example.png
       :align: center
@@ -285,7 +303,7 @@ To create the layer action:
    * All the python code is in a single line with semi-colons
      separating commands (instead of newlines, the usual way of
      separating Python commands).
-   * ``[% "name" %]`` will be replaced by the actual attribute value
+   * ``[%name%]`` will be replaced by the actual attribute value
      when the action is invoked (as before).
    * The code simply creates a new ``QWebView`` instance, sets its
      URL, and then calls ``show()`` on it to make it visible as a
@@ -298,26 +316,28 @@ To create the layer action:
    from a Python module and then call a function with a field
    attribute as parameter.
 
-   You could equally use the approach to display an image without
-   requiring that the user has a particular image viewer on their
+   You could also use this approach to display an image without
+   requiring that the users have a particular image viewer on their
    system.
 
-#. Try using the methods described above to load a Wikipedia page
+#. Try to use the methods described above to load a Wikipedia page
    using the Wikipedia action you just created.
 
 |IC|
 ----------------------------------------------------------------------
 
-Actions allow you to give your map extra functionality, useful to the end-user
-who views the same map in QGIS. Due to the fact that you can use shell commands
-for any operating system, as well as Python, the sky is the limit in terms of
-the functions you could incorporate!
+Actions allow you to give your map extra functionality, useful to the
+end-user who views the same map in QGIS.
+Due to the fact that you can use shell commands for any operating
+system, as well as Python, the sky is the limit in terms of the
+functions you could incorporate!
 
 |WN|
 ----------------------------------------------------------------------
 
-Now that you've done all kinds of vector data creation, you will learn how to
-analyze the data to solve problems. That is the topic of the next module.
+Now that you've done all kinds of vector data creation, you will
+learn how to analyze the data to solve problems.
+That is the topic of the next module.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -335,3 +355,8 @@ analyze the data to solve problems. That is the topic of the next module.
 .. |basic| image:: /static/common/basic.png
 .. |hard| image:: /static/common/hard.png
 .. |moderate| image:: /static/common/moderate.png
+.. |signMinus| image:: /static/common/symbologyRemove.png
+   :width: 1.5em
+.. |signPlus| image:: /static/common/symbologyAdd.png
+   :width: 1.5em
+
