@@ -1,10 +1,11 @@
 |LS| Creating a Dynamic Print Layout
 ======================================================================
 
-Now that you've learned to create a basic map layout we go a step further and
-create a map layout that adapts dynamically to our map extent and to the page
-properties, e.g. when you change the size of the page. Also, the date of creation
-will adapt dynamically.
+Now that you have learned to create a basic map layout we go a step
+further and create a map layout that adapts dynamically to our map
+extent and to the page properties, e.g. when you change the size of
+the page.
+Also, the date of creation will adapt dynamically.
 
 |moderate| |FA| Creating the dynamic map canvas
 ----------------------------------------------------------------------
@@ -58,7 +59,8 @@ will adapt dynamically.
 
      @layout_pagewidth - @sw_layout_margin * 2
 
-   Click the |dataDefineExpressionOn| :sup:`Data defined override` for :guilabel:`Height` and choose :guilabel:`Edit ...`.
+   Click the |dataDefineExpressionOn| :sup:`Data defined override`
+   for :guilabel:`Height` and choose :guilabel:`Edit ...`.
    Here fill in the formula::
 
      @layout_pageheight -  @sw_layout_height_header -  @sw_layout_margin * 2
@@ -148,13 +150,13 @@ will adapt dynamically.
    :guilabel:`Items Properties` Panel enter the expression::
 
      [%@project title%]
-    
+
    Set the position of the label.
 
    #. For :guilabel:`X`, use the expression::
 
         @sw_layout_margin + 3
-    
+
    #. For :guilabel:`Y`, use the expression::
 
         @sw_layout_margin + 0.25
@@ -162,7 +164,7 @@ will adapt dynamically.
    #. For :guilabel:`Width`, use the expression::
 
         @layout_pagewidth - @sw_layout_margin *2 - 90
-   
+
    #. Enter ``11.25`` for :guilabel:`Height`
 
    Under :guilabel:`Appearance` set the Font size to 16 pt.
@@ -172,9 +174,9 @@ will adapt dynamically.
    In the :guilabel:`Main Properties` enter the text
    ``map description``.
    In the :guilabel:`Main Properties` we will also include::
-    
+
      printed on: [%format_date(now(),'dd.MM.yyyy')%]
-     
+
    Here we used two ``Date and Time`` functions (``now`` and
    ``format_date``.
 
@@ -183,7 +185,7 @@ will adapt dynamically.
    #. For :guilabel:`X`, use the expression::
 
         @sw_layout_margin + 3
-    
+
    #. For :guilabel:`Y`, use the expression::
 
         @sw_layout_margin + 11.5
@@ -210,7 +212,7 @@ will adapt dynamically.
    #. For :guilabel:`X`, use the expression::
 
         @layout_pagewidth - @sw_layout_margin - 49.5
-    
+
    #. For :guilabel:`Y`, use the expression::
 
         @sw_layout_margin + 15.5
@@ -253,14 +255,14 @@ will adapt dynamically.
    #. For :guilabel:`X`, use the expression::
 
         @layout_pagewidth - @sw_layout_margin * 2 - 78
-    
+
    #. For :guilabel:`Y`, use the expression::
 
         @sw_layout_margin + 9
 
    #. For :guilabel:`Width`, use ``21.027``
    #. For :guilabel:`Height`, use ``21.157``
-  
+
 |moderate| |FA| Creating the scalebar of the dynamic header
 ----------------------------------------------------------------------
 
@@ -279,7 +281,7 @@ will adapt dynamically.
    #. For :guilabel:`X`, use the expression::
 
         @layout_pagewidth - @sw_layout_margin * 2 - 78
-    
+
    #. For :guilabel:`Y`, use the expression::
 
         @sw_layout_margin + 1
@@ -287,7 +289,7 @@ will adapt dynamically.
    #. For :guilabel:`Width`, use ``25``
    #. For :guilabel:`Height`, use ``8``
    #. Place the ``Reference point`` in the center.
-  
+
 Congratulations! You have created your first dynamic map layout.
 Take a look at the layout and check if everything looks the way you
 want it!
