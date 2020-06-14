@@ -90,7 +90,7 @@ html_theme_options = {
     # includehidden:Specifies if the navigation includes hidden table(s) of contents – that is, any toctree directive that is marked with the :hidden: option. Default: True,
     # 'includehidden': True,
     # canonical_url: This will specify a canonical URL meta link element to tell search engines which URL should be ranked as the primary URL for your documentation. This is important if you have multiple URLs that your documentation is available through. The URL points to the root path of the documentation and requires a trailing slash.
-    'canonical_url': 'https://docs.qgis.org/latest/en/docs/',
+    'canonical_url': 'https://docs.qgis.org/latest/en/',
     # display_version: If True, the version number is shown at the top of the sidebar. Default: True,
     'display_version': True,
     # logo_only: Only display the logo image, do not display the project name at the top of the sidebar. Default: False,
@@ -193,28 +193,6 @@ else:
     html_context = context
 
 
-latex_elements = {
-# The paper size ('letterpaper' or 'a4paper').
- 'papersize': 'a4paper',
-
-  # The font size ('10pt', '11pt' or '12pt').
-  #'pointsize': '10pt',
-
-  # Additional stuff for the LaTeX preamble.
-  'preamble': u'''\\usepackage{combelow}
-    \\usepackage{newunicodechar}
-    \\newunicodechar{Ș}{\\cb{S}}
-    \\newunicodechar{ș}{\\cb{s}}
-    \\newunicodechar{Ț}{\\cb{T}}
-    \\newunicodechar{ț}{\\cb{t}}
-    \\newunicodechar{≠}{$\\neq$}
-    \\newunicodechar{≥}{$\geq$}
-    \\newunicodechar{≤}{$\leq$}
-    \\newunicodechar{​}{ }
-    \\newunicodechar{Т}{T}
-    \\newunicodechar{А}{A}'''
-}
-
 # -- Options for LaTeX output --------------------------------------------------
 
 # The paper size ('letter' or 'a4').
@@ -249,6 +227,30 @@ latex_use_parts = False
 # If false, no module index is generated.
 #latex_use_modindex = True
 
+<<<<<<< HEAD
+=======
+latex_elements = {
+# The paper size ('letterpaper' or 'a4paper').
+ 'papersize': 'a4paper',
+
+  # The font size ('10pt', '11pt' or '12pt').
+  #'pointsize': '10pt',
+
+  # Additional stuff for the LaTeX preamble.
+  'preamble': u'''\\usepackage{combelow}
+    \\usepackage{newunicodechar}
+    \\newunicodechar{Ș}{\\cb{S}}
+    \\newunicodechar{ș}{\\cb{s}}
+    \\newunicodechar{Ț}{\\cb{T}}
+    \\newunicodechar{ț}{\\cb{t}}
+    \\newunicodechar{≠}{$\\neq$}
+    \\newunicodechar{≥}{$\geq$}
+    \\newunicodechar{≤}{$\leq$}
+    \\newunicodechar{​}{ }'''
+}
+
+
+>>>>>>> 98e1f2f7ad23fec3723bae96069b4d7d6eb85eee
 # -- Settings for Python code samples testing --------------------------------
 
 # adding this because in pycookbook a lot of text is referencing classes, which cannot be found by sphinx
@@ -282,7 +284,6 @@ nitpick_ignore = [
 # Add doctest configuration
 
 doctest_path = ['/usr/share/qgis/python/plugins/', os.path.join(os.getcwd(), 'testdata', 'processing')]
-
 
 doctest_global_setup = '''
 import os

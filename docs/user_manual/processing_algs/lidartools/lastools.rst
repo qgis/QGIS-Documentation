@@ -176,6 +176,13 @@ Outputs
      - [raster]
      - The output raster
 
+**Algorithm ID**: ``lastools:blast2dem``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _lastoolsblast2iso:
 
 blast2iso
@@ -300,6 +307,12 @@ Outputs
      - ``OUTPUT_VECTOR``
      - [vector: line]
      - The output line vector layer with contours
+
+**Algorithm ID**: ``lastools:blast2iso``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _lastoolslas2dem:
@@ -477,6 +490,12 @@ Outputs
      - [raster]
      - The output raster
 
+**Algorithm ID**: ``lastools:las2dem``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _lastoolslas2iso:
 
@@ -609,6 +628,12 @@ Outputs
      - ``OUTPUT_VECTOR``
      - [vector: line]
      - The output line vector layer with contours
+
+**Algorithm ID**: ``lastools:las2iso``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _lastoolslas2las_filter:
@@ -852,6 +877,12 @@ Outputs
      - ``OUTPUT_LASLAZ``
      - [file]
      - The output LAS/LAZ format file
+
+**Algorithm ID**: ``lastools:las2las_filter``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _lastoolslas2las_project:
@@ -1496,6 +1527,12 @@ Outputs
      - [file]
      - The output LAS/LAZ format file
 
+**Algorithm ID**: ``lastools:las2las_project``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _lastoolslas2las_transform:
 
@@ -1733,6 +1770,12 @@ Outputs
      - [file]
      - The output (merged) LAS/LAZ format file
 
+**Algorithm ID**: ``lastools:las2las_transform``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _lastoolslas2txt:
 
@@ -1824,6 +1867,12 @@ Outputs
      - [file]
      - The output file
 
+**Algorithm ID**: ``lastools:las2txt``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _lastoolslasindex:
 
@@ -1910,13 +1959,19 @@ Outputs
      - 
      - No output
 
+**Algorithm ID**: ``lastools:lasindex``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _lastoolslasgrid:
 
 lasgrid
 -------
 Grids a selected attribute (e.g. elevation, intensity, classification,
-scan angle, ...) of a large point clouds with a user-defined step size 
+scan angle, ...) of a large point clouds with a user-defined step size
 onto raster using a particular method (e.g. min, max, average).
 
 For more info see the
@@ -2078,6 +2133,12 @@ Outputs
      - ``OUTPUT_RASTER``
      - [raster]
      - The output raster
+
+**Algorithm ID**: ``lastools:lasgrid``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _lastoolslasinfo:
@@ -2270,6 +2331,12 @@ Outputs
      - [file]
      - The file with the output
 
+**Algorithm ID**: ``lastools:lasinfo``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _lastoolslasmerge:
 
@@ -2401,6 +2468,12 @@ Outputs
      - [file]
      - The output (merged) LAS/LAZ format file
 
+**Algorithm ID**: ``lastools:lasmerge``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _lastoolslasprecision:
 
@@ -2475,6 +2548,12 @@ Outputs
      - [file]
      - The output ASCII file
 
+**Algorithm ID**: ``lastools:lasprecision``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _lastoolslasquery:
 
@@ -2530,6 +2609,12 @@ Parameters
 
 Outputs
 .......
+
+**Algorithm ID**: ``lastools:lasquery``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _lastoolslasvalidate:
@@ -2596,6 +2681,12 @@ Outputs
      - ``OUTPUT_GENERIC``
      - [file]
      - The output XML file
+
+**Algorithm ID**: ``lastools:lasvalidate``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _lastoolslaszip:
@@ -2696,6 +2787,12 @@ Outputs
      - ``OUTPUT_LASLAZ``
      - [file]
      - The output file
+
+**Algorithm ID**: ``lastools:laszip``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _lastoolstxt2las:
@@ -3093,3 +3190,9 @@ Outputs
      - ``OUTPUT_LASLAZ``
      - [file]
      - The output file
+
+**Algorithm ID**: ``lastools:txt2las``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
