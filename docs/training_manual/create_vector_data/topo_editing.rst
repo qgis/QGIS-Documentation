@@ -49,7 +49,7 @@ snapping options:
    the vertices of adjoining areas, you'll notice that there won't be
    any gaps between your new area and the existing adjacent areas.
 
-#. Note the |undo| :sup`undo` / |redo| :sup:`redo` tools in the
+#. Note the |undo| :sup:`undo` and |redo| :sup:`redo` tools in the
    :guilabel:`Advanced Digitizing`toolbar.
 
   
@@ -258,7 +258,7 @@ Instead, it keeps them both.
 Now we will re-join the feature you just created to the original polygon:
 
 #. Experiment with  the :guilabel:`Merge Selected Features` and
-  :guilabel:`Merge Attributes of Selected Features` tools.
+   :guilabel:`Merge Attributes of Selected Features` tools.
 #. Note the differences.
 
 :ref:`Check your results <create-vector-topology-4>`
