@@ -49,8 +49,9 @@ snapping options:
    the vertices of adjoining areas, you'll notice that there won't be
    any gaps between your new area and the existing adjacent areas.
 
-#. Note the |undo| :sup:`undo` and |redo| :sup:`redo` tools in the
-   :guilabel:`Advanced Digitizing`toolbar.
+#. Note the |undo| :sup:`undo`
+   and |redo| :sup:`redo` tools in the
+   :guilabel:`Advanced Digitizing` toolbar.
 
   
 
