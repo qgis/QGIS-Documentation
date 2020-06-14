@@ -13,6 +13,7 @@ You will also be able to load a layer into QGIS.
 
    preparation
    overview
+   mapviewnavigation
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
