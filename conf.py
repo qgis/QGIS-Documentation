@@ -227,6 +227,27 @@ latex_use_parts = False
 # If false, no module index is generated.
 #latex_use_modindex = True
 
+latex_elements = {
+# The paper size ('letterpaper' or 'a4paper').
+ 'papersize': 'a4paper',
+
+  # The font size ('10pt', '11pt' or '12pt').
+  #'pointsize': '10pt',
+
+  # Additional stuff for the LaTeX preamble.
+  'preamble': u'''\\usepackage{combelow}
+    \\usepackage{newunicodechar}
+    \\newunicodechar{Ș}{\\cb{S}}
+    \\newunicodechar{ș}{\\cb{s}}
+    \\newunicodechar{Ț}{\\cb{T}}
+    \\newunicodechar{ț}{\\cb{t}}
+    \\newunicodechar{≠}{$\\neq$}
+    \\newunicodechar{≥}{$\geq$}
+    \\newunicodechar{≤}{$\leq$}
+    \\newunicodechar{​}{ }'''
+}
+
+
 # -- Settings for Python code samples testing --------------------------------
 
 # adding this because in pycookbook a lot of text is referencing classes, which cannot be found by sphinx
