@@ -44,7 +44,7 @@ Also, the date of creation will adapt dynamically.
    :guilabel:`Position and Size` section.
    Click the |dataDefineExpressionOn| :sup:`Data defined override` for
    :guilabel:`X` and from the :guilabel:`Variables` entry, choose
-   ``@sw_layout_margin``. 
+   ``@sw_layout_margin``.
 #. Click the |dataDefineExpressionOn| :sup:`Data defined override`
    for :guilabel:`Y`, choose :guilabel:`Edit...` and type in the
    formula::
