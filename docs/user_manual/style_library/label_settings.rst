@@ -480,12 +480,93 @@ or outside.
 
    Label placement examples in polygons
 
-In the :guilabel:`priority` section you can define the priority with which
-labels are rendered for all three vector layer types (point, line, polygon).
-This placement option interacts with the labels from other vector layers in
-the map canvas. If there are labels from different layers in the same
+Common placement settings
+-------------------------
+
+Some label placement settings are available for all layer geometry types:
+
+Data Defined
+............
+
+The :guilabel:`Data Defined` group provides direct control on labels
+placement, on a feature-by-feature basis. It relies on their attributes
+or an expression to set:
+
+* the :guilabel:`X` and :guilabel:`Y` coordinate
+* the text alignment over the custom position set above:
+
+  * :guilabel:`Horizontal`: it can be **Left**, **Center** or **Right**
+  * the text :guilabel:`Vertical`: it can be **Bottom**, **Base**, **Half**,
+    **Cap** or **Top**
+* the text :guilabel:`Rotation`. Check the :guilabel:`Preserve data rotation
+  values` entry if you want to keep the rotation value in the associated field
+  and apply it to the label, whether the label is pinned or not. If unchecked,
+  unpinning the label rotation is reset and its value cleared from the attribute
+  table.
+  
+  .. note:: Data-defined rotation with polygon features is currently supported
+   only with the :guilabel:`Around centroid` placement mode.
+
+.. note:: Expressions can not be used in combination with the labels map tools
+   (ie the :guilabel:`Rotate label` and :guilabel:`Move label` tools)
+   to :ref:`data-define <data_defined>` labels placement.
+   The widget will be reset to the corresponding :ref:`auxiliary storage field
+   <vector_auxiliary_storage>`.
+
+.. _`labels_priority`:
+
+Priority
+........
+
+In the :guilabel:`Priority` section you can define the placement priority rank
+of each label, ie if there are different labels candidates for the same
 location, the label with the higher priority will be displayed and the
-others will be left out.
+others could be left out.
+The priority rank is also used to evaluate whether a label could be omitted
+due to a greater weighted :ref:`obstacle feature <labels_obstacles>`.
+
+.. _`labels_obstacles`:
+
+Obstacles
+.........
+
+In some contexts (eg, high density labels, overlapping features...), the
+labels placement can result in labels being placed over unrelated features.
+
+An obstacle is a feature over which QGIS avoids placing other features' labels
+or diagrams. This can be controlled from the :guilabel:`Obstacles` section:
+
+#. Activate the |checkbox| :guilabel:`Discourage labels from covering features`
+   option to decide whether features of the layer should act as obstacles for
+   any label (including labels from other features in the same layer).
+
+   Instead of the whole layer, you can select a subset of features to use as
+   obstacles, using the |dataDefined| :sup:`data-defined override` control next
+   to the option.
+
+#. Use the :guilabel:`Settings` button to tweak the obstacle's weighting.
+
+   * For every potential obstacle feature you can assign an :guilabel:`Obstacle
+     weight`: any :ref:`label <labels_priority>` or :ref:`diagram <diagram_placement>`
+     whose placement priority rank is greater than this value can be placed
+     over. Labels or diagrams with lower rank will be omitted if no other
+     placement is possible.
+
+     This weighting can also be data-defined, so that within the same layer,
+     certain features are more likely to be covered than others.
+   * For polygon layers, you can choose the kind of obstacle the feature is:
+
+     * **over the feature's interior**: avoids placing labels over the interior
+       of the polygon (prefers placing labels totally outside or just slightly
+       inside the polygon)
+     * or **over the feature's boundary**: avoids placing labels over the
+       boundary of the polygon (prefers placing labels outside or completely
+       inside the polygon). This can be useful for layers where the features
+       cover the whole area (administrative units, categorical coverages, ...).
+       In this case, it is impossible to avoid
+       placing labels within these features, and it looks much better when
+       placing them over the boundaries between features is avoided.
+
 
 .. _labels_rendering:
 
@@ -546,40 +627,6 @@ Under :guilabel:`Feature options`:
   to avoid duplicate labels`, rendering a quite airy map in conjunction with
   the :guilabel:`Distance` or :guilabel:`Repeat` options in the :ref:`Placement
   <labels_line_placement>` tab.
-
-Obstacles
----------
-
-An obstacle is a feature QGIS tries as far as possible to not place labels over.
-From the :guilabel:`Obstacles` frame, you can manage the covering relation
-between labels and features:
-
-* Activate the |checkbox| :guilabel:`Discourage labels from covering features`
-  option to decide whether features of the layer should act as obstacles for
-  any label (including labels from other features in the same layer).
-  
-  Instead of the whole layer, you can define a subset of features to use as obstacles,
-  using the |dataDefined| :sup:`data-defined override` control next to the option.
-
-* The |slider| priority control slider for obstacles allows you to make labels
-  prefer to overlap features from certain layers rather than others.
-  A **Low weight** obstacle priority means that features of the layer are less
-  considered as obstacles and thus more likely to be covered by labels.
-  This priority can also be data-defined, so that within the same layer,
-  certain features are more likely to be covered than others.
-
-* For polygon layers, you can choose the type of obstacle the features could be,
-  by minimising the labels placement:
-
-  * **over the feature's interior**: avoids placing labels over the interior of
-    the polygon (prefers placing labels totally outside or just slightly inside
-    the polygon)
-  * or **over the feature's boundary**: avoids placing labels over boundary of
-    the polygon (prefers placing labels outside or completely inside the
-    polygon). E.g., it can be useful for regional boundary layers, where the
-    features cover an entire area. In this case, it's impossible to avoid
-    placing labels within these features, and it looks much better to avoid
-    placing them over the boundaries between features.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

@@ -17,11 +17,11 @@ algorithms.
      cartography
      database
      filetools
-     graphics
      interpolation
      layertools
      modelertools
      networkanalysis
+     plots
      rasteranalysis
      rasterterrainanalysis
      rastertools

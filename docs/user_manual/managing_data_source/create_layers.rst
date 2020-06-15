@@ -110,10 +110,10 @@ figure_create_shapefile_.
    :guilabel:`...` button next to :guilabel:`File name`. QGIS will
    automatically add the right extension to the name you provide.
 #. Next, indicate the :guilabel:`File encoding` of the data
-#. Choose the :guilabel:`Geometry type` of the layer (point, multipoint, line
-   or polygon)
-#. Specify whether the geometry should have :guilabel:`Z (+ M
-   values)` or :guilabel:`M values`
+#. Choose the :guilabel:`Geometry type` of the layer: No Geometry (resulting
+   in a :file:`.DBF` format file), point, multipoint, line or polygon
+#. Specify whether the geometry should have additional dimensions:
+   :guilabel:`None`, :guilabel:`Z (+ M values)` or :guilabel:`M values`
 #. Specify the coordinate reference system using the |setProjection| button
 
 .. _figure_create_shapefile:
@@ -233,7 +233,25 @@ figure_create_temporary_. Then:
    * ``Point`` or ``MultiPoint`` layer,
    * ``LineString/CompoundCurve`` or ``MultiLineString/MultiCurve`` layer,
    * ``Polygon/CurvePolygon`` or ``MultiPolygon/MultiSurface`` layer.
+#. For geometric types, specify the dimensions of the dataset: check whether
+   it should :guilabel:`Include Z dimension` and/or :guilabel:`Include M values`
 #. Specify the coordinate reference system using the |setProjection| button.
+#. Add fields to the layer. Note that unlike many formats, temporary
+   layers can be created without any fields. This step is thus optional.
+
+   #. Enter the :guilabel:`Name` of the field
+   #. Select the data :guilabel:`Type`: :guilabel:`Text`, :guilabel:`Whole number`,
+      :guilabel:`Decimal number`, :guilabel:`Boolean`, :guilabel:`Date`,
+      :guilabel:`Time`, :guilabel:`Date & Time` and :guilabel:`Binary (BLOB)`
+      are supported.
+   #. Depending on the selected data format, enter the :guilabel:`Length` and
+      :guilabel:`Precision`
+   #. Click on the |newAttribute| :guilabel:`Add to Fields List` button
+   #. Repeat the steps above for each field you need to add
+#. Once you are happy with the settings, click :guilabel:`OK`.
+   QGIS will add the new layer to the :guilabel:`Layers` panel, and you can edit
+   it as described in section :ref:`sec_edit_existing_layer`.
+
 
 .. _figure_create_temporary:
 
@@ -242,17 +260,14 @@ figure_create_temporary_. Then:
 
    Creating a new Temporary Scratch layer dialog
 
-By default, a new temporary scratch layer is created without any attributes. You
-can later add them using the |newAttribute| :sup:`New Field` button in the
-layer's attribute table dialog or the :guilabel:`Fields` tab of its
-properties dialog.
+
 You can also create prepopulated temporary scratch layers using e.g. the
 clipboard (see :ref:`paste_into_layer`) or as a result of a :ref:`Processing
 algorithm <processing_algs>`.
 
 .. tip:: **Permanently store a memory layer on disk**
 
-  To avoid data loss when closing  a project with temporary scratch layers,
+  To avoid data loss when closing a project with temporary scratch layers,
   you can save these layers to any vector format supported by QGIS:
 
   * clicking the |indicatorMemory| indicator icon next to the layer;
@@ -488,9 +503,9 @@ data by themselves and can be seen as views.
 
 To create a virtual layer, open the virtual layer creation dialog by:
 
-* choosing the |virtualLayer| :guilabel:`Add/Edit Virtual Layer` entry
+* choosing the |addVirtualLayer| :guilabel:`Add/Edit Virtual Layer` entry
   in the :menuselection:`Layer --> Add Layer -->` menu;
-* enabling the |virtualLayer| :guilabel:`Add Virtual Layer` tab in the
+* enabling the |addVirtualLayer| :guilabel:`Add Virtual Layer` tab in the
   :guilabel:`Data Source Manager` dialog;
 * or using the :guilabel:`DB Manager` dialog tree.
 
@@ -667,6 +682,8 @@ when used in conjunction with this spatial index syntax.
 
 .. |addPart| image:: /static/common/mActionAddPart.png
    :width: 1.5em
+.. |addVirtualLayer| image:: /static/common/mActionAddVirtualLayer.png
+   :width: 1.5em
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
 .. |createGPX| image:: /static/common/create_gpx.png
@@ -689,5 +706,3 @@ when used in conjunction with this spatial index syntax.
    :width: 1.5em
 .. |unchecked| image:: /static/common/checkbox_unchecked.png
    :width: 1.3em
-.. |virtualLayer| image:: /static/common/mActionAddVirtualLayer.png
-   :width: 1.5em

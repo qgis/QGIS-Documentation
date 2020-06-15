@@ -29,6 +29,7 @@ The code snippets on this page need the following imports if you're outside the 
 
     from qgis.PyQt.QtWidgets import (
         QWidget,
+        QTabWidget,
     )
 
     from qgis.PyQt.QtNetwork import QSslCertificate
@@ -71,7 +72,7 @@ A good code reference can be read from the authentication infrastructure
 
 .. warning::
 
-    Due the the security constraints that were taken into account during the authentication
+    Due to the security constraints that were taken into account during the authentication
     infrastructure design, only a selected subset of the internal methods are exposed to Python.
 
 
@@ -100,7 +101,7 @@ Here are some definition of the most common objects treated in this chapter.
     A set of authentication data depending on :term:`Authentication Method`.
     e.g Basic authentication method stores the couple of user/password.
 
-  Authentication config
+  Authentication Config
     :term:`Authentication Configuration`
 
   Authentication Method
@@ -207,18 +208,15 @@ Available Authentication methods
 ................................
 
 :term:`Authentication Method` libraries are loaded dynamically during
-authentication manager init. The list of Authentication methods can vary
-with QGIS evolution, but the original list of available methods is:
+authentication manager init. Available authentication methods are:
 
 #. ``Basic`` User and password authentication
+#. ``Esri-Token`` ESRI token based authentication
 #. ``Identity-Cert`` Identity certificate authentication
+#. ``OAuth2`` OAuth2 authentication
 #. ``PKI-Paths`` PKI paths authentication
 #. ``PKI-PKCS#12`` PKI PKCS#12 authentication
 
-The above strings are that identify authentication methods in the QGIS
-authentication system.
-In `Development <https://www.qgis.org/en/site/getinvolved/development/index.html>`_
-section is described how to create a new c++ :term:`Authentication Method`\.
 
 .. _Populate_Authorities:
 
@@ -237,11 +235,6 @@ Populate Authorities
     authMgr.rebuildCaCertsCache()
     authMgr.rebuildTrustedCaCertsCache()
 
-.. warning::
-
-    Due to QT4/OpenSSL interface limitation, updated cached CA are exposed to
-    OpenSsl only almost a minute later. Hope this will be solved in QT5
-    authentication infrastructure.
 
 .. _Manage_PKI_bundles_with_QgsPkiBundle:
 
@@ -307,9 +300,11 @@ enabled service like a WMS or WFS or to a DB connection.
     authM = QgsApplication.authManager()
     print(authM.authMethod("Identity-Cert").supportedDataProviders())
 
+  Sample output:
+
   .. testoutput:: auth
 
-    ['ows', 'wfs', 'wcs', 'wms', 'postgres']
+     ['ows', 'wfs', 'wcs', 'wms', 'postgres']
 
 For example, to access a WMS service using stored credentials identified with
 ``authcfg = 'fm1s770'``, we just have to use the ``authcfg`` in the data source
@@ -412,20 +407,22 @@ GUI to select credentials
 
 If it's necessary to select a :term:`Authentication Configuration` from the set
 stored in the :term:`Authentication DB` it is available in the GUI class
-`QgsAuthConfigSelect <qgis.gui.QgsAuthConfigSelect>`.
+:class:`QgsAuthConfigSelect <qgis.gui.QgsAuthConfigSelect>`.
 
 .. figure:: img/QgsAuthConfigSelect.png
    :align: center
 
 and can be used as in the following snippet:
 
-... testcode:: auth
+.. testcode:: auth
 
   # create the instance of the QgsAuthConfigSelect GUI hierarchically linked to
   # the widget referred with `parent`
+  parent = QWidget()  # Your GUI parent widget
   gui = QgsAuthConfigSelect( parent, "postgres" )
   # add the above created gui in a new tab of the interface where the
   # GUI has to be integrated
+  tabGui = QTabWidget()
   tabGui.insertTab( 1, gui, "Configurations" )
 
 The above example is taken from the QGIS source :source:`code
@@ -456,7 +453,7 @@ and can be used as in the following snippet:
   gui = QgsAuthConfigSelect( parent )
   gui.show()
 
-an integrated example can be found in the related :source:`test
+An integrated example can be found in the related :source:`test
 <tests/src/python/test_qgsauthsystem.py#L80>`.
 
 .. _Authorities_Editor_GUI:
@@ -465,7 +462,7 @@ Authorities Editor GUI
 ----------------------
 
 A GUI used to manage only authorities is managed by the
-`QgsAuthAuthoritiesEditor <qgis.gui.QgsAuthAuthoritiesEditor>` class.
+:class:`QgsAuthAuthoritiesEditor <qgis.gui.QgsAuthAuthoritiesEditor>` class.
 
 .. figure:: img/QgsAuthAuthoritiesEditor.png
    :align: center

@@ -49,7 +49,7 @@ and update the whole QGIS documentation.
    "Astrid Emde", "Luigi Pirelli", "Thomas Gratier", "Giovanni Allegri", "GiordanoPezzola"
    "Paolo Corti", "Tudor Bărăscu", "Maning Sambale",  "Claudia A. Engel", "Yoichi Kayama"
    "Otto Dassau", "Denis Rouzaud", "Nick Bearman", "embelding", "ajazepk"
-   "Ramon", "Andrei", "zstadler",  "icephale"
+   "Ramon", "Andrei", "zstadler",  "icephale", "Rosa Aguilar"
 
 
 
@@ -72,7 +72,7 @@ The current translations are made possible thanks to:
    :header: "Language", "Contributors"
    :widths: 15, 80              
 
-   "Bahasian Indonesian", "Emir Hartato, I Made Anombawa, Januar V. Simarmata,
+   "Bahasa Indonesia", "Emir Hartato, I Made Anombawa, Januar V. Simarmata,
    Muhammad Iqnaul Haq Siregar, Trias Aditya"
    "Chinese (Traditional)", "Calvin Ngei, Zhang Jun, Richard Xie"
    "Dutch", "Carlo van Rijswijk, Dick Groskamp, Diethard Jansen, Raymond Nijssen,

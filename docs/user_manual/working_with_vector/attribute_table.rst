@@ -78,7 +78,7 @@ following functionality:
    "|toggleEditing|", "Toggle editing mode", "Enable editing functionalities", ":kbd:`Ctrl+E`"
    "|multiEdit|", "Toggle multi edit mode", "Update multiple fields of many features"
    "|saveEdits|", "Save Edits", "Save current modifications"
-   "|draw|", "Reload the table"
+   "|refresh|", "Reload the table"
    "|newTableRow|", "Add feature", "Add new geometryless feature"
    "|deleteSelectedFeatures|", "Delete selected features", "Remove selected features from the layer"
    "|editCut|", "Cut selected features to clipboard", "", ":kbd:`Ctrl+X`"
@@ -118,9 +118,14 @@ QGIS provides two view modes to easily manipulate data in the attribute table:
 
 * The |openTable| :sup:`Table view`, displays values of multiple features in a
   tabular mode, each row representing a feature and each column a field.
-* And the |formView| :sup:`Form view` shows :ref:`feature identifiers
+* The |formView| :sup:`Form view` shows :ref:`feature identifiers
   <maptips>` in a first panel and displays only the attributes of the clicked
-  identifier in the second one. Form view uses the layer fields configuration
+  identifier in the second one.
+  There is a pull-down menu at the top of the first panel where the "identifier"
+  can be specified using an attribute (:guilabel:`Column preview`) or an
+  :guilabel:`Expression`.
+  The pull-down also includes the last 10 expressions for re-use.
+  Form view uses the layer fields configuration
   (see :ref:`vector_attributes_menu`).
   You can browse through the feature identifiers with the arrows on the bottom
   of the first panel. Once you markered the feature in yellow in the list it
@@ -990,8 +995,6 @@ table.
    :width: 1.5em
 .. |dock| image:: /static/common/dock.png
    :width: 1.5em
-.. |draw| image:: /static/common/mActionDraw.png
-   :width: 1.5em
 .. |duplicateFeature| image:: /static/common/mActionDuplicateFeature.png
    :width: 1.5em
 .. |editCut| image:: /static/common/mActionEditCut.png
@@ -1031,6 +1034,8 @@ table.
 .. |radioButtonOff| image:: /static/common/radiobuttonoff.png
    :width: 1.5em
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
+   :width: 1.5em
+.. |refresh| image:: /static/common/mActionRefresh.png
    :width: 1.5em
 .. |saveEdits| image:: /static/common/mActionSaveEdits.png
    :width: 1.5em

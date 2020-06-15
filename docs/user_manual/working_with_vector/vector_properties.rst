@@ -283,15 +283,6 @@ See :ref:`symbol-selector` for further information about symbol representation.
 
    Single symbol line properties
 
-.. tip:: **Edit symbol directly from layer panel**
-
-   If in your **Layers Panel** you have layers with categories defined through
-   categorized, graduated or rule-based symbology mode, you can quickly change the
-   fill color of the symbol of the categories by right-clicking on a category
-   and choose the color you prefer from a |colorWheel| :sup:`color wheel` menu.
-   Right-clicking on a category will also give you access to the options **Hide
-   all items**, **Show all items** and **Edit symbol**.
-
 
 .. index::
    single: Symbology; No symbols renderer
@@ -448,6 +439,23 @@ or fine-tune the symbols rendering:
   assigns to each category a symbol whose name represents the classification
   value of the category
 * :ref:`Symbol levels... <Symbols_levels>` to define the order of symbols rendering.
+
+.. tip:: **Edit categories directly from the** :guilabel:`Layers` **panel**
+
+   When a layer symbology is based on a :ref:`categorized <categorized_renderer>`,
+   :ref:`graduated <graduated_renderer>` or :ref:`rule-based <rule_based_rendering>`
+   symbology mode, you can edit each of the categories from the :guilabel:`Layers`
+   Panel. Right-click on a sub-item of the layer and you will:
+
+   * |toggleAllLayers| :guilabel:`Toggle items` visibility
+   * |showAllLayers| :guilabel:`Show all items`
+   * |hideAllLayers| :guilabel:`Hide all items`
+   * Modify the symbol color thanks to the :ref:`color selector
+     <color-selector>` wheel
+   * :guilabel:`Edit symbol...` from the :ref:`symbol selector
+     <symbol-selector>` dialog
+   * :guilabel:`Copy symbol`
+   * :guilabel:`Paste symbol`
 
 
 .. index:: Natural Breaks (Jenks), Pretty Breaks, Equal Interval, Quantile, Histogram
@@ -1236,7 +1244,7 @@ Description of how to set each property is exposed at :ref:`showlabels`.
 Setting the automated placement engine
 --------------------------------------
 
-You can use the automated placement settings to configure a global and
+You can use the automated placement settings to configure a project-level
 automated behavior of the labels. In the top right corner of the
 :guilabel:`Labels` tab, click the |autoPlacement| :sup:`Automated placement
 settings (applies to all layers)` button, opening a dialog with the following
@@ -1249,11 +1257,10 @@ options:
 
    The labels automated placement engine
 
-* The :guilabel:`Number of candidates` controls how many label placement
-  candidates should be generated for each feature type. The more candidates
-  generated, the better the labeling will be - but at a cost of rendering
-  speed. Smaller number of candidates results in less labels placed but faster
-  redraws.
+* :guilabel:`Number of candidates`: calculates and assigns to line and
+  polygon features the number of possible labels placement based on their size.
+  The longer or wider a feature is, the more candidates it has, and its labels
+  can be better placed with less risk of collision.
 * :guilabel:`Text rendering`: sets the default value for label rendering
   widgets when :ref:`exporting a map canvas <exportingmapcanvas>` or
   :ref:`a layout <create-output>` to PDF or SVG.
@@ -1280,7 +1287,23 @@ options:
   Like the label says, it's useful only for debugging and testing the effect different
   labeling settings have. This could be handy for a better manual placement with
   tools from the :ref:`label toolbar <label_toolbar>`.
+* :guilabel:`Project labeling version`: QGIS supports two different versions of
+  label automatic placement:
 
+  * :guilabel:`Version 1`: the old system (used by QGIS versions 3.10 and earlier,
+    and when opening projects created in these versions in QGIS 3.12 or later).
+    Version 1 treats label and obstacle priorities as "rough guides" only,
+    and it's possible that a low-priority label will be placed over a high-priority
+    obstacle in this version. Accordingly, it can be difficult to obtain the
+    desired labeling results when using this version and it is thus
+    recommended only for compatibility with older projects.
+  * :guilabel:`Version 2 (recommended)`: this is the default system in new
+    projects created in QGIS 3.12 or later. In version 2, the logic dictating
+    when labels are allowed to overlap :ref:`obstacles <labels_obstacles>`
+    has been reworked. The newer logic forbids any labels from overlapping
+    any obstacles with a greater obstacle weight compared to the label's
+    priority. As a result, this version results in much more predictable
+    and easier to understand labeling results.
 
 .. _rule_based_labeling:
 
@@ -1513,8 +1536,7 @@ The Label Toolbar
 
 The :guilabel:`Label Toolbar` provides some tools to manipulate |labeling|
 :ref:`label <vector_labels_tab>` or |diagram| :ref:`diagram <sec_diagram>`
-properties, but only if the corresponding data-defined option is indicated
-(otherwise, buttons are disabled).
+properties.
 
 .. _figure_labels_tools:
 
@@ -1527,11 +1549,10 @@ While for readability, ``label`` has been used below to describe the Label
 toolbar, note that when mentioned in their name, the tools work almost the
 same way with diagrams:
 
-* |pinLabels| :sup:`Pin/Unpin Labels And Diagrams` that has data-defined
-  position. By clicking or draging an area, you pin label(s). If you click or
-  drag an area holding :kbd:`Shift`, label(s) are unpinned. Finally, you can
-  also click or drag an area holding :kbd:`Ctrl` to toggle the pin status of
-  label(s).
+* |pinLabels| :sup:`Pin/Unpin Labels And Diagrams`. By clicking or draging an
+  area, you pin label(s). If you click or drag an area holding :kbd:`Shift`,
+  label(s) are unpinned. Finally, you can also click or drag an area holding
+  :kbd:`Ctrl` to toggle the pin status of label(s).
 * |showPinnedLabels| :sup:`Highlight Pinned Labels And Diagrams`. If the
   vector layer of the label is editable, then the highlighting is green,
   otherwise it's blue.
@@ -1539,12 +1560,12 @@ same way with diagrams:
   determine whether any important labels are missing from the maps (e.g. due
   to overlaps or other constraints). They are displayed with a customizable
   color (see :ref:`automated_placement`).
-* |showHideLabels| :sup:`Show/Hide Labels And Diagrams` that has
-  data-defined visbility. If you click or drag an area holding :kbd:`Shift`,
-  then label(s) are hidden. When a label is hidden, you just have to click
-  or drag an area around the feature's point to restore its visibility.
-* |moveLabel| :sup:`Move Label And Diagram` that has data-defined
-  position. You just have to drag the label to the desired place.
+* |showHideLabels| :sup:`Show/Hide Labels And Diagrams`. If you click on the labels,
+  or click and drag an area holding :kbd:`Shift`, they are hidden.
+  When a label is hidden, you just have to click on the feature to restore its
+  visibility. If you drag an area, all the labels in the area will be restored.
+* |moveLabel| :sup:`Move Label And Diagram`. You just have to drag the label to
+  the desired place.
 * |rotateLabel| :sup:`Rotate Label`. Click the label and move around and
   you get the text rotated.
 * |changeLabelProperties| :sup:`Change Label`. It opens a dialog to change the
@@ -3376,6 +3397,8 @@ This makes it possible to quickly flag gaps as allowed.
    :width: 1.5em
 .. |heatmapSymbol| image:: /static/common/rendererHeatmapSymbol.png
    :width: 1.5em
+.. |hideAllLayers| image:: /static/common/mActionHideAllLayers.png
+   :width: 1.5em
 .. |histogram| image:: /static/common/histogram.png
    :width: 1.5em
 .. |identify| image:: /static/common/mActionIdentify.png
@@ -3460,6 +3483,8 @@ This makes it possible to quickly flag gaps as allowed.
    :width: 2.5em
 .. |setProjection| image:: /static/common/mActionSetProjection.png
    :width: 1.5em
+.. |showAllLayers| image:: /static/common/mActionShowAllLayers.png
+   :width: 1.5em
 .. |showHideLabels| image:: /static/common/mActionShowHideLabels.png
    :width: 1.5em
 .. |showPinnedLabels| image:: /static/common/mActionShowPinnedLabels.png
@@ -3484,6 +3509,8 @@ This makes it possible to quickly flag gaps as allowed.
 .. |system| image:: /static/common/system.png
    :width: 1.5em
 .. |text| image:: /static/common/text.png
+   :width: 1.5em
+.. |toggleAllLayers| image:: /static/common/mActionToggleAllLayers.png
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em

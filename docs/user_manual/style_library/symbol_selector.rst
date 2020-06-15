@@ -151,7 +151,7 @@ regardless it's of marker, line or fill sub-type:
 * the |dataDefined| :sup:`data-defined override` widget near almost all options,
   extending capabilities of customizing each symbol (see :ref:`data_defined` for
   more information)
-* the |checkbox| :guilabel:`Enable layer` option controls the symbol layer's
+* the |checkbox| :guilabel:`Enable symbol layer` option controls the symbol layer's
   visibility. Disabled symbol layers are not drawn when rendering the symbol but
   are saved in the symbol. Being able to hide symbol layers is convenient when
   looking for the best design of your symbol as you don't need to remove any for
@@ -193,7 +193,16 @@ Appropriate for point geometry features, marker symbols have several
   uses a :ref:`fill sub symbol <vector_fill_symbols>` to render the marker.
   This allows use of all the existing QGIS fill (and stroke) styles for
   rendering markers, e.g. gradient or shapeburst fills.
-* **Font marker**: use installed fonts as marker symbols
+* **Font marker**: similar to the simple marker symbol layer, except that it
+  uses installed fonts to render the marker. Its additional properties
+  are:
+
+  * :guilabel:`Font family`
+  * :guilabel:`Font style`
+  * :guilabel:`Character(s)`, representing the text to display as symbol.
+    They can be typed in or selected from the font characters collection widget
+    and you can live :guilabel:`Preview` them with the selected settings.
+
 * **Geometry generator** (see :ref:`geometry_generator_symbol`)
 
 .. _raster_image_marker:
@@ -202,7 +211,9 @@ Appropriate for point geometry features, marker symbols have several
   as marker symbol. The image can be a file on the disk, a remote URL
   or embedded in the style database (:ref:`more details <svg_paths>`).
   Width and height of the image can be set independently or using the
-  |lockedGray| :sup:`Lock aspect ratio`.
+  |lockedGray| :sup:`Lock aspect ratio`. The size can be set using any of the
+  :ref:`common units <unit_selector>` or as a percentage of the image's original
+  size (scaled by the width).
 * **Vector Field marker** (see :ref:`vector_field_marker`)
 
 .. _svg_marker:
@@ -245,8 +256,10 @@ Appropriate for point geometry features, marker symbols have several
 Line Symbols
 ............
 
-Appropriate for line geometry features, line symbols have following symbol
+Appropriate for line geometry features, line symbols have the following symbol
 layer types:
+
+.. _simple_line_symbol:
 
 * **Simple line** (default): available settings are:
 
@@ -283,8 +296,9 @@ layer types:
     geometry: first, last or each vertex, on the central point of the line
     or of each segment, or on every curve point.
   * The markers placement can also be given an offset along the line
-  * The |checkbox| :guilabel:`Rotate marker` option allows you to set whether
-    each marker symbol should be oriented relative to the line direction or not.
+  * The |checkbox| :guilabel:`Rotate marker to follow line direction` option
+    sets whether each marker symbol should be oriented relative to the line
+    direction or not.
 
     Because a line is often a succession of segments of different directions,
     the rotation of the marker is calculated by averaging over a specified
@@ -340,10 +354,18 @@ symbol layer types:
   The position of the marker may not be the real centroid
   of the feature, because calculation takes into account the polygon(s)
   clipped to area visible in map canvas for rendering and ignores holes.
-  Use the geometry generator symbol if you want the exact centroid. 
+  Use the :ref:`geometry generator symbol <geometry_generator_symbol>`
+  if you want the exact centroid. 
   
-  The marker(s) can be placed on every part of a multi-part feature or
-  only on its biggest part, and forced to be inside the polygon.
+  You can:
+  
+  * :guilabel:`Force point inside polygon`
+  * :guilabel:`Draw point on every part of multi-part feature` or place
+    the point only on its biggest part
+  * display the marker symbol(s) in whole or in part, keeping parts overlapping
+    the current feature geometry (:guilabel:`Clip markers to polygon boundary`)
+    or the geometry part the symbol belongs to (:guilabel:`Clip markers to current
+    part boundary only`)
 
 * **Geometry generator** (see :ref:`geometry_generator_symbol`)
 * **Gradient fill**: uses a radial, linear or conical gradient, based on either
@@ -375,7 +397,8 @@ symbol layer types:
   :file:`JPG`, :file:`BMP` ...). The image can be a file on the disk, a remote URL
   or an embedded file encoded as a string (:ref:`more details <svg_paths>`).
   Options include (data defined) opacity, image width, coordinate mode (object
-  or viewport), rotation and offset.
+  or viewport), rotation and offset. The image width can be set using any of the
+  :ref:`common units <unit_selector>` or as a percentage of the original size.
 * **SVG fill**: fills the polygon using :ref:`SVG markers <svg_marker>`;
 * **Shapeburst fill**: buffers a gradient fill, where a gradient
   is drawn from the boundary of a polygon towards the polygon's centre.
@@ -387,9 +410,11 @@ symbol layer types:
 * **Outline: Hashed line**: uses a :ref:`hash line symbol <hashed_line_symbol>`
   layer to represent the polygon boundary (the interior rings, the
   exterior ring or all the rings).
-* **Outline: Marker line**: uses a marker line symbol layer to represent the
+* **Outline: Marker line**: uses a :ref:`marker line symbol <marker_line_symbol>`
+  layer to represent the
   polygon boundary (the interior rings, the exterior ring or all the rings).
-* **Outline: simple line**: uses a simple line symbol layer to represent the
+* **Outline: simple line**: uses a :ref:`simple line symbol <simple_line_symbol>`
+  layer to represent the
   polygon boundary (the interior rings, the exterior ring or all the rings).
   The :guilabel:`Draw line only inside polygon` option displays the
   polygon borders inside the polygon and can be useful to clearly represent

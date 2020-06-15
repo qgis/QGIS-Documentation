@@ -7,16 +7,18 @@ Interpolation
       :local:
       :depth: 1
 
+
 .. _qgisheatmapkerneldensityestimation:
 
 Heatmap (kernel density estimation)
 -----------------------------------
-Creates a density (heatmap) raster of an input point vector layer using kernel
-density estimation.
+Creates a density (heatmap) raster of an input point vector layer
+using kernel density estimation.
 
-The density is calculated based on the number of points in a location, with larger
-numbers of clustered points resulting in larger values. Heatmaps allow easy identification
-of *hotspots* and clustering of points.
+The density is calculated based on the number of points in a location,
+with larger numbers of clustered points resulting in larger values.
+Heatmaps allow easy identification of *hotspots* and clustering of
+points.
 
 Parameters
 ..........
@@ -167,9 +169,10 @@ Outputs
 
 Example: Creating a Heatmap
 ...........................
-For the following example, we will use the ``airports`` vector point layer from
-the QGIS sample dataset (see :ref:`label_sampledata`). Another excellent QGIS
-tutorial on making heatmaps can be found at `http://qgistutorials.com
+For the following example, we will use the ``airports`` vector point
+layer from the QGIS sample dataset (see :ref:`label_sampledata`).
+Another excellent QGIS tutorial on making heatmaps can be found at
+`http://qgistutorials.com
 <http://www.qgistutorials.com/en/docs/creating_heatmaps.html>`_.
 
 In Figure_Heatmap_data_processing_, the airports of Alaska are shown.
@@ -182,13 +185,15 @@ In Figure_Heatmap_data_processing_, the airports of Alaska are shown.
    Airports of Alaska
 
 
-#. Open the :guilabel:`Heatmap (Kernel Density Estimation)` algorithm from
-   the QGIS :guilabel:`Interpolation` group
-#. In the :guilabel:`Point layer` |selectString| field, select ``airports``
-   from the list of point layers loaded in the current project.
+#. Open the :guilabel:`Heatmap (Kernel Density Estimation)` algorithm
+   from the QGIS :guilabel:`Interpolation` group
+#. In the :guilabel:`Point layer` |selectString| field, select
+   ``airports`` from the list of point layers loaded in the current
+   project.
 #. Change the :guilabel:`Radius` to ``1000000`` meters.
-#. Change the :guilabel:`Pixel size X` to ``1000``. The :guilabel:`Pixel size Y`,
-   :guilabel:`Rows` and :guilabel:`Columns` will be automatically updated.
+#. Change the :guilabel:`Pixel size X` to ``1000``.
+   The :guilabel:`Pixel size Y`, :guilabel:`Rows` and
+   :guilabel:`Columns` will be automatically updated.
 #. Click on :guilabel:`Run` to create and load the airports heatmap
    (see Figure_Heatmap_created_processing_).
 
@@ -212,12 +217,14 @@ The heatmap can now be styled in QGIS to improve its appearance.
    The heatmap after loading looks like a grey surface
 
 
-#. Open the properties dialog of the ``heatmap_airports`` layer (select the layer
-   ``heatmap_airports``, open the context menu with the right mouse button and select
-   :guilabel:`Properties`).
+#. Open the properties dialog of the ``heatmap_airports`` layer
+   (select the layer ``heatmap_airports``, open the context menu with
+   the right mouse button and select :guilabel:`Properties`).
 #. Select the :guilabel:`Symbology` tab.
-#. Change the :guilabel:`Render type` |selectString| to 'Singleband pseudocolor'.
-#. Select a suitable :guilabel:`Color ramp` |selectString|, for instance ``YlOrRd``.
+#. Change the :guilabel:`Render type` |selectString| to
+   'Singleband pseudocolor'.
+#. Select a suitable :guilabel:`Color ramp` |selectString|, for
+   instance ``YlOrRd``.
 #. Click the :guilabel:`Classify` button.
 #. Press :guilabel:`OK` to update the layer.
 
@@ -232,21 +239,30 @@ The final result is shown in Figure_Heatmap_styled_processing_.
 
 .. _Wikipedia: https://en.wikipedia.org/wiki/Kernel_(statistics)#Kernel_functions_in_common_use
 
+**Algorithm ID**: ``qgis:heatmapkerneldensityestimation``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisidwinterpolation:
 
 IDW Interpolation
 -----------------
-Generates an Inverse Distance Weighted (IDW) interpolation of a point vector layer.
+Generates an Inverse Distance Weighted (IDW) interpolation of a point
+vector layer.
 
-Sample points are weighted during interpolation such that the influence of one point
-relative to another declines with distance from the unknown point you want to create.
+Sample points are weighted during interpolation such that the
+influence of one point relative to another declines with distance from
+the unknown point you want to create.
 
-The IDW interpolation method also has some disadvantages: the quality of the interpolation
-result can decrease, if the distribution of sample data points is uneven.
+The IDW interpolation method also has some disadvantages: the quality
+of the interpolation result can decrease, if the distribution of
+sample data points is uneven.
 
-Furthermore, maximum and minimum values in the interpolated surface can only occur
-at sample data points.
+Furthermore, maximum and minimum values in the interpolated surface
+can only occur at sample data points.
 
 Parameters
 ..........
@@ -264,7 +280,8 @@ Parameters
    * - **Input layer(s)**
      - ``INTERPOLATION_DATA``
      - [string]
-     - Vector layer(s) and field(s) to use for the interpolation, coded
+     - Vector layer(s) and field(s) to use for the interpolation,
+       coded
        in a string (see the ``ParameterInterpolationData`` class in
        :source:`InterpolationWidgets <python/plugins/processing/algs/qgis/ui/InterpolationWidgets.py>`
        for more details).
@@ -300,8 +317,8 @@ Parameters
      - ``EXTENT``
      - [extent]
      - Extent of the output raster layer.
-       You have to declare the output extent by either choosing it from
-       the map canvas, selecting it from another layer or type it
+       You have to declare the output extent by either choosing it
+       from the map canvas, selecting it from another layer or type it
        manually.
    * - **Output raster size**
      - ``PIXEL_SIZE``
@@ -351,20 +368,118 @@ Outputs
      - [raster]
      - Raster layer of interpolated values
 
+**Algorithm ID**: ``qgis:idwinterpolation``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgislinedensity:
+
+Line Density |312|
+-----------------------
+Calculates for each raster cell, the density measure of linear
+features within a circular neighbourhood. This measure is obtained by
+summing all the line segments intersecting the circular neighbourhood
+and dividing this sum by the area of such neighbourhood. 
+A weighting factor can be applied to the line segments. 
+
+.. figure:: img/linedensity.png
+  :align: center
+  
+  Line density example. Input layer source: Roads Overijssel - The
+  Netherlands (OSM).
+
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input line layer**
+     - ``INPUT``
+     - [vector: any]
+     - Input vector layer containing line features
+   * - **Weight field**
+     - ``WEIGHT``
+     - [number]
+     - Field of the layer containing the weight factor to use during
+       the calculation
+   * - **Search Radius**
+     - ``RADIUS``
+     - [number]
+
+       Default: 10
+     - Radius of the circular neighbourhood. Units can be specified
+       here.
+   * - **Pixel size**
+     - ``PIXEL_SIZE``
+     - [number]
+
+       Default: 10
+     - Pixel size of the output raster layer in layer units.
+       The raster has square pixels.
+   * - **Line density raster**
+     - ``OUTPUT``
+     - [raster]
+
+       Default: ``[Save to temporary file]``
+     - The output as a raster layer. One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
+
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :stub-columns: 0
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Line density raster**
+     - ``OUTPUT``
+     - [raster]
+     - The output line density raster layer.
+
+**Algorithm ID**: ``qgis:linedensity``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgistininterpolation:
 
 TIN Interpolation
 -----------------
-Generates a Triangulated Irregular Network (TIN) interpolation of a point vector layer.
+Generates a Triangulated Irregular Network (TIN) interpolation of a
+point vector layer.
 
-With the TIN method you can create a surface formed by triangles of nearest neighbor
-points. To do this, circumcircles around selected sample points are created and
-their intersections are connected to a network of non overlapping and as compact
-as possible triangles. The resulting surfaces are not smooth.
+With the TIN method you can create a surface formed by triangles of
+nearest neighbor points.
+To do this, circumcircles around selected sample points are created
+and their intersections are connected to a network of non overlapping
+and as compact as possible triangles.
+The resulting surfaces are not smooth.
 
-The algorithm creates both the raster layer of the interpolated values and the
-vector line layer with the triangulation boundaries.
+The algorithm creates both the raster layer of the interpolated values
+and the vector line layer with the triangulation boundaries.
 
 Parameters
 ..........
@@ -382,8 +497,9 @@ Parameters
    * - **Input layer(s)**
      - ``INTERPOLATION_DATA``
      - [string]
-     - Vector layer(s) and field(s) to use for the interpolation, coded
-       in a string (see the ``ParameterInterpolationData`` class in
+     - Vector layer(s) and field(s) to use for the interpolation,
+       coded in a string (see the ``ParameterInterpolationData``
+       class in
        :source:`InterpolationWidgets <python/plugins/processing/algs/qgis/ui/InterpolationWidgets.py>`
        for more details).
 
@@ -421,8 +537,8 @@ Parameters
      - ``EXTENT``
      - [extent]
      - Extent of the output raster layer.
-       You have to declare the output extent by either choosing it from
-       the map canvas, selecting it from another layer or type it
+       You have to declare the output extent by either choosing it
+       from the map canvas, selecting it from another layer or type it
        manually.
    * - **Output raster size**
      - ``PIXEL_SIZE``
@@ -487,6 +603,12 @@ Outputs
      - [vector: line]
      - The output TIN as a vector layer.
 
+**Algorithm ID**: ``qgis:tininterpolation``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -494,5 +616,6 @@ Outputs
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |312| replace:: ``NEW in 3.12``
 .. |selectString| image:: /static/common/selectstring.png
    :width: 2.5em

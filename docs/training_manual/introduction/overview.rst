@@ -37,9 +37,9 @@ available to you.
 Expanding collapsed items (by clicking the arrow or plus symbol beside them)
 will provide you with more information on the layer's current appearance.
 
-Hovering the layer will give you some basic information: layer name, type of
-geometry, coordinate reference system and the complete path of the location on
-your device.
+Hovering over the layer will give you some basic information: layer name, type
+of geometry, coordinate reference system and the complete path of the location
+on your device.
 
 Right-clicking on a layer will give you a menu with lots of extra options. You
 will be using some of them before long, so take a look around!
@@ -160,8 +160,8 @@ Try to find each of these tools on your screen. What is their purpose?
 |WN|
 -------------------------------------------------------------------------------
 
-Now you've seen how the QGIS interface works, you can use the tools available
-to you and start improving on your map! This is the topic of the next lesson.
+Now that you are familiar with the basics of the QGIS interface, in the next 
+lesson we will look at how to Pan and Zoom in the Map Canvas and learn about map scale.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

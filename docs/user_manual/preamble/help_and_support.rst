@@ -93,10 +93,8 @@ BugTracker
 
 While the qgis-users mailing list is useful for general 'How do I do
 XYZ in QGIS?'-type questions, you may wish to notify us about bugs in
-QGIS. You can submit bug reports using the QGIS bug tracker at
-https://issues.qgis.org/projects/qgis/issues. When creating a new
-ticket for a bug, please provide an email address where we can contact
-you for additional information.
+QGIS. You can submit bug reports using the
+`QGIS bug tracker <https://github.com/qgis/QGIS/issues>`_.
 
 Please bear in mind that your bug may not always enjoy the priority
 you might hope for (depending on its severity). Some bugs may require
@@ -104,19 +102,14 @@ significant developer effort to remedy, and the manpower is not always
 available for this.
 
 Feature requests can be submitted as well using the same ticket system
-as for bugs. Please make sure to select the type ``Feature``.
+as for bugs. Please make sure to select the type ``Feature request``.
 
-If you have found a bug and fixed it yourself, you can submit either a
-Pull Request on the Github QGIS Project (prefered) or a patch also.
-The lovely redmine ticketsystem at
-https://issues.qgis.org/projects/qgis/issues has this type as well.
-Check the ``Patch supplied`` checkbox and attach your patch before
-submitting your bug. One of the developers will review it and apply it
-to QGIS. Please don't be alarmed if your patch is not applied straight
-away -- developers may be tied up with other commitments.
+If you have found a bug and fixed it yourself, you can submit a
+Pull Request on the `Github QGIS Project <https://github.com/qgis/QGIS/pulls>`_.
 
-Note that if you supply a Pull Request, your change would be more
-likely be merged into the source code!
+Read
+`Bugs, Features and Issues <https://qgis.org/en/site/getinvolved/development/bugreporting.html#bugs-features-and-issues>`_
+and :ref:`submit_patch` for more details.
 
 Blog
 ====

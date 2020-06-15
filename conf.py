@@ -91,7 +91,7 @@ html_theme_options = {
     # includehidden:Specifies if the navigation includes hidden table(s) of contents – that is, any toctree directive that is marked with the :hidden: option. Default: True,
     # 'includehidden': True,
     # canonical_url: This will specify a canonical URL meta link element to tell search engines which URL should be ranked as the primary URL for your documentation. This is important if you have multiple URLs that your documentation is available through. The URL points to the root path of the documentation and requires a trailing slash.
-    'canonical_url': 'https://docs.qgis.org/latest/en/docs/',
+    'canonical_url': 'https://docs.qgis.org/latest/en/',
     # display_version: If True, the version number is shown at the top of the sidebar. Default: True,
     'display_version': True,
     # logo_only: Only display the logo image, do not display the project name at the top of the sidebar. Default: False,
@@ -137,6 +137,10 @@ html_context = {
     # information message on the top of the page.
     'isTesting': True
 }
+
+# Add custom CSS when a top bar is needed to be shown (for testing or outdated versions)
+if html_context['isTesting'] or html_context['outdated']:
+  html_css_files = ['css/qgis_topbar.css']
 
 supported_languages = cfg['supported_languages'].replace(' ','').split(',')
 version_list = cfg['version_list'].replace(' ','').split(',')

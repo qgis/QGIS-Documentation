@@ -304,7 +304,7 @@ The :menuselection:`View` menu  gives access to navigation tools and helps
 to configure general behavior of the print layout. Beside the common zoom
 tools, you have means to:
 
-* |draw| :sup:`Refresh view` (if you find the view in an inconsistent state);
+* |refresh| :sup:`Refresh view` (if you find the view in an inconsistent state);
 * enable a :ref:`grid <grid_guides>` you could snap items to when moving or
   creating them. Grids setting is done in :menuselection:`Settings --> Layout
   Options...` or in the :ref:`Layout Panel <layout_panel>`;
@@ -344,7 +344,7 @@ interact with by pressing :kbd:`F11` or using :menuselection:`View -->`
 ================================================= ========================== ========================== =====================================
  Tool                                              Shortcut                   Toolbar                    Reference
 ================================================= ========================== ========================== =====================================
- |draw| :guilabel:`Refresh`                        :kbd:`F5`                  :guilabel:`Navigation`
+ |refresh| :guilabel:`Refresh`                     :kbd:`F5`                  :guilabel:`Navigation`
  :menuselection:`Preview -->`
  |zoomIn| :guilabel:`Zoom In`                      :kbd:`Ctrl++`              :guilabel:`Navigation`
  |zoomOut| :guilabel:`Zoom Out`                    :kbd:`Ctrl+-`              :guilabel:`Navigation`
@@ -821,8 +821,6 @@ the actions done after the selected one will be removed.
    :width: 1.5em
 .. |deselectAll| image:: /static/common/mActionDeselectAll.png
    :width: 1.5em
-.. |draw| image:: /static/common/mActionDraw.png
-   :width: 1.5em
 .. |duplicateLayout| image:: /static/common/mActionDuplicateLayout.png
    :width: 1.5em
 .. |editCopy| image:: /static/common/mActionEditCopy.png
@@ -872,6 +870,8 @@ the actions done after the selected one will be removed.
 .. |raiseItems| image:: /static/common/mActionRaiseItems.png
    :width: 1.5em
 .. |redo| image:: /static/common/mActionRedo.png
+   :width: 1.5em
+.. |refresh| image:: /static/common/mActionRefresh.png
    :width: 1.5em
 .. |saveAsPDF| image:: /static/common/mActionSaveAsPDF.png
    :width: 1.5em

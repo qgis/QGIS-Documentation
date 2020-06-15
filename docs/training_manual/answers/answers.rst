@@ -40,7 +40,7 @@ remember the names and functions of the screen elements.
 
 #. :guilabel:`Save as`
 #. :guilabel:`Zoom to layer`
-#. :guilabel:`Help`
+#. :guilabel:`Invert selection`
 #. :guilabel:`Rendering on/off`
 #. :guilabel:`Measure line`
 
@@ -63,7 +63,7 @@ remember the names and functions of the screen elements.
   #. Count the number of columns.
 
   .. tip:: A quicker approach could be to double-click the
-   :guilabel:`rivers` layer, open the :menuselection:`Layer properties --> Source
+   :guilabel:`rivers` layer, open the :menuselection:`Layer properties -->
    Fields` tab, where you will find a numbered list of the table's fields.
 
 * Information about towns is available in the :guilabel:`places` layer. Open its
@@ -247,7 +247,7 @@ of your places have names.
 :ref:`Back to text <backlink-labels-attribute-data-1>`
 
 
-|RF| *The Label Tool*
+|RF| *Labels*
 -------------------------------------------------------------------------------
 
 .. _label-tool-1:
@@ -256,7 +256,7 @@ of your places have names.
 ...............................................................................
 
 Your map should now show the marker points and the labels should be offset by
-:kbd:`2.0 mm`: The style of the markers and labels should allow both to be
+2mm. The style of the markers and labels should allow both to be
 clearly visible on the map:
 
 .. figure:: img/customised_labels_one.png
@@ -277,16 +277,15 @@ One possible solution has this final product:
 
 To arrive at this result:
 
-* Use a font size of :kbd:`10`, a :guilabel:`Label
-  distance` of :kbd:`1,5 mm`, :guilabel:`Symbol width` and
-  :guilabel:`Symbol size` of :kbd:`3.0 mm`.
-* In addition, this example uses the :guilabel:`Wrap label on character`
-  option:
+* Use a font size of ``10``
+* Use an around point placement distance of ``1.5 mm``
+* Use a marker size of ``3.0 mm``
+* In addition, this example uses the :guilabel:`Wrap on character` option:
 
   .. figure:: img/wrap_character_settings.png
      :align: center
 
-* Enter a :kbd:`space` in this field and click :guilabel:`Apply` to achieve the
+* Enter a ``space`` in this field and click :guilabel:`Apply` to achieve the
   same effect. In our case, some of the place names are very long, resulting in
   names with multiple lines which is not very user friendly. You might find this
   setting to be more appropriate for your map.
@@ -299,21 +298,21 @@ To arrive at this result:
 |hard| *Using Data Defined Settings*
 ...............................................................................
 
-* Still in edit mode, set the :kbd:`FONT_SIZE` values to whatever you prefer.
-  The example uses :kbd:`16` for towns, :kbd:`14` for suburbs, :kbd:`12` for
-  localities and :kbd:`10` for hamlets.
-* Remember to save changes and exit edit mode.
-* Return to the :guilabel:`Text` formatting options for the :guilabel:`places`
-  layer and select :kbd:`FONT_SIZE` in the :guilabel:`Attribute field` of the
-  font size data override dropdown:
+#. Still in edit mode, set the ``FONT_SIZE`` values to whatever you prefer.
+   The example uses ``16`` for towns, ``14`` for suburbs, ``12`` for
+   localities, and ``10`` for hamlets.
+#. Remember to save changes and exit edit mode
+#. Return to the :guilabel:`Text` formatting options for the ``places``
+   layer and select ``FONT_SIZE`` in the :guilabel:`Attribute field` of the
+   font size |dataDefined| data defined override dropdown:
 
-  .. figure:: img/font_size_override.png
-     :align: center
+   .. figure:: img/font_size_override.png
+      :align: center
 
-  Your results, if using the above values, should be this:
+   Your results, if using the above values, should be this:
 
-  .. figure:: img/font_override_results.png
-     :align: center
+   .. figure:: img/font_override_results.png
+      :align: center
 
 :ref:`Back to text <backlink-label-data-defined-1>`
 
@@ -326,14 +325,8 @@ To arrive at this result:
 |moderate| *Refine the Classification*
 ...............................................................................
 
-* Use the same method as in the first exercise of the lesson to get rid of the
-  borders:
-
-  .. figure:: img/gradient_map_no_pen.png
-     :align: center
-
 The settings you used might not be the same, but with the values
-:guilabel:`Classes` = :kbd:`6` and :guilabel:`Mode` = :guilabel:`Natural Breaks
+:guilabel:`Classes` = ``6`` and :guilabel:`Mode` = :guilabel:`Natural Breaks
 (Jenks)` (and using the same colors, of course), the map will look like this:
 
 .. figure:: img/gradient_map_new_mode.png
@@ -437,7 +430,7 @@ that they are predefined.
   .. figure:: img/value_map_settings.png
      :align: center
 
-* Click :guilabel:`Ok` three times.
+* Click :guilabel:`OK` three times.
 * If you use the :guilabel:`Identify` tool on a street now while edit mode is
   active, the dialog you get should look like this:
 
@@ -1192,6 +1185,8 @@ As you can see, our constraint allows nulls to be added into the database.
 .. |arrowDown| image:: /static/common/mActionArrowDown.png
    :width: 1.5em
 .. |basic| image:: /static/common/basic.png
+.. |dataDefined| image:: /static/common/mIconDataDefine.png
+   :width: 1.5em
 .. |hard| image:: /static/common/hard.png
 .. |largeLandUseArea| replace:: Bontebok National Park
 .. |majorUrbanName| replace:: Swellendam

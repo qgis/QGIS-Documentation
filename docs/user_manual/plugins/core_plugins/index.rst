@@ -13,9 +13,7 @@ Using QGIS Core Plugins
 
    plugins_coordinate_capture
    plugins_db_manager
-   plugins_evis
    plugins_geometry_checker
-   plugins_georeferencer
    plugins_metasearch
    plugins_offline_editing
    plugins_topology_checker
@@ -29,9 +27,7 @@ Icon                    Plugin                        Description               
 ======================  ============================  ======================================================  ===============================
 |coordinateCapture|     Coordinate Capture            Capture mouse coordinate in different CRS               :ref:`coordcapt`
 |dbManager|             DB Manager                    Manage your databases within QGIS                       :ref:`dbmanager`
-|eventId|               eVis                          Event Visualization Tool                                :ref:`evis`
 |geometryChecker|       Geometry Checker              Check and repair errors in vector geometries            :ref:`geometry_checker`
-|georefRun|             Georeferencer GDAL            Georeference rasters with GDAL                          :ref:`georef`
 |gpsImporter|           GPS Tools                     Tools for loading and importing GPS data                :ref:`plugin_gps`
 |grass|                 GRASS                         GRASS functionality                                     :ref:`sec_grass`
 |metasearch|            MetaSearch Catalog Client     Interact with metadata catalog services (CSW)           :ref:`metasearch`
@@ -51,13 +47,9 @@ Icon                    Plugin                        Description               
    :width: 1.5em
 .. |dbManager| image:: /static/common/dbmanager.png
    :width: 1.5em
-.. |eventId| image:: /static/common/event_id.png
-   :width: 1.5em
 .. |geometryChecker| image:: /static/common/geometrychecker.png
    :width: 1.5em
 .. |geoprocessing| image:: /static/common/geoprocessing.png
-   :width: 1.5em
-.. |georefRun| image:: /static/common/mGeorefRun.png
    :width: 1.5em
 .. |gpsImporter| image:: /static/common/gps_importer.png
    :width: 1.5em
