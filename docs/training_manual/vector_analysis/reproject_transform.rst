@@ -122,9 +122,9 @@ You can easily export the layer with another CRS.
 #. Navigate to :file:`exercise_data/` and specify the name of the new
    layer as :file:`buildings_reprojected.shp`.
 #. Change the value of the :guilabel:`CRS`.
-   Only the recent CRSs used will be shown in the drop down menu.
+   Only the recent CRSs used will be shown in the drop-down menu.
    Click on the |setProjection| :sup:`Select projection` button next
-   to the dropdown menu.
+   to the drop-down menu.
 #. The :guilabel:`Coordinate Reference System Selector` dialog will
    appear.
    In its :guilabel:`Filter` field, search for ``34S``.
