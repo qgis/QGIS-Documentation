@@ -14,24 +14,27 @@ shared border and both features will change at the same time.
 |moderate| |FA| Snapping
 ----------------------------------------------------------------------
 
-To make topological editing easier, it's best if you enable snapping. This will
-allow your mouse cursor to snap to other objects while you digitize. To set
-snapping options:
+Snapping makes topological editing easier.
+This will allow your mouse cursor to snap to other objects while you
+digitize.
+To set snapping options:
 
 #. Navigate to the menu entry
    :menuselection:`Project --> Snapping Options...`.
-#. Set up your :guilabel:`Snapping options` dialog as shown:
+#. Set up your :guilabel:`Snapping options` dialog to activate the
+   ``landuse`` layer with :guilabel:`Type` *vertex* and tolerance
+   ``12`` pixels::
 
    .. figure:: img/set_snapping_options.png
       :align: center
 
-#. Ensure that the box in the :guilabel:`Avoid overlap` column is
+#. Make sure that the box in the :guilabel:`Avoid overlap` column is
    checked.
 #. Leave the dialog.
 #. Select the :guilabel:`landuse` layer and enter edit mode
    (|toggleEditing|)
-#. Check under :menuselection:`View --> Toolbars` to make sure that
-   your :guilabel:`Advanced Digitizing` toolbar is enabled.
+#. Check (under :menuselection:`View --> Toolbars`) that the
+   :guilabel:`Advanced Digitizing` toolbar is enabled.
 #. Zoom to this area (enable layers and labels if necessary):
 
    .. figure:: img/zoom_to.png
@@ -53,15 +56,15 @@ snapping options:
    and |redo| :sup:`redo` tools in the
    :guilabel:`Advanced Digitizing` toolbar.
 
-  
-
 
 |moderate| |FA| Correct Topological Features
 ----------------------------------------------------------------------
 
 Topology features can sometimes need to be updated.
-In our example, the ``landuse`` layer has some complex forest areas
-which have recently been joined to form one area:
+In our study area, an area has been turned into forest, so the
+``landuse`` layer need an update.
+We will therefore expand and join some forest features in this
+area:
 
 .. figure:: img/zoom_to.png
    :align: center
@@ -69,15 +72,15 @@ which have recently been joined to form one area:
 Instead of creating new polygons to join the forest areas, we are
 going to use the *Vertex Tool* to edit and join existing polygons.
 
-#. Enter edit mode (if it isn't active already)
-#. Select the |vertexToolActiveLayer| :sup:`Vertex Tool`
-#. Pick an area of forest, select a corner and move it to an adjoining
-   corner so two forest sections meet:
+#. Enter edit mode (if it is not active already)
+#. Select the |vertexToolActiveLayer| :sup:`Vertex Tool` tool.
+#. Choose an area of forest, select a vertex, and move it to an
+   adjoining vertex so that the two forest features meet:
 
    .. figure:: img/corner_selected_move.png
       :align: center
 
-#. Click on the nodes and snap them into place.
+#. Click on the other vertices and snap them into place.
 
    The topologically correct border looks like this:
 
@@ -85,8 +88,13 @@ going to use the *Vertex Tool* to edit and join existing polygons.
       :align: center
 
    Go ahead and join a few more areas using the *Vertex Tool*.
+
    You can also use the |capturePolygon| :sup:`Add Polygon Feature`
-   tool.
+   tool to fill the gap between the two forest polygons.
+   If you have enabled *Avoid overlap*, you don't have to add every
+   single vertex - they will be added automatically if your new
+   polygon overlaps the existing ones.
+
    If you are using our example data, you should have a forest area
    looking something like this:
 
@@ -134,27 +142,29 @@ undoing the last change.
 |moderate| |TY| Tool: Add Ring
 ----------------------------------------------------------------------
 
-The |addRing| :sup:`Add Ring` tool allows you to cut a hole in a
-feature, as long as the hole is bounded on all side by the feature.
+The |addRing| :sup:`Add Ring` tool allows you to add an interior ring
+to a polygon feature (cut a hole in the polygon), as long as the hole
+is completely contained within the polygon (touching the boundary is
+OK).
 For example, if you have digitized the outer boundaries of South
 Africa and you need to add a hole for Lesotho, you would use this
 tool.
 
-If you experiment with this tool, you'll notice that the current
-snapping options prevent you from creating a ring in the middle of the
-polygon.
-This would be fine if the area you wished to exclude linked to the
-polygon's boundaries.
+If you experiment with the tool, you may notice that the snapping
+options can prevent you from creating a ring inside a polygon.
+So you are advised to turn off snapping before cutting a hole.
 
-#. Disable snapping for the landuse layer via the dialog you used
-   earlier.
-#. Now try using the :guilabel:`Add Ring` tool to create a gap in the
-   middle of the |largeLandUseArea|.
-#. Delete your new feature by using the |deleteRing|
+#. Disable snapping for the ``landuse`` layer using the |snapping|
+   :sup:`Enable Snapping` button (or use the shortcut :kbd:`s`).
+#. Use the |addRing| :sup:`Add Ring` tool to create a hole in the
+   middle of a polygon geometry.
+#. Draw a polygon over the target feature, as if you were using the
+   |addpolygon| :sup:`Add polygon` tool.
+#. When you right-click, the hole will be visible.
+#. Remove the hole you just created using the |deleteRing|
    :sup:`Delete Ring` tool.
 
-   .. Note:: You need to select a corner of the ring in order to
-      delete it.
+   .. Note:: Click inside the hole to delete it.
 
 :ref:`Check your results <create-vector-topology-1>`
 
@@ -164,22 +174,20 @@ polygon's boundaries.
 |moderate| |TY| Tool: Add Part
 ----------------------------------------------------------------------
 
-The |addPart| :sup:`Add Part` tool allows you to create an extra part
-of the feature, not directly connected to the main feature.
+The |addPart| :sup:`Add Part` tool allows you to add a new part to a
+feature, that is not directly connected to the main feature.
 For example, if you have digitized the boundaries of mainland South
-Africa but you haven't yet added the Prince Edward Islands, you'd use
-this tool to create them.
+Africa, but you haven't yet added the Prince Edward Islands, you
+would use this tool to create them.
 
-#. To use this tool, you must first select the polygon to which you
-   wish to add the part by using the |selectRectangle|
-   :sup:`Select Features by area or single click` tool.
-#. Now try using the :guilabel:`Add Part` tool to add an outlying area
-   to the |largeLandUseArea|.
-#. Delete your new feature by using the |deletePart|
-   :sup:`Delete Part` tool.  
+#. Select the polygon to which you wish to add the part by using the
+   |selectRectangle| :sup:`Select Features by area or single click`
+   tool.
+#. Use the :guilabel:`Add Part` tool to add an outlying area.
+#. Delete the part you just created using the |deletePart|
+   :sup:`Delete Part` tool.
 
-   .. Note:: You need to select a corner of the part in order to
-      delete it.
+   .. Note:: Click inside the part to delete it.
 
 :ref:`Check your results <create-vector-topology-2>`
 
@@ -187,16 +195,17 @@ this tool to create them.
 |moderate| |FA| Tool: Reshape Features
 ----------------------------------------------------------------------
 
-The |reshape| :sup:`Reshape Features` tool can add a bump to an
-existing feature.
+The |reshape| :sup:`Reshape Features` tool is used to extend a polygon
+feature or cut away a part of it (along the boundary).
 
-With this tool selected:
+Extending:
 
-#. Left-click inside the |largeLandUseArea| to start
-   drawing a polygon.
-#. Draw a polygon with three corners, the last of which should be back
-   inside the original polygon, forming an open-sided rectangle.
-#. Right-click to finish marking points:
+#. Select the polygon using the |selectRectangle|
+   :sup:`Select Features by area or single click` tool.
+#. Left-click inside the polygon to start drawing.
+#. Draw a shape outside the polygon. The last vertex should be back
+   inside the polygon..
+#. Right-click to finish the shape:
 
    .. figure:: img/reshape_step_one.png
       :align: center
@@ -206,11 +215,14 @@ With this tool selected:
    .. figure:: img/reshape_result.png
       :align: center
 
-You can do the opposite, too:
+Cut away a part:
 
+#. Select the polygon using the |selectRectangle|
+   :sup:`Select Features by area or single click` tool.
 #. Click outside the polygon.
-#. Draw a rectangle into the polygon.
-#. Right-click outside the polygon again:
+#. Draw a shape inside the polygon. The last vertex must be back
+   outside the polygon.
+#. Right-click outside the polygon:
 
    .. figure:: img/reshape_inverse_example.png
      :align: center
@@ -224,43 +236,50 @@ You can do the opposite, too:
 |moderate| |TY| Tool: Split Features
 ----------------------------------------------------------------------
 
-The :guilabel:`Split Features` tool is similar to how you took part of
-the farm away, except that it doesn't delete either of the two parts.
+The |splitFeatures| :sup:`Split Features` tool is similar to the
+|reshape| :sup:`Reshape Features` tool, except that it does not delete
+either of the two parts.
 Instead, it keeps them both.
 
-  |splitFeatures|
+We will use the tool to split a corner from a polygon.
 
-#. First, re-enable snapping for the :guilabel:`landuse` layer.
+#. First, select the ``landuse`` layer and re-enable snapping for it.
 
-   We will use the tool to split a corner from the |largeLandUseArea|.
+#. Select the |splitFeatures| :sup:`Split Features` tool and click on
+   a vertex to begin drawing a line.
 
-#. Select the :guilabel:`Split Features` tool and click on a vertex to
-   begin drawing a line.
-   Click the vertex on the opposite side of the corner you wish to
+#. Draw the bounding line.
+
+#. Click a vertex on the "opposite" side of the polygon you wish to
    split and right-click to complete the line:
 
    .. figure:: img/split_feature_example.png
       :align: center
 
 #. At this point, it may seem as if nothing has happened.
-   But remember that your symbology for the :kbd:`landuse` layer does
-   not have any border, so the new division line will not be shown.
-#. Use the :guilabel:`Select Single Feature` tool to select the corner
-   you just split; the new feature will now be highlighted:
+   But remember that the ``landuse`` layer is rendered without
+   border lines, so the new division line will not be shown.
+#. Use the |selectRectangle|
+   :sup:`Select Features by area or single click` tool to select the
+   part you just split out; the new feature will now be highlighted:
 
    .. figure:: img/new_corner_selected.png
       :align: center
+
 
 .. _backlink-create-vector-topology-4:
 
 |hard| |TY| Tool: Merge Features
 ----------------------------------------------------------------------
 
-Now we will re-join the feature you just created to the original polygon:
+Now we will re-join the feature you just split out to the remaining
+part of the polygon:
 
-#. Experiment with  the :guilabel:`Merge Selected Features` and
-   :guilabel:`Merge Attributes of Selected Features` tools.
+#. Experiment with  the |mergeFeatures|:sup:`Merge Selected Features`
+   and |mergeFeatAttributes|
+   :sup:`Merge Attributes of Selected Features` tools.
 #. Note the differences.
+
 
 :ref:`Check your results <create-vector-topology-4>`
 
@@ -271,12 +290,13 @@ Topology editing is a powerful tool that allows you to create and modify
 objects quickly and easily, while ensuring that they remain topologically
 correct.
 
+
 |WN|
 ----------------------------------------------------------------------
 
 Now you know how to digitize the shape of the objects easily, but
 adding attributes is still a bit of a headache!
-Next we'll show you how to use forms so that attribute editing is
+Next we will show you how to use forms, making attribute editing
 simpler and more effective.
 
 
@@ -303,6 +323,10 @@ simpler and more effective.
    :width: 2em
 .. |hard| image:: /static/common/hard.png
 .. |largeLandUseArea| replace:: Bontebok National Park
+.. |mergeFeatAttributes| image:: /static/common/mActionMergeFeatureAttributes.png
+   :width: 1.5em
+.. |mergeFeatures| image:: /static/common/mActionMergeFeatures.png
+   :width: 1.5em
 .. |moderate| image:: /static/common/moderate.png
 .. |redo| image:: /static/common/mActionRedo.png
    :width: 1.5em
