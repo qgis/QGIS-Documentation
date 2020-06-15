@@ -22,7 +22,7 @@ But there's a problem, as we will see.
 #. Zoom in to South Africa by using the :guilabel:`Zoom In` tool
 #. Try setting a scale in the :guilabel:`Scale` field, which is in the
    *Statusbar* along the bottom of the screen.
-   While over South Africa, set this value to :guilabel:`1:5 000 000`
+   While over South Africa, set this value to ``1:5 000 000``
    (one to five million).
 #. Pan around the map while keeping an eye on the :guilabel:`Scale`
    field
