@@ -51,8 +51,8 @@ can learn more about the protected areas by exploring the **attribute table**.
 
    .. Note:: In order to understand what the **fields** and **attributes** 
       represent, one may need to find documentation (or meta data) describing 
-	  meaning of the attribute values.  This is usually available from the creator
-	  of the data set.
+      meaning of the attribute values.  This is usually available from the creator
+      of the data set.
 
 Next, let's see how the record in the Attribute Table is linked to a polygon 
 feature that we see in the Map Canvas.
