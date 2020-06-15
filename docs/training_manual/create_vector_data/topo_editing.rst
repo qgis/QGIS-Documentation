@@ -23,7 +23,7 @@ To set snapping options:
    :menuselection:`Project --> Snapping Options...`.
 #. Set up your :guilabel:`Snapping options` dialog to activate the
    ``landuse`` layer with :guilabel:`Type` *vertex* and tolerance
-   ``12`` pixels::
+   ``12`` pixels:
 
    .. figure:: img/set_snapping_options.png
       :align: center
@@ -313,6 +313,8 @@ simpler and more effective.
 .. |WN| replace:: What's Next?
 .. |addPart| image:: /static/common/mActionAddPart.png
    :width: 1.5em
+.. |addPolygon| image:: /static/common/mActionAddPolygon.png
+   :width: 1.5em
 .. |addRing| image:: /static/common/mActionAddRing.png
    :width: 2em
 .. |capturePolygon| image:: /static/common/mActionCapturePolygon.png
@@ -335,6 +337,8 @@ simpler and more effective.
 .. |selectRectangle| image:: /static/common/mActionSelectRectangle.png
    :width: 1.5em
 .. |simplifyFeatures| image:: /static/common/mActionSimplify.png
+   :width: 1.5em
+.. |snapping| image:: /static/common/mIconSnapping.png
    :width: 1.5em
 .. |splitFeatures| image:: /static/common/mActionSplitFeatures.png
    :width: 1.5em
