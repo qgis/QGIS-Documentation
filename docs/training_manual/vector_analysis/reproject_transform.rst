@@ -108,7 +108,7 @@ projected coordinate system.
 Be aware that the 'on the fly' reprojection is related to the
 **project** and not to single layers.
 This means that a layer can have a different CRS from the project even
-if you see them in the *correct* position.
+if you see it in the *correct* position.
 
 You can easily export the layer with another CRS.
 
