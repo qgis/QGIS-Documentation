@@ -2240,10 +2240,10 @@ The color dialog
 
 The :guilabel:`Select Color` dialog will appear whenever you click
 the |selectColor| icon to choose a color. The features of this dialog
-depend on the state of the :guilabel:`Use native color chooser dialogs` parameter
-checkbox in :menuselection:`Settings --> Options... --> General`.
-When checked, the color dialog used is the native one of the OS on which QGIS is running. Otherwise,
-the QGIS custom color chooser is used.
+depend on the state of the :guilabel:`Use native color chooser dialogs`
+parameter checkbox in :menuselection:`Settings --> Options... --> General`.
+When checked, the color dialog used is the native one of the OS on which
+QGIS is running. Otherwise, the QGIS custom color chooser is used.
 
 The custom color chooser dialog has four different tabs which allow you to
 select colors by |colorBox| :sup:`Color ramp`, |colorWheel| :sup:`Color wheel`,
@@ -2361,6 +2361,11 @@ The drop-down menu to the right of the button gives quick access to a
 wider set of color ramps and options:
 
 * :guilabel:`Invert Color Ramp`
+* |unchecked| :guilabel:`Random Colors`: available only in some contexts
+  (e.g., when a color ramp is being used for a layer symbology),
+  checking this entry creates and applies a color ramp with random colors.
+  It also enables a :guilabel:`Shuffle random colors` entry to regenerate
+  a new random color ramp if the current one is not satisfactory.
 * a preview of the ``gradient`` or ``catalog: cpt-city`` color ramps flagged as
   **Favorites** in the :guilabel:`Style Manager` dialog
 * :guilabel:`All Color Ramps` to access the compatible color ramps database
