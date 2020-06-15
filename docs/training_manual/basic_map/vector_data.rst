@@ -50,10 +50,9 @@ can learn more about the protected areas by exploring the **attribute table**.
    the two polygons we see in the Map Canvas. 
 
    .. Note:: In order to understand what the **fields** and **attributes** 
-      represent, one may need to find documentation describing meaning of these
-      values.  This documentation is usually located in the same place where 
-      the data was downloaded from, or you may need to contact the author of 
-      the data to provide you with that information.
+      represent, one may need to find documentation (or meta data) describing 
+	  meaning of the attribute values.  This is usually available from the creator
+	  of the data set.
 
 Next, let's see how the record in the Attribute Table is linked to a polygon 
 feature that we see in the Map Canvas.
@@ -88,7 +87,7 @@ You can also select a feature using the the Attribute Table.
 #. To deselect the feature, go to the :guilabel:`Attribute Table` window 
    and click on |deselectActiveLayer| :sup:`Deselect All` button.
 
-Sometimes there are many features show in the Map Canvas and it might be difficult
+Sometimes there are many features shown in the Map Canvas and it might be difficult
 to see which feature is selected from the Attribute Table.  Another way to 
 identify the location of a feature is to use :guilabel:`Flash Feature` tool.
 
