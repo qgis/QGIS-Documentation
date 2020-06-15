@@ -112,7 +112,7 @@ if you see it in the *correct* position.
 
 You can easily export the layer with another CRS.
 
-#. Add the building dataset from :file:`training_data.gpkg`
+#. Add the ``buildings`` dataset from :file:`training_data.gpkg`
 #. Right-click on the ``buildings`` layer in the :guilabel:`Layers`
    panel
 #. Select :menuselection:`Export --> Save Features As...` in the menu
