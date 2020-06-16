@@ -951,11 +951,21 @@ The :menuselection:`Layer` menu provides a large set of tools to
 :ref:`save modifications <sec_edit_existing_layer>` to them.
 Using the same data sources, you can also:
 
+<<<<<<< HEAD
 * :guilabel:`Duplicate` a layer, generating a copy you can modify
   within the same project
 * :guilabel:`Copy` and :guilabel:`Paste` layers or groups from one
   project to another as a new instance whose features and properties
   you can modify independently of the original
+=======
+* :guilabel:`Duplicate` a layer to generate a copy where you can
+  modify the name, style (symbology, labels, ...), joins, ...
+  The copy uses the same data source as the original.
+* :guilabel:`Copy` and :guilabel:`Paste` layers or groups from one
+  project to another as a new instance whose properties can be
+  modified independently.
+  As for *Duplicate*, the layers are still based on the same data source.
+>>>>>>> 99fe3e23c... Apply suggestions from review
 * or :guilabel:`Embed Layers and Groups...` from another project, as
   read-only copies which you cannot modify (see
   :ref:`nesting_projects`)
