@@ -270,81 +270,96 @@ image layer (raster dataset).
 #. Choose the :guilabel:`Histogram` tab.
    You may need to click on the :guilabel:`Compute Histogram` button
    to generate the graphic.
-   You will see a graph describing the frequency of values in the
-   image.
-#. You can export it as an image:
+   You will see a graph that shows the frequency distribution for the
+   raster values.
 
    .. figure:: img/histogram_export.png
       :align: center
 
-#. Select the :guilabel:`Information` tab, you can see more detailed
-   information of the layer.
+#. The graph can be exported as an image with the |fileSave|
+   :sup:`Save plot` button
 
-The mean value is ``332.8``, and the maximum value is ``1699``!
-But those
-values don't show up on the histogram. Why not? It's because there are so few
-of them, compared to the abundance of pixels with values below the mean. That's
-also why the histogram extends so far to the right, even though there is no
-visible red line marking the frequency of values higher than about ``250``.
+#. You can see more detailed information about the layer in the
+   :guilabel:`Information` tab (the mean and max values are estimated,
+   and may not be exact).
 
-.. note:: If the mean and maximum values are not the same as those of the example,
-    it can be due to the min/max value calculation. Open the :guilabel:`Symbology`
-    tab and expand the :guilabel:`Min / Max Value Settings` menu. Choose
-    |radioButtonOn|:guilabel:`Min / max` and click on :guilabel:`Apply`.
+The mean value is ``332.8`` (estimated to 324.3), and the maximum
+value is ``1699`` (estimated to 1548)!
+You can zoom in the histogram.
+Since there are a lot of pixels with value ``0``, the histogram looks
+compressed vertically.
+By zooming in to cover everything but the peak at ``0``, you will see
+more details:
 
-Therefore, keep in mind that a histogram shows you the distribution of values,
-and not all values are necessarily visible on the graph.
+   .. figure:: img/histogram_export_zoom.png
+      :align: center
+
+.. note:: If the mean and maximum values are not the same as above, it
+   can be due to the min/max value calculation.
+   Open the :guilabel:`Symbology` tab and expand the
+   :guilabel:`Min / Max Value Settings` menu.
+   Choose |radioButtonOn|:guilabel:`Min / max` and click on
+   :guilabel:`Apply`.
+
+Keep in mind that a histogram shows you the distribution of
+values, and not all values are necessarily visible on the graph.
+
 
 |basic| |FA| Spatial Interpolation
 ----------------------------------------------------------------------
 
-Let's say you have a collection of sample points from which you would like to
-extrapolate data. For example, you might have access to the
-:guilabel:`Sampled points` dataset we created earlier, and would like to have
-some idea of what the terrain looks like.
+Let's say you have a collection of sample points from which you would
+like to extrapolate data.
+For example, you might have access to the :guilabel:`Sampled points`
+dataset we created earlier, and would like to have some idea of what
+the terrain looks like.
 
-#. To start, launch the :menuselection:`GDAL --> Raster analysis --> Grid (IDW
-   with nearest neighbor searching)` tool within :guilabel:`Processing` toolbox.
-#. In the :guilabel:`Point layer` parameter, select :guilabel:`Sampled points`
-#. Set ``5.0`` as the :guilabel:`Weighting power`
-#. In the :guilabel:`Advanced parameters` set :guilabel:`rvalue_1` for the
-   :guilabel:`Z value from field` parameter
-#. Finally click on :guilabel:`Run` and wait until the algorithm ends
+#. To start, launch the
+   :menuselection:`GDAL --> Raster analysis --> Grid (IDW with nearest neighbor searching)`
+   tool in the :guilabel:`Processing Toolbox`.
+#. For :guilabel:`Point layer` select ``Sampled points``
+#. Set :guilabel:`Weighting power` to ``5.0``
+#. In :guilabel:`Advanced parameters`, set
+   :guilabel:`Z value from field` to ``rvalue_1``
+#. Finally click on :guilabel:`Run` and wait until the processing ends
 #. Close the dialog
 
-Here's a comparison of the original dataset (left) to the one constructed from
-our sample points (right). Yours may look different due to the random nature of
-the location of the sample points.
+Here is a comparison of the original dataset (left) to the one
+constructed from our sample points (right).
+Yours may look different due to the random nature of the location of
+the sample points.
 
 .. figure:: img/interpolation_comparison.png
    :align: center
 
-As you can see, 100 sample points aren't really enough to get a detailed
-impression of the terrain. It gives a very general idea, but it can be
-misleading as well.
+As you can see, 100 sample points aren't really enough to get a
+detailed impression of the terrain.
+It gives a very general idea, but it can be misleading as well.
 
 |moderate| |TY| Different interpolation methods
 ----------------------------------------------------------------------
 
-#. Use the processes shown above to create a new set of ``10 000`` random points.
+#. Use the processes shown above to create a set of 10 000 random
+   points
 
-   .. note:: If the points amount is really big the processing time can take a
-      long time.
+   .. note:: If the number of points is really big, the processing
+      time can take a long time.
 
-#. Use these points to sample the original DEM.
-#. Use the :guilabel:`Grid (IDW with nearest neighbor searching)` tool on this
-   new dataset as above.
-#. Set the :guilabel:`Power` and :guilabel:`Smoothing` to ``5.0`` and ``2.0``,
-   respectively.
+#. Use these points to sample the original DEM
+#. Use the :guilabel:`Grid (IDW with nearest neighbor searching)` tool
+   on this dataset.
+#. Set :guilabel:`Power` and :guilabel:`Smoothing` to ``5.0`` and
+   ``2.0``, respectively.
 
-The results (depending on the positioning of your random points) will look more
-or less like this:
+The results (depending on the positioning of your random points) will
+look more or less like this:
 
 .. figure:: img/interpolation_comparison_10000.png
    :align: center
 
-This is a much better representation of the terrain, due to the much greater
-density of sample points. Remember, bigger samples give better results.
+This is a better representation of the terrain, due to the greater
+density of sample points. Remember, larger samples give better
+results.
 
 
 |IC|
@@ -352,6 +367,7 @@ density of sample points. Remember, bigger samples give better results.
 
 QGIS has a number of tools for analyzing the spatial statistical
 properties of datasets.
+
 
 |WN|
 ----------------------------------------------------------------------
