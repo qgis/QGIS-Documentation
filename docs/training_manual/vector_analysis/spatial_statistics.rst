@@ -391,6 +391,8 @@ That is what we will do in the next module!
 .. |basic| image:: /static/common/basic.png
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
+.. |fileSave| image:: /static/common/mActionFileSave.png
+   :width: 1.5em
 .. |moderate| image:: /static/common/moderate.png
 .. |radioButtonOn| image:: /static/common/radiobuttonon.png
    :width: 1.5em
