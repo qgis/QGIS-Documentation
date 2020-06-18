@@ -50,7 +50,6 @@ html:
 	fi
 
 latex:
-	#@echo "exclude_patterns += ['docs/user_manual/processing_algs/*']" >> $(SOURCEDIR)/conf.py;
 	$(SPHINXBUILD) -b latex -t latex "$(SOURCEDIR)" "$(BUILDDIR)/latex/$(LANG)" $(SPHINXINTLOPTS) $(0); \
 
 pdf: latex
