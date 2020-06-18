@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:21+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -98,6 +99,18 @@ msgid ""
 "forestry knowledge, you might be interested in reading `this Wikipedia "
 "article <https://en.wikipedia.org/wiki/Forest_inventory>`_."
 msgstr ""
+"La forma más común de conocer un bosque es muestreándolo, es decir, tomando "
+"medidas en diferentes lugares del bosque y generalizando esa información a "
+"todo el bosque. Estas mediciones a menudo se realizan en * parcelas de "
+"muestra * que son áreas forestales más pequeñas que se pueden medir "
+"fácilmente. Las parcelas de muestra pueden ser de cualquier tamaño (por ej. "
+"50 m2, 0.5 ha) y forma (por ej. Circular, rectangular, tamaño variable), y "
+"pueden ubicarse en el bosque de diferentes maneras (por ej. Aleatoriamente, "
+"sistemáticamente, a lo largo de las líneas). El tamaño, la forma y la "
+"ubicación de las parcelas de muestra generalmente se deciden siguiendo "
+"consideraciones estadísticas, económicas y prácticas. Si no tiene "
+"conocimiento forestal, podría estar interesado en leer `este artículo de "
+"Wikipedia  <https://en.wikipedia.org/wiki/Forest_inventory>`_."
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:40
 msgid "|basic| |FA| Implementing a Systematic Sampling Plot Design"
@@ -395,6 +408,13 @@ msgid ""
 "software. You need to be careful with selecting the CRS when you save your "
 "data:"
 msgstr ""
+"Los equipos de campo probablemente usarán un dispositivo GPS para ubicar las"
+" parcelas de muestra que planeó. El siguiente paso es exportar los puntos "
+"que creó a un formato que su GPS pueda leer. QGIS le permite guardar sus "
+"datos de vector de punto y línea en `GPS eXchange Format (GPX) "
+"<https://en.wikipedia.org/wiki/GPS_Exchange_Format>`, que es un formato de "
+"datos GPS estándar que puede leer la mayoría de El software especializado. "
+"Debe tener cuidado al seleccionar el CRS cuando guarde sus datos:"
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:150
 msgid ""
@@ -425,6 +445,8 @@ msgid ""
 "The :kbd:`GPX` format accepts only this CRS, if you select a different one, "
 "QGIS will give no error but you will get an empty file."
 msgstr ""
+"EL formato :kbd:`GPX` acepta solo este CRS, si selecciona uno diferente, "
+"QGIS no dará ningún error pero obtendrá un archivo vacío."
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:160
 msgid ""
@@ -446,6 +468,16 @@ msgid ""
 " can find out information about it in the section :ref:`working_gps` in the "
 "**QGIS User Manual**."
 msgstr ""
+"Las parcelas de muestra del inventario ahora están en un formato estándar "
+"que puede ser administrado por la mayoría del software GPS. Los equipos de "
+"campo ahora pueden cargar las ubicaciones de las parcelas de muestra en sus "
+"dispositivos. Eso se haría utilizando el software propio del dispositivo "
+"específico y el archivo: kbd: `plots_wgs84.gpx` que acaba de guardar. Otra "
+"opción sería utilizar el complemento: guilabel: `Herramientas GPS` pero "
+"probablemente implicaría configurar la herramienta para que funcione con su "
+"dispositivo GPS específico. Si está trabajando con sus propios datos y desea"
+" ver cómo funciona la herramienta, puede encontrar información al respecto "
+"en la sección : ref:`working_gps` en el ** Manual de usuario de QGIS **."
 
 #: ../../docs/training_manual/forestry/systematic_sampling.rst:175
 msgid "Save your QGIS project now."

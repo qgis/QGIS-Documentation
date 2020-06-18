@@ -6,6 +6,7 @@
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
 # Letícia Lima <leticia.stlima@gmail.com>, 2020
+# Aline Furlanetto Viero <afviero@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:16+0000\n"
-"Last-Translator: Letícia Lima <leticia.stlima@gmail.com>, 2020\n"
+"Last-Translator: Aline Furlanetto Viero <afviero@gmail.com>, 2020\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -150,6 +151,8 @@ msgid ""
 "Assuming you already have a `GitHub account <https://github.com/join>`_, you"
 " first need to fork the source files of the documentation."
 msgstr ""
+" Supondo que você já tenha uma conta `GitHub <https://github.com/join>`_, "
+"primeiro você precisa bifurcar os arquivos de origem da documentação."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:63
 msgid ""
@@ -360,14 +363,14 @@ msgstr ""
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:152
 msgid "4. Share your changes via Pull Request"
-msgstr "4. Compartilhe suas mudanças através da Solicitação"
+msgstr "4. Compartilhe suas mudanças através de Pull Request"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:154
 msgid ""
 "You need to make a pull request to integrate your changes into the official "
 "documentation."
 msgstr ""
-"Você precisa fazer uma solicitação para integrar suas mudanças na "
+"Você precisa fazer um pull request para integrar suas mudanças na "
 "documentação oficial."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:156
@@ -430,10 +433,14 @@ msgid ""
 "changes that you have made in your branch with the master branch that you "
 "want to merge into. They are:"
 msgstr ""
+"Você deve ver quatro menus drop-down. Isso permitirá que você compare as "
+"alterações que você fez em sua ramificação com a ramificação principal na "
+"qual deseja mesclar. Eles são:"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:190
 msgid "**base fork**: the fork that you want to merge your changes into"
 msgstr ""
+"**bifurcação base**: a bifurcação em que você quer mesclar suas mudanças"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:191
 msgid ""
@@ -449,7 +456,7 @@ msgstr ""
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:193
 msgid "**compare**: the branch with those changes"
-msgstr ""
+msgstr " **compare**: o ramo com essas alterações"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:195
 msgid ""
@@ -462,6 +469,7 @@ msgstr ""
 msgid ""
 "Comparing changes between ``qgis/QGIS-Documentation`` and your repository"
 msgstr ""
+"Comparando alterações entre ``qgis/QGIS-Documentation`` e seu repositório"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:204
 msgid ""
@@ -471,7 +479,7 @@ msgstr ""
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:207
 msgid "Click the :guilabel:`Create pull request` button."
-msgstr ""
+msgstr "Clique no botão :guilabel:`Create pull request`."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:209
 msgid "**If you see** |githubCantMerge|"
@@ -486,6 +494,12 @@ msgid ""
 "request but you'll need to fix any :ref:`conflicts <fix_conflicts>` to "
 "complete the merge."
 msgstr ""
+"Isso significa que existem `conflitos <https://help.github.com/articles"
+"/addressing-merge-conflicts/>`_. Os arquivos que você está modificando não "
+"estão atualizados com a ramificação que você está direcionando porque outra "
+"pessoa fez um commit que entra em conflito com suas alterações. Você ainda "
+"pode criar a pull request mas você precisa resolver quaisquer "
+":ref:`conflicts <fix_conflicts>` para concluir a mescla. "
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:217
 msgid ""
@@ -494,6 +508,10 @@ msgid ""
 "for a different release, change **base** from ``master`` to the appropriate "
 "``release_...`` branch in the steps above."
 msgstr ""
+"Embora liberada e sendo traduzida, a documentação do QGIS |CURRENT| ainda é "
+"mantida e os problemas existentes são corrigidos. Se você estiver corrigindo"
+" problemas para uma versão diferente, altere **base** de ``master`` para a "
+"ramificação ``release_...`` apropriada nas etapas acima."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:223
 msgid "3. Describe your pull request"
@@ -515,6 +533,11 @@ msgid ""
 " like ``fix`` or ``close``, the concerned issue will be closed as soon as "
 "the pull request is merged."
 msgstr ""
+" Se estiver relacionado a um problema específico `<https://github.com/qgis"
+"/QGIS-Documentation/issues>`_, inclua o número do problema aos seus "
+"comentários. Isso é feito digitando # e o número do problema (*e. g.,* ``# "
+"1234``). Se precedido por termos como ``fix`` ou ``close``, o problema em "
+"questão será encerrado assim que o pull request for mesclado. "
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:233
 msgid "Add links to any documentation pages that you are changing."
@@ -672,6 +695,14 @@ msgid ""
 "of the error. You'll have to fix any reported errors or warnings before your"
 " changes are committed to the ``qgis/QGIS-Documentation`` repository."
 msgstr ""
+"Um pull request também acionará um `Travis CI build <https://travis-"
+"ci.org/qgis/QGIS-Documentation>`_ que verifica automaticamente sua "
+"contribuição quanto a erros de compilação. Se o Travis CI encontrar um erro,"
+" uma cruz vermelha aparecerá ao lado do seu commit. Clique na cruz vermelha "
+"ou em ``Detalhes`` na seção de sumário na parte inferior da página de pull "
+"request para ver os detalhes do erro. Você precisará corrigir quaisquer "
+"erros ou avisos relatados antes que suas alterações sejam confirmadas no "
+"repositório `` qgis/QGIS-Documentation``."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:324
 msgid ""
@@ -679,9 +710,9 @@ msgid ""
 "main repository, either to improve your request, to address requested "
 "modifications, or to fix a build error."
 msgstr ""
-"Você pode fazer modificações à sua solicitação até que ela seja mesclada com"
-" o repositório principal, seja para melhorar sua solicitação, para trabalhar"
-" em modificações solicitadas, ou para consertar um erro de construção."
+"Você pode fazer modificações ao seu pull request até que ela seja mesclada "
+"com o repositório principal, seja para melhorar seu request, para trabalhar "
+"em modificações solicitadas, ou para consertar um erro de construção."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:328
 msgid ""
@@ -715,6 +746,9 @@ msgid ""
 "corrected, and after you and the administrators are satisfied with your "
 "changes."
 msgstr ""
+"Um administrador vai mesclar sua contribuição após a correção de quaisquer "
+"erros de compilação e depois que você e os administradores estiverem "
+"satisfeitos com suas alterações."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:344
 msgid "5. Delete your merged branch"
@@ -738,6 +772,11 @@ msgid ""
 "of your branches. Click on the |deleteSelected| :sup:`Delete this branch` "
 "icon to delete any unwanted branches."
 msgstr ""
+"Navegue até a bifurcação do repositório QGIS-Documentation repository "
+"(``https://github.com/<YourName>/QGIS-Documentation``). Clique na guia "
+":guilabel:`Branches`. Abaixo :guilabel:`Your branches` você verá uma lista "
+"de suas ramificações. Clique no ícone |deleteSelected| :sup:`Delete this "
+"branch` para excluir os ramos indesejados."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:358
 msgid "Using Git command line tools"
@@ -789,6 +828,8 @@ msgstr ""
 #: ../../docs/documentation_guidelines/first_contribution.rst:382
 msgid "You can clone  your QGIS repository using the web URL as follows:"
 msgstr ""
+"Você pode clonar seu repositório QGIS usando o URL da web da seguinte "
+"maneira:"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:390
 msgid ""
@@ -816,10 +857,12 @@ msgstr ""
 msgid ""
 "Alternatively you can clone your QGIS repository using the SSH protocol:"
 msgstr ""
+" Como alternativa, você pode clonar seu repositório QGIS usando o protocolo "
+"SSH:"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:419
 msgid "**Permission denied (publickey) error?**"
-msgstr ""
+msgstr " **Erro de permissão negada (chave pública)?** "
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:421
 msgid ""
@@ -841,6 +884,11 @@ msgid ""
 "diverge from your local/remote repository. You then need to keep track of "
 "the main remote repository and work with branches."
 msgstr ""
+"Você pode começar a trabalhar aqui, mas, a longo prazo, terá muitos "
+"problemas quando enviar sua contribuição (chamada Pull Request no processo "
+"do github), pois o ramo principal do repositório de documentação QGIS-"
+"Documentation divergirá do seu repositório local/remoto. Você precisa "
+"acompanhar o repositório remoto principal e trabalhar com ramificações. "
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:443
 msgid "Add another remote repository"
@@ -873,6 +921,9 @@ msgid ""
 "official one OR to update your master branch of local repository from the "
 "master branch of the official repository."
 msgstr ""
+" *upstream* para mesclar (se você tiver o direito de fazê-lo) sua "
+"contribuição para a oficial OU para atualizar sua ramificação principal do "
+"repositório local a partir da ramificação principal do repositório oficial."
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:477
 msgid ""
@@ -882,7 +933,7 @@ msgstr ""
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:482
 msgid "Update your base branch"
-msgstr ""
+msgstr "Atualize sua ramificação base "
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:484
 msgid ""
@@ -920,6 +971,9 @@ msgid ""
 "in which you add your contribution. Always work on a branch other than the "
 "base branch! Always!"
 msgstr ""
+" Agora que sua ramificação base está atualizada, é necessário criar uma "
+"ramificação dedicada na qual você inclui sua contribuição. Sempre trabalhe "
+"em um ramo que não seja o ramo base! Sempre!"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:539
 msgid "Few words about commit/push commands:"
@@ -939,6 +993,11 @@ msgid ""
 "Your description can be longer, end with a ``.`` and you can give much more "
 "details."
 msgstr ""
+"tente explicar com cuidado o que você muda no título do seu commit e na "
+"descrição. A primeira linha é um título e deve começar por uma letra "
+"maiúscula e ter 80 caracteres, não termina com um ``.``. Seja conciso. Sua "
+"descrição pode ser mais longa, terminar com um ``.`` e você poderá fornecer "
+"muito mais detalhes. "
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:546
 msgid ""
@@ -974,6 +1033,10 @@ msgid ""
 "delete your branch. If you work a lot this way, in few weeks you will get a "
 "lot of unuseful branches. So keep your repository clean this way:"
 msgstr ""
+" Após a fusão do seu PR com a documentação oficial do QGIS, você pode "
+"excluir sua ramificação. Se você trabalha muito dessa maneira, em poucas "
+"semanas receberá muitos ramos inúteis. Portanto, mantenha seu repositório "
+"limpo desta maneira: "
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:581
 msgid ""
@@ -1006,6 +1069,10 @@ msgid ""
 "button and resolve the issue as explained at "
 "https://help.github.com/articles/resolving-a-merge-conflict-on-github/"
 msgstr ""
+"se o conflito estiver relacionado a poucas linhas concorrentes, um botão "
+":guilabel:`Resolv conflicts' está disponível na página de pull request do "
+"Github. Pressione o botão e resolva o problema, conforme explicado em "
+"https://help.github.com/articles/resolving-a-merge-conflict-on-github/"
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:600
 msgid ""
@@ -1016,6 +1083,12 @@ msgid ""
 "https://help.github.com/articles/resolving-a-merge-conflict-using-the-"
 "command-line/"
 msgstr ""
+"se o conflito envolver substituição de nome ou remoção de arquivos, você "
+"precisará resolvê-lo usando as linhas de comando git. Normalmente, você deve"
+" primeiro refazer sua ramificação sobre a ramificação de destino usando a "
+"chamada ``git rebase targetBranch`` e corrigir os conflitos relatados. Leia "
+"mais em https://help.github.com/articles/resolving-a-merge-conflict-using-"
+"the-command-line/ "
 
 #: ../../docs/documentation_guidelines/first_contribution.rst:605
 msgid ""

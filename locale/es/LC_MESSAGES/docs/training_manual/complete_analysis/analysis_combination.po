@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:17+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -59,7 +60,7 @@ msgstr ""
 
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:16
 msgid "In the :guilabel:`Layers` panel, enable these layers:"
-msgstr ""
+msgstr "En el panel :guilabel:`Layers` , active estas capas:"
 
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:18
 msgid ":guilabel:`hillshade`,"
@@ -94,6 +95,10 @@ msgid ""
 "contains only those buildings which intersect the :kbd:`suitable_terrain` "
 "layer."
 msgstr ""
+"Use el :guilabel:`Intersect` tool (:menuselection:`Vector --> Geoprocessing "
+"Tools`) para crear una nueva capa vectorial llamada :kbd:`new_solution.shp` "
+"que solo contiene aquellas construcciones que intersectan la capa "
+":kbd:`suitable_terrain`."
 
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:30
 msgid ""
@@ -112,6 +117,12 @@ msgid ""
 "example, the :file:`suitable_terrain` layer was reprojected to |localCRS| "
 "and named :file:`suitable_terrain_34S.shp`."
 msgstr ""
+"Si encuentra que la herramienta :guilabel:`Intersect` no produce ningún "
+"resultado, verifique la configuración de CRS de cada una de sus capas. El "
+"CRS debe ser el mismo para las dos capas que está comparando. Es posible que"
+" deba volver a proyectar una capa guardando la capa como un archivo nuevo "
+"con el CRS requerido. En nuestro ejemplo, la capa :file:`suitable_terrain` "
+"fue reproyectada a |localCRS| y nombrada :file:`suitable_terrain_34S.shp`."
 
 #: ../../docs/training_manual/complete_analysis/analysis_combination.rst:47
 msgid "|moderate| |TY| Inspecting the Results"
