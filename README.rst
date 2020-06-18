@@ -52,6 +52,15 @@ If you want for some reason start from scratch:
 
  make -f venv.mk cleanall
 
+Build PDFs
+..........
+
+In Linux, you can also build the PDF versions of the main documents
+
+.. code-block:: bash
+
+ make -f venv.mk pdf
+
 Build on macOS or Linux
 -----------------------
 
@@ -83,7 +92,7 @@ And run the build from within that venv:
 
  make html
 
-Want to build your own language? Note that you will use the translations from the 
+Want to build your own language? Note that you will use the translations from the
 po files from git! For example for 'nl' do:
 
 .. code-block:: bash
@@ -101,7 +110,7 @@ use the module 'venv' to create a virtual environment called 'venv'
 
  # in dos box:
  python -m venv venv
- 
+
 Then activate the venv:
 
 .. code-block:: bash
@@ -121,7 +130,7 @@ with the html argument to locally build the docs:
 .. code-block:: bash
 
  make.bat html
- 
+
 Want to build your own language? Note that you will use the translations from the
 po files from git! For example 'nl' do:
 
