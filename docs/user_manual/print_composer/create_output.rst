@@ -457,7 +457,34 @@ The information provided here is an update of the excellent blog (in English
 and Portuguese) on the Data Defined Override options
 Multiple_format_map_series_using_QGIS_2.6_ .
 
-This is just one example of how you can use some advanced settings with atlas.
+Another example for using data-defined override buttons is the usage of a dynamic
+picture. For the following examples we use a geopackage layer containing a BLOB field
+called :file:`logo` with the field type binary (see :ref:`vector_create_geopackage`).
+For every feature there is defined a different picture so that the atlas can iterate 
+over as described in :ref:`atlas_preview`.
+All you need to do is add a picture in the print layout and go to its
+:guilabel:`Item properties` in the atlas context. There you can find a 
+data-defined override button in the :guilabel:`Image source`section of the
+:guilabel:`Main Properties`.
+
+.. _figure_image_source:
+
+.. figure:: img/image_source.png
+   :align: center
+   
+ In the following window choose :guilabel:`Edit` so that the :guilabel:`Expression String Builder`
+ opens. From the :guilabel:`Fields and values` section you can find the BLOB field that
+ was defined in the geopackage layer. Double-click the field name :file:`logo` and click :guilabel:`OK`.
+ 
+.. _figure_expression_blob_picture_atlas:
+ 
+.. figure:: img/expression_blob_picture_atlas.png
+   :align: center
+
+The atlas iterates over the entries in the BLOB field provided that you choose the geopackage 
+layer as :guilabel:`Coverage layer` (further instructions you can find in :ref:`atlas preview`).
+
+These are just two examples of how you can use some advanced settings with atlas.
 
 .. _atlas_preview:
 
