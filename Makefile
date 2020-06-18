@@ -36,7 +36,7 @@ gettext:
 # this will build html-version of one language (defaults to english: en)
 # to build for example dutch on Linux:
 #  make LANG=nl html
-# on windows: 
+# on windows:
 #  set SPHINXOPTS=-D language=nl
 #  make.bat html
 # note that the translations/po files from git will be used
@@ -50,7 +50,22 @@ html:
 	fi
 
 latex:
-	$(SPHINXBUILD) -b latex "$(SOURCEDIR)" "$(BUILDDIR)/latex/$(LANG)" $(SPHINXINTLOPTS) $(0); \
+	#@echo "exclude_patterns += ['docs/user_manual/processing_algs/*']" >> $(SOURCEDIR)/conf.py;
+	$(SPHINXBUILD) -b latex -t latex "$(SOURCEDIR)" "$(BUILDDIR)/latex/$(LANG)" $(SPHINXINTLOPTS) $(0); \
+
+pdf: latex
+
+	(cd $(BUILDDIR)/latex/$(LANG); \
+	pdflatex QGISUserGuide.tex; \
+	pdflatex QGISUserGuide.tex; \
+	pdflatex PyQGISDeveloperCookbook.tex; \
+	pdflatex PyQGISDeveloperCookbook.tex; \
+	pdflatex QGISTrainingManual.tex; \
+	pdflatex QGISTrainingManual.tex;)
+	mkdir -p $(BUILDDIR)/pdf/$(LANG);
+	mv $(BUILDDIR)/latex/$(LANG)/QGISUserGuide.pdf $(BUILDDIR)/pdf/$(LANG)/;
+	mv $(BUILDDIR)/latex/$(LANG)/PyQGISDeveloperCookbook.pdf $(BUILDDIR)/pdf/$(LANG)/;
+	mv $(BUILDDIR)/latex/$(LANG)/QGISTrainingManual.pdf $(BUILDDIR)/pdf/$(LANG)/;
 
 site: html
 	rsync -az $(BUILDDIR)/html/$(LANG) $(SITEDIR)/
