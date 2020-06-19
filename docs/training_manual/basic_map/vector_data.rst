@@ -40,13 +40,13 @@ but we can learn more about the protected areas by exploring the
    .. figure:: img/attribute_data_preview.png
      :align: center
 
-   .. Note:: A row is called a **record** and is associated with a **feature** 
-      in the Canvas Map, such as a polygon.
-      A column is called a **field** (or an **attribute**), and has a name that helps
-      describe it, such as ``name`` or ``id``.
-      Values in the cells are known as **attribute values**.  
-      These definitions are commonly used in GIS, so it is good to become 
-      familiar with them.
+   A row is called a **record** and is associated with a **feature**
+   in the Canvas Map, such as a polygon.
+   A column is called a **field** (or an **attribute**), and has a name that helps
+   describe it, such as ``name`` or ``id``.
+   Values in the cells are known as **attribute values**.
+   These definitions are commonly used in GIS, so it is good to become
+   familiar with them.
 
    In the ``protected_areas`` layer, there are two **features**, which are
    represented by the two polygons we see on the Map Canvas. 
