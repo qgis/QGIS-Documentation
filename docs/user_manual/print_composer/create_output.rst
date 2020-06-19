@@ -482,7 +482,7 @@ data-defined override button in the :guilabel:`Image source`section of the
    :align: center
 
 The atlas iterates over the entries in the BLOB field provided that you choose the geopackage 
-layer as :guilabel:`Coverage layer` (further instructions you can find in :ref:`atlas preview`).
+layer as :guilabel:`Coverage layer` (further instructions you can find in :ref:`atlas_preview`).
 
 These are just two examples of how you can use some advanced settings with atlas.
 
