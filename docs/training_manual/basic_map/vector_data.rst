@@ -23,12 +23,13 @@ represent **where** objects are in space, but also tells you **what** those
 objects are.
 
 From the previous exercise, you should have the ``protected_areas`` layer
-loaded in your map. If its not loaded, then you can find the 
+loaded in your map. If it is not loaded, then you can find the 
 :file:`protected_areas.shp` ESRI Shapefile in directory 
 :file:`exercise_data/shapefile`.
 
-The polygons representing the protected areas is the **spatial data**, but we 
-can learn more about the protected areas by exploring the **attribute table**.
+The polygons representing the protected areas constitute the **spatial data**,
+but we can learn more about the protected areas by exploring the
+**attribute table**.
 
 #. In the :guilabel:`Layers` panel, click on the ``protected_areas`` layer to 
    select it.
@@ -40,22 +41,23 @@ can learn more about the protected areas by exploring the **attribute table**.
      :align: center
 
    .. Note:: A row is called a **record** and is associated with a **feature** 
-      in the Canvas Map, such as a polygon.  A column is called a **field**, 
-      and provides a name of a property that helps describe the features, 
-      such as ``name`` or ``id``. Values in the cells are known as **attributes**.  
+      in the Canvas Map, such as a polygon.
+      A column is called a **field** (or an **attribute**), and has a name that helps
+      describe it, such as ``name`` or ``id``.
+      Values in the cells are known as **attribute values**.  
       These definitions are commonly used in GIS, so it is good to become 
       familiar with them.
 
-   For ``protected_areas`` layer, there are two **features**, which matches 
-   the two polygons we see in the Map Canvas. 
+   In the ``protected_areas`` layer, there are two **features**, which are
+   represented by the two polygons we see on the Map Canvas. 
 
-   .. Note:: In order to understand what the **fields** and **attributes** 
-      represent, one may need to find documentation (or meta data) describing 
-      meaning of the attribute values.  This is usually available from the creator
-      of the data set.
+   .. Note:: In order to understand what the **fields** and **attribute values** 
+      represent, one may need to find documentation (or metadata) describing 
+      the meaning of the attribute values.
+      This is usually available from the creator of the data set.
 
-Next, let's see how the record in the Attribute Table is linked to a polygon 
-feature that we see in the Map Canvas.
+Next, let's see how a record in the attribute table is linked to a polygon 
+feature that we see on the Map Canvas.
 
 #. Go back to the main QGIS window.
 #. In the :guilabel:`Attributes Toolbar`, click on the |selectFeature| 
@@ -69,14 +71,15 @@ feature that we see in the Map Canvas.
       :align: center
    
 #. Go back to the :guilabel:`Attribute Table` window, and you should see a 
-   record (row) highlighted.  These are the attributes of the selected polygon.
+   record (row) highlighted.  These are the attribute values of the
+   selected polygon.
    
    .. figure:: img/select_record.png
      :align: center
 
-You can also select a feature using the the Attribute Table.
+You can also select a feature using the Attribute Table.
 
-#. In the :guilabel:`Attribute Table` window, on the far left click on the 
+#. In the :guilabel:`Attribute Table` window, on the far left, click on the 
    row number of the record that is currently not selected.
 
    .. figure:: img/select_record2.png
@@ -87,12 +90,13 @@ You can also select a feature using the the Attribute Table.
 #. To deselect the feature, go to the :guilabel:`Attribute Table` window 
    and click on |deselectActiveLayer| :sup:`Deselect All` button.
 
-Sometimes there are many features shown in the Map Canvas and it might be difficult
+Sometimes there are many features shown on the Map Canvas and it might be difficult
 to see which feature is selected from the Attribute Table.  Another way to 
 identify the location of a feature is to use :guilabel:`Flash Feature` tool.
 
-#. In the :guilabel:`Attribute Table`, right-click on attribute ``r2855697``.
-#. In the context menu, click on :guilabel:`Flash Feature` and look at the 
+#. In the :guilabel:`Attribute Table`, right-click on any cell in the
+   row that has the attribute value ``r2855697`` for the field ``full_id``.
+#. In the context menu, click on :guilabel:`Flash Feature` and watch the 
    Map Canvas.  
 
    .. figure:: img/flash_feature.png
@@ -104,14 +108,15 @@ identify the location of a feature is to use :guilabel:`Flash Feature` tool.
 Another useful tool is the :guilabel:`Zoom to Feature` tool, that tells QGIS to 
 zoom to the feature of interest.
 
-#. In the :guilabel:`Attribute Table`, right-click on attribute ``r2855697``.
+#. In the :guilabel:`Attribute Table`, right-click on  any cell in the
+   row that has the attribute value ``r2855697`` for the field ``full_id``.
 #. In the context menu, click on :guilabel:`Zoom to Feature`
 
    .. figure:: img/zoom_to_feature.png
      :align: center
 
-   Look at the Map Canvas.  You now should see the polygon occupy the 
-   extent of the Map Canvas area.  
+   Look at the Map Canvas.  The polygon should now occupy the extent
+   of the Map Canvas area.  
    
 You may now close the attribute table.
 
