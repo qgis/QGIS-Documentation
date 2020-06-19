@@ -92,7 +92,8 @@ You can also select a feature using the Attribute Table.
 
 Sometimes there are many features shown on the Map Canvas and it might be difficult
 to see which feature is selected from the Attribute Table.  Another way to 
-identify the location of a feature is to use :guilabel:`Flash Feature` tool.
+identify the location of a feature is to use the :guilabel:`Flash Feature`
+tool.
 
 #. In the :guilabel:`Attribute Table`, right-click on any cell in the
    row that has the attribute value ``r2855697`` for the field ``full_id``.
