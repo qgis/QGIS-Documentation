@@ -1,19 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGISDoc package.
+# This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Leônidas Luiz Volcato Descovi Filho <leonidasfilho2000@yahoo.com.br>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGISDoc 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:32+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Leônidas Luiz Volcato Descovi Filho <leonidasfilho2000@yahoo.com.br>, 2020\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +24,7 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:6
 msgid "Working with the Attribute Table"
-msgstr ""
+msgstr "Trabalhando com a tabela de atributos"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:8
 msgid ""
@@ -32,10 +33,15 @@ msgid ""
 "each column contains a particular piece of information about the feature. "
 "Features in the table can be searched, selected, moved or even edited."
 msgstr ""
+"A tabela de atributos exibe informações sobre as feições de uma camada "
+"selecionada. Cada linha da tabela representa uma feição (com ou sem "
+"geometria) e cada coluna contém uma informação específica sobre a feição. As"
+" feições da tabela podem ser pesquisadas, selecionadas, movidas ou mesmo "
+"editadas."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:22
 msgid "Foreword: Spatial and non-spatial tables"
-msgstr ""
+msgstr "Prefácio: Tabelas espaciais e não espaciais"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:24
 msgid ""
@@ -45,6 +51,12 @@ msgid ""
 "are listed in the :guilabel:`Layers` panel. Whether a layer is spatially "
 "enabled or not determines whether you can interact with it on the map."
 msgstr ""
+"O QGIS permite carregar camadas espaciais e não espaciais. Atualmente, isso "
+"inclui tabelas suportadas pelo OGR e texto delimitado, bem como o provedor "
+"PostgreSQL, MSSQL, SpatiaLite, DB2 e Oracle. Todas as camadas carregadas "
+"estão listadas no painel: guilabel: `Camadas`. Se uma camada está "
+"espacialmente ativada ou não, determina se você pode interagir com ela no "
+"mapa."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:30
 msgid ""
@@ -55,10 +67,17 @@ msgid ""
 "digitizing. Have a closer look at the edit widget in section "
 ":ref:`vector_attributes_menu` to find out more."
 msgstr ""
+"As tabelas não espaciais podem ser navegadas e editadas usando a "
+"visualização da tabela de atributos. Além disso, eles podem ser usados "
+"​​para pesquisas de campo. Por exemplo, você pode usar colunas de uma tabela"
+" não espacial para definir valores de atributos ou um intervalo de valores "
+"permitidos para serem adicionados a uma camada vetorial específica durante a"
+" digitalização. Dê uma olhada no widget de edição na seção "
+":ref:`vector_attributes_menu` para descobrir mais. "
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:40
 msgid "Introducing the attribute table interface"
-msgstr ""
+msgstr "Apresentando a Interface da Tabela de Atributos"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:42
 msgid ""
@@ -73,6 +92,16 @@ msgid ""
 "selected features and :kbd:`Ctrl+F6` will open the attribute table filtered "
 "to visible features."
 msgstr ""
+"Para abrir a tabela de atributos para uma camada vetorial, ative a camada "
+"clicando nela :ref:`label_legend`. Em seguida, no menu principal: seleção de"
+" menus: menu `Camada`, escolha |openTable| :menuselection: `Abrir tabela de "
+"atributos`. Também é possível clicar com o botão direito do mouse na camada "
+"e escolher |openTable| :menuselection:`Abrir Tabela de Atributo` no menu "
+"suspenso ou clique em |openTable| :guilabel: botão `Abrir tabela de "
+"atributos` na barra de ferramentas Atributos. Se você preferir atalhos, "
+":kbd:`F6` abrirá a tabela de atributos. :kbd:`Shift+F6` abrirá a tabela de "
+"atributos filtrada para os recursos selecionados e: kbd:`Ctrl+F6` abrirá a "
+"tabela de atributos filtrados para os recursos visíveis."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:53
 msgid ""
@@ -84,20 +113,29 @@ msgid ""
 " are shown in the attribute table title, as well as if the layer is "
 "spatially limited."
 msgstr ""
+"Isso abrirá uma nova janela que exibe os atributos da feição para a camada "
+"(figure_attributes_table_). De acordo com a configuração em :menuselection: "
+"menu `Configurações --> Opções --> Fonte de dados`, a tabela de atributos "
+"será aberta em uma janela encaixada ou em uma janela regular. O número total"
+" de feições na camada e o número de feições atualmente "
+"selecionados/filtrados são mostrados no título da tabela de atributos, bem "
+"como se a camada é espacialmente limitada."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:66
 msgid "Attribute Table for regions layer"
-msgstr ""
+msgstr "Tabela de atributos para a camada de regiões"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:68
 msgid ""
 "The buttons at the top of the attribute table window provide the following "
 "functionality:"
 msgstr ""
+"Os botões na parte superior da janela da tabela de atributos fornecem a "
+"seguinte funcionalidade:"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:73
 msgid "Available Tools"
-msgstr ""
+msgstr "Ferramentas Disponíveis"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Icon"
@@ -105,7 +143,7 @@ msgstr "Ícone"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Label"
-msgstr ""
+msgstr "Etiqueta"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Purpose"
@@ -113,7 +151,7 @@ msgstr "Finalidade"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Default Shortcut"
-msgstr ""
+msgstr "Atalho Padrão"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|toggleEditing|"
@@ -121,27 +159,27 @@ msgstr "|toggleEditing|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Toggle editing mode"
-msgstr ""
+msgstr "Alternar modo de edição"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Enable editing functionalities"
-msgstr ""
+msgstr "Habilitar funcionalidades de edição"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid ":kbd:`Ctrl+E`"
-msgstr ""
+msgstr ":kbd:`Ctrl+E`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|multiEdit|"
-msgstr ""
+msgstr "|multiEdit|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Toggle multi edit mode"
-msgstr ""
+msgstr "Alternar modo multi edição"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Update multiple fields of many features"
-msgstr ""
+msgstr "Atualize vários campos de várias feições"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|saveEdits|"
@@ -149,11 +187,11 @@ msgstr "|saveEdits|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Save Edits"
-msgstr ""
+msgstr "Salvar Edições"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Save current modifications"
-msgstr ""
+msgstr "Salvar modificações atuais"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|draw|"
@@ -161,7 +199,7 @@ msgstr "|draw|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Reload the table"
-msgstr ""
+msgstr "Recarregar a tabela"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|newTableRow|"
@@ -169,23 +207,23 @@ msgstr "|newTableRow|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Add feature"
-msgstr ""
+msgstr "Adicionar feição"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Add new geometryless feature"
-msgstr ""
+msgstr "Adicionar nova feição sem geometria"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|deleteSelectedFeatures|"
-msgstr ""
+msgstr "|deleteSelectedFeatures|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Delete selected features"
-msgstr ""
+msgstr "Excluir feições selecionadas"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Remove selected features from the layer"
-msgstr ""
+msgstr "Remover feições selecionadas para a camada"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|editCut|"
@@ -193,7 +231,7 @@ msgstr "|editCut|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Cut selected features to clipboard"
-msgstr ""
+msgstr "Cortar feições selecionadas para área de transferência"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid ":kbd:`Ctrl+X`"
@@ -205,7 +243,7 @@ msgstr "|copySelected|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Copy selected features to clipboard"
-msgstr ""
+msgstr "Copiar feições selecionadas para a área de transferência"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid ":kbd:`Ctrl+C`"
@@ -217,11 +255,11 @@ msgstr "|editPaste|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Paste features from clipboard"
-msgstr ""
+msgstr "Colar feições da área de transferência"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Insert new features from copied ones"
-msgstr ""
+msgstr "Inserir novas feições das copiadas"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid ":kbd:`Ctrl+V`"
@@ -233,7 +271,7 @@ msgstr "|expressionSelect|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Select features using an Expression"
-msgstr ""
+msgstr "Selecionar feições usando uma expressão"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|selectAll|"
@@ -241,15 +279,15 @@ msgstr "|selectAll|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Select All"
-msgstr ""
+msgstr "Selecionar Todas"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Select all features in the layer"
-msgstr ""
+msgstr "Selecionar todas feições em uma camada"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid ":kbd:`Ctrl+A`"
-msgstr ""
+msgstr ":kbd:`Ctrl+A`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|invertSelection|"
@@ -257,15 +295,15 @@ msgstr "|invertSelection|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Invert selection"
-msgstr ""
+msgstr "Seleção invertida"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Invert the current selection in the layer"
-msgstr ""
+msgstr "Inverter a seleção atual na camada"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid ":kbd:`Ctrl+R`"
-msgstr ""
+msgstr ":kbd:`Ctrl+R`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|deselectAll|"
@@ -273,15 +311,15 @@ msgstr "|deselectAll|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Deselect all"
-msgstr ""
+msgstr "Desselecionar todas"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Deselect all features in the current layer"
-msgstr ""
+msgstr "Desselecionar todas as feições na camada atual"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid ":kbd:`Ctrl+Shift+A`"
-msgstr ""
+msgstr ":kbd:`Ctrl+Shift+A`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|filterMap|"
@@ -289,11 +327,11 @@ msgstr "|filterMap|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Filter/Select features using form"
-msgstr ""
+msgstr "Filtrar/Selecionar feições usando formulário"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid ":kbd:`Ctrl+F`"
-msgstr ""
+msgstr ":kbd:`Ctrl+F`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|selectedToTop|"
@@ -301,11 +339,11 @@ msgstr "|selectedToTop|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Move selected to top"
-msgstr ""
+msgstr "Mover selecionadas para o topo"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Move selected rows to the top of the table"
-msgstr ""
+msgstr "Mover linhas selecionadas para o todo da tabela"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|panToSelected|"
@@ -313,7 +351,7 @@ msgstr "|panToSelected|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Pan map to the selected rows"
-msgstr ""
+msgstr "Mapa panorâmico para selecionar linhas"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid ":kbd:`Ctrl+P`"
@@ -325,7 +363,7 @@ msgstr "|zoomToSelected|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Zoom map to the selected rows"
-msgstr ""
+msgstr "Aproximar mapa para selecionar linhas"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid ":kbd:`Ctrl+J`"
@@ -337,15 +375,15 @@ msgstr "|newAttribute|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "New field"
-msgstr ""
+msgstr "Novo campo"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Add a new field to the data source"
-msgstr ""
+msgstr "Adicionar um novo campo para uma fonte de dados"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid ":kbd:`Ctrl+W`"
-msgstr ""
+msgstr ":kbd:`Ctrl+W`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|deleteAttribute|"
@@ -353,11 +391,11 @@ msgstr "|deleteAttribute|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Delete field"
-msgstr ""
+msgstr "Excluir campo"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Remove a field from the data source"
-msgstr ""
+msgstr "Remover um campo a partir da fonte de dados"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|calculateField|"
@@ -365,39 +403,39 @@ msgstr "|calculateField|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Open field calculator"
-msgstr ""
+msgstr "Abrir calculadora de campo"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Update field for many features in a row"
-msgstr ""
+msgstr "Atualização de campo para muitas feições em uma linha"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid ":kbd:`Ctrl+I`"
-msgstr ""
+msgstr ":kbd:`Ctrl+I`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|conditionalFormatting|"
-msgstr ""
+msgstr "|conditionalFormatting|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Conditional formatting"
-msgstr ""
+msgstr "Formatação condicional"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Enable table formatting"
-msgstr ""
+msgstr "Ativar formatação de tabela"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|dock|"
-msgstr ""
+msgstr "|dock|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Dock attribute table"
-msgstr ""
+msgstr "Tabela de Atributos do Dock"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Allows to dock/undock the attribute table"
-msgstr ""
+msgstr "Permite encaixar/desencaixar a tabela de atributos"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "|actionRun|"
@@ -405,17 +443,19 @@ msgstr "|actionRun|"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Actions"
-msgstr ""
+msgstr "Ações"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:1
 msgid "Lists the actions related to the layer"
-msgstr ""
+msgstr "Listas de ações relatadas para uma camada"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:103
 msgid ""
 "Depending on the format of the data and the OGR library built with your QGIS"
 " version, some tools may not be available."
 msgstr ""
+"Dependendo do formato dos dados e da biblioteca OGR criada com a sua versão "
+"do QGIS, algumas ferramentas podem não estar disponíveis."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:106
 msgid ""
@@ -425,22 +465,32 @@ msgid ""
 "same :ref:`expressions <vector_expressions>` as the |calculateField| "
 ":sup:`Field Calculator` (see :ref:`calculate_fields_values`)."
 msgstr ""
+"Abaixo desses botões está a barra Cálculo de campo rápido (ativada apenas em"
+" :ref:`modo de edição<sec_edit_existing_layer>`), que permite aplicar "
+"rapidamente cálculos a todos ou parte das feições da camada. Esta barra usa "
+"o mesmo: ref:`expressões<vector_expressions>`como o |calcula campo| "
+":sup:`Calculadora de campo` (consulte: ref:` calcule_campos_valores`)."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:115
 msgid "Table view vs Form view"
-msgstr ""
+msgstr "Visualização da tabela versus visualização do formulário"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:117
 msgid ""
 "QGIS provides two view modes to easily manipulate data in the attribute "
 "table:"
 msgstr ""
+"O QGIS fornece dois modos de exibição para manipular facilmente os dados na "
+"tabela de atributos:"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:119
 msgid ""
 "The |openTable| :sup:`Table view`, displays values of multiple features in a"
 " tabular mode, each row representing a feature and each column a field."
 msgstr ""
+"O |openTable| :sup: `Visualização da tabela`, exibe valores de várias "
+"feições em modo tabular, cada linha representando uma feição e cada coluna "
+"um campo."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:121
 msgid ""
@@ -455,12 +505,24 @@ msgid ""
 " makes a feature flash in red color once so you can see where it is "
 "situated."
 msgstr ""
+"E o |formView| :sup:`Visão de formulário` mostra :ref:` identificadores de "
+"feições` em um primeiro painel e exibe apenas os atributos do identificador "
+"clicado no segundo. A exibição de formulário usa a configuração dos campos "
+"da camada (consulte :ref:`vector_attributes_menu`). Você pode navegar pelos "
+"identificadores de feições com as setas na parte inferior do primeiro "
+"painel. Depois de marcar a feição em amarelo na lista, ele é selecionado em "
+"amarelo na tela. Use o |zoomToSelected| na parte superior da tabela de "
+"atributos para ampliar afeição. Clicar em uma entrada da lista (sem usar os "
+"retângulos) faz com que uma feição pisque em vermelho uma vez, para que você"
+" possa ver onde está situado."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:132
 msgid ""
 "You can switch from one mode to the other by clicking the corresponding icon"
 " at the bottom right of the dialog."
 msgstr ""
+"Você pode alternar de um modo para outro clicando no ícone correspondente no"
+" canto inferior direito da caixa de diálogo."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:135
 msgid ""
@@ -468,14 +530,20 @@ msgid ""
 " attribute table in :menuselection:`Settings --> Options --> Data Sources` "
 "menu. It can be 'Remember last view', 'Table view' or 'Form view'."
 msgstr ""
+"Você também pode especificar o modo :guilabel: `Visualização padrão` na "
+"abertura da tabela de atributos em :menuselection: menu `Configurações -> "
+"Opções -> Fonte de Dados`. Pode ser 'Lembrar última visualização', 'Tabela' "
+"ou 'Formulário'."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:144
-msgid "Attribute table in form view (top) vs table view (bottom)"
+msgid "Attribute table in table view (top) vs form view (bottom)"
 msgstr ""
+"Tabela de atributos na exibição de tabela (superior) vs exibição de "
+"formulário (inferior)"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:152
 msgid "Configuring the columns"
-msgstr ""
+msgstr "Configurando as colunas"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:154
 msgid ""
@@ -483,10 +551,15 @@ msgid ""
 "that help you configure what can be displayed in the attribute table and "
 "how."
 msgstr ""
+"Clique com o botão direito do mouse em um cabeçalho de coluna quando estiver"
+" na exibição de tabela para ter acesso a ferramentas que ajudam a configurar"
+" o que pode ser exibido na tabela de atributos e como."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:158
 msgid "Hiding and organizing columns and enabling actions"
 msgstr ""
+" \n"
+"Ocultando e organizando colunas e permitindo ações"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:160
 msgid ""
@@ -495,10 +568,15 @@ msgid ""
 " or change the order of the columns, choose :guilabel:`Organize columns "
 "...`. In the new dialog, you can:"
 msgstr ""
+"Ao clicar com o botão direito do mouse em um cabeçalho de coluna, você pode "
+"ocultá-lo da tabela de atributos. Para alterar o comportamento de várias "
+"colunas ao mesmo tempo, reexibir uma coluna ou alterar a ordem das colunas, "
+"escolha :guilabel:`Organizar colunas ...`. Na nova caixa de diálogo, você "
+"pode:"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:165
 msgid "check/uncheck columns you want to show or hide"
-msgstr ""
+msgstr "marque / desmarque as colunas que deseja mostrar ou ocultar"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:166
 msgid ""
@@ -506,6 +584,9 @@ msgid ""
 " this change is for the table rendering and does not alter the fields order "
 "in the layer datasource"
 msgstr ""
+"arraste e solte itens para reordenar as colunas na tabela de atributos. "
+"Observe que essa alteração é para a renderização da tabela e não altera a "
+"ordem dos campos na fonte de dados da camada"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:169
 msgid ""
@@ -513,26 +594,35 @@ msgid ""
 "drop-down box or button list of actions for each row, see "
 ":ref:`actions_menu` for more information about actions."
 msgstr ""
+"ative uma nova coluna virtual :guilabel:`Açõess` que exibe em cada linha uma"
+" caixa suspensa ou uma lista de ações de cada linha, consulte "
+":ref:`actions_menu` para obter mais informações sobre ações."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:174
 msgid "Resizing columns widths"
-msgstr ""
+msgstr "Redimensionando larguras de colunas"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:176
 msgid ""
 "Columns width can be set through a right-click on the column header and "
 "select either:"
 msgstr ""
+"A largura das colunas pode ser definida através de um clique com o botão "
+"direito do mouse no cabeçalho da coluna e selecione:"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:179
 msgid ""
 ":guilabel:`Set width...` to enter the desired value. By default, the current"
 " value is displayed in the widget"
 msgstr ""
+":guilabel:`Defina a largura...` para inserir o valor desejado. Por padrão, o"
+" valor atual é exibido no widget"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:181
 msgid ":guilabel:`Autosize` to resize at the best fit the column."
 msgstr ""
+":guilabel:`Autodimensionar` para redimensionar da melhor forma possível a "
+"coluna."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:183
 msgid ""
@@ -540,10 +630,13 @@ msgid ""
 "heading. The new size of the column is maintained for the layer, and "
 "restored at the next opening of the attribute table."
 msgstr ""
+"Também pode ser alterado arrastando o limite à direita do cabeçalho da "
+"coluna. O novo tamanho da coluna é mantido para a camada e restaurado na "
+"próxima abertura da tabela de atributos."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:188
 msgid "Sorting columns"
-msgstr ""
+msgstr "Classificando colunas"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:190
 msgid ""
@@ -555,16 +648,26 @@ msgid ""
 "expression, e.g. to sort the row using multiple columns you can write "
 "``concat(col0, col1)``."
 msgstr ""
+"A tabela pode ser classificada por qualquer coluna, clicando no cabeçalho da"
+" coluna. Uma seta pequena indica a ordem de classificação (apontar para "
+"baixo significa valores decrescentes da linha superior para baixo, apontar "
+"para cima significa valores ascendentes da linha superior para baixo). Você "
+"também pode optar por classificar as linhas com a opção: guilabel:`sort` do "
+"menu de contexto do cabeçalho da coluna e escrever uma expressão, por "
+"exemplo. para classificar a linha usando várias colunas, você pode escrever "
+"``concat (col0, col1)``."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:198
 msgid ""
 "In form view, features identifier can be sorted using the |sort| "
 ":guilabel:`Sort by preview expression` option."
 msgstr ""
+"Na exibição de formulário, o identificador de feições pode ser classificado "
+"usando o |sort| :guilabel: opção Classificar por expressão de visualização."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:203
 msgid "**Sorting based on columns of different types**"
-msgstr ""
+msgstr "**Classificação com base em colunas de diferentes tipos**"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:205
 msgid ""
@@ -574,10 +677,16 @@ msgid ""
 "'Borough6'``). You can workaround this by using eg ``concat(\"USE\", "
 "lpad(\"ID\", 3, 0))`` which returns ``'Borough105' > 'Borough006'``."
 msgstr ""
+"Tentar classificar uma tabela de atributos com base em colunas de tipos "
+"string e numéricos pode levar a resultados inesperados devido à expressão "
+"``concat((\"USE\", \"ID\")`` retornando valores de string (ou "
+"seja,``'Borough105' < 'Borough6'``). Você pode contornar isso usando, por "
+"exemplo, ``concat(\"USE\", lpad(\"ID\", 3, 0))``, que retorna ``'Borough105'"
+" > 'Borough006'``."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:215
 msgid "Formatting of table cells using conditions"
-msgstr ""
+msgstr "Formatação de células da tabela usando condições"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:217
 msgid ""
@@ -585,18 +694,25 @@ msgid ""
 "table features you may want to put a particular focus on, using custom "
 "conditions on feature's:"
 msgstr ""
+"As configurações de formatação condicional podem ser usadas para realçar nas"
+" feições da tabela de atributos nos quais você deseja enfatizar, usando "
+"condições personalizadas nas feições:"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:221
 msgid ""
 "geometry (e.g., identifying multi-parts features, small area ones or in a "
 "defined map extent...);"
 msgstr ""
+"geometria (por exemplo, identificando características de várias partes, "
+"áreas pequenas ou em uma extensão de mapa definida ...);"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:223
 msgid ""
 "or field value (e.g., comparing values to a threshold, identifying empty "
 "cells...)."
 msgstr ""
+"ou valor do campo (por exemplo, comparando valores com um limite, "
+"identificando células vazias ...)."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:226
 msgid ""
@@ -604,6 +720,9 @@ msgid ""
 "|conditionalFormatting| at the top right of the attributes window in table "
 "view (not available in form view)."
 msgstr ""
+"Você pode ativar o painel de formatação condicional clicando em "
+"|conditionalFormatting| no canto superior direito da janela de atributos na "
+"exibição de tabela (não disponível na exibição de formulário)."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:230
 msgid ""
@@ -611,46 +730,54 @@ msgid ""
 "|radioButtonOn|:guilabel:`Field` or |radioButtonOff|:guilabel:`Full row`. "
 "Adding new rule opens a form to define:"
 msgstr ""
+"O novo painel permite que o usuário adicione novas regras para formatar a "
+"renderização de |radioButtonOn|:guilabel:`Campo` ou "
+"|radioButtonOff|:guilabel:`Linha completa`. Adicionar nova regra abre um "
+"formulário para definir:"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:234
 msgid "the name of the rule;"
-msgstr ""
+msgstr "o nome da regra;"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:235
 msgid ""
 "a condition using any of the :ref:`expression builder <vector_expressions>` "
 "functions;"
 msgstr ""
+"uma condição usando qualquer uma das funções :ref:`construtor de "
+"expressões<vector_expressions>`;"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:237
 msgid ""
 "the formatting: it can be choosen from a list of predefined formats or "
 "created based on properties like:"
 msgstr ""
+"a formatação: pode ser escolhida de uma lista de formatos predefinidos ou "
+"criada com base em propriedades como:"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:240
 msgid "background and text colors;"
-msgstr ""
+msgstr "cores de fundo e texto;"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:241
 msgid "use of icon;"
-msgstr ""
+msgstr "uso de ícone;"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:242
 msgid "bold, italic, underline, or strikeout;"
-msgstr ""
+msgstr "negrito, itálico, sublinhado ou strikeout;"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:243
 msgid "font."
-msgstr ""
+msgstr "fonte."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:250
 msgid "Conditional Formatting of an attribute table"
-msgstr ""
+msgstr "Formatação condicional de uma tabela de atributo"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:256
 msgid "Interacting with features in an attribute table"
-msgstr ""
+msgstr "Interagindo com feições em uma tabela de atributos"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:259
 msgid "Selecting features"
@@ -666,6 +793,13 @@ msgid ""
 "selection is also updated in the attribute table (or map canvas) "
 "accordingly."
 msgstr ""
+"Na exibição de tabela, cada linha da tabela de atributos exibe os atributos "
+"de um recurso exclusivo da camada. Selecionar uma linha seleciona o recurso "
+"e, da mesma forma, selecionar um recurso na tela do mapa (no caso de camada "
+"ativada para geometria) seleciona a linha na tabela de atributos. Se o "
+"conjunto de recursos selecionados na tela do mapa (ou tabela de atributos) "
+"for alterado, a seleção também será atualizada na tabela de atributos (ou "
+"tela do mapa) de acordo."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:268
 msgid ""
@@ -678,6 +812,15 @@ msgid ""
 "table, does not change the row selection. Changing the selection in the main"
 " canvas does not move the cursor position in the attribute table."
 msgstr ""
+"As linhas podem ser selecionadas clicando no número da linha no lado "
+"esquerdo da linha. **Múltiplas linhas** podem ser marcadas pressionando a "
+"tecla: kbd:`Ctrl`. Uma **seleção contínua** pode ser feita pressionando a "
+"tecla: kbd:`Shift` e clicando em vários cabeçalhos de linha no lado esquerdo"
+" das linhas. Todas as linhas entre a posição atual do cursor e a linha "
+"clicada são selecionadas. Mover a posição do cursor na tabela de atributos, "
+"clicando em uma célula na tabela, não altera a seleção de linha. Alterar a "
+"seleção na tela principal não move a posição do cursor na tabela de "
+"atributos."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:277
 msgid ""
@@ -687,6 +830,12 @@ msgid ""
 "panel, either by selecting an existing field or using a custom expression. "
 "You can also choose to sort the list of features from the drop-down menu."
 msgstr ""
+"Na exibição de formulário da tabela de atributos, as feições são "
+"identificados por padrão no painel esquerdo pelo valor do campo exibido "
+"(consulte: ref: `maptips`). Esse identificador pode ser substituído usando a"
+" lista suspensa na parte superior do painel, selecionando um campo existente"
+" ou usando uma expressão personalizada. Você também pode optar por "
+"classificar a lista de recursos no menu suspenso."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:283
 msgid ""
@@ -696,6 +845,11 @@ msgid ""
 "Like in the table view, you can perform multiple feature selection using the"
 " keyboard combinations previously exposed."
 msgstr ""
+"Clique em um valor no painel esquerdo para exibir os atributos da feição no "
+"caminho certo. Para selecionar uma feição, você precisa clicar dentro do "
+"símbolo quadrado à esquerda do identificador. Por padrão, o símbolo fica "
+"amarelo. Como na exibição de tabela, você pode executar várias seleções de "
+"recursos usando as combinações de teclado expostas anteriormente."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:292
 msgid ""
@@ -704,35 +858,41 @@ msgid ""
 "attribute table toolbar, such as (see section :ref:`automatic_selection` and"
 " following one for more information and use case):"
 msgstr ""
+"Além de selecionar feições com o mouse, você pode executar a seleção "
+"automática com base no atributo da feição, usando as ferramentas disponíveis"
+" na barra de ferramentas da tabela de atributos, como (consulte a seção: "
+"ref:`automatic_selection` e a seguir para obter mais informações e casos de "
+"uso):"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:297
 msgid "|expressionSelect| :guilabel:`Select By Expression...`"
-msgstr ""
+msgstr "|expressionSelect| :guilabel:`Selecione por expressão...`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:298
 msgid "|formSelect| :guilabel:`Select Features By Value...`"
-msgstr ""
+msgstr "|formSelect| :guilabel:`Selecionar Feição pelo Valor...`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:299
 msgid "|deselectAll| :guilabel:`Deselect Features from All Layers`"
-msgstr ""
+msgstr "|deselectAll| :guilabel:`Desselecionar Feições para Todas as Camadas`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:300
 msgid "|selectAll| :guilabel:`Select All Features`"
-msgstr ""
+msgstr "|selectAll| :guilabel:`Selecionar Todas as Feições`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:301
 msgid "|invertSelection| :guilabel:`Invert Feature Selection`."
-msgstr ""
+msgstr "|invertSelection| :guilabel:`Inverter Feições Selecionadas`."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:303
 msgid ""
 "It is also possible to select features using the :ref:`filter_select_form`."
 msgstr ""
+"Também é possível selecionar recursos usando o :ref: `filter_select_form`."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:309
 msgid "Filtering features"
-msgstr ""
+msgstr "Filtragem de feições"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:311
 msgid ""
@@ -742,22 +902,27 @@ msgid ""
 "bottom left of the attribute table dialog. This list offers the following "
 "filters:"
 msgstr ""
+"Depois de selecionar as feições na tabela de atributos, você pode exibir "
+"apenas esses registros na tabela. Isso pode ser feito facilmente usando o "
+"item :guilabel:`Mostrar feições selecionadas` na lista suspensa no canto "
+"inferior esquerdo da caixa de diálogo da tabela de atributos. Esta lista "
+"oferece os seguintes filtros:"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:316
 msgid ":guilabel:`Show All Features`"
-msgstr ""
+msgstr ":guilabel:`Mostrar Todas as Feições`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:317
 msgid ":guilabel:`Show Selected Features`"
-msgstr ""
+msgstr ":guilabel:`Mostrar Feições Selecionadas`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:318
 msgid ":guilabel:`Show Features visible on map`"
-msgstr ""
+msgstr ":guilabel:`Mostrar Feições visíveis no mapa`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:319
 msgid ":guilabel:`Show Edited and New Features`"
-msgstr ""
+msgstr ":guilabel:`Mostrar Feições Novas e Editadas`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:320
 msgid ""
@@ -765,6 +930,10 @@ msgid ""
 "field: choose a column from a list, type a value and press :kbd:`Enter` to "
 "filter. Then, only the matching features are shown in the attribute table."
 msgstr ""
+":guilabel:`Filtro de Campo` - permite ao usuário filtrar com base no valor "
+"de um campo: escolha uma coluna da lista, digite um valor e pressione :kbd:`"
+" Enter` para filtrar. Em seguida, apenas as feições correspondentes são "
+"mostrados na tabela de atributos."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:323
 msgid ""
@@ -774,12 +943,20 @@ msgid ""
 "table using more than one field. When applied, the filter expression will "
 "show up at the bottom of the form."
 msgstr ""
+":guilabel:`Filtro avançado (Expressão)` - Abre a caixa de diálogo Construtor"
+" de expressões. Dentro dele, você pode criar: ref: `expressões "
+"complexas<vector_expressions>` para corresponder às linhas da tabela. Por "
+"exemplo, você pode filtrar a tabela usando mais de um campo. Quando "
+"aplicada, a expressão do filtro será exibida na parte inferior do "
+"formulário."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:329
 msgid ""
 "It is also possible to :ref:`filter features using forms "
 "<filter_select_form>`."
 msgstr ""
+"Também é possível: ref: `filtrar recursos usando formulários "
+"<filter_select_form>`."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:333
 msgid ""
@@ -789,10 +966,17 @@ msgid ""
 "hide features from the layer, use the :ref:`Query Builder "
 "<vector_query_builder>`."
 msgstr ""
+"A filtragem de registros da tabela de atributos não filtra feições da "
+"camada; eles são simplesmente ocultados momentaneamente da tabela e podem "
+"ser acessados ​​na tela do mapa ou removendo o filtro. Para filtros que "
+"ocultam recursos da camada, use o :ref:`Query "
+"Builder<vector_query_builder>`."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:339
 msgid "**Update datasource filtering with** ``Show Features Visible on Map``"
 msgstr ""
+"**Atualize a filtragem da fonte de dados com** ``Mostrar feições visíveis no"
+" mapa``"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:341
 msgid ""
@@ -802,10 +986,15 @@ msgid ""
 "Features Visible on Map` on a new canvas extent updates the spatial "
 "restriction."
 msgstr ""
+"Quando, por motivos de desempenho, os recursos mostrados na tabela de "
+"atributos são espacialmente limitados à extensão da tela em sua abertura "
+"(consulte: ref: `Opções da fonte de dados<tip_table_filtering>` para obter "
+"instruções), selecionando: guilabel: `Mostrar feições visíveis no mapa` em "
+"um nova extensão de tela atualiza a restrição espacial."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:350
 msgid "Filtering and selecting features using forms"
-msgstr ""
+msgstr "Filtrando e selecionando feições usando formulários"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:352
 msgid ""
@@ -813,6 +1002,10 @@ msgid ""
 "pressing :kbd:`Ctrl+F` will make the attribute table dialog switch to form "
 "view and replace each widget with its search variant."
 msgstr ""
+"Clicando no |filterMap| :sup: `Filtre/selecione recursos usando o "
+"formulário` ou pressione :kbd:Ctrl+F` fará com que a caixa de diálogo da "
+"tabela de atributos mude para a exibição do formulário e substitua cada "
+"widget por sua variante de pesquisa."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:356
 msgid ""
@@ -820,10 +1013,13 @@ msgid ""
 "described in :ref:`select_by_value`, where you can find descriptions of all "
 "operators and selecting modes."
 msgstr ""
+"A partir deste ponto, a funcionalidade desta ferramenta é semelhante à "
+"descrita em: ref: `select_by_value`, onde é possível encontrar descrições de"
+" todos os operadores e selecionar modos."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:365
 msgid "Attribute table filtered by the filter form"
-msgstr ""
+msgstr "Tabela de atributos filtrada pelo formulário de filtro"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:367
 msgid ""
@@ -833,6 +1029,11 @@ msgid ""
 "option and displays the corresponding filter expression in an editable text "
 "widget at the bottom of the form."
 msgstr ""
+"Ao selecionar / filtrar feições da tabela de atributos, existe um botão "
+":guilabel:`Filtro de feições` que permite definir e refinar filtros. Seu uso"
+" aciona a opção: guilabel: `Filtro avançado (Expressão)` e exibe a expressão"
+" de filtro correspondente em um widget de texto editável na parte inferior "
+"do formulário."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:372
 msgid ""
@@ -840,14 +1041,16 @@ msgid ""
 "drop-down list next to the :guilabel:`Filter features` button. The options "
 "are:"
 msgstr ""
+"Se já houver feições filtradas, você poderá refinar o filtro usando a lista "
+"suspensa ao lado do botão :guilabel:`Filtro de feições`. As opções são:"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:375
 msgid ":guilabel:`Filter within (\"AND\")`"
-msgstr ""
+msgstr ":guilabel:`Filtrar dentro de (\"AND\")`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:376
 msgid ":guilabel:`Extend filter (\"OR\")`"
-msgstr ""
+msgstr ":guilabel:`Estender filtro (\"OR\")`"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:378
 msgid ""
@@ -855,38 +1058,46 @@ msgid ""
 "from the bottom left pull-down menu, or clear the expression and click "
 ":guilabel:`Apply` or press :kbd:`Enter`."
 msgstr ""
+"Para limpar o filtro, selecione a opção :guilabel:`Mostrar todas as feições`"
+" no menu suspenso inferior esquerdo ou limpe a expressão e clique em "
+":guilabel:`Aplicar` ou pressione :kbd:`Enter`."
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:383
 msgid "Using action on features"
-msgstr ""
+msgstr "Usando ação em feições"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:385
 msgid ""
 "Users have several possibilities to manipulate feature with the contextual "
 "menu like:"
 msgstr ""
+"Os usuários têm várias possibilidades de manipular feições com o menu "
+"contextual, como:"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:388
 msgid ":guilabel:`Select all` (:kbd:`Ctrl+A`) the features;"
-msgstr ""
+msgstr ":guilabel:`Selecionar todas` (:kbd:`Ctrl+A`) as feições;"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:389
 msgid ""
 "Copy the content of a cell in the clipboard with :guilabel:`Copy cell "
 "content`;"
 msgstr ""
+"Copie o conteúdo de uma célula na área de transferência com: "
+"guilabel:`Copiar conteúdo da célula`;"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:390
 msgid ":guilabel:`Zoom to feature` without having to select it beforehand;"
-msgstr ""
+msgstr ":guilabel:`Aproximar na feição` sem ter que selecioná-lo previamente;"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:391
 msgid ":guilabel:`Pan to feature` without having to select it beforehand;"
 msgstr ""
+":guilabel:`Panorâmica da feição` sem ter que selecioná-lo previamente;"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:392
 msgid ":guilabel:`Flash feature`, to highlight it in the map canvas;"
-msgstr ""
+msgstr ":guilabel:`Destacar feição`, para destacá-la na tela do mapa;"
 
 #: ../../docs/user_manual/working_with_vector/attribute_table.rst:393
 msgid ""

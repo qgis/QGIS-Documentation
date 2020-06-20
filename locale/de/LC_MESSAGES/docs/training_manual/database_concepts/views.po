@@ -1,107 +1,128 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014, QGIS project
-# This file is distributed under the same license as the QGIS Documentation
-# Project package.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Ettore Atalan <atalanttore@googlemail.com>, 2016
-# Matthias Wachholz <matthias.wachholz@lageso.berlin.de>, 2020
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-28 10:31+0100\n"
-"PO-Revision-Date: 2020-01-21 16:36+0000\n"
-"Last-Translator: Matthias Wachholz <matthias.wachholz@lageso.berlin.de>\n"
-"Language-Team: German (http://www.transifex.com/qgis/qgis-documentation/language/de/)\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
+"PO-Revision-Date: 2020-03-16 19:18+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: German (https://www.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../source/docs/training_manual/database_concepts/views.rst:6
+#: ../../docs/training_manual/database_concepts/views.rst:2
 msgid "|LS| Views"
 msgstr "|LS| Ansichten"
 
-#: ../../source/docs/training_manual/database_concepts/views.rst:8
+#: ../../docs/training_manual/database_concepts/views.rst:4
 msgid ""
 "When you write a query, you need to spend a lot of time and effort "
 "formulating it. With views, you can save the definition of an SQL query in a"
 " reusable 'virtual table'."
-msgstr "Das Schreiben einer Abfrage erfordert viel Zeit und Aufwand. Mit Hilfe von Sichten kann man die Formulierung einer SQL Abfrage in Form einer wiederverwendbaren 'virtuellen Tabelle' speichern."
+msgstr ""
+"Das Schreiben einer Abfrage erfordert viel Zeit und Aufwand. Mit Hilfe von "
+"Sichten kann man die Formulierung einer SQL Abfrage in Form einer "
+"wiederverwendbaren 'virtuellen Tabelle' speichern."
 
-#: ../../source/docs/training_manual/database_concepts/views.rst:12
+#: ../../docs/training_manual/database_concepts/views.rst:8
 msgid "**The goal for this lesson:** To save a query as a view."
 msgstr "**Ziel dieser Lektion:** Das Speichern einer Abfrage als Sicht."
 
-#: ../../source/docs/training_manual/database_concepts/views.rst:15
+#: ../../docs/training_manual/database_concepts/views.rst:11
 msgid "Creating a View"
 msgstr "Erstellen einer Sicht"
 
-#: ../../source/docs/training_manual/database_concepts/views.rst:17
+#: ../../docs/training_manual/database_concepts/views.rst:13
 msgid ""
 "You can treat a view just like a table, but its data is sourced from a "
 "query. Let's make a simple view based on the above:"
-msgstr "Man kann eine Sicht wie eine Tabelle behandeln, die Daten stammen aber aus einer Abfrage. Sehen wir uns eine einfache Sicht an:"
+msgstr ""
+"Man kann eine Sicht wie eine Tabelle behandeln, die Daten stammen aber aus "
+"einer Abfrage. Sehen wir uns eine einfache Sicht an:"
 
-#: ../../source/docs/training_manual/database_concepts/views.rst:27
+#: ../../docs/training_manual/database_concepts/views.rst:23
 msgid ""
 "As you can see the only change is the :kbd:`create view roads_count_v as` "
 "part at the beginning. We can now select data from that view:"
-msgstr "Wie man sieht, ist der einzige Unterschied der Teil :kbd:`create view roads_count_v as` am Anfang. Wir können nun Daten aus der Sicht auswählen:"
+msgstr ""
+"Wie man sieht, ist der einzige Unterschied der Teil :kbd:`create view "
+"roads_count_v as` am Anfang. Wir können nun Daten aus der Sicht auswählen:"
 
-#: ../../source/docs/training_manual/database_concepts/views.rst:34
+#: ../../docs/training_manual/database_concepts/views.rst:30
 msgid "Result:"
 msgstr "Ergebnis:"
 
-#: ../../source/docs/training_manual/database_concepts/views.rst:46
+#: ../../docs/training_manual/database_concepts/views.rst:42
 msgid "Modifying a View"
 msgstr "Veränderung einer Sicht"
 
-#: ../../source/docs/training_manual/database_concepts/views.rst:48
+#: ../../docs/training_manual/database_concepts/views.rst:44
 msgid ""
 "A view is not fixed, and it contains no 'real data'. This means you can "
 "easily change it without impacting on any data in your database:"
-msgstr "Eine Sicht ist nicht unveränderlich und enthält auch keine 'echten Daten'. Das bedeutet, dass sie leicht verändert werden kann, ohne die eigentlichen Daten in der Datenbank zu beeinflussen:"
+msgstr ""
+"Eine Sicht ist nicht unveränderlich und enthält auch keine 'echten Daten'. "
+"Das bedeutet, dass sie leicht verändert werden kann, ohne die eigentlichen "
+"Daten in der Datenbank zu beeinflussen:"
 
-#: ../../source/docs/training_manual/database_concepts/views.rst:59
+#: ../../docs/training_manual/database_concepts/views.rst:55
 msgid ""
 "(This example also shows the best practice convention of using UPPER CASE "
 "for all SQL keywords.)"
-msgstr "(Dieses Beispiel zeigt die empfohlene Praxis zur Nutzung von GROSSSCHREIBUNG für alle SQL Schlüsselwörter.)"
+msgstr ""
+"(Dieses Beispiel zeigt die empfohlene Praxis zur Nutzung von GROSSSCHREIBUNG"
+" für alle SQL Schlüsselwörter.)"
 
-#: ../../source/docs/training_manual/database_concepts/views.rst:62
+#: ../../docs/training_manual/database_concepts/views.rst:58
 msgid ""
 "You will see that we have added an :kbd:`ORDER BY` clause so that our view "
 "rows are nicely sorted:"
-msgstr "Wir haben eine :kbd:`ORDER BY` Klausel hinzugefügt, so dass die Zeilen der Sicht nun schön geordnet sind:"
+msgstr ""
+"Wir haben eine :kbd:`ORDER BY` Klausel hinzugefügt, so dass die Zeilen der "
+"Sicht nun schön geordnet sind:"
 
-#: ../../source/docs/training_manual/database_concepts/views.rst:77
+#: ../../docs/training_manual/database_concepts/views.rst:73
 msgid "Dropping a View"
 msgstr "Verwerfen einer Sicht"
 
-#: ../../source/docs/training_manual/database_concepts/views.rst:79
+#: ../../docs/training_manual/database_concepts/views.rst:75
 msgid "If you no longer need a view, you can delete it like this:"
-msgstr "Wenn man eine Sicht nicht länger benötigt, kann sie wie folgt gelöscht werden:"
-
-#: ../../source/docs/training_manual/database_concepts/views.rst:86
-msgid "|IC|"
 msgstr ""
+"Wenn man eine Sicht nicht länger benötigt, kann sie wie folgt gelöscht "
+"werden:"
 
-#: ../../source/docs/training_manual/database_concepts/views.rst:88
+#: ../../docs/training_manual/database_concepts/views.rst:82
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../docs/training_manual/database_concepts/views.rst:84
 msgid ""
 "Using views, you can save a query and access its results as if it were a "
 "table."
-msgstr "Mit Hilfe von Sichten kann man Abfragen speichern. Auf die Ausgabe der Abfragen kann man dann wie auf eine Tabelle zugreifen."
-
-#: ../../source/docs/training_manual/database_concepts/views.rst:91
-msgid "|WN|"
 msgstr ""
+"Mit Hilfe von Sichten kann man Abfragen speichern. Auf die Ausgabe der "
+"Abfragen kann man dann wie auf eine Tabelle zugreifen."
 
-#: ../../source/docs/training_manual/database_concepts/views.rst:93
+#: ../../docs/training_manual/database_concepts/views.rst:87
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../docs/training_manual/database_concepts/views.rst:89
 msgid ""
 "Sometimes, when changing data, you want your changes to have effects "
 "elsewhere in the database. The next lesson will show you how to do this."
-msgstr "Manchmal möchte man, dass die Ädnerung von bestimmten Daten auch Auswirkungen auf andere Teile der Datenbank hat. In der nächsten Lektion sehen wir, wie man das macht."
+msgstr ""
+"Manchmal möchte man, dass die Ädnerung von bestimmten Daten auch "
+"Auswirkungen auf andere Teile der Datenbank hat. In der nächsten Lektion "
+"sehen wir, wie man das macht."

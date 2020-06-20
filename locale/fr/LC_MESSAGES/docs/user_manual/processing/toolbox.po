@@ -1,19 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGISDoc package.
+# This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# MarieSilvestre, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGISDoc 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:31+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: MarieSilvestre, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -259,11 +260,11 @@ msgid ""
 " in selection boxes` option."
 msgstr ""
 "Par défaut, la boîte de dialogue des paramètres affichera une description du"
-" CRS de chaque couche ainsi que son nom. Si vous ne souhaitez pas voir ces "
+" SCR de chaque couche ainsi que son nom. Si vous ne souhaitez pas voir ces "
 "informations supplémentaires, vous pouvez désactiver cette fonctionnalité "
 "dans la boîte de dialogue Paramètres de traitement, en décochant l'option "
-":menuselection:`Général -> Afficher la définition CRS de la couche dans les "
-"zones de sélection`."
+":menuselection:`Général -> Montrer les SCR des couches dans les listes de "
+"choix des couches`."
 
 #: ../../docs/user_manual/processing/toolbox.rst:128
 msgid ""
@@ -339,8 +340,8 @@ msgid ""
 msgstr ""
 "Un **un système de référence de coordonnées**. Vous pouvez le sélectionner "
 "parmi ceux récemment utilisés dans la liste déroulante ou dans la boîte de "
-"dialogue :ref:`CRS selection` qui apparaît lorsque vous cliquez sur le "
-"bouton à droite."
+"dialogue :ref:`Sélectionner le SCR` qui apparaît lorsque vous cliquez sur le"
+" bouton à droite."
 
 #: ../../docs/user_manual/processing/toolbox.rst:158
 msgid ""
@@ -452,11 +453,11 @@ msgid ""
 msgstr ""
 "Certains algorithmes nécessitent de nombreux paramètres pour s'exécuter, par"
 " exemple dans le :ref:`qgisrastercalculator` vous devez spécifier "
-"manuellement la taille de la cellule, l'étendue et le CRS. Vous pouvez "
+"manuellement la taille de la cellule, l'étendue et le SCR. Vous pouvez "
 "éviter de choisir tous les paramètres manuellement lorsque l'algorithme a le"
 " paramètre ``Couches de référence``. Avec ce paramètre, vous pouvez choisir "
 "la couche de référence et toutes ses propriétés (taille de cellule, étendue,"
-" CRS) seront utilisées."
+" SCR) seront utilisées."
 
 #: ../../docs/user_manual/processing/toolbox.rst:231
 msgid ""
@@ -536,7 +537,7 @@ msgid ""
 "coordinate reference system of the first input layer."
 msgstr ""
 "L'exécution de l'algorithme de traitement est toujours effectuée dans le "
-"système de référence de coordonnées de la couche (CRS). En raison des "
+"système de référence de coordonnées de la couche (SCR). En raison des "
 "capacités de re-projection à la volée de QGIS, bien que deux couches "
 "puissent sembler se chevaucher et correspondre, cela pourrait ne pas être "
 "vrai si leurs coordonnées d'origine sont utilisées sans les re-projeter sur "
@@ -568,12 +569,12 @@ msgid ""
 "selection boxes` option."
 msgstr ""
 "Par défaut, la boîte de dialogue des paramètres affiche une description du "
-"CRS de chaque couche ainsi que son nom, ce qui facilite la sélection des "
-"couches qui partagent le même CRS à utiliser comme couches d'entrée. Si vous"
+"SCR de chaque couche ainsi que son nom, ce qui facilite la sélection des "
+"couches qui partagent le même SCR à utiliser comme couches d'entrée. Si vous"
 " ne souhaitez pas voir ces informations supplémentaires, vous pouvez "
 "désactiver cette fonctionnalité dans la boîte de dialogue Paramètres de "
-"traitement, en décochant l'option :guilabel:`Afficher la définition de la "
-"couche CRS dans les zones de sélection`."
+"traitement, en décochant l'option :guilabel:`Afficher la définition du SCR "
+"de la couche dans les zones de sélection`."
 
 #: ../../docs/user_manual/processing/toolbox.rst:285
 msgid ""
@@ -582,10 +583,9 @@ msgid ""
 ":guilabel:`Warn before executing if layer CRS's do not match` option."
 msgstr ""
 "Si vous essayez d'exécuter un algorithme en utilisant en entrée deux couches"
-" ou plus avec des CRS sans correspondance, une boîte de dialogue "
-"d'avertissement s'affiche. Cela se produit grâce à l'option "
-":guilabel:`Avertir avant d'exécuter si les CRS de couche ne correspondent "
-"pas`."
+" ou plus avec des SCR différents, une boîte de dialogue d'avertissement "
+"s'affiche. Cela se produit grâce à l'option :guilabel:`Avertir avant "
+"d'exécuter si les SCR de couche ne correspondent pas`."
 
 #: ../../docs/user_manual/processing/toolbox.rst:289
 msgid ""
@@ -611,9 +611,9 @@ msgid ""
 "before executing the algorithm using these outputs."
 msgstr ""
 "Lorsqu'un algorithme ne peut pas fonctionner correctement sur plusieurs "
-"couches d'entrée en raison de CRS inégaux, utilisez l'algorithme interne "
+"couches d'entrée en raison de SCR différents, utilisez l'algorithme interne "
 "QGIS tel que :ref:`qgisreprojectlayer` pour effectuer la reprojection des "
-"couches vers le même CRS avant d'exécuter l'algorithme à l'aide de ces "
+"couches vers le même SCR avant d'exécuter l'algorithme à l'aide de ces "
 "sorties."
 
 #: ../../docs/user_manual/processing/toolbox.rst:301

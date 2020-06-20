@@ -1,19 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGISDoc package.
+# This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Yann Voté <ygversil@lilo.org>, 2020
+# Francis Gasc <francisgasc@gmail.com>, 2020
+# Sant-anna <delazj@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGISDoc 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:16+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Sant-anna <delazj@gmail.com>, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -60,6 +63,11 @@ msgid ""
 "map projections try to transform the earth from its spherical shape (3D) to "
 "a planar shape (2D)."
 msgstr ""
+"Les **projections cartographiques** tentent de figurer la surface terrestre,"
+" ou une portion de celle-ci, sur une feuille de papier à plat or sur l'écran"
+" d'un ordinateur. En clair, les projections cartographiques tentent de "
+"transformer la forme sphérique (3 dimensions) de la Terre en une forme plane"
+" (2 dimensions)."
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:19
 msgid ""
@@ -69,6 +77,11 @@ msgid ""
 "extent of the area you want to work in, on the analysis you want to do, and "
 "often on the availability of data."
 msgstr ""
+"Un **système de coordonnées de référence** (SCR) est ce qui définit la "
+"relation entre la carte projetée en deux dimensions dans votre SIG et les "
+"lieux réels sur la Terre. Le choix d'une projection cartographique et d'un "
+"SCR dépend de l'emprise de votre zone d'étude, des analyses que vous "
+"souhaitez faire, et souvent des données disponibles."
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:26
 msgid "Map Projection in detail"
@@ -368,6 +381,23 @@ msgid ""
 "projections** (shown in figure_mollweide_equal_area_projection_) are types "
 "of equal area projections that are often encountered in GIS work."
 msgstr ""
+"Quand une carte figure des zones dont la superficie est proportionnelle à "
+"celles des zones réelles sur Terre qui sont représentées, on dit que la "
+"carte **respecte les surfaces**. Ainsi, en pratique, les cartes de référence"
+" ou à but éducatif utilisent le plus souvent des **projections respectant "
+"les surfaces**, ou **projections équivalentes**. Comme le nom l'indique, ces"
+" cartes sont utiles quand vous faîtes surtout des calculs de superficie. Si,"
+" par exemple, vous analysez une zone dans votre commune pour vérifier si "
+"elle est suffisamment grande pour accueillir un centre commercial, les "
+"projections respectant les surfaces sont à préférer. Avec ces projections, "
+"plus la zone à étudier est grande, plus les mesures de superficies seront "
+"précises. Par contre, une projection respectant les surfaces **déformera les"
+" angles**, d'autant plus que la zone d'étude est grande. Les angles des "
+"petites surfaces sont beaucoup moins déformés par une projection "
+"équivalente. La **projection d'Albers**, la **projection azimutale "
+"équivalent de Lambert**  et la **projection de Mollweide** "
+"(figure_mollweide_equal_area_projection_) sont des exemples de projections "
+"respectant les surface souvent utilisées dans les travaux SIG."
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:198
 msgid ""
@@ -605,6 +635,20 @@ msgid ""
 " and progressing East back to the **antemeridian** (**zone 60** at 180 "
 "degrees East longitude) as shown in figure_utm_zones_."
 msgstr ""
+"Le système de coordonnées de référence Transverse Universelle de Mercator "
+"(UTM) a pour origine l'**équateur** et une **longitude** particulière. Cette"
+" fois les coordonnées Y augmentent vers le Sud et les coordonnées X "
+"augmentent vers l'Ouest. Le SCR UTM est un système mondial. Cela signifie "
+"qu'il est utilisé en général pour représenter le monde entier. Mais, comme "
+"décrit dans la section « Précision des projections cartographiques » plus "
+"haut, plus la zone d'étude est grande (l'Afrique du Sud par exemple), plus "
+"les angles, les distances et les surfaces sont déformés. Pour éviter de trop"
+" grandes déformations, le monde est divisé en **60 zones égales** qui sont "
+"toutes larges de 6 degrés en longitude, d'Est en Ouest. Ces **zones UTM** "
+"sont numérotées de **1 à 60** à partir de celle **antéméridienne** (la "
+"**zone 1** se trouve à 180 degrés Ouest de longitude) et en allant vers "
+"l'Est (la **zone 60** est à 180 degrés Est de longitude), ainsi que le "
+"montre la figure figure_utm_zones_."
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:323
 msgid ""
@@ -668,10 +712,23 @@ msgid ""
 "difficult, so, we will do an example that shows you how to find the correct "
 "**UTM 35S** coordinate for the **Area of Interest**."
 msgstr ""
+"La position d'une coordonnée en UTM au sud de l'équateur doit être indiquée "
+"avec le **numéro de zone** (35) et avec sa **valeur d'ordonnée (Y)** et "
+"**valeur d'abscisse (X)** en mètres. La **valeur d'ordonnée** est la "
+"distance de la position par rapport à **l'équateur** en mètres. La **valeur "
+"d'abscisse** est la distance du **méridien central** (longitude) de la zone "
+"UTM utilisée. Pour la zone UTM 35S, elle est de **27 degrés** **Est** comme "
+"indiqué dans la figure_utm_for_sa_. De plus, comme nous sommes au sud de "
+"l'équateur et que les valeurs négatives ne sont pas autorisées dans le "
+"système de référence de coordonnées UTM, nous devons ajouter une soi-disant "
+"**fausse valeur d'ordonnée** de 10 000 000 m à la valeur d'ordonnée (Y) et "
+"une fausse abscisse de 500 000 m à la valeur d'abscisse (X). Cela semble "
+"difficile, nous allons donc faire un exemple qui vous montrera comment "
+"trouver la bonne coordonnée **UTM 35S** pour la **zone d'intérêt**."
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:361
 msgid "The northing (Y) value"
-msgstr ""
+msgstr "La valeur d'ordonnée (Y)"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:363
 msgid ""
@@ -681,10 +738,15 @@ msgid ""
 "of 10,000,000 m. This means the northing (Y) value of our coordinate is "
 "6,450,000 m (-3,550,000 m + 10,000,000 m)."
 msgstr ""
+"L'endroit que nous recherchons est à 3 550 000 mètres au sud de l'équateur, "
+"de sorte que la valeur d'ordonnée (Y) obtient un **signe négatif** et est de"
+" -3 550 000 m. Selon les définitions UTM, nous devons ajouter une **fausse "
+"valeur d'ordonnée** de 10 000 000 m. Cela signifie que la valeur d'ordonnée "
+"(Y) de notre coordonnée est de 6 450 000 m (-3 550 000 m + 10 000 000 m)."
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:370
 msgid "The easting (X) value"
-msgstr ""
+msgstr "La valeur d'abscisse (X)"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:372
 msgid ""
@@ -698,6 +760,16 @@ msgid ""
 "500,000 m). Finally, we have to add the **zone number** to the easting value"
 " to get the correct value."
 msgstr ""
+"Nous devons d'abord trouver le **méridien central** (longitude) pour la "
+"**zone UTM 35S**. Comme nous pouvons le voir dans figure_utm_for_sa_, il "
+"fait **27 degrés Est**. L'endroit que nous recherchons est à **85 000 mètres"
+" à l'ouest** du méridien central. Tout comme la valeur d'ordonnée, la valeur"
+" d'abscisse (X) obtient un signe négatif, donnant un résultat de **- 85 000 "
+"m**. Selon les définitions UTM, nous devons ajouter une **fausse valeur "
+"d'abscisse** de 500 000 m. Cela signifie que la valeur d'abscisse (X) de "
+"notre coordonnée est de 415 000 m (-85 000 m + 500 000 m). Enfin, nous "
+"devons ajouter le **numéro de zone** à la valeur d'abscisse pour obtenir la "
+"valeur correcte."
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:381
 msgid ""
@@ -747,6 +819,14 @@ msgid ""
 "within the map window of your GIS, even though they may be in **different** "
 "reference systems. In QGIS, this functionality is applied by default."
 msgstr ""
+"Pour pallier à cela, beaucoup de SIG offrent une fonctionnalité dite de "
+"projection **à la volée**. Cela signifie que vous pouvez **fixer** une "
+"projection quand vous démarrez votre SIG et que toutes les couches que vous "
+"chargez alors, quel que soit leur système de coordonnées de référence, "
+"s'afficheront automatiquement dans la projection choisie. Cette "
+"fonctionnalité vous permet de superposer des couches dans le canevas de "
+"votre SIG bien qu'elles soient dans des systèmes de référence différents. "
+"Dans QGIS, cette fonctionnalité est activée par défaut."
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:406
 msgid "Common problems / things to be aware of"
@@ -850,29 +930,38 @@ msgstr "Voici quelques pistes d'actions à essayer avec vos élèves :"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:442
 msgid "Start QGIS"
-msgstr ""
+msgstr "Démarrez QGIS"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:443
 msgid ""
 "In :menuselection:`Project --> Properties... --> CRS` check :guilabel:`No "
 "projection (or unknown/non-Earth projection)`"
 msgstr ""
+"In :menuselection:`Projet --> Propriétés... --> SCR` cochez "
+":guilabel:`Aucune projection (ou projection inconnue/non-terrestre)`"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:445
 msgid "Load two layers of the same area but with different projections"
 msgstr ""
+"Chargez deux couches ayant des emprises superposées mais avec deux "
+"projections différentes"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:446
 msgid ""
 "Let your pupils find the coordinates of several places on the two layers. "
 "You can show them that it is not possible to overlay the two layers."
 msgstr ""
+"Encouragez les élèves à chercher les coordonnées de plusieurs lieux sur "
+"chaque coche. Vous pouvez leur montrer qu'il n'est pas possible de "
+"superposer les deux couches."
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:448
 msgid ""
 "Then define the coordinate reference system as Geographic/WGS 84 inside the "
 ":guilabel:`Project Properties` dialog"
 msgstr ""
+"Maintenant choisissez le système des coordonnées de référence WGS 84 dans la"
+" fenêtre :guilabel:`Propriétés du projet` "
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:450
 msgid ""
@@ -880,6 +969,9 @@ msgid ""
 "setting a CRS for the project (hence, enabling \"on-the-fly\" projection) "
 "works."
 msgstr ""
+"Chargez à nouveau les deux couches aux emprises superposées et constatez "
+"avec vos élèves que d'avoir défini un SCR pour le projet (ce qui a donc "
+"activé la reprojection « à la volée ») a fonctionné."
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:453
 msgid ""
@@ -888,6 +980,10 @@ msgid ""
 "of the complexity of this topic. You can select different CRSs to display "
 "the same layer in different projections."
 msgstr ""
+"Vous pouvez ouvrit à nouveau la fenêtre :guilabel:`Propriétés du projet` "
+"dans QGIS et montrez à vous élèves la grande quantité de systèmes de "
+"coordonnées de références afin qu'ils entrevoient la complexité de ce sujet."
+" Vous pouvez essayer d'afficher les couches avec différents SCR."
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:459
 msgid "Something to think about"
@@ -902,6 +998,13 @@ msgid ""
 "coordinate reference system showing X axes and Y axes. Then, let your pupils"
 " define coordinates (X and Y values) for different places."
 msgstr ""
+"Si vous n'avez pas d'ordinateur disponible, vous pouvez montrer à vos élèves"
+" les principes de trois familles de projections. Avec un globe terrestre et "
+"une feuille de papier, montrez comment les projections cylindriques, "
+"coniques et planaires fonctionnent en général. Avec une feuille de papier "
+"calque, vous pouvez dessiner une système de coordonnées de référence en deux"
+" dimensions, montrant les axes X et Y. Laissez alors vous élèves définir les"
+" coordonnées (X et Y) pour différents endroits."
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:469
 msgid "Further reading"
@@ -942,10 +1045,12 @@ msgstr "**Sites Web** :"
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:482
 msgid "https://www.colorado.edu/geography/gcraft/notes/mapproj/mapproj_f.html"
 msgstr ""
+"https://www.colorado.edu/geography/gcraft/notes/mapproj/mapproj_f.html"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:483
 msgid "https://geology.isu.edu/wapi/geostac/Field_Exercise/topomaps/index.htm"
 msgstr ""
+"https://geology.isu.edu/wapi/geostac/Field_Exercise/topomaps/index.htm"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:485
 msgid ""

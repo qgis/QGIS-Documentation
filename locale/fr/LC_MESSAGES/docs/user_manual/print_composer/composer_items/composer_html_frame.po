@@ -1,19 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGISDoc package.
+# This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# MarieSilvestre, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGISDoc 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:27+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: MarieSilvestre, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +24,7 @@ msgstr ""
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:5
 msgid "The HTML Frame Item"
-msgstr "L'élément cadre HTML"
+msgstr "Cadre HTML"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:12
 msgid ""
@@ -33,6 +34,11 @@ msgid ""
 "creation instructions <create_layout_item>` and manipulate it the same way "
 "as exposed in :ref:`interact_layout_item`."
 msgstr ""
+"Il est possible d'ajouter un cadre qui affiche le contenu d'une page web ou "
+"de créer votre page HTML, lui donner un style et l'afficher ! Vous pouvez "
+"ajouter une image avec |addHtml| :guilabel:`Ajouter un cadre HTML` en "
+"suivant les :ref:`instructions de création d'objets <create_layout_item>` et"
+" pour :ref:`interact_layout_item`."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:18
 msgid ""
@@ -40,6 +46,9 @@ msgid ""
 " Other than the :ref:`items common properties <item_common_properties>`, "
 "this feature has the following functionalities (see figure_layout_html_):"
 msgstr ""
+"Un objet HTML se personnalise via le panneau des :guilabel:`Propriétés de "
+"l'objet`. En plus des :ref:`propriétés communes <item_common_properties>`, "
+"cet objet propose les fonctionnalités suivantes (voir figure_layout_html_) :"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:28
 msgid "HTML Frame, the Item Properties Panel"
@@ -55,6 +64,9 @@ msgid ""
 "Properties` panel provides the following functionalities (see "
 "figure_layout_html_ppt_):"
 msgstr ""
+"La zone :guilabel:`Source du HTML` de l'onglet :guilabel:`Propriétés de "
+"l'objet` du cadre HTML propose les fonctionnalités suivantes (voir "
+"figure_layout_html_ppt_) :"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:42
 msgid "HTML frame, the HTML Source properties"
@@ -68,6 +80,12 @@ msgid ""
 ":`Data-defined override` button, to provide a URL from the contents of an "
 "attribute field of a table or using a regular expression."
 msgstr ""
+"Dans :guilabel:`URL`, vous pouvez entrer l'URL d'une page Internet que vous "
+"avez copiée depuis votre navigateur internet ou sélectionner un fichier HTML"
+" en utilisant le bouton :guilabel:`...` :sup:`Parcourir`. Il y a aussi la "
+"possibilité d'utiliser le bouton |dataDefined| :sup:`Valeur définie par les "
+"données` , pour fournir une URL à partir du contenu d'un champ d'attribut "
+"d'une table ou en utilisant une expression régulière. "
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:49
 msgid ""
@@ -86,6 +104,12 @@ msgid ""
 "somewhere in the textbox before refreshing the HTML frame, otherwise you "
 "will lose the expression."
 msgstr ""
+"Le bouton :guilabel:`Insérer une expression` peut être utilisé pour insérer "
+"une expression comme ``[%Year($now)%]`` dans la zone de texte Source pour "
+"afficher l'année courante. Ce bouton est seulement activé lorsque le bouton "
+"radio :guilabel:`Source` est sélectionné. Après avoir inséré l'expression, "
+"cliquez quelque part dans la zone de texte avant de rafraîchir le cadre "
+"HTML, autrement vous perdrez l'expression. "
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:56
 msgid ""
@@ -102,6 +126,8 @@ msgid ""
 "Use the :guilabel:`Refresh HTML` button to refresh the HTML frame(s) and see"
 " the result of changes."
 msgstr ""
+"Utilisez le bouton :guilabel:`Mise à jour du HTML` pour actualiser le(s) "
+"cadre(s) HTML et voir les changements."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:64
 msgid "Frames"
@@ -113,6 +139,9 @@ msgid ""
 "panel provides the following functionalities (see "
 "figure_layout_html_frames_):"
 msgstr ""
+"La zone :guilabel:`Cadres` du panneau :guilabel:`Propriétés de l'objet` de "
+"l'objet HTML propose les fonctionnalités suivantes (voir "
+"figure_layout_html_frames_) :"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:74
 msgid "HTML frame, the Frames properties"
@@ -130,6 +159,8 @@ msgid ""
 "``Use existing frames`` displays the result in the first frame and added "
 "frames only."
 msgstr ""
+"``Utiliser les cadres existants`` affiche le résultat seulement dans le "
+"premier cadre et les cadres ajoutés. "
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:80
 msgid ""
@@ -139,18 +170,28 @@ msgid ""
 "between the other frames. The last frame will be trimmed to fit the web "
 "page."
 msgstr ""
+"``Étendre à la page suivante`` créera autant de cadres (et de pages) que "
+"nécessaire pour afficher la page web en entier. Chaque cadre peut être "
+"déplacé sur la mise en page. Si vous redimensionnez un cadre, la page web "
+"sera à nouveau répartie dans les cadres. Le dernier cadre sera rogné pour "
+"s'ajuster à la page web. "
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:84
 msgid ""
 "``Repeat on every page`` will repeat the upper left of the web page on every"
 " page in frames of the same size."
 msgstr ""
+"``Répéter sur chaque page`` répétera la partie supérieure gauche de la page "
+"web sur chaque page de la mise en page dans des cadres de taille identique. "
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:86
 msgid ""
 "``Repeat until finished`` will also create as many frames as the ``Extend to"
 " next page`` option, except all frames will have the same size."
 msgstr ""
+"``Répéter jusqu'à la fin`` créera autant de cadres que pour l'option "
+"``Étendre à la page suivante`` sauf que tous les cadres auront la même "
+"taille. "
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:89
 msgid ""
@@ -159,6 +200,11 @@ msgid ""
 " continue in the next frame when you use :guilabel:`Resize mode` or "
 ":guilabel:`Use existing frames`."
 msgstr ""
+"Utilisez le bouton :guilabel:`Ajouter un cadre` pour ajouter un autre cadre "
+"avec la même taille que le cadre sélectionné. Si la page HTML ne va pas dans"
+" le premier cadre, elle ira dans le cadre suivant lorsque vous utilisez "
+":guilabel:`Mode de redimensionnement` ou :guilabel:`Utiliser les cadres "
+"existants`."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:93
 msgid ""
@@ -167,6 +213,11 @@ msgid ""
 "means all other layout items, maps, scale bars, legends etc. will not be "
 "visible in the result."
 msgstr ""
+"Activez |checkbox| :guilabel:`Ne pas exporter la page si le cadre est vide` "
+"empêche que la carte mise en page soit exportée lorsque le cadre n'a pas de "
+"contenu HTML. Cela signifie que tous les autres objets de la mise en page, "
+"cartes, barres d'échelle, légendes etc. ne seront pas visibles dans le "
+"résultat. "
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:97
 msgid ""
@@ -186,10 +237,16 @@ msgid ""
 "sheet` dialog of the HTML frame :guilabel:`Item Properties` panel provides "
 "the following functionalities (see figure_layout_html_breaks_):"
 msgstr ""
+"Les zones :guilabel:`Utiliser des sauts de page intelligents` et "
+":guilabel:`Feuille de style utilisateur` du panneau :guilabel:`Propriétés de"
+" l'objet` du cadre HTML proposent les fonctionnalités suivantes (voir "
+"figure_layout_html_breaks_) :"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:113
 msgid "HTML frame, Use smart page breaks and User style sheet properties"
 msgstr ""
+"Cadre HTML, Utiliser des sauts de page intelligents et Feuille de style "
+"utilisateur"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:115
 msgid ""
@@ -226,9 +283,16 @@ msgid ""
 "provided below to set the color of ``<h1>`` header tag to green and set the "
 "font and font size of text included in paragraph tags ``<p>``."
 msgstr ""
+"Activez |checkbox| :guilabel:`Feuille de style utilisateur` pour appliquer "
+"des styles HTML qui sont souvent fournis dans des feuilles de style en "
+"cascade. Un exemple de code de style est fourni ci-dessous pour définir la "
+"couleur de la balise d'en-tête ``<h1>`` au vert et définir la police et la "
+"taille de police du texte inclus dans les balises de paragraphe ``<p>``. "
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_html_frame.rst:137
 msgid ""
 "Use the :guilabel:`Update HTML` button to see the result of the style sheet "
 "settings."
 msgstr ""
+"Utilisez le bouton :guilabel:`Mise à jour du HTML` pour voir le résultat des"
+" paramètres de la feuille de style. "

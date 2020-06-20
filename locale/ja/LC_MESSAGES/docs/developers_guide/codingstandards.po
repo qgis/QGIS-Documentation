@@ -1,19 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGISDoc package.
+# This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# mnamihdk, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGISDoc 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:24+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: mnamihdk, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -257,10 +258,8 @@ msgid ""
 "QGIS uses Doxygen for documentation. Write descriptive and meaningful "
 "comments that give a reader information about what to expect, what happens "
 "in edge cases and give hints about other interfaces he could be looking for,"
-" best best practice and code samples."
+" best practices and code samples."
 msgstr ""
-"QGIS ではドキュメント作成に Doxygen を使用しています。説明的でかつ意味のあるコメントを書いてください "
-"(期待される動作や、エッジケースで何が起きるか、探しているかもしれない別のインターフェースへを探すヒント、ベストプラクティスやコードサンプルなどの情報を読み手にもたらすようなコメント)。"
 
 #: ../../docs/developers_guide/codingstandards.rst:128
 msgid "Methods"
@@ -361,7 +360,7 @@ msgid ""
 "implemented in its own file. This makes it much easier for newcomers to "
 "identify where the code is relating to specific class."
 msgstr ""
-"上記の文から明確ではない場合は、ファイル名がクラス名と一致するために、それは各クラスが独自のファイルで宣言され実装されるべきであることを暗黙的に意味します。これにより、新参者にとってコードが特定のクラスにどこで関連しているか特定するのがはるかに容易になります。"
+"上記の文が暗黙的に意味していることをより明確にいえば、ファイル名をクラス名と一致させるために、それぞれのクラスはそのクラス固有のファイルで宣言され、実装されねばならないということです。これによって、あるクラスに関連したコードがどこにあるのかを探すのが、新規参加者にとってもはるかに容易になります。"
 
 #: ../../docs/developers_guide/codingstandards.rst:229
 msgid "Standard Header and License"
@@ -452,9 +451,9 @@ msgid ""
 "available in Qt5. Futher information on this requirement is available in "
 "`QEP #77 <https://github.com/qgis/QGIS-Enhancement-Proposals/issues/77>`_."
 msgstr ""
-"すべてのシグナル/スロットコネクトは、「新しいスタイル」を使用して行われるべきであるQt5で利用できる接続します。この要件のFuther情報は、 "
+"すべてのシグナルとスロットの接続は、Qt5から利用可能になった「新しいスタイル」の接続を使用して行われるべきです。この要件についてのより詳しい情報は、 "
 "`QEP #77 <https://github.com/qgis/QGIS-Enhancement-Proposals/issues/77>`_ "
-"で利用可能です。"
+"で読むことができます。"
 
 #: ../../docs/developers_guide/codingstandards.rst:319
 msgid ""
@@ -512,9 +511,8 @@ msgid ""
 "version, that we include in our repository (enable ``WITH_ASTYLE`` in cmake "
 "to include it in the build)."
 msgstr ""
-"ソースの完全な字下げを行うために使用されるバージョンとは異なる astyle "
-"インデントの新しいバージョンとして、このスクリプトは、私たちは（ビルドに含める cmake "
-"の中``WITH_ASTYLE``を有効にする）私たちのリポジトリに含まれていることを、古いの astyle のバージョンを使用しています。"
+"astyle字下げのより新しいバージョンは、ソースコード全体を字下げし直す時に使用するバージョンとは異なっているので、スクリプトでは古いastyleバージョンを使用しており、これをリポジトリに含めています（これを含めるにはビルドの際にcmakeで"
+" ``WITH_ASTYLE`` を有効にします）。"
 
 #: ../../docs/developers_guide/codingstandards.rst:352
 msgid "Braces"
@@ -522,7 +520,7 @@ msgstr "中括弧"
 
 #: ../../docs/developers_guide/codingstandards.rst:354
 msgid "Braces should start on the line following the expression:"
-msgstr "中括弧は式に続いて行内で始めてください。"
+msgstr "中括弧は式の次の行で始めてください。"
 
 #: ../../docs/developers_guide/codingstandards.rst:370
 msgid "API Compatibility"
@@ -530,7 +528,7 @@ msgstr "API の互換性"
 
 #: ../../docs/developers_guide/codingstandards.rst:372
 msgid "There is :api:`API documentation <>` for C++."
-msgstr ""
+msgstr "C++用の :api:`API documentation <>` があります。"
 
 #: ../../docs/developers_guide/codingstandards.rst:374
 msgid ""
@@ -565,8 +563,8 @@ msgid ""
 "Use ``#ifdef SIP_RUN`` to generate code only in SIP files or ``#ifndef "
 "SIP_RUN`` for C++ code only. ``#else`` statements are handled in both cases."
 msgstr ""
-"``#ifdef SIP_RUN`` を使用すると SIP ファイルのみのコードを生成し、 ``#ifndef SIP_RUN`` は C++ "
-"のコードのみのものです。 ``#else`` 文はどちらの場合も扱うことができます。"
+"``#ifdef SIP_RUN`` で SIP ファイル内でのみ使用するコードを生成し、 ``#ifndef SIP_RUN`` で C++ "
+"コード内でのみ使用するコードを生成してください。 ``#else`` 文を使えばこの両方を扱うことができます。"
 
 #: ../../docs/developers_guide/codingstandards.rst:429
 msgid "Use ``SIP_SKIP`` to discard a line"
@@ -620,6 +618,9 @@ msgid ""
 "value of the python method. If the default value contains a comma ``,``, the"
 " value should be surrounded by single quotes ``'``"
 msgstr ""
+"``SIP_PYDEFAULTVALUE(value)`` "
+"は、Pythonのメソッドのための別のデフォルト値を定義するために使用することができます。デフォルト値がコンマ ``,`` "
+"を含む場合は、値はシングルクォート ``'`` で囲まなければなりません。"
 
 #: ../../docs/developers_guide/codingstandards.rst:446
 msgid ""
@@ -627,18 +628,20 @@ msgid ""
 "argument of the python method. If the type contains a comma ``,``, the type "
 "should be surrounded by single quotes ``'``"
 msgstr ""
+"``SIP_PYTYPE(type)``  は、Pythonのメソッドの引数のための別の型を定義するために使用することができます。型がコンマ ``,``"
+" を含む場合は、型はシングルクォート ``'`` で囲まなければなりません。"
 
 #: ../../docs/developers_guide/codingstandards.rst:450
 msgid "A demo file can be found in :file:`tests/scripts/sipifyheader.h`."
-msgstr ""
+msgstr "デモファイルが :file:`tests/scripts/sipifyheader.h` にありますので利用可能です。"
 
 #: ../../docs/developers_guide/codingstandards.rst:453
 msgid "Generating the SIP file"
-msgstr ""
+msgstr "SIP ファイルを生成する"
 
 #: ../../docs/developers_guide/codingstandards.rst:455
 msgid "The SIP file can be generated using a dedicated script. For instance:"
-msgstr ""
+msgstr "SIP ファイルはそのための専用スクリプトを使って生成することができます。例えば次のようにします。"
 
 #: ../../docs/developers_guide/codingstandards.rst:462
 msgid ""
@@ -654,10 +657,11 @@ msgid ""
 "Older files for which the automatic creation is not enabled yet are listed "
 "in :file:`python/auto_sip.blacklist`."
 msgstr ""
+"自動生成がまだ有効にされていない古いファイルは :file:`python/auto_sip.blacklist` にリストアップされています。"
 
 #: ../../docs/developers_guide/codingstandards.rst:472
 msgid "Improving sipify script"
-msgstr ""
+msgstr "sipify スクリプトを改善する"
 
 #: ../../docs/developers_guide/codingstandards.rst:474
 msgid ""
@@ -666,6 +670,9 @@ msgid ""
 "expected header :file:`tests/scripts/sipifyheader.expected.si`. This will "
 "also be automatically tested on Travis as a unit test of the script itself."
 msgstr ""
+"sipify スクリプトに何か改善が必要な場合は、デモファイル :file:`tests/scripts/sipifyheader.h` "
+"に必要な追加を行い、 期待されるヘッダ :file:`tests/scripts/sipifyheader.expected.si` "
+"を作成してください。これはスクリプト自身のユニットテストとしても、Travisで自動的にテストされます。"
 
 #: ../../docs/developers_guide/codingstandards.rst:481
 msgid "Coding Style"
@@ -675,7 +682,7 @@ msgstr "コーディングスタイル"
 msgid ""
 "Here are described some programming hints and tips that will hopefully "
 "reduce errors, development time and maintenance."
-msgstr "ここに、うまくいけばエラー、開発時間およびメンテナンスを減らすいくつかのプログラミングのヒントが記載されています。"
+msgstr "ここでは、うまくいけばエラーや開発時間、メンテナンスを減らすことが期待できる、プログラミングのヒントやコツを説明します。"
 
 #: ../../docs/developers_guide/codingstandards.rst:489
 msgid "Where-ever Possible Generalize Code"
@@ -747,7 +754,7 @@ msgstr "またはこちら："
 
 #: ../../docs/developers_guide/codingstandards.rst:533
 msgid ":file:`scripts/prepare-commit.sh` will take care of this."
-msgstr ""
+msgstr ":file:`scripts/prepare-commit.sh` はこれを行います。"
 
 #: ../../docs/developers_guide/codingstandards.rst:537
 msgid "Put commands on separate lines"
@@ -793,7 +800,8 @@ msgid ""
 "`Effective Modern C++ <http://shop.oreilly.com/product/0636920033707.do>`_, "
 "Scott Meyers"
 msgstr ""
-"`効果的な現代的C++ <http://shop.oreilly.com/product/0636920033707.do>`_ 、スコット・メイヤーズ"
+"`Effective Modern C++ <http://shop.oreilly.com/product/0636920033707.do>`_, "
+"Scott Meyers （ `日本語版 <https://www.oreilly.co.jp/books/9784873117362/>`_ ）"
 
 #: ../../docs/developers_guide/codingstandards.rst:587
 msgid ""
@@ -818,8 +826,8 @@ msgid ""
 "You should also really read this article from Qt Quarterly on `designing Qt "
 "style (APIs) <https://doc.qt.io/archives/qq/qq13-apis.html>`_"
 msgstr ""
-"Qt Quarterlyからの `Qtスタイル（API）の設計 "
-"<https://doc.qt.io/archives/qq/qq13-apis.html>`_ についてこの記事もお読みください。"
+"Qt Quarterly の記事 `designing Qt style (APIs) "
+"<https://doc.qt.io/archives/qq/qq13-apis.html>`_ も絶対に読むべきです。"
 
 #: ../../docs/developers_guide/codingstandards.rst:596
 msgid "Credits for contributions"
@@ -842,6 +850,8 @@ msgid ""
 "writing an article about the new feature on a blog, and add it to the QGIS "
 "planet https://plugins.qgis.org/planet/"
 msgstr ""
+"新機能についてのブログ記事を執筆し、それを QGIS planet https://plugins.qgis.org/planet/ "
+"に追加してください。"
 
 #: ../../docs/developers_guide/codingstandards.rst:609
 msgid "adding their name to:"

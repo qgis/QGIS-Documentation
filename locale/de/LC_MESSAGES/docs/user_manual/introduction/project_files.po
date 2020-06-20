@@ -1,95 +1,73 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGIS Documentation
-# Project package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
+# Richard Duivenvoorde <richard@duif.net>, 2020
 # Klaus Affeldt <ka@ansperger.de>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation Project 3.4\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-06 11:48+0100\n"
-"PO-Revision-Date: 2019-08-11 13:03+0000\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
+"PO-Revision-Date: 2020-03-16 19:26+0000\n"
 "Last-Translator: Klaus Affeldt <ka@ansperger.de>, 2020\n"
 "Language-Team: German (https://www.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:13
+#: ../../docs/user_manual/introduction/project_files.rst:9
 msgid "Working with Project Files"
 msgstr "Arbeiten mit Projektdateien"
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:25
+#: ../../docs/user_manual/introduction/project_files.rst:21
 msgid "Introducing QGIS projects"
 msgstr "Vorstellung von QGIS-Projekten"
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:27
+#: ../../docs/user_manual/introduction/project_files.rst:22
 msgid ""
 "The state of your QGIS session is called a project. QGIS works on one "
-"project at a time. Any settings can be project-specific or an application-"
-"wide default for new projects (see section :ref:`gui_options`). QGIS can "
-"save the state of your workspace into a project file using the menu options "
-":menuselection:`Project -->` |fileSave| :menuselection:`Save` or "
-":menuselection:`Project -->` |fileSaveAs| :menuselection:`Save As...`."
+"project at a time. A settings can be project-specific or an application-wide"
+" default for new projects (see section :ref:`gui_options`). QGIS can save "
+"the state of your workspace into a :ref:`QGIS project file "
+"<qgisprojectfile>` using the menu options :menuselection:`Project -->` "
+"|fileSave| :menuselection:`Save` or :menuselection:`Project -->` "
+"|fileSaveAs| :menuselection:`Save As...`."
 msgstr ""
-"Der Status Ihrer QGIS-Sitzung wird als Projekt bezeichnet. QGIS hat jeweils "
-"nur ein Projekt geöffnet. Alle Einstellungen können projektspezifisch oder "
-"anwendungsweit für neue Projekte voreingestellt sein (siehe Abschnitt "
-":ref:`gui_options`). QGIS kann den Zustand Ihres Arbeitsbereichs über die "
-"Menüpunkte :menuselection:`Projekt -->` ` |fileSave| "
-":menuselection:`Speichern` oder :menuselection:`Projekt -->` |fileSaveAs| "
-":menuselection:`Speichern als...` in eine Projektdatei speichern."
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:36
+#: ../../docs/user_manual/introduction/project_files.rst:34
 msgid ""
-"If the project you loaded has been modified in the meantime, by default, "
-"QGIS will ask you if you want to overwrite the changes. This behavior is "
-"controlled by the |checkbox| :guilabel:`Prompt to save project and data "
-"source changes when required` setting under :menuselection:`Settings --> "
-"Options --> General` menu."
+"If the project has been modified QGIS will, by default, ask you if you would"
+" like to save the changes. This behavior is controlled by the |checkbox| "
+":guilabel:`Prompt to save project and data source changes when required` "
+"setting under :menuselection:`Settings --> Options --> General`."
 msgstr ""
-"Wenn das von Ihnen geladene Projekt in der Zwischenzeit geändert wurde, "
-"fragt Sie QGIS standardmäßig , ob Sie die Änderungen überschreiben möchten. "
-"Dieses Verhalten wird durch die Einstellung |checkbox| :guilabel:`Prompt to "
-"save project and data source changes when required` unter "
-":menuselection:`Einstellungen --> Optionen --> Allgemein` gesteuert."
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:41
+#: ../../docs/user_manual/introduction/project_files.rst:40
 msgid ""
-"You can load existing projects into QGIS using :menuselection:`Project -->` "
-"|fileOpen| :menuselection:`Open...`, :menuselection:`Project --> New from "
-"template` or :menuselection:`Project --> Open Recent -->`."
+"You can load existing projects into QGIS from the Browser panel or by "
+"through :menuselection:`Project -->` |fileOpen| :menuselection:`Open...`, "
+":menuselection:`Project --> New from template` or :menuselection:`Project "
+"--> Open Recent -->`."
 msgstr ""
-"Sie können vorhandene QGIS Projekte anhand von :menuselection:`Projekt -->` "
-"|fileOpen| :menuselection:`Öffnen...`, :menuselection:`Projekt --> Neu aus "
-"Vorlage` oder :menuselection:`Projekt --> Zuletzt verwendetes -->` laden."
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:46
+#: ../../docs/user_manual/introduction/project_files.rst:46
 msgid ""
-"At startup, a list of recently opened projects is displayed, including "
-"screenshots, names and file paths (for up to ten projects). This is a handy "
-"quick way to access recently used projects. Double-click an entry in this "
-"list to open the corresponding project. If you instead want to create a new "
-"project, just add any layer and the list disappears, giving way to the map "
-"canvas."
+"At startup, a list of :guilabel:`Project Templates` and :guilabel:`Recent "
+"Projects` are displayed, including screenshots, names and file paths (for up"
+" to ten projects). The :guilabel:`Recent Projects` list is handy to access "
+"recently used projects. Double-click an entry to open the project or project"
+" template. You can also add a layer to create a new project automatically. "
+"The lists will then disappear, giving way to the map canvas."
 msgstr ""
-"Beim Start wird eine Liste der zuletzt geöffneten Projekte angezeigt, "
-"einschließlich Screenshots, Namen und Dateipfade (für bis zu zehn Projekte)."
-" Dies ist ein praktischer und schneller Weg, um auf zuletzt verwendete "
-"Projekte zuzugreifen. Doppelklicken Sie auf einen Eintrag in dieser Liste, "
-"um das entsprechende Projekt zu öffnen. Wenn Sie stattdessen ein neues "
-"Projekt erstellen möchten, fügen Sie einfach einen beliebigen Layer hinzu "
-"und die Liste verschwindet und weicht der Kartenansicht."
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:52
+#: ../../docs/user_manual/introduction/project_files.rst:55
 msgid ""
 "If you want to clear your session and start fresh, go to "
 ":menuselection:`Project -->` |fileNew| :menuselection:`New`. This will "
@@ -97,143 +75,121 @@ msgid ""
 "was opened or last saved."
 msgstr ""
 "Wenn Sie Ihre Sitzung löschen und neu beginnen möchten, gehen Sie zu "
-":menuselection: Projekt -->` |fileNew| | :menuselection: Neu\". Dabei werden"
-" Sie aufgefordert, das bestehende Projekt zu speichern, wenn seit dem Öffnen"
-" oder letzten Speichern Änderungen vorgenommen wurden."
+":menuselection: `Projekt -->` |fileNew| :menuselection: `Neu`. Dabei werden "
+"Sie aufgefordert, das bestehende Projekt zu speichern, wenn seit dem Öffnen "
+"oder letzten Speichern Änderungen vorgenommen wurden."
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:62
+#: ../../docs/user_manual/introduction/project_files.rst:65
 msgid "Starting a new project in QGIS"
 msgstr "Start eines neuen Projekts in QGIS"
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:64
+#: ../../docs/user_manual/introduction/project_files.rst:67
 msgid "The information saved in a project file includes:"
 msgstr "In einer Projektdatei sind folgenden Informationen gespeichert:"
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:66
+#: ../../docs/user_manual/introduction/project_files.rst:69
 msgid "Layers added"
 msgstr "Hinzugefügte Layer"
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:67
+#: ../../docs/user_manual/introduction/project_files.rst:70
 msgid "Which layers can be queried"
 msgstr "Welche Layer können abgefragt werden"
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:68
+#: ../../docs/user_manual/introduction/project_files.rst:71
 msgid "Layer properties, including symbolization and styles"
 msgstr "Layereigenschaften, inklusive Symbologie und Styles"
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:69
+#: ../../docs/user_manual/introduction/project_files.rst:72
 msgid "Projection for the map view"
 msgstr "Projektion für das Kartenfenster"
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:70
+#: ../../docs/user_manual/introduction/project_files.rst:73
 msgid "Last viewed extent"
 msgstr "Zuletzt gewählte Ausdehnung im Kartenfenster"
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:71
+#: ../../docs/user_manual/introduction/project_files.rst:74
 msgid "Print layouts"
 msgstr "Drucklayouts"
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:72
+#: ../../docs/user_manual/introduction/project_files.rst:75
 msgid "Print layout elements with settings"
 msgstr "Drucklayout Elemente mit Einstellungen"
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:73
+#: ../../docs/user_manual/introduction/project_files.rst:76
 msgid "Print layout atlas settings"
 msgstr "Drucklayouts Atlas Einstellungen"
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:74
+#: ../../docs/user_manual/introduction/project_files.rst:77
 msgid "Digitizing settings"
 msgstr "Digitalisierungseinstellungen"
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:75
+#: ../../docs/user_manual/introduction/project_files.rst:78
 msgid "Table Relations"
 msgstr "Tabellen Beziehungen"
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:76
+#: ../../docs/user_manual/introduction/project_files.rst:79
 msgid "Project Macros"
 msgstr "Projekt Makros"
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:77
+#: ../../docs/user_manual/introduction/project_files.rst:80
 msgid "Project default styles"
 msgstr "Projekt Vorgabestile"
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:78
+#: ../../docs/user_manual/introduction/project_files.rst:81
 msgid "Plugins settings"
 msgstr "Plugin-Einstellungen"
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:79
+#: ../../docs/user_manual/introduction/project_files.rst:82
 msgid ""
 "QGIS Server settings from the OWS settings tab in the Project properties"
 msgstr ""
 "QGIS-Servereinstellungen aus der Registerkarte QGIS-Server in den "
 "Projekteigenschaften."
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:80
+#: ../../docs/user_manual/introduction/project_files.rst:83
 msgid "Queries stored in the DB Manager"
 msgstr "Im DB-Manager gespeicherte Abfragen"
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:82
+#: ../../docs/user_manual/introduction/project_files.rst:85
 msgid ""
-"The project file is saved in XML format. This means that it is possible to "
-"edit the file outside of QGIS if you know what you are doing. The file "
-"format has been updated several times compared with earlier QGIS versions. "
+"The project file is saved in XML format (see :ref:`qgisprojectfile`). This "
+"means that it is possible to edit the file outside of QGIS if you know what "
+"you are doing. The project file format has been updated several times. "
 "Project files from older QGIS versions may not work properly any more."
 msgstr ""
-"Die Projektdatei wird im XML-Format gespeichert. Das bedeutet, dass es "
-"möglich ist, die Datei außerhalb von QGIS zu bearbeiten, wenn Sie wissen, "
-"was Sie tun. Das Dateiformat wurde im Vergleich zu früheren QGIS-Versionen "
-"mehrfach aktualisiert. Projektdateien aus älteren QGIS-Versionen "
-"funktionieren möglicherweise nicht mehr richtig."
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:89
+#: ../../docs/user_manual/introduction/project_files.rst:93
 msgid ""
 "By default, QGIS will warn you of version differences. This behavior is "
-"controlled in :menuselection:`Settings --> Options`. On the "
-":guilabel:`General` tab, you should tick |checkbox| :guilabel:`Warn when "
-"opening a project file saved with an older version of QGIS`."
+"controlled in the :guilabel:`General` tab of :menuselection:`Settings --> "
+"Options` (|checkbox| :guilabel:`Warn when opening a project file saved with "
+"an older version of QGIS`)."
 msgstr ""
-"Standardmäßig warnt Sie QGIS vor Versionsunterschieden. Dieses Verhalten "
-"wird in :menuselection: `Einstellungen --> Optionen` gesteuert. Auf der "
-"Registerkarte :guilabel:`Allgemein` sollten Sie das Kontrollkästchen "
-"|checkbox| :guilabel:`Warnung beim Öffnen einer Projektdatei, die mit einer "
-"älteren Version von QGIS gespeichert wurde`, aktivieren."
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:94
+#: ../../docs/user_manual/introduction/project_files.rst:99
 msgid ""
-"Whenever you save a ``.qgs`` project in QGIS, a backup of the project file "
-"is created with the extension ``.qgs~`` and stored in the same directory as "
-"the project file."
+"Whenever you save a ``.qgs`` project file in QGIS, a backup of the file is "
+"created in the same directory as the project file, with the extension "
+"``.qgs~``."
 msgstr ""
-"Immer wenn Sie ein ``.qgs`` Projekt in QGIS speichern, wird ein Backup der "
-"Projektdatei mit der Erweiterung ``.qgs~`` erstellt und im gleichen "
-"Verzeichnis wie die Projektdatei gespeichert."
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:97
+#: ../../docs/user_manual/introduction/project_files.rst:103
 msgid ""
 "The extension for QGIS projects is ``.qgs`` but when saving from QGIS, the "
 "default is to save using a compressed format with the ``.qgz`` extension. "
 "The ``.qgs`` file is embedded in the ``.qgz`` file (a zip archive), together"
 " with its associated sqlite database (``.qgd``) for :ref:`auxiliary data "
-"<vector_auxiliary_storage>`. You can get to these files by unzipping."
+"<vector_auxiliary_storage>`. You can get to these files by unzipping the "
+"``.qgz`` file."
 msgstr ""
-"Die Erweiterung für QGIS-Projekte ist ``.qgs``, aber beim Speichern aus QGIS"
-" wird standardmäßig in einem komprimierten Format mit der Erweiterung "
-"``.qgz`` gespeichert. Die Datei ``.qgs``` ist in die Datei ``.qgz``` (ein "
-"Zip-Archiv) eingebettet, zusammen mit der zugehörigen SQLite-Datenbank "
-"(``.qgd``) für :ref:`auxiliary data 1`. Du kannst zu diesen Dateien "
-"gelangen, indem du sie entpackst."
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:105
+#: ../../docs/user_manual/introduction/project_files.rst:113
 msgid ""
-"A zipped project may be particularly useful with the "
-":ref:`vector_auxiliary_storage` mechanism in order to embed the underlying "
-"database."
+"The :ref:`vector_auxiliary_storage` mechanism makes a zipped project "
+"particularly useful, since it embeds auxiliary data."
 msgstr ""
-"Ein gezipptes Projekt kann besonders nützlich sein mit dem Mechanismus "
-":ref:`vector_auxiliary_storage`, um die zugrunde liegende Datenbank "
-"einzubetten."
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:111
+#: ../../docs/user_manual/introduction/project_files.rst:118
 msgid ""
 "Projects can also be saved/loaded to/from a PostgreSQL database using the "
 "following Project menu items:"
@@ -241,41 +197,34 @@ msgstr ""
 "Projekte können auch über die folgenden Menüeinträge des Projekts in eine "
 "PostgreSQL-Datenbank gespeichert bzw. geladen werden:"
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:114
+#: ../../docs/user_manual/introduction/project_files.rst:121
 msgid ":menuselection:`Project --> Open from`"
 msgstr ":menuselection:`Projekt --> Öffnen aus`"
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:115
+#: ../../docs/user_manual/introduction/project_files.rst:122
 msgid ":menuselection:`Project --> Save to`"
 msgstr ":menuselection:`Projekt --> Speichern als`"
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:117
+#: ../../docs/user_manual/introduction/project_files.rst:124
 msgid ""
 "Both menu items have a sub-menu with a list of extra project storage "
-"implementations (currently just PostgreSQL). Clicking the action will open a"
-" dialog to pick a PostgreSQL connection name, schema name and project."
+"implementations (PostgreSQL and GeoPackage). Clicking the action will open a"
+" dialog to pick a GeoPackage connection and project or a PostgreSQL "
+"connection, schema and project."
 msgstr ""
-"Beide Menüpunkte haben ein Untermenü mit einer Liste von zusätzlichen "
-"Projektspeicherimplementierungen (derzeit nur PostgreSQL). Wenn Sie auf die "
-"Aktion klicken, öffnet sich ein Dialog, in dem Sie einen PostgreSQL-"
-"Verbindungsnamen, einen Schemanamen und ein Projekt auswählen können."
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:121
+#: ../../docs/user_manual/introduction/project_files.rst:129
 msgid ""
-"Projects stored in PostgreSQL can be also loaded from the QGIS browser panel"
-" (the entries are located within the schema they are stored in), either by "
-"double-clicking them or by dragging them to the map canvas."
+"Projects stored in Geopackage or PostgreSQL can be also be loaded through "
+"the QGIS browser panel, either by double-clicking them or by dragging them "
+"to the map canvas."
 msgstr ""
-"In PostgreSQL gespeicherte Projekte können auch aus dem QGIS-Browser-Panel "
-"geladen werden (die Einträge befinden sich innerhalb des Schemas, in dem sie"
-" gespeichert sind), entweder durch Doppelklick oder durch Ziehen auf das "
-"Kartenfenster."
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:129
+#: ../../docs/user_manual/introduction/project_files.rst:137
 msgid "Generating output"
 msgstr "Ausgaben erzeugen"
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:134
+#: ../../docs/user_manual/introduction/project_files.rst:142
 msgid ""
 "There are several ways to generate output from your QGIS session. We have "
 "already discussed saving as a project file in :ref:`sec_projects`. Other "
@@ -286,66 +235,35 @@ msgstr ""
 ":ref:`sec_projects` besprochen. Andere Möglichkeiten, Ausgabedateien zu "
 "erzeugen, sind:"
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:138
+#: ../../docs/user_manual/introduction/project_files.rst:147
 msgid ""
 "Creating images: :menuselection:`Project --> Import/Export -->` "
-"|saveMapAsImage| :menuselection:`Export Map to Image...` opens a file dialog"
-" where you select the name, path and type of image (PNG, JPG and many other "
-"formats). This will also create a world file (with extension ``PNGW`` or "
-"``JPGW``) that is saved in the same folder as your image. This world file is"
-" used to georeference the image."
+"|saveMapAsImage| :menuselection:`Export Map to Image...` outputs the map "
+"canvas rendering to an image format (PNG, JPG, TIFF...) at custom scale, "
+"resolution, size, ... Georeferencing the image is possible. See "
+":ref:`exportingmapcanvas` for more details."
 msgstr ""
-"Bilder erzeugen: :menuselection:`Projekt -->` |saveMapAsImage| "
-":menuselection:`Bild speichern als...` öffnet einen Dateidialog indem Sie "
-"den Namen, Pfad und Bildtyp (PNG, JPG und viele andere Formate) auswählen. "
-"Dabei wird auch eine Weltdatei (mit der Erweiterung ``PNGW`` oder ``JPGW```)"
-" erstellt, die im gleichen Ordner wie Ihr Bild gespeichert wird. Diese "
-"Weltdatei wird verwendet, um das Bild zu georeferenzieren."
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:144
+#: ../../docs/user_manual/introduction/project_files.rst:154
+msgid ""
+"Exporting to PDF files: :menuselection:`Project --> Import/Export --> Export"
+" Map to PDF...` outputs the map canvas rendering to PDF at custom scale, "
+"resolution, and with some advanced settings (simplification, georeferencing,"
+" ...). See :ref:`exportingmapcanvas` for more details."
+msgstr ""
+
+#: ../../docs/user_manual/introduction/project_files.rst:160
 msgid ""
 "Exporting to DXF files: :menuselection:`Project --> Import/Export --> Export"
 " Project to DXF...` opens a dialog where you can define the 'Symbology "
 "mode', the 'Symbology scale' and vector layers you want to export to DXF. "
-"Through the 'Symbology mode' symbols from the original QGIS Symbology can be"
-" exported with high fidelity (see section :ref:`create_dxf_files`)."
+"Through the 'Symbology mode', symbols from the original QGIS Symbology can "
+"be exported with high fidelity (see section :ref:`create_dxf_files`)."
 msgstr ""
-"Export in DXF-Dateien: :menuselection:`Projekt --> Import/Export --> Projekt"
-" nach DXF exportieren...` öffnet einen Dialog, in dem Sie den "
-"'Symbolisierungsmodus', den 'Symbolisierungsmaßstab' und die Vektorebenen "
-"definieren können, die Sie nach DXF exportieren möchten. Durch den "
-"'Symbolisierungsmodus' können Symbole aus dem ursprünglichen QGIS Symbologie"
-" mit hoher Genauigkeit exportiert werden (siehe Abschnitt "
-":ref:`create_dxf_files`)."
 
-#: ../../source/docs/user_manual/introduction/project_files.rst:150
+#: ../../docs/user_manual/introduction/project_files.rst:167
 msgid ""
-"Exporting to PDF files: :menuselection:`Project --> Import/Export --> Export"
-" Map to PDF...` opens a dialog where you can define the part "
-"(:guilabel:`Extent`) of the map to be exported, the :guilabel:`Scale`, "
-":guilabel:`Resolution`, :guilabel:`Output width` (pixels) and "
-":guilabel:`Output height` (pixels). You can also choose to :guilabel:`Draw "
-"active decorations` and :guilabel:`Draw annotations`, as well as "
-":guilabel:`Rasterize map`."
+"Designing maps: :menuselection:`Project -->` |newLayout| :menuselection:`New"
+" Print Layout...` opens a dialog where you can layout and print the current "
+"map canvas (see section :ref:`label_printlayout`)."
 msgstr ""
-"Der Export in PDF-Dateien: :menuselection:`Projekt --> Import/Export --> "
-"Karte als PDF exportieren...` öffnet einen Dialog, in dem Sie den Teil "
-"(:guilabel: `Ausdehnung`) der zu exportierenden Karte, den "
-":guilabel:`Maßstab`, :guilabel:`Auflösung`, :guilabel:`Ausgabebreite` "
-"(Pixel) und :guilabel:`Ausgabehöhe` (Pixel) definieren können. Sie können "
-"auch wählen zwischen :guilabel:`Aktive Dekorationen anzeigen` und "
-":guilabel:`Bemerkungen zeichnen`, sowie :guilabel:`Karte rastern`."
-
-#: ../../source/docs/user_manual/introduction/project_files.rst:157
-msgid ""
-"Designing print maps: :menuselection:`Project -->` |newLayout| "
-":menuselection:`New Print Layout...` opens a dialog where you can layout and"
-" print the current map canvas (see section :ref:`label_printlayout`)."
-msgstr ""
-"Gestalten von Druckkarten: :menuselection:`Projekt -->` |newLayout| "
-":menuselection:`Neues Drucklayout...` öffnet einen Dialog, in dem Sie die "
-"aktuelle Kartendarstellung gestalten und drucken können (siehe Abschnitt "
-":ref:`label_printlayout`)."
-
-#~ msgid "|updatedisclaimer|"
-#~ msgstr "|updatedisclaimer|"

@@ -1,20 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGISDoc package.
+# This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
 # Sant-anna <delazj@gmail.com>, 2020
+# a00fce65fdff2427915d78cd7ee0a4f6_c16c729 <a55eac686ada07eb8210deda0a39fa35_814277>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGISDoc 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:24+0000\n"
-"Last-Translator: Sant-anna <delazj@gmail.com>, 2020\n"
+"Last-Translator: a00fce65fdff2427915d78cd7ee0a4f6_c16c729 <a55eac686ada07eb8210deda0a39fa35_814277>, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -125,8 +126,8 @@ msgstr "Basculer vers une branche"
 #: ../../docs/developers_guide/git.rst:80
 msgid "To check out a branch, for example the release 2.6.1 branch do:"
 msgstr ""
-"Pour basculer vers une branche (checkout), par exemple la branche de la "
-"version 2.6.1, faites:"
+"Pour extraire une branche, par exemple la branche de la version 2.6.1, "
+"procédez comme suit:"
 
 #: ../../docs/developers_guide/git.rst:89
 msgid "To check out the master branch:"
@@ -226,6 +227,16 @@ msgid ""
 "finished and stable. This section describes the procedure for branching and "
 "merging in the QGIS project."
 msgstr ""
+"La complexité du code source de QGIS a considérablement augmenté au cours "
+"des dernières années. Par conséquent, il est difficile d'anticiper les "
+"effets secondaires que l'ajout d'une fonctionnalité aura. Dans le passé, le "
+"projet QGIS avait de très longs cycles de publication, car il fallait "
+"beaucoup de travail pour rétablir la stabilité du système logiciel après "
+"l'ajout de nouvelles fonctionnalités. Pour surmonter ces problèmes, QGIS est"
+" passé à un modèle de développement où les nouvelles fonctionnalités sont "
+"d'abord codées dans les branches GIT et fusionnées pour devenir master (la "
+"branche principale) lorsqu'elles sont terminées et stables. Cette section "
+"décrit la procédure de branchement et de fusion dans le projet QGIS."
 
 #: ../../docs/developers_guide/git.rst:160
 msgid "Procedure"
@@ -335,6 +346,11 @@ msgid ""
 "pull request documentation <https://help.github.com/articles/about-pull-"
 "requests>`_."
 msgstr ""
+"En général, il est plus facile pour les développeurs de soumettre des "
+"demandes d'extraction GitHub. Nous ne décrivons pas les demandes "
+"d'extraction ici, mais nous vous référons plutôt à la documentation de la "
+"demande d'extraction GitHub <https://help.github.com/articles/about-pull-"
+"requests> `_."
 
 #: ../../docs/developers_guide/git.rst:225
 msgid ""
@@ -342,6 +358,9 @@ msgid ""
 "branch regularly so that your PR is always mergeable to the upstream master "
 "branch."
 msgstr ""
+"Si vous procédez via une pull request, nous vous remercions de bien vouloir "
+"vous assurer régulièrement que votre branche est à jour avec la branche "
+"master du projet, afin d'en faciliter l'intégration à tout moment."
 
 #: ../../docs/developers_guide/git.rst:229
 msgid ""
@@ -350,10 +369,10 @@ msgid ""
 "<https://changelog.com/posts/git-pulls-command-line-tool-for-github-pull-"
 "requests>`_"
 msgstr ""
-"Si vous êtes un développeur et que vous voulez évaluer la file de pull "
-"requests, il existe un outil simple `qui vous permettra de le faire en ligne"
-" de commande <https://changelog.com/posts/git-pulls-command-line-tool-for-"
-"github-pull-requests/>`_."
+"Si vous êtes un développeur et que vous souhaitez évaluer le fichier de "
+"demandes de traction, il existe un 'outil simple qui vous permet de faire en"
+" ligne de commande <https://changelog.com/posts/git-pulls-command-line-tool-"
+"for-github-pull-requests>`_"
 
 #: ../../docs/developers_guide/git.rst:233
 msgid ""
@@ -422,9 +441,9 @@ msgid ""
 "branch, rather rebase as described in the next point to keep your history "
 "clean."
 msgstr ""
-"Si vous développez une branche de nouvelle fonctionnalité, ne fusionnez rien"
-" dans cette branche. A la place, effectuez un rebasement (rebase) comme "
-"décrit dans le prochain point, de manière à conserver un historique propre."
+"Si vous codez une branche de fonctionnalité, ne \"fusionnez\" rien dans "
+"cette branche, plutôt rebasez comme décrit au point suivant pour garder "
+"votre historique propre."
 
 #: ../../docs/developers_guide/git.rst:257
 msgid ""

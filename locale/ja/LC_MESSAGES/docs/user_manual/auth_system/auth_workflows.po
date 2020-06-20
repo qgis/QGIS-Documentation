@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGISDoc package.
+# This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGISDoc 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:26+0000\n"
 "Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
@@ -162,17 +162,13 @@ msgstr "証明書情報ダイアログ"
 
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:131
 msgid ""
-"You can edit the :guilabel:`trust policy` |selectString| for any selected "
+"You can edit the :guilabel:`Trust policy` |selectString| for any selected "
 "certificate within the chain. Any change in trust policy to a selected "
 "certificate will not be saved to the database unless the |fileSave| "
 ":sup:`Save certificate trust policy change to database` button is clicked "
 "*per* selected certification. Closing the dialog will **not** apply the "
 "policy changes."
 msgstr ""
-"編集できます |selectString| :guilabel:`信頼ポリシー` "
-"をチェーン内のいずれかの選択した証明書について。選択した証明書の信頼ポリシーの変更がない限り、データベースに保存されることはありません "
-"|FileSave| :sup:`データベース` ボタンに保存した証明書の信頼ポリシーの変更は、選択した認証 *ごと* "
-"クリックします。ダイアログを閉じると、ポリシーの変更を適用 **しません** 。"
 
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:143
 msgid "Saving the trust policy changes"
@@ -428,23 +424,18 @@ msgstr ""
 msgid "SSL server exceptions"
 msgstr "SSLサーバーの例外"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:326
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:328
-msgid "\\"
-msgstr "\\"
-
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:335
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:331
 msgid "SSL server exception"
 msgstr "SSLサーバーの例外"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:337
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:333
 msgid ""
 "You can manage SSL server configurations and exceptions from the **Servers**"
 " tab in the **Authentication** section of the QGIS **Options** dialog."
 msgstr ""
 "QGISの **オプション** ダイアログの **認証** セクション中の **サーバー** タブから、SSLサーバーの設定および例外を管理できます。"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:340
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:336
 msgid ""
 "Sometimes, when connecting to an SSL server, there are errors with the SSL "
 "\"handshake\" or the server's certificate. You can ignore those errors or "
@@ -454,7 +445,7 @@ msgid ""
 msgstr ""
 "SSLサーバーへの接続時に時々、SSL「握手」や、サーバーの証明書でエラーがあります。これらのエラーを無視するか、例外としてSSLサーバー構成を作成できます。これは、Webブラウザを使用してSSLエラーをどのように上書きできるかに似ていますが、より細かく制御しています。"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:346
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:342
 msgid ""
 "You should not create an SSL server configuration unless you have complete "
 "knowledge of the entire SSL setup between the server and client. Instead, "
@@ -462,7 +453,7 @@ msgid ""
 msgstr ""
 "サーバーとクライアントの間で全体のSSLの設定の完全な知識を持っていない限り、SSLのサーバー構成を作成しないでください。代わりに、サーバー管理者に問題を報告してください。"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:351
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:347
 msgid ""
 "Some PKI setups use a completely different CA trust chain to validate client"
 " identities than the chain used to validate the SSL server certificate. In "
@@ -473,7 +464,7 @@ msgid ""
 msgstr ""
 "一部のPKIのセットアップは、SSLサーバー証明書を検証するために使用するチェーンよりも、クライアントのアイデンティティを検証するために完全に異なるCAの信頼チェーンを使用します。このような状況では、接続するサーバー用に作成された任意の構成は、必ずしもあなたのクライアントのアイデンティティの検証の問題を解決しないだろう、自分のクライアントIDの発行者またはサーバー管理者だけが問題を解決できます。"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:357
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:353
 msgid ""
 "You can pre-configure an SSL server configuration by clicking the |signPlus|"
 " button. Alternatively, you can add a configuration when an SSL error occurs"
@@ -484,40 +475,37 @@ msgstr ""
 "|signPlus| ボタンをクリックすることにより、SSLサーバーの設定を事前に設定できます。SSLエラーが接続時に発生しますが **SSLエラー**"
 " ダイアログが表示されたときに代わりに、設定を追加できます（ここではエラーは一時的に無視されるか、またはデータベースに保存されて無視できます）："
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:367
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:363
 msgid "Manually adding configuration"
 msgstr "手動で設定を追加"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:374
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:370
 msgid "Adding configuration during SSL error"
 msgstr "SSLエラー時の設定を追加"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:376
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:372
 msgid ""
 "Once an SSL configuration is saved to the database, it can be edited or "
 "deleted."
 msgstr "SSLの設定がデータベースに保存されれば、編集したり削除できます。"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:383
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:379
 msgid "Existing SSL configuration"
 msgstr "既存のSSL設定"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:390
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:386
 msgid "Editing an existing SSL configuration"
 msgstr "既存のSSL設定を編集します"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:392
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:388
 msgid ""
 "If you want to pre-configure an SSL configuration and the import dialog is "
 "not working for your server's connection, you can manually trigger a "
 "connection via the **Python Console** by running the following code (replace"
-" ``https://bugreports.qt-project.org`` with the URL of your server)::"
+" ``https://bugreports.qt-project.org`` with the URL of your server):"
 msgstr ""
-"サーバーの接続のために働いていないSSLの設定とインポートダイアログを事前に設定したい場合は、手動で、次のコードを実行して、 "
-"**Pythonコンソール** を介した接続をトリガすることができます：（ ``https://bugreports.qt-project.org`` "
-"をサーバーのURLと置き換えてください）::"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:401
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:402
 msgid ""
 "This will open an SSL error dialog if any errors occur, where you can choose"
 " to save the configuration to the database."

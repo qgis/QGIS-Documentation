@@ -21,6 +21,8 @@ configured its installation.
 
 Let's get started right away!
 
+.. _tm_pepare_a_map:
+
 |basic| |FA| Prepare a map
 -------------------------------------------------------------------------------
 

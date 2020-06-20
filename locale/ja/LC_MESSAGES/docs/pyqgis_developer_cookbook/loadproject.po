@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGISDoc package.
+# This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGISDoc 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:23+0000\n"
 "Last-Translator: mnamihdk, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
@@ -22,11 +22,17 @@ msgstr ""
 "Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:5
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:6
+msgid ""
+"The code snippets on this page need the following imports if you're outside "
+"the pyqgis console:"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:34
 msgid "Loading Projects"
 msgstr "プロジェクトをロードする"
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:7
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:36
 msgid ""
 "Sometimes you need to load an existing project from a plugin or (more often)"
 " when developing a standalone QGIS Python application (see: "
@@ -35,7 +41,7 @@ msgstr ""
 "時々プラグインから、または（しばしば）スタンドアローンのQGIS "
 "Pythonアプリケーションを開発する時に既存のプロジェクトをロードする必要があります（参照： :ref:`pythonapplications` ）。"
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:14
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:43
 msgid ""
 "To load a project into the current QGIS application you need to create an "
 "instance of the :class:`QgsProject <qgis.core.QgsProject>` class. This is a "
@@ -49,7 +55,7 @@ msgstr ""
 "<qgis.core.QgsProject.instance>` メソッドを使わなければなりません。  :meth:`read() "
 "<qgis.core.QgsProject.read>` メソッドを呼び出して、読み込むプロジェクトのパスを渡すことができます。"
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:35
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:74
 msgid ""
 "If you need to make modifications to the project (for example to add or "
 "remove some layers) and save your changes, call the :meth:`write() "
@@ -61,7 +67,7 @@ msgstr ""
 "<qgis.core.QgsProject.write>` メソッドを呼び出します。 :meth:`write() "
 "<qgis.core.QgsProject.write>` メソッドにパスを指定すれば、プロジェクトを新しい場所に保存することもできます。"
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:47
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:86
 msgid ""
 "Both :meth:`read() <qgis.core.QgsProject.read>` and :meth:`write() "
 "<qgis.core.QgsProject.write>` functions return a boolean value that you can "
@@ -70,7 +76,7 @@ msgstr ""
 ":meth:`read() <qgis.core.QgsProject.read>` と :meth:`write() "
 "<qgis.core.QgsProject.write>` の両方の関数は操作が成功したかどうかをチェックするために使用できるブール値を返します。"
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:53
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:92
 msgid ""
 "If you are writing a QGIS standalone application, in order to synchronise "
 "the loaded project with the canvas you need to instantiate a "

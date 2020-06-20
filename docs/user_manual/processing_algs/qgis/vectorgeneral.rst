@@ -14,17 +14,17 @@ Assign projection
 -----------------
 Assigns a new projection to a vector layer.
 
-It creates a new layer with the exact same features and geometries as the input
-one, but assigned to a new CRS. The geometries are **not** reprojected, they
-are just assigned to a different CRS.
+It creates a new layer with the exact same features and geometries as
+the input one, but assigned to a new CRS. The geometries are **not**
+reprojected, they are just assigned to a different CRS.
 
-This algorithm can be used to repair layers which have been assigned an incorrect
-projection.
+This algorithm can be used to repair layers which have been assigned
+an incorrect projection.
 
 Attributes are not modified by this algorithm.
 
-.. seealso:: :ref:`qgisdefinecurrentprojection`, :ref:`qgisfindprojection`,
- :ref:`qgisreprojectlayer`
+.. seealso:: :ref:`qgisdefinecurrentprojection`,
+   :ref:`qgisfindprojection`, :ref:`qgisreprojectlayer`
 
 Parameters
 ..........
@@ -81,6 +81,12 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - Vector layer with assigned projection
+
+**Algorithm ID**: ``qgis:assignprojection``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisbuildvirtualvector:
@@ -184,11 +190,13 @@ Parameters
    * - **Name field**
      - ``NAME_EXPRESSION``
      - [expression]
-     - Field or expression that will give names to the generated bookmarks
+     - Field or expression that will give names to the generated
+       bookmarks
    * - **Group field**
      - ``GROUP_EXPRESSION``
      - [expression]
-     - Field or expression that will provide groups for the generated bookmarks
+     - Field or expression that will provide groups for the generated
+       bookmarks
 
 Outputs
 ..........
@@ -207,16 +215,21 @@ Outputs
      - [number]
      - 
 
+**Algorithm ID**: ``qgis:layertobookmarks``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisbookmarkstolayer:
 
 Convert spatial bookmarks to layer
 ----------------------------------------
-Creates a new layer containing polygon
-features for stored spatial bookmarks.
-The export can be filtered to only bookmarks belonging
-to the current project, to all user bookmarks, or a
-combination of both.
+Creates a new layer containing polygon features for stored spatial
+bookmarks.
+The export can be filtered to only bookmarks belonging to the current
+project, to all user bookmarks, or a combination of both.
 
 Parameters
 ..........
@@ -277,14 +290,21 @@ Outputs
      - [vector: polygon]
      - The output (bookmarks) vector layer
 
+**Algorithm ID**: ``qgis:bookmarkstolayer``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgiscreateattributeindex:
 
 Create attribute index
 ----------------------
-Creates an index against a field of the attribute table to speed up queries.
-The support for index creation depends on both the layer's data provider and the
-field type.
+Creates an index against a field of the attribute table to speed up
+queries.
+The support for index creation depends on both the layer's data
+provider and the field type.
 
 No outputs are created: the index is stored on the layer itself.
 
@@ -303,7 +323,8 @@ Parameters
    * - **Input Layer**
      - ``INPUT``
      - [vector: any]
-     - Select the vector layer you want to create an attribute index for
+     - Select the vector layer you want to create an attribute index
+       for
    * - **Attribute to index**
      - ``FIELD``
      - [tablefield: any]
@@ -324,20 +345,28 @@ Outputs
    * - **Indexed layer**
      - ``OUTPUT``
      - [same as input]
-     - A copy of the input vector layer with an index for the specified field
+     - A copy of the input vector layer with an index for the
+       specified field
+
+**Algorithm ID**: ``qgis:createattributeindex``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgiscreatespatialindex:
 
 Create spatial index
 --------------------
-Creates an index to speed up access to the features in a layer based on their
-spatial location. Support for spatial index creation is dependent on the layer's
-data provider.
+Creates an index to speed up access to the features in a layer based
+on their spatial location.
+Support for spatial index creation is dependent on the layer's data
+provider.
 
 No new output layers are created.
 
-``Default menu``: :menuselection:`Vector --> Data Management Tools`
+**Default menu**: :menuselection:`Vector --> Data Management Tools`
 
 Parameters
 ..........
@@ -373,22 +402,29 @@ Outputs
      - [same as input]
      - A copy of the input vector layer with a spatial index
 
+**Algorithm ID**: ``qgis:createspatialindex``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisdefinecurrentprojection:
 
 Define Shapefile projection
 ---------------------------
-Sets the CRS (projection) of an existing Shapefile format dataset to the provided CRS.
-It is very useful when a Shapefile format dataset is missing the ``prj``
-file and you know the correct projection.
+Sets the CRS (projection) of an existing Shapefile format dataset to
+the provided CRS.
+It is very useful when a Shapefile format dataset is missing the
+``prj`` file and you know the correct projection.
 
-Contrary to the :ref:`qgisassignprojection` algorithm, it modifies the current
-layer and will not output a new layer.
+Contrary to the :ref:`qgisassignprojection` algorithm, it modifies the
+current layer and will not output a new layer.
 
 .. note:: For Shapefile datasets, the ``.prj`` and ``.qpj`` files will
    be overwritten - or created if missing - to match the provided CRS.
 
-``Default menu``: :menuselection:`Vector --> Data Management Tools`
+**Default menu**: :menuselection:`Vector --> Data Management Tools`
 
 .. seealso:: :ref:`qgisassignprojection`, :ref:`qgisfindprojection`,
  :ref:`qgisreprojectlayer`
@@ -431,6 +467,12 @@ Outputs
      - [same as input]
      - The input vector layer with the defined projection
 
+**Algorithm ID**: ``qgis:definecurrentprojection``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisdeleteduplicategeometries:
 
@@ -438,11 +480,12 @@ Delete duplicate geometries
 ---------------------------
 Finds and removes duplicated geometries.
 
-Attributes are not checked, so in case two features have identical geometries
-but different attributes, only one of them will be added to the result layer.
+Attributes are not checked, so in case two features have identical
+geometries but different attributes, only one of them will be added to
+the result layer.
 
-.. seealso:: :ref:`qgisdropgeometries`, :ref:`qgisremovenullgeometries`,
- :ref:`qgisdeleteduplicatesbyattribute`
+.. seealso:: :ref:`qgisremovenullgeometries`,
+   :ref:`qgisdeleteduplicatesbyattribute`
 
 Parameters
 ..........
@@ -498,6 +541,12 @@ Outputs
      - ``RETAINED_COUNT``
      - [number]
      - Count of unique records
+
+**Algorithm ID**: ``qgis:deleteduplicategeometries``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisdeleteduplicatesbyattribute:
@@ -588,7 +637,8 @@ Outputs
      
        Default: ``[Skip output]``
      - Vector layer containing the removed features.
-       Will not be produced if not specified (left as ``[Skip output]``).
+       Will not be produced if not specified (left as
+       ``[Skip output]``).
    * - **Count of discarded duplicate records**
      - ``DUPLICATE_COUNT``
      - [number]
@@ -602,76 +652,24 @@ Outputs
      - [number]
      - Count of unique records
 
+**Algorithm ID**: ``qgis:deleteduplicatesbyattribute``
 
-.. _qgisdropgeometries:
-
-Drop geometries
----------------
-Creates a simple *geometryless* copy of the input layer attribute table. It keeps
-the attribute table of the source layer.
-
-If the file is saved in a local folder, you can choose between many file formats.
-
-|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
-
-.. seealso:: :ref:`qgisdeleteduplicategeometries`, :ref:`qgisremovenullgeometries`
-
-Parameters
-..........
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-   :stub-columns: 0
-
-   * - Label
-     - Name
-     - Type
-     - Description
-   * - **Input layer**
-     - ``INPUT``
-     - [vector: any]
-     - The input vector layer
-   * - **Dropped geometries**
-     - ``OUTPUT``
-     - [table]
-     - Specify the output geometryless layer. One of:
-
-       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
-       * Save to File...
-       * Save to Geopackage...
-       * Save to PostGIS Table...
-
-       The file encoding can also be changed here.
-
-Outputs
-..........
-
-.. list-table::
-   :header-rows: 1
-   :widths: 20 20 20 40
-   :stub-columns: 0
-
-   * - Label
-     - Name
-     - Type
-     - Description
-   * - **Dropped geometries**
-     - ``OUTPUT``
-     - [table]
-     - The output geometryless layer.
-       A copy of the original attribute table.
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgisexecutesql:
 
 Execute SQL
 -----------
-Runs a simple or complex query with ``SQL`` syntax on the source layer.
+Runs a simple or complex query with ``SQL`` syntax on the source
+layer.
 
 The result of the query will be added as a new layer.
 
-.. seealso:: :ref:`qgisspatialiteexecutesql`, :ref:`qgispostgisexecutesql`
+.. seealso:: :ref:`qgisspatialiteexecutesql`,
+   :ref:`qgispostgisexecutesql`
 
 Parameters
 ..........
@@ -695,7 +693,8 @@ Parameters
    * - **SQL query**
      - ``INPUT_QUERY``
      - [string]
-     - Type the string of your SQL query, e.g. ``SELECT * FROM input1``.
+     - Type the string of your SQL query, e.g.
+       ``SELECT * FROM input1``.
    * - **Unique identifier field**
 
        Optional
@@ -765,6 +764,12 @@ Outputs
      - [vector: any]
      - Vector layer created by the query
 
+**Algorithm ID**: ``qgis:executesql``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgissaveselectedfeatures:
 
@@ -772,8 +777,8 @@ Extract selected features
 -------------------------
 Saves the selected features as a new layer.
 
-.. note:: If the selected layer has no selected features, the newly created
-   layer will be empty.
+.. note:: If the selected layer has no selected features, the newly
+   created layer will be empty.
 
 Parameters
 ..........
@@ -824,13 +829,19 @@ Outputs
      - Vector layer with only the selected features,
        or no feature if none was selected.
 
+**Algorithm ID**: ``qgis:saveselectedfeatures``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisfindprojection:
 
 Find projection
 ---------------
-Creates a shortlist of candidate coordinate reference systems, for instance
-for a layer with an unknown projection.
+Creates a shortlist of candidate coordinate reference systems, for
+instance for a layer with an unknown projection.
 
 The area that the layer is expected to cover must be specified via the
 target area parameter.
@@ -838,11 +849,11 @@ The coordinate reference system for this target area must be known to
 QGIS.
 
 The algorithm operates by testing the layer's extent in every known
-reference system and then listing any for which the bounds would be near
-the target area if the layer was in this projection.
+reference system and then listing any for which the bounds would be
+near the target area if the layer was in this projection.
 
-.. seealso:: :ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`,
- :ref:`qgisreprojectlayer`
+.. seealso:: :ref:`qgisassignprojection`,
+   :ref:`qgisdefinecurrentprojection`, :ref:`qgisreprojectlayer`
 
 Parameters
 ..........
@@ -905,18 +916,27 @@ Outputs
      - A table with all the
        CRS (EPSG codes) of the matching criteria.
 
+**Algorithm ID**: ``qgis:findprojection``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisjoinattributestable:
 
 Join attributes by field value
 ------------------------------
-Takes an input vector layer and creates a new vector layer that is an extended
-version of the input one, with additional attributes in its attribute table.
+Takes an input vector layer and creates a new vector layer that is an
+extended version of the input one, with additional attributes in its
+attribute table.
 
-The additional attributes and their values are taken from a second vector layer.
+The additional attributes and their values are taken from a second
+vector layer.
 An attribute is selected in each of them to define the join criteria.
 
-.. seealso:: :ref:`qgisjoinattributesbynearest`, :ref:`qgisjoinattributesbylocation`
+.. seealso:: :ref:`qgisjoinattributesbynearest`,
+   :ref:`qgisjoinattributesbylocation`
 
 Parameters
 ..........
@@ -964,15 +984,18 @@ Parameters
        Default: 1
      - The type of the final joined layer. One of:
 
-       * 0 --- Create separate feature for each matching feature (one-to-many)
-       * 1 --- Take attributes of the first matching feature only (one-to-one)
+       * 0 --- Create separate feature for each matching feature
+	 (one-to-many)
+       * 1 --- Take attributes of the first matching feature only
+	 (one-to-one)
 
    * - **Discard records which could not be joined**
      - ``DISCARD_NONMATCHING``
      - [boolean]
 
        Default: True
-     - Check if you don't want to keep the features that could not be joined
+     - Check if you don't want to keep the features that could not be
+       joined
    * - **Joined field prefix**
 
        Optional
@@ -1044,22 +1067,30 @@ Outputs
      - [number]
      - 
 
+**Algorithm ID**: ``qgis:joinattributestable``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisjoinattributesbylocation:
 
 Join attributes by location
 ---------------------------
-Takes an input vector layer and creates a new vector layer that is an extended
-version of the input one, with additional attributes in its attribute table.
+Takes an input vector layer and creates a new vector layer that is an
+extended version of the input one, with additional attributes in its
+attribute table.
 
-The additional attributes and their values are taken from a second vector layer.
-A spatial criteria is applied to select the values from the second layer that are
-added to each feature from the first layer.
+The additional attributes and their values are taken from a second
+vector layer.
+A spatial criteria is applied to select the values from the second
+layer that are added to each feature from the first layer.
 
-``Default menu``: :menuselection:`Vector --> Data Management Tools`
+**Default menu**: :menuselection:`Vector --> Data Management Tools`
 
-.. seealso:: :ref:`qgisjoinattributesbynearest`, :ref:`qgisjoinattributestable`,
- :ref:`qgisjoinbylocationsummary`
+.. seealso:: :ref:`qgisjoinattributesbynearest`,
+   :ref:`qgisjoinattributestable`, :ref:`qgisjoinbylocationsummary`
 
 Parameters
 ..........
@@ -1111,15 +1142,18 @@ Parameters
      - [enumeration]
      - The type of the final joined layer. One of:
 
-       * 0 --- Create separate feature for each matching feature (one-to-many)
-       * 1 --- Take attributes of the first matching feature only (one-to-one)
+       * 0 --- Create separate feature for each matching feature
+	 (one-to-many)
+       * 1 --- Take attributes of the first matching feature only
+	 (one-to-one)
 
    * - **Discard records which could not be joined**
      - ``DISCARD_NONMATCHING``
      - [boolean]
      
        Default: False
-     - Remove from the output the input layer records which could not be joined
+     - Remove from the output the input layer records which could not
+       be joined
    * - **Joined field prefix**
 
        Optional
@@ -1185,20 +1219,29 @@ Outputs
      - [same as input]
      - Output vector layer with added attributes from the join
 
+**Algorithm ID**: ``qgis:joinattributesbylocation``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisjoinbylocationsummary:
 
 Join attributes by location (summary)
 -------------------------------------
-Takes an input vector layer and creates a new vector layer that is an extended
-version of the input one, with additional attributes in its attribute table.
+Takes an input vector layer and creates a new vector layer that is an
+extended version of the input one, with additional attributes in its
+attribute table.
 
-The additional attributes and their values are taken from a second vector layer.
-A spatial criteria is applied to select the values from the second layer that are
-added to each feature from the first layer.
+The additional attributes and their values are taken from a second
+vector layer.
+A spatial criteria is applied to select the values from the second
+layer that are added to each feature from the first layer.
 
-The algorithm calculates a statistical summary for the values from matching
-features in the second layer (e.g. maximum value, mean value, etc).
+The algorithm calculates a statistical summary for the values from
+matching features in the second layer (e.g. maximum value, mean value,
+etc).
 
 .. seealso:: :ref:`qgisjoinattributesbylocation`
 
@@ -1315,6 +1358,12 @@ Outputs
      - [same as input]
      - Output vector layer with summarized attributes from the join
 
+**Algorithm ID**: ``qgis:joinbylocationsummary``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisjoinattributesbynearest:
 
@@ -1332,8 +1381,9 @@ join to the k-nearest neighboring features.
 If a maximum distance is specified, only features which are closer
 than this distance will be matched.
 
-.. seealso:: :ref:`qgisnearestneighbouranalysis`, :ref:`qgisjoinattributestable`,
- :ref:`qgisjoinattributesbylocation`, :ref:`qgisdistancematrix`
+.. seealso:: :ref:`qgisnearestneighbouranalysis`,
+   :ref:`qgisjoinattributestable`,
+   :ref:`qgisjoinattributesbylocation`, :ref:`qgisdistancematrix`
 
 Parameters
 ..........
@@ -1365,7 +1415,8 @@ Parameters
      - [boolean]
      
        Default: False
-     - Remove from the output the input layer records which could not be joined
+     - Remove from the output the input layer records which could not
+       be joined
    * - **Joined field prefix**
      - ``PREFIX``
      - [string]
@@ -1385,7 +1436,8 @@ Parameters
      - [same as input]
 
        Default: ``[Create temporary layer]``
-     - Specify the vector layer containing the joined features. One of:
+     - Specify the vector layer containing the joined features.
+       One of:
 
        * Create Temporary Layer (``TEMPORARY_OUTPUT``)
        * Save to File...
@@ -1441,29 +1493,39 @@ Outputs
      - Number of features from the input table that could not
        be joined.
 
+**Algorithm ID**: ``qgis:joinattributesbynearest``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgismergevectorlayers:
 
 Merge vector layers
 -------------------
-Combines multiple vector layers of the **same geometry** type into a single one.
+Combines multiple vector layers of the **same geometry** type into a
+single one.
 
-If attributes tables are different, the attribute table of the resulting layer
-will contain the attributes from all input layers. Non-matching fields will be
-appended at the end of the attribute table.
+If attributes tables are different, the attribute table of the
+resulting layer will contain the attributes from all input layers.
+Non-matching fields will be appended at the end of the attribute
+table.
 
-If any input layers contain Z or M values, then the output layer will also contain
-these values. Similarly, if any of the input layers are multi-part, the output layer
+If any input layers contain Z or M values, then the output layer will
+also contain these values.
+Similarly, if any of the input layers are multi-part, the output layer
 will also be a multi-part layer.
 
-Optionally, the destination coordinate reference system (CRS) for the merged layer
-can be set. If it is not set, the CRS will be taken from the first input layer.
+Optionally, the destination coordinate reference system (CRS) for the
+merged layer can be set. If it is not set, the CRS will be taken from
+the first input layer.
 All layers will be reprojected to match this CRS.
 
 .. figure:: img/merge_vector_layers.png
    :align: center
 
-``Default menu``: :menuselection:`Vector --> Data Management Tools`
+**Default menu**: :menuselection:`Vector --> Data Management Tools`
 
 .. seealso:: :ref:`qgissplitvectorlayer`
 
@@ -1525,16 +1587,22 @@ Outputs
      - Output vector layer containing all the
        features and attributes from the input layers.
 
+**Algorithm ID**: ``qgis:mergevectorlayers``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisorderbyexpression:
 
 Order by expression
 -------------------
-Sorts a vector layer according to an expression: changes the feature index
-according to an expression.
+Sorts a vector layer according to an expression: changes the feature
+index according to an expression.
 
-Be careful, it might not work as expected with some providers, the order might
-not be kept every time.
+Be careful, it might not work as expected with some providers, the
+order might not be kept every time.
 
 Parameters
 ..........
@@ -1600,18 +1668,24 @@ Outputs
      - [same as input]
      - Output (sorted) vector layer
 
+**Algorithm ID**: ``qgis:orderbyexpression``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgisreprojectlayer:
 
 Reproject layer
 ---------------
-Reprojects a vector layer in a different CRS. The reprojected layer will have
-the same features and attributes of the input layer.
+Reprojects a vector layer in a different CRS. The reprojected layer
+will have the same features and attributes of the input layer.
 
 |checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
 
-.. seealso:: :ref:`qgisassignprojection`, :ref:`qgisdefinecurrentprojection`,
- :ref:`qgisfindprojection`
+.. seealso:: :ref:`qgisassignprojection`,
+   :ref:`qgisdefinecurrentprojection`, :ref:`qgisfindprojection`
 
 Parameters
 ..........
@@ -1666,6 +1740,12 @@ Outputs
      - [same as input]
      - Output (reprojected) vector layer
 
+**Algorithm ID**: ``qgis:reprojectlayer``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgissetstyleforvectorlayer:
 
@@ -1674,7 +1754,8 @@ Set style for vector layer
 Sets the style of a vector layer. The style must be defined in a
 QML file.
 
-No new output are created: the style is immediately assigned to the vector layer.
+No new output are created: the style is immediately assigned to the
+vector layer.
 
 .. seealso:: :ref:`qgissetstyleforrasterlayer`
 
@@ -1715,6 +1796,12 @@ Outputs
      - ``INPUT``
      - [same as input]
      - The input vector layer with the new style
+
+**Algorithm ID**: ``qgis:setstyleforvectorlayer``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _qgissplitfeaturesbycharacter:
@@ -1792,21 +1879,28 @@ Outputs
      - [same as input]
      - The output vector layer.
 
+**Algorithm ID**: ``qgis:splitfeaturesbycharacter``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgissplitvectorlayer:
 
 Split vector layer
 ------------------
-Creates a set of vectors in an output folder based on an input layer and an attribute.
-The output folder will contain as many layers as the unique values found in the
-desired field.
+Creates a set of vectors in an output folder based on an input layer
+and an attribute.
+The output folder will contain as many layers as the unique values
+found in the desired field.
 
-The number of files generated is equal to the number of different values found
-for the specified attribute.
+The number of files generated is equal to the number of different
+values found for the specified attribute.
 
 It is the opposite operation of *merging*.
 
-``Default menu``: :menuselection:`Vector --> Data Management Tools`
+**Default menu**: :menuselection:`Vector --> Data Management Tools`
 
 .. seealso:: :ref:`qgismergevectorlayers`
 
@@ -1864,6 +1958,12 @@ Outputs
      - [same as input] [list]
      - The output vector layers resulting from the split.
 
+**Algorithm ID**: ``qgis:splitvectorlayer``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _qgistruncatetable:
 
@@ -1871,13 +1971,11 @@ Truncate table
 --------------
 Truncates a layer, by deleting all features from within the layer.
 
-.. warning:: This algorithm modifies the layer in place, and deleted features cannot
-  be restored!
+.. warning:: This algorithm modifies the layer in place, and deleted
+   features cannot be restored!
 
 Parameters
 ..........
-``Input layer`` [vector: any]
-  Vector layer in input.
 
 .. list-table::
    :header-rows: 1
@@ -1909,6 +2007,12 @@ Outputs
      - ``OUTPUT``
      - [folder]
      - The truncated (empty) layer
+
+**Algorithm ID**: ``qgis:truncatetable``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

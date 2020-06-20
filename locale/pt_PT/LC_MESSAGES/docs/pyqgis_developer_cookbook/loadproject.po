@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGISDoc package.
+# This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGISDoc 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:23+0000\n"
 "Language-Team: Portuguese (Portugal) (https://www.transifex.com/qgis/teams/6144/pt_PT/)\n"
 "MIME-Version: 1.0\n"
@@ -17,18 +17,24 @@ msgstr ""
 "Language: pt_PT\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:5
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:6
+msgid ""
+"The code snippets on this page need the following imports if you're outside "
+"the pyqgis console:"
+msgstr ""
+
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:34
 msgid "Loading Projects"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:7
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:36
 msgid ""
 "Sometimes you need to load an existing project from a plugin or (more often)"
 " when developing a standalone QGIS Python application (see: "
 ":ref:`pythonapplications`)."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:14
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:43
 msgid ""
 "To load a project into the current QGIS application you need to create an "
 "instance of the :class:`QgsProject <qgis.core.QgsProject>` class. This is a "
@@ -38,7 +44,7 @@ msgid ""
 "project to be loaded:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:35
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:74
 msgid ""
 "If you need to make modifications to the project (for example to add or "
 "remove some layers) and save your changes, call the :meth:`write() "
@@ -47,14 +53,14 @@ msgid ""
 " path for saving the project to a new location:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:47
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:86
 msgid ""
 "Both :meth:`read() <qgis.core.QgsProject.read>` and :meth:`write() "
 "<qgis.core.QgsProject.write>` functions return a boolean value that you can "
 "use to check if the operation was successful."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:53
+#: ../../docs/pyqgis_developer_cookbook/loadproject.rst:92
 msgid ""
 "If you are writing a QGIS standalone application, in order to synchronise "
 "the loaded project with the canvas you need to instantiate a "

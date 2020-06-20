@@ -1,19 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGISDoc package.
+# This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Francis Gasc <francisgasc@gmail.com>, 2020
+# MarieSilvestre, 2020
+# Sant-anna <delazj@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGISDoc 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:25+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Sant-anna <delazj@gmail.com>, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +26,7 @@ msgstr ""
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:9
 msgid "Opening Data"
-msgstr "Ouverture des données"
+msgstr "Ouvrir des données"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:16
 msgid ""
@@ -31,10 +34,10 @@ msgid ""
 "libraries that, combined with its own providers, offer capabilities to read "
 "and often write a lot of formats:"
 msgstr ""
-"Comme partie d'un écosystème de logiciel Open Source, QGIS est construit à "
-"partir de différentes bibliothèques qui, combinées avec ses propres "
-"fournisseurs, offre des capacités à lire et souvent à écrire en de nombreux "
-"formats :"
+"Comme faisant partie d'un écosystème de logiciel Open Source, QGIS est "
+"construit à partir de différentes bibliothèques qui, combinées avec ses "
+"propres fournisseurs, offre la possibilité de lire et souvent d'écrire dans "
+"de nombreux formats :"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:20
 msgid ""
@@ -44,6 +47,12 @@ msgid ""
 "complete list of `supported vector formats "
 "<https://gdal.org/drivers/vector/index.html>`_."
 msgstr ""
+"Les formats de données vectorielles incluent GeoPackage, GML, GeoJSON, GPX, "
+"KML, Valeurs séparées par des virgules, les formats ESRI (Shapefile, "
+"Geodatabase ...), les formats de fichier MapInfo et MicroStation, AutoCAD "
+"DWG / DXF, GRASS et bien d'autres encore ... Lire la suite liste des "
+"`formats vectoriels pris en charge "
+"<https://gdal.org/drivers/vector/index.html>` _."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:26
 msgid ""
@@ -52,6 +61,11 @@ msgid ""
 "Binary Grid, ArcInfo ASCII Grid, and many more... Read the complete list of "
 "`supported raster formats <https://gdal.org/drivers/raster/index.html>`_."
 msgstr ""
+"Les formats de données raster incluent GeoTIFF, JPEG, ASCII Gridded XYZ, "
+"MBTiles, R ou Idrisi rasters, GDAL Virtual, SRTM, Sentinel Data, ERDAS "
+"IMAGINE, ArcInfo Binary Grid, ArcInfo ASCII Grid, et bien d'autres ... Lisez"
+" la liste complète de ` formats raster pris en charge "
+"<https://gdal.org/drivers/raster/index.html> `_."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:32
 msgid ""
@@ -67,6 +81,10 @@ msgid ""
 "services, ...) are also handled by QGIS providers. See "
 ":ref:`working_with_ogc` for more information about some of these."
 msgstr ""
+"Les services de cartes et de données Web (WM (T) S, WFS, WCS, CSW, tuiles "
+"XYZ, services ArcGIS, ...) sont également gérés par les fournisseurs QGIS. "
+"Voir :ref:`working_with_ogc` pour plus d'informations sur certains d'entre "
+"eux."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:37
 msgid ""
@@ -74,12 +92,17 @@ msgid ""
 "formats such as QML files (:ref:`qgisstylefile`) and virtual and memory "
 "layers."
 msgstr ""
+"Vous pouvez lire les fichiers pris en charge à partir de dossiers archivés "
+"et utiliser des formats natifs QGIS tels que des fichiers QML "
+"(:ref:`qgisstylefile`) et des couches virtuelles et de mémoire."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:41
 msgid ""
 "More than 80 vector and 140 raster formats are supported by `GDAL "
 "<https://gdal.org/>`_ and QGIS native providers."
 msgstr ""
+"Plus de 80 formats vectoriels et 140 raster sont pris en charge par les "
+"fournisseurs natifs `GDAL <https://gdal.org/>` _ et QGIS."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:46
 msgid ""
@@ -88,9 +111,17 @@ msgid ""
 "installation of your OS may not have been built to support the format you "
 "want to use. To see the list of available formats, run the command line "
 "``ogrinfo --formats`` (for vector) and ``gdalinfo --formats`` (for raster), "
-"or check :menuselection:`settings --> Options --> GDAL` menu (for raster) in"
+"or check :menuselection:`Settings --> Options --> GDAL` menu (for raster) in"
 " QGIS."
 msgstr ""
+"Tous les formats répertoriés peuvent ne pas fonctionner dans QGIS pour "
+"diverses raisons. Par exemple, certains nécessitent des bibliothèques "
+"propriétaires externes, ou l'installation GDAL / OGR de votre système "
+"d'exploitation peut ne pas avoir été conçue pour prendre en charge le format"
+" que vous souhaitez utiliser. Pour voir la liste des formats disponibles, "
+"exécutez la ligne de commande ``ogrinfo --formats`` (pour le vectoriel) et "
+"``gdalinfo --formats`` (pour le raster), ou vérifiez "
+":menuselection:`Préférences -> Options - -> GDAL` (pour raster) dans QGIS."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:58
 msgid ""
@@ -107,6 +138,21 @@ msgid ""
 "|checkbox| :guilabel:`Modeless data source manager dialog` in the "
 ":menuselection:`Settings --> Options --> General` menu."
 msgstr ""
+"Dans QGIS, selon le format de données, il existe différents outils pour "
+"ouvrir un jeu de données, principalement disponibles dans le menu "
+":menuelection:`couche -> ajouter une couche ->` ou à partir de la barre "
+"d'outils :guilabel:`Gestionnaire de couches` (activé via :menuselection:`Vue"
+" -> Barres d'outil`). Cependant, tous ces outils pointent vers une boîte de "
+"dialogue unique, la boîte de dialogue :guilabel:`Gestionnaire de source de "
+"données`, que vous pouvez ouvrir avec le bouton |dataSourceManager| "
+":sup:`ouvrir gestionnaire de source données`, disponible depuis la barre "
+"d'outils :guilabel:`Gestionnaire de source de données`, ou en appuyant sur "
+":kbd:`Ctrl+L`. La boîte de dialogue :guilabel:`gestionnaire de source de "
+"données` offre une interface unifiée pour ouvrir des données vectorielles ou"
+" raster, ainsi que des bases de données ou des services Web pris en charge "
+"par QGIS. Il peut être défini modal ou non avec la |checkbox| "
+":guilabel:`Boîte de dialogue du gestionnaire de source de données sans "
+"modal`` dans le menu  :menuselection:`Paramètres -> Options -> General` "
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:79
 msgid "QGIS Data Source Manager dialog"
@@ -119,12 +165,18 @@ msgid ""
 "connected databases. More information on DB Manager capabilities can be "
 "found in :ref:`dbmanager`."
 msgstr ""
+"A côté de ce point d'entrée principal, vous avez également le plugin "
+"|dbManager| :guilabel:`DB Manager` qui offre des capacités avancées pour "
+"analyser et manipuler les bases de données connectées. Plus d'informations "
+"sur les capacités de DB Manager peuvent être trouvées dans :ref:`dbmanager`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:87
 msgid ""
 "There are many other tools, native or third-party plugins, that help you "
 "open various data formats."
 msgstr ""
+"Il existe de nombreux autres outils, plugins natifs ou tiers, qui vous "
+"aident à ouvrir différents formats de données."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:90
 msgid ""
@@ -133,17 +185,22 @@ msgid ""
 "dialog but more than describing each tab, it will also explore the tools "
 "based on the data provider or format specificities."
 msgstr ""
+"Ce chapitre décrira uniquement les outils fournis par défaut dans QGIS pour "
+"le chargement des données. Il se concentrera principalement sur la boîte de "
+"dialogue :guilabel:`gestionnaire de source de données` mais plus que la "
+"description de chaque onglet, il explorera également les outils en fonction "
+"du fournisseur de données ou des spécificités de format."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:101
 msgid "The Browser Panel"
-msgstr "Le panneau Navigateur"
+msgstr "Le panneau Explorateur"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:103
 msgid ""
 "The :guilabel:`Browser` is one of the main ways to quickly and easily add "
 "your data to projects. It's available as:"
 msgstr ""
-"Le :guilabel:`Navigateur` est l'un des principaux moyens d'ajouter "
+"L':guilabel:`Explorateur` est l'un des principaux moyens d'ajouter "
 "rapidement et facilement vos données à des projets. Il est disponible en "
 "tant que:"
 
@@ -153,7 +210,7 @@ msgid ""
 "|dataSourceManager| :sup:`Open Data Source Manager` button (:kbd:`Ctrl+L`);"
 msgstr ""
 "Un onglet :guilabel:`Data Source Manager`, activé en appuyant sur le bouton "
-"|dataSourceManager| :sup:`Open Data Source Manager` ( :kbd:`Ctrl + L`);"
+"|dataSourceManager| :sup:`Open Data Source Manager` ( :kbd:`Ctrl + L`) ;"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:108
 msgid ""
@@ -162,8 +219,8 @@ msgid ""
 ":kbd:`Ctrl+2`."
 msgstr ""
 "en tant que panneau QGIS, vous pouvez l'ouvrir à partir du menu "
-":menuselection:`View -> Panels` (ou |kde| :menuselection:`Settings -> "
-"Panels`) ou en appuyant sur :kbd:`Ctrl + 2`."
+":menuselection:`Vue --> Panneaux` (ou |kde| :menuselection:`Préférences --> "
+"Panneaux`) ou en appuyant sur :kbd:`Ctrl + 2`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:111
 msgid ""
@@ -172,21 +229,30 @@ msgid ""
 "table), or the datasource format (plain or compressed files, databases, web "
 "services)."
 msgstr ""
+"Dans les deux cas, l':guilabel:`Explorateur` vous aide à naviguer dans votre"
+" système de fichiers et à gérer les données géographiques, quel que soit le "
+"type de couche (raster, vecteur, table) ou le format de la source de données"
+" (fichiers simples ou compressés, bases de données, services Web) ."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:116
 msgid "Exploring the Interface"
-msgstr ""
+msgstr "Explorer l'interface"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:118
 msgid ""
 "At the top of the Browser panel, you find some buttons that help you to:"
 msgstr ""
+"En haut du panneau Explorateur, vous trouverez des boutons qui vous aident à"
+" :"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:120
 msgid ""
 "|addLayer| :sup:`Add Selected Layers`: you can also add data to the map "
 "canvas by selecting **Add selected layer(s)** from the layer's context menu;"
 msgstr ""
+"|addLayer| :sup:`Ajouter les couches sélectionnées`: vous pouvez également "
+"ajouter des données au canevas de carte en sélectionnant **Ajouter la ou les"
+" couches sélectionnées** dans le menu contextuel de la couche;"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:122
 msgid "|draw| :sup:`Refresh` the browser tree;"
@@ -201,20 +267,30 @@ msgid ""
 "figure_browser_panels_. The comparison can be case-sensitive or not. It can "
 "also be set to:"
 msgstr ""
+"|filterMap| :sup:`Filtrer l'Explorateur` pour rechercher des données "
+"spécifiques. Entrez un mot de recherche ou un caractère générique et "
+"l'esplorateur filtrera l'arborescence pour n'afficher que les chemins "
+"d'accès aux tables, noms de fichiers ou dossiers DB correspondants - les "
+"autres données ou dossiers ne seront pas affichés. Voir l'exemple du Panneau"
+" Explorateur (2) dans figure_browser_panels_. La comparaison peut être "
+"sensible à la casse ou non. Elle peut également être définie sur :"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:129
 msgid ":guilabel:`Normal`: show items containing the search text"
 msgstr ""
+":guilabel:`Normal`: affiche les éléments contenant le texte de recherche"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:130
 msgid ""
 ":guilabel:`Wildcard(s)`: fine tune the search using the ``?`` and/or ``*`` "
 "characters to specify the position of the search text"
 msgstr ""
+":guilabel:`Wildcard (s)`: affinez la recherche en utilisant les caractères "
+"``?`` et / ou ``*`` pour spécifier la position du texte de recherche"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:132
 msgid ":guilabel:`Regular expression`"
-msgstr ""
+msgstr ":guilabel:`Expression régulière`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:134
 msgid "|collapseTree| :sup:`Collapse All` the whole tree;"
@@ -226,6 +302,9 @@ msgid ""
 "widget is added at the bottom of the panel showing, if applicable, metadata "
 "for the selected item."
 msgstr ""
+"|métadonnées| :sup:`Activer / désactiver le widget des propriétés`: "
+"lorsqu'il est activé, un nouveau widget est ajouté en bas du panneau "
+"affichant, le cas échéant, les métadonnées de l'élément sélectionné."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:139
 msgid ""
@@ -243,10 +322,24 @@ msgid ""
 ":guilabel:`ArcGISMapServer`, :guilabel:`ArcGISFeatureServer` and "
 ":guilabel:`GeoNode`."
 msgstr ""
+"Les entrées du panneau :guilabel:`Explorateur` sont organisées de manière "
+"hiérarchique et il existe plusieurs entrées de niveau supérieur. Vient "
+"d'abord :guilabel:`Marque-pages` (où vous pouvez placer des raccourcis vers "
+"des emplacements souvent utilisés). Vient ensuite :guilabel:`Signets "
+"spatiaux`, suivi de votre :guilabel:`Project Home` (le répertoire par défaut"
+" est celui où réside votre fichier de projet), votre :guilabel:`Home` "
+"répertoire dans le système de fichiers et le répertoire racine du système de"
+" fichiers (:guilabel:`/`). Viennent ensuite un certain nombre de types de "
+"conteneurs / bases de données et protocoles de service (qui peuvent ou non "
+"vous concerner): :guilabel:`GeoPackage`, :guilabel:`SpatiaLite`, "
+":guilabel:`PostGIS`, :guilabel:`MSSQL `, :guilabel:`DB2`, :guilabel:`WMS / "
+"WMTS`, :guilabel:`XYZ Tiles`, :guilabel:`WCS`, :guilabel:`WFS`, "
+":guilabel:`OWS`, :guilabel:`ArcGISMapServer`, "
+":guilabel:`ArcGISFeatureServer` et :guilabel:`GeoNode`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:159
 msgid "Interacting with the Browser items"
-msgstr ""
+msgstr "Interaction avec les éléments de l'Explorateur"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:161
 msgid ""
@@ -254,6 +347,10 @@ msgid ""
 "the canvas and :guilabel:`Layers` panel, and from the :guilabel:`Layers` "
 "panel to layer containers (e.g. GeoPackage) in the browser."
 msgstr ""
+"L'explorateur prend en charge le glisser-déposer dans l'explorateur, de "
+"l'explorateur vers le canevas et le panneau :guilabel:`couches`, et du "
+"panneau :guilabel:`Couches` aux conteneurs de couches (par exemple "
+"GeoPackage) dans le l'explorateur."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:165
 msgid ""
@@ -264,14 +361,21 @@ msgid ""
 "a geopackage file) or added to the current project through drag and drop or "
 "double click."
 msgstr ""
+"Les éléments du fichier de projet à l'intérieur de l'Explorateur peuvent "
+"être développés, montrant l'arborescence complète des couches (y compris les"
+" groupes) contenue dans ce projet. Les éléments de projet sont traités de la"
+" même manière que tout autre élément de l'explorateur, de sorte qu'ils "
+"peuvent être glissés et déposés dans l'explorateur (par exemple pour copier "
+"une couche dans un fichier geopackage) ou ajoutés au projet en cours par un "
+"glisser-déposer ou un double-clic"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:172
 msgid ""
 "The context menu for an element in the :guilabel:`Browser` panel is opened "
 "by right-clicking on it."
 msgstr ""
-"Le menu contextuel d'un élément du panneau :guilabel:`Navigateur` s'ouvre en"
-" cliquant dessus avec le bouton droit."
+"Le menu contextuel d'un élément du panneau :guilabel:`Explorateur` s'ouvre "
+"en cliquant dessus avec le bouton droit."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:175
 msgid ""
@@ -282,19 +386,19 @@ msgstr ""
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:177
 msgid ":guilabel:`New` -->"
-msgstr ""
+msgstr ":guilabel:`Nouveau` ->"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:179
 msgid ":guilabel:`Directory...`"
-msgstr ""
+msgstr ":guilabel:`Répertoire ...`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:180
 msgid ":guilabel:`GeoPackage...`"
-msgstr ""
+msgstr ":guilabel:`GeoPackage...`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:181
 msgid ":guilabel:`ShapeFile...`"
-msgstr ""
+msgstr ":guilabel:`ShapeFile...`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:182
 msgid ":guilabel:`Add as a Favorite`"
@@ -302,7 +406,7 @@ msgstr ":guilabel:`Ajouter favoris`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:183
 msgid ":guilabel:`Hide from Browser`"
-msgstr ":guilabel:`Masquer du navigateur`"
+msgstr ":guilabel:`Masquer de l'explorateur`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:184
 msgid ":guilabel:`Fast Scan this Directory`"
@@ -314,7 +418,7 @@ msgstr ":guilabel:`Ouvrir Dossier`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:186
 msgid ":guilabel:`Open in Terminal`"
-msgstr ""
+msgstr ":guilabel:`Ouvrir dans le terminal`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:187
 msgid ":guilabel:`Properties...`"
@@ -322,7 +426,7 @@ msgstr ":guilabel:`Propriétés...`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:188
 msgid ":guilabel:`Directory Properties...`"
-msgstr ""
+msgstr ":guilabel:`Propriétés du répertoire ...`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:190
 msgid ":guilabel:`Favourites`, can also be removed and renamed:"
@@ -342,6 +446,10 @@ msgid ""
 "will have supporting entries. For example, for non-database, non-service-"
 "based vector, raster and mesh data sources:"
 msgstr ""
+"Pour les entrées feuilles qui peuvent agir comme des couches dans le projet,"
+" le menu contextuel aura des entrées de support. Par exemple, pour des non "
+"base de données, pour les services non basés sur des données vecteur, raster"
+" et source de données maillees :"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:200
 msgid ":guilabel:`Delete File \"<name of file>\"...`"
@@ -349,19 +457,19 @@ msgstr ":guilabel:`Supprimer fichier...`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:201
 msgid ":guilabel:`Export Layer` --> :guilabel:`To File...`"
-msgstr ""
+msgstr ":guilabel:`Exporter Couche` ->:guilabel:`vers le fichier ... `"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:202
 msgid ":guilabel:`Add Layer to Project`"
-msgstr ""
+msgstr ":guilabel:`Ajouter une couche au projet`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:203
 msgid ":guilabel:`Layer Properties`"
-msgstr ""
+msgstr ":guilabel:`Propriétés couche`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:204
 msgid ":guilabel:`File Properties`"
-msgstr ""
+msgstr ":guilabel:`Propriétés du fichier`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:206
 msgid ""
@@ -406,7 +514,7 @@ msgstr ""
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:223
 msgid "To add a layer to the project using the :guilabel:`Browser`:"
 msgstr ""
-"Pour ajouter une couche au projet en utilisant :guilabel:`Navigateur`:"
+"Pour ajouter une couche au projet en utilisant l':guilabel:`Explorateur` :"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:225
 msgid ""
@@ -415,8 +523,8 @@ msgid ""
 "connect databases and web services before they appear (see dedicated "
 "sections)."
 msgstr ""
-"Activez le :guilabel:`Navigateur` comme décrit ci-dessus. Une arborescence "
-"de navigateur avec votre système de fichiers, vos bases de données et vos "
+"Activez l':guilabel:`Explorateur` comme décrit ci-dessus. Une arborescence "
+"d'explorateur avec votre système de fichiers, vos bases de données et vos "
 "services Web s'affiche. Vous devrez peut-être connecter des bases de données"
 " et des services Web avant qu'ils n'apparaissent (voir les sections "
 "dédiées)."
@@ -438,7 +546,7 @@ msgstr ""
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:236
 msgid "**Open a QGIS project directly from the browser**"
-msgstr "**Ouvrez un projet QGIS directement depuis le navigateur**"
+msgstr "**Ouvrez un projet QGIS directement depuis l'explorateur**"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:238
 msgid ""
@@ -446,8 +554,8 @@ msgid ""
 "clicking its name or by drag-and-drop into the map canvas."
 msgstr ""
 "Vous pouvez également ouvrir un projet QGIS directement à partir du panneau "
-"Navigateur en double-cliquant sur son nom ou par glisser-déposer dans le "
-"canevas de carte."
+"Explorateur en double-cliquant sur son nom ou par glisser-déposer dans le "
+"canevas de la carte."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:241
 msgid ""
@@ -458,16 +566,27 @@ msgid ""
 " menu. See section :ref:`vector_style_menu` for more information on setting "
 "symbology for vector layers."
 msgstr ""
+"Une fois un fichier chargé, vous pouvez  zoomer à l'aide des outils de "
+"navigation sur la carte. Pour changer le style d'une couche, ouvrez la boîte"
+" de dialogue :guilabel:`Propriétés couche` en double-cliquant sur le nom de "
+"la couche ou en cliquant avec le bouton droit sur le nom dans la légende et "
+"en choisissant :menuselection:`Propriétés` dans le menu contextuel. Voir la "
+"section :ref:`vector_style_menu` pour plus d'informations sur la définition "
+"de la symbologie pour les couches vectorielles."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:249
 msgid "Right-clicking an item in the browser tree helps you to:"
 msgstr ""
+"Un clic droit sur un élément dans l'arborescence de l'explorateur vous aide "
+"à :"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:251
 msgid ""
 "for a file or a table, display its metadata or open it in your project. "
 "Tables can even be renamed, deleted or truncated."
 msgstr ""
+"pour un fichier ou une table, affichez ses métadonnées ou ouvrez-le dans "
+"votre projet. Les table peuvent même être renommés, supprimés ou tronqués."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:253
 msgid ""
@@ -475,20 +594,26 @@ msgid ""
 "tree. Hidden folders can be managed from the :menuselection:`Settings --> "
 "Options --> Data Sources` tab."
 msgstr ""
+"pour un dossier, ajoutez-le à vos marque-pages ou masquez-le dans "
+"l'arborescence de l'explorateur. Les dossiers cachés peuvent être gérés à "
+"partir de onglet :menuselection:`Paramètres -> Options -> Sources de "
+"données`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:256
 msgid ""
 "manage your :ref:`spatial bookmarks <sec_bookmarks>`: bookmarks can be "
 "created, exported and imported as ``XML`` files."
 msgstr ""
+"gérer vos :ref:`spatial bookmarks 1`: les bookmarks peuvent être créés, "
+"exportés et importés sous forme de fichiers ``XML``."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:258
 msgid "create a connection to a database or a web service."
-msgstr ""
+msgstr "créer une connexion à une base de données ou à un service Web."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:259
 msgid "refresh, rename or delete a schema."
-msgstr ""
+msgstr "actualisez, renommez ou supprimez un schéma."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:261
 msgid ""
@@ -497,6 +622,11 @@ msgid ""
 "browser panel available to avoid long scrolling while dragging. Just select "
 "the file and drag-and-drop from one panel to the other."
 msgstr ""
+"Vous pouvez également importer des fichiers dans des bases de données ou "
+"copier des tables d'un schéma / base de données à un autre avec un simple "
+"glisser-déposer. Un deuxième panneau de navigation est disponible pour "
+"éviter un long défilement lors du glissement. Sélectionnez simplement le "
+"fichier et glissez-déposez d'un panneau à l'autre."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:271
 msgid "QGIS Browser panels side-by-side"
@@ -507,7 +637,7 @@ msgid ""
 "**Add layers to QGIS by simple drag-and-drop from your OS file browser**"
 msgstr ""
 "**Ajoutez des couches à QGIS par simple glisser-déposer depuis votre "
-"navigateur de fichiers**"
+"exlorateur de fichiers**"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:276
 msgid ""
@@ -516,8 +646,8 @@ msgid ""
 "canvas."
 msgstr ""
 "Vous pouvez également ajouter des fichiers au projet en les faisant glisser "
-"depuis le navigateur de fichiers de votre système d'exploitation vers "
-":guilabel:`Panneau Couches` ou le canevas de carte."
+"depuis l'explorateur de fichiers de votre système d'exploitation vers "
+":guilabel:`Panneau Couches` ou le canevas de la carte."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:283
 msgid "The DB Manager"
@@ -530,6 +660,11 @@ msgid ""
 "GeoPackage, Oracle Spatial, MSSQL, DB2, Virtual layers). It can be activated"
 " from the :menuselection:`Plugins --> Manage and Install Plugins...` menu."
 msgstr ""
+"L'extension :guilabel:`DB Manager` est un autre outil d'intégration et de "
+"gestion des formats de bases de données spatiales pris en charge par QGIS "
+"(PostGIS, SpatiaLite, GeoPackage, Oracle Spatial, MSSQL, DB2, couches "
+"virtuelles). Elle peut être activée à partir de :menuselection:`Extension "
+"--> Installer/Gérer les extensions...`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:291
 msgid "The |dbManager| :sup:`DB Manager` Plugin provides several features:"
@@ -539,33 +674,40 @@ msgstr ""
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:293
 msgid "connect to databases and display their structure and contents"
 msgstr ""
+"se connecter aux bases de données et afficher leur structure et leur contenu"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:294
 msgid "preview tables of databases"
-msgstr ""
+msgstr "aperçu des tables des bases de données"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:295
 msgid ""
 "add layers to the map canvas, either by double-clicking or drag-and-drop."
 msgstr ""
+"ajoutez des couches au canevas de la carte, soit en double-cliquant, soit en"
+" faisant glisser-déposer."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:296
 msgid ""
 "add layers to a database from the QGIS Browser or from another database"
 msgstr ""
+"ajouter des couches à une base de données à partir de l'explorateur QGIS ou "
+"d'une autre base de données"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:297
 msgid "create SQL queries and add their output to the map canvas"
-msgstr ""
+msgstr "créer des requêtes SQL et ajouter leur sortie au canevas de carte"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:298
 msgid "create :ref:`virtual layers <vector_virtual_layers>`"
-msgstr ""
+msgstr "créer :ref:`virtual layers 1`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:300
 msgid ""
 "More information on DB Manager capabilities is found in :ref:`dbmanager`."
 msgstr ""
+"Plus d'informations sur les capacités de DB Manager se trouvent dans "
+":ref:`dbmanager`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:307
 msgid "DB Manager dialog"
@@ -580,12 +722,17 @@ msgid ""
 "Beside the Browser Panel and the DB Manager, the main tools provided by QGIS"
 " to add layers, you'll also find tools that are specific to data providers."
 msgstr ""
+"Outre le panneau Explorateur et le Gestionnaire de bases de données, les "
+"principaux outils fournis par QGIS pour ajouter des couches, vous trouverez "
+"également des outils spécifiques aux fournisseurs de données."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:318
 msgid ""
 "Some :ref:`external plugins <plugins>` also provide tools to open specific "
 "format files in QGIS."
 msgstr ""
+"Certains :ref:`external plugins 1` fournissent également des outils pour "
+"ouvrir des fichiers au format spécifique dans QGIS."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:326
 msgid "Loading a layer from a file"
@@ -593,7 +740,7 @@ msgstr "Charger une couche à partir d'un fichier"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:328
 msgid "To load a layer from a file:"
-msgstr ""
+msgstr "Pour charger une couche à partir d'un fichier:"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:330
 msgid ""
@@ -601,6 +748,10 @@ msgid ""
 "click the |dataSourceManager| :sup:`Open Data Source Manager` button (or "
 "press :kbd:`Ctrl+L`) and enable the target tab or:"
 msgstr ""
+"Ouvrez l'onglet type de couche dans la boîte de dialogue :guilabel:`Data "
+"Source Manager`, c'est-à-dire cliquez sur le bouton |dataSourceManager| "
+":sup:`ouvrir le gestionnaire de source de donnees` (ou appuyez sur "
+":kbd:`Ctrl + L`) et activez l'onglet cible ou:"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:334
 msgid ""
@@ -609,6 +760,11 @@ msgid ""
 "|addOgrLayer| :guilabel:`Add Vector Layer` menu option or click on the "
 "|addOgrLayer| :sup:`Add Vector Layer` toolbar button."
 msgstr ""
+"pour les données vectorielles (comme les couches GML, ESRI Shapefile, "
+"Mapinfo et DXF): appuyez sur :kbd:`Ctrl + Shift + V`, sélectionnez "
+":menuselection:`Couche --> Ajouter couche -->` |addOgrLayer| "
+":guilabel:`Ajouter une couche vectorielle` ou cliquez sur le bouton "
+"|addOgrLayer| :sup:`Ajouter une couche vectorielle`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:344
 msgid "Add Vector Layer Dialog"
@@ -621,18 +777,22 @@ msgid ""
 "-->` |addRasterLayer| :guilabel:`Add Raster Layer` menu option or click on "
 "the |addRasterLayer| :sup:`Add Raster Layer` toolbar button."
 msgstr ""
+"pour les données raster (comme GeoTiff, MBTiles, GRIdded Binary et DWG): "
+"appuyez sur :kbd:`Ctrl + Shift + R`, sélectionnez :menuselection:`Couche -->"
+" ajouter couche -->` |addRasterLayer| :guilabel: `Ajouter une couche raster`"
+" ou cliquez sur bouton |addRasterLayer| :sup:`Ajouter une couche raster`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:356
 msgid "Add Raster Layer Dialog"
-msgstr ""
+msgstr "Boîte de dialogue ajouter une couche raster"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:358
 msgid "Check |radioButtonOn| :guilabel:`File` source type"
-msgstr ""
+msgstr "Vérifiez |radioButtonOn| type de source de fichier :guilabel:`File`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:359
 msgid "Click on the :guilabel:`...` :sup:`Browse` button"
-msgstr ""
+msgstr "Cliquez sur le bouton :guilabel: `...` :sup:`Parcourir`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:360
 msgid ""
@@ -644,16 +804,28 @@ msgid ""
 "filter. Other formats can be loaded by selecting ``All files`` (the top item"
 " in the pull-down menu)."
 msgstr ""
+"Naviguez dans le système de fichiers et chargez une source de données prise "
+"en charge. Plusieurs couches peuvent être chargées en même temps en "
+"maintenant enfoncée la touche :kbd:`Ctrl` et en cliquant sur plusieurs "
+"éléments dans la boîte de dialogue ou en maintenant enfoncée la touche "
+":kbd:`Shift` pour sélectionner une plage d'éléments en cliquant sur les "
+"premier et dernier articles de la gamme. Seuls les formats qui ont été bien "
+"testés apparaissent dans le filtre des formats. D'autres formats peuvent "
+"être chargés en sélectionnant ``Tous les fichiers`` (l'élément supérieur du "
+"menu déroulant)."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:368
 msgid ""
 "Press :guilabel:`Open` to load the selected file into :guilabel:`Data Source"
 " Manager` dialog"
 msgstr ""
+"Appuyez sur :guilabel:`Ouvrir` pour charger le fichier sélectionné dans la "
+"boîte de dialogue :guilabel:`gestionnaire de source de données`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:370
 msgid "You can specify the encoding for vector file if desired"
 msgstr ""
+"Vous pouvez spécifier l'encodage du fichier vectoriel si vous le souhaitez"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:371
 msgid ""
@@ -661,6 +833,9 @@ msgid ""
 "view. figure_vector_loaded_ shows QGIS after loading the :file:`alaska.shp` "
 "file."
 msgstr ""
+"Appuyez sur :guilabel:`Ajouter` pour charger le fichier dans QGIS et les "
+"afficher dans la vue de la carte. figure_vector_loaded_ montre QGIS après le"
+" chargement du fichier :file:`alaska.shp`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:379
 msgid "QGIS with Shapefile of Alaska loaded"
@@ -673,6 +848,11 @@ msgid ""
 "loading such datasets opens a dialog to select geometries to use in order to"
 " have one geometry per layer."
 msgstr ""
+"Étant donné que certains formats comme MapInfo (par exemple :file:`.tab`) ou"
+" Autocad (:file:`.dxf`) permettent de mélanger différents types de géométrie"
+" dans un seul fichier, le chargement de ces ensembles de données ouvre une "
+"boîte de dialogue pour sélectionner les géométries à utiliser dans afin "
+"d'avoir une géométrie par couche."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:391
 msgid ""
@@ -680,6 +860,9 @@ msgid ""
 "Raster Layer` tabs allow loading of layers from source types other than "
 ":guilabel:`File`:"
 msgstr ""
+"Onglets |addOgrLayer| :sup:`Ajouter une couche vectorielle` et "
+"|addRasterLayer| :sup:`Ajouter une couche raster` permettent de charger des "
+"couches à partir de types de sources autres que :guilabel:`Fichier`:"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:394
 msgid ""
@@ -689,6 +872,13 @@ msgid ""
 ":guilabel:`Directory` as :guilabel:`Source type`. In this case, a directory "
 "can be selected in the dialog after pressing :guilabel:`...` :sup:`Browse`."
 msgstr ""
+"Vous pouvez charger des formats vectoriels spécifiques tels que ``Couverture"
+" binaire ArcInfo``, ``Royaume-Uni. National Transfer Format``, ainsi que le "
+"format TIGER brut du ``US Census Bureau`` ou ``OpenfileGDB``. Pour ce faire,"
+" vous sélectionnez |radioButtonOn| :guilabel:`Répertoire` comme "
+":guilabel:`Type de source`. Dans ce cas, un répertoire peut être sélectionné"
+" dans la boîte de dialogue après avoir appuyé sur :guilabel:`...` "
+":sup:`Parcourir`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:400
 msgid ""
@@ -697,6 +887,11 @@ msgid ""
 "Some possible database types are ``ODBC``, ``Esri Personal Geodatabase``, "
 "``MSSQL`` as well as ``PostgreSQL`` or ``MySQL`` ."
 msgstr ""
+"Avec le type de source |radioButtonOn| :guilabel:`bases de données` vous "
+"pouvez sélectionner une connexion à une base de données existante ou en "
+"créer une pour le type de base de données sélectionné. Certains types de "
+"bases de données possibles sont ``ODBC``, ``Esri Personal Geodatabase``, "
+"``MSSQL`` ainsi que ``PostgreSQL`` ou ``MySQL``."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:405
 msgid ""
@@ -706,6 +901,12 @@ msgid ""
 "you select from the available tables, for example of PostGIS enabled "
 "databases."
 msgstr ""
+"Appuyer sur le bouton :guilabel:`Nouveau` ouvre la boîte de dialogue "
+":guilabel:`Créer une nouvelle connexion à la base de données OGR` dont les "
+"paramètres sont parmi ceux que vous pouvez trouver dans "
+":ref:`vector_create_stored_connection`. En appuyant sur :guilabel:`ouvrir` "
+"cela vous permet de sélectionner parmi les tables disponibles, par exemple "
+"des bases de données compatibles PostGIS."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:410
 msgid ""
@@ -714,12 +915,18 @@ msgid ""
 "in private buckets of commercial cloud storage services. Supported protocol "
 "types are:"
 msgstr ""
+"Le type de source |radioButtonOn| :guilabel:`Protocole: HTTP (S), cloud, "
+"etc.`  ouvre les données stockées localement ou sur le réseau, accessibles "
+"au public ou dans des compartiments privés de services de stockage cloud "
+"commerciaux. Les types de protocoles pris en charge sont:"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:415
 msgid ""
 "``HTTP/HTTPS/FTP``, with a :guilabel:`URI` and, if required, an "
 "authentication"
 msgstr ""
+"``HTTP/HTTPS/FTP``, avec une :guilabel:`URI` et, si nécessaire, une "
+"authentification"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:417
 msgid ""
@@ -728,6 +935,9 @@ msgid ""
 "to fill in the :guilabel:`Bucket or container` and the :guilabel:`Object "
 "key`."
 msgstr ""
+"Stockage cloud tel que ``AWS S3``, ``Google Cloud Storage``, ``Microsoft "
+"Azure Blob``, ``Alibaba OSS Cloud``, ``Open Stack Swift Storage``. Vous "
+"devez remplir :guilabel:`Bucket or container` et :guilabel:`Object key`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:421
 msgid ""
@@ -735,10 +945,14 @@ msgid ""
 "``GEOJSON - Newline Delimited`` format or based on ``CouchDB`` database. A "
 ":guilabel:`URI` is required, with optional authentication."
 msgstr ""
+"service supportant OGC ``WFS 3`` (encore expérimental), utilisant le format "
+"``GeoJSON`` ou ``GEOJSON - Newline Delimited`` ou basé sur la base de "
+"données ``CouchDB``. R :guilabel:``URI`` est requis, avec authentification "
+"facultative."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:429
 msgid "Loading a mesh layer"
-msgstr ""
+msgstr "Chargement d'une couche de maillage"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:431
 msgid ""
@@ -746,10 +960,14 @@ msgid ""
 "The spatial component contains a collection of vertices, edges and faces in "
 "2D or 3D space. More information on mesh layers at :ref:`label_meshdata`."
 msgstr ""
+"Un maillage est une grille non structurée généralement avec des composants "
+"temporels et autres. La composante spatiale contient une collection de "
+"sommets, d'arêtes et de faces dans un espace 2D ou 3D. Plus d'informations "
+"sur les couches de mailles sur :ref:`label_meshdata`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:435
 msgid "To add a mesh layer to QGIS:"
-msgstr ""
+msgstr "Pour ajouter une couche de maillage à QGIS:"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:437
 msgid ""
@@ -757,26 +975,35 @@ msgid ""
 " from the :menuselection:`Layer -->` menu or clicking the "
 "|dataSourceManager| :sup:`Open Data Source Manager` button."
 msgstr ""
+"Ouvrez la boîte de dialogue : menuselection:`gestionnaire source de "
+"donnees`, soit en la sélectionnant dans :menuselection:`couche -> `, soit en"
+" cliquant sur le bouron |dataSourceManager| :sup:`Open Data Source Manager`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:440
 msgid "Enable the |addMeshLayer| :guilabel:`Mesh` tab on the left panel"
 msgstr ""
+"Activez l'onglet |addMeshLayer| :guilabel:`maillage` sur le panneau de "
+"gauche"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:441
 msgid ""
 "Press the :guilabel:`...` :sup:`Browse` button to select the file. "
 ":ref:`Various formats <mesh_supported_formats>` are supported."
 msgstr ""
+"Appuyez sur le bouton :guilabel:`...` :sup:`Parcourir` pour sélectionner le "
+"fichier. :ref:`De nombreux formats <mesh_supported_formats>` sont supportés."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:443
 msgid ""
 "Select the layer and press :guilabel:`Add`. The layer will be added using "
 "the native mesh rendering."
 msgstr ""
+"Sélectionnez la couche et appuyez sur :guilabel:`Ajouter`. La couche sera "
+"ajoutée en utilisant le rendu de maillage natif."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:451
 msgid "Mesh tab in Data Source Manager"
-msgstr ""
+msgstr "Onglet Maillage dans gestionnaire de source de donnees"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:459
 msgid "Importing a delimited text file"
@@ -790,16 +1017,26 @@ msgid ""
 "coordinates / geometries that you could want to visualize. This is what "
 "|addDelimitedTextLayer|:guilabel:`Add Delimited Text Layer` is designed for."
 msgstr ""
+"Les fichiers texte délimités (par exemple :file:`.txt`, :file:`.csv`, "
+":file:`.dat`, :file:`.wkt`) peuvent être chargés à l'aide des outils décrits"
+" ci-dessus. De cette façon, ils apparaîtront comme de simples tables. "
+"Parfois, les fichiers texte délimités peuvent contenir des coordonnées / "
+"géométries que vous pourriez souhaiter visualiser. C'est pour cela que "
+"|addDelimitedTextLayer| :guilabel:`Ajouter une couche de texte délimité` est"
+" conçu."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:469
 msgid ""
 "Click the |dataSourceManager| :sup:`Open Data Source Manager` icon to open "
 "the :guilabel:`Data Source Manager` dialog"
 msgstr ""
+"Cliquez sur icône |dataSourceManager| :sup:`ouvrir le gestionnaire de "
+"sources de donnees` pour ouvrir la boîte de dialogue :guilabel:`gestionnaire"
+" de source de donnees`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:471
 msgid "Enable the |addDelimitedTextLayer| :guilabel:`Delimited Text` tab"
-msgstr ""
+msgstr "Activez l'onglet |addDelimitedTextLayer| :guilabel:`Texte délimité`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:472
 msgid ""
@@ -807,17 +1044,24 @@ msgid ""
 ":file:`qgis_sample_data/csv/elevp.csv`) by clicking on the :guilabel:`...` "
 ":sup:`Browse` button."
 msgstr ""
+"Sélectionnez le fichier texte délimité à importer (par exemple "
+":file:`qgis_sample_data/csv/elevp.csv`) en cliquant sur le bouton "
+":guilabel:`... ` :sup:`Parcourir`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:474
 msgid ""
 "In the :guilabel:`Layer name` field, provide the name to use for the layer "
 "in the project (e.g. :file:`Elevation`)."
 msgstr ""
+"Dans le champ :guilabel:`Nom de la couche`, indiquez le nom à utiliser pour "
+"la couche dans le projet (par exemple :file:`Élévation`)."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:476
 msgid ""
 "Configure the settings to meet your dataset and needs, as explained below."
 msgstr ""
+"Configurez les paramètres pour répondre à votre ensemble de données et à vos"
+" besoins, comme expliqué ci-dessous."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:483
 msgid "Delimited Text Dialog"
@@ -834,12 +1078,19 @@ msgid ""
 "correctly parse the file, it is important to select the right delimiter. You"
 " can specify a delimiter by choosing between:"
 msgstr ""
+"Une fois le fichier sélectionné, QGIS tente d'analyser le fichier avec le "
+"délimiteur le plus récemment utilisé, en identifiant les champs et les "
+"lignes. Pour permettre à QGIS d'analyser correctement le fichier, il est "
+"important de sélectionner le bon délimiteur. Vous pouvez spécifier un "
+"délimiteur en choisissant entre:"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:493
 msgid ""
 "|radioButtonOn|:guilabel:`CSV (comma separated values)` to use the comma "
 "character."
 msgstr ""
+"|radioButtonOn| :guilabel:`CSV (valeurs séparées par des virgules)` pour "
+"utiliser le caractère virgule."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:495
 msgid ""
@@ -848,6 +1099,10 @@ msgid ""
 "tab, use ``\\t`` (this is used in regular expressions for the tab "
 "character)."
 msgstr ""
+"|radioButtonOff| :guilabel:`Délimiteur d'expressions régulières` et entrez "
+"du texte dans le champ :guilabel:`Expression`. Par exemple, pour changer le "
+"délimiteur en tab, utilisez ``\\t`` (utilisé dans les expressions régulières"
+" pour le caractère de tabulation)."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:499
 msgid ""
@@ -855,6 +1110,9 @@ msgid ""
 "predefined delimiters like ``comma``, ``space``, ``tab``, ``semicolon``, ..."
 " ."
 msgstr ""
+"|radioButtonOff| :guilabel:`Délimiteurs personnalisés`, en choisissant parmi"
+" certains délimiteurs prédéfinis comme ``virgule``, ``espace``, "
+"``tabulation``, ``point-virgule``, ...."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:503
 msgid "Records and fields"
@@ -863,6 +1121,8 @@ msgstr "Enregistrements et champs"
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:505
 msgid "Some other convenient options can be used for data recognition:"
 msgstr ""
+"D'autres options pratiques peuvent être utilisées pour la reconnaissance des"
+" données:"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:507
 msgid ""
@@ -870,6 +1130,9 @@ msgid ""
 "avoid the first lines in the file in the import, either because those are "
 "blank lines or with another formatting."
 msgstr ""
+":guilabel:`Nombre de lignes d'en-tête à supprimer`: pratique lorsque vous "
+"souhaitez éviter les premières lignes du fichier lors de l'importation, soit"
+" parce que ce sont des lignes vides, soit avec un autre formatage."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:510
 msgid ""
@@ -877,6 +1140,9 @@ msgid ""
 " are used as field names, otherwise QGIS uses the field names ``field_1``, "
 "``field_2``..."
 msgstr ""
+"|checkbox| :guilabel:`Le premier enregistrement a des noms de champs`: les "
+"valeurs de la première ligne sont utilisées comme noms de champs, sinon QGIS"
+" utilise les noms de champs ``field_1``, ``field_2`` ..."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:513
 msgid ""
@@ -892,6 +1158,8 @@ msgid ""
 "|checkbox|:guilabel:`Decimal separator is comma`: you can force decimal "
 "separator to be a comma."
 msgstr ""
+"|checkbox| :guilabel:`Le séparateur décimal est une virgule`: vous pouvez "
+"forcer le séparateur décimal à être une virgule."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:517
 msgid ""
@@ -933,6 +1201,13 @@ msgid ""
 "coordinates` checkbox. Provide the appropriate :guilabel:`Geometry CRS` "
 "using the |setProjection| :sup:`Select CRS` widget."
 msgstr ""
+"|radioButtonOn| :guilabel:`Coordonnées du point` et fournissez "
+":guilabel:`Champ X`, :guilabel:`Champ Y`, :guilabel:`Champ Z` (pour les "
+"données tridimensionnelles) et :guilabel:`Champ M`(pour la dimension de "
+"mesure) si la couche est de type géométrie ponctuelle et contient de tels "
+"champs. Si les coordonnées sont définies en degrés/minutes/secondes, cochez "
+"la case |checkbox| :guilabel:`Coordonnées DMS`. Fournissez le "
+":guilabel:`Geometry CRS` à l'aide de |setProjection| :sup:`Select CRS`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:537
 msgid ""
@@ -942,6 +1217,12 @@ msgid ""
 "field` or let QGIS auto-detect it. Provide the appropriate "
 ":guilabel:`Geometry CRS` using the |setProjection| :sup:`Select CRS` widget."
 msgstr ""
+"|radioButtonOn| Option :guilabel:`Well Known Text (WKT)` si les informations"
+" spatiales sont représentées sous la forme WKT: sélectionnez "
+":guilabel:`Champ de géométrie` contenant la géométrie WKT et choisissez la "
+"version appropriée :guilabel:`Champ de géométrie` ou laissez QGIS le détecte"
+" automatiquement. Fournissez le :guilabel:`Geometry CRS` à l'aide de "
+"|setProjection| :sup:`Select CRS`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:543
 msgid ""
@@ -966,6 +1247,8 @@ msgid ""
 "|checkbox|:guilabel:`Use spatial index` to improve the performance of "
 "displaying and spatially selecting features."
 msgstr ""
+"|checkbox| :guilabel:`Utiliser l'index spatial` pour améliorer les "
+"performances d'affichage et de sélection spatiale des entités."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:553
 msgid ""
@@ -973,6 +1256,9 @@ msgid ""
 ":ref:`subset filters <vector_query_builder>` (when defined in the layer "
 "properties)."
 msgstr ""
+"|checkbox| :guilabel:`Utiliser l'index de sous-ensemble` pour améliorer les "
+"performances de :ref:`Use subset index 1` (lorsqu'il est défini dans les "
+"propriétés de la couche)."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:555
 msgid ""
@@ -992,6 +1278,12 @@ msgid ""
 "require :ref:`to be saved <general_saveas>` in order to get a spatial layer "
 "on disk."
 msgstr ""
+"À la fin, cliquez sur :guilabel:`Ajouter` pour ajouter la couche à la carte."
+" Dans notre exemple, une couche de points nommée ``Altitude` est ajoutée au "
+"projet et se comporte comme n'importe quelle autre couche de carte dans "
+"QGIS. Cette couche est le résultat d'une requête sur le fichier source "
+":file:`.csv` (donc liée à lui) et nécessiterait :ref:`to be saved 1` afin "
+"d'obtenir une couche spatiale sur le disque."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:570
 msgid "Importing a DXF or DWG file"
@@ -1004,6 +1296,10 @@ msgid ""
 "you would like to add to the project. Layers are added with random style "
 "properties."
 msgstr ""
+"Les fichiers :file:`DXF` et :file:`DWG` peuvent être ajoutés à QGIS par "
+"simple glisser-déposer depuis le panneau de l'Explorateur. Vous serez invité"
+" à sélectionner les sous-couches que vous souhaitez ajouter au projet. Les "
+"couches sont ajoutées avec des propriétés de style aléatoires."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:577
 msgid ""
@@ -1011,6 +1307,9 @@ msgid ""
 "polygon), the name of the layers will be generated as *<filename.dxf> "
 "entities <geometry type>*."
 msgstr ""
+"Pour les fichiers DXF contenant plusieurs types de géométrie (point, ligne "
+"et / ou polygone), le nom des couches sera généré en tant qu'entités "
+"*<filename.dxf> 1*."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:581
 msgid ""
@@ -1019,8 +1318,8 @@ msgid ""
 "Layers from DWG/DXF...` tool which allows you to:"
 msgstr ""
 "Pour conserver la structure du fichier dxf / dwg et sa symbologie dans QGIS,"
-" vous pouvez utiliser l'outil dédié :menuselection:`Project -> Import / "
-"Export -> Import Layers from DWG / DXF ...` qui vous permet de :"
+" vous pouvez utiliser l'outil dédié :menuselection:`Projet --> Import / "
+"Export --> Importer couches depuis DWG / DXF...` qui vous permet de :"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:586
 msgid "import elements from the drawing file into a GeoPackage database."
@@ -1030,13 +1329,15 @@ msgstr ""
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:587
 msgid "add imported elements to the project."
-msgstr ""
+msgstr "ajouter des éléments importés au projet."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:589
 msgid ""
 "In the :guilabel:`DWG/DXF Import` dialog, to import the drawing file "
 "contents:"
 msgstr ""
+"Dans la boîte de dialogue :guilabel:`Importation DWG / DXF`, pour importer "
+"le contenu du fichier de dessin:"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:592
 msgid ""
@@ -1078,6 +1379,10 @@ msgid ""
 "the drawing file content. Depending on the size of the file, this can take "
 "some time."
 msgstr ""
+"Utilisez le bouton :guilabel:`Importer` pour sélectionner le fichier DWG / "
+"DXF à utiliser (un par géopackage). La base de données GeoPackage sera "
+"automatiquement remplie avec le contenu du fichier de dessin. Selon la "
+"taille du fichier, cela peut prendre un certain temps."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:606
 msgid ""
@@ -1086,6 +1391,10 @@ msgid ""
 "with the list of layers from the imported file. There you can select which "
 "layers to add to the QGIS project:"
 msgstr ""
+"Une fois les données :file:`.dwg` ou :file:`.dxf` importées dans la base de "
+"données GeoPackage, le cadre dans la moitié inférieure de la boîte de "
+"dialogue est rempli avec la liste des couches du fichier importé. Vous "
+"pouvez y sélectionner les couches à ajouter au projet QGIS:"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:611
 msgid ""
@@ -1102,16 +1411,23 @@ msgid ""
 "drawing layer. The style of the layers will resemble the look they "
 "originally had in \\*CAD."
 msgstr ""
+"Vérifier les couches à afficher: chaque couche sélectionnée esyt ajoutee à "
+"un groupe ad hoc qui contient des couches vectorielles pour les entités "
+"ponctuelles, linéaires, d'étiquettes et de surface de la couche de dessin. "
+"Le style des couches ressemblera à l'aspect qu'ils avaient à l'origine dans "
+"\\*CAD."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:618
 msgid "Choose if the layer should be visible at opening."
-msgstr ""
+msgstr "Choisissez si la couche doit être visible à l'ouverture."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:619
 msgid ""
 "Checking the |checkbox| :guilabel:`Merge layers` option places all layers in"
 " a single group."
 msgstr ""
+"|checkbox| :guilabel:`Fusionner les calques` place tous les calques dans un "
+"seul groupe."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:621
 msgid "Press :guilabel:`OK` to open the layers in QGIS."
@@ -1133,6 +1449,12 @@ msgid ""
 "photography and local knowledge. To support this objective, QGIS provides "
 "support for OSM data."
 msgstr ""
+"Le projet OpenStreetMap est populaire car dans de nombreux pays, aucune "
+"géodonnée gratuite telle que des cartes routières numériques n'est "
+"disponible. L'objectif du projet OSM est de créer une carte du monde "
+"éditable gratuite à partir des données GPS, de la photographie aérienne et "
+"des connaissances locales. Pour soutenir cet objectif, QGIS prend en charge "
+"les données OSM."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:645
 msgid ""
@@ -1142,6 +1464,12 @@ msgid ""
 "geometry type in the :file:`.osm` file, and keep the :file:`osm` file data "
 "structure."
 msgstr ""
+"En utilisant le :guilabel:`panneau Explorateur`, vous pouvez charger un "
+"fichier :file:`.osm` dans le canevas de carte, auquel cas vous obtiendrez "
+"une boîte de dialogue pour sélectionner des sous-couches en fonction du type"
+" de géométrie. Les couches chargées contiendront toutes les données de ce "
+"type de géométrie dans le fichier :file:`.osm`, et conserveront la structure"
+" de données du fichier :file:`osm`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:657
 msgid "SpatiaLite Layers"
@@ -1160,16 +1488,20 @@ msgid ""
 "clicking on the |addSpatiaLiteLayer| :sup:`Add SpatiaLite Layer` toolbar "
 "button"
 msgstr ""
+"en cliquant sur le bouton |addSpatiaLiteLayer| :sup:`Ajouter une couche "
+"SpatiaLite`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:664
 msgid ""
 "selecting the |addSpatiaLiteLayer| :menuselection:`Add SpatiaLite Layer...` "
 "option from the :menuselection:`Layer --> Add Layer` menu"
 msgstr ""
+"sélection de |addSpatiaLiteLayer| :menuselection:`Ajouter une couche "
+"SpatiaLite...` du menu :menuselection:`Coucher --> Ajouter couche`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:666
 msgid "or by typing :kbd:`Ctrl+Shift+L`"
-msgstr ""
+msgstr "ou en tapant :kbd:`Ctrl + Maj + L`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:668
 msgid ""
@@ -1179,6 +1511,13 @@ msgid ""
 "connection, click on :guilabel:`New` and use the file browser to point to "
 "your SpatiaLite database, which is a file with a :file:`.sqlite` extension."
 msgstr ""
+"Cela fera apparaître une fenêtre qui vous permettra soit de vous connecter à"
+" une base de données SpatiaLite déjà connue de QGIS (que vous choisissez "
+"dans le menu déroulant) soit de définir une nouvelle connexion à une "
+"nouvelle base de données. Pour définir une nouvelle connexion, cliquez sur "
+":guilabel:`Nouveau` et utilisez l'explorateur de fichiers pour pointer vers "
+"votre base de données SpatiaLite, qui est un fichier avec une extension "
+":file:`.sqlite`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:674
 msgid "QGIS also supports editable views in SpatiaLite."
@@ -1193,6 +1532,9 @@ msgid ""
 "Loading GPS data in QGIS can be done using the core plugin ``GPS Tools``. "
 "Instructions are found in section :ref:`plugin_gps`."
 msgstr ""
+"Le chargement des données GPS dans QGIS peut être effectué à l'aide du "
+"plugin principal ``GPS Tools``. Les instructions se trouvent dans la section"
+" :ref:`plugin_gps`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:685
 msgid "GRASS"
@@ -1202,6 +1544,8 @@ msgstr "GRASS"
 msgid ""
 "Working with GRASS vector data is described in section :ref:`sec_grass`."
 msgstr ""
+"Le travail avec les données vectorielles GRASS est décrit dans la section "
+":ref:`sec_grass`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:694
 msgid "Database related tools"
@@ -1219,6 +1563,11 @@ msgid ""
 "databases, QGIS provides other tools to connect to each of them and load "
 "their tables:"
 msgstr ""
+"Pour lire et écrire des tables à partir d'un format de base de données pris "
+"en charge par QGIS, vous devez créer une connexion à cette base de données. "
+"Alors que :ref:`QGIS Browser Panel 1` est le moyen le plus simple et "
+"recommandé de se connecter et d'utiliser des bases de données, QGIS fournit "
+"d'autres outils pour se connecter à chacun d'eux et charger leurs tables:"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:708
 msgid ""
@@ -1230,19 +1579,23 @@ msgstr ""
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:710
 msgid "|addMssqlLayer| :menuselection:`Add MSSQL Spatial Layer`"
-msgstr ""
+msgstr "|addMssqlLayer| :menuselection:`Ajouter une couche spatiale MSSQL`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:711
 msgid ""
 "|addOracleLayer| :menuselection:`Add Oracle Spatial Layer...` or by typing "
 ":kbd:`Ctrl+Shift+O`"
 msgstr ""
+"|addOracleLayer| :menuselection:`Add Oracle Spatial Layer ...` ou en tapant "
+":kbd:`Ctrl + Shift + O`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:713
 msgid ""
 "|addDb2Layer| :menuselection:`Add DB2 Spatial Layer...` or by typing "
 ":kbd:`Ctrl+Shift+2`"
 msgstr ""
+"|addDb2Layer| :menuselection:`Ajouter DB2 Spatial Layer ...` ou en tapant "
+":kbd:`Ctrl + Shift + 2`"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:716
 msgid ""
@@ -1250,6 +1603,10 @@ msgid ""
 " and the :menuselection:`Layer --> Add Layer -->` menu. Connecting to "
 "SpatiaLite database is described at :ref:`label_spatialite`."
 msgstr ""
+"Ces outils sont accessibles à partir de :guilabel:`Gérer les barres d'outils"
+" des couches` et du :menuselection:`Couche-> Ajouter une couche ->`. La "
+"connexion à la base de données SpatiaLite est décrite dans "
+":ref:`label_spatialite`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:720
 msgid "**Create connection to database from the QGIS Browser Panel**"
@@ -1262,6 +1619,10 @@ msgid ""
 "clicking and choosing connect will provide you with the database connection "
 "dialog."
 msgstr ""
+"En sélectionnant le format de base de données correspondant dans "
+"l'arborescence de l'Explorateur, en cliquant avec le bouton droit et en "
+"choisissant Connecter, vous obtiendrez la boîte de dialogue de connexion à "
+"la base de données."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:726
 msgid ""
@@ -1270,6 +1631,10 @@ msgid ""
 "settings specific to other providers, you can find corresponding "
 "descriptions at:"
 msgstr ""
+"La plupart des boîtes de dialogue de connexion suivent une base commune qui "
+"sera décrite ci-dessous en utilisant l'outil de base de données PostgreSQL "
+"comme exemple. Pour des paramètres supplémentaires spécifiques à d'autres "
+"fournisseurs, vous pouvez trouver les descriptions correspondantes sur:"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:731
 msgid ":ref:`create_mssql_connection`;"
@@ -1309,12 +1674,17 @@ msgid ""
 "The parameters required for a PostGIS connection are explained below. For "
 "the other database types, see their differences at :ref:`db_requirements`."
 msgstr ""
+"Les paramètres requis pour une connexion PostGIS sont expliqués ci-dessous. "
+"Pour les autres types de bases de données, voyez leurs différences sur "
+":ref:`db_requirements`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:755
 msgid ""
 ":guilabel:`Name`: A name for this connection. It can be the same as "
 ":guilabel:`Database`."
 msgstr ""
+":guilabel:`nom`: Un nom pour cette connexion. Il peut être identique à la "
+":guilabel:`base donnees`."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:756
 msgid ""
@@ -1323,6 +1693,10 @@ msgid ""
 ":file:`pg_service.conf`. Check the :ref:`pg-service-file` section for more "
 "details."
 msgstr ""
+":guilabel:`Service`: Paramètre de service à utiliser alternativement pour le"
+" nom d'hôte / port (et potentiellement la base de données). Cela peut être "
+"défini dans :file:`pg_service.conf`. Consultez la section :ref:`pg-service-"
+"file` pour plus de détails."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:759
 msgid ""
@@ -1330,68 +1704,104 @@ msgid ""
 "name such as would be used to open a TCP/IP connection or ping the host. If "
 "the database is on the same computer as QGIS, simply enter *localhost* here."
 msgstr ""
+":guilabel:`Hote`: nom de l'hôte de la base de données. Il doit s'agir d'un "
+"nom d'hôte résolvable tel que celui utilisé pour ouvrir une connexion TCP / "
+"IP ou envoyer une requête ping à l'hôte. Si la base de données se trouve sur"
+" le même ordinateur que QGIS, entrez simplement *localhost* ici."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:762
 msgid ""
 ":guilabel:`Port`: Port number the PostgreSQL database server listens on. The"
 " default port for PostGIS is ``5432``."
 msgstr ""
+":guilabel:`Port`: Numéro de port sur lequel le serveur de base de données "
+"PostgreSQL écoute. Le port par défaut pour PostGIS est ``5432``."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:764
 msgid ":guilabel:`Database`: Name of the database."
-msgstr ""
+msgstr ":guilabel:`Base de donnees`: Nom de la base de données."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:765
 msgid ""
-":guilabel:`SSL mode`: How the SSL connection will be negotiated with the "
-"server. Note that massive speed-ups in PostGIS layer rendering can be "
-"achieved by disabling SSL in the connection editor. The following options "
-"may be available:"
+":guilabel:`SSL mode`: SSL encryption setup The following options are "
+"available:"
 msgstr ""
+":guilabel:`SSL mode` : chiffrement SSL. Les options suivantes sont "
+"disponibles :"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:768
+msgid ""
+":guilabel:`Prefer` (the default): I don't care about encryption, but I wish "
+"to pay the overhead of encryption if the server supports it."
+msgstr ""
+":guilabel:`préfère` (par défaut) : Je n’accorde pas d'importance au "
+"chiffrement mais j’accepte la surcharge liée au chiffrement si le serveur le"
+" gère."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:770
-msgid ":guilabel:`Disable`: Only try an unencrypted SSL connection;"
-msgstr ""
-
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:771
 msgid ""
-":guilabel:`Allow`: Try a non-SSL connection. If that fails, try an SSL "
-"connection;"
+":guilabel:`Require`: I want my data to be encrypted, and I accept the "
+"overhead. I trust that the network will make sure I always connect to the "
+"server I want."
 msgstr ""
+":guilabel:`requiert` : Je veux que mes données soient chiffrées et j'accepte"
+" la surcharge. Je fais confiance au réseau pour me connecter toujours au "
+"serveur que je veux."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:772
 msgid ""
-":guilabel:`Prefer` (the default): Try an SSL connection. If that fails, try "
-"a non-SSL connection;"
+":guilabel:`Verify CA`: I want my data encrypted, and I accept the overhead. "
+"I want to be sure that I connect to a server that I trust."
 msgstr ""
+":guilabel:`verify-CA` : Je veux chiffrer mes données et j'accepte la "
+"surcharge. Je veux être sûr que je me connecte à un serveur en qui j'ai "
+"confiance."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:774
-msgid ":guilabel:`Require`: Only try an SSL connection."
+msgid ""
+":guilabel:`Verify Full`: I want my data encrypted, and I accept the "
+"overhead. I want to be sure that I connect to a server I trust, and that "
+"it's the one I specify."
 msgstr ""
-
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:775
-msgid ":guilabel:`verify_ca`:"
-msgstr ""
+":guilabel:`verify Full` : Je veux chiffrer mes données, et j'accepte la "
+"surcharge. Je veux être sûr que je me connecte à un serveur en qui j'ai "
+"confiance et que c'est bien celui que j'indique. "
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:776
-msgid ":guilabel:`verify_full`:"
+msgid ""
+":guilabel:`Allow`: I don't care about security, but I will pay the overhead "
+"of encryption if the server insists on it."
 msgstr ""
+":guilabel:`permet` : Peu m'importe la sécurité, mais je vais accepter la "
+"surcharge du chiffrement si le serveur insiste là-dessus. "
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:778
-msgid ":guilabel:`Authentication`, basic."
+msgid ""
+":guilabel:`Disable`: I don't care about security, and I don't want to pay "
+"the overhead of encryption."
 msgstr ""
-
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:780
-msgid ":guilabel:`User name`: User name used to log in to the database."
-msgstr ""
+":guilabel:`désactive` : Peu m'importe la sécurité, je ne veux pas la "
+"surcharge apportée par le chiffrement."
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:781
+msgid ":guilabel:`Authentication`, basic."
+msgstr ":guilabel:`Authentication`, basic."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:783
+msgid ":guilabel:`User name`: User name used to log in to the database."
+msgstr ""
+":guilabel:`Nom d'utilisateur`: Nom d'utilisateur utilisé pour se connecter à"
+" la base de données."
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:784
 msgid ""
 ":guilabel:`Password`: Password used with *Username* to connect to the "
 "database."
 msgstr ""
+":guilabel:`Mot de passe`: Mot de passe utilisé avec *Username* pour se "
+"connecter à la base de données."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:783
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:786
 msgid ""
 "You can save any or both of the ``User name`` and ``Password`` parameters, "
 "in which case they will be used by default each time you need to connect to "
@@ -1401,12 +1811,21 @@ msgid ""
 " username/password for the same database is requested, until you end the "
 "current QGIS session."
 msgstr ""
+"Vous pouvez enregistrer l'un ou les deux paramètres ``Nom d'utilisateur`` et"
+" ``Mot de passe``, auquel cas ils seront utilisés par défaut chaque fois que"
+" vous devrez vous connecter à cette base de données. S'il n'est pas "
+"enregistré, vous serez invité à fournir les informations d'identification "
+"pour vous connecter à la base de données lors des prochaines sessions QGIS. "
+"Les paramètres de connexion que vous avez entrés sont stockés dans un cache "
+"interne temporaire et retournés chaque fois qu'un nom d'utilisateur / mot de"
+" passe pour la même base de données est demandé, jusqu'à la fin de la "
+"session QGIS en cours."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:791
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:794
 msgid "**QGIS User Settings and Security**"
 msgstr "**Paramètres utilisateur de QGIS et Sécurité**"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:793
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:796
 msgid ""
 "In the :guilabel:`Authentication` tab, saving **username** and **password** "
 "will keep unprotected credentials in the connection configuration. Those "
@@ -1416,31 +1835,44 @@ msgid ""
 " :ref:`authentication_index` for more details) or in a service connection "
 "file (see :ref:`pg-service-file` for example)."
 msgstr ""
+"Dans l'onglet :guilabel:`Authentification`, l'enregistrement du **nom "
+"d'utilisateur** et **mot de passe** conservera les informations "
+"d'identification non protégées dans la configuration de la connexion. Ces "
+"informations d'identification seront visibles **si, par exemple, vous "
+"partagez le fichier de projet avec quelqu'un. Par conséquent, il est "
+"conseillé de sauvegarder vos informations d'identification dans une "
+"*configuration d'authentification* à la place ( onglet "
+":guilabel:`Configurations` - Voir :ref:`index_authentification` pour plus de"
+" détails) ou dans un fichier de connexion de service (voir :ref:`pg- "
+"service-file` par exemple)."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:801
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:804
 msgid ""
 ":guilabel:`Authentication`, configurations. Choose an authentication "
 "configuration. You can add configurations using the |signPlus| button. "
 "Choices are:"
 msgstr ""
-
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:805
-msgid "Basic authentication"
-msgstr ""
-
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:806
-msgid "PKI PKCS#12 authentication"
-msgstr ""
-
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:807
-msgid "PKI paths authentication"
-msgstr ""
+":guilabel:`Authentification`, configurations. Choisissez une configuration "
+"d'authentification. Vous pouvez ajouter des configurations en utilisant le "
+"bouton |signPlus| . Les choix sont:"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:808
-msgid "PKI stored identity certificate"
-msgstr ""
+msgid "Basic authentication"
+msgstr "Authentification de base"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:809
+msgid "PKI PKCS#12 authentication"
+msgstr "Authentification PKI PKCS#12"
 
 #: ../../docs/user_manual/managing_data_source/opening_data.rst:810
+msgid "PKI paths authentication"
+msgstr "Authentification des chemins PKI"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:811
+msgid "PKI stored identity certificate"
+msgstr "Certificat d'identité stocké PKI"
+
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:813
 msgid ""
 "Optionally, depending on the type of database, you can activate the "
 "following checkboxes:"
@@ -1448,43 +1880,45 @@ msgstr ""
 "Vous pouvez également, selon le type de base de données, activer les cases à"
 " cocher suivantes :"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:813
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:816
 msgid "|checkbox| :guilabel:`Only show layers in the layer registries`"
 msgstr ""
 "|checkbox| :guilabel:`N'afficher que les couches dont la géométrie est "
 "listée (dans geometry_columns)`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:814
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:817
 msgid ""
 "|checkbox| :guilabel:`Don't resolve type of unrestricted columns (GEOMETRY)`"
 msgstr ""
 "|checkbox| :guilabel:`Ne pas résoudre le type pour les géométries non "
 "restreintes (GEOMETRY)`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:815
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:818
 msgid "|checkbox| :guilabel:`Only look in the 'public' schema`"
 msgstr "|checkbox| :guilabel:`Ne regarder que dans le schéma 'public'`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:816
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:819
 msgid "|checkbox| :guilabel:`Also list tables with no geometry`"
 msgstr "|checkbox| :guilabel:`Lister les tables sans géométrie`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:817
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:820
 msgid "|checkbox| :guilabel:`Use estimated table metadata`"
 msgstr "|checkbox| :guilabel:`Utiliser la table des métadonnées estimées`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:818
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:821
 msgid ""
 "|checkbox| :guilabel:`Allow saving/loading QGIS projects in the database` - "
 "more details :ref:`here <saveprojecttodb>`"
 msgstr ""
+"|checkbox| :guilabel:`Autoriser l'enregistrement / le chargement de projets "
+"QGIS dans la base de données` - plus de détails :ref:`here 1`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:821
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:824
 msgid "**Use estimated table metadata to speed up operations**"
 msgstr ""
 "**Utiliser la table de métadonnées estimées pour accélérer les opérations**"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:823
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:826
 msgid ""
 "When initializing layers, various queries may be needed to establish the "
 "characteristics of the geometries stored in the database table. When the "
@@ -1496,8 +1930,19 @@ msgid ""
 "even cause strange behaviour if columns that are supposed to be unique "
 "actually are not."
 msgstr ""
+"Lors de l'initialisation des couches, diverses requêtes peuvent être "
+"nécessaires pour établir les caractéristiques des géométries stockées dans "
+"la table de base de données. Lorsque l'option :guilabel:`Utiliser les "
+"métadonnées estimées de table` est cochée, ces requêtes examinent uniquement"
+" un échantillon des lignes et utilisent les statistiques de la table, plutôt"
+" que la table entiere. Cela peut considérablement accélérer les opérations "
+"sur de grands ensembles de données, mais peut entraîner une caractérisation "
+"incorrecte des couches (par exemple, le nombre d'entités des couches "
+"filtrées ne sera pas déterminé avec précision) et peut même provoquer un "
+"comportement étrange si les colonnes qui sont censées être uniques ne le "
+"sont pas réellement."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:833
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:836
 msgid ""
 "Once all parameters and options are set, you can test the connection by "
 "clicking the :guilabel:`Test Connection` button or apply it by clicking the "
@@ -1505,22 +1950,31 @@ msgid ""
 ":guilabel:`Connect`, and the dialog is filled with tables from the selected "
 "database (as shown in figure_add_postgis_tables_)."
 msgstr ""
+"Une fois tous les paramètres et options définis, vous pouvez tester la "
+"connexion en cliquant sur le bouton :guilabel:`Tester la connexion` ou "
+"l'appliquer en cliquant sur le bouton :guilabel:`OK`. De :guilabel:`Ajouter "
+"des tables PostGIS`, cliquez maintenant sur :guilabel:`connecter`, et la "
+"boîte de dialogue est remplie des tables de la base de données sélectionnée "
+"(comme illustré dans figure_add_postgis_tables_)."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:844
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:847
 msgid "Particular Connection requirements"
 msgstr "Paramètres particuliers de connexion"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:846
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:849
 msgid ""
 "Because of database type particularities, provided options are not the same."
 " Database specific options are described below."
 msgstr ""
+"En raison des particularités du type de base de données, les options "
+"fournies ne sont pas les mêmes. Les options spécifiques à la base de données"
+" sont décrites ci-dessous."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:852
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:855
 msgid "PostgreSQL Service connection file"
 msgstr "Fichier de connexion de service"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:854
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:857
 msgid ""
 "The service connection file allows PostgreSQL connection parameters to be "
 "associated with a single service name. That service name can then be "
@@ -1530,7 +1984,7 @@ msgstr ""
 "PostgreSQL d'être associés à un seul nom de service. Ce nom de service peut "
 "alors être utilisé par un client et les paramètres associés seront utilisés."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:858
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:861
 msgid ""
 "It's called :file:`.pg_service.conf` under \\*nix systems (GNU/Linux, macOS "
 "etc.) and :file:`pg_service.conf` on Windows."
@@ -1538,11 +1992,11 @@ msgstr ""
 "Il est nommé :file:`.pg_service.conf` sous les systèmes \\*nix (GNU/Linux, "
 "macOs, etc.) et :file:`pg_service.conf` sous Windows."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:861
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:864
 msgid "The service file can look like this::"
-msgstr ""
+msgstr "Le fichier de service peut ressembler à ceci:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:875
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:878
 msgid ""
 "There are two services in the above example: ``water_service`` and "
 "``wastewater_service``. You can use these to connect from QGIS, pgAdmin, "
@@ -1551,22 +2005,35 @@ msgid ""
 "``psql`` you need to do something like ``export PGSERVICE=water_service`` "
 "before doing your psql commands."
 msgstr ""
+"Il existe deux services dans l'exemple ci-dessus: ``water_service`` et "
+"``wastewater_service``. Vous pouvez les utiliser pour vous connecter à "
+"partir de QGIS, pgAdmin, etc. en spécifiant uniquement le nom du service "
+"auquel vous souhaitez vous connecter (sans les crochets inclus). Si vous "
+"souhaitez utiliser le service avec ``psql``, vous devez faire quelque chose "
+"comme ``export PGSERVICE=water_service`` avant d'exécuter vos commandes "
+"psql."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:882
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:885
 msgid ""
 "You can find all the PostgreSQL parameters `here "
 "<https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-"
 "PARAMKEYWORDS>`_"
 msgstr ""
+"Vous pouvez trouver tous les paramètres PostgreSQL `ici "
+"<https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-"
+"PARAMKEYWORDS>` _ _"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:885
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:888
 msgid ""
 "If you don't want to save the passwords in the service file you can use the "
 "`.pg_pass <https://www.postgresql.org/docs/current/libpq-pgpass.html>`_ "
 "option."
 msgstr ""
+"Si vous ne souhaitez pas enregistrer les mots de passe dans le fichier de "
+"service, vous pouvez utiliser l'option `.pg_pass "
+"<https://www.postgresql.org/docs/current/libpq-pgpass.html>` _."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:891
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:894
 msgid ""
 "On \\*nix operating systems (GNU/Linux, macOS etc.) you can save the "
 ":file:`.pg_service.conf` file in the user's home directory and PostgreSQL "
@@ -1575,8 +2042,15 @@ msgid ""
 ":file:`/home/web/` directory in order to directly work (without specifying "
 "any other environment variables)."
 msgstr ""
+"Sur les systèmes d'exploitation \\*nix (GNU / Linux, macOS, etc.), vous "
+"pouvez enregistrer le fichier :file:`.pg_service.conf` dans le répertoire "
+"personnel de l'utilisateur et les clients PostgreSQL en seront "
+"automatiquement informés. Par exemple, si l'utilisateur connecté est "
+"``web``, :file:`.pg_service.conf` doit être enregistré dans le répertoire "
+":file:`/home/web/ `afin de fonctionner directement (sans spécifier d'autre "
+"variables d'environnement) )."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:898
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:901
 msgid ""
 "You can specify the location of the service file by creating a "
 "``PGSERVICEFILE`` environment variable (e.g. run the ``export "
@@ -1588,7 +2062,7 @@ msgstr ""
 "PGSERVICEFILE=/home/web/.pg_service.conf`` sous votre OS \\*nix pour créer "
 "temporairement la variable ``PGSERVICEFILE``)."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:904
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:907
 msgid ""
 "You can also make the service file available system-wide (all users) either "
 "by placing the :file:`.pg_service.conf` file in ``pg_config --sysconfdir`` "
@@ -1596,12 +2070,19 @@ msgid ""
 "directory containing the service file. If service definitions with the same "
 "name exist in the user and the system file, the user file takes precedence."
 msgstr ""
+"Vous pouvez également rendre le fichier de service disponible à l'échelle du"
+" système (tous les utilisateurs) en plaçant le fichier "
+":file:`.pg_service.conf` dans ``pg_config --sysconfdir`` ou en ajoutant la "
+"variable d'environnement ``PGSYSCONFDIR`` et spécifiez le répertoire "
+"contenant le fichier de service. Si des définitions de service portant le "
+"même nom existent dans l'utilisateur et le fichier système, le fichier "
+"utilisateur est prioritaire."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:912
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:915
 msgid "There are some caveats under Windows:"
 msgstr "Il existe quelques limites sous Windows :"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:914
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:917
 msgid ""
 "The service file should be saved as :file:`pg_service.conf` and not as "
 ":file:`.pg_service.conf`."
@@ -1609,7 +2090,7 @@ msgstr ""
 "Le fichier de service doit être nommé :file:`pg_service.conf` et non "
 ":file:`.pg_service.conf`."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:916
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:919
 msgid ""
 "The service file should be saved in Unix format in order to work. One way to"
 " do it is to open it with `Notepad++ <https://notepad-plus-plus.org/>`_ and "
@@ -1617,10 +2098,10 @@ msgid ""
 msgstr ""
 "Le fichier de service doit être sauvegardé au format Unix pour fonctionner. "
 "Un moyen de le garantir est de l'ouvrir avec `Notepad++ <https://notepad-"
-"plus-plus.org/>`_ et d'utiliser :menuselection:`Editer -> Conversion des "
-"retours à la ligne -> Format Unix -> Sauvegarder le fichier`."
+"plus-plus.org/>`_ et d'utiliser :menuselection:`Éditer --> Conversion des "
+"retours à la ligne --> Format Unix --> Sauvegarder le fichier`."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:921
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:924
 msgid ""
 "You can add environmental variables in various ways; a tested one, known to "
 "work reliably, is :menuselection:`Control Panel --> System and Security --> "
@@ -1628,8 +2109,14 @@ msgid ""
 "``PGSERVICEFILE`` with the path - e.g. "
 ":file:`C:\\\\Users\\\\John\\\\pg_service.conf`"
 msgstr ""
+"Vous pouvez ajouter des variables d'environnement de différentes manières; "
+"un test, connu pour fonctionner de manière fiable, est "
+":menuselection:`Panneau de configuration -> Système et sécurité -> Système "
+"-> Paramètres système avancés -> Variables d'environnement` en ajoutant "
+"``PGSERVICEFILE`` avec le chemin d'accès - par ex. "
+":file:`C:\\\\Users\\\\John\\\\pg_service.conf`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:926
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:929
 msgid ""
 "After adding an environment variable you may also need to restart the "
 "computer."
@@ -1637,11 +2124,11 @@ msgstr ""
 "Après avoir ajouté une variable d'environnement, vous aurez peut-être besoin"
 " de redémarrer l'ordinateur."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:933
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:936
 msgid "Connecting to Oracle Spatial"
 msgstr "Connexion Oracle Spatial"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:935
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:938
 msgid ""
 "The spatial features in Oracle Spatial aid users in managing geographic and "
 "location data in a native type within an Oracle database. In addition to "
@@ -1654,11 +2141,11 @@ msgstr ""
 ":ref:`vector_create_stored_connection`, la boîte de dialogue de connexion "
 "propose:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:940
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:943
 msgid "**Database**: SID or SERVICE_NAME of the Oracle instance;"
 msgstr "**Base de données** : SID ou SERVICE_NAME de l'instance Oracle."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:941
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:944
 msgid ""
 "**Port**: Port number the Oracle database server listens on. The default "
 "port is ``1521``;"
@@ -1666,15 +2153,15 @@ msgstr ""
 "**Port** : numéro de port que le serveur de base de données Oracle écoute. "
 "Le port par défaut est ``1521``."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:943
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:946
 msgid "**Workspace**: Workspace to switch to."
 msgstr "**Espace de travail**: passer à l'espace de travail."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:945
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:948
 msgid "Optionally, you can activate the following checkboxes:"
-msgstr ""
+msgstr "Vous pouvez éventuellement activer les cases à cocher suivantes:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:947
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:950
 msgid ""
 "|checkbox| :guilabel:`Only look in metadata table`: restricts the displayed "
 "tables to those that are in the ``all_sdo_geom_metadata`` view. This can "
@@ -1685,7 +2172,7 @@ msgstr ""
 "``all_sdo_geom_metadata``. Cela peut accélérer l'affichage initial des "
 "tables spatiales."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:950
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:953
 msgid ""
 "|checkbox| :guilabel:`Only look for user's tables`: when searching for "
 "spatial tables, restricts the search to tables that are owned by the user."
@@ -1694,7 +2181,7 @@ msgstr ""
 "lors de la recherche de tables spatiales, restreint la recherche aux tables "
 "appartenant à l'utilisateur."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:952
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:955
 msgid ""
 "|checkbox| :guilabel:`Also list tables with no geometry`: indicates that "
 "tables without geometry should also be listed by default."
@@ -1702,7 +2189,7 @@ msgstr ""
 "|checkbox| :guilabel:`Également lister les tables sans géométrie`: indique "
 "que les tables sans géométrie doivent également être listées par défaut."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:954
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:957
 msgid ""
 "|checkbox| :guilabel:`Use estimated table statistics for the layer "
 "metadata`: when the layer is set up, various metadata are required for the "
@@ -1728,7 +2215,7 @@ msgstr ""
 "couche est appliqué. La géométrie de la table est déterminée à partir des "
 "100 premières lignes de géométrie non nulles de la table."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:964
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:967
 msgid ""
 "|checkbox| :guilabel:`Only existing geometry types`: only lists the existing"
 " geometry types and don't offer to add others."
@@ -1737,16 +2224,16 @@ msgstr ""
 "uniquement les types de géométrie existants et ne propose pas d'en ajouter "
 "d'autres."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:966
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:969
 msgid "|checkbox| :guilabel:`Include additional geometry attributes`."
 msgstr ""
 "|checkbox| :guilabel:`Inclure les attributs géométriques additionnels`."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:970
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:973
 msgid "**Oracle Spatial Layers**"
 msgstr "**Couches Oracle Spatial**"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:972
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:975
 msgid ""
 "Normally, an Oracle Spatial layer is defined by an entry in the "
 "**USER_SDO_METADATA** table."
@@ -1754,7 +2241,7 @@ msgstr ""
 "Normalement, une couche Oracle Spatial est définie par une entrée dans la "
 "table **USER_SDO_METADATA**."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:975
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:978
 msgid ""
 "To ensure that selection tools work correctly, it is recommended that your "
 "tables have a **primary key**."
@@ -1762,11 +2249,11 @@ msgstr ""
 "Pour vous assurer que les outils de sélection fonctionnent correctement, il "
 "est recommandé que vos tables aient une **clé primaire**."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:982
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:985
 msgid "Connecting to DB2 Spatial"
 msgstr "Connexion DB2 Spatial"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:984
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:987
 msgid ""
 "In addition to some of the options described in "
 ":ref:`vector_create_stored_connection`, the connection to a DB2 database "
@@ -1774,8 +2261,13 @@ msgid ""
 "either a :guilabel:`Service/DSN` name defined to ODBC or :guilabel:`Driver`,"
 " :guilabel:`Host` and :guilabel:`Port`."
 msgstr ""
+"En plus de certaines des options décrites dans "
+":ref:`vector_create_stored_connection`, la connexion à une base de données "
+"DB2 (voir :ref:`label_db2_spatial` pour plus d'informations) peut être "
+"spécifiée en utilisant soit avec :guilabel:`Service/DSN` défini vers ODBC ou"
+" :guilabel:`Driver`, :guilabel:`Host` et :guilabel:`Port`."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:990
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:993
 msgid ""
 "An ODBC **Service/DSN** connection requires the service name defined to "
 "ODBC."
@@ -1783,18 +2275,18 @@ msgstr ""
 "Une connexion ODBC **Service / DSN** nécessite le nom de service défini sur "
 "ODBC."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:992
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:995
 msgid "A driver/host/port connection requires:"
 msgstr "Un driver / hôte / port nécessite:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:994
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:997
 msgid ""
 "**Driver**: Name of the DB2 driver. Typically this would be IBM DB2 ODBC "
 "DRIVER."
 msgstr ""
 "**Driver**: nom du pilote DB2. Il s'agit généralement d'IBM DB2 ODBC DRIVER."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:996
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:999
 msgid ""
 "**DB2 Host**: Name of the database host. This must be a resolvable host name"
 " such as would be used to open a TCP/IP connection or ping the host. If the "
@@ -1805,7 +2297,7 @@ msgstr ""
 " envoyer une requête ping à l'hôte. Si la base de données se trouve sur le "
 "même ordinateur que QGIS, entrez simplement *localhost* ici."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1001
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1004
 msgid ""
 "**DB2 Port**: Port number the DB2 database server listens on. The default "
 "DB2 LUW port is ``50000``. The default DB2 z/OS port is ``446``."
@@ -1814,11 +2306,11 @@ msgstr ""
 "écoute. Le port DB2 LUW par défaut est ``50000``. Le port DB2 z / OS par "
 "défaut est ``446``."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1007
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1010
 msgid "**DB2 Spatial Layers**"
 msgstr "**Couche spatiale  DB2**"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1009
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1012
 msgid ""
 "A DB2 Spatial layer is defined by a row in the "
 "**DB2GSE.ST_GEOMETRY_COLUMNS** view."
@@ -1826,7 +2318,7 @@ msgstr ""
 "Une couche spatiale DB2 est définie par une ligne dans la vue "
 "**DB2GSE.ST_GEOMETRY_COLUMNS**."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1014
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1017
 msgid ""
 "In order to work effectively with DB2 spatial tables in QGIS, it is "
 "important that tables have an INTEGER or BIGINT column defined as PRIMARY "
@@ -1838,7 +2330,7 @@ msgstr ""
 "comme PRIMARY KEY et si de nouvelles entités vont être ajoutées, cette "
 "colonne doit également avoir la caractéristique GENERATED."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1019
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1022
 msgid ""
 "It is also helpful for the spatial column to be registered with a specific "
 "spatial reference identifier (most often ``4326`` for WGS84 coordinates). A "
@@ -1850,11 +2342,11 @@ msgstr ""
 "les coordonnées WGS84). Une colonne spatiale peut être enregistrée en "
 "appelant la procédure stockée ``ST_Register_Spatial_Column``."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1028
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1031
 msgid "Connecting to MSSQL Spatial"
 msgstr "Connexion MSSQL Spatial"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1030
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1033
 msgid ""
 "In addition to some of the options in "
 ":ref:`vector_create_stored_connection`, creating a new MSSQL connection "
@@ -1866,11 +2358,11 @@ msgstr ""
 " de renseigner un nom **Provider / DSN **. Vous pouvez également afficher "
 "les bases de données disponibles."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1038
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1041
 msgid "Loading a Database Layer"
 msgstr "Chargement d'une couche de base de données"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1040
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1043
 msgid ""
 "Once you have one or more connections defined to a database (see section "
 ":ref:`vector_create_stored_connection`), you can load layers from it. Of "
@@ -1878,14 +2370,20 @@ msgid ""
 ":ref:`vector_import_data_in_postgis` for a discussion on importing data into"
 " a PostGIS database."
 msgstr ""
+"Une fois que vous avez défini une ou plusieurs connexions à une base de "
+"données (voir la section :ref:`vector_create_stored_connection`), vous "
+"pouvez en charger des couches. Bien sûr, cela nécessite que des données "
+"soient disponibles. Voir la section :ref:`vector_import_data_in_postgis` "
+"pour une discussion sur l'importation de données dans une base de données "
+"PostGIS."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1046
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1049
 msgid "To load a layer from a database, you can perform the following steps:"
 msgstr ""
 "Pour charger une couche à partir d'une base de données, vous pouvez "
 "effectuer les étapes suivantes:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1048
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1051
 msgid ""
 "Open the \"Add <database> table(s)\" dialog (see "
 ":ref:`vector_create_stored_connection`)."
@@ -1893,41 +2391,49 @@ msgstr ""
 "Ouvrez la boîte de dialogue \"Ajouter table (s)\" (voir "
 ":ref:`vector_create_stored_connection`)."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1050
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1053
 msgid ""
 "Choose the connection from the drop-down list and click :guilabel:`Connect`."
 msgstr ""
 "Choisissez la connexion dans la liste déroulante et cliquez sur "
 ":guilabel:`Connect`."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1051
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1054
 msgid ""
 "Select or unselect |checkbox| :guilabel:`Also list tables with no geometry`."
 msgstr ""
 "Cochez ou décochez selon votre besoin |checkbox| :guilabel:`Lister les "
 "tables sans géométrie`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1052
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1055
 msgid ""
 "Optionally, use some |checkbox| :guilabel:`Search Options` to reduce the "
 "list of tables to those matching your search. You can also set this option "
 "before you hit the :guilabel:`Connect` button, speeding up the database "
 "fetching."
 msgstr ""
+"Facultativement, utilisez certaines |checkbox| :guilabel:`Options de "
+"recherche` pour réduire la liste des tables à celles correspondant à votre "
+"recherche. Vous pouvez également définir cette option avant d'appuyer sur le"
+" bouton :guilabel:`Connecter`, accélérant la récupération de la base de "
+"données."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1056
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1059
 msgid "Find the layer(s) you wish to add in the list of available layers."
 msgstr ""
 "Trouvez la ou les couches que vous souhaitez ajouter dans la liste des "
 "couches disponibles."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1057
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1060
 msgid ""
 "Select it by clicking on it. You can select multiple layers by holding down "
 "the :kbd:`Shift` or :kbd:`Ctrl` key while clicking."
 msgstr ""
+"Sélectionnez-le en cliquant dessus. Vous pouvez sélectionner plusieurs "
+"couches en maintenant enfoncée la touche :kbd:`Shift` ou :kbd:`Ctrl` tout en"
+" cliquant."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1059
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1062
 msgid ""
 "If applicable, use the :guilabel:`Set Filter` button (or double-click the "
 "layer) to start the :guilabel:`Query Builder` dialog (see section "
@@ -1936,30 +2442,40 @@ msgid ""
 "restriction can be removed or edited in the :menuselection:`Layer Properties"
 " --> General --> Provider Feature Filter` frame."
 msgstr ""
+"Le cas échéant, utilisez le bouton :guilabel:`Définir le filtre` (ou double-"
+"cliquez sur la couche) pour ouvrir la boîte de dialogue "
+":guilabel:`Construire requete` (voir la section :ref:`vector_query_builder`)"
+" et définissez les entites à charger à partir de la couche sélectionnée. "
+"L'expression de filtre apparaît dans la colonne ``sql``. Cette restriction "
+"peut être supprimée ou modifiée dans :menuselection:`Propriétés de la couche"
+" -> Général -> Filtre d'entités du fournisseur`."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1065
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1068
 msgid ""
 "The checkbox in the ``Select at id`` column that is activated by default "
 "gets the feature ids without the attributes and generally speeds up the data"
 " loading."
 msgstr ""
+"La case à cocher dans la colonne ``Sélectionner à l'id`` qui est activée par"
+" défaut obtient les identifiants des entites sans les attributs et accélère "
+"généralement le chargement des données."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1068
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1071
 msgid "Click on the :guilabel:`Add` button to add the layer to the map."
 msgstr ""
 "Cliquez sur le bouton :guilabel:`Ajouter` pour ajouter la couche à la carte."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1076
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1079
 msgid "Add PostGIS Table(s) Dialog"
 msgstr "Boîte de dialogue Ajouter des tables PostGIS"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1079
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1082
 msgid "**Use the Browser Panel to speed up loading of database table(s)**"
 msgstr ""
-"**Utilisez le panneau du navigateur pour accélérer le chargement des tables "
-"de base de données**"
+"**Utilisez le panneau Explorateur pour accélérer le chargement des tables de"
+" base de données**"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1081
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1084
 msgid ""
 "Adding DB tables from the :guilabel:`Data Source Manager` may sometimes be "
 "time consuming as QGIS fetches statistics and properties (e.g. geometry type"
@@ -1969,22 +2485,32 @@ msgid ""
 " Manager <dbmanager>` to drag and drop the database tables into the map "
 "canvas."
 msgstr ""
+"L'ajout de tables de base de données à partir du :guilabel:`Gestionnaire de "
+"source de données` peut parfois prendre du temps car QGIS récupère des "
+"statistiques et des propriétés (par exemple, type et champ de géométrie, "
+"SCR, nombre d'entités) pour chaque table au préalable. Pour éviter cela, une"
+" fois :ref:`la connexion est établie `, il est préférable d'utiliser le "
+":ref:`Panneau Explorateur <browser_panel>` ou le :ref:`Gestionnaire de Base "
+"de Données <dbmanager>` pour faire glisser et déposer les tables de base de "
+"données dans la carte."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1093
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1096
 msgid "QGIS Custom formats"
 msgstr "Formats personnalisés QGIS"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1095
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1098
 msgid "QGIS proposes two custom formats:"
-msgstr ""
+msgstr "QGIS propose deux formats personnalisés:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1097
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1100
 msgid ""
 "Temporary Scratch Layer: a memory layer that is bound to the project (see "
 ":ref:`vector_new_scratch_layer` for more information)"
 msgstr ""
+"Couche memoire temporair: une couche mémoire qui est liée au projet (voir "
+":ref:`vector_new_scratch_layer` pour plus d'informations)"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1099
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1102
 msgid ""
 "Virtual Layers: a layer resulting from a query on other layer(s) (see "
 ":ref:`vector_virtual_layers` for more information)"
@@ -1992,22 +2518,23 @@ msgstr ""
 "Couches virtuelles: une couche résultant d'une requête sur d'autres couches "
 "(voir :ref:`vector_virtual_layers` pour plus d'informations)"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1106
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1109
 msgid "QLR - QGIS Layer Definition File"
 msgstr "QLR - Fichier de définition de couche QGIS"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1108
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1111
 msgid ""
 "Layer definitions can be saved as a :ref:`Layer Definition File "
 "<qgislayerdefinitionfile>` (QLR - :file:`.qlr`) using :menuselection:`Export"
 " --> Save As Layer Definition File...` in the layer context menu."
 msgstr ""
-"Les définitions de couche peuvent être enregistrées sous la forme "
-":ref:`Fichier de définition de couche` (QLR - :file:`.qlr`) en utilisant "
-":menuselection:`Exporter -> Enregistrer en tant que fichier de définition de"
-" couche ...` dans le menu contextuel de la couche."
+"Les définitions de couche peuvent être enregistrées sous la forme  de "
+":ref:`Fichier de définition de couche <qgislayerdefinitionfile>` ( au format"
+" :file:`.qlr`) en utilisant :menuselection:`Exporter --> Enregistrer en tant"
+" que fichier de définition de couche...` dans le menu contextuel de la "
+"couche."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1114
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1117
 msgid ""
 "The QLR format makes it possible to share \"complete\" QGIS layers with "
 "other QGIS users. QLR files contain links to the data sources and all the "
@@ -2018,34 +2545,38 @@ msgstr ""
 "sources de données et toutes les informations de style QGIS nécessaires pour"
 " styliser la couche."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1119
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1122
 msgid ""
 "QLR files are shown in the Browser Panel and can be used to add layers (with"
 " their saved styles) to the Layers Panel. You can also drag and drop QLR "
 "files from the system file manager into the map canvas."
 msgstr ""
-"Les fichiers QLR sont affichés dans le panneau du navigateur et peuvent être"
-" utilisés pour ajouter des couches (avec leurs styles enregistrés) au "
-"panneau des couhes. Vous pouvez également faire glisser et déposer des "
-"fichiers QLR du gestionnaire de fichiers système dans le canevas de carte."
+"Les fichiers QLR sont affichés dans le panneau Explorateur et peuvent être "
+"utilisés pour ajouter des couches (avec leurs styles enregistrés) au panneau"
+" Couches. Vous pouvez également faire glisser et déposer des fichiers QLR du"
+" gestionnaire de fichiers système dans le canevas de la carte."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1125
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1128
 msgid "Connecting to web services"
 msgstr "Connexion aux services Web"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1127
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1130
 msgid ""
 "With QGIS you can get access to different types of OGC web services (WM(T)S,"
 " WFS(-T), WCS, CSW, ...). Thanks to QGIS Server, you can also publish such "
 "services. Chapter :ref:`sec_ogc` contains descriptions of these "
 "capabilities."
 msgstr ""
+"Avec QGIS, vous pouvez accéder à différents types de services Web OGC (WM "
+"(T) S, WFS (-T), WCS, CSW, ...). Grâce à QGIS Server, vous pouvez également "
+"publier de tels services. Le chapitre :ref:`sec_ogc` contient des "
+"descriptions de ces capacités."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1136
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1139
 msgid "Using XYZ Tile services"
-msgstr ""
+msgstr "Utilisation des services de tuile XYZ"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1138
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1141
 msgid ""
 "XYZ Tile services can be found in the :guilabel:`XYZ Tiles` top level entry "
 "in the :guilabel:`Browser`. By default, the OpenStreetMap XYZ Tile service "
@@ -2054,70 +2585,99 @@ msgid ""
 "click to open). figure_xyz_tiles_openstreetmap_ shows the dialog with the "
 "OpenStreetMap XYZ Tile service configuration."
 msgstr ""
+"Les services de tuile XYZ  peuvent être trouvés dans l'entrée de haut niveau"
+" :guilabel:`Tuiles XYZ` dans l':guilabel:`Explorateur`. Par défaut, le "
+"service OpenStreetMap XYZ Tuile est configuré. Vous pouvez ajouter d'autres "
+"services qui utilisent le protocole XYZ Tuile en choisissant "
+":guilabel:`Nouvelle connexion` dans le menu contextuel XYZ Tuiles (clic "
+"droit pour l'ouvrir). figure_xyz_tiles_openstreetmap_ montre la boîte de "
+"dialogue avec la configuration du service OpenStreetMap XYZ Tuile."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1152
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1155
 msgid "XYZ Tiles - OpenStreetMap configuration"
-msgstr ""
+msgstr "Tuiles XYZ - Configuration OpenStreetMap"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1154
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1157
 msgid ""
 "Configurations can be saved (:guilabel:`Save Connections`) to XML and loaded"
 " (:guilabel:`Load Connections`) through the context menu. Authentication "
 "configuration is supported. The XML file for OpenStreetMap looks like this:"
 msgstr ""
+"Les configurations peuvent être enregistrées ( :guilabel:`Enregistrer les "
+"connexions`) au format XML et chargées (:guilabel:`Charger les connexions`) "
+"via le menu contextuel. La configuration d'authentification est prise en "
+"charge. Le fichier XML pour OpenStreetMap ressemble à ceci:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1168
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1171
 msgid ""
 "Once a connection to a XYZ tile service is set, right-click over the entry "
 "to:"
 msgstr ""
+"Une fois la connexion à un service de tuiles XYZ établie, cliquez avec le "
+"bouton droit sur l'entrée pour:"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1170
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1173
 msgid ":guilabel:`Edit...` the XYZ connection settings"
-msgstr ""
+msgstr ":guilabel:`Modifier ...` les paramètres de connexion XYZ"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1171
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1174
 msgid ":guilabel:`Delete` the connection"
-msgstr ""
+msgstr ":guilabel:`Supprimer` la connexion"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1172
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1175
 msgid ""
 ":menuselection:`Export layer... --> To File`, :ref:`saving it as a raster "
 "<general_saveas>`"
 msgstr ""
+":menuselection:`Exporter la couche... --> vers un fichier`, :ref:`en "
+"l'enregistrant comme un raster <general_saveas>`"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1174
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1177
 msgid ":guilabel:`Add layer to project`: a double-click also adds the layer"
 msgstr ""
+":guilabel:`Ajouter une couche au projet`: un double-clic ajoute également la"
+" couche"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1175
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1178
 msgid ""
 "View the :guilabel:`Layer Properties...` and get access to metadata and a "
 "preview of the data provided by the service. More settings are available "
 "when the layer has been loaded into the project."
 msgstr ""
+"Affichez les :guilabel:`Propriétés de la couche ...` et accédez aux "
+"métadonnées et à un aperçu des données fournies par le service. D'autres "
+"paramètres sont disponibles lorsque la couche a été chargée dans le projet."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1180
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1183
 msgid "Examples of XYZ Tile services:"
-msgstr ""
+msgstr "Exemples de tuile services XYZ :"
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1182
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1185
 msgid ""
 "OpenStreetMap Monochrome: :guilabel:`URL`: ``http://tiles.wmflabs.org/bw-"
 "mapnik/{z}/{x}/{y}.png``, :guilabel:`Min. Zoom Level`: 0, :guilabel:`Max. "
 "Zoom Level`: 19."
 msgstr ""
+"OpenStreetMap Monochrome: :guilabel:`URL`: ``http://tiles.wmflabs.org/bw-"
+"mapnik/{z}/{x}/{y}.png``, :guilabel:`Min. Zoom Level`: 0, :guilabel:`Max. "
+"Zoom Level`: 19."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1185
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1188
 msgid ""
 "Google Maps: :guilabel:`URL`: "
 "``https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}``, :guilabel:`Min. Zoom"
 " Level`: 0, :guilabel:`Max. Zoom Level`: 19."
 msgstr ""
+"Google Maps: :guilabel:`URL`: "
+"``https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}``, :guilabel:`Min. Zoom"
+" Level`: 0, :guilabel:`Max. Zoom Level`: 19."
 
-#: ../../docs/user_manual/managing_data_source/opening_data.rst:1188
+#: ../../docs/user_manual/managing_data_source/opening_data.rst:1191
 msgid ""
 "Open Weather Map Temperature: :guilabel:`URL`: "
 "``http://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid={api_key}``"
 " :guilabel:`Min. Zoom Level`: 0, :guilabel:`Max. Zoom Level`: 19."
 msgstr ""
+"Open Weather Map Temperature: :guilabel:`URL`: "
+"``http://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid={api_key}``"
+" :guilabel:`Min. Zoom Level`: 0, :guilabel:`Max. Zoom Level`: 19."

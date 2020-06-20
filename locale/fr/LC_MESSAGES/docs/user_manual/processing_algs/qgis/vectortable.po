@@ -1,20 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGISDoc package.
+# This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
 # Francis Gasc <francisgasc@gmail.com>, 2020
+# MarieSilvestre, 2020
+# Sant-anna <delazj@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGISDoc 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:29+0000\n"
-"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2020\n"
+"Last-Translator: Sant-anna <delazj@gmail.com>, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,17 +26,19 @@ msgstr ""
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:2
 msgid "Vector table"
-msgstr ""
+msgstr "Table vecteur"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:14
 msgid "Add autoincremental field"
-msgstr ""
+msgstr "Ajouter un champ d'incrémentation automatique"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:15
 msgid ""
 "Adds a new integer field to a vector layer, with a sequential value for each"
 " feature."
 msgstr ""
+"Ajoute un nouveau champ entier à une couche vectorielle, avec une valeur "
+"séquentielle pour chaque entité."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:17
 msgid ""
@@ -42,6 +46,9 @@ msgid ""
 "attribute is not added to the input layer but a new layer is generated "
 "instead."
 msgstr ""
+"Ce champ peut être utilisé comme ID unique pour les entités de la couche. Le"
+" nouvel attribut n'est pas ajouté à la couche d'entrée mais une nouvelle "
+"couche est générée à la place."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:20
 msgid ""
@@ -49,6 +56,10 @@ msgid ""
 "Optionally, the incremental series can be based on grouping fields and a "
 "sort order for features can also be specified."
 msgstr ""
+"La valeur de départ initiale pour la série incrémentielle peut être "
+"spécifiée. Facultativement, la série incrémentielle peut être basée sur des "
+"champs de regroupement et un ordre de tri pour les entités peut également "
+"être spécifié."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:25
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:132
@@ -225,7 +236,7 @@ msgstr "[vector: any]"
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:39
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:977
 msgid "The input vector layer."
-msgstr ""
+msgstr "La couche de vecteur d'entrée."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:40
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:148
@@ -254,15 +265,15 @@ msgstr "[string]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:44
 msgid "Default: 'AUTO'"
-msgstr ""
+msgstr "Default: 'AUTO'"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:45
 msgid "Name of the field with autoincremental values"
-msgstr ""
+msgstr "Nom du champ avec valeurs d'incrémentation automatique"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:46
 msgid "**Start values at**"
-msgstr ""
+msgstr "**Valeurs de départ à**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:48
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:56
@@ -275,7 +286,7 @@ msgstr "Optionnel"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:49
 msgid "``START``"
-msgstr ""
+msgstr "``START``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:50
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:165
@@ -297,15 +308,15 @@ msgstr "Par défaut : 0"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:53
 msgid "Choose the initial number of the incremental count"
-msgstr ""
+msgstr "Choisissez le numéro initial du compte incrémentiel"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:54
 msgid "**Group values by**"
-msgstr ""
+msgstr "**Regrouper les valeurs par**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:57
 msgid "``GROUP_FIELDS``"
-msgstr ""
+msgstr "``GROUP_FIELDS``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:58
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:512
@@ -318,14 +329,17 @@ msgid ""
 " a separate count is processed for each value returned by the combination of"
 " these fields."
 msgstr ""
+"Sélectionnez le ou les champs de regroupement: au lieu d'un seul comptage "
+"exécuté pour la couche entière, un décompte séparé est traité pour chaque "
+"valeur renvoyée par la combinaison de ces champs."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:63
 msgid "**Sort expression**"
-msgstr ""
+msgstr "**Expression de tri**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:66
 msgid "``SORT_EXPRESSION``"
-msgstr ""
+msgstr "``SORT_EXPRESSION``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:67
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:657
@@ -338,14 +352,16 @@ msgid ""
 "Use an expression to sort the features in the layer either globally or if "
 "set, based on group fields."
 msgstr ""
+"Utilisez une expression pour trier les entités de la couche de manière "
+"globale ou si elles sont définies, en fonction des champs groupés."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:70
 msgid "**Sort ascending**"
-msgstr ""
+msgstr "**Trier par ordre croissant**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:71
 msgid "``SORT_ASCENDING``"
-msgstr ""
+msgstr "``SORT_ASCENDING``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:72
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:80
@@ -363,14 +379,16 @@ msgid ""
 "When a ``sort expression`` is set, use this option to control the order in "
 "which features are assigned values."
 msgstr ""
+"Lorsqu'une ``expression de tri`` est définie, utilisez cette option pour "
+"contrôler l'ordre dans lequel les entités sont affectées."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:78
 msgid "**Sort nulls first**"
-msgstr ""
+msgstr "**Trier les valeurs nulles en premier**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:79
 msgid "``SORT_NULLS_FIRST``"
-msgstr ""
+msgstr "``SORT_NULLS_FIRST``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:82
 msgid "Default: False"
@@ -381,11 +399,13 @@ msgid ""
 "When a ``sort expression`` is set, use this option to set whether *Null* "
 "values are counted first or last."
 msgstr ""
+"Lorsqu'une ``expression de tri`` est définie, utilisez cette option pour "
+"définir si les valeurs *Null* sont comptées en premier ou en dernier."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:86
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:114
 msgid "**Incremented**"
-msgstr ""
+msgstr "**Incrémenté**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:87
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:115
@@ -437,11 +457,13 @@ msgstr "[same as input]"
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:599
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:922
 msgid "Default: ``[Create temporary layer]``"
-msgstr "Par défaut: ``[Create temporary layer]``"
+msgstr "Par défaut: ``[Créer une couche temporaire]``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:91
 msgid "Specify the output vector layer with the auto increment field. One of:"
 msgstr ""
+"Spécifiez la couche vectorielle de sortie avec le champ d'incrémentation "
+"automatique. Un des:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:95
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:183
@@ -510,15 +532,15 @@ msgstr "Sorties"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:117
 msgid "Vector layer with auto incremental field"
-msgstr ""
+msgstr "Couche vectorielle avec champ d'incrémentation automatique"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:123
 msgid "Add field to attributes table"
-msgstr ""
+msgstr "Ajouter un champ à la table des attributs"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:124
 msgid "Adds a new field to a vector layer."
-msgstr ""
+msgstr "Ajoute un nouveau champ à une couche vectorielle."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:126
 msgid ""
@@ -532,26 +554,28 @@ msgid ""
 "The new attribute is not added to the input layer but a new layer is "
 "generated instead."
 msgstr ""
+"Le nouvel attribut n'est pas ajouté à la couche d'entrée mais une nouvelle "
+"couche est générée à la place."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:147
 msgid "The input layer"
-msgstr ""
+msgstr "La couche d'entrée"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:151
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:410
 msgid "Name of the new field"
-msgstr ""
+msgstr "Nom du nouveau champ"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:152
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:411
 msgid "**Field type**"
-msgstr ""
+msgstr "**Type de champ**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:153
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:412
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:779
 msgid "``FIELD_TYPE``"
-msgstr ""
+msgstr "``FIELD_TYPE``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:154
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:413
@@ -561,34 +585,34 @@ msgstr "[enumeration]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:157
 msgid "Type of the new field. You can choose between:"
-msgstr ""
+msgstr "Type du nouveau champ. Vous pouvez choisir entre:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:159
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:418
 msgid "0 --- Integer"
-msgstr ""
+msgstr "0 --- Entier"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:160
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:419
 msgid "1 --- Float"
-msgstr ""
+msgstr "1 --- Flottant"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:161
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:420
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:787
 msgid "2 --- String"
-msgstr ""
+msgstr "2 --- Chaîne"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:163
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:422
 msgid "**Field length**"
-msgstr ""
+msgstr "**Longueur de champ**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:164
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:423
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:791
 msgid "``FIELD_LENGTH``"
-msgstr ""
+msgstr "``FIELD_LENGTH``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:167
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:426
@@ -599,29 +623,29 @@ msgstr "Par défaut: 10"
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:168
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:427
 msgid "Length of the field"
-msgstr ""
+msgstr "Longueur du champ"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:169
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:428
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:796
 msgid "**Field precision**"
-msgstr ""
+msgstr "**Précision de champ**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:170
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:429
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:797
 msgid "``FIELD_PRECISION``"
-msgstr ""
+msgstr "``FIELD_PRECISION``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:174
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:433
 msgid "Precision of the field. Useful with Float field type."
-msgstr ""
+msgstr "Précision du champ. Utile avec le type de champ Flottant."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:175
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:202
 msgid "**Added**"
-msgstr ""
+msgstr "**Ajouté**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:180
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:600
@@ -641,15 +665,17 @@ msgstr "Sauvegarder en table PostGIS ....."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:205
 msgid "Vector layer with new field added"
-msgstr ""
+msgstr "Couche vectorielle avec nouveau champ ajouté"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:211
 msgid "Add unique value index field"
-msgstr ""
+msgstr "Ajouter un champ d'index de valeur unique"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:212
 msgid "Takes a vector layer and an attribute and adds a new numeric field."
 msgstr ""
+"Prend une couche vectorielle et un attribut et ajoute un nouveau champ "
+"numérique."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:214
 msgid ""
@@ -657,18 +683,23 @@ msgid ""
 "features with the same value for the attribute will have the same value in "
 "the new numeric field."
 msgstr ""
+"Les valeurs de ce champ correspondent aux valeurs de l'attribut spécifié, "
+"donc les entités ayant la même valeur pour l'attribut auront la même valeur "
+"dans le nouveau champ numérique."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:218
 msgid ""
 "This creates a numeric equivalent of the specified attribute, which defines "
 "the same classes."
 msgstr ""
+"Cela crée un équivalent numérique de l'attribut spécifié, qui définit les "
+"mêmes classes."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:239
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:331
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:717
 msgid "The input layer."
-msgstr ""
+msgstr "La couche d'entrée."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:240
 msgid "**Class field**"
@@ -691,28 +722,30 @@ msgstr "[tablefield: any]"
 msgid ""
 "Features that have the same value for this field will get the same index."
 msgstr ""
+"Les entités qui ont la même valeur pour ce champ obtiendront le même index."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:245
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:774
 msgid "**Output field name**"
-msgstr ""
+msgstr "**Nom du champ de sortie**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:249
 msgid "Default: 'NUM_FIELD'"
-msgstr ""
+msgstr "Default: 'NUM_FIELD'"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:250
 msgid "Name of the new field containing the indexes."
-msgstr ""
+msgstr "Nom du nouveau champ contenant les index."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:251
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:295
 msgid "**Layer with index field**"
-msgstr ""
+msgstr "**Couche avec champ d'index**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:256
 msgid "Vector layer with the numeric field containing indexes. One of:"
 msgstr ""
+"Couche vectorielle avec le champ numérique contenant les index. Un des:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:259
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:275
@@ -733,12 +766,12 @@ msgstr "Créer une couche temporaire"
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:266
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:299
 msgid "**Class summary**"
-msgstr ""
+msgstr "**Resume de la classe**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:267
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:300
 msgid "``SUMMARY_OUTPUT``"
-msgstr ""
+msgstr "``SUMMARY_OUTPUT``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:268
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:301
@@ -754,24 +787,28 @@ msgid ""
 "Specify the table to contain the summary of the class field mapped to the "
 "corresponding unique value. One of:"
 msgstr ""
+"Spécifiez la table devant contenir le résumé du champ de classe mappé à la "
+"valeur unique correspondante. Un des:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:298
 msgid "Vector layer with the numeric field containing indexes."
-msgstr ""
+msgstr "Couche vectorielle avec le champ numérique contenant les index."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:303
 msgid "Default: ``[Skip Output]``"
-msgstr ""
+msgstr "Default: ``[Skip Output]``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:304
 msgid ""
 "Table with summary of the class field mapped to the corresponding unique "
 "value."
 msgstr ""
+"Table avec récapitulatif du champ de classe mappé à la valeur unique "
+"correspondante."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:311
 msgid "Add X/Y fields to layer"
-msgstr ""
+msgstr "Ajouter des champs X/Y à la couche"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:312
 msgid ""
@@ -779,6 +816,10 @@ msgid ""
 " can be calculated in a different CRS to the layer (e.g. creating "
 "latitude/longitude fields for a layer in a projected CRS)."
 msgstr ""
+"Ajoute des champs X et Y (ou latitude/longitude) à une couche de points. Les"
+" champs X/Y peuvent être calculés dans un SCR différent de celui de la "
+"couche (par exemple en créant des champs de latitude/longitude pour une "
+"couche dans un SCR projeté)."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:330
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:348
@@ -788,7 +829,7 @@ msgstr "[vector: point]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:332
 msgid "**Coordinate system**"
-msgstr ""
+msgstr "**Système de coordonnées**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:333
 msgid "``CRS``"
@@ -800,55 +841,63 @@ msgstr "[crs]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:336
 msgid "Default: \"EPSG:4326\""
-msgstr ""
+msgstr "Default: \"EPSG:4326\""
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:337
 msgid "Coordinate reference system to use for the generated x and y fields."
 msgstr ""
+"Système de référence de coordonnées à utiliser pour les champs x et y "
+"générés."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:339
 msgid "**Field prefix**"
-msgstr ""
+msgstr "**Préfixe de champ**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:342
 msgid "``PREFIX``"
-msgstr ""
+msgstr "``PREFIX``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:344
 msgid ""
 "Prefix to add to the new field names to avoid name collisions with fields in"
 " the input layer."
 msgstr ""
+"Préfixe à ajouter aux nouveaux noms de champs pour éviter les collisions de "
+"noms avec les champs de la couche d'entrée."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:346
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:373
 msgid "**Added fields**"
-msgstr ""
+msgstr "**Champs ajoutés**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:351
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:988
 msgid "Specify the output layer. One of:"
-msgstr ""
+msgstr "Spécifiez la couche de sortie. Un des:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:376
 msgid ""
 "The output layer - identical to the input layer but with two new double "
 "fields, ``x`` and ``y``."
 msgstr ""
+"La couche de sortie - identique à la couche d'entrée mais avec deux nouveaux"
+" champs doubles, ``x`` et ``y``."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:383
 msgid "Advanced Python field calculator"
-msgstr ""
+msgstr "Calculateur de champ Python avancé"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:384
 msgid ""
 "Adds a new attribute to a vector layer, with values resulting from applying "
 "an expression to each feature."
 msgstr ""
+"Ajoute un nouvel attribut à une couche vectorielle, avec des valeurs "
+"résultant de l'application d'une expression à chaque entité."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:387
 msgid "The expression is defined as a Python function."
-msgstr ""
+msgstr "L'expression est définie comme une fonction Python."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:404
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:580
@@ -857,15 +906,15 @@ msgstr "Couche vectorielle en entrée"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:405
 msgid "**Result field name**"
-msgstr ""
+msgstr "**Nom du champ de résultat**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:409
 msgid "Default: 'NewField'"
-msgstr ""
+msgstr "Default: 'NewField'"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:416
 msgid "Type of the new field. One of:"
-msgstr ""
+msgstr "Type du nouveau champ. Un des:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:432
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:800
@@ -874,11 +923,11 @@ msgstr "Default: 3"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:434
 msgid "**Global expression**"
-msgstr ""
+msgstr "**Expression globale**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:437
 msgid "``GLOBAL``"
-msgstr ""
+msgstr "``GLOBAL``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:439
 msgid ""
@@ -887,86 +936,99 @@ msgid ""
 " Therefore, this is the correct place to import necessary modules or to "
 "calculate variables that will be used in subsequent calculations."
 msgstr ""
+"Le code de la section d'expression globale ne sera exécuté qu'une seule fois"
+" avant que la calculatrice ne commence à parcourir toutes les entités de la "
+"couche d'entrée. Par conséquent, c'est le bon endroit pour importer les "
+"modules nécessaires ou pour calculer les variables qui seront utilisées dans"
+" les calculs ultérieurs."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:445
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:808
 msgid "**Formula**"
-msgstr ""
+msgstr "**Formule**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:446
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:809
 msgid "``FORMULA``"
-msgstr ""
+msgstr "``FORMULA``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:448
 msgid ""
 "The Python formula to evaluate. Example: To calculate the area of an input "
 "polygon layer you can add::"
 msgstr ""
+"La formule Python à évaluer. Exemple: Pour calculer l'aire d'une couche de "
+"polygones en entrée, vous pouvez ajouter:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:454
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:481
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:831
 msgid "**Calculated**"
-msgstr ""
+msgstr "**Calculé**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:459
 msgid "Specify the vector layer with the new calculated field. One of:"
 msgstr ""
+"Spécifiez la couche vectorielle avec le nouveau champ calculé. Un des:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:484
 msgid "Vector layer with the new calculated field"
-msgstr ""
+msgstr "Couche vectorielle avec le nouveau champ calculé"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:490
 msgid "Drop field(s)"
-msgstr ""
+msgstr "Supprimer le (s) champ (s)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:491
 msgid ""
 "Takes a vector layer and generates a new one that has the same features but "
 "without the selected columns."
 msgstr ""
+"Prend une couche vectorielle et en génère une nouvelle qui a les mêmes "
+"caractéristiques mais sans les colonnes sélectionnées."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:509
 msgid "Input vector layer to drop field(s) from"
-msgstr ""
+msgstr "Couche vectorielle d'entrée à partir de laquelle supprimer les champs"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:510
 msgid "**Fields to drop**"
-msgstr ""
+msgstr "**Champs à supprimer**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:511
 msgid "``COLUMN``"
-msgstr ""
+msgstr "``COLUMN``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:513
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:584
 msgid "The field(s) to drop"
-msgstr ""
+msgstr "Le ou les champs à supprimer"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:514
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:541
 msgid "**Remaining fields**"
-msgstr ""
+msgstr "**Champs restants**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:519
 msgid "Specify the output vector layer with the remaining fields. One of:"
 msgstr ""
+"Spécifiez la couche vectorielle de sortie avec les champs restants. Un des:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:544
 msgid "Vector layer with the remaining fields"
-msgstr ""
+msgstr "Couche vectorielle avec les champs restants"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:550
 msgid "Explode HStore Field"
-msgstr ""
+msgstr "Décomposer le champ HStore"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:551
 msgid ""
 "Creates a copy of the input layer and adds a new field for every unique key "
 "in the HStore field."
 msgstr ""
+"Crée une copie de la couche d'entrée et ajoute un nouveau champ pour chaque "
+"clé unique du champ HStore."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:554
 msgid ""
@@ -974,6 +1036,10 @@ msgid ""
 " specified, only these fields are added and the HStore field is updated. By "
 "default, all unique keys are added."
 msgstr ""
+"La liste des champs attendus est une liste facultative séparée par des "
+"virgules. Si cette liste est spécifiée, seuls ces champs sont ajoutés et le "
+"champ HStore est mis à jour. Par défaut, toutes les clés uniques sont "
+"ajoutées."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:560
 msgid ""
@@ -982,18 +1048,22 @@ msgid ""
 "file <https://gdal.org/drivers/vector/osm.html#other-tags-field>`_ with the "
 "``other_tags`` field."
 msgstr ""
+"Le PostgreSQL `HStore <https://www.postgresql.org/docs/10/hstore.html>` _ "
+"est un simple magasin de valeurs-clés utilisé dans PostgreSQL et OGR (lors "
+"de la lecture d'un `fichier OSM <https://gdal .org/drivers/vector/osm.html"
+"#other-tags-field> `_ avec le champ ``other_tags``."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:581
 msgid "**HStore field**"
-msgstr ""
+msgstr "**Champ HStore**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:585
 msgid "**Expected list of fields separated by a comma**"
-msgstr ""
+msgstr "**Liste attendue des champs séparés par une virgule**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:588
 msgid "``EXPECTED_FIELDS``"
-msgstr ""
+msgstr "``EXPECTED_FIELDS``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:591
 msgid "Default: ''"
@@ -1004,19 +1074,21 @@ msgid ""
 "Comma-separated list of fields to extract. The HStore field will be updated "
 "by removing these keys."
 msgstr ""
+"Liste de champs séparés par des virgules à extraire. Le champ HStore sera "
+"mis à jour en supprimant ces clés."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:595
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:621
 msgid "**Exploded**"
-msgstr ""
+msgstr "**Eclaté**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:624
 msgid "Output vector layer"
-msgstr ""
+msgstr "Couche vectorielle de sortie"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:630
 msgid "Extract binary field"
-msgstr ""
+msgstr "Extraire le champ binaire"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:631
 msgid ""
@@ -1024,34 +1096,40 @@ msgid ""
 "Filenames can be generated using values taken from an attribute in the "
 "source table or based on a more complex expression."
 msgstr ""
+"Extrait le contenu d'un champ binaire et les enregistre dans des fichiers "
+"individuels. Les noms de fichiers peuvent être générés à l'aide de valeurs "
+"tirées d'un attribut de la table source ou basées sur une expression plus "
+"complexe."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:650
 msgid "Input vector layer containing the binary data"
-msgstr ""
+msgstr "Couche vectorielle d'entrée contenant les données binaires"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:651
 msgid "**Binary field**"
-msgstr ""
+msgstr "**Champ binaire**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:654
 msgid "Field containing the binary data"
-msgstr ""
+msgstr "Champ contenant les données binaires"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:655
 msgid "**File name**"
-msgstr ""
+msgstr "**Nom du fichier**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:656
 msgid "``FILENAME``"
-msgstr ""
+msgstr "``FILENAME``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:658
 msgid "Field or expression-based text to name each output file"
 msgstr ""
+"Texte basé sur un champ ou une expression pour nommer chaque fichier de "
+"sortie"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:659
 msgid "**Destination folder**"
-msgstr ""
+msgstr "**Dossier de destination**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:660
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:684
@@ -1065,11 +1143,11 @@ msgstr "[folder]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:663
 msgid "Default: ``[Save to a temporary folder]``"
-msgstr ""
+msgstr "Default: ``[Save to a temporary folder]``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:664
 msgid "Folder in which to store the output files.  One of:"
-msgstr ""
+msgstr "Dossier dans lequel stocker les fichiers de sortie. Un des:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:666
 msgid "Save to a Temporary Directory"
@@ -1081,15 +1159,15 @@ msgstr "Save to Directory..."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:683
 msgid "**Folder**"
-msgstr ""
+msgstr "**Dossier**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:686
-msgid "The folder that contains the output file."
-msgstr ""
+msgid "The folder that contains the output files."
+msgstr "Répertoire contenant les fichiers de sortie."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:692
 msgid "Feature filter"
-msgstr ""
+msgstr "Filtre entité"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:693
 msgid ""
@@ -1098,29 +1176,36 @@ msgid ""
 " possible input layers, filtering is only possible on the feature geometry "
 "and general record mechanisms, such as ``$id`` and ``uuid``."
 msgstr ""
+"Filtre les entités de la couche d'entrée et les redirige vers une ou "
+"plusieurs sorties. Si vous ne connaissez aucun nom d'attribut commun à "
+"toutes les couches d'entrée possibles, le filtrage n'est possible que sur la"
+" géométrie de l'entité et les mécanismes d'enregistrement généraux, tels que"
+" ``$id`` et ``uuid``."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:699
 msgid ""
 "This algorithm is only available from the :ref:`Graphical modeler "
 "<processing.modeler>`."
 msgstr ""
+"Cet algorithme n'est disponible que depuis :ref:`Graphical modeler "
+"<processing.modeler>`."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:718
 msgid "**Outputs and filters**"
-msgstr ""
+msgstr "**Sorties et filtres**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:720
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:739
 msgid "(one or more)"
-msgstr ""
+msgstr "(un ou plus)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:721
 msgid "``OUTPUT_<name of the filter>``"
-msgstr ""
+msgstr "``OUTPUT_<name of the filter>``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:723
 msgid "The output layers with filters (as many as there are filters)."
-msgstr ""
+msgstr "Les couches de sortie avec des filtres (autant qu'il y a de filtres)."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:737
 msgid "**Output**"
@@ -1128,91 +1213,97 @@ msgstr "**Rendu**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:740
 msgid "``native:filter_1:OUTPUT_<name of filter>``"
-msgstr ""
+msgstr "``native:filter_1:OUTPUT_<name of filter>``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:742
 msgid ""
 "The output layers with filtered features (as many as there are filters)."
 msgstr ""
+"Les couches de sortie avec des entités filtrées (autant qu'il y a de "
+"filtres)."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:750
 msgid "Field calculator"
-msgstr ""
+msgstr "Calculatrice de chemp"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:751
 msgid ""
 "Opens the field calculator (see :ref:`vector_expressions`). You can use all "
 "the supported expressions and functions."
 msgstr ""
+"Ouvre le calculateur de champ (voir :ref:`vector_expressions`). Vous pouvez "
+"utiliser toutes les expressions et fonctions prises en charge."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:754
 msgid "A new layer is created with the result of the expression."
-msgstr ""
+msgstr "Une nouvelle couche est créée avec le résultat de l'expression."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:756
 msgid ""
 "The field calculator is very useful when used in :ref:`processing.modeler`."
 msgstr ""
+"Le calculateur de champ est très utile lorsqu'il est utilisé dans "
+":ref:`processing.modeler`."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:773
 msgid "The layer to calculate on"
-msgstr ""
+msgstr "La couche sur laquelle calculer"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:777
 msgid "The name of the field for the results"
-msgstr ""
+msgstr "Le nom du champ pour les résultats"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:778
 msgid "**Output field type**"
-msgstr ""
+msgstr "**Type de champ de sortie**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:783
 msgid "The type of the field.  One of:"
-msgstr ""
+msgstr "Le type du champ. Un des:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:785
 msgid "0 --- Float"
-msgstr ""
+msgstr "0 --- Flottant"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:786
 msgid "1 --- Integer"
-msgstr ""
+msgstr "1 --- Entier"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:788
 msgid "3 --- Date"
-msgstr ""
+msgstr "3 --- Date"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:790
 msgid "**Output field width**"
-msgstr ""
+msgstr "**Longueur du champ de sortie**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:795
 msgid "The length of the result field (minimum 0)"
-msgstr ""
+msgstr "La longueur du champ de résultat (minimum 0)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:801
 msgid "The precision of the result field (minimum 0, maximum 15)"
-msgstr ""
+msgstr "La précision du champ de résultat (minimum 0, maximum 15)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:802
 msgid "**Create new field**"
-msgstr ""
+msgstr "**Créer un nouveau champ**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:803
 msgid "``NEW_FIELD``"
-msgstr ""
+msgstr "``NEW_FIELD``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:807
 msgid "Should the result field be a new field"
-msgstr ""
+msgstr "Le champ de résultat doit-il être un nouveau champ"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:811
 msgid "The formula to use to calculate the result"
-msgstr ""
+msgstr "La formule à utiliser pour calculer le résultat"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:812
 msgid "**Output file**"
-msgstr ""
+msgstr "**Fichier de sortie**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:816
 msgid "Default: ``[Save to temporary file]``"
@@ -1220,69 +1311,76 @@ msgstr "Default: ``[Save to temporary file]``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:817
 msgid "Specification of the output layer."
-msgstr ""
+msgstr "Spécification de la couche de sortie."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:834
 msgid "Output layer with the calculated field values"
-msgstr ""
+msgstr "Couche de sortie avec les valeurs de champ calculées"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:839
 msgid "Refactor fields"
-msgstr ""
+msgstr "Champs refactorisees"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:840
 msgid "Allows editing the structure of the attribute table of a vector layer."
 msgstr ""
+"Permet de modifier la structure de la table attributaire d'une couche "
+"vectorielle."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:842
 msgid "Fields can be modified in their type and name, using a fields mapping."
 msgstr ""
+"Les champs peuvent être modifiés dans leur type et leur nom, à l'aide d'un "
+"mappage de champs."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:844
 msgid ""
 "The original layer is not modified. A new layer is generated, which contains"
 " a modified attribute table, according to the provided fields mapping."
 msgstr ""
+"La couche d'origine n'est pas modifiée. Une nouvelle couche est générée, qui"
+" contient une table d'attributs modifiée, selon le mappage des champs "
+"fourni."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:847
 msgid "Refactor layer fields allows to:"
-msgstr ""
+msgstr "Les champs de la couche refactorisee permettent de:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:849
 msgid "Change field names and types"
-msgstr ""
+msgstr "Modifier les noms et types de champs"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:850
 msgid "Add and remove fields"
-msgstr ""
+msgstr "Ajouter et supprimer des champs"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:851
 msgid "Reorder fields"
-msgstr ""
+msgstr "Réorganiser les champs"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:852
 msgid "Calculate new fields based on expressions"
-msgstr ""
+msgstr "Calculer de nouveaux champs en fonction des expressions"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:853
 msgid "Load field list from another layer"
-msgstr ""
+msgstr "Charger la liste des champs à partir d'une autre couche"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:858
 msgid "Refactor fields dialog"
-msgstr ""
+msgstr "Boîte de dialogue des champs de refactorisation"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:875
 msgid "The layer to modify"
-msgstr ""
+msgstr "La couche à modifier"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:876
 msgid "**Fields mapping**"
-msgstr ""
+msgstr "**Mapper les champs**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:877
 msgid "``FIELDS_MAPPING``"
-msgstr ""
+msgstr "``FIELDS_MAPPING``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:878
 msgid "[list]"
@@ -1293,32 +1391,39 @@ msgid ""
 "List of output fields with their definitions. The embedded table lists all "
 "the fields of the source layer and allows you to edit them:"
 msgstr ""
+"Liste des champs de sortie avec leurs définitions. Le tableau intégré "
+"répertorie tous les champs de la couche source et vous permet de les "
+"modifier:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:883
 msgid "Click |newAttribute| to create a new field."
-msgstr ""
+msgstr "Cliquez sur |newAttribute| pour créer un nouveau champ."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:884
 msgid "Click |deleteAttribute| to remove a field."
-msgstr ""
+msgstr "Cliquez sur |deleteAttribute| pour supprimer un champ."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:885
 msgid "Use |arrowUp| and |arrowDown| to change the selected field order."
 msgstr ""
+"Utilisez |arrowUp| et |arrowDown| pour modifier l'ordre des champs "
+"sélectionné."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:886
 msgid "Click |clearText| to reset to the default view."
-msgstr ""
+msgstr "Cliquez sur |clearText| pour rétablir la vue par défaut."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:888
 msgid ""
 "For each of the fields you'd like to reuse, you need to fill the following "
 "options:"
 msgstr ""
+"Pour chacun des champs que vous souhaitez réutiliser, vous devez remplir les"
+" options suivantes:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:892
 msgid ":guilabel:`Source expression` (``expression``) [expression]"
-msgstr ""
+msgstr ":guilabel:`Source expression` (``expression``) [expression]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:892
 msgid "Field or expression from the input layer."
@@ -1326,16 +1431,18 @@ msgstr "Champ ou expression de la couche en entrée."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:896
 msgid ":guilabel:`Field name` (``name``) [string]"
-msgstr ""
+msgstr ":guilabel:`Field name` (``name``) [string]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:895
 msgid ""
 "Name of the field in the output layer. By default input field name is kept."
 msgstr ""
+"Nom du champ dans la couche de sortie. Par défaut, le nom du champ source "
+"est conservé."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:908
 msgid ":guilabel:`Type` (``type``) [enumeration]"
-msgstr ""
+msgstr ":guilabel:`Type` (``type``) [enumeration]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:899
 msgid "Data type of the output field. One of:"
@@ -1343,35 +1450,35 @@ msgstr "Type de données du champ de sortie. Un des:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:902
 msgid "Date (14)"
-msgstr ""
+msgstr "Date (14)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:903
 msgid "DateTime (16)"
-msgstr ""
+msgstr "DateTime (16)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:904
 msgid "Double (6)"
-msgstr ""
+msgstr "Double (6)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:905
 msgid "Integer (2)"
-msgstr ""
+msgstr "Entier (2)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:906
 msgid "Integer64 (4)"
-msgstr ""
+msgstr "Entier64 (4)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:907
 msgid "String (10)"
-msgstr ""
+msgstr "Chaîne (10)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:908
 msgid "Boolean (1)"
-msgstr ""
+msgstr "Booléen (1)"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:911
 msgid ":guilabel:`Length` (``length``) [number]"
-msgstr ""
+msgstr ":guilabel:`Longueur` (``length``) [number]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:911
 msgid "Length of the output field."
@@ -1379,7 +1486,7 @@ msgstr "Longueur du champ en sortie."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:914
 msgid ":guilabel:`Precision` (``precision``) [number]"
-msgstr ""
+msgstr ":guilabel:`Precision` (``precision``) [number]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:914
 msgid "Precision of the output field."
@@ -1390,11 +1497,13 @@ msgid ""
 "Fields from another layer can be loaded into the field list in "
 ":guilabel:`Load fields from layer`."
 msgstr ""
+"Les champs d'une autre couche peuvent être chargés dans la liste des champs "
+"dans :guilabel:`Charger les champs depuis la couche`."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:918
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:945
 msgid "**Refactored**"
-msgstr ""
+msgstr "**Refactorisé**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:923
 msgid "Specification of the output layer. One of:"
@@ -1402,11 +1511,11 @@ msgstr "Spécification de la couche de sortie. Un des:"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:948
 msgid "Output layer with refactored fields"
-msgstr ""
+msgstr "Couche de sortie avec champs refactorisés"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:954
 msgid "Text to float"
-msgstr ""
+msgstr "de Texte à flottant"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:955
 msgid ""
@@ -1414,21 +1523,28 @@ msgid ""
 "attribute containing numeric strings into a numeric attribute (e.g. '1' to "
 "``1.0``)."
 msgstr ""
+"Modifie le type d'un attribut donné dans une couche vectorielle, "
+"convertissant un attribut de texte contenant des chaînes numériques en un "
+"attribut numérique (par exemple, ``1`` à ``1.0``)."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:958
 msgid ""
 "The algorithm creates a new vector layer so the source one is not modified."
 msgstr ""
+"L'algorithme crée une nouvelle couche vectorielle afin que la source ne soit"
+" pas modifiée."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:960
 msgid ""
 "If the conversion is not possible the selected column will have ``NULL`` "
 "values."
 msgstr ""
+"Si la conversion n'est pas possible, la colonne sélectionnée aura des "
+"valeurs ``NULL``."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:978
 msgid "**Text attribute to convert to float**"
-msgstr ""
+msgstr "**Attribut texte à convertir en flottant**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:980
 msgid "[tablefield: string]"
@@ -1438,17 +1554,19 @@ msgstr "[tablefield: string]"
 msgid ""
 "The string field for the input layer that is to be converted to a float "
 "field."
-msgstr ""
+msgstr "Champ de chaîne de la couche d'entrée à convertir en champ flottant."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:983
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:1009
 msgid "**Float from text**"
-msgstr ""
+msgstr "**Flottant à partir de texte **"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:987
 msgid "Default: ``[Create Temporary Layer]``"
-msgstr "Par défaut: ``[Create Temporary Layer]``"
+msgstr "Par défaut: ``[Créer une couche temporaire]``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectortable.rst:1012
 msgid "Output vector layer with the string field converted into a float field"
 msgstr ""
+"Couche vectorielle de sortie avec le champ de chaîne converti en champ "
+"flottant"

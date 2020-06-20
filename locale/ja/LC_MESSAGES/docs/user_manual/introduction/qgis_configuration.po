@@ -1,19 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGISDoc package.
+# This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# fairtommy <fairtommy@gmail.com>, 2020
+# Kayama Yoichi <yoichi.kayama@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGISDoc 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:25+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Kayama Yoichi <yoichi.kayama@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -50,6 +52,9 @@ msgid ""
 "during each QGIS session by the :ref:`project properties "
 "<project_properties>` (accessible under :menuselection:`Project` menu)."
 msgstr ""
+"|keyboardShortcuts| :guilabel:`キーボードショートカット...`: は自分用の :ref:`キーボードショートカット "
+"<shortcuts>` のセットを定義します。また、それらは各QGISセッション中に :ref:`プロジェクトのプロパティ "
+"<project_properties>` （ :menuselection:`プロジェクト` メニューからアクセス可能）によって上書きできます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:22
 msgid ""
@@ -181,6 +186,8 @@ msgid ""
 "aware of project news (user/developer meetings date and summary, community "
 "surveys, releases announcements, various tips...)"
 msgstr ""
+"|checkbox| :guilabel:`QGISニュースを起動ページに表示する` "
+"：QGISニュースフィードを起動ページに表示します。これによりプロジェクトのニュース（ユーザー/開発者の会議の日付と概要、コミュニティ調査、リリースのお知らせ、さまざまなヒント...）を知ることができます"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:95
 msgid ""
@@ -305,6 +312,7 @@ msgid ""
 "path and QGIS needs to resolve the path in order to display the "
 "corresponding image"
 msgstr ""
+"ファイルシステムからファイルをロード: ファイルはファイルパスを通じて識別され、QGISでは対応する画像を表示するためにパスを解決する必要があります"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:154
 msgid ""
@@ -333,6 +341,7 @@ msgid ""
 " are also applicable to raster images you may want to use for customizing "
 "symbols, labels or decorations."
 msgstr ""
+"SVGファイルをプロジェクトにロードおよび保存するための上記のオプションは、シンボル、ラベル、または装飾のカスタマイズに使用できるラスタ画像にも適用できます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:169
 msgid "**Plugin paths**"
@@ -406,6 +415,8 @@ msgid ""
 " and for turning on debugging output for specific sections of the source "
 "code."
 msgstr ""
+"**環境変数** "
+"グループでは、システム環境変数を表示し、多くの設定を行うことができます。これはMacなど、GUIアプリケーションが必ずしもユーザのシェル環境を継承しないプラットフォームで役立ちます。また、Processingツールボックス（SAGA、GRASSなど）によって制御される外部ツールセットの環境変数を設定および表示したり、ソースコードの特定のセクションのデバッグ出力をオンにしたりする場合にも役立ちます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:213
 msgid ""
@@ -415,6 +426,9 @@ msgid ""
 "environment variables`, and it's possible to filter them by activating "
 "|checkbox| :guilabel:`Show only QGIS-specific variables`."
 msgstr ""
+"|checkbox| :guilabel: `カスタム変数を使用（再起動が必要-セパレータを含める）` 。変数を :guilabel:`追加` および "
+":guilabel:`削除` できます。定義済みの環境変数は :guilabel:`現在の環境変数` に表示され、 |checkbox| "
+":guilabel:`QGIS固有の変数のみを表示` を有効にするとそれらをフィルタできます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:223
 msgid "CRS Settings"
@@ -513,7 +527,7 @@ msgstr ""
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:269
 msgid ""
 "|checkbox| :guilabel:`Ask for datum transformation if several are available`"
-msgstr ""
+msgstr "|checkbox| :guilabel:`複数ある場合はデータム変換するか尋ねる`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:270
 msgid ""
@@ -853,6 +867,11 @@ msgid ""
 ":guilabel:`Oversampling` value (between 0.0 and 99.99 - a large value means "
 "more work for QGIS - the default value is 2.0)."
 msgstr ""
+":guilabel:`ズームインの再サンプリング` と :guilabel:`ズームアウトの再サンプリング` の方法を定義できます。 "
+":guilabel:`ズームインの再サンプリング` の場合、「最近傍」、「双線形」、「立方」の3つのリサンプリング方法から選択できます。  "
+":guilabel:`ズームアウトの再サンプリング` の場合、「最近傍」と「平均」のどちらかを選択できます。 "
+":guilabel:`オーバーサンプリング` "
+"値も設定できます（0.0と99.99の間。値が大きほどQGISの処理がより多くなります。デフォルト値は2.0です）。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:445
 msgid "*Contrast enhancement*"
@@ -978,7 +997,7 @@ msgstr ""
 msgid ""
 ":guilabel:`Highlight color` allows you to choose with which color features "
 "being identified should be highlighted."
-msgstr ""
+msgstr ":guilabel:`強調表示の色` を使用すると、識別される地物を強調表示する色を選択できます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:514
 msgid ""
@@ -1161,10 +1180,11 @@ msgid ""
 "|checkbox| :guilabel:`Suppress attribute form pop-up after feature "
 "creation`: this choice can be overridden in each layer properties dialog."
 msgstr ""
+"|checkbox| :guilabel:`地物作成後に属性フォームをポップアップしない` ：この選択は各レイヤプロパティダイアログで上書きできます。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:615
 msgid "|checkbox| :guilabel:`Reuse last entered attribute values`."
-msgstr ""
+msgstr "|checkbox| :guilabel:`最後に入力した属性値を再利用する`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:616
 msgid ""
@@ -1444,6 +1464,7 @@ msgid ""
 "In this frame, you can define which GDAL driver is to use to read and/or "
 "write files, as in some cases more than one GDAL driver is available."
 msgstr ""
+"このフレームでは、ファイルの読み取りや書き込みに使用するGDALドライバを定義できます。使用できるGDALドライバは複数ある場合があるためです。"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:772
 msgid "GDAL Settings in QGIS"
@@ -3040,11 +3061,11 @@ msgstr ""
 msgid "The equivalent environment variable is ``QGIS_OPENCL_PROGRAM_FOLDER``."
 msgstr "同等の環境変数は :menuselection: ``QGIS_OPENCL_PROGRAM_FOLDER`` です。"
 
-#: ../../docs/user_manual/introduction/qgis_configuration.rst:1732
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1735
 msgid "Deploying QGIS within an organization"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/qgis_configuration.rst:1734
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1737
 msgid ""
 "If you need to deploy QGIS within an organization with a custom "
 "configuration file, first you need to copy/paste the content of the default "
@@ -3060,23 +3081,23 @@ msgstr ""
 "にあるデフォルト設定ファイルの内容をコピーして貼り付ける必要があります。このファイルには、 ``[]`` "
 "で始まるブロックで識別されるデフォルトのセクションがすでに含まれています。これらのデフォルト値を保持し、ファイルの下部に独自のセクションを追加することをお勧めします。ファイル内でセクションが重複している場合、QGISは上から下に最後のセクションを取得します。"
 
-#: ../../docs/user_manual/introduction/qgis_configuration.rst:1742
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1745
 msgid ""
 "You can change ``allowVersionCheck=false`` to disable the QGIS version "
 "check."
 msgstr ""
 
-#: ../../docs/user_manual/introduction/qgis_configuration.rst:1745
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1748
 msgid ""
 "If you do not want to display the migration window after a fresh install, "
 "you need the following section:"
 msgstr "新規インストール後に移行ウィンドウを表示したくない場合は、次のセクションが必要です。"
 
-#: ../../docs/user_manual/introduction/qgis_configuration.rst:1754
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1757
 msgid "If you want to add a custom variable in the global scope:"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/qgis_configuration.rst:1761
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1764
 msgid ""
 "To discover the possibilities of the settings ``INI`` file, we suggest that "
 "you set the config you would like in QGIS Desktop and then search for it in "
@@ -3085,13 +3106,13 @@ msgid ""
 "connections, proxy settings, maptips…"
 msgstr ""
 
-#: ../../docs/user_manual/introduction/qgis_configuration.rst:1766
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1769
 msgid ""
 "Finally, you need to set the environment variable "
 "``QGIS_GLOBAL_SETTINGS_FILE`` to the path of your customized file."
 msgstr ""
 
-#: ../../docs/user_manual/introduction/qgis_configuration.rst:1769
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1772
 msgid ""
 "In addition, you can also deploy files such as Python macros, color "
 "palettes, layout templates, project templates… either in the QGIS system "
@@ -3099,18 +3120,18 @@ msgid ""
 msgstr ""
 "さらに、Pythonマクロ、カラーパレット、レイアウトテンプレート、プロジェクトテンプレートなどのファイルをQGISシステムディレクトリまたはQGISユーザープロファイルのいずれかに配置することもできます。"
 
-#: ../../docs/user_manual/introduction/qgis_configuration.rst:1773
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1776
 msgid ""
 "Layout templates must be deployed in the :file:`composer_templates` "
 "directory."
 msgstr ""
 
-#: ../../docs/user_manual/introduction/qgis_configuration.rst:1774
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1777
 msgid ""
 "Project templates must be deployed in the :file:`project_templates` "
 "directory."
 msgstr ""
 
-#: ../../docs/user_manual/introduction/qgis_configuration.rst:1775
+#: ../../docs/user_manual/introduction/qgis_configuration.rst:1778
 msgid "Custom Python macros must be deployed in the :file:`python` directory."
 msgstr ""

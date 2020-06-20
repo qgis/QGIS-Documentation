@@ -1,19 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGISDoc package.
+# This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# MarieSilvestre, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGISDoc 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:27+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: MarieSilvestre, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +24,7 @@ msgstr ""
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:4
 msgid "The Picture and the North Arrow Items"
-msgstr ""
+msgstr "Image et flèche du Nord"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:5
 msgid ""
@@ -31,10 +32,13 @@ msgid ""
 "pictures, logos... It can also be used to add north arrows, despite the "
 "dedicated :ref:`North arrow <layout_northarrow_item>` tool."
 msgstr ""
+"L'objet :guilabel:`Image` permet de décorer une carte avec des images, "
+"logos... Il peut également être utilisé pour ajouter une flèche du Nord, "
+"malgré l'outil dédié :ref:`Flèche du nord <layout_northarrow_item>`."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:12
 msgid "The Picture Item"
-msgstr ""
+msgstr "L'objet Image"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:14
 msgid ""
@@ -42,6 +46,10 @@ msgid ""
 ":ref:`items creation instructions <create_layout_item>` and manipulate it "
 "the same way as exposed in :ref:`interact_layout_item`."
 msgstr ""
+"Vous pouvez ajouter une image avec |addImage| :guilabel:`Ajouter une image` "
+"en suivant les :ref:`instructions de création d'objets <create_layout_item>`"
+" que vous pourrez ensuite manipuler comme expliqué dans "
+":ref:`interact_layout_item`."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:20
 msgid ""
@@ -50,16 +58,22 @@ msgid ""
 "properties <item_common_properties>`, this feature has the following "
 "functionalities (see figure_layout_image_):"
 msgstr ""
+"Par défaut, l'objet image est vide et se personnalise via les "
+":guilabel:`Propriétés de l'objet`. En plus des :ref:`propriétés communes "
+"<item_common_properties>`, cet objet propose les fonctionnalités suivantes "
+"(voir figure_layout_image_) :"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:30
 msgid "Picture Item Properties panel"
-msgstr ""
+msgstr "Propriétés de l'objet Image"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:33
 msgid ""
 "You first have to select the image you want to display. There are several "
 "ways to set the :guilabel:`Image source`:"
 msgstr ""
+"Vous devez d'abord sélectionner l'image que vous voulez afficher. Il y a "
+"plusieurs moyens de configurer la :guilabel:`Source de l'image` :"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:36
 msgid ""
@@ -69,12 +83,21 @@ msgid ""
 "Besides :file:`SVG`, you can also select other image formats like "
 ":file:`.png` or :file:`.jpg`."
 msgstr ""
+"Dans les :guilabel:`Propriétés principales`, utilisez le bouton "
+":guilabel:`...` :sup:`Explorer` dans :guilabel:`Source de l'image` pour "
+"sélectionnez un fichier sur votre ordinateur. L'explorateur commencera dans "
+"la librairie SVG fournie avec QGIS. Outre les fichiers :file:`SVG`, vous "
+"pouvez aussi sélectionner d'autres formats d'image comme :file:`.png` ou "
+":file:`.jpg`."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:41
 msgid ""
 "You can enter the source directly in the :guilabel:`Image source` text "
 "field. You can even provide a remote URL-address to a picture."
 msgstr ""
+"Vous pouvez entrer la source directement dans la zone de texte "
+":guilabel:`Source de l'image`. Vous pouvez même fournir une adresse URL "
+"distante vers une image."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:43
 msgid ""
@@ -83,12 +106,20 @@ msgid ""
 "default provided    by folders set in :menuselection:`Settings --> Options "
 "--> System --> SVG Paths`."
 msgstr ""
+"Dans la zone :guilabel:`Rechercher dans les répertoires`, vous pouvez "
+"sélectionner une image parmi celle chargées en prévisualisation pour définir"
+" la source de l'image. Ces images sont fournies par défaut via les "
+"répertoires définis dans :menuselection:`Préférences --> Options --> Système"
+" --> Chemins SVG`."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:47
 msgid ""
 "Use the |dataDefined| :sup:`data defined override` button to set the image "
 "source from a feature attribute or using a regular expression."
 msgstr ""
+"Utilisez le bouton |dataDefined| :sup:`Valeur définie par les données` pour "
+"définir la source de l'image depuis un attribut d'entité ou en utilisant une"
+" expression régulière."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:50
 msgid ""
@@ -96,23 +127,33 @@ msgid ""
 " and :guilabel:`Remove` buttons in the group to customize the list of "
 "folders to fetch and preview images from."
 msgstr ""
+"Dans la zone :guilabel:`Rechercher dans les répertoires`, vous pouvez "
+"utiliser les boutons :guilabel:`Ajouter...` et :guilabel:`Supprimer` pour "
+"personnaliser la liste des répertoires à parcourir pour récupérer des "
+"images."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:54
 msgid ""
 "With the :guilabel:`Resize mode` option, you can set how the image is "
 "displayed when the frame is resized:"
 msgstr ""
+"Avec l'option :guilabel:`Mode de redimensionnement`, vous pouvez définir "
+"comment l'image est affichée lorsque le cadre change :"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:57
 msgid ""
 "``Zoom``: enlarges/reduces the image to the frame while maintaining aspect "
 "ratio of picture;"
 msgstr ""
+"``Zoom`` : agrandit/réduit l'image au cadre tout en conservant les "
+"proportions de l'image ; "
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:59
 msgid ""
 "``Stretch``: stretches image to fit inside the frame, ignores aspect ratio;"
 msgstr ""
+"``Étirement`` : étire une image pour l'ajuster à l'intérieur du cadre et "
+"ignore les proportions ;"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:60
 msgid ""
@@ -120,18 +161,27 @@ msgid ""
 "image to original image size without scaling and the frame is used to clip "
 "the image, so only the part of the image inside the frame is visible;"
 msgstr ""
+"``Découper`` : utilisez ce mode uniquement pour des images raster, il "
+"définit la taille de l'image à la taille de l'image originale sans mise à "
+"l'échelle, et le cadre est utilisé pour découper l'image, donc seule la "
+"partie de l'image à l'intérieur du cadre est visible ;"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:63
 msgid ""
 "``Zoom and resize frame``: enlarges image to fit frame, then resizes frame "
 "to fit resultant image;"
 msgstr ""
+"``Zoomer et redimensionner le cadre`` : agrandit l'image pour s'ajuster avec"
+" le cadre, puis redimensionne le cadre pour s'ajuster à l'image résultante ;"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:65
 msgid ""
 "``Resize frame to image size``: sets size of frame to match original size of"
 " image without scaling."
 msgstr ""
+"``Redimensionner le cadre à la taille de l'image`` : définit la taille du "
+"cadre pour correspondre à la taille originale de l'image sans mise à "
+"l'échelle."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:68
 msgid ""
@@ -140,6 +190,10 @@ msgid ""
 ":guilabel:`Placement` you can select the position of the image inside its "
 "frame."
 msgstr ""
+"En fonction du :guilabel:`Mode de redimensionnement`, la "
+":guilabel:`Position` et la :guilabel:`Rotation de l'image` sont activés ou "
+"pas. Avec la :guilabel:`Position`, vous pouvez sélectionner la position de "
+"l'image à l'intérieur du cadre."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:74
 msgid ""
@@ -149,6 +203,12 @@ msgid ""
 "their corresponding feature in the :guilabel:`SVG Parameters` group. These "
 "properties can as well be :ref:`data-defined <data_defined>`."
 msgstr ""
+"Les fichiers :file:`.SVG` fournis par défaut dans QGIS sont "
+"personnalisables, c'est-à-dire que vous pouvez facilement modifier la "
+":guilabel:`Couleur de remplissage`, la :guilabel:`Couleur de trait` (dont "
+"l'opacité) et la :guilabel:`Largeur de trait` du symbole original en "
+"utilisant les :guilabel:`Paramètres SVG`. Ces propriétés peuvent être "
+":ref:`définies par les données <data_defined>`."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:80
 msgid ""
@@ -156,6 +216,9 @@ msgid ""
 "may need to add the following tags to the file in order to add support e.g. "
 "for transparency:"
 msgstr ""
+"Si vous ajoutez un fichier :file:`.SVG` qui ne propose pas ces propriétés, "
+"il vous faudra peut-être ajouter le code suivant dans le fichier pour "
+"permettre la gestion de la transparence par exemple :"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:84
 msgid "`fill-opacity=\"param(fill-opacity)\"`"
@@ -170,6 +233,9 @@ msgid ""
 "You can read this `blog post <https://blog.sourcepole.ch/2011/06/30/svg-"
 "symbols-in-qgis-with-modifiable-colors/>`_ to see an example."
 msgstr ""
+"Vous pouvez lire ce post de blog pour voir un exemple : "
+"<https://blog.sourcepole.ch/2011/06/30/svg-symbols-in-qgis-with-modifiable-"
+"colors/>`_"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:91
 msgid ""
@@ -178,27 +244,38 @@ msgid ""
 "of the image with the rotation applied to a selected map item; this is a "
 "convenient feature for north arrows that you can align with either:"
 msgstr ""
+"Les images peuvent être tournées avec les paramètres de :guilabel:`Rotation "
+"de l'image`. L'activation de l'option |checkbox| :guilabel:`Synchroniser "
+"avec la carte` synchronise la rotation d'une image avec celle de l'objet "
+"carte sélectionné ; c'est une fonctionnalité intéressante pour les flèches "
+"du Nord que vous pouvez aligner avec :"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:96
 msgid ""
 "the **Grid north**: direction of a grid line which is parallel to the "
 "central meridian on the national/local grid;"
 msgstr ""
+"le **Nord de la grille** : direction de la ligne de graticule parallèle au "
+"méridien central de la grille nationale/locale ;"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:98
 msgid ""
 "or the **True north**: direction of a meridian of longitude which converges "
 "on the North Pole."
 msgstr ""
+"ou le **Nord géographique** : direction du méridien qui converge vers le "
+"pôle Nord."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:101
 msgid ""
 "You can also apply a declination :guilabel:`Offset` to the picture rotation."
 msgstr ""
+"Vous pouvez également appliquer une déclinaison (:guilabel:`Décalage`) à la "
+"rotation de l'image."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:107
 msgid "The North Arrow Item"
-msgstr ""
+msgstr "L'objet Flèche du Nord"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:109
 msgid ""
@@ -206,6 +283,10 @@ msgid ""
 "following :ref:`items creation instructions <create_layout_item>` and "
 "manipulate it the same way as exposed in :ref:`interact_layout_item`."
 msgstr ""
+"Vous pouvez ajouter une flèche du Nord |northArrow| :guilabel:`Ajouter une "
+"flèche du Nord` en suivant les :ref:`instructions de création d'objets "
+"<create_layout_item>` que vous pourrez ensuite manipuler comme expliqué dans"
+" :ref:`interact_layout_item`."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:113
 msgid ""
@@ -213,11 +294,16 @@ msgid ""
 " properties as the :ref:`picture item <layout_picture_item>`. The main "
 "differences are:"
 msgstr ""
+"Comme les flèches du Nord sont des images, l'objet :guilabel:`Flèche du "
+"Nord` possède les mêmes propriétés qu'un :ref:`Objet Image "
+"<layout_picture_item>`. Les différences principales sont :"
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:117
 msgid ""
 "A default north arrow is used when adding the item instead of a blank frame"
 msgstr ""
+"Une flèche du Nord par défaut est utilisée lorsque l'objet est ajouté, au "
+"lieu d'un cadre vide."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:118
 msgid ""
@@ -226,6 +312,10 @@ msgid ""
 "north arrow item is drawn. If none, then it falls back to the "
 ":ref:`reference map <reference_map>`."
 msgstr ""
+"L'objet Flèche du Nord est synchronisé avec une carte définie par défaut : "
+"le paramètre guilabel:`Synchroniser avec la carte` est renseigné avec la "
+"carte sur laquelle la flèche est ajoutée. S'il n'y en a pas, il s'agit de la"
+" :ref:`carte de référence <reference_map>`."
 
 #: ../../docs/user_manual/print_composer/composer_items/composer_image.rst:124
 msgid ""

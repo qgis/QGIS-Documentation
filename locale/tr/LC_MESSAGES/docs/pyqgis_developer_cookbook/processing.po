@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGISDoc package.
+# This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGISDoc 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:24+0000\n"
 "Language-Team: Turkish (https://www.transifex.com/qgis/teams/6144/tr/)\n"
 "MIME-Version: 1.0\n"
@@ -17,48 +17,48 @@ msgstr ""
 "Language: tr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:6
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:18
 msgid "Writing a Processing plugin"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:11
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:23
 msgid ""
-"Depending on the kind of plugin that you are going to develop, it might be "
-"better option to add its functionality as a Processing algorithm (or a set "
+"Depending on the kind of plugin that you are going to develop, it might be a"
+" better option to add its functionality as a Processing algorithm (or a set "
 "of them). That would provide a better integration within QGIS, additional "
 "functionality (since it can be run in the components of Processing, such as "
 "the modeler or the batch processing interface), and a quicker development "
 "time (since Processing will take of a large part of the work)."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:18
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:30
 msgid ""
 "To distribute those algorithms, you should create a new plugin that adds "
 "them to the Processing Toolbox. The plugin should contain an algorithm "
 "provider, which has to be registered when the plugin is instantiated."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:23
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:35
 msgid "Creating from scratch"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:25
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:37
 msgid ""
 "To create a plugin from scratch which contains an algorithm provider, you "
 "can follow these steps using the Plugin Builder:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:28
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:40
 msgid "Install the **Plugin Builder** plugin"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:29
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:41
 msgid ""
 "Create a new plugin using the Plugin Builder. When the Plugin Builder asks "
 "you for the template to use, select \"Processing provider\"."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:31
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:43
 msgid ""
 "The created plugin contains a provider with a single algorithm. Both the "
 "provider file and the algorithm file are fully commented and contain "
@@ -66,44 +66,44 @@ msgid ""
 "Refer to them for more information."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:36
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:48
 msgid "Updating a plugin"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:38
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:50
 msgid ""
 "If you want to add your existing plugin to Processing, you need to add some "
 "code."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:40
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:52
 msgid "In your :file:`metadata.txt` file, you need to add a variable:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:46
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:58
 msgid ""
 "In the Python file where your plugin is setup with the ``initGui`` method, "
 "you need to adapt some lines like this:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:70
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:82
 msgid ""
 "You can create a folder :file:`processing_provider` with three files in it:"
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:72
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:84
 msgid ""
 ":file:`__init__.py` with nothing in it. This is necessary to make a valid "
 "Python package."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:74
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:86
 msgid ""
 ":file:`provider.py` which will create the Processing provider and expose "
 "your algorithms."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:113
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:126
 msgid ""
 ":file:`example_processing_algorithm.py` which contains the example algorithm"
 " file. Copy/paste the content of the :source:`script template file "
@@ -111,7 +111,7 @@ msgid ""
 "according to your needs."
 msgstr ""
 
-#: ../../docs/pyqgis_developer_cookbook/processing.rst:118
+#: ../../docs/pyqgis_developer_cookbook/processing.rst:131
 msgid ""
 "Now you can reload your plugin in QGIS and you should see your example "
 "script in the Processing toolbox and modeler."

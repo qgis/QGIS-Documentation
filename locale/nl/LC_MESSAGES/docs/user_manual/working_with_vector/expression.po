@@ -1,19 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGISDoc package.
+# This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Dick Groskamp, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGISDoc 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:32+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Dick Groskamp, 2020\n"
 "Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -185,13 +186,13 @@ msgid ""
 msgstr ""
 "Sommige functies vereisen dat veel parameters moeten worden ingesteld. Het "
 "programma voor expressies ondersteunt het gebruiken van benoemde parameters."
-" Dit betekent dat in plaats van de cryptische expressie: ``clamp(1, 2, 9)`` "
-"te schrijven u: ``clamp( min:=1, value:=2, max:=9)`` kunt gebruiken. Deze "
+" Dit betekent dat, in plaats van de cryptische expressie: ``clamp(1, 2, 9)``"
+" te schrijven, u: ``clamp( min:=1, value:=2, max:=9)`` kunt gebruiken. Deze "
 "wijziging maakt het ook mogelijk argumenten te wisselen, bijv: ``clamp( "
-"value:=2, max:=9, min:=1)``. Het gebruiken van benoemde parameters helpt "
+"value:=2, max:=9, min:=1)``. Het gebruiken van benoemde parameters helpt te "
 "verduidelijken waar de argumenten voor een functie voor een expressie naar "
-"verwijzen, wat nuttig is als u probeert een expressie te interpreteren op "
-"een latere datum!"
+"verwijzen, wat nuttig is als u op een latere datum probeert een expressie te"
+" interpreteren!"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:93
 msgid "List of functions"
@@ -285,7 +286,7 @@ msgid ""
 "quickly find a particular function or field. Double-clicking an item adds it"
 " to the expression editor."
 msgstr ""
-"Een functieselectie geeft de lijst met functies, variabelen, velden weer… "
+"Een functieselectie geeft de lijst met functies, variabelen, velden… weer, "
 "georganiseerd in groepen. Een zoekvak is beschikbaar om de lijst te filteren"
 " en snel een bepaalde functie of veld te vinden. Dubbelklikken op de naam "
 "van het item voegt het toe aan de te schrijven expressie."
@@ -302,9 +303,9 @@ msgid ""
 "Press :kbd:`Ctrl+Click` when hovering a function name in an expression to "
 "automatically display its help in the dialog."
 msgstr ""
-"Drukken op:kbd:`Ctrl+Click` terwijl u met de muis over de naam van een "
-"functie in een expressie gaat zal automatisch de Help daarvoor openen in een"
-" dialoogvenster."
+"Drukken op :kbd:`Ctrl+Click`, terwijl u met de muis over de naam van een "
+"functie in een expressie gaat, zal automatisch de Help daarvoor openen in "
+"een dialoogvenster."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:158
 msgid ""
@@ -323,7 +324,7 @@ msgid ""
 "(invisible) in the dialog. Press the :guilabel:`Show Values` or "
 ":guilabel:`Show Help` button to get it back."
 msgstr ""
-"Het rechter paneel, dat help voor functies of veldwaarden weergeeft, kan "
+"Het rechterpaneel, dat Help voor functies of veldwaarden weergeeft, kan "
 "worden samengevouwen (onzichtbaar) in het dialoogvenster. Druk op de knoppen"
 " :guilabel:`Waarden weergeven` of :guilabel:`Help weergeven` om het terug te"
 " krijgen."
@@ -429,16 +430,20 @@ msgid ""
 "Returns all aggregated strings from a field or expression joined by a "
 "delimiter"
 msgstr ""
+"Geeft alle samengevoegde waarden terug uit een veld of expressie, verbonden "
+"door een scheidingsteken"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "concatenate_unique"
-msgstr ""
+msgstr "concatenate_unique"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns all unique aggregated strings from a field or expression joined by a"
 " delimiter"
 msgstr ""
+"Geeft alle unieke samengevoegde waarden terug uit een veld of expressie, "
+"verbonden door een scheidingsteken"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "count"
@@ -612,11 +617,11 @@ msgid "Returns the aggregate summed value from a field or expression"
 msgstr ""
 "Geeft de samengestelde opgetelde waarde terug uit een veld of expressie"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:221
+#: ../../docs/user_manual/working_with_vector/expression.rst:217
 msgid "**Examples:**"
 msgstr "**Voorbeelden:**"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:223
+#: ../../docs/user_manual/working_with_vector/expression.rst:219
 msgid ""
 "Return the maximum of the \"passengers\" field from features in the layer "
 "grouped by \"station_class\" field::"
@@ -624,7 +629,7 @@ msgstr ""
 "Geeft het maximum terug van het veld \"passengers\" uit objecten in de laag,"
 " gegroepeerd op het veld \"station_class\"::"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:228
+#: ../../docs/user_manual/working_with_vector/expression.rst:224
 msgid ""
 "Calculate the total number of passengers for the stations inside the current"
 " atlas feature::"
@@ -632,7 +637,7 @@ msgstr ""
 "Berekent het totale aantal passagiers voor de stations binnen het huidige "
 "object van de atlas::"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:234
+#: ../../docs/user_manual/working_with_vector/expression.rst:230
 msgid ""
 "Return the mean of the \"field_from_related_table\" field for all matching "
 "child features using the 'my_relation' relation from the layer::"
@@ -641,15 +646,15 @@ msgstr ""
 "alle overeenkomende kind-objecten met behulp van de relatie 'my_relation' "
 "uit de laag::"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:239
+#: ../../docs/user_manual/working_with_vector/expression.rst:235
 msgid "or::"
 msgstr "of::"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:249
+#: ../../docs/user_manual/working_with_vector/expression.rst:245
 msgid "Array Functions"
-msgstr "Functies voopr array "
+msgstr "Functies voor array "
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:251
+#: ../../docs/user_manual/working_with_vector/expression.rst:247
 msgid ""
 "This group contains functions to create and manipulate arrays (also known as"
 " list data structures). The order of values within the array matters, unlike"
@@ -675,11 +680,12 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "array_all"
-msgstr ""
+msgstr "array_all"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns true if an array contains all the values of a given array"
 msgstr ""
+"Geeft true terug als een array alle waarden van een opgegeven array bevat"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "array_append"
@@ -852,11 +858,11 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "array_sort"
-msgstr ""
+msgstr "array_sort"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the provided array with its elements sorted"
-msgstr ""
+msgstr "Geeft de opgegeven array terug met gesorteerde elementen"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "array_to_string"
@@ -904,11 +910,11 @@ msgstr ""
 "Splitst een tekenreeks in een array met het opgegeven scheidingsteken en de "
 "optionele tekenreeks voor lege waarden"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:297
+#: ../../docs/user_manual/working_with_vector/expression.rst:293
 msgid "Color Functions"
 msgstr "Kleurfuncties"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:299
+#: ../../docs/user_manual/working_with_vector/expression.rst:295
 msgid "This group contains functions for manipulating colors."
 msgstr "Deze groep bevat functies waarmee u kleuren kunt bewerken."
 
@@ -1101,11 +1107,11 @@ msgstr ""
 "Stelt een specifieke kleurcomponent in voor een tekenreeks voor een kleur, "
 "bijv, de rode component of alfa-component"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:334
+#: ../../docs/user_manual/working_with_vector/expression.rst:330
 msgid "Conditional Functions"
 msgstr "Functies Voorwaarden"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:336
+#: ../../docs/user_manual/working_with_vector/expression.rst:332
 msgid ""
 "This group contains functions to handle conditional checks in expressions."
 msgstr ""
@@ -1159,40 +1165,44 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "nullif(value1, value2)"
-msgstr ""
+msgstr "nullif(waarde1, waarde2)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns a null value if value1 equals value2 otherwise it returns value1. "
 "This can be used to conditionally substitute values with NULL."
 msgstr ""
+"Geeft een waarde Null terug als waarde1 gelijk is aan waarde2, anders geeft "
+"het waarde1 terug. Dit kan worden gebruikt om voorwaardelijk waarden door "
+"NULL te vervangen."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "try"
-msgstr ""
+msgstr "try"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Tries an expression and returns its value if error-free, an alternative "
 "value (if provided) or Null if an error occurs"
 msgstr ""
+"Probeert een expressie en geeft de waarde ervan terug indien foutenvrij, een"
+" alternatieve waarde (indien opgegeven) of Null als er een fout optrad"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:356
-#: ../../docs/user_manual/working_with_vector/expression.rst:792
+#: ../../docs/user_manual/working_with_vector/expression.rst:348
 msgid "**Some example:**"
 msgstr "**Enkele voorbeelden:**"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:358
+#: ../../docs/user_manual/working_with_vector/expression.rst:350
 msgid "Send back a value if the first condition is true, else another value::"
 msgstr ""
 "Geeft een waarde terug als de eerste voorwaarde waar is, anders een andere "
 "waarde::"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:366
+#: ../../docs/user_manual/working_with_vector/expression.rst:358
 msgid "Conversions Functions"
 msgstr "Functies Conversies"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:368
+#: ../../docs/user_manual/working_with_vector/expression.rst:360
 msgid ""
 "This group contains functions to convert one data type to another (e.g., "
 "string to integer, integer to string)."
@@ -1276,11 +1286,11 @@ msgstr "to_time"
 msgid "Converts a string into a time object"
 msgstr "Converteert een tekenreeks naar een object time"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:388
+#: ../../docs/user_manual/working_with_vector/expression.rst:380
 msgid "Custom Functions"
 msgstr "Aangepaste functies"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:390
+#: ../../docs/user_manual/working_with_vector/expression.rst:382
 msgid ""
 "This group contains functions created by the user. See "
 ":ref:`function_editor` for more details."
@@ -1288,11 +1298,11 @@ msgstr ""
 "Deze groep bevat functies die door de gebruiker zijn gedefinieerd. Bekijk "
 ":ref:`function_editor` voor meer details."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:395
+#: ../../docs/user_manual/working_with_vector/expression.rst:387
 msgid "Date and Time Functions"
 msgstr "Datum en tijd functies"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:397
+#: ../../docs/user_manual/working_with_vector/expression.rst:389
 msgid "This group contains functions for handling date and time data."
 msgstr ""
 "Deze groep bevat functies voor het behandelen van gegevens met betrekking "
@@ -1417,11 +1427,13 @@ msgstr "year"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
-"Extracts the year part from a date or datetime,or the number of years from "
+"Extracts the year part from a date or datetime, or the number of years from "
 "an interval"
 msgstr ""
+"Neemt het deel jaar uit een datum of datetime, of het aantal jaren vanaf een"
+" interval"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:419
+#: ../../docs/user_manual/working_with_vector/expression.rst:407
 msgid ""
 "This group also shares several functions with the "
 ":ref:`conversion_functions` ( to_date, to_time, to_datetime, to_interval) "
@@ -1431,21 +1443,21 @@ msgstr ""
 ":ref:`conversion_functions` ( to_date, to_time, to_datetime, to_interval) en"
 " :ref:`string_functions` (format_date)."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:423
-#: ../../docs/user_manual/working_with_vector/expression.rst:747
-#: ../../docs/user_manual/working_with_vector/expression.rst:943
-#: ../../docs/user_manual/working_with_vector/expression.rst:1015
-#: ../../docs/user_manual/working_with_vector/expression.rst:1240
+#: ../../docs/user_manual/working_with_vector/expression.rst:411
+#: ../../docs/user_manual/working_with_vector/expression.rst:731
+#: ../../docs/user_manual/working_with_vector/expression.rst:919
+#: ../../docs/user_manual/working_with_vector/expression.rst:987
+#: ../../docs/user_manual/working_with_vector/expression.rst:1204
 msgid "**Some examples:**"
 msgstr "**Enkele voorbeelden:**"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:425
+#: ../../docs/user_manual/working_with_vector/expression.rst:413
 msgid "Get today's month and year in the \"month_number/year\" format:"
 msgstr ""
 "Haal de maand en het jaar op van vandaag in de indeling "
 "\"month_number/year\":"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:432
+#: ../../docs/user_manual/working_with_vector/expression.rst:420
 msgid ""
 "Besides these functions, subtracting dates, datetimes or times using the "
 "``-`` (minus) operator will return an interval."
@@ -1453,7 +1465,7 @@ msgstr ""
 "Naast deze functies, aftrekken van datums, datum/tijden of tijden met behulp"
 " van de operator ``-`` (minus) zal een interval teruggeven."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:435
+#: ../../docs/user_manual/working_with_vector/expression.rst:423
 msgid ""
 "Adding or subtracting an interval to dates, datetimes or times, using the "
 "``+`` (plus) and ``-`` (minus) operators, will return a datetime."
@@ -1462,23 +1474,23 @@ msgstr ""
 "met behulp van de operatoren ``+`` (plus) en ``-`` (minus), zal een datetime"
 " teruggeven."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:438
+#: ../../docs/user_manual/working_with_vector/expression.rst:426
 msgid "Get the number of days until QGIS 3.0 release:"
 msgstr "Haal het aantal dagen op tot de uitgave van QGIS 3.0:"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:445
+#: ../../docs/user_manual/working_with_vector/expression.rst:433
 msgid "The same with time:"
 msgstr "Hetzelfde met tijd:"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:452
+#: ../../docs/user_manual/working_with_vector/expression.rst:440
 msgid "Get the datetime of 100 days from now:"
 msgstr "Haal de datum/tijd op tot 100 dagen vanaf nu:"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:459
+#: ../../docs/user_manual/working_with_vector/expression.rst:447
 msgid "**Storing date and datetime and intervals on fields**"
 msgstr "**Datum en datum/tijd en intervallen opslaan in velden**"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:461
+#: ../../docs/user_manual/working_with_vector/expression.rst:449
 msgid ""
 "The ability to store *date*, *time* and *datetime* values directly on fields"
 " may depend on the data source's provider (e.g., Shapefile accepts *date* "
@@ -1491,7 +1503,7 @@ msgstr ""
 " of *time*). Hieronder volgen enkele suggesties om deze beperking te "
 "omzeilen:"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:466
+#: ../../docs/user_manual/working_with_vector/expression.rst:454
 msgid ""
 "*date*, *Datetime* and *time* can be stored in text type fields after using "
 "the ``to_format()`` function."
@@ -1499,25 +1511,25 @@ msgstr ""
 "*date*, *Datetime* and *time* kunnen worden opgeslagen in velden type tekst "
 "na het gebruiken van de functie ``to_format()``."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:469
+#: ../../docs/user_manual/working_with_vector/expression.rst:457
 msgid ""
 "*Intervals* can be stored in integer or decimal type fields after using one "
 "of the date extraction functions (e.g., ``day()`` to get the interval "
 "expressed in days)"
 msgstr ""
-"*Intervals* kunnen worden opgeslagen in velden type integer of decimal na "
-"het gebruiken van een van de functies voor het uitnemen van de datum (bijv.,"
-" ``day()`` om de interval uitgedrukt te krijgen in dagen)"
+"*Intervallen* kunnen worden opgeslagen in velden type integer of decimal na "
+"het gebruiken van een van de functies voor het uitnemen van de datum (bijv. "
+"``day()`` om de interval uitgedrukt te krijgen in dagen)"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:476
+#: ../../docs/user_manual/working_with_vector/expression.rst:464
 msgid "Fields and Values"
 msgstr "Velden en waarden"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:478
+#: ../../docs/user_manual/working_with_vector/expression.rst:466
 msgid "Contains a list of fields from the layer."
 msgstr "Bevat een lijst met velden uit de laag."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:480
+#: ../../docs/user_manual/working_with_vector/expression.rst:468
 msgid ""
 "Double-click a field name to have it added to your expression. You can also "
 "type the field name (preferably inside double quotes) or its :ref:`alias "
@@ -1527,7 +1539,7 @@ msgstr ""
 "kunt ook de naam van het veld typen (bij voorkeur tussen dubbele "
 "aanhalingstekens) of het :ref:`alias <configure_field>` daarvan."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:484
+#: ../../docs/user_manual/working_with_vector/expression.rst:472
 msgid ""
 "To retrieve fields values to use in an expression, select the appropriate "
 "field and, in the shown widget, choose between :guilabel:`10 Samples` and "
@@ -1543,7 +1555,7 @@ msgstr ""
 "voorbeeldwaarden kan ook worden gekregen door met rechts te klikken op een "
 "veld."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:490
+#: ../../docs/user_manual/working_with_vector/expression.rst:478
 msgid ""
 "To add a value to the expression you are writing, double-click on it in the "
 "list. If the value is of a string type, it should be simple quoted, "
@@ -1553,86 +1565,92 @@ msgstr ""
 " lijst. Als de waarde van het type string is, moet het tussen enkele "
 "aanhalingstekens staan, anders zijn geen aanhalingstekens nodig."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:496
+#: ../../docs/user_manual/working_with_vector/expression.rst:484
 msgid "Files and Paths Functions"
-msgstr ""
+msgstr "Functies voor bestanden en paden"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:498
+#: ../../docs/user_manual/working_with_vector/expression.rst:486
 msgid "This group contains functions which manipulate file and path names."
 msgstr ""
+"Deze groep bevat functies waarmee u bestands- en padnamen kunt bewerken."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "base_file_name"
-msgstr ""
+msgstr "base_file_name"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the base name of the file without the directory or file suffix."
 msgstr ""
+"Geeft de basisnaam terug van het bestand, zonder de map of achtervoegsel "
+"voor het bestand (extensie)."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "file_exists"
-msgstr ""
+msgstr "file_exists"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns true if a file path exists."
-msgstr ""
+msgstr "Geeft true terug als een bestandspad bestaat."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "file_name"
-msgstr ""
+msgstr "file_name"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the name of a file (including the file extension), excluding the "
 "directory."
 msgstr ""
+"Geeft de naam terug van een bestand, (inclusief de bestandsextensie), maar "
+"zonder de map."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "file_path"
-msgstr ""
+msgstr "file_path"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the directory component of a file path, without the file name"
 msgstr ""
+"Geeft de component map terug van een bestandspad, zonder de bestandsnaam."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "file_size"
-msgstr ""
+msgstr "file_size"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the size (in bytes) of a file."
-msgstr ""
+msgstr "Geeft de grootte (in bytes) terug van een bestand."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "file_suffix"
-msgstr ""
+msgstr "file_suffix"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the file extension from a file path."
-msgstr ""
+msgstr "Geeft de bestandsextensie terug uit een bestandspad."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "is_directory"
-msgstr ""
+msgstr "is_directory"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns true if a path corresponds to a directory."
-msgstr ""
+msgstr "Geeft true terug als een pad correspondeert met een map."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "is_file"
-msgstr ""
+msgstr "is_file"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns true if a path corresponds to a file."
-msgstr ""
+msgstr "Geeft true terug als een pad correspondeert met een bestand."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:515
+#: ../../docs/user_manual/working_with_vector/expression.rst:503
 msgid "Fuzzy Matching Functions"
 msgstr "Functies voor fuzzy overeenkomsten"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:517
+#: ../../docs/user_manual/working_with_vector/expression.rst:505
 msgid "This group contains functions for fuzzy comparisons between values."
 msgstr "Deze groep bevat functies voor fuzzy vergelijkingen tussen waarden."
 
@@ -1679,13 +1697,13 @@ msgstr "soundex"
 msgid "Returns the Soundex representation of a string"
 msgstr "Geeft de weergave in Soundex terug van een tekenreeks"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:533
+#: ../../docs/user_manual/working_with_vector/expression.rst:521
 msgid "General Functions"
 msgstr "Algemene functies"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:535
+#: ../../docs/user_manual/working_with_vector/expression.rst:523
 msgid "This group contains general assorted functions."
-msgstr ""
+msgstr "Deze groep bevat een algemeen assortiment van functies."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "env"
@@ -1709,6 +1727,9 @@ msgid ""
 "Evaluates an expression which is passed in a string. Useful to expand "
 "dynamic parameters passed as context variables or fields."
 msgstr ""
+"Evalueert een expressie die in een tekenreeks wordt doorgegeven. Nuttig om "
+"dynamische parameters, die zijn doorgegeven als contextvariabelen of velden,"
+" uit te breiden."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "is_layer_visible"
@@ -1757,11 +1778,11 @@ msgstr ""
 "worden verschaft als derde argument. Nuttig om herhaling te vermijden in "
 "expressies waar dezelfde waarde meer dan één keer moet worden gebruikt."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:557
+#: ../../docs/user_manual/working_with_vector/expression.rst:545
 msgid "Geometry Functions"
 msgstr "Geometrie functies"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:559
+#: ../../docs/user_manual/working_with_vector/expression.rst:547
 msgid ""
 "This group contains functions that operate on geometry objects (e.g., "
 "length, area)."
@@ -1982,13 +2003,15 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "collect_geometries"
-msgstr ""
+msgstr "collect_geometries"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Collects a set of geometries into a multi-part geometry object (see also "
 ":ref:`qgiscollect`)"
 msgstr ""
+"Verzamelt een set geometrieën in een meerdelig object geometrie (zie ook "
+":ref:`qgiscollect`)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "combine"
@@ -2140,13 +2163,15 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "force_rhr"
-msgstr ""
+msgstr "force_rhr"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Forces a geometry to respect the Right-Hand-Rule (see also "
 ":ref:`qgisforcerhr`)"
 msgstr ""
+"Forceert een geometrie om de Rechterhand-regel te respecteren (zie ook "
+":ref:`qgisforcerhr`)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "geom_from_gml"
@@ -2206,6 +2231,9 @@ msgid ""
 "Returns basically a measure of how similar or dissimilar two geometries are,"
 " with a lower distance indicating more similar geometries"
 msgstr ""
+"Geeft in de basis een meting terug van hoe soortgelijk of niet soortgelijk "
+"twee geometrieën zijn, met een lagere afstand die meer soortgelijke "
+"geometrieën aangeeft"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
@@ -2394,6 +2422,7 @@ msgstr "make_line"
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Creates a line geometry from a series or an array of point geometries"
 msgstr ""
+"Maakt een lijngeometrie uit een serie of een array van puntgeometrieën"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "make_point(x,y,z,m)"
@@ -2427,11 +2456,11 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "make_rectangle_3points"
-msgstr ""
+msgstr "make_rectangle_3points"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Creates a rectangle from 3 points"
-msgstr ""
+msgstr "Maakt een rechthoek uit 3 punten"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "make_regular_polygon"
@@ -2443,11 +2472,11 @@ msgstr "Maakt een normale polygoon"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "make_square"
-msgstr ""
+msgstr "make_square"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Creates a square from a diagonal"
-msgstr ""
+msgstr "Maakt een vierkant uit een diagonaal"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "make_triangle"
@@ -2637,6 +2666,9 @@ msgid ""
 "(azimuth) and an elevation in radians (see also "
 ":ref:`qgisprojectpointcartesian`)"
 msgstr ""
+"Geeft een geprojecteerd punt terug vanaf een beginpunt met een afstand, "
+"richting (azimut) en een hoogte in radialen (zie ook "
+":ref:`qgisprojectpointcartesian`)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "relate"
@@ -2927,32 +2959,36 @@ msgstr "z"
 msgid "Returns the Z coordinate of a point geometry"
 msgstr "Geeft de Z-coördinaat van een geometrie punt terug"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:749
+#: ../../docs/user_manual/working_with_vector/expression.rst:733
 msgid "Return the X coordinate of the current feature's centroid::"
 msgstr ""
 "Geef de X-coördinaat terug van het zwaartepunt van het huidige object::"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:753
+#: ../../docs/user_manual/working_with_vector/expression.rst:737
 msgid "Send back a value according to feature's area::"
 msgstr "Stuur een waarde terug overeenkomstig het gebied van het object::"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:757
+#: ../../docs/user_manual/working_with_vector/expression.rst:741
 msgid ""
 "You can manipulate the current geometry using the variable ``$geometry`` to "
 "create a buffer or get a point on the geometry's surface::"
 msgstr ""
+"U kunt de huidige geometrie bewerken met de variabele ``$geometry`` om een "
+"buffer te maken of een punt op het oppervlak van de geometrie te verkrijgen:"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:763
+#: ../../docs/user_manual/working_with_vector/expression.rst:747
 msgid ""
 "Given a point feature, generate a closed line (using ``make_line``) around "
 "the point's geometry::"
 msgstr ""
+"Gegeven een object punt, maak een gesloten lijn (met ``make_line``) rondom "
+"de geometrie van het punt::"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:778
+#: ../../docs/user_manual/working_with_vector/expression.rst:762
 msgid "Layout Functions"
 msgstr "Functies voor lay-out"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:780
+#: ../../docs/user_manual/working_with_vector/expression.rst:764
 msgid ""
 "This group contains functions to manipulate print layout items properties."
 msgstr ""
@@ -2969,15 +3005,19 @@ msgstr ""
 "Geeft een kaart van variabelen terug uit een item van lay-out binnen deze "
 "afdruklay-out"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:794
+#: ../../docs/user_manual/working_with_vector/expression.rst:772
+msgid "**An example:**"
+msgstr "**Een voorbeeld:**"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:774
 msgid "Get the scale of the 'Map 0' in the current print layout::"
 msgstr "De schaal ophalen van het item 'Map 0' in de huidige afdruklay-out::"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:800
+#: ../../docs/user_manual/working_with_vector/expression.rst:780
 msgid "Map Layers"
 msgstr "Lagen"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:802
+#: ../../docs/user_manual/working_with_vector/expression.rst:782
 msgid ""
 "This group contains a list of the available layers in the current project. "
 "This offers a convenient way to write expressions referring to multiple "
@@ -2989,27 +3029,29 @@ msgstr ""
 " biedt een handige manier om expressies te schrijven die verwijzen naar "
 "meerdere lagen, zoals voor het uitvoeren van query's voor :ref:`samenvoegen "
 "<aggregates_function>`, :ref:`attributen <record_attributes>` of "
-":ref:`ruimtelijke <geometry_functions>` ."
+":ref:`ruimtelijke <geometry_functions>`."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:807
+#: ../../docs/user_manual/working_with_vector/expression.rst:787
 msgid "It also provides some convenient functions to manipulate layers."
-msgstr ""
+msgstr "Het verschaft ook enkele handige functies om lagen te bewerken."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "decode_uri"
-msgstr ""
+msgstr "decode_uri"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Takes a layer and decodes the uri of the underlying data provider. Available"
 " information depends on the data provider type."
 msgstr ""
+"Neemt een laag en decodeert de URI van de onderliggende gegevensprovider. "
+"Beschikbare informatie is afhankelijk van het type gegevensprovider."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:820
+#: ../../docs/user_manual/working_with_vector/expression.rst:800
 msgid "Maps Functions"
 msgstr "Functies Kaartobjecten"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:822
+#: ../../docs/user_manual/working_with_vector/expression.rst:802
 msgid ""
 "This group contains functions to create or manipulate keys and values of map"
 " data structures (also known as dictionary objects, key-value pairs, or "
@@ -3027,11 +3069,11 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "from_json"
-msgstr ""
+msgstr "from_json"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Loads a json-formatted string"
-msgstr ""
+msgstr "Laadt een als JSON opgemaakte tekenreeks"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "hstore_to_map"
@@ -3142,17 +3184,19 @@ msgstr "Voeg kaartelementen samen tot een als JSON opgemaakte tekenreeks"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "to_json"
-msgstr ""
+msgstr "to_json"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Creates a json-formatted string from a map, an array or other value"
 msgstr ""
+"Maakt een als JSON opgemaakte tekenreeks uit een kaart, een array of een "
+"andere waarde"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:850
+#: ../../docs/user_manual/working_with_vector/expression.rst:830
 msgid "Mathematical Functions"
 msgstr "Wiskundige functies"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:852
+#: ../../docs/user_manual/working_with_vector/expression.rst:832
 msgid "This group contains math functions (e.g., square root, sin and cos)."
 msgstr ""
 "Deze groep bevat wiskundige functies (bijv. vierkantswortel, sin en cos)."
@@ -3234,8 +3278,8 @@ msgid "cos"
 msgstr "cos"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the cosine of a value in radians"
-msgstr "Geeft de cosinus van een waarde in radialen terug"
+msgid "Returns the cosine of an angle in radians"
+msgstr "Geeft de cosinus van een hoek in radialen terug"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "degrees"
@@ -3392,8 +3436,8 @@ msgid "sin"
 msgstr "sin"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the sine of an angle"
-msgstr "Geeft de sinus van een hoek terug"
+msgid "Returns the sine of an angle in radians"
+msgstr "Geeft de sinus van een hoek in radialen terug"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "sqrt"
@@ -3408,14 +3452,14 @@ msgid "tan"
 msgstr "tan"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the tangent of an angle"
-msgstr "Geeft de tangens van een hoek terug"
+msgid "Returns the tangent of an angle in radians"
+msgstr "Geeft de tangens van een hoek in radialen terug"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:897
+#: ../../docs/user_manual/working_with_vector/expression.rst:877
 msgid "Operators"
 msgstr "Operatoren"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:899
+#: ../../docs/user_manual/working_with_vector/expression.rst:879
 msgid ""
 "This group contains operators (e.g., +, -, \\*). Note that for most of the "
 "mathematical functions below, if one of the inputs is NULL then the result "
@@ -3498,6 +3542,8 @@ msgid ""
 "Compares two values and evaluates to 1 if the left value is less than or "
 "equal to the right value"
 msgstr ""
+"Vergelijkt twee waarden en evalueert naar 1 als de waarde aan de linkerkant "
+"kleiner of gelijk is aan de waarde aan de rechterkant."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "a <> b"
@@ -3637,13 +3683,15 @@ msgstr "Draait een voorwaarde om"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "\"Column_name\""
-msgstr ""
+msgstr "\"Kolom_naam\""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Value of the field *Column_name*, take care to not be confused with simple "
 "quote, see below"
 msgstr ""
+"Waarde van het veld *Kolom_naam*, zorg er voor dat u niet verward raakt door"
+" het enkele aanhalingsteken, zie hieronder"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "'string'"
@@ -3696,37 +3744,41 @@ msgstr "a NOT IN (waarde[,waarde])"
 msgid "a is not below the values listed"
 msgstr "a staat niet tussen de vermelde waarden"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:945
+#: ../../docs/user_manual/working_with_vector/expression.rst:921
 msgid "Joins a string and a value from a column name::"
 msgstr "Voegt een tekenreeks en een waarde uit een naam van een kolom samen::"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:949
+#: ../../docs/user_manual/working_with_vector/expression.rst:925
 msgid ""
 "Test if the \"description\" attribute field starts with the 'Hello' string "
 "in the value (note the position of the ``%`` character)::"
 msgstr ""
+"Test of het veld voor het attribuut \"description\" begint met de tekenreeks"
+" 'Hello' in de waarde (let op de positie van het teken ``%``)::"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:958
+#: ../../docs/user_manual/working_with_vector/expression.rst:934
 msgid "Processing Functions"
-msgstr ""
+msgstr "Functies voor Processing "
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:960
+#: ../../docs/user_manual/working_with_vector/expression.rst:936
 msgid "This group contains functions that operate on processing algorithms."
-msgstr ""
+msgstr "Deze groep bevat functies die werken op algoritmen van Processing."
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "parameter"
-msgstr ""
+msgstr "parameter"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the value of a processing algorithm input parameter"
 msgstr ""
+"Geeft de waarde van een parameter voor de invoer voor een algoritme van "
+"Processing terug"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:972
+#: ../../docs/user_manual/working_with_vector/expression.rst:948
 msgid "Rasters Functions"
 msgstr "Functies voor rasters"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:974
+#: ../../docs/user_manual/working_with_vector/expression.rst:950
 msgid "This group contains functions to operate on raster layer."
 msgstr "Deze groep bevat functies voor bewerkingen van rasterlagen."
 
@@ -3746,11 +3798,11 @@ msgstr "raster_value"
 msgid "Returns the raster band value at the provided point"
 msgstr "Geeft de rasterwaarde terug van de band voor het opgegeven punt"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:987
+#: ../../docs/user_manual/working_with_vector/expression.rst:963
 msgid "Record and Attributes Functions"
 msgstr "Functies Records en attributen"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:989
+#: ../../docs/user_manual/working_with_vector/expression.rst:965
 msgid "This group contains functions that operate on record identifiers."
 msgstr "Deze groep bevat functies voor het bewerken van unieke record-ID's."
 
@@ -3785,13 +3837,15 @@ msgstr "Geeft de waarde van een gespecificeerd attribuut van een object terug"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "attributes"
-msgstr ""
+msgstr "attributes"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns a :ref:`map <maps_functions>` of all attributes from a feature, with"
 " field names as map keys"
 msgstr ""
+"Geeft een :ref:`kaart <maps_functions>` terug van alle attributen van een "
+"object, met veldnamen als sleutels voor de kaart"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "get_feature"
@@ -3843,11 +3897,11 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "sql_fetch_and_increment"
-msgstr ""
+msgstr "sql_fetch_and_increment"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Manage autoincrementing values in sqlite databases"
-msgstr ""
+msgid "Manage autoincrementing values in SQLite databases"
+msgstr "Beheren van automatisch verhogende waarden in databases van SQLite"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "uuid"
@@ -3861,7 +3915,7 @@ msgstr ""
 "Genereert een Universally Unique Identifier (UUID) voor elke rij. Elke UUID "
 "is 38 tekens lang."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1017
+#: ../../docs/user_manual/working_with_vector/expression.rst:989
 msgid ""
 "Return the first feature in layer \"LayerA\" whose field \"id\" has the same"
 " value as the field \"name\" of the current feature (a kind of jointure)::"
@@ -3870,16 +3924,16 @@ msgstr ""
 "dezelfde waarde heeft als het veld \"name\" van het huidige object (een "
 "soort samenvoeging)::"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1022
+#: ../../docs/user_manual/working_with_vector/expression.rst:994
 msgid "Calculate the area of the joined feature from the previous example::"
 msgstr ""
 "Bereken het gebied van het samengevoegde object uit het vorige voorbeeld::"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1030
+#: ../../docs/user_manual/working_with_vector/expression.rst:1002
 msgid "String Functions"
 msgstr "Tekstfuncties"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1032
+#: ../../docs/user_manual/working_with_vector/expression.rst:1004
 msgid ""
 "This group contains functions that operate on strings (e.g., that replace, "
 "convert to upper case)."
@@ -3918,7 +3972,7 @@ msgstr "format_date"
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Formats a date type or string into a custom string format"
 msgstr ""
-"maakt een type datum of tekenreeks op in een aangepaste indeling voor een "
+"Maakt een type datum of tekenreeks op in een aangepaste indeling voor een "
 "tekenreeks"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
@@ -3957,7 +4011,7 @@ msgstr "lower"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "converts a string to lower case"
-msgstr "converteert een tekenreeks naar kleine letters"
+msgstr "Converteert een tekenreeks naar kleine letters"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "lpad"
@@ -4099,40 +4153,50 @@ msgstr "wordwrap"
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns a string wrapped to a maximum/minimum number of characters"
 msgstr ""
+"Geeft een tekenreeks terug, verpakt in een maximum/minimum aantal tekens"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1070
+#: ../../docs/user_manual/working_with_vector/expression.rst:1038
 msgid "**About fields concatenation**"
 msgstr "**Over het samenvoegen van velden**"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1072
+#: ../../docs/user_manual/working_with_vector/expression.rst:1040
 msgid ""
 "You can concatenate strings or field values using either ``||`` or ``+`` "
 "operators or the ``concat`` function, with some special characteristics:"
 msgstr ""
+"U kunt tekenreeksen of waarden uit velden samenvoegen met ofwel ``||`` of de"
+" operator ``+`` of de functie ``concat``, met enkele speciale "
+"karakteristieken:"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1075
+#: ../../docs/user_manual/working_with_vector/expression.rst:1043
 msgid ""
 "The ``+`` operator also means sum up expression, so if you have an integer "
 "(field or numeric value) operand, this can be error prone and you better use"
 " the others::"
 msgstr ""
+"De operator ``+`` betekent ook het optellen van de expressie, dus als u een "
+"integer deel hebt (veld of numerieke waarde), kan dit gevoelig zijn voor "
+"fouten en kunt u beter de andere gebruiken::"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1081
+#: ../../docs/user_manual/working_with_vector/expression.rst:1049
 msgid ""
 "When any of the arguments is a NULL value, either ``||`` or ``+`` will "
 "return a NULL value. To return the other arguments regardless the NULL "
 "value, you may want to use the ``concat`` function::"
 msgstr ""
+"Wanneer een van de argumenten een waarde NULL is, zullen ``||`` of ``+`` een"
+" waarde NULL teruggeven. U zou misschien de functie ``concat`` willen "
+"gebruiken om de andere argumenten, ongeacht de waarde NULL, terug te geven::"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1090
+#: ../../docs/user_manual/working_with_vector/expression.rst:1058
 msgid "For other cases, do at your convenience::"
-msgstr ""
+msgstr "Doe, voor andere gevallen, wat u zelf prettig vindt::"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1101
+#: ../../docs/user_manual/working_with_vector/expression.rst:1069
 msgid "Variables Functions"
 msgstr "Functies Variabelen "
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1103
+#: ../../docs/user_manual/working_with_vector/expression.rst:1071
 msgid ""
 "This group contains dynamic variables related to the application, the "
 "project file and other settings. It means that some functions may not be "
@@ -4142,25 +4206,25 @@ msgstr ""
 "projectbestand en andere instellingen. Het betekent dat sommige functies "
 "niet beschikbaar zouden kunnen zijn overeenkomstig de context:"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1107
+#: ../../docs/user_manual/working_with_vector/expression.rst:1075
 msgid "from the |expressionSelect| :sup:`Select by expression` dialog"
 msgstr ""
 "in het dialoogvenster |expressionSelect| :sup:`Objecten selecteren met een "
 "expressie`"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1108
+#: ../../docs/user_manual/working_with_vector/expression.rst:1076
 msgid "from the |calculateField| :sup:`Field calculator` dialog"
 msgstr "in het dialoogvenster |calculateField| :sup:`Veldberekening`"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1109
+#: ../../docs/user_manual/working_with_vector/expression.rst:1077
 msgid "from the layer properties dialog"
 msgstr "in het dialoogvenster Laageigenschappen"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1110
+#: ../../docs/user_manual/working_with_vector/expression.rst:1078
 msgid "from the print layout"
 msgstr "uit de afdruklay-out"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1112
+#: ../../docs/user_manual/working_with_vector/expression.rst:1080
 msgid ""
 "To use these functions in an expression, they should be preceded by @ "
 "character (e.g, @row_number). Are concerned:"
@@ -4182,7 +4246,7 @@ msgstr "atlas_feature"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the current atlas feature (as feature object)"
-msgstr "Geeft het huidige object in atlas terug (als Atlas-object)."
+msgstr "Geeft het huidige object in atlas terug (als Atlas-object)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "atlas_featureid"
@@ -4307,32 +4371,39 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "fullextent_maxx"
-msgstr ""
+msgstr "fullextent_maxx"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Maximum x value from full canvas extent (including all layers)"
 msgstr ""
+"Maximum waarde X uit volledig bereik kaartvenster (inclusief alle lagen)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "fullextent_maxy"
-msgstr ""
+msgstr "fullextent_maxy"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Maximum y value from full canvas extent (including all layers)"
 msgstr ""
+"Maximum waarde Y uit volledig bereik kaartvenster (inclusief alle lagen)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "fullextent_minx"
-msgstr ""
+msgstr "fullextent_minx"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Minimum x value from full canvas extent (including all layers)"
 msgstr ""
+"Minimum waarde X uit volledig bereik kaartvenster (inclusief alle lagen)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "fullextent_miny"
+msgstr "fullextent_miny"
+
+#: ../../docs/user_manual/working_with_vector/expression.rst:1
+msgid "Minimum y value from full canvas extent (including all layers)"
 msgstr ""
+"Minimum waarde Y uit volledig bereik kaartvenster (inclusief alle lagen)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "geometry_part_count"
@@ -4483,51 +4554,53 @@ msgstr "Geeft de breedte van de actieve pagina in de lay-out terug (in mm)"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "legend_column_count"
-msgstr ""
+msgstr "legend_column_count"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the number of columns in the legend"
-msgstr ""
+msgstr "Geeft het aantal kolommen in de legenda terug"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "legend_filter_by_map"
-msgstr ""
+msgstr "legend_filter_by_map"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Indicates if the content of the legend is filtered by the map"
-msgstr ""
+msgstr "Geeft aan of de inhoud van de legenda is gefilterd op de kaart"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "legend_filter_out_atlas"
-msgstr ""
+msgstr "legend_filter_out_atlas"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Indicates if the atlas is filtered out of the legend"
-msgstr ""
+msgstr "Geeft aan of de Atlas is uitgefilterd van de legenda"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "legend_split_layers"
-msgstr ""
+msgstr "legend_split_layers"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Indicates if layers can be split in the legend"
-msgstr ""
+msgstr "Geeft aan of lagen in de legenda kunnen worden gesplitst"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "legend_title"
-msgstr ""
+msgstr "legend_title"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the title of the legend"
-msgstr ""
+msgstr "Geeft de titel van de legenda terug"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "legend_wrap_string"
-msgstr ""
+msgstr "legend_wrap_string"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the character(s) used to wrap the legend text"
 msgstr ""
+"Geeft het/de teken(s) terug die zijn gebruikt om de tekst van de legenda te "
+"verpakken"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "map_crs"
@@ -4541,12 +4614,14 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "map_crs_acronym"
-msgstr ""
+msgstr "map_crs_acronym"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the acronym of the Coordinate reference system of the current map"
 msgstr ""
+"Geeft het acroniem van het coördinaten referentiesysteem van de huidige "
+"kaart terug"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "map_crs_definition"
@@ -4562,41 +4637,49 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "map_crs_description"
-msgstr ""
+msgstr "map_crs_description"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns the name of the Coordinate reference system of the current map"
 msgstr ""
+"Geeft de naam van het coördinaten referentiesysteem van de huidige kaart "
+"terug"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "map_crs_ellipsoid"
-msgstr ""
+msgstr "map_crs_ellipsoid"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the acronym of the ellipsoid of the Coordinate reference system of "
 "the current map"
 msgstr ""
+"Geeft het acroniem van de ellipsoïde van het coördinaten referentiesysteem "
+"van de huidige kaart terug"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "map_crs_proj4"
-msgstr ""
+msgstr "map_crs_proj4"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the Proj4 definition of the Coordinate reference system of the "
 "current map"
 msgstr ""
+"Geeft de definitie voor Proj4 van het coördinaten referentiesysteem van de "
+"huidige kaart terug"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "map_crs_wkt"
-msgstr ""
+msgstr "map_crs_wkt"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the WKT definition of the Coordinate reference system of the current"
 " map"
 msgstr ""
+"Geeft de definitie voor WKT van het coördinaten referentiesysteem van de "
+"huidige kaart terug"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "map_extent"
@@ -4722,13 +4805,15 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "project_area_units"
-msgstr ""
+msgstr "project_area_units"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the area unit for the current project, used when calculating areas "
 "of geometries"
 msgstr ""
+"Geeft de eenheid voor gebied terug voor het huidige project, gebruikt voor "
+"het berekenen van gebieden van geometrieën"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "project_author"
@@ -4784,23 +4869,27 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "project_distance_units"
-msgstr ""
+msgstr "project_distance_units"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the distance unit for the current project, used when calculating "
 "lengths of geometries and distances"
 msgstr ""
+"Geeft de eenheid voor afstand terug voor het huidige project, gebruikt voor "
+"het berekenen van lengten van geometrieën en afstanden"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "project_ellipsoid"
-msgstr ""
+msgstr "project_ellipsoid"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid ""
 "Returns the name of the ellipsoid of the current project, used when "
 "calculating geodetic areas or lengths of geometries"
 msgstr ""
+"Geeft de naam van de ellipsoïde voor het huidige project terug, gebruikt "
+"voor het berekenen van geodetische gebieden of lengten van geometrieën"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "project_filename"
@@ -4937,11 +5026,11 @@ msgstr ""
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "scale_value"
-msgstr ""
+msgstr "scale_value"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "Returns current scale bar distance value"
-msgstr ""
+msgstr "Geeft de huidige waarde voor afstand van de schaalbalk terug"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "symbol_angle"
@@ -4960,8 +5049,10 @@ msgid "symbol_color"
 msgstr "symbol_color"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
-msgid "Returns the color of the symbol used to renderthe feature"
+msgid "Returns the color of the symbol used to render the feature"
 msgstr ""
+"Geeft de kleur van het symbool terug dat is gebruikt om het object te "
+"renderen"
 
 #: ../../docs/user_manual/working_with_vector/expression.rst:1
 msgid "user_account_name"
@@ -5006,7 +5097,7 @@ msgstr ""
 "Maakt instellen van een variabele mogelijk om te gebruiken in een expressie "
 "om herhaaldelijk herberekenen van dezelfde waarde te vermijden"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1242
+#: ../../docs/user_manual/working_with_vector/expression.rst:1206
 msgid ""
 "Return the X coordinate of a map item center to insert into a label in "
 "layout::"
@@ -5014,7 +5105,7 @@ msgstr ""
 "Geef het X-coördinaat van het midden van een kaartitem terug om in te voegen"
 " in een label in lay-out::"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1246
+#: ../../docs/user_manual/working_with_vector/expression.rst:1210
 msgid ""
 "Return for each feature in the current layer the number of overlapping "
 "airports features::"
@@ -5022,15 +5113,15 @@ msgstr ""
 "Geef voor elk object op de huidige laag het aantal overlappende objecten "
 "airports terug::"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1252
+#: ../../docs/user_manual/working_with_vector/expression.rst:1216
 msgid "Get the object_id of the first snapped point of a line::"
 msgstr "Haal het object_ID op van het eerste gesnapte punt van een lijn::"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1268
+#: ../../docs/user_manual/working_with_vector/expression.rst:1232
 msgid "Recent Functions"
 msgstr "Functies Recent "
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1270
+#: ../../docs/user_manual/working_with_vector/expression.rst:1234
 msgid ""
 "This group contains recently used functions. Depending on the context of its"
 " usage (feature selection, field calculator, generic), any applied "
@@ -5039,16 +5130,16 @@ msgid ""
 "and reapply any previously used expression."
 msgstr ""
 "Deze groep bevat recent gebruikte functies. Afhankelijk van de context van "
-"zijn gebruik (object selecteren, veldberekening, algemeen), wordt welke "
+"zijn gebruik (object selecteren, veldberekening, algemeen), wordt elke "
 "toegepaste expressie toegevoegd aan de corresponderende lijst (tot maximaal "
 "tien expressies),  gesorteerd van de meest recente tot de minder recente. "
 "Dit helpt om snel een eerder gebruikte expressie terug te vinden."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1281
+#: ../../docs/user_manual/working_with_vector/expression.rst:1245
 msgid "Function Editor"
 msgstr "Functiebewerker"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1283
+#: ../../docs/user_manual/working_with_vector/expression.rst:1247
 msgid ""
 "With the :guilabel:`Function Editor` tab, you are able to write your own "
 "functions in Python language. This provides a handy and comfortable way to "
@@ -5056,51 +5147,51 @@ msgid ""
 "functions."
 msgstr ""
 "Met de tab :guilabel:`Functiebewerker` kunt u uw eigen functies schrijven in"
-" de taal Python Dit verschaft een handige en comfortabele manier om bepaalde"
-" wensen die niet door vooraf gedefinieerde functies worden verschaft aan te "
-"pakken."
+" de taal Python. Dit verschaft een handige en comfortabele manier om "
+"bepaalde wensen, die niet door vooraf gedefinieerde functies worden "
+"verschaft, aan te pakken."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1292
+#: ../../docs/user_manual/working_with_vector/expression.rst:1256
 msgid "The Function Editor tab"
 msgstr "De tab Functiebewerker"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1294
+#: ../../docs/user_manual/working_with_vector/expression.rst:1258
 msgid "To create a new function:"
 msgstr "Een nieuwe functie maken:"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1296
+#: ../../docs/user_manual/working_with_vector/expression.rst:1260
 msgid "Press the |signPlus| :sup:`New File` button."
 msgstr "Druk op de knop |signPlus| :sup:`Nieuw bestand`."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1297
+#: ../../docs/user_manual/working_with_vector/expression.rst:1261
 msgid "Enter a name to use in the form that pops up and press :guilabel:`OK`."
 msgstr ""
 "Voer een naam in om te gebruiken in het formulier dat opent en druk op "
 ":guilabel:`OK`."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1299
+#: ../../docs/user_manual/working_with_vector/expression.rst:1263
 msgid ""
 "A new item of the name you provide is added in the left panel of the "
 ":guilabel:`Function Editor` tab; this is a Python :file:`.py` file based on "
 "QGIS template file and stored in the :file:`/python/expressions` folder "
 "under the active :ref:`user profile <user_profiles>` directory."
 msgstr ""
-"Een nieuw item van de naam die u opgaf wordt toegevoegd aan het linker "
-"paneel van de tab :guilabel:`Functiebewerker`; dit is een Python-bestand "
-":file:`.py` gebaseerd op een sjabloonbestand van QGIS en opgeslagen in de "
-"map :file:`/python/expressions` onder de map van het actieve "
+"Een nieuw item van de naam die u opgaf, wordt toegevoegd aan het "
+"linkerpaneel van de tab :guilabel:`Functiebewerker`; dit is een Python-"
+"bestand :file:`.py` gebaseerd op een sjabloonbestand van QGIS en opgeslagen "
+"in de map :file:`/python/expressions` onder de map van het actieve "
 ":ref:`gebruikersprofiel <user_profiles>`."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1303
+#: ../../docs/user_manual/working_with_vector/expression.rst:1267
 msgid ""
 "The right panel displays the content of the file: a python script template. "
 "Update the code and its help according to your needs."
 msgstr ""
-"Het rechter paneel geeft de inhoud van het bestand weer: een sjabloon voor "
+"Het rechterpaneel geeft de inhoud van het bestand weer: een sjabloon voor "
 "een Python-bestand. Werk de code en zijn Help bij overeenkomstig uw "
 "behoeften."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1305
+#: ../../docs/user_manual/working_with_vector/expression.rst:1269
 msgid ""
 "Press the |start| :guilabel:`Save and Load Functions` button. The function "
 "you wrote is added to the functions tree in the :guilabel:`Expression` tab, "
@@ -5110,23 +5201,23 @@ msgstr ""
 "functie die u schreef wordt toegevoegd aan de boom met functies op de tab "
 ":guilabel:`Expressie`, standaard onder de groep ``Aangepast``."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1308
+#: ../../docs/user_manual/working_with_vector/expression.rst:1272
 msgid "Enjoy your new function."
 msgstr "Veel plezier met uw functie."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1309
+#: ../../docs/user_manual/working_with_vector/expression.rst:1273
 msgid ""
 "If the function requires improvements, enable the :guilabel:`Function "
 "Editor` tab, do the changes and press again the |start| :guilabel:`Save and "
 "Load Functions` button to make them available in the file, hence in any "
 "expression tab."
 msgstr ""
-"Als de functie verbeteringen nodig heeft, schakel naar de tabe "
+"Als de functie verbeteringen nodig heeft, schakel naar de tab "
 ":guilabel:`Functiebewerker`, maak de wijzigingen en druk opnieuw op de knop "
 "|start| :guilabel:`Functies voor laden en opslaan` om ze beschikbaar te "
 "maken in het bestand, en daarmee op de tab Expressie."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1314
+#: ../../docs/user_manual/working_with_vector/expression.rst:1278
 msgid ""
 "Custom Python functions are stored under the user profile directory, meaning"
 " that at each QGIS startup, it will auto load all the functions defined with"
@@ -5140,15 +5231,15 @@ msgstr ""
 "automatisch alle functies zal laden die zijn gedefinieerd met het huidige "
 "gebruikersprofiel. Onthoud dat nieuwe functies alleen worden opgeslagen in "
 "de map :file:`/python/expressions` en niet in het projectbestand. Als u een "
-"project deelt dat een van uw aangepaste functies gebruikt moet u ook het "
+"project deelt dat een van uw aangepaste functies gebruikt, moet u ook het "
 "bestand :file:`.py` in de map :file:`/python/expressions` delen."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1321
+#: ../../docs/user_manual/working_with_vector/expression.rst:1285
 msgid "Here's a short example on how to create your own functions:"
 msgstr ""
 "Hier is een kort voorbeeld over hoe u uw eigen aangepaste functies maakt:"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1341
+#: ../../docs/user_manual/working_with_vector/expression.rst:1305
 msgid ""
 "The short example creates a function ``my_sum`` that will give you a "
 "function with two values. When using the ``args='auto'`` function argument "
@@ -5162,15 +5253,15 @@ msgstr ""
 "door het aantal argumenten waarmee de functie werd gedefinieerd in Python "
 "(minus 2 - ``object`` en ``ouder``)."
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1347
+#: ../../docs/user_manual/working_with_vector/expression.rst:1311
 msgid "This function can then be used in expressions:"
 msgstr "Deze functie kan dan worden gebruikt in expressies:"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1354
+#: ../../docs/user_manual/working_with_vector/expression.rst:1318
 msgid "Custom Function added to the Expression tab"
 msgstr "Aangepaste functie toegevoegd aan de tab Expressie"
 
-#: ../../docs/user_manual/working_with_vector/expression.rst:1357
+#: ../../docs/user_manual/working_with_vector/expression.rst:1321
 msgid ""
 "Further information about creating Python code can be found in the :ref"
 ":`PyQGIS-Developer-Cookbook`."

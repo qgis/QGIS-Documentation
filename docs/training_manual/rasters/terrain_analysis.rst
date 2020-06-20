@@ -1,35 +1,43 @@
 |LS| Terrain Analysis
-===============================================================================
+======================================================================
 
-Certain types of rasters allow you to gain more insight into the terrain that
-they represent. Digital Elevation Models (DEMs) are particularly useful in this
-regard. In this lesson you will use terrain analysis tools to find out more
-about the study area for the proposed residential development from earlier.
+Certain types of rasters allow you to gain more insight into the
+terrain that they represent.
+Digital Elevation Models (DEMs) are particularly useful in this
+regard.
+In this lesson you will use terrain analysis tools to find out more
+about the study area for the proposed residential development from
+earlier.
 
-**The goal for this lesson:** To use terrain analysis tools to derive more
-information about the terrain.
+**The goal for this lesson:** To use terrain analysis tools to derive
+more information about the terrain.
 
 |basic| |FA| Calculating a Hillshade
--------------------------------------------------------------------------------
+----------------------------------------------------------------------
 
-We are going to use the same DEM layer as in the previous lesson. If you are
-starting this chapter from scratch use the :guilabel:`Browser` panel and load
-the :file:`raster/SRTM/srtm_41_19.tif`.
+We are going to use the same DEM layer as in the previous lesson.
+If you are starting this chapter from scratch, use the
+:guilabel:`Browser` panel and load the
+:file:`raster/SRTM/srtm_41_19.tif`.
 
-The DEM layer shows you the elevation of the terrain, but it can sometimes seem a
-little abstract. It contains all the 3D information about the terrain that you
-need, but it doesn't look like a 3D object. To get a better look at the terrain,
-it is possible to calculate a *hillshade*, which is a raster that maps the
-terrain using light and shadow to create a 3D-looking image.
+The DEM layer shows you the elevation of the terrain, but it can
+sometimes seem a little abstract.
+It contains all the 3D information about the terrain that you need,
+but it doesn't look like a 3D object.
+To get a better impression of the terrain, it is possible to calculate
+a *hillshade*, which is a raster that maps the terrain using light and
+shadow to create a 3D-looking image.
 
-We are going to use algorithms of :menuselection:`Raster --> Raster terrain analysis`
-menu.
+We are going to use algorithms in the
+:menuselection:`Raster --> Raster terrain analysis` menu.
 
 #. Click on the :menuselection:`Hillshade` menu
-#. The algorithm allows you to specify where the position of the light source:
-   the :guilabel:`Azimuth` parameter has values from 0 (North) through 90 (East),
-   180 (South) and 270 (West) while the :guilabel:`Vertical angle` sets how high
-   the light is. We will leave the default values:
+#. The algorithm allows you to specify the position of the light
+   source: :guilabel:`Azimuth` has values from 0 (North) through 90
+   (East), 180 (South) and 270 (West), while the
+   :guilabel:`Vertical angle` sets how high the light source is
+   (0 to 90 degrees).
+   We will use the default values:
 
    .. figure:: img/hillshade_explanation.png
       :align: center
@@ -50,7 +58,7 @@ colorful rasters somehow? Of course we can, by using the hillshade as an
 overlay.
 
 |basic| |FA| Using a Hillshade as an Overlay
--------------------------------------------------------------------------------
+----------------------------------------------------------------------
 
 A hillshade can provide very useful information about the sunlight at a given
 time of day. But it can also be used for aesthetic purposes, to make the map
@@ -85,7 +93,7 @@ Remember to save the project when you are done.
 
 
 |moderate| |FA| Calculating the Slope
--------------------------------------------------------------------------------
+----------------------------------------------------------------------
 
 Another useful thing to know about the terrain is how steep it is. If, for
 example, you want to build houses on the land there, then you need land
@@ -109,7 +117,7 @@ and white pixels, steep terrain:
 .. _backlink-raster-analysis-1:
 
 |moderate| |TY| Calculating the aspect
--------------------------------------------------------------------------------
+----------------------------------------------------------------------
 
 *Aspect* is the compass direction that the slope of the terrain faces. An aspect
 of 0 means that the slope is North-facing, 90 East-facing, 180 South-facing, and
@@ -125,54 +133,64 @@ Use the :guilabel:`Aspect` algorithm of the
 :ref:`Check your results <raster-analysis-1>`
 
 |moderate| |FA| Using the Raster Calculator
--------------------------------------------------------------------------------
+----------------------------------------------------------------------
 
 Think back to the estate agent problem, which we last addressed in the
-*Vector Analysis* lesson. Let's imagine that the buyers now wish to purchase a
-building and build a smaller cottage on the property. In the Southern
-Hemisphere, we know that an ideal plot for development needs to have areas on it
-that are north-facing, and with a slope of less than five degrees. But if the
-slope is less than 2 degrees, then the aspect doesn't matter.
+*Vector Analysis* lesson.
+Let us imagine that the buyers now wish to purchase a building and
+build a smaller cottage on the property.
+In the Southern Hemisphere, we know that an ideal plot for development
+needs to have areas on it that are north-facing, and with a slope of
+less than five degrees.
+But if the slope is less than 2 degrees, then the aspect doesn't
+matter.
 
-Fortunately, you already have rasters showing you the slope as well as the
-aspect, but you have no way of knowing where both conditions are satisfied at
-once. How could this analysis be done?
+Fortunately, you already have rasters showing you the slope as well as
+the aspect, but you have no way of knowing where both conditions are
+satisfied at once.
+How could this analysis be done?
 
 The answer lies with the :guilabel:`Raster calculator`.
 
 QGIS has different raster calculators available:
 
 * :menuselection:`Raster --> Raster Calculator`
-* :menuselection:`Processing --> Raster Analysis --> Raster calculator`
-* :menuselection:`Processing --> GDAL --> Raster miscellaneous --> Raster calculator`
-* :menuselection:`SAGA --> Raster calculus --> Raster calculator`
+* In processing:
 
-Each tool is leading to the same results, but the syntax may be slightly
-different and the availability of operators may vary.
+  * :menuselection:`Raster Analysis --> Raster calculator`
+  * :menuselection:`GDAL --> Raster miscellaneous --> Raster calculator`
+  * :menuselection:`SAGA --> Raster calculus --> Raster calculator`
 
-We will use :menuselection:`Processing --> Raster Analysis --> Raster calculator`.
+Each tool is leading to the same results, but the syntax may be
+slightly different and the availability of operators may vary.
+
+We will use :menuselection:`Raster Analysis --> Raster calculator` in
+the *Processing Toolbox*
 
 #. Open the tool by double clicking on it.
 
-   * The upper left part of the dialog lists all the raster layers loaded in
-     the legend as ``name@N`` where ``name`` is the name of the layer and ``N``
-     is the raster band used.
-   * In the upper right part you will see a lot of different operators: stop for a
-     moment to think that a raster is an image, you should see it as a 2D matrix
-     filled with numbers.
+   * The upper left part of the dialog lists all the loaded raster
+     layers as ``name@N``, where ``name`` is the name of the layer and
+     ``N`` is the band.
+   * In the upper right part you will see a lot of different operators.
+     Stop for a moment to think that a raster is an image.
+     You should see it as a 2D matrix filled with numbers.
 
-#. North is at 0 (zero) degrees, so for the terrain to face north, its aspect
-   needs to be greater than 270 degrees and less than 90 degrees. Therefore the
-   formula is::
+#. North is at 0 (zero) degrees, so for the terrain to face north, its
+   aspect needs to be greater than 270 degrees and less than 90
+   degrees.
+   Therefore the formula is::
 
     aspect@1 <= 90 OR aspect@1 >= 270
 
-#. You have now to set up the raster details, like the cell size, extent and CRS.
-   This can be done manually by filling or it can be automatically set by choosing
-   a ``Reference layer``. Choose this last option by clicking on the :guilabel:`...`
-   button next to the :guilabel:`Reference layer(s)` parameter.
-#. In the dialog, choose the :guilabel:`aspect` layer because we want to obtain
-   a layer with the same resolution.
+#. Now you have to set up the raster details, like the cell size,
+   extent and CRS.
+   This can be done manually or it can be automatically set by
+   choosing a ``Reference layer``.
+   Choose this last option by clicking on the :guilabel:`...` button
+   next to the :guilabel:`Reference layer(s)` parameter.
+#. In the dialog, choose the :guilabel:`aspect` layer, because we want
+   to obtain a layer with the same resolution.
 #. Save the layer as ``aspect_north``.
 
    The dialog should look like:
@@ -187,23 +205,24 @@ Your result will be this:
 .. figure:: img/aspect_result.png
    :align: center
 
-The output values are ``0`` or ``1``. What does it mean? The formula we wrote
-contains the *conditional* operator ``OR``: therefore the final result will be
-**False** (0) and **True** (1).
+The output values are ``0`` or ``1``.
+What does it mean?
+The formula we wrote contains the *conditional* operator ``OR``.
+Therefore the final result will be **False** (0) and **True** (1).
 
 
 .. _backlink-raster-analysis-2:
 
-|moderate| |TY| More slopes
--------------------------------------------------------------------------------
+|moderate| |TY| More criteria
+----------------------------------------------------------------------
 
-Now that you've done the aspect, create two separate new analyses of the
-:guilabel:`DEM` layer.
+Now that you have done the aspect, create two new layers from the
+DEM.
 
-* The first will be to identify all areas where the slope is less than or equal
-  to ``2`` degrees.
-* The second is similar, but the slope should be less than or equal to ``5``
-  degrees.
+* The first shall identify areas where the slope is less than or
+  equal to ``2`` degrees
+* The second is similar, but the slope should be less than or equal to
+  ``5`` degrees.
 * Save them under :file:`exercise_data/raster_analysis` as
   :file:`slope_lte2.tif` and :file:`slope_lte5.tif`.
 
@@ -211,91 +230,100 @@ Now that you've done the aspect, create two separate new analyses of the
 
 
 |moderate| |FA| Combining Raster Analysis Results
--------------------------------------------------------------------------------
+----------------------------------------------------------------------
 
-Now you have three new analysis rasters of the :guilabel:`DEM` layer:
+Now you have generated three raster layers from the DEM:
 
-* :guilabel:`aspect_north`: the terrain faces north
-* :guilabel:`slope_lte2`: the slope is at or below 2 degrees
-* :guilabel:`slope_lte5`: the slope is at or below 5 degrees
+* :guilabel:`aspect_north`: terrain facing north
+* :guilabel:`slope_lte2`: slope equal to or below 2 degrees
+* :guilabel:`slope_lte5`: slope equal to or below 5 degrees
 
-Where the conditions of these layers are met, they are equal to ``1``.
-Elsewhere, they are equal to ``0``. Therefore, if you multiply one of these
-rasters by another one, you will get the areas where both of them are equal to
-``1``.
+Where the conditions are met, the pixel value is ``1``.
+Elsewhere, it is ``0``.
+Therefore, if you multiply these rasters, the pixels that have a value
+of ``1`` for all of them will get a value of ``1`` (the rest will get
+``0``).
 
-The conditions to be met are: at or below 5 degrees of slope, the terrain must
-face north; but at or below 2 degrees of slope, the direction that the terrain
-faces in does not matter.
+The conditions to be met are:
 
-Therefore, you need to find areas where the slope is at or below 5 degrees
-``AND`` the terrain is facing north, ``OR`` the slope is at or below 2
-degrees. Such terrain would be suitable for development.
+* at or below 5 degrees of slope, the terrain must face north
+* at or below 2 degrees of slope, the direction that the terrain faces
+  does not matter.
+
+Therefore, you need to find areas where the slope is at or below five
+degrees ``AND`` the terrain is facing north, ``OR`` the slope is at or
+below 2 degrees. Such terrain would be suitable for development.
 
 To calculate the areas that satisfy these criteria:
 
-#. Open your :guilabel:`Raster calculator` again
-#. Use the :guilabel:`Layer` panel, the :guilabel:`Operators` buttons, and
-   your keyboard to build this expression in the :guilabel:`Expressions` text area::
+#. Open the :guilabel:`Raster calculator` again
+#. Use this expression in :guilabel:`Expression`::
 
-    ( aspect_north@1 = 1 AND slope_lte5@1 = 1 ) OR slope_lte2@1 = 1
+     ( aspect_north@1 = 1 AND slope_lte5@1 = 1 ) OR slope_lte2@1 = 1
 
-#. Set the :guilabel:`Reference layer(s)` parameter as the ``aspect_north`` (it does not
-   matter if you choose another one given that all the layers have been calculated
-   from :guilabel:`srtm_41_19`)
+#. Set the :guilabel:`Reference layer(s)` parameter to
+   ``aspect_north`` (it does not matter if you choose another - they
+   have all been calculated from ``srtm_41_19``)
 #. Save the output under :file:`exercise_data/raster_analysis/` as
    :file:`all_conditions.tif`
 #. Click :guilabel:`Run`
 
-Your results:
+The result:
 
 .. figure:: img/development_analysis_results.png
    :align: center
 
 
 |moderate| |FA| Simplifying the Raster
--------------------------------------------------------------------------------
+----------------------------------------------------------------------
 
-As you can see from the image above, the combined analysis has left us with
-many, very small areas where the conditions are met. But these aren't really
-useful for our analysis, since they're too small to build anything on. Let's
-get rid of all these tiny unusable areas.
+As you can see from the image above, the combined analysis has left us
+with many, very small areas where the conditions are met.
+But these aren't really useful for our analysis, since they are too
+small to build anything on.
+Let us get rid of all these tiny unusable areas.
 
-#. Open the :guilabel:`Sieve` tool :menuselection:`Processing --> GDAL -->
-   Raster Analysis`
-#. Set the :guilabel:`Input file` to :guilabel:`all_conditions`, and the
+#. Open the :guilabel:`Sieve` tool
+   (:menuselection:`GDAL --> Raster Analysis` in the
+   :guilabel:`Processing Toolbox`)
+#. Set the :guilabel:`Input file` to ``all_conditions``, and the
    :guilabel:`Sieved` to :file:`all_conditions_sieve.tif` (under
    :file:`exercise_data/raster_analysis/`).
-#. Set both the :guilabel:`Threshold` to 8 and check :guilabel:`Use 8-connectedness`.
+#. Set the :guilabel:`Threshold` to 8 (minimum eight contiguous
+   pixels), and check :guilabel:`Use 8-connectedness`.
 
    .. figure:: img/raster_seive_dialog.png
       :align: center
 
-   Once processing is done, the new layer will load into the canvas.
+   Once processing is done, the new layer will be loaded.
 
    .. figure:: img/seive_result_incorrect.png
       :align: center
 
-   What's going on? The answer lies in the new raster file's metadata.
+   What is going on? The answer lies in the new raster file's
+   metadata.
 
-#. View the metadata under the :guilabel:`Information` tab of the :guilabel:`Layer
-   Properties` dialog. Look the ``STATISTICS_MINIMUM`` value:
+#. View the metadata under the :guilabel:`Information` tab of the
+   :guilabel:`Layer Properties` dialog.
+   Look the ``STATISTICS_MINIMUM`` value:
 
    .. figure:: img/seive_metadata.png
       :align: center
 
-   Whereas this raster, like the one it's derived from, should only feature the
-   values ``1`` and ``0`` while it has also a very large negative number.
-   Investigation of the data shows that this number acts as a null value. Since
-   we're only after areas that weren't filtered out, let's set these null values to
-   zero.
+   This raster, like the one it is derived from, should only feature
+   the values ``1`` and ``0``, but it has also a very large negative
+   number.
+   Investigation of the data shows that this number acts as a null
+   value.
+   Since we are only after areas that weren't filtered out, let us set
+   these null values to zero.
 
-#. Open the :guilabel:`Raster Calculator` again, and build this expression::
+#. Open the :guilabel:`Raster Calculator`, and build this expression::
 
     (all_conditions_sieve@1 <= 0) = 0
 
-   This will maintain all existing zero values, while also setting the negative
-   numbers to zero; which will leave all the areas with value ``1`` intact.
+   This will maintain all non-negative values, and set the negative
+   numbers to zero, leaving all the areas with value ``1`` intact.
 #. Save the output under ``exercise_data/raster_analysis/`` as
    :file:`all_conditions_simple.tif`.
 
@@ -304,49 +332,54 @@ Your output looks like this:
 .. figure:: img/raster_seive_correct.png
    :align: center
 
-This is what was expected: a simplified version of the earlier results.
-Remember that if the results you get from a tool aren't what you expected,
-viewing the metadata (and vector attributes, if applicable) can prove essential
-to solving the problem.
+This is what was expected: a simplified version of the earlier
+results.
+Remember that if the results you get from a tool aren't what you
+expected, viewing the metadata (and vector attributes, if applicable)
+can prove essential to solving the problem.
 
 
 |moderate| |FA| Reclassifying the Raster
--------------------------------------------------------------------------------
+----------------------------------------------------------------------
 
-We use the :guilabel:`Raster calculator` tool to make some calculation on raster
-layer. There is another powerful tool that we can use to better extract information
+We have used the *Raster calculator* to do calculations on raster
+layers.
+There is another powerful tool that we can use to extract information
 from existing layers.
 
-Back to the :guilabel:`aspect` layer: we know now that it has numeric values
-within a range from 0 through 360. What we want to do is to *reclassify* this
-layer with other discrete values (from 1 to 4) depending on the aspect:
+Back to the ``aspect`` layer.
+We know now that it has numerical values within a range from 0 through
+360.
+What we want to do is to *reclassify* this layer to other discrete
+values (from 1 to 4), depending on the aspect:
 
 * 1 = North (from 0 to 45 and from 315 to 360);
 * 2 = East (from 45 to 135)
 * 3 = South (from 135 to 225)
 * 4 = West (from 225 to 315)
 
-This operation could be achieved with the raster calculator but the formula would
-become very very large.
+This operation can be achieved with the raster calculator, but the
+formula would become very very large.
 
-The alternative tool is the :guilabel:`Reclassify by table` tool within
-:menuselection:`Processing --> Raster analysis`.
+The alternative tool is the :guilabel:`Reclassify by table` tool
+in :menuselection:`Raster analysis` in the
+:guilabel:`Processing Toolbox`.
 
 #. Open the tool
 #. Choose :guilabel:`aspect` as the ``Input raster layer``
-#. Click on the :guilabel:`...` of the :guilabel:`Reclassification table` parameter.
-   A table like dialog will pop up where you can choose the minimum, maximum and
-   new values for each class.
-#. Click on the :guilabel:`Add row` button and add 5 rows. Fill each row as the
-   following picture and click :guilabel:`OK`:
+#. Click on the :guilabel:`...` of :guilabel:`Reclassification table`.
+   A table-like dialog will pop up, where you can choose the minimum,
+   maximum and new values for each class.
+#. Click on the :guilabel:`Add row` button and add 5 rows.
+   Fill in each row as the following picture and click :guilabel:`OK`:
 
    .. figure:: img/reclassify_table.png
       :align: center
 
-   The method used by the algorithm to treat the threshold values of each class
-   is defined by the :guilabel:`Range boundaries` parameter.
-#. Save the layer as ``reclassified`` in the ``exercise_data/raster_analysis/``
-   folder
+   The method used by the algorithm to treat the threshold values of
+   each class is defined by the :guilabel:`Range boundaries`.
+#. Save the layer as file:`reclassified.tif` in the
+   :file:`exercise_data/raster_analysis/` folder
 
    .. figure:: img/reclassify_setup.png
       :align: center
@@ -354,105 +387,117 @@ The alternative tool is the :guilabel:`Reclassify by table` tool within
 #. Click on :guilabel:`Run`
 
 If you compare the native :guilabel:`aspect` layer with the
-:guilabel:`reclassified` one, there are not big differences. But giving a look
-at the legend you can see that the values go from 1 to 4.
+:guilabel:`reclassified` one, there are not big differences.
+But by looking at the legend, you can see that the values go from
+``1`` to ``4``.
 
-Let's give this layer a better style.
+Let us give this layer a better style.
 
 #. Open the :guilabel:`Layer Styling` panel
-#. Choose :guilabel:`Paletted/Unique values` instead of :guilabel:`Singleband gray`
-#. Click on the :guilabel:`Classify` button to automatically fetch the values and
-   assign them random colors:
+#. Choose :guilabel:`Paletted/Unique values`, instead of
+   :guilabel:`Singleband gray`
+#. Click on the :guilabel:`Classify` button to automatically fetch the
+   values and assign them random colors:
 
    .. figure:: img/unique_style.png
       :align: center
 
-The output should look like this (you can have different colors given that they
-have been randomly generated):
+The output should look like this (you can have different colors given
+that they have been randomly generated):
 
 .. figure:: img/reclassify_result.png
    :align: center
 
-With this reclassification and the paletted style applied to the layer you can
-immediately see the aspect areas. Cool isn't it?!
+With this reclassification and the paletted style applied to the
+layer, you can immediately differentiate the aspect areas.
 
 
 |basic| |FA| Querying the raster
--------------------------------------------------------------------------------
+----------------------------------------------------------------------
 
-Unlike vectors, raster layers don't have an attribute table: each pixel contains
-one or more numerical values, depending if the raster is singleband or multiband.
+Unlike vector layers, raster layers don't have an attribute table.
+Each pixel contains one or more numerical values (singleband or
+multiband rasters).
 
-All the raster layers we used in this exercise are made by just a single band:
-depending on the layer, pixel numbers will represent elevation, aspect or slope
-values.
+All the raster layers we used in this exercise consist of just one
+band.
+Depending on the layer, pixel values may represent elevation, aspect
+or slope values.
 
-How can we query the raster layer to know the value of a single pixel? We can use
-the |identify| button to extract this information.
+How can we query the raster layer to get the value of a pixel?
+We can use the |identify| :sup:`Identify Features` button!
 
-#. Select the tool from the upper toolbar
+#. Select the tool from the Attributes toolbar.
 #. Click on a random location of the :guilabel:`srtm_41_19` layer.
-   The :guilabel:`Identify Results` will appear with the value of the band at
-   the clicked location:
+   :guilabel:`Identify Results` will appear with the value of the
+   band at the clicked location:
 
    .. figure:: img/identify_raster.png
       :align: center
 
-#. You can change the output of the :guilabel:`Identify Results` panel from the
-   current ``tree`` mode to a ``table`` one by selecting :guilabel:`Table` in
-   the :guilabel:`View` menu at the bottom of the panel:
+#. You can change the output of the :guilabel:`Identify Results` panel
+   from the current ``tree`` mode to a ``table`` one by selecting
+   :guilabel:`Table` in the :guilabel:`View` menu at the bottom of the
+   panel:
 
    .. figure:: img/identify_raster_table.png
       :align: center
 
-Clicking each pixel to get the value of the raster could become annoying after
-a while. We can use the :guilabel:`Value Tool` plugin to solve this problem.
+Clicking each pixel to get the value of the raster could become
+annoying after a while.
+We can use the *Value Tool* plugin to solve this problem.
 
 #. Go to :menuselection:`Plugins --> Manage/Install Plugins...`
-#. In the :guilabel:`All` tab, type ``Value Tool`` in the search box
-#. Select the Value Tool plugin, press :guilabel:`Install Plugin` and then
-   :guilabel:`Close` the dialog.
+#. In the :guilabel:`All` tab, type ``value t`` in the search box
+#. Select the *Value Tool* plugin, press :guilabel:`Install Plugin`
+   and then :guilabel:`Close` the dialog.
 
    .. figure:: img/value_tool.png
       :align: center
 
    The new :guilabel:`Value Tool` panel will appear.
 
-   .. tip:: If you close the panel you can reopen it by enabling it in the
-    :menuselection:`View --> Panels --> Value Tool` or by clicking on the new
-    icon of the toolbar.
+   .. tip:: If you close the panel you can reopen it by enabling it in
+      the :menuselection:`View --> Panels --> Value Tool` or by
+      clicking on the icon in the toolbar.
 
-#. To use the plugin just check the :guilabel:`Enable` checkbox and be sure that
-   the :guilabel:`srtm_41_19` layer is active (checked) in the :guilabel:`Layers`
-   panel.
-#. Move the cursor on the map to immediately know the value of the pixel
+#. To use the plugin just check the :guilabel:`Enable` checkbox and be
+   sure that the ``srtm_41_19`` layer is active (checked) in the
+   :guilabel:`Layers` panel.
+#. Move the cursor over the map to see the value of the pixels.
 
    .. figure:: img/value_tool_query.png
       :align: center
 
-#. But there is more. The Value Tool plugin allows to query **all** the active
-   raster layers in the :guilabel:`Layers` panel. Set the :guilabel:`aspect` and
-   :guilabel:`slope` layers active again and hover the mouse on the map:
+#. But there is more.
+   The Value Tool plugin allows you to query **all** the active raster
+   layers in the :guilabel:`Layers` panel.
+   Set the :guilabel:`aspect` and :guilabel:`slope` layers active
+   again and hover the mouse on the map:
 
    .. figure:: img/value_tool_query_multi.png
       :align: center
 
 
 |IC|
--------------------------------------------------------------------------------
+----------------------------------------------------------------------
 
-You've seen how to derive all kinds of analysis products from a DEM. These
-include hillshade, slope and aspect calculations. You've also seen how to use
-the raster calculator to further analyze and combine these results. Finally you
-learned how to reclassify a layer and how to query the results.
+You've seen how to derive all kinds of analysis products from a DEM.
+These include hillshade, slope and aspect calculations.
+You've also seen how to use the raster calculator to further analyze
+and combine these results.
+Finally you learned how to reclassify a layer and how to query the
+results.
 
 |WN|
--------------------------------------------------------------------------------
+----------------------------------------------------------------------
 
-Now you have two analyses: the vector analysis which shows you the potentially
-suitable plots, and the raster analysis that shows you the potentially suitable
-terrain. How can these be combined to arrive at a final result for this
-problem? That's the topic for the next lesson, starting in the next module.
+Now you have two analyses: the vector analysis which shows you the
+potentially suitable plots, and the raster analysis that shows you the
+potentially suitable terrain.
+How can these be combined to arrive at a final result for this
+problem?
+That's the topic for the next lesson, starting in the next module.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE

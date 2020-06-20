@@ -1,41 +1,45 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014, QGIS project
-# This file is distributed under the same license as the QGIS Documentation
-# Project package.
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Mathias Gröbe <mathias.groebe@gmail.com>, 2018
-# Matthias Wachholz <matthias.wachholz@lageso.berlin.de>, 2020
+# Richard Duivenvoorde <richard@duif.net>, 2020
+# 
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-28 10:31+0100\n"
-"PO-Revision-Date: 2020-02-20 14:49+0000\n"
-"Last-Translator: Matthias Wachholz <matthias.wachholz@lageso.berlin.de>\n"
-"Language-Team: German (http://www.transifex.com/qgis/qgis-documentation/language/de/)\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
+"PO-Revision-Date: 2020-03-16 19:22+0000\n"
+"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Language-Team: German (https://www.transifex.com/qgis/teams/6144/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.5.1\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:6
+#: ../../docs/training_manual/processing/modeler_hydro_calculator.rst:2
 msgid "Numeric calculations in the modeler"
 msgstr "Nummerische Berechnungen im Modellierer"
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:8
+#: ../../docs/training_manual/processing/modeler_hydro_calculator.rst:4
 msgid ""
 "Beware, this chapter is not well tested, please report any issue; images are"
 " missing"
-msgstr "Achtung, dieses Kapitel wurde nicht weiter getestet. Bitte melden Sie auftrende Probleme. Es sind keine Bilder enthalten."
+msgstr ""
+"Achtung, dieses Kapitel wurde nicht weiter getestet. Bitte melden Sie "
+"auftrende Probleme. Es sind keine Bilder enthalten."
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:10
+#: ../../docs/training_manual/processing/modeler_hydro_calculator.rst:6
 msgid "In this lesson we will see how to use numeric outputs in the modeler"
-msgstr "In dieser Lektion lernen wir, wie man numerische Ausgaben in der Verarbeitungsmodellierung verwendet."
+msgstr ""
+"In dieser Lektion lernen wir, wie man numerische Ausgaben in der "
+"Verarbeitungsmodellierung verwendet."
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:12
+#: ../../docs/training_manual/processing/modeler_hydro_calculator.rst:8
 msgid ""
 "For this lesson, we are going to modify the hydrological model that we "
 "created in the last chapter (open it in the modeler before starting), so we "
@@ -43,90 +47,126 @@ msgid ""
 "to ask the user to enter it. Since that value refers to the variable in the "
 "threshold raster layer, we will extract it from that layer, based on some "
 "simple statistical analysis."
-msgstr "In dieser Lektion werden wir das hydologische Modell aus der letzen Lektion (öffenen Sie es bevor Sie beginnen) so verändern, dass der Schwellenwert automatisch gefüllt wird und nicht mehr vom Nutzer vorgegeben werden muss. Da sich der Wert auf die Variable im Rasterlayer Schwellenwert bezieht, werden wir ihn aus diesem Layer mit Hilfe einiger einfacher statistischer Analysen extrahieren."
+msgstr ""
+"In dieser Lektion werden wir das hydologische Modell aus der letzen Lektion "
+"(öffenen Sie es bevor Sie beginnen) so verändern, dass der Schwellenwert "
+"automatisch gefüllt wird und nicht mehr vom Nutzer vorgegeben werden muss. "
+"Da sich der Wert auf die Variable im Rasterlayer Schwellenwert bezieht, "
+"werden wir ihn aus diesem Layer mit Hilfe einiger einfacher statistischer "
+"Analysen extrahieren."
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:14
+#: ../../docs/training_manual/processing/modeler_hydro_calculator.rst:10
 msgid ""
 "Starting with the aforementioned model, let's do the following "
 "modifications:"
 msgstr "Wir nehmen am oben genannten Modell die folgenden Änderungen vor:"
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:16
+#: ../../docs/training_manual/processing/modeler_hydro_calculator.rst:12
 msgid ""
 "First, calculate statistics of the flow accumulation layer using the *Raster"
 " layer statistics* algorithm."
-msgstr "Berechnen Sie als Erstes Statistiken des Layers flow accumulation mit Hilfe des Algorithmus *Raster layer statistics*."
+msgstr ""
+"Berechnen Sie als Erstes Statistiken des Layers flow accumulation mit Hilfe "
+"des Algorithmus *Raster layer statistics*."
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:20
+#: ../../docs/training_manual/processing/modeler_hydro_calculator.rst:16
 msgid ""
 "This will generate a set of statistical values that will now be available "
 "for all numeric fields in other algorithms."
-msgstr "Damit wird eine Menge von statistischen Werten erstellt, die dann für die numerischen Felder in allen Algorithmen verfügbar sind."
+msgstr ""
+"Damit wird eine Menge von statistischen Werten erstellt, die dann für die "
+"numerischen Felder in allen Algorithmen verfügbar sind."
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:22
+#: ../../docs/training_manual/processing/modeler_hydro_calculator.rst:18
 msgid ""
 "If you edit the  *Channel network* algorithm, as we did in the last lesson, "
 "you will see now that you have other options apart from the numeric input "
 "that you added."
-msgstr "Wenn wir den Algorithmus *Channel network* wie in der letzen Lektion bearbeiten, sehen wir nun weitere Optionen außer der numerischen Eingabe, die wir hinzugefügt hatten."
+msgstr ""
+"Wenn wir den Algorithmus *Channel network* wie in der letzen Lektion "
+"bearbeiten, sehen wir nun weitere Optionen außer der numerischen Eingabe, "
+"die wir hinzugefügt hatten."
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:26
+#: ../../docs/training_manual/processing/modeler_hydro_calculator.rst:22
 msgid ""
 "However, none of this values is suitable for being used as a valid "
 "threshold, since they will result in channel networks that will not be very "
 "realistic. We can, instead, derive some new parameter based on them, to get "
 "a better result. For instance, we can use the mean plus 2 times the standard"
 " deviation."
-msgstr "Allerdings ist keiner der Werte wirklich als Schwellenwert nutzbar. Die entstehenden Abflussnetzwerke wären nicht sehr realistisch. Wir können aber basierend auf diesen Werten einige neue Parameter ableiten. Wir können z.B. den Mittelwert plus 2 mal der Standardabweichung verwenden."
+msgstr ""
+"Allerdings ist keiner der Werte wirklich als Schwellenwert nutzbar. Die "
+"entstehenden Abflussnetzwerke wären nicht sehr realistisch. Wir können aber "
+"basierend auf diesen Werten einige neue Parameter ableiten. Wir können z.B. "
+"den Mittelwert plus 2 mal der Standardabweichung verwenden."
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:28
+#: ../../docs/training_manual/processing/modeler_hydro_calculator.rst:24
 msgid ""
 "To add that arithmetical operation, we can use the calculator that you will "
 "find in the *Geoalgorithms/modeler/modeler-tools* group. This group contains"
 " algorithms that are not very useful outside of the modeler, but that "
 "provide some useful functionality when creating a model."
-msgstr "Um diese Rechenoperation zu ergänzen, können wir den Rechner aus der Gruppe *Geoalgorithms/modeler/modeler-tools* verwenden. Diese Gruppe enthält Algorithmen, die außerhalb der Verarbeitungsmodellierung nicht sehr nützlich sind. Sie stellen aber nützliche Funktionalitäten für die Erstellung eines Modells bereit."
+msgstr ""
+"Um diese Rechenoperation zu ergänzen, können wir den Rechner aus der Gruppe "
+"*Geoalgorithms/modeler/modeler-tools* verwenden. Diese Gruppe enthält "
+"Algorithmen, die außerhalb der Verarbeitungsmodellierung nicht sehr nützlich"
+" sind. Sie stellen aber nützliche Funktionalitäten für die Erstellung eines "
+"Modells bereit."
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:30
+#: ../../docs/training_manual/processing/modeler_hydro_calculator.rst:26
 msgid "The parameters dialog of the calculator algorithm looks like this:"
 msgstr "Der Parameter Dialog des Rechner Algorithmus sieht wie folgt aus:"
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:34
+#: ../../docs/training_manual/processing/modeler_hydro_calculator.rst:30
 msgid ""
 "As you can see, the dialog is different to the other ones we have seen, but "
 "you have in there the same variables that were available in the *Threshold* "
 "field in the *Channel network* algorithm. Enter the above formula and click "
 "on *OK* to add the algorithm."
-msgstr "Der Dialog weicht von den anderen vorher verwendeten Dialogen ab. Es sind aber dieselben Variablen verfügbar wie im Feld *Threshold* im Algorithmus *Channel network*. Geben Sie die obige Formel ein und klicken auf *OK*, um den Algorithmus hinzuzufügen."
+msgstr ""
+"Der Dialog weicht von den anderen vorher verwendeten Dialogen ab. Es sind "
+"aber dieselben Variablen verfügbar wie im Feld *Threshold* im Algorithmus "
+"*Channel network*. Geben Sie die obige Formel ein und klicken auf *OK*, um "
+"den Algorithmus hinzuzufügen."
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:38
+#: ../../docs/training_manual/processing/modeler_hydro_calculator.rst:34
 msgid ""
 "If you expand the outputs entry, as shown above, you will see that the model"
 " is connected to two of the values, namely the mean and the standard "
 "deviation, which are the ones that we have used in the formula."
-msgstr "Wenn Sie den Ausgabeeintrag wie oben gezeigt erweitern, sehen Sie, dass das Modell eine Verbindung zu zwei der Werte hergestellt hat, dem Mittelwert und der Standardabweichung. Das sind die Werte, die wir in der Formel verwendet haben."
+msgstr ""
+"Wenn Sie den Ausgabeeintrag wie oben gezeigt erweitern, sehen Sie, dass das "
+"Modell eine Verbindung zu zwei der Werte hergestellt hat, dem Mittelwert und"
+" der Standardabweichung. Das sind die Werte, die wir in der Formel verwendet"
+" haben."
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:40
+#: ../../docs/training_manual/processing/modeler_hydro_calculator.rst:36
 msgid ""
 "Adding this new algorithm will add a new numeric value. If you go again to "
 "the *Channel network* algorithm, you can now select that value in the "
 "*Threshold* parameter."
-msgstr "Nach dem Hinzufügen des Algorithmus steht ein neuer numerischer Wert zur Verfügung. Wenn Sie noch einmal den Algorithmus *Channel network* öffnen, können Sie diesen Wert als Parameter für *Threshold* auswählen."
+msgstr ""
+"Nach dem Hinzufügen des Algorithmus steht ein neuer numerischer Wert zur "
+"Verfügung. Wenn Sie noch einmal den Algorithmus *Channel network* öffnen, "
+"können Sie diesen Wert als Parameter für *Threshold* auswählen."
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:44
+#: ../../docs/training_manual/processing/modeler_hydro_calculator.rst:40
 msgid "Click on *OK* and your model should look like this."
 msgstr "Klicken Sie auf *OK* und Ihr Modell sollte wie folgt aussehen."
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:48
+#: ../../docs/training_manual/processing/modeler_hydro_calculator.rst:44
 msgid ""
 "We are not using the numeric input that we added to the model, so it can be "
 "removed. Right--click on it and select *Remove*"
-msgstr "Wir nutzen die numerische Eingabe, die wir hinzugefügt hatten nicht mehr. Wir können Sie nun durch Klick mit der rechten Maustaste und Auswahl von *Remove* löschen."
-
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:50
-msgid "todo: Add image"
 msgstr ""
+"Wir nutzen die numerische Eingabe, die wir hinzugefügt hatten nicht mehr. "
+"Wir können Sie nun durch Klick mit der rechten Maustaste und Auswahl von "
+"*Remove* löschen."
 
-#: ../../source/docs/training_manual/processing/modeler_hydro_calculator.rst:52
+#: ../../docs/training_manual/processing/modeler_hydro_calculator.rst:46
+msgid "todo: Add image"
+msgstr "todo: Bild einfügen"
+
+#: ../../docs/training_manual/processing/modeler_hydro_calculator.rst:48
 msgid "Our new model is now finished."
 msgstr "Unser neues Modell ist nun fertig gestellt."

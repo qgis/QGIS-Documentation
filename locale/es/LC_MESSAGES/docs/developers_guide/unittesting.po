@@ -1,20 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGISDoc package.
+# This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
 # Damián Ortega Terol <dortegat@gmail.com>, 2020
+# micirculopolar <lfernandez@geosistec.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGISDoc 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:24+0000\n"
-"Last-Translator: Damián Ortega Terol <dortegat@gmail.com>, 2020\n"
+"Last-Translator: micirculopolar <lfernandez@geosistec.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -67,6 +68,14 @@ msgid ""
 "QGIS since we are starting with a testing framework well after much "
 "application logic has already been implemented."
 msgstr ""
+"Hay algún código que desea probar, p. Ej. una clase o función. Los "
+"defensores de la programación extrema sugieren que el código ni siquiera "
+"debería escribirse cuando empieza a construir sus pruebas, y luego, cuando "
+"implemente su código, puede validar de inmediato con su prueba, cada parte "
+"funcional nueva que agregue. En la práctica, probablemente necesitará "
+"escribir pruebas para el código preexistente en QGIS ya que estamos "
+"comenzando con una estructura de prueba mucho después de que ya se ha "
+"implementado mucha lógica de la aplicación."
 
 #: ../../docs/developers_guide/unittesting.rst:34
 msgid ""
@@ -139,6 +148,10 @@ msgid ""
 "after the ``make install`` step, though we will explain other approaches "
 "that offer more fine grained control over running tests."
 msgstr ""
+"Usted ejecuta sus pruebas. Esto normalmente se hace simplemente "
+"haciendo``make test`` después del paso ``make install``, aunque explicaremos"
+" otros enfoques que ofrecen un control más detallado sobre las pruebas en "
+"ejecución."
 
 #: ../../docs/developers_guide/unittesting.rst:64
 msgid ""
@@ -159,7 +172,7 @@ msgstr "Creando una prueba de unidad"
 #: ../../docs/developers_guide/unittesting.rst:72
 msgid ""
 "Creating a unit test is easy - typically you will do this by just creating a"
-" single :file:`.cpp` file (not :file:`.h` file is used) and implement all "
+" single :file:`.cpp` file (no :file:`.h` file is used) and implement all "
 "your test methods as public methods that return void. We'll use a simple "
 "test class for ``QgsRasterLayer`` throughout the section that follows to "
 "illustrate. By convention we will name our test with the same name as the "
@@ -170,14 +183,13 @@ msgstr ""
 "Crear una unidad de prueba es fácil - por lo general, esto se hace sólo por "
 "la creación de un único archivo :file:`.cpp` (no se utiliza el archivo "
 ":file:`.h`) e implementar todos tus métodos de prueba cómo métodos públicos "
-"que devuelven void. Vamos a usar una clase de prueba simple "
-"``QgsRasterLayer`` en la siguiente sección para ilustrar. Por convenio "
+"que devuelven nulos. Vamos a usar una clase de prueba simple "
+"``QgsRasterLayer`` en la siguiente sección para ilustrar. Por convención "
 "nombraremos nuestra prueba con el mismo nombre que la clase que estamos "
-"poniendo a prueba, pero con el prefijo 'Test'. De manera que la "
-"implementación de prueba va en un archivo llamado "
-":file:`testqgsrasterlayer.cpp` de prueba y la propia clase será "
-"``TestQgsRasterLayer``. Primero añadimos nuestro titular estándar de "
-"copyright:"
+"evaluando, pero con el prefijo 'Test'. De manera que la implementación de "
+"prueba va en un archivo llamado :file:`testqgsrasterlayer.cpp` de prueba y "
+"la propia clase será ``TestQgsRasterLayer``. Primero añadimos nuestro "
+"titular estándar de copyright: "
 
 #: ../../docs/developers_guide/unittesting.rst:98
 msgid ""
@@ -257,6 +269,15 @@ msgid ""
 " the whole unit test passes, your new class is done and is now complete with"
 " a repeatable way to validate it."
 msgstr ""
+"En el primer caso, generalmente queremos probar si las diversas partes de la"
+" clase están funcionando. Podemos usar un enfoque de prueba funcional. Una "
+"vez más, los programadores extremos recomendarían escribir estas pruebas "
+"antes de implementar la clase. Luego, a medida que avanza en la "
+"implementación de su clase, ejecutará iterativamente las pruebas de la "
+"unidad. Cada vez más funciones de prueba deben completarse con éxito a "
+"medida que avanza el trabajo de implementación de su clase, y cuando pasa la"
+" prueba de la unidad completa, su nueva clase está terminada y ahora está "
+"completa con una forma repetible de validarla."
 
 #: ../../docs/developers_guide/unittesting.rst:173
 msgid ""
@@ -266,39 +287,56 @@ msgid ""
 "would normally implement a :ref:`regression test <regression_test>` to check"
 " for this."
 msgstr ""
+"Por lo general, sus pruebas de unidad solo cubrirían el API público de su "
+"clase, y normalmente no necesita escribir pruebas para accesores y "
+"mutadores. Si ocurriera que un descriptor de acceso o mutador no funciona "
+"como se espera, normalmente implementaría una: ref: `prueba de regresión "
+"<regression_test>` para verificar esto."
 
 #: ../../docs/developers_guide/unittesting.rst:193
 msgid "Implementing a regression test"
-msgstr ""
+msgstr "Implementando una prueba de regresión"
 
 #: ../../docs/developers_guide/unittesting.rst:195
 msgid ""
 "Next we implement our regression tests. Regression tests should be "
 "implemented to replicate the conditions of a particular bug. For example:"
 msgstr ""
+"Luego implementamos nuestras pruebas de regresión. Las pruebas de regresión "
+"deben implementarse para replicar las condiciones de un error en particular."
+" Por ejemplo:"
 
 #: ../../docs/developers_guide/unittesting.rst:198
 msgid ""
 "We received a report by email that the cell count by rasters was off by 1, "
 "throwing off all the statistics for the raster bands."
 msgstr ""
+"Recibimos un informe por correo electrónico de que el recuento de celdas por"
+" rásteres estaba desfasado en 1, eliminando todas las estadísticas para las "
+"bandas de ráster."
 
 #: ../../docs/developers_guide/unittesting.rst:200
 msgid ""
 "We opened a bug report (`ticket #832 <https://issues.qgis.org/issues/832>`_)"
 msgstr ""
+"Abrimos un reporte de error (`ticket #832 "
+"<https://issues.qgis.org/issues/832>`_)"
 
 #: ../../docs/developers_guide/unittesting.rst:201
 msgid ""
 "We created a regression test that replicated the bug using a small test "
 "dataset (a 10x10 raster)."
 msgstr ""
+"Creamos una prueba de regresión que replica el error usando un set de datos "
+"pequeño (un ráster de 10x10)"
 
 #: ../../docs/developers_guide/unittesting.rst:203
 msgid ""
 "We ran the test, verifying that it did indeed fail (the cell count was 99 "
 "instead of 100)."
 msgstr ""
+"Realizamos la prueba, verificando que efectivamente fallaba (el conteo de "
+"celdas fue de 99 en lugar de 100)."
 
 #: ../../docs/developers_guide/unittesting.rst:205
 msgid ""
@@ -307,6 +345,11 @@ msgid ""
 "anybody breakes this in the source code again in the future, we can "
 "immediately identify that the code has regressed."
 msgstr ""
+"Luego fuimos a arreglar el error y volvimos a clasificar la prueba de la "
+"unidad y la prueba de regresión pasó. Sometimos la prueba de regresión junto"
+" con la corrección de errores. Ahora, si alguien vuelve a modificar esto en "
+"el código fuente en el futuro, podemos identificar de inmediato que el "
+"código ha regresado a un estado previo."
 
 #: ../../docs/developers_guide/unittesting.rst:210
 msgid ""
@@ -314,6 +357,9 @@ msgid ""
 "will ensure our changes don't have unexpected side effects - like breaking "
 "existing functionality."
 msgstr ""
+"Mejor aún, antes de realizar cualquier cambio en el futuro, ejecutar "
+"nuestras pruebas garantizarán que nuestros cambios no tengan efectos "
+"secundarios inesperados, como afectar la funcionalidad existente."
 
 #: ../../docs/developers_guide/unittesting.rst:214
 msgid ""
@@ -324,6 +370,12 @@ msgid ""
 "implementing your regression test before fixing the bug will let you "
 "automate the testing for bug resolution in an efficient manner."
 msgstr ""
+"Las pruebas de regresión tienen otro beneficio: pueden ahorrarle tiempo. Si "
+"alguna vez solucionó un error que implicaba realizar cambios en la fuente, y"
+" luego ejecutar la aplicación y realizar una serie de pasos complicados para"
+" replicar el problema, será inmediatamente evidente que simplemente "
+"implementando su prueba de regresión antes de corregir el error le permitirá"
+" automatizar las pruebas para la resolución de errores de manera eficiente."
 
 #: ../../docs/developers_guide/unittesting.rst:221
 msgid ""
@@ -333,6 +385,11 @@ msgid ""
 " person running a failed regression test easily go and find out more "
 "information."
 msgstr ""
+"Para implementar su prueba de regresión, debe seguir la convención de "
+"nomenclatura de ** regresión<TicketID>** para sus funciones de prueba. Si no"
+" existe un ticket para la regresión, primero debe crear uno. El uso de este "
+"enfoque permite a la persona que ejecuta una prueba de regresión fallida ir "
+"fácilmente y obtener más información."
 
 #: ../../docs/developers_guide/unittesting.rst:240
 msgid ""
@@ -346,12 +403,25 @@ msgid ""
 "ensure that they won't be automatically run by the QTest executable that is "
 "created when we compile our test."
 msgstr ""
+"Finalmente, en su declaración de clase de prueba, puede declarar en privado "
+"cualquier miembro de datos y métodos auxiliares que su prueba de unidad "
+"pueda necesitar. En nuestro caso, declararemos un ``QgsRasterLayer *`` que "
+"puede ser utilizado por cualquiera de nuestros métodos de prueba. La capa "
+"ráster se creará en la función  ``initTestCase()`` que se ejecuta antes de "
+"cualquier otra prueba, y luego se destruirá usando  ``cleanupTestCase()`` "
+"que se ejecuta después de todas las pruebas. Al declarar los métodos de "
+"ayuda (que pueden ser llamados por varias funciones de prueba) de forma "
+"privada, puede asegurarse de que el ejecutable QTest que se crea cuando "
+"compilamos nuestra prueba no los ejecute automáticamente."
 
 #: ../../docs/developers_guide/unittesting.rst:257
 msgid ""
 "That ends our class declaration. The implementation is simply inlined in the"
 " same file lower down. First our init and cleanup functions:"
 msgstr ""
+"Eso termina nuestra declaración de clase. La implementación simplemente está"
+" en línea en el mismo archivo más abajo. Primero nuestras funciones init y "
+"cleanup:"
 
 #: ../../docs/developers_guide/unittesting.rst:290
 msgid "The above init function illustrates a couple of interesting things."
@@ -362,6 +432,8 @@ msgid ""
 "We needed to manually set the QGIS application data path so that resources "
 "such as :file:`srs.db` can be found properly."
 msgstr ""
+"Necesitábamos establecer manualmente la ruta de datos de la aplicación QGIS "
+"para que recursos como: file:`srs.db` se puedan encontrar correctamente."
 
 #: ../../docs/developers_guide/unittesting.rst:294
 msgid ""
@@ -374,6 +446,16 @@ msgid ""
 "Root>/tests/testdata`. You should only commit very small datasets here. If "
 "your test needs to modify the test data, it should make a copy of it first."
 msgstr ""
+"En segundo lugar, esta es una prueba basada en datos, por lo que "
+"necesitábamos proporcionar una forma de ubicar genéricamente el archivo: "
+"file:`tenbytenraster.asc`. Esto se logró haciendo que el compilador defina "
+"``TEST_DATA_PATH``. La definición se crea en el archivo de configuración "
+"``CMakeLists.txt`` en: archivo:`<QGIS Source Root>/tests/CMakeLists.txt` y "
+"está disponible para todas las pruebas de unidades de QGIS. Si necesita "
+"datos de muestra para su prueba, ingresarlos bajo :file:`<QGIS Source "
+"Root>/tests/testdata`. Aquí solo debe confirmar sets de datos muy pequeños. "
+"Si su prueba necesita modificar los datos de la prueba, primero debe hacer "
+"una copia."
 
 #: ../../docs/developers_guide/unittesting.rst:304
 msgid ""
@@ -392,14 +474,19 @@ msgid ""
 "macro that you can use to evaluate a test condition. There are a few other "
 "use macros Qt provide for use in your tests including:"
 msgstr ""
+"A continuación, veamos nuestra prueba funcional. La prueba ``isValid ()`` "
+"simplemente verifica que la capa ráster se haya cargado correctamente en "
+"initTestCase. QVERIFY es un macro de Qt que puede usar para evaluar una "
+"condición de prueba. Hay otros macros que Qt proporciona para usar en sus "
+"pruebas, que incluyen:"
 
 #: ../../docs/developers_guide/unittesting.rst:313
 msgid "QCOMPARE ( *actual, expected* )"
-msgstr ""
+msgstr "QCOMPARE ( *actual, esperada* )"
 
 #: ../../docs/developers_guide/unittesting.rst:314
 msgid "QEXPECT_FAIL ( *dataIndex, comment, mode* )"
-msgstr ""
+msgstr "QEXPECT_FAIL ( *dataIndex, comment, mode* )"
 
 #: ../../docs/developers_guide/unittesting.rst:315
 msgid "QFAIL ( *message* )"
@@ -415,15 +502,15 @@ msgstr "QSKIP ( *descripción, modo* )"
 
 #: ../../docs/developers_guide/unittesting.rst:318
 msgid "QTEST ( *actual, testElement* )"
-msgstr ""
+msgstr "QTEST ( *actual, testElement* )"
 
 #: ../../docs/developers_guide/unittesting.rst:319
 msgid "QTEST_APPLESS_MAIN ( *TestClass* )"
-msgstr ""
+msgstr "QTEST_APPLESS_MAIN ( *TestClass* )"
 
 #: ../../docs/developers_guide/unittesting.rst:320
 msgid "QTEST_MAIN ( *TestClass* )"
-msgstr ""
+msgstr "QTEST_MAIN ( *TestClass* )"
 
 #: ../../docs/developers_guide/unittesting.rst:321
 msgid "QTEST_NOOP_MAIN ()"
@@ -446,6 +533,9 @@ msgid ""
 "Some of these macros are useful only when using the Qt framework for data "
 "driven testing (see the Qt docs for more detail)."
 msgstr ""
+"Algunos de estos macros son útiles solo cuando se usa la estructura Qt para "
+"pruebas basadas en datos (consulte los documentos de Qt para obtener más "
+"detalles)."
 
 #: ../../docs/developers_guide/unittesting.rst:336
 msgid ""
@@ -453,6 +543,10 @@ msgid ""
 " your classes public API where feasible. With our functional tests out the "
 "way, we can look at our regression test example."
 msgstr ""
+"ormalmente, sus pruebas funcionales cubrirían todo el rango de funcionalidad"
+" de sus clases de API pública cuando sea posible. Con nuestras pruebas "
+"funcionales fuera del camino, podemos ver nuestro ejemplo de prueba de "
+"regresión."
 
 #: ../../docs/developers_guide/unittesting.rst:340
 msgid ""
@@ -828,17 +922,17 @@ msgstr "LD_LIBRARY_PATH"
 msgid "[build]/output/lib"
 msgstr "[build]/output/lib"
 
-#: ../../docs/developers_guide/unittesting.rst:740
+#: ../../docs/developers_guide/unittesting.rst:738
 msgid ""
 "Replace ``[build]`` with your build directory and ``[source]`` with your "
 "source directory."
 msgstr ""
 
-#: ../../docs/developers_guide/unittesting.rst:744
+#: ../../docs/developers_guide/unittesting.rst:742
 msgid "Have fun"
 msgstr "Que te diviertas"
 
-#: ../../docs/developers_guide/unittesting.rst:746
+#: ../../docs/developers_guide/unittesting.rst:744
 msgid ""
 "Well that concludes this section on writing unit tests in QGIS. We hope you "
 "will get into the habit of writing test to test new functionality and to "

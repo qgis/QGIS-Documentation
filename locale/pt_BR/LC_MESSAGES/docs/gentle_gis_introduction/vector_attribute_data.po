@@ -1,19 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGISDoc package.
+# This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Aline Furlanetto Viero <afviero@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGISDoc 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:16+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Aline Furlanetto Viero <afviero@gmail.com>, 2020\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -288,7 +289,7 @@ msgstr "Campo 3: Varanda"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:143
 msgid "Record 1"
-msgstr "Registro1"
+msgstr "Registro 1"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:143
 msgid "1998"
@@ -614,6 +615,9 @@ msgid ""
 "the number of classes you select. Each class is represented by a different "
 "colour."
 msgstr ""
+"Tabela Graduada: a cor graduada divide os intervalos de valor do atributo no"
+" número de classes que você selecionar. Cada classe é representada por uma "
+"cor diferente."
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:283
 msgid "Continuous Colour Symbols"
@@ -647,6 +651,9 @@ msgid ""
 "light orange shown here) and an end colour (e.g. dark brown shown here) and "
 "creates a series of shades between those colours."
 msgstr ""
+"Tabela Contínua: A simbologia de cores contínua usa uma cor inicial (por "
+"exemplo, laranja claro mostrada aqui) e uma cor final (por exemplo, marrom "
+"escuro mostrada aqui) e cria uma série de tons entre essas cores."
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:320
 msgid ""
@@ -655,6 +662,10 @@ msgid ""
 " starts by setting the layers properties to continuous colour using a dialog"
 " like the one shown in figure_continuous_symbol_."
 msgstr ""
+" Usando o mesmo exemplo de contornos que usamos na seção anterior, vamos ver"
+" como um mapa com simbologia de cores contínua é definido e visualizado. O "
+"processo começa definindo as propriedades das camadas para cores contínuas "
+"usando uma caixa de diálogo como a mostrada em figure_continuous_symbol_."
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:331
 msgid ""
@@ -680,6 +691,15 @@ msgid ""
 " near to 1000 m will be drawn close to orange (see "
 "figure_continuous_symbol_map_)."
 msgstr ""
+"Após definir as cores mínimas e máximas no intervalo de cores, as feições de"
+" cores desenhadas serão dependentes de onde o atributo está no intervalo "
+"entre mínimo e máximo. Por exemplo, se você tiver feições de contorno com "
+"valores que começam em 1000 m e terminam em 1400 m, o intervalo de valores é"
+" de 1000 a 1400. Se a cor definida para o valor mínimo estiver definida como"
+" laranja e a cor para o valor máximo for preta, os contornos para um valor "
+"próximo de 1400 m serão desenhados com uma cor próxima ao preto. Por outro "
+"lado, contornos com um valor próximo a 1000 m serão desenhados com uma cor "
+"próxima a laranja (veja figure_continuous_symbol_map_). "
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:351
 msgid "A contour map drawn using continuous colour symbology"
@@ -700,6 +720,14 @@ msgid ""
 "each drawn in the map view of the GIS with different colours or symbols. "
 "This is illustrated in table_unique_."
 msgstr ""
+"Algumas vezes os atributos das feições não são numéricos, mas **strings** "
+"são usadas. 'String' é uma termo de computador que significa um grupo de "
+"letras, números e outros símbolos da escrita. Atributos tipo Strings são "
+"frequentemente usados para classificar coisas por nome. Podemos dizer ao "
+"Aplicativo SIG para dar a número ou a cada string distintos sua própria cor "
+"e símbolo. Feições de estradas podem ter classes diferentes (e.g. 'rua', "
+"'estrada secundária', 'estrada principal' etc.), cada uma desenhada no mapa "
+"do SIG com diferentes cores ou símbolos. Isso é ilustrado na table_unique_."
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:367
 msgid "Colour class and symbol"
@@ -726,6 +754,8 @@ msgid ""
 "Table Unique: Unique attribute values for a feature type (e.g. roads) can "
 "each have their own symbol."
 msgstr ""
+"Tabela Exclusiva: valores de atributo exclusivos para um tipo de feição (por"
+" exemplo, estradas) podem ter seu próprio símbolo."
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:381
 msgid ""
@@ -735,6 +765,11 @@ msgid ""
 "unique value can then be assigned a colour and style. This is shown in "
 "figure_unique_symbol_."
 msgstr ""
+"Dentro do Aplicativo SIG, podemos abrir/optar por usar a simbologia de Valor"
+" Ũnico para uma camada. O SIG examinará todos os diferentes valores de "
+"string campo de atributo e criará uma lista de strings ou números distintos."
+" Cada valor distinto pode ser atribuído a uma cor e estilo. Isso é mostrado "
+"em figure_unique_symbol_."
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:392
 msgid "Defining unique value symbology for roads based on the road type."
@@ -750,6 +785,11 @@ msgid ""
 "line style (and fill style if its a polygon feature). This is shown in "
 "figure_unique_symbol_map_."
 msgstr ""
+"Quando o SIG desenha a camada, ele verá os atributos de cada feição antes de"
+" desenhá-las na tela. Com base no valor do campo escolhido na tabela de "
+"atributos, a linha da estrada será desenhada com estilo de linha e cor "
+"adequados (e estilo de preenchimento se for uma feição polígono). Isso é "
+"mostrado na figure_unique_symbol_map_."
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:405
 msgid "A roads vector layer symbolised using a unique value per road type."
@@ -883,6 +923,10 @@ msgid ""
 "identify which symbology type they would use (see table_example_symbols_ for"
 " an example)."
 msgstr ""
+"Usando a tabela que você criou no último tópico, adicione uma nova coluna "
+"para o tipo de simbologia que você usaria para cada tipo de recurso e peça "
+"aos alunos que identifiquem qual tipo de simbologia eles usariam (veja "
+"table_example_symbols_  como um exemplo)."
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:452
 msgid ""
@@ -1011,6 +1055,8 @@ msgid ""
 "Table Example Symbols: An example of a table that defines the feature types "
 "and the kind of symbology you would use for each."
 msgstr ""
+"Símbolos de exemplo de tabela: um exemplo de uma tabela que define os tipos "
+"de recurso e o tipo de simbologia que você usaria para cada um."
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:484
 msgid "Something to think about"
@@ -1039,7 +1085,7 @@ msgstr "Outras leituras"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:496
 msgid "**Website:** https://en.wikipedia.org/wiki/Cartography#Map_symbology"
-msgstr ""
+msgstr "**Website:** https://en.wikipedia.org/wiki/Cartography#Map_symbology"
 
 #: ../../docs/gentle_gis_introduction/vector_attribute_data.rst:498
 msgid ""

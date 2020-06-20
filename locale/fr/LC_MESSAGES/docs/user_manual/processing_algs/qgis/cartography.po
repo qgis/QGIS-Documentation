@@ -1,20 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGISDoc package.
+# This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
 # Francis Gasc <francisgasc@gmail.com>, 2020
+# MarieSilvestre, 2020
+# Sant-anna <delazj@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGISDoc 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:29+0000\n"
-"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2020\n"
+"Last-Translator: Sant-anna <delazj@gmail.com>, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,7 +30,7 @@ msgstr "Cartographie"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:13
 msgid "Combine style databases"
-msgstr ""
+msgstr "Combiner des bases de données de style"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:14
 msgid ""
@@ -37,10 +39,14 @@ msgid ""
 "databases these will be renamed to have unique names in the output combined "
 "database."
 msgstr ""
+"Combine plusieurs bases de données de style QGIS en une seule base de "
+"données de style. Si des éléments du même type avec le même nom existent "
+"dans différentes bases de données source, ils seront renommés pour avoir des"
+" noms uniques dans la base de données combinée en sortie."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:18
 msgid ":ref:`qgisstylefromproject`"
-msgstr ""
+msgstr ":ref:`qgisstylefromproject`"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:21
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:111
@@ -103,7 +109,7 @@ msgstr "Description"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:32
 msgid "**Input databases**"
-msgstr ""
+msgstr "**Bases de données d'entrée**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:33
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:123
@@ -114,20 +120,20 @@ msgstr "``INPUT``"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:34
 msgid "[file] [list]"
-msgstr ""
+msgstr "[file] [list]"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:35
 msgid "Files containing QGIS style items"
-msgstr ""
+msgstr "Fichiers contenant des éléments de style QGIS"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:36
 msgid "**Objects to combine**"
-msgstr ""
+msgstr "**Objets à combiner**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:37
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:250
 msgid "``OBJECTS``"
-msgstr ""
+msgstr "``OBJECTS``"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:38
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:251
@@ -139,33 +145,35 @@ msgid ""
 "Types of style items in the input databases you would like to put in the new"
 " database.  These can be:"
 msgstr ""
+"Types d'éléments de style dans les bases de données d'entrée que vous "
+"souhaitez mettre dans la nouvelle base de données. Ceux-ci peuvent être:"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:42
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:255
 msgid "0 --- :ref:`Symbols <edit_symbol>`"
-msgstr ""
+msgstr "0 --- :ref:`Symbols <edit_symbol>`"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:43
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:256
 msgid "1 --- :ref:`Color ramps <color-ramp>`"
-msgstr ""
+msgstr "1 --- :ref:`Color ramps <color-ramp>`"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:44
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:257
 msgid "2 --- :ref:`Text formats <text_format>`"
-msgstr ""
+msgstr "2 --- :ref:`Text formats <text_format>`"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:45
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:258
 msgid "3 --- :ref:`Label settings <showlabels>`"
-msgstr ""
+msgstr "3 --- :ref:`Label settings <showlabels>`"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:47
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:80
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:260
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:293
 msgid "**Output style database**"
-msgstr ""
+msgstr "**Base de données de style de sortie**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:48
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:81
@@ -194,8 +202,9 @@ msgid "Default: ``[Save to temporary file]``"
 msgstr "Default: ``[Save to temporary file]``"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:52
-msgid "Output :file:`.XML` file combining the selected style items One of:"
+msgid "Output :file:`.XML` file combining the selected style items. One of:"
 msgstr ""
+"Sortie :file:`.XML` combinant les éléments de style sélectionnés parmi :"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:55
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:268
@@ -231,12 +240,12 @@ msgstr "Sorties"
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:72
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:285
 msgid "**Color ramp count**"
-msgstr ""
+msgstr "**Nombre de plages de couleur**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:73
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:286
 msgid "``COLORRAMPS``"
-msgstr ""
+msgstr "``COLORRAMPS``"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:74
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:78
@@ -258,40 +267,40 @@ msgstr "[number]"
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:76
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:289
 msgid "**Label settings count**"
-msgstr ""
+msgstr "**Compter les paramètres d'étiquette**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:77
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:290
 msgid "``LABELSETTINGS``"
-msgstr ""
+msgstr "``LABELSETTINGS``"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:83
 msgid "Output :file:`.XML` file combining the selected style items"
-msgstr ""
+msgstr "Sortie :file:`.XML` combinant les éléments de style sélectionnés"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:84
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:297
 msgid "**Symbol count**"
-msgstr ""
+msgstr "**Nombre de symboles**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:85
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:298
 msgid "``SYMBOLS``"
-msgstr ""
+msgstr "``SYMBOLS``"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:88
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:301
 msgid "**Text format count**"
-msgstr ""
+msgstr "**Nombre de formats de texte**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:89
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:302
 msgid "``TEXTFORMATS``"
-msgstr ""
+msgstr "``TEXTFORMATS``"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:97
 msgid "Create categorized renderer from styles"
-msgstr ""
+msgstr "Créer un rendu catégorisé à partir de styles"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:98
 msgid ""
@@ -300,6 +309,10 @@ msgid ""
 "the user's current :ref:`symbol library <vector_symbol_library>` are used "
 "instead."
 msgstr ""
+"Définit le rendu d'une couche vectorielle sur un rendu catégorisé à l'aide "
+"des symboles correspondants d'une base de données de styles. Si aucun "
+"fichier de style n'est spécifié, les symboles de la bibliothèque courante de"
+" l'utilisateur :ref:`symbol library 1` sont utilisés à la place."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:102
 msgid ""
@@ -308,6 +321,11 @@ msgid ""
 "within the specified QGIS XML style database. Whenever a matching symbol "
 "name is found, the category's symbol will be set to this matched symbol."
 msgstr ""
+"Une expression ou un champ spécifié est utilisé pour créer des catégories "
+"pour le rendu. Chaque catégorie est adaptée individuellement aux symboles "
+"qui existent dans la base de données de style XML QGIS spécifiée. Chaque "
+"fois qu'un nom de symbole correspondant est trouvé, le symbole de la "
+"catégorie sera défini sur ce symbole correspondant."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:107
 msgid ""
@@ -315,6 +333,10 @@ msgid ""
 "which could not be matched to symbols, and symbols which were not matched to"
 " categories."
 msgstr ""
+"Si vous le souhaitez, les sorties peuvent également être des tables "
+"contenant des listes des catégories qui n'ont pas pu être mises en "
+"correspondance avec des symboles et des symboles qui n'ont pas pu être mis "
+"en correspondance avec des catégories."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:122
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:437
@@ -327,11 +349,11 @@ msgstr "[vector: any]"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:125
 msgid "Vector layer to apply a categorized style to"
-msgstr ""
+msgstr "Couche vectorielle à laquelle appliquer un style catégorisé"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:126
 msgid "**Categorize using expression**"
-msgstr ""
+msgstr "**Catégoriser en utilisant uneexpression**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:127
 msgid "``FIELD``"
@@ -343,15 +365,17 @@ msgstr "[expression]"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:129
 msgid "Field or expression to categorize the features"
-msgstr ""
+msgstr "Champ ou expression pour classer les entités"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:130
 msgid "**Style database (leave blank to use saved symbols)**"
 msgstr ""
+"**Base de données de styles (laissez vide pour utiliser les symboles "
+"enregistrés)**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:131
 msgid "``STYLE``"
-msgstr ""
+msgstr "``STYLE``"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:133
 msgid ""
@@ -360,14 +384,20 @@ msgid ""
 "symbols <share_symbols>` tool. If no file is specified, QGIS local symbols "
 "library is used."
 msgstr ""
+"Fichier (:file:`.XML`) contenant les symboles à appliquer aux catégories de "
+"couches en entrée. Le fichier peut être obtenu à partir du gestionnaire de "
+"styles :ref:`Share symbols 1`. Si aucun fichier n'est spécifié, la "
+"bibliothèque de symboles locaux QGIS est utilisée."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:139
 msgid "**Use case-sensitive match to symbol names**"
 msgstr ""
+"**Utilisez une correspondance sensible à la casse pour les noms de "
+"symboles**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:140
 msgid "``CASE_SENSITIVE``"
-msgstr ""
+msgstr "``CASE_SENSITIVE``"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:141
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:148
@@ -384,25 +414,31 @@ msgid ""
 "If True (checked), applies a case sensitive comparison between the "
 "categories and symbols names"
 msgstr ""
+"Si Vrai (coché), applique une comparaison sensible à la casse entre les noms"
+" de catégories et de symboles"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:146
 msgid "**Ignore non-alphanumeric characters while matching**"
 msgstr ""
+"**Ignorez les caractères non alphanumériques lors de la correspondance**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:147
 msgid "``TOLERANT``"
-msgstr ""
+msgstr "``TOLERANT``"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:151
 msgid ""
 "If True (checked), non-alphanumeric characters in the categories and symbols"
 " names will be ignored, allowing greater tolerance during the match."
 msgstr ""
+"Si Vrai (coché), les caractères non alphanumériques dans les noms de "
+"catégories et de symboles seront ignorés, ce qui permettra une plus grande "
+"tolérance pendant la comparaison."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:154
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:201
 msgid "**Non-matching categories**"
-msgstr ""
+msgstr "**Catégories non correspondantes**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:156
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:173
@@ -415,7 +451,7 @@ msgstr "Optionnel"
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:157
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:202
 msgid "``NON_MATCHING_CATEGORIES``"
-msgstr ""
+msgstr "``NON_MATCHING_CATEGORIES``"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:158
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:175
@@ -434,6 +470,8 @@ msgid ""
 "Output table for categories which do not match any symbol in the database. "
 "One of:"
 msgstr ""
+"Table de sortie pour les catégories qui ne correspondent à aucun symbole de "
+"la base de données. Un des:"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:164
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:181
@@ -464,34 +502,40 @@ msgstr "Enregistrer dans la table PostGIS ..."
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:171
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:206
 msgid "**Non-matching symbol names**"
-msgstr ""
+msgstr "**Noms de symboles non identiques**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:174
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:207
 msgid "``NON_MATCHING_SYMBOLS``"
-msgstr ""
+msgstr "``NON_MATCHING_SYMBOLS``"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:178
 msgid ""
 "Output table for symbols from the provided style database which do not match"
 " any category. One of:"
 msgstr ""
+"Tableau de sortie pour les symboles de la base de données de styles fournis "
+"qui ne correspondent à aucune catégorie. Un des:"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:204
 msgid ""
 "Lists categories which could not be matched to any symbol in the provided "
 "style database"
 msgstr ""
+"Répertorie les catégories qui ne peuvent être associées à aucun symbole dans"
+" la base de données de styles fournie"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:209
 msgid ""
 "Lists symbols from the provided style database which could not match any "
 "category"
 msgstr ""
+"Répertorie les symboles de la base de données de styles fournis qui ne "
+"peuvent correspondre à aucune catégorie"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:211
 msgid "**Categorized layer**"
-msgstr ""
+msgstr "**Couche catégorisée**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:213
 msgid "[same as input]"
@@ -502,16 +546,20 @@ msgid ""
 "The input vector layer with the categorized style applied. No new layer is "
 "output."
 msgstr ""
+"La couche vecteur d'entrée avec le style catégorisé appliqué. Aucune "
+"nouvelle couche n'est sortie."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:221
 msgid "Create style database from project"
-msgstr ""
+msgstr "Créer une base de données de style à partir du projet"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:222
 msgid ""
 "Extracts all style objects (symbols, color ramps, text formats and label "
 "settings) from a QGIS project."
 msgstr ""
+"Extrait tous les objets de style (symboles, plages de couleurs, formats de "
+"texte et paramètres d'étiquette) d'un projet QGIS."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:225
 msgid ""
@@ -519,57 +567,64 @@ msgid ""
 "format), which can be managed and imported via the :ref:`Style Manager "
 "<vector_style_manager>` dialog."
 msgstr ""
+"Les symboles extraits sont enregistrés dans une base de données de style "
+"QGIS (:file:`XML`), qui peut être gérée et importée via la boîte de dialogue"
+" :ref:`Style Manager 1`."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:229
 msgid ":ref:`qgiscombinestyles`"
-msgstr ""
+msgstr ":ref:`qgiscombinestyles`"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:243
 msgid "**Input project (leave blank to use current)**"
-msgstr ""
+msgstr "**Projet d'entrée (laisser vide pour utiliser le courant)**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:248
 msgid "A QGIS project file to extract the style items from"
-msgstr ""
+msgstr "Un fichier de projet QGIS pour extraire les éléments de style de"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:249
 msgid "**Objects to extract**"
-msgstr ""
+msgstr "**Objets à extraire**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:252
 msgid ""
 "Types of style items in the input project you would like to put in the new "
 "database. These can be:"
 msgstr ""
+"Types d'éléments de style dans le projet d'entrée que vous souhaitez mettre "
+"dans la nouvelle base de données. Ceux-ci peuvent être:"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:265
 msgid ""
-"Specify the output :file:`.XML` file for the selected style items One of:"
+"Specify the output :file:`.XML` file for the selected style items. One of:"
 msgstr ""
+"Spécifiez le fichier de sortie :file:`.XML` pour les éléments de style "
+"sélectionnés parmi :"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:288
 msgid "Number of color ramps"
-msgstr ""
+msgstr "Nombre de plages  de couleur"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:292
 msgid "Number of label settings"
-msgstr ""
+msgstr "Nombre de paramètres d'étiquette"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:296
 msgid "Output :file:`.XML` file for the selected style items"
-msgstr ""
+msgstr "Sortie :file:`.XML` pour les éléments de style sélectionnés"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:300
 msgid "Number of symbols"
-msgstr ""
+msgstr "Nombre de symboles"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:304
 msgid "Number of text formats"
-msgstr ""
+msgstr "Nombre de formats de texte"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:310
 msgid "Print layout map extent to layer"
-msgstr ""
+msgstr "Imprimer l'étendue de la mise en page de carte sur la couche"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:312
 msgid ""
@@ -577,6 +632,10 @@ msgid ""
 " items), with attributes specifying the map size (in layout units, i.e. the "
 ":ref:`reference map <reference_map>` units), scale and rotation."
 msgstr ""
+"Crée une couche polygonale contenant l'étendue d'un ou plusieurs éléments de"
+" la carte de mise en page d'impression, avec des attributs spécifiant la "
+"taille de la carte (en unités de mise en page, c'est-à-dire les unités "
+":ref:`reference map 1`), l'échelle et la rotation."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:316
 msgid ""
@@ -584,20 +643,25 @@ msgid ""
 "will be exported. If it is not specified, all map extents from the layout "
 "will be exported."
 msgstr ""
+"Si le paramètre d'élément de carte est spécifié, seule l'étendue de carte "
+"correspondante sera exportée. S'il n'est pas spécifié, toutes les étendues "
+"de carte de la mise en page seront exportées."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:319
 msgid ""
 "Optionally, a specific output CRS can be specified. If it is not specified, "
 "the original map item CRS will be used."
 msgstr ""
+"Facultativement, un SCR de sortie spécifique peut être spécifié. S'il n'est "
+"pas spécifié, le SCR de  l'objet carte d'origine sera utilisé."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:331
 msgid "**Print layout**"
-msgstr ""
+msgstr "**Mise en page d'impression**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:332
 msgid "``LAYOUT``"
-msgstr ""
+msgstr "``LAYOUT``"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:333
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:339
@@ -607,29 +671,31 @@ msgstr "[enumeration]"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:334
 msgid "A print layout in the current project"
-msgstr ""
+msgstr "Une mise en page d'impression dans le projet en cours"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:335
 msgid "**Map item**"
-msgstr ""
+msgstr "**Élément de carte**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:338
 msgid "``MAP``"
-msgstr ""
+msgstr "``MAP``"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:341
 msgid "Default: *All the map items*"
-msgstr ""
+msgstr "Default: *All the map items*"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:342
 msgid ""
 "The map item(s) whose information you want to extract. If none is provided "
 "then all the map items are processed."
 msgstr ""
+"Le ou les éléments de carte dont vous souhaitez extraire les informations. "
+"Si aucun n'est fourni, tous les éléments de la carte sont traités."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:346
 msgid "**Overrride CRS**"
-msgstr ""
+msgstr "**Remplacer le SCR**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:349
 msgid "``CRS``"
@@ -641,12 +707,14 @@ msgstr "[crs]"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:352
 msgid "Default: *The layout CRS*"
-msgstr ""
+msgstr "Default: *The layout CRS*"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:353
 msgid ""
 "Select the CRS for the layer in which the information will be reported."
 msgstr ""
+"Sélectionnez le SCR pour la couche dans laquelle les informations seront "
+"rapportées."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:356
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:386
@@ -664,37 +732,40 @@ msgstr "[vector: polygon]"
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:360
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:488
 msgid "Default: ``[Create temporary layer]``"
-msgstr "Par défaut: ``[Create temporary layer]``"
+msgstr "Par défaut: ``[Créer une couche temporaire]``"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:361
 msgid "Specify the output vector layer for the extent(s). One of:"
 msgstr ""
+"Spécifiez la couche vectorielle de sortie pour les extensions. Un des:"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:382
 msgid "**Map height**"
-msgstr ""
+msgstr "**hauteur de la carte**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:383
 msgid "``HEIGHT``"
-msgstr ""
+msgstr "``HEIGHT``"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:389
 msgid ""
 "Output polygon vector layer containing extents of all the input layout map "
 "item(s)"
 msgstr ""
+"Couche vectorielle de polygone en sortie contenant l'étendue de tous les "
+"éléments de carte de la mise en page d'entrée"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:391
 msgid "**Map rotation**"
-msgstr ""
+msgstr "**Rotation de la carte**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:392
 msgid "``ROTATION``"
-msgstr ""
+msgstr "``ROTATION``"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:395
 msgid "**Map scale**"
-msgstr ""
+msgstr "**Échelle de la carte**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:396
 msgid "``SCALE``"
@@ -702,15 +773,15 @@ msgstr "``SCALE``"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:399
 msgid "**Map width**"
-msgstr ""
+msgstr "**Largeur de la carte**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:400
 msgid "``WIDTH``"
-msgstr ""
+msgstr "``WIDTH``"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:408
 msgid "Topological coloring"
-msgstr ""
+msgstr "Coloration topologique"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:409
 msgid ""
@@ -718,50 +789,61 @@ msgid ""
 "polygons share the same color index, whilst minimizing the number of colors "
 "required."
 msgstr ""
+"Attribue un indice de couleur aux entités surfaciques de manière à ce "
+"qu'aucun polygone adjacent ne partage le même indice de couleur, tout en "
+"minimisant le nombre de couleurs requises."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:412
 msgid "The algorithm allows choice of method to use when assigning colors."
 msgstr ""
+"L'algorithme permet de choisir la méthode à utiliser lors de l'attribution "
+"des couleurs."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:414
 msgid ""
 "A minimum number of colors can be specified if desired. The color index is "
 "saved to a new attribute named **color_id**."
 msgstr ""
+"Un nombre minimum de couleurs peut être spécifié si vous le souhaitez. "
+"L'index de couleur est enregistré dans un nouvel attribut nommé "
+"**color_id**."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:417
 msgid ""
 "The following example shows the algorithm with four different colors chosen;"
 " as you can see each color class has the same amount of features."
 msgstr ""
+"L'exemple suivant montre l'algorithme avec quatre couleurs différentes "
+"choisies; comme vous pouvez le voir, chaque classe de couleurs a le même "
+"nombre d'entités."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:423
 msgid "Topological colors example"
-msgstr ""
+msgstr "Exemple de couleurs topologiques"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:440
 msgid "The input polygon layer"
-msgstr ""
+msgstr "La couche de polygone d'entrée"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:441
 msgid "**Minimum number of colors**"
-msgstr ""
+msgstr "**Nombre minimum de couleurs**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:442
 msgid "``MIN_COLORS``"
-msgstr ""
+msgstr "``MIN_COLORS``"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:445
 msgid "Default: 4"
-msgstr ""
+msgstr "Default: 4"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:446
 msgid "The minimum number of colors to assign. Minimum 1, maximum 1000."
-msgstr ""
+msgstr "Le nombre minimum de couleurs à attribuer. Minimum 1, maximum 1000."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:448
 msgid "**Minimum distance between features**"
-msgstr ""
+msgstr "**Distance minimale entre les entites**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:449
 msgid "``MIN_DISTANCE``"
@@ -776,14 +858,16 @@ msgid ""
 "Prevent nearby (but non-touching) features from being assigned equal colors."
 " Minimum 0.0."
 msgstr ""
+"Empêchez que les entites à proximité (mais sans toucher) se voient attribuer"
+" des couleurs égales. Minimum 0,0."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:456
 msgid "**Balance color assignment**"
-msgstr ""
+msgstr "**Attribution des couleurs de l'équilibre**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:457
 msgid "``BALANCE``"
-msgstr ""
+msgstr "``BALANCE``"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:460
 msgid "Default: 0"
@@ -791,21 +875,23 @@ msgstr "Par défaut : 0"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:461
 msgid "Options are:"
-msgstr ""
+msgstr "Les options sont:"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:463
 msgid "0 --- By feature count"
-msgstr ""
+msgstr "0 --- Par nombre d' entités.."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:465
 msgid ""
 "Attempts to assign colors so that the count of features assigned to each "
 "individual color index is balanced."
 msgstr ""
+"Tente d'attribuer des couleurs de sorte que le nombre d'entités affectées à "
+"chaque index de couleur individuel soit équilibré."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:469
 msgid "1 --- By assigned area"
-msgstr ""
+msgstr "1 --- Par surface affectée"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:471
 msgid ""
@@ -813,10 +899,14 @@ msgid ""
 "balanced. This mode can be useful to help avoid large features resulting in "
 "one of the colors appearing more dominant on a colored map."
 msgstr ""
+"Attribue des couleurs de sorte que la surface totale des entités affectées à"
+" chaque couleur soit équilibrée. Ce mode peut être utile pour éviter les "
+"grandes entités, ce qui fait que l'une des couleurs apparaît plus dominante "
+"sur une carte colorée."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:477
 msgid "2 --- By distance between colors"
-msgstr ""
+msgstr "2 --- Par distance entre les couleurs"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:479
 msgid ""
@@ -824,16 +914,19 @@ msgid ""
 "same color. This mode helps to create a more uniform distribution of colors "
 "across a map."
 msgstr ""
+"Attribue des couleurs afin de maximiser la distance entre les entités de la "
+"même couleur. Ce mode permet de créer une distribution plus uniforme des "
+"couleurs sur une carte."
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:484
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:510
 msgid "**Colored**"
-msgstr ""
+msgstr "**Coloré**"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:489
 msgid "Specify the output layer. One of:"
-msgstr ""
+msgstr "Spécifiez la couche de sortie. Un des:"
 
 #: ../../docs/user_manual/processing_algs/qgis/cartography.rst:513
 msgid "Polygon vector layer with an added ``color_id`` column"
-msgstr ""
+msgstr "Couche vectorielle polygone avec une colonne ``color_id`` ajoutée"

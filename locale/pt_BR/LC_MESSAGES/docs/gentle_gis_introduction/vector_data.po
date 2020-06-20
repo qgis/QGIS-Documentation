@@ -1,19 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGISDoc package.
+# This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Aline Furlanetto Viero <afviero@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGISDoc 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:16+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Aline Furlanetto Viero <afviero@gmail.com>, 2020\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -63,6 +64,14 @@ msgid ""
 "Application. Vector features have **attributes**, which consist of text or "
 "numerical information that **describe** the features."
 msgstr ""
+"**Vetor** de dados fornece um modo de representar **feições** do mundo real "
+"dentro do ambiente SIG. Uma feição é qualquer coisa que você possa ver na "
+"paisagem. Imagine que você está de pé no topo de uma colina. Olhando para "
+"baixo, você vai ver casas, estradas, árvores, rios, e assim por diante (veja"
+" figure_vector_landscape_). Cada uma dessas coisas seria uma **feição** "
+"quando as representamos em um aplicativo SIG. Feições vetoriais tem "
+"**atributos**, que consistem de informações numéricas ou de texto que "
+"**descrevem** as feições."
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:30
 msgid ""
@@ -80,6 +89,12 @@ msgid ""
 "Geometries which have vertices with a ``Z`` axis are often referred to as "
 "**2.5D** since they describe height or depth at each vertex, but not both."
 msgstr ""
+"Uma feição vetorial tem sua forma representada usando **geometria**. A "
+"geometria é composta de um ou mais **vertices** interconectados. Um vétice "
+"descreve a posição no espaço usando eixos **X**, **Y** e opcionalmente "
+"**Z**. Geometrias que tem vértices com um eixo ``Z`` são frequentemente "
+"chamadas de **2.5D** uma vez que descrevem altura ou profundidade em cada "
+"vértice, mas não para ambos."
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:39
 msgid ""
@@ -290,6 +305,12 @@ msgid ""
 " street, and so on. The GIS can use these attributes to symbolise the "
 "polyline feature with a suitable colour or line style."
 msgstr ""
+"Os **atributos** de uma polilinha descrevem suas propriedades ou "
+"características. Por exemplo, uma polilinha de estrada pode ter atributos "
+"que descrevem se sua superfície é de cascalho ou asfalto, quantas vias ela "
+"tem, se é uma rua de uma mão só, e assim por diante. O SIG pode usar esses "
+"atributos para simbolizar a feição polilinha com estilo de linha ou cor "
+"adequada."
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:157
 msgid "Polygon features in detail"
@@ -345,6 +366,16 @@ msgid ""
 "show all of the features for that layer in your GIS application with a "
 "single mouse click."
 msgstr ""
+"Agora que descrevemos o que é um vetor de dados, vamos ver como um vetor de "
+"dados é gerenciado e usado em um ambiente SIG. A maior parte dos aplicativos"
+" SIG agrupa feições vetoriais em **camadas**. As feições em uma camada tem a"
+" mesma tipo de geometria (e.g. todas são pontos) e o mesmo tipo de atributos"
+" (e.g. informação sobre qual espécie de árvore há em uma camada de árvores)."
+" Por exemplo se você registrou as posições de todas as trilhas na sua "
+"escola, elas usualmente estarão armazenadas juntas no disco rígido do "
+"computador e mostradas no SIG como uma única camada. Isso é conveniente, "
+"pois permite que você mostre ou não todas as feições para aquela camada em "
+"seu aplicativo SIG com um único clique do mouse."
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:186
 msgid "Editing vector data"
@@ -608,6 +639,11 @@ msgid ""
 "it should be connected. Figure figure_vector_shoots_ demonstrates what "
 "undershoots and overshoots look like."
 msgstr ""
+"**Overshoots** podem ocorrer quando uma feição linear como uma estrada, por "
+"exemplo, não se encontra com outra estrada exatamente no cruzamento. "
+"**Undershoots** podem ocorrer quando uma feição linear (e.g. um rio) não "
+"coincide exatamente com outra feição a qual deveria estar conectado. A "
+"Figura figure_vector_shoots_ mostra como são os undershoots e overshoots."
 
 #: ../../docs/gentle_gis_introduction/vector_data.rst:338
 msgid ""

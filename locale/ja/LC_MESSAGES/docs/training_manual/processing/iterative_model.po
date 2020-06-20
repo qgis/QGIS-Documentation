@@ -1,19 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGISDoc package.
+# This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# fairtommy <fairtommy@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGISDoc 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:21+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: fairtommy <fairtommy@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -66,7 +67,7 @@ msgid ""
 "the curves, so this model will not generated any layers, but just a table "
 "with the curve data."
 msgstr ""
-"既にこのレッスンのためのデータフォルダ内に作成したモデルを見つけることができますが、最初は自分で作成しようとすると良いでしょう。興味があるのは曲線にだけなので、この場合はクリップされたレイヤーは最終的な結果ではありません。だからこのモデルは、レイヤーは何も作成せず、曲線データを有するテーブルを作成するだけです。"
+"このレッスン用のデータフォルダ内に既に作成したモデルが見つかりますが、最初は自分で作成してみると良いでしょう。興味があるのは曲線にだけなので、この場合はクリップされたレイヤーは最終的な結果ではありません。だからこのモデルでは、何もレイヤーを作成せず、曲線データを有するテーブルを作成するだけです。"
 
 #: ../../docs/training_manual/processing/iterative_model.rst:16
 msgid "The model should look like this:"
@@ -75,34 +76,31 @@ msgstr "モデルは次のようになります。"
 #: ../../docs/training_manual/processing/iterative_model.rst:20
 msgid ""
 "Add the model to you models folder, so it is available in the toolbox, and "
-"now execute it."
-msgstr "モデルフォルダにモデルを追加し、それはツールボックスで提供され、そして今それを実行します。"
+"execute it."
+msgstr "モデルフォルダにこのモデルを追加すると、ツールボックスで使用可能になるので、それを実行します。"
+
+#: ../../docs/training_manual/processing/iterative_model.rst:22
+msgid "Select the DEM and watersheds basins."
+msgstr "DEMおよび流域界を選択します。"
 
 #: ../../docs/training_manual/processing/iterative_model.rst:24
 msgid ""
-"Select the DEM and watersheds basins, and do not forget to toggle the button"
-" that indicates that the algorithm has to be run iteratively."
-msgstr "DEMや流域の流域を選択し、アルゴリズムが反復的に実行する必要があることを示すボタンをトグルすることを忘れないでください。"
+"The algorithm will generate tables for all the basins and place them in the "
+"output directory."
+msgstr "アルゴリズムによりすべての盆地のテーブルが作成され、出力ディレクトリに置かれます。"
 
-#: ../../docs/training_manual/processing/iterative_model.rst:26
-msgid ""
-"The algorithm will be run several times, and the corresponding tables will "
-"be created and open in your QGIS project."
-msgstr "このアルゴリズムは複数回実行され、対応するテーブルが作成されてお手元のQGISプロジェクトで開くでしょう。"
-
-#: ../../docs/training_manual/processing/iterative_model.rst:30
+#: ../../docs/training_manual/processing/iterative_model.rst:27
 msgid ""
 "We can make this example more complex by extending the model and computing "
-"some slope statistics. Add the *Slope, aspect, curvature* algorithm to the "
-"model, and then the *Raster statistics* algorithm, which should use the "
-"slope output as its only input."
+"some slope statistics. Add the *Slope* algorithm to the model, and then the "
+"*Raster statistics* algorithm, which should use the slope output as its only"
+" input."
 msgstr ""
-"この例をより複雑にして、モデルを拡張し、斜面の統計をいくつか計算できます。 *勾配、向き、曲率* アルゴリズムをモデルに追加し、それから "
-"*ラスター統計* アルゴリズムを追加します、その唯一の入力として傾斜出力を使用すべき。"
+"この例をより複雑にして、モデルを拡張し、斜面の統計をいくつか計算できます。 *勾配* アルゴリズムをモデルに追加し、それから *ラスター統計* "
+"アルゴリズムを追加します、その唯一の入力として傾斜出力を使用すべき。"
 
 #: ../../docs/training_manual/processing/iterative_model.rst:34
 msgid ""
 "If you now run the model, apart from the tables you will get a set of pages "
 "with statistics. These pages will be available in the results dialog."
-msgstr ""
-"今モデルを実行すると、テーブルから離れて、統計を持つページのセットを取得します。これらのページは、結果ダイアログで利用できるようになります。"
+msgstr "ここでモデルを実行すると、テーブルと別に、統計が入ったページのセットが得られるでしょう。これらのページは結果ダイアログで利用できます。"

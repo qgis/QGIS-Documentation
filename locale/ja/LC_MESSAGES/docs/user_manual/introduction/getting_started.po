@@ -1,19 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGISDoc package.
+# This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Kayama Yoichi <yoichi.kayama@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGISDoc 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:25+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Kayama Yoichi <yoichi.kayama@gmail.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/qgis/teams/6144/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -114,6 +115,7 @@ msgid ""
 "This user guide contains examples based on the QGIS sample dataset (also "
 "called the ``Alaska dataset``)."
 msgstr ""
+"このユーザガイドには QGISサンプルデータセット ( ``Alaska dataset`` ともよばれています) に基づく例が含まれています."
 
 #: ../../docs/user_manual/introduction/getting_started.rst:72
 msgid ""
@@ -138,7 +140,7 @@ msgid ""
 "Download sample data from "
 "https://qgis.org/downloads/data/qgis_sample_data.zip"
 msgstr ""
-" https://qgis.org/downloads/data/qgis_sample_data.zip　からサンプルデータをダウンロードする"
+"https://qgis.org/downloads/data/qgis_sample_data.zip　からサンプルデータをダウンロードする"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:82
 msgid ""
@@ -153,6 +155,9 @@ msgid ""
 "it from https://qgis.org/downloads/data/qgis_sample_data.zip and unzip the "
 "archive on any convenient location on your system."
 msgstr ""
+"|nix| |osx|  GNU/Linux と macOS,ではrpm.deb またはdmg形式のデータセットインストールパッケージはありません. "
+"サンプルデータセットを利用するためには https://qgis.org/downloads/data/qgis_sample_data.zip "
+"をダウンロードしてあなたのシステム上の便利な場所にアーカイブを解凍して下さい."
 
 #: ../../docs/user_manual/introduction/getting_started.rst:90
 msgid ""
@@ -182,13 +187,12 @@ msgstr "QGISの起動と終了"
 msgid ""
 "QGIS can be started like any other application on your computer. This means "
 "that you can launch QGIS by:"
-msgstr ""
-"QGISはあなたのコンピュータの他のアプリケーションと同じような方法で起動できます。このことはあなたが次のような方法でQGISを起動でえきることを意味します:"
+msgstr "あなたのコンピュータの他のアプリケーションと同じような方法でQGISは起動できます.次のような方法でQGISを起動できます:"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:131
 msgid ""
 "using |nix| the Applications menu, |win| the Start menu, or |osx| the Dock"
-msgstr ""
+msgstr " |nix| アプリケーションメニュー, |win| スタートメニュー,  |osx| Dock を使って起動できます"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:132
 msgid ""
@@ -200,16 +204,20 @@ msgid ""
 "double clicking an existing QGIS project file (with :file:`.qgz` or "
 ":file:`.qgs` extension). Note that this will also open the project."
 msgstr ""
+"既存のQGIS プロジェクトファイル( :file:`.qgz` または :file:`.qgs` という拡張子)をダブルクリックして下さい. 注 "
+"この操作ではそのプロジェクトも開かれます."
 
 #: ../../docs/user_manual/introduction/getting_started.rst:135
 msgid ""
 "typing ``qgis`` in a command prompt (assuming that QGIS is added to your "
 "PATH or you are in its installation folder)"
 msgstr ""
+"コマンドプロンプトで ``qgis`` とタイプして下さい ( QGIS のインストール場所が PATH "
+"に追加されているかインストールされているフォルダになたがいることが前提です)"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:138
 msgid "To stop QGIS, use:"
-msgstr ""
+msgstr "QGISを終了させる場合は以下の方法を使って下さい:"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:140
 msgid ""
@@ -229,7 +237,7 @@ msgstr ""
 msgid ""
 "or use the red cross at the top-right corner of the main interface of the "
 "application."
-msgstr ""
+msgstr "またはアプリケーションメインインターフェースで上右の角にある赤いバツ印を使って下さい."
 
 #: ../../docs/user_manual/introduction/getting_started.rst:149
 msgid "Sample Session: Loading raster and vector layers"
@@ -256,20 +264,20 @@ msgstr ""
 #: ../../docs/user_manual/introduction/getting_started.rst:157
 msgid ""
 "and the :file:`lakes` vector layer (:file:`qgis_sample_data/gml/lakes.gml`)"
-msgstr ""
+msgstr "そして :file:`lakes` ベクタレイヤ (:file:`qgis_sample_data/gml/lakes.gml`)"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:159
 msgid ""
 "Where :file:`qgis_sample_data` represents the path to the unzipped dataset."
-msgstr ""
+msgstr " :file:`qgis_sample_data` が解凍されたデータセットのパスはどこに表示されるでしょうか？."
 
 #: ../../docs/user_manual/introduction/getting_started.rst:161
 msgid "Start QGIS as seen in :ref:`label_startingqgis`."
-msgstr ""
+msgstr " :ref:`label_startingqgis` で説明されている方法でQGISを起動します."
 
 #: ../../docs/user_manual/introduction/getting_started.rst:162
 msgid "To load the files in QGIS:"
-msgstr ""
+msgstr "QGIS にファイルをロードします:"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:164
 msgid ""
@@ -281,7 +289,7 @@ msgstr ""
 
 #: ../../docs/user_manual/introduction/getting_started.rst:166
 msgid "Browse to the folder :file:`qgis_sample_data/raster/`"
-msgstr ""
+msgstr " :file:`qgis_sample_data/raster/` フォルダを閲覧します"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:167
 msgid ""
@@ -301,6 +309,8 @@ msgid ""
 "To load the lakes data, browse to the folder :file:`qgis_sample_data/gml/`, "
 "and double-click the :file:`lakes.gml` file to open it."
 msgstr ""
+"lakes データをロードするためには :file:`qgis_sample_data/gml/` フォルダを開き,  "
+":file:`lakes.gml` をダブルクリックして開いて下さい."
 
 #: ../../docs/user_manual/introduction/getting_started.rst:180
 msgid ""
@@ -308,6 +318,8 @@ msgid ""
 ":guilabel:`Filter` menu, type ``2964``, filtering the list of Coordinate "
 "Reference Systems below."
 msgstr ""
+":guilabel:`座標参照系の選択` ダイアログが開きます. In the :guilabel:`フィルター` メニューで, ``2964`` "
+"と打ち込んでください, フィルターされた座標参照系のリストが下に表示されます."
 
 #: ../../docs/user_manual/introduction/getting_started.rst:189
 msgid "Select the Coordinate Reference System of data"
@@ -315,7 +327,7 @@ msgstr ""
 
 #: ../../docs/user_manual/introduction/getting_started.rst:191
 msgid "Select the :guilabel:`NAD27 / Alaska Alberts` entry"
-msgstr ""
+msgstr " :guilabel:`NAD27 / Alaska Alberts` エントリを選択して下さい"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:192
 msgid "Click :guilabel:`OK`"
@@ -323,7 +335,7 @@ msgstr ":guilabel:`OK` をクリックします"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:193
 msgid "Close the Data Source Manager window"
-msgstr ""
+msgstr "データソースマネージャウィンドウを閉じて下さい"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:195
 msgid ""
@@ -339,17 +351,17 @@ msgstr "|zoomIn| :sup:`Navigation` ツールバーの :guilabel:`Zoom In` ツー
 
 #: ../../docs/user_manual/introduction/getting_started.rst:199
 msgid "Zoom to an area with some lakes"
-msgstr ""
+msgstr "湖がある場所にズームします"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:200
 msgid ""
 "Double-click the :file:`lakes` layer in the map legend to open the "
 ":guilabel:`Properties` dialog"
-msgstr ""
+msgstr " :file:`lakes` を地図の凡例の場所でクリックして :guilabel:`プロパティ` ダイアログを開きます"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:202
 msgid "To change the lakes color:"
-msgstr ""
+msgstr "湖の色を変えてみます:"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:204
 msgid "Click on the |symbology| :guilabel:`Symbology` tab"
@@ -357,7 +369,7 @@ msgstr ""
 
 #: ../../docs/user_manual/introduction/getting_started.rst:205
 msgid "Select blue as fill color."
-msgstr ""
+msgstr "塗りつぶし色として青を選択しましょう."
 
 #: ../../docs/user_manual/introduction/getting_started.rst:212
 msgid "Selecting Lakes color"
@@ -366,28 +378,28 @@ msgstr "湖の色を選択する"
 #: ../../docs/user_manual/introduction/getting_started.rst:214
 msgid ""
 "Press :guilabel:`OK`. Lakes are now displayed in blue in the map canvas."
-msgstr ""
+msgstr ":guilabel:`OK` を押して下さい. 地図キャンバスで湖が青で表示されます."
 
 #: ../../docs/user_manual/introduction/getting_started.rst:215
 msgid "To display the name of the lakes:"
-msgstr ""
+msgstr "湖の名前を表示します:"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:217
 msgid "Reopen the :file:`lakes` layer :guilabel:`Properties` dialog"
-msgstr ""
+msgstr ":file:`lakes` レイヤ :guilabel:`プロパティ` ダイアログを再度開きます"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:218
 msgid "Click on the |labeling| :guilabel:`Labels` tab"
-msgstr ""
+msgstr " |labeling| :guilabel:`Labels` タブをクリックします"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:219
 msgid ""
 "Select :guilabel:`Single labels` in the drop-down menu to enable labeling."
-msgstr ""
+msgstr "ドロップダウンメニューで :guilabel:`単一定義(single )` を選択するとラベリングが有効になります."
 
 #: ../../docs/user_manual/introduction/getting_started.rst:220
 msgid "From the :guilabel:`Label with` list, choose the ``NAMES`` field."
-msgstr ""
+msgstr ":guilabel:`Label with` リストで, ``NAMES`` フィールドを選んでください."
 
 #: ../../docs/user_manual/introduction/getting_started.rst:227
 msgid "Showing Lakes names"
@@ -395,25 +407,25 @@ msgstr ""
 
 #: ../../docs/user_manual/introduction/getting_started.rst:229
 msgid "Press :guilabel:`Apply`. Names will now load over the boundaries."
-msgstr ""
+msgstr ":guilabel:`Apply` を押して下さい. 名前が境界線の上に表示されます."
 
 #: ../../docs/user_manual/introduction/getting_started.rst:230
 msgid ""
 "You can improve readability of the labels by adding a white buffer around "
 "them:"
-msgstr ""
+msgstr "ラベルに縁取り(バッファ)を加えて読みやすくすることができます:"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:232
 msgid "Click the :guilabel:`Buffer` tab in the list on the left"
-msgstr ""
+msgstr "左のリストで :guilabel:`バッファ` タブをクリックして下さい"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:233
 msgid "Check |checkbox| :guilabel:`Draw text buffer`"
-msgstr ""
+msgstr "|checkbox| :guilabel:`テキストバッファを描画` をチェックして下さい"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:234
 msgid "Choose ``3`` as buffer size"
-msgstr ""
+msgstr "バッファサイズとして ``3`` を選択して下さい"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:235
 msgid "Click :guilabel:`Apply`"
@@ -421,33 +433,33 @@ msgstr ""
 
 #: ../../docs/user_manual/introduction/getting_started.rst:236
 msgid "Check if the result looks good, and update the value if needed."
-msgstr ""
+msgstr "できばえがいいかどうかチェックしましょう, 必要があれば値を変えてみましょう."
 
 #: ../../docs/user_manual/introduction/getting_started.rst:237
 msgid ""
 "Finally click :guilabel:`OK` to close the :guilabel:`Layer Properties` "
 "dialog and apply the changes."
-msgstr ""
+msgstr "最後に :guilabel:`OK` をクリックして :guilabel:`レイヤプロパティ` ダイアログを閉じて変更を適用して下さい."
 
 #: ../../docs/user_manual/introduction/getting_started.rst:240
 msgid ""
 "Let's now add some decorations in order to shape the map and export it out "
 "of QGIS:"
-msgstr ""
+msgstr "地図にいくつかの整飾を加えてからQGISの外にエキスポートしてみましょう:"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:243
 msgid "Select :menuselection:`View --> Decorations --> Scale Bar` menu"
-msgstr ""
+msgstr " :menuselection:`ビュー --> 地図整飾 --> スケールバー`  メニューを選択して下さい"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:244
 msgid ""
 "In the dialog that opens, check |checkbox| :guilabel:`Enable Scale Bar` "
 "option"
-msgstr ""
+msgstr "開いたダイアログの中で |checkbox| :guilabel:`スケールバーを有効にする` オプションをチェックして下さい"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:245
 msgid "Customize the options of the dialog as you want"
-msgstr ""
+msgstr "お好みにあわせてダイアログにあるオプションを設定して下さい"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:246
 msgid "Press :guilabel:`Apply`"
@@ -458,28 +470,34 @@ msgid ""
 "Likewise, from the decorations menu, add more items (north arrow, "
 "copyright...) to the map canvas with custom properties."
 msgstr ""
+"同じように地図整飾メニューではさらにいくつかのアイテムを (方位記号, 著作権ラベル...)　"
+"いくつかのプロパティを指定して地図キャンバスに追加できます."
 
 #: ../../docs/user_manual/introduction/getting_started.rst:249
 msgid ""
 "Click :menuselection:`Project --> Import/Export -->` |saveMapAsImage| "
 ":menuselection:`Export Map to Image...`"
 msgstr ""
+" :menuselection:`プロジェクト --> インポートとエキスポーと -->` |saveMapAsImage| "
+":menuselection:`地図を画像にエキスポート...` をクリックして下さい"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:251
 msgid "Press :guilabel:`Save` in the opened dialog"
-msgstr ""
+msgstr "開いたダイアログで :guilabel:`保存` を押して下さい"
 
 #: ../../docs/user_manual/introduction/getting_started.rst:252
 msgid ""
 "Select a file location, a format and confirm by pressing :guilabel:`Save` "
 "again."
-msgstr ""
+msgstr "ファイルの保存場所を選択して形式を確認した上で :guilabel:`保存` を再度押して下さい."
 
 #: ../../docs/user_manual/introduction/getting_started.rst:254
 msgid ""
 "Press :menuselection:`Project -->` |fileSave| :menuselection:`Save...` to "
 "store your changes as a :file:`.qgz` project file."
 msgstr ""
+"変更を :file:`.qgz`  プロジェクトファイルに保存する場合は :menuselection:`プロジェクト -->` |fileSave| "
+":menuselection:`保存...` を押して下さい."
 
 #: ../../docs/user_manual/introduction/getting_started.rst:257
 msgid ""
@@ -496,3 +514,5 @@ msgid ""
 "To continue learning QGIS through step-by-step exercises, follow the "
 ":ref:`Training manual <QGIS-training-manual-index-reference>`."
 msgstr ""
+"QGISをステップバイステップの演習で勉強したい場合は :ref:`トレーニングマニュアル <QGIS-training-manual-index-"
+"reference>` を参照して下さい."

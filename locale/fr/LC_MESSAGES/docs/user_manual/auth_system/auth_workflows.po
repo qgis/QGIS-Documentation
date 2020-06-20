@@ -1,19 +1,20 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGISDoc package.
+# This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# MarieSilvestre, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGISDoc 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:26+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: MarieSilvestre, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -70,6 +71,12 @@ msgid ""
 "system, the ``key=value`` will be an abstracted representation of the "
 "credentials, e.g. ``authfg=81t21b9``."
 msgstr ""
+"Les connexions aux ressources des bases de données sont généralement "
+"stockées comme paires ``clé=valeur`` ; elles exposeront les noms "
+"d'utilisateur et (optionnellement) les mots de passe, si une configuration "
+"d'authentification *n'est pas* utilisée. Lors de la configuration avec le "
+"nouveau système d'authentification, la ``clé=valeur`` sera une "
+"représentation abstraite des identifiants, par ex. ``authfg=81t21b9``."
 
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:50
 msgid "Configuring a Postgres SSL-with-PKI connection"
@@ -108,6 +115,11 @@ msgid ""
 "(:menuselection:`Settings --> Options`) by clicking the :guilabel:`Manage "
 "Certificates` button."
 msgstr ""
+"Tous les composants PKI peuvent être gérés par des éditeurs séparés dans le "
+"**Gestionnaire de Certificats** qui peut être ouvert dans l'onglet "
+":guilabel:`Authentification` de la fenêtre `Options` de QGIS "
+"(:menuselection:`Paramètres--> Options`) en cliquant sur le bouton "
+":guilabel:`Gestion des certificats`."
 
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:79
 msgid "Opening the Certificate Manager"
@@ -121,6 +133,12 @@ msgid ""
 "encountered in the workflow chart above. The tab order is relative to "
 "frequently accessed editors once you are accustomed to the workflow."
 msgstr ""
+"Dans le :guilabel:`Gestionnaire de certificats`, il y a des éditeurs pour "
+"les **Identités**, **Serveurs** et **Autorités**. Chacun se trouve dans son "
+"propre onglet, et sont décrits ci-dessous dans l'ordre dans lequel ils "
+"apparaissent dans le tableau de processus précédent. L'ordre des onglets est"
+" relatif aux éditeurs les plus utilisés une fois que vous êtes habitué au "
+"processus."
 
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:89
 msgid ""
@@ -129,6 +147,11 @@ msgid ""
 "dialog :guilabel:`OK` button for any changes to be saved. This is unlike "
 "other settings in the Options dialog."
 msgstr ""
+"Parce que toutes les modifications du système d'authentification sont "
+"immédiatement écrites dans la base de données, il n'est pas nécessaire de "
+"cliquer sur le bouton :guilabel:`OK` de la fenêtre :guilabel:`Options` pour "
+"qu'une modification soit sauvée. C'est différent des autres paramètres du "
+"dialogue Options."
 
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:95
 msgid "Authorities"
@@ -177,6 +200,15 @@ msgid ""
 "trust policy. To see the QGIS-discoverable trust chain for any certificate, "
 "select it and click the |metadata| :sup:`Show information for certificate`."
 msgstr ""
+"Par défaut, l'AC racine de votre OS sera disponible; néanmoins leurs "
+"paramètres de confiance ne seront pas récupérés. Vous devriez revoir les "
+"paramètres de politique de confiance du certificat, spécialement si vos AC "
+"racines d'OS ont eu leur politique modifiée. Tout certificat expiré ne sera "
+"pas un certificat de confiance et il ne sera pas utilisé pour les connexions"
+" vers des serveurs sécurisés, à moins que vous forciez sa politique de "
+"confiance. Pour consulter la chaîne de confiance de QGIS pour un certificat,"
+" sélectionnez-le et cliquez sur |metadata| :sup:`Afficher les informations "
+"du certificat`."
 
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:129
 msgid "Certificate info dialog"
@@ -184,7 +216,7 @@ msgstr "Boîte de dialogue d’information du Certificat"
 
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:131
 msgid ""
-"You can edit the :guilabel:`trust policy` |selectString| for any selected "
+"You can edit the :guilabel:`Trust policy` |selectString| for any selected "
 "certificate within the chain. Any change in trust policy to a selected "
 "certificate will not be saved to the database unless the |fileSave| "
 ":sup:`Save certificate trust policy change to database` button is clicked "
@@ -410,6 +442,8 @@ msgid ""
 "that is associated with accessing a resource. There are instances where this"
 " is useful:"
 msgstr ""
+"Parfois, vous devrez modifier l'ID de configuration d'authentification "
+"associée à l'accès d'une ressource. Cela peut être utile dans certains cas :"
 
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:271
 msgid ""
@@ -417,6 +451,10 @@ msgid ""
 " switched auth databases add need to *align* a new configuration to the ID "
 "already associated with a resource."
 msgstr ""
+"**L'ID de configuration d'authentification de la ressource n'est plus "
+"valide** : Cela peut survenir lorsque vous avez échangé des bases de données"
+" d'authentification et que vous devez *aligner* la nouvelle configuration à "
+"l'ID déjà associée avec une ressource."
 
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:274
 msgid ""
@@ -428,6 +466,14 @@ msgid ""
 "the ID is found in the authentication database, but the credentials are "
 "different per user."
 msgstr ""
+"**Fichiers de projet partagés** : Si vous avez l'intention de partager des "
+"fichiers de projet entre plusieurs utilisateurs, par exemple via un serveur "
+"de fichiers partagés, vous pouvez *prédéfinir* une chaîne de 7 caractères "
+"(contenant **a-z** et/ou **0-9**), associée à la ressource. Ainsi, les "
+"utilisateurs pourront modifier l'ID de configuration d'authentification "
+"spécifique à leurs identifiants d'accès à la ressource. Lorsque le projet "
+"est ouvert, l'ID est trouvée dans la base de données d'authentification mais"
+" les identifiants sont différents pour chaque utilisateur."
 
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:286
 msgid ""
@@ -511,21 +557,18 @@ msgid ""
 "``QGIS_AUTH_PASSWORD_FILE`` variable will be removed from the Server "
 "environment immediately after accessing."
 msgstr ""
+"La variable ``QGIS_AUTH_PASSWORD_FILE`` sera effacée de l'environnement du "
+"serveur tout de suite après avoir été utilisée"
 
 #: ../../docs/user_manual/auth_system/auth_workflows.rst:324
 msgid "SSL server exceptions"
 msgstr "Exceptions du serveur SSL"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:326
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:328
-msgid "\\"
-msgstr "\\"
-
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:335
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:331
 msgid "SSL server exception"
 msgstr "Exception du serveur SSL"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:337
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:333
 msgid ""
 "You can manage SSL server configurations and exceptions from the **Servers**"
 " tab in the **Authentication** section of the QGIS **Options** dialog."
@@ -534,7 +577,7 @@ msgstr ""
 "de l'onglet **Serveurs** dans la section **Authentification** de la boîte de"
 " dialogue **Options** de QGIS."
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:340
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:336
 msgid ""
 "Sometimes, when connecting to an SSL server, there are errors with the SSL "
 "\"handshake\" or the server's certificate. You can ignore those errors or "
@@ -548,7 +591,7 @@ msgstr ""
 "C'est similaire au comportement des navigateurs internet qui vous permettent"
 " d'ignorer les erreurs SSL, mais avec plus de contrôle granulaire."
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:346
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:342
 msgid ""
 "You should not create an SSL server configuration unless you have complete "
 "knowledge of the entire SSL setup between the server and client. Instead, "
@@ -559,7 +602,7 @@ msgstr ""
 "serveur et client. Vous devriez plutôt signaler le problème au gestionnaire "
 "du serveur."
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:351
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:347
 msgid ""
 "Some PKI setups use a completely different CA trust chain to validate client"
 " identities than the chain used to validate the SSL server certificate. In "
@@ -576,7 +619,7 @@ msgstr ""
 "de votre identité client ou le gestionnaire du serveur qui puisse résoudre "
 "ce problème."
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:357
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:353
 msgid ""
 "You can pre-configure an SSL server configuration by clicking the |signPlus|"
 " button. Alternatively, you can add a configuration when an SSL error occurs"
@@ -590,15 +633,15 @@ msgstr ""
 "apparaît (lorsque l'erreur peut être temporairement ignorée ou alors "
 "sauvegardé dans la base de données et ignorée) :"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:367
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:363
 msgid "Manually adding configuration"
 msgstr "Ajouter manuellement une configuration"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:374
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:370
 msgid "Adding configuration during SSL error"
 msgstr "Ajouter une configuration lors d'une erreur SSL"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:376
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:372
 msgid ""
 "Once an SSL configuration is saved to the database, it can be edited or "
 "deleted."
@@ -606,28 +649,28 @@ msgstr ""
 "Une fois qu'une configuration SSL est enregistrée dans la base de données, "
 "elle peut être éditée ou effacée."
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:383
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:379
 msgid "Existing SSL configuration"
 msgstr "Configuration SSL existante"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:390
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:386
 msgid "Editing an existing SSL configuration"
 msgstr "Éditer une configuration SSL existante"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:392
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:388
 msgid ""
 "If you want to pre-configure an SSL configuration and the import dialog is "
 "not working for your server's connection, you can manually trigger a "
 "connection via the **Python Console** by running the following code (replace"
-" ``https://bugreports.qt-project.org`` with the URL of your server)::"
+" ``https://bugreports.qt-project.org`` with the URL of your server):"
 msgstr ""
 "Si vous voulez pré-configurer une configuration SSL et que le dialogue "
 "d'import ne fonctionne pas avec la connexion à votre serveur, vous pouvez "
 "activer manuellement une connexion dans la **Console Python** en utilisant "
 "le code suivant (remplacer ``https://bugreports.qt-project.org`` par l'URL "
-"de votre serveur)::"
+"de votre serveur) :"
 
-#: ../../docs/user_manual/auth_system/auth_workflows.rst:401
+#: ../../docs/user_manual/auth_system/auth_workflows.rst:402
 msgid ""
 "This will open an SSL error dialog if any errors occur, where you can choose"
 " to save the configuration to the database."

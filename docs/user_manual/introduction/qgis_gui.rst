@@ -251,7 +251,7 @@ details).
      - :guilabel:`Digitizing`
      - :ref:`clipboard_feature`
    * - :menuselection:`Paste Features as -->`
-     - :kbd:`Ctrl+Alt+V`
+     -
      -
      - :ref:`sec_attribute_table`
    * - :menuselection:`--> New Vector Layer...`
@@ -259,7 +259,7 @@ details).
      -
      - :ref:`sec_attribute_table`
    * - :menuselection:`--> Temporary Scratch Layer...`
-     -
+     - :kbd:`Ctrl+Alt+V`
      -
      - :ref:`sec_attribute_table`
    * - :menuselection:`Select -->`
@@ -979,107 +979,112 @@ copy or paste layer properties (style, scale, CRS...).
      - :ref:`Opening Data <datasourcemanager>`
    * - :menuselection:`Create Layer -->`
      -
-     - :guilabel:`Data Source Manager`
+     -
      - :ref:`sec_create_vector`
    * - :menuselection:`-->` |newGeoPackageLayer|
        :guilabel:`New GeoPackage Layer...`
      - :kbd:`Ctrl+Shift+N`
      - :guilabel:`Data Source Manager`
-     - :ref:`sec_create_vector`
+     - :ref:`vector_create_geopackage`
    * - :menuselection:`-->` |newVectorLayer|
        :guilabel:`New Shapefile Layer...`
      -
      - :guilabel:`Data Source Manager`
-     - :ref:`sec_create_vector`
+     - :ref:`vector_create_shapefile`
    * - :menuselection:`-->` |newSpatiaLiteLayer|
        :guilabel:`New SpatiaLite Layer...`
      -
      - :guilabel:`Data Source Manager`
-     - :ref:`sec_create_vector`
+     - :ref:`vector_create_spatialite`
    * - :menuselection:`-->` |createMemory|
        :guilabel:`New Temporary Scratch Layer...`
      -
      - :guilabel:`Data Source Manager`
-     - :ref:`sec_create_vector`
-   * - :menuselection:`-->` |virtualLayer|
+     - :ref:`vector_new_scratch_layer`
+   * - :menuselection:`-->` |newVirtualLayer|
        :guilabel:`New Virtual Layer...`
      -
      - :guilabel:`Data Source Manager`
-     - :ref:`sec_create_vector`
+     - :ref:`vector_virtual_layers`
    * - :menuselection:`Add Layer -->`
      -
-     - :guilabel:`Data Source Manager`
+     -
      - :ref:`opening_data`
    * - :menuselection:`-->` |addOgrLayer|
        :guilabel:`Add Vector Layer......`
      - :kbd:`Ctrl+Shift+V`
-     - :guilabel:`Data Source Manager`
-     - :ref:`opening_data`
+     - :guilabel:`Manage Layers`
+     - :ref:`loading_file`
    * - :menuselection:`-->` |addRasterLayer|
        :guilabel:`Add Raster Layer...`
      - :kbd:`Ctrl+Shift+R`
-     - :guilabel:`Data Source Manager`
-     - :ref:`opening_data`
+     - :guilabel:`Manage Layers`
+     - :ref:`loading_file`
    * - :menuselection:`-->` |addMeshLayer|
        :guilabel:`Add Mesh Layer...`
      -
-     - :guilabel:`Data Source Manager`
-     - :ref:`opening_data`
+     - :guilabel:`Manage Layers`
+     - :ref:`mesh_loading`
    * - :menuselection:`-->` |addDelimitedTextLayer|
        :guilabel:`Add Delimited Text Layer...`
      - :kbd:`Ctrl+Shift+T`
-     - :guilabel:`Data Source Manager`
-     - :ref:`opening_data`
+     - :guilabel:`Manage Layers`
+     - :ref:`vector_loading_csv`
    * - :menuselection:`-->` |addPostgisLayer|
        :guilabel:`Add PostGIS Layer...`
      - :kbd:`Ctrl+Shift+D`
-     - :guilabel:`Data Source Manager`
-     - :ref:`opening_data`
+     - :guilabel:`Manage Layers`
+     - :ref:`db_tools`
    * - :menuselection:`-->` |addSpatiaLiteLayer|
        :guilabel:`Add SpatiaLite Layer...`
      - :kbd:`Ctrl+Shift+L`
-     - :guilabel:`Data Source Manager`
-     - :ref:`opening_data`
+     - :guilabel:`Manage Layers`
+     - :ref:`label_spatialite`
    * - :menuselection:`-->` |addMssqlLayer|
        :guilabel:`Add MSSQL Spatial Layer...`
      -
-     - :guilabel:`Data Source Manager`
-     - :ref:`opening_data`
+     - :guilabel:`Manage Layers`
+     - :ref:`db_tools`
+   * - :menuselection:`-->` |addOracleLayer|
+       :guilabel:`Add Oracle Spatial Layer...`
+     -
+     - :guilabel:`Manage Layers`
+     - :ref:`db_tools`
    * - :menuselection:`-->` |addDb2Layer|
        :guilabel:`Add DB2 Spatial Layer...`
      - :kbd:`Ctrl+Shift+2`
-     - :guilabel:`Data Source Manager`
-     - :ref:`opening_data`
-   * - :menuselection:`-->` |virtualLayer|
+     - :guilabel:`Manage Layers`
+     - :ref:`db_tools`
+   * - :menuselection:`-->` |addVirtualLayer|
        :guilabel:`Add/Edit Virtual Layer...`
      -
-     - :guilabel:`Data Source Manager`
-     - :ref:`opening_data`
-   * - :menuselection:`-->` |wms|
+     - :guilabel:`Manage Layers`
+     - :ref:`vector_virtual_layers`
+   * - :menuselection:`-->` |addWmsLayer|
        :guilabel:`Add WMS/WMTS Layer...`
      - :kbd:`Ctrl+Shift+W`
-     - :guilabel:`Data Source Manager`
-     - :ref:`opening_data`
+     - :guilabel:`Manage Layers`
+     - :ref:`ogc-wms-layers`
    * - :menuselection:`-->` |addAmsLayer|
        :guilabel:`Add ArcGIS MapServer Layer...`
      -
-     - :guilabel:`Data Source Manager`
-     - :ref:`opening_data`
-   * - :menuselection:`-->` |wcs|
+     - :guilabel:`Manage Layers`
+     -
+   * - :menuselection:`-->` |addWcsLayer|
        :guilabel:`Add WCS Layer...`
      -
-     - :guilabel:`Data Source Manager`
-     - :ref:`opening_data`
-   * - :menuselection:`-->` |wfs|
+     - :guilabel:`Manage Layers`
+     - :ref:`ogc-wcs`
+   * - :menuselection:`-->` |addWfsLayer|
        :guilabel:`Add WFS Layer...`
      -
-     - :guilabel:`Data Source Manager`
-     - :ref:`opening_data`
+     - :guilabel:`Manage Layers`
+     - :ref:`ogc-wfs`
    * - :menuselection:`-->` |addAfsLayer|
        :guilabel:`Add ArcGIS FeatureServer Layer...`
      -
-     - :guilabel:`Data Source Manager`
-     - :ref:`opening_data`
+     - :guilabel:`Manage Layers`
+     -
    * - :guilabel:`Embed Layers and Groups...`
      -
      -
@@ -2009,21 +2014,21 @@ tasks.
 
 Below is a list of the default panels provided by QGIS:
 
-* the :ref:`label_legend`
-* the :ref:`Browser Panel <browser_panel>`
 * the :ref:`Advanced Digitizing Panel <advanced_digitizing_panel>`
-* the :ref:`Spatial Bookmarks Panel <sec_bookmarks>`
+* the :ref:`Browser Panel <browser_panel>`
 * the :ref:`GPS Information Panel <sec_gpstracking>`
-* the :ref:`Tile Scale Panel <tilesets>`
 * the :ref:`Identify Panel <identify>`
-* the :ref:`User Input Panel <rotate_feature>`
 * the :ref:`Layer Order Panel <layer_order>`
-* the :ref:`layer_styling_panel`
-* the :ref:`statistical_summary`
-* the :ref:`overview_panels`
-* the :ref:`log_message_panel`
-* the :ref:`undo_redo_panel`
+* the :ref:`Layer Styling Panel <layer_styling_panel>`
+* the :ref:`Layers Panel <label_legend>`
+* the :ref:`Log Messages Panel <log_message_panel>`
+* the :ref:`Overview Panel <overview_panels>`
 * the :ref:`Processing Toolbox <label_processing>`
+* the :guilabel:`Result Viewer Panel`
+* the :ref:`Spatial Bookmark Manager Panel <sec_bookmarks>`
+* the :ref:`Statistics Panel <statistical_summary>`
+* the :ref:`Tile Scale Panel <tilesets>`
+* the :ref:`Undo/Redo Panel <undo_redo_panel>`
 
 
 .. index:: Map view
@@ -2616,6 +2621,8 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |addOgrLayer| image:: /static/common/mActionAddOgrLayer.png
    :width: 1.5em
+.. |addOracleLayer| image:: /static/common/mActionAddOracleLayer.png
+   :width: 1.5em
 .. |addPart| image:: /static/common/mActionAddPart.png
    :width: 1.5em
 .. |addPostgisLayer| image:: /static/common/mActionAddPostgisLayer.png
@@ -2625,6 +2632,14 @@ Click the icon to open the Plugin Manager dialog.
 .. |addRing| image:: /static/common/mActionAddRing.png
    :width: 2em
 .. |addSpatiaLiteLayer| image:: /static/common/mActionAddSpatiaLiteLayer.png
+   :width: 1.5em
+.. |addVirtualLayer| image:: /static/common/mActionAddVirtualLayer.png
+   :width: 1.5em
+.. |addWcsLayer| image:: /static/common/mActionAddWcsLayer.png
+   :width: 1.5em
+.. |addWfsLayer| image:: /static/common/mActionAddWfsLayer.png
+   :width: 1.5em
+.. |addWmsLayer| image:: /static/common/mActionAddWmsLayer.png
    :width: 1.5em
 .. |allEdits| image:: /static/common/mActionAllEdits.png
    :width: 1.5em
@@ -2791,6 +2806,8 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |newVectorLayer| image:: /static/common/mActionNewVectorLayer.png
    :width: 1.5em
+.. |newVirtualLayer| image:: /static/common/mActionNewVirtualLayer.png
+   :width: 1.5em
 .. |northArrow| image:: /static/common/north_arrow.png
    :width: 1.5em
 .. |offlineEditingCopy| image:: /static/common/offline_editing_copy.png
@@ -2938,14 +2955,6 @@ Click the icon to open the Plugin Manager dialog.
 .. |vertexTool| image:: /static/common/mActionVertexTool.png
    :width: 1.5em
 .. |vertexToolActiveLayer| image:: /static/common/mActionVertexToolActiveLayer.png
-   :width: 1.5em
-.. |virtualLayer| image:: /static/common/mActionAddVirtualLayer.png
-   :width: 1.5em
-.. |wcs| image:: /static/common/mActionAddWcsLayer.png
-   :width: 1.5em
-.. |wfs| image:: /static/common/mActionAddWfsLayer.png
-   :width: 1.5em
-.. |wms| image:: /static/common/mActionAddWmsLayer.png
    :width: 1.5em
 .. |zoomActual| image:: /static/common/mActionZoomActual.png
    :width: 1.5em

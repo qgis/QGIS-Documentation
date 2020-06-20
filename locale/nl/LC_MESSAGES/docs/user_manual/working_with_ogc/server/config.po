@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGISDoc package.
+# This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGISDoc 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:26+0000\n"
 "Last-Translator: Dick Groskamp, 2020\n"
 "Language-Team: Dutch (https://www.transifex.com/qgis/teams/6144/nl/)\n"
@@ -270,8 +270,8 @@ msgid ""
 "Number of threads to use when parallel rendering is activated. Default value"
 " is ``-1`` to use the number of processor cores."
 msgstr ""
-"Aantal te gebruiken threads als parallel renderen is geactiveerd. Standaard "
-"waarde is ``-1`` om het aantal processor-bronnen te gebruiken."
+"Aantal te gebruiken threads als parallel renderen is geactiveerd. "
+"Standaardwaarde is ``-1`` om het aantal processor-bronnen te gebruiken."
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:149
 msgid "QGIS_SERVER_CACHE_DIRECTORY"
@@ -282,7 +282,7 @@ msgid ""
 "Specifies the network cache directory on the filesystem. The default "
 "directory is named ``cache`` and located in the profile directory."
 msgstr ""
-"Specificeert de netwerk cachemap op het filesysteem. De standaard map is "
+"Specificeert de netwerk cachemap op het filesysteem. De standaardmap is "
 "genaamd ``cache`` en geplaatst in de map profile."
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:156
@@ -292,8 +292,8 @@ msgstr "QGIS_SERVER_CACHE_SIZE"
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:158
 msgid "Sets the network cache size in MB. The default value is ``50`` MB."
 msgstr ""
-"Stelt de grootte van de netwerkcache in in MB. De standaard waarde is ``50``"
-" MB."
+"Stelt de grootte van de netwerkcache in in MB. De standaardwaarde is ``50`` "
+"MB."
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:162
 msgid "QGIS_SERVER_OVERRIDE_SYSTEM_LOCALE"
@@ -326,10 +326,34 @@ msgstr ""
 "antwoorden GetFeatureInfo). De standaardwaarde is ``0``."
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:180
+msgid "QGIS_SERVER_IGNORE_BAD_LAYERS"
+msgstr "QGIS_SERVER_IGNORE_BAD_LAYERS"
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:182
+msgid ""
+"\"Bad\" layers are layers that cannot be loaded. The default behavior of "
+"QGIS Server is to consider the project as not available if it contains a bad"
+" layer."
+msgstr ""
+"\"Bad layers\" (slechte lagen) zijn lagen die niet kunnen worden geladen. "
+"Het standaardgedrag van QGIS Server is om te overwegen het project als niet "
+"beschikbaar te beschouwen als het een slechte laag bevat."
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:185
+msgid ""
+"The default behavior can be overridden by setting this variable to ``1`` or "
+"``true``. In this case, \"bad\" layers will just be ignored, and the project"
+" will be considered valid and available."
+msgstr ""
+"Het standaardgedrag kan worden overschreven door deze variabele in te "
+"stellen op ``1`` of ``true``. In dat geval zullen lagen \"bad\" gewoon "
+"worden genegeerd, en het project als geldig en beschikbaar worden beschouwd."
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:191
 msgid "Settings summary"
 msgstr "Overzicht instellingen"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:182
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:193
 msgid ""
 "When QGIS Server is starting, you have a summary of all configurable "
 "parameters thanks to environment variables. Moreover, the value currently "
@@ -339,11 +363,11 @@ msgstr ""
 "parameters dankzij de omgevingsvariabelen. Meer nog, de huidige gebruikte "
 "waarden en het origine worden ook weergegeven."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:186
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:197
 msgid "For example with spawn-fcgi:"
 msgstr "Bijvoorbeeld met spawn-fcgi:"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:217
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:228
 msgid ""
 "In this particular case, we know that **QGIS_SERVER_MAX_THREADS** and "
 "**QGIS_SERVER_PARALLEL_RENDERING** values are read from the ini file found "
@@ -355,15 +379,15 @@ msgstr ""
 "In dit bijzondere geval weten we dat de waarden **QGIS_SERVER_MAX_THREADS** "
 "en **QGIS_SERVER_PARALLEL_RENDERING** worden gelezen vanuit het bestand ini "
 "dat is te vinden in de map **QGIS_OPTIONS_PATH** (die is gedefinieerd met "
-"een omgevingsvariabele). De overeenkomende items in het bestand ini file "
-"zijn **/qgis/max_threads** en **/qgis/parallel_rendering** en hun waarden "
-"zijn **true** en **4** threads."
+"een omgevingsvariabele). De overeenkomende items in het bestand ini zijn "
+"**/qgis/max_threads** en **/qgis/parallel_rendering** en hun waarden zijn "
+"**true** en **4** threads."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:225
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:236
 msgid "Short name for layers, groups and project"
 msgstr "Verkorte namen voor lagen, groepen en project"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:227
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:238
 msgid ""
 "A number of elements have both a ``<Name>`` and a ``<Title>``. The **Name** "
 "is a text string used for machine-to-machine communication while the "
@@ -373,7 +397,7 @@ msgstr ""
 "**Naam** is een teksttekenreeks gebruikt voor communicatie van machine-naar-"
 "machine terwijl de **Titel** ten behoeve van mensen is."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:231
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:242
 msgid ""
 "For example, a dataset might have the descriptive Title “Maximum Atmospheric"
 " Temperature” and be requested using the abbreviated Name “ATMAX”. User can "
@@ -383,7 +407,7 @@ msgstr ""
 " Temperature* hebben en kan worden bevraagd met de verkorte Naam *ATMAX*. "
 "Gebruikers kunnen al titels instellen voor lagen, groepen en het project."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:235
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:246
 msgid ""
 "OWS name is based on the name used in layer tree. This name is more a label "
 "for humans than a name for machine-to-machine communication."
@@ -392,11 +416,11 @@ msgstr ""
 "is meer een label voor mensen dan een naam voor communicatie van machine-"
 "naar-machine."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:238
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:249
 msgid "QGIS Server supports:"
 msgstr "QGIS Server ondersteunt:"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:240
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:251
 msgid ""
 "short name line edits to layers properties You can change this by right "
 "clicking on a layer, choose :menuselection:`Properties --> Metadata tab --> "
@@ -407,13 +431,13 @@ msgstr ""
 ":menuselection:`Eigenschappen --> tab Metadata --> Omschrijving --> Korte "
 "naam`."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:244
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:255
 msgid "WMS data dialog to layer tree group (short name, title, abstract)"
 msgstr ""
 "dialoogvenster voor gegevens van WMS om de boom van lagen te groeperen "
 "(verkorte naam, titel, abstract)"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:246
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:257
 msgid ""
 "By right clicking on a layer group and selecting the :guilabel:`Set Group "
 "WMS data` option you will get:"
@@ -421,11 +445,11 @@ msgstr ""
 "Door met rechts te klikken op een lagengroep en de optie "
 ":guilabel:`Groeperen WMS-gegevens instellen` te selecteren zult u krijgen:"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:253
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:264
 msgid "Set group WMS data dialog"
 msgstr "Dialoogvenster Groeperen WMS-gegevens instellen"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:255
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:266
 msgid ""
 "short name line edits to project properties - add a regexp validator "
 "``\"^[A-Za-z][A-Za-z0-9\\._-]*\"`` to short name line edit accessible "
@@ -435,7 +459,7 @@ msgstr ""
 " als reguliere expressie \"^[A-Za-z][A-Za-z0-9.\\_-]\\*\" toe om bewerking "
 "voor verkorte naam toegankelijk te houden via een statische methode"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:258
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:269
 msgid ""
 "add a regexp validator ``\"^[A-Za-z][A-Za-z0-9\\._-]*\"`` to short name line"
 " edit accessible through a static method"
@@ -444,7 +468,7 @@ msgstr ""
 "bewerking voor verkorte naam toegankelijk te houden via een statische "
 "methode"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:261
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:272
 msgid ""
 "You can choose a short name for the project root by going to "
 ":menuselection:`Project properties --> OWS Server --> Service capabilities "
@@ -454,11 +478,11 @@ msgstr ""
 "naar :menuselection:`Projecteigenschappen --> OWS Server --> Service-"
 "mogelijkheden (Capabilities) --> Korte naam`."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:264
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:275
 msgid "add a ``TreeName`` element in the ``fullProjectSettings``"
 msgstr "toevoegen van een element ``TreeName`` aan de ``fullProjectSettings``"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:266
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:277
 msgid ""
 "If a short name has been set for layers, groups or project it is used by "
 "QGIS Sever as the layer name."
@@ -466,11 +490,11 @@ msgstr ""
 "Als een korte naam is ingesteld voor lagen, groepen en project wordt die "
 "door QGIS Server gebruikt  als de laagnaam."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:270
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:281
 msgid "Connection to service file"
 msgstr "Verbinding naar servicebestand"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:272
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:283
 msgid ""
 "In order to make apache aware of the PostgreSQL service file (see the :ref"
 ":`pg-service-file` section) you need to make your :file:`*.conf` file look "
@@ -480,11 +504,11 @@ msgstr ""
 "(zie het gedeelte :ref:`pg-service-file`), uw bestand :file:`*.conf` er als "
 "volgt uit te laten zien:"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:288
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:299
 msgid "Add fonts to your linux server"
 msgstr "Lettertypen aan uw server van Linux toevoegen"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:290
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:301
 msgid ""
 "Keep in mind that you may use QGIS projects that point to fonts that may not"
 " exist by default on other machines. This means that if you share the "
@@ -496,7 +520,7 @@ msgstr ""
 "Dat betekent dat als u het project gaat delen, het er op andere machines "
 "anders uit kan zien (als de lettertypen niet bestaan op de doelmachine)."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:294
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:305
 msgid ""
 "In order to ensure this does not happen you just need to install the missing"
 " fonts on the target machine. Doing this on desktop systems is usually "
@@ -507,7 +531,7 @@ msgstr ""
 "desktopsystemen te doen is gewoonlijk triviaal (dubbelklikken op de "
 "lettertypen)."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:297
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:308
 msgid ""
 "For linux, if you don't have a desktop environment installed (or you prefer "
 "the command line) you need to:"
@@ -515,10 +539,10 @@ msgstr ""
 "Voor Linux, als u geen dekstopomgeving hebt geïnstalleerd (of als u liever "
 "via de opdrachtregel werkt) dient u:"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:299
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:310
 msgid "On Debian based systems:"
 msgstr "Op Debian gebaseerde systemen:"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:312
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:323
 msgid "On Fedora based systems:"
 msgstr "Op Fedora gebaseerde systemen:"

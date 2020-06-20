@@ -1,70 +1,80 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2014, QGIS project
-# This file is distributed under the same license as the QGIS Documentation
-# Project package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
-#
+# Copyright (C) 2002-now, QGIS project
+# This file is distributed under the same license as the QGIS Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation Project testing\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.8.0\n"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:2
 msgid "|LS| DEM from LiDAR Data"
-msgstr ""
+msgstr "|LS| DEM from LiDAR Data"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:4
 msgid ""
-"You can improve the look of your maps by using different background "
-"images. You could use the basic map or the aerial image you have been "
-"using before, but a hillshade raster of the terrain will look nicer in "
-"some situations."
+"You can improve the look of your maps by using different background images. "
+"You could use the basic map or the aerial image you have been using before, "
+"but a hillshade raster of the terrain will look nicer in some situations."
 msgstr ""
+"You can improve the look of your maps by using different background images. "
+"You could use the basic map or the aerial image you have been using before, "
+"but a hillshade raster of the terrain will look nicer in some situations."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:8
 msgid ""
-"You will use LAStools to extract a DEM from a LiDAR dataset and then "
-"create a hillshade raster to use in your map presentation later."
+"You will use LAStools to extract a DEM from a LiDAR dataset and then create "
+"a hillshade raster to use in your map presentation later."
 msgstr ""
+"You will use LAStools to extract a DEM from a LiDAR dataset and then create "
+"a hillshade raster to use in your map presentation later."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:11
 msgid ""
 "**The goal for this lesson:** Install LAStools and calculate a DEM from "
 "LiDAR data and a hillshade raster."
 msgstr ""
+"**The goal for this lesson:** Install LAStools and calculate a DEM from "
+"LiDAR data and a hillshade raster."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:16
 msgid "|basic| |FA| Installing Lastools"
-msgstr ""
+msgstr "|basic| |FA| Installing Lastools"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:18
 msgid ""
-"Managing LiDAR data within QGIS is possible using the Processing "
-"framework and the algorithms provided by `LAStools "
-"<https://rapidlasso.com/2013/09/29/how-to-install-lastools-toolbox-in-"
-"qgis>`_."
+"Managing LiDAR data within QGIS is possible using the Processing framework "
+"and the algorithms provided by `LAStools <https://rapidlasso.com/2013/09/29"
+"/how-to-install-lastools-toolbox-in-qgis>`_."
 msgstr ""
+"Managing LiDAR data within QGIS is possible using the Processing framework "
+"and the algorithms provided by `LAStools <https://rapidlasso.com/2013/09/29"
+"/how-to-install-lastools-toolbox-in-qgis>`_."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:21
 msgid ""
-"You can obtain a digital elevation model (DEM) from a LiDAR point cloud "
-"and then create a hillshade raster that is visually more intuitive for "
+"You can obtain a digital elevation model (DEM) from a LiDAR point cloud and "
+"then create a hillshade raster that is visually more intuitive for "
 "presentation purposes. First you will have to set up the "
 ":guilabel:`Processing` framework settings to properly work with LAStools:"
 msgstr ""
+"You can obtain a digital elevation model (DEM) from a LiDAR point cloud and "
+"then create a hillshade raster that is visually more intuitive for "
+"presentation purposes. First you will have to set up the "
+":guilabel:`Processing` framework settings to properly work with LAStools:"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:26
 msgid "Close QGIS, if you have already started it."
-msgstr ""
+msgstr "Close QGIS, if you have already started it."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:27
 msgid ""
@@ -72,19 +82,27 @@ msgid ""
 "folder :file:`C:/Program Files/QGIS "
 "Valmiera/apps/qgis/python/plugins/processing/`."
 msgstr ""
+"An old lidar plugin might be installed by default in your system in the "
+"folder :file:`C:/Program Files/QGIS "
+"Valmiera/apps/qgis/python/plugins/processing/`."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:29
 msgid ""
-"If you have a folder named :kbd:`lidar`, delete it. This is valid for "
-"some installations of QGIS 2.2 and 2.4."
+"If you have a folder named :kbd:`lidar`, delete it. This is valid for some "
+"installations of QGIS 2.2 and 2.4."
 msgstr ""
+"If you have a folder named :kbd:`lidar`, delete it. This is valid for some "
+"installations of QGIS 2.2 and 2.4."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:35
 msgid ""
-"Go to the :file:`exercise_data\\\\forestry\\\\lidar\\\\` folder, there "
-"you can find the file :file:`QGIS_2_2_toolbox.zip`. Open it and extract "
-"the :kbd:`lidar` folder to replace the one you just deleted."
+"Go to the :file:`exercise_data\\\\forestry\\\\lidar\\\\` folder, there you "
+"can find the file :file:`QGIS_2_2_toolbox.zip`. Open it and extract the "
+":kbd:`lidar` folder to replace the one you just deleted."
 msgstr ""
+"Go to the :file:`exercise_data\\\\forestry\\\\lidar\\\\` folder, there you "
+"can find the file :file:`QGIS_2_2_toolbox.zip`. Open it and extract the "
+":kbd:`lidar` folder to replace the one you just deleted."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:38
 msgid ""
@@ -92,102 +110,131 @@ msgid ""
 "instructions in `this tutorial <https://rapidlasso.com/2013/09/29/how-to-"
 "install-lastools-toolbox-in-qgis/>`_."
 msgstr ""
+"If you are using a different QGIS version, you can see more installation "
+"instructions in `this tutorial <https://rapidlasso.com/2013/09/29/how-to-"
+"install-lastools-toolbox-in-qgis/>`_."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:41
 msgid ""
 "Now you need to install the LAStools to your computer. Get the newest "
 "*lastools* version `here "
-"<https://lastools.github.io/download/LAStools.zip>`_ and extract the "
-"content of the :file:`lastools.zip` file into a folder in your system, "
-"for example, :file:`C:\\\\lastools\\\\`. The path to the :file:`lastools`"
-" folder cannot have spaces or special characters."
+"<https://lastools.github.io/download/LAStools.zip>`_ and extract the content"
+" of the :file:`lastools.zip` file into a folder in your system, for example,"
+" :file:`C:\\\\lastools\\\\`. The path to the :file:`lastools` folder cannot "
+"have spaces or special characters."
 msgstr ""
+"Now you need to install the LAStools to your computer. Get the newest "
+"*lastools* version `here "
+"<https://lastools.github.io/download/LAStools.zip>`_ and extract the content"
+" of the :file:`lastools.zip` file into a folder in your system, for example,"
+" :file:`C:\\\\lastools\\\\`. The path to the :file:`lastools` folder cannot "
+"have spaces or special characters."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:47
 msgid ""
-"Read the :kbd:`LICENSE.txt` file inside the :kbd:`lastools` folder. Some "
-"of the LAStools are open source and other are closed source and require "
+"Read the :kbd:`LICENSE.txt` file inside the :kbd:`lastools` folder. Some of "
+"the LAStools are open source and other are closed source and require "
 "licensing for most commercial and governmental use.  For education and "
 "evaluation purposes you can use and test LAStools as much as you need to."
 msgstr ""
+"Read the :kbd:`LICENSE.txt` file inside the :kbd:`lastools` folder. Some of "
+"the LAStools are open source and other are closed source and require "
+"licensing for most commercial and governmental use.  For education and "
+"evaluation purposes you can use and test LAStools as much as you need to."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:52
 msgid ""
-"The plugin and the actual algorithms are now installed in your computer "
-"and almost ready to use, you just need to set up the Processing framework"
-" to start using them:"
+"The plugin and the actual algorithms are now installed in your computer and "
+"almost ready to use, you just need to set up the Processing framework to "
+"start using them:"
 msgstr ""
+"The plugin and the actual algorithms are now installed in your computer and "
+"almost ready to use, you just need to set up the Processing framework to "
+"start using them:"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:55
 msgid "Open a new project in QGIS."
-msgstr ""
+msgstr "Open a new project in QGIS."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:56
 msgid "Set the project's CRS to :kbd:`ETRS89 / ETRS-TM35FIN`."
-msgstr ""
+msgstr "Set the project's CRS to :kbd:`ETRS89 / ETRS-TM35FIN`."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:57
 msgid "Save the project as :kbd:`forest_lidar.qgs`."
-msgstr ""
+msgstr "Save the project as :kbd:`forest_lidar.qgs`."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:59
 msgid "To setup the LAStools in QGIS:"
-msgstr ""
+msgstr "To setup the LAStools in QGIS:"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:61
 msgid "Go to :menuselection:`Processing --> Options and configuration`."
-msgstr ""
+msgstr "Go to :menuselection:`Processing --> Options and configuration`."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:62
 msgid ""
-"In the :guilabel:`Processing options` dialog, go to :guilabel:`Providers`"
-" and then to :guilabel:`Tools for LiDAR data`."
+"In the :guilabel:`Processing options` dialog, go to :guilabel:`Providers` "
+"and then to :guilabel:`Tools for LiDAR data`."
 msgstr ""
+"In the :guilabel:`Processing options` dialog, go to :guilabel:`Providers` "
+"and then to :guilabel:`Tools for LiDAR data`."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:64
 msgid "Check :guilabel:`Activate`."
-msgstr ""
+msgstr "Check :guilabel:`Activate`."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:65
 msgid ""
-"For :guilabel:`LAStools folder` set :kbd:`c:\\\\lastools\\\\` (or the "
-"folder you extracted LAStools to)."
+"For :guilabel:`LAStools folder` set :kbd:`c:\\\\lastools\\\\` (or the folder"
+" you extracted LAStools to)."
 msgstr ""
+"For :guilabel:`LAStools folder` set :kbd:`c:\\\\lastools\\\\` (or the folder"
+" you extracted LAStools to)."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:72
 msgid "|basic| |FA| Calculating a DEM with LAStools"
-msgstr ""
+msgstr "|basic| |FA| Calculating a DEM with LAStools"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:74
 msgid ""
 "You have already used the :menuselection:`Processing` toolbox in "
-":doc:`../vector_analysis/spatial_statistics` to run some SAGA algorithms."
-" Now you are going to use it to run LAStools programs:"
+":doc:`../vector_analysis/spatial_statistics` to run some SAGA algorithms. "
+"Now you are going to use it to run LAStools programs:"
 msgstr ""
+"You have already used the :menuselection:`Processing` toolbox in "
+":doc:`../vector_analysis/spatial_statistics` to run some SAGA algorithms. "
+"Now you are going to use it to run LAStools programs:"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:77
 msgid "Open :menuselection:`Processing --> Toolbox`."
-msgstr ""
+msgstr "Open :menuselection:`Processing --> Toolbox`."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:78
-msgid "In the dropdown menu at the bottom, select :guilabel:`Advanced interface`."
+msgid ""
+"In the dropdown menu at the bottom, select :guilabel:`Advanced interface`."
 msgstr ""
+"In the dropdown menu at the bottom, select :guilabel:`Advanced interface`."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:79
 msgid "You should see the :guilabel:`Tools for LiDAR data` category."
-msgstr ""
+msgstr "You should see the :guilabel:`Tools for LiDAR data` category."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:84
 msgid ""
 "Expand it to see the tools available, and expand also the "
 ":guilabel:`LAStools` category (the number of algorithms may vary)."
 msgstr ""
+"Expand it to see the tools available, and expand also the "
+":guilabel:`LAStools` category (the number of algorithms may vary)."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:86
 msgid ""
-"Scroll down until you find the :guilabel:`lasview` algorithm, double "
-"click it to open."
+"Scroll down until you find the :guilabel:`lasview` algorithm, double click "
+"it to open."
 msgstr ""
+"Scroll down until you find the :guilabel:`lasview` algorithm, double click "
+"it to open."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:87
 msgid ""
@@ -195,56 +242,73 @@ msgid ""
 ":file:`exercise_data\\\\forestry\\\\lidar\\\\` and select the "
 ":file:`rautjarvi_lidar.laz` file."
 msgstr ""
+"At :guilabel:`Input LAS/LAZ file`, browse to "
+":file:`exercise_data\\\\forestry\\\\lidar\\\\` and select the "
+":file:`rautjarvi_lidar.laz` file."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:93
 msgid "Click :guilabel:`Run`."
-msgstr ""
+msgstr "Click :guilabel:`Run`."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:95
 msgid ""
-"Now you can see the LiDAR data in the :guilabel:`just a little LAS and "
-"LAZ viewer` dialog window:"
+"Now you can see the LiDAR data in the :guilabel:`just a little LAS and LAZ "
+"viewer` dialog window:"
 msgstr ""
+"Now you can see the LiDAR data in the :guilabel:`just a little LAS and LAZ "
+"viewer` dialog window:"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:100
 msgid ""
 "There are many things you can do within this viewer, but for now you can "
-"just click and drag on the viewer to pan the LiDAR point cloud to see "
-"what it looks like."
+"just click and drag on the viewer to pan the LiDAR point cloud to see what "
+"it looks like."
 msgstr ""
+"There are many things you can do within this viewer, but for now you can "
+"just click and drag on the viewer to pan the LiDAR point cloud to see what "
+"it looks like."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:103
 msgid ""
-"If you want to know further details on how the LAStools work, you can "
-"read the :file:`README` text files about each of the tools, in the "
-":file:`C:\\\\lastools\\\\bin\\\\` folder. Tutorials and other materials "
-"are available at the `Rapidlasso webpage <https://rapidlasso.com/>`_."
+"If you want to know further details on how the LAStools work, you can read "
+"the :file:`README` text files about each of the tools, in the "
+":file:`C:\\\\lastools\\\\bin\\\\` folder. Tutorials and other materials are "
+"available at the `Rapidlasso webpage <https://rapidlasso.com/>`_."
 msgstr ""
+"If you want to know further details on how the LAStools work, you can read "
+"the :file:`README` text files about each of the tools, in the "
+":file:`C:\\\\lastools\\\\bin\\\\` folder. Tutorials and other materials are "
+"available at the `Rapidlasso webpage <https://rapidlasso.com/>`_."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:107
 msgid "Close the viewer when you are ready."
-msgstr ""
+msgstr "Close the viewer when you are ready."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:109
 msgid ""
-"Creating a DEM with LAStools can be done in two steps, first one to "
-"classify the point cloud into :kbd:`ground` and :kbd:`no ground` points "
-"and then calculating a DEM using only the :kbd:`ground` points."
+"Creating a DEM with LAStools can be done in two steps, first one to classify"
+" the point cloud into :kbd:`ground` and :kbd:`no ground` points and then "
+"calculating a DEM using only the :kbd:`ground` points."
 msgstr ""
+"Creating a DEM with LAStools can be done in two steps, first one to classify"
+" the point cloud into :kbd:`ground` and :kbd:`no ground` points and then "
+"calculating a DEM using only the :kbd:`ground` points."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:113
 msgid "Go back to the :guilabel:`Processing Toolbox`."
-msgstr ""
+msgstr "Go back to the :guilabel:`Processing Toolbox`."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:114
 msgid "Note the :guilabel:`Search...` box, write :kbd:`lasground`."
-msgstr ""
+msgstr "Note the :guilabel:`Search...` box, write :kbd:`lasground`."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:115
 msgid ""
-"Double click to open the :guilabel:`lasground` tool and set it as shown "
-"in this image:"
+"Double click to open the :guilabel:`lasground` tool and set it as shown in "
+"this image:"
 msgstr ""
+"Double click to open the :guilabel:`lasground` tool and set it as shown in "
+"this image:"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:120
 msgid ""
@@ -252,65 +316,81 @@ msgid ""
 ":file:`rautjarvi_lidar.laz` is located and it is named "
 ":file:`rautjarvi_lidar_1.las`."
 msgstr ""
+"The output file is saved to the same folder where the "
+":file:`rautjarvi_lidar.laz` is located and it is named "
+":file:`rautjarvi_lidar_1.las`."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:123
 msgid "You can open it with :guilabel:`lasview` if you want to check it."
-msgstr ""
+msgstr "You can open it with :guilabel:`lasview` if you want to check it."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:128
 msgid ""
-"The brown points are the points classified as ground and the gray ones "
-"are the rest, you can click the letter :kbd:`g` to visualize only the "
-"ground points or the letter :kbd:`u` to see only the unclassified points."
-" Click the letter :kbd:`a` to see all the points again. Check the "
-":file:`lasview_README.txt` file for more commands. If you are interested,"
-" also this `tutorial <https://rapidlasso.com/2014/03/02/tutorial-manual-"
+"The brown points are the points classified as ground and the gray ones are "
+"the rest, you can click the letter :kbd:`g` to visualize only the ground "
+"points or the letter :kbd:`u` to see only the unclassified points. Click the"
+" letter :kbd:`a` to see all the points again. Check the "
+":file:`lasview_README.txt` file for more commands. If you are interested, "
+"also this `tutorial <https://rapidlasso.com/2014/03/02/tutorial-manual-"
 "lidar-editing/>`_ about editing LiDAR points manually will show you "
 "different operations within the viewer."
 msgstr ""
+"The brown points are the points classified as ground and the gray ones are "
+"the rest, you can click the letter :kbd:`g` to visualize only the ground "
+"points or the letter :kbd:`u` to see only the unclassified points. Click the"
+" letter :kbd:`a` to see all the points again. Check the "
+":file:`lasview_README.txt` file for more commands. If you are interested, "
+"also this `tutorial <https://rapidlasso.com/2014/03/02/tutorial-manual-"
+"lidar-editing/>`_ about editing LiDAR points manually will show you "
+"different operations within the viewer."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:137
 msgid "Close the viewer again."
-msgstr ""
+msgstr "Close the viewer again."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:138
 msgid "In the :guilabel:`Processing Toolbox`, search for :kbd:`las2dem`."
-msgstr ""
+msgstr "In the :guilabel:`Processing Toolbox`, search for :kbd:`las2dem`."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:139
 msgid "Open the :guilabel:`las2dem` tool and set it as shown in this image:"
-msgstr ""
+msgstr "Open the :guilabel:`las2dem` tool and set it as shown in this image:"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:144
 msgid ""
 "The result DEM is added to your map with the generic name :kbd:`Output "
 "raster file`."
 msgstr ""
+"The result DEM is added to your map with the generic name :kbd:`Output "
+"raster file`."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:146
 msgid ""
-"The :guilabel:`lasground` and :guilabel:`las2dem` tools require "
-"licensing. You can use the unlicensed tool as indicated in the license "
-"file, but you get the diagonals you can appreciate in the image results."
+"The :guilabel:`lasground` and :guilabel:`las2dem` tools require licensing. "
+"You can use the unlicensed tool as indicated in the license file, but you "
+"get the diagonals you can appreciate in the image results."
 msgstr ""
+"The :guilabel:`lasground` and :guilabel:`las2dem` tools require licensing. "
+"You can use the unlicensed tool as indicated in the license file, but you "
+"get the diagonals you can appreciate in the image results."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:151
 msgid "|basic| |FA| Creating a Terrain Hillshade"
-msgstr ""
+msgstr "|basic| |FA| Creating a Terrain Hillshade"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:154
 msgid ""
-"For visualization purposes, a hillshade generated from a DEM gives a "
-"better"
+"For visualization purposes, a hillshade generated from a DEM gives a better"
 msgstr ""
+"For visualization purposes, a hillshade generated from a DEM gives a better"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:154
 msgid "visualization of the terrain:"
-msgstr ""
+msgstr "visualization of the terrain:"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:156
 msgid "Open :menuselection:`Raster --> Terrain analysis --> Hillshade`."
-msgstr ""
+msgstr "Open :menuselection:`Raster --> Terrain analysis --> Hillshade`."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:157
 msgid ""
@@ -318,38 +398,49 @@ msgid ""
 ":file:`exercise_data\\\\forestry\\\\lidar\\\\` and name the file "
 ":file:`hillshade.tif`."
 msgstr ""
+"As the :guilabel:`Output layer`, browse to "
+":file:`exercise_data\\\\forestry\\\\lidar\\\\` and name the file "
+":file:`hillshade.tif`."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:159
 msgid "Leave the rest of parameters with the default settings."
-msgstr ""
+msgstr "Leave the rest of parameters with the default settings."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:164
 msgid "Select :kbd:`ETRS89 / ETRS-TM35FIN` as the CRS when prompted."
-msgstr ""
+msgstr "Select :kbd:`ETRS89 / ETRS-TM35FIN` as the CRS when prompted."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:166
 msgid ""
-"Despite the diagonal lines remaining in the hillshade raster result, you "
-"can clearly see an accurate relief of the area. You can even see the "
-"different soil drains that have been dug in the forests."
+"Despite the diagonal lines remaining in the hillshade raster result, you can"
+" clearly see an accurate relief of the area. You can even see the different "
+"soil drains that have been dug in the forests."
 msgstr ""
+"Despite the diagonal lines remaining in the hillshade raster result, you can"
+" clearly see an accurate relief of the area. You can even see the different "
+"soil drains that have been dug in the forests."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:175
 msgid "|IC|"
-msgstr ""
+msgstr "|IC|"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:177
 msgid ""
 "Using LiDAR data to get a DEM, specially in forested areas, gives good "
-"results with not much effort. You could also use ready LiDAR derived DEMs"
-" or other sources like the `SRTM 9m resolution DEMs "
+"results with not much effort. You could also use ready LiDAR derived DEMs or"
+" other sources like the `SRTM 9m resolution DEMs "
 "<http://srtm.csi.cgiar.org/srtmdata/>`_. Either way, you can use them to "
 "create a hillshade raster to use in your map presentations."
 msgstr ""
+"Using LiDAR data to get a DEM, specially in forested areas, gives good "
+"results with not much effort. You could also use ready LiDAR derived DEMs or"
+" other sources like the `SRTM 9m resolution DEMs "
+"<http://srtm.csi.cgiar.org/srtmdata/>`_. Either way, you can use them to "
+"create a hillshade raster to use in your map presentations."
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:184
 msgid "|WN|"
-msgstr ""
+msgstr "|WN|"
 
 #: ../../docs/training_manual/forestry/basic_lidar.rst:186
 msgid ""
@@ -357,162 +448,6 @@ msgid ""
 "hillshade raster and the forest inventory results to create a map "
 "presentation of the results."
 msgstr ""
-
-#~ msgid ""
-#~ "Managing LiDAR data within QGIS is "
-#~ "possible using the Processing framework "
-#~ "and the algorithms provided by `LAStools"
-#~ " <http://rapidlasso.com/2013/09/29//how-to-install-"
-#~ "lastools-toolbox-in-qgis>`_."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Go to the "
-#~ ":kbd:`exercise_data\\\\forestry\\\\lidar\\\\` folder, "
-#~ "there you can find the file "
-#~ ":kbd:`QGIS_2_2_toolbox.zip`. Open it and "
-#~ "extract the :kbd:`lidar` folder to "
-#~ "replace the one you just deleted."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If you are using a different QGIS"
-#~ " version, you can see more "
-#~ "installation instructions in `this tutorial"
-#~ " <http://rapidlasso.com/2013/09/29/how-to-install-"
-#~ "lastools-toolbox-in-qgis/>`_."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Now you need to install the "
-#~ "LAStools to your computer. Get the "
-#~ "newest :kbd:`lastools` version `here "
-#~ "<http://lastools.org/download/lastools.zip>`_  and extract"
-#~ " the content of the :kbd:`lastools.zip` "
-#~ "file into a folder in your system,"
-#~ " for example, :kbd:`c:\\\\lastools\\\\`. The "
-#~ "path to the :kbd:`lastools` folder "
-#~ "cannot have spaces or special "
-#~ "characters."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "At :guilabel:`Input LAS/LAZ file`, browse "
-#~ "to :kbd:`exercise_data\\\\forestry\\\\lidar\\\\` and "
-#~ "select the :kbd:`rautjarvi_lidar.laz` file."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "If you want to know further "
-#~ "details on how the LAStools work, "
-#~ "you can read the :kbd:`README` text "
-#~ "files about each of the tools, in"
-#~ " the :kbd:`C:\\\\lastools\\\\bin\\\\` folder. "
-#~ "Tutorials and other materials are "
-#~ "available at the `Rapidlasso webpage "
-#~ "<http://rapidlasso.com/>`_."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The output file is saved to the"
-#~ " same folder where the "
-#~ ":kbd:`rautjarvi_lidar.laz` is located and it"
-#~ " is named :kbd:`rautjarvi_lidar_1.las`."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The brown points are the points "
-#~ "classified as ground and the gray "
-#~ "ones are the rest, you can click"
-#~ " the letter :kbd:`g` to visualize "
-#~ "only the ground points or the "
-#~ "letter :kbd:`u` to see only the "
-#~ "unclassified points. Click the letter "
-#~ ":kbd:`a` to see all the points "
-#~ "again. Check the :kbd:`lasview_README.txt` "
-#~ "file for more commands. If you are"
-#~ " interested, also this `tutorial "
-#~ "<http://www.rapidlasso.com/2014/03/02/tutorial-manual-"
-#~ "lidar-editing/>`_ about editing LiDAR "
-#~ "points manually will show you different"
-#~ " operations within the viewer."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "For visualization purposes, a hillshade "
-#~ "generated from a DEM gives a "
-#~ "better visualization of the terrain:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "As the :guilabel:`Output layer`, browse "
-#~ "to :kbd:`exercise_data\\\\forestry\\\\lidar\\\\` and "
-#~ "name the file :kbd:`hillshade.tif`."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Using LiDAR data to get a DEM, "
-#~ "specially in forested areas, gives good"
-#~ " results with not much effort. You"
-#~ " could also use ready LiDAR derived"
-#~ " DEMs or other sources like the "
-#~ "`SRTM 9m resolution DEMs <http://www.cgiar-"
-#~ "csi.org/data/srtm-90m-digital-elevation-"
-#~ "database-v4-1>`_. Either way, you can "
-#~ "use them to create a hillshade "
-#~ "raster to use in your map "
-#~ "presentations."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Now you need to install the "
-#~ "LAStools to your computer. Get the "
-#~ "newest *lastools* version `here "
-#~ "<http://lastools.org/download/lastools.zip>`_ and extract"
-#~ " the content of the :file:`lastools.zip`"
-#~ " file into a folder in your "
-#~ "system, for example, :file:`C:\\\\lastools\\\\`. "
-#~ "The path to the :file:`lastools` folder"
-#~ " cannot have spaces or special "
-#~ "characters."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Managing LiDAR data within QGIS is "
-#~ "possible using the Processing framework "
-#~ "and the algorithms provided by `LAStools"
-#~ " <https://rapidlasso.com/2013/09/29//how-to-install-"
-#~ "lastools-toolbox-in-qgis>`_."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The brown points are the points "
-#~ "classified as ground and the gray "
-#~ "ones are the rest, you can click"
-#~ " the letter :kbd:`g` to visualize "
-#~ "only the ground points or the "
-#~ "letter :kbd:`u` to see only the "
-#~ "unclassified points. Click the letter "
-#~ ":kbd:`a` to see all the points "
-#~ "again. Check the :file:`lasview_README.txt` "
-#~ "file for more commands. If you are"
-#~ " interested, also this `tutorial "
-#~ "<https://www.rapidlasso.com/2014/03/02/tutorial-manual-"
-#~ "lidar-editing/>`_ about editing LiDAR "
-#~ "points manually will show you different"
-#~ " operations within the viewer."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Using LiDAR data to get a DEM, "
-#~ "specially in forested areas, gives good"
-#~ " results with not much effort. You"
-#~ " could also use ready LiDAR derived"
-#~ " DEMs or other sources like the "
-#~ "`SRTM 9m resolution DEMs "
-#~ "<http://srtm.csi.cgiar.org/SELECTION/inputCoord.asp>`_. Either"
-#~ " way, you can use them to "
-#~ "create a hillshade raster to use "
-#~ "in your map presentations."
-#~ msgstr ""
-
+"In the next, and final step in this module, lesson you will use the "
+"hillshade raster and the forest inventory results to create a map "
+"presentation of the results."

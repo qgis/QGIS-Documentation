@@ -24,7 +24,7 @@ solar radiation (higher azimuth from 180°-270°).
 This algorithm is derived from the
 `GDAL DEM utility <https://gdal.org/gdaldem.html>`_ .
 
-``Default menu``: :menuselection:`Raster --> Analysis`
+**Default menu**: :menuselection:`Raster --> Analysis`
 
 Parameters
 ..........
@@ -122,6 +122,12 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output raster with angle values in degrees
+
+**Algorithm ID**: ``gdal:aspect``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 .. _gdalcolorrelief:
@@ -230,6 +236,12 @@ Outputs
      - [raster]
      - A 4-band output raster
 
+**Algorithm ID**: ``gdal:colorrelief``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdalfillnodata:
 
@@ -250,7 +262,7 @@ point data.
 This algorithm is derived from the
 `GDAL fillnodata utility <https://gdal.org/gdal_fillnodata.html>`_ .
 
-``Default menu``: :menuselection:`Raster --> Analysis`
+**Default menu**: :menuselection:`Raster --> Analysis`
 
 Parameters
 ..........
@@ -348,6 +360,12 @@ Outputs
      - [raster]
      - Output raster
 
+**Algorithm ID**: ``gdal:fillnodata``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdalgriddatametrics:
 
@@ -359,7 +377,7 @@ geometry.
 This algorithm is derived from the
 `GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
 
-``Default menu``: :menuselection:`Raster --> Analysis`
+**Default menu**: :menuselection:`Raster --> Analysis`
 
 .. seealso:: `GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_
 
@@ -515,6 +533,12 @@ Outputs
      - [raster]
      - Output raster with interpolated values
 
+**Algorithm ID**: ``gdal:griddatametrics``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdalgridinversedistancenearestneighbor:
 
@@ -661,6 +685,12 @@ Outputs
      - [raster]
      - Output raster with interpolated values
 
+**Algorithm ID**: ``gdal:gridinversedistancenearestneighbor``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdalgridinversedistance:
 
@@ -676,7 +706,7 @@ The function will compute interpolated value for the given position in output gr
 This algorithm is derived from the
 `GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
 
-``Default menu``: :menuselection:`Raster --> Analysis`
+**Default menu**: :menuselection:`Raster --> Analysis`
 
 .. seealso:: `GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_
 
@@ -827,6 +857,12 @@ Outputs
      - [raster]
      - Output raster with interpolated values
 
+**Algorithm ID**: ``gdal:gridinversedistance``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdalgridlinear:
 
@@ -951,6 +987,12 @@ Outputs
      - [raster]
      - Output raster with interpolated values
 
+**Algorithm ID**: ``gdal:gridlinear``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdalgridaverage:
 
@@ -968,7 +1010,7 @@ will be filled with specified NODATA value.
 This algorithm is derived from the
 `GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
 
-``Default menu``: :menuselection:`Raster --> Analysis`
+**Default menu**: :menuselection:`Raster --> Analysis`
 
 .. seealso:: `GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_
 
@@ -1099,6 +1141,12 @@ Outputs
      - [raster]
      - Output raster with interpolated values
 
+**Algorithm ID**: ``gdal:gridaverage``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdalgridnearestneighbor:
 
@@ -1113,7 +1161,7 @@ returned.
 This algorithm is derived from the
 `GDAL grid utility <https://gdal.org/gdal_grid.html>`_ .
 
-``Default menu``: :menuselection:`Raster --> Analysis`
+**Default menu**: :menuselection:`Raster --> Analysis`
 
 .. seealso:: `GDAL grid tutorial <https://gdal.org/tutorials/gdal_grid_tut.html>`_
 
@@ -1236,6 +1284,12 @@ Outputs
      - [raster]
      - Output raster with interpolated values
 
+**Algorithm ID**: ``gdal:gridnearestneighbor``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdalhillshade:
 
@@ -1250,7 +1304,7 @@ for differences between vertical and horizontal units.
 This algorithm is derived from the
 `GDAL DEM utility <https://gdal.org/gdaldem.html>`__ .
 
-``Default menu``: :menuselection:`Raster --> Analysis`
+**Default menu**: :menuselection:`Raster --> Analysis`
 
 Parameters
 ..........
@@ -1378,6 +1432,12 @@ Outputs
      - [raster]
      - Output raster with interpolated values
 
+**Algorithm ID**: ``gdal:hillshade``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdalnearblack:
 
@@ -1394,7 +1454,7 @@ color pixels can be treated as transparent when mosaicking.
 This algorithm is derived from the
 `GDAL nearblack utility <https://gdal.org/nearblack.html>`_ .
 
-``Default menu``: :menuselection:`Raster --> Analysis`
+**Default menu**: :menuselection:`Raster --> Analysis`
 
 Parameters
 ..........
@@ -1476,6 +1536,12 @@ Outputs
      - [raster]
      - Output raster
 
+**Algorithm ID**: ``gdal:nearblack``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdalproximity:
 
@@ -1490,7 +1556,7 @@ pixel value is in the set of target pixel values.
 This algorithm is derived from the
 `GDAL proximity utility <https://gdal.org/gdal_proximity.html>`_ .
 
-``Default menu``: :menuselection:`Raster --> Analysis`
+**Default menu**: :menuselection:`Raster --> Analysis`
 
 Parameters
 ..........
@@ -1640,6 +1706,12 @@ Outputs
      - [raster]
      - Output raster
 
+**Algorithm ID**: ``gdal:proximity``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdalroughness:
 
@@ -1656,7 +1728,7 @@ morphology, in climatology and physical geography in general.
 This algorithm is derived from the
 `GDAL DEM utility <https://gdal.org/gdaldem.html>`_ .
 
-``Default menu``: :menuselection:`Raster --> Analysis`
+**Default menu**: :menuselection:`Raster --> Analysis`
 
 Parameters
 ..........
@@ -1728,6 +1800,12 @@ Outputs
      - Single-band output roughness raster.
        The value -9999 is used as nodata value.
 
+**Algorithm ID**: ``gdal:roughness``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdalsieve:
 
@@ -1742,7 +1820,7 @@ map.
 This algorithm is derived from the
 `GDAL sieve utility <https://gdal.org/gdal_sieve.html>`_ .
 
-``Default menu``: :menuselection:`Raster --> Analysis`
+**Default menu**: :menuselection:`Raster --> Analysis`
 
 Parameters
 ..........
@@ -1822,6 +1900,12 @@ Outputs
      - [raster]
      - Output raster layer.
 
+**Algorithm ID**: ``gdal:sieve``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdalslope:
 
@@ -1835,7 +1919,7 @@ degrees or percent slope.
 This algorithm is derived from the
 `GDAL DEM utility <https://gdal.org/gdaldem.html>`_ .
 
-``Default menu``: :menuselection:`Raster --> Analysis`
+**Default menu**: :menuselection:`Raster --> Analysis`
 
 Parameters
 ..........
@@ -1932,6 +2016,12 @@ Outputs
      - [raster]
      - Output raster
 
+**Algorithm ID**: ``gdal:slope``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdaltriterrainruggednessindex:
 
@@ -1946,7 +2036,7 @@ surrounding cells.
 This algorithm is derived from the
 `GDAL DEM utility <https://gdal.org/gdaldem.html>`_ .
 
-``Default menu``: :menuselection:`Raster --> Analysis`
+**Default menu**: :menuselection:`Raster --> Analysis`
 
 Parameters
 ..........
@@ -2018,6 +2108,12 @@ Outputs
      - Output ruggedness raster.
        The value -9999 is used as nodata value.
 
+**Algorithm ID**: ``gdal:triterrainruggednessindex``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 .. _gdaltpitopographicpositionindex:
 
@@ -2031,7 +2127,7 @@ cells.
 This algorithm is derived from the
 `GDAL DEM utility <https://gdal.org/gdaldem.html>`_ .
 
-``Default menu``: :menuselection:`Raster --> Analysis`
+**Default menu**: :menuselection:`Raster --> Analysis`
 
 Parameters
 ..........
@@ -2101,3 +2197,9 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output raster.
+
+**Algorithm ID**: ``gdal:tpitopographicpositionindex``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**

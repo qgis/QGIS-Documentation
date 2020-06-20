@@ -1,19 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2002-now, QGIS project
-# This file is distributed under the same license as the QGISDoc package.
+# This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Francis Gasc <francisgasc@gmail.com>, 2020
+# MarieSilvestre, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: QGISDoc 3.10\n"
+"Project-Id-Version: QGIS Documentation 3.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-16 19:29+0100\n"
+"POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:26+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: MarieSilvestre, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,6 +36,8 @@ msgid ""
 "To log requests sent to the server, you have to set the following "
 "environment variables:"
 msgstr ""
+"Pour enregistrer les requêtes envoyées au serveur, vous devez paramétrer les"
+" variables d'environnement suivantes :"
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:27
 msgid "**QGIS_SERVER_LOG_LEVEL**"
@@ -50,6 +54,7 @@ msgstr "**QGIS_SERVER_LOG_STDERR**"
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:31
 msgid "Take a look on :ref:`qgis-server-envvar` to understand their meanings."
 msgstr ""
+"Jetez un œil à :ref:`qgis-server-envvar` pour comprendre leur signification."
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:37
 msgid "Environment variables"
@@ -60,6 +65,8 @@ msgid ""
 "You can configure some aspects of QGIS Server by setting **environment "
 "variables**."
 msgstr ""
+"Vous pouvez configurer certains aspects de QGIS Server en définissant **des "
+"variables d'environnement**."
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:42
 msgid ""
@@ -67,6 +74,9 @@ msgid ""
 "ways to define these variables. This is fully described in "
 ":ref:`httpserver`."
 msgstr ""
+"Selon le serveur HTTP et la façon dont vous exécutez QGIS Server, il existe "
+"plusieurs façons de définir ces variables. Ceci est décrit en détail dans "
+":ref:`httpserver`."
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:48
 msgid "QGIS_OPTIONS_PATH"
@@ -78,6 +88,10 @@ msgid ""
 "QGIS application ``--optionspath`` option. It is looking for settings file "
 "in ``<QGIS_OPTIONS_PATH>/QGIS/QGIS3.ini``."
 msgstr ""
+"Indique le chemin vers le répertoire des paramètres. Elle fonctionne de la "
+"même manière que l'option ``--optionspath`` de l'application QGIS. Elle "
+"recherche le fichier de paramètres dans "
+"``<QGIS_OPTIONS_PATH>/QGIS/QGIS3.ini``."
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:56
 msgid "QUERY_STRING"
@@ -88,6 +102,9 @@ msgid ""
 "The query string, normally passed by the web server. This variable can be "
 "useful while testing QGIS server binary from the command line."
 msgstr ""
+"La chaîne de caractères de la requête, habituellement transmise par le "
+"serveur Web. Cette variable peut être utile pour tester le binaire de QGIS "
+"Server depuis la ligne de commande."
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:61
 msgid ""
@@ -95,12 +112,17 @@ msgid ""
 "project that also requires a PostgreSQL connection defined in a "
 "pg_service.conf file:"
 msgstr ""
+"Par exemple, pour tester une demande GetCapabilities sur la ligne de "
+"commande d'un projet qui nécessite également une connexion PostgreSQL "
+"définie dans un fichier pg_service.conf:"
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:69
 msgid ""
 "The result should be either the content of the GetCapabilities response or, "
 "if something is wrong, an error message."
 msgstr ""
+"Le résultat doit être le contenu de la réponse GetCapabilities ou, si "
+"quelque chose ne va pas, un message d'erreur."
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:73
 msgid "QGIS_PROJECT_FILE"
@@ -112,12 +134,19 @@ msgid ""
 " query string (with *MAP*), you can also set it as an environment variable "
 "(for example by using ``mod_rewrite`` Apache module)."
 msgstr ""
+"Le fichier de projet .``.qgs`` ou ``.qgz``, habituellement transmis sous "
+"forme de paramètre dans la chaîne de la requête (avec *MAP*), vous pouvez "
+"également la paramétrer comme une variable d’environnement (par exemple, en "
+"utilisant le module Apache `mod_rewrite`)."
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:79
 msgid ""
 "Note that you may also indicate a project stored in PostgreSQL, e.g. "
 "``postgresql://localhost:5432?sslmode=disable&dbname=mydb&schema=myschema&project=myproject``."
 msgstr ""
+"Notez que vous pouvez également indiquer un projet stocké dans PostgreSQL, "
+"par exemple "
+"``postgresql://localhost:5432?sslmode=disable&dbname=mydb&schema=myschema&project=myproject``."
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:84
 msgid "QGIS_SERVER_LOG_FILE"
@@ -129,12 +158,18 @@ msgid ""
 "writing to file. File should be created automatically, just send some "
 "requests to server. If it's not there, check permissions."
 msgstr ""
+"Indique le chemin et le nom de fichier du journal. Assurez-vous que le "
+"serveur dispose des permissions adaptées pour écrire dans le fichier. Le "
+"fichier est créé automatiquement lors de l'envoi de requêtes vers le "
+"serveur. S'il n'existe pas, vérifiez les permissions. "
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:90
 msgid ""
 "QGIS_SERVER_LOG_FILE is deprecated since QGIS 3.4. File logging support will"
 " be removed in QGIS 4.0."
 msgstr ""
+"QGIS_SERVER_LOG_FILE est obsolète depuis QGIS 3.4. La prise en charge de la "
+"journalisation des fichiers sera supprimée dans QGIS 4.0."
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:94
 msgid "QGIS_SERVER_LOG_STDERR"
@@ -145,18 +180,20 @@ msgid ""
 "Activate logging to stderr. It's disabled by default. This variable has no "
 "effect when ``QGIS_SERVER_LOG_FILE`` is set."
 msgstr ""
+"Activez la journalisation sur stderr. Il est désactivé par défaut. Cette "
+"variable n'a aucun effet lorsque ``QGIS_SERVER_LOG_FILE`` est défini."
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:99
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:137
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:175
 msgid "``0`` or ``false`` (case insensitive)"
-msgstr ""
+msgstr "``0`` ou ``false`` (sensible à la casse)"
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:100
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:138
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:176
 msgid "``1`` or ``true`` (case insensitive)"
-msgstr ""
+msgstr "``1`` ou ``true`` (insensible à la casse)"
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:103
 msgid "MAX_CACHE_LAYERS"
@@ -165,6 +202,7 @@ msgstr "MAX_CACHE_LAYERS"
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:105
 msgid "Specify the maximum number of cached layers (default: ``100``)."
 msgstr ""
+"Indique le nombre maximal de couches mises en cache (par défaut : ``100``)."
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:109
 msgid "DISPLAY"
@@ -175,6 +213,8 @@ msgid ""
 "This is used to pass (fake) X server display number (needed on Unix-like "
 "systems)."
 msgstr ""
+"Ce paramètre est utilisé pour transmettre (tromper) le numéro d'affichage du"
+" serveur X (utilisé sur les systèmes de type Unix)."
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:115
 msgid "QGIS_PLUGINPATH"
@@ -185,6 +225,8 @@ msgid ""
 "Useful if you are using Python plugins for the server, this sets the folder "
 "that is searched for Python plugins."
 msgstr ""
+"Utile si vous utilisez des extensions Python pour le serveur, le répertoire "
+"indiqué est celui qui sera utilisé pour la recherche des extensions Python."
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:122
 msgid "QGIS_SERVER_LOG_LEVEL"
@@ -193,20 +235,24 @@ msgstr "QGIS_SERVER_LOG_LEVEL"
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:124
 msgid "Specify desired log level. Available values are:"
 msgstr ""
+"indique le niveau de journalisation désiré. Les valeurs disponibles sont les"
+" suivantes : "
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:126
 msgid "``0`` or ``INFO`` (log all requests)"
-msgstr ""
+msgstr "``0`` ou ``INFO`` (journalise toutes les requêtes), "
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:127
 msgid "``1`` or ``WARNING``"
-msgstr "``1`` ou ``WARNING``"
+msgstr "``1`` ou ``WARNING``,"
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:128
 msgid ""
 "``2`` or ``CRITICAL`` (log just critical errors, suitable for production "
 "purposes)"
 msgstr ""
+"``2`` ou ``CRITICAL`` (journalise uniquement les erreurs critiques, adapté à"
+" un fonctionnement en production)."
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:132
 msgid "QGIS_SERVER_PARALLEL_RENDERING"
@@ -217,6 +263,8 @@ msgid ""
 "Activates parallel rendering for WMS GetMap requests. It's disabled "
 "(``false``) by default. Available values are:"
 msgstr ""
+"Active le rendu parallèle pour les demandes WMS GetMap. Il est désactivé "
+"(``faux``) par défaut. Les valeurs disponibles sont:"
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:142
 msgid "QGIS_SERVER_MAX_THREADS"
@@ -227,6 +275,8 @@ msgid ""
 "Number of threads to use when parallel rendering is activated. Default value"
 " is ``-1`` to use the number of processor cores."
 msgstr ""
+"Nombre de threads à utiliser lorsque le rendu parallèle est activé. La "
+"valeur par défaut est ``-1`` pour utiliser le nombre de cœurs de processeur."
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:149
 msgid "QGIS_SERVER_CACHE_DIRECTORY"
@@ -237,6 +287,9 @@ msgid ""
 "Specifies the network cache directory on the filesystem. The default "
 "directory is named ``cache`` and located in the profile directory."
 msgstr ""
+"Spécifie le répertoire de cache réseau sur le système de fichiers. Le "
+"répertoire par défaut est nommé ``cache`` et situé dans le répertoire de "
+"profil."
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:156
 msgid "QGIS_SERVER_CACHE_SIZE"
@@ -245,24 +298,27 @@ msgstr "QGIS_SERVER_CACHE_SIZE"
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:158
 msgid "Sets the network cache size in MB. The default value is ``50`` MB."
 msgstr ""
+"Définit la taille du cache réseau en Mo. La valeur par défaut est ``50`` Mo."
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:162
 msgid "QGIS_SERVER_OVERRIDE_SYSTEM_LOCALE"
-msgstr ""
+msgstr "QGIS_SERVER_OVERRIDE_SYSTEM_LOCALE"
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:164
 msgid ""
 "Sets LOCALE to be used by QGIS server. The default value is empty (no "
 "override)."
 msgstr ""
+"Définit LOCALE à utiliser par le serveur QGIS. La valeur par défaut est vide"
+" (pas de substitution)."
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:166
 msgid "Example: ``de_CH.utf8``"
-msgstr ""
+msgstr "Exemple : ``de_CH.utf8``"
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:170
 msgid "QGIS_SERVER_SHOW_GROUP_SEPARATOR"
-msgstr ""
+msgstr "QGIS_SERVER_SHOW_GROUP_SEPARATOR"
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:172
 msgid ""
@@ -270,23 +326,53 @@ msgid ""
 "for numeric values (e.g. in GetFeatureInfo responses). The default value is "
 "``0``."
 msgstr ""
+"Définit si un séparateur de groupe (par exemple mille séparateurs) doit être"
+" utilisé pour les valeurs numériques (par exemple dans les réponses "
+"GetFeatureInfo). La valeur par défaut est ``0``."
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:180
-msgid "Settings summary"
-msgstr ""
+msgid "QGIS_SERVER_IGNORE_BAD_LAYERS"
+msgstr "QGIS_SERVER_IGNORE_BAD_LAYERS"
 
 #: ../../docs/user_manual/working_with_ogc/server/config.rst:182
+msgid ""
+"\"Bad\" layers are layers that cannot be loaded. The default behavior of "
+"QGIS Server is to consider the project as not available if it contains a bad"
+" layer."
+msgstr ""
+"Les \"mauvaises\" couches sont des couches qui ne peuvent pas être chargées."
+" Le comportement par défaut de QGIS Server consiste à considérer le projet "
+"comme non disponible s'il contient une mauvaise couche."
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:185
+msgid ""
+"The default behavior can be overridden by setting this variable to ``1`` or "
+"``true``. In this case, \"bad\" layers will just be ignored, and the project"
+" will be considered valid and available."
+msgstr ""
+"Le comportement par défaut peut être remplacé en définissant cette variable "
+"sur ``1`` ou ``vrai``. Dans ce cas, les \"mauvaises\" couches seront "
+"simplement ignorées et le projet sera considéré comme valide et disponible."
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:191
+msgid "Settings summary"
+msgstr "Résumé des paramètres"
+
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:193
 msgid ""
 "When QGIS Server is starting, you have a summary of all configurable "
 "parameters thanks to environment variables. Moreover, the value currently "
 "used and the origin is also displayed."
 msgstr ""
+"Au démarrage de QGIS Server, vous disposez d'un résumé de tous les "
+"paramètres configurables grâce aux variables d'environnement. De plus, la "
+"valeur actuellement utilisée et l'origine sont également affichées."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:186
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:197
 msgid "For example with spawn-fcgi:"
-msgstr ""
+msgstr "Par exemple avec spawn-fcgi :"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:217
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:228
 msgid ""
 "In this particular case, we know that **QGIS_SERVER_MAX_THREADS** and "
 "**QGIS_SERVER_PARALLEL_RENDERING** values are read from the ini file found "
@@ -295,12 +381,19 @@ msgid ""
 "**/qgis/max_threads** and **/qgis/parallel_rendering** and their values are "
 "**true** and **4** threads."
 msgstr ""
+"Dans ce cas particulier, nous savons que les valeurs "
+"**QGIS_SERVER_MAX_THREADS** et **QGIS_SERVER_PARALLEL_RENDERING** sont lues "
+"à partir du fichier ini situé dans le répertoire **QGIS_OPTIONS_PATH** (qui "
+"est défini via une variable d'environnement). Les entrées correspondantes "
+"dans le fichier ini sont **/qgis/max_threads** et "
+"**/qgis/parallel_rendering** et leurs valeurs sont **true** et **4** "
+"threads."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:225
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:236
 msgid "Short name for layers, groups and project"
 msgstr "Nom court pour les couches, les groupes et le projet"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:227
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:238
 msgid ""
 "A number of elements have both a ``<Name>`` and a ``<Title>``. The **Name** "
 "is a text string used for machine-to-machine communication while the "
@@ -310,7 +403,7 @@ msgstr ""
 " Le nom est une chaîne de caractères utilisée dans la communication de "
 "machine à machine alors que le titre est utilisé pour les êtres humains."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:231
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:242
 msgid ""
 "For example, a dataset might have the descriptive Title “Maximum Atmospheric"
 " Temperature” and be requested using the abbreviated Name “ATMAX”. User can "
@@ -321,7 +414,7 @@ msgstr ""
 "L'utilisateur peut indiquer un titre pour les couches, les groupes et le "
 "projet."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:235
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:246
 msgid ""
 "OWS name is based on the name used in layer tree. This name is more a label "
 "for humans than a name for machine-to-machine communication."
@@ -330,28 +423,28 @@ msgstr ""
 "plus une étiquette pour les être humains qu'un nom utilisé dans la "
 "communication de machine à machine."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:238
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:249
 msgid "QGIS Server supports:"
 msgstr "QGIS Server gère :"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:240
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:251
 msgid ""
 "short name line edits to layers properties You can change this by right "
 "clicking on a layer, choose :menuselection:`Properties --> Metadata tab --> "
 "Description --> Short name`."
 msgstr ""
 "Modification de la ligne de nom abrégé pour les propriétés des couches. Vous"
-" pouvez modifier cela en cliquant avec le bouton droit de la souris sur un "
-"calque, choisissez :menuselection:`Propriétés --> Onglet Métadonnées --> "
+" pouvez modifier cela en cliquant avec le bouton droit de la souris sur une "
+"couche, choisissez :menuselection:`Propriétés --> Onglet Métadonnées --> "
 "Description --> Nom court`"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:244
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:255
 msgid "WMS data dialog to layer tree group (short name, title, abstract)"
 msgstr ""
 "une boîte de dialogue WMS pour les groupes (permet de saisir le nom court du"
 " groupe, le titre et un résumé)"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:246
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:257
 msgid ""
 "By right clicking on a layer group and selecting the :guilabel:`Set Group "
 "WMS data` option you will get:"
@@ -359,11 +452,11 @@ msgstr ""
 "En faisant un clic-droit sur un groupe de couches et en sélectionnant "
 "l'option :guilabel:`Définir un groupe de données WMS`, vous obtiendrez:"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:253
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:264
 msgid "Set group WMS data dialog"
 msgstr "Définir la boîte de dialogue des données associées au groupe WMS"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:255
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:266
 msgid ""
 "short name line edits to project properties - add a regexp validator "
 "``\"^[A-Za-z][A-Za-z0-9\\._-]*\"`` to short name line edit accessible "
@@ -373,7 +466,7 @@ msgstr ""
 "validateur d'expressions régulières ``\"^[A-Za-z][A-Za-z0-9\\._-]*\"`` pour "
 "les éditions de noms courts (via une méthode statique)"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:258
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:269
 msgid ""
 "add a regexp validator ``\"^[A-Za-z][A-Za-z0-9\\._-]*\"`` to short name line"
 " edit accessible through a static method"
@@ -382,7 +475,7 @@ msgstr ""
 "``\"^[A-Za-z][A-Za-z0-9\\._-]*\"`` pour les éditions de noms courts (via une"
 " méthode statique)"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:261
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:272
 msgid ""
 "You can choose a short name for the project root by going to "
 ":menuselection:`Project properties --> OWS Server --> Service capabilities "
@@ -392,13 +485,13 @@ msgstr ""
 ":menuselection:`Propriétés du projet --> Serveur OWS -->  Fonctionnalités du"
 " service --> Nom court`."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:264
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:275
 msgid "add a ``TreeName`` element in the ``fullProjectSettings``"
 msgstr ""
 "l'ajout d'un élément ``TreeName`` dans les propriétés du projet "
 "(``fullProjectSettings``)"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:266
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:277
 msgid ""
 "If a short name has been set for layers, groups or project it is used by "
 "QGIS Sever as the layer name."
@@ -406,11 +499,11 @@ msgstr ""
 "Si un nom court a été utilisé pour des couches, des groupes ou pour le "
 "projet, il sera utilisé par QGIS Server pour définir le nom de la couche."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:270
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:281
 msgid "Connection to service file"
 msgstr "Connexion au fichier de service"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:272
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:283
 msgid ""
 "In order to make apache aware of the PostgreSQL service file (see the :ref"
 ":`pg-service-file` section) you need to make your :file:`*.conf` file look "
@@ -420,11 +513,11 @@ msgstr ""
 "PostgreSQL (consultez la section ref:`pg-service-file`), vous devez modifier"
 " vos fichiers :file:`*.conf` de la manière suivante:"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:288
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:299
 msgid "Add fonts to your linux server"
 msgstr "Ajouter des polices à votre serveur Linux"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:290
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:301
 msgid ""
 "Keep in mind that you may use QGIS projects that point to fonts that may not"
 " exist by default on other machines. This means that if you share the "
@@ -437,7 +530,7 @@ msgstr ""
 "différente sur d'autres machines (si les polices n'existent pas sur la "
 "machine cible)."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:294
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:305
 msgid ""
 "In order to ensure this does not happen you just need to install the missing"
 " fonts on the target machine. Doing this on desktop systems is usually "
@@ -448,7 +541,7 @@ msgstr ""
 "systèmes bureautiques est relativement simple (double-cliquer sur des "
 "polices)."
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:297
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:308
 msgid ""
 "For linux, if you don't have a desktop environment installed (or you prefer "
 "the command line) you need to:"
@@ -456,10 +549,10 @@ msgstr ""
 "Sous Linux, si vous n'avez pas d'environnement de bureau d'installé (ou que "
 "vous préferrez la ligne de commande), vous devrez:"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:299
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:310
 msgid "On Debian based systems:"
 msgstr "Sur les systèmes basés sur Debian:"
 
-#: ../../docs/user_manual/working_with_ogc/server/config.rst:312
+#: ../../docs/user_manual/working_with_ogc/server/config.rst:323
 msgid "On Fedora based systems:"
 msgstr "Pour les systèmes basés sur Fedora:"
