@@ -459,7 +459,7 @@ Multiple_format_map_series_using_QGIS_2.6_ .
 
 Another example for using data-defined override buttons is the usage of a dynamic
 picture. For the following examples we use a geopackage layer containing a BLOB field
-called :file:`logo` with the field type binary (see :ref:`vector_create_geopackage`).
+called ``logo`` with the field type binary (see :ref:`vector_create_geopackage`).
 For every feature there is defined a different picture so that the atlas can iterate 
 over as described in :ref:`atlas_preview`.
 All you need to do is add a picture in the print layout and go to its
