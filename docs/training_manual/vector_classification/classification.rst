@@ -56,8 +56,8 @@ effectively.
    :guilabel:`Layers` panel or in the :guilabel:`Layer Properties`
    dialog:
 
-.. figure:: img/change_layer_color.png
-   :align: center
+   .. figure:: img/change_layer_color.png
+      :align: center
 
 Notice that there is one category that's empty:
 
@@ -158,10 +158,10 @@ if not saved.
 #. Add a new column with the |newAttribute| button
 #. Set up the dialog that appears like this:
 
-.. figure:: img/add_area_column.png
-   :align: center
+   .. figure:: img/add_area_column.png
+      :align: center
 
-* Click :guilabel:`OK`.
+#. Click :guilabel:`OK`
 
    The new field will be added (at the far right of the table; you may
    need to scroll horizontally to see it).
@@ -174,19 +174,20 @@ if not saved.
 
    You will get this dialog:
 
-.. figure:: img/calculate_field_dialog.png
-   :align: center
 
-* Change the values at the top of the dialog to look like this:
+   .. figure:: img/calculate_field_dialog.png
+      :align: center
 
-.. figure:: img/field_calculator_top.png
-   :align: center
+#. Change the values at the top of the dialog to look like this:
+ 
+   .. figure:: img/field_calculator_top.png
+      :align: center
 
 #. In the :guilabel:`Function List` select
    :menuselection:`Geometry --> $area`:
 
-.. figure:: img/geometry_area_select.png
-   :align: center
+   .. figure:: img/geometry_area_select.png
+      :align: center
 
 #. Double-click on it so that it appears in the :guilabel:`Expression`
    field
@@ -204,29 +205,34 @@ if not saved.
 #. Change the classification style from :guilabel:`Categorized` to
    :guilabel:`Graduated`
 
-* Change the :guilabel:`Column` to :guilabel:`AREA`:
+#. Open the :guilabel:`Layer properties` dialog's :guilabel:`Symbology` tab
+   for the ``landuse`` layer
+#. Change the classification style from :guilabel:`Categorized` to
+   :guilabel:`Graduated`
 
-* Under :guilabel:`Color ramp`, choose the option :guilabel:`New color ramp...`
-  to get this dialog:
+#. Change the :guilabel:`Value` to ``AREA``
 
-.. figure:: img/area_gradient_select.png
-   :align: center
+#. Under :guilabel:`Color ramp`, choose the option
+   :guilabel:`Create New Color Ramp...`:
+
+   .. figure:: img/area_gradient_select.png
+      :align: center
 
 #. Choose :guilabel:`Gradient` (if it's not selected already) and click
    :guilabel:`OK`. You will see this:
 
-.. figure:: img/gradient_color_select.png
-   :align: center
+   .. figure:: img/gradient_color_select.png
+      :align: center
 
-You'll be using this to denote area, with small areas as :guilabel:`Color 1`
-and large areas as :guilabel:`Color 2`.
+   You'll be using this to denote area, with small areas as
+   :guilabel:`Color 1` and large areas as :guilabel:`Color 2`.
 
-* Choose appropriate colors.
+#. Choose appropriate colors
 
-In the example, the result looks like this:
+   In the example, the result looks like this:
 
-.. figure:: img/gradient_color_example.png
-   :align: center
+   .. figure:: img/gradient_color_example.png
+      :align: center
 
 #. Click :guilabel:`OK`
 #. You can save the colour ramp by selecting
@@ -240,12 +246,12 @@ In the example, the result looks like this:
 
    Now you will have something like this:
 
-.. figure:: img/landuse_gradient_selected.png
-   :align: center
+   .. figure:: img/landuse_gradient_selected.png
+      :align: center
 
-Leave everything else as-is.
+   Leave everything else as-is.
 
-* Click :guilabel:`Ok`:
+#. Click :guilabel:`OK`:
 
 .. figure:: img/gradient_result_map.png
    :align: center
@@ -298,8 +304,8 @@ That's where rule-based classification comes in handy.
 #. Choose a pale blue-grey :guilabel:`Fill color` and remove the
    border:
 
-.. figure:: img/rule_style_result.png
-   :align: center
+   .. figure:: img/rule_style_result.png
+      :align: center
 
 #. Click :guilabel:`OK`
 #. Add a new rule ``"landuse" <> 'residential' AND "AREA" >= 605000``
@@ -320,12 +326,12 @@ That's where rule-based classification comes in handy.
    residential areas, so give the default category a suitable pale
    green color.
 
-Your dialog should now look like this:
+   Your dialog should now look like this:
 
-.. figure:: img/criterion_refined_list.png
-   :align: center
+   .. figure:: img/criterion_refined_list.png
+      :align: center
 
-* Apply this symbology.
+#. Apply this symbology
 
 Your map will look something like this:
 
