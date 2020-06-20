@@ -164,7 +164,7 @@ QGIS has different raster calculators available:
 Each tool is leading to the same results, but the syntax may be
 slightly different and the availability of operators may vary.
 
-We will use :menuselection:Raster Analysis --> Raster calculator` in
+We will use :menuselection:`Raster Analysis --> Raster calculator` in
 the *Processing Toolbox*
 
 #. Open the tool by double clicking on it.
@@ -219,7 +219,7 @@ Therefore the final result will be **False** (0) and **True** (1).
 Now that you have done the aspect, create two new layers from the
 DEM.
 
-* The first will shall identify areas where the slope is less than or
+* The first shall identify areas where the slope is less than or
   equal to ``2`` degrees
 * The second is similar, but the slope should be less than or equal to
   ``5`` degrees.
@@ -235,11 +235,10 @@ DEM.
 Now you have generated three raster layers from the DEM:
 
 * :guilabel:`aspect_north`: terrain facing north
-* :guilabel:`slope_lte2`: slope equalt to or below 2 degrees
-* :guilabel:`slope_lte5`: slope equalt to or below 5 degrees
+* :guilabel:`slope_lte2`: slope equal to or below 2 degrees
+* :guilabel:`slope_lte5`: slope equal to or below 5 degrees
 
-Where the conditions of these layers are met, the pixel value is
-``1``.
+Where the conditions are met, the pixel value is ``1``.
 Elsewhere, it is ``0``.
 Therefore, if you multiply these rasters, the pixels that have a value
 of ``1`` for all of them will get a value of ``1`` (the rest will get
