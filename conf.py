@@ -170,10 +170,10 @@ extlinks = {# api website: docs master branch points to '/' while x.y points to 
 
 context = {
     # 'READTHEDOCS': True,
-    'version_downloads': False,
+    'version_downloads': True,
     'versions': [ [v, docs_url+v] for v in version_list],
     'supported_languages': [ [l, docs_url+version+'/'+l] for l in supported_languages],
-    # 'downloads': [ ['PDF', '/builders.pdf'], ['HTML', '/builders.tgz'] ],
+    'downloads': [ ['PDF', docs_url+version+'/pdf'] ], # ['HTML', '/builders.tgz'] ],
 
     'display_github': not html_context['outdated'], # Do not display for outdated releases
     'github_user': 'qgis',
@@ -212,7 +212,7 @@ latex_documents = [
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
-#latex_logo = None
+latex_logo = 'static/common/logo.png'
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
