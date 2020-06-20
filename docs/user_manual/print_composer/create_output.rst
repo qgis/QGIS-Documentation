@@ -471,10 +471,10 @@ data-defined override button in the :guilabel:`Image source` section of the
 
 .. figure:: img/picture_image_source.png
    :align: center
-   
- In the following window choose :guilabel:`Edit` so that the :guilabel:`Expression String Builder`
- opens. From the :guilabel:`Fields and values` section you can find the BLOB field that
- was defined in the geopackage layer. Double-click the field name :file:`logo` and click :guilabel:`OK`.
+
+In the following window choose :guilabel:`Edit` so that the :guilabel:`Expression String Builder`
+opens. From the :guilabel:`Fields and values` section you can find the BLOB field that
+was defined in the geopackage layer. Double-click the field name :file:`logo` and click :guilabel:`OK`.
  
 .. _figure_expression_blob_picture_atlas:
  
