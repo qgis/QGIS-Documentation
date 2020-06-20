@@ -263,38 +263,27 @@ This is the result:
 Finally the map is ready for export! You'll see the export buttons
 near the top left corner of the layout window:
 
-  |filePrint| |saveMapAsImage| |saveAsSVG|
-  |saveAsPDF|
+* |filePrint| :sup:`Print Layout`: interfaces with a printer.
+  Since the printer options will differ depending on the model of
+  printer that you're working with, it's probably better to consult the
+  printer manual or a general guide to printing for more information on
+  this topic.
 
-The button on the left is the *Print Layout* button, which
-interfaces with a printer.
-Since the printer options will differ depending on the model of
-printer that you're working with, it's probably better to consult the
-printer manual or a general guide to printing for more information on
-this topic.
-
-The other three buttons allow you to export the map page to a file.
-There are three export formats to choose from:
-
-- *Export as Image*
-- *Export as SVG*
-- *Export as PDF*
-
-Exporting as an image will give you a selection of various common
-image formats to choose from.
-This is probably the simplest option, but the image it creates is
-"dead" and difficult to edit.
-
-If you're sending the map to a cartographer (who may want to edit the
-map for publication), it's best to export as an SVG. SVG stands for
-"Scalable Vector Graphic", and can be imported to programs like
-`Inkscape <https://inkscape.org/>`_ or other vector image editing
-software.
-
-If you need to send the map to a client, it's most common to use a
-PDF, because it's easier to set up printing options for a PDF.
-Some cartographers may prefer PDF as well, if they have a program
-that allows them to import and edit this format.
+  The other buttons allow you to export the map page to a file.
+* |saveMapAsImage| :sup:`Export as Image`: gives you a selection
+  of various common image formats to choose from.
+  This is probably the simplest option, but the image it creates is
+  "dead" and difficult to edit.
+* |saveAsSVG| :sup:`Export as SVG`: If you're sending the map to a
+  cartographer (who may want to edit the map for publication),
+  it's best to export as an SVG. SVG stands for "Scalable Vector Graphic",
+  and can be imported to programs like `Inkscape <https://inkscape.org/>`_
+  or other vector image editing software.
+* |saveAsPDF| :sup:`Export as PDF`: If you need to send the map to a client,
+  it's most common to use a PDF, because it's easier to set up printing
+  options for a PDF.
+  Some cartographers may prefer PDF as well, if they have a program
+  that allows them to import and edit this format.
 
 For our purposes, we're going to use PDF.
 
@@ -307,6 +296,7 @@ For our purposes, we're going to use PDF.
    
 #. You can safely use the default values now and click
    :guilabel:`Save`.
+<<<<<<< HEAD
 
 |IC|
 ----------------------------------------------------------------------
@@ -317,6 +307,28 @@ For our purposes, we're going to use PDF.
 #. Open it
 
 Congratulations on your first completed QGIS map project!
+=======
+   
+   QGIS will proceed to the map export and push a message
+   on top of the print layout dialog as soon as it finishes.
+#. Click the hyperlink in the message to open the folder in which
+   the PDF has been saved in your system's file manager
+#. Open it and see how your layout looks.
+
+   Everything is OK?
+   Congratulations on your first completed QGIS map project!
+
+#. Anything unsatisfying? Go back to the QGIS window, do the
+   appropriate modifications and export again.
+#. Remember to save your project file.
+
+
+|IC|
+----------------------------------------------------------------------
+Now you know how to create a basic static map layout. We can go a step
+further and create a map layout that adapts dynamically, with more
+layout items.
+>>>>>>> afb64f17b... Restructure the layout export buttons description
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
