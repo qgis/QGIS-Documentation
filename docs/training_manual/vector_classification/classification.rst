@@ -170,7 +170,10 @@ if not saved.
 
    To solve this problem, we will need to calculate the areas.
 
-   You'll get this dialog:
+* Open the field calculator with the |calculateField| button
+
+   You will get this dialog:
+
 
    .. figure:: img/calculate_field_dialog.png
       :align: center
