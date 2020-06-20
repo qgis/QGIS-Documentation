@@ -24,7 +24,7 @@ objects are.
 
 From the previous exercise, you should have the ``protected_areas`` layer
 loaded in your map. If it is not loaded, then you can find the 
-:file:`protected_areas.shp` ESRI Shapefile in directory 
+:file:`protected_areas.shp` *ESRI Shapefile* format dataset in directory 
 :file:`exercise_data/shapefile`.
 
 The polygons representing the protected areas constitute the **spatial data**,
