@@ -469,7 +469,7 @@ data-defined override button in the :guilabel:`Image source` section of the
 
 .. _figure_image_source:
 
-.. figure:: img/image_source.png
+.. figure:: img/picture_image_source.png
    :align: center
    
  In the following window choose :guilabel:`Edit` so that the :guilabel:`Expression String Builder`
