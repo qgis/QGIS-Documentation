@@ -464,7 +464,7 @@ For every feature there is defined a different picture so that the atlas can ite
 over as described in :ref:`atlas_preview`.
 All you need to do is add a picture in the print layout and go to its
 :guilabel:`Item properties` in the atlas context. There you can find a 
-data-defined override button in the :guilabel:`Image source`section of the
+data-defined override button in the :guilabel:`Image source` section of the
 :guilabel:`Main Properties`.
 
 .. _figure_image_source:
