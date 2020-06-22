@@ -19,7 +19,7 @@ layers that we can explore during this tutorial.
    These datasets are found in a *GeoPackage* file that contains several
    datasets, so the dialog in :guilabel:`Data Source Manager` is a bit
    different from what you experienced for the ESRI Shapefile format datasets.
-   The result view should look similiar to the snippet below:
+   The result view should look similar to the snippet below:
 
    .. figure:: img/roads_buildings_added.png
      :align: center
