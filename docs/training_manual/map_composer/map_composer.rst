@@ -296,18 +296,6 @@ For our purposes, we're going to use PDF.
    
 #. You can safely use the default values now and click
    :guilabel:`Save`.
-<<<<<<< HEAD
-
-|IC|
-----------------------------------------------------------------------
-
-#. Close the layout window
-#. Save your map
-#. Find your exported PDF using your operating system's file manager
-#. Open it
-
-Congratulations on your first completed QGIS map project!
-=======
    
    QGIS will proceed to the map export and push a message
    on top of the print layout dialog as soon as it finishes.
@@ -328,7 +316,6 @@ Congratulations on your first completed QGIS map project!
 Now you know how to create a basic static map layout. We can go a step
 further and create a map layout that adapts dynamically, with more
 layout items.
->>>>>>> afb64f17b... Restructure the layout export buttons description
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
