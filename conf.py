@@ -210,10 +210,6 @@ latex_documents = [
   #('docs/developers_guide/index', 'QGISDevelopersGuide.tex', u'QGIS Developers Guide', u'QGIS Project', 'manual'),
 ]
 
-# Exclude processing algorithms
-if tags.has('latex'):
-    exclude_patterns += ['docs/user_manual/processing_algs/*']
-
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
 #latex_logo = None
