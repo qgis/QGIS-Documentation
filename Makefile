@@ -36,7 +36,7 @@ gettext:
 # this will build html-version of one language (defaults to english: en)
 # to build for example dutch on Linux:
 #  make LANG=nl html
-# on windows: 
+# on windows:
 #  set SPHINXOPTS=-D language=nl
 #  make.bat html
 # note that the translations/po files from git will be used
@@ -50,10 +50,25 @@ html:
 	fi
 
 latex:
-	$(SPHINXBUILD) -b latex "$(SOURCEDIR)" "$(BUILDDIR)/latex/$(LANG)" $(SPHINXINTLOPTS) $(0); \
+	$(SPHINXBUILD) -b latex -t latex "$(SOURCEDIR)" "$(BUILDDIR)/latex/$(LANG)" $(SPHINXINTLOPTS) $(0); \
 
-site: html
+pdf: latex
+
+	(cd $(BUILDDIR)/latex/$(LANG); \
+	pdflatex QGISUserGuide.tex; \
+	pdflatex QGISUserGuide.tex; \
+	pdflatex PyQGISDeveloperCookbook.tex; \
+	pdflatex PyQGISDeveloperCookbook.tex; \
+	pdflatex QGISTrainingManual.tex; \
+	pdflatex QGISTrainingManual.tex;)
+	mkdir -p $(BUILDDIR)/pdf/$(LANG);
+	mv $(BUILDDIR)/latex/$(LANG)/QGISUserGuide.pdf $(BUILDDIR)/pdf/$(LANG)/;
+	mv $(BUILDDIR)/latex/$(LANG)/PyQGISDeveloperCookbook.pdf $(BUILDDIR)/pdf/$(LANG)/;
+	mv $(BUILDDIR)/latex/$(LANG)/QGISTrainingManual.pdf $(BUILDDIR)/pdf/$(LANG)/;
+
+site: html pdf
 	rsync -az $(BUILDDIR)/html/$(LANG) $(SITEDIR)/
+	rsync -az $(BUILDDIR)/pdf $(SITEDIR)/
 
 # this will build ALL languages, AND tries to rsync them to the web dir on qgis2
 # to be able to run this you will need a key on the server

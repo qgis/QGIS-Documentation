@@ -170,10 +170,10 @@ extlinks = {# api website: docs master branch points to '/' while x.y points to 
 
 context = {
     # 'READTHEDOCS': True,
-    'version_downloads': False,
+    'version_downloads': True,
     'versions': [ [v, docs_url+v] for v in version_list],
     'supported_languages': [ [l, docs_url+version+'/'+l] for l in supported_languages],
-    # 'downloads': [ ['PDF', '/builders.pdf'], ['HTML', '/builders.tgz'] ],
+    'downloads': [ ['PDF', docs_url+version+'/pdf'] ], # ['HTML', '/builders.tgz'] ],
 
     'display_github': not html_context['outdated'], # Do not display for outdated releases
     'github_user': 'qgis',
@@ -204,15 +204,15 @@ latex_paper_size = 'a4'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('docs/user_manual/index', 'QGISUserGuide.tex', u'QGIS User Guide', u'QGIS Project', 'manual'),
-  ('docs/pyqgis_developer_cookbook/index', 'PyQGISDeveloperCookbook.tex', u'PyQGIS developer cookbook', u'QGIS Project', 'manual'),
+  ('docs/user_manual/index', 'QGISUserGuide.tex', f'QGIS {version} User Guide', u'QGIS Project', 'manual'),
+  ('docs/pyqgis_developer_cookbook/index', 'PyQGISDeveloperCookbook.tex', f'PyQGIS {version} developer cookbook', u'QGIS Project', 'manual'),
   ('docs/training_manual/index', 'QGISTrainingManual.tex', u'QGIS Training Manual', u'QGIS Project', 'manual'),
-  ('docs/developers_guide/index', 'QGISDevelopersGuide.tex', u'QGIS Developers Guide', u'QGIS Project', 'manual'),
+  #('docs/developers_guide/index', 'QGISDevelopersGuide.tex', u'QGIS Developers Guide', u'QGIS Project', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
-#latex_logo = None
+latex_logo = 'static/common/logo.png'
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
@@ -244,6 +244,7 @@ latex_elements = {
     \\newunicodechar{≠}{$\\neq$}
     \\newunicodechar{≥}{$\geq$}
     \\newunicodechar{≤}{$\leq$}
+    \\newunicodechar{π}{$\pi$}
     \\newunicodechar{​}{ }'''
 }
 
@@ -406,4 +407,3 @@ class BetterOutputChecker(doctest.OutputChecker):
         return doctest.OutputChecker.check_output(self, want, got, optionflags)
 
 ext_doctest.SphinxDocTestRunner = BetterDocTestRunner
-
