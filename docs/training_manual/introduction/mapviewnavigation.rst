@@ -14,8 +14,12 @@ Before learning how to navigate within the Map Canvas, let's add two additional
 layers that we can explore during this tutorial.
 
 #. Use the steps learnt in :ref:`Create a Map <tm_pepare_a_map>` lesson to add 
-   ESRI Shapefiles :file:`roads.shp` and :file:`buildings.shp` as layers to the 
-   current project.  The result view should look similiar to the snippet below:
+   the ``roads`` and ``buildings`` datasets from :file:`training_data.gpkg`
+   as layers to the current project.
+   These datasets are contained in a GeoPackage file, containing several
+   datasets, so the dialog in :guilabel:`Data Source Manager` is a bit
+   different from what you experienced for the ESRI Shapefile format datasets.
+   The result view should look similiar to the snippet below:
 
    .. figure:: img/roads_buildings_added.png
      :align: center
