@@ -16,7 +16,7 @@ layers that we can explore during this tutorial.
 #. Use the steps learnt in :ref:`Create a Map <tm_pepare_a_map>` lesson to add 
    the ``roads`` and ``buildings`` datasets from :file:`training_data.gpkg`
    as layers to the current project.
-   These datasets are contained in a GeoPackage file, containing several
+   These datasets are found in a *GeoPackage* file that contains several
    datasets, so the dialog in :guilabel:`Data Source Manager` is a bit
    different from what you experienced for the ESRI Shapefile format datasets.
    The result view should look similiar to the snippet below:
