@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Francis Gasc <francisgasc@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:20+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,36 +36,44 @@ msgstr ""
 
 #: ../../docs/training_manual/grass/grass_tools.rst:11
 msgid "|basic| |FA| Create an aspect map"
-msgstr ""
+msgstr "|basic| |FA| Créer une carte d'aspect"
 
 #: ../../docs/training_manual/grass/grass_tools.rst:13
 #: ../../docs/training_manual/grass/grass_tools.rst:36
 msgid "Open the :guilabel:`GRASS Tools` tab"
-msgstr ""
+msgstr "Ouvrez l'onglet :guilabel:`outils GRASS`"
 
 #: ../../docs/training_manual/grass/grass_tools.rst:14
 #: ../../docs/training_manual/grass/grass_tools.rst:37
 msgid ""
 "Load the :file:`g_dem` raster layer from the :guilabel:`grass_mapset` Mapset"
 msgstr ""
+"Chargez la couche matricielle :file:`g_dem` depuis le jeu de cartes "
+":guilabel:`grass_mapset`"
 
 #: ../../docs/training_manual/grass/grass_tools.rst:15
 msgid ""
 "Look for the :guilabel:`r.aspect` module by searching for it in the "
 ":guilabel:`Filter` field of the :guilabel:`Modules List` tab"
 msgstr ""
+"Recherchez le module :guilabel:`r.aspect` en le cherchant dans le champ "
+":guilabel:`Filtre` de l'onglet :guilabel:`liste des modules`."
 
 #: ../../docs/training_manual/grass/grass_tools.rst:17
 msgid ""
 "Open the tool and set it up like this and click on the :guilabel:`Run` "
 "button:"
 msgstr ""
+"Ouvrez l'outil et configurez-le comme suit, puis cliquez sur le bouton "
+":guilabel:`Run` :"
 
 #: ../../docs/training_manual/grass/grass_tools.rst:22
 msgid ""
 "When the process is finished click on :guilabel:`View Output` to load the "
 "resulting layer in the canvas:"
 msgstr ""
+"Lorsque le processus est terminé, cliquez sur :guilabel:`voir le résultat` "
+"pour charger la couche résultante dans le canevas :"
 
 #: ../../docs/training_manual/grass/grass_tools.rst:28
 msgid ""
@@ -72,25 +81,32 @@ msgid ""
 "Mapset so you can remove the layer from the canvas and reload it whenever "
 "you want."
 msgstr ""
+"La couche :file:`g_aspect` est stockée dans le Mapset "
+":guilabel:`grass_mapset` afin que vous puissiez retirer la couche du canevas"
+" et la recharger quand vous le souhaitez."
 
 #: ../../docs/training_manual/grass/grass_tools.rst:32
 msgid "|basic| |FA| Get basic statistic of raster layer"
-msgstr ""
+msgstr "|basic| |FA| Obtenir des statistiques de base sur la couche raster"
 
 #: ../../docs/training_manual/grass/grass_tools.rst:34
 msgid ""
 "We want to know some basic statistics of the :file:`g_dem` raster layer."
 msgstr ""
+"Nous voulons connaître quelques statistiques de base de la couche raster "
+":file:`g_dem`."
 
 #: ../../docs/training_manual/grass/grass_tools.rst:38
 msgid ""
 "Look for the :guilabel:`r.info` module by searching for it in the "
 ":guilabel:`Filter` field of the :guilabel:`Modules List` tab"
 msgstr ""
+"Recherchez le module :guilabel:`r.info` en le cherchant dans le champ "
+":guilabel:`Filtre` de l'onglet :guilabel:`liste modules`."
 
 #: ../../docs/training_manual/grass/grass_tools.rst:40
 msgid "Set up the tool like this and click on :guilabel:`Run`:"
-msgstr ""
+msgstr "Configurez l'outil comme ceci et cliquez sur :guilabel:`Run` :"
 
 #: ../../docs/training_manual/grass/grass_tools.rst:45
 msgid ""
@@ -98,10 +114,13 @@ msgid ""
 " path of the file, the number of rows and columns and other useful "
 "information:"
 msgstr ""
+"Dans l'onglet Sortie, vous verrez s'imprimer certaines informations raster, "
+"comme le chemin d'accès au fichier, le nombre de lignes et de colonnes et "
+"d'autres informations utiles :"
 
 #: ../../docs/training_manual/grass/grass_tools.rst:53
 msgid "|moderate| |FA| The Reclass Tool"
-msgstr ""
+msgstr "|moderate| |FA| L'outil de recyclage"
 
 #: ../../docs/training_manual/grass/grass_tools.rst:55
 msgid ""
@@ -112,6 +131,13 @@ msgid ""
 "just 4 **categories** following specific *rules* (North = 1, East = 2, South"
 " = 3 and West = 4)."
 msgstr ""
+"La reclassification d'une couche raster est une tâche très utile. Nous "
+"venons de créer la couche :file:`g_aspect` à partir de la couche "
+":file:`g_dem` one. La plage de valeurs va de 0 (Nord) à 360 (Nord à nouveau)"
+" en passant par 90 (Est), 180 (Sud), 270 (Ouest) et enfin 360 (Nord à "
+"nouveau). Nous pouvons reclassifier la couche :file:`g_aspect` pour n'avoir "
+"que 4 **catégories** suivant des *règles* spécifiques (Nord = 1, Est = 2, "
+"Sud = 3 et Ouest = 4)."
 
 #: ../../docs/training_manual/grass/grass_tools.rst:62
 msgid ""
@@ -119,24 +145,34 @@ msgid ""
 " the rules is very simple and the GRASS Manual contains very good "
 "description."
 msgstr ""
+"L'outil de reclassification Grass accepte un fichier \"txt\" avec les règles"
+" définies. L'écriture des règles est très simple et le manuel GRASS contient"
+" une très bonne description."
 
 #: ../../docs/training_manual/grass/grass_tools.rst:65
 msgid ""
 "Each GRASS tool has its own Manual tab. Take the time to read the "
 "description of the tool you are using to don't miss some useful parameters"
 msgstr ""
+"Chaque outil GRASS a son propre onglet Manuel. Prenez le temps de lire la "
+"description de l'outil que vous utilisez pour ne pas manquer quelques "
+"paramètres utiles"
 
 #: ../../docs/training_manual/grass/grass_tools.rst:69
 msgid ""
 "Load the :file:`g_aspect` layer or, if you don't have create it, go back to "
 "the :ref:`grass_aspect` section."
 msgstr ""
+"Chargez la couche :file:`g_aspect` ou, si vous ne l'avez pas encore créée, "
+"retournez à la section :ref:`grass_aspect`."
 
 #: ../../docs/training_manual/grass/grass_tools.rst:71
 msgid ""
 "Look for the :guilabel:`r.reclass` module by searching for it in the "
 ":guilabel:`Filter` field of the :guilabel:`Modules List` tab"
 msgstr ""
+"Recherchez le module :guilabel:`r.reclass` en le cherchant dans le champ "
+":guilabel:`Filtre` de l'onglet :guilabel:`liste modules`."
 
 #: ../../docs/training_manual/grass/grass_tools.rst:73
 msgid ""
@@ -144,6 +180,9 @@ msgid ""
 "the rules is in the :file:`exercise_data/grass/` folder, named "
 ":file:`reclass_aspect.txt`."
 msgstr ""
+"Ouvrez l'outil et configurez-le comme sur l'image suivante. Le fichier "
+"contenant les règles se trouve dans le dossier :file:`exercise_data/grass/`,"
+" nommé :file:`reclass_aspect.txt`."
 
 #: ../../docs/training_manual/grass/grass_tools.rst:75
 msgid "Click on :guilabel:`Run` and wait until the process is finished:"

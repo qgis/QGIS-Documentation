@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Francis Gasc <francisgasc@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:21+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -65,12 +66,18 @@ msgid ""
 "then typed to a spreadsheet. The sample plots information has been condensed"
 " into a :file:`.csv` file that can be easily open in QGIS."
 msgstr ""
+"Le plus souvent, les informations sont recueillies sur le terrain au moyen "
+"de formulaires papier, puis saisies dans un tableur. Les informations des "
+"parcelles d'échantillonnage ont été condensées dans un fichier :file:`.csv` "
+"qui peut être facilement ouvert dans le QGIS."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:21
 msgid ""
 "Continue with the QGIS project from the lesson about designing the "
 "inventory, you probably named it :file:`forest_inventory.qgs`."
 msgstr ""
+"Continuez avec le projet QGIS de la leçon sur la conception de l'inventaire,"
+" vous l'avez probablement nommé :file:`forest_inventory.qgs`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:24
 msgid "First, add the sample plots measurements to your QGIS project:"
@@ -89,6 +96,8 @@ msgid ""
 "Browse to the file :file:`systematic_inventory_results.csv` located in "
 ":file:`exercise_data/forestry/results/`."
 msgstr ""
+"Naviguez vers le fichier :file:`systematic_inventory_results.csv` situé dans"
+" :file:`exercise_data/forestry/results/`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:29
 msgid "Make sure that the :guilabel:`Point coordinates` option is checked."
@@ -99,6 +108,8 @@ msgid ""
 "Set the fields for the coordinates to the :guilabel:`X` and :guilabel:`Y` "
 "fields."
 msgstr ""
+"Définissez les champs pour les coordonnées sur les champs :guilabel:`X` et "
+":guilabel:`Y`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:31
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:64
@@ -111,6 +122,8 @@ msgstr "Cliquez sur :guilabel:`OK`."
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:32
 msgid "When prompted, select :guilabel:`ETRS89 / ETRS-TM35FIN` as the CRS."
 msgstr ""
+"Lorsque vous y êtes invité, sélectionnez :guilabel:`ETRS89 / ETRS-TM35FIN` "
+"comme CRS."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:33
 msgid ""
@@ -126,6 +139,10 @@ msgid ""
 "measurements in the text file :file:`legend_2012_inventorydata.txt` located "
 "in the :file:`exercise_data/forestry/results/` folder."
 msgstr ""
+"Vous pouvez lire le type de données qui sont contenues dans les mesures des "
+"placettes d'échantillonnage dans le fichier texte "
+":file:`legend_2012_inventorydata.txt` situé dans le dossier "
+":file:`exercise_data/forestry/results/`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:39
 msgid ""
@@ -134,18 +151,23 @@ msgid ""
 "file. Before you continue, convert the inventory results to a real spatial "
 "dataset:"
 msgstr ""
+"La couche :file:`systematic_inventory_results` que vous venez d'ajouter "
+"n'est en fait qu'une représentation virtuelle des informations textuelles "
+"contenues dans le fichier :file:`.csv`. Avant de continuer, convertissez les"
+" résultats de l'inventaire en un véritable ensemble de données spatiales :"
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:43
 msgid "Right click on the :file:`systematic_inventory_results` layer."
 msgstr ""
+"Faites un clic droit sur la couche :file:`systematic_inventory_results`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:44
 msgid "Browse to :file:`exercise_data/forestry/results/` folder."
-msgstr ""
+msgstr "Naviguez vers le dossier :file:`exercise_data/forestry/results/`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:45
 msgid "Name the file :file:`sample_plots_results.shp`."
-msgstr ""
+msgstr "Nommez le fichier :file:`sample_plots_results.shp`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:46
 msgid "Check :guilabel:`Add saved file to map`."
@@ -155,6 +177,7 @@ msgstr "Cochez :guilabel:`Ajouter les fichiers sauvegardés à la carte`."
 msgid ""
 "Remove the :file:`systematic_inventory_results` layer from your project."
 msgstr ""
+"Supprimez la couche :file:`systematic_inventory_results` de votre projet."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:50
 msgid "|basic| |FA| Whole Forest Parameters Estimation"
@@ -168,6 +191,12 @@ msgid ""
 "areas, you can directly calculate the averages of the volumes and number of "
 "stems per hectare from the :file:`sample_plots_results` layer."
 msgstr ""
+"Vous pouvez calculer les moyennes pour toute cette zone forestière à partir "
+"des résultats de l'inventaire pour certains paramètres intéressants, comme "
+"le volume et le nombre de tiges par hectare. Comme les placettes "
+"d'échantillonnage systématiques représentent des superficies égales, vous "
+"pouvez calculer directement les moyennes des volumes et du nombre de tiges "
+"par hectare à partir de la couche :file:`sample_plots_results`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:58
 msgid ""
@@ -182,24 +211,29 @@ msgid ""
 "Open :menuselection:`Vector --> Analysis Tools --> Basic statistics for "
 "Fields`."
 msgstr ""
+"Ouvrez :menuselection:`Vecteur --> outil d'analyse --> statistiques de base "
+"de champs`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:62
 msgid "Select ``sample_plots_results`` as the :guilabel:`Input Vector Layer`."
 msgstr ""
+"Sélectionnez ``sample_plots_results`` comme :guilabel:`couche source``."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:63
 msgid "Select ``Vol`` as :guilabel:`Target field`."
-msgstr ""
+msgstr "Sélectionnez \"Vol\" comme :guilabel:`champ cible`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:66
 msgid "The average volume in the forest is ``135.2 m3/ha``."
-msgstr ""
+msgstr "Le volume moyen dans la forêt est de \"135,2 m3/ha\"."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:68
 msgid ""
 "You can calculate the average for the number of stems in the same way, "
 "``2745 stems/ha``."
 msgstr ""
+"Vous pouvez calculer la moyenne pour le nombre de tiges de la même manière, "
+"\"2 745 tiges/ha\"."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:74
 msgid "|basic| |FA| Estimating Stand Parameters"
@@ -254,12 +288,17 @@ msgid ""
 "Set ``forest_stands_2012`` as the :guilabel:`Target vector layer`. The layer"
 " you want the results for."
 msgstr ""
+"Définissez ``forest_stands_2012`` comme la :guilabel:`Couche vectorielle "
+"cible``. La couche pour laquelle vous voulez les résultats."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:93
 msgid ""
 "Set ``sample_plots_results`` as the :guilabel:`Join vector layer`. The layer"
 " you want to calculate estimates from."
 msgstr ""
+"Définissez ``sample_plots_results`` comme étant la couche de vecteurs "
+":guilabel:`de jointure`. La couche à partir de laquelle vous voulez calculer"
+" les estimations."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:95
 msgid "Check :guilabel:`Take summary of intersecting features`."
@@ -274,6 +313,8 @@ msgid ""
 "Name the result as :file:`forest_stands_2012_results.shp` and save it in the"
 " :file:`exercise_data/forestry/results/` folder."
 msgstr ""
+"Nommez le résultat comme :file:`forest_stands_2012_results.shp` et "
+"enregistrez-le dans le dossier :file:`exercise_data/forestry/results/`. "
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:99
 msgid ""
@@ -300,6 +341,12 @@ msgid ""
 "calculations, those are the ones having no sample plots. Select them all and"
 " view them in the map, they are some of the smaller stands:"
 msgstr ""
+"Ouvrez la table d'attributs :guilabel:`table attribut` pour "
+":guilabel:`forest_stands_2012_results` et examinez les résultats que vous "
+"avez obtenus. Notez qu'un certain nombre de peuplements forestiers ont "
+"\"NULL\" comme valeur pour les calculs, ce sont ceux qui n'ont pas de "
+"placettes échantillons. Sélectionnez-les tous et visualisez-les sur la "
+"carte, ce sont certains des plus petits peuplements :"
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:114
 msgid ""
@@ -311,6 +358,14 @@ msgid ""
 "again, the average values of the parameters that are in, for example, m3/ha "
 "for the volumes are converted to total volumes for the stands."
 msgstr ""
+"Calculons maintenant les mêmes moyennes pour l'ensemble de la forêt "
+"qu'auparavant, mais cette fois, vous utiliserez les moyennes obtenues pour "
+"les peuplements comme base de calcul. Rappelez-vous que dans la situation "
+"précédente, chaque placette d'échantillonnage représentait un peuplement "
+"théorique de \"80 x 80 m\". Vous devez maintenant considérer la superficie "
+"de chacun des peuplements individuellement. De cette façon, les valeurs "
+"moyennes des paramètres qui sont, par exemple, en m3/ha pour les volumes "
+"sont converties en volumes totaux pour les peuplements."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:122
 msgid ""
@@ -330,21 +385,25 @@ msgstr "Ouvrez la :guilabel:`Calculatrice de champ`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:127
 msgid "Create a new field called ``area``."
-msgstr ""
+msgstr "Créez un nouveau champ appelé \"zone\"."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:128
 msgid "Set the :guilabel:`Output field type` to ``Decimal number (real)``."
 msgstr ""
+"Définissez le type de champ de :guilabel:`sortie` à ``Nombre décimal "
+"(réel)``."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:129
 msgid "Set the :guilabel:`Precision` to ``2``."
-msgstr ""
+msgstr "Réglez :guilabel:`Précision`` à ``2``."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:130
 msgid ""
 "In the :guilabel:`Expression` box, write ``$area / 10000``. This will "
 "calculate the area of the forest stands in ha."
 msgstr ""
+"Dans  :guilabel:`Expression`, écrivez ``$area/10000``. Cela permettra de "
+"calculer la superficie des peuplements forestiers en ha."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:134
 msgid ""
@@ -356,7 +415,7 @@ msgstr ""
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:136
 msgid "Name the fields ``s_vol`` and ``s_stem``."
-msgstr ""
+msgstr "Nommez les champs ``s_vol`` et ``s_stem``."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:137
 msgid "The fields can be integer numbers or you can use real numbers also."
@@ -369,6 +428,8 @@ msgid ""
 "Use the expressions ``\"area\"  *  \"MEANVol\"`` and ``\"area\"  *  "
 "\"MEANStems\"`` for total volumes and total stems respectively."
 msgstr ""
+"Utilisez les expressions \"zone\" * \"MEANVol\" et \"zone\" * \"MEANStems\" "
+"respectivement pour les volumes totaux et les tiges totales."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:140
 msgid "Save the edits when you are finished."
@@ -398,38 +459,50 @@ msgid ""
 ":file:`forest_stands_2012_results` layer, select all the stands containing "
 "information."
 msgstr ""
+"Dans la :guilabel:`table attributaire` pour la couche "
+":file:`forest_stands_2012_results`, sélectionnez tous les stands contenant "
+"des informations."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:150
 msgid ""
 "Open :menuselection:`Vector --> Analysis Tools --> Basic statistics for "
 "fields`."
 msgstr ""
+"Ouvrez :menuselection:`Vecteur --> outils analyse --> statistiques de base "
+"pour les champs`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:151
 msgid ""
 "Select the :file:`forest_stands_2012_results` as the :guilabel:`Input "
 "layer`."
 msgstr ""
+"Sélectionnez le fichier :file:`forest_stands_2012_results` comme "
+":guilabel:`Couche d'entrée`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:152
 msgid "Select ``area`` as :guilabel:`Field to calculate statistics on`."
-msgstr ""
+msgstr "Sélectionnez \"zone\" comme :guilabel:`Field to calculate statistics on`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:153
 msgid "Check the :guilabel:`Selected features only`"
-msgstr ""
+msgstr "Cochez la case :guilabel:`Selected features only`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:159
 msgid ""
 "As you can see, the total sum of the stands' areas is ``66.04 ha``. Note "
 "that the area of the missing forest stands is only about ``7 ha``."
 msgstr ""
+"Comme vous pouvez le voir, la somme totale des superficies des peuplements "
+"est de 66,04 ha. Notez que la superficie des peuplements forestiers "
+"manquants n'est que de \"7 ha\" environ."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:162
 msgid ""
 "In the same way, you can calculate that the total volume for these stands is"
 " ``8908 m3/ha`` and the total number of stems is ``179594 stems``."
 msgstr ""
+"De même, vous pouvez calculer que le volume total de ces peuplements est de "
+"\"8908 m3/ha\" et que le nombre total de tiges est de \"179594 tiges\"."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:165
 msgid ""
@@ -442,15 +515,15 @@ msgstr ""
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:168
 msgid "``184.9 m3/ha`` and"
-msgstr ""
+msgstr "\"184.9 m3/ha\" et"
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:169
 msgid "``2719 stems/ha``."
-msgstr ""
+msgstr "``2719 stems/ha``."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:171
 msgid "Save your QGIS project, :file:`forest_inventory.qgs`."
-msgstr ""
+msgstr "Enregistrez votre projet QGIS, :file:`forest_inventory.qgs`."
 
 #: ../../docs/training_manual/forestry/parameters_calculation.rst:174
 msgid "|IC|"
