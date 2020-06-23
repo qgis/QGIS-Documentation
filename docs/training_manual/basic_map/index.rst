@@ -11,7 +11,6 @@ for further demonstrations of QGIS functionality.
    overview
    preparation
    mapviewnavigation
-   vector_data
    symbology
 
 
