@@ -150,7 +150,7 @@ lesson.
 
 .. _backlink-labels-attribute-data-1:
 
-|basic| |FA| Attribute data
+|basic| |TY| Attribute data
 -------------------------------------------------------------------------------
 
 Open the attribute table for the :guilabel:`places` layer.
