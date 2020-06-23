@@ -1,7 +1,7 @@
 |LS| Navigating the Map Canvas
 ===============================================================================
 This section will focus on basic QGIS navigation tools used to navigate within 
-the Map Canvas.  These tools will allow you to visually explore the layers at 
+the Map Canvas. These tools will allow you to visually explore the layers at 
 different scales.
 
 **The goal for this lesson:** Learn how to use Pan and Zoom tools within QGIS 
@@ -95,7 +95,7 @@ the Map Canvas.
 |IC|
 -------------------------------------------------------------------------------
 
-Knowing how to navigate the Map Canvas is important, as it allows one to explore and visually inspect the layers.  This could be done for initial data exploration, or to validate output of a spatial analysis.
+Knowing how to navigate the Map Canvas is important, as it allows one to explore and visually inspect the layers. This could be done for initial data exploration, or to validate output of a spatial analysis.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
