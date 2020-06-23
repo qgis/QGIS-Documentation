@@ -1,24 +1,6 @@
 Answer Sheet
 ===============================================================================
 
-|RF| *Adding Your First Layer*
--------------------------------------------------------------------------------
-
-.. _interface-preparation-1:
-
-|basic| *Preparation*
-...............................................................................
-
-In the main area of the dialog you should see many shapes with different
-colors. Each shape belongs to a layer you can identify by its color in the
-left panel (your colors may be different from the ones below):
-
-.. figure:: img/basic_map.png
-   :align: center
-
-:ref:`Back to text <backlink-interface-preparation-1>`
-
-
 |RF| *An Overview of the Interface*
 -------------------------------------------------------------------------------
 
@@ -47,6 +29,42 @@ remember the names and functions of the screen elements.
 :ref:`Back to text <backlink-interface-overview-2>`
 
 
+|RF| *Adding Your First Layer*
+-------------------------------------------------------------------------------
+
+.. _interface-preparation-1:
+
+|basic| *Preparation*
+...............................................................................
+
+In the main area of the dialog you should see many shapes with different
+colors. Each shape belongs to a layer you can identify by its color in the
+left panel (your colors may be different from the ones below):
+
+.. figure:: img/basic_map.png
+   :align: center
+
+:ref:`Back to text <backlink-interface-preparation-1>`
+
+
+.. _vector-load-more-data:
+
+|basic| *Data loading*
+...............................................................................
+
+Your map should have seven layers:
+
+* :guilabel:`protected_areas`
+* :guilabel:`places`
+* :guilabel:`rivers`
+* :guilabel:`roads`
+* :guilabel:`landuse`
+* :guilabel:`buildings` (taken from :file:`training_data.gpkg`) and
+* :guilabel:`water` (taken from :file:`exercise_data/shapefile`).
+
+:ref:`Back to text <backlink-vector-load-more-data>`
+
+
 |RF| *Working with Vector Data*
 -------------------------------------------------------------------------------
 
@@ -72,24 +90,6 @@ remember the names and functions of the screen elements.
   You can add comment on other fields from these two records, if you like.
 
 :ref:`Back to text <backlink-vector-explore-attribute-data>`
-
-.. _vector-load-more-data:
-
-|basic| *Data loading*
-...............................................................................
-
-Your map should have seven layers:
-
-* :guilabel:`protected_areas`
-* :guilabel:`places`
-* :guilabel:`rivers`
-* :guilabel:`roads`
-* :guilabel:`landuse`
-* :guilabel:`buildings` (taken from :file:`training_data.gpkg`) and
-* :guilabel:`water` (taken from :file:`exercise_data/shapefile`).
-
-:ref:`Back to text <backlink-vector-load-more-data>`
-
 
 |RF| *Symbology*
 -------------------------------------------------------------------------------
