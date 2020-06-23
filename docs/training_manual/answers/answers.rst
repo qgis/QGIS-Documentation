@@ -65,32 +65,6 @@ Your map should have seven layers:
 :ref:`Back to text <backlink-vector-load-more-data>`
 
 
-|RF| *Working with Vector Data*
--------------------------------------------------------------------------------
-
-.. _vector-explore-attribute-data:
-
-|basic| *Attribute data*
-...............................................................................
-
-* There should be 9 fields in the :guilabel:`rivers` layer:
-
-  #. Select the layer in the :guilabel:`Layers` panel.
-  #. Right-click and choose :guilabel:`Open Attribute Table`, or press the |openTable|
-     button on the :guilabel:`Attributes Toolbar`.
-  #. Count the number of columns.
-
-  .. tip:: A quicker approach could be to double-click the
-   :guilabel:`rivers` layer, open the :menuselection:`Layer properties -->
-   Fields` tab, where you will find a numbered list of the table's fields.
-
-* Information about towns is available in the :guilabel:`places` layer. Open its
-  attribute table as you did with the :guilabel:`rivers` layer: there are two features whose :guilabel:`place`
-  attribute is set to ``town``: *Swellendam* and *Buffeljagsrivier*.
-  You can add comment on other fields from these two records, if you like.
-
-:ref:`Back to text <backlink-vector-explore-attribute-data>`
-
 |RF| *Symbology*
 -------------------------------------------------------------------------------
 
@@ -231,8 +205,32 @@ Here are examples of the symbol structure:
 
 :ref:`Back to text <backlink-symbology-geom_generator>`
 
-|RF| *Attribute Data*
+|RF| *Vector Attribute Data*
 -------------------------------------------------------------------------------
+
+.. _vector-explore-attribute-data:
+
+|basic| *Exploring Vector Data Attributes*
+...............................................................................
+
+* There should be 9 fields in the :guilabel:`rivers` layer:
+
+  #. Select the layer in the :guilabel:`Layers` panel.
+  #. Right-click and choose :guilabel:`Open Attribute Table`, or press the |openTable|
+     button on the :guilabel:`Attributes Toolbar`.
+  #. Count the number of columns.
+
+  .. tip:: A quicker approach could be to double-click the
+   :guilabel:`rivers` layer, open the :menuselection:`Layer properties -->
+   Fields` tab, where you will find a numbered list of the table's fields.
+
+* Information about towns is available in the :guilabel:`places` layer. Open its
+  attribute table as you did with the :guilabel:`rivers` layer:
+  there are two features whose :guilabel:`place`
+  attribute is set to ``town``: *Swellendam* and *Buffeljagsrivier*.
+  You can add comment on other fields from these two records, if you like.
+
+:ref:`Back to text <backlink-vector-explore-attribute-data>`
 
 .. _labels-attribute-data-1:
 
