@@ -103,11 +103,11 @@ If you want to build PDFs in another language, you can use a similar syntax:
 
 .. code-block:: bash
 
- make LANG=fr html
+ make LANG=fr pdf
 
 For building PDFs, you may have to install the texlive extra package for your
 specific language (e.g. ``texlive-lang-french``) or install them all
-(``texlive-lang-french``).
+(``texlive-lang-all``).
 
 
 Build on Windows
