@@ -189,10 +189,47 @@ using any of the methods explained above:
 :ref:`Check your results <vector-load-more-data>`
 
 
+|FA| Reordering the Layers
+-------------------------------------------------------------------------------
+
+The layers in your Layers list are drawn on the map in a certain order. The
+layer at the bottom of the list is drawn first, and the layer at the top is
+drawn last. By changing the order that they are shown on the list, you can
+change the order they are drawn in.
+
+.. note:: You can alter this behavior using the :guilabel:`Control rendering
+   order` checkbox beneath the :guilabel:`Layer Order` panel. We will
+   however not discuss this feature yet.
+
+The order in which the layers have been loaded into the map is probably not
+logical at this stage. It's possible that the road layer is completely hidden
+because other layers are on top of it.
+
+For example, this layer order...
+
+.. figure:: img/incorrect_layer_order.png
+   :align: center
+
+... would result in roads and places being hidden as they run *underneath*
+the polygons of the landuse layer.
+
+To resolve this problem:
+
+#. Click and drag on a layer in the Layers list.
+#. Reorder them to look like this:
+
+.. figure:: img/correct_layer_order.png
+   :align: center
+
+You'll see that the map now makes more sense visually, with roads and buildings
+appearing above the land use regions.
+
+
 |IC|
 -------------------------------------------------------------------------------
 
-You've learned how to add layers of different formats and create a basic map!
+Now you've added all the layers you need from several different sources
+and create a basic map!
 
 
 |WN|
