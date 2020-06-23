@@ -107,7 +107,7 @@ If you want to build PDFs in another language, you can use a similar syntax:
 
 For building PDFs, you may have to install the texlive extra package for your
 specific language (e.g. ``texlive-lang-french``) or install them all
-(``texlive-lang-french``).
+(``texlive-lang-all``).
 
 
 Build on Windows
@@ -198,4 +198,3 @@ BUT we do not do this yet as there were some technical issues...
 .. code-block:: bash
 
  .\scripts\create_transifex_yaml.sh
-
