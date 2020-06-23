@@ -230,19 +230,12 @@ Here are examples of the symbol structure:
   attribute is set to ``town``: *Swellendam* and *Buffeljagsrivier*.
   You can add comment on other fields from these two records, if you like.
 
+* The ``name`` field is the most useful to show as labels. This is because all its
+  values are unique for every object and are very unlikely to contain *NULL*
+  values. If your data contains some *NULL* values, do not worry as long as most
+  of your places have names.
+
 :ref:`Back to text <backlink-vector-explore-attribute-data>`
-
-.. _labels-attribute-data-1:
-
-|basic| *Attribute Data*
-...............................................................................
-
-The ``name`` field is the most useful to show as labels. This is because all its
-values are unique for every object and are very unlikely to contain *NULL*
-values. If your data contains some *NULL* values, do not worry as long as most
-of your places have names.
-
-:ref:`Back to text <backlink-labels-attribute-data-1>`
 
 
 |RF| *Labels*
