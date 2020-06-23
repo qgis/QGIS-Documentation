@@ -136,27 +136,10 @@ You may now close the attribute table.
 
 #. How many fields are available in the :guilabel:`rivers` layer?
 #. Tell us a bit about the ``town`` places in your dataset.
+#. Open the attribute table for the :guilabel:`places` layer.
+   Which field would be the most useful to represent in label form, and why?
 
 :ref:`Check your results <vector-explore-attribute-data>`
-
-|WN|
--------------------------------------------------------------------------------
-
-Using the random palette automatically assigned when loading the layers, your
-current map is probably not easy to read. It would be preferable to assign your
-own choice of colors and symbols. This is what you'll learn to do in the next
-lesson.
-
-
-.. _backlink-labels-attribute-data-1:
-
-|basic| |TY| Attribute data
--------------------------------------------------------------------------------
-
-Open the attribute table for the :guilabel:`places` layer.
-Which field would be the most useful to represent in label form, and why?
-
-:ref:`Check your results <labels-attribute-data-1>`
 
 |IC|
 -------------------------------------------------------------------------------
