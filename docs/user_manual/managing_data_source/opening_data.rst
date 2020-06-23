@@ -162,8 +162,8 @@ hierarchically, and there are several top level entries:
    * |wcs| :guilabel:`WCS`
    * |wfs| :guilabel:`WFS/OGC API-Features`
    * |ows| :guilabel:`OWS`
-   * |ams| :guilabel:`ArcGISMapServer`
-   * |afs| :guilabel:`ArcGISFeatureServer`
+   * |ams| :guilabel:`ArcGIS Map Service`
+   * |afs| :guilabel:`ArcGIS Feature Service`
    * |geonode| :guilabel:`GeoNode`
 
 Interacting with the Browser items

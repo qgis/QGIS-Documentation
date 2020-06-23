@@ -17,8 +17,8 @@ Introduction
 MetaSearch is a QGIS plugin to interact with metadata catalog services,
 supporting the OGC Catalog Service for the Web (CSW) standard.
 
-MetaSearch provides an easy and intuitive approach and user-friendly interface
-to searching metadata catalogs within QGIS.
+MetaSearch provides an easy and intuitive approach and user-friendly
+interface to searching metadata catalogs within QGIS.
 
 .. _figure_metasearch_results:
 
@@ -45,9 +45,10 @@ and other potential resources.
 Startup
 .......
 
-To start MetaSearch, click the |metasearch| icon or select :menuselection:`Web -->
-MetaSearch --> MetaSearch` via the QGIS main menu. The MetaSearch dialog will
-appear. The main GUI consists of three tabs: :guilabel:`Services`,
+To start MetaSearch, click the |metasearch| icon or select
+:menuselection:`Web --> MetaSearch --> MetaSearch` via the QGIS main menu.
+The MetaSearch dialog will appear.
+The main GUI consists of three tabs: :guilabel:`Services`,
 :guilabel:`Search` and :guilabel:`Settings`.
 
 Managing Catalog Services
@@ -60,19 +61,21 @@ Managing Catalog Services
 
    Managing Catalog Services
 
-The :guilabel:`Services` tab allows the user to manage all available catalog
-services. MetaSearch provides a default list of Catalog Services, which can
-be added by pressing :guilabel:`Add Default Services` button.
+The :guilabel:`Services` tab allows the user to manage all available
+catalog services.
+MetaSearch provides a default list of Catalog Services, which can be
+added by pressing the :guilabel:`Add Default Services` button.
 
 To find all listed Catalog Service entries, click the dropdown select box.
 
 To add a Catalog Service entry:
 
 #. Click the :guilabel:`New` button
-#. Enter a :guilabel:`Name` for the service, as well as the :guilabel:`URL` (endpoint).
+#. Enter a :guilabel:`Name` for the service, as well as the
+   :guilabel:`URL` (endpoint).
    Note that only the base URL is required (not a full GetCapabilities URL).
-#. If the CSW requires authentication, enter the appropriate :guilabel:`User name`
-   and :guilabel:`Password` credentials.
+#. If the CSW requires authentication, enter the appropriate
+   :guilabel:`User name` and :guilabel:`Password` credentials.
 #. Click :guilabel:`OK` to add the service to the list of entries.
 
 To edit an existing Catalog Service entry:
@@ -82,13 +85,13 @@ To edit an existing Catalog Service entry:
 #. And modify the :guilabel:`Name` or :guilabel:`URL` values
 #. Click :guilabel:`OK`.
 
-To delete a Catalog Service entry, select the entry you would like to delete
-and click the :guilabel:`Delete` button. You will be asked to confirm deleting the
-entry.
+To delete a Catalog Service entry, select the entry you would like to
+delete and click the :guilabel:`Delete` button.
+You will be asked to confirm deleting the entry.
 
-MetaSearch allows for loading and saving connections to an XML file. This is
-useful when you need to share settings between applications. Below is an
-example of the XML file format.
+MetaSearch allows loading and saving connections to an XML file.
+This is useful when you need to share settings between applications.
+Below is an example of the XML file format.
 
 .. code-block:: xml
 
@@ -108,16 +111,18 @@ example of the XML file format.
 To load a list of entries:
 
 #. Click the :guilabel:`Load` button. A new window will appear.
-#. Click the :guilabel:`Browse` button and navigate to the XML file of entries
-   you wish to load.
+#. Click the :guilabel:`Browse` button and navigate to the XML file of
+   entries you wish to load.
 #. Click :guilabel:`Open`. The list of entries will be displayed.
-#. Select the entries you wish to add from the list and click :guilabel:`Load`.
+#. Select the entries you wish to add from the list and click
+   :guilabel:`Load`.
 
-Click the :guilabel:`Service Info` button to display information about the selected
-Catalog Service such as service identification, service provider and contact
-information. If you would like to view the raw XML response, click the
-:guilabel:`GetCapabilities Response` button. A separate window will open displaying
-Capabilities XML.
+Click the :guilabel:`Service Info` button to display information about
+the selected Catalog Service such as service identification, service
+provider and contact information.
+If you would like to view the raw XML response, click the
+:guilabel:`GetCapabilities Response` button.
+A separate window will open displaying the Capabilities XML.
 
 Searching Catalog Services
 ..........................
@@ -129,36 +134,42 @@ Searching Catalog Services
 
    Searching catalog services
 
-The :guilabel:`Search` tab allows the user to query Catalog Services for data
-and services, set various search parameters and view results.
+The :guilabel:`Search` tab allows the user to query Catalog Services
+for data and services, set various search parameters and view results.
 
 The following search parameters are available:
 
 * :guilabel:`Keywords`: free text search keywords;
 * :guilabel:`From`: the Catalog Service to perform the query against;
-* **Bounding box**: the spatial area of interest to filter on defined by
-  :guilabel:`Xmax`, :guilabel:`Xmin`, :guilabel:`Ymax`, and :guilabel:`Ymin`.
-  Click :guilabel:`Set  Global` to do a  global search, click :guilabel:`Map Extent` to do a
-  search on the visible area only or manually enter custom values as desired.
+* **Bounding box**: the spatial area of interest to filter, defined
+  by :guilabel:`Xmax`, :guilabel:`Xmin`, :guilabel:`Ymax`, and
+  :guilabel:`Ymin`.
+  Click :guilabel:`Set  Global` to do a  global search, click
+  :guilabel:`Map Extent` to do a search in the visible area, or
+  enter values manually.
 
 Clicking the :guilabel:`Search` button will search the selected Metadata Catalog.
-Search results are displayed in a list and are sortable by clicking on the
-column header. You can navigate through search results with the directional
-buttons below the search results.
+Search results are displayed in a list, and can be sorted by clicking on
+the column header.
+You can navigate through search results with the directional buttons
+below the search results.
 
 Select a result and:
 
-* click the :guilabel:`View Search Results as XML` button to open a window
-  with the service response in raw XML format.
-* if the metadata record has an associated bounding box, a footprint of the
-  bounding box will be displayed on the map;
-* double-clicking the record displays the record metadata with any associated
-  access links. Clicking the links opens the link in the user's web browser;
-* if the record is a supported web service (WMS/WMTS, WFS, WCS, ArcGIS MapServer,
-  ArcGIS FeatureServer, etc.), the :guilabel:`Add Data` button will be enabled for the user to add to
-  QGIS. When clicking this button, MetaSearch will verify if this is a valid
-  OWS. The service will then be added to the appropriate QGIS connection list, and
-  the appropriate connection dialog will then appear.
+* Click the :guilabel:`View Search Results as XML` button to open a
+  window with the service response in raw XML format.
+* If the metadata record has an associated bounding box, a footprint
+  of the bounding box will be displayed on the map.
+* Double-click the record to display the record metadata with any
+  associated access links.
+  Clicking a link opens the link in the user's web browser.
+* If the record is a supported web service (WMS/WMTS, WFS, WCS,
+  ArcGIS Map Service, ArcGIS Feature Service, etc.), the
+  :guilabel:`Add Data` button will be enabled.
+  When clicking this button, MetaSearch will verify if this is a
+  valid OWS.
+  The service will then be added to the appropriate QGIS connection
+  list, and the appropriate connection dialog will appear.
 
 .. _figure_metasearch_metadata:
 
@@ -179,10 +190,11 @@ Settings
 
 You can fine tune MetaSearch with the following :guilabel:`Settings`:
 
-* :guilabel:`Server Timeout`: when searching metadata catalogs, the number of
-  seconds for blocking connection attempt. Default value is 10.
-* :guilabel:`Results paging`: when searching metadata catalogs, the number of
-  results to show per page. Default value is 10.
+* :guilabel:`Server Timeout`: when searching metadata catalogs, the
+  number of seconds for blocking connection attempt.
+  Default value is 10.
+* :guilabel:`Results paging`: when searching metadata catalogs, the
+  number of results to show per page. Default value is 10.
 
 
 .. _`CSW (Catalog Service for the Web)`: https://www.opengeospatial.org/standards/cat
