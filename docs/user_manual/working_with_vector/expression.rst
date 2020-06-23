@@ -564,7 +564,7 @@ This group contains general assorted functions.
    If the variable is not found, ``NULL`` will be returned."
    "eval", "Evaluates an expression which is passed in a string.
    Useful to expand dynamic parameters passed as context variables or fields."
-   eval_template |314|", "Evaluates a template which is passed in a string.
+   "eval_template |314|", "Evaluates a template which is passed in a string.
    Useful to expand dynamic parameters passed as context variables or fields."
    "is_layer_visible", "Returns true if a specified layer is visible"
    "layer_property", "Returns a property of a layer or a value of its metadata.
