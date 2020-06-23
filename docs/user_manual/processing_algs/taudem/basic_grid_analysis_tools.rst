@@ -29,7 +29,7 @@ the flow direction angle is to the direct angle to those cells. The contour
 length used here is the grid cell size. The resulting units of the specific
 catchment area are length units the same as those of the grid cell size.
 
-.. figure:: img/tardemfig.gif
+.. figure:: img/tardemfig.png
    :align: center
 
 When the optional weight grid is not used, the result is reported in terms of
@@ -133,13 +133,13 @@ Parameters
    * - **D-infinity specific catchment area**
      - ``DINF_CONTRIB_AREA``
      - [raster]
-       
+
        Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
-       
+
        * Save to a Temporary File
        * Save to File...
-       
+
        The file encoding can also be changed here.
 
 Outputs
@@ -185,7 +185,7 @@ interest. The resulting flow in a grid is then usually interpreted as being
 proportioned between the two neighboring cells that define the triangular facet
 with the steepest downward slope.
 
-.. figure:: img/tardemfig.gif
+.. figure:: img/tardemfig.png
    :align: center
 
 A block-centered representation is used with each elevation value taken to
@@ -247,28 +247,28 @@ Parameters
        edge, so an internal NODATA value will stop a pit from being
        removed, if necessary.
    * - **D-infinity flow directions**
-     - ``DINF_FLOWDIR``  
+     - ``DINF_FLOWDIR``
      - [raster]
-       
+
        Default: ``[Save to temporary file]``
      - Specification of the output flow direction raster.
        One of:
-       
+
        * Save to a Temporary File
        * Save to File...
-       
+
        The file encoding can also be changed here.
    * - **D-infinity slope**
      - ``DINF_SLOPE``
      - [raster]
-       
+
        Default: ``[Save to temporary file]``
      - Specification of the output slope raster.
        One of:
-       
+
        * Save to a Temporary File
        * Save to File...
-       
+
        The file encoding can also be changed here.
 
 Outputs
@@ -403,13 +403,13 @@ Parameters
    * - **D8 specific catchment area**
      - ``D8_CONTRIB_AREA``
      - [raster]
-       
+
        Default: ``[Save to temporary file]``
      - Specification of the output raster. One of:
-       
+
        * Save to a Temporary File
        * Save to File...
-       
+
        The file encoding can also be changed here.
 
 Outputs
@@ -460,9 +460,8 @@ D8 Flow Direction Coding:
 * 7 --- South
 * 8 --- Southeast
 
-.. figure:: img/d8index.gif
+.. figure:: img/d8index.png
    :align: center
-   :width: 30em
 
 The flow direction routing across flat areas is performed according to the method
 described by Garbrecht, J. and L. W. Martz, (1997), "The Assignment of Drainage
@@ -504,28 +503,28 @@ Parameters
        edge, so an internal NODATA value will stop a pit from being
        removed, if necessary.
    * - **D8 flow directions**
-     - ``D8_FLOWDIR``  
+     - ``D8_FLOWDIR``
      - [raster]
-       
+
        Default: ``[Save to temporary file]``
      - Specification of the output flow direction raster.
        One of:
-       
+
        * Save to a Temporary File
        * Save to File...
-       
+
        The file encoding can also be changed here.
    * - **D8 slope**
      - ``D8_SLOPE``
      - [raster]
-       
+
        Default: ``[Save to temporary file]``
      - Specification of the output slope raster.
        One of:
-       
+
        * Save to a Temporary File
        * Save to File...
-       
+
        The file encoding can also be changed here.
 
 Outputs
@@ -628,7 +627,7 @@ Parameters
        Optional
      - ``THRESHOLD``
      - [number]
-       
+
        Default: 100.0
      - This input parameter is used in the calculation mask grid
        value >= mask threshold to determine if the grid cell is
@@ -645,40 +644,40 @@ Parameters
    * - **Longest upslope length**
      - ``LONGEST_PATH``
      - [raster]
-       
+
        Default: ``[Save to temporary file]``
      - Specification of the output raster with total upslope
        lengths.
        One of:
-       
+
        * Save to a Temporary File
        * Save to File...
-       
+
        The file encoding can also be changed here.
    * - **Total upslope length**
      - ``TOTAL_PATH``
      - [raster]
-       
+
        Default: ``[Save to temporary file]``
      - Specification of the output raster with upslope lengths.
        One of:
-       
+
        * Save to a Temporary File
        * Save to File...
-       
+
        The file encoding can also be changed here.
    * - **Strahler network order**
      - ``STRAHLER_ORDER``
      - [raster]
-       
+
        Default: ``[Save to temporary file]``
      - Specification of the output raster with Strahler network
        order.
        One of:
-       
+
        * Save to a Temporary File
        * Save to File...
-       
+
        The file encoding can also be changed here.
 
 Outputs
@@ -770,24 +769,24 @@ Parameters
        Optional
      - ``DEPRESSION_MASK``
      - [raster]
-     - 
+     -
    * - **Consider only 4 way neighbors**
      - ``FOUR_NEIGHBOURS``
      - [boolean]
 
        Default: False
-     - 
+     -
    * - **Pit removed elevation**
      - ``PIT_FILLED``
      - [raster]
-       
+
        Default: ``[Save to temporary file]``
      - Specification of the (pit filled) output raster.
        One of:
-       
+
        * Save to a Temporary File
        * Save to File...
-       
+
        The file encoding can also be changed here.
 
 Outputs
