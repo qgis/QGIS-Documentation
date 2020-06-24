@@ -56,6 +56,10 @@ The Expression builder dialog offers access to the:
          WHEN "pop_density" >= 150 THEN 'High population density'
     END
 
+* Update a point layer field with values of overlapping features in a polygon layer::
+
+    aggregate('polygonlayername', 'concatenate', "fieldtoextract", contains($geometry, geometry(@parent)))
+
 * Apply a categorized style to all the features according to whether their average house
   price is smaller or higher than 10000€ per square metre::
 
