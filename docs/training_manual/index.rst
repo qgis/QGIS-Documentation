@@ -29,5 +29,6 @@ QGIS Training Manual
    processing/index
    databases/index
    appendix/contribute
+   appendix/preparing_data
 
    answers/answers
