@@ -171,10 +171,10 @@ extlinks = {# api website: docs master branch points to '/' while x.y points to 
 
 context = {
     # 'READTHEDOCS': True,
-    'version_downloads': False,
+    'version_downloads': True,
     'versions': [ [v, docs_url+v] for v in version_list],
     'supported_languages': [ [l, docs_url+version+'/'+l] for l in supported_languages],
-    #'downloads': [ ['PDF', docs_url+version+'/pdf'] ], # ['HTML', '/builders.tgz'] ],
+    'downloads': [ ['PDF', docs_url+version+'/pdf'] ], # ['HTML', '/builders.tgz'] ],
 
     'display_github': not html_context['outdated'], # Do not display for outdated releases
     'github_user': 'qgis',
@@ -283,7 +283,6 @@ nitpick_ignore = [
 # Add doctest configuration
 
 doctest_path = ['/usr/share/qgis/python/plugins/', os.path.join(os.getcwd(), 'testdata', 'processing')]
-
 
 doctest_global_setup = '''
 import os
