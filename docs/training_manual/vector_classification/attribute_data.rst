@@ -3,7 +3,7 @@
 |LS| Vector Attribute Data
 ===============================================================================
 
-Vector data is arguably the most common kind of data you will find in the daily
+Vector data is arguably the most common kind of data in the daily
 use of GIS. The vector model represents the location and shape of geographic
 features using points, lines and polygons (and for 3D data also surfaces and
 volumes), while their other properties are included as attributes (often presented
@@ -20,7 +20,7 @@ map also have attributes. Maps in a GIS aren't just pictures. They represent
 not only objects in locations, but also information about those objects.
 
 
-**The goal for this lesson:** To learn abourt the structure of vector data and
+**The goal for this lesson:** To learn about the structure of vector data and
 explore the attribute data of an object
 
 |basic| |FA| Viewing Layer Attributes
@@ -96,7 +96,7 @@ You can also select a feature using the Attribute Table.
 #. Go back to the main QGIS window and look at the Map Canvas. You should 
    see the larger of the two polygons colored yellow.  
 #. To deselect the feature, go to the :guilabel:`Attribute Table` window 
-   and click on |deselectActiveLayer| :sup:`Deselect All` button.
+   and click on |deselectActiveLayer| :sup:`Deselect all features from the layer` button.
 
 Sometimes there are many features shown on the Map Canvas and it might be difficult
 to see which feature is selected from the Attribute Table.  Another way to 
