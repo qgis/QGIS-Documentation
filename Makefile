@@ -84,7 +84,11 @@ all:
 # tx is the python transifex cli client (pip install transifex-client)
 tx_force_pull_translations:
 	@for LANG in $(LANGUAGES) ; do \
-		tx pull -f --parallel -l $$LANG ; \
+		if [ $$LANG != "en" ]; then \
+			tx pull -f --parallel -l $$LANG ; \
+		else \
+			echo "Ignoring EN translations pull..."; \
+		fi \
 	done
 
 
