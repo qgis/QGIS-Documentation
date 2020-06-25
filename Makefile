@@ -36,8 +36,26 @@ html:
 		$(SPHINXBUILD) -b html -nW --keep-going "$(SOURCEDIR)" "$(BUILDDIR)/html/$(LANG)" $(SPHINXOPTS) $(0); \
 	fi
 
-site: html
+latex:
+	$(SPHINXBUILD) -b latex -t latex "$(SOURCEDIR)" "$(BUILDDIR)/latex/$(LANG)" $(SPHINXINTLOPTS) $(0); \
+
+pdf: latex
+
+	(cd $(BUILDDIR)/latex/$(LANG); \
+	pdflatex QGISUserGuide.tex; \
+	pdflatex QGISUserGuide.tex; \
+	pdflatex PyQGISDeveloperCookbook.tex; \
+	pdflatex PyQGISDeveloperCookbook.tex; \
+	pdflatex QGISTrainingManual.tex; \
+	pdflatex QGISTrainingManual.tex;)
+	mkdir -p $(BUILDDIR)/pdf/$(LANG);
+	mv $(BUILDDIR)/latex/$(LANG)/QGISUserGuide.pdf $(BUILDDIR)/pdf/$(LANG)/;
+	mv $(BUILDDIR)/latex/$(LANG)/PyQGISDeveloperCookbook.pdf $(BUILDDIR)/pdf/$(LANG)/;
+	mv $(BUILDDIR)/latex/$(LANG)/QGISTrainingManual.pdf $(BUILDDIR)/pdf/$(LANG)/;
+
+site: html #pdf
 	rsync -az $(BUILDDIR)/html/$(LANG) $(SITEDIR)/
+	#rsync -az $(BUILDDIR)/pdf $(SITEDIR)/
 
 doctest:
 	$(SPHINXBUILD) -b doctest . $(BUILDDIR)/doctest
