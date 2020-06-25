@@ -16,7 +16,7 @@ SOURCEDIR       = .
 BUILDDIR        = build
 #SITEDIR         = /var/www/html/qgisdocs
 SITEDIR         = qgis2:/var/www/qgisdata/QGIS-Documentation/live/html
-
+VERSION         = testing
 
 
 # Put it first so that "make" without argument is like "make help".
@@ -63,13 +63,13 @@ pdf: latex
 	pdflatex QGISTrainingManual.tex; \
 	pdflatex QGISTrainingManual.tex;)
 	mkdir -p $(BUILDDIR)/pdf/$(LANG);
-	mv $(BUILDDIR)/latex/$(LANG)/QGISUserGuide.pdf $(BUILDDIR)/pdf/$(LANG)/;
-	mv $(BUILDDIR)/latex/$(LANG)/PyQGISDeveloperCookbook.pdf $(BUILDDIR)/pdf/$(LANG)/;
-	mv $(BUILDDIR)/latex/$(LANG)/QGISTrainingManual.pdf $(BUILDDIR)/pdf/$(LANG)/;
+	mv $(BUILDDIR)/latex/$(LANG)/QGISUserGuide.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-UserGuide-$(LANG).pdf;
+	mv $(BUILDDIR)/latex/$(LANG)/PyQGISDeveloperCookbook.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-PyQGISDeveloperCookbook-$(LANG).pdf;
+	mv $(BUILDDIR)/latex/$(LANG)/QGISTrainingManual.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS$(VERSION)-TrainingManual-$(LANG).pdf;
 
-site: html #pdf
+site: html pdf
 	rsync -az $(BUILDDIR)/html/$(LANG) $(SITEDIR)/
-	#rsync -az $(BUILDDIR)/pdf $(SITEDIR)/
+	rsync -az $(BUILDDIR)/pdf $(SITEDIR)/
 
 # this will build ALL languages, AND tries to rsync them to the web dir on qgis2
 # to be able to run this you will need a key on the server
