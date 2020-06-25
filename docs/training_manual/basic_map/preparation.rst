@@ -84,7 +84,7 @@ layers from the same folder (:file:`exercise_data/shapefile`) to the map.
 
 .. _load_geopackage:
 
-|basic| |FA| Loading vector data from GeoPackage Database
+|basic| |FA| Loading vector data from a GeoPackage Database
 -------------------------------------------------------------------------------
 
 Databases allow you to store a large volume of associated data in one file. You
@@ -229,7 +229,7 @@ appearing above the land use regions.
 -------------------------------------------------------------------------------
 
 Now you've added all the layers you need from several different sources
-and create a basic map!
+and created a basic map!
 
 
 |WN|
@@ -237,7 +237,7 @@ and create a basic map!
 
 Now you're familiar with the basic function of the :guilabel:`Open Data Source Manager`
 button, but what about all the others? How does this interface work? Before we
-go on, let's first take a look at some basic interaction with the QGIS interface.
+go on, let's take a look at some basic interaction with the QGIS interface.
 This is the topic of the next lesson.
 
 
