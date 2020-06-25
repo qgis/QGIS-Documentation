@@ -7,4 +7,3 @@ Course Introduction
 
    foreword
    intro
-   preparing_data
