@@ -1881,8 +1881,8 @@ filters all features where attribute ``name`` ends with "value"
 Feature sorting
 ---------------
 
-When querying for features it is possible to order the result set by field value using
-``sortby`` query parameter. 
+It is possible to order the result set by field value using the ``sortby``
+query parameter. 
 
 The results are sorted in ascending order by default. To sort the results in descending
 order a boolean flag ``sortdesc`` can be set:
