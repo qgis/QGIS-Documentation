@@ -88,13 +88,10 @@ all:
 # tx is the python transifex cli client (pip install transifex-client)
 # because there's a divergence between chinese language codes Sphinx and
 # Transifex we need to do a substitution converting underscores into dashes
+# The English language is removed to avoid trying to pull the source po files
 tx_force_pull_translations:
-	@for LANG in $(subst zh_, zh-,$(LANGUAGES)) ; do \
-		if [ $$LANG != "en" ]; then \
-			tx pull -f --parallel -l $$LANG ; \
-		else \
-			echo "Ignoring EN translations pull..."; \
-		fi \
+	@for LANG in $(subst en,, $(subst zh_, zh-,$(LANGUAGES))) ; do \
+		tx pull -f --parallel -l $$LANG ; \
 	done
 
 
