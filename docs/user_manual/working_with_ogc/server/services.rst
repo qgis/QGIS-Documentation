@@ -1878,6 +1878,23 @@ filters all features where attribute ``name`` ends with "value"
 
     http://localhost/qgisserver/wfs3/collection_one/items.json?attribute_one=*value
 
+Feature sorting
+---------------
+
+When querying for features it is possible to order the result set by field value using
+``sortby`` query parameter. 
+
+The results are sorted in ascending order by default, to sort the results in descending
+order a boolean flag ``sortdesc`` can be set:
+
+URL example:
+
+sort features by ``name`` in descending order:
+
+.. code-block:: none
+
+  http://localhost/qgisserver/wfs3/collection_one/items.json?sortby=name&sortdesc=1
+  
 
 Attribute selection
 -------------------
