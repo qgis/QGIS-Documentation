@@ -5,8 +5,6 @@
 LANG            = en
 # currently we are building for the following languages, if you want yours to be build: ask!
 LANGUAGES       = en # bg cs de es fi fr id it ja ko nl pt_BR pt_PT ro ru tr zh_Hant zh_Hans
-# to pull tranlations from transifex we need other codes for the chinese languages
-TX_LANGUAGES    = en bg cs de es fi fr id it ja ko nl pt_BR pt_PT ro ru tr zh-Hant zh-Hans
 SPHINXOPTS      =
 SPHINXINTLOPTS  = $(SPHINXOPTS) -D language=$(LANG)
 SPHINXBUILD     ?= sphinx-build
@@ -88,9 +86,10 @@ all:
 # to your local disk, so it can be committed into github
 # in that way a build from git will contain those translation
 # tx is the python transifex cli client (pip install transifex-client)
+# because there's a divergence between chinese language codes Sphinx and
+# Transifex we need to do a substitution converting underscores into dashes
 tx_force_pull_translations:
-	@for LANG in $(TX_LANGUAGES) ; do \
-		$$LANG
+	@for LANG in $(subst zh_, zh-,$(LANGUAGES)) ; do \
 		if [ $$LANG != "en" ]; then \
 			tx pull -f --parallel -l $$LANG ; \
 		else \
