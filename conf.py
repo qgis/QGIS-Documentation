@@ -174,7 +174,7 @@ context = {
     'version_downloads': True,
     'versions': [ [v, docs_url+v] for v in version_list],
     'supported_languages': [ [l, docs_url+version+'/'+l] for l in supported_languages],
-    'downloads': [ ['PDF', docs_url+version+'/pdf'] ], # ['HTML', '/builders.tgz'] ],
+    'downloads': [ ['PDF', docs_url+version+'/pdf'] , ['HTML', docs_url+version+'/zip'] ],
 
     'display_github': not html_context['outdated'], # Do not display for outdated releases
     'github_user': 'qgis',

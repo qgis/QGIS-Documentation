@@ -67,9 +67,16 @@ pdf: latex
 	mv $(BUILDDIR)/latex/$(LANG)/PyQGISDeveloperCookbook.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-PyQGISDeveloperCookbook-$(LANG).pdf;
 	mv $(BUILDDIR)/latex/$(LANG)/QGISTrainingManual.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS$(VERSION)-TrainingManual-$(LANG).pdf;
 
-site: html pdf
-	rsync -az $(BUILDDIR)/html/$(LANG) $(SITEDIR)/
-	rsync -az $(BUILDDIR)/pdf $(SITEDIR)/
+zip:
+	mkdir -p $(BUILDDIR)/zip;
+	(cd $(BUILDDIR)/html; \
+	zip -r QGIS-$(VERSION)-Documentation-$(LANG).zip $(LANG)/;)
+	mv $(BUILDDIR)/html/QGIS-$(VERSION)-Documentation-$(LANG).zip $(BUILDDIR)/zip/;
+
+site: html pdf zip
+	rsync -az $(BUILDDIR)/html/$(LANG) $(SITEDIR)/;
+	rsync -az $(BUILDDIR)/pdf $(SITEDIR)/;
+	rsync -az $(BUILDDIR)/zip $(SITEDIR)/;
 
 # this will build ALL languages, AND tries to rsync them to the web dir on qgis2
 # to be able to run this you will need a key on the server
