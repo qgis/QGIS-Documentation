@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:24+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,6 +32,9 @@ msgid ""
 "layer type based on :class:`QgsPluginLayer <qgis.core.QgsPluginLayer>` might"
 " be the best way to implement that."
 msgstr ""
+"Si su complemento utiliza sus propios métodos para representar una capa de "
+"mapa, escribir su propio tipo de capa basándose en :class:`QgsPluginLayer "
+"<qgis.core.QgsPluginLayer>` podría ser la mejor manera de implementarlo."
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/pluginlayer.rst:33
 msgid "Subclassing QgsPluginLayer"
@@ -42,20 +46,29 @@ msgid ""
 "on the original code  of the `Watermark example plugin "
 "<https://github.com/sourcepole/qgis-watermark-plugin>`_."
 msgstr ""
+"A continuación se muestra un ejemplo de una implementación mínima de "
+"QgsPluginLayer. Se basa en el código original del complemento de ejemplo "
+"`Marca de agua <https://github.com/sourcepole/qgis-watermark-plugin>`_."
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/pluginlayer.rst:38
 msgid ""
 "The custom renderer is the part of the implement that defines the actual "
 "drawing on the canvas."
 msgstr ""
+"El renderizador personalizado es la parte del implemento que define el "
+"dibujo real en el canvas."
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/pluginlayer.rst:79
 msgid ""
 "The plugin layer can be added to the project and to the canvas as any other "
 "map layer:"
 msgstr ""
+"La capa de complemento se puede agregar al proyecto y al lienzo como "
+"cualquier otra capa de mapa:"
 
 #: ../../docs/pyqgis_developer_cookbook/plugins/pluginlayer.rst:87
 msgid ""
 "When loading a project containing such a layer, a factory class is needed:"
 msgstr ""
+"Al cargar un proyecto que contiene dicha capa, se necesita una clase de "
+"fábrica:"

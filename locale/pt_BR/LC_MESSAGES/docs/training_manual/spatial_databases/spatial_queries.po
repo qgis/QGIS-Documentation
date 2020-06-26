@@ -97,6 +97,9 @@ msgid ""
 "We also can define spatial indexes. A spatial index makes your spatial "
 "queries much faster. To create a spatial index on the geometry column use:"
 msgstr ""
+"Também podemos definir índices espaciais. Um índice espacial torna suas "
+"consultas espaciais muito mais rápidas. Para criar um índice espacial na "
+"coluna de geometria, use:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:86
 msgid "|TY| |moderate|"
@@ -127,6 +130,7 @@ msgstr ""
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:98
 msgid "To start, create a new database (exit the psql shell first):"
 msgstr ""
+"Para começar, crie um novo banco de dados (saia primeiro do shell psql):"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:104
 msgid "Remember to install the postgis extensions:"
@@ -140,6 +144,11 @@ msgid ""
 " can import from the terminal or via DB Manager. Import the files into the "
 "following database tables:"
 msgstr ""
+"Em seguida, importe os dados fornecidos no diretório "
+":kbd:`exercise_data/postgis/`. Consulte a lição anterior para instruções, "
+"mas lembre-se de que você precisará criar uma nova conexão PostGIS para o "
+"novo banco de dados. Você pode importar do terminal ou via DB Manager. "
+"Importe os arquivos para as seguintes tabelas de banco de dados:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:116
 msgid ":kbd:`points.shp` into :kbd:`building`"
@@ -189,11 +198,11 @@ msgstr "Selecionar pela localização"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:136
 msgid "Get all the buildings in the KwaZulu region:"
-msgstr ""
+msgstr "Obtenha todos os edifícios na região de KwaZulu:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:158
 msgid "Or, if we create a view from it:"
-msgstr ""
+msgstr "Ou, se criarmos uma visualização a partir dele:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:168
 msgid "Add the view as a layer and view it in QGIS:"
@@ -206,6 +215,8 @@ msgstr "Selecione os vizinhos"
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:176
 msgid "Show a list of all the names of regions adjoining the Hokkaido region:"
 msgstr ""
+"Mostre uma lista de todos os nomes de regiões adjacentes à região de "
+"Hokkaido:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:196
 msgid "As a view:"
@@ -223,6 +234,10 @@ msgid ""
 "solve this enigma without getting caught up in the anomalies the data may "
 "have, we could use a buffer intersect instead:"
 msgstr ""
+"Observe a região faltante (Queensland). Isso pode ocorrer devido a um erro "
+"de topologia. Artefatos como esse podem nos alertar sobre possíveis "
+"problemas nos dados. Para resolver esse enigma sem ser pego pelas anomalias "
+"que os dados possam ter, poderíamos usar uma interseção de buffer:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:223
 msgid "This creates a buffer of 100 meters around the region Hokkaido."
@@ -234,7 +249,7 @@ msgstr "A área sombreada representa o buffer:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:230
 msgid "Select using the buffer:"
-msgstr ""
+msgstr "Selecione usando o buffer:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:245
 msgid ""
@@ -256,6 +271,8 @@ msgid ""
 "It is also possible to select all objects within a given distance, without "
 "the extra step of creating a buffer:"
 msgstr ""
+"Também é possível selecionar todos os objetos dentro de uma determinada "
+"distância, sem a etapa extra de criar um buffer:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_queries.rst:268
 msgid ""

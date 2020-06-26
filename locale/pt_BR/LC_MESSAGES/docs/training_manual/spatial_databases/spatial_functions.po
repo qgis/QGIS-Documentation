@@ -75,6 +75,10 @@ msgid ""
 "can find the version installed by issuing a ``select "
 "PostGIS_full_version();`` query with psql or another tool."
 msgstr ""
+"Dependendo da versão do Ubuntu que você está usando e dos repositórios que "
+"você configurou, esses comandos instalarão o PostGIS 1.5 ou 2.x. Você pode "
+"encontrar a versão instalada fazendo uma consulta ``select "
+"PostGIS_full_version ();`` com psql ou outra ferramenta."
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:33
 msgid ""
@@ -100,18 +104,23 @@ msgstr ""
 msgid ""
 "First Visit `the download page <https://www.postgresql.org/download/>`_."
 msgstr ""
+"Antes Visite `a página de download <https://www.postgresql.org/download/>`_."
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:52
 msgid ""
 "Then follow `this guide "
 "<https://www.bostongis.com/PrinterFriendly.aspx?content_name=postgis_tut01>`_."
 msgstr ""
+"Depois siga `este guia "
+"<https://www.bostongis.com/PrinterFriendly.aspx?content_name=postgis_tut01>`_."
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:55
 msgid ""
 "More information about installing on Windows can be found on the `PostGIS "
 "website <https://postgis.net/windows_downloads>`_."
 msgstr ""
+"Mais informações sobre a instalação no Windows podem ser encontradas no "
+"website `PostGIS <https://postgis.net/windows_downloads>`_."
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:59
 msgid "Installing on Other Platforms"
@@ -152,6 +161,12 @@ msgid ""
 "<https://postgis.net/docs/postgis_installation.html#create_new_db>`_ for "
 "instructions on how to do this."
 msgstr ""
+"Se você estiver usando o PostGIS 1.5 e uma versão do PostgreSQL anterior a "
+"9.1, precisará seguir um conjunto diferente de etapas para instalar as "
+"extensões do postgis no seu banco de dados. Por favor, consulte a "
+"`Documentação do PostGIS "
+"<https://postgis.net/docs/postgis_installation.html#create_new_db>`_ para "
+"obter instruções sobre como fazer isso."
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:83
 msgid "Looking at the installed PostGIS functions"
@@ -179,6 +194,12 @@ msgid ""
 "relating to point. If you are not already connected to the ``address`` "
 "database, do so now. Then run:"
 msgstr ""
+"Nosso banco de dados ``endereço`` do PostgreSQL agora está ativado "
+"geoespacialmente, graças ao PostGIS. Iremos nos aprofundar muito nas "
+"próximas seções, mas vamos dar uma pequena amostra rápida. Digamos que "
+"queremos criar um ponto a partir do texto. Primeiro, usamos o comando psql "
+"para encontrar funções relacionadas ao ponto. Se você ainda não está "
+"conectado ao banco de dados ``endereço``, faça isso agora. Então execute:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:100
 msgid ""
@@ -186,10 +207,13 @@ msgid ""
 "through the list, use the down arrow, then press :kbd:`Q` to quit back to "
 "the psql shell."
 msgstr ""
+"Este é o comando que estamos procurando: :kbd:`st_pointfromtext`. Para "
+"percorrer a lista, use a seta para baixo e pressione :kbd:`Q` para voltar ao"
+" shell psql."
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:103
 msgid "Try running this command:"
-msgstr ""
+msgstr "Tente executar este comando:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:109
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:143
@@ -234,12 +258,16 @@ msgid ""
 "To get the results back as text, we can do a quick scan through the function"
 " list for something that returns text:"
 msgstr ""
+"Para recuperar os resultados como texto, podemos fazer uma varredura rápida "
+"na lista de funções em busca de algo que retorne texto:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:136
 msgid ""
 "The query we're looking for now is ``st_astext``. Let's combine it with the "
 "previous query:"
 msgstr ""
+"A questão que estamos procurando agora é ``st_astext``. Vamos combiná-lo com"
+" a questão anterior:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:152
 msgid ""
@@ -256,6 +284,8 @@ msgstr ""
 msgid ""
 "One last example before we really get into the detail of using PostGIS:"
 msgstr ""
+"Um último exemplo antes de realmente entrarmos nos detalhes do uso do "
+"PostGIS:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:163
 msgid ""
@@ -294,6 +324,8 @@ msgid ""
 "First, let's look at the schema of the table by entering the following "
 "command in the psql prompt:"
 msgstr ""
+"Primeiro, vejamos o esquema da tabela digitando o seguinte comando no prompt"
+" do psql:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:184
 msgid "The result should be this:"
@@ -315,6 +347,9 @@ msgid ""
 "One SRID you may be interested in is EPSG:4326 - the geographic / lat lon "
 "reference system using the WGS 84 ellipsoid. Let's take a look at it:"
 msgstr ""
+"Um SRID no qual você estar interessado é o EPSG: 4326 - o sistema de "
+"referência geográfica / lat lon usando o elipsóide WGS 84. Vamos dar uma "
+"olhada nisso:"
 
 #: ../../docs/training_manual/spatial_databases/spatial_functions.rst:224
 msgid ""

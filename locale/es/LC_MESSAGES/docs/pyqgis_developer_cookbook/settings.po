@@ -6,6 +6,7 @@
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
 # micirculopolar <lfernandez@geosistec.com>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:24+0000\n"
-"Last-Translator: micirculopolar <lfernandez@geosistec.com>, 2020\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -59,7 +60,7 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/settings.rst:36
 msgid "We can differentiate between several types of settings:"
-msgstr ""
+msgstr "Podemos diferenciar entre varios tipos de configuraciones:"
 
 #: ../../docs/pyqgis_developer_cookbook/settings.rst:40
 msgid ""
@@ -70,10 +71,17 @@ msgid ""
 ":meth:`setValue() <qgis.core.QgsSettings.setValue>` and :meth:`value() "
 "<qgis.core.QgsSettings.value>` methods."
 msgstr ""
+"**global settings** --- están vinculados al usuario en una máquina en "
+"particular. QGIS almacena muchas configuraciones globales, por ejemplo, el "
+"tamaño de la ventana principal o la tolerancia de ajuste predeterminada. La "
+"configuración se maneja usando la clase :class:`QgsSettings "
+"<qgis.core.QgsSettings>`, por ejemplo, a través de :meth:`setValue() "
+"<qgis.core.QgsSettings.setValue>` y :meth:`value() < "
+"qgis.core.QgsSettings.value>`métodos."
 
 #: ../../docs/pyqgis_developer_cookbook/settings.rst:47
 msgid "Here you can see an example of how these methods are used."
-msgstr ""
+msgstr "Aquí puede ver un ejemmplo de como se usan estos métodos."
 
 #: ../../docs/pyqgis_developer_cookbook/settings.rst:68
 msgid ""
@@ -81,6 +89,10 @@ msgid ""
 "method is optional and specifies the default value that is returned if there"
 " is no previous value set for the passed setting name."
 msgstr ""
+"El segundo parámetro del método :meth:`value() "
+"<qgis.core.QgsSettings.value>` es opcional y especifica el valor "
+"predeterminado que se devuelve si no hay un valor anterior establecido para "
+"el nombre de configuración pasado."
 
 #: ../../docs/pyqgis_developer_cookbook/settings.rst:72
 msgid ""
@@ -88,6 +100,9 @@ msgid ""
 "through the  :file:`global_settings.ini` file, see "
 ":ref:`deploying_organization` for further details."
 msgstr ""
+"Para obtener un método para preconfigurar los valores predeterminados de la "
+"configuración global a través del archivo :file:`global_settings.ini`, "
+"consulte :ref:deploying_organization` para obtener más detalles."
 
 #: ../../docs/pyqgis_developer_cookbook/settings.rst:78
 msgid ""
@@ -97,10 +112,15 @@ msgid ""
 "background and WGS84 might be suitable for one project, while yellow "
 "background and UTM projection are better for another one."
 msgstr ""
+"**project settings** --- varían entre diferentes proyectos y, por lo tanto, "
+"están conectados con un archivo de proyecto. El color de fondo del lienzo "
+"del mapa o el sistema de referencia de coordenadas de destino (CRS) son "
+"ejemplos: el fondo blanco y WGS84 pueden ser adecuados para un proyecto, "
+"mientras que el fondo amarillo y la proyección UTM son mejores para otro."
 
 #: ../../docs/pyqgis_developer_cookbook/settings.rst:84
 msgid "An example of usage follows."
-msgstr ""
+msgstr "A continuación se muestra un ejemplo de uso."
 
 #: ../../docs/pyqgis_developer_cookbook/settings.rst:114
 msgid ""
@@ -109,6 +129,10 @@ msgid ""
 " setting value back, and the corresponding one has to be selected for each "
 "data type."
 msgstr ""
+"Como puede ver, el método :meth:`writeEntry() "
+"<qgis.core.QgsProject.writeEntry>` se utiliza para todos los tipos de datos,"
+" pero existen varios métodos para volver a leer el valor de configuración, y"
+" se debe seleccionar el correspondiente para cada tipo de datos."
 
 #: ../../docs/pyqgis_developer_cookbook/settings.rst:121
 msgid ""
@@ -122,3 +146,14 @@ msgid ""
 "<qgis.core.QgsMapLayer.customProperty>` method, and can be set using the "
 ":meth:`setCustomProperty() <qgis.core.QgsMapLayer.setCustomProperty>` one."
 msgstr ""
+"**map layer settings** --- esta configuración está relacionada con una "
+"instancia particular de una capa de mapa con un proyecto. No están "
+"*conectados* con la fuente de datos subyacente de una capa, por lo que si "
+"crea dos instancias de capa de mapa de un archivo de forma, no compartirán "
+"la configuración. La configuración se almacena dentro del archivo del "
+"proyecto, por lo que si el usuario abre el proyecto nuevamente, la "
+"configuración relacionada con la capa volverá a estar allí. El valor para "
+"una configuración dada se recupera usando el método :meth:`customProperty() "
+"<qgis.core.QgsMapLayer.customProperty>`, y se puede establecer usando el "
+"método :meth:`setCustomProperty() <qgis.core.QgsMapLayer.setCustomProperty "
+">` uno."

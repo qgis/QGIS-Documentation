@@ -70,6 +70,11 @@ msgid ""
 ":guilabel:`places`, :guilabel:`landuse` and :guilabel:`protected_areas` "
 "layers and adjusted the symbology:"
 msgstr ""
+"Para este exercício, você pode usar o mapa básico criado no início do curso "
+"ou apenas iniciar um novo mapa e carregar algumas camadas existentes nele. "
+"Neste exemplo, usamos um novo mapa e carregamos as camadas originais "
+":guilabel:`locais`, :guilabel:`uso do solo` e :guilabel:`áreas_protegidas` e"
+" ajustamos a simbologia:"
 
 #: ../../docs/training_manual/online_resources/wms.rst:31
 msgid ""
@@ -86,6 +91,11 @@ msgid ""
 " projection (or unknown/non-Earth projection)`. This may cause the layers to"
 " no longer overlap properly, but don't worry: we'll fix that later."
 msgstr ""
+"Antes de começar a adicionar a camada WMS, desative a projeção \"on the "
+"fly\" (guia :menuselection:`Projeto --> Propriedades ... --> SRC`, verifique"
+" :guilabel:`Nenhuma projeção (ou projeção desconhecida/não terrestre)`. Isso"
+" pode fazer com que as camadas não se sobreponham corretamente, mas não se "
+"preocupe: corrigiremos isso mais tarde."
 
 #: ../../docs/training_manual/online_resources/wms.rst:38
 msgid ""
@@ -93,6 +103,9 @@ msgid ""
 ":guilabel:`Data Source Manager` dialog and enable the |wms| "
 ":guilabel:`WMS/WMTS` tab."
 msgstr ""
+"Para adicionar camadas WMS, clique no botão |dataSourceManager| para abrir a"
+" caixa de diálogo :guilabel:`Gerenciador de Fonte de Dados` e ative a guia "
+"|wms| :guilabel:`WMS/WMTS`."
 
 #: ../../docs/training_manual/online_resources/wms.rst:45
 msgid ""
@@ -102,6 +115,12 @@ msgid ""
 " first needed to connect to the database. Using a WMS is similar, with the "
 "exception that the layers are on a remote server."
 msgstr ""
+"Lembre-se de como você se conectou a um banco de dados SpatiaLite ou "
+"GeoPackage no início do curso. As camadas :guilabel:`uso do solo`, "
+":guilabel:`construções' e :guilabel:`estradas` são armazenadas em um banco "
+"de dados. Para usar essas camadas, primeiro você precisa se conectar ao "
+"banco de dados. O uso de um WMS é semelhante, com a exceção de que as "
+"camadas estão em um servidor remoto."
 
 #: ../../docs/training_manual/online_resources/wms.rst:51
 msgid ""
@@ -116,6 +135,10 @@ msgid ""
 "<https://ows.terrestris.de/osm/service>`_, which makes use of the "
 "`OpenStreetMap <https://wiki.openstreetmap.org/wiki/Main_Page>`_ dataset."
 msgstr ""
+"Você vai precisar de um endereço WMS para continuar. Existem vários "
+"servidores WMS gratuitos disponíveis na Internet. Um deles é o `terrestris "
+"<https://ows.terrestris.de/osm/service>`_, que faz uso do conjunto de dados "
+"`OpenStreetMap <https://wiki.openstreetmap.org/wiki/Main_Page>`_."
 
 #: ../../docs/training_manual/online_resources/wms.rst:58
 msgid "To make use of this WMS, set it up in your current dialog, like this:"
@@ -123,13 +146,15 @@ msgstr "Para utilizar ese WMS, ajústalo en tu cuadro de diálogo actual, así:"
 
 #: ../../docs/training_manual/online_resources/wms.rst:63
 msgid "The value of the :guilabel:`Name` field should be ``terrestris``."
-msgstr ""
+msgstr "O valor do campo :guilabel:`Nome` deve ser ``terrestris``."
 
 #: ../../docs/training_manual/online_resources/wms.rst:64
 msgid ""
 "The value of the :guilabel:`URL` field should be "
 "``https://ows.terrestris.de/osm/service``."
 msgstr ""
+"O valor do campo :guilabel:`URL` deve ser "
+"``https://ows.terrestris.de/osm/service``."
 
 #: ../../docs/training_manual/online_resources/wms.rst:66
 msgid "Click :guilabel:`OK`. You should see the new WMS server listed:"
@@ -161,12 +186,16 @@ msgid ""
 "Since we're not using ``WGS 84`` for our map, let's see all the CRSs we have"
 " to choose from."
 msgstr ""
+"Como não estamos usando o ``WGS 84`` no nosso mapa, vamos ver todos os SRCs "
+"que temos para escolher."
 
 #: ../../docs/training_manual/online_resources/wms.rst:88
 msgid ""
 "Click the :guilabel:`Change...` button. You will see a standard "
 ":guilabel:`Coordinate Reference System Selector` dialog."
 msgstr ""
+"Clique no botão :guilabel:`Alterar...`. Você verá uma caixa de diálogo "
+"padrão :guilabel:`Seletor de Sistema de Referência de Coordenadas`."
 
 #: ../../docs/training_manual/online_resources/wms.rst:90
 msgid ""
@@ -178,7 +207,7 @@ msgstr ""
 
 #: ../../docs/training_manual/online_resources/wms.rst:93
 msgid "Enter the value ``pseudo`` in the :guilabel:`Filter` field:"
-msgstr ""
+msgstr "Entre o valor ``pseudo`` no campo :guilabel:`Filtro`:"
 
 #: ../../docs/training_manual/online_resources/wms.rst:94
 #: ../../docs/training_manual/online_resources/wms.rst:119
@@ -190,23 +219,30 @@ msgid ""
 "Click :guilabel:`OK`. The Coordinate Reference System associated with the "
 "entry has changed."
 msgstr ""
+"Clique em :guilabel:`OK`. O Sistema de Referência de Coordenadas associado à"
+" entrada foi alterado."
 
 #: ../../docs/training_manual/online_resources/wms.rst:102
 msgid ""
 "Click :guilabel:`Add` and the new layer will appear in your map as "
 ":guilabel:`OpenStreetMap WMS - by terrestris`."
 msgstr ""
+"Clique em :guilabel:`Adicionar` e a nova camada irá aparecer no seu mapa "
+"como :guilabel:`OpenStreetMap WMS - by terrestris`."
 
 #: ../../docs/training_manual/online_resources/wms.rst:104
 msgid ""
 "Close the :guilabel:`Data Source Manager` dialog if not done automatically"
 msgstr ""
+"Feche a caixa de diálogo :guilabel:`Gerenciador de Fonte de Dados` se não "
+"for feito automaticamente"
 
 #: ../../docs/training_manual/online_resources/wms.rst:105
 msgid ""
 "In the :guilabel:`Layers` panel, click and drag it to the bottom of the "
 "list."
 msgstr ""
+"No painel :guilabel:`Camadas`, clique e arraste-o para o final da lista."
 
 #: ../../docs/training_manual/online_resources/wms.rst:106
 msgid ""
@@ -214,6 +250,9 @@ msgid ""
 "your layers aren't located correctly (near west of Africa). This is because "
 "\"on the fly\" projection is disabled."
 msgstr ""
+"Diminua o zoom para obter uma visão global das camadas. Você notará que suas"
+" camadas não estão localizadas corretamente (perto do oeste da África). Isso"
+" ocorre porque a projeção \"on the fly\" está desativada."
 
 #: ../../docs/training_manual/online_resources/wms.rst:114
 msgid ""
@@ -221,14 +260,19 @@ msgid ""
 ":guilabel:`OpenStreetMap WMS` layer, which is :guilabel:`WGS 84 / Pseudo "
 "Mercator`."
 msgstr ""
+"Vamos ativar a reprojeção novamente, mas usando a mesma projeção que a "
+"camada :guilabel:`OpenStreetMap WMS`, que é :guilabel:`WGS 84 / Pseudo "
+"Mercator`."
 
 #: ../../docs/training_manual/online_resources/wms.rst:117
 msgid "Open the :menuselection:`Project --> Properties... --> CRS` tab"
-msgstr ""
+msgstr "Abra a guia :menuselection:`Projeto --> Propriedades... --> SRC`"
 
 #: ../../docs/training_manual/online_resources/wms.rst:118
 msgid "Uncheck :guilabel:`No projection (or unknown/non-Earth projection)`"
 msgstr ""
+"Desmarque :guilabel:`Nenhuma projeção (ou projeção desconhecida / não "
+"terrestre)`"
 
 #: ../../docs/training_manual/online_resources/wms.rst:124
 msgid "Click :guilabel:`OK`."
@@ -240,6 +284,9 @@ msgid ""
 "and click :guilabel:`Zoom to layer extent`. You should see the "
 "|majorUrbanName| area:"
 msgstr ""
+"Agora clique com o botão direito do mouse em uma de suas próprias camadas no"
+" painel :guilabel:`Camadas` e clique em :guilabel:`Zoom na extensão da "
+"camada`. Você deverá ver a área |majorUrbanName|:"
 
 #: ../../docs/training_manual/online_resources/wms.rst:133
 msgid ""
@@ -320,13 +367,15 @@ msgstr "|basic| |TY|"
 
 #: ../../docs/training_manual/online_resources/wms.rst:168
 msgid "Hide the :guilabel:`OSM-WSM` layer in the :guilabel:`Layers` panel."
-msgstr ""
+msgstr "Oculte a camada :guilabel:`OSM-WSM` no painel :guilabel:` Camadas`."
 
 #: ../../docs/training_manual/online_resources/wms.rst:169
 msgid ""
 "Add the \"ZAF CGS 1M Bedrock Lithostratigraphy\" WMS server at this URL: "
 "``http://196.33.85.22/cgi-bin/ZAF_CGS_Bedrock_Geology/wms``"
 msgstr ""
+"Adicione o servidor WMS  \"ZAF CGS 1M Bedrock Lithostratigraphy\" nesta "
+"URL:``http://196.33.85.22/cgi-bin/ZAF_CGS_Bedrock_Geology/wms``"
 
 #: ../../docs/training_manual/online_resources/wms.rst:171
 msgid ""
@@ -336,12 +385,20 @@ msgid ""
 "to check that it's in the same :guilabel:`WGS 84 / World Mercator` "
 "projection as the rest of your map!"
 msgstr ""
+"Carregue a camada :guilabel:`BEDROCKGEOLOGY` no mapa (você também pode usar "
+"a opção :menuselection:`Camada --> Adicionar camada -->` botão |wms| "
+":menuselection:`Adicionar camada WMS / WMTS Layer ...` para abrir a caixa de"
+" diálogo Gerenciador de Fonte de Dados). Lembre-se de verificar se está na "
+"mesma projeção :guilabel:`WGS 84 / World Mercator` como o resto do seu mapa!"
 
 #: ../../docs/training_manual/online_resources/wms.rst:176
 msgid ""
 "You might want to set its :guilabel:`Encoding` to :guilabel:`JPEG` and its "
 ":guilabel:`Tile size` option to ``200`` by ``200``, so that it loads faster:"
 msgstr ""
+"Você pode definir sua opção :guilabel: `Encoding` como :guilabel:`JPEG` e "
+"sua opção :guilabel:`Tamanho do bloco` como ``200`` por ``200``, para que "
+"seja carregado mais rapidamente:"
 
 #: ../../docs/training_manual/online_resources/wms.rst:183
 msgid ":ref:`Check your results <wms-1>`"
@@ -356,10 +413,12 @@ msgid ""
 "Hide all other WMS layers to prevent them from rendering unnecessarily in "
 "the background."
 msgstr ""
+"Oculte todas as outras camadas do WMS para impedir que sejam renderizadas "
+"desnecessariamente em segundo plano."
 
 #: ../../docs/training_manual/online_resources/wms.rst:193
 msgid "Add the \"OGC\" WMS server at this URL: ``http://ogc.gbif.org:80/wms``"
-msgstr ""
+msgstr "Adicione o servidor WMS \"OGC\" nesta URL: ``http://ogc.gbif.org:80/wms``"
 
 #: ../../docs/training_manual/online_resources/wms.rst:194
 msgid "Add the :guilabel:`bluemarble` layer."
@@ -386,6 +445,10 @@ msgid ""
 "associated fees or restrictions, and must have coverage over the "
 "|majorUrbanName| study area."
 msgstr ""
+"Encontre um novo WMS em `directory.spatineo.com "
+"<https://directory.spatineo.com/>`_ (ou em outro local online). Ele não deve"
+" ter taxas ou restrições associadas e deve ter cobertura sobre a área em "
+"estudo |majorUrbanName| ."
 
 #: ../../docs/training_manual/online_resources/wms.rst:210
 msgid ""

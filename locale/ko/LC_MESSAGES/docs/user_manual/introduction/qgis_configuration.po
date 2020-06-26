@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:25+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,19 +30,23 @@ msgstr "QGIS 환경 설정"
 msgid ""
 "QGIS is highly configurable. Through the :menuselection:`Settings` menu, it "
 "provides different tools to:"
-msgstr ""
+msgstr ":menuselection:`Settings` 메뉴를 통해 QGIS 환경을 다음과 같이 매우 자세하게 설정할 수 있습니다:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:14
 msgid ""
 "|styleManager| :guilabel:`Style Manager...`: create and manage "
 ":ref:`symbols, styles and color ramps <vector_style_manager>`."
 msgstr ""
+"|styleManager| :guilabel:`Style Manager...`: :ref:`심볼, 스타일 및 색상표 "
+"<vector_style_manager>` 를 생성하고 관리합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:16
 msgid ""
 "|customProjection| :guilabel:`Custom Projections...`: create your own "
 ":ref:`coordinate reference systems <sec_custom_projections>`."
 msgstr ""
+"|customProjection| :guilabel:`Custom Projections...`: 사용자 자신만의 :ref:`좌표계 "
+"<sec_custom_projections>` 를 생성합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:18
 msgid ""
@@ -50,6 +55,9 @@ msgid ""
 "during each QGIS session by the :ref:`project properties "
 "<project_properties>` (accessible under :menuselection:`Project` menu)."
 msgstr ""
+"|keyboardShortcuts| :guilabel:`Keyboard Shortcuts...`: 사용자 자신만의 :ref:`키보드 "
+"단축키 <shortcuts>` 모음을 정의합니다. 그리고 각 QGIS 세션마다 (:menuselection:`Project` 메뉴 아래 "
+"있는) :ref:`프로젝트 속성 <project_properties>` 으로 이 단축키 정의를 무시할 수도 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:22
 msgid ""
@@ -57,6 +65,8 @@ msgid ""
 "the :ref:`application interface <sec_customization>`, hiding dialogs or "
 "tools you may not need."
 msgstr ""
+"|interfaceCustomization| :guilabel:`Interface Customization...`: 사용자가 필요로 하지"
+" 않는 대화창이나 도구를 숨기는 등, :ref:`응용 프로그램 인터페이스 <sec_customization>` 를 설정합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:25
 msgid ""
@@ -65,6 +75,9 @@ msgid ""
 "the active :ref:`User profile <user_profiles>` settings and applied by "
 "default whenever you open a new project with this profile."
 msgstr ""
+"|options| :guilabel:`Options...`: 소프트웨어의 서로 다른 영역들에 적용할 전체 수준 :ref:`옵션 "
+"<gui_options>` 을 설정합니다. 설정한 옵션들은 활성화된 :ref:`사용자 프로파일 <user_profiles>` 설정에 "
+"저장되어, 해당 프로파일과 함께 새로 프로젝트를 열 때마다 기본적으로 적용됩니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:35
 msgid "Options"
@@ -88,7 +101,7 @@ msgstr "사용자 고유 옵션을 사용자 지정할 수 있는 탭들에 대�
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:45
 msgid "**Plugins can embed their settings within the Options dialog**"
-msgstr ""
+msgstr "**플러그인 설정을 옵션 대화창에 내장시킬 수 있습니다.**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:47
 msgid ""
@@ -97,6 +110,9 @@ msgid ""
 "options into the standard Options dialog. This avoids each plugin having "
 "their own config dialog with extra menu items just for them..."
 msgstr ""
+"여기에서는 핵심 설정만 설명하지만, :ref:`설치된 플러그인 <plugins>` 이 표준 옵션 대화창에 고유 옵션을 삽입하여 해당 "
+"목록을 확장시킬 수 있다는 사실을 기억하십시오. 이렇게 해서 각 플러그인이 각각 자신만의 추가 메뉴 항목을 가진 설정 대화창을 여는 것을"
+" 막을 수 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:59
 msgid "General Settings"
@@ -104,7 +120,7 @@ msgstr "일반 설정"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:64
 msgid "**Override System Locale**"
-msgstr ""
+msgstr "**시스템 로케일 무시**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:66
 msgid ""
@@ -112,28 +128,33 @@ msgid ""
 "language and manipulate numerical values. Enabling this group allows you to "
 "customize the behavior."
 msgstr ""
+"QGIS는 기본적으로 사용자의 운영체제 설정에 의존해서 언어를 설정하고 수치(numerical value)를 처리합니다. 이 옵션 그룹을"
+" 활성화하면 사용자가 이런 로케일 습성을 사용자 지정할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:70
 msgid ""
 "Select from :guilabel:`User interface translation` the language to apply to "
 "the GUI"
-msgstr ""
+msgstr ":guilabel:`User interface translation` 에서 GUI에 적용할 언어를 선택합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:72
 msgid ""
 "Select in :guilabel:`Locale (number, date and currency formats)` the system "
 "on which date and numeric values should be input and rendered"
 msgstr ""
+":guilabel:`Locale (number, date and currency formats)` 에서 날짜 및 수치를 입력하고 "
+"렌더링하는 체계를 선택합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:74
 msgid "|checkbox| :guilabel:`Show group (thousand) separator`"
 msgstr ""
+"|checkbox| :guilabel:`Show group (thousand) separator` : 천단위 구분자를 활성화합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:76
 msgid ""
 "A summary of the selected settings and how they would be interpreted is "
 "displayed at the bottom of the frame."
-msgstr ""
+msgstr "사용자가 선택한 설정 및 해당 설정이 어떻게 해석되는지에 대한 요약 설명이 대화창 프레임의 하단에 표시됩니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:80
 msgid "**Application**"
@@ -144,30 +165,40 @@ msgid ""
 "Select the :guilabel:`Style (QGIS restart required)` ie, the widgets look "
 "and placement in dialogs. Possible values depend on your Operating System."
 msgstr ""
+"대화창에 표시되는 위젯의 모양 및 위치 등을 설정하려면 :guilabel:`Style (QGIS restart required)` 을 "
+"선택하십시오. 사용자의 운영체제에 따라 선택할 수 있는 옵션값이 달라집니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:84
 msgid ""
 "Define the :guilabel:`UI theme (QGIS restart required)` |selectString|. It "
 "can be 'default', 'Night Mapping', or 'Blend of Gray'"
 msgstr ""
+":guilabel:`UI theme (QGIS restart required)` |selectString| 에서 UI 테마를 "
+"정의하십시오. 'default', 'Night Mapping', 또는 'Blend of Gray' 가운데 하나를 선택할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:86
 msgid "Define the :guilabel:`Icon size` |selectString|"
-msgstr ""
+msgstr ":guilabel:`Icon size` |selectString| 에서 아이콘 크기를 정의하십시오."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:87
 msgid ""
 "Define the :guilabel:`Font` and its :guilabel:`Size`. The font can be "
 "|radioButtonOn| :guilabel:`Qt default` or a user-defined one"
 msgstr ""
+":guilabel:`Font` 와 :guilabel:`Size` 에서 글꼴 및 그 크기를 정의하십시오. 글꼴은 "
+"|radioButtonOn| :guilabel:`Qt default` 일 수도 있고, 사용자가 글꼴을 선택할 수도 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:89
 msgid "Change the :guilabel:`Timeout for timed messages or dialogs`"
 msgstr ""
+":guilabel:`Timeout for timed messages or dialogs` 에서 시한이 정해진 메시지 또는 대화창의 시한을"
+" 정의하십시오."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:90
 msgid "|unchecked| :guilabel:`Hide splash screen at startup`"
 msgstr ""
+"|unchecked| :guilabel:`Hide splash screen at startup` 에서 QGIS 실행 시 로딩 이미지 표시"
+" 여부를 설정하십시오."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:91
 msgid ""
@@ -176,18 +207,25 @@ msgid ""
 "aware of project news (user/developer meetings date and summary, community "
 "surveys, releases announcements, various tips...)"
 msgstr ""
+"|checkbox| :guilabel:`Show QGIS news feed on welcome page`: 환영 페이지에 사용자가 직접 "
+"프로젝트 소식(사용자/개발자 모임 날짜 및 요약, 커뮤니티 설문조사, 배포판 발표, 다양한 팁들 등등)을 볼 수 있는 기획된 QGIS "
+"뉴스피드를 표시할지 여부를 설정하십시오."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:95
 msgid ""
 "|checkbox| :guilabel:`Check QGIS version at startup` to keep you informed if"
 " a newer version is released"
 msgstr ""
+"|checkbox| :guilabel:`Check QGIS version at startup` 를 체크하면 새 버전이 출시됐는지에 대한 "
+"소식을 놓치지 않을 수 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:97
 msgid ""
 "|unchecked| :guilabel:`Use native color chooser dialogs` (see :ref:`color-"
 "selector`)"
 msgstr ""
+"|unchecked| :guilabel:`Use native color chooser dialogs` : 내장된 색상 선택 대화창 사용 "
+"여부를 설정합니다. (:ref:`color-selector` 참조)"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:99
 msgid ""
@@ -195,6 +233,9 @@ msgid ""
 ":ref:`data source manager <datasourcemanager>` dialog opened and allow "
 "interaction with QGIS interface while adding layers to project"
 msgstr ""
+"|unchecked| :guilabel:`Modeless data source manager dialog` : 프로젝트에 레이어를 "
+"추가하는 동안 :ref:`데이터소스 관리자 <datasourcemanager>` 대화창을 열어둔 채 QGIS 인터페이스와 상호작용시킬지 "
+"여부를 설정합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:106
 msgid "**Project files**"
@@ -202,7 +243,7 @@ msgstr "**프로젝트 파일**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:108
 msgid ":guilabel:`Open project on launch`"
-msgstr ""
+msgstr ":guilabel:`Open project on launch`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:110
 msgid ""
@@ -210,20 +251,23 @@ msgid ""
 "template(s) and the most recent projects (with thumbnails) of the :ref:`user"
 " profile <user_profiles>`. No project is opened by default."
 msgstr ""
+"'환영 페이지' (기본값): \"뉴스\" 피드, 프로젝트 템플릿(들), 그리고 :ref:`사용자 프로파일 <user_profiles>` "
+"의 (썸네일로 표시된) 최근 프로젝트들을 표시할 수 있습니다. 기본적으로 어떤 프로젝트도 열지 않습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:113
 msgid "'New': opens a new project, based on the default template"
-msgstr ""
+msgstr "'새 프로젝트': 기본 템플릿에 기반한 새 프로젝트를 엽니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:114
 msgid "'Most recent': reopens the last saved project"
-msgstr ""
+msgstr "'최근 프로젝트': 마지막으로 저장했던 프로젝트를 다시 엽니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:115
 msgid ""
 "and 'Specific': opens a particular project. Use the :guilabel:`...` button "
 "to define the project to use by default."
 msgstr ""
+"'특정 프로젝트': 특정 프로젝트를 엽니다. :guilabel:`...` 버튼을 통해 기본값으로 사용할 프로젝트를 정의합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:117
 msgid ""
@@ -247,12 +291,15 @@ msgid ""
 "|checkbox| :guilabel:`Prompt to save project and data source changes when "
 "required` to avoid losing changes you made."
 msgstr ""
+"|checkbox| :guilabel:`Prompt to save project and data source changes when "
+"required`: 사용자의 변경 사항을 잃지 않으려면 이 옵션을 체크하십시오."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:126
 msgid ""
 "|checkbox| :guilabel:`Prompt for confirmation when a layer is to be removed`"
 msgstr ""
-"|checkbox| :guilabel:`Prompt for confirmation when a layer is to be removed`"
+"|checkbox| :guilabel:`Prompt for confirmation when a layer is to be "
+"removed`: 실수로 레이어를 삭제하는 일이 없으려면 이 옵션을 체크하십시오."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:127
 msgid ""
@@ -261,6 +308,10 @@ msgid ""
 " QGIS but once the project is saved, trying to open with older release may "
 "fail because of features not available in that version."
 msgstr ""
+"|checkbox| :guilabel:`Warn when opening a project file saved with an older "
+"version of QGIS`: QGIS 구 버전의 프로젝트 파일을 열려고 할 때 경고창을 엽니다. QGIS 신 버전은 언제나 구 "
+"버전에서 생성된 프로젝트를 열 수 있지만, 신 버전의 프로젝트를 구 버전으로 열려고 할 경우 해당 버전에서 지원하지 않는 피처가 있을 수"
+" 있기 때문에 실패할 수도 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:131
 msgid ""
@@ -287,10 +338,12 @@ msgid ""
 " symbols`. These SVG files are then available to symbolize or label the "
 "features or decorate your map composition."
 msgstr ""
+":guilabel:`Path(s) to search for Scalable Vector Graphic (SVG) symbols` 를 "
+"추가하거나 삭제합니다. 피처 심볼 또는 레이블을 적용하거나, 사용자 맵 조판을 장식하는 데 이 SVG 파일을 쓸 수 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:150
 msgid "When using an SVG file in a symbol or a label, QGIS allows you to:"
-msgstr ""
+msgstr "심볼 또는 레이블에 SVG 파일을 사용할 경우, QGIS는 다음과 같은 작업을 할 수 있습니다:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:152
 msgid ""
@@ -298,12 +351,13 @@ msgid ""
 "path and QGIS needs to resolve the path in order to display the "
 "corresponding image"
 msgstr ""
+"파일 시스템에서 파일 불러오기: 파일 경로를 통해 파일을 식별하는데, QGIS는 대응하는 이미지를 표시하기 위해 경로를 분해해야 합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:154
 msgid ""
 "load the file from a remote URL: as above, the image will only be loaded on "
 "successful retrieval of the remote resource"
-msgstr ""
+msgstr "원격 URL에서 파일 불러오기: 마찬가지로, 원격 리소스에서 성공적으로 검색되어야 이미지를 불러올 것입니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:156
 msgid ""
@@ -313,12 +367,15 @@ msgid ""
 "self-contained projects with custom SVG symbols which can be easily shared "
 "amongst different users and installations of QGIS."
 msgstr ""
+"항목 내에 SVG 파일 내장시키기: 현재 프로젝트, 스타일 데이터베이스, 또는 인쇄 조판 템플릿 안에 파일을 내장시킵니다. 그러면 언제나"
+" SVG 파일을 항목의 일부로 렌더링할 것입니다. 이 방법으로 사용자 지정 SVG 심볼을 내장한 프로젝트를 서로 다른 사용자와 QGIS "
+"설치판 사이에서 쉽게 공유할 수 있도록 간편하게 생성할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:162
 msgid ""
 "It is also possible to extract the embedded SVG file from a symbol or label "
 "and save it on disk."
-msgstr ""
+msgstr "심볼 또는 레이블에서 내장 SVG 파일을 추출해서 디스크에 저장할 수도 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:165
 msgid ""
@@ -326,6 +383,8 @@ msgid ""
 " are also applicable to raster images you may want to use for customizing "
 "symbols, labels or decorations."
 msgstr ""
+"앞에서 언급한 프로젝트에 SVG 파일을 불러오거나 저장하는 옵션을, 사용자 지정려고 하는 심볼, 레이블, 장식에 사용할 래스터 이미지에도"
+" 적용할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:169
 msgid "**Plugin paths**"
@@ -336,10 +395,12 @@ msgid ""
 "Add or Remove :guilabel:`Path(s) to search for additional C++ plugin "
 "libraries`."
 msgstr ""
+":guilabel:`Path(s) to search for additional C++ plugin libraries` 를 추가하거나 "
+"삭제합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:174
 msgid "**Documentation paths**"
-msgstr ""
+msgstr "**문서 경로**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:176
 msgid ""
@@ -350,6 +411,10 @@ msgid ""
 " a dialog, the topmost link is checked and if no corresponding page is "
 "found, the next one is tried, and so on."
 msgstr ""
+"QGIS 도움말에 사용할 :guilabel:`Documentation Path(s)` 를 추가하거나 삭제합니다. 사용 중인 QGIS "
+"버전에 대응하는 공식 온라인 사용자 지침서를 가리키는 링크가 기본값으로 추가됩니다. 하지만 다른 링크들을 추가하고 위에서 아래로 "
+"우선순위를 정할 수 있습니다. 사용자가 대화창에서 :guilabel:`Help` 버튼을 클릭할 때마다, 가장 위에 있는 링크를 검색하고 "
+"만약 해당 페이지를 찾을 수 없다면 그 다음 링크, 다시 그 다음 링크를 검색할 것입니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:184
 msgid ""
@@ -360,6 +425,10 @@ msgid ""
 "If no LTR documentation is available then the *testing* doc, with features "
 "from newer and development versions, is used."
 msgstr ""
+"QGIS LTR(Long Term Release) 버전에 대해서만 문서의 버전을 붙이고 번역합니다. 즉 사용자가 (QGIS 3.0 같은)"
+" 일반 배포판을 실행하는 경우, 도움말 버튼을 클릭하면 기본적으로 다음 (QGIS 3.4 LTR 같은) LTR 버전 사용자 지침서 "
+"페이지를 열 것입니다. 이 사용자 지침서는 (3.2 및 3.4 같은) 신 배포판의 기능 설명을 포함하고 있을 수도 있습니다. LTR 버전"
+" 문서를 사용할 수 없을 경우, 최신 개발 중인 버전의 기능을 설명하는 *시험용* 문서로 연결합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:191
 msgid "**QSettings**"
@@ -391,6 +460,10 @@ msgid ""
 " and for turning on debugging output for specific sections of the source "
 "code."
 msgstr ""
+"**Environment** 그룹에서 시스템 환경 변수를 살펴볼 수 있고, 많은 변수를 설정할 수 있습니다. 이 옵션은 맥OS처럼 GUI"
+" 응용 프로그램이 사용자의 셸 환경을 반드시 상속하지는 않는 플랫폼에서 유용합니다. SAGA, GRASS 같은 공간 처리 툴박스가 "
+"제어하는 외부 도구 모음을 위한 환경 변수들을 설정하고 살펴보는 데에도, 그리고 소스 코드의 특정 부분에 대해 산출물을 디버그하는 작업을"
+" 활성화시키는 데에도 유용합니다. "
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:213
 msgid ""
@@ -400,6 +473,10 @@ msgid ""
 "environment variables`, and it's possible to filter them by activating "
 "|checkbox| :guilabel:`Show only QGIS-specific variables`."
 msgstr ""
+"|checkbox| :guilabel:`Use custom variables (restart required - include "
+"separators)` 를 활성화하면 변수들을 :guilabel:`Add` 및 :guilabel:`Remove` 할 수 있습니다. "
+":guilabel:`Current environment variables` 에 이미 정의된 환경 변수를 표시하며, |checkbox| "
+":guilabel:`Show only QGIS-specific variables` 를 활성화해서 환경 변수를 필터링할 수도 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:223
 msgid "CRS Settings"
@@ -410,24 +487,28 @@ msgid ""
 "For more information on how QGIS handles layer projection, please read the "
 "dedicated section at :ref:`label_projections`."
 msgstr ""
+"QGIS가 레이어 투영체를 어떻게 처리하는지 자세히 알고 싶다면, :ref:`label_projections` 에서 전문적으로 설명하고 "
+"있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:233
 msgid "CRS Settings in QGIS"
-msgstr ""
+msgstr "QGIS에서 좌표계 설정하기"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:235
 msgid "**CRS for projects**"
-msgstr ""
+msgstr "**새 프로젝트 용 좌표계**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:237
 msgid "There is an option to automatically set new project’s CRS:"
-msgstr ""
+msgstr "새 프로젝트의 좌표계를 자동적으로 설정하는 옵션이 있습니다:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:239
 msgid ""
 "|radioButtonOn|:guilabel:`Use CRS from first layer added`: the CRS of the "
 "project will be set to the CRS of the first layer loaded into it"
 msgstr ""
+"|radioButtonOn|:guilabel:`Use CRS from first layer added`: 프로젝트의 좌표계를 처음 불러온"
+" 레이어의 좌표계로 설정할 것입니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:241
 msgid ""
@@ -435,6 +516,8 @@ msgid ""
 "by default to any new project and is left unchanged when adding layers to "
 "the project."
 msgstr ""
+"|radioButtonOff|:guilabel:`Use a default CRS`: 모든 새 프로젝트에 미리 설정해둔 좌표계를 적용하며,"
+" 프로젝트에 어느 레이어를 추가해도 변경하지 않습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:245
 msgid ""
@@ -442,30 +525,33 @@ msgid ""
 " Reference System of the project can still be overridden from the "
 ":menuselection:`Project --> Properties... --> CRS` tab."
 msgstr ""
+"사용자가 어떤 옵션을 선택하든, 선택한 옵션을 차후 QGIS 세션에도 사용하도록 저장할 것입니다. 하지만 언제든지 "
+":menuselection:`Project --> Properties... --> CRS` 탭에서 프로젝트의 기존 좌표계를 무시하고 새로"
+" 적용할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:249
 msgid "**CRS for layers**"
-msgstr ""
+msgstr "**레이어 용 좌표계**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:251
 msgid ""
 ":guilabel:`Default CRS for layers`: select a default CRS to use when you "
 "create a layer"
-msgstr ""
+msgstr ":guilabel:`Default CRS for layers`: 새 레이어를 생성할 때 사용할 좌표계를 선택합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:254
 msgid ""
 "You can also define the action to take when a new layer is created, or when "
 "a layer without a CRS is loaded."
-msgstr ""
+msgstr "새 레이어를 생성하거나 좌표계가 정의되지 않은 레이어를 불러올 때 수행할 액션을 정의할 수도 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:257
 msgid "|radioButtonOn| :guilabel:`Leave as unknown CRS (take no action)`"
-msgstr ""
+msgstr "|radioButtonOn| :guilabel:`Leave as unknown CRS (take no action)`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:258
 msgid "|radioButtonOff| :guilabel:`Prompt for CRS`"
-msgstr ""
+msgstr "|radioButtonOff| :guilabel:`Prompt for CRS`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:259
 msgid "|radioButtonOff| :guilabel:`Use project CRS`"
@@ -473,7 +559,7 @@ msgstr "|radioButtonOff| :guilabel:`Use project CRS`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:260
 msgid "|radioButtonOff| :guilabel:`Use a default CRS`"
-msgstr ""
+msgstr "|radioButtonOff| :guilabel:`Use a default CRS`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:262
 msgid "**Default datum transformations**"
@@ -483,32 +569,36 @@ msgstr "**기본 데이터 변환**"
 msgid ""
 "In this group, you can control whether reprojecting layers to another CRS "
 "should be:"
-msgstr ""
+msgstr "이 그룹에서는 레이어 좌표계를 또다른 좌표계로 재투영하는 작업을 다음과 같이 제어할 수 있습니다:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:266
 msgid "automatically processed using QGIS default transformations settings;"
-msgstr ""
+msgstr "QGIS 기본 변환 설정을 사용해서 자동적으로 공간 처리"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:267
 msgid "and/or more controlled by you with custom preferences such as:"
-msgstr ""
+msgstr "그리고/또는 사용자 지정 선호도를 통해 다음과 같이 더 자세히 조정:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:269
 msgid ""
 "|checkbox| :guilabel:`Ask for datum transformation if several are available`"
 msgstr ""
+"|checkbox| :guilabel:`Ask for datum transformation if several are available`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:270
 msgid ""
 "a predefined list of datum transformations to apply by default. See "
 ":ref:`datum_transformation` for more details."
 msgstr ""
+"기본으로 적용할 미리 정의된 데이터 변환 목록. 자세한 내용은 :ref:`datum_transformation` 을 참조하세요."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:274
 msgid ""
 "|unchecked| :guilabel:`Planimetric measurements`: sets the default for the "
 "\"planimetric measurements\" property for newly created projects."
 msgstr ""
+"|unchecked| :guilabel:`Planimetric measurements`: 새로 생성한 프로젝트 용 \"평면 "
+"측정(planimetric measurements)\" 속성 기본값을 설정합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:281
 msgid "Data Sources Settings"
@@ -516,7 +606,7 @@ msgstr "데이터소스 설정"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:288
 msgid "Data Sources Settings in QGIS"
-msgstr ""
+msgstr "QGIS에서 데이터소스 설정하기"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:291
 msgid "**Feature attributes and table**"
@@ -524,7 +614,7 @@ msgstr "**피처 속성 및 테이블**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:293
 msgid "|checkbox| :guilabel:`Open new attribute tables as docked windows`"
-msgstr ""
+msgstr "|checkbox| :guilabel:`Open new attribute tables as docked windows`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:294
 msgid ""
@@ -618,6 +708,9 @@ msgid ""
 "of the Browser panel when querying such files. 'No', 'Basic scan' and 'Full "
 "scan' are possible options."
 msgstr ""
+":guilabel:`Scan for contents of compressed files (.zip) in browser dock` "
+"|selectString| 을 통해 :file:`.zip` 압축 파일을 쿼리할 경우 탐색기 패널 하단의 위젯 정보를 얼마나 자세히 "
+"표시할지 정의합니다. ‘No’, ‘Basic scan’ 그리고 ‘Full scan’ 가운데 하나를 선택할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:333
 msgid ""
@@ -668,6 +761,12 @@ msgid ""
 "database compatible SQL. In those cases, QGIS will download the whole data "
 "and filter locally to be on the safe side, which is much less performant."
 msgstr ""
+"|checkbox| :guilabel:`Execute expressions on server-side if possible`: "
+"데이터소스에서 피처를 요청할 경우, QGIS는 서버에 직접 필터링 기준을 전송해서 기준에 맞는 피처만 다운로드하는 방법으로 요청을 "
+"최적화하려 할 것입니다. 예를 들어 사용자 인터페이스 상의 목록에 베른에 사는 농부들만 표시돼야 할 경우, QGIS는 데이터베이스에 "
+"``WHERE \"hometown\" = 'Bern'`` 을 전송할 것입니다. 어떤 경우에는 필터 기준이 너무 복잡해서 QGIS 표현식을"
+" 데이터베이스 호환 SQL로 번역할 수 없을 수도 있습니다. 이런 경우 QGIS는, 작업 효율은 많이 떨어지겠지만, 안전한 작업을 위해 "
+"전체 데이터를 다운로드해서 사용자 시스템 상에서 필터링할 것입니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:357
 msgid ""
@@ -676,6 +775,9 @@ msgid ""
 "option is meant as a safety break and should only be deactivated if you "
 "identify a misbehavior of the QGIS expression translation engine."
 msgstr ""
+"이 옵션을 비활성화하면 성능 저하를 감수하더라도 언제나 전체 데이터를 다운로드해서 사용자 시스템 상에서 필터링 작업을 하도록 QGIS를 "
+"강제할 수 있습니다. 이 옵션은 안전차단기(safety break)라는 의미를 가지며, 사용자가 QGIS 표현식 번역 엔진의 오류를 "
+"식별한 경우에만 비활성화해야 합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:361
 msgid ""
@@ -683,6 +785,8 @@ msgid ""
 "values from database provider should be calculated when digitizing the new "
 "feature (checked status) or when saving the changes."
 msgstr ""
+"|checkbox| :guilabel:`Evaluate default values`: 이 옵션은 변경 사항을 저장하는 경우 또는 (체크한"
+" 상태라면) 새 피처를 디지타이즈하는 경우 데이터베이스 제공자가 제공한 기본값들을 계산해야 하는지 여부를 정의합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:366
 msgid "**Hidden Browser Path**"
@@ -694,6 +798,8 @@ msgid ""
 "panel <browser_panel>`. Removing a folder from the list will make it "
 "available in the :guilabel:`Browser` panel."
 msgstr ""
+"이 위젯은 사용자가 :ref:`탐색기 패널 <browser_panel>` 에서 숨기기로 선택한 모든 폴더 목록을 표시합니다. 이 목록에서"
+" 폴더를 제거하면 :guilabel:`Browser` 패널에 표시될 것입니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:378
 msgid "Rendering Settings"
@@ -714,6 +820,9 @@ msgid ""
 " to avoid each new layer being rendered in the canvas and slow down the "
 "process"
 msgstr ""
+"|checkbox| :guilabel:`By default new layers added to the map should be "
+"displayed`: 이 옵션을 체크 해제하는 것은 여러 레이어를 동시에 불러오는 경우 캔버스에 새 레이어들 각각을 동시에 렌더링해서 "
+"처리 속도가 느려지는 상황을 피하고자 할 때 유용합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:392
 msgid ""
@@ -756,7 +865,7 @@ msgid ""
 "provides three algorithms: 'Distance' (default), 'SnapToGrid' and "
 "'Visvalingam'."
 msgstr ""
-":guilabel:`Simplification algorithm`: 이 옵션은 로컬에서 피처를 \"실시간(on-the-fly)\" "
+":guilabel:`Simplification algorithm`: 이 옵션은 로컬에서 피처를 \"실시간(on-the-fly)\"으로 "
 "단순화시켜 도형 렌더링 속도를 향상시킵니다. 데이터 제공자에서 불러온 도형을 변경하지는 않습니다. 사용자가 피처 도형을 사용하는 표현식을"
 " 사용할 경우 (예를 들어 면적을 계산할 경우) 이 옵션은 중요합니다. 단순화된 도형이 아니라 원본 도형에 대해 계산이 이루어진다는 것을"
 " 보장하기 때문입니다. 이를 위해 QGIS는 'Distance'(기본값), 'SnapToGrid' 그리고 'Visvalingam' 세 "
@@ -768,6 +877,8 @@ msgid ""
 "geometries are simplified by the provider (PostGIS, Oracle...) and unlike "
 "the local-side simplification, geometry-based calculations may be affected"
 msgstr ""
+"|unchecked| :guilabel:`Simplify on provider side if possible`: PostGIS, "
+"Oracle 등의 제공자 단에서 도형을 단순화하며, 로컬 단의 단순화와는 달리 도형 기반 계산에 영향을 줄 수도 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:411
 msgid ":guilabel:`Maximum scale at which the layer should be simplified`"
@@ -778,6 +889,7 @@ msgid ""
 "|doubleSpinBox| :guilabel:`Magnification level` (see the :ref:`magnifier "
 "<magnifier>`)"
 msgstr ""
+"|doubleSpinBox| :guilabel:`Magnification level` (:ref:`확대경 <magnifier>` 참조)"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:414
 msgid ""
@@ -785,7 +897,7 @@ msgid ""
 "specific layer from its :menuselection:`Layer properties --> Rendering` "
 "menu."
 msgstr ""
-"일반 수준 설정 이외에도, 특정 레이어의 :menuselection:`Layer properties --> Rendering` 메뉴를 "
+"전체 수준 설정 이외에도, 특정 레이어의 :menuselection:`Layer properties --> Rendering` 메뉴를 "
 "통해서도 피처 단순화를 설정할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:417
@@ -822,6 +934,8 @@ msgid ""
 ":guilabel:`Tolerance type`: it can be *Maximum angle* or *Maximum "
 "difference* between approximation and curve."
 msgstr ""
+":guilabel:`Tolerance type`: 근사치와 곡선 사이에서 *최대 각도(Maximum angle)* 또는 *최대 "
+"거리(Maximum difference)* 가운데 선택할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:432
 msgid "**Rasters**"
@@ -843,10 +957,16 @@ msgid ""
 ":guilabel:`Oversampling` value (between 0.0 and 99.99 - a large value means "
 "more work for QGIS - the default value is 2.0)."
 msgstr ""
+":guilabel:`Zoomed in resampling` 과 :guilabel:`Zoomed out resampling` 을 정의할 수"
+" 있습니다. :guilabel:`Zoomed in resampling` 의 경우 다음 'Nearest Neighbour', "
+"'Bilinear' 와 'Cubic' 세 가지 리샘플링 메소드 가운데 하나를 선택할 수 있습니다. :guilabel:`Zoomed out"
+" resampling` 의 경우 'Nearest Neighbour' 와 'Average' 가운데 하나를 선택할 수 있습니다. "
+":guilabel:`Oversampling` 값도 설정할 수 있습니다. (0.0 ~ 99.99 - 값이 커질수록 QGIS 작업량이 "
+"많아집니다. 기본값은 2.0입니다.)"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:445
 msgid "*Contrast enhancement*"
-msgstr "**Contrast enhancement**"
+msgstr "**대비 향상(Contrast enhancement)**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:447
 msgid ""
@@ -854,12 +974,17 @@ msgid ""
 " :guilabel:`Multi band color (byte/band)` or :guilabel:`Multi band color "
 "(>byte/band)`. For each, you can set:"
 msgstr ""
+":guilabel:`Single band gray`, :guilabel:`Multi band color (byte/band)` 또는 "
+":guilabel:`Multi band color (>byte/band)` 에 대비 향상 옵션을 적용할 수 있습니다. 각 항목에 대해 "
+"다음 옵션을 설정할 수 있습니다:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:451
 msgid ""
 "the :guilabel:`Algorithm` to use, whose values can be 'No stretch', 'Stretch"
 " to MinMax', 'Stretch and Clip to MinMax' or 'Clip to MinMax'"
 msgstr ""
+":guilabel:`Algorithm`: 사용할 알고리즘을 설정합니다. 'No stretch', 'Stretch to MinMax', "
+"'Stretch and Clip to MinMax' 또는 'Clip to MinMax' 가운데 하나를 선택할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:453
 msgid ""
@@ -867,10 +992,12 @@ msgid ""
 "'Cumulative pixel count cut', 'Minimum/Maximum', 'Mean +/- standard "
 "deviation'."
 msgstr ""
+":guilabel:`Limits (minimum/maximum)`: 적용할 제한을 설정합니다. 'Cumulative pixel count"
+" cut', 'Minimum/Maximum', 'Mean +/- standard deviation' 가운데 하나를 선택할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:456
 msgid "For rasters rendering, you can also define the following options:"
-msgstr ""
+msgstr "래스터 렌더링의 경우, 다음 옵션도 정의할 수 있습니다:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:458
 msgid ":guilabel:`Cumulative pixel count cut limits`"
@@ -889,6 +1016,8 @@ msgid ""
 "|checkbox| :guilabel:`Map canvas refresh` to debug rendering duration in the"
 " :guilabel:`Log Messages` panel."
 msgstr ""
+"|checkbox| :guilabel:`Map canvas refresh`: 렌더링에 걸리는 시간을 :guilabel:`Log "
+"Messages` 패널에서 디버그합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:469
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:476
@@ -897,17 +1026,19 @@ msgstr "캔버스 및 범례 설정"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:478
 msgid "These properties let you set:"
-msgstr ""
+msgstr "다음 속성을 설정할 수 있습니다:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:480
 msgid ""
 "the **Default map appearance (overridden by project properties)**: the "
 ":guilabel:`Selection color` and :guilabel:`Background color`."
 msgstr ""
+"**(프로젝트 속성으로 무시되는) 기본 맵 모양**: :guilabel:`Selection color` 및 "
+":guilabel:`Background color` 를 정의합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:483
 msgid "**Layer legend** interaction:"
-msgstr ""
+msgstr "**레이어 범례** 상호작용:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:485
 msgid ""
@@ -925,16 +1056,20 @@ msgid ""
 "panel, e.g. when applying a categorized or rule-based renderer (see "
 ":ref:`vector_style_menu` for more information)."
 msgstr ""
+"|checkbox| :guilabel:`Display classification attribute names`: 예를 들어 범주화 또는 "
+"규칙 기반 렌더링 작업자를 적용할 경우 레이어 패널에 범주 속성 명칭을 표시할지 여부를 정의합니다. (자세한 내용은 "
+":ref:`vector_style_menu` 을 참조하세요.)"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:491
 msgid "the :guilabel:`WMS getLegendGraphic Resolution`"
-msgstr ""
+msgstr ":guilabel:`WMS getLegendGraphic Resolution` 을 설정할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:492
 msgid ""
 "the :guilabel:`Delay` in milliseconds of layers :ref:`map tips <maptips>` "
 "display"
 msgstr ""
+":guilabel:`Delay`: 레이어의 :ref:`맵 팁 <maptips>` 표시를 1,000분의 1초 단위로 지연시킬 수 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:498
 msgid "Map tools Settings"
@@ -956,12 +1091,14 @@ msgid ""
 "is a tolerance distance within which the identify tool will depict results "
 "as long as you click within this tolerance."
 msgstr ""
+":guilabel:`Search radius for identifying features and displaying map tips` 는"
+" 사용자가 해당 허용 오차 내에서 클릭하는 한 식별 도구가 결과를 표시하게 될 허용 오차 거리입니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:512
 msgid ""
 ":guilabel:`Highlight color` allows you to choose with which color features "
 "being identified should be highlighted."
-msgstr ""
+msgstr ":guilabel:`Highlight color` 에서 식별된 피처를 어떤 색상으로 강조할지 선택할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:514
 msgid ""
@@ -1001,6 +1138,8 @@ msgid ""
 "'Feet', 'Yards', 'Miles', 'Nautical Miles', 'Centimeters', 'Millimeters', "
 "'Degrees' or 'Map Units'"
 msgstr ""
+":guilabel:`Preferred distance units`: '미터', '킬로미터', '피트', '야드', '마일', "
+"'해리(Nautical Miles)', '센티미터', '밀리미터', '도(Degrees)' 또는 '맵 단위' 가운데 하나를 선택합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:528
 msgid ""
@@ -1009,6 +1148,9 @@ msgid ""
 "'Acres', 'Square nautical miles', 'Square centimeters', 'Square "
 "millimeters', 'Square degrees' or 'Map Units'"
 msgstr ""
+":guilabel:`Preferred area units`: '제곱미터', '제곱킬로미터', '제곱피트', '제곱야드', '제곱마일', "
+"'헥타르', '에이커(Acres)', '제곱해리', '제곱센티미터', '제곱밀리미터', '제곱도' 또는 '맵 단위' 가운데 하나를 "
+"선택합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:532
 msgid ""
@@ -1016,6 +1158,9 @@ msgid ""
 "'Gon/gradians', 'Minutes of arc', 'Seconds of arc', 'Turns/revolutions', "
 "milliradians (SI definition) or mil (NATO/military definition)"
 msgstr ""
+":guilabel:`Preferred angle units`: '도', '라디안', '곤/그라디안(Gon/gradians)', "
+"'Minutes of arc', 'Seconds of arc', 'Turns/revolutions', 밀리라디안(milliradian, "
+"SI 정의) 또는 밀(mil, NATO/군사 정의) 가운데 하나를 선택합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:536
 msgid "**Panning and zooming**"
@@ -1051,32 +1196,36 @@ msgid ""
 "the application in the :ref:`color selector widget <color_widget>`. You can "
 "choose from:"
 msgstr ""
+"이 메뉴는 :ref:`색상 선택기 위젯 <color_widget>` 을 통해 응용 프로그램 전반에 걸쳐 사용되는 색상표를 생성하거나 "
+"업데이트할 수 있게 해줍니다. 다음과 같은 색상표들을 선택할 수 있습니다:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:568
 msgid ":guilabel:`Recent colors` showing recently used colors"
-msgstr ""
+msgstr "최근 사용한 색상들을 보여주는 :guilabel:`Recent colors`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:569
 msgid ":guilabel:`Standard colors`, the default palette of colors"
-msgstr ""
+msgstr "기본 색상표인 :guilabel:`Standard colors`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:570
 msgid ""
 ":guilabel:`Project colors`, a set of colors specific to the current project "
 "(see :ref:`default_styles_properties` for more details)"
 msgstr ""
+"현재 프로젝트에 특정해 사용되는 색상표인 :guilabel:`Project colors` (자세한 내용은 "
+":ref:`default_styles_properties` 참조)"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:572
 msgid ""
 ":guilabel:`New layer colors`, a set of colors to use by default when new "
 "layers are added to QGIS"
-msgstr ""
+msgstr "QGIS에 새 레이어를 추가할 경우 기본적으로 사용되는 색상표인 :guilabel:`New layer colors`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:574
 msgid ""
 "or custom palette(s) you can create or import using the :guilabel:`...` "
 "button next to the palette combobox."
-msgstr ""
+msgstr "또는 색상표 콤보박스 옆의 :guilabel:`...` 버튼으로 생성하거나 가져올 수 있는 사용자 지정 색상표(들)"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:577
 msgid ""
@@ -1085,22 +1234,29 @@ msgid ""
 " in the color button drop-down. Custom palettes can also be added to this "
 "widget thanks to the :guilabel:`Show in Color Buttons` option."
 msgstr ""
+"기본적으로, :guilabel:`Recent colors`, :guilabel:`Standard colors` 및 "
+":guilabel:`Project colors` 색상표는 색상 버튼 드롭다운 목록에 표시되도록 설정돼 있으며 이들을 삭제할 수는 "
+"없습니다. :guilabel:`Show in Color Buttons` 옵션을 통해 사용자 지정 색상표도 이 위젯에 추가할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:582
 msgid ""
 "For any of the palettes, you can manage the list of colors using the set of "
 "tools next to the frame, ie:"
-msgstr ""
+msgstr "프레임 옆의 다음과 같은 도구 모음을 사용해서, 모든 색상표의 색상 목록을 관리할 수 있습니다:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:585
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1201
 msgid "|signPlus| :guilabel:`Add` or |signMinus| :guilabel:`Remove` color"
 msgstr ""
+"|signPlus| :guilabel:`Add` 또는 |signMinus| :guilabel:`Remove`: 색상을 추가하거나 "
+"삭제합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:586
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1202
 msgid "|editCopy| :guilabel:`Copy` or |editPaste| :guilabel:`Paste` color"
 msgstr ""
+"|editCopy| :guilabel:`Copy` 또는 |editPaste| :guilabel:`Paste`: 색상을 복사하거나 "
+"붙여넣습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:587
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1203
@@ -1108,6 +1264,8 @@ msgid ""
 "|fileOpen| :guilabel:`Import` or |fileSave| :guilabel:`Export` the set of "
 "colors from/to :file:`.gpl` file."
 msgstr ""
+"|fileOpen| :guilabel:`Import` 또는 |fileSave| :guilabel:`Export`: 색상 모음을 "
+":file:`.gpl` 파일로부터 가져오거나, :file:`.gpl` 파일로 내보냅니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:590
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1206
@@ -1116,6 +1274,8 @@ msgid ""
 "Selector <color-selector>` dialog. You can also rename it by double-clicking"
 " in the :guilabel:`Label` column."
 msgstr ""
+"목록에 있는 색상을 더블클릭하면 :ref:`색상 선택기 <color-selector>` 대화창의 해당 색상을 조정하거나 대체할 수 "
+"있습니다. :guilabel:`Label` 열을 더블클릭하면 해당 색상의 명칭을 변경할 수도 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:599
 msgid "Digitizing Settings"
@@ -1123,7 +1283,7 @@ msgstr "디지타이즈 작업 설정"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:606
 msgid "Digitizing Settings in QGIS"
-msgstr ""
+msgstr "QGIS에서 디지타이즈 작업 설정하기"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:608
 msgid ""
@@ -1142,10 +1302,14 @@ msgid ""
 "|checkbox| :guilabel:`Suppress attribute form pop-up after feature "
 "creation`: this choice can be overridden in each layer properties dialog."
 msgstr ""
+"|checkbox| :guilabel:`Suppress attribute form pop-up after feature "
+"creation`: 이 옵션을 활성화하더라도, 각 레이어의 속성 대화창에서 무시할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:615
 msgid "|checkbox| :guilabel:`Reuse last entered attribute values`."
 msgstr ""
+"|checkbox| :guilabel:`Reuse last entered attribute values`: 마지막으로 입력한 속성값들을 "
+"다시 사용할지 여부를 선택합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:616
 msgid ""
@@ -1159,17 +1323,18 @@ msgstr ""
 ":guilabel:`Validate geometries`. 많은 노드를 보유한 복잡한 라인 및 폴리곤을 편집하는 작업 시 렌더링이 아주 "
 "느려질 수 있습니다. QGIS의 기본 유효성 확인 과정에 시간이 오래 걸릴 수 있기 때문입니다. GEOS 도형 유효성 확인을 (GEOS "
 "3.3 버전부터 사용 가능) 활성화하거나, 도형 유효성 확인 과정을 비활성화해서 렌더링 속도를 높일 수 있습니다. GEOS 도형 유효성 "
-"확인은 훨씬 빠르지만, 첫 도형 문제점만 표시한다는 단점이 있습니다."
+"확인은 훨씬 빠르지만, 첫 도형 문제점만 보고한다는 단점이 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:623
 msgid ""
 "Note that depending on the selection, reports of geometry errors may differ "
 "(see :ref:`typesofgeomerrors`)"
 msgstr ""
+"선택 집합에 따라 도형 오류에 대한 보고도 달라질 수 있다는 점을 기억하십시오. (:ref:`typesofgeomerrors` 참조)"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:625
 msgid ":guilabel:`Default Z value` to use when creating new 3D features."
-msgstr ""
+msgstr ":guilabel:`Default Z value`: 새 3D 피처를 생성할 때 사용할 기본 Z값을 정의합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:627
 msgid "**Rubberband**"
@@ -1180,10 +1345,14 @@ msgid ""
 "Define Rubberband :guilabel:`Line width`, :guilabel:`Line color` and "
 ":guilabel:`Fill color`."
 msgstr ""
+"고무줄의 :guilabel:`Line width`, :guilabel:`Line color` 와 :guilabel:`Fill color`"
+" 를 정의합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:631
 msgid ":guilabel:`Don't update rubberband during vertex editing`."
 msgstr ""
+":guilabel:`Don't update rubberband during vertex editing`: 꼭짓점 편집 시 고무줄을 "
+"표시하지 않습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:633
 msgid "**Snapping**"
@@ -1194,12 +1363,16 @@ msgid ""
 "|checkbox| :guilabel:`Enable snapping by default` activates snapping when a "
 "project is opened"
 msgstr ""
+"|checkbox| :guilabel:`Enable snapping by default`: 프로젝트를 열 때부터 스냅 작업을 "
+"활성화합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:637
 msgid ""
 "Define :guilabel:`Default snap mode` |selectString| ('Vertex', 'Vertex and "
 "segment', 'Segment')"
 msgstr ""
+":guilabel:`Default snap mode` |selectString| 를 정의합니다. 'Vertex', 'Vertex and "
+"segment', 'Segment' 가운데 하나를 선택할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:639
 msgid "Define :guilabel:`Default snapping tolerance` in map units or pixels"
@@ -1218,22 +1391,29 @@ msgid ""
 ":guilabel:`Display main dialog as (restart required)`: set whether the "
 "Advanced Snapping dialog should be shown as 'Dialog' or 'Dock'."
 msgstr ""
+":guilabel:`Display main dialog as (restart required)`: 고급 스냅 작업 대화창을 '대화창' "
+"또는 '독' 가운데 어느쪽으로 표시할지 설정합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:643
 msgid ":guilabel:`Snapping marker color`"
-msgstr ""
+msgstr ":guilabel:`Snapping marker color`: 스냅 작업 마커의 색상을 설정합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:644
 msgid ""
 "|checkbox| :guilabel:`Show snapping tooltips` such as name of the layer "
 "whose feature you are about to snap. Helpful when multiple features overlap."
 msgstr ""
+"|checkbox| :guilabel:`Show snapping tooltips`: 예를 들어 사용자가 스냅하고자 하는 피처의 레이어명을"
+" 보여주는 툴팁의 표시 여부를 설정합니다. 여러 피처가 중첩돼 있을 경우 유용합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:646
 msgid ""
 "|checkbox| :guilabel:`Enable snapping on invisible features (not shown on "
 "the map canvas)`"
 msgstr ""
+"|checkbox| :guilabel:`Enable snapping on invisible features (not shown on "
+"the map canvas)`: 이 설정을 활성화하면 맵 캔버스 상에 표시되지 않는 가시화되지 않은 피처에도 스냅 작업을 할 수 있게 "
+"해줍니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:650
 msgid "**Vertex markers**"
@@ -1241,19 +1421,21 @@ msgstr "**꼭짓점 마커**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:652
 msgid "|checkbox| :guilabel:`Show markers only for selected features`"
-msgstr "|checkbox| :guilabel:`Show markers only for selected features`"
+msgstr ""
+"|checkbox| :guilabel:`Show markers only for selected features`: 선택한 피처에만 마커를"
+" 표시합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:653
 msgid ""
 "Define vertex :guilabel:`Marker style` |selectString| ('Cross' (default), "
 "'Semi transparent circle' or 'None')"
 msgstr ""
-"꼭짓점 :guilabel:`Marker style` |selectString| 을 정의합니다. 'Cross' (default), "
-"'Semi transparent circle' 또는 'None' 가운데 하나를 선택할 수 있습니다."
+"꼭짓점 :guilabel:`Marker style` |selectString| 을 정의합니다. 'Cross' (기본값), 'Semi "
+"transparent circle' 또는 'None' 가운데 하나를 선택할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:655
 msgid "Define vertex :guilabel:`Marker size (in millimeter)`"
-msgstr ""
+msgstr "꼭짓점 :guilabel:`Marker size (in millimeter)` 를 밀리미터 단위로 정의합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:657
 msgid "**Curve offset tool**"
@@ -1284,11 +1466,11 @@ msgstr ":guilabel:`Miter limit`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:672
 msgid "Layouts Settings"
-msgstr ""
+msgstr "조판기 설정"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:679
 msgid "Layouts Settings in QGIS"
-msgstr ""
+msgstr "QGIS에서 조판기 설정하기"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:682
 msgid "**Composition defaults**"
@@ -1299,6 +1481,8 @@ msgid ""
 "You can define the :guilabel:`Default font` used within the :ref:`print "
 "layout <label_printlayout>`."
 msgstr ""
+":ref:`인쇄 조판기 <label_printlayout>` 내부에서 사용되는 :guilabel:`Default font` 를 정의할 수"
+" 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:687
 msgid "**Grid appearance**"
@@ -1326,7 +1510,7 @@ msgstr ":guilabel:`Grid spacing` |selectNumber| 을 정의합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:695
 msgid "Define the :guilabel:`Grid offset` |selectNumber| for X and Y"
-msgstr ""
+msgstr ":guilabel:`Grid offset` |selectNumber|: X축 및 Y축에 대한 그리드 오프셋을 정의합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:696
 msgid "Define the :guilabel:`Snap tolerance` |selectNumber|"
@@ -1334,13 +1518,15 @@ msgstr ":guilabel:`Snap tolerance` |selectNumber| 를 정의합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:699
 msgid "**Layout Paths**"
-msgstr ""
+msgstr "**조판기 경로**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:701
 msgid ""
 "Define :guilabel:`Path(s) to search for extra print templates`: a list of "
 "folders with custom layout templates to use while creating new one."
 msgstr ""
+":guilabel:`Path(s) to search for extra print templates`: 추가 인쇄 템플릿을 검색할 경로를 "
+"정의합니다. 새 인쇄 템플릿 생성 시 사용자 정의 조판 템플릿을 담은 폴더 목록을 사용할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:708
 msgid "GDAL Settings"
@@ -1353,16 +1539,19 @@ msgid ""
 "The :guilabel:`GDAL` tab currently exposes the drivers for raster formats "
 "with their capabilities."
 msgstr ""
+"`GDAL <https://gdal.org>`_ 은 벡터 및 래스터 파일 용 데이터 교환 라이브러리입니다. GDAL 라이브러리는 데이터를"
+" 서로 다른 포맷들로 읽기 그리고/또는 쓰기 할 수 있는 드라이버들을 제공합니다. 현재의 :guilabel:`GDAL` 탭은 래스터 포맷"
+" 용 드라이버를 그 기능과 함께 보여줍니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:716
 msgid "GDAL driver options"
-msgstr ""
+msgstr "GDAL 드라이버 옵션"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:718
 msgid ""
 "This frame provides ways to customize the behavior of drivers that support "
 "read and write access:"
-msgstr ""
+msgstr "이 프레임은 읽기 및 쓰기 권한 접근을 지원하는 드라이버들의 습성을 사용자 지정할 수 있는 방법을 제공합니다:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:723
 msgid ""
@@ -1372,10 +1561,13 @@ msgid ""
 "colorimetry, alpha...) to use when outputting raster files. The parameters "
 "depend on the driver."
 msgstr ""
+":guilabel:`Edit create options`: 사용자가 래스터 파일을 산출할 때 사용할 서로 다른 파일 변환 프로파일 ─ "
+"예를 들면 미리 정의된 파라미터들의 조합(압축 유형 및 수준, 블록 크기, 오버뷰, 색채분석(colorimetry), 투명도 등등) ─ "
+"을 편집하거나 추가할 수 있습니다. 정의할 수 있는 파라미터는 드라이버에 따라 달라집니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:733
 msgid "Sample of create options profile (for GeoTiff)"
-msgstr ""
+msgstr "옵션 프로파일 생성 (GeoTiff 용) 예시"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:735
 msgid ""
@@ -1384,26 +1576,29 @@ msgid ""
 "default parameters if you have changed them. Some drivers (eg, GeoTiff) have"
 " some sample of profiles you can work with."
 msgstr ""
+"대화창의 상단 부분은 현재 프로파일 목록을 표시하며, 사용자가 프로파일을 새로 추가하거나 목록에서 제거할 수 있습니다. 사용자가 "
+"프로파일의 파라미터를 변경했다면 파라미터의 기본값으로 프로파일을 초기화할 수도 있습니다. GeoTiff 같은 몇몇 드라이버는 사용자가 "
+"작업할 수 있는 예시 프로파일을 제공합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:740
 msgid "At the bottom of the dialog:"
-msgstr ""
+msgstr "대화창 하단 부분에서는:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:742
 msgid ""
 "The |signPlus| button lets you add rows to fill with the parameter name and "
 "value"
-msgstr ""
+msgstr "|signPlus| 버튼으로 파라미터명과 그 값을 입력해서 행을 추가할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:743
 msgid "The |signMinus| button deletes the selected parameter"
-msgstr ""
+msgstr "|signMinus| 버튼으로 선택한 파라미터를 삭제할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:744
 msgid ""
 "Click the :guilabel:`Validate` button to check that the creation options "
 "entered for the given format are valid"
-msgstr ""
+msgstr ":guilabel:`Validate` 버튼을 클릭하면 해당 포맷에 대해 입력한 생성 옵션이 유효한지를 검사합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:746
 msgid ""
@@ -1411,28 +1606,32 @@ msgid ""
 "the `GDAL raster drivers documentation "
 "<https://gdal.org/drivers/raster/index.html>`_."
 msgstr ""
+"사용할 파라미터를 찾으려면 :guilabel:`Help` 버튼을 클릭하거나, `GDAL 래스터 드라이버 문서 "
+"<https://gdal.org/drivers/raster/index.html>`_ 를 참조하십시오."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:752
 msgid ":guilabel:`Edit Pyramids Options`"
-msgstr ""
+msgstr ":guilabel:`Edit Pyramids Options`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:759
 msgid "Sample of Pyramids profile"
-msgstr ""
+msgstr "피라미드 프로파일 예시"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:762
 msgid "GDAL drivers"
-msgstr ""
+msgstr "GDAL 드라이버"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:764
 msgid ""
 "In this frame, you can define which GDAL driver is to use to read and/or "
 "write files, as in some cases more than one GDAL driver is available."
 msgstr ""
+"이 프레임에서는 어떤 파일 포맷을 읽기 그리고/또는 쓰기 위해 사용할 GDAL 드라이버를 정의할 수 있습니다. 몇몇 경우 GDAL "
+"드라이버 하나 이상을 사용할 수 있기 때문입니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:772
 msgid "GDAL Settings in QGIS"
-msgstr ""
+msgstr "QGIS에서 GDAL 설정하기"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:774
 msgid ""
@@ -1440,6 +1639,8 @@ msgid ""
 "the :ref:`Edit Create options <gdal_createoptions>` dialog for "
 "customization."
 msgstr ""
+"읽기와 쓰기 권한(``rw+(v)``)에 접근할 수 있는 드라이버를 더블클릭하면 드라이버를 사용자 지정할 수 있는 :ref:`생성 옵션 "
+"편집 <gdal_createoptions>` 대화창이 열립니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:782
 msgid "Variables Settings"
@@ -1469,7 +1670,7 @@ msgstr ":ref:`general_tools_variables` 에서 변수에 대한 더 자세한 정
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:801
 msgid "Variables Settings in QGIS"
-msgstr ""
+msgstr "QGIS에서 변수 설정하기"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:808
 msgid "Authentication Settings"
@@ -1486,11 +1687,11 @@ msgstr ""
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:820
 msgid "Authentication Settings in QGIS"
-msgstr ""
+msgstr "QGIS에서 인증 설정하기"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:827
 msgid "Network Settings"
-msgstr ""
+msgstr "네트워크 설정"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:829
 msgid "**General**"
@@ -1537,7 +1738,7 @@ msgstr ":guilabel:`User-Agent` 를 정의합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:846
 msgid "Proxy-settings in QGIS"
-msgstr "QGIS의 프록시 설정"
+msgstr "QGIS에서 프록시 설정하기"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:848
 msgid "**Cache settings**"
@@ -1549,25 +1750,30 @@ msgid ""
 " offers tools to :guilabel:`automatically clear the connection "
 "authentication cache on SSL errors (recommended)`."
 msgstr ""
+"캐시 용 :guilabel:`Directory` 와 :guilabel:`Size` 를 정의합니다. 또 "
+":guilabel:`automatically clear the connection authentication cache on SSL "
+"errors (recommended)` 옵션은 SLL 오류 시 연결 인증 캐시를 자동으로 삭제하는 도구를 제공합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:854
 msgid "**Proxy for web access**"
-msgstr ""
+msgstr "**웹 접근 용 프록시**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:856
 msgid "|checkbox| :guilabel:`Use proxy for web access`"
-msgstr ""
+msgstr "|checkbox| :guilabel:`Use proxy for web access`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:857
 msgid ""
 "Set the :guilabel:`Proxy type` |selectString| according to your needs and "
 "define 'Host' and 'Port'. Available proxy types are:"
 msgstr ""
+"사용자의 필요에 따라 :guilabel:`Proxy type` |selectString| 을 설정하고 'Host' 와 'Port' 를 "
+"정의하십시오. 다음과 같은 프록시 유형을 선택할 수 있습니다:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:860
 msgid ""
 ":menuselection:`Default Proxy`: Proxy is determined based on system's proxy"
-msgstr ""
+msgstr ":menuselection:`Default Proxy`: 시스템의 프록시를 기반으로 프록시를 결정합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:861
 msgid ""
@@ -1583,7 +1789,7 @@ msgid ""
 ":menuselection:`HttpProxy`: Implemented using the \"CONNECT\" command, "
 "supports only outgoing TCP connections; supports authentication."
 msgstr ""
-":menuselection:`HttpProxy`: \"CONNECT\" 명령어로 시행되며, 나가는 TCP 연결만 지원하고, 인증을 "
+":menuselection:`HttpProxy`: \"CONNECT\" 명령어로 시행되며, 나가는 TCP 연결만 지원하고, 인증을 "
 "지원합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:865
@@ -1606,7 +1812,7 @@ msgstr ""
 msgid ""
 "Credentials of proxy are set using the :ref:`authentication widget "
 "<authentication>`."
-msgstr ""
+msgstr "프록시의 인증 정보(credential)는 :ref:`인증 위젯 <authentication>`을 사용해서 설정합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:872
 msgid ""
@@ -1614,6 +1820,8 @@ msgid ""
 "(see Figure_Network_Tab_). No proxy will be used if the target url starts "
 "with one of the string listed in this text box."
 msgstr ""
+"프록시 설정 아래에 있는 텍스트 상자에 제외시킬 URL을 추가할 수 있습니다. (Figure_Network_Tab_ 그림 참조) 목표 "
+"URL이 텍스트 상자 목록에 있는 문자열 가운데 하나로 시작된다면 어떤 프록시도 사용하지 않을 것입니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:876
 msgid ""
@@ -1621,6 +1829,9 @@ msgid ""
 "please refer to the manual of the underlying QT library documentation at "
 "https://doc.qt.io/qt-5.9/qnetworkproxy.html#ProxyType-enum"
 msgstr ""
+"서로 다른 프록시 설정들에 대한 자세한 정보가 필요한 경우, "
+"https://doc.qt.io/qt-5.9/qnetworkproxy.html#ProxyType-enum 에 있는 기저 Qt 라이브러리 "
+"문서를 참조하십시오. "
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:880
 msgid "**Using Proxies**"
@@ -1636,7 +1847,7 @@ msgstr ""
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:889
 msgid "Locator Settings"
-msgstr ""
+msgstr "위치 탐색 설정"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:891
 msgid ""
@@ -1645,28 +1856,34 @@ msgid ""
 "helps you perform searches anywhere in the application. It provides some "
 "default filters (with prefix) to use:"
 msgstr ""
+"|search| The :guilabel:`Locator` 탭에서 :ref:`위치 탐색란 <locator_bar>` 의 환경을 설정할 수"
+" 있습니다. 위치 탐색란이란 상태 바에서 사용할 수 있는 빠른 검색 위젯으로, 응용 프로그램 내 어디에서든 검색 작업을 수행할 수 있도록"
+" 해줍니다. 다음과 같은 (접두어를 가진) 기본 필터를 제공합니다:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:895
 msgid ""
 "Project layers (``l``): finds and selects a layer in the :guilabel:`Layers` "
 "panel."
-msgstr ""
+msgstr "프로젝트 레이어 (``l``): :guilabel:`Layers` 패널에 있는 레이어를 찾아서 선택합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:897
 msgid "Project layouts (``pl``): finds and opens a print layout."
-msgstr ""
+msgstr "프로젝트 조판기 (``pl``): 인쇄 조판을 찾아서 엽니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:898
 msgid ""
 "Actions (``.``): finds and executes a QGIS action; actions can be any tool "
 "or menu in QGIS, opening a panel..."
 msgstr ""
+"액션 (``.``): QGIS 액션을 찾아서 실행합니다. 액션이란 QGIS에 있는 어떤 도구나 메뉴도 될 수 있고, 패널을 열 수도 "
+"있고, ..."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:900
 msgid ""
 "Active layer features (``f``): searches for matching attributes in any field"
 " from the current active layer and zooms to the selected feature."
 msgstr ""
+"활성 레이어 피처 (``f``): 현재 활성화된 레이어의 어느 항목에서건 일치하는 속성을 검색해서 선택된 피처로 확대/축소합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:902
 msgid ""
@@ -1674,26 +1891,29 @@ msgid ""
 ":ref:`display name <maptips>` of each :ref:`searchable layers "
 "<project_layer_capabilities>` and zooms to the selected feature."
 msgstr ""
+"모든 레이어의 피처 (``af``): 각 :ref:`검색 가능한 레이어 <project_layer_capabilities>` 의 "
+":ref:`표시 명칭 <maptips>` 에서 일치하는 속성을 검색해서 선택된 피처로 확대/축소합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:905
 msgid ""
 "Calculator (``=``): allows evaluation of any QGIS expression and, if valid, "
 "gives an option to copy the result to the clipboard."
 msgstr ""
+"계산기 (``=``): 모든 QGIS 표현식을 검증할 수 있고, 표현식이 유효한 경우 결과물을 클립보드로 복사할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:907
 msgid "Spatial bookmarks (``b``): finds and zooms to the bookmark extent."
-msgstr ""
+msgstr "공간 북마크 (``b``): 북마크를 찾아서 북마크의 범위로 확대/축소합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:908
 msgid ""
 "Settings (``set``): browses and opens project and application-wide "
 "properties dialogs."
-msgstr ""
+msgstr "설정 (``set``): 프로젝트를 탐색해서 연 다음, 응용 프로그램 수준의 속성 대화창을 엽니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:910
 msgid "Processing (``a``): searches and opens a Processing algorithm dialog."
-msgstr ""
+msgstr "공간 처리 (``a``): 공간 처리 알고리즘을 검색해서 공간 처리 알고리즘 대화창을 엽니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:911
 msgid ""
@@ -1701,6 +1921,8 @@ msgid ""
 ":ref:`modify-in-place <processing_inplace_edit>` Processing algorithm on the"
 " active layer."
 msgstr ""
+"선택한 피처 편집 (``ef``): 빠른 접근을 허용해서 활성 레이어에 호환되는 :ref:`제자리 수정 "
+"<processing_inplace_edit>` 공간 처리 알고리즘을 실행합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:915
 msgid ""
@@ -1709,6 +1931,10 @@ msgid ""
 "plugins, eg for OSM nominatim searches, direct database searching, layer "
 "catalog searches."
 msgstr ""
+"사용자는 각 필터를 사용자 지정할 수 있으며, 기본적으로 활성화시킬지 여부를 설정할 수 있고, 플러그인으로 기본 위치 탐색 필터 모음을 "
+"확장시킬 수 있습니다. 예를 들어 `OSM Nominatim "
+"<https://wiki.openstreetmap.org/wiki/Ko:Nominatim>_` 검색, 데이터베이스 직접 검색, 레이어 "
+"카탈로그 검색 플러그인을 사용할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:919
 msgid ""
@@ -1719,6 +1945,10 @@ msgid ""
 "will return only the layers whose name contains ``cad``. Click on the result"
 " to execute the corresponding action, depending on the type of item."
 msgstr ""
+":kbd:`Ctrl+K` 단축키를 누르면 위치 탐색란을 활성화시킬 수 있습니다. 텍스트를 입력해서 검색을 수행해보십시오. 기본적으로 "
+"활성화된 모든 위치 탐색 필터에 대해 검색 결과를 반환하지만, 사용자의 텍스트 앞에 위치 탐색 필터 접두어를 입력하면 특정 필터로 검색을"
+" 제한할 수 있습니다. 예를 들어 ``l cad`` 라고 입력하면 레이어명에 ``cad`` 가 들어간 레이어만 반환할 것입니다. 검색 "
+"결과를 클릭하면 항목의 유형에 따라 대응하는 액션을 실행합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:926
 msgid ""
@@ -1730,10 +1960,14 @@ msgid ""
 "responsive even if a very slow search filter is present (e.g. one which uses"
 " an online service)."
 msgstr ""
+"검색은 스레드를 통해 처리되기 때문에 어떤 느린 검색 필터를 설치했어도 그에 상관없이 가장 빠른 속도로 검색 결과를 반환합니다. 또 "
+"각각의 필터에 걸리자마자 각각의 결과값을 반환하기 때문에, 예를 들면 파일 검색 필터는 파일 트리를 스캔하는 과정에서 검색 결과를 하나씩"
+" 표시하게 됩니다. 즉 아주 느린 (예를 들어 온라인 서비스를 사용하는) 검색 필터인 경우에도 사용자 인터페이스가 멈추는 일은 없을 "
+"것입니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:933
 msgid "**Quick access to the locator's configurations**"
-msgstr ""
+msgstr "**위치 탐색 환경 설정에 빠르게 접근하기**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:935
 msgid ""
@@ -1742,10 +1976,13 @@ msgid ""
 "that opens the :guilabel:`Locator` tab of the :menuselection:`Settings --> "
 "Options...` menu."
 msgstr ""
+"상태 바에 있는 위치 탐색 위젯의 |search| 아이콘을 클릭하면 사용할 수 있는 필터 목록을 표시하는데, 이 목록에서 "
+":guilabel:`Configure` 항목을 클릭하면 :menuselection:`Settings --> Options...` 메뉴의 "
+":guilabel:`Locator` 탭을 엽니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:946
 msgid "Locator Settings in QGIS"
-msgstr ""
+msgstr "QGIS에서 위치 탐색 설정하기"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:952
 msgid "Advanced Settings"
@@ -1753,7 +1990,7 @@ msgstr "고급 설정"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:959
 msgid "Advanced Settings tab in QGIS"
-msgstr ""
+msgstr "QGIS의 고급 설정 탭"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:961
 msgid ""
@@ -1763,6 +2000,9 @@ msgid ""
 "active :ref:`user profile <user_profiles>` directory. Configurations can be "
 "shared by copying this file to other installations."
 msgstr ""
+"QGIS와 관련된 모든 설정은 (UI, 도구, 데이터 제공자, 공간 처리 환경 설정, 기본값 및 기본 경로, 플러그인 옵션, 표현식, "
+"도형 검사 등등) 활성화된 :ref:`사용자 프로파일 <user_profiles>` 디렉터리 아래 "
+":file:`QGIS/QGIS3.ini` 파일로 저장됩니다. 이 파일을 다른 설치본으로 복사하면 환경 설정을 공유할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:967
 msgid ""
@@ -1774,10 +2014,15 @@ msgid ""
 " :file:`QGIS3.ini` file). Changes are automatically saved in the "
 ":file:`QGIS3.ini` file."
 msgstr ""
+"QGIS 내에서라면, :guilabel:`Advanced` 탭은 :guilabel:`Advanced Settings Editor` 를 "
+"통해 이런 설정들을 관리할 수 있는 방법을 제공합니다. 사용자가 조심하겠다는 확인을 하고 나면, 해당 위젯은 존재하는 모든 설정들의 "
+"트리로 채워지고 그 값을 편집할 수 있게 됩니다. 어떤 설정이나 그룹을 오른쪽 클릭하면 해당 항목을 삭제할 수 있습니다. (설정 또는 "
+"그룹을 추가하려면, :file:`QGIS3.ini` 파일을 편집해야 합니다.) 변경 사항은 :file:`QGIS3.ini` 파일에 "
+"자동적으로 저장됩니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:975
 msgid "**Avoid using the Advanced tab settings blindly**"
-msgstr "**고급 탭 설정을 무턱대고 이용하지 말 것**"
+msgstr "**고급 설정 탭을 무턱대고 이용하지 말 것**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:977
 msgid ""
@@ -1790,19 +2035,19 @@ msgstr ""
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:983
 msgid "Acceleration Settings"
-msgstr ""
+msgstr "가속 설정"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:984
 msgid "OpenCL acceleration settings."
-msgstr ""
+msgstr "OpenCL 가속을 설정합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:991
 msgid "Acceleration tab"
-msgstr ""
+msgstr "가속 탭"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:995
 msgid "Processing Settings"
-msgstr ""
+msgstr "공간 처리 설정"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:997
 msgid ""
@@ -1810,14 +2055,16 @@ msgid ""
 "settings of tools and data providers that are used in the QGIS Processing "
 "framework. More information at :ref:`label_processing`."
 msgstr ""
+"|processing| :guilabel:`Processing` 탭은 QGIS 공간 처리 프레임워크가 사용하는 도구와 데이터 제공자의 "
+"일반 설정을 제공합니다. 자세한 내용은 :ref:`label_processing` 을 참조하세요."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1011
 msgid "Processing Settings tab in QGIS"
-msgstr ""
+msgstr "QGIS의 공간 처리 설정 탭"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1017
 msgid "Working with User Profiles"
-msgstr ""
+msgstr "사용자 프로파일 작업"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1019
 msgid ""
@@ -1825,79 +2072,89 @@ msgid ""
 "set and access user profiles. A user profile is a unified application "
 "configuration that allows to store in a single folder:"
 msgstr ""
+":menuselection:`Settings --> User Profiles` 메뉴는 사용자 프로파일을 설정하고 프로파일에 접근하는 "
+"기능을 제공합니다. 사용자 프로파일이란 통합 응용 프로그램 환경 설정으로, 단일 폴더 안에 저장할 수 있습니다:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1023
 msgid ""
 "all the :ref:`global settings <gui_options>`, including locale, projections,"
 " authentication settings, color palettes, shortcuts..."
-msgstr ""
+msgstr "로케일, 투영체, 인증 설정, 색상표, 단축키 등등을 포함하는 모든 :ref:`전체 수준 설정들 <gui_options>`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1025
 msgid "GUI configurations and :ref:`customization <sec_customization>`"
-msgstr ""
+msgstr "GUI 환경 설정 및 :ref:`사용자 지정 설정 <sec_customization>`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1026
 msgid "installed :ref:`plugins <plugins>` and their configurations"
-msgstr ""
+msgstr "설치된 :ref:`플러그인 <plugins>` 과 그 환경 설정"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1027
 msgid ""
 "project templates and history of saved project with their image preview"
-msgstr ""
+msgstr "투영 템플릿 그리고 그 이미지 미리보기를 포함한 저장된 프로젝트의 이력"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1028
 msgid ":ref:`processing settings <label_processing>`, logs, scripts, models."
-msgstr ""
+msgstr ":ref:`공간 처리 설정 <label_processing>`, 로그, 스크립트, 모델"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1030
 msgid ""
 "By default, a QGIS installation contains a single user profile named "
 "``default``. But you can create as many user profiles as you want:"
 msgstr ""
+"QGIS 설치본은 기본적으로 ``default`` 라는 단일 사용자 프로파일을 담고 있습니다. 하지만 사용자가 원하는만큼 많은 사용자 "
+"프로파일을 생성할 수 있습니다:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1033
 msgid "Click the :guilabel:`New profile...` entry."
-msgstr ""
+msgstr ":guilabel:`New profile...` 항목을 클릭하십시오."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1034
 msgid ""
 "You'll be prompted to provide a profile name, creating a folder of the same "
 "name under :file:`~/<UserProfiles>/` where:"
 msgstr ""
+"프로파일 명칭을 입력해야 하는데, 명칭을 입력하면 :file:`~/<UserProfiles>/` 아래 동일 명칭의 폴더를 생성합니다. "
+"이때:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1037
 msgid ""
 "``~`` represents the **HOME** directory, which on |win| Windows is usually "
 "something like :file:`C:\\\\Users\\\\(user)`."
 msgstr ""
+"``~`` 는 **HOME** 디렉터리를 나타냅니다. |win| 윈도우에서는 보통 :file:`C:\\\\Users\\\\(user)` "
+"같은 디렉터리입니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1039
 msgid "and ``<UserProfiles>`` represents the main profiles folder, i.e.:"
-msgstr ""
+msgstr "``<UserProfiles>`` 는 주 프로파일 폴더를 나타냅니다. 예를 들면:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1041
 msgid "|nix| :file:`.local/share/QGIS/QGIS3/profiles/`"
-msgstr ""
+msgstr "|nix| :file:`.local/share/QGIS/QGIS3/profiles/`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1042
 msgid "|win| :file:`AppData\\\\Roaming\\\\QGIS\\\\QGIS3\\\\profiles\\\\`"
-msgstr ""
+msgstr "|win| :file:`AppData\\\\Roaming\\\\QGIS\\\\QGIS3\\\\profiles\\\\`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1043
 msgid "|osx| :file:`Library/Application Support/QGIS/QGIS3/profiles/`"
-msgstr ""
+msgstr "|osx| :file:`Library/Application Support/QGIS/QGIS3/profiles/`"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1045
 msgid ""
 "The user profile folder can be opened from within QGIS using the "
 ":guilabel:`Open Active Profile Folder`."
 msgstr ""
+":guilabel:`Open Active Profile Folder` 메뉴를 클릭하면 QGIS에서 사용자 프로파일 폴더를 열 수 "
+"있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1047
 msgid ""
 "A new instance of QGIS is started, using a clean configuration. You can then"
 " set your custom configurations."
-msgstr ""
+msgstr "새 QGIS 인스턴스를 시작하면, 초기화된 환경 설정을 사용합니다. 그러면 환경을 사용자 지정 설정할 수 있습니다. "
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1050
 msgid ""
@@ -1908,16 +2165,20 @@ msgid ""
 "run QGIS with a specific user profile from the :ref:`command line "
 "<label_commandline>`."
 msgstr ""
+"각 사용자 프로파일이 독립된 설정, 플러그인, 이력을 담고 있으므로, 서로 다른 워크플로나 데모, 동일 머신의 서로 다른 사용자들, 또는"
+" 테스트용 설정 등에 매우 유용할 수 있습니다. :menuselection:`Settings --> User Profiles` 메뉴에서 "
+"프로파일을 선택하면 한 프로파일에서 다른 프로파일로 전환할 수 있습니다. 또 :ref:`명령 줄 <label_commandline>` "
+"에서 특정 사용자 프로파일로 QGIS를 실행할 수도 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1056
 msgid ""
 "Unless changed, the profile of the last closed QGIS session will be used in "
 "the following QGIS sessions."
-msgstr ""
+msgstr "일부러 변경하지 않는 한, 마지막으로 닫은 QGIS 세션의 사용자 프로파일을 다음 QGIS 세션에서 사용할 것입니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1059
 msgid "**Run QGIS under a new user profile to check for bug persistence**"
-msgstr ""
+msgstr "**버그 지속성 검사를 위해 새 사용자 프로파일로 QGIS 실행하기**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1061
 msgid ""
@@ -1926,6 +2187,9 @@ msgid ""
 " leftovers in the current user profile and creating a new one may fix them "
 "as it restarts QGIS with the new (clean) profile."
 msgstr ""
+"QGIS의 어떤 기능에서 이상한 습성을 발견한 경우, 새 사용자 프로파일을 생성한 다음 해당 명령을 다시 실행해보십시오. 버그는 때때로 "
+"현재 사용자 프로파일에 있는 어떤 잔존물 때문에 발생하기도 합니다. 사용자 프로파일을 새로 생성하면 새 (초기화된) 프로파일로 QGIS를"
+" 재시작하기 때문에 버그가 사라지는 경우도 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1074
 msgid "Project Properties"
@@ -1938,19 +2202,22 @@ msgid ""
 "specific options overwrite their equivalent in the :guilabel:`Options` "
 "dialog described above."
 msgstr ""
+":menuselection:`Project --> Project Properties` 메뉴를 클릭하면 열리는 프로젝트 용 속성 창에서 "
+"프로젝트에 특화된 옵션들을 설정할 수 있습니다. 이 프로젝트 특화 옵션은 위에서 설명하는 :guilabel:`Options` 대화창의 "
+"대응하는 옵션을 덮어씁니다(무시하고 재설정합니다)."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1082
 msgid "General Properties"
-msgstr ""
+msgstr "일반 속성"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1084
 msgid ""
 "In the :guilabel:`General` tab, the :guilabel:`General settings` let you:"
-msgstr ""
+msgstr ":guilabel:`General` 탭에 있는 :guilabel:`General settings` 부분에서:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1086
 msgid "see the location of the project file"
-msgstr ""
+msgstr "프로젝트 파일의 위치를 볼 수 있고"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1087
 msgid ""
@@ -1959,6 +2226,9 @@ msgid ""
 "(type it in) or absolute. The project home can be used for storing data and "
 "other content that is useful for the project."
 msgstr ""
+"프로젝트 홈 용 폴더를 (탐색기에 있는 ``Project Home`` 항목에서) 설정할 수 있습니다. 프로젝트 파일이 있는 폴더에 대한 "
+"상대 경로일 수도 있고 (직접 입력) 또는 절대 경로일 수도 있습니다. 프로젝트 홈은 프로젝트에 유용한 데이터와 기타 콘텐츠를 저장하는 "
+"데 쓰일 수 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1092
 msgid "give a title to the project beside the project file path"
@@ -1998,30 +2268,36 @@ msgid ""
 ":guilabel:`Measurements` frame lets you control these parameters. You can "
 "indeed choose:"
 msgstr ""
+"면적 및 거리 계산은 GIS에서 흔히 필요로 하는 작업입니다. 하지만, 이 값들은 기저 투영체 설정과 떼려야 뗄 수 없는 관계입니다. "
+":guilabel:`Measurements` 프레임에서 다음과 같은 파라미터들을 선택하고 조정할 수 있습니다:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1106
 msgid ""
 "the :guilabel:`Ellipsoid`, on which distance and area calculations are "
 "entirely based; it can be:"
 msgstr ""
+":guilabel:`Ellipsoid`: 거리 및 면적 계산이 완전히 의존하는 타원체입니다. 다음 가운데 하나를 선택할 수 있습니다:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1109
 msgid ""
 "**None/Planimetric**: returned values are in this case cartesian "
 "measurements."
-msgstr ""
+msgstr "**None/Planimetric**: 이 타원체를 선택하면 데카르트 도량법으로 된 값을 반환합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1110
 msgid ""
 "a **Custom** one: you'll need to set values of the semi-major and semi-minor"
 " axes."
 msgstr ""
+"**Custom**: 이 타원체를 선택하면 긴반지름(semi-major)과 짧은반지름(semi-minor)의 값을 설정해야 합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1111
 msgid ""
 "or an existing one from a predefined list (Clarke 1866, Clarke 1880 IGN, New"
 " International 1967, WGS 84...)."
 msgstr ""
+"또는 미리 정의된 목록에서 기존 타원체 가운데 하나를 선택할 수도 있습니다. (Clarke 1866, Clarke 1880 IGN, "
+"New International 1967, WGS 84, ...)"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1113
 msgid ""
@@ -2056,16 +2332,20 @@ msgid ""
 "format of units to use to display the mouse coordinate in the status bar and"
 " the derived coordinates shown via the identify tool."
 msgstr ""
+":guilabel:`Coordinate display` 에서 상태 바에 표시되는 마우스 좌표 및 식별 도구에 표시되는 파생 좌표에 쓰이는"
+" 단위의 유형을 선택하고 사용자 지정할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1127
 msgid ""
 "Finally, you can set a :guilabel:`Project predefined scales` list, which "
 "overrides the global predefined scales."
 msgstr ""
+"마지막으로, 전체 수준에서 사전 정의된 축척을 무시하는 :guilabel:`Project predefined scales` 목록을 설정할"
+" 수 있습니다. "
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1135
 msgid "General tab of the Project Properties dialog"
-msgstr ""
+msgstr "프로젝트 속성 대화창의 일반 탭"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1140
 msgid "Metadata Properties"
@@ -2080,28 +2360,38 @@ msgid ""
 "this is not enforced. See :ref:`vector layer metadata properties "
 "<vectormetadatamenu>` for some details."
 msgstr ""
+":guilabel:`Metadata` 탭에서 다음과 같은 자세한 메타데이터를 (이외에도 있지만) 정의할 수 있습니다: "
+"작성자(author), 생성일, 언어, 개요(abstract), 카테고리, 키워드, 연락처 정보, 링크, 이력. 특정 항목이 입력됐는지 "
+"확인하는 유효성 확인 기능도 있지만, 강제 사항은 아닙니다. 더 자세한 내용은 :ref:`벡터 레이어 메타데이터 속성 "
+"<vectormetadatamenu>` 을 참조하세요."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1150
 msgid "CRS Properties"
-msgstr ""
+msgstr "좌표계 속성"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1152
 msgid ""
 "For more information on how QGIS handles project projection, please read the"
 " dedicated section at :ref:`label_projections`."
 msgstr ""
+"QGIS가 어떻게 프로젝트 투영체를 처리하는지 더 자세히 알고 싶다면, :ref:`label_projections` 에서 심도 있게 "
+"다루고 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1155
 msgid ""
 "The |crs| :guilabel:`CRS` tab helps you set the coordinate reference system "
 "to use in this project. It can be:"
 msgstr ""
+"|crs| :guilabel:`CRS` 탭에서 현재 프로젝트에 사용할 좌표계를 설정할 수 있습니다. 다음 가운데 하나를 선택할 수 "
+"있습니다:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1158
 msgid ""
 "|checkbox| :guilabel:`No projection (or unknown/non-Earth projection)`: "
 "layers are drawn based on their raw coordinates"
 msgstr ""
+"|checkbox| :guilabel:`No projection (or unknown/non-Earth projection)`: 레이어의"
+" 가공되지 않은(raw) 좌표를 기반으로 레이어를 렌더링합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1160
 msgid ""
@@ -2110,6 +2400,9 @@ msgid ""
 "on-the-fly to this CRS in order to overlay them regardless their original "
 "CRS."
 msgstr ""
+"또는 기존 좌표계에서 *지리(geographic)*, *투영(projected)*이나 *사용자 정의(user-defined)* 좌표계 "
+"가운데 하나를 선택할 수도 있습니다. 프로젝트에 추가한 레이어를, 원래 좌표계와 상관없이 중첩시키기 위해, 선택한 좌표계로 실시간(on-"
+"the-fly) 재투영합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1164
 msgid ""
@@ -2118,10 +2411,13 @@ msgid ""
 "the current project. As usual, these override any corresponding global "
 "settings. See :ref:`datum_transformation` for more details."
 msgstr ""
+"|crs| :guilabel:`CRS` 탭에서는 현재 프로젝트에 적용할 데이터 변환 선호도의 환경을 설정해서 레이어 재투영 설정을 조정할"
+" 수도 있습니다. 이런 설정들은 마찬가지로 대응하는 전체 수준 설정을 무시합니다. 자세한 내용은 "
+":ref:`datum_transformation` 을 참조하세요."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1172
 msgid "Default Styles Properties"
-msgstr ""
+msgstr "기본 스타일 속성"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1174
 msgid ""
@@ -2129,6 +2425,8 @@ msgid ""
 "drawn in the project when they do not have an existing :file:`.qml` style "
 "defined. You can:"
 msgstr ""
+":guilabel:`Default Styles` 탭에서 기존에 정의된 :file:`.qml` 스타일이 없는 새 레이어를 어떻게 렌더링할지"
+" 제어할 수 있습니다. 다음과 같은 작업을 할 수 있습니다:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1178
 msgid ""
@@ -2136,20 +2434,24 @@ msgid ""
 " to apply depending on the layer geometry type as well as a default "
 ":guilabel:`Color Ramp`"
 msgstr ""
+"레이어 도형 유형은 물론 기본 :guilabel:`Color Ramp` 에 따라 적용할 기본 심볼(:guilabel:`Marker`, "
+":guilabel:`Line`, :guilabel:`Fill`)을 설정할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1181
 msgid "Apply a default :guilabel:`Opacity` to new layers"
-msgstr ""
+msgstr ":guilabel:`Opacity`: 새 레이어에 적용할 기본 투명도를 설정할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1182
 msgid ""
 "|checkbox| :guilabel:`Assign random colors to symbols`, modifying the "
 "symbols fill colors, hence avoiding same rendering for all layers."
 msgstr ""
+"|checkbox| :guilabel:`Assign random colors to symbols`: 심볼에 랜덤한 채우기 색상을 "
+"할당해서, 모든 레이어가 동일하게 렌더링되는 결과를 피할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1190
 msgid "Default Styles tab"
-msgstr ""
+msgstr "기본 스타일 탭"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1192
 msgid ""
@@ -2157,6 +2459,8 @@ msgid ""
 "quickly access the :ref:`Style Manager <vector_style_manager>` dialog and "
 "configure symbols and color ramps."
 msgstr ""
+"|styleManager| :guilabel:`Style Manager` 버튼을 클릭하면 :ref:`스타일 관리자 "
+"<vector_style_manager>` 대화창에 바로 접근해서 심볼 및 색상표의 환경을 설정할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1198
 msgid ""
@@ -2164,16 +2468,20 @@ msgid ""
 " the running project. Like the :ref:`global colors <colors_options>`, you "
 "can:"
 msgstr ""
+"실행 중인 프로젝트에 대해 특정 색상들을 정의할 수 있는 추가 옵션도 있습니다. 예를 들어 :ref:`전체 수준 색상 "
+"<colors_options>` 이라면, 다음과 같은 작업을 할 수 있습니다:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1210
 msgid ""
 "These colors are identified as :guilabel:`Project colors` and listed as part"
 " of :ref:`color widgets <color-selector>`."
 msgstr ""
+"이 색상들은 :guilabel:`Project colors` 로 식별되어, :ref:`색상 위젯 <color-selector>` 의 한 "
+"부분으로 목록화됩니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1213
 msgid "**Use project colors to quickly assign and update color widgets**"
-msgstr ""
+msgstr "**색상 위젯에 바로 적용하고 업데이트할 수 있는 프로젝트 색상 이용하기**"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1215
 msgid ""
@@ -2182,16 +2490,19 @@ msgid ""
 "setting the same color for many properties and, to avoid a cumbersome update"
 " you can:"
 msgstr ""
+"프로젝트 색상의 레이블을 이용해서 프로젝트 색상을 참조할 수 있는데, 프로젝트 색상을 사용하는 색상 위젯은 프로젝트 색상과 묶이게 "
+"됩니다. 즉 수많은 속성에 대해 동일한 색상을 반복 설정하면서 느리고 긴 업데이트 과정을 겪는 대신, 다음과 같은 작업을 할 수 있다는 "
+"뜻입니다:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1220
 msgid "Define the color as a project color"
-msgstr ""
+msgstr "어떤 색상을 프로젝트 색상으로 정의하려면"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1221
 msgid ""
 "Click the :ref:`data defined override widget <data_defined>` next to the "
 "color property you want to set"
-msgstr ""
+msgstr "사용자가 설정하고자 하는 색상 속성 옆에 있는 :ref:`데이터 정의 무시 위젯 <data_defined>` 을 클릭한 다음"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1223
 msgid ""
@@ -2199,20 +2510,22 @@ msgid ""
 "property is then assigned the expression ``project_color('color_label')`` "
 "and the color widget reflects that color."
 msgstr ""
+":guilabel:`Color` 메뉴에 마우스를 가져가서 프로젝트 색상을 선택합니다. 그러면 속성이 표현식 "
+"``project_color('color_label')`` 에 할당되어 색상 위젯이 해당 색상을 반영합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1226
 msgid "Repeat steps 2 and 3 as much as needed"
-msgstr ""
+msgstr "필요한만큼 두 번째와 세 번째 단계를 반복합니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1227
 msgid ""
 "Update the project color once and the change is reflected EVERYWHERE it's in"
 " use."
-msgstr ""
+msgstr "프로젝트 색상을 한 번 업데이트해주면, 프로젝트 색상이 사용되는 모든 곳에 변경 사항을 반영할 것입니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1231
 msgid "Data Sources Properties"
-msgstr ""
+msgstr "데이터소스 속성"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1233
 msgid "In the :guilabel:`Data Sources` tab, you can:"
@@ -2229,6 +2542,12 @@ msgid ""
 " when the user clicks save layer. Note that you can (de)activate this option"
 " only if no layer is being edited in the project."
 msgstr ""
+"|unchecked| :guilabel:`Automatically create transaction groups where "
+"possible`: 이 모드를 활성화한 경우, 동일 데이터베이스로부터 나온 모든 (PostgreSQL) 레이어의 편집 상태를 "
+"동기화합니다. 예를 들어, 레이어 하나를 편집 상태로 만들면 모든 레이어가 편집 상태로 바뀝니다. 레이어 하나를 커밋하거나 롤백하면, "
+"다른 레이어들도 그렇게 됩니다. 또한 편집 변경 사항을 로컬에서 버퍼링하는 대신, 사용자가 레이어 저장을 클릭할 때 커밋되는 "
+"데이터베이스의 트랜잭션(transaction)으로 직접 전송합니다. 프로젝트에 있는 어떤 레이어도 편집 중이 아닐 경우에만 이 옵션을 "
+"(비)활성화할 수 있다는 것을 기억하십시오."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1244
 msgid ""
@@ -2239,6 +2558,10 @@ msgid ""
 "``nextval('serial')``, the field in the :guilabel:`Add Feature` form will "
 "display expected value (e.g., ``25``)."
 msgstr ""
+"|unchecked| :guilabel:`Evaluate default values on provider side`: PostgreSQL"
+" 테이블에 새 피처를 추가할 때, 기본값 제약조건을 가진 필드를 평가한 다음 커밋할 때가 아니라 양식을 열 때 표시합니다. 즉 "
+":guilabel:`Add Feature` 양식에 있는 필드가 ``nextval('serial')`` 같은 표현식 대신 기대한 값을 "
+"(예를 들어 ``25``를) 표시할 것이라는 뜻입니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1249
 msgid ""
@@ -2249,16 +2572,23 @@ msgid ""
 "sources) and when using the PostgreSQL provider the primary key unicity will"
 " not be checked for views and materialized views."
 msgstr ""
+"|unchecked| :guilabel:`Trust project when data source has no metadata`: 데이터 "
+"검사를 하지 않고 프로젝트를 불러오는 속도를 높이려면 이 옵션을 활성화하십시오. QGIS 서버 환경 또는 대용량 데이터베이스 뷰/구체화 "
+"뷰(materialized view)를 가진 프로젝트에서 유용한 옵션입니다. 레이어 범위를 (데이터소스 대신) QGIS 프로젝트 파일에서"
+" 읽어올 것입니다. 또 PostgreSQL 제공자를 사용하는 경우, 뷰 및 구체화 뷰에 대해 기본 키(primary key)의 "
+"단일성(unicity)을 검사하지 않을 것입니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1258
 msgid "Configure the :guilabel:`Layers Capabilities`, i.e.:"
-msgstr ""
+msgstr ":guilabel:`Layers Capabilities` 를 다음과 같이 환경 설정할 수 있습니다:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1260
 msgid ""
 "Set (or disable) which layers are ``identifiable``, i.e. will respond to the"
 " :ref:`identify tool <identify>`. By default, layers are set queryable."
 msgstr ""
+"어떤 레이어가 ``identifiable`` 한지, 즉 :ref:`식별 도구 <identify>` 에 반응할지 설정합니다. 기본적으로 "
+"모든 레이어는 쿼리 가능하도록 설정돼 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1262
 msgid ""
@@ -2268,6 +2598,9 @@ msgid ""
 "configuration to avoid end-users modifying data when working with file-based"
 " layers."
 msgstr ""
+"어떤 레이어가 ``read-only`` 로 나타나야 하는지, 즉 데이터소스 제공자의 성능에 상관없이 사용자가 편집할 수 없는지를 "
+"설정합니다. 낮은 수준의 보호 정책이기는 해도, 파일 기반 레이어를 작업하는 경우 최종 사용자가 데이터를 수정하는 일을 막을 수 있는 "
+"간편한 환경 설정인 것은 틀림없습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1266
 msgid ""
@@ -2275,43 +2608,51 @@ msgid ""
 ":ref:`locator widget <locator_options>`. By default, layers are set "
 "searchable."
 msgstr ""
+"어떤 레이어가 ``searchable`` 한지, 즉 :ref:`위치 탐색 위젯 <locator_options>` 을 통해 쿼리할 수 "
+"있을지 설정합니다. 기본적으로 모든 레이어는 검색 가능하도록 설정돼 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1268
 msgid ""
 "Define which layers are defined as ``required``. Checked layers in this list"
 " are protected from inadvertent removal from the project."
 msgstr ""
+"어떤 레이어가 ``required`` 상태로 정의돼 있는지 설정합니다. 목록에서 체크된 레이어들은 프로젝트에서 우연히 제거되는 일이 "
+"없도록 보호됩니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1271
 msgid ""
 "The :guilabel:`Layers Capabilities` table provides some convenient tools to:"
-msgstr ""
+msgstr ":guilabel:`Layers Capabilities` 테이블은 다음과 같은 작업을 할 수 있는 편리한 도구를 제공합니다:"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1273
 msgid ""
 "Select multiple cells and press :guilabel:`Toggle Selection` to have them "
 "change their checkbox state;"
 msgstr ""
+"셀을 여러 개 선택한 다음 :guilabel:`Toggle Selection` 을 클릭하면 한꺼번에 체크박스의 체크 상태를 바꿀 수 "
+"있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1275
 msgid ""
 "|unchecked| :guilabel:`Show spatial layers only`, filtering out non-spatial "
 "layers from the layers list;"
 msgstr ""
+"|unchecked| :guilabel:`Show spatial layers only`: 레이어 목록에서 비공간 레이어를 필터링해서 "
+"빼버립니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1277
 msgid ""
 "|search| :guilabel:`Filter layers...` and quickly find a particular layer to"
 " configure."
-msgstr ""
+msgstr "|search| :guilabel:`Filter layers...`: 환경 설정할 특정 레이어를 빨리 찾을 수 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1285
 msgid "Data Sources tab"
-msgstr ""
+msgstr "데이터소스 탭"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1288
 msgid "Relations Properties"
-msgstr ""
+msgstr "관계 속성"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1290
 msgid ""
@@ -2330,7 +2671,7 @@ msgstr ""
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1302
 msgid "Relations tab"
-msgstr ""
+msgstr "관계 탭"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1305
 msgid "Variables Properties"
@@ -2354,7 +2695,7 @@ msgstr ""
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1317
 msgid "Macros Properties"
-msgstr ""
+msgstr "매크로 속성"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1319
 msgid ""
@@ -2371,7 +2712,7 @@ msgstr "QGIS의 매크로 설정"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1331
 msgid "QGIS Server Properties"
-msgstr ""
+msgstr "QGIS 서버 속성"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1333
 msgid ""
@@ -2381,10 +2722,13 @@ msgid ""
 "information available in section :ref:`Creatingwmsfromproject` and "
 "subsequent."
 msgstr ""
+":guilabel:`QGIS Server` 탭은 사용자 프로젝트를 온라인 상에 퍼블리싱하기 위해 환경 설정할 수 있습니다. 이 탭에서 "
+"QGIS 서버의 WMS 및 WFS 성능, 범위, 그리고 좌표계 제약 조건에 관한 정보를 정의할 수 있습니다. "
+":ref:`Creatingwmsfromproject` 과 이어지는 부분에서 더 자세한 내용을 다루고 있습니다."
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1344
 msgid "QGIS Server settings tab"
-msgstr ""
+msgstr "QGIS 서버 설정 탭"
 
 #: ../../docs/user_manual/introduction/qgis_configuration.rst:1350
 msgid "Customization"

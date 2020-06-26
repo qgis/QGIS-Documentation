@@ -6,6 +6,7 @@
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
 # Arnaud Vandecasteele <arnaud.sig@gmail.com>, 2020
+# Sant-anna <delazj@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:23+0000\n"
-"Last-Translator: Arnaud Vandecasteele <arnaud.sig@gmail.com>, 2020\n"
+"Last-Translator: Sant-anna <delazj@gmail.com>, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -144,7 +145,7 @@ msgid ""
 msgstr ""
 "Pour ceux qui utilisent fréquemment la console, il peut-être utile de "
 "configurer un raccourci clavier pour ouvrir la console ( dans "
-":menuselection:`Settings --> Keyboard shortcuts...`)."
+":menuselection:`Préférences --> Raccourcis clavier...`)."
 
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:86
 msgid "Python Plugins"
@@ -217,7 +218,7 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:125
 msgid "The :file:`startup.py` file"
-msgstr "Le fichier : :file:`startup.py`"
+msgstr "Le fichier :file:`startup.py`"
 
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:127
 msgid "Every time QGIS starts, the user's Python home directory"
@@ -253,7 +254,7 @@ msgid ""
 msgstr ""
 "Le chemin par défaut dépend du système d'exploitation. Pour trouver le "
 "chemin qui fonctionne chez vous, ouvrez la console python et exécutez "
-"``QStandardPaths.standardLocations(QStandardPaths.AppDataLocation)``  pour "
+"``QStandardPaths.standardLocations(QStandardPaths.AppDataLocation)`` pour "
 "voir la liste des répertoires par défaut. "
 
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:145
@@ -307,7 +308,7 @@ msgid ""
 msgstr ""
 "Vous pouvez aussi souhaiter créer une application interactive utilisant "
 "certaines fonctionnalités SIG --- mesurer des données, exporter une carte en"
-" PDF, .... Le module :mod:`qgis.gui` fourni différentes composantes de "
+" PDF, .... Le module :mod:`qgis.gui` fournit différentes composantes de "
 "l'interface, le plus notable étant le canevas de carte qui peut être "
 "facilement intégré dans l'application, avec le support du zoom, du "
 "déplacement ou de tout autre outil personnalisé de cartographie."
@@ -362,9 +363,10 @@ msgstr ""
 "Nous commençons par importer le module :mod:`qgis.core` puis nous "
 "configurons le chemin de préfixe. Le chemin de préfixe est l'endroit où QGIS"
 " est installé sur votre système. Il est configuré dans le script en faisant "
-"appel à la méthode ``setPrefixPath``. Le second argument "
-":meth:`setPrefixPath <qgis.core.QgsApplication.setPrefixPath>`  est mis à "
-":const:`True`, ce qui contrôle si les chemins par défaut sont utilisés."
+"appel à la méthode :meth:`setPrefixPath "
+"<qgis.core.QgsApplication.setPrefixPath>`. Le second argument de la méthode "
+":meth:`setPrefixPath <qgis.core.QgsApplication.setPrefixPath>` est mis à "
+"``True``, indiquant que les chemins par défaut sont à utiliser."
 
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:230
 msgid ""
@@ -411,8 +413,8 @@ msgid ""
 msgstr ""
 "La seule différence entre :ref:`standalonescript` et une application PyQGIS "
 "personnalisée réside dans le second argument lors de l'initialisation de "
-"``QgsApplication``. Passer :const:`True` au lieu de ``False`` pour indiquer "
-"que nous allons utiliser une interface graphique."
+"``QgsApplication``. Passer ``True`` au lieu de ``False`` pour indiquer que "
+"nous allons utiliser une interface graphique."
 
 #: ../../docs/pyqgis_developer_cookbook/intro.rst:278
 msgid ""

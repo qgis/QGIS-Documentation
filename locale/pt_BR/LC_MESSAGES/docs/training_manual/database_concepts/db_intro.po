@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Aline Furlanetto Viero <afviero@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:18+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Aline Furlanetto Viero <afviero@gmail.com>, 2020\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -174,6 +175,9 @@ msgid ""
 "there is nothing in a field, then the field content is referred to as a "
 "**'null' value**:"
 msgstr ""
+"Você pode dizer ao banco de dados para permitir que você também não armazene"
+" nada em um campo. Se não houver nada em um campo, o conteúdo do campo será "
+"referido como um **'valor nulo'**:"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:101
 msgid "Result:"
@@ -184,6 +188,9 @@ msgid ""
 "There are many more datatypes you can use - `check the PostgreSQL manual! "
 "<https://www.postgresql.org/docs/current/datatype.html>`_"
 msgstr ""
+"Existem muitos outros tipos de dados que você pode usar - `verifique o "
+"manual do PostgreSQL! "
+"<https://www.postgresql.org/docs/current/datatype.html>`_"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:116
 msgid "Modelling an Address Database"
@@ -301,6 +308,8 @@ msgid ""
 "You can read more about database normalisation `here "
 "<https://en.wikipedia.org/wiki/Database_normalization>`_"
 msgstr ""
+"Você pode ler mais sobre a normalização do banco de dados `aqui "
+"<https://en.wikipedia.org/wiki/Database_normalization>`_"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:196
 msgid ":ref:`Check your results <database-concepts-2>`"
@@ -327,10 +336,15 @@ msgid ""
 "information you need. The index at the back of a book helps you to jump "
 "quickly to the page with the relevant information:"
 msgstr ""
+"Imagine que você está lendo um livro e procurando a explicação de um "
+"conceito - e o livro não tem índice! Você terá que começar a ler em uma capa"
+" e percorrer todo o livro até encontrar as informações necessárias. O índice"
+" na parte de trás de um livro ajuda você a pular rapidamente para a página "
+"com as informações relevantes:"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:216
 msgid "Now searches on name will be faster:"
-msgstr ""
+msgstr " Agora, as pesquisas por nome serão mais rápidas: "
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:235
 msgid "Sequences"
@@ -349,6 +363,8 @@ msgid ""
 "In this example, id is a sequence - the number is incremented each time a "
 "record is added to the table:"
 msgstr ""
+"Neste exemplo, id é uma sequência - o número é incrementado toda vez que um "
+"registro é adicionado à tabela: "
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:251
 msgid "Entity Relationship Diagramming"
@@ -361,12 +377,18 @@ msgid ""
 "dependencies between the relations. Consider our non-normalised `people` "
 "table from earlier in the lesson:"
 msgstr ""
+"Em um banco de dados normalizado, você normalmente tem muitas relações "
+"(tabelas). O diagrama de entidade-relacionamento (diagrama ER) é usado para "
+"projetar as dependências lógicas entre as relações. Considere a nossa tabela"
+" `pessoas` não normalizada do início da lição:"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:268
 msgid ""
 "With a little work we can split it into two tables, removing the need to "
 "repeat the street name for individuals who live in the same street:"
 msgstr ""
+"Com um pouco de trabalho, podemos dividi-lo em duas tabelas, eliminando a "
+"necessidade de repetir o nome da rua para pessoas que moram na mesma rua:"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:280
 msgid "and:"
@@ -461,6 +483,9 @@ msgid ""
 " column is a foreign key that references the primary key on the streets "
 "table:"
 msgstr ""
+"Se olharmos para o nosso exemplo de pessoas, a definição da tabela mostra "
+"que a coluna da rua é uma chave externa que faz referência à chave primária "
+"na tabela de ruas:"
 
 #: ../../docs/training_manual/database_concepts/db_intro.rst:351
 msgid "Transactions"

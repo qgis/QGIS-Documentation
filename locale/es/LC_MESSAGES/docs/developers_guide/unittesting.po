@@ -7,6 +7,7 @@
 # Richard Duivenvoorde <richard@duif.net>, 2020
 # Damián Ortega Terol <dortegat@gmail.com>, 2020
 # micirculopolar <lfernandez@geosistec.com>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:24+0000\n"
-"Last-Translator: micirculopolar <lfernandez@geosistec.com>, 2020\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -554,12 +555,17 @@ msgid ""
 " simply a matter of using QVERIFY to check that the cell count meets the "
 "expected value:"
 msgstr ""
+"Dado que el problema en el error #832 es un recuento incorrecto de celdas, "
+"escribir nuestra prueba es simplemente una cuestión de usar QVERIFY para "
+"verificar que el recuento de celdas cumpla con el valor esperado:"
 
 #: ../../docs/developers_guide/unittesting.rst:355
 msgid ""
 "With all the unit test functions implemented, there's one final thing we "
 "need to add to our test class:"
 msgstr ""
+"Con todas las funciones de prueba unitarias implementadas, hay una última "
+"cosa que debemos agregar a nuestra clase de prueba:"
 
 #: ../../docs/developers_guide/unittesting.rst:363
 msgid ""
@@ -569,10 +575,15 @@ msgid ""
 "should replace ``testqgsrasterlayer`` with the name of your class in lower "
 "case."
 msgstr ""
+"El propósito de estas dos líneas es señalar al moc Qt's que se trata de un "
+"QtTest (generará un método principal que a su vez llama a cada función de "
+"prueba. La última línea es la inclusión de las fuentes generadas por MOC. "
+"Debe reemplazar ``testqgsrasterlayer`` con el nombre de tu clase en "
+"minúsculas."
 
 #: ../../docs/developers_guide/unittesting.rst:369
 msgid "Comparing images for rendering tests"
-msgstr ""
+msgstr "Comparación de imágenes para pruebas de renderizado"
 
 #: ../../docs/developers_guide/unittesting.rst:371
 msgid ""
@@ -581,6 +592,10 @@ msgid ""
 "antialiasing algorithms), to the fonts available on the system and for other"
 " obscure reasons."
 msgstr ""
+"La representación de imágenes en diferentes entornos puede producir "
+"diferencias sutiles debido a implementaciones específicas de la plataforma "
+"(por ejemplo, diferentes tipos de letra y algoritmos de suavizado), a las "
+"fuentes disponibles en el sistema y por otras razones oscuras."
 
 #: ../../docs/developers_guide/unittesting.rst:375
 msgid ""
@@ -590,6 +605,11 @@ msgid ""
 "\"difference\" image which highlights in red any pixels which did not match "
 "the reference image."
 msgstr ""
+"Cuando se ejecuta una prueba de renderizado en Travis y falla, busque el "
+"enlace del guión en la parte inferior del registro de Travis. Este enlace lo"
+" llevará a una página cdash donde puede ver las imágenes renderizadas frente"
+" a las esperadas, junto con una imagen de \"diferencia\" que resalta en rojo"
+" los píxeles que no coinciden con la imagen de referencia."
 
 #: ../../docs/developers_guide/unittesting.rst:380
 msgid ""
@@ -605,6 +625,19 @@ msgid ""
 "image, and a fully white pixel (255, 255, 255) means that the pixel is "
 "effectively ignored when comparing the expected and rendered images."
 msgstr ""
+"El sistema de prueba de la unidad QGIS tiene soporte para agregar imágenes "
+"de \"máscara\", que se utilizan para indicar cuándo una imagen renderizada "
+"puede diferir de la imagen de referencia. Una imagen de máscara es una "
+"imagen (con el mismo nombre que la imagen de referencia, pero que incluye un"
+" sufijo **_mask.png**), y debe tener las mismas dimensiones que la imagen de"
+" referencia. En una imagen de máscara, los valores de píxel indican cuánto "
+"puede diferir ese píxel individual de la imagen de referencia, por lo que un"
+" píxel negro indica que el píxel en la imagen renderizada debe coincidir "
+"exactamente con el mismo píxel en la imagen de referencia. Un píxel con RGB "
+"2, 2, 2 significa que la imagen renderizada puede variar hasta 2 en sus "
+"valores RGB de la imagen de referencia, y un píxel completamente blanco "
+"(255, 255, 255) significa que el píxel se ignora efectivamente al comparar "
+"Las imágenes esperadas y renderizadas."
 
 #: ../../docs/developers_guide/unittesting.rst:392
 msgid ""
@@ -614,6 +647,11 @@ msgid ""
 "``tests/testdata/control_images/annotations/expected_annotation_fillstyle/expected_annotation_fillstyle.png``)"
 " and the path to your rendered image."
 msgstr ""
+"Un script de utilidad para generar imágenes de máscara está disponible "
+"como``scripts/generate_test_mask_image.py``. Este script se usa pasándole la"
+" ruta de una imagen de referencia (p. Ej. "
+"``tests/testdata/control_images/annotations/expected_annotation_fillstyle/expected_annotation_fillstyle.png``)"
+" y el camino hacia tu imagen renderizada."
 
 #: ../../docs/developers_guide/unittesting.rst:397
 msgid "E.g."
@@ -624,6 +662,8 @@ msgid ""
 "You can shortcut the path to the reference image by passing a partial part "
 "of the test name instead, e.g."
 msgstr ""
+"En su lugar, puede atajar la ruta a la imagen de referencia pasando una "
+"parte parcial del nombre de la prueba, p. Ej."
 
 #: ../../docs/developers_guide/unittesting.rst:410
 msgid ""
@@ -631,6 +671,9 @@ msgid ""
 "multiple matches are found you will need to provide the full path to the "
 "reference image.)"
 msgstr ""
+"(Este acceso directo solo funciona si se encuentra una sola imagen de "
+"referencia coincidente. Si se encuentran varias coincidencias, deberá "
+"proporcionar la ruta completa a la imagen de referencia)."
 
 #: ../../docs/developers_guide/unittesting.rst:414
 msgid ""
@@ -638,6 +681,9 @@ msgid ""
 "directly copy a rendered image url from the cdash results page and pass it "
 "to the script."
 msgstr ""
+"El script también acepta URL http para la imagen renderizada, por lo que "
+"puede copiar directamente una URL de la imagen renderizada desde la página "
+"de resultados de cdash y pasarla al script."
 
 #: ../../docs/developers_guide/unittesting.rst:417
 msgid ""
@@ -647,6 +693,11 @@ msgid ""
 "important portions of the reference image -- otherwise your unit test will "
 "be meaningless!"
 msgstr ""
+"Tenga cuidado al generar imágenes de máscara: siempre debe ver la imagen de "
+"máscara generada y revisar las áreas blancas de la imagen. Como se ignoran "
+"estos píxeles, asegúrese de que estas imágenes en blanco no cubran ninguna "
+"parte importante de la imagen de referencia; de lo contrario, la prueba de "
+"su unidad no tendrá sentido."
 
 #: ../../docs/developers_guide/unittesting.rst:422
 msgid ""
@@ -656,22 +707,32 @@ msgid ""
 " unit test is not designed to test the rendered text and you don't want the "
 "test to be subject to cross-platform text rendering differences."
 msgstr ""
+"Del mismo modo, puede \"blanquear\" manualmente las porciones de la máscara "
+"si deliberadamente desea excluirlas de la prueba. Esto puede ser útil, p. "
+"Ej. para pruebas que combinan la representación de símbolos y texto (como "
+"las pruebas de leyenda), donde la prueba unitaria no está diseñada para "
+"probar el texto renderizado y no desea que la prueba esté sujeta a "
+"diferencias de representación de texto multiplataforma."
 
 #: ../../docs/developers_guide/unittesting.rst:428
 msgid ""
 "To compare images in QGIS unit tests you should use the class "
 "``QgsMultiRenderChecker`` or one of its subclasses."
 msgstr ""
+"Para comparar imágenes en pruebas unitarias QGIS, debe usar la clase `` "
+"QgsMultiRenderChecker '' o una de sus subclases."
 
 #: ../../docs/developers_guide/unittesting.rst:431
 msgid "To improve tests robustness here are few tips:"
-msgstr ""
+msgstr "Para mejorar la robustez de las pruebas, aquí hay algunos consejos:"
 
 #: ../../docs/developers_guide/unittesting.rst:433
 msgid ""
 "Disable antialiasing if you can, as this minimizes cross-platform rendering "
 "differences."
 msgstr ""
+"Desactive el antialiasing si puede, ya que esto minimiza las diferencias de "
+"representación entre plataformas."
 
 #: ../../docs/developers_guide/unittesting.rst:435
 msgid ""
@@ -679,6 +740,9 @@ msgid ""
 "lines or other fine features, and use large, bold fonts (14 points or more "
 "is recommended)."
 msgstr ""
+"Asegúrese de que sus imágenes de referencia sean \"sólidas\" ... es decir no"
+" tengan líneas de 1 px de ancho u otras características finas, y use fuentes"
+" grandes y en negrita (se recomiendan 14 puntos o más)."
 
 #: ../../docs/developers_guide/unittesting.rst:438
 msgid ""
@@ -689,6 +753,13 @@ msgid ""
 " of pixels that the rendered image width and height differ from the "
 "reference image."
 msgstr ""
+"A veces, las pruebas generan imágenes de tamaño ligeramente diferente (por "
+"ejemplo, pruebas de representación de leyendas, donde el tamaño de la imagen"
+" depende del tamaño de representación de la fuente, que está sujeto a "
+"diferencias entre plataformas). Para tener esto en cuenta, use "
+"``QgsMultiRenderChecker::setSizeTolerance()'' y especifique el número máximo"
+" de píxeles que el ancho y la altura de la imagen renderizada difieren de la"
+" imagen de referencia."
 
 #: ../../docs/developers_guide/unittesting.rst:444
 msgid ""
@@ -696,16 +767,21 @@ msgid ""
 "support them). Instead, use ``QgsMultiRenderChecker::drawBackground()`` to "
 "draw a checkboard pattern for the reference image background."
 msgstr ""
+"No use fondos transparentes en las imágenes de referencia (CDash no las "
+"admite). En su lugar, use ``QgsMultiRenderChecker::drawBackground()`` para "
+"dibujar un patrón de tablero para el fondo de la imagen de referencia."
 
 #: ../../docs/developers_guide/unittesting.rst:447
 msgid ""
 "When fonts are required, use the font specified in "
 "``QgsFontUtils::standardTestFontFamily()`` (\"QGIS Vera Sans\")."
 msgstr ""
+"Cuando se requieren fuentes, use la fuente especificada en "
+"``QgsFontUtils::standardTestFontFamily()`` (\"QGIS Vera Sans\")."
 
 #: ../../docs/developers_guide/unittesting.rst:452
 msgid "Adding your unit test to CMakeLists.txt"
-msgstr ""
+msgstr "Agregar su prueba de unidad a CMakeLists.txt"
 
 #: ../../docs/developers_guide/unittesting.rst:455
 msgid ""
@@ -713,16 +789,22 @@ msgid ""
 ":file:`CMakeLists.txt` in the test directory, cloning one of the existing "
 "test blocks, and then replacing your test class name into it. For example:"
 msgstr ""
+"Agregar su prueba de unidad al sistema de compilación es simplemente una "
+"cuestión de editar el archivo :`CMakeLists.txt` en el directorio de prueba, "
+"clonar uno de los bloques de prueba existentes y luego reemplazar el nombre "
+"de su clase de prueba. Por ejemplo:"
 
 #: ../../docs/developers_guide/unittesting.rst:466
 msgid "The ADD_QGIS_TEST macro explained"
-msgstr ""
+msgstr "La macro ADD_QGIS_TEST explicada"
 
 #: ../../docs/developers_guide/unittesting.rst:468
 msgid ""
 "We'll run through these lines briefly to explain what they do, but if you "
 "are not interested, just do the step explained in the above section."
 msgstr ""
+"Revisaremos estas líneas brevemente para explicar lo que hacen, pero si no "
+"está interesado, simplemente siga el paso explicado en la sección anterior."
 
 #: ../../docs/developers_guide/unittesting.rst:503
 msgid ""
@@ -731,6 +813,11 @@ msgid ""
 "(following the methodology described above where class declaration and "
 "definition are in the same file) its a simple statement:"
 msgstr ""
+"Veamos un poco más en detalle las líneas individuales. Primero definimos la "
+"lista de fuentes para nuestra prueba. Dado que solo tenemos un archivo "
+"fuente (siguiendo la metodología descrita anteriormente donde la declaración"
+" de clase y la definición están en el mismo archivo) es una declaración "
+"simple:"
 
 #: ../../docs/developers_guide/unittesting.rst:512
 msgid ""
@@ -749,6 +836,11 @@ msgid ""
 "that will give it (among other things) a main method so the class can be "
 "compiled as an executable:"
 msgstr ""
+"A continuación, le decimos a cmake que debe hacer un ejecutable de la clase "
+"de prueba. Recuerde que en la sección anterior en la última línea de la "
+"implementación de la clase incluimos los resultados de moc directamente en "
+"nuestra clase de prueba, por lo que le dará (entre otras cosas) un método "
+"principal para que la clase pueda compilarse como un ejecutable:"
 
 #: ../../docs/developers_guide/unittesting.rst:532
 msgid ""
@@ -758,6 +850,12 @@ msgid ""
 "needs only. Of course you also need to link to the relevant qgis libraries "
 "as required by your unit test."
 msgstr ""
+"A continuación, debemos especificar las dependencias de la biblioteca. Por "
+"el momento, las clases se han implementado con una dependencia general "
+"QT_LIBRARIES, pero estaremos trabajando para reemplazar eso con las "
+"bibliotecas Qt específicas que cada clase solo necesita. Por supuesto, "
+"también debe vincular a las bibliotecas qgis relevantes según lo requiera su"
+" prueba unitaria."
 
 #: ../../docs/developers_guide/unittesting.rst:542
 msgid ""
@@ -765,6 +863,10 @@ msgid ""
 "binaries itself. This is something we plan to remove in the future so that "
 "the tests can run directly from inside the source tree."
 msgstr ""
+"A continuación, le decimos a cmake que instale las pruebas en el mismo lugar"
+" que los binarios qgis. Esto es algo que planeamos eliminar en el futuro "
+"para que las pruebas puedan ejecutarse directamente desde el árbol de "
+"origen."
 
 #: ../../docs/developers_guide/unittesting.rst:569
 msgid ""
@@ -780,32 +882,53 @@ msgid ""
 "better yet integrate running tests into the build process, the CTest is what"
 " we use."
 msgstr ""
+"Finalmente, lo anterior usa `` ADD_TEST '' para registrar la prueba con "
+"cmake / ctest. Aquí es donde sucede la mejor magia: registramos la clase con"
+" ctest. Si recuerda en la descripción general que proporcionamos al comienzo"
+" de esta sección, estamos usando QtTest y CTest juntos. Para recapitular, "
+"QtTest agrega un método principal a su unidad de prueba y se encarga de "
+"llamar a sus métodos de prueba dentro de la clase. También proporciona "
+"algunas macros como `` QVERIFY '' que puede usar para probar el fracaso de "
+"las pruebas usando condiciones. La salida de una prueba de unidad QtTest es "
+"un ejecutable que puede ejecutar desde la línea de comandos. Sin embargo, "
+"cuando tiene un conjunto de pruebas y desea ejecutar cada ejecutable a su "
+"vez, e integrar las pruebas en ejecución en el proceso de compilación, CTest"
+" es lo que usamos."
 
 #: ../../docs/developers_guide/unittesting.rst:582
 msgid "Building your unit test"
-msgstr ""
+msgstr "Construyendo su unidad de prueba"
 
 #: ../../docs/developers_guide/unittesting.rst:584
 msgid ""
 "To build the unit test you need only to make sure that ``ENABLE_TESTS=true``"
 " in the cmake configuration. There are two ways to do this:"
 msgstr ""
+"Para construir la prueba unitaria, solo necesita asegurarse de que "
+"``ENABLE_TESTS=true'' en la configuración de cmake. Hay dos maneras de hacer"
+" esto:"
 
 #: ../../docs/developers_guide/unittesting.rst:587
 msgid ""
 "Run ``ccmake ..`` ( or ``cmakesetup ..`` under windows) and interactively "
 "set the ``ENABLE_TESTS`` flag to ``ON``."
 msgstr ""
+"Ejecute ``ccmake...'' (o ``cmakesetup...'' en Windows) y establezca "
+"interactivamente el indicador ``ENABLE_TESTS'' en ``ON''."
 
 #: ../../docs/developers_guide/unittesting.rst:589
 msgid "Add a command line flag to cmake e.g. ``cmake -DENABLE_TESTS=true ..``"
 msgstr ""
+"Agregue un indicador de línea de comando a cmake, p. Ej.``cmake-"
+"DENABLE_TESTS=verdadero...''"
 
 #: ../../docs/developers_guide/unittesting.rst:591
 msgid ""
 "Other than that, just build QGIS as per normal and the tests should build "
 "too."
 msgstr ""
+"Aparte de eso, solo construye QGIS como de costumbre y las pruebas también "
+"deberían compilarse."
 
 #: ../../docs/developers_guide/unittesting.rst:595
 msgid "Run your tests"
@@ -824,6 +947,9 @@ msgid ""
 "was registered using the ADD_TEST CMake directive described above. Typical "
 "output from ``make test`` will look like this:"
 msgstr ""
+"El comando ``make test'' invocará CTest, que ejecutará cada prueba "
+"registrada con la directiva ADD_TEST CMake descrita anteriormente. La salida"
+" típica de ``make test'' se verá así:"
 
 #: ../../docs/developers_guide/unittesting.rst:624
 msgid ""
@@ -831,16 +957,22 @@ msgid ""
 "it failed. Use the ``-R`` option to specify a regex for which tests you want"
 " to run and ``-V`` to get verbose output:"
 msgstr ""
+"Si una prueba falla, puede usar el comando ctest para examinar más de cerca "
+"por qué falló. Use la opción ``-R '' para especificar una expresión regular "
+"para las pruebas que desea ejecutar y ``-V'' para obtener una salida "
+"detallada:"
 
 #: ../../docs/developers_guide/unittesting.rst:669
 msgid "Running individual tests"
-msgstr ""
+msgstr "Ejecutando pruebas individuales"
 
 #: ../../docs/developers_guide/unittesting.rst:671
 msgid ""
 "C++ tests are ordinary applications. You can run them from the build folder "
 "like any executable."
 msgstr ""
+"Las pruebas de C++ son aplicaciones comunes. Puede ejecutarlos desde la "
+"carpeta de compilación como cualquier ejecutable."
 
 #: ../../docs/developers_guide/unittesting.rst:687
 msgid ""
@@ -848,20 +980,25 @@ msgid ""
 "snapshots.qt.io/qt5-5.9/qtest-overview.html#qt-test-command-line-"
 "arguments>`_. This makes it possible to run a specific subset of tests:"
 msgstr ""
+"Estas pruebas también toman argumentos de línea de comando <https://doc-"
+"snapshots.qt.io/qt5-5.9/qtest-overview.html#qt-test-command-line-arguments> "
+"`_. Esto hace posible ejecutar un subconjunto específico de pruebas:"
 
 #: ../../docs/developers_guide/unittesting.rst:703
 msgid "Debugging unit tests"
-msgstr ""
+msgstr "Pruebas unitarias de depuración"
 
 #: ../../docs/developers_guide/unittesting.rst:706
 msgid "C++ Tests"
-msgstr ""
+msgstr "Pruebas C++"
 
 #: ../../docs/developers_guide/unittesting.rst:708
 msgid ""
 "For C++ unit tests, QtCreator automatically adds run targets, so you can "
 "start them from the debugger."
 msgstr ""
+"Para las pruebas unitarias de C++, QtCreator agrega automáticamente "
+"objetivos de ejecución, para que pueda iniciarlos desde el depurador."
 
 #: ../../docs/developers_guide/unittesting.rst:711
 msgid ""
@@ -869,10 +1006,14 @@ msgid ""
 "tab, you can also specify command line parameters that will allow a subset "
 "of the tests to be run inside a .cpp file in the debugger."
 msgstr ""
+"Si va a * Proyectos * y allí a la pestaña * Construir&ejecutar* -> "
+"Escritorio*Ejecutar *, también puede especificar parámetros de línea de "
+"comando que permitirán ejecutar un subconjunto de las pruebas dentro de un "
+"archivo .cpp en el depurador"
 
 #: ../../docs/developers_guide/unittesting.rst:716
 msgid "Python Tests"
-msgstr ""
+msgstr "Pruebas Python"
 
 #: ../../docs/developers_guide/unittesting.rst:718
 msgid ""
@@ -883,10 +1024,19 @@ msgid ""
 "path of the unit test python file, e.g. "
 ":file:`/home/user/dev/qgis/QGIS/tests/src/python/test_qgsattributeformeditorwidget.py`."
 msgstr ""
+"También es posible iniciar las pruebas unitarias de Python desde QtCreator "
+"con GDB. Para esto, debe ir a :guilabel:`Proyectos` y elegir "
+":guilabel:`Ejecutar` en :guilabel:`Construir y ejecutar`. Luego agregue una "
+"nueva `` Configuración de ejecución '' con el ejecutable "
+"``/usr/bin/python3'' y los argumentos de la línea de comando establecidos en"
+" la ruta del archivo de prueba de unidad de Python, p. Ej: archivo: "
+"`/home/user/dev/qgis/QGIS/tests/src/python/test_qgsattributeformeditorwidget.py`."
 
 #: ../../docs/developers_guide/unittesting.rst:726
 msgid "Now also change the ``Run Environment`` and add 3 new variables:"
 msgstr ""
+"Ahora también cambie el `` Entorno de ejecución '' y agregue 3 nuevas "
+"variables:"
 
 #: ../../docs/developers_guide/unittesting.rst:729
 msgid "Variable"
@@ -927,6 +1077,8 @@ msgid ""
 "Replace ``[build]`` with your build directory and ``[source]`` with your "
 "source directory."
 msgstr ""
+"Reemplace ``[build]'' con su directorio de compilación y ``[source]'' con su"
+" directorio de origen."
 
 #: ../../docs/developers_guide/unittesting.rst:742
 msgid "Have fun"
@@ -940,3 +1092,9 @@ msgid ""
 ":file:`CMakeLists.txt` parts) are still being worked on so that the testing "
 "framework works in a truly platform independent way."
 msgstr ""
+"Bueno, eso concluye esta sección sobre la escritura de pruebas unitarias en "
+"QGIS. Esperamos que se acostumbre a escribir pruebas para probar nuevas "
+"funciones y verificar regresiones. Algunos aspectos del sistema de prueba "
+"(en particular, las partes: file: `CMakeLists.txt`) todavía se están "
+"trabajando para que el marco de prueba funcione de una manera verdaderamente"
+" independiente de la plataforma."
