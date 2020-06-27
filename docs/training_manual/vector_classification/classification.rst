@@ -30,7 +30,7 @@ effectively.
 
 #. In the new panel, change the :guilabel:`Value` to ``landuse`` and
    the :guilabel:`Color ramp` to :guilabel:`Random colors`
-#. Click the button labeled :guilabel:`Classify`:
+#. Click the button labeled :guilabel:`Classify`
 
    .. figure:: img/categorised_style_settings.png
       :align: center
@@ -43,7 +43,7 @@ effectively.
       :align: center
 
 #. Click the arrow (or plus sign) next to ``landuse`` in the
-   :guilabel:`Layer list`, you'll see the categories explained:
+   :guilabel:`Layers` panel, you'll see the categories explained:
 
    .. figure:: img/categories_explained.png
       :align: center
@@ -51,7 +51,7 @@ effectively.
    Now our landuse polygons are colored and are classified so that
    areas with the same land use are the same color.
 
-#. If you wish to, you can change the fill color for each landuse
+#. If you wish to, you can change the symbol of each landuse
    area by double-clicking the relevant color block in the
    :guilabel:`Layers` panel or in the :guilabel:`Layer Properties`
    dialog:
@@ -77,8 +77,7 @@ hard-earned changes!
 |basic| |TY| More Classification
 ----------------------------------------------------------------------
 
-If you're only following the basic-level content, use the knowledge
-you gained above to classify the ``buildings`` layer.
+Use the knowledge you gained above to classify the ``buildings`` layer.
 Set the categorisation against the ``building`` field and use the
 :guilabel:`Spectral` color ramp.
 
@@ -144,19 +143,28 @@ record in the ``landuse`` layer based on its ``landuse`` attribute.
 Now we will use ratio classification to classify the records by area.
 
 We are going to reclassify the layer, so existing classes will be lost
-if not saved.
+if not saved. To store the current classification:
 
-#. Save your landuse symbology (if you want to keep it) by clicking on
-   the :guilabel:`Save Style ...` button in the :guilabel:`Style`
+#. Open the layer's properties dialog
+#. Click the :guilabel:`Save Style ...` button in the :guilabel:`Style`
    drop-down menu.
-#. Close the :guilabel:`Layer Properties` dialog
-#. Open the Attributes Table for the ``landuse`` layer.
+#. Select :guilabel:`Rename Current...`, enter ``land usage`` and press
+   :guilabel:`OK`.
 
-   We want to classify the landuse areas by size, but there is a
-   problem: they don't have a size field, so we'll have to make one.
-#. Enter edit mode by clicking the |toggleEditing| button
-#. Add a new column with the |newAttribute| button
-#. Set up the dialog that appears like this:
+   The categories and their symbols are now saved in the layer's properties.
+#. Click now on the :guilabel:`Add...` entry of the :guilabel:`Style`
+   drop-down menu and create a new style named ``ratio``.
+   This will store the new classification.
+#. Close the :guilabel:`Layer Properties` dialog
+
+We want to classify the landuse areas by size, but there is a
+problem: they don't have a size field, so we'll have to make one.
+
+#. Open the Attributes Table for the ``landuse`` layer.
+#. Enter edit mode by clicking the |toggleEditing|  :sup:`Toggle editing`
+   button
+#. Add a new column of decimal type, called ``AREA``, using the
+   |newAttribute| :sup:`New field` button: 
 
    .. figure:: img/add_area_column.png
       :align: center
@@ -170,34 +178,40 @@ if not saved.
 
    To solve this problem, we will need to calculate the areas.
 
-#. Open the field calculator with the |calculateField| button
+   #. Open the field calculator with the |calculateField| button.
 
-   You will get this dialog:
+      You will get this dialog:
 
-   .. figure:: img/calculate_field_dialog.png
-      :align: center
+      .. figure:: img/calculate_field_dialog.png
+         :align: center
 
-#. Change the values at the top of the dialog to look like this:
+   #. Check the |checkbox| :guilabel:`Update existing fields`
+   #. Select :guilabel:`AREA` in the fields drop-down menu
 
-   .. figure:: img/field_calculator_top.png
-      :align: center
+      .. figure:: img/field_calculator_top.png
+         :align: center
 
-#. In the :guilabel:`Function List` select
-   :menuselection:`Geometry --> $area`:
+   #. Under the :guilabel:`Expression` tab, expand the :guilabel:`Geometry`
+      functions group in the list and find :menuselection:`$area`
+   #. Double-click on it so that it appears in the :guilabel:`Expression`
+      field
 
-   .. figure:: img/geometry_area_select.png
-      :align: center
+      .. figure:: img/geometry_area_select.png
+         :align: center
 
-#. Double-click on it so that it appears in the :guilabel:`Expression`
-   field
-#. Click :guilabel:`OK`
-
-   Now your ``AREA`` field is populated with values (you may need to
-   click the column header to refresh the data). Save the edits and
-   close the attribute table.
+   #. Click :guilabel:`OK`
+   #. Scroll to the ``AREA`` field in the attribute table and you will
+      notice that it is populated with values (you may need to
+      click the column header to refresh the data).
 
    .. note:: These areas respect the project's area unit settings, so
       they may be in square meters or square degrees.
+
+#. Press |saveEdits| to save the edits and exit the edit mode with
+   |toggleEditing| :sup:`Toggle editing`
+#. Close the attribute table
+
+Now that we have the data, let's use them to render the ``landuse`` layer.
 
 #. Open the :guilabel:`Layer properties` dialog's
    :guilabel:`Symbology` tab for the ``landuse`` layer
@@ -266,6 +280,10 @@ It's often useful to combine multiple criteria for a classification,
 but unfortunately normal classification only takes one attribute into account.
 That's where rule-based classification comes in handy.
 
+In this lesson, we will represent the ``landuse`` layer in a way to
+easily identify |majorUrbanName| city from the other residential area,
+and from the other types of landuse (based on their area).
+
 #. Open the :guilabel:`Layer Properties` dialog for the ``landuse``
    layer
 #. Switch to the :guilabel:`Symbology` tab
@@ -279,46 +297,57 @@ That's where rule-based classification comes in handy.
    .. figure:: img/rule_based_classification.png
       :align: center
 
+#. Click and drag to select all the rules
 #. Use the |signMinus| :sup:`Remove selected rules` button to remove
    all of the existing rules
+
+Let's now add our custom rules.
+
 #. Click the |signPlus| :sup:`Add rule` button
-#. A new dialog then appears
+#. The :guilabel:`Edit rule` dialog then appears
+#. Enter ``Swellendam city`` as :guilabel:`Label`
 #. Click the |expression| button next to the :guilabel:`Filter` text
    area to open the :guilabel:`Expression String Builder`
-#. Enter the criterion
-   ``"landuse" = 'residential' AND "name" <> 'Swellendam'`` (or
-   ``"landuse" = 'residential' AND "name" != 'Swellendam'``):
+#. Enter the criterion ``"name" = 'Swellendam'`` and validate
 
    .. figure:: img/query_builder_example.png
       :align: center
 
-#. Click :guilabel:`OK`
-#. Choose a pale blue-grey :guilabel:`Fill color` and remove the
-   border:
+#. Back to the :guilabel:`Edit rule` dalog, assign it a darker
+   grey-blue color in order to indicate the town's
+   importance in the region and remove the border
 
    .. figure:: img/rule_style_result.png
       :align: center
 
-#. Click :guilabel:`OK`
-#. Add a new rule ``"landuse" <> 'residential' AND "AREA" >= 605000``
-   and choose a mid-green color
-#. Add another new rule ``"name" = 'Swellendam'`` and assign it
-   a darker grey-blue color in order to indicate the town's
-   importance in the region
-#. Click and drag this criterion to the top of the list
+#. Press :guilabel:`OK`
+#. Repeat the steps above to add the following rules:
 
-   These filters are exclusive, in that they collectively exclude
-   some areas on the map (i.e. those which are smaller than 605000
-   (square meters), are not residential, and are not
-   '|majorUrbanName|').
-   This means that the excluded polygons take the style of the
-   default :guilabel:`(no filter)` category.
+   #. **Other residential** label with the criterion
+      ``"landuse" = 'residential' AND "name" <> 'Swellendam'`` (or
+      ``"landuse" = 'residential' AND "name" != 'Swellendam'``). 
+      Choose a pale blue-grey :guilabel:`Fill color`
+   #. **Big non residential areas** label with the criterion
+      ``"landuse" <> 'residential' AND "AREA" >= 605000``.
+      Choose a mid-green color.
 
-   We know that the excluded polygons on our map cannot be
-   residential areas, so give the default category a suitable pale
-   green color.
+      .. figure:: img/criterion_refined_midway.png
+         :align: center
 
-   Your dialog should now look like this:
+      These filters are exclusive, in that they collectively exclude
+      some areas on the map (i.e. those which are smaller than 605000
+      (square meters), are not residential, and are not
+      '|majorUrbanName|').
+
+   #. We will catch the remaining features using a new rule labeled
+      **Small non residential areas**. Instead of a filter expression,
+      Check the |radioButtonOn| :guilabel:`Else`.
+      Give this category a suitable pale green color.
+
+      .. figure:: img/criterion_else.png
+         :align: center
+
+   Your rules should now look like this:
 
    .. figure:: img/criterion_refined_list.png
       :align: center
@@ -365,12 +394,18 @@ QGIS and into a format we can print out, or make into an image or PDF? That's th
 .. |basic| image:: /static/common/basic.png
 .. |calculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
+.. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.5em
 .. |expression| image:: /static/common/mIconExpression.png
    :width: 1.5em
 .. |hard| image:: /static/common/hard.png
 .. |majorUrbanName| replace:: Swellendam
 .. |moderate| image:: /static/common/moderate.png
 .. |newAttribute| image:: /static/common/mActionNewAttribute.png
+   :width: 1.5em
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
+   :width: 1.5em
+.. |saveEdits| image:: /static/common/mActionSaveEdits.png
    :width: 1.5em
 .. |signMinus| image:: /static/common/symbologyRemove.png
    :width: 1.5em
