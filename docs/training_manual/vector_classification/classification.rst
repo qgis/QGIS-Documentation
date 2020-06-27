@@ -25,8 +25,8 @@ effectively.
 #. Click on the dropdown that says :guilabel:`Single Symbol` and
    change it to :guilabel:`Categorized`:
 
-.. figure:: img/categorised_styles.png
-   :align: center
+   .. figure:: img/categorised_styles.png
+      :align: center
 
 #. In the new panel, change the :guilabel:`Value` to ``landuse`` and
    the :guilabel:`Color ramp` to :guilabel:`Random colors`
@@ -170,16 +170,15 @@ if not saved.
 
    To solve this problem, we will need to calculate the areas.
 
-* Open the field calculator with the |calculateField| button
+#. Open the field calculator with the |calculateField| button
 
    You will get this dialog:
-
 
    .. figure:: img/calculate_field_dialog.png
       :align: center
 
 #. Change the values at the top of the dialog to look like this:
- 
+
    .. figure:: img/field_calculator_top.png
       :align: center
 
@@ -204,14 +203,7 @@ if not saved.
    :guilabel:`Symbology` tab for the ``landuse`` layer
 #. Change the classification style from :guilabel:`Categorized` to
    :guilabel:`Graduated`
-
-#. Open the :guilabel:`Layer properties` dialog's :guilabel:`Symbology` tab
-   for the ``landuse`` layer
-#. Change the classification style from :guilabel:`Categorized` to
-   :guilabel:`Graduated`
-
 #. Change the :guilabel:`Value` to ``AREA``
-
 #. Under :guilabel:`Color ramp`, choose the option
    :guilabel:`Create New Color Ramp...`:
 
