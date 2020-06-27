@@ -96,7 +96,7 @@ You can also select a feature using the Attribute Table.
 #. Go back to the main QGIS window and look at the Map Canvas. You should 
    see the larger of the two polygons colored yellow.  
 #. To deselect the feature, go to the :guilabel:`Attribute Table` window 
-   and click on |deselectActiveLayer| :sup:`Deselect all features from the layer` button.
+   and click on |deselectAll| :sup:`Deselect all features from the layer` button.
 
 Sometimes there are many features shown on the Map Canvas and it might be difficult
 to see which feature is selected from the Attribute Table.  Another way to 
@@ -175,7 +175,7 @@ this in the next lesson.
    :width: 1.5em
 .. |openTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em
-.. |deselectActiveLayer| image:: /static/common/mActionDeselectActiveLayer.png
+.. |deselectAll| image:: /static/common/mActionDeselectAll.png
    :width: 1.5em
 .. |selectFeature| image:: /static/common/mActionSelectRectangle.png
    :width: 1.5em
