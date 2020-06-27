@@ -569,7 +569,7 @@ This group contains general assorted functions.
    "is_layer_visible", "Returns true if a specified layer is visible"
    "layer_property", "Returns a property of a layer or a value of its metadata.
    It can be layer name, crs, geometry type, feature count..."
-   "var", "Returns the value stored within a specified variable. See variable functions below"
+   "var", "Returns the value stored within a specified variable. See *variables* below"
    "with_variable", "Creates and sets a variable for any expression code that
    will be provided as a third argument. Useful to avoid repetition in expressions
    where the same value needs to be used more than once."
@@ -1190,8 +1190,8 @@ the user expressions:
 
 .. _variables_functions:
 
-Variables Functions
---------------------
+Variables
+---------
 
 This group contains dynamic variables related to the application, the project
 file and other settings.
