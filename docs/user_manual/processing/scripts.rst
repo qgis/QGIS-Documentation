@@ -416,7 +416,7 @@ Input types
 .. list-table::
    :widths: 45 31 24
    :header-rows: 1
-   :stub-columns: 0
+   :class: longtable
 
    * - Class
      - Alg constant
@@ -541,7 +541,7 @@ Output types
 .. list-table::
    :widths: 47 24 29
    :header-rows: 1
-   :stub-columns: 0
+   :class: longtable
 
    * - Class
      - Alg constant

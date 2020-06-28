@@ -26,7 +26,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -63,7 +62,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -90,7 +88,7 @@ Runs a simple or complex query with SQL syntax on the source layer.
 The result of the query will be added as a new layer.
 
 This algorithm is derived from the
-`GDAL ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_ .
+`GDAL ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_.
 
 Parameters
 ..........
@@ -98,7 +96,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -153,7 +151,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -185,7 +182,7 @@ activated.
 Then you can use the algorithm.
 
 This algorithm is derived from the
-`GDAL ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_ .
+`GDAL ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_.
 
 Parameters
 ..........
@@ -193,7 +190,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -480,7 +477,7 @@ Imports vector layers inside a PostGreSQL database. A new connection
 to the PostGIS database must be created.
 
 This algorithm is derived from the
-`GDAL ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_ .
+`GDAL ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_.
 
 Parameters
 ..........
@@ -488,7 +485,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -823,7 +820,7 @@ The information includes the geometry type, feature count, the spatial
 extent, the projection information and many more.
 
 This algorithm is derived from the
-`GDAL ogrinfo utility <https://gdal.org/ogrinfo.html>`_ .
+`GDAL ogrinfo utility <https://gdal.org/ogrinfo.html>`_.
 
 Parameters
 ..........
@@ -831,7 +828,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -878,7 +875,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name

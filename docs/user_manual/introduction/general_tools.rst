@@ -850,7 +850,7 @@ You can perform the following tasks:
 .. list-table::
    :header-rows: 1
    :widths: 20 40 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Task
      - Spatial Bookmark Manager
