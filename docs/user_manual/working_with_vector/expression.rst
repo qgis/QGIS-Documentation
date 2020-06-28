@@ -577,11 +577,11 @@ This group contains general assorted functions.
 
 .. _geometry_functions:
 
-Geometry Functions and Variables
---------------------------------
+Geometry Functions
+------------------
 
-This group contains functions and variables (prefixed with a '$') that
-operate on geometry objects (e.g., buffer, transform, $area).
+This group contains functions that operate on geometry objects
+(e.g. buffer, transform, $area).
 
 .. csv-table::
    :header: "Function", "Description"
@@ -1054,7 +1054,7 @@ This group contains functions to operate on raster layer.
 Record and Attributes
 ---------------------
 
-This group contains functions and variables (prefixed with a '$') that operate on record identifiers.
+This group contains functions that operate on record identifiers.
 
 .. csv-table::
    :header: "Function", "Description"
