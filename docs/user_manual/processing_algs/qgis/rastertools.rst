@@ -107,6 +107,9 @@ Outputs
      - [raster]
      - Output raster layer
   
+Python code
+...........
+
 **Algorithm ID**: ``qgis:rasterize``
 
 .. include:: qgis_algs_include.rst
@@ -186,6 +189,9 @@ Outputs
      - [raster]
      - Raster covering the desired extent with the specified pixel
        size and value.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:createconstantrasterlayer``
 
@@ -348,6 +354,9 @@ Outputs
      - [html]
      - The output HTML (Leaflet) file
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:tilesxyzdirectory``
 
 .. include:: qgis_algs_include.rst
@@ -471,6 +480,9 @@ Outputs
      - [file]
      - The output file.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:tilesxyzmbtiles``
 
 .. include:: qgis_algs_include.rst
@@ -525,6 +537,9 @@ Outputs
      - ``INPUT``
      - [raster]
      - The raster layer with the chosen style
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:setstyleforrasterlayer``
 

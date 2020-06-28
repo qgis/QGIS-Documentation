@@ -80,6 +80,9 @@ Outputs
      - [same as input]
      - Vector layer with assigned projection
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:assignprojection``
 
 .. include:: qgis_algs_include.rst
@@ -145,6 +148,9 @@ Outputs
      - ``COUNT``
      - [number]
      - 
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:layertobookmarks``
 
@@ -219,6 +225,9 @@ Outputs
      - [vector: polygon]
      - The output (bookmarks) vector layer
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:bookmarkstolayer``
 
 .. include:: qgis_algs_include.rst
@@ -275,6 +284,9 @@ Outputs
      - A copy of the input vector layer with an index for the
        specified field
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:createattributeindex``
 
 .. include:: qgis_algs_include.rst
@@ -326,6 +338,9 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - A copy of the input vector layer with a spatial index
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:createspatialindex``
 
@@ -389,6 +404,9 @@ Outputs
      - ``INPUT``
      - [same as input]
      - The input vector layer with the defined projection
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:definecurrentprojection``
 
@@ -463,6 +481,9 @@ Outputs
      - ``RETAINED_COUNT``
      - [number]
      - Count of unique records
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:deleteduplicategeometries``
 
@@ -573,6 +594,9 @@ Outputs
      - ``RETAINED_COUNT``
      - [number]
      - Count of unique records
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:deleteduplicatesbyattribute``
 
@@ -710,6 +734,9 @@ Outputs
      - [number]
      - Count of features deleted from original layer.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:detectdatasetchanges``
 
 .. include:: qgis_algs_include.rst
@@ -776,6 +803,9 @@ Outputs
      - [table]
      - The output geometryless layer.
        A copy of the original attribute table.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:dropgeometries``
 
@@ -888,6 +918,9 @@ Outputs
      - [vector: any]
      - Vector layer created by the query
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:executesql``
 
 .. include:: qgis_algs_include.rst
@@ -950,6 +983,9 @@ Outputs
      - [same as input]
      - Vector layer with only the selected features,
        or no feature if none was selected.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:saveselectedfeatures``
 
@@ -1036,6 +1072,9 @@ Outputs
      - [table]
      - A table with all the
        CRS (EPSG codes) of the matching criteria.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:findprojection``
 
@@ -1186,6 +1225,9 @@ Outputs
      - ``UNJOINABLE_COUNT``
      - [number]
      - 
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:joinattributestable``
 
@@ -1340,6 +1382,9 @@ Outputs
      - [same as input]
      - Output vector layer with added attributes from the join
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:joinattributesbylocation``
 
 .. include:: qgis_algs_include.rst
@@ -1478,6 +1523,9 @@ Outputs
      - [same as input]
      - Output vector layer with summarized attributes from the join
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:joinbylocationsummary``
 
 .. include:: qgis_algs_include.rst
@@ -1613,6 +1661,9 @@ Outputs
      - Number of features from the input table that could not
        be joined.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:joinattributesbynearest``
 
 .. include:: qgis_algs_include.rst
@@ -1705,6 +1756,9 @@ Outputs
      - Output vector layer containing all the
        features and attributes from the input layers.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:mergevectorlayers``
 
 .. include:: qgis_algs_include.rst
@@ -1784,6 +1838,9 @@ Outputs
      - [same as input]
      - Output (sorted) vector layer
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:orderbyexpression``
 
 .. include:: qgis_algs_include.rst
@@ -1829,8 +1886,11 @@ Outputs
      - ``OUTPUT``
      - [vector any]
      - The input vector layer with the SHX file repaired
-	 
-	 **Algorithm ID**: ``qgis:repairshapefile``
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:repairshapefile``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
@@ -1900,6 +1960,9 @@ Outputs
      - [same as input]
      - Output (reprojected) vector layer
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:reprojectlayer``
 
 .. include:: qgis_algs_include.rst
@@ -1954,6 +2017,9 @@ Outputs
      - ``INPUT``
      - [same as input]
      - The input vector layer with the new style
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:setstyleforvectorlayer``
 
@@ -2036,6 +2102,9 @@ Outputs
      - [same as input]
      - The output vector layer.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:splitfeaturesbycharacter``
 
 .. include:: qgis_algs_include.rst
@@ -2113,6 +2182,9 @@ Outputs
      - [same as input] [list]
      - The output vector layers resulting from the split.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:splitvectorlayer``
 
 .. include:: qgis_algs_include.rst
@@ -2160,6 +2232,9 @@ Outputs
      - ``OUTPUT``
      - [folder]
      - The truncated (empty) layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:truncatetable``
 

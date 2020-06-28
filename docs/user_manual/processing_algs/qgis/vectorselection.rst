@@ -117,6 +117,9 @@ Outputs
      - Vector layer with non-matching features from the
        input layer
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:extractbyattribute``
 
 .. include:: qgis_algs_include.rst
@@ -208,6 +211,9 @@ Outputs
      - [same as input]
      - Vector layer with non-matching features from the
        input layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:extractbyexpression``
 
@@ -306,6 +312,9 @@ Outputs
        have the chosen spatial relationship(s) with one or
        more features in the comparison layer.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:extractbylocation``
 
 .. include:: qgis_algs_include.rst
@@ -390,6 +399,9 @@ Outputs
      - [same as input]
      - Vector layer containing randomly selected features from
        the input layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:randomextract``
 
@@ -483,6 +495,9 @@ Outputs
      - Vector layer containing randomly selected features from
        the input layer
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:randomextractwithinsubsets``
 
 .. include:: qgis_algs_include.rst
@@ -552,6 +567,9 @@ Outputs
      - ``INPUT``
      - [same as input]
      - The input layer with features selected
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:randomselection``
 
@@ -634,6 +652,9 @@ Outputs
      - ``INPUT``
      - [same as input]
      - The input layer with features selected
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:randomselectionwithinsubsets``
 
@@ -727,6 +748,9 @@ Outputs
      - [same as input]
      - The input layer with features selected
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:selectbyattribute``
 
 .. include:: qgis_algs_include.rst
@@ -793,6 +817,9 @@ Outputs
      - ``INPUT``
      - [same as input]
      - The input layer with features selected
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:selectbyexpression``
 
@@ -887,6 +914,9 @@ Outputs
      - ``INPUT``
      - [same as input]
      - The input layer with features selected
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:selectbylocation``
 

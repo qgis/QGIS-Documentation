@@ -129,6 +129,9 @@ Outputs
 
 The algorithm has no output.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:importintopostgis``
 
 .. include:: qgis_algs_include.rst
@@ -243,6 +246,9 @@ Outputs
 
 The algorithm has no output.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:importintospatialite``
 
 .. include:: qgis_algs_include.rst
@@ -317,6 +323,9 @@ Outputs
      - ``OUTPUT_LAYERS``
      - [string] [list]
      - The list of layers added to the GeoPackage.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:package``
 
@@ -398,6 +407,9 @@ Outputs
      - [vector: any]
      - The resulting vector layer to be loaded into QGIS.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:postgisexecuteandloadsql``
 
 .. include:: qgis_algs_include.rst
@@ -452,6 +464,9 @@ Outputs
 No output is created.
 The SQL query is executed in place.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:postgisexecutesql``
 
 .. include:: qgis_algs_include.rst
@@ -505,6 +520,9 @@ Outputs
 
 No output is created.
 The SQL query is executed in place.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:spatialiteexecutesql``
 

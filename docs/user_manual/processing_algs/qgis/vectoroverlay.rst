@@ -97,6 +97,9 @@ Outputs
      - Layer containing features from the input layer split by the
        overlay layer.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:clip``
 
 .. include:: qgis_algs_include.rst
@@ -187,6 +190,9 @@ Outputs
      - Layer containing (parts of) features from the input layer
        not overlapping the overlay layer.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:difference``
 
 .. include:: qgis_algs_include.rst
@@ -264,6 +270,9 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - Layer containing the clipped features.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:extractbyextent``
 
@@ -379,6 +388,9 @@ Outputs
      - Layer containing (parts of) features from the input
        layer that overlap the overlay layer.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:intersection``
 
 .. include:: qgis_algs_include.rst
@@ -477,6 +489,9 @@ Outputs
      - [vector: point]
      - Point vector layer with the intersections.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:lineintersections``
 
 .. include:: qgis_algs_include.rst
@@ -554,6 +569,9 @@ Outputs
      - [same as input]
      - Output vector layer with split lines or polygons from input
        layer.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:splitwithlines``
 
@@ -647,6 +665,9 @@ Outputs
      - [same as input]
      - Layer containing (parts of) features from each layer
        not overlapping the other layer.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:symmetricaldifference``
 
@@ -759,6 +780,9 @@ Outputs
      - [same as input]
      - Layer containing all the overlapping and
        non-overlapping parts from the processed layer(s).
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:union``
 

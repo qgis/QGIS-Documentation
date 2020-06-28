@@ -67,6 +67,9 @@ Outputs
      - HTML file with the plot.
        Available in the :menuselection:`Processing --> Result Viewer`.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:barplot``
 
 .. include:: qgis_algs_include.rst
@@ -145,6 +148,9 @@ Outputs
      - HTML file with the plot.
        Available in the :menuselection:`Processing --> Result Viewer`.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:boxplot``
 
 .. include:: qgis_algs_include.rst
@@ -210,6 +216,9 @@ Outputs
      - [html]
      - HTML file with the plot.
        Available in the :menuselection:`Processing --> Result Viewer`.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:meanandstandarddeviationplot``
 
@@ -280,6 +289,9 @@ Outputs
      - HTML file with the plot.
        Available in the :menuselection:`Processing --> Result Viewer`.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:polarplot``
 
 .. include:: qgis_algs_include.rst
@@ -347,6 +359,9 @@ Outputs
      - [html]
      - HTML file with the plot.
        Available in the :menuselection:`Processing --> Result Viewer`.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:rasterlayerhistogram``
 
@@ -418,6 +433,9 @@ Outputs
      - HTML file with the plot.
        Available in the :menuselection:`Processing --> Result Viewer`.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:vectorlayerhistogram``
 
 .. include:: qgis_algs_include.rst
@@ -483,6 +501,9 @@ Outputs
      - [html]
      - HTML file with the plot.
        Available in the :menuselection:`Processing --> Result Viewer`.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:vectorlayerscatterplot``
 
@@ -553,6 +574,9 @@ Outputs
      - [html]
      - HTML file with the plot.
        Available in the :menuselection:`Processing --> Result Viewer`.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:scatter3dplot``
 

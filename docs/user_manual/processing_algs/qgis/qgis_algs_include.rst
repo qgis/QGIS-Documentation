@@ -419,8 +419,7 @@ Available geometric predicates are:
 
 **algorithm_code_section**
 
-Python code
-...........
+.. The following section is used to load python code sample in algs help
 
 .. code-block:: python
 

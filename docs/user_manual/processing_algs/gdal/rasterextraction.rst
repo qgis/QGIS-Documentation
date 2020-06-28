@@ -121,6 +121,9 @@ Outputs
      - [raster]
      - Output raster layer clipped by the given extent
 
+Python code
+...........
+
 **Algorithm ID**: ``gdal:cliprasterbyextent``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -295,6 +298,9 @@ Outputs
      - [raster]
      - Output raster layer clipped by the vector layer
 
+Python code
+...........
+
 **Algorithm ID**: ``gdal:cliprasterbymasklayer``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -427,6 +433,9 @@ Outputs
      - ``OUTPUT``
      - [vector: line]
      - Output vector layer with contour lines
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:contour``
 

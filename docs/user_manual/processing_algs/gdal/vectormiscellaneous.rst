@@ -72,6 +72,9 @@ Outputs
      - [vector: any]
      - The output virtual vector made from the chosen sources
 
+Python code
+...........
+
 **Algorithm ID**: ``gdal:buildvirtualvector``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -160,6 +163,9 @@ Outputs
      - ``OUTPUT``
      - [vector: any]
      - Vector layer created by the query
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:executesql``
 
@@ -461,6 +467,9 @@ Outputs
 .......
 
 This algorithm has no output.
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:importvectorintopostgisdatabaseavailableconnections``
 
@@ -801,6 +810,9 @@ Outputs
 
 This algorithm has no output.
 
+Python code
+...........
+
 **Algorithm ID**: ``gdal:importvectorintopostgisdatabasenewconnection``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -885,6 +897,9 @@ Outputs
      - ``OUTPUT``
      - [html]
      - The output HTML-file that includes the file information.
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:ogrinfo``
 

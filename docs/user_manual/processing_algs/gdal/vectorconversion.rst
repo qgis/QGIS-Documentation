@@ -73,6 +73,9 @@ Outputs
      - [same as input]
      - The output vector layer
 
+Python code
+...........
+
 **Algorithm ID**: ``gdal:convertformat``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -150,6 +153,9 @@ Outputs
       - [raster]
       - The overwritten input raster layer
 
+Python code
+...........
+
 **Algorithm ID**: ``gdal:rasterize_over``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -226,6 +232,9 @@ Outputs
       - ``OUTPUT``
       - [raster]
       - The overwritten input raster layer
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:rasterize_over_fixed_value``
 
@@ -399,6 +408,9 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output raster layer
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:rasterize``
 
