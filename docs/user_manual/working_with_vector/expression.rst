@@ -1051,8 +1051,8 @@ This group contains functions to operate on raster layer.
 
 .. _record_attributes:
 
-Record and Attributes
----------------------
+Record and Attributes Functions
+-------------------------------
 
 This group contains functions that operate on record identifiers.
 
