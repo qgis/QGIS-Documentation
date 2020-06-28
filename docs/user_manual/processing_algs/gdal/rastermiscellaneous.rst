@@ -118,6 +118,9 @@ Outputs
      - [raster]
      - Output raster layer with overviews
 
+Python code
+...........
+
 **Algorithm ID**: ``gdal:overviews``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -261,6 +264,9 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output raster layer
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:buildvirtualraster``
 
@@ -457,6 +463,9 @@ Outputs
      - [folder]
      - The output folder (for the tiles)
 
+Python code
+...........
+
 **Algorithm ID**: ``gdal:gdal2tiles``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -591,6 +600,9 @@ Outputs
      - [raster]
      - Output raster layer
 
+Python code
+...........
+
 **Algorithm ID**: ``gdal:merge``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -693,6 +705,9 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output (sharpened) raster layer
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:pansharp``
 
@@ -901,6 +916,9 @@ Outputs
      - [raster]
      - Output (calculated) raster layer
 
+Python code
+...........
+
 **Algorithm ID**: ``gdal:rastercalculator``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -1001,6 +1019,9 @@ Outputs
      - [html]
      - The HTML file containing information about the input raster
        layer
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:gdalinfo``
 
@@ -1191,6 +1212,9 @@ Outputs
      - [file]
      - The CSV file with georeferencing information for the tiles.
 
+Python code
+...........
+
 **Algorithm ID**: ``gdal:retile``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -1308,6 +1332,9 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - The polygon vector layer with the tile index.
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:tileindex``
 

@@ -57,6 +57,9 @@ Outputs
      - [raster]
      - The output raster layer (with the new projection information)
 
+Python code
+...........
+
 **Algorithm ID**: ``gdal:assignprojection``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -127,6 +130,9 @@ Outputs
       - Text file with :file:`.prj` extension that describes the CRS.
         Will be ``None`` if :guilabel:`Create also .prj file` is
 	False.
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:extractprojection``
 
@@ -319,6 +325,9 @@ Outputs
 
        Default: ``[Save to temporary file]``
      - Reprojected output raster layer
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:warpreproject``
 

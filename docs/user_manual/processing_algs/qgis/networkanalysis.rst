@@ -131,6 +131,9 @@ Outputs
        that can be serviced by the start points, for the
        given cost.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:serviceareafromlayer``
 
 .. include:: qgis_algs_include.rst
@@ -252,6 +255,9 @@ Outputs
      - Line layer representing the parts of the network
        that can be serviced by the start point, for the
        given cost.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:serviceareafrompoint``
 
@@ -431,6 +437,9 @@ Outputs
      - Line layer of the shortest or fastest path
        from each of the start points to the end point
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:shortestpathlayertopoint``
 
 .. include:: qgis_algs_include.rst
@@ -600,6 +609,9 @@ Outputs
      - [vector: line]
      - Line layer of the shortest or fastest path
        from each of the start points to the end point
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:shortestpathpointtolayer``
 
@@ -784,6 +796,9 @@ Outputs
      - [vector: line]
      - Line layer of the shortest or fastest path
        from each of the start point to the end point
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:shortestpathpointtopoint``
 

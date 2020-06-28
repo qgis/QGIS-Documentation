@@ -239,6 +239,9 @@ The final result is shown in Figure_Heatmap_styled_processing_.
 
 .. _Wikipedia: https://en.wikipedia.org/wiki/Kernel_(statistics)#Kernel_functions_in_common_use
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:heatmapkerneldensityestimation``
 
 .. include:: qgis_algs_include.rst
@@ -367,6 +370,9 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Raster layer of interpolated values
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:idwinterpolation``
 
@@ -513,6 +519,9 @@ Outputs
      - ``TRIANGULATION``
      - [vector: line]
      - The output TIN as a vector layer.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:tininterpolation``
 

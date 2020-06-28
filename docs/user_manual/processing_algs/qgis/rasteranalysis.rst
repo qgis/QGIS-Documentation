@@ -137,6 +137,9 @@ Outputs
      - [raster]
      - Output raster layer containing the result
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:rasterbooleanand``
 
 .. include:: qgis_algs_include.rst
@@ -273,6 +276,9 @@ Outputs
      - [raster]
      - Output raster layer containing the result
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:rasterbooleanor``
 
 .. include:: qgis_algs_include.rst
@@ -406,6 +412,9 @@ Outputs
      - [raster]
      - Output raster file with the calculated values.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:rastercalculator``
 
 .. include:: qgis_algs_include.rst
@@ -513,6 +522,9 @@ Outputs
      - ``SUM_OF_SQUARES``
      - [number]
      - 
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:rasterlayerstatistics``
 
@@ -637,6 +649,9 @@ Outputs
      - [number]
      - 
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:rasterlayeruniquevaluesreport``
 
 .. include:: qgis_algs_include.rst
@@ -756,6 +771,9 @@ Outputs
      - ``WIDTH_IN_PIXELS``
      - [number]
      - 
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:rasterlayerzonalstats``
 
@@ -886,6 +904,9 @@ Outputs
      - The output table (containing volume, area and
        pixel count)
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:rastersurfacevolume``
 
 .. include:: qgis_algs_include.rst
@@ -1015,6 +1036,9 @@ Outputs
      - [raster]
      - Output raster layer with reclassified band values
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:reclassifybylayer``
 
 .. include:: qgis_algs_include.rst
@@ -1137,6 +1161,9 @@ Outputs
        Default: '[Save to temporary file]'
      - The output raster layer.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:reclassifybytable``
 
 .. include:: qgis_algs_include.rst
@@ -1215,6 +1242,9 @@ Outputs
      - ``OUTPUT``
      - [vector: point]
      - The output layer containing the sampled values.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:rastersampling``
 
@@ -1308,6 +1338,9 @@ Outputs
        Default: ``[Create temporary layer]``
      - The output vector polygon layer.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:zonalhistogram``
 
 .. include:: qgis_algs_include.rst
@@ -1394,6 +1427,9 @@ Outputs
      - ``INPUT_VECTOR``
      - [vector: polygon]
      - The input zone vector layer with added statistics.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:zonalstatistics``
 

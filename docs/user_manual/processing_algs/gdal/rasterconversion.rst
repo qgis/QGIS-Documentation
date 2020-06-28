@@ -75,6 +75,9 @@ Outputs
      - [table]
      - Table file containing the values exported from the raster band.
 
+Python code
+...........
+
 **Algorithm ID**: ``gdal:gdal2xyz``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -153,6 +156,9 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - 24 bit RGB raster image
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:pcttorgb``
 
@@ -249,6 +255,9 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - Output vector layer
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:polygonize``
 
@@ -352,6 +361,9 @@ Outputs
      - [raster]
      - Output raster layer with rearranged bands.
 
+Python code
+...........
+
 **Algorithm ID**: ``gdal:rearrange_bands``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -430,6 +442,9 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output raster layer.
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:rgbtopct``
 
@@ -556,6 +571,9 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output (translated) raster layer.
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:translate``
 

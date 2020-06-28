@@ -176,6 +176,9 @@ Outputs
      - [raster]
      - The output raster
 
+Python code
+...........
+
 **Algorithm ID**: ``lastools:blast2dem``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -307,6 +310,9 @@ Outputs
      - ``OUTPUT_VECTOR``
      - [vector: line]
      - The output line vector layer with contours
+
+Python code
+...........
 
 **Algorithm ID**: ``lastools:blast2iso``
 
@@ -490,6 +496,9 @@ Outputs
      - [raster]
      - The output raster
 
+Python code
+...........
+
 **Algorithm ID**: ``lastools:las2dem``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -628,6 +637,9 @@ Outputs
      - ``OUTPUT_VECTOR``
      - [vector: line]
      - The output line vector layer with contours
+
+Python code
+...........
 
 **Algorithm ID**: ``lastools:las2iso``
 
@@ -877,6 +889,9 @@ Outputs
      - ``OUTPUT_LASLAZ``
      - [file]
      - The output LAS/LAZ format file
+
+Python code
+...........
 
 **Algorithm ID**: ``lastools:las2las_filter``
 
@@ -1527,6 +1542,9 @@ Outputs
      - [file]
      - The output LAS/LAZ format file
 
+Python code
+...........
+
 **Algorithm ID**: ``lastools:las2las_project``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -1770,6 +1788,9 @@ Outputs
      - [file]
      - The output (merged) LAS/LAZ format file
 
+Python code
+...........
+
 **Algorithm ID**: ``lastools:las2las_transform``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -1867,6 +1888,9 @@ Outputs
      - [file]
      - The output file
 
+Python code
+...........
+
 **Algorithm ID**: ``lastools:las2txt``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -1958,6 +1982,9 @@ Outputs
      - 
      - 
      - No output
+
+Python code
+...........
 
 **Algorithm ID**: ``lastools:lasindex``
 
@@ -2133,6 +2160,9 @@ Outputs
      - ``OUTPUT_RASTER``
      - [raster]
      - The output raster
+
+Python code
+...........
 
 **Algorithm ID**: ``lastools:lasgrid``
 
@@ -2331,6 +2361,9 @@ Outputs
      - [file]
      - The file with the output
 
+Python code
+...........
+
 **Algorithm ID**: ``lastools:lasinfo``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -2468,6 +2501,9 @@ Outputs
      - [file]
      - The output (merged) LAS/LAZ format file
 
+Python code
+...........
+
 **Algorithm ID**: ``lastools:lasmerge``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -2548,6 +2584,9 @@ Outputs
      - [file]
      - The output ASCII file
 
+Python code
+...........
+
 **Algorithm ID**: ``lastools:lasprecision``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -2609,6 +2648,9 @@ Parameters
 
 Outputs
 .......
+
+Python code
+...........
 
 **Algorithm ID**: ``lastools:lasquery``
 
@@ -2681,6 +2723,9 @@ Outputs
      - ``OUTPUT_GENERIC``
      - [file]
      - The output XML file
+
+Python code
+...........
 
 **Algorithm ID**: ``lastools:lasvalidate``
 
@@ -2787,6 +2832,9 @@ Outputs
      - ``OUTPUT_LASLAZ``
      - [file]
      - The output file
+
+Python code
+...........
 
 **Algorithm ID**: ``lastools:laszip``
 
@@ -3190,6 +3238,9 @@ Outputs
      - ``OUTPUT_LASLAZ``
      - [file]
      - The output file
+
+Python code
+...........
 
 **Algorithm ID**: ``lastools:txt2las``
 

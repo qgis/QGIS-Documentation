@@ -55,6 +55,9 @@ Outputs
      - [same as input]
      - The (renamed) loaded layer
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:loadlayer``
 
 .. include:: qgis_algs_include.rst
@@ -106,6 +109,9 @@ Outputs
      - [same as input]
      - The (renamed) output layer
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:renamelayer``
 
 .. include:: qgis_algs_include.rst
@@ -156,6 +162,9 @@ Outputs
      - ``CONCATENATION``
      - [string]
      - The concatenated string
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:stringconcatenation``
 

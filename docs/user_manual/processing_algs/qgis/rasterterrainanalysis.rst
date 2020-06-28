@@ -84,6 +84,9 @@ Outputs
      - [raster]
      - The output aspect raster layer
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:aspect``
 
 .. include:: qgis_algs_include.rst
@@ -196,6 +199,9 @@ Outputs
      - [raster]
      - The output hillshade raster layer
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:hillshade``
 
 .. include:: qgis_algs_include.rst
@@ -289,6 +295,9 @@ Outputs
 .. figure:: img/hypsometric.png
    :align: center
    :scale: 50%
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:hypsometriccurves``
 
@@ -413,6 +422,9 @@ Outputs
      - [table]
      - The output frequency distribution
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:relief``
 
 .. include:: qgis_algs_include.rst
@@ -494,6 +506,9 @@ Outputs
      - [raster]
      - The output ruggedness raster layer
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:ruggednessindex``
 
 .. include:: qgis_algs_include.rst
@@ -572,6 +587,9 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - The output slope raster layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:slope``
 
