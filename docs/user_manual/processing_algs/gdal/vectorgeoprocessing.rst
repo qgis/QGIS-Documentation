@@ -102,6 +102,9 @@ Outputs
       - [vector: polygon]
       - The output buffer layer
 
+Python code
+...........
+
 **Algorithm ID**: ``gdal:buffervectors``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -178,6 +181,9 @@ Outputs
       - The output (clipped) layer.
         The default format is "ESRI Shapefile".
 
+Python code
+...........
+
 **Algorithm ID**: ``gdal:clipvectorbyextent``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -252,6 +258,9 @@ Outputs
       - [same as input]
       - The output (masked) layer.
         The default format is "ESRI Shapefile".
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:clipvectorbymasklayer``
 
@@ -377,6 +386,9 @@ Outputs
       - The output multipart geometry layer (with dissolved
 	geometries)
 
+Python code
+...........
+
 **Algorithm ID**: ``gdal:dissolve``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -456,6 +468,9 @@ Outputs
       - ``OUTPUT``
       - [vector: line]
       - The output offset curve layer
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:offsetcurve``
 
@@ -569,6 +584,9 @@ Outputs
       - [vector: polygon]
       - The output buffer layer
 
+Python code
+...........
+
 **Algorithm ID**: ``gdal:onesidebuffer``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -650,6 +668,9 @@ Outputs
       - ``OUTPUT``
       - [vector: point]
       - The output point layer
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:pointsalonglines``
 

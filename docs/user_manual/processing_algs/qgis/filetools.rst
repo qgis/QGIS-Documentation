@@ -63,6 +63,9 @@ Outputs
      - [string]
      - The location of the downloaded file
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:filedownloader``
 
 .. include:: qgis_algs_include.rst

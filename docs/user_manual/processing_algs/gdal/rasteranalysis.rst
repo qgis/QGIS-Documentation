@@ -123,6 +123,9 @@ Outputs
      - [raster]
      - Output raster with angle values in degrees
 
+Python code
+...........
+
 **Algorithm ID**: ``gdal:aspect``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -235,6 +238,9 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - A 4-band output raster
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:colorrelief``
 
@@ -359,6 +365,9 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output raster
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:fillnodata``
 
@@ -533,6 +542,9 @@ Outputs
      - [raster]
      - Output raster with interpolated values
 
+Python code
+...........
+
 **Algorithm ID**: ``gdal:griddatametrics``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -684,6 +696,9 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output raster with interpolated values
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:gridinversedistancenearestneighbor``
 
@@ -857,6 +872,9 @@ Outputs
      - [raster]
      - Output raster with interpolated values
 
+Python code
+...........
+
 **Algorithm ID**: ``gdal:gridinversedistance``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -986,6 +1004,9 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output raster with interpolated values
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:gridlinear``
 
@@ -1141,6 +1162,9 @@ Outputs
      - [raster]
      - Output raster with interpolated values
 
+Python code
+...........
+
 **Algorithm ID**: ``gdal:gridaverage``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -1283,6 +1307,9 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output raster with interpolated values
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:gridnearestneighbor``
 
@@ -1432,6 +1459,9 @@ Outputs
      - [raster]
      - Output raster with interpolated values
 
+Python code
+...........
+
 **Algorithm ID**: ``gdal:hillshade``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -1535,6 +1565,9 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output raster
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:nearblack``
 
@@ -1706,6 +1739,9 @@ Outputs
      - [raster]
      - Output raster
 
+Python code
+...........
+
 **Algorithm ID**: ``gdal:proximity``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -1799,6 +1835,9 @@ Outputs
      - [raster]
      - Single-band output roughness raster.
        The value -9999 is used as nodata value.
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:roughness``
 
@@ -1899,6 +1938,9 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output raster layer.
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:sieve``
 
@@ -2016,6 +2058,9 @@ Outputs
      - [raster]
      - Output raster
 
+Python code
+...........
+
 **Algorithm ID**: ``gdal:slope``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -2108,6 +2153,9 @@ Outputs
      - Output ruggedness raster.
        The value -9999 is used as nodata value.
 
+Python code
+...........
+
 **Algorithm ID**: ``gdal:triterrainruggednessindex``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -2197,6 +2245,9 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output raster.
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:tpitopographicpositionindex``
 

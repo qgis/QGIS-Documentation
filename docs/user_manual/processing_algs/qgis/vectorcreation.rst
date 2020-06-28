@@ -115,6 +115,9 @@ Outputs
      - Output line layer with offset features.
        The original features are also copied.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:arrayoffsetlines``
 
 .. include:: qgis_algs_include.rst
@@ -224,6 +227,9 @@ Outputs
      - Output vector layer with translated (moved)
        copies of the features.
        The original features are also copied.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:arraytranslatedfeatures``
 
@@ -347,6 +353,9 @@ Outputs
      - Resulting vector grid layer. The output geometry type (point,
        line or polygon) depends on the :guilabel:`Grid type`.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:creategrid``
 
 .. include:: qgis_algs_include.rst
@@ -438,6 +447,9 @@ Outputs
      - [vector: point]
      - The resulting point layer
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:createpointslayerfromtable``
 
 .. include:: qgis_algs_include.rst
@@ -511,6 +523,9 @@ Outputs
      - [vector: point]
      - Resulting point layer with pixel centroids
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:generatepointspixelcentroidsalongline``
 
 .. include:: qgis_algs_include.rst
@@ -583,6 +598,9 @@ Outputs
      - ``OUTPUT``
      - [vector: point]
      - Resulting point layer of pixel centroids
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:generatepointspixelcentroidsinsidepolygons``
 
@@ -686,6 +704,9 @@ Outputs
      - [table]
      - Table of unreadable or non-geotagged photos can
        also be created.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:importphotos``
 
@@ -795,6 +816,9 @@ Outputs
      - [folder]
      - Directory containing description files of points and paths
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:pointstopath``
 
 .. include:: qgis_algs_include.rst
@@ -871,6 +895,9 @@ Outputs
      - ``OUTPUT``
      - [vector: point]
      - The output random points layer.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:qgisrandompointsalongline``
 
@@ -956,6 +983,9 @@ Outputs
      - [vector: point]
      - The output random points layer.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:randompointsinextent``
 
 .. include:: qgis_algs_include.rst
@@ -1033,6 +1063,9 @@ Outputs
      - ``OUTPUT``
      - [vector: point]
      - The output random points layer.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:randompointsinlayerbounds``
 
@@ -1128,6 +1161,9 @@ Outputs
      - [vector: point]
      - The output random points layer.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:randompointsinsidepolygons``
 
 .. include:: qgis_algs_include.rst
@@ -1204,6 +1240,9 @@ Outputs
      - [vector: point]
      - Resulting point layer with pixels centroids
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:pixelstopoints``
 
 .. include:: qgis_algs_include.rst
@@ -1279,6 +1318,9 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - Resulting polygon layer of pixel extents
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:pixelstopolygons``
 
@@ -1383,6 +1425,9 @@ Outputs
      - ``OUTPUT``
      - [vector: point]
      - The output regular point layer.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:regularpoints``
 
