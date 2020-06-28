@@ -91,6 +91,9 @@ Outputs
      - [same as input]
      - Copy of the input vector layer with the addition of the geometry fields
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:exportaddgeometrycolumns``
 
 .. include:: qgis_algs_include.rst
@@ -243,6 +246,9 @@ Outputs
      - [same as input]
      - Multigeometry vector layer with the aggregated values
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:aggregate``
 
 .. include:: qgis_algs_include.rst
@@ -323,6 +329,9 @@ Outputs
      - Boundaries from the input layer (point for line, and line
        for polygon)
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:boundary``
 
 .. include:: qgis_algs_include.rst
@@ -394,6 +403,9 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - Bounding boxes of input layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:boundingboxes``
 
@@ -542,6 +554,9 @@ Outputs
      - [vector: polygon]
      - Output (buffer) polygon layer
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:buffer``
 
 .. include:: qgis_algs_include.rst
@@ -630,6 +645,9 @@ Outputs
      - ``OUTPUT``
      - [vector: point]
      - Output point vector layer (centroids)
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:centroids``
 
@@ -796,6 +814,9 @@ Outputs
      - [same as input]
      - Vector layer containing a copy of the valid features of
        the source layer.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:checkvalidity``
 
@@ -1009,6 +1030,9 @@ Outputs
 
        The file encoding can also be changed here.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:collect``
 
 .. include:: qgis_algs_include.rst
@@ -1095,6 +1119,9 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - The output vector layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:concavehull``
 
@@ -1194,6 +1221,9 @@ Outputs
      - [vector: polygon]
      - The output vector layer
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:knearestconcavehull``
 
 .. include:: qgis_algs_include.rst
@@ -1276,6 +1306,9 @@ Outputs
      - [vector: any]
      - Output vector layer - the type depends on the parameters
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:convertgeometrytype``
 
 .. include:: qgis_algs_include.rst
@@ -1353,6 +1386,9 @@ Outputs
      - [vector: polygon]
      - The output (convex hull) vector layer
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:convexhull``
 
 .. include:: qgis_algs_include.rst
@@ -1419,6 +1455,9 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - The output (extent) vector layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:extenttolayer``
 
@@ -1491,6 +1530,9 @@ Outputs
      - ``OUTPUT``
      - [vector: point]
      - The output point vector layer containing the input point.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:pointtolayer``
 
@@ -1601,6 +1643,9 @@ Outputs
      - [vector: polygon]
      - The output (wedge buffer) vector layer
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:wedgebuffers``
 
 .. include:: qgis_algs_include.rst
@@ -1668,6 +1713,9 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - The output (Delaunay triangulation) vector layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:delaunaytriangulation``
 
@@ -1754,6 +1802,9 @@ Outputs
      - [same as input]
      - The output (cleaned) vector layer
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:deleteholes``
 
 .. include:: qgis_algs_include.rst
@@ -1838,6 +1889,9 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - The output (densified) vector layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:densifygeometries``
 
@@ -1930,6 +1984,9 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - The output (densified) vector layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:densifygeometriesgivenaninterval``
 
@@ -2027,6 +2084,9 @@ Outputs
      - [same as input]
      - The output vector layer with dissolved geometries
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:dissolve``
 
 .. include:: qgis_algs_include.rst
@@ -2122,6 +2182,9 @@ Outputs
      - The output vector layer with Z values from the
        raster layer
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:setzfromraster``
 
 .. include:: qgis_algs_include.rst
@@ -2197,6 +2260,9 @@ Outputs
      - The output vector layer (identical to the input layer,
        except that the M and/or Z dimensions have been removed
        from the geometries).
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:dropmzvalues``
 
@@ -2282,6 +2348,9 @@ Outputs
      - [vector: polygon]
      - The output polygon vector layer.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:eliminateselectedpolygons``
 
 .. include:: qgis_algs_include.rst
@@ -2358,6 +2427,9 @@ Outputs
      - [vector: line]
      - The output line vector layer with features representing
        each segment of the input layer.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:explodelines``
 
@@ -2443,6 +2515,9 @@ Outputs
      - ``OUTPUT``
      - [vector: line]
      - The output (extended) line vector layer.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:extendlines``
 
@@ -2544,6 +2619,9 @@ Outputs
      - [same as input]
      - The output vector layer (with M values)
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:extractmvalues``
 
 .. include:: qgis_algs_include.rst
@@ -2634,6 +2712,9 @@ Outputs
      - The output (point) vector layer containing the specified
        vertices from the input layer geometries.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:extractspecificvertices``
 
 .. include:: qgis_algs_include.rst
@@ -2713,6 +2794,9 @@ Outputs
      - [vector: point]
      - The output (point) vector layer containing the vertices from
        the input layer geometries.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:extractvertices``
 
@@ -2815,6 +2899,9 @@ Outputs
      - [same as input]
      - The output vector layer (with Z values)
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:extractzvalues``
 
 .. include:: qgis_algs_include.rst
@@ -2912,6 +2999,9 @@ Outputs
      - [same as input]
      - The output vector layer of features
        with only the filtered vertices.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:filterverticesbym``
 
@@ -3013,6 +3103,9 @@ Outputs
      - The output vector layer of features
        with only the filtered vertices.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:filterverticesbyz``
 
 .. include:: qgis_algs_include.rst
@@ -3083,6 +3176,9 @@ Outputs
      - [same as input]
      - The output vector layer with fixed geometries.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:fixgeometries``
 
 .. include:: qgis_algs_include.rst
@@ -3146,6 +3242,9 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - The output vector layer with reoriented geometries.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:forcerhr``
 
@@ -3222,6 +3321,9 @@ Outputs
      - ``OUTPUT``
      - [vector: line]
      - The output line vector layer split at the antimeridian.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:antimeridiansplit``
 
@@ -3326,6 +3428,9 @@ Outputs
      - [vector: any]
      - The output vector layer
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:geometrybyexpression``
 
 .. include:: qgis_algs_include.rst
@@ -3409,6 +3514,9 @@ Outputs
      - The output point vector layer with features
        at a set distance along the line or polygon boundary
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:interpolatepoint``
 
 .. include:: qgis_algs_include.rst
@@ -3485,6 +3593,9 @@ Outputs
      - [vector: polygon]
      - The output polygon vector layer with the N biggest parts of
        each feature
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:keepnbiggestparts``
 
@@ -3573,6 +3684,9 @@ Outputs
      - [vector: line]
      - The output line vector layer.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:linesubstring``
 
 .. include:: qgis_algs_include.rst
@@ -3641,6 +3755,9 @@ Outputs
      - [vector: polygon]
      - The output polygon vector layer.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:linestopolygons``
 
 .. include:: qgis_algs_include.rst
@@ -3708,6 +3825,9 @@ Outputs
      - ``OUTPUT``
      - [vector: line]
      - The output (merged) line vector layer.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:mergelines``
 
@@ -3809,6 +3929,9 @@ Outputs
      - [vector: polygon]
      - The output (bounding) polygon vector layer.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:minimumboundinggeometry``
 
 .. include:: qgis_algs_include.rst
@@ -3886,6 +4009,9 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - The output polygon vector layer.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:minimumenclosingcircle``
 
@@ -3979,6 +4105,9 @@ Outputs
      - [vector: polygon]
      - The output polygon vector layer.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:multiringconstantbuffer``
 
 .. include:: qgis_algs_include.rst
@@ -4055,6 +4184,9 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - The output vector layer.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:multiparttosingleparts``
 
@@ -4169,6 +4301,9 @@ Outputs
      - [vector: line]
      - Output (offset) line layer
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:offsetline``
 
 .. include:: qgis_algs_include.rst
@@ -4239,6 +4374,9 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - The output polygon vector layer.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:orientedminimumboundingbox``
 
@@ -4331,6 +4469,9 @@ Outputs
      - [same as input]
      - The output polygon vector layer with adjusted angles.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:orthogonalize``
 
 .. include:: qgis_algs_include.rst
@@ -4401,6 +4542,9 @@ Outputs
      - ``OUTPUT``
      - [vector: point]
      - The output point vector layer.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:pointonsurface``
 
@@ -4496,6 +4640,9 @@ Outputs
      - Point vector layer with features placed along lines or polygon
        boundaries of the input layer.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:pointsalonglines``
 
 .. include:: qgis_algs_include.rst
@@ -4581,6 +4728,9 @@ Outputs
      - [vector: point]
      - Output point vector layer
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:pointsdisplacement``
 
 .. include:: qgis_algs_include.rst
@@ -4662,6 +4812,9 @@ Outputs
      - [vector: point]
      - The output point vector layer
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:poleofinaccessibility``
 
 .. include:: qgis_algs_include.rst
@@ -4741,6 +4894,9 @@ Outputs
      - [vector: polygon]
      - The output polygon vector layer from lines
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:polygonize``
 
 .. include:: qgis_algs_include.rst
@@ -4810,6 +4966,9 @@ Outputs
      - ``OUTPUT``
      - [vector: line]
      - The output line vector layer from polygons
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:polygonstolines``
 
@@ -4886,6 +5045,9 @@ Outputs
      - [vector: point]
      - The output (projected) point vector layer
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:projectpointcartesian``
 
 .. include:: qgis_algs_include.rst
@@ -4958,6 +5120,9 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - The output multipart vector layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:promotetomulti``
 
@@ -5063,6 +5228,9 @@ Outputs
      - [vector: polygon]
      - The output vector layer (with the buffer shapes)
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:rectanglesovalsdiamonds``
 
 .. include:: qgis_algs_include.rst
@@ -5160,6 +5328,9 @@ Outputs
      - [same as input]
      - The output vector layer (without duplicate vertices)
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:removeduplicatevertices``
 
 .. include:: qgis_algs_include.rst
@@ -5256,6 +5427,9 @@ Outputs
      - [same as input]
      - The output vector layer (without NULL and, if chosen, empty geometries)
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:removenullgeometries``
 
 .. include:: qgis_algs_include.rst
@@ -5323,6 +5497,9 @@ Outputs
      - ``OUTPUT``
      - [vector: line]
      - The output line vector layer (with reversed lines)
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:reverselinedirection``
 
@@ -5409,6 +5586,9 @@ Outputs
      - [same as input]
      - The output vector layer with rotated geometries
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:rotatefeatures``
 
 .. include:: qgis_algs_include.rst
@@ -5487,6 +5667,9 @@ Outputs
      - [same as input]
      - The output vector layer with segmentized geometries
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:segmentizebymaxangle``
 
 .. include:: qgis_algs_include.rst
@@ -5564,6 +5747,9 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - The output vector layer with segmentized geometries
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:segmentizebymaxdistance``
 
@@ -5645,6 +5831,9 @@ Outputs
      - [same as input]
      - The output vector layer (with M values assigned to the
        geometries)
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:setmvalue``
 
@@ -5740,6 +5929,9 @@ Outputs
      - [same as input]
      - The output vector layer (with updated M values)
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:setmfromraster``
 
 .. include:: qgis_algs_include.rst
@@ -5819,6 +6011,9 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - The output vector layer (with Z values assigned)
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:setzvalue``
 
@@ -5918,6 +6113,9 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - The output (simplified) vector layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:simplifygeometries``
 
@@ -6031,6 +6229,9 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - Output (buffer) polygon layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:singlesidedbuffer``
 
@@ -6147,6 +6348,9 @@ Outputs
      - [same as input]
      - Output (smoothed) vector layer
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:smoothgeometry``
 
 .. include:: qgis_algs_include.rst
@@ -6245,6 +6449,9 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - Output (snapped) vector layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:snapgeometries``
 
@@ -6346,6 +6553,9 @@ Outputs
      - [same as input]
      - Output (snapped) vector layer
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:snappointstogrid``
 
 .. include:: qgis_algs_include.rst
@@ -6418,6 +6628,9 @@ Outputs
      - The new line vector layer - the length of the feature geometries
        is less than or equal to the length specified in
        the LENGTH parameter.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:splitlinesbylength``
 
@@ -6511,6 +6724,9 @@ Outputs
      - [same as input]
      - Output vector layer
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:subdivide``
 
 .. include:: qgis_algs_include.rst
@@ -6581,6 +6797,9 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - Output (swapped) vector layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:swapxy``
 
@@ -6673,6 +6892,9 @@ Outputs
      - [vector: polygon]
      - Output (buffer) polygon layer
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:taperedbuffer``
 
 .. include:: qgis_algs_include.rst
@@ -6746,6 +6968,9 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - Output multipolygonZ layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:tessellate``
 
@@ -6848,6 +7073,9 @@ Outputs
      - [vector: line]
      - Output line layer
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:transect``
 
 .. include:: qgis_algs_include.rst
@@ -6946,6 +7174,9 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - Output vector layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:translategeometry``
 
@@ -7048,6 +7279,9 @@ Outputs
      - [vector: polygon]
      - Buffer polygon vector layer.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:variabledistancebuffer``
 
 .. include:: qgis_algs_include.rst
@@ -7126,6 +7360,9 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - Variable buffer polygon layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:bufferbym``
 
@@ -7207,6 +7444,9 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - Voronoi polygons of the input point vector layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:voronoipolygons```
 

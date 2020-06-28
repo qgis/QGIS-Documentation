@@ -90,6 +90,9 @@ Outputs
      - [number]
      - 
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:combinestyles``
 
 .. include:: qgis_algs_include.rst
@@ -220,6 +223,9 @@ Outputs
      - The input vector layer with the categorized style applied.
        No new layer is output.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:categorizeusingstyle``
 
 .. include:: qgis_algs_include.rst
@@ -314,6 +320,9 @@ Outputs
      - ``TEXTFORMATS``
      - [number]
      - Number of text formats
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:stylefromproject``
 
@@ -418,6 +427,9 @@ Outputs
      - ``WIDTH``
      - [number]
      - 
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:printlayoutmapextenttolayer``
 
@@ -535,6 +547,9 @@ Outputs
      - ``OUTPUT``
      - [vector: polygon]
      - Polygon vector layer with an added ``color_id`` column
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:topologicalcoloring``
 

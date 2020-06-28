@@ -74,6 +74,9 @@ Outputs
       - Output (polygon) vector layer with the extent
         (minimum bounding box)
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:polygonfromlayerextent``
 
 .. include:: qgis_algs_include.rst

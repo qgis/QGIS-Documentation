@@ -146,6 +146,9 @@ Outputs
      - [number]
      -
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:basicstatisticsforfields``
 
 .. include:: qgis_algs_include.rst
@@ -229,6 +232,9 @@ Outputs
      - [number]
      - The maximum elevation for the geometries in the
        layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:climbalongline``
 
@@ -416,6 +422,9 @@ Outputs
      - [number]
      - The number of clusters discovered
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:dbscanclustering``
 
 .. include:: qgis_algs_include.rst
@@ -519,6 +528,9 @@ Outputs
        Its features and attribute table depend on the selected
        output matrix type.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:distancematrix``
 
 .. include:: qgis_algs_include.rst
@@ -607,6 +619,9 @@ Outputs
        features, the identifier of their closest feature
        and the calculated distance.
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:distancetonearesthublinetohub``
 
 .. include:: qgis_algs_include.rst
@@ -689,6 +704,9 @@ Outputs
      - Point vector layer with the attributes of the
        input features, the identifier of their closest
        feature and the calculated distance.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:distancetonearesthubpoints``
 
@@ -810,6 +828,9 @@ Outputs
      - [vector: line]
      - The resulting line layer
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:hublines``
 
 .. include:: qgis_algs_include.rst
@@ -891,6 +912,9 @@ Outputs
      - Vector layer containing the original features with
        a field specifying the cluster they belong to
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:kmeansclustering``
 
 .. include:: qgis_algs_include.rst
@@ -968,6 +992,9 @@ Outputs
      - A string with the comma separated list of unique values found
        in the input field
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:listuniquevalues``
 
 .. include:: qgis_algs_include.rst
@@ -1041,6 +1068,9 @@ Outputs
      - ``OUTPUT``
      - [vector: point]
      - Resulting point(s) layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:meancoordinates``
 
@@ -1127,6 +1157,9 @@ Outputs
      - [number]
      - Z-Score
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:nearestneighbouranalysis``
 
 .. include:: qgis_algs_include.rst
@@ -1198,6 +1231,9 @@ Outputs
      - The output layer with additional fields reporting the
        overlap (in map units and percentage) of the input feature
        overlapped by each of the selected layers.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:overlapanalysis``
 
@@ -1353,6 +1389,9 @@ the following statistics are returned for each grouped value:
      -
      -
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:statisticsbycategories``
 
 .. include:: qgis_algs_include.rst
@@ -1427,6 +1466,9 @@ Outputs
      - [vector: polygon]
      - Polygon output layer with fields of lines length and
        line count
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:sumlinelengths``
 
