@@ -129,17 +129,15 @@ Snapping icons
 
 QGIS will show different *snap* icons depending on the kind of *snap*:
 
-.. figure:: img/snap_vertex_icon.png
+.. list-table::
 
-   Snapping to a vertex: box icon
+   * - .. figure:: img/snap_vertex_icon.png
+     - .. figure:: img/snap_segment_icon.png
+     - .. figure:: img/snap_intersection_icon.png
+   * - Snapping to a vertex: box icon
+     - Snapping to a segment: hourglass icon
+     - Snapping to an intersection: cross icon
 
-.. figure:: img/snap_segment_icon.png
-
-   Snapping to a segment: hourglass icon
-
-.. figure:: img/snap_intersection_icon.png
-
-   Snapping to an intersection: cross icon
 
 Note that it is possible to change the color of these icons in the 
 :guilabel:`Digitizing` part of your settings.
