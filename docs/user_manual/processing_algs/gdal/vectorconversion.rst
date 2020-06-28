@@ -16,7 +16,7 @@ Converts any OGR-supported vector layer into another OGR-supported
 format.
 
 This algorithm is derived from the
-`ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_ .
+`ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_.
 
 Parameters
 ..........
@@ -24,7 +24,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -64,7 +63,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -91,7 +89,7 @@ New values are assigned based on the attribute value of
 the overlapping vector feature.
 
 This algorithm is derived from the
-`GDAL rasterize utility <https://gdal.org/gdal_rasterize.html>`_ .
+`GDAL rasterize utility <https://gdal.org/gdal_rasterize.html>`_.
 
 Parameters
 ..........
@@ -99,7 +97,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    *  - Label
       - Name
@@ -142,7 +140,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    *  - Label
       - Name
@@ -169,7 +166,7 @@ The pixels to overwrite are chosen based on the supplied (overlapping)
 vector layer.
 
 This algorithm is derived from the
-`GDAL rasterize utility <https://gdal.org/gdal_rasterize.html>`_ .
+`GDAL rasterize utility <https://gdal.org/gdal_rasterize.html>`_.
 
 Parameters
 ..........
@@ -177,7 +174,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    *  - Label
       - Name
@@ -220,7 +217,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    *  - Label
       - Name
@@ -246,7 +242,7 @@ Converts vector geometries (points, lines and polygons) into a raster
 image.
 
 This algorithm is derived from the
-`GDAL rasterize utility <https://gdal.org/gdal_rasterize.html>`_ .
+`GDAL rasterize utility <https://gdal.org/gdal_rasterize.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Conversion`
 
@@ -256,7 +252,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -394,7 +390,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
