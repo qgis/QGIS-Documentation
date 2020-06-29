@@ -615,7 +615,7 @@ On Ubuntu, the default Wine folder is :file:`/usr/bin`.
 OTB Applications
 -----------------
 
-OTB applications are fully supported within QGIS Processing framework. 
+OTB applications are fully supported within the QGIS Processing framework. 
 Note that OTB is not distributed with QGIS and needs to be installed 
 separately. Binary packages for OTB can be found on the 
 `download page <https://www.orfeo-toolbox.org/download>`_.
