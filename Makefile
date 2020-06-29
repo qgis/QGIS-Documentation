@@ -86,14 +86,16 @@ all:
 # to your local disk, so it can be committed into github
 # in that way a build from git will contain those translation
 # tx is the python transifex cli client (pip install transifex-client)
-# because there's a divergence between chinese language codes Sphinx and
-# Transifex we need to do a substitution converting underscores into dashes
-# The English language is removed to avoid trying to pull the source po files
+# because differences between chinese language codes in Sphinx and
+# transifex, we need to replace the underscores by dashes,
+# the english language is removed to avoid pulling the po source files.
+# finally, the spaces are replaced by commas. In the end we have something like this
+# tx pull -f --parallel -l lang1,lang2,lang2,lang4
 tx_force_pull_translations:
-	@for LANG in $(subst en,, $(subst zh_, zh-,$(LANGUAGES))) ; do \
-		tx pull -f --parallel -l $$LANG ; \
-	done
-
+	$(eval space := )
+	$(eval space += )
+	$(eval comma += ,)
+	tx pull -f --parallel -l $(subst $(space),$(comma),$(subst en$(space),,$(subst zh_,zh-,$(LANGUAGES)))) ;
 
 doctest:
 	$(SPHINXBUILD) -b doctest . $(BUILDDIR)/doctest
