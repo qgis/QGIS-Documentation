@@ -53,7 +53,7 @@ In Main properties you can:
   By default, the map over which the legend item is drawn is picked. If none,
   then it falls back to the :ref:`reference map <reference_map>`.
   
-  .. note:: :ref:`Variables <variables_functions>` of the linked map item
+  .. note:: :ref:`Variables <expression_variables>` of the linked map item
    (@map_id, @map_scale, @map_extent...) are also accessible from data-defined
    properties of the legend.
 

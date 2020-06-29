@@ -1944,7 +1944,7 @@ Will render the label like this::
   This map was made using QGIS 3.4.4-Madeira. The project file for this map is:
   /gis/qgis-user-conference-2019.qgs
 
-Besides the :ref:`preset read-only variables <variables_functions>`, you can
+Besides the :ref:`preset read-only variables <expression_variables>`, you can
 define your own custom variables for any of the levels mentioned above. You can
 manage:
 

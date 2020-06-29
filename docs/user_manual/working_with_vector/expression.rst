@@ -533,7 +533,7 @@ This group contains general assorted functions.
    "is_layer_visible", "Returns true if a specified layer is visible"
    "layer_property", "Returns a property of a layer or a value of its metadata.
    It can be layer name, crs, geometry type, feature count..."
-   "var", "Returns the value stored within a specified variable. See variable functions below"
+   "var", "Returns the value stored within a specified variable. See :ref:`expression_variables` below"
    "with_variable", "Creates and sets a variable for any expression code that
    will be provided as a third argument. Useful to avoid repetition in expressions
    where the same value needs to be used more than once."
@@ -544,8 +544,8 @@ This group contains general assorted functions.
 Geometry Functions
 ------------------
 
-This group contains functions that operate on geometry objects (e.g., length, area).
-
+This group contains functions that operate on geometry objects
+(e.g. buffer, transform, $area).
 
 .. csv-table::
    :header: "Function", "Description"
@@ -1063,10 +1063,10 @@ operators or the ``concat`` function, with some special characteristics:
    # All the above return: My country is France (FR)
 
 
-.. _variables_functions:
+.. _expression_variables:
 
-Variables Functions
---------------------
+Variables
+---------
 
 This group contains dynamic variables related to the application, the project
 file and other settings.
