@@ -688,3 +688,8 @@ Troubleshoot
 If you have issues with OTB applications in QGIS Processing, please open an issue
 on the `OTB bug tracker <https://gitlab.orfeo-toolbox.org/orfeotoolbox/otb/-/issues>`_, 
 using the ``qgis`` label.
+
+Additional information about OTB and QGIS can be found 
+`here <https://www.orfeo-toolbox.org/CookBook-develop/QGISInterface.html>`_
+
+.. the previous link will be modify to be coherent with this page cf. https://gitlab.orfeo-toolbox.org/orfeotoolbox/otb/-/merge_requests/722
