@@ -1063,39 +1063,7 @@ operators or the ``concat`` function, with some special characteristics:
    # All the above return: My country is France (FR)
 
 
-<<<<<<< HEAD
-.. _variables_functions:
-=======
-.. _user_expressions_functions:
-
-User Expressions |312|
-----------------------
-
-This group contains the expressions saved as **user expressions** using
-the |fileSave| :sup:`Add current expression to user expressions` button
-above the expression editor frame.
-It is meant for important expressions you want to have quick access to.
-They are saved under the user profile (:file:`<userprofile>/QGIS/QGIS3.ini`
-file) and available in all expression dialogs inside all projects of the
-current user profile.
-
-A set of tools available above the expression editor frame helps you manage
-the user expressions:
-
-* |fileSave|:sup:`Add the current expression to user expressions`: store the
-  expression in the user profile. A label and a help text can be added for
-  easy identification.
-* |symbologyEdit| :sup:`Edit selected expression from user expressions`,
-  as well as their help and label
-* |deleteSelected| :sup:`Remove selected expression from user expressions`
-* |sharingImport| :sup:`Import user expressions` from a ``.json`` file
-  into the active user profile folder
-* |sharingExport| :sup:`Export user expressions` as a ``.json`` file;
-  all the user expressions in the user profile :file:`QGIS3.ini` file are
-  shared
-
 .. _expression_variables:
->>>>>>> 73e78c061... Merge pull request #5766 from qgis/havatv-expressions_variables
 
 Variables
 ---------
