@@ -646,14 +646,14 @@ Documentation of OTB settings available in QGIS Processing
 
 * **OTB application folder**: This is the location(s) of OTB applications. 
 
-Multiple paths are allowed.
+  Multiple paths are allowed.
 
 * **Logger level** (optional): Level of logger to use by OTB applications. 
 
-The level of logging controls the amount of detail printed during 
-algorithm execution. Possible values for logger level are ``INFO``, 
-``WARNING``, ``CRITICAL``, ``DEBUG``.  This value is ``INFO`` by default. This is an 
-advanced user configuration.
+  The level of logging controls the amount of detail printed during
+  algorithm execution. Possible values for logger level are ``INFO``,
+  ``WARNING``, ``CRITICAL``, ``DEBUG``. This value is ``INFO`` by default. This is an
+  advanced user configuration.
 
 * **Maximum RAM to use** (optional): by default, OTB applications use
   all available system RAM.
@@ -664,10 +664,10 @@ advanced user configuration.
 
 * **Geoid file** (optional): Path to the geoid file.
 
-This option sets the value of the elev.dem.geoid and elev.geoid 
-parameters in OTB applications.
-Setting this value globally enables users to share it across multiple
-processing algorithms. Empty by default.
+  This option sets the value of the elev.dem.geoid and elev.geoid
+  parameters in OTB applications.
+  Setting this value globally enables users to share it across multiple
+  processing algorithms. Empty by default.
 
 * **SRTM tiles folder** (optional): Directory where SRTM tiles are
   available. 
@@ -681,8 +681,7 @@ processing algorithms. Empty by default.
 Compatibility between QGIS and OTB versions
 ...........................................
 
-All versions of OTB from OTB 6.6.1 to latest (currently 7.1.0) are
-compatible with latest QGIS version.
+All OTB versions (from OTB 6.6.1) are compatible with the latest QGIS version.
 
 Troubleshoot
 ............
