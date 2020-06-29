@@ -680,8 +680,10 @@ This value is empty by default.
 Compatibility between QGIS and OTB versions
 ...........................................
 
-All versions of OTB from OTB 6.6.1 to latest (currently 7.1.0) are 
-compatible with latest QGIS version. 
+Any version of OTB compiled with GDAL 3.X is not compatible with QGIS 
+3.10. This is the case for the binary packages of OTB 7.1 and above. 
+Therefore QGIS 3.10 is only compatible with OTB official binary 
+packages 6.6.1 and 7.0.0.
 
 Troubleshoot
 ............
