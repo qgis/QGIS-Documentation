@@ -616,9 +616,18 @@ OTB Applications
 -----------------
 
 OTB applications are fully supported within the QGIS Processing framework. 
-Note that OTB is not distributed with QGIS and needs to be installed 
-separately. Binary packages for OTB can be found on the 
-`download page <https://www.orfeo-toolbox.org/download>`_.
+
+
+`OTB <https://www.orfeo-toolbox.org>`_ (Orfeo ToolBox) is an image  
+processing library for remote sensing data. It also provides
+applications that provide image processing functionalities. 
+The list of applications and their documentation are available in
+`OTB CookBook <https://www.orfeo-toolbox.org/CookBook/Applications.html>`_
+
+.. note::
+   Note that OTB is not distributed with QGIS and needs to be installed 
+   separately. Binary packages for OTB can be found on the 
+   `download page <https://www.orfeo-toolbox.org/download>`_.
 
 To configure QGIS processing to find the OTB library:
 

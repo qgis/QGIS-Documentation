@@ -18,4 +18,4 @@ are documented here.
      gdal/index
      lidartools/lastools
      taudem/index
-     otb/index
+     otb
