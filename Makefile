@@ -48,17 +48,31 @@ html:
 	fi
 
 latex:
-	$(SPHINXBUILD) -b latex -t latex "$(SOURCEDIR)" "$(BUILDDIR)/latex/$(LANG)" $(SPHINXINTLOPTS) $(0); \
+	# for LANG=ja overwrites the default latex_engine=xelatex by latex_engine=platex
+	$(eval SPHINXINTLOPTS += $(if $(filter $(LANG),ja),-D latex_engine=platex,))
+	$(SPHINXBUILD) -b latex -t latex "$(SOURCEDIR)" "$(BUILDDIR)/latex/$(LANG)" $(SPHINXINTLOPTS) $(0)
+
 
 pdf: latex
+	# Choose the correct latex compiler, equivalent to:
+	# IF LANG=ja THEN LATEXCOMPILER = platex -kanji=euc ELSE LATEXCOMPILER = xelatex
+	$(eval LATEXCOMPILER := $(if $(filter $(LANG),ja),platex,xelatex))
 
-	(cd $(BUILDDIR)/latex/$(LANG); \
-	pdflatex QGISUserGuide.tex; \
-	pdflatex QGISUserGuide.tex; \
-	pdflatex PyQGISDeveloperCookbook.tex; \
-	pdflatex PyQGISDeveloperCookbook.tex; \
-	pdflatex QGISTrainingManual.tex; \
-	pdflatex QGISTrainingManual.tex;)
+	# Compile the tex files into PDF, it runs 2x to fix hyperlinks
+	# notice that platex compiler needs an extra step to convert dvi to PDF
+	# using the dvipdfmx command
+	cd $(BUILDDIR)/latex/$(LANG); \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISUserGuide.tex; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISUserGuide.tex; \
+	if [ "$(LATEXCOMPILER)" != "xelatex" ]; then dvipdfmx QGISUserGuide.dvi; fi; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape PyQGISDeveloperCookbook.tex; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape PyQGISDeveloperCookbook.tex; \
+	if [ "$(LATEXCOMPILER)" != "xelatex" ]; then dvipdfmx PyQGISDeveloperCookbook.dvi; fi; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISTrainingManual.tex; \
+	$(LATEXCOMPILER) -interaction=batchmode -shell-escape QGISTrainingManual.tex; \
+	if [ "$(LATEXCOMPILER)" != "xelatex" ]; then dvipdfmx QGISTrainingManual.dvi; fi;
+
+	# copy and rename PDF files to the pdf folder
 	mkdir -p $(BUILDDIR)/pdf/$(LANG);
 	mv $(BUILDDIR)/latex/$(LANG)/QGISUserGuide.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-UserGuide-$(LANG).pdf;
 	mv $(BUILDDIR)/latex/$(LANG)/PyQGISDeveloperCookbook.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-PyQGISDeveloperCookbook-$(LANG).pdf;
@@ -72,8 +86,6 @@ zip:
 
 site: html pdf zip
 	rsync -az $(BUILDDIR)/html/$(LANG) $(SITEDIR)/;
-	rsync -az $(BUILDDIR)/pdf $(SITEDIR)/;
-	rsync -az $(BUILDDIR)/zip $(SITEDIR)/;
 
 # this will build ALL languages, AND tries to rsync them to the web dir on qgis2
 # to be able to run this you will need a key on the server
@@ -81,6 +93,8 @@ all:
 	@for LANG in $(LANGUAGES) ; do \
 		make LANG=$$LANG site; \
 	done
+	rsync -az $(BUILDDIR)/pdf $(SITEDIR)/;
+	rsync -az $(BUILDDIR)/zip $(SITEDIR)/;
 
 # this will pull ALL translations (or at least from the languages we build for)
 # to your local disk, so it can be committed into github
