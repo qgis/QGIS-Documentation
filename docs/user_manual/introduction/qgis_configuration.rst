@@ -134,10 +134,11 @@ displayed at the bottom of the frame.
   'Always (not recommended)'.
 * :guilabel:`Default project file format`
 
-  * |radioButtonOn| :guilabel:`QGZ Archive file format, supports auxiliary data`
+  * |radioButtonOn| :guilabel:`QGZ Archive file format, embeds auxiliary data`
     (see :ref:`auxiliary data <vector_auxiliary_storage>`)
   * |radioButtonOff| :guilabel:`QGS Project saved in a clear text, does not
-    support auxiliary data`
+    embed auxiliary data`: the auxiliary data is stored in a separate :file:`.qgd`
+    file along with the project file.
 
 
 .. index:: Environment variables
@@ -376,6 +377,17 @@ This widget lists all the folders you chose to hide from the :ref:`Browser panel
 <browser_panel>`.
 Removing a folder from the list will make it available in the :guilabel:`Browser`
 panel.
+
+**Localized paths**
+
+It is possible to use localized paths for any kind of file based data source. 
+They are a list of paths which are used to abstract the data source location.
+For instance, if :file:`C:\my_maps` is listed in the localized paths,
+a layer having :file:`C:\my_maps\my_country\ortho.tif` as data source
+will be saved in the project using :file:`localized:my_country\ortho.tif`.
+
+The paths are listed by order of preference, in other words QGIS will first look
+for the file in the first path, then in the second one, etc.
 
 
 .. index:: Rendering

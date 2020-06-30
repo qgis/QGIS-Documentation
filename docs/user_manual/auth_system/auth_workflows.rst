@@ -38,7 +38,7 @@ Database authentication
 
 Connections to database resources are generally stored as ``key=value`` pairs,
 which will expose usernames and (optionally) passwords, if *not* using an
-authentication configuration. When configuring with the new auth system, the
+authentication configuration. When configuring with the auth system, the
 ``key=value`` will be an abstracted representation of the credentials, e.g.
 ``authfg=81t21b9``.
 
@@ -390,7 +390,7 @@ working for your server's connection, you can manually trigger a connection via
 the **Python Console** by running the following code (replace
 ``https://bugreports.qt-project.org`` with the URL of your server):
 
-.. testcode:: auth_workflows
+.. code-block:: python
 
    from qgis.PyQt.QtNetwork import QNetworkRequest
    from qgis.PyQt.QtCore import QUrl

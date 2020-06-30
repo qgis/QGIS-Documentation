@@ -1,5 +1,5 @@
 *******************************************************************************
-|MOD| Creating Maps
+|MOD| Laying out the Maps
 *******************************************************************************
 
 In this module, you'll learn how to use the QGIS print layout to produce

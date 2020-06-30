@@ -781,6 +781,14 @@ actions like:
      -
      -
      - :ref:`label_legend`
+   * - |toggleSelectedLayers| :guilabel:`Toggle Selected Layers`
+     -
+     -
+     - :ref:`label_legend`
+   * - :guilabel:`Toogle Selected Layers Independently`
+     -
+     -
+     - :ref:`label_legend`
    * - |hideDeselectedLayers| :guilabel:`Hide Deselected Layers`
      -
      -
@@ -961,14 +969,15 @@ The :menuselection:`Layer` menu provides a large set of tools to
 :ref:`save modifications <sec_edit_existing_layer>` to them.
 Using the same data sources, you can also:
 
-* :guilabel:`Duplicate` a layer, generating a copy you can modify
-  within the same project
+* :guilabel:`Duplicate` a layer to generate a copy where you can
+  modify the name, style (symbology, labels, ...), joins, ...
+  The copy uses the same data source as the original.
 * :guilabel:`Copy` and :guilabel:`Paste` layers or groups from one
-  project to another as a new instance whose features and properties
-  you can modify independently of the original
+  project to another as a new instance whose properties can be
+  modified independently.
+  As for *Duplicate*, the layers are still based on the same data source.
 * or :guilabel:`Embed Layers and Groups...` from another project, as
-  read-only copies which you cannot modify (see
-  :ref:`nesting_projects`)
+  read-only copies which you cannot modify (see :ref:`nesting_projects`)
 
 The :menuselection:`Layer` menu also contains tools to configure,
 copy or paste layer properties (style, scale, CRS...).
@@ -995,27 +1004,27 @@ copy or paste layer properties (style, scale, CRS...).
        :guilabel:`New GeoPackage Layer...`
      - :kbd:`Ctrl+Shift+N`
      - :guilabel:`Data Source Manager`
-     - :ref:`sec_create_vector`
+     - :ref:`vector_create_geopackage`
    * - :menuselection:`-->` |newVectorLayer|
        :guilabel:`New Shapefile Layer...`
      -
      - :guilabel:`Data Source Manager`
-     - :ref:`sec_create_vector`
+     - :ref:`vector_create_shapefile`
    * - :menuselection:`-->` |newSpatiaLiteLayer|
        :guilabel:`New SpatiaLite Layer...`
      -
      - :guilabel:`Data Source Manager`
-     - :ref:`sec_create_vector`
+     - :ref:`vector_create_spatialite`
    * - :menuselection:`-->` |createMemory|
        :guilabel:`New Temporary Scratch Layer...`
      -
      - :guilabel:`Data Source Manager`
-     - :ref:`sec_create_vector`
-   * - :menuselection:`-->` |virtualLayer|
+     - :ref:`vector_new_scratch_layer`
+   * - :menuselection:`-->` |newVirtualLayer|
        :guilabel:`New Virtual Layer...`
      -
      - :guilabel:`Data Source Manager`
-     - :ref:`sec_create_vector`
+     - :ref:`vector_virtual_layers`
    * - :menuselection:`Add Layer -->`
      -
      -
@@ -1024,72 +1033,87 @@ copy or paste layer properties (style, scale, CRS...).
        :guilabel:`Add Vector Layer......`
      - :kbd:`Ctrl+Shift+V`
      - :guilabel:`Manage Layers`
-     - :ref:`opening_data`
+     - :ref:`loading_file`
    * - :menuselection:`-->` |addRasterLayer|
        :guilabel:`Add Raster Layer...`
      - :kbd:`Ctrl+Shift+R`
      - :guilabel:`Manage Layers`
-     - :ref:`opening_data`
+     - :ref:`loading_file`
    * - :menuselection:`-->` |addMeshLayer|
        :guilabel:`Add Mesh Layer...`
      -
      - :guilabel:`Manage Layers`
-     - :ref:`opening_data`
+     - :ref:`mesh_loading`
    * - :menuselection:`-->` |addDelimitedTextLayer|
        :guilabel:`Add Delimited Text Layer...`
      - :kbd:`Ctrl+Shift+T`
      - :guilabel:`Manage Layers`
-     - :ref:`opening_data`
+     - :ref:`vector_loading_csv`
    * - :menuselection:`-->` |addPostgisLayer|
        :guilabel:`Add PostGIS Layer...`
      - :kbd:`Ctrl+Shift+D`
      - :guilabel:`Manage Layers`
-     - :ref:`opening_data`
+     - :ref:`db_tools`
    * - :menuselection:`-->` |addSpatiaLiteLayer|
        :guilabel:`Add SpatiaLite Layer...`
      - :kbd:`Ctrl+Shift+L`
      - :guilabel:`Manage Layers`
-     - :ref:`opening_data`
+     - :ref:`label_spatialite`
    * - :menuselection:`-->` |addMssqlLayer|
        :guilabel:`Add MSSQL Spatial Layer...`
      -
      - :guilabel:`Manage Layers`
-     - :ref:`opening_data`
+     - :ref:`db_tools`
+   * - :menuselection:`-->` |addOracleLayer|
+       :guilabel:`Add Oracle Spatial Layer...`
+     -
+     - :guilabel:`Manage Layers`
+     - :ref:`db_tools`
    * - :menuselection:`-->` |addDb2Layer|
        :guilabel:`Add DB2 Spatial Layer...`
      - :kbd:`Ctrl+Shift+2`
      - :guilabel:`Manage Layers`
-     - :ref:`opening_data`
-   * - :menuselection:`-->` |virtualLayer|
+     - :ref:`db_tools`
+   * - :menuselection:`-->` |addVirtualLayer|
        :guilabel:`Add/Edit Virtual Layer...`
      -
      - :guilabel:`Manage Layers`
-     - :ref:`opening_data`
-   * - :menuselection:`-->` |wms|
+     - :ref:`vector_virtual_layers`
+   * - :menuselection:`-->` |addWmsLayer|
        :guilabel:`Add WMS/WMTS Layer...`
      - :kbd:`Ctrl+Shift+W`
      - :guilabel:`Manage Layers`
-     - :ref:`opening_data`
+     - :ref:`ogc-wms-layers`
+   * - :menuselection:`-->` |addXyzLayer|
+       :guilabel:`Add XYZ Layer...`
+     -
+     -
+     - :ref:`xyz_tile`
    * - :menuselection:`-->` |addAmsLayer|
-       :guilabel:`Add ArcGIS MapServer Layer...`
+       :guilabel:`Add ArcGIS Map Service Layer...`
      -
      - :guilabel:`Manage Layers`
-     - :ref:`opening_data`
-   * - :menuselection:`-->` |wcs|
+     -
+   * - :menuselection:`-->` |addWcsLayer|
        :guilabel:`Add WCS Layer...`
      -
      - :guilabel:`Manage Layers`
-     - :ref:`opening_data`
-   * - :menuselection:`-->` |wfs|
+     - :ref:`ogc-wcs`
+   * - :menuselection:`-->` |addWfsLayer|
        :guilabel:`Add WFS Layer...`
      -
      - :guilabel:`Manage Layers`
-     - :ref:`opening_data`
+     - :ref:`ogc-wfs`
    * - :menuselection:`-->` |addAfsLayer|
-       :guilabel:`Add ArcGIS FeatureServer Layer...`
+       :guilabel:`Add ArcGIS Feature Service Layer...`
      -
      - :guilabel:`Manage Layers`
-     - :ref:`opening_data`
+     -
+   * - :menuselection:`-->` |addVectorTileLayer|
+       :guilabel:`Add Vector Tile Layer...`
+     -
+     -
+     -
    * - :guilabel:`Embed Layers and Groups...`
      -
      -
@@ -1958,21 +1982,21 @@ tasks.
 
 Below is a list of the default panels provided by QGIS:
 
-* the :ref:`label_legend`
-* the :ref:`Browser Panel <browser_panel>`
 * the :ref:`Advanced Digitizing Panel <advanced_digitizing_panel>`
-* the :ref:`Spatial Bookmarks Panel <sec_bookmarks>`
+* the :ref:`Browser Panel <browser_panel>`
 * the :ref:`GPS Information Panel <sec_gpstracking>`
-* the :ref:`Tile Scale Panel <tilesets>`
 * the :ref:`Identify Panel <identify>`
-* the :ref:`User Input Panel <rotate_feature>`
 * the :ref:`Layer Order Panel <layer_order>`
-* the :ref:`layer_styling_panel`
-* the :ref:`statistical_summary`
-* the :ref:`overview_panels`
-* the :ref:`log_message_panel`
-* the :ref:`undo_redo_panel`
+* the :ref:`Layer Styling Panel <layer_styling_panel>`
+* the :ref:`Layers Panel <label_legend>`
+* the :ref:`Log Messages Panel <log_message_panel>`
+* the :ref:`Overview Panel <overview_panels>`
 * the :ref:`Processing Toolbox <label_processing>`
+* the :guilabel:`Result Viewer Panel`
+* the :ref:`Spatial Bookmark Manager Panel <sec_bookmarks>`
+* the :ref:`Statistics Panel <statistical_summary>`
+* the :ref:`Tile Scale Panel <tilesets>`
+* the :ref:`Undo/Redo Panel <undo_redo_panel>`
 
 
 .. index:: Map view
@@ -2381,8 +2405,8 @@ fine-tune the 3D scene:
     tiles to hide the cracks.
 
 * :guilabel:`Mesh Terrain Settings`: Configures the rendering of the terrain
-  when a mesh layer is used. You can set the triangles, colors or arrows
-  properties of the Mesh dataset vertices.
+  when a mesh layer is used. You can set the triangles rendering (wireframe,
+  smooth triangle) and colors (uniform or depending on terrain level).
   More details in the :ref:`Mesh layer properties <label_meshproperties>` section.
 
   .. TODO: replace the mesh properties link with a direct one to the 3D section
@@ -2547,7 +2571,6 @@ Click the icon to open the Plugin Manager dialog.
    :menuselection:`Settings --> Options --> CRS`.
 
 
-
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
@@ -2578,6 +2601,8 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |addOgrLayer| image:: /static/common/mActionAddOgrLayer.png
    :width: 1.5em
+.. |addOracleLayer| image:: /static/common/mActionAddOracleLayer.png
+   :width: 1.5em
 .. |addPart| image:: /static/common/mActionAddPart.png
    :width: 1.5em
 .. |addPostgisLayer| image:: /static/common/mActionAddPostgisLayer.png
@@ -2587,6 +2612,18 @@ Click the icon to open the Plugin Manager dialog.
 .. |addRing| image:: /static/common/mActionAddRing.png
    :width: 2em
 .. |addSpatiaLiteLayer| image:: /static/common/mActionAddSpatiaLiteLayer.png
+   :width: 1.5em
+.. |addVectorTileLayer| image:: /static/common/mActionAddVectorTileLayer.png
+   :width: 1.5em
+.. |addVirtualLayer| image:: /static/common/mActionAddVirtualLayer.png
+   :width: 1.5em
+.. |addWcsLayer| image:: /static/common/mActionAddWcsLayer.png
+   :width: 1.5em
+.. |addWfsLayer| image:: /static/common/mActionAddWfsLayer.png
+   :width: 1.5em
+.. |addWmsLayer| image:: /static/common/mActionAddWmsLayer.png
+   :width: 1.5em
+.. |addXyzLayer| image:: /static/common/mActionAddXyzLayer.png
    :width: 1.5em
 .. |allEdits| image:: /static/common/mActionAllEdits.png
    :width: 1.5em
@@ -2749,6 +2786,8 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |newVectorLayer| image:: /static/common/mActionNewVectorLayer.png
    :width: 1.5em
+.. |newVirtualLayer| image:: /static/common/mActionNewVirtualLayer.png
+   :width: 1.5em
 .. |northArrow| image:: /static/common/north_arrow.png
    :width: 1.5em
 .. |offlineEditingCopy| image:: /static/common/offline_editing_copy.png
@@ -2883,6 +2922,8 @@ Click the icon to open the Plugin Manager dialog.
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
+.. |toggleSelectedLayers| image:: /static/common/mActionToggleSelectedLayers.png
+   :width: 1.5em
 .. |topologyChecker| image:: /static/common/mActionTopologyChecker.png
    :width: 1.5em
 .. |tracking| image:: /static/common/tracking.png
@@ -2896,14 +2937,6 @@ Click the icon to open the Plugin Manager dialog.
 .. |vertexTool| image:: /static/common/mActionVertexTool.png
    :width: 1.5em
 .. |vertexToolActiveLayer| image:: /static/common/mActionVertexToolActiveLayer.png
-   :width: 1.5em
-.. |virtualLayer| image:: /static/common/mActionAddVirtualLayer.png
-   :width: 1.5em
-.. |wcs| image:: /static/common/mActionAddWcsLayer.png
-   :width: 1.5em
-.. |wfs| image:: /static/common/mActionAddWfsLayer.png
-   :width: 1.5em
-.. |wms| image:: /static/common/mActionAddWmsLayer.png
    :width: 1.5em
 .. |zoomActual| image:: /static/common/mActionZoomActual.png
    :width: 1.5em

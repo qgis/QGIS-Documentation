@@ -101,6 +101,11 @@ panel:
 * |hideAllLayers| :guilabel:`Hide All Layers`
 * |showSelectedLayers| :guilabel:`Show Selected Layers`
 * |hideSelectedLayers| :guilabel:`Hide Selected Layers`
+* |toggleSelectedLayers| :guilabel:`Toggle Selected Layers`: changes the visibility of
+  the first selected layer in the panel, and applies that state to the other selected
+  layers. Also accesible through :kbd:`Space` shortcut.
+* :guilabel:`Toggle Selected Layers Independently`: changes the visibility status
+  of each selected layer
 * |hideDeselectedLayers| :guilabel:`Hide Deselected Layers`
 
 Beyond the simple control of layer visibility,
@@ -182,12 +187,17 @@ Option                                                             Vector Layer 
 |removeLayer| :guilabel:`Remove Layer/Group...`                    |checkbox|          |checkbox|         |checkbox|
 :guilabel:`Move Out of Group`                                      |checkbox|          |checkbox|         \
 :guilabel:`Move to Top`                                            |checkbox|          |checkbox|         |checkbox|
+:guilabel:`Move to Bottom`                                         |checkbox|          |checkbox|         |checkbox|
 :guilabel:`Check and all its Parents`                              |checkbox|          |checkbox|         \
 :guilabel:`Group Selected`                                         |checkbox|          |checkbox|         \
 |openTable| :guilabel:`Open Attribute Table`                       |checkbox|          \                  \
 |toggleEditing| :guilabel:`Toggle Editing`                         |checkbox|          \                  \
 |allEdits| :menuselection:`Current Edits -->`                      |checkbox|          \                  \
 :guilabel:`Filter...`                                              |checkbox|          \                  \
+:guilabel:`Change Data Source...`                                  |checkbox|          \                  \
+:menuselection:`Actions on selections -->` (in edit mode)          |checkbox|          \                  \
+:menuselection:`--> Duplicate Feature`                             |checkbox|          \                  \
+:menuselection:`--> Duplicate Feature and Digitize`                |checkbox|          \                  \
 :guilabel:`Set Layer Scale Visibility...`                          |checkbox|          |checkbox|         \
 :guilabel:`Zoom to Visible Scale`                                  |checkbox|          |checkbox|         \
 :menuselection:`Set CRS -->`                                       |checkbox|          |checkbox|         \
@@ -209,6 +219,9 @@ Option                                                             Vector Layer 
 :menuselection:`--> Paste Style`                                   |checkbox|          |checkbox|         |checkbox|
 :menuselection:`--> Add...`                                        |checkbox|          |checkbox|         \
 :menuselection:`--> Rename Current...`                             |checkbox|          |checkbox|         \
+:menuselection:`--> Edit symbol...`                                |checkbox|          \                  \
+:menuselection:`--> Copy Symbol`                                   |checkbox|          \                  \
+:menuselection:`--> Paste Symbol`                                  |checkbox|          \                  \
 :guilabel:`Properties...`                                          |checkbox|          |checkbox|         \
 =================================================================  ==================  =================  =============
 
@@ -243,9 +256,16 @@ out of all nested groups.
 To move a group or layer to the top of the layer panel, either drag it to
 the top, or choose :guilabel:`Move to Top`. If you use this option on a layer nested
 in a group, the layer is moved to the top in its current group.
+The :guilabel:`Move to Bottom` option follows the same logic to move layers
+and groups down.
 
-The checkbox for a group will show or hide all the layers in the group
+The checkbox for a group will show or hide the checked layers in the group
 with one click.
+With :kbd:`Ctrl` pressed, the checkbox will also turn on or off all
+the layers in the group and its sub-groups.
+
+:kbd:`Ctrl`-click on a checked / unchecked layer will uncheck / check the
+layer and all its parents.
 
 Enabling the **Mutually Exclusive Group** option means you can make a group have
 only one layer visible at the same time.
@@ -296,32 +316,39 @@ in the list in order to:
 * see the :ref:`styles <manage_custom_style>` currently applied to the layer. If
   you defined many styles for the layer, you can switch from one to another
   and your layer rendering will automatically be updated on the map canvas.
-* copy the current style, and when applicable, paste a copied style from another layer
-* rename the current style, add a new style (which is actually a copy of the current
-  one) or delete the current style (when multiple styles are available).
+* copy part or all of the current style, and when applicable, paste a copied
+  style from another layer
 
-.. note:: The previous options are also available for raster layers.
-
-Whether the features in the vector layer all have the same unique symbol or they are
-classified (in which case the layer is displayed in a tree structure with each class
-as a sub-item), the following options are available at layer level or class level:
-
-* :guilabel:`Edit Symbol...` to open the :ref:`symbol-selector` dialog to
-  change any properties of the layer or feature symbol (symbol, size, color...).
-  Double-clicking on a feature also opens the :guilabel:`Symbol Selector` dialog.
-* :ref:`color-selector` with a **Color Wheel** from which you can click a
-  color to update the symbol fill color automatically. For convenience,
-  **Recent colors** are available at the bottom of the color wheel.
-* |showAllLayers| :guilabel:`Show All Items` and |hideAllLayers| :guilabel:`Hide All
-  Items` to toggle on or off the visibility of all the classes of features. This avoids
-  (un)checking items one by one.
-
-.. tip:: **Quickly share a layer style**
+  .. tip:: **Quickly share a layer style**
 
     From the context menu, copy the style of a layer and paste it to a group
     or a selection of layers: the style is applied to all the layers that
     are of the same type (vector/raster) as the original layer and,
     for vector layers, have the same geometry type (point, line or polygon).
+
+* rename the current style, add a new style (which is actually a copy of
+  the current one) or delete the current style (when multiple styles are
+  available).
+
+.. note:: The previous options are also available for raster or mesh layers.
+
+* update the :ref:`symbol color <color-selector>` using a **Color Wheel**.
+  For convenience, the recently used colors are also available at the bottom
+  of the color wheel.
+* :guilabel:`Edit Symbol...`: open the :ref:`Symbol Selector <symbol-selector>`
+  dialog and change feature symbol (symbol, size, color...).
+
+When using a classification symbology type (based on :ref:`categorized
+<categorized_renderer>`, :ref:`graduated <graduated_renderer>` or
+:ref:`rule-based <rule_based_rendering>`), the aforementioned symbol-level
+options are available from the class entry context menu. Also provided are the
+|toggleAllLayers| :guilabel:`Toggle Items`, |showAllLayers| :guilabel:`Show All
+Items` and |hideAllLayers| :guilabel:`Hide All Items` entries to switch the
+visibility of all the classes of features. These avoid (un)checking items
+one by one.
+
+.. tip:: Double-clicking a class leaf entry also opens the
+ :guilabel:`Symbol Selector` dialog.
 
 
 .. index::
@@ -1932,7 +1959,7 @@ Will render the label like this::
   This map was made using QGIS 3.4.4-Madeira. The project file for this map is:
   /gis/qgis-user-conference-2019.qgs
 
-Besides the :ref:`preset read-only variables <variables_functions>`, you can
+Besides the :ref:`preset read-only variables <expression_variables>`, you can
 define your own custom variables for any of the levels mentioned above. You can
 manage:
 
@@ -2613,7 +2640,11 @@ The values presented in the varying size assistant above will set the size
    :width: 1.5em
 .. |titleLabel| image:: /static/common/title_label.png
    :width: 1.5em
+.. |toggleAllLayers| image:: /static/common/mActionToggleAllLayers.png
+   :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
+   :width: 1.5em
+.. |toggleSelectedLayers| image:: /static/common/mActionToggleSelectedLayers.png
    :width: 1.5em
 .. |transparency| image:: /static/common/transparency.png
    :width: 1.5em

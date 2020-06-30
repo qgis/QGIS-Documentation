@@ -154,7 +154,7 @@ layers.
    In this example, the current symbol has no outline (i.e., it uses the
    :guilabel:`No Pen` border style).
 
-   .. figure:: img/add_symbol_layer_button.png
+   .. figure:: img/simple_fill_selected.png
       :align: center
 
 #. Select the :guilabel:`Fill` level in the tree and click

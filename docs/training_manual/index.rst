@@ -10,7 +10,6 @@ QGIS Training Manual
    :numbered:
 
    foreword/index
-   introduction/index
    basic_map/index
    vector_classification/index
    map_composer/index
@@ -29,5 +28,6 @@ QGIS Training Manual
    processing/index
    databases/index
    appendix/contribute
+   appendix/preparing_data
 
    answers/answers

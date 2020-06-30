@@ -53,7 +53,7 @@ In Main properties you can:
   By default, the map over which the legend item is drawn is picked. If none,
   then it falls back to the :ref:`reference map <reference_map>`.
   
-  .. note:: :ref:`Variables <variables_functions>` of the linked map item
+  .. note:: :ref:`Variables <expression_variables>` of the linked map item
    (@map_id, @map_scale, @map_extent...) are also accessible from data-defined
    properties of the legend.
 
@@ -81,8 +81,8 @@ panel provides the following functionalities (see figure_layout_legend_items_):
 
    Legend Items group
 
-* The legend will be updated automatically if |checkbox| :guilabel:`Auto-update`
-  is checked. When :guilabel:`Auto-update` is unchecked this will give you more
+* The legend will be updated automatically if |checkbox| :guilabel:`Auto update`
+  is checked. When :guilabel:`Auto update` is unchecked this will give you more
   control over the legend items. All the icons below the legend items list will
   be activated.
 * The legend items window lists all legend items and allows you to change item
@@ -95,7 +95,7 @@ panel provides the following functionalities (see figure_layout_legend_items_):
   * Use the |addGroup| button to add a legend group.
   * Use the |signPlus| button to add layers and |signMinus| button to remove
     groups, layers or symbol classes.
-  * The |projectProperties| button is used to edit the layer, group name or title.
+  * The |symbologyEdit| button is used to edit the layer, group name or title.
     First you need to select the legend item. Double-clicking the item also
     opens the text box to rename it.
   * |expression| allows you to add expressions to each symbol label of a given
@@ -253,8 +253,6 @@ columns and lines can be customized through this dialog.
    :width: 1.5em
 .. |expressionFilter| image:: /static/common/mIconExpressionFilter.png
    :width: 1.5em
-.. |projectProperties| image:: /static/common/mActionProjectProperties.png
-   :width: 1.5em
 .. |selectNumber| image:: /static/common/selectnumber.png
    :width: 2.8em
 .. |signMinus| image:: /static/common/symbologyRemove.png
@@ -263,3 +261,5 @@ columns and lines can be customized through this dialog.
    :width: 1.5em
 .. |sum| image:: /static/common/mActionSum.png
    :width: 1.2em
+.. |symbologyEdit| image:: /static/common/symbologyEdit.png
+   :width: 1.5em

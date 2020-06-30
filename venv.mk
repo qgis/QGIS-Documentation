@@ -22,5 +22,6 @@ cleanall: springclean
 
 # Add dependencies to targets that require sphinx
 html: venv/REQUIREMENTS.timestamp
+latex: venv/REQUIREMENTS.timestamp
 gettext: venv/REQUIREMENTS.timestamp
 fasthtml: venv/REQUIREMENTS.timestamp
