@@ -286,19 +286,47 @@ Integrate an NTv2-transformation in QGIS
 
 To integrate an NTv2 transformation file in QGIS you need one more step:
 
-#. Place the NTv2 file (.gsb) in the CRS/Proj folder that QGIS uses
+#. Step 1. Place the NTv2 file (.gsb) in the CRS/Proj folder that QGIS uses
    (e.g. :file:`C:\\OSGeo4W64\\share\\proj` for windows users)
-#. Add **nadgrids** (``+nadgrids=nameofthefile.gsb``) to the Proj definition
+#. Step 2. Add **nadgrids** (``+nadgrids=nameofthefile.gsb``) to the Proj definition
    in the :guilabel:`Parameters` field of the :guilabel:`Custom Coordinate
    Reference System Definition` (:menuselection:`Settings --> Custom Projections...`).
-
-   .. _figure_nadgrids:
-
+    
+    .. _figure_nadgrids:
+   
    .. figure:: img/nadgrids_example.png
       :align: center
-
+      
       Setting an NTv2 transformation
+      
+#. Step 3. Since QGIS 3.10.X it is also needed to add a line for each transformation in 
+the proj.db file (e.g. :file:`C:\\OSGeo4W64\\share\\proj\\proj.db` for windows users).
+It is possible to use a sqlite db management system (e.g DB Browser) and add a line using the following code
 
+```
+INSERT INTO "grid_transformation"
+VALUES ('PROJ','EPSG_6706_TO_EPSG_4265_GENOVA','RDN2008 TO Monte Mario (ROMA40) - Regione Veneto',
+'For the Veneto Region - Use of IGM proprietary grids',
+'LOCALE',
+'EPSG','9615','NTv2',
+'EPSG','6706','EPSG','4265',
+'EPSG','1127', 
+NULL,
+'EPSG','8656','Latitude and longitude difference file',
+'44301020_46501320_F00_R40.gsb',
+NULL,NULL,NULL,NULL,NULL,NULL,NULL,0);
+```
+
+After this insert into the sqlite DB file a restart of QGIS is needed. 
+
+After these 3 steps the user can set the layer CRS of the layer to be convertted using the *Custom Coordinate Reference System Definition* previous defined and then run the trasformation in the desired CRS using the standard EPSG code. 
+
+   .. _figure_set_crss:
+
+   .. figure:: img/set_crs.png
+      :align: center
+
+      Set layer CRS
 
 .. index:: Datum transformation
 .. _datum_transformation:
