@@ -251,6 +251,20 @@ latex_elements = {
     \\newunicodechar{​}{ }'''
 }
 
+# Special case of korean that need different latex settings to work
+if tags.has('ko'):
+    latex_elements = {
+        'inputenc': '',
+        'utf8extra': '',
+        'preamble': '''
+
+    \usepackage{fontspec}
+    \usepackage[space]{xeCJK}
+    \\renewcommand\CJKglue{}
+    \setCJKmainfont{NanumMyeongjo}
+    ''',
+    }
+
 
 # -- Settings for Python code samples testing --------------------------------
 
