@@ -1107,26 +1107,6 @@ To use these variables in an expression, they should be preceded by the
    "fullextent_maxy", "Maximum y value from full canvas extent (including all layers)"
    "fullextent_minx", "Minimum x value from full canvas extent (including all layers)"
    "fullextent_miny", "Minimum y value from full canvas extent (including all layers)"
-<<<<<<< HEAD
-   "geometry_part_count", "Returns the number of parts in rendered feature's geometry"
-   "geometry_part_num", "Returns the current geometry part number for feature being rendered"
-   "geometry_point_count", "Returns the number of points in the rendered geometry's part"
-   "geometry_point_num", "Returns the current point number in the rendered geometry's part"
-   "grid_axis", "Returns the current grid annotation axis (eg, 'x' for longitude, 'y' for latitude)"
-   "grid_number", "Returns the current grid annotation value"
-   "item_id", "Returns the layout item user ID (not necessarily unique)"
-   "item_uuid", "Returns the layout item unique ID"
-   "layer", "Returns the current layer"
-   "layer_id", "Returns the ID of current layer"
-   "layer_name", "Returns the name of current layer"
-   "layout_dpi", "Returns the composition resolution (DPI)"
-   "layout_name", "Returns the layout name"
-   "layout_numpages", "Returns the number of pages in the layout"
-   "layout_page", "Returns the page number of the current item in the layout"
-   "layout_pageheight", "Returns the active page height in the layout (in mm)"
-   "layout_pagewidth", "Returns the active page width in the layout (in mm)"
-   "legend_column_count", "Returns the number of columns in the legend"
-=======
    "geometry_part_count", "The number of parts in rendered feature's geometry"
    "geometry_part_num", "The current geometry part number for feature being rendered"
    "geometry_point_count", "The number of points in the rendered geometry's part"
@@ -1137,9 +1117,7 @@ To use these variables in an expression, they should be preceded by the
    "item_uuid", "The layout item unique ID"
    "layer", "The current layer"
    "layer_id", "The ID of current layer"
-   "layer_ids |314|", "The IDs of all the map layers in the current project as a list"
    "layer_name", "The name of current layer"
-   "layers |314|", "All the map layers in the current project as a list"
    "layout_dpi", "The composition resolution (DPI)"
    "layout_name", "The layout name"
    "layout_numpages", "The number of pages in the layout"
@@ -1147,7 +1125,6 @@ To use these variables in an expression, they should be preceded by the
    "layout_pageheight", "The active page height in the layout (in mm)"
    "layout_pagewidth", "The active page width in the layout (in mm)"
    "legend_column_count", "The number of columns in the legend"
->>>>>>> 7c62ce103... Merge pull request #5785 from qgis/havatv_expressions_variables2
    "legend_filter_by_map", "Indicates if the content of the legend is
    filtered by the map"
    "legend_filter_out_atlas", "Indicates if the atlas is filtered out of the legend"
@@ -1167,37 +1144,17 @@ To use these variables in an expression, they should be preceded by the
    reference system of the current map"
    "map_crs_wkt", "The WKT definition of the Coordinate reference
    system of the current map"
-<<<<<<< HEAD
-   "map_extent", "Returns the geometry representing the current extent of the map"
-   "map_extent_center", "Returns the point feature at the center of the map"
-   "map_extent_height", "Returns the current height of the map"
-   "map_extent_width", "Returns the current width of the map"
-   "map_id", "Returns the ID of current map destination. This will be 'canvas'
-   for canvas renders, and the item ID for layout map renders"
-   "map_layer_ids", "Returns the list of map layer IDs visible in the map"
-   "map_layers", "Returns the list of map layers visible in the map"
-   "map_rotation", "Returns the current rotation of the map"
-   "map_scale", "Returns the current scale of the map"
-   "map_units", "Returns the units of map measurements"
-=======
-   "map_end_time |314|", "The end of the map's temporal time range
-   (as a datetime value)"
    "map_extent", "The geometry representing the current extent of the map"
    "map_extent_center", "The point feature at the center of the map"
    "map_extent_height", "The current height of the map"
    "map_extent_width", "The current width of the map"
    "map_id", "The ID of current map destination. This will be 'canvas'
    for canvas renders, and the item ID for layout map renders"
-   "map_interval |314|", "The duration of the map's temporal time range
-   (as an interval value)"
    "map_layer_ids", "The list of map layer IDs visible in the map"
    "map_layers", "The list of map layers visible in the map"
    "map_rotation", "The current rotation of the map"
    "map_scale", "The current scale of the map"
-   "map_start_time |314|", "The start of the map's temporal time range
-   (as a datetime value)"
    "map_units", "The units of map measurements"
->>>>>>> 7c62ce103... Merge pull request #5785 from qgis/havatv_expressions_variables2
    "notification_message", "Content of the notification message sent by the provider
    (available only for actions triggered by provider notifications)."
    "parent", "Refers to the current feature in the parent layer, providing access to
