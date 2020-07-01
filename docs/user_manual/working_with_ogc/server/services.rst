@@ -1884,12 +1884,8 @@ Feature sorting
 It is possible to order the result set by field value using the ``sortby``
 query parameter. 
 
-The results are sorted in ascending order by default. To sort the results in descending
-order a boolean flag ``sortdesc`` can be set:
-
-URL example:
-
-sort features by ``name`` in descending order:
+The results are sorted in ascending order by default.
+To sort the results in descending order, a boolean flag (``sortdesc``) can be set:
 
 .. code-block:: none
 
