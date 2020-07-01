@@ -1070,43 +1070,44 @@ Variables
 
 This group contains dynamic variables related to the application, the project
 file and other settings.
-It means that some functions may not be available according to the context:
+The availability of variables depends on the context:
 
 - from the |expressionSelect| :sup:`Select by expression` dialog
 - from the |calculateField| :sup:`Field calculator` dialog
 - from the layer properties dialog
 - from the print layout
 
-To use these functions in an expression, they should be preceded by @ character
-(e.g, @row_number). Are concerned:
+To use these variables in an expression, they should be preceded by the
+``@`` character (e.g, ``@row_number``).
 
 .. csv-table::
    :header: "Function", "Description"
    :widths: 25, 70
 
-   "algorithm_id", "Returns the unique ID of an algorithm"
-   "atlas_feature", "Returns the current atlas feature (as feature object)"
-   "atlas_featureid", "Returns the current atlas feature ID"
-   "atlas_featurenumber", "Returns the current atlas feature number in the layout"
-   "atlas_filename", "Returns the current atlas file name"
-   "atlas_geometry", "Returns the current atlas feature geometry"
-   "atlas_layerid", "Returns the current atlas coverage layer ID"
-   "atlas_layername", "Returns the current atlas coverage layer name"
-   "atlas_pagename", "Returns the current atlas page name"
-   "atlas_totalfeatures", "Returns the total number of features in atlas"
-   "canvas_cursor_point", "Returns the last cursor position on the canvas in the
+   "algorithm_id", "The unique ID of an algorithm"
+   "atlas_feature", "The current atlas feature (as feature object)"
+   "atlas_featureid", "The current atlas feature ID"
+   "atlas_featurenumber", "The current atlas feature number in the layout"
+   "atlas_filename", "The current atlas file name"
+   "atlas_geometry", "The current atlas feature geometry"
+   "atlas_layerid", "The current atlas coverage layer ID"
+   "atlas_layername", "The current atlas coverage layer name"
+   "atlas_pagename", "The current atlas page name"
+   "atlas_totalfeatures", "The total number of features in atlas"
+   "canvas_cursor_point", "The last cursor position on the canvas in the
    project's geographical coordinates"
-   "cluster_color", "Returns the color of symbols within a cluster, or NULL if
+   "cluster_color", "The color of symbols within a cluster, or NULL if
    symbols have mixed colors"
-   "cluster_size", "Returns the number of symbols contained within a cluster"
-   "current_feature", "Returns the feature currently being edited in the attribute
+   "cluster_size", "The number of symbols contained within a cluster"
+   "current_feature", "The feature currently being edited in the attribute
    form or table row"
-   "current_geometry", "Returns the geometry of the feature currently being edited
+   "current_geometry", "The geometry of the feature currently being edited
    in the form or the table row"
    "fullextent_maxx", "Maximum x value from full canvas extent (including all layers)"
    "fullextent_maxy", "Maximum y value from full canvas extent (including all layers)"
    "fullextent_minx", "Minimum x value from full canvas extent (including all layers)"
    "fullextent_miny", "Minimum y value from full canvas extent (including all layers)"
+<<<<<<< HEAD
    "geometry_part_count", "Returns the number of parts in rendered feature's geometry"
    "geometry_part_num", "Returns the current geometry part number for feature being rendered"
    "geometry_point_count", "Returns the number of points in the rendered geometry's part"
@@ -1125,25 +1126,48 @@ To use these functions in an expression, they should be preceded by @ character
    "layout_pageheight", "Returns the active page height in the layout (in mm)"
    "layout_pagewidth", "Returns the active page width in the layout (in mm)"
    "legend_column_count", "Returns the number of columns in the legend"
+=======
+   "geometry_part_count", "The number of parts in rendered feature's geometry"
+   "geometry_part_num", "The current geometry part number for feature being rendered"
+   "geometry_point_count", "The number of points in the rendered geometry's part"
+   "geometry_point_num", "The current point number in the rendered geometry's part"
+   "grid_axis", "The current grid annotation axis (eg, 'x' for longitude, 'y' for latitude)"
+   "grid_number", "The current grid annotation value"
+   "item_id", "The layout item user ID (not necessarily unique)"
+   "item_uuid", "The layout item unique ID"
+   "layer", "The current layer"
+   "layer_id", "The ID of current layer"
+   "layer_ids |314|", "The IDs of all the map layers in the current project as a list"
+   "layer_name", "The name of current layer"
+   "layers |314|", "All the map layers in the current project as a list"
+   "layout_dpi", "The composition resolution (DPI)"
+   "layout_name", "The layout name"
+   "layout_numpages", "The number of pages in the layout"
+   "layout_page", "The page number of the current item in the layout"
+   "layout_pageheight", "The active page height in the layout (in mm)"
+   "layout_pagewidth", "The active page width in the layout (in mm)"
+   "legend_column_count", "The number of columns in the legend"
+>>>>>>> 7c62ce103... Merge pull request #5785 from qgis/havatv_expressions_variables2
    "legend_filter_by_map", "Indicates if the content of the legend is
    filtered by the map"
    "legend_filter_out_atlas", "Indicates if the atlas is filtered out of the legend"
    "legend_split_layers", "Indicates if layers can be split in the legend"
-   "legend_title", "Returns the title of the legend"
-   "legend_wrap_string", "Returns the character(s) used to wrap the legend text"
-   "map_crs", "Returns the Coordinate reference system of the current map"
-   "map_crs_acronym", "Returns the acronym of the Coordinate reference
+   "legend_title", "The title of the legend"
+   "legend_wrap_string", "The character(s) used to wrap the legend text"
+   "map_crs", "The Coordinate reference system of the current map"
+   "map_crs_acronym", "The acronym of the Coordinate reference
    system of the current map"
-   "map_crs_definition", "Returns the full definition of the Coordinate
+   "map_crs_definition", "The full definition of the Coordinate
    reference system of the current map"
-   "map_crs_description", "Returns the name of the Coordinate reference
+   "map_crs_description", "The name of the Coordinate reference
    system of the current map"
-   "map_crs_ellipsoid", "Returns the acronym of the ellipsoid of the
+   "map_crs_ellipsoid", "The acronym of the ellipsoid of the
    Coordinate reference system of the current map"
-   "map_crs_proj4", "Returns the Proj4 definition of the Coordinate
+   "map_crs_proj4", "The Proj4 definition of the Coordinate
    reference system of the current map"
-   "map_crs_wkt", "Returns the WKT definition of the Coordinate reference
+   "map_crs_wkt", "The WKT definition of the Coordinate reference
    system of the current map"
+<<<<<<< HEAD
    "map_extent", "Returns the geometry representing the current extent of the map"
    "map_extent_center", "Returns the point feature at the center of the map"
    "map_extent_height", "Returns the current height of the map"
@@ -1155,63 +1179,89 @@ To use these functions in an expression, they should be preceded by @ character
    "map_rotation", "Returns the current rotation of the map"
    "map_scale", "Returns the current scale of the map"
    "map_units", "Returns the units of map measurements"
+=======
+   "map_end_time |314|", "The end of the map's temporal time range
+   (as a datetime value)"
+   "map_extent", "The geometry representing the current extent of the map"
+   "map_extent_center", "The point feature at the center of the map"
+   "map_extent_height", "The current height of the map"
+   "map_extent_width", "The current width of the map"
+   "map_id", "The ID of current map destination. This will be 'canvas'
+   for canvas renders, and the item ID for layout map renders"
+   "map_interval |314|", "The duration of the map's temporal time range
+   (as an interval value)"
+   "map_layer_ids", "The list of map layer IDs visible in the map"
+   "map_layers", "The list of map layers visible in the map"
+   "map_rotation", "The current rotation of the map"
+   "map_scale", "The current scale of the map"
+   "map_start_time |314|", "The start of the map's temporal time range
+   (as a datetime value)"
+   "map_units", "The units of map measurements"
+>>>>>>> 7c62ce103... Merge pull request #5785 from qgis/havatv_expressions_variables2
    "notification_message", "Content of the notification message sent by the provider
    (available only for actions triggered by provider notifications)."
    "parent", "Refers to the current feature in the parent layer, providing access to
    its attributes and geometry when filtering an :ref:`aggregate <aggregates_function>`
    function"
-   "project_abstract", "Returns the project abstract, taken from project metadata"
-   "project_area_units", "Returns the area unit for the current project, used when
+   "project_abstract", "The project abstract, taken from project metadata"
+   "project_area_units", "The area unit for the current project, used when
    calculating areas of geometries"
-   "project_author", "Returns the project author, taken from project metadata"
-   "project_basename", "Returns the basename of current project's filename
+   "project_author", "The project author, taken from project metadata"
+   "project_basename", "The basename of current project's filename
    (without path and extension)"
-   "project_creation_date", "Returns the project creation date, taken from project metadata"
-   "project_crs", "Returns the Coordinate reference system of the project"
-   "project_crs_definition", "Returns the full definition of the Coordinate reference
+   "project_creation_date", "The project creation date, taken from project metadata"
+   "project_crs", "The Coordinate reference system of the project"
+   "project_crs_arconym", "The acronym of the Coordinate reference system of the project"
+   "project_crs_definition", "The full definition of the Coordinate reference
    system of the project"
-   "project_distance_units", "Returns the distance unit for the current project,
+   "project_crs_description", "The description of the Coordinate reference system of the project"
+   "project_crs_ellipsoid", "The ellipsoid of the Coordinate reference system of the project"
+   "project_crs_proj4", "The Proj4 representation of the Coordinate reference system of the project"
+   "project_crs_wkt", "The WKT (well known text) representation of the coordinate reference system of the project"
+   "project_distance_units", "The distance unit for the current project,
    used when calculating lengths of geometries and distances"
-   "project_ellipsoid", "Returns the name of the ellipsoid of the current project,
+   "project_ellipsoid", "The name of the ellipsoid of the current project,
    used when calculating geodetic areas or lengths of geometries"
-   "project_filename", "Returns the filename of the current project"
-   "project_folder", "Returns the folder of the current project"
-   "project_home", "Returns the home path of the current project"
-   "project_identifier", "Returns the project identifier, taken from the project's metadata"
-   "project_keywords", "Returns the project keywords, taken from the project's metadata"
-   "project_path", "Returns the full path (including file name) of the current project"
-   "project_title", "Returns the title of current project"
-   "qgis_locale", "Returns the current language of QGIS"
-   "qgis_os_name", "Returns the current Operating system name, eg 'windows', 'linux' or 'osx'"
-   "qgis_platform", "Returns QGIS platform, eg 'desktop' or 'server'"
-   "qgis_release_name", "Returns current QGIS release name"
-   "qgis_short_version", "Returns current QGIS version short string"
-   "qgis_version", "Returns current QGIS version string"
-   "qgis_version_no", "Returns current QGIS version number"
+   "project_filename", "The filename of the current project"
+   "project_folder", "The folder of the current project"
+   "project_home", "The home path of the current project"
+   "project_identifier", "The project identifier, taken from the project's metadata"
+   "project_keywords", "The project keywords, taken from the project's metadata"
+   "project_last_saved", "Date/time when project was last saved."
+   "project_path", "The full path (including file name) of the current project"
+   "project_title", "The title of current project"
+   "project_units", "The units of the project's CRS"
+   "qgis_locale", "The current language of QGIS"
+   "qgis_os_name", "The current Operating system name, eg 'windows', 'linux' or 'osx'"
+   "qgis_platform", "The QGIS platform, eg 'desktop' or 'server'"
+   "qgis_release_name", "The current QGIS release name"
+   "qgis_short_version", "The current QGIS version short string"
+   "qgis_version", "The current QGIS version string"
+   "qgis_version_no", "The current QGIS version number"
+   "row_number", "Stores the number of the current row"
    "snapping_results", "Gives access to snapping results while digitizing a
    feature (only available in add feature)"
-   "scale_value", "Returns current scale bar distance value"
-   "symbol_angle", "Returns the angle of the symbol used to render the feature
+   "scale_value", "The current scale bar distance value"
+   "symbol_angle", "The angle of the symbol used to render the feature
    (valid for marker symbols only)"
-   "symbol_color", "Returns the color of the symbol used to render the feature"
-   "symbol_count", "Returns the number of features represented by the symbol (in the layout legend)"
-   "symbol_id", "Returns the Internal ID of the symbol (in the layout legend)"
-   "symbol_label", "Returns the label for the symbol (either a user defined
+   "symbol_color", "The color of the symbol used to render the feature"
+   "symbol_count", "The number of features represented by the symbol (in the layout legend)"
+   "symbol_id", "The Internal ID of the symbol (in the layout legend)"
+   "symbol_label", "The label for the symbol (either a user defined
    label or the default autogenerated label - in the layout legend)"
-   "user_account_name", "Returns the current user's operating system account name"
-   "user_full_name", "Returns the current user's operating system user name"
-   "row_number", "Stores the number of the current row"
-   "value", "Returns the current value"
+   "user_account_name", "The current user's operating system account name"
+   "user_full_name", "The current user's operating system user name"
+   "value", "The current value"
    "with_variable", "Allows setting a variable for usage within an expression
    and avoid recalculating the same value repeatedly"
 
 **Some examples:**
 
-* Return the X coordinate of a map item center to insert into a label in layout::
+* Return the X coordinate of a map item center in layout::
 
    x( map_get( item_variables( 'map1'), 'map_extent_center' ) )
 
-* Return for each feature in the current layer the number of overlapping airports
+* Return, for each feature in the current layer, the number of overlapping airport
   features::
 
    aggregate( layer:='airport', aggregate:='count', expression:="code",
@@ -1236,10 +1286,10 @@ Recent Functions
 -----------------
 
 This group contains recently used functions. Depending on the context of its
-usage (feature selection, field calculator, generic), any applied expression
-is added to the corresponding list (up to ten expressions), sorted from the
-more recent to the less one.
-This helps to quickly retrieve and reapply any previously used expression.
+usage (feature selection, field calculator, generic), recently applied expressions
+are added to the corresponding list (up to ten expressions), sorted from 
+more to less recent.
+This makes it easy to quickly retrieve and reapply previously used expressions.
 
 
 .. index:: Custom functions
