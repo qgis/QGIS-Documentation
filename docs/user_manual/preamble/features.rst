@@ -29,6 +29,7 @@ Supported formats include:
 *  Raster and imagery formats supported by the installed GDAL (Geospatial
    Data Abstraction Library) library, such as GeoTIFF, ERDAS IMG, ArcInfo
    ASCII GRID, JPEG, PNG and many more. See section :ref:`working_with_raster`.
+*  Mesh data (TINs and regular grids are supported). See :ref:`label_meshdata`.
 *  GRASS raster and vector data from GRASS databases (location/mapset).
    See section :ref:`sec_grass`.
 *  Online spatial data served as OGC Web Services, including WMS, WMTS, WCS,
