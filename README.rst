@@ -55,11 +55,18 @@ If you want for some reason start from scratch:
 Build PDFs
 ..........
 
-In Linux, you can also build the PDF versions of the main documents
+In Linux, you can also build the PDF versions of the main documents:
 
 .. code-block:: bash
 
  make -f venv.mk pdf
+
+For building PDFs you will need to install the XeLaTex compiler package
+``textlive-xetex`` and GNU Freefont.
+
+.. code-block:: bash
+
+ sudo apt install textlive-xetex fonts-freefont
 
 Build on macOS or Linux
 -----------------------
@@ -105,9 +112,17 @@ If you want to build PDFs in another language, you can use a similar syntax:
 
  make LANG=fr pdf
 
-For building PDFs, you may have to install the texlive extra package for your
-specific language (e.g. ``texlive-lang-french``) or install them all
-(``texlive-lang-all``).
+For building translated PDFs, you may have to install the texlive extra package
+for your specific language (e.g. ``texlive-lang-french``). For japanese, it's
+crucial to install ``texlive-lang-japanese``, which will install the platex
+compiler. If you plan to build all languages, it might be easier to install all
+languages packages (``texlive-lang-all``), but it will use a considerable amount
+of disk space.
+
+Some languages will also need specific fonts installed:
+
+* Korea (ko) - NanumMyeongjo
+* Hindi (hi) - Nakula
 
 
 Build on Windows
