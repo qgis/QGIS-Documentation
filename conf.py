@@ -232,13 +232,14 @@ latex_use_parts = False
 
 latex_elements = {
 # The paper size ('letterpaper' or 'a4paper').
- 'papersize': 'a4paper',
+    'papersize': 'a4paper',
 
-  # The font size ('10pt', '11pt' or '12pt').
-  #'pointsize': '10pt',
+    # The font size ('10pt', '11pt' or '12pt').
+    #'pointsize': '10pt',
 
-  # Additional stuff for the LaTeX preamble.
-  'preamble': u'''\\usepackage{combelow}
+    # Additional stuff for the LaTeX preamble.
+    'preamble': u'''
+    \\usepackage{combelow}
     \\usepackage{newunicodechar}
     \\newunicodechar{Ș}{\\cb{S}}
     \\newunicodechar{ș}{\\cb{s}}
@@ -257,13 +258,21 @@ if tags.has('ko'):
         'inputenc': '',
         'utf8extra': '',
         'preamble': '''
+        \\usepackage{fontspec}
+        \\usepackage[space]{xeCJK}
+        \\renewcommand\CJKglue{}
+        \\setCJKmainfont{NanumMyeongjo}''',
+        }
 
-    \usepackage{fontspec}
-    \usepackage[space]{xeCJK}
-    \\renewcommand\CJKglue{}
-    \setCJKmainfont{NanumMyeongjo}
-    ''',
-    }
+# Special case for hindi that need different setting and typeset
+if tags.has('ko'):
+    latex_elements = {
+        'inputenc': '',
+        'utf8extra': '',
+        'preamble': '''
+        \\usepackage{fontspec}
+        \\setmainfont[Script=Devanagari]{Nakula}''',
+        }
 
 
 # -- Settings for Python code samples testing --------------------------------
