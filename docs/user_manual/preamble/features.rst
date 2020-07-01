@@ -46,6 +46,7 @@ friendly GUI. The many helpful tools available in the GUI include:
 *  On-the-fly reprojection
 *  DB Manager
 *  Print layout
+*  Report
 *  Overview panel
 *  Spatial bookmarks
 *  Annotation tools
@@ -63,7 +64,7 @@ Create, edit, manage and export data
 You can create, edit, manage and export vector and raster layers in
 several formats. QGIS offers the following:
 
-*  Digitizing tools for OGR-supported formats and GRASS vector layers
+*  Vector digitizing tools
 *  Ability to create and edit multiple file formats and GRASS vector layers
 *  Georeferencer plugin to geocode images
 *  GPS tools to import and export GPX format, and convert other GPS
@@ -95,8 +96,8 @@ Publish maps on the Internet
 
 QGIS can be used as a WMS, WMTS, WMS-C or WFS and WFS-T client, and as
 a WMS, WCS or WFS server (see section :ref:`sec_ogc`). Additionally,
-you can publish your data on the Internet using a webserver with UMN
-MapServer or GeoServer installed.
+you can publish your data on the Internet using a webserver with QGIS
+Server, UMN MapServer or GeoServer installed.
 
 Extend QGIS functionality through plugins
 -----------------------------------------
