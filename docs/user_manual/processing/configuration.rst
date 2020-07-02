@@ -9,7 +9,7 @@
    .. contents::
       :local:
       
-The Processing Options menu (:menuselection:`Settings-> Options` -
+The Processing Options menu (:menuselection:`Settings--> Options -->`
 :guilabel:`Processing` tab) allows you to configure how algorithms work.
 Configuration parameters are structured in separate blocks that you can
 select on the left-hand side of the dialog.
