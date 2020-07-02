@@ -159,13 +159,6 @@ Outputs
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:gagewatershed', -p, -o, -gw, -id)
-
 
 Length Area Stream Source
 -------------------------
@@ -449,13 +442,6 @@ Outputs
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
 
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:slopearea', slope_grid, area_grid, slope_exponent, area_exponent, slope_area_grid)
-
 
 Slope area stream definition
 ----------------------------
@@ -602,13 +588,6 @@ Outputs
 .. include:: ../qgis/qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
-
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:streamdefinitionbythreshold', -ssa, -thresh, -mask, -src)
 
 
 Stream definition with drop analysis
@@ -761,13 +740,6 @@ Outputs
 .. include:: ../qgis/qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
-
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:dropanalysis', d8_contrib_area_grid, d8_flow_dir_grid, pit_filled_grid, accum_stream_source_grid, outlets_shape, min_treshold, max_threshold, treshold_num, step_type, drop_analysis_file)
 
 See also
 ........
@@ -967,14 +939,4 @@ Outputs
 .. include:: ../qgis/qgis_algs_include.rst
   :start-after: **algorithm_code_section**
   :end-before: **end_algorithm_code_section**
-
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:streamnet', -fel, -p, -ad8, -src, -o, -sw, -ord, -w, -net, -tree, -coord)
-
-
-
 
