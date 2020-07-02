@@ -7,6 +7,668 @@ Raster analysis
       :local:
       :depth: 1
 
+<<<<<<< HEAD
+=======
+.. _qgisfuzzifyrastergaussianmembership:
+
+Fuzzify raster (gaussian membership) |312|
+------------------------------------------
+
+Transforms an input raster to a fuzzified raster by assigning a
+membership value to each pixel, using a Gaussian membership function.
+Membership values range from 0 to 1.
+In the fuzzified raster, a value of 0 implies no membership of the
+defined fuzzy set, whereas a value of 1 means full membership.
+The gaussian membership function is defined as |gaussian_formula|,
+where *f1* is the spread and *f2* the midpoint.
+
+.. figure:: img/gaussianimage.png
+  :align: center
+
+  Fuzzify raster example. Input raster source: Land Tirol -
+  data.tirol.gv.at.
+
+.. seealso:: :ref:`qgisfuzzifyrasterlargemembership`
+  :ref:`qgisfuzzifyrasterlinearmembership`,
+  :ref:`qgisfuzzifyrasternearmembership`,
+  :ref:`qgisfuzzifyrasterpowermembership`,
+  :ref:`qgisfuzzifyrastersmallmembership`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Raster**
+     - ``INPUT``
+     - [raster]
+     - Input raster layer
+   * - **Band Number**
+     - ``BAND``
+     - [raster band]
+
+       Default: The first band of the raster layer
+     - If the raster is multiband, choose the band that
+       you want to fuzzify.
+   * - **Function midpoint**
+     - ``FUZZYMIDPOINT``
+     - [number]
+
+       Default: 10
+     - Midpoint of the gaussian function
+   * - **Function spread**
+     - ``FUZZYSPREAD``
+     - [number]
+
+       Default: 0.01
+     - Spread of the gaussian function
+   * - **Fuzzified raster**
+     - ``OUTPUT``
+     - [same as input]
+     - Specification of the output raster. One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Fuzzified raster**
+     - ``OUTPUT``
+     - [same as input]
+     - Output raster layer containing the result
+
+   * - **CRS authority identifier**
+     - ``CRS_AUTHID``
+     - [crs]
+     - The coordinate reference system of the output raster layer
+   * - **Extent**
+     - ``EXTENT``
+     - [extent]
+     - The spatial extent of the output raster layer
+   * - **Width in pixels**
+     - ``WIDTH_IN_PIXELS``
+     - [integer]
+     - The width in pixels of the output raster layer
+   * - **Height in pixels**
+     - ``HEIGHT_IN_PIXELS``
+     - [integer]
+     - The height in pixels of the output raster layer
+   * - **Total pixel count**
+     - ``TOTAL_PIXEL_COUNT``
+     - [integer]
+     - The count of pixels in the output raster layer
+
+**Algorithm ID**: ``qgis:fuzzifyrastergaussianmembership``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgisfuzzifyrasterlargemembership:
+
+Fuzzify raster (large membership) |312|
+------------------------------------------
+
+Transforms an input raster to a fuzzified raster by assigning a
+membership value to each pixel, using a Large membership function.
+Membership values range from 0 to 1.
+In the fuzzified raster, a value of 0 implies no membership of the
+defined fuzzy set, whereas a value of 1 means full membership.
+The large membership function is defined as |fuzzy_large_formula|,
+where *f1* is the spread and *f2* the midpoint.
+
+.. seealso:: :ref:`qgisfuzzifyrastergaussianmembership`,
+  :ref:`qgisfuzzifyrasterlinearmembership`,
+  :ref:`qgisfuzzifyrasternearmembership`,
+  :ref:`qgisfuzzifyrasterpowermembership`,
+  :ref:`qgisfuzzifyrastersmallmembership`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Raster**
+     - ``INPUT``
+     - [raster]
+     - Input raster layer
+   * - **Band Number**
+     - ``BAND``
+     - [raster band]
+
+       Default: The first band of the raster layer
+     - If the raster is multiband, choose the band that you want to
+       fuzzify.
+   * - **Function midpoint**
+     - ``FUZZYMIDPOINT``
+     - [number]
+
+       Default: 50
+     - Midpoint of the large function
+   * - **Function spread**
+     - ``FUZZYSPREAD``
+     - [number]
+
+       Default: 5
+     - Spread of the large function
+   * - **Fuzzified raster**
+     - ``OUTPUT``
+     - [same as input]
+     - Specification of the output raster. One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Fuzzified raster**
+     - ``OUTPUT``
+     - [same as input]
+     - Output raster layer containing the result
+
+   * - **CRS authority identifier**
+     - ``CRS_AUTHID``
+     - [crs]
+     - The coordinate reference system of the output raster layer
+   * - **Extent**
+     - ``EXTENT``
+     - [extent]
+     - The spatial extent of the output raster layer
+   * - **Width in pixels**
+     - ``WIDTH_IN_PIXELS``
+     - [integer]
+     - The width in pixels of the output raster layer
+   * - **Height in pixels**
+     - ``HEIGHT_IN_PIXELS``
+     - [integer]
+     - The height in pixels of the output raster layer
+   * - **Total pixel count**
+     - ``TOTAL_PIXEL_COUNT``
+     - [integer]
+     - The count of pixels in the output raster layer
+
+**Algorithm ID**: ``qgis:fuzzifyrasterlargemembership``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgisfuzzifyrasterlinearmembership:
+
+Fuzzify raster (linear membership) |312|
+------------------------------------------
+
+Transforms an input raster to a fuzzified raster by assigning a
+membership value to each pixel, using a Linear membership function.
+Membership values range from 0 to 1. In the fuzzified raster, a value
+of 0 implies no membership of the defined fuzzy set, whereas a value
+of 1 means full membership.
+The linear function is defined as |fuzzy_linear_formula|, where *a*
+is the low bound and *b* the high bound. This equation assigns
+membership values using a linear transformation for pixel values
+between the low and high bounds.
+Pixels values smaller than the low bound are given 0 membership
+whereas pixel values greater than the high bound are given 1
+membership.
+
+.. seealso:: :ref:`qgisfuzzifyrastergaussianmembership`,
+  :ref:`qgisfuzzifyrasterlargemembership`,
+  :ref:`qgisfuzzifyrasternearmembership`,
+  :ref:`qgisfuzzifyrasterpowermembership`,
+  :ref:`qgisfuzzifyrastersmallmembership`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Raster**
+     - ``INPUT``
+     - [raster]
+     - Input raster layer
+   * - **Band Number**
+     - ``BAND``
+     - [raster band]
+
+       Default: The first band of the raster layer
+     - If the raster is multiband, choose the band that you want to
+       fuzzify.
+   * - **Low fuzzy membership bound**
+     - ``FUZZYLOWBOUND``
+     - [number]
+
+       Default: 0
+     - Low bound of the linear function
+   * - **High fuzzy membership bound**
+     - ``FUZZYHIGHBOUND``
+     - [number]
+
+       Default: 1
+     - High bound of the linear function
+   * - **Fuzzified raster**
+     - ``OUTPUT``
+     - [same as input]
+     - Specification of the output raster. One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Fuzzified raster**
+     - ``OUTPUT``
+     - [same as input]
+     - Output raster layer containing the result
+   * - **CRS authority identifier**
+     - ``CRS_AUTHID``
+     - [crs]
+     - The coordinate reference system of the output raster layer
+   * - **Extent**
+     - ``EXTENT``
+     - [extent]
+     - The spatial extent of the output raster layer
+   * - **Width in pixels**
+     - ``WIDTH_IN_PIXELS``
+     - [integer]
+     - The width in pixels of the output raster layer
+   * - **Height in pixels**
+     - ``HEIGHT_IN_PIXELS``
+     - [integer]
+     - The height in pixels of the output raster layer
+   * - **Total pixel count**
+     - ``TOTAL_PIXEL_COUNT``
+     - [integer]
+     - The count of pixels in the output raster layer
+
+**Algorithm ID**: ``qgisfuzzifyrasterlinearmembership``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgisfuzzifyrasternearmembership:
+
+Fuzzify raster (near membership) |312|
+------------------------------------------
+
+Transforms an input raster to a fuzzified raster by assigning a
+membership value to each pixel, using a Near membership function.
+Membership values range from 0 to 1.
+In the fuzzified raster, a value of 0 implies no membership of the
+defined fuzzy set, whereas a value of 1 means full membership.
+The near membership function is defined as |near_formula|, where
+*f1* is the spread and *f2* the midpoint.
+
+.. seealso:: :ref:`qgisfuzzifyrastergaussianmembership`,
+  :ref:`qgisfuzzifyrasterlargemembership`,
+  :ref:`qgisfuzzifyrasterlinearmembership`,
+  :ref:`qgisfuzzifyrasterpowermembership`,
+  :ref:`qgisfuzzifyrastersmallmembership`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Raster**
+     - ``INPUT``
+     - [raster]
+     - Input raster layer
+   * - **Band Number**
+     - ``BAND``
+     - [raster band]
+
+       Default: The first band of the raster layer
+     - If the raster is multiband, choose the band that you want to
+       fuzzify.
+   * - **Function midpoint**
+     - ``FUZZYMIDPOINT``
+     - [number]
+
+       Default: 50
+     - Midpoint of the near function
+   * - **Function spread**
+     - ``FUZZYSPREAD``
+     - [number]
+
+       Default: 0.01
+     - Spread of the near function
+   * - **Fuzzified raster**
+     - ``OUTPUT``
+     - [same as input]
+     - Specification of the output raster. One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Fuzzified raster**
+     - ``OUTPUT``
+     - [same as input]
+     - Output raster layer containing the result
+   * - **CRS authority identifier**
+     - ``CRS_AUTHID``
+     - [crs]
+     - The coordinate reference system of the output raster layer
+   * - **Extent**
+     - ``EXTENT``
+     - [extent]
+     - The spatial extent of the output raster layer
+   * - **Width in pixels**
+     - ``WIDTH_IN_PIXELS``
+     - [integer]
+     - The width in pixels of the output raster layer
+   * - **Height in pixels**
+     - ``HEIGHT_IN_PIXELS``
+     - [integer]
+     - The height in pixels of the output raster layer
+   * - **Total pixel count**
+     - ``TOTAL_PIXEL_COUNT``
+     - [integer]
+     - The count of pixels in the output raster layer
+
+**Algorithm ID**: ``qgis:fuzzifyrasternearmembership``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgisfuzzifyrasterpowermembership:
+
+Fuzzify raster (power membership) |312|
+------------------------------------------
+
+Transforms an input raster to a fuzzified raster by assigning a
+membership value to each pixel, using a Power membership function.
+Membership values range from 0 to 1.
+In the fuzzified raster, a value of 0 implies no membership of the
+defined fuzzy set, whereas a value of 1 means full membership.
+The power function is defined as |power_formula|, where *a* is the
+low bound, *b* is the high bound, and *f1* the exponent.
+This equation assigns membership values using the power transformation
+for pixel values between the low and high bounds.
+Pixels values smaller than the low bound are given 0 membership
+whereas pixel values greater than the high bound are given 1
+membership.
+
+.. seealso:: :ref:`qgisfuzzifyrastergaussianmembership`, :ref:`qgisfuzzifyrasterlargemembership`,
+  :ref:`qgisfuzzifyrasterlinearmembership`, :ref:`qgisfuzzifyrasternearmembership`,
+  :ref:`qgisfuzzifyrastersmallmembership`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Raster**
+     - ``INPUT``
+     - [raster]
+     - Input raster layer
+   * - **Band Number**
+     - ``BAND``
+     - [raster band]
+
+       Default: The first band of the raster layer
+     - If the raster is multiband, choose the band that you want to
+       fuzzify.
+   * - **Low fuzzy membership bound**
+     - ``FUZZYLOWBOUND``
+     - [number]
+
+       Default: 0
+     - Low bound of the power function
+   * - **High fuzzy membership bound**
+     - ``FUZZYHIGHBOUND``
+     - [number]
+
+       Default: 1
+     - High bound of the power function
+   * - **High fuzzy membership bound**
+     - ``FUZZYEXPONENT``
+     - [number]
+
+       Default: 2
+     - Exponent of the power function
+   * - **Fuzzified raster**
+     - ``OUTPUT``
+     - [same as input]
+     - Specification of the output raster. One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Fuzzified raster**
+     - ``OUTPUT``
+     - [same as input]
+     - Output raster layer containing the result
+   * - **CRS authority identifier**
+     - ``CRS_AUTHID``
+     - [crs]
+     - The coordinate reference system of the output raster layer
+   * - **Extent**
+     - ``EXTENT``
+     - [extent]
+     - The spatial extent of the output raster layer
+   * - **Width in pixels**
+     - ``WIDTH_IN_PIXELS``
+     - [integer]
+     - The width in pixels of the output raster layer
+   * - **Height in pixels**
+     - ``HEIGHT_IN_PIXELS``
+     - [integer]
+     - The height in pixels of the output raster layer
+   * - **Total pixel count**
+     - ``TOTAL_PIXEL_COUNT``
+     - [integer]
+     - The count of pixels in the output raster layer
+
+**Algorithm ID**: ``qgisfuzzifyrasterpowermembership``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgisfuzzifyrastersmallmembership:
+
+Fuzzify raster (small membership) |312|
+------------------------------------------
+
+Transforms an input raster to a fuzzified raster by assigning a
+membership value to each pixel, using a Small membership function.
+Membership values range from 0 to 1.
+In the fuzzified raster, a value of 0 implies no membership of the
+defined fuzzy set, whereas a value of 1 means full membership.
+The small membership function is defined as |small_formula|, where
+*f1* is the spread and *f2* the midpoint.
+
+.. seealso:: :ref:`qgisfuzzifyrastergaussianmembership`,
+  :ref:`qgisfuzzifyrasterlargemembership`
+  :ref:`qgisfuzzifyrasterlinearmembership`,
+  :ref:`qgisfuzzifyrasternearmembership`,
+  :ref:`qgisfuzzifyrasterpowermembership`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Raster**
+     - ``INPUT``
+     - [raster]
+     - Input raster layer
+   * - **Band Number**
+     - ``BAND``
+     - [raster band]
+
+       Default: The first band of the raster layer
+     - If the raster is multiband, choose the band that you want to
+       fuzzify.
+   * - **Function midpoint**
+     - ``FUZZYMIDPOINT``
+     - [number]
+
+       Default: 50
+     - Midpoint of the small function
+   * - **Function spread**
+     - ``FUZZYSPREAD``
+     - [number]
+
+       Default: 5
+     - Spread of the small function
+   * - **Fuzzified raster**
+     - ``OUTPUT``
+     - [same as input]
+     - Specification of the output raster. One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
+
+Outputs
+.......
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Fuzzified raster**
+     - ``OUTPUT``
+     - [same as input]
+     - Output raster layer containing the result
+   * - **CRS authority identifier**
+     - ``CRS_AUTHID``
+     - [crs]
+     - The coordinate reference system of the output raster layer
+   * - **Extent**
+     - ``EXTENT``
+     - [extent]
+     - The spatial extent of the output raster layer
+   * - **Width in pixels**
+     - ``WIDTH_IN_PIXELS``
+     - [integer]
+     - The width in pixels of the output raster layer
+   * - **Height in pixels**
+     - ``HEIGHT_IN_PIXELS``
+     - [integer]
+     - The height in pixels of the output raster layer
+   * - **Total pixel count**
+     - ``TOTAL_PIXEL_COUNT``
+     - [integer]
+     - The count of pixels in the output raster layer
+
+**Algorithm ID**: ``qgisfuzzifyrastersmallmembership``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+>>>>>>> cab40811f... Make table with a lot of content render correctly in pdf file
 .. _qgisrasterbooleanand:
 
 Raster boolean AND
@@ -35,7 +697,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -93,7 +755,7 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -172,7 +834,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -230,7 +892,7 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -305,7 +967,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -395,7 +1057,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -428,7 +1089,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -464,7 +1124,7 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -534,7 +1194,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -584,7 +1244,7 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -659,7 +1319,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -714,7 +1374,7 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -777,7 +1437,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -857,7 +1517,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -906,7 +1565,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1004,7 +1663,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1035,7 +1693,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1124,7 +1782,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1160,7 +1817,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 30 20 20 30
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1203,7 +1859,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1244,7 +1899,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1293,7 +1947,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1331,7 +1984,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1384,7 +2037,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name

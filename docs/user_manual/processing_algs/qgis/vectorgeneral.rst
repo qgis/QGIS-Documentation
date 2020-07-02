@@ -32,7 +32,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -71,7 +70,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -167,7 +165,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -204,7 +201,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -237,7 +233,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -279,7 +274,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -314,7 +308,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -336,7 +329,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -374,7 +366,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -391,7 +382,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -435,7 +425,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -456,7 +445,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -493,7 +481,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -523,7 +510,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -569,7 +555,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -623,7 +609,7 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -659,6 +645,212 @@ Outputs
   :end-before: **end_algorithm_code_section**
 
 
+<<<<<<< HEAD
+=======
+.. _qgisdetectdatasetchanges:
+
+Detect dataset changes
+-----------------------------------
+Compares two vector layers, and determines which features are
+unchanged, added or deleted between the two.
+It is designed for comparing two different versions of the same
+dataset.
+
+.. figure:: img/detect_change.png
+  :align: center
+
+  Detect dataset change example
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Original layer**
+     - ``ORIGINAL``
+     - [vector: any]
+     - The vector layer considered as the original version
+   * - **Revised layer**
+     - ``REVISED``
+     - [vector: any]
+     - The revised or modified vector layer
+   * - **Attributes to consider for match**
+   
+       (Optional)
+     - ``COMPARE_ATTRIBUTES``
+     - [tablefield: any] [list]
+     - Attributes to consider for match. By default, all attributes
+       are compared.  
+   * - **Geometry comparison behavior**
+   
+       (Optional)
+     - ``MATCH_TYPE``
+     - [enumeration]
+       
+       Default: 1
+     - Defines the criteria for comparison. Options:
+
+       * 0 --- Exact Match: includes the order and vertices count of
+         geometries
+       * 1 --- Tolerant Match (Topological Equality): geometries are
+         considered equal
+
+   * - **Unchanged features**
+     - ``UNCHANGED``
+     - [vector: same as Original layer]
+     - Specify the output vector layer containing the unchanged
+       features. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
+   * - **Added features**
+     - ``ADDED``
+     - [vector: same as Original layer]
+     - Specify the output vector layer containing the added features.
+       One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
+   * - **Deleted features**
+     - ``DELETED``
+     - [vector: same as Original layer]
+     - Specify the output vector layer containing the deleted
+       features. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
+
+Outputs
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+   :class: longtable
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Unchanged features**
+     - ``UNCHANGED``
+     - [vector: same as Original layer]
+     - Vector layer containing the unchanged features. 
+   * - **Added features**
+     - ``ADDED``
+     - [vector: same as Original layer]
+     - Vector layer containing the added features.
+   * - **Deleted features**
+     - ``DELETED``
+     - [vector: same as Original layer]
+     - Vector layer containing the deleted features.
+   * - **Count of unchanged features**
+     - ``UNCHANGED_COUNT``
+     - [number]
+     - Count of unchanged features.
+   * - **Count of features added in revised layer**
+     - ``ADDED_COUNT``
+     - [number]
+     - Count of features added in revised layer.
+   * - **Count of features deleted from original layer**
+     - ``DELETED_COUNT``
+     - [number]
+     - Count of features deleted from original layer.
+
+**Algorithm ID**: ``qgis:detectdatasetchanges``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+.. _qgisdropgeometries:
+
+Drop geometries
+---------------
+Creates a simple *geometryless* copy of the input layer attribute
+table.
+It keeps the attribute table of the source layer.
+
+If the file is saved in a local folder, you can choose between many
+file formats.
+
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
+.. seealso:: :ref:`qgisdeleteduplicategeometries`,
+   :ref:`qgisremovenullgeometries`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - The input vector layer
+   * - **Dropped geometries**
+     - ``OUTPUT``
+     - [table]
+     - Specify the output geometryless layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
+
+Outputs
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Dropped geometries**
+     - ``OUTPUT``
+     - [table]
+     - The output geometryless layer.
+       A copy of the original attribute table.
+
+**Algorithm ID**: ``qgis:dropgeometries``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+>>>>>>> cab40811f... Make table with a lot of content render correctly in pdf file
 .. _qgisexecutesql:
 
 Execute SQL
@@ -677,7 +869,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -753,7 +945,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -786,7 +977,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -817,7 +1007,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -861,7 +1050,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -904,7 +1093,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -944,7 +1132,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1040,7 +1228,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1098,7 +1285,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1198,7 +1385,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1251,7 +1437,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1347,7 +1533,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1391,7 +1576,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1467,7 +1652,7 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1535,7 +1720,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1575,7 +1759,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1610,7 +1793,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1657,7 +1839,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1675,6 +1856,55 @@ Outputs
   :end-before: **end_algorithm_code_section**
 
 
+<<<<<<< HEAD
+=======
+.. _qgisrepairshapefile:
+
+Repair Shapefile
+----------------
+Repairs a broken ESRI Shapefile dataset by (re)creating the SHX file.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input Shapefile**
+     - ``INPUT``
+     - [file]
+     - Full path to the ESRI Shapefile dataset with a missing or
+       broken SHX file
+
+Outputs
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Repaired layer**
+     - ``OUTPUT``
+     - [vector any]
+     - The input vector layer with the SHX file repaired
+	 
+	 **Algorithm ID**: ``qgis:repairshapefile``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+>>>>>>> cab40811f... Make table with a lot of content render correctly in pdf file
 .. _qgisreprojectlayer:
 
 Reproject layer
@@ -1693,7 +1923,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1729,7 +1958,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1765,7 +1993,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1786,7 +2013,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1824,7 +2050,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1868,7 +2094,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1910,7 +2135,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1943,7 +2167,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1980,7 +2203,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1997,7 +2219,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name

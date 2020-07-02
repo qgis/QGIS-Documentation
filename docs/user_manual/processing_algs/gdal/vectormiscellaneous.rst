@@ -8,6 +8,80 @@ Vector miscellaneous
       :depth: 1
 
 
+<<<<<<< HEAD
+=======
+.. _gdalbuildvirtualvector:
+
+Build virtual vector
+--------------------
+Creates a virtual vector layer that contains a set of vector layers.
+The output virtual vector layer will not be opened in the current
+project.
+
+This algorithm is especially useful in case another algorithm needs
+multiple layers but accept only one ``vrt`` in which the layers are
+specified.
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input datasources**
+     - ``INPUT``
+     - [vector: any] [list]
+     - Select the vector layers you want to use to build
+       the virtual vector
+   * - **Create "unioned" VRT**
+     - ``UNIONED``
+     - [boolean]
+       
+       Default: False
+     - Check if you want to unite all the vectors in a
+       single ``vrt`` file
+   * - **Virtual vector**
+     - ``OUTPUT``
+     - [same as input]
+
+       Default: ``[Save to temporary file]``
+     - Specify the output layer containing only the duplicates.
+       One of:
+
+       * Save to a Temporary File
+       * Save to File...
+
+       The file encoding can also be changed here.
+
+Outputs
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Virtual vector**
+     - ``OUTPUT``
+     - [vector: any]
+     - The output virtual vector made from the chosen sources
+
+**Algorithm ID**: ``gdal:buildvirtualvector``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+>>>>>>> cab40811f... Make table with a lot of content render correctly in pdf file
 .. _gdalexecutesql:
 
 Execute SQL
@@ -17,7 +91,7 @@ Runs a simple or complex query with SQL syntax on the source layer.
 The result of the query will be added as a new layer.
 
 This algorithm is derived from the
-`GDAL ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_ .
+`GDAL ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_.
 
 Parameters
 ..........
@@ -25,7 +99,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -80,7 +154,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -112,7 +185,7 @@ activated.
 Then you can use the algorithm.
 
 This algorithm is derived from the
-`GDAL ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_ .
+`GDAL ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_.
 
 Parameters
 ..........
@@ -120,7 +193,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -407,7 +480,7 @@ Imports vector layers inside a PostGreSQL database. A new connection
 to the PostGIS database must be created.
 
 This algorithm is derived from the
-`GDAL ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_ .
+`GDAL ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_.
 
 Parameters
 ..........
@@ -415,7 +488,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -750,7 +823,7 @@ The information includes the geometry type, feature count, the spatial
 extent, the projection information and many more.
 
 This algorithm is derived from the
-`GDAL ogrinfo utility <https://gdal.org/ogrinfo.html>`_ .
+`GDAL ogrinfo utility <https://gdal.org/ogrinfo.html>`_.
 
 Parameters
 ..........
@@ -758,7 +831,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -805,7 +878,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
