@@ -165,6 +165,12 @@ Outputs
        that have some fraction draining to it according to the
        D-infinity flow model.
 
+**Algorithm ID**: ``taudem:areadinf``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 D-Infinity Flow Directions
 --------------------------
@@ -308,6 +314,12 @@ Outputs
        facets centered at each grid cell, measured as drop/distance,
        i.e. tan of the slope angle.
 
+**Algorithm ID**: ``taudem:dinfflowdir``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 D8 Contributing Area
 --------------------
@@ -431,6 +443,12 @@ Outputs
        contribution plus the contribution from upslope neighbors that
        drain in to it according to the D8 flow model.
 
+**Algorithm ID**: ``taudem:aread8``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 D8 Flow Directions
 ------------------
@@ -550,6 +568,12 @@ Outputs
      - [raster]
      - A grid giving slope in the D8 flow direction.
        This is measured as drop/distance.
+
+**Algorithm ID**: ``taudem:d8flowdir``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 Grid Network
@@ -725,6 +749,12 @@ Outputs
        This generalizes the common definition to cases where more
        than two flow paths join at a point.
 
+**Algorithm ID**: ``taudem:gridnet``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 Pit Remove
 ----------
@@ -806,3 +836,10 @@ Outputs
      - [raster]
      - A grid of elevation values with pits removed so that flow
        is routed off of the domain.
+
+**Algorithm ID**: ``taudem:pitremove``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
