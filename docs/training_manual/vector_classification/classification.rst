@@ -334,10 +334,9 @@ Let's now add our custom rules.
       .. figure:: img/criterion_refined_midway.png
          :align: center
 
-      These filters are exclusive, in that they collectively exclude
-      some areas on the map (i.e. those which are smaller than 605000
-      (square meters), are not residential, and are not
-      '|majorUrbanName|').
+      These filters are exclusive, in that they exclude areas on the
+      map (non-residential areas which are smaller than 605000
+      (square meters) are not included in any of the rules).
 
    #. We will catch the remaining features using a new rule labeled
       **Small non residential areas**. Instead of a filter expression,
