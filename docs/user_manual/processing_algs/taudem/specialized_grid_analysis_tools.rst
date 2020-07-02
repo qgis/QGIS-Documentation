@@ -1052,7 +1052,7 @@ Outputs
   index, but contributing area is in the denominator to avoid divide by 0
   errors when slope is 0.
 
-**Algorithm ID**: ``taudem:slopeavedown``
+**Algorithm ID**: ``taudem:slopearearatio``
 
 .. include:: ../qgis/qgis_algs_include.rst
   :start-after: **algorithm_code_section**
