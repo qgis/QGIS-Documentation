@@ -7,6 +7,47 @@ Stream Network Analysis
       :local:
       :depth: 1
 
+Connect down
+------------
+
+Description
+...........
+
+
+Parameters
+..........
+
+``D8 flow directions`` [raster]
+  A grid of D8 flow directions which are defined, for each cell, as the
+  direction of the one of its eight adjacent or diagonal neighbors with the
+  steepest downward slope. This grid can be obtained as the output of the
+  **"D8 Flow Directions"** tool.
+
+``D8 contribution area`` [raster]
+
+``Watershed`` [raster]
+
+``Grid cells move to downstream`` [number]
+
+``Outlets`` [vector: point]
+  Optional
+
+  A point shape file defining outlets of interest. If this input file is used,
+  only the area upslope of these outlets will be evaluated by the tool.
+
+Outputs
+.......
+
+``Extreme Upslope Values Grid`` [raster]
+  A grid of the maximum/minimum upslope values.
+
+**Algorithm ID**: ``taudem:connectdown``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 D8 Extreme Upslope Value
 ------------------------
 
@@ -70,6 +111,54 @@ Outputs
 ``Extreme Upslope Values Grid`` [raster]
   A grid of the maximum/minimum upslope values.
 
+**Algorithm ID**: ``taudem:d8flowpathextremeup``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+Gage Watershed
+--------------
+
+Description
+...........
+
+Calculates Gage Watersheds Grid. Each grid cell is labeled with the identifier
+(from column ``id``) of the gage to which it drains directly without passing
+through any other gages.
+
+Parameters
+..........
+
+``D8 Flow Directions Grid`` [raster]
+  A grid of D8 flow directions which are defined, for each cell, as the
+  direction of the one of its eight adjacent or diagonal neighbors with the
+  steepest downward slope. This grid can be obtained as the output of the
+  **"D8 Flow Directions"** tool.
+
+``Gages Shapefile`` [vector: point]
+  A point shapefile defining the gages to which watersheds will be delineated.
+  This shapefile should have a colmun ``id``. Grid cells draining directly to
+  each point in this shapefile will be labeled with this id.
+
+Outputs
+.......
+
+``Gage Watershed Grid`` [raster]
+  A grid identifies each gage watershed. Each grid cell is labeled with the
+  identifier (from column ``id``) of the gage to which it drains directly
+  without passing through any other gages.
+
+``Downstream Identifiers File`` [file]
+  Text file giving watershed downslope connectivity
+
+**Algorithm ID**: ``taudem:gagewatershed``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 Length Area Stream Source
 -------------------------
@@ -129,6 +218,12 @@ Outputs
   An indicator grid (1,0) that evaluates A >= (M)(L^y), based on the maximum
   upslope path length, the D8 contributing area grid inputs, and parameters ``M``
   and ``y``. This grid indicates likely stream source grid cells.
+
+**Algorithm ID**: ``taudem:lengtharea``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 Move Outlets To Streams
@@ -197,6 +292,12 @@ Outputs
   originally on a stream, -1 if it was not moved because there was not a stream
   within the maximum distance, or some positive value if it was moved.
 
+**Algorithm ID**: ``taudem:moveoutletstostreams``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 Peuker Douglas
 --------------
@@ -259,6 +360,39 @@ See also
   by local parallel processing of discrete terrain elevation data", Comput.
   Graphics Image Process., 4: 375-387.
 
+**Algorithm ID**: ``taudem:peukerdouglas``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+Peuker Douglas stream
+---------------------
+
+Description
+...........
+
+
+Parameters
+..........
+
+Outputs
+.......
+
+``Stream source`` [raster]
+  An indicator grid (1, 0) of upward curved grid cells according to the Peuker
+  and Douglas algorithm, and if viewed, resembles a channel network. This
+  proto-channel network generally lacks connectivity and requires thinning,
+  issues that were discussed in detail by Band (1986).
+
+**Algorithm ID**: ``taudem:peukerdouglasstreamdef``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 Slope Area Combination
 ----------------------
 
@@ -302,12 +436,97 @@ Outputs
   specific catchment area grid, ``m`` slope exponent parameter, and ``n`` area
   exponent parameter.
 
-Console usage
-.............
+**Algorithm ID**: ``taudem:slopearea``
 
-::
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
-  processing.runalg('taudem:slopeareacombination', slope_grid, area_grid, slope_exponent, area_exponent, slope_area_grid)
+
+Slope area stream definition
+----------------------------
+
+Description
+...........
+
+Creates a grid of slope-area values = ``(Sm) (An)`` based on slope and specific
+catchment area grid inputs, and parameters ``m`` and ``n``. This tool is intended
+for use as part of the slope-area stream raster delineation method.
+
+Parameters
+..........
+
+``D8 flow directions`` [raster]
+
+``D-infinity Contributing Area`` [raster]
+  A grid giving the specific catchment area for each cell taken as its own
+  contribution (grid cell length or summation of weights) plus the proportional
+  contribution from upslope neighbors that drain in to it. This grid is
+  typically obtained from the **"D-Infinity Contributing Area"** tool.
+
+``Slope`` [raster]
+  This input is a grid of slope values. This grid can be obtained from the
+  **"D-Infinity Flow Directions"** tool.
+
+``Mask grid`` [raster]
+
+``Outlets`` [vector: point]
+
+``Pit-filled grid for drop analysis`` [raster]
+
+``D8 contributing area for drop analysis`` [raster]
+
+``Slope Exponent`` [number]
+  The slope exponent (``m``) parameter which will be used in the formula:
+  ``(Sm)(An)``, that is used to create the slope-area grid.
+
+  Default: *2*
+
+``Area Exponent`` [number]
+  The area exponent (``n``) parameter which will be used in the formula:
+  ``(Sm)(An)``, that is used to create the slope-area grid.
+
+  Default: *1*
+
+``Accumulation threshold`` [number]
+
+``Minimum threshold`` [number]
+
+``Maximum threshold`` [number]
+
+``Number of drop thresholds`` [number]
+
+``Type of threshold step`` [enumeration].
+
+  Options:
+
+  * 0 --- Logarithmic
+  * 1 --- Linear
+
+  Default: *0*
+
+``Check for edge contamination`` [boolean]
+
+``Select threshold by drop analysis`` [boolean]
+
+Outputs
+.......
+``Stream raster`` [raster]
+
+``Slope area`` [raster]
+  A grid of slope-area values = ``(Sm)(An)`` calculated from the slope grid,
+  specific catchment area grid, ``m`` slope exponent parameter, and ``n`` area
+  exponent parameter.
+
+``Maximum upslope`` [raster]
+
+``Drop analysis`` [file]
+
+**Algorithm ID**: ``taudem:slopeareastreamdef``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 Stream Definition By Threshold
@@ -364,12 +583,33 @@ Outputs
   This is an indicator grid (1, 0) that indicates the location of streams, with
   a value of 1 for each of the stream cells and 0 for the remainder of the cells.
 
-Console usage
-.............
+**Algorithm ID**: ``taudem:threshold``
 
-::
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
-  processing.runalg('taudem:streamdefinitionbythreshold', -ssa, -thresh, -mask, -src)
+
+Stream definition with drop analysis
+------------------------------------
+
+Description
+...........
+
+
+Parameters
+..........
+
+
+Outputs
+.......
+
+
+**Algorithm ID**: ``taudem:streamdefdropanalysis``
+
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 Stream Drop Analysis
@@ -495,12 +735,11 @@ Outputs
   t-statistic is less than 2. For the science behind the drop analysis, see
   Tarboton et al. (1991, 1992), Tarboton and Ames (2001).
 
-Console usage
-.............
+**Algorithm ID**: ``taudem:dropanalysis``
 
-::
-
-  processing.runalg('taudem:streamdropanalysis', d8_contrib_area_grid, d8_flow_dir_grid, pit_filled_grid, accum_stream_source_grid, outlets_shape, min_treshold, max_threshold, treshold_num, step_type, drop_analysis_file)
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 See also
 ........
@@ -517,6 +756,7 @@ See also
   networks from digital elevation data", World Water and Environmental Resources
   Congress, Orlando, Florida, May 20-24, ASCE,
   https://www.researchgate.net/publication/2329568_Advances_in_the_Mapping_of_Flow_Networks_From_Digital_Elevation_Data.
+
 
 Stream Reach and Watershed
 --------------------------
@@ -694,84 +934,9 @@ Outputs
   * Elevation
   * Contributing area
 
-Console usage
-.............
+**Algorithm ID**: ``taudem:streamnet``
 
-::
-
-  processing.runalg('taudem:streamreachandwatershed', -fel, -p, -ad8, -src, -o, -sw, -ord, -w, -net, -tree, -coord)
-
-
-Gage Watershed
---------------
-
-Description
-...........
-
-Calculates Gage Watersheds Grid. Each grid cell is labeled with the identifier
-(from column ``id``) of the gage to which it drains directly without passing
-through any other gages.
-
-Parameters
-..........
-
-``D8 Flow Directions Grid`` [raster]
-  A grid of D8 flow directions which are defined, for each cell, as the
-  direction of the one of its eight adjacent or diagonal neighbors with the
-  steepest downward slope. This grid can be obtained as the output of the
-  **"D8 Flow Directions"** tool.
-
-``Gages Shapefile`` [vector: point]
-  A point shapefile defining the gages to which watersheds will be delineated.
-  This shapefile should have a colmun ``id``. Grid cells draining directly to
-  each point in this shapefile will be labeled with this id.
-
-Outputs
-.......
-
-``Gage Watershed Grid`` [raster]
-  A grid identifies each gage watershed. Each grid cell is labeled with the
-  identifier (from column ``id``) of the gage to which it drains directly
-  without passing through any other gages.
-
-``Downstream Identifiers File`` [file]
-  Text file giving watershed downslope connectivity
-
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:gagewatershed2', -p, -o, -gw, -id)
-
-
-Topographic Wetness Index
--------------------------
-
-Description
-...........
-
-<put algorithm description here>
-
-Parameters
-..........
-
-``D-Infinity Specific Catchment Area Grid`` [raster]
-  <put parameter description here>
-
-``D-Infinity Slope Grid`` [raster]
-  <put parameter description here>
-
-Outputs
-.......
-
-``Topographic Wetness Index Grid`` [raster]
-  <put output description here>
-
-Console usage
-.............
-
-::
-
-  processing.runalg('taudem:topographicwetnessindex', -sca, -slp, -twi)
+.. include:: ../qgis/qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
