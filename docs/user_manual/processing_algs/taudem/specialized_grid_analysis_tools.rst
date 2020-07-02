@@ -50,6 +50,12 @@ Outputs
   A grid giving the horizontal distance along the flow path as defined by the
   D8 Flow Directions Grid to the streams in the Stream Raster Grid.
 
+**Algorithm ID**: ``taudem:d8hdisttostrm``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 D-Infinity Avalanche Runout
 ---------------------------
@@ -178,6 +184,12 @@ Outputs
   This is a grid of the flow distance from the source site that has the highest
   angle to each cell.
 
+**Algorithm ID**: ``taudem:dinfavalanche``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 D-Infinity Concentration Limited Accumulation
 ---------------------------------------------
@@ -293,6 +305,12 @@ Outputs
   A grid giving the resulting concentration of the compound of interest in
   the flow.
 
+**Algorithm ID**: ``taudem:dinfconclimaccum``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 D-Infinity Decaying Accumulation
 --------------------------------
@@ -374,6 +392,12 @@ Outputs
   The D-Infinity Decaying Accumulation tool creates a grid of the accumulated
   mass at each location in the domain where mass moves with the D-infinity flow
   field, but is subject to first order decay in moving from cell to cell.
+
+**Algorithm ID**: ``taudem:dinfdecayaccum``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 D-Infinity Distance Down
@@ -479,6 +503,12 @@ Outputs
   Grid containing the distance to stream calculated using the D-infinity flow
   model and the statistical and path methods chosen.
 
+**Algorithm ID**: ``taudem:dinfdistdown``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 D-Infinity Distance Up
 ----------------------
@@ -580,6 +610,12 @@ Outputs
   Grid containing the distances up to the ridge calculated using the D-Infinity
   flow model and the statistical and path methods chosen.
 
+**Algorithm ID**: ``taudem:dinfdistup``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 D-Infinity Reverse Accumulation
 -------------------------------
@@ -628,6 +664,12 @@ Outputs
 ``Maximum Downslope Grid`` [raster]
   The grid giving the maximum of the weight loading grid downslope from each
   grid cell.
+
+**Algorithm ID**: ``taudem:dinfrevaccum``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
 
 
 D-Infinity Transport Limited Accumulation - 2
@@ -751,6 +793,12 @@ Outputs
   output and gives the concentration of a compound (contaminant) adhered or
   bound to the transported substance (e.g. sediment) is calculated.
 
+**Algorithm ID**: unknown
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 D-Infinity Transport Limited Accumulation
 -----------------------------------------
@@ -862,6 +910,12 @@ Outputs
   minus the transport capacity out of the grid cell. The deposition grid is
   calculated as the transport in + the local supply - the tranport out.
 
+**Algorithm ID**: ``taudem:dinftranslimaccum``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 D-Infinity Upslope Dependence
 -----------------------------
@@ -911,6 +965,12 @@ Outputs
   A grid quantifing the amount each source point in the domain contributes to
   the zone defined by the destination grid.
 
+**Algorithm ID**: ``taudem:dinfupdependence``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 Slope Average Down
 ------------------
@@ -951,6 +1011,12 @@ Outputs
   This output is a grid of slopes calculated in the D8 downslope direction,
   averaged over the selected distance.
 
+**Algorithm ID**: ``taudem:slopeavedown``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
 
 Slope Over Area Ratio
 ---------------------
@@ -985,3 +1051,45 @@ Outputs
   This is algebraically related to the more common ``ln(a/tan beta)`` wetness
   index, but contributing area is in the denominator to avoid divide by 0
   errors when slope is 0.
+
+**Algorithm ID**: ``taudem:slopeavedown``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
+Topographic wetness index
+-------------------------
+
+Description
+...........
+
+Calculates the topographic wetness index (TWI).
+
+Parameters
+..........
+
+``Slope`` [raster]
+  A grid of slope. This grid can be generated using ether the
+  **"D8 Flow Directions"** tool or the **"D-Infinity Flow Directions"** tool.
+
+``Specific catchment area`` [raster]
+  A grid giving the contributing area value for each cell taken as its own
+  contribution plus the contribution from upslope neighbors that drain in to it.
+  Contributing area is counted in terms of the number of grid cells (or
+  summation of weights). This grid can be generated using either the
+  **"D8 Contributing Area"** tool or the **"D-Infinity Contributing Area"** tool.
+
+Outputs
+.......
+
+``Wetness index`` [raster]
+  A grid of the wetness index (TWI).
+
+**Algorithm ID**: ``taudem:twi``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
