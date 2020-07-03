@@ -528,8 +528,11 @@ that may change (e.g., using ``now()`` function).
 
    * Virtual fields are not permanent in the layer attributes, meaning that
      they're only saved and available in the project file they've been created.
-   * A field can be set virtual only at its creation and the expression used
-     can't be changed later: you'll need to delete and recreate that field.
+   * Virtual fields are marked with a purple background in the fields tab of
+     the layer properties dialog to distinguish them from regular physical
+     or joined fields. Their expression can be edited later by pressing the
+     expression button in the Comment column. An expression editor window will
+     be opened to adjust the expression of the virtual field.
 
 .. _quick_field_calculation_bar:
 
