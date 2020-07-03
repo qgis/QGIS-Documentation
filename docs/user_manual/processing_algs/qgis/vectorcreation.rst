@@ -1125,7 +1125,7 @@ If you want approximately the same point density for all the line
 features, you can data-define the number of points using the area of
 the polygon feature geometry.
 
-.. seealso:: :ref:`qgisrandompointsinsidepolyons`
+.. seealso:: :ref:`qgisrandompointsinsidepolygons`
 
 Parameters
 ..........
