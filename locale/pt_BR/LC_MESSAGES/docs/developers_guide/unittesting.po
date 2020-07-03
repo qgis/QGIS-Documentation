@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Aline Furlanetto Viero <afviero@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:24+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Aline Furlanetto Viero <afviero@gmail.com>, 2020\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -51,6 +52,10 @@ msgid ""
 "the CMake build process). Lets take an overview of the process before we "
 "delve into the details:"
 msgstr ""
+"O teste de unidade é realizado usando uma combinação de QTestLib (a "
+"biblioteca de testes Qt) e CTest (uma estrutura para compilar e executar "
+"testes como parte do processo de criação do CMake). Vamos ter uma visão "
+"geral do processo antes de nos aprofundarmos nos detalhes:"
 
 #: ../../docs/developers_guide/unittesting.rst:26
 msgid ""
@@ -62,6 +67,14 @@ msgid ""
 "QGIS since we are starting with a testing framework well after much "
 "application logic has already been implemented."
 msgstr ""
+"Há algum código que você deseja testar, por exemplo uma classe ou função. Os"
+" maiores defensores da programaçãosugerem que o código ainda não deve ser "
+"gravado quando você começar a compilar seus testes e, ao implementar o "
+"código, poderá validar imediatamente cada nova parte funcional que você "
+"adiciona ao seu teste. Na prática, você provavelmente precisará escrever "
+"testes para o código preexistente no QGIS, pois estamos começando com uma "
+"estrutura de teste bem depois da implementação de muita lógica do "
+"aplicativo."
 
 #: ../../docs/developers_guide/unittesting.rst:34
 msgid ""
@@ -71,6 +84,12 @@ msgid ""
 "class. It will check the return from each method to make sure it matches the"
 " expected value. If any one of the calls fails, the unit will fail."
 msgstr ""
+"Você cria um teste de unidade. Isso acontece em ``<QGIS Source "
+"Dir>/tests/src/core`` no caso da biblioteca principal. O teste é basicamente"
+" um cliente que cria uma instância de uma classe e chama alguns métodos "
+"nessa classe. Ele verifica o retorno de cada método para garantir que ele "
+"corresponda ao valor esperado. Se qualquer uma das chamadas falhar, a "
+"unidade vai falhar."
 
 #: ../../docs/developers_guide/unittesting.rst:40
 msgid ""
@@ -105,6 +124,8 @@ msgid ""
 "You compile your sources and install. Do this using normal ``make && (sudo)"
 "  make install`` procedure."
 msgstr ""
+"Você compila suas sources e instala. Faça isso usando o procedimento normal "
+"``make && (sudo) make install``."
 
 #: ../../docs/developers_guide/unittesting.rst:59
 msgid ""
@@ -112,6 +133,9 @@ msgid ""
 "after the ``make install`` step, though we will explain other approaches "
 "that offer more fine grained control over running tests."
 msgstr ""
+"Você executa seus testes. Isso normalmente é feito simplesmente executando "
+"``make test`` após a etapa ``make install``, apesar de explicarmos outras "
+"abordagens que oferecem controle mais refinado sobre a execução de testes."
 
 #: ../../docs/developers_guide/unittesting.rst:64
 msgid ""
@@ -120,6 +144,10 @@ msgid ""
 "the source tree so all you need to do are the easy bits - writing unit "
 "tests!"
 msgstr ""
+"Bem com essa visão geral, vamos nos aprofundar um pouco nos detalhes. Já "
+"fizemos grande parte da configuração para você no CMake e em outros locais "
+"da árvore de origem; portanto, tudo o que você precisa fazer são as partes "
+"fáceis - escrever testes de unidade!"
 
 #: ../../docs/developers_guide/unittesting.rst:70
 msgid "Creating a unit test"

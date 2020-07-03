@@ -100,6 +100,9 @@ msgid ""
 "Mutable static class member names should begin with a lower case ``s``, but "
 "constant static class member names should be all caps:"
 msgstr ""
+"Os nomes dos membros da classe estática mutável devem começar com ``s`` "
+"minúsculos, mas os nomes constantes dos membros da classe estática devem ser"
+" todos em maiúsculas:"
 
 #: ../../docs/developers_guide/codingstandards.rst:46
 msgid "``sRefCounter``"
@@ -222,6 +225,10 @@ msgid ""
 "shared objects, which are always returned by value. Return ``QObject`` or "
 "subclassed objects as pointers."
 msgstr ""
+"Retorna objetos pequenos e copiados trivialmente como valores. Objetos "
+"maiores devem ser retornados por referência const. A única exceção a isso "
+"são os objetos implicitamente compartilhados, que sempre são retornados por "
+"valor. Retorna ``QObject`` ou objetos de subclasse como ponteiros."
 
 #: ../../docs/developers_guide/codingstandards.rst:107
 msgid "``int maximumValue() const``"
@@ -234,16 +241,20 @@ msgstr "``const LayerSet& layers() const``"
 #: ../../docs/developers_guide/codingstandards.rst:109
 msgid "``QString title() const`` (``QString`` is implicitly shared)"
 msgstr ""
+"``QString title() const`` (``QString`` é compartilhado implicitamente)"
 
 #: ../../docs/developers_guide/codingstandards.rst:110
 msgid ""
 "``QList< QgsMapLayer* > layers() const`` (``QList`` is implicitly shared)"
 msgstr ""
+"``QList< QgsMapLayer* > layers() const`` (``QList`` é compartilhado "
+"implicitamente)"
 
 #: ../../docs/developers_guide/codingstandards.rst:111
 msgid ""
 "``QgsVectorLayer *layer() const;`` (``QgsVectorLayer`` inherits ``QObject``)"
 msgstr ""
+"``QgsVectorLayer *layer() const;`` (``QgsVectorLayer`` herda ``QObject``)"
 
 #: ../../docs/developers_guide/codingstandards.rst:112
 msgid ""
@@ -451,7 +462,7 @@ msgstr ""
 
 #: ../../docs/developers_guide/codingstandards.rst:298
 msgid "Comments"
-msgstr ""
+msgstr "Comentários"
 
 #: ../../docs/developers_guide/codingstandards.rst:300
 msgid ""
@@ -887,4 +898,4 @@ msgstr ""
 
 #: ../../docs/developers_guide/codingstandards.rst:612
 msgid ":source:`doc/AUTHORS`"
-msgstr ""
+msgstr ":source:`doc/AUTORES`"

@@ -37,6 +37,8 @@ msgid ""
 "in most dialogs --- please note that third-party plugins can point to "
 "dedicated web pages."
 msgstr ""
+"특정 문제에 대해 도움말이 필요한 경우, 대부분의 대화창에 있는 :guilabel:`Help` 버튼을 통해 최신 사용자 지침서에서 "
+"대응하는 페이지를 볼 수 있습니다. 이때 외부 플러그인의 경우 전용 웹페이지로 이동할 수도 있다는 사실을 기억하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:32
 msgid "Panels"
@@ -50,6 +52,9 @@ msgid ""
 "via the :menuselection:`View --> Panels -->` menu and mentioned at "
 ":ref:`panels_tools`."
 msgstr ""
+"QGIS는 작업할 수 있는 패널 여러 개를 기본적으로 제공합니다. 이 패널들 가운데 일부는 이 절에서 설명하고 있으며, 이 문서의 다른 "
+"부분들에서 다른 패널들의 정보를 찾아볼 수도 있습니다. :menuselection:`View --> Panels -->` 메뉴에서 "
+"QGIS가 제공하는 기본 패널들의 전체 목록을 볼 수 있으며, :ref:`panels_tools` 에서 이를 언급하고 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:43
 msgid "Layers Panel"
@@ -64,6 +69,10 @@ msgid ""
 " listed nearer the top of the legend are drawn over layers listed lower down"
 " in the legend."
 msgstr ""
+":guilabel:`Layers` 패널(통칭 ``맵 범례``)에서 프로젝트가 보유한 모든 레이어 목록을 볼 수 있으며, 레이어의 가시성을"
+" 관리할 수 있습니다. :kbd:`Ctrl+1` 키 조합을 눌러 레이어를 보이게 하거나 숨길 수 있습니다. Z 순서를 변경하기 위해 범례"
+" 안에서 레이어를 선택해, 위아래로 드래그할 수 있습니다. Z 순서란 범례 목록 상위에 위치한 레이어가 범례 목록 하위에 있는 레이어를 "
+"덮는다는 뜻입니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:55
 msgid ""
@@ -80,6 +89,7 @@ msgid ""
 "|symbology| :sup:`Open the layer styling dock (F7)`: toggle the layer "
 "styling panel on and off."
 msgstr ""
+"|symbology| :sup:`Open the layer styling dock (F7)`: 레이어 스타일 작업 패널을 켜고 끕니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:62
 msgid "|addGroup| :sup:`Add new group`"
@@ -90,6 +100,8 @@ msgid ""
 "|showMapTheme| :sup:`Manage Map Themes`: control visibility of layers and "
 "arrange them in different map themes."
 msgstr ""
+"|showMapTheme| :sup:`Manage Map Themes`: 레이어의 가시성을 제어하고 서로 다른 맵 테마에 레이어를 "
+"배치합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:65
 msgid ""
@@ -100,9 +112,9 @@ msgid ""
 " to identify which kind of features from which layers cover your area of "
 "interest."
 msgstr ""
-"|filterMap| :sup:`Filter Legend by Map Content`: 레이어가 켜지고 피처가 현재 맵 캔버스 안에 "
-"들어오는 레이어만, 레이어 패널에 레이어 스타일을 표시합니다. 해당 사항이 없을 경우, 일반적인 NULL 심볼로 표시합니다. 레이어 "
-"심볼을 바탕으로 하는 이 방식으로 어떤 레이어의 어떤 피처 유형이 사용자의 관심 지역에 들어오는 지 손쉽게 알아볼 수 있습니다."
+"|filterMap| :sup:`Filter Legend by Map Content`: 맵에 표시되며 피처가 현재 맵 캔버스 안에 "
+"들어오는 레이어만, 레이어 패널에 레이어 스타일을 렌더링합니다. 해당 사항이 없을 경우, 일반적인 NULL 심볼로 표시합니다. 레이어 "
+"심볼을 바탕으로 하는 이 방식으로 어떤 레이어의 어떤 피처 유형이 사용자의 관심 지역에 들어오는지 손쉽게 알아볼 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:70
 msgid ""
@@ -112,6 +124,9 @@ msgid ""
 "within a given area/feature of another layer. From the drop-down list, you "
 "can edit and clear the expression currently applied."
 msgstr ""
+"|expressionFilter| :sup:`Filter Legend by Expression`: 선택한 레이어 트리에서, 조건을 "
+"만족시키는 피처가 없는 레이어의 스타일을 제거하는 표현식을 적용하도록 해줍니다. 예를 들어 기준으로 설정한 다른 레이어의 영역/피처 "
+"내부에 있는 피처만 강조하도록 할 수도 있습니다. 드롭다운 목록에서 현재 적용된 표현식을 편집하고 삭제할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:75
 msgid ""
@@ -123,7 +138,7 @@ msgstr ""
 
 #: ../../docs/user_manual/introduction/general_tools.rst:77
 msgid "|removeLayer| :sup:`Remove Layer/Group` currently selected."
-msgstr ""
+msgstr "|removeLayer| :sup:`Remove Layer/Group`: 현재 선택한 레이어나 그룹을 제거합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:84
 msgid "Layer Toolbar in Layers Panel"
@@ -133,11 +148,11 @@ msgstr "레이어 패널의 레이어 툴바"
 msgid ""
 "Tools to manage the layers panel are also available for map and legend items"
 " in print layouts"
-msgstr ""
+msgstr "레이어 패널을 관리하는 도구들은 인쇄 조판기의 맵과 범례 항목을 배치하는 데에도 쓸 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:94
 msgid "Configuring map themes"
-msgstr ""
+msgstr "맵 테마 환경 설정하기"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:96
 msgid ""
@@ -145,6 +160,8 @@ msgid ""
 " to convenient shortcuts to manipulate visibility of the layers in the "
 ":guilabel:`Layers` panel:"
 msgstr ""
+"|showMapTheme| :sup:`Manage Map Themes` 드롭다운 버튼은 :guilabel:`Layers` 패널에 있는 "
+"레이어들의 가시성을 조작할 수 있는 편리한 도구들을 제공합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:100
 msgid "|showAllLayers| :guilabel:`Show All Layers`"
@@ -173,19 +190,22 @@ msgid ""
 "legend and switch from one map theme to another. A map theme is a "
 "**snapshot** of the current map legend that records:"
 msgstr ""
+"레이어 가시성을 간단하게 조작할 수 있을 뿐만 아니라, |showMapTheme| :sup:`Manage Map Themes` 메뉴는 "
+"범례에서 **맵 테마**를 환경 설정할 수 있으며 맵 테마를 변경할 수도 있습니다. 맵 테마는 다음과 같은  정보를 기록하는 현재 맵의 "
+"**스냅샷**입니다:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:111
 msgid "the layers set as visible in the :guilabel:`Layers` panel"
-msgstr ""
+msgstr ":guilabel:`Layers` 패널에서 보이도록 설정된 레이어들"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:112
 msgid "**and** for each visible layer:"
-msgstr ""
+msgstr "**그리고** 각 가시 레이어의:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:114
 msgid ""
 "the reference to the :ref:`style <save_layer_property>` applied to the layer"
-msgstr ""
+msgstr "레이어에 적용된 :ref:`스타일 <save_layer_property>` 관련 사항"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:115
 msgid ""
@@ -193,25 +213,27 @@ msgid ""
 ":guilabel:`Layers panel`. This applies to :ref:`symbologies "
 "<vector_style_menu>` other than the single symbol rendering"
 msgstr ""
+":guilabel:`Layers` 패널에서 노드 항목이 체크된 레이어 같은, 스타일의 가시 범주. 이는 단일 심볼 렌더링이 아니라 "
+":ref:`심볼 <vector_style_menu>` 에 적용됩니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:118
 msgid ""
 "the collapsed/expanded state of the layer node(s) and the group(s) it's "
 "placed inside"
-msgstr ""
+msgstr "레이어 노드(들) 및 레이어가 위치한 그룹(들)의 펼쳐진/접힌 상태"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:121
 msgid "To create a map theme:"
-msgstr ""
+msgstr "맵 테마를 생성하려면:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:123
 msgid "Check a layer you want to show"
-msgstr ""
+msgstr "표시하고자 하는 레이어를 체크하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:124
 msgid ""
 "Configure the layer properties (symbology, diagram, labels...) as usual"
-msgstr ""
+msgstr "평소대로 레이어 속성(심볼, 다이어그램, 레이블 등등)을 환경 설정하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:125
 msgid ""
@@ -219,6 +241,8 @@ msgid ""
 ":guilabel:`Add...` to store the settings as :ref:`a new style embedded in "
 "the project <manage_custom_style>`"
 msgstr ""
+"하단에 있는 :menuselection:`Style -->` 메뉴를 펼친 다음 :guilabel:`Add...` 를 클릭해서 설정을 "
+":ref:`프로젝트에 내장된 새 스타일 <manage_custom_style>` 로 저장하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:129
 msgid ""
@@ -227,32 +251,36 @@ msgid ""
 " the layer while this style is enabled (eg change the symbology rendering), "
 "the map theme is updated with new information."
 msgstr ""
+"맵 테마는 현재 속성의 상세 사항을 기억하지 않습니다. 스타일 명칭 참조 정보만 저장하기 때문에, 이 스타일이 활성화된 상태에서 (예를 "
+"들어 심볼 렌더링을 변경하는 것과 같이) 레이어에 수정 사항을 적용할 때마다 맵 테마는 새 정보로 업데이트됩니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:134
 msgid "Repeat the previous steps as necessary for the other layers"
-msgstr ""
+msgstr "다른 레이어에 대해서도 필요한 만큼 이전 단계를 반복합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:135
 msgid ""
 "If applicable, expand or collapse groups or visible layer nodes in the "
 ":guilabel:`Layers` panel"
-msgstr ""
+msgstr "적용할 수 있다면, :guilabel:`Layers` 패널에서 그룹 또는 가시 레이어 노드를 펼치거나 접습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:137
 msgid ""
 "Click on the |showMapTheme| :sup:`Manage Map Themes` button on top of the "
 "panel, and :guilabel:`Add Theme...`"
 msgstr ""
+"패널 상단에 있는 |showMapTheme| :sup:`Manage Map Themes` 버튼을 클릭한 다음, :guilabel:`Add"
+" Theme...` 를 클릭해서 테마를 추가합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:139
 msgid "Enter the map theme's name and click :guilabel:`OK`"
-msgstr ""
+msgstr "맵 테마의 명칭을 입력한 다음 :guilabel:`OK` 를 클릭합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:141
 msgid ""
 "The new theme is listed in the lower part of the |showMapTheme| drop-down "
 "menu."
-msgstr ""
+msgstr "새 테마가 |showMapTheme| 드롭다운 메뉴의 목록 하단에 추가됩니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:143
 msgid ""
@@ -263,6 +291,10 @@ msgid ""
 ":menuselection:`Replace Theme -->` to update a map theme. Use the "
 ":menuselection:`Remove Current Theme` button to delete the active theme."
 msgstr ""
+"사용자가 필요한 만큼 제한없이 맵 테마를 생성할 수 있습니다. 위와 같이 정의한 기존 맵 테마 내용 가운데 맵 범례에 있는 현재 "
+"조합(가시 레이어, 활성 스타일, 맵 범례 노드)과 일치하지 않는 것이 하나라도 있다면, :guilabel:`Add Theme...` 를"
+" 클릭해서 새 맵 테마를 생성하거나, :menuselection:`Replace Theme -->` 메뉴를 사용해서 맵 테마를 "
+"업데이트하십시오. :menuselection:`Remove Current Theme` 버튼을 클릭하면 활성 테마를 삭제합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:150
 msgid ""
@@ -272,6 +304,9 @@ msgid ""
 "create different map items based on specific themes and independent of the "
 "current main canvas rendering (see :ref:`Map item layers <layout_layers>`)."
 msgstr ""
+"맵 테마는 미리 환경 설정해놓은 서로 다른 조합들을 빠르게 바꾸는 데 유용합니다. 목록에서 맵 테마를 선택하면 해당 테마의 조합을 "
+"복구합니다. 인쇄 조판기에서도 환경 설정해놓은 테마에 접근할 수 있기 때문에, 특정 테마에 기반하면서도 현재 주 캔버스의 렌더링에 "
+"독립적인 서로 다른 맵 항목들을 생성할 수 있습니다. (:ref:`맵 항목 레이어 <layout_layers>` 참조)"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:158
 msgid "Overview of the context menu of the Layers panel"
@@ -284,6 +319,9 @@ msgid ""
 "organized in groups. Depending on the item selected in the panel, a right-"
 "click shows a dedicated set of options presented below."
 msgstr ""
+"툴바 아래 있는 레이어 패널의 주 요소는 프로젝트에 추가된 벡터 또는 래스터 레이어 목록을 담은 프레임으로, 이 레이어들을 그룹화할 수도"
+" 있습니다. 패널에서 어떤 항목을 선택하느냐에 따라 오른쪽 클릭으로 나타나는 컨텍스트 메뉴의 내용이 달라집니다. 컨텍스트 메뉴의 옵션들은"
+" 다음과 같습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:168
 msgid "Option"
@@ -299,11 +337,11 @@ msgstr "래스터 레이어"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:168
 msgid "Group"
-msgstr "그룹"
+msgstr "Group"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:170
 msgid "|zoomToLayer| :guilabel:`Zoom to Layer/Group`"
-msgstr ""
+msgstr "|zoomToLayer| :guilabel:`Zoom to Layer/Group`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:170
 #: ../../docs/user_manual/introduction/general_tools.rst:170
@@ -458,7 +496,7 @@ msgstr "|checkbox|"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:171
 msgid "|zoomToLayer| :guilabel:`Zoom to Selection`"
-msgstr ""
+msgstr "|zoomToLayer| :guilabel:`Zoom to Selection`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:171
 #: ../../docs/user_manual/introduction/general_tools.rst:171
@@ -520,55 +558,55 @@ msgstr "|inOverview| :guilabel:`Show in Overview`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:173
 msgid ":guilabel:`Show Feature Count`"
-msgstr ""
+msgstr ":guilabel:`Show Feature Count`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:174
 msgid ":guilabel:`Copy Layer/Group`"
-msgstr ""
+msgstr ":guilabel:`Copy Layer/Group`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:175
 msgid ":guilabel:`Rename Layer/Group`"
-msgstr ""
+msgstr ":guilabel:`Rename Layer/Group`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:176
 msgid "|zoomActual| :guilabel:`Zoom to Native Resolution (100%)`"
-msgstr ""
+msgstr "|zoomActual| :guilabel:`Zoom to Native Resolution (100%)`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:177
 msgid ":guilabel:`Stretch Using Current Extent`"
-msgstr ""
+msgstr ":guilabel:`Stretch Using Current Extent`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:178
 msgid "|dbManager| :guilabel:`Update SQL Layer...`"
-msgstr ""
+msgstr "|dbManager| :guilabel:`Update SQL Layer...`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:179
 msgid "|addGroup| :guilabel:`Add Group`"
-msgstr ""
+msgstr "|addGroup| :guilabel:`Add Group`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:180
 msgid "|duplicateLayer| :guilabel:`Duplicate Layer`"
-msgstr ""
+msgstr "|duplicateLayer| :guilabel:`Duplicate Layer`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:181
 msgid "|removeLayer| :guilabel:`Remove Layer/Group...`"
-msgstr ""
+msgstr "|removeLayer| :guilabel:`Remove Layer/Group...`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:182
 msgid ":guilabel:`Move Out of Group`"
-msgstr ""
+msgstr ":guilabel:`Move Out of Group`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:183
 msgid ":guilabel:`Move to Top`"
-msgstr ""
+msgstr ":guilabel:`Move to Top`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:184
 msgid ":guilabel:`Check and all its Parents`"
-msgstr ""
+msgstr ":guilabel:`Check and all its Parents`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:185
 msgid ":guilabel:`Group Selected`"
-msgstr ""
+msgstr ":guilabel:`Group Selected`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:186
 msgid "|openTable| :guilabel:`Open Attribute Table`"
@@ -588,67 +626,67 @@ msgstr ":guilabel:`Filter...`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:190
 msgid ":guilabel:`Set Layer Scale Visibility...`"
-msgstr ""
+msgstr ":guilabel:`Set Layer Scale Visibility...`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:191
 msgid ":guilabel:`Zoom to Visible Scale`"
-msgstr ""
+msgstr ":guilabel:`Zoom to Visible Scale`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:192
 msgid ":menuselection:`Set CRS -->`"
-msgstr ""
+msgstr ":menuselection:`Set CRS -->`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:193
 msgid ":menuselection:`--> Set Layer/Group CRS...`"
-msgstr ""
+msgstr ":menuselection:`--> Set Layer/Group CRS...`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:194
 msgid ":menuselection:`--> Set Project CRS from Layer`"
-msgstr ""
+msgstr ":menuselection:`--> Set Project CRS from Layer`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:195
 msgid ":guilabel:`Set Group WMS Data...`"
-msgstr ""
+msgstr ":guilabel:`Set Group WMS Data...`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:196
 msgid "|unchecked| :guilabel:`Mutually Exclusive Group`"
-msgstr ""
+msgstr "|unchecked| :guilabel:`Mutually Exclusive Group`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:197
 msgid ":guilabel:`Check and all its children (Ctrl-click)`"
-msgstr ""
+msgstr ":guilabel:`Check and all its children (Ctrl-click)`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:198
 msgid ":guilabel:`Uncheck and all its children (Ctrl-click)`"
-msgstr ""
+msgstr ":guilabel:`Uncheck and all its children (Ctrl-click)`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:199
 msgid ":guilabel:`Make Permanent`"
-msgstr ""
+msgstr ":guilabel:`Make Permanent`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:200
 msgid ":menuselection:`Export -->`"
-msgstr ""
+msgstr ":menuselection:`Export -->`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:201
 msgid ":menuselection:`--> Save As...`"
-msgstr ""
+msgstr ":menuselection:`--> Save As...`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:202
 msgid ":menuselection:`--> Save Features As...`"
-msgstr ""
+msgstr ":menuselection:`--> Save Features As...`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:203
 msgid ":menuselection:`--> Save Selected Features As...`"
-msgstr ""
+msgstr ":menuselection:`--> Save Selected Features As...`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:204
 msgid ":menuselection:`--> Save As Layer Definition File...`"
-msgstr ""
+msgstr ":menuselection:`--> Save As Layer Definition File...`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:205
 msgid ":menuselection:`--> Save As QGIS Layer Style File...`"
-msgstr ""
+msgstr ":menuselection:`--> Save As QGIS Layer Style File...`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:206
 msgid ":menuselection:`Styles -->`"
@@ -656,19 +694,19 @@ msgstr ":menuselection:`Styles -->`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:207
 msgid ":menuselection:`--> Copy Style`"
-msgstr ""
+msgstr ":menuselection:`--> Copy Style`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:208
 msgid ":menuselection:`--> Paste Style`"
-msgstr ""
+msgstr ":menuselection:`--> Paste Style`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:209
 msgid ":menuselection:`--> Add...`"
-msgstr ""
+msgstr ":menuselection:`--> Add...`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:210
 msgid ":menuselection:`--> Rename Current...`"
-msgstr ""
+msgstr ":menuselection:`--> Rename Current...`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:211
 msgid ":guilabel:`Properties...`"
@@ -685,11 +723,11 @@ msgid ""
 "GRASS vector layers."
 msgstr ""
 "GRASS 벡터 레이어의 경우, |toggleEditing| :sup:`Toggle editing` 을 사용할 수 없습니다. GRASS "
-"벡터 레이어 편집에 대한 정보는 :ref:`grass_digitizing` 을 참조하십시오."
+"벡터 레이어 편집에 대한 정보는 :ref:`grass_digitizing` 를 참조하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:224
 msgid "Interact with groups and layers"
-msgstr ""
+msgstr "그룹 및 레이어와 대화형 작업"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:226
 msgid ""
@@ -712,6 +750,8 @@ msgid ""
 ":guilabel:`Group Selected`. The selected layers will automatically be placed"
 " in a new group."
 msgstr ""
+"레이어 몇 개를 선택하고, 범례 창을 오른쪽 클릭한 다음 :guilabel:`Group Selected` 를 선택하십시오. 새 그룹이 "
+"만들어지고 선택한 레이어들이 이 그룹으로 자동 이동될 것입니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:236
 msgid ""
@@ -721,6 +761,9 @@ msgid ""
 "placed in a nested group, :guilabel:`Move Out of Group` will move the layer "
 "out of all nested groups."
 msgstr ""
+"레이어를 그룹에서 꺼내려면, 레이어를 밖으로 드래그하거나 또는 오른쪽 클릭한 다음 :guilabel:`Move Out of Group` "
+"을 선택하면 됩니다. 레이어가 원래 있던 그룹과 동일한 수준으로 이동합니다. 또, 그룹을 다른 그룹 안에 넣을 수도 있습니다. 레이어가 "
+"그룹 안의 그룹에 있는 경우, :guilabel:`Move Out of Group` 메뉴는 레이어를 모든 그룹에서 꺼낼 것입니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:242
 msgid ""
@@ -728,6 +771,8 @@ msgid ""
 "the top, or choose :guilabel:`Move to Top`. If you use this option on a "
 "layer nested in a group, the layer is moved to the top in its current group."
 msgstr ""
+"레이어 패널 최상단으로 그룹 또는 레이어를 이동시키려면, 최상단으로 드래그하거나 :guilabel:`Move to Top` 메뉴를 "
+"선택하십시오. 그룹 안에 들어 있는 레이어에 이 메뉴 옵션을 사용하면, 해당 레이어가 들어 있는 현재 그룹 안에서 최상단으로 이동합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:246
 msgid ""
@@ -741,6 +786,8 @@ msgid ""
 "have only one layer visible at the same time. Whenever a layer within the "
 "group is set visible the others will be toggled not visible."
 msgstr ""
+"**Mutually Exclusive Group** 옵션을 활성화하면 한 번에 한 레이어만 보이는 그룹을 생성할 수 있습니다. 그룹 "
+"내부의 어떤 레이어를 보이도록 설정할 때마다 다른 레이어들은 보이지 않도록 꺼질 것입니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:253
 msgid ""
@@ -748,6 +795,8 @@ msgid ""
 "holding down the :kbd:`Ctrl` key while clicking additional layers. You can "
 "then move all selected layers to a new group at the same time."
 msgstr ""
+"왼쪽 마우스 버튼으로 레이어를 선택할 때 :kbd:`Ctrl` 키를 누르고 있으면 하나 이상의 레이어 또는 그룹을 동시에 선택할 수 "
+"있습니다. 그 다음 선택한 모든 레이어를 동시에 새 그룹으로 이동시킬 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:257
 msgid ""
@@ -755,10 +804,12 @@ msgid ""
 "several items with the :kbd:`Ctrl` key and then pressing :kbd:`Ctrl+D`: all "
 "selected layers or groups will be removed from the layers list."
 msgstr ""
+":kbd:`Ctrl` 키로 항목 몇 개를 선택한 다음 :kbd:`Ctrl+D` 를 누르면 하나 이상의 레이어 또는 그룹을 한 번에 삭제할"
+" 수도 있습니다. 이렇게 하면, 선택한 모든 레이어 또는 그룹이 레이어 목록에서 한꺼번에 제거될 것입니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:262
 msgid "More information on layers and groups using indicator icon"
-msgstr ""
+msgstr "표시자(indicator) 아이콘을 통한 레이어 및 그룹에 대한 상세 정보"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:264
 msgid ""
@@ -766,18 +817,20 @@ msgid ""
 ":guilabel:`Layers` panel to give more information about the layer/group. "
 "These symbols are:"
 msgstr ""
+"레이어/그룹에 대한 상세 정보를 제공하기 위한 아이콘이 :guilabel:`Layers` 패널에 있는 레이어 또는 그룹 옆에 나타나는 "
+"경우가 종종 있습니다. 다음과 같은 심볼로 나타납니다:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:268
 msgid ""
 "|toggleEditing| to indicate that the layer is in edit mode and you can "
 "modify the data"
-msgstr ""
+msgstr "|toggleEditing| : 레이어가 편집 상태여서 사용자가 데이터를 수정할 수 있다는 것을 나타냅니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:270
 msgid ""
 "|editableEdits| to indicate that the layer being edited has some unsaved "
 "changes"
-msgstr ""
+msgstr "|editableEdits| : 편집 중인 레이어에 일부 저장되지 않은 변경 사항이 있다는 것을 나타냅니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:271
 msgid ""
@@ -785,18 +838,24 @@ msgid ""
 " to the layer. Hover over the icon to see the filter expression and double-"
 "click to update the setting"
 msgstr ""
+"|indicatorFilter| : 레이어에 :ref:`필터 <vector_query_builder>` 가 적용됐다는 것을 나타냅니다. "
+"이 아이콘 위에 마우스를 가져가면 필터 표현식을 볼 수 있고, 더블클릭하면 설정을 업데이트할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:274
 msgid ""
 "|indicatorEmbedded| to identify an :ref:`embedded group or layer "
 "<nesting_projects>` and the path to their original project file"
 msgstr ""
+"|indicatorEmbedded|: :ref:`내장된 그룹 또는 레이어 <nesting_projects>` 및 원래 프로젝트 파일의 "
+"경로를 식별합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:276
 msgid ""
 "|indicatorBadLayer| to identify a layer whose data source was not available "
 "at the project file opening. Click the icon to update the source path."
 msgstr ""
+"|indicatorBadLayer| : 프로젝트 파일을 열 때 데이터소스를 사용할 수 없는 레이어를 식별합니다. 아이콘을 클릭하면 소스 "
+"경로를 업데이트할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:278
 msgid ""
@@ -806,10 +865,13 @@ msgid ""
 "the icon to store the layer in any of the OGR vector formats supported by "
 "QGIS."
 msgstr ""
+"|indicatorMemory| : 레이어가 :ref:`임시 스크래치 레이어 <vector_new_scratch_layer>` 이며 현재"
+" 프로젝트를 닫으면 레이어의 내용이 사라질 것이라는 사실을 알려줍니다. 데이터 손실을 피하고 레이어를 항구적으로 만들려면, 아이콘을 "
+"클릭해서 레이어를 QGIS가 지원하는 OGR 벡터 유형 가운데 하나로 저장하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:282
 msgid "|indicatorNoCRS| to identify a layer that has no/unknown CRS"
-msgstr ""
+msgstr "|indicatorNoCRS| : 좌표계가 없거나, 알려지지 않은 좌표계를 가진 레이어를 식별합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:289
 msgid "Editing vector layer style"
@@ -821,6 +883,8 @@ msgid ""
 "quickly and easily. Right-click on a vector layer and select "
 ":menuselection:`Styles -->` in the list in order to:"
 msgstr ""
+"레이어 패널에서 레이어 렌더링을 쉽고 빠르게 변경할 수 있는 빠른 방법이 있습니다. 벡터 레이어를 오른쪽 클릭한 다음 목록에서 "
+":menuselection:`Styles -->` 를 선택하면 다음과 같은 작업을 할 수 있습니다:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:295
 msgid ""
@@ -828,12 +892,14 @@ msgid ""
 "If you defined many styles for the layer, you can switch from one to another"
 " and your layer rendering will automatically be updated on the map canvas."
 msgstr ""
+"레이어에 현재 적용된 :ref:`스타일 <manage_custom_style>` 을 확인합니다. 해당 레이어에 여러 스타일을 정의했을 "
+"경우, 한 스타일에서 다른 스타일로 바꿔가면 맵 캔버스에서 해당 레이어의 렌더링이 자동적으로 업데이트되는 걸 볼 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:298
 msgid ""
 "copy the current style, and when applicable, paste a copied style from "
 "another layer"
-msgstr "현재 스타일을 복사해서, 이 스타일이 적용 가능한 다른 레이어에 붙여넣어 적용시킬 수 있습니다."
+msgstr "현재 스타일을 복사해서, 이 스타일을 적용할 수 있는 다른 레이어에 붙여넣을 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:299
 msgid ""
@@ -841,10 +907,12 @@ msgid ""
 "current one) or delete the current style (when multiple styles are "
 "available)."
 msgstr ""
+"현재 스타일의 명칭을 변경하거나, (사실 현재 스타일의 복사본인) 새 스타일을 추가하거나, 또는 (다중 스타일을 사용할 수 있는 경우) "
+"현재 스타일을 삭제할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:302
 msgid "The previous options are also available for raster layers."
-msgstr ""
+msgstr "이 작업들은 래스터 레이어에 대해서도 똑같이 쓸 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:304
 msgid ""
@@ -853,6 +921,8 @@ msgid ""
 "structure with each class as a sub-item), the following options are "
 "available at layer level or class level:"
 msgstr ""
+"벡터 레이어 내부의 피처들에 모두 동일한 유일 심볼을 적용했거나, 분류별로 적용했거나 (이 경우 레이어는 트리 구조 내에서 각 분류를 "
+"하위 항목으로 가진 것으로 표시됩니다) 상관 없이, 레이어 수준이나 클래스 수준에서 다음 옵션들을 쓸 수 있습니다:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:308
 msgid ""
@@ -861,6 +931,9 @@ msgid ""
 "color...). Double-clicking on a feature also opens the :guilabel:`Symbol "
 "Selector` dialog."
 msgstr ""
+":guilabel:`Edit Symbol...` 버튼으로 :ref:`symbol-selector` 대화창을 열어 레이어 또는 피처 심볼의"
+" 모든 속성(심볼, 크기, 색상 등등)을 변경할 수 있습니다. 또 피처를 더블 클릭해도 :guilabel:`Symbol Selector`"
+" 대화창을 엽니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:311
 msgid ""
@@ -868,6 +941,9 @@ msgid ""
 "color to update the symbol fill color automatically. For convenience, "
 "**Recent colors** are available at the bottom of the color wheel."
 msgstr ""
+":ref:`color-selector` 위젯에 있는 **색상환(Color Wheel)** 을 클릭해서 색상을 고르면 심볼을 채울 색상을 "
+"자동적으로 업데이트할 수 있습니다. 사용자 편의를 위해 색상환 하단에서 **최근 사용한 색상(Recent colors)** 을 사용할 "
+"수도 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:314
 msgid ""
@@ -875,6 +951,9 @@ msgid ""
 ":guilabel:`Hide All Items` to toggle on or off the visibility of all the "
 "classes of features. This avoids (un)checking items one by one."
 msgstr ""
+"|showAllLayers| :guilabel:`Show All Items` 와 |hideAllLayers| :guilabel:`Hide"
+" All Items` 버튼을 통해 모든 피처 클래스의 가시성을 켜고 끌 수 있습니다. 이 방법을 쓰면 항목들을 하나하나 체크하거나 "
+"해제하는 수고를 피할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:318
 msgid "**Quickly share a layer style**"
@@ -887,6 +966,9 @@ msgid ""
 "the same type (vector/raster) as the original layer and, for vector layers, "
 "have the same geometry type (point, line or polygon)."
 msgstr ""
+"컨텍스트 메뉴에서, 레이어의 스타일을 복사해 그룹 또는 레이어 집합에 붙여 넣을 수 있습니다. 원본 레이어와 동일한 유형(벡터 또는 "
+"래스터)인 모든 레이어에, 그리고 벡터 레이어의 경우 동일한 도형 유형(포인트, 라인, 폴리곤)을 가진 모든 레이어에 스타일을 "
+"적용합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:332
 msgid "Layer Styling Panel"
@@ -900,6 +982,9 @@ msgid ""
 "behavior of a layer, and to visualize its effects without having to open the"
 " layer properties dialog."
 msgstr ""
+":guilabel:`Layer Styling` 패널은 (:kbd:`Ctrl+3` 키 조합으로 활성화할 수 있으며) "
+":guilabel:`Layer Properties` 대화창의 기능 가운데 일부를 실행하는 단축키입니다. 이 패널은 레이어 속성 대화창을 "
+"열지 않고도 레이어의 렌더링 방식과 습성을 정의해서 그에 따라 시각화할 수 있는 빠르고 손쉬운 방법을 제공합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:340
 msgid ""
@@ -910,6 +995,10 @@ msgid ""
 "style panel causes the color selector dialog to be opened inside the layer "
 "style panel itself rather than as a separate dialog."
 msgstr ""
+"레이어 스타일 작업 패널은 \"모달(modal)\" 대화상자가 레이어 속성 대화창을 가리는 일을 방지할 뿐만 아니라, 이미 대부분의 "
+"스타일 기능(색상 선택기, 효과 속성, 규칙 편집, 라벨 대체 등등)을 내장하고 있기 때문에 대화창들이 화면을 덮어버리는 일도 "
+"방지해줍니다. 예를 들어, 레이어 스타일 작업 패널 내부의 색상 버튼을 클릭하면 색상 선택기가 개별 대화창이 아니라 레이어 스타일 패널 "
+"안에서 열립니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:347
 msgid ""
@@ -924,6 +1013,9 @@ msgid ""
 "properties. These options are the same as those in the "
 ":ref:`raster_properties_dialog`."
 msgstr ""
+"래스터 레이어의 경우 레이어의 |symbology| :guilabel:`Symbology`, |transparency| "
+":guilabel:`Transparency`, |rasterHistogram| :guilabel:`Histogram` 을 설정합니다. 이"
+" 옵션들은 :ref:`raster_properties_dialog` 과 동일합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:352
 msgid ""
@@ -931,12 +1023,17 @@ msgid ""
 " and |labeling| :guilabel:`Labels` properties. These options are the same as"
 " those in the :ref:`vector_properties_dialog`."
 msgstr ""
+"벡터 레이어의 경우 레이어의 |symbology| :guilabel:`Symbology`, |3d| :guilabel:`3D View`,"
+" |labeling| :guilabel:`Labels` 를 설정합니다. 이 옵션들은 "
+":ref:`vector_properties_dialog` 과 동일합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:355
 msgid ""
 "Manage the associated style(s) in the |stylePreset| :guilabel:`Style "
 "Manager` (more details at :ref:`manage_custom_style`)."
 msgstr ""
+"|stylePreset| :guilabel:`Style Manager` 에서 관련 스타일(들)을 관리합니다. (자세한 내용은 "
+":ref:`manage_custom_style` 를 참조하세요.)"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:357
 msgid ""
@@ -944,6 +1041,9 @@ msgid ""
 "style in the current project: you can therefore cancel or restore to any "
 "state by selecting it in the list and clicking :guilabel:`Apply`."
 msgstr ""
+"사용자가 현재 프로젝트의 레이어 스타일에 적용한 변경 |history| :guilabel:`History` 전체를 추적합니다. 따라서 "
+"이력 목록에 있는 어떤 상태든 선택하고 :guilabel:`Apply` 버튼을 클릭하면 해당 상태 이후의 변경 사항을 취소하고 해당 "
+"상태를 복구할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:361
 msgid ""
@@ -951,14 +1051,17 @@ msgid ""
 "update` checkbox. Tick it to render your changes immediately on the map "
 "canvas: you no longer need to click the :guilabel:`Apply` button."
 msgstr ""
+"이 패널의 또다른 강력한 기능은 |checkbox| :guilabel:`Live update` 체크박스입니다. 이 옵션을 활성화하면 "
+"사용자가 변경 사항을 만드는 대로 맵 캔버스에 해당 변경 사항을 즉시 렌더링하기 때문에, 더 이상 :guilabel:`Apply` 버튼을"
+" 클릭할 필요가 없습니다. "
 
 #: ../../docs/user_manual/introduction/general_tools.rst:370
 msgid "Defining a layer's symbology from the layer styling panel"
-msgstr ""
+msgstr "레이어 스타일 작업 패털에서 레이어 심볼 정의하기"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:372
 msgid "**Add custom tabs to the Layer Styling panel**"
-msgstr ""
+msgstr "**레이어 스타일 작업 패널에 사용자 지정 탭 추가하기**"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:374
 msgid ""
@@ -967,10 +1070,13 @@ msgid ""
 "https://nathanw.net/2016/06/29/qgis-style-dock-part-2-plugin-panels/ for an "
 "example."
 msgstr ""
+":ref:`PyQGIS <PyQGIS-Developer-Cookbook>` 를 사용하면, 레이어 스타일 작업 패널에 레이어 속성 정보 "
+"관리를 위한 새로운 탭을 설정할 수 있습니다. 다음의 예를 참고하세요: https://nathanw.net/2016/06/29/qgis-"
+"style-dock-part-2-plugin-panels/"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:385
 msgid "Layer Order Panel"
-msgstr ""
+msgstr "레이어 순서 패널"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:387
 msgid ""
@@ -978,6 +1084,8 @@ msgid ""
 "order in the :guilabel:`Layers` panel: the higher a layer is in the panel, "
 "the higher (hence, more visible) it'll be in the map view."
 msgstr ""
+"QGIS 맵 캔버스에 보여지는 레이어는 기본적으로 :guilabel:`Layers` 패널에 있는 레이어 순서를 따라 렌더링됩니다. "
+"패널에서 레이어가 위에 있을수록 맵 뷰에서도 위에 렌더링됩니다. (따라서 더 잘 보입니다.)"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:391
 msgid ""
@@ -990,20 +1098,27 @@ msgid ""
 "see that the ``airports`` features are displayed over the ``alaska`` polygon"
 " despite those layers' respective placement in the Layers panel."
 msgstr ""
+":menuselection:`View --> Panels -->` 메뉴에서 또는 :kbd:`Ctrl+9` 키 조합으로 활성화할 수 있는 "
+":guilabel:`Layer Order` 패널을 통해 레이어 패널에 있는 순서에 독립적으로 레이어를 렌더링하는 순서를 정의할 수 "
+"있습니다. 레이어 목록 아래 있는 |checkbox| :guilabel:`Control rendering order` 옵션을 체크하고 "
+"사용자가 원하는 대로 패널에 있는 레이어들을 재정렬하십시오. 예를 들어 figure_layer_order_ 그림을 보십시오. 레이어 "
+"패널에 있는 레이어 위치에도 불구하고 ``airports`` 피처가 ``alaska`` 폴리곤 위에 표시되고 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:401
 msgid ""
 "Unchecking |checkbox| :guilabel:`Control rendering order` will revert to "
 "default behavior."
 msgstr ""
+"|checkbox| :guilabel:`Control rendering order` 옵션을 해제하면 기본 동작대로 레이어 페널의 순서를 "
+"따르게 됩니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:409
 msgid "Define a layer order independent of the legend"
-msgstr ""
+msgstr "범례에 독립적인 레이어 순서 정의하기"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:417
 msgid "Overview Panel"
-msgstr ""
+msgstr "오버뷰 패널"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:419
 msgid ""

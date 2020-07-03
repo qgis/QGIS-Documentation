@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:16+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -60,6 +61,10 @@ msgid ""
 "map projections try to transform the earth from its spherical shape (3D) to "
 "a planar shape (2D)."
 msgstr ""
+"**Map projections**  intente retratar la superficie de la tierra, o una "
+"porción de la tierra, en una hoja de papel o pantalla de computadora. En "
+"términos simples, las proyecciones de mapas intentan transformar la tierra "
+"de su forma esférica (3D) a una forma plana (2D)."
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:19
 msgid ""
@@ -69,6 +74,11 @@ msgid ""
 "extent of the area you want to work in, on the analysis you want to do, and "
 "often on the availability of data."
 msgstr ""
+"Un **coordinate reference system** (CRS) entonces define cómo el mapa "
+"proyectado bidimensional en su SIG se relaciona con lugares reales en la "
+"tierra. La decisión de qué proyección de mapa y CRS usar depende de la "
+"extensión regional del área en la que desea trabajar, del análisis que desea"
+" hacer y, a menudo, de la disponibilidad de datos."
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:26
 msgid "Map Projection in detail"
@@ -622,6 +632,19 @@ msgid ""
 " and progressing East back to the **antemeridian** (**zone 60** at 180 "
 "degrees East longitude) as shown in figure_utm_zones_."
 msgstr ""
+"El sistema de coordenadas de referencia Universal Transverse Mercator (UTM) "
+"tiene su origene en el **equator** a una **Longitude** específica. Ahora los"
+" valores Y crecen hacia el sur y los valores X crecen hacie el oeste. El CRS"
+" UTM es una proyección de mapa global. Esto significa que generalmente se "
+"usa en todo el mundo. Pero como ya se describió en la sección \"precisión de"
+" las proyecciones de mapas\" anterior, cuanto mayor es el área (por ejemplo,"
+" Sudáfrica), se produce una mayor distorsión de la conformidad angular, la "
+"distancia y el área. Para evitar demasiada distorsión, el mundo se divide en"
+" **60 zonas iguales** que tienen todas **6 grados** de ancho de este a "
+"oeste. Las **zonas UTM** están numeradas **1 a 60**, comenzando en el "
+"**antimeridiano** (**zona 1** a 180 grados de longitud oeste) y progresando "
+"hacia el este hasta el **antemeridio** ( **zona 60** a 180 grados de "
+"longitud este) como se muestra en figure_utm_zones_."
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:323
 msgid ""
@@ -788,6 +811,14 @@ msgid ""
 "within the map window of your GIS, even though they may be in **different** "
 "reference systems. In QGIS, this functionality is applied by default."
 msgstr ""
+"Para resolver este problema, muchos SIG incluyen una funcionalidad llamada "
+"proyección **sobre la marcha**. Significa que puede **definir** una cierta "
+"proyección cuando inicia el SIG y todas las capas que luego carga, sin "
+"importar qué sistema de referencia de coordenadas tengan, se mostrarán "
+"automáticamente en la proyección que definió. Esta funcionalidad le permite "
+"superponer capas dentro de la ventana del mapa de su SIG, aunque puedan "
+"estar en sistemas de referencia **diferentes**. En QGIS, esta funcionalidad "
+"se aplica por defecto."
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:406
 msgid "Common problems / things to be aware of"
@@ -890,29 +921,35 @@ msgstr "Aquí hay algunas ideas para que intentes con  tus alumnos:"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:442
 msgid "Start QGIS"
-msgstr ""
+msgstr "Inicie QGIS"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:443
 msgid ""
 "In :menuselection:`Project --> Properties... --> CRS` check :guilabel:`No "
 "projection (or unknown/non-Earth projection)`"
 msgstr ""
+"En :menuselection:`Project --> Properties... --> CRS` marque :guilabel:`No "
+"projection (or unknown/non-Earth projection)`"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:445
 msgid "Load two layers of the same area but with different projections"
-msgstr ""
+msgstr "Cargue dos áreas del mismo área pero con diferentes proyecciones"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:446
 msgid ""
 "Let your pupils find the coordinates of several places on the two layers. "
 "You can show them that it is not possible to overlay the two layers."
 msgstr ""
+"Deje que sus alumnos encuentren las coordenadas de varios lugares en las dos"
+" capas. Puede mostrarles que no es posible superponer las dos capas."
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:448
 msgid ""
 "Then define the coordinate reference system as Geographic/WGS 84 inside the "
 ":guilabel:`Project Properties` dialog"
 msgstr ""
+"Luego defina el sistema de referencia de coordenadas como Geographic/WGS 84 "
+"dentro del:guilabel:`Project Properties` dialog"
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:450
 msgid ""
@@ -920,6 +957,9 @@ msgid ""
 "setting a CRS for the project (hence, enabling \"on-the-fly\" projection) "
 "works."
 msgstr ""
+"Vuelva a cargar las dos capas de la misma área y permita que sus alumnos "
+"vean cómo funciona la configuración de un CRS para el proyecto (por lo "
+"tanto, habilitar la proyección \"sobre la marcha\")."
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:453
 msgid ""
@@ -928,6 +968,10 @@ msgid ""
 "of the complexity of this topic. You can select different CRSs to display "
 "the same layer in different projections."
 msgstr ""
+"Puede abrir el diálogo: guilabel: `Propiedades del proyecto` en QGIS y "
+"mostrar a sus alumnos los diferentes Sistemas de referencia de coordenadas "
+"para que tengan una idea de la complejidad de este tema. Puede seleccionar "
+"diferentes CRS para mostrar la misma capa en diferentes proyecciones."
 
 #: ../../docs/gentle_gis_introduction/coordinate_reference_systems.rst:459
 msgid "Something to think about"

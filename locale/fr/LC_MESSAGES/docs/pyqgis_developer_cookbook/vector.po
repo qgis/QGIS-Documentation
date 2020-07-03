@@ -6,6 +6,7 @@
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
 # Francis Gasc <francisgasc@gmail.com>, 2020
+# thomas jacquemot <t.jacquemot@inddigo.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:23+0000\n"
-"Last-Translator: Francis Gasc <francisgasc@gmail.com>, 2020\n"
+"Last-Translator: thomas jacquemot <t.jacquemot@inddigo.com>, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -46,6 +47,8 @@ msgid ""
 "Most work here is based on the methods of the :class:`QgsVectorLayer "
 "<qgis.core.QgsVectorLayer>` class."
 msgstr ""
+"La plupart des exemples de cette section sont basés sur des méthodes de la "
+"classe <qgis.core.QgsVectorLayer>"
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:66
 msgid "Retrieving information about attributes"
@@ -57,6 +60,10 @@ msgid ""
 " by calling :meth:`fields() <qgis.core.QgsVectorLayer.fields>` on a "
 ":class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` object:"
 msgstr ""
+"Vous pouvez récupérer les informations associées aux champs d'une couche "
+"vecteur en appelant la méthode :meth:`fields() "
+"<qgis.core.QgsVectorLayer.fields>` d'un objet :class:`QgsVectorLayer "
+"<qgis.core.QgsVectorLayer>`"
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:89
 msgid "Iterating over Vector Layer"
@@ -69,6 +76,11 @@ msgid ""
 " showing some information about each feature. The ``layer`` variable is "
 "assumed to have a :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` object."
 msgstr ""
+"Parcourir les enregistrement d'une couche vecteur est l'une des tache les "
+"plus basique. L'exemple de code ci dessous vous montre comment le faire pour"
+" montrer quelques informations de chaque enregistrement. Ici, la variable "
+"``layer`` doit être une instance de l'objet :class:`QgsVectorLayer "
+"<qgis.core.QgsVectorLayer>`. "
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:150
 msgid "Selecting features"
@@ -81,24 +93,37 @@ msgid ""
 "filter. Selected features are normally highlighted in a different color "
 "(default is yellow) to draw user's attention on the selection."
 msgstr ""
+"Dans QGIS Desktop, vous pouvez sélectionner des enregistrements de "
+"différentes façons : vous pouvez cliquer sur un objet, dessiner un rectangle"
+" sur la carte ou encore filtrer une couche avec des expressions. Les objets "
+"sélectionnés apparaissent normalement en surbrillance dans une couleur "
+"différente (le jaune par défaut) pour permettre à l'utilisateur de les "
+"distinguer."
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:157
 msgid ""
 "Sometimes it can be useful to programmatically select features or to change "
 "the default color."
 msgstr ""
+"Parfois, il peut être utile de sélectionner des enregistrement à l'aide de  "
+"code ou de changer la couleur de sélection par défaut."
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:160
 msgid ""
 "To select all the features, the :meth:`selectAll() "
 "<qgis.core.QgsVectorLayer.selectAll>` method can be used:"
 msgstr ""
+"pour sélectionner tous les enregistrement d'une couche vecteur, vous pouvez "
+"utiliser la méthode :meth:`selectAll() <qgis.core.QgsVectorLayer.selectAll>`"
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:168
 msgid ""
 "To select using an expression, use the :meth:`selectByExpression() "
 "<qgis.core.QgsVectorLayer.selectByExpression>` method:"
 msgstr ""
+"Pour séléctionner des enregistrement à l'aide d'une expression, utilisez la "
+"méthode :meth:`selectByExpression() "
+"<qgis.core.QgsVectorLayer.selectByExpression>`"
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:177
 msgid ""
@@ -106,6 +131,10 @@ msgid ""
 "<qgis.gui.QgsMapCanvas.setSelectionColor>` method of :class:`QgsMapCanvas "
 "<qgis.gui.QgsMapCanvas>` as shown in the following example:"
 msgstr ""
+"Pour changer la couleur par défaut des objets séléctionnés, vous pouvez "
+"utiliser la méthode :meth:`setSelectionColor() "
+"<qgis.gui.QgsMapCanvas.setSelectionColor>` de la classe :class:`QgsMapCanvas"
+" <qgis.gui.QgsMapCanvas>`, comme montré dans l'exemple suivant :"
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:185
 msgid ""
@@ -113,10 +142,13 @@ msgid ""
 "call :meth:`select() <qgis.core.QgsVectorLayer.select>` passing to it the "
 "list of features IDs:"
 msgstr ""
+"Pour ajouter des enregistrement à ceux déjà séléctionésn vous pouvez appeler"
+" la méthode :meth:`select() <qgis.core.QgsVectorLayer.select>` en lui "
+"passant une liste d'ID d'enregistrements :"
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:200
 msgid "To clear the selection:"
-msgstr ""
+msgstr "Pour vider votre sélection :"
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:207
 msgid "Accessing attributes"
@@ -124,13 +156,16 @@ msgstr "Accès aux attributs"
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:209
 msgid "Attributes can be referred to by their name:"
-msgstr ""
+msgstr "Les attributs peuvent être invoqués par leur nom : "
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:219
 msgid ""
 "Alternatively, attributes can be referred to by index. This is a bit faster "
 "than using the name. For example, to get the second attribute:"
 msgstr ""
+"D'une autre façon, les attributs peuvent être invoqués par le ID. Cette "
+"méthode est légèrement plus rapide que d'utiliser le nom. Par exemple, pour "
+"récupérer le second attribut :"
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:233
 msgid "Iterating over selected features"
@@ -142,6 +177,9 @@ msgid ""
 ":meth:`selectedFeatures() <qgis.core.QgsVectorLayer.selectedFeatures>` "
 "method from the vector layer:"
 msgstr ""
+"Si vous avez besoin uniquement de sélectionner des enregistrements, vous "
+"pouvez utiliser la méthode :meth:`selectedFeatures() "
+"<qgis.core.QgsVectorLayer.selectedFeatures>` depuis une couche vecteur :"
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:247
 msgid "Iterating over a subset of features"
@@ -154,6 +192,11 @@ msgid ""
 "<qgis.core.QgsFeatureRequest>` object to the :meth:`getFeatures() "
 "<qgis.core.QgsVectorLayer.getFeatures>` call. Here's an example:"
 msgstr ""
+"Si vous voulez parcourir un sous ensemble d'enregistrements d'une couche, ar"
+" exemple avec sur une zone donnée, vous devez ajouter une classe "
+":class:`QgsFeatureRequest <qgis.core.QgsFeatureRequest>` à l'appel de la "
+"méthode  :meth:`getFeatures() <qgis.core.QgsVectorLayer.getFeatures>`. Par "
+"exemple :"
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:263
 msgid ""
@@ -161,12 +204,18 @@ msgid ""
 "bounding box. There is however a flag ``ExactIntersect`` that makes sure "
 "that only intersecting features will be returned:"
 msgstr ""
+"Pour des questions de rapidité, la recherche d'intersection est souvent "
+"réalisée à partir du rectangle d'encombrement minimum des objets. Il existe "
+"toutefois l'option ``ExactIntersect`` qui permet de s'assurer que seul les "
+"objets intersectés soit renvoyés."
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:272
 msgid ""
 "With :meth:`setLimit() <qgis.core.QgsFeatureRequest.setLimit>` you can limit"
 " the number of requested features. Here's an example:"
 msgstr ""
+"Avec la méthode :meth:`setLimit() <qgis.core.QgsFeatureRequest.setLimit>`, "
+"vous pouvez limiter le nombre d'enregistrement sélectionnés. Par exemple :"
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:286
 msgid ""
@@ -176,12 +225,20 @@ msgid ""
 ":class:`QgsFeatureRequest <qgis.core.QgsFeatureRequest>` constructor. Here's"
 " an example:"
 msgstr ""
+"Si vous avez besoin d'un filtre basé sur des attributs à la place (ou en "
+"plus) d'un filtre spatial, comme montré dans les exemples précédents, vous "
+"pouvez construire un objet  :class:`QgsExpression <qgis.core.QgsExpression>`"
+" et le passer à la classe constructeur :class:`QgsFeatureRequest "
+"<qgis.core.QgsFeatureRequest>` :"
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:299
 msgid ""
 "See :ref:`expressions` for the details about the syntax supported by "
 ":class:`QgsExpression <qgis.core.QgsExpression>`."
 msgstr ""
+"Vous pouvez vous référer à la section :ref:`expressions` pour plus de "
+"détails sur la syntaxe employée dans :class:`QgsExpression "
+"<qgis.core.QgsExpression>`."
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:301
 msgid ""
@@ -204,12 +261,19 @@ msgid ""
 ":meth:`capabilities() <qgis.core.QgsVectorDataProvider.capabilities>` "
 "function to find out what set of functionality is supported."
 msgstr ""
+"La plupart des sources vectorielles supportent les fonctions d'édition. "
+"Parfois,  ces possibilités sont limitées. Vous pouvez utiliser la fonction "
+":meth:`capabilities() <qgis.core.QgsVectorDataProvider.capabilities>` pour "
+"voir quelles fonctionnalités sont supportées."
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:344
 msgid ""
 "For a list of all available capabilities, please refer to the :class:`API "
 "Documentation of QgsVectorDataProvider <qgis.core.QgsVectorDataProvider>`."
 msgstr ""
+"Pour une liste complète des possibilités, merci de se référer à la "
+"documentation de l'API :class:`QgsVectorDataProvider "
+"<qgis.core.QgsVectorDataProvider>`."
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:348
 msgid ""
@@ -218,6 +282,11 @@ msgid ""
 "<qgis.core.QgsVectorDataProvider.capabilitiesString>` as in the following "
 "example:"
 msgstr ""
+"Pour afficher les possibilités d'édition d'une couche dans une liste séparé "
+"par des virgules, vous pouvez utiliser la méthode  "
+":meth:`capabilitiesString() "
+"<qgis.core.QgsVectorDataProvider.capabilitiesString>` comme montré dans "
+"l’exemple suivant :"
 
 #: ../../docs/pyqgis_developer_cookbook/vector.rst:361
 msgid ""

@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Aline Furlanetto Viero <afviero@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:17+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Aline Furlanetto Viero <afviero@gmail.com>, 2020\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,6 +44,9 @@ msgid ""
 "Also, you should have downloaded the :ref:`sample data <data_downloadlink>` "
 "to use."
 msgstr ""
+"Antes de iniciar este exercício, o QGIS deve estar instalado no seu "
+"computador. Além disso, você deve ter baixado o :ref:`sample data "
+"<data_downloadlink>` para usar."
 
 #: ../../docs/training_manual/introduction/preparation.rst:13
 msgid ""
@@ -60,6 +64,12 @@ msgid ""
 "instructions will work on any OS. You will need QGIS 3.4 (the latest version"
 " at time of writing) to use this course."
 msgstr ""
+"As capturas de tela deste curso foram tiradas no QGIS 3.4 em execução no "
+"Linux. Dependendo da sua configuração, as telas que você encontra podem "
+"parecer um pouco diferentes. No entanto, todos os mesmos botões ainda "
+"estarão disponíveis e as instruções funcionarão em qualquer sistema "
+"operacional. Você precisará do QGIS 3.4 (a versão mais recente no momento da"
+" redação) para usar este curso. "
 
 #: ../../docs/training_manual/introduction/preparation.rst:22
 msgid "Let's get started right away!"
@@ -79,41 +89,52 @@ msgid ""
 "load depending on the data type. We'll use it to load our dataset: click the"
 " |dataSourceManager| :sup:`Open Data Source Manager` button."
 msgstr ""
+" \n"
+"A caixa de diálogo :guilabel:`Gerenciador de Fonte de Dados` permite escolher os dados a serem carregados, dependendo do tipo de dados. Vamos usá-lo para carregar nosso conjunto de dados: clique no botão |dataSourceManager| :sup:`Abrir Gerenciador de Fonte de Dados`."
 
 #: ../../docs/training_manual/introduction/preparation.rst:37
 msgid ""
 "If you can't find the icon, check that the :guilabel:`Data Source Manager` "
 "toolbar is enabled in the :menuselection:`View --> Toolbars` menu."
 msgstr ""
+"Se você não encontrar o ícone, verifique se a barra de ferramentas "
+":guilabel:`Gerenciador de Fonte de Dados` está ativada no menu "
+":menuselection:`Exibir --> Barras de ferramentas`."
 
 #: ../../docs/training_manual/introduction/preparation.rst:44
 msgid "Load the :file:`protected_areas.shp` vector dataset:"
-msgstr ""
+msgstr "Carregue o conjunto de dados do vetor :file:`protected_areas.shp`:"
 
 #: ../../docs/training_manual/introduction/preparation.rst:46
 msgid "Click on the :guilabel:`Vector` tab."
-msgstr ""
+msgstr "Clique na guia :guilabel:`Vetor`."
 
 #: ../../docs/training_manual/introduction/preparation.rst:47
 msgid "Enable the |radioButtonOn|:guilabel:`File` source type."
-msgstr ""
+msgstr "Ative o tipo de fonte |radioButtonOn|:guilabel:`Arquivo`."
 
 #: ../../docs/training_manual/introduction/preparation.rst:48
 msgid ""
 "Press the :guilabel:`...` button next to :guilabel:`Vector Dataset(s)`."
 msgstr ""
+" Pressione o botão :guilabel:`...` ao lado de :guilabel:`Conjunto(s) de "
+"Dados Vetoriais`. "
 
 #: ../../docs/training_manual/introduction/preparation.rst:49
 msgid ""
 "Select the :file:`exercise_data/shapefile/protected_areas.shp` file in your "
 "training directory."
 msgstr ""
+"Selecione o arquivo :file:`exercise_data/shapefile/protected_areas.shp` em "
+"seu diretório de treinamento."
 
 #: ../../docs/training_manual/introduction/preparation.rst:51
 msgid ""
 "Click :guilabel:`Open`. You will see the original dialog, with the file path"
 " filled in."
 msgstr ""
+"Clique em :guilabel:`Abrir`. Você verá a caixa de diálogo original, com o "
+"caminho do arquivo preenchido."
 
 #: ../../docs/training_manual/introduction/preparation.rst:57
 msgid ""
@@ -121,6 +142,10 @@ msgid ""
 "you can see a ``protected_areas`` item in the :guilabel:`Layers` panel "
 "(bottom left) with its features shown in the main map canvas."
 msgstr ""
+"Clique em :guilabel:`Adicionar` aqui também. Os dados que você especificou "
+"agora serão carregados: você pode ver um item ``protected_areas`` no painel "
+":guilabel:`Camadas` (canto inferior esquerdo) com seus recursos mostrados na"
+" tela principal do mapa. "
 
 #: ../../docs/training_manual/introduction/preparation.rst:65
 msgid ""
@@ -132,13 +157,15 @@ msgstr ""
 
 #: ../../docs/training_manual/introduction/preparation.rst:68
 msgid "Click on the :guilabel:`Save As` button: |fileSaveAs|"
-msgstr ""
+msgstr "Clique no botão :guilabel:`Salvar como`: |fileSaveAs|"
 
 #: ../../docs/training_manual/introduction/preparation.rst:69
 msgid ""
 "Save the map under a :file:`solution` folder next to :file:`exercise_data` "
 "and call it :file:`basic_map.qgz`."
 msgstr ""
+"Salve o mapa na pasta :file:`solution` ao lado de :file:`exercise_data` e "
+"chame-o :file:`basic_map.qgz`."
 
 #: ../../docs/training_manual/introduction/preparation.rst:75
 msgid "|basic| |TY|"
@@ -149,6 +176,8 @@ msgid ""
 "Repeat the steps above to add the :file:`places.shp` and :file:`rivers.shp` "
 "layers from the same folder (:file:`exercise_data/shapefile`) to the map."
 msgstr ""
+"Repita as etapas acima para adicionar as camadas :file:`places.shp` e "
+":file:`rivers.shp` da mesma pasta (:file:`exercise_data/shapefile`) ao mapa."
 
 #: ../../docs/training_manual/introduction/preparation.rst:80
 msgid ":ref:`Check your results <interface-preparation-1>`"
@@ -163,6 +192,8 @@ msgid ""
 "You've learned how to add a layer from a Shapefile dataset and create a "
 "basic map!"
 msgstr ""
+" Você aprendeu como adicionar uma camada a partir de um conjunto de dados "
+"Shapefile e criar um mapa básico!"
 
 #: ../../docs/training_manual/introduction/preparation.rst:88
 msgid "|WN|"
@@ -175,3 +206,7 @@ msgid ""
 "interface work? Before we go on, let's first take a look at the layout of "
 "the QGIS interface. This is the topic of the next lesson."
 msgstr ""
+" Agora você está familiarizado com a função básica do botão :guilabel: "
+"`Abrir Gerenciador da Fonte de Dados`, mas e todos os outros? Como essa "
+"interface funciona? Antes de continuarmos, vamos primeiro dar uma olhada no "
+"layout da interface QGIS. Este é o tópico da próxima lição. "

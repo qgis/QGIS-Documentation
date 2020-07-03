@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:26+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,12 +35,22 @@ msgid ""
 "downloads/installs a malicious PyQGIS plugin or standalone app that gains "
 "access to authentication credentials."
 msgstr ""
+"Una vez que se ingresa la contraseña maestra, la API está abierta para "
+"acceder a las configuraciones de autenticación en la base de datos de "
+"autenticación, similar a cómo funciona Firefox. Sin embargo, en la "
+"implementación inicial, no se ha definido ningún muro contra el acceso a "
+"PyQGIS. Esto puede generar problemas en los que un usuario descarga / "
+"instala un complemento PyQGIS malicioso o una aplicación independiente que "
+"obtiene acceso a las credenciales de autenticación."
 
 #: ../../docs/user_manual/auth_system/auth_considerations.rst:17
 msgid ""
 "The quick solution for initial release of feature is to just not include "
 "most PyQGIS bindings for the authentication system."
 msgstr ""
+"La solución rápida para el lanzamiento inicial de la función es simplemente "
+"no incluir la mayoría de los enlaces PyQGIS para el sistema de "
+"autenticación."
 
 #: ../../docs/user_manual/auth_system/auth_considerations.rst:20
 msgid ""
@@ -47,6 +58,9 @@ msgid ""
 ":menuselection:`Settings --> Options --> Authentication` (defaults to "
 "\"never\"):"
 msgstr ""
+"Otra solución simple, aunque no robusta, es agregar un cuadro combinado en "
+":menuselection:`Settings --> Options --> Authentication` (defaults to "
+"\"never\"):"
 
 #: ../../docs/user_manual/auth_system/auth_considerations.rst:28
 msgid ""
@@ -54,16 +68,23 @@ msgid ""
 " to Python, e.g. the authentication database, and encrypted with the master "
 "password."
 msgstr ""
+"La configuración de dicha opción debería guardarse en una ubicación no "
+"accesible para Python, p.ej. la base de datos de autenticación, y encriptada"
+" con la contraseña maestra."
 
 #: ../../docs/user_manual/auth_system/auth_considerations.rst:32
 msgid "Another option may be to track which plugins the user has specifically"
 msgstr ""
+"Otra opción puede ser rastrear qué complementos tiene el usuario "
+"específicamente"
 
 #: ../../docs/user_manual/auth_system/auth_considerations.rst:33
 msgid ""
 "allowed to access the authentication system, though it may be tricky to "
 "deduce which plugin is actually making the call."
 msgstr ""
+"se le permite acceder al sistema de autenticación, aunque puede ser difícil "
+"deducir qué complemento está realmente haciendo la llamada."
 
 #: ../../docs/user_manual/auth_system/auth_considerations.rst:37
 msgid ""
@@ -72,6 +93,11 @@ msgid ""
 "is authorized. This might mean limiting cross-plugin communication as well, "
 "but maybe only between third-party plugins."
 msgstr ""
+"Los complementos de sandboxing, posiblemente en sus propios entornos "
+"virtuales, reducirían  la piratería 'cross-plugin' de configuraciones de "
+"autenticación desde otro complemento que esté autorizado. Esto también "
+"podría significar limitar la comunicación entre complementos, pero tal vez "
+"solo entre complementos de terceros."
 
 #: ../../docs/user_manual/auth_system/auth_considerations.rst:42
 msgid ""
@@ -80,11 +106,19 @@ msgid ""
 "the user can also directly set an untrusted policy for the certificate "
 "associated with the plugin using existing certificate management dialogs."
 msgstr ""
+"Otra buena solución es emitir certificados de firma de código a autores de "
+"complementos investigados. Luego valide el certificado del complemento al "
+"cargarlo. Si es necesario, el usuario también puede establecer directamente "
+"una política no confiable para el certificado asociado con el complemento "
+"utilizando los cuadros de diálogo de administración de certificados "
+"existentes."
 
 #: ../../docs/user_manual/auth_system/auth_considerations.rst:47
 msgid ""
 "Alternatively, access to sensitive authentication system data from Python"
 msgstr ""
+"Alternativamente, acceso a datos confidenciales del sistema de autenticación"
+" desde Python"
 
 #: ../../docs/user_manual/auth_system/auth_considerations.rst:48
 msgid ""
@@ -94,6 +128,11 @@ msgid ""
 " master password and authentication config loading in the realm of the main "
 "app."
 msgstr ""
+"nunca podría permitirse, y solo el uso de widgets centrales QGIS, o la "
+"duplicación de las integraciones del sistema de autenticación, permitiría "
+"que el complemento funcione con recursos que tienen una configuración de "
+"autenticación, mientras se mantiene la contraseña maestra y la carga de "
+"configuración de autenticación en el ámbito de la aplicación principal."
 
 #: ../../docs/user_manual/auth_system/auth_considerations.rst:54
 msgid ""
@@ -101,6 +140,9 @@ msgid ""
 " restrict access, since there is no function binding to simply be removed as"
 " with Python."
 msgstr ""
+"Los mismos problemas de seguridad se aplican a los complementos deC ++, "
+"aunque será más difícil restringir el acceso, ya que no existe un enlace de "
+"función que se elimine simplemente como con Python."
 
 #: ../../docs/user_manual/auth_system/auth_considerations.rst:59
 msgid "Restrictions"
@@ -114,6 +156,11 @@ msgid ""
 "dynamically link to the OpenSSL libs at run-time (to avoid the export "
 "limitations)."
 msgstr ""
+"Los confusos problemas `licensing and exporting`_ asociado con OpenSSL se "
+"aplica. Para que Qt funcione con certificados SSL, necesita acceso a las "
+"bibliotecas OpenSSL. Dependiendo de cómo se compiló Qt, el valor "
+"predeterminado es vincular dinámicamente a las bibliotecas OpenSSL en tiempo"
+" de ejecución (para evitar las limitaciones de exportación)."
 
 #: ../../docs/user_manual/auth_system/auth_considerations.rst:66
 msgid ""
@@ -123,9 +170,17 @@ msgid ""
 "needing to ensure any OpenSSL-linking restrictions are met, if they ship the"
 " plugin. Maybe.  I don't really know. I'm not a lawyer."
 msgstr ""
+"QCA sigue una táctica similar, según la cual el enlace a QCA no incurre en "
+"restricciones, ya que el complemento qca-ossl (OpenSSL) se carga en tiempo "
+"de ejecución. El complemento qca-ossl está directamente vinculado a las "
+"librerías OpenSSL. Los empaquetadores serían los que necesitan asegurarse de"
+" que se cumplan las restricciones de enlace de OpenSSL, si envían el "
+"complemento. Tal vez. Realmente no lo se. No soy abogado"
 
 #: ../../docs/user_manual/auth_system/auth_considerations.rst:72
 msgid ""
 "The authentication system safely disables itself when ``qca-ossl`` is not "
 "found at run-time."
 msgstr ""
+"El sistema de autenticación se deshabilita de forma segura cuando ``qca-"
+"ossl`` no se encuentra en tiempo de ejecución."

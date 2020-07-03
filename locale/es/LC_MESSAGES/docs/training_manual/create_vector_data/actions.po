@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:19+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -273,6 +274,8 @@ msgid ""
 "Click on the :guilabel:`school_property` layer in the :guilabel:`Layers` "
 "panel so that it is highlighted."
 msgstr ""
+"Click en la capa :guilabel:`school_property` en el panel :guilabel:`Layers` "
+"para que quede resaltado."
 
 #: ../../docs/training_manual/create_vector_data/actions.rst:129
 msgid ""
@@ -401,12 +404,22 @@ msgid ""
 "is what you want to search for. Since we don't know what phrase to search "
 "for yet, we'll just enter the first part (without the search phrase)."
 msgstr ""
+"Por lo general, cuando usa Google, ingresa su frase de búsqueda en la barra "
+"de búsqueda de Google. Pero en este caso, desea que su computadora haga esto"
+" por usted. La forma en que le dice a Google que busque algo (si no desea "
+"usar su barra de búsqueda directamente) es dándole la dirección a su "
+"navegador de Internet ``https://www.google.com/search?q=SEARCH_PHRASE``, "
+"donde ``SEARCH_PHRASE`` es lo que quiera buscar. Como todavía no sabemos qué"
+" frase buscar, ingresaremos la primera parte (sin la frase de búsqueda)."
 
 #: ../../docs/training_manual/create_vector_data/actions.rst:196
 msgid ""
 "In the :guilabel:`Action` field, write ``https://www.google.com/search?q=``."
 " Remember to add a space after your initial command before writing this in!"
 msgstr ""
+"En el campo :guilabel:`Action` , escriba "
+"``https://www.google.com/search?q=``. Recuerde añadir un espacio despues de "
+"su comando inicial antes de antes de escribir esto!"
 
 #: ../../docs/training_manual/create_vector_data/actions.rst:200
 msgid ""
@@ -435,6 +448,10 @@ msgid ""
 "\"name\" %]` tells QGIS to use the contents of the :kbd:`name` field as the "
 "phrase to search for."
 msgstr ""
+"Lo que esto significa es que QGIS abrirá el navegador y lo enviará a la "
+"dirección ``https://www.google.com/search?q=[% \"name\" %]``. Pero :kbd:`[% "
+"\"name\" %]` dice a QGIS a usar los contenidos del campo :kbd:`name` como la"
+" frase a buscar."
 
 #: ../../docs/training_manual/create_vector_data/actions.rst:219
 msgid ""
@@ -444,6 +461,11 @@ msgid ""
 "cause your browser to visit Google, which will in turn search for \"Marloth "
 "Nature Reserve\"."
 msgstr ""
+"Entonces, si, por ejemplo, el área de uso del suelo en la que hace clic se "
+"llama ``Marloth Nature Reserve``, entonce QGIS va a enviar el navegador a "
+"``https://www.google.com/search?q=Marloth%20Nature%20Reserve``, lo que hará "
+"que su navegador visite Google, que a su vez buscará \"Marloth Nature "
+"Reserve\"."
 
 #: ../../docs/training_manual/create_vector_data/actions.rst:225
 msgid "If you haven't done so already, set everything up as explained above."
@@ -467,6 +489,8 @@ msgid ""
 "With the :guilabel:`landuse` layer active in the :guilabel:`Layers` panel, "
 "click on the :guilabel:`Run feature action` button."
 msgstr ""
+"Con la capa activa :guilabel:`landuse` en el panel :guilabel:`Layers` , "
+"click en el botón :guilabel:`Run feature action`."
 
 #: ../../docs/training_manual/create_vector_data/actions.rst:234
 msgid ""
@@ -515,6 +539,10 @@ msgid ""
 "library. Also, QGIS actions can be arbitrary, tokenized (i.e. using variable"
 " information based on the contents of a field attribute) Python commands!"
 msgstr ""
+"Sin embargo, QGIS se encuentra en la cima de la biblioteca Qt increíblemente"
+" poderosa y versátil. Además, las acciones de QGIS pueden ser arbitrarias, "
+"tokenizadas (es decir, utilizando información variable basada en el "
+"contenido de un atributo de campo) ¡Comandos de Python!"
 
 #: ../../docs/training_manual/create_vector_data/actions.rst:256
 msgid ""
@@ -523,6 +551,11 @@ msgid ""
 "browser on the user’s system since it uses the Qt QWebView class (which is a"
 " webkit based html widget) to display the content in a pop up window."
 msgstr ""
+"Ahora verá cómo usar una acción de Python para mostrar una página web. Es la"
+" misma idea general de abrir un sitio en un navegador externo, pero no "
+"requiere ningún navegador en el sistema del usuario, ya que utiliza la clase"
+" Qt QWebView (que es un widget html basado en webkit) para mostrar el "
+"contenido en una ventana emergente."
 
 #: ../../docs/training_manual/create_vector_data/actions.rst:261
 msgid ""
@@ -534,7 +567,7 @@ msgstr ""
 
 #: ../../docs/training_manual/create_vector_data/actions.rst:264
 msgid "``https://wikipedia.org/wiki/SEARCH_PHRASE``"
-msgstr ""
+msgstr "``https://wikipedia.org/wiki/SEARCH_PHRASE``"
 
 #: ../../docs/training_manual/create_vector_data/actions.rst:266
 msgid "To create the layer action:"
@@ -564,7 +597,7 @@ msgstr ":guilabel:`Nombre`: :kbd:`Wikipedia`"
 
 #: ../../docs/training_manual/create_vector_data/actions.rst:274
 msgid ":guilabel:`Action` (all on one line)::"
-msgstr ""
+msgstr ":guilabel:`Action` (todo en una línea)::"
 
 #: ../../docs/training_manual/create_vector_data/actions.rst:281
 msgid "There are a couple of things going on here:"

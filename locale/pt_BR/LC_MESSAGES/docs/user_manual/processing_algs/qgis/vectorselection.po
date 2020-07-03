@@ -168,7 +168,7 @@ msgstr "Descrição"
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:745
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:833
 msgid "**Input layer**"
-msgstr ""
+msgstr "**Camada de entrada**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:36
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:146
@@ -186,7 +186,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:781
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:834
 msgid "``INPUT``"
-msgstr ""
+msgstr "``ENTRADA``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:37
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:147
@@ -218,7 +218,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:564
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:630
 msgid "``FIELD``"
-msgstr ""
+msgstr "``CAMPO``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:41
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:407
@@ -344,7 +344,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:66
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:656
 msgid "[string]"
-msgstr ""
+msgstr "[string]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:67
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:657
@@ -367,7 +367,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:426
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:454
 msgid "``OUTPUT``"
-msgstr ""
+msgstr "``SAÍDA``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:70
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:84
@@ -438,13 +438,13 @@ msgstr "Salvar para Geopackage..."
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:352
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:437
 msgid "Save to PostGIS Table..."
-msgstr ""
+msgstr "Salvar para Tabela PostGIS..."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:81
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:166
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:439
 msgid "The file encoding can also be changed here."
-msgstr ""
+msgstr "A codificação do arquivo também pode ser alterada aqui."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:82
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:114
@@ -471,7 +471,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:91
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:176
 msgid "Skip Output"
-msgstr ""
+msgstr "Ignorar Saída"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:98
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:183
@@ -516,17 +516,17 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:715
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:783
 msgid "Input vector layer"
-msgstr ""
+msgstr "Camada vetorial de entrada"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:149
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:716
 msgid "**Expression**"
-msgstr ""
+msgstr "**Expressão**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:150
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:717
 msgid "``EXPRESSION``"
-msgstr ""
+msgstr "``EXPRESSÃO``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:151
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:718
@@ -621,7 +621,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:33
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:33
 msgid "*Equal*"
-msgstr ""
+msgstr "*Igual*"
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:32
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:32
@@ -629,6 +629,8 @@ msgid ""
 "Returns 1 (true) if and only if geometries are exactly the same. No circles "
 "will be selected."
 msgstr ""
+"Retorna 1 (verdadeiro) se e somente se as geometrias forem exatamente "
+"iguais. Nenhum círculo será selecionado."
 
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:38
 #: ../../docs/user_manual/processing_algs/qgis/qgis_algs_include.rst:38
@@ -682,6 +684,12 @@ msgid ""
 " as a line (selected). Two lines crossing will cross as a point (selected). "
 "Two polygons cross as a polygon (not selected)."
 msgstr ""
+"Retorna 1 (verdadeiro) se as geometrias fornecidas tiverem alguns pontos "
+"internos em comum, mas não todos, e o cruzamento real tiver uma dimensão "
+"menor que a maior geometria fornecida. Por exemplo, uma linha cruzando um "
+"polígono cruzará como uma linha (selecionada). O cruzamento de duas linhas "
+"cruzará como um ponto (selecionado). Dois polígonos cruzam como um polígono "
+"(não selecionado)."
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:219
 msgid ":ref:`qgisselectbylocation`"
@@ -709,7 +717,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:241
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:788
 msgid "Default: [0]"
-msgstr ""
+msgstr "Padrão: [0]"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:242
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:789
@@ -834,7 +842,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:490
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:567
 msgid "**Method**"
-msgstr ""
+msgstr "**Método**"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:325
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:410
@@ -844,7 +852,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:721
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:809
 msgid "``METHOD``"
-msgstr ""
+msgstr "``MÉTODO``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:329
 msgid "Random selection methods. One of:"
@@ -876,7 +884,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:501
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:578
 msgid "``NUMBER``"
-msgstr ""
+msgstr "``NÚMERO``"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:336
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:421
@@ -890,7 +898,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:504
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:581
 msgid "Default: 10"
-msgstr ""
+msgstr "Padrão: 10"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:339
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:424
@@ -975,7 +983,7 @@ msgstr ""
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:543
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:764
 msgid "``Default menu``: :menuselection:`Vector --> Research Tools`"
-msgstr ""
+msgstr "``Menu padrão``: :menuselection:`Vetor --> Ferramentas de Pesquisa`"
 
 #: ../../docs/user_manual/processing_algs/qgis/vectorselection.rst:472
 msgid ":ref:`qgisrandomextract`"

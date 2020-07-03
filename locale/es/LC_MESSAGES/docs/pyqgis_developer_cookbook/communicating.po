@@ -6,6 +6,7 @@
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
 # micirculopolar <lfernandez@geosistec.com>, 2020
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:23+0000\n"
-"Last-Translator: micirculopolar <lfernandez@geosistec.com>, 2020\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -46,7 +47,7 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:44
 msgid "Showing messages. The QgsMessageBar class"
-msgstr ""
+msgstr "Mostrando mensajes. La clase QgsMessageBar"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:46
 msgid ""
@@ -86,22 +87,26 @@ msgid ""
 ":class:`Qgis.MessageLevel <qgis.core.Qgis.MessageLevel>` enumeration. You "
 "can use up to 4 different levels:"
 msgstr ""
+"Los ejemplos anteriores muestran una barra de error, pero el parámetro "
+"``level`` se puede usar para crear mensajes de advertencia o mensajes de "
+"información, utilizando la enumeración :class:`Qgis.MessageLevel "
+"<qgis.core.Qgis.MessageLevel>`. Puede usar hasta 4 niveles diferentes:"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:89
 msgid "Info"
-msgstr ""
+msgstr "Información"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:90
 msgid "Warning"
-msgstr ""
+msgstr "Advertencia"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:91
 msgid "Critical"
-msgstr ""
+msgstr "Critica"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:92
 msgid "Success"
-msgstr ""
+msgstr "Éxito"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:98
 msgid "QGIS Message bar (info)"
@@ -152,6 +157,8 @@ msgid ""
 "Also, you can use the built-in status bar to report progress, as in the next"
 " example:"
 msgstr ""
+"Además, puede usar el constructor en la barra de estado para comunicar "
+"progreso, como en el siguiente ejemplo:"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:210
 msgid "Logging"
@@ -174,18 +181,29 @@ msgid ""
 "<qgis.core.QgsLogger>` or :class:`QgsMessageLog <qgis.core.QgsMessageLog>`) "
 "instead."
 msgstr ""
+"El uso de la declaración ``print`` de Python no es seguro en cualquier "
+"código que pueda ser multiproceso. Esto incluye **expression functions**, "
+"**renderers**, **symbol layers** y **Processing algorithms** (Entre otros). "
+"En estos casos, siempre debe usar clases seguras para subprocesos en su "
+"lugar(:class:`QgsLogger <qgis.core.QgsLogger>` o :class:`QgsMessageLog "
+"<qgis.core.QgsMessageLog>`)."
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:239
 msgid ""
 "You can see the output of the :class:`QgsMessageLog "
 "<qgis.core.QgsMessageLog>` in the :ref:`log_message_panel`"
 msgstr ""
+"Puede ver la salida de la :class:`QgsMessageLog <qgis.core.QgsMessageLog>` "
+"en el :ref:`log_message_panel`"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:244
 msgid ""
 ":class:`QgsLogger <qgis.core.QgsLogger>` is for messages for debugging / "
 "developers (i.e. you suspect they are triggered by some broken code)"
 msgstr ""
+":class:`QgsLogger <qgis.core.QgsLogger>` es para mensajes de "
+"depuración/desarrollo (es decir, sospecha que son activados por algún código"
+" roto)"
 
 #: ../../docs/pyqgis_developer_cookbook/communicating.rst:246
 msgid ""
@@ -193,3 +211,6 @@ msgid ""
 "investigate issues by sysadmins (e.g. to help a sysadmin to fix "
 "configurations)"
 msgstr ""
+":class:`QgsMessageLog <qgis.core.QgsMessageLog>` es para mensajes para "
+"investigar problemas de los administradores de sistemas (por ejemplo, para "
+"ayudar a un administrador de sistemas a corregir las configuraciones)"

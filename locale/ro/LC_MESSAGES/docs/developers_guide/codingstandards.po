@@ -242,26 +242,29 @@ msgstr "``const LayerSet& layers() const``"
 #: ../../docs/developers_guide/codingstandards.rst:109
 msgid "``QString title() const`` (``QString`` is implicitly shared)"
 msgstr ""
-"``QString title() const`` (``QString`` este, în mod implicit, partajat)"
+"``QString title() const`` (``QString`` se partajează, în mod implicit)"
 
 #: ../../docs/developers_guide/codingstandards.rst:110
 msgid ""
 "``QList< QgsMapLayer* > layers() const`` (``QList`` is implicitly shared)"
 msgstr ""
-"``QList< QgsMapLayer* > layers() const`` (``QList`` este, în mod implicit, "
-"partajat)"
+"``QList< QgsMapLayer* > layers() const`` (``QList`` se partajează, în mod "
+"implicit)"
 
 #: ../../docs/developers_guide/codingstandards.rst:111
 msgid ""
 "``QgsVectorLayer *layer() const;`` (``QgsVectorLayer`` inherits ``QObject``)"
 msgstr ""
-"``QgsVectorLayer *layer() const;`` (``QgsVectorLayer`` inherits ``QObject``)"
+"``QgsVectorLayer *layer() const;`` (``QgsVectorLayer`` moștenește pe "
+"``QObject``)"
 
 #: ../../docs/developers_guide/codingstandards.rst:112
 msgid ""
 "``QgsAbstractGeometry *geometry() const;`` (``QgsAbstractGeometry`` is "
 "abstract and will probably need to be casted)"
 msgstr ""
+"``QgsAbstractGeometry *geometry() const;`` (``QgsAbstractGeometry`` este "
+"abstract și, probabil, necesită specificarea tipului)"
 
 #: ../../docs/developers_guide/codingstandards.rst:117
 msgid "API Documentation"
@@ -282,6 +285,10 @@ msgid ""
 "in edge cases and give hints about other interfaces he could be looking for,"
 " best practices and code samples."
 msgstr ""
+"QGIS folosește Doxygen pentru documentație. Introduceți comentarii "
+"descriptive și semnificative care să ofere cititorului informații despre "
+"rezultatele așteptate și despre cazurile excepționale, indicii despre alte "
+"interfețe, cele mai bune practici și exemple de cod."
 
 #: ../../docs/developers_guide/codingstandards.rst:128
 msgid "Methods"
@@ -294,6 +301,10 @@ msgid ""
 "introduced. You should add additional ``\\since`` tags for important changes"
 " that were introduced later on."
 msgstr ""
+"Descrierile metodelor trebuie efectuate într-o formă descriptivă, folosind "
+"persoana a 3-a. Metodele necesită o etichetă ``\\since`` care arată momentul"
+" introducerii. Ar trebui să adăugați etichete ``\\ since`` suplimentare "
+"pentru modificările importante introduse ulterior."
 
 #: ../../docs/developers_guide/codingstandards.rst:151
 msgid "Members Variables"
@@ -306,6 +317,10 @@ msgid ""
 "containers like for error reporting. In such cases do not prefix the member "
 "with an ``m``."
 msgstr ""
+"Variabilele membru ar trebui să se afle, în mod normal, în secțiunea "
+"``private`` și să fie dispoibile prin intermediul funcțiilor get și set. O "
+"excepție o constituie containerele de date, cum ar fi raportarea erorilor. "
+"În astfel de cazuri, nu prefixați membrul cu un ``m``."
 
 #: ../../docs/developers_guide/codingstandards.rst:183
 msgid "Qt Designer"

@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Aline Furlanetto Viero <afviero@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:24+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Aline Furlanetto Viero <afviero@gmail.com>, 2020\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,7 +35,7 @@ msgid ""
 "The original version of these instructions is available at "
 ":source:`python/plugins/processing/tests/README.md`"
 msgstr ""
-"A versão original destas instruções está disponível em: \n"
+"A versão original destas instruções está disponível em "
 ":source:`python/plugins/processing/tests/README.md`"
 
 #: ../../docs/developers_guide/processingtesting.rst:16
@@ -61,6 +62,8 @@ msgstr ""
 msgid ""
 "This file is structured with `yaml syntax <https://yaml.org/start.html>`_."
 msgstr ""
+"Este arquivo está estruturado com `sintaxe yaml "
+"<https://yaml.org/start.html>`_."
 
 #: ../../docs/developers_guide/processingtesting.rst:25
 msgid ""
@@ -100,12 +103,17 @@ msgid ""
 "When you have run the algorithm, go to :menuselection:`Processing --> "
 "History` and find the algorithm which you have just run."
 msgstr ""
+"Quando você executar o algoritmo, vá para :menuselection:`Processar --> "
+"Histórico` e encontre o algoritmo que você acabou de executar."
 
 #: ../../docs/developers_guide/processingtesting.rst:55
 msgid ""
 "Right click the algorithm and click :guilabel:`Create Test`. A new window "
 "will open with a text definition."
 msgstr ""
+"Clique com o botão direito do mouse no algoritmo e clique em "
+":guilabel:`Criar Teste`. Uma nova janela será aberta com uma definição de "
+"texto."
 
 #: ../../docs/developers_guide/processingtesting.rst:57
 msgid ""
@@ -113,16 +121,21 @@ msgid ""
 ":file:`python/plugins/processing/tests/testdata/algorithm_tests.yaml`, copy "
 "the text definition there."
 msgstr ""
+"Abra o arquivo "
+":file:`python/plugins/processing/tests/testdata/algoritm_tests.yaml`, copie "
+"a definição de texto lá."
 
 #: ../../docs/developers_guide/processingtesting.rst:60
 msgid ""
 "The first string from the command goes to the key ``algorithm``, the "
 "subsequent ones to ``params`` and the last one(s) to ``results``."
 msgstr ""
+"A primeira string do comando vai para a chave ``algoritmo``, as subsequentes"
+" para ``params`` e a última(s) para ``resultados``."
 
 #: ../../docs/developers_guide/processingtesting.rst:63
 msgid "The above translates to"
-msgstr ""
+msgstr "O acima se traduz em"
 
 #: ../../docs/developers_guide/processingtesting.rst:79
 msgid ""
@@ -131,78 +144,88 @@ msgid ""
 ":file:`python/plugins/processing/tests/testdata/`. The script file name "
 "should match the script algorithm name."
 msgstr ""
+"Também é possível criar testes para scripts de processamento. Os scripts "
+"devem ser colocados no subdiretório :file:`scripts` no diretório de dados de"
+" teste :file:`python/plugins/processing/tests/testdata/`. O nome do arquivo "
+"de script deve corresponder ao nome do algoritmo de script."
 
 #: ../../docs/developers_guide/processingtesting.rst:85
 msgid "Parameters and results"
-msgstr ""
+msgstr "Parâmetros e resultados"
 
 #: ../../docs/developers_guide/processingtesting.rst:88
 msgid "Trivial type parameters"
-msgstr ""
+msgstr "Tipos de parâmetros triviais"
 
 #: ../../docs/developers_guide/processingtesting.rst:90
 msgid "Parameters and results are specified as lists or dictionaries:"
-msgstr ""
+msgstr "Parâmetros e resultados são especificados como listas ou dicionários:"
 
 #: ../../docs/developers_guide/processingtesting.rst:99
 msgid "or"
-msgstr ""
+msgstr "ou"
 
 #: ../../docs/developers_guide/processingtesting.rst:109
 msgid "Layer type parameters"
-msgstr ""
+msgstr "Parâmetros do tipo camada "
 
 #: ../../docs/developers_guide/processingtesting.rst:111
 msgid ""
 "You will often need to specify layers as parameters. To specify a layer you "
 "will need to specify:"
 msgstr ""
+"Você muitas vezes precisará especificar camadas como parâmetros. Para "
+"especificar uma camada, você precisará especificar:"
 
 #: ../../docs/developers_guide/processingtesting.rst:114
 msgid "the type, ie ``vector`` or ``raster``"
-msgstr ""
+msgstr "o tipo, ou seja, ``vetor`` ou ``raster``"
 
 #: ../../docs/developers_guide/processingtesting.rst:115
 msgid "a name, with a relative path like :file:`expected/polys_centroid.gml`"
 msgstr ""
+"um nome, com um caminho relativo como :file:`expected/polys_centroid.gml`"
 
 #: ../../docs/developers_guide/processingtesting.rst:117
 msgid "This is what it looks like in action:"
-msgstr ""
+msgstr "É assim que parece em ação:"
 
 #: ../../docs/developers_guide/processingtesting.rst:131
 msgid "File type parameters"
-msgstr ""
+msgstr "Parâmetros do tipo de arquivo"
 
 #: ../../docs/developers_guide/processingtesting.rst:133
 msgid ""
 "If you need an external file for the algorithm test, you need to specify the"
 " 'file' type and the (relative) path to the file in its 'name':"
 msgstr ""
+"Se você precisar de um arquivo externo para o teste do algoritmo, precisará "
+"especificar o tipo 'arquivo' e o caminho (relativo) para o arquivo em seu "
+"'nome':"
 
 #: ../../docs/developers_guide/processingtesting.rst:148
 msgid "Results"
-msgstr ""
+msgstr "Resultados"
 
 #: ../../docs/developers_guide/processingtesting.rst:150
 msgid "Results are specified very similarly."
-msgstr ""
+msgstr "Os resultados são especificados de maneira muito semelhante."
 
 #: ../../docs/developers_guide/processingtesting.rst:153
 msgid "Basic vector files"
-msgstr ""
+msgstr "Arquivos vetoriais básicos"
 
 #: ../../docs/developers_guide/processingtesting.rst:155
 msgid "It couldn't be more trivial"
-msgstr ""
+msgstr "Não poderia ser mais trivial"
 
 #: ../../docs/developers_guide/processingtesting.rst:164
 msgid "Add the expected GML and XSD files in the folder."
-msgstr ""
+msgstr "Adicione os arquivos GML e XSD esperados na pasta."
 
 #: ../../docs/developers_guide/processingtesting.rst:167
 msgid "Vector with tolerance"
-msgstr ""
+msgstr "Vetor com tolerância"
 
 #: ../../docs/developers_guide/processingtesting.rst:169
 msgid ""
@@ -210,6 +233,9 @@ msgid ""
 "still acceptable. In this case (but only then) you may also use additional "
 "properties to define how a layer is compared."
 msgstr ""
+"Às vezes, plataformas diferentes criam resultados ligeiramente diferentes "
+"que ainda são aceitáveis. Nesse caso (mas somente então), você também pode "
+"usar propriedades adicionais para definir como uma camada é comparada."
 
 #: ../../docs/developers_guide/processingtesting.rst:173
 msgid ""
@@ -221,26 +247,38 @@ msgid ""
 "certain tolerance to all fields. There is another property ``geometry`` "
 "which also accepts a ``precision`` which is applied to each vertex."
 msgstr ""
+"Para lidar com uma certa tolerância para os valores de saída, você pode "
+"especificar uma propriedade ``compare`` para uma saída. A propriedade "
+"compare pode conter subpropriedades para ``campos``. Isso contém informações"
+" sobre a precisão de comparação de um determinado campo (``precisão``) ou um"
+" campo pode ser inteiramente ``ignorado``. Existe um nome de campo especial "
+"``__todos__`` que aplicará uma certa tolerância a todos os campos. Existe "
+"outra propriedade ``geometria`` que também aceita uma ``precisão`` que é "
+"aplicada a cada vértice."
 
 #: ../../docs/developers_guide/processingtesting.rst:196
 msgid "Raster files"
-msgstr ""
+msgstr "Arquivos raster"
 
 #: ../../docs/developers_guide/processingtesting.rst:198
 msgid ""
 "Raster files are compared with a hash checksum. This is calculated when you "
 "create a test from the processing history."
 msgstr ""
+"Arquivos raster são comparados com uma soma de verificação de hash. Isso é "
+"calculado quando você cria um teste a partir do histórico de processamento."
 
 #: ../../docs/developers_guide/processingtesting.rst:208
 msgid "Files"
-msgstr ""
+msgstr "Arquivos"
 
 #: ../../docs/developers_guide/processingtesting.rst:210
 msgid ""
 "You can compare the content of an output file to an expected result "
 "reference file"
 msgstr ""
+"Você pode comparar o conteúdo de um arquivo de saída com um arquivo de "
+"referência de resultado esperado"
 
 #: ../../docs/developers_guide/processingtesting.rst:219
 msgid ""
@@ -248,50 +286,65 @@ msgid ""
 "<https://docs.python.org/3/library/re.html#re.search>`_ against the file "
 "content"
 msgstr ""
+"Ou você pode usar uma ou mais expressões regulares que serão `matched "
+"<https://docs.python.org/3/library/re.html#re.search>`_ com o conteúdo do "
+"arquivo"
 
 #: ../../docs/developers_guide/processingtesting.rst:233
 msgid "Directories"
-msgstr ""
+msgstr "Diretórios"
 
 #: ../../docs/developers_guide/processingtesting.rst:235
 msgid ""
 "You can compare the content of an output directory with an expected result "
 "reference directory"
 msgstr ""
+"Você pode comparar o conteúdo de um diretório de saída com um diretório de "
+"referência de resultado esperado"
 
 #: ../../docs/developers_guide/processingtesting.rst:245
 msgid "Algorithm Context"
-msgstr ""
+msgstr "Contexto do algoritmo"
 
 #: ../../docs/developers_guide/processingtesting.rst:247
 msgid ""
 "There are a few more definitions that can modify the context of the "
 "algorithm - these can be specified at the top level of test:"
 msgstr ""
+"Existem mais algumas definições que podem modificar o contexto do algoritmo "
+"- estas podem ser especificadas no nível superior do teste:"
 
 #: ../../docs/developers_guide/processingtesting.rst:250
 msgid ""
 "``project`` - will load a specified QGIS project file before running the "
 "algorithm. If not specified, the algorithm will run with an empty project"
 msgstr ""
+"``projeto`` - carregará um arquivo de projeto QGIS especificado antes de "
+"executar o algoritmo. Se não especificado, o algoritmo será executado com um"
+" projeto vazio"
 
 #: ../../docs/developers_guide/processingtesting.rst:252
 msgid ""
 "``project_crs`` - overrides the default project CRS - e.g. ``EPSG:27700``"
 msgstr ""
+"``project_crs`` - substitui o SRC do projeto padrão - e.g. ``EPSG:27700``"
 
 #: ../../docs/developers_guide/processingtesting.rst:253
 msgid ""
 "``ellipsoid`` - overrides the default project ellipsoid used for "
 "measurements, e.g. ``GRS80``"
 msgstr ""
+"``elipsóide`` - substitui o elipsóide padrão do projeto usado para medições,"
+" e.g. ``GRS80``"
 
 #: ../../docs/developers_guide/processingtesting.rst:258
 msgid "Running tests locally"
-msgstr ""
+msgstr "Executar testes localmente"
 
 #: ../../docs/developers_guide/processingtesting.rst:264
 msgid ""
 "or one of the following values listed in the :source:`CMakelists.txt "
 "<python/plugins/processing/tests/CMakeLists.txt>`"
 msgstr ""
+"ou um dos seguintes valores listados em :source:`CMakelists.txt "
+"<python/plugins/processing/tests/CMakeLists.txt>`"

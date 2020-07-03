@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Kwon.Yongchan <ruvyn@naver.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:26+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Kwon.Yongchan <ruvyn@naver.com>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/qgis/teams/6144/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,6 +36,10 @@ msgid ""
 " this choice, and makes working with different CRSs as transparent and "
 "accurate as possible."
 msgstr ""
+"좌표계 또는 CRS(Coordinate Reference System)는 지표면 상의 위치에 수치 좌표를 결합시키는 체계를 말합니다. "
+"QGIS는 약 7,000개의 표준 좌표계를 지원하고 있는데, 각 좌표계는 서로 다른 사용 사례(use case)와 장점 및 단점을 가지고"
+" 있습니다. 사용자의 QGIS 프로젝트와 데이터를 위한 적절한 좌표계를 선택하는 일은 쉽지 않은 업무일 수도 있지만, 다행히도 QGIS는"
+" 이 선택 과정 전반에 걸쳐 사용자를 안내하며, 서로 다른 좌표계를 작업하는 일을 가능한 한 투명하고 정확하게 만들어줍니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:25
 msgid "Overview of Projection Support"
@@ -52,6 +57,12 @@ msgid ""
 "For instance, the common WGS 84 latitude/longitude CRS is known by the "
 "identifier ``EPSG:4326``, and the web mapping standard CRS is ``EPSG:3857``."
 msgstr ""
+"QGIS는 알려진 좌표계 약 7,000개를 지원합니다. 이 표준 좌표계들은 유럽 석유 탐사 연합(EPSG; European "
+"Petroleum Search Group)과 프랑스 국립지리원(IGNF; Institut Geographique National de "
+"France)이 정의한 좌표계에 기반하며, 기저 \"Proj\" 투영체 라이브러리를 통해 QGIS에서 사용할 수 있습니다. 일반적으로 이"
+" 표준 좌표계들은 \"EPSG\" 또는 \"IGNF\" 같은 조직명이 기관(authority)이고 특정 좌표계에 할당된 유일한 숫자가 "
+"코드인 기관:코드(authority:code) 조합을 사용해서 식별됩니다. 예를 들어, 흔히 쓰이는 WGS 84 위도/경도 좌표계는 "
+"식별자 ``EPSG:4326`` 로 알려져 있으며, 웹 맵핑 표준 좌표계는 ``EPSG:3857`` 입니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:37
 msgid ""
@@ -59,10 +70,12 @@ msgid ""
 ":ref:`sec_custom_projections` for information on managing your custom "
 "coordinate reference systems."
 msgstr ""
+"사용자 지정, 사용자 생성 좌표계는 사용자 좌표계 데이터베이스에 저장됩니다. 사용자 지정 좌표계 관리에 대한 자세한 내용은 "
+":ref:`sec_custom_projections` 를 참조하십시오."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:44
 msgid "Layer Coordinate Reference Systems"
-msgstr ""
+msgstr "레이어 좌표계"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:46
 msgid ""
@@ -78,6 +91,13 @@ msgid ""
 "extension. For example, :file:`alaska.shp` would have a corresponding "
 "projection file named :file:`alaska.prj`."
 msgstr ""
+"데이터를 특정 목표 좌표계로 정확히 투영하려면, 사용자 데이터가 좌표계 정보를 담고 있어야 하거나 사용자가 레이어에 정확한 좌표계를 직접"
+" 할당해야 합니다. PostGIS 레이어의 경우, QGIS는 해당 PostGIS 레이어가 생성됐던 당시 지정된 공간 참조 식별자를 "
+"사용합니다. OGR 또는 GDAL이 지원하는 데이터의 경우, QGIS는 좌표계를 지정하는 공인된 방법(recognized means)이 "
+"있는지 여부에 의존합니다. 예를 들어 shapefile 포맷의 경우 레이어의 좌표계를 나타내는 WKT(ESRI Well-Known "
+"Text)를 담고 있는 파일을 말합니다. 이 투영체 파일은 :file:`.shp` 파일과 동일한 기본 명칭(base name)과 "
+":file:`.prj` 확장자로 이루어져 있습니다. 예를 들어 :file:`alaska.shp` 파일은 이에 대응하는 "
+":file:`alaska.prj` 라는 투영체 파일을 가지고 있을 것입니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:58
 msgid ""
@@ -87,16 +107,21 @@ msgid ""
 "information. You can configure QGIS behavior whenever it cannot "
 "automatically determine the correct CRS for a layer:"
 msgstr ""
+"QGIS는 레이어를 불러올 때마다 자동적으로 레이어의 정확한 좌표계를 판별하려 합니다. 어떤 경우 ─ 예를 들어 불러온 레이어가 해당 "
+"정보를 담고 있지 않은 경우 ─ 이는 불가능합니다. 사용자는 QGIS가 레이어의 정확한 좌표계를 자동적으로 판별할 수 없을 때마다 어떻게"
+" 반응할지를 환경 설정할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:64
 msgid ""
 "Open :menuselection:`Settings -->` |options| :menuselection:`Options... --> "
 "CRS`"
 msgstr ""
+":menuselection:`Settings -->` |options| :menuselection:`Options... --> CRS` "
+"메뉴를 클릭합니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:71
 msgid "The CRS tab in the QGIS Options Dialog"
-msgstr ""
+msgstr "QGIS 옵션 대화창의 CRS 탭"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:73
 msgid ""
@@ -104,6 +129,9 @@ msgid ""
 ":guilabel:`when a new layer is created, or when a layer is loaded that has "
 "no CRS`. One of:"
 msgstr ""
+":guilabel:`CRS for layers` 그룹에 있는 :guilabel:`when a new layer is created, or"
+" when a layer is loaded that has no CRS` 에서 불러온 레이어가 좌표계 정보를 가지고 있지 않을 경우 "
+"어떻게 반응할지 설정하십시오. 다음 옵션 가운데 하나를 선택할 수 있습니다:"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:77
 msgid ""
@@ -116,6 +144,11 @@ msgid ""
 "values, i.e. the same behavior as all layers get when :ref:`a project is set"
 " to have no CRS <project_crs>`."
 msgstr ""
+"|radioButtonOn| :guilabel:`Leave as unknown CRS (take no action)`: 좌표계 정보가 "
+"없는 레이어를 불러왔을 때 좌표계를 선택하라고 물어보지 않고, 다음에 선택하도록 미룰 것입니다. 한번에 많은 레이어들을 불러올 때 "
+"편리합니다. :guilabel:`Layers` 패널에서 좌표계가 없는 레이어는 옆의 |indicatorNoCRS| 아이콘으로 식별할 수 "
+"있습니다. 이들은 비참조(un-referenced)되어, 레이어의 좌표를 지구와는 관계없는 순수한 수치로 취급할 것입니다. 즉 "
+":ref:`프로젝트가 좌표계를 갖지 않도록 설정 <project_crs>` 했을 때의 모든 레이어처럼 취급될 것입니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:85
 msgid ""
@@ -126,42 +159,51 @@ msgid ""
 "in other cases you will need to contact the original author of the data to "
 "determine the correct CRS to use."
 msgstr ""
+"|radioButtonOff| :guilabel:`Prompt for CRS`: 사용자에게 좌표계를 직접 선택하도록 요청할 것입니다. "
+"정확하게 선택하는 것이 중요합니다. 잘못 선택하면 지표면 상의 잘못된 위치에 사용자 레이어를 배치할 것이기 때문이죠! 첨부된 메타데이터가"
+" 레이어의 정확한 좌표계를 설명할 때도 있고, 정확한 좌표계를 결정하기 위해 데이터의 원저자와 연락해야 할 경우도 있습니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:91
 msgid "|radioButtonOff| :guilabel:`Use project CRS`"
-msgstr "|radioButtonOff| :guilabel:`Use project CRS`"
+msgstr "|radioButtonOff| :guilabel:`Use project CRS`: 레이어에 프로젝트 좌표계를 적용합니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:92
 msgid ""
 "|radioButtonOff| :guilabel:`Use default layer CRS`, as set in the "
 ":guilabel:`Default CRS for layers` combobox above."
 msgstr ""
+"|radioButtonOff| :guilabel:`Use default layer CRS`: 위에 있는 콤보박스에 설정된 "
+":guilabel:`Default CRS for layers` 대로 기본 레이어 좌표계를 사용합니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:97
 msgid ""
 "To assign the same CRS to multiple layers that have no crs or have a wrong "
 "one in one operation:"
-msgstr ""
+msgstr "좌표계를 가지고 있지 않거나 잘못된 좌표계를 가지고 있는 레이어 여러 개에 동일한 좌표계를 한번에 할당하려면:"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:100
 msgid "Select the layers in the :guilabel:`Layers` panel"
-msgstr ""
+msgstr ":guilabel:`Layers` 패널에서 레이어를 선택합니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:101
 msgid ""
 "Press :kbd:`Ctrl+Shift+C`. You could also right-click over one of the "
 "selected layers or go to :menuselection:`Layer --> Set CRS of layer(s)`"
 msgstr ""
+":kbd:`Ctrl+Shift+C` 키를 동시에 입력합니다. 선택된 레이어 가운데 하나를 오른쪽 클릭하거나 "
+":menuselection:`Layer --> Set CRS of layer(s)` 메뉴를 선택해도 됩니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:103
 msgid "Find and select the right CRS to use"
-msgstr ""
+msgstr "사용할 올바른 좌표계를 찾아 선택합니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:104
 msgid ""
 "And press :guilabel:`OK`. You can confirm that it has been set correctly in "
 "the :guilabel:`Source` tab of the layers' properties dialog."
 msgstr ""
+":guilabel:`OK` 를 클릭하십시오. 레이어 속성 대화창의 :guilabel:`Source` 탭에서 정확히 설정됐는지 확인할 수 "
+"있습니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:107
 msgid ""
@@ -169,10 +211,12 @@ msgid ""
 "data source in any way, rather it just changes how QGIS interprets the raw "
 "coordinates from the layer in the current QGIS project."
 msgstr ""
+"이 설정에서 좌표계를 변경하는 것은 기저 데이터소스를 전혀 변경시키지 않는다는 사실을 기억하십시오. 그보다는 QGIS가 현재 QGIS "
+"프로젝트에서 레이어가 가지고 있는 원(raw) 좌표를 해석하는 방법을 변경할 뿐입니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:117
 msgid "Project Coordinate Reference Systems"
-msgstr ""
+msgstr "프로젝트 좌표계"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:119
 msgid ""
@@ -180,6 +224,8 @@ msgid ""
 "The project CRS determines how data is projected from its underlying raw "
 "coordinates to the flat map rendered within your QGIS map canvas."
 msgstr ""
+"QGIS의 모든 프로젝트도 좌표계와 관련돼 있습니다. 프로젝트 좌표계는 사용자의 QGIS 맵 캔버스 내에서 데이터의 기저 원좌표를 "
+"렌더링된 평면 맵으로 어떻게 투영할지 결정합니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:123
 msgid ""
@@ -191,6 +237,10 @@ msgid ""
 "project's CRS, so that they will all be rendered in the correct position "
 "with respect to each other!"
 msgstr ""
+"QGIS는 래스터와 벡터 데이터의 \"실시간(on the fly)\" 좌표계 변환을 지원합니다. 즉 사용자 프로젝트에 있는 어떤 맵 "
+"레이어의 기저 좌표계와도 상관 없이, 사용자 프로젝트 용으로 정의된 일반 좌표계로 자동적으로 변환될 것이라는 뜻입니다. 겉으로 드러나지는"
+" 않지만, QGIS는 사용자 프로젝트가 담고 있는 모든 레이어를 프로젝트의 좌표계로 그대로 재투영해서, 레이어들이 각각 서로 정확한 "
+"위치로 렌더링될 것입니다!"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:131
 msgid ""
@@ -203,6 +253,10 @@ msgid ""
 "for the area you are mapping, and ensure that your QGIS project follows "
 "these standards."
 msgstr ""
+"사용자의 QGIS 프로젝트 용 좌표계를 적절히 선택하는 일은 중요합니다. 적절하지 않은 좌표계를 선택하면 사용자 맵이 일그러져 보일 수도"
+" 있고, 실재 세계의 상대적 크기와 피처의 위치를 제대로 반영하지 못할 수도 있습니다. 상대적으로 작은 지리적 면적을 작업한다면, 특정 "
+"국가 또는 행정구역 내에서 사용되는 몇몇 표준 좌표계가 있는 것이 보통입니다. 사용자가 맵핑하고 있는 지역에서 어떤 좌표계가 적절한지 "
+"또는 표준인지 조사하는 일이 중요합니다. 그 다음 사용자의 QGIS 프로젝트가 그런 표준을 따르도록 하십시오."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:140
 msgid ""
@@ -217,6 +271,13 @@ msgid ""
 " default CRS to use for all newly created projects. This choice will be "
 "saved for use in subsequent QGIS sessions."
 msgstr ""
+"QGIS는 기본적으로 새 프로젝트를 시작할 때 전체 수준 기본 투영체를 사용합니다. 전체 수준 기본 좌표계는 (\"WGS 84\"로도 "
+"알려진) ``EPSG:4326``으로, 지구 경도/위도 기반 좌표계입니다. 이 기본 좌표계는 :menuselection:`Settings"
+" -->` |options| :menuselection:`Options...` 메뉴를 클릭하면 열리는 대화창의 "
+":guilabel:`CRS` 탭에 있는 :guilabel:`CRS for New Projects` 설정을 통해 변경할 수 있습니다. "
+"(figure_projection_options_ 그림 참조) 프로젝트 좌표계를 새 프로젝트에 처음으로 불러온 레이어의 좌표계에 "
+"자동적으로 일치시키도록 설정할 수도 있고, 다른 방법으로는 새로 생성할 프로젝트에 사용할 다른 기본 좌표계를 선택할 수도 있습니다. "
+"이렇게 선택한 좌표계는 이후 새로 시작되는 QGIS 세션이 사용하도록 저장될 것입니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:151
 msgid ""
@@ -224,6 +285,8 @@ msgid ""
 ":menuselection:`Project --> Properties...` dialog. It will also be shown in "
 "the lower-right of the QGIS status bar."
 msgstr ""
+":menuselection:`Project --> Properties...` :guilabel:`CRS` 탭을 통해서도 대화창의 프로젝트"
+" 좌표계를 설정할 수 있습니다. 프로젝트 좌표계는 QGIS 상태 바의 우하단에도 표시될 것입니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:160
 msgid "Project Properties Dialog"
@@ -231,7 +294,7 @@ msgstr "프로젝트 속성 대화창"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:162
 msgid "Available options are:"
-msgstr ""
+msgstr "다음과 같은 옵션을 사용할 수 있습니다:"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:164
 msgid ""
@@ -243,16 +306,21 @@ msgid ""
 "using QGIS for non earth uses like role-playing game maps, building mapping "
 "or microscopic stuff. In this case:"
 msgstr ""
+"|unchecked| :guilabel:`No projection (or unknown/non-Earth projection)`: 이 "
+"설정을 체크하면 QGIS 내에서 모든 투영체 처리를 비활성화할 것입니다. 즉 모든 레이어와 맵 좌표를 지표면 상의 위치와는 아무 상관 "
+"없는 단순 2차원 데카르트 좌표로 취급할 것입니다. 레이어 좌표계를 (원좌표를 기반으로) 추측하거나, 롤 플레잉 게임, 건물 맵핑, 또는"
+" 미소(microscopic) 사물 등과 같이 지구와 관련이 없는 목적으로 QGIS를 사용하는 데 이 옵션을 사용할 수 있습니다. 이런 "
+"경우에는:"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:172
 msgid ""
 "No reprojection is done while rendering the layers: features are just drawn "
 "using their raw coordinates."
-msgstr ""
+msgstr "레이어를 렌더링하는 동안 어떤 재투영도 이루어지지 않습니다: 피처를 고유의 원좌표를 이용해서 그릴 뿐입니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:174
 msgid "The ellipsoid is locked out and forced to ``None/Planimetric``."
-msgstr ""
+msgstr "타원체를 무시하고 ``None/Planimetric``으로 강제합니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:175
 msgid ""
@@ -260,6 +328,8 @@ msgid ""
 "forced to \"unknown units\"; all measurements are done in unknown map units,"
 " and no conversion is possible."
 msgstr ""
+"거리 및 면적 단위와 좌표 표시를 무시하고 \"unknown units\"로 강제합니다. 모든 측정은 알 수 없는 맵 단위로 이루어지며,"
+" 어떤 변환도 할 수 없습니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:179
 msgid ""
@@ -270,6 +340,10 @@ msgid ""
 "regardless their original CRS. Use of units and ellipsoid setting are "
 "available and make sense and you can perform calculations accordingly."
 msgstr ""
+"또는 기존 좌표계에서 *지리(geographic)*, *투영(projected)*이나 *사용자 정의(user-defined)* 좌표계 "
+"가운데 하나를 선택할 수도 있습니다. 사용자가 적절한 좌표계를 선택하는 것을 돕기 위해 지표면 상의 좌표계 범위의 미리보기를 표시합니다."
+" 프로젝트에 추가한 레이어를, 원래 좌표계와 상관없이 중첩시키기 위해, 선택한 좌표계로 실시간(on-the-fly) 재투영합니다. 단위 "
+"및 타원체 설정을 사용할 수 있고, 의미가 통하며, 사용자가 설정에 따라 계산을 수행할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:186
 msgid ""
@@ -281,24 +355,29 @@ msgid ""
 " one of these CRSs will also set your project to measure using feet by "
 "default."
 msgstr ""
+"사용자가 자신의 QGIS 프로젝트를 위한 새 좌표계를 선택할 때마다, 선택한 좌표계와 일치시키기 위해 :guilabel:`Project "
+"properties` 대화창(:menuselection:`Project --> Properties...`)의 "
+":guilabel:`General` 탭에서 측정 단위를 자동적으로 변경할 것입니다. 예를 들어, 몇몇 좌표계는 자신의 좌표를 미터가 아닌"
+" 피트 단위로 정의하기 때문에 사용자의 QGIS 프로젝트를 그런 좌표계 가운데 하나로 설정하면 사용자 프로젝트가 피트 단위를 기본값으로 "
+"사용해서 측정하도록 설정할 것입니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:193
 msgid "**Setting the project CRS from a layer**"
-msgstr ""
+msgstr "**레이어로부터 프로젝트 좌표계를 설정하기**"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:195
 msgid "You can assign a CRS to the project using a layer CRS:"
-msgstr ""
+msgstr "레이어 좌표계를 사용해서 프로젝트에 좌표계를 할당할 수 있습니다:"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:197
 msgid ""
 "In the :guilabel:`Layers` panel, right-click on the layer you want to pick "
 "the CRS"
-msgstr ""
+msgstr ":guilabel:`Layers` 패널에서 선택하고자 하는 좌표계를 오른쪽 클릭하십시오."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:199
 msgid "Select :guilabel:`Set project CRS from Layer`."
-msgstr ""
+msgstr ":guilabel:`Set project CRS from Layer` 를 선택하십시오."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:201
 msgid ""
@@ -306,6 +385,8 @@ msgid ""
 "coordinates display are updated accordingly and all the layers in the "
 "project are on-the-fly translated to the new project CRS."
 msgstr ""
+"프로젝트 좌표계를 레이어 좌표계로 재정의합니다. 그에 맞춰 맵 캔버스 범위, 좌표 표시를 업데이트하고 프로젝트의 모든 레이어를 새 "
+"프로젝트 좌표계로 실시간 변환합니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:210
 msgid "Coordinate Reference System Selector"
@@ -325,6 +406,8 @@ msgid ""
 "Coordinate Reference System, you can use the search feature to find it. "
 "Enter the EPSG code, the identifier or the name."
 msgstr ""
+"**Filter**: EPSG 코드, 식별자, 또는 좌표계 명칭을 알고 있을 경우, 검색 기능을 이용해서 좌표계를 찾을 수 있습니다. "
+"EPSG 코드, 식별자, 또는 명칭을 입력해보십시오."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:218
 msgid ""
@@ -343,7 +426,7 @@ msgid ""
 " appropriate node and selecting the CRS. The active CRS is preselected."
 msgstr ""
 "**Coordinate reference systems of the world**: QGIS가 지원하는 모든 좌표계들의 목록을 "
-"보여줍니다. 극좌표계,  투영좌표계 및 사용자 지정 좌표계가 들어 있습니다. 좌표계를 지정하려면, 적절한 노드를 확장해서 좌표계를 "
+"보여줍니다. 지리 좌표계,  투영 좌표계 및 사용자 지정 좌표계가 들어 있습니다. 좌표계를 지정하려면, 적절한 노드를 확장해서 좌표계를 "
 "선택하십시오. 현재 사용중인 좌표계가 미리 선택돼 있습니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:225
@@ -351,6 +434,7 @@ msgid ""
 "**PROJ text**: This is the CRS string used by the PROJ projection engine. "
 "This text is read-only and provided for informational purposes."
 msgstr ""
+"**PROJ text**: PROJ 투영 엔진이 사용하는 좌표계 문자열입니다. 이 텍스트는 읽기 전용으로, 정보 제공 용도로 표시됩니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:228
 msgid ""
@@ -361,6 +445,9 @@ msgid ""
 "whenever a CRS is selected from the list. In addition, this preview map also"
 " shows an indicator of the current main canvas map extent."
 msgstr ""
+"좌표계 선택기는 선택한 좌표계를 유효하게 사용할 수 있는 지리적 지역을 개략적으로 보여주는 미리보기도 표시합니다. 많은 좌표계는 작은 "
+"지리적 지역에서만 사용하도록 설계되어 있어서, 해당 좌표계가 사용되도록 설계된 지역에서만 사용해야 합니다. 미리보기 맵은 목록에서 "
+"좌표계를 선택할 때마다 사용할 수 있는 지역을 추정해서 표시합니다. 또한, 이 미리보기 맵은 현재 주 맵 캔버스의 범위도 보여줍니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:241
 msgid "Custom Coordinate Reference System"
@@ -391,6 +478,10 @@ msgid ""
 "Geological Survey Open-File Report 90-284, 1990 (available at "
 "ftp://ftp.remotesensing.org/proj/OF90-284.pdf)."
 msgstr ""
+"QGIS 에서 사용자 지정 좌표계를 정의하려면 PROJ 투영 라이브러리를 잘 이해하고 있어야 합니다. 먼저, 제럴드 I. "
+"이븐던(Gerald I. Evenden)이 1990년 작성한 미국지리조사국 오픈 파일 보고서 90-284 “UNIX 환경의 지도 제작 "
+"투영 과정 - 사용자 설명서”를 참조하십시오. (ftp://ftp.remotesensing.org/proj/OF90-284.pdf 에서 "
+"다운로드할 수 있습니다.)"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:263
 msgid ""
@@ -398,6 +489,8 @@ msgid ""
 "utilities. The cartographic parameters used with ``proj`` are described in "
 "the user manual and are the same as those used by QGIS."
 msgstr ""
+"이 문서는 ``proj`` 및 관련 명령 줄 유틸리티의 사용법을 설명하고 있습니다. 이 문서가 설명하는 ``proj``에 쓰이는 지도 "
+"제작 관련 파라미터는 QGIS에서 쓰이는 파라미터와 동일합니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:267
 msgid ""
@@ -413,19 +506,21 @@ msgstr "좌표계를 설명하는 명칭"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:271
 msgid "The cartographic parameters in PROJ or WKT format"
-msgstr ""
+msgstr "PROJ 또는 WKT 문법으로 된 지도 제작 파라미터"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:273
 msgid ""
 "To create a new CRS, click the |signPlus| :sup:`Add new CRS` button, enter a"
 " descriptive name, select the format, and the CRS parameters."
 msgstr ""
+"새 좌표계를 만들려면, |signPlus| :sup:`Add new CRS` 버튼을 클릭한 다음 좌표계를 설명하는 명칭을 입력하고, "
+"포맷을 선택한 다음, 좌표계 파라미터를 입력하십시오."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:276
 msgid ""
 "Click :guilabel:`Validate` to test whether the CRS definition is an "
 "acceptable projection definition."
-msgstr ""
+msgstr "사용자가 정의한 좌표계가 유효한 투영체 정의인지 테스트해보려면 :guilabel:`Validate` 를 클릭하십시오."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:279
 msgid ""
@@ -435,21 +530,27 @@ msgid ""
 "and compare the results with the known values in your coordinate reference "
 "system."
 msgstr ""
+"사용자 좌표계가 제대로 된 결과를 내놓는지 확인하기 위해 사용자 좌표계 파라미터를 테스트해볼 수 있습니다. "
+":guilabel:`North` 와 :guilabel:`East` 란에 사용자가 위치를 알고 있는 WGS 84 위도와 경도 값을 각각 "
+"입력하십시오. :guilabel:`Calculate` 를 클릭한 다음, 그 결과를 사용자 좌표계에서 위치를 알고 있는 값과 "
+"비교해보십시오."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:285
 msgid "Integrate an NTv2-transformation in QGIS"
-msgstr ""
+msgstr "QGIS에서 NTv2 변환 통합"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:287
 msgid ""
 "To integrate an NTv2 transformation file in QGIS you need one more step:"
-msgstr ""
+msgstr "QGIS에서 NTv2 변환 파일을 통합하려면 한 가지 단계를 더 거쳐야 합니다:"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:289
 msgid ""
 "Place the NTv2 file (.gsb) in the CRS/Proj folder that QGIS uses (e.g. "
 ":file:`C:\\\\OSGeo4W64\\\\share\\\\proj` for windows users)"
 msgstr ""
+"QGIS가 사용하는 :file:`CRS/Proj` 폴더에 NTv2 파일(``.gsb``)을 넣으십시오. (예를 들어 윈도우 사용자의 경우"
+" :file:`C:\\\\OSGeo4W64\\\\share\\\\proj` 폴더)"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:291
 msgid ""
@@ -458,14 +559,17 @@ msgid ""
 "Reference System Definition` (:menuselection:`Settings --> Custom "
 "Projections...`)."
 msgstr ""
+":menuselection:`Settings --> Custom Projections...` 대화창의 :guilabel:`Custom "
+"Coordinate Reference System Definition` 부분의 :guilabel:`Parameters` 란에 있는 "
+"PROJ 정의에 **nadgrids**(``+nadgrids=nameofthefile.gsb``)를 추가하십시오."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:300
 msgid "Setting an NTv2 transformation"
-msgstr ""
+msgstr "NTv2 변환 설정하기"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:307
 msgid "Datum Transformations"
-msgstr ""
+msgstr "데이터 변환"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:309
 msgid ""
@@ -474,6 +578,9 @@ msgid ""
 "transparently reprojects them to the project CRS. For some CRS, there are a "
 "number of possible transforms available to reproject to the project's CRS!"
 msgstr ""
+"QGIS는 기본적으로 '실시간(on-the-fly)' 좌표계 변환을 활성화시켜 놓습니다. 즉 다른 좌표계를 가진 레이어를 사용할 때마다 "
+"QGIS는 해당 레이어를 그대로 프로젝트 좌표계로 재투영한다는 뜻입니다. 일부 좌표계의 경우, 프로젝트 좌표계로 재투영하는 데 사용할 수"
+" 있는 변환 방법이 하나가 아닙니다!"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:314
 msgid ""
@@ -487,6 +594,11 @@ msgid ""
 "extracting these to the :file:`proj` folder under your QGIS :ref:`user "
 "profile <user_profiles>` folder."
 msgstr ""
+"QGIS는 기본적으로 사용할 수 있는 변환 방법 가운데 가장 정확한 방법을 사용하려 할 것입니다. 하지만, 그럴 수 없는 경우도 "
+"있습니다. 예를 들어 변환할 때마다 추가적인 지원 파일이 필요한 경우가 있겠습니다. 더 정확한 변환 방법이 있지만 현재 사용할 수는 없을"
+" 때마다, QGIS는 사용자에게 더 정확한 변환 방법과 사용자 시스템에서 해당 변환을 활성화시키는 방법을 알려주는 경고 메시지를 표시할 "
+"것입니다. 일반적으로 이렇게 변환 방법을 활성화시키려면 외부 변환 지원 파일 패키지를 다운로드해서 QGIS의 :ref:`사용자 프로파일 "
+"<user_profiles>` 폴더 아래에 있는 :file:`proj` 폴더에 압축 해제해야 합니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:324
 msgid ""
@@ -495,6 +607,8 @@ msgid ""
 "informed selection of which is the most appropriate transformation to use "
 "for your data."
 msgstr ""
+"사용자가 원한다면 QGIS가 두 좌표계 사이에서 변환할 수 있는 변환 방법이 두 개 이상일 때마다 알려주고, 사용자 데이터를 사용하는 데"
+" 어떤 변환이 가장 적절한지에 대한 정보를 제공해서 올바르게 선택할 수 있도록 도와주게 할 수도 있습니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:328
 msgid ""
@@ -502,6 +616,8 @@ msgid ""
 ":menuselection:`Options --> CRS` tab menu under the :guilabel:`Default datum"
 " transformations` group:"
 msgstr ""
+":guilabel:`Default datum transformations` 그룹 아래에 있는 :menuselection:`Settings"
+" -->` |options| :menuselection:`Options --> CRS` 탭 메뉴에서 이렇게 사용자 지정할 수 있습니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:332
 msgid ""
@@ -513,28 +629,37 @@ msgid ""
 "selecting a transformation from this dialog, then the choice is remembered "
 "and automatically applied to any newly created QGIS projects."
 msgstr ""
+"|checkbox| :guilabel:`Ask for datum transformation if several are available`"
+" 사용: 입력/산출(source/destination) 좌표계 조합을 위한 데이터 변환 방법이 하나 이상 있을 경우, 사용자에게 "
+"프로젝트에서 어떤 데이터 변환을 사용할지 물어보는 대화창이 자동적으로 열릴 것입니다. 이 대화창에서 변환 방법을 선택했을 때 "
+":guilabel:`Make default` 체크박스를 체크했다면, 선택 사항을 기억해서 새로 생성하는 모든 QGIS 프로젝트에 "
+"자동적으로 적용할 것입니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:339
 msgid ""
 "or defining a list of appropriate datum transformations to use as defaults "
 "when loading a layer to a project or reprojecting a layer."
 msgstr ""
+"또는 프로젝트에 레이어를 불러오거나 레이어를 재투영할 때 기본값으로 사용할 적절한 데이터 변환 방법 목록을 정의할 수도 있습니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:342
 msgid ""
 "Use the |signPlus| button to open the :guilabel:`Select Datum "
 "Transformations` dialog. Then:"
 msgstr ""
+"|signPlus| 버튼을 클릭해서 :guilabel:`Select Datum Transformations` 대화창을 연 다음:"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:345
 msgid ""
 "Choose the :guilabel:`Source CRS` of the layer, using the drop-down menu or "
 "the |setProjection| :sup:`Select CRS` widget."
 msgstr ""
+"드롭다운 메뉴 또는 |setProjection| :sup:`Select CRS` 위젯을 사용해서 레이어의 :guilabel:`Source"
+" CRS` 를 선택합니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:347
 msgid "Provide the :guilabel:`Destination CRS` in the same way."
-msgstr ""
+msgstr "동일한 방법으로 :guilabel:`Destination CRS` 도 선택합니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:348
 msgid ""
@@ -542,6 +667,8 @@ msgid ""
 " in the table. Clicking a row shows details on the settings applied and the "
 "corresponding accuracy of the transformation."
 msgstr ""
+"입력/산출할 수 있는 변환 방법 목록이 테이블에 표시될 것입니다. 행을 클릭하면 적용된 설정에 대한 상세 정보 및 그에 대응하는 변환 "
+"정확를 보여줍니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:353
 msgid ""
@@ -549,11 +676,13 @@ msgid ""
 "In this case, the transformation will still be shown in this list but will "
 "not be selectable."
 msgstr ""
+"사용자 시스템 상에서 변환을 사용할 수 없을 수도 있습니다. 이럴 경우, 해당 변환이 목록에서 사라지지는 않지만 선택할 수도 없을 "
+"것입니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:357
 msgid ""
 "Find your preferred transformation, select it and click :guilabel:`OK`."
-msgstr ""
+msgstr "사용자가 선호하는 변환을 찾아 선택한 다음 :guilabel:`OK` 를 클릭하십시오."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:359
 msgid ""
@@ -563,6 +692,10 @@ msgid ""
 "Transformation` and :guilabel:`Destination Datum Transformation`) to be used"
 " to transform between the CRSs."
 msgstr ""
+":guilabel:`Default Datum Transformations` 에 있는 테이블에 :guilabel:`Source CRS` 및"
+" :guilabel:`Destination CRS` 는 물론 좌표계들 사이를 변환하는 데 쓰이는 데이터 "
+"변환(:guilabel:`Source Datum Transformation` 및 :guilabel:`Destination Datum "
+"Transformation`)에 대한 정보와 함께 행이 추가됩니다."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:365
 msgid ""
@@ -571,10 +704,12 @@ msgid ""
 "(|signMinus|) from the list or change the entry (|toggleEditing|) in the "
 "list."
 msgstr ""
+"QGIS는 자동적으로 이제부터 선택한 데이터 변환을 이 두 좌표계 사이를 변환하는 데 사용합니다. 사용자가 목록에서 해당 변환을 "
+"제거(|signMinus|)하거나 목록에 있는 항목을 변경(|toggleEditing|)하기 전까지는 말이죠."
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:375
 msgid "Selecting a preferred default datum transformation"
-msgstr ""
+msgstr "선호하는 기본 데이터 변환을 선택하기"
 
 #: ../../docs/user_manual/working_with_projections/working_with_projections.rst:377
 msgid ""
@@ -585,3 +720,8 @@ msgid ""
 "tab of the :guilabel:`Project properties` dialog (:menuselection:`Project "
 "--> Properties...`). These settings apply to the current project only."
 msgstr ""
+"이 시스템 상에서 생성된 모든 새 QGIS 프로젝트가 :menuselection:`Settings -->` |options| "
+":menuselection:`Options --> CRS` 탭에서 설정한 데이터 변환을 상속할 것입니다. 또한 특정 프로젝트는 "
+":guilabel:`Project properties` 대화창의 (:menuselection:`Project --> "
+"Properties...`) :guilabel:`CRS` 탭을 통해 지정한 자신만의 특정 변환 방법 모음을 가질 수도 있습니다. 이 "
+"설정은 현재 프로젝트에만 적용됩니다."

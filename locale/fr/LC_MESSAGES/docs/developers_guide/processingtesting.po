@@ -6,6 +6,7 @@
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
 # Sant-anna <delazj@gmail.com>, 2020
+# thomas jacquemot <t.jacquemot@inddigo.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:24+0000\n"
-"Last-Translator: Sant-anna <delazj@gmail.com>, 2020\n"
+"Last-Translator: thomas jacquemot <t.jacquemot@inddigo.com>, 2020\n"
 "Language-Team: French (https://www.transifex.com/qgis/teams/6144/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,7 +25,7 @@ msgstr ""
 
 #: ../../docs/developers_guide/processingtesting.rst:5
 msgid "Processing Algorithms Testing"
-msgstr ""
+msgstr "Test de l'algorithme de traitement :"
 
 #: ../../docs/developers_guide/processingtesting.rst:11
 msgid "Algorithm tests"
@@ -44,6 +45,9 @@ msgid ""
 "extend this list with algorithms of your own and, like any new feature, "
 "adding tests is required."
 msgstr ""
+"QGIS fournit un certain nombre d'algorithmes dans le framework Processing. "
+"Vous pouvez y ajouter les votre mais, comme  toute nouvelles "
+"fonctionnalités, vous devez les tester."
 
 #: ../../docs/developers_guide/processingtesting.rst:20
 msgid ""
@@ -51,16 +55,23 @@ msgid ""
 ":file:`testdata/qgis_algorithm_tests.yaml` or "
 ":file:`testdata/gdal_algorithm_tests.yaml` as appropriate."
 msgstr ""
+"Pour tester vos algorithmes, vous pouvez les ajouter, le cas échéant, a "
+":file:`testdata/qgis_algorithm_tests.yaml` ou "
+":file:`testdata/gdal_algorithm_tests.yaml`"
 
 #: ../../docs/developers_guide/processingtesting.rst:23
 msgid ""
 "This file is structured with `yaml syntax <https://yaml.org/start.html>`_."
 msgstr ""
+"Ce fichier est structuré selon la `syntaxe yaml "
+"<https://yaml.org/start.html>`_."
 
 #: ../../docs/developers_guide/processingtesting.rst:25
 msgid ""
 "A basic test appears under the toplevel key ``tests`` and looks like this:"
 msgstr ""
+"Un test simple doit figurer sous la clé principale ``tests`` et doit "
+"ressembler à ceci :"
 
 #: ../../docs/developers_guide/processingtesting.rst:42
 msgid "How To"
@@ -86,12 +97,16 @@ msgid ""
 "When you have run the algorithm, go to :menuselection:`Processing --> "
 "History` and find the algorithm which you have just run."
 msgstr ""
+"Lorsque vous lancé un algorithme, ouvrez le  :menuselection:`Processing --> "
+"History` et recherchez celui que vous avez lancer en dernier."
 
 #: ../../docs/developers_guide/processingtesting.rst:55
 msgid ""
 "Right click the algorithm and click :guilabel:`Create Test`. A new window "
 "will open with a text definition."
 msgstr ""
+"Faites un click-droit sur l'algorithme et cliquer sur :guilabel:`Create "
+"Test`. Une nouvelle fenêtre s'ouvre avec une text definition."
 
 #: ../../docs/developers_guide/processingtesting.rst:57
 msgid ""
@@ -99,12 +114,17 @@ msgid ""
 ":file:`python/plugins/processing/tests/testdata/algorithm_tests.yaml`, copy "
 "the text definition there."
 msgstr ""
+"Ouvrez le fichier "
+":file:`python/plugins/processing/tests/testdata/algorithm_tests.yaml` et "
+"copiez-y la text definition."
 
 #: ../../docs/developers_guide/processingtesting.rst:60
 msgid ""
 "The first string from the command goes to the key ``algorithm``, the "
 "subsequent ones to ``params`` and the last one(s) to ``results``."
 msgstr ""
+"La première chaine correspond à la clé ``algorithme``, les suivantes aux "
+"``paramètres`` et la⸱les dernière⸱s aux ``résultats``."
 
 #: ../../docs/developers_guide/processingtesting.rst:63
 msgid "The above translates to"
@@ -154,7 +174,7 @@ msgstr ""
 
 #: ../../docs/developers_guide/processingtesting.rst:117
 msgid "This is what it looks like in action:"
-msgstr ""
+msgstr "Vous devriez obtenir quelque chose comme ça :"
 
 #: ../../docs/developers_guide/processingtesting.rst:131
 msgid "File type parameters"
@@ -176,7 +196,7 @@ msgstr ""
 
 #: ../../docs/developers_guide/processingtesting.rst:153
 msgid "Basic vector files"
-msgstr ""
+msgstr "Fichiers vecteurs simples"
 
 #: ../../docs/developers_guide/processingtesting.rst:155
 msgid "It couldn't be more trivial"
@@ -260,17 +280,23 @@ msgid ""
 "``project`` - will load a specified QGIS project file before running the "
 "algorithm. If not specified, the algorithm will run with an empty project"
 msgstr ""
+"``project`` - chargera un projet QGIS spécifique avant de lancer "
+"l'algorithme. Si non précisé, l'algorithme sera lancé avec un projet vide."
 
 #: ../../docs/developers_guide/processingtesting.rst:252
 msgid ""
 "``project_crs`` - overrides the default project CRS - e.g. ``EPSG:27700``"
 msgstr ""
+"``project_crs`` - remplace le système de projection par défaut du projet. "
+"(par exemple ``EPSG:27700``)"
 
 #: ../../docs/developers_guide/processingtesting.rst:253
 msgid ""
 "``ellipsoid`` - overrides the default project ellipsoid used for "
 "measurements, e.g. ``GRS80``"
 msgstr ""
+"``ellipsoid`` - remplace la projection par défaut utilisée pour les mesure. "
+"(par exemple ``GRS80``)"
 
 #: ../../docs/developers_guide/processingtesting.rst:258
 msgid "Running tests locally"
