@@ -669,6 +669,76 @@ Python code
   :end-before: **end_algorithm_code_section**
 
 
+.. _qgisdropgeometries:
+
+Drop geometries
+---------------
+Creates a simple *geometryless* copy of the input layer attribute
+table.
+It keeps the attribute table of the source layer.
+
+If the file is saved in a local folder, you can choose between many
+file formats.
+
+|checkbox| Allows :ref:`features in-place modification <processing_inplace_edit>`
+
+.. seealso:: :ref:`qgisdeleteduplicategeometries`,
+   :ref:`qgisremovenullgeometries`
+
+Parameters
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Input layer**
+     - ``INPUT``
+     - [vector: any]
+     - The input vector layer
+   * - **Dropped geometries**
+     - ``OUTPUT``
+     - [table]
+     - Specify the output geometryless layer. One of:
+
+       * Create Temporary Layer (``TEMPORARY_OUTPUT``)
+       * Save to File...
+       * Save to Geopackage...
+       * Save to PostGIS Table...
+
+       The file encoding can also be changed here.
+
+Outputs
+..........
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 20 20 40
+
+   * - Label
+     - Name
+     - Type
+     - Description
+   * - **Dropped geometries**
+     - ``OUTPUT``
+     - [table]
+     - The output geometryless layer.
+       A copy of the original attribute table.
+
+Python code
+...........
+
+**Algorithm ID**: ``qgis:dropgeometries``
+
+.. include:: qgis_algs_include.rst
+  :start-after: **algorithm_code_section**
+  :end-before: **end_algorithm_code_section**
+
+
 .. _qgisexecutesql:
 
 Execute SQL
