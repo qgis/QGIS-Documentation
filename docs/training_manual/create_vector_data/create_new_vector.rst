@@ -342,7 +342,7 @@ Our track is a little further to the south:
    :file:`exercise_data` folder of the training data you downloaded.
 #. Activate edit mode.
 #. Since you are working with a line feature, click on the
-   |addLineFeature| :sup:`Add Line` button to initiate line
+   |captureLine| :sup:`Add Line` button to initiate line
    digitizing mode.
 #. One at a time, digitize the path and the track on the ``routes`` layer.
    Try to follow the routes as accurately as possible, adding additional points along
@@ -388,6 +388,8 @@ be useful.
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/common/basic.png
+.. |captureLine| image:: /static/common/mActionCaptureLine.png
+   :width: 1.5em
 .. |capturePolygon| image:: /static/common/mActionCapturePolygon.png
    :width: 1.5em
 .. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png

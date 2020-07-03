@@ -68,7 +68,7 @@ Next, let's see how a record in the attribute table is linked to a polygon
 feature that we see on the Map Canvas.
 
 #. Go back to the main QGIS window.
-#. In the :guilabel:`Attributes Toolbar`, click on the |selectFeature| 
+#. In the :guilabel:`Attributes Toolbar`, click on the |selectRectangle| 
    :sup:`Select Feature` button.  
 #. Make sure the ``protected_areas`` layer is still selected in the 
    :guilabel:`Layers` panel.
@@ -173,4 +173,6 @@ this in the next lesson.
 .. |deselectActiveLayer| image:: /static/common/mActionDeselectActiveLayer.png
    :width: 1.5em
 .. |openTable| image:: /static/common/mActionOpenTable.png
+   :width: 1.5em
+.. |selectRectangle| image:: /static/common/mActionSelectRectangle.png
    :width: 1.5em

@@ -159,7 +159,7 @@ So you are advised to turn off snapping before cutting a hole.
 #. Use the |addRing| :sup:`Add Ring` tool to create a hole in the
    middle of a polygon geometry.
 #. Draw a polygon over the target feature, as if you were using the
-   |addpolygon| :sup:`Add polygon` tool.
+   |capturePolygon| :sup:`Add polygon` tool.
 #. When you right-click, the hole will be visible.
 #. Remove the hole you just created using the |deleteRing|
    :sup:`Delete Ring` tool.
