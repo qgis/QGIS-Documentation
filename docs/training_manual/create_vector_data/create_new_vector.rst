@@ -385,42 +385,26 @@ be useful.
 .. |FA| replace:: Follow Along:
 .. |IC| replace:: In Conclusion
 .. |LS| replace:: Lesson:
-.. |TY| replace:: Try Yourself:
+.. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
-.. |addRasterLayer| image:: /static/common/mActionAddRasterLayer.png
-   :width: 1.5em
 .. |basic| image:: /static/common/basic.png
-.. |moderate| image:: /static/common/moderate.png
 .. |capturePolygon| image:: /static/common/mActionCapturePolygon.png
    :width: 1.5em
-.. |deleteSelectedFeatures| image:: /static/common/mActionDeleteSelectedFeatures.png
+.. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
    :width: 1.5em
-.. |edit| image:: /static/common/edit.png
-   :width: 1.5em
-.. |editCopy| image:: /static/common/mActionEditCopy.png
-   :width: 1.5em
-.. |editCut| image:: /static/common/mActionEditCut.png
-   :width: 1.5em
-.. |editPaste| image:: /static/common/mActionEditPaste.png
-   :width: 1.5em
-.. |moveFeature| image:: /static/common/mActionMoveFeature.png
+.. |moderate| image:: /static/common/moderate.png
+.. |raster| image:: /static/common/mIconRaster.png
    :width: 1.5em
 .. |saveEdits| image:: /static/common/mActionSaveEdits.png
    :width: 1.5em
 .. |schoolAreaType1| replace:: athletics field
-.. |vertexToolActiveLayer| image:: /static/common/mActionVertexToolActiveLayer.png
+.. |selectRectangle| image:: /static/common/mActionSelectRectangle.png
    :width: 1.5em
 .. |toggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
-.. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
-   :width: 1.5em
-.. |zoomIn| image:: /static/common/mActionZoomIn.png
-   :width: 1.5em
 .. |undo| image:: /static/common/mActionUndo.png
    :width: 1.5em
-.. |selectRectangle| image:: /static/common/mActionSelectRectangle.png
+.. |vertexToolActiveLayer| image:: /static/common/mActionVertexToolActiveLayer.png
    :width: 1.5em
-.. |raster| image:: /static/common/mActionAddRasterLayer.png
-   :width: 1.5em
-.. |addLineFeature| image:: /static/common/mActionCaptureLine.png
+.. |zoomIn| image:: /static/common/mActionZoomIn.png
    :width: 1.5em

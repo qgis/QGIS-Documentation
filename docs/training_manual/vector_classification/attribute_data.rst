@@ -164,18 +164,13 @@ this in the next lesson.
    please add it also to the substitutions.txt file in the
    source folder.
 
-
 .. |FA| replace:: Follow Along:
 .. |IC| replace:: In Conclusion
 .. |LS| replace:: Lesson:
 .. |TY| replace:: Try Yourself
 .. |WN| replace:: What's Next?
 .. |basic| image:: /static/common/basic.png
-.. |dataSourceManager| image:: /static/common/mActionDataSourceManager.png
-   :width: 1.5em
-.. |openTable| image:: /static/common/mActionOpenTable.png
-   :width: 1.5em
 .. |deselectActiveLayer| image:: /static/common/mActionDeselectActiveLayer.png
    :width: 1.5em
-.. |selectFeature| image:: /static/common/mActionSelectRectangle.png
+.. |openTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em
