@@ -578,7 +578,7 @@ flow paths join at a point.
 Where the optional mask grid and threshold value are input, the function is
 evaluated only considering grid cells that lie in the domain with mask grid value
 greater than or equal to the threshold value. Source (first order) grid cells are
-taken as those that do not have any other g   :class: longtablerid cells from inside the domain
+taken as those that do not have any other grid cells from inside the domain
 draining in to them, and only when two of these flow paths join is order
 propagated according to the ordering rules. Lengths are also only evaluated
 counting paths within the domain greater than or equal to the threshold.
