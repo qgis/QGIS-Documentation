@@ -163,7 +163,7 @@ Now you know how many minutes it will take to get from one point to
 the other one.
 
 
-|hard| Shortest map with speed limit
+|hard| Shortest path with speed limit
 ----------------------------------------------------------------------
 The Network analysis toolbox has other interesting options. Looking
 at the following map:
