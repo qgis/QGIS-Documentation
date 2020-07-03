@@ -10,6 +10,7 @@ Expressions
 
    .. contents::
       :local:
+      :depth: 2
 
 Based on layer data and prebuilt or user defined functions, **Expressions**
 offer a powerful way to manipulate attribute value, geometry and variables
@@ -130,7 +131,7 @@ using functions, layer's fields and values. It contains following widgets:
           -- and limit the airports to the region they are within
           filter := within( $geometry, geometry( @parent ) )
         ),
-          aggregate( -- finds airports at the same altitude in the region 
+          aggregate( -- finds airports at the same altitude in the region
             'airports',
             'concatenate',
             "NAME",
@@ -321,6 +322,10 @@ Color Functions
 ----------------
 
 This group contains functions for manipulating colors.
+
+.. contents:: :local:
+
+.. include:: expression_help/Color.txt
 
 .. csv-table::
    :header: "Function", "Description"
@@ -667,7 +672,7 @@ This group contains functions that operate on geometry objects
    "intersects", "Tests whether a geometry intersects another. Returns 1 (true)
    if the geometries spatially intersect (share any portion of space) and 0 if they don't"
    "intersects_bbox", "Tests whether a geometry's bounding box overlaps another geometry's
-   bounding box. Returns 1 (true) if the geometries spatially intersect 
+   bounding box. Returns 1 (true) if the geometries spatially intersect
    (share any portion of space) their bounding box, or 0 if they don't"
    "is_closed", "Returns true if a line string is closed (start and end points are coincident),
    false if a line string is not closed, or null if the geometry is not a line string"
@@ -700,7 +705,7 @@ This group contains functions that operate on geometry objects
    "make_point_m(x,y,m)", "Returns a point geometry from X and Y coordinates and M values"
    "make_polygon", "Creates a polygon geometry from an outer ring and optional series
    of inner ring geometries"
-   "make_rectangle_3points", "Creates a rectangle from 3 points" 
+   "make_rectangle_3points", "Creates a rectangle from 3 points"
    "make_regular_polygon", "Creates a regular polygon"
    "make_square", "Creates a square from a diagonal"
    "make_triangle", "Creates a triangle polygon"
@@ -758,7 +763,7 @@ This group contains functions that operate on geometry objects
    diameter varies evenly over the length of the line (see also :ref:`qgistaperedbuffer`)"
    "touches", "Tests whether a geometry touches another. Returns 1 (true) if
    the geometries have at least one point in common, but their interiors do not intersect"
-   "transform", "Returns the geometry transformed from the source CRS to the 
+   "transform", "Returns the geometry transformed from the source CRS to the
    destination CRS (see also :ref:`qgisreprojectlayer`)"
    "translate", "Returns a translated version of a geometry. Calculations are in
    the Spatial Reference System of the geometry (see also :ref:`qgistranslategeometry`)"
@@ -1377,7 +1382,7 @@ Recent Functions
 
 This group contains recently used functions. Depending on the context of its
 usage (feature selection, field calculator, generic), recently applied expressions
-are added to the corresponding list (up to ten expressions), sorted from 
+are added to the corresponding list (up to ten expressions), sorted from
 more to less recent.
 This makes it easy to quickly retrieve and reapply previously used expressions.
 
