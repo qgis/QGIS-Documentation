@@ -1238,15 +1238,9 @@ Convert geometry type
 Generates a new layer based on an existing one, with a different type
 of geometry.
 
-<<<<<<< HEAD
-Not all conversions are possible. For instance, a line layer can be
-converted to a point layer, but a point layer cannot be converted to a 
-line layer.
-=======
 Not all conversions are possible. For instance, a line can be
 converted to a point, but a point cannot be converted to a
 line. A line can also be converted to a polygon.
->>>>>>> 41ba3605a... Remove the note to make the parameters table more compact (#4922)
 
 .. seealso:: :ref:`qgispolygonize`, :ref:`qgislinestopolygons`
 
