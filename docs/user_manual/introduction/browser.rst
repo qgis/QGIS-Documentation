@@ -4,17 +4,21 @@
 .. index:: Browser panel
 .. _`label_browserpanel`:
 
-The browser panel
-=================
+The Browser panel
+======================================================================
 
-The QGIS browser panel is a great tool for browsing, searching,
-inspecting and loading QGIS resources.
+The QGIS Browser panel is a great tool for browsing, searching,
+inspecting, copying and loading QGIS resources.
+Only resources that QGIS knows how to handle are shown in the
+browser.
 
 Using the browser panel you can locate, inspect and add data, as
 described in :ref:`browser_panel`.
 In addition, the Browser panel supports drag and drop of many QGIS
 resources, such as project files, processing scripts and processing
 models.
+Processing scripts and models can also be opened for editing in an
+external editor and the graphical modeller respectively.
 
 .. _figure_browser_panel:
 
@@ -22,17 +26,73 @@ models.
    :align: center
 
 The browser panel is organised as an expandable hierarchy with some
-fixed top-level entries.
+fixed top-level entries that organise the resources handled by the
+browser.
 Node entries are expanded by clicking on |browserExpand| to the left
 of the entry name.
 A branch is collapsed by clicking on |browserCollapse|.
+The |collapseTree| :sup:`Collapse All` button collapses all top-level
+entries.
+
+In :menuselection:`Settings --> Interface Customization` it is
+possible to disable resources.
+If you, for instance, would not like to show Python scripts in the
+browser, you can uncheck the :menuselection:`Browser --> py` entry,
+and if you want to get rid of your home folder in the browser, you
+can uncheck the :menuselection:`Browser --> special:Home` entry.
+
+A filter (|filterMap| :sup:`Filter Browser`) can be used for searching
+based on entry names (both leaf entries and node entries in the
+hierarchy).
+Using the |options| :sup:`Options` pull-down menu next to the filter
+text field, you can
+
+* toggle :labelitem:`Case Sensitive` search
+* set the :labelitem:`Filter pattern syntax` to one of
+
+  * :labelitem:`Normal`
+  * :labelitem:`Wildcard(s)`
+  * :labelitem:`Regular Expressions`
+
+The *Properties widget*, showing useful information about some
+entries / resources, can be enabled / disabled using the |metadata|
+:sup:`Enable/disable properties widget` button.
+When enabled, it opens at the bottom of the browser panel.
+
+A second browser panels can be opened by activating the
+:labelitem:`Browser (2)` panel in :menuselection:`View --> Panels`.
+Having two browser panels can be useful when copying layers between
+resources that are locationed deep down in different branches of the
+browser hierarcy.
+
+
+Resources that can be opened / run from the Browser
+----------------------------------------------------------------------
+
+A lot can be accomplished in the Browser panel
+
+* Add vector, raster and mesh layers to your map by double-clicking,
+  dragging onto the map canvas or clicking the |addLayer|
+  :sup:`Add Selected Layers` button (after selecting layers)
+* Run Python scripts (including Processing algorithms) by
+  double-clicking or dragging onto the map canvas
+* Run Models by double-clicking or dragging onto the map canvas
+* :labelitem:`Extract Symbols...` from QGIS Project files using the
+  context menu
+* Open files with their default applications
+  (:labelitem:`Open <file type> Externally...` in the context menu).
+  Examples: HTML files, spreadsheets, images, PDFs, text files, ...
+* Copy entries 
+
+Resource specific actions are listed for the different resource groups
+sorted under the top-level entries listed below.
 
 
 Browser panel top-level entries
--------------------------------
+----------------------------------------------------------------------
 
 Favorites
-.........
+......................................................................
 Often used file system locations can be tagged as favorites.
 The ones you have tagged will appear here.
 
@@ -42,7 +102,7 @@ context menu allows you to :guilabel:`Rename Favorite...` and
 
 
 Spatial Bookmarks
-.................
+......................................................................
 This is where you will find your spatial bookmarks, organised
 into :guilabel:`Project Bookmarks` and :guilabel:`User Bookmarks`.
 
@@ -58,7 +118,7 @@ For bookmark entries you can :guilabel:`Zoom to Bookmark`,
 
 
 Home
-.........
+......................................................................
 Your file system home directory / folder.
 By right-clicking on an entry, and choosing
 :guilabel:`Add as a Favorite`, the location will be added to
@@ -77,12 +137,12 @@ From the context menu, you can also
 
 
 /
-.........
+......................................................................
 Your file system root directory / folder.
 
 
 Geopackage
-..........
+......................................................................
 Geopackage files / databases.
 From the top level context menu, you can create a Geopackage
 file / database (:guilabel:`Create Database...`) or add a
@@ -106,64 +166,64 @@ For Geopackage layer/table entries you can
 
 
 SpatiaLite
-..........
+......................................................................
 SpatiaLite database connections.
 
 
 PostGIS
-.......
+......................................................................
 PostGIS database connections.
 
 
 MSSQL
-.....
+......................................................................
 Microsoft SQL Server connections.
 
 
 DB2
-...
+......................................................................
 IBM DB2 database connections.
 
 
 WMS/WMTS
-........
+......................................................................
 Web Map Services (WMS) and Web Map Tile Services (WMTS)
 
 
 Vector Tiles
-............
+......................................................................
 Vector tile services
 
 
 XYZ Tiles
-.........
+......................................................................
 XYZ tile services
 
 
 WCS
-...
+......................................................................
 Web Coverage Services
 
 
 WFS / OGC API - Features
-........................
+......................................................................
 *Web Feature Services* (WFS) and *OGC API - Features services* (aka WFS3)
 
 OWS
-...
+......................................................................
 Here you will find a read-only list of all your Open Web Services (OWS)
 - WMS / WCS / WFS / ...
 
 ArcGIS Map Service
-..................
+......................................................................
 
 
 ArcGIS Features Service
-.......................
+......................................................................
 
 
 GeoNode
-.......
+......................................................................
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -175,4 +235,13 @@ GeoNode
    :width: 1.5em
 .. |browserExpand| image:: /static/common/browser_expand.png
    :width: 1.5em
+.. |collapseTree| image:: /static/common/mActionCollapseTree.png
+   :width: 1.5em
+.. |filterMap| image:: /static/common/mActionFilterMap.png
+   :width: 1.5em
+.. |metadata| image:: /static/common/metadata.png
+   :width: 1.5em
+.. |options| image:: /static/common/mActionOptions.png
+   :width: 1em
+
 
