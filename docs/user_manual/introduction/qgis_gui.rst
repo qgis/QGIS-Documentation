@@ -2118,21 +2118,6 @@ Below is a list of the default panels provided by QGIS:
 * the :ref:`Processing Toolbox <label_processing>`
 
 
-.. index:: Browser panel
-.. _`label_browserpanel`:
-
-The browser panel
------------------
-
-The QGIS browser panel is a great tool for browsing, searching,
-inspecting and loading QGIS resources.
-Using the browser panel you can locate, inspect and add data, as
-described in :ref:`browser_panel`.
-In addition, the Browser panel supports drag and drop of many QGIS
-resources, such as project files, processing scripts and processing
-models.
-
-
 .. index:: Map view
 .. _`label_mapview`:
 
