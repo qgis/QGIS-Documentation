@@ -12,7 +12,7 @@ Advanced parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -119,7 +119,7 @@ Advanced parameters
 .. list-table::
    :header-rows: 0
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - **Direction field**
 
@@ -225,7 +225,7 @@ Advanced parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name

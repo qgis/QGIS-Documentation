@@ -345,7 +345,6 @@ For even more complex tables, it is easier to use ``list-table``:
    .. list-table::
       :header-rows: 1
       :widths: 20 20 20 40
-      :stub-columns: 0
 
       * - What
         - Purpose
@@ -365,7 +364,6 @@ The result:
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - What
      - Purpose

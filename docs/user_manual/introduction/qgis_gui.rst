@@ -548,7 +548,6 @@ polyline or polygon, are activated accordingly:
 .. list-table::
    :header-rows: 1
    :widths: 40 15 15 15
-   :stub-columns: 0
 
    * - Menu Option
      - Point
@@ -1212,7 +1211,6 @@ Settings
 .. list-table::
    :header-rows: 1
    :widths: 50 50
-   :stub-columns: 0
 
    * - Menu Option
      - Reference
@@ -1247,7 +1245,6 @@ Plugins
 .. list-table::
    :header-rows: 1
    :widths: 36 17 17 30
-   :stub-columns: 0
 
    * - Menu Option
      - Shortcut
@@ -1730,7 +1727,6 @@ If no database plugins are enabled, there will be no
 .. list-table::
    :header-rows: 1
    :widths: 40 15 15 30
-   :stub-columns: 0
 
    * - Menu Option
      - Shortcut
@@ -1838,7 +1834,6 @@ Processing
 .. list-table::
    :header-rows: 1
    :widths: 30 20 10 40
-   :stub-columns: 0
 
    * - Menu Option
      - Shortcut
@@ -1873,7 +1868,6 @@ Help
 .. list-table::
    :header-rows: 1
    :widths: 40 15 15 30
-   :stub-columns: 0
 
    * - Menu Option
      - Shortcut
