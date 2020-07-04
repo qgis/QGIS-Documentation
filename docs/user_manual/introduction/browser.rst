@@ -47,12 +47,12 @@ hierarchy).
 Using the |options| :sup:`Options` pull-down menu next to the filter
 text field, you can
 
-* toggle :labelitem:`Case Sensitive` search
-* set the :labelitem:`Filter pattern syntax` to one of
+* toggle :guilabel:`Case Sensitive` search
+* set the :guilabel:`Filter pattern syntax` to one of
 
-  * :labelitem:`Normal`
-  * :labelitem:`Wildcard(s)`
-  * :labelitem:`Regular Expressions`
+  * :guilabel:`Normal`
+  * :guilabel:`Wildcard(s)`
+  * :guilabel:`Regular Expressions`
 
 The *Properties widget*, showing useful information about some
 entries / resources, can be enabled / disabled using the |metadata|
@@ -60,7 +60,7 @@ entries / resources, can be enabled / disabled using the |metadata|
 When enabled, it opens at the bottom of the browser panel.
 
 A second browser panels can be opened by activating the
-:labelitem:`Browser (2)` panel in :menuselection:`View --> Panels`.
+:guilabel:`Browser (2)` panel in :menuselection:`View --> Panels`.
 Having two browser panels can be useful when copying layers between
 resources that are locationed deep down in different branches of the
 browser hierarcy.
@@ -77,10 +77,10 @@ A lot can be accomplished in the Browser panel
 * Run Python scripts (including Processing algorithms) by
   double-clicking or dragging onto the map canvas
 * Run Models by double-clicking or dragging onto the map canvas
-* :labelitem:`Extract Symbols...` from QGIS Project files using the
+* :guilabel:`Extract Symbols...` from QGIS Project files using the
   context menu
 * Open files with their default applications
-  (:labelitem:`Open <file type> Externally...` in the context menu).
+  (:guilabel:`Open <file type> Externally...` in the context menu).
   Examples: HTML files, spreadsheets, images, PDFs, text files, ...
 * Copy entries 
 
@@ -231,6 +231,8 @@ GeoNode
    If you need to create a new substitution manually,
    please add it also to the substitutions.txt file in the
    source folder.
+.. |addLayer| image:: /static/common/mActionAddLayer.png
+   :width: 1.5em
 .. |browserCollapse| image:: /static/common/browser_collapse.png
    :width: 1.5em
 .. |browserExpand| image:: /static/common/browser_expand.png
