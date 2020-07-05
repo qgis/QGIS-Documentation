@@ -38,13 +38,6 @@ A branch is collapsed by clicking on |browserCollapse|.
 The |collapseTree| :sup:`Collapse All` button collapses all top-level
 entries.
 
-In :menuselection:`Settings --> Interface Customization` it is
-possible to disable resources.
-If you, for instance, would not like to show Python scripts in the
-browser, you can uncheck the :menuselection:`Browser --> py` entry,
-and if you want to get rid of your home folder in the browser, you
-can uncheck the :menuselection:`Browser --> special:Home` entry.
-
 A filter (|filterMap| :sup:`Filter Browser`) can be used for searching
 based on entry names (both leaf entries and node entries in the
 hierarchy).
@@ -91,9 +84,6 @@ A lot can be accomplished in the Browser panel
 * Run Models by double-clicking or dragging onto the map canvas
 * :guilabel:`Extract Symbols...` from QGIS Project files using the
   context menu
-* Open files with their default applications
-  (:guilabel:`Open <file type> Externally...` in the context menu).
-  Examples: HTML files, spreadsheets, images, PDFs, text files, ...
 * Copy entries 
 
 Resource specific actions are listed for the different resource groups
@@ -425,8 +415,6 @@ Resources
   * inspect properties (:guilabel:`Layer Properties...`,
     :guilabel:`File Properties...`)
 
-  For some formats you can also
-  :guilabel:`Open <file type> Externally...`
 * Recognized vector formats.
   The following actions are available from the context menu:
 
@@ -435,9 +423,6 @@ Resources
   * add it to the project (:guilabel:`Add Layer to Project`)
   * inspect properties (:guilabel:`Layer Properties...`,
     :guilabel:`File Properties...`)
-
-  For some formats you can also
-  :guilabel:`Open <file type> Externally...`
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
