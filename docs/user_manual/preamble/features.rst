@@ -9,8 +9,12 @@ Features
    .. contents::
       :local:
 
-QGIS offers many common GIS functions provided by core features
-and plugins. A short summary of six general categories of features and
+QGIS offers a wealth of GIS functions, provided by core features
+and plugins.
+The locator bar makes it easy to search for functions, datasets and
+more.
+
+A short summary of six general categories of features and
 plugins is presented below, followed by first insights into the
 integrated Python console.
 
@@ -34,8 +38,12 @@ Supported formats include:
 *  Vector tiles
 *  GRASS raster and vector data from GRASS databases (location/mapset).
    See section :ref:`sec_grass`.
-*  Online spatial data served as OGC Web Services, including WMS, WMTS, WCS,
-   WFS, and WFS-T. See section :ref:`sec_ogc`.
+*  Online spatial data served as OGC Web Services, including WMS,
+   WMTS, WCS, WFS, and WFS-T. See section :ref:`sec_ogc`.
+
+   The QGIS authentication infrastructure helps you manage
+   user/password, certificates and keys for web services and other
+   resources.
 
 Temporal data are supported.
 
@@ -99,6 +107,10 @@ third-party algorithms from QGIS, such as GDAL, SAGA, GRASS, R, and
 more (see section :ref:`sec_processing_intro`).
 All analysis functions are run in the background, allowing you to
 continue your work before the processing has finished.
+
+The graphical modeller allows you to combine / chain functions into a
+complete workflow in an intuitive graphical environment.
+
 
 Publish maps on the Internet
 ----------------------------------------------------------------------
