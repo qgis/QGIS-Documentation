@@ -15,10 +15,11 @@ plugins is presented below, followed by first insights into the
 integrated Python console.
 
 View data
----------
+----------------------------------------------------------------------
 
-You can view combinations of vector and raster data (in 2D or 3D) in different
-formats and projections without conversion to an internal or common format.
+You can view combinations of vector and raster data (in 2D or 3D) in
+different formats and projections without conversion to an internal
+or common format.
 Supported formats include:
 
 *  Spatially-enabled tables and views using PostGIS, SpatiaLite and MS SQL
@@ -30,14 +31,17 @@ Supported formats include:
    Data Abstraction Library) library, such as GeoTIFF, ERDAS IMG, ArcInfo
    ASCII GRID, JPEG, PNG and many more. See section :ref:`working_with_raster`.
 *  Mesh data (TINs and regular grids are supported). See :ref:`label_meshdata`.
+*  Vector tiles
 *  GRASS raster and vector data from GRASS databases (location/mapset).
    See section :ref:`sec_grass`.
 *  Online spatial data served as OGC Web Services, including WMS, WMTS, WCS,
    WFS, and WFS-T. See section :ref:`sec_ogc`.
 
+Temporal data are supported.
+
 
 Explore data and compose maps
------------------------------
+----------------------------------------------------------------------
 
 You can compose maps and interactively explore spatial data with a
 friendly GUI. The many helpful tools available in the GUI include:
@@ -58,8 +62,9 @@ friendly GUI. The many helpful tools available in the GUI include:
 *  North arrow, scale bar and copyright label for maps
 *  Support for saving and restoring projects
 
+
 Create, edit, manage and export data
-------------------------------------
+----------------------------------------------------------------------
 
 You can create, edit, manage and export vector and raster layers in
 several formats. QGIS offers the following:
@@ -71,7 +76,8 @@ several formats. QGIS offers the following:
    formats to GPX or down/upload directly to a GPS unit (on Linux,
    usb: has been added to list of GPS devices)
 *  Support for visualizing and editing OpenStreetMap data
-*  Ability to create spatial database tables from files with the DB Manager plugin
+*  Ability to create spatial database tables from files with the DB
+   Manager plugin
 *  Improved handling of spatial database tables
 *  Tools for managing vector attribute tables
 *  Option to save screenshots as georeferenced images
@@ -79,7 +85,7 @@ several formats. QGIS offers the following:
    to perform CAD-like functions
 
 Analyze data
-------------
+----------------------------------------------------------------------
 
 You can perform spatial data analysis on spatial databases and other
 OGR-supported formats. QGIS currently offers vector analysis, raster
@@ -95,7 +101,7 @@ All analysis functions are run in the background, allowing you to
 continue your work before the processing has finished.
 
 Publish maps on the Internet
-----------------------------
+----------------------------------------------------------------------
 
 QGIS can be used as a WMS, WMTS, WMS-C or WFS and WFS-T client, and as
 a WMS, WCS or WFS server (see section :ref:`sec_ogc`). Additionally,
@@ -103,7 +109,7 @@ you can publish your data on the Internet using a webserver with QGIS
 Server, UMN MapServer or GeoServer installed.
 
 Extend QGIS functionality through plugins
------------------------------------------
+----------------------------------------------------------------------
 
 QGIS can be adapted to your special needs with the extensible plugin
 architecture and libraries that can be used to create plugins. You can
@@ -114,7 +120,6 @@ Core Plugins
 
 Core plugins include:
 
-#.  Coordinate Capture (capture mouse coordinates in different CRSs)
 #.  DB Manager (exchange, edit and view layers and tables from/to databases; execute SQL queries)
 #.  eVIS (visualize events)
 #.  Geometry Checker (check geometries for errors)
@@ -136,8 +141,9 @@ provided by the community. These plugins reside in the official
 Plugins Repository and can be easily installed using the Python Plugin
 Installer. See Section :ref:`managing_plugins`.
 
+
 Python Console
---------------
+----------------------------------------------------------------------
 
 For scripting, it is possible to take advantage of an integrated
 Python console, which can be opened with: :menuselection:`Plugins
@@ -153,8 +159,9 @@ For further information about working with the Python console and
 programming QGIS plugins and applications, please refer to
 :ref:`console` and :ref:`PyQGIS-Developer-Cookbook`.
 
+
 Known Issues
-------------
+----------------------------------------------------------------------
 
 Number of open files limitation
 ...............................
