@@ -15,6 +15,7 @@ QGIS User Guide
     introduction/getting_started
     introduction/project_files
     introduction/qgis_gui
+    introduction/browser
     introduction/qgis_configuration
     working_with_projections/working_with_projections
     introduction/general_tools
