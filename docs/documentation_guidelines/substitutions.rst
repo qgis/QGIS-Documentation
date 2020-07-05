@@ -301,6 +301,7 @@ Icon                            Substitution                        Icon        
 |folder|                        ``|folder|``                        |extents|                       ``|extents|``
 |settings|                      ``|settings|``                      |start|                         ``|start|``
 |3dconfigure|                   ``|3dconfigure|``                   |deleteSelected|                ``|deleteSelected|``
+|browserExpand|                 ``|browserExpand|``                 |browserCollapse|               ``|browserCollapse|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -590,6 +591,10 @@ Icon                            Substitution                        Icon        
 .. |autoPlacement| image:: /static/common/mIconAutoPlacementSettings.png
    :width: 1.5em
 .. |auxiliaryStorage| image:: /static/common/mIconAuxiliaryStorage.png
+   :width: 1.5em
+.. |browserCollapse| image:: /static/common/browser_collapse.png
+   :width: 1.5em
+.. |browserExpand| image:: /static/common/browser_expand.png
    :width: 1.5em
 .. |buffer| image:: /static/common/buffer.png
    :width: 1.5em
