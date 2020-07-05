@@ -17,7 +17,8 @@ integrated Python console.
 View data
 ----------------------------------------------------------------------
 
-You can view combinations of vector and raster data (in 2D or 3D) in different formats and projections without conversion to an internal
+You can view combinations of vector and raster data (in 2D or 3D) in
+different formats and projections without conversion to an internal
 or common format.
 Supported formats include:
 
