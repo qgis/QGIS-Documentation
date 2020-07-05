@@ -31,13 +31,10 @@ Supported formats include:
    Data Abstraction Library) library, such as GeoTIFF, ERDAS IMG, ArcInfo
    ASCII GRID, JPEG, PNG and many more. See section :ref:`working_with_raster`.
 *  Mesh data (TINs and regular grids are supported). See :ref:`label_meshdata`.
-*  Vector tiles
 *  GRASS raster and vector data from GRASS databases (location/mapset).
    See section :ref:`sec_grass`.
 *  Online spatial data served as OGC Web Services, including WMS, WMTS, WCS,
    WFS, and WFS-T. See section :ref:`sec_ogc`.
-
-Temporal data are supported.
 
 
 Explore data and compose maps
