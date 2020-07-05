@@ -12,13 +12,17 @@ inspecting, copying and loading QGIS resources.
 Only resources that QGIS knows how to handle are shown in the
 browser.
 
-Using the browser panel you can locate, inspect and add data, as
+Using the Browser panel you can locate, inspect and add data, as
 described in :ref:`browser_panel`.
 In addition, the Browser panel supports drag and drop of many QGIS
 resources, such as project files, processing scripts and processing
 models.
 Processing scripts and models can also be opened for editing in an
 external editor and the graphical modeller respectively.
+
+You can drag and drop layers from the :guilabel:`Layers` panel
+to the :guilabel:`Browser` panel, for instance into a GeoPackage or a
+PostGIS database.
 
 .. _figure_browser_panel:
 
@@ -57,7 +61,15 @@ text field, you can
 The *Properties widget*, showing useful information about some
 entries / resources, can be enabled / disabled using the |metadata|
 :sup:`Enable/disable properties widget` button.
-When enabled, it opens at the bottom of the browser panel.
+When enabled, it opens at the bottom of the browser panel, as shown in
+:ref:`figure_properties_widget`.
+
+.. _figure_properties_widget:
+
+.. figure:: img/browser_p_properties_w.png
+   :align: center
+
+   The properties widget
 
 A second browser panels can be opened by activating the
 :guilabel:`Browser (2)` panel in :menuselection:`View --> Panels`.
@@ -181,6 +193,7 @@ For layer/table entries you can
 * add it to the project :guilabel:`Add Layer to Project`
 * delete it (:guilabel:`Delete Layer`)
 * inspect properties (:guilabel:`Layer Properties...`)
+
 
 PostGIS
 ......................................................................
