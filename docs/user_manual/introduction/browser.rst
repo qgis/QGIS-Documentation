@@ -145,7 +145,7 @@ Geopackage
 ......................................................................
 Geopackage files / databases.
 From the top level context menu, you can create a Geopackage
-file / database (:guilabel:`Create Database...`) or add a
+file / database (:guilabel:`Create Database...`) or add an existing
 Geopackage file / database (:guilabel:`New Connection...`).
 
 The context menu of each Geopackage lets you remove it from
@@ -158,7 +158,6 @@ For Geopackage layer/table entries you can
 
 * rename it (:guilabel:`Rename Layer <layer name>...`)
 * export it (:menuselection:`Export Layer --> To file`)
-* hide the directory (:guilabel:`Hide from Browser`)
 * add it to the project :guilabel:`Add Layer to Project`
 * delete it (:guilabel:`Delete Layer`)
 * inspect properties (:guilabel:`Layer Properties...`,
@@ -169,6 +168,19 @@ SpatiaLite
 ......................................................................
 SpatiaLite database connections.
 
+From the top level context menu, you can create a SpatiaLite
+file / database (:guilabel:`Create Database...`) or add an
+existing SpatiaLite file / database (:guilabel:`New Connection...`).
+
+The context menu of each SpatiaLite file lets you delete it
+(:guilabel:`Delete`).
+
+For SpatiaLite layer/table entries you can 
+
+* export it (:menuselection:`Export Layer --> To file`)
+* add it to the project :guilabel:`Add Layer to Project`
+* delete it (:guilabel:`Delete Layer`)
+* inspect properties (:guilabel:`Layer Properties...`)
 
 PostGIS
 ......................................................................
@@ -189,6 +201,20 @@ WMS/WMTS
 ......................................................................
 Web Map Services (WMS) and Web Map Tile Services (WMTS)
 
+From the top level context menu, you can add a new connection
+(:guilabel:`New Connection...`).
+
+The context menu of each WSM/WMTS service lets you :guilabel:`Refresh`
+it, :guilabel:`Edit...` it and delete it (:guilabel:`Delete`).
+
+Group layers can be added by dragging them onto the map canvas.
+
+For WMS/WMTS layer entries you can 
+
+* export it (:menuselection:`Export Layer --> To file`)
+* add it to the project (:guilabel:`Add Layer to Project`)
+* inspect properties (:guilabel:`Layer Properties...`)
+
 
 Vector Tiles
 ......................................................................
@@ -204,15 +230,41 @@ WCS
 ......................................................................
 Web Coverage Services
 
+From the top level context menu, you can add a new connection
+(:guilabel:`New Connection...`).
+
+The context menu of each WCS lets you :guilabel:`Refresh`
+it, :guilabel:`Edit...` it and delete it (:guilabel:`Delete`).
+
+For WCS layer entries you can 
+
+* export it (:menuselection:`Export Layer --> To file`)
+* add it to the project (:guilabel:`Add Layer to Project`)
+* inspect properties (:guilabel:`Layer Properties...`)
+
 
 WFS / OGC API - Features
 ......................................................................
 *Web Feature Services* (WFS) and *OGC API - Features services* (aka WFS3)
 
+From the top level context menu, you can add a new connection
+(:guilabel:`New Connection...`).
+
+The context menu of each WFS lets you :guilabel:`Refresh`
+it, :guilabel:`Edit...` it and delete it (:guilabel:`Delete`).
+
+For WFS layer entries you can 
+
+* export it (:menuselection:`Export Layer --> To file`)
+* add it to the project (:guilabel:`Add Layer to Project`)
+* inspect properties (:guilabel:`Layer Properties...`)
+
+
 OWS
 ......................................................................
 Here you will find a read-only list of all your Open Web Services (OWS)
 - WMS / WCS / WFS / ...
+
 
 ArcGIS Map Service
 ......................................................................
