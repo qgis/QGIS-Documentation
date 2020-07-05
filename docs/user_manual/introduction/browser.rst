@@ -377,6 +377,69 @@ For the service layer entries you can
 * inspect properties (:guilabel:`Layer Properties...`)
 
 
+Resources
+----------------------------------------------------------------------
+
+* Project files.
+  The context menu for QGIS project files allows you to:
+
+  * open it (:guilabel:`Open Project`)
+  * extract symbols (:guilabel:`Extract Symbols...`) - open the style
+    manager that allows you to export symbols to an XML file, add
+    symbols to the default style or export as PNG or SVG.
+  * inspect properties (:guilabel:`File Properties...`)
+
+  You can expand the project file to see its layers.
+  The context menu of a layers offers the same actions as elsewhere
+  in the browser.
+* QGIS Layer Definition files (QLR)
+  The following actions are available from the context menu:
+
+  * export it (:menuselection:`Export Layer --> To file`)
+  * add it to the project (:guilabel:`Add Layer to Project`)
+  * inspect properties (:guilabel:`Layer Properties...`)
+
+* QGIS Models (.model3)
+  The following actions are available from the context menu:
+
+  * :guilabel:`Run Model...`)
+  * :guilabel:`Edit Model...`)
+
+* QGIS print composer templates (QPT)
+  The following action is available from the context menu:
+
+  * (:guilabel:`New Layout from Template`)
+
+* Python scripts (.py)
+  The following actions are available from the context menu:
+
+  * (:guilabel:`Run script...`)
+  * (:guilabel:`Open in External Editor`)
+
+* Recognized raster formats.
+  The following actions are available from the context menu:
+
+  * delete it (:guilabel:`Delete File <dataset name>`)
+  * export it (:menuselection:`Export Layer --> To file`)
+  * add it to the project (:guilabel:`Add Layer to Project`)
+  * inspect properties (:guilabel:`Layer Properties...`,
+    :guilabel:`File Properties...`)
+
+  For some formats you can also
+  :guilabel:`Open <file type> Externally...`
+* Recognized vector formats.
+  The following actions are available from the context menu:
+
+  * delete it (:guilabel:`Delete File <dataset name>`)
+  * export it (:menuselection:`Export Layer --> To file`)
+  * add it to the project (:guilabel:`Add Layer to Project`)
+  * inspect properties (:guilabel:`Layer Properties...`,
+    :guilabel:`File Properties...`)
+
+  For some formats you can also
+  :guilabel:`Open <file type> Externally...`
+
+
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
    If you need to create a new substitution manually,
