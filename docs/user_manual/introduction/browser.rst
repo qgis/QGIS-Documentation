@@ -150,11 +150,11 @@ Geopackage file / database (:guilabel:`New Connection...`).
 
 The context menu of each Geopackage lets you remove it from
 the list (:guilabel:`Remove connection...`), add a new layer
-or table to the Geopackage (:guilabel:`Create new Layer og Table...`),
+or table to the Geopackage (:guilabel:`Create new Layer or Table...`),
 delete the Geopackage (:guilabel:`Delete <name of geopackage>`)
 and :guilabel:`Compact Database (VACUUM)`.
 
-For Geopackage layer/table entries you can 
+For layer/table entries you can 
 
 * rename it (:guilabel:`Rename Layer <layer name>...`)
 * export it (:menuselection:`Export Layer --> To file`)
@@ -175,7 +175,7 @@ existing SpatiaLite file / database (:guilabel:`New Connection...`).
 The context menu of each SpatiaLite file lets you delete it
 (:guilabel:`Delete`).
 
-For SpatiaLite layer/table entries you can 
+For layer/table entries you can 
 
 * export it (:menuselection:`Export Layer --> To file`)
 * add it to the project :guilabel:`Add Layer to Project`
@@ -186,15 +186,72 @@ PostGIS
 ......................................................................
 PostGIS database connections.
 
+From the top level context menu, you can add a new connection
+(:guilabel:`New Connection...`).
+
+The context menu of each connection lets you :guilabel:`Refresh` it,
+edit it :guilabel:`Edit connection...`, delete it
+(:guilabel:`Delete connection`) or :guilabel:`Create Schema...`.
+
+The context menu of each schema lets you :guilabel:`Refresh`,
+:guilabel:`Rename Schema...` or :guilabel:`Delete Schema`.
+
+For layers/tables you can 
+
+* rename it (:guilabel:`Rename Table...`)
+* remove its contents (:guilabel:`Truncate Table...`)
+* export it (:menuselection:`Export Layer --> To file`)
+* add it to the project (:guilabel:`Add Layer to Project`)
+* delete it (:guilabel:`Delete Layer`)
+* inspect its properties (:guilabel:`Layer Properties...`)
+
 
 MSSQL
 ......................................................................
 Microsoft SQL Server connections.
 
+From the top level context menu, you can add a new connection
+(:guilabel:`New Connection...`).
+
+The context menu of each connection lets you :guilabel:`Refresh` it,
+edit it :guilabel:`Edit connection...`, delete it
+(:guilabel:`Delete connection`) or :guilabel:`Create Schema...`.
+
+The context menu of each schema lets you :guilabel:`Refresh`,
+:guilabel:`Rename Schema...` or :guilabel:`Delete Schema`.
+
+For layers/tables you can 
+
+* rename it (:guilabel:`Rename Table...`)
+* remove its contents (:guilabel:`Truncate Table...`)
+* export it (:menuselection:`Export Layer --> To file`)
+* add it to the project (:guilabel:`Add Layer to Project`)
+* delete it (:guilabel:`Delete Layer`)
+* inspect its properties (:guilabel:`Layer Properties...`)
+
 
 DB2
 ......................................................................
 IBM DB2 database connections.
+
+From the top level context menu, you can add a new connection
+(:guilabel:`New Connection...`).
+
+The context menu of each connection lets you :guilabel:`Refresh` it,
+edit it :guilabel:`Edit connection...`, delete it
+(:guilabel:`Delete connection`) or :guilabel:`Create Schema...`.
+
+The context menu of each schema lets you :guilabel:`Refresh`,
+:guilabel:`Rename Schema...` or :guilabel:`Delete Schema`.
+
+For layers/tables you can 
+
+* rename it (:guilabel:`Rename Table...`)
+* remove its contents (:guilabel:`Truncate Table...`)
+* export it (:menuselection:`Export Layer --> To file`)
+* add it to the project (:guilabel:`Add Layer to Project`)
+* delete it (:guilabel:`Delete Layer`)
+* inspect its properties (:guilabel:`Layer Properties...`)
 
 
 WMS/WMTS
@@ -220,10 +277,28 @@ Vector Tiles
 ......................................................................
 Vector tile services
 
+From the top level context menu, you add an existing service
+(:guilabel:`New Connection...`), and you can
+:guilabel:`Save Connections...` or :guilabel:`Load Connections...`
+to / from XML files.
+
 
 XYZ Tiles
 ......................................................................
 XYZ tile services
+
+From the top level context menu, you add an existing service
+(:guilabel:`New Connection...`), and you can
+:guilabel:`Save Connections...` or :guilabel:`Load Connections...`
+to / from XML files.
+
+For the XYZ tile service entries you can 
+
+* edit it (:guilabel:`Edit...`)
+* delete it (:guilabel:`Delete`)
+* export it (:menuselection:`Export Layer --> To file`)
+* add it to the project :guilabel:`Add Layer to Project`
+* inspect properties (:guilabel:`Layer Properties...`)
 
 
 WCS
@@ -276,6 +351,17 @@ ArcGIS Features Service
 
 GeoNode
 ......................................................................
+From the top level context menu, you can add a new connection
+(:guilabel:`New Connection...`).
+
+The context menu of each service lets you :guilabel:`Refresh`
+it, :guilabel:`Edit...` it and delete it (:guilabel:`Delete`).
+
+For the service layer entries you can 
+
+* export it (:menuselection:`Export Layer --> To file`)
+* add it to the project (:guilabel:`Add Layer to Project`)
+* inspect properties (:guilabel:`Layer Properties...`)
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
