@@ -29,6 +29,7 @@ Supported formats include:
 *  Raster and imagery formats supported by the installed GDAL (Geospatial
    Data Abstraction Library) library, such as GeoTIFF, ERDAS IMG, ArcInfo
    ASCII GRID, JPEG, PNG and many more. See section :ref:`working_with_raster`.
+*  Mesh data (TINs and regular grids are supported). See :ref:`label_meshdata`.
 *  GRASS raster and vector data from GRASS databases (location/mapset).
    See section :ref:`sec_grass`.
 *  Online spatial data served as OGC Web Services, including WMS, WMTS, WCS,
@@ -45,6 +46,7 @@ friendly GUI. The many helpful tools available in the GUI include:
 *  On-the-fly reprojection
 *  DB Manager
 *  Print layout
+*  Report
 *  Overview panel
 *  Spatial bookmarks
 *  Annotation tools
@@ -62,7 +64,7 @@ Create, edit, manage and export data
 You can create, edit, manage and export vector and raster layers in
 several formats. QGIS offers the following:
 
-*  Digitizing tools for OGR-supported formats and GRASS vector layers
+*  Vector digitizing tools
 *  Ability to create and edit multiple file formats and GRASS vector layers
 *  Georeferencer plugin to geocode images
 *  GPS tools to import and export GPX format, and convert other GPS
@@ -80,22 +82,25 @@ Analyze data
 ------------
 
 You can perform spatial data analysis on spatial databases and other
-OGR-supported formats. QGIS currently offers vector analysis,
-sampling, geoprocessing, geometry and database management tools. You
-can also use the integrated GRASS tools, which include the complete
-GRASS functionality of more than 400 modules. (See section
-:ref:`sec_grass`.) Or, you can work with the Processing Plugin, which
+OGR-supported formats. QGIS currently offers vector analysis, raster
+analysis, sampling, geoprocessing, geometry and database management
+tools.
+You can also use the integrated GRASS tools, which include the
+complete GRASS functionality of more than 400 modules (see section
+:ref:`sec_grass`). Or, you can work with the Processing plugin, which
 provides a powerful geospatial analysis framework to call native and
-third-party algorithms from QGIS, such as GDAL, SAGA, GRASS and more.
-(See section :ref:`sec_processing_intro`.)
+third-party algorithms from QGIS, such as GDAL, SAGA, GRASS, R, and
+more (see section :ref:`sec_processing_intro`).
+All analysis functions are run in the background, allowing you to
+continue your work before the processing has finished.
 
 Publish maps on the Internet
 ----------------------------
 
 QGIS can be used as a WMS, WMTS, WMS-C or WFS and WFS-T client, and as
 a WMS, WCS or WFS server (see section :ref:`sec_ogc`). Additionally,
-you can publish your data on the Internet using a webserver with UMN
-MapServer or GeoServer installed.
+you can publish your data on the Internet using a webserver with QGIS
+Server, UMN MapServer or GeoServer installed.
 
 Extend QGIS functionality through plugins
 -----------------------------------------
