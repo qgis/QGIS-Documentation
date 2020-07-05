@@ -29,9 +29,11 @@ PostGIS database.
 .. figure:: img/browser_panel.png
    :align: center
 
-The browser panel is organised as an expandable hierarchy with some
-fixed top-level entries that organise the resources handled by the
-browser.
+   The Browser panel
+
+The browser panel (:numref:`figure_browser_panel`) is organised
+as an expandable hierarchy with some fixed top-level entries that
+organise the resources handled by the browser.
 Node entries are expanded by clicking on |browserExpand| to the left
 of the entry name.
 A branch is collapsed by clicking on |browserCollapse|.
@@ -62,7 +64,7 @@ The *Properties widget*, showing useful information about some
 entries / resources, can be enabled / disabled using the |metadata|
 :sup:`Enable/disable properties widget` button.
 When enabled, it opens at the bottom of the browser panel, as shown in
-:ref:`figure_properties_widget`.
+:numref:`figure_properties_widget`.
 
 .. _figure_properties_widget:
 

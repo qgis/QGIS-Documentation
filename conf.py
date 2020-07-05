@@ -70,6 +70,8 @@ language = 'en'
 locale_dirs = ['locale/']   # path is example but recommended.
 gettext_compact = False     # optional.
 
+# Enable numeric figure references
+numfig = True
 
 # -- Options for HTML output -------------------------------------------------
 
