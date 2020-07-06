@@ -44,6 +44,7 @@ Supported formats include:
    The QGIS authentication infrastructure helps you manage
    user/password, certificates and keys for web services and other
    resources.
+*  Spreadsheets (ODS / XLSX)
 
 Temporal data are supported.
 
