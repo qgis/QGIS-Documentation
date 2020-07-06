@@ -15,7 +15,7 @@ Assign projection
 Applies a coordinate system to a raster dataset.
 
 This algorithm is derived from the
-`GDAL edit utility <https://gdal.org/gdal_edit.html>`_ .
+`GDAL edit utility <https://gdal.org/gdal_edit.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Projections`
 
@@ -25,7 +25,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -46,7 +45,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -56,6 +54,9 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - The output raster layer (with the new projection information)
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:assignprojection``
 
@@ -72,7 +73,7 @@ Extracts the projection of a raster file and writes it into a *world*
 file with extension :file:`.wld`.
 
 This algorithm is derived from the
-`GDAL srsinfo utility <https://gdal.org/gdalsrsinfo.html>`_ .
+`GDAL srsinfo utility <https://gdal.org/gdalsrsinfo.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Projections`
 
@@ -82,7 +83,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -110,7 +110,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    *  - Label
       - Name
@@ -128,6 +127,9 @@ Outputs
         Will be ``None`` if :guilabel:`Create also .prj file` is
 	False.
 
+Python code
+...........
+
 **Algorithm ID**: ``gdal:extractprojection``
 
 .. include:: ../qgis/qgis_algs_include.rst
@@ -144,7 +146,7 @@ Reprojects a raster layer into another Coordinate Reference System
 The output file resolution and the resampling method can be chosen.
 
 This algorithm is derived from the
-`GDAL warp utility <https://gdal.org/gdalwarp.html>`_ .
+`GDAL warp utility <https://gdal.org/gdalwarp.html>`_.
 
 **Default menu**: :menuselection:`Raster --> Projections`
 
@@ -154,7 +156,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -307,7 +309,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -319,6 +320,9 @@ Outputs
 
        Default: ``[Save to temporary file]``
      - Reprojected output raster layer
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:warpreproject``
 

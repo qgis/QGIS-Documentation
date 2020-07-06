@@ -32,7 +32,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -62,7 +61,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    *  - Label
       - Name
@@ -73,6 +71,9 @@ Outputs
       - [vector: polygon]
       - Output (polygon) vector layer with the extent
         (minimum bounding box)
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:polygonfromlayerextent``
 

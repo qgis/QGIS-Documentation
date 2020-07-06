@@ -38,7 +38,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -83,7 +83,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -114,6 +113,9 @@ Outputs
      - ``TOTAL_PIXEL_COUNT``
      - [integer]
      - The count of pixels in the output raster layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:fuzzifyrastergaussianmembership``
 
@@ -147,7 +149,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -192,7 +193,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -223,6 +223,9 @@ Outputs
      - ``TOTAL_PIXEL_COUNT``
      - [integer]
      - The count of pixels in the output raster layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:fuzzifyrasterlargemembership``
 
@@ -261,7 +264,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -306,7 +308,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -336,6 +337,9 @@ Outputs
      - ``TOTAL_PIXEL_COUNT``
      - [integer]
      - The count of pixels in the output raster layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgisfuzzifyrasterlinearmembership``
 
@@ -369,7 +373,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -414,7 +417,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -444,6 +446,9 @@ Outputs
      - ``TOTAL_PIXEL_COUNT``
      - [integer]
      - The count of pixels in the output raster layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:fuzzifyrasternearmembership``
 
@@ -480,7 +485,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -531,7 +535,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -561,6 +564,9 @@ Outputs
      - ``TOTAL_PIXEL_COUNT``
      - [integer]
      - The count of pixels in the output raster layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgisfuzzifyrasterpowermembership``
 
@@ -594,7 +600,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -639,7 +644,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -669,6 +673,9 @@ Outputs
      - ``TOTAL_PIXEL_COUNT``
      - [integer]
      - The count of pixels in the output raster layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgisfuzzifyrastersmallmembership``
 
@@ -705,7 +712,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -763,7 +770,7 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -807,6 +814,9 @@ Outputs
      - [raster]
      - Output raster layer containing the result
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:rasterbooleanand``
 
 .. include:: qgis_algs_include.rst
@@ -842,7 +852,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -900,7 +910,7 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -943,6 +953,9 @@ Outputs
      - [raster]
      - Output raster layer containing the result
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:rasterbooleanor``
 
 .. include:: qgis_algs_include.rst
@@ -975,7 +988,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1065,7 +1078,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1075,6 +1087,9 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output raster file with the calculated values.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:rastercalculator``
 
@@ -1098,7 +1113,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1134,7 +1148,7 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1184,6 +1198,9 @@ Outputs
      - [number]
      -
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:rasterlayerstatistics``
 
 .. include:: qgis_algs_include.rst
@@ -1204,7 +1221,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1254,7 +1271,7 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1307,6 +1324,9 @@ Outputs
      - [number]
      -
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:rasterlayeruniquevaluesreport``
 
 .. include:: qgis_algs_include.rst
@@ -1329,7 +1349,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1384,7 +1404,7 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1427,6 +1447,9 @@ Outputs
      - [number]
      -
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:rasterlayerzonalstats``
 
 .. include:: qgis_algs_include.rst
@@ -1447,7 +1470,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1527,7 +1550,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1556,6 +1578,9 @@ Outputs
      - The output table (containing volume, area and
        pixel count)
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:rastersurfacevolume``
 
 .. include:: qgis_algs_include.rst
@@ -1576,7 +1601,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1674,7 +1699,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1684,6 +1708,9 @@ Outputs
      - ``OUTPUT``
      - [raster]
      - Output raster layer with reclassified band values
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:reclassifybylayer``
 
@@ -1705,7 +1732,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1794,7 +1821,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1806,6 +1832,9 @@ Outputs
 
        Default: '[Save to temporary file]'
      - The output raster layer.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:reclassifybytable``
 
@@ -1830,7 +1859,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 30 20 20 30
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1873,7 +1901,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1885,6 +1912,9 @@ Outputs
      - ``OUTPUT``
      - [vector: point]
      - The output layer containing the sampled values.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:rastersampling``
 
@@ -1914,7 +1944,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1963,7 +1992,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1977,6 +2005,9 @@ Outputs
 
        Default: ``[Create temporary layer]``
      - The output vector polygon layer.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:zonalhistogram``
 
@@ -2001,7 +2032,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -2054,7 +2085,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -2064,6 +2094,9 @@ Outputs
      - ``INPUT_VECTOR``
      - [vector: polygon]
      - The input zone vector layer with added statistics.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:zonalstatistics``
 

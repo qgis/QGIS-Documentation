@@ -30,7 +30,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -55,7 +54,7 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 35 20 20 25
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -146,6 +145,9 @@ Outputs
      - [number]
      -
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:basicstatisticsforfields``
 
 .. include:: qgis_algs_include.rst
@@ -177,7 +179,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -198,7 +199,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -229,6 +229,9 @@ Outputs
      - [number]
      - The maximum elevation for the geometries in the
        layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:climbalongline``
 
@@ -266,7 +269,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -317,7 +320,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -348,7 +350,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -400,7 +402,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -415,6 +416,9 @@ Outputs
      - ``NUM_CLUSTERS``
      - [number]
      - The number of clusters discovered
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:dbscanclustering``
 
@@ -440,7 +444,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -504,7 +508,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -518,6 +521,9 @@ Outputs
        for each input feature.
        Its features and attribute table depend on the selected
        output matrix type.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:distancematrix``
 
@@ -550,7 +556,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -594,7 +599,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -606,6 +610,9 @@ Outputs
      - Line vector layer with the attributes of the input
        features, the identifier of their closest feature
        and the calculated distance.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:distancetonearesthublinetohub``
 
@@ -633,7 +640,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -677,7 +684,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -689,6 +695,9 @@ Outputs
      - Point vector layer with the attributes of the
        input features, the identifier of their closest
        feature and the calculated distance.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:distancetonearesthubpoints``
 
@@ -731,7 +740,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -799,7 +808,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -809,6 +817,9 @@ Outputs
      - ``OUTPUT``
      - [vector: line]
      - The resulting line layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:hublines``
 
@@ -845,7 +856,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -879,7 +889,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -890,6 +899,9 @@ Outputs
      - [vector: any]
      - Vector layer containing the original features with
        a field specifying the cluster they belong to
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:kmeansclustering``
 
@@ -913,7 +925,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -943,7 +954,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -967,6 +977,9 @@ Outputs
      - [string]
      - A string with the comma separated list of unique values found
        in the input field
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:listuniquevalues``
 
@@ -999,7 +1012,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1031,7 +1043,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1041,6 +1052,9 @@ Outputs
      - ``OUTPUT``
      - [vector: point]
      - Resulting point(s) layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:meancoordinates``
 
@@ -1074,7 +1088,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1096,7 +1109,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1127,6 +1139,9 @@ Outputs
      - [number]
      - Z-Score
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:nearestneighbouranalysis``
 
 .. include:: qgis_algs_include.rst
@@ -1152,7 +1167,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1186,7 +1200,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1198,6 +1211,9 @@ Outputs
      - The output layer with additional fields reporting the
        overlap (in map units and percentage) of the input feature
        overlapped by each of the selected layers.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:overlapanalysis``
 
@@ -1219,7 +1235,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1250,7 +1265,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1267,6 +1281,7 @@ the following statistics are returned for each grouped value:
 .. list-table::
    :header-rows: 1
    :widths: 62 12 12 12
+   :class: longtable
 
    * - Statistics
      - String
@@ -1353,6 +1368,9 @@ the following statistics are returned for each grouped value:
      -
      -
 
+Python code
+...........
+
 **Algorithm ID**: ``qgis:statisticsbycategories``
 
 .. include:: qgis_algs_include.rst
@@ -1379,7 +1397,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -1416,7 +1434,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -1427,6 +1444,9 @@ Outputs
      - [vector: polygon]
      - Polygon output layer with fields of lines length and
        line count
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:sumlinelengths``
 

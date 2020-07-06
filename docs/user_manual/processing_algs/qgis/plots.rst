@@ -21,7 +21,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -57,7 +56,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -68,6 +66,9 @@ Outputs
      - [html]
      - HTML file with the plot.
        Available in the :menuselection:`Processing --> Result Viewer`.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:barplot``
 
@@ -88,7 +89,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -136,7 +137,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -147,6 +147,9 @@ Outputs
      - [html]
      - HTML file with the plot.
        Available in the :menuselection:`Processing --> Result Viewer`.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:boxplot``
 
@@ -168,7 +171,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -204,7 +206,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -215,6 +216,9 @@ Outputs
      - [html]
      - HTML file with the plot.
        Available in the :menuselection:`Processing --> Result Viewer`.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:meanandstandarddeviationplot``
 
@@ -239,7 +243,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -275,7 +278,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -286,6 +288,9 @@ Outputs
      - [html]
      - HTML file with the plot.
        Available in the :menuselection:`Processing --> Result Viewer`.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:polarplot``
 
@@ -306,7 +311,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -345,7 +349,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -356,6 +359,9 @@ Outputs
      - [html]
      - HTML file with the plot.
        Available in the :menuselection:`Processing --> Result Viewer`.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:rasterlayerhistogram``
 
@@ -378,7 +384,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -417,7 +422,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -428,6 +432,9 @@ Outputs
      - [html]
      - HTML file with the plot.
        Available in the :menuselection:`Processing --> Result Viewer`.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:vectorlayerhistogram``
 
@@ -449,7 +456,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -485,7 +491,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -496,6 +501,9 @@ Outputs
      - [html]
      - HTML file with the plot.
        Available in the :menuselection:`Processing --> Result Viewer`.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:vectorlayerscatterplot``
 
@@ -517,7 +525,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -557,7 +564,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -568,6 +574,9 @@ Outputs
      - [html]
      - HTML file with the plot.
        Available in the :menuselection:`Processing --> Result Viewer`.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:scatter3dplot``
 
