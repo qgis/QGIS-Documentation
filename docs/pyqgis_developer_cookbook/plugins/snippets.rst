@@ -107,8 +107,3 @@ How to access attribute table of selected features
     # The method requires one parameter (the new value for the second
     # field of the selected feature(s)) and can be called by
     change_value(50)
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 9e4305108... Fix documentation build (#5835)
