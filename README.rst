@@ -121,8 +121,8 @@ of disk space.
 
 Some languages will also need specific fonts installed:
 
-* Korea (ko) - NanumMyeongjo
-* Hindi (hi) - Nakula
+* Korea (ko) - NanumMyeongjo from the ``fonts-nanum`` package
+* Hindi (hi) - Nakula from the ``fonts-nakula`` package
 
 
 Build on Windows

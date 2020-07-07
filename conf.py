@@ -231,7 +231,7 @@ latex_use_parts = False
 #latex_use_modindex = True
 
 latex_elements = {
-# The paper size ('letterpaper' or 'a4paper').
+  # The paper size ('letterpaper' or 'a4paper').
     'papersize': 'a4paper',
 
     # The font size ('10pt', '11pt' or '12pt').
@@ -265,7 +265,7 @@ if tags.has('ko'):
         }
 
 # Special case for hindi that need different setting and typeset
-if tags.has('ko'):
+if tags.has('hi'):
     latex_elements = {
         'inputenc': '',
         'utf8extra': '',
@@ -429,4 +429,3 @@ class BetterOutputChecker(doctest.OutputChecker):
         return doctest.OutputChecker.check_output(self, want, got, optionflags)
 
 ext_doctest.SphinxDocTestRunner = BetterDocTestRunner
-
