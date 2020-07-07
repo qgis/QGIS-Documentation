@@ -217,11 +217,11 @@ providers:
 .. index::
   pair: WFS vector; Loading
 
-* WFS connection:. the connection is defined with a URI and using the ``WFS`` provider:
+* WFS connection: the connection is defined with a URI and using the ``WFS`` provider:
 
   .. testcode:: loadlayer
 
-        uri = "https://demo.geo-solutions.it/geoserver/ows?service=WFS&request=GetFature&typename=topp:tasmania_water_bodies"
+        uri = "https://demo.geo-solutions.it/geoserver/ows?service=WFS&request=GetFature&typename=geosolutions:regioni"
         vlayer = QgsVectorLayer(uri, "my wfs layer", "WFS")
         QgsProject.instance().addMapLayer(vlayer)
 
@@ -233,9 +233,9 @@ providers:
 
       params = {
           'service': 'WFS',
-          'version': '1.0.0',
+          'version': '2.0.0',
           'request': 'GetFeature',
-          'typename': 'topp:tasmania_water_bodies',
+          'typename': 'geosolutions:regioni',
           'srsname': "EPSG:4326"
       }
       uri2 = 'http://localhost:8080/geoserver/wfs?' + urllib.parse.unquote(urllib.parse.urlencode(params))
@@ -247,7 +247,7 @@ providers:
 
    .. testcode:: loadlayer
 
-      uri = "https://demo.geo-solutions.it/geoserver/ows?service=WFS&request=GetFature&typename=topp:tasmania_water_bodies"
+      uri = "https://demo.geo-solutions.it/geoserver/ows?service=WFS&request=GetFature&typename=geosolutions:regioni"
       provider_options = QgsDataProvider.ProviderOptions()
       # Use project's transform context
       provider_options.transformContext = QgsProject.instance().transformContext()
