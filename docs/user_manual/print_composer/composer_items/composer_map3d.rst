@@ -25,7 +25,7 @@ has the following functionalities:
 
 .. _figure_layout_3dmap_prop:
 
-.. figure:: img/3map_properties.png
+.. figure:: img/3dmap_properties.png
    :align: center
 
    3D Map Item Properties
