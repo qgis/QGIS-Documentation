@@ -384,6 +384,10 @@ Depending on the format of export, some of these options may be available:
   :guilabel:`Custom Options` which allow you to configure advanced parameters
   depending on the output format. Some are described in :ref:`supported_format`
   but for full details, see the `GDAL <https://gdal.org>`_ driver documentation.
+  Each file format has its own custom parameters, e.g. for the ``GeoJSON`` format
+  have a look at the
+  `GDAL GeoJSON <https://gdal.org/drivers/vector/geojson.html#layer-creation-options>`_
+  documentation.
 
 .. _figure_save_vector:
 
