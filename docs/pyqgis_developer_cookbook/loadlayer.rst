@@ -215,15 +215,15 @@ providers:
       QgsProject.instance().addMapLayer(vlayer)
 
 .. index::
-  pair: WFS vector; Loading
+  pair: WFS; Loading
 
 * WFS connection: the connection is defined with a URI and using the ``WFS`` provider:
 
   .. testcode:: loadlayer
 
-        uri = "https://demo.geo-solutions.it/geoserver/ows?service=WFS&request=GetFeature&typename=geosolutions:regioni"
-        vlayer = QgsVectorLayer(uri, "my wfs layer", "WFS")
-        QgsProject.instance().addMapLayer(vlayer)
+      uri = "https://demo.geo-solutions.it/geoserver/ows?service=WFS&version=1.1.0&request=GetFeature&typename=geosolutions:regioni"
+      vlayer = QgsVectorLayer(uri, "my wfs layer", "WFS")
+      QgsProject.instance().addMapLayer(vlayer)
 
   The uri can be created using the standard ``urllib`` library:
 
@@ -233,21 +233,21 @@ providers:
 
       params = {
           'service': 'WFS',
-          'version': '2.0.0',
+          'version': '1.1.0',
           'request': 'GetFeature',
           'typename': 'geosolutions:regioni',
           'srsname': "EPSG:4326"
       }
-      uri2 = 'https://demo.geo-solutions.it/geoserver/wfs?' + urllib.parse.unquote(urllib.parse.urlencode(params))
-
+      uri2 = 'https://demo.geo-solutions.it/geoserver/ows?' + urllib.parse.unquote(urllib.parse.urlencode(params))
 
 .. note:: You can change the data source of an existing layer by calling
    :meth:`setDataSource() <qgis.core.QgsVectorLayer.setDataSource>`
-   on a :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` instance, as in the following example:
+   on a :class:`QgsVectorLayer <qgis.core.QgsVectorLayer>` instance, as
+   in the following example:
 
    .. testcode:: loadlayer
 
-      uri = "https://demo.geo-solutions.it/geoserver/ows?service=WFS&request=GetFeature&typename=geosolutions:regioni"
+      uri = "https://demo.geo-solutions.it/geoserver/ows?service=WFS&version=1.1.0&request=GetFeature&typename=geosolutions:regioni"
       provider_options = QgsDataProvider.ProviderOptions()
       # Use project's transform context
       provider_options.transformContext = QgsProject.instance().transformContext()
@@ -260,7 +260,7 @@ providers:
 
 
 Raster Layers
-=============
+======================================================================
 
 For accessing raster files, GDAL library is used. It supports a wide range of
 file formats. In case you have troubles with opening some files, check whether
