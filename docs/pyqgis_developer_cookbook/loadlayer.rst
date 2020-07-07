@@ -221,7 +221,7 @@ providers:
 
   .. testcode:: loadlayer
 
-        uri = "https://demo.geo-solutions.it/geoserver/ows?service=WFS&request=GetFature&typename=geosolutions:regioni"
+        uri = "https://demo.geo-solutions.it/geoserver/ows?service=WFS&request=GetFeature&typename=geosolutions:regioni"
         vlayer = QgsVectorLayer(uri, "my wfs layer", "WFS")
         QgsProject.instance().addMapLayer(vlayer)
 
@@ -238,7 +238,7 @@ providers:
           'typename': 'geosolutions:regioni',
           'srsname': "EPSG:4326"
       }
-      uri2 = 'http://localhost:8080/geoserver/wfs?' + urllib.parse.unquote(urllib.parse.urlencode(params))
+      uri2 = 'https://demo.geo-solutions.it/geoserver/wfs?' + urllib.parse.unquote(urllib.parse.urlencode(params))
 
 
 .. note:: You can change the data source of an existing layer by calling
@@ -247,7 +247,7 @@ providers:
 
    .. testcode:: loadlayer
 
-      uri = "https://demo.geo-solutions.it/geoserver/ows?service=WFS&request=GetFature&typename=geosolutions:regioni"
+      uri = "https://demo.geo-solutions.it/geoserver/ows?service=WFS&request=GetFeature&typename=geosolutions:regioni"
       provider_options = QgsDataProvider.ProviderOptions()
       # Use project's transform context
       provider_options.transformContext = QgsProject.instance().transformContext()
