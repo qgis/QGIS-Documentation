@@ -259,7 +259,7 @@ list gives a quick review of how to introduce values for each type of input para
 * Enumeration. If an algorithm has an enumeration parameter, the value of that
   parameter should be entered using an integer value. To know the available
   options, you can use the ``algorithmHelp()`` command, as above.
-  For instance, the "native.buffer" algorithm has an enumeration called JOIN_STYLE:
+  For instance, the ``native:buffer`` algorithm has an enumeration called JOIN_STYLE:
 
   ::
 
