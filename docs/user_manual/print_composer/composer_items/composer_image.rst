@@ -44,7 +44,7 @@ the image you want to display):
    SVG-libraries provided with QGIS. You can also select other image
    formats (like :file:`.png` or :file:`.jpg`).
 #. You can enter the source directly in the :guilabel:`Image source` text field.
-   You can even provide a remote a URL that points to a picture.
+   You can even provide a remote URL that points to a picture.
 #. From the :guilabel:`Search directories` area you can select an
    image from the loaded previews to set the image source.
    These images are by default provided by folders set in
@@ -85,7 +85,8 @@ The QGIS provided (default) :file:`.SVG` files are customizable,
 meaning that you can easily apply other :guilabel:`Fill color`,
 :guilabel:`Stroke color` (including opacity) and
 :guilabel:`Stroke width` than the original, using their
-corresponding feature in the the :guilabel:`SVG Parameters` group. These properties can also be :ref:`data-defined <data_defined>`.
+corresponding feature in the :guilabel:`SVG Parameters` group.
+These properties can also be :ref:`data-defined <data_defined>`.
 
 If you add an :file:`.SVG` file that does not enable these properties,
 you may need to add the following tags to the file in order to add
