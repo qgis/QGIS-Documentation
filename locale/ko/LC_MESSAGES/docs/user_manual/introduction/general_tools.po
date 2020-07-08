@@ -233,7 +233,7 @@ msgstr "표시하고자 하는 레이어를 체크하십시오."
 #: ../../docs/user_manual/introduction/general_tools.rst:124
 msgid ""
 "Configure the layer properties (symbology, diagram, labels...) as usual"
-msgstr "평소대로 레이어 속성(심볼, 다이어그램, 레이블 등등)을 환경 설정하십시오."
+msgstr "평소대로 레이어 속성(심볼, 다이어그램, 라벨 등등)을 환경 설정하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:125
 msgid ""
@@ -1131,12 +1131,17 @@ msgid ""
 "If you click-and-drag the red rectangle in the overview frame, the main map "
 "view extent will update accordingly."
 msgstr ""
+":guilabel:`Overview` 패널(:kbd:`Ctrl+8`)은 일부 레이어들의 전체 범위를 보여주는 맵입니다. 오버뷰 맵은 "
+":menuselection:`Layer` 메뉴 또는 레이어 컨텍스트 메뉴에서 :guilabel:`Show in Overview` 옵션을 "
+"켠 레이어들로 채워집니다. 이 뷰 안에는현재 맵 범위를 나타내는 빨간 사각형이 있습니다. 이 사각형을 통해 사용자가 현재 맵의 어느 "
+"영역을 보고 있는지 한 눈에 알 수 있습니다. 오버뷰에서 현재 범위를 보여주는 빨간색 사각형을 클릭&드래그하면, 그에 따라 주 맵 뷰도 "
+"자동적으로 업데이트됩니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:428
 msgid ""
 "Note that labels are not rendered to the map overview even if the layers "
 "used in the map overview have been set up for labeling."
-msgstr ""
+msgstr "맵 오버뷰가 표시하는 레이어에 라벨이 적용돼 있더라도 맵 오버뷰에는 라벨이 렌더링되지 않는다는 사실을 기억하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:438
 msgid "Log Messages Panel"
@@ -1149,6 +1154,9 @@ msgid ""
 " Messages Panel`. It can be activated using the most right icon in the "
 "bottom status bar."
 msgstr ""
+"몇몇 작업을 불러오거나 공간 처리할 때, |messageLog| :guilabel:`Log Messages Panel` 을 통해 서로 "
+"다른 탭에 나타나는 메시지를 추적하고 지켜볼 수 있습니다. 하단 상태 바의 가장 오른쪽에 있는 아이콘을 클릭하면 이 패널을 활성화할수 "
+"있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:452
 msgid "Undo/Redo Panel"
@@ -1161,6 +1169,9 @@ msgid ""
 "of actions by selecting the action listed above. More details at :ref:`Undo "
 "and Redo edits <undoredo_edits>`."
 msgstr ""
+":guilabel:`Undo/Redo` 패널(:kbd:`Ctrl+5`)은 편집 중인 각 레이어에 대해 실행된 모든 작업 목록을 표시해서,"
+" 위쪽에 있는 작업을 선택하는것만으로도 작업 모음을 빠르게 실행 취소시킬 수 있습니다. 더 자세한 내용은 :ref:`실행 취소 및 재실행"
+" 편집 <undoredo_edits>` 을 참조하세요."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:466
 msgid "Statistical Summary Panel"
@@ -1171,15 +1182,17 @@ msgid ""
 "The :guilabel:`Statistics` panel (:kbd:`Ctrl+6`) provides summarized "
 "information on any vector layer. This panel allows you to select:"
 msgstr ""
+":guilabel:`Statistics` 패널(:kbd:`Ctrl+6`)은 모든 벡터 레이어에 대한 요약된 정보를 표시할 수 있습니다. "
+"이 패널에서 선택할 수있는 것은 다음과 같습니다:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:471
 msgid "the vector layer to compute the statistics on"
-msgstr ""
+msgstr "통계를 계산할 벡터 레이어"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:472
 msgid ""
 "the column to use, or an |expression| :ref:`expression <vector_expressions>`"
-msgstr ""
+msgstr "사용할 열(column) 또는 |expression| :ref:`표현식 <vector_expressions>`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:473
 msgid ""
@@ -1187,6 +1200,8 @@ msgid ""
 "the dialog. Depending on the field's (or expression's values) type, "
 "available statistics are:"
 msgstr ""
+"대화창 우하단의 드롭다운 버튼을 통해 반환할 통계 정보. 레이어 필드 유형에 따라 (또는 표현식의 값 유형에 따라) 사용할 수 있는 통계"
+" 정보는 다음과 같습니다:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:480
 msgid "Statistics"
@@ -1288,29 +1303,33 @@ msgstr "표: 필드 유형에 따라 사용할 수 있는 통계"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:504
 msgid "The statistical summary can be:"
-msgstr ""
+msgstr "통계 요약 정보는:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:506
 msgid ""
 "returned for the whole layer or |checkbox| :guilabel:`selected features "
 "only`"
 msgstr ""
+"전체 레이어의 통계를 반환하거나, |checkbox| :guilabel:`selected features only` 옵션으로 선택한 "
+"피처에 대한 통계만 반환할 수도 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:507
 msgid ""
 "recalculated using the |draw| button when the underlying data source changes"
 " (eg, new or removed features/fields, attribute modification)"
 msgstr ""
+"기저 데이터소스가 바뀔 경우 (예를 들어 피처/필드를 새로 추가하거나, 피처/필드를 제거하거나, 속성을 수정하는 경우) |draw| "
+"버튼을 통해 통계를 다시 계산할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:509
 msgid ""
 "|editCopy| copied to the clipboard and pasted as a table in another "
 "application"
-msgstr ""
+msgstr "|editCopy| 클립보드로 복사한 다음 다른 응용 프로그램에 테이블로 붙여넣을 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:516
 msgid "Show statistics on a field"
-msgstr "필드에 대한 통계정보 종류 표시"
+msgstr "필드에 대한 통계 정보 종류 표시"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:523
 msgid "Nesting Projects"
@@ -1322,6 +1341,8 @@ msgid ""
 "the same style. You can either create a :ref:`default style <store_style>` "
 "for these layers or embed them from another project to save time and effort."
 msgstr ""
+"서로 다른 프로젝트들에 있는 여러 레이어들을 동일한 스타일로 유지하고자 할 경우가 있습니다. 이 레이어들을 위한 :ref:`기본 스타일 "
+"<store_style>` 을 생성할 수도 있고, 또는 다른 프로젝트로부터 레이어들을 내포시켜 수고를 줄일 수도 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:529
 msgid ""
@@ -1332,13 +1353,13 @@ msgstr "기존 프로젝트로부터 레이어 및 그룹을 내포시키면 스
 #: ../../docs/user_manual/introduction/general_tools.rst:532
 msgid ""
 "All types of layers (vector or raster, local or online...) can be added"
-msgstr ""
+msgstr "모든 유형의 (벡터 또는 래스터, 로컬 또는 온라인 등등) 레이어를 추가할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:533
 msgid ""
 "Fetching groups and layers, you can keep the same tree structure of the "
 "\"background\" layers in your different projects"
-msgstr ""
+msgstr "그룹 및 레이어를 불러오면, 서로 다른 사용자 프로젝트에 있는 “배경” 레이어들의 트리 구조를 동일하게 유지할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:535
 msgid ""
@@ -1346,30 +1367,37 @@ msgid ""
 "such as symbology, labels, forms, default values and actions, ensuring "
 "consistency across projects"
 msgstr ""
+"내포한 레이어를 편집할 수 있지만, 심볼, 라벨, 양식, 기본값, 동작 등과 같은 레이어 속성을 변경할 수는 없습니다. 이 습성은 "
+"프로젝트 전체에서 일관성을 보장합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:538
 msgid ""
 "Modify the items in the original project and changes are propagated to all "
 "the other projects"
-msgstr ""
+msgstr "원본 프로젝트에 있는 항목을 수정하면, 변경 사항이 다른 모든 프로젝트로 전파됩니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:541
 msgid ""
 "If you want to embed content from other project files into your project, "
 "select :menuselection:`Layer --> Embed Layers and Groups`:"
 msgstr ""
+"사용자 프로젝트에 다른 프로젝트 파일의 내용을 삽입하고자 할 경우, :menuselection:`Layer --> Embed Layers"
+" and Groups` 메뉴를 선택한 다음:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:544
 msgid ""
 "Click the :guilabel:`...` button to look for a project: you can see the "
 "content of the project (see figure_embed_dialog_)"
 msgstr ""
+":guilabel:`...` 버튼을 클릭해서 프로젝트를 찾으십시오. 프로젝트의 내용을 (figure_embed_dialog_ 그림 참조)"
+" 볼 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:546
 msgid ""
 "Hold down :kbd:`Ctrl` ( or |osx| :kbd:`Cmd`) and click on the layers and "
 "groups you wish to retrieve"
 msgstr ""
+":kbd:`Ctrl` (또는 |osx| :kbd:`Cmd`) 키를 누른 채 사용자가 가져오려 하는 레이어 및 그룹을 클릭하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:548
 msgid "Click :guilabel:`OK`"
@@ -1382,6 +1410,8 @@ msgid ""
 "to their name for recognition and hovering over displays a tooltip with the "
 "original project file path."
 msgstr ""
+":guilabel:`Layers` 패널에 선택한 레이어 및 그룹을 삽입하고 맵 캔버스에 가시화할 것입니다. 내포된 항목의 명칭 옆에 "
+"|indicatorEmbedded| 아이콘이 추가되고, 그 위에 마우스를 가져가면 원본 프로젝트 파일 경로를 보여주는 툴팁을 표시합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:560
 msgid "Select layers and groups to embed"
@@ -1392,6 +1422,8 @@ msgid ""
 "Like any other layer, an embedded layer can be removed from the project by "
 "right-clicking on the layer and clicking |removeLayer| :sup:`Remove`."
 msgstr ""
+"다른 모든 레이어와 마찬가지로, 내포 레이어를 오른쪽 클릭하고 |removeLayer| :sup:`Remove` 를 선택하면 프로젝트에서"
+" 제거할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:565
 msgid "**Change rendering of an embedded layer**"
@@ -1405,10 +1437,13 @@ msgid ""
 "featured and not dependent on the original project. You can then safely "
 "remove the linked layer."
 msgstr ""
+"원본 프로젝트 파일을 변경하지 않는 이상, 내포 레이어의 렌더링을 변경할 수는 없습니다. 하지만, 내포 레이어를 오른쪽 클릭하고 "
+":guilabel:`Duplicate` 를 선택하면 완전히 동일하며 원본 프로젝트에 독립적인 레이어를 생성합니다. 그 다음 링크된 "
+"레이어를 안전하게 제거할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:577
 msgid "Working with the map canvas"
-msgstr ""
+msgstr "맵 캔버스 작업"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:583
 msgid "Rendering"
@@ -1424,19 +1459,19 @@ msgstr ""
 
 #: ../../docs/user_manual/introduction/general_tools.rst:588
 msgid "adding a layer"
-msgstr ""
+msgstr "레이어 추가"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:589
 msgid "panning or zooming"
-msgstr ""
+msgstr "맵 이동 또는 확대/축소"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:590
 msgid "resizing the QGIS window"
-msgstr ""
+msgstr "QGIS 창 크기 변경"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:591
 msgid "changing the visibility of a layer or layers"
-msgstr ""
+msgstr "레이어(들)의 가시성 변경"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:593
 msgid "QGIS allows you to control the rendering process in a number of ways."
@@ -1456,6 +1491,11 @@ msgid ""
 ":guilabel:`Minimum (exclusive)` and :guilabel:`Maximum (inclusive)` scale "
 "values."
 msgstr ""
+"축척에 의존적인 렌더링을 통해 어떤 (래스터 또는 벡터) 레이어를 가시화하는 최소 및 최대 축척을 설정할 수 있습니다. 축척 의존 "
+"렌더링을 설정하려면, 범례에 있는 레이어를 더블 클릭해서 :guilabel:`Properties` 대화창을 여십시오. "
+":guilabel:`Rendering` 탭에서 |checkbox| :guilabel:`Scale dependent visibility` "
+"를 체크한 다음, :guilabel:`Minimum (exclusive)` 과 :guilabel:`Maximum (inclusive)` "
+"축척값을 입력합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:608
 msgid ""
@@ -1463,12 +1503,16 @@ msgid ""
 "panel. Right-click on the layer and in the context menu, select "
 ":guilabel:`Set Layer Scale Visibility`."
 msgstr ""
+"레이어 패널에서 레이어에 대한 축척 의존 가시성을 활성화시킬 수도 있습니다. 레이어를 오른쪽 클릭한다음 컨텍스트 메뉴에서 "
+":guilabel:`Set Layer Scale Visibility` 를 선택하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:611
 msgid ""
 "The |mapIdentification| :sup:`Set to current canvas scale` button allow you "
 "to use the current map canvas scale as boundary of the range visibility."
 msgstr ""
+"|mapIdentification| :sup:`Set to current canvas scale` 버튼을 클릭하면 가시성 범위의 "
+"한계값으로 현재 맵 캔버스의 축척을 쓸 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:616
 msgid ""
@@ -1478,6 +1522,9 @@ msgid ""
 "menu. Select it and the map is zoomed to the layer's nearest visibility "
 "scale."
 msgstr ""
+"맵 축척이 가시성 축척 범위를 벗어나서 맵 캔버스에 레이어를 렌더링하지 않는 경우, 레이어 패널에서 해당 레이어를 회색조로 표시하며 해당"
+" 레이어의 컨텍스트 메뉴에 새로운 옵션 :guilabel:`Zoom to Visible Scale` 이 추가됩니다. 이 옵션을 선택하면 "
+"해당 레이어가 가시화될 가장 가까운 축척값으로 맵을 확대/축소할 것입니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:625
 msgid "Controlling Map Rendering"
@@ -1499,25 +1546,29 @@ msgid ""
 "response to any of the events described in the section :ref:`redraw_events`."
 " Examples of when you might want to suspend rendering include:"
 msgstr ""
+"렌더링 작업을 보류하려면, 상태 바 우하단에 있는 |checkbox| :guilabel:`Render` 체크박스를 클릭하십시오. "
+"|checkbox| :guilabel:`Render` 체크박스를 해제하면, QGIS 는 :ref:`redraw_events` 에서 "
+"설명하는 어떤 이벤트에도 대응하지 않고 캔버스를 다시 그리지 않습니다. 사용자가 렌더링을 보류하길 원할 수도 있는 경우는 다음과 "
+"같습니다:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:642
 msgid "adding many layers and symbolizing them prior to drawing"
-msgstr ""
+msgstr "많은 레이어를 추가하고 렌더링 전에 심볼 작업을 하고자 하는 경우"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:643
 msgid ""
 "adding one or more large layers and setting scale dependency before drawing"
-msgstr ""
+msgstr "하나 이상의 대용량 레이어를 추가하고 렌더링 전에 축척 의존성을 설정하고자 하는 경우"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:644
 msgid ""
 "adding one or more large layers and zooming to a specific view before "
 "drawing"
-msgstr ""
+msgstr "하나 이상의 대용량 레이어를 추가하고 렌더링 전에 특정한 뷰로 확대/축소하고자 하는 경우"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:645
 msgid "any combination of the above"
-msgstr ""
+msgstr "이런 경우들의 조합"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:647
 msgid ""
@@ -1540,6 +1591,11 @@ msgid ""
 "layers added to the map should be displayed`. Any layer subsequently added "
 "to the map will be off (invisible) by default."
 msgstr ""
+"새 레이어를 불러올 때 항상 그리지 않도록 하는 옵션을 설정할 수 있습니다. 즉 맵에 레이어가 추가되어도,기본적으로 범례의 가시성 "
+"체크박스는 해제된 상태일 것이라는 뜻입니다. 이 옵션을 설정하려면, :menuselection:`Settings --> Options` "
+"메뉴 옵션을 선택한 다음 :guilabel:`Rendering` 탭을 클릭하십시오. |checkbox| :guilabel:`By "
+"default new layers added to the map should be displayed` 체크박스를 해제하십시오. 이후 맵에"
+" 추가되는 모든 레이어가 기본적으로 꺼져 있게 (보이지 않게) 될 것입니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:673
 msgid "Stopping Rendering"
@@ -1551,6 +1607,8 @@ msgid ""
 "refresh of the map canvas and leave the map partially drawn. It may take a "
 "bit of time between pressing :kbd:`Esc` for the map drawing to halt."
 msgstr ""
+"맵 렌더링을 중단하려면 :kbd:`Esc` 키를 누르십시오. 맵 캔버스 업데이트를 중단하고 맵 일부만 렌더링된 상태로 남겨둘 겁니다. "
+":kbd:`Esc` 키를 눌렀을 때 실제로 맵 렌더링이 중단될 때까지 시간이 조금 걸릴 수도 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:685
 msgid "Influence Rendering Quality"
@@ -1586,6 +1644,8 @@ msgid ""
 "|checkbox| :guilabel:`Use render caching where possible to speed up "
 "redraws`."
 msgstr ""
+"|checkbox| :guilabel:`Use render caching where possible to speed up redraws`"
+" 를 체크"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:703
 msgid ""
@@ -1614,6 +1674,9 @@ msgid ""
 "result, they display more quickly. Be aware that this can cause rendering "
 "inconsistencies."
 msgstr ""
+"|checkbox| :guilabel:`Enable Feature simplification by default for newly "
+"added layers` 를 체크하면, 피처의 도형을 단순화(노드 감소)해서 그 결과 피처를 더 빨리 표시합니다. 이때 렌더링 일관성을 "
+"해치게 될 수도 있다는 점을 주의하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:720
 msgid "Zooming and Panning"
@@ -1632,6 +1695,10 @@ msgid ""
 ":menuselection:`Options --> Map tools` menu to define the scale behavior "
 "while zooming."
 msgstr ""
+"마우스로 툴바에 있는 |pan| :sup:`pan` 이동 및 |zoomIn| :sup:`zoom-in`/|zoomOut| :sup"
+":`zoom-out` 확대/축소 아이콘을 이용하는 것 이외에, 마우스 휠, 스페이스 바 그리고 방향 키로도 맵을 탐색할 수 있습니다. "
+":menuselection:`Settings -->` |options| :menuselection:`Options --> Map "
+"tools` 메뉴를 통해 :guilabel:`Zoom factor` 를 설정해서 확대/축소 중의 축척 습성을 정의할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:732
 msgid "With the mouse wheel"
@@ -1645,6 +1712,9 @@ msgid ""
 "of the zoomed area of interest. Holding down :kbd:`Ctrl` while rolling the "
 "mouse wheel results in a finer zoom."
 msgstr ""
+"메인 창 안에서 마우스 휠을 누르면 (맥OS에서는 :kbd:`cmd` 키를 함께 눌러야 할 수도 있습니다) 맵을 이동할수 있습니다. "
+"마우스 휠을 돌려서 맵을 확대하거나 축소할 수 있습니다. 관심 지역을 확대/축소할 때 마우스커서의 위치가 중심점이 될 것입니다. "
+":kbd:`Ctrl` 키를 누른 상태에서 마우스 휠을 돌리면 더 정밀하게 확대/축소할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:741
 msgid "With the arrow keys"
@@ -1656,6 +1726,8 @@ msgid ""
 "inside the map area, and click on the arrow keys to pan up, down, left and "
 "right."
 msgstr ""
+"방향 키를 이용해서 맵을 이동할 수 있습니다. 맵 영역 안쪽에 마우스 커서를 가져간 다음 방향 키를 누르면 위쪽, 아래쪽, 왼쪽, "
+"오른쪽으로 이동합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:747
 msgid ""
@@ -1665,6 +1737,9 @@ msgid ""
 ":kbd:`Ctrl++` or :kbd:`Ctrl+-` also performs an immediate zoom in/out on the"
 " map canvas."
 msgstr ""
+"스페이스 바를 누르면 일시적으로 마우스 움직임에 따라 맵을 이동시킬 수 있습니다. 사용자 키보드의 :kbd:`PgUp` 과 "
+":kbd:`PgDown` 키를 누르면 설정한 확대/축소 인자(zoom factor)에 따라 맵을 확대하거나 축소할 수 있습니다. 맵 "
+"캔버스 상에서 :kbd:`Ctrl++` 또는 :kbd:`Ctrl+-` 키 조합을 누르면 즉각적으로 맵을 확대/축소합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:753
 msgid ""
@@ -1673,6 +1748,9 @@ msgid ""
 "zoom to that area. This is not enabled for selection tools (since they use "
 ":kbd:`Shift` for adding to selection) or edit tools."
 msgstr ""
+"특정한 맵 도구(식별, 측정 등등)를 활성화한 상태라면, :kbd:`Shift` 키를 누른 상태로 맵 상에 사각형을 드래그해서 해당 "
+"지역으로 확대할 수 있습니다. 선택 도구(선택 도구는 추가 선택에 :kbd:`Shift` 키를 이용합니다)나 편집 도구가 아닌 맵 도구에"
+" 한해 이 기능이 활성화됩니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:765
 msgid "Spatial Bookmarks"
@@ -1687,6 +1765,10 @@ msgid ""
 ":guilabel:`Project Bookmarks`) and stored within the project file, which can"
 " be helpful if the project is to be shared with other users."
 msgstr ""
+"공간 북마크를 통해 지리적 위치에 “책갈피”를 끼워 나중에 다시 해당 위치로 돌아올 수 있습니다. 기본적으로 북마크는 사용자 프로파일에 "
+"(:guilabel:`User Bookmarks` 로) 저장되는데, 사용자가 연 어떤 프로젝트에서도 사용할 수 있다는 뜻입니다. 북마크를"
+" 단일 프로젝트 용으로 (:guilabel:`Project Bookmarks` 라는 명칭으로) 저장할 수도 있습니다. 프로젝트 북마크는 "
+"프로젝트 파일 안에 저장되는데, 다른 사용자와 공유해야 하는 프로젝트인 경우 유용할 것입니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:775
 msgid "Creating a Bookmark"
@@ -1698,7 +1780,7 @@ msgstr "북마크를 생성하려면:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:779
 msgid "Zoom and pan to the area of interest."
-msgstr ""
+msgstr "관심 지역으로 확대/축소 또는 이동하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:780
 msgid ""
@@ -1708,18 +1790,22 @@ msgid ""
 ":guilabel:`Browser` panel and select :guilabel:`New Spatial Bookmark`. The "
 ":guilabel:`Bookmark Editor` dialog opens."
 msgstr ""
+":menuselection:`View -->` |newBookmark| :menuselection:`New Spatial "
+"Bookmark...` 메뉴 옵션을 선택하고, :kbd:`Ctrl+B` 키 조합을 누르거나 :guilabel:`Browser` 패널에 "
+"있는 :guilabel:`Spatial Bookmarks` 항목을 오른쪽 클릭한 다음 :guilabel:`New Spatial "
+"Bookmark` 를 선택하십시오. :guilabel:`Bookmark Editor` 대화창이 열립니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:792
 msgid "The Bookmark Editor Dialog"
-msgstr ""
+msgstr "북마크 편집기 대화창"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:794
 msgid "Enter a descriptive name for the bookmark"
-msgstr ""
+msgstr "북마크를 잘 설명하는 명칭을 입력하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:795
 msgid "Enter or select a group name in which to store related bookmarks"
-msgstr ""
+msgstr "관련 북마크를 저장할 그룹명을 입력하거나 선택하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:796
 msgid ""
@@ -1727,20 +1813,24 @@ msgid ""
 "the extent can be calculated from a loaded layer extent, the current map "
 "canvas or drawn over the current map canvas."
 msgstr ""
+"범위 선택기를 사용해서 저장하고자 하는 영역의 범위를 선택하십시오. 불러온 레이어의 범위, 현재 맵 캔버스의 범위, 또는 현재 맵 캔버스"
+" 위에 마우스로 드래그한 사각형을 통해 범위를 계산할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:799
 msgid "Indicate the :guilabel:`CRS` to use for the extent"
-msgstr ""
+msgstr "선택한 범위에 사용할 :guilabel:`CRS` 를 지정하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:800
 msgid ""
 "Select whether the bookmark will be :guilabel:`Saved in` :guilabel:`User "
 "Bookmarks` or :guilabel:`Project Bookmarks`"
 msgstr ""
+":guilabel:`Saved in` 옵션에서 북마크를 :guilabel:`User Bookmarks` 로 또는 "
+":guilabel:`Project Bookmarks` 로 저장할지 선택하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:802
 msgid "Press :guilabel:`Save` to add the bookmark to the list"
-msgstr ""
+msgstr ":guilabel:`Save` 를 클릭하면 북마크가 목록에 추가됩니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:804
 msgid "Note that you can have multiple bookmarks with the same name."
@@ -1755,6 +1845,8 @@ msgid ""
 "To use and manage bookmarks, you can either use the :guilabel:`Spatial "
 "Bookmarks` panel or :guilabel:`Browser`."
 msgstr ""
+"북마크를 사용하거나 관리하려면, :guilabel:`Spatial Bookmarks` 패널이나 :guilabel:`Browser` 를 "
+"사용하면 됩니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:812
 msgid ""
@@ -1765,58 +1857,71 @@ msgid ""
 "to show the |showBookmarks| :guilabel:`Spatial Bookmarks` entry in the "
 ":guilabel:`Browser` panel."
 msgstr ""
+":guilabel:`Spatial Bookmarks Manager` 패널을 열려면 :menuselection:`View -->` "
+"|showBookmarks| :menuselection:`Show Spatial Bookmark Manager` 메뉴 옵션을 선택하거나 "
+":kbd:`Ctrl+7` 키 조합을 누르십시오. :guilabel:`Browser` 패널에 있는 |showBookmarks| "
+":guilabel:`Spatial Bookmarks` 항목을 보려면 :menuselection:`View -->` "
+"|showBookmarks| :menuselection:`Show Bookmarks` 메뉴를 선택하거나 "
+":kbd:`Ctrl+Shift+B` 키 조합을 누르십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:820
 msgid "You can perform the following tasks:"
-msgstr ""
+msgstr "다음과 같은 작업들을 수행할 수 있습니다:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:827
 msgid "Task"
-msgstr ""
+msgstr "작업"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:828
 msgid "Spatial Bookmark Manager"
-msgstr ""
+msgstr "공간 북마크 관리자"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:829
 msgid "Browser"
-msgstr ""
+msgstr "탐색기"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:830
 msgid "**Zoom to a Bookmark**"
-msgstr ""
+msgstr "**북마크로 확대/축소**"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:831
 msgid ""
 "Double-click on it, or select the bookmark and press the |zoomToBookmark| "
 ":guilabel:`Zoom to bookmark` button."
 msgstr ""
+"북마크를 더블 클릭하거나, 북마크를 선택한 다음 |zoomToBookmark| :guilabel:`Zoom to bookmark` 버튼을"
+" 누르십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:833
 msgid ""
 "Double-click on it, drag and drop it to the map canvas, or right-click the "
 "bookmark and select :guilabel:`Zoom to Bookmark`."
 msgstr ""
+"북마크를 더블 클릭하거나, 북마크를 맵 캔버스로 드래그&드롭하거나, 북마크를 오른쪽 클릭한 다음 :guilabel:`Zoom to "
+"Bookmark`를 선택하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:835
 msgid "**Delete a bookmark**"
-msgstr ""
+msgstr "**북마크 삭제**"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:836
 msgid ""
 "Select the bookmark and click the |deleteSelected| :guilabel:`Delete "
 "bookmark` button. Confirm your choice."
 msgstr ""
+"북마크를 선택하고 |deleteSelected| :guilabel:`Delete bookmark` 버튼을 클릭한 다음, 확인을 "
+"누르십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:838
 msgid ""
 "Right-click the bookmark and select :guilabel:`Delete Spatial Bookmark`. "
 "Confirm your choice."
 msgstr ""
+"북마크를 오른쪽 클릭하고 :guilabel:`Delete Spatial Bookmark` 를 선택한 다음, 확인을 누르십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:840
 msgid "**Export bookmarks to XML**"
-msgstr ""
+msgstr "**북마크를 XML로 내보내기**"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:841
 msgid ""
@@ -1824,6 +1929,8 @@ msgid ""
 "|sharingExport| :guilabel:`Export`. All the bookmarks (user or project) are "
 "saved in an xml file."
 msgstr ""
+"|sharing| :guilabel:`Import/Export Bookmarks` 버튼을 클릭한 다음 |sharingExport| "
+":guilabel:`Export` 를 선택하십시오. 모든 (사용자 또는 프로젝트) 북마크를 :file:`xml` 파일로 저장합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:844
 msgid ""
@@ -1831,10 +1938,12 @@ msgid ""
 "right-click and select |sharingExport| :guilabel:`Export Spatial "
 "Bookmarks...`. The selected bookmark subset is saved."
 msgstr ""
+"하나 이상의 폴더(사용자 또는 프로젝트) 또는 하위 폴더(그룹)를 선택한 다음, 오른쪽 클릭하고 :guilabel:`Export "
+"Spatial Bookmarks...` 를 선택하십시오. 선택한 북마크 부분 집합(subset)을 저장합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:847
 msgid "**Import bookmarks from XML**"
-msgstr ""
+msgstr "**XML에서 북마크 가져오기**"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:848
 msgid ""
@@ -1842,6 +1951,8 @@ msgid ""
 "|sharingImport| :guilabel:`Import`. All bookmarks in the XML file are "
 "imported as user bookmarks."
 msgstr ""
+"|sharing| :guilabel:`Import/Export Bookmarks` 버튼을 클릭한 다음 |sharingImport| "
+":guilabel:`Import` 를 선택하십시오. :file:`xml` 파일에 있는 모든 북마크를 사용자 북마크로 가져옵니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:851
 msgid ""
@@ -1851,16 +1962,22 @@ msgid ""
 " If performed on the :guilabel:`Spatial Bookmarks` entry, the bookmarks are "
 "added to :guilabel:`User Bookmarks`."
 msgstr ""
+":guilabel:`Spatial Bookmarks` 항목이나, 북마크를 가져올 하나 이상의 북마크 폴더(사용자 또는 프로젝트) 또는 "
+"하위 폴더(그룹)를 오른쪽 클릭한 다음, |sharingImport| :guilabel:`Import Spatial Bookmarks` "
+"를 선택하십시오. :guilabel:`Spatial Bookmarks` 항목을 오른쪽 클릭했을 경우, :guilabel:`User "
+"Bookmarks` 로 북마크를 추가합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:856
 msgid "**Edit bookmark**"
-msgstr ""
+msgstr "**북마크 편집**"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:857
 msgid ""
 "You can change a bookmark by changing the values in the table. You can edit "
 "the name, the group, the extent and if it is stored in the project or not."
 msgstr ""
+"테이블에 있는 값을 변경해서 북마크를 수정할 수 있습니다. 사용자가 명칭, 그룹, 범위 및 프로젝트에 저장됐는지 여부를 편집할 수 "
+"있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:860
 msgid ""
@@ -1869,18 +1986,21 @@ msgid ""
 "redefine every aspect of the bookmark as if you were creating it for the "
 "first time."
 msgstr ""
+"원하는 북마크를 오른쪽 클릭하고 :guilabel:`Edit Spatial Bookmark...` 를 선택합니다. "
+":guilabel:`Bookmark Editor` 가 열려, 마치 사용자가 북마크를 처음으로 생성하는 것처럼 해당 북마크의 모든 속성을 "
+"재정의할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:865
 msgid ""
 "You can also drag and drop the bookmark between folders (user and project) "
 "and subfolders (groups)."
-msgstr ""
+msgstr "폴더(사용자 또는 프로젝트) 또는 하위 폴더(그룹)로 북마크를 드래그&드롭할 수도 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:868
 msgid ""
 "You can also zoom to bookmarks by typing the bookmark name in the "
 ":ref:`locator <label_statusbar>`."
-msgstr ""
+msgstr ":ref:`위치 탐색란 <label_statusbar>` 에 북마크 명칭을 입력해서 북마크로 확대/축소할 수도 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:875
 msgid "Decorations"
@@ -1892,6 +2012,8 @@ msgid ""
 "Scale Bar and Layout Extents. They are used to 'decorate' the map by adding "
 "cartographic elements."
 msgstr ""
+"지도 장식은 그리드, 제목 라벨, 저작권 라벨, 이미지, 방위표, 축척 막대 및 조판 범위를 포함하며, 지도 제작 요소를 추가해 맵을 "
+"‘장식’하는 데 쓰입니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:884
 msgid "Grid"
@@ -1901,13 +2023,14 @@ msgstr "그리드"
 msgid ""
 "|addGrid| :guilabel:`Grid` allows you to add a coordinate grid and "
 "coordinate annotations to the map canvas."
-msgstr ""
+msgstr "|addGrid| :guilabel:`Grid` 를 통해 맵 캔버스에 좌표 격자 및 좌표 주석을 추가할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:889
 msgid ""
 "Select menu option :menuselection:`View --> Decorations --> Grid...` to open"
 " the dialog."
 msgstr ""
+":menuselection:`View --> Decorations --> Grid...` 메뉴 옵션을 선택해서 대화창을 여십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:896
 msgid "The Grid Dialog"
@@ -1918,77 +2041,98 @@ msgid ""
 "Tick |checkbox| :guilabel:`Enable grid` and set grid definitions according "
 "to the layers loaded in the map canvas:"
 msgstr ""
+"|checkbox| :guilabel:`Enable grid` 체크박스를 체크해서 활성화한 다음 맵 캔버스에 불러온 레이어에 맞춰 그리드"
+" 정의를 설정하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:901
 msgid ""
 "The :guilabel:`Grid type`: it can be :guilabel:`Line` or :guilabel:`Marker`"
 msgstr ""
+":guilabel:`Grid type`: :guilabel:`Line` 또는 :guilabel:`Marker` 가운데 하나로 설정할 수 "
+"있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:902
 msgid ""
 "The associated :ref:`Line symbol <vector_line_symbols>` or :ref:`marker "
 "symbol <vector_marker_symbols>` used to represent the grid marks"
 msgstr ""
+"그리드를 표시하는 데 관련 :ref:`라인 심볼 <vector_line_symbols>` 또는 :ref:`마커 심볼 "
+"<vector_marker_symbols>` 을 사용합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:904
 msgid ""
 "The :guilabel:`Interval X` and :guilabel:`Interval Y` between the grid "
 "marks, in map units"
 msgstr ""
+":guilabel:`Interval X` 와 :guilabel:`Interval Y` : 그리드 표시 사이의 X 방향 간격과 Y 방향 "
+"간격을 맵 단위로 설정합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:906
 msgid ""
 "An :guilabel:`Offset X` and :guilabel:`Offset Y` distance of the grid marks "
 "from the bottom left corner of the map canvas, in map units"
 msgstr ""
+":guilabel:`Offset X` 와 :guilabel:`Offset Y` : 맵 캔버스의 좌하단에서 그리드 표시까지의 X방향, Y "
+"방향 거리를 맵 단위로 설정합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:908
 msgid "The interval and offset parameters can be set based on the:"
-msgstr ""
+msgstr "다음에 기반해서 간격 및 오프셋 파라미터를 설정할 수 있습니다:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:910
 msgid ""
 ":guilabel:`Canvas Extents`: generates a grid with an interval that is "
 "approximatively 1/5 of the canvas width"
-msgstr ""
+msgstr ":guilabel:`Canvas Extents`: 캔버스 범위의 약 1/5 간격으로 그리드를 생성합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:912
 msgid ":guilabel:`Active Raster Layer` resolution"
-msgstr ""
+msgstr ":guilabel:`Active Raster Layer` : 가시 래스터 레이어의 해상도를 기반으로 그리드를 생성합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:913
 msgid ""
 "Tick |checkbox| :guilabel:`Draw annotations` to display the coordinates of "
 "the grid marks and set:"
 msgstr ""
+"|checkbox| :guilabel:`Draw annotations` 옵션을 체크하면 그리드 표시의 좌표를 보이게 하고 다음을 설정할 "
+"수 있습니다:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:916
 msgid ""
 "The :guilabel:`Annotation direction`, ie how the labels would be placed "
 "relative to their grid line. It can be:"
 msgstr ""
+":guilabel:`Annotation direction` : 주석의 방향, 즉 그리드 선을 기준으로 라벨을 어떻게 배치할지 다음 가운데"
+" 하나를 선택합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:919
 msgid ":guilabel:`Horizontal` or :guilabel:`Vertical` for all the labels"
 msgstr ""
+":guilabel:`Horizontal` 또는 :guilabel:`Vertical` : 모든 라벨을 그리드 선에 대해 수평 또는 수직으로"
+" 배치합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:920
 msgid ""
 ":guilabel:`Horizontal and Vertical`, ie each label is parallel to the grid "
 "mark it refers to"
 msgstr ""
+":guilabel:`Horizontal and Vertical` : 각 라벨을 각 라벨이 참조하는 그리드 표시에 평행하게 배치합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:922
 msgid ""
 ":guilabel:`Boundary direction`, ie each label follows the canvas boundary, "
 "and is perpendicular to the grid mark it refers to"
 msgstr ""
+":guilabel:`Boundary direction` : 각 라벨을 캔버스 경계(boundary)를 따라, 각 라벨이 참조하는 그리드 "
+"표시에 수직으로 배치합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:924
 msgid ""
 "The :guilabel:`Annotation font` using the OS :ref:`font selector widget "
 "<font_selector>`"
 msgstr ""
+":guilabel:`Annotation font`: OS의 :ref:`글꼴 선택기 위젯 <font_selector>` 을 통해 주석의 "
+"글꼴을 선택합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:926
 msgid ""
@@ -1996,10 +2140,12 @@ msgid ""
 "canvas limits. Convenient when exporting the map canvas eg to an image "
 "format or PDF, and avoid annotations to be on the \"paper\" limits."
 msgstr ""
+":guilabel:`Distance to map frame` : 주석과 맵 캔버스 경계 사이의 여백을 설정합니다. 맵 캔버스를 예를 들어"
+" 이미지 포맷이나 PDF로 내보내면서 주석이 \"용지\" 한계에 걸리지 않도록 하는 데 유용합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:932
 msgid "The :guilabel:`Coordinate precision`"
-msgstr ""
+msgstr ":guilabel:`Coordinate precision` : 좌표 수치의 정밀도를 설정합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:934
 #: ../../docs/user_manual/introduction/general_tools.rst:973
@@ -2009,40 +2155,46 @@ msgid ""
 "Click :guilabel:`Apply` to verify that it looks as expected or "
 ":guilabel:`OK` if you're satisfied."
 msgstr ""
+"기대한대로 모양이 나오는지 확인하려면 :guilabel:`Apply` 를, 또는 사용자가 만족한다면 :guilabel:`OK` 를 "
+"클릭하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:941
 msgid "Title Label"
-msgstr ""
+msgstr "제목 라벨"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:943
 msgid ""
 "|titleLabel| :guilabel:`Title Label` allows you to decorate your map with a "
 "**Title**."
-msgstr ""
+msgstr "|titleLabel| :guilabel:`Title Label` 도구는 사용자 맵에 **제목**을 장식할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:945
 msgid "To add a Title Label decoration:"
-msgstr ""
+msgstr "제목 라벨 장식을 추가하려면:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:947
 msgid ""
 "Select menu option :menuselection:`View --> Decorations --> Title Label...` "
 "to open the dialog."
 msgstr ""
+":menuselection:`View --> Decorations --> Title Label...` 메뉴 옵션을 선택해서 대화창을 "
+"여십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:955
 msgid "The Title Decoration Dialog"
-msgstr ""
+msgstr "제목 장식 대화창"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:957
 msgid "Make sure |checkbox| :guilabel:`Enable Title Label` is checked"
-msgstr ""
+msgstr "|checkbox| :guilabel:`Enable Title Label` 체크박스가 체크돼 있는지 확인하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:958
 msgid ""
 "Enter the title text you want to place on the map. You can make it dynamic "
 "using the :guilabel:`Insert an Expression` button."
 msgstr ""
+"맵 상에 배치하려 하는 제목 텍스트를 입력하십시오. :guilabel:`Insert an Expression` 버튼을 사용하면 동적 "
+"텍스트를 만들 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:960
 #: ../../docs/user_manual/introduction/general_tools.rst:1000
@@ -2052,12 +2204,17 @@ msgid ""
 "<text_format>` options. Quickly set the font color and opacity by clicking "
 "the black arrow to the right of the font combo box."
 msgstr ""
+":guilabel:`Font` 에서 QGIS의 ref:`텍스트 서식 설정 <text_format>` 전체 옵션을 사용할 수 있는 "
+"ref:`글꼴 선택기 위젯 <font_selector>`을 통해 라벨 용 글꼴을 선택하십시오. 글꼴 콤보박스 오른쪽에 있는 검은 화살표를"
+" 클릭하면 글꼴 색상 및 투명도를 빠르게 설정할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:964
 msgid ""
 "Select the :ref:`color <color-selector>` to apply to the title's "
 ":guilabel:`Background bar color`."
 msgstr ""
+":guilabel:`Background bar color` 에서 제목의 배경 막대에 적용할 :ref:`색상 <color-"
+"selector>` 을 선택하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:966
 msgid ""
@@ -2066,6 +2223,10 @@ msgid ""
 "Right`, :guilabel:`Bottom left`, :guilabel:`Bottom Center` and "
 ":guilabel:`Bottom Right`."
 msgstr ""
+":guilabel:`Placement` 에서 캔버스에 라벨을 어떻게 배치할지 선택하십시오. :guilabel:`Top left`, "
+":guilabel:`Top Center` (기본값), :guilabel:`Top Right`, :guilabel:`Bottom "
+"left`, :guilabel:`Bottom Center` 및 :guilabel:`Bottom Right` 가운데 하나를 선택할 수 "
+"있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:970
 #: ../../docs/user_manual/introduction/general_tools.rst:1008
@@ -2075,40 +2236,48 @@ msgid ""
 "**Pixels** or set as a **Percentage** of the width or height of the map "
 "canvas."
 msgstr ""
+":guilabel:`Margin from Edge` 에서 수평 그리고/또는 수직 경계 여백을 설정해서 항목의 배치를 미세 조정하십시오. "
+"**밀리미터** 또는 **픽셀** 값으로 설정할 수도 있고, 맵 캔버스의 너비 또는 높이의 **백분율** 값으로 설정할 수도 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:980
 msgid "Copyright Label"
-msgstr ""
+msgstr "저작권 라벨"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:982
 msgid ""
 "|copyrightLabel| :guilabel:`Copyright Label` can be used to decorate your "
 "map with a **Copyright** label."
 msgstr ""
+"|copyrightLabel| :guilabel:`Copyright Label` 을 통해 사용자 맵에 **저작권** 라벨을 장식할 수 "
+"있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:985
 msgid "To add this decoration:"
-msgstr ""
+msgstr "이 장식을 추가하려면:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:987
 msgid ""
 "Select menu option :menuselection:`View --> Decorations --> Copyright "
 "Label...` to open the dialog."
 msgstr ""
+":menuselection:`View --> Decorations --> Copyright Label...` 메뉴 옵션을 선택해서 "
+"대화창을 여십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:995
 msgid "The Copyright Decoration Dialog"
-msgstr ""
+msgstr "저작권 장식 대화창"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:997
 msgid "Make sure |checkbox| :guilabel:`Enable Copyright Label` is checked"
-msgstr ""
+msgstr "|checkbox| :guilabel:`Enable Copyright Label` 체크박스가 체크돼 있는지 확인하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:998
 msgid ""
 "Enter the copyright text you want to place on the map. You can make it "
 "dynamic using the :guilabel:`Insert an Expression` button."
 msgstr ""
+"맵 상에 배치하려 하는 저작권 텍스트를 입력하십시오. :guilabel:`Insert an Expression` 버튼을 사용하면 동적 "
+"텍스트를 만들 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1004
 msgid ""
@@ -2117,40 +2286,48 @@ msgid ""
 ":guilabel:`Bottom left`, :guilabel:`Bottom Center`, and :guilabel:`Bottom "
 "Right` (default for Copyright decoration)"
 msgstr ""
+":guilabel:`Placement` 에서 캔버스에 라벨을 어떻게 배치할지 선택하십시오. :guilabel:`Top left`, "
+":guilabel:`Top Center`, :guilabel:`Top Right`, :guilabel:`Bottom left`, "
+":guilabel:`Bottom Center` 및 :guilabel:`Bottom Right` (저작권 장식의 기본값) 가운데 하나를 "
+"선택할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1018
 msgid "Image Decoration"
-msgstr ""
+msgstr "이미지 장식"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1020
 msgid ""
 "|addImage| :guilabel:`Image` allows you to add an image (logo, legend, ..) "
 "on the map canvas."
 msgstr ""
+"|addImage| :guilabel:`Image` 를 통해 맵 캔버스 위에 이미지(로고, 범례 등등)를 추가할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1022
 msgid "To add an image:"
-msgstr ""
+msgstr "이미지를 추가하려면:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1024
 msgid ""
 "Select menu option :menuselection:`View --> Decorations --> Image...` to "
 "open the dialog."
 msgstr ""
+":menuselection:`View --> Decorations --> Image...` 메뉴 옵션을 선택해서 대화창을 여십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1032
 msgid "The Image Decoration Dialog"
-msgstr ""
+msgstr "이미지 장식 대화창"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1034
 msgid "Make sure |checkbox| :guilabel:`Enable Image` is checked"
-msgstr ""
+msgstr "|checkbox| :guilabel:`Enable Image` 체크박스가 체크돼 있는지 확인하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1035
 msgid ""
 "Select a bitmap (e.g. png or jpg) or SVG image using the :guilabel:`...` "
 ":sup:`Browse` button"
 msgstr ""
+":guilabel:`...` :sup:`Browse` 버튼을 사용해서 (png 또는 jpg 같은) 비트맵 이미지 또는 SVG 이미지를 "
+"선택하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1037
 msgid ""
@@ -2158,12 +2335,16 @@ msgid ""
 ":guilabel:`Fill` or :guilabel:`Stroke` (outline) color. For bitmap images, "
 "the color settings are disabled."
 msgstr ""
+"SVG를 활성화시키는 파라미터를 선택했다면 :guilabel:`Fill` 또는 :guilabel:`Stroke` (외곽선) 색상도 설정할"
+" 수 있습니다. 비트맵 이미지의 경우 색상 설정은 비활성화됩니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1040
 msgid ""
 "Set a :guilabel:`Size` of the image in mm. The width of selected image is "
 "used to resize it to given :guilabel:`Size`."
 msgstr ""
+":guilabel:`Size` 에서 이미지의 크기를 밀리미터 단위로 설정하십시오. 선택한 이미지의 너비를 설정한 "
+":guilabel:`Size` 로 맞춰 크기를 재조정합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1042
 msgid ""
@@ -2171,6 +2352,8 @@ msgid ""
 ":guilabel:`Placement` combo box. The default position is :guilabel:`Top "
 "Left`."
 msgstr ""
+":guilabel:`Placement` 콤보박스를 통해 맵 상에 이미지를 어떻게 배치할지 선택하십시오. 기본 위치는 "
+":guilabel:`Top Left` 입니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1044
 msgid ""
@@ -2178,6 +2361,9 @@ msgid ""
 "Edge`. These values can be set in **Millimeters**, **Pixels** or as a "
 "**Percentage** of the width or height of the map canvas."
 msgstr ""
+":guilabel:`Margin from (Canvas) Edge` 에서 :guilabel:`Horizontal` 및 "
+":guilabel:`Vertical` 경계 여백을 설정하십시오. **밀리미터** 또는 **픽셀** 값으로 설정할 수도 있고, 맵 캔버스의"
+" 너비 또는 높이의 **백분율** 값으로 설정할 수도 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1047
 #: ../../docs/user_manual/introduction/general_tools.rst:1078
@@ -2186,6 +2372,8 @@ msgid ""
 "Click :guilabel:`Apply` to verify that it looks as expected and "
 ":guilabel:`OK` if you're satisfied."
 msgstr ""
+"기대한대로 모양이 나오는지 확인하려면 :guilabel:`Apply` 를, 사용자가 만족한다면 :guilabel:`OK` 를 "
+"클릭하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1054
 msgid "North Arrow"
@@ -2195,17 +2383,19 @@ msgstr "방위표"
 msgid ""
 "|northArrow| :guilabel:`North Arrow` allows you to add a north arrow on the "
 "map canvas."
-msgstr ""
+msgstr "|addImage| :guilabel:`North Arrow` 를 통해 맵 캔버스 위에 방위표를 추가할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1058
 msgid "To add a north arrow:"
-msgstr ""
+msgstr "방위표를 추가하려면:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1060
 msgid ""
 "Select menu option :menuselection:`View --> Decorations --> North Arrow...` "
 "to open the dialog."
 msgstr ""
+":menuselection:`View --> Decorations --> North Arrow...` 메뉴 옵션을 선택해서 대화창을 "
+"여십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1068
 msgid "The North Arrow Dialog"
@@ -2213,21 +2403,21 @@ msgstr "방위표 대화창"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1070
 msgid "Make sure |checkbox| :guilabel:`Enable north arrow` is checked"
-msgstr ""
+msgstr "|checkbox| :guilabel:`Enable North Arrow` 체크박스가 체크돼 있는지 확인하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1071
 msgid "Optionally change the color and size, or choose a custom SVG"
-msgstr ""
+msgstr "색상 및 크기 옵션을 변경하거나, 사용자 지정 SVG를 선택하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1072
 msgid ""
 "Optionally change the angle or choose **Automatic** to let QGIS determine "
 "the direction"
-msgstr ""
+msgstr "각도 옵션을 변경하거나, **자동 선택(Automatic)**을 선택해서 QGIS가 방향을 결정하도록 하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1074
 msgid "Optionally choose the placement from the Placement combo box"
-msgstr ""
+msgstr ":guilabel:`Placement` 콤보박스에서 방위표의 배치를 선택할 수도 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1075
 msgid ""
@@ -2236,6 +2426,9 @@ msgid ""
 " or **Pixels** or set as a **Percentage** of the width or height of the map "
 "canvas."
 msgstr ""
+":guilabel:`Margin from (Canvas) Edge` 에서 수평 그리고/또는 수직 경계 여백을 설정해서 항목의 배치를 미세"
+" 조정하십시오. **밀리미터** 또는 **픽셀** 값으로 설정할 수도 있고, 맵 캔버스의 너비 또는 높이의 **백분율** 값으로 설정할 "
+"수도 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1085
 msgid "Scale Bar"
@@ -2247,6 +2440,8 @@ msgid ""
 "You can control the style and placement, as well as the labelling of the "
 "bar."
 msgstr ""
+"|scaleBar| :guilabel:`Scale Bar` 도구는 맵 캔버스에 단순한 축척 막대를 추가합니다. 사용자가 스타일과 위치는 "
+"물론 막대의 라벨도 제어할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1090
 msgid ""
@@ -2255,6 +2450,9 @@ msgid ""
 " bar in feet. Likewise, if you are using decimal degrees, you can't create a"
 " scale bar to display distance in meters."
 msgstr ""
+"QGIS에서는 축척을 사용자 맵 프레임과 동일한 단위로만 표시할 수 있습니다. 따라서 사용자 프로젝트의 좌표계가 미터 단위라면, 축척 "
+"막대를 피트 단위로 생성할 수 없습니다. 마찬가지로, 사용자가 십진수도(decimal degrees)를 사용하고 있다면, 미터 단위로 "
+"거리를 표시하는 축척 막대를 생성할 수 없습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1095
 msgid "To add a scale bar:"
@@ -2265,6 +2463,8 @@ msgid ""
 "Select menu option :menuselection:`View --> Decorations --> Scale Bar...` to"
 " open the dialog"
 msgstr ""
+":menuselection:`View --> Decorations --> Scale Bar...` 메뉴 옵션을 선택해서 대화창을 "
+"여십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1105
 msgid "The Scale Bar Dialog"
@@ -2272,12 +2472,13 @@ msgstr "축척 막대 대화창"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1107
 msgid "Make sure |checkbox| :guilabel:`Enable scale bar` is checked"
-msgstr ""
+msgstr "|checkbox| :guilabel:`Enable Scale Bar` 체크박스가 체크돼 있는지 확인하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1108
 msgid ""
 "Choose a style from the :guilabel:`Scale bar style` |selectString| combo box"
 msgstr ""
+":guilabel:`Scale bar style` |selectString| 콤보박스를 이용해서 축척 막대의 스타일을 선택하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1109
 msgid ""
@@ -2286,27 +2487,31 @@ msgid ""
 "and outline can be made opaque by clicking on the down arrow to the right of"
 " the color input."
 msgstr ""
+":guilabel:`Color of bar` |selectColor| 에서 채우기 색상(기본값: 검정색) 및 외곽선 색상(기본값: "
+"흰색)을 선택하십시오. 색상 입력 오른쪽에 있는 아래쪽 화살표를 클릭하면 축척 막대의 채우기 및 외곽선을 불투명하게 만들 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1113
 msgid ""
 "Select the font for the scale bar from the :guilabel:`Font of bar` "
 "|selectString| combo box"
-msgstr ""
+msgstr ":guilabel:`Font of bar` |selectString| 콤보박스에서 축척 막대 용 글꼴을 선택하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1114
 msgid "Set the :guilabel:`Size of bar` |selectNumber|"
-msgstr ""
+msgstr ":guilabel:`Size of bar` |selectNumber| 에서 축척 막대의 크기를 설정하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1115
 msgid ""
 "Optionally check |checkbox| :guilabel:`Automatically snap to round number on"
 " resize` to display easy-to-read values"
 msgstr ""
+"|checkbox| :guilabel:`Automatically snap to round number on resize` 옵션을 체크하면"
+" 읽기 쉬운 값을 표시하도록 할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1117
 msgid ""
 "Choose the placement from the :guilabel:`Placement` |selectString| combo box"
-msgstr ""
+msgstr ":guilabel:`Placement` |selectString| 콤보박스에서 축척 막대의 배치를 선택하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1118
 msgid ""
@@ -2315,10 +2520,13 @@ msgid ""
 " or **Pixels** or set as a **Percentage** of the width or height of the map "
 "canvas."
 msgstr ""
+":guilabel:`Margin from (Canvas) Edge` 에서 수평 그리고/또는 수직 경계 여백을 설정해서 항목의 배치를 미세"
+" 조정하십시오. **밀리미터** 또는 **픽셀** 값으로 설정할 수도 있고, 맵 캔버스의 너비 또는 높이의 **백분율** 값으로 설정할 "
+"수도 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1127
 msgid "Layout Extents"
-msgstr ""
+msgstr "조판 범위"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1129
 msgid ""
@@ -2330,6 +2538,10 @@ msgid ""
 "decoration is useful when you are tweaking the positioning of map elements "
 "such as labels, and need to know the actual visible region of print layouts."
 msgstr ""
+"|addMap| :guilabel:`Layout Extents` 도구는 캔버스에 인쇄 조판기(들)에 있는 :ref:`맵 항목(들) "
+"<layout_map_item>` 의 범위를 추가합니다. 이 도구를 활성화하면 모든 인쇄 조판기에 있는 모든 맵 항목의 범위를 인쇄 "
+"조판기 및 맵 항목의 명칭 라벨이 붙은 점선으로 된 경계선으로 표시합니다. 표시된 조판 범위의 스타일과 라벨을 제어할 수 있습니다. "
+"사용자가 라벨 같은 맵 요소의 위치를 조정하는 도중 인쇄 조판기의 실제 가시화 영역을 알아야 하는 경우 이 장식이 유용합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1141
 msgid ""
@@ -2337,32 +2549,36 @@ msgid ""
 "layouts. The print layout named 'Sights' contains two map items, while the "
 "other print layout contains one map item."
 msgstr ""
+"QGIS 프로젝트에 인쇄 조판기 2개의 조판 범위가 표시돼 있는 예시. 'Sights'라는 인쇄 조판기는 맵 항목 2개를 담고 있는 "
+"반면, 다른 인쇄 조판기는 맵 항목 1개를 담고 있다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1145
 msgid "To add layout extent(s):"
-msgstr ""
+msgstr "조판 범위(들)를 추가하려면:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1147
 msgid ""
 "Select :menuselection:`View --> Decorations --> Layout Extents` to open the "
 "dialog"
 msgstr ""
+":menuselection:`View --> Decorations --> Layout Extents` 메뉴 옵션을 선택해서 대화창을 "
+"여십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1155
 msgid "The Layout Extents Dialog"
-msgstr ""
+msgstr "조판 범위 대화창"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1157
 msgid "Make sure |checkbox| :guilabel:`Show layout extents` is checked."
-msgstr ""
+msgstr "|checkbox| :guilabel:`Show layout extents` 체크박스가 체크돼 있는지 확인하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1158
 msgid "Optionally change the symbol and labeling of the extents."
-msgstr ""
+msgstr "범위의 심볼 및 라벨을 변경할 수 있는 옵션이 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1165
 msgid "**Decorations Settings**"
-msgstr ""
+msgstr "**장식 설정**"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1167
 msgid ""
@@ -2370,6 +2586,8 @@ msgid ""
 "Arrow, Scale Bar, Copyright and Layout Extents will be saved in the project "
 "and restored the next time you load the project."
 msgstr ""
+"사용자가 QGIS 프로젝트 파일을 저장할 때, 프로젝트에 그리드, 방위표, 축척 막대, 저작권 및 조판 범위의 모든 변경 사항이 저장되어"
+" 다음에 프로젝트를 불러올 때 복원될 것입니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1178
 msgid "Annotation Tools"
@@ -2381,20 +2599,23 @@ msgid ""
 "balloon. This information can be of different types and annotations are "
 "added using the corresponding tools in the :guilabel:`Attributes Toolbar`:"
 msgstr ""
+"주석이란 맵 캔버스에 추가된 정보로 말풍선 안에 표시됩니다. 서로 다른 유형의 정보를 표시할 수 있으며, "
+":guilabel:`Attributes Toolbar` 에 있는 서로 다른 유형에 대응하는 도구를 사용하면 해당 유형의 주석을 "
+"추가합니다:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1184
 msgid "|textAnnotation| :sup:`Text Annotation` for custom formatted text"
-msgstr ""
+msgstr "|textAnnotation| :sup:`Text Annotation`: 사용자 지정 서식 텍스트"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1185
 msgid ""
 "|htmlAnnotation| :sup:`HTML Annotation` to place the content of an "
 ":file:`html` file"
-msgstr ""
+msgstr "|htmlAnnotation| :sup:`HTML Annotation`: :file:`html` 파일의 내용을 배치"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1187
 msgid "|svgAnnotation| :sup:`SVG Annotation` to add an :file:`SVG` symbol"
-msgstr ""
+msgstr "|svgAnnotation| :sup:`SVG Annotation`: :file:`SVG` 심볼을 추가"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1188
 msgid ""
@@ -2405,10 +2626,15 @@ msgid ""
 " video https://www.youtube.com/watch?v=0pDBuSbQ02o&feature=youtu.be&t=2m25s "
 "from Tim Sutton for more information."
 msgstr ""
+"|formAnnotation| :sup:`Form Annotation`: 사용자 지정 :file:`ui` 파일에 있는 벡터 레이어의 "
+"속성을 표시하는 데 유용합니다. (figure_custom_annotation_ 그림을 참조하세요.) 이는 :ref:`사용자 지정 속성 "
+"양식 <provide_ui_file>` 과 비슷하지만, 주석 항목으로 표시된다는 점이 다릅니다. 더 자세한 정보를 알고 싶다면 팀 서튼이"
+" 게시한 https://www.youtube.com/watch?v=0pDBuSbQ02o&feature=youtu.be&t=2m25s "
+"영상도 참조하세요."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1200
 msgid "Customized QT Designer annotation form"
-msgstr ""
+msgstr "사용자 지정 QT 디자이너 주석 양식"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1207
 msgid ""
@@ -2417,6 +2643,8 @@ msgid ""
 "with various options. This dialog is almost the same for all the annotation "
 "types:"
 msgstr ""
+"주석을 추가하려면, 대응하는 도구를 선택한 다음 맵 캔버스를 클릭하십시오. 비어 있는 말풍선이 추가됩니다. 이 말풍선을 더블 클릭하면 "
+"여러 옵션을 담은 대화창이 열립니다. 모든 주석 유형에 대해 이 대화창은 거의 동일합니다:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1211
 msgid ""
@@ -2425,6 +2653,9 @@ msgid ""
 " annotation, you can enter your message in a text box and set its rendering "
 "with the normal font tools."
 msgstr ""
+"주석 유형에 따라 :file:`html`, :file:`svg` 또는 :file:`ui` 파일을 가리키는 경로를 입력하는 파일 선택기가 "
+"맨 위에 있습니다. 텍스트 주석의 경우, 사용자가 텍스트 란에 직접 메시지를 입력하고 일반 글꼴 도구로 텍스트의 렌더링 방법을 설정할 수"
+" 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1215
 msgid ""
@@ -2432,12 +2663,14 @@ msgid ""
 "placement is based on a screen position (instead of the map), meaning that "
 "it's always shown regardless the map canvas extent."
 msgstr ""
+"|checkbox| :guilabel:`Fixed map position`: 이 옵션을 체크 해제하면, 말풍선을 (맵 위치 대신) 스크린"
+" 위치를 기반으로 배치합니다. 즉 맵 캔버스 범위와 상관없이 언제나 말풍선을 표시합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1218
 msgid ""
 ":guilabel:`Linked layer`: associates the annotation with a map layer, making"
 " it visible only when that layer is visible."
-msgstr ""
+msgstr ":guilabel:`Linked layer`: 주석을 맵 레이어와 연결해서 해당 레이어가 가시화될 때만 주석을 가시화합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1220
 msgid ""
@@ -2445,17 +2678,22 @@ msgid ""
 "the symbol to display at the balloon anchor position (shown only when "
 ":guilabel:`Fixed map position` is checked)."
 msgstr ""
+":guilabel:`Map marker`: :ref:`QGIS 심볼 <symbol-selector>` 을 사용해서 말풍선 고정 "
+"위치(anchor position)에 표시될 심볼을 설정합니다. (:guilabel:`Fixed map position` 옵션을 체크한 "
+"경우에만 심볼을 표시합니다.)"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1223
 msgid ""
 ":guilabel:`Frame style`: sets the frame background color, transparency, "
 "stroke color or width of the balloon using QGIS symbols."
 msgstr ""
+":guilabel:`Frame style`: QGIS 심볼을 통해 주석 프레임의 배경색, 투명도, 획 색상 또는 말풍선의 너비를 "
+"설정합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1225
 msgid ""
 ":guilabel:`Contents margins`: sets interior margins of the annotation frame."
-msgstr ""
+msgstr ":guilabel:`Contents margins`: 주석 프레임의 내부 여백을 설정합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1232
 msgid "Annotation text dialog"
@@ -2468,6 +2706,9 @@ msgid ""
 " the balloon. The |annotation| :sup:`Move Annotation` tool also allows you "
 "to move the balloon on the map canvas."
 msgstr ""
+"주석 도구를 활성화하면 주석을 선택할 수 있습니다. 선택한 주석의 맵 위치를 (맵 마커를 드래그해서) 옮기거나, 말풍선만 이동시킬 수도 "
+"있습니다. |annotation| :sup:`Move Annotation` 도구를 사용해서도 맵 캔버스 상에서 말풍선을 이동할 수 "
+"있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1239
 msgid ""
@@ -2475,6 +2716,8 @@ msgid ""
 ":kbd:`Backspace` button, or double-click it and press the :guilabel:`Delete`"
 " button in the properties dialog."
 msgstr ""
+"주석을 삭제하려면, 주석을 선택한 다음 :kbd:`Del` 또는 :kbd:`Backspace` 키를 누르거나 또는 주석을 더블 클릭한 "
+"다음 속성 대화창에 있는 :guilabel:`Delete` 버튼을 클릭하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1243
 msgid ""
@@ -2482,25 +2725,29 @@ msgid ""
 "annotation, text annotation, form annotation) is active, the visibility "
 "states of the items are inverted."
 msgstr ""
+":guilabel:`Annotation` 도구가 활성화됐을 때 (주석 이동, 텍스트 주석, 양식 주석 등) :kbd:`Ctrl+T` 를 "
+"누르면 말풍선의 가시성 상태가 반전됩니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1247
 msgid "**Layout the map with annotations**"
-msgstr ""
+msgstr "**주석으로 맵을 조판하기**"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1249
 msgid ""
 "You can print or export annotations with your map to various formats using:"
-msgstr ""
+msgstr "다음 도구를 사용해서 사용자 맵을 주석과 함께 인쇄하거나 여러 포맷으로 내보낼 수 있습니다:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1251
 msgid "map canvas export tools available in the :menuselection:`Project` menu"
-msgstr ""
+msgstr ":menuselection:`Project` 메뉴에서 사용할 수 있는 맵 캔버스 내보내기 도구들"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1252
 msgid ""
 ":ref:`print layout <create-output>`, in which case you need to check "
 ":guilabel:`Draw map canvas items` in the corresponding map item properties"
 msgstr ""
+":ref:`인쇄 조판기 <create-output>`를 이용하는 경우, 내보내고자 하는 맵 항목 속성에서 :guilabel:`Draw "
+"map canvas items` 옵션을 활성화해야 합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1261
 msgid "Measuring"
@@ -2516,21 +2763,23 @@ msgstr "QGIS는 도형을 측정하는 네 가지 방법을 제공하고 있습�
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1268
 msgid "interactive measurement tools |measure|"
-msgstr ""
+msgstr "쌍방향 측정 도구인 |measure| 과,"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1269
 msgid "measuring in the |calculateField| :sup:`Field Calculator`"
-msgstr ""
+msgstr "|calculateField| :sup:`Field Calculator` 에서 측정하는 방법,"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1270
 msgid "derived measurements in the :ref:`identify` tool"
-msgstr ""
+msgstr ":ref:`identify` 도구에서 파생된 측정 방법,"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1271
 msgid ""
 "the vector analysis tool: :menuselection:`Vector --> Geometry Tools --> "
 "Export/Add Geometry Columns`"
 msgstr ""
+"그리고 :menuselection:`Vector --> Geometry Tools --> Export/Add Geometry "
+"Columns` 메뉴의 벡터 분석 도구가 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1274
 msgid ""
@@ -2548,6 +2797,9 @@ msgid ""
 "General`. This is true both when geographic and projected coordinate systems"
 " are defined for the project."
 msgstr ""
+"다른 대부분의 GIS 와는 달리, 기본 측정법은 :menuselection:`Project --> Properties... --> "
+"General` 에서 정의한 타원체를 이용합니다. 프로젝트 용으로 지리 좌표계를 정의한 경우, 투영 좌표계를 정의한 경우 둘 다 타원체 "
+"상에서 측정합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1281
 msgid ""
@@ -2557,6 +2809,9 @@ msgid ""
 "General`). However, with a geographic (ie unprojected) CRS defined for the "
 "data and project, area and distance measurement will be ellipsoidal."
 msgstr ""
+"데카르트 수학을 이용해서 투영/평면 면적 또는 거리를 계산하려면, :menuselection:`Project --> "
+"Properties... --> General` 메뉴에서 측정 타원체를 \"None/Planimetric\"으로 설정해야 합니다. 하지만"
+" 데이터 및 프로젝트 용으로 지리(=비투영) 좌표계를 정의했다면, 타원체 상에서 면적 및 거리를 측정할 것입니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1287
 msgid ""
@@ -2566,10 +2821,14 @@ msgid ""
 "Geometry Tools --> Add Geometry Attributes...`. Here, measurement is "
 "planimetric, unless you choose the ellipsoidal measurement."
 msgstr ""
+"그러나 식별 도구 또는 필드 계산기 둘 다 측정 작업 전에 사용자 데이터를 프로젝트 좌표계로 변환하지 않을 겁니다. 측정 전에 좌표계를 "
+"변환하도록 하고 싶다면, :menuselection:`Vector --> Geometry Tools --> Add Geometry "
+"Attributes...` 메뉴의 벡터 분석 도구를 이용해야 합니다. 이때 사용자가 타원체 측정법을 선택한 경우를 제외하면 기본적으로 "
+"평면 상에서 측정하게 됩니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1294
 msgid "Measure length, areas and angles interactively"
-msgstr ""
+msgstr "대화형 길이, 면적 및 각도 측정"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1296
 msgid ""
@@ -2578,6 +2837,10 @@ msgid ""
 "area or |measureAngle| angle. The default unit used in the dialog is the one"
 " set in :menuselection:`Project --> Properties... --> General` menu."
 msgstr ""
+"측정을 시작하려면 :guilabel:`Attributes toolbar` 에 있는 |measure| 아이콘을 클릭하십시오. 아이콘 옆에 "
+"있는 아래쪽 화살표를 누르면 |measure| 길이, |measureArea| 면적, 또는 |measureAngle| 각도 측정 도구로 "
+"번갈아 변경합니다. 측정 대화창은 :menuselection:`Project --> Properties... --> General` "
+"메뉴에서 설정한 기본 단위를 사용합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1302
 msgid "**Configuring the measure tool**"
@@ -2594,6 +2857,11 @@ msgid ""
 ":menuselection:`Project --> Properties... --> General` menu, and by the "
 "selection made in the measurement widget."
 msgstr ""
+"길이 또는 면적 측정 시, 위젯 하단에 있는 :guilabel:`Configuration` 버튼을 클릭하면 "
+":menuselection:`Settings --> Options --> Map Tools` 메뉴와 동일하게 고무줄 색상, 측정 정밀도 "
+"및 단위 습성을 정의할 수 있습니다. 사용자가 선호하는 측정 단위 또는 각도 단위를 선택할 수도 있지만, "
+":menuselection:`Project --> Properties... --> General` 메뉴 그리고 측정 위젯에서 선택한 "
+"옵션이 현재 프로젝트에서 사용자가 선택한 단위를 대체한다는 사실을 유념해야 합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1313
 msgid ""
@@ -2614,6 +2882,9 @@ msgid ""
 "click points on the map. Each segment length, as well as the total, shows up"
 " in the measure window. To stop measuring, click the right mouse button."
 msgstr ""
+"기본값인 |measure| :sup:`Measure Line` 은 지정한 포인트들 사이의 실제 거리를 정의한 타원체에 따라 측정합니다. "
+"이 도구를 선택하면 사용자가 맵 상에 포인트를 클릭할 수 있습니다. 각 선분 길이는 물론 총합 길이도 측정 창에 표시됩니다. 측정을 "
+"중단하려면 오른쪽 클릭하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1330
 msgid ""
@@ -2623,12 +2894,15 @@ msgid ""
 "'Centimeters', 'Millimeters', 'Degrees', 'Map units'). This unit is retained"
 " for the widget until a new project is created or another project is opened."
 msgstr ""
+"측정 도구 사용 중에 총합 길이 옆에 있는 드롭다운 목록에서 대화형으로 측정 단위를 ('미터', '킬로미터', '피트', '야드', "
+"'마일', '해리', '센티미터', '밀리미터', '도', '맵 단위') 변경할 수 있다는 사실을 기억하십시오. 위젯은 새로운 또는 다른"
+" 프로젝트를 열 때까지 이렇게 선택한 단위를 유지합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1336
 msgid ""
 "The :guilabel:`Info` section in the dialog explains how calculations are "
 "made according to the CRS settings available."
-msgstr ""
+msgstr "대화창의 :guilabel:`Info` 부분은 사용할 수 있는 좌표계 설정에 따라 어떻게 계산하는지 설명합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1348
 msgid "Measure Distance"
@@ -2644,6 +2918,10 @@ msgid ""
 "centimeters', 'Square millimeters', 'Square nautical miles', 'Square "
 "degrees', 'Map units')."
 msgstr ""
+"|measureArea| :sup:`Measure Area` 도구로 면적도 측정할 수 있습니다. 측정 창에 누적 면적 크기를 표시합니다."
+" 오른쪽 클릭으로 그리기를 중단합니다. 서로 다른 면적 단위로 ('제곱미터', '제곱킬로미터', '제곱피트', '제곱야드', "
+"'제곱마일', '헥타르', '에이커', '제곱센티미터', '제곱밀리미터', '제곱해리', '제곱도', '맵 단위') 변경할 수 있는 것은"
+" 물론 :guilabel:`Info` 부분도 볼 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1362
 msgid "Measure Area"
@@ -2656,6 +2934,8 @@ msgid ""
 " to measure, then move the cursor to draw the desired angle. The measurement"
 " is displayed in a pop-up dialog."
 msgstr ""
+"|measureAngle| :sup:`Measure Angle` 도구로 각도도 측정할 수 있습니다. 커서가 십자가 형태로 바뀝니다. "
+"사용자가 측정하려는각도의 첫 번째 선분을 그린 다음, 커서를 움직여서 원하는 각도를 그리십시오. 측정값이 팝업 대화창에 표시됩니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1374
 msgid "Measure Angle"
@@ -2663,7 +2943,7 @@ msgstr "각도 측정"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1377
 msgid "Interacting with features"
-msgstr ""
+msgstr "대화형 피처 작업"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1394
 msgid "Selecting features"
@@ -2675,6 +2955,8 @@ msgid ""
 "tools are available in the :menuselection:`Edit --> Select` menu or in the "
 ":guilabel:`Attributes toolbar`."
 msgstr ""
+"QGIS는 맵 캔버스에서 피처를 선택할 수 있는 여러 도구를 제공하고 있습니다. :menuselection:`Edit --> "
+"Select` 메뉴 또는:guilabel:`Attributes toolbar` 에서 선택 도구를 쓸 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1402
 msgid "Selection tools work with the currently active layer."
@@ -2682,13 +2964,13 @@ msgstr "선택 도구는 현재 활성화된 레이어 상에서 동작합니다
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1405
 msgid "Selecting manually on the map canvas"
-msgstr ""
+msgstr "맵 캔버스에서 직접 선택하기"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1407
 msgid ""
 "To select one or more features with the mouse, you can use one of the "
 "following tools:"
-msgstr ""
+msgstr "하나 이상의 피처를 마우스로 선택하려면, 다음 도구들 가운데 하나를 쓸 수 있습니다:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1410
 msgid "|selectRectangle| :sup:`Select Features by area or single click`"
@@ -2712,6 +2994,8 @@ msgid ""
 "selection tools allow you to select feature(s) on the map canvas with a "
 "single click."
 msgstr ""
+"|selectPolygon| :sup:`Select Features by Polygon` 도구를 제외하면, 이 수동 선택 도구들을 통해 "
+"맵 캔버스에서 피처(들)를 클릭 한 번으로 선택할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1419
 msgid ""
@@ -2721,6 +3005,9 @@ msgid ""
 "that contain the clicked point. All the overlapping features from the active"
 " layer are selected."
 msgstr ""
+"중첩된 피처를 선택하기 위해 기존 폴리곤을 쓰려면 |selectPolygon| :sup:`Select Features by "
+"Polygon` 도구를 사용하십시오. 폴리곤을 오른쪽 클릭하면 클릭한 포인트를 담고 있는 모든 폴리곤들의 목록을 보여주는 컨텍스트 메뉴가"
+" 나타납니다. 이 목록에서 원하는 폴리곤을 선택하십시오. 활성화된 레이어에 있는 모든 중첩 피처들이 선택될 것입니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1425
 msgid ""
@@ -2729,6 +3016,9 @@ msgid ""
 "selection, and then click somewhere else accidentally and clear your "
 "selection."
 msgstr ""
+"사용자가 가장 마지막으로 선택했던 피처를 다시 선택하려면 :menuselection:`Edit --> Select --> Reselect"
+" Features` 메뉴를 사용하십시오. 사용자가 고생해서 선택해 놓은 것들을 실수로 다른 곳을 클릭해버리는 바람에 선택 해제됐을 경우 "
+"매우 유용합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1430
 msgid ""
@@ -2736,11 +3026,13 @@ msgid ""
 "holding :kbd:`Shift` or :kbd:`Ctrl` toggles whether a feature is selected "
 "(ie either adds to the current selection or remove from it)."
 msgstr ""
+"|selectRectangle| :guilabel:`Select Feature(s)` 도구 사용 시, :kbd:`Shift` 또는 "
+":kbd:`Ctrl` 키를 누르면 피처를 선택할지 말지를 (예를 들면 현재 선택 집합에 추가할지 아니면 제거할지) 토글할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1434
 msgid ""
 "For the other tools, different behaviors can be performed by holding down:"
-msgstr ""
+msgstr "다른 도구들의 경우, 다음 키를 누르면 서로 다른 습성이 발현됩니다:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1436
 msgid ":kbd:`Shift`: add features to the current selection"
@@ -2754,7 +3046,7 @@ msgstr ":kbd:`Ctrl`: 현재 선택 집합에서 피처를 제거"
 msgid ""
 ":kbd:`Ctrl+Shift`: intersect with current selection, ie only keep "
 "overlapping features from the current selection"
-msgstr ""
+msgstr ":kbd:`Ctrl+Shift`: 현재 선택 집합과 교차, 예를 들어 현재 선택 집합에서 중첩하는 피처들만 유지"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1440
 msgid ""
@@ -2762,6 +3054,8 @@ msgid ""
 "Combined with :kbd:`Shift` or :kbd:`Ctrl` keys, you can add or substract "
 "features to/from the current selection."
 msgstr ""
+":kbd:`Alt`: 선택 형태에 완전히 들어가는 피처들만 선택. :kbd:`Shift` 또는 :kbd:`Ctrl` 키와 조합하면, 현재"
+" 선택 집합에 피처를 추가하거나 제거할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1447
 msgid "Automatic selection"
@@ -2775,12 +3069,17 @@ msgid ""
 "show the same information, so if you select one feature in the attribute "
 "table, it will be selected on the map canvas too):"
 msgstr ""
+":ref:`속성 테이블 <sec_attribute_table>` 에서도 대부분 쓸 수 있는 다음 선택 도구들은 피처의 속성 또는 선택 "
+"상태를 바탕으로 선택 작업을 수행합니다(속성 테이블과 맵 캔버스는 동일한 정보를 표시하기 때문에, 속성 테이블에서 피처 1개를 선택하면 "
+"맵 캔버스에서도 선택될 것이라는 점을 기억하십시오):"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1455
 msgid ""
 "|expressionSelect| :sup:`Select By Expression...` select features using "
 "expression dialog"
 msgstr ""
+"|expressionSelect| :sup:`Select By Expression...` 도구로 표현식 대화창을 이용해서 피처를 선택할 "
+"수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1457
 msgid "|formSelect| :sup:`Select Features By Value...` or press :kbd:`F3`"
@@ -2791,51 +3090,60 @@ msgid ""
 "|deselectAll| :sup:`Deselect Features from All Layers` or press "
 ":kbd:`Ctrl+Shift+A` to deselect all selected features in all layers"
 msgstr ""
+"|deselectAll| :sup:`Deselect Features from All Layers` 도구 또는 "
+":kbd:`Ctrl+Shift+A` 조합 키로 모든 레이어에서 선택한 모든 피처들을 선택 해제할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1460
 msgid ""
 "|selectAll| :sup:`Select All Features` or press :kbd:`Ctrl+A` to select all "
 "features in the current layer"
 msgstr ""
+"|selectAll| :sup:`Select All Features` 도구 또는 :kbd:`Ctrl+A` 조합 키로 현재 레이어에 있는 "
+"모든 피처를 선택할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1462
 msgid ""
 "|invertSelection| :sup:`Invert Feature Selection` to invert the selection in"
 " the current layer"
 msgstr ""
+"|invertSelection| :sup:`Invert Feature Selection` 도구로 현재 레이어의 선택 집합을 반전시킬 수 "
+"있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1466
 msgid ""
 "For example, if you want to find regions that are boroughs from "
 ":file:`regions.shp` of the QGIS sample data, you can:"
 msgstr ""
+"예를 들어 QGIS 예시 데이터의 :file:`regions.shp` 파일에서 구(borough)인 지역을 찾고자 하는 경우:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1469
 msgid ""
 "Use the |expressionSelect| :sup:`Select features using an Expression` icon"
 msgstr ""
+"|expressionSelect| :sup:`Select features using an Expression` 아이콘을 클릭하고"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1470
 msgid "Expand the :guilabel:`Fields and Values` group"
-msgstr ""
+msgstr ":guilabel:`Fields and Values` 그룹을 펼친 다음"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1471
 msgid "Double-click the field that you want to query (\"TYPE_2\")"
-msgstr ""
+msgstr "쿼리하려는 필드를 (\"TYPE_2\") 더블 클릭하고"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1472
 msgid "Click :guilabel:`All Unique` in the panel that shows up on the right"
-msgstr ""
+msgstr "오른쪽에 나타나는 패널에 있는 :guilabel:`All Unique` 버튼을 클릭하면"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1473
 msgid ""
 "From the list, double-click 'Borough'. In the :guilabel:`Expression` editor "
 "field, write the following query:"
 msgstr ""
+"나타나는 목록에서 'Borough'를 더블 클릭하고 :guilabel:`Expression` 편집기 필드에 다음 쿼리를 입력하십시오:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1481
 msgid "Click :guilabel:`Select Features`"
-msgstr ""
+msgstr ":guilabel:`Select Features` 를 클릭합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1483
 msgid ""
@@ -2844,6 +3152,9 @@ msgid ""
 "that you have used before. The dialog remembers the last 20 expressions "
 "used. See :ref:`vector_expressions` for more information and examples."
 msgstr ""
+"표현식 작성기 대화창에서, :menuselection:`Function list --> Recent (Selection)` 메뉴를 "
+"이용해서 이전에 사용했던 표현식을선택할 수도 있습니다. 이 대화창은 최근 사용한 표현식을 20개까지 저장하고 있습니다. 더 자세한 정보 "
+"및 몇몇 예시를 살펴보려면 :ref:`vector_expressions` 을 참조하세요."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1489
 msgid "**Save your selection into a new file**"
@@ -2855,6 +3166,9 @@ msgid ""
 " **New Vector Layer** using :menuselection:`Edit --> Copy Features` and "
 ":menuselection:`Edit --> Paste Features as` in the desired format."
 msgstr ""
+":menuselection:`Edit --> Copy Features` 와 :menuselection:`Edit --> Paste "
+"Features as` 메뉴를 통해 선택한 피처를 각각 원하는 유형의 **New Temporary Scratch Layer** 또는 "
+"**New Vector Layer** 로 저장할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1501
 msgid "Select Features By Value"
@@ -2867,6 +3181,8 @@ msgid ""
 "case-sensitive, and the operation that should be used. The tool has also "
 "autocompletes, automatically filling the search box with existing values."
 msgstr ""
+"이 선택 도구는 레이어의 피처 양식을 열어 사용자가 각 필드에 대해 어떤 값을 검색할지, 대소문자를 구분해서 검색할지, 어떤 연산을 "
+"사용할지 선택할 수 있게 해줍니다. 이 도구는 자동적으로 검색란을 기존 값으로 채워주는 자동 완성 기능도 제공합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1513
 msgid "Filter/Select features using form dialog"
@@ -2876,19 +3192,19 @@ msgstr "양식 대화창을 이용해 피처 필터링/선택"
 msgid ""
 "Alongside each field, there is a drop-down list with options to control the "
 "search behaviour:"
-msgstr ""
+msgstr "각 필드 옆에, 검색 습성을 제어할 수 있는 옵션을 나열한 드롭다운 목록이 있습니다:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1521
 msgid "Field search option"
-msgstr ""
+msgstr "필드 검색 옵션"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1521
 msgid "Numeric"
-msgstr ""
+msgstr "수치"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1523
 msgid ":guilabel:`Exclude Field` from the search"
-msgstr ""
+msgstr ":guilabel:`Exclude Field` 검색에서 제외할 필드"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1524
 msgid ":guilabel:`Equal to (=)`"
@@ -2896,7 +3212,7 @@ msgstr ":guilabel:`Equal to (=)`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1525
 msgid ":guilabel:`Not equal to (≠)`"
-msgstr ""
+msgstr ":guilabel:`Not equal to (≠)`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1526
 msgid ":guilabel:`Greater than (>)`"
@@ -2908,11 +3224,11 @@ msgstr ":guilabel:`Less than (<)`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1528
 msgid ":guilabel:`Greater than or equal to (≥)`"
-msgstr ""
+msgstr ":guilabel:`Greater than or equal to (≥)`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1529
 msgid ":guilabel:`Less than or equal to (≤)`"
-msgstr ""
+msgstr ":guilabel:`Less than or equal to (≤)`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1530
 msgid ":guilabel:`Between (inclusive)`"
@@ -2920,7 +3236,7 @@ msgstr ":guilabel:`Between (inclusive)`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1531
 msgid ":guilabel:`Not between (inclusive)`"
-msgstr ""
+msgstr ":guilabel:`Not between (inclusive)`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1532
 msgid ":guilabel:`Contains`"
@@ -2940,23 +3256,26 @@ msgstr ":guilabel:`Is not missing (not null)`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1536
 msgid ":guilabel:`Starts with`"
-msgstr ""
+msgstr ":guilabel:`Starts with`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1537
 msgid ":guilabel:`Ends with`"
-msgstr ""
+msgstr ":guilabel:`Ends with`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1541
 msgid ""
 "For string comparisons, it is also possible to use the |checkbox| "
 ":guilabel:`Case sensitive` option."
 msgstr ""
+"문자열 비교의 경우, 대소문자를 구분하는 |checkbox| :guilabel:`Case sensitive` 옵션도 사용할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1544
 msgid ""
 "After setting all search options, click :guilabel:`Select features` to "
 "select the matching features. The drop-down options are:"
 msgstr ""
+"모든 검색 옵션을 설정한 다음, :guilabel:`Select features` 버튼을 눌러 일치하는 피처들을 선택할 수 있습니다. "
+"드롭다운 옵션은 다음과 같습니다:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1547
 msgid ":guilabel:`Select features`"
@@ -2968,7 +3287,7 @@ msgstr ":guilabel:`Add to current selection`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1549
 msgid ":guilabel:`Remove from current selection`"
-msgstr ""
+msgstr ":guilabel:`Remove from current selection`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1550
 msgid ":guilabel:`Filter current selection`"
@@ -2978,17 +3297,19 @@ msgstr ":guilabel:`Filter current selection`"
 msgid ""
 "You can also clear all search options using the :guilabel:`Reset form` "
 "button."
-msgstr ""
+msgstr ":guilabel:`Reset form` 버튼을 눌러 모든 검색 옵션을 초기화할 수도 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1554
 msgid "Once the conditions are set, you can also either:"
-msgstr ""
+msgstr "조건을 설정하고 나면, 다음 가운데 하나를 할 수 있습니다:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1556
 msgid ""
 ":guilabel:`Zoom to features` on the map canvas without the need of a "
 "preselection"
 msgstr ""
+":guilabel:`Zoom to features`: 피처를 미리 선택하지 않고도 맵 캔버스에서 조건과 일치하는 피처로 확대/축소할 수 "
+"있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1557
 msgid ""
@@ -2997,10 +3318,13 @@ msgid ""
 "tool. Note that the flash does not alter the map canvas extent and would be "
 "visible only if the feature is within the bounds of the current map canvas."
 msgstr ""
+":guilabel:`Flash features`: 조건과 일치하는 피처를 강조합니다. 선택 또는 식별 도구를 사용하지 않고도 피처를 "
+"식별할 수 있는 간편한 방법입니다. 강조 효과는 맵 캔버스 범위를 변경하지 않으며, 피처가 현재 맵 캔버스 경계 안에 있는 경우에만 "
+"강조가 가시화될 것이라는 점을 기억하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1567
 msgid "Identifying Features"
-msgstr ""
+msgstr "피처 식별"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1569
 msgid ""
@@ -3012,15 +3336,15 @@ msgstr ""
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1572
 msgid ":menuselection:`View --> Identify Features`"
-msgstr ""
+msgstr ":menuselection:`View --> Identify Features` 메뉴"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1573
 msgid ":kbd:`Ctrl+Shift+I` (or |osx| :kbd:`Cmd+Shift+I`),"
-msgstr ""
+msgstr ":kbd:`Ctrl+Shift+I` (또는 |osx| :kbd:`Cmd+Shift+I`) 키 조합"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1574
 msgid "|identify| :sup:`Identify Features` icon on the Attributes toolbar"
-msgstr ""
+msgstr "속성 툴바에 있는 |identify| :sup:`Identify Features` 아이콘"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1577
 msgid "Using the Identify Features tool"
@@ -3031,6 +3355,7 @@ msgid ""
 "QGIS offers several ways to identify features with the |identify| "
 ":sup:`Identify Features` tool:"
 msgstr ""
+"QGIS는 |identify| :sup:`Identify Features` 도구로 피처를 식별할 수 있는 몇 가지 방법을 제공합니다:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1582
 msgid ""
@@ -3038,6 +3363,8 @@ msgid ""
 "<identify_mode>` and the :ref:`selection mask <identify_selection>` set in "
 "the :guilabel:`Identify Results` panel"
 msgstr ""
+"**왼쪽 클릭**하면 :guilabel:`Identify Results` 패널에서 설정한 :ref:`선택 모드 "
+"<identify_mode>` 및 :ref:`선택 마스크 <identify_selection>` 에 따라 피처를 식별합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1586
 msgid ""
@@ -3047,6 +3374,9 @@ msgid ""
 "allowing the user to choose more precisely the features to identify or the "
 "action to execute on them."
 msgstr ""
+":guilabel:`Identify Results` 패널에서 설정한 :ref:`선택 모드 <identify_mode>` 를 따르는 "
+":guilabel:`Identify Feature(s)` 로 **오른쪽 클릭**하면 모든 가시화된 레이어에서 모든 스냅된 피처를 "
+"가져옵니다. 이 방법은 컨텍스트 메뉴를 열어, 사용자가 식별할 피처를 또는 피처에 실행할 작업을 더 정밀하게 선택할 수 있도록 해줍니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1591
 msgid ""
@@ -3056,6 +3386,10 @@ msgid ""
 " according to the :ref:`selection mask <identify_selection>` set in the "
 ":guilabel:`Identify Results` panel"
 msgstr ""
+":guilabel:`Identify Results` 패널 에서 설정한 :ref:`선택 모드 <identify_mode>` 를 따르는 "
+":guilabel:`Identify Features by Polygon` 으로 **오른쪽 클릭**하면 선택한 기존 폴리곤과 중첩하는 "
+"피처를, :guilabel:`Identify Results` 패널에서 설정한 :ref:`선택 마스크 "
+"<identify_selection>` 에 따라 식별합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1597
 msgid "**Filter the layers to query with the Identify Features tool**"
@@ -3070,6 +3404,10 @@ msgid ""
 "is a handy way to return features from only layers that are of interest for "
 "you."
 msgstr ""
+":menuselection:`Project --> Properties... --> Data Sources` 메뉴의 "
+":guilabel:`Layer Capabilities` 에서 레이어 옆에 있는 :guilabel:`Identifiable` 열을 체크 "
+"해제하면, **Current Layer**가 아닌 모드로 |identify| :sup:`Identify Features` 도구를 사용할 "
+"경우 해당 레이어를 쿼리 대상에서 제외합니다. 사용자가 관심을 가진 레이어에서만 피처를 반환받을 수 있는 간편한 방법입니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1606
 msgid ""
@@ -3081,20 +3419,26 @@ msgid ""
 "Properties --> Display`. All the other information about the feature "
 "follows."
 msgstr ""
+"피처(들)를 클릭하면, 클릭한 피처(들)에 대한 정보 목록을 담은 :guilabel:`Identify Results` 대화창이 열립니다."
+" 기본 뷰는 첫 번째 항목이 레이어명이고 그 하위 항목이 식별된 피처(들)인 트리 뷰입니다. 각 피처는 필드명을 그 값과 함께 "
+"표시합니다. :menuselection:`Layer Properties --> Display` 메뉴에서 이 필드를 설정합니다. 그 다음 "
+"해당 피처에 대한 다른 모든 정보를 나열합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1614
 msgid "Feature information"
-msgstr ""
+msgstr "피처 정보"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1616
 msgid ""
 "The Identify Results dialog can be customized to display custom fields, but "
 "by default it will display the following information:"
 msgstr ""
+"사용자 지정 필드를 표출시키기 위해 식별 결과 대화창을 사용자 지정할 수도 있지만, 기본적으로 다음과 같은 유형의 정보를 표시할 "
+"것입니다:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1621
 msgid "The feature :ref:`display name <maptips>`;"
-msgstr ""
+msgstr "피처의 :ref:`표시 명칭 <maptips>`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1622
 msgid ""
@@ -3111,17 +3455,17 @@ msgstr ""
 msgid ""
 "**Derived**: This information is calculated or derived from other "
 "information. It includes:"
-msgstr ""
+msgstr "**Derived**: 다른 정보로부터 계산된 또는 파생된 정보로, 다음을 포함합니다:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1629
 msgid "general information about the feature's geometry:"
-msgstr ""
+msgstr "피처의 도형과 관련된 일반 정보:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1631
 msgid ""
 "depending on the geometry type, the cartesian measurements of length, "
 "perimeter or area in the layer's CRS units"
-msgstr ""
+msgstr "도형 유형에 따라, 데카르트 평면에서 레이어 좌표계의 단위로 측정된 피처의 길이, 둘레 또는 면적"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1633
 msgid ""
@@ -3129,42 +3473,44 @@ msgid ""
 "properties dialog for :guilabel:`Measurements`, the ellipsoidal values of "
 "length, perimeter or area using the specified units"
 msgstr ""
+"프로젝트 속성 대화창에서 :guilabel:`Measurements` 용으로 설정된 타원체가 있는 경우, 도형 유형에 따라 타원체 상에서"
+" 지정한 단위로 측정된 피처의 길이, 둘레 또는 면적"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1636
 msgid ""
 "the count of geometry parts in the feature and the number of the part "
 "clicked"
-msgstr ""
+msgstr "피처가 보유한 도형 부분의 개수와 클릭한 부분의 개수"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1638
 msgid "the count of vertices in the feature"
-msgstr ""
+msgstr "피처가 보유한 꼭짓점의 개수"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1639
 msgid ""
 "coordinate information, using the project properties :guilabel:`Coordinates "
 "display` settings:"
-msgstr ""
+msgstr "프로젝트 속성의 :guilabel:`Coordinates display` 설정을 사용한 좌표 정보:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1642
 msgid "``X`` and ``Y`` coordinate values of the point clicked"
-msgstr ""
+msgstr "클릭한 포인트의 ``X`` 및 ``Y`` 좌표값"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1643
 msgid "the number of the closest vertex to the point clicked"
-msgstr ""
+msgstr "클릭한 포인트에 가장 가까운 꼭짓점의 번호"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1644
 msgid ""
 "``X`` and ``Y`` coordinate values of the closest vertex (and ``Z``/``M`` if "
 "applicable)"
-msgstr ""
+msgstr "가장 가까운 꼭짓점의 ``X`` 및 ``Y`` 좌표값 (가능한 경우 ``Z``/``M`` 좌표값)"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1646
 msgid ""
 "if you click on a curved segment, the radius of that section is also "
 "displayed."
-msgstr ""
+msgstr "곡선을 클릭한 경우, 해당 구간의 반경도 표시합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1649
 msgid ""
@@ -3177,6 +3523,8 @@ msgid ""
 "Links in the feature's attributes are clickable from the :guilabel:`Identify"
 " Results` panel and will open in your default web browser."
 msgstr ""
+":guilabel:`Identify Results` 패널에서 피처 속성 내부에 있는 링크를 클릭할 수 있으며, 사용자 기본 웹브라우저로 "
+"열릴 것입니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1660
 msgid "Identify Results dialog"
@@ -3188,29 +3536,31 @@ msgstr "식별 결과 대화창"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1665
 msgid "At the top of the window, you have a handful of tools:"
-msgstr ""
+msgstr "창 상단에 여러 도구가 있습니다:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1667
 msgid "|formView| :sup:`Open Form` of the current feature"
-msgstr ""
+msgstr "|formView| :sup:`Open Form`: 현재 피처의 양식을 엽니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1668
 msgid "|expandTree| :sup:`Expand tree`"
-msgstr "|expandTree| :sup:`Expand tree`"
+msgstr "|expandTree| :sup:`Expand tree`: 트리를 펼칩니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1669
 msgid "|collapseTree| :sup:`Collapse tree`"
-msgstr "|collapseTree| :sup:`Collapse tree`"
+msgstr "|collapseTree| :sup:`Collapse tree`: 트리를 접습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1670
 msgid ""
 "|expandNewTree| :sup:`Expand New Results by Default` to define whether the "
 "next identified feature's information should be collapsed or expanded"
 msgstr ""
+"|expandNewTree| :sup:`Expand New Results by Default`: 다음 식별할 피처의 정보를 접을지 펼칠지"
+" 여부를 정의합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1672
 msgid "|deselectAll| :sup:`Clear Results`"
-msgstr "|deselectAll| :sup:`Clear Results`"
+msgstr "|deselectAll| :sup:`Clear Results`: 결과를 초기화합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1673
 msgid "|editCopy| :sup:`Copy selected feature to clipboard`"
@@ -3222,23 +3572,24 @@ msgstr "|filePrint| :sup:`Print selected HTML response`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1678
 msgid "selection mode to use to fetch features to identify:"
-msgstr ""
+msgstr "식별할 피처를 가져오기 위해 사용할 선택 모드:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1680
 msgid "|identifyByRectangle| :sup:`Identify Features by area or single click`"
 msgstr ""
+"|identifyByRectangle| :sup:`Identify Features by area or single click`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1681
 msgid "|identifyByPolygon| :sup:`Identify Features by Polygon`"
-msgstr ""
+msgstr "|identifyByPolygon| :sup:`Identify Features by Polygon`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1682
 msgid "|identifyByFreehand| :sup:`Identify Features by Freehand`"
-msgstr ""
+msgstr "|identifyByFreehand| :sup:`Identify Features by Freehand`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1683
 msgid "|identifyByRadius| :sup:`Identify Features by Radius`"
-msgstr ""
+msgstr "|identifyByRadius| :sup:`Identify Features by Radius`"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1686
 msgid ""
@@ -3246,6 +3597,8 @@ msgid ""
 "right-click any existing polygon and use it to identify overlapping features"
 " in another layer."
 msgstr ""
+"|identifyByPolygon| :sup:`Identify Features by Polygon` 도구 사용 시, 모든 기존 폴리곤을 "
+"오른쪽 클릭하면 또다른 레이어의 중첩하는 피처를 식별하는 데 사용할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1692
 msgid ""
@@ -3253,23 +3606,25 @@ msgid ""
 "combo boxes. :guilabel:`Mode` defines from which layers features should be "
 "identified:"
 msgstr ""
+"창 하단에는 :guilabel:`Mode` 와 :guilabel:`View` 콤보박스가 있습니다. :guilabel:`Mode` "
+"콤보박스를 통해 어떤 레이어에 있는 피처를 식별해야 하는지 정의할 수 있습니다:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1696
 msgid ""
 "**Current layer**: only features from the selected layer are identified. The"
 " layer need not be visible in the canvas."
-msgstr ""
+msgstr "**Current layer**: 선택한 레이어에 있는 피처만 식별합니다. 레이어가 맵 캔버스에 보이지 않아도 됩니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1698
 msgid ""
 "**Top down, stop at first**: only features from the upper visible layer."
-msgstr ""
+msgstr "**Top down, stop at first**: 가시화된 레이어 가운데 가장 위에 있는 레이어의 피처만 식별합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1699
 msgid ""
 "**Top down**: all features from the visible layers. The results are shown in"
 " the panel."
-msgstr ""
+msgstr "**Top down**: 가시화된 레이어들의 모든 피처를 식별합니다. 식별 결과가 패널에 표시됩니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1701
 msgid ""
@@ -3277,13 +3632,15 @@ msgid ""
 "to identify features from, similar to a right-click. Only the chosen "
 "features will be shown in the result panel."
 msgstr ""
+"**Layer selection**: 컨텍스트 메뉴를 열어서 사용자가 피처를 식별할 레이어를 선택할 수 있습니다. 오른쪽 클릭과 동일하게"
+" 동작합니다. 선택한 피처만 식별 결과 패널에 표시될 것입니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1705
 msgid ""
 "The :guilabel:`View` can be set as **Tree**, **Table** or **Graph**. 'Table'"
 " and 'Graph' views can only be set for raster layers."
 msgstr ""
-":guilabel:`View` 를 **트리**, **테이블** 또는 **그래프** 로 설정할 수 있습니다. 래스터 레이어에 대해서만 "
+":guilabel:`View` 를 **트리**, **테이블** 또는 **그래프**로 설정할 수 있습니다. 래스터 레이어에 대해서만 "
 "'테이블'과 '그래프'를 설정할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1708
@@ -3292,6 +3649,8 @@ msgid ""
 "checked, each time a single feature is identified, a form opens showing its "
 "attributes. This is a handy way to quickly edit a feature's attributes."
 msgstr ""
+"식별 도구에서 |checkbox|:guilabel:`Auto open form` 을 이용할 수 있습니다. 이 체크박스를 체크하면, 피처를"
+" 하나 식별할 때마다 QGIS가 해당 피처의 속성을 보여주는 양식을 엽니다. 피처 속성을 빠르게 편집할 수 있는 편리한 방법입니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1712
 msgid ""
@@ -3314,7 +3673,7 @@ msgstr "피처 복사: 모든 피처 도형 및 속성 복사"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1718
 msgid "Toggle feature selection: Add identified feature to selection"
-msgstr ""
+msgstr "피처 집합 켜고끄기: 식별한 피처를 선택 집합에 추가"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1719
 msgid ""
@@ -3372,6 +3731,9 @@ msgid ""
 "symbol in :menuselection:`Project --> Properties... --> Default styles` that"
 " will be applied to each newly added layer according to its geometry type."
 msgstr ""
+"맵 캔버스에 벡터 레이어를 추가하면, QGIS는 레이어 피처를 렌더링하는 데 기본값으로 랜덤한 심볼/색상을 이용합니다. 하지만 "
+":menuselection:`Project --> Properties... --> Default styles` 에서 기본 심볼을 "
+"설정해서, 새로 추가되는 레이어마다 그 도형 유형에 따라 적용시킬 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1749
 msgid ""
@@ -3381,6 +3743,9 @@ msgid ""
 "the bottom of the Layer Properties dialog. This menu provides you with "
 "functions to create, load and manage styles."
 msgstr ""
+"그러나 대부분의 경우, 레이어에 자동적으로 또는 수동으로 (수고를 덜 들이고) 적용할 수 있는, 사용자가 지정한 좀 더 복잡한 스타일을 "
+"선호할 겁니다. 레이어 속성 대화창 하단에 있는 :menuselection:`Style` 메뉴를 통해 이런 스타일을 정의할 수 있습니다."
+" 이 메뉴는 스타일을 생성하고, 불러오고, 관리할 수 있는 기능을 제공합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1755
 msgid ""
@@ -3389,10 +3754,13 @@ msgid ""
 "definitions, actions, diagrams...) for vector layers, or the pixels (band or"
 " color rendering, transparency, pyramids, histogram ...) for raster."
 msgstr ""
+"스타일은 벡터 레이어의 경우 피처(심볼, 라벨, 필드 및 양식 정의, 액션, 다이어그램 등등의 설정), 래스터 레이어의 경우 픽셀(밴드 "
+"또는 색상 렌더링, 투명도, 피라미드, 히스토그램 등등)을 렌더링하거나 상호작용하기 위해 레이어 속성 대화창에서 설정한 모든 정보를 "
+"저장합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1766
 msgid "Vector layer style combo box options"
-msgstr ""
+msgstr "벡터 레이어 스타일 콤보박스 옵션들"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1768
 msgid ""
@@ -3401,12 +3769,15 @@ msgid ""
 "save it by clicking the |selectString| :menuselection:`Style` combo box and "
 "choosing:"
 msgstr ""
+"불러온 레이어에 적용되는 스타일의 기본 명칭은 ``default``입니다. 사용자 레이어에 대해 이상적이고 적절한 렌더링 옵션을 설정하고"
+" 나면, |selectString| :menuselection:`Style` 콤보박스를 클릭해서 다음 저장 옵션 가운데 하나를 선택할 수"
+" 있습니다:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1772
 msgid ""
 "**Rename Current**: The active style is renamed and updated with the current"
 " options"
-msgstr ""
+msgstr "**Rename Current**: 활성화된 스타일을 재명명하고 현재 옵션으로 업데이트합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1774
 msgid ""
@@ -3421,19 +3792,19 @@ msgstr ""
 msgid ""
 "**Remove**: Delete unwanted style, in case you have more than one style "
 "defined for the layer."
-msgstr ""
+msgstr "**Remove**: 해당 레이어에 하나 이상의 스타일이 정의돼 있는 경우, 원하지 않는 스타일을 삭제합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1780
 msgid ""
 "At the bottom of the Style drop-down list, you can see the styles set for "
 "the layer with the active one checked."
-msgstr ""
+msgstr "스타일 드롭다운 목록 하단에 레이어에 대한 스타일 집합이 있는데, 활성화된 스타일은 체크 표시가 돼 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1783
 msgid ""
 "Note that each time you validate the layer properties dialog, the active "
 "style is updated with the changes you've made."
-msgstr ""
+msgstr "사용자가 레이어 속성 대화창을 승인할 때마다, 활성화된 스타일이 사용자가 변경한 사항으로 업데이트된다는 점을 기억하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1786
 msgid ""
@@ -3442,6 +3813,9 @@ msgid ""
 "offers a quick and powerful way to manage complex projects without the need "
 "to duplicate any layer in the map legend."
 msgstr ""
+"레이어 하나에 대해 원하는 만큼 많은 스타일을 생성할 수 있지만, 한 번에 스타일 하나만 활성화할 수있습니다. :ref:`맵 테마 "
+"<map_themes>` 와 결합하면, 맵 범례에서 어떤 레이어도 복사할 필요가 없이 복잡한 프로젝트를 관리할 수 있는 빠르고 강력한 "
+"방법을 얻게 됩니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1793
 msgid ""
@@ -3450,6 +3824,8 @@ msgid ""
 "style to avoid mistakenly altering a style used in a :ref:`map theme "
 "<map_themes>`."
 msgstr ""
+"사용자가 레이어 속성을 수정할 때마다 활성화된 스타일에 변경 사항을 저장한다는 사실은, 사용자가 :ref:`맵 테마 "
+"<map_themes>` 에서 사용되는 스타일을 실수로 변경하는 일 없이 언제나 올바른 스타일을 편집하고 있다는 점을 보장합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1797
 msgid "**Manage styles from layer context menu**"
@@ -3460,10 +3836,11 @@ msgid ""
 "Right-click on the layer in the :guilabel:`Layers` panel to add, rename or "
 "remove layer styles."
 msgstr ""
+":guilabel:`Layers` 패널에 있는 레이어를 오른쪽 클릭하면 레이어 스타일을 추가, 재명명 또는 제거할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1805
 msgid "Storing Styles in a File or a Database"
-msgstr ""
+msgstr "스타일을 파일 또는 데이터베이스로 저장하기"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1807
 msgid ""
@@ -3472,10 +3849,12 @@ msgid ""
 " the project, it's also possible to save them outside the project so that "
 "they can be loaded in another project."
 msgstr ""
+"기본적으로 프로젝트 파일에 :guilabel:`Style` 콤보박스에서 생성한 스타일을 저장하고, 프로젝트에 있는 레이어에서 레이어로 "
+"복사하고 붙여넣을 수 있지만, 다른 프로젝트에서 불러올 수 있도록 프로젝트 외부에 저장할 수도 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1813
 msgid "Save as text file"
-msgstr ""
+msgstr "텍스트 파일로 저장"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1815
 msgid ""
@@ -3491,7 +3870,7 @@ msgstr "QGIS 레이어 스타일 파일 (:file:`.qml`)"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1819
 msgid "SLD file (:file:`.sld`), only available for vector layers"
-msgstr ""
+msgstr "벡터 레이어만 지원하는 SLD 파일 (:file:`.sld`)"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1821
 msgid ""
@@ -3505,6 +3884,11 @@ msgid ""
 "other hand, it can be very handy sometimes to have this easy way of "
 "converting styles to rule-based."
 msgstr ""
+"파일 기반 유형 레이어(.shp, .tab 등등)의 경우, :guilabel:`Save as Default` 메뉴가 레이어와 함께 "
+"(동일한 명칭으로) :file:`.qml` 파일을 생성합니다. 모든 렌더링 작업자 유형 – 단일 심볼, 범주, 등급 또는 규칙 기반 – "
+"이 SLD 파일을 내보낼 수 있습니다. 그러나 SLD를 가져오는 경우, 단일 심볼 또는 규칙 기반 렌더링 작업자 가운데 하나를 "
+"생성합니다. 즉 범주 또는 등급 스타일이 규칙 기반으로 변환된다는 뜻입니다. 범주 또는 등급 렌더링 작업자를 그대로 가져오려면 QML "
+"포맷을 이용해야 합니다. 그런 반면, 스타일을 손쉽게 규칙 기반으로 변환하는 이런 방법이 매우 유용한 경우도 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1832
 msgid "Save in database"
@@ -3520,6 +3904,11 @@ msgid ""
 "name, add a description, a :file:`.ui` file if applicable and to check if "
 "the style should be the default style."
 msgstr ""
+"레이어 데이터소스가 데이터베이스 제공자인 경우 벡터 레이어 스타일도 데이터베이스에 저장할 수 있습니다. PostGIS, "
+"GeoPackage, SpatiaLite, MS SQL 및 Oracle 포맷을 지원합니다. 데이터베이스의 (테이블명 "
+":file:`layer_styles`) 테이블에 레이어 스타일을 저장합니다. :menuselection:`Save Style... -->"
+" Save in database` 메뉴를 클릭한 다음 대화창에서 스타일 명칭을 정의하고, 설명을 추가하고, 가능한 경우 "
+":file:`.ui` 파일을 추가하고 해당 스타일을 기본 스타일로 설정할지 체크하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1841
 msgid ""
@@ -3528,6 +3917,9 @@ msgid ""
 "the layer database or in the QGIS local database, a SQLite database in the "
 ":file:`~/.qgis2/` directory (where QGIS stores its local settings)."
 msgstr ""
+"데이터베이스의 단일 테이블에 여러 스타일을 저장할 수 있습니다. 하지만 각 테이블은 오직 하나의 기본 스타일만 보유할 수 있습니다. "
+"레이어 데이터베이스 또는 :file:`~/.qgis2/` 디렉터리에 있는 QGIS 로컬 데이터베이스 ─ (QGIS가 로컬 설정을 "
+"저장하는) SQLite 데이터베이스 ─ 에 기본 스타일을 저장할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1851
 msgid "Save Style in database Dialog"
@@ -3545,14 +3937,16 @@ msgid ""
 "among databases."
 msgstr ""
 "레이어가 데이터베이스 기반일 경우에만 해당 데이터베이스에 사용자 스타일을 저장할 수 있습니다. 데이터베이스 사이에서 (예를 들어 "
-"Oracle 레이어와 MS SQL 스타일은) 호환되지 않습니다. 데이터베이스들 사이에서 스타일을 공유하려면 암호화되지 않은 텍스트 파일을"
-" 대신 이용하십시오."
+"Oracle 레이어 스타일과 MS SQL 스타일은) 호환되지 않습니다. 데이터베이스들 사이에서 스타일을 공유하려면 암호화되지 않은 텍스트"
+" 파일을 대신 이용하십시오."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1862
 msgid ""
 "You may encounter issues restoring the :file:`layer_styles` table from a "
 "PostgreSQL database backup. Follow :ref:`layer_style_backup` to fix that."
 msgstr ""
+"PostgreSQL 데이터베이스 백업에서 :file:`layer_styles` 테이블을 복구하는 데 문제가 있을 수도 있습니다. 이런 "
+"문제를 해결하려면 :ref:`layer_style_backup` 을 참조하세요."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1866
 msgid "Load style"
@@ -3565,6 +3959,9 @@ msgid ""
 "Restore Default` looks for and loads that file, replacing the layer's "
 "current style."
 msgstr ""
+"QGIS에 레이어를 불러올 때, 해당 레이어의 기본 스타일이 이미 존재하는 경우, QGIS는 해당 레이어를 레이어 기본 스타일로 "
+"불러옵니다. 또 :menuselection:`Style --> Restore Default` 메뉴 옵션을 클릭하면 기본 스타일 파일을 "
+"찾아 불러와서 해당 레이어의 현재 스타일을 교체합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1872
 msgid ""
@@ -3574,6 +3971,9 @@ msgid ""
 "only possible if the layer is from the same database or the style is stored "
 "in the QGIS local database."
 msgstr ""
+":menuselection:`Style --> Load Style` 메뉴를 사용하면 레이어에 저장된 모든 스타일을 적용할 수 있습니다. "
+"텍스트 파일 스타일(:file:`.sld` 또는 :file:`.qml`)은 레이어 유형에 상관없이 적용할 수 있는 반면, 데이터베이스에 "
+"저장된 스타일은 레이어가 동일 데이터베이스 기반이거나, QGIS 로컬 데이터베이스에 저장된 스타일인 경우에만 불러올 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1878
 msgid ""
@@ -3581,6 +3981,8 @@ msgid ""
 "related to the layer found in the database and all the other styles saved in"
 " it, with name and description."
 msgstr ""
+":guilabel:`Database Styles Manager` 대화창은 데이터베이스에 있는 레이어 관련 스타일은 물론 저장돼 있는 다른"
+" 모든 스타일의 목록을 명칭 및 설명과 함께 표시합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1882
 msgid "**Quickly share a layer style within the project**"
@@ -3596,10 +3998,14 @@ msgid ""
 "layer and, in the case of vector layers, have the same geometry type (point,"
 " line or polygon)."
 msgstr ""
+"프로젝트 내부에서 파일 또는 데이터베이스 스타일을 가져오지 않고서도 레이어 스타일을 공유할 수 있습니다. :guilabel:`Layers"
+" Panel` 에 있는 레이어를 오른쪽 클릭한 다음 :guilabel:`Styles` 콤보박스에서 레이어의 스타일을 복사해서 그룹 또는 "
+"레이어 집합으로 붙여 넣을 수 있습니다. 이렇게 하면 원본 레이어와 동일한 (벡터 또는 래스터) 유형인 모든 레이어에, 그리고 벡터 "
+"레이어인 경우 모든 동일한 도형 유형(포인트, 라인, 폴리곤)에 스타일을 적용합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1895
 msgid "Layer definition file"
-msgstr ""
+msgstr "레이어 정의 파일"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1897
 msgid ""
@@ -3611,10 +4017,15 @@ msgid ""
 " the saved style) to the Layers Panel. You can also drag and drop "
 ":file:`.qlr` files from the system file manager into the map canvas."
 msgstr ""
+"활성화된 레이어의 컨텍스트 메뉴에서 :menuselection:`Export --> Save As Layer Definition "
+"File...` 을 선택하면 레이어 정의를 ``레이어 정의 파일``(:file:`.qlr`)로 저장할 수 있습니다. 레이어 정의 "
+"파일(:file:`.qlr`)은 레이어의 데이터소스를 가리키는 참조 정보와 레이어 스타일을 담고 있습니다. :file:`.qlr` 파일은"
+" 탐색기 패널에 표시되며, 레이어 패널에 레이어를 (저장된 스타일과 함께) 추가하는 데 사용할 수 있습니다. 시스템 파일 관리자에서 맵 "
+"캔버스로 :file:`.qlr` 파일을 드래그&드롭할 수도 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1912
 msgid "Storing values in Variables"
-msgstr ""
+msgstr "값을 변수로 저장"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1914
 msgid ""
@@ -3628,6 +4039,11 @@ msgid ""
 "using the ``@`` character before the variable name. For example in print "
 "layout creating a label with this content::"
 msgstr ""
+"QGIS는 표현식에 쓰일 수 있는 자주 사용되는 유용한 값들(예를 들어 프로젝트 제목 또는 사용자의 이름)을 변수를 이용해서 저장할 수 "
+"있습니다. 응용 프로그램 전체 수준, 프로젝트 수준, 레이어 수준, 조판 수준그리고 조판기 항목 수준에서 변수를 정의할 수 있습니다. "
+"CSS의 순차적(cascading) 규칙처럼, 변수도 덮어쓸 수 있습니다. 예를 들어, 프로젝트 수준의 변수는 동일한 명칭을 가진 모든 "
+"응용 프로그램 수준의 변수를 덮어쓸 것입니다. 변수명 앞에 ``@`` 문자를 붙여서 텍스트 문자열 또는 다른 사용자 지정 표현식을 "
+"작성하는 데 쓸 수 있습니다. 다음은 인쇄 조판기에서 라벨을 생성하는 예시입니다:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1927
 msgid "Will render the label like this::"
@@ -3639,37 +4055,44 @@ msgid ""
 " define your own custom variables for any of the levels mentioned above. You"
 " can manage:"
 msgstr ""
-":ref:`사전 설정된 읽기 전용 변수 <variables_functions>` 이외에도, 사용자가 앞에서 언급한 모든 레벨에서 사용자 "
-"지정 변수를 정의할 수 있습니다. 다음 변수들을 관리할 수 있습니다:"
+":ref:`사전 설정된 읽기 전용 변수 <variables_functions>` 이외에도, 앞에서 언급한 모든 수준에서 사용자 지정 "
+"변수를 정의할 수 있습니다. 다음 변수들을 관리할 수 있습니다:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1936
 msgid ""
 "**global variables** from the :menuselection:`Settings --> Options` menu"
-msgstr ""
+msgstr ":menuselection:`Settings --> Options` 메뉴에서 **전체 수준 변수**"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1937
 msgid ""
 "**project variables** from the :guilabel:`Project Properties` dialog (see "
 ":ref:`project_properties`)"
 msgstr ""
+":guilabel:`Project Properties` 대화창에서 **프로젝트 수준 변수** "
+"(:ref:`project_properties` 참조)"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1939
 msgid ""
 "**vector layer variables** from the :guilabel:`Layer Properties` dialog (see"
 " :ref:`vector_properties_dialog`);"
 msgstr ""
+":guilabel:`Layer Properties` 대화창에서 **벡터 레이어 수준 변수** "
+"(:ref:`vector_properties_dialog` 참조)"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1941
 msgid ""
 "**layout variables** from the :guilabel:`Layout` panel in the Print layout "
 "(see :ref:`layout_panel`);"
 msgstr ""
+"인쇄 조판기의 :guilabel:`Layout` 패널에서 **조판기 수준 변수** (:ref:`layout_panel` 참조)"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1943
 msgid ""
 "and **layout item variables** from the :guilabel:`Item Properties` panel in "
 "the Print layout (see :ref:`layout_item_options`)."
 msgstr ""
+"인쇄 조판기의 :guilabel:`Item Properties` 패널에서 **조판 항목 수준 변수** "
+"(:ref:`layout_item_options` 참조)"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1946
 msgid ""
@@ -3677,10 +4100,12 @@ msgid ""
 "values are displayed in italic. On the other hand, higher level variables "
 "overwritten by lower level ones are strike through."
 msgstr ""
+"편집 가능한 변수와 구별하기 위해, 읽기 전용 변수의 명칭 및 값을 이탤릭체로 표시합니다. 다른 한편으로, 하위 수준 변수가 덮어쓰는 "
+"상위 수준 변수엔 취소선이 그어집니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1955
 msgid "Variables editor at the project level"
-msgstr ""
+msgstr "프로젝트 수준 변수 편집기"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1957
 msgid ""
@@ -3691,6 +4116,12 @@ msgid ""
 "management/>`_ and `part 3 <https://nyalldawson .net/2015/12/exploring-"
 "variables-in-qgis-pt-3-layer-level-variables/>`_ blog posts."
 msgstr ""
+"나이얼 도슨(Nyall Dawson)의 블로그 포스트, QGIS 2.12에서의 변수 탐구 `1편 "
+"<https://nyalldawson.net/2015/12/exploring-variables-in-"
+"qgis-2-12-part-1/>`_, `2편 <https://nyalldawson.net/2015/12/exploring-"
+"variables-in-qgis-pt-2-project-management/>`_ 그리고 `3편 <https://nyalldawson "
+".net/2015/12/exploring-variables-in-qgis-pt-3-layer-level-variables/>`_ 에서 더"
+" 자세한 정보와 예시들을 찾아볼 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1968
 msgid "Authentication"
@@ -3705,6 +4136,10 @@ msgid ""
 " in project or settings files. For more information see "
 ":ref:`authentication_index`."
 msgstr ""
+"QGIS에는 안전한 방식으로 인증서(authentication credentials)를 저장/검색할 수 있는 기능이 있습니다.사용자는 "
+"인증 환경 설정 안에 인증서를 안전하게 저장할 수 있는데, 인증 환경 설정은 자체 데이터베이스에 저장되어 서버 또는 데이터베이스 연결에 "
+"적용할 수 있으며 프로젝트 또는 설정 파일에서 ID 토큰으로 안전하게 참조할 수 있습니다. 더 자세한 정보를 원한다면 "
+":ref:`authentication_index` 을 참조하세요."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1976
 msgid ""
@@ -3714,7 +4149,7 @@ msgstr "인증 시스템 및 그 자체 데이터베이스를 처음 실행할 �
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1983
 msgid "Common widgets"
-msgstr ""
+msgstr "일반 위젯"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1985
 msgid ""
@@ -3722,6 +4157,7 @@ msgid ""
 "convenience, QGIS provides you with special widgets that are presented "
 "below."
 msgstr ""
+"사용자가 QGIS에서 자주 사용해야 할 옵션이 몇 개 있습니다. QGIS는 사용자 편의를 위해 다음에 소개하는 특별 위젯들을 제공합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1992
 msgid "Color Selector"
@@ -3729,7 +4165,7 @@ msgstr "색상 선택기"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1995
 msgid "The color dialog"
-msgstr ""
+msgstr "색상 대화창"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:1997
 msgid ""
@@ -3740,6 +4176,10 @@ msgid ""
 "checked, the color dialog used is the native one of the OS on which QGIS is "
 "running. Otherwise, the QGIS custom color chooser is used."
 msgstr ""
+"사용자가 색상을 선택하기 위해 |selectColor| 아이콘을 클릭할 때마다 :guilabel:`Select Color` 대화창이 "
+"열립니다. :menuselection:`Settings --> Options... --> General` 메뉴에 있는 "
+":guilabel:`Use native color chooser dialogs` 파라미터 체크박스의 상태에 따라 이 대화창의 기능이 "
+"달라집니다. 체크된 상태라면, QGIS가 실행 중인 OS의 색상 대화창이 열립니다. 해제된 경우엔 QGIS 전용 색상 선택기가 열립니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2004
 msgid ""
@@ -3749,6 +4189,10 @@ msgid ""
 "picker`. With the first two tabs, you can browse to all possible color "
 "combinations and apply your choice to the item."
 msgstr ""
+"전용 색상 선택기 대화창은 사용자가 색상을 선택할 수 있도록 |colorBox| :sup:`Color ramp` 색상표, "
+"|colorWheel| :sup:`Color wheel` 색상환, |colorSwatches| :sup:`Color swatches` "
+"색상 견본표 또는 |colorPicker| :sup:`Color picker` 색상 추출기 탭 4개를 보유하고 있습니다. 앞의 두 탭을 "
+"통해 가능한 모든 색상 조합을 탐색하고 항목에 사용자 선택 사항을 적용할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2015
 msgid "Color selector ramp tab"
@@ -3762,12 +4206,16 @@ msgid ""
 ":sup:`Add current color` and |signMinus| :sup:`Remove selected color` "
 "buttons at the bottom of the frame."
 msgstr ""
+"|colorSwatches| :sup:`Color swatches` 탭에 있는 색상표 목록에서 색상을 선택할 수 있습니다. (자세한 "
+"내용은 :ref:`colors_options` 을 참조하세요.) 프레임 하단에 있는 |signPlus| :sup:`Add current "
+"color` 및 |signMinus| :sup:`Remove selected color` 버튼으로 :guilabel:`Recent "
+"colors` 색상표를 제외한 모든 색상표를 수정할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2024
 msgid ""
 "The :guilabel:`...` button next to the palette combo box also offers several"
 " options to:"
-msgstr ""
+msgstr "색상표 콤보박스 옆에있는 :guilabel:`...` 버튼을 클릭하면 다음 옵션들을 선택할 수 있습니다:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2027
 msgid "copy, paste, import or export colors"
@@ -3775,17 +4223,19 @@ msgstr "색상을 복사, 붙여넣기, 불러오기 또는 내보내기"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2028
 msgid "create, import or remove color palettes"
-msgstr ""
+msgstr "색상표를 생성, 불러오기 또는 제거하기"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2029
 msgid ""
 "add the custom palette to the color selector widget with the :guilabel:`Show"
 " in Color Buttons` item (see figure_color_selector_)"
 msgstr ""
+":guilabel:`Show in Color Buttons` 옵션을 활성화시키면 색상 선택기 "
+"위젯(figure_color_selector_ 그림 참조)에 사용자 지정 색상표를 추가합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2037
 msgid "Color selector swatches tab"
-msgstr ""
+msgstr "색상 선택기의 색상 견본표 탭"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2041
 msgid ""
@@ -3796,6 +4246,10 @@ msgid ""
 "space bar again. You can also click the :guilabel:`Sample Color` button to "
 "activate the picker."
 msgstr ""
+"사용자가 QGIS UI의 어디에서라도 또는 다른 응용 프로그램에서라도 마우스 커서 아래에 있는 색상 표본을 추출할 수 있는 "
+"|colorPicker| :sup:`Color picker` 색상 추출기를 이용하는 옵션도 있습니다. 탭이 활성화된 상태에서 스페이스 "
+"바를 누르고, 원하는 색상 위로 마우스를 가져가서 클릭하거나 스페이스 바를 다시 누르십시오. :guilabel:`Sample Color`"
+" 버튼을 눌러도 색상 추출기가 활성화됩니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2047
 msgid ""
@@ -3803,6 +4257,9 @@ msgid ""
 "color sliders for ``HSV`` (Hue, Saturation, Value) and ``RGB`` (Red, Green, "
 "Blue) values. The color is also identifiable in :guilabel:`HTML notation`."
 msgstr ""
+"어떤 방법을 이용하든, 항상 ``HSV``(색상 hue, 채도 saturation, 명도 value)와 ``RGB``(적 red, 녹 "
+"green, 청 blue) 값에 대한 색상 슬라이드 바를 통해 선택한 색상을 설명합니다. :guilabel:`HTML notation` "
+"으로도 색상을 식별할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2051
 msgid ""
@@ -3812,6 +4269,10 @@ msgid ""
 "slider. You can also type the color in HTML notation. Finally, there is an "
 ":guilabel:`Opacity` slider to set transparency level."
 msgstr ""
+"색상환(color wheel)이나 색상표(color ramp) 또는 모든 색상 파라미터 슬라이드 바를 클릭하는 것만으로도 쉽게 색상을 "
+"조정할 수 있습니다. 색상 파라미터들 옆에 있는 스핀박스를 통해 또는 해당 슬라이드 바에 커서를 가져가서 마우스 휠을 돌리면 이런 "
+"파라미터들을 변경할 수 있습니다. :guilabel:`HTML notation` 에 색상을 입력할 수도 있습니다. 마지막으로, 투명도 "
+"수준을 설정하기 위한 :guilabel:`Opacity` 슬라이드 바가 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2057
 msgid ""
@@ -3820,6 +4281,9 @@ msgid ""
 "Using drag-and-drop or pressing the |atlasNext| :sup:`Add color to swatch` "
 "button, any of these colors can be saved in a slot for easy access."
 msgstr ""
+"이 대화창에서 (오브젝트에 적용된) :guilabel:`Old` 색상과 (선택한) :guilabel:`Current` 색상을 시각적으로 "
+"비교해볼 수도 있습니다. 이렇게 선택한 색상을 손쉽게 쓸 수 있도록 슬롯에 드래그&드롭해서 또는 |atlasNext| :sup:`Add "
+"color to swatch` 버튼을 클릭해서 저장할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2064
 msgid "**Quick color modification**"
@@ -3828,11 +4292,11 @@ msgstr "**빠른 색상 조정**"
 #: ../../docs/user_manual/introduction/general_tools.rst:2066
 msgid ""
 "Drag-and-drop a color selector widget onto another one to apply its color."
-msgstr ""
+msgstr "색상 선택기 위젯을 다른 색상 선택기 위젯으로 드래그&드롭하면 해당 위젯의 색상을 적용합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2072
 msgid "The color drop-down shortcut"
-msgstr ""
+msgstr "색상 드롭다운 단축키"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2074
 msgid ""
@@ -3840,35 +4304,37 @@ msgid ""
 "display a widget for quick color selection. This shortcut provides access "
 "to:"
 msgstr ""
+"|selectColor| 색상 버튼 오른쪽에 있는 드롭다운 화살표를 클릭하면 빠른 색상 선택을 위한 위젯을 표시합니다. 이 단축키로 다음"
+" 기능에 접근할 수 있습니다:"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2078
 msgid "a color wheel to pick a color from"
-msgstr ""
+msgstr "색상을 선택하기 위한 색상환"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2079
 msgid "an alpha slider to change color opacity"
-msgstr ""
+msgstr "색상 투명도를 변경하기 위한 알파값 슬라이드 바"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2080
 msgid "the color palettes previously set to :guilabel:`Show in Color Buttons`"
-msgstr ""
+msgstr "이전에 :guilabel:`Show in Color Buttons` 에 설정된 색상표"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2081
 msgid "copy the current color and paste it into another widget"
-msgstr ""
+msgstr "현재 색상을 복사해서 다른 위젯으로 붙여넣기"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2082
 msgid "pick a color from anywhere on your computer display"
-msgstr ""
+msgstr "사용자의 컴퓨터 스크린 어느 곳에서든 색상 선택"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2083
 msgid "choose a color from the color selector dialog"
-msgstr ""
+msgstr "색상 선택기 대화창에서 색상 선택"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2084
 msgid ""
 "drag-and-drop the color from one widget to another for quick modification"
-msgstr ""
+msgstr "빠른 색상 조정을 위해 한 위젯에서 다른 위젯으로 색상을 드래그&드롭"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2086
 msgid ""
@@ -3877,6 +4343,9 @@ msgid ""
 "changing the color are unavailable. You'd first need to :guilabel:`Unlink "
 "color` or :guilabel:`Clear` the definition."
 msgstr ""
+"데이터 정의 무시 속성을 통해 색상 위젯이 :ref:`프로젝트 색상 <project_colors>` 으로 설정돼 있는 경우, 앞에서 "
+"설명한 색상 변경 기능들을 사용할 수 없습니다. 색상을 변경하려면 먼저 :guilabel:`Unlink color` 로 색상을 해제하거나"
+" :guilabel:`Clear` 로 색상 정의를 초기화해야 합니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2096
 msgid "Quick color selector menu"
@@ -3884,7 +4353,7 @@ msgstr "빠른 색상 선택기 메뉴"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2102
 msgid "The color ramp drop-down shortcut"
-msgstr ""
+msgstr "색상표 드롭다운 단축키"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2104
 msgid ""
@@ -3893,10 +4362,13 @@ msgid ""
 "for the colors, pressing the |selectColorRamp| color ramp button opens the "
 "corresponding color ramp type dialog allowing you to change its properties."
 msgstr ""
+"색상표는 하나 이상의 피처에 색상 집합을 적용할 수 있는 실용적인 방법입니다. :ref:`color-ramp` 절에서 색상표를 생성하는 "
+"방법을 설명하고 있습니다. 색상의 경우, |selectColorRamp| 색상표 버튼을 클릭하면 그에 대응하는 유형의 색상표 대화창이 "
+"열려 그 속성을 변경할 수 있습니다."
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2114
 msgid "Customizing a colorbrewer ramp"
-msgstr ""
+msgstr "컬러브루어(colorbrewer) 색상표 사용자 지정하기"
 
 #: ../../docs/user_manual/introduction/general_tools.rst:2116
 msgid ""

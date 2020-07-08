@@ -3,6 +3,9 @@
 # This file is distributed under the same license as the QGIS Documentation package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,6 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:27+0000\n"
+"Last-Translator: Rodrigo Armesto <rodri_Armesto@hotmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/qgis/teams/6144/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,11 +24,11 @@ msgstr ""
 #: ../../docs/user_manual/style_library/style_manager.rst:8
 #: ../../docs/user_manual/style_library/style_manager.rst:43
 msgid "The Style Manager"
-msgstr ""
+msgstr "El administrador de Estilo"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:18
 msgid "The Style Manager dialog"
-msgstr ""
+msgstr "El diálogo del Administrador de Estilo"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:20
 msgid ""
@@ -36,21 +40,34 @@ msgid ""
 "opened with that profile. Style items can also be shared with others thanks "
 "to the export/import capabilities of the :guilabel:`Style Manager` dialog."
 msgstr ""
+"El :guilabel: `Administrador de Estilo` es el lugar donde puede administrar "
+"y crear elementos de estilo genéricos. Estos son símbolos, rampas de color, "
+"formatos de texto o configuraciones de etiquetas que se pueden utilizar para"
+" simbolizar entidades, capas o diseños de impresión. Se almacenan en la base"
+" de datos :file:`symbology-style.db` en el activo :ref:`user profile "
+"<user_profiles>` y compartido con todos los archivos de proyecto abiertos "
+"con ese perfil. Los elementos de estilo también se pueden compartir con "
+"otros gracias a las capacidades de exportación/importación del diálogo "
+":guilabel:`Administrador de Estilo`."
 
 #: ../../docs/user_manual/style_library/style_manager.rst:29
 msgid "You can open that modeless dialog either:"
-msgstr ""
+msgstr "Puede abrir este cuadro de diálogo no modal:"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:31
 msgid ""
 "from the :menuselection:`Settings -->` |styleManager| :menuselection:`Style "
 "Manager...` menu"
 msgstr ""
+"desde el menú :menuselection:`Ajustes -->` |styleManager| "
+":menuselection:`Administrador de Estilo...`"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:33
 msgid ""
 "with the |styleManager| :sup:`Style Manager` button from the Project toolbar"
 msgstr ""
+"con el botón |styleManager| :sup:`Administrador de Estilo` desde la barra de"
+" herramientas del Proyecto"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:34
 msgid ""
@@ -58,16 +75,21 @@ msgid ""
 ":menuselection:`Layer Properties -->` menu (while :ref:`configuring a symbol"
 " <symbol-selector>` or :ref:`formatting a text <showlabels>`)."
 msgstr ""
+"o con el botón |styleManager| :sup:`Administrador de Estilo` desde un menú "
+"vector :menuselection:`Propiedades de Capa -->` (si bien :ref:`configuring a"
+" symbol <symbol-selector>` o :ref:`formatting a text <showlabels>`)."
 
 #: ../../docs/user_manual/style_library/style_manager.rst:50
 msgid "Organizing style items"
-msgstr ""
+msgstr "Organizando elementos de estilo"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:52
 msgid ""
 "The :guilabel:`Style Manager` dialog displays in its center a frame with "
 "previewed items organized into tabs:"
 msgstr ""
+"El diálogo :guilabel:`Administrador de Estilo` muestra en su centro un marco"
+" con elementos previsualizados organizados en pestañas:"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:55
 msgid ""
@@ -75,22 +97,25 @@ msgid ""
 "symbols and label settings as well as predefined color ramps and text "
 "formats;"
 msgstr ""
+":guilabel:`Todo` para una colección completa de símbolos de puntos, lineales"
+" y de superficie y configuraciones de etiquetas, así como rampas de colores "
+"y formatos de texto predefinidos;"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:57
 msgid "|pointLayer| :guilabel:`Marker` for point symbols only;"
-msgstr ""
+msgstr "|pointLayer| :guilabel:`Marcador` solo para símbolos de puntos;"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:58
 msgid "|lineLayer| :guilabel:`Line` for linear symbols only;"
-msgstr ""
+msgstr "|lineLayer| :guilabel:`Línea` solo para símbolos lineales;"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:59
 msgid "|polygonLayer| :guilabel:`Fill` for surface symbols only;"
-msgstr ""
+msgstr "|polygonLayer| :guilabel:`Relleno` solo para símbolos de superficie;"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:60
 msgid "|color| :guilabel:`Color ramp`;"
-msgstr ""
+msgstr "|color| :guilabel:`Rampa de color`;"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:61
 msgid ""
@@ -99,6 +124,10 @@ msgid ""
 "(i.e. all the formatting parts of the label settings, which for instance can"
 " be used in layouts);"
 msgstr ""
+"|text| :guilabel:`Formato de Texto` para administrar :ref:`text formats "
+"<text_format>`, que almacenan la fuente, el color, los búferes, las sombras "
+"y los fondos de los textos (es decir, todas las partes de formato de la "
+"configuración de la etiqueta, que por ejemplo se pueden usar en diseños);"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:65
 msgid ""
@@ -106,22 +135,31 @@ msgid ""
 "<showlabels>`, which include the text formats and some layer-type specific "
 "settings such as label placement, priority, callouts, rendering..."
 msgstr ""
+"|labeling| :guilabel:`Ajustes de etiquetado` para administrar :ref:`label "
+"settings <showlabels>`, que incluyen los formatos de texto y algunas "
+"configuraciones específicas de tipo de capa, como ubicación de etiquetas, "
+"prioridad, rótulos, renderizado ..."
 
 #: ../../docs/user_manual/style_library/style_manager.rst:70
 msgid ""
 "For each family of items, you can organize the elements into different "
 "categories, listed in the panel on the left:"
 msgstr ""
+"Para cada familia de elementos, puede organizar los elementos en diferentes "
+"categorías, que se enumeran en el panel de la izquierda:"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:73
 msgid ""
 "**Favorites**: displayed by default when configuring an item, it shows an "
 "extensible set of items;"
 msgstr ""
+"**Favoritos**: mostrado de manera predeterminada al configurar un elemento, "
+"muestra un conjunto extensible de elementos;"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:75
 msgid "**All**: lists all the available items for the active type;"
 msgstr ""
+"**Todo**: enumera todos los elementos disponibles para el tipo activo;"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:76
 msgid ""
@@ -132,6 +170,14 @@ msgid ""
 "or select the |signPlus| :guilabel:`Add Tag...` from any tag contextual "
 "menu;"
 msgstr ""
+"**Etiquetas**: muestra una lista de etiquetas que puede usar para "
+"identificar los elementos. Un artículo se puede etiquetar más de una vez. "
+"Seleccione una etiqueta en la lista y las pestañas se actualizan para "
+"mostrar solo los elementos que le pertenecen. Para crear una nueva etiqueta "
+"que luego pueda adjuntar a un conjunto de elementos, use el botón "
+":guilabel:`Agregar etiqueta ...` o seleccione el |signPlus| "
+":guilabel:`Agregar etiqueta ...` desde cualquier menú contextual de "
+"etiquetas;"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:82
 msgid ""
@@ -143,10 +189,19 @@ msgid ""
 "setting that satisfies the entered condition(s) is automatically added to "
 "the smart group."
 msgstr ""
+"**Grupo inteligente**: un grupo inteligente busca dinámicamente sus símbolos"
+" de acuerdo con las condiciones establecidas ( ver, por ejemplo, "
+"figure_smart_group_). Haga click en el botón: guilabel: `Agregar grupo "
+"inteligente ...` para crear grupos inteligentes. El cuadro de diálogo le "
+"permite ingresar una expresión para filtrar los elementos a seleccionar ( "
+"tiene una etiqueta particular, tiene una cadena en su nombre, etc.). "
+"Cualquier símbolo, rampa de color, formato de texto o configuración de "
+"etiqueta que satisfaga las condiciones ingresadas se agrega automáticamente "
+"al grupo inteligente."
 
 #: ../../docs/user_manual/style_library/style_manager.rst:95
 msgid "Creating a Smart Group"
-msgstr ""
+msgstr "Creando un grupo inteligente"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:97
 msgid ""
@@ -156,12 +211,21 @@ msgid ""
 "tags are filled by the user. To edit any of those categories, you can "
 "either:"
 msgstr ""
+"Las etiquetas y los grupos inteligentes no son mutuamente excluyentes: son "
+"simplemente dos formas diferentes de organizar sus elementos de estilo. A "
+"diferencia de los grupos inteligentes que obtienen automáticamente sus "
+"elementos pertenecientes en función de las restricciones de entrada, el "
+"usuario llena las etiquetas. Para editar cualquiera de esas categorías, "
+"puede:"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:103
 msgid ""
 "select the items, right-click and choose :menuselection:`Add to Tag -->` and"
 " then select the tag name or create a new tag;"
 msgstr ""
+"seleccione los elementos, haga click con el botón derecho y elija "
+":menuselection:`Agregar a etiqueta ->` y luego seleccione el nombre de la "
+"etiqueta o cree una nueva etiqueta;"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:105
 msgid ""
@@ -170,6 +234,11 @@ msgid ""
 " deselect it. When selection is finished, press :menuselection:`Modify "
 "group... --> Finish Tagging`."
 msgstr ""
+"seleccione la etiqueta y presione :menuselection:`Modificar grupo ... -> "
+"Adjuntar etiqueta seleccionada a símbolos`. Aparece una casilla de "
+"verificación junto a cada elemento para ayudarlo a seleccionarlo o anular su"
+" selección. Cuando finalice la selección, presione: menuselection: "
+"`Modificar grupo ... -> Finalizar etiquetado`."
 
 #: ../../docs/user_manual/style_library/style_manager.rst:109
 msgid ""
@@ -178,6 +247,10 @@ msgid ""
 "Group Editor` dialog. This option is also available in the contextual menu "
 "of the smart group."
 msgstr ""
+"seleccione el grupo inteligente, presione :menuselection:`Modificar grupo "
+"... -> Editar grupo inteligente ...` y configure un nuevo conjunto de "
+"restricciones en el diálogo: guilabel: `Editor de grupo inteligente`. Esta "
+"opción también está disponible en el menú contextual del grupo inteligente."
 
 #: ../../docs/user_manual/style_library/style_manager.rst:114
 msgid ""
@@ -185,10 +258,13 @@ msgid ""
 "|signMinus| :guilabel:`Remove` button. Note that this does not delete the "
 "items grouped in the category."
 msgstr ""
+"Para eliminar una etiqueta o un grupo inteligente, haga click con el botón "
+"derecho en él y seleccione el botón |signMinus| :guilabel:`Eliminar`. Tenga "
+"en cuenta que esto no elimina los elementos agrupados en la categoría."
 
 #: ../../docs/user_manual/style_library/style_manager.rst:119
 msgid "Adding, editing or removing an item"
-msgstr ""
+msgstr "Agregar, editar o eliminar un elemento"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:121
 msgid ""
@@ -196,6 +272,9 @@ msgid ""
 "contents depend on the active category (tag, smart group, favorites...). "
 "When a tab is enabled, you can:"
 msgstr ""
+"Como se vio anteriormente, los elementos de estilo se enumeran en diferentes"
+" pestañas cuyo contenido depende de la categoría activa (etiqueta, grupo "
+"inteligente, favoritos ...). Cuando una pestaña está habilitada, puede:"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:125
 msgid ""
@@ -203,12 +282,19 @@ msgid ""
 " item following :ref:`symbols <symbol-selector>`, :ref:`color ramps <color-"
 "ramp>` or :ref:`text format and label <showlabels>` builder description."
 msgstr ""
+"Agregar nuevos elementos: presione el botón |signPlus| :sup:`Agregar "
+"elemento` y configurar el elemento de la siguiente manera :ref:`symbols "
+"<symbol-selector>`, :ref:`color ramps <color-ramp>` o :ref:`text format and "
+"label <showlabels>`"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:128
 msgid ""
 "Modify an existing item: select an item and press |symbologyEdit| :sup:`Edit"
 " item` button and configure as mentioned above."
 msgstr ""
+"Modificar un elemento existente: seleccione un elemento y presione el botón "
+"|symbologyEdit| :sup:`Editar elemento` y configurar como se mencionó "
+"anteriormente."
 
 #: ../../docs/user_manual/style_library/style_manager.rst:130
 msgid ""
@@ -216,68 +302,87 @@ msgid ""
 "and click |signMinus| :sup:`Remove item` (also available through right-"
 "click). The item will be deleted from the local database."
 msgstr ""
+"Eliminar elementos existentes: para eliminar un elemento que ya no necesita,"
+" selecciónelo y haga click en |signMinus| : sup:`Eliminar elemento` (también"
+" disponible haciendo click derecho). El elemento se eliminará de la base de "
+"datos local."
 
 #: ../../docs/user_manual/style_library/style_manager.rst:134
 msgid ""
 "Note that the :guilabel:`All` tab provides access to these options for every"
 " type of item."
 msgstr ""
+"Tenga en cuenta que la pestaña :guilabel:`Todos` proporciona acceso a estas "
+"opciones para cada tipo de elemento."
 
 #: ../../docs/user_manual/style_library/style_manager.rst:137
 msgid "Right-clicking over a selection of items also allows you to:"
 msgstr ""
+"Hacer click derecho sobre una selección de elementos también le permite:"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:139
 msgid ":guilabel:`Add to Favorites`;"
-msgstr ""
+msgstr ":guilabel:`Añadir a Favoritos`;"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:140
 msgid ":guilabel:`Remove from Favorites`;"
-msgstr ""
+msgstr ":guilabel:`Borrar de Favoritos`;"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:141
 msgid ""
 ":menuselection:`Add to Tag -->` and select the appropriate tag or create a "
 "new one to use; the currently assigned tags are checked;"
 msgstr ""
+":menuselection:`Añadir a etiqueta -->` y seleccione la etiqueta apropiada o "
+"cree una nueva para usar; se verifican las etiquetas asignadas actualmente;"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:143
 msgid ":guilabel:`Clear Tags`: detaching the symbols from any tag;"
 msgstr ""
+":guilabel:`Limpiar Etiquetas`: separar los símbolos de cualquier etiqueta;"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:144
 msgid ":guilabel:`Remove Item(s)`;"
-msgstr ""
+msgstr ":guilabel:`Borrar elemento(s)`;"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:145
 msgid ":guilabel:`Edit Item`: applies to the item you right-click over;"
 msgstr ""
+":guilabel:`Editar elemento`: se aplica al elemento sobre el que hace click "
+"con el botón derecho;"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:146
 msgid ":guilabel:`Copy Item`;"
-msgstr ""
+msgstr ":guilabel:`Copiar elemento`;"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:147
 msgid ""
 ":guilabel:`Paste Item ...`: pasting to one of the categories of the style "
 "manager or elsewhere in QGIS (symbol or color buttons)"
 msgstr ""
+":guilabel:`Pegar elemento...`: pegar en una de las categorías del "
+"administrador de estilo o en cualquier otro lugar de QGIS (botones de "
+"símbolo o color)"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:149
 msgid ""
 ":guilabel:`Export Selected Symbol(s) as PNG...` (only available with "
 "symbols);"
 msgstr ""
+":guilabel:`Exportar Símbolo(s) Seleccionados como PNG...` (solo disponible "
+"con símbolos);"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:150
 msgid ""
 ":guilabel:`Export Selected Symbol(s) as SVG...` (only available with "
 "symbols);"
 msgstr ""
+":guilabel:`Exportar Símbolo(s) Seleccionados como SVG...` (solo disponible "
+"con símbolos);"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:155
 msgid "Sharing style items"
-msgstr ""
+msgstr "Compartiendo elementos de estilo"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:157
 msgid ""
@@ -286,26 +391,35 @@ msgid ""
 "text formats and label settings with others. These options are also "
 "available through right-click over the items."
 msgstr ""
+"La herramienta |sharing| :guilabel:`Importar/Exportar`, en la parte inferior"
+" izquierda del cuadro de diálogo Administrador de Estilo, ofrece opciones "
+"para compartir fácilmente símbolos, rampas de color, formatos de texto y "
+"configuraciones de etiquetas con otros. Estas opciones también están "
+"disponibles haciendo clic derecho sobre los elementos."
 
 #: ../../docs/user_manual/style_library/style_manager.rst:163
 msgid "Exporting items"
-msgstr ""
+msgstr "Esportando elementos"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:165
 msgid "You can export a set of items to an :file:`.XML` file:"
-msgstr ""
+msgstr "Puede exportar un conjunto de elementos a un archivo :file:`.XML`:"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:167
 msgid ""
 "Expand the |sharing| :guilabel:`Import/Export` drop-down menu and select "
 "|fileSave| :guilabel:`Export Item(s)...`"
 msgstr ""
+"Expanda el menú desplegable |sharing| :guilabel:`Importar/Exportar` y "
+"seleccione |fileSave| :guilabel:`Exportar elemento(s)...`"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:169
 msgid ""
 "Choose the items you'd like to integrate. Selection can be done with the "
 "mouse or using a tag or a group previously set."
 msgstr ""
+"Elija los elementos que le gustaría integrar. La selección se puede hacer "
+"con el ratón o usando una etiqueta o un grupo previamente establecido."
 
 #: ../../docs/user_manual/style_library/style_manager.rst:171
 msgid ""
@@ -314,10 +428,14 @@ msgid ""
 "containing all the selected items. This file can then be imported in another"
 " user's style library."
 msgstr ""
+"Presione :guilabel:`Exportar` cuando esté listo. Se le pedirá que indique el"
+" destino del archivo guardado. El formato XML genera un solo archivo que "
+"contiene todos los elementos seleccionados. Este archivo se puede importar "
+"en la biblioteca de estilos de otro usuario."
 
 #: ../../docs/user_manual/style_library/style_manager.rst:181
 msgid "Exporting style items"
-msgstr ""
+msgstr "Exportando elementos de estilo"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:183
 msgid ""
@@ -328,86 +446,115 @@ msgid ""
 ":menuselection:`Settings --> Options --> System` menu of another user, "
 "allowing him direct access to all these symbols."
 msgstr ""
+"Cuando se seleccionan símbolos, también puede exportarlos a :file:`.PNG` o "
+":file:`.SVG`. La exportación a :file:`.PNG` o :file:`.SVG` (ambos no "
+"disponibles para otros tipos de elementos de estilo) crea un archivo para "
+"cada símbolo seleccionado en una carpeta determinada. La carpeta SVG se "
+"puede agregar a :guilabel:`Trayectorias SVG` en el menú "
+":menuselection:`Configuración -> Opciones -> Sistema` de otro usuario, lo "
+"que le permite el acceso directo a todos estos símbolos."
 
 #: ../../docs/user_manual/style_library/style_manager.rst:193
 msgid "Importing items"
-msgstr ""
+msgstr "Importando elementos"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:195
 msgid "You can extend your style library by importing new items:"
-msgstr ""
+msgstr "Puede ampliar su librería de estilo importando nuevos elementos:"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:197
 msgid ""
 "Expand the |sharing| :guilabel:`Import/Export` drop-down menu and select "
 "|fileOpen| :guilabel:`Import Item(s)` at the left bottom of the dialog."
 msgstr ""
+"Expanda el menú desplegable |sharing| :guilabel:`Importar/Exportar` y "
+"seleccione |fileOpen| :guilabel:`Importar elemento(s)` en la esquina "
+"inferior izquierda del diálogo."
 
 #: ../../docs/user_manual/style_library/style_manager.rst:199
 msgid ""
 "In the new dialog, indicate the source of the style items (it can be an "
 ":file:`.xml` file on the disk or a url)."
 msgstr ""
+"En el nuevo cuadro de diálogo, indique la fuente de los elementos de estilo "
+"(puede ser un archivo :file:`.xml` en el disco o una url)."
 
 #: ../../docs/user_manual/style_library/style_manager.rst:201
 msgid ""
 "Set whether to |unchecked| :guilabel:`Add to favorites` the items to import."
 msgstr ""
+"Establecer si |unchecked| :guilabel:`Agregar a favoritos` los elementos a "
+"importar."
 
 #: ../../docs/user_manual/style_library/style_manager.rst:202
 msgid ""
 "Check |unchecked| :guilabel:`Do not import embedded tags` to avoid the "
 "import of tags associated to the items being imported."
 msgstr ""
+"Marque |unchecked| :guilabel:`No importar etiquetas incrustadas` para evitar"
+" la importación de etiquetas asociadas a los artículos que se importan."
 
 #: ../../docs/user_manual/style_library/style_manager.rst:204
 msgid ""
 "Give the name of any :guilabel:`Additional tag(s)` to apply to the new "
 "items."
 msgstr ""
+"Dé el nombre de cualquier :guilabel:`Etiqueta adicional(es)'para aplicar a "
+"los nuevos elementos."
 
 #: ../../docs/user_manual/style_library/style_manager.rst:205
 msgid "Select from the preview the symbols you want to add to your library."
 msgstr ""
+"Seleccione de la vista previa los símbolos que desea agregar a su "
+"biblioteca."
 
 #: ../../docs/user_manual/style_library/style_manager.rst:206
 msgid "And press :guilabel:`Import`."
-msgstr ""
+msgstr "Y presione :guilabel:`Importar`."
 
 #: ../../docs/user_manual/style_library/style_manager.rst:213
 msgid "Importing style items"
-msgstr ""
+msgstr "Importando elementos de estilo"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:219
 msgid "Using the Browser panel"
-msgstr ""
+msgstr "Usando el panel Navegador"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:221
 msgid ""
 "It's also possible to import style items into the active user profile style "
 "database directly from the :guilabel:`Browser` panel:"
 msgstr ""
+"También es posible importar elementos de estilo en la base de datos de "
+"estilo de perfil de usuario activo directamente desde el panel "
+":guilabel:`Navegador`:"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:224
 msgid "Select the style :file:`.xml` file in the browser"
-msgstr ""
+msgstr "Seleccione el archivo de estilo :file:`.xml` en el navegador"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:225
 msgid ""
 "Drag-and-drop it over the map canvas or right-click and select "
 ":guilabel:`Import Style...`"
 msgstr ""
+"Arrástrelo y suéltelo sobre el lienzo del mapa o haga click con el botón "
+"derecho y seleccione :guilabel:`Importar estilo ...`"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:227
 msgid ""
 "Fill the :guilabel:`Import Items` dialog following :ref:`import_style_items`"
 msgstr ""
+"Rellene el siguiente diálogo :guilabel:`Importar elementos`  "
+":ref:`import_style_items`"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:228
 msgid ""
 "Press :guilabel:`Import` and the selected style items are added to the style"
 " database"
 msgstr ""
+"Presione :guilabel:`Importar 'y los elementos de estilo seleccionados se "
+"agregan a la base de datos de estilos"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:231
 msgid ""
@@ -417,26 +564,37 @@ msgid ""
 "database. Tags can be assigned to items. Also available through right-click,"
 " :guilabel:`Open Style...` command."
 msgstr ""
+"Al hacer doble click en el archivo de estilo en el navegador, se abre el "
+"diálogo :guilabel:Administrador de Estilo` que muestra los elementos del "
+"archivo. Puede seleccionarlos y presionar :guilabel:`Copiar al estilo "
+"predeterminado ...` para importarlos a la base de datos de estilo activa. "
+"Las etiquetas pueden asignarse a elementos. También disponible haciendo "
+"click derecho, comando :guilabel:`Abrir estilo ...`."
 
 #: ../../docs/user_manual/style_library/style_manager.rst:242
 msgid "Opening a style items file"
-msgstr ""
+msgstr "Abriendo un archivo de elementos de estilo"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:244
 msgid ""
 "The dialog also allows to export single symbols as :file:`.PNG` or "
 ":file:`.SVG` files."
 msgstr ""
+"El cuadro de diálogo también permite exportar símbolos individuales como "
+":file:`.PNG` o :file:`.SVG`."
 
 #: ../../docs/user_manual/style_library/style_manager.rst:250
 msgid "Setting a Color Ramp"
-msgstr ""
+msgstr "Estableciendo una Rampa de Color"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:258
 msgid ""
 "The Color ramp tab in the :guilabel:`Style Manager` dialog helps you preview"
 " different color ramps based on the category selected in the left panel."
 msgstr ""
+"La pestaña Rampa de color en el diálogo :guilabel:`Administrador de estilo` "
+"le ayuda a obtener una vista previa de diferentes rampas de color según la "
+"categoría seleccionada en el panel izquierdo."
 
 #: ../../docs/user_manual/style_library/style_manager.rst:261
 msgid ""
@@ -444,6 +602,9 @@ msgid ""
 "|signPlus| :sup:`Add item` button. The button reveals a drop-down list to "
 "choose the ramp type:"
 msgstr ""
+"Para crear una rampa de color personalizada, active la pestaña Rampa de "
+"color y haga clic en el botón |signPlus| :sup:`Agregar elemento`. El botón "
+"revela una lista desplegable para elegir el tipo de rampa:"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:265
 msgid ""
@@ -451,16 +612,23 @@ msgid ""
 "which can be **continuous** or **discrete**. With double-clicking the ramp "
 "preview, you can add as many intermediate color stops as you want."
 msgstr ""
+":guilabel:`Gradiente`: Dados los colores de inicio y fin, genere una rampa "
+"de color que puede ser **continua** o **discreta**. Al hacer doble click en "
+"la vista previa de la rampa, puede agregar tantas paradas de color "
+"intermedias como desee."
 
 #: ../../docs/user_manual/style_library/style_manager.rst:274
 msgid "Example of custom gradient color ramp with multiple stops"
 msgstr ""
+"Ejemplo de rampa de color degradado personalizado con múltiples paradas"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:276
 msgid ""
 ":guilabel:`Color presets`: allows to create a color ramp consisting of a "
 "list of colors selected by the user;"
 msgstr ""
+":guilabel:`preajustes de color`: permite crear una rampa de color que "
+"consiste en una lista de colores seleccionados por el usuario;"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:278
 msgid ""
@@ -468,12 +636,19 @@ msgid ""
 "for :guilabel:`Hue`, :guilabel:`Saturation`, :guilabel:`Value` and "
 ":guilabel:`Opacity` and a number of colors (:guilabel:`Classes`);"
 msgstr ""
+":guilabel:`Aleatorio`: crea un conjunto aleatorio de colores basado en el "
+"rango de valores para :guilabel:`Matiz`, :guilabel:`Saturación`, "
+":guilabel:`Valor` y :guilabel:`Opacidad` y varios colores (:guilabel:`Clases"
+" `);"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:281
 msgid ""
 ":guilabel:`Catalog: ColorBrewer`: a set of predefined discrete color "
 "gradients you can customize the number of colors in the ramp;"
 msgstr ""
+":guilabel:`Catálogo: ColorBrewer`: un conjunto de gradientes de color "
+"discretos predefinidos que puede personalizar el número de colores en la "
+"rampa;"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:283
 msgid ""
@@ -481,14 +656,19 @@ msgid ""
 "gradients to locally :guilabel:`save as standard gradient`. The cpt-city "
 "option opens a new dialog with hundreds of themes included 'out of the box'."
 msgstr ""
+"o :guilabel:`Catálogo: cpt-city`: un acceso a todo un catálogo de gradientes"
+" de color a nivel local :guilabel:`guardar como gradiente estándar`. La "
+"opción cpt-city abre un nuevo diálogo con cientos de temas incluidos "
+"\"listos para usar\"."
 
 #: ../../docs/user_manual/style_library/style_manager.rst:292
 msgid "cpt-city dialog with hundreds of color ramps"
-msgstr ""
+msgstr "diálogo cpt-city con cientos de rampas de color"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:294
 msgid "**Easily adjust the color stops of the gradient color ramp**"
 msgstr ""
+"**Ajuste fácilmente las paradas de color de la rampa de color degradado**"
 
 #: ../../docs/user_manual/style_library/style_manager.rst:296
 msgid ""
@@ -500,3 +680,11 @@ msgid ""
 " position` spinbox. Pressing :guilabel:`Delete stop` as well as :kbd:`DEL` "
 "key removes the selected color stop."
 msgstr ""
+"Al hacer doble click en la vista previa de la rampa o arrastrar y soltar un "
+"color desde el área de color en la vista previa de la rampa, se agrega una "
+"nueva parada de color. Cada parada de color puede modificarse utilizando los"
+" widgets :ref:`color-selector` o trazando cada uno de sus parámetros. "
+"También puede reposicionarlo con el mouse, las teclas de flecha (combínelas "
+"con la tecla :kbd:`Shift` para un movimiento más grande) o el spinbox "
+":guilabel:`Posición relativa`. Presionando :guilabel:`Borrar stop`, así como"
+" la tecla :kbd:`DEL` elimina el color seleccionado."

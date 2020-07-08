@@ -183,6 +183,8 @@ msgid ""
 "The following example shows how to check if a given expression can be parsed"
 " correctly:"
 msgstr ""
+"O exemplo a seguir mostra como verificar se uma determinada expressão pode "
+"ser analisada corretamente:"
 
 #: ../../docs/pyqgis_developer_cookbook/expressions.rst:103
 msgid "Evaluating Expressions"
@@ -196,6 +198,11 @@ msgid ""
 "specified computational steps, which can range from simple arithmetic to "
 "aggregate expressions."
 msgstr ""
+"Expressões podem ser usadas em diferentes contextos, por exemplo, para "
+"filtrar recursos ou calcular novos valores de campo. De qualquer forma, a "
+"expressão deve ser avaliada. Isso significa que seu valor é calculado "
+"executando as etapas computacionais especificadas, que podem variar de "
+"aritmética simples a expressões agregadas."
 
 #: ../../docs/pyqgis_developer_cookbook/expressions.rst:112
 msgid "Basic Expressions"
@@ -204,6 +211,7 @@ msgstr "Expressões Básicas"
 #: ../../docs/pyqgis_developer_cookbook/expressions.rst:114
 msgid "This basic expression evaluates to 1, meaning it is true:"
 msgstr ""
+"Essa expressão básica é avaliada como 1, o que significa que é verdadeiro:"
 
 #: ../../docs/pyqgis_developer_cookbook/expressions.rst:123
 msgid "Expressions with features"
@@ -216,22 +224,30 @@ msgid ""
 " evaluate function in order to allow the expression to access the feature's "
 "field values."
 msgstr ""
+"Para avaliar uma expressão em relação a um recurso, um objeto  "
+":class:`QgsExpressionContext <qgis.core.QgsExpressionContext>` deve ser "
+"criado e passado à função de avaliação para permitir que a expressão acesse "
+"os valores de campo do recurso."
 
 #: ../../docs/pyqgis_developer_cookbook/expressions.rst:129
 msgid ""
 "The following example shows how to create a feature with a field called "
 "\"Column\" and how to add this feature to the expression context."
 msgstr ""
+"O exemplo a seguir mostra como criar um recurso com um campo chamado "
+"\"Coluna\" e como adicionar esse recurso ao contexto da expressão."
 
 #: ../../docs/pyqgis_developer_cookbook/expressions.rst:147
 msgid ""
 "The following is a more complete example of how to use expressions in the "
 "context of a vector layer, in order to compute new field values:"
 msgstr ""
+"A seguir, é apresentado um exemplo mais completo de como usar expressões no "
+"contexto de uma camada vetorial, para calcular novos valores de campo:"
 
 #: ../../docs/pyqgis_developer_cookbook/expressions.rst:214
 msgid "Filtering a layer with expressions"
-msgstr ""
+msgstr "Filtrando uma camada com expressões"
 
 #: ../../docs/pyqgis_developer_cookbook/expressions.rst:216
 msgid ""
@@ -243,9 +259,11 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/expressions.rst:243
 msgid "Handling expression errors"
-msgstr ""
+msgstr "Manipulando erros de expressão"
 
 #: ../../docs/pyqgis_developer_cookbook/expressions.rst:245
 msgid ""
 "Expression-related errors can occur during expression parsing or evaluation:"
 msgstr ""
+"Erros relacionados à expressão podem ocorrer durante a análise ou análise de"
+" expressão:"

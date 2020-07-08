@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Aline Furlanetto Viero <afviero@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:19+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Aline Furlanetto Viero <afviero@gmail.com>, 2020\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -401,6 +402,14 @@ msgid ""
 "is what you want to search for. Since we don't know what phrase to search "
 "for yet, we'll just enter the first part (without the search phrase)."
 msgstr ""
+"Geralmente, quando você usa o Google, você insire sua frase de pesquisa na "
+"barra de Pesquisa do Google. Mas, neste caso, você deseja que seu computador"
+" faça isso por você. A maneira como você instrui o Google a procurar algo "
+"(se não quiser usar a barra de pesquisa diretamente) é fornecendo ao "
+"navegador da Internet o endereço "
+"``https://www.google.com/search?q=SEARCH_PHRASE``, onde ``SEARCH_PHRASE`` é "
+"o que você deseja pesquisar. Como ainda não sabemos qual frase procurar, "
+"apenas digitaremos a primeira parte (sem a frase de pesquisa)."
 
 #: ../../docs/training_manual/create_vector_data/actions.rst:196
 msgid ""
@@ -435,6 +444,10 @@ msgid ""
 "\"name\" %]` tells QGIS to use the contents of the :kbd:`name` field as the "
 "phrase to search for."
 msgstr ""
+"O que isso significa é que o QGIS abrirá o navegador e o enviará para o "
+"endereço ``https://www.google.com/search?q=[% \"name\"%]``. Mas "
+":kbd:`[%\"name\"%]` diz ao QGIS para usar o conteúdo do campo :kbd:`name` "
+"como a frase a ser pesquisada."
 
 #: ../../docs/training_manual/create_vector_data/actions.rst:219
 msgid ""
@@ -444,6 +457,11 @@ msgid ""
 "cause your browser to visit Google, which will in turn search for \"Marloth "
 "Nature Reserve\"."
 msgstr ""
+"Portanto, se, por exemplo, a área de uso do solo em que você clicar se "
+"chamar ``Marloth Nature Reserve'', o QGIS enviará o navegador para "
+"``https://www.google.com/search?q=Marloth%20Nature % 20Reserve``, que fará "
+"com que seu navegador visite o Google, que, por sua vez, pesquisará "
+"\"Marloth Nature Reserve\"."
 
 #: ../../docs/training_manual/create_vector_data/actions.rst:225
 msgid "If you haven't done so already, set everything up as explained above."
@@ -534,7 +552,7 @@ msgstr ""
 
 #: ../../docs/training_manual/create_vector_data/actions.rst:264
 msgid "``https://wikipedia.org/wiki/SEARCH_PHRASE``"
-msgstr ""
+msgstr "``https://wikipedia.org/wiki/SEARCH_PHRASE``"
 
 #: ../../docs/training_manual/create_vector_data/actions.rst:266
 msgid "To create the layer action:"

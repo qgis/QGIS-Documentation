@@ -82,7 +82,7 @@ msgstr ""
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:23
 msgid "Pan around the map while keeping an eye on the :guilabel:`Scale` field"
-msgstr ""
+msgstr "Percorra o mapa enquanto observa o campo :guilabel:`Escala`"
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:25
 msgid ""
@@ -90,6 +90,9 @@ msgid ""
 "point that you zoomed into at :guilabel:`1:5 000 000`, which was at the "
 "center of your screen. All around that point, the scale is different."
 msgstr ""
+"Observou a mudança de escala? Isso ocorre porque você está se afastando do "
+"ponto em que você ampliou o zoom :guilabel:`1: 5 000 000`, que estava no "
+"centro da tela. Em torno desse ponto, a escala é diferente."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:29
 msgid ""
@@ -143,12 +146,17 @@ msgid ""
 "even if the data itself is in another CRS, QGIS can project it as if it were"
 " in a CRS of your choice."
 msgstr ""
+"Por padrão, o QGIS reprojeta os dados \"on the fly\". O que isso significa é"
+" que, mesmo que os dados estejam em outro SRC, o QGIS pode projetá-lo como "
+"se estivesse em um SRC de sua escolha."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:54
 msgid ""
 "You can change the CRS of the project by clicking on |projectionEnabled| "
 "button in the bottom right corner of QGIS."
 msgstr ""
+"Você pode alterar o SRC do projeto clicando no botão |projectionEnabled| no "
+"canto inferior direito do QGIS."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:57
 msgid ""
@@ -156,12 +164,17 @@ msgid ""
 ":guilabel:`Filter` field. One CRS (:guilabel:`NSIDC EASE-Grid 2.0 Global`, "
 "EPSG:6933) should appear in the list below."
 msgstr ""
+"Na caixa de diálogo mostrada, digite a palavra ``global`` no campo "
+":guilabel:`Filtrar`. Um SRC (:guilabel:`NSIDC EASE-Grid 2.0 Global`, EPSG: "
+"6933) deve aparecer na lista abaixo."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:60
 msgid ""
 "Click on the :guilabel:`NSIDC EASE-Grid 2.0 Global` to select it, then click"
 " :guilabel:`OK`."
 msgstr ""
+"Clique em :guilabel:`NSIDC EASE-Grid 2.0 Global` para selecioná-lo e clique "
+"em :guilabel:`OK`."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:63
 msgid ""
@@ -198,12 +211,16 @@ msgid ""
 "Add another vector layer to your map which has the data for South Africa "
 "only. You'll find it as :file:`exercise_data/world/RSA.shp`."
 msgstr ""
+"Adicione outra camada vetorial ao seu mapa que possua os dados somente para "
+"a África do Sul. Você o encontrará como :file:`exercise_data/world/RSA.shp`."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:75
 msgid ""
 "Load it and a quick way to see what is its CRS is by hovering the mouse over"
 " the layer in the legend. It is ``EPSG:3410``."
 msgstr ""
+"Carregue-o e veja rapidamente qual é o seu SRC, passando o mouse sobre a "
+"camada na legenda. É ``EPSG:3410``."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:78
 msgid "What do you notice?"
@@ -228,6 +245,10 @@ msgid ""
 "layer, it is always better to have the layer in a projected coordinate "
 "system."
 msgstr ""
+"Às vezes, você precisa exportar um conjunto de dados existente em outro SRC."
+" Como veremos na próxima lição, se você precisar fazer alguns cálculos de "
+"distância na camada, é sempre melhor ter a camada em um sistema de "
+"coordenadas projetado."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:91
 msgid ""
@@ -235,22 +256,30 @@ msgid ""
 "and not to single layers. This means that layers can have different CRS from"
 " the project even if you see them in the *correct* position."
 msgstr ""
+"Esteja ciente de que a reprojeção 'on the fly' está relacionada ao "
+"**projeto** e não a camadas únicas. Isso significa que as camadas podem ter "
+"SRC diferentes do projeto, mesmo que você as veja na posição *correta*."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:95
 msgid "But you can easily export the layer in another CRS."
-msgstr ""
+msgstr "Mas você pode exportar facilmente a camada em outro SRC."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:97
 msgid ""
 "Right-click on the :guilabel:`buildings` layer in the :guilabel:`Layers` "
 "panel"
 msgstr ""
+"Clique com o botão direito do mouse na camada :guilabel:`construções` no "
+"painel :guilabel:`Camadas`"
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:98
 msgid ""
 "Select :menuselection:`Export --> Save Features As...` in the menu that "
 "appears. You will be shown the :guilabel:`Save Vector Layer as...` dialog."
 msgstr ""
+"Selecione :menuselection:`Exportar --> Salvar Feição Como...` no menu que "
+"aparece. Você verá a caixa de diálogo :guilabel:`Salvar Camada Vetorial "
+"como...`."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:100
 msgid ""
@@ -281,16 +310,20 @@ msgid ""
 "The :guilabel:`CRS Selector` dialog will now appear. In its "
 ":guilabel:`Filter` field, search for ``34S``."
 msgstr ""
+"A caixa de diálogo :guilabel:`Seletor de SRC` será exibida. No campo "
+":guilabel:`Filtrar`, procure por ``34S``."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:108
 msgid "Select :guilabel:`WGS 84 / UTM zone 34S` from the list"
-msgstr ""
+msgstr "Selecione :guilabel: `WGS 84 / UTM zona 34S` da lista"
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:113
 msgid ""
 "Leave the other options unchanged. The :guilabel:`Save Vector Layer as...` "
 "dialog now looks like this:"
 msgstr ""
+"Deixe as outras opções inalteradas. A caixa de diálogo :guilabel:`Salvar "
+"Camada Vetorial como...` agora fica assim:"
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:119
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:153
@@ -302,6 +335,8 @@ msgid ""
 "You can now compare the old and new projections of the layer and see that "
 "they are in two different CRS but they are still overlapping."
 msgstr ""
+"Agora você pode comparar as projeções antiga e nova da camada e ver que elas"
+" estão em dois SRC diferentes, mas ainda estão sobrepostas."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:126
 msgid "|hard| |FA| Creating Your Own Projection"
@@ -317,7 +352,7 @@ msgstr ""
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:131
 msgid "Start a new map"
-msgstr ""
+msgstr "Inicie um novo mapa"
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:132
 msgid "Load the :file:`world/oceans.shp` dataset"
@@ -328,6 +363,8 @@ msgid ""
 "Go to :menuselection:`Settings --> Custom Projections...` and you'll see "
 "this dialog."
 msgstr ""
+"Vá para :menuelection:`Configurações --> Projeções personalizadas ...` e "
+"você verá esta caixa de diálogo."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:139
 msgid "Click on the |signPlus| button to create a new projection"
@@ -338,6 +375,8 @@ msgid ""
 "An interesting projection to use is called ``Van der Grinten I``. Enter its "
 "name in the :guilabel:`Name` field."
 msgstr ""
+"Uma projeção interessante a ser usada é chamada ``Van der Grinten I`. Digite"
+" seu nome no campo :guilabel:`Nome`."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:143
 msgid ""
@@ -349,17 +388,19 @@ msgstr ""
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:146
 msgid "Add the following string in the :guilabel:`Parameters` field::"
-msgstr ""
+msgstr "Adicione a seguinte string no campo :guilabel:`Parâmetros` ::"
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:154
 msgid "Click on the |projectionEnabled| button to change the project CRS"
-msgstr ""
+msgstr "Clique no |projectionEnabled| botão para alterar o SRC do projeto"
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:155
 msgid ""
 "Choose your newly defined projection (search for its name in the "
 ":guilabel:`Filter` field)"
 msgstr ""
+"Escolha sua projeção recém-definida (pesquise seu nome no campo "
+":guilabel:`Filtrar`)"
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:157
 msgid "On applying this projection, the map will be reprojected thus:"
@@ -389,6 +430,9 @@ msgid ""
 "article <https://anitagraser.com/2012/03/18/beautiful-global-projections-"
 "adding-custom-projections-to-qgis/>`_."
 msgstr ""
+"Os materiais para a seção *Avançado* desta lição foram extraídos deste "
+"artigo `<https://anitagraser.com/2012/03/18/beautiful-global-projections-"
+"adding-custom-projections-to-qgis/>`_ ."
 
 #: ../../docs/training_manual/vector_analysis/reproject_transform.rst:175
 msgid ""

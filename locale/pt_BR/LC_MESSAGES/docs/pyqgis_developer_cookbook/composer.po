@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Aline Furlanetto Viero <afviero@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:23+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Aline Furlanetto Viero <afviero@gmail.com>, 2020\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +24,7 @@ msgstr ""
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:10
 msgid "The code snippets on this page need the following imports:"
-msgstr ""
+msgstr "Os trechos de código nesta página precisam das seguintes importações:"
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:51
 msgid "Map Rendering and Printing"
@@ -36,6 +37,10 @@ msgid ""
 "tuned output by composing the map with the :class:`QgsLayout "
 "<qgis.core.QgsLayout>` class."
 msgstr ""
+"Geralmente, existem duas abordagens em que os dados de entrada devem ser "
+"renderizados como um mapa: seja rápido usando `QgsMapRendererJob` ou produza"
+" uma saída mais ajustada compondo o mapa com a classe :class:`QgsLayout "
+"<qgis.core.QgsLayout>`."
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:63
 msgid "Simple Rendering"
@@ -48,6 +53,11 @@ msgid ""
 "then constructing a :class:`QgsMapRendererJob <qgis.core.QgsMapRendererJob>`"
 " with those settings. The latter is then used to create the resulting image."
 msgstr ""
+"A renderização é feita criando um objeto :class:`QgsMapSettings "
+"<qgis.core.QgsMapSettings>` para definir as configurações de renderização e,"
+" em seguida, construindo um :class:`QgsMapRendererJob "
+"<qgis.core.QgsMapRendererJob>` com essas configurações. O último é usado "
+"para criar a imagem resultante."
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:69
 msgid "Here's an example:"
@@ -63,10 +73,14 @@ msgid ""
 "example above will probably not work: to get the right values from the "
 "extent calculations you have to explicitly set the destination CRS"
 msgstr ""
+"Se você tiver mais de uma camada e eles tiverem SRC diferente, o exemplo "
+"simples acima provavelmente não funcionará: para obter os valores corretos a"
+" partir dos cálculos de extensão, você deve definir explicitamente o SRC de "
+"destino"
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:111
 msgid "Output using print layout"
-msgstr ""
+msgstr "Saída usando layout de impressão"
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:113
 msgid ""
@@ -77,6 +91,12 @@ msgid ""
 "layouts can be then exported to PDF, raster images or directly printed on a "
 "printer."
 msgstr ""
+"O layout de impressão é uma ferramenta muito útil se você deseja obter uma "
+"saída mais sofisticada do que a simples renderização mostrada acima. É "
+"possível criar layouts de mapas complexos que consistem em visualizações de "
+"mapas, rõtulos, legendas, tabelas e outros elementos que geralmente estão "
+"presentes nos mapas em papel. Os layouts podem ser exportados para PDF, "
+"imagens raster ou diretamente impressas em uma impressora."
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:119
 msgid ""
@@ -87,6 +107,12 @@ msgid ""
 "<https://doc.qt.io/qt-5/graphicsview.html>`_, then you are encouraged to "
 "check the documentation now, because the layout is based on it."
 msgstr ""
+"O layout consiste de várias classes. Todos eles pertencem à biblioteca "
+"principal. O aplicativo QGIS possui uma GUI conveniente para a colocação dos"
+" elementos, embora não esteja disponível na biblioteca da GUI. Se você não "
+"estiver familiarizado com a estrutura `Qt Graphics View "
+"<https://doc.qt.io/qt-5/graphicsview.html>`_, recomendamos que verifique a "
+"documentação agora, porque o layout é baseado nela ."
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:126
 msgid ""
@@ -95,6 +121,10 @@ msgid ""
 "<https://doc.qt.io/qt-5/qgraphicsscene.html>`_ class. Let us create an "
 "instance of it:"
 msgstr ""
+"A classe central do layout é a classe :class:`QgsLayout "
+"<qgis.core.QgsLayout>`, que é derivada da classe Qt `QGraphicsScene "
+"<https://doc.qt.io/qt-5/qgraphicsscene.html>`_. Vamos criar uma instância "
+"dele:"
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:136
 msgid ""
@@ -102,12 +132,17 @@ msgid ""
 "objects are represented by classes that inherit from the base "
 ":class:`QgsLayoutItem <qgis.core.QgsLayoutItem>` class."
 msgstr ""
+"Agora podemos adicionar vários elementos (mapa, rõtulo, ...) ao layout. "
+"Todos esses objetos são representados por classes que herdam da classe base "
+":class:`QgsLayoutItem <qgis.core.QgsLayoutItem>`."
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:139
 msgid ""
 "Here's a description of some of the main layout items that can be added to a"
 " layout."
 msgstr ""
+"Aqui está uma descrição de alguns dos principais itens de layout que podem "
+"ser adicionados a um layout."
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:141
 msgid ""
@@ -143,11 +178,11 @@ msgstr "Imagem"
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:179
 msgid "basic shape"
-msgstr ""
+msgstr "forma básica"
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:180
 msgid "nodes based shape"
-msgstr ""
+msgstr "forma baseada em nós"
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:204
 msgid "table"
@@ -156,6 +191,8 @@ msgstr "Tabela"
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:206
 msgid "Once an item is added to the layout, it can be moved and resized:"
 msgstr ""
+"Depois que um item é adicionado ao layout, ele pode ser movido e "
+"redimensionado:"
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:213
 msgid ""
@@ -168,6 +205,9 @@ msgid ""
 "templates which are essentially compositions with all their items saved to a"
 " .qpt file (with XML syntax)."
 msgstr ""
+"Além de criar os itens de layout manualmente, o QGIS oferece suporte a "
+"modelos de layout que são essencialmente composições com todos os itens "
+"salvos em um arquivo .qpt (com sintaxe XML)."
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:224
 msgid ""
@@ -175,26 +215,33 @@ msgid ""
 "to the composition), we can proceed to produce a raster and/or vector "
 "output."
 msgstr ""
+"Quando a composição estiver pronta (os itens de layout foram criados e "
+"adicionados à composição), podemos continuar produzindo uma saída raster "
+"e/ou vetorial."
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:230
 msgid "Exporting the layout"
-msgstr ""
+msgstr "Exportando o layout"
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:232
 msgid ""
 "To export a layout, the :class:`QgsLayoutExporter "
 "<qgis.core.QgsLayoutExporter>` class must be used."
 msgstr ""
+"Para exportar um layout, a classe :class: `QgsLayoutExporter "
+"<qgis.core.QgsLayoutExporter>` deve ser usada."
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:242
 msgid ""
 "Use the :meth:`exportToImage() <qgis.core.QgsLayoutExporter.exportToImage>` "
 "in case you want to export to an image instead of a PDF file."
 msgstr ""
+"Use :meth:`exportToImage () <qgis.core.QgsLayoutExporter.exportToImage>` "
+"caso deseje exportar para uma imagem em vez de um arquivo PDF."
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:246
 msgid "Exporting a layout atlas"
-msgstr ""
+msgstr "Exportando um atlas como layout"
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:248
 msgid ""
@@ -204,9 +251,16 @@ msgid ""
 "(:class:`QgsLayoutExporter <qgis.core.QgsLayoutExporter>`) with small "
 "adjustments. In the following example, the pages are exported to PNG images:"
 msgstr ""
+"Se você deseja exportar todas as páginas de um layout que tenha a opção "
+"atlas configurada e ativada, use o método :meth:`atlas () "
+"<qgis.core.QgsPrintLayout.atlas>` no exportador (:class:` QgsLayoutExporter "
+"<qgis.core.QgsLayoutExporter>`) com pequenos ajustes. No exemplo a seguir, "
+"as páginas são exportadas para imagens PNG:"
 
 #: ../../docs/pyqgis_developer_cookbook/composer.rst:258
 msgid ""
 "Notice that the outputs will be saved in the base path folder, using the "
 "output filename expression configured on atlas."
 msgstr ""
+"Observe que as saídas serão salvas na pasta do caminho base, usando a "
+"expressão do nome do arquivo de saída configurada no atlas."

@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Richard Duivenvoorde <richard@duif.net>, 2020
+# Aline Furlanetto Viero <afviero@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-10 11:07+0200\n"
 "PO-Revision-Date: 2020-03-16 19:19+0000\n"
-"Last-Translator: Richard Duivenvoorde <richard@duif.net>, 2020\n"
+"Last-Translator: Aline Furlanetto Viero <afviero@gmail.com>, 2020\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/qgis/teams/6144/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +24,7 @@ msgstr ""
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:2
 msgid "|LS| Creating a Dynamic Print Layout"
-msgstr ""
+msgstr "|LS| Criando um Layout de Impressão Dinâmico"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:4
 msgid ""
@@ -32,10 +33,14 @@ msgid ""
 " page properties, e.g. when you change the size of the page. Also, the date "
 "of creation will adapt dynamically."
 msgstr ""
+"Agora que você aprendeu a criar um layout básico de mapa, vamos um passo "
+"além e criamos um layout de mapa que se adapta dinamicamente à extensão do "
+"mapa e às propriedades da página, por exemplo quando você altera o tamanho "
+"da página. Além disso, a data de criação se adaptará dinamicamente."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:10
 msgid "|moderate| |FA| Creating the dynamic map canvas"
-msgstr ""
+msgstr "|moderate| |FA| Criando a tela do mapa dinâmico"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:12
 msgid ""
@@ -43,6 +48,10 @@ msgid ""
 ":file:`places.shp`, :file:`rivers.shp` and :file:`water.shp` into the map "
 "canvas and adapt its properties to suit your own convenience."
 msgstr ""
+"Carregue os conjuntos de dados no formato ESRI Shapefile "
+":file:`protected_areas.shp`, :file:`places.shp`, :file:`rivers.shp` e "
+":file:`water.shp` na tela do mapa e adapte suas propriedades para o que for "
+"mais conveniente."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:15
 msgid ""
@@ -51,6 +60,10 @@ msgid ""
 ":menuselection:`File --> New Print Layout`. You will be prompted to choose a"
 " title for the new layer."
 msgstr ""
+"Depois que tudo estiver renderizado e simbolizado ao seu gosto, clique no "
+"|newLayout| :sup:`Novo Layout de Impressão` na barra de ferramentas ou "
+"escolha :menuselection:`Arquivo --> Novo Layout de Impressão`. Você deve "
+"escolher um título para a nova camada."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:19
 msgid ""
@@ -58,6 +71,9 @@ msgid ""
 "region near Swellendam, South Africa. The layout should have a margin of 7.5"
 " mm and the header should be 36mm high."
 msgstr ""
+"Queremos criar um layout de mapa que consiste em um cabeçalho e um mapa da "
+"região perto de Swellendam, África do Sul. O layout deve ter uma margem de "
+"7,5 mm e o cabeçalho deve ter 36 mm de altura."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:22
 msgid ""
@@ -114,7 +130,7 @@ msgstr ""
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:62
 msgid "|moderate| |FA| Creating the dynamic header"
-msgstr ""
+msgstr "|moderate| |FA| Criando o cabeçalho dinâmico"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:64
 msgid ""
@@ -122,6 +138,9 @@ msgid ""
 ":sup:`Add Shape` button. In the :guilabel:`Items` panel enter the name "
 "``header``."
 msgstr ""
+"Insira um retângulo que conterá o cabeçalho com o botão |addBasicShape| "
+":sup:`Adicionar Forma`. No painel :guilabel:`Items`, digite o nome "
+"``cabeçalho``."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:66
 msgid ""
@@ -134,7 +153,7 @@ msgstr ""
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:75
 msgid "and :guilabel:`Height` by the expression"
-msgstr ""
+msgstr "e :guilabel:`Altura` pela expressão"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:81
 msgid ""
@@ -146,25 +165,25 @@ msgstr ""
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:89
 msgid "for :guilabel:`X`,"
-msgstr ""
+msgstr "para :guilabel:`X`,"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:95
 msgid "for :guilabel:`Y`, and"
-msgstr ""
+msgstr "para :guilabel:`Y`, e"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:101
 msgid "for the :guilabel:`Width`."
-msgstr ""
+msgstr "para a :guilabel:`Altura`."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:102
 msgid "The first vertical line is defined by ::"
-msgstr ""
+msgstr "A primeira linha vertical é definida por ::"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:107
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:162
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:209
 msgid "for :guilabel:`X` and"
-msgstr ""
+msgstr "para :guilabel:`X` e"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:113
 msgid ""
@@ -180,13 +199,15 @@ msgstr ""
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:126
 msgid "for :guilabel:`X` and ::"
-msgstr ""
+msgstr "para :guilabel:`X` e ::"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:131
 msgid ""
 "for :guilabel:`Y`. It shall have the same value for :guilabel:`Height` as "
 "the first vertical line:"
 msgstr ""
+"para :guilabel:`Y`. Deve ter o mesmo valor para :guilabel:`Altura' como a "
+"primeira linha vertical:"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:137
 msgid ""
@@ -196,7 +217,7 @@ msgstr ""
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:144
 msgid "|moderate| |FA| Creating labels for the dynamic header"
-msgstr ""
+msgstr "|moderate| |FA| Criando rótulos para o cabeçalho dinâmico"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:146
 msgid ""
@@ -213,7 +234,7 @@ msgstr ""
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:168
 msgid "for :guilabel:`Y`. Enter the expression"
-msgstr ""
+msgstr "para :guilabel:`Y`. Entre a expressão"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:174
 msgid ""
@@ -221,6 +242,9 @@ msgid ""
 "``11.25`` for :guilabel:`Height`. Under :guilabel:`Appearance` set the Font "
 "size to 16 pt."
 msgstr ""
+"para :guilabel:`Largura` (deve ter uma largura de 105 mm) e digite ``11,25``"
+" para :guilabel:`Altura`. Em :guilabel:`Aparência` defina o tamanho da fonte"
+" para 16 pt."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:176
 msgid ""
@@ -235,10 +259,12 @@ msgid ""
 "We are again using a variable that QGIS creates automatically. For "
 ":guilabel:`X` insert the expression"
 msgstr ""
+"Estamos novamente usando uma variável que o QGIS cria automaticamente. Para "
+":guilabel:`X` insira a expressão"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:191
 msgid "and for :guilabel:`Y` enter the expression"
-msgstr ""
+msgstr "e para :guilabel:`Y` entre a expressão"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:197
 msgid ""
@@ -257,10 +283,12 @@ msgid ""
 "for :guilabel:`Y`. :guilabel:`Width` is ``49.00`` and :guilabel:`Height` is "
 "defined by"
 msgstr ""
+"para :guilabel:`Y`. :guilabel:`Largura` é ``49.00`` e :guilabel:`Altura` é "
+"definido por"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:225
 msgid "|moderate| |FA| Adding pictures to the dynamic header"
-msgstr ""
+msgstr "|moderate| |FA| Adicionando imagens ao cabeçalho dinâmico"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:227
 msgid ""
@@ -269,10 +297,14 @@ msgid ""
 "entering the name ``organisation logo`` define the position for "
 ":guilabel:`X` with"
 msgstr ""
+"Use o botão |addNewImage| :sup:`Adicionar uma nova Imagem ao layout` para "
+"colocar uma imagem acima do rótulo ``informações da organização``. Depois de"
+" inserir o nome ``logo da organização``, defina a posição para :guilabel:`X`"
+" com"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:235
 msgid "and for :guilabel:`Y` with"
-msgstr ""
+msgstr "e para :guilabel:`Y` com"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:241
 msgid ""
@@ -292,17 +324,19 @@ msgstr ""
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:254
 msgid "for :guilabel:`X` and by"
-msgstr ""
+msgstr "para :guilabel:`X` e por"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:260
 msgid ""
 "for :guilabel:`Y`. We use static numbers here to define the "
 ":guilabel:`Width` and the :guilabel:`Height`: ``21.027`` and ``21.157``."
 msgstr ""
+"para :guilabel:`Y`. Utilizamos números estáticos aqui para definir "
+":guilabel:`Largura` e:guilabel:`Altura`: ``21,027`` e ``21,157``."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:264
 msgid "|moderate| |FA| Creating the scalebar of the dynamic header"
-msgstr ""
+msgstr "|moderate| |FA| Criando a barra de escala do cabeçalho dinâmico"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:266
 msgid ""
@@ -318,13 +352,15 @@ msgstr ""
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:277
 msgid "For :guilabel:`Y` enter"
-msgstr ""
+msgstr "Para :guilabel:`Y` entre"
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:283
 msgid ""
 ",for :guilabel:`Width` enter ``28,639`` and for :guilabel:`Height` "
 "``13.100``. The ``Reference point`` should be placed in the center."
 msgstr ""
+", para :guilabel:`Largura` digite ``28.639`` e para :guilabel:`Altura` "
+"``13.100``. O ``Ponto de referência`` deve ser colocado no centro."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:287
 msgid ""
@@ -335,6 +371,12 @@ msgid ""
 " just click the |draw| :sup:`Refresh view` button and the page design is "
 "adapted."
 msgstr ""
+"Parabéns! Você criou seu primeiro layout de mapa dinâmico. Dê uma olhada no "
+"layout e verifique se tudo está do jeito que você quer! O layout do mapa "
+"dinâmico reage automaticamente quando você altera o :guilabel:`propriedades "
+"da página`. Por exemplo, se você alterar o tamanho da página de DIN A4 para "
+"DIN A3, basta clicar no botão |draw| :sup:`Atualizar visualização` e o "
+"design da página é adaptado."
 
 #: ../../docs/training_manual/map_composer/dynamic_layout.rst:297
 msgid "|WN|"
@@ -345,3 +387,5 @@ msgid ""
 "On the next page, you will be given an assignment to complete. This will "
 "allow you to practice the techniques you have learned so far."
 msgstr ""
+"Na próxima página, você receberá uma tarefa para concluir. Isso permitirá "
+"que você pratique as técnicas que aprendeu até agora."

@@ -126,7 +126,7 @@ msgstr "Abstand"
 
 #: ../../docs/user_manual/processing/modeler.rst:59
 msgid "Enum"
-msgstr "Aufz(ählung)"
+msgstr "Aufzählung"
 
 #: ../../docs/user_manual/processing/modeler.rst:60
 msgid "Expression"
@@ -201,10 +201,17 @@ msgid ""
 "the next figure, in addition to the description of the parameter, you have "
 "to set a default value and the range of valid values."
 msgstr ""
+"Wenn Sie auf ein Element doppelklicken, wird ein Dialog angezeigt, in dem "
+"Sie seine Eigenschaften definieren können. Je nach Parameter enthält der "
+"Dialog mindestens ein Grundelement (die Beschreibung, die der Benutzer bei "
+"der Ausführung des Modells sieht). Wenn Sie einen numerischen Wert "
+"hinzufügen, wie in der nächsten Abbildung zu sehen ist, müssen Sie, "
+"zusätzlich zur Beschreibung des Parameters, einen Standardwert und den "
+"Bereich der gültigen Werte festlegen."
 
 #: ../../docs/user_manual/processing/modeler.rst:91
 msgid "Model Parameters Definition"
-msgstr ""
+msgstr "Definition der Modellparameter"
 
 #: ../../docs/user_manual/processing/modeler.rst:93
 msgid "For each added input, a new element is added to the modeler canvas."
@@ -212,17 +219,19 @@ msgstr "Für jede Eingabe wird ein neues Element im Modeller-Fenster erstellt."
 
 #: ../../docs/user_manual/processing/modeler.rst:100
 msgid "Model Parameters"
-msgstr ""
+msgstr "Modellparameter"
 
 #: ../../docs/user_manual/processing/modeler.rst:102
 msgid ""
 "You can also add inputs by dragging the input type from the list and "
 "dropping it in the position where you want it in the modeler canvas."
 msgstr ""
+"Sie können Eingaben auch hinzufügen, indem Sie den Eingabetyp aus der Liste "
+"an die gewünschten Stelle im Modellierungsfenster ziehen."
 
 #: ../../docs/user_manual/processing/modeler.rst:106
 msgid "Definition of the workflow"
-msgstr "Definition des Workflows"
+msgstr "Definition des Arbeitsablaufs"
 
 #: ../../docs/user_manual/processing/modeler.rst:108
 msgid ""
@@ -230,10 +239,14 @@ msgid ""
 "the model. Algorithms can be found in the :guilabel:`Algorithms` tab, "
 "grouped much in the same way as they are in the Processing toolbox."
 msgstr ""
+"Sobald die Eingaben definiert sind, ist es an der Zeit, die Algorithmen des "
+"Modells zu definieren. Die Algorithmen finden Sie auf der Registerkarte "
+":guilabel:`Algorithmen`, ähnlich gruppiert wie in der Verarbeitungs-"
+"Werkzeugkiste."
 
 #: ../../docs/user_manual/processing/modeler.rst:118
 msgid "Model Inputs"
-msgstr ""
+msgstr "Modell-Eingaben"
 
 #: ../../docs/user_manual/processing/modeler.rst:121
 msgid ""
@@ -244,10 +257,17 @@ msgid ""
 "'Drape (set Z value from raster)' algorithm and the QGIS 'Climb along line' "
 "algorithm."
 msgstr ""
+"Um einen Algorithmus zu einem Modell hinzuzufügen, doppelklicken Sie auf "
+"seinen Namen oder ziehen Sie ihn per Drag & Drop, genau wie bei Eingaben. Es"
+" erscheint ein Ausführungsdialogfeld mit einem ähnlichen Inhalt wie das "
+"Ausführungsfenster, das angezeigt wird, wenn der Algorithmus aus der "
+"Werkzeugkiste ausgeführt wird. Die nebenan gezeigten entsprechen dem QGIS-"
+"Algorithmus 'Drapieren (Z-Wert von Raster übernehmen)' und dem QGIS-"
+"Algorithmus 'Entlang Linie klettern'."
 
 #: ../../docs/user_manual/processing/modeler.rst:135
 msgid "Model Algorithm parameters"
-msgstr ""
+msgstr "Modell-Algorithmus-Parameter"
 
 #: ../../docs/user_manual/processing/modeler.rst:138
 msgid ""
@@ -303,6 +323,11 @@ msgid ""
 "outputs from model algorithms and also statistical values from available "
 "layers within the model."
 msgstr ""
+"Numerische Werte. Feste Werte können direkt in das Textfeld eingegeben "
+"werden. Durch Klicken auf die Schaltfläche neben dem Textfeld können "
+"Ausdrücke eingegeben werden. Zu den verfügbaren Variablen für Ausdrücke "
+"gehören numerische Eingaben des Modells, Ausgaben von Modellalgorithmen und "
+"auch statistische Werte aus verfügbaren Ebenen innerhalb des Modells."
 
 #: ../../docs/user_manual/processing/modeler.rst:164
 msgid ""
@@ -310,6 +335,9 @@ msgid ""
 " on the button beside the text box, expressions can be entered, as for "
 "numerical values."
 msgstr ""
+"Zeichenkette. Feste Zeichenfolgen können in das entsprechende Textfeld "
+"eingegeben werden. Durch Klicken auf die Schaltfläche neben dem Textfeld "
+"können Ausdrücke wie bei numerischen Werten eingegeben werden."
 
 #: ../../docs/user_manual/processing/modeler.rst:168
 msgid ""
@@ -319,6 +347,12 @@ msgid ""
 "directly in the text box, or use the list to select a table field. The "
 "validity of the selected field will be checked at run time."
 msgstr ""
+"Vektorfeld. Die Feldwerte eines Vektorlayers können bei der Modellierung "
+"nicht bekannt sein, da sie bei jeder Ausführung des Modells von der Auswahl "
+"des Benutzers abhängen. Um den Wert für diesen Parameter festzulegen, geben "
+"Sie den Namen eines Feldes direkt in das Textfeld ein oder verwenden Sie die"
+" Liste, um ein Tabellenfeld auszuwählen. Die Gültigkeit des ausgewählten "
+"Feldes wird zur Laufzeit überprüft."
 
 #: ../../docs/user_manual/processing/modeler.rst:175
 msgid ""
@@ -349,6 +383,16 @@ msgid ""
 "algorithm in the *Parent algorithms* parameter and they will be executed in "
 "the correct order."
 msgstr ""
+"Wenn Sie die Ausgabe eines vorherigen Algorithmus als Eingabe Ihres "
+"Algorithmus verwenden, wird der vorherige Algorithmus implizit als "
+"übergeordneter Algorithmus des aktuellen festgelegt (und der entsprechende "
+"Pfeil im Modellierungsfenster platziert). In einigen Fällen kann ein "
+"Algorithmus jedoch von einem anderen Algorithmus abhängen, selbst wenn er "
+"kein Ausgabeobjekt von diesem verwendet (z.B. ein Algorithmus, der einen "
+"SQL-Satz auf einer PostGIS-Datenbank ausführt und ein anderer, der einen "
+"Layer in dieselbe Datenbank importiert). In diesem Fall wählen Sie einfach "
+"den vorherigen Algorithmus im Parameter *Parent algorithms* aus und sie "
+"werden in der richtigen Reihenfolge ausgeführt."
 
 #: ../../docs/user_manual/processing/modeler.rst:194
 msgid ""
