@@ -10,7 +10,7 @@ The 3D Map Item
       :local:
 
 
-The 3D map item is used to display a 3D map view.
+The 3D map item is used to display a :ref:`3D map view <label_3dmapview>`.
 Use the |add3DMap| :guilabel:`Add 3D Map` button, and follow
 :ref:`items creation instructions <create_layout_item>` to add a new
 map item that you can later manipulate the same way as exposed in
@@ -34,31 +34,39 @@ has the following functionalities (:ref:`figure_layout_3dmap_prop`):
 
 .. _`layout_3dmap_scene_settings`:
 
-Scene setting
+Scene settings
 ----------------------------------------------------------------------
 
-Here you can :guilabel:`Copy Settings from a 3D View...`.
-In the pull-down menu, choose the 3D view that you would like to get
-the settings from.
+Press :guilabel:`Copy Settings from a 3D View...` to choose
+the 3D map view to display.
 
-Once you have chosen a 3D View, the settings in
-the :ref:`layout_3dmap_camera_pose` group reflects this 3D view, and
-it will be visible in the 3D Map frame.
-
+The 3D map view is rendered with its current configuration
+(layers, terrain, lights, camera position and angle...).
 
 .. _`layout_3dmap_camera_pose`:
 
 Camera pose
 ----------------------------------------------------------------------
 
-* :guilabel:`Center X` sets the X value of the camera center
-* :guilabel:`Center Y` sets the Y value of the camera center
-* :guilabel:`Center Z` sets the Z value of the camera center
-* :guilabel:`Distance` sets the distance from the camera center to the
-  ground
-* :guilabel:`Pitch` sets the pitch of the camera
-* :guilabel:`Heading` sets the direction of the camera (0/360: north,
-  90: west, 180: south, 270: east)
+* :guilabel:`Center X` sets the X coordinate of the point the camera
+  is pointing at
+* :guilabel:`Center Y` sets the Y coordinate of the point the camera
+  is pointing at
+* :guilabel:`Center Z` sets the Z coordinate of the point the camera
+  is pointing at
+* :guilabel:`Distance` sets the distance from the camera center to
+  the point the camera is pointing at
+* :guilabel:`Pitch` sets the rotation of the camera around the X-axis
+  (vertical rotation).
+  Values from 0 to 360 degrees.
+  0°: terrain seen straight from above;
+  90°: horizontal (from the side);
+  180°: straight from below;
+  270°: horizontal, upside down;
+  360°: straight from above.
+* :guilabel:`Heading` sets the rotation of the camera around the
+  Y-axis (horizontal rotation - 0 to 360 degrees).
+  0°/360°: north; 90°: west; 180°: south; 270°: east.
 
 The :guilabel:`Set from a 3D View...` pull-down menu lets you
 populate the items with the parameters of a 3D View.
@@ -71,4 +79,3 @@ populate the items with the parameters of a 3D View.
 
 .. |add3DMap| image:: /static/common/mActionAdd3DMap.png
    :width: 1.5em
-
