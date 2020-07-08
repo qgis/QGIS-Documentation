@@ -2,7 +2,7 @@
 .. _layout_map3d_item:
 
 The 3D Map Item
-===============
+======================================================================
 
 .. only:: html
 
@@ -35,7 +35,7 @@ has the following functionalities (:ref:`figure_layout_3dmap_prop`):
 .. _`layout_3dmap_scene_settings`:
 
 Scene setting
--------------
+----------------------------------------------------------------------
 
 Here you can :guilabel:`Copy Settings from a 3D View...`.
 In the pull-down menu, choose the 3D view that you would like to get
@@ -49,13 +49,13 @@ it will be visible in the 3D Map frame.
 .. _`layout_3dmap_camera_pose`:
 
 Camera pose
------------
+----------------------------------------------------------------------
 
 * :guilabel:`Center X` sets the X value of the camera center
 * :guilabel:`Center Y` sets the Y value of the camera center
 * :guilabel:`Center Z` sets the Z value of the camera center
-* :guilabel:`Distance` sets the distance from the camera center to
-  the ground
+* :guilabel:`Distance` sets the distance from the camera center to the
+  ground
 * :guilabel:`Pitch` sets the pitch of the camera
 * :guilabel:`Heading` sets the direction of the camera (0/360: north,
   90: west, 180: south, 270: east)
