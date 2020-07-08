@@ -9,17 +9,17 @@ The 3D Map Item
    .. contents::
       :local:
 
-
-The 3D map item is used to display a :ref:`3D map view <label_3dmapview>`.
+The 3D Map item is used to display a
+:ref:`3D map view <label_3dmapview>`.
 Use the |add3DMap| :guilabel:`Add 3D Map` button, and follow
 :ref:`items creation instructions <create_layout_item>` to add a new
-map item that you can later manipulate the same way as exposed in
-:ref:`interact_layout_item`.
+3D Map item that you can later manipulate the same way as demonstrated
+in :ref:`interact_layout_item`.
 
 By default, a new 3D Map item is empty.
 You can set the properties of the 3D view and customize it in the
 :guilabel:`Item Properties` panel.
-Other than the
+In addition to the
 :ref:`common properties <item_common_properties>`, this feature
 has the following functionalities (:ref:`figure_layout_3dmap_prop`):
 
@@ -43,6 +43,7 @@ the 3D map view to display.
 The 3D map view is rendered with its current configuration
 (layers, terrain, lights, camera position and angle...).
 
+
 .. _`layout_3dmap_camera_pose`:
 
 Camera pose
@@ -58,7 +59,7 @@ Camera pose
   the point the camera is pointing at
 * :guilabel:`Pitch` sets the rotation of the camera around the X-axis
   (vertical rotation).
-  Values from 0 to 360 degrees.
+  Values from 0 to 360 (degrees).
   0°: terrain seen straight from above;
   90°: horizontal (from the side);
   180°: straight from below;
