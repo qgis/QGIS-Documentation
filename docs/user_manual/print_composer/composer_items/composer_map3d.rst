@@ -51,17 +51,17 @@ it will be visible in the 3D Map frame.
 Camera pose
 -----------
 
-* :guilabel:`Center X`, sets the X value of the camera center
-* :guilabel:`Center Y`, sets the Y value of the camera center
-* :guilabel:`Center Z`, sets the Z value of the camera center
-* :guilabel:`Distance`, sets the distance from the camera center to
+* :guilabel:`Center X` sets the X value of the camera center
+* :guilabel:`Center Y` sets the Y value of the camera center
+* :guilabel:`Center Z` sets the Z value of the camera center
+* :guilabel:`Distance` sets the distance from the camera center to
   the ground
-* :guilabel:`Pitch`, sets the pitch of the camera
+* :guilabel:`Pitch` sets the pitch of the camera
 * :guilabel:`Heading` sets the direction of the camera (0/360: north,
   90: west, 180: south, 270: east)
 
-The :guilabel:`Set from a 3D View...` button lets you populate the
-items with the parameters of a 3D View.
+The :guilabel:`Set from a 3D View...` pull-down menu lets you
+populate the items with the parameters of a 3D View.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
