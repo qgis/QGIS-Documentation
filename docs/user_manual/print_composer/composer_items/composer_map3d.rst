@@ -51,7 +51,8 @@ Camera pose
 * :guilabel:`Center X` sets the X coordinate of the point the camera is pointing at
 * :guilabel:`Center Y` sets the Y coordinate of the point the camera is pointing at
 * :guilabel:`Center Z` sets the Z coordinate of the point the camera is pointing at
-* :guilabel:`Distance` sets the distance from the camera center to
+* :guilabel:`Distance` sets the distance from the camera center to the
+  point the camera is pointing at
   the ground
 * :guilabel:`Pitch` sets the rotation of the camera around the X-axis
   (vertical rotation).
