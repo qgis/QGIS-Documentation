@@ -27,6 +27,7 @@ has the following functionalities (:ref:`figure_layout_3dmap_prop`):
 
 .. figure:: img/3dmap_properties.png
    :align: center
+   :width: 20em
 
    3D Map Item Properties
 
