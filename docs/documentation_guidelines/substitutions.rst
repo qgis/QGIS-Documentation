@@ -199,7 +199,7 @@ Icon                            Substitution                        Icon        
 |identify|                      ``|identify|``                      |mapTips|                       ``|mapTips|``
 |showBookmarks|                 ``|showBookmarks|``                 |newBookmark|                   ``|newBookmark|``
 |measure|                       ``|measure|``                       |measureArea|                   ``|measureArea|``
-|measureAngle|                  ``|measureAngle|``                  
+|measureAngle|                  ``|measureAngle|``
 |newMap|                        ``|newMap|``                        |new3DMap|                      ``|new3DMap|``
 |tiltUp|                        ``|tiltUp|``                        |tiltDown|                      ``|tiltDown|``
 |3dNavigation|                  ``|3dNavigation|``                  |play|                          ``|play|``
@@ -245,7 +245,7 @@ Icon                     Substitution                 Icon                     S
 |pinLabels|              ``|pinLabels|``              |showHideLabels|         ``|showHideLabels|``
 |moveLabel|              ``|moveLabel|``              |rotateLabel|            ``|rotateLabel|``
 |showPinnedLabels|       ``|showPinnedLabels|``       |showUnplacedLabel|      ``|showUnplacedLabel|``
-|changeLabelProperties|  ``|changeLabelProperties|``   
+|changeLabelProperties|  ``|changeLabelProperties|``
 =======================  ===========================  =======================  ===========================
 
 Decorations
@@ -355,8 +355,8 @@ Icon                     Substitution                 Icon                     S
 |addNodesShape|          ``|addNodesShape|``          |editNodesShape|         ``|editNodesShape|``
 |addPolygon|             ``|addPolygon|``             |addPolyline|            ``|addPolyline|``
 |addArrow|               ``|addArrow|``               |northArrow|             ``|northArrow|``
-|addMap|                 ``|addMap|``                 |addLegend|              ``|addLegend|``
-|addHtml|                ``|addHtml|``                \                        \
+|add3DMap|               ``|add3DMap|``               |addMap|                 ``|addMap|``
+|addLegend|              ``|addLegend|``              |addHtml|                ``|addHtml|``
 |addImage|               ``|addImage|``               |addTable|               ``|addTable|``
 |label|                  ``|label|``                  |scaleBar|               ``|scaleBar|``
 |select|                 ``|select|``                 |moveItemContent|        ``|moveItemContent|``
@@ -497,6 +497,8 @@ Icon                            Substitution                        Icon        
 .. |action| image:: /static/common/action.png
    :width: 2em
 .. |actionRun| image:: /static/common/mAction.png
+   :width: 1.5em
+.. |add3DMap| image:: /static/common/mActionAdd3DMap.png
    :width: 1.5em
 .. |addAfsLayer| image:: /static/common/mActionAddAfsLayer.png
    :width: 1.5em
