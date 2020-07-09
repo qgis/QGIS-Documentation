@@ -5265,7 +5265,7 @@ By default, Z values are not considered when detecting duplicate
 vertices.
 E.g. two vertices with the same X and Y coordinate but different Z
 values will still be considered duplicate and one will be removed.
-If the :guilabel;`Use Z Value` parameter is true, then the Z values
+If the :guilabel:`Use Z Value` parameter is true, then the Z values
 are also tested and vertices with the same X and Y but different Z
 will be maintained.
 
@@ -5307,7 +5307,7 @@ Parameters
      - [boolean |dataDefined|]
 
        Default: False
-     - If the :guilabel;`Use Z Value` parameter is true, then the Z
+     - If the :guilabel:`Use Z Value` parameter is true, then the Z
        values are also tested and vertices with the same X and Y but
        different Z will be maintained.
    * - **Cleaned**
@@ -7415,7 +7415,7 @@ Outputs
 Python code
 ...........
 
-**Algorithm ID**: ``qgis:voronoipolygons```
+**Algorithm ID**: ``qgis:voronoipolygons``
 
 .. include:: qgis_algs_include.rst
   :start-after: **algorithm_code_section**
