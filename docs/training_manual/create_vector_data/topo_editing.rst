@@ -159,7 +159,7 @@ So you are advised to turn off snapping before cutting a hole.
 #. Use the |addRing| :sup:`Add Ring` tool to create a hole in the
    middle of a polygon geometry.
 #. Draw a polygon over the target feature, as if you were using the
-   |addpolygon| :sup:`Add polygon` tool.
+   |capturePolygon| :sup:`Add polygon` tool.
 #. When you right-click, the hole will be visible.
 #. Remove the hole you just created using the |deleteRing|
    :sup:`Delete Ring` tool.
@@ -313,8 +313,6 @@ simpler and more effective.
 .. |WN| replace:: What's Next?
 .. |addPart| image:: /static/common/mActionAddPart.png
    :width: 1.5em
-.. |addPolygon| image:: /static/common/mActionAddPolygon.png
-   :width: 1.5em
 .. |addRing| image:: /static/common/mActionAddRing.png
    :width: 2em
 .. |capturePolygon| image:: /static/common/mActionCapturePolygon.png
@@ -324,7 +322,6 @@ simpler and more effective.
 .. |deleteRing| image:: /static/common/mActionDeleteRing.png
    :width: 2em
 .. |hard| image:: /static/common/hard.png
-.. |largeLandUseArea| replace:: Bontebok National Park
 .. |mergeFeatAttributes| image:: /static/common/mActionMergeFeatureAttributes.png
    :width: 1.5em
 .. |mergeFeatures| image:: /static/common/mActionMergeFeatures.png
@@ -348,4 +345,3 @@ simpler and more effective.
    :width: 1.5em
 .. |vertexToolActiveLayer| image:: /static/common/mActionVertexToolActiveLayer.png
    :width: 1.5em
-

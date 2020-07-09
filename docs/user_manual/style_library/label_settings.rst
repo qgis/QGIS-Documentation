@@ -663,7 +663,6 @@ Under :guilabel:`Feature options`:
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
-.. |slider| image:: /static/common/slider.png
 .. |styleManager| image:: /static/common/mActionStyleManager.png
    :width: 1.5em
 .. |text| image:: /static/common/text.png

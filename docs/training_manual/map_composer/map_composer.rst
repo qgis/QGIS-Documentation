@@ -341,9 +341,9 @@ layout items.
 .. |alignLeft| image:: /static/common/mActionAlignLeft.png
    :width: 1.5em
 .. |basic| image:: /static/common/basic.png
-.. |fileSave| image:: /static/common/mActionFileSave.png
-   :width: 1.5em
 .. |filePrint| image:: /static/common/mActionFilePrint.png
+   :width: 1.5em
+.. |fileSave| image:: /static/common/mActionFileSave.png
    :width: 1.5em
 .. |label| image:: /static/common/mActionLabel.png
    :width: 1.5em

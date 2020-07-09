@@ -607,7 +607,7 @@ Python code
 
 .. _qgisdetectdatasetchanges:
 
-Detect dataset changes
+Detect dataset changes |312|
 -----------------------------------
 Compares two vector layers, and determines which features are
 unchanged, added or deleted between the two.
@@ -1850,8 +1850,8 @@ Python code
 
 .. _qgisrepairshapefile:
 
-Repair Shapefile
-----------------
+Repair Shapefile |312|
+----------------------
 Repairs a broken ESRI Shapefile dataset by (re)creating the SHX file.
 
 Parameters
@@ -2249,5 +2249,6 @@ Python code
    please add it also to the substitutions.txt file in the
    source folder.
 
+.. |312| replace:: ``NEW in 3.12``
 .. |checkbox| image:: /static/common/checkbox.png
    :width: 1.3em
