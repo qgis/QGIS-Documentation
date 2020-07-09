@@ -396,7 +396,7 @@ The filters must be registered into the **serverIface** as in the following exam
 
     class HelloServerServer:
         def __init__(self, serverIface):
-            serverIface.registerFilter(HelloFilter(), 100)
+            serverIface.registerFilter(HelloFilter(serverIface), 100)
 
 The second parameter of
 :meth:`registerFilter <qgis.server.QgsServerInterface.registerFilter>` sets a priority which

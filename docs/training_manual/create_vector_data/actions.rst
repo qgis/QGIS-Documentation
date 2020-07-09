@@ -359,4 +359,3 @@ That is the topic of the next module.
    :width: 1.5em
 .. |signPlus| image:: /static/common/symbologyAdd.png
    :width: 1.5em
-

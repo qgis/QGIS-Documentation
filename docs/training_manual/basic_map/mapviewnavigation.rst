@@ -1,7 +1,7 @@
 |LS| Navigating the Map Canvas
 ===============================================================================
 This section will focus on basic QGIS navigation tools used to navigate within 
-the Map Canvas.  These tools will allow you to visually explore the layers at 
+the Map Canvas. These tools will allow you to visually explore the layers at 
 different scales.
 
 **The goal for this lesson:** Learn how to use Pan and Zoom tools within QGIS 
@@ -10,12 +10,13 @@ and learn about map scale.
 |basic| |FA| Basic Navigation Tools
 -------------------------------------------------------------------------------
 
-Before learning how to navigate within the Map Canvas, let's add two additional 
+Before learning how to navigate within the Map Canvas, let's add some
 layers that we can explore during this tutorial.
 
-#. Use the steps learnt in :ref:`Create a Map <tm_pepare_a_map>` lesson to add 
-   ESRI Shapefiles :file:`roads.shp` and :file:`buildings.shp` as layers to the 
-   current project.  The result view should look similiar to the snippet below:
+#. Open a new blank project and using the steps learnt in :ref:`Create a Map
+   <tm_pepare_a_map>`, load the previously seen ``protected_areas``, ``roads``
+   and ``buildings`` layers to the project.
+   The result view should look similar to the snippet below (colors do not matter): 
 
    .. figure:: img/roads_buildings_added.png
      :align: center
@@ -91,7 +92,9 @@ the Map Canvas.
 |IC|
 -------------------------------------------------------------------------------
 
-Knowing how to navigate the Map Canvas is important, as it allows one to explore and visually inspect the layers.  This could be done for initial data exploration, or to validate output of a spatial analysis.
+Knowing how to navigate the Map Canvas is important, as it allows one to explore
+and visually inspect the layers. This could be done for initial data exploration,
+or to validate output of a spatial analysis.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.
@@ -103,15 +106,15 @@ Knowing how to navigate the Map Canvas is important, as it allows one to explore
 .. |IC| replace:: In Conclusion
 .. |LS| replace:: Lesson:
 .. |basic| image:: /static/common/basic.png
-.. |zoomIn| image:: /static/common/mActionZoomIn.png
+.. |pan| image:: /static/common/mActionPan.png
    :width: 1.5em
-.. |zoomOut| image:: /static/common/mActionZoomOut.png
+.. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
+   :width: 1.5em
+.. |zoomIn| image:: /static/common/mActionZoomIn.png
    :width: 1.5em
 .. |zoomLast| image:: /static/common/mActionZoomLast.png
    :width: 1.5em
 .. |zoomNext| image:: /static/common/mActionZoomNext.png
    :width: 1.5em
-.. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
-   :width: 1.5em
-.. |pan| image:: /static/common/mActionPan.png
+.. |zoomOut| image:: /static/common/mActionZoomOut.png
    :width: 1.5em

@@ -22,24 +22,29 @@ a basic map with all the required settings.
 QGIS allows you to create multiple maps using the same map file.
 For this reason, it has a tool called the *Layout Manager*.
 
-#. Click on the :menuselection:`Project --> Layout Manager` menu
+#. Click on the :menuselection:`Project --> Layout Manager...` menu
    entry to open this tool.
    You'll see a blank :guilabel:`Layout manager` dialog appear.
-#. Under :guilabel:`New from Template`, select
-   :guilabel:`Empty layout`, click the :guilabel:`Create...` button,
-   and give the new layout the name of |majorUrbanName|.
-#. Click :guilabel:`OK`.
 
-(You could also close the dialog and navigate to a layout via the
-:menuselection:`Project --> Layouts -->` menu, as in the image below.)
+   .. figure:: img/layout_manager_dialog.png
+      :align: center
+
+#. Under :guilabel:`New from Template`, select
+   :guilabel:`Empty layout` and press the :guilabel:`Create...` button.
+#. Give the new layout the name of |majorUrbanName| and
+   click :guilabel:`OK`.
+#. You will now see the *Print Layout* window:
+
+   .. figure:: img/print_composer_dialog.png
+      :align: center
+   
+You could also create this new layout via the
+:menuselection:`Project --> New Print Layout...` menu.
+
+Whichever route you take, the new print layout is now accessible from
+the :menuselection:`Project --> Layouts -->` menu, as in the image below.
 
 .. figure:: img/print_composer_menu.png
-   :align: center
-
-Whichever route you take to get there, you will now see
-the *Print Layout* window:
-
-.. figure:: img/print_composer_dialog.png
    :align: center
 
 
@@ -51,7 +56,7 @@ Ensure that yours is as well.
 
 #. Right-click on the sheet in the central part of the layout window
    and choose :guilabel:`Page properties...` in the context menu.
-   Check that the values in the :guilabel:`Item Properties` tab are
+#. Check that the values in the :guilabel:`Item Properties` tab are
    set to the following:
 
    * :guilabel:`Size`: ``A4``
@@ -102,10 +107,8 @@ Ensure that yours is as well.
 
    The map view updates as you zoom in or zoom out.
 #. If, for any reason, the map view does not refresh correctly,
-   you can force the map to refresh by clicking this button:
-
-   .. figure:: img/refresh_button.png
-      :align: center
+   you can force the map to refresh by clicking the
+   |refresh| :sup:`Refresh view` button.
 
    Remember that the size and position you've given the map doesn't
    need to be final.
@@ -130,11 +133,9 @@ adding map elements.
 First, let us add a title.
 
 #. Click on the |label| :sup:`Add Label` button
-
 #. Click on the page, above the map, accept the suggested values in
    the :guilabel:`New Item Properties` dialog, and a label will
    appear at the top of the map.
-
 #. Resize it and place it in the top center of the page.
    It can be resized and moved in the same way that you resized and
    moved the map.
@@ -166,25 +167,26 @@ First, let us add a title.
       of the layout window.
    #. Change the text of the label to "|majorUrbanName|":
 
-   #. Use this interface to set the font and alignment options:
-
       .. figure:: img/title_font_alignment.png
          :align: center
 
-   #. Choose a large but sensible font (the example will use the
-      default font with a size of ``36``) and set the
-      :guilabel:`Horizontal Alignment` to :guilabel:`Center`.
+   #. Use this interface to set the font and alignment options
+      under the :guilabel:`Appearance` section:
+
+      #. Choose a large but sensible font (the example will use the
+         default font with a size of ``36``)
+      #. Set the :guilabel:`Horizontal Alignment` to :guilabel:`Center`.
 
       You can also change the font color, but it's probably best to
       keep it black as per the default.
 
-   The default setting is not to add a frame to the title's text box.
-   However, if you wish to add a frame, you can do so:
+   #. The default setting is not to add a frame to the title's text box.
+      However, if you wish to add a frame, you can do so:
 
-   #. In the :guilabel:`Item Properties` tab, scroll down until you
-      see the :guilabel:`Frame` option.
-   #. Click the :guilabel:`Frame` checkbox to enable the frame.
-      You can also change the frame's color and width.
+      #. In the :guilabel:`Item Properties` tab, scroll down until you
+         see the :guilabel:`Frame` option.
+      #. Click the :guilabel:`Frame` checkbox to enable the frame.
+         You can also change the frame's color and width.
 
    In this example, we won't enable the frame, so here is our page so
    far:
@@ -195,12 +197,12 @@ First, let us add a title.
    To make sure that you don't accidentally move these elements
    around now that you've aligned them, you can lock items into place:
 
-   * With both the label and map selected, click the
-     |lockItems| :sup:`Lock Selected Items` button in the *Actions*
-     Toolbar.
+   #. Select both the label and the map items
+   #. Click the |lockItems| :sup:`Lock Selected Items` button in
+      the *Actions* Toolbar.
 
-   .. note:: Click the |unlockAll| :sup:`Unlock All Items` button in
-      the *Actions* Toolbar to be able to edit the items again.
+      .. note:: Click the |unlockAll| :sup:`Unlock All Items` button
+       in the *Actions* Toolbar to be able to edit the items again.
 
 
 |basic| |FA| Adding a Legend
@@ -213,14 +215,16 @@ In other cases, it's more difficult to guess, like the colors of the
 forests.
 Let's add a new legend.
 
-#. Click on this |addLegend| :sup:`Add Legend` button
-
+#. Click on the |addLegend| :sup:`Add Legend` button
 #. Click on the page to place the legend, accept the suggested values
-   in the :guilabel:`New Item Properties` dialog, and then move it to
-   where you want it:
+   in the :guilabel:`New Item Properties` dialog,
+#. A legend is added to the layout page, showing layers symbology
+   as set in the main dialog.
+#. As usual, you can click and move the item to where you want it:
 
    .. figure:: img/legend_added.png
       :align: center
+      :width: 100%
 
 |moderate| |FA| Customizing Legend Items
 ----------------------------------------------------------------------
@@ -229,24 +233,24 @@ Not everything on the legend is necessary, so let's remove some
 unwanted items.
 
 #. In the :guilabel:`Item Properties` tab, you'll find the
-   :guilabel:`Legend items` panel.
-#. Select the entry with buildings (from :file:`training_data.gpkg`).
-#. Delete it from the legend by clicking the
-   |signMinus| button:  
+   :guilabel:`Legend items` group.
+#. Uncheck the |unchecked| :guilabel:`Auto update` box, allowing you
+   to directly modify the legend items
+#. Select the entry with :guilabel:`buildings`
+#. Delete it from the legend by clicking the |signMinus| button
 
 You can also rename items.
 
 #. Select a layer from the same list.
-#. Click the |edit| button.
+#. Click the |symbologyEdit| :sup:`Edit selected item properties` button.
 #. Rename the layers to ``Places``, ``Roads and Streets``,
    ``Surface Water``, and ``Rivers``.
-#. Set ``landuse`` to :guilabel:`Hidden` (right-click to bring up the
-   context menu).
 
 You can also reorder the items:
 
 .. figure:: img/categories_reordered.png
    :align: center
+   :width: 100%
 
 As the legend will likely be widened by the new layer names, you may
 wish to move and resize the legend and or map.
@@ -254,6 +258,7 @@ This is the result:
 
 .. figure:: img/map_composer_result.png
    :align: center
+   :width: 100%
 
 |basic| |FA| Exporting Your Map
 ----------------------------------------------------------------------
@@ -263,38 +268,27 @@ This is the result:
 Finally the map is ready for export! You'll see the export buttons
 near the top left corner of the layout window:
 
-  |filePrint| |saveMapAsImage| |saveAsSVG|
-  |saveAsPDF|
+* |filePrint| :sup:`Print Layout`: interfaces with a printer.
+  Since the printer options will differ depending on the model of
+  printer that you're working with, it's probably better to consult the
+  printer manual or a general guide to printing for more information on
+  this topic.
 
-The button on the left is the *Print Layout* button, which
-interfaces with a printer.
-Since the printer options will differ depending on the model of
-printer that you're working with, it's probably better to consult the
-printer manual or a general guide to printing for more information on
-this topic.
-
-The other three buttons allow you to export the map page to a file.
-There are three export formats to choose from:
-
-- *Export as Image*
-- *Export as SVG*
-- *Export as PDF*
-
-Exporting as an image will give you a selection of various common
-image formats to choose from.
-This is probably the simplest option, but the image it creates is
-"dead" and difficult to edit.
-
-If you're sending the map to a cartographer (who may want to edit the
-map for publication), it's best to export as an SVG. SVG stands for
-"Scalable Vector Graphic", and can be imported to programs like
-`Inkscape <https://inkscape.org/>`_ or other vector image editing
-software.
-
-If you need to send the map to a client, it's most common to use a
-PDF, because it's easier to set up printing options for a PDF.
-Some cartographers may prefer PDF as well, if they have a program
-that allows them to import and edit this format.
+  The other buttons allow you to export the map page to a file.
+* |saveMapAsImage| :sup:`Export as Image`: gives you a selection
+  of various common image formats to choose from.
+  This is probably the simplest option, but the image it creates is
+  "dead" and difficult to edit.
+* |saveAsSVG| :sup:`Export as SVG`: If you're sending the map to a
+  cartographer (who may want to edit the map for publication),
+  it's best to export as an SVG. SVG stands for "Scalable Vector Graphic",
+  and can be imported to programs like `Inkscape <https://inkscape.org/>`_
+  or other vector image editing software.
+* |saveAsPDF| :sup:`Export as PDF`: If you need to send the map to a client,
+  it's most common to use a PDF, because it's easier to set up printing
+  options for a PDF.
+  Some cartographers may prefer PDF as well, if they have a program
+  that allows them to import and edit this format.
 
 For our purposes, we're going to use PDF.
 
@@ -307,16 +301,26 @@ For our purposes, we're going to use PDF.
    
 #. You can safely use the default values now and click
    :guilabel:`Save`.
+   
+   QGIS will proceed to the map export and push a message
+   on top of the print layout dialog as soon as it finishes.
+#. Click the hyperlink in the message to open the folder in which
+   the PDF has been saved in your system's file manager
+#. Open it and see how your layout looks.
+
+   Everything is OK?
+   Congratulations on your first completed QGIS map project!
+
+#. Anything unsatisfying? Go back to the QGIS window, do the
+   appropriate modifications and export again.
+#. Remember to save your project file.
+
 
 |IC|
 ----------------------------------------------------------------------
-
-#. Close the layout window
-#. Save your map
-#. Find your exported PDF using your operating system's file manager
-#. Open it
-
-Congratulations on your first completed QGIS map project!
+Now you know how to create a basic static map layout. We can go a step
+further and create a map layout that adapts dynamically, with more
+layout items.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -337,11 +341,9 @@ Congratulations on your first completed QGIS map project!
 .. |alignLeft| image:: /static/common/mActionAlignLeft.png
    :width: 1.5em
 .. |basic| image:: /static/common/basic.png
-.. |edit| image:: /static/common/edit.png
+.. |filePrint| image:: /static/common/mActionFilePrint.png
    :width: 1.5em
 .. |fileSave| image:: /static/common/mActionFileSave.png
-   :width: 1.5em
-.. |filePrint| image:: /static/common/mActionFilePrint.png
    :width: 1.5em
 .. |label| image:: /static/common/mActionLabel.png
    :width: 1.5em
@@ -351,6 +353,8 @@ Congratulations on your first completed QGIS map project!
 .. |moderate| image:: /static/common/moderate.png
 .. |moveItemContent| image:: /static/common/mActionMoveItemContent.png
    :width: 1.5em
+.. |refresh| image:: /static/common/mActionRefresh.png
+   :width: 1.5em
 .. |saveAsPDF| image:: /static/common/mActionSaveAsPDF.png
    :width: 1.5em
 .. |saveAsSVG| image:: /static/common/mActionSaveAsSVG.png
@@ -359,6 +363,10 @@ Congratulations on your first completed QGIS map project!
    :width: 1.5em
 .. |signMinus| image:: /static/common/symbologyRemove.png
    :width: 1.5em
+.. |symbologyEdit| image:: /static/common/symbologyEdit.png
+   :width: 1.5em
+.. |unchecked| image:: /static/common/checkbox_unchecked.png
+   :width: 1.3em
 .. |unlockAll| image:: /static/common/mActionUnlockAll.png
    :width: 1.5em
 .. |zoomFullExtent| image:: /static/common/mActionZoomFullExtent.png

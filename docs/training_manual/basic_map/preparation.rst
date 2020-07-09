@@ -1,60 +1,90 @@
-.. _tm_working_vector_data:
-
-|LS| Working with Vector Data
+|LS| Adding your first layers
 ===============================================================================
 
-Vector data is arguably the most common kind of data you will find in the daily
-use of GIS. The vector model represents the location and shape of geographic
-features using points, lines and polygons (and for 3D data also surfaces and
-volumes), while their other properties are included as attributes (often presented
-as a table in QGIS).
-It is usually used to store discrete features, like roads and
-city blocks. The objects in a vector dataset are called **features**,
-and contain data that describe their location and properties.
+We will start the application, and create a basic map to use for examples and
+exercises.
 
-**The goal for this lesson:** To learn about the structure of vector data, and
-how to load vector datasets into a map.
+**The goal for this lesson:** To get started with an example map.
 
-|basic| |FA| Viewing Layer Attributes
+.. note::  Before starting this exercise, QGIS must be installed on your
+   computer. Also, you should have downloaded the :ref:`sample data
+   <data_downloadlink>` to use.
+
+Launch QGIS from its desktop shortcut, menu item, etc., depending on how you
+configured its installation.
+
+.. note::  The screenshots for this course were taken in QGIS 3.4 running on
+   Linux. Depending on your setup, the screens you encounter may well appear
+   somewhat different. However, all the same buttons will still be available,
+   and the instructions will work on any OS. You will need QGIS 3.4 (the latest
+   version at time of writing) to use this course.
+
+Let's get started right away!
+
+.. _tm_pepare_a_map:
+
+|basic| |FA| Prepare a map
 -------------------------------------------------------------------------------
 
-It's important to know that the data you will be working with does not only
-represent **where** objects are in space, but also tells you **what** those
-objects are.
+#. Open QGIS. You will have a new, blank map.
 
-From the previous exercise, you should have the :guilabel:`rivers` layer
-loaded in your map. The lines that you can see right now are merely the
-position of the rivers: this is the *spatial data*.
+   .. figure:: img/add_blank_qgis.png
+      :align: center
+      :width: 100 %
 
-To see all the available data in the :guilabel:`rivers` layer,
-select it in the Layers panel and click the |openTable| button.
+#. The :guilabel:`Data Source Manager` dialog allows you to choose the data to
+   load depending on the data type. We'll use it to load our dataset:
+   click the |dataSourceManager| :sup:`Open Data Source Manager` button.
 
-It will show you a table with more data about the :guilabel:`rivers` layer.
-This is the layer's :guilabel:`Attribute table`. A row is called
-a *record*, and represents a river *feature*. A column is called a *field*,
-and represents a property of the river. Cells show *attributes*.
+   If you can't find the icon, check that the :guilabel:`Data Source Manager`
+   toolbar is enabled in the :menuselection:`View --> Toolbars` menu.
 
-.. figure:: img/attribute_data_preview.png
-   :align: center
+   .. figure:: img/add_data_dialog.png
+      :align: center
+      :width: 100 %
 
-These definitions are commonly used in GIS, so it's essential to remember them!
+#. Load the :file:`protected_areas.shp` vector dataset:
+   
+   #. Click on the :guilabel:`Vector` tab.
+   #. Enable the |radioButtonOn|:guilabel:`File` source type.
+   #. Press the :guilabel:`...` button next to :guilabel:`Vector Dataset(s)`.
+   #. Select the :file:`exercise_data/shapefile/protected_areas.shp` file
+      in your training directory.
+   #. Click :guilabel:`Open`. You will see the original dialog,
+      with the file path filled in.
 
-You may now close the attribute table.
+      .. figure:: img/add_vector_dialog.png
+         :align: center
 
-.. _backlink-vector-explore-attribute-data:
+   #. Click :guilabel:`Add` here as well. The data you specified will now load:
+      you can see a ``protected_areas`` item in the :guilabel:`Layers` panel
+      (bottom left) with its features shown in the main map canvas.
 
-|basic| |TY| Exploring Vector Data Attributes
+      .. figure:: img/first_loaded_layer.png
+         :align: center
+         :width: 100%
+
+Congratulations! You now have a basic map. Now would be a good time to save
+your work.
+
+#. Click on the :guilabel:`Save As` button: |fileSaveAs|
+#. Save the map under a :file:`solution` folder next to :file:`exercise_data`
+   and call it :file:`basic_map.qgz`.
+
+.. _backlink-interface-preparation-1:
+
+|basic| |TY|
 -------------------------------------------------------------------------------
 
-#. How many fields are available in the :guilabel:`rivers` layer?
-#. Tell us a bit about the ``town`` places in your dataset.
+Repeat the steps above to add the :file:`places.shp` and :file:`rivers.shp`
+layers from the same folder (:file:`exercise_data/shapefile`) to the map.
 
-:ref:`Check your results <vector-explore-attribute-data>`
+:ref:`Check your results <interface-preparation-1>`
 
 
 .. _load_geopackage:
 
-|basic| |FA| Loading Vector Data From GeoPackage Database
+|basic| |FA| Loading vector data from a GeoPackage Database
 -------------------------------------------------------------------------------
 
 Databases allow you to store a large volume of associated data in one file. You
@@ -100,7 +130,7 @@ Congratulations! You have loaded the first layer from a GeoPackage.
 
 .. _backlink-vector-load-from-database-1:
 
-|basic| |FA| Loading Vector Data From a SpatiaLite Database with the Browser
+|basic| |FA| Loading vector data from a SpatiaLite Database with the Browser
 -------------------------------------------------------------------------------
 
 QGIS provides access to many other database formats. Like GeoPackage, the
@@ -141,8 +171,8 @@ the :guilabel:`Browser`.
   and use it to add your data. It's a handy shortcut for the :menuselection:`Data Source
   Manager --> Browser` tab, with the same functionality.
 
-.. note:: Remember to save your project frequently! The project file doesn't contain any of
-   the data itself, but it remembers which layers you loaded into your map.
+.. note:: Remember to save your project frequently! The project file doesn't contain
+   any of the data itself, but it remembers which layers you loaded into your map.
 
 
 .. _backlink-vector-load-more-data:
@@ -157,6 +187,7 @@ using any of the methods explained above:
 * :guilabel:`water`
 
 :ref:`Check your results <vector-load-more-data>`
+
 
 |FA| Reordering the Layers
 -------------------------------------------------------------------------------
@@ -193,18 +224,21 @@ To resolve this problem:
 You'll see that the map now makes more sense visually, with roads and buildings
 appearing above the land use regions.
 
+
 |IC|
 -------------------------------------------------------------------------------
 
-Now you've added all the layers you need from several different sources.
+Now you've added all the layers you need from several different sources
+and created a basic map!
+
 
 |WN|
 -------------------------------------------------------------------------------
 
-Using the random palette automatically assigned when loading the layers, your
-current map is probably not easy to read. It would be preferable to assign your
-own choice of colors and symbols. This is what you'll learn to do in the next
-lesson.
+Now you're familiar with the basic function of the :guilabel:`Open Data Source Manager`
+button, but what about all the others? How does this interface work? Before we
+go on, let's take a look at some basic interaction with the QGIS interface.
+This is the topic of the next lesson.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -225,14 +259,16 @@ lesson.
    :width: 1.5em
 .. |fileOpen| image:: /static/common/mActionFileOpen.png
    :width: 1.5em
+.. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
+   :width: 1.5em
 .. |geoPackage| image:: /static/common/mGeoPackage.png
    :width: 1.5em
 .. |moderate| image:: /static/common/moderate.png
 .. |newGeoPackageLayer| image:: /static/common/mActionNewGeoPackageLayer.png
    :width: 1.5em
-.. |openTable| image:: /static/common/mActionOpenTable.png
-   :width: 1.5em
 .. |polygonLayer| image:: /static/common/mIconPolygonLayer.png
+   :width: 1.5em
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
    :width: 1.5em
 .. |spatialite| image:: /static/common/mIconSpatialite.png
    :width: 1.5em

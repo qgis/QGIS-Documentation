@@ -1878,6 +1878,19 @@ filters all features where attribute ``name`` ends with "value"
 
     http://localhost/qgisserver/wfs3/collection_one/items.json?attribute_one=*value
 
+Feature sorting |316|
+---------------------
+
+It is possible to order the result set by field value using the ``sortby``
+query parameter. 
+
+The results are sorted in ascending order by default.
+To sort the results in descending order, a boolean flag (``sortdesc``) can be set:
+
+.. code-block:: none
+
+  http://localhost/qgisserver/wfs3/collection_one/items.json?sortby=name&sortdesc=1
+  
 
 Attribute selection
 -------------------
@@ -2128,3 +2141,12 @@ Similarly, external layers can be used in GetPrint requests:
    &basemap:crs=EPSG:2056
    &basemap:layers=orthofoto
    &basemap:styles=default
+
+
+.. Substitutions definitions - AVOID EDITING PAST THIS LINE
+   This will be automatically updated by the find_set_subst.py script.
+   If you need to create a new substitution manually,
+   please add it also to the substitutions.txt file in the
+   source folder.
+
+.. |316| replace:: ``NEW in 3.16``

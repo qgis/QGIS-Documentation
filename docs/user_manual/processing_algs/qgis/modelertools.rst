@@ -23,7 +23,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -44,7 +43,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -54,6 +52,9 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - The (renamed) loaded layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:loadlayer``
 
@@ -74,7 +75,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -95,7 +95,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -105,6 +104,9 @@ Outputs
      - ``OUTPUT``
      - [same as input]
      - The (renamed) output layer
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:renamelayer``
 
@@ -125,7 +127,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -146,7 +147,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -156,6 +156,9 @@ Outputs
      - ``CONCATENATION``
      - [string]
      - The concatenated string
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:stringconcatenation``
 

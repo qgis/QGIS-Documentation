@@ -20,7 +20,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    *  - Label
       - Name
@@ -91,7 +91,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    *  - Label
       - Name
@@ -101,6 +100,9 @@ Outputs
       - ``OUTPUT``
       - [vector: polygon]
       - The output buffer layer
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:buffervectors``
 
@@ -116,7 +118,7 @@ Clip vector by extent
 Clips any OGR-supported vector file to a given extent.
 
 This algorithm is derived from the
-`ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_ .
+`ogr2ogr utility <https://gdal.org/ogr2ogr.html>`_.
 
 Parameters
 ..........
@@ -124,7 +126,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    *  - Label
       - Name
@@ -166,7 +167,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    *  - Label
       - Name
@@ -177,6 +177,9 @@ Outputs
       - [same as input]
       - The output (clipped) layer.
         The default format is "ESRI Shapefile".
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:clipvectorbyextent``
 
@@ -192,7 +195,7 @@ Clip vector by mask layer
 Clips any OGR-supported vector layer by a mask polygon layer.
 
 This algorithm is derived from the `ogr2ogr utility
-<https://gdal.org/ogr2ogr.html>`_ .
+<https://gdal.org/ogr2ogr.html>`_.
 
 Parameters
 ..........
@@ -200,7 +203,6 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    *  - Label
       - Name
@@ -241,7 +243,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    *  - Label
       - Name
@@ -252,6 +253,9 @@ Outputs
       - [same as input]
       - The output (masked) layer.
         The default format is "ESRI Shapefile".
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:clipvectorbymasklayer``
 
@@ -275,7 +279,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    *  - Label
       - Name
@@ -365,7 +369,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    *  - Label
       - Name
@@ -376,6 +379,9 @@ Outputs
       - [same as input]
       - The output multipart geometry layer (with dissolved
 	geometries)
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:dissolve``
 
@@ -398,7 +404,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    *  - Label
       - Name
@@ -446,7 +452,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    *  - Label
       - Name
@@ -456,6 +461,9 @@ Outputs
       - ``OUTPUT``
       - [vector: line]
       - The output offset curve layer
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:offsetcurve``
 
@@ -477,7 +485,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    *  - Label
       - Name
@@ -558,7 +566,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    *  - Label
       - Name
@@ -568,6 +575,9 @@ Outputs
       - ``OUTPUT``
       - [vector: polygon]
       - The output buffer layer
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:onesidebuffer``
 
@@ -590,7 +600,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    *  - Label
       - Name
@@ -640,7 +650,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    *  - Label
       - Name
@@ -650,6 +659,9 @@ Outputs
       - ``OUTPUT``
       - [vector: point]
       - The output point layer
+
+Python code
+...........
 
 **Algorithm ID**: ``gdal:pointsalonglines``
 

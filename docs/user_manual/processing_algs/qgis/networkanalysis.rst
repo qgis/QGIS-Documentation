@@ -24,7 +24,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -65,7 +65,7 @@ Parameters
 .. list-table::
    :header-rows: 0
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - **Include upper/lower bound points**
      - ``INCLUDE_BOUNDS``
@@ -112,7 +112,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -130,6 +129,9 @@ Outputs
      - Line layer representing the parts of the network
        that can be serviced by the start points, for the
        given cost.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:serviceareafromlayer``
 
@@ -156,7 +158,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -234,7 +236,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -252,6 +253,9 @@ Outputs
      - Line layer representing the parts of the network
        that can be serviced by the start point, for the
        given cost.
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:serviceareafrompoint``
 
@@ -273,7 +277,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -418,7 +422,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -430,6 +433,9 @@ Outputs
      - [vector: line]
      - Line layer of the shortest or fastest path
        from each of the start points to the end point
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:shortestpathlayertopoint``
 
@@ -451,7 +457,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -588,7 +594,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -600,6 +605,9 @@ Outputs
      - [vector: line]
      - Line layer of the shortest or fastest path
        from each of the start points to the end point
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:shortestpathpointtolayer``
 
@@ -621,7 +629,7 @@ Parameters
 .. list-table::
    :header-rows: 1
    :widths: 20 15 15 20 30
-   :stub-columns: 0
+   :class: longtable
 
    * - Label
      - Name
@@ -772,7 +780,6 @@ Outputs
 .. list-table::
    :header-rows: 1
    :widths: 20 20 20 40
-   :stub-columns: 0
 
    * - Label
      - Name
@@ -784,6 +791,9 @@ Outputs
      - [vector: line]
      - Line layer of the shortest or fastest path
        from each of the start point to the end point
+
+Python code
+...........
 
 **Algorithm ID**: ``qgis:shortestpathpointtopoint``
 
