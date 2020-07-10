@@ -1,4 +1,4 @@
-.. _expression_function_env:
+.. _expression_function_General_env:
 
 env
 ...
@@ -23,7 +23,7 @@ env(name)
        ``env( 'I_DO_NOT_EXIST' )`` → NULL
 
 
-.. _expression_function_eval:
+.. _expression_function_General_eval:
 
 eval
 ....
@@ -46,7 +46,7 @@ eval(expression)
        ``eval(@expression_var)`` → [whatever the result of evaluating @expression_var might be…]
 
 
-.. _expression_function_eval_template:
+.. _expression_function_General_eval_template:
 
 eval_template
 .............
@@ -67,7 +67,7 @@ eval_template(template)
      - ``eval_template('QGIS [% upper(\\'rocks\\') %]')`` → QGIS ROCKS
 
 
-.. _expression_function_is_layer_visible:
+.. _expression_function_General_is_layer_visible:
 
 is_layer_visible
 ................
@@ -88,7 +88,7 @@ is_layer_visible(layer)
      - ``is_layer_visible('baseraster')`` → True
 
 
-.. _expression_function_layer_property:
+.. _expression_function_General_layer_property:
 
 layer_property
 ..............
@@ -115,7 +115,7 @@ layer_property(layer, property)
        ``layer_property('landsat','crs')`` → 'EPSG:4326'
 
 
-.. _expression_function_var:
+.. _expression_function_General_var:
 
 var
 ...
@@ -136,7 +136,7 @@ var(name)
      - ``var('qgis_version')`` → '2.12'
 
 
-.. _expression_function_with_variable:
+.. _expression_function_General_with_variable:
 
 with_variable
 .............

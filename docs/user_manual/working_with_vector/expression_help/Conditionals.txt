@@ -1,4 +1,4 @@
-.. _expression_function_coalesce:
+.. _expression_function_Conditionals_coalesce:
 
 coalesce
 ........
@@ -25,7 +25,7 @@ coalesce(expression1, expression2, ...)
        ``coalesce("fieldA", "fallbackField", 'ERROR')`` → value of fieldA if it is non-NULL else the value of "fallbackField" or the string 'ERROR' if both are NULL
 
 
-.. _expression_function_if:
+.. _expression_function_Conditionals_if:
 
 if
 ..
@@ -62,7 +62,7 @@ if(condition, result_when_true, result_when_false)
        ``if( 10, 'One', 'Zero' )`` → 'One'
 
 
-.. _expression_function_nullif:
+.. _expression_function_Conditionals_nullif:
 
 nullif
 ......
@@ -89,7 +89,7 @@ nullif(value1, value2)
        ``nullif("name", '')`` → NULL, if name is an empty string (or already NULL), the name in any other case.
 
 
-.. _expression_function_regexp_match:
+.. _expression_function_Conditionals_regexp_match:
 
 regexp_match
 ............
@@ -112,7 +112,7 @@ regexp_match(input_string, regex)
      - ``regexp_match('QGIS ROCKS','\\\\sROCKS')`` → 4
 
 
-.. _expression_function_try:
+.. _expression_function_Conditionals_try:
 
 try
 ...

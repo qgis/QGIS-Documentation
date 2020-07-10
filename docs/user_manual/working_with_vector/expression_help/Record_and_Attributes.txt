@@ -1,4 +1,4 @@
-.. _expression_function_$currentfeature:
+.. _expression_function_Record_and_Attributes_$currentfeature:
 
 $currentfeature
 ...............
@@ -12,11 +12,11 @@ $currentfeature
    * - Description
      - Returns the current feature being evaluated. This can be used with the 'attribute' function to evaluate attribute values from the current feature.
 
-      * - Examples
+   * - Examples
      - ``attribute( $currentfeature, 'name' )`` → value stored in 'name' attribute for the current feature
 
 
-.. _expression_function_$id:
+.. _expression_function_Record_and_Attributes_$id:
 
 $id
 ...
@@ -30,11 +30,11 @@ $id
    * - Description
      - Returns the feature id of the current row.
 
-      * - Examples
+   * - Examples
      - ``$id`` → 42
 
 
-.. _expression_function_attribute:
+.. _expression_function_Record_and_Attributes_attribute:
 
 attribute
 .........
@@ -48,10 +48,10 @@ attribute
    * - Description
      - Returns an attribute from a feature.
 
-      
 
 
-.. _expression_function_attributes:
+
+.. _expression_function_Record_and_Attributes_attributes:
 
 attributes
 ..........
@@ -65,10 +65,10 @@ attributes
    * - Description
      - Returns a map containing all attributes from a feature, with field names as map keys.
 
-      
 
 
-.. _expression_function_display_expression:
+
+.. _expression_function_Record_and_Attributes_display_expression:
 
 display_expression
 ..................
@@ -97,7 +97,7 @@ display_expression(feature, layer, evaluate)
        ``display_expression('a_layer_id', $currentfeature, 'False')`` → The display expression of the given feature not evaluated.
 
 
-.. _expression_function_get_feature:
+.. _expression_function_Record_and_Attributes_get_feature:
 
 get_feature
 ...........
@@ -122,7 +122,7 @@ get_feature(layer, attribute, value)
      - ``get_feature('streets','name','main st')`` → first feature found in "streets" layer with "main st" value in the "name" field
 
 
-.. _expression_function_get_feature_by_id:
+.. _expression_function_Record_and_Attributes_get_feature_by_id:
 
 get_feature_by_id
 .................
@@ -145,7 +145,7 @@ get_feature_by_id(layer, feature_id)
      - ``get_feature('streets', 1)`` → the feature with the id 1 on the layer "streets"
 
 
-.. _expression_function_is_selected:
+.. _expression_function_Record_and_Attributes_is_selected:
 
 is_selected
 ...........
@@ -159,10 +159,10 @@ is_selected
    * - Description
      - Returns True if a feature is selected. Can be used with zero, one or two arguments, see below for details.
 
-      
 
 
-.. _expression_function_maptip:
+
+.. _expression_function_Record_and_Attributes_maptip:
 
 maptip
 ......
@@ -191,7 +191,7 @@ maptip(feature, layer, evaluate)
        ``maptip('a_layer_id', $currentfeature, 'False')`` → The maptip of the given feature not evaluated.
 
 
-.. _expression_function_num_selected:
+.. _expression_function_Record_and_Attributes_num_selected:
 
 num_selected
 ............
@@ -214,7 +214,7 @@ num_selected(layer)
        ``num_selected('streets')`` → The number of selected features on the layer streets
 
 
-.. _expression_function_represent_value:
+.. _expression_function_Record_and_Attributes_represent_value:
 
 represent_value
 ...............
@@ -239,7 +239,7 @@ represent_value(value, fieldName)
        ``represent_value('static value', 'field_name')`` → Description for static value
 
 
-.. _expression_function_sqlite_fetch_and_increment:
+.. _expression_function_Record_and_Attributes_sqlite_fetch_and_increment:
 
 sqlite_fetch_and_increment
 ..........................
@@ -272,7 +272,7 @@ sqlite_fetch_and_increment(database, table, id_field, filter_attribute, filter_v
        ``sqlite_fetch_and_increment(layer_property(@layer, 'path'), 'sequence_table', 'last_unique_id', 'sequence_id', 'global', map('last_change','date(''now'')','user','''' || @user_account_name || ''''))`` → 0
 
 
-.. _expression_function_uuid:
+.. _expression_function_Record_and_Attributes_uuid:
 
 uuid
 ....
@@ -286,7 +286,7 @@ uuid
    * - Description
      - Generates a Universally Unique Identifier (UUID) for each row using the Qt <a href='http://qt-project.org/doc/qt-4.8/quuid.html#createUuid'>QUuid::createUuid</a>  method.  Each UUID is 38 characters long.
 
-      * - Examples
+   * - Examples
      - ``uuid()`` → '{0bd2f60f-f157-4a6d-96af-d4ba4cb366a1}'
 
 

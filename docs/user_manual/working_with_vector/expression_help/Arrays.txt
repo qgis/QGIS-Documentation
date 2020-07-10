@@ -1,4 +1,4 @@
-.. _expression_function_array:
+.. _expression_function_Arrays_array:
 
 array
 .....
@@ -19,7 +19,7 @@ array(value1, value2, ...)
      - ``array(2,10)`` → [ 2, 10 ]
 
 
-.. _expression_function_array_all:
+.. _expression_function_Arrays_array_all:
 
 array_all
 .........
@@ -44,7 +44,7 @@ array_all(array_a, array_b)
        ``array_all(array(1,2,3),array(1,2,4))`` → false
 
 
-.. _expression_function_array_append:
+.. _expression_function_Arrays_array_append:
 
 array_append
 ............
@@ -67,7 +67,7 @@ array_append(array, value)
      - ``array_append(array(1,2,3),4)`` → [ 1, 2, 3, 4 ]
 
 
-.. _expression_function_array_cat:
+.. _expression_function_Arrays_array_cat:
 
 array_cat
 .........
@@ -88,7 +88,7 @@ array_cat(array1, array2, ...)
      - ``array_cat(array(1,2),array(2,3))`` → [ 1, 2, 2, 3 ]
 
 
-.. _expression_function_array_contains:
+.. _expression_function_Arrays_array_contains:
 
 array_contains
 ..............
@@ -111,7 +111,7 @@ array_contains(array, value)
      - ``array_contains(array(1,2,3),2)`` → true
 
 
-.. _expression_function_array_distinct:
+.. _expression_function_Arrays_array_distinct:
 
 array_distinct
 ..............
@@ -132,7 +132,7 @@ array_distinct(array)
      - ``array_distinct(array(1,2,3,2,1))`` → [ 1, 2, 3 ]
 
 
-.. _expression_function_array_filter:
+.. _expression_function_Arrays_array_filter:
 
 array_filter
 ............
@@ -155,7 +155,7 @@ array_filter(array, expression)
      - ``array_filter(array(1,2,3),@element &lt; 3)`` → [ 1, 2 ]
 
 
-.. _expression_function_array_find:
+.. _expression_function_Arrays_array_find:
 
 array_find
 ..........
@@ -178,7 +178,7 @@ array_find(array, value)
      - ``array_find(array(1,2,3),2)`` → 1
 
 
-.. _expression_function_array_first:
+.. _expression_function_Arrays_array_first:
 
 array_first
 ...........
@@ -199,7 +199,7 @@ array_first(array)
      - ``array_first(array('a','b','c'))`` → 'a'
 
 
-.. _expression_function_array_foreach:
+.. _expression_function_Arrays_array_foreach:
 
 array_foreach
 .............
@@ -224,7 +224,7 @@ array_foreach(array, expression)
        ``array_foreach(array(1,2,3),@element + 10)`` → [ 11, 12, 13 ]
 
 
-.. _expression_function_array_get:
+.. _expression_function_Arrays_array_get:
 
 array_get
 .........
@@ -247,7 +247,7 @@ array_get(array, index)
      - ``array_get(array('a','b','c'),1)`` → 'b'
 
 
-.. _expression_function_array_insert:
+.. _expression_function_Arrays_array_insert:
 
 array_insert
 ............
@@ -272,7 +272,7 @@ array_insert(array, pos, value)
      - ``array_insert(array(1,2,3),1,100)`` → [ 1, 100, 2, 3 ]
 
 
-.. _expression_function_array_intersect:
+.. _expression_function_Arrays_array_intersect:
 
 array_intersect
 ...............
@@ -295,7 +295,7 @@ array_intersect(array1, array2)
      - ``array_intersect(array(1,2,3,4),array(4,0,2,5))`` → true
 
 
-.. _expression_function_array_last:
+.. _expression_function_Arrays_array_last:
 
 array_last
 ..........
@@ -316,7 +316,7 @@ array_last(array)
      - ``array_last(array('a','b','c'))`` → 'c'
 
 
-.. _expression_function_array_length:
+.. _expression_function_Arrays_array_length:
 
 array_length
 ............
@@ -337,7 +337,7 @@ array_length(array)
      - ``array_length(array(1,2,3))`` → 3
 
 
-.. _expression_function_array_prepend:
+.. _expression_function_Arrays_array_prepend:
 
 array_prepend
 .............
@@ -360,7 +360,7 @@ array_prepend(array, value)
      - ``array_prepend(array(1,2,3),0)`` → [ 0, 1, 2, 3 ]
 
 
-.. _expression_function_array_remove_all:
+.. _expression_function_Arrays_array_remove_all:
 
 array_remove_all
 ................
@@ -383,7 +383,7 @@ array_remove_all(array, value)
      - ``array_remove_all(array('a','b','c','b'),'b')`` → [ 'a', 'c' ]
 
 
-.. _expression_function_array_remove_at:
+.. _expression_function_Arrays_array_remove_at:
 
 array_remove_at
 ...............
@@ -406,7 +406,7 @@ array_remove_at(array, pos)
      - ``array_remove_at(array(1,2,3),1)`` → [ 1, 3 ]
 
 
-.. _expression_function_array_reverse:
+.. _expression_function_Arrays_array_reverse:
 
 array_reverse
 .............
@@ -427,7 +427,7 @@ array_reverse(array)
      - ``array_reverse(array(2,4,0,10))`` → [ 10, 0, 4, 2 ]
 
 
-.. _expression_function_array_slice:
+.. _expression_function_Arrays_array_slice:
 
 array_slice
 ...........
@@ -466,7 +466,7 @@ array_slice(array, start_pos, end_pos)
        ``array_slice(array_slice(array('Dufour','Valmiera','Chugiak','Brighton'),-2,-1)`` → [ 'Chugiak', 'Brighton' ]
 
 
-.. _expression_function_array_sort:
+.. _expression_function_Arrays_array_sort:
 
 array_sort
 ..........
@@ -489,7 +489,7 @@ array_sort(array, ascending)
      - ``array_sort(array(3,2,1))`` → [ 1, 2, 3 ]
 
 
-.. _expression_function_array_to_string:
+.. _expression_function_Arrays_array_to_string:
 
 array_to_string
 ...............
@@ -518,7 +518,7 @@ array_to_string(array, delimiter, empty_value)
        ``array_to_string(array('1','','3'),',','0')`` → '1,0,3'
 
 
-.. _expression_function_generate_series:
+.. _expression_function_Arrays_generate_series:
 
 generate_series
 ...............
@@ -545,7 +545,7 @@ generate_series(start, stop, step)
        ``generate_series(5,1,-1)`` → [ 5, 4, 3, 2, 1 ]
 
 
-.. _expression_function_regexp_matches:
+.. _expression_function_Arrays_regexp_matches:
 
 regexp_matches
 ..............
@@ -572,7 +572,7 @@ regexp_matches(string, regex, empty_value)
        ``regexp_matches('key=>','(.*)=>(.*)','empty value')`` → [ 'key', 'empty value' ]
 
 
-.. _expression_function_string_to_array:
+.. _expression_function_Arrays_string_to_array:
 
 string_to_array
 ...............

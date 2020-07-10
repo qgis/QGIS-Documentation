@@ -1,4 +1,4 @@
-.. _expression_function_from_json:
+.. _expression_function_Maps_from_json:
 
 from_json
 .........
@@ -21,7 +21,7 @@ from_json(string)
        ``from_json('[1,2,3]')`` → [1,2,3]
 
 
-.. _expression_function_hstore_to_map:
+.. _expression_function_Maps_hstore_to_map:
 
 hstore_to_map
 .............
@@ -42,7 +42,7 @@ hstore_to_map(string)
      - ``hstore_to_map('qgis=>rocks')`` → { "qgis" : "rocks" }
 
 
-.. _expression_function_json_to_map:
+.. _expression_function_Maps_json_to_map:
 
 json_to_map
 ...........
@@ -63,7 +63,7 @@ json_to_map(string)
      - ``json_to_map('{"qgis":"rocks"}')`` → { "qgis" : "rocks" }
 
 
-.. _expression_function_map:
+.. _expression_function_Maps_map:
 
 map
 ...
@@ -86,7 +86,7 @@ map(key1, value1, key2, value2, ...)
      - ``map('1','one','2', 'two')`` → { '1': 'one', '2': 'two' }
 
 
-.. _expression_function_map_akeys:
+.. _expression_function_Maps_map_akeys:
 
 map_akeys
 .........
@@ -107,7 +107,7 @@ map_akeys(map)
      - ``map_akeys(map('1','one','2','two'))`` → [ '1', '2' ]
 
 
-.. _expression_function_map_avals:
+.. _expression_function_Maps_map_avals:
 
 map_avals
 .........
@@ -128,7 +128,7 @@ map_avals(map)
      - ``map_avals(map('1','one','2','two'))`` → [ 'one', 'two' ]
 
 
-.. _expression_function_map_concat:
+.. _expression_function_Maps_map_concat:
 
 map_concat
 ..........
@@ -149,7 +149,7 @@ map_concat(map1, map2, ...)
      - ``map_concat(map('1','one', '2','overridden'),map('2','two', '3','three'))`` → { '1': 'one, '2': 'two', '3': 'three' }
 
 
-.. _expression_function_map_delete:
+.. _expression_function_Maps_map_delete:
 
 map_delete
 ..........
@@ -172,7 +172,7 @@ map_delete(map, key)
      - ``map_delete(map('1','one','2','two'),'2')`` → { '1': 'one' }
 
 
-.. _expression_function_map_exist:
+.. _expression_function_Maps_map_exist:
 
 map_exist
 .........
@@ -195,7 +195,7 @@ map_exist(map, key)
      - ``map_exist(map('1','one','2','two'),'3')`` → false
 
 
-.. _expression_function_map_get:
+.. _expression_function_Maps_map_get:
 
 map_get
 .......
@@ -218,7 +218,7 @@ map_get(map, key)
      - ``map_get(map('1','one','2','two'),'2')`` → 'two'
 
 
-.. _expression_function_map_insert:
+.. _expression_function_Maps_map_insert:
 
 map_insert
 ..........
@@ -243,7 +243,7 @@ map_insert(map, key, value)
      - ``map_insert(map('1','one'),'3','three')`` → { '1': 'one', '3': 'three' }
 
 
-.. _expression_function_map_to_hstore:
+.. _expression_function_Maps_map_to_hstore:
 
 map_to_hstore
 .............
@@ -264,7 +264,7 @@ map_to_hstore(map)
      - ``map_to_hstore(map('qgis','rocks'))`` → "qgis"=>"rocks"}
 
 
-.. _expression_function_map_to_json:
+.. _expression_function_Maps_map_to_json:
 
 map_to_json
 ...........
@@ -285,7 +285,7 @@ map_to_json(map)
      - ``map_to_json(map('qgis','rocks'))`` → {"qgis":"rocks"}
 
 
-.. _expression_function_to_json:
+.. _expression_function_Maps_to_json:
 
 to_json
 .......

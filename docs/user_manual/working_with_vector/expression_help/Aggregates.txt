@@ -1,4 +1,4 @@
-.. _expression_function_aggregate:
+.. _expression_function_Aggregates_aggregate:
 
 aggregate
 .........
@@ -37,7 +37,7 @@ aggregate(layer, aggregate, expression, filter, concatenator, order_by)
        ``aggregate(layer:='countries', aggregate:='max', expression:="code", filter:=intersects( $geometry, geometry(@parent) ) )`` → The country code of an intersecting country on the layer 'countries'
 
 
-.. _expression_function_array_agg:
+.. _expression_function_Aggregates_array_agg:
 
 array_agg
 .........
@@ -64,7 +64,7 @@ array_agg(expression, group_by, filter, order_by)
      - ``array_agg("name",group_by:="state")`` → list of name values, grouped by state field
 
 
-.. _expression_function_collect:
+.. _expression_function_Aggregates_collect:
 
 collect
 .......
@@ -89,7 +89,7 @@ collect(expression, group_by, filter)
      - ``collect( $geometry )`` → multipart geometry of aggregated geometries
 
 
-.. _expression_function_concatenate:
+.. _expression_function_Aggregates_concatenate:
 
 concatenate
 ...........
@@ -118,7 +118,7 @@ concatenate(expression, group_by, filter, concatenator, order_by)
      - ``concatenate("town_name",group_by:="state",concatenator:=',')`` → comma separated list of town_names, grouped by state field
 
 
-.. _expression_function_concatenate_unique:
+.. _expression_function_Aggregates_concatenate_unique:
 
 concatenate_unique
 ..................
@@ -147,7 +147,7 @@ concatenate_unique(expression, group_by, filter, concatenator, order_by)
      - ``concatenate("town_name",group_by:="state",concatenator:=',')`` → comma separated list of unique town_names, grouped by state field
 
 
-.. _expression_function_count:
+.. _expression_function_Aggregates_count:
 
 count
 .....
@@ -172,7 +172,7 @@ count(expression, group_by, filter)
      - ``count("stations",group_by:="state")`` → count of stations, grouped by state field
 
 
-.. _expression_function_count_distinct:
+.. _expression_function_Aggregates_count_distinct:
 
 count_distinct
 ..............
@@ -197,7 +197,7 @@ count_distinct(expression, group_by, filter)
      - ``count_distinct("stations",group_by:="state")`` → count of distinct stations values, grouped by state field
 
 
-.. _expression_function_count_missing:
+.. _expression_function_Aggregates_count_missing:
 
 count_missing
 .............
@@ -222,7 +222,7 @@ count_missing(expression, group_by, filter)
      - ``count_missing("stations",group_by:="state")`` → count of missing (null) station values, grouped by state field
 
 
-.. _expression_function_iqr:
+.. _expression_function_Aggregates_iqr:
 
 iqr
 ...
@@ -247,7 +247,7 @@ iqr(expression, group_by, filter)
      - ``iqr("population",group_by:="state")`` → inter quartile range of population value, grouped by state field
 
 
-.. _expression_function_majority:
+.. _expression_function_Aggregates_majority:
 
 majority
 ........
@@ -272,7 +272,7 @@ majority(expression, group_by, filter)
      - ``majority("class",group_by:="state")`` → most commonly occurring class value, grouped by state field
 
 
-.. _expression_function_max_length:
+.. _expression_function_Aggregates_max_length:
 
 max_length
 ..........
@@ -297,7 +297,7 @@ max_length(expression, group_by, filter)
      - ``max_length("town_name",group_by:="state")`` → maximum length of town_name, grouped by state field
 
 
-.. _expression_function_maximum:
+.. _expression_function_Aggregates_maximum:
 
 maximum
 .......
@@ -322,7 +322,7 @@ maximum(expression, group_by, filter)
      - ``maximum("population",group_by:="state")`` → maximum population value, grouped by state field
 
 
-.. _expression_function_mean:
+.. _expression_function_Aggregates_mean:
 
 mean
 ....
@@ -347,7 +347,7 @@ mean(expression, group_by, filter)
      - ``mean("population",group_by:="state")`` → mean population value, grouped by state field
 
 
-.. _expression_function_median:
+.. _expression_function_Aggregates_median:
 
 median
 ......
@@ -372,7 +372,7 @@ median(expression, group_by, filter)
      - ``median("population",group_by:="state")`` → median population value, grouped by state field
 
 
-.. _expression_function_min_length:
+.. _expression_function_Aggregates_min_length:
 
 min_length
 ..........
@@ -397,7 +397,7 @@ min_length(expression, group_by, filter)
      - ``min_length("town_name",group_by:="state")`` → minimum length of town_name, grouped by state field
 
 
-.. _expression_function_minimum:
+.. _expression_function_Aggregates_minimum:
 
 minimum
 .......
@@ -422,7 +422,7 @@ minimum(expression, group_by, filter)
      - ``minimum("population",group_by:="state")`` → minimum population value, grouped by state field
 
 
-.. _expression_function_minority:
+.. _expression_function_Aggregates_minority:
 
 minority
 ........
@@ -447,7 +447,7 @@ minority(expression, group_by, filter)
      - ``minority("class",group_by:="state")`` → least occurring class value, grouped by state field
 
 
-.. _expression_function_q1:
+.. _expression_function_Aggregates_q1:
 
 q1
 ..
@@ -472,7 +472,7 @@ q1(expression, group_by, filter)
      - ``q1("population",group_by:="state")`` → first quartile of population value, grouped by state field
 
 
-.. _expression_function_q3:
+.. _expression_function_Aggregates_q3:
 
 q3
 ..
@@ -497,7 +497,7 @@ q3(expression, group_by, filter)
      - ``q3("population",group_by:="state")`` → third quartile of population value, grouped by state field
 
 
-.. _expression_function_range:
+.. _expression_function_Aggregates_range:
 
 range
 .....
@@ -522,7 +522,7 @@ range(expression, group_by, filter)
      - ``range("population",group_by:="state")`` → range of population values, grouped by state field
 
 
-.. _expression_function_relation_aggregate:
+.. _expression_function_Aggregates_relation_aggregate:
 
 relation_aggregate
 ..................
@@ -557,7 +557,7 @@ relation_aggregate(relation, aggregate, expression, concatenator, order_by)
        ``relation_aggregate('my_relation','array_agg', "id")`` → array of the id field from all matching child features using the 'my_relation' relation
 
 
-.. _expression_function_stdev:
+.. _expression_function_Aggregates_stdev:
 
 stdev
 .....
@@ -582,7 +582,7 @@ stdev(expression, group_by, filter)
      - ``stdev("population",group_by:="state")`` → standard deviation of population value, grouped by state field
 
 
-.. _expression_function_sum:
+.. _expression_function_Aggregates_sum:
 
 sum
 ...

@@ -1,4 +1,4 @@
-.. _expression_function_age:
+.. _expression_function_Date_and_Time_age:
 
 age
 ...
@@ -23,7 +23,7 @@ age(datetime1, datetime2)
        ``hour(age('2012-05-12','2012-05-02'))`` → 240
 
 
-.. _expression_function_datetime_from_epoch:
+.. _expression_function_Date_and_Time_datetime_from_epoch:
 
 datetime_from_epoch
 ...................
@@ -44,7 +44,7 @@ datetime_from_epoch(int)
      - ``datetime_from_epoch(1483225200000)`` → 2017-01-01T00:00:00
 
 
-.. _expression_function_day:
+.. _expression_function_Date_and_Time_day:
 
 day
 ...
@@ -58,10 +58,10 @@ day
    * - Description
      - Extracts the day from a date, or the number of days from an interval.
 
-      
 
 
-.. _expression_function_day_of_week:
+
+.. _expression_function_Date_and_Time_day_of_week:
 
 day_of_week
 ...........
@@ -82,7 +82,7 @@ day_of_week(date)
      - ``day_of_week(to_date('2015-09-21'))`` → 1
 
 
-.. _expression_function_epoch:
+.. _expression_function_Date_and_Time_epoch:
 
 epoch
 .....
@@ -103,7 +103,7 @@ epoch(date)
      - ``epoch(to_date('2017-01-01'))`` → 1483203600000
 
 
-.. _expression_function_format_date:
+.. _expression_function_Date_and_Time_format_date:
 
 format_date
 ...........
@@ -130,7 +130,7 @@ format_date(datetime, format, language)
        ``format_date('2012-05-15','d MMMM yyyy','fr')`` → '15 juin 2012'
 
 
-.. _expression_function_hour:
+.. _expression_function_Date_and_Time_hour:
 
 hour
 ....
@@ -144,10 +144,10 @@ hour
    * - Description
      - Extracts the hour part from a datetime or time, or the number of hours from an interval.
 
-      
 
 
-.. _expression_function_make_date:
+
+.. _expression_function_Date_and_Time_make_date:
 
 make_date
 .........
@@ -172,7 +172,7 @@ make_date(year, month, day)
      - ``make_date(2020,5,4)`` → date value 2020-05-04
 
 
-.. _expression_function_make_datetime:
+.. _expression_function_Date_and_Time_make_datetime:
 
 make_datetime
 .............
@@ -203,7 +203,7 @@ make_datetime(year, month, day, hour, minute, second)
      - ``make_datetime(2020,5,4,13,45,30.5)`` → datetime value 2020-05-04 13:45:30.500
 
 
-.. _expression_function_make_interval:
+.. _expression_function_Date_and_Time_make_interval:
 
 make_interval
 .............
@@ -238,7 +238,7 @@ make_interval(years, months, weeks, days, hours, minutes, seconds)
        ``make_interval(days:=2, hours:=3)`` → 2 day, 3 hour interval
 
 
-.. _expression_function_make_time:
+.. _expression_function_Date_and_Time_make_time:
 
 make_time
 .........
@@ -263,7 +263,7 @@ make_time(hour, minute, second)
      - ``make_time(13,45,30.5)`` → time value 13:45:30.500
 
 
-.. _expression_function_minute:
+.. _expression_function_Date_and_Time_minute:
 
 minute
 ......
@@ -277,10 +277,10 @@ minute
    * - Description
      - Extracts the minutes part from a datetime or time, or the number of minutes from an interval.
 
-      
 
 
-.. _expression_function_month:
+
+.. _expression_function_Date_and_Time_month:
 
 month
 .....
@@ -294,10 +294,10 @@ month
    * - Description
      - Extracts the month part from a date, or the number of months from an interval.
 
-      
 
 
-.. _expression_function_now:
+
+.. _expression_function_Date_and_Time_now:
 
 now
 ...
@@ -311,11 +311,11 @@ now
    * - Description
      - Returns the current date and time. The function is static and will return consistent results while evaluating. The time returned is the time when the expression is prepared.
 
-      * - Examples
+   * - Examples
      - ``now()`` → 2012-07-22T13:24:57
 
 
-.. _expression_function_second:
+.. _expression_function_Date_and_Time_second:
 
 second
 ......
@@ -329,10 +329,10 @@ second
    * - Description
      - Extracts the seconds part from a datetime or time, or the number of seconds from an interval.
 
-      
 
 
-.. _expression_function_to_date:
+
+.. _expression_function_Date_and_Time_to_date:
 
 to_date
 .......
@@ -361,7 +361,7 @@ to_date(string, format, language)
        ``to_date('29 juin, 2019','d MMMM, yyyy','fr')`` → 2019-06-29
 
 
-.. _expression_function_to_datetime:
+.. _expression_function_Date_and_Time_to_datetime:
 
 to_datetime
 ...........
@@ -390,7 +390,7 @@ to_datetime(string, format, language)
        ``to_datetime('29 juin, 2019 @ 12:34','d MMMM, yyyy @ HH:mm','fr')`` → 2019-06-29T12:34
 
 
-.. _expression_function_to_interval:
+.. _expression_function_Date_and_Time_to_interval:
 
 to_interval
 ...........
@@ -411,7 +411,7 @@ to_interval(string)
      - ``to_datetime('2012-05-05 12:00:00') - to_interval('1 day 2 hours')`` → 2012-05-04T10:00:00
 
 
-.. _expression_function_to_time:
+.. _expression_function_Date_and_Time_to_time:
 
 to_time
 .......
@@ -440,7 +440,7 @@ to_time(string, format, language)
        ``to_time('12:34','HH:mm','fr')`` → 12:34:00
 
 
-.. _expression_function_week:
+.. _expression_function_Date_and_Time_week:
 
 week
 ....
@@ -454,10 +454,10 @@ week
    * - Description
      - Extracts the week number from a date, or the number of weeks from an interval.
 
-      
 
 
-.. _expression_function_year:
+
+.. _expression_function_Date_and_Time_year:
 
 year
 ....
@@ -471,6 +471,6 @@ year
    * - Description
      - Extracts the year part from a date, or the number of years from an interval.
 
-      
+
 
 

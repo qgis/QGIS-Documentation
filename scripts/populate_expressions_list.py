@@ -7,7 +7,7 @@ help_folder = path.join(qgis_repo_path,'resources/function_help/json')
 # expression help folder
 output_folder = path.abspath('./docs/user_manual/working_with_vector/expression_help')
 
-def format_function(function_dict):
+def format_function(group, function_dict):
     f_name = function_dict['name']
     
     # Organize arguments
@@ -29,7 +29,7 @@ def format_function(function_dict):
     if len(arg_syntax_list) > 0:
         syntax = f'{f_name}({", ".join(arg_syntax_list)}{variable_args})'
         descriptions = '\n\n       '.join(arg_description_list)
-        arguments = (f"* - Arguments\n"
+        arguments = (f"   * - Arguments\n"
                      f"     - {descriptions}\n"
                      f"\n")
     else:
@@ -39,17 +39,13 @@ def format_function(function_dict):
     # Prepare examples
     if 'examples' in function_dict:
         ex_list = [f"``{ex['expression']}`` → {ex['returns']}" for ex in function_dict['examples']]
-        examples = "* - Examples\n     - "+ "\n\n       ".join(ex_list)
+        examples = "   * - Examples\n     - "+ "\n\n       ".join(ex_list)
     else:
         examples = ''
-
-
-
-        
+      
     
     f_description = function_dict['description']
-    f_examples_list = 'test2 test2 test2'
-    text = (f".. _expression_function_{f_name}:\n\n"
+    text = (f".. _expression_function_{group.replace(' ','_')}_{f_name}:\n\n"
             f"{f_name}\n"
             f"{'.'* len(f_name)}\n"
             f"\n"
@@ -62,8 +58,8 @@ def format_function(function_dict):
             f"   * - Description\n"
             f"     - {f_description}\n"
             f"\n"
-            f"   {arguments}"
-            f"   {examples}"
+            f"{arguments}"
+            f"{examples}"
             f"\n\n\n")
     return text
         
@@ -102,37 +98,8 @@ for f_name in functions.keys():
 for g_name in groups:
     func_list = groups[g_name]['func_list']
     func_list.sort()
-    output_group_file = path.join(output_folder,g_name + '.txt')
+    output_group_file = path.join(output_folder, g_name.replace(' ','_') + '.txt')
     with open(output_group_file, 'w') as f:
         for f_name in func_list:
-            text = format_function(functions[f_name])
+            text = format_function(g_name, functions[f_name])
             f.write(text)
-'''
-... _expression_function_{f_name}:
-
-    {f_name}
-    {"."*len(f_name)}
-
-    *{color_cmyk} ({f_arguments_list})*
-
-    .. list-table::
-    :widths: 15 85
-    :stub-columns: 1
-
-    * - Description
-        - {f_description}
-
-    * - Arguments
-        - **{f_argument}** - {f_arguments_description}
-
-        **magenta** - magenta component of the color, as a percentage integer value from 0 to 100
-
-        **yellow** - yellow component of the color, as a percentage integer value from 0 to 100
-
-        **black** - black component of the color, as a percentage integer value from 0 to 100
-
-    * - Examples
-        - ``color_cmyk(100,50,0,10)`` → ``'0,115,230'``
-    ´´´
-    # close file
-'''

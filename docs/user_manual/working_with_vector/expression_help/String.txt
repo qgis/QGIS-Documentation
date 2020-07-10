@@ -1,4 +1,4 @@
-.. _expression_function_ascii:
+.. _expression_function_String_ascii:
 
 ascii
 .....
@@ -19,7 +19,7 @@ ascii(string)
      - ``ascii('Q')`` → 81
 
 
-.. _expression_function_char:
+.. _expression_function_String_char:
 
 char
 ....
@@ -40,7 +40,7 @@ char(code)
      - ``char(81)`` → 'Q'
 
 
-.. _expression_function_concat:
+.. _expression_function_String_concat:
 
 concat
 ......
@@ -67,7 +67,7 @@ concat(string1, string2, ...)
        ``concat('The Wall', NULL)`` → 'The Wall'
 
 
-.. _expression_function_format:
+.. _expression_function_String_format:
 
 format
 ......
@@ -90,7 +90,7 @@ format(string, arg1, arg2, ...)
      - ``format('This %1 a %2','is', 'test')`` → 'This is a test''
 
 
-.. _expression_function_format_date:
+.. _expression_function_String_format_date:
 
 format_date
 ...........
@@ -117,7 +117,7 @@ format_date(datetime, format, language)
        ``format_date('2012-05-15','d MMMM yyyy','fr')`` → '15 juin 2012'
 
 
-.. _expression_function_format_number:
+.. _expression_function_String_format_number:
 
 format_number
 .............
@@ -142,7 +142,7 @@ format_number(number, places, language)
      - ``format_number(10000000.332,2)`` → '10,000,000.33'
 
 
-.. _expression_function_left:
+.. _expression_function_String_left:
 
 left
 ....
@@ -165,7 +165,7 @@ left(string, length)
      - ``left('Hello World',5)`` → 'Hello'
 
 
-.. _expression_function_length:
+.. _expression_function_String_length:
 
 length
 ......
@@ -179,10 +179,10 @@ length
    * - Description
      - Returns the number of characters in a string or the length of a geometry linestring.
 
-      
 
 
-.. _expression_function_lower:
+
+.. _expression_function_String_lower:
 
 lower
 .....
@@ -203,7 +203,7 @@ lower(string)
      - ``lower('HELLO World')`` → 'hello world'
 
 
-.. _expression_function_lpad:
+.. _expression_function_String_lpad:
 
 lpad
 ....
@@ -230,7 +230,7 @@ lpad(string, width, fill)
        ``lpad('Hello', 3, 'x')`` → 'Hel'
 
 
-.. _expression_function_regexp_match:
+.. _expression_function_String_regexp_match:
 
 regexp_match
 ............
@@ -253,7 +253,7 @@ regexp_match(input_string, regex)
      - ``regexp_match('QGIS ROCKS','\\\\sROCKS')`` → 4
 
 
-.. _expression_function_regexp_replace:
+.. _expression_function_String_regexp_replace:
 
 regexp_replace
 ..............
@@ -278,7 +278,7 @@ regexp_replace(input_string, regex, replacement)
      - ``regexp_replace('QGIS SHOULD ROCK','\\\\sSHOULD\\\\s',' DOES ')`` → 'QGIS DOES ROCK'
 
 
-.. _expression_function_regexp_substr:
+.. _expression_function_String_regexp_substr:
 
 regexp_substr
 .............
@@ -301,7 +301,7 @@ regexp_substr(input_string, regex)
      - ``regexp_substr('abc123','(\\\\d+)')`` → '123'
 
 
-.. _expression_function_replace:
+.. _expression_function_String_replace:
 
 replace
 .......
@@ -315,10 +315,10 @@ replace
    * - Description
      - Returns a string with the supplied string, array, or map of strings replaced.
 
-      
 
 
-.. _expression_function_right:
+
+.. _expression_function_String_right:
 
 right
 .....
@@ -341,7 +341,7 @@ right(string, length)
      - ``right('Hello World',5)`` → 'World'
 
 
-.. _expression_function_rpad:
+.. _expression_function_String_rpad:
 
 rpad
 ....
@@ -368,7 +368,7 @@ rpad(string, width, fill)
        ``rpad('Hello', 3, 'x')`` → 'Hel'
 
 
-.. _expression_function_strpos:
+.. _expression_function_String_strpos:
 
 strpos
 ......
@@ -393,7 +393,7 @@ strpos(haystack, needle)
        ``strpos('HELLO WORLD','GOODBYE')`` → 0
 
 
-.. _expression_function_substr:
+.. _expression_function_String_substr:
 
 substr
 ......
@@ -428,7 +428,7 @@ substr(string, start, length)
        ``substr('HELLO WORLD',-5,-1)`` → 'WORL'
 
 
-.. _expression_function_title:
+.. _expression_function_String_title:
 
 title
 .....
@@ -449,7 +449,7 @@ title(string)
      - ``title('hello WOrld')`` → 'Hello World'
 
 
-.. _expression_function_to_string:
+.. _expression_function_String_to_string:
 
 to_string
 .........
@@ -470,7 +470,7 @@ to_string(number)
      - ``to_string(123)`` → '123'
 
 
-.. _expression_function_trim:
+.. _expression_function_String_trim:
 
 trim
 ....
@@ -491,7 +491,7 @@ trim(string)
      - ``trim('   hello world    ')`` → 'hello world'
 
 
-.. _expression_function_upper:
+.. _expression_function_String_upper:
 
 upper
 .....
@@ -512,7 +512,7 @@ upper(string)
      - ``upper('hello WOrld')`` → 'HELLO WORLD'
 
 
-.. _expression_function_wordwrap:
+.. _expression_function_String_wordwrap:
 
 wordwrap
 ........
