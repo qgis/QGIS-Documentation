@@ -1,0 +1,91 @@
+.. _expression_function_hamming_distance:
+
+hamming_distance
+................
+
+hamming_distance(string1, string2)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Returns the Hamming distance between two strings. This equates to the number of characters at corresponding positions within the input strings where the characters are different. The input strings must be the same length, and the comparison is case-sensitive.
+
+  - Arguments
+  - **string1** - a string
+    **string2** - a string
+
+  - Examples
+  - ``hamming_distance('abc','xec')`` → 2
+    ``hamming_distance('abc','ABc')`` → 2
+    ``hamming_distance(upper('abc'),upper('ABC'))`` → 0
+
+.. _expression_function_levenshtein:
+
+levenshtein
+...........
+
+levenshtein(string1, string2)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Returns the Levenshtein edit distance between two strings. This equates to the minimum number of character edits (insertions, deletions or substitutions) required to change one string to another.<br />The Levenshtein distance is a measure of the similarity between two strings. Smaller distances mean the strings are more similar, and larger distances indicate more different strings. The distance is case sensitive.
+
+  - Arguments
+  - **string1** - a string
+    **string2** - a string
+
+  - Examples
+  - ``levenshtein('kittens','mitten')`` → 2
+    ``levenshtein('Kitten','kitten')`` → 1
+    ``levenshtein(upper('Kitten'),upper('kitten'))`` → 0
+
+.. _expression_function_longest_common_substring:
+
+longest_common_substring
+........................
+
+longest_common_substring(string1, string2)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Returns the longest common substring between two strings. This substring is the longest string that is a substring of the two input strings. For example, the longest common substring of "ABABC" and "BABCA" is "ABC". The substring is case sensitive.
+
+  - Arguments
+  - **string1** - a string
+    **string2** - a string
+
+  - Examples
+  - ``longest_common_substring('ABABC','BABCA')`` → 'ABC'
+    ``longest_common_substring('abcDeF','abcdef')`` → 'abc'
+    ``longest_common_substring(upper('abcDeF'),upper('abcdex'))`` → 'ABCDE'
+
+.. _expression_function_soundex:
+
+soundex
+.......
+
+soundex(string)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Returns the Soundex representation of a string. Soundex is a phonetic matching algorithm, so strings with similar sounds should be represented by the same Soundex code.
+
+  - Arguments
+  - **string** - a string
+
+  - Examples
+  - ``soundex('robert')`` → 'R163'
+    ``soundex('rupert')`` → 'R163'
+    ``soundex('rubin')`` → 'R150'
+

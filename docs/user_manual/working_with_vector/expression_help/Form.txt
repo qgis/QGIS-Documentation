@@ -1,0 +1,40 @@
+.. _expression_function_current_parent_value:
+
+current_parent_value
+....................
+
+current_parent_value(field_name)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Only usable in an embedded form context, this function returns the current, unsaved value of a field in the parent form currently being edited. This will differ from the parent feature's actual attribute values for features which are currently being edited or have not yet been added to a parent layer. When used in a value-relation widget filter expression, this function should be wrapped into a 'coalesce()' that can retrieve the actual parent feature from the layer when the form is not used in an embedded context.
+
+  - Arguments
+  - **field_name** - a field name in the current parent form
+
+  - Examples
+  - ``current_parent_value( 'FIELD_NAME' )`` → The current value of a field 'FIELD_NAME' in the parent form.
+
+.. _expression_function_current_value:
+
+current_value
+.............
+
+current_value(field_name)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Returns the current, unsaved value of a field in the form or table row currently being edited. This will differ from the feature's actual attribute values for features which are currently being edited or have not yet been added to a layer.
+
+  - Arguments
+  - **field_name** - a field name in the current form or table row
+
+  - Examples
+  - ``current_value( 'FIELD_NAME' )`` → The current value of field 'FIELD_NAME'.
+

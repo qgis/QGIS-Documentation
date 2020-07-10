@@ -1,0 +1,523 @@
+.. _expression_function_aggregate:
+
+aggregate
+.........
+
+aggregate(layer, aggregate, expression, filter, concatenator, order_by)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Returns an aggregate value calculated using features from another layer.
+
+  - Arguments
+  - **layer** - a string, representing either a layer name or layer ID
+    **aggregate** - a string corresponding to the aggregate to calculate. Valid options are:<br /><ul><li>count</li><li>count_distinct</li><li>count_missing</li><li>min</li><li>max</li><li>sum</li><li>mean</li><li>median</li><li>stdev</li><li>stdevsample</li><li>range</li><li>minority</li><li>majority</li><li>q1: first quartile</li><li>q3: third quartile</li><li>iqr: inter quartile range</li><li>min_length: minimum string length</li><li>max_length: maximum string length</li><li>concatenate: join strings with a concatenator</li><li>concatenate_unique: join unique strings with a concatenator</li><li>collect: create an aggregated multipart geometry</li><li>array_agg: create an array of aggregated values</li></ul>
+    **expression** - sub expression or field name to aggregate
+    **filter** - optional filter expression to limit the features used for calculating the aggregate. Fields and geometry are from the features on the joined layer. The source feature can be accessed with the variable @parent.
+    **concatenator** - optional string to use to join values for 'concatenate' aggregate
+    **order_by** - optional filter expression to order the features used for calculating the aggregate. Fields and geometry are from the features on the joined layer.
+
+  - Examples
+  - ``aggregate(layer:='rail_stations',aggregate:='sum',expression:="passengers")`` → sum of all values from the passengers field in the rail_stations layer
+    ``aggregate('rail_stations','sum', "passengers"/7)`` → calculates a daily average of "passengers" by dividing the "passengers" field by 7 before summing the values
+    ``aggregate(layer:='rail_stations',aggregate:='sum',expression:="passengers",filter:="class">3)`` → sums up all values from the "passengers" field from features where the "class" attribute is greater than 3 only
+    ``aggregate(layer:='rail_stations',aggregate:='concatenate', expression:="name", concatenator:=',')`` → comma separated list of the name field for all features in the rail_stations layer
+    ``aggregate(layer:='countries', aggregate:='max', expression:="code", filter:=intersects( $geometry, geometry(@parent) ) )`` → The country code of an intersecting country on the layer 'countries'
+
+.. _expression_function_array_agg:
+
+array_agg
+.........
+
+array_agg(expression, group_by, filter, order_by)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Returns an array of aggregated values from a field or expression.
+
+  - Arguments
+  - **expression** - sub expression of field to aggregate
+    **group_by** - optional expression to use to group aggregate calculations
+    **filter** - optional expression to use to filter features used to calculate aggregate
+    **order_by** - optional expression to use to order features used to calculate aggregate
+
+  - Examples
+  - ``array_agg("name",group_by:="state")`` → list of name values, grouped by state field
+
+.. _expression_function_collect:
+
+collect
+.......
+
+collect(expression, group_by, filter)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Returns the multipart geometry of aggregated geometries from an expression
+
+  - Arguments
+  - **expression** - geometry expression to aggregate
+    **group_by** - optional expression to use to group aggregate calculations
+    **filter** - optional expression to use to filter features used to calculate aggregate
+
+  - Examples
+  - ``collect( $geometry )`` → multipart geometry of aggregated geometries
+
+.. _expression_function_concatenate:
+
+concatenate
+...........
+
+concatenate(expression, group_by, filter, concatenator, order_by)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Returns all aggregated strings from a field or expression joined by a delimiter.
+
+  - Arguments
+  - **expression** - sub expression of field to aggregate
+    **group_by** - optional expression to use to group aggregate calculations
+    **filter** - optional expression to use to filter features used to calculate aggregate
+    **concatenator** - optional string to use to join values
+    **order_by** - optional expression to use to order features used to calculate aggregate
+
+  - Examples
+  - ``concatenate("town_name",group_by:="state",concatenator:=',')`` → comma separated list of town_names, grouped by state field
+
+.. _expression_function_concatenate_unique:
+
+concatenate_unique
+..................
+
+concatenate_unique(expression, group_by, filter, concatenator, order_by)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Returns all unique strings from a field or expression joined by a delimiter.
+
+  - Arguments
+  - **expression** - sub expression of field to aggregate
+    **group_by** - optional expression to use to group aggregate calculations
+    **filter** - optional expression to use to filter features used to calculate aggregate
+    **concatenator** - optional string to use to join values
+    **order_by** - optional expression to use to order features used to calculate aggregate
+
+  - Examples
+  - ``concatenate("town_name",group_by:="state",concatenator:=',')`` → comma separated list of unique town_names, grouped by state field
+
+.. _expression_function_count:
+
+count
+.....
+
+count(expression, group_by, filter)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Returns the count of matching features.
+
+  - Arguments
+  - **expression** - sub expression of field to aggregate
+    **group_by** - optional expression to use to group aggregate calculations
+    **filter** - optional expression to use to filter features used to calculate aggregate
+
+  - Examples
+  - ``count("stations",group_by:="state")`` → count of stations, grouped by state field
+
+.. _expression_function_count_distinct:
+
+count_distinct
+..............
+
+count_distinct(expression, group_by, filter)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Returns the count of distinct values.
+
+  - Arguments
+  - **expression** - sub expression of field to aggregate
+    **group_by** - optional expression to use to group aggregate calculations
+    **filter** - optional expression to use to filter features used to calculate aggregate
+
+  - Examples
+  - ``count_distinct("stations",group_by:="state")`` → count of distinct stations values, grouped by state field
+
+.. _expression_function_count_missing:
+
+count_missing
+.............
+
+count_missing(expression, group_by, filter)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Returns the count of missing (null) values.
+
+  - Arguments
+  - **expression** - sub expression of field to aggregate
+    **group_by** - optional expression to use to group aggregate calculations
+    **filter** - optional expression to use to filter features used to calculate aggregate
+
+  - Examples
+  - ``count_missing("stations",group_by:="state")`` → count of missing (null) station values, grouped by state field
+
+.. _expression_function_iqr:
+
+iqr
+...
+
+iqr(expression, group_by, filter)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Returns the calculated inter quartile range from a field or expression.
+
+  - Arguments
+  - **expression** - sub expression of field to aggregate
+    **group_by** - optional expression to use to group aggregate calculations
+    **filter** - optional expression to use to filter features used to calculate aggregate
+
+  - Examples
+  - ``iqr("population",group_by:="state")`` → inter quartile range of population value, grouped by state field
+
+.. _expression_function_majority:
+
+majority
+........
+
+majority(expression, group_by, filter)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Returns the aggregate majority of values (most commonly occurring value) from a field or expression.
+
+  - Arguments
+  - **expression** - sub expression of field to aggregate
+    **group_by** - optional expression to use to group aggregate calculations
+    **filter** - optional expression to use to filter features used to calculate aggregate
+
+  - Examples
+  - ``majority("class",group_by:="state")`` → most commonly occurring class value, grouped by state field
+
+.. _expression_function_max_length:
+
+max_length
+..........
+
+max_length(expression, group_by, filter)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Returns the maximum length of strings from a field or expression.
+
+  - Arguments
+  - **expression** - sub expression of field to aggregate
+    **group_by** - optional expression to use to group aggregate calculations
+    **filter** - optional expression to use to filter features used to calculate aggregate
+
+  - Examples
+  - ``max_length("town_name",group_by:="state")`` → maximum length of town_name, grouped by state field
+
+.. _expression_function_maximum:
+
+maximum
+.......
+
+maximum(expression, group_by, filter)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Returns the aggregate maximum value from a field or expression.
+
+  - Arguments
+  - **expression** - sub expression of field to aggregate
+    **group_by** - optional expression to use to group aggregate calculations
+    **filter** - optional expression to use to filter features used to calculate aggregate
+
+  - Examples
+  - ``maximum("population",group_by:="state")`` → maximum population value, grouped by state field
+
+.. _expression_function_mean:
+
+mean
+....
+
+mean(expression, group_by, filter)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Returns the aggregate mean value from a field or expression.
+
+  - Arguments
+  - **expression** - sub expression of field to aggregate
+    **group_by** - optional expression to use to group aggregate calculations
+    **filter** - optional expression to use to filter features used to calculate aggregate
+
+  - Examples
+  - ``mean("population",group_by:="state")`` → mean population value, grouped by state field
+
+.. _expression_function_median:
+
+median
+......
+
+median(expression, group_by, filter)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Returns the aggregate median value from a field or expression.
+
+  - Arguments
+  - **expression** - sub expression of field to aggregate
+    **group_by** - optional expression to use to group aggregate calculations
+    **filter** - optional expression to use to filter features used to calculate aggregate
+
+  - Examples
+  - ``median("population",group_by:="state")`` → median population value, grouped by state field
+
+.. _expression_function_min_length:
+
+min_length
+..........
+
+min_length(expression, group_by, filter)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Returns the minimum length of strings from a field or expression.
+
+  - Arguments
+  - **expression** - sub expression of field to aggregate
+    **group_by** - optional expression to use to group aggregate calculations
+    **filter** - optional expression to use to filter features used to calculate aggregate
+
+  - Examples
+  - ``min_length("town_name",group_by:="state")`` → minimum length of town_name, grouped by state field
+
+.. _expression_function_minimum:
+
+minimum
+.......
+
+minimum(expression, group_by, filter)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Returns the aggregate minimum value from a field or expression.
+
+  - Arguments
+  - **expression** - sub expression of field to aggregate
+    **group_by** - optional expression to use to group aggregate calculations
+    **filter** - optional expression to use to filter features used to calculate aggregate
+
+  - Examples
+  - ``minimum("population",group_by:="state")`` → minimum population value, grouped by state field
+
+.. _expression_function_minority:
+
+minority
+........
+
+minority(expression, group_by, filter)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Returns the aggregate minority of values (least occurring value) from a field or expression.
+
+  - Arguments
+  - **expression** - sub expression of field to aggregate
+    **group_by** - optional expression to use to group aggregate calculations
+    **filter** - optional expression to use to filter features used to calculate aggregate
+
+  - Examples
+  - ``minority("class",group_by:="state")`` → least occurring class value, grouped by state field
+
+.. _expression_function_q1:
+
+q1
+..
+
+q1(expression, group_by, filter)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Returns the calculated first quartile from a field or expression.
+
+  - Arguments
+  - **expression** - sub expression of field to aggregate
+    **group_by** - optional expression to use to group aggregate calculations
+    **filter** - optional expression to use to filter features used to calculate aggregate
+
+  - Examples
+  - ``q1("population",group_by:="state")`` → first quartile of population value, grouped by state field
+
+.. _expression_function_q3:
+
+q3
+..
+
+q3(expression, group_by, filter)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Returns the calculated third quartile from a field or expression.
+
+  - Arguments
+  - **expression** - sub expression of field to aggregate
+    **group_by** - optional expression to use to group aggregate calculations
+    **filter** - optional expression to use to filter features used to calculate aggregate
+
+  - Examples
+  - ``q3("population",group_by:="state")`` → third quartile of population value, grouped by state field
+
+.. _expression_function_range:
+
+range
+.....
+
+range(expression, group_by, filter)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Returns the aggregate range of values (maximum - minimum) from a field or expression.
+
+  - Arguments
+  - **expression** - sub expression of field to aggregate
+    **group_by** - optional expression to use to group aggregate calculations
+    **filter** - optional expression to use to filter features used to calculate aggregate
+
+  - Examples
+  - ``range("population",group_by:="state")`` → range of population values, grouped by state field
+
+.. _expression_function_relation_aggregate:
+
+relation_aggregate
+..................
+
+relation_aggregate(relation, aggregate, expression, concatenator, order_by)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Returns an aggregate value calculated using all matching child features from a layer relation.
+
+  - Arguments
+  - **relation** - a string, representing a relation ID
+    **aggregate** - a string corresponding to the aggregate to calculate. Valid options are:<br /><ul><li>count</li><li>count_distinct</li><li>count_missing</li><li>min</li><li>max</li><li>sum</li><li>mean</li><li>median</li><li>stdev</li><li>stdevsample</li><li>range</li><li>minority</li><li>majority</li><li>q1: first quartile</li><li>q3: third quartile</li><li>iqr: inter quartile range</li><li>min_length: minimum string length</li><li>max_length: maximum string length</li><li>concatenate: join strings with a concatenator</li><li>concatenate_unique: join unique strings with a concatenator</li><li>collect: create an aggregated multipart geometry</li><li>array_agg: create an array of aggregated values</li></ul>
+    **expression** - sub expression or field name to aggregate
+    **concatenator** - optional string to use to join values for 'concatenate' aggregate
+    **order_by** - optional expression to order the features used for calculating the aggregate. Fields and geometry are from the features on the joined layer.
+
+  - Examples
+  - ``relation_aggregate(relation:='my_relation',aggregate:='mean',expression:="passengers")`` → mean value of all matching child features using the 'my_relation' relation
+    ``relation_aggregate('my_relation','sum', "passengers"/7)`` → sum of the passengers field divided by 7 for all matching child features using the 'my_relation' relation
+    ``relation_aggregate('my_relation','concatenate', "towns", concatenator:=',')`` → comma separated list of the towns field for all matching child features using the 'my_relation' relation
+    ``relation_aggregate('my_relation','array_agg', "id")`` → array of the id field from all matching child features using the 'my_relation' relation
+
+.. _expression_function_stdev:
+
+stdev
+.....
+
+stdev(expression, group_by, filter)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Returns the aggregate standard deviation value from a field or expression.
+
+  - Arguments
+  - **expression** - sub expression of field to aggregate
+    **group_by** - optional expression to use to group aggregate calculations
+    **filter** - optional expression to use to filter features used to calculate aggregate
+
+  - Examples
+  - ``stdev("population",group_by:="state")`` → standard deviation of population value, grouped by state field
+
+.. _expression_function_sum:
+
+sum
+...
+
+sum(expression, group_by, filter)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Returns the aggregate summed value from a field or expression.
+
+  - Arguments
+  - **expression** - sub expression of field to aggregate
+    **group_by** - optional expression to use to group aggregate calculations
+    **filter** - optional expression to use to filter features used to calculate aggregate
+
+  - Examples
+  - ``sum("population",group_by:="state")`` → summed population value, grouped by state field
+

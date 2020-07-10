@@ -1,0 +1,422 @@
+.. _expression_function_age:
+
+age
+...
+
+age(datetime1, datetime2)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Returns the difference between two dates or datetimes.<br>The difference is returned as a <code>Interval</code> and needs to be used with one of the following functions in order to extract useful information:<br /><ul><li><code>year</code><li><code>month</code><li><code>week</code><li><code>day</code><li><code>hour</code><li><code>minute</code><li><code>second</code></ul>
+
+  - Arguments
+  - **datetime1** - a string, date or datetime representing the later date
+    **datetime2** - a string, date or datetime representing the earlier date
+
+  - Examples
+  - ``day(age('2012-05-12','2012-05-02'))`` → 10
+    ``hour(age('2012-05-12','2012-05-02'))`` → 240
+
+.. _expression_function_datetime_from_epoch:
+
+datetime_from_epoch
+...................
+
+datetime_from_epoch(int)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Returns a datetime whose date and time are the number of milliseconds, msecs, that have passed since 1970-01-01T00:00:00.000, Coordinated Universal Time (Qt.UTC), and converted to Qt.LocalTime.
+
+  - Arguments
+  - **int** - number (milliseconds)
+
+  - Examples
+  - ``datetime_from_epoch(1483225200000)`` → 2017-01-01T00:00:00
+
+.. _expression_function_day:
+
+day
+...
+
+day
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Extracts the day from a date, or the number of days from an interval.
+
+
+
+.. _expression_function_day_of_week:
+
+day_of_week
+...........
+
+day_of_week(date)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Returns the day of the week for a specified date or datetime. The returned value ranges from 0 to 6, where 0 corresponds to a Sunday and 6 to a Saturday.
+
+  - Arguments
+  - **date** - date or datetime value
+
+  - Examples
+  - ``day_of_week(to_date('2015-09-21'))`` → 1
+
+.. _expression_function_epoch:
+
+epoch
+.....
+
+epoch(date)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Returns the interval in milliseconds between the unix epoch and a given date value.
+
+  - Arguments
+  - **date** - a date or datetime value
+
+  - Examples
+  - ``epoch(to_date('2017-01-01'))`` → 1483203600000
+
+.. _expression_function_format_date:
+
+format_date
+...........
+
+format_date(datetime, format, language)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Formats a date type or string into a custom string format. Uses Qt date/time format strings. See <a href='https://doc.qt.io/qt-5/qdatetime.html#toString'>QDateTime::toString</a>.
+
+  - Arguments
+  - **datetime** - date, time or datetime value
+    **format** - String template used to format the string. <table><thead><tr><th>Expression</th><th>Output</th></tr></thead><tr valign="top"><td>d</td><td>the day as number without a leading zero (1 to 31)</td></tr><tr valign="top"><td>dd</td><td>the day as number with a leading zero (01 to 31)</td></tr><tr valign="top"><td>ddd</td><td>the abbreviated localized day name (e.g. 'Mon' to 'Sun')</td></tr><tr valign="top"><td>dddd</td><td>the long localized day name (e.g. 'Monday' to 'Sunday')</td></tr><tr valign="top"><td>M</td><td>the month as number without a leading zero (1-12)</td></tr><tr valign="top"><td>MM</td><td>the month as number with a leading zero (01-12)</td></tr><tr valign="top"><td>MMM</td><td>the abbreviated localized month name (e.g. 'Jan' to 'Dec')</td></tr><tr valign="top"><td>MMMM</td><td>the long localized month name (e.g. 'January' to 'December')</td></tr><tr valign="top"><td>yy</td><td>the year as two digit number (00-99)</td></tr><tr valign="top"><td>yyyy</td><td>the year as four digit number</td></tr></table><p>These expressions may be used for the time part of the format string:</p><table><thead><tr><th>Expression</th><th>Output</th></tr></thead><tr valign="top"><td>h</td><td>the hour without a leading zero (0 to 23 or 1 to 12 if AM/PM display)</td></tr><tr valign="top"><td>hh</td><td>the hour with a leading zero (00 to 23 or 01 to 12 if AM/PM display)</td></tr><tr valign="top"><td>H</td><td>the hour without a leading zero (0 to 23, even with AM/PM display)</td></tr><tr valign="top"><td>HH</td><td>the hour with a leading zero (00 to 23, even with AM/PM display)</td></tr><tr valign="top"><td>m</td><td>the minute without a leading zero (0 to 59)</td></tr><tr valign="top"><td>mm</td><td>the minute with a leading zero (00 to 59)</td></tr><tr valign="top"><td>s</td><td>the second without a leading zero (0 to 59)</td></tr><tr valign="top"><td>ss</td><td>the second with a leading zero (00 to 59)</td></tr><tr valign="top"><td>z</td><td>the milliseconds without trailing zeroes (0 to 999)</td></tr><tr valign="top"><td>zzz</td><td>the milliseconds with trailing zeroes (000 to 999)</td></tr><tr valign="top"><td>AP or A</td><td>interpret as an AM/PM time. <i>AP</i> must be either "AM" or "PM".</td></tr><tr valign="top"><td>ap or a</td><td>Interpret as an AM/PM time. <i>ap</i> must be either "am" or "pm".</td></tr></table>
+    **language** - language (lowercase, two- or three-letter, ISO 639 language code) used to format the date into a custom string
+
+  - Examples
+  - ``format_date('2012-05-15','dd.MM.yyyy')`` → '15.05.2012'
+    ``format_date('2012-05-15','d MMMM yyyy','fr')`` → '15 juin 2012'
+
+.. _expression_function_hour:
+
+hour
+....
+
+hour
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Extracts the hour part from a datetime or time, or the number of hours from an interval.
+
+
+
+.. _expression_function_make_date:
+
+make_date
+.........
+
+make_date(year, month, day)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Creates a date value from year, month and day numbers.
+
+  - Arguments
+  - **year** - Year number. Years 1 to 99 are interpreted as is. Year 0 is invalid.
+    **month** - Month number, where 1=January
+    **day** - Day number, beginning with 1 for the first day in the month
+
+  - Examples
+  - ``make_date(2020,5,4)`` → date value 2020-05-04
+
+.. _expression_function_make_datetime:
+
+make_datetime
+.............
+
+make_datetime(year, month, day, hour, minute, second)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Creates a datetime value from year, month, day, hour, minute and second numbers.
+
+  - Arguments
+  - **year** - Year number. Years 1 to 99 are interpreted as is. Year 0 is invalid.
+    **month** - Month number, where 1=January
+    **day** - Day number, beginning with 1 for the first day in the month
+    **hour** - Hour number
+    **minute** - Minutes
+    **second** - Seconds (fractional values include milliseconds)
+
+  - Examples
+  - ``make_datetime(2020,5,4,13,45,30.5)`` → datetime value 2020-05-04 13:45:30.500
+
+.. _expression_function_make_interval:
+
+make_interval
+.............
+
+make_interval(years, months, weeks, days, hours, minutes, seconds)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Creates an interval value from year, month, weeks, days, hours, minute and seconds values.
+
+  - Arguments
+  - **years** - Number of years (assumes a 365.25 day year length).
+    **months** - Number of months (assumes a 30 day month length)
+    **weeks** - Number of weeks
+    **days** - Number of days
+    **hours** - Number of hours
+    **minutes** - Number of minutes
+    **seconds** - Number of seconds
+
+  - Examples
+  - ``make_interval(hours:=3)`` → 3 hour interval
+    ``make_interval(days:=2, hours:=3)`` → 2 day, 3 hour interval
+
+.. _expression_function_make_time:
+
+make_time
+.........
+
+make_time(hour, minute, second)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Creates a time value from hour, minute and second numbers.
+
+  - Arguments
+  - **hour** - Hour number
+    **minute** - Minutes
+    **second** - Seconds (fractional values include milliseconds)
+
+  - Examples
+  - ``make_time(13,45,30.5)`` → time value 13:45:30.500
+
+.. _expression_function_minute:
+
+minute
+......
+
+minute
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Extracts the minutes part from a datetime or time, or the number of minutes from an interval.
+
+
+
+.. _expression_function_month:
+
+month
+.....
+
+month
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Extracts the month part from a date, or the number of months from an interval.
+
+
+
+.. _expression_function_now:
+
+now
+...
+
+now
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Returns the current date and time. The function is static and will return consistent results while evaluating. The time returned is the time when the expression is prepared.
+
+  - Examples
+  - ``now()`` → 2012-07-22T13:24:57
+
+.. _expression_function_second:
+
+second
+......
+
+second
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Extracts the seconds part from a datetime or time, or the number of seconds from an interval.
+
+
+
+.. _expression_function_to_date:
+
+to_date
+.......
+
+to_date(string, format, language)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Converts a string into a date object. An optional format string can be provided to parse the string; see <a href='https://doc.qt.io/qt-5/qdate.html#fromString-1'>QDate::fromString</a> for additional documentation on the format.
+
+  - Arguments
+  - **string** - string representing a date value
+    **format** - format used to convert the string into a date
+    **language** - language (lowercase, two- or three-letter, ISO 639 language code) used to convert the string into a date
+
+  - Examples
+  - ``to_date('2012-05-04')`` → 2012-05-04
+    ``to_date('June 29, 2019','MMMM d, yyyy')`` → 2019-06-29
+    ``to_date('29 juin, 2019','d MMMM, yyyy','fr')`` → 2019-06-29
+
+.. _expression_function_to_datetime:
+
+to_datetime
+...........
+
+to_datetime(string, format, language)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Converts a string into a datetime object. An optional format string can be provided to parse the string; see <a href='https://doc.qt.io/qt-5/qdatetime.html#fromString-1'>QDateTime::fromString</a> for additional documentation on the format.
+
+  - Arguments
+  - **string** - string representing a datetime value
+    **format** - format used to convert the string into a datetime
+    **language** - language (lowercase, two- or three-letter, ISO 639 language code) used to convert the string into a datetime
+
+  - Examples
+  - ``to_datetime('2012-05-04 12:50:00')`` → 2012-05-04T12:50:00
+    ``to_datetime('June 29, 2019 @ 12:34','MMMM d, yyyy @ HH:mm')`` → 2019-06-29T12:34
+    ``to_datetime('29 juin, 2019 @ 12:34','d MMMM, yyyy @ HH:mm','fr')`` → 2019-06-29T12:34
+
+.. _expression_function_to_interval:
+
+to_interval
+...........
+
+to_interval(string)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Converts a string to a interval type. Can be used to take days, hours, month, etc of a date.
+
+  - Arguments
+  - **string** - a string representing an interval. Allowable formats include {n} days {n} hours {n} months.
+
+  - Examples
+  - ``to_datetime('2012-05-05 12:00:00') - to_interval('1 day 2 hours')`` → 2012-05-04T10:00:00
+
+.. _expression_function_to_time:
+
+to_time
+.......
+
+to_time(string, format, language)
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Converts a string into a time object. An optional format string can be provided to parse the string; see <a href='https://doc.qt.io/qt-5/qtime.html#fromString-1'>QTime::fromString</a> for additional documentation on the format.
+
+  - Arguments
+  - **string** - string representing a time value
+    **format** - format used to convert the string into a time
+    **language** - language (lowercase, two- or three-letter, ISO 639 language code) used to convert the string into a time
+
+  - Examples
+  - ``to_time('12:30:01')`` → 12:30:01
+    ``to_time('12:34','HH:mm')`` → 12:34:00
+    ``to_time('12:34','HH:mm','fr')`` → 12:34:00
+
+.. _expression_function_week:
+
+week
+....
+
+week
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Extracts the week number from a date, or the number of weeks from an interval.
+
+
+
+.. _expression_function_year:
+
+year
+....
+
+year
+
+.. list-table::
+   :widths: 15 85
+   :stub-columns: 1
+
+* - Description
+  - Extracts the year part from a date, or the number of years from an interval.
+
+
+
