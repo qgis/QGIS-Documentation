@@ -282,6 +282,10 @@ list data structures). The order of values within the array matters, unlike the
 :ref:`'map' data structure <maps_functions>`, where the order of key-value pairs
 is irrelevant and values are identified by their keys.
 
+.. contents:: :local:
+
+.. include:: expression_help/Arrays.txt
+
 
 .. csv-table::
    :header: "Function", "Description"
@@ -368,6 +372,10 @@ Conditional Functions
 
 This group contains functions to handle conditional checks in expressions.
 
+.. contents:: :local:
+
+.. include:: expression_help/Conditionals.txt
+
 .. csv-table::
    :header: "Function", "Description"
    :widths: auto
@@ -397,6 +405,10 @@ Conversions Functions
 This group contains functions to convert one data type to another
 (e.g., string to integer, integer to string).
 
+.. contents:: :local:
+
+.. include:: expression_help/Conversions.txt
+
 .. csv-table::
    :header: "Function", "Description"
    :widths: auto
@@ -424,6 +436,10 @@ Date and Time Functions
 ------------------------
 
 This group contains functions for handling date and time data.
+
+.. contents:: :local:
+
+.. include:: expression_help/Date_and_Time.txt
 
 .. csv-table::
    :header: "Function", "Description"
@@ -528,6 +544,10 @@ Files and Paths Functions
 
 This group contains functions which manipulate file and path names.
 
+.. contents:: :local:
+
+.. include:: expression_help/Files_and_Paths.txt
+
 .. csv-table::
    :header: "Function", "Description"
    :widths: auto
@@ -541,11 +561,24 @@ This group contains functions which manipulate file and path names.
    "is_directory", "Returns true if a path corresponds to a directory."
    "is_file", "Returns true if a path corresponds to a file."
 
+Form Functions
+--------------
+
+This group contains functions that operate exclusively under the attribute form
+context. For example, in field's widgets settings.
+
+.. contents:: :local:
+
+.. include:: expression_help/Form.txt
 
 Fuzzy Matching Functions
 -------------------------
 
 This group contains functions for fuzzy comparisons between values.
+
+.. contents:: :local:
+
+.. include:: expression_help/Fuzzy_Matching.txt
 
 .. csv-table::
    :header: "Function", "Description"
@@ -564,6 +597,10 @@ General Functions
 ------------------
 
 This group contains general assorted functions.
+
+.. contents:: :local:
+
+.. include:: expression_help/General.txt
 
 .. csv-table::
    :header: "Function", "Description"
@@ -591,6 +628,10 @@ Geometry Functions
 
 This group contains functions that operate on geometry objects
 (e.g. buffer, transform, $area).
+
+.. contents:: :local:
+
+.. include:: expression_help/GeometryGroup.txt
 
 .. csv-table::
    :header: "Function", "Description"
@@ -827,6 +868,10 @@ Layout Functions
 
 This group contains functions to manipulate print layout items properties.
 
+.. contents:: :local:
+
+.. include:: expression_help/Layout.txt
+
 .. csv-table::
    :header: "Function", "Description"
    :widths: auto
@@ -850,6 +895,10 @@ such as when performing :ref:`aggregates <aggregates_function>`, :ref:`attribute
 
 It also provides some convenient functions to manipulate layers.
 
+.. contents:: :local:
+
+.. include:: expression_help/Map_Layers.txt
+
 .. csv-table::
    :header: "Function", "Description"
    :widths: auto
@@ -868,6 +917,10 @@ data structures (also known as dictionary objects, key-value pairs, or associati
 arrays). Unlike the :ref:`list data structure <array_functions>` where values
 order matters, the order of the key-value pairs in the map object is not relevant
 and values are identified by their keys.
+
+.. contents:: :local:
+
+.. include:: expression_help/Maps.txt
 
 .. csv-table::
    :header: "Function", "Description"
@@ -894,6 +947,10 @@ Mathematical Functions
 -----------------------
 
 This group contains math functions (e.g., square root, sin and cos).
+
+.. contents:: :local:
+
+.. include:: expression_help/Math.txt
 
 .. csv-table::
    :header: "Function", "Description"
@@ -999,6 +1056,10 @@ Processing Functions
 
 This group contains functions that operate on processing algorithms.
 
+.. contents:: :local:
+
+.. include:: expression_help/Processing.txt
+
 .. csv-table::
    :header: "Function", "Description"
    :widths: auto
@@ -1012,6 +1073,10 @@ Rasters Functions
 -----------------
 
 This group contains functions to operate on raster layer.
+
+.. contents:: :local:
+
+.. include:: expression_help/Rasters.txt
 
 .. csv-table::
    :header: "Function", "Description"
@@ -1027,6 +1092,10 @@ Record and Attributes Functions
 -------------------------------
 
 This group contains functions that operate on record identifiers.
+
+.. contents:: :local:
+
+.. include:: expression_help/Record_and_Attributes.txt
 
 .. csv-table::
    :header: "Function", "Description"
@@ -1071,6 +1140,10 @@ String Functions
 
 This group contains functions that operate on strings
 (e.g., that replace, convert to upper case).
+
+.. contents:: :local:
+
+.. include:: expression_help/String.txt
 
 .. csv-table::
    :header: "Function", "Description"
