@@ -1,7 +1,7 @@
 |LS| Navigating the Map Canvas
 ===============================================================================
 This section will focus on basic QGIS navigation tools used to navigate within 
-the Map Canvas.  These tools will allow you to visually explore the layers at 
+the Map Canvas. These tools will allow you to visually explore the layers at 
 different scales.
 
 **The goal for this lesson:** Learn how to use Pan and Zoom tools within QGIS 
@@ -10,16 +10,13 @@ and learn about map scale.
 |basic| |FA| Basic Navigation Tools
 -------------------------------------------------------------------------------
 
-Before learning how to navigate within the Map Canvas, let's add two additional 
+Before learning how to navigate within the Map Canvas, let's add some
 layers that we can explore during this tutorial.
 
-#. Use the steps learnt in :ref:`Create a Map <tm_pepare_a_map>` lesson to add 
-   the ``roads`` and ``buildings`` datasets from :file:`training_data.gpkg`
-   as layers to the current project.
-   These datasets are found in a *GeoPackage* file that contains several
-   datasets, so the dialog in :guilabel:`Data Source Manager` is a bit
-   different from what you experienced for the ESRI Shapefile format datasets.
-   The result view should look similar to the snippet below:
+#. Open a new blank project and using the steps learnt in :ref:`Create a Map
+   <tm_pepare_a_map>`, load the previously seen ``protected_areas``, ``roads``
+   and ``buildings`` layers to the project.
+   The result view should look similar to the snippet below (colors do not matter): 
 
    .. figure:: img/roads_buildings_added.png
      :align: center
@@ -95,7 +92,9 @@ the Map Canvas.
 |IC|
 -------------------------------------------------------------------------------
 
-Knowing how to navigate the Map Canvas is important, as it allows one to explore and visually inspect the layers.  This could be done for initial data exploration, or to validate output of a spatial analysis.
+Knowing how to navigate the Map Canvas is important, as it allows one to explore
+and visually inspect the layers. This could be done for initial data exploration,
+or to validate output of a spatial analysis.
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
    This will be automatically updated by the find_set_subst.py script.

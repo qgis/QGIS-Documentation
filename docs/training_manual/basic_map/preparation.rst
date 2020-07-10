@@ -1,140 +1,90 @@
-.. _tm_working_vector_data:
-
-|LS| Working with Vector Data
+|LS| Adding your first layers
 ===============================================================================
 
-Vector data is arguably the most common kind of data you will find in the daily
-use of GIS. The vector model represents the location and shape of geographic
-features using points, lines and polygons (and for 3D data also surfaces and
-volumes), while their other properties are included as attributes (often presented
-as a table in QGIS).
-It is usually used to store discrete features, like roads and
-city blocks. The objects in a vector dataset are called **features**,
-and contain data that describe their location and properties.
+We will start the application, and create a basic map to use for examples and
+exercises.
 
-**The goal for this lesson:** To learn about the structure of vector data, and
-how to load vector datasets into a map.
+**The goal for this lesson:** To get started with an example map.
 
-|basic| |FA| Viewing Layer Attributes
+.. note::  Before starting this exercise, QGIS must be installed on your
+   computer. Also, you should have downloaded the :ref:`sample data
+   <data_downloadlink>` to use.
+
+Launch QGIS from its desktop shortcut, menu item, etc., depending on how you
+configured its installation.
+
+.. note::  The screenshots for this course were taken in QGIS 3.4 running on
+   Linux. Depending on your setup, the screens you encounter may well appear
+   somewhat different. However, all the same buttons will still be available,
+   and the instructions will work on any OS. You will need QGIS 3.4 (the latest
+   version at time of writing) to use this course.
+
+Let's get started right away!
+
+.. _tm_pepare_a_map:
+
+|basic| |FA| Prepare a map
 -------------------------------------------------------------------------------
 
-It's important to know that the data you will be working with does not only
-represent **where** objects are in space, but also tells you **what** those
-objects are.
+#. Open QGIS. You will have a new, blank map.
 
-From the previous exercise, you should have the ``protected_areas`` layer
-loaded in your map. If it is not loaded, then you can find the 
-:file:`protected_areas.shp` *ESRI Shapefile* format dataset in directory 
-:file:`exercise_data/shapefile`.
-
-The polygons representing the protected areas constitute the **spatial data**,
-but we can learn more about the protected areas by exploring the
-**attribute table**.
-
-#. In the :guilabel:`Layers` panel, click on the ``protected_areas`` layer to 
-   select it.
-#. In the :guilabel:`Attributes Toolbar` click the |openTable| 
-   :sup:`Open Attribute Table` button.  This will open a new window showing 
-   the attribute table of the ``protected_areas`` layer.  
-
-   .. figure:: img/attribute_data_preview.png
-     :align: center
-
-   A row is called a **record** and is associated with a **feature**
-   in the Canvas Map, such as a polygon.
-   A column is called a **field** (or an **attribute**), and has a name that helps
-   describe it, such as ``name`` or ``id``.
-   Values in the cells are known as **attribute values**.
-   These definitions are commonly used in GIS, so it is good to become
-   familiar with them.
-
-   In the ``protected_areas`` layer, there are two **features**, which are
-   represented by the two polygons we see on the Map Canvas. 
-
-   .. Note:: In order to understand what the **fields** and **attribute values** 
-      represent, one may need to find documentation (or metadata) describing 
-      the meaning of the attribute values.
-      This is usually available from the creator of the data set.
-
-Next, let's see how a record in the attribute table is linked to a polygon 
-feature that we see on the Map Canvas.
-
-#. Go back to the main QGIS window.
-#. In the :guilabel:`Attributes Toolbar`, click on the |selectFeature| 
-   :sup:`Select Feature` button.  
-#. Make sure the ``protected_areas`` layer is still selected in the 
-   :guilabel:`Layers` panel.
-#. Move your mouse to the Map Canvas and left click on the smaller  
-   of the two polygons.  The polygon will turn yellow indicating it is selected.
-   
-   .. figure:: img/select_polygon.png
+   .. figure:: img/add_blank_qgis.png
       :align: center
+      :width: 100 %
+
+#. The :guilabel:`Data Source Manager` dialog allows you to choose the data to
+   load depending on the data type. We'll use it to load our dataset:
+   click the |dataSourceManager| :sup:`Open Data Source Manager` button.
+
+   If you can't find the icon, check that the :guilabel:`Data Source Manager`
+   toolbar is enabled in the :menuselection:`View --> Toolbars` menu.
+
+   .. figure:: img/add_data_dialog.png
+      :align: center
+      :width: 100 %
+
+#. Load the :file:`protected_areas.shp` vector dataset:
    
-#. Go back to the :guilabel:`Attribute Table` window, and you should see a 
-   record (row) highlighted.  These are the attribute values of the
-   selected polygon.
-   
-   .. figure:: img/select_record.png
-     :align: center
+   #. Click on the :guilabel:`Vector` tab.
+   #. Enable the |radioButtonOn|:guilabel:`File` source type.
+   #. Press the :guilabel:`...` button next to :guilabel:`Vector Dataset(s)`.
+   #. Select the :file:`exercise_data/shapefile/protected_areas.shp` file
+      in your training directory.
+   #. Click :guilabel:`Open`. You will see the original dialog,
+      with the file path filled in.
 
-You can also select a feature using the Attribute Table.
+      .. figure:: img/add_vector_dialog.png
+         :align: center
 
-#. In the :guilabel:`Attribute Table` window, on the far left, click on the 
-   row number of the record that is currently not selected.
+   #. Click :guilabel:`Add` here as well. The data you specified will now load:
+      you can see a ``protected_areas`` item in the :guilabel:`Layers` panel
+      (bottom left) with its features shown in the main map canvas.
 
-   .. figure:: img/select_record2.png
-     :align: center
+      .. figure:: img/first_loaded_layer.png
+         :align: center
+         :width: 100%
 
-#. Go back to the main QGIS window and look at the Map Canvas. You should 
-   see the larger of the two polygons colored yellow.  
-#. To deselect the feature, go to the :guilabel:`Attribute Table` window 
-   and click on |deselectAll| :sup:`Deselect All` button.
+Congratulations! You now have a basic map. Now would be a good time to save
+your work.
 
-Sometimes there are many features shown on the Map Canvas and it might be difficult
-to see which feature is selected from the Attribute Table.  Another way to 
-identify the location of a feature is to use the :guilabel:`Flash Feature`
-tool.
+#. Click on the :guilabel:`Save As` button: |fileSaveAs|
+#. Save the map under a :file:`solution` folder next to :file:`exercise_data`
+   and call it :file:`basic_map.qgz`.
 
-#. In the :guilabel:`Attribute Table`, right-click on any cell in the
-   row that has the attribute value ``r2855697`` for the field ``full_id``.
-#. In the context menu, click on :guilabel:`Flash Feature` and watch the 
-   Map Canvas.  
+.. _backlink-interface-preparation-1:
 
-   .. figure:: img/flash_feature.png
-     :align: center
-   
-   You should see the polygon flash red a few times.  If you missed it, 
-   try it again.
-
-Another useful tool is the :guilabel:`Zoom to Feature` tool, that tells QGIS to 
-zoom to the feature of interest.
-
-#. In the :guilabel:`Attribute Table`, right-click on  any cell in the
-   row that has the attribute value ``r2855697`` for the field ``full_id``.
-#. In the context menu, click on :guilabel:`Zoom to Feature`
-
-   .. figure:: img/zoom_to_feature.png
-     :align: center
-
-   Look at the Map Canvas.  The polygon should now occupy the extent
-   of the Map Canvas area.  
-   
-You may now close the attribute table.
-
-.. _backlink-vector-explore-attribute-data:
-
-|basic| |TY| Exploring Vector Data Attributes
+|basic| |TY|
 -------------------------------------------------------------------------------
 
-#. How many fields are available in the :guilabel:`rivers` layer?
-#. Tell us a bit about the ``town`` places in your dataset.
+Repeat the steps above to add the :file:`places.shp` and :file:`rivers.shp`
+layers from the same folder (:file:`exercise_data/shapefile`) to the map.
 
-:ref:`Check your results <vector-explore-attribute-data>`
+:ref:`Check your results <interface-preparation-1>`
 
 
 .. _load_geopackage:
 
-|basic| |FA| Loading Vector Data From GeoPackage Database
+|basic| |FA| Loading vector data from a GeoPackage Database
 -------------------------------------------------------------------------------
 
 Databases allow you to store a large volume of associated data in one file. You
@@ -180,7 +130,7 @@ Congratulations! You have loaded the first layer from a GeoPackage.
 
 .. _backlink-vector-load-from-database-1:
 
-|basic| |FA| Loading Vector Data From a SpatiaLite Database with the Browser
+|basic| |FA| Loading vector data from a SpatiaLite Database with the Browser
 -------------------------------------------------------------------------------
 
 QGIS provides access to many other database formats. Like GeoPackage, the
@@ -238,6 +188,7 @@ using any of the methods explained above:
 
 :ref:`Check your results <vector-load-more-data>`
 
+
 |FA| Reordering the Layers
 -------------------------------------------------------------------------------
 
@@ -273,18 +224,21 @@ To resolve this problem:
 You'll see that the map now makes more sense visually, with roads and buildings
 appearing above the land use regions.
 
+
 |IC|
 -------------------------------------------------------------------------------
 
-Now you've added all the layers you need from several different sources.
+Now you've added all the layers you need from several different sources
+and created a basic map!
+
 
 |WN|
 -------------------------------------------------------------------------------
 
-Using the random palette automatically assigned when loading the layers, your
-current map is probably not easy to read. It would be preferable to assign your
-own choice of colors and symbols. This is what you'll learn to do in the next
-lesson.
+Now you're familiar with the basic function of the :guilabel:`Open Data Source Manager`
+button, but what about all the others? How does this interface work? Before we
+go on, let's take a look at some basic interaction with the QGIS interface.
+This is the topic of the next lesson.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
@@ -305,18 +259,16 @@ lesson.
    :width: 1.5em
 .. |fileOpen| image:: /static/common/mActionFileOpen.png
    :width: 1.5em
+.. |fileSaveAs| image:: /static/common/mActionFileSaveAs.png
+   :width: 1.5em
 .. |geoPackage| image:: /static/common/mGeoPackage.png
    :width: 1.5em
 .. |moderate| image:: /static/common/moderate.png
 .. |newGeoPackageLayer| image:: /static/common/mActionNewGeoPackageLayer.png
    :width: 1.5em
-.. |openTable| image:: /static/common/mActionOpenTable.png
-   :width: 1.5em
 .. |polygonLayer| image:: /static/common/mIconPolygonLayer.png
    :width: 1.5em
+.. |radioButtonOn| image:: /static/common/radiobuttonon.png
+   :width: 1.5em
 .. |spatialite| image:: /static/common/mIconSpatialite.png
-   :width: 1.5em
-.. |deselectAll| image:: /static/common/mActionDeselectAll.png
-   :width: 1.5em
-.. |selectFeature| image:: /static/common/mActionSelectRectangle.png
    :width: 1.5em

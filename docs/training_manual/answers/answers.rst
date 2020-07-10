@@ -1,24 +1,6 @@
 Answer Sheet
 ===============================================================================
 
-|RF| *Adding Your First Layer*
--------------------------------------------------------------------------------
-
-.. _interface-preparation-1:
-
-|basic| *Preparation*
-...............................................................................
-
-In the main area of the dialog you should see many shapes with different
-colors. Each shape belongs to a layer you can identify by its color in the
-left panel (your colors may be different from the ones below):
-
-.. figure:: img/basic_map.png
-   :align: center
-
-:ref:`Back to text <backlink-interface-preparation-1>`
-
-
 |RF| *An Overview of the Interface*
 -------------------------------------------------------------------------------
 
@@ -47,31 +29,23 @@ remember the names and functions of the screen elements.
 :ref:`Back to text <backlink-interface-overview-2>`
 
 
-|RF| *Working with Vector Data*
+|RF| *Adding Your First Layer*
 -------------------------------------------------------------------------------
 
-.. _vector-explore-attribute-data:
+.. _interface-preparation-1:
 
-|basic| *Attribute data*
+|basic| *Preparation*
 ...............................................................................
 
-* There should be 9 fields in the :guilabel:`rivers` layer:
+In the main area of the dialog you should see many shapes with different
+colors. Each shape belongs to a layer you can identify by its color in the
+left panel (your colors may be different from the ones below):
 
-  #. Select the layer in the :guilabel:`Layers` panel.
-  #. Right-click and choose :guilabel:`Open Attribute Table`, or press the |openTable|
-     button on the :guilabel:`Attributes Toolbar`.
-  #. Count the number of columns.
+.. figure:: img/basic_map.png
+   :align: center
 
-  .. tip:: A quicker approach could be to double-click the
-   :guilabel:`rivers` layer, open the :menuselection:`Layer properties -->
-   Fields` tab, where you will find a numbered list of the table's fields.
+:ref:`Back to text <backlink-interface-preparation-1>`
 
-* Information about towns is available in the :guilabel:`places` layer. Open its
-  attribute table as you did with the :guilabel:`rivers` layer: there are two features whose :guilabel:`place`
-  attribute is set to ``town``: *Swellendam* and *Buffeljagsrivier*.
-  You can add comment on other fields from these two records, if you like.
-
-:ref:`Back to text <backlink-vector-explore-attribute-data>`
 
 .. _vector-load-more-data:
 
@@ -231,20 +205,37 @@ Here are examples of the symbol structure:
 
 :ref:`Back to text <backlink-symbology-geom_generator>`
 
-|RF| *Attribute Data*
+|RF| *Vector Attribute Data*
 -------------------------------------------------------------------------------
 
-.. _labels-attribute-data-1:
+.. _vector-explore-attribute-data:
 
-|basic| *Attribute Data*
+|basic| *Exploring Vector Data Attributes*
 ...............................................................................
 
-The ``name`` field is the most useful to show as labels. This is because all its
-values are unique for every object and are very unlikely to contain *NULL*
-values. If your data contains some *NULL* values, do not worry as long as most
-of your places have names.
+* There should be 9 fields in the :guilabel:`rivers` layer:
 
-:ref:`Back to text <backlink-labels-attribute-data-1>`
+  #. Select the layer in the :guilabel:`Layers` panel.
+  #. Right-click and choose :guilabel:`Open Attribute Table`, or press the |openTable|
+     button on the :guilabel:`Attributes Toolbar`.
+  #. Count the number of columns.
+
+  .. tip:: A quicker approach could be to double-click the
+   :guilabel:`rivers` layer, open the :menuselection:`Layer properties -->
+   Fields` tab, where you will find a numbered list of the table's fields.
+
+* Information about towns is available in the :guilabel:`places` layer. Open its
+  attribute table as you did with the :guilabel:`rivers` layer:
+  there are two features whose :guilabel:`place`
+  attribute is set to ``town``: *Swellendam* and *Buffeljagsrivier*.
+  You can add comment on other fields from these two records, if you like.
+
+* The ``name`` field is the most useful to show as labels. This is because all its
+  values are unique for every object and are very unlikely to contain *NULL*
+  values. If your data contains some *NULL* values, do not worry as long as most
+  of your places have names.
+
+:ref:`Back to text <backlink-vector-explore-attribute-data>`
 
 
 |RF| *Labels*

@@ -161,7 +161,7 @@ Try to find each of these tools on your screen. What is their purpose?
 -------------------------------------------------------------------------------
 
 Now that you are familiar with the basics of the QGIS interface, in the next 
-lesson we will look at how to Pan and Zoom in the Map Canvas and learn about map scale.
+lesson we will see how to load some common data types.
 
 
 .. Substitutions definitions - AVOID EDITING PAST THIS LINE
